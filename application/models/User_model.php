@@ -112,5 +112,43 @@ class User_model extends CI_Model {
 		else
 			return false;
 	}
+
+    public function forgetPassword() {
+        //echo $argEmail; exit;
+        $this->load->helper('string');
+        $email_count = $this->db->get_where('gsp_user', array('email' => $this->input->post('val')))->num_rows();
+        //echo $this->db->last_query(); exit;
+        if ($email_count > 0) {
+            $varNewPass = random_string('alnum', 5);
+            $arr = array(
+                'password' => $varNewPass
+            );
+            $this->db->where('email', $this->input->post('val'));
+            if ($this->db->update('gsp_user', $arr)) {
+                $this->load->library('email');
+                $config['mailtype'] = 'html';
+                $this->email->initialize($config);
+                $from = "info@greenschoolsprogramme.org";
+                $to=$this->input->post('email');
+                $subject = "GSP Forget Password";
+                $msg = "Dear &nbsp;";
+                $msg .= $this->input->post('email') . "," . "<br>";
+                $msg .= "Yor new password for GSP Login.<br>";
+                $msg .= "New Passowd:<br>";
+                $msg .= $varNewPass . "<br>";
+                $this->email->to($to);
+                $this->email->from($from, "GSP Team");
+                $this->email->subject($subject);
+                $this->email->message($msg);
+                $this->email->send();
+
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }
 }
 ?>

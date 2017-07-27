@@ -44,8 +44,8 @@ class Login extends CI_Controller {
             $vals = array(
 //                'img_path' => './uploads/',
 //                'img_url' => 'http://studio-tesseract.co/GSP/uploads/',
-                'img_path' => './audit2017/uploads/',
-                'img_url' => 'http://www.greenschoolsprogramme.org/audit2017/uploads/',
+                'img_path' => './audit2017/uploads/captcha/',
+                'img_url' => 'http://www.greenschoolsprogramme.org/audit2017/uploads/captcha/',
                 'img_width' => '230',
                 'img_height' => 50,
                 'expiration' => 3600,
@@ -111,6 +111,23 @@ class Login extends CI_Controller {
             $this->session->set_flashdata('error', 'Invalid Password');
             redirect('/School');
         }
+    }
+
+    /* * GSP Forget Password
+     */
+    public function forgetpassword()
+    {
+        //echo $this->input->post('val'); exit;
+        $status='';
+        $temp=$this->User_model->forgetPassword();
+        if($temp)
+        {
+            $status='success';
+        } else {
+            $status='error';
+        }
+        echo json_encode($status);
+
     }
 }
 
