@@ -29,8 +29,8 @@ class Waste extends CI_Controller {
             $argPost['type'] = 7  ;
             $data['data'] = $this->Answer_model->getAnswers($argPost);
             $data['other'] = $this->Answer_model->getAllAnswers($argPost);
-            print_r($data['other']['Q1G1']);
-            print_r($data['other']['Q1G2']);
+//            print_r($data['other']['Q1G1']);
+//            print_r($data['other']['Q1G2']);
             
             if(isset($data['other']['Q1G1']) && isset($data['other']['Q1G2']))
             {	 
