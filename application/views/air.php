@@ -955,7 +955,7 @@ else
     </div>
     <input type="hidden" id="Q4G4S3" value="<?php if(isset($other['Q4G4S3']) )if($other['Q4G4S3']) echo $other['Q4G4S3'];?>"/>
     <input type="hidden" id="Q4G1S3" value="<?php if(isset($other['Q4G1S3']) )if($other['Q4G1S3']) echo $other['Q4G1S3'];?>"/>
-    
+    <script></script>
     <div class="form-group row">
       <div class="col-xs-3">
         <label >School bus</label>
@@ -1281,8 +1281,8 @@ else
 
 
         <div class="text-center">
-          <button type="button" class="org-btn" id="airprevious" value="movenext" onClick="javasript:window.location.href='<?php echo base_url('general'); ?>'">Previous</button>
-          <button type="submit" class="org-btn" id="airnext" value="movenext" >Next</button>
+            <button type="button" class="org-btn" id="btnAirPrevious">Previous</button>
+            <button type="submit" class="org-btn" id="airnext" value="movenext" >Next</button>
           <input type="button" class="org-btn" value="Save and Resume Later" class="submit button" id="generalresume" name="resume"/>
         </div>
         
@@ -1311,7 +1311,23 @@ else
  $('.close').click(function(){
     $('#video').attr("src","https://www.youtube.com/embed/klen-TOrXFA");
  });
+
 $('body').click(function(){
     $('#video').attr("src","https://www.youtube.com/embed/klen-TOrXFA");
+ });
+ $(document).ready(function () {
+     $('#btnAirPrevious').on('click', function (data) {
+         var fd = $('#air').serialize();
+         //console.log(fd);
+         $.ajax({
+             type: 'POST',
+             url: '<?php echo base_url('previous/airprevious') ?>',
+             data: fd,
+             success: function (data)
+             {
+                 window.location.href = "<?php echo base_url('general'); ?>";
+             }
+         });
+     });
  });
  </script>
