@@ -1859,13 +1859,10 @@ if (isset($data['Q9A1']))
 <div class="text-center">
     <button type="button" class="org-btn" id="btnAirPrevious">Previous</button>
     <button type="submit" class="org-btn" id="airnext" value="movenext">Next</button>
-    <button type="button" class="org-btn" class="submit button" id="airsave" >Save and Resume Later</button>
+    <button type="button" class="org-btn" class="submit button" id="airsave">Save and Resume Later</button>
 </div>
 
-<?php echo form_close(); ?> </div>
-</div>
-</div>
-</div>
+<?php echo form_close(); ?>
 
 <!-- /.container -->
 <?php $this->load->view('footer'); ?>

@@ -461,7 +461,7 @@
                                 Private School</label>
                         </div>
                     </div>
-                    <button class="text-center">
+                    <div class="text-center">
 
                         <button type="button" class="org-btn" id="btnGeneralPrevious">Previous</button>
                         <button type="submit" id="movenextbtn" value="movenext" accesskey="n"
