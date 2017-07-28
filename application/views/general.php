@@ -17,7 +17,7 @@
             <div id="samplt" class="fin-prog progress-bar" role="progressbar" style="width: 5%; height: 35px;">5%</div>
         </div>
         <h1>GENERAL QUESTIONS</h1>
-        <?php echo form_open('general/set'); ?>
+        <?php echo form_open('general/set',array('id'=>'general-form')); ?>
         <div class="form-group">
             <label class="control-label" data-toggle="tooltip" data-placement="top"
                    title="If your school has classes from Grade 6 to 11, you response will be lowest level of grade: Grade 6 and Highest level of grade: Grade 11. If your school has only one Grade (Grade 7) then your response for both will be Grade 7."><span
@@ -461,13 +461,13 @@
                                 Private School</label>
                         </div>
                     </div>
-                    <div class="text-center">
+                    <button class="text-center">
 
                         <button type="button" class="org-btn" id="btnGeneralPrevious">Previous</button>
-                        <button type="submit" id="movenextbtn" value="movenext" name="movenext" accesskey="n"
+                        <button type="submit" id="movenextbtn" value="movenext" accesskey="n"
                                 class="submit button">Next
                         </button>
-                        <input type="submit" value="Save and Resume Later" class="submit button" id="movenextbtn"/>
+                        <button type="button" class="submit button" id="generalsave">Save and Resume Later</button>
                     </div>
                     <?php echo form_close(); ?> </div>
             </div>
@@ -487,6 +487,19 @@
                         success: function (data)
                         {
                             window.location.href = "<?php echo base_url('school'); ?>";
+                        }
+                    });
+                });
+                $('#generalsave').on('click', function (data) {
+                    var fd = $('#general-form').serialize();
+                    //console.log(fd);
+                    $.ajax({
+                        type: 'POST',
+                        url: '<?php echo base_url('previous/generalajax') ?>',
+                        data: fd,
+                        success: function (data)
+                        {
+                            window.location.href = "<?php echo base_url('logout'); ?>";
                         }
                     });
                 });

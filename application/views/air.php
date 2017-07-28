@@ -1859,8 +1859,7 @@ if (isset($data['Q9A1']))
 <div class="text-center">
     <button type="button" class="org-btn" id="btnAirPrevious">Previous</button>
     <button type="submit" class="org-btn" id="airnext" value="movenext">Next</button>
-    <input type="button" class="org-btn" value="Save and Resume Later" class="submit button" id="generalresume"
-           name="resume"/>
+    <button type="button" class="org-btn" class="submit button" id="airsave" >Save and Resume Later</button>
 </div>
 
 <?php echo form_close(); ?> </div>
@@ -1903,6 +1902,19 @@ if (isset($data['Q9A1']))
                 data: fd,
                 success: function (data) {
                     window.location.href = "<?php echo base_url('general'); ?>";
+                }
+            });
+        });
+
+        $('#airsave').on('click', function (data) {
+            var fd = $('#air').serialize();
+            //console.log(fd);
+            $.ajax({
+                type: 'POST',
+                url: '<?php echo base_url('previous/airprevious') ?>',
+                data: fd,
+                success: function (data) {
+                    window.location.href = "<?php echo base_url('logout'); ?>";
                 }
             });
         });

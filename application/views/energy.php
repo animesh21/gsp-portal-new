@@ -1314,8 +1314,7 @@
             <div class="text-center">
                 <button type="button" class="org-btn" id="btnEnergyPrevious">Previous</button>
                 <button type="submit" class="org-btn" id="energynext" value="movenext">Next</button>
-                <input type="button" class="org-btn" value="Save and Resume Later" class="submit button"
-                       id="energyresume" name="resume"/>
+                <button type="button" class="org-btn" class="submit button" id="energysave" >Save and Resume Later</button>
             </div>
             <?php echo form_close(); ?> </div>
     </div>
@@ -1355,6 +1354,19 @@
                     data: fd,
                     success: function (data) {
                         window.location.href = "<?php echo base_url('air'); ?>";
+                    }
+                });
+            });
+
+            $('#energysave').on('click', function (data) {
+                var fd = $('#energy').serialize();
+                //console.log(fd);
+                $.ajax({
+                    type: 'POST',
+                    url: '<?php echo base_url('previous/energyajax') ?>',
+                    data: fd,
+                    success: function (data) {
+                        window.location.href = "<?php echo base_url('logout'); ?>";
                     }
                 });
             });

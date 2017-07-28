@@ -748,7 +748,7 @@
                         <button type="submit" id="movenextbtn" value="movenext" name="movenext" accesskey="n"
                                 class="submit button">Next
                         </button>
-                        <input type="button" value="Save and Resume Later" class="org-btn"/>
+                        <button type="button" class="org-btn" id="landsave">Save and Resume Later</button>
                     </div>
                     <?php echo form_close(); ?> </div>
             </div>
@@ -798,6 +798,19 @@
                 success: function (data)
                 {
                     window.location.href = "<?php echo base_url('food'); ?>";
+                }
+            });
+        });
+        $('#landsave').on('click', function (data) {
+            var fd = $('#land').serialize();
+            //console.log(fd);
+            $.ajax({
+                type: 'POST',
+                url: '<?php echo base_url('previous/landajax') ?>',
+                data: fd,
+                success: function (data)
+                {
+                    window.location.href = "<?php echo base_url('logout'); ?>";
                 }
             });
         });

@@ -2549,12 +2549,11 @@
                                                                                                                     value="movenext">
                                                                                                                 Next
                                                                                                             </button>
-                                                                                                            <input type="button"
+                                                                                                            <button type="button"
                                                                                                                    class="org-btn"
-                                                                                                                   value="Save and Resume Later"
                                                                                                                    class="submit button"
-                                                                                                                   id="foodresume"
-                                                                                                                   name="resume"/>
+                                                                                                                   id="foodsave"
+                                                                                                            >Save and Resume Later</button>
                                                                                                             <?php echo form_close(); ?>
                                                                                                         </div>
                                                                                                     </div>
@@ -2614,6 +2613,19 @@
                                                                                     data: fd,
                                                                                     success: function (data) {
                                                                                         window.location.href = "<?php echo base_url('energy'); ?>";
+                                                                                    }
+                                                                                });
+                                                                            });
+
+                                                                            $('#foodsave').on('click', function (data) {
+                                                                                var fd = $('#food').serialize();
+                                                                                //console.log(fd);
+                                                                                $.ajax({
+                                                                                    type: 'POST',
+                                                                                    url: '<?php echo base_url('previous/foodajax') ?>',
+                                                                                    data: fd,
+                                                                                    success: function (data) {
+                                                                                        window.location.href = "<?php echo base_url('logout'); ?>";
                                                                                     }
                                                                                 });
                                                                             });

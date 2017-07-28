@@ -2570,7 +2570,7 @@
                                                     <button type="submit" id="movenextbtn" value="movenext"
                                                             name="movenext" accesskey="n" class="submit button">Next
                                                     </button>
-                                                    <input type="button" value="Save and Resume Later" class="org-btn"/>
+                                                    <button type="button"  class="org-btn" id="watersave">Save and Resume Later</button>
                                                 </div>
                                                 <?php echo form_close(); ?> </div>
                                         </div>
@@ -2619,6 +2619,20 @@
                                                         success: function (data)
                                                         {
                                                             window.location.href = "<?php echo base_url('land'); ?>";
+                                                        }
+                                                    });
+                                                });
+
+                                                $('#watersave').on('click', function (data) {
+                                                    var fd = $('#water').serialize();
+                                                    //console.log(fd);
+                                                    $.ajax({
+                                                        type: 'POST',
+                                                        url: '<?php echo base_url('previous/waterajax') ?>',
+                                                        data: fd,
+                                                        success: function (data)
+                                                        {
+                                                            window.location.href = "<?php echo base_url('logout'); ?>";
                                                         }
                                                     });
                                                 });

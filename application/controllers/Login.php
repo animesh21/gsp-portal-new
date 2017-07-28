@@ -91,7 +91,7 @@ class Login extends CI_Controller {
         }
     }
 
-    public function generateRandomString($length = 10) {
+    public function generateRandomString($length = 5) {
         $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $charactersLength = strlen($characters);
         $randomString = '';

@@ -3781,8 +3781,7 @@
         <div class="text-center">
             <button type="button" class="org-btn" id="btnWastePrevious">Previous</button>
             <button type="submit" class="org-btn" id="wastenext" value="movenext">Next</button>
-            <input type="button" class="org-btn" value="Save and Resume Later" class="submit button" id="wasteresume"
-                   name="resume"/>
+            <button type="button" class="org-btn" class="submit button" id="wastesave">Save and Resume Later</button>
         </div>
     </div>
 </div>
@@ -3827,6 +3826,19 @@
                 success: function (data)
                 {
                     window.location.href = "<?php echo base_url('water'); ?>";
+                }
+            });
+        });
+        $('#wastesave').on('click', function (data) {
+            var fd = $('#waste').serialize();
+            //console.log(fd);
+            $.ajax({
+                type: 'POST',
+                url: '<?php echo base_url('previous/wasteajax') ?>',
+                data: fd,
+                success: function (data)
+                {
+                    window.location.href = "<?php echo base_url('logout'); ?>";
                 }
             });
         });

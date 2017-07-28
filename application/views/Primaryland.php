@@ -581,9 +581,9 @@
                             Uploaded files must be in one of the following formats: PDF Document (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg). File size per document should not exceed 500 KB. </div>
                         <button class="btn uploadbtn upload" data-id="Green Cover" data-toggle="modal" data-target="#airModal" type="button">UPLOAD FILES</button>  <br>
 			<div class="text-center">
-                            <button type="submit" id="moveprevbtn" value="moveprev" name="moveprev" accesskey="p" class="submit button">Previous</button>
+                            <button type="button" id="moveprevbtn" value="moveprev" name="moveprev" accesskey="p" class="submit button">Previous</button>
                             <button type="submit" id="movenextbtn" value="movenext" name="movenext" accesskey="n" class="submit button">Next</button>
-                            <input type="submit" value="Submit" class="org-btn">
+                            <button type="button" value="Submit" class="org-btn" id=""landsave>Save and Resume Later</button>
                         </div>
                         <?php echo form_close(); ?> </div>
                 </div>
@@ -609,5 +609,34 @@
 <script type="text/javascript">
  $('.close').click(function(){
     $('#video').attr("src","https://www.youtube.com/embed/9r3Lwrd9BUs");
+ });
+
+ $(document).ready(function () {
+     $('#landprevious').on('click', function (data) {
+         var fd = $('#land').serialize();
+         //console.log(fd);
+         $.ajax({
+             type: 'POST',
+             url: '<?php echo base_url('previous/landajax') ?>',
+             data: fd,
+             success: function (data)
+             {
+                 window.location.href = "<?php echo base_url('food'); ?>";
+             }
+         });
+     });
+     $('#landsave').on('click', function (data) {
+         var fd = $('#land').serialize();
+         //console.log(fd);
+         $.ajax({
+             type: 'POST',
+             url: '<?php echo base_url('previous/landajax') ?>',
+             data: fd,
+             success: function (data)
+             {
+                 window.location.href = "<?php echo base_url('logout'); ?>";
+             }
+         });
+     });
  });
 </script>

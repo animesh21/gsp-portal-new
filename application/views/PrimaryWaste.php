@@ -1935,9 +1935,10 @@ if($data['Q18Wa1'] == 'Y')
           <br>
         </div>
         <div class="text-center">
-          <button type="submit" id="moveprevbtn" value="moveprev" name="moveprev" accesskey="p" class="submit button">Previous</button>
-          <button type="submit" id="movenextbtn" value="movenext" name="movenext" accesskey="n" class="submit button">Next</button>
-          <input type="submit" class="submit button" id="movenextbtn" value="Save & resume later"  />
+
+            <button type="button" class="org-btn" id="btnWastePrevious">Previous</button>
+            <button type="submit" class="org-btn" id="wastenext" value="movenext">Next</button>
+            <button type="button" class="org-btn" class="submit button" id="wastesave">Save and Resume Later</button>
         </div>
       </div>
     </div>
@@ -1946,6 +1947,43 @@ if($data['Q18Wa1'] == 'Y')
 </div>
 <!-- /.container -->
 <?php $this->load->view('footer');?>
+<script type="text/javascript">
+    $('.close').click(function () {
+        $('#video').attr("src", "https://www.youtube.com/embed/CI-iGmii5Yk");
+    });
+    $('body').click(function () {
+        $('#video').attr("src", "https://www.youtube.com/embed/CI-iGmii5Yk");
+    });
+
+    $(document).ready(function () {
+        $('#btnWastePrevious').on('click', function (data) {
+            var fd = $('#waste').serialize();
+            //console.log(fd);
+            $.ajax({
+                type: 'POST',
+                url: '<?php echo base_url('previous/wasteajax') ?>',
+                data: fd,
+                success: function (data)
+                {
+                    window.location.href = "<?php echo base_url('water'); ?>";
+                }
+            });
+        });
+        $('#wastesave').on('click', function (data) {
+            var fd = $('#waste').serialize();
+            //console.log(fd);
+            $.ajax({
+                type: 'POST',
+                url: '<?php echo base_url('previous/wasteajax') ?>',
+                data: fd,
+                success: function (data)
+                {
+                    window.location.href = "<?php echo base_url('logout'); ?>";
+                }
+            });
+        });
+    });
+</script>
 <style type="text/css">
 .text-gray{
    color: #666666!important;
