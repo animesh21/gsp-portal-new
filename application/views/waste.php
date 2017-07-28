@@ -528,7 +528,7 @@
                 <label><span class="cube">2</span>How many categories does your school segregate waste into? <a
                             class="tt"
                             data-tooltip="Students will have to count the number of waste disposal points in the school as, for instance, one dustbin, two dustbins or more. If there are no dustbins, please say zero (o)"
-                            style="position:relative; top:-18px;"><span class="badge">?</span></a></label>
+                            ><span class="badge">?</span></a></label>
                 <ul>
                     <li>
                         <label class="radio-inline text-gray">
@@ -991,12 +991,11 @@
             <div class="form-group">
                 <label class="control-label"><span class="cube">3</span>Determine the quantity of waste generated in
                     your school. (in kilogram) ?<a class="tt"
-                                                   data-tooltip="Please note that some categories of waste may happen daily, weekly, monthly, bi-annually or annually. Please convert these to monthly average before entering."
-                                                   style="position:relative; top:-18px;"><span
+                                                   data-tooltip="Please note that some categories of waste may happen daily, weekly, monthly, bi-annually or annually. Please convert these to monthly average before entering."><span
                                 class="badge">?</span></a></label>
             </div>
             <div class="form-group">
-                <label><span class="cube">A.</span>Biodegradable/Wet Waste</label>
+                <label><span class="cube">a.</span>Biodegradable/Wet Waste</label>
                 <div class="form-group row">
                     <div class="col-xs-6">
                         <label>HOW MUCH WASTE DOES YOUR SCHOOL GENERATE? </label>
@@ -1067,7 +1066,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <label><span class="cube">B.</span>Dry/recyclable waste</label>
+                <label><span class="cube">b.</span>Dry/recyclable waste</label>
                 <div class="form-group row">
                     <div class="col-xs-6">
                         <label>HOW MUCH WASTE DOES YOUR SCHOOL GENERATE? </label>
@@ -1169,7 +1168,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <label><span class="cube">C.</span>Domestic hazardous waste</label>
+                <label><span class="cube">c.</span>Domestic hazardous waste</label>
                 <div class="form-group row">
                     <div class="col-xs-6">
                         <label>HOW MUCH WASTE DOES YOUR SCHOOL GENERATE? </label>
@@ -1220,7 +1219,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <label><span class="cube">D.</span>E-Waste</label>
+                <label><span class="cube">d.</span>E-Waste</label>
                 <div class="form-group row">
                     <div class="col-xs-6">
                         <label>HOW MUCH WASTE DOES YOUR SCHOOL GENERATE? </label>
@@ -1251,7 +1250,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <label><span class="cube">E.</span>Biomedical waste</label>
+                <label><span class="cube">e.</span>Biomedical waste</label>
                 <div class="form-group row">
                     <div class="col-xs-6">
                         <label>HOW MUCH WASTE DOES YOUR SCHOOL GENERATE? </label>
@@ -1282,7 +1281,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <label><span class="cube">F.</span>Sanitary waste </label>
+                <label><span class="cube">f.</span>Sanitary waste </label>
                 <div class="form-group row">
                     <div class="col-xs-6">
                         <label>HOW MUCH WASTE DOES YOUR SCHOOL GENERATE? </label>
@@ -1313,7 +1312,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <label><span class="cube">G.</span>Cc& D Waste</label>
+                <label><span class="cube">g.</span>Cc& D Waste</label>
                 <div class="form-group row">
                     <div class="col-xs-6">
                         <label>HOW MUCH WASTE DOES YOUR SCHOOL GENERATE? </label>

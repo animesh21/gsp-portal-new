@@ -815,7 +815,7 @@
                             </label>
                             <div class="form-group">
                                 <label class="control-label"><span class="cube">5</span> What are the water conservation
-                                    practices your school follows</label>
+                                    practices your school follows <a class="tt" data-tooltip="Please tick “Yes” if your school follows the below mentioned practices. Do upload images/ jpegs, where relevant."><span class="badge">?</span></a></label>
                                 <div class="form-group">
                                     <label class="radio-inline text-gray col-xs-10"> Does your school have any water and
                                         sanitation policy? </label>
@@ -1543,7 +1543,8 @@
                             ?>
 
                         >
-                            <label><span class="cube">6(c)</span>How much area in your school is harvested? </label>
+                            <label><span class="cube">6(c)</span>How much area in your school is harvested?
+                                <a class="kplink" href="http://www.greenschoolsprogramme.org/knowledge-bank/water/#rainFalls" target="_blank"> </a></label>
                             <div class="form-group">
                                 <ul>
                                     <li>
@@ -1618,7 +1619,8 @@
 
                         >
                             <label><span class="cube">6(d)</span>Please select (from the list given below) the rainwater
-                                harvesting structures present in your school: </label>
+                                harvesting structures present in your school:
+                                <a class="kplink" href="http://www.greenschoolsprogramme.org/knowledge-bank/water/#rainFalls" target="_blank"> </a></label>
                             <div class="form-group">
                                 <ul>
                                     <li>
@@ -2134,8 +2136,8 @@
                                     </tbody>
                                 </table>
                                 <br>
-                                Note: *For Average Rainfall Data refer to Knowledge Bank: <a
-                                        href="http://www.greenschoolsprogramme.org" target="_blank">www.greenschoolsprogramme.org</a><br>
+                                Note: *For Average Rainfall Data refer to Knowledge Bank: <a class="kplink" href="
+http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_blank"> </a>www.greenschoolsprogramme.org</a><br>
                             </div>
                         </div>
                         <br>

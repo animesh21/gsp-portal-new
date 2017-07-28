@@ -62,7 +62,7 @@ class Login extends CI_Controller {
             $details = $this->input->post();
             $pass = $this->generateRandomString();
             $userDetails = array(
-                'email' => $details['schoolemail'],
+                'email' => $details['coemail'],
                 'username' => $details['name'],
                 'Password' => $pass
             );
