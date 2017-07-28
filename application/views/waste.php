@@ -990,7 +990,7 @@
             <br>
             <div class="form-group">
                 <label class="control-label"><span class="cube">3</span>Determine the quantity of waste generated in
-                    your school. (in kilogram) ?<a class="tt"
+                    your school. (in kilogram) <a class="tt"
                                                    data-tooltip="Please note that some categories of waste may happen daily, weekly, monthly, bi-annually or annually. Please convert these to monthly average before entering."><span
                                 class="badge">?</span></a></label>
             </div>
@@ -1056,7 +1056,7 @@
                 </div>
                 <div class="form-group row">
                     <div class="col-xs-6">
-                        <label>Per capita waste generation A: </label>
+                        <label>Per capita waste generation (a): </label>
                     </div>
                     <div class="col-xs-6">
                         <input class="form-control space-textbox" onKeyUp="solidWaste()" id="Q6Wa1S6" type="number"
@@ -1158,7 +1158,7 @@
                 </div>
                 <div class="form-group row">
                     <div class="col-xs-6">
-                        <label>Per capita waste generation B: </label>
+                        <label>Per capita waste generation (b): </label>
                     </div>
                     <div class="col-xs-6">
                         <input class="form-control space-textbox" onKeyUp="solidRecyclable()" id="Q6Wa2S9" type="number"
@@ -1179,7 +1179,7 @@
                 </div>
                 <div class="form-group row">
                     <div class="col-xs-6">
-                        <label>Hazardous and toxic waste(Paints, lab waste, etc) </label>
+                        <label>Hazardous and toxic waste (Paints, lab waste, etc) </label>
                     </div>
                     <div class="col-xs-6">
                         <input class="form-control space-textbox" onKeyUp="WasteDomestic()" id="Q6Wa3S1" type="number"
@@ -1209,7 +1209,7 @@
                 </div>
                 <div class="form-group row">
                     <div class="col-xs-6">
-                        <label>Per capita waste generation C. </label>
+                        <label>Per capita waste generation (c). </label>
                     </div>
                     <div class="col-xs-6">
                         <input class="form-control space-textbox" onKeyUp="WasteDomestic()" id="Q6Wa3S4" type="number"
@@ -1240,7 +1240,7 @@
                 </div>
                 <div class="form-group row">
                     <div class="col-xs-6">
-                        <label>Per capita waste generation D: </label>
+                        <label>Per capita waste generation (d): </label>
                     </div>
                     <div class="col-xs-6">
                         <input class="form-control space-textbox" onKeyUp="EWaste()" id="Q6Wa4S2" type="number"
@@ -1271,7 +1271,7 @@
                 </div>
                 <div class="form-group row">
                     <div class="col-xs-6">
-                        <label>Per capita waste generation E: </label>
+                        <label>Per capita waste generation (e): </label>
                     </div>
                     <div class="col-xs-6">
                         <input class="form-control space-textbox" onKeyUp="WasteBiomedical()" id="Q6Wa5S2" type="number"
@@ -1302,7 +1302,7 @@
                 </div>
                 <div class="form-group row">
                     <div class="col-xs-6">
-                        <label>Per capita waste generation F: </label>
+                        <label>Per capita waste generation (f): </label>
                     </div>
                     <div class="col-xs-6">
                         <input class="form-control space-textbox" onKeyUp="WasteSanitary()" id="Q6Wa6S2" type="number"
@@ -1334,7 +1334,7 @@
                 </div>
                 <div class="form-group row">
                     <div class="col-xs-6">
-                        <label>Per capita waste generation G: </label>
+                        <label>Per capita waste generation (g): </label>
                     </div>
                     <div class="col-xs-6">
                         <input class="form-control space-textbox" onKeyUp="WasteConstruction()" id="Q6Wa7S2"
@@ -1376,9 +1376,7 @@
                 <label class="control-label"><span class="cube">4</span>Does your school recycle any generated waste? <a
                             class="tt"
                             data-tooltip=" In kg/day or kg/month, you can check daily waste generation and then find out how much of it goes for recycling or treatment."
-                            style="position:relative; top:-18px;"><span class="badge">?</span></a><a class="kplink"
-                                                                                                     href="http://www.greenschoolsprogramme.org/knowledge-bank/waste/#recyclingRefuse"
-                                                                                                     target="_blank"> </a></label>
+                            ><span class="badge">?</span></a><a class="kplink" href="http://www.greenschoolsprogramme.org/knowledge-bank/waste/#recyclingRefuse" target="_blank"> </a></label>
                 <div class="form-group">
                     <label class="radio-inline text-gray">
                         <input type="radio" name="Q8Wa1" onClick="WasteGenerated(1)" class="radio" id="Q8Wa1"
@@ -1464,7 +1462,7 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-xs-6">
-                                    <label>Per capita waste generation A: </label>
+                                    <label>Per capita waste generation (a): </label>
                                 </div>
                                 <div class="col-xs-6">
                                     <input class="form-control space-textbox" onKeyUp="solidWaste()" id="Q8Wa1S6"
@@ -1575,7 +1573,7 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-xs-6">
-                                    <label>Per capita waste generation B: </label>
+                                    <label>Per capita waste generation (b): </label>
                                 </div>
                                 <div class="col-xs-6">
                                     <input class="form-control space-textbox" onKeyUp="solidRecyclable1()" id="Q8Wa2S9"
@@ -1630,7 +1628,7 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-xs-6">
-                                    <label>Per capita waste generation C. </label>
+                                    <label>Per capita waste generation (c). </label>
                                 </div>
                                 <div class="col-xs-6">
                                     <input class="form-control space-textbox" onKeyUp="WasteDomestic1()" id="Q8Wa3S4"
@@ -1663,7 +1661,7 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-xs-6">
-                                    <label>Per capita waste generation D: </label>
+                                    <label>Per capita waste generation (d): </label>
                                 </div>
                                 <div class="col-xs-6">
                                     <input class="form-control space-textbox" onKeyUp="EWaste1()" id="Q8Wa4S2"
@@ -1696,7 +1694,7 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-xs-6">
-                                    <label>Per capita waste generation E: </label>
+                                    <label>Per capita waste generation (e): </label>
                                 </div>
                                 <div class="col-xs-6">
                                     <input class="form-control space-textbox" onKeyUp="WasteBiomedical1()" id="Q8Wa5S2"
@@ -1729,7 +1727,7 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-xs-6">
-                                    <label>Per capita waste generation F: </label>
+                                    <label>Per capita waste generation (f): </label>
                                 </div>
                                 <div class="col-xs-6">
                                     <input class="form-control space-textbox" onKeyUp="WasteSanitary1()" id="Q8Wa6S2"
@@ -1740,7 +1738,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label><span class="cube">G.</span>Cc& D Waste</label>
+                            <label><span class="cube">G.</span>C & D Waste</label>
                             <div class="form-group row">
                                 <div class="col-xs-6">
                                     <label>HOW MUCH WASTE DOES YOUR SCHOOL REUSE/RECYCLE? </label>
@@ -1762,7 +1760,7 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-xs-6">
-                                    <label>Per capita waste generation G: </label>
+                                    <label>Per capita waste generation (g): </label>
                                 </div>
                                 <div class="col-xs-6">
                                     <input class="form-control space-textbox" onKeyUp="WasteConstruction1()"
@@ -1845,7 +1843,7 @@
                     </div>
                     <div class="form-group row">
                         <div class="col-xs-6">
-                            <label>Per capita waste generation A: </label>
+                            <label>Per capita waste generation (a): </label>
                         </div>
                         <div class="col-xs-6">
                             <input class="form-control space-textbox" onKeyUp="solidWaste1()" id="Q8Wa1S6" type="number"
@@ -1956,7 +1954,7 @@
                     </div>
                     <div class="form-group row">
                         <div class="col-xs-6">
-                            <label>Per capita waste generation B: </label>
+                            <label>Per capita waste generation (b): </label>
                         </div>
                         <div class="col-xs-6">
                             <input class="form-control space-textbox" onKeyUp="solidRecyclable1()" id="Q8Wa2S9"
@@ -2011,7 +2009,7 @@
                     </div>
                     <div class="form-group row">
                         <div class="col-xs-6">
-                            <label>Per capita waste generation C. </label>
+                            <label>Per capita waste generation (c). </label>
                         </div>
                         <div class="col-xs-6">
                             <input class="form-control space-textbox" onKeyUp="WasteDomestic1()" id="Q8Wa3S4"
@@ -2044,7 +2042,7 @@
                     </div>
                     <div class="form-group row">
                         <div class="col-xs-6">
-                            <label>Per capita waste generation D: </label>
+                            <label>Per capita waste generation (d): </label>
                         </div>
                         <div class="col-xs-6">
                             <input class="form-control space-textbox" onKeyUp="EWaste1()" id="Q8Wa4S2" type="number"
@@ -2077,7 +2075,7 @@
                     </div>
                     <div class="form-group row">
                         <div class="col-xs-6">
-                            <label>Per capita waste generation E: </label>
+                            <label>Per capita waste generation (e): </label>
                         </div>
                         <div class="col-xs-6">
                             <input class="form-control space-textbox" onKeyUp="WasteBiomedical1()" id="Q8Wa5S2"
@@ -2110,7 +2108,7 @@
                     </div>
                     <div class="form-group row">
                         <div class="col-xs-6">
-                            <label>Per capita waste generation F: </label>
+                            <label>Per capita waste generation (f): </label>
                         </div>
                         <div class="col-xs-6">
                             <input class="form-control space-textbox" onKeyUp="WasteSanitary1()" id="Q8Wa6S2"
@@ -2143,7 +2141,7 @@
                     </div>
                     <div class="form-group row">
                         <div class="col-xs-6">
-                            <label>Per capita waste generation G: </label>
+                            <label>Per capita waste generation (g): </label>
                         </div>
                         <div class="col-xs-6">
                             <input class="form-control space-textbox" onKeyUp="WasteConstruction1()" id="Q8Wa7S2"
@@ -3342,6 +3340,18 @@
                         </label>
                     </div>
                 </div>
+                <div class="form-group">
+                    <label class="control-label">Please upload supporting documents:</label>
+                    <br>
+                    • Certificate of disposing e-waste from authorised dealer/dismantler<br>
+                    <br>
+                    <button class="btn uploadbtn upload" data-id="E-waste authorised dealer" data-toggle="modal"
+                            data-target="#airModal" type="button">UPLOAD FILES
+                    </button>
+                    <br>
+                    <br>
+                </div>
+
                 <br>
                 <?php
             }
@@ -3423,7 +3433,7 @@
         <div class="form-group">
             <label class="control-label">Please upload supporting documents:</label>
             <br>
-            • Pictures of burning waste<br>
+            • Pictures of housekeeping staff disposing different types of solid waste<br>
             <br>
             <button class="btn uploadbtn upload" data-id="Buring Waste" data-toggle="modal" data-target="#airModal"
                     type="button">UPLOAD FILES
@@ -3579,17 +3589,6 @@
   </div>
 </div>-->
         <br>
-        <div class="form-group">
-            <label class="control-label">Please upload supporting documents:</label>
-            <br>
-            • Certificate of disposing e-waste from authorised dealer/dismantler<br>
-            <br>
-            <button class="btn uploadbtn upload" data-id="E-waste authorised dealer" data-toggle="modal"
-                    data-target="#airModal" type="button">UPLOAD FILES
-            </button>
-            <br>
-            <br>
-        </div>
         <div class="form-group">
             <label>
                 <h6>Task 6: Choose your Waste Audit Team.</h6>
