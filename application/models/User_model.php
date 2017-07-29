@@ -156,8 +156,8 @@ class User_model extends CI_Model
                 $this->email->subject($subject);
                 $this->email->message($msg);
                 $this->email->send();
-                echo $this->email->print_debugger();
-                die();
+//                echo $this->email->print_debugger();
+//                die();
                 return true;
             } else {
                 return false;
