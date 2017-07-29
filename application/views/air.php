@@ -788,7 +788,10 @@
                 </div>
             </div>
             <div class="form-group row">
-                <div class="col-xs-2"></div>
+                <div class="col-xs-2">
+                    <input type="text" class="form-control space-textbox" placeholder="Total"
+                           style="text-align:center;" readonly=""/>
+                </div>
                 <div class="col-xs-2">
                     <input class="form-control space-textbox" id="Q5A110S2" type="number" min="0" name="Q5A110S2"
                            placeholder="<?php if (isset($data['Q5A110S2'])) echo $data['Q5A110S2'] ?>"
