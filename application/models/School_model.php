@@ -67,24 +67,26 @@ class School_model extends CI_Model {
         if ($this->db->insert('gsp_school', $update)) {
             //Sending Mail To The School
             $insert_id = $this->db->insert_id();
-            $query = $this->db->select('a.*, b.email AS emailfiled, b.password, b.username, c.name AS state_name')
+            $query = $this->db->select('a.*, b.email AS emailfiled, b.password, b.username, c.name AS state_name, d.name AS district_name')
                             ->from('gsp_school AS a')
                             ->join('gsp_user AS b', 'a.userid=b.id', 'left')
                             ->join('states AS c', 'a.state=c.id', 'left')
+                            ->join('cities AS d', 'a.district=d.id', 'left')
                             ->where('a.id', $insert_id)
                             ->get()->row();
             //echo '<pre>'; print_r($query); exit;
             $this->load->library('email');
             $config['mailtype'] = 'html';
             $this->email->initialize($config);
-            $from = "info@studiotesseract.co";
-            $to = $query->schoolemail;
+            $from = "suppor@greenschoolsprogramme.org";
+            $arrMails=array($query->schoolemail, $query->coemail, 'ajanta@cseindia.org', 'ranjita@cseindia.org', 'aditi.sharma@cseindia.org', 'contact@studiotesseract.biz');
+            $to = $arrMails;
             $subject = "GSP Audit Registration";
             $msg = "Dear &nbsp;";
             $msg .= $query->coname. "," . "<br>";
-            $msg .= "Thank you for registering your school'".$query->name."', for the GSP (Green Schools Programme) Audit 2017. Your account has been successfully created.<br><br>";
+            $msg .= "Thank you for registering your school'".$query->name."', for GSP (Green Schools Programme) Audit 2017. Your account has been successfully created.<br><br>";
             $msg .= "To participate in GSP Audit 2017 that will open in July/ August 2017, please remember to save your username and password given below.<br><br>";
-            $msg .= "The launch date of GSP Audit 2017 will be announced at www.greenschoolsprogramme.org, in July 2017.<br><br>";
+//            $msg .= "The launch date of GSP Audit 2017 will be announced at www.greenschoolsprogramme.org, in July 2017.<br><br>";
             $msg .= "URL: http://www.greenschoolsprogramme.org/audit2017 <br><br>";
             $msg .= "Username: " . $query->coemail . "<br><br>";
             $msg .= "Password: " . $query->password . "<br><br>";
@@ -96,6 +98,7 @@ class School_model extends CI_Model {
             $msg .= "Address Line 1: " . $query->address1 . "<br><br>";
             $msg .= "Address Line 2: " . $query->address2 . "<br><br>";
             $msg .= "State: " . $query->state_name. "<br><br>";
+            $msg .= "District: " . $query->district_name. "<br><br>";
             $msg .= "City: " . $query->city . "<br><br>";
             $msg .= "Pincode: " . $query->pincode . "<br><br>";
             $msg .= "Land Line No: "."91 - ".$query->std." - ".$query->telephone . "<br><br>";
@@ -105,8 +108,8 @@ class School_model extends CI_Model {
             $msg .= "GSP Coordinator's Email: " . $query->coemail . "<br><br>";
             $msg .= "Mobile Number: " . $query->comobile . "<br><br>";
             $this->email->to($to);
-            $this->email->cc($query->coemail);
-            $this->email->from($from, "GSP Team");
+            //$this->email->cc($query->coemail);
+            $this->email->from($from, "Green Schools Programme");
             $this->email->subject($subject);
             $this->email->message($msg);
             $this->email->send();
