@@ -44,13 +44,13 @@ class User_model extends CI_Model
         );
         $this->db->insert('gsp_user', $update);//insert if does not exist
 
-        $query = $this -> db
-                       -> select('id')
-                       -> from('gsp_user')
-                       -> where('email', $argPost['email'])
-                       -> get();
-        $row = $query -> row();
-        return $row -> id;
+        $query = $this->db
+            ->select('id')
+            ->from('gsp_user')
+            ->where('email', $argPost['email'])
+            ->get();
+        $row = $query->row();
+        return $row->id;
     }
 
     public function Login($argPost)
@@ -135,23 +135,29 @@ class User_model extends CI_Model
             );
             $this->db->where('email', $this->input->post('val'));
             if ($this->db->update('gsp_user', $arr)) {
+                $query = $this->db->select('*')
+                    ->from('gsp_user')
+                    ->where('email', $this->input->post('val'))
+                    ->get()->row();
+//                echo '<pre>';                print_r($query); exit;
+
                 $this->load->library('email');
                 $config['mailtype'] = 'html';
                 $this->email->initialize($config);
-                $from = "info@greenschoolsprogramme.org";
-                $to = $this->input->post('email');
+                $from = "support@greenschoolsprogramme.org";
+                $to = $query->email;
                 $subject = "GSP Forget Password";
                 $msg = "Dear &nbsp;";
-                $msg .= $this->input->post('email') . "," . "<br>";
-                $msg .= "Yor new password for GSP Login.<br>";
-                $msg .= "New Passowd:<br>";
-                $msg .= $varNewPass . "<br>";
+                $msg .= $query->username . "," . "<br><br>";
+                $msg .= "Yor new password for GSP Login.<br><br>";
+                $msg .= $varNewPass . "<br><br>";
                 $this->email->to($to);
-                $this->email->from($from, "GSP Team");
+                $this->email->from($from, "Green Schools Programme");
                 $this->email->subject($subject);
                 $this->email->message($msg);
                 $this->email->send();
-
+                echo $this->email->print_debugger();
+                die();
                 return true;
             } else {
                 return false;
