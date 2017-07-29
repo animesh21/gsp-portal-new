@@ -762,17 +762,6 @@
                            min="0" name="Q5A10S4"
                            placeholder="<?php if (isset($data['Q5A10S4'])) echo $data['Q5A10S4'] ?>"
                            value="<?php echo set_value('Q5A10S4'); ?>" readonly/>
-<<<<<<< Updated upstream
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-xs-2">
-                    <input type="text" class="form-control space-textbox" placeholder="Total"
-                           style="text-align:center;" readonly=""/>
-                </div>
-                <div class="col-xs-2">
-                    <input class="form-control space-textbox" id="Q5A110S2" type="number" min="0" name="Q5A110S2"
-=======
         </div>
       </div>
       <div class="form-group row">
@@ -780,7 +769,6 @@
           </div>
         <div class="col-xs-2">
 		  <input class="form-control space-textbox" id="Q5A110S2" type="number" min="0" name="Q5A110S2"
->>>>>>> Stashed changes
                            placeholder="<?php if (isset($data['Q5A110S2'])) echo $data['Q5A110S2'] ?>"
                            value="<?php echo set_value('Q5A110S2'); ?>" readonly/>
         </div>
@@ -843,7 +831,6 @@
             else
                 echo 'style="display:none;"';
             ?>>
-<<<<<<< Updated upstream
             <label class="control-label"><span class="cube">3(a)</span>Provide details of school-owned motorised
                 vehicles
                 <a class="tt" data-tooltip="Schools who use a combination of school-owned and operator-owned vehicles have to upload information only about school-owned vehicles. Do not add any personal vehicles.">
@@ -882,36 +869,6 @@
                 </div>
                 <div class="col-xs-2">
                     <input class="form-control space-textbox" onkeyup="details()" id="b1" type="number" min="0"
-=======
-      <label class="control-label"><span class="cube">3(a)</span>Provide details of school-owned motorised
-      vehicles <a class="tt" data-tooltip="Schools who use a combination of school-owned and operator-owned vehicles have to upload information only about school-owned vehicles. Do not add any personal vehicles."><span class="badge">?</span></a></label>
-      <div class="form-group row">
-        <div class="col-xs-2">
-          <label>Vehicle Details</label>
-        </div>
-        <div class="col-xs-2">
-          <label>Buses</label>
-        </div>
-        <div class="col-xs-2">
-          <label>Cars</label>
-        </div>
-        <div class="col-xs-2">
-          <label>Vans / SUVs</label>
-        </div>
-        <div class="col-xs-2">
-          <label>Others</label>
-        </div>
-        <div class="col-xs-2">
-          <label>Total</label>
-        </div>
-      </div>
-      <div class="form-group row">
-        <div class="col-xs-2">
-          <label>No. of vehicles</label>
-        </div>
-        <div class="col-xs-2">
-          <input class="form-control space-textbox" onkeyup="details()" id="b1" type="number" min="0"
->>>>>>> Stashed changes
                            name="Q6A2S1B1" placeholder="<?php if (isset($data['Q6A2S1B1'])) echo $data['Q6A2S1B1'] ?>"
                            value="<?php echo set_value('Q6A2S1B1'); ?>"/>
         </div>
@@ -1027,23 +984,6 @@
           <input class="form-control space-textbox" onkeyup="details()" id="t4" type="number" min="0"
                            name="Q6A2S1T4" placeholder="<?php if (isset($data['Q6A2S1T4'])) echo $data['Q6A2S1T4'] ?>"
                            value="<?php echo set_value('Q6A2S1T4'); ?>" readonly/>
-<<<<<<< Updated upstream
-                </div>
-            </div>
-            <div class="clearfix">&nbsp;</div>
-            <div class="form-group row">
-                <div class="col-xs-2">
-                    <label>Authorised parking available
-                        <a class="tt"
-                           data-tooltip="For parking area, give the number of vehicles (Of the total) that have designated parking areas."
-                        >
-                            <span class="badge">?</span>
-                        </a>
-                    </label>
-                </div>
-                <div class="col-xs-2">
-                    <input class="form-control space-textbox" onkeyup="details()" id="b5" type="number" min="0"
-=======
         </div>
       </div>
       <div class="clearfix">&nbsp;</div>
@@ -1053,7 +993,6 @@
         </div>
         <div class="col-xs-2">
           <input class="form-control space-textbox" onkeyup="details()" id="b5" type="number" min="0"
->>>>>>> Stashed changes
                            name="Q6A2S1B5" placeholder="<?php if (isset($data['Q6A2S1B5'])) echo $data['Q6A2S1B5'] ?>"
                            value="<?php echo set_value('Q6A2S1B5'); ?>"/>
         </div>
@@ -1141,23 +1080,6 @@
     ?>
     <label class="control-label"><span class="cube">3(b)</span>Specify the type of fuel used by your school’s vehicles: <a class="tt" data-tooltip="The below is an indicative list of type of vehicles.  If the school has other than these vehicles, please provide details in ‘Other vehicles’ section."><span
                     class="badge">?</span></a></label>
-<<<<<<< Updated upstream
-    </label>
-    <table class="table">
-        <tr class="text-center">
-            <td>Type of vehicles</td>
-            <td>Diesel</td>
-            <td>Petrol</td>
-            <td>LPG</td>
-            <td>CNG</td>
-            <td>Hybrid</td>
-            <td>Electric</td>
-            <td>Bio Fuel</td>
-        </tr>
-        <tr>
-            <td>Buses</td>
-            <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3D1"
-=======
     <table class="table table-bordered">
       <tr class="text-center">
         <td>Type of vehicles</td>
@@ -1172,7 +1094,6 @@
       <tr>
         <td>Buses</td>
         <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3D1"
->>>>>>> Stashed changes
                        type="number" min="0" name="Q6A2S3D1"
                        placeholder="<?php if (isset($data['Q6A2S3D1'])) echo $data['Q6A2S3D1'] ?>"
                        value="<?php echo set_value('Q6A2S3D1'); ?>"/></td>
@@ -1406,14 +1327,7 @@ else
                     class="badge">?</span></a> <a class="kplink"
                                                   href="http://www.greenschoolsprogramme.org/knowledge-bank/air/#publicTransport"
                                                   target="_blank"> </a></label>
-<<<<<<< Updated upstream
-    <div class="form-group row">
-        <label class="control-label"><span class="cube">A</span> Sustainable Motorised Vehicles </label>
 
-    </div>
-    <div class="form-group row">
-=======
-      
       <div class="form-group row">
         <label class="control-label"><span class="cube">a</span> Sustainable Motorised Vehicles </label>
       </div>
@@ -1423,7 +1337,6 @@ else
            value="<?php if (isset($other['Q4G1S3'])) if ($other['Q4G1S3']) echo $other['Q4G1S3']; ?>"/>
       <script></script>
       <div class="form-group row">
->>>>>>> Stashed changes
         <div class="col-xs-3">
           <label>Mode of transport</label>
         </div>
@@ -1439,7 +1352,6 @@ else
         <div class="col-xs-2">
           <label>Total</label>
         </div>
-<<<<<<< Updated upstream
     </div>
     <input type="hidden" id="Q4G4S3"
            value="<?php if (isset($other['Q4G4S3'])) if ($other['Q4G4S3']) echo $other['Q4G4S3']; ?>"/>
@@ -1447,10 +1359,8 @@ else
            value="<?php if (isset($other['Q4G1S3'])) if ($other['Q4G1S3']) echo $other['Q4G1S3']; ?>"/>
     <script></script>
     <div class="form-group row">
-=======
       </div>
 	  <div class="form-group row">
->>>>>>> Stashed changes
         <div class="col-xs-3">
           <label>School bus</label>
         </div>
@@ -1629,7 +1539,6 @@ else
       </div>
 	  <div class="form-group row">
         <div class="col-xs-3">
-<<<<<<< Updated upstream
             <label>Mode of transport</label>
         </div>
         <div class="col-xs-2">
@@ -1649,15 +1558,12 @@ else
     <div class="form-group row">
         <div class="col-xs-3">
             <label>Personal four-wheeler</label>
-=======
-          <label>Mode of transport</label>
         </div>
         <div class="col-xs-2">
           <label>Students</label>
         </div>
         <div class="col-xs-2">
           <label>Teaching Staff</label>
->>>>>>> Stashed changes
         </div>
         <div class="col-xs-2">
           <label>Non-Teaching Staff</label>
@@ -1723,7 +1629,6 @@ else
                    placeholder="<?php if (isset($data['Q7A8S4'])) echo $data['Q7A8S4'] ?>"
                    value="<?php echo set_value('Q7A8S4'); ?>" readonly/>
         </div>
-<<<<<<< Updated upstream
     </div>
 
     <div class="form-group row">
@@ -1748,13 +1653,6 @@ else
     </div>
 
     <div class="form-group row">
-=======
-      </div>
-      <div class="form-group row">
-        <label class="control-label"><span class="cube">c</span>Non-Polluting Mode</label>
-      </div>
-	  <div class="form-group row">
->>>>>>> Stashed changes
         <div class="col-xs-3">
           <label>Mode of transport</label>
         </div>
@@ -1887,18 +1785,10 @@ else
         </div>
       </div>
     </div>
-<<<<<<< Updated upstream
-</div>
-
-<div class="clearfix">&nbsp;</div>
-<div class="form-group">
-    <label class="control-label"><h6>Task 5: How good is the air you breathe in your school? <a class="tt"
-=======
     <div class="clearfix">&nbsp;</div>
     <div class="form-group">
       <label class="control-label">
       <h6>Task 5: How good is the air you breathe in your school? <a class="tt"
->>>>>>> Stashed changes
                                                                                                 data-tooltip="The teacher/coordinator in the team should ask individual class monitors to find out the number of students suffering from asthma, bronchitis and other respiratory-related issues. Record the number in the field given below."><span
                         class="badge">?</span></a></h6>
       </label>
