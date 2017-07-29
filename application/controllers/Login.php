@@ -44,8 +44,8 @@ class Login extends CI_Controller {
             $vals = array(
 //                'img_path' => './uploads/',
 //                'img_url' => 'http://studio-tesseract.co/GSP/uploads/',
-                'img_path' => './audit2017/uploads/captcha/',
-                'img_url' => 'http://www.greenschoolsprogramme.org/audit2017/uploads/captcha/',                
+                'img_path' => './uploads/',
+                'img_url' => 'http://www.greenschoolsprogramme.org/uploads/',
                 'img_width' => '230',
                 'img_height' => 50,
                 'expiration' => 3600,
