@@ -44,8 +44,8 @@ class Login extends CI_Controller {
             $vals = array(
 //                'img_path' => './uploads/',
 //                'img_url' => 'http://studio-tesseract.co/GSP/uploads/',
-                'img_path' => './audit2017/uploads/captcha/',
-                'img_url' => 'http://www.greenschoolsprogramme.org/audit2017/uploads/captcha/',
+                'img_path' => './uploads/',
+                'img_url' => 'http://localhost/gsp-portal-new/uploads/',
                 'img_width' => '230',
                 'img_height' => 50,
                 'expiration' => 3600,
@@ -64,15 +64,16 @@ class Login extends CI_Controller {
             $userDetails = array(
                 'email' => $details['coemail'],
                 'username' => $details['name'],
-                'Password' => $pass
+                'Password' => strtolower($pass)
             );
 
             $user = $this->User_model->CreateUser($userDetails);
             $details['userid'] = $user;
-            $details['pass'] = $pass;
+            $details['pass'] = strtolower($pass);
             $user = $this->School_model->RegisterUser($details);
             if (isset($user)) {
-                $this->session->set_flashdata('success', 'You have successfully registered your school for the GSP Audit. Kindly add support@greenschoolsprogramme.org to your Contact list so that emails from GSP do not go into your spam box. Good luck! GSP Team'.'<a href="'.base_url('login').'">Login Page</a>');
+               /* $this->session->set_flashdata('success', 'You have successfully registered your school for the GSP Audit. Kindly add support@greenschoolsprogramme.org to your Contact list so that emails from GSP do not go into your spam box. Good luck! GSP Team'.'<a href="'.base_url('login').'">Login Page</a>');*/
+			   redirect(base_url('login/welcome'), 'refresh');
             } else {
                 $this->session->set_flashdata('error', 'There is an error occured creating your account !');
             }
@@ -129,6 +130,10 @@ class Login extends CI_Controller {
         echo json_encode($status);
 
     }
+	public function welcome(){
+	   $data['title']='Green School';
+	   $this->load->view('welcome-message', $data);
+	}
 }
 
 ?>
