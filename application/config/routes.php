@@ -54,3 +54,4 @@ $route['404_override'] = '';
 $route['admin']='admin/login';
 $route['translate_uri_dashes'] = FALSE;
 $route['admin/Registrations/(:num)'] = "admin/Registrations/setUser/$1";
+$route['register']='login/register';
