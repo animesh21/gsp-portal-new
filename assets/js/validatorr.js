@@ -478,8 +478,9 @@ $(document).ready(function(e){
     	{
     		var val = parseInt(this.value + e.key);
          	var total = parseInt($('#Q4G1S3').val());
+         	console.log('Value of Q4G1S3: ' + total);
          	console.log(total);
-         	console.log(val)
+         	console.log(val);
          //debugger;
     
     		if (val > total){
@@ -2295,9 +2296,9 @@ function computePercent()
 			 if(element1 >= element2)
 			 {	
 			 	if(!isNaN(value))
-			 		$('#'+id3).val(value);
+			 		$('#'+id3).val(value.toFixed(2));
 			 	else
-			 		$('#'+id3).val(0);		
+			 		$('#'+id3).val(0);
 			 }
 			else
 				alert("'Area of openings' must be less then 'Area of floor'");

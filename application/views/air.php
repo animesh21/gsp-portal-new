@@ -1,4 +1,16 @@
 <?php $this->load->view('header'); ?>
+
+<style>
+    .table>tbody>tr>td,
+    .table>tbody>tr>th,
+    .table>tfoot>tr>td,
+    .table>tfoot>tr>th,
+    .table>thead>tr>td,
+    .table>thead>tr>th{
+        border-top:none;
+    }
+</style>
+
 <div class="container">
     <div class="content-form">
         <div class="log-nav">
@@ -1103,7 +1115,7 @@
            data-tooltip="The below is an indicative list of type of vehicles.  If the school has other than these vehicles, please provide details in ‘Other vehicles’ section."><span
                     class="badge">?</span></a></label>
     </label>
-    <table class="table table-bordered">
+    <table class="table">
         <tr class="text-center">
             <td>Type of vehicles</td>
             <td>Diesel</td>
