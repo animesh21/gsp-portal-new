@@ -1,22 +1,11 @@
 <?php $this->load->view('header'); ?>
-
-<style>
-    .table > tbody > tr > td,
-    .table > tbody > tr > th,
-    .table > tfoot > tr > td,
-    .table > tfoot > tr > th,
-    .table > thead > tr > td,
-    .table > thead > tr > th {
-        border-top: none;
-    }
-</style>
-
 <div class="container">
     <div class="content-form">
         <div class="log-nav">
             <div class="welcome">Welcome, <span
                         style="font-weight:bold"><?php echo $this->session->userdata('USERNAME'); ?></span></div>
             <ul>
+                <!--<li><a href="http://www.greenschoolsprogramme.org/GSP-Audit2016-Questions.pdf" target="_blank" onclick="_gaq.push([\" _trackevent\",\"download\",\"pdf\",this.href])"=""><img src="http://www.greenschoolsprogramme.org/audit2016/images/pdf-icon16.png"> Audit Questionnaire</a> |</li>-->
                 <li><a href="<?php echo base_url('logout'); ?>">Logout</a></li>
                 <li>|</li>
                 <li><a class="lptext" title="Change Password Form" data-toggle="modal" data-target="#ChangePass"
@@ -435,8 +424,7 @@
                 higher secondary. If your school is up to Standard X only, then, at your discretion, you can add a class
                 to any tier. <br>
                 5. This activity is for all schools (non-air-conditioned buildings as well as air-conditioned
-                buildings).
-            </div>
+                buildings). </div>
             <div class="clearfix">&nbsp;</div>
             <div class="form-group">
                 <label class="control-label"><span class="cube">1</span>How many classrooms does your school
@@ -452,6 +440,7 @@
          -->
             </div>
         </div>
+        <div class="clearfix">&nbsp;</div>
         <div class="form-group" id="Ratio">
             <label class="control-label"><span class="cube">2</span>To calculate the Window-floor ratio of classrooms in
                 your school, please fill the table below:</label>
@@ -767,9 +756,7 @@
                 </div>
             </div>
             <div class="form-group row">
-                <div class="col-xs-2"><input type="text" class="form-control space-textbox" placeholder="Total"
-                                             style="text-align:center;" readonly=""/>
-                </div>
+                <div class="col-xs-2"></div>
                 <div class="col-xs-2">
                     <input class="form-control space-textbox" id="Q5A110S2" type="number" min="0" name="Q5A110S2"
                            placeholder="<?php if (isset($data['Q5A110S2'])) echo $data['Q5A110S2'] ?>"
@@ -783,6 +770,7 @@
                 <div class="col-xs-2"></div>
             </div>
         </div>
+        <div class="clearfix">&nbsp;</div>
         <div class="form-group">
             <label>
                 <h6> Task 3: How eco-friendly are the vehicles in your school?</h6>
@@ -790,6 +778,7 @@
             <p> In this section, you will maintain a record of vehicles used by your school. Two critical parameters
                 indicate if your vehicles are eco-friendly. One—type of fuel—is given in the table below.</p>
         </div>
+        <div class="clearfix">&nbsp;</div>
         <div class="form-group">
             <label class="control-label"><span class="cube">3</span>What is the ownership of the vehicles used by your
                 school? Please choose what is applicable.</label>
@@ -821,9 +810,10 @@
                 <label>
                     <input type="radio" id="Q6A1" required onclick="Air(2)" name="Q6A1"
                            value="<?php echo set_value('Q6A1', 5) ?>" <?php if (isset($data['Q6A1'])) echo $data['Q6A1'] == 5 ? "checked" : "" ?>>
-                    Hired vehicles (JNV schools) </label>
+                    Hired-vehicles (JNV schools) </label>
             </div>
         </div>
+        <div class="clearfix">&nbsp;</div>
         <div class="form-group" id="vehicle"
             <?php
             if (isset($data['Q6A1']))
@@ -835,30 +825,19 @@
                 echo 'style="display:none;"';
             ?>>
             <label class="control-label"><span class="cube">3(a)</span>Provide details of school-owned motorised
-                vehicles
-                <a class="tt"
-                   data-tooltip="Schools who use a combination of school-owned and operator-owned vehicles have to upload information only about school-owned vehicles. Do not add any personal vehicles.">
-                    <span class="badge">
-                        ?
-                    </span>
-                </a>
-            </label>
-
+                vehicles</label>
             <div class="form-group row">
                 <div class="col-xs-2">
                     <label>Vehicle Details</label>
                 </div>
                 <div class="col-xs-2">
                     <label>Buses</label>
-
                 </div>
                 <div class="col-xs-2">
                     <label>Cars</label>
-
                 </div>
                 <div class="col-xs-2">
-                    <label>Vans/SUVs</label>
-
+                    <label>Vans</label>
                 </div>
                 <div class="col-xs-2">
                     <label>Others</label>
@@ -993,9 +972,7 @@
             <div class="clearfix">&nbsp;</div>
             <div class="form-group row">
                 <div class="col-xs-2">
-                    <label>Authorised parking available <a class="tt"
-                                                           data-tooltip="For parking area, give the number of vehicles (Of the total) that have designated parking areas."><span
-                                    class="badge">?</span></a></label>
+                    <label>Authorised parking available</label>
                 </div>
                 <div class="col-xs-2">
                     <input class="form-control space-textbox" onkeyup="details()" id="b5" type="number" min="0"
@@ -1025,35 +1002,36 @@
             </div>
             <div class="form-group row">
                 <div class="col-xs-2">
-                    <label>Annual road worthiness certificate (Yes / No)</label>
+                    <label>Annual road worthiness certificate</label>
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" onkeyup="details()" id="b6" type="text" min="0"
+                    <input class="form-control space-textbox" onkeyup="details()" id="b6" type="number" min="0"
                            name="Q6A2S1B6" placeholder="<?php if (isset($data['Q6A2S1B6'])) echo $data['Q6A2S1B6'] ?>"
                            value="<?php echo set_value('Q6A2S1B6'); ?>"/>
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" onkeyup="details()" id="c6" type="text" min="0"
+                    <input class="form-control space-textbox" onkeyup="details()" id="c6" type="number" min="0"
                            name="Q6A2S1C6" placeholder="<?php if (isset($data['Q6A2S1C6'])) echo $data['Q6A2S1C6'] ?>"
                            value="<?php echo set_value('Q6A2S1C6'); ?>"/>
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" onkeyup="details()" id="v6" type="text" min="0"
+                    <input class="form-control space-textbox" onkeyup="details()" id="v6" type="number" min="0"
                            name="Q6A2S1V6" placeholder="<?php if (isset($data['Q6A2S1V6'])) echo $data['Q6A2S1V6'] ?>"
                            value="<?php echo set_value('Q6A2S1V6'); ?>"/>
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" onkeyup="details()" id="o6" type="text" min="0"
+                    <input class="form-control space-textbox" onkeyup="details()" id="o6" type="number" min="0"
                            name="Q6A2S1O6" placeholder="<?php if (isset($data['Q6A2S1O6'])) echo $data['Q6A2S1O6'] ?>"
                            value="<?php echo set_value('Q6A2S1O6'); ?>"/>
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" onkeyup="details()" id="t6" type="text" min="0"
+                    <input class="form-control space-textbox" onkeyup="details()" id="t6" type="number" min="0"
                            name="Q6A2S1T6" placeholder="<?php if (isset($data['Q6A2S1T6'])) echo $data['Q6A2S1T6'] ?>"
-                           value="<?php echo set_value('Q6A2S1T6'); ?>"/>
+                           value="<?php echo set_value('Q6A2S1T6'); ?>" readonly/>
                 </div>
             </div>
         </div>
+        <div class="clearfix">&nbsp;</div>
         <?php
         if (isset($data['Q6A1']))
             if ($data['Q6A1'] == 1 || $data['Q6A1'] == 2)
@@ -1064,20 +1042,17 @@
             echo '<div class="form-group" id="vehicle1" style="display:none;">';
 
         ?>
-        <div class="form-group">
-            <label class="control-label">Upload supporting documents</label>
-            <div class="clearfix">&nbsp;</div>
-            • PUC certificates of not more than five buses.<br/>
-            Uploaded files must be in one of the following formats: PDF Document (.pdf), Word Document (.doc, .docx),
-            Image
-            File (.jpg, .jpeg). File size per document should not exceed 500 KB.
-            <div class="clearfix">&nbsp;</div>
-            <div class="clearfix">&nbsp;</div>
-            <button class="btn uploadbtn upload" data-id="Fuels" data-toggle="modal" data-target="#airModal"
-                    type="button"> UPLOAD FILES
-            </button>
-            <br>
-        </div>
+        <label class="control-label">Upload supporting documents</label>
+        <div class="clearfix">&nbsp;</div>
+        • Fuel bills<br>
+        • Picture of school owned vehicles<br>
+        Uploaded files must be in one of the following formats: PDF Document (.pdf), Word Document (.doc, .docx), Image
+        File (.jpg, .jpeg). File size per document should not exceed 500 KB.
+        <div class="clearfix">&nbsp;</div>
+        <div class="clearfix">&nbsp;</div>
+        <button class="btn uploadbtn upload" data-id="Fuels" data-toggle="modal" data-target="#airModal" type="button"> UPLOAD FILES </button>
+        <br>
+        <div class="clearfix">&nbsp;</div>
         <?php
         if (isset($data['Q6A1']))
             if ($data['Q6A1'] == 1 || $data['Q6A1'] == 2)
@@ -1086,12 +1061,12 @@
                 echo '<div class="form-group" id="vehicle2">';
         else
             echo '<div class="form-group" id="vehicle2" style="display:none;">';
+
         ?>
-        <label class="control-label"><span class="cube">3(b)</span>Specify the type of fuel used by your school’s
-            vehicles: <a class="tt"
-                         data-tooltip="The below is an indicative list of type of vehicles.  If the school has other than these vehicles, please provide details in ‘Other vehicles’ section."><span
+        <label class="control-label"><span class="cube">3(b)</span>Specify the type of fuel used by your school’s vehicles: <a class="tt"
+                                                                                                                               data-tooltip="The below is an indicative list of type of vehicles.  If the school has other than these vehicles, please provide details in ‘Other vehicles’ section."><span
                         class="badge">?</span></a></label>
-        <table class="table">
+        <table class="table table-bordered">
             <tr class="text-center">
                 <td>Type of vehicles</td>
                 <td>Diesel</td>
@@ -1258,21 +1233,6 @@
                            value="<?php echo set_value('Q6A2S3B5'); ?>" readonly/></td>
             </tr>
         </table>
-        <div class="form-group">
-            <label class="control-label">Upload supporting documents</label>
-            <div class="clearfix">&nbsp;</div>
-            • Fuel bills<br>
-            • Picture of school owned vehicles<br>
-            Uploaded files must be in one of the following formats: PDF Document (.pdf), Word Document (.doc, .docx),
-            Image
-            File (.jpg, .jpeg). File size per document should not exceed 500 KB.
-            <div class="clearfix">&nbsp;</div>
-            <div class="clearfix">&nbsp;</div>
-            <button class="btn uploadbtn upload" data-id="Fuels" data-toggle="modal" data-target="#airModal"
-                    type="button"> UPLOAD FILES
-            </button>
-            <br/><br/>
-        </div>
         <?php
         if (isset($data['Q6A1']))
             if ($data['Q6A1'] == 1 || $data['Q6A1'] == 2)
@@ -1284,20 +1244,18 @@
 
         ?>
         <label class="control-label"><span class="cube">3(c)</span>IS CNG AVAILABLE IN YOUR STATE?</label>
-        <ul class="list-inline">
-            <li>
-                <label>
-                    <input type="radio" name="Q6A3" id="Q6A3Answer" onclick="AvailableState(1)"
-                           value="<?php echo set_value('Q6A3', 'Y') ?>" <?php if (isset($data['Q6A3'])) echo $data['Q6A3'] == 'Y' ? "checked" : "" ?>>
-                    Yes </label>
-            </li>
-            <li>
-                <label>
-                    <input type="radio" name="Q6A3" id="Q6A3Answer" onclick="AvailableState(2)"
-                           value="<?php echo set_value('Q6A3', 'N') ?>" <?php if (isset($data['Q6A3'])) echo $data['Q6A3'] == 'N' ? "checked" : "" ?>>
-                    No </label>
-            </li>
-        </ul>
+        <div class="radio">
+            <label>
+                <input type="radio" name="Q6A3" id="Q6A3Answer" onclick="AvailableState(1)"
+                       value="<?php echo set_value('Q6A3', 'Y') ?>" <?php if (isset($data['Q6A3'])) echo $data['Q6A3'] == 'Y' ? "checked" : "" ?>>
+                Yes </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="Q6A3" id="Q6A3Answer" onclick="AvailableState(2)"
+                       value="<?php echo set_value('Q6A3', 'N') ?>" <?php if (isset($data['Q6A3'])) echo $data['Q6A3'] == 'N' ? "checked" : "" ?>>
+                No </label>
+        </div>
         <div class="clearfix">&nbsp;</div>
         <?php
         if (isset($data['Q6A3']))
@@ -1309,32 +1267,27 @@
             echo '<div class="form-group" id="Q6A3S1" style="display:none;">';
 
         ?>
-        <label class="control-label"><span class="cube">3(c)a</span>IS CNG AVAILABLE IN YOUR AREA?</label>
-        <ul class="list-inline">
-            <li>
-                <label>
-                    <input type="radio" name="Q6A4S1" id="Q6A3S1Answer"
-                           value="<?php echo set_value('Q6A4S1', 'Y') ?>" <?php if (isset($data['Q6A4S1'])) echo $data['Q6A4S1'] == 'Y' ? "checked" : "" ?>>
-                    Yes </label>
-            </li>
-            <li>
-                <label>
-                    <input type="radio" name="Q6A4S1" id="Q6A3S1Answer"
-                           value="<?php echo set_value('Q6A4S1', 'N') ?>" <?php if (isset($data['Q6A4S1'])) echo $data['Q6A4S1'] == 'N' ? "checked" : "" ?>>
-                    No </label>
-            </li>
-        </ul>
+        <label class="control-label"><span class="cube">3(c)A</span>IS CNG AVAILABLE IN YOUR AREA?</label>
+        <div class="radio">
+            <label>
+                <input type="radio" name="Q6A4S1" id="Q6A3S1Answer"
+                       value="<?php echo set_value('Q6A4S1', 'Y') ?>" <?php if (isset($data['Q6A4S1'])) echo $data['Q6A4S1'] == 'Y' ? "checked" : "" ?>>
+                Yes </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="Q6A4S1" id="Q6A3S1Answer"
+                       value="<?php echo set_value('Q6A4S1', 'N') ?>" <?php if (isset($data['Q6A4S1'])) echo $data['Q6A4S1'] == 'N' ? "checked" : "" ?>>
+                No </label>
+        </div>
         <div class="clearfix">&nbsp;</div>
         <div class="form-group">
             <label>
                 <h6> Task 4: How do you travel to school every day? </h6>
             </label>
-            <p> To know how the students, teachers and other staff in your school travel daily, the teacher/co-ordinator
-                in the
-                team should ask individual class monitors to record the commuting practices of his/her classmates and
-                the
-                teachers, and forward the data to the audit team. After completing the survey, provide the compiled
-                information
+            <p> To know how the students, teachers and other staff in your school travel daily, the teacher/co-ordinator in the
+                team should ask individual class monitors to record the commuting practices of his/her classmates and the
+                teachers, and forward the data to the audit team. After completing the survey, provide the compiled information
                 below.</p>
         </div>
         <div class="form-group">
@@ -1344,15 +1297,6 @@
                             class="badge">?</span></a> <a class="kplink"
                                                           href="http://www.greenschoolsprogramme.org/knowledge-bank/air/#publicTransport"
                                                           target="_blank"> </a></label>
-
-            <div class="form-group row">
-                <label class="control-label"><span class="cube">a</span> Sustainable Motorised Vehicles </label>
-            </div>
-            <input type="hidden" id="Q4G4S3"
-                   value="<?php if (isset($other['Q4G4S3'])) if ($other['Q4G4S3']) echo $other['Q4G4S3']; ?>"/>
-            <input type="hidden" id="Q4G1S3"
-                   value="<?php if (isset($other['Q4G1S3'])) if ($other['Q4G1S3']) echo $other['Q4G1S3']; ?>"/>
-            <script></script>
             <div class="form-group row">
                 <div class="col-xs-3">
                     <label>Mode of transport</label>
@@ -1370,13 +1314,14 @@
                     <label>Total</label>
                 </div>
             </div>
+            <div class="form-group row">
+                <label class="control-label"><span class="cube">A</span> Sustainable Motorised Vehicles </label>
+            </div>
             <input type="hidden" id="Q4G4S3"
                    value="<?php if (isset($other['Q4G4S3'])) if ($other['Q4G4S3']) echo $other['Q4G4S3']; ?>"/>
             <input type="hidden" id="Q4G1S3"
                    value="<?php if (isset($other['Q4G1S3'])) if ($other['Q4G1S3']) echo $other['Q4G1S3']; ?>"/>
             <script></script>
-            <div class="form-group row">
-            </div>
             <div class="form-group row">
                 <div class="col-xs-3">
                     <label>School bus</label>
@@ -1552,26 +1497,8 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label class="control-label"><span class="cube">b</span>Private Vehicles</label>
+                <label class="control-label"><span class="cube">B</span>Private Vehicles</label>
             </div>
-            <div class="form-group row">
-                <div class="col-xs-3">
-                    <label>Mode of transport</label>
-                </div>
-                <div class="col-xs-2">
-                    <label>Students</label>
-                </div>
-                <div class="col-xs-2">
-                    <label>Teaching Staff</label>
-                </div>
-                <div class="col-xs-2">
-                    <label>Non-Teaching Staff</label>
-                </div>
-                <div class="col-xs-2">
-                    <label>Total</label>
-                </div>
-            </div>
-
             <div class="form-group row">
                 <div class="col-xs-3">
                     <label>Personal four-wheeler</label>
@@ -1630,28 +1557,9 @@
                            value="<?php echo set_value('Q7A8S4'); ?>" readonly/>
                 </div>
             </div>
-
             <div class="form-group row">
                 <label class="control-label"><span class="cube">C</span>Non Polluting Mode</label>
             </div>
-            <div class="form-group row">
-                <div class="col-xs-3">
-                    <label>Mode of transport</label>
-                </div>
-                <div class="col-xs-2">
-                    <label>Students</label>
-                </div>
-                <div class="col-xs-2">
-                    <label>Teaching Staff</label>
-                </div>
-                <div class="col-xs-2">
-                    <label>Non-Teaching Staff</label>
-                </div>
-                <div class="col-xs-2">
-                    <label>Total</label>
-                </div>
-            </div>
-
             <div class="form-group row">
                 <div class="col-xs-3">
                     <label>Bicycle</label>
@@ -1776,38 +1684,36 @@
                                 class="badge">?</span></a></h6>
             </label>
             <p> The starting point of air quality monitoring is to first study if an area has an air pollution problem.
-                Monitoring helps in assessing the level of pollution in relation to the ambient air quality standards.
-                Standards
+                Monitoring helps in assessing the level of pollution in relation to the ambient air quality standards. Standards
                 are a regulatory measure to set the target for pollution reduction and achieve clean air.</p>
         </div>
+        <div class="clearfix">&nbsp;</div>
         <div class="form-group">
-            <label class="control-label"> <span class="cube">5</span>How many students suffer from respiratory problems?
-                <a
+            <label class="control-label"> <span class="cube">5</span>How many students suffer from respiratory problems? <a
                         class="kplink" href="http://www.greenschoolsprogramme.org/knowledge-bank/air/#pmLevels"
                         target="_blank"> </a></label>
             <input type="number" min="0" name="Q8A1" id="Q8A1" class="form-control"
                    placeholder="<?php if (isset($data['Q8A1'])) echo $data['Q8A1'] ?>"
                    value="<?php echo set_value('Q8A1'); ?>"/>
         </div>
+        <div class="clearfix">&nbsp;</div>
         <div class="form-group">
-            <label class="control-label"> <span class="cube">6</span>Does the school laboratory have air quality
-                monitoring
+            <label class="control-label"> <span class="cube">6</span>Does the school laboratory have air quality monitoring
                 equipment? </label>
-            <ul class="list-inline">
-                <li>
-                    <label>
-                        <input type="radio" onclick="ComputeLab(1)" id="Q9A1" required name="Q9A1"
-                               value="<?php echo set_value('Q8A1', 'Y') ?>" <?php if (isset($data['Q9A1'])) echo $data['Q9A1'] == 'Y' ? "checked" : "" ?>>
-                        Yes</label>
-                </li>
-                <li>
-                    <label>
-                        <input type="radio" onclick="ComputeLab(2)" id="Q9A1" required name="Q9A1"
-                               value="<?php echo set_value('Q9A1', 'N') ?>" <?php if (isset($data['Q9A1'])) echo $data['Q9A1'] == 'N' ? "checked" : "" ?>>
-                        No</label>
-                </li>
-            </ul>
+            <div class="radio">
+                <label>
+                    <input type="radio" onclick="ComputeLab(1)" id="Q9A1" required name="Q9A1"
+                           value="<?php echo set_value('Q8A1', 'Y') ?>" <?php if (isset($data['Q9A1'])) echo $data['Q9A1'] == 'Y' ? "checked" : "" ?>>
+                    Yes</label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" onclick="ComputeLab(2)" id="Q9A1" required name="Q9A1"
+                           value="<?php echo set_value('Q9A1', 'N') ?>" <?php if (isset($data['Q9A1'])) echo $data['Q9A1'] == 'N' ? "checked" : "" ?>>
+                    No</label>
+            </div>
         </div>
+        <div class="clearfix">&nbsp;</div>
         <?php
         if (isset($data['Q9A1']))
             if ($data['Q9A1'] == 'Y') {
@@ -1817,15 +1723,12 @@
                     <br>
                     &bull; Picture of Air Quality Monitoring equipment of school<br>
                     <br>
-                    Please upload all supporting documents related to this section here. Note: files must be in one of
-                    the
-                    following formats: PDF Document (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg). File
-                    size per
+                    Please upload all supporting documents related to this section here. Note: files must be in one of the
+                    following formats: PDF Document (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg). File size per
                     document should not exceed 500 KB.<br/>
                     <br/>
                     <button class="btn uploadbtn upload" data-id="Air Quality Monitoring" data-toggle="modal"
-                            data-target="#airModal" type="button">UPLOAD FILES
-                    </button>
+                            data-target="#airModal" type="button">UPLOAD FILES </button>
                     <br>
                     <br>
                     <br/>
@@ -1834,23 +1737,20 @@
             } else {
                 ?>
                 <div class="form-group" id="lab">
-                    <label class="control-label"><span class="cube">6(a)</span>If No, is there an air quality monitoring
-                        station
+                    <label class="control-label"><span class="cube">6(a)</span>If No, is there an air quality monitoring station
                         (private or government) close to your school?</label>
-                    <ul class="list-inline">
-                        <li>
-                            <label>
-                                <input type="radio" id="Q9A2_1" name="Q9A2"
-                                       value="<?php echo set_value('Q9A2', 1) ?>" <?php if (isset($data['Q9A2'])) echo $data['Q9A2'] == 1 ? "checked" : "" ?>>
-                                Yes</label>
-                        </li>
-                        <li>
-                            <label>
-                                <input type="radio" id="Q9A2_2" name="Q9A2"
-                                       value="<?php echo set_value('Q9A2', 2) ?>" <?php if (isset($data['Q9A2'])) echo $data['Q9A2'] == 2 ? "checked" : "" ?>>
-                                No</label>
-                        </li>
-                    </ul>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" id="Q9A2_1" name="Q9A2"
+                                   value="<?php echo set_value('Q9A2', 1) ?>" <?php if (isset($data['Q9A2'])) echo $data['Q9A2'] == 1 ? "checked" : "" ?>>
+                            Yes</label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" id="Q9A2_2" name="Q9A2"
+                                   value="<?php echo set_value('Q9A2', 2) ?>" <?php if (isset($data['Q9A2'])) echo $data['Q9A2'] == 2 ? "checked" : "" ?>>
+                            No</label>
+                    </div>
                 </div>
             <?php } ?>
         <div class="form-group" id="lab1" style="display:none;">
@@ -1858,10 +1758,8 @@
             <br>
             &bull; Picture of Air Quality Monitoring equipment of school<br>
             <br>
-            Please upload all supporting documents related to this section here. Note: files must be in one of the
-            following
-            formats: PDF Document (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg). File size per document
-            should
+            Please upload all supporting documents related to this section here. Note: files must be in one of the following
+            formats: PDF Document (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg). File size per document should
             not exceed 500 KB.<br/>
             <br/>
             <button class="btn uploadbtn upload" type="button">UPLOAD FILES</button>
@@ -1870,59 +1768,56 @@
         <div class="form-group" id="lab2" style="display:none;">
             <label class="control-label"><span class="cube">6(a)</span>If No, is there an air quality monitoring station
                 (private or government) close to your school?</label>
-            <ul class="list-inline">
-                <li>
-                    <label>
-                        <input type="radio" id="Q9A2_1" name="Q9A2"
-                               value="<?php echo set_value('Q9A2', 1) ?>" <?php if (isset($data['Q9A2'])) echo $data['Q9A2'] == 1 ? "checked" : "" ?>>
-                        Yes</label>
-                </li>
-                <li>
-                    <label>
-                        <input type="radio" id="Q9A2_2" name="Q9A2"
-                               value="<?php echo set_value('Q9A2', 2) ?>" <?php if (isset($data['Q9A2'])) echo $data['Q9A2'] == 2 ? "checked" : "" ?>>
-                        No</label>
-                </li>
-            </ul>
+            <div class="radio">
+                <label>
+                    <input type="radio" id="Q9A2_1" name="Q9A2"
+                           value="<?php echo set_value('Q9A2', 1) ?>" <?php if (isset($data['Q9A2'])) echo $data['Q9A2'] == 1 ? "checked" : "" ?>>
+                    Yes</label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" id="Q9A2_2" name="Q9A2"
+                           value="<?php echo set_value('Q9A2', 2) ?>" <?php if (isset($data['Q9A2'])) echo $data['Q9A2'] == 2 ? "checked" : "" ?>>
+                    No</label>
+            </div>
         </div>
         <br>
         <div class="form-group" id="WastePolicy">
             <label class="control-label">Please upload supporting documents:</label>
             <br>
             &bull;Pictures of audit team doing survey<br/>
-            Please upload all supporting documents related to this section here. Note, files must be one of the
-            following
+            Please upload all supporting documents related to this section here. Note, files must be one of the following
             formats: PDF Document (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg) <br>
             File size per document should not exceed 500 KB. <br/>
             <br/>
-            <button class="btn uploadbtn upload" data-id="Supporting Document Air" data-toggle="modal"
-                    data-target="#airModal"
-                    type="button">UPLOAD FILES
-            </button>
+            <button class="btn uploadbtn upload" data-id="Supporting Document Air" data-toggle="modal" data-target="#airModal"
+                    type="button">UPLOAD FILES </button>
             <br>
             <br>
         </div>
         <div class="text-center">
             <button type="button" class="org-btn" id="btnAirPrevious">Previous</button>
             <button type="submit" class="org-btn" id="airnext" value="movenext">Next</button>
-            <button type="button" class="org-btn submit button" id="airsave">Save and Resume Later</button>
+            <button type="button" class="org-btn submit button" id="airsave" >Save and Resume Later</button>
         </div>
-        <?php echo form_close(); ?> </div>
-</div>
-<?php $this->load->view('footer'); ?>
-<div id="myModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content" style="background:transparent; border-radius:0px;">
-            <div class="modal-header" style="background: rgb(232, 101, 73); color:#fff;">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">View video tutorial</h4>
+        <?php echo form_close(); ?>
+        <!-- /.container -->
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content" style="background:transparent; border-radius:0px;">
+                    <div class="modal-header" style="background: rgb(232, 101, 73); color:#fff;">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">View video tutorial</h4>
+                    </div>
+                    <iframe width="100%" height="330px" src="https://www.youtube.com/embed/klen-TOrXFA" frameborder="0"
+                            id="video" allowfullscreen></iframe>
+                </div>
             </div>
-            <iframe width="100%" height="330px" src="https://www.youtube.com/embed/klen-TOrXFA" frameborder="0"
-                    id="video" allowfullscreen></iframe>
         </div>
     </div>
 </div>
+<?php $this->load->view('footer'); ?>
 <script type="text/javascript">
     $('.close').click(function () {
         $('#video').attr("src", "https://www.youtube.com/embed/klen-TOrXFA");
