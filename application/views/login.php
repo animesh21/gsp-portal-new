@@ -70,7 +70,7 @@
         <div class="home_container">
             <div class="mform" style="display: block;">
                 <h1>Please Log In</h1>
-                <p>The <a href="greenschoolsprogramme.org/" target="_blank">Green Schools Programme</a>
+                <p>The <a href="http://www.greenschoolsprogramme.org/" target="_blank">Green Schools Programme</a>
                     audit is only open to registered schools. If you have already registered, please log in using your
                     registered email id and password you would have received via email. </p>
                 <p>If you would like to register, please visit our <a href="<?php echo base_url('login/register') ?>"
