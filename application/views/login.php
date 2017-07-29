@@ -174,11 +174,11 @@
                     console.log(data);
                     if (data == "success") {
                         $('#msgForget').html('<div class="alert alert-success">' +
-                            '<strong>&#10004; Success!</strong> New password successfully send to your emmail !.' +
+                            '<strong>&#10004; Success!</strong> New password successfully send to your email !.' +
                             '</div>');
                     } else if (data == "error") {
                         $('#msgForget').html('<div class="alert alert-danger">' +
-                            '<strong>&#x2716; Error!</strong> There is an error while sending a  mail.' +
+                            '<strong>&#x2716; Error!</strong> There is an error while sending a email.' +
                             '</div>');
                     }
                     setTimeout(function () {
