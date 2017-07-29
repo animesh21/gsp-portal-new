@@ -850,7 +850,7 @@
                 echo 'style="display:none;"';
             ?>>
             <label class="control-label"><span class="cube">3(a)</span>Provide details of school-owned motorised
-                vehicles</label>
+                vehicles <a class="tt" data-tooltip="Schools who use a combination of school-owned and operator-owned vehicles have to upload information only about school-owned vehicles. Do not add any personal vehicles."><span class="badge">?</span></a></label>
 
             <div class="form-group row">
                 <div class="col-xs-2">
