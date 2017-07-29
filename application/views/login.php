@@ -73,7 +73,7 @@
                 <p>The <a href="http://www.greenschoolsprogramme.org/" target="_blank">Green Schools Programme</a>
                     audit is only open to registered schools. If you have already registered, please log in using your
                     registered email id and password you would have received via email. </p>
-                <p>If you would like to register, please visit our <a href="<?php echo base_url('login/register') ?>"
+                <p>If you would like to register, please visit our <a href="<?php echo base_url('register') ?>"
                                                                       target="_blank">registration page.</a></p>
                 <!--<p>GSP Audit 2016 Questions <a href='http://www.greenschoolsprogramme.org/GSP-Audit2016-Questions.pdf' target='_blank'>click here</a></p>-->
                 <p class="deadline">Deadline to submit the audit is Tuesday, October 31, 2017.</p>
