@@ -1,4 +1,16 @@
 <?php $this->load->view('header'); ?>
+
+<style>
+    .table>tbody>tr>td,
+    .table>tbody>tr>th,
+    .table>tfoot>tr>td,
+    .table>tfoot>tr>th,
+    .table>thead>tr>td,
+    .table>thead>tr>th{
+        border-top:none;
+    }
+</style>
+
 <div class="container">
     <div class="content-form">
         <div class="log-nav">
@@ -776,7 +788,10 @@
                 </div>
             </div>
             <div class="form-group row">
-                <div class="col-xs-2"></div>
+                <div class="col-xs-2">
+                    <input type="text" class="form-control space-textbox" placeholder="Total"
+                           style="text-align:center;" readonly=""/>
+                </div>
                 <div class="col-xs-2">
                     <input class="form-control space-textbox" id="Q5A110S2" type="number" min="0" name="Q5A110S2"
                            placeholder="<?php if (isset($data['Q5A110S2'])) echo $data['Q5A110S2'] ?>"
@@ -850,7 +865,13 @@
                 echo 'style="display:none;"';
             ?>>
             <label class="control-label"><span class="cube">3(a)</span>Provide details of school-owned motorised
-                vehicles</label>
+                vehicles
+                <a class="tt" data-tooltip="Schools who use a combination of school-owned and operator-owned vehicles have to upload information only about school-owned vehicles. Do not add any personal vehicles.">
+                    <span class="badge">
+                        ?
+                    </span>
+                </a>
+            </label>
 
             <div class="form-group row">
                 <div class="col-xs-2">
@@ -865,7 +886,7 @@
 
                 </div>
                 <div class="col-xs-2">
-                    <label>Vans</label>
+                    <label>Vans/SUVs</label>
 
                 </div>
                 <div class="col-xs-2">
@@ -1001,7 +1022,13 @@
             <div class="clearfix">&nbsp;</div>
             <div class="form-group row">
                 <div class="col-xs-2">
-                    <label>Authorised parking available</label>
+                    <label>Authorised parking available
+                        <a class="tt"
+                           data-tooltip="For parking area, give the number of vehicles (Of the total) that have designated parking areas."
+                        >
+                            <span class="badge">?</span>
+                        </a>
+                    </label>
                 </div>
                 <div class="col-xs-2">
                     <input class="form-control space-textbox" onkeyup="details()" id="b5" type="number" min="0"
@@ -1103,7 +1130,7 @@
            data-tooltip="The below is an indicative list of type of vehicles.  If the school has other than these vehicles, please provide details in ‘Other vehicles’ section."><span
                     class="badge">?</span></a></label>
     </label>
-    <table class="table table-bordered">
+    <table class="table">
         <tr class="text-center">
             <td>Type of vehicles</td>
             <td>Diesel</td>
@@ -1344,6 +1371,10 @@ else
                                                   href="http://www.greenschoolsprogramme.org/knowledge-bank/air/#publicTransport"
                                                   target="_blank"> </a></label>
     <div class="form-group row">
+        <label class="control-label"><span class="cube">A</span> Sustainable Motorised Vehicles </label>
+
+    </div>
+    <div class="form-group row">
         <div class="col-xs-3">
             <label>Mode of transport</label>
         </div>
@@ -1359,10 +1390,6 @@ else
         <div class="col-xs-2">
             <label>Total</label>
         </div>
-    </div>
-    <div class="form-group row">
-        <label class="control-label"><span class="cube">A</span> Sustainable Motorised Vehicles </label>
-
     </div>
     <input type="hidden" id="Q4G4S3"
            value="<?php if (isset($other['Q4G4S3'])) if ($other['Q4G4S3']) echo $other['Q4G4S3']; ?>"/>
@@ -1551,6 +1578,24 @@ else
     </div>
     <div class="form-group row">
         <div class="col-xs-3">
+            <label>Mode of transport</label>
+        </div>
+        <div class="col-xs-2">
+            <label>Students</label>
+        </div>
+        <div class="col-xs-2">
+            <label>Teaching Staff</label>
+        </div>
+        <div class="col-xs-2">
+            <label>Non-Teaching Staff</label>
+        </div>
+        <div class="col-xs-2">
+            <label>Total</label>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-xs-3">
             <label>Personal four-wheeler</label>
         </div>
         <div class="col-xs-2">
@@ -1610,6 +1655,23 @@ else
 
     <div class="form-group row">
         <label class="control-label"><span class="cube">C</span>Non Polluting Mode</label>
+    </div>
+    <div class="form-group row">
+        <div class="col-xs-3">
+            <label>Mode of transport</label>
+        </div>
+        <div class="col-xs-2">
+            <label>Students</label>
+        </div>
+        <div class="col-xs-2">
+            <label>Teaching Staff</label>
+        </div>
+        <div class="col-xs-2">
+            <label>Non-Teaching Staff</label>
+        </div>
+        <div class="col-xs-2">
+            <label>Total</label>
+        </div>
     </div>
 
     <div class="form-group row">
@@ -1730,6 +1792,7 @@ else
         </div>
     </div>
 </div>
+
 <div class="clearfix">&nbsp;</div>
 <div class="form-group">
     <label class="control-label"><h6>Task 5: How good is the air you breathe in your school? <a class="tt"

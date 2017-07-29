@@ -1396,7 +1396,7 @@
                         <label class="control-label"><span class="cube">4(a)</span>Please provide quantity of which is
                             applicable</label>
                         <div class="form-group">
-                            <label><span class="cube">A.</span>Biodegradable/Wet Waste</label>
+                            <label><span class="cube">a.</span>Biodegradable/Wet Waste</label>
                             <div class="form-group row">
                                 <div class="col-xs-6">
                                     <label>HOW MUCH WASTE DOES YOUR SCHOOL REUSE/RECYCLE? </label>
@@ -1462,7 +1462,7 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-xs-6">
-                                    <label>Per capita waste generation (a): </label>
+                                    <label>Per capita waste reused/recycled (a): </label>
                                 </div>
                                 <div class="col-xs-6">
                                     <input class="form-control space-textbox" onKeyUp="solidWaste()" id="Q8Wa1S6"
@@ -1473,7 +1473,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label><span class="cube">B.</span>Dry/recyclable waste</label>
+                            <label><span class="cube">b.</span>Dry/recyclable waste</label>
                             <div class="form-group row">
                                 <div class="col-xs-6">
                                     <label>HOW MUCH WASTE DOES YOUR SCHOOL REUSE/RECYCLE? </label>
@@ -1573,7 +1573,7 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-xs-6">
-                                    <label>Per capita waste generation (b): </label>
+                                    <label>Per capita waste reused/recycled (b): </label>
                                 </div>
                                 <div class="col-xs-6">
                                     <input class="form-control space-textbox" onKeyUp="solidRecyclable1()" id="Q8Wa2S9"
@@ -1584,7 +1584,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label><span class="cube">C.</span>Domestic hazardous waste</label>
+                            <label><span class="cube">c.</span>Domestic hazardous waste</label>
                             <div class="form-group row">
                                 <div class="col-xs-6">
                                     <label>HOW MUCH WASTE DOES YOUR SCHOOL REUSE/RECYCLE? </label>
@@ -1628,7 +1628,7 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-xs-6">
-                                    <label>Per capita waste generation (c). </label>
+                                    <label>Per capita waste reused/recycled (c). </label>
                                 </div>
                                 <div class="col-xs-6">
                                     <input class="form-control space-textbox" onKeyUp="WasteDomestic1()" id="Q8Wa3S4"
@@ -1639,7 +1639,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label><span class="cube">D.</span>E-Waste</label>
+                            <label><span class="cube">d.</span>E-Waste</label>
                             <div class="form-group row">
                                 <div class="col-xs-6">
                                     <label>HOW MUCH WASTE DOES YOUR SCHOOL REUSE/RECYCLE? </label>
@@ -1661,7 +1661,7 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-xs-6">
-                                    <label>Per capita waste generation (d): </label>
+                                    <label>Per capita waste reused/recycled (d): </label>
                                 </div>
                                 <div class="col-xs-6">
                                     <input class="form-control space-textbox" onKeyUp="EWaste1()" id="Q8Wa4S2"
@@ -1672,7 +1672,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label><span class="cube">E.</span>Biomedical waste</label>
+                            <label><span class="cube">e.</span>Biomedical waste</label>
                             <div class="form-group row">
                                 <div class="col-xs-6">
                                     <label>HOW MUCH WASTE DOES YOUR SCHOOL REUSE/RECYCLE? </label>
@@ -1694,7 +1694,7 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-xs-6">
-                                    <label>Per capita waste generation (e): </label>
+                                    <label>Per capita waste reused/recycled (e): </label>
                                 </div>
                                 <div class="col-xs-6">
                                     <input class="form-control space-textbox" onKeyUp="WasteBiomedical1()" id="Q8Wa5S2"
@@ -1705,7 +1705,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label><span class="cube">F.</span>Sanitary waste </label>
+                            <label><span class="cube">f.</span>Sanitary waste </label>
                             <div class="form-group row">
                                 <div class="col-xs-6">
                                     <label>HOW MUCH WASTE DOES YOUR SCHOOL REUSE/RECYCLE? </label>
@@ -1727,7 +1727,7 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-xs-6">
-                                    <label>Per capita waste generation (f): </label>
+                                    <label>Per capita waste reused/recycled (f): </label>
                                 </div>
                                 <div class="col-xs-6">
                                     <input class="form-control space-textbox" onKeyUp="WasteSanitary1()" id="Q8Wa6S2"
@@ -1738,7 +1738,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label><span class="cube">G.</span>C & D Waste</label>
+                            <label><span class="cube">g.</span>C & D Waste</label>
                             <div class="form-group row">
                                 <div class="col-xs-6">
                                     <label>HOW MUCH WASTE DOES YOUR SCHOOL REUSE/RECYCLE? </label>
@@ -1760,7 +1760,7 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-xs-6">
-                                    <label>Per capita waste generation (g): </label>
+                                    <label>Per capita waste reused/recycled (g): </label>
                                 </div>
                                 <div class="col-xs-6">
                                     <input class="form-control space-textbox" onKeyUp="WasteConstruction1()"
@@ -1777,7 +1777,7 @@
             ?>
             <div class="form-group" id="Q8Wa2" style="display: none;">
                 <div class="form-group">
-                    <label><span class="cube">A.</span>Biodegradable/Wet Waste</label>
+                    <label><span class="cube">a.</span>Biodegradable/Wet Waste</label>
                     <div class="form-group row">
                         <div class="col-xs-6">
                             <label>HOW MUCH WASTE DOES YOUR SCHOOL REUSE/RECYCLE? </label>
@@ -1843,7 +1843,7 @@
                     </div>
                     <div class="form-group row">
                         <div class="col-xs-6">
-                            <label>Per capita waste generation (a): </label>
+                            <label>Per capita waste reused/recycled (a): </label>
                         </div>
                         <div class="col-xs-6">
                             <input class="form-control space-textbox" onKeyUp="solidWaste1()" id="Q8Wa1S6" type="number"
@@ -1854,7 +1854,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label><span class="cube">B.</span>Dry/recyclable waste</label>
+                    <label><span class="cube">b.</span>Dry/recyclable waste</label>
                     <div class="form-group row">
                         <div class="col-xs-6">
                             <label>HOW MUCH WASTE DOES YOUR SCHOOL REUSE/RECYCLE? </label>

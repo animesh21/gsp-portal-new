@@ -70,7 +70,7 @@
         <div class="home_container">
             <div class="mform" style="display: block;">
                 <h1>Please Log In</h1>
-                <p>The <a href="http://studio-tesseract.co/greenschool/" target="_blank">Green Schools Programme</a>
+                <p>The <a href="http://www.greenschoolsprogramme.org/" target="_blank">Green Schools Programme</a>
                     audit is only open to registered schools. If you have already registered, please log in using your
                     registered email id and password you would have received via email. </p>
                 <p>If you would like to register, please visit our <a href="<?php echo base_url('login/register') ?>"
@@ -174,11 +174,11 @@
                     console.log(data);
                     if (data == "success") {
                         $('#msgForget').html('<div class="alert alert-success">' +
-                            '<strong>&#10004; Success!</strong> New password successfully send to your emmail !.' +
+                            '<strong>&#10004; Success!</strong> New password successfully send to your email !.' +
                             '</div>');
                     } else if (data == "error") {
                         $('#msgForget').html('<div class="alert alert-danger">' +
-                            '<strong>&#x2716; Error!</strong> There is an error while sending a  mail.' +
+                            '<strong>&#x2716; Error!</strong> There is an error while sending a email.' +
                             '</div>');
                     }
                     setTimeout(function () {
