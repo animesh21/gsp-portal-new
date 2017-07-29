@@ -150,8 +150,8 @@ class User_model extends CI_Model
                 $msg = "Dear &nbsp;";
                 $msg .= $query->username . "," . "<br><br>";
                 $msg .= "Your new password for GSP Login.<br><br>";
-                $msg .= "Regards,<br/>GSP Team.<br><br>";
                 $msg .= $varNewPass . "<br><br>";
+                $msg .= "Regards,<br/>GSP Team.<br><br>";
                 $this->email->to($to);
                 $this->email->from($from, "Green Schools Programme");
                 $this->email->subject($subject);
