@@ -149,7 +149,7 @@ $(document).ready(function(){
         if(val < 1 && min > 2)
         {
             
-            if (confirm("You have 1 or more vehicles with Petrol in air section, this value cannot be 0") == true) 
+            if (confirm("You have 1 or more vehicles with Diesel in air section, this value cannot be 0") == true)
             {
                 $('#Q6E4S1').removeAttr('value');
                 $('#Q6E4S1').css('border-color', 'red');
