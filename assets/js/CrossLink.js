@@ -1854,8 +1854,8 @@ $("#energy").submit(function( event ) { //Energy Submit
 
 $("#air").submit(function( event ) { //Air Submit
 
-    var data = '<?php echo json_encode($data); ?>';
-    alert('submit clicked.\nData: ' + data);    
+    // var data = '<?php echo json_encode($data); ?>';
+    // alert('submit clicked.\nData: ' + data);
   
     var count1 = 0;
     var count2 = 0;
