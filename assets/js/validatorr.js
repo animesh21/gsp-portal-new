@@ -1841,7 +1841,7 @@ function details()
     
     var countYes = 0;
     var countNo = 0;
-
+    var commit = 0;
     
     if(NFVb5 == "Yes")
     {
