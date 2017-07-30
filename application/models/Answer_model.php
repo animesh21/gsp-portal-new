@@ -59,8 +59,8 @@ class Answer_model extends CI_Model {
 				$this->db->where('userid', $this->session->userdata('USER_ID'));
 				$this->db->like('questionid', 'Q9E1S');
 				$this->db->delete('gsp_answers');
-				echo $this->db->last_query();
-				exit();
+				//echo $this->db->last_query();
+				//exit();
 			}
 		}
 		
