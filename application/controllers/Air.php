@@ -166,8 +166,6 @@ class Air extends CI_Controller {
         
     }
 
-    public function webhook(){
-      echo 'Hi';
-    }
 }
+
 
