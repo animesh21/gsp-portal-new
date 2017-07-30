@@ -160,9 +160,9 @@ class Answer_model extends CI_Model {
 		{
 			if(isset($post['Q4A1']))
 			{
-				for($x=$post['Q4A1']; $x<=10;$x++)
+				for($x=$post['Q4A1']+1; $x<=10;$x++)
 				{
-					$qid = 'Q5A'.$x.'S1';
+					$qid = 'Q5A'.$x.'S';
 					$this->db->where('userid', $this->session->userdata('USER_ID'));
 					$this->db->where('questionid', $qid);
 					$this->db->delete('gsp_answers');

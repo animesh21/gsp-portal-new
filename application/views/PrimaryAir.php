@@ -658,7 +658,7 @@
                            value="<?php echo set_value('Q6A2S1T5'); ?>" readonly/>
                 </div>
             </div>
-            <div class="form-group1 row">
+            <!--div class="form-group1 row">
                 <div class="col-xs-2">
                     <label>Total</label>
                 </div>
@@ -687,7 +687,7 @@
                            name="Q6A2S1T6" placeholder="<?php if (isset($data['Q6A2S1T6'])) echo $data['Q6A2S1T6'] ?>"
                            value="<?php echo set_value('Q6A2S1T6'); ?>" />
                 </div>
-            </div>
+            </div-->
         </div>
         <?php
         if (isset($data['Q6A1']))
