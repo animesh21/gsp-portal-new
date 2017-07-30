@@ -1182,32 +1182,32 @@
                     <div class="form-group" id="typeofenergy">
                         <div class="form-group">
                             <label><span class="cube">6(a)</span>If yes, do you use:</label>
+
                             <ul class="list-unstyled">
                                 <li>
                                     <label>Solar</label>
                                     <input type="checkbox" name="Q9E1S1" id="Solar"
-                                           value="<?php echo set_value('Q9E1S1'); ?>" <?php if (isset($data['Q9E1S1'])) echo "checked"; ?>/>
+                                           value="<?php echo set_value('Q9E1S1',1); ?>" <?php if (isset($data['Q9E1S1'])) echo set_checkbox('Q9E1S1', '1', true); ?>/>
                                 </li>
                                 <li>
                                     <label>Wind</label>
                                     <input type="checkbox" name="Q9E1S2" id="Wind"
-                                           value="<?php echo set_value('Q9E1S2'); ?>" <?php if (isset($data['Q9E1S2'])) echo "checked"; ?>/>
+                                           value="<?php echo set_value('Q9E1S2',1); ?>" <?php if (isset($data['Q9E1S2'])) echo set_checkbox('Q9E1S2', '1', true); ?>/>
                                 </li>
                                 <li>
                                     <label>Hydro</label>
                                     <input type="checkbox" name="Q9E1S3" id="Hydro"
-                                           value="<?php echo set_value('Q9E1S3'); ?>" <?php if (isset($data['Q9E1S3'])) echo "checked"; ?>/>
+                                           value="<?php echo set_value('Q9E1S3',1); ?>" <?php if (isset($data['Q9E1S3'])) echo set_checkbox('Q9E1S3', '1', true); ?>/>
                                 </li>
                                 <li>
                                     <label>Biogas Plant</label>
                                     <input type="checkbox" name="Q9E1S5"
-                                           value="<?php echo set_value('Q9E1S5'); ?>" <?php if (isset($data['Q9E1S5'])) echo "checked"; ?>/>
+                                           value="<?php echo set_value('Q9E1S5',1); ?>" <?php if (isset($data['Q9E1S5'])) echo set_checkbox('Q9E1S5', '1', true); ?>/>
                                 </li>
                                 <li>
-                                    <label>Combination of solar and wind
+                                    <label>Combination of solar and wind</label>
                                         <input type="checkbox" name="Q9E1S4" id="Combination"
-                                               value="<?php echo set_value('Q9E1S4'); ?>" <?php if (isset($data['Q9E1S4'])) echo "checked"; ?>/>
-                                    </label>
+                                               value="<?php echo set_value('Q9E1S4', 1); ?>" <?php if (isset($data['Q9E1S4'])) echo set_checkbox('Q9E1S4', '1', true); ?>/>
                                 </li>
                             </ul>
                         </div>
@@ -1230,27 +1230,27 @@
                     <li>
                         <label>Solar</label>
                         <input type="checkbox" name="Q9E1S1" id="Solar"
-                               value="<?php echo set_value('Q9E1S1'); ?>" <?php if (isset($data['Q9E1S1'])) echo "checked"; ?>/>
+                               value="<?php echo set_value('Q9E1S1',1); ?>" <?php if (isset($data['Q9E1S1'])) echo set_checkbox('Q9E1S1', '1', true); ?>/>
                     </li>
                     <li>
                         <label>Wind</label>
                         <input type="checkbox" name="Q9E1S2" id="Wind"
-                               value="<?php echo set_value('Q9E1S2'); ?>" <?php if (isset($data['Q9E1S2'])) echo "checked"; ?>/>
+                               value="<?php echo set_value('Q9E1S2',1); ?>" <?php if (isset($data['Q9E1S2'])) echo set_checkbox('Q9E1S2', '1', true); ?>/>
                     </li>
                     <li>
                         <label>Hydro</label>
                         <input type="checkbox" name="Q9E1S3" id="Hydro"
-                               value="<?php echo set_value('Q9E1S3'); ?>" <?php if (isset($data['Q9E1S3'])) echo "checked"; ?>/>
+                               value="<?php echo set_value('Q9E1S3',1); ?>" <?php if (isset($data['Q9E1S3'])) echo set_checkbox('Q9E1S3', '1', true); ?>/>
                     </li>
                     <li>
                         <label>Biogas Plant</label>
                         <input type="checkbox" name="Q9E1S5"
-                               value="<?php echo set_value('Q9E1S5'); ?>" <?php if (isset($data['Q9E1S5'])) echo "checked"; ?>/>
+                               value="<?php echo set_value('Q9E1S5',1); ?>" <?php if (isset($data['Q9E1S5'])) echo set_checkbox('Q9E1S5', '1', true); ?>/>
                     </li>
                     <li>
                         <label>Combination of solar and wind</label>
-                        <input type="checkbox" name="Q9E1S4" id="Combination"
-                               value="<?php echo set_value('Q9E1S4'); ?>" <?php if (isset($data['Q9E1S4'])) echo "checked"; ?>/>
+                            <input type="checkbox" name="Q9E1S4" id="Combination"
+                                   value="<?php echo set_value('Q9E1S4', 1); ?>" <?php if (isset($data['Q9E1S4'])) echo set_checkbox('Q9E1S4', '1', true); ?>/>
                     </li>
                 </ul>
             </div>
