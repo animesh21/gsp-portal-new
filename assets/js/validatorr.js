@@ -237,12 +237,13 @@ $(document).ready(function(e){
 
         var val = this.value + e.key;
         console.log(patt.test(val),!patt.test(val))
-        if (patt.test(val)){
-            e.preventDefault();
+        if (patt.test(val))
+        {
+            $('#Q6E1S3').val(this.value+",");
         }
         else
         {
-            $('#Q6E1S3').val(this.value+","+e.key);
+            e.preventDefault();
         }
 
 
