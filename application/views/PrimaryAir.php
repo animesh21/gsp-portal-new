@@ -29,7 +29,7 @@
             <div id="samplt" class="fin-prog progress-bar" role="progressbar" style="width:10%; height: 35px;">10%</div>
         </div>
         <div class="intro">
-            <h1>AIR</h1>
+            <h1>AIR <span style="text-transform:capitalize">(Primary)</span></h1>
             <div class="video"><a class="lptext" href="#" data-toggle="modal" data-target="#myModal"><img
                             src="http://greenschoolsprogramme.org/audit2015/upload/templates/tfr_responsive/images/video-icon.png"
                             style="width: 45px; height: 40px; margin-top:47px;"></a></div>
@@ -467,8 +467,7 @@
             <label>
                 <h6> Task 3: How eco-friendly are the vehicles in your school?</h6>
             </label>
-            <p> In this section, you will maintain a record of vehicles used by your school. Two critical parameters
-                indicate if your vehicles are eco-friendly. One—type of fuel—is given in the table below.</p>
+            <p> In this section, you will maintain a record of vehicles used by your school. Type of fuel used by vehicles is a critical parameters which indicates if your vehicles are eco-friendly.</p>
         </div>
         <div class="clearfix">&nbsp;</div>
         <div class="form-group">
@@ -484,7 +483,7 @@
                 <label>
                     <input type="radio" id="Q6A1" required onclick="Air(1)" name="Q6A1"
                            value="<?php echo set_value('Q6A1', 2) ?>" <?php if (isset($data['Q6A1'])) echo $data['Q6A1'] == 2 ? "checked" : "" ?>>
-                    Operator-owned vehicles </label>
+                    Operator-owned vehicles / private vehicles </label>
             </div>
             <div class="radio">
                 <label>
@@ -496,7 +495,7 @@
                 <label>
                     <input type="radio" id="Q6A1" required onclick="Air(2)" name="Q6A1"
                            value="<?php echo set_value('Q6A1', 4) ?>" <?php if (isset($data['Q6A1'])) echo $data['Q6A1'] == 4 ? "checked" : "" ?>>
-                    A combination of school-owned and operator-owned vehicles </label>
+                    A combination of school-owned and operator-owned vehicles / private vehicles </label>
             </div>
             <div class="radio">
                 <label>
@@ -718,175 +717,175 @@
         echo '<div class="form-group" id="vehicle2" style="display:none;">';
 
     ?>
-    <!-- <label class="control-label"><span class="cube">3(b)</span>Specify the type of fuel used by your school’s vehicles: <a class="tt" data-tooltip="The below is an indicative list of type of vehicles.  If the school has other than these vehicles, please provide details in ‘Other vehicles’ section."><span
-                       class="badge">?</span></a></label>-->
-    <!--<table class="table">
-    <tr class="text-center">
-      <td>Type of vehicles</td>
-      <td>Diesel</td>
-      <td>Petrol</td>
-      <td>LPG</td>
-      <td>CNG</td>
-      <td>Hybrid</td>
-      <td>Electric</td>
-      <td>Bio Fuel</td>
-    </tr>
-    <tr>
-      <td>Buses</td>
-      <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3D1"
+    <label class="control-label"><span class="cube">3(b)</span>Specify the type of fuel used by your school’s vehicles: <a class="tt" data-tooltip="The below is an indicative list of type of vehicles.  If the school has other than these vehicles, please provide details in ‘Other vehicles’ section."><span
+                    class="badge">?</span></a></label>
+    <table class="table">
+        <tr class="text-center">
+            <td>Type of vehicles</td>
+            <td>Diesel</td>
+            <td>Petrol</td>
+            <td>LPG</td>
+            <td>CNG</td>
+            <td>Hybrid</td>
+            <td>Electric</td>
+            <td>Bio Fuel</td>
+        </tr>
+        <tr>
+            <td>Buses</td>
+            <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3D1"
                        type="number" min="0" name="Q6A2S3D1"
                        placeholder="<?php if (isset($data['Q6A2S3D1'])) echo $data['Q6A2S3D1'] ?>"
                        value="<?php echo set_value('Q6A2S3D1'); ?>"/></td>
-      <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3P1"
+            <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3P1"
                        type="number" min="0" name="Q6A2S3P1"
                        placeholder="<?php if (isset($data['Q6A2S3P1'])) echo $data['Q6A2S3P1'] ?>"
                        value="<?php echo set_value('Q6A2S3P1'); ?>"/></td>
-      <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3L1"
+            <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3L1"
                        type="number" min="0" name="Q6A2S3L1"
                        placeholder="<?php if (isset($data['Q6A2S3L1'])) echo $data['Q6A2S3L1'] ?>"
                        value="<?php echo set_value('Q6A2S3L1'); ?>"/></td>
-      <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3C1"
+            <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3C1"
                        type="number" min="0" name="Q6A2S3C1"
                        placeholder="<?php if (isset($data['Q6A2S3C1'])) echo $data['Q6A2S3C1'] ?>"
                        value="<?php echo set_value('Q6A2S3C1'); ?>"/></td>
-      <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3E1"
+            <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3E1"
                        type="number" min="0" name="Q6A2S3E1"
                        placeholder="<?php if (isset($data['Q6A2S3E1'])) echo $data['Q6A2S3E1'] ?>"
                        value="<?php echo set_value('Q6A2S3E1'); ?>"/></td>
-      <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3H1"
+            <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3H1"
                        type="number" min="0" name="Q6A2S3H1"
                        placeholder="<?php if (isset($data['Q6A2S3H1'])) echo $data['Q6A2S3H1'] ?>"
                        value="<?php echo set_value('Q6A2S3H1'); ?>"/></td>
-      <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3B1"
+            <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3B1"
                        type="number" min="0" name="Q6A2S3B1"
                        placeholder="<?php if (isset($data['Q6A2S3B1'])) echo $data['Q6A2S3B1'] ?>"
                        value="<?php echo set_value('Q6A2S3B1'); ?>"/></td>
-    </tr>
-    <tr>
-      <td>Cars</td>
-      <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3D2"
+        </tr>
+        <tr>
+            <td>Cars</td>
+            <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3D2"
                        type="number" min="0" name="Q6A2S3B12"
                        placeholder="<?php if (isset($data['Q6A2S3B1'])) echo $data['Q6A2S3B1'] ?>"
                        value="<?php echo set_value('Q6A2S3B1'); ?>"/></td>
-      <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3P2"
+            <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3P2"
                        type="number" min="0" name="Q6A2S3D2"
                        placeholder="<?php if (isset($data['Q6A2S3D2'])) echo $data['Q6A2S3D2'] ?>"
                        value="<?php echo set_value('Q6A2S3D2'); ?>"/></td>
-      <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3L2"
+            <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3L2"
                        type="number" min="0" name="Q6A2S3P2"
                        placeholder="<?php if (isset($data['Q6A2S3P2'])) echo $data['Q6A2S3P2'] ?>"
                        value="<?php echo set_value('Q6A2S3P2'); ?>"/></td>
-      <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3C2"
+            <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3C2"
                        type="number" min="0" name="Q6A2S3L2"
                        placeholder="<?php if (isset($data['Q6A2S3L2'])) echo $data['Q6A2S3L2'] ?>"
                        value="<?php echo set_value('Q6A2S3L2'); ?>"/></td>
-      <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3E2"
+            <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3E2"
                        type="number" min="0" name="Q6A2S3C2"
                        placeholder="<?php if (isset($data['Q6A2S3C2'])) echo $data['Q6A2S3C2'] ?>"
                        value="<?php echo set_value('Q6A2S3C2'); ?>"/></td>
-      <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3H2"
+            <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3H2"
                        type="number" min="0" name="Q6A2S3E2"
                        placeholder="<?php if (isset($data['Q6A2S3E2'])) echo $data['Q6A2S3E2'] ?>"
                        value="<?php echo set_value('Q6A2S3E2'); ?>"/></td>
-      <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3B2"
+            <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3B2"
                        type="number" min="0" name="Q6A2S3H2"
                        placeholder="<?php if (isset($data['Q6A2S3H2'])) echo $data['Q6A2S3H2'] ?>"
                        value="<?php echo set_value('Q6A2S3H2'); ?>"/></td>
-    </tr>
-    <tr>
-      <td>Vans</td>
-      <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3D3"
+        </tr>
+        <tr>
+            <td>Vans</td>
+            <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3D3"
                        type="number" min="0" name="Q6A2S3D3"
                        placeholder="<?php if (isset($data['Q6A2S3D3'])) echo $data['Q6A2S3D3'] ?>"
                        value="<?php echo set_value('Q6A2S3D3'); ?>"/></td>
-      <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3P3"
+            <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3P3"
                        type="number" min="0" name="Q6A2S3P3"
                        placeholder="<?php if (isset($data['Q6A2S3P3'])) echo $data['Q6A2S3P3'] ?>"
                        value="<?php echo set_value('Q6A2S3P3'); ?>"/></td>
-      <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3L3"
+            <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3L3"
                        type="number" min="0" name="Q6A2S3L3"
                        placeholder="<?php if (isset($data['Q6A2S3L3'])) echo $data['Q6A2S3L3'] ?>"
                        value="<?php echo set_value('Q6A2S3L3'); ?>"/></td>
-      <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3C3"
+            <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3C3"
                        type="number" min="0" name="Q6A2S3C3"
                        placeholder="<?php if (isset($data['Q6A2S3C3'])) echo $data['Q6A2S3C3'] ?>"
                        value="<?php echo set_value('Q6A2S3C3'); ?>"/></td>
-      <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3E3"
+            <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3E3"
                        type="number" min="0" name="Q6A2S3E3"
                        placeholder="<?php if (isset($data['Q6A2S3E3'])) echo $data['Q6A2S3E3'] ?>"
                        value="<?php echo set_value('Q6A2S3E3'); ?>"/></td>
-      <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3H3"
+            <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3H3"
                        type="number" min="0" name="Q6A2S3H3"
                        placeholder="<?php if (isset($data['Q6A2S3H3'])) echo $data['Q6A2S3H3'] ?>"
                        value="<?php echo set_value('Q6A2S3H3'); ?>"/></td>
-      <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3B3"
+            <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3B3"
                        type="number" min="0" name="Q6A2S3B3"
                        placeholder="<?php if (isset($data['Q6A2S3B3'])) echo $data['Q6A2S3B3'] ?>"
                        value="<?php echo set_value('Q6A2S3B3'); ?>"/></td>
-    </tr>
-    <tr>
-      <td>Other vehicles</td>
-      <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3D4"
+        </tr>
+        <tr>
+            <td>Other vehicles</td>
+            <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3D4"
                        type="number" min="0" name="Q6A2S3D4"
                        placeholder="<?php if (isset($data['Q6A2S3D4'])) echo $data['Q6A2S3D4'] ?>"
                        value="<?php echo set_value('Q6A2S3D4'); ?>"/></td>
-      <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3P4"
+            <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3P4"
                        type="number" min="0" name="Q6A2S3P4"
                        placeholder="<?php if (isset($data['Q6A2S3P4'])) echo $data['Q6A2S3P4'] ?>"
                        value="<?php echo set_value('Q6A2S3P4'); ?>"/></td>
-      <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3L4"
+            <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3L4"
                        type="number" min="0" name="Q6A2S3L4"
                        placeholder="<?php if (isset($data['Q6A2S3L4'])) echo $data['Q6A2S3L4'] ?>"
                        value="<?php echo set_value('Q6A2S3L4'); ?>"/></td>
-      <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3C4"
+            <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3C4"
                        type="number" min="0" name="Q6A2S3C4"
                        placeholder="<?php if (isset($data['Q6A2S3C4'])) echo $data['Q6A2S3C4'] ?>"
                        value="<?php echo set_value('Q6A2S3C4'); ?>"/></td>
-      <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3E4"
+            <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3E4"
                        type="number" min="0" name="Q6A2S3E4"
                        placeholder="<?php if (isset($data['Q6A2S3E4'])) echo $data['Q6A2S3E4'] ?>"
                        value="<?php echo set_value('Q6A2S3E4'); ?>"/></td>
-      <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3H4"
+            <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3H4"
                        type="number" min="0" name="Q6A2S3H4"
                        placeholder="<?php if (isset($data['Q6A2S3H4'])) echo $data['Q6A2S3H4'] ?>"
                        value="<?php echo set_value('Q6A2S3H4'); ?>"/></td>
-      <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3B4"
+            <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3B4"
                        type="number" min="0" name="Q6A2S3B4"
                        placeholder="<?php if (isset($data['Q6A2S3B4'])) echo $data['Q6A2S3B4'] ?>"
                        value="<?php echo set_value('Q6A2S3B4'); ?>"/></td>
-    </tr>
-    <tr>
-      <td>Sub-Total</td>
-      <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3D5"
+        </tr>
+        <tr>
+            <td>Sub-Total</td>
+            <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3D5"
                        type="number" min="0" name="Q6A2S3D5"
                        placeholder="<?php if (isset($data['Q6A2S3D5'])) echo $data['Q6A2S3D5'] ?>"
                        value="<?php echo set_value('Q6A2S3D5'); ?>" readonly/></td>
-      <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3P5"
+            <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3P5"
                        type="number" min="0" name="Q6A2S3P5"
                        placeholder="<?php if (isset($data['Q6A2S3P5'])) echo $data['Q6A2S3P5'] ?>"
                        value="<?php echo set_value('Q6A2S3P5'); ?>" readonly/></td>
-      <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3L5"
+            <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3L5"
                        type="number" min="0" name="Q6A2S3L5"
                        placeholder="<?php if (isset($data['Q6A2S3L5'])) echo $data['Q6A2S3L5'] ?>"
                        value="<?php echo set_value('Q6A2S3L5'); ?>" readonly/></td>
-      <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3C5"
+            <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3C5"
                        type="number" min="0" name="Q6A2S3C5"
                        placeholder="<?php if (isset($data['Q6A2S3C5'])) echo $data['Q6A2S3C5'] ?>"
                        value="<?php echo set_value('Q6A2S3C5'); ?>" readonly/></td>
-      <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3E5"
+            <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3E5"
                        type="number" min="0" name="Q6A2S3E5"
                        placeholder="<?php if (isset($data['Q6A2S3E5'])) echo $data['Q6A2S3E5'] ?>"
                        value="<?php echo set_value('Q6A2S3E5'); ?>" readonly/></td>
-      <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3H5"
+            <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3H5"
                        type="number" min="0" name="Q6A2S3H5"
                        placeholder="<?php if (isset($data['Q6A2S3H5'])) echo $data['Q6A2S3H5'] ?>"
                        value="<?php echo set_value('Q6A2S3H5'); ?>" readonly/></td>
-      <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3B5"
+            <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3B5"
                        type="number" min="0" name="Q6A2S3B5"
                        placeholder="<?php if (isset($data['Q6A2S3B5'])) echo $data['Q6A2S3B5'] ?>"
                        value="<?php echo set_value('Q6A2S3B5'); ?>" readonly/></td>
-    </tr>
-  </table>-->
+        </tr>
+    </table>
 </div>
 <?php
 if (isset($data['Q6A1']))
@@ -903,9 +902,9 @@ else
     <label>
         <h6> Task 4: How do you travel to school every day? </h6>
     </label>
-    <p> To know how the students, teachers and other staff in your school travel daily, the teacher/co-ordinator in the
+    <p> To know how the students, teachers and other staff in your school usually travel, the teacher/co-ordinator in the
         team should ask individual class monitors to record the commuting practices of his/her classmates and the
-        teachers, and forward the data to the audit team. After completing the survey, provide the compiled information
+        teachers, and forward the data to the Audit team. After completing the survey, provide the compiled information
         below.</p>
 </div>
 <div class="form-group">
