@@ -1822,20 +1822,26 @@ function details()
     var NFVc5 = document.getElementById("c6").value;
     var NFVv5 = document.getElementById("v6").value;
     var NFVo5 = document.getElementById("o6").value;
+    
     var NFVb51 =  document.getElementById("b6").placeholder;
     var NFVc51 = document.getElementById("c6").placeholder;
     var NFVv51 = document.getElementById("v6").placeholder;
     var NFVo51 = document.getElementById("o6").placeholder;
     sum5 = 0;
     
-    NFVb5 = parseFloat(NFVb5);
-    NFVc5 = parseFloat(NFVc5);
-    NFVv5  = parseFloat(NFVv5 );
-    NFVo5 = parseFloat(NFVo5);
-    NFVb51 = parseFloat(NFVb51);
-    NFVc51 = parseFloat(NFVc51);
-    NFVv51  = parseFloat(NFVv51 );
-    NFVo51 = parseFloat(NFVo51);
+    NFVb5 = NFVb5;
+    NFVc5 = NFVc5;
+    NFVv5  = NFVv5;
+    NFVo5 = NFVo5;
+    
+    NFVb51 = NFVb51;
+    NFVc51 = NFVc51;
+    NFVv51  = NFVv51;
+    NFVo51 = NFVo51;
+    
+    var countYes = 0;
+    var countNo = 0;
+
     
     if(isNaN(NFVb5))
         if(isNaN(NFVb51))
@@ -2544,7 +2550,7 @@ function MealsToggle(type)
         var current_pop = parseInt(document.getElementById('Q4G4S3').value);
         var school_type = parseInt(document.getElementById('Q9G1').value);
 
-        if(current_pop > 1 && school_type > 1)
+        if(current_pop > 1 && school_type == 1)
         {
             alert(" YOU HAVE MENTIONED THAT YOU ARE GOVERNMENT PRIMARY SCHOOL.");
         }
