@@ -1913,7 +1913,7 @@ function details()
     }
 
 
-    $('#t6').val(countYes+"/"+countNo);
+        $('#t6').val(countYes+"/"+countNo);
     
         
     
