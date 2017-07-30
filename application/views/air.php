@@ -1317,6 +1317,11 @@ else
            value="<?php if (isset($other['Q4G4S3'])) if ($other['Q4G4S3']) echo $other['Q4G4S3']; ?>"/>
     <input type="hidden" id="Q4G1S3"
            value="<?php if (isset($other['Q4G1S3'])) if ($other['Q4G1S3']) echo $other['Q4G1S3']; ?>"/>
+    <input type="hidden" id="Q4G2S3"
+           value="<?php if (isset($other['Q4G2S3'])) if ($other['Q4G2S3']) echo $other['Q4G2S3']; ?>"/>
+    <input type="hidden" id="Q4G3S3"
+           value="<?php if (isset($other['Q4G3S3'])) if ($other['Q4G3S3']) echo $other['Q4G3S3']; ?>"/>
+    
     <script></script>
     <div class="form-group-1 row">
         <div class="col-xs-3">

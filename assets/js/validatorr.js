@@ -2381,7 +2381,9 @@ function computeTransport()
 				
 		var current_pop = parseInt(document.getElementById('Q4G4S3').value);
 		var current_student = parseInt(document.getElementById('Q4G1S3').value);
-		
+		var current_teacher = parseInt(document.getElementById('Q4G2S3').value);
+        var current_nonTeacher = parseInt(document.getElementById('Q4G3S3').value);
+        
 		student += element1;
 		teaching += element2;
 		NTeaching += element3;
@@ -2392,6 +2394,18 @@ function computeTransport()
 			resetAir();
 			break;	
 		}
+        if(teaching > current_teacher)
+        {
+            alert("Total teacher population("+teaching+") doesn't match with student population mentioned in GQ("+current_teacher+")");
+            resetAir();
+            break;  
+        }
+        if(NTeaching > current_nonTeacher)
+        {
+            alert("Total non teaching population("+NTeaching+") doesn't match with student population mentioned in GQ("+current_nonTeacher+")");
+            resetAir();
+            break;  
+        }
 		if(Total > current_pop || student > current_pop || teaching > current_pop || NTeaching > current_pop )
 		{
 			alert("Total members of the school community in Q4 ("+Total+") should be equal to total permanent population of the school in General Questions Q4a ("+current_pop+")");
@@ -2415,7 +2429,7 @@ function computeTransport()
 }
 function resetAir()
 {
-	for(i=1;i<13;i++)
+	for(i=1;i<14;i++)
 	{
 		var id1="Q7A"+i+"S1";
 		var id2="Q7A"+i+"S2";

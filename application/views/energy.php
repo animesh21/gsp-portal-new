@@ -1258,7 +1258,7 @@
             </div>
             <div class="text-center">
                 <button type="button" class="org-btn" id="btnEnergyPrevious">Previous</button>
-                <button type="submit" class="org-btn" id="energynext" value="movenext">Next</button>
+                <button type="submit" class="org-btn" id="" value="movenext">Next</button>
                 <button type="button" class="org-btn submit button" id="energysave" >Save and Resume Later</button>
             </div>
             <?php echo form_close(); ?> </div>
