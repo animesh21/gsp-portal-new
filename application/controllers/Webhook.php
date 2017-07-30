@@ -11,6 +11,7 @@ class Webhook extends CI_Controller {
         echo 'Code is pushed to the repository';
         exec('cd /usr/share/nginx/html/mountedspace/greenschoolsprogramme/audit2017/scripts');
         echo exec('./gitpull.sh');
+        echo '\nI am ';
         echo exec('whoami');
     }
 }
