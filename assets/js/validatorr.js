@@ -243,7 +243,8 @@ $(document).ready(function(e){
         }
         else if (patt.test(e.key))
         {
-            if (this.value != "") {
+            if (this.value != "" && !this.value.includes(""+e.key))
+            {
                 $('#Q6E1S3').val(this.value + ",");
             }
         }
