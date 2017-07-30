@@ -9,7 +9,7 @@ $(document).ready(function(e){
             {
                 alert("You have selected government school");
             }
-            if(typeOfSchool == 3 && val != 3)
+            if(typeOfSchool == 3 && val == 1)
             {
                 alert("You have selected private school")
             }
