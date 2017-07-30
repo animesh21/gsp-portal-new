@@ -115,26 +115,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </li>
                     <li id="Nav"
                         class="row <?php echo ($this->router->fetch_class() == 'energy') ? "current" : "missing"; ?>"
-                        id="link" onClick="javascript:window.location.href='<?php echo base_url("energy") ?>';">Energy
+                        id="link">Energy
                     </li>
                     <li id="Nav"
                         class="row <?php echo ($this->router->fetch_class() == 'food') ? "current" : "missing"; ?>"
-                        id="link" onClick="javascript:window.location.href='<?php echo base_url("food") ?>';">Food
+                        id="link">Food
                     </li>
                     <li id="Nav"
                         class="row <?php echo ($this->router->fetch_class() == 'land') ? "current" : "missing"; ?>"
-                        id="link" onClick="javascript:window.location.href='<?php echo base_url("land") ?>';">Land
+                        id="link">Land
                     </li>
                     <li id="Nav"
                         class="row <?php echo ($this->router->fetch_class() == 'water') ? "current" : "missing"; ?>"
-                        id="link" onClick="javascript:window.location.href='<?php echo base_url("water") ?>';">Water
+                        id="link">Water
                     </li>
                     <li id="Nav"
                         class="row <?php echo ($this->router->fetch_class() == 'waste') ? "current" : "missing"; ?>"
-                        id="link" onClick="javascript:window.location.href='<?php echo base_url("waste") ?>';">Waste
+                        id="link" >Waste
                     </li>
                     <li class="row <?php echo ($this->router->fetch_class() == 'feedback') ? "current" : "missing"; ?>"
-                        id="link" onClick="javascript:window.location.href='<?php echo base_url("feedback") ?>';">
+                        id="link">
                         Feedback
                     </li>
                 </ol>
