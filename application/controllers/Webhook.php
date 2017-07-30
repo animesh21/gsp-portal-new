@@ -16,6 +16,6 @@ class Webhook extends CI_Controller {
     }
 
     public function test() {
-        echo 'Testing the webhook';
+        echo 'Testing the webhook, part 1';
     }
 }

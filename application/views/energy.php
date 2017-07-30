@@ -1219,7 +1219,7 @@
             </div>
             <div class="form-group" id="typeofenergy" style="display:none">
                 <div class="form-group">
-                    <label><span class="cube">6(a)</span>If yes, do you use:</label>
+                    <label><span class="cube">6(a)</span>If yes, do you use: <a class="tt" data-tooltip="Do not add solar water heater here. Consider only solar panels which give you electricity."><span class="badge">?</span></a></label>
                 </div>
                 <ul class="list-inline">
                     <li>
@@ -1236,6 +1236,11 @@
                         <label>Hydro</label>
                         <input type="checkbox" name="Q9E1S3" id="Hydro"
                                value="<?php echo set_value('Q9E1S3'); ?>" <?php if (isset($data['Q9E1S3'])) echo "checked"; ?>/>
+                    </li>
+                    <li>
+                        <label>Biogas Plant</label>
+                        <input type="checkbox" name="Q9E1S5" id="Wind"
+                               value="<?php echo set_value('Q9E1S2'); ?>" <?php if (isset($data['Q9E1S2'])) echo "checked"; ?>/>
                     </li>
                     <li>
                         <label>Combination of solar and wind</label>
@@ -1256,9 +1261,26 @@
                         data-target="#airModal" type="button">UPLOAD FILES </button>
                 <br>
             </div>
+            <div class="form-group" id="typeofenergy">
+                <div class="form-group">
+                    <label><span class="cube">7</span>Does your school use solar water heater:</label>
+                    <ul class="list-inline">
+                        <li>
+                            <label>Yes</label>
+                            <input type="radio" name="Q9E1S1" id="Solar"
+                                   value="<?php echo set_value('Q9E1S1'); ?>" <?php if (isset($data['Q9E1S1'])) echo "checked"; ?>/>
+                        </li>
+                        <li>
+                            <label>No</label>
+                            <input type="radio" name="Q9E1S2" id="Wind"
+                                   value="<?php echo set_value('Q9E1S2'); ?>" <?php if (isset($data['Q9E1S2'])) echo "checked"; ?>/>
+                        </li>
+                    </ul>
+                </div>
+            </div>
             <div class="text-center">
                 <button type="button" class="org-btn" id="btnEnergyPrevious">Previous</button>
-                <button type="submit" class="org-btn" id="" value="movenext">Next</button>
+                <button type="submit" class="org-btn" id="energynext" value="movenext">Next</button>
                 <button type="button" class="org-btn submit button" id="energysave" >Save and Resume Later</button>
             </div>
             <?php echo form_close(); ?> </div>
