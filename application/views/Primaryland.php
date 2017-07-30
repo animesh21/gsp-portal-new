@@ -39,265 +39,374 @@
             Your school gardener is certainly the best person to be a part of your audit team. Just like all other teams, five to 10 of your committed and interested schoolmates would make a strong team. </div>
         <div class="form-group">
             <label class="control-label">Teachers (maximum of three teachers can be part of the team):</label>
-            <div class="form-group-1 row">
-                <div class="col-xs-1"> </div>
-                <div class="col-xs-3">
-                    <label >First Name</label>
-                </div>
-                <div class="col-xs-3">
-                    <label >Last Name</label>
-                </div>
-                <div class="col-xs-3">
-                    <label >Email ID</label>
-                </div>
+        </div>
+        <div class="form-group-1 row">
+            <div class="col-xs-1"></div>
+            <div class="col-xs-3">
+                <label>First Name</label>
             </div>
-            <div class="form-group1 row">
-                <div class="col-xs-1"> 1 </div>
-                <div class="col-xs-3"> <?php echo form_error('name'); ?>
-                    <input class="form-control space-textbox" id="Q1L1S1" type="text" name="Q1L1S1" placeholder="<?php if(isset($data['Q1L1S1'])) echo $data['Q1L1S1']; ?>" value="<?php echo set_value('Q1L1S1'); ?>"/>
-                </div>
-                <div class="col-xs-3"> <?php echo form_error('name'); ?>
-                    <input class="form-control space-textbox" id="Q1L1S1" type="text" name="Q1L1S3" placeholder="<?php if(isset($data['Q1L1S3'])) echo $data['Q1L1S3']; ?>" value="<?php echo set_value('Q1L1S3'); ?>"/>
-                </div>
-                <div class="col-xs-3"> <?php echo form_error('email'); ?>
-                    <input class="form-control space-textbox" id="Q1L1S1" type="email"  name="Q1L1S2" placeholder="<?php if(isset($data['Q1L1S2'])) echo $data['Q1L1S2']; ?>" value="<?php echo set_value('Q1L1S2'); ?>"/>
-                </div>
+            <div class="col-xs-3">
+                <label>Last Name</label>
             </div>
-            <div class="form-group1 row">
-                <div class="col-xs-1"> 2 </div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q1L1" type="text"  name="Q1L2S1" placeholder="<?php if(isset($data['Q1L2S1'])) echo $data['Q1L2S1'] ?>" value="<?php echo set_value('Q1L2S1'); ?>"/>
-                </div>
-                <div class="col-xs-3"> <?php echo form_error('name'); ?>
-                    <input class="form-control space-textbox" id="Q1L2S1" type="text" name="Q1L2S3" placeholder="<?php if(isset($data['Q1L2S3'])) echo $data['Q1L2S3']; ?>" value="<?php echo set_value('Q1L2S3'); ?>"/>
-                </div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q1L1" type="email"  name="Q1L2S2" placeholder="<?php if(isset($data['Q1L2S2'])) echo $data['Q1L2S2'] ?>" value="<?php echo set_value('Q1L2S2'); ?>"/>
-                </div>
+            <div class="col-xs-3">
+                <label>Email ID</label>
             </div>
-            <div class="form-group1 row">
-                <div class="col-xs-1"> 3 </div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q1L1" type="text"  name="Q1L3S1" placeholder="<?php if(isset($data['Q1L3S1'])) echo $data['Q1L3S1'] ?>" value="<?php echo set_value('Q1L3S1'); ?>"/>
-                </div>
-                <div class="col-xs-3"> <?php echo form_error('name'); ?>
-                    <input class="form-control space-textbox" id="Q1L3S1" type="text" name="Q1L3S3" placeholder="<?php if(isset($data['Q1L3S3'])) echo $data['Q1L3S3']; ?>" value="<?php echo set_value('Q1L3S3'); ?>"/>
-                </div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q1L1" type="email"  name="Q1L3S2" placeholder="<?php if(isset($data['Q1L3S2'])) echo $data['Q1L3S2'] ?>" value="<?php echo set_value('Q1L3S2'); ?>"/>
-                </div>
+        </div>
+        <div class="form-group1 row">
+            <div class="col-xs-1"> 1</div>
+            <div class="col-xs-3"> <?php echo form_error('name'); ?>
+                <input class="form-control space-textbox" id="Q1L1S1" type="text" name="Q1L1S1"
+                       placeholder="<?php if (isset($data['Q1L1S1'])) echo $data['Q1L1S1']; ?>"
+                       value="<?php echo set_value('Q1L1S1'); ?>"/>
             </div>
-            <div class="form-group">
-                <label  class="control-label">Administrative staff (maximum of five staff can be part of the team):</label>
-                <div class="form-group-1 row">
-                    <div class="col-xs-1"> </div>
-                    <div class="col-xs-3">
-                        <label >First Name</label>
-                    </div>
-                    <div class="col-xs-3">
-                        <label >Last Name</label>
-                    </div>
-                    <div class="col-xs-3">
-                        <label >Email ID</label>
-                    </div>
-                </div>
-                <div class="form-group1 row">
-                    <div class="col-xs-1"> 1 </div>
-                    <div class="col-xs-3"> <?php echo form_error('name1'); ?>
-                        <input class="form-control space-textbox" type="text"  name="Q2L1S1" placeholder="<?php if(isset($data['Q2L1S1'])) echo $data['Q2L1S1'] ?>" value="<?php echo set_value('Q2L1S1'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" type="text"  name="Q2L1S3" placeholder="<?php if(isset($data['Q2L1S3'])) echo $data['Q2L1S3'] ?>" value="<?php echo set_value('Q2L1S3'); ?>"/>
-                    </div>
-                    <div class="col-xs-3"> <?php echo form_error('email1'); ?>
-                        <input class="form-control space-textbox" type="email"  name="Q2L1S2" placeholder="<?php if(isset($data['Q2L1S2'])) echo $data['Q2L1S2'] ?>" value="<?php echo set_value('Q2L1S2'); ?>"/>
-                    </div>
-                </div>
-                <div class="form-group1 row">
-                    <div class="col-xs-1"> 2 </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" type="text"  name="Q2L2S1" placeholder="<?php if(isset($data['Q2L2S1'])) echo $data['Q2L2S1'] ?>" value="<?php echo set_value('Q2L2S1'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" type="text"  name="Q2L2S3" placeholder="<?php if(isset($data['Q2L2S3'])) echo $data['Q2L2S3'] ?>" value="<?php echo set_value('Q2L2S3'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" type="email"  name="Q2L2S2" placeholder="<?php if(isset($data['Q2L2S2'])) echo $data['Q2L2S2'] ?>" value="<?php echo set_value('Q2L2S2'); ?>"/>
-                    </div>
-                </div>
-                <div class="form-group1 row">
-                    <div class="col-xs-1"> 3 </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" type="text"  name="Q2L3S1" placeholder="<?php if(isset($data['Q2L3S1'])) echo $data['Q2L3S1'] ?>" value="<?php echo set_value('Q2L3S1'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" type="text"  name="Q2L3S3" placeholder="<?php if(isset($data['Q2L3S3'])) echo $data['Q2L3S3'] ?>" value="<?php echo set_value('Q2L3S3'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" type="email"  name="Q2L3S2" placeholder="<?php if(isset($data['Q2L3S2'])) echo $data['Q2L3S2'] ?>" value="<?php echo set_value('Q2L3S2'); ?>"/>
-                    </div>
-                </div>
-                <div class="form-group1 row">
-                    <div class="col-xs-1"> 4 </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" type="text"  name="Q2L4S1" placeholder="<?php if(isset($data['Q2L4S1'])) echo $data['Q2L4S1']; ?>" value="<?php echo set_value('Q2L4S1'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" type="text"  name="Q2L4S3" placeholder="<?php if(isset($data['Q2L4S3'])) echo $data['Q2L4S3'] ?>" value="<?php echo set_value('Q2L4S3'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" type="email"  name="Q2L4S2" placeholder="<?php if(isset($data['Q2L4S2'])) echo $data['Q2L4S2']; ?>" value="<?php echo set_value('Q2L4S2'); ?>"/>
-                    </div>
-                    ; </div>
-                <div class="form-group1 row">
-                    <div class="col-xs-1"> 5 </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" type="text"  name="Q2L5S1" placeholder="<?php if(isset($data['Q2L5S1'])) echo $data['Q2L5S1'] ?>" value="<?php echo set_value('Q2L5S1'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" type="text"  name="Q2L5S3" placeholder="<?php if(isset($data['Q2L5S3'])) echo $data['Q2L5S3'] ?>" value="<?php echo set_value('Q2L5S3'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" type="email"  name="Q2L5S2" placeholder="<?php if(isset($data['Q2L5S2'])) echo $data['Q2L5S2'] ?>" value="<?php echo set_value('Q2L5S2'); ?>"/>
-                    </div>
-                </div>
+            <div class="col-xs-3"> <?php echo form_error('name'); ?>
+                <input class="form-control space-textbox" id="Q1L1S3" type="text" name="Q1L1S3"
+                       placeholder="<?php if (isset($data['Q1L1S3'])) echo $data['Q1L1S3']; ?>"
+                       value="<?php echo set_value('Q1L1S3'); ?>"/>
             </div>
-            <div class="form-group">
-                <label  class="control-label">Students (maximum of ten students can be part of the team):</label>
-                <div class="form-group-1 row">
-                    <div class="col-xs-1"> </div>
-                    <div class="col-xs-3">
-                        <label >First Name</label>
-                    </div>
-                    <div class="col-xs-3">
-                        <label >Last Name</label>
-                    </div>
-                    <div class="col-xs-3">
-                        <label >Grade</label>
-                    </div>
-                </div>
-                <div class="form-group1 row">
-                    <div class="col-xs-1"> 1 </div>
-                    <div class="col-xs-3"> <?php echo form_error('name2'); ?>
-                        <input class="form-control space-textbox" id="ex1" type="text"  name="Q3L1S1" placeholder="<?php if(isset($data['Q3L1S1'])) echo $data['Q3L1S1'] ?>"  value="<?php echo set_value('Q3L1S1'); ?>"/>
-                    </div>
-                    <div class="col-xs-3"> <?php echo form_error('email2'); ?>
-                        <input class="form-control space-textbox" id="ex2" type="text"  name="Q3L1S2" placeholder="<?php if(isset($data['Q3L1S2'])) echo $data['Q3L1S2'] ?>" value="<?php echo set_value('Q3L1S2'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="ex3" type="text"  name="Q3L1S3" placeholder="<?php if(isset($data['Q3L1S3'])) echo $data['Q3L1S3'] ?>" value="<?php echo set_value('Q3L1S3'); ?>"/>
-                    </div>
-                </div>
-                <div class="form-group1 row">
-                    <div class="col-xs-1"> 2 </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="ex1" type="text"  name="Q3L2S1" placeholder="<?php if(isset($data['Q3L2S1'])) echo $data['Q3L2S1'] ?>" value="<?php echo set_value('Q3L2S1'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="ex2" type="text"  name="Q3L2S2" placeholder="<?php if(isset($data['Q3L2S2'])) echo $data['Q3L2S2'] ?>" value="<?php echo set_value('Q3L2S2'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="ex3" type="text"  name="Q3L2S3" placeholder="<?php if(isset($data['Q3L2S3'])) echo $data['Q3L2S3'] ?>" value="<?php echo set_value('Q3L2S3'); ?>"/>
-                    </div>
-                </div>
-                <div class="form-group1 row">
-                    <div class="col-xs-1"> 3 </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="ex1" type="text"  name="Q3L3S1" placeholder="<?php if(isset($data['Q3L3S1'])) echo $data['Q3L3S1'] ?>" value="<?php echo set_value('Q3L3S3'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="ex2" type="text"  name="Q3L3S2" placeholder="<?php if(isset($data['Q3L3S2'])) echo $data['Q3L3S2'] ?>" value="<?php echo set_value('Q3L3S2'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="ex3" type="text"  name="Q3L3S3" placeholder="<?php if(isset($data['Q3L3S3'])) echo $data['Q3L3S3'] ?>" value="<?php echo set_value('Q3L3S3'); ?>"/>
-                    </div>
-                </div>
-                <div class="form-group1 row">
-                    <div class="col-xs-1"> 4 </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="ex1" type="text"  name="Q3L4S1" placeholder="<?php if(isset($data['Q3L4S1'])) echo $data['Q3L4S1'] ?>" value="<?php echo set_value('Q3L4S1'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="ex2" type="text"  name="Q3L4S2" placeholder="<?php if(isset($data['Q3L4S2'])) echo $data['Q3L4S2'] ?>" value="<?php echo set_value('Q3L4S2'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="ex3" type="text"  name="Q3L4S3" placeholder="<?php if(isset($data['Q3L4S3'])) echo $data['Q3L4S3'] ?>" value="<?php echo set_value('Q3L4S3'); ?>"/>
-                    </div>
-                </div>
-                <div class="form-group1 row">
-                    <div class="col-xs-1"> 5 </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="ex1" type="text" name="Q3L5S1" placeholder="<?php if(isset($data['Q3L5S1'])) echo $data['Q3L5S1'] ?>" value="<?php echo set_value('Q3L5S1'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="ex2" type="text" name="Q3L5S2" placeholder="<?php if(isset($data['Q3L5S2'])) echo $data['Q2L5S2'] ?>" value="<?php echo set_value('Q3L5S2'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="ex3" type="text" name="Q3L5S3" placeholder="<?php if(isset($data['Q3L5S3'])) echo $data['Q3L5S3'] ?>" value="<?php echo set_value('Q3L5S3'); ?>"/>
-                    </div>
-                </div>
-                <div class="form-group1 row">
-                    <div class="col-xs-1"> 6 </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="ex1" type="text" name="Q3L6S1" placeholder="<?php if(isset($data['Q3L6S1'])) echo $data['Q3L6S1'] ?>" value="<?php echo set_value('Q3L6S1'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="ex2" type="text" name="Q3L6S2" placeholder="<?php if(isset($data['Q3L6S2'])) echo $data['Q3L6S2'] ?>" value="<?php echo set_value('Q3L6S2'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="ex3" type="text" name="Q3L6S3" placeholder="<?php if(isset($data['Q3L6S3'])) echo $data['Q3L6S3'] ?>" value="<?php echo set_value('Q3L6S3'); ?>"/>
-                    </div>
-                </div>
-                <div class="form-group1 row">
-                    <div class="col-xs-1"> 7 </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="ex1" type="text" name="Q3L7S1" placeholder="<?php if(isset($data['Q3L7S1'])) echo $data['Q3L7S1'] ?>" value="<?php echo set_value('Q3L7S1'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="ex2" type="text" name="Q3L7S2" placeholder="<?php if(isset($data['Q3L7S2'])) echo $data['Q3L7S2'] ?>" value="<?php echo set_value('Q3L7S2'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="ex3" type="text" name="Q3L7S3" placeholder="<?php if(isset($data['Q3L7S3'])) echo $data['Q3L7S3'] ?>" value="<?php echo set_value('Q3L7S3'); ?>"/>
-                    </div>
-                </div>
-                <div class="form-group1 row">
-                    <div class="col-xs-1"> 8 </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="ex1" type="text" name="Q3L8S1" placeholder="<?php if(isset($data['Q3L8S1'])) echo $data['Q3L8S1'] ?>" value="<?php echo set_value('Q3L8S1'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="ex2" type="text" name="Q3L8S2" placeholder="<?php if(isset($data['Q3L8S2'])) echo $data['Q3L8S2'] ?>" value="<?php echo set_value('Q3L8S2'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="ex3" type="text" name="Q3L8S3" placeholder="<?php if(isset($data['Q3L8S3'])) echo $data['Q3L8S3'] ?>" value="<?php echo set_value('Q3L8S3'); ?>"/>
-                    </div>
-                </div>
-                <div class="form-group1 row">
-                    <div class="col-xs-1"> 9 </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="ex1" type="text" name="Q3L9S1" placeholder="<?php if(isset($data['Q3L9S1'])) echo $data['Q3L9S1'] ?>" value="<?php echo set_value('Q3L9S1'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="ex2" type="text" name="Q3L9S2" placeholder="<?php if(isset($data['Q3L9S2'])) echo $data['Q3L9S2'] ?>" value="<?php echo set_value('Q3L9S2'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="ex3" type="text" name="Q3L9S3" placeholder="<?php if(isset($data['Q3L9S3'])) echo $data['Q3L9S3'] ?>" value="<?php echo set_value('Q3L9S3'); ?>"/>
-                    </div>
-                </div>
-                <div class="form-group1 row">
-                    <div class="col-xs-1"> 10 </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="ex1" type="text" name="Q3L10S1" placeholder="<?php if(isset($data['Q3L10S1'])) echo $data['Q3L10S1'] ?>" value="<?php echo set_value('Q3L10S1'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="ex2" type="text" name="Q3L10S2" placeholder="<?php if(isset($data['Q3L10S2'])) echo $data['Q3L10S2'] ?>" value="<?php echo set_value('Q3L10S2'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="ex3" type="text" name="Q3L10S3" placeholder="<?php if(isset($data['Q3L10S3'])) echo $data['Q3L10S3'] ?>" value="<?php echo set_value('Q3L10S3'); ?>"/>
-                    </div>
-                </div>
+            <div class="col-xs-3"> <?php echo form_error('email'); ?>
+                <input class="form-control space-textbox" id="Q1L1S2" type="email" name="Q1L1S2"
+                       placeholder="<?php if (isset($data['Q1L1S2'])) echo $data['Q1L1S2']; ?>"
+                       value="<?php echo set_value('Q1L1S2'); ?>"/>
             </div>
-
+        </div>
+        <div class="form-group1 row">
+            <div class="col-xs-1"> 2</div>
+            <div class="col-xs-3">
+                <input class="form-control space-textbox" id="Q1L2S1" type="text" name="Q1L2S1"
+                       placeholder="<?php if (isset($data['Q1L2S1'])) echo $data['Q1L2S1'] ?>"
+                       value="<?php echo set_value('Q1L2S1'); ?>"/>
+            </div>
+            <div class="col-xs-3"> <?php echo form_error('name'); ?>
+                <input class="form-control space-textbox" id="Q1L2S3" type="text" name="Q1L2S3"
+                       placeholder="<?php if (isset($data['Q1L2S3'])) echo $data['Q1L2S3']; ?>"
+                       value="<?php echo set_value('Q1L2S3'); ?>"/>
+            </div>
+            <div class="col-xs-3">
+                <input class="form-control space-textbox" id="Q1L2S2" type="email" name="Q1L2S2"
+                       placeholder="<?php if (isset($data['Q1L2S2'])) echo $data['Q1L2S2'] ?>"
+                       value="<?php echo set_value('Q1L2S2'); ?>"/>
+            </div>
+        </div>
+        <div class="form-group1 row">
+            <div class="col-xs-1"> 3</div>
+            <div class="col-xs-3">
+                <input class="form-control space-textbox" id="Q1L3S1" type="text" name="Q1L3S1"
+                       placeholder="<?php if (isset($data['Q1L3S1'])) echo $data['Q1L3S1'] ?>"
+                       value="<?php echo set_value('Q1L3S1'); ?>"/>
+            </div>
+            <div class="col-xs-3"> <?php echo form_error('name'); ?>
+                <input class="form-control space-textbox" id="Q1L3S3" type="text" name="Q1L3S3"
+                       placeholder="<?php if (isset($data['Q1L3S3'])) echo $data['Q1L3S3']; ?>"
+                       value="<?php echo set_value('Q1L3S3'); ?>"/>
+            </div>
+            <div class="col-xs-3">
+                <input class="form-control space-textbox" id="Q1L3S2" type="email" name="Q1L3S2"
+                       placeholder="<?php if (isset($data['Q1L3S2'])) echo $data['Q1L3S2'] ?>"
+                       value="<?php echo set_value('Q1L3S2'); ?>"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label">Administrative staff (maximum of five staff can be part of the
+                team):</label>
+        </div>
+        <div class="form-group-1 row">
+            <div class="col-xs-1"></div>
+            <div class="col-xs-3">
+                <label>First Name</label>
+            </div>
+            <div class="col-xs-3">
+                <label>Last Name</label>
+            </div>
+            <div class="col-xs-3">
+                <label>Email ID</label>
+            </div>
+        </div>
+        <div class="form-group1 row">
+            <div class="col-xs-1"> 1</div>
+            <div class="col-xs-3"> <?php echo form_error('name1'); ?>
+                <input class="form-control space-textbox" id="Q2L1S1" type="text" name="Q2L1S1"
+                       placeholder="<?php if (isset($data['Q2L1S1'])) echo $data['Q2L1S1'] ?>"
+                       value="<?php echo set_value('Q2L1S1'); ?>"/>
+            </div>
+            <div class="col-xs-3">
+                <input class="form-control space-textbox" id="Q2L1S3" type="text" name="Q2L1S3"
+                       placeholder="<?php if (isset($data['Q2L1S3'])) echo $data['Q2L1S3'] ?>"
+                       value="<?php echo set_value('Q2L1S3'); ?>"/>
+            </div>
+            <div class="col-xs-3"> <?php echo form_error('email1'); ?>
+                <input class="form-control space-textbox" id="Q2L1S2" type="email" name="Q2L1S2"
+                       placeholder="<?php if (isset($data['Q2L1S2'])) echo $data['Q2L1S2'] ?>"
+                       value="<?php echo set_value('Q2L1S2'); ?>"/>
+            </div>
+        </div>
+        <div class="form-group1 row">
+            <div class="col-xs-1"> 2</div>
+            <div class="col-xs-3">
+                <input class="form-control space-textbox" id="Q2L2S1" type="text" name="Q2L2S1"
+                       placeholder="<?php if (isset($data['Q2L2S1'])) echo $data['Q2L2S1'] ?>"
+                       value="<?php echo set_value('Q2L2S1'); ?>"/>
+            </div>
+            <div class="col-xs-3">
+                <input class="form-control space-textbox" id="Q2L2S3" type="text" name="Q2L2S3"
+                       placeholder="<?php if (isset($data['Q2L2S3'])) echo $data['Q2L2S3'] ?>"
+                       value="<?php echo set_value('Q2L2S3'); ?>"/>
+            </div>
+            <div class="col-xs-3">
+                <input class="form-control space-textbox" id="Q2L2S2" type="email" name="Q2L2S2"
+                       placeholder="<?php if (isset($data['Q2L2S2'])) echo $data['Q2L2S2'] ?>"
+                       value="<?php echo set_value('Q2L2S2'); ?>"/>
+            </div>
+        </div>
+        <div class="form-group1 row">
+            <div class="col-xs-1"> 3</div>
+            <div class="col-xs-3">
+                <input class="form-control space-textbox" id="Q2L3S1" type="text" name="Q2L3S1"
+                       placeholder="<?php if (isset($data['Q2L3S1'])) echo $data['Q2L3S1'] ?>"
+                       value="<?php echo set_value('Q2L3S1'); ?>"/>
+            </div>
+            <div class="col-xs-3">
+                <input class="form-control space-textbox" id="Q2L3S3" type="text" name="Q2L3S3"
+                       placeholder="<?php if (isset($data['Q2L3S3'])) echo $data['Q2L3S3'] ?>"
+                       value="<?php echo set_value('Q2L3S3'); ?>"/>
+            </div>
+            <div class="col-xs-3">
+                <input class="form-control space-textbox" id="Q2L3S2" type="email" name="Q2L3S2"
+                       placeholder="<?php if (isset($data['Q2L3S2'])) echo $data['Q2L3S2'] ?>"
+                       value="<?php echo set_value('Q2L3S2'); ?>"/>
+            </div>
+        </div>
+        <div class="form-group1 row">
+            <div class="col-xs-1"> 4</div>
+            <div class="col-xs-3">
+                <input class="form-control space-textbox" id="Q2L4S1" type="text" name="Q2L4S1"
+                       placeholder="<?php if (isset($data['Q2L4S1'])) echo $data['Q2L4S1']; ?>"
+                       value="<?php echo set_value('Q2L4S1'); ?>"/>
+            </div>
+            <div class="col-xs-3">
+                <input class="form-control space-textbox" id="Q2L4S3" type="text" name="Q2L4S3"
+                       placeholder="<?php if (isset($data['Q2L4S3'])) echo $data['Q2L4S3'] ?>"
+                       value="<?php echo set_value('Q2L4S3'); ?>"/>
+            </div>
+            <div class="col-xs-3">
+                <input class="form-control space-textbox" id="Q2L4S2" type="email" name="Q2L4S2"
+                       placeholder="<?php if (isset($data['Q2L4S2'])) echo $data['Q2L4S2']; ?>"
+                       value="<?php echo set_value('Q2L4S2'); ?>"/>
+            </div>
+        </div>
+        <div class="form-group1 row">
+            <div class="col-xs-1"> 5</div>
+            <div class="col-xs-3">
+                <input class="form-control space-textbox" id="Q2L5S1" type="text" name="Q2L5S1"
+                       placeholder="<?php if (isset($data['Q2L5S1'])) echo $data['Q2L5S1'] ?>"
+                       value="<?php echo set_value('Q2L5S1'); ?>"/>
+            </div>
+            <div class="col-xs-3">
+                <input class="form-control space-textbox" id="Q2L5S3" type="text" name="Q2L5S3"
+                       placeholder="<?php if (isset($data['Q2L5S3'])) echo $data['Q2L5S3'] ?>"
+                       value="<?php echo set_value('Q2L5S3'); ?>"/>
+            </div>
+            <div class="col-xs-3">
+                <input class="form-control space-textbox" id="Q2L5S2" type="email" name="Q2L5S2"
+                       placeholder="<?php if (isset($data['Q2L5S2'])) echo $data['Q2L5S2'] ?>"
+                       value="<?php echo set_value('Q2L5S2'); ?>"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label">Students (maximum of ten students can be part of the team):</label>
+        </div>
+        <div class="form-group-1 row">
+            <div class="col-xs-1"></div>
+            <div class="col-xs-3">
+                <label>First Name</label>
+            </div>
+            <div class="col-xs-3">
+                <label>Last Name</label>
+            </div>
+            <div class="col-xs-3">
+                <label>Grade</label>
+            </div>
+        </div>
+        <div class="form-group1 row">
+            <div class="col-xs-1"> 1</div>
+            <div class="col-xs-3"> <?php echo form_error('name2'); ?>
+                <input class="form-control space-textbox" id="Q3L1S1" type="text" name="Q3L1S1"
+                       placeholder="<?php if (isset($data['Q3L1S1'])) echo $data['Q3L1S1'] ?>"
+                       value="<?php echo set_value('Q3L1S1'); ?>"/>
+            </div>
+            <div class="col-xs-3"> <?php echo form_error('email2'); ?>
+                <input class="form-control space-textbox" id="Q3L1S2" type="text" name="Q3L1S2"
+                       placeholder="<?php if (isset($data['Q3L1S2'])) echo $data['Q3L1S2'] ?>"
+                       value="<?php echo set_value('Q3L1S2'); ?>"/>
+            </div>
+            <div class="col-xs-3">
+                <input class="form-control space-textbox" id="Q3L1S3" type="text" name="Q3L1S3"
+                       placeholder="<?php if (isset($data['Q3L1S3'])) echo $data['Q3L1S3'] ?>"
+                       value="<?php echo set_value('Q3L1S3'); ?>"/>
+            </div>
+        </div>
+        <div class="form-group1 row">
+            <div class="col-xs-1"> 2</div>
+            <div class="col-xs-3">
+                <input class="form-control space-textbox" id="Q3L2S1" type="text" name="Q3L2S1"
+                       placeholder="<?php if (isset($data['Q3L2S1'])) echo $data['Q3L2S1'] ?>"
+                       value="<?php echo set_value('Q3L2S1'); ?>"/>
+            </div>
+            <div class="col-xs-3">
+                <input class="form-control space-textbox" id="Q3L2S2" type="text" name="Q3L2S2"
+                       placeholder="<?php if (isset($data['Q3L2S2'])) echo $data['Q3L2S2'] ?>"
+                       value="<?php echo set_value('Q3L2S2'); ?>"/>
+            </div>
+            <div class="col-xs-3">
+                <input class="form-control space-textbox" id="Q3L2S3" type="text" name="Q3L2S3"
+                       placeholder="<?php if (isset($data['Q3L2S3'])) echo $data['Q3L2S3'] ?>"
+                       value="<?php echo set_value('Q3L2S3'); ?>"/>
+            </div>
+        </div>
+        <div class="form-group1 row">
+            <div class="col-xs-1"> 3</div>
+            <div class="col-xs-3">
+                <input class="form-control space-textbox" id="Q3L3S1" type="text" name="Q3L3S1"
+                       placeholder="<?php if (isset($data['Q3L3S1'])) echo $data['Q3L3S1'] ?>"
+                       value="<?php echo set_value('Q3L3S3'); ?>"/>
+            </div>
+            <div class="col-xs-3">
+                <input class="form-control space-textbox" id="Q3L3S2" type="text" name="Q3L3S2"
+                       placeholder="<?php if (isset($data['Q3L3S2'])) echo $data['Q3L3S2'] ?>"
+                       value="<?php echo set_value('Q3L3S2'); ?>"/>
+            </div>
+            <div class="col-xs-3">
+                <input class="form-control space-textbox" id="Q3L3S3" type="text" name="Q3L3S3"
+                       placeholder="<?php if (isset($data['Q3L3S3'])) echo $data['Q3L3S3'] ?>"
+                       value="<?php echo set_value('Q3L3S3'); ?>"/>
+            </div>
+        </div>
+        <div class="form-group1 row">
+            <div class="col-xs-1"> 4</div>
+            <div class="col-xs-3">
+                <input class="form-control space-textbox" id="Q3L4S1" type="text" name="Q3L4S1"
+                       placeholder="<?php if (isset($data['Q3L4S1'])) echo $data['Q3L4S1'] ?>"
+                       value="<?php echo set_value('Q3L4S1'); ?>"/>
+            </div>
+            <div class="col-xs-3">
+                <input class="form-control space-textbox" id="Q3L4S2" type="text" name="Q3L4S2"
+                       placeholder="<?php if (isset($data['Q3L4S2'])) echo $data['Q3L4S2'] ?>"
+                       value="<?php echo set_value('Q3L4S2'); ?>"/>
+            </div>
+            <div class="col-xs-3">
+                <input class="form-control space-textbox" id="Q3L4S3" type="text" name="Q3L4S3"
+                       placeholder="<?php if (isset($data['Q3L4S3'])) echo $data['Q3L4S3'] ?>"
+                       value="<?php echo set_value('Q3L4S3'); ?>"/>
+            </div>
+        </div>
+        <div class="form-group1 row">
+            <div class="col-xs-1"> 5</div>
+            <div class="col-xs-3">
+                <input class="form-control space-textbox" id="Q3L5S1" type="text" name="Q3L5S1"
+                       placeholder="<?php if (isset($data['Q3L5S1'])) echo $data['Q3L5S1'] ?>"
+                       value="<?php echo set_value('Q3L5S1'); ?>"/>
+            </div>
+            <div class="col-xs-3">
+                <input class="form-control space-textbox" id="Q3L5S2" type="text" name="Q3L5S2"
+                       placeholder="<?php if (isset($data['Q3L5S2'])) echo $data['Q2L5S2'] ?>"
+                       value="<?php echo set_value('Q3L5S2'); ?>"/>
+            </div>
+            <div class="col-xs-3">
+                <input class="form-control space-textbox" id="Q3L5S3" type="text" name="Q3L5S3"
+                       placeholder="<?php if (isset($data['Q3L5S3'])) echo $data['Q3L5S3'] ?>"
+                       value="<?php echo set_value('Q3L5S3'); ?>"/>
+            </div>
+        </div>
+        <div class="form-group1 row">
+            <div class="col-xs-1"> 6</div>
+            <div class="col-xs-3">
+                <input class="form-control space-textbox" id="Q3L6S1" type="text" name="Q3L6S1"
+                       placeholder="<?php if (isset($data['Q3L6S1'])) echo $data['Q3L6S1'] ?>"
+                       value="<?php echo set_value('Q3L6S1'); ?>"/>
+            </div>
+            <div class="col-xs-3">
+                <input class="form-control space-textbox" id="Q3L6S2" type="text" name="Q3L6S2"
+                       placeholder="<?php if (isset($data['Q3L6S2'])) echo $data['Q3L6S2'] ?>"
+                       value="<?php echo set_value('Q3L6S2'); ?>"/>
+            </div>
+            <div class="col-xs-3">
+                <input class="form-control space-textbox" id="Q3L6S3" type="text" name="Q3L6S3"
+                       placeholder="<?php if (isset($data['Q3L6S3'])) echo $data['Q3L6S3'] ?>"
+                       value="<?php echo set_value('Q3L6S3'); ?>"/>
+            </div>
+        </div>
+        <div class="form-group1 row">
+            <div class="col-xs-1"> 7</div>
+            <div class="col-xs-3">
+                <input class="form-control space-textbox" id="Q3L7S1" type="text" name="Q3L7S1"
+                       placeholder="<?php if (isset($data['Q3L7S1'])) echo $data['Q3L7S1'] ?>"
+                       value="<?php echo set_value('Q3L7S1'); ?>"/>
+            </div>
+            <div class="col-xs-3">
+                <input class="form-control space-textbox" id="Q3L7S2" type="text" name="Q3L7S2"
+                       placeholder="<?php if (isset($data['Q3L7S2'])) echo $data['Q3L7S2'] ?>"
+                       value="<?php echo set_value('Q3L7S2'); ?>"/>
+            </div>
+            <div class="col-xs-3">
+                <input class="form-control space-textbox" id="Q3L7S3" type="text" name="Q3L7S3"
+                       placeholder="<?php if (isset($data['Q3L7S3'])) echo $data['Q3L7S3'] ?>"
+                       value="<?php echo set_value('Q3L7S3'); ?>"/>
+            </div>
+        </div>
+        <div class="form-group1 row">
+            <div class="col-xs-1"> 8</div>
+            <div class="col-xs-3">
+                <input class="form-control space-textbox" id="Q3L8S1" type="text" name="Q3L8S1"
+                       placeholder="<?php if (isset($data['Q3L8S1'])) echo $data['Q3L8S1'] ?>"
+                       value="<?php echo set_value('Q3L8S1'); ?>"/>
+            </div>
+            <div class="col-xs-3">
+                <input class="form-control space-textbox" id="Q3L8S2" type="text" name="Q3L8S2"
+                       placeholder="<?php if (isset($data['Q3L8S2'])) echo $data['Q3L8S2'] ?>"
+                       value="<?php echo set_value('Q3L8S2'); ?>"/>
+            </div>
+            <div class="col-xs-3">
+                <input class="form-control space-textbox" id="Q3L8S3" type="text" name="Q3L8S3"
+                       placeholder="<?php if (isset($data['Q3L8S3'])) echo $data['Q3L8S3'] ?>"
+                       value="<?php echo set_value('Q3L8S3'); ?>"/>
+            </div>
+        </div>
+        <div class="form-group1 row">
+            <div class="col-xs-1"> 9</div>
+            <div class="col-xs-3">
+                <input class="form-control space-textbox" id="Q3L9S1" type="text" name="Q3L9S1"
+                       placeholder="<?php if (isset($data['Q3L9S1'])) echo $data['Q3L9S1'] ?>"
+                       value="<?php echo set_value('Q3L9S1'); ?>"/>
+            </div>
+            <div class="col-xs-3">
+                <input class="form-control space-textbox" id="Q3L9S2" type="text" name="Q3L9S2"
+                       placeholder="<?php if (isset($data['Q3L9S2'])) echo $data['Q3L9S2'] ?>"
+                       value="<?php echo set_value('Q3L9S2'); ?>"/>
+            </div>
+            <div class="col-xs-3">
+                <input class="form-control space-textbox" id="Q3L9S3" type="text" name="Q3L9S3"
+                       placeholder="<?php if (isset($data['Q3L9S3'])) echo $data['Q3L9S3'] ?>"
+                       value="<?php echo set_value('Q3L9S3'); ?>"/>
+            </div>
+        </div>
+        <div class="form-group1 row">
+            <div class="col-xs-1"> 10</div>
+            <div class="col-xs-3">
+                <input class="form-control space-textbox" id="Q3L10S1" type="text" name="Q3L10S1"
+                       placeholder="<?php if (isset($data['Q3L10S1'])) echo $data['Q3L10S1'] ?>"
+                       value="<?php echo set_value('Q3L10S1'); ?>"/>
+            </div>
+            <div class="col-xs-3">
+                <input class="form-control space-textbox" id="Q3L10S2" type="text" name="Q3L10S2"
+                       placeholder="<?php if (isset($data['Q3L10S2'])) echo $data['Q3L10S2'] ?>"
+                       value="<?php echo set_value('Q3L10S2'); ?>"/>
+            </div>
+            <div class="col-xs-3">
+                <input class="form-control space-textbox" id="Q3L10S3" type="text" name="Q3L10S3"
+                       placeholder="<?php if (isset($data['Q3L10S3'])) echo $data['Q3L10S3'] ?>"
+                       value="<?php echo set_value('Q3L10S3'); ?>"/>
+            </div>
+        </div>
             <div class="form-group">
                 <label for="username" class="control-label"><h6> Task 2: Identify the types of areas in your school.</h6></label>
                 <div class="form-group-1 row">
@@ -313,7 +422,7 @@
                         <label for="ex3">No. of Playgrounds</label>
                     </div>
                     <div class="col-xs-5">
-                        <input class="form-control space-textbox space-textbox" id="ex2" type="number" name="Q4L1" placeholder="<?php if (isset($data['Q4L1'])) echo $data['Q4L1'] ?>" value="<?php echo set_value('Q4L1'); ?>"/>
+                        <input class="form-control space-textbox space-textbox" id="Q4L1" type="number" name="Q4L1" placeholder="<?php if (isset($data['Q4L1'])) echo $data['Q4L1'] ?>" value="<?php echo set_value('Q4L1'); ?>"/>
                     </div>
                 </div>
                 <div class="form-group1 row">
@@ -321,7 +430,7 @@
                         <label for="ex3">No. of <i>Kachcha</i> (unpaved) playgrounds with grass</label>
                     </div>
                     <div class="col-xs-5">
-                        <input class="form-control space-textbox space-textbox" id="ex2" type="number" name="Q4L2" placeholder="<?php if (isset($data['Q4L2'])) echo $data['Q4L2'] ?>" value="<?php echo set_value('Q4L2'); ?>"/>
+                        <input class="form-control space-textbox space-textbox" id="Q4L2" type="number" name="Q4L2" placeholder="<?php if (isset($data['Q4L2'])) echo $data['Q4L2'] ?>" value="<?php echo set_value('Q4L2'); ?>"/>
                     </div>
                 </div>
                 <div class="form-group1 row">
@@ -329,7 +438,7 @@
                         <label for="ex3">No. of <i>Kachcha</i> (unpaved) playgrounds with grass</label>
                     </div>
                     <div class="col-xs-5">
-                        <input class="form-control space-textbox space-textbox" id="ex2" type="number" name="Q4L3" placeholder="<?php if (isset($data['Q4L3'])) echo $data['Q4L3'] ?>" value="<?php echo set_value('Q4L3'); ?>"/>
+                        <input class="form-control space-textbox space-textbox" id="Q4L3" type="number" name="Q4L3" placeholder="<?php if (isset($data['Q4L3'])) echo $data['Q4L3'] ?>" value="<?php echo set_value('Q4L3'); ?>"/>
                     </div>
                 </div>
                 <div class="form-group1 row">
@@ -337,7 +446,7 @@
                         <label for="ex3">No. of <i>Pucca</i> (paved) playgrounds</label>
                     </div>
                     <div class="col-xs-5">
-                        <input class="form-control space-textbox space-textbox" id="ex2" type="number" name="Q4L4" placeholder="<?php if (isset($data['Q4L4'])) echo $data['Q4L4'] ?>" value="<?php echo set_value('Q4L4'); ?>"/>
+                        <input class="form-control space-textbox space-textbox" id="Q4L4" type="number" name="Q4L4" placeholder="<?php if (isset($data['Q4L4'])) echo $data['Q4L4'] ?>" value="<?php echo set_value('Q4L4'); ?>"/>
                     </div>
                 </div>
                 <div class="form-group1 row">
@@ -345,7 +454,7 @@
                         <label for="ex3">No. of constructed buildings - Academic</label>
                     </div>
                     <div class="col-xs-5">
-                        <input class="form-control space-textbox space-textbox" id="ex2" type="number" name="Q4L5" placeholder="<?php if (isset($data['Q4L5'])) echo $data['Q4L5'] ?>" value="<?php echo set_value('Q4L5'); ?>"/>
+                        <input class="form-control space-textbox space-textbox" id="Q4L5" type="number" name="Q4L5" placeholder="<?php if (isset($data['Q4L5'])) echo $data['Q4L5'] ?>" value="<?php echo set_value('Q4L5'); ?>"/>
                     </div>
                 </div>
                 <div class="form-group1 row">
@@ -353,7 +462,7 @@
                         <label for="ex3">No. of constructed buildings – Official</label>
                     </div>
                     <div class="col-xs-5">
-                        <input class="form-control space-textbox space-textbox" id="ex2" type="number" name="Q4L6" placeholder="<?php if (isset($data['Q4L6'])) echo $data['Q4L6'] ?>" value="<?php echo set_value('Q4L6'); ?>"/>
+                        <input class="form-control space-textbox space-textbox" id="Q4L6" type="number" name="Q4L6" placeholder="<?php if (isset($data['Q4L6'])) echo $data['Q4L6'] ?>" value="<?php echo set_value('Q4L6'); ?>"/>
                     </div>
                 </div>
                 <div class="form-group1 row">
@@ -361,7 +470,7 @@
                         <label for="ex3">No. of floors (does not include ground floor) <a class="tt" data-tooltip="Please give no. of floors only." style="position:relative; top:-5px;"><span class="badge">?</span></a></label>
                     </div>
                     <div class="col-xs-5">
-                        <input class="form-control space-textbox space-textbox" id="ex2" type="number" name="Q4L7" placeholder="<?php if (isset($data['Q4L7'])) echo $data['Q4L7'] ?>" value="<?php echo set_value('Q4L7'); ?>"/>
+                        <input class="form-control space-textbox space-textbox" id="Q4L7" type="number" name="Q4L7" placeholder="<?php if (isset($data['Q4L7'])) echo $data['Q4L7'] ?>" value="<?php echo set_value('Q4L7'); ?>"/>
                     </div>
                 </div>
                 <div class="form-group1 row">
@@ -369,7 +478,7 @@
                         <label for="ex3">Rooftop/Terrace Gardens</label>
                     </div>
                     <div class="col-xs-5">
-                        <input class="form-control space-textbox space-textbox" id="ex2" type="number" name="Q4L8" placeholder="<?php if (isset($data['Q4L8'])) echo $data['Q4L8'] ?>" value="<?php echo set_value('Q4L8'); ?>"/>
+                        <input class="form-control space-textbox space-textbox" id="Q4L8" type="number" name="Q4L8" placeholder="<?php if (isset($data['Q4L8'])) echo $data['Q4L8'] ?>" value="<?php echo set_value('Q4L8'); ?>"/>
                     </div>
                 </div>
                 <!--            <div class="form-group row">

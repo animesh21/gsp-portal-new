@@ -508,7 +508,7 @@ $(document).ready(function(){
         var count2 = 0;
         var count3 = 0;
 
-        for(i=1;i<11;i++)
+        for(i=1;i<9;i++)
         {
             var id1 = "Q3LzS1".replace('z',i);
             var id2 = "Q3LzS2".replace('z',i);
@@ -543,27 +543,7 @@ $(document).ready(function(){
             event.preventDefault();
         }
 
-        var error = false;
-        var id = "";
-        for(i=1;i<13;i++)
-        {
-            var id1 = "Q4Lz".replace('z',i);
 
-            var element1 = parseInt(document.getElementById(id1).value);
-            var element11 = parseInt(document.getElementById(id1).placeholder);
-
-            if(isNaN(element1) && isNaN(element11))
-            {
-                id = id1;
-                error =true;
-                alert("Please write 0(zero) if you do not have any input/entry");
-            }
-        }
-        if(error == true)
-        {
-            $('#'+id).focus();
-
-        }
         var Q4L1 = parseInt(document.getElementById("Q4L1").value);
         var Q4L11 = parseInt(document.getElementById("Q4L1").placeholder);
 
@@ -574,20 +554,7 @@ $(document).ready(function(){
 
         }
 
-        var val1 = $('#Q6A2S1T5').val();
-        val1 = parseInt(val1);
-
-        if(val1 > 0)
-        {
-            var val2 = parseFloat($('#Q4L7').val());
-            var val2Place = parseFloat(document.getElementById('Q4L7').placeholder);
-
-            if(val2 < 1 || val2Place < 1)
-            {
-                alert("Please Enter Value in Surface parking area, Or remove Authorized Parking form Air Section");
-
-            }
-        }
+       
 
     });
 
