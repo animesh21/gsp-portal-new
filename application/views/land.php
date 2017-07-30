@@ -464,10 +464,11 @@
                 <label>Site area in square meter (<strong>m<sup>2</sup></strong>)</label>
             </div>
             <div class="col-xs-5">
+                <?php $placeholder_Default = "<strong>m<sup>2</sup></strong>" ?>
                 <input class="form-control space-textbox" id="Q4L1" onkeyup="BuildUpArea()"
                        onchange="BuildUpArea()" type="number" min="1" name="Q4L1"
-                       placeholder="<?php if (isset($data['Q4L1'])) echo $data['Q4L1']; else echo '<strong>m<sup>2</sup></strong>'; ?>"
-                       value="<?php echo set_value('Q4L1'); ?>" readonly/>
+                       placeholder="<?php if (isset($data['Q4L1'])) echo $data['Q4L1']; else echo $placeholder_Default; ?>"
+                       value="<?php echo set_value('Q4L1'); ?>" rea/>
             </div>
         </div>
         <div class="form-group">
@@ -481,7 +482,7 @@
             <div class="col-xs-5">
                 <input class="form-control space-textbox" id="Q4L2" onkeyup="BuildUpArea()"
                        onchange="BuildUpArea()" type="number" min="1" name="Q4L2"
-                       placeholder="<?php if (isset($data['Q4L2'])) echo $data['Q4L2']; else echo '<strong>m<sup>2</sup></strong>'; ?>"
+                       placeholder="<?php if (isset($data['Q4L2'])) echo $data['Q4L2']; else echo $placeholder_Default; ?>"
                        value="<?php echo set_value('Q4L2'); ?>"/>
             </div>
         </div>
@@ -492,7 +493,7 @@
             <div class="col-xs-5">
                 <input class="form-control space-textbox" id="Q4L3" onkeyup="GreenArea()"
                        onchange="GreenArea()" type="number" min="0" name="Q4L3"
-                       placeholder="<?php if (isset($data['Q4L3'])) echo $data['Q4L3']; else echo '<strong>m<sup>2</sup></strong>'; ?>"
+                       placeholder="<?php if (isset($data['Q4L3'])) echo $data['Q4L3']; else echo $placeholder_Default; ?>"
                        value="<?php echo set_value('Q4L3'); ?>"/>
             </div>
         </div>
@@ -503,7 +504,7 @@
             <div class="col-xs-5">
                 <input class="form-control space-textbox" id="Q4L4" onkeyup="GreenArea()"
                        onchange="GreenArea()" type="number" min="0" name="Q4L4"
-                       placeholder="<?php if (isset($data['Q4L4'])) echo $data['Q4L4']; else echo '<strong>m<sup>2</sup></strong>'; ?>"
+                       placeholder="<?php if (isset($data['Q4L4'])) echo $data['Q4L4']; else echo $placeholder_Default; ?>"
                        value="<?php echo set_value('Q4L4'); ?>"/>
             </div>
         </div>
@@ -513,7 +514,7 @@
             </div>
             <div class="col-xs-5">
                 <input class="form-control space-textbox" id="Q4L5" onchange="BuildUpArea()" type="number" min="0" name="Q4L5"
-                       placeholder="<?php if (isset($data['Q4L5'])) echo $data['Q4L5']; else echo '<strong>m<sup>2</sup></strong>'; ?>"
+                       placeholder="<?php if (isset($data['Q4L5'])) echo $data['Q4L5']; else echo $placeholder_Default; ?>"
                        value="<?php echo set_value('Q4L5'); ?>" readonly/>
             </div>
         </div>
@@ -524,7 +525,7 @@
             <div class="col-xs-5">
                 <input class="form-control space-textbox" id="Q4L6" onkeyup="BuildUpArea()"
                        onchange="BuildUpArea()" type="number" min="0" name="Q4L6"
-                       placeholder="<?php if (isset($data['Q4L6'])) echo $data['Q4L6']; else echo '<strong>m<sup>2</sup></strong>'; ?>"
+                       placeholder="<?php if (isset($data['Q4L6'])) echo $data['Q4L6']; else echo $placeholder_Default; ?>"
                        value="<?php echo set_value('Q4L6'); ?>"/>
             </div>
         </div>
@@ -537,7 +538,7 @@
                        value="<?php if (isset($other['Q6A2S1T5'])) echo $other['Q6A2S1T5']; ?>">
                 <input class="form-control space-textbox" id="Q4L7" onkeyup="BuildUpArea()"
                        onchange="BuildUpArea()" type="number" name="Q4L7"
-                       placeholder="<?php if (isset($data['Q4L7'])) echo $data['Q4L7']; else echo '<strong>m<sup>2</sup></strong>'; ?>"
+                       placeholder="<?php if (isset($data['Q4L7'])) echo $data['Q4L7']; else echo $placeholder_Default; ?>"
                        value="<?php echo set_value('Q4L7'); ?>"
                        min="0"/>
             </div>
@@ -549,7 +550,7 @@
             <div class="col-xs-5">
                 <input class="form-control space-textbox" id="Q4L8" onkeyup="BuildUpArea()"
                        onchange="BuildUpArea()" type="number" min="0" name="Q4L8"
-                       placeholder="<?php if (isset($data['Q4L8'])) echo $data['Q4L8']; else echo '<strong>m<sup>2</sup></strong>'; ?>"
+                       placeholder="<?php if (isset($data['Q4L8'])) echo $data['Q4L8']; else echo $placeholder_Default; ?>"
                        value="<?php echo set_value('Q4L8'); ?>"/>
             </div>
         </div>
@@ -563,7 +564,7 @@
             <div class="col-xs-5">
                 <input class="form-control space-textbox" id="Q4L9" onkeyup="BuildUpArea()"
                        onchange="BuildUpArea()" type="number" min="0" name="Q4L9"
-                       placeholder="<?php if (isset($data['Q4L9'])) echo $data['Q4L9']; else echo '<strong>m<sup>2</sup></strong>'; ?>"
+                       placeholder="<?php if (isset($data['Q4L9'])) echo $data['Q4L9']; else echo $placeholder_Default; ?>"
                        value="<?php echo set_value('Q4L9'); ?>"/>
             </div>
         </div>
@@ -574,7 +575,7 @@
             <div class="col-xs-5">
                 <input class="form-control space-textbox" id="Q4L10" onkeyup="BuildUpArea()"
                        onchange="BuildUpArea()" type="number" min="0" name="Q4L10"
-                       placeholder="<?php if (isset($data['Q4L10'])) echo $data['Q4L10']; else echo '<strong>m<sup>2</sup></strong>'; ?>"
+                       placeholder="<?php if (isset($data['Q4L10'])) echo $data['Q4L10']; else echo $placeholder_Default; ?>"
                        value="<?php echo set_value('Q4L10'); ?>"/>
             </div>
         </div>
@@ -584,7 +585,7 @@
             </div>
             <div class="col-xs-5">
                 <input class="form-control space-textbox" id="Q4L11" type="number" min="0" name="Q4L11"
-                       placeholder="<?php if (isset($data['Q4L11'])) echo $data['Q4L11']; else echo '<strong>m<sup>2</sup></strong>'; ?>"
+                       placeholder="<?php if (isset($data['Q4L11'])) echo $data['Q4L11']; else echo $placeholder_Default; ?>"
                        value="<?php echo set_value('Q4L11'); ?>"/>
             </div>
         </div>
@@ -594,7 +595,7 @@
             </div>
             <div class="col-xs-5">
                 <input class="form-control space-textbox" id="Q4L12" type="number" min="0" name="Q4L12"
-                       placeholder="<?php if (isset($data['Q4L12'])) echo $data['Q4L12']; else echo '<strong>m<sup>2</sup></strong>'; ?>"
+                       placeholder="<?php if (isset($data['Q4L12'])) echo $data['Q4L12']; else echo $placeholder_Default; ?>"
                        value="<?php echo set_value('Q4L12'); ?>"/>
             </div>
         </div>
