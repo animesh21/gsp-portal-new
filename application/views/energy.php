@@ -1233,9 +1233,7 @@
                             </ul>
                         </div>
                     </div>
-                    <?php
-                }
-            ?>
+
             <div class="form-group">
                 <div class="form-group">
                     <label><span class="cube">7</span>Does your school use solar water heater:</label>
