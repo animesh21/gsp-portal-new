@@ -235,11 +235,17 @@ $(document).ready(function(e){
     $("#Q6E1S3").keypress(function(e){
         var patt = /^[0-5]$/g;
 
-        var val = this.value + e.key;
+        var val = (this.value + e.key).length;
         console.log(patt.test(val),!patt.test(val))
-        if (patt.test(e.key))
+        if(val > 11)
         {
-            $('#Q6E1S3').val(this.value+",");
+            e.preventDefault();
+        }
+        else if (patt.test(e.key))
+        {
+            if (this.value != "") {
+                $('#Q6E1S3').val(this.value + ",");
+            }
         }
         else
         {
