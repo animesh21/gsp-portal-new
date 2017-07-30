@@ -1240,7 +1240,7 @@
                     <li>
                         <label>Biogas Plant</label>
                         <input type="checkbox" name="Q9E1S5" id="Wind"
-                               value="<?php echo set_value('Q9E1S2'); ?>" <?php if (isset($data['Q9E1S2'])) echo "checked"; ?>/>
+                               value="<?php echo set_value('Q9E1S5'); ?>" <?php if (isset($data['Q9E1S5'])) echo "checked"; ?>/>
                     </li>
                     <li>
                         <label>Combination of solar and wind</label>
@@ -1248,6 +1248,23 @@
                                value="<?php echo set_value('Q9E1S4'); ?>" <?php if (isset($data['Q9E1S4'])) echo "checked"; ?>/>
                     </li>
                 </ul>
+            </div>
+            <div class="form-group">
+                <div class="form-group">
+                    <label><span class="cube">7</span>Does your school use solar water heater:</label>
+                    <ul class="list-inline">
+                        <li>
+                            <label>Yes</label>
+                            <input type="radio" name="Q10E1S1" id="Solar"
+                                   value="<?php echo set_value('Q10E1S1'); ?>" <?php if (isset($data['Q10E1S1'])) echo "checked"; ?>/>
+                        </li>
+                        <li>
+                            <label>No</label>
+                            <input type="radio" name="Q10E1S1" id="Wind"
+                                   value="<?php echo set_value('Q10E1S2'); ?>" <?php if (isset($data['Q10E1S2'])) echo "checked"; ?>/>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="form-group" id="WastePolicy">
                 <label class="control-label">Please upload supporting documents:</label>
@@ -1260,23 +1277,6 @@
                 <button class="btn uploadbtn upload" data-id="Supporting Document Energy" data-toggle="modal"
                         data-target="#airModal" type="button">UPLOAD FILES </button>
                 <br>
-            </div>
-            <div class="form-group" id="typeofenergy">
-                <div class="form-group">
-                    <label><span class="cube">7</span>Does your school use solar water heater:</label>
-                    <ul class="list-inline">
-                        <li>
-                            <label>Yes</label>
-                            <input type="radio" name="Q9E1S1" id="Solar"
-                                   value="<?php echo set_value('Q9E1S1'); ?>" <?php if (isset($data['Q9E1S1'])) echo "checked"; ?>/>
-                        </li>
-                        <li>
-                            <label>No</label>
-                            <input type="radio" name="Q9E1S2" id="Wind"
-                                   value="<?php echo set_value('Q9E1S2'); ?>" <?php if (isset($data['Q9E1S2'])) echo "checked"; ?>/>
-                        </li>
-                    </ul>
-                </div>
             </div>
             <div class="text-center">
                 <button type="button" class="org-btn" id="btnEnergyPrevious">Previous</button>
