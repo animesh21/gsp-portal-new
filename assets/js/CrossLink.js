@@ -1976,7 +1976,7 @@ $("#air").submit(function( event ) { //Air Submit
     var id= "";
     if(val1 > 2)
     {
-        for(i=1;i<7;i++)
+        for(i=1;i<6;i++)
         {
             var id1="bz".replace('z',i);
             var id2="cz".replace('z',i);
