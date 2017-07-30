@@ -464,13 +464,13 @@
                 <label>Site area in square meter (<strong>m<sup>2</sup></strong>)</label>
             </div>
             <div class="col-xs-5">
-                <?php $placeholder_Default = "<strong>m<sup>2</sup></strong>";
+                <?php $placeholder_Default = "m²";
                       echo $placeholder_Default;
                       
                 ?>
                 <input class="form-control space-textbox" id="Q4L1" onkeyup="BuildUpArea()"
                        onchange="BuildUpArea()" type="number" min="1" name="Q4L1"
-                       placeholder="<?php if (isset($data['Q4L1'])) echo $data['Q4L1']; else echo "<strong>m<sup>2</sup></strong>"; ?>"
+                       placeholder="<?php if (isset($data['Q4L1'])) echo $data['Q4L1']; else echo $placeholder_Default; ?>"
                        value="<?php echo set_value('Q4L1'); ?>" rea/>
             </div>
         </div>
