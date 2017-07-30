@@ -1172,14 +1172,35 @@
             if (isset($data['Q9E1']))
                 if ($data['Q9E1'] == 'Y') {
                     ?>
-                    <div class="form-group" id="alternativeEnergy">
+            <div class="form-group" id="alternativeEnergy">
+
+            <?php } else { ?>
+                <div class="form-group" id="alternativeEnergy" style="display:none">
+
+
+                <?php } else {?>
+                    <div class="form-group" id="alternativeEnergy" style="display:none">
+
+                    <?php }?>
                         <label class="control-label">If yes, please upload a picture of alternative source of energy
                             installed that is currently in use.</label>
                         <br>
                         <button class="btn uploadbtn upload" data-id="Alternative Source of Energy" data-toggle="modal"
                                 data-target="#airModal" type="button">UPLOAD FILES </button>
                     </div>
-                    <div class="form-group" id="typeofenergy">
+                    <?php
+                    if (isset($data['Q9E1']))
+                        if ($data['Q9E1'] == 'Y') {
+                        ?>
+                            <div class="form-group" id="typeofenergy">
+                   <?php } else { ?>
+                                <div class="form-group" id="typeofenergy" style="display:none">
+                   <?php }
+                   else {?>
+                            <div class="form-group" id="typeofenergy" style="display:none">
+
+                   <?php }?>
+
                         <div class="form-group">
                             <label><span class="cube">6(a)</span>If yes, do you use:</label>
 
@@ -1215,45 +1236,6 @@
                     <?php
                 }
             ?>
-            <div class="form-group" id="alternativeEnergy" style="display:none">
-                <label class="control-label">If yes, please upload a picture of alternative source of energy installed
-                    that is currently in use.</label>
-                <br>
-                <button class="btn uploadbtn upload" data-id="Alternative Source of Energy" data-toggle="modal"
-                        data-target="#airModal" type="button">UPLOAD FILES </button>
-            </div>
-            <div class="form-group" id="typeofenergy" style="display:none">
-                <div class="form-group">
-                    <label><span class="cube">6(a)</span>If yes, do you use: <a class="tt" data-tooltip="Do not add solar water heater here. Consider only solar panels which give you electricity."><span class="badge">?</span></a></label>
-                </div>
-                <ul class="list-inline">
-                    <li>
-                        <label>Solar</label>
-                        <input type="checkbox" name="Q9E1S1" id="Solar"
-                               value="<?php echo set_value('Q9E1S1',1); ?>" <?php if (isset($data['Q9E1S1'])) echo set_checkbox('Q9E1S1', '1', true); ?>/>
-                    </li>
-                    <li>
-                        <label>Wind</label>
-                        <input type="checkbox" name="Q9E1S2" id="Wind"
-                               value="<?php echo set_value('Q9E1S2',1); ?>" <?php if (isset($data['Q9E1S2'])) echo set_checkbox('Q9E1S2', '1', true); ?>/>
-                    </li>
-                    <li>
-                        <label>Hydro</label>
-                        <input type="checkbox" name="Q9E1S3" id="Hydro"
-                               value="<?php echo set_value('Q9E1S3',1); ?>" <?php if (isset($data['Q9E1S3'])) echo set_checkbox('Q9E1S3', '1', true); ?>/>
-                    </li>
-                    <li>
-                        <label>Biogas Plant</label>
-                        <input type="checkbox" name="Q9E1S5"
-                               value="<?php echo set_value('Q9E1S5',1); ?>" <?php if (isset($data['Q9E1S5'])) echo set_checkbox('Q9E1S5', '1', true); ?>/>
-                    </li>
-                    <li>
-                        <label>Combination of solar and wind</label>
-                            <input type="checkbox" name="Q9E1S4" id="Combination"
-                                   value="<?php echo set_value('Q9E1S4', 1); ?>" <?php if (isset($data['Q9E1S4'])) echo set_checkbox('Q9E1S4', '1', true); ?>/>
-                    </li>
-                </ul>
-            </div>
             <div class="form-group">
                 <div class="form-group">
                     <label><span class="cube">7</span>Does your school use solar water heater:</label>
