@@ -1199,6 +1199,11 @@
                                            value="<?php echo set_value('Q9E1S3'); ?>" <?php if (isset($data['Q9E1S3'])) echo "checked"; ?>/>
                                 </li>
                                 <li>
+                                    <label>Biogas Plant</label>
+                                    <input type="checkbox" name="Q9E1S5"
+                                           value="<?php echo set_value('Q9E1S5'); ?>" <?php if (isset($data['Q9E1S5'])) echo "checked"; ?>/>
+                                </li>
+                                <li>
                                     <label>Combination of solar and wind
                                         <input type="checkbox" name="Q9E1S4" id="Combination"
                                                value="<?php echo set_value('Q9E1S4'); ?>" <?php if (isset($data['Q9E1S4'])) echo "checked"; ?>/>
@@ -1239,7 +1244,7 @@
                     </li>
                     <li>
                         <label>Biogas Plant</label>
-                        <input type="checkbox" name="Q9E1S5" id="Wind"
+                        <input type="checkbox" name="Q9E1S5"
                                value="<?php echo set_value('Q9E1S5'); ?>" <?php if (isset($data['Q9E1S5'])) echo "checked"; ?>/>
                     </li>
                     <li>
