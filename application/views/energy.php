@@ -1255,13 +1255,14 @@
                     <ul class="list-inline">
                         <li>
                             <label>Yes</label>
-                            <input type="radio" name="Q10E1S1" id="Solar"
-                                   value="<?php echo set_value('Q10E1S1'); ?>" <?php if (isset($data['Q10E1S1'])) echo "checked"; ?>/>
+
+                            <input type="radio" name="Q10E1"
+                                   value="<?php echo set_value('Q10E1', 'Y') ?>" <?php if (isset($data['Q10E1'])) echo $data['Q10E1'] == 'Y' ? "checked" : "" ?>/>
                         </li>
                         <li>
                             <label>No</label>
-                            <input type="radio" name="Q10E1S1" id="Wind"
-                                   value="<?php echo set_value('Q10E1S2'); ?>" <?php if (isset($data['Q10E1S2'])) echo "checked"; ?>/>
+                            <input type="radio" name="Q10E1"
+                                   value="<?php echo set_value('Q10E1', 'Y') ?>" <?php if (isset($data['Q10E1'])) echo $data['Q10E1'] == 'Y' ? "checked" : "" ?>/>
                         </li>
                     </ul>
                 </div>

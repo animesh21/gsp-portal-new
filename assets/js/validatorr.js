@@ -352,7 +352,7 @@ $(document).ready(function(e){
 
     });
 
-    $("#Q6E16S3").keypress(function(e){
+    $("#Q6E6S3").keypress(function(e){
         var patt = /^[0-5]$/g;
 
         var val = (this.value + e.key).length;
@@ -365,7 +365,7 @@ $(document).ready(function(e){
         {
             if (this.value != "")
             {
-                $('#Q6E16S3').val(this.value + ",");
+                $('#Q6E6S3').val(this.value + ",");
             }
         }
         else
