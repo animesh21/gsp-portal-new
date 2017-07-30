@@ -35,11 +35,13 @@ class Upload_Files extends CI_Controller
 					$uploadData[$i]['file_name'] = $fileData['file_name'];
 					$uploadData[$i]['created'] = date("Y-m-d H:i:s");
 					$uploadData[$i]['modified'] = date("Y-m-d H:i:s");
-				}
+                    $uploadData[$i]['userid'] = $this->session->userdata('USER_ID');
+
+                }
 			}
 			if(!empty($uploadData)){
 				//Insert files data into the database
-				$insert = $this->file->insert($uploadData,  $this->session->userdata('USER_ID'));
+				$insert = $this->file->insert($uploadData);
 				//$statusMsg = $insert?'Files uploaded successfully.':'Some problem occurred, please try again.';
                                 //redirect(base_url($url), 'refresh');
 				//$this->session->set_flashdata('statusMsg',$statusMsg);

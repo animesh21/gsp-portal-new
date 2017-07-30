@@ -13,7 +13,6 @@ class Air extends CI_Controller {
             redirect('login');
 
         }
-      
     }
 
     public function index() {
@@ -166,6 +165,7 @@ class Air extends CI_Controller {
          
         
     }
-   
+
 }
+
 

@@ -1,0 +1,13 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: animesh
+ * Date: 30/7/17
+ * Time: 11:26 AM
+ */
+
+class Webhook extends CI_Controller {
+    public function push() {
+        echo 'Code is pushed to the repository';
+    }
+}
