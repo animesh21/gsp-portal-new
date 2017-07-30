@@ -459,7 +459,7 @@
                 </tr>
                 <tr>
                     <td>Total number of well-ventilated classrooms in your school</td>
-                    <td><input type="text" class="form-control" style="width:250px;" id="input-2" /></td>
+                    <td><input type="text" class="form-control" style="width:250px;" id="input-2" value="0" /></td>
                 </tr>
             </table>
         </div>
@@ -1422,17 +1422,14 @@ else
 <script type="text/javascript">
     $("input[name='Q4A1']").change(function(){
         var total_classroom=$("input[name='Q4A1']").val();
-        if(total_classroom>4){
-            alert("Please survey only four classrooms only");
-        }else{
-            $("#input-1").val(total_classroom);
-        }
+        $("#input-1").val(total_classroom);
     });
     $("#input-2").change(function(){
         var total_classroom=$("#input-1").val();
         var total_existing_classroom=$("#input-2").val();
         if(total_classroom<total_existing_classroom){
             alert("Please survey only four classrooms only");
+            $("#input-2").val('0');
         }
     });
 </script>
