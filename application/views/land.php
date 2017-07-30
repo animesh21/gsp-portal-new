@@ -465,7 +465,7 @@
             </div>
             <div class="col-xs-5">
                 <?php $placeholder_Default = "m²";
-                      echo $placeholder_Default;
+                     // echo $placeholder_Default;
                       
                 ?>
                 <input class="form-control space-textbox" id="Q4L1" onkeyup="BuildUpArea()"
