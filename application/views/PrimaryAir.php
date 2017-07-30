@@ -542,27 +542,27 @@
                     <label>No. of vehicles</label>
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" onkeyup="details()" id="b1" type="number" min="0"
+                    <input class="form-control space-textbox" onkeyup="PrimaryDetails()" id="b1" type="number" min="0"
                            name="Q6A2S1B1" placeholder="<?php if (isset($data['Q6A2S1B1'])) echo $data['Q6A2S1B1'] ?>"
                            value="<?php echo set_value('Q6A2S1B1'); ?>"/>
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" onkeyup="details()" id="c1" type="number" min="0"
+                    <input class="form-control space-textbox" onkeyup="PrimaryPrimaryDetails()" id="c1" type="number" min="0"
                            name="Q6A2S1C1" placeholder="<?php if (isset($data['Q6A2S1C1'])) echo $data['Q6A2S1C1'] ?>"
                            value="<?php echo set_value('Q6A2S1C1'); ?>"/>
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" onkeyup="details()" id="v1" type="number" min="0"
+                    <input class="form-control space-textbox" onkeyup="PrimaryDetails()" id="v1" type="number" min="0"
                            name="Q6A2S1V1" placeholder="<?php if (isset($data['Q6A2S1V1'])) echo $data['Q6A2S1V1'] ?>"
                            value="<?php echo set_value('Q6A2S1V1'); ?>"/>
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" onkeyup="details()" id="o1" type="number" min="0"
+                    <input class="form-control space-textbox" onkeyup="PrimaryDetails()" id="o1" type="number" min="0"
                            name="Q6A2S1O1" placeholder="<?php if (isset($data['Q6A2S1O1'])) echo $data['Q6A2S1O1'] ?>"
                            value="<?php echo set_value('Q6A2S1O1'); ?>"/>
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" onkeyup="details()" id="t1" type="number" min="0"
+                    <input class="form-control space-textbox" onkeyup="PrimaryDetails()" id="t1" type="number" min="0"
                            name="Q6A2S1T1" placeholder="<?php if (isset($data['Q6A2S1T1'])) echo $data['Q6A2S1T1'] ?>"
                            value="<?php echo set_value('Q6A2S1T1'); ?>" readonly/>
                 </div>
@@ -572,27 +572,27 @@
                     <label>No. of vehicles more than eight years old</label>
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" onkeyup="details()" id="b2" type="number" min="0"
+                    <input class="form-control space-textbox" onkeyup="PrimaryDetails()" id="b2" type="number" min="0"
                            name="Q6A2S1B2" placeholder="<?php if (isset($data['Q6A2S1B2'])) echo $data['Q6A2S1B2'] ?>"
                            value="<?php echo set_value('Q6A2S1B2'); ?>"/>
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" onkeyup="details()" id="c2" type="number" min="0"
+                    <input class="form-control space-textbox" onkeyup="PrimaryDetails()" id="c2" type="number" min="0"
                            name="Q6A2S1C2" placeholder="<?php if (isset($data['Q6A2S1C2'])) echo $data['Q6A2S1C2'] ?>"
                            value="<?php echo set_value('Q6A2S1C2'); ?>"/>
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" onkeyup="details()" id="v2" type="number" min="0"
+                    <input class="form-control space-textbox" onkeyup="PrimaryDetails()" id="v2" type="number" min="0"
                            name="Q6A2S1V2" placeholder="<?php if (isset($data['Q6A2S1V2'])) echo $data['Q6A2S1V2'] ?>"
                            value="<?php echo set_value('Q6A2S1V2'); ?>"/>
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" onkeyup="details()" id="o2" type="number" min="0"
+                    <input class="form-control space-textbox" onkeyup="PrimaryDetails()" id="o2" type="number" min="0"
                            name="Q6A2S1O2" placeholder="<?php if (isset($data['Q6A2S1O2'])) echo $data['Q6A2S1O2'] ?>"
                            value="<?php echo set_value('Q6A2S1O2'); ?>"/>
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" onkeyup="details()" id="t2" type="number" min="0"
+                    <input class="form-control space-textbox" onkeyup="PrimaryDetails()" id="t2" type="number" min="0"
                            name="Q6A2S1T2" placeholder="<?php if (isset($data['Q6A2S1T2'])) echo $data['Q6A2S1T2'] ?>"
                            value="<?php echo set_value('Q6A2S1T2'); ?>" readonly/>
                 </div>
@@ -602,27 +602,27 @@
                     <label>No. of Air conditioned vehicles</label>
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" onkeyup="details()" id="b3" type="number" min="0"
+                    <input class="form-control space-textbox" onkeyup="PrimaryDetails()" id="b3" type="number" min="0"
                            name="Q6A2S1B3" placeholder="<?php if (isset($data['Q6A2S1B3'])) echo $data['Q6A2S1B3'] ?>"
                            value="<?php echo set_value('Q6A2S1B3'); ?>"/>
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" onkeyup="details()" id="c3" type="number" min="0"
+                    <input class="form-control space-textbox" onkeyup="PrimaryDetails()" id="c3" type="number" min="0"
                            name="Q6A2S1C3" placeholder="<?php if (isset($data['Q6A2S1C3'])) echo $data['Q6A2S1C3'] ?>"
                            value="<?php echo set_value('Q6A2S1C3'); ?>"/>
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" onkeyup="details()" id="v3" type="number" min="0"
+                    <input class="form-control space-textbox" onkeyup="PrimaryDetails()" id="v3" type="number" min="0"
                            name="Q6A2S1V3" placeholder="<?php if (isset($data['Q6A2S1V3'])) echo $data['Q6A2S1V3'] ?>"
                            value="<?php echo set_value('Q6A2S1V3'); ?>"/>
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" onkeyup="details()" id="o3" type="number" min="0"
+                    <input class="form-control space-textbox" onkeyup="PrimaryDetails()" id="o3" type="number" min="0"
                            name="Q6A2S1O3" placeholder="<?php if (isset($data['Q6A2S1O3'])) echo $data['Q6A2S1O3'] ?>"
                            value="<?php echo set_value('Q6A2S1O3'); ?>"/>
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" onkeyup="details()" id="t3" type="number" min="0"
+                    <input class="form-control space-textbox" onkeyup="PrimaryDetails()" id="t3" type="number" min="0"
                            name="Q6A2S1T3" placeholder="<?php if (isset($data['Q6A2S1T3'])) echo $data['Q6A2S1T3'] ?>"
                            value="<?php echo set_value('Q6A2S1T3'); ?>" readonly/>
                 </div>
@@ -633,27 +633,27 @@
                     <label>Authorised parking available <a class="tt" data-tooltip="For parking area, give the number of vehicles (Of the total) that have designated parking areas."><span class="badge">?</span></a></label>
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" onkeyup="details()" id="b5" type="number" min="0"
+                    <input class="form-control space-textbox" onkeyup="PrimaryDetails()" id="b5" type="number" min="0"
                            name="Q6A2S1B5" placeholder="<?php if (isset($data['Q6A2S1B5'])) echo $data['Q6A2S1B5'] ?>"
                            value="<?php echo set_value('Q6A2S1B5'); ?>"/>
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" onkeyup="details()" id="c5" type="number" min="0"
+                    <input class="form-control space-textbox" onkeyup="PrimaryDetails()" id="c5" type="number" min="0"
                            name="Q6A2S1C5" placeholder="<?php if (isset($data['Q6A2S1C5'])) echo $data['Q6A2S1C5'] ?>"
                            value="<?php echo set_value('Q6A2S1C5'); ?>"/>
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" onkeyup="details()" id="v5" type="number" min="0"
+                    <input class="form-control space-textbox" onkeyup="PrimaryDetails()" id="v5" type="number" min="0"
                            name="Q6A2S1V5" placeholder="<?php if (isset($data['Q6A2S1V5'])) echo $data['Q6A2S1V5'] ?>"
                            value="<?php echo set_value('Q6A2S1V5'); ?>"/>
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" onkeyup="details()" id="o5" type="number" min="0"
+                    <input class="form-control space-textbox" onkeyup="PrimaryDetails()" id="o5" type="number" min="0"
                            name="Q6A2S1O5" placeholder="<?php if (isset($data['Q6A2S1O5'])) echo $data['Q6A2S1O5'] ?>"
                            value="<?php echo set_value('Q6A2S1O5'); ?>"/>
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" onkeyup="details()" id="t5" type="number" min="0"
+                    <input class="form-control space-textbox" onkeyup="PrimaryDetails()" id="t5" type="number" min="0"
                            name="Q6A2S1T5" placeholder="<?php if (isset($data['Q6A2S1T5'])) echo $data['Q6A2S1T5'] ?>"
                            value="<?php echo set_value('Q6A2S1T5'); ?>" readonly/>
                 </div>
@@ -663,27 +663,27 @@
                     <label>Total</label>
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" onkeyup="details()" id="b6" type="type" min="0"
+                    <input class="form-control space-textbox" onkeyup="PrimaryDetails()" id="b6" type="type" min="0"
                            name="Q6A2S1B6" placeholder="<?php if (isset($data['Q6A2S1B6'])) echo $data['Q6A2S1B6'] ?>"
                            value="<?php echo set_value('Q6A2S1B6'); ?>"/>
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" onkeyup="details()" id="c6" type="type" min="0"
+                    <input class="form-control space-textbox" onkeyup="PrimaryDetails()" id="c6" type="type" min="0"
                            name="Q6A2S1C6" placeholder="<?php if (isset($data['Q6A2S1C6'])) echo $data['Q6A2S1C6'] ?>"
                            value="<?php echo set_value('Q6A2S1C6'); ?>"/>
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" onkeyup="details()" id="v6" type="type" min="0"
+                    <input class="form-control space-textbox" onkeyup="PrimaryDetails()" id="v6" type="type" min="0"
                            name="Q6A2S1V6" placeholder="<?php if (isset($data['Q6A2S1V6'])) echo $data['Q6A2S1V6'] ?>"
                            value="<?php echo set_value('Q6A2S1V6'); ?>"/>
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" onkeyup="details()" id="o6" type="type" min="0"
+                    <input class="form-control space-textbox" onkeyup="PrimaryDetails()" id="o6" type="type" min="0"
                            name="Q6A2S1O6" placeholder="<?php if (isset($data['Q6A2S1O6'])) echo $data['Q6A2S1O6'] ?>"
                            value="<?php echo set_value('Q6A2S1O6'); ?>"/>
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" onkeyup="details()" id="t6" type="number" min="0"
+                    <input class="form-control space-textbox" onkeyup="PrimaryDetails()" id="t6" type="number" min="0"
                            name="Q6A2S1T6" placeholder="<?php if (isset($data['Q6A2S1T6'])) echo $data['Q6A2S1T6'] ?>"
                            value="<?php echo set_value('Q6A2S1T6'); ?>" />
                 </div>

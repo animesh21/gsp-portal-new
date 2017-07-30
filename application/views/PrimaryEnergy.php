@@ -1207,7 +1207,7 @@
             </li>
             <li>
               <label>Wind</label>
-              <input type="checkbox" name="Q9E1S2" 
+              <input type="checkbox" name="Q9E1S2"
                                        value="<?php echo set_value('Q9E1S2'); ?>" <?php if (isset($data['Q9E1S2'])) echo "checked"; ?>/>
             </li>
             <li>

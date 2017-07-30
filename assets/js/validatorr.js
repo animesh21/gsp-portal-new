@@ -3,15 +3,18 @@ $(document).ready(function(e){
     $("input[name=Q5F1S1]").click(function(e){
         var val = this.value;
         var typeOfSchool = $('#Q9G1').val();
+        if(val != 'Y' && val != 'N')
+        {
+            if(typeOfSchool < 3 && val != 1)
+            {
+                alert("You have selected government school");
+            }
+            if(typeOfSchool == 3 && val != 3)
+            {
+                alert("You have selected private school")
+            }
+        }
 
-        if(typeOfSchool < 3 && val != 1)
-        {
-            alert("You have selected government school");
-        }
-        if(typeOfSchool == 3 && val != 3)
-        {
-            alert("You have selected private school")
-        }
 
     });
 
@@ -2247,6 +2250,324 @@ function details()
 
 
     $('#t6').val(countYes+"/"+countNo);
+
+
+
+}
+function PrimaryDetails()
+{
+    var NFVb1 =  document.getElementById("b1").value;
+    var NFVc1 = document.getElementById("c1").value;
+    var NFVv1 = document.getElementById("v1").value;
+    var NFVo1 = document.getElementById("o1").value;
+
+    var NFVb11 =  document.getElementById("b1").placeholder;
+    var NFVc11 = document.getElementById("c1").placeholder;
+    var NFVv11 = document.getElementById("v1").placeholder;
+    var NFVo11 = document.getElementById("o1").placeholder;
+
+
+    NFVb1 = parseFloat(NFVb1);
+    NFVc1 = parseFloat(NFVc1);
+    NFVv1  = parseFloat(NFVv1 );
+    NFVo1 = parseFloat(NFVo1);
+    NFVb11 = parseFloat(NFVb11);
+    NFVc11 = parseFloat(NFVc11);
+    NFVv11  = parseFloat(NFVv11 );
+    NFVo11 = parseFloat(NFVo11);
+
+    if(isNaN(NFVb1))
+        if(isNaN(NFVb11))
+            NFVb1 = 0;
+        else
+            NFVb1 = NFVb11
+    if(isNaN(NFVc1))
+        if(isNaN(NFVc11))
+            NFVc1 = 0;
+        else
+            NFVc1 = NFVc11;
+
+    if(isNaN(NFVv1))
+        if(isNaN(NFVv11))
+            NFVv1 = 0;
+        else
+            NFVv1 = NFVv11;
+
+
+    if(isNaN(NFVo1))
+        if(isNaN(NFVo11))
+            NFVo1 = 0;
+        else
+            NFVo1 = NFVo11;
+
+
+
+    var sum1 = NFVb1 + NFVc1 +NFVv1 +NFVo1 ;
+    $('#t1').val(sum1);
+
+    var NFVb2 =  document.getElementById("b2").value;
+    var NFVc2 = document.getElementById("c2").value;
+    var NFVv2 = document.getElementById("v2").value;
+    var NFVo2 = document.getElementById("o2").value;
+    var NFVb21 =  document.getElementById("b2").placeholder;
+    var NFVc21 = document.getElementById("c2").placeholder;
+    var NFVv21 = document.getElementById("v2").placeholder;
+    var NFVo21 = document.getElementById("o2").placeholder;
+
+    NFVb2 = parseFloat(NFVb2);
+    NFVc2 = parseFloat(NFVc2);
+    NFVv2  = parseFloat(NFVv2 );
+    NFVo2 = parseFloat(NFVo2);
+    NFVb21 = parseFloat(NFVb21);
+    NFVc21 = parseFloat(NFVc21);
+    NFVv21  = parseFloat(NFVv21 );
+    NFVo21 = parseFloat(NFVo21);
+
+    if(isNaN(NFVb2))
+        if(isNaN(NFVb21))
+            NFVb2 = 0;
+        else
+            NFVb2 = NFVb21
+    if(isNaN(NFVc2))
+        if(isNaN(NFVc21))
+            NFVc2 = 0;
+        else
+            NFVc2 = NFVc21;
+
+    if(isNaN(NFVv2))
+        if(isNaN(NFVv21))
+            NFVv2 = 0;
+        else
+            NFVv2 = NFVv21;
+
+
+    if(isNaN(NFVo2))
+        if(isNaN(NFVo21))
+            NFVo2 = 0;
+        else
+            NFVo2 = NFVo11;
+
+    // if(NFVc2 > NFVc1)
+    // {
+    //     NFVc2 = 0;
+    //     $("b2").val(NFVc2);
+    //
+    // }
+    // if(NFVb2 > NFVb1)
+    // {
+    //     NFVb2 = 0;
+    //     $("b2").val(NFVb2);
+    //
+    // }
+    // if(NFVv2 > NFVv1)
+    // {
+    //     NFVb2 = 0;
+    //     $("b2").val(NFVb2);
+    //
+    // }
+    // if(NFVo2 > NFVo1)
+    // {
+    //     NFVb2 = 0;
+    //     $("b2").val(NFVb2);
+    //
+    // }
+    var sum2 = NFVb2 + NFVc2 +NFVv2 +NFVo2 ;
+    if(sum2 > sum1)
+    {
+
+        alert('Please enter lower value then the total');
+        document.getElementById("b2").value = 0;
+        document.getElementById("c2").value = 0;
+        document.getElementById("v2").value = 0;
+        document.getElementById("o2").value = 0
+
+    }
+    else
+    {
+        $('#t2').val(sum2);
+    }
+    var NFVb3 =  document.getElementById("b3").value;
+    var NFVc3 = document.getElementById("c3").value;
+    var NFVv3 = document.getElementById("v3").value;
+    var NFVo3 = document.getElementById("o3").value;
+    var NFVb31 =  document.getElementById("b3").placeholder;
+    var NFVc31 = document.getElementById("c3").placeholder;
+    var NFVv31 = document.getElementById("v3").placeholder;
+    var NFVo31 = document.getElementById("o3").placeholder;
+
+    NFVb3 = parseFloat(NFVb3);
+    NFVc3 = parseFloat(NFVc3);
+    NFVv3  = parseFloat(NFVv3 );
+    NFVo3 = parseFloat(NFVo3);
+    NFVb31 = parseFloat(NFVb31);
+    NFVc31 = parseFloat(NFVc31);
+    NFVv31  = parseFloat(NFVv31 );
+    NFVo31 = parseFloat(NFVo31);
+
+    if(isNaN(NFVb3))
+        if(isNaN(NFVb31))
+            NFVb3 = 0;
+        else
+            NFVb3 = NFVb31
+    if(isNaN(NFVc3))
+        if(isNaN(NFVc31))
+            NFVc3 = 0;
+        else
+            NFVc3 = NFVc31;
+
+    if(isNaN(NFVv3))
+        if(isNaN(NFVv31))
+            NFVv3 = 0;
+        else
+            NFVv3 = NFVv31;
+
+
+    if(isNaN(NFVo3))
+        if(isNaN(NFVo31))
+            NFVo3 = 0;
+        else
+            NFVo3 = NFVo31;
+
+    var sum3 = NFVb3 + NFVc3 +NFVv3 +NFVo3 ;
+
+    if(sum3 > sum1)
+    {
+
+        alert('Please enter lower value then the total');
+        document.getElementById("b3").value = 0;
+        document.getElementById("c3").value = 0;
+        document.getElementById("v3").value = 0;
+        document.getElementById("o3").value = 0
+
+    }
+    else
+    {
+        $('#t3').val(sum3);
+
+    }
+
+
+    var NFVb4 =  document.getElementById("b4").value;
+    var NFVc4 = document.getElementById("c4").value;
+    var NFVv4 = document.getElementById("v4").value;
+    var NFVo4 = document.getElementById("o4").value;
+    var NFVb41 =  document.getElementById("b4").placeholder;
+    var NFVc41 = document.getElementById("c4").placeholder;
+    var NFVv41 = document.getElementById("v4").placeholder;
+    var NFVo41 = document.getElementById("o4").placeholder;
+
+    NFVb4 = parseFloat(NFVb4);
+    NFVc4 = parseFloat(NFVc4);
+    NFVv4  = parseFloat(NFVv4 );
+    NFVo4 = parseFloat(NFVo4);
+    NFVb41 = parseFloat(NFVb41);
+    NFVc41 = parseFloat(NFVc41);
+    NFVv41  = parseFloat(NFVv41 );
+    NFVo41 = parseFloat(NFVo41);
+
+    if(isNaN(NFVb4))
+        if(isNaN(NFVb41))
+            NFVb4 = 0;
+        else
+            NFVb4 = NFVb41
+    if(isNaN(NFVc4))
+        if(isNaN(NFVc41))
+            NFVc4 = 0;
+        else
+            NFVc4 = NFVc41;
+
+    if(isNaN(NFVv4))
+        if(isNaN(NFVv41))
+            NFVv4 = 0;
+        else
+            NFVv4 = NFVv41;
+
+
+    if(isNaN(NFVo4))
+        if(isNaN(NFVo41))
+            NFVo4 = 0;
+        else
+            NFVo4 = NFVo41;
+
+    var sum4 = NFVb4 + NFVc4 +NFVv4 +NFVo4;
+
+    if(sum4 > sum1)
+    {
+
+        alert('Please enter lower value then the total');
+        document.getElementById("b4").value = 0;
+        document.getElementById("c4").value = 0;
+        document.getElementById("v4").value = 0;
+        document.getElementById("o4").value = 0
+
+    }
+    else
+    {
+        $('#t4').val(sum4);
+
+    }
+
+
+    var NFVb5 =  document.getElementById("b5").value;
+    var NFVc5 = document.getElementById("c5").value;
+    var NFVv5 = document.getElementById("v5").value;
+    var NFVo5 = document.getElementById("o5").value;
+    var NFVb51 =  document.getElementById("b5").placeholder;
+    var NFVc51 = document.getElementById("c5").placeholder;
+    var NFVv51 = document.getElementById("v5").placeholder;
+    var NFVo51 = document.getElementById("o5").placeholder;
+
+
+    NFVb5 = parseFloat(NFVb5);
+    NFVc5 = parseFloat(NFVc5);
+    NFVv5  = parseFloat(NFVv5 );
+    NFVo5 = parseFloat(NFVo5);
+    NFVb51 = parseFloat(NFVb51);
+    NFVc51 = parseFloat(NFVc51);
+    NFVv51  = parseFloat(NFVv51 );
+    NFVo51 = parseFloat(NFVo51);
+
+    if(isNaN(NFVb5))
+        if(isNaN(NFVb51))
+            NFVb5 = 0;
+        else
+            NFVb5 = NFVb51
+    if(isNaN(NFVc5))
+        if(isNaN(NFVc51))
+            NFVc5 = 0;
+        else
+            NFVc5 = NFVc51;
+
+    if(isNaN(NFVv5))
+        if(isNaN(NFVv51))
+            NFVv5 = 0;
+        else
+            NFVv5 = NFVv51;
+
+
+    if(isNaN(NFVo5))
+        if(isNaN(NFVo51))
+            NFVo5 = 0;
+        else
+            NFVo5 = NFVo51;
+
+    var sum5 = NFVb5 + NFVc5 +NFVv5 +NFVo5;
+    if(sum5 > sum1)
+    {
+
+        alert('Please enter lower value then the total');
+        document.getElementById("b5").value = 0;
+        document.getElementById("c5").value = 0;
+        document.getElementById("v5").value = 0;
+        document.getElementById("o5").value = 0
+
+    }
+    else
+    {
+        $('#t5').val(sum5);
+    }
+
+
 
 
 
