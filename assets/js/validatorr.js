@@ -2447,65 +2447,6 @@ function PrimaryDetails()
     }
 
 
-    var NFVb4 =  document.getElementById("b4").value;
-    var NFVc4 = document.getElementById("c4").value;
-    var NFVv4 = document.getElementById("v4").value;
-    var NFVo4 = document.getElementById("o4").value;
-    var NFVb41 =  document.getElementById("b4").placeholder;
-    var NFVc41 = document.getElementById("c4").placeholder;
-    var NFVv41 = document.getElementById("v4").placeholder;
-    var NFVo41 = document.getElementById("o4").placeholder;
-
-    NFVb4 = parseFloat(NFVb4);
-    NFVc4 = parseFloat(NFVc4);
-    NFVv4  = parseFloat(NFVv4 );
-    NFVo4 = parseFloat(NFVo4);
-    NFVb41 = parseFloat(NFVb41);
-    NFVc41 = parseFloat(NFVc41);
-    NFVv41  = parseFloat(NFVv41 );
-    NFVo41 = parseFloat(NFVo41);
-
-    if(isNaN(NFVb4))
-        if(isNaN(NFVb41))
-            NFVb4 = 0;
-        else
-            NFVb4 = NFVb41
-    if(isNaN(NFVc4))
-        if(isNaN(NFVc41))
-            NFVc4 = 0;
-        else
-            NFVc4 = NFVc41;
-
-    if(isNaN(NFVv4))
-        if(isNaN(NFVv41))
-            NFVv4 = 0;
-        else
-            NFVv4 = NFVv41;
-
-
-    if(isNaN(NFVo4))
-        if(isNaN(NFVo41))
-            NFVo4 = 0;
-        else
-            NFVo4 = NFVo41;
-
-    var sum4 = NFVb4 + NFVc4 +NFVv4 +NFVo4;
-
-    if(sum4 > sum1)
-    {
-
-        alert('Please enter lower value then the total');
-        document.getElementById("b4").value = 0;
-        document.getElementById("c4").value = 0;
-        document.getElementById("v4").value = 0;
-        document.getElementById("o4").value = 0
-
-    }
-    else
-    {
-        $('#t4').val(sum4);
-
-    }
 
 
     var NFVb5 =  document.getElementById("b5").value;
