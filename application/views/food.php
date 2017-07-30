@@ -317,7 +317,7 @@
                     </div>
                     <div class="col-xs-3">
                         <input class="form-control space-textbox" id="Q3F5S2" type="text" name="Q3F5S2"
-                               placeholder="<?php if (isset($data['Q3F5S2'])) echo $data['Q3F5S2'] ?>"
+                               placeholder="<?php if (isset($data['Q3F5S2'])) echo $data['Q2A5S2'] ?>"
                                value="<?php echo set_value('Q3F5S2'); ?>"/>
                     </div>
                     <div class="col-xs-3">
@@ -996,8 +996,8 @@
                                                                                         </div>
                                                                                     </div>
                                                                                     <?php
-                                                                                    if (isset($other['Q1S1']) && isset($other['Q9G1']))
-                                                                                        if ($other['Q1S1'] >= 3 && $other['Q9G1'] < 3) {
+                                                                                    if (isset($other['Q1S1']))
+                                                                                        if ($other['Q1S1'] >= 3 && $other['Q1S1'] != 4) {
                                                                                             ?>
                                                                                             <div class="form-group">
                                                                                                 <label class="control-label"><span class="cube">2.1</span>Does your school serve whole day’s
@@ -2250,15 +2250,16 @@
                                                                                                 </div>
                                                                                                 <div class="form-group">
                                                                                                     <label class="control-label"><span
-                                                                                                                class="cube">9</span>How
-                                                                                                        regularly
-                                                                                                        is
+                                                                                                                class="cube">9</span> Does
+                                                                                                        your
+                                                                                                        school
+                                                                                                        measure
                                                                                                         height
                                                                                                         and
                                                                                                         weight
-                                                                                                        of the
-                                                                                                        students
-                                                                                                        measured?</label>
+                                                                                                        of all
+                                                                                                        the
+                                                                                                        students?</label>
                                                                                                     <ul class="list-inline">
                                                                                                         <li>
                                                                                                             <label class="radio-inline text-gray">
@@ -2292,16 +2293,15 @@
                                                                                                     }
                                                                                                     ?> >
                                                                                                     <label class="control-label"><span
-                                                                                                                class="cube">9(a)</span>Does
-                                                                                                        your
-                                                                                                        school
-                                                                                                        measure
+                                                                                                                class="cube">9(a)</span>How
+                                                                                                        regularly
+                                                                                                        is
                                                                                                         height
                                                                                                         and
                                                                                                         weight
-                                                                                                        of all
-                                                                                                        the
-                                                                                                        students?</label>
+                                                                                                        of the
+                                                                                                        students
+                                                                                                        measured?</label>
                                                                                                     <div class="form-group">
                                                                                                         <ul>
                                                                                                             <li>

@@ -2327,9 +2327,7 @@ $(document).ready(function(){
             $('#Q9A1').focus();
             event.preventDefault();
         }
-
-        var val1 = $("input[name=Q9A1]:checked").val();
-        if(val1 == 'N')
+        else if(radioCheck == 'N')
         {
             var val1 = $("input[name=Q9A2]:checked").val();
             if(val1 != 'N' && val1 != 'Y')
@@ -2389,7 +2387,7 @@ $(document).ready(function(){
                     else
                         student = student1;
 
-                alert("Total members of the school community in Q4 ("+student+") should be equal to total permanent population of the school in General Questions Q4a ("+current_student+")")
+                alert("Total members of the school community in Q4 ("+student+") should be equal to student permanent population of the school in General Questions Q4a ("+current_student+")")
                 $('#Q7A12S1').focus();
                 event.preventDefault();
             }
@@ -2404,7 +2402,7 @@ $(document).ready(function(){
                     else
                         teacher = teacher1;
 
-                alert("Total members of the school community in Q4 ("+teacher+") should be equal to total permanent population of the school in General Questions Q4a ("+current_teacher+")")
+                alert("Total members of the school community in Q4 ("+teacher+") should be equal to total teaching population of the school in General Questions Q4a ("+current_teacher+")")
                 $('#Q7A12S2').focus();
                 event.preventDefault();
             }
@@ -2420,7 +2418,7 @@ $(document).ready(function(){
                     else
                         nonTeaching = nonTeaching1;
 
-                alert("Total members of the school community in Q4 ("+nonTeaching+") should be equal to total permanent population of the school in General Questions Q4a ("+current_nonTeacher+")")
+                alert("Total members of the school community in Q4 ("+nonTeaching+") should be equal to total non teaching population of the school in General Questions Q4a ("+current_nonTeacher+")")
                 $('#Q7A12S3').focus();
                 event.preventDefault();
             }
@@ -2446,7 +2444,7 @@ $(document).ready(function(){
 
     });
 
-    $("#air").submit(function( event ) { //Air Submit
+    $("#PrimaryAir").submit(function( event ) { //Air Submit
 
         // var data = '<?php echo json_encode($data); ?>';
         // alert('submit clicked.\nData: ' + data);
@@ -2759,30 +2757,11 @@ $(document).ready(function(){
 
         if(isNaN(Q8A1) && isNaN(Q8A2))
         {
-            alert("Please write 0(zero) if you do not have any input/entry");
+            alert("Please write 0(zero) if you do not have any input/entry -5");
             $('#Q8A1').focus();
             event.preventDefault();
         }
 
-        var radioCheck = $("input[name=Q9A1]:checked").val();
-        if(radioCheck != 'Y' && radioCheck != 'N')
-        {
-            alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed.");
-            $('#Q9A1').focus();
-            event.preventDefault();
-        }
-
-        var val1 = $("input[name=Q9A1]:checked").val();
-        if(val1 == 'N')
-        {
-            var val1 = $("input[name=Q9A2]:checked").val();
-            if(val1 != 'N' && val1 != 'Y')
-            {
-                alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed.");
-                $('#Q9A2_1').focus();
-                event.preventDefault();
-            }
-        }
 
 
         /*var val1 = $('#Q4G4S3').val();
@@ -2833,7 +2812,7 @@ $(document).ready(function(){
                     else
                         student = student1;
 
-                alert("Total members of the school community in Q4 ("+student+") should be equal to total permanent population of the school in General Questions Q4a ("+current_student+")")
+                alert("Total members of the school community in Q4 ("+student+") should be equal to total student population of the school in General Questions Q4a ("+current_student+")")
                 $('#Q7A12S1').focus();
                 event.preventDefault();
             }
@@ -2848,7 +2827,7 @@ $(document).ready(function(){
                     else
                         teacher = teacher1;
 
-                alert("Total members of the school community in Q4 ("+teacher+") should be equal to total permanent population of the school in General Questions Q4a ("+current_teacher+")")
+                alert("Total members of the school community in Q4 ("+teacher+") should be equal to total teacher population of the school in General Questions Q4a ("+current_teacher+")")
                 $('#Q7A12S2').focus();
                 event.preventDefault();
             }
@@ -2864,7 +2843,7 @@ $(document).ready(function(){
                     else
                         nonTeaching = nonTeaching1;
 
-                alert("Total members of the school community in Q4 ("+nonTeaching+") should be equal to total permanent population of the school in General Questions Q4a ("+current_nonTeacher+")")
+                alert("Total members of the school community in Q4 ("+nonTeaching+") should be equal to total non teaching population of the school in General Questions Q4a ("+current_nonTeacher+")")
                 $('#Q7A12S3').focus();
                 event.preventDefault();
             }

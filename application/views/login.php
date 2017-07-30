@@ -178,7 +178,7 @@
                             '</div>');
                     } else if (data == "error") {
                         $('#msgForget').html('<div class="alert alert-danger">' +
-                            '<strong>&#x2716; Error!</strong> There is an error while sending a email.' +
+                            '<strong>&#x2716; Error!</strong> The email you have entered is not registered.' +
                             '</div>');
                     }
                     setTimeout(function () {

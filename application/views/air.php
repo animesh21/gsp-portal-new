@@ -1769,6 +1769,13 @@ if (isset($data['Q9A1']))
     if ($data['Q9A1'] == 'Y') {
         ?>
         <div class="form-group" id="lab1">
+            <?php } else { ?>
+            <div class="form-group" id="lab1" style="display:none">
+
+            <?php} else { ?>
+                <div class="form-group" id="lab1" style="display: none;">
+
+                <?php } ?>
             <label class="control-label">Upload supporting documents</label>
             <br>
             &bull; Picture of Air Quality Monitoring equipment of school<br>
@@ -1781,10 +1788,20 @@ if (isset($data['Q9A1']))
                     data-target="#airModal" type="button">UPLOAD FILES </button>
             <br>
         </div>
+
         <?php
-    } else {
-        ?>
-        <div class="form-group" id="lab">
+          if (isset($data['Q9A1']))
+            if ($data['Q9A1'] == 'N') {
+            ?>
+            <div class="form-group" id="lab">
+                <?php } else { ?>
+                <div class="form-group" id="lab" style="display:none">
+
+                    <?php} else { ?>
+                    <div class="form-group" id="lab" style="display: none;">
+
+                        <?php } ?>
+
             <label class="control-label"><span class="cube">6(a)</span>If No, is there an air quality monitoring station
                 (private or government) close to your school?</label>
             <ul class="list-inline">
@@ -1802,36 +1819,6 @@ if (isset($data['Q9A1']))
                 </li>
             </ul>
         </div>
-    <?php } ?>
-<div class="form-group" id="lab1" style="display:none;">
-    <label class="control-label">Upload supporting documents</label>
-    <br>
-    &bull; Picture of Air Quality Monitoring equipment of school<br>
-    <br>
-    Please upload all supporting documents related to this section here. Note: files must be in one of the following
-    formats: PDF Document (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg). File size per document should
-    not exceed 500 KB.<br/>
-    <button class="btn uploadbtn upload" type="button">UPLOAD FILES</button>
-    <br>
-</div>
-<div class="form-group" id="lab2" style="display:none;">
-    <label class="control-label"><span class="cube">6(a)</span>If No, is there an air quality monitoring station
-        (private or government) close to your school?</label>
-    <ul class="list-inline">
-        <li>
-            <label>
-                <input type="radio" id="Q9A2_1" name="Q9A2"
-                       value="<?php echo set_value('Q9A2', 1) ?>" <?php if (isset($data['Q9A2'])) echo $data['Q9A2'] == 1 ? "checked" : "" ?>>
-                Yes</label>
-        </li>
-        <li>
-            <label>
-                <input type="radio" id="Q9A2_2" name="Q9A2"
-                       value="<?php echo set_value('Q9A2', 2) ?>" <?php if (isset($data['Q9A2'])) echo $data['Q9A2'] == 2 ? "checked" : "" ?>>
-                No</label>
-        </li>
-    </ul>
-</div>
 <div class="form-group" id="WastePolicy">
     <label class="control-label">
         <h6>Please upload supporting documents:</h6>

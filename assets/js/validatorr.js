@@ -657,10 +657,7 @@ $(document).ready(function(e){
 
     });
 
-    $("#airNav").click(function(){
-        $(this).closest("form").submit();;
 
-    });
 
     $("#male").keypress(function(e){
         var patt = /^\d*$/g;
@@ -4463,6 +4460,18 @@ function FoodQ4F1(type)
             }
 
         }
+        else
+        {
+            $('#Q4F1_2').prop('checked',true);
+            $('#Q6F1').css('display','none');
+            $('#Q7F1').css('display','none');
+            $('#Q8F1').css('display','none');
+            $('#Q7F1_2').prop('checked',true);
+            $('#Q8F1_2').prop('checked',true);
+            ComputeTraditionalFood(2);
+            ComputeBeverages(2);
+        }
+
     }
 }
 function Measure(type)

@@ -48,7 +48,7 @@
                 </div>
             </label>
         </div>
-        <?php echo form_open('air/set', array('id' => 'air')); ?>
+        <?php echo form_open('air/set', array('id' => 'PrimaryAir')); ?>
         <div class="form-group">
             <label class="control-label">Teachers (maximum of three teachers can be part of the team):</label>
             <div class="form-group-1 row">
@@ -1393,7 +1393,7 @@ else
 
     $(document).ready(function () {
         $('#airprevious').on('click', function (data) {
-            var fd = $('#land').serialize();
+            var fd = $('#PrimaryAir').serialize();
             //console.log(fd);
             $.ajax({
                 type: 'POST',
@@ -1405,7 +1405,7 @@ else
             });
         });
         $('#airsave').on('click', function (data) {
-            var fd = $('#land').serialize();
+            var fd = $('#PrimaryAir').serialize();
             //console.log(fd);
             $.ajax({
                 type: 'POST',
