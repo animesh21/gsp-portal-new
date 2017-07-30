@@ -232,6 +232,24 @@ $(document).ready(function(e){
         }
 
     });
+    $("#Q6E1S3").keypress(function(e){
+        var patt = /^[0-5]{0,6}$/g;
+
+        var val = this.value + e.key;
+        console.log(patt.test(val),!patt.test(val))
+        if (patt.test(val)){
+            e.preventDefault();
+        }
+        else
+        {
+            $('#Q6E1S3').val(this.value+","+e.key);
+        }
+
+
+
+    });
+
+
     $("#Q4L1").keypress(function(e){
         var val = this.value + e.key;
         if (val <=0){
