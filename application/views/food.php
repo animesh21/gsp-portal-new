@@ -317,7 +317,7 @@
                     </div>
                     <div class="col-xs-3">
                         <input class="form-control space-textbox" id="Q3F5S2" type="text" name="Q3F5S2"
-                               placeholder="<?php if (isset($data['Q3F5S2'])) echo $data['Q2A5S2'] ?>"
+                               placeholder="<?php if (isset($data['Q3F5S2'])) echo $data['Q3F5S2'] ?>"
                                value="<?php echo set_value('Q3F5S2'); ?>"/>
                     </div>
                     <div class="col-xs-3">
@@ -2382,32 +2382,31 @@
                                                                                                     echo 'style="display:none;"';
                                                                                                 ?>
                                                                                             >
-                                                                                                <div class="form-group">
-                                                                                                    <label for="username"
-                                                                                                           class="control-label"><span
-                                                                                                                class="cube">10(a)</span>If
-                                                                                                        yes,
-                                                                                                        please
-                                                                                                        share
-                                                                                                        the
-                                                                                                        details</label>
-                                                                                                    <textarea
-                                                                                                            type="text"
-                                                                                                            rows="5"
-                                                                                                            id="Q13F2"
-                                                                                                            name="Q13F2"
-                                                                                                            placeholder="<?php if (isset($data['Q13F2'])) echo $data['Q13F2'] ?>"
-                                                                                                            value="<?php echo set_value('Q13F2'); ?>">
+                                <div class="form-group">
+                                    <label for="username"
+                                           class="control-label"><span
+                                                class="cube">10(a)</span>If
+                                        yes,
+                                        please
+                                        share
+                                        the
+                                        details</label>
+                                    <textarea
+                                            type="text"
+                                            rows="5"
+                                            id="Q13F2"
+                                            name="Q13F2"
+                                            placeholder="<?php if (isset($data['Q13F2'])) echo $data['Q13F2'] ?>"
+                                            value="<?php echo set_value('Q13F2'); ?>">
 
-                        </textarea>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            <div class="form-group">
-                                                                                                <label class="control-label">Please
-                                                                                                    upload
-                                                                                                    pictures
-                                                                                                    of your
-                                                                                                    Audit
+</textarea>
+                                </div>
+                            <div class="form-group">
+                                <label class="control-label">Please
+                                    upload
+                                    pictures
+                                    of your
+                                    Audit
                                                                                                     Team
                                                                                                     doing
                                                                                                     the
