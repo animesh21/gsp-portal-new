@@ -257,6 +257,278 @@ $(document).ready(function(e){
 
     });
 
+    $("#Q6E2S3").keypress(function(e){
+        var patt = /^[0-5]$/g;
+
+        var val = (this.value + e.key).length;
+        console.log(patt.test(val),!patt.test(val))
+        if(val > 11)
+        {
+            e.preventDefault();
+        }
+        else if (patt.test(e.key) && !this.value.includes(""+e.key))
+        {
+            if (this.value != "")
+            {
+                $('#Q6E2S3').val(this.value + ",");
+            }
+        }
+        else
+        {
+            e.preventDefault();
+        }
+
+
+
+    });
+
+    $("#Q6E3S3").keypress(function(e){
+        var patt = /^[0-5]$/g;
+
+        var val = (this.value + e.key).length;
+        console.log(patt.test(val),!patt.test(val))
+        if(val > 11)
+        {
+            e.preventDefault();
+        }
+        else if (patt.test(e.key) && !this.value.includes(""+e.key))
+        {
+            if (this.value != "")
+            {
+                $('#Q6E3S3').val(this.value + ",");
+            }
+        }
+        else
+        {
+            e.preventDefault();
+        }
+    });
+
+    $("#Q6E4S3").keypress(function(e){
+        var patt = /^[0-5]$/g;
+
+        var val = (this.value + e.key).length;
+        console.log(patt.test(val),!patt.test(val))
+        if(val > 11)
+        {
+            e.preventDefault();
+        }
+        else if (patt.test(e.key) && !this.value.includes(""+e.key))
+        {
+            if (this.value != "")
+            {
+                $('#Q6E4S3').val(this.value + ",");
+            }
+        }
+        else
+        {
+            e.preventDefault();
+        }
+
+   });
+
+    $("#Q6E5S3").keypress(function(e){
+        var patt = /^[0-5]$/g;
+
+        var val = (this.value + e.key).length;
+        console.log(patt.test(val),!patt.test(val))
+        if(val > 11)
+        {
+            e.preventDefault();
+        }
+        else if (patt.test(e.key) && !this.value.includes(""+e.key))
+        {
+            if (this.value != "")
+            {
+                $('#Q6E5S3').val(this.value + ",");
+            }
+        }
+        else
+        {
+            e.preventDefault();
+        }
+
+
+
+    });
+
+    $("#Q6E16S3").keypress(function(e){
+        var patt = /^[0-5]$/g;
+
+        var val = (this.value + e.key).length;
+        console.log(patt.test(val),!patt.test(val))
+        if(val > 11)
+        {
+            e.preventDefault();
+        }
+        else if (patt.test(e.key) && !this.value.includes(""+e.key))
+        {
+            if (this.value != "")
+            {
+                $('#Q6E16S3').val(this.value + ",");
+            }
+        }
+        else
+        {
+            e.preventDefault();
+        }
+
+
+
+    });
+
+    $("#Q6E7S3").keypress(function(e){
+        var patt = /^[0-5]$/g;
+
+        var val = (this.value + e.key).length;
+        console.log(patt.test(val),!patt.test(val))
+        if(val > 11)
+        {
+            e.preventDefault();
+        }
+        else if (patt.test(e.key) && !this.value.includes(""+e.key))
+        {
+            if (this.value != "")
+            {
+                $('#Q6E7S3').val(this.value + ",");
+            }
+        }
+        else
+        {
+            e.preventDefault();
+        }
+
+
+
+    });
+
+    $("#Q6E8S3").keypress(function(e){
+        var patt = /^[0-5]$/g;
+
+        var val = (this.value + e.key).length;
+        console.log(patt.test(val),!patt.test(val))
+        if(val > 11)
+        {
+            e.preventDefault();
+        }
+        else if (patt.test(e.key) && !this.value.includes(""+e.key))
+        {
+            if (this.value != "")
+            {
+                $('#Q6E8S3').val(this.value + ",");
+            }
+        }
+        else
+        {
+            e.preventDefault();
+        }
+
+
+
+    });
+
+    $("#Q6E8S3").keypress(function(e){
+        var patt = /^[0-5]$/g;
+
+        var val = (this.value + e.key).length;
+        console.log(patt.test(val),!patt.test(val))
+        if(val > 11)
+        {
+            e.preventDefault();
+        }
+        else if (patt.test(e.key) && !this.value.includes(""+e.key))
+        {
+            if (this.value != "")
+            {
+                $('#Q6E8S3').val(this.value + ",");
+            }
+        }
+        else
+        {
+            e.preventDefault();
+        }
+
+    });
+
+    $("#Q6E9S3").keypress(function(e){
+        var patt = /^[0-5]$/g;
+
+        var val = (this.value + e.key).length;
+        console.log(patt.test(val),!patt.test(val))
+        if(val > 11)
+        {
+            e.preventDefault();
+        }
+        else if (patt.test(e.key) && !this.value.includes(""+e.key))
+        {
+            if (this.value != "")
+            {
+                $('#Q6E9S3').val(this.value + ",");
+            }
+        }
+        else
+        {
+            e.preventDefault();
+        }
+
+
+
+    });
+
+    $("#Q6E10S3").keypress(function(e){
+        var patt = /^[0-5]$/g;
+
+        var val = (this.value + e.key).length;
+        console.log(patt.test(val),!patt.test(val))
+        if(val > 11)
+        {
+            e.preventDefault();
+        }
+        else if (patt.test(e.key) && !this.value.includes(""+e.key))
+        {
+            if (this.value != "")
+            {
+                $('#Q6E10S3').val(this.value + ",");
+            }
+        }
+        else
+        {
+            e.preventDefault();
+        }
+
+    });
+
+    $("#Q6E11S3").keypress(function(e){
+        var patt = /^[0-5]$/g;
+
+        var val = (this.value + e.key).length;
+        console.log(patt.test(val),!patt.test(val))
+        if(val > 11)
+        {
+            e.preventDefault();
+        }
+        else if (patt.test(e.key) && !this.value.includes(""+e.key))
+        {
+            if (this.value != "")
+            {
+                $('#Q6E11S3').val(this.value + ",");
+            }
+        }
+        else
+        {
+            e.preventDefault();
+        }
+    });
+
+
+
+
+
+
+
+
+
+
 
     $("#Q4L1").keypress(function(e){
         var val = this.value + e.key;
