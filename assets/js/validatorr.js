@@ -1675,8 +1675,8 @@ function ComputeLab(type)
     }
     if(type == 2)
     {
-        document.getElementById("lab2").style.display = 'block';
-        document.getElementById("lab").style.display = 'none';
+        document.getElementById("lab").style.display = 'block';
+        document.getElementById("lab1").style.display = 'none';
     }
 
 }
