@@ -467,7 +467,7 @@
                 <input class="form-control space-textbox" id="Q4L1" onkeyup="BuildUpArea()"
                        onchange="BuildUpArea()" type="number" min="1" name="Q4L1"
                        placeholder="<?php if (isset($data['Q4L1'])) echo $data['Q4L1'] ?>"
-                       value="<?php echo set_value('Q4L1'); ?>"/>
+                       value="<?php echo set_value('Q4L1'); ?>" readonly/>
             </div>
         </div>
         <div class="form-group">
@@ -490,8 +490,8 @@
                 <label><strong class="bold">(b1)</strong> Green Landscaped area on ground</label>
             </div>
             <div class="col-xs-5">
-                <input class="form-control space-textbox" id="Q4L3" onkeyup="BuildUpArea()"
-                       onchange="BuildUpArea()" type="number" min="0" name="Q4L3"
+                <input class="form-control space-textbox" id="Q4L3" onkeyup="GreenArea()"
+                       onchange="GreenArea()" type="number" min="0" name="Q4L3"
                        placeholder="<?php if (isset($data['Q4L3'])) echo $data['Q4L3'] ?>"
                        value="<?php echo set_value('Q4L3'); ?>"/>
             </div>
@@ -501,8 +501,8 @@
                 <label><strong class="bold">(b2)</strong> Play area that has grass on ground</label>
             </div>
             <div class="col-xs-5">
-                <input class="form-control space-textbox" id="Q4L4" onkeyup="BuildUpArea()"
-                       onchange="BuildUpArea()" type="number" min="0" name="Q4L4"
+                <input class="form-control space-textbox" id="Q4L4" onkeyup="GreenArea()"
+                       onchange="GreenArea()" type="number" min="0" name="Q4L4"
                        placeholder="<?php if (isset($data['Q4L4'])) echo $data['Q4L4'] ?>"
                        value="<?php echo set_value('Q4L4'); ?>"/>
             </div>
@@ -512,10 +512,9 @@
                 <label><strong class="bold">(b3)</strong> Green area on ground</label>
             </div>
             <div class="col-xs-5">
-                <input class="form-control space-textbox" id="Q4L5" onkeyup="BuildUpArea()"
-                       onchange="BuildUpArea()" type="number" min="0" name="Q4L5"
+                <input class="form-control space-textbox" id="Q4L5" onchange="BuildUpArea()" type="number" min="0" name="Q4L5"
                        placeholder="<?php if (isset($data['Q4L5'])) echo $data['Q4L5'] ?>"
-                       value="<?php echo set_value('Q4L5'); ?>"/>
+                       value="<?php echo set_value('Q4L5'); ?>" readonly/>
             </div>
         </div>
         <div class="form-group1 row">

@@ -4495,27 +4495,33 @@ function ExtraCurricular(type)
 function BuildUpArea()
 {
 
-    var Sum = 0;
-    for(i=1;i<11;i++)
+    var Sum = 0;Q4L8
+    for(i=2;i<9;i++)
     {
+        if(i == 3 || i == 4)
+        {
+            continue;
+        }
+        else
+        {
+            id = "Q4Lz".replace('z',i);
+            var a = document.getElementById(''+id);
+            console.log(id);
 
-        id = "Q4Lz".replace('z',i);
-        var a = document.getElementById(''+id);
-        console.log(id);
+            a1 = parseFloat(a.value);
+            a11 = parseFloat(a.placeholder);
 
-        a1 = parseFloat(a.value);
-        a11 = parseFloat(a.placeholder);
+            if(isNaN(a1))
+                if(isNaN(a11))
+                    a1 = 0;
+                else
+                    a1 = a11;
+            Sum+=a1;
+        }
 
-        if(isNaN(a1))
-            if(isNaN(a11))
-                a1 = 0;
-            else
-                a1 = a11;
-
-        Sum+=a1;
     }
 
-    $('#Q4L11').val(Sum);
+    $('#Q4L1').val(Sum);
 
 }
 
@@ -4544,6 +4550,8 @@ function GreenArea()
             b1 = b11;
 
     $('#Q4L5').val(a1+b1);
+
+    BuildUpArea();
 
 }
 
