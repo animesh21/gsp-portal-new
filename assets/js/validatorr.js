@@ -241,9 +241,9 @@ $(document).ready(function(e){
         {
             e.preventDefault();
         }
-        else if (patt.test(e.key))
+        else if (patt.test(e.key) && !this.value.includes(""+e.key))
         {
-            if (this.value != "" && !this.value.includes(""+e.key))
+            if (this.value != "")
             {
                 $('#Q6E1S3').val(this.value + ",");
             }
