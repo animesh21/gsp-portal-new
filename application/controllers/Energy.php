@@ -40,26 +40,18 @@ class Energy extends CI_Controller {
                     $data['data']['Q5E1'] = 'N';
 
 
-            /*if(isset($air['Q6A2S3D5']))
-                $data['data']['Q6E4S1'] = $air['Q6A2S3D5'];
+            if(isset($data['other']['Q1G1']) && isset($data['other']['Q1G2']))
+                if($data['other']['Q1G1'] < 6 && $data['other']['Q1G2'] < 6)
+                {  //  print("Primaryland");
+                    $this->load->view('PrimaryEnergy',$data);
+                }
+                else
+                    $this->load->view('energy',$data);
+            else
+                $this->load->view('energy',$data);
 
-            if(isset($air['Q6A2S3P5']))
-                $data['data']['Q6E3S1'] = $air['Q6A2S3P5'];
 
-            if(isset($air['Q6A2S3L5']))
-                $data['data']['Q6E11S1'] = $air['Q6A2S3L5'];
 
-            if(isset($air['Q6A2S3C5']))
-                $data['data']['Q6E5S1'] = $air['Q6A2S3C5'];
-
-            if(isset($air['Q6A2S3E5']))
-                $data['data']['Q6E1S1'] = $air['Q6A2S3E5'];
-
-            if(isset($air['Q6A2S3B5']))
-                $data['data']['Q6E13S1'] = $air['Q6A2S3B5'];
-
-            */
-            $this->load->view('energy',$data);
         }
     }
     public function set()
@@ -143,7 +135,7 @@ class Energy extends CI_Controller {
                redirect(base_url("food"));
 
             }
-        }           
+        }
         else
         {*/
         $this->Answer_model->submitAnswers($post,3);
@@ -151,4 +143,34 @@ class Energy extends CI_Controller {
         redirect(base_url("food"));
         // }
     }
+    function CheckData($air,$Q2,$Q3,$Q4,$Q11)
+    {
+        if(isset($air))
+        {
+            if(($air != 1) || ($air != 2))
+            {
+                if(isset($Q2) || isset($Q3) || isset($Q4) || isset($Q11))
+                {
+                    return true;
+                }
+                else
+                    return false;
+            }
+            else
+            {
+                if(isset($Q2) || isset($Q3) || isset($Q4) || isset($Q11))
+                {
+                    return false;
+                }
+                else
+                    return true;
+            }
+        }
+        else if(isset($Q2) || isset($Q3) || isset($Q4) || isset($Q11))
+        {
+            return false;
+        }
+
+    }
+
 }
