@@ -1202,12 +1202,12 @@
           <ul class="list-unstyled">
             <li>
               <label>Solar</label>
-              <input type="checkbox" name="Q9E1S1" id="Solar"
+              <input type="checkbox" name="Q9E1S1"
                                        value="<?php echo set_value('Q9E1S1'); ?>" <?php if (isset($data['Q9E1S1'])) echo "checked"; ?>/>
             </li>
             <li>
               <label>Wind</label>
-              <input type="checkbox" name="Q9E1S2" id="Wind"
+              <input type="checkbox" name="Q9E1S2" 
                                        value="<?php echo set_value('Q9E1S2'); ?>" <?php if (isset($data['Q9E1S2'])) echo "checked"; ?>/>
             </li>
             <li>
