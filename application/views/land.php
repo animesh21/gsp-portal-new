@@ -470,7 +470,7 @@
                 ?>
                 <input class="form-control space-textbox" id="Q4L1" onkeyup="BuildUpArea()"
                        onchange="BuildUpArea()" type="number" min="1" name="Q4L1"
-                       placeholder="<?php if (isset($data['Q4L1'])) echo $data['Q4L1']; else echo $placeholder_Default; ?>"
+                       placeholder="<?php if (isset($data['Q4L1'])) echo $data['Q4L1']; else echo "<strong>m<sup>2</sup></strong>"; ?>"
                        value="<?php echo set_value('Q4L1'); ?>" rea/>
             </div>
         </div>
