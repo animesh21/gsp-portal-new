@@ -1843,45 +1843,78 @@ function details()
     var countNo = 0;
 
     
-    if(isNaN(NFVb5))
-        if(isNaN(NFVb51))
-            NFVb5 = 0;
-        else
-            NFVb5 = NFVb51
-    if(isNaN(NFVc5))
-        if(isNaN(NFVc51))
-            NFVc5 = 0;
-        else
-            NFVc5 = NFVc51;
-        
-    if(isNaN(NFVv5))
-        if(isNaN(NFVv51))
-            NFVv5 = 0;
-        else
-            NFVv5 = NFVv51;
-        
-        
-    if(isNaN(NFVo5))
-        if(isNaN(NFVo51))
-            NFVo5 = 0;
-        else
-            NFVo5 = NFVo51;
-    
-    var sum5 = NFVb5 + NFVc5 +NFVv5 +NFVo5;
-    if(sum5 > sum1)
+    if(NFVb5 == "Yes")
     {
+        countYes++;
+    }
+    else if(NFVb5 == "" && NFVb51 == "Yes")
+    {
+        countYes++;
+    }
+    else if(NFVb5 == "No")
+    {
+        countNo++;
+    }
+    else if(NFVb5 == "" && NFVb51 == "No")
+    {
+        countNo++;
+    }
 
-        alert('Please enter lower value then the total');
-        document.getElementById("b6").value = 0;
-        document.getElementById("c6").value = 0;
-        document.getElementById("v6").value = 0;
-        document.getElementById("o6").value = 0
-        
+
+    if(NFVc5 == "Yes")
+    {
+        countYes++;
     }
-    else
-    {       
-        $('#t6').val(sum5);
+    else if(NFVc5 == "" && NFVc51 == "Yes")
+    {
+        countYes++;
     }
+    else if(NFVc5 == "No")
+    {
+        countNo++;
+    }
+    else if(NFVc5 == "" && NFVc1 == "No")
+    {
+        countNo++;
+    }
+
+    if(NFVv5 == "Yes")
+    {
+        countYes++;
+    }
+    else if(NFVv5 == "" && NFVv51 == "Yes")
+    {
+        countYes++;
+    }
+    else if(NFVv5 == "No")
+    {
+        countNo++;
+    }
+    else if(NFVv5 == "" && NFVv1 == "No")
+    {
+        countNo++;
+    }
+
+    if(NFVo5 == "Yes")
+    {
+        countYes++;
+    }
+    else if(NFVo5 == "" && NFVo51 == "Yes")
+    {
+        countYes++;
+    }
+    else if(NFVo5 == "No")
+    {
+        countNo++;
+    }
+    else if(NFVo5 == "" && NFVo1 == "No")
+    {
+        countNo++;
+    }
+
+
+        $('#t6').val(countYes+"/"+countNo);
+    
         
     
 }
