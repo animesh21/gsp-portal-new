@@ -54,10 +54,10 @@ class Answer_model extends CI_Model {
 		}
 		if($type == 3)
 		{
-			if(isset($post['Q9E1S1']) || isset($post['Q9E1S2']) || isset($post['Q9E1S3']) || isset($post['Q9E1S4']))
+			if(isset($post['Q9E1S1']) || isset($post['Q9E1S2']) || isset($post['Q9E1S3']) || isset($post['Q9E1S4']) || isset($post['Q9E1S5']))
 			{
 				$this->db->where('userid', $this->session->userdata('USER_ID'));
-				$this->db->like('questionid', 'Q7E1S');
+				$this->db->like('questionid', 'Q9E1S');
 				$this->db->delete('gsp_answers');
 				
 			}

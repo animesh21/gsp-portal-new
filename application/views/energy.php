@@ -1267,7 +1267,7 @@
                         <li>
                             <label>No</label>
                             <input type="radio" name="Q10E1"
-                                   value="<?php echo set_value('Q10E1', 'Y') ?>" <?php if (isset($data['Q10E1'])) echo $data['Q10E1'] == 'Y' ? "checked" : "" ?>/>
+                                   value="<?php echo set_value('Q10E1', 'N') ?>" <?php if (isset($data['Q10E1'])) echo $data['Q10E1'] == 'N' ? "checked" : "" ?>/>
                         </li>
                     </ul>
                 </div>
