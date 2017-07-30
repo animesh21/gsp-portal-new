@@ -1599,9 +1599,6 @@ $("#waste").submit(function( event ) { //Waste Submit
 });
 
 $("#energy").submit(function( event ) { //Energy Submit
-    if(energynext == true)
-    {
-
     var count1 = 0;
     var count2 = 0;
     var count3 = 0;
@@ -1847,8 +1844,6 @@ $("#energy").submit(function( event ) { //Energy Submit
         event.preventDefault();                
               
     }
-  }
-  energynext = false;
   
 });
 
@@ -2232,11 +2227,20 @@ $("#air").submit(function( event ) { //Air Submit
   var student = parseInt($('#Q7A12S1').val());
   var student1 = parseInt(document.getElementById('Q7A12S1').placeholder);
 
+  var teacher = parseInt($('#Q7A12S2').val());
+  var teacher1 = parseInt(document.getElementById('Q7A12S2').placeholder);
+  
+  var nonTeaching = parseInt($('#Q7A12S3').val());
+  var nonTeaching1 = parseInt(document.getElementById('Q7A12S3').placeholder);
+
+
   var total = parseInt($('#Q7A12S4').val());
   var total1 = parseInt(document.getElementById('Q7A12S4').placeholder);
 
   var current_student = parseInt($('#Q4G1S3').val());
   var current_pop = parseInt($('#Q4G4S3').val());
+  var current_teacher = parseInt($('#Q4G2S3').val());
+  var current_nonTeacher = parseInt($('#Q4G3S3').val());
   
   if(current_student > 0)
       if(student != current_student && student1 != current_student)
@@ -2253,6 +2257,482 @@ $("#air").submit(function( event ) { //Air Submit
         $('#Q7A12S1').focus();  
         event.preventDefault();  
       }
+  if(current_teacher > 0)
+      if(teacher != current_teacher && teacher1 != current_teacher)
+      {
+        if(isNaN(teacher))
+            if(isNaN(teacher1))
+            {
+                teacher = 0;
+            }
+            else
+                teacher = teacher1;
+
+        alert("Total members of the school community in Q4 ("+teacher+") should be equal to total permanent population of the school in General Questions Q4a ("+current_teacher+")") 
+        $('#Q7A12S2').focus();  
+        event.preventDefault();  
+      }
+  
+  if(current_nonTeacher > 0)
+      if(nonTeaching != current_nonTeacher && nonTeaching1 != current_nonTeacher)
+      {
+        if(isNaN(nonTeaching))
+            if(isNaN(nonTeaching1))
+            {
+                nonTeaching = 0;
+            }
+            else
+                nonTeaching = nonTeaching1;
+
+        alert("Total members of the school community in Q4 ("+nonTeaching+") should be equal to total permanent population of the school in General Questions Q4a ("+current_nonTeacher+")") 
+        $('#Q7A12S3').focus();  
+        event.preventDefault();  
+      }
+  
+  if(current_pop > 0)
+  {
+      if(total != current_pop && total1 != current_pop)
+      {
+        if(isNaN(total))
+         if(isNaN(total))
+            {
+                total = 0;
+            }
+            else
+                total = total1;
+
+
+         alert("Total members of the school community in Q4 ("+total+") should be equal to total permanent population of the school in General Questions Q4a ("+current_pop+")") 
+         $('#Q7A12S3').focus();  
+         event.preventDefault();  
+      }
+  }
+  
+});
+
+$("#air").submit(function( event ) { //Air Submit
+
+    // var data = '<?php echo json_encode($data); ?>';
+    // alert('submit clicked.\nData: ' + data);
+  
+    var count1 = 0;
+    var count2 = 0;
+    var count3 = 0;
+    
+    for(i=1;i<4;i++)
+    {
+        var id1 = "Q1AzS1".replace('z',i);
+        var id2 = "Q1AzS2".replace('z',i);
+        var id3 = "Q1AzS3".replace('z',i);
+        
+        var element1 = document.getElementById(id1).value;
+        var element11 = document.getElementById(id1).placeholder;
+        
+        var element2 = document.getElementById(id2).value;
+        var element21 = document.getElementById(id2).placeholder;
+        
+        var element3 = document.getElementById(id3).value;
+        var element31 = document.getElementById(id3).placeholder;
+               
+
+         if(element1 != "" || element11 != "")
+         {
+            count1 ++;
+         }
+         if(element2 != "" || element21 != "")
+         {
+            count2 ++;
+         }
+         if(element3 != "" || element31 != "")
+         {
+            count3 ++;
+         }      
+    }
+    if(count1 == 0 && count2 == 0 && count3 == 0)
+    {
+        alert("Please enter the name of at least one teacher");
+        
+        event.preventDefault();
+    }
+    var count1 = 0;
+    var count2 = 0;
+    var count3 = 0;
+    
+    for(i=1;i<6;i++)
+    {
+        var id1 = "Q2AzS1".replace('z',i);
+        var id2 = "Q2AzS2".replace('z',i);
+        var id3 = "Q2AzS3".replace('z',i);
+        
+        var element1 = document.getElementById(id1).value;
+        var element11 = document.getElementById(id1).placeholder;
+        
+        var element2 = document.getElementById(id2).value;
+        var element21 = document.getElementById(id2).placeholder;
+        
+        var element3 = document.getElementById(id3).value;
+        var element31 = document.getElementById(id3).placeholder;
+               
+
+         if(element1 != "" || element11 != "")
+         {
+            count1 ++;
+         }
+         if(element2 != "" || element21 != "")
+         {
+            count2 ++;
+         }
+         if(element3 != "" || element31 != "")
+         {
+            count3 ++;
+         }      
+    }
+    if(count1 == 0 && count2 == 0 && count3 == 0)
+    {
+        alert("Please enter the name of at least one admin");
+        
+        event.preventDefault();
+    }
+
+    var count1 = 0;
+    var count2 = 0;
+    var count3 = 0;
+    
+    for(i=1;i<11;i++)
+    {
+        var id1 = "Q3AzS1".replace('z',i);
+        var id2 = "Q3AzS2".replace('z',i);
+        var id3 = "Q3AzS3".replace('z',i);
+        
+        var element1 = document.getElementById(id1).value;
+        var element11 = document.getElementById(id1).placeholder;
+        
+        var element2 = document.getElementById(id2).value;
+        var element21 = document.getElementById(id2).placeholder;
+        
+        var element3 = document.getElementById(id3).value;
+        var element31 = document.getElementById(id3).placeholder;
+               
+
+         if(element1 != "" || element11 != "")
+         {
+            count1 ++;
+         }
+         if(element2 != "" || element21 != "")
+         {
+            count2 ++;
+         }
+         if(element3 != "" || element31 != "")
+         {
+            count3 ++;
+         }      
+    }
+    if(count1 == 0 && count2 == 0 && count3 == 0)
+    {
+        alert("Please enter the name of at least one student");
+        event.preventDefault();
+    }
+
+    var val1 = $("input[name=Q6A1]:checked").val();
+    val1 = parseInt(val1);
+    var error = false;
+    var id= "";
+    if(val1 > 2)
+    {
+        for(i=1;i<7;i++)
+        {
+            var id1="bz".replace('z',i);
+            var id2="cz".replace('z',i);
+            var id3="vz".replace('z',i);
+            var id4="oz".replace('z',i);
+
+            var b1 = parseInt(document.getElementById(id1).value);
+            var b11 = parseInt(document.getElementById(id1).placeholder);
+
+            var c1 = parseInt(document.getElementById(id2).value);
+            var c11 = parseInt(document.getElementById(id2).placeholder);
+            
+            var v1 = parseInt(document.getElementById(id3).value);
+            var v11 = parseInt(document.getElementById(id3).placeholder);
+            
+            var o1 = parseInt(document.getElementById(id4).value);
+            var o11 = parseInt(document.getElementById(id4).placeholder);
+            
+            if(isNaN(b1) && isNaN(b11))
+             {
+               error = true;
+               id = id1;
+               break;
+             }
+             else if(isNaN(c1) && isNaN(c11))
+             {
+               error = true;
+               id = id2;
+               break;
+             }
+             else if(isNaN(v1) && isNaN(v11))
+             {
+               error = true;
+               id = id3;
+               break;
+             }
+             else if(isNaN(o1) && isNaN(o11))
+             {
+               error = true;
+               id = id4;
+               break;
+             }   
+                
+        }
+        if(error == true)
+        {
+            alert("Please write 0(zero) if you do not have any input/entry");
+            $('#'+id).focus();
+            event.preventDefault();
+        }
+
+        error = false;
+        for(i=1;i<5;i++)
+        {
+            var id1="S3Dz".replace('z',i);
+            var id2="S3Pz".replace('z',i);
+            var id3="S3Lz".replace('z',i);
+            var id4="S3Cz".replace('z',i);
+            var id5="S3Ez".replace('z',i);
+            var id6="S3Hz".replace('z',i);
+            var id7="S3Bz".replace('z',i);
+
+            var d1 = parseInt(document.getElementById(id1).value);
+            var d11 = parseInt(document.getElementById(id1).placeholder);
+
+            var p1 = parseInt(document.getElementById(id2).value);
+            var p11 = parseInt(document.getElementById(id2).placeholder);
+            
+            var l1 = parseInt(document.getElementById(id3).value);
+            var l11 = parseInt(document.getElementById(id3).placeholder);
+            
+            var c1 = parseInt(document.getElementById(id4).value);
+            var c11 = parseInt(document.getElementById(id4).placeholder);
+            
+            var e1 = parseInt(document.getElementById(id5).value);
+            var e11 = parseInt(document.getElementById(id5).placeholder);
+            
+            var h1 = parseInt(document.getElementById(id6).value);
+            var h11 = parseInt(document.getElementById(id6).placeholder);
+            
+            var b1 = parseInt(document.getElementById(id7).value);
+            var b11 = parseInt(document.getElementById(id7).placeholder);
+            console.log(id1,id2,id3,id4,id5,id6,id7);
+            if(isNaN(d1) && isNaN(d11))
+             {
+               error = true;
+               id = id1;
+               break;
+             }
+             else if(isNaN(p1) && isNaN(p11))
+             {
+               error = true;
+               id = id2;
+               break;
+             }
+             else if(isNaN(l1) && isNaN(l11))
+             {
+               error = true;
+               id = id3;
+               break;
+             }
+             else if(isNaN(c1) && isNaN(c11))
+             {
+               error = true;
+               id = id4;
+               break;
+             }
+             else if(isNaN(e1) && isNaN(e11))
+             {
+               error = true;
+               id = id5;
+               break;
+             }
+             else if(isNaN(h1) && isNaN(h11))
+             {
+               error = true;
+               id = id6;
+               break;
+             }
+             else if(isNaN(b1) && isNaN(b11))
+             {
+               error = true;
+               id = id7;
+               break;
+             }   
+                
+        }
+        if(error == true)
+        {
+            alert("Please write 0(zero) if you do not have any input/entry");
+            $('#'+id).focus();
+            event.preventDefault();
+        }
+    }
+    error = false;
+    for(i=1;i<12;i++)
+        {
+            var id1="Q7AzS1".replace('z',i);
+            var id2="Q7AzS2".replace('z',i);
+            var id3="Q7AzS3".replace('z',i);
+            
+            var b1 = parseInt(document.getElementById(id1).value);
+            var b11 = parseInt(document.getElementById(id1).placeholder);
+
+            var c1 = parseInt(document.getElementById(id2).value);
+            var c11 = parseInt(document.getElementById(id2).placeholder);
+            
+            var v1 = parseInt(document.getElementById(id3).value);
+            var v11 = parseInt(document.getElementById(id3).placeholder);
+            
+            
+            if(isNaN(b1) && isNaN(b11))
+             {
+               error = true;
+               id = id1;
+               break;
+             }
+             else if(isNaN(c1) && isNaN(c11))
+             {
+               error = true;
+               id = id2;
+               break;
+             }
+             else if(isNaN(v1) && isNaN(v11))
+             {
+               error = true;
+               id = id3;
+               break;
+             }
+                
+                
+        }
+        if(error == true)
+        {
+            alert("Please write 0(zero) if you do not have any input/entry");
+            $('#'+id).focus();
+            event.preventDefault();
+        }
+    var Q8A1 = parseInt($('#Q8A1').val());
+    var Q8A2 = parseInt(document.getElementById('Q8A1').placeholder);
+
+    if(isNaN(Q8A1) && isNaN(Q8A2))
+    {
+        alert("Please write 0(zero) if you do not have any input/entry");
+        $('#Q8A1').focus();
+        event.preventDefault();
+    }
+
+    var radioCheck = $("input[name=Q9A1]:checked").val();
+    if(radioCheck != 'Y' && radioCheck != 'N')
+    {
+        alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed.");
+        $('#Q9A1').focus();
+        event.preventDefault();
+    }
+
+    var val1 = $("input[name=Q9A1]:checked").val();
+    if(val1 == 'N')
+    {
+        var val1 = $("input[name=Q9A2]:checked").val();
+        if(val1 != 'N' && val1 != 'Y')
+        {
+            alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed.");
+            $('#Q9A2_1').focus();
+            event.preventDefault();
+        }   
+    }
+    
+
+  /*var val1 = $('#Q4G4S3').val();
+  val1 = parseInt(val1);
+    
+  if(val1 > 0)
+  {
+    var val2 = parseFloat($('#Q7A12S4').val());
+    var val2Place = parseFloat(document.getElementById('Q7A12S4').placeholder);
+    
+    if(val2 < 1 || val2Place < 1)
+    {
+        alert("Popultaion does Not match.") 
+    
+        $('#Q7A12S4').css('border-color', 'red'); 
+        $('#Q7A12S4').focus();  
+     
+        event.preventDefault();      
+    }
+  }*/
+
+  var student = parseInt($('#Q7A12S1').val());
+  var student1 = parseInt(document.getElementById('Q7A12S1').placeholder);
+
+  var teacher = parseInt($('#Q7A12S2').val());
+  var teacher1 = parseInt(document.getElementById('Q7A12S2').placeholder);
+  
+  var nonTeaching = parseInt($('#Q7A12S3').val());
+  var nonTeaching1 = parseInt(document.getElementById('Q7A12S3').placeholder);
+
+
+  var total = parseInt($('#Q7A12S4').val());
+  var total1 = parseInt(document.getElementById('Q7A12S4').placeholder);
+
+  var current_student = parseInt($('#Q4G1S3').val());
+  var current_pop = parseInt($('#Q4G4S3').val());
+  var current_teacher = parseInt($('#Q4G2S3').val());
+  var current_nonTeacher = parseInt($('#Q4G3S3').val());
+  
+  if(current_student > 0)
+      if(student != current_student && student1 != current_student)
+      {
+        if(isNaN(student))
+            if(isNaN(student1))
+            {
+                student = 0;
+            }
+            else
+                student = student1;
+
+        alert("Total members of the school community in Q4 ("+student+") should be equal to total permanent population of the school in General Questions Q4a ("+current_student+")") 
+        $('#Q7A12S1').focus();  
+        event.preventDefault();  
+      }
+  if(current_teacher > 0)
+      if(teacher != current_teacher && teacher1 != current_teacher)
+      {
+        if(isNaN(teacher))
+            if(isNaN(teacher1))
+            {
+                teacher = 0;
+            }
+            else
+                teacher = teacher1;
+
+        alert("Total members of the school community in Q4 ("+teacher+") should be equal to total permanent population of the school in General Questions Q4a ("+current_teacher+")") 
+        $('#Q7A12S2').focus();  
+        event.preventDefault();  
+      }
+  
+  if(current_nonTeacher > 0)
+      if(nonTeaching != current_nonTeacher && nonTeaching1 != current_nonTeacher)
+      {
+        if(isNaN(nonTeaching))
+            if(isNaN(nonTeaching1))
+            {
+                nonTeaching = 0;
+            }
+            else
+                nonTeaching = nonTeaching1;
+
+        alert("Total members of the school community in Q4 ("+nonTeaching+") should be equal to total permanent population of the school in General Questions Q4a ("+current_nonTeacher+")") 
+        $('#Q7A12S3').focus();  
+        event.preventDefault();  
+      }
+  
   if(current_pop > 0)
   {
       if(total != current_pop && total1 != current_pop)
@@ -2685,17 +3165,5 @@ $('#select').change(function(){
     
 });
 
-$('#energynext').click(function(){
-  energynext = true;
-  $('#energy').submit();
-  window.location.replace('studio-tesseract.co/GSP/air');
-
- });
- $('#energyprevious').click(function(){
-  energynext = false;
-  $('#energy').submit();
-  window.location.replace('studio-tesseract.co/GSP/air');
-
- });
 
 });
