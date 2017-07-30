@@ -423,6 +423,175 @@ $(document).ready(function(){
 
     });
 
+    $( "#PrimaryLand" ).submit(function( event ) { //Land Submit
+
+        var count1 = 0;
+        var count2 = 0;
+        var count3 = 0;
+
+        for(i=1;i<4;i++)
+        {
+            var id1 = "Q1LzS1".replace('z',i);
+            var id2 = "Q1LzS2".replace('z',i);
+            var id3 = "Q1LzS3".replace('z',i);
+
+            var element1 = document.getElementById(id1).value;
+            var element11 = document.getElementById(id1).placeholder;
+
+            var element2 = document.getElementById(id2).value;
+            var element21 = document.getElementById(id2).placeholder;
+
+            var element3 = document.getElementById(id3).value;
+            var element31 = document.getElementById(id3).placeholder;
+
+
+            if(element1 != "" || element11 != "")
+            {
+                count1 ++;
+            }
+            if(element2 != "" || element21 != "")
+            {
+                count2 ++;
+            }
+            if(element3 != "" || element31 != "")
+            {
+                count3 ++;
+            }
+        }
+        if(count1 == 0 && count2 == 0 && count3 == 0)
+        {
+            alert("Please enter the name of at least one teacher");
+
+            event.preventDefault();
+        }
+        var count1 = 0;
+        var count2 = 0;
+        var count3 = 0;
+
+        for(i=1;i<6;i++)
+        {
+            var id1 = "Q2LzS1".replace('z',i);
+            var id2 = "Q2LzS2".replace('z',i);
+            var id3 = "Q2LzS3".replace('z',i);
+
+            var element1 = document.getElementById(id1).value;
+            var element11 = document.getElementById(id1).placeholder;
+
+            var element2 = document.getElementById(id2).value;
+            var element21 = document.getElementById(id2).placeholder;
+
+            var element3 = document.getElementById(id3).value;
+            var element31 = document.getElementById(id3).placeholder;
+
+
+            if(element1 != "" || element11 != "")
+            {
+                count1 ++;
+            }
+            if(element2 != "" || element21 != "")
+            {
+                count2 ++;
+            }
+            if(element3 != "" || element31 != "")
+            {
+                count3 ++;
+            }
+        }
+        if(count1 == 0 && count2 == 0 && count3 == 0)
+        {
+            alert("Please enter the name of at least one admin");
+
+            event.preventDefault();
+        }
+
+        var count1 = 0;
+        var count2 = 0;
+        var count3 = 0;
+
+        for(i=1;i<11;i++)
+        {
+            var id1 = "Q3LzS1".replace('z',i);
+            var id2 = "Q3LzS2".replace('z',i);
+            var id3 = "Q3LzS3".replace('z',i);
+
+            var element1 = document.getElementById(id1).value;
+            var element11 = document.getElementById(id1).placeholder;
+
+            var element2 = document.getElementById(id2).value;
+            var element21 = document.getElementById(id2).placeholder;
+
+            var element3 = document.getElementById(id3).value;
+            var element31 = document.getElementById(id3).placeholder;
+
+
+            if(element1 != "" || element11 != "")
+            {
+                count1 ++;
+            }
+            if(element2 != "" || element21 != "")
+            {
+                count2 ++;
+            }
+            if(element3 != "" || element31 != "")
+            {
+                count3 ++;
+            }
+        }
+        if(count1 == 0 && count2 == 0 && count3 == 0)
+        {
+            alert("Please enter the name of at least one student");
+            event.preventDefault();
+        }
+
+        var error = false;
+        var id = "";
+        for(i=1;i<13;i++)
+        {
+            var id1 = "Q4Lz".replace('z',i);
+
+            var element1 = parseInt(document.getElementById(id1).value);
+            var element11 = parseInt(document.getElementById(id1).placeholder);
+
+            if(isNaN(element1) && isNaN(element11))
+            {
+                id = id1;
+                error =true;
+                alert("Please write 0(zero) if you do not have any input/entry");
+            }
+        }
+        if(error == true)
+        {
+            $('#'+id).focus();
+
+        }
+        var Q4L1 = parseInt(document.getElementById("Q4L1").value);
+        var Q4L11 = parseInt(document.getElementById("Q4L1").placeholder);
+
+        if(isNaN(Q4L1) && isNaN(Q4L11) )
+        {
+            alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed.");
+            event.preventDefault();
+
+        }
+
+        var val1 = $('#Q6A2S1T5').val();
+        val1 = parseInt(val1);
+
+        if(val1 > 0)
+        {
+            var val2 = parseFloat($('#Q4L7').val());
+            var val2Place = parseFloat(document.getElementById('Q4L7').placeholder);
+
+            if(val2 < 1 || val2Place < 1)
+            {
+                alert("Please Enter Value in Surface parking area, Or remove Authorized Parking form Air Section");
+
+            }
+        }
+
+    });
+
+
     $('#Q4L7').change(function(){
         var val1 = $('#Q6A2S1T5').val();
         val1 = parseInt(val1);
