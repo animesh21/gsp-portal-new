@@ -1670,14 +1670,12 @@ function ComputeLab(type)
     {
 
         document.getElementById("lab1").style.display = 'block';
-        document.getElementById("lab2").style.display = 'none';
         document.getElementById("lab").style.display = 'none';
 
     }
     if(type == 2)
     {
         document.getElementById("lab2").style.display = 'block';
-        document.getElementById("lab1").style.display = 'none';
         document.getElementById("lab").style.display = 'none';
     }
 
