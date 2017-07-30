@@ -1844,85 +1844,85 @@ function details()
     var NFVo51 = document.getElementById("o6").placeholder;
     sum5 = 0;
 
-    NFVb5 = NFVb5;
-    NFVc5 = NFVc5;
-    NFVv5  = NFVv5;
-    NFVo5 = NFVo5;
+    NFVb5 = NFVb5.toLowerCase();;
+    NFVc5 = NFVc5.toLowerCase();;
+    NFVv5  = NFVv5.toLowerCase();;
+    NFVo5 = NFVo5.toLowerCase();;
 
-    NFVb51 = NFVb51;
-    NFVc51 = NFVc51;
-    NFVv51  = NFVv51;
-    NFVo51 = NFVo51;
+    NFVb51 = NFVb51.toLowerCase();;
+    NFVc51 = NFVc51.toLowerCase();;
+    NFVv51  = NFVv51.toLowerCase();;
+    NFVo51 = NFVo51.toLowerCase();;
 
     var countYes = 0;
     var countNo = 0;
 
 
-    if(NFVb5 == "Yes")
+    if(NFVb5 == "yes")
     {
         countYes++;
     }
-    else if(NFVb5 == "" && NFVb51 == "Yes")
+    else if(NFVb5 == "" && NFVb51 == "yes")
     {
         countYes++;
     }
-    else if(NFVb5 == "No")
+    else if(NFVb5 == "no")
     {
         countNo++;
     }
-    else if(NFVb5 == "" && NFVb51 == "No")
-    {
-        countNo++;
-    }
-
-
-    if(NFVc5 == "Yes")
-    {
-        countYes++;
-    }
-    else if(NFVc5 == "" && NFVc51 == "Yes")
-    {
-        countYes++;
-    }
-    else if(NFVc5 == "No")
-    {
-        countNo++;
-    }
-    else if(NFVc5 == "" && NFVc1 == "No")
+    else if(NFVb5 == "" && NFVb51 == "no")
     {
         countNo++;
     }
 
-    if(NFVv5 == "Yes")
+
+    if(NFVc5 == "yes")
     {
         countYes++;
     }
-    else if(NFVv5 == "" && NFVv51 == "Yes")
+    else if(NFVc5 == "" && NFVc51 == "yes")
     {
         countYes++;
     }
-    else if(NFVv5 == "No")
+    else if(NFVc5 == "no")
     {
         countNo++;
     }
-    else if(NFVv5 == "" && NFVv1 == "No")
+    else if(NFVc5 == "" && NFVc1 == "no")
     {
         countNo++;
     }
 
-    if(NFVo5 == "Yes")
+    if(NFVv5 == "yes")
     {
         countYes++;
     }
-    else if(NFVo5 == "" && NFVo51 == "Yes")
+    else if(NFVv5 == "" && NFVv51 == "yes")
     {
         countYes++;
     }
-    else if(NFVo5 == "No")
+    else if(NFVv5 == "no")
     {
         countNo++;
     }
-    else if(NFVo5 == "" && NFVo1 == "No")
+    else if(NFVv5 == "" && NFVv1 == "no")
+    {
+        countNo++;
+    }
+
+    if(NFVo5 == "yes")
+    {
+        countYes++;
+    }
+    else if(NFVo5 == "" && NFVo51 == "yes")
+    {
+        countYes++;
+    }
+    else if(NFVo5 == "no")
+    {
+        countNo++;
+    }
+    else if(NFVo5 == "" && NFVo1 == "no")
     {
         countNo++;
     }
