@@ -14,4 +14,8 @@ class Webhook extends CI_Controller {
         echo '\nI am ';
         echo exec('whoami');
     }
+
+    public function test() {
+        echo 'Testing the webhook';
+    }
 }
