@@ -2323,7 +2323,7 @@ $(document).ready(function(){
         var radioCheck = $("input[name=Q9A1]:checked").val();
         if(radioCheck != 'Y' && radioCheck != 'N')
         {
-            alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed.");
+            alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 6");
             $('#Q9A1').focus();
             event.preventDefault();
         }
@@ -2332,7 +2332,7 @@ $(document).ready(function(){
             var val1 = $("input[name=Q9A2]:checked").val();
             if(val1 != 'N' && val1 != 'Y')
             {
-                alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed.");
+                alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 6(a)");
                 $('#Q9A2_1').focus();
                 event.preventDefault();
             }

@@ -1796,7 +1796,7 @@ else
    } ?>
 
    >
-       >
+
             <label class="control-label">Upload supporting documents</label>
             <br>
             &bull; Picture of Air Quality Monitoring equipment of school<br>
@@ -1834,13 +1834,13 @@ else
                         <li>
                             <label>
                                 <input type="radio" id="Q9A2_1" name="Q9A2"
-                                       value="<?php echo set_value('Q9A2', 1) ?>" <?php if (isset($data['Q9A2'])) echo $data['Q9A2'] == 1 ? "checked" : "" ?>>
+                                       value="<?php echo set_value('Q9A2', 'Y') ?>" <?php if (isset($data['Q9A2'])) echo $data['Q9A2'] == 'Y' ? "checked" : "" ?>>
                                 Yes</label>
                         </li>
                         <li>
                             <label>
                                 <input type="radio" id="Q9A2_2" name="Q9A2"
-                                       value="<?php echo set_value('Q9A2', 2) ?>" <?php if (isset($data['Q9A2'])) echo $data['Q9A2'] == 2 ? "checked" : "" ?>>
+                                       value="<?php echo set_value('Q9A2', 'N') ?>" <?php if (isset($data['Q9A2'])) echo $data['Q9A2'] == 'N' ? "checked" : "" ?>>
                                 No</label>
                         </li>
                     </ul>
