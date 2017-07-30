@@ -1839,9 +1839,10 @@ function details()
     NFVv51  = NFVv51;
     NFVo51 = NFVo51;
     
-    var countYes = 0
+    var countYes = 0;
     var countNo = 0;
 
+    
     if(isNaN(NFVb5))
         if(isNaN(NFVb51))
             NFVb5 = 0;
