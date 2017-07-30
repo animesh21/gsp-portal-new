@@ -1929,6 +1929,30 @@ function details()
         else
             NFVo2 = NFVo11;
 
+    // if(NFVc2 > NFVc1)
+    // {
+    //     NFVc2 = 0;
+    //     $("b2").val(NFVc2);
+    //
+    // }
+    // if(NFVb2 > NFVb1)
+    // {
+    //     NFVb2 = 0;
+    //     $("b2").val(NFVb2);
+    //
+    // }
+    // if(NFVv2 > NFVv1)
+    // {
+    //     NFVb2 = 0;
+    //     $("b2").val(NFVb2);
+    //
+    // }
+    // if(NFVo2 > NFVo1)
+    // {
+    //     NFVb2 = 0;
+    //     $("b2").val(NFVb2);
+    //
+    // }
     var sum2 = NFVb2 + NFVc2 +NFVv2 +NFVo2 ;
     if(sum2 > sum1)
     {

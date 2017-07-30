@@ -1121,7 +1121,7 @@
           </div>
           <div class="col-xs-3">
             <input class="form-control space-textbox" id="Q7E9S2" type="text" name="Q7E9S2"
-                               placeholder="<?php echo isset($data['Q7E8S2']) ? $data['Q7E9S2'] : "(Watts)" ?>"
+                               placeholder="<?php echo isset($data['Q7E9S2']) ? $data['Q7E9S2'] : "(Watts)" ?>"
                                value="<?php echo set_value('Q7E9S2'); ?>" readonly=""/>
           </div>
           <div class="col-xs-3">
