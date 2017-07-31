@@ -89,10 +89,10 @@ class Gsp extends REST_Controller
         }
 
         // $this->some_model->delete_something($id);
-        $message = [
+        $message = array(
             'id' => $id,
             'message' => 'Deleted the resource'
-        ];
+        );
 
         $this->set_response($message, REST_Controller::HTTP_NO_CONTENT); // NO_CONTENT (204) being the HTTP response code
     }
