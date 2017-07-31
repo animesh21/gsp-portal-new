@@ -13,54 +13,46 @@ class Energy extends CI_Controller {
             redirect('login');
 
         }
-        
+
     }
 
     public function index() {
         $data['title'] = 'Energy';
         //Validation
         if ($this->session->userdata('USER_ID') == '') {
-        
+
             redirect('login');
 
         }
         else
         {
-	        $argPost['userid'] = $this->session->userdata('USER_ID');
-	        $argPost['type'] = 3 ;
-	        $data['data'] = $this->Answer_model->getAnswers($argPost);
-	        $other = $this->Answer_model->getAllAnswers($argPost);
-	        $data['other'] = $other;
-	        $argPost['type'] = 2;
-	        $air = $this->Answer_model->getAnswers($argPost);
-	        if(isset($air['Q6A1']))
-	            if($air['Q6A1']>2)
-	                $data['data']['Q5E1'] = 'Y';
-	            else
-	                $data['data']['Q5E1'] = 'N';
-	
-	
-	        if(isset($air['Q6A2S3D5']))
-	            $data['data']['Q6E4S1'] = $air['Q6A2S3D5'];
-	
-	        if(isset($air['Q6A2S3P5']))
-	            $data['data']['Q6E3S1'] = $air['Q6A2S3P5'];
-	
-	        if(isset($air['Q6A2S3L5']))
-	            $data['data']['Q6E11S1'] = $air['Q6A2S3L5'];
-	
-	        if(isset($air['Q6A2S3C5']))
-	            $data['data']['Q6E5S1'] = $air['Q6A2S3C5'];
-	
-	        if(isset($air['Q6A2S3E5']))
-	            $data['data']['Q6E1S1'] = $air['Q6A2S3E5'];
-	
-	        if(isset($air['Q6A2S3B5']))
-	            $data['data']['Q6E13S1'] = $air['Q6A2S3B5'];
-	
-	            
-	        $this->load->view('energy',$data);
-	}        
+            $argPost['userid'] = $this->session->userdata('USER_ID');
+            $argPost['type'] = 3 ;
+            $data['data'] = $this->Answer_model->getAnswers($argPost);
+            $other = $this->Answer_model->getAllAnswers($argPost);
+            $data['other'] = $other;
+            $argPost['type'] = 2;
+            $air = $this->Answer_model->getAnswers($argPost);
+            if(isset($air['Q6A1']))
+                if($air['Q6A1']>2)
+                    $data['data']['Q5E1'] = 'Y';
+                else
+                    $data['data']['Q5E1'] = 'N';
+
+
+            if(isset($data['other']['Q1G1']) && isset($data['other']['Q1G2']))
+                if($data['other']['Q1G1'] < 6 && $data['other']['Q1G2'] < 6)
+                {  //  print("Primaryland");
+                    $this->load->view('PrimaryEnergy',$data);
+                }
+                else
+                    $this->load->view('energy',$data);
+            else
+                $this->load->view('energy',$data);
+
+
+
+        }
     }
     public function set()
     {
@@ -68,13 +60,13 @@ class Energy extends CI_Controller {
         //$argPost['type'] = 3 ;
         //$data['data'] = $this->Answer_model->getAnswers($argPost);
         //$this->load->view('energy',$data);
-        
-        
+
+
         //$argPost['userid'] = $this->session->userdata('USER_ID');
         //$argPost['type'] = 2 ;
         $post = $this->input->post();
         //$data = $this->Answer_model->getAnswers($argPost);
-        
+
         /*if(isset($post['Q6E2S1']) && $data['Q6A1'] != 3)
         {
             echo "<script>
@@ -83,7 +75,7 @@ class Energy extends CI_Controller {
             </script>";
 
         }
-        else if(CheckData($data['Q6A1'],$post['Q6E11S1'],$post['Q6E2S1'],$post['Q6E3S1'],$post['Q6E4S1'],$post['Q6E11S1']) == false) 
+        else if(CheckData($data['Q6A1'],$post['Q6E11S1'],$post['Q6E2S1'],$post['Q6E3S1'],$post['Q6E4S1'],$post['Q6E11S1']) == false)
         {
             echo "<script>
             alert('School Does Not own vehicle.2');
@@ -143,13 +135,13 @@ class Energy extends CI_Controller {
                redirect(base_url("food"));
 
             }
-        }           
+        }
         else
         {*/
-            $this->Answer_model->submitAnswers($post,3);
-                //print_r($post);
-            redirect(base_url("food"));
-       // }
+        $this->Answer_model->submitAnswers($post,3);
+        //print_r($post);
+        redirect(base_url("food"));
+        // }
     }
     function CheckData($air,$Q2,$Q3,$Q4,$Q11)
     {
@@ -162,7 +154,7 @@ class Energy extends CI_Controller {
                     return true;
                 }
                 else
-                    return false; 
+                    return false;
             }
             else
             {
@@ -171,7 +163,7 @@ class Energy extends CI_Controller {
                     return false;
                 }
                 else
-                    return true; 
+                    return true;
             }
         }
         else if(isset($Q2) || isset($Q3) || isset($Q4) || isset($Q11))

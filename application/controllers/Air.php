@@ -13,7 +13,6 @@ class Air extends CI_Controller {
             redirect('login');
 
         }
-      
     }
 
     public function index() {
@@ -153,11 +152,7 @@ class Air extends CI_Controller {
         {
     */   
           $this->Answer_model->submitAnswers($post, 2);
-          if ($post['Prev']) {
-            redirect(base_url("general"));
-          } else {
-            redirect(base_url("energy"));
-          } 
+          redirect(base_url("energy"));
 
         /*}
         */
@@ -166,6 +161,7 @@ class Air extends CI_Controller {
          
         
     }
-   
+
 }
+
 

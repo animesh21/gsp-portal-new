@@ -129,7 +129,7 @@ class User_model extends CI_Model
         $email_count = $this->db->get_where('gsp_user', array('email' => $this->input->post('val')))->num_rows();
         //echo $this->db->last_query(); exit;
         if ($email_count > 0) {
-            $varNewPass = random_string('alnum', 5);
+            $varNewPass = strtolower(random_string('alnum', 5));
             $arr = array(
                 'password' => $varNewPass
             );

@@ -54,14 +54,14 @@ class Answer_model extends CI_Model {
 		}
 		if($type == 3)
 		{
-			if(isset($post['Q9E1S1']) || isset($post['Q9E1S2']) || isset($post['Q9E1S3']) || isset($post['Q9E1S4']))
+			if(isset($post['Q9E1S1']) || isset($post['Q9E1S2']) || isset($post['Q9E1S3']) || isset($post['Q9E1S4']) || isset($post['Q9E1S5']))
 			{
 				$this->db->where('userid', $this->session->userdata('USER_ID'));
-				$this->db->like('questionid', 'Q7E1S');
+				$this->db->like('questionid', 'Q9E1S');
 				$this->db->delete('gsp_answers');
-				
+				//echo $this->db->last_query();
+				//exit();
 			}
-			
 		}
 		
 		if($type == 6)
@@ -160,9 +160,9 @@ class Answer_model extends CI_Model {
 		{
 			if(isset($post['Q4A1']))
 			{
-				for($x=$post['Q4A1']; $x<=10;$x++)
+				for($x=$post['Q4A1']+1; $x<=10;$x++)
 				{
-					$qid = 'Q5A'.$x.'S1';
+					$qid = 'Q5A'.$x.'S';
 					$this->db->where('userid', $this->session->userdata('USER_ID'));
 					$this->db->where('questionid', $qid);
 					$this->db->delete('gsp_answers');
