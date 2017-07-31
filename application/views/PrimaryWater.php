@@ -2271,7 +2271,7 @@ To understand water, it is important to know the source of water in your school 
  });
 
  $(document).ready(function () {
-     $('#btnWaterPrevious').on('click', function (data) {
+     $('#moveprevbtn').on('click', function (data) {
          var fd = $('#water').serialize();
          //console.log(fd);
          $.ajax({

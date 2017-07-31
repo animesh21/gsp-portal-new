@@ -641,7 +641,7 @@
     });
 
     $(document).ready(function () {
-        $('#landprevious').on('click', function (data) {
+        $('#moveprevbtn').on('click', function (data) {
             var fd = $('#PrimaryLand').serialize();
             //console.log(fd);
             $.ajax({
