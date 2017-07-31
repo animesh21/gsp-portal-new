@@ -1,7 +1,7 @@
 <?php
-header('Access-Control-Allow-Origin: *');
-header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method");
-header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
+//header('Access-Control-Allow-Origin: *');
+//header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method");
+//header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
 
 
 defined('BASEPATH') OR exit('No direct script access allowed');
@@ -21,7 +21,8 @@ require APPPATH . '/libraries/REST_Controller.php';
  * @license         MIT
  * @link            https://github.com/chriskacerguis/codeigniter-restserver
  */
-class Gsp extends REST_Controller {
+class Gsp extends REST_Controller
+{
 
     function __construct()
     {
@@ -36,33 +37,25 @@ class Gsp extends REST_Controller {
         $this->load->model('School_model');
         $this->load->model('Answer_model');
         $this->load->model('User_model');
-        
-        
     }
 
     public function users_get()
     {
         $email = $this->get('email');
         $password = $this->get('password');
-        $email = str_replace("-","@",$email);
-        
-       if (isset($email) && isset($password))
-       {
-       	    $details['email'] = $email;
+        $email = str_replace("-", "@", $email);
+
+        if (isset($email) && isset($password)) {
+            $details['email'] = $email;
             $details['password'] = $password;
             $users = $this->User_model->Login($details);
-           
-            
-            
-            if ($users)
-            {
+
+            if ($users) {
                 $detail['school'] = $this->School_model->getSchool($users);
                 $detail['data'] = $this->Answer_model->Answers($users);
                 $this->set_response($detail, REST_Controller::HTTP_CREATED); // CREATED (201) being the HTTP response code
-                 // OK (200) being the HTTP response code
-            }
-            else
-            {
+                // OK (200) being the HTTP response code
+            } else {
 
                 //$this->response([
                 //    'status' => FALSE,
@@ -71,27 +64,26 @@ class Gsp extends REST_Controller {
                 //], REST_Controller::HTTP_NOT_FOUND); // NOT_FOUND (404) being the HTTP response code
             }
         }
-   }
+    }
 
     public function users_post()
     {
         $details = $this->post('survey');
-        if(isset($details))
-        {
+        if (isset($details)) {
             foreach ($details as $data) {
-            		//print_r($data);
-		    print_r($this->Answer_model->SubmitAPIAnswers($data));
-		    
-		}
+                //print_r($data);
+                print_r($this->Answer_model->SubmitAPIAnswers($data));
+
+            }
         }
     }
+
     public function users_delete()
     {
-        $id = (int) $this->get('id');
+        $id = (int)$this->get('id');
 
         // Validate the id.
-        if ($id <= 0)
-        {
+        if ($id <= 0) {
             // Set the response and exit
             $this->response(NULL, REST_Controller::HTTP_BAD_REQUEST); // BAD_REQUEST (400) being the HTTP response code
         }
