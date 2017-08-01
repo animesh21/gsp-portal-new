@@ -63,7 +63,7 @@ class Food extends CI_Controller {
         $post = $this->input->post();
         $this->Answer_model->submitAnswers($post,4);
         //print_r($post);
-        redirect(base_url("Land"));
+        redirect(base_url("land"));
     }
 
 }
