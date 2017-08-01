@@ -35,15 +35,65 @@
 <script>
     //Get Data When Modal Open
     $("#airModal").on('shown.bs.modal', function (e) {
-		var id = e.relatedTarget.dataset.id;
-		$.get('<?php echo base_url('upload_files/getHtml') ?>', function (data) {
+        var id = e.relatedTarget.dataset.id;
+        $.get('<?php echo base_url('upload_files/getHtml') ?>', function (data) {
             $('#test').html(data);
-			$('#Fules_bill').val(id);
-			//alert($('#Fules_bill').val());
-		});
+            $('#Fules_bill').val(id);
+            //alert($('#Fules_bill').val());
+        });
     });
     //Remove Data When Modal Close
     $("#airModal").on("hidden.bs.modal", function () {
         $('#test').html("");
+        var fd = $('#' + document.forms[0].id).serialize();
+        ///alert(fd);
+        var redirect = '';
+        switch (document.forms[0].id)
+        {
+            case "air":
+                redirect = "airprevious";
+                break;
+            case "food":
+                redirect = "foodajax";
+                break;
+            case "energy":
+                redirect = "energyajax";
+                break;
+            case "land":
+                redirect = "landajax";
+                break;
+            case "water":
+                redirect = "waterajax";
+                break;
+            case "PrimaryWater":
+                redirect = "waterajax";
+                break;
+            case "waste":
+                redirect = "wasteajax";
+                break;
+            case "PrimaryWaste":
+                redirect = "wasteajax";
+                break;
+            case "PrimaryAir":
+                //alert('Case Called');
+                redirect="airprevious";
+                break;
+            case "PrimaryEnergy":
+                redirect = "energyajax";
+                break;
+            case "PrimaryFood":
+                redirect = "foodajax";
+                break;
+        }
+
+        //console.log(fd);
+        $.ajax({
+            type: 'POST',
+            url: '<?php echo base_url() ?>previous/' + redirect,
+            data: fd,
+            success: function (data) {
+                location.reload();
+            }
+        });
     });
 </script>

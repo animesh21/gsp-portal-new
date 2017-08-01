@@ -491,6 +491,23 @@
                         <br/>
                         <button class="btn uploadbtn upload" data-id="Mid Day Meal" data-toggle="modal"
                                 data-target="#airModal" type="button">UPLOAD FILES </button>
+                        <table width="100%" class="question uploadedfiles">
+                    <thead>
+                        <tr>
+                            <th>File name</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+<?php foreach ($midDayMeal as $f) { ?>
+                            <tr id="index<?php echo $f->id; ?>">
+    <?php $name = str_replace(" ", "_", $f->name . "_Mid_Day_Meal_"); ?>
+                                <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                                <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+                            </tr>
+                            <?php } ?>
+                    </tbody>
+                </table>
                     </div>
                     <input type="hidden" value="<?php if (isset($other['Q4G4S3'])) echo $other['Q4G4S3']; ?>"
                            id="Q4G4S3"/>
@@ -2291,6 +2308,23 @@
                                                                                                         <br>
                                                                                                     </div>
                                                                                                     <br>
+                                                                                                    <table width="100%" class="question uploadedfiles">
+                                                                                                            <thead>
+                                                                                                                <tr>
+                                                                                                                    <th>File name</th>
+                                                                                                                    <th>Action</th>
+                                                                                                                </tr>
+                                                                                                            </thead>
+                                                                                                            <tbody>
+<?php foreach ($files as $f) { ?>
+                                                                                                                    <tr id="index<?php echo $f->id; ?>">
+    <?php $name = str_replace(" ", "_", $f->name . "_Audit_Team_doing_Survey_"); ?>
+                                                                                                                        <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                                                                                                                        <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+                                                                                                                    </tr>
+<?php } ?>
+                                                                                                            </tbody>
+                                                                                                        </table>
                                                                                                     <div class="form-group">
                                                                                                         <label>
                                                                                                             <h6> Task
@@ -2483,7 +2517,7 @@
                                                                                                         KB.<br>
                                                                                                         <div class="clearfix"> &nbsp; </div>
                                                                                                         <button class="btn uploadbtn upload"
-                                                                                                                data-id="Audit Team Doing Servey"
+                                                                                                                data-id="UPPF"
                                                                                                                 data-toggle="modal"
                                                                                                                 data-target="#airModal"
                                                                                                                 type="button"> UPLOAD
@@ -2491,6 +2525,23 @@
                                                                                                         <br>
                                                                                                         <br>
                                                                                                     </div>
+                                                                                                    <table width="100%" class="question uploadedfiles">
+                                                                                                            <thead>
+                                                                                                                <tr>
+                                                                                                                    <th>File name</th>
+                                                                                                                    <th>Action</th>
+                                                                                                                </tr>
+                                                                                                            </thead>
+                                                                                                            <tbody>
+<?php foreach ($uppc as $u) { ?>
+                                                                                                                    <tr id="index<?php echo $u->id; ?>">
+    <?php $name = str_replace(" ", "_", $f->name . "_UPPF_"); ?>
+                                                                                                                        <td class="upload edit"><?php echo str_replace($name, "", $u->file_name); ?></td>
+                                                                                                                        <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $u->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+                                                                                                                    </tr>
+<?php } ?>
+                                                                                                            </tbody>
+                                                                                                        </table>
                                                                                                     <div class="text-center">
                                                                                                         <button type="button"
                                                                                                                 class="org-btn"
@@ -2565,5 +2616,35 @@
                                                                                 }
                                                                             });
                                                                         });
+                                                                        
+                                                                        //delete air files
+                                                                            $('body').on('click', '.air-delete-files', function (data) {
+                                                                                var test = confirm("Are you sure you want to delete this file");
+                                                                                if (test == true)
+                                                                                {
+                                                                                    var divId = $(this).attr('data-id');
+                                                                                    $.ajax({
+                                                                                        url: '<?php echo base_url('upload_files/deletFiles') ?>',
+                                                                                        type: 'POST',
+                                                                                        data: {id: $(this).attr('data-id')},
+                                                                                        success: function (data)
+                                                                                        {
+                                                                                            if (data == "success")
+                                                                                            {
+                                                                                                console.log('index' + divId);
+                                                                                                $('#msg').html('<div class="alert alert-success">' +
+                                                                                                        '<strong>&#10004; Success!</strong> Files deleted successfully.' +
+                                                                                                        '</div>');
+                                                                                                $('#index' + divId).html('');
+                                                                                            } else if (data == "error")
+                                                                                            {
+                                                                                                $('#msg').html('<div class="alert alert-danger">' +
+                                                                                                        '<strong>&#x2716; Error!</strong> There is an error deleting your files.' +
+                                                                                                        '</div>');
+                                                                                            }
+                                                                                        }
+                                                                                    });
+                                                                                }
+                                                                            });
                                                                     });
                                                                 </script>

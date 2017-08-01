@@ -7,7 +7,7 @@ class Energy extends CI_Controller {
         parent::__construct();
         $this->load->helper(array('form', 'security'));
         $this->load->library('form_validation');
-        $this->load->model('Answer_model');
+        $this->load->model(array('Answer_model', 'file'));
         if ($this->session->userdata('USER_ID') == '') {
 
             redirect('login');
@@ -33,6 +33,11 @@ class Energy extends CI_Controller {
             $data['other'] = $other;
             $argPost['type'] = 2;
             $air = $this->Answer_model->getAnswers($argPost);
+            $data['electricityBills']=$this->file->getElectricityFulesBillsData($this->session->userdata('USER_ID'));
+            $data['fulesBills']=$this->file->getEnergyFulesBillsData($this->session->userdata('USER_ID'));
+            $data['appliancesBills']=$this->file->getEnergyApplianceBillsData($this->session->userdata('USER_ID'));
+            $data['alternativeResource']=$this->file->alternativeResource($this->session->userdata('USER_ID'));
+            $data['energySupport']=$this->file->getEnergySupportData($this->session->userdata('USER_ID'));
             if(isset($air['Q6A1']))
                 if($air['Q6A1']>2)
                     $data['data']['Q5E1'] = 'Y';

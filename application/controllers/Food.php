@@ -7,7 +7,7 @@ class Food extends CI_Controller {
         parent::__construct();
         $this->load->helper(array('form', 'security'));
         $this->load->library('form_validation');
-        $this->load->model('Answer_model');
+        $this->load->model(array('Answer_model', 'file'));
         if ($this->session->userdata('USER_ID') == '') {
 
             redirect('login');
@@ -31,9 +31,10 @@ class Food extends CI_Controller {
             $argPost['type'] = 4 ;
             $data['data'] = $this->Answer_model->getAnswers($argPost);
             $data['other'] = $this->Answer_model->getAllAnswers($argPost);
-
-
-
+            $data['midDayMeal']=$this->file->getMidDayMeal($this->session->userdata('USER_ID'));
+            $data['canteen']=$this->file->getCanteen($this->session->userdata('USER_ID'));
+            $data['files']=$this->file->getFoodFilesData($this->session->userdata('USER_ID'));
+            $data['uppc']=$this->file->getFoodUPPCData($this->session->userdata('USER_ID'));
             if(isset($data['other']['Q1G1']) && isset($data['other']['Q1G2']))
                 if($data['other']['Q1G1'] < 6 && $data['other']['Q1G2'] < 6)
                 {  //  print("Primaryland");

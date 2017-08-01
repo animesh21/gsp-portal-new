@@ -63,4 +63,19 @@ class Upload_Files extends CI_Controller
         {
             $this->load->view('test1');
         }
+        
+         //Delet files
+        public function deletFiles()
+        {
+            $varResponse='';
+            $test=$this->file->removeFiles($this->input->post('id'));
+            if($test==true)
+            {
+                $varResponse="success";
+            }else
+            {
+                $varResponse="error";
+            }
+            echo $varResponse;
+        }
 }
