@@ -1124,7 +1124,7 @@
         <tr>
             <td>Cars</td>
             <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3D2"
-                       type="number" min="0" name="Q6A2S3B12"
+                       type="number" min="0" name="Q6A2S3B1"
                        placeholder="<?php if (isset($data['Q6A2S3B1'])) echo $data['Q6A2S3B1'] ?>"
                        value="<?php echo set_value('Q6A2S3B1'); ?>"/></td>
             <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3P2"
@@ -1782,142 +1782,142 @@ else
         </li>
     </ul>
 </div>
-   <div class="form-group" id="lab1" <?php
-   if (isset($data['Q9A1']))
-   {
-       if ($data['Q9A1'] == 'Y') {
-           echo "style='display: block;'";
-       } else {
-           echo "style=\"display: none;\"";
-       }
-   } else {
-       echo "style=\"display: none;\"";
+<div class="form-group" id="lab1" <?php
+if (isset($data['Q9A1']))
+{
+    if ($data['Q9A1'] == 'Y') {
+        echo "style='display: block;'";
+    } else {
+        echo "style=\"display: none;\"";
+    }
+} else {
+    echo "style=\"display: none;\"";
 
-   } ?>
+} ?>
 
-   >
+>
 
-            <label class="control-label">Upload supporting documents</label>
-            <br>
-            &bull; Picture of Air Quality Monitoring equipment of school<br>
-            <br>
-            Please upload all supporting documents related to this section here. Note: files must be in one of the
-            following formats: PDF Document (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg). File size per
-            document should not exceed 500 KB.<br/>
-            <br/>
-            <button class="btn uploadbtn upload" data-id="Air Quality Monitoring" data-toggle="modal"
-                    data-target="#airModal" type="button">UPLOAD FILES
-            </button>
-            <br>
-        </div>
+    <label class="control-label">Upload supporting documents</label>
+    <br>
+    &bull; Picture of Air Quality Monitoring equipment of school<br>
+    <br>
+    Please upload all supporting documents related to this section here. Note: files must be in one of the
+    following formats: PDF Document (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg). File size per
+    document should not exceed 500 KB.<br/>
+    <br/>
+    <button class="btn uploadbtn upload" data-id="Air Quality Monitoring" data-toggle="modal"
+            data-target="#airModal" type="button">UPLOAD FILES
+    </button>
+    <br>
+</div>
 
-        <div class="form-group" id="lab"
+<div class="form-group" id="lab"
 
-        <?php
-        if (isset($data['Q9A1']))
-        {
-            if ($data['Q9A1'] == 'N') {
-                echo "style='display: block;'";
-            } else {
-                echo "style=\"display: none;\"";
-                 }
-                } else {
-                    echo "style=\"display: none;\"";
+    <?php
+    if (isset($data['Q9A1']))
+    {
+        if ($data['Q9A1'] == 'N') {
+            echo "style='display: block;'";
+        } else {
+            echo "style=\"display: none;\"";
+        }
+    } else {
+        echo "style=\"display: none;\"";
 
-                     } ?>
+    } ?>
 
-                    >
-                    <label class="control-label"><span class="cube">6(a)</span>If No, is there an air quality monitoring
-                        station
-                        (private or government) close to your school?</label>
-                    <ul class="list-inline">
-                        <li>
-                            <label>
-                                <input type="radio" id="Q9A2_1" name="Q9A2"
-                                       value="<?php echo set_value('Q9A2', 'Y') ?>" <?php if (isset($data['Q9A2'])) echo $data['Q9A2'] == 'Y' ? "checked" : "" ?>>
-                                Yes</label>
-                        </li>
-                        <li>
-                            <label>
-                                <input type="radio" id="Q9A2_2" name="Q9A2"
-                                       value="<?php echo set_value('Q9A2', 'N') ?>" <?php if (isset($data['Q9A2'])) echo $data['Q9A2'] == 'N' ? "checked" : "" ?>>
-                                No</label>
-                        </li>
-                    </ul>
-                </div>
-                <div class="form-group" id="WastePolicy">
-                    <label class="control-label">
-                        <h6>Please upload supporting documents:</h6>
-                    </label>
-                    <br>
-                    &bull; Pictures of audit team doing survey<br/>
-                    Please upload all supporting documents related to this section here. Note, files must be one of the
-                    following
-                    formats: PDF Document (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg) <br>
-                    File size per document should not exceed 500 KB. <br/>
-                    <br/>
-                    <button class="btn uploadbtn upload" data-id="Supporting Document Air" data-toggle="modal"
-                            data-target="#airModal"
-                            type="button">UPLOAD FILES
-                    </button>
-                    <br>
-                    <br>
-                </div>
-                <div class="text-center">
-                    <button type="button" class="org-btn" id="btnAirPrevious">Previous</button>
-                    <button type="submit" class="org-btn" id="airnext" value="movenext">Next</button>
-                    <button type="button" class="org-btn submit button" id="airsave">Save and Resume Later</button>
-                </div>
-                <?php echo form_close(); ?>
+>
+    <label class="control-label"><span class="cube">6(a)</span>If No, is there an air quality monitoring
+        station
+        (private or government) close to your school?</label>
+    <ul class="list-inline">
+        <li>
+            <label>
+                <input type="radio" id="Q9A2_1" name="Q9A2"
+                       value="<?php echo set_value('Q9A2', 'Y') ?>" <?php if (isset($data['Q9A2'])) echo $data['Q9A2'] == 'Y' ? "checked" : "" ?>>
+                Yes</label>
+        </li>
+        <li>
+            <label>
+                <input type="radio" id="Q9A2_2" name="Q9A2"
+                       value="<?php echo set_value('Q9A2', 'N') ?>" <?php if (isset($data['Q9A2'])) echo $data['Q9A2'] == 'N' ? "checked" : "" ?>>
+                No</label>
+        </li>
+    </ul>
+</div>
+<div class="form-group" id="WastePolicy">
+    <label class="control-label">
+        <h6>Please upload supporting documents:</h6>
+    </label>
+    <br>
+    &bull; Pictures of audit team doing survey<br/>
+    Please upload all supporting documents related to this section here. Note, files must be one of the
+    following
+    formats: PDF Document (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg) <br>
+    File size per document should not exceed 500 KB. <br/>
+    <br/>
+    <button class="btn uploadbtn upload" data-id="Supporting Document Air" data-toggle="modal"
+            data-target="#airModal"
+            type="button">UPLOAD FILES
+    </button>
+    <br>
+    <br>
+</div>
+<div class="text-center">
+    <button type="button" class="org-btn" id="btnAirPrevious">Previous</button>
+    <button type="submit" class="org-btn" id="airnext" value="movenext">Next</button>
+    <button type="button" class="org-btn submit button" id="airsave">Save and Resume Later</button>
+</div>
+<?php echo form_close(); ?>
+</div>
+</div>
+<?php $this->load->view('footer'); ?>
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content" style="background:transparent; border-radius:0px;">
+            <div class="modal-header" style="background: rgb(232, 101, 73); color:#fff;">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">View video tutorial</h4>
             </div>
+            <iframe width="100%" height="330px" src="https://www.youtube.com/embed/klen-TOrXFA" frameborder="0"
+                    id="video" allowfullscreen></iframe>
         </div>
-        <?php $this->load->view('footer'); ?>
-        <div id="myModal" class="modal fade" role="dialog">
-            <div class="modal-dialog">
-                <!-- Modal content-->
-                <div class="modal-content" style="background:transparent; border-radius:0px;">
-                    <div class="modal-header" style="background: rgb(232, 101, 73); color:#fff;">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">View video tutorial</h4>
-                    </div>
-                    <iframe width="100%" height="330px" src="https://www.youtube.com/embed/klen-TOrXFA" frameborder="0"
-                            id="video" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-        <script type="text/javascript">
-            $('.close').click(function () {
-                $('#video').attr("src", "https://www.youtube.com/embed/klen-TOrXFA");
-            });
+    </div>
+</div>
+<script type="text/javascript">
+    $('.close').click(function () {
+        $('#video').attr("src", "https://www.youtube.com/embed/klen-TOrXFA");
+    });
 
-            $('body').click(function () {
-                $('#video').attr("src", "https://www.youtube.com/embed/klen-TOrXFA");
+    $('body').click(function () {
+        $('#video').attr("src", "https://www.youtube.com/embed/klen-TOrXFA");
+    });
+    $(document).ready(function () {
+        $('#btnAirPrevious').on('click', function (data) {
+            var fd = $('#air').serialize();
+            //console.log(fd);
+            $.ajax({
+                type: 'POST',
+                url: '<?php echo base_url('previous/airprevious') ?>',
+                data: fd,
+                success: function (data) {
+                    window.location.href = "<?php echo base_url('general'); ?>";
+                }
             });
-            $(document).ready(function () {
-                $('#btnAirPrevious').on('click', function (data) {
-                    var fd = $('#air').serialize();
-                    //console.log(fd);
-                    $.ajax({
-                        type: 'POST',
-                        url: '<?php echo base_url('previous/airprevious') ?>',
-                        data: fd,
-                        success: function (data) {
-                            window.location.href = "<?php echo base_url('general'); ?>";
-                        }
-                    });
-                });
+        });
 
-                $('#airsave').on('click', function (data) {
-                    var fd = $('#air').serialize();
-                    //console.log(fd);
-                    $.ajax({
-                        type: 'POST',
-                        url: '<?php echo base_url('previous/airprevious') ?>',
-                        data: fd,
-                        success: function (data) {
-                            window.location.href = "<?php echo base_url('logout'); ?>";
-                        }
-                    });
-                });
+        $('#airsave').on('click', function (data) {
+            var fd = $('#air').serialize();
+            //console.log(fd);
+            $.ajax({
+                type: 'POST',
+                url: '<?php echo base_url('previous/airprevious') ?>',
+                data: fd,
+                success: function (data) {
+                    window.location.href = "<?php echo base_url('logout'); ?>";
+                }
             });
-        </script>
+        });
+    });
+</script>

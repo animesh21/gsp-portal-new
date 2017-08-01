@@ -1422,16 +1422,18 @@ else
         });
     });
 </script>
+
 <script type="text/javascript">
     $("input[name='Q4A1']").change(function(){
         var total_classroom=$("input[name='Q4A1']").val();
         $("#input-1").val(total_classroom);
     });
+
     $("#input-2").change(function(){
         var total_classroom=$("#input-1").val();
         var total_existing_classroom=$("#input-2").val();
         if(total_classroom<total_existing_classroom){
-            alert("Please survey only four classrooms only");
+            alert("The total no. of well-ventilated classroom can not exceed the no in Q(1).");
             $("#input-2").val('0');
         }
     });

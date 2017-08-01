@@ -1170,18 +1170,18 @@
             </div>
             <?php
             if (isset($data['Q9E1']))
-                if ($data['Q9E1'] == 'Y') {
-                    ?>
+            if ($data['Q9E1'] == 'Y') {
+            ?>
             <div class="form-group" id="alternativeEnergy">
 
-            <?php } else { ?>
+                <?php } else { ?>
                 <div class="form-group" id="alternativeEnergy" style="display:none">
 
 
-                <?php } else {?>
+                    <?php } else {?>
                     <div class="form-group" id="alternativeEnergy" style="display:none">
 
-                    <?php }?>
+                        <?php }?>
                         <label class="control-label">If yes, please upload a picture of alternative source of energy
                             installed that is currently in use.</label>
                         <br>
@@ -1190,137 +1190,137 @@
                     </div>
                     <?php
                     if (isset($data['Q9E1']))
-                        if ($data['Q9E1'] == 'Y') {
-                        ?>
-                            <div class="form-group" id="typeofenergy">
-                   <?php } else { ?>
-                                <div class="form-group" id="typeofenergy" style="display:none">
-                   <?php }
-                   else {?>
+                    if ($data['Q9E1'] == 'Y') {
+                    ?>
+                    <div class="form-group" id="typeofenergy">
+                        <?php } else { ?>
+                        <div class="form-group" id="typeofenergy" style="display:none">
+                            <?php }
+                            else {?>
                             <div class="form-group" id="typeofenergy" style="display:none">
 
-                   <?php }?>
+                                <?php }?>
 
-                        <div class="form-group">
-                            <label><span class="cube">6(a)</span>If yes, do you use:</label>
+                                <div class="form-group">
+                                    <label><span class="cube">6(a)</span>If yes, do you use:</label>
 
-                            <ul class="list-unstyled">
-                                <li>
-                                    <label>Solar</label>
-                                    <input type="checkbox" name="Q9E1S1" id="Solar"
-                                           value="<?php echo set_value('Q9E1S1',1); ?>" <?php if (isset($data['Q9E1S1'])) echo set_checkbox('Q9E1S1', '1', true); ?>/>
-                                </li>
-                                <li>
-                                    <label>Wind</label>
-                                    <input type="checkbox" name="Q9E1S2" id="Wind"
-                                           value="<?php echo set_value('Q9E1S2',1); ?>" <?php if (isset($data['Q9E1S2'])) echo set_checkbox('Q9E1S2', '1', true); ?>/>
-                                </li>
-                                <li>
-                                    <label>Hydro</label>
-                                    <input type="checkbox" name="Q9E1S3" id="Hydro"
-                                           value="<?php echo set_value('Q9E1S3',1); ?>" <?php if (isset($data['Q9E1S3'])) echo set_checkbox('Q9E1S3', '1', true); ?>/>
-                                </li>
-                                <li>
-                                    <label>Biogas Plant</label>
-                                    <input type="checkbox" name="Q9E1S5"
-                                           value="<?php echo set_value('Q9E1S5',1); ?>" <?php if (isset($data['Q9E1S5'])) echo set_checkbox('Q9E1S5', '1', true); ?>/>
-                                </li>
-                                <li>
-                                    <label>Combination of solar and wind</label>
-                                        <input type="checkbox" name="Q9E1S4" id="Combination"
-                                               value="<?php echo set_value('Q9E1S4', 1); ?>" <?php if (isset($data['Q9E1S4'])) echo set_checkbox('Q9E1S4', '1', true); ?>/>
-                                </li>
-                            </ul>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <label>Solar</label>
+                                            <input type="checkbox" name="Q9E1S1" id="Solar"
+                                                   value="<?php echo set_value('Q9E1S1',1); ?>" <?php if (isset($data['Q9E1S1'])) echo set_checkbox('Q9E1S1', '1', true); ?>/>
+                                        </li>
+                                        <li>
+                                            <label>Wind</label>
+                                            <input type="checkbox" name="Q9E1S2" id="Wind"
+                                                   value="<?php echo set_value('Q9E1S2',1); ?>" <?php if (isset($data['Q9E1S2'])) echo set_checkbox('Q9E1S2', '1', true); ?>/>
+                                        </li>
+                                        <li>
+                                            <label>Hydro</label>
+                                            <input type="checkbox" name="Q9E1S3" id="Hydro"
+                                                   value="<?php echo set_value('Q9E1S3',1); ?>" <?php if (isset($data['Q9E1S3'])) echo set_checkbox('Q9E1S3', '1', true); ?>/>
+                                        </li>
+                                        <li>
+                                            <label>Biogas Plant</label>
+                                            <input type="checkbox" name="Q9E1S5"
+                                                   value="<?php echo set_value('Q9E1S5',1); ?>" <?php if (isset($data['Q9E1S5'])) echo set_checkbox('Q9E1S5', '1', true); ?>/>
+                                        </li>
+                                        <li>
+                                            <label>Combination of solar and wind</label>
+                                            <input type="checkbox" name="Q9E1S4" id="Combination"
+                                                   value="<?php echo set_value('Q9E1S4', 1); ?>" <?php if (isset($data['Q9E1S4'])) echo set_checkbox('Q9E1S4', '1', true); ?>/>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <label><span class="cube">7</span>Does your school use solar water heater:</label>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <label>Yes</label>
+
+                                            <input type="radio" name="Q10E1"
+                                                   value="<?php echo set_value('Q10E1', 'Y') ?>" <?php if (isset($data['Q10E1'])) echo $data['Q10E1'] == 'Y' ? "checked" : "" ?>/>
+                                        </li>
+                                        <li>
+                                            <label>No</label>
+                                            <input type="radio" name="Q10E1"
+                                                   value="<?php echo set_value('Q10E1', 'N') ?>" <?php if (isset($data['Q10E1'])) echo $data['Q10E1'] == 'N' ? "checked" : "" ?>/>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="form-group" id="WastePolicy">
+                                <label class="control-label">Please upload supporting documents:</label>
+                                <br>
+                                &bull;Pictures of audit team doing survey<br/>
+                                Please upload all supporting documents related to this section here. Note, files must be one of the
+                                following formats: PDF Document (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg) <br>
+                                File size per document should not exceed 500 KB. <br/>
+                                <br/>
+                                <button class="btn uploadbtn upload" data-id="Supporting Document Energy" data-toggle="modal"
+                                        data-target="#airModal" type="button">UPLOAD FILES </button>
+                                <br>
+                            </div>
+                            <div class="text-center">
+                                <button type="button" class="org-btn" id="btnEnergyPrevious">Previous</button>
+                                <button type="submit" class="org-btn" id="energynext" value="movenext">Next</button>
+                                <button type="button" class="org-btn submit button" id="energysave" >Save and Resume Later</button>
+                            </div>
+                            <?php echo form_close(); ?> </div>
+                    </div>
+                </div>
+                <!-- /.container -->
+                <?php $this->load->view('footer'); ?>
+                <div id="videoModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                        <!-- Modal content-->
+                        <div class="modal-content" style="background:transparent; border-radius:0px;">
+                            <div class="modal-header" style="background: rgb(232, 101, 73); color:#fff;">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">View video tutorial</h4>
+                            </div>
+                            <iframe width="100%" height="330px" src="https://www.youtube.com/embed/i6DM3E5euRE" frameborder="0"
+                                    id="video" allowfullscreen></iframe>
                         </div>
                     </div>
-
-            <div class="form-group">
-                <div class="form-group">
-                    <label><span class="cube">7</span>Does your school use solar water heater:</label>
-                    <ul class="list-inline">
-                        <li>
-                            <label>Yes</label>
-
-                            <input type="radio" name="Q10E1"
-                                   value="<?php echo set_value('Q10E1', 'Y') ?>" <?php if (isset($data['Q10E1'])) echo $data['Q10E1'] == 'Y' ? "checked" : "" ?>/>
-                        </li>
-                        <li>
-                            <label>No</label>
-                            <input type="radio" name="Q10E1"
-                                   value="<?php echo set_value('Q10E1', 'N') ?>" <?php if (isset($data['Q10E1'])) echo $data['Q10E1'] == 'N' ? "checked" : "" ?>/>
-                        </li>
-                    </ul>
                 </div>
-            </div>
-            <div class="form-group" id="WastePolicy">
-                <label class="control-label">Please upload supporting documents:</label>
-                <br>
-                &bull;Pictures of audit team doing survey<br/>
-                Please upload all supporting documents related to this section here. Note, files must be one of the
-                following formats: PDF Document (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg) <br>
-                File size per document should not exceed 500 KB. <br/>
-                <br/>
-                <button class="btn uploadbtn upload" data-id="Supporting Document Energy" data-toggle="modal"
-                        data-target="#airModal" type="button">UPLOAD FILES </button>
-                <br>
-            </div>
-            <div class="text-center">
-                <button type="button" class="org-btn" id="btnEnergyPrevious">Previous</button>
-                <button type="submit" class="org-btn" id="energynext" value="movenext">Next</button>
-                <button type="button" class="org-btn submit button" id="energysave" >Save and Resume Later</button>
-            </div>
-            <?php echo form_close(); ?> </div>
-    </div>
-</div>
-<!-- /.container -->
-<?php $this->load->view('footer'); ?>
-<div id="videoModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content" style="background:transparent; border-radius:0px;">
-            <div class="modal-header" style="background: rgb(232, 101, 73); color:#fff;">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">View video tutorial</h4>
-            </div>
-            <iframe width="100%" height="330px" src="https://www.youtube.com/embed/i6DM3E5euRE" frameborder="0"
-                    id="video" allowfullscreen></iframe>
-        </div>
-    </div>
-</div>
-<script type="text/javascript">
-    $('.close').click(function () {
-        $('#video').attr("src", "https://www.youtube.com/embed/i6DM3E5euRE");
-    });
-    $('.body').click(function () {
-        $('#video').attr("src", "https://www.youtube.com/embed/i6DM3E5euRE");
-    });
+                <script type="text/javascript">
+                    $('.close').click(function () {
+                        $('#video').attr("src", "https://www.youtube.com/embed/i6DM3E5euRE");
+                    });
+                    $('.body').click(function () {
+                        $('#video').attr("src", "https://www.youtube.com/embed/i6DM3E5euRE");
+                    });
 
-    $(document).ready(function () {
-        $('#btnEnergyPrevious').on('click', function (data) {
-            var fd = $('#energy').serialize();
-            //console.log(fd);
-            $.ajax({
-                type: 'POST',
-                url: '<?php echo base_url('previous/energyajax') ?>',
-                data: fd,
-                success: function (data) {
-                    window.location.href = "<?php echo base_url('air'); ?>";
-                }
-            });
-        });
+                    $(document).ready(function () {
+                        $('#btnEnergyPrevious').on('click', function (data) {
+                            var fd = $('#energy').serialize();
+                            //console.log(fd);
+                            $.ajax({
+                                type: 'POST',
+                                url: '<?php echo base_url('previous/energyajax') ?>',
+                                data: fd,
+                                success: function (data) {
+                                    window.location.href = "<?php echo base_url('air'); ?>";
+                                }
+                            });
+                        });
 
-        $('#energysave').on('click', function (data) {
-            var fd = $('#energy').serialize();
-            //console.log(fd);
-            $.ajax({
-                type: 'POST',
-                url: '<?php echo base_url('previous/energyajax') ?>',
-                data: fd,
-                success: function (data) {
-                    window.location.href = "<?php echo base_url('logout'); ?>";
-                }
-            });
-        });
-    });
+                        $('#energysave').on('click', function (data) {
+                            var fd = $('#energy').serialize();
+                            //console.log(fd);
+                            $.ajax({
+                                type: 'POST',
+                                url: '<?php echo base_url('previous/energyajax') ?>',
+                                data: fd,
+                                success: function (data) {
+                                    window.location.href = "<?php echo base_url('logout'); ?>";
+                                }
+                            });
+                        });
+                    });
 
-</script>
+                </script>
