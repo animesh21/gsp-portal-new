@@ -12,6 +12,16 @@
     .form-group-1{
         margin-bottom:20px;
     }
+	.cube-1{
+	 display: inline-block;
+     min-width: 30px;
+     line-height: 27px;
+     background: #e86549;
+     text-align: center;
+     margin: 0 10px 0 0;
+     color: #fff;
+     padding: 0 8px;
+	 }
 </style>
 <div class="container">
     <div class="content-form">
@@ -408,10 +418,11 @@
             </div>
         </div>
         <div class="form-group">
-            <label for="username" class="control-label"><h6> Task 2: Identify the types of areas in your school.</h6></label>
-            <div class="form-group-1 row">
+            <label for="username" class="control-label"><h6> Task 2: Identify the types of areas in your school. <a class="kplink" href="http://www.greenschoolsprogramme.org/knowledge-bank/land" target="_blank"> </a></h6></label>
+            
+			<div class="form-group-1 row">
                 <div class="col-xs-5">
-                    <label for="ex1">Types of Area</label>
+                    <label for="ex1"><span class="cube-1">1</span> Types of Area</label>
                 </div>
                 <div class="col-xs-5">
                     <label for="ex2"> Numbers</label>

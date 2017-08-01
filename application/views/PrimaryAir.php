@@ -453,7 +453,7 @@
             <table class="table">
                 <tr>
                     <td>Total number of classrooms in your school</td>
-                    <td><input name="Q5A1" placeholder="<?php if (isset($data['Q5A1'])) echo $data['Q5A1'] ?>" type="text" class="form-control" style="width:250px;" id="input-1" value="<?php echo set_value('Q5A1') ?>"  readonly=""/></td>
+                    <td><input name="Q5A1" placeholder="<?php if (isset($data['Q5A1'])) echo $data['Q5A1'] ?>" type="text" class="form-control" style="width:250px;" id="input-1" value="<?php if (isset($data['Q5A1'])) echo $data['Q5A1'] ?>"  readonly=""/></td>
                 </tr>
                 <tr>
                     <td>Total number of well-ventilated classrooms in your school</td>
