@@ -33,6 +33,7 @@ class Air extends CI_Controller {
         $data['other'] = $this->Answer_model->getAllAnswers($argPost);
         $data['files']=$this->file->getFilesData($this->session->userdata('USER_ID'));
         $data['filesfules']=$this->file->getFilesDatafules($this->session->userdata('USER_ID'));
+        $data['airQualityMonitering']=$this->file->AirQuality($this->session->userdata('USER_ID'));
         if(isset($data['other']['Q1G1']) && isset($data['other']['Q1G2']))
             {	 
             	if($data['other']['Q1G1'] < 6 && $data['other']['Q1G2'] < 6)

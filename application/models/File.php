@@ -166,4 +166,15 @@ class File extends CI_Model {
                         ->like('a.file_name', 'UPPF')
                         ->get()->result();
     }
+    
+    //Get Air Quality Atrachmen
+    public function AirQuality($argID)
+    {
+        return $this->db->select('a.*, b.name')
+                        ->from('files AS a')
+                        ->join('gsp_school AS b', 'a.userid=b.userid', 'left')
+                        ->where('a.userid', $argID)
+                        ->like('a.file_name', 'Air_Quality_Monitoring')
+                        ->get()->result();
+    }
 }

@@ -1829,7 +1829,23 @@ if (isset($data['Q9A1']))
     </button>
     <br>
 </div>
-
+<table width="100%" class="question uploadedfiles">
+    <thead>
+        <tr>
+            <th>File name</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($airQualityMonitering as $f) { ?>
+            <tr id="index<?php echo $f->id; ?>">
+                <?php $name = str_replace(" ", "_", $f->name . "_Air_Quality_Monitoring_"); ?>
+                <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+            </tr>
+        <?php } ?>
+    </tbody>
+</table>
 <div class="form-group" id="lab"
 
     <?php

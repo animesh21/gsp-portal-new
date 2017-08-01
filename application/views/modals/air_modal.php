@@ -46,6 +46,7 @@
     $("#airModal").on("hidden.bs.modal", function () {
         $('#test').html("");
         var fd = $('#' + document.forms[0].id).serialize();
+        ///alert(fd);
         var redirect = '';
         switch (document.forms[0].id)
         {
@@ -63,18 +64,26 @@
                 break;
             case "water":
                 redirect = "waterajax";
+                break;
             case "PrimaryWater":
                 redirect = "waterajax";
+                break;
             case "waste":
                 redirect = "wasteajax";
+                break;
             case "PrimaryWaste":
                 redirect = "wasteajax";
+                break;
             case "PrimaryAir":
+                //alert('Case Called');
                 redirect="airprevious";
+                break;
             case "PrimaryEnergy":
                 redirect = "energyajax";
+                break;
             case "PrimaryFood":
                 redirect = "foodajax";
+                break;
         }
 
         //console.log(fd);
