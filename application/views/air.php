@@ -1066,6 +1066,24 @@
             UPLOAD FILES
         </button>
     </div>
+    <div class="clearfix">&nbsp;</div>
+    <table width="100%" class="question uploadedfiles">
+        <thead>
+            <tr>
+                <th>File name</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($filesfules as $a) { ?>
+                <tr id="index<?php echo $a->id; ?>">
+                    <?php $Text = str_replace(" ", "_", $a->name . "_Fuels_"); ?>
+                    <td class="upload edit"><?php echo str_replace($Text, " ", $a->file_name); ?></td>
+                    <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $a->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+                </tr>
+            <?php } ?>
+        </tbody>
+    </table>
     <?php
     if (isset($data['Q6A1']))
         if ($data['Q6A1'] == 1 || $data['Q6A1'] == 2)
@@ -1863,6 +1881,23 @@ if (isset($data['Q9A1']))
     <br>
     <br>
 </div>
+<table width="100%" class="question uploadedfiles">
+    <thead>
+        <tr>
+            <th>File name</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($files as $f) { ?>
+            <tr id="index<?php echo $f->id; ?>">
+                <?php $name = str_replace(" ", "_", $f->name . "_Supporting_Document_Air_"); ?>
+                <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+            </tr>
+        <?php } ?>
+    </tbody>
+</table>
 <div class="text-center">
     <button type="button" class="org-btn" id="btnAirPrevious">Previous</button>
     <button type="submit" class="org-btn" id="airnext" value="movenext">Next</button>
@@ -1918,6 +1953,36 @@ if (isset($data['Q9A1']))
                     window.location.href = "<?php echo base_url('logout'); ?>";
                 }
             });
+        });
+        
+        //delete air files
+        $('body').on('click', '.air-delete-files', function (data) {
+            var test = confirm("Are you sure you want to delete this file");
+            if (test == true)
+            {
+                var divId = $(this).attr('data-id');
+                $.ajax({
+                    url: '<?php echo base_url('upload_files/deletFiles') ?>',
+                    type: 'POST',
+                    data: {id: $(this).attr('data-id')},
+                    success: function (data)
+                    {
+                        if (data == "success")
+                        {
+                            console.log('index' + divId);
+                            $('#msg').html('<div class="alert alert-success">' +
+                                    '<strong>&#10004; Success!</strong> Files deleted successfully.' +
+                                    '</div>');
+                            $('#index' + divId).html('');
+                        } else if (data == "error")
+                        {
+                            $('#msg').html('<div class="alert alert-danger">' +
+                                    '<strong>&#x2716; Error!</strong> There is an error deleting your files.' +
+                                    '</div>');
+                        }
+                    }
+                });
+            }
         });
     });
 </script>

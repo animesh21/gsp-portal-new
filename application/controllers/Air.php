@@ -7,7 +7,7 @@ class Air extends CI_Controller {
         parent::__construct();
         $this->load->helper(array('form', 'security'));
         $this->load->library('form_validation');
-        $this->load->model('Answer_model');
+        $this->load->model(array('Answer_model', 'file'));
         if ($this->session->userdata('USER_ID') == '') {
         
             redirect('login');
@@ -31,7 +31,8 @@ class Air extends CI_Controller {
         
         $data['data'] = $this->Answer_model->getAnswers($argPost);
         $data['other'] = $this->Answer_model->getAllAnswers($argPost);
-        
+        $data['files']=$this->file->getFilesData($this->session->userdata('USER_ID'));
+        $data['filesfules']=$this->file->getFilesDatafules($this->session->userdata('USER_ID'));
         if(isset($data['other']['Q1G1']) && isset($data['other']['Q1G2']))
             {	 
             	if($data['other']['Q1G1'] < 6 && $data['other']['Q1G2'] < 6)

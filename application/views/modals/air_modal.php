@@ -35,15 +35,56 @@
 <script>
     //Get Data When Modal Open
     $("#airModal").on('shown.bs.modal', function (e) {
-		var id = e.relatedTarget.dataset.id;
-		$.get('<?php echo base_url('upload_files/getHtml') ?>', function (data) {
+        var id = e.relatedTarget.dataset.id;
+        $.get('<?php echo base_url('upload_files/getHtml') ?>', function (data) {
             $('#test').html(data);
-			$('#Fules_bill').val(id);
-			//alert($('#Fules_bill').val());
-		});
+            $('#Fules_bill').val(id);
+            //alert($('#Fules_bill').val());
+        });
     });
     //Remove Data When Modal Close
     $("#airModal").on("hidden.bs.modal", function () {
         $('#test').html("");
+        var fd = $('#' + document.forms[0].id).serialize();
+        var redirect = '';
+        switch (document.forms[0].id)
+        {
+            case "air":
+                redirect = "airprevious";
+                break;
+            case "food":
+                redirect = "foodajax";
+                break;
+            case "energy":
+                redirect = "energyajax";
+                break;
+            case "land":
+                redirect = "landajax";
+                break;
+            case "water":
+                redirect = "waterajax";
+            case "PrimaryWater":
+                redirect = "waterajax";
+            case "waste":
+                redirect = "wasteajax";
+            case "PrimaryWaste":
+                redirect = "wasteajax";
+            case "PrimaryAir":
+                redirect="airprevious";
+            case "PrimaryEnergy":
+                redirect = "energyajax";
+            case "PrimaryFood":
+                redirect = "foodajax";
+        }
+
+        //console.log(fd);
+        $.ajax({
+            type: 'POST',
+            url: '<?php echo base_url() ?>previous/' + redirect,
+            data: fd,
+            success: function (data) {
+                location.reload();
+            }
+        });
     });
 </script>

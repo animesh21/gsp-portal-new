@@ -34,8 +34,8 @@
 <div class="intro">
     <h1>FOOD</h1>
     <div class="video"><a class="lptext" href="#" data-toggle="modal" data-target="#videoModal"><img
-                    src="http://greenschoolsprogramme.org/audit2015/upload/templates/tfr_responsive/images/video-icon.png"
-                    style="width: 45px; height: 40px; margin-top:47px;"></a></div>
+                src="http://greenschoolsprogramme.org/audit2015/upload/templates/tfr_responsive/images/video-icon.png"
+                style="width: 45px; height: 40px; margin-top:47px;"></a></div>
 </div>
 <?php echo form_open('food/set', array('id' => 'food')); ?>
 <div class="form-group">
@@ -422,14 +422,14 @@
     <div class="form-group">
         <label>
             <h6>Task 2: Find out about the food service in your school.<a class="tt" data-tooltip="Packaged food is any food item which is commercially prepared, processed for a longer shelf life and is ready to eat and drink"><span
-                            class="badge">?</span></a></h6>
+                        class="badge">?</span></a></h6>
         </label>
         <div class="form-group">
             <input type="hidden" id="Q1S1" value="<?php if (isset($other['Q1S1'])) echo $other['Q1S1']; ?>">
             <?php if (empty($data['Q4F1'])) if (isset($other['Q1S1'])) if ($other['Q1S1'] >= 3) $data['Q4F1'] = 'Y' ?>
             <label class="control-label"><span class="cube">1</span> Does your school have a provision/space
                 to sell packaged food items within the campus<a class="tt" data-tooltip="Any place, permanent or temporary, run by school, outsourced to vendors, self help groups, shopkeepers to sell products during/after/before school timings/duration should be considered."><span
-                            class="badge">?</span></a></label>
+                        class="badge">?</span></a></label>
             <ul class="list-inline">
                 <li>
                     <label class="radio-inline text-gray">
@@ -464,58 +464,68 @@
         </ul>
     </div>
     <?php
-    if (isset($data['Q5F1']))
-    {
-    if ($data['Q5F1'] == 'Y')
-    {
-    ?>
-    <div class="form-group" id="meals1">
-        <?php
-        }
-        else {
-        ?>
-        <div class="form-group" id="meals1" style="display: none;">
+    if (isset($data['Q5F1'])) {
+        if ($data['Q5F1'] == 'Y') {
+            ?>
+            <div class="form-group" id="meals1">
             <?php
+        } else {
+            ?>
+                <div class="form-group" id="meals1" style="display: none;">
+                <?php
             }
             ?>
-            <?php
-            }
-            else
-            { ?>
-            <div class="form-group" id="meals1" style="display: none;">
                 <?php
-                }
+            } else {
                 ?>
+                <div class="form-group" id="meals1" style="display: none;">
+                <?php
+            }
+            ?>
                 <label class="control-label">Please upload picture of Mid-day meal being
                     served</label>
                 <br/>
                 <button class="btn uploadbtn upload" data-id="Mid Day Meal" data-toggle="modal"
                         data-target="#airModal" type="button">UPLOAD FILES </button>
+                <table width="100%" class="question uploadedfiles">
+                    <thead>
+                        <tr>
+                            <th>File name</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+<?php foreach ($midDayMeal as $f) { ?>
+                            <tr id="index<?php echo $f->id; ?>">
+    <?php $name = str_replace(" ", "_", $f->name . "_Mid_Day_Meal_"); ?>
+                                <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                                <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+                            </tr>
+                            <?php } ?>
+                    </tbody>
+                </table>
             </div>
             <input type="hidden" value="<?php if (isset($other['Q4G4S3'])) echo $other['Q4G4S3']; ?>"
                    id="Q4G4S3"/>
-            <?php
-            if (isset($data['Q5F1']))
-            {
-            if ($data['Q5F1'] == 'Y')
-            {
-            ?>
-            <div class="form-group" id="meals11">
-                <?php
-                }
-                else {
-                ?>
-                <div class="form-group" id="meals11" style="display: none;">
+<?php
+if (isset($data['Q5F1'])) {
+    if ($data['Q5F1'] == 'Y') {
+        ?>
+                    <div class="form-group" id="meals11">
+                           <?php
+                       } else {
+                           ?>
+                        <div class="form-group" id="meals11" style="display: none;">
+                           <?php
+                       }
+                       ?>
                     <?php
+                } else {
+                    ?>
+                        <div class="form-group" id="meals11" style="display: none;">
+                        <?php
                     }
                     ?>
-                    <?php
-                    }else
-                    { ?>
-                    <div class="form-group" id="meals11" style="display: none;">
-                        <?php
-                        }
-                        ?>
                         <label class="control-label"><span class="cube">2(a)</span>If yes, then midday meal
                             is served under:</label>
                         <ul class="list-inline">
@@ -539,28 +549,25 @@
                             </li>
                         </ul>
                     </div>
-                    <?php
-                    if (isset($data['Q5F1']))
-                    {
-                    if ($data['Q5F1'] == 'N')
-                    {
-                    ?>
-                    <div class="form-group" id="meals2">
-                        <?php
+<?php
+if (isset($data['Q5F1'])) {
+    if ($data['Q5F1'] == 'N') {
+        ?>
+                            <div class="form-group" id="meals2">
+        <?php
+    } else {
+        ?>
+                                <div class="form-group" id="meals2" style="display: none;">
+                            <?php
                         }
-                        else {
                         ?>
-                        <div class="form-group" id="meals2" style="display: none;">
+                        <?php
+                    } else {
+                        ?>
+                                <div class="form-group" id="meals2" style="display: none;">
                             <?php
-                            }
-                            ?>
-                            <?php
-                            }else
-                            { ?>
-                            <div class="form-group" id="meals2" style="display: none;">
-                                <?php
-                                }
-                                ?>
+                        }
+                        ?>
                                 <label class="control-label"><span class="cube">2(a)</span>Do students bring their
                                     own lunch from home?</label>
                                 <ul class="list-inline">
@@ -578,31 +585,23 @@
                                     </li>
                                 </ul>
                             </div>
-                            <?php
-                            if (isset($data['Q5F1S1']))
-                            {
-                            if ($data['Q5F1S1'] == 'Y')
-                            {
-                            ?>
-                            <div class="form-group" id="Q5F1SF">
-                                <?php
-                                }
-                                else
-                                {
-                                ?>
-                                <div class="form-group" id="Q5F1SF" style="display: none;">
+<?php
+if (isset($data['Q5F1S1'])) {
+    if ($data['Q5F1S1'] == 'Y') {
+        ?>
+                                    <div class="form-group" id="Q5F1SF">
+        <?php
+    } else {
+        ?>
+                                        <div class="form-group" id="Q5F1SF" style="display: none;">
                                     <?php
-
-                                    }
-                                    }
-                                    else
-                                    {
-                                    ?>
-                                    <div class="form-group" id="Q5F1SF" style="display: none;">
-                                        <?php
-
-                                        }
-                                        ?>
+                                }
+                            } else {
+                                ?>
+                                        <div class="form-group" id="Q5F1SF" style="display: none;">
+                                <?php
+                            }
+                            ?>
                                         <label class="control-label">Please upload photographs of lunch
                                             boxes</label>
                                         <br>
@@ -612,30 +611,22 @@
                                         <br>
                                     </div>
                                     <?php
-                                    if (isset($data['Q5F1S1']))
-                                    {
-                                    if ($data['Q5F1S1'] == 'Y')
-                                    {
-                                    ?>
-                                    <div class="form-group" id="Q5F1S2">
-                                        <?php
-                                        }
-                                        else
-                                        {
-                                        ?>
-                                        <div class="form-group" id="Q5F1S2" style="display: none;">
-                                            <?php
-
-                                            }
-                                            }
-                                            else
-                                            {
+                                    if (isset($data['Q5F1S1'])) {
+                                        if ($data['Q5F1S1'] == 'Y') {
                                             ?>
-                                            <div class="form-group" id="Q5F1S2" style="display: none;">
+                                            <div class="form-group" id="Q5F1S2">
                                                 <?php
-
-                                                }
+                                            } else {
                                                 ?>
+                                                <div class="form-group" id="Q5F1S2" style="display: none;">
+                                                <?php
+                                            }
+                                        } else {
+                                            ?>
+                                                <div class="form-group" id="Q5F1S2" style="display: none;">
+    <?php
+}
+?>
                                                 <label class="control-label"><span class="cube">2(a)(1)</span> How
                                                     many students out of total student population bring home-made
                                                     lunch? </label>
@@ -645,33 +636,25 @@
                                                        placeholder="<?php if (isset($data['Q5F1S2'])) echo $data['Q5F1S2'] ?>"
                                                        value="<?php echo set_value('Q5F1S2'); ?>">
                                             </div>
-                                            <?php
-                                            if (isset($data['Q5F1S1']))
-                                            {
-                                            if ($data['Q5F1S1'] == 'Y')
-                                            {
-                                            ?>
-                                            <div class="form-group" id="Q5F1S3">
-                                                <?php
-                                                }
-                                                else
-                                                {
+                                        <?php
+                                        if (isset($data['Q5F1S1'])) {
+                                            if ($data['Q5F1S1'] == 'Y') {
                                                 ?>
-                                                <div class="form-group" id="Q5F1S3" style="display: none;">
+                                                    <div class="form-group" id="Q5F1S3">
                                                     <?php
-
-                                                    }
-                                                    }
-                                                    else
-                                                    {
+                                                } else {
                                                     ?>
-                                                    <div class="form-group" id="Q5F1S3" style="display: none;">
-                                                        <?php
-
-                                                        }
-                                                        ?>
+                                                        <div class="form-group" id="Q5F1S3" style="display: none;">
+                                                    <?php
+                                                }
+                                            } else {
+                                                ?>
+                                                        <div class="form-group" id="Q5F1S3" style="display: none;">
+                                                    <?php
+                                                }
+                                                ?>
                                                         <label class="control-label"><span
-                                                                    class="cube">2(a)(2)</span>Of the students who
+                                                                class="cube">2(a)(2)</span>Of the students who
                                                             bring lunch from home, how many bring packaged
                                                             food?</label>
                                                         <br>
@@ -680,31 +663,23 @@
                                                                placeholder="<?php if (isset($data['Q5F1S3'])) echo $data['Q5F1S3'] ?>"
                                                                value="<?php echo set_value('Q5F1S3'); ?>">
                                                     </div>
-                                                    <?php
-                                                    if (isset($data['Q5F1S1']))
-                                                    {
-                                                    if ($data['Q5F1S1'] == 'Y')
-                                                    {
+                                            <?php
+                                            if (isset($data['Q5F1S1'])) {
+                                                if ($data['Q5F1S1'] == 'Y') {
                                                     ?>
-                                                    <div class="form-group" id="Q5F1S4">
+                                                            <div class="form-group" id="Q5F1S4">
                                                         <?php
-                                                        }
-                                                        else
-                                                        {
+                                                    } else {
                                                         ?>
-                                                        <div class="form-group" id="Q5F1S4" style="display: none;">
-                                                            <?php
-
-                                                            }
-                                                            }
-                                                            else
-                                                            {
-                                                            ?>
-                                                            <div class="form-group" id="Q5F1S4" style="display: none;">
-                                                                <?php
-
-                                                                }
-                                                                ?>
+                                                                <div class="form-group" id="Q5F1S4" style="display: none;">
+                                                        <?php
+                                                    }
+                                                } else {
+                                                    ?>
+                                                                <div class="form-group" id="Q5F1S4" style="display: none;">
+                                                        <?php
+                                                    }
+                                                    ?>
                                                                 <label class="control-label"><span class="cube">2(a)(3)</span>Do
                                                                     teachers have the responsibility to ensure that
                                                                     students are carrying lunch from home?</label>
@@ -723,23 +698,21 @@
                                                                     </li>
                                                                 </ul>
                                                             </div>
-                                                            <?php
-                                                            if (isset($data['Q5F1']))
-                                                            if ($data['Q5F1'] == 'Y')
-                                                            {
-
+                                                    <?php
+                                                    if (isset($data['Q5F1']))
+                                                        if ($data['Q5F1'] == 'Y') {
                                                             ?>
-                                                            <div class="form-group" id="Q5F2">
+                                                                    <div class="form-group" id="Q5F2">
                                                                 <?php
-                                                                } else {
+                                                            } else {
                                                                 ?>
-                                                                <div class="form-group" id="Q5F2" style="display: none;">
-                                                                    <?php } else {
-                                                                    ?>
-                                                                    <div class="form-group" id="Q5F2" style="display: none;">
-                                                                        <?php } ?>
+                                                                        <div class="form-group" id="Q5F2" style="display: none;">
+                                                            <?php } else {
+                                                            ?>
+                                                                        <div class="form-group" id="Q5F2" style="display: none;">
+                                                            <?php } ?>
                                                                         <label class="control-label"><span
-                                                                                    class="cube">2(b)</span>What
+                                                                                class="cube">2(b)</span>What
                                                                             kind of food items are served in midday
                                                                             meal?</label>
                                                                         <div class="form-group-1">
@@ -995,25 +968,23 @@
                                                                             </ul>
                                                                         </div>
                                                                     </div>
-                                                                    <?php
-                                                                    if (isset($data['Q5F1']))
-                                                                    if ($data['Q5F1'] == 'Y')
-                                                                    {
-
-                                                                    ?>
-                                                                    <div class="form-group" id="Q5F3">
-                                                                        <?php
-                                                                        } else {
-                                                                        ?>
-                                                                        <div class="form-group" id="Q5F3"
-                                                                             style="display: none;">
-                                                                            <?php } else {
-                                                                            ?>
-                                                                            <div class="form-group" id="Q5F3"
-                                                                                 style="display: none;">
-                                                                                <?php } ?>
+<?php
+if (isset($data['Q5F1']))
+    if ($data['Q5F1'] == 'Y') {
+        ?>
+                                                                            <div class="form-group" id="Q5F3">
+        <?php
+    } else {
+        ?>
+                                                                                <div class="form-group" id="Q5F3"
+                                                                                     style="display: none;">
+    <?php } else {
+    ?>
+                                                                                <div class="form-group" id="Q5F3"
+                                                                                     style="display: none;">
+<?php } ?>
                                                                                 <label class="control-label"><span
-                                                                                            class="cube">2(b)(1)</span>How
+                                                                                        class="cube">2(b)(1)</span>How
                                                                                     many students out of total
                                                                                     student population avail of the
                                                                                     midday meal services
@@ -1026,10 +997,10 @@
                                                                                            placeholder="<?php if (isset($data['Q5F3S1'])) echo $data['Q5F3S1']; ?>">
                                                                                 </div>
                                                                             </div>
-                                                                            <?php
-                                                                            if (isset($other['Q1S1']))
-                                                                                if ($other['Q1S1'] >= 3 && $other['Q1S1'] != 4) {
-                                                                                    ?>
+<?php
+if (isset($other['Q1S1']))
+    if ($other['Q1S1'] >= 3 && $other['Q1S1'] != 4) {
+        ?>
                                                                                     <div class="form-group">
                                                                                         <label class="control-label"><span class="cube">2.1</span>Does your school serve whole day’s
                                                                                             meals? <a class="tt" data-tooltip="Applicable for residential schools only"><span class="badge">?</span></a></label>
@@ -1048,36 +1019,35 @@
                                                                                             </li>
                                                                                         </ul>
                                                                                     </div>
-                                                                                    <?php
-                                                                                }
-                                                                            ?>
+                                                                                <?php
+                                                                            }
+                                                                        ?>
                                                                             <div class="form-group">
                                                                                 <label class="control-label">
                                                                                     <h6> Task 3: What kind of food is
                                                                                         served/sold in your
                                                                                         school <a class="tt" data-tooltip="Any place, permanent or temporary, run by school, outsourced to vendors or self help groups or shopkeepers, to sell products during/after/before schools hours should be considered. If the space is limited please create the table in a word document and upload as attachment. Option to upload has been provided at the end of the section.
-                                                                                                                                                                                                        "><span class="badge">?</span></a></h6>
+                                                                                                  "><span class="badge">?</span></a></h6>
                                                                                 </label>
                                                                             </div>
-                                                                            <?php
-                                                                            if (isset($data['Q4F1']))
-                                                                            if ($data['Q4F1'] == 'Y')
-                                                                            {
-                                                                            ?>
-                                                                            <div class="form-group" id="Q6F1">
-                                                                                <?php } else { ?>
-                                                                                <div class="form-group" id="Q6F1"
-                                                                                     style="display: none;">
-                                                                                    <?php }
-                                                                                    else { ?>
-                                                                                    <div class="form-group" id="Q6F1" style="display: none;">
-                                                                                        <?php } ?>
+<?php
+if (isset($data['Q4F1']))
+    if ($data['Q4F1'] == 'Y') {
+        ?>
+                                                                                    <div class="form-group" id="Q6F1">
+    <?php } else { ?>
+                                                                                        <div class="form-group" id="Q6F1"
+                                                                                             style="display: none;">
+    <?php } else {
+    ?>
+                                                                                        <div class="form-group" id="Q6F1" style="display: none;">
+<?php } ?>
                                                                                         <label class="control-label"><span class="cube">3</span>What
                                                                                             kind of food is being
                                                                                             served / sold in your
                                                                                             school? <a class="tt"
                                                                                                        data-tooltip="For types and varieties of packaged food items, please mention each brand and flavor available in your school. For example, if Lay’s chips are available, mention if it is Baked, Herbs and onions, Original salted, Sunkissed tomatoes, American style cream and onion, etc. (Please note it is advisable not to have hawkers, vendors and shops selling ultra processed packaged items near the school.)"><span
-                                                                                                        class="badge">?</span></a> </label>
+                                                                                                    class="badge">?</span></a> </label>
                                                                                         <!--div class=" row">
                 <div class="col-xs-3">
                  <label >Packaged food items served / sold inside school campus</label>
@@ -1338,31 +1308,30 @@
                                                                                             </tr>
                                                                                         </table>
                                                                                     </div>
-                                                                                    <?php
-                                                                                    if (isset($data['Q4F1']))
-                                                                                    if ($data['Q4F1'] == 'Y')
-                                                                                    {
-                                                                                    ?>
-                                                                                    <div class="form-group"
-                                                                                         id="Q7F1">
-                                                                                        <?php } else { ?>
-                                                                                        <div class="form-group"
-                                                                                             id="Q7F1"
-                                                                                             style="display: none;">
-                                                                                            <?php } else { ?>
+<?php
+if (isset($data['Q4F1']))
+    if ($data['Q4F1'] == 'Y') {
+        ?>
                                                                                             <div class="form-group"
-                                                                                                 id="Q7F1"
-                                                                                                 style="display: none;">
-                                                                                                <?php } ?>
+                                                                                                 id="Q7F1">
+    <?php } else { ?>
+                                                                                                <div class="form-group"
+                                                                                                     id="Q7F1"
+                                                                                                     style="display: none;">
+    <?php } else { ?>
+                                                                                                <div class="form-group"
+                                                                                                     id="Q7F1"
+                                                                                                     style="display: none;">
+<?php } ?>
                                                                                                 <label class="control-label"><span
-                                                                                                            class="cube">4</span>Does
+                                                                                                        class="cube">4</span>Does
                                                                                                     your school
                                                                                                     serve
                                                                                                     traditional
                                                                                                     Indian snacks?<a
-                                                                                                            class="tt"
-                                                                                                            data-tooltip="Traditional Indian snacks are any food item prepared within the school on the same day for immediate consumption. Monitor over a period of a month."><span
-                                                                                                                class="badge">?</span></a></label>
+                                                                                                        class="tt"
+                                                                                                        data-tooltip="Traditional Indian snacks are any food item prepared within the school on the same day for immediate consumption. Monitor over a period of a month."><span
+                                                                                                            class="badge">?</span></a></label>
                                                                                                 <ul class="list-inline">
                                                                                                     <li>
                                                                                                         <label class="radio-inline text-gray">
@@ -1383,13 +1352,12 @@
                                                                                                     </li>
                                                                                                 </ul>
                                                                                             </div>
-                                                                                            <?php
-                                                                                            if (isset($data['Q4F1']))
-                                                                                                if ($data['Q4F1'] == 'Y')
-
-                                                                                                    if (isset($data['Q7F1']))
-                                                                                                        if ($data['Q7F1'] == 'Y') {
-                                                                                                            ?>
+<?php
+if (isset($data['Q4F1']))
+    if ($data['Q4F1'] == 'Y')
+        if (isset($data['Q7F1']))
+            if ($data['Q7F1'] == 'Y') {
+                ?>
                                                                                                             <div class="form-group" id="traditional">
                                                                                                                 <label class="control-label"><span class="cube">4(a)</span>Please
                                                                                                                     provide
@@ -1503,10 +1471,28 @@
                                                                                                                 <br>
                                                                                                                 <br>
                                                                                                             </div>
+                                                                                                    <table width="100%" class="question uploadedfiles">
+    <thead>
+        <tr>
+            <th>File name</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($canteen as $f) { ?>
+            <tr id="index<?php echo $f->id; ?>">
+                <?php $name = str_replace(" ", "_", $f->name . "_Canteen_Food_Items_"); ?>
+                <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+            </tr>
+        <?php } ?>
+    </tbody>
+</table>
+                                                                                                    
                                                                                                             <div class="form-group"
                                                                                                                  id="Q7F3S1">
                                                                                                                 <label class="control-label"><span
-                                                                                                                            class="cube">4(b)</span>Give
+                                                                                                                        class="cube">4(b)</span>Give
                                                                                                                     descriptions
                                                                                                                     for
                                                                                                                     rare
@@ -1517,25 +1503,25 @@
                                                                                                                     your
                                                                                                                     school:</label>
                                                                                                                 <textarea
-                                                                                                                        type="textbox"
-                                                                                                                        rows="5"
-                                                                                                                        name="Q7F3S1"
-                                                                                                                        placeholder="<?php if (isset($data['Q7F3S1'])) echo $data['Q7F3S1'] ?>"
-                                                                                                                        value="<?php echo set_value('Q7F3S1'); ?>"></textarea>
+                                                                                                                    type="textbox"
+                                                                                                                    rows="5"
+                                                                                                                    name="Q7F3S1"
+                                                                                                                    placeholder="<?php if (isset($data['Q7F3S1'])) echo $data['Q7F3S1'] ?>"
+                                                                                                                    value="<?php echo set_value('Q7F3S1'); ?>"></textarea>
                                                                                                                 <br>
                                                                                                             </div>
-                                                                                                            <?php
-                                                                                                        }
-                                                                                            ?>
+                <?php
+            }
+?>
                                                                                             <div class="form-group"
                                                                                                  id="traditional"
                                                                                                  style="display: none;">
                                                                                                 <label class="control-label"><span
-                                                                                                            class="cube">4(a)</span>Please
+                                                                                                        class="cube">4(a)</span>Please
                                                                                                     provide the
                                                                                                     details: <a
-                                                                                                            class="tt"
-                                                                                                            data-tooltip="If space is limited, please create the table in a word document and upload as attachment. Option to upload has been provided at the end of the section."> <span class="badge">?</span> </a></label>
+                                                                                                        class="tt"
+                                                                                                        data-tooltip="If space is limited, please create the table in a word document and upload as attachment. Option to upload has been provided at the end of the section."> <span class="badge">?</span> </a></label>
                                                                                                 <div class="form-group row">
                                                                                                     <div class="col-xs-3">
                                                                                                         <label>Traditional
@@ -1643,47 +1629,46 @@
                                                                                                  id="Q7F3S1"
                                                                                                  style="display: none;">
                                                                                                 <label class="control-label"><span
-                                                                                                            class="cube">4(b)</span>Give
+                                                                                                        class="cube">4(b)</span>Give
                                                                                                     descriptions for
                                                                                                     rare local
                                                                                                     snacks served in
                                                                                                     your
                                                                                                     school:</label>
                                                                                                 <textarea
-                                                                                                        type="text"
-                                                                                                        rows="5"
-                                                                                                        name="Q7F3S1"
-                                                                                                        placeholder="<?php if (isset($data['Q7F3S1'])) echo $data['Q7F3S1'] ?>"
-                                                                                                        value="<?php echo set_value('Q7F3S1'); ?>"></textarea>
+                                                                                                    type="text"
+                                                                                                    rows="5"
+                                                                                                    name="Q7F3S1"
+                                                                                                    placeholder="<?php if (isset($data['Q7F3S1'])) echo $data['Q7F3S1'] ?>"
+                                                                                                    value="<?php echo set_value('Q7F3S1'); ?>"></textarea>
                                                                                                 <br>
                                                                                             </div>
-                                                                                            <?php
-                                                                                            if (isset($data['Q4F1']))
-                                                                                            if ($data['Q4F1'] == 'Y')
-                                                                                            {
-                                                                                            ?>
-                                                                                            <div class="form-group"
-                                                                                                 id="Q8F1">
-                                                                                                <?php } else { ?>
-                                                                                                <div class="form-group"
-                                                                                                     id="Q8F1"
-                                                                                                     style="display: none;">
-                                                                                                    <?php }else { ?>
+<?php
+if (isset($data['Q4F1']))
+    if ($data['Q4F1'] == 'Y') {
+        ?>
                                                                                                     <div class="form-group"
-                                                                                                         id="Q8F1"
-                                                                                                         style="display: none;">
-                                                                                                        <?php } ?>
+                                                                                                         id="Q8F1">
+    <?php } else { ?>
+                                                                                                        <div class="form-group"
+                                                                                                             id="Q8F1"
+                                                                                                             style="display: none;">
+    <?php } else { ?>
+                                                                                                        <div class="form-group"
+                                                                                                             id="Q8F1"
+                                                                                                             style="display: none;">
+<?php } ?>
                                                                                                         <label class="control-label"><span
-                                                                                                                    class="cube">5</span>Does
+                                                                                                                class="cube">5</span>Does
                                                                                                             your
                                                                                                             school
                                                                                                             serve
                                                                                                             traditional
                                                                                                             Indian
                                                                                                             beverages?<a
-                                                                                                                    class="tt"
-                                                                                                                    data-tooltip="Traditional Indian beverages are any drink items prepared within the school on the same day for immediate consumption. Monitor over a period of a month."><span
-                                                                                                                        class="badge">?</span></a></label>
+                                                                                                                class="tt"
+                                                                                                                data-tooltip="Traditional Indian beverages are any drink items prepared within the school on the same day for immediate consumption. Monitor over a period of a month."><span
+                                                                                                                    class="badge">?</span></a></label>
                                                                                                         <ul class="list-inline">
                                                                                                             <li>
                                                                                                                 <label class="radio-inline text-gray">
@@ -1704,23 +1689,22 @@
                                                                                                             </li>
                                                                                                         </ul>
                                                                                                     </div>
-                                                                                                    <?php
-                                                                                                    if (isset($data['Q4F1']))
-                                                                                                        if ($data['Q4F1'] == 'Y')
-
-                                                                                                            if (isset($data['Q8F1']))
-                                                                                                                if ($data['Q8F1'] == 'Y') {
-                                                                                                                    ?>
+<?php
+if (isset($data['Q4F1']))
+    if ($data['Q4F1'] == 'Y')
+        if (isset($data['Q8F1']))
+            if ($data['Q8F1'] == 'Y') {
+                ?>
                                                                                                                     <div class="form-group"
                                                                                                                          id="beverages">
                                                                                                                         <label class="control-label"><span
-                                                                                                                                    class="cube">5(a)</span>Please
+                                                                                                                                class="cube">5(a)</span>Please
                                                                                                                             provide
                                                                                                                             details:<a
-                                                                                                                                    class="tt"
-                                                                                                                                    data-tooltip="If space is limited, please create the table in a word document and upload as attachment. Option to upload has been provided at the end of the section."
-                                                                                                                                    href="#"><span
-                                                                                                                                        class="badge">?</span></a></label>
+                                                                                                                                class="tt"
+                                                                                                                                data-tooltip="If space is limited, please create the table in a word document and upload as attachment. Option to upload has been provided at the end of the section."
+                                                                                                                                href="#"><span
+                                                                                                                                    class="badge">?</span></a></label>
                                                                                                                         <div class="form-group row">
                                                                                                                             <div class="col-xs-3">
                                                                                                                                 <label>Traditional
@@ -1809,19 +1793,19 @@
                                                                                                                             </div>
                                                                                                                         </div>
                                                                                                                     </div>
-                                                                                                                    <?php
-                                                                                                                }
-                                                                                                    ?>
+                <?php
+            }
+?>
                                                                                                     <div class="form-group"
                                                                                                          id="beverages"
                                                                                                          style="display: none;">
                                                                                                         <label class="control-label"><span
-                                                                                                                    class="cube">5(a)</span>Please
+                                                                                                                class="cube">5(a)</span>Please
                                                                                                             provide
                                                                                                             details: <a class="tt"
                                                                                                                         data-tooltip="If space is limited, please create the table in a word document and upload as attachment. Option to upload has been provided at the end of the section."
                                                                                                                         href="#"><span
-                                                                                                                        class="badge">?</span></a></label>
+                                                                                                                    class="badge">?</span></a></label>
                                                                                                         <div class="form-group row">
                                                                                                             <div class="col-xs-3">
                                                                                                                 <label>Traditional
@@ -1926,7 +1910,7 @@
                                                                                                     </div>
                                                                                                     <div class="form-group">
                                                                                                         <label class="control-label"><span
-                                                                                                                    class="cube">6</span> Does the
+                                                                                                                class="cube">6</span> Does the
                                                                                                             school
                                                                                                             distribute
                                                                                                             packaged
@@ -1956,55 +1940,55 @@
                                                                                                         </ul>
                                                                                                     </div>
                                                                                                 </div>
-                                                                                                <?php
-                                                                                                if (isset($data['Q9F1']))
-                                                                                                    if ($data['Q9F1'] == 'Y') {
-                                                                                                        ?>
+<?php
+if (isset($data['Q9F1']))
+    if ($data['Q9F1'] == 'Y') {
+        ?>
                                                                                                         <div class="form-group"
                                                                                                              id="Q9F2">
                                                                                                             <label class="control-label"><span
-                                                                                                                        class="cube">6(a)</span>Please
+                                                                                                                    class="cube">6(a)</span>Please
                                                                                                                 provide
                                                                                                                 details:<a
-                                                                                                                        class="tt"
-                                                                                                                        data-tooltip="For example, Kitkat chocolate as consolation prize or food/discount coupons of Dominos/Pizza Hut"
-                                                                                                                        href="#"><span
-                                                                                                                            class="badge">?</span></a></label>
+                                                                                                                    class="tt"
+                                                                                                                    data-tooltip="For example, Kitkat chocolate as consolation prize or food/discount coupons of Dominos/Pizza Hut"
+                                                                                                                    href="#"><span
+                                                                                                                        class="badge">?</span></a></label>
                                                                                                             <textarea
-                                                                                                                    type="text"
-                                                                                                                    rows="5"
-                                                                                                                    id="Q9F2"
-                                                                                                                    name="Q9F2"
-                                                                                                                    placeholder="<?php if (isset($data['Q9F2'])) echo $data['Q9F2'] ?>"
-                                                                                                                    value="<?php echo set_value('Q9F2'); ?>"></textarea>
+                                                                                                                type="text"
+                                                                                                                rows="5"
+                                                                                                                id="Q9F2"
+                                                                                                                name="Q9F2"
+                                                                                                                placeholder="<?php if (isset($data['Q9F2'])) echo $data['Q9F2'] ?>"
+                                                                                                                value="<?php echo set_value('Q9F2'); ?>"></textarea>
                                                                                                             <br>
                                                                                                         </div>
-                                                                                                        <?php
-                                                                                                    }
-                                                                                                ?>
+        <?php
+    }
+?>
                                                                                                 <div class="form-group"
                                                                                                      id="Q9F2"
                                                                                                      style="display: none;">
                                                                                                     <label class="control-label"><span
-                                                                                                                class="cube">6(a)</span>Please
+                                                                                                            class="cube">6(a)</span>Please
                                                                                                         provide
                                                                                                         details:<a
-                                                                                                                class="tt"
-                                                                                                                data-tooltip="For example, Kitkat chocolate as consolation prize or food/discount coupons of Dominos/Pizza Hut"
-                                                                                                                href="#"><span
-                                                                                                                    class="badge">?</span></a></label>
+                                                                                                            class="tt"
+                                                                                                            data-tooltip="For example, Kitkat chocolate as consolation prize or food/discount coupons of Dominos/Pizza Hut"
+                                                                                                            href="#"><span
+                                                                                                                class="badge">?</span></a></label>
                                                                                                     <textarea
-                                                                                                            type="text"
-                                                                                                            rows="5"
-                                                                                                            id="Q9F2"
-                                                                                                            name="Q9F2"
-                                                                                                            placeholder="<?php if (isset($data['Q9F2'])) echo $data['Q9F2'] ?>"
-                                                                                                            value="<?php echo set_value('Q9F2'); ?>"></textarea>
+                                                                                                        type="text"
+                                                                                                        rows="5"
+                                                                                                        id="Q9F2"
+                                                                                                        name="Q9F2"
+                                                                                                        placeholder="<?php if (isset($data['Q9F2'])) echo $data['Q9F2'] ?>"
+                                                                                                        value="<?php echo set_value('Q9F2'); ?>"></textarea>
                                                                                                     <br>
                                                                                                 </div>
                                                                                                 <div class="form-group">
                                                                                                     <label class="control-label"><span
-                                                                                                                class="cube">7</span>Does
+                                                                                                            class="cube">7</span>Does
                                                                                                         the
                                                                                                         school
                                                                                                         distribute
@@ -2036,49 +2020,49 @@
                                                                                                         </li>
                                                                                                     </ul>
                                                                                                 </div>
-                                                                                                <?php
-                                                                                                if (isset($data['Q10F1']))
-                                                                                                    if ($data['Q10F1'] == 'Y') {
-                                                                                                        ?>
+<?php
+if (isset($data['Q10F1']))
+    if ($data['Q10F1'] == 'Y') {
+        ?>
                                                                                                         <div class="form-group"
                                                                                                              id="Q10F2">
                                                                                                             <label class="control-label"><span
-                                                                                                                        class="cube">7(a)</span>Please
+                                                                                                                    class="cube">7(a)</span>Please
                                                                                                                 provide
                                                                                                                 the
                                                                                                                 names: <a class="tt" data-tooltip="For example, Fanta, small packets of chips or Kurkure, etc."><span class="badge">?</span></a></label>
                                                                                                             <textarea
-                                                                                                                    type="text"
-                                                                                                                    id="Q10F2"
-                                                                                                                    rows="5"
-                                                                                                                    name="Q10F2"
-                                                                                                                    placeholder="<?php if (isset($data['Q10F2'])) echo $data['Q10F2'] ?>"
-                                                                                                                    value="<?php echo set_value('Q10F2'); ?>"></textarea>
+                                                                                                                type="text"
+                                                                                                                id="Q10F2"
+                                                                                                                rows="5"
+                                                                                                                name="Q10F2"
+                                                                                                                placeholder="<?php if (isset($data['Q10F2'])) echo $data['Q10F2'] ?>"
+                                                                                                                value="<?php echo set_value('Q10F2'); ?>"></textarea>
                                                                                                             <br>
                                                                                                         </div>
-                                                                                                        <?php
-                                                                                                    }
-                                                                                                ?>
+        <?php
+    }
+?>
                                                                                                 <div class="form-group"
                                                                                                      id="Q10F2"
                                                                                                      style="display: none;">
                                                                                                     <label class="control-label"><span
-                                                                                                                class="cube">7(a)</span>Please
+                                                                                                            class="cube">7(a)</span>Please
                                                                                                         provide
                                                                                                         the
                                                                                                         names: <a class="tt" data-tooltip="For example, Fanta, small packets of chips or Kurkure, etc."><span class="badge">?</span></a></label>
                                                                                                     <textarea
-                                                                                                            type="text"
-                                                                                                            id="Q10F2"
-                                                                                                            rows="5"
-                                                                                                            name="Q10F2"
-                                                                                                            placeholder="<?php if (isset($data['Q10F2'])) echo $data['Q10F2'] ?>"
-                                                                                                            value="<?php echo set_value('Q10F2'); ?>"></textarea>
+                                                                                                        type="text"
+                                                                                                        id="Q10F2"
+                                                                                                        rows="5"
+                                                                                                        name="Q10F2"
+                                                                                                        placeholder="<?php if (isset($data['Q10F2'])) echo $data['Q10F2'] ?>"
+                                                                                                        value="<?php echo set_value('Q10F2'); ?>"></textarea>
                                                                                                     <br>
                                                                                                 </div>
                                                                                                 <div class="form-group">
                                                                                                     <label class="control-label"><span
-                                                                                                                class="cube">8</span>Are
+                                                                                                            class="cube">8</span>Are
                                                                                                         your
                                                                                                         school
                                                                                                         events
@@ -2106,61 +2090,61 @@
                                                                                                                        name="Q11F1"
                                                                                                                        onclick="ComputeBanners(2)"
                                                                                                                        value="<?php echo set_value('Q11F1', 'N') ?>" <?php if (isset($data['Q11F1'])) echo $data['Q11F1'] == 'N' ? "checked" : "" ?>
-                                                                                                                /I>
-                                                                                                                No </label>
+                                                                                                                       /I>
+                                                                                                                       No </label>
                                                                                                         </li>
                                                                                                     </ul>
                                                                                                 </div>
                                                                                                 <div class="form-group"
                                                                                                      id="Q11F2"
-                                                                                                    <?php
-                                                                                                    if (isset($data['Q11F1'])) {
-                                                                                                        if ($data['Q11F1'] == 'Y') {
-                                                                                                            echo 'style="display:none;"';
-                                                                                                        } else {
-                                                                                                            echo 'style="display:block;"';
-                                                                                                        }
-                                                                                                    } else {
-                                                                                                        echo 'style="display:none;"';
-                                                                                                    }
-                                                                                                    ?>
-                                                                                                >
+<?php
+if (isset($data['Q11F1'])) {
+    if ($data['Q11F1'] == 'Y') {
+        echo 'style="display:none;"';
+    } else {
+        echo 'style="display:block;"';
+    }
+} else {
+    echo 'style="display:none;"';
+}
+?>
+                                                                                                     >
                                                                                                     <label class="control-label"><span
-                                                                                                                class="cube">8(a)</span> Please
+                                                                                                            class="cube">8(a)</span> Please
                                                                                                         provide
                                                                                                         the
                                                                                                         names
                                                                                                         of
                                                                                                         sponsors:<a
-                                                                                                                class="tt"
-                                                                                                                data-tooltip="For example Complan, Quaker Oats, Cadbury, etc."
-                                                                                                                href="#"><span
-                                                                                                                    class="badge">?</span></a></label>
+                                                                                                            class="tt"
+                                                                                                            data-tooltip="For example Complan, Quaker Oats, Cadbury, etc."
+                                                                                                            href="#"><span
+                                                                                                                class="badge">?</span></a></label>
                                                                                                     <textarea
-                                                                                                            type="text"
-                                                                                                            id="Q11F2"
-                                                                                                            rows="5"
-                                                                                                            name="Q11F2"
-                                                                                                            placeholder="<?php if (isset($data['Q11F2'])) echo $data['Q11F2'] ?>"
-                                                                                                            value="<?php echo set_value('Q11F2'); ?>"></textarea>
+                                                                                                        type="text"
+                                                                                                        id="Q11F2"
+                                                                                                        rows="5"
+                                                                                                        name="Q11F2"
+                                                                                                        placeholder="<?php if (isset($data['Q11F2'])) echo $data['Q11F2'] ?>"
+                                                                                                        value="<?php echo set_value('Q11F2'); ?>"></textarea>
                                                                                                     <br>
                                                                                                 </div>
                                                                                                 <div class="form-group"
                                                                                                      id="Q11F3"
-                                                                                                    <?php
-                                                                                                    if (isset($data['Q11F1'])) {
-                                                                                                        if ($data['Q11F1'] == 'Y') {
-                                                                                                            echo 'style="display:none;"';
-                                                                                                        } else {
-                                                                                                            echo 'style="display:block;"';
-                                                                                                        }
-                                                                                                    } else {
-                                                                                                        echo 'style="display:none;"';
-                                                                                                    }
-                                                                                                    ?>
-                                                                                                >
+<?php
+if (isset($data['Q11F1'])) {
+    if ($data['Q11F1'] == 'Y') {
+        echo 'style="display:none;"';
+    } else {
+        echo 'style="display:block;"';
+    }
+} else {
+    echo 'style="display:none;"';
+}
+?>
+                                                                                                     >
                                                                                                     <label class="control-label"><span
-                                                                                                                class="cube">8(b)</span>Are
+                                                                                                            class="cube">8(b)</span>Are
                                                                                                         their
                                                                                                         banners,
                                                                                                         brochures,
@@ -2187,8 +2171,8 @@
                                                                                                                        id="Q11F3"
                                                                                                                        name="Q11F3"
                                                                                                                        value="<?php echo set_value('Q11F3', 'N') ?>" <?php if (isset($data['Q11F3'])) echo $data['Q11F3'] == 'N' ? "checked" : "" ?>
-                                                                                                                /I>
-                                                                                                                No </label>
+                                                                                                                       /I>
+                                                                                                                       No </label>
                                                                                                         </li>
                                                                                                     </ul>
                                                                                                 </div>
@@ -2229,6 +2213,23 @@
                                                                                                     FILES </button>
                                                                                                 <br>
                                                                                             </div>
+                                                                                            <table width="100%" class="question uploadedfiles">
+                                                                                                            <thead>
+                                                                                                                <tr>
+                                                                                                                    <th>File name</th>
+                                                                                                                    <th>Action</th>
+                                                                                                                </tr>
+                                                                                                            </thead>
+                                                                                                            <tbody>
+<?php foreach ($files as $f) { ?>
+                                                                                                                    <tr id="index<?php echo $f->id; ?>">
+    <?php $name = str_replace(" ", "_", $f->name . "_Audit_Team_doing_Survey_"); ?>
+                                                                                                                        <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                                                                                                                        <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+                                                                                                                    </tr>
+<?php } ?>
+                                                                                                            </tbody>
+                                                                                                        </table>
                                                                                             <div class="form-group">
                                                                                                 <label>
                                                                                                     <h6> Task
@@ -2239,7 +2240,7 @@
                                                                                             </div>
                                                                                             <div class="form-group">
                                                                                                 <label class="control-label"><span
-                                                                                                            class="cube">9</span> Does
+                                                                                                        class="cube">9</span> Does
                                                                                                     your
                                                                                                     school
                                                                                                     measure
@@ -2270,19 +2271,19 @@
                                                                                             </div>
                                                                                             <div class="form-group"
                                                                                                  id="Q12F2"
-                                                                                                <?php
-                                                                                                if (isset($data['Q12F1'])) {
-                                                                                                    if ($data['Q12F1'] == 'N') {
-                                                                                                        echo 'style="display:none;"';
-                                                                                                    } else {
-                                                                                                        echo 'style="display:block;"';
-                                                                                                    }
-                                                                                                } else {
-                                                                                                    echo 'style="display:none;"';
-                                                                                                }
-                                                                                                ?> >
+<?php
+if (isset($data['Q12F1'])) {
+    if ($data['Q12F1'] == 'N') {
+        echo 'style="display:none;"';
+    } else {
+        echo 'style="display:block;"';
+    }
+} else {
+    echo 'style="display:none;"';
+}
+?> >
                                                                                                 <label class="control-label"><span
-                                                                                                            class="cube">9(a)</span>How
+                                                                                                        class="cube">9(a)</span>How
                                                                                                     regularly
                                                                                                     is
                                                                                                     height
@@ -2305,31 +2306,31 @@
                                                                                                                 <input type="radio"
                                                                                                                        name="Q12F2"
                                                                                                                        value="<?php echo set_value('Q12F2', 2) ?>" <?php if (isset($data['Q12F2'])) echo $data['Q12F2'] == 2 ? "checked" : "" ?>
-                                                                                                                /I>
-                                                                                                                Quarterly </label>
+                                                                                                                       /I>
+                                                                                                                       Quarterly </label>
                                                                                                         </li>
                                                                                                         <li>
                                                                                                             <label class="radio-inline text-gray">
                                                                                                                 <input type="radio"
                                                                                                                        name="Q12F2"
                                                                                                                        value="<?php echo set_value('Q12F2', 3) ?>" <?php if (isset($data['Q12F2'])) echo $data['Q12F2'] == 3 ? "checked" : "" ?>
-                                                                                                                /I>
-                                                                                                                Bi-annually </label>
+                                                                                                                       /I>
+                                                                                                                       Bi-annually </label>
                                                                                                         </li>
                                                                                                         <li>
                                                                                                             <label class="radio-inline text-gray">
                                                                                                                 <input type="radio"
                                                                                                                        name="Q12F2"
                                                                                                                        value="<?php echo set_value('Q12F2', 4) ?>" <?php if (isset($data['Q12F2'])) echo $data['Q12F2'] == 4 ? "checked" : "" ?>
-                                                                                                                /I>
-                                                                                                                Annually </label>
+                                                                                                                       /I>
+                                                                                                                       Annually </label>
                                                                                                         </li>
                                                                                                     </ul>
                                                                                                 </div>
                                                                                             </div>
                                                                                             <div class="form-group">
                                                                                                 <label class="control-label"><span
-                                                                                                            class="cube">10</span>Is
+                                                                                                        class="cube">10</span>Is
                                                                                                     cooking
                                                                                                     part of
                                                                                                     any
@@ -2359,34 +2360,34 @@
                                                                                             </div>
                                                                                             <div class="form-group"
                                                                                                  id="Q13F2"
-                                                                                                <?php
-                                                                                                if (isset($data['Q13F1'])) {
-                                                                                                    if ($data['Q13F1'] == 'N') {
-                                                                                                        echo 'style="display:none;"';
-                                                                                                    } else {
-                                                                                                        echo 'style="display:block"';
-                                                                                                    }
-                                                                                                } else
-                                                                                                    echo 'style="display:none;"';
-                                                                                                ?>
-                                                                                            >
+<?php
+if (isset($data['Q13F1'])) {
+    if ($data['Q13F1'] == 'N') {
+        echo 'style="display:none;"';
+    } else {
+        echo 'style="display:block"';
+    }
+} else
+    echo 'style="display:none;"';
+?>
+                                                                                                 >
                                                                                                 <label for="username"
                                                                                                        class="control-label"><span
-                                                                                                            class="cube">10(a)</span>If
+                                                                                                        class="cube">10(a)</span>If
                                                                                                     yes,
                                                                                                     please
                                                                                                     share
                                                                                                     the
                                                                                                     details</label>
                                                                                                 <textarea
-                                                                                                        type="text"
-                                                                                                        rows="5"
-                                                                                                        id="Q13F2"
-                                                                                                        name="Q13F2"
-                                                                                                        placeholder="<?php if (isset($data['Q13F2'])) echo $data['Q13F2'] ?>"
-                                                                                                        value="<?php echo set_value('Q13F2'); ?>">
+                                                                                                    type="text"
+                                                                                                    rows="5"
+                                                                                                    id="Q13F2"
+                                                                                                    name="Q13F2"
+                                                                                                    placeholder="<?php if (isset($data['Q13F2'])) echo $data['Q13F2'] ?>"
+                                                                                                    value="<?php echo set_value('Q13F2'); ?>">
 
-                                                                                                                              </textarea>
+                                                                                                </textarea>
                                                                                             </div>
                                                                                             <div class="form-group">
                                                                                                 <label class="control-label">Please
@@ -2425,11 +2426,29 @@
                                                                                                 exceed 500
                                                                                                 KB.<br>
                                                                                                 <div class="clearfix"> &nbsp; </div>
-                                                                                                <button class="btn uploadbtn upload" data-id="Audit Team Doing Servey" data-toggle="modal"
+                                                                                                <button class="btn uploadbtn upload" data-id="UPPF" data-toggle="modal"
                                                                                                         data-target="#airModal" type="button"> UPLOAD FILES </button>
                                                                                                 <br>
                                                                                                 <br>
                                                                                             </div>
+                                                                                                    <div class="clearfix">&nbsp;</div>
+                                                                                                        <table width="100%" class="question uploadedfiles">
+                                                                                                            <thead>
+                                                                                                                <tr>
+                                                                                                                    <th>File name</th>
+                                                                                                                    <th>Action</th>
+                                                                                                                </tr>
+                                                                                                            </thead>
+                                                                                                            <tbody>
+<?php foreach ($uppc as $u) { ?>
+                                                                                                                    <tr id="index<?php echo $u->id; ?>">
+    <?php $name = str_replace(" ", "_", $f->name . "_UPPF_"); ?>
+                                                                                                                        <td class="upload edit"><?php echo str_replace($name, "", $u->file_name); ?></td>
+                                                                                                                        <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $u->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+                                                                                                                    </tr>
+<?php } ?>
+                                                                                                            </tbody>
+                                                                                                        </table>
                                                                                             <div class="text-center">
                                                                                                 <button type="button"
                                                                                                         class="org-btn"
@@ -2439,7 +2458,7 @@
                                                                                                         id="foodnext"
                                                                                                         value="movenext"> Next </button>
                                                                                                 <button type="button" class="org-btn submit button" id="foodsave"> Save and Resume Later</button>
-                                                                                                <?php echo form_close(); ?> </div>
+<?php echo form_close(); ?> </div>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -2448,7 +2467,7 @@
                                                                     </div>
                                                                 </div>
                                                                 <!-- /.container -->
-                                                                <?php $this->load->view('footer'); ?>
+<?php $this->load->view('footer'); ?>
                                                                 <style type="text/css">
                                                                     .text-gray {
                                                                         color: #666666 !important;
@@ -2502,5 +2521,35 @@
                                                                                 }
                                                                             });
                                                                         });
+                                                                        
+                                                                        //delete air files
+                                                                            $('body').on('click', '.air-delete-files', function (data) {
+                                                                                var test = confirm("Are you sure you want to delete this file");
+                                                                                if (test == true)
+                                                                                {
+                                                                                    var divId = $(this).attr('data-id');
+                                                                                    $.ajax({
+                                                                                        url: '<?php echo base_url('upload_files/deletFiles') ?>',
+                                                                                        type: 'POST',
+                                                                                        data: {id: $(this).attr('data-id')},
+                                                                                        success: function (data)
+                                                                                        {
+                                                                                            if (data == "success")
+                                                                                            {
+                                                                                                console.log('index' + divId);
+                                                                                                $('#msg').html('<div class="alert alert-success">' +
+                                                                                                        '<strong>&#10004; Success!</strong> Files deleted successfully.' +
+                                                                                                        '</div>');
+                                                                                                $('#index' + divId).html('');
+                                                                                            } else if (data == "error")
+                                                                                            {
+                                                                                                $('#msg').html('<div class="alert alert-danger">' +
+                                                                                                        '<strong>&#x2716; Error!</strong> There is an error deleting your files.' +
+                                                                                                        '</div>');
+                                                                                            }
+                                                                                        }
+                                                                                    });
+                                                                                }
+                                                                            });
                                                                     });
                                                                 </script>
