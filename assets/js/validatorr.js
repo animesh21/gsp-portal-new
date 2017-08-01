@@ -328,7 +328,7 @@ $(document).ready(function(e){
             e.preventDefault();
         }
 
-   });
+    });
 
     $("#Q6E5S3").keypress(function(e){
         var patt = /^[0-5]$/g;
@@ -2514,6 +2514,7 @@ function PrimaryDetails()
 
 }
 
+
 function details2()
 {
     var D1 =  document.getElementById("S3D1");
@@ -2881,6 +2882,387 @@ function details2()
 
 
 
+
+}
+
+function PrimaryDetails2()
+{
+    var D1 =  document.getElementById("S3D1");
+    var P1 = document.getElementById("S3P1");
+    var L1 = document.getElementById("S3L1");
+    var C1 = document.getElementById("S3C1");
+    var E1 = document.getElementById("S3E1");
+    var H1 = document.getElementById("S3H1");
+    var B1 = document.getElementById("S3B1");
+
+    var D2 =  document.getElementById("S3D2");
+    var P2 = document.getElementById("S3P2");
+    var L2 = document.getElementById("S3L2");
+    var C2 = document.getElementById("S3C2");
+    var E2 = document.getElementById("S3E2");
+    var H2 = document.getElementById("S3H2");
+    var B2 = document.getElementById("S3B2");
+
+    var D3 =  document.getElementById("S3D3");
+    var P3 = document.getElementById("S3P3");
+    var L3 = document.getElementById("S3L3");
+    var C3 = document.getElementById("S3C3");
+    var E3 = document.getElementById("S3E3");
+    var H3 = document.getElementById("S3H3");
+    var B3 = document.getElementById("S3B3");
+
+    var D4 =  document.getElementById("S3D4");
+    var P4 = document.getElementById("S3P4");
+    var L4 = document.getElementById("S3L4");
+    var C4 = document.getElementById("S3C4");
+    var E4 = document.getElementById("S3E4");
+    var H4 = document.getElementById("S3H4");
+    var B4 = document.getElementById("S3B4");
+
+    var D5 =  document.getElementById("S3D5");
+    var P5 = document.getElementById("S3P5");
+    var L5 = document.getElementById("S3L5");
+    var C5 = document.getElementById("S3C5");
+    var E5 = document.getElementById("S3E5");
+    var H5 = document.getElementById("S3H5");
+    var B5 = document.getElementById("S3B5");
+
+    D1 = parseFloat(D1.value);
+    P1 = parseFloat(P1.value);
+    L1  = parseFloat(L1.value);
+    C1 = parseFloat(C1.value);
+    E1 = parseFloat(E1.value);
+    H1 = parseFloat(H1.value);
+    B1 = parseFloat(B1.value);
+    D11 = parseFloat(D1.placeholder);
+    P11 = parseFloat(P1.placeholder);
+    L11  = parseFloat(L1.placeholder);
+    C11 = parseFloat(C1.placeholder);
+    E11  = parseFloat(E1.placeholder);
+    H11 = parseFloat(H1.placeholder);
+    B11 = parseFloat(B1.placeholder);
+
+    D2 = parseFloat(D2.value);
+    P2 = parseFloat(P2.value);
+    L2  = parseFloat(L2.value);
+    C2 = parseFloat(C2.value);
+    E2 = parseFloat(E2.value);
+    H2 = parseFloat(H2.value);
+    B2 = parseFloat(B2.value);
+
+    D21 = parseFloat(D2.placeholder);
+    P21 = parseFloat(P2.placeholder);
+    L21  = parseFloat(L2.placeholder);
+    C21 = parseFloat(C2.placeholder);
+    E21  = parseFloat(E2.placeholder);
+    H21 = parseFloat(H2.placeholder);
+    B21 = parseFloat(B2.placeholder);
+
+    D3 = parseFloat(D3.value);
+    P3 = parseFloat(P3.value);
+    L3  = parseFloat(L3.value);
+    C3 = parseFloat(C3.value);
+    E3 = parseFloat(E3.value);
+    H3 = parseFloat(H3.value);
+    B3 = parseFloat(B3.value);
+
+    D31 = parseFloat(D3.placeholder);
+    P31 = parseFloat(P3.placeholder);
+    L31  = parseFloat(L3.placeholder);
+    C31 = parseFloat(C3.placeholder);
+    E31  = parseFloat(E3.placeholder);
+    H31 = parseFloat(H3.placeholder);
+    B31 = parseFloat(B3.value);
+
+    D4 = parseFloat(D4.value);
+    P4 = parseFloat(P4.value);
+    L4  = parseFloat(L4.value);
+    C4 = parseFloat(C4.value);
+    E4 = parseFloat(E4.value);
+    H4 = parseFloat(H4.value);
+    B4 = parseFloat(B4.value);
+    D41 = parseFloat(D4.placeholder);
+    P41 = parseFloat(P4.placeholder);
+    L41  = parseFloat(L4.placeholder);
+    C41 = parseFloat(C4.placeholder);
+    E41  = parseFloat(E4.placeholder);
+    H41 = parseFloat(H4.placeholder);
+    B41 = parseFloat(B4.placeholder);
+
+
+    if(isNaN(D1))
+        if(isNaN(D11))
+            D1 = 0;
+        else
+            D1 = D11;
+    if(isNaN(P1))
+        if(isNaN(P11))
+            P1 = 0;
+        else
+            P1 = P11;
+    if(isNaN(L1))
+        if(isNaN(L11))
+            L1 = 0;
+        else
+            L1 = L11;
+    if(isNaN(C1))
+        if(isNaN(C11))
+            C1 = 0;
+        else
+            C1 = C11;
+    if(isNaN(E1))
+        if(isNaN(E11))
+            E1 = 0;
+        else
+            E1 = E11;
+    if(isNaN(H1))
+        if(isNaN(H11))
+            H1 = 0;
+        else
+            H1 = H11;
+
+    if(isNaN(B1))
+        if(isNaN(B11))
+            B1 = 0;
+        else
+            B1 = B11;
+
+    if(isNaN(D2))
+        if(isNaN(D21))
+            D2 = 0;
+        else
+            D2 = D21;
+    if(isNaN(P2))
+        if(isNaN(P21))
+            P2 = 0;
+        else
+            P2 = P21;
+    if(isNaN(L2))
+        if(isNaN(L21))
+            L2 = 0;
+        else
+            L2 = L21;
+    if(isNaN(C2))
+        if(isNaN(C21))
+            C2 = 0;
+        else
+            C2 = C21;
+    if(isNaN(E2))
+        if(isNaN(E21))
+            E2 = 0;
+        else
+            E2 = E21;
+    if(isNaN(H2))
+        if(isNaN(H21))
+            H2 = 0;
+        else
+            H2 = H21;
+    if(isNaN(B2))
+        if(isNaN(B21))
+            B2 = 0;
+        else
+            B2 = B21;
+
+    if(isNaN(D3))
+        if(isNaN(D31))
+            D3 = 0;
+        else
+            D3 = D31;
+    if(isNaN(P3))
+        if(isNaN(P31))
+            P3 = 0;
+        else
+            P3 = P31;
+    if(isNaN(L3))
+        if(isNaN(L31))
+            L3 = 0;
+        else
+            L3 = L31;
+    if(isNaN(C3))
+        if(isNaN(C31))
+            C3 = 0;
+        else
+            C3 = C31;
+    if(isNaN(E3))
+        if(isNaN(E31))
+            E3 = 0;
+        else
+            E3 = E31;
+    if(isNaN(H3))
+        if(isNaN(H31))
+            H3 = 0;
+        else
+            H3 = H31;
+    if(isNaN(B3))
+        if(isNaN(B31))
+            B3 = 0;
+        else
+            B3 = B31;
+
+    if(isNaN(D4))
+        if(isNaN(D41))
+            D4 = 0;
+        else
+            D4 = D41;
+    if(isNaN(P4))
+        if(isNaN(P41))
+            P4 = 0;
+        else
+            P4 = P41;
+    if(isNaN(L4))
+        if(isNaN(L41))
+            L4 = 0;
+        else
+            L4 = L41;
+    if(isNaN(C4))
+        if(isNaN(C41))
+            C4 = 0;
+        else
+            C4 = C41;
+    if(isNaN(E4))
+        if(isNaN(E41))
+            E4 = 0;
+        else
+            E4 = E41;
+    if(isNaN(H4))
+        if(isNaN(H41))
+            H4 = 0;
+        else
+            H4 = H41;
+    if(isNaN(B4))
+        if(isNaN(B41))
+            B4 = 0;
+        else
+            B4 = B41;
+
+
+
+
+    total_bus = D1 + P1 + L1 + C1 + E1 + H1 ;
+    total_cars = D2 + P2 + L2 + C2 + E2 + H2 ;
+    total_vans = D3 + P3 + L3 + C3 + E3 + H3 ;
+    total_other = D4 + P4 + L4 + C4 + E4 + H4 ;
+    $('#S3B1').val(total_bus);
+    console.log("Total Bus:"+total_bus);
+
+    current_bus = parseInt(document.getElementById('b1').value);
+    current_car = parseInt(document.getElementById('c1').value);
+    current_vans = parseInt(document.getElementById('v1').value);
+    current_others = parseInt(document.getElementById('o1').value);
+
+    current_bus1 = parseInt(document.getElementById('b1').placeholder);
+    current_car1 = parseInt(document.getElementById('c1').placeholder);
+    current_vans1 = parseInt(document.getElementById('v1').placeholder);
+    current_others1 = parseInt(document.getElementById('o1').placeholder);
+
+    if(isNaN(current_bus))
+        if(isNaN(current_bus1))
+            current_bus = 0;
+        else
+            current_bus = current_bus1;
+
+    if(isNaN(current_car))
+        if(isNaN(current_car1))
+            current_car = 0;
+        else
+            current_car = current_car1;
+
+    if(isNaN(current_vans))
+        if(isNaN(current_vans1))
+            current_vans = 0;
+        else
+            current_vans = current_vans1;
+
+    if(isNaN(current_others))
+        if(isNaN(current_others1))
+            current_others = 0;
+        else
+            current_others = current_others1;
+
+
+
+    if(total_bus > current_bus)
+    {
+        alert("No. is greater than entered in question.")
+        $('#S3D1').val(0);
+        $('#S3P1').val(0);
+        $('#S3L1').val(0);
+        $('#S3C1').val(0);
+        $('#S3E1').val(0);
+        $('#S3H1').val(0);
+        $('#S3B1').val(0);
+        total_bus = 0;
+    }
+
+
+    if(total_cars > current_car)
+    {
+        alert("No. is greater than entered in question.")
+        $('#S3D2').val(0);
+        $('#S3P2').val(0);
+        $('#S3L2').val(0);
+        $('#S3C2').val(0);
+        $('#S3E2').val(0);
+        $('#S3H2').val(0);
+        $('#S3B2').val(0);
+        total_cars = 0;
+    }
+    else
+        $('#S3B2').val(total_cars);
+
+
+    if(total_vans > current_vans)
+    {
+        alert("No. is greater than entered in question.")
+        $('#S3D3').val(0);
+        $('#S3P3').val(0);
+        $('#S3L3').val(0);
+        $('#S3C3').val(0);
+        $('#S3E3').val(0);
+        $('#S3H3').val(0);
+        $('#S3B3').val(0);
+        total_vans = 0;
+    }
+    else
+        $('#S3B3').val(total_vans);
+
+
+    if(total_other > current_others)
+    {
+        alert("No. is greater than entered in question.")
+        $('#S3D4').val(0);
+        $('#S3P4').val(0);
+        $('#S3L4').val(0);
+        $('#S3C4').val(0);
+        $('#S3E4').val(0);
+        $('#S3H4').val(0);
+        $('#S3B4').val(0);
+        total_other = 0;
+
+    }
+    else
+        $('#S3B4').val(total_other);
+
+    var sum1 = D1 + D2 + D3 + D4 ;
+    $('#S3D5').val(sum1);
+
+    var sum2 = P1 + P2 + P3 + P4 ;
+    $('#S3P5').val(sum2);
+
+    var sum3 = L1 + L2 + L3 + L4 ;
+    $('#S3L5').val(sum3);
+
+    var sum4 = C1 + C2 + C3 + C4 ;
+    $('#S3C5').val(sum4);
+
+    var sum5 = E1 + E2 + E3 + E4 ;
+    $('#S3E5').val(sum5);
+
+    var sum6 = H1 + H2 + H3 + H4 ;
+    $('#S3H5').val(sum6);
+
+    var sum7 = B1 + B2 + B3 + B4;
+    $("#S3B5").val(sum7);
 
 }
 function computePercent()

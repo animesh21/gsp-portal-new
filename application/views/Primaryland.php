@@ -407,81 +407,81 @@
                        value="<?php echo set_value('Q3L10S3'); ?>"/>
             </div>
         </div>
-            <div class="form-group">
-                <label for="username" class="control-label"><h6> Task 2: Identify the types of areas in your school.</h6></label>
-                <div class="form-group-1 row">
-                    <div class="col-xs-5">
-                        <label for="ex1">Types of Area</label>
-                    </div>
-                    <div class="col-xs-5">
-                        <label for="ex2"> Numbers</label>
-                    </div>
+        <div class="form-group">
+            <label for="username" class="control-label"><h6> Task 2: Identify the types of areas in your school.</h6></label>
+            <div class="form-group-1 row">
+                <div class="col-xs-5">
+                    <label for="ex1">Types of Area</label>
                 </div>
-                <div class="form-group1 row">
-                    <div class="col-xs-5">
-                        <label for="ex3">No. of Playgrounds</label>
-                    </div>
-                    <div class="col-xs-5">
-                        <input class="form-control space-textbox space-textbox" id="Q4L1" type="number" name="Q4L1" placeholder="<?php if (isset($data['Q4L1'])) echo $data['Q4L1'] ?>" value="<?php echo set_value('Q4L1'); ?>"/>
-                    </div>
+                <div class="col-xs-5">
+                    <label for="ex2"> Numbers</label>
                 </div>
-                <div class="form-group1 row">
-                    <div class="col-xs-5">
-                        <label for="ex3">No. of <i>Kachcha</i> (unpaved) playgrounds with grass</label>
-                    </div>
-                    <div class="col-xs-5">
-                        <input class="form-control space-textbox space-textbox" id="Q4L2" type="number" name="Q4L2" placeholder="<?php if (isset($data['Q4L2'])) echo $data['Q4L2'] ?>" value="<?php echo set_value('Q4L2'); ?>"/>
-                    </div>
+            </div>
+            <div class="form-group1 row">
+                <div class="col-xs-5">
+                    <label for="ex3">No. of Playgrounds</label>
                 </div>
-                <div class="form-group1 row">
-                    <div class="col-xs-5">
-                        <label for="ex3">No. of <i>Kachcha</i> (unpaved) playgrounds with grass</label>
-                    </div>
-                    <div class="col-xs-5">
-                        <input class="form-control space-textbox space-textbox" id="Q4L3" type="number" name="Q4L3" placeholder="<?php if (isset($data['Q4L3'])) echo $data['Q4L3'] ?>" value="<?php echo set_value('Q4L3'); ?>"/>
-                    </div>
+                <div class="col-xs-5">
+                    <input class="form-control space-textbox space-textbox" id="Q4L1" type="number" name="Q4L1" placeholder="<?php if (isset($data['Q4L1'])) echo $data['Q4L1'] ?>" value="<?php echo set_value('Q4L1'); ?>"/>
                 </div>
-                <div class="form-group1 row">
-                    <div class="col-xs-5">
-                        <label for="ex3">No. of <i>Pucca</i> (paved) playgrounds</label>
-                    </div>
-                    <div class="col-xs-5">
-                        <input class="form-control space-textbox space-textbox" id="Q4L4" type="number" name="Q4L4" placeholder="<?php if (isset($data['Q4L4'])) echo $data['Q4L4'] ?>" value="<?php echo set_value('Q4L4'); ?>"/>
-                    </div>
+            </div>
+            <div class="form-group1 row">
+                <div class="col-xs-5">
+                    <label for="ex3">No. of <i>Kachcha</i> (unpaved) playgrounds with grass</label>
                 </div>
-                <div class="form-group1 row">
-                    <div class="col-xs-5">
-                        <label for="ex3">No. of constructed buildings - Academic</label>
-                    </div>
-                    <div class="col-xs-5">
-                        <input class="form-control space-textbox space-textbox" id="Q4L5" type="number" name="Q4L5" placeholder="<?php if (isset($data['Q4L5'])) echo $data['Q4L5'] ?>" value="<?php echo set_value('Q4L5'); ?>"/>
-                    </div>
+                <div class="col-xs-5">
+                    <input class="form-control space-textbox space-textbox" id="Q4L2" type="number" name="Q4L2" placeholder="<?php if (isset($data['Q4L2'])) echo $data['Q4L2'] ?>" value="<?php echo set_value('Q4L2'); ?>"/>
                 </div>
-                <div class="form-group1 row">
-                    <div class="col-xs-5">
-                        <label for="ex3">No. of constructed buildings – Official</label>
-                    </div>
-                    <div class="col-xs-5">
-                        <input class="form-control space-textbox space-textbox" id="Q4L6" type="number" name="Q4L6" placeholder="<?php if (isset($data['Q4L6'])) echo $data['Q4L6'] ?>" value="<?php echo set_value('Q4L6'); ?>"/>
-                    </div>
+            </div>
+            <div class="form-group1 row">
+                <div class="col-xs-5">
+                    <label for="ex3">No. of <i>Kachcha</i> (unpaved) playgrounds with grass</label>
                 </div>
-                <div class="form-group1 row">
-                    <div class="col-xs-5">
-                        <label for="ex3">No. of floors (does not include ground floor) <a class="tt" data-tooltip="Please give no. of floors only." style="position:relative; top:-5px;"><span class="badge">?</span></a></label>
-                    </div>
-                    <div class="col-xs-5">
-                        <input class="form-control space-textbox space-textbox" id="Q4L7" type="number" name="Q4L7" placeholder="<?php if (isset($data['Q4L7'])) echo $data['Q4L7'] ?>" value="<?php echo set_value('Q4L7'); ?>"/>
-                    </div>
+                <div class="col-xs-5">
+                    <input class="form-control space-textbox space-textbox" id="Q4L3" type="number" name="Q4L3" placeholder="<?php if (isset($data['Q4L3'])) echo $data['Q4L3'] ?>" value="<?php echo set_value('Q4L3'); ?>"/>
                 </div>
-                <div class="form-group1 row">
-                    <div class="col-xs-5">
-                        <label for="ex3">Rooftop/Terrace Gardens</label>
-                    </div>
-                    <div class="col-xs-5">
-                        <input class="form-control space-textbox space-textbox" id="Q4L8" type="number" name="Q4L8" placeholder="<?php if (isset($data['Q4L8'])) echo $data['Q4L8'] ?>" value="<?php echo set_value('Q4L8'); ?>"/>
-                    </div>
+            </div>
+            <div class="form-group1 row">
+                <div class="col-xs-5">
+                    <label for="ex3">No. of <i>Pucca</i> (paved) playgrounds</label>
                 </div>
-                <!--            <div class="form-group row">
+                <div class="col-xs-5">
+                    <input class="form-control space-textbox space-textbox" id="Q4L4" type="number" name="Q4L4" placeholder="<?php if (isset($data['Q4L4'])) echo $data['Q4L4'] ?>" value="<?php echo set_value('Q4L4'); ?>"/>
+                </div>
+            </div>
+            <div class="form-group1 row">
+                <div class="col-xs-5">
+                    <label for="ex3">No. of constructed buildings - Academic</label>
+                </div>
+                <div class="col-xs-5">
+                    <input class="form-control space-textbox space-textbox" id="Q4L5" type="number" name="Q4L5" placeholder="<?php if (isset($data['Q4L5'])) echo $data['Q4L5'] ?>" value="<?php echo set_value('Q4L5'); ?>"/>
+                </div>
+            </div>
+            <div class="form-group1 row">
+                <div class="col-xs-5">
+                    <label for="ex3">No. of constructed buildings – Official</label>
+                </div>
+                <div class="col-xs-5">
+                    <input class="form-control space-textbox space-textbox" id="Q4L6" type="number" name="Q4L6" placeholder="<?php if (isset($data['Q4L6'])) echo $data['Q4L6'] ?>" value="<?php echo set_value('Q4L6'); ?>"/>
+                </div>
+            </div>
+            <div class="form-group1 row">
+                <div class="col-xs-5">
+                    <label for="ex3">No. of floors (does not include ground floor) <a class="tt" data-tooltip="Please give no. of floors only." style="position:relative; top:-5px;"><span class="badge">?</span></a></label>
+                </div>
+                <div class="col-xs-5">
+                    <input class="form-control space-textbox space-textbox" id="Q4L7" type="number" name="Q4L7" placeholder="<?php if (isset($data['Q4L7'])) echo $data['Q4L7'] ?>" value="<?php echo set_value('Q4L7'); ?>"/>
+                </div>
+            </div>
+            <div class="form-group1 row">
+                <div class="col-xs-5">
+                    <label for="ex3">Rooftop/Terrace Gardens</label>
+                </div>
+                <div class="col-xs-5">
+                    <input class="form-control space-textbox space-textbox" id="Q4L8" type="number" name="Q4L8" placeholder="<?php if (isset($data['Q4L8'])) echo $data['Q4L8'] ?>" value="<?php echo set_value('Q4L8'); ?>"/>
+                </div>
+            </div>
+            <!--            <div class="form-group row">
                                       <div class="col-xs-3">
                                         <label for="ex3">Green cover on exposed roof & terrace</label>
                                       </div>
@@ -489,46 +489,84 @@
                                         <input class="form-control space-textbox" id="ex2" type="number" name="Q4L9" placeholder="<?php if (isset($data['Q4L9'])) echo $data['Q4L9'] ?>" value="<?php echo set_value('Q4L9'); ?>"/>
                                       </div>
                                     </div>-->
-            </div>
-            <div class="form-group">
-                <label>
-                    <h6>Task 3: Explore the types of plants and animals in your school</h6>
-                </label>
-                <br/>
-                This task will help you to understand the number and variety of plants and animals that your school campus supports. Identify and count the various species of plants and animals in your school.<br>
-                <label>To collect data:</label>
-                <br>
-                Make two teams of students. One for plant species and the other for animal species. Get the school gardener and the teacher to accompany them. Count plant species and animal species that are visible to the naked eye.<br>
-                <!--            Native (definition): a species that occurs naturally within a region, either evolving there or arriving and becoming established without human assistance<br>-->
-                <!--            Exotic (definition): An exotic plant or animal, which is invasive, is a species that meets the following conditions:<br>-->
-                <!--            1. Originate outside the local area.<br>
-                                            2. Have the potential to spread long distances on its own.<br>
-                                            3. Once established, have the potential to out-compete native species in the wild.<br>-->
-            </div>
-            <div class="form-group">
-                <label for="username" class="control-label"><span class="cube">2</span>How many types of plants are there in your school?</label>
-                <table class="table" style="width:700px;">
-                    <tr>
-                        <td><label></label>
-                        </td>
-                        <td><label>Flowering</label>
-                        </td>
-                        <td><label>Fruiting</label>
-                        </td>
-                        <td><label>Total</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><label> Plants</label>
-                        </td>
-                        <td><input class="form-control space-textbox" onkeyup="computeAnimal()" id="Q5L1S1" type="number" name="Q5L1S1" placeholder="<?php if (isset($data['Q5L1S1'])) echo $data['Q5L1S1'] ?>" value="<?php echo set_value('Q5L1S1'); ?>"/>
-                        </td>
-                        <td><input class="form-control space-textbox" onkeyup="computeAnimal()" id="Q5L1S2" type="number" name="Q5L1S2" placeholder="<?php if (isset($data['Q5L1S2'])) echo $data['Q5L1S2'] ?>" value="<?php echo set_value('Q5L1S2'); ?>" />
-                        </td>
-                        <td><input class="form-control space-textbox"  id="Q5L1S3" type="number" name="Q5L1S3" placeholder="<?php if (isset($data['Q5L1S3'])) echo $data['Q5L1S3'] ?>" value="<?php echo set_value('Q5L1S3'); ?>" readonly/>
-                        </td>
-                    </tr>
-                </table>
+        </div>
+        <div class="form-group">
+            <label>
+                <h6>Task 3: Explore the types of plants and animals in your school</h6>
+            </label>
+            <br/>
+            This task will help you to understand the number and variety of plants and animals that your school campus supports. Identify and count the various species of plants and animals in your school.<br>
+            <label>To collect data:</label>
+            <br>
+            Make two teams of students. One for plant species and the other for animal species. Get the school gardener and the teacher to accompany them. Count plant species and animal species that are visible to the naked eye.<br>
+            <!--            Native (definition): a species that occurs naturally within a region, either evolving there or arriving and becoming established without human assistance<br>-->
+            <!--            Exotic (definition): An exotic plant or animal, which is invasive, is a species that meets the following conditions:<br>-->
+            <!--            1. Originate outside the local area.<br>
+                                        2. Have the potential to spread long distances on its own.<br>
+                                        3. Once established, have the potential to out-compete native species in the wild.<br>-->
+        </div>
+        <div class="form-group">
+            <label for="username" class="control-label"><span class="cube">2</span>How many types of plants are there in your school?</label>
+            <table class="table" style="width:700px;">
+                <tr>
+                    <td><label></label>
+                    </td>
+                    <td><label>Flowering</label>
+                    </td>
+                    <td><label>Fruiting</label>
+                    </td>
+                    <td><label>Total</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label> Plants</label>
+                    </td>
+                    <td><input class="form-control space-textbox" onkeyup="computeAnimal()" id="Q5L1S1" type="number" name="Q5L1S1" placeholder="<?php if (isset($data['Q5L1S1'])) echo $data['Q5L1S1'] ?>" value="<?php echo set_value('Q5L1S1'); ?>"/>
+                    </td>
+                    <td><input class="form-control space-textbox" onkeyup="computeAnimal()" id="Q5L1S2" type="number" name="Q5L1S2" placeholder="<?php if (isset($data['Q5L1S2'])) echo $data['Q5L1S2'] ?>" value="<?php echo set_value('Q5L1S2'); ?>" />
+                    </td>
+                    <td><input class="form-control space-textbox"  id="Q5L1S3" type="number" name="Q5L1S3" placeholder="<?php if (isset($data['Q5L1S3'])) echo $data['Q5L1S3'] ?>" value="<?php echo set_value('Q5L1S3'); ?>" readonly/>
+                    </td>
+                </tr>
+            </table>
+            <!--              <div class="form-group row">
+                                            <div class="col-xs-3">
+                                              <label>Animals</label>
+                                            </div>
+                                            <div class="col-xs-3">
+                                              <input class="form-control space-textbox" onkeyup="computeAnimal()" id="Q5L2S1" type="number" name="Q5L2S1" placeholder="<?php if (isset($data['Q5L2S1'])) echo $data['Q5L2S1'] ?>" value="<?php echo set_value('Q5L2S1'); ?>"/>
+                                            </div>
+                                            <div class="col-xs-3">
+                                              <input class="form-control space-textbox" onkeyup="computeAnimal()" id="Q5L2S2" type="number" name="Q5L2S2" placeholder="<?php if (isset($data['Q5L2S2'])) echo $data['Q5L2S2'] ?>" value="<?php echo set_value('Q5L2S2'); ?>"/>
+                                            </div>
+                                            <div class="col-xs-3">
+                                              <input class="form-control space-textbox" id="Q5L2S3" type="number" name="Q5L2S3" placeholder="<?php if (isset($data['Q5L2S3'])) echo $data['Q5L2S3'] ?>" value="<?php echo set_value('Q5L2S3'); ?>" readonly/>
+                                            </div>
+                                          </div>-->
+        </div>
+        <div class="form-group">
+            <label for="username" class="control-label"><span class="cube">3</span>How many types of animals and birds are there in your school?</label>
+            <table class="table" style="width:700px;">
+                <tr>
+                    <td><label></label>
+                    </td>
+                    <td><label>Birds</label>
+                    </td>
+                    <td><label>Animal</label>
+                    </td>
+                    <td><label>Total</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label style="width:36px;">&nbsp;</label>
+                    </td>
+                    <td><input class="form-control space-textbox" onkeyup="computeAnimal()" id="Q5L2S1" type="number" name="Q5L2S1" placeholder="<?php if (isset($data['Q5L2S1'])) echo $data['Q5L2S1'] ?>" value="<?php echo set_value('Q5L2S1'); ?>"/>
+                    </td>
+                    <td><input class="form-control space-textbox" onkeyup="computeAnimal()" id="Q5L2S2" type="number" name="Q5L2S2" placeholder="<?php if (isset($data['Q5L2S2'])) echo $data['Q5L2S2'] ?>" value="<?php echo set_value('Q5L2S2'); ?>"/>
+                    </td>
+                    <td><input class="form-control space-textbox" id="Q5L2S3" type="number" name="Q5L2S3" placeholder="<?php if (isset($data['Q5L2S3'])) echo $data['Q5L2S3'] ?>" value="<?php echo set_value('Q5L2S3'); ?>" readonly/>
+                    </td>
+                </tr>
                 <!--              <div class="form-group row">
                                             <div class="col-xs-3">
                                               <label>Animals</label>
@@ -543,83 +581,45 @@
                                               <input class="form-control space-textbox" id="Q5L2S3" type="number" name="Q5L2S3" placeholder="<?php if (isset($data['Q5L2S3'])) echo $data['Q5L2S3'] ?>" value="<?php echo set_value('Q5L2S3'); ?>" readonly/>
                                             </div>
                                           </div>-->
-            </div>
-            <div class="form-group">
-                <label for="username" class="control-label"><span class="cube">3</span>How many types of animals and birds are there in your school?</label>
-                <table class="table" style="width:700px;">
-                    <tr>
-                        <td><label></label>
-                        </td>
-                        <td><label>Birds</label>
-                        </td>
-                        <td><label>Animal</label>
-                        </td>
-                        <td><label>Total</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><label style="width:36px;">&nbsp;</label>
-                        </td>
-                        <td><input class="form-control space-textbox" onkeyup="computeAnimal()" id="Q5L2S1" type="number" name="Q5L2S1" placeholder="<?php if (isset($data['Q5L2S1'])) echo $data['Q5L2S1'] ?>" value="<?php echo set_value('Q5L2S1'); ?>"/>
-                        </td>
-                        <td><input class="form-control space-textbox" onkeyup="computeAnimal()" id="Q5L2S2" type="number" name="Q5L2S2" placeholder="<?php if (isset($data['Q5L2S2'])) echo $data['Q5L2S2'] ?>" value="<?php echo set_value('Q5L2S2'); ?>"/>
-                        </td>
-                        <td><input class="form-control space-textbox" id="Q5L2S3" type="number" name="Q5L2S3" placeholder="<?php if (isset($data['Q5L2S3'])) echo $data['Q5L2S3'] ?>" value="<?php echo set_value('Q5L2S3'); ?>" readonly/>
-                        </td>
-                    </tr>
-                    <!--              <div class="form-group row">
-                                            <div class="col-xs-3">
-                                              <label>Animals</label>
-                                            </div>
-                                            <div class="col-xs-3">
-                                              <input class="form-control space-textbox" onkeyup="computeAnimal()" id="Q5L2S1" type="number" name="Q5L2S1" placeholder="<?php if (isset($data['Q5L2S1'])) echo $data['Q5L2S1'] ?>" value="<?php echo set_value('Q5L2S1'); ?>"/>
-                                            </div>
-                                            <div class="col-xs-3">
-                                              <input class="form-control space-textbox" onkeyup="computeAnimal()" id="Q5L2S2" type="number" name="Q5L2S2" placeholder="<?php if (isset($data['Q5L2S2'])) echo $data['Q5L2S2'] ?>" value="<?php echo set_value('Q5L2S2'); ?>"/>
-                                            </div>
-                                            <div class="col-xs-3">
-                                              <input class="form-control space-textbox" id="Q5L2S3" type="number" name="Q5L2S3" placeholder="<?php if (isset($data['Q5L2S3'])) echo $data['Q5L2S3'] ?>" value="<?php echo set_value('Q5L2S3'); ?>" readonly/>
-                                            </div>
-                                          </div>-->
-                </table>
-            </div>
-            <div class="form-group">
-                <label>
-                    <h6> Task 4: Find out if your school uses pesticides</h6>
-                </label>
-            </div>
-            <div class="form-group">
-                <label for="username" class="control-label"><span class="cube">4</span>Do you use chemical-based pesticides in your school green cover?</label>
-                <ul class="list-inline">
-                    <li>
-                        <label class="radio-inline">
-                            <input type="radio" name="Q6L1" value="<?php echo set_value('Q6L1', 'Y') ?>" <?php if (isset($data['Q6L1'])) echo $data['Q6L1'] == 'Y' ? "checked" : "" ?>>
-                            Yes </label>
-                    </li>
-                    <li>
-                        <label class="radio-inline">
-                            <input type="radio" name="Q6L1" value="<?php echo set_value('Q6L1', 'N') ?>" <?php if (isset($data['Q6L1'])) echo $data['Q6L1'] == 'N' ? "checked" : "" ?>>
-                            No </label>
-                    </li>
-                </ul>
-            </div>
-            <div class="form-group">
-                <label><h6>Upload supporting documents</h6></label>
-                <br>
-                Please upload the following supporting documents:<br>
-                <br>
-                &bull; Pictures of  <i>Kachcha</i> playground with grass<br>
-                &bull; Pictures of <i>Pucca</i> (paved) playground<br>
-                Uploaded files must be in one of the following formats: PDF Document (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg). File size per document should not exceed 500 KB. </div>
-            <button class="btn uploadbtn upload" data-id="Green Cover" data-toggle="modal" data-target="#airModal" type="button">UPLOAD FILES</button>
+            </table>
+        </div>
+        <div class="form-group">
+            <label>
+                <h6> Task 4: Find out if your school uses pesticides</h6>
+            </label>
+        </div>
+        <div class="form-group">
+            <label for="username" class="control-label"><span class="cube">4</span>Do you use chemical-based pesticides in your school green cover?</label>
+            <ul class="list-inline">
+                <li>
+                    <label class="radio-inline">
+                        <input type="radio" name="Q6L1" value="<?php echo set_value('Q6L1', 'Y') ?>" <?php if (isset($data['Q6L1'])) echo $data['Q6L1'] == 'Y' ? "checked" : "" ?>>
+                        Yes </label>
+                </li>
+                <li>
+                    <label class="radio-inline">
+                        <input type="radio" name="Q6L1" value="<?php echo set_value('Q6L1', 'N') ?>" <?php if (isset($data['Q6L1'])) echo $data['Q6L1'] == 'N' ? "checked" : "" ?>>
+                        No </label>
+                </li>
+            </ul>
+        </div>
+        <div class="form-group">
+            <label><h6>Upload supporting documents</h6></label>
             <br>
-            <div class="text-center">
-                <button type="button" id="moveprevbtn" value="moveprev" name="moveprev" accesskey="p" class="submit button">Previous</button>
-                <button type="submit" id="movenextbtn" value="movenext" name="movenext" accesskey="n" class="submit button">Next</button>
-                <button type="button" value="Submit" class="org-btn" id=""landsave>Save and Resume Later</button>
-            </div>
-            <?php echo form_close(); ?> </div>
-    </div>
+            Please upload the following supporting documents:<br>
+            <br>
+            &bull; Pictures of  <i>Kachcha</i> playground with grass<br>
+            &bull; Pictures of <i>Pucca</i> (paved) playground<br>
+            Uploaded files must be in one of the following formats: PDF Document (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg). File size per document should not exceed 500 KB. </div>
+        <button class="btn uploadbtn upload" data-id="Green Cover" data-toggle="modal" data-target="#airModal" type="button">UPLOAD FILES</button>
+        <br>
+        <div class="text-center">
+            <button type="button" id="moveprevbtn" value="moveprev" name="moveprev" accesskey="p" class="submit button">Previous</button>
+            <button type="submit" id="movenextbtn" value="movenext" name="movenext" accesskey="n" class="submit button">Next</button>
+            <button type="button" value="Submit" class="org-btn" id=""landsave>Save and Resume Later</button>
+        </div>
+        <?php echo form_close(); ?> </div>
+</div>
 </div>
 <!-- /.container -->
 <?php $this->load->view('footer'); ?>

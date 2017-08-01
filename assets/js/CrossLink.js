@@ -3,23 +3,6 @@ $(document).ready(function(){
     //alert("Tasks: Sorted based on prioprity \n 1. Make this look like GreenSchoolProgramme \n 2.Check if all javascripts are working fine and if not please rectify.\n 3. FeedBack Page No need for backed. \n 4. Checkboxes values are there even if you uncheck them and submit, Please check I could not understand this. \n 5. Ad Primary Questions, I will share the doc. Logic is there is a entry in database with ID primary, if it is Zero then school opted for primary school audit. Changes only in Land and Waste page. Just copy this page and make new view. \n 6. If you have time after this, then in nergy section there is js missing to calculate megajoules.Please make that.");
     //alert("Required files Crosslink.js and validatorr.js. \n Please test every Field out, i won't be working on this from tommorow since I will be traveling. So if you have any quires ping me.");
 
-    var energynext = false;
-    var energysavesuccess = false;
-
-    var airnext = false;
-    var airsavesuccess = false;
-
-    var foodnext = false;
-    var foodsavesuccess = false;
-
-    var landnext = false;
-    var landsavesuccess = false;
-
-    var waternext = false;
-    var watersavesuccess = false;
-
-    var wastenext = false;
-    var wastesavesuccess = false;
 
     $("#Q6E1S1").change(function(){
 
@@ -239,7 +222,6 @@ $(document).ready(function(){
         else
         {
             var x = $('#Solar').is(":checked");
-            alert("T");
             if(x == true)
             {
                 if (confirm("Please Enter Value in Solar Input Box.") == true)
@@ -554,7 +536,7 @@ $(document).ready(function(){
 
         }
 
-       
+
 
     });
 
@@ -1983,6 +1965,256 @@ $(document).ready(function(){
 
     });
 
+    $("#PrimaryEnergy").submit(function( event ) { //Energy Submit
+        var count1 = 0;
+        var count2 = 0;
+        var count3 = 0;
+
+        for(i=1;i<4;i++)
+        {
+            var id1 = "Q1EzS1".replace('z',i);
+            var id2 = "Q1EzS2".replace('z',i);
+            var id3 = "Q1EzS3".replace('z',i);
+
+            var element1 = document.getElementById(id1).value;
+            var element11 = document.getElementById(id1).placeholder;
+
+            var element2 = document.getElementById(id2).value;
+            var element21 = document.getElementById(id2).placeholder;
+
+            var element3 = document.getElementById(id3).value;
+            var element31 = document.getElementById(id3).placeholder;
+
+
+            if(element1 != "" || element11 != "")
+            {
+                count1 ++;
+            }
+            if(element2 != "" || element21 != "")
+            {
+                count2 ++;
+            }
+            if(element3 != "" || element31 != "")
+            {
+                count3 ++;
+            }
+        }
+        if(count1 == 0 && count2 == 0 && count3 == 0)
+        {
+            alert("Please enter the name of at least one teacher");
+
+            event.preventDefault();
+        }
+        var count1 = 0;
+        var count2 = 0;
+        var count3 = 0;
+
+        for(i=1;i<6;i++)
+        {
+            var id1 = "Q2EzS1".replace('z',i);
+            var id2 = "Q2EzS2".replace('z',i);
+            var id3 = "Q2EzS3".replace('z',i);
+
+            var element1 = document.getElementById(id1).value;
+            var element11 = document.getElementById(id1).placeholder;
+
+            var element2 = document.getElementById(id2).value;
+            var element21 = document.getElementById(id2).placeholder;
+
+            var element3 = document.getElementById(id3).value;
+            var element31 = document.getElementById(id3).placeholder;
+
+
+            if(element1 != "" || element11 != "")
+            {
+                count1 ++;
+            }
+            if(element2 != "" || element21 != "")
+            {
+                count2 ++;
+            }
+            if(element3 != "" || element31 != "")
+            {
+                count3 ++;
+            }
+        }
+        if(count1 == 0 && count2 == 0 && count3 == 0)
+        {
+            alert("Please enter the name of at least one admin");
+
+            event.preventDefault();
+        }
+
+        var count1 = 0;
+        var count2 = 0;
+        var count3 = 0;
+
+        for(i=1;i<11;i++)
+        {
+            var id1 = "Q3EzS1".replace('z',i);
+            var id2 = "Q3EzS2".replace('z',i);
+            var id3 = "Q3EzS3".replace('z',i);
+
+            var element1 = document.getElementById(id1).value;
+            var element11 = document.getElementById(id1).placeholder;
+
+            var element2 = document.getElementById(id2).value;
+            var element21 = document.getElementById(id2).placeholder;
+
+            var element3 = document.getElementById(id3).value;
+            var element31 = document.getElementById(id3).placeholder;
+
+
+            if(element1 != "" || element11 != "")
+            {
+                count1 ++;
+            }
+            if(element2 != "" || element21 != "")
+            {
+                count2 ++;
+            }
+            if(element3 != "" || element31 != "")
+            {
+                count3 ++;
+            }
+        }
+        if(count1 == 0 && count2 == 0 && count3 == 0)
+        {
+            alert("Please enter the name of at least one student");
+            event.preventDefault();
+        }
+
+        var val1 = $("input[name=Q4E1]:checked").val();
+        if(val1 != 'Y' && val1 != 'N')
+        {
+            alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed.");
+            $('#Q4E1').focus();
+            event.preventDefault();
+        }
+        var val1 = $("input[name=Q5E1]:checked").val();
+        if(val1 != 'Y' && val1 != 'N')
+        {
+            alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed.");
+            $('#Q5E1').focus();
+            event.preventDefault();
+        }
+
+        var error = false;
+        var id = "";
+        for(i=1;i<15;i++)
+        {
+            var id1 = "Q6EzS1".replace('z',i);
+            var id2 = "Q6EzS3".replace('z',i);
+
+            var element1 = parseInt(document.getElementById(id1).value);
+            var element11 = parseInt(document.getElementById(id1).placeholder);
+
+            var element2 = parseInt(document.getElementById(id2).value);
+            var element21 = parseInt(document.getElementById(id2).placeholder);
+
+            if(isNaN(element1) && isNaN(element11))
+            {
+                error = true;
+                id = id1;
+                break;
+            }
+            else if(isNaN(element2) && isNaN(element21))
+            {
+                error = true;
+                id = id2;
+                break;
+            }
+
+        }
+        if(error == true)
+        {
+            alert("Please write 0(zero) if you do not have any input/entry");
+            $('#'+id).focus();
+            event.preventDefault();
+        }
+        error = false;
+
+        for(i=2;i<9;i++)
+        {
+            var id1 = "Q7EzS1".replace('z',i);
+            var id2 = "Q7EzS2".replace('z',i);
+            var id3 = "Q7EzS3".replace('z',i);
+
+            var element1 = parseInt(document.getElementById(id1).value);
+            var element11 = parseInt(document.getElementById(id1).placeholder);
+
+            var element2 = parseInt(document.getElementById(id2).value);
+            var element21 = parseInt(document.getElementById(id2).placeholder);
+
+            var element3 = parseInt(document.getElementById(id3).value);
+            var element31 = parseInt(document.getElementById(id3).placeholder);
+
+            if(isNaN(element1) && isNaN(element11))
+            {
+                error = true;
+                id = id1;
+                break;
+            }
+            else if(isNaN(element2) && isNaN(element21))
+            {
+                error = true;
+                id = id2;
+                break;
+            }
+            else if(isNaN(element3) && isNaN(element31))
+            {
+                error = true;
+                id = id3;
+                break;
+            }
+
+        }
+        if(error == true)
+        {
+            alert("Please write 0(zero) if you do not have any input/entry");
+            $('#'+id).focus();
+            event.preventDefault();
+        }
+        error = false;
+        var val2 = parseInt($('#Q8E1').val());
+        var val2Place = parseInt(document.getElementById('Q8E1').placeholder);
+        if(isNaN(val2) && isNaN(val2Place))
+        {
+            alert("Please write 0(zero) if you do not have any input/entry");
+            $('#Q8E1').css('border-color','red');
+            $('#Q8E1').focus();
+            event.preventDefault();
+        }
+
+        var val1 = $("input[name=Q9E1]:checked").val();
+        if(val1 != 'Y' && val1 != 'N')
+        {
+            alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed.");
+            $('#Q9E1').focus();
+            event.preventDefault();
+        }
+        var val2 = parseFloat($('#Q6E1S1').val());
+        var val2Place = parseFloat(document.getElementById('Q6E1S1').placeholder);
+        var x = $("#Q4E1_1").is(":checked")
+        if(x == true && (val2 < 1 || val2Place < 1))
+        {
+            if (confirm("Please Enter Value in Electricity Column.") == true)
+            {
+                $('#Q6E1S1').css('border-color', 'red');
+                $('#Q6E1S1').focus();
+            }
+            else
+            {
+                $('#Q6E1S1').css('border-color', 'red');
+                $('#Q6E1S1').focus();
+            }
+            event.preventDefault();
+
+        }
+
+    });
+
+
     $("#air").submit(function( event ) { //Air Submit
 
         // var data = '<?php echo json_encode($data); ?>';
@@ -3028,14 +3260,14 @@ $(document).ready(function(){
             var radioCheck = $("input[name=Q4F1]:checked").val();
             if(radioCheck != 'Y' && radioCheck != 'N')
             {
-                alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed.");
+                alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 1");
                 $('#Q4F1').focus();
                 event.preventDefault();
             }
             var radioCheck = $("input[name=Q5F1]:checked").val();
             if(radioCheck != 'Y' && radioCheck != 'N')
             {
-                alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed.");
+                alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 2");
                 $('#Q5F1').focus();
                 event.preventDefault();
             }
@@ -3044,7 +3276,7 @@ $(document).ready(function(){
                 var radioCheck = $("input[name=Q5F1S1]:checked").val();
                 if(radioCheck != 1 && radioCheck != 2 && radioCheck != 3)
                 {
-                    alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed.");
+                    alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 3");
                     $('#Q5F1S1').focus();
                     event.preventDefault();
                 }
@@ -3053,7 +3285,7 @@ $(document).ready(function(){
                 for(i=1;i<15;i++)
                 {
                     var name = "Q5F2Sz".replace('z',i)
-                    var radioCheck = $("input[name=Q5F1Sz]:checked").val();
+                    var radioCheck = $("input[name="+name+"]:checked").val();
                     if(radioCheck != 'Y' && radioCheck != 'N')
                     {
                         id = name;
@@ -3063,7 +3295,7 @@ $(document).ready(function(){
                 }
                 if(error)
                 {
-                    alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed.");
+                    alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. Test");
                     $('#'+id).focus();
                     event.preventDefault();
                 }
