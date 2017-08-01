@@ -3413,14 +3413,14 @@ function computeTransport()
         }
         if(teaching > current_teacher)
         {
-            alert("Total teacher population("+teaching+") doesn't match with student population mentioned in GQ("+current_teacher+")");
+            alert("Total teacher population("+teaching+") doesn't match with Teaching Staff population mentioned in GQ("+current_teacher+")");
             resetAir();
             teaching = 0;
             break;
         }
         if(NTeaching > current_nonTeacher)
         {
-            alert("Total non teaching population("+NTeaching+") doesn't match with student population mentioned in GQ("+current_nonTeacher+")");
+            alert("Total non teaching population("+NTeaching+") doesn't match with Non Teaching Staff population mentioned in GQ("+current_nonTeacher+")");
             resetAir();
             NTeaching = 0;
             break;
