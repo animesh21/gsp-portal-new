@@ -23,7 +23,7 @@ class Upload_Files extends CI_Controller
 
 				$uploadPath = 'uploads/files/';
 				$config['upload_path'] = $uploadPath;
-				$config['allowed_types'] = 'gif|jpg|png|pdf|doc|xls|xlsx';
+				$config['allowed_types'] = 'gif|jpg|png|pdf|doc|xls|xlsx|docx';
 				//$config['max_size']	= '100';
 				//$config['max_width'] = '1024';
 				//$config['max_height'] = '768';
