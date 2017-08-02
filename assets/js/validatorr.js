@@ -2472,7 +2472,7 @@ function PrimaryDetails()
         if(isNaN(NFVb51))
             NFVb5 = 0;
         else
-            NFVb5 = NFVb51
+            NFVb5 = NFVb51;
     if(isNaN(NFVc5))
         if(isNaN(NFVc51))
             NFVc5 = 0;
@@ -3413,7 +3413,7 @@ function computeTransport()
         }
         if(teaching > current_teacher)
         {
-            alert("Total teacher population("+teaching+") doesn't match with Teaching Staff population mentioned in GQ("+current_teacher+")");
+            alert("Total Teacher population("+teaching+") doesn't match with Teaching Staff population mentioned in GQ("+current_teacher+")");
             resetAir();
             teaching = 0;
             break;
