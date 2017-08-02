@@ -1063,7 +1063,7 @@
         Uploaded files must be in one of the following formats: PDF Document (.pdf), Word Document (.doc, .docx), Image
         File (.jpg, .jpeg). File size per document should not exceed 500 KB.
         <div class="clearfix">&nbsp;</div>
-        <button class="btn uploadbtn upload" data-id="Fuels" data-toggle="modal" data-target="#airModal" type="button">
+        <button class="btn uploadbtn upload" data-id="PUC Certificate" data-toggle="modal" data-target="#airModal" type="button">
             UPLOAD FILES
         </button>
     </div>
@@ -1076,9 +1076,9 @@
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($filesfules as $a) { ?>
+            <?php foreach ($pucCertificate as $a) { ?>
                 <tr id="index<?php echo $a->id; ?>">
-                    <?php $Text = str_replace(" ", "_", $a->name . "_Fuels_"); ?>
+                    <?php $Text = str_replace(" ", "_", $a->name . "_PUC_Certificate_"); ?>
                     <td class="upload edit"><?php echo str_replace($Text, " ", $a->file_name); ?></td>
                     <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $a->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
                 </tr>
@@ -1279,6 +1279,23 @@
     </button>
     <br/>
 </div>
+<table width="100%" class="question uploadedfiles">
+        <thead>
+            <tr>
+                <th>File name</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($filesfules as $a) { ?>
+                <tr id="index<?php echo $a->id; ?>">
+                    <?php $Text = str_replace(" ", "_", $a->name . "_Fuels_"); ?>
+                    <td class="upload edit"><?php echo str_replace($Text, " ", $a->file_name); ?></td>
+                    <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $a->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+                </tr>
+            <?php } ?>
+        </tbody>
+    </table>
 <?php
 if (isset($data['Q6A1']))
     if ($data['Q6A1'] == 1 || $data['Q6A1'] == 2)
