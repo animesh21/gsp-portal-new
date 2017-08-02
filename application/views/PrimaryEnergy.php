@@ -33,8 +33,8 @@
   <div class="video"><a class="lptext" href="#" data-toggle="modal" data-target="#videoModal"><img
                             src="http://greenschoolsprogramme.org/audit2015/upload/templates/tfr_responsive/images/video-icon.png"
                             style="width: 45px; height: 40px; margin-top:47px;"></a></div>
-  <p> Prior to answering these questions, please consider using a meter to measure the monthly average amount
-    of energy used from the respective energy sources.</p>
+<!--  <p> Prior to answering these questions, please consider using a meter to measure the monthly average amount
+    of energy used from the respective energy sources.</p>-->
   <p class="unit"><strong>The unit of measurement to be used in the Energy section is megajoule (mj).</strong> </p>
 </div>
 <?php echo form_open('energy/set', array('id' => "PrimaryEnergy")); ?>
@@ -1011,128 +1011,130 @@ else echo "0"; ?>"
     <tr>
       <td width="800px">Electricity from the board (kwh)</td>
       <td><label class="radio-inline">
-        <input type="radio" name="Q3En1" id="Q3En1" value="Y" />
+        <input type="radio" name="Q6E1" value="<?php echo set_value('Q6E1', 'Y') ?>" <?php if (isset($data['Q6E1'])) echo $data['Q6E1'] == 'Y' ? "checked" : "" ?> />
         Yes</label></td>
       <td><label class="radio-inline">
-        <input type="radio" name="Q3En1" id="Q3En1" value="N" />
+        <input type="radio" name="Q6E1" value="<?php echo set_value('Q6E1', 'N') ?>" <?php if (isset($data['Q6E1'])) echo $data['Q6E1'] == 'N' ? "checked" : "" ?>  />
         No</label></td>
     </tr>
     <tr>
       <td>Electricity from generator (diesel) (litres)</td>
       <td><label class="radio-inline">
-        <input type="radio" name="Q3En2" id="Q3En2" value="Y" />
+        <input type="radio" name="Q6E2" value="<?php echo set_value('Q6E2', 'Y') ?>" <?php if (isset($data['Q6E2'])) echo $data['Q6E2'] == 'Y' ? "checked" : "" ?> />
         Yes</label></td>
       <td><label class="radio-inline">
-        <input type="radio" name="Q3En2" id="Q3En2" value="N" />
+        <input type="radio" name="Q6E2" value="<?php echo set_value('Q6E2', 'N') ?>" <?php if (isset($data['Q6E2'])) echo $data['Q6E2'] == 'N' ? "checked" : "" ?>  />
         No</label></td>
     </tr>
     <tr>
       <td>Petrol (litres)</td>
-      <td><label class="radio-inline">
-        <input type="radio" name="Q3En3" id="Q3En3" value="Y" />
+    <td><label class="radio-inline">
+        <input type="radio" name="Q6E3" value="<?php echo set_value('Q6E3', 'Y') ?>" <?php if (isset($data['Q6E3'])) echo $data['Q6E3'] == 'Y' ? "checked" : "" ?> />
         Yes</label></td>
       <td><label class="radio-inline">
-        <input type="radio" name="Q3En3" id="Q3En3" value="N" />
+        <input type="radio" name="Q6E3" value="<?php echo set_value('Q6E3', 'N') ?>" <?php if (isset($data['Q6E3'])) echo $data['Q6E3'] == 'N' ? "checked" : "" ?>  />
         No</label></td>
     </tr>
     <tr>
       <td>Diesel (litres)</td>
-      <td><label class="radio-inline">
-        <input type="radio" name="Q3En4" id="Q3En4" value="Y" />
+    <td><label class="radio-inline">
+        <input type="radio" name="Q6E4" value="<?php echo set_value('Q6E4', 'Y') ?>" <?php if (isset($data['Q6E4'])) echo $data['Q6E4'] == 'Y' ? "checked" : "" ?> />
         Yes</label></td>
       <td><label class="radio-inline">
-        <input type="radio" name="Q3En4" id="Q3En4" value="N" />
+        <input type="radio" name="Q6E4" value="<?php echo set_value('Q6E4', 'N') ?>" <?php if (isset($data['Q6E4'])) echo $data['Q6E4'] == 'N' ? "checked" : "" ?>  />
         No</label></td>
     </tr>
     <tr>
       <td>CNG (kilogrammes)</td>
-      <td><label class="radio-inline">
-        <input type="radio" name="Q3En5" id="Q3En5" value="Y" />
+    <td><label class="radio-inline">
+        <input type="radio" name="Q6E5" value="<?php echo set_value('Q6E5', 'Y') ?>" <?php if (isset($data['Q6E5'])) echo $data['Q6E5'] == 'Y' ? "checked" : "" ?> />
         Yes</label></td>
       <td><label class="radio-inline">
-        <input type="radio" name="Q3En5" id="Q3En5" value="N" />
+        <input type="radio" name="Q6E5" value="<?php echo set_value('Q6E5', 'N') ?>" <?php if (isset($data['Q6E5'])) echo $data['Q6E5'] == 'N' ? "checked" : "" ?>  />
         No</label></td>
     </tr>
     <tr>
       <td>Kerosene (litres)</td>
-      <td><label class="radio-inline">
-        <input type="radio" name="Q3En6" id="Q3En6" value="Y" />
+    <td><label class="radio-inline">
+        <input type="radio" name="Q6E6" value="<?php echo set_value('Q6E6', 'Y') ?>" <?php if (isset($data['Q6E6'])) echo $data['Q6E6'] == 'Y' ? "checked" : "" ?> />
         Yes</label></td>
       <td><label class="radio-inline">
-        <input type="radio" name="Q3En6" id="Q3En6" value="N" />
+        <input type="radio" name="Q6E6" value="<?php echo set_value('Q6E6', 'N') ?>" <?php if (isset($data['Q6E6'])) echo $data['Q6E6'] == 'N' ? "checked" : "" ?>  />
         No</label></td>
     </tr>
     <tr>
       <td>Coal (kilogrammes)</td>
-      <td><label class="radio-inline">
-        <input type="radio" name="Q3En7" id="Q3En7" value="Y" />
+    <td><label class="radio-inline">
+        <input type="radio" name="Q6E7" value="<?php echo set_value('Q6E7', 'Y') ?>" <?php if (isset($data['Q6E7'])) echo $data['Q6E7'] == 'Y' ? "checked" : "" ?> />
         Yes</label></td>
       <td><label class="radio-inline">
-        <input type="radio" name="Q3En7" id="Q3En7" value="N" />
+        <input type="radio" name="Q6E7" value="<?php echo set_value('Q6E7', 'N') ?>" <?php if (isset($data['Q6E7'])) echo $data['Q6E7'] == 'N' ? "checked" : "" ?>  />
         No</label></td>
     </tr>
     <tr>
       <td>Wood (kilogrammes)</td>
-      <td><label class="radio-inline">
-        <input type="radio" name="Q3En8" id="Q3En8" value="Y" />
+    <td><label class="radio-inline">
+        <input type="radio" name="Q6E8" value="<?php echo set_value('Q6E8', 'Y') ?>" <?php if (isset($data['Q6E8'])) echo $data['Q6E8'] == 'Y' ? "checked" : "" ?> />
         Yes</label></td>
       <td><label class="radio-inline">
-        <input type="radio" name="Q3En8" id="Q3En8" value="N" />
+        <input type="radio" name="Q6E8" value="<?php echo set_value('Q6E8', 'N') ?>" <?php if (isset($data['Q6E8'])) echo $data['Q6E8'] == 'N' ? "checked" : "" ?>  />
         No</label></td>
     </tr>
     <tr>
       <td>Animal waste (kilogrammes)</td>
-      <td><label class="radio-inline">
-        <input type="radio" name="Q3En9" id="Q3En9" value="Y" />
+    <td><label class="radio-inline">
+        <input type="radio" name="Q6E9" value="<?php echo set_value('Q6E9', 'Y') ?>" <?php if (isset($data['Q6E9'])) echo $data['Q6E9'] == 'Y' ? "checked" : "" ?> />
         Yes</label></td>
       <td><label class="radio-inline">
-        <input type="radio" name="Q3En9" id="Q3En9" value="N"/>
+        <input type="radio" name="Q6E9" value="<?php echo set_value('Q6E9', 'N') ?>" <?php if (isset($data['Q6E9'])) echo $data['Q6E9'] == 'N' ? "checked" : "" ?>  />
         No</label></td>
     </tr>
     <tr>
       <td>Solar (kwh)</td>
-      <td><label class="radio-inline">
-        <input type="radio" name="Q3En10" id="Q3En10" value="Y" />
+    <td><label class="radio-inline">
+        <input type="radio" name="Q6E10" value="<?php echo set_value('Q6E10', 'Y') ?>" <?php if (isset($data['Q6E10'])) echo $data['Q6E10'] == 'Y' ? "checked" : "" ?> />
         Yes</label></td>
       <td><label class="radio-inline">
-        <input type="radio" name="Q3En10" id="Q3En10" value="N" />
+        <input type="radio" name="Q6E10" value="<?php echo set_value('Q6E10', 'N') ?>" <?php if (isset($data['Q6E10'])) echo $data['Q6E10'] == 'N' ? "checked" : "" ?>  />
         No</label></td>
     </tr>
     <tr>
       <td>Wind (kwh)</td>
-      <td><label class="radio-inline">
-        <input type="radio" name="Q3En11" id="Q3En11" value="Y" />
+    <td><label class="radio-inline">
+        <input type="radio" name="Q6E11" value="<?php echo set_value('Q6E11', 'Y') ?>" <?php if (isset($data['Q6E11'])) echo $data['Q6E11'] == 'Y' ? "checked" : "" ?> />
         Yes</label></td>
       <td><label class="radio-inline">
-        <input type="radio" name="Q3En11" id="Q3En11" value="N" />
+        <input type="radio" name="Q6E11" value="<?php echo set_value('Q6E11', 'N') ?>" <?php if (isset($data['Q6E11'])) echo $data['Q6E11'] == 'N' ? "checked" : "" ?>  />
         No</label></td>
-    </tr>
     <tr>
       <td>LPG (kilogrammes)</td>
       <td><label class="radio-inline">
-        <input type="radio" name="Q3En12" id="Q3En12" value="Y" />
+        <input type="radio" name="Q6E12" value="<?php echo set_value('Q6E12', 'Y') ?>" <?php if (isset($data['Q6E12'])) echo $data['Q6E12'] == 'Y' ? "checked" : "" ?> />
         Yes</label></td>
       <td><label class="radio-inline">
-        <input type="radio" name="Q3En12" id="Q3En12" value="N" />
+        <input type="radio" name="Q6E12" value="<?php echo set_value('Q6E12', 'N') ?>" <?php if (isset($data['Q6E12'])) echo $data['Q6E12'] == 'N' ? "checked" : "" ?>  />
         No</label></td>
+
     </tr>
     <tr>
       <td>Piped Natural Gas (kilogrammes)</td>
       <td><label class="radio-inline">
-        <input type="radio" name="Q3En13" id="Q3En13" value="Y" />
+        <input type="radio" name="Q6E13" value="<?php echo set_value('Q6E13', 'Y') ?>" <?php if (isset($data['Q6E13'])) echo $data['Q6E13'] == 'Y' ? "checked" : "" ?> />
         Yes</label></td>
       <td><label class="radio-inline">
-        <input type="radio" name="Q3En13" id="Q3En13" value="N" />
+        <input type="radio" name="Q6E13" value="<?php echo set_value('Q6E13', 'N') ?>" <?php if (isset($data['Q6E13'])) echo $data['Q6E13'] == 'N' ? "checked" : "" ?>  />
         No</label></td>
+
     </tr>
     <tr>
       <td>Biogas (kilogrammes)</td>
       <td><label class="radio-inline">
-        <input type="radio" name="Q3En14" id="Q3En14" value="Y" />
+        <input type="radio" name="Q6E14" value="<?php echo set_value('Q6E14', 'Y') ?>" <?php if (isset($data['Q6E14'])) echo $data['Q6E14'] == 'Y' ? "checked" : "" ?> />
         Yes</label></td>
       <td><label class="radio-inline">
-        <input type="radio" name="Q3En14" id="Q3En14" value="N" />
+        <input type="radio" name="Q6E14" value="<?php echo set_value('Q6E14', 'N') ?>" <?php if (isset($data['Q6E14'])) echo $data['Q6E14'] == 'N' ? "checked" : "" ?>  />
         No</label></td>
+
     </tr>
   </table>
 </div>
