@@ -2614,7 +2614,7 @@
                                                                                                                     rows="5"
                                                                                                                     id="Q13F2"
                                                                                                                     name="Q13F2"
-                                                                                                                    placeholder="<?php if (isset($data['Q13F2'])) echo $data['Q13F2'].trim() ?>"
+                                                                                                                    placeholder="<?php if (isset($data['Q13F2'])) echo trim($data['Q13F2']) ?>"
                                                                                                                     value="<?php echo set_value('Q13F2'); ?>">
 <?php if (isset($data['Q13F2'])) echo $data['Q13F2'] ?>
                         </textarea>
