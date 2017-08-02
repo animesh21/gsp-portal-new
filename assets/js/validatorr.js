@@ -2472,7 +2472,7 @@ function PrimaryDetails()
         if(isNaN(NFVb51))
             NFVb5 = 0;
         else
-            NFVb5 = NFVb51
+            NFVb5 = NFVb51;
     if(isNaN(NFVc5))
         if(isNaN(NFVc51))
             NFVc5 = 0;
@@ -3413,14 +3413,14 @@ function computeTransport()
         }
         if(teaching > current_teacher)
         {
-            alert("Total teacher population("+teaching+") doesn't match with student population mentioned in GQ("+current_teacher+")");
+            alert("Total Teacher population("+teaching+") doesn't match with Teaching Staff population mentioned in GQ("+current_teacher+")");
             resetAir();
             teaching = 0;
             break;
         }
         if(NTeaching > current_nonTeacher)
         {
-            alert("Total non teaching population("+NTeaching+") doesn't match with student population mentioned in GQ("+current_nonTeacher+")");
+            alert("Total non teaching population("+NTeaching+") doesn't match with Non Teaching Staff population mentioned in GQ("+current_nonTeacher+")");
             resetAir();
             NTeaching = 0;
             break;
