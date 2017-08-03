@@ -3,86 +3,140 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
-    <title><?php echo $title; ?></title>
+    <title>Greenschools Programme</title>
     <!-- BOOTSTRAP CORE STYLE  -->
     <!-- Bootstrap Core CSS -->
-    
     <link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="<?php echo base_url(); ?>assets/css/jquery.dataTables.min.css" rel="stylesheet">
-    <link href="<?php echo base_url(); ?>assets/css/buttons.dataTables.min.css" rel="stylesheet">
-    <link href="<?php echo base_url(); ?>assets/css/shadowbox.css" type="text/css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>assets/css/custom.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>assets/css/responsive.css" rel="stylesheet">
-
+    <style>
+        #myBtn {
+            cursor: pointer;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+        }
+    </style>
+    <style type="text/css">
+        button {
+            background-color: #e86549;
+            border-radius: 2px;
+            box-shadow: 0 0 6px #cccccc;
+            color: #fff;
+            margin: 30px 5px;
+            min-width: 138px;
+            padding: 16px 15px;
+            text-transform: uppercase;
+            border: none;
+        }
+    </style>
     <script src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/jquery.dataTables.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/dataTables.buttons.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/buttons.flash.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/vfs_fonts.js"></script>
-    <script src="<?php echo base_url(); ?>assets/js/buttons.html5.min.js(1)"></script>
+    <script src="<?php echo base_url(); ?>assets/js/buttons.html5.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/buttons.print.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/yui-utilities.js" type="text/javascript"></script>
     <script src="<?php echo base_url(); ?>assets/js/shadowbox-yui.js" type="text/javascript"></script>
     <script src="<?php echo base_url(); ?>assets/js/shadowbox.js" type="text/javascript"></script>
     <script src="<?php echo base_url(); ?>assets/js/admin.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/AC_RunActiveContent.js" type="text/javascript"></script>
+    <script src="<?php echo base_url(); ?>assets/js/validatorr.js" type="text/javascript"></script>
+    <script src="<?php echo base_url(); ?>assets/js/CrossLink.js" type="text/javascript"></script>
+
     <script type="text/javascript">
-    window.onload = function(){
-        Shadowbox.init();
-    
-};
+        window.onload = function () {
+            Shadowbox.init();
+
+        };
     </script>
+    <script type="text/javascript">
+        $("body").addClass("page-odd");
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 50) {
+                    $('#myBtn').fadeIn();
+                } else {
+                    $('#myBtn').fadeOut();
+                }
+            });
+            // scroll body to 0px on click
+            $('#myBtn').click(function () {
+                $('#myBtn').tooltip('hide');
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 800);
+                return false;
+            });
 
-    <style type="text/css">
-    #loader { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1001; background: #FFFFFF; opacity: .7; }
-    #loader img { position: absolute; top: 50%; left: 50%; margin-left: -32px; margin-top: -32px; }
-    .placeholder { color: #aaa; }
-    </style>
-    </head>
-    
-<header class="form-hdr ">
-  <div class="container">
-    <figure class="logo2"><a href="http://studiotesseract.co/dashboard/2016/dashboard.php#"><img src="<?php echo base_url(); ?>assets/img/logo.png" alt="" class="img-responsive"></a></figure>
-    <img src="<?php echo base_url(); ?>assets/img/top-bnr.png" alt="" class="top-bnr1 "> </div>
-  <!--close container-->
-  
-  <div class="container-fluid nav_main">
-    <div class="container">
-      <nav class="navbar navbar-default">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-          </div>
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="<?php echo base_url("admin/survey/school")?>">SCHOOL</a></li>
-              <li><a href="<?php echo base_url("admin/survey/general")?>">GENERAL QUESTIONS</a></li>
-              <li class=""><a href="<?php echo base_url("admin/survey/air")?>">AIR</span></a></li>
-              <li class=""><a href="<?php echo base_url("admin/survey/energy")?>">ENERGY</a></li>
-              <li><a href="<?php echo base_url("admin/survey/food")?>">FOOD</a></li>
-              <li class=""><a href="<?php echo base_url("admin/survey/land") ?>">LAND</span></a></li>
-              <li class=""><a href="<?php echo base_url("admin/survey/water")?>">WATER</a> </li>
-              <li><a href="">WASTE</a></li>
-              <li><a href="">FEEDBACK</a></li>
-              
-              </ul>
-          </div>
-          <!-- /.navbar-collapse  --> 
+            $('#myBtn').tooltip('show');
+
+        });
+    </script>
+</head>
+<body>
+<div class="main-wrapper">
+    <div class="main" role="main">
+        <div id="jhead">
+            <header class="form-hdr">
+                <div class="container">
+                    <figure class="logo2"><a href="http://www.greenschoolsprogramme.org/" target="_blank"> <img
+                                    src="<?php echo base_url(); ?>assets/img/logo.png" title="CSE GSP" alt=""
+                                    class="img-responsive"></a></figure>
+                    <img src="<?php echo base_url(); ?>assets/img/top-bnr.png" alt="" class="top-bnr1 "></div>
+            </header>
         </div>
-        <!-- /.container-fluid --> 
-      </nav>
-    </div>
-  </div>
-</header>
-
-    
+        <div id="index" class="index">
+            <div class="index-body">
+                <h2>Question index</h2>
+                <ol>
+                    <li id="Nav"
+                        class="row  <?php echo ($this->router->fetch_class() == 'school') ? "current" : "missing"; ?>"
+                        id="link" onClick="javascript:window.location.href='<?php echo base_url("school") ?>';">School
+                        Profile
+                    </li>
+                    <li id="generalNav"
+                        class="row <?php echo ($this->router->fetch_class() == 'general') ? "current" : "missing"; ?>"
+                        id="link" onClick="javascript:window.location.href='<?php echo base_url("general") ?>';">General
+                        Questions
+                    </li>
+                    <li id="airNav"
+                        class="row <?php echo ($this->router->fetch_class() == 'air') ? "current" : "missing"; ?>"
+                        id="link" onClick="javascript:window.location.href='<?php echo base_url("air") ?>';">Air
+                    </li>
+                    <li id="Nav"
+                        class="row <?php echo ($this->router->fetch_class() == 'energy') ? "current" : "missing"; ?>"
+                        id="link" onClick="javascript:window.location.href='<?php echo base_url("energy") ?>';">Energy
+                    </li>
+                    <li id="Nav"
+                        class="row <?php echo ($this->router->fetch_class() == 'food') ? "current" : "missing"; ?>"
+                        id="link" onClick="javascript:window.location.href='<?php echo base_url("food") ?>';">Food
+                    </li>
+                    <li id="Nav"
+                        class="row <?php echo ($this->router->fetch_class() == 'land') ? "current" : "missing"; ?>"
+                        id="link">Land
+                    </li>
+                    <li id="Nav"
+                        class="row <?php echo ($this->router->fetch_class() == 'water') ? "current" : "missing"; ?>"
+                        id="link">Water
+                    </li>
+                    <li id="Nav"
+                        class="row <?php echo ($this->router->fetch_class() == 'waste') ? "current" : "missing"; ?>"
+                        id="link" >Waste
+                    </li>
+                    <li class="row <?php echo ($this->router->fetch_class() == 'feedback') ? "current" : "missing"; ?>"
+                        id="link">
+                        Feedback
+                    </li>
+                </ol>
+            </div>
+        </div>
