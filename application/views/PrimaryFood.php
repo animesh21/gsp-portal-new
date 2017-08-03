@@ -1,18 +1,23 @@
 <?php $this->load->view('header'); ?>
 <style type="text/css">
-    .form-group{
-        margin-bottom:20px;
+    .form-group {
+        margin-bottom: 20px;
     }
-    .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{      border-top:none;
+
+    .table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+        border-top: none;
     }
-    .list-inline li{
-        width:200px;
+
+    .list-inline li {
+        width: 200px;
     }
-    .list-inline-1 li{
-        width:78px!important;
+
+    .list-inline-1 li {
+        width: 78px !important;
     }
-    .form-group-1{
-        margin-bottom:20px;
+
+    .form-group-1 {
+        margin-bottom: 20px;
     }
 </style>
 <div class="container">
@@ -202,7 +207,8 @@
                                placeholder="<?php if (isset($data['Q2F4S2'])) echo $data['Q2F4S2']; ?>"
                                value="<?php echo set_value('Q2F4S2'); ?>"/>
                     </div>
-                    ; </div>
+                    ;
+                </div>
                 <div class="form-group1 row">
                     <div class="col-xs-1"> 5</div>
                     <div class="col-xs-3">
@@ -421,14 +427,16 @@
             <input type="hidden" id="Q4G1S3" value="<?php if (isset($other['Q4G1S3'])) echo $other['Q4G1S3'] ?>"/>
             <div class="form-group">
                 <label>
-                    <h6>Task 2: Find out about the food service in your school<a class="tt" data-tooltip="Packaged food is any food item which is commercially prepared, processed for a longer shelf life and is ready to eat and drink"><span
+                    <h6>Task 2: Find out about the food service in your school<a class="tt"
+                                                                                 data-tooltip="Packaged food is any food item which is commercially prepared, processed for a longer shelf life and is ready to eat and drink"><span
                                     class="badge">?</span></a></h6>
                 </label>
                 <div class="form-group">
                     <input type="hidden" id="Q1S1" value="<?php if (isset($other['Q1S1'])) echo $other['Q1S1']; ?>">
                     <?php if (empty($data['Q4F1'])) if (isset($other['Q1S1'])) if ($other['Q1S1'] >= 3) $data['Q4F1'] = 'Y' ?>
                     <label class="control-label"><span class="cube">1</span> Does your school have a provision/space
-                        to sell packaged food items within the campus<a class="tt" data-tooltip="Any place, permanent or temporary, run by school, outsourced to vendors, self help groups, shopkeepers to sell products during/after/before school timings/duration should be considered."><span
+                        to sell packaged food items within the campus<a class="tt"
+                                                                        data-tooltip="Any place, permanent or temporary, run by school, outsourced to vendors, self help groups, shopkeepers to sell products during/after/before school timings/duration should be considered."><span
                                     class="badge">?</span></a></label>
                     <ul class="list-inline">
                         <li>
@@ -490,24 +498,28 @@
                             served</label>
                         <br/>
                         <button class="btn uploadbtn upload" data-id="Mid Day Meal" data-toggle="modal"
-                                data-target="#airModal" type="button">UPLOAD FILES </button>
+                                data-target="#airModal" type="button">UPLOAD FILES
+                        </button>
                         <table width="100%" class="question uploadedfiles">
-                    <thead>
-                        <tr>
-                            <th>File name</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-<?php foreach ($midDayMeal as $f) { ?>
-                            <tr id="index<?php echo $f->id; ?>">
-    <?php $name = str_replace(" ", "_", $f->name . "_Mid_Day_Meal_"); ?>
-                                <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
-                                <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+                            <thead>
+                            <tr>
+                                <th>File name</th>
+                                <th>Action</th>
                             </tr>
+                            </thead>
+                            <tbody>
+                            <?php foreach ($midDayMeal as $f) { ?>
+                                <tr id="index<?php echo $f->id; ?>">
+                                    <?php $name = str_replace(" ", "_", $f->name . "_Mid_Day_Meal_"); ?>
+                                    <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                                    <td><a href="javascript:void(0)" class="air-delete-files"
+                                           data-id="<?php echo $f->id; ?>"><img
+                                                    src="<?php echo base_url(); ?>assets/front/images/delete.png"
+                                                    style="position:relative; top:5px"/></a></td>
+                                </tr>
                             <?php } ?>
-                    </tbody>
-                </table>
+                            </tbody>
+                        </table>
                     </div>
                     <input type="hidden" value="<?php if (isset($other['Q4G4S3'])) echo $other['Q4G4S3']; ?>"
                            id="Q4G4S3"/>
@@ -578,7 +590,8 @@
                                         <?php
                                         }
                                         ?>
-                                        <label class="control-label"><span class="cube">2(a)</span>Do students bring their
+                                        <label class="control-label"><span class="cube">2(a)</span>Do students bring
+                                            their
                                             own lunch from home?</label>
                                         <ul class="list-inline">
                                             <li>
@@ -625,7 +638,8 @@
                                                 <br>
                                                 <button class="btn uploadbtn upload" data-id="Lunch Boxes"
                                                         data-toggle="modal" data-target="#airModal" type="button">UPLOAD
-                                                    FILES </button>
+                                                    FILES
+                                                </button>
                                                 <br>
                                             </div>
                                             <?php
@@ -653,8 +667,10 @@
 
                                                         }
                                                         ?>
-                                                        <label class="control-label"><span class="cube">2(a)(1)</span> How
-                                                            many students out of total student population bring home-made
+                                                        <label class="control-label"><span class="cube">2(a)(1)</span>
+                                                            How
+                                                            many students out of total student population bring
+                                                            home-made
                                                             lunch? </label>
                                                         <br>
                                                         <input type="number" min="0" name="Q5F1S2" id="Q5F1S2A"
@@ -688,7 +704,8 @@
                                                                 }
                                                                 ?>
                                                                 <label class="control-label"><span
-                                                                            class="cube">2(a)(2)</span>Of the students who
+                                                                            class="cube">2(a)(2)</span>Of the students
+                                                                    who
                                                                     bring lunch from home, how many bring packaged
                                                                     food?</label>
                                                                 <br>
@@ -709,7 +726,8 @@
                                                                 else
                                                                 {
                                                                 ?>
-                                                                <div class="form-group" id="Q5F1S4" style="display: none;">
+                                                                <div class="form-group" id="Q5F1S4"
+                                                                     style="display: none;">
                                                                     <?php
 
                                                                     }
@@ -717,14 +735,17 @@
                                                                     else
                                                                     {
                                                                     ?>
-                                                                    <div class="form-group" id="Q5F1S4" style="display: none;">
+                                                                    <div class="form-group" id="Q5F1S4"
+                                                                         style="display: none;">
                                                                         <?php
 
                                                                         }
                                                                         ?>
                                                                         <label class="control-label"><span class="cube">2(a)(3)</span>Do
-                                                                            teachers have the responsibility to ensure that
-                                                                            students are carrying lunch from home?</label>
+                                                                            teachers have the responsibility to ensure
+                                                                            that
+                                                                            students are carrying lunch from
+                                                                            home?</label>
                                                                         <ul class="list-inline">
                                                                             <li>
                                                                                 <label class="radio-inline text-gray">
@@ -750,14 +771,17 @@
                                                                         <?php
                                                                         } else {
                                                                         ?>
-                                                                        <div class="form-group" id="Q5F2" style="display: none;">
+                                                                        <div class="form-group" id="Q5F2"
+                                                                             style="display: none;">
                                                                             <?php } else {
                                                                             ?>
-                                                                            <div class="form-group" id="Q5F2" style="display: none;">
+                                                                            <div class="form-group" id="Q5F2"
+                                                                                 style="display: none;">
                                                                                 <?php } ?>
                                                                                 <label class="control-label"><span
                                                                                             class="cube">2(b)</span>What
-                                                                                    kind of food items are served in midday
+                                                                                    kind of food items are served in
+                                                                                    midday
                                                                                     meal?</label>
                                                                                 <div class="form-group-1">
                                                                                     <label class="radio-inline text-gray col-xs-10">1.
@@ -765,13 +789,15 @@
                                                                                     <ul class="list-inline list-inline-1">
                                                                                         <li>
                                                                                             <label class="radio-inline text-gray">
-                                                                                                <input type="radio" name="Q5F2S1"
+                                                                                                <input type="radio"
+                                                                                                       name="Q5F2S1"
                                                                                                        value="<?php echo set_value('Q5F2S1', 'Y') ?>" <?php if (isset($data['Q5F2S1'])) echo $data['Q5F2S1'] == 'Y' ? "checked" : "" ?>/>
                                                                                                 Yes </label>
                                                                                         </li>
                                                                                         <li>
                                                                                             <label class="radio-inline text-gray">
-                                                                                                <input type="radio" name="Q5F2S1"
+                                                                                                <input type="radio"
+                                                                                                       name="Q5F2S1"
                                                                                                        value="<?php echo set_value('Q5F2S1', 'N') ?>" <?php if (isset($data['Q5F2S1'])) echo $data['Q5F2S1'] == 'N' ? "checked" : "" ?>>
                                                                                                 No </label>
                                                                                         </li>
@@ -783,13 +809,15 @@
                                                                                     <ul class="list-inline list-inline-1">
                                                                                         <li>
                                                                                             <label class="radio-inline text-gray">
-                                                                                                <input type="radio" name="Q5F2S2"
+                                                                                                <input type="radio"
+                                                                                                       name="Q5F2S2"
                                                                                                        value="<?php echo set_value('Q5F2S2', 'Y') ?>" <?php if (isset($data['Q5F2S2'])) echo $data['Q5F2S1'] == 'Y' ? "checked" : "" ?>>
                                                                                                 Yes </label>
                                                                                         </li>
                                                                                         <li>
                                                                                             <label class="radio-inline text-gray">
-                                                                                                <input type="radio" name="Q5F2S2"
+                                                                                                <input type="radio"
+                                                                                                       name="Q5F2S2"
                                                                                                        value="<?php echo set_value('Q5F2S2', 'N') ?>" <?php if (isset($data['Q5F2S2'])) echo $data['Q5F2S2'] == 'N' ? "checked" : "" ?>>
                                                                                                 No </label>
                                                                                         </li>
@@ -801,13 +829,15 @@
                                                                                     <ul class="list-inline list-inline-1">
                                                                                         <li>
                                                                                             <label class="radio-inline text-gray">
-                                                                                                <input type="radio" name="Q5F2S3"
+                                                                                                <input type="radio"
+                                                                                                       name="Q5F2S3"
                                                                                                        value="<?php echo set_value('Q5F2S3', 'Y') ?>" <?php if (isset($data['Q5F2S3'])) echo $data['Q5F2S3'] == 'Y' ? "checked" : "" ?>>
                                                                                                 Yes </label>
                                                                                         </li>
                                                                                         <li>
                                                                                             <label class="radio-inline text-gray">
-                                                                                                <input type="radio" name="Q5F2S3"
+                                                                                                <input type="radio"
+                                                                                                       name="Q5F2S3"
                                                                                                        value="<?php echo set_value('Q5F2S3', 'N') ?>" <?php if (isset($data['Q5F2S3'])) echo $data['Q5F2S3'] == 'N' ? "checked" : "" ?>>
                                                                                                 No </label>
                                                                                         </li>
@@ -819,13 +849,15 @@
                                                                                     <ul class="list-inline list-inline-1">
                                                                                         <li>
                                                                                             <label class="radio-inline text-gray">
-                                                                                                <input type="radio" name="Q5F2S4"
+                                                                                                <input type="radio"
+                                                                                                       name="Q5F2S4"
                                                                                                        value="<?php echo set_value('Q5F2S4', 'Y') ?>" <?php if (isset($data['Q5F2S4'])) echo $data['Q5F2S4'] == 'Y' ? "checked" : "" ?>>
                                                                                                 Yes </label>
                                                                                         </li>
                                                                                         <li>
                                                                                             <label class="radio-inline text-gray">
-                                                                                                <input type="radio" name="Q5F2S4"
+                                                                                                <input type="radio"
+                                                                                                       name="Q5F2S4"
                                                                                                        value="<?php echo set_value('Q5F2S4', 'N') ?>" <?php if (isset($data['Q5F2S4'])) echo $data['Q5F2S4'] == 'N' ? "checked" : "" ?>>
                                                                                                 No </label>
                                                                                         </li>
@@ -837,13 +869,15 @@
                                                                                     <ul class="list-inline list-inline-1">
                                                                                         <li>
                                                                                             <label class="radio-inline text-gray">
-                                                                                                <input type="radio" name="Q5F2S5"
+                                                                                                <input type="radio"
+                                                                                                       name="Q5F2S5"
                                                                                                        value="<?php echo set_value('Q5F2S5', 'Y') ?>" <?php if (isset($data['Q5F2S5'])) echo $data['Q5F2S5'] == 'Y' ? "checked" : "" ?>>
                                                                                                 Yes </label>
                                                                                         </li>
                                                                                         <li>
                                                                                             <label class="radio-inline text-gray">
-                                                                                                <input type="radio" name="Q5F2S5"
+                                                                                                <input type="radio"
+                                                                                                       name="Q5F2S5"
                                                                                                        value="<?php echo set_value('Q5F2S5', 'N') ?>" <?php if (isset($data['Q5F2S5'])) echo $data['Q5F2S5'] == 'N' ? "checked" : "" ?>>
                                                                                                 No </label>
                                                                                         </li>
@@ -855,13 +889,15 @@
                                                                                     <ul class="list-inline list-inline-1">
                                                                                         <li>
                                                                                             <label class="radio-inline text-gray">
-                                                                                                <input type="radio" name="Q5F2S6"
+                                                                                                <input type="radio"
+                                                                                                       name="Q5F2S6"
                                                                                                        value="<?php echo set_value('Q5F2S6', 'Y') ?>" <?php if (isset($data['Q5F2S6'])) echo $data['Q5F2S6'] == 'Y' ? "checked" : "" ?>>
                                                                                                 Yes </label>
                                                                                         </li>
                                                                                         <li>
                                                                                             <label class="radio-inline text-gray">
-                                                                                                <input type="radio" name="Q5F2S6"
+                                                                                                <input type="radio"
+                                                                                                       name="Q5F2S6"
                                                                                                        value="<?php echo set_value('Q5F2S6', 'N') ?>" <?php if (isset($data['Q5F2S6'])) echo $data['Q5F2S6'] == 'N' ? "checked" : "" ?>>
                                                                                                 No </label>
                                                                                         </li>
@@ -873,13 +909,15 @@
                                                                                     <ul class="list-inline list-inline-1">
                                                                                         <li>
                                                                                             <label class="radio-inline text-gray">
-                                                                                                <input type="radio" name="Q5F2S7"
+                                                                                                <input type="radio"
+                                                                                                       name="Q5F2S7"
                                                                                                        value="<?php echo set_value('Q5F2S7', 'Y') ?>" <?php if (isset($data['Q5F2S7'])) echo $data['Q5F2S7'] == 'Y' ? "checked" : "" ?>>
                                                                                                 Yes </label>
                                                                                         </li>
                                                                                         <li>
                                                                                             <label class="radio-inline text-gray">
-                                                                                                <input type="radio" name="Q5F2S7"
+                                                                                                <input type="radio"
+                                                                                                       name="Q5F2S7"
                                                                                                        value="<?php echo set_value('Q5F2S7', 'N') ?>" <?php if (isset($data['Q5F2S7'])) echo $data['Q5F2S7'] == 'N' ? "checked" : "" ?>>
                                                                                                 No </label>
                                                                                         </li>
@@ -891,13 +929,15 @@
                                                                                     <ul class="list-inline list-inline-1">
                                                                                         <li>
                                                                                             <label class="radio-inline text-gray">
-                                                                                                <input type="radio" name="Q5F2S8"
+                                                                                                <input type="radio"
+                                                                                                       name="Q5F2S8"
                                                                                                        value="<?php echo set_value('Q5F2S8', 'Y') ?>" <?php if (isset($data['Q5F2S8'])) echo $data['Q5F2S8'] == 'Y' ? "checked" : "" ?>>
                                                                                                 Yes </label>
                                                                                         </li>
                                                                                         <li>
                                                                                             <label class="radio-inline text-gray">
-                                                                                                <input type="radio" name="Q5F2S8"
+                                                                                                <input type="radio"
+                                                                                                       name="Q5F2S8"
                                                                                                        value="<?php echo set_value('Q5F2S8', 'N') ?>" <?php if (isset($data['Q5F2S8'])) echo $data['Q5F2S8'] == 'N' ? "checked" : "" ?>>
                                                                                                 No </label>
                                                                                         </li>
@@ -909,13 +949,15 @@
                                                                                     <ul class="list-inline list-inline-1">
                                                                                         <li>
                                                                                             <label class="radio-inline text-gray">
-                                                                                                <input type="radio" name="Q5F2S9"
+                                                                                                <input type="radio"
+                                                                                                       name="Q5F2S9"
                                                                                                        value="<?php echo set_value('Q5F2S9', 'Y') ?>" <?php if (isset($data['Q5F2S9'])) echo $data['Q5F2S9'] == 'Y' ? "checked" : "" ?>>
                                                                                                 Yes </label>
                                                                                         </li>
                                                                                         <li>
                                                                                             <label class="radio-inline text-gray">
-                                                                                                <input type="radio" name="Q5F2S9"
+                                                                                                <input type="radio"
+                                                                                                       name="Q5F2S9"
                                                                                                        value="<?php echo set_value('Q5F2S9', 'N') ?>" <?php if (isset($data['Q5F2S9'])) echo $data['Q5F2S9'] == 'N' ? "checked" : "" ?>>
                                                                                                 No </label>
                                                                                         </li>
@@ -927,13 +969,15 @@
                                                                                     <ul class="list-inline list-inline-1">
                                                                                         <li>
                                                                                             <label class="radio-inline text-gray">
-                                                                                                <input type="radio" name="Q5F2S10"
+                                                                                                <input type="radio"
+                                                                                                       name="Q5F2S10"
                                                                                                        value="<?php echo set_value('Q5F2S10', 'Y') ?>" <?php if (isset($data['Q5F2S10'])) echo $data['Q5F2S10'] == 'Y' ? "checked" : "" ?>>
                                                                                                 Yes </label>
                                                                                         </li>
                                                                                         <li>
                                                                                             <label class="radio-inline text-gray">
-                                                                                                <input type="radio" name="Q5F2S10"
+                                                                                                <input type="radio"
+                                                                                                       name="Q5F2S10"
                                                                                                        value="<?php echo set_value('Q5F2S10', 'N') ?>" <?php if (isset($data['Q5F2S10'])) echo $data['Q5F2S10'] == 'N' ? "checked" : "" ?>>
                                                                                                 No </label>
                                                                                         </li>
@@ -945,13 +989,15 @@
                                                                                     <ul class="list-inline list-inline-1">
                                                                                         <li>
                                                                                             <label class="radio-inline text-gray">
-                                                                                                <input type="radio" name="Q5F2S11"
+                                                                                                <input type="radio"
+                                                                                                       name="Q5F2S11"
                                                                                                        value="<?php echo set_value('Q5F2S11', 'Y') ?>" <?php if (isset($data['Q5F2S11'])) echo $data['Q5F2S11'] == 'Y' ? "checked" : "" ?>>
                                                                                                 Yes </label>
                                                                                         </li>
                                                                                         <li>
                                                                                             <label class="radio-inline text-gray">
-                                                                                                <input type="radio" name="Q5F2S11"
+                                                                                                <input type="radio"
+                                                                                                       name="Q5F2S11"
                                                                                                        value="<?php echo set_value('Q5F2S11', 'N') ?>" <?php if (isset($data['Q5F2S11'])) echo $data['Q5F2S11'] == 'N' ? "checked" : "" ?>>
                                                                                                 No </label>
                                                                                         </li>
@@ -963,13 +1009,15 @@
                                                                                     <ul class="list-inline list-inline-1">
                                                                                         <li>
                                                                                             <label class="radio-inline text-gray">
-                                                                                                <input type="radio" name="Q5F2S12"
+                                                                                                <input type="radio"
+                                                                                                       name="Q5F2S12"
                                                                                                        value="<?php echo set_value('Q5F2S12', 'Y') ?>" <?php if (isset($data['Q5F2S12'])) echo $data['Q5F2S12'] == 'Y' ? "checked" : "" ?>>
                                                                                                 Yes </label>
                                                                                         </li>
                                                                                         <li>
                                                                                             <label class="radio-inline text-gray">
-                                                                                                <input type="radio" name="Q5F2S12"
+                                                                                                <input type="radio"
+                                                                                                       name="Q5F2S12"
                                                                                                        value="<?php echo set_value('Q5F2S12', 'N') ?>" <?php if (isset($data['Q5F2S12'])) echo $data['Q5F2S12'] == 'N' ? "checked" : "" ?>>
                                                                                                 No </label>
                                                                                         </li>
@@ -981,13 +1029,15 @@
                                                                                     <ul class="list-inline list-inline-1">
                                                                                         <li>
                                                                                             <label class="radio-inline text-gray">
-                                                                                                <input type="radio" name="Q5F2S13"
+                                                                                                <input type="radio"
+                                                                                                       name="Q5F2S13"
                                                                                                        value="<?php echo set_value('Q5F2S13', 'Y') ?>" <?php if (isset($data['Q5F2S13'])) echo $data['Q5F2S13'] == 'Y' ? "checked" : "" ?>>
                                                                                                 Yes </label>
                                                                                         </li>
                                                                                         <li>
                                                                                             <label class="radio-inline text-gray">
-                                                                                                <input type="radio" name="Q5F2S13"
+                                                                                                <input type="radio"
+                                                                                                       name="Q5F2S13"
                                                                                                        value="<?php echo set_value('Q5F2S13', 'N') ?>" <?php if (isset($data['Q5F2S13'])) echo $data['Q5F2S13'] == 'N' ? "checked" : "" ?>>
                                                                                                 No </label>
                                                                                         </li>
@@ -999,13 +1049,15 @@
                                                                                     <ul class="list-inline list-inline-1">
                                                                                         <li>
                                                                                             <label class="radio-inline text-gray">
-                                                                                                <input type="radio" name="Q5F2S14"
+                                                                                                <input type="radio"
+                                                                                                       name="Q5F2S14"
                                                                                                        value="<?php echo set_value('Q5F2S14', 'Y') ?>" <?php if (isset($data['Q5F2S14'])) echo $data['Q5F2S14'] == 'Y' ? "checked" : "" ?>>
                                                                                                 Yes </label>
                                                                                         </li>
                                                                                         <li>
                                                                                             <label class="radio-inline text-gray">
-                                                                                                <input type="radio" name="Q5F2S14"
+                                                                                                <input type="radio"
+                                                                                                       name="Q5F2S14"
                                                                                                        value="<?php echo set_value('Q5F2S14', 'N') ?>" <?php if (isset($data['Q5F2S14'])) echo $data['Q5F2S14'] == 'N' ? "checked" : "" ?>>
                                                                                                 No </label>
                                                                                         </li>
@@ -1032,34 +1084,43 @@
                                                                                         <label class="control-label"><span
                                                                                                     class="cube">2(b)(1)</span>How
                                                                                             many students out of total
-                                                                                            student population avail of the
+                                                                                            student population avail of
+                                                                                            the
                                                                                             midday meal services
                                                                                             provided?</label>
                                                                                         <div class="form-group">
                                                                                             <input type="number"
                                                                                                    class="form-control space-textbox"
-                                                                                                   id="Q5F3S1" name="Q5F3S1"
+                                                                                                   id="Q5F3S1"
+                                                                                                   name="Q5F3S1"
                                                                                                    value="<?php echo set_value('Q5F3S1') ?>"
                                                                                                    placeholder="<?php if (isset($data['Q5F3S1'])) echo $data['Q5F3S1']; ?>">
                                                                                         </div>
                                                                                     </div>
                                                                                     <?php
                                                                                     if (isset($other['Q1S1']))
-                                                                                        if ($other['Q1S1'] >= 3 && $other['Q1S1']!=4) {
+                                                                                        if ($other['Q1S1'] >= 3 && $other['Q1S1'] != 4) {
                                                                                             ?>
                                                                                             <div class="form-group">
-                                                                                                <label class="control-label"><span class="cube">2.1</span>Does your school serve whole day’s
-                                                                                                    meals? <a class="tt" data-tooltip="Applicable for residential schools only"><span class="badge">?</span></a></label>
+                                                                                                <label class="control-label"><span
+                                                                                                            class="cube">2.1</span>Does
+                                                                                                    your school serve
+                                                                                                    whole day’s
+                                                                                                    meals? <a class="tt"
+                                                                                                              data-tooltip="Applicable for residential schools only"><span
+                                                                                                                class="badge">?</span></a></label>
                                                                                                 <ul class="list-inline">
                                                                                                     <li>
                                                                                                         <label class="radio-inline text-gray">
-                                                                                                            <input type="radio" name="Q5F2"
+                                                                                                            <input type="radio"
+                                                                                                                   name="Q5F2"
                                                                                                                    value="<?php echo set_value('Q5F2', 'Y') ?>" <?php if (isset($data['Q5F2'])) echo $data['Q5F2'] == 'Y' ? "checked" : "" ?>>
                                                                                                             Yes </label>
                                                                                                     </li>
                                                                                                     <li>
                                                                                                         <label class="radio-inline text-gray">
-                                                                                                            <input type="radio" name="Q5F2"
+                                                                                                            <input type="radio"
+                                                                                                                   name="Q5F2"
                                                                                                                    value="<?php echo set_value('Q5F2', 'N') ?>" <?php if (isset($data['Q5F2'])) echo $data['Q5F2'] == 'N' ? "checked" : "" ?>>
                                                                                                             No </label>
                                                                                                     </li>
@@ -1083,11 +1144,14 @@
                                                                                     ?>
                                                                                     <div class="form-group" id="Q6F1">
                                                                                         <?php } else { ?>
-                                                                                        <div class="form-group" id="Q6F1"
+                                                                                        <div class="form-group"
+                                                                                             id="Q6F1"
                                                                                              style="display: none;">
                                                                                             <?php }
                                                                                             else { ?>
-                                                                                            <div class="form-group" id="Q6F1" style="display: none;">
+                                                                                            <div class="form-group"
+                                                                                                 id="Q6F1"
+                                                                                                 style="display: none;">
                                                                                                 <?php } ?>
                                                                                                 <!-- <label class="control-label"><span
                                                                                                                                                                                         class="cube">3</span>What
@@ -1837,9 +1901,10 @@
                                                                                                                 <label class="control-label"><span
                                                                                                                             class="cube">5(a)</span>Please
                                                                                                                     provide
-                                                                                                                    details: <a class="tt"
-                                                                                                                                data-tooltip="If space is limited, please create the table in a word document and upload as attachment. Option to upload has been provided at the end of the section."
-                                                                                                                                href="#"><span
+                                                                                                                    details:
+                                                                                                                    <a class="tt"
+                                                                                                                       data-tooltip="If space is limited, please create the table in a word document and upload as attachment. Option to upload has been provided at the end of the section."
+                                                                                                                       href="#"><span
                                                                                                                                 class="badge">?</span></a></label>
                                                                                                                 <div class="form-group row">
                                                                                                                     <div class="col-xs-3">
@@ -1931,7 +1996,8 @@
                                                                                                             </div>
                                                                                                             <div class="form-group">
                                                                                                                 <label>
-                                                                                                                    <h6> Task
+                                                                                                                    <h6>
+                                                                                                                        Task
                                                                                                                         3:
                                                                                                                         What
                                                                                                                         kind
@@ -1945,7 +2011,21 @@
                                                                                                             </div>
                                                                                                             <div class="form-group">
                                                                                                                 <label class="control-label"><span
-                                                                                                                            class="cube">3</span> Does your school allow students to bring packaged food items (from home) for lunch?</label>
+                                                                                                                            class="cube">3</span>
+                                                                                                                    Does
+                                                                                                                    your
+                                                                                                                    school
+                                                                                                                    allow
+                                                                                                                    students
+                                                                                                                    to
+                                                                                                                    bring
+                                                                                                                    packaged
+                                                                                                                    food
+                                                                                                                    items
+                                                                                                                    (from
+                                                                                                                    home)
+                                                                                                                    for
+                                                                                                                    lunch?</label>
                                                                                                                 <ul class="list-inline">
                                                                                                                     <li>
                                                                                                                         <label class="radio-inline text-gray">
@@ -1953,7 +2033,8 @@
                                                                                                                                    name="Q9F1"
                                                                                                                                    onclick=""
                                                                                                                                    value="<?php echo set_value('Q9F1', 'Y') ?>" <?php if (isset($data['Q9F1'])) echo $data['Q9F1'] == 'Y' ? "checked" : "" ?>>
-                                                                                                                            Yes </label>
+                                                                                                                            Yes
+                                                                                                                        </label>
                                                                                                                     </li>
                                                                                                                     <li>
                                                                                                                         <label class="radio-inline text-gray">
@@ -1961,18 +2042,22 @@
                                                                                                                                    name="Q9F1"
                                                                                                                                    onclick="W"
                                                                                                                                    value="<?php echo set_value('Q9F1', 'N') ?>" <?php if (isset($data['Q9F1'])) echo $data['Q9F1'] == 'N' ? "checked" : "" ?>/>
-                                                                                                                            No </label>
+                                                                                                                            No
+                                                                                                                        </label>
                                                                                                                     </li>
                                                                                                                 </ul>
                                                                                                             </div>
                                                                                                             <div class="form-group">
                                                                                                                 <label class="control-label"><span
-                                                                                                                            class="cube">4</span> Does the
+                                                                                                                            class="cube">4</span>
+                                                                                                                    Does
+                                                                                                                    the
                                                                                                                     school
                                                                                                                     distribute
                                                                                                                     packaged
                                                                                                                     food
-                                                                                                                    items as
+                                                                                                                    items
+                                                                                                                    as
                                                                                                                     rewards
                                                                                                                     during
                                                                                                                     schools
@@ -1984,7 +2069,8 @@
                                                                                                                                    name="Q10F1"
                                                                                                                                    onclick="ComputePackaged(1)"
                                                                                                                                    value="<?php echo set_value('Q10F1', 'Y') ?>" <?php if (isset($data['Q10F1'])) echo $data['Q10F1'] == 'Y' ? "checked" : "" ?>>
-                                                                                                                            Yes </label>
+                                                                                                                            Yes
+                                                                                                                        </label>
                                                                                                                     </li>
                                                                                                                     <li>
                                                                                                                         <label class="radio-inline text-gray">
@@ -1992,7 +2078,8 @@
                                                                                                                                    name="Q10F1"
                                                                                                                                    onclick="ComputePackaged(2)"
                                                                                                                                    value="<?php echo set_value('Q10F1', 'N') ?>" <?php if (isset($data['Q10F1'])) echo $data['Q10F1'] == 'N' ? "checked" : "" ?>/>
-                                                                                                                            No </label>
+                                                                                                                            No
+                                                                                                                        </label>
                                                                                                                     </li>
                                                                                                                 </ul>
                                                                                                             </div>
@@ -2064,7 +2151,8 @@
                                                                                                                                name="Q10F1"
                                                                                                                                onclick="ComputeChocolates(1)"
                                                                                                                                value="<?php echo set_value('Q10F1', 'Y') ?>" <?php if (isset($data['Q10F1'])) echo $data['Q10F1'] == 'Y' ? "checked" : "" ?>>
-                                                                                                                        Yes </label>
+                                                                                                                        Yes
+                                                                                                                    </label>
                                                                                                                 </li>
                                                                                                                 <li>
                                                                                                                     <label class="radio-inline text-gray">
@@ -2073,7 +2161,8 @@
                                                                                                                                name="Q10F1"
                                                                                                                                onclick="ComputeChocolates(2)"
                                                                                                                                value="<?php echo set_value('Q10F1', 'N') ?>" <?php if (isset($data['Q10F1'])) echo $data['Q10F1'] == 'N' ? "checked" : "" ?>/>
-                                                                                                                        No </label>
+                                                                                                                        No
+                                                                                                                    </label>
                                                                                                                 </li>
                                                                                                             </ul>
                                                                                                         </div>
@@ -2087,7 +2176,10 @@
                                                                                                                                 class="cube">5(a)</span>Please
                                                                                                                         provide
                                                                                                                         the
-                                                                                                                        names: <a class="tt" data-tooltip="For example, Fanta, small packets of chips or Kurkure, etc."><span class="badge">?</span></a></label>
+                                                                                                                        names:
+                                                                                                                        <a class="tt"
+                                                                                                                           data-tooltip="For example, Fanta, small packets of chips or Kurkure, etc."><span
+                                                                                                                                    class="badge">?</span></a></label>
                                                                                                                     <textarea
                                                                                                                             type="text"
                                                                                                                             id="Q10F2"
@@ -2107,7 +2199,10 @@
                                                                                                                         class="cube">5(a)</span>Please
                                                                                                                 provide
                                                                                                                 the
-                                                                                                                names: <a class="tt" data-tooltip="For example, Fanta, small packets of chips or Kurkure, etc."><span class="badge">?</span></a></label>
+                                                                                                                names:
+                                                                                                                <a class="tt"
+                                                                                                                   data-tooltip="For example, Fanta, small packets of chips or Kurkure, etc."><span
+                                                                                                                            class="badge">?</span></a></label>
                                                                                                             <textarea
                                                                                                                     type="text"
                                                                                                                     id="Q10F2"
@@ -2139,7 +2234,8 @@
                                                                                                                                name="Q11F1"
                                                                                                                                onclick="ComputeBanners(1)"
                                                                                                                                value="<?php echo set_value('Q11F1', 'Y') ?>" <?php if (isset($data['Q11F1'])) echo $data['Q11F1'] == 'Y' ? "checked" : "" ?>>
-                                                                                                                        Yes </label>
+                                                                                                                        Yes
+                                                                                                                    </label>
                                                                                                                 </li>
                                                                                                                 <li>
                                                                                                                     <label class="radio-inline text-gray">
@@ -2148,7 +2244,8 @@
                                                                                                                                onclick="ComputeBanners(2)"
                                                                                                                                value="<?php echo set_value('Q11F1', 'N') ?>" <?php if (isset($data['Q11F1'])) echo $data['Q11F1'] == 'N' ? "checked" : "" ?>
                                                                                                                         /I>
-                                                                                                                        No </label>
+                                                                                                                        No
+                                                                                                                    </label>
                                                                                                                 </li>
                                                                                                             </ul>
                                                                                                         </div>
@@ -2159,7 +2256,8 @@
                                                                                                         <div class="form-group"
                                                                                                              id="Q11F2">
                                                                                                             <label class="control-label"><span
-                                                                                                                        class="cube">6(a)</span> Please
+                                                                                                                        class="cube">6(a)</span>
+                                                                                                                Please
                                                                                                                 provide
                                                                                                                 the
                                                                                                                 names
@@ -2200,7 +2298,8 @@
                                                                                                                                id="Q11F3"
                                                                                                                                name="Q11F3"
                                                                                                                                value="<?php echo set_value('Q11F3', 'Y') ?>" <?php if (isset($data['Q11F3'])) echo $data['Q11F3'] == 'Y' ? "checked" : "" ?>>
-                                                                                                                        Yes </label>
+                                                                                                                        Yes
+                                                                                                                    </label>
                                                                                                                 </li>
                                                                                                                 <li>
                                                                                                                     <label class="radio-inline text-gray">
@@ -2209,7 +2308,8 @@
                                                                                                                                name="Q11F3"
                                                                                                                                value="<?php echo set_value('Q11F3', 'N') ?>" <?php if (isset($data['Q11F3'])) echo $data['Q11F3'] == 'N' ? "checked" : "" ?>
                                                                                                                         /I>
-                                                                                                                        No </label>
+                                                                                                                        No
+                                                                                                                    </label>
                                                                                                                 </li>
                                                                                                             </ul>
                                                                                                         </div>
@@ -2221,13 +2321,15 @@
                                                                                                          id="Q11F2"
                                                                                                          style="display: none;">
                                                                                                         <label class="control-label"><span
-                                                                                                                    class="cube">6(a)</span> Please
+                                                                                                                    class="cube">6(a)</span>
+                                                                                                            Please
                                                                                                             provide
                                                                                                             the
                                                                                                             names of
-                                                                                                            sponsors: <a class="tt"
-                                                                                                                         data-tooltip="For example Complan, Quaker Oats, Cadbury, etc."
-                                                                                                                         href="#"><span
+                                                                                                            sponsors: <a
+                                                                                                                    class="tt"
+                                                                                                                    data-tooltip="For example Complan, Quaker Oats, Cadbury, etc."
+                                                                                                                    href="#"><span
                                                                                                                         class="badge">?</span></a></label>
                                                                                                         <textarea
                                                                                                                 type="text"
@@ -2259,7 +2361,8 @@
                                                                                                                     <input type="radio"
                                                                                                                            name="Q11F3"
                                                                                                                            value="<?php echo set_value('Q11F3', 'Y') ?>" <?php if (isset($data['Q11F3'])) echo $data['Q11F3'] == 'Y' ? "checked" : "" ?>>
-                                                                                                                    Yes </label>
+                                                                                                                    Yes
+                                                                                                                </label>
                                                                                                             </li>
                                                                                                             <li>
                                                                                                                 <label class="radio-inline text-gray">
@@ -2267,12 +2370,22 @@
                                                                                                                            name="Q11F3"
                                                                                                                            value="<?php echo set_value('Q11F3', 'N') ?>" <?php if (isset($data['Q11F3'])) echo $data['Q11F3'] == 'N' ? "checked" : "" ?>
                                                                                                                     />
-                                                                                                                    No </label>
+                                                                                                                    No
+                                                                                                                </label>
                                                                                                             </li>
                                                                                                         </ul>
                                                                                                     </div>
                                                                                                     <div class="form-group">
-                                                                                                        <label>Please upload pictures of events sponsored by UPPF (ultra-processed packaged food) companies</label>
+                                                                                                        <label>Please
+                                                                                                            upload
+                                                                                                            pictures of
+                                                                                                            events
+                                                                                                            sponsored by
+                                                                                                            UPPF
+                                                                                                            (ultra-processed
+                                                                                                            packaged
+                                                                                                            food)
+                                                                                                            companies</label>
                                                                                                         <br>
                                                                                                         Please
                                                                                                         upload all
@@ -2290,7 +2403,8 @@
                                                                                                         (.pdf), Word
                                                                                                         Document
                                                                                                         (.doc,
-                                                                                                        .docx), Image File
+                                                                                                        .docx), Image
+                                                                                                        File
                                                                                                         (.jpg,
                                                                                                         .jpeg). File
                                                                                                         size per
@@ -2303,28 +2417,40 @@
                                                                                                                 data-id="Audit Team doing Survey"
                                                                                                                 data-toggle="modal"
                                                                                                                 data-target="#airModal"
-                                                                                                                type="button"> UPLOAD
-                                                                                                            FILES </button>
+                                                                                                                type="button">
+                                                                                                            UPLOAD
+                                                                                                            FILES
+                                                                                                        </button>
                                                                                                         <br>
                                                                                                     </div>
                                                                                                     <br>
-                                                                                                    <table width="100%" class="question uploadedfiles">
-                                                                                                            <thead>
-                                                                                                                <tr>
-                                                                                                                    <th>File name</th>
-                                                                                                                    <th>Action</th>
-                                                                                                                </tr>
-                                                                                                            </thead>
-                                                                                                            <tbody>
-<?php foreach ($files as $f) { ?>
-                                                                                                                    <tr id="index<?php echo $f->id; ?>">
-    <?php $name = str_replace(" ", "_", $f->name . "_Audit_Team_doing_Survey_"); ?>
-                                                                                                                        <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
-                                                                                                                        <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
-                                                                                                                    </tr>
-<?php } ?>
-                                                                                                            </tbody>
-                                                                                                        </table>
+                                                                                                    <table width="100%"
+                                                                                                           class="question uploadedfiles">
+                                                                                                        <thead>
+                                                                                                        <tr>
+                                                                                                            <th>File
+                                                                                                                name
+                                                                                                            </th>
+                                                                                                            <th>Action
+                                                                                                            </th>
+                                                                                                        </tr>
+                                                                                                        </thead>
+                                                                                                        <tbody>
+                                                                                                        <?php foreach ($files as $f) { ?>
+                                                                                                            <tr id="index<?php echo $f->id; ?>">
+                                                                                                                <?php $name = str_replace(" ", "_", $f->name . "_Audit_Team_doing_Survey_"); ?>
+                                                                                                                <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                                                                                                                <td>
+                                                                                                                    <a href="javascript:void(0)"
+                                                                                                                       class="air-delete-files"
+                                                                                                                       data-id="<?php echo $f->id; ?>"><img
+                                                                                                                                src="<?php echo base_url(); ?>assets/front/images/delete.png"
+                                                                                                                                style="position:relative; top:5px"/></a>
+                                                                                                                </td>
+                                                                                                            </tr>
+                                                                                                        <?php } ?>
+                                                                                                        </tbody>
+                                                                                                    </table>
                                                                                                     <div class="form-group">
                                                                                                         <label>
                                                                                                             <h6> Task
@@ -2335,7 +2461,8 @@
                                                                                                     </div>
                                                                                                     <div class="form-group">
                                                                                                         <label class="control-label"><span
-                                                                                                                    class="cube">7</span> Does
+                                                                                                                    class="cube">7</span>
+                                                                                                            Does
                                                                                                             your
                                                                                                             school
                                                                                                             measure
@@ -2352,7 +2479,8 @@
                                                                                                                            name="Q12F1"
                                                                                                                            onclick="Measure(1)"
                                                                                                                            value="<?php echo set_value('Q12F1', 'Y') ?>" <?php if (isset($data['Q12F1'])) echo $data['Q12F1'] == 'Y' ? "checked" : "" ?>>
-                                                                                                                    Yes </label>
+                                                                                                                    Yes
+                                                                                                                </label>
                                                                                                             </li>
                                                                                                             <li>
                                                                                                                 <label class="radio-inline text-gray">
@@ -2360,7 +2488,8 @@
                                                                                                                            name="Q12F1"
                                                                                                                            onclick="Measure(2)"
                                                                                                                            value="<?php echo set_value('Q12F1', 'N') ?>" <?php if (isset($data['Q12F1'])) echo $data['Q12F1'] == 'N' ? "checked" : "" ?>/>
-                                                                                                                    No </label>
+                                                                                                                    No
+                                                                                                                </label>
                                                                                                             </li>
                                                                                                         </ul>
                                                                                                     </div>
@@ -2394,7 +2523,8 @@
                                                                                                                         <input type="radio"
                                                                                                                                name="Q12F2"
                                                                                                                                value="<?php echo set_value('Q12F2', 1) ?>" <?php if (isset($data['Q12F2'])) echo $data['Q12F2'] == 'Y' ? "checked" : "" ?>>
-                                                                                                                        Monthly </label>
+                                                                                                                        Monthly
+                                                                                                                    </label>
                                                                                                                 </li>
                                                                                                                 <li>
                                                                                                                     <label class="radio-inline text-gray">
@@ -2402,7 +2532,8 @@
                                                                                                                                name="Q12F2"
                                                                                                                                value="<?php echo set_value('Q12F2', 2) ?>" <?php if (isset($data['Q12F2'])) echo $data['Q12F2'] == 'N' ? "checked" : "" ?>
                                                                                                                         /I>
-                                                                                                                        Quarterly </label>
+                                                                                                                        Quarterly
+                                                                                                                    </label>
                                                                                                                 </li>
                                                                                                                 <li>
                                                                                                                     <label class="radio-inline text-gray">
@@ -2410,7 +2541,8 @@
                                                                                                                                name="Q12F2"
                                                                                                                                value="<?php echo set_value('Q12F2', 3) ?>" <?php if (isset($data['Q12F2'])) echo $data['Q12F2'] == 'N' ? "checked" : "" ?>
                                                                                                                         /I>
-                                                                                                                        Bi-annually </label>
+                                                                                                                        Bi-annually
+                                                                                                                    </label>
                                                                                                                 </li>
                                                                                                                 <li>
                                                                                                                     <label class="radio-inline text-gray">
@@ -2418,7 +2550,8 @@
                                                                                                                                name="Q12F2"
                                                                                                                                value="<?php echo set_value('Q12F2', 4) ?>" <?php if (isset($data['Q12F2'])) echo $data['Q12F2'] == 'N' ? "checked" : "" ?>
                                                                                                                         /I>
-                                                                                                                        Annually </label>
+                                                                                                                        Annually
+                                                                                                                    </label>
                                                                                                                 </li>
                                                                                                             </ul>
                                                                                                         </div>
@@ -2441,7 +2574,8 @@
                                                                                                                            name="Q13F1"
                                                                                                                            onclick="ExtraCurricular(1)"
                                                                                                                            value="<?php echo set_value('Q13F1', 'Y') ?>" <?php if (isset($data['Q13F1'])) echo $data['Q13F1'] == 'Y' ? "checked" : "" ?>>
-                                                                                                                    Yes </label>
+                                                                                                                    Yes
+                                                                                                                </label>
                                                                                                             </li>
                                                                                                             <li>
                                                                                                                 <label class="radio-inline text-gray">
@@ -2449,7 +2583,8 @@
                                                                                                                            name="Q13F1"
                                                                                                                            onclick="ExtraCurricular(2)"
                                                                                                                            value="<?php echo set_value('Q13F1', 'N') ?>" <?php if (isset($data['Q13F1'])) echo $data['Q13F1'] == 'N' ? "checked" : "" ?>/>
-                                                                                                                    No </label>
+                                                                                                                    No
+                                                                                                                </label>
                                                                                                             </li>
                                                                                                         </ul>
                                                                                                     </div>
@@ -2475,7 +2610,12 @@
                                                                                                                 share
                                                                                                                 the
                                                                                                                 details</label>
-                  <textarea type="text" rows="5" id="Q13F2" name="Q13F2" placeholder="<?php if (isset($data['Q13F2'])) echo $data['Q13F2'] ?>" value="<?php echo set_value('Q13F2'); ?>">
+                                                                                                            <textarea
+                                                                                                                    rows="5"
+                                                                                                                    id="Q13F2"
+                                                                                                                    name="Q13F2"
+                                                                                                                    placeholder="<?php if (isset($data['Q13F2'])) echo trim($data['Q13F2']) ?>"
+                                                                                                                    value="<?php echo set_value('Q13F2'); ?>">
 <?php if (isset($data['Q13F2'])) echo $data['Q13F2'] ?>
                         </textarea>
                                                                                                         </div>
@@ -2507,7 +2647,8 @@
                                                                                                         (.pdf), Word
                                                                                                         Document
                                                                                                         (.doc,
-                                                                                                        .docx), Image File
+                                                                                                        .docx), Image
+                                                                                                        File
                                                                                                         (.jpg,
                                                                                                         .jpeg). File
                                                                                                         size per
@@ -2515,43 +2656,67 @@
                                                                                                         should not
                                                                                                         exceed 500
                                                                                                         KB.<br>
-                                                                                                        <div class="clearfix"> &nbsp; </div>
+                                                                                                        <div class="clearfix">
+                                                                                                            &nbsp;
+                                                                                                        </div>
                                                                                                         <button class="btn uploadbtn upload"
                                                                                                                 data-id="UPPF"
                                                                                                                 data-toggle="modal"
                                                                                                                 data-target="#airModal"
-                                                                                                                type="button"> UPLOAD
-                                                                                                            FILES </button>
+                                                                                                                type="button">
+                                                                                                            UPLOAD
+                                                                                                            FILES
+                                                                                                        </button>
                                                                                                         <br>
                                                                                                         <br>
                                                                                                     </div>
-                                                                                                    <table width="100%" class="question uploadedfiles">
-                                                                                                            <thead>
-                                                                                                                <tr>
-                                                                                                                    <th>File name</th>
-                                                                                                                    <th>Action</th>
-                                                                                                                </tr>
-                                                                                                            </thead>
-                                                                                                            <tbody>
-<?php foreach ($uppc as $u) { ?>
-                                                                                                                    <tr id="index<?php echo $u->id; ?>">
-    <?php $name = str_replace(" ", "_", $f->name . "_UPPF_"); ?>
-                                                                                                                        <td class="upload edit"><?php echo str_replace($name, "", $u->file_name); ?></td>
-                                                                                                                        <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $u->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
-                                                                                                                    </tr>
-<?php } ?>
-                                                                                                            </tbody>
-                                                                                                        </table>
+                                                                                                    <table width="100%"
+                                                                                                           class="question uploadedfiles">
+                                                                                                        <thead>
+                                                                                                        <tr>
+                                                                                                            <th>File
+                                                                                                                name
+                                                                                                            </th>
+                                                                                                            <th>Action
+                                                                                                            </th>
+                                                                                                        </tr>
+                                                                                                        </thead>
+                                                                                                        <tbody>
+                                                                                                        <?php foreach ($uppc as $u) { ?>
+                                                                                                            <tr id="index<?php echo $u->id; ?>">
+                                                                                                                <?php $name = str_replace(" ", "_", $f->name . "_UPPF_"); ?>
+                                                                                                                <td class="upload edit"><?php echo str_replace($name, "", $u->file_name); ?></td>
+                                                                                                                <td>
+                                                                                                                    <a href="javascript:void(0)"
+                                                                                                                       class="air-delete-files"
+                                                                                                                       data-id="<?php echo $u->id; ?>"><img
+                                                                                                                                src="<?php echo base_url(); ?>assets/front/images/delete.png"
+                                                                                                                                style="position:relative; top:5px"/></a>
+                                                                                                                </td>
+                                                                                                            </tr>
+                                                                                                        <?php } ?>
+                                                                                                        </tbody>
+                                                                                                    </table>
                                                                                                     <div class="text-center">
                                                                                                         <button type="button"
                                                                                                                 class="org-btn"
-                                                                                                                id="btnFoodPrevious"> Previous </button>
+                                                                                                                id="btnFoodPrevious">
+                                                                                                            Previous
+                                                                                                        </button>
                                                                                                         <button type="submit"
                                                                                                                 class="org-btn"
                                                                                                                 id="foodnext"
-                                                                                                                value="movenext"> Next </button>
-                                                                                                        <button type="button" class="org-btn submit button" id="foodsave"> Save and Resume Later</button>
-                                                                                                        <?php echo form_close(); ?> </div>
+                                                                                                                value="movenext">
+                                                                                                            Next
+                                                                                                        </button>
+                                                                                                        <button type="button"
+                                                                                                                class="org-btn submit button"
+                                                                                                                id="foodsave">
+                                                                                                            Save and
+                                                                                                            Resume Later
+                                                                                                        </button>
+                                                                                                        <?php echo form_close(); ?>
+                                                                                                    </div>
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
@@ -2572,13 +2737,19 @@
                                                                 <div id="videoModal" class="modal fade" role="dialog">
                                                                     <div class="modal-dialog">
                                                                         <!-- Modal content-->
-                                                                        <div class="modal-content" style="background:transparent; border-radius:0px;">
-                                                                            <div class="modal-header" style="background: rgb(232, 101, 73); color:#fff;">
-                                                                                <button type="button" class="close"  data-dismiss="modal">&times; </button>
+                                                                        <div class="modal-content"
+                                                                             style="background:transparent; border-radius:0px;">
+                                                                            <div class="modal-header"
+                                                                                 style="background: rgb(232, 101, 73); color:#fff;">
+                                                                                <button type="button" class="close"
+                                                                                        data-dismiss="modal">&times;
+                                                                                </button>
                                                                                 <h4 class="modal-title">View video
                                                                                     tutorial</h4>
                                                                             </div>
-                                                                            <iframe width="100%" height="330px" src="https://www.youtube.com/embed/9r3Lwrd9BUs" id="video" frameborder="0"
+                                                                            <iframe width="100%" height="330px"
+                                                                                    src="https://www.youtube.com/embed/9r3Lwrd9BUs"
+                                                                                    id="video" frameborder="0"
                                                                                     allowfullscreen></iframe>
                                                                         </div>
                                                                     </div>
@@ -2616,35 +2787,31 @@
                                                                                 }
                                                                             });
                                                                         });
-                                                                        
+
                                                                         //delete air files
-                                                                            $('body').on('click', '.air-delete-files', function (data) {
-                                                                                var test = confirm("Are you sure you want to delete this file");
-                                                                                if (test == true)
-                                                                                {
-                                                                                    var divId = $(this).attr('data-id');
-                                                                                    $.ajax({
-                                                                                        url: '<?php echo base_url('upload_files/deletFiles') ?>',
-                                                                                        type: 'POST',
-                                                                                        data: {id: $(this).attr('data-id')},
-                                                                                        success: function (data)
-                                                                                        {
-                                                                                            if (data == "success")
-                                                                                            {
-                                                                                                console.log('index' + divId);
-                                                                                                $('#msg').html('<div class="alert alert-success">' +
-                                                                                                        '<strong>&#10004; Success!</strong> Files deleted successfully.' +
-                                                                                                        '</div>');
-                                                                                                $('#index' + divId).html('');
-                                                                                            } else if (data == "error")
-                                                                                            {
-                                                                                                $('#msg').html('<div class="alert alert-danger">' +
-                                                                                                        '<strong>&#x2716; Error!</strong> There is an error deleting your files.' +
-                                                                                                        '</div>');
-                                                                                            }
+                                                                        $('body').on('click', '.air-delete-files', function (data) {
+                                                                            var test = confirm("Are you sure you want to delete this file");
+                                                                            if (test == true) {
+                                                                                var divId = $(this).attr('data-id');
+                                                                                $.ajax({
+                                                                                    url: '<?php echo base_url('upload_files/deletFiles') ?>',
+                                                                                    type: 'POST',
+                                                                                    data: {id: $(this).attr('data-id')},
+                                                                                    success: function (data) {
+                                                                                        if (data == "success") {
+                                                                                            console.log('index' + divId);
+                                                                                            $('#msg').html('<div class="alert alert-success">' +
+                                                                                                '<strong>&#10004; Success!</strong> Files deleted successfully.' +
+                                                                                                '</div>');
+                                                                                            $('#index' + divId).html('');
+                                                                                        } else if (data == "error") {
+                                                                                            $('#msg').html('<div class="alert alert-danger">' +
+                                                                                                '<strong>&#x2716; Error!</strong> There is an error deleting your files.' +
+                                                                                                '</div>');
                                                                                         }
-                                                                                    });
-                                                                                }
-                                                                            });
+                                                                                    }
+                                                                                });
+                                                                            }
+                                                                        });
                                                                     });
                                                                 </script>
