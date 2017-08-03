@@ -52,7 +52,7 @@
               <li class=""><a href="audit_registrations.php">REGISTRATIONS<span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li class=""><a href="<?php echo base_url('admin/audit_started'); ?>">AUDIT STARTED</a></li>
-                  <li><a href="audit_registrations_2017.php">REGISTRATIONS 2017</a></li>
+                  <li><a href="<?php echo base_url('admin/audit_started_2017'); ?>">REGISTRATIONS 2017</a></li>
                 </ul>
               </li>
               <li class=""><a href="audit_completed.php">AUDIT COMPLETED<span class="caret"></span></a>
