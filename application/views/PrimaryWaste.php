@@ -663,6 +663,23 @@
                 <br>
                 <br>
             </div>
+            <table width="100%" class="question uploadedfiles">
+                <thead>
+                <tr>
+                    <th>File name</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php foreach ($segregationClassroom as $f) { ?>
+                    <tr id="index<?php echo $f->id; ?>">
+                        <?php $name = str_replace(" ", "_", $f->name . "_Segregation_Source_Classrooms_"); ?>
+                        <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                        <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+                    </tr>
+                <?php } ?>
+                </tbody>
+            </table>
             <div class="form-group">
                 <label><h6>Task 4: Does your school treat/recycle waste?</h6> </label>
                 <br>
@@ -996,6 +1013,23 @@
                     <button class="btn uploadbtn upload" data-id="Recycling Units" data-toggle="modal" data-target="#airModal" type="button">UPLOAD FILES</button>
                     <br><br>
                 </div>
+                <table width="100%" class="question uploadedfiles">
+                    <thead>
+                    <tr>
+                        <th>File name</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php foreach ($composingPit as $f) { ?>
+                        <tr id="index<?php echo $f->id; ?>">
+                            <?php $name = str_replace(" ", "_", $f->name . "_Composting_Pit_"); ?>
+                            <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                            <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+                        </tr>
+                    <?php } ?>
+                    </tbody>
+                </table>
                 <?php
                 if(isset($data['Q9Wa1']))
                     if($data['Q9Wa1'] == 'Y')
@@ -1074,6 +1108,24 @@
                     <br>
                 </div>
                 <br>
+                <table width="100%" class="question uploadedfiles">
+                    <thead>
+                    <tr>
+                        <th>File name</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php foreach ($composingPit as $f) { ?>
+                        <tr id="index<?php echo $f->id; ?>">
+                            <?php $name = str_replace(" ", "_", $f->name . "_Composting_Pit_"); ?>
+                            <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                            <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+                        </tr>
+                    <?php } ?>
+                    </tbody>
+                </table>
+                <div class="clearfix">&nbsp;</div>
                 <div class="form-group">
                     <label  class="control-label"><span class="cube">8</span>Does your school have the following? If yes, please give the numbers of items in working condition and those that are not.</label>
 
@@ -1581,6 +1633,23 @@
                         <br>
                         <br>
                     </div>
+                    <table width="100%" class="question uploadedfiles">
+                        <thead>
+                        <tr>
+                            <th>File name</th>
+                            <th>Action</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php foreach ($ewasteStorage as $f) { ?>
+                            <tr id="index<?php echo $f->id; ?>">
+                                <?php $name = str_replace(" ", "_", $f->name . "_E-Waste_Storage_"); ?>
+                                <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                                <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+                            </tr>
+                        <?php } ?>
+                        </tbody>
+                    </table>
                     <div class="form-group">
                         <label class="control-label"><span class="cube">9</span>Do you know that your e-waste can be collected by an authorized dealer or dismantler? </label>
                         <div class="form-group">
@@ -1693,8 +1762,29 @@
                         <br>
                         &bull; Pictures of housekeeping staff disposing different types of solid waste<br><br/>
                         <!--    <input type="file" name="" class="org-btn">  <br>-->
-                        <button class="btn uploadbtn upload">UPLOAD FILES</button>
+                        <button class="btn uploadbtn upload"
+                                data-id="Disposing" data-toggle="modal"
+                                data-target="#airModal" type="button">UPLOAD FILES
+                        </button>
                     </div><br/>
+                    <table width="100%" class="question uploadedfiles">
+                        <thead>
+                        <tr>
+                            <th>File name</th>
+                            <th>Action</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php foreach ($disposing as $f) { ?>
+                            <tr id="index<?php echo $f->id; ?>">
+                                <?php $name = str_replace(" ", "_", $f->name . "_Disposing_"); ?>
+                                <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                                <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+                            </tr>
+                        <?php } ?>
+                        </tbody>
+                    </table>
+                    <div class="clearfix">&nbsp;</div>
                     <div class="form-group">
                         <label class="control-label"><span class="cube">11</span>Does your school burn waste? </label>
                         <div class="form-group">
@@ -1715,6 +1805,25 @@
                         <br>
                         <br>
                     </div>
+                    <div class="clearfix">&nbsp;</div>
+                    <table width="100%" class="question uploadedfiles">
+                        <thead>
+                        <tr>
+                            <th>File name</th>
+                            <th>Action</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php foreach ($burningWaste as $f) { ?>
+                            <tr id="index<?php echo $f->id; ?>">
+                                <?php $name = str_replace(" ", "_", $f->name . "_Buring_Waste_"); ?>
+                                <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                                <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+                            </tr>
+                        <?php } ?>
+                        </tbody>
+                    </table>
+                    <div class="clearfix">&nbsp;</div>
                     <?php
                     if(isset($data['Q15Wa1']))
                         if($data['Q15Wa1'])
@@ -1799,6 +1908,26 @@
                         <br>
                         <br>
                     </div>
+                    <div class="clearfix">&nbsp;</div>
+
+                    <table width="100%" class="question uploadedfiles">
+                        <thead>
+                        <tr>
+                            <th>File name</th>
+                            <th>Action</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php foreach ($eWasteDisposing as $f) { ?>
+                            <tr id="index<?php echo $f->id; ?>">
+                                <?php $name = str_replace(" ", "_", $f->name . "_E-Waste_Disposing_Certificate_"); ?>
+                                <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                                <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+                            </tr>
+                        <?php } ?>
+                        </tbody>
+                    </table>
+                    <div class="clearfix">&nbsp;</div>
                     <div class="form-group">
                         <label><h6> Task 6: School’s initiatives </h6></label>
                         <br>
@@ -1922,6 +2051,25 @@
                         <br>
                         <br>
                     </div>
+                    <div class="clearfix">&nbsp;</div>
+                    <table width="100%" class="question uploadedfiles">
+                        <thead>
+                        <tr>
+                            <th>File name</th>
+                            <th>Action</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php foreach ($pictures as $f) { ?>
+                            <tr id="index<?php echo $f->id; ?>">
+                                <?php $name = str_replace(" ", "_", $f->name . "_Pictures_of_Audit_Team_Waste_"); ?>
+                                <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                                <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+                            </tr>
+                        <?php } ?>
+                        </tbody>
+                    </table>
+                    <div class="clearfix">&nbsp;</div>
                     <div class="text-center">
 
                         <button type="button" class="org-btn" id="btnWastePrevious">Previous</button>
@@ -1969,6 +2117,36 @@
                     window.location.href = "<?php echo base_url('logout'); ?>";
                 }
             });
+        });
+
+        //delete air files
+        $('body').on('click', '.air-delete-files', function (data) {
+            var test = confirm("Are you sure you want to delete this file");
+            if (test == true)
+            {
+                var divId = $(this).attr('data-id');
+                $.ajax({
+                    url: '<?php echo base_url('upload_files/deletFiles') ?>',
+                    type: 'POST',
+                    data: {id: $(this).attr('data-id')},
+                    success: function (data)
+                    {
+                        if (data == "success")
+                        {
+                            console.log('index' + divId);
+                            $('#msg').html('<div class="alert alert-success">' +
+                                '<strong>&#10004; Success!</strong> Files deleted successfully.' +
+                                '</div>');
+                            $('#index' + divId).html('');
+                        } else if (data == "error")
+                        {
+                            $('#msg').html('<div class="alert alert-danger">' +
+                                '<strong>&#x2716; Error!</strong> There is an error deleting your files.' +
+                                '</div>');
+                        }
+                    }
+                });
+            }
         });
     });
 </script>

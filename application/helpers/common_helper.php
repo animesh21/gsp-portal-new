@@ -28,3 +28,21 @@ if (!function_exists('getFiled')) {
     }
 
 }
+
+/*
+ * Upload Helper Function
+ */
+if (!function_exists('uploadHelper')) {
+
+    function uploadHelper($argID, $argTypeName)
+    {
+        $CI =& get_instance();
+        return $CI->db->select('a.*, b.name')
+            ->from('files AS a')
+            ->join('gsp_school AS b', 'a.userid=b.userid', 'left')
+            ->where('a.userid', $argID)
+            ->like('a.file_name', $argTypeName)
+            ->get()->result();
+    }
+
+}
