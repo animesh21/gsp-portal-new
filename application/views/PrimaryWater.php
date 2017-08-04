@@ -2068,12 +2068,12 @@
                         <ul class="list-inline">
                             <li>
                                 <label class="radio-inline text-gray">
-                                    <input type="radio" name="Q17W1" value="<?php echo set_value('Q17W1','Y')?>" <?php if(isset($data['Q17W1'])) echo $data['Q17W1'] == 'Y'?"checked":"";  if(isset($other['Q2G1'])) echo "required";?>>
+                                    <input type="radio" name="Q17W1" value="<?php echo set_value('Q17W1','Y')?>" <?php if(isset($data['Q17W1'])) echo $data['Q17W1'] == 'Y'?"checked":""; ?>>
                                     Yes </label>
                             </li>
                             <li>
                                 <label class="radio-inline text-gray">
-                                    <input type="radio" name="Q17W1" value="<?php echo set_value('Q17W1','N')?>" <?php if(isset($data['Q17W1'])) echo $data['Q17W1'] == 'N'?"checked":""; if(isset($other['Q2G1'])) echo "required";?>>
+                                    <input type="radio" name="Q17W1" value="<?php echo set_value('Q17W1','N')?>" <?php if(isset($data['Q17W1'])) echo $data['Q17W1'] == 'N'?"checked":""; ?>>
                                     No </label>
                             </li>
                         </ul>
@@ -2242,7 +2242,7 @@
                                                 <br>
                                             </div>
                                             <div class="text-center">
-                                                <button type="button" id="moveprevbtn" value="moveprev" name="moveprev" accesskey="p" class="submit button" onClick="javascript:window.location.href='<?php echo base_url("land")?>';">Previous</button>
+                                                <button type="button" id="moveprevbtn" value="moveprev" name="moveprev" accesskey="p" class="submit button">Previous</button>
                                                 <button type="submit" id="movenextbtn" value="movenext" name="movenext" accesskey="n" class="submit button">Next</button>
                                                 <button type="button" class="org-btn" id="watersave">Save and Resume Later</button>
                                             </div>
@@ -2278,7 +2278,7 @@
 
                                         $(document).ready(function () {
                                             $('#moveprevbtn').on('click', function (data) {
-                                                var fd = $('#water').serialize();
+                                                var fd = $('#PrimaryWater').serialize();
                                                 //console.log(fd);
                                                 $.ajax({
                                                     type: 'POST',
@@ -2292,7 +2292,7 @@
                                             });
 
                                             $('#watersave').on('click', function (data) {
-                                                var fd = $('#water').serialize();
+                                                var fd = $('#PrimaryWater').serialize();
                                                 //console.log(fd);
                                                 $.ajax({
                                                     type: 'POST',
