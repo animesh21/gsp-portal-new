@@ -2379,15 +2379,7 @@ if (isset($data['Q13F1'])) {
                                                                                                     share
                                                                                                     the
                                                                                                     details</label>
-                                                                                                <textarea
-                                                                                                    type="text"
-                                                                                                    rows="5"
-                                                                                                    id="Q13F2"
-                                                                                                    name="Q13F2"
-                                                                                                    placeholder="<?php if (isset($data['Q13F2'])) echo $data['Q13F2'] ?>"
-                                                                                                    value="<?php echo set_value('Q13F2'); ?>">
-
-                                                                                                </textarea>
+   <textarea type="text" rows="5" id="Q13F2" name="Q13F2" placeholder="<?php if (isset($data['Q13F2'])) echo $data['Q13F2'] ?>"><?php echo set_value('Q13F2'); ?></textarea>
                                                                                             </div>
                                                                                             <div class="form-group">
                                                                                                 <label class="control-label">Please
