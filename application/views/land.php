@@ -879,6 +879,27 @@
             FILES
         </button>
         <br>
+        <table width="100%" class="question uploadedfiles">
+            <thead>
+            <tr>
+                <th>File name</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php //echo '<pre>'; print_r($greenCover);  ?>
+            <?php foreach ($greenCover as $f) { ?>
+                <tr id="index<?php echo $f->id; ?>">
+                    <?php $name = str_replace(" ", "_", $f->name . "_Green_Cover_"); //echo $name; ?>
+                    <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                    <td><a href="javascript:void(0)" class="air-delete-files"
+                           data-id="<?php echo $f->id; ?>"><img
+                                    src="<?php echo base_url(); ?>assets/front/images/delete.png"
+                                    style="position:relative; top:5px"/></a></td>
+                </tr>
+            <?php } ?>
+            </tbody>
+        </table>
         <div class="text-center">
             <button type="button" class="org-btn" id="btnlandPrevious">
                 Previous
@@ -892,27 +913,6 @@
             </button>
         </div>
     </div>
-    <table width="100%" class="question uploadedfiles">
-        <thead>
-        <tr>
-            <th>File name</th>
-            <th>Action</th>
-        </tr>
-        </thead>
-        <tbody>
-        <?php //echo '<pre>'; print_r($greenCover);  ?>
-        <?php foreach ($greenCover as $f) { ?>
-            <tr id="index<?php echo $f->id; ?>">
-                <?php $name = str_replace(" ", "_", $f->name . "_Green_Cover_"); //echo $name; ?>
-                <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
-                <td><a href="javascript:void(0)" class="air-delete-files"
-                       data-id="<?php echo $f->id; ?>"><img
-                                src="<?php echo base_url(); ?>assets/front/images/delete.png"
-                                style="position:relative; top:5px"/></a></td>
-            </tr>
-        <?php } ?>
-        </tbody>
-    </table>
     <?php echo form_close(); ?> </div>
 </div>
 <!-- /.container -->
