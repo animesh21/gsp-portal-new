@@ -42,7 +42,7 @@
         <br>
         <strong>The unit of measurement to be used in the Water section is Litre (L).</strong> <br>
         <br>
-        <?php echo form_open('water/set',array('id'=>'water')); ?>
+        <?php echo form_open('water/set',array('id'=>'PrimaryWater')); ?>
         <div class="form-group">
             <label>
                 <h6> Task 1: Choose your Water Audit Team</h6>
@@ -988,14 +988,16 @@
 
                         >
                             <label><span class="cube">4(b)(2)</span> Does your school have rainwater storage tank? </label>
-                            <div class="form-group">
-                                <label class="radio-inline text-gray">
+                            <ul class="list-inline">
+                                <li>
+								<label class="radio-inline text-gray">
                                     <input type="radio" name="Q8W2S2S2" onclick="Storage(1)" value="<?php echo set_value('Q8W2S2S2','Y')?>" <?php if(isset($data['Q8W2S2S2'])) echo $data['Q8W2S2S2'] == 'Y'?"checked":"" ?>>
-                                    Yes </label>
+                                    Yes </label></li>
+									<li>
                                 <label class="radio-inline text-gray">
                                     <input type="radio" id="Q8W2S2S2_2" name="Q8W2S2S2" onclick="Storage(2)" value="<?php echo set_value('Q8W2S2S2','N')?>" <?php if(isset($data['Q8W2S2S2'])) echo $data['Q8W2S2S2'] == 'N'?"checked":"" ?>/>
-                                    No </label>
-                            </div>
+                                    No </label></li>
+                            </ul>
                         </div>
                         <div class="form-group" id="Q8W2S2S3"
                             <?php
@@ -1162,14 +1164,16 @@
 
                         >
                             <label><span class="cube">4(b)(3)</span>Does your school have groundwater recharge structure? </label>
-                            <div class="form-group">
+                            <ul class="list-inline">
+							<li>
                                 <label class="radio-inline text-gray">
                                     <input type="radio"  name="Q8W2S2S7" onclick="Recharge(1)" value="<?php echo set_value('Q8W2S2S7','Y')?>" <?php if(isset($data['Q8W2S2S7'])) echo $data['Q8W2S2S7'] == 'Y'?"checked":"" ?>>
-                                    Yes </label>
+                                    Yes </label></li>
+									<li>
                                 <label class="radio-inline text-gray">
                                     <input type="radio" id="Q8W2S2S7_2" name="Q8W2S2S7" onclick="Recharge(2)" value="<?php echo set_value('Q8W2S2S7','N')?>" <?php if(isset($data['Q8W2S2S7'])) echo $data['Q8W2S2S7'] == 'N'?"checked":"" ?>/>
-                                    No </label>
-                            </div>
+                                    No </label></li>
+                            </ul>
                         </div>
                         <div class="form-group" id="Q8W2S2S8"
                             <?php
@@ -1589,12 +1593,14 @@
                     >
                         <label><span class="cube">4(c)</span>Does your school clean your catchment and system </label>
                         <ul class="list-inline">
+						<li>
                             <label class="radio-inline text-gray">
                                 <input type="radio" name="Q8W2S61" onclick="WaterCatchment(1)" value="<?php echo set_value('Q8W2S61','Y')?>" <?php if(isset($data['Q8W2S61'])) echo $data['Q8W2S61'] == 'Y'?"checked":"" ?>>
-                                Yes </label>
+                                Yes </label></li>
+								<li>
                             <label class="radio-inline text-gray">
                                 <input type="radio" name="Q8W2S61" onclick="WaterCatchment(2)" value="<?php echo set_value('Q8W2S61','N')?>" <?php if(isset($data['Q8W2S61'])) echo $data['Q8W2S61'] == 'N'?"checked":"" ?>/>
-                                No </label>
+                                No </label></li>
                         </ul>
                     </div>
                     <div class="form-group" id="Q8W2S7"
