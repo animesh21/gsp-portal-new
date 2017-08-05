@@ -47,6 +47,7 @@ class Land extends CI_Controller {
         
         $post = $this->input->post();
         $this->Answer_model->submitAnswers($post,5);
+	updateProgress($this->session->userdata('USER_ID'), 50);    
         //print_r($post);
         redirect(base_url("water"));
     }
