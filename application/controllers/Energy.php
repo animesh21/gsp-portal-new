@@ -144,6 +144,7 @@ class Energy extends CI_Controller {
         else
         {*/
         $this->Answer_model->submitAnswers($post,3);
+		updateProgress($this->session->userdata('USER_ID'), 30);
         //print_r($post);
         redirect(base_url("food"));
         // }
