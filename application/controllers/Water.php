@@ -59,6 +59,7 @@ class Water extends CI_Controller {
         
         $post = $this->input->post();
         $this->Answer_model->submitAnswers($post,6);
+	updateProgress($this->session->userdata('USER_ID'), 75);
         redirect(base_url("waste"));
     }
 	
