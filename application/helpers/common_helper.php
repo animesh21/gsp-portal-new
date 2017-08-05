@@ -46,3 +46,18 @@ if (!function_exists('uploadHelper')) {
     }
 
 }
+
+/*
+ * Update Progress Function
+ */
+if (!function_exists('updateProgress')) {
+
+    function updateProgress($argID, $argProgress)
+    {
+        $arr=array('progress'=>$argProgress);
+        $CI =& get_instance();
+        $CI->db->where('userid', $argID);
+        $CI->db->update('gsp_school', $arr);
+    }
+
+}
