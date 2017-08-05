@@ -62,6 +62,7 @@ class Food extends CI_Controller {
 
         $post = $this->input->post();
         $this->Answer_model->submitAnswers($post,4);
+		updateProgress($this->session->userdata('USER_ID'), 40);
         //print_r($post);
         redirect(base_url("land"));
     }
