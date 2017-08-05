@@ -84,6 +84,8 @@
             case "PrimaryFood":
                 redirect = "foodajax";
                 break;
+			case "PrimaryLand":
+                redirect= "landajax";
         }
 
         //console.log(fd);
