@@ -5,7 +5,7 @@ class General extends CI_Controller {
   
   public function __construct() {
         parent::__construct();
-        $this->load->helper(array('form', 'security'));
+        $this->load->helper(array('form', 'security', 'common_helper'));
         $this->load->library('form_validation');
         $this->load->model('Answer_model');
         $this->load->model('School_model');
