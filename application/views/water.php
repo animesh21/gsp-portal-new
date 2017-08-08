@@ -1,4 +1,6 @@
 <?php $this->load->view('header'); ?>
+<link rel="stylesheet"  href="<?php echo base_url() ?>assets/css/jquery.fileuploader.css" />
+<link href="<?php echo base_url() ?>assets/css/jquery.fileuploader-theme-onebutton.css" media="all" rel="stylesheet">
 <style>
     .form-group > label ul {
         list-style-type: none !important;
@@ -536,6 +538,7 @@
                            value="<?php echo set_value('Q4W5'); ?>"/>
                 </div>
             </div>
+            <!--
             <div class="form-group row">
                 <div class="col-xs-3">
                     <label class="text-gray">Service Area on ground</label>
@@ -558,15 +561,16 @@
                            value="<?php echo set_value('Q4W7'); ?>"/>
                 </div>
             </div>
+             -->
             <div class="form-group row">
                 <div class="col-xs-3">
                     <label class="text-gray">Cleaning Utensils</label>
                 </div>
                 <div class="col-xs-5">
                     <input class="form-control space-textbox" onkeyup="WaterConsumption()" onchange="WaterConsumption()"
-                           id="Q4W8" type="number" min="0" name="Q4W8"
-                           placeholder="<?php if (isset($data['Q4W8'])) echo $data['Q4W8'] ?>"
-                           value="<?php echo set_value('Q4W8'); ?>"/>
+                           id="Q4W8" type="number" min="0" name="Q4W6"
+                           placeholder="<?php if (isset($data['Q4W6'])) echo $data['Q4W6'] ?>"
+                           value="<?php echo set_value('Q4W6'); ?>"/>
                 </div>
             </div>
             <div class="form-group row">
@@ -575,9 +579,9 @@
                 </div>
                 <div class="col-xs-5">
                     <input class="form-control space-textbox" onkeyup="WaterConsumption()" onchange="WaterConsumption()"
-                           id="Q4W9" type="number" min="0" name="Q4W9"
-                           placeholder="<?php if (isset($data['Q4W9'])) echo $data['Q4W9'] ?>"
-                           value="<?php echo set_value('Q4W9'); ?>"/>
+                           id="Q4W9" type="number" min="0" name="Q4W7"
+                           placeholder="<?php if (isset($data['Q4W7'])) echo $data['Q4W7'] ?>"
+                           value="<?php echo set_value('Q4W7'); ?>"/>
                 </div>
             </div>
             <div class="form-group row">
@@ -586,9 +590,9 @@
                 </div>
                 <div class="col-xs-5">
                     <input class="form-control space-textbox" onkeyup="WaterConsumption()" onchange="WaterConsumption()"
-                           id="Q4W10" type="number" min="0" name="Q4W10"
-                           placeholder="<?php if (isset($data['Q4W10'])) echo $data['Q4W10'] ?>"
-                           value="<?php echo set_value('Q4W10'); ?>"/>
+                           id="Q4W10" type="number" min="0" name="Q4W8"
+                           placeholder="<?php if (isset($data['Q4W8'])) echo $data['Q4W8'] ?>"
+                           value="<?php echo set_value('Q4W8'); ?>"/>
                 </div>
             </div>
             <div class="form-group row">
@@ -597,9 +601,9 @@
                 </div>
                 <div class="col-xs-5">
                     <input class="form-control space-textbox" onkeyup="WaterConsumption()" onchange="WaterConsumption()"
-                           id="Q4W11" type="number" min="0" name="Q4W11"
-                           placeholder="<?php if (isset($data['Q4W11'])) echo $data['Q4W11'] ?>"
-                           value="<?php echo set_value('Q4W11'); ?>"/>
+                           id="Q4W11" type="number" min="0" name="Q4W9"
+                           placeholder="<?php if (isset($data['Q4W9'])) echo $data['Q4W9'] ?>"
+                           value="<?php echo set_value('Q4W9'); ?>"/>
                 </div>
             </div>
             <div class="form-group row">
@@ -608,9 +612,9 @@
                 </div>
                 <div class="col-xs-5">
                     <input class="form-control space-textbox" onkeyup="WaterConsumption()" onchange="WaterConsumption()"
-                           id="Q4W12" type="number" min="0" name="Q4W12"
-                           placeholder="<?php if (isset($data['Q4W12'])) echo $data['Q4W12'] ?>"
-                           value="<?php echo set_value('Q4W12'); ?>"/>
+                           id="Q4W12" type="number" min="0" name="Q4W10"
+                           placeholder="<?php if (isset($data['Q4W10'])) echo $data['Q4W10'] ?>"
+                           value="<?php echo set_value('Q4W10'); ?>"/>
                 </div>
             </div>
             <div class="form-group row">
@@ -618,9 +622,9 @@
                     <label class="text-gray">Total</label>
                 </div>
                 <div class="col-xs-5">
-                    <input class="form-control space-textbox" id="Q4W13" type="number" min="0" name="Q4W13"
-                           placeholder="<?php if (isset($data['Q4W13'])) echo $data['Q4W13'] ?>"
-                           value="<?php echo set_value('Q4W13'); ?>" readonly/>
+                    <input class="form-control space-textbox" id="Q4W11" type="number" min="0" name="Q4W11"
+                           placeholder="<?php if (isset($data['Q4W11'])) echo $data['Q4W11'] ?>"
+                           value="<?php echo set_value('Q4W11'); ?>" readonly/>
                 </div>
             </div>
         </div>
@@ -966,11 +970,30 @@
                                 to this section here. Note: files must be in one of the following formats: PDF Document
                                 (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg)</label>
                             <button class="btn uploadbtn upload" data-id="Task 4 Supporting docs" data-toggle="modal"
-                                    data-target="#airModal" type="button">UPLOAD FILES
+                                    data-target="#uploadModal"
+                                    type="button">UPLOAD FILES
                             </button>
                             <br><br>
                         </div>
-
+                        <div class="clearfix">&nbsp;</div>
+                        <table width="100%" class="question uploadedfiles">
+                            <thead>
+                            <tr>
+                                <th>File name</th>
+                                <th>Action</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <?php foreach ($task4supporting as $f) { ?>
+                                <tr id="index<?php echo $f->id; ?>">
+                                    <?php $name = str_replace(" ", "_", $f->name . "_Task_4_Supporting_docs_"); ?>
+                                    <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                                    <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+                                </tr>
+                            <?php } ?>
+                            </tbody>
+                        </table>
+                        <div class="clearfix">&nbsp;</div>
                         <div class="form-group">
                             <label>
                                 <h6>Task 5: Does your school harvest rainwater? <a class="kplink"
@@ -1145,56 +1168,56 @@
                                     </li>
                                     <li>
                                         <label class="radio-inline text-gray">
-                                            <input type="checkbox" name="Q8W2S2S1"
-                                                   value="<?php echo set_value('Q8W2S2S1', 2) ?>" <?php if (isset($data['Q8W2S2S1'])) echo $data['Q8W2S2S1'] == 2 ? "checked" : "" ?>/>
+                                            <input type="checkbox" name="Q8W2S2S2"
+                                                   value="<?php echo set_value('Q8W2S2S2', 1) ?>" <?php if (isset($data['Q8W2S2S2'])) echo $data['Q8W2S2S2'] == 1 ? "checked" : "" ?>/>
                                             Gardening </label>
                                     </li>
                                     <li>
                                         <label class="radio-inline text-gray">
-                                            <input type="checkbox" name="Q8W2S2S1"
-                                                   value="<?php echo set_value('Q8W2S2S1', 3) ?>" <?php if (isset($data['Q8W2S2S1'])) echo $data['Q8W2S2S1'] == 3 ? "checked" : "" ?>/>
+                                            <input type="checkbox" name="Q8W2S2S3"
+                                                   value="<?php echo set_value('Q8W2S2S3', 1) ?>" <?php if (isset($data['Q8W2S2S3'])) echo $data['Q8W2S2S3'] == 1 ? "checked" : "" ?>/>
                                             Mopping </label>
                                     </li>
                                     <li>
                                         <label class="radio-inline text-gray">
-                                            <input type="checkbox" name="Q8W2S2S1"
-                                                   value="<?php echo set_value('Q8W2S2S1', 4) ?>" <?php if (isset($data['Q8W2S2S1'])) echo $data['Q8W2S2S1'] == 4 ? "checked" : "" ?>/>
+                                            <input type="checkbox" name="Q8W2S2S4"
+                                                   value="<?php echo set_value('Q8W2S2S4', 1) ?>" <?php if (isset($data['Q8W2S2S4'])) echo $data['Q8W2S2S4'] == 1 ? "checked" : "" ?>/>
                                             Toilets </label>
                                     </li>
                                     <li>
                                         <label class="radio-inline text-gray">
-                                            <input type="checkbox" name="Q8W2S2S1"
-                                                   value="<?php echo set_value('Q8W2S2S1', 5) ?>" <?php if (isset($data['Q8W2S2S1'])) echo $data['Q8W2S2S1'] == 5 ? "checked" : "" ?>/>
+                                            <input type="checkbox" name="Q8W2S2S5"
+                                                   value="<?php echo set_value('Q8W2S2S5', 1) ?>" <?php if (isset($data['Q8W2S2S5'])) echo $data['Q8W2S2S5'] == 1 ? "checked" : "" ?>/>
                                             Washing vehicles </label>
                                     </li>
                                     <li>
                                         <label class="radio-inline text-gray">
-                                            <input type="checkbox" name="Q8W2S2S1"
-                                                   value="<?php echo set_value('Q8W2S2S1', 6) ?>" <?php if (isset($data['Q8W2S2S1'])) echo $data['Q8W2S2S1'] == 6 ? "checked" : "" ?>/>
+                                            <input type="checkbox" name="Q8W2S2S6"
+                                                   value="<?php echo set_value('Q8W2S2S6', 1) ?>" <?php if (isset($data['Q8W2S2S6'])) echo $data['Q8W2S2S6'] == 1? "checked" : "" ?>/>
                                             Kitchen (Cooking/Washing vegetables and utensils) </label>
                                     </li>
                                     <li>
                                         <label class="radio-inline text-gray">
-                                            <input type="checkbox" name="Q8W2S2S1"
-                                                   value="<?php echo set_value('Q8W2S2S1', 7) ?>" <?php if (isset($data['Q8W2S2S1'])) echo $data['Q8W2S2S1'] == 7 ? "checked" : "" ?>/>
+                                            <input type="checkbox" name="Q8W2S2S7"
+                                                   value="<?php echo set_value('Q8W2S2S7', 1) ?>" <?php if (isset($data['Q8W2S2S7'])) echo $data['Q8W2S2S7'] == 1 ? "checked" : "" ?>/>
                                             Shower, Brushing teeth, Bathing, Hand washing </label>
                                     </li>
                                     <li>
                                         <label class="radio-inline text-gray">
-                                            <input type="checkbox" name="Q8W2S2S1"
-                                                   value="<?php echo set_value('Q8W2S2S1', 8) ?>" <?php if (isset($data['Q8W2S2S1'])) echo $data['Q8W2S2S1'] == 8 ? "checked" : "" ?>/>
+                                            <input type="checkbox" name="Q8W2S2S8"
+                                                   value="<?php echo set_value('Q8W2S2S8', 1) ?>" <?php if (isset($data['Q8W2S2S8'])) echo $data['Q8W2S2S8'] == 1 ? "checked" : "" ?>/>
                                             Swimming Pool </label>
                                     </li>
                                     <li>
                                         <label class="radio-inline text-gray">
-                                            <input type="checkbox" name="Q8W2S2S1"
-                                                   value="<?php echo set_value('Q8W2S2S1', 9) ?>" <?php if (isset($data['Q8W2S2S1'])) echo $data['Q8W2S2S1'] == 9 ? "checked" : "" ?>/>
+                                            <input type="checkbox" name="Q8W2S2S9"
+                                                   value="<?php echo set_value('Q8W2S2S9', 1) ?>" <?php if (isset($data['Q8W2S2S9'])) echo $data['Q8W2S2S9'] == 1 ? "checked" : "" ?>/>
                                             Fire fighting </label>
                                     </li>
                                     <li>
                                         <label class="radio-inline text-gray">
-                                            <input type="checkbox" name="Q8W2S2S1"
-                                                   value="<?php echo set_value('Q8W2S2S1', 10) ?>" <?php if (isset($data['Q8W2S2S1'])) echo $data['Q8W2S2S1'] == 10 ? "checked" : "" ?>/>
+                                            <input type="checkbox" name="Q8W2S2S10"
+                                                   value="<?php echo set_value('Q8W2S2S10', 1) ?>" <?php if (isset($data['Q8W2S2S10'])) echo $data['Q8W2S2S10'] == 1 ? "checked" : "" ?>/>
                                             Desert coolers </label>
                                     </li>
                                 </ul>
@@ -1806,10 +1829,29 @@
                         >
                             <label>Please upload a flow chart (hand drawn) of the wastewater treatment process.<br>
                                 <button class="btn uploadbtn upload" data-id="Water Treatment Process"
-                                        data-toggle="modal" data-target="#airModal" type="button">UPLOAD FILES
+                                        data-toggle="modal"
+                                        data-target="#uploadModal"
+                                        type="button">UPLOAD FILES
                                 </button>
                                 <br>
                             </label>
+                            <table width="100%" class="question uploadedfiles">
+                                <thead>
+                                <tr>
+                                    <th>File name</th>
+                                    <th>Action</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <?php foreach ($waterTreatment as $f) { ?>
+                                    <tr id="index<?php echo $f->id; ?>">
+                                        <?php $name = str_replace(" ", "_", $f->name . "_Water_Treatment_Process_"); ?>
+                                        <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                                        <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+                                    </tr>
+                                <?php } ?>
+                                </tbody>
+                            </table>
                         </div>
                         <div class="form-group" id="Q8W2S61"
                             <?php
@@ -2544,12 +2586,31 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
                                                     <label>Please upload a flow chart (hand drawn) of the wastewater
                                                         treatment process.</label><br/>
                                                     <button class="btn uploadbtn upload"
-                                                            data-id="Water Treatment Process" data-toggle="modal"
-                                                            data-target="#airModal" type="button">UPLOAD FILES
+                                                            data-id="Flow
+                                                            Chart Hand Drwan"
+                                                            data-toggle="modal"
+                                                            data-target="#uploadModal" type="button">UPLOAD FILES
                                                     </button>
                                                     <br>
                                                     </label>
                                                 </div>
+                                                <table width="100%" class="question uploadedfiles">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>File name</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <?php foreach ($flowChartHandDrawn as $f) { ?>
+                                                        <tr id="index<?php echo $f->id; ?>">
+                                                            <?php $name = str_replace(" ", "_", $f->name . "_Flow_Chart_Hand_Drwan_"); ?>
+                                                            <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                                                            <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+                                                        </tr>
+                                                    <?php } ?>
+                                                    </tbody>
+                                                </table>
                                                 <div class="form-group" id="WastePolicy">
                                                     <label class="control-label">Please upload supporting
                                                         documents:</label>
@@ -2561,12 +2622,29 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
                                                     File size per document should not exceed 500 KB.
                                                     <br/><br/>
                                                     <button class="btn uploadbtn upload"
-                                                            data-id="Supporting Document Air" data-toggle="modal"
-                                                            data-target="#airModal" type="button">UPLOAD FILES
+                                                            data-id="Supporting Document Water" data-toggle="modal"
+                                                            data-target="#uploadModal" type="button">UPLOAD FILES
                                                     </button>
                                                     <br>
                                                     <br>
                                                 </div>
+                                                <table width="100%" class="question uploadedfiles">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>File name</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <?php foreach ($supportDocWater as $f) { ?>
+                                                        <tr id="index<?php echo $f->id; ?>">
+                                                            <?php $name = str_replace(" ", "_", $f->name . "_Supporting_Document_Water_"); ?>
+                                                            <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                                                            <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+                                                        </tr>
+                                                    <?php } ?>
+                                                    </tbody>
+                                                </table>
                                                 <div class="text-center">
                                                     <button type="button" class="org-btn" id="btnWaterPrevious">Previous</button>
                                                     <button type="submit" id="movenextbtn" value="movenext"
@@ -2602,6 +2680,52 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <!--                                        Upload Modal Starts Here.....-->
+                                        <div id="uploadModal" class="modal
+                                        fade" role="dialog">
+                                            <div class="modal-dialog modal-lg">
+                                                <!-- Modal content-->
+                                                <div class="modal-content">
+                                                    <div class="modal-header"
+                                                         style="background: rgb(232, 101, 73); color:#fff;">
+                                                        <button type="button" class="close" data-dismiss="modal">
+                                                            &times;
+                                                        </button>
+                                                        <h4 class="modal-title">View video tutorial</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="row">
+                                                            <div class="col-md-8 col-md-offset-2">
+                                                                <div id="msg"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-6 col-md-offset-3" id="test">
+                                                                <form enctype="multipart/form-data">
+                                                                    <input
+                                                                            type="file" name="file[]" id="file1" multiple />
+                                                                    <input
+                                                                            type="hidden" name="Fules" value="" id="Fules_bill" />
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row pull-right">
+                                                            <div class="col-md-12">
+                                                                <button class="btn btn-default" id="uploadFiles" type="button">UPLOAD</button>
+                                                                <button type="button" class="btn btn-default" data-dismiss="modal">Return to survey</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="clerarfix">&nbsp;</div>
+                                                        <div class="clerarfix">&nbsp;</div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery
+.fileuploader.min.js"></script>
+                                        <!--                                        Ends Here...-->
                                         <script type="text/javascript">
                                             $('.close').click(function () {
                                                 $('#video').attr("src", "https://www.youtube.com/embed/TcyZ1vtXsMw");
@@ -2610,6 +2734,7 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
                                                 $('#video').attr("src", "https://www.youtube.com/embed/TcyZ1vtXsMw");
                                             });
 
+                                            //                                            Window Load
                                             $(document).ready(function () {
                                                 $('#btnWaterPrevious').on('click', function (data) {
                                                     var fd = $('#water').serialize();
@@ -2637,6 +2762,162 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
                                                             window.location.href = "<?php echo base_url('logout'); ?>";
                                                         }
                                                     });
+                                                });
+//                                                File Upload Plugin
+                                                $('#file1').fileuploader({
+                                                    addMore: true,
+                                                    theme: 'onebutton',
+                                                    limit: 5,
+                                                    fileMaxSize:0.5,
+                                                    extensions: ['jpg', 'jpeg', 'png','pdf','doc','docx'],
+                                                    captions: {
+                                                        button: "Select File",
+                                                        errors: {
+                                                            fileSize: '${name} is too large! Please choose a file up ' +
+                                                            'to 512KB.',
+
+                                                        }
+                                                    }
+                                                });
+                                                //Ends Here....
+
+                                                //Upload Files
+                                                $('#uploadFiles').on('click', function () {
+                                                    $('#msg').html('');
+                                                    var formdata = new FormData();
+                                                    var ins = document
+                                                        .getElementById('file1').files.length;
+                                                    if (ins == 0)
+                                                    {
+                                                        $('#msg').html('<div class="alert alert-danger">' +
+                                                            '<strong>&#x2716; Error!</strong> Please Select a File to upload' +
+                                                            '</div>');
+                                                    } else
+                                                    {
+                                                        for (var x = 0; x < ins; x++) {
+                                                            formdata.append
+                                                            ("files[]", document.getElementById('file1').files[x]);
+                                                        }
+                                                        formdata.append('Fuels', $('#Fules_bill').val());
+                                                        $.ajax({
+                                                            url: '<?php echo base_url('upload_files'); ?>', // point to server-side PHP script
+                                                            dataType: 'text', // what to expect back from the PHP script
+                                                            cache: false,
+                                                            contentType: false,
+                                                            processData: false,
+                                                            data: formdata,
+                                                            type: 'post',
+                                                            success: function (response) {
+                                                                if (response == "success")
+                                                                {
+                                                                    $('#msg').html('<div class="alert alert-success">' +
+                                                                        '<strong>&#10004; Success!</strong> Files uploaded successfully.' +
+                                                                        '</div>');
+                                                                } else if (response == "error")
+                                                                {
+                                                                    $('#msg').html('<div class="alert alert-danger">' +
+                                                                        '<strong>&#x2716; Error!</strong> There is an error uploading your files.' +
+                                                                        '</div>');
+                                                                }
+                                                            }
+
+                                                        });
+                                                    }
+                                                });
+
+                                                //delete air files
+                                                $('body').on('click', '.air-delete-files', function (data) {
+                                                    var test = confirm("Are you sure you want to delete this file");
+                                                    if (test == true)
+                                                    {
+                                                        var divId = $(this).attr('data-id');
+                                                        $.ajax({
+                                                            url: '<?php echo base_url('upload_files/deletFiles') ?>',
+                                                            type: 'POST',
+                                                            data: {id: $(this).attr('data-id')},
+                                                            success: function (data)
+                                                            {
+                                                                if (data == "success")
+                                                                {
+                                                                    console.log('index' + divId);
+                                                                    $('#msg').html('<div class="alert alert-success">' +
+                                                                        '<strong>&#10004; Success!</strong> Files deleted successfully.' +
+                                                                        '</div>');
+                                                                    $('#index' + divId).html('');
+                                                                } else if (data == "error")
+                                                                {
+                                                                    $('#msg').html('<div class="alert alert-danger">' +
+                                                                        '<strong>&#x2716; Error!</strong> There is an error deleting your files.' +
+                                                                        '</div>');
+                                                                }
+                                                            }
+                                                        });
+                                                    }
+                                                });
+                                            });
+                                            //Ends Window Loading
+                                            //Get Data When Modal Open
+                                            $("#uploadModal").on('shown.bs' +
+                                                '.modal',
+                                                function (e) {
+                                                    var id = e.relatedTarget.dataset.id;
+                                                    $('#Fules_bill').val(id);
+                                                });
+
+                                            //Remove Data When Modal Close
+                                            $("#uploadModal").on("hidden.bs.modal", function () {
+                                                $('#test').html("");
+                                                var fd = $('#' + document.forms[0].id).serialize();
+                                                ///alert(fd);
+                                                var redirect = '';
+                                                switch (document.forms[0].id)
+                                                {
+                                                    case "air":
+                                                        redirect = "airprevious";
+                                                        break;
+                                                    case "food":
+                                                        redirect = "foodajax";
+                                                        break;
+                                                    case "energy":
+                                                        redirect = "energyajax";
+                                                        break;
+                                                    case "land":
+                                                        redirect = "landajax";
+                                                        break;
+                                                    case "water":
+                                                        redirect = "waterajax";
+                                                        break;
+                                                    case "PrimaryWater":
+                                                        redirect = "waterajax";
+                                                        break;
+                                                    case "waste":
+                                                        redirect = "wasteajax";
+                                                        break;
+                                                    case "PrimaryWaste":
+                                                        redirect = "wasteajax";
+                                                        break;
+                                                    case "PrimaryAir":
+                                                        //alert('Case Called');
+                                                        redirect="airprevious";
+                                                        break;
+                                                    case "PrimaryEnergy":
+                                                        redirect = "energyajax";
+                                                        break;
+                                                    case "PrimaryFood":
+                                                        redirect = "foodajax";
+                                                        break;
+                                                    case "PrimaryLand":
+                                                        redirect= "landajax";
+                                                }
+
+                                                //console.log(fd);
+                                                $.ajax({
+                                                    type: 'POST',
+                                                    url: '<?php echo base_url() ?>previous/' + redirect,
+                                                    data: fd,
+                                                    success: function (data) {
+                                                        location.reload();
+                                                    }
                                                 });
                                             });
                                         </script>

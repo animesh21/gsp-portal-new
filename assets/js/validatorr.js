@@ -5234,7 +5234,7 @@ function GreenArea()
 function WaterConsumption()
 {
     var sum = 0;
-    for(i=1;i<13;i++)
+    for(i=1;i<11;i++)
     {
         var id="Q4Wz".replace("z",i);
 
@@ -5253,7 +5253,7 @@ function WaterConsumption()
 
 
     }
-    $('#Q4W13').val(sum);
+    $('#Q4W11').val(sum);
     sum = 0;
 
 
