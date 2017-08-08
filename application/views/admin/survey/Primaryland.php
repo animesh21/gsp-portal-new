@@ -624,28 +624,6 @@
             Uploaded files must be in one of the following formats: PDF Document (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg). File size per document should not exceed 500 KB. </div>
         <button class="btn uploadbtn upload" data-id="Green Cover" data-toggle="modal" data-target="#airModal" type="button">UPLOAD FILES</button>
         <br>
-        <table width="100%" class="question uploadedfiles">
-            <thead>
-            <tr>
-                <th>File name</th>
-                <th>Action</th>
-            </tr>
-            </thead>
-            <tbody>
-            <?php //echo '<pre>'; print_r($greenCover);  ?>
-            <?php foreach ($greenCover as $f) { ?>
-                <tr id="index<?php echo $f->id; ?>">
-                    <?php $name = str_replace(" ", "_", $f->name . "_Green_Cover_"); //echo $name; ?>
-                    <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
-                    <td><a href="javascript:void(0)" class="air-delete-files"
-                           data-id="<?php echo $f->id; ?>"><img
-                                    src="<?php echo base_url(); ?>assets/front/images/delete.png"
-                                    style="position:relative; top:5px"/></a></td>
-                </tr>
-            <?php } ?>
-            </tbody>
-        </table>
-        <div class="clearfix">&nbsp;</div>
         <div class="text-center">
             <button type="button" id="moveprevbtn" value="moveprev" name="moveprev" accesskey="p" class="submit button">Previous</button>
             <button type="submit" id="movenextbtn" value="movenext" name="movenext" accesskey="n" class="submit button">Next</button>
@@ -699,36 +677,6 @@
                     window.location.href = "<?php echo base_url('logout'); ?>";
                 }
             });
-        });
-
-        //delete air files
-        $('body').on('click', '.air-delete-files', function (data) {
-            var test = confirm("Are you sure you want to delete this file");
-            if (test == true)
-            {
-                var divId = $(this).attr('data-id');
-                $.ajax({
-                    url: '<?php echo base_url('upload_files/deletFiles') ?>',
-                    type: 'POST',
-                    data: {id: $(this).attr('data-id')},
-                    success: function (data)
-                    {
-                        if (data == "success")
-                        {
-                            console.log('index' + divId);
-                            $('#msg').html('<div class="alert alert-success">' +
-                                '<strong>&#10004; Success!</strong> Files deleted successfully.' +
-                                '</div>');
-                            $('#index' + divId).html('');
-                        } else if (data == "error")
-                        {
-                            $('#msg').html('<div class="alert alert-danger">' +
-                                '<strong>&#x2716; Error!</strong> There is an error deleting your files.' +
-                                '</div>');
-                        }
-                    }
-                });
-            }
         });
     });
 </script>

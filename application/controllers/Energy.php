@@ -5,7 +5,7 @@ class Energy extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
-        $this->load->helper(array('form', 'security'));
+        $this->load->helper(array('form', 'security', 'common_helper'));
         $this->load->library('form_validation');
         $this->load->model(array('Answer_model', 'file'));
         if ($this->session->userdata('USER_ID') == '') {
@@ -144,6 +144,7 @@ class Energy extends CI_Controller {
         else
         {*/
         $this->Answer_model->submitAnswers($post,3);
+		updateProgress($this->session->userdata('USER_ID'), 30);
         //print_r($post);
         redirect(base_url("food"));
         // }

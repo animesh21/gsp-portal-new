@@ -5,7 +5,7 @@ class Air extends CI_Controller {
   
   public function __construct() {
         parent::__construct();
-        $this->load->helper(array('form', 'security'));
+        $this->load->helper(array('form', 'security', 'common_helper'));
         $this->load->library('form_validation');
         $this->load->model(array('Answer_model', 'file'));
         if ($this->session->userdata('USER_ID') == '') {
@@ -155,6 +155,7 @@ class Air extends CI_Controller {
         {
     */   
           $this->Answer_model->submitAnswers($post, 2);
+	  updateProgress($this->session->userdata('USER_ID'), 20);
           redirect(base_url("energy"));
 
         /*}

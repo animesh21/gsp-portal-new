@@ -1,82 +1,86 @@
-<?php $this->load->view('admin/survey/header');?>
+<?php $this->load->view('admin/survey/header'); ?>
 <div class="container">
-        <div class="row">
-            <h2>SCHOOL PROFILE</h2>
-            <p class="lead">
-                In this section, all questions are compulsory. The school contact details should match with the details provided during the time of registration to the Green Schools Programme (GSP) Audit.<br />
-                
-            </p>
-        
-        
-        <div class="content-form">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <form id="login-form" action="http://phpoll.com/login/process" method="post" role="form" style="display: block;">
-                                    <div class="form-group">
-                                   		<label for="username" class="control-label">Name of the School / Institution:</label>
-                                        <label for="username" class="control-label"><?php if(isset($data['name'])) echo $data['name'] ?></label>
-                                        
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="username" class="control-label">Address Line 1:</label>
-                                        <label for="username" class="control-label"><?php if(isset($data['address1'])) echo $data['address1'] ?></label>
+    <div class="content-form">
+        <h1>School Profile</h1>
+        <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1"> <span class="cube">1</span> Name of the School / Institution</label>
+                        <p class="formanswertext"><?php echo $school->name; ?></p>
+                    </div>
+                    <div class="form-group">
 
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="username" class="control-label">Address Line 2:</label>
-                                        <label for="username" class="control-label"><?php if(isset($data['address2'])) echo $data['address2'] ?></label>
 
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="username" class="control-label">Country:</label>
-                                        <label for="username" class="control-label">India</label>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="username" class="control-label">State:</label>
-                                        <label for="username" class="control-label"><?php if(isset($data['state'])) echo $data['state'] ?></label>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="username" class="control-label">District:</label>
-                                        <label for="username" class="control-label"><?php if(isset($data['district'])) echo $data['district'] ?></label>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="username" class="control-label">City:</label>
-                                        <label for="username" class="control-label"><?php if(isset($data['city'])) echo $data['city'] ?></label>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="username" class="control-label">Pin Code:</label>
-                                        <label for="username" class="control-label"><?php if(isset($data['pincode'])) echo $data['pincode'] ?></label>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="username" class="control-label">Enter Telephone Number (Landline Number):</label>
-                                        <label for="username" class="control-label"><?php if(isset($data['telephone'])) echo $data['telephone'] ?></label>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="username" class="control-label">Enter Mobile number:</label>
-                                        <label for="username" class="control-label"><?php if(isset($data['mobile'])) echo $data['mobile'] ?></label>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="username" class="control-label"> Principal's Name:</label>
-                                        <label for="username" class="control-label"><?php if(isset($data['principle_name'])) echo $data['principle_name'] ?></label>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="username" class="control-label">Enter GSP Coordinator's Name: </label>
-                                        <label for="username" class="control-label"><?php if(isset($data['coname'])) echo $data['coname'] ?></label>
+                        <label for="exampleInputEmail1"> <span class="cube">2</span> Address</label>
+                                                <p class="formanswertext"><?php echo $school->address1; ?>, <?php echo $school->address2; ?> </p>
+                    </div>
 
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="username" class="control-label">Enter GSP Coordinator's Email:</label>
-                                        <label for="username" class="control-label"><?php if(isset($data['coemail'])) echo $data['coemail'] ?></label>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="username" class="control-label"> Enter GSP Coordinator's Mobile Number:</label>
-                                        <label for="username" class="control-label"><?php if(isset($data['comobile'])) echo $data['comobile'] ?></label>
-                                    </div>
 
-                                </form>
-                                
-                            </div>
-                        </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1"> <span class="cube">3</span> Telephone Number <small>(Landline Number with STD code)</small></label>
+                        <p class="formanswertext">(ISD) &nbsp;91  &nbsp;&nbsp; (STD) &nbsp;<?php echo $school->std; ?>  &nbsp;&nbsp; (Number)<?php echo $school->telephone; ?> </p>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1"> <span class="cube">4</span> Mobile Number <small>(Mobile Number with ISD code)</small></label>
 
-    <!-- /.container -->
-<?php $this->load->view('footer');?>
+                        <p class="formanswertext">(ISD) 91  &nbsp;&nbsp; (Number) <?php echo $school->mobile; ?> </p>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1"> <span class="cube">5</span> Principal's Name</label>
+                        <p class="formanswertext"><?php echo $school->principle_name; ?></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1"> <span class="cube">6</span> GSP Coordinator's Name </label>
+                        <p class="formanswertext"><?php echo $school->coname; ?></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1"> <span class="cube">7</span> GSP Coordinator's Email</label>
+                        <p class="formanswertext"><?php echo $school->coemail; ?></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1"> <span class="cube">8</span> GSP Coordinator's Mobile Number</label>
+
+                        <p class="formanswertext">(ISD) 91  &nbsp;&nbsp; (Number) <?php echo $school->comobile; ?></p>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1"> <span class="cube">9</span> Category Of The School </label>
+
+                        <p class="formanswertext">
+                            <?php $arr=array(
+                                '1'=>'Day Scholar',
+                                '2'=>'Day Boarding',
+                                '3'=>'Residential',
+                                '4'=>'Day Scholar + Day Boarding',
+                                '5'=>'Day Boarding + Residential',
+                                '6'=>'Day Scholar + Residential',
+                                '7'=>'Day Scholar + Day Boarding + Residential'
+                            ); ?>
+                            <?php echo $arr[getFiled('Q1S1', $schoolUserID)]; ?>
+                        </p>  
+
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1"> <span class="cube">10</span> School Shifts</label>
+
+                        <p class="formanswertext">
+                            <?php $arr1=array(
+                                '1'=>'Morning',
+                                '2'=>'Evening',
+                                '3'=>'Both',
+                            ); ?>
+                            <?php echo $arr1[getFiled('Q2S1', $schoolUserID)]; ?>
+                        </p>  
+
+                    </div>
+
+                    <center>
+                        <a class="btn org-btn" href="<?php echo base_url('admin/audit_started_2017') ?>">NEXT</a>
+                    </center>
+
+                </form>
+ </div>
+</div>
+<?php $this->load->view('admin/survey/footer'); ?>
