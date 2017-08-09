@@ -5,7 +5,7 @@
         <div class="log-nav">
             <div class="welcome">Welcome, <span style="font-weight:bold"><?php echo $this->session->userdata('USERNAME');?></span></div>
             <ul>
-                <!--- <li><a href="http://www.greenschoolsprogramme.org/GSP-Audit2016-Questions.pdf" target="_blank" onclick="_gaq.push([\" _trackevent\",\"download\",\"pdf\",this.href])"=""><img src="http://www.greenschoolsprogramme.org/audit2016/images/pdf-icon16.png"> Audit Questionnaire</a> |</li>--->
+                <!--- <li><a href="http://www.greenschoolsprogramme.org/GSP-Audit2016-Questions.pdf" target="_blank" onclick="_gaq.push([\" _trackevent\",\"download\",\"pdf\",this.href])"=""><img src="http://www.greenschoolsprogramme.org/audit2016/images/pdf-icon16.png"> Audit Questionnaire</a> |</li>-->
                 <li><a href="<?php echo base_url('logout'); ?>">Logout</a></li>
                 <li>|</li>
                 <li><a class="lptext" title="Change Password Form" data-toggle="modal" data-target="#ChangePass" href="#ChangePass" rel="shadowbox;width=580;height=500;">Change Password</a></li>
@@ -391,18 +391,18 @@
                 <label><span class="cube">2</span>How many categories does your school segregate waste into? <a class="kplink" href="http://www.greenschoolsprogramme.org/knowledge-bank/waste/#pickUpProblems" target="_blank"> </a> <a class="tt" data-tooltip="Students will have to count the number of waste disposal points in the school as, for instance, one dustbin, two dustbins or more. If there are no dustbins, please say zero (o)" style="position: relative; top: -17px;"><span class="badge">?</span></a> </label>
                 <div >
                     <label class="radio-inline text-gray">
-                        <input type="radio" name="Q4Wa1" class="radio" id="Q4Wa1" value="<?php echo set_value('Q4Wa1',1)?>" <?php if(isset($data['Q4Wa1'])) echo $data['Q4Wa1'] == 1 ?"checked":"" ?>>
+                        <input type="radio" name="Q4Wa2" class="radio" id="Q4Wa2" value="<?php echo set_value('Q4Wa2',1)?>" <?php if(isset($data['Q4Wa2'])) echo $data['Q4Wa2'] == 1 ?"checked":"" ?>>
                         Two </label>
                     <label class="radio-inline text-gray">
-                        <input type="radio" name="Q4Wa1" class="Q4Wa1" id="Q4Wa1" value="<?php echo set_value('Q4Wa1',2)?>" <?php if(isset($data['Q4Wa1'])) echo $data['Q4Wa1'] == 2 ?"checked":"" ?>>
+                        <input type="radio" name="Q4Wa2" class="radio" id="Q4Wa2" value="<?php echo set_value('Q4Wa2',2)?>" <?php if(isset($data['Q4Wa2'])) echo $data['Q4Wa2'] == 2 ?"checked":"" ?>>
                         Three </label>
                     <label class="radio-inline text-gray">
-                        <input type="radio" name="Q4Wa1" class="Q4Wa1" id="Q4Wa1" value="<?php echo set_value('Q4Wa1',3)?>" <?php if(isset($data['Q4Wa1'])) echo $data['Q4Wa1'] == 3 ?"checked":"" ?>>
+                        <input type="radio" name="Q4Wa2" class="radio" id="Q4Wa2" value="<?php echo set_value('Q4Wa2',3)?>" <?php if(isset($data['Q4Wa2'])) echo $data['Q4Wa2'] == 3 ?"checked":"" ?>>
                         More than three </label>
                 </div>
             </div>
             <div class="form-group">
-                <label  class="control-label"><!---- How many categories does your school segregate waste into? ---></label>
+                <label  class="control-label"><!-- How many categories does your school segregate waste into? --></label>
                 <div class="form-group row">
                     <div class="col-xs-2">
                         <label >Area </label>
