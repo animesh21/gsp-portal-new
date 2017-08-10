@@ -36,8 +36,8 @@ class Gsp extends REST_Controller {
         $this->load->model('School_model');
         $this->load->model('Answer_model');
         $this->load->model('User_model');
-        
-        
+
+
     }
 
     public function users_get()
@@ -45,15 +45,15 @@ class Gsp extends REST_Controller {
         $email = $this->get('email');
         $password = $this->get('password');
         $email = str_replace("-","@",$email);
-        
+
        if (isset($email) && isset($password))
        {
        	    $details['email'] = $email;
             $details['password'] = $password;
             $users = $this->User_model->Login($details);
-           
-            
-            
+
+
+
             if ($users)
             {
                 $detail['school'] = $this->School_model->getSchool($users);
@@ -81,7 +81,7 @@ class Gsp extends REST_Controller {
             foreach ($details as $data) {
             		//print_r($data);
 		    print_r($this->Answer_model->SubmitAPIAnswers($data));
-		    
+
 		}
         }
     }
@@ -97,10 +97,10 @@ class Gsp extends REST_Controller {
         }
 
         // $this->some_model->delete_something($id);
-        $message = [
+        $message = array(
             'id' => $id,
             'message' => 'Deleted the resource'
-        ];
+        );
 
         $this->set_response($message, REST_Controller::HTTP_NO_CONTENT); // NO_CONTENT (204) being the HTTP response code
     }
