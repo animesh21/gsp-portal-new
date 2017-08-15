@@ -151,7 +151,27 @@ class School_model extends CI_Model {
         $data = $this->db->select('*')->where('id ', $cityID)->from('cities')->get()->row()->name;
         return $data;
     }
+    public function SubmitAPIAnswers($data)
+    {
+        if(isset($data))
+        {
+            try
+            {
+                $this->db->set($data['questionid'], $data['answer'])
+                    ->where( array('userid' => $data['userid'])) //which row want to upgrade
+                    ->update('gsp_school');
+                return "SCHOOL Updated";
 
+            }
+            catch(Exception $e)
+            {
+                return "Invalid Key";
+            }
+
+
+
+        }
+    }
 }
 ?>
 
