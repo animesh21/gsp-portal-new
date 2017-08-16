@@ -981,7 +981,9 @@
                     <tr id="index<?php echo $f->id; ?>">
                         <?php $name = str_replace(" ", "_", $f->name . "_Segregation_Source_Classrooms_"); ?>
                         <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
-                        <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+                        <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img
+                                        src="<?php echo base_url(); ?>assets/front/images/delete.png"
+                                        style="position:relative; top:5px"/></a></td>
                     </tr>
                 <?php } ?>
                 </tbody>
@@ -1387,7 +1389,9 @@
                     <tr id="index<?php echo $f->id; ?>">
                         <?php $name = str_replace(" ", "_", $f->name . "_Audit_Team_Weighing_Solid_Waste_"); ?>
                         <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
-                        <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+                        <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img
+                                        src="<?php echo base_url(); ?>assets/front/images/delete.png"
+                                        style="position:relative; top:5px"/></a></td>
                     </tr>
                 <?php } ?>
                 </tbody>
@@ -1410,7 +1414,9 @@
                 <label class="control-label"><span class="cube">4</span>Does your school recycle any generated waste? <a
                             class="tt"
                             data-tooltip=" In kg/day or kg/month, you can check daily waste generation and then find out how much of it goes for recycling or treatment."
-                    ><span class="badge">?</span></a><a class="kplink" href="http://www.greenschoolsprogramme.org/knowledge-bank/waste/#recyclingRefuse" target="_blank"> </a></label>
+                    ><span class="badge">?</span></a><a class="kplink"
+                                                        href="http://www.greenschoolsprogramme.org/knowledge-bank/waste/#recyclingRefuse"
+                                                        target="_blank"> </a></label>
                 <div class="form-group">
                     <label class="radio-inline text-gray">
                         <input type="radio" name="Q8Wa1" onClick="WasteGenerated(1)" class="radio" id="Q8Wa1"
@@ -2225,7 +2231,9 @@
                     <tr id="index<?php echo $f->id; ?>">
                         <?php $name = str_replace(" ", "_", $f->name . "_Composting_Pit_"); ?>
                         <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
-                        <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+                        <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img
+                                        src="<?php echo base_url(); ?>assets/front/images/delete.png"
+                                        style="position:relative; top:5px"/></a></td>
                     </tr>
                 <?php } ?>
                 </tbody>
@@ -2619,7 +2627,9 @@
                 <tr id="index<?php echo $f->id; ?>">
                     <?php $name = str_replace(" ", "_", $f->name . "_Recycling_Machine_"); ?>
                     <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
-                    <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+                    <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img
+                                    src="<?php echo base_url(); ?>assets/front/images/delete.png"
+                                    style="position:relative; top:5px"/></a></td>
                 </tr>
             <?php } ?>
             </tbody>
@@ -3371,7 +3381,9 @@
                 <tr id="index<?php echo $f->id; ?>">
                     <?php $name = str_replace(" ", "_", $f->name . "_E-Waste_"); ?>
                     <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
-                    <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+                    <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img
+                                    src="<?php echo base_url(); ?>assets/front/images/delete.png"
+                                    style="position:relative; top:5px"/></a></td>
                 </tr>
             <?php } ?>
             </tbody>
@@ -3391,11 +3403,22 @@
                     No </label>
             </div>
         </div>
+
+
         <?php
         if (isset($data['Q13Wa1']))
-            if ($data['Q13Wa1'] == 'Y') {
-                ?>
-                <div class="form-group" id="Q13Wa2">
+        {
+        if ($data['Q13Wa1'] == 'Y')
+        {
+        ?>
+        <div class="form-group" id="Q13Wa2">
+            <?php } else { ?>
+            <div class="form-group" id="Q13Wa2" style="display: none;">
+                <?php }
+                } else { ?>
+                <div class="form-group" id="Q13Wa2" style="display: none;">
+                    <?php } ?>
+
                     <label class="control-label"><span class="cube">9(a)</span>Who collects your e-waste, when not in
                         working condition?</label>
                     <div class="radio">
@@ -3442,268 +3465,211 @@
                 </div>
 
                 <br>
+
+                <br>
+                <div class="form-group">
+                    <label>
+                        <h6>Task 5: How does your school dispose of waste?</h6>
+                    </label>
+                    <br>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label class="control-label"><span class="cube">10</span>What is the final destination for waste
+                        from your
+                        school that is disposed of externally? <a class="kplink"
+                                                                  href="http://www.greenschoolsprogramme.org/knowledge-bank/waste/#landfillingPractices"
+                                                                  target="_blank"> </a></label>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="Q14Wa1"
+                                   value="<?php echo set_value('Q14Wa1', 1) ?>" <?php if (isset($data['Q14Wa1'])) echo $data['Q14Wa1'] == 1 ? "checked" : "" ?>>
+                            Open dumping </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="Q14Wa1"
+                                   value="<?php echo set_value('Q14Wa1', 2) ?>" <?php if (isset($data['Q14Wa1'])) echo $data['Q14Wa1'] == 2 ? "checked" : "" ?>>
+                            Designated dumping site (Dhalao) </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="Q14Wa1"
+                                   value="<?php echo set_value('Q14Wa1', 3) ?>" <?php if (isset($data['Q14Wa1'])) echo $data['Q14Wa1'] == 3 ? "checked" : "" ?>>
+                            Landfill Site </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="Q14Wa1"
+                                   value="<?php echo set_value('Q14Wa1', 4) ?>" <?php if (isset($data['Q14Wa1'])) echo $data['Q14Wa1'] == 4 ? "checked" : "" ?>>
+                            Don’t know </label>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="form-group">
+                    <label class="control-label">Please upload supporting documents:</label>
+                    <br>
+                    • Pictures of housekeeping staff disposing different types of solid waste<br>
+                    <br>
+                    <button class="btn uploadbtn upload" data-id="Housekeeping"
+                            data-toggle="modal" data-target="#airModal"
+                            type="button">UPLOAD FILES
+                    </button>
+                    <br>
+                    <br>
+                </div>
+                <div class="clearfix">&nbsp;</div>
+                <table width="100%" class="question uploadedfiles">
+                    <thead>
+                    <tr>
+                        <th>File name</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php foreach ($houseKeeping as $f) { ?>
+                        <tr id="index<?php echo $f->id; ?>">
+                            <?php $name = str_replace(" ", "_", $f->name . "_Housekeeping_"); ?>
+                            <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                            <td><a href="javascript:void(0)" class="air-delete-files"
+                                   data-id="<?php echo $f->id; ?>"><img
+                                            src="<?php echo base_url(); ?>assets/front/images/delete.png"
+                                            style="position:relative; top:5px"/></a></td>
+                        </tr>
+                    <?php } ?>
+                    </tbody>
+                </table>
+                <div class="clearfix">&nbsp;</div>
+                <div class="form-group">
+                    <label class="control-label"><span class="cube">11</span>Does your school burn waste? </label>
+                    <div class="form-group">
+                        <label class="radio-inline text-gray">
+                            <input type="radio" name="Q15Wa1" onClick="WasteBurn(1)" class="radio" id="Q15Wa1"
+                                   value="<?php echo set_value('Q15Wa1', 'Y') ?>" <?php if (isset($data['Q15Wa1'])) echo $data['Q15Wa1'] == 'Y' ? "checked" : "" ?>>
+                            Yes </label>
+                        <label class="radio-inline text-gray">
+                            <input type="radio" name="Q15Wa1" onClick="WasteBurn(2)" class="radio" id="Q15Wa1"
+                                   value="<?php echo set_value('Q15Wa1', 'N') ?>" <?php if (isset($data['Q15Wa1'])) echo $data['Q15Wa1'] == 'N' ? "checked" : "" ?>>
+                            No </label>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label class="control-label">Please upload supporting documents:</label>
+                    <br>
+                    • Pictures of burning waste<br>
+                    <br>
+                    <button class="btn uploadbtn upload" data-id="Buring Waste" data-toggle="modal"
+                            data-target="#airModal"
+                            type="button">UPLOAD FILES
+                    </button>
+                    <br>
+                    <br>
+                </div>
+                <table width="100%" class="question uploadedfiles">
+                    <thead>
+                    <tr>
+                        <th>File name</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php foreach ($burningWaste as $f) { ?>
+                        <tr id="index<?php echo $f->id; ?>">
+                            <?php $name = str_replace(" ", "_", $f->name . "_Buring_Waste_"); ?>
+                            <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                            <td><a href="javascript:void(0)" class="air-delete-files"
+                                   data-id="<?php echo $f->id; ?>"><img
+                                            src="<?php echo base_url(); ?>assets/front/images/delete.png"
+                                            style="position:relative; top:5px"/></a></td>
+                        </tr>
+                    <?php } ?>
+                    </tbody>
+                </table>
                 <?php
-            }
-        ?>
-        <div class="form-group" id="Q13Wa2" style="display: none;">
-            <label class="control-label"><span class="cube">9(a)</span>Who collects your e-waste, when not in working
-                condition?</label>
-            <div class="radio">
-                <label>
-                    <input type="radio" name="Q13Wa2"
-                           value="<?php echo set_value('Q13Wa2', 1) ?>" <?php if (isset($data['Q13Wa2'])) echo $data['Q13Wa2'] == 1 ? "checked" : "" ?>>
-                    Kabadiwalla/ Scrapdealer </label>
-            </div>
-            <div class="radio">
-                <label>
-                    <input type="radio" name="Q13Wa2"
-                           value="<?php echo set_value('Q13Wa2', 2) ?>" <?php if (isset($data['Q13Wa2'])) echo $data['Q13Wa2'] == 2 ? "checked" : "" ?>>
-                    Taken back by manufacturer/vendor </label>
-            </div>
-            <div class="radio">
-                <label>
-                    <input type="radio" name="Q13Wa2"
-                           value="<?php echo set_value('Q13Wa2', 3) ?>" <?php if (isset($data['Q13Wa2'])) echo $data['Q13Wa2'] == 3 ? "checked" : "" ?>>
-                    Authorised dealer </label>
-            </div>
-            <div class="radio">
-                <label>
-                    <input type="radio" name="Q13Wa2"
-                           value="<?php echo set_value('Q13Wa2', 4) ?>" <?php if (isset($data['Q13Wa2'])) echo $data['Q13Wa2'] == 4 ? "checked" : "" ?>>
-                    Authorised dismantler </label>
-            </div>
-            <div class="form-group row">
-                <label>Other: &nbsp
-                    <input type="text" name="Q13Wa2" value="<?php echo set_value('Q13Wa2'); ?>"
-                           placeholder="<?php if (isset($data['Q13Wa2'])) echo $data['Q13Wa2'] ?>">
-                </label>
-            </div>
-        </div>
-        <br>
-        <div class="form-group">
-            <label>
-                <h6>Task 5: How does your school dispose of waste?</h6>
-            </label>
-            <br>
-        </div>
-        <br>
-        <div class="form-group">
-            <label class="control-label"><span class="cube">10</span>What is the final destination for waste from your
-                school that is disposed of externally? <a class="kplink"
-                                                          href="http://www.greenschoolsprogramme.org/knowledge-bank/waste/#landfillingPractices"
-                                                          target="_blank"> </a></label>
-            <div class="radio">
-                <label>
-                    <input type="radio" name="Q14Wa1"
-                           value="<?php echo set_value('Q14Wa1', 1) ?>" <?php if (isset($data['Q14Wa1'])) echo $data['Q14Wa1'] == 1 ? "checked" : "" ?>>
-                    Open dumping </label>
-            </div>
-            <div class="radio">
-                <label>
-                    <input type="radio" name="Q14Wa1"
-                           value="<?php echo set_value('Q14Wa1', 2) ?>" <?php if (isset($data['Q14Wa1'])) echo $data['Q14Wa1'] == 2 ? "checked" : "" ?>>
-                    Designated dumping site (Dhalao) </label>
-            </div>
-            <div class="radio">
-                <label>
-                    <input type="radio" name="Q14Wa1"
-                           value="<?php echo set_value('Q14Wa1', 3) ?>" <?php if (isset($data['Q14Wa1'])) echo $data['Q14Wa1'] == 3 ? "checked" : "" ?>>
-                    Landfill Site </label>
-            </div>
-            <div class="radio">
-                <label>
-                    <input type="radio" name="Q14Wa1"
-                           value="<?php echo set_value('Q14Wa1', 4) ?>" <?php if (isset($data['Q14Wa1'])) echo $data['Q14Wa1'] == 4 ? "checked" : "" ?>>
-                    Don’t know </label>
-            </div>
-        </div>
-        <br>
-        <br>
-        <div class="form-group">
-            <label class="control-label">Please upload supporting documents:</label>
-            <br>
-            • Pictures of housekeeping staff disposing different types of solid waste<br>
-            <br>
-            <button class="btn uploadbtn upload" data-id="Housekeeping"
-                    data-toggle="modal" data-target="#airModal"
-                    type="button">UPLOAD FILES
-            </button>
-            <br>
-            <br>
-        </div>
-        <div class="clearfix">&nbsp;</div>
-        <table width="100%" class="question uploadedfiles">
-            <thead>
-            <tr>
-                <th>File name</th>
-                <th>Action</th>
-            </tr>
-            </thead>
-            <tbody>
-            <?php foreach ($houseKeeping as $f) { ?>
-                <tr id="index<?php echo $f->id; ?>">
-                    <?php $name = str_replace(" ", "_", $f->name . "_Housekeeping_"); ?>
-                    <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
-                    <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
-                </tr>
-            <?php } ?>
-            </tbody>
-        </table>
-        <div class="clearfix">&nbsp;</div>
-        <div class="form-group">
-            <label class="control-label"><span class="cube">11</span>Does your school burn waste? </label>
-            <div class="form-group">
-                <label class="radio-inline text-gray">
-                    <input type="radio" name="Q15Wa1" onClick="WasteBurn(1)" class="radio" id="Q15Wa1"
-                           value="<?php echo set_value('Q15Wa1', 'Y') ?>" <?php if (isset($data['Q15Wa1'])) echo $data['Q15Wa1'] == 'Y' ? "checked" : "" ?>>
-                    Yes </label>
-                <label class="radio-inline text-gray">
-                    <input type="radio" name="Q15Wa1" onClick="WasteBurn(2)" class="radio" id="Q15Wa1"
-                           value="<?php echo set_value('Q15Wa1', 'N') ?>" <?php if (isset($data['Q15Wa1'])) echo $data['Q15Wa1'] == 'N' ? "checked" : "" ?>>
-                    No </label>
-            </div>
-        </div>
-        <br>
-        <div class="form-group">
-            <label class="control-label">Please upload supporting documents:</label>
-            <br>
-            • Pictures of burning waste<br>
-            <br>
-            <button class="btn uploadbtn upload" data-id="Buring Waste" data-toggle="modal" data-target="#airModal"
-                    type="button">UPLOAD FILES
-            </button>
-            <br>
-            <br>
-        </div>
-        <table width="100%" class="question uploadedfiles">
-            <thead>
-            <tr>
-                <th>File name</th>
-                <th>Action</th>
-            </tr>
-            </thead>
-            <tbody>
-            <?php foreach ($burningWaste as $f) { ?>
-                <tr id="index<?php echo $f->id; ?>">
-                    <?php $name = str_replace(" ", "_", $f->name . "_Buring_Waste_"); ?>
-                    <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
-                    <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
-                </tr>
-            <?php } ?>
-            </tbody>
-        </table>
-        <?php
-        if (isset($data['Q15Wa1']))
-            if ($data['Q15Wa1']) {
+                if (isset($data['Q15Wa1']))
+                {
+                if ($data['Q15Wa1'] == 'Y')
+                {
                 ?>
                 <div class="form-group" id="Q15Wa2">
-                    <label class="control-label"><span class="cube">11(a)</span>Where does your school burn
-                        waste?</label>
-                    <div class="form-group">
-                        <ul>
-                            <li>
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" name="Q15Wa2" class="radio" id="Q15Wa2"
-                                           value="<?php echo set_value('Q15Wa2', 1) ?>" <?php if (isset($data['Q15Wa2'])) echo $data['Q15Wa2'] == 1 ? "checked" : "" ?>>
-                                    Inside the school </label>
-                            </li>
-                            <li>
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" name="Q15Wa2" class="radio" id="Q15Wa2"
-                                           value="<?php echo set_value('Q15Wa2', 2) ?>" <?php if (isset($data['Q15Wa2'])) echo $data['Q15Wa2'] == 2 ? "checked" : "" ?>>
-                                    Outside the school </label>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="clearfix">&nbsp;</div>
-                <div class="form-group" id="Q15Wa3">
-                    <label class="control-label"><span class="cube">11(b)</span>What kind of waste is burnt/
-                        incinerated?</label>
-                    <div class="form-group">
-                        <ul>
-                            <li>
-                                <label class="radio-inline text-gray">
-                                    <input type="checkbox" name="Q15Wa2S1"
-                                           value="<?php echo set_value('Q15Wa2S1', 1); ?>" <?php if (isset($data['Q15Wa2S1'])) echo "checked" ?>>
-                                    Horticultural </label>
-                            </li>
-                            <li>
-                                <label class="radio-inline text-gray">
-                                    <input type="checkbox" name="Q15Wa2S2"
-                                           value="<?php echo set_value('Q15Wa2S2', 1); ?>" <?php if (isset($data['Q15Wa2S2'])) echo "checked" ?>>
-                                    Plastic </label>
-                            </li>
-                            <li>
-                                <label class="radio-inline text-gray">
-                                    <input type="checkbox" name="Q15Wa2S3"
-                                           value="<?php echo set_value('Q15Wa2S3', 1); ?>" <?php if (isset($data['Q15Wa2S3'])) echo "checked" ?>>
-                                    Tyres </label>
-                            </li>
-                            <li>
-                                <label class="radio-inline text-gray">
-                                    <input type="checkbox" name="Q15Wa2S4"
-                                           value="<?php echo set_value('Q15Wa2S4', 1); ?>" <?php if (isset($data['Q15Wa2S4'])) echo "checked" ?>>
-                                    Paper </label>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="clearfix">&nbsp;</div>
-                <?php
-            }
-        ?>
-        <div class="form-group" id="Q15Wa2" style="display: none;">
-            <label class="control-label"><span class="cube">11(a)</span>Does your school burn waste? </label>
-            <div class="form-group">
-                <ul>
-                    <li>
-                        <label class="radio-inline text-gray">
-                            <input type="radio" name="Q15Wa2" class="radio" id="Q15Wa2"
-                                   value="<?php echo set_value('Q15Wa2', 1) ?>" <?php if (isset($data['Q15Wa2'])) echo $data['Q15Wa2'] == 1 ? "checked" : "" ?>>
-                            Inside the school </label>
-                    </li>
-                    <li>
-                        <label class="radio-inline text-gray">
-                            <input type="radio" name="Q15Wa2" class="radio" id="Q15Wa2"
-                                   value="<?php echo set_value('Q15Wa2', 2) ?>" <?php if (isset($data['Q15Wa2'])) echo $data['Q15Wa2'] == 2 ? "checked" : "" ?>>
-                            Outside the school </label>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="form-group" id="Q15Wa3" style="display: none;">
-            <label class="control-label"><span class="cube">11(b)</span>Does your school burn waste? </label>
-            <div class="form-group">
-                <ul>
-                    <li>
-                        <label class="radio-inline text-gray">
-                            <input type="checkbox" name="Q15Wa2S1"
-                                   value="<?php echo set_value('Q15Wa2S1', 1); ?>" <?php if (isset($data['Q15Wa2S1'])) echo "checked" ?>>
-                            Horticultural </label>
-                    </li>
-                    <li>
-                        <label class="radio-inline text-gray">
-                            <input type="checkbox" name="Q15Wa2S2"
-                                   value="<?php echo set_value('Q15Wa2S2', 1); ?>" <?php if (isset($data['Q15Wa2S2'])) echo "checked" ?>>
-                            Plastic </label>
-                    </li>
-                    <li>
-                        <label class="radio-inline text-gray">
-                            <input type="checkbox" name="Q15Wa2S3"
-                                   value="<?php echo set_value('Q15Wa2S3', 1); ?>" <?php if (isset($data['Q15Wa2S3'])) echo "checked" ?>>
-                            Tyres </label>
-                    </li>
-                    <li>
-                        <label class="radio-inline text-gray">
-                            <input type="checkbox" name="Q15Wa2S4"
-                                   value="<?php echo set_value('Q15Wa2S4', 1); ?>" <?php if (isset($data['Q15Wa2S4'])) echo "checked" ?>>
-                            Paper </label>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!---<div class="form-group">
+                    <?php } else { ?>
+                    <div class="form-group" id="Q15Wa2" style="display: none;">
+                        <?php }
+                        } else { ?>
+                        <div class="form-group" id="Q15Wa2" style="display: none;">
+                            <?php } ?>
+                            <label class="control-label"><span class="cube">11(a)</span>Where does your school burn
+                                waste?</label>
+                            <div class="form-group">
+                                <ul>
+                                    <li>
+                                        <label class="radio-inline text-gray">
+                                            <input type="radio" name="Q15Wa2" class="radio" id="Q15Wa2"
+                                                   value="<?php echo set_value('Q15Wa2', 1) ?>" <?php if (isset($data['Q15Wa2'])) echo $data['Q15Wa2'] == 1 ? "checked" : "" ?>>
+                                            Inside the school </label>
+                                    </li>
+                                    <li>
+                                        <label class="radio-inline text-gray">
+                                            <input type="radio" name="Q15Wa2" class="radio" id="Q15Wa2"
+                                                   value="<?php echo set_value('Q15Wa2', 2) ?>" <?php if (isset($data['Q15Wa2'])) echo $data['Q15Wa2'] == 2 ? "checked" : "" ?>>
+                                            Outside the school </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="clearfix">&nbsp;</div>
+
+                        <?php
+                        if (isset($data['Q15Wa1']))
+                        {
+                        if ($data['Q15Wa1'] == 'Y')
+                        {
+                        ?>
+                        <div class="form-group" id="Q15Wa3">
+                            <?php } else { ?>
+                            <div class="form-group" id="Q15Wa3" style="display: none;">
+                                <?php }
+                                } else { ?>
+                                <div class="form-group" id="Q15Wa3" style="display: none;">
+                                    <?php } ?>
+
+                                    <label class="control-label"><span class="cube">11(b)</span>What kind of waste is
+                                        burnt/
+                                        incinerated?</label>
+                                    <div class="form-group">
+                                        <ul>
+                                            <li>
+                                                <label class="radio-inline text-gray">
+                                                    <input type="checkbox" name="Q15Wa2S1"
+                                                           value="<?php echo set_value('Q15Wa2S1', 1); ?>" <?php if (isset($data['Q15Wa2S1'])) echo "checked" ?>>
+                                                    Horticultural </label>
+                                            </li>
+                                            <li>
+                                                <label class="radio-inline text-gray">
+                                                    <input type="checkbox" name="Q15Wa2S2"
+                                                           value="<?php echo set_value('Q15Wa2S2', 1); ?>" <?php if (isset($data['Q15Wa2S2'])) echo "checked" ?>>
+                                                    Plastic </label>
+                                            </li>
+                                            <li>
+                                                <label class="radio-inline text-gray">
+                                                    <input type="checkbox" name="Q15Wa2S3"
+                                                           value="<?php echo set_value('Q15Wa2S3', 1); ?>" <?php if (isset($data['Q15Wa2S3'])) echo "checked" ?>>
+                                                    Tyres </label>
+                                            </li>
+                                            <li>
+                                                <label class="radio-inline text-gray">
+                                                    <input type="checkbox" name="Q15Wa2S4"
+                                                           value="<?php echo set_value('Q15Wa2S4', 1); ?>" <?php if (isset($data['Q15Wa2S4'])) echo "checked" ?>>
+                                                    Paper </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="clearfix">&nbsp;</div>
+
+                                <!---<div class="form-group">
   <label class="control-label"><span class="cube">12</span>Do you know that your E-waste can be collected by an authorised dealer or dismantler? </label>
   <div class="form-group">
     <label class="radio-inline text-gray">
@@ -3714,304 +3680,327 @@
     No </label>
   </div>
 </div>-->
-        <br>
-        <div class="form-group">
-            <label>
-                <h6>Task 6: Choose your Waste Audit Team.</h6>
-            </label>
-            <br>
-            It is important to appreciate the initiatives taken by the management on issues related to waste. The
-            management's approach to these issues can be assessed in the following way:
-            Seek an appointment with the Chairperson, Manager and Principal of your school and ask them the following
-            questions:
-        </div>
-        <br>
-        <div class="form-group">
-            <label class="control-label"><span class="cube">13</span>Does the school have a policy on waste?</label>
-            <div class="form-group">
-                <label class="radio-inline text-gray">
-                    <input type="radio" name="Q17Wa1" class="radio" onClick="WastePolicy(1)" id="Q17Wa1"
-                           value="<?php echo set_value('Q17Wa1', 'Y') ?>" <?php if (isset($data['Q17Wa1'])) echo $data['Q17Wa1'] == 'Y' ? "checked" : "" ?>>
-                    Yes </label>
-                <label class="radio-inline text-gray">
-                    <input type="radio" name="Q17Wa1" class="radio" onClick="WastePolicy(2)" id="Q17Wa1"
-                           value="<?php echo set_value('Q17Wa1', 'N') ?>" <?php if (isset($data['Q17Wa1'])) echo $data['Q17Wa1'] == 'N' ? "checked" : "" ?>>
-                    No </label>
-            </div>
-        </div>
-        <br>
-        <?php if (isset($data['Q17Wa1']))
-            if ($data['Q17Wa1'] == 'Y') {
-                ?>
-                <br>
-                <div class="form-group" id="WastePolicy">
-                    <label class="control-label">Please upload supporting documents:</label>
-                    <br>
-                    • Waste Policy<br>
-                    <br>
-                    <button class="btn uploadbtn upload" data-id="Waste Policy" data-toggle="modal"
-                            data-target="#airModal" type="button">UPLOAD FILES
-                    </button>
-                    <br>
-                    <br>
-                </div>
-                <?php
-            } ?>
-        <br>
-        <div class="form-group" id="WastePolicy" style="display: none;">
-            <label class="control-label">Please upload supporting documents:</label>
-            <br>
-            • Waste Policy<br>
-            <br>
-            <button class="btn uploadbtn upload" data-id="Water Policy" data-toggle="modal" data-target="#airModal"
-                    type="button">UPLOAD FILES
-            </button>
-            <br>
-        </div>
-        <div class="form-group">
-            <label class="control-label"><span class="cube">14</span>Are there awareness drives with regard to Reduce,
-                Recycle and Reuse? <a class="kplink"
-                                      href="http://www.greenschoolsprogramme.org/knowledge-bank/waste/#partnerInOperation"
-                                      target="_blank"></a></label>
-            <div class="form-group">
-                <label class="radio-inline text-gray">
-                    <input type="radio" name="Q18Wa1" class="radio" onClick="WasteAwareness(1)" id="Q18Wa1"
-                           value="<?php echo set_value('Q18Wa1', 'Y') ?>" <?php if (isset($data['Q18Wa1'])) echo $data['Q18Wa1'] == 'Y' ? "checked" : "" ?>>
-                    Yes </label>
-                <label class="radio-inline text-gray">
-                    <input type="radio" name="Q18Wa1" class="radio" onClick="WasteAwareness(2)" id="Q18Wa1"
-                           value="<?php echo set_value('Q18Wa1', 'N') ?>" <?php if (isset($data['Q18Wa1'])) echo $data['Q18Wa1'] == 'N' ? "checked" : "" ?>>
-                    No </label>
-            </div>
-        </div>
-        <br>
-        <?php if (isset($data['Q18Wa1']))
-            if ($data['Q18Wa1'] == 'Y') {
-                ?>
-                <br>
-                <div class="form-group" id="awareness">
-                    <label class="control-label">Please upload supporting documents:</label>
-                    <br>
-                    • Pictures of various school initiatives e.g. rally, debate, street play, art competition, etc<br>
-                    <br>
-                    <button class="btn uploadbtn upload" data-id="School Initiatives" data-toggle="modal"
-                            data-target="#airModal" type="button">UPLOAD FILES
-                    </button>
-                    <br>
-                    <br>
-                </div>
-                <div class="form-group" id="Q18Wa3">
-                    <label class="control-label"><span class="cube">14(a)</span>What form do these awareness drives
-                        take? </label>
-                    <ul>
-                        <li>
-                            <div class="form-group">
-                                <label class="radio text-gray">
-                                    <input type="checkbox" name="Q18Wa2S1"
-                                           value="<?php echo set_value('Q18Wa2S1', 1); ?>" <?php if (isset($data['Q18Wa2S1'])) echo "checked" ?>>
-                                    As part of the curriculum </label>
+                                <br>
+                                <div class="form-group">
+                                    <label>
+                                        <h6>Task 6: Choose your Waste Audit Team.</h6>
+                                    </label>
+                                    <br>
+                                    It is important to appreciate the initiatives taken by the management on issues
+                                    related to waste. The
+                                    management's approach to these issues can be assessed in the following way:
+                                    Seek an appointment with the Chairperson, Manager and Principal of your school and
+                                    ask them the following
+                                    questions:
+                                </div>
+                                <br>
+                                <div class="form-group">
+                                    <label class="control-label"><span class="cube">13</span>Does the school have a
+                                        policy on waste?</label>
+                                    <div class="form-group">
+                                        <label class="radio-inline text-gray">
+                                            <input type="radio" name="Q17Wa1" class="radio" onClick="WastePolicy(1)"
+                                                   id="Q17Wa1"
+                                                   value="<?php echo set_value('Q17Wa1', 'Y') ?>" <?php if (isset($data['Q17Wa1'])) echo $data['Q17Wa1'] == 'Y' ? "checked" : "" ?>>
+                                            Yes </label>
+                                        <label class="radio-inline text-gray">
+                                            <input type="radio" name="Q17Wa1" class="radio" onClick="WastePolicy(2)"
+                                                   id="Q17Wa1"
+                                                   value="<?php echo set_value('Q17Wa1', 'N') ?>" <?php if (isset($data['Q17Wa1'])) echo $data['Q17Wa1'] == 'N' ? "checked" : "" ?>>
+                                            No </label>
+                                    </div>
+                                </div>
+                                <br>
+                                <?php if (isset($data['Q17Wa1']))
+                                    if ($data['Q17Wa1'] == 'Y') {
+                                        ?>
+                                        <br>
+                                        <div class="form-group" id="WastePolicy">
+                                            <label class="control-label">Please upload supporting documents:</label>
+                                            <br>
+                                            • Waste Policy<br>
+                                            <br>
+                                            <button class="btn uploadbtn upload" data-id="Waste Policy"
+                                                    data-toggle="modal"
+                                                    data-target="#airModal" type="button">UPLOAD FILES
+                                            </button>
+                                            <br>
+                                            <br>
+                                        </div>
+                                        <?php
+                                    } ?>
+                                <br>
+                                <div class="form-group" id="WastePolicy" style="display: none;">
+                                    <label class="control-label">Please upload supporting documents:</label>
+                                    <br>
+                                    • Waste Policy<br>
+                                    <br>
+                                    <button class="btn uploadbtn upload" data-id="Water Policy" data-toggle="modal"
+                                            data-target="#airModal"
+                                            type="button">UPLOAD FILES
+                                    </button>
+                                    <br>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label"><span class="cube">14</span>Are there awareness drives
+                                        with regard to Reduce,
+                                        Recycle and Reuse? <a class="kplink"
+                                                              href="http://www.greenschoolsprogramme.org/knowledge-bank/waste/#partnerInOperation"
+                                                              target="_blank"></a></label>
+                                    <div class="form-group">
+                                        <label class="radio-inline text-gray">
+                                            <input type="radio" name="Q18Wa1" class="radio" onClick="WasteAwareness(1)"
+                                                   id="Q18Wa1"
+                                                   value="<?php echo set_value('Q18Wa1', 'Y') ?>" <?php if (isset($data['Q18Wa1'])) echo $data['Q18Wa1'] == 'Y' ? "checked" : "" ?>>
+                                            Yes </label>
+                                        <label class="radio-inline text-gray">
+                                            <input type="radio" name="Q18Wa1" class="radio" onClick="WasteAwareness(2)"
+                                                   id="Q18Wa1"
+                                                   value="<?php echo set_value('Q18Wa1', 'N') ?>" <?php if (isset($data['Q18Wa1'])) echo $data['Q18Wa1'] == 'N' ? "checked" : "" ?>>
+                                            No </label>
+                                    </div>
+                                </div>
+                                <br>
+                                <?php if (isset($data['Q18Wa1']))
+                                    if ($data['Q18Wa1'] == 'Y') {
+                                        ?>
+                                        <br>
+                                        <div class="form-group" id="awareness">
+                                            <label class="control-label">Please upload supporting documents:</label>
+                                            <br>
+                                            • Pictures of various school initiatives e.g. rally, debate, street play,
+                                            art competition, etc<br>
+                                            <br>
+                                            <button class="btn uploadbtn upload" data-id="School Initiatives"
+                                                    data-toggle="modal"
+                                                    data-target="#airModal" type="button">UPLOAD FILES
+                                            </button>
+                                            <br>
+                                            <br>
+                                        </div>
+                                        <div class="form-group" id="Q18Wa3">
+                                            <label class="control-label"><span class="cube">14(a)</span>What form do
+                                                these awareness drives
+                                                take? </label>
+                                            <ul>
+                                                <li>
+                                                    <div class="form-group">
+                                                        <label class="radio text-gray">
+                                                            <input type="checkbox" name="Q18Wa2S1"
+                                                                   value="<?php echo set_value('Q18Wa2S1', 1); ?>" <?php if (isset($data['Q18Wa2S1'])) echo "checked" ?>>
+                                                            As part of the curriculum </label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="form-group">
+                                                        <label class="radio text-gray">
+                                                            <input type="checkbox" name="Q18Wa2S2"
+                                                                   value="<?php echo set_value('Q18Wa2S2', 2); ?>" <?php if (isset($data['Q18Wa2S2'])) echo "checked" ?>>
+                                                            As part of extracurricular activities such as guest lectures
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="form-group">
+                                                        <label class="radio text-gray">
+                                                            <input type="checkbox" name="Q18Wa2S3"
+                                                                   value="<?php echo set_value('Q18Wa2S3', 3); ?>" <?php if (isset($data['Q18Wa2S3'])) echo "checked" ?>>
+                                                            By the showcasing of posters and stickers </label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <?php
+                                    } ?>
+                                <div class="form-group" id="awareness" style="display: none;">
+                                    <label class="control-label">Please upload supporting documents:</label>
+                                    <br>
+                                    • Waste Policy<br>
+                                    <br>
+                                    <button class="btn uploadbtn upload" data-id="Waste Policy" data-toggle="modal"
+                                            data-target="#airModal"
+                                            type="button">UPLOAD FILES
+                                    </button>
+                                    <br>
+                                </div>
+                                <div class="form-group" id="Q18Wa3" style="display: none;">
+                                    <label class="control-label"><span class="cube">14(a)</span>What form do these
+                                        awareness drives take?
+                                    </label>
+                                    <div class="form-group">
+                                        <ul>
+                                            <li>
+                                                <div class="form-group">
+                                                    <label class="radio text-gray">
+                                                        <input type="checkbox" name="Q18Wa2S1"
+                                                               value="<?php echo set_value('Q18Wa2S1', 1); ?>" <?php if (isset($data['Q18Wa2S1'])) echo "checked" ?>>
+                                                        As part of the curriculum </label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="form-group">
+                                                    <label class="radio text-gray">
+                                                        <input type="checkbox" name="Q18Wa2S2"
+                                                               value="<?php echo set_value('Q18Wa2S2', 2); ?>" <?php if (isset($data['Q18Wa2S2'])) echo "checked" ?>>
+                                                        As part of extracurricular activities such as guest lectures
+                                                    </label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="form-group">
+                                                    <label class="radio text-gray">
+                                                        <input type="checkbox" name="Q18Wa2S3"
+                                                               value="<?php echo set_value('Q18Wa2S3', 3); ?>" <?php if (isset($data['Q18Wa2S3'])) echo "checked" ?>>
+                                                        By the showcasing of posters and stickers </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label"><span class="cube">15</span>Is the study of the
+                                        environment integrated into the
+                                        curriculum?</label>
+                                    <div class="form-group">
+                                        <label class="radio-inline text-gray">
+                                            <input type="radio" name="Q19Wa1" class="radio" onClick="WasteWwareness(1)"
+                                                   id="Q19Wa1"
+                                                   value="<?php echo set_value('Q19Wa1', 'Y') ?>" <?php if (isset($data['Q19Wa1'])) echo $data['Q19Wa1'] == 'Y' ? "checked" : "" ?>>
+                                            Yes </label>
+                                        <label class="radio-inline text-gray">
+                                            <input type="radio" name="Q19Wa1" class="radio" onClick="WasteWwareness(2)"
+                                                   id="Q19Wa1"
+                                                   value="<?php echo set_value('Q19Wa1', 'N') ?>" <?php if (isset($data['Q19Wa1'])) echo $data['Q19Wa1'] == 'N' ? "checked" : "" ?>>
+                                            No </label>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="form-group" id="WastePolicy">
+                                    <label class="control-label">Please upload supporting documents:</label>
+                                    <br>
+                                    • Pictures of audit team doing survey
+                                    Please upload all supporting documents related to this section here. Note, files
+                                    must be one of the
+                                    following formats: PDF Document (.pdf), Word Document (.doc, .docx), Image File
+                                    (.jpg, .jpeg) <br>
+                                    File size per document should not exceed 500 KB.<br>
+                                    <br>
+                                    <button class="btn uploadbtn upload" data-id="Audit Team Doing Survey Waste"
+                                            data-toggle="modal"
+                                            data-target="#airModal" type="button">UPLOAD FILES
+                                    </button>
+                                    <br>
+                                </div>
+                                <table width="100%" class="question uploadedfiles">
+                                    <thead>
+                                    <tr>
+                                        <th>File name</th>
+                                        <th>Action</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <?php foreach ($teamDoingWaste as $f) { ?>
+                                        <tr id="index<?php echo $f->id; ?>">
+                                            <?php $name = str_replace(" ", "_", $f->name . "_Audit_Team_Doing_Survey_"); ?>
+                                            <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                                            <td><a href="javascript:void(0)" class="air-delete-files"
+                                                   data-id="<?php echo $f->id; ?>"><img
+                                                            src="<?php echo base_url(); ?>assets/front/images/delete.png"
+                                                            style="position:relative; top:5px"/></a></td>
+                                        </tr>
+                                    <?php } ?>
+                                    </tbody>
+                                </table>
+                                <div class="text-center">
+                                    <button type="button" class="org-btn" id="btnWastePrevious">Previous</button>
+                                    <button type="submit" class="org-btn" id="wastenext" value="movenext">Next</button>
+                                    <button type="button" class="org-btn" class="submit button" id="wastesave">Save and
+                                        Resume Later
+                                    </button>
+                                </div>
                             </div>
-                        </li>
-                        <li>
-                            <div class="form-group">
-                                <label class="radio text-gray">
-                                    <input type="checkbox" name="Q18Wa2S2"
-                                           value="<?php echo set_value('Q18Wa2S2', 2); ?>" <?php if (isset($data['Q18Wa2S2'])) echo "checked" ?>>
-                                    As part of extracurricular activities such as guest lectures </label>
+                        </div>
+                        <?php echo form_close(); ?>
+                        <style type="text/css">
+                            .text-gray {
+                                color: #666666 !important;
+                                /*font-weight:100!important;*/
+                            }
+                        </style>
+                        <!-- /.container -->
+                        <?php $this->load->view('footer'); ?>
+                        <div id="videoModal" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+                                <!-- Modal content-->
+                                <div class="modal-content" style="background:transparent; border-radius:0px;">
+                                    <div class="modal-header" style="background: rgb(232, 101, 73); color:#fff;">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">View video tutorial</h4>
+                                    </div>
+                                    <iframe width="100%" height="330px" src="https://www.youtube.com/embed/CI-iGmii5Yk"
+                                            frameborder="0"
+                                            allowfullscreen></iframe>
+                                </div>
                             </div>
-                        </li>
-                        <li>
-                            <div class="form-group">
-                                <label class="radio text-gray">
-                                    <input type="checkbox" name="Q18Wa2S3"
-                                           value="<?php echo set_value('Q18Wa2S3', 3); ?>" <?php if (isset($data['Q18Wa2S3'])) echo "checked" ?>>
-                                    By the showcasing of posters and stickers </label>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <?php
-            } ?>
-        <div class="form-group" id="awareness" style="display: none;">
-            <label class="control-label">Please upload supporting documents:</label>
-            <br>
-            • Waste Policy<br>
-            <br>
-            <button class="btn uploadbtn upload" data-id="Waste Policy" data-toggle="modal" data-target="#airModal"
-                    type="button">UPLOAD FILES
-            </button>
-            <br>
-        </div>
-        <div class="form-group" id="Q18Wa3" style="display: none;">
-            <label class="control-label"><span class="cube">14(a)</span>What form do these awareness drives take?
-            </label>
-            <div class="form-group">
-                <ul>
-                    <li>
-                        <div class="form-group">
-                            <label class="radio text-gray">
-                                <input type="checkbox" name="Q18Wa2S1"
-                                       value="<?php echo set_value('Q18Wa2S1', 1); ?>" <?php if (isset($data['Q18Wa2S1'])) echo "checked" ?>>
-                                As part of the curriculum </label>
                         </div>
-                    </li>
-                    <li>
-                        <div class="form-group">
-                            <label class="radio text-gray">
-                                <input type="checkbox" name="Q18Wa2S2"
-                                       value="<?php echo set_value('Q18Wa2S2', 2); ?>" <?php if (isset($data['Q18Wa2S2'])) echo "checked" ?>>
-                                As part of extracurricular activities such as guest lectures </label>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="form-group">
-                            <label class="radio text-gray">
-                                <input type="checkbox" name="Q18Wa2S3"
-                                       value="<?php echo set_value('Q18Wa2S3', 3); ?>" <?php if (isset($data['Q18Wa2S3'])) echo "checked" ?>>
-                                By the showcasing of posters and stickers </label>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="control-label"><span class="cube">15</span>Is the study of the environment integrated into the
-                curriculum?</label>
-            <div class="form-group">
-                <label class="radio-inline text-gray">
-                    <input type="radio" name="Q19Wa1" class="radio" onClick="WasteWwareness(1)" id="Q19Wa1"
-                           value="<?php echo set_value('Q19Wa1', 'Y') ?>" <?php if (isset($data['Q19Wa1'])) echo $data['Q19Wa1'] == 'Y' ? "checked" : "" ?>>
-                    Yes </label>
-                <label class="radio-inline text-gray">
-                    <input type="radio" name="Q19Wa1" class="radio" onClick="WasteWwareness(2)" id="Q19Wa1"
-                           value="<?php echo set_value('Q19Wa1', 'N') ?>" <?php if (isset($data['Q19Wa1'])) echo $data['Q19Wa1'] == 'N' ? "checked" : "" ?>>
-                    No </label>
-            </div>
-        </div>
-        <br>
-        <div class="form-group" id="WastePolicy">
-            <label class="control-label">Please upload supporting documents:</label>
-            <br>
-            • Pictures of audit team doing survey
-            Please upload all supporting documents related to this section here. Note, files must be one of the
-            following formats: PDF Document (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg) <br>
-            File size per document should not exceed 500 KB.<br>
-            <br>
-            <button class="btn uploadbtn upload" data-id="Audit Team Doing Survey Waste" data-toggle="modal"
-                    data-target="#airModal" type="button">UPLOAD FILES
-            </button>
-            <br>
-        </div>
-        <table width="100%" class="question uploadedfiles">
-            <thead>
-            <tr>
-                <th>File name</th>
-                <th>Action</th>
-            </tr>
-            </thead>
-            <tbody>
-            <?php foreach ($teamDoingWaste as $f) { ?>
-                <tr id="index<?php echo $f->id; ?>">
-                    <?php $name = str_replace(" ", "_", $f->name . "_Audit_Team_Doing_Survey_"); ?>
-                    <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
-                    <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
-                </tr>
-            <?php } ?>
-            </tbody>
-        </table>
-        <div class="text-center">
-            <button type="button" class="org-btn" id="btnWastePrevious">Previous</button>
-            <button type="submit" class="org-btn" id="wastenext" value="movenext">Next</button>
-            <button type="button" class="org-btn" class="submit button" id="wastesave">Save and Resume Later</button>
-        </div>
-    </div>
-</div>
-<?php echo form_close(); ?>
-<style type="text/css">
-    .text-gray {
-        color: #666666 !important;
-        /*font-weight:100!important;*/
-    }
-</style>
-<!-- /.container -->
-<?php $this->load->view('footer'); ?>
-<div id="videoModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content" style="background:transparent; border-radius:0px;">
-            <div class="modal-header" style="background: rgb(232, 101, 73); color:#fff;">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">View video tutorial</h4>
-            </div>
-            <iframe width="100%" height="330px" src="https://www.youtube.com/embed/CI-iGmii5Yk" frameborder="0"
-                    allowfullscreen></iframe>
-        </div>
-    </div>
-</div>
-<script type="text/javascript">
-    $('.close').click(function () {
-        $('#video').attr("src", "https://www.youtube.com/embed/CI-iGmii5Yk");
-    });
-    $('body').click(function () {
-        $('#video').attr("src", "https://www.youtube.com/embed/CI-iGmii5Yk");
-    });
+                        <script type="text/javascript">
+                            $('.close').click(function () {
+                                $('#video').attr("src", "https://www.youtube.com/embed/CI-iGmii5Yk");
+                            });
+                            $('body').click(function () {
+                                $('#video').attr("src", "https://www.youtube.com/embed/CI-iGmii5Yk");
+                            });
 
-    $(document).ready(function () {
-        $('#btnWastePrevious').on('click', function (data) {
-            var fd = $('#waste').serialize();
-            //console.log(fd);
-            $.ajax({
-                type: 'POST',
-                url: '<?php echo base_url('previous/wasteajax') ?>',
-                data: fd,
-                success: function (data)
-                {
-                    window.location.href = "<?php echo base_url('water'); ?>";
-                }
-            });
-        });
-        $('#wastesave').on('click', function (data) {
-            var fd = $('#waste').serialize();
-            //console.log(fd);
-            $.ajax({
-                type: 'POST',
-                url: '<?php echo base_url('previous/wasteajax') ?>',
-                data: fd,
-                success: function (data)
-                {
-                    window.location.href = "<?php echo base_url('logout'); ?>";
-                }
-            });
-        });
+                            $(document).ready(function () {
+                                $('#btnWastePrevious').on('click', function (data) {
+                                    var fd = $('#waste').serialize();
+                                    //console.log(fd);
+                                    $.ajax({
+                                        type: 'POST',
+                                        url: '<?php echo base_url('previous/wasteajax') ?>',
+                                        data: fd,
+                                        success: function (data) {
+                                            window.location.href = "<?php echo base_url('water'); ?>";
+                                        }
+                                    });
+                                });
+                                $('#wastesave').on('click', function (data) {
+                                    var fd = $('#waste').serialize();
+                                    //console.log(fd);
+                                    $.ajax({
+                                        type: 'POST',
+                                        url: '<?php echo base_url('previous/wasteajax') ?>',
+                                        data: fd,
+                                        success: function (data) {
+                                            window.location.href = "<?php echo base_url('logout'); ?>";
+                                        }
+                                    });
+                                });
 
-        //delete air files
-        $('body').on('click', '.air-delete-files', function (data) {
-            var test = confirm("Are you sure you want to delete this file");
-            if (test == true)
-            {
-                var divId = $(this).attr('data-id');
-                $.ajax({
-                    url: '<?php echo base_url('upload_files/deletFiles') ?>',
-                    type: 'POST',
-                    data: {id: $(this).attr('data-id')},
-                    success: function (data)
-                    {
-                        if (data == "success")
-                        {
-                            console.log('index' + divId);
-                            $('#msg').html('<div class="alert alert-success">' +
-                                '<strong>&#10004; Success!</strong> Files deleted successfully.' +
-                                '</div>');
-                            $('#index' + divId).html('');
-                        } else if (data == "error")
-                        {
-                            $('#msg').html('<div class="alert alert-danger">' +
-                                '<strong>&#x2716; Error!</strong> There is an error deleting your files.' +
-                                '</div>');
-                        }
-                    }
-                });
-            }
-        });
-    });
-</script>
+                                //delete air files
+                                $('body').on('click', '.air-delete-files', function (data) {
+                                    var test = confirm("Are you sure you want to delete this file");
+                                    if (test == true) {
+                                        var divId = $(this).attr('data-id');
+                                        $.ajax({
+                                            url: '<?php echo base_url('upload_files/deletFiles') ?>',
+                                            type: 'POST',
+                                            data: {id: $(this).attr('data-id')},
+                                            success: function (data) {
+                                                if (data == "success") {
+                                                    console.log('index' + divId);
+                                                    $('#msg').html('<div class="alert alert-success">' +
+                                                        '<strong>&#10004; Success!</strong> Files deleted successfully.' +
+                                                        '</div>');
+                                                    $('#index' + divId).html('');
+                                                } else if (data == "error") {
+                                                    $('#msg').html('<div class="alert alert-danger">' +
+                                                        '<strong>&#x2716; Error!</strong> There is an error deleting your files.' +
+                                                        '</div>');
+                                                }
+                                            }
+                                        });
+                                    }
+                                });
+                            });
+                        </script>
