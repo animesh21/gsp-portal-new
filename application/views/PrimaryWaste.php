@@ -27,7 +27,7 @@
             <div id="samplt" class="fin-prog progress-bar" role="progressbar" style="width:75%; height: 35px;">75%</div>
         </div>
         <div class="intro">
-            <h1>WASTE</h1>
+            <h1>WASTE<span style="text-transform:capitalize">(Primary)</span></h1>
             <div class="video"> <a class="lptext" href="#" data-toggle="modal" data-target="#videoModal"><img src="http://greenschoolsprogramme.org/audit2015/upload/templates/tfr_responsive/images/video-icon.png" style="width: 45px; height: 40px; margin-top:47px;"></a></div>
         </div>
         <p> Schools can provide excellent educational opportunities for creating awareness about waste and its management.<br>

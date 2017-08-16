@@ -509,8 +509,9 @@
                         It does not include floors.</p>
                     <p> 2. Green cover or green, landscaped area on ground
                         includes areas covered by grass,
-                        trees, lawn or horticulture, flower beds, grasscrete
-                        paver tiles, etc.</p>
+                        trees, lawn or horticulture, flower beds, shrubs, etc.
+                        excluding play area covered by the grass on ground.
+                    </p>
                     <p> 3. Surface parking area refers to any parking lots
                         directly on land.</p>
                     <p> 4. Play areas that are paved / concrete include outdoor
