@@ -39,7 +39,9 @@ class Audit_started_2017 extends CI_Controller {
      */
     public function response($argID)
     {
+        $data['title'] = 'Home | School';
         $data['states'] = getStates();
+        $data['id']=$argID;
         $data['school']=$this->Audit_started_model->getSchoolById($argID);
         $data['schoolUserID']=$data['school']->userid;
         $this->load->view('admin/survey/school', $data);
@@ -48,12 +50,26 @@ class Audit_started_2017 extends CI_Controller {
     /*
      * Generate Response General
      */
-    public function responsegenral($argID)
+    public function general($argID)
     {
-        //$data['states'] = getStates();
+        $data['title'] = 'Home | General';
+        $data['id']=$argID;
         $data['school']=$this->Audit_started_model->getSchoolById($argID);
         $data['schoolUserID']=$data['school']->userid;
         $this->load->view('admin/survey/general', $data);
+    }
+
+    /*
+     * Generate Response Air
+     */
+    public function air($argID)
+    {
+        $data['title'] = 'Home | Air';
+        $data['id']=$argID;
+        $data['school']=$this->Audit_started_model->getSchoolById($argID);
+        $data['schoolUserID']=$data['school']->userid;
+        $this->load->view('admin/survey/air', $data);
+
     }
 
 }
