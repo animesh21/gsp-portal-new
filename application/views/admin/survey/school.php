@@ -77,7 +77,7 @@
                     </div>
 
                     <center>
-                        <a class="btn org-btn" href="<?php echo base_url('admin/audit_started_2017') ?>">NEXT</a>
+                        <a class="btn org-btn" href="<?php echo base_url('admin/audit_started_2017/general/'.$id) ?>">NEXT</a>
                     </center>
 
                 </form>
