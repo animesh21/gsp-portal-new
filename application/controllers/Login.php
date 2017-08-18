@@ -72,8 +72,8 @@ class Login extends CI_Controller {
             $details['pass'] = strtolower($pass);
             $user = $this->School_model->RegisterUser($details);
             if (isset($user)) {
-               /* $this->session->set_flashdata('success', 'You have successfully registered your school for the GSP Audit. Kindly add support@greenschoolsprogramme.org to your Contact list so that emails from GSP do not go into your spam box. Good luck! GSP Team'.'<a href="'.base_url('login').'">Login Page</a>');*/
-			   redirect(base_url('login/welcome'), 'refresh');
+                /* $this->session->set_flashdata('success', 'You have successfully registered your school for the GSP Audit. Kindly add support@greenschoolsprogramme.org to your Contact list so that emails from GSP do not go into your spam box. Good luck! GSP Team'.'<a href="'.base_url('login').'">Login Page</a>'); */
+                redirect(base_url('login/welcome'), 'refresh');
             } else {
                 $this->session->set_flashdata('error', 'There is an error occured creating your account !');
             }
@@ -114,26 +114,54 @@ class Login extends CI_Controller {
         }
     }
 
-    /* * GSP Forget Password
+    /*     * GSP Forget Password
      */
-    public function forgetpassword()
-    {
+
+    public function forgetpassword() {
         //echo $this->input->post('val'); exit;
-        $status='';
-        $temp=$this->User_model->forgetPassword();
-        if($temp)
-        {
-            $status='success';
+        $status = '';
+        $temp = $this->User_model->forgetPassword();
+        if ($temp) {
+            $status = 'success';
         } else {
-            $status='error';
+            $status = 'error';
         }
         echo json_encode($status);
-
     }
-	public function welcome(){
-	   $data['title']='Green School';
-	   $this->load->view('welcome-message', $data);
-	}
+
+    public function welcome() {
+        $data['title'] = 'Green School';
+        $this->load->view('welcome-message', $data);
+    }
+
+    /*
+     * Check Duplicate Mail
+     */
+
+    public function checkschoomail() {
+        //echo '<pre>'; print_r($this->input->get('schoolemail'));
+        $this->db->select('*');
+        if($this->input->get('schoolemail'))
+        {
+            $this->db->where('schoolemail', $this->input->get('schoolemail'));
+        }else if($this->input->get('coemail'))
+        {
+            $this->db->where('coemail', $this->input->get('coemail'));
+        }else if($this->input->post('comobile'))
+        {
+            $this->db->where('comobile', $this->input->get('comobile'));
+        }
+        $query = $this->db->get('gsp_school');
+        $num = $query->num_rows();
+        if($num > 0)
+        {
+            echo "false";
+        }else
+        {
+            echo "true";
+        }
+    }
+
 }
 
 ?>
