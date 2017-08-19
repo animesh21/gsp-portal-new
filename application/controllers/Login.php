@@ -139,7 +139,7 @@ class Login extends CI_Controller {
      */
 
     public function checkschoomail() {
-        //echo '<pre>'; print_r($this->input->get('schoolemail'));
+        //echo '<pre>'; print_r($this->input->get('comobile')); exit
         $this->db->select('*');
         if($this->input->get('schoolemail'))
         {
@@ -147,11 +147,14 @@ class Login extends CI_Controller {
         }else if($this->input->get('coemail'))
         {
             $this->db->where('coemail', $this->input->get('coemail'));
-        }else if($this->input->post('comobile'))
+        }else if($this->input->get('comobile'))
         {
             $this->db->where('comobile', $this->input->get('comobile'));
+            ///echo 'Hi'; exit;
         }
         $query = $this->db->get('gsp_school');
+        //echo $this->db->last_query();
+        //echo '<pre>'; print_r($query); exit;
         $num = $query->num_rows();
         if($num > 0)
         {
