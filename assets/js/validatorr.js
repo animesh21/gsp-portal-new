@@ -5238,7 +5238,7 @@ function WaterConsumption()
     for(i=1;i<11;i++)
     {
         var id="Q4Wz".replace("z",i);
-
+        console.log(id);
         var val = document.getElementById(id);
 
         var val1 = parseFloat(val.value);
@@ -5248,7 +5248,7 @@ function WaterConsumption()
             if(isNaN(val2))
                 val1 = 0;
             else
-                val2 = val2
+                val1 = val2
 
         sum += val1;
 
