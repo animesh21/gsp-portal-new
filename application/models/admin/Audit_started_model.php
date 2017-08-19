@@ -19,6 +19,7 @@ class Audit_started_model extends CI_Model {
         return $this->db->select('a.*, b.name AS state_name')
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
+//                        ->where('YEAR(a.date_added)', 2017)
                         ->order_by('a.id', 'desc')
                         ->get()->result();
     }
@@ -28,7 +29,7 @@ class Audit_started_model extends CI_Model {
      */
 
     public function getExcelData() {
-        $output="";
+        $output = "";
         $arrRecord = $this->db->select('a.*, b.name AS state_name, c.name AS district_name, d.password')
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
@@ -37,8 +38,8 @@ class Audit_started_model extends CI_Model {
                         ->order_by('a.id', 'desc')
                         ->get()->result();
         //echo '<pre>'; print_r($arrRecord); exit;
-        $k=1;
-        $isdCode='+91';
+        $k = 1;
+        $isdCode = '+91';
         $output .= '"S.No",';
         $output .= '"School Name",';
         $output .= '"Address1",';
@@ -90,13 +91,26 @@ class Audit_started_model extends CI_Model {
 
         return $output;
     }
-    
+
     /*
      * Get School By Id
      */
-    public function getSchoolById($argID)
-    {
-        return $this->db->get_where('gsp_school', array('id'=>$argID))->row();
+
+    public function getSchoolById($argID) {
+        return $this->db->get_where('gsp_school', array('id' => $argID))->row();
+    }
+
+    /*
+     * Get Data By State
+     */
+
+    public function getDataSearch($argID) {
+        return $this->db->select('a.*, b.name AS state_name')
+                        ->from('gsp_school AS a')
+                        ->join('states AS b', 'a.state=b.id', 'left')
+                        ->where('a.state', $argID)
+                        ->order_by('a.id', 'desc')
+                        ->get()->result();
     }
 
 }

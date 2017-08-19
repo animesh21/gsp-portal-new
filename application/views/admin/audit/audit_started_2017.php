@@ -5,7 +5,7 @@
         <thead>
           <tr role="row">
             <th>S.No</th>
-<!--            <th>Sch.Id</th>-->
+            <th>Sch.Id</th>
             <th>School Name</th>
             <th>State</th>
             <th>City</th>
@@ -22,6 +22,7 @@
           <?php $i=1; foreach($record as $r){ ?>
             <tr role="row" class="<?php echo ($i%2==0) ? "even" : "odd"; ?>">
                 <td><?php echo $i; ?></td>
+                <td><?php echo $r->id; ?></td>
                 <td><?php echo $r->name; ?></td>
                 <td><?php echo $r->state_name; ?></td>
                 <td><?php echo $r->city; ?></td>
