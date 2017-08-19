@@ -1,5 +1,5 @@
 <?php $this->load->view('header'); ?>
-<link rel="stylesheet" href="<?php echo base_url() ?>assets/css/jquery.fileuploader.css"/>
+<link rel="stylesheet"  href="<?php echo base_url() ?>assets/css/jquery.fileuploader.css" />
 <link href="<?php echo base_url() ?>assets/css/jquery.fileuploader-theme-onebutton.css" media="all" rel="stylesheet">
 <style>
     .form-group > label ul {
@@ -488,7 +488,7 @@
                     <label class="text-gray">Drinking</label>
                 </div>
                 <div class="col-xs-5">
-                    <input class="form-control space-textbox" onkeyup="WaterConsumption()" onchange="WaterConsumption()"
+                    <input class="form-control space-textbox" onkeyup="WaterConsumption()" 
                            id="Q4W1" type="number" min="0" name="Q4W1"
                            placeholder="<?php if (isset($data['Q4W1'])) echo $data['Q4W1'] ?>"
                            value="<?php echo set_value('Q4W1'); ?>"/>
@@ -499,7 +499,7 @@
                     <label class="text-gray">Toilet flushing</label>
                 </div>
                 <div class="col-xs-5">
-                    <input class="form-control space-textbox" onkeyup="WaterConsumption()" onchange="WaterConsumption()"
+                    <input class="form-control space-textbox" onkeyup="WaterConsumption()" 
                            id="Q4W2" type="number" min="0" name="Q4W2"
                            placeholder="<?php if (isset($data['Q4W2'])) echo $data['Q4W2'] ?>"
                            value="<?php echo set_value('Q4W2'); ?>"/>
@@ -510,7 +510,7 @@
                     <label class="text-gray">Personal cleaning</label>
                 </div>
                 <div class="col-xs-5">
-                    <input class="form-control space-textbox" onkeyup="WaterConsumption()" onchange="WaterConsumption()"
+                    <input class="form-control space-textbox" onkeyup="WaterConsumption()" 
                            id="Q4W3" type="number" min="0" name="Q4W3"
                            placeholder="<?php if (isset($data['Q4W3'])) echo $data['Q4W3'] ?>"
                            value="<?php echo set_value('Q4W3'); ?>"/>
@@ -521,7 +521,7 @@
                     <label class="text-gray">Washing clothes</label>
                 </div>
                 <div class="col-xs-5">
-                    <input class="form-control space-textbox" onkeyup="WaterConsumption()" onchange="WaterConsumption()"
+                    <input class="form-control space-textbox" onkeyup="WaterConsumption()" 
                            id="Q4W4" type="number" min="0" name="Q4W4"
                            placeholder="<?php if (isset($data['Q4W4'])) echo $data['Q4W4'] ?>"
                            value="<?php echo set_value('Q4W4'); ?>"/>
@@ -532,7 +532,7 @@
                     <label class="text-gray">Cooking</label>
                 </div>
                 <div class="col-xs-5">
-                    <input class="form-control space-textbox" onkeyup="WaterConsumption()" onchange="WaterConsumption()"
+                    <input class="form-control space-textbox" onkeyup="WaterConsumption()" 
                            id="Q4W5" type="number" min="0" name="Q4W5"
                            placeholder="<?php if (isset($data['Q4W5'])) echo $data['Q4W5'] ?>"
                            value="<?php echo set_value('Q4W5'); ?>"/>
@@ -567,8 +567,8 @@
                     <label class="text-gray">Cleaning Utensils</label>
                 </div>
                 <div class="col-xs-5">
-                    <input class="form-control space-textbox" onkeyup="WaterConsumption()" onchange="WaterConsumption()"
-                           id="Q4W8" type="number" min="0" name="Q4W6"
+                    <input class="form-control space-textbox" onkeyup="WaterConsumption()" 
+                           id="Q4W6" type="number" min="0" name="Q4W6"
                            placeholder="<?php if (isset($data['Q4W6'])) echo $data['Q4W6'] ?>"
                            value="<?php echo set_value('Q4W6'); ?>"/>
                 </div>
@@ -578,8 +578,8 @@
                     <label class="text-gray">Washing Vegetables</label>
                 </div>
                 <div class="col-xs-5">
-                    <input class="form-control space-textbox" onkeyup="WaterConsumption()" onchange="WaterConsumption()"
-                           id="Q4W9" type="number" min="0" name="Q4W7"
+                    <input class="form-control space-textbox" onkeyup="WaterConsumption()" 
+                           id="Q4W7" type="number" min="0" name="Q4W7"
                            placeholder="<?php if (isset($data['Q4W7'])) echo $data['Q4W7'] ?>"
                            value="<?php echo set_value('Q4W7'); ?>"/>
                 </div>
@@ -589,8 +589,8 @@
                     <label class="text-gray">Mopping floors</label>
                 </div>
                 <div class="col-xs-5">
-                    <input class="form-control space-textbox" onkeyup="WaterConsumption()" onchange="WaterConsumption()"
-                           id="Q4W10" type="number" min="0" name="Q4W8"
+                    <input class="form-control space-textbox" onkeyup="WaterConsumption()" 
+                           id="Q4W8" type="number" min="0" name="Q4W8"
                            placeholder="<?php if (isset($data['Q4W8'])) echo $data['Q4W8'] ?>"
                            value="<?php echo set_value('Q4W8'); ?>"/>
                 </div>
@@ -600,8 +600,8 @@
                     <label class="text-gray">Gardening</label>
                 </div>
                 <div class="col-xs-5">
-                    <input class="form-control space-textbox" onkeyup="WaterConsumption()" onchange="WaterConsumption()"
-                           id="Q4W11" type="number" min="0" name="Q4W9"
+                    <input class="form-control space-textbox" onkeyup="WaterConsumption()" 
+                           id="Q4W9" type="number" min="0" name="Q4W9"
                            placeholder="<?php if (isset($data['Q4W9'])) echo $data['Q4W9'] ?>"
                            value="<?php echo set_value('Q4W9'); ?>"/>
                 </div>
@@ -611,8 +611,8 @@
                     <label class="text-gray">Others</label>
                 </div>
                 <div class="col-xs-5">
-                    <input class="form-control space-textbox" onkeyup="WaterConsumption()" onchange="WaterConsumption()"
-                           id="Q4W12" type="number" min="0" name="Q4W10"
+                    <input class="form-control space-textbox" onkeyup="WaterConsumption()" 
+                           id="Q4W10" type="number" min="0" name="Q4W10"
                            placeholder="<?php if (isset($data['Q4W10'])) echo $data['Q4W10'] ?>"
                            value="<?php echo set_value('Q4W10'); ?>"/>
                 </div>
@@ -819,9 +819,7 @@
                             </label>
                             <div class="form-group">
                                 <label class="control-label"><span class="cube">5</span> What are the water conservation
-                                    practices your school follows <a class="tt"
-                                                                     data-tooltip="Please tick “Yes” if your school follows the below mentioned practices. Do upload images/ jpegs, where relevant."><span
-                                                class="badge">?</span></a></label>
+                                    practices your school follows <a class="tt" data-tooltip="Please tick “Yes” if your school follows the below mentioned practices. Do upload images/ jpegs, where relevant."><span class="badge">?</span></a></label>
                                 <div class="form-group">
                                     <label class="radio-inline text-gray col-xs-10"> Does your school have any water and
                                         sanitation policy? </label>
@@ -990,10 +988,7 @@
                                 <tr id="index<?php echo $f->id; ?>">
                                     <?php $name = str_replace(" ", "_", $f->name . "_Task_4_Supporting_docs_"); ?>
                                     <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
-                                    <td><a href="javascript:void(0)" class="air-delete-files"
-                                           data-id="<?php echo $f->id; ?>"><img
-                                                    src="<?php echo base_url(); ?>assets/front/images/delete.png"
-                                                    style="position:relative; top:5px"/></a></td>
+                                    <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
                                 </tr>
                             <?php } ?>
                             </tbody>
@@ -1198,7 +1193,7 @@
                                     <li>
                                         <label class="radio-inline text-gray">
                                             <input type="checkbox" name="Q8W2S2S6"
-                                                   value="<?php echo set_value('Q8W2S2S6', 1) ?>" <?php if (isset($data['Q8W2S2S6'])) echo $data['Q8W2S2S6'] == 1 ? "checked" : "" ?>/>
+                                                   value="<?php echo set_value('Q8W2S2S6', 1) ?>" <?php if (isset($data['Q8W2S2S6'])) echo $data['Q8W2S2S6'] == 1? "checked" : "" ?>/>
                                             Kitchen (Cooking/Washing vegetables and utensils) </label>
                                     </li>
                                     <li>
@@ -1572,9 +1567,7 @@
 
                         >
                             <label><span class="cube">6(c)</span>How much area in your school is harvested?
-                                <a class="kplink"
-                                   href="http://www.greenschoolsprogramme.org/knowledge-bank/water/#rainFalls"
-                                   target="_blank"> </a></label>
+                                <a class="kplink" href="http://www.greenschoolsprogramme.org/knowledge-bank/water/#rainFalls" target="_blank"> </a></label>
                             <div class="form-group">
                                 <ul>
                                     <li>
@@ -1650,9 +1643,7 @@
                         >
                             <label><span class="cube">6(d)</span>Please select (from the list given below) the rainwater
                                 harvesting structures present in your school:
-                                <a class="kplink"
-                                   href="http://www.greenschoolsprogramme.org/knowledge-bank/water/#rainFalls"
-                                   target="_blank"> </a></label>
+                                <a class="kplink" href="http://www.greenschoolsprogramme.org/knowledge-bank/water/#rainFalls" target="_blank"> </a></label>
                             <div class="form-group">
                                 <ul>
                                     <li>
@@ -1856,10 +1847,7 @@
                                     <tr id="index<?php echo $f->id; ?>">
                                         <?php $name = str_replace(" ", "_", $f->name . "_Water_Treatment_Process_"); ?>
                                         <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
-                                        <td><a href="javascript:void(0)" class="air-delete-files"
-                                               data-id="<?php echo $f->id; ?>"><img
-                                                        src="<?php echo base_url(); ?>assets/front/images/delete.png"
-                                                        style="position:relative; top:5px"/></a></td>
+                                        <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
                                     </tr>
                                 <?php } ?>
                                 </tbody>
@@ -2191,8 +2179,7 @@
                                 </table>
                                 <br>
                                 Note: *For Average Rainfall Data refer to Knowledge Bank: <a class="kplink" href="
-http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_blank"> </a>www.greenschoolsprogramme.org</a>
-                                <br>
+http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_blank"> </a>www.greenschoolsprogramme.org</a><br>
                             </div>
                         </div>
                         <br>
@@ -2619,11 +2606,7 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
                                                         <tr id="index<?php echo $f->id; ?>">
                                                             <?php $name = str_replace(" ", "_", $f->name . "_Flow_Chart_Hand_Drwan_"); ?>
                                                             <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
-                                                            <td><a href="javascript:void(0)" class="air-delete-files"
-                                                                   data-id="<?php echo $f->id; ?>"><img
-                                                                            src="<?php echo base_url(); ?>assets/front/images/delete.png"
-                                                                            style="position:relative; top:5px"/></a>
-                                                            </td>
+                                                            <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
                                                         </tr>
                                                     <?php } ?>
                                                     </tbody>
@@ -2657,25 +2640,17 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
                                                         <tr id="index<?php echo $f->id; ?>">
                                                             <?php $name = str_replace(" ", "_", $f->name . "_Supporting_Document_Water_"); ?>
                                                             <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
-                                                            <td><a href="javascript:void(0)" class="air-delete-files"
-                                                                   data-id="<?php echo $f->id; ?>"><img
-                                                                            src="<?php echo base_url(); ?>assets/front/images/delete.png"
-                                                                            style="position:relative; top:5px"/></a>
-                                                            </td>
+                                                            <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
                                                         </tr>
                                                     <?php } ?>
                                                     </tbody>
                                                 </table>
                                                 <div class="text-center">
-                                                    <button type="button" class="org-btn" id="btnWaterPrevious">
-                                                        Previous
-                                                    </button>
+                                                    <button type="button" class="org-btn" id="btnWaterPrevious">Previous</button>
                                                     <button type="submit" id="movenextbtn" value="movenext"
                                                             name="movenext" accesskey="n" class="submit button">Next
                                                     </button>
-                                                    <button type="button" class="org-btn" id="watersave">Save and Resume
-                                                        Later
-                                                    </button>
+                                                    <button type="button"  class="org-btn" id="watersave">Save and Resume Later</button>
                                                 </div>
                                                 <?php echo form_close(); ?> </div>
                                         </div>
@@ -2729,22 +2704,16 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
                                                             <div class="col-md-6 col-md-offset-3" id="test">
                                                                 <form enctype="multipart/form-data">
                                                                     <input
-                                                                            type="file" name="file[]" id="file1"
-                                                                            multiple/>
+                                                                            type="file" name="file[]" id="file1" multiple />
                                                                     <input
-                                                                            type="hidden" name="Fules" value=""
-                                                                            id="Fules_bill"/>
+                                                                            type="hidden" name="Fules" value="" id="Fules_bill" />
                                                                 </form>
                                                             </div>
                                                         </div>
                                                         <div class="row pull-right">
                                                             <div class="col-md-12">
-                                                                <button class="btn btn-default" id="uploadFiles"
-                                                                        type="button">UPLOAD
-                                                                </button>
-                                                                <button type="button" class="btn btn-default"
-                                                                        data-dismiss="modal">Return to survey
-                                                                </button>
+                                                                <button class="btn btn-default" id="uploadFiles" type="button">UPLOAD</button>
+                                                                <button type="button" class="btn btn-default" data-dismiss="modal">Return to survey</button>
                                                             </div>
                                                         </div>
                                                         <div class="clerarfix">&nbsp;</div>
@@ -2774,7 +2743,8 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
                                                         type: 'POST',
                                                         url: '<?php echo base_url('previous/waterajax') ?>',
                                                         data: fd,
-                                                        success: function (data) {
+                                                        success: function (data)
+                                                        {
                                                             window.location.href = "<?php echo base_url('land'); ?>";
                                                         }
                                                     });
@@ -2787,7 +2757,8 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
                                                         type: 'POST',
                                                         url: '<?php echo base_url('previous/waterajax') ?>',
                                                         data: fd,
-                                                        success: function (data) {
+                                                        success: function (data)
+                                                        {
                                                             window.location.href = "<?php echo base_url('logout'); ?>";
                                                         }
                                                     });
@@ -2797,8 +2768,8 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
                                                     addMore: true,
                                                     theme: 'onebutton',
                                                     limit: 5,
-                                                    fileMaxSize: 0.5,
-                                                    extensions: ['jpg', 'jpeg', 'png', 'pdf', 'doc', 'docx'],
+                                                    fileMaxSize:0.5,
+                                                    extensions: ['jpg', 'jpeg', 'png','pdf','doc','docx'],
                                                     captions: {
                                                         button: "Select File",
                                                         errors: {
@@ -2816,11 +2787,13 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
                                                     var formdata = new FormData();
                                                     var ins = document
                                                         .getElementById('file1').files.length;
-                                                    if (ins == 0) {
+                                                    if (ins == 0)
+                                                    {
                                                         $('#msg').html('<div class="alert alert-danger">' +
                                                             '<strong>&#x2716; Error!</strong> Please Select a File to upload' +
                                                             '</div>');
-                                                    } else {
+                                                    } else
+                                                    {
                                                         for (var x = 0; x < ins; x++) {
                                                             formdata.append
                                                             ("files[]", document.getElementById('file1').files[x]);
@@ -2835,11 +2808,13 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
                                                             data: formdata,
                                                             type: 'post',
                                                             success: function (response) {
-                                                                if (response == "success") {
+                                                                if (response == "success")
+                                                                {
                                                                     $('#msg').html('<div class="alert alert-success">' +
                                                                         '<strong>&#10004; Success!</strong> Files uploaded successfully.' +
                                                                         '</div>');
-                                                                } else if (response == "error") {
+                                                                } else if (response == "error")
+                                                                {
                                                                     $('#msg').html('<div class="alert alert-danger">' +
                                                                         '<strong>&#x2716; Error!</strong> There is an error uploading your files.' +
                                                                         '</div>');
@@ -2853,20 +2828,24 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
                                                 //delete air files
                                                 $('body').on('click', '.air-delete-files', function (data) {
                                                     var test = confirm("Are you sure you want to delete this file");
-                                                    if (test == true) {
+                                                    if (test == true)
+                                                    {
                                                         var divId = $(this).attr('data-id');
                                                         $.ajax({
                                                             url: '<?php echo base_url('upload_files/deletFiles') ?>',
                                                             type: 'POST',
                                                             data: {id: $(this).attr('data-id')},
-                                                            success: function (data) {
-                                                                if (data == "success") {
+                                                            success: function (data)
+                                                            {
+                                                                if (data == "success")
+                                                                {
                                                                     console.log('index' + divId);
                                                                     $('#msg').html('<div class="alert alert-success">' +
                                                                         '<strong>&#10004; Success!</strong> Files deleted successfully.' +
                                                                         '</div>');
                                                                     $('#index' + divId).html('');
-                                                                } else if (data == "error") {
+                                                                } else if (data == "error")
+                                                                {
                                                                     $('#msg').html('<div class="alert alert-danger">' +
                                                                         '<strong>&#x2716; Error!</strong> There is an error deleting your files.' +
                                                                         '</div>');
@@ -2891,7 +2870,8 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
                                                 var fd = $('#' + document.forms[0].id).serialize();
                                                 ///alert(fd);
                                                 var redirect = '';
-                                                switch (document.forms[0].id) {
+                                                switch (document.forms[0].id)
+                                                {
                                                     case "air":
                                                         redirect = "airprevious";
                                                         break;
@@ -2918,7 +2898,7 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
                                                         break;
                                                     case "PrimaryAir":
                                                         //alert('Case Called');
-                                                        redirect = "airprevious";
+                                                        redirect="airprevious";
                                                         break;
                                                     case "PrimaryEnergy":
                                                         redirect = "energyajax";
@@ -2927,7 +2907,7 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
                                                         redirect = "foodajax";
                                                         break;
                                                     case "PrimaryLand":
-                                                        redirect = "landajax";
+                                                        redirect= "landajax";
                                                 }
 
                                                 //console.log(fd);
