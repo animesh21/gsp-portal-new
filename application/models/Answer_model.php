@@ -688,6 +688,12 @@ class Answer_model extends CI_Model {
                     $this->db->where('questionid', 'Q13Wa2');
                     $this->db->delete('gsp_answers');
                 }
+                else if($post['Q13Wa2'] == 1 || $post['Q13Wa2'] == 2 || $post['Q13Wa2'] == 3|| $post['Q13Wa2'] == 4)
+                {
+                    $this->db->where('userid', $this->session->userdata('USER_ID'));
+                    $this->db->where('questionid', 'Q13Wa2O');
+                    $this->db->delete('gsp_answers');   
+                }
             }
             if(isset($post['Q15Wa1']))
             {
