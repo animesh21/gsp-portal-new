@@ -69,8 +69,21 @@ class Answer_model extends CI_Model {
             if(isset($post['Q5W1']) || isset($post['Q5W2']) || isset($post['Q5W3']) || isset($post['Q5W4']))
             {
                 $this->db->where('userid', $this->session->userdata('USER_ID'));
-                $this->db->like('questionid', 'Q5W');
+                $this->db->where('questionid', 'Q5W1');
                 $this->db->delete('gsp_answers');
+
+                $this->db->where('userid', $this->session->userdata('USER_ID'));
+                $this->db->where('questionid', 'Q5W2');
+                $this->db->delete('gsp_answers');
+
+                $this->db->where('userid', $this->session->userdata('USER_ID'));
+                $this->db->where('questionid', 'Q5W3');
+                $this->db->delete('gsp_answers');
+
+                $this->db->where('userid', $this->session->userdata('USER_ID'));
+                $this->db->where('questionid', 'Q5W4');
+                $this->db->delete('gsp_answers');
+
 
             }
 
@@ -83,8 +96,26 @@ class Answer_model extends CI_Model {
             if(isset($post['Q6W1']) || isset($post['Q6W2']) || isset($post['Q6W3']) || isset($post['Q6W4']) || isset($post['Q6W4']))
             {
                 $this->db->where('userid', $this->session->userdata('USER_ID'));
-                $this->db->like('questionid', 'Q6W');
+                $this->db->where('questionid', 'Q6W1');
                 $this->db->delete('gsp_answers');
+
+                $this->db->where('userid', $this->session->userdata('USER_ID'));
+                $this->db->where('questionid', 'Q6W2');
+                $this->db->delete('gsp_answers');
+
+                $this->db->where('userid', $this->session->userdata('USER_ID'));
+                $this->db->where('questionid', 'Q6W3');
+                $this->db->delete('gsp_answers');
+
+                $this->db->where('userid', $this->session->userdata('USER_ID'));
+                $this->db->where('questionid', 'Q6W4');
+                $this->db->delete('gsp_answers');
+
+                $this->db->where('userid', $this->session->userdata('USER_ID'));
+                $this->db->where('questionid', 'Q6W5');
+                $this->db->delete('gsp_answers');
+
+
 
             }
             if(isset($post['Q8W2S31']) || isset($post['Q8W2S32']) || isset($post['Q8W2S33']) || isset($post['Q8W2S34']) || isset($post['Q8W2S35']) || isset($post['Q8W2S36']) || isset($post['Q8W2S37']) || isset($post['Q8W2S38']))
@@ -398,7 +429,6 @@ class Answer_model extends CI_Model {
 
                 if($post['Q8W2'] ==  'Y')
                 {
-                    echo "<br> Its Yes!";
                     $this->db->where('userid', $this->session->userdata('USER_ID'));
                     $this->db->where('questionid', 'Q8W2S6');
                     $this->db->delete('gsp_answers');
@@ -663,6 +693,7 @@ class Answer_model extends CI_Model {
         }
         if($type == 7)
         {
+            echo "Deleted Waste";
             if(isset($post['Q4Wa1']))
             {
                 if($post['Q4Wa1'] == 'N')
