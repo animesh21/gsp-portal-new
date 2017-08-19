@@ -4480,7 +4480,7 @@ function WasteConstruction()
         else
             element1 = element11;
 
-    var population = parseFloat($('#Q4G4S3').val().toFixed(2));
+    var population = parseFloat($('#Q4G4S3').val());
 
     $('#Q6Wa7S2').val(((element1/30)/population).toFixed(2))
 }
