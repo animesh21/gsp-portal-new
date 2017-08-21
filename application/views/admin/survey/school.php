@@ -56,7 +56,7 @@
                                 '6'=>'Day Scholar + Residential',
                                 '7'=>'Day Scholar + Day Boarding + Residential'
                             ); ?>
-                            <?php echo $arr[getFiled('Q1S1', $schoolUserID)]; ?>
+                            <?php echo (getFiled('Q1S1', $schoolUserID) !='') ?  $arr[getFiled('Q1S1', $schoolUserID)] : ""; ?>
                         </p>  
 
                     </div>
@@ -71,7 +71,7 @@
                                 '2'=>'Evening',
                                 '3'=>'Both',
                             ); ?>
-                            <?php echo $arr1[getFiled('Q2S1', $schoolUserID)]; ?>
+                            <?php echo (getFiled('Q2S1', $schoolUserID)) ? $arr1[getFiled('Q2S1', $schoolUserID)] : ""; ?>
                         </p>  
 
                     </div>
