@@ -3256,7 +3256,7 @@
         <br>
         <div class="form-group">
             <label>
-                <h6>Task 6: Choose your Waste Audit Team.</h6>
+                <h6>Task 6: School's initiatives.</h6>
             </label>
             <br>
             It is important to appreciate the initiatives taken by the management on issues related to waste. The
