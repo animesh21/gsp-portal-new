@@ -2393,14 +2393,10 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
                                 sufficient?</label>
                             <div class="form-group">
                                 <label class="radio-inline text-gray">
-                                    <input type="radio" name="Q17W1"
-                                           value="<?php echo set_value('Q17W1', 'Y') ?>" <?php if (isset($data['Q17W1'])) echo $data['Q17W1'] == 'Y' ? "checked" : "";
-                                    if (isset($other['Q2G1'])) echo "required"; ?>>
+                                    <input type="radio" name="Q21W1" value="<?php echo set_value('Q21W1', 'Y') ?>" <?php if (isset($data['Q21W1'])) echo $data['Q21W1'] == 'Y' ? "checked" : "";?>>
                                     Yes </label>
                                 <label class="radio-inline text-gray">
-                                    <input type="radio" name="Q17W1"
-                                           value="<?php echo set_value('Q17W1', 'N') ?>" <?php if (isset($data['Q17W1'])) echo $data['Q17W1'] == 'N' ? "checked" : "";
-                                    if (isset($other['Q2G1'])) echo "required"; ?>>
+                                    <input type="radio" name="Q21W1" value="<?php echo set_value('Q21W1', 'N') ?>" <?php if (isset($data['Q21W1'])) echo $data['Q21W1'] == 'N' ? "checked" : "";?>>
                                     No </label>
                             </div>
                         </div>
