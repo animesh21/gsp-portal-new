@@ -1665,11 +1665,11 @@ $(document).ready(function(){
             event.preventDefault();
         }
 
-        var radioCheck = $("input[name=Q17W1]:checked").val(); //15
+        var radioCheck = $("input[name=Q21W1]:checked").val(); //15
         if(radioCheck != 'Y' && radioCheck != 'N' )
         {
             alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. -(15)");
-            $('#Q17W1').focus(); $('#Q17W1').css('border-color', 'red');
+            $('#Q21W1').focus(); $('#Q21W1').css('border-color', 'red');
             event.preventDefault();
         }
 
