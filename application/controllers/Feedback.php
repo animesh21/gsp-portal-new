@@ -28,11 +28,16 @@ class Feedback extends CI_Controller {
         
     }
 
+     public function end_aduit()
+    {
+       $this->load->view('end-message');
+    }
+   
     public function set()
     {
         $post = $this->input->post();
         $this->Answer_model->submitAnswers($post,8);
-        redirect(base_url("School"));
+        redirect(base_url("Feedback/end_aduit"));
     }
 	
 }
