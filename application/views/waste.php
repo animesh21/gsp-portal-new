@@ -3242,7 +3242,7 @@
                 </div>
                 <div class="clearfix">&nbsp;</div>
        
-        <!---<div class="form-group">
+        <div class="form-group">
   <label class="control-label"><span class="cube">12</span>Do you know that your E-waste can be collected by an authorised dealer or dismantler? </label>
   <div class="form-group">
     <label class="radio-inline text-gray">
@@ -3252,7 +3252,7 @@
     <input type="radio" name="Q16Wa1"class="radio" id="Q16Wa1" value="<?php echo set_value('Q16Wa1', 'N') ?>" <?php if (isset($data['Q16Wa1'])) echo $data['Q16Wa1'] == 'N' ? "checked" : "" ?>>
     No </label>
   </div>
-</div>-->
+</div>
         <br>
         <div class="form-group">
             <label>
