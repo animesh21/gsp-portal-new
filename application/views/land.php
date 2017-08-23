@@ -681,8 +681,7 @@
             </div>
         </div>
         <div class="form-group">
-            <label><span class="cube">1B</span>Built-up area of your school
-                campus</label>
+            <label><span class="cube">1B</span>Other General Area in Campus</label>
         </div>
         <div class="form-group1 row">
             <div class="col-xs-5">
