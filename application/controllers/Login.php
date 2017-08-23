@@ -17,7 +17,8 @@ class Login extends CI_Controller {
         //Validation
         $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
         $this->form_validation->set_rules('password', 'Password', 'trim|required');
-
+		$this->form_validation->set_rules('state', 'State', 'required');
+		
         if ($this->form_validation->run() == FALSE) {
             $this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');
         } else {
