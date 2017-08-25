@@ -56,9 +56,9 @@
                   <li><a href="<?php echo base_url('admin/audit_started/statewise'); ?>">REGISTRATIONS BY STATE</a></li>
                 </ul>
               </li>
-              <li class=""><a href="audit_completed.php">AUDIT COMPLETED<span class="caret"></span></a>
+              <li class=""><a href="#">AUDIT COMPLETED<span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li class=""><a href="performance_report.php">PERFORMANCE REPORT</a> </li>
+                  <li class=""><a href="<?php echo base_url('admin/performance_report'); ?>">PERFORMANCE REPORT</a> </li>
                   <li><a href="analysis_report_all_question.php">All Responses</a></li>
                 </ul>
               </li>
