@@ -34,7 +34,9 @@ if (!empty($varParams['profile_image'])) {
     $data = date('Y-m-d H:i:s');
     $sql = "INSERT INTO files(file_name, created, modified, status, userid) VALUES('".$imagename."',
      '".$date."', '".$date."', 1, 1484)";
+    echo $sql;
     mysql_query($sql);
+
 
 //    $new_image_name = $_FILES["file"]["name"];
 //    $tmpFilePath = $_FILES['file']['tmp_name'];
