@@ -31,7 +31,7 @@ if (!empty($varParams['profile_image'])) {
     file_put_contents($destination, base64_decode($varParams['profile_image']));
     mysql_connect('localhost', 'gspaudit17_usr', 'Gl!k6x7zQ');
     mysql_select_db('gsp_audit17');
-    $data = date('Y-m-d H:i:s');
+    $date = date('Y-m-d H:i:s');
     $sql = "INSERT INTO files(file_name, created, modified, status, userid) VALUES('".$imagename."',
      '".$date."', '".$date."', 1, 1484)";
     echo $sql;
