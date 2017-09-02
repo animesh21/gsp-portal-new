@@ -3,7 +3,8 @@
     <div class="content-form">
 
         <!--close log-nav-->
-        <h1>Air <span class="school-name">KENDRIYA VIDYALAYA No.1</span></h1>
+        <h1> <span class="school-name"><?php echo $school->name;
+                ?></span></h1>
         <!--close progress-->
 
         <form>
@@ -1354,7 +1355,7 @@
 
 
             <center>
-                <a class="btn org-btn" href="response_detail2.php?id=aeiou0617@">PREVIOUS</a>
+                <a class="btn org-btn" href="<?php echo base_url('admin/audit_started_2017/general/'.$id) ?>">PREVIOUS</a>
                 <a class="btn org-btn" href="response_detail4.php?id=aeiou0617@">NEXT</a>
             </center>
 

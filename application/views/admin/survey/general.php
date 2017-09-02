@@ -185,17 +185,20 @@
                         <td class="answer_cell_00SQ001 question-item answer-item  numeric-item text-item  numberonly">
                             <input type="hidden" value="484" id="java266617X32X33SQ004_SQ001" name="java266617X32X33SQ004_SQ001" class="form-control">
                             <label for="answer266617X32X33SQ004_SQ001" class="hide read">Male</label>
-                            <input type="text" value="484" onkeyup="fixnum_checkconditions(this.value, this.name, this.type)" title="Male" size="5" id="answer266617X32X33SQ004_SQ001" name="266617X32X33SQ004_SQ001" class="multiflexitext text  em_sq_validation good form-control" readonly="">
+                            <input type="text" value="<?php  echo getFiled('Q4G4S1',
+                                $schoolUserID); ?>" onkeyup="fixnum_checkconditions(this.value, this.name, this.type)" title="Male" size="5" id="answer266617X32X33SQ004_SQ001" name="266617X32X33SQ004_SQ001" class="multiflexitext text  em_sq_validation good form-control" readonly="">
                         </td>
                         <td class="answer_cell_00SQ002 question-item answer-item  numeric-item text-item  numberonly">
                             <input type="hidden" value="343" id="java266617X32X33SQ004_SQ002" name="java266617X32X33SQ004_SQ002" class="form-control">
                             <label for="answer266617X32X33SQ004_SQ002" class="hide read">Female</label>
-                            <input type="text" value="343" onkeyup="fixnum_checkconditions(this.value, this.name, this.type)" title="Female" size="5" id="answer266617X32X33SQ004_SQ002" name="266617X32X33SQ004_SQ002" class="multiflexitext text  em_sq_validation good form-control" readonly="">
+                            <input type="text" value="<?php  echo getFiled('Q4G4S2',
+                                $schoolUserID); ?>" onkeyup="fixnum_checkconditions(this.value, this.name, this.type)" title="Female" size="5" id="answer266617X32X33SQ004_SQ002" name="266617X32X33SQ004_SQ002" class="multiflexitext text  em_sq_validation good form-control" readonly="">
                         </td>
                         <td class="answer_cell_00SQ003 question-item answer-item  numeric-item text-item  numberonly">
                             <input type="hidden" value="827" id="java266617X32X33SQ004_SQ003" name="java266617X32X33SQ004_SQ003" class="form-control">
                             <label for="answer266617X32X33SQ004_SQ003" class="hide read">Total</label>
-                            <input type="text" value="827" onkeyup="fixnum_checkconditions(this.value, this.name, this.type)" title="Total" size="5" id="answer266617X32X33SQ004_SQ003" name="266617X32X33SQ004_SQ003" class="multiflexitext text  em_sq_validation good form-control" readonly="">
+                            <input type="text" value="<?php  echo getFiled('Q4G4S3',
+                                $schoolUserID); ?>" onkeyup="fixnum_checkconditions(this.value, this.name, this.type)" title="Total" size="5" id="answer266617X32X33SQ004_SQ003" name="266617X32X33SQ004_SQ003" class="multiflexitext text  em_sq_validation good form-control" readonly="">
                         </td>
                     </tr>
                     </tbody>
@@ -229,7 +232,7 @@
 
             <div class="form-group">
                 <label for="exampleInputEmail1"> <span class="cube">7</span>  Where is the school located?</label>
-                <?php echo $schoolUserID; ?>
+                <?php //echo $schoolUserID; ?>
                 <p class="formanswertext">
                     <?php
                         $arrSchoolType=array(

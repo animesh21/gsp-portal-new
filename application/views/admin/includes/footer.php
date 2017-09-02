@@ -37,6 +37,11 @@ $(document).ready(function() {
 		 "aLengthMenu": [[10,25, 50, 75, -1], [10,25, 50, 75, "All"]],
         "iDisplayLength": 25
     } );
+    $('.tablepluging').DataTable( {
+        dom: 'lfrtip',
+		 "aLengthMenu": [[10,25, 50, 75, -1], [10,25, 50, 75, "All"]],
+        "iDisplayLength": 25
+    } );
 } );
 </script>
 <div id="shadowbox_overlay"></div>
