@@ -24,9 +24,18 @@ $varParams = json_decode(file_get_contents('php://input'), true);
 if (!empty($varParams['profile_image'])) {
 //    $rand = rand();
 //    $imagename = $rand.'.jpeg';
+    $user_id = $varParams['user_id'];
+
     $imagename = $varParams['fileName'];
     $destination = './uploads/files/'.$imagename;
     file_put_contents($destination, base64_decode($varParams['profile_image']));
+    mysql_connect('localhost', 'gspaudit17_usr', 'Gl!k6x7zQ');
+    mysql_select_db('gsp_audit17');
+    $data = date('Y-m-d H:i:s');
+    $sql = "INSERT INTO files(file_name, created, modified, status, userid) VALUES('".$imagename."',
+     '".$date."', '".$date."', 1, 1484)";
+    mysql_query($sql);
+
 //    $new_image_name = $_FILES["file"]["name"];
 //    $tmpFilePath = $_FILES['file']['tmp_name'];
 //    $filePath = "./uploads/";
