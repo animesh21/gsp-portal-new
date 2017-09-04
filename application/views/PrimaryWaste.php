@@ -248,7 +248,7 @@
                         <input class="form-control space-textbox" id="ex1" type="text" name="Q3Wa5S1" placeholder="<?php if(isset($data['Q3Wa5S1'])) echo $data['Q3Wa5S1'] ?>" value="<?php echo set_value('Q3Wa5S1'); ?>"/>
                     </div>
                     <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="ex2" type="text" name="Q3Wa5S2" placeholder="<?php if(isset($data['Q3Wa5S2'])) echo $data['Q2A5S2'] ?>" value="<?php echo set_value('Q3Wa5S2'); ?>"/>
+                        <input class="form-control space-textbox" id="ex2" type="text" name="Q3Wa5S2" placeholder="<?php if(isset($data['Q3Wa5S2'])) echo $data['Q3Wa5S2'] ?>" value="<?php echo set_value('Q3Wa5S2'); ?>"/>
                     </div>
                     <div class="col-xs-3">
                         <input class="form-control space-textbox" id="ex3" type="text" name="Q3Wa5S3" placeholder="<?php if(isset($data['Q3Wa5S3'])) echo $data['Q3Wa5S3'] ?>" value="<?php echo set_value('Q3Wa5S3'); ?>"/>
