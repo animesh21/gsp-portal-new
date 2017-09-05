@@ -1,30 +1,11 @@
-<?php $this->load->view('header'); ?>
-<style>
-    .form-group > label ul {
-        list-style-type: none !important;
-    }
-</style>
+<?php $this->load->view('admin/survey/header'); ?>
 <div class="container">
     <div class="content-form">
-        <div class="log-nav">
-            <div class="welcome">Welcome, <span
-                        style="font-weight:bold"><?php echo $this->session->userdata('USERNAME'); ?></span></div>
-            <ul>
-                <!--<li><a href="http://www.greenschoolsprogramme.org/GSP-Audit2016-Questions.pdf" target="_blank" onclick="_gaq.push([\" _trackevent\",\"download\",\"pdf\",this.href])"=""><img src="http://www.greenschoolsprogramme.org/audit2016/images/pdf-icon16.png"> Audit Questionnaire</a> |</li>-->
-                <li><a href="<?php echo base_url('logout'); ?>">Logout</a></li>
-                <li>|</li>
-                <li><a class="lptext" title="Change Password Form" data-toggle="modal" data-target="#ChangePass"
-                       href="#ChangePass" rel="shadowbox;width=580;height=500;">Change Password</a></li>
-            </ul>
-        </div>
-        <div id="pprg" class="newprog progress" style="text-align:center">
-            <div id="samplt" class="fin-prog progress-bar" role="progressbar" style="width:50%; height: 35px;">50%</div>
-        </div>
+        
+        
         <div class="intro">
             <h1>WATER</h1>
-            <div class="video"><a class="lptext" href="#" data-toggle="modal" data-target="#videoModal"><img
-                            src="http://greenschoolsprogramme.org/audit2015/upload/templates/tfr_responsive/images/video-icon.png"
-                            style="width: 45px; height: 40px; margin-top:47px;"></a></div>
+            <div class="video"><a class="lptext" href="#" data-toggle="modal" data-target="#videoModal"><img src="http://greenschoolsprogramme.org/audit2015/upload/templates/tfr_responsive/images/video-icon.png" style="width: 45px; height: 40px; margin-top:47px;"></a></div>
         </div>
         <br>
         To understand water, it is important to know the source of water in your school premise. As you know, most
@@ -35,7 +16,7 @@
         <br>
         <strong>The unit of measurement to be used in the Water section is Litre (L).</strong> <br>
         <br>
-        <?php echo form_open('water/set', array('id' => 'water')); ?>
+        <form action="http://localhost/gsp-portal-new/water/set" id="water" method="post" accept-charset="utf-8">
         <div class="form-group">
             <label>
                 <h6> Task 1: Choose your Water Audit Team</h6>
@@ -48,372 +29,178 @@
         </div>
         <div class="form-group">
             <label class="control-label">Teachers (maximum of three teachers can be part of the team):</label>
+	<table class="table table-bordered table-striped">
+        <tr>
+          <th>Sr.No </th>
+          <th> First Name </th>
+          <th> Last Name </th>
+          <th> Email ID </th>
+         
+        </tr>
+        <tr>
+		  <td>1</td>
+          <td> <?php echo (getFiled('Q1W1S1', $schoolUserID)!="")?getFiled('Q1W1S1', $schoolUserID) : "N/A"; ?></td>
+          <td><?php echo (getFiled('Q1W1S3', $schoolUserID)!="")?getFiled('Q1W1S3', $schoolUserID) : "N/A"; ?> </td>
+		  <td><?php echo (getFiled('Q1W1S2', $schoolUserID)!="")?getFiled('Q1W1S2', $schoolUserID) : "N/A"; ?> </td>
+          
+        </tr>
+		 <tr>
+		  <td>2</td>
+          <td> <?php echo (getFiled('Q1W2S1', $schoolUserID)!="")?getFiled('Q1W2S1', $schoolUserID) : "N/A"; ?></td>
+          <td><?php echo (getFiled('Q1W2S3', $schoolUserID)!="")?getFiled('Q1W2S3', $schoolUserID) : "N/A"; ?> </td>
+		  <td><?php echo (getFiled('Q1W3S1', $schoolUserID)!="")?getFiled('Q1W3S1', $schoolUserID) : "N/A"; ?> </td>
+          
+        </tr>
+		 <tr>
+		  <td>3</td>
+          <td> <?php echo (getFiled('Q1W3S1', $schoolUserID)!="")?getFiled('Q1W3S1', $schoolUserID) : "N/A"; ?></td>
+          <td><?php echo (getFiled('Q1W3S3', $schoolUserID)!="")?getFiled('Q1W3S3', $schoolUserID) : "N/A"; ?> </td>
+		  <td><?php echo (getFiled('Q1W3S2', $schoolUserID)!="")?getFiled('Q1W3S2', $schoolUserID) : "N/A"; ?> </td>
+          
+        </tr>
+        
+     </table>
+		
         </div>
-        <div class="form-group row">
-            <div class="col-xs-1"></div>
-            <div class="col-xs-3">
-                <label class="text-gray">First Name</label>
-            </div>
-            <div class="col-xs-3">
-                <label class="text-gray">Last Name</label>
-            </div>
-            <div class="col-xs-3">
-                <label class="text-gray">Email ID</label>
-            </div>
-        </div>
-        <div class="form-group row">
-            <div class="col-xs-1"> 1</div>
-            <div class="col-xs-3"> <?php echo form_error('name'); ?>
-                <input class="form-control space-textbox" id="Q1W1S1" type="text" name="Q1W1S1"
-                       placeholder="<?php if (isset($data['Q1W1S1'])) echo $data['Q1W1S1']; ?>"
-                       value="<?php echo set_value('Q1W1S1'); ?>"/>
-            </div>
-            <div class="col-xs-3"> <?php echo form_error('name'); ?>
-                <input class="form-control space-textbox" id="Q1W1S3" type="text" name="Q1W1S3"
-                       placeholder="<?php if (isset($data['Q1W1S3'])) echo $data['Q1W1S3']; ?>"
-                       value="<?php echo set_value('Q1W1S3'); ?>"/>
-            </div>
-            <div class="col-xs-3"> <?php echo form_error('email'); ?>
-                <input class="form-control space-textbox" id="Q1W1S2" type="email" name="Q1W1S2"
-                       placeholder="<?php if (isset($data['Q1W1S2'])) echo $data['Q1W1S2']; ?>"
-                       value="<?php echo set_value('Q1W1S2'); ?>"/>
-            </div>
-        </div>
-        <div class="form-group row">
-            <div class="col-xs-1"> 2</div>
-            <div class="col-xs-3">
-                <input class="form-control space-textbox" id="Q1W2S1" type="text" name="Q1W2S1"
-                       placeholder="<?php if (isset($data['Q1W2S1'])) echo $data['Q1W2S1'] ?>"
-                       value="<?php echo set_value('Q1W2S1'); ?>"/>
-            </div>
-            <div class="col-xs-3"> <?php echo form_error('name'); ?>
-                <input class="form-control space-textbox" id="Q1W2S3" type="text" name="Q1W2S3"
-                       placeholder="<?php if (isset($data['Q1W2S3'])) echo $data['Q1W2S3']; ?>"
-                       value="<?php echo set_value('Q1W2S3'); ?>"/>
-            </div>
-            <div class="col-xs-3">
-                <input class="form-control space-textbox" id="Q1W2S2" type="email" name="Q1W2S2"
-                       placeholder="<?php if (isset($data['Q1W2S2'])) echo $data['Q1W2S2'] ?>"
-                       value="<?php echo set_value('Q1W2S2'); ?>"/>
-            </div>
-        </div>
-        <div class="form-group row">
-            <div class="col-xs-1"> 3</div>
-            <div class="col-xs-3">
-                <input class="form-control space-textbox" id="Q1W3S1" type="text" name="Q1W3S1"
-                       placeholder="<?php if (isset($data['Q1W3S1'])) echo $data['Q1W3S1'] ?>"
-                       value="<?php echo set_value('Q1W3S1'); ?>"/>
-            </div>
-            <div class="col-xs-3"> <?php echo form_error('name'); ?>
-                <input class="form-control space-textbox" id="Q1W3S3" type="text" name="Q1W3S3"
-                       placeholder="<?php if (isset($data['Q1W3S3'])) echo $data['Q1W3S3']; ?>"
-                       value="<?php echo set_value('Q1W3S3'); ?>"/>
-            </div>
-            <div class="col-xs-3">
-                <input class="form-control space-textbox" id="Q1W3S2" type="email" name="Q1W3S2"
-                       placeholder="<?php if (isset($data['Q1W3S2'])) echo $data['Q1W3S2'] ?>"
-                       value="<?php echo set_value('Q1W3S2'); ?>"/>
-            </div>
-        </div>
+       
+        
         <div class="form-group">
             <label class="control-label">Administrative staff (maximum of five staff can be part of the team):</label>
-            <div class="form-group row">
-                <div class="col-xs-1"></div>
-                <div class="col-xs-3">
-                    <label class="text-gray">First Name</label>
-                </div>
-                <div class="col-xs-3">
-                    <label class="text-gray">Last Name</label>
-                </div>
-                <div class="col-xs-3">
-                    <label class="text-gray">Email ID</label>
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-xs-1"> 1</div>
-                <div class="col-xs-3"> <?php echo form_error('name1'); ?>
-                    <input class="form-control space-textbox" id="Q2W1S1" type="text" name="Q2W1S1"
-                           placeholder="<?php if (isset($data['Q2W1S1'])) echo $data['Q2W1S1'] ?>"
-                           value="<?php echo set_value('Q2W1S1'); ?>"/>
-                </div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q2W1S3" type="text" name="Q2W1S3"
-                           placeholder="<?php if (isset($data['Q2W1S3'])) echo $data['Q2W1S3'] ?>"
-                           value="<?php echo set_value('Q2W1S3'); ?>"/>
-                </div>
-                <div class="col-xs-3"> <?php echo form_error('email1'); ?>
-                    <input class="form-control space-textbox" id="Q2W1S2" type="email" name="Q2W1S2"
-                           placeholder="<?php if (isset($data['Q2W1S2'])) echo $data['Q2W1S2'] ?>"
-                           value="<?php echo set_value('Q2W1S2'); ?>"/>
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-xs-1"> 2</div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q2W2S1" type="text" name="Q2W2S1"
-                           placeholder="<?php if (isset($data['Q2W2S1'])) echo $data['Q2W2S1'] ?>"
-                           value="<?php echo set_value('Q2W2S1'); ?>"/>
-                </div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q2W2S3" type="text" name="Q2W2S3"
-                           placeholder="<?php if (isset($data['Q2W2S3'])) echo $data['Q2W2S3'] ?>"
-                           value="<?php echo set_value('Q2W2S3'); ?>"/>
-                </div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q2W2S2" type="email" name="Q2W2S2"
-                           placeholder="<?php if (isset($data['Q2W2S2'])) echo $data['Q2W2S2'] ?>"
-                           value="<?php echo set_value('Q2W2S2'); ?>"/>
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-xs-1"> 3</div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q2W3S1" type="text" name="Q2W3S1"
-                           placeholder="<?php if (isset($data['Q2W3S1'])) echo $data['Q2W3S1'] ?>"
-                           value="<?php echo set_value('Q2W3S1'); ?>"/>
-                </div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q2W3S3" type="text" name="Q2W3S3"
-                           placeholder="<?php if (isset($data['Q2W3S3'])) echo $data['Q2W3S3'] ?>"
-                           value="<?php echo set_value('Q2W3S3'); ?>"/>
-                </div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q2W3S2" type="email" name="Q2W3S2"
-                           placeholder="<?php if (isset($data['Q2W3S2'])) echo $data['Q2W3S2'] ?>"
-                           value="<?php echo set_value('Q2W3S2'); ?>"/>
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-xs-1"> 4</div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q2W4S1" type="text" name="Q2W4S1"
-                           placeholder="<?php if (isset($data['Q2W4S1'])) echo $data['Q2W4S1']; ?>"
-                           value="<?php echo set_value('Q2W4S1'); ?>"/>
-                </div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q2W4S3" type="text" name="Q2W4S3"
-                           placeholder="<?php if (isset($data['Q2W4S3'])) echo $data['Q2W4S3'] ?>"
-                           value="<?php echo set_value('Q2W4S3'); ?>"/>
-                </div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q2W4S2" type="email" name="Q2W4S2"
-                           placeholder="<?php if (isset($data['Q2W4S2'])) echo $data['Q2W4S2']; ?>"
-                           value="<?php echo set_value('Q2W4S2'); ?>"/>
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-xs-1"> 5</div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q2W5S1" type="text" name="Q2W5S1"
-                           placeholder="<?php if (isset($data['Q2W5S1'])) echo $data['Q2W5S1'] ?>"
-                           value="<?php echo set_value('Q2W5S1'); ?>"/>
-                </div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q2W5S3" type="text" name="Q2W5S3"
-                           placeholder="<?php if (isset($data['Q2W5S3'])) echo $data['Q2W5S3'] ?>"
-                           value="<?php echo set_value('Q2W5S3'); ?>"/>
-                </div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q2W5S2" type="email" name="Q2W5S2"
-                           placeholder="<?php if (isset($data['Q2W5S2'])) echo $data['Q2W5S2'] ?>"
-                           value="<?php echo set_value('Q2W5S2'); ?>"/>
-                </div>
-            </div>
+		<table class="table table-bordered table-striped">
+        <tr>
+          <th>Sr.No </th>
+          <th> First Name </th>
+          <th> Last Name </th>
+          <th> Email ID </th>
+         
+        </tr>
+        <tr>
+		  <td>1</td>
+          <td> <?php echo (getFiled('Q2W1S1', $schoolUserID)!="")?getFiled('Q2W1S1', $schoolUserID) : "N/A"; ?></td>
+          <td><?php echo (getFiled('Q2W1S2', $schoolUserID)!="")?getFiled('Q2W1S2', $schoolUserID) : "N/A"; ?> </td>
+		  <td><?php echo (getFiled('Q2W1S3', $schoolUserID)!="")?getFiled('Q2W1S3', $schoolUserID) : "N/A"; ?> </td>
+          
+        </tr>
+		 <tr>
+		  <td>2</td>
+          <td> <?php echo (getFiled('Q2W2S1', $schoolUserID)!="")?getFiled('Q2W2S1', $schoolUserID) : "N/A"; ?></td>
+          <td><?php echo (getFiled('Q2W2S3', $schoolUserID)!="")?getFiled('Q2W2S3', $schoolUserID) : "N/A"; ?> </td>
+		  <td><?php echo (getFiled('Q2W2S2', $schoolUserID)!="")?getFiled('Q2W2S2', $schoolUserID) : "N/A"; ?> </td>
+          
+        </tr>
+		 <tr>
+		  <td>3</td>
+          <td> <?php echo (getFiled('Q2W3S1', $schoolUserID)!="")?getFiled('Q2W3S1', $schoolUserID) : "N/A"; ?></td>
+          <td><?php echo (getFiled('Q2W3S3', $schoolUserID)!="")?getFiled('Q2W3S3', $schoolUserID) : "N/A"; ?> </td>
+		  <td><?php echo (getFiled('Q2W3S2', $schoolUserID)!="")?getFiled('Q2W3S2', $schoolUserID) : "N/A"; ?> </td>
+          
+        </tr>
+		<tr>
+		  <td>4</td>
+          <td> <?php echo (getFiled('Q2W4S1', $schoolUserID)!="")?getFiled('Q2W4S1', $schoolUserID) : "N/A"; ?></td>
+          <td><?php echo (getFiled('Q2W4S3', $schoolUserID)!="")?getFiled('Q2W4S3', $schoolUserID) : "N/A"; ?> </td>
+		  <td><?php echo (getFiled('Q2W4S2', $schoolUserID)!="")?getFiled('Q2W4S2', $schoolUserID) : "N/A"; ?> </td>
+          
+        </tr>
+		<tr>
+		  <td>5</td>
+          <td> <?php echo (getFiled('Q2W5S1', $schoolUserID)!="")?getFiled('Q2W5S1', $schoolUserID) : "N/A"; ?></td>
+          <td><?php echo (getFiled('Q2W5S3', $schoolUserID)!="")?getFiled('Q2W5S3', $schoolUserID) : "N/A"; ?> </td>
+		  <td><?php echo (getFiled('Q2W5S2', $schoolUserID)!="")?getFiled('Q2W5S2', $schoolUserID) : "N/A"; ?> </td>
+          
+        </tr>
+        
+     </table>	
+			
+		
+            
         </div>
         <div class="form-group">
             <label class="control-label">Students (maximum of ten students can be part of the team):</label>
-            <div class="form-group row">
-                <div class="col-xs-1"></div>
-                <div class="col-xs-3">
-                    <label class="text-gray">First Name</label>
-                </div>
-                <div class="col-xs-3">
-                    <label class="text-gray">Last Name</label>
-                </div>
-                <div class="col-xs-3">
-                    <label class="text-gray">Grade</label>
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-xs-1"> 1</div>
-                <div class="col-xs-3"> <?php echo form_error('name2'); ?>
-                    <input class="form-control space-textbox" id="Q3W1S1" type="text" name="Q3W1S1"
-                           placeholder="<?php if (isset($data['Q3W1S1'])) echo $data['Q3W1S1'] ?>"
-                           value="<?php echo set_value('Q3W1S1'); ?>"/>
-                </div>
-                <div class="col-xs-3"> <?php echo form_error('email2'); ?>
-                    <input class="form-control space-textbox" id="Q3W1S2" type="text" name="Q3W1S2"
-                           placeholder="<?php if (isset($data['Q3W1S2'])) echo $data['Q3W1S2'] ?>"
-                           value="<?php echo set_value('Q3W1S2'); ?>"/>
-                </div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q3W1S3" type="text" name="Q3W1S3"
-                           placeholder="<?php if (isset($data['Q3W1S3'])) echo $data['Q3W1S3'] ?>"
-                           value="<?php echo set_value('Q3W1S3'); ?>"/>
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-xs-1"> 2</div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q3W2S1" type="text" name="Q3W2S1"
-                           placeholder="<?php if (isset($data['Q3W2S1'])) echo $data['Q3W2S1'] ?>"
-                           value="<?php echo set_value('Q3W2S1'); ?>"/>
-                </div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q3W2S2" type="text" name="Q3W2S2"
-                           placeholder="<?php if (isset($data['Q3W2S2'])) echo $data['Q3W2S2'] ?>"
-                           value="<?php echo set_value('Q3W2S2'); ?>"/>
-                </div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q3W2S3" type="text" name="Q3W2S3"
-                           placeholder="<?php if (isset($data['Q3W2S3'])) echo $data['Q3W2S3'] ?>"
-                           value="<?php echo set_value('Q3W2S3'); ?>"/>
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-xs-1"> 3</div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q3W3S1" type="text" name="Q3W3S1"
-                           placeholder="<?php if (isset($data['Q3W3S1'])) echo $data['Q3W3S1'] ?>"
-                           value="<?php echo set_value('Q3W3S3'); ?>"/>
-                </div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q3W3S2" type="text" name="Q3W3S2"
-                           placeholder="<?php if (isset($data['Q3W3S2'])) echo $data['Q3W3S2'] ?>"
-                           value="<?php echo set_value('Q3W3S2'); ?>"/>
-                </div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q3W3S3" type="text" name="Q3W3S3"
-                           placeholder="<?php if (isset($data['Q3W3S3'])) echo $data['Q3W3S3'] ?>"
-                           value="<?php echo set_value('Q3W3S3'); ?>"/>
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-xs-1"> 4</div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q3W4S1" type="text" name="Q3W4S1"
-                           placeholder="<?php if (isset($data['Q3W4S1'])) echo $data['Q3W4S1'] ?>"
-                           value="<?php echo set_value('Q3W4S1'); ?>"/>
-                </div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q3W4S2" type="text" name="Q3W4S2"
-                           placeholder="<?php if (isset($data['Q3W4S2'])) echo $data['Q3W4S2'] ?>"
-                           value="<?php echo set_value('Q3W4S2'); ?>"/>
-                </div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q3W4S3" type="text" name="Q3W4S3"
-                           placeholder="<?php if (isset($data['Q3W4S3'])) echo $data['Q3W4S3'] ?>"
-                           value="<?php echo set_value('Q3W4S3'); ?>"/>
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-xs-1"> 5</div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q3W5S1" type="text" name="Q3W5S1"
-                           placeholder="<?php if (isset($data['Q3W5S1'])) echo $data['Q3W5S1'] ?>"
-                           value="<?php echo set_value('Q3W5S1'); ?>"/>
-                </div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q3W5S2" type="text" name="Q3W5S2"
-                           placeholder="<?php if (isset($data['Q3W5S2'])) echo $data['Q2W5S2'] ?>"
-                           value="<?php echo set_value('Q3W5S2'); ?>"/>
-                </div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q3W5S3" type="text" name="Q3W5S3"
-                           placeholder="<?php if (isset($data['Q3W5S3'])) echo $data['Q3W5S3'] ?>"
-                           value="<?php echo set_value('Q3W5S3'); ?>"/>
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-xs-1"> 6</div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q3W6S1" type="text" name="Q3W6S1"
-                           placeholder="<?php if (isset($data['Q3W6S1'])) echo $data['Q3W6S1'] ?>"
-                           value="<?php echo set_value('Q3W6S1'); ?>"/>
-                </div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q3W6S2" type="text" name="Q3W6S2"
-                           placeholder="<?php if (isset($data['Q3W6S2'])) echo $data['Q3W6S2'] ?>"
-                           value="<?php echo set_value('Q3W6S2'); ?>"/>
-                </div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q3W6S3" type="text" name="Q3W6S3"
-                           placeholder="<?php if (isset($data['Q3W6S3'])) echo $data['Q3W6S3'] ?>"
-                           value="<?php echo set_value('Q3W6S3'); ?>"/>
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-xs-1"> 7</div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q3W7S1" type="text" name="Q3W7S1"
-                           placeholder="<?php if (isset($data['Q3W7S1'])) echo $data['Q3W7S1'] ?>"
-                           value="<?php echo set_value('Q3W7S1'); ?>"/>
-                </div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q3W7S2" type="text" name="Q3W7S2"
-                           placeholder="<?php if (isset($data['Q3W7S2'])) echo $data['Q3W7S2'] ?>"
-                           value="<?php echo set_value('Q3W7S2'); ?>"/>
-                </div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q3W7S3" type="text" name="Q3W7S3"
-                           placeholder="<?php if (isset($data['Q3W7S3'])) echo $data['Q3W7S3'] ?>"
-                           value="<?php echo set_value('Q3W7S3'); ?>"/>
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-xs-1"> 8</div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q3W8S1" type="text" name="Q3W8S1"
-                           placeholder="<?php if (isset($data['Q3W8S1'])) echo $data['Q3W8S1'] ?>"
-                           value="<?php echo set_value('Q3W8S1'); ?>"/>
-                </div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q3W8S2" type="text" name="Q3W8S2"
-                           placeholder="<?php if (isset($data['Q3W8S2'])) echo $data['Q3W8S2'] ?>"
-                           value="<?php echo set_value('Q3W8S2'); ?>"/>
-                </div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q3W8S3" type="text" name="Q3W8S3"
-                           placeholder="<?php if (isset($data['Q3W8S3'])) echo $data['Q3W8S3'] ?>"
-                           value="<?php echo set_value('Q3W8S3'); ?>"/>
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-xs-1"> 9</div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q3W9S1" type="text" name="Q3W9S1"
-                           placeholder="<?php if (isset($data['Q3W9S1'])) echo $data['Q3W9S1'] ?>"
-                           value="<?php echo set_value('Q3W9S1'); ?>"/>
-                </div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q3W9S2" type="text" name="Q3W9S2"
-                           placeholder="<?php if (isset($data['Q3W9S2'])) echo $data['Q3W9S2'] ?>"
-                           value="<?php echo set_value('Q3W9S2'); ?>"/>
-                </div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q3W9S3" type="text" name="Q3W9S3"
-                           placeholder="<?php if (isset($data['Q3W9S3'])) echo $data['Q3W9S3'] ?>"
-                           value="<?php echo set_value('Q3W9S3'); ?>"/>
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-xs-1"> 10</div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q3W10S1" type="text" name="Q3W10S1"
-                           placeholder="<?php if (isset($data['Q3W10S1'])) echo $data['Q3W10S1'] ?>"
-                           value="<?php echo set_value('Q3W10S1'); ?>"/>
-                </div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q3W10S2" type="text" name="Q3W10S2"
-                           placeholder="<?php if (isset($data['Q3W10S2'])) echo $data['Q3W10S2'] ?>"
-                           value="<?php echo set_value('Q3W10S2'); ?>"/>
-                </div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q3W10S3" type="text" name="Q3W10S3"
-                           placeholder="<?php if (isset($data['Q3W10S3'])) echo $data['Q3W10S3'] ?>"
-                           value="<?php echo set_value('Q3W10S3'); ?>"/>
-                </div>
-            </div>
+           
+			<table class="table table-bordered table-striped">
+        <tr>
+          <th>Sr.No </th>
+          <th> First Name </th>
+          <th> Last Name </th>
+          <th> Grade </th>
+         
+        </tr>
+        <tr>
+		  <td>1</td>
+          <td> <?php echo (getFiled('Q3W1S1', $schoolUserID)!="")?getFiled('Q3W1S1', $schoolUserID) : "N/A"; ?></td>
+          <td><?php echo (getFiled('Q3W1S2', $schoolUserID)!="")?getFiled('Q3W1S2', $schoolUserID) : "N/A"; ?> </td>
+		  <td><?php echo (getFiled('Q3W1S3', $schoolUserID)!="")?getFiled('Q3W1S3', $schoolUserID) : "N/A"; ?> </td>
+          
+        </tr>
+		 <tr>
+		  <td>2</td>
+          <td> <?php echo (getFiled('Q3W2S1', $schoolUserID)!="")?getFiled('Q3W2S1', $schoolUserID) : "N/A"; ?></td>
+          <td><?php echo (getFiled('Q3W2S2', $schoolUserID)!="")?getFiled('Q3W2S2', $schoolUserID) : "N/A"; ?> </td>
+		  <td><?php echo (getFiled('Q3W2S3', $schoolUserID)!="")?getFiled('Q3W2S3', $schoolUserID) : "N/A"; ?> </td>
+          
+        </tr>
+		 <tr>
+		  <td>3</td>
+          <td> <?php echo (getFiled('Q3W3S1', $schoolUserID)!="")?getFiled('Q3W3S1', $schoolUserID) : "N/A"; ?></td>
+          <td><?php echo (getFiled('Q3W3S2', $schoolUserID)!="")?getFiled('Q3W3S2', $schoolUserID) : "N/A"; ?> </td>
+		  <td><?php echo (getFiled('Q3W3S3', $schoolUserID)!="")?getFiled('Q3W3S3', $schoolUserID) : "N/A"; ?> </td>
+          
+        </tr>
+		<tr>
+		  <td>4</td>
+          <td> <?php echo (getFiled('Q3W4S1', $schoolUserID)!="")?getFiled('Q3W4S1', $schoolUserID) : "N/A"; ?></td>
+          <td><?php echo (getFiled('Q3W4S2', $schoolUserID)!="")?getFiled('Q3W4S2', $schoolUserID) : "N/A"; ?> </td>
+		  <td><?php echo (getFiled('Q3W4S3', $schoolUserID)!="")?getFiled('Q3W4S3', $schoolUserID) : "N/A"; ?> </td>
+          
+        </tr>
+		<tr>
+		  <td>5</td>
+          <td> <?php echo (getFiled('Q3W5S1', $schoolUserID)!="")?getFiled('Q3W5S1', $schoolUserID) : "N/A"; ?></td>
+          <td><?php echo (getFiled('Q3W5S2', $schoolUserID)!="")?getFiled('Q3W5S2', $schoolUserID) : "N/A"; ?> </td>
+		  <td><?php echo (getFiled('Q3W5S3', $schoolUserID)!="")?getFiled('Q3W5S3', $schoolUserID) : "N/A"; ?> </td>
+          
+        </tr>
+		<tr>
+		  <td>6</td>
+          <td> <?php echo (getFiled('Q3W6S1', $schoolUserID)!="")?getFiled('Q3W6S1', $schoolUserID) : "N/A"; ?></td>
+          <td><?php echo (getFiled('Q3W6S2', $schoolUserID)!="")?getFiled('Q3W6S2', $schoolUserID) : "N/A"; ?> </td>
+		  <td><?php echo (getFiled('Q3W6S3', $schoolUserID)!="")?getFiled('Q3W6S3', $schoolUserID) : "N/A"; ?> </td>
+          
+        </tr>
+		<tr>
+		  <td>7</td>
+          <td> <?php echo (getFiled('Q3W7S1', $schoolUserID)!="")?getFiled('Q3W7S1', $schoolUserID) : "N/A"; ?></td>
+          <td><?php echo (getFiled('Q3W7S2', $schoolUserID)!="")?getFiled('Q3W7S2', $schoolUserID) : "N/A"; ?> </td>
+		  <td><?php echo (getFiled('Q3W7S3', $schoolUserID)!="")?getFiled('Q3W7S3', $schoolUserID) : "N/A"; ?> </td>
+          
+        </tr>
+		<tr>
+		  <td>8</td>
+          <td> <?php echo (getFiled('Q3W8S1', $schoolUserID)!="")?getFiled('Q3W8S1', $schoolUserID) : "N/A"; ?></td>
+          <td><?php echo (getFiled('Q3W8S2', $schoolUserID)!="")?getFiled('Q3W8S2', $schoolUserID) : "N/A"; ?> </td>
+		  <td><?php echo (getFiled('Q3W8S3', $schoolUserID)!="")?getFiled('Q3W8S3', $schoolUserID) : "N/A"; ?> </td>
+          
+        </tr>
+		<tr>
+		  <td>9</td>
+          <td> <?php echo (getFiled('Q3W9S1', $schoolUserID)!="")?getFiled('Q3W9S1', $schoolUserID) : "N/A"; ?></td>
+          <td><?php echo (getFiled('Q3W9S2', $schoolUserID)!="")?getFiled('Q3W9S2', $schoolUserID) : "N/A"; ?> </td>
+		  <td><?php echo (getFiled('Q3W9S3', $schoolUserID)!="")?getFiled('Q3W9S3', $schoolUserID) : "N/A"; ?> </td>
+          
+        </tr>
+		<tr>
+		  <td>10</td>
+          <td> <?php echo (getFiled('Q3W10S1', $schoolUserID)!="")?getFiled('Q3W10S1', $schoolUserID) : "N/A"; ?></td>
+          <td><?php echo (getFiled('Q3W10S2', $schoolUserID)!="")?getFiled('Q3W10S2', $schoolUserID) : "N/A"; ?> </td>
+		  <td><?php echo (getFiled('Q3W10S3', $schoolUserID)!="")?getFiled('Q3W10S3', $schoolUserID) : "N/A"; ?> </td>
+          
+        </tr>
+        
+     </table>	
+			
+			
+            
         </div>
         <div class="form-group">
             <label>
@@ -425,9 +212,7 @@
                     <p> For example: you can monitor the water consumption on August 5, August 15 and August 25. Add all
                         three total consumptions and then divide it with number of days of observation (that is three
                         days). You will get an average per day water consumption.</p>
-                    <p><strong>To collect data: </strong><a class="kplink"
-                                                            href="http://www.greenschoolsprogramme.org/knowledge-bank/water/"
-                                                            target="_blank"> </a></p>
+                    <p><strong>To collect data: </strong><a class="kplink" href="http://www.greenschoolsprogramme.org/knowledge-bank/water/" target="_blank"> </a></p>
                     <p><strong>The bill method:</strong> If the school’s water meter is monitored regularly—water bills
                         by the government/municipality state the actual amount used—students can simply compile bills to
                         assess total consumption.</p>
@@ -472,70 +257,62 @@
             </ul>
         </div>
         <div class="form-group">
-            <label class="control-label">Total water consumption of your school</label>
-            <div class="form-group row">
-                <div class="col-xs-3">
-                    <label class="text-gray">Activity</label>
-                </div>
-                <div class="col-xs-5">
-                    <label class="text-gray"> Total Quantity (litres per day)</label>
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-xs-3">
-                    <label class="text-gray">Drinking</label>
-                </div>
-                <div class="col-xs-5">
-                    <input class="form-control space-textbox" onkeyup="WaterConsumption()" onchange="WaterConsumption()"
-                           id="Q4W1" type="number" min="0" name="Q4W1"
-                           placeholder="<?php if (isset($data['Q4W1'])) echo $data['Q4W1'] ?>"
-                           value="<?php echo set_value('Q4W1'); ?>"/>
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-xs-3">
-                    <label class="text-gray">Toilet flushing</label>
-                </div>
-                <div class="col-xs-5">
-                    <input class="form-control space-textbox" onkeyup="WaterConsumption()" onchange="WaterConsumption()"
-                           id="Q4W2" type="number" min="0" name="Q4W2"
-                           placeholder="<?php if (isset($data['Q4W2'])) echo $data['Q4W2'] ?>"
-                           value="<?php echo set_value('Q4W2'); ?>"/>
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-xs-3">
-                    <label class="text-gray">Personal cleaning</label>
-                </div>
-                <div class="col-xs-5">
-                    <input class="form-control space-textbox" onkeyup="WaterConsumption()" onchange="WaterConsumption()"
-                           id="Q4W3" type="number" min="0" name="Q4W3"
-                           placeholder="<?php if (isset($data['Q4W3'])) echo $data['Q4W3'] ?>"
-                           value="<?php echo set_value('Q4W3'); ?>"/>
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-xs-3">
-                    <label class="text-gray">Washing clothes</label>
-                </div>
-                <div class="col-xs-5">
-                    <input class="form-control space-textbox" onkeyup="WaterConsumption()" onchange="WaterConsumption()"
-                           id="Q4W4" type="number" min="0" name="Q4W4"
-                           placeholder="<?php if (isset($data['Q4W4'])) echo $data['Q4W4'] ?>"
-                           value="<?php echo set_value('Q4W4'); ?>"/>
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-xs-3">
-                    <label class="text-gray">Cooking</label>
-                </div>
-                <div class="col-xs-5">
-                    <input class="form-control space-textbox" onkeyup="WaterConsumption()" onchange="WaterConsumption()"
-                           id="Q4W5" type="number" min="0" name="Q4W5"
-                           placeholder="<?php if (isset($data['Q4W5'])) echo $data['Q4W5'] ?>"
-                           value="<?php echo set_value('Q4W5'); ?>"/>
-                </div>
-            </div>
+            <label class="control-label"><span class="cube">1</span>Total water consumption of your school</label>
+	<table class="table table-bordered table-striped">
+        <tr>
+      
+          <th> Activity </th>
+          <th>Total Quantity (litres per day) </th>
+          
+        </tr>
+        <tr>
+          <td> Drinking </td>
+          <td><?php echo (getFiled('Q4W1', $schoolUserID)!="")?getFiled('Q4W1', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+        <tr>
+          <td> Toilet flushing</td>
+          <td><?php echo (getFiled('Q4W2', $schoolUserID)!="")?getFiled('Q4W2', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+        <tr>
+          <td> Personal cleaning </td>
+          <td><?php echo (getFiled('Q4W3', $schoolUserID)!="")?getFiled('Q4W3', $schoolUserID) : "N/A"; ?> </td>
+         
+        </tr>
+        <tr>
+          <td> Washing clothes</td>
+          <td><?php echo (getFiled('Q4W4', $schoolUserID)!="")?getFiled('Q4W4', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+        <tr>
+          <td> Cooking</td>
+          <td><?php echo (getFiled('Q4W5', $schoolUserID)!="")?getFiled('Q4W5', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+		 <tr>
+          <td> Cleaning Utensils</td>
+          <td><?php echo (getFiled('Q4W6', $schoolUserID)!="")?getFiled('Q4W6', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+		 <tr>
+          <td> Washing Vegetables</td>
+          <td><?php echo (getFiled('Q4W7', $schoolUserID)!="")?getFiled('Q4W7', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+		 <tr>
+          <td> Mopping floors</td>
+          <td><?php echo (getFiled('Q4W8', $schoolUserID)!="")?getFiled('Q4W8', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+		<tr>
+          <td> Gardening</td>
+          <td><?php echo (getFiled('Q4W9', $schoolUserID)!="")?getFiled('Q4W9', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+		<tr>
+          <td> Others</td>
+          <td><?php echo (getFiled('Q4W10', $schoolUserID)!="")?getFiled('Q4W10', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+		<tr>
+          <td> Total</td>
+          <td><?php echo (getFiled('Q4W11', $schoolUserID)!="")?getFiled('Q4W11', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+     </table>
+			
+            <!--
             <div class="form-group row">
                 <div class="col-xs-3">
                     <label class="text-gray">Service Area on ground</label>
@@ -543,8 +320,8 @@
                 <div class="col-xs-5">
                     <input class="form-control space-textbox" onkeyup="WaterConsumption()" onchange="WaterConsumption()"
                            id="Q4W6" type="number" min="0" name="Q4W6"
-                           placeholder="<?php if (isset($data['Q4W6'])) echo $data['Q4W6'] ?>"
-                           value="<?php echo set_value('Q4W6'); ?>"/>
+                           placeholder="3"
+                           value=""/>
                 </div>
             </div>
             <div class="form-group row">
@@ -554,81 +331,16 @@
                 <div class="col-xs-5">
                     <input class="form-control space-textbox" onkeyup="WaterConsumption()" onchange="WaterConsumption()"
                            id="Q4W7" type="number" min="0" name="Q4W7"
-                           placeholder="<?php if (isset($data['Q4W7'])) echo $data['Q4W7'] ?>"
-                           value="<?php echo set_value('Q4W7'); ?>"/>
+                           placeholder="4"
+                           value=""/>
                 </div>
             </div>
-            <div class="form-group row">
-                <div class="col-xs-3">
-                    <label class="text-gray">Cleaning Utensils</label>
-                </div>
-                <div class="col-xs-5">
-                    <input class="form-control space-textbox" onkeyup="WaterConsumption()" onchange="WaterConsumption()"
-                           id="Q4W8" type="number" min="0" name="Q4W8"
-                           placeholder="<?php if (isset($data['Q4W8'])) echo $data['Q4W8'] ?>"
-                           value="<?php echo set_value('Q4W8'); ?>"/>
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-xs-3">
-                    <label class="text-gray">Washing Vegetables</label>
-                </div>
-                <div class="col-xs-5">
-                    <input class="form-control space-textbox" onkeyup="WaterConsumption()" onchange="WaterConsumption()"
-                           id="Q4W9" type="number" min="0" name="Q4W9"
-                           placeholder="<?php if (isset($data['Q4W9'])) echo $data['Q4W9'] ?>"
-                           value="<?php echo set_value('Q4W9'); ?>"/>
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-xs-3">
-                    <label class="text-gray">Mopping floors</label>
-                </div>
-                <div class="col-xs-5">
-                    <input class="form-control space-textbox" onkeyup="WaterConsumption()" onchange="WaterConsumption()"
-                           id="Q4W10" type="number" min="0" name="Q4W10"
-                           placeholder="<?php if (isset($data['Q4W10'])) echo $data['Q4W10'] ?>"
-                           value="<?php echo set_value('Q4W10'); ?>"/>
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-xs-3">
-                    <label class="text-gray">Gardening</label>
-                </div>
-                <div class="col-xs-5">
-                    <input class="form-control space-textbox" onkeyup="WaterConsumption()" onchange="WaterConsumption()"
-                           id="Q4W11" type="number" min="0" name="Q4W11"
-                           placeholder="<?php if (isset($data['Q4W11'])) echo $data['Q4W11'] ?>"
-                           value="<?php echo set_value('Q4W11'); ?>"/>
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-xs-3">
-                    <label class="text-gray">Others</label>
-                </div>
-                <div class="col-xs-5">
-                    <input class="form-control space-textbox" onkeyup="WaterConsumption()" onchange="WaterConsumption()"
-                           id="Q4W12" type="number" min="0" name="Q4W12"
-                           placeholder="<?php if (isset($data['Q4W12'])) echo $data['Q4W12'] ?>"
-                           value="<?php echo set_value('Q4W12'); ?>"/>
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-xs-3">
-                    <label class="text-gray">Total</label>
-                </div>
-                <div class="col-xs-5">
-                    <input class="form-control space-textbox" id="Q4W13" type="number" min="0" name="Q4W13"
-                           placeholder="<?php if (isset($data['Q4W13'])) echo $data['Q4W13'] ?>"
-                           value="<?php echo set_value('Q4W13'); ?>" readonly/>
-                </div>
-            </div>
+             -->
+            
         </div>
         <div class="form-group">
             <label>
-                <h6>Task 3: What Are The Sources, Supply and Storage of Water in your School? <a class="kplink"
-                                                                                                 href="http://www.greenschoolsprogramme.org/knowledge-bank/water/#sourceOfWater"
-                                                                                                 target="_blank"> </a>
+                <h6>Task 3: What Are The Sources, Supply and Storage of Water in your School? <a class="kplink" href="http://www.greenschoolsprogramme.org/knowledge-bank/water/#sourceOfWater" target="_blank"> </a>
                 </h6>
             </label>
             <p> To understand water, it is important to know the source of water in your school premises. As you know,
@@ -643,26 +355,24 @@
                 (please tick the correct options):</label>
             <div class="form-group">
                 <ul>
-                    <li>
-                        <input type="checkbox" name="Q5W1"
-                               value="<?php echo set_value('Q5W1', 1); ?>" <?php if (isset($data['Q5W1'])) echo set_checkbox('Q5W1', '1', true); ?> />
-                        <label class="text-gray">Ground water</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="Q5W2" name="Q5W2"
-                               value="<?php echo set_value('Q5W2', 1); ?>" <?php if (isset($data['Q5W2'])) echo set_checkbox('Q5W2', '1', true); ?> />
-                        <label class="text-gray">Surface water</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="Q5W3" name="Q5W3"
-                               value="<?php echo set_value('Q5W3', 1); ?>" <?php if (isset($data['Q5W3'])) echo set_checkbox('Q5W3', '1', true); ?>/>
-                        <label class="text-gray">Rain water</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="Q5W4"
-                               value="<?php echo set_value('Q5W4', 1); ?>" <?php if (isset($data['Q5W4'])) echo set_checkbox('Q5W4', '1', true); ?>/>
-                        <label class="text-gray">Recycled waste water</label>
-                    </li>
+					<?php 
+							  if(getFiled('Q5W1', $schoolUserID)==1):
+							 echo "Ground water";
+							 echo "<br/>";
+							 endif;  
+							 if(getFiled('Q5W2', $schoolUserID)==1):
+							 echo "Surface water";
+							 echo "<br/>" ;
+							 endif; 
+							 if(getFiled('Q5W3', $schoolUserID)==1):
+							 echo "Rain water";
+							 echo "<br/>" ;
+							 endif; 
+							 if(getFiled('Q5W4', $schoolUserID)==1):
+							 echo "Recycled waste water";
+							 endif;
+					?>
+				
                 </ul>
             </div>
         </div>
@@ -671,311 +381,180 @@
                 the correct options):</label>
             <br>
             <ul class="list-unstyled">
-                <li>
-                    <input type="checkbox" name="Q6W1"
-                           value="<?php echo set_value('Q6W1', 1); ?>" <?php if (isset($data['Q6W1'])) echo set_checkbox('Q6W1', '1', true); ?>/>
-                    <label class="text-gray">Municipality</label>
-                </li>
-                <li>
-                    <input type="checkbox" name="Q6W2"
-                           value="<?php echo set_value('Q6W2', 1); ?>" <?php if (isset($data['Q6W2'])) echo set_checkbox('Q6W2', '1', true); ?> />
-                    <label class="text-gray">Panchayat</label>
-                </li>
-                <li>
-                    <input type="checkbox" name="Q6W3"
-                           value="<?php echo set_value('Q6W3', 1); ?>" <?php if (isset($data['Q6W3'])) echo set_checkbox('Q6W3', '1', true); ?>/>
-                    <label class="text-gray">Public Health Engineering Department (PHED)</label>
-                </li>
-                <li>
-                    <input type="checkbox" name="Q6W4"
-                           value="<?php echo set_value('Q6W4', 1); ?>" <?php if (isset($data['Q6W4'])) echo set_checkbox('Q6W4', '1', true); ?>/>
-                    <label class="text-gray">Private supplier</label>
-                </li>
-                <li>
-                    <input type="checkbox" name="Q6W5"
-                           value="<?php echo set_value('Q6W5', 1); ?>" <?php if (isset($data['Q6W5'])) echo set_checkbox('Q6W5', '1', true); ?>/>
-                    <label class="text-gray">School’s own supply (bore well, rainwater harvesting facility, etc)</label>
-                </li>
+			<?php 
+							  if(getFiled('Q6W1', $schoolUserID)==1):
+							 echo "Ground water";
+							 echo "<br/>";
+							 endif;  
+							 if(getFiled('Q6W2', $schoolUserID)==1):
+							 echo "Surface water";
+							 echo "<br/>" ;
+							 endif; 
+							 if(getFiled('Q6W3', $schoolUserID)==1):
+							 echo "Rain water";
+							 echo "<br/>" ;
+							 endif; 
+							 if(getFiled('Q6W4', $schoolUserID)==1):
+							 echo "Recycled waste water";
+							 echo "<br/>" ;
+							 endif;
+							 if(getFiled('Q6W5', $schoolUserID)==1):
+							 echo "Recycled waste water";
+							 endif;
+							 
+					?>
+			
             </ul>
         </div>
         <div class="form-group">
             <label class="control-label"> <span class="cube">4</span>Does your school get daily water supply?</label>
             <div class="form-group">
-                <label class="radio-inline text-gray">
-                    <input type="radio" name="Q7W1" onclick="WaterSupply(1)"
-                           value="<?php echo set_value('Q7W1', 'Y') ?>" <?php if (isset($data['Q7W1'])) echo $data['Q7W1'] == 'Y' ? "checked" : "" ?>/>
-                    Yes </label>
-                <label class="radio-inline text-gray">
-                    <input type="radio" name="Q7W1" onclick="WaterSupply(2)"
-                           value="<?php echo set_value('Q7W1', 'N') ?>" <?php if (isset($data['Q7W1'])) echo $data['Q7W1'] == 'N' ? "checked" : "" ?>/>
-                    No </label>
+			<p> <?php echo (getFiled('Q7W1', $schoolUserID)!="")? (getFiled('Q7W1', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+              
             </div>
         </div>
-        <?php
-        if (isset($data['Q7W1']))
-        {
-        if ($data['Q7W1'] == 'Y')
-        {
-        ?>
-        <div class="form-group" id="Q7W2">
-            <?php } else { ?>
-            <div class="form-group" id="Q7W2" style="display: none;">
-
-                <?php }
-                } else { ?>
-                <div class="form-group" id="Q7W2" style="display: none;">
-
-                    <?php } ?>
-                    <label class="control-label"> <span class="cube">4(a)</span>Does your school get daily water supply?</label>
+                <div class="form-group" id="Q7W2" style="display: block;">
+                                <label class="control-label"> <span class="cube">4(a)</span>Does your school get daily water supply?</label>
                     <div class="form-group">
                         <ul class="list-unstyled">
-                            <li>
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" id="Q7W22" name="Q7W2"
-                                           value="<?php echo set_value('Q7W2', 1) ?>" <?php if (isset($data['Q7W2'])) echo $data['Q7W2'] == 1 ? "checked" : ""; ?>/>
-                                    ≤1 hours </label>
-                            </li>
-                            <li>
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" id="Q7W22" name="Q7W2"
-                                           value="<?php echo set_value('Q7W2', 2) ?>" <?php if (isset($data['Q7W2'])) echo $data['Q7W2'] == 2 ? "checked" : ""; ?>/>
-                                    2-6 hours </label>
-                            </li>
-                            <li>
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" id="Q7W22" name="Q7W2"
-                                           value="<?php echo set_value('Q7W2', 3) ?>" <?php if (isset($data['Q7W2'])) echo $data['Q7W2'] == 3 ? "checked" : ""; ?>/>
-                                    7-12 hours </label>
-                            </li>
-                            <li>
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" id="Q7W22" name="Q7W2"
-                                           value="<?php echo set_value('Q7W2', 4) ?>" <?php if (isset($data['Q7W2'])) echo $data['Q7W2'] == 4 ? "checked" : ""; ?>/>
-                                    13-18 hours </label>
-                            </li>
-                            <li>
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" id="Q7W22" name="Q7W2"
-                                           value="<?php echo set_value('Q7W2', 5) ?>" <?php if (isset($data['Q7W2'])) echo $data['Q7W2'] == 5 ? "checked" : ""; ?>/>
-                                    19-24 hours </label>
-                            </li>
+						<p> <?php 
+  if(getFiled('Q7W2', $schoolUserID)==1):
+ echo "≤1 hours";
+ elseif(getFiled('Q7W2', $schoolUserID)==2):
+ echo "2-6 hours";
+ elseif(getFiled('Q7W2', $schoolUserID)==3):
+ echo "7-12 hours";
+ elseif(getFiled('Q7W2', $schoolUserID)==4):
+ echo "13-18 hours";
+ elseif(getFiled('Q7W2', $schoolUserID)==5):
+ echo "19-24 hours";
+ endif;?></p>
+                           
                         </ul>
                     </div>
                 </div>
-                <?php
-                if (isset($data['Q7W1']))
-                {
-                if ($data['Q7W1'] == 'N')
-                {
-                ?>
-                <div class="form-group" id="Q7W3">
-                    <?php } else { ?>
-                    <div class="form-group" id="Q7W3" style="display: none;">
+                                    <div class="form-group" id="Q7W3">
 
-                        <?php }
-                        } else { ?>
-                        <div class="form-group" id="Q7W3" style="display: none;">
-
-                            <?php } ?>
-                            <label class="control-label"> <span class="cube">4(b)</span>Does your school get daily water
-                                supply?</label>
+   <label class="control-label"> <span class="cube">4(b)</span>Does your school get daily water supply?</label>
                             <div class="form-group">
                                 <ul>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q7W3"
-                                                   value="<?php echo set_value('Q7W3', 1) ?>" <?php if (isset($data['Q7W3'])) echo $data['Q7W3'] == 1 ? "checked" : "" ?>>
-                                            ≤1 day </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q7W3"
-                                                   value="<?php echo set_value('Q7W3', 2) ?>" <?php if (isset($data['Q7W3'])) echo $data['Q7W3'] == 2 ? "checked" : "" ?>>
-                                            2 days in a week </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q7W3"
-                                                   value="<?php echo set_value('Q7W3', 3) ?>" <?php if (isset($data['Q7W3'])) echo $data['Q7W3'] == 3 ? "checked" : "" ?>>
-                                            3 days in a week </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q7W3"
-                                                   value="<?php echo set_value('Q7W3', 4) ?>" <?php if (isset($data['Q7W3'])) echo $data['Q7W3'] == 4 ? "checked" : "" ?>>
-                                            Every alternate day in a week </label>
-                                    </li>
+								<p> <?php 
+  if(getFiled('Q7W3', $schoolUserID)==1):
+ echo "≤1 day";
+ elseif(getFiled('Q7W3', $schoolUserID)==2):
+ echo "2 days in a week";
+ elseif(getFiled('Q7W3', $schoolUserID)==3):
+ echo "3 days in a week";
+ elseif(getFiled('Q7W3', $schoolUserID)==4):
+ echo "Every alternate day in a week";
+ 
+ endif;?></p>
+								
+                                   
                                 </ul>
                             </div>
                         </div>
 
-                        <div class="form-group">
+ <div class="form-group">
                             <label>
                                 <h6>Task 4: What are the water conservation practices followed in your school?</h6>
                             </label>
-                            <div class="form-group">
+<div class="form-group">
                                 <label class="control-label"><span class="cube">5</span> What are the water conservation
-                                    practices your school follows <a class="tt" data-tooltip="Please tick “Yes” if your school follows the below mentioned practices. Do upload images/ jpegs, where relevant."><span class="badge">?</span></a></label>
-                                <div class="form-group">
-                                    <label class="radio-inline text-gray col-xs-10"> Does your school have any water and
-                                        sanitation policy? </label>
-                                    <label class="radio-inline text-gray">
-                                        <input type="radio" name="Q8W1S1"
-                                               value="<?php echo set_value('Q8W1S1', 'Y') ?>" <?php if (isset($data['Q8W1S1'])) echo $data['Q8W1S1'] == 'Y' ? "checked" : "" ?>/>
-                                        Yes </label>
-                                    <label class="radio-inline text-gray">
-                                        <input type="radio" name="Q8W1S1"
-                                               value="<?php echo set_value('Q8W1S1', 'N') ?>" <?php if (isset($data['Q8W1S1'])) echo $data['Q8W1S1'] == 'N' ? "checked" : "" ?>>
-                                        No </label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="radio-inline text-gray col-xs-10"> If your school has an eco-club, do
-                                        they have water component? </label>
-                                    <label class="radio-inline text-gray">
-                                        <input type="radio" name="Q8W1S2"
-                                               value="<?php echo set_value('Q8W1S2', 'Y') ?>" <?php if (isset($data['Q8W1S2'])) echo $data['Q8W1S2'] == 'Y' ? "checked" : "" ?>>
-                                        Yes </label>
-                                    <label class="radio-inline text-gray">
-                                        <input type="radio" name="Q8W1S2"
-                                               value="<?php echo set_value('Q8W1S2', 'N') ?>" <?php if (isset($data['Q8W1S2'])) echo $data['Q8W1S2'] == 'N' ? "checked" : "" ?>>
-                                        No </label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="radio-inline text-gray col-xs-10"> Do all tanks in the school have
-                                        float valves installed to stop overflow? </label>
-                                    <label class="radio-inline text-gray">
-                                        <input type="radio" name="Q8W1S3"
-                                               value="<?php echo set_value('Q8W1S3', 'Y') ?>" <?php if (isset($data['Q8W1S3'])) echo $data['Q8W1S3'] == 'Y' ? "checked" : "" ?>>
-                                        Yes </label>
-                                    <label class="radio-inline text-gray">
-                                        <input type="radio" name="Q8W1S3"
-                                               value="<?php echo set_value('Q8W1S3', 'N') ?>" <?php if (isset($data['Q8W1S3'])) echo $data['Q8W1S3'] == 'N' ? "checked" : "" ?>>
-                                        No </label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="radio-inline text-gray col-xs-10"> Do the drinking water points have
-                                        spill proof taps to check overflow? </label>
-                                    <label class="radio-inline text-gray">
-                                        <input type="radio" name="Q8W1S4"
-                                               value="<?php echo set_value('Q8W1S4', 'Y') ?>" <?php if (isset($data['Q8W1S4'])) echo $data['Q8W1S4'] == 'Y' ? "checked" : "" ?>>
-                                        Yes </label>
-                                    <label class="radio-inline text-gray">
-                                        <input type="radio" name="Q8W1S4"
-                                               value="<?php echo set_value('Q8W1S4', 'N') ?>" <?php if (isset($data['Q8W1S4'])) echo $data['Q8W1S4'] == 'N' ? "checked" : "" ?>>
-                                        No </label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="radio-inline text-gray col-xs-10"> Does your school use appliances
-                                        with a quick-wash setting? </label>
-                                    <label class="radio-inline text-gray">
-                                        <input type="radio" name="Q8W1S5"
-                                               value="<?php echo set_value('Q8W1S5', 'Y') ?>" <?php if (isset($data['Q8W1S5'])) echo $data['Q8W1S5'] == 'Y' ? "checked" : "" ?>>
-                                        Yes </label>
-                                    <label class="radio-inline text-gray">
-                                        <input type="radio" name="Q8W1S5"
-                                               value="<?php echo set_value('Q8W1S5', 'N') ?>" <?php if (isset($data['Q8W1S5'])) echo $data['Q8W1S5'] == 'N' ? "checked" : "" ?>>
-                                        No </label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="radio-inline text-gray col-xs-10"> Are dual flush systems installed in
-                                        the toilets? </label>
-                                    <label class="radio-inline text-gray">
-                                        <input type="radio" name="Q8W1S6"
-                                               value="<?php echo set_value('Q8W1S6', 'Y') ?>" <?php if (isset($data['Q8W1S6'])) echo $data['Q8W1S6'] == 'Y' ? "checked" : "" ?>>
-                                        Yes </label>
-                                    <label class="radio-inline text-gray">
-                                        <input type="radio" name="Q8W1S6"
-                                               value="<?php echo set_value('Q8W1S6', 'N') ?>" <?php if (isset($data['Q8W1S6'])) echo $data['Q8W1S6'] == 'N' ? "checked" : "" ?>>
-                                        No </label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="radio-inline text-gray col-xs-10"> Does your school encourage bottled
-                                        water for drinking water? </label>
-                                    <label class="radio-inline text-gray">
-                                        <input type="radio" name="Q8W1S7"
-                                               value="<?php echo set_value('Q8W1S7', 'Y') ?>" <?php if (isset($data['Q8W1S7'])) echo $data['Q8W1S7'] == 'Y' ? "checked" : "" ?>>
-                                        Yes </label>
-                                    <label class="radio-inline text-gray">
-                                        <input type="radio" name="Q8W1S7"
-                                               value="<?php echo set_value('Q8W1S7', 'N') ?>" <?php if (isset($data['Q8W1S7'])) echo $data['Q8W1S7'] == 'N' ? "checked" : "" ?>>
-                                        No </label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="radio-inline text-gray col-xs-10"> Does your school grow local plant
-                                        species which require limited amount of water to grow? </label>
-                                    <label class="radio-inline text-gray">
-                                        <?php
-                                        if (empty($data['Q8W1S8']))
-                                            if (isset($other['Q5L1S3']))
-                                                if (isset($other['Q5L1S3'])) {
-                                                    $data['Q8W1S8'] = 'Y';
-                                                }
-                                        ?>
-                                        <input type="hidden" id="Q5L1S3"
-                                               value="<?php if (isset($other['Q5L1S3'])) echo $other['Q5L1S3']; ?>">
-                                        <input type="radio" id="Q8W1S8_1" name="Q8W1S8"
-                                               value="<?php echo set_value('Q8W1S8', 'Y') ?>" <?php if (isset($data['Q8W1S8'])) echo $data['Q8W1S8'] == 'Y' ? "checked" : "" ?>>
-                                        Yes </label>
-                                    <label class="radio-inline text-gray">
-                                        <input type="radio" id="Q8W1S8_2" name="Q8W1S8"
-                                               value="<?php echo set_value('Q8W1S8', 'N') ?>" <?php if (isset($data['Q8W1S8'])) echo $data['Q8W1S8'] == 'N' ? "checked" : "" ?>>
-                                        No </label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="radio-inline text-gray col-xs-10"> Has your school initiated any water
-                                        conservation steps in the school or outside, in the past one year? </label>
-                                    <label class="radio-inline text-gray">
-                                        <input type="radio" name="Q8W1S9"
-                                               value="<?php echo set_value('Q8W1S9', 'Y') ?>" <?php if (isset($data['Q8W1S9'])) echo $data['Q8W1S8'] == 'Y' ? "checked" : "" ?>>
-                                        Yes </label>
-                                    <label class="radio-inline text-gray">
-                                        <input type="radio" name="Q8W1S9"
-                                               value="<?php echo set_value('Q8W1S9', 'N') ?>" <?php if (isset($data['Q8W1S9'])) echo $data['Q8W1S8'] == 'N' ? "checked" : "" ?>>
-                                        No </label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="radio-inline text-gray col-xs-10"> Does your school use a drip or
-                                        irrigation system? </label>
-                                    <label class="radio-inline text-gray">
-                                        <input type="radio" name="Q8W1S10"
-                                               value="<?php echo set_value('Q8W1S10', 'Y') ?>" <?php if (isset($data['Q8W1S10'])) echo $data['Q8W1S10'] == 'Y' ? "checked" : "" ?>>
-                                        Yes </label>
-                                    <label class="radio-inline text-gray">
-                                        <input type="radio" name="Q8W1S10"
-                                               value="<?php echo set_value('Q8W1S10', 'N') ?>" <?php if (isset($data['Q8W1S10'])) echo $data['Q8W1S10'] == 'N' ? "checked" : "" ?>>
-                                        No </label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="radio-inline text-gray col-xs-10"> Any other step taken for water
-                                        conservation? (if Yes, please specify) </label>
-                                    <label class="radio-inline text-gray">
-                                        <input type="radio" name="Q8W1S11"
-                                               value="<?php echo set_value('Q8W1S11', 'Y') ?>" <?php if (isset($data['Q8W1S11'])) echo $data['Q8W1S11'] == 'Y' ? "checked" : "" ?>>
-                                        Yes </label>
-                                    <label class="radio-inline text-gray">
-                                        <input type="radio" name="Q8W1S11"
-                                               value="<?php echo set_value('Q8W1S11', 'N') ?>" <?php if (isset($data['Q8W1S11'])) echo $data['Q8W1S11'] == 'N' ? "checked" : "" ?>/>
-                                        No </label>
-                                </div>
-                            </div>
-                        </div>
+                                    practices your school follows 
+								</label>
+									
+<table class="table table-bordered table-striped">
+        <tr>
+      
+          <th> Activity </th>
+          <th>Total Quantity (litres per day) </th>
+          
+        </tr>
+        <tr>
+          <td> Does your school have any water and
+                                        sanitation policy?</td>
+          <td> <p> <?php echo (getFiled('Q8W1S1', $schoolUserID)!="")? (getFiled('Q8W1S1', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>  </td>
+        </tr>
+        <tr>
+          <td>If your school has an eco-club, do
+                                        they have water component?</td>
+          <td> <p> <?php echo (getFiled('Q8W1S2', $schoolUserID)!="")? (getFiled('Q8W1S2', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>  </td>
+        </tr>
+        <tr>
+          <td> Do all tanks in the school have
+                                        float valves installed to stop overflow?  </td>
+          <td> <p> <?php echo (getFiled('Q8W1S3', $schoolUserID)!="")? (getFiled('Q8W1S3', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>  </td>
+         
+        </tr>
+        <tr>
+          <td>Do the drinking water points have
+                                        spill proof taps to check overflow?</td>
+          <td> <p> <?php echo (getFiled('Q8W1S4', $schoolUserID)!="")? (getFiled('Q8W1S4', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>  </td>
+        </tr>
+        <tr>
+          <td> Does your school use appliances
+                                        with a quick-wash setting?</td>
+          <td> <p> <?php echo (getFiled('Q8W1S5', $schoolUserID)!="")? (getFiled('Q8W1S5', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p> </td>
+        </tr>
+		 <tr>
+          <td> Are dual flush systems installed in
+                                        the toilets?</td>
+          <td> <p> <?php echo (getFiled('Q8W1S6', $schoolUserID)!="")? (getFiled('Q8W1S6', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>  </td>
+        </tr>
+		 <tr>
+          <td> Does your school encourage bottled
+                                        water for drinking water?</td>
+          <td> <p> <?php echo (getFiled('Q8W1S7', $schoolUserID)!="")? (getFiled('Q8W1S7', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>  </td>
+        </tr>
+		 <tr>
+          <td> Does your school grow local plant
+                                        species which require limited amount of water to grow?</td>
+          <td> <p> <?php echo (getFiled('Q8W1S8', $schoolUserID)!="")? (getFiled('Q8W1S8', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>  </td>
+        </tr>
+		 <tr>
+          <td>Has your school initiated any water
+                                        conservation steps in the school or outside, in the past one year?</td>
+          <td> <p> <?php echo (getFiled('Q8W1S9', $schoolUserID)!="")? (getFiled('Q8W1S9', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>  </td>
+        </tr>
+		<tr>
+          <td>Does your school use a drip or
+                                        irrigation system?</td>
+          <td> <p> <?php echo (getFiled('Q8W1S10', $schoolUserID)!="")? (getFiled('Q8W1S10', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>  </td>
+        </tr>
+		<tr>
+          <td>Any other step taken for water
+                                        conservation? (if Yes, please specify)</td>
+          <td> <p> <?php echo (getFiled('Q8W1S11', $schoolUserID)!="")? (getFiled('Q8W1S11', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>  </td>
+        </tr>		
+     </table>	
+  </div>
+   </div>
                         <div class="form-group">
                             <label>Upload supporting documents</label>
                             <br>
                             <label style="font-color: white !important; ">Please upload all supporting documents related
                                 to this section here. Note: files must be in one of the following formats: PDF Document
                                 (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg)</label>
-                            <button class="btn uploadbtn upload" data-id="Task 4 Supporting docs" data-toggle="modal"
-                                    data-target="#airModal" type="button">UPLOAD FILES
+                            <button class="btn uploadbtn upload" data-id="Task 4 Supporting docs" data-toggle="modal" data-target="#uploadModal" type="button">UPLOAD FILES
                             </button>
                             <br><br>
                         </div>
-
+                        <div class="clearfix">&nbsp;</div>
+                        <table width="100%" class="question uploadedfiles">
+                            <thead>
+                            <tr>
+                                <th>File name</th>
+                                <th>Action</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                                        </tbody>
+                        </table>
+                        <div class="clearfix">&nbsp;</div>
                         <div class="form-group">
                             <label>
-                                <h6>Task 5: Does your school harvest rainwater? <a class="kplink"
-                                                                                   href="http://www.greenschoolsprogramme.org/knowledge-bank/water/#rainFalls"
-                                                                                   target="_blank"> </a></h6>
+                                <h6>Task 5: Does your school harvest rainwater? <a class="kplink" href="http://www.greenschoolsprogramme.org/knowledge-bank/water/#rainFalls" target="_blank"> </a></h6>
                             </label>
 
                             <br>
@@ -983,1119 +562,532 @@
                             will find out how much rainwater your school can catch, and how much your school can
                             harvest. Rainwater harvesting is a traditional, time-tested method of collecting rainwater
                             and using it to recharge groundwater or storing it for other uses.<br>
-                            To know the types of catchment <a class="kplink"
-                                                              href="http://www.greenschoolsprogramme.org/knowledge-bank/water/#rainFalls"
-                                                              target="_blank"> </a></div>
+                            To know the types of catchment <a class="kplink" href="http://www.greenschoolsprogramme.org/knowledge-bank/water/#rainFalls" target="_blank"> </a></div>
                         <div class="form-group">
                             <label><span class="cube">6</span>Do you have Rainwater harvesting (RWH) system in your
                                 school?</label>
                             <div class="form-group">
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" id="Q8W2_1" name="Q8W2" onclick="harvest(1)"
-                                           value="<?php echo set_value('Q8W2', 'Y') ?>" <?php if (isset($data['Q8W2'])) echo $data['Q8W2'] == 'Y' ? "checked" : "" ?>>
-                                    Yes </label>
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" id="Q8W2_2" name="Q8W2" onclick="harvest(2)"
-                                           value="<?php echo set_value('Q8W2', 'N') ?>" <?php if (isset($data['Q8W2'])) echo $data['Q8W2'] == 'N' ? "checked" : "" ?>/>
-                                    No </label>
+							<p> <?php echo (getFiled('Q8W2', $schoolUserID)!="")? (getFiled('Q8W2', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p> 
+                                
                             </div>
                         </div>
-                        <div class="form-group" id="Q8W2S1"
-                            <?php
-                            if (isset($data['Q8W2']))
-                                if ($data['Q8W2'] == 'Y') {
-                                    echo 'style="display:block;"';
-                                } else {
-                                    echo 'style="display:none;"';
-                                }
-                            else {
-                                echo 'style="display:none;"';
-                            }
-                            ?>
-
-                        >
+                        <div class="form-group" id="Q8W2S1" style="display:block;">
                             <label><span class="cube">6(a)</span>Does your school harvest different catchments? </label>
                             <div class="form-group">
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" name="Q8W2S1" onclick="Catchment(1)"
-                                           value="<?php echo set_value('Q8W2S1', 'Y') ?>" <?php if (isset($data['Q8W2S1'])) echo $data['Q8W2S1'] == 'Y' ? "checked" : "" ?>>
-                                    Yes </label>
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" name="Q8W2S1" onclick="Catchment(2)"
-                                           value="<?php echo set_value('Q8W2S1', 'N') ?>" <?php if (isset($data['Q8W2S1'])) echo $data['Q8W2S1'] == 'N' ? "checked" : "" ?>/>
-                                    No </label>
+							<p> <?php echo (getFiled('Q8W2S1', $schoolUserID)!="")? (getFiled('Q8W2S1', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+                               
                             </div>
                         </div>
-                        <div class="form-group" id="Q8W2S1S1"
-                            <?php
-                            if (isset($data['Q8W2S1']))
-                                if ($data['Q8W2S1'] == 'Y') {
-                                    echo ' style="display:block;"';
-                                } else {
-                                    echo ' style="display:none;"';
-                                }
-                            else {
-                                echo ' style="display:none;"';
-                            }
-                            ?>
-
-                        >
+                        <div class="form-group" id="Q8W2S1S1" style="display: block;">
                             <label><span class="cube">6(a)(1)</span>Which is the catchment area being harvested by your
                                 school? </label>
                             <div class="form-group">
                                 <ul>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q8W2S1S1"
-                                                   value="<?php echo set_value('Q8W2S1S1', 1) ?>" <?php if (isset($data['Q8W2S1S1'])) echo $data['Q8W2S1S1'] == 1 ? "checked" : "" ?>>
-                                            Rooftop </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q8W2S1S1"
-                                                   value="<?php echo set_value('Q8W2S1S1', 2) ?>" <?php if (isset($data['Q8W2S1S1'])) echo $data['Q8W2S1S1'] == 2 ? "checked" : "" ?>/>
-                                            Paved </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q8W2S1S1"
-                                                   value="<?php echo set_value('Q8W2S1S1', 3) ?>" <?php if (isset($data['Q8W2S1S1'])) echo $data['Q8W2S1S1'] == 3 ? "checked" : "" ?>/>
-                                            Unpaved </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q8W2S1S1"
-                                                   value="<?php echo set_value('Q8W2S1S1', 4) ?>" <?php if (isset($data['Q8W2S1S1'])) echo $data['Q8W2S1S1'] == 4 ? "checked" : "" ?>/>
-                                            Rooftop + paved </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q8W2S1S1"
-                                                   value="<?php echo set_value('Q8W2S1S1', 5) ?>" <?php if (isset($data['Q8W2S1S1'])) echo $data['Q8W2S1S1'] == 5 ? "checked" : "" ?>/>
-                                            Paved + unpaved </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q8W2S1S1"
-                                                   value="<?php echo set_value('Q8W2S1S1', 6) ?>" <?php if (isset($data['Q8W2S1S1'])) echo $data['Q8W2S1S1'] == 6 ? "checked" : "" ?>/>
-                                            Rooftop + unpaved </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q8W2S1S1"
-                                                   value="<?php echo set_value('Q8W2S1S1', 7) ?>" <?php if (isset($data['Q8W2S1S1'])) echo $data['Q8W2S1S1'] == 7 ? "checked" : "" ?>/>
-                                            Rooftop + paved + unpaved </label>
-                                    </li>
+								<?php 
+  if(getFiled('Q8W2S1S1', $schoolUserID)==1):
+ echo "Rooftop";
+ elseif(getFiled('Q8W2S1S1', $schoolUserID)==2):
+ echo "Paved";
+ elseif(getFiled('Q8W2S1S1', $schoolUserID)==3):
+ echo "Unpaved";
+ elseif(getFiled('Q8W2S1S1', $schoolUserID)==4):
+ echo "Rooftop + paved";
+ elseif(getFiled('Q8W2S1S1', $schoolUserID)==5):
+ echo "Paved + unpaved";
+ elseif(getFiled('Q8W2S1S1', $schoolUserID)==6):
+ echo "Rooftop + unpave";
+ elseif(getFiled('Q8W2S1S1', $schoolUserID)==7):
+ echo "Rooftop + paved + unpaved";
+ 
+ endif;?>
+                                   
                                 </ul>
                             </div>
                         </div>
-                        <div class="form-group" id="Q8W2S2"
-                            <?php
-                            if (isset($data['Q8W2']))
-                                if ($data['Q8W2'] == 'Y') {
-                                    echo 'style="display:block;"';
-                                } else {
-                                    echo 'style="display:none;"';
-                                }
-                            else {
-                                echo 'style="display:none;"';
-                            }
-                            ?>
-
-                        >
+                        <div class="form-group" id="Q8W2S2" style="display:block;">
                             <label><span class="cube">6(b)</span> How does your school harvest rainwater? </label>
                             <div class="form-group">
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" onclick="RainwaterHarvest(1)" name="Q8W2S2"
-                                           value="<?php echo set_value('Q8W2S2', 1) ?>" <?php if (isset($data['Q8W2S2'])) echo $data['Q8W2S2'] == 1 ? "checked" : "" ?>>
-                                    By storing </label>
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" onclick="RainwaterHarvest(2)" name="Q8W2S2"
-                                           value="<?php echo set_value('Q8W2S2', 2) ?>" <?php if (isset($data['Q8W2S2'])) echo $data['Q8W2S2'] == 2 ? "checked" : "" ?>/>
-                                    By recharging groundwater </label>
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" onclick="RainwaterHarvest(1)" name="Q8W2S2"
-                                           value="<?php echo set_value('Q8W2S2', 3) ?>" <?php if (isset($data['Q8W2S2'])) echo $data['Q8W2S2'] == 3 ? "checked" : "" ?>/>
-                                    Combination of both</label>
+							<?php 
+							  if(getFiled('Q8W2S2', $schoolUserID)==1):
+								 echo "By storing";
+								 elseif(getFiled('Q8W2S2', $schoolUserID)==2):
+								 echo "By recharging groundwater";
+								 elseif(getFiled('Q8W2S2', $schoolUserID)==3):
+								 echo "Combination of both";
+							 endif;
+							 
+					?>
+			 
                             </div>
                         </div>
-                        <div class="form-group" id="Q8W2S2S1"
-                            <?php
-                            if (isset($data['Q8W2S2']))
-                                if ($data['Q8W2S2'] == 1 || $data['Q8W2S2'] == 3) {
-                                    echo 'style="display:block;"';
-                                } else {
-                                    echo 'style="display:none;"';
-                                }
-                            else {
-                                echo 'style="display:none;"';
-                            }
-                            ?>
-
-                        >
+                        <div class="form-group" id="Q8W2S2S1">
                             <label><span class="cube">6(b)(1)</span>If your school only stores rainwater, please select
                                 the use of stored rainwater: </label>
                             <div class="form-group">
-                                <ul>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="checkbox" name="Q8W2S2S1"
-                                                   value="<?php echo set_value('Q8W2S2S1', 1) ?>" <?php if (isset($data['Q8W2S2S1'])) echo $data['Q8W2S2S1'] == 1 ? "checked" : "" ?>>
-                                            Drinking </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="checkbox" name="Q8W2S2S1"
-                                                   value="<?php echo set_value('Q8W2S2S1', 2) ?>" <?php if (isset($data['Q8W2S2S1'])) echo $data['Q8W2S2S1'] == 2 ? "checked" : "" ?>/>
-                                            Gardening </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="checkbox" name="Q8W2S2S1"
-                                                   value="<?php echo set_value('Q8W2S2S1', 3) ?>" <?php if (isset($data['Q8W2S2S1'])) echo $data['Q8W2S2S1'] == 3 ? "checked" : "" ?>/>
-                                            Mopping </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="checkbox" name="Q8W2S2S1"
-                                                   value="<?php echo set_value('Q8W2S2S1', 4) ?>" <?php if (isset($data['Q8W2S2S1'])) echo $data['Q8W2S2S1'] == 4 ? "checked" : "" ?>/>
-                                            Toilets </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="checkbox" name="Q8W2S2S1"
-                                                   value="<?php echo set_value('Q8W2S2S1', 5) ?>" <?php if (isset($data['Q8W2S2S1'])) echo $data['Q8W2S2S1'] == 5 ? "checked" : "" ?>/>
-                                            Washing vehicles </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="checkbox" name="Q8W2S2S1"
-                                                   value="<?php echo set_value('Q8W2S2S1', 6) ?>" <?php if (isset($data['Q8W2S2S1'])) echo $data['Q8W2S2S1'] == 6 ? "checked" : "" ?>/>
-                                            Kitchen (Cooking/Washing vegetables and utensils) </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="checkbox" name="Q8W2S2S1"
-                                                   value="<?php echo set_value('Q8W2S2S1', 7) ?>" <?php if (isset($data['Q8W2S2S1'])) echo $data['Q8W2S2S1'] == 7 ? "checked" : "" ?>/>
-                                            Shower, Brushing teeth, Bathing, Hand washing </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="checkbox" name="Q8W2S2S1"
-                                                   value="<?php echo set_value('Q8W2S2S1', 8) ?>" <?php if (isset($data['Q8W2S2S1'])) echo $data['Q8W2S2S1'] == 8 ? "checked" : "" ?>/>
-                                            Swimming Pool </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="checkbox" name="Q8W2S2S1"
-                                                   value="<?php echo set_value('Q8W2S2S1', 9) ?>" <?php if (isset($data['Q8W2S2S1'])) echo $data['Q8W2S2S1'] == 9 ? "checked" : "" ?>/>
-                                            Fire fighting </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="checkbox" name="Q8W2S2S1"
-                                                   value="<?php echo set_value('Q8W2S2S1', 10) ?>" <?php if (isset($data['Q8W2S2S1'])) echo $data['Q8W2S2S1'] == 10 ? "checked" : "" ?>/>
-                                            Desert coolers </label>
-                                    </li>
-                                </ul>
+                                
+								
+								<?php 
+							 if(getFiled('Q8W2S2S1', $schoolUserID)==1):
+							 echo "Drinking";
+							 echo "<br/>";
+							 endif;  
+							 if(getFiled('Q8W2S2S2', $schoolUserID)==1):
+							 echo "Gardening";
+							 echo "<br/>" ;
+							 endif; 
+							 if(getFiled('Q8W2S2S3', $schoolUserID)==1):
+							 echo "Mopping";
+							 echo "<br/>" ;
+							 endif; 
+							 if(getFiled('Q8W2S2S4', $schoolUserID)==1):
+							 echo " Toilets";
+							 echo "<br/>" ;
+							 endif;
+							 if(getFiled('Q8W2S2S5', $schoolUserID)==1):
+							 echo "Washing vehicles";
+							  echo "<br/>" ;
+							 endif;
+							 if(getFiled('Q8W2S2S6', $schoolUserID)==1):
+							 echo "Kitchen (Cooking/Washing vegetables and utensils)";
+							  echo "<br/>" ;
+							 endif;
+							 if(getFiled('Q8W2S2S7', $schoolUserID)==1):
+							 echo "Shower, Brushing teeth, Bathing, Hand washing";
+							  echo "<br/>" ;
+							 endif;
+							 if(getFiled('Q8W2S2S8', $schoolUserID)==1):
+							 echo "Swimming Pool";
+							 endif;
+							 if(getFiled('Q8W2S2S9', $schoolUserID)==1):
+							 echo "Fire fighting";
+							  echo "<br/>" ;
+							 endif;
+							 if(getFiled('Q8W2S2S10', $schoolUserID)==1):
+							 echo "Desert coolers";
+							 endif;
+							 
+							 
+					?>     
+                                
                             </div>
                         </div>
-                        <div class="form-group" id="Q8W2S2S2"
-                            <?php
-                            if (isset($data['Q8W2S2']))
-                                if ($data['Q8W2S2'] == 1 || $data['Q8W2S2'] == 3) {
-                                    echo 'style="display:block;"';
-                                } else {
-                                    echo 'style="display:none;"';
-                                }
-                            else {
-                                echo 'style="display:none;"';
-                            }
-                            ?>
-
-                        >
+                        <div class="form-group" id="Q8W2S2S2">
                             <label><span class="cube">6(b)(2)</span> Does your school have rainwater storage tank?
                             </label>
                             <div class="form-group">
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" name="Q8W2S2S2" onclick="Storage(1)"
-                                           value="<?php echo set_value('Q8W2S2S2', 'Y') ?>" <?php if (isset($data['Q8W2S2S2'])) echo $data['Q8W2S2S2'] == 'Y' ? "checked" : "" ?>>
-                                    Yes </label>
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" id="Q8W2S2S2_2" name="Q8W2S2S2" onclick="Storage(2)"
-                                           value="<?php echo set_value('Q8W2S2S2', 'N') ?>" <?php if (isset($data['Q8W2S2S2'])) echo $data['Q8W2S2S2'] == 'N' ? "checked" : "" ?>/>
-                                    No </label>
+							<p> <?php echo (getFiled('Q8W2S2S2', $schoolUserID)!="")? (getFiled('Q8W2S2S2', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+							
                             </div>
                         </div>
-                        <div class="form-group" id="Q8W2S2S3"
-                            <?php
-                            if (isset($data['Q8W2S2S2']))
-                                if ($data['Q8W2S2S2'] == 'Y') {
-                                    echo 'style="display:block;"';
-                                } else {
-                                    echo 'style="display:none;"';
-                                }
-                            else {
-                                echo 'style="display:none;"';
-                            }
-                            ?>
-
-                        >
+                        <div class="form-group" id="Q8W2S2S3">
                             <label><span class="cube">6(b)(2) A</span>If yes, please provide: </label>
                             <div class="form-group">
-                                <label class="text-gray"> Total number of storage tank (litres): </label>
-                                <input class="form-control space-textbox" id="Q8W2S2S3A" type="number" name="Q8W2S2S3"
-                                       value="<?php echo set_value('Q8W2S2S3') ?>"
-                                       placeholder="<?php if (isset($data['Q8W2S2S3'])) echo $data['Q8W2S2S3'] ?>">
+                                <label class="text-gray"> Total number of storage tank (litres): </label><br/>
+								<?php echo (getFiled('Q8W2S2S3', $schoolUserID)!="")?getFiled('Q8W2S2S3', $schoolUserID) : "N/A"; ?>
+                                
                             </div>
                         </div>
-                        <div class="form-group" id="Q8W2S2S4"
-                            <?php
-                            if (isset($data['Q8W2S2S2']))
-                                if ($data['Q8W2S2S2'] == 'Y') {
-                                    echo 'style="display:block;"';
-                                } else {
-                                    echo 'style="display:none;"';
-                                }
-                            else {
-                                echo 'style="display:none;"';
-                            }
-                            ?>
-
-                        >
+                        <div class="form-group" id="Q8W2S2S4">
                             <label><span class="cube">6(b)(2) B</span>If yes, please provide: </label>
                             <div class="form-group">
                                 <label class="radio-inline text-gray"> Total capacity of each storage tank
-                                    (litres): </label>
-                                <input class="form-control space-textbox" id="Q8W2S2S4A" type="number" name="Q8W2S2S4"
-                                       value="<?php echo set_value('Q8W2S2S4') ?>"
-                                       placeholder="<?php if (isset($data['Q8W2S2S4'])) echo $data['Q8W2S2S4'] ?>">
+                                    (litres): </label><br/>
+									<?php echo (getFiled('Q8W2S2S4', $schoolUserID)!="")?getFiled('Q8W2S2S4', $schoolUserID) : "N/A"; ?>
+                              
                             </div>
                         </div>
-                        <div class="form-group" id="Q8W2S2S5"
-                            <?php
-                            if (isset($data['Q8W2S2']))
-                                if ($data['Q8W2S2'] == 'Y') {
-                                    echo 'style="display:block;"';
-                                } else {
-                                    echo 'style="display:none;"';
-                                }
-                            else {
-                                echo 'style="display:none;"';
-                            }
-                            ?>
-
-                        >
+                        <div class="form-group" id="Q8W2S2S5">
                             <label><span class="cube">6(b)(2) C</span>Location of tanks: </label>
                             <div class="form-group">
                                 <ul>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q8W2S2S5"
-                                                   value="<?php echo set_value('Q8W2S2S5', 1) ?>" <?php if (isset($data['Q8W2S2S5'])) echo $data['Q8W2S2S5'] == 1 ? "checked" : "" ?>>
-                                            Underground </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q8W2S2S5"
-                                                   value="<?php echo set_value('Q8W2S2S5', 2) ?>" <?php if (isset($data['Q8W2S2S5'])) echo $data['Q8W2S2S5'] == 2 ? "checked" : "" ?>/>
-                                            Over ground </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q8W2S2S5"
-                                                   value="<?php echo set_value('Q8W2S2S5', 3) ?>" <?php if (isset($data['Q8W2S2S5'])) echo $data['Q8W2S2S5'] == 3 ? "checked" : "" ?>/>
-                                            Semi underground </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q8W2S2S5"
-                                                   value="<?php echo set_value('Q8W2S2S5', 4) ?>" <?php if (isset($data['Q8W2S2S5'])) echo $data['Q8W2S2S5'] == 4 ? "checked" : "" ?>/>
-                                            Over- ground + semi underground </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q8W2S2S5"
-                                                   value="<?php echo set_value('Q8W2S2S5', 5) ?>" <?php if (isset($data['Q8W2S2S5'])) echo $data['Q8W2S2S5'] == 5 ? "checked" : "" ?>/>
-                                            Underground + semi underground </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q8W2S2S5"
-                                                   value="<?php echo set_value('Q8W2S2S5', 6) ?>" <?php if (isset($data['Q8W2S2S5'])) echo $data['Q8W2S2S5'] == 6 ? "checked" : "" ?>/>
-                                            Underground + Over- ground + semi underground </label>
-                                    </li>
+								<?php 
+							  if(getFiled('Q8W2S2S5', $schoolUserID)==1):
+								 echo "Underground";
+								 elseif(getFiled('Q8W2S2S5', $schoolUserID)==2):
+								 echo "Over ground";
+								 elseif(getFiled('Q8W2S2S5', $schoolUserID)==3):
+								 echo "Semi underground";
+								 elseif(getFiled('Q8W2S2S5', $schoolUserID)==4):
+								 echo "Over- ground + semi underground ";
+								 elseif(getFiled('Q8W2S2S5', $schoolUserID)==5):
+								 echo "Underground + semi underground";
+								 elseif(getFiled('Q8W2S2S5', $schoolUserID)==6):
+								 echo "Underground + Over- ground + semi underground ";
+								 
+							 endif;
+							 
+					?>
+                          
                                 </ul>
                             </div>
                         </div>
-                        <div class="form-group" id="Q8W2S2S6"
-                            <?php
-                            if (isset($data['Q8W2S2']))
-                                if ($data['Q8W2S2'] == 'Y') {
-                                    echo 'style="display:block;"';
-                                } else {
-                                    echo 'style="display:none;"';
-                                }
-                            else {
-                                echo 'style="display:none;"';
-                            }
-                            ?>
-
-                        >
+                        <div class="form-group" id="Q8W2S2S6">
                             <label><span class="cube">6(b)(2) D</span> Material options for tanks: </label>
                             <div class="form-group">
                                 <ul>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q8W2S2S6"
-                                                   value="<?php echo set_value('Q8W2S2S6', 1) ?>" <?php if (isset($data['Q8W2S2S6'])) echo $data['Q8W2S2S6'] == 1 ? "checked" : "" ?>>
-                                            PVC </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q8W2S2S6"
-                                                   value="<?php echo set_value('Q8W2S2S6', 2) ?>" <?php if (isset($data['Q8W2S2S6'])) echo $data['Q8W2S2S6'] == 2 ? "checked" : "" ?>/>
-                                            RCC </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q8W2S2S6"
-                                                   value="<?php echo set_value('Q8W2S2S6', 3) ?>" <?php if (isset($data['Q8W2S2S6'])) echo $data['Q8W2S2S6'] == 3 ? "checked" : "" ?>/>
-                                            Brick </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q8W2S2S6"
-                                                   value="<?php echo set_value('Q8W2S2S6', 4) ?>" <?php if (isset($data['Q8W2S2S6'])) echo $data['Q8W2S2S6'] == 4 ? "checked" : "" ?>/>
-                                            Combination of PVC + RCC + brick </label>
-                                    </li>
+								<?php 
+							  if(getFiled('Q8W2S2S6', $schoolUserID)==1):
+								 echo "PVC";
+								 elseif(getFiled('Q8W2S2S6', $schoolUserID)==2):
+								 echo "RCC";
+								 elseif(getFiled('Q8W2S2S6', $schoolUserID)==3):
+								 echo "Brick";
+								 elseif(getFiled('Q8W2S2S6', $schoolUserID)==4):
+								 echo "Combination of PVC + RCC + brick ";
+								 
+								 
+							 endif;
+							 
+					?>     
                                 </ul>
                             </div>
                         </div>
-                        <div class="form-group" id="Q8W2S27"
-                            <?php
-                            if (isset($data['Q8W2S2']))
-                                if ($data['Q8W2S2'] == 1 || $data['Q8W2S2'] == 3) {
-                                    echo 'style="display:block;"';
-                                } else {
-                                    echo 'style="display:none;"';
-                                }
-                            else {
-                                echo 'style="display:none;"';
-                            }
-                            ?>
-
-                        >
+                        <div class="form-group" id="Q8W2S27">
                             <label><span class="cube">6(b)(3)</span>Does your school have groundwater recharge
                                 structure? </label>
                             <div class="form-group">
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" name="Q8W2S2S7" onclick="Recharge(1)"
-                                           value="<?php echo set_value('Q8W2S2S7', 'Y') ?>" <?php if (isset($data['Q8W2S2S7'])) echo $data['Q8W2S2S7'] == 'Y' ? "checked" : "" ?>>
-                                    Yes </label>
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" id="Q8W2S2S7_2" name="Q8W2S2S7" onclick="Recharge(2)"
-                                           value="<?php echo set_value('Q8W2S2S7', 'N') ?>" <?php if (isset($data['Q8W2S2S7'])) echo $data['Q8W2S2S7'] == 'N' ? "checked" : "" ?>/>
-                                    No </label>
+							<p> <?php echo (getFiled('Q8W2S2S7', $schoolUserID)!="")? (getFiled('Q8W2S2S7', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+							
                             </div>
                         </div>
-                        <div class="form-group" id="Q8W2S2S8"
-                            <?php
-                            if (isset($data['Q8W2S2S7']))
-                                if ($data['Q8W2S2S7'] == 'Y') {
-                                    echo 'style="display:block;"';
-                                } else {
-                                    echo 'style="display:none;"';
-                                }
-                            else {
-                                echo 'style="display:none;"';
-                            }
-                            ?>
-
-                        >
+                        <div class="form-group" id="Q8W2S2S8">
                             <label><span class="cube">6(b)(3) i</span>If yes, please provide: </label>
                             <div class="form-group">
                                 <label class="radio-inline text-gray"> Please share the total number of groundwater
-                                    recharge structures </label>
-                                <input class="form-control space-textbox" id="Q8W2S2S8A" type="number" name="Q8W2S2S8"
-                                       value="<?php echo set_value('Q8W2S2S8') ?>"
-                                       placeholder="<?php if (isset($data['Q8W2S2S8'])) echo $data['Q8W2S2S8'] ?>">
+                                    recharge structures </label><br/>
+									<?php echo (getFiled('Q8W2S2S8', $schoolUserID)!="")?getFiled('Q8W2S2S8', $schoolUserID) : "N/A"; ?>
+                                
                             </div>
                         </div>
-                        <div class="form-group" id="Q8W2S2S9"
-                            <?php
-                            if (isset($data['Q8W2S2S7']))
-                                if ($data['Q8W2S2S7'] == 'Y') {
-                                    echo 'style="display:block;"';
-                                } else {
-                                    echo 'style="display:none;"';
-                                }
-                            else {
-                                echo 'style="display:none;"';
-                            }
-                            ?>
-
-                        >
+                        <div class="form-group" id="Q8W2S2S9">
                             <label><span class="cube">6(b)(3) ii</span>Please tick the type of groundwater recharge
                                 structure used in your school: </label>
+								  
+								
                             <div class="form-group">
-                                <ul>
-                                    <li>
-                                        <input type="checkbox" name="Q8W2S2S91"
-                                               value="<?php echo set_value('Q8W2S2S91', 1); ?>" <?php if (isset($data['Q8W2S2S91'])) if ($data['Q8W2S2S91'] == 1) echo set_checkbox('Q8W2S2S91', '1', true); ?> />
-                                        <label col-xs-4>Percolation pit/tank</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="Q8W2S2S92" name="Q8W2S2S92"
-                                               value="<?php echo set_value('Q8W2S2S92', 1); ?>" <?php if (isset($data['Q8W2S2S92'])) if ($data['Q8W2S2S92'] == 1) echo set_checkbox('Q8W2S2S92', '1', true); ?> />
-                                        <label class="text-gray">Recharge through abandoned dug well</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="Q8W2S2S93" name="Q8W2S2S93"
-                                               value="<?php echo set_value('Q8W2S2S93', 1); ?>" <?php if (isset($data['Q8W2S2S93'])) if ($data['Q8W2S2S93'] == 1) echo set_checkbox('Q8W2S2S93', 1, true); ?>/>
-                                        <label class="text-gray">Recharge through abandoned tube well/bore well</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" name="Q8W2S2S94"
-                                               value="<?php echo set_value('Q8W2S2S94', 1); ?>" <?php if (isset($data['Q8W2S2S94'])) if ($data['Q8W2S2S94'] == 1) echo set_checkbox('Q8W2S2S94', '1', true); ?>/>
-                                        <label class="text-gray">Recharge pits</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" name="Q8W2S2S95"
-                                               value="<?php echo set_value('Q8W2S2S95', 1); ?>" <?php if (isset($data['Q8W2S2S95'])) if ($data['Q8W2S2S95'] == 1) echo set_checkbox('Q8W2S2S95', '1', true); ?>/>
-                                        <label class="text-gray">Recharge trenches</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" name="Q8W2S2S96"
-                                               value="<?php echo set_value('Q8W2S2S96', 1); ?>" <?php if (isset($data['Q8W2S2S96'])) if ($data['Q8W2S2S96'] == 1) echo set_checkbox('Q8W2S2S96', '1', true); ?>/>
-                                        <label class="text-gray">Recharge through ponds/water bodies</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" name="Q8W2S2S97"
-                                               value="<?php echo set_value('Q8W2S2S97', 1); ?>" <?php if (isset($data['Q8W2S2S97'])) if ($data['Q8W2S2S97'] == 1) echo set_checkbox('Q8W2S2S97', '1', true); ?>/>
-                                        <label class="text-gray">Soak pit</label>
-                                    </li>
-                                </ul>
+                              <?php 
+							 if(getFiled('Q8W2S2S91', $schoolUserID)==1):
+							 echo "Percolation pit/tank";
+							 echo "<br/>";
+							 endif;  
+							 if(getFiled('Q8W2S2S92', $schoolUserID)==1):
+							 echo "Recharge through abandoned dug well";
+							 echo "<br/>" ;
+							 endif; 
+							 if(getFiled('Q8W2S2S93', $schoolUserID)==1):
+							 echo "Recharge through abandoned tube well/bore well";
+							 echo "<br/>" ;
+							 endif; 
+							 if(getFiled('Q8W2S2S94', $schoolUserID)==1):
+							 echo " Recharge pits";
+							 echo "<br/>" ;
+							 endif;
+							 if(getFiled('Q8W2S2S95', $schoolUserID)==1):
+							 echo "Recharge trenches";
+							  echo "<br/>" ;
+							 endif;
+							 if(getFiled('Q8W2S2S96', $schoolUserID)==1):
+							 echo "Recharge through ponds/water bodies";
+							  echo "<br/>" ;
+							 endif;
+							 if(getFiled('Q8W2S2S97', $schoolUserID)==1):
+							 echo "Soak pit";
+							  echo "<br/>" ;
+							 endif;
+							 
+						 
+					?>     
                             </div>
                         </div>
-                        <div class="form-group" id="Q8W2S2S10"
-                            <?php
-                            if (isset($data['Q8W2S2']))
-                                if ($data['Q8W2S2'] == 1 || $data['Q8W2S2'] == 3) {
-                                    echo 'style="display:block;"';
-                                } else {
-                                    echo 'style="display:none;"';
-                                }
-                            else {
-                                echo 'style="display:none;"';
-                            }
-                            ?>
-
-                        >
+                        <div class="form-group" id="Q8W2S2S10">
                             <label><span class="cube">6(b)(4)</span>If your school practices rainwater harvesting, then
                                 what is the ratio between storage and recharge </label>
                             <div class="form-group">
-                                <ul>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q8W2S2S10"
-                                                   value="<?php echo set_value('Q8W2S2S10', 1) ?>" <?php if (isset($data['Q8W2S2S10'])) echo $data['Q8W2S2S10'] == 1 ? "checked" : "" ?>>
-                                            Storage = Recharge </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" id="Q8W2S2S10_2" name="Q8W2S2S10"
-                                                   value="<?php echo set_value('Q8W2S2S10', 2) ?>" <?php if (isset($data['Q8W2S2S10'])) echo $data['Q8W2S2S10'] == 2 ? "checked" : "" ?>/>
-                                            Storage > Recharge </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" id="Q8W2S2S10_2" name="Q8W2S2S10"
-                                                   value="<?php echo set_value('Q8W2S2S10', 3) ?>" <?php if (isset($data['Q8W2S2S10'])) echo $data['Q8W2S2S10'] == 3 ? "checked" : "" ?>/>
-                                            Recharge > Storage </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" id="Q8W2S2S10_2" name="Q8W2S2S10"
-                                                   value="<?php echo set_value('Q8W2S2S10', 4) ?>" <?php if (isset($data['Q8W2S2S10'])) echo $data['Q8W2S2S10'] == 4 ? "checked" : "" ?>/>
-                                            Only recharge </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" id="Q8W2S2S10_2" name="Q8W2S2S10"
-                                                   value="<?php echo set_value('Q8W2S2S10', 5) ?>" <?php if (isset($data['Q8W2S2S10'])) echo $data['Q8W2S2S10'] == 5 ? "checked" : "" ?>/>
-                                            Only storage </label>
-                                    </li>
-                                </ul>
+							<?php 
+							  if(getFiled('Q8W2S2S10', $schoolUserID)==1):
+								 echo "Storage = Recharge";
+								 elseif(getFiled('Q8W2S2S10', $schoolUserID)==2):
+								 echo "Storage &gt; Recharge";
+								 elseif(getFiled('Q8W2S2S10', $schoolUserID)==3):
+								 echo "Recharge &gt; Storage";
+								 elseif(getFiled('Q8W2S2S10', $schoolUserID)==4):
+								 echo "Only recharge ";
+								 elseif(getFiled('Q8W2S2S10', $schoolUserID)==5):
+								 echo "Only storage ";
+								 
+								 
+							 endif;
+							 
+					?>     
+                                
                             </div>
                         </div>
-                        <div class="form-group" id="Q8W2S3"
-                            <?php
-                            if (isset($data['Q8W2']))
-                                if ($data['Q8W2'] == 'Y') {
-                                    echo 'style="display:block;"';
-                                } else {
-                                    echo 'style="display:none;"';
-                                }
-                            else {
-                                echo 'style="display:none;"';
-                            }
-                            ?>
-
-                        >
+                        <div class="form-group" id="Q8W2S3">
                             <label><span class="cube">6(c)</span>How much area in your school is harvested?
-                                <a class="kplink" href="http://www.greenschoolsprogramme.org/knowledge-bank/water/#rainFalls" target="_blank"> </a></label>
+                                </label>
                             <div class="form-group">
-                                <ul>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q8W2S4"
-                                                   value="<?php echo set_value('Q8W2S4', 1) ?>" <?php if (isset($data['Q8W2S4'])) echo $data['Q8W2S4'] == 1 ? "checked" : "" ?>>
-                                            10 to 20 per cent </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q8W2S4"
-                                                   value="<?php echo set_value('Q8W2S4', 2) ?>" <?php if (isset($data['Q8W2S4'])) echo $data['Q8W2S4'] == 2 ? "checked" : "" ?>/>
-                                            21 to 30 per cent </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q8W2S4"
-                                                   value="<?php echo set_value('Q8W2S4', 3) ?>" <?php if (isset($data['Q8W2S4'])) echo $data['Q8W2S4'] == 3 ? "checked" : "" ?>/>
-                                            31 to 40 per cent </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q8W2S4"
-                                                   value="<?php echo set_value('Q8W2S4', 4) ?>" <?php if (isset($data['Q8W2S4'])) echo $data['Q8W2S4'] == 4 ? "checked" : "" ?>/>
-                                            41 to 50 per cent </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q8W2S4"
-                                                   value="<?php echo set_value('Q8W2S4', 5) ?>" <?php if (isset($data['Q8W2S4'])) echo $data['Q8W2S4'] == 5 ? "checked" : "" ?>/>
-                                            51 to 60 per cent </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q8W2S4"
-                                                   value="<?php echo set_value('Q8W2S4', 6) ?>" <?php if (isset($data['Q8W2S4'])) echo $data['Q8W2S4'] == 6 ? "checked" : "" ?>/>
-                                            61 to 70 per cent </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q8W2S4"
-                                                   value="<?php echo set_value('Q8W2S4', 7) ?>" <?php if (isset($data['Q8W2S4'])) echo $data['Q8W2S4'] == 7 ? "checked" : "" ?>/>
-                                            71 to 80 per cent </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q8W2S4"
-                                                   value="<?php echo set_value('Q8W2S4', 8) ?>" <?php if (isset($data['Q8W2S4'])) echo $data['Q8W2S4'] == 8 ? "checked" : "" ?>/>
-                                            81 to 90 per cent </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q8W2S4"
-                                                   value="<?php echo set_value('Q8W2S4', 9) ?>" <?php if (isset($data['Q8W2S4'])) echo $data['Q8W2S4'] == 9 ? "checked" : "" ?>/>
-                                            91 to 100 per cent </label>
-                                    </li>
-                                </ul>
+							<?php 
+							  if(getFiled('Q8W2S4', $schoolUserID)==1):
+								 echo "10 to 20 per cent";
+								 elseif(getFiled('Q8W2S4', $schoolUserID)==2):
+								 echo "21 to 30 per cent";
+								 elseif(getFiled('Q8W2S4', $schoolUserID)==3):
+								 echo "31 to 40 per cent";
+								 elseif(getFiled('Q8W2S4', $schoolUserID)==4):
+								 echo "41 to 50 per cente ";
+								 elseif(getFiled('Q8W2S4', $schoolUserID)==5):
+								 echo "51 to 60 per cent";
+								 elseif(getFiled('Q8W2S4', $schoolUserID)==6):
+								 echo "61 to 70 per cent";
+								 elseif(getFiled('Q8W2S4', $schoolUserID)==7):
+								 echo "71 to 80 per cent";
+								 elseif(getFiled('Q8W2S4', $schoolUserID)==8):
+								 echo " 81 to 90 per cent";
+								  elseif(getFiled('Q8W2S4', $schoolUserID)==9):
+								 echo "91 to 100 per cent";
+								 
+								 
+							 endif;
+							 
+					?>     
+							
+                                
                             </div>
                         </div>
-                        <div class="form-group" id="Q8W2S4"
-                            <?php
-                            if (isset($data['Q8W2']))
-                                if ($data['Q8W2'] == 'Y') {
-                                    echo 'style="display:block;"';
-                                } else {
-                                    echo 'style="display:none;"';
-                                }
-                            else {
-                                echo 'style="display:none;"';
-                            }
-                            ?>
-
-                        >
+                        <div class="form-group" id="Q8W2S4">
                             <label><span class="cube">6(d)</span>Please select (from the list given below) the rainwater
                                 harvesting structures present in your school:
-                                <a class="kplink" href="http://www.greenschoolsprogramme.org/knowledge-bank/water/#rainFalls" target="_blank"> </a></label>
+                                </label>
                             <div class="form-group">
-                                <ul>
-                                    <li>
-                                        <input type="checkbox" name="Q8W2S31"
-                                               value="<?php echo set_value('Q8W2S31', 1); ?>" <?php if (isset($data['Q8W2S31'])) if ($data['Q8W2S31'] == 1) echo set_checkbox('Q8W2S31', '1', true); ?> />
-                                        <label class="text-gray">Conduits</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="Q8W2S32" name="Q8W2S32"
-                                               value="<?php echo set_value('Q8W2S32', 1); ?>" <?php if (isset($data['Q8W2S32'])) if ($data['Q8W2S32'] == 1) echo set_checkbox('Q8W2S32', '1', true); ?> />
-                                        <label class="text-gray">Gutters</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="Q8W2S33" onclick="HarvestingStructure()"
-                                               name="Q8W2S33"
-                                               value="<?php echo set_value('Q8W2S33', 1); ?>" <?php if (isset($data['Q8W2S33'])) if ($data['Q8W2S33'] == 1) echo set_checkbox('Q8W2S33', 1, true); ?>/>
-                                        <label class="text-gray">Filter unit</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" name="Q8W2S34"
-                                               value="<?php echo set_value('Q8W2S34', 1); ?>" <?php if (isset($data['Q8W2S34'])) if ($data['Q8W2S34'] == 1) echo set_checkbox('Q8W2S34', '1', true); ?>/>
-                                        <label class="text-gray">First flush</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" name="Q8W2S35"
-                                               value="<?php echo set_value('Q8W2S35', 1); ?>" <?php if (isset($data['Q8W2S35'])) if ($data['Q8W2S35'] == 1) echo set_checkbox('Q8W2S35', '1', true); ?>/>
-                                        <label class="text-gray">Storage tank</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" name="Q8W2S36"
-                                               value="<?php echo set_value('Q8W2S36', 1); ?>" <?php if (isset($data['Q8W2S36'])) if ($data['Q8W2S36'] == 1) echo set_checkbox('Q8W2S36', '1', true); ?>/>
-                                        <label class="text-gray">Collection sump</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" name="Q8W2S37"
-                                               value="<?php echo set_value('Q8W2S37', 1); ?>" <?php if (isset($data['Q8W2S37'])) if ($data['Q8W2S37'] == 1) echo set_checkbox('Q8W2S37', '1', true); ?>/>
-                                        <label class="text-gray">Pump unit</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" name="Q8W2S38"
-                                               value="<?php echo set_value('Q8W2S38', 1); ?>" <?php if (isset($data['Q8W2S38'])) if ($data['Q8W2S38'] == 1) echo set_checkbox('Q8W2S38', '1', true); ?>/>
-                                        <label class="text-gray">Recharge structure</label>
-                                    </li>
-                                </ul>
+							<?php 
+							 if(getFiled('Q8W2S31', $schoolUserID)==1):
+							 echo "Conduits";
+							 echo "<br/>";
+							 endif;  
+							 if(getFiled('Q8W2S32', $schoolUserID)==1):
+							 echo "Gutters";
+							 echo "<br/>" ;
+							 endif; 
+							 if(getFiled('Q8W2S33', $schoolUserID)==1):
+							 echo "Filter unit";
+							 echo "<br/>" ;
+							 endif; 
+							 if(getFiled('Q8W2S34', $schoolUserID)==1):
+							 echo " First flush";
+							 echo "<br/>" ;
+							 endif;
+							 if(getFiled('Q8W2S35', $schoolUserID)==1):
+							 echo "Storage tank";
+							  echo "<br/>" ;
+							 endif;
+							 if(getFiled('Q8W2S36', $schoolUserID)==1):
+							 echo "Collection sump";
+							  echo "<br/>" ;
+							 endif;
+							 if(getFiled('Q8W2S37', $schoolUserID)==1):
+							 echo "Pump unit";
+							  echo "<br/>" ;
+							 endif;
+							 if(getFiled('Q8W2S38', $schoolUserID)==1):
+							 echo "Recharge structure";
+							  echo "<br/>" ;
+							 endif;
+							 
+							 
+						 
+					?>     
+                                
                             </div>
                         </div>
-                        <div class="form-group" id="Q8W2S4S1"
-                            <?php
-                            if (isset($data['Q8W2S33']))
-                                if ($data['Q8W2S33'] == 1) {
-                                    echo 'style="display:block;"';
-                                } else {
-                                    echo 'style="display:none;"';
-                                }
-                            else {
-                                echo 'style="display:none;"';
-                            }
-                            ?>
-
-                        >
+                        <div class="form-group" id="Q8W2S4S1">
                             <label><span class="cube">6(d)(1)</span> Where is your filter unit? </label>
                             <div class="form-group">
-                                <ul>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q8W2S4S1"
-                                                   value="<?php echo set_value('Q8W2S4S1', 1) ?>" <?php if (isset($data['Q8W2S4S1'])) echo $data['Q8W2S4S1'] == 1 ? "checked" : "" ?>>
-                                            Before storage tank </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" id="Q8W2S4S1_2" name="Q8W2S4S1"
-                                                   value="<?php echo set_value('Q8W2S4S1', 2) ?>" <?php if (isset($data['Q8W2S4S1'])) echo $data['Q8W2S4S1'] == 2 ? "checked" : "" ?>/>
-                                            Before recharge system </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" id="Q8W2S4S1_2" name="Q8W2S4S1"
-                                                   value="<?php echo set_value('Q8W2S4S1', 3) ?>" <?php if (isset($data['Q8W2S4S1'])) echo $data['Q8W2S4S1'] == 3 ? "checked" : "" ?>/>
-                                            Before both storage tank and recharge system </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" id="Q8W2S4S1_2" name="Q8W2S4S1"
-                                                   value="<?php echo set_value('Q8W2S4S1', 4) ?>" <?php if (isset($data['Q8W2S4S1'])) echo $data['Q8W2S4S1'] == 4 ? "checked" : "" ?>/>
-                                            We do not use filters </label>
-                                    </li>
-                                </ul>
+							<?php 
+							  if(getFiled('Q8W2S4S1', $schoolUserID)==1):
+								 echo "Before storage tank";
+								 elseif(getFiled('Q8W2S4S1', $schoolUserID)==2):
+								 echo "Before recharge system";
+								 elseif(getFiled('Q8W2S4S1', $schoolUserID)==3):
+								 echo "Before both storage tank and recharge systemt";
+								 elseif(getFiled('Q8W2S4S1', $schoolUserID)==4):
+								 echo "We do not use filters";
+								 endif;
+								 ?>
+                              
                             </div>
                         </div>
-                        <div class="form-group" id="Q8W2S4S2"
-                            <?php
-                            if (isset($data['Q8W2S33']))
-                                if ($data['Q8W2S33'] == 1) {
-                                    echo 'style="display:block;"';
-                                } else {
-                                    echo 'style="display:none;"';
-                                }
-                            else {
-                                echo 'style="display:none;"';
-                            }
-                            ?>
-
-                        >
+                        <div class="form-group" id="Q8W2S4S2">
                             <label><span class="cube">6(d)(2)</span>Types of filter used in your school: </label>
                             <div class="form-group">
-                                <ul>
-                                    <li>
-                                        <input type="checkbox" name="Q8W2S41"
-                                               value="<?php echo set_value('Q8W2S4S21'); ?>" <?php if (isset($data['Q8W2S4S21'])) if ($data['Q8W2S4S21'] == 1) echo set_checkbox('Q8W2S4S21', '1', true); ?> />
-                                        <label class="text-gray">Sand gravel filter</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="Q8W2S4S22" name="Q8W2S4S22"
-                                               value="<?php echo set_value('Q8W2S4S22'); ?>" <?php if (isset($data['Q8W2S4S22'])) if ($data['Q8W2S4S22'] == 1) echo set_checkbox('Q8W2S4S22', '1', true); ?> />
-                                        <label class="text-gray">Charcoal filter</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="Q8W2S4S23" name="Q8W2S4S23"
-                                               value="<?php echo set_value('Q8W2S4S23'); ?>" <?php if (isset($data['Q8W2S4S23'])) if ($data['Q8W2S4S23'] == 1) echo set_checkbox('Q8W2S4S23', 1, true); ?>/>
-                                        <label class="text-gray">Readymade on line filter</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" name="Q8W2S4S24"
-                                               value="<?php echo set_value('Q8W2S4S24'); ?>" <?php if (isset($data['Q8W2S4S24'])) if ($data['Q8W2S4S24'] == 1) echo set_checkbox('Q8W2S4S24', '1', true); ?>/>
-                                        <label class="text-gray">Chemical used</label>
-                                    </li>
-                                </ul>
+							
+							<?php 
+							 if(getFiled('Q8W2S4S21', $schoolUserID)==1):
+							 echo "Sand gravel filter";
+							 echo "<br/>";
+							 endif;  
+							 if(getFiled('Q8W2S4S22', $schoolUserID)==1):
+							 echo "Charcoal filter";
+							 echo "<br/>" ;
+							 endif; 
+							 if(getFiled('Q8W2S4S23', $schoolUserID)==1):
+							 echo "Readymade on line filter";
+							 echo "<br/>" ;
+							 endif; 
+							 if(getFiled('Q8W2S4S24', $schoolUserID)==1):
+							 echo " Chemical used";
+							 echo "<br/>" ;
+							 endif;
+							 
+					?>     
+                              
                             </div>
                         </div>
-                        <div class="form-group" id="Q8W2S5"
-                            <?php
-                            if (isset($data['Q8W2']))
-                                if ($data['Q8W2'] == 'Y') {
-                                    echo 'style="display:block;"';
-                                } else {
-                                    echo 'style="display:none;"';
-                                }
-                            else {
-                                echo 'style="display:none;"';
-                            }
-                            ?>
-
-                        >
+                        <div class="form-group" id="Q8W2S5">
                             <label><span class="cube">6(e)</span>Rate your catchment on cleanliness: </label>
                             <div class="form-group">
-                                <ul>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q8W2S5"
-                                                   value="<?php echo set_value('Q8W2S5', 1) ?>" <?php if (isset($data['Q8W2S5'])) echo $data['Q8W2S5'] == 1 ? "checked" : "" ?>>
-                                            Good </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q8W2S5"
-                                                   value="<?php echo set_value('Q8W2S5', 2) ?>" <?php if (isset($data['Q8W2S5'])) echo $data['Q8W2S5'] == 2 ? "checked" : "" ?>/>
-                                            Average </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q8W2S5"
-                                                   value="<?php echo set_value('Q8W2S5', 3) ?>" <?php if (isset($data['Q8W2S5'])) echo $data['Q8W2S5'] == 3 ? "checked" : "" ?>/>
-                                            Poor </label>
-                                    </li>
-                                </ul>
+							<?php 
+							  if(getFiled('Q8W2S5', $schoolUserID)==1):
+								 echo "Good";
+								 elseif(getFiled('Q8W2S5', $schoolUserID)==2):
+								 echo "Average";
+								 elseif(getFiled('Q8W2S5', $schoolUserID)==3):
+								 echo "Poor";
+								 
+								 endif;
+								 ?>
+                                
                             </div>
                         </div>
                         <br>
-                        <div class="form-group" id="file"
-                            <?php
-                            if (isset($data['Q8W2']))
-                                if ($data['Q8W2'] == 'Y') {
-                                    echo 'style="display:block;"';
-                                } else {
-                                    echo 'style="display:none;"';
-                                }
-                            else {
-                                echo 'style="display:none;"';
-                            }
-                            ?>
-
-                        >
+                        <div class="form-group" id="file" style="display:block;">
                             <label>Please upload a flow chart (hand drawn) of the wastewater treatment process.<br>
-                                <button class="btn uploadbtn upload" data-id="Water Treatment Process"
-                                        data-toggle="modal" data-target="#airModal" type="button">UPLOAD FILES
+                                <button class="btn uploadbtn upload" data-id="Water Treatment Process" data-toggle="modal" data-target="#uploadModal" type="button">UPLOAD FILES
                                 </button>
                                 <br>
                             </label>
+                            <table width="100%" class="question uploadedfiles">
+                                <thead>
+                                <tr>
+                                    <th>File name</th>
+                                    <th>Action</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                </tbody>
+                            </table>
                         </div>
-                        <div class="form-group" id="Q8W2S61"
-                            <?php
-                            if (isset($data['Q8W2']))
-                                if ($data['Q8W2'] == 'Y') {
-                                    echo 'style="display:block;"';
-                                } else {
-                                    echo 'style="display:none;"';
-                                }
-                            else {
-                                echo 'style="display:none;"';
-                            }
-                            ?>
-
-                        >
+                        <div class="form-group" id="Q8W2S61" style="display:block;">
                             <label><span class="cube">6(f)</span>Does your school clean your catchment and system
                             </label>
                             <div class="form-group">
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" name="Q8W2S61" onclick="WaterCatchment(1)"
-                                           value="<?php echo set_value('Q8W2S61', 'Y') ?>" <?php if (isset($data['Q8W2S61'])) echo $data['Q8W2S61'] == 'Y' ? "checked" : "" ?>>
-                                    Yes </label>
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" name="Q8W2S61" onclick="WaterCatchment(2)"
-                                           value="<?php echo set_value('Q8W2S61', 'N') ?>" <?php if (isset($data['Q8W2S61'])) echo $data['Q8W2S61'] == 'N' ? "checked" : "" ?>/>
-                                    No </label>
+							 <p> <?php echo (getFiled('Q8W2S61', $schoolUserID)!="")? (getFiled('Q8W2S61', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+                                
                             </div>
                         </div>
-                        <div class="form-group" id="Q8W2S7"
-                            <?php
-                            if (isset($data['Q8W2S61']))
-                                if ($data['Q8W2S61'] == 'Y') {
-                                    echo 'style="display:block;"';
-                                } else {
-                                    echo 'style="display:none;"';
-                                }
-                            else {
-                                echo 'style="display:none;"';
-                            }
-                            ?>
-                        >
+                        <div class="form-group" id="Q8W2S7" style="display: block;">
                             <label><span class="cube">6(f)(1)</span>Please specify when does your school clean the
                                 catchment and RWH system? </label>
                             <div class="form-group">
-                                <ul>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q8W2S7"
-                                                   value="<?php echo set_value('Q8W2S7', 1) ?>" <?php if (isset($data['Q8W2S7'])) echo $data['Q8W2S7'] == 1 ? "checked" : "" ?>>
-                                            Pre-monsoon </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q8W2S7"
-                                                   value="<?php echo set_value('Q8W2S7', 2) ?>" <?php if (isset($data['Q8W2S7'])) echo $data['Q8W2S7'] == 2 ? "checked" : "" ?>/>
-                                            Post-monsoon </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q8W2S7"
-                                                   value="<?php echo set_value('Q8W2S7', 3) ?>" <?php if (isset($data['Q8W2S7'])) echo $data['Q8W2S7'] == 3 ? "checked" : "" ?>/>
-                                            Do not follow any such pattern </label>
-                                    </li>
-                                </ul>
+							<?php 
+							  if(getFiled('Q8W2S7', $schoolUserID)==1):
+								 echo "Pre-monsoon";
+								 elseif(getFiled('Q8W2S7', $schoolUserID)==2):
+								 echo "Post-monsoon";
+								 elseif(getFiled('Q8W2S7', $schoolUserID)==3):
+								 echo "Do not follow any such pattern";
+								 
+								 endif;
+								 ?>
+                               
                             </div>
                         </div>
-                        <div class="form-group" id="Q8W2S8"
-                            <?php
-                            if (isset($data['Q8W2']))
-                                if ($data['Q8W2'] == 'Y') {
-                                    echo 'style="display:block;"';
-                                } else {
-                                    echo 'style="display:none;"';
-                                }
-                            else {
-                                echo 'style="display:none;"';
-                            }
-                            ?>
-
-                        >
+                        <div class="form-group" id="Q8W2S8">
                             <label><span class="cube">6(g)</span>Does your school monitor the rainwater harvesting
                                 structure for its efficiency? </label>
                             <div class="form-group">
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" name="Q8W2S8" onclick="RainEfficiency(1)"
-                                           value="<?php echo set_value('Q8W2S8', 'Y') ?>" <?php if (isset($data['Q8W2S8'])) echo $data['Q8W2S8'] == 'Y' ? "checked" : "" ?>>
-                                    Yes </label>
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" name="Q8W2S8" onclick="RainEfficiency(2)"
-                                           value="<?php echo set_value('Q8W2S8', 'N') ?>" <?php if (isset($data['Q8W2S8'])) echo $data['Q8W2S8'] == 'N' ? "checked" : "" ?>/>
-                                    No </label>
+							 <p> <?php echo (getFiled('Q8W2S8', $schoolUserID)!="")? (getFiled('Q8W2S8', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+                              
                             </div>
                         </div>
-                        <div class="form-group" id="Q8W2S9"
-                            <?php
-                            if (isset($data['Q8W2S8']))
-                                if ($data['Q8W2S8'] == 'Y') {
-                                    echo 'style="display:block;"';
-                                } else {
-                                    echo 'style="display:none;"';
-                                }
-                            else {
-                                echo 'style="display:none;"';
-                            }
-                            ?>
-
-                        >
+                        <div class="form-group" id="Q8W2S9" style="display: block;">
                             <label><span class="cube">6(g)(1)</span>Please specify when does your school monitor the
                                 groundwater level? </label>
                             <div class="form-group">
-                                <ul>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q8W2S9"
-                                                   value="<?php echo set_value('Q8W2S9', 1) ?>" <?php if (isset($data['Q8W2S9'])) echo $data['Q8W2S9'] == 1 ? "checked" : "" ?>>
-                                            Pre-monsoon </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q8W2S9"
-                                                   value="<?php echo set_value('Q8W2S9', 2) ?>" <?php if (isset($data['Q8W2S9'])) echo $data['Q8W2S9'] == 2 ? "checked" : "" ?>/>
-                                            Post-monsoon </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q8W2S9"
-                                                   value="<?php echo set_value('Q8W2S9', 3) ?>" <?php if (isset($data['Q8W2S9'])) echo $data['Q8W2S9'] == 3 ? "checked" : "" ?>/>
-                                            Do not follow any such pattern </label>
-                                    </li>
-                                </ul>
+							<?php 
+							  if(getFiled('Q8W2S9', $schoolUserID)==1):
+								 echo "Pre-monsoon";
+								 elseif(getFiled('Q8W2S9', $schoolUserID)==2):
+								 echo "Post-monsoon";
+								 elseif(getFiled('Q8W2S9', $schoolUserID)==3):
+								 echo "Do not follow any such pattern";
+								 
+								 endif;
+								 ?>
+                                
                             </div>
                         </div>
-                        <div class="form-group" id="Q8W2S10"
-                            <?php
-                            if (isset($data['Q8W2']))
-                                if ($data['Q8W2'] == 'Y') {
-                                    echo 'style="display:block;"';
-                                } else {
-                                    echo 'style="display:none;"';
-                                }
-                            else {
-                                echo 'style="display:none;"';
-                            }
-                            ?>
-
-                        >
+                        <div class="form-group" id="Q8W2S10">
                             <label><span class="cube">6(h)</span>What is the trend of groundwater level in your school
                                 across the year? </label>
                             <div class="form-group">
-                                <ul>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q8W2S10" onclick="WaterDecrease(1)"
-                                                   value="<?php echo set_value('Q8W2S10', 1) ?>" <?php if (isset($data['Q8W2S10'])) echo $data['Q8W2S10'] == 1 ? "checked" : "" ?>>
-                                            If there was a decrease, please specify </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q8W2S10" onclick="WaterDecrease(2)"
-                                                   value="<?php echo set_value('Q8W2S10', 2) ?>" <?php if (isset($data['Q8W2S10'])) echo $data['Q8W2S10'] == 2 ? "checked" : "" ?>/>
-                                            If there was an increase, please specify </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q8W2S10" onclick="WaterDecrease(0)"
-                                                   value="<?php echo set_value('Q8W2S10', 3) ?>" <?php if (isset($data['Q8W2S10'])) echo $data['Q8W2S10'] == 3 ? "checked" : "" ?>/>
-                                            No change </label>
-                                    </li>
-                                </ul>
+							<?php 
+							  if(getFiled('Q8W2S10', $schoolUserID)==1):
+								 echo "If there was a decrease, please specify";
+								 elseif(getFiled('Q8W2S10', $schoolUserID)==2):
+								 echo "If there was an increase, please specify ";
+								 elseif(getFiled('Q8W2S10', $schoolUserID)==3):
+								 echo "No change ";
+								 
+								 endif;
+								 ?>
+                             
                             </div>
                         </div>
-                        <div class="form-group" id="Q8W2S11"
-                            <?php
-                            if (isset($data['Q8W2S10']))
-                                if ($data['Q8W2S10'] == 1) {
-                                    echo 'style="display:block;"';
-                                } else {
-                                    echo 'style="display:none;"';
-                                }
-                            else {
-                                echo 'style="display:none;"';
-                            }
-                            ?>
-
-                        >
+                        <div class="form-group" id="Q8W2S11" >
                             <label><span class="cube">6(h)(1)</span>Please specify how much was the decrease? </label>
                             <div class="form-group">
-                                <ul>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q8W2S11"
-                                                   value="<?php echo set_value('Q8W2S11', 1) ?>" <?php if (isset($data['Q8W2S11'])) echo $data['Q8W2S11'] == 1 ? "checked" : "" ?>>
-                                            Less than a metre annually </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q8W2S11"
-                                                   value="<?php echo set_value('Q8W2S11', 2) ?>" <?php if (isset($data['Q8W2S11'])) echo $data['Q8W2S11'] == 2 ? "checked" : "" ?>/>
-                                            1-5 metre annually </label>
-                                    </li>
-                                    <li>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q8W2S11"
-                                                   value="<?php echo set_value('Q8W2S11', 3) ?>" <?php if (isset($data['Q8W2S11'])) echo $data['Q8W2S11'] == 3 ? "checked" : "" ?>/>
-                                            More than 5 metres annually </label>
-                                    </li>
-                                </ul>
+							<?php 
+							  if(getFiled('Q8W2S11', $schoolUserID)==1):
+								 echo "Less than a metre annually";
+								 elseif(getFiled('Q8W2S11', $schoolUserID)==2):
+								 echo "1-5 metre annually ";
+								 elseif(getFiled('Q8W2S11', $schoolUserID)==3):
+								 echo "More than 5 metres annually ";
+								 
+								 endif;
+								 ?>
+                            
                             </div>
                         </div>
-                        <div class="form-group" id="Q8W2S12"
-                            <?php
-                            if (isset($data['Q8W2S10']))
-                                if ($data['Q8W2S10'] == 2) {
-                                    echo 'style="display:block;"';
-                                } else {
-                                    echo 'style="display:none;"';
-                                }
-                            else {
-                                echo 'style="display:none;"';
-                            }
-                            ?>
-
-                        >
+                        <div class="form-group" id="Q8W2S12">
                             <label><span class="cube">6(h)(1)</span>Please specify how much was the increase? </label>
                             <div class="form-group">
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" name="Q8W2S12"
-                                           value="<?php echo set_value('Q8W2S12', 1) ?>" <?php if (isset($data['Q8W2S12'])) echo $data['Q8W2S12'] == 1 ? "checked" : "" ?>>
-                                    Less than a metre annually </label>
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" name="Q8W2S12"
-                                           value="<?php echo set_value('Q8W2S12', 2) ?>" <?php if (isset($data['Q8W2S12'])) echo $data['Q8W2S12'] == 2 ? "checked" : "" ?>/>
-                                    1-5 metre annually </label>
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" name="Q8W2S12"
-                                           value="<?php echo set_value('Q8W2S12', 3) ?>" <?php if (isset($data['Q8W2S12'])) echo $data['Q8W2S12'] == 3 ? "checked" : "" ?>/>
-                                    More than 5 metres annually </label>
+							<?php 
+							  if(getFiled('Q8W2S12', $schoolUserID)==1):
+								 echo "Less than a metre annually";
+								 elseif(getFiled('Q8W2S12', $schoolUserID)==2):
+								 echo "1-5 metre annually ";
+								 elseif(getFiled('Q8W2S12', $schoolUserID)==3):
+								 echo "More than 5 metres annually ";
+								 
+								 endif;
+								 ?>
+                               
                             </div>
                         </div>
-                        <div class="form-group" id="Q8W2S13"
-                            <?php
-                            if (isset($data['Q8W2'])) {
-                                if ($data['Q8W2'] == 'Y') {
-                                    echo 'style="display:block;"';
-                                } else {
-                                    echo 'style="display:none;"';
-                                }
-                            } else {
-                                echo 'style="display:none;"';
-                            }
-                            ?>
-
-                        >
+                        <div class="form-group" id="Q8W2S13">
                             <label><span class="cube">6(i)</span>If your school's RWH structure is more than a year old,
                                 is there any improvement in the groundwater quality after the implementation of the RWH
                                 structure?</label>
                             <div class="form-group">
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" name="Q8W2S13"
-                                           value="<?php echo set_value('Q8W2S13', 'Y') ?>" <?php if (isset($data['Q8W2S13'])) echo $data['Q8W2S13'] == 'Y' ? "checked" : "" ?>>
-                                    Yes </label>
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" name="Q8W2S13"
-                                           value="<?php echo set_value('Q8W2S13', 'N') ?>" <?php if (isset($data['Q8W2S13'])) echo $data['Q8W2S13'] == 'N' ? "checked" : "" ?>/>
-                                    No </label>
+							 <p> <?php echo (getFiled('Q8W2S13', $schoolUserID)!="")? (getFiled('Q8W2S13', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+                               
                             </div>
                         </div>
-                        <div class="form-group" id="Q8W2S6"
-                            <?php
-                            if (isset($data['Q8W2']))
-                                if ($data['Q8W2'] == 'N') {
-                                    echo 'style="display:block;"';
-                                } else {
-                                    echo 'style="display:none;"';
-                                }
-                            else {
-                                echo 'style="display:none;"';
-                            }
-                            ?>
-
-                        >
+                        <div class="form-group" id="Q8W2S6" style="display:none;">
                             <label><span class="cube">6(a)</span> Calculate your school’s rainwater harvesting potential
                                 (in litres).</label>
-                            <input class="form-control space-textbox" id="Q8W2S6A" type="number" min="0" name="Q8W2S6"
-                                   placeholder="<?php if (isset($data['Q8W2S6'])) echo $data['Q8W2S6']; ?>"
-                                   value="<?php echo set_value('Q8W2S6'); ?>"/>
+                            <input class="form-control space-textbox" id="Q8W2S6A" type="number" min="0" name="Q8W2S6" placeholder="" value="">
                         </div>
                         <div class="form-group">
                             <label>To calculate the maximum rainwater harvesting potential:</label>
@@ -2136,8 +1128,7 @@
                                     </tbody>
                                 </table>
                                 <br>
-                                Note: *For Average Rainfall Data refer to Knowledge Bank: <a class="kplink" href="
-http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_blank"> </a>www.greenschoolsprogramme.org</a><br>
+                                Note: *For Average Rainfall Data refer to Knowledge Bank: <a class="kplink" href="&#10;http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_blank"> </a>www.greenschoolsprogramme.org<br>
                             </div>
                         </div>
                         <br>
@@ -2154,128 +1145,79 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
                             <label class="control-label"><span class="cube">7</span>Please share details about
                                 sanitation and hygiene practices in your school: </label>
                             <div class="form-group">
-                                <label class="radio-inline text-gray col-xs-10"> Does the school have separate toilets
-                                    for males and females? </label>
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" name="Q8W3S1"
-                                           value="<?php echo set_value('Q8W3S1', 'Y') ?>" <?php if (isset($data['Q8W3S1'])) echo $data['Q8W3S1'] == 'Y' ? "checked" : "" ?>/>
-                                    Yes </label>
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" name="Q8W3S1"
-                                           value="<?php echo set_value('Q8W3S1', 'N') ?>" <?php if (isset($data['Q8W3S1'])) echo $data['Q8W3S1'] == 'N' ? "checked" : "" ?>>
-                                    No </label>
-                            </div>
-                            <div class="form-group">
-                                <label class="radio-inline text-gray col-xs-10">Are there sufficient toilets for women
-                                    in your school?</label>
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" name="Q8W3S2"
-                                           value="<?php echo set_value('Q8W3S2', 'Y') ?>" <?php if (isset($data['Q8W3S2'])) echo $data['Q8W3S2'] == 'Y' ? "checked" : "" ?>>
-                                    Yes </label>
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" name="Q8W3S2"
-                                           value="<?php echo set_value('Q8W3S2', 'N') ?>" <?php if (isset($data['Q8W3S2'])) echo $data['Q8W3S2'] == 'N' ? "checked" : "" ?>>
-                                    No </label>
-                            </div>
-                            <div class="form-group">
-                                <label class="radio-inline text-gray col-xs-10">Are there sufficient toilets for men in
-                                    your school?</label>
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" name="Q8W3S3"
-                                           value="<?php echo set_value('Q8W3S3', 'Y') ?>" <?php if (isset($data['Q8W3S3'])) echo $data['Q8W3S3'] == 'Y' ? "checked" : "" ?>>
-                                    Yes </label>
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" name="Q8W3S3"
-                                           value="<?php echo set_value('Q8W3S3', 'N') ?>" <?php if (isset($data['Q8W3S3'])) echo $data['Q8W3S3'] == 'N' ? "checked" : "" ?>>
-                                    No </label>
-                            </div>
-                            <div class="form-group">
-                                <label class="radio-inline text-gray col-xs-10"> Are the toilets accessible and safe to
-                                    use for children? </label>
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" name="Q8W3S4"
-                                           value="<?php echo set_value('Q8W3S4', 'Y') ?>" <?php if (isset($data['Q8W3S4'])) echo $data['Q8W3S4'] == 'Y' ? "checked" : "" ?>>
-                                    Yes </label>
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" name="Q8W3S4"
-                                           value="<?php echo set_value('Q8W3S4', 'N') ?>" <?php if (isset($data['Q8W3S4'])) echo $data['Q8W3S4'] == 'N' ? "checked" : "" ?>>
-                                    No </label>
-                            </div>
-                            <div class="form-group">
-                                <label class="radio-inline text-gray col-xs-10">Are the toilets accessible and safe to
-                                    use for differently abled children? </label>
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" name="Q8W3S5"
-                                           value="<?php echo set_value('Q8W3S5', 'Y') ?>" <?php if (isset($data['Q8W3S5'])) echo $data['Q8W3S5'] == 'Y' ? "checked" : "" ?>>
-                                    Yes </label>
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" name="Q8W3S5"
-                                           value="<?php echo set_value('Q8W3S5', 'N') ?>" <?php if (isset($data['Q8W3S5'])) echo $data['Q8W3S5'] == 'N' ? "checked" : "" ?>>
-                                    No </label>
-                            </div>
-                            <div class="form-group">
-                                <label class="radio-inline text-gray col-xs-10">Are the toilets accessible and safe to
-                                    use for differently abled staff (teaching and non-teaching)?</label>
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" name="Q8W3S6"
-                                           value="<?php echo set_value('Q8W3S6', 'Y') ?>" <?php if (isset($data['Q8W3S6'])) echo $data['Q8W3S6'] == 'Y' ? "checked" : "" ?>>
-                                    Yes </label>
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" name="Q8W3S6"
-                                           value="<?php echo set_value('Q8W3S6', 'N') ?>" <?php if (isset($data['Q8W3S6'])) echo $data['Q8W3S6'] == 'N' ? "checked" : "" ?>>
-                                    No </label>
-                            </div>
-                            <div class="form-group">
-                                <label class="radio-inline text-gray col-xs-10">Are the toilets situated in the right
-                                    location in terms of privacy and safety?</label>
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" name="Q8W3S7"
-                                           value="<?php echo set_value('Q8W3S7', 'Y') ?>" <?php if (isset($data['Q8W3S7'])) echo $data['Q8W3S7'] == 'Y' ? "checked" : "" ?>>
-                                    Yes </label>
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" name="Q8W3S7"
-                                           value="<?php echo set_value('Q8W3S7', 'N') ?>" <?php if (isset($data['Q8W3S7'])) echo $data['Q8W3S7'] == 'N' ? "checked" : "" ?>>
-                                    No </label>
-                            </div>
-                            <div class="form-group">
-                                <label class="radio-inline text-gray col-xs-10">Is there sufficient light during day
-                                    time?</label>
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" name="Q8W3S8"
-                                           value="<?php echo set_value('Q8W3S8', 'Y') ?>" <?php if (isset($data['Q8W3S8'])) echo $data['Q8W3S8'] == 'Y' ? "checked" : "" ?>>
-                                    Yes </label>
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" name="Q8W3S8"
-                                           value="<?php echo set_value('Q8W3S8', 'N') ?>" <?php if (isset($data['Q8W3S8'])) echo $data['Q8W3S8'] == 'N' ? "checked" : "" ?>>
-                                    No </label>
+							<table class="table table-bordered table-striped">
+        
+        <tr>
+          <td> Does the school have separate toilets
+                                    for males and females?</td>
+          <td> <p> <?php echo (getFiled('Q8W3S1', $schoolUserID)!="")? (getFiled('Q8W3S1', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>  </td>
+        </tr>
+        <tr>
+          <td>Are there sufficient toilets for women
+                                    in your school?</td>
+          <td> <p> <?php echo (getFiled('Q8W3S2', $schoolUserID)!="")? (getFiled('Q8W3S2', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>  </td>
+        </tr>
+        <tr>
+          <td> Are there sufficient toilets for men in
+                                    your school?  </td>
+          <td> <p> <?php echo (getFiled('Q8W3S3', $schoolUserID)!="")? (getFiled('Q8W3S3', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>  </td>
+         
+        </tr>
+        <tr>
+          <td>Are the toilets accessible and safe to
+                                    use for children?</td>
+          <td> <p> <?php echo (getFiled('Q8W3S4', $schoolUserID)!="")? (getFiled('Q8W3S4', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>  </td>
+        </tr>
+        <tr>
+          <td> Are the toilets accessible and safe to
+                                    use for differently abled children?</td>
+          <td> <p> <?php echo (getFiled('Q8W3S5', $schoolUserID)!="")? (getFiled('Q8W3S5', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p> </td>
+        </tr>
+		 <tr>
+          <td> Are the toilets accessible and safe to
+                                    use for differently abled staff (teaching and non-teaching)?</td>
+          <td> <p> <?php echo (getFiled('Q8W3S6', $schoolUserID)!="")? (getFiled('Q8W3S6', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>  </td>
+        </tr>
+		 <tr>
+          <td> Are the toilets situated in the right
+                                    location in terms of privacy and safety?</td>
+          <td> <p> <?php echo (getFiled('Q8W3S7', $schoolUserID)!="")? (getFiled('Q8W3S7', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>  </td>
+        </tr>
+		 <tr>
+          <td> Is there sufficient light during day
+                                    time?</td>
+          <td> <p> <?php echo (getFiled('Q8W3S8', $schoolUserID)!="")? (getFiled('Q8W3S8', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>  </td>
+        </tr>
+				
+     </table>
+				      
                             </div>
                         </div>
                         <br>
                         <div class="form-group">
-                            <label><span class="cube">8</span>How many drinking water taps do you have?</label>
-                            <input class="form-control space-textbox" id="Q9W1" type="number" min="0" name="Q9W1"
-                                   placeholder="<?php if (isset($data['Q9W1'])) echo $data['Q9W1']; ?>"
-                                   value="<?php echo set_value('Q9W1'); ?>"/>
+                            <label><span class="cube">8</span>How many drinking water taps do you have?</label><br/>
+							<?php echo (getFiled('Q9W1', $schoolUserID)!="")?getFiled('Q9W1', $schoolUserID) : "N/A"; ?>
+                           
                         </div>
                         <br>
                         <div class="form-group">
                             <label><span class="cube">9</span>How many hand pumps do you have?</label>
-                            <input class="form-control space-textbox" id="Q10W1" type="number" min="0" name="Q10W1"
-                                   placeholder="<?php if (isset($data['Q10W1'])) echo $data['Q10W1']; ?>"
-                                   value="<?php echo set_value('Q10W1'); ?>"/>
+							<br/>
+							<?php echo (getFiled('Q10W1', $schoolUserID)!="")?getFiled('Q10W1', $schoolUserID) : "N/A"; ?>
+                            
                         </div>
                         <br>
                         <div class="form-group">
                             <label><span class="cube">10</span>How many ablution taps (taps used for washing hands only)
                                 do you have?</label>
-                            <input class="form-control space-textbox" id="Q11W1" type="number" min="0" name="Q11W1"
-                                   placeholder="<?php if (isset($data['Q11W1'])) echo $data['Q11W1']; ?>"
-                                   value="<?php echo set_value('Q11W1'); ?>"/>
+								<br/>
+							<?php echo (getFiled('Q11W1', $schoolUserID)!="")?getFiled('Q11W1', $schoolUserID) : "N/A"; ?>
+                            
                         </div>
                         <br>
                         <!--div class="form-group">
       <label><span class="cube">11</span>How many water closets (used for defecation and urination) do you have?</label>
-      <input class="form-control space-textbox" type="number" min="0" name="Q12W1" placeholder="<?php if (isset($data['Q12W1'])) echo $data['Q12W1']; ?>" value="<?php echo set_value('Q12W1'); ?>"/>
+      <input class="form-control space-textbox" type="number" min="0" name="Q12W1" placeholder="" value=""/>
     </div-->
                         <br>
                         <div class="form-group">
@@ -2287,46 +1229,42 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
                                 </div>
                                 <div class="col-xs-2">
                                     <label class="text-gray"> Girls</label>
-                                    <input class="form-control space-textbox" onkeyup="Toilets()" id="Q13W1S1"
-                                           type="number" min="0" name="Q13W1S1"
-                                           placeholder="<?php if (isset($data['Q13W1S1'])) echo $data['Q13W1S1'] ?>"
-                                           value="<?php echo set_value('Q13W1S1'); ?>"/>
+									<br/>
+									<?php echo (getFiled('Q13W1S1', $schoolUserID)!="")?getFiled('Q13W1S1', $schoolUserID) : "N/A"; ?>
+                                    
                                 </div>
                                 <div class="col-xs-2">
                                     <label class="text-gray">Boys</label>
-                                    <input class="form-control space-textbox" onkeyup="Toilets()" id="Q13W1S2"
-                                           type="number" min="0" name="Q13W1S2"
-                                           placeholder="<?php if (isset($data['Q13W1S2'])) echo $data['Q13W1S2'] ?>"
-                                           value="<?php echo set_value('Q13W1S2'); ?>"/>
+									<br/>
+									<?php echo (getFiled('Q13W1S2', $schoolUserID)!="")?getFiled('Q13W1S2', $schoolUserID) : "N/A"; ?>
+                                   
                                 </div>
                                 <div class="col-xs-2">
                                     <label class="text-gray">Common</label>
-                                    <input class="form-control space-textbox" onkeyup="Toilets()" id="Q13W1S3"
-                                           type="number" min="0" name="Q13W1S3"
-                                           placeholder="<?php if (isset($data['Q13W1S3'])) echo $data['Q13W1S3'] ?>"
-                                           value="<?php echo set_value('Q13W1S3'); ?>"/>
+									<br/>
+									<?php echo (getFiled('Q13W1S3', $schoolUserID)!="")?getFiled('Q13W1S3', $schoolUserID) : "N/A"; ?>
+                                    
                                 </div>
                                 <div class="col-xs-2">
                                     <label class="text-gray">Total</label>
-                                    <input class="form-control space-textbox" onkeyup="Toilets()" id="Q13W1S4"
-                                           type="number" min="0" name="Q13W1S4"
-                                           placeholder="<?php if (isset($data['Q13W1S4'])) echo $data['Q13W1S4'] ?>"
-                                           value="<?php echo set_value('Q13W1S4'); ?>" readonly/>
+									<br/>
+									<?php echo (getFiled('Q13W1S4', $schoolUserID)!="")?getFiled('Q13W1S4', $schoolUserID) : "N/A"; ?>
+                                   
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label><span class="cube">12</span>How many urinals (strictly used for urination only)
                                     do you have?</label>
-                                <input class="form-control space-textbox" id="Q14W1" type="number" min="0" name="Q14W1"
-                                       placeholder="<?php if (isset($data['Q14W1'])) echo $data['Q14W1']; ?>"
-                                       value="<?php echo set_value('Q14W1'); ?>"/>
+									<br/>
+									<?php echo (getFiled('Q14W1', $schoolUserID)!="")?getFiled('Q14W1', $schoolUserID) : "N/A"; ?>
+                                
                             </div>
                             <div class="form-group">
                                 <label><span class="cube">13</span>How many other water outlets (example: taps in play
                                     fields, sprinklers, swimming pool) do you have?</label>
-                                <input class="form-control space-textbox" id="Q15W1" type="number" min="0" name="Q15W1"
-                                       placeholder="<?php if (isset($data['Q15W1'])) echo $data['Q15W1']; ?>"
-                                       value="<?php echo set_value('Q15W1'); ?>"/>
+									<br/>
+									<?php echo (getFiled('Q15W1', $schoolUserID)!="")?getFiled('Q15W1', $schoolUserID) : "N/A"; ?>
+                                
                             </div>
                         </div>
                         <div class="form-group">
@@ -2336,91 +1274,46 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
                             <label class="control-label"><span class="cube">14</span>Is there a water storage system in
                                 place to supply water in the toilets?</label>
                             <div class="form-group">
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" name="Q16W1"
-                                           value="<?php echo set_value('Q16W1', 'Y') ?>" <?php if (isset($data['Q16W1'])) echo $data['Q16W1'] == 'Y' ? "checked" : "" ?>>
-                                    Yes </label>
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" name="Q16W1"
-                                           value="<?php echo set_value('Q16W1', 'N') ?>" <?php if (isset($data['Q16W1'])) echo $data['Q16W1'] == 'N' ? "checked" : "" ?>>
-                                    No </label>
+							<p> <?php echo (getFiled('Q16W1', $schoolUserID)!="")? (getFiled('Q16W1', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+                                
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label"><span class="cube">15</span>Is the water supply
                                 sufficient?</label>
                             <div class="form-group">
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" name="Q17W1"
-                                           value="<?php echo set_value('Q17W1', 'Y') ?>" <?php if (isset($data['Q17W1'])) echo $data['Q17W1'] == 'Y' ? "checked" : "";
-                                    if (isset($other['Q2G1'])) echo "required"; ?>>
-                                    Yes </label>
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" name="Q17W1"
-                                           value="<?php echo set_value('Q17W1', 'N') ?>" <?php if (isset($data['Q17W1'])) echo $data['Q17W1'] == 'N' ? "checked" : "";
-                                    if (isset($other['Q2G1'])) echo "required"; ?>>
-                                    No </label>
+							<p> <?php echo (getFiled('Q21W1', $schoolUserID)!="")? (getFiled('Q21W1', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+                                
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label"><span class="cube">16</span>Are the toilets cleaned?</label>
                             <div class="form-group">
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" name="Q18W1" onclick="ToiletCleaned(1)"
-                                           value="<?php echo set_value('Q18W1', 'Y') ?>" <?php if (isset($data['Q18W1'])) echo $data['Q18W1'] == 'Y' ? "checked" : "" ?>>
-                                    Yes </label>
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" name="Q18W1" onclick="ToiletCleaned(2)"
-                                           value="<?php echo set_value('Q18W1', 'N') ?>" <?php if (isset($data['Q18W1'])) echo $data['Q18W1'] == 'N' ? "checked" : "" ?>>
-                                    No </label>
+							<p> <?php echo (getFiled('Q18W1', $schoolUserID)!="")? (getFiled('Q18W1', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+                                
                             </div>
                         </div>
-                        <?php
-                        if (isset($data['Q18W1']))
-                        {
-                        if ($data['Q18W1'] == 'Y')
-                        {
-                        ?>
-                        <div class="form-group" id="Q18W2">
-                            <?php } else { ?>
-                            <div class="form-group" id="Q18W2" style="display: none;">
-
-                                <?php }
-                                } else { ?>
-                                <div class="form-group" id="Q18W2" style="display: none;">
-
-                                    <?php } ?>
-                                    <label class="control-label"><span class="cube">16(a)</span>If yes, please
+             <div class="form-group" id="Q18W2" style="display: block;">
+                     <label class="control-label"><span class="cube">16(a)</span>If yes, please
                                         specify</label>
                                     <div class="form-group">
-                                        <ul>
-                                            <li>
-                                                <label class="radio-inline text-gray">
-                                                    <input type="radio" name="Q18W2"
-                                                           value="<?php echo set_value('Q18W2', 1) ?>" <?php if (isset($data['Q18W2'])) echo $data['Q18W2'] == 1 ? "checked" : "" ?>>
-                                                    Once a day </label>
-                                            </li>
-                                            <li>
-                                                <label class="radio-inline text-gray">
-                                                    <input type="radio" name="Q18W2"
-                                                           value="<?php echo set_value('Q18W2', 2) ?>" <?php if (isset($data['Q18W2'])) echo $data['Q18W2'] == 2 ? "checked" : "" ?>>
-                                                    Twice a day </label>
-                                            </li>
-                                            <li>
-                                                <label class="radio-inline text-gray">
-                                                    <input type="radio" name="Q18W2"
-                                                           value="<?php echo set_value('Q18W2', 3) ?>" <?php if (isset($data['Q18W2'])) echo $data['Q18W2'] == 3 ? "checked" : "" ?>>
-                                                    More than twice a day </label>
-                                            </li>
-                                        </ul>
+						<?php 
+							  if(getFiled('Q18W2', $schoolUserID)==1):
+								 echo "Once a day";
+								 elseif(getFiled('Q18W2', $schoolUserID)==2):
+								 echo "Twice a day";
+								 elseif(getFiled('Q18W2', $schoolUserID)==3):
+								 echo "More than twice a day ";
+								 
+								 endif;
+								 ?>
+                          
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label>
-                                        <h6>Task 7: Does your school reuse/recycle waste water? <a class="kplink"
-                                                                                                   href="http://www.greenschoolsprogramme.org/knowledge-bank/water/#recyclingSewageWater"
-                                                                                                   target="_blank"> </a>
+                                        <h6>Task 7: Does your school reuse/recycle waste water? 
                                         </h6>
                                     </label>
                                     <br>
@@ -2432,211 +1325,101 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
                                     <label class="control-label"><span class="cube">17</span>Does your school treat
                                         wastewater?</label>
                                     <div class="form-group">
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q19W1"
-                                                   value="<?php echo set_value('Q19W1', 'Y') ?>" <?php if (isset($data['Q19W1'])) echo $data['Q19W1'] == 'Y' ? "checked" : "" ?>>
-                                            Yes </label>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q19W1"
-                                                   value="<?php echo set_value('Q19W1', 'N') ?>" <?php if (isset($data['Q19W1'])) echo $data['Q19W1'] == 'N' ? "checked" : "" ?>>
-                                            No </label>
+									<p> <?php echo (getFiled('Q19W1', $schoolUserID)!="")? (getFiled('Q19W1', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+                                        
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label"><span class="cube">18</span>Does your school reuse the
                                         treated wastewater?</label>
                                     <div class="form-group">
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q20W1" onclick="WasteWater(1)"
-                                                   value="<?php echo set_value('Q20W1', 'Y') ?>" <?php if (isset($data['Q20W1'])) echo $data['Q20W1'] == 'Y' ? "checked" : "" ?>>
-                                            Yes </label>
-                                        <label class="radio-inline text-gray">
-                                            <input type="radio" name="Q20W1" onclick="WasteWater(2)"
-                                                   value="<?php echo set_value('Q20W1', 'N') ?>" <?php if (isset($data['Q20W1'])) echo $data['Q20W1'] == 'N' ? "checked" : "" ?>>
-                                            No </label>
+									<p> <?php echo (getFiled('Q20W1', $schoolUserID)!="")? (getFiled('Q20W1', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+                                        
                                     </div>
                                 </div>
 
 
-                                <?php
-                                if (isset($data['Q20W1']))
-                                {
-                                if ($data['Q20W1'] == 'Y')
-                                {
-                                ?>
-                                <div class="form-group" id="Q20W1Q">
-                                    <?php } else { ?>
-                                    <div class="form-group" id="Q20W1Q" style="display: none;">
-
-                                        <?php }
-                                        } else { ?>
-                                        <div class="form-group" id="Q20W1Q" style="display: none;">
-
-                                            <?php } ?>
-                                            <label class="control-label"><span class="cube">18(a)</span>How does your
+                <div class="form-group" id="Q20W1Q">
+				
+                                                                                <label class="control-label"><span class="cube">18(a)</span>How does your
                                                 school reuse wastewater?</label>
                                             <div class="form-group">
-                                                <ul>
-                                                    <li>
-                                                        <label class="radio-inline text-gray">
-                                                            <input type="radio" name="Q20W2"
-                                                                   value="<?php echo set_value('Q20W2', 1) ?>" <?php if (isset($data['Q20W2'])) echo $data['Q20W2'] == 1 ? "checked" : "" ?>>
-                                                            Wastewater flows directly to the drains </label>
-                                                    </li>
-                                                    <li>
-                                                        <label class="radio-inline text-gray">
-                                                            <input type="radio" name="Q20W2"
-                                                                   value="<?php echo set_value('Q20W2', 2) ?>" <?php if (isset($data['Q20W2'])) echo $data['Q20W2'] == 2 ? "checked" : "" ?>>
-                                                            Flushing</label>
-                                                    </li>
-                                                    <li>
-                                                        <label class="radio-inline text-gray">
-                                                            <input type="radio" name="Q20W2"
-                                                                   value="<?php echo set_value('Q20W2', 3) ?>" <?php if (isset($data['Q20W2'])) echo $data['Q20W2'] == 3 ? "checked" : "" ?>>
-                                                            Recharge Ground Water</label>
-                                                    </li>
-                                                </ul>
+											<?php 
+							  if(getFiled('Q20W2', $schoolUserID)==1):
+								 echo "Wastewater flows directly to the drains";
+								 elseif(getFiled('Q20W2', $schoolUserID)==2):
+								 echo "Flushing";
+								 elseif(getFiled('Q20W2', $schoolUserID)==3):
+								 echo " Recharge Ground Water";
+								 
+								 endif;
+								 ?>
+                                               
                                             </div>
                                         </div>
 
 
-                                        <?php
-                                        if (isset($data['Q20W1']))
-                                        {
-                                        if ($data['Q20W1'] == 'N')
-                                        {
-                                        ?>
-                                        <div class="form-group" id="Q19W2">
-                                            <?php } else { ?>
-                                            <div class="form-group" id="Q19W2" style="display: none;">
+                                                                                    <div class="form-group" id="Q19W2">
 
-                                                <?php }
-                                                } else { ?>
-                                                <div class="form-group" id="Q19W2" style="display: none;">
-
-                                                    <?php } ?>
-                                                    <label class="control-label"><span class="cube">18(a)</span>Please
-                                                        specify the fate of wastewater:</label>
-                                                    <div class="form-group">
-                                                        <ul>
-                                                            <li>
-                                                                <label class="radio-inline text-gray">
-                                                                    <input type="radio" name="Q20W3"
-                                                                           value="<?php echo set_value('Q20W3', 1) ?>" <?php if (isset($data['Q20W3'])) echo $data['Q20W3'] == 1 ? "checked" : "" ?>>
-                                                                    Wastewater flows directly to the drains </label>
-                                                            </li>
-                                                            <li>
-                                                                <label class="radio-inline text-gray">
-                                                                    <input type="radio" name="Q20W3"
-                                                                           value="<?php echo set_value('Q20W3', 2) ?>" <?php if (isset($data['Q20W3'])) echo $data['Q20W3'] == 2 ? "checked" : "" ?>>
-                                                                    Used for groundwater recharge </label>
-                                                            </li>
-                                                            <li>
-                                                                <label class="radio-inline text-gray">
-                                                                    <input type="radio" name="Q20W3"
-                                                                           value="<?php echo set_value('Q20W3', 3) ?>" <?php if (isset($data['Q20W3'])) echo $data['Q20W3'] == 3 ? "checked" : "" ?>>
-                                                                    Used for gardening and horticulture </label>
-                                                            </li>
-                                                        </ul>
+                                                                                                    <label class="control-label"><span class="cube">18(a)</span>Please specify the fate of wastewater:</label>
+                           <div class="form-group">
+						   <?php 
+							  if(getFiled('Q20W3', $schoolUserID)==1):
+								 echo "Wastewater flows directly to the drains";
+								 elseif(getFiled('Q20W3', $schoolUserID)==2):
+								 echo "Used for groundwater recharge";
+								 elseif(getFiled('Q20W3', $schoolUserID)==3):
+								 echo " Used for gardening and horticulture";
+								 
+								 endif;
+								 ?>
+                        
                                                     </div>
                                                 </div>
-                                                <div class="form-group">
-                                                    <label>Please upload a flow chart (hand drawn) of the wastewater
-                                                        treatment process.</label><br/>
-                                                    <button class="btn uploadbtn upload"
-                                                            data-id="Water Treatment Process" data-toggle="modal"
-                                                            data-target="#airModal" type="button">UPLOAD FILES
-                                                    </button>
-                                                    <br>
-                                                    </label>
-                                                </div>
-                                                <div class="form-group" id="WastePolicy">
-                                                    <label class="control-label">Please upload supporting
-                                                        documents:</label>
-                                                    <br>
-                                                    &bull;Pictures of audit team doing survey<br/>
-                                                    Please upload all supporting documents related to this section here.
-                                                    Note, files must be one of the following formats: PDF Document
-                                                    (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg) <br>
-                                                    File size per document should not exceed 500 KB.
-                                                    <br/><br/>
-                                                    <button class="btn uploadbtn upload"
-                                                            data-id="Supporting Document Air" data-toggle="modal"
-                                                            data-target="#airModal" type="button">UPLOAD FILES
-                                                    </button>
-                                                    <br>
-                                                    <br>
-                                                </div>
-                                                <div class="text-center">
-                                                    <button type="button" class="org-btn" id="btnWaterPrevious">Previous</button>
-                                                    <button type="submit" id="movenextbtn" value="movenext"
-                                                            name="movenext" accesskey="n" class="submit button">Next
-                                                    </button>
-                                                    <button type="button"  class="org-btn" id="watersave">Save and Resume Later</button>
-                                                </div>
-                                                <?php echo form_close(); ?> </div>
-                                        </div>
-                                        <!-- /.container -->
-                                        <?php $this->load->view('footer'); ?>
-                                        <style type="text/css">
-                                            .text-gray {
-                                                color: #666666 !important;
-                                                /*font-weight:100!important;*/
-                                            }
-                                        </style>
-                                        <div id="videoModal" class="modal fade" role="dialog">
-                                            <div class="modal-dialog">
-                                                <!-- Modal content-->
-                                                <div class="modal-content"
-                                                     style="background:transparent; border-radius:0px;">
-                                                    <div class="modal-header"
-                                                         style="background: rgb(232, 101, 73); color:#fff;">
-                                                        <button type="button" class="close" data-dismiss="modal">
-                                                            &times;
-                                                        </button>
-                                                        <h4 class="modal-title">View video tutorial</h4>
-                                                    </div>
-                                                    <iframe width="100%" height="330px"
-                                                            src="https://www.youtube.com/embed/TcyZ1vtXsMw" id="video"
-                                                            frameborder="0" allowfullscreen></iframe>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <script type="text/javascript">
-                                            $('.close').click(function () {
-                                                $('#video').attr("src", "https://www.youtube.com/embed/TcyZ1vtXsMw");
-                                            });
-                                            $('body').click(function () {
-                                                $('#video').attr("src", "https://www.youtube.com/embed/TcyZ1vtXsMw");
-                                            });
-
-                                            $(document).ready(function () {
-                                                $('#btnWaterPrevious').on('click', function (data) {
-                                                    var fd = $('#water').serialize();
-                                                    //console.log(fd);
-                                                    $.ajax({
-                                                        type: 'POST',
-                                                        url: '<?php echo base_url('previous/waterajax') ?>',
-                                                        data: fd,
-                                                        success: function (data)
-                                                        {
-                                                            window.location.href = "<?php echo base_url('land'); ?>";
-                                                        }
-                                                    });
-                                                });
-
-                                                $('#watersave').on('click', function (data) {
-                                                    var fd = $('#water').serialize();
-                                                    //console.log(fd);
-                                                    $.ajax({
-                                                        type: 'POST',
-                                                        url: '<?php echo base_url('previous/waterajax') ?>',
-                                                        data: fd,
-                                                        success: function (data)
-                                                        {
-                                                            window.location.href = "<?php echo base_url('logout'); ?>";
-                                                        }
-                                                    });
-                                                });
-                                            });
-                                        </script>
+       <div class="form-group">
+     <label>Please upload a flow chart (hand drawn) of the wastewatertreatment process.</label><br>
+    <button class="btn uploadbtn upload" data-id="Flow
+           Chart Hand Drwan" data-toggle="modal" data-target="#uploadModal" type="button">UPLOAD FILES</button>
+                       <br>
+                                                    
+         </div>
+          <table width="100%" class="question uploadedfiles">
+               <thead>
+                     <tr>
+                      <th>File name</th>
+                       <th>Action</th>
+                     </tr>
+               </thead>
+              <tbody>
+                                                                                                        </tbody>
+          </table>
+       <div class="form-group" id="WastePolicy">
+        <label class="control-label">Please upload supportingdocuments:</label>
+               <br>
+         •Pictures of audit team doing survey<br>
+          Please upload all supporting documents related to this section here.
+          Note, files must be one of the following formats: PDF Document
+          (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg) <br>
+          File size per document should not exceed 500 KB.
+          <br><br>
+         <button class="btn uploadbtn upload" data-id="Supporting Document Water" data-toggle="modal" data-target="#uploadModal" type="button">UPLOAD FILES</button>
+               <br>
+               <br>
+       </div>
+         <table width="100%" class="question uploadedfiles">
+          <thead>
+                 <tr>
+                   <th>File name</th>
+                    <th>Action</th>
+                 </tr>
+           </thead>
+        <tbody>
+                                                                                                        </tbody>
+         </table>
+     <div class="text-center">
+     <button type="button" class="org-btn" id="btnWaterPrevious">Previous</button>
+    <button type="submit" id="movenextbtn" value="movenext" name="movenext" accesskey="n" class="submit button">Next</button>
+    <button type="button" class="org-btn" id="watersave">Save and Resume Later</button>
+     </div>
+     </form> </div></div>
+	<?php $this->load->view('admin/survey/footer'); ?>

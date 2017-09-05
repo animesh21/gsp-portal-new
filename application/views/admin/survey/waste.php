@@ -1,26 +1,11 @@
-<?php $this->load->view('header'); ?>
-
+<?php $this->load->view('admin/survey/header'); ?>
 <div class="container">
     <div class="content-form">
-        <div class="log-nav">
-            <div class="welcome">Welcome, <span
-                        style="font-weight:bold"><?php echo $this->session->userdata('USERNAME'); ?></span></div>
-            <ul>
-                <!--<li><a href="http://www.greenschoolsprogramme.org/GSP-Audit2016-Questions.pdf" target="_blank" onclick="_gaq.push([\" _trackevent\",\"download\",\"pdf\",this.href])"=""><img src="http://www.greenschoolsprogramme.org/audit2016/images/pdf-icon16.png"> Audit Questionnaire</a> |</li>-->
-                <li><a href="<?php echo base_url('logout'); ?>">Logout</a></li>
-                <li>|</li>
-                <li><a class="lptext" title="Change Password Form" data-toggle="modal" data-target="#ChangePass"
-                       href="#ChangePass" rel="shadowbox;width=580;height=500;">Change Password</a></li>
-            </ul>
-        </div>
-        <div id="pprg" class="newprog progress" style="text-align:center">
-            <div id="samplt" class="fin-prog progress-bar" role="progressbar" style="width:75%; height: 35px;">75%</div>
-        </div>
+        
+        
         <div class="intro">
             <h1>WASTE</h1>
-            <div class="video"><a class="lptext" href="#" data-toggle="modal" data-target="#videoModal"><img
-                            src="http://greenschoolsprogramme.org/audit2015/upload/templates/tfr_responsive/images/video-icon.png"
-                            style="width: 45px; height: 40px; margin-top:47px;"></a></div>
+            <div class="video"><a class="lptext" href="#" data-toggle="modal" data-target="#videoModal"><img src="http://greenschoolsprogramme.org/audit2015/upload/templates/tfr_responsive/images/video-icon.png" style="width: 45px; height: 40px; margin-top:47px;"></a></div>
         </div>
         <p> Schools can provide excellent educational opportunities for creating awareness about waste and its
             management.<br>
@@ -33,7 +18,7 @@
             the local environment.<br>
             <br>
             <b> The unit of measurement to be used in the Waste section is Kilogram (kg).</b></p>
-        <?php echo form_open('waste/set', array('id' => 'waste')); ?>
+        <form action="http://localhost/gsp-portal-new/waste/set" id="waste" method="post" accept-charset="utf-8">
         <div class="form-group">
             <label>
                 <h6>Task 1: Choose your Waste Audit Team.</h6>
@@ -45,386 +30,186 @@
             housekeeping staff to work with you.
         </div>
         <br>
-        <input type="hidden" id="Q4G4S3" value="<?php if (isset($other['Q4G4S3'])) echo $other['Q4G4S3']; ?>">
-        <input type="hidden" id="Q4A1" value="<?php if (isset($other['Q4A1'])) echo $other['Q4A1']; ?>">
-        <input type="hidden" id="Q4L4" value="<?php if (isset($other['Q4L4'])) echo $other['Q4L4']; ?>">
-        <input type="hidden" id="Q4L6" value="<?php if (isset($other['Q4L6'])) echo $other['Q4L6']; ?>">
-        <input type="hidden" id="Q4F1" value="<?php if (isset($other['Q4F1'])) echo $other['Q4F1']; ?>">
-        <input type="hidden" id="Q4W2" value="<?php if (isset($other['Q4W2'])) echo $other['Q4W2']; ?>">
-        <input type="hidden" id="Q6A2S1T1" value="<?php if (isset($other['Q6A2S1T1'])) echo $other['Q6A2S1T1']; ?>">
-        <input type="hidden" id="Q6A2S1T2" value="<?php if (isset($other['Q6A2S1T2'])) echo $other['Q6A2S1T2']; ?>">
-        <input type="hidden" id="Q6A2S1T3" value="<?php if (isset($other['Q6A2S1T3'])) echo $other['Q6A2S1T3']; ?>">
-        <input type="hidden" id="Q6A2S1T4" value="<?php if (isset($other['Q6A2S1T4'])) echo $other['Q6A2S1T4']; ?>">
-        <input type="hidden" id="Q6A2S1T5" value="<?php if (isset($other['Q6A2S1T5'])) echo $other['Q6A2S1T5']; ?>">
-        <input type="hidden" id="Q6A2S1T6" value="<?php if (isset($other['Q6A2S1T6'])) echo $other['Q6A2S1T6']; ?>">
+        <input type="hidden" id="Q4G4S3" value="400">
+        <input type="hidden" id="Q4A1" value="10">
+        <input type="hidden" id="Q4L4" value="">
+        <input type="hidden" id="Q4L6" value="">
+        <input type="hidden" id="Q4F1" value="Y">
+        <input type="hidden" id="Q4W2" value="1">
+        <input type="hidden" id="Q6A2S1T1" value="40">
+        <input type="hidden" id="Q6A2S1T2" value="40">
+        <input type="hidden" id="Q6A2S1T3" value="40">
+        <input type="hidden" id="Q6A2S1T4" value="40">
+        <input type="hidden" id="Q6A2S1T5" value="40">
+        <input type="hidden" id="Q6A2S1T6" value="2/2">
         <div class="form-group">
             <label class="control-label">Teachers (maximum of three teachers can be part of the team):</label>
-            <div class="form-group row">
-                <div class="col-xs-1"></div>
-                <div class="col-xs-3">
-                    <label>First Name</label>
-                </div>
-                <div class="col-xs-3">
-                    <label>Last Name</label>
-                </div>
-                <div class="col-xs-3">
-                    <label>Email ID</label>
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-xs-1"> 1</div>
-                <div class="col-xs-3"> <?php echo form_error('name'); ?>
-                    <input class="form-control space-textbox" id="Q1Wa1S1" type="text" name="Q1Wa1S1"
-                           placeholder="<?php if (isset($data['Q1Wa1S1'])) echo $data['Q1Wa1S1']; ?>"
-                           value="<?php echo set_value('Q1Wa1S1'); ?>"/>
-                </div>
-                <div class="col-xs-3"> <?php echo form_error('name'); ?>
-                    <input class="form-control space-textbox" id="Q1Wa1S3" type="text" name="Q1Wa1S3"
-                           placeholder="<?php if (isset($data['Q1Wa1S3'])) echo $data['Q1Wa1S3']; ?>"
-                           value="<?php echo set_value('Q1Wa1S3'); ?>"/>
-                </div>
-                <div class="col-xs-3"> <?php echo form_error('email'); ?>
-                    <input class="form-control space-textbox" id="Q1Wa1S2" type="email" name="Q1Wa1S2"
-                           placeholder="<?php if (isset($data['Q1Wa1S2'])) echo $data['Q1Wa1S2']; ?>"
-                           value="<?php echo set_value('Q1Wa1S2'); ?>"/>
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-xs-1"> 2</div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q1Wa2S1" type="text" name="Q1Wa2S1"
-                           placeholder="<?php if (isset($data['Q1Wa2S1'])) echo $data['Q1Wa2S1'] ?>"
-                           value="<?php echo set_value('Q1Wa2S1'); ?>"/>
-                </div>
-                <div class="col-xs-3"> <?php echo form_error('name'); ?>
-                    <input class="form-control space-textbox" id="Q1Wa2S3" type="text" name="Q1Wa2S3"
-                           placeholder="<?php if (isset($data['Q1Wa2S3'])) echo $data['Q1Wa2S3']; ?>"
-                           value="<?php echo set_value('Q1Wa2S3'); ?>"/>
-                </div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q1Wa2S2" type="email" name="Q1Wa2S2"
-                           placeholder="<?php if (isset($data['Q1Wa2S2'])) echo $data['Q1Wa2S2'] ?>"
-                           value="<?php echo set_value('Q1Wa2S2'); ?>"/>
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-xs-1"> 3</div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q1Wa3S1" type="text" name="Q1Wa3S1"
-                           placeholder="<?php if (isset($data['Q1Wa3S1'])) echo $data['Q1Wa3S1'] ?>"
-                           value="<?php echo set_value('Q1Wa3S1'); ?>"/>
-                </div>
-                <div class="col-xs-3"> <?php echo form_error('name'); ?>
-                    <input class="form-control space-textbox" id="Q1Wa3S3" type="text" name="Q1Wa3S3"
-                           placeholder="<?php if (isset($data['Q1Wa3S3'])) echo $data['Q1Wa3S3']; ?>"
-                           value="<?php echo set_value('Q1Wa3S3'); ?>"/>
-                </div>
-                <div class="col-xs-3">
-                    <input class="form-control space-textbox" id="Q1Wa3S2" type="email" name="Q1Wa3S2"
-                           placeholder="<?php if (isset($data['Q1Wa3S2'])) echo $data['Q1Wa3S2'] ?>"
-                           value="<?php echo set_value('Q1Wa3S2'); ?>"/>
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="control-label">Administrative staff (maximum of five staff can be part of the
-                    team):</label>
-                <div class="form-group row">
-                    <div class="col-xs-1"></div>
-                    <div class="col-xs-3">
-                        <label>First Name</label>
-                    </div>
-                    <div class="col-xs-3">
-                        <label>Last Name</label>
-                    </div>
-                    <div class="col-xs-3">
-                        <label>Email ID</label>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-xs-1"> 1</div>
-                    <div class="col-xs-3"> <?php echo form_error('name1'); ?>
-                        <input class="form-control space-textbox" id="Q2Wa1S1" type="text" name="Q2Wa1S1"
-                               placeholder="<?php if (isset($data['Q2Wa1S1'])) echo $data['Q2Wa1S1'] ?>"
-                               value="<?php echo set_value('Q2Wa1S1'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="Q2Wa1S3" type="text" name="Q2Wa1S3"
-                               placeholder="<?php if (isset($data['Q2Wa1S3'])) echo $data['Q2Wa1S3'] ?>"
-                               value="<?php echo set_value('Q2Wa1S3'); ?>"/>
-                    </div>
-                    <div class="col-xs-3"> <?php echo form_error('email1'); ?>
-                        <input class="form-control space-textbox" id="Q2Wa1S2" type="email" name="Q2Wa1S2"
-                               placeholder="<?php if (isset($data['Q2Wa1S2'])) echo $data['Q2Wa1S2'] ?>"
-                               value="<?php echo set_value('Q2Wa1S2'); ?>"/>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-xs-1"> 2</div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="Q2Wa2S1" type="text" name="Q2Wa2S1"
-                               placeholder="<?php if (isset($data['Q2Wa2S1'])) echo $data['Q2Wa2S1'] ?>"
-                               value="<?php echo set_value('Q2Wa2S1'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="Q2Wa2S3" type="text" name="Q2Wa2S3"
-                               placeholder="<?php if (isset($data['Q2Wa2S3'])) echo $data['Q2Wa2S3'] ?>"
-                               value="<?php echo set_value('Q2Wa2S3'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="Q2Wa2S2" type="email" name="Q2Wa2S2"
-                               placeholder="<?php if (isset($data['Q2Wa2S2'])) echo $data['Q2Wa2S2'] ?>"
-                               value="<?php echo set_value('Q2Wa2S2'); ?>"/>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-xs-1"> 3</div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="Q2Wa3S1" type="text" name="Q2Wa3S1"
-                               placeholder="<?php if (isset($data['Q2Wa3S1'])) echo $data['Q2Wa3S1'] ?>"
-                               value="<?php echo set_value('Q2Wa3S1'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="Q2Wa3S3" type="text" name="Q2Wa3S3"
-                               placeholder="<?php if (isset($data['Q2Wa3S3'])) echo $data['Q2Wa3S3'] ?>"
-                               value="<?php echo set_value('Q2Wa3S3'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="Q2Wa3S2" type="email" name="Q2Wa3S2"
-                               placeholder="<?php if (isset($data['Q2Wa3S2'])) echo $data['Q2Wa3S2'] ?>"
-                               value="<?php echo set_value('Q2Wa3S2'); ?>"/>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-xs-1"> 4</div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="Q2Wa4S1" type="text" name="Q2Wa4S1"
-                               placeholder="<?php if (isset($data['Q2Wa4S1'])) echo $data['Q2Wa4S1']; ?>"
-                               value="<?php echo set_value('Q2Wa4S1'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="Q2Wa4S3" type="text" name="Q2Wa4S3"
-                               placeholder="<?php if (isset($data['Q2Wa4S3'])) echo $data['Q2Wa4S3']; ?>"
-                               value="<?php echo set_value('Q2Wa4S3'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="Q2Wa4S2" type="email" name="Q2Wa4S2"
-                               placeholder="<?php if (isset($data['Q2Wa4S2'])) echo $data['Q2Wa4S2']; ?>"
-                               value="<?php echo set_value('Q2Wa4S2'); ?>"/>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-xs-1"> 5</div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="Q2Wa5S1" type="text" name="Q2Wa5S1"
-                               placeholder="<?php if (isset($data['Q2Wa5S1'])) echo $data['Q2Wa5S1'] ?>"
-                               value="<?php echo set_value('Q2Wa5S1'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="Q2Wa5S3" type="text" name="Q2Wa5S3"
-                               placeholder="<?php if (isset($data['Q2Wa5S3'])) echo $data['Q2Wa5S3'] ?>"
-                               value="<?php echo set_value('Q2Wa5S3'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="Q2Wa5S2" type="email" name="Q2Wa5S2"
-                               placeholder="<?php if (isset($data['Q2Wa5S2'])) echo $data['Q2Wa5S2'] ?>"
-                               value="<?php echo set_value('Q2Wa5S2'); ?>"/>
-                    </div>
-                </div>
-            </div>
+			<table class="table table-bordered table-striped">
+        <tr>
+          <th>Sr.No </th>
+          <th> First Name </th>
+          <th> Last Name </th>
+          <th> Email ID </th>
+         
+        </tr>
+        <tr>
+		  <td>1</td>
+          <td> <?php echo (getFiled('Q1Wa1S1', $schoolUserID)!="")?getFiled('Q1Wa1S1', $schoolUserID) : "N/A"; ?></td>
+          <td><?php echo (getFiled('Q1Wa1S3', $schoolUserID)!="")?getFiled('Q1Wa1S3', $schoolUserID) : "N/A"; ?> </td>
+		  <td><?php echo (getFiled('Q1Wa1S2', $schoolUserID)!="")?getFiled('Q1Wa1S2', $schoolUserID) : "N/A"; ?> </td>
+          
+        </tr>
+		 <tr>
+		  <td>2</td>
+          <td> <?php echo (getFiled('Q1Wa2S1', $schoolUserID)!="")?getFiled('Q1Wa2S1', $schoolUserID) : "N/A"; ?></td>
+          <td><?php echo (getFiled('Q1Wa2S3', $schoolUserID)!="")?getFiled('Q1Wa2S3', $schoolUserID) : "N/A"; ?> </td>
+		  <td><?php echo (getFiled('Q1Wa2S2', $schoolUserID)!="")?getFiled('Q1Wa2S2', $schoolUserID) : "N/A"; ?> </td>
+          
+        </tr>
+		 <tr>
+		  <td>3</td>
+          <td> <?php echo (getFiled('Q1Wa3S1', $schoolUserID)!="")?getFiled('Q1Wa3S1', $schoolUserID) : "N/A"; ?></td>
+          <td><?php echo (getFiled('Q1Wa3S3', $schoolUserID)!="")?getFiled('Q1Wa3S3', $schoolUserID) : "N/A"; ?> </td>
+		  <td><?php echo (getFiled('Q1Wa3S2', $schoolUserID)!="")?getFiled('Q1Wa3S2', $schoolUserID) : "N/A"; ?> </td>
+          
+        </tr>
+        
+     </table> 
+	 </div>
+		 
+    <div class="form-group">
+    <label class="control-label">Administrative staff (maximum of five staff can be part of the team):</label>
+	<table class="table table-bordered table-striped">
+        <tr>
+          <th>Sr.No </th>
+          <th> First Name </th>
+          <th> Last Name </th>
+          <th> Email ID </th>
+         
+        </tr>
+        <tr>
+		  <td>1</td>
+          <td> <?php echo (getFiled('Q2Wa1S1', $schoolUserID)!="")?getFiled('Q2Wa1S1', $schoolUserID) : "N/A"; ?></td>
+          <td><?php echo (getFiled('Q2Wa1S3', $schoolUserID)!="")?getFiled('Q2Wa1S3', $schoolUserID) : "N/A"; ?> </td>
+		  <td><?php echo (getFiled('Q2Wa1S2', $schoolUserID)!="")?getFiled('Q2Wa1S2', $schoolUserID) : "N/A"; ?> </td>
+          
+        </tr>
+		 <tr>
+		  <td>2</td>
+          <td> <?php echo (getFiled('Q2Wa2S1', $schoolUserID)!="")?getFiled('Q2Wa2S1', $schoolUserID) : "N/A"; ?></td>
+          <td><?php echo (getFiled('Q2Wa2S3', $schoolUserID)!="")?getFiled('Q2Wa2S3', $schoolUserID) : "N/A"; ?> </td>
+		  <td><?php echo (getFiled('Q2Wa2S2', $schoolUserID)!="")?getFiled('Q2Wa2S2', $schoolUserID) : "N/A"; ?> </td>
+          
+        </tr>
+		 <tr>
+		  <td>3</td>
+          <td> <?php echo (getFiled('Q2Wa3S1', $schoolUserID)!="")?getFiled('Q2Wa3S1', $schoolUserID) : "N/A"; ?></td>
+          <td><?php echo (getFiled('Q2Wa3S3', $schoolUserID)!="")?getFiled('Q2Wa3S3', $schoolUserID) : "N/A"; ?> </td>
+		  <td><?php echo (getFiled('Q2Wa3S2', $schoolUserID)!="")?getFiled('Q2Wa3S2', $schoolUserID) : "N/A"; ?> </td>
+          
+        </tr>
+		<tr>
+		  <td>4</td>
+          <td> <?php echo (getFiled('Q2Wa4S1', $schoolUserID)!="")?getFiled('Q2Wa4S1', $schoolUserID) : "N/A"; ?></td>
+          <td><?php echo (getFiled('Q2Wa4S3', $schoolUserID)!="")?getFiled('Q2Wa4S3', $schoolUserID) : "N/A"; ?> </td>
+		  <td><?php echo (getFiled('Q2Wa4S2', $schoolUserID)!="")?getFiled('Q2Wa4S2', $schoolUserID) : "N/A"; ?> </td>
+          
+        </tr>
+		<tr>
+		  <td>5</td>
+          <td> <?php echo (getFiled('Q2Wa5S1', $schoolUserID)!="")?getFiled('Q2Wa5S1', $schoolUserID) : "N/A"; ?></td>
+          <td><?php echo (getFiled('Q2Wa5S3', $schoolUserID)!="")?getFiled('Q2Wa5S3', $schoolUserID) : "N/A"; ?> </td>
+		  <td><?php echo (getFiled('Q2Wa5S2', $schoolUserID)!="")?getFiled('Q2Wa5S2', $schoolUserID) : "N/A"; ?> </td>
+          
+        </tr>
+        
+     </table>	
+			
+	</div>			
+			
             <div class="form-group">
                 <label class="control-label">Students (maximum of ten students can be part of the team):</label>
-                <div class="form-group row">
-                    <div class="col-xs-1"></div>
-                    <div class="col-xs-3">
-                        <label>First Name</label>
-                    </div>
-                    <div class="col-xs-3">
-                        <label>Last Name</label>
-                    </div>
-                    <div class="col-xs-3">
-                        <label>Grade</label>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-xs-1"> 1</div>
-                    <div class="col-xs-3"> <?php echo form_error('name2'); ?>
-                        <input class="form-control space-textbox" id="Q3Wa1S1" type="text" name="Q3Wa1S1"
-                               placeholder="<?php if (isset($data['Q3Wa1S1'])) echo $data['Q3Wa1S1'] ?>"
-                               value="<?php echo set_value('Q3Wa1S1'); ?>"/>
-                    </div>
-                    <div class="col-xs-3"> <?php echo form_error('email2'); ?>
-                        <input class="form-control space-textbox" id="Q3Wa1S2" type="text" name="Q3Wa1S2"
-                               placeholder="<?php if (isset($data['Q3Wa1S2'])) echo $data['Q3Wa1S2'] ?>"
-                               value="<?php echo set_value('Q3Wa1S2'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="Q3Wa1S3" type="text" name="Q3Wa1S3"
-                               placeholder="<?php if (isset($data['Q3Wa1S3'])) echo $data['Q3Wa1S3'] ?>"
-                               value="<?php echo set_value('Q3Wa1S3'); ?>"/>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-xs-1"> 2</div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="Q3Wa2S1" type="text" name="Q3Wa2S1"
-                               placeholder="<?php if (isset($data['Q3Wa2S1'])) echo $data['Q3Wa2S1'] ?>"
-                               value="<?php echo set_value('Q3Wa2S1'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="Q3Wa2S2" type="text" name="Q3Wa2S2"
-                               placeholder="<?php if (isset($data['Q3Wa2S2'])) echo $data['Q3Wa2S2'] ?>"
-                               value="<?php echo set_value('Q3Wa2S2'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="Q3Wa2S3" type="text" name="Q3Wa2S3"
-                               placeholder="<?php if (isset($data['Q3Wa2S3'])) echo $data['Q3Wa2S3'] ?>"
-                               value="<?php echo set_value('Q3Wa2S3'); ?>"/>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-xs-1"> 3</div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="Q3Wa3S1" type="text" name="Q3Wa3S1"
-                               placeholder="<?php if (isset($data['Q3Wa3S1'])) echo $data['Q3Wa3S1'] ?>"
-                               value="<?php echo set_value('Q3Wa3S3'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="Q3Wa3S2" type="text" name="Q3Wa3S2"
-                               placeholder="<?php if (isset($data['Q3Wa3S2'])) echo $data['Q3Wa3S2'] ?>"
-                               value="<?php echo set_value('Q3Wa3S2'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="Q3Wa3S3" type="text" name="Q3Wa3S3"
-                               placeholder="<?php if (isset($data['Q3Wa3S3'])) echo $data['Q3Wa3S3'] ?>"
-                               value="<?php echo set_value('Q3Wa3S3'); ?>"/>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-xs-1"> 4</div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="Q3Wa4S1" type="text" name="Q3Wa4S1"
-                               placeholder="<?php if (isset($data['Q3Wa4S1'])) echo $data['Q3Wa4S1'] ?>"
-                               value="<?php echo set_value('Q3Wa4S1'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="Q3Wa4S2" type="text" name="Q3Wa4S2"
-                               placeholder="<?php if (isset($data['Q3Wa4S2'])) echo $data['Q3Wa4S2'] ?>"
-                               value="<?php echo set_value('Q3Wa4S2'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="Q3Wa4S3" type="text" name="Q3Wa4S3"
-                               placeholder="<?php if (isset($data['Q3Wa4S3'])) echo $data['Q3Wa4S3'] ?>"
-                               value="<?php echo set_value('Q3Wa4S3'); ?>"/>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-xs-1"> 5</div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="Q3Wa5S1" type="text" name="Q3Wa5S1"
-                               placeholder="<?php if (isset($data['Q3Wa5S1'])) echo $data['Q3Wa5S1'] ?>"
-                               value="<?php echo set_value('Q3Wa5S1'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="Q3Wa5S2" type="text" name="Q3Wa5S2"
-                               placeholder="<?php if (isset($data['Q3Wa5S2'])) echo $data['Q2A5S2'] ?>"
-                               value="<?php echo set_value('Q3Wa5S2'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="Q3Wa5S3" type="text" name="Q3Wa5S3"
-                               placeholder="<?php if (isset($data['Q3Wa5S3'])) echo $data['Q3Wa5S3'] ?>"
-                               value="<?php echo set_value('Q3Wa5S3'); ?>"/>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-xs-1"> 6</div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="Q3Wa6S1" type="text" name="Q3Wa6S1"
-                               placeholder="<?php if (isset($data['Q3Wa6S1'])) echo $data['Q3Wa6S1'] ?>"
-                               value="<?php echo set_value('Q3Wa6S1'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="Q3Wa6S2" type="text" name="Q3Wa6S2"
-                               placeholder="<?php if (isset($data['Q3Wa6S2'])) echo $data['Q3Wa6S2'] ?>"
-                               value="<?php echo set_value('Q3Wa6S2'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="Q3Wa6S3" type="text" name="Q3Wa6S3"
-                               placeholder="<?php if (isset($data['Q3Wa6S3'])) echo $data['Q3Wa6S3'] ?>"
-                               value="<?php echo set_value('Q3Wa6S3'); ?>"/>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-xs-1"> 7</div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="Q3Wa7S1" type="text" name="Q3Wa7S1"
-                               placeholder="<?php if (isset($data['Q3Wa7S1'])) echo $data['Q3Wa7S1'] ?>"
-                               value="<?php echo set_value('Q3Wa7S1'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="Q3Wa7S2" type="text" name="Q3Wa7S2"
-                               placeholder="<?php if (isset($data['Q3Wa7S2'])) echo $data['Q3Wa7S2'] ?>"
-                               value="<?php echo set_value('Q3Wa7S2'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="Q3Wa7S3" type="text" name="Q3Wa7S3"
-                               placeholder="<?php if (isset($data['Q3Wa7S3'])) echo $data['Q3Wa7S3'] ?>"
-                               value="<?php echo set_value('Q3Wa7S3'); ?>"/>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-xs-1"> 8</div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="Q3Wa8S1" type="text" name="Q3Wa8S1"
-                               placeholder="<?php if (isset($data['Q3Wa8S1'])) echo $data['Q3Wa8S1'] ?>"
-                               value="<?php echo set_value('Q3Wa8S1'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="Q3Wa8S2" type="text" name="Q3Wa8S2"
-                               placeholder="<?php if (isset($data['Q3Wa8S2'])) echo $data['Q3Wa8S2'] ?>"
-                               value="<?php echo set_value('Q3Wa8S2'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="Q3Wa8S3" type="text" name="Q3Wa8S3"
-                               placeholder="<?php if (isset($data['Q3Wa8S3'])) echo $data['Q3Wa8S3'] ?>"
-                               value="<?php echo set_value('Q3Wa8S3'); ?>"/>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-xs-1"> 9</div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="Q3Wa9S1" type="text" name="Q3Wa9S1"
-                               placeholder="<?php if (isset($data['Q3Wa9S1'])) echo $data['Q3Wa9S1'] ?>"
-                               value="<?php echo set_value('Q3Wa9S1'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="Q3Wa9S2" type="text" name="Q3Wa9S2"
-                               placeholder="<?php if (isset($data['Q3Wa9S2'])) echo $data['Q3Wa9S2'] ?>"
-                               value="<?php echo set_value('Q3Wa9S2'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="Q3Wa9S3" type="text" name="Q3Wa9S3"
-                               placeholder="<?php if (isset($data['Q3Wa9S3'])) echo $data['Q3Wa9S3'] ?>"
-                               value="<?php echo set_value('Q3Wa9S3'); ?>"/>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-xs-1"> 10</div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="Q3Wa10S1" type="text" name="Q3Wa10S1"
-                               placeholder="<?php if (isset($data['Q3Wa10S1'])) echo $data['Q3Wa10S1'] ?>"
-                               value="<?php echo set_value('Q3Wa10S1'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="Q3Wa10S2" type="text" name="Q3Wa10S2"
-                               placeholder="<?php if (isset($data['Q3Wa10S2'])) echo $data['Q3Wa10S2'] ?>"
-                               value="<?php echo set_value('Q3Wa10S2'); ?>"/>
-                    </div>
-                    <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="Q3Wa10S3" type="text" name="Q3Wa10S3"
-                               placeholder="<?php if (isset($data['Q3Wa10S3'])) echo $data['Q3Wa10S3'] ?>"
-                               value="<?php echo set_value('Q3Wa10S3'); ?>"/>
-                    </div>
-                </div>
+				<table class="table table-bordered table-striped">
+        <tr>
+          <th>Sr.No </th>
+          <th> First Name </th>
+          <th> Last Name </th>
+          <th> Grade </th>
+         
+        </tr>
+        <tr>
+		  <td>1</td>
+          <td> <?php echo (getFiled('Q3Wa1S1', $schoolUserID)!="")?getFiled('Q3Wa1S1', $schoolUserID) : "N/A"; ?></td>
+          <td><?php echo (getFiled('Q3Wa1S2', $schoolUserID)!="")?getFiled('Q3Wa1S2', $schoolUserID) : "N/A"; ?> </td>
+		  <td><?php echo (getFiled('Q3Wa1S3', $schoolUserID)!="")?getFiled('Q3Wa1S3', $schoolUserID) : "N/A"; ?> </td>
+          
+        </tr>
+		 <tr>
+		  <td>2</td>
+          <td> <?php echo (getFiled('Q3Wa2S1', $schoolUserID)!="")?getFiled('Q3Wa2S1', $schoolUserID) : "N/A"; ?></td>
+          <td><?php echo (getFiled('Q3Wa2S2', $schoolUserID)!="")?getFiled('Q3Wa2S2', $schoolUserID) : "N/A"; ?> </td>
+		  <td><?php echo (getFiled('Q3Wa2S3', $schoolUserID)!="")?getFiled('Q3Wa2S3', $schoolUserID) : "N/A"; ?> </td>
+          
+        </tr>
+		 <tr>
+		  <td>3</td>
+          <td> <?php echo (getFiled('Q3Wa3S1', $schoolUserID)!="")?getFiled('Q3Wa3S1', $schoolUserID) : "N/A"; ?></td>
+          <td><?php echo (getFiled('Q3Wa3S2', $schoolUserID)!="")?getFiled('Q3Wa3S2', $schoolUserID) : "N/A"; ?> </td>
+		  <td><?php echo (getFiled('Q3Wa3S3', $schoolUserID)!="")?getFiled('Q3Wa3S3', $schoolUserID) : "N/A"; ?> </td>
+          
+        </tr>
+		<tr>
+		  <td>4</td>
+          <td> <?php echo (getFiled('Q3Wa4S1', $schoolUserID)!="")?getFiled('Q3Wa4S1', $schoolUserID) : "N/A"; ?></td>
+          <td><?php echo (getFiled('Q3Wa4S2', $schoolUserID)!="")?getFiled('Q3Wa4S2', $schoolUserID) : "N/A"; ?> </td>
+		  <td><?php echo (getFiled('Q3Wa4S3', $schoolUserID)!="")?getFiled('Q3Wa4S3', $schoolUserID) : "N/A"; ?> </td>
+          
+        </tr>
+		<tr>
+		  <td>5</td>
+          <td> <?php echo (getFiled('Q3Wa5S1', $schoolUserID)!="")?getFiled('Q3Wa5S1', $schoolUserID) : "N/A"; ?></td>
+          <td><?php echo (getFiled('Q3Wa5S2', $schoolUserID)!="")?getFiled('Q3Wa5S2', $schoolUserID) : "N/A"; ?> </td>
+		  <td><?php echo (getFiled('Q3Wa5S3', $schoolUserID)!="")?getFiled('Q3Wa5S3', $schoolUserID) : "N/A"; ?> </td>
+          
+        </tr>
+		<tr>
+		  <td>6</td>
+          <td> <?php echo (getFiled('Q3Wa6S1', $schoolUserID)!="")?getFiled('Q3Wa6S1', $schoolUserID) : "N/A"; ?></td>
+          <td><?php echo (getFiled('Q3Wa6S2', $schoolUserID)!="")?getFiled('Q3Wa6S2', $schoolUserID) : "N/A"; ?> </td>
+		  <td><?php echo (getFiled('Q3Wa6S3', $schoolUserID)!="")?getFiled('Q3Wa6S3', $schoolUserID) : "N/A"; ?> </td>
+          
+        </tr>
+		<tr>
+		  <td>7</td>
+          <td> <?php echo (getFiled('Q3Wa7S1', $schoolUserID)!="")?getFiled('Q3Wa7S1', $schoolUserID) : "N/A"; ?></td>
+          <td><?php echo (getFiled('Q3Wa7S2', $schoolUserID)!="")?getFiled('Q3Wa7S2', $schoolUserID) : "N/A"; ?> </td>
+		  <td><?php echo (getFiled('Q3Wa7S3', $schoolUserID)!="")?getFiled('Q3Wa7S3', $schoolUserID) : "N/A"; ?> </td>
+          
+        </tr>
+		<tr>
+		  <td>8</td>
+          <td> <?php echo (getFiled('Q3Wa8S1', $schoolUserID)!="")?getFiled('Q3Wa8S1', $schoolUserID) : "N/A"; ?></td>
+          <td><?php echo (getFiled('Q3Wa8S2', $schoolUserID)!="")?getFiled('Q3Wa8S2', $schoolUserID) : "N/A"; ?> </td>
+		  <td><?php echo (getFiled('Q3Wa8S3', $schoolUserID)!="")?getFiled('Q3Wa8S3', $schoolUserID) : "N/A"; ?> </td>
+          
+        </tr>
+		<tr>
+		  <td>9</td>
+          <td> <?php echo (getFiled('Q3Wa9S1', $schoolUserID)!="")?getFiled('Q3Wa9S1', $schoolUserID) : "N/A"; ?></td>
+          <td><?php echo (getFiled('Q3Wa9S2', $schoolUserID)!="")?getFiled('Q3Wa9S2', $schoolUserID) : "N/A"; ?> </td>
+		  <td><?php echo (getFiled('Q3Wa9S3', $schoolUserID)!="")?getFiled('Q3Wa9S3', $schoolUserID) : "N/A"; ?> </td>
+          
+        </tr>
+		<tr>
+		  <td>10</td>
+          <td> <?php echo (getFiled('Q3Wa10S1', $schoolUserID)!="")?getFiled('Q3Wa10S1', $schoolUserID) : "N/A"; ?></td>
+          <td><?php echo (getFiled('Q3Wa10S2', $schoolUserID)!="")?getFiled('Q3Wa10S2', $schoolUserID) : "N/A"; ?> </td>
+		  <td><?php echo (getFiled('Q3Wa10S3', $schoolUserID)!="")?getFiled('Q3Wa10S3', $schoolUserID) : "N/A"; ?> </td>
+          
+        </tr>
+        
+     </table>	
+			
             </div>
             <div class="form-group">
                 <label>
@@ -442,113 +227,52 @@
             <div class="form-group">
                 <label class="control-label"><span class="cube">1</span>Does your school segregate solid waste?</label>
                 <div class="form-group">
-                    <label class="radio-inline text-gray">
-                        <input type="radio" name="Q4Wa1" onClick="WasteSegregate(1)" class="radio" id="Q4Wa1"
-                               value="<?php echo set_value('Q4Wa1', 'Y') ?>" <?php if (isset($data['Q4Wa1'])) echo $data['Q4Wa1'] == 'Y' ? "checked" : "" ?>>
-                        Yes </label>
-                    <label class="radio-inline text-gray">
-                        <input type="radio" name="Q4Wa1" onClick="WasteSegregate(2)" class="Q4Wa1" id="Q4Wa1"
-                               value="<?php echo set_value('Q4Wa1', 'N') ?>" <?php if (isset($data['Q4Wa1'])) echo $data['Q4Wa1'] == 'N' ? "checked" : "" ?>>
-                        No </label>
+				<p> <?php echo (getFiled('Q4Wa1', $schoolUserID)!="")? (getFiled('Q4Wa1', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+                    
                 </div>
             </div>
-            <?php
-            if (isset($data['Q4Wa1']))
-                if ($data['Q4Wa1'] == 'Y') {
-                    ?>
-                    <div class="form-group row" id="Q1A">
-                        <label><span class="cube">1(a)</span>Who segregates the waste at source? </label>
-                        <div class="">
-                            <label>
-                                <input type="checkbox" name="Q4Wa2S1"
-                                       value="<?php echo set_value('Q4Wa2S1', 1); ?>" <?php if (isset($data['Q4Wa2S1'])) echo "checked" ?>>
-                                Students and teachers</label>
-                        </div>
-                        <div class="">
-                            <label>
-                                <input type="checkbox" name="Q4Wa2S2"
-                                       value="<?php echo set_value('Q4Wa2S2', 1); ?>" <?php if (isset($data['Q4Wa2S2'])) echo "checked" ?>>
-                                Housekeeping (Sweeper)</label>
-                        </div>
-                        <div class="">
-                            <label>
-                                <input type="checkbox" name="Q4Wa2S3"
-                                       value="<?php echo set_value('Q4Wa2S3', 1); ?>" <?php if (isset($data['Q4Wa2S3'])) echo "checked" ?>>
-                                Gardener</label>
-                        </div>
-                        <div class="">
-                            <label><input type="checkbox" name="Q4Wa2S4"
-                                          value="<?php echo set_value('Q4Wa2S4', 1); ?>" <?php if (isset($data['Q4Wa2S4'])) echo "checked" ?>>Ragpickers
-                            </label>
-                        </div>
-                        <div class="">
-                            <label>Other: &nbsp
-                                <input type="text" name="Q4Wa2S5" value="<?php echo set_value('Q4Wa2S5'); ?>"
-                                       placeholder="<?php if (isset($data['Q4Wa2S5'])) echo $data['Q4Wa2'] ?>">
-                            </label>
-                        </div>
+      <div class="form-group row" id="Q1A">
+        <label><span class="cube">1(a)</span>Who segregates the waste at source? </label><br/>
+						<?php 
+							 if(getFiled('Q4Wa2S1', $schoolUserID)==1):
+							 echo "Students and teachers";
+							 echo "<br/>";
+							 endif;  
+							 if(getFiled('Q4Wa2S2', $schoolUserID)==1):
+							 echo "Housekeeping (Sweeper)";
+							 echo "<br/>" ;
+							 endif; 
+							 if(getFiled('Q4Wa2S3', $schoolUserID)==1):
+							 echo "Gardener";
+							 echo "<br/>" ;
+							 endif; 
+							 if(getFiled('Q4Wa2S4', $schoolUserID)==1):
+							 echo "Ragpickers";
+							 echo "<br/>" ;
+							 endif;
+							  if(getFiled('Q4Wa2S5', $schoolUserID)==1):
+							 echo "Other";
+							 echo "<br/>" ;
+							 endif;
+							 
+							 
+?>  
+                      
                     </div>
-                    <?php
-                }
-            ?>
-            <div class="form-group row" id="Q1A" style="display: none;">
-                <label><span class="cube">1(a)</span>Who segregates the waste at source? </label>
-                <div class="">
-                    <label>
-                        <input type="checkbox" name="Q4Wa2S1"
-                               value="<?php echo set_value('Q4Wa2S1', 1); ?>" <?php if (isset($data['Q4Wa2S1'])) echo "checked" ?>>
-                        Students and teachers</label>
-                </div>
-                <div class="">
-                    <label>
-                        <input type="checkbox" name="Q4Wa2S2"
-                               value="<?php echo set_value('Q4Wa2S2', 1); ?>" <?php if (isset($data['Q4Wa2S2'])) echo "checked" ?>>
-                        Housekeeping (Sweeper)</label>
-                </div>
-                <div class="">
-                    <label>
-                        <input type="checkbox" name="Q4Wa2S3"
-                               value="<?php echo set_value('Q4Wa2S3', 1); ?>" <?php if (isset($data['Q4Wa2S3'])) echo "checked" ?>>
-                        Gardener</label>
-                </div>
-                <div class="">
-                    <label>
-                        <input type="checkbox" name="Q4Wa2S4"
-                               value="<?php echo set_value('Q4Wa2S4', 1); ?>" <?php if (isset($data['Q4Wa2S4'])) echo "checked" ?>>
-                        Ragpickers</label>
-                </div>
-                <div class="">
-                    <label>Other: &nbsp
-                        <input type="text" name="Q4Wa2S5" value="<?php echo set_value('Q4Wa2S5'); ?>"
-                               placeholder="<?php if (isset($data['Q4Wa2S5'])) echo $data['Q4Wa2'] ?>">
-                    </label>
-                </div>
-            </div>
-            <div class="form-group">
-                <label><span class="cube">2</span>How many categories does your school segregate waste into? <a
-                            class="tt"
-                            data-tooltip="Students will have to count the number of waste disposal points in the school as, for instance, one dustbin, two dustbins or more. If there are no dustbins, please say zero (o)"
-                            ><span class="badge">?</span></a></label>
-                <ul>
-                    <li>
-                        <label class="radio-inline text-gray">
-                            <input type="radio" name="Q4Wa2" class="radio" id="Q4Wa2"
-                                   value="<?php echo set_value('Q4Wa2', 1) ?>" <?php if (isset($data['Q4Wa2'])) echo $data['Q4Wa2'] == 1 ? "checked" : "" ?>>
-                            Two </label>
-                    </li>
-                    <li>
-                        <label class="radio-inline text-gray">
-                            <input type="radio" name="Q4Wa2" class="radio" id="Q4Wa2"
-                                   value="<?php echo set_value('Q4Wa2', 2) ?>" <?php if (isset($data['Q4Wa2'])) echo $data['Q4Wa2'] == 2 ? "checked" : "" ?>>
-                            Three </label>
-                    </li>
-                    <li>
-                        <label class="radio-inline text-gray">
-                            <input type="radio" name="Q4Wa2" class="Q4Wa2" id="Q4Wa2"
-                                   value="<?php echo set_value('Q4Wa2', 3) ?>" <?php if (isset($data['Q4Wa2'])) echo $data['Q4Wa2'] == 3 ? "checked" : "" ?>>
-                            More than three </label>
-                    </li>
-                </ul>
+    
+<div class="form-group">
+  <label><span class="cube">2</span>How many categories does your school segregate waste into? </label><br/>
+				 <?php 
+							  if(getFiled('Q4Wa2', $schoolUserID)==1):
+								 echo "Two";
+								 elseif(getFiled('Q4Wa2', $schoolUserID)==2):
+								 echo "Three";
+								 elseif(getFiled('Q4Wa2', $schoolUserID)==3):
+								 echo "More than three";
+								 
+								 endif;
+?>
+              
             </div>
             <div class="form-group">
                 <label class="control-label"><span class="cube">2(a)</span> How many categories does your school
@@ -564,7 +288,7 @@
                         <label>No. of waste collection points with one bin (mixed waste) </label>
                     </div>
                     <div class="col-xs-2">
-                        <label>No. of waste collection points with two bins (wet & dry) </label>
+                        <label>No. of waste collection points with two bins (wet &amp; dry) </label>
                     </div>
                     <div class="col-xs-2">
                         <label>No. of waste collection points with three bins or more </label>
@@ -578,37 +302,25 @@
                         <label>Classrooms </label>
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa1S1"
-                               type="number" name="Q5Wa1S1"
-                               placeholder="<?php if (isset($data['Q5Wa1S1'])) echo $data['Q5Wa1S1'] ?>"
-                               value="<?php echo set_value('Q5Wa1S1'); ?>"/>
+					<?php echo (getFiled('Q5Wa1S1', $schoolUserID)!="")?getFiled('Q5Wa1S1', $schoolUserID) : "N/A"; ?>
+                        <!--<input class="form-control space-textbox" onkeyup="computeeSegregate()" id="Q5Wa1S1" type="number" name="Q5Wa1S1" placeholder="" value="">-->
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa1S2"
-                               type="number" name="Q5Wa1S2"
-                               placeholder="<?php if (isset($data['Q5Wa1S2'])) echo $data['Q5Wa1S2'] ?>"
-                               value="<?php echo set_value('Q5Wa1S2'); ?>"/>
+					<?php echo (getFiled('Q5Wa1S2', $schoolUserID)!="")?getFiled('Q5Wa1S2', $schoolUserID) : "N/A"; ?>
+                        
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa1S3"
-                               type="number" name="Q5Wa1S3"
-                               placeholder="<?php if (isset($data['Q5Wa1S3'])) echo $data['Q5Wa1S3'] ?>"
-                               value="<?php echo set_value('Q5Wa1S3'); ?>"/>
+					<?php echo (getFiled('Q5Wa1S3', $schoolUserID)!="")?getFiled('Q5Wa1S3', $schoolUserID) : "N/A"; ?>
+                       
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa1S4"
-                               type="number" name="Q5Wa1S4"
-                               placeholder="<?php if (isset($data['Q5Wa1S4'])) echo $data['Q5Wa1S4'] ?>"
-                               value="<?php echo set_value('Q5Wa1S4'); ?>"/>
+					<?php echo (getFiled('Q5Wa1S4', $schoolUserID)!="")?getFiled('Q5Wa1S4', $schoolUserID) : "N/A"; ?>
+                      
                     </div>
                     <div class="col-xs-2">
-                        <?php
-                        if (empty($data['Q5Wa1S5']))
-                            $data['Q5Wa1S5'] = 0;
-                        $attribs = array("class" => "form-control space-textbox", "id" => "Q5Wa1S5", "type" => "number", "name" => "Q5Wa1S5", "readonly" => "true");
-                        echo form_input('Q5Wa1S5', $data['Q5Wa1S5'], $attribs);
-                        ?>
-                        <!-- <input class="form-control space-textbox" id="Q5Wa1S5" type="number" name="Q5Wa1S5" placeholder="<?php if (isset($data['Q5Wa1S5'])) echo $data['Q5Wa1S5'] ?>" value="<?php echo set_value('Q5Wa1S5'); ?>" readonly/>
+					<?php echo (getFiled('Q5Wa1S5', $schoolUserID)!="")?getFiled('Q5Wa1S5', $schoolUserID) : "N/A"; ?>
+                        
+                        <!-- <input class="form-control space-textbox" id="Q5Wa1S5" type="number" name="Q5Wa1S5" placeholder="0" value="" readonly/>
                -->
                     </div>
                 </div>
@@ -617,33 +329,24 @@
                         <label>Playgrounds </label>
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa2S1"
-                               type="number" name="Q5Wa2S1"
-                               placeholder="<?php if (isset($data['Q5Wa2S1'])) echo $data['Q5Wa2S1'] ?>"
-                               value="<?php echo set_value('Q5Wa2S1'); ?>"/>
+					<?php echo (getFiled('Q5Wa2S1', $schoolUserID)!="")?getFiled('Q5Wa2S1', $schoolUserID) : "N/A"; ?>
+                       
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa2S2"
-                               type="number" name="Q5Wa2S2"
-                               placeholder="<?php if (isset($data['Q5Wa2S2'])) echo $data['Q5Wa2S2'] ?>"
-                               value="<?php echo set_value('Q5Wa2S2'); ?>"/>
+					<?php echo (getFiled('Q5Wa2S2', $schoolUserID)!="")?getFiled('Q5Wa2S2', $schoolUserID) : "N/A"; ?>
+                        
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa2S3"
-                               type="number" name="Q5Wa2S3"
-                               placeholder="<?php if (isset($data['Q5Wa2S3'])) echo $data['Q5Wa2S3'] ?>"
-                               value="<?php echo set_value('Q5Wa2S3'); ?>"/>
+					<?php echo (getFiled('Q5Wa2S3', $schoolUserID)!="")?getFiled('Q5Wa2S3', $schoolUserID) : "N/A"; ?>
+                        
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa2S4"
-                               type="number" name="Q5Wa2S4"
-                               placeholder="<?php if (isset($data['Q5Wa2S4'])) echo $data['Q5Wa2S4'] ?>"
-                               value="<?php echo set_value('Q5Wa2S4'); ?>"/>
+					<?php echo (getFiled('Q5Wa2S4', $schoolUserID)!="")?getFiled('Q5Wa2S4', $schoolUserID) : "N/A"; ?>
+                       
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" id="Q5Wa2S5" type="number" name="Q5Wa2S5"
-                               placeholder="<?php if (isset($data['Q5Wa2S5'])) echo $data['Q5Wa2S5'] ?>"
-                               value="<?php echo set_value('Q5Wa2S5'); ?>" readonly/>
+					<?php echo (getFiled('Q5Wa2S5', $schoolUserID)!="")?getFiled('Q5Wa2S5', $schoolUserID) : "N/A"; ?>
+                        
                     </div>
                 </div>
                 <div class="form-group row">
@@ -651,34 +354,24 @@
                         <label>Common area </label>
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa3S1"
-                               type="number" name="Q5Wa3S1"
-                               placeholder="<?php if (isset($data['Q5Wa3S1'])) echo $data['Q5Wa3S1'] ?>"
-                               value="<?php echo set_value('Q5Wa3S1'); ?>"/>
+					<?php echo (getFiled('Q5Wa3S1', $schoolUserID)!="")?getFiled('Q5Wa3S1', $schoolUserID) : "N/A"; ?>
+                        
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa3S2"
-                               type="number" name="Q5Wa3S2"
-                               placeholder="<?php if (isset($data['Q5Wa3S2'])) echo $data['Q5Wa3S2'] ?>"
-                               value="<?php echo set_value('Q5Wa3S2'); ?>"/>
+					<?php echo (getFiled('Q5Wa3S2', $schoolUserID)!="")?getFiled('Q5Wa3S2', $schoolUserID) : "N/A"; ?>
+                        
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa3S3"
-                               type="number" name="Q5Wa3S3"
-                               placeholder="<?php if (isset($data['Q5Wa3S3'])) echo $data['Q5Wa3S3'] ?>"
-                               value="<?php echo set_value('Q5Wa3S3'); ?>"/>
+					<?php echo (getFiled('Q5Wa3S3', $schoolUserID)!="")?getFiled('Q5Wa3S3', $schoolUserID) : "N/A"; ?>
+                        
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa3S4"
-                               type="number" name="Q5Wa3S4"
-                               placeholder="<?php if (isset($data['Q5Wa3S4'])) echo $data['Q5Wa3S4'] ?>"
-                               value="<?php echo set_value('Q5Wa3S4'); ?>"/>
+					<?php echo (getFiled('Q5Wa3S4', $schoolUserID)!="")?getFiled('Q5Wa3S4', $schoolUserID) : "N/A"; ?>
+                       
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa3S5"
-                               type="number" name="Q5Wa3S5"
-                               placeholder="<?php if (isset($data['Q5Wa3S5'])) echo $data['Q5Wa3S5'] ?>"
-                               value="<?php echo set_value('Q5Wa3S5'); ?>" readonly/>
+					<?php echo (getFiled('Q5Wa3S5', $schoolUserID)!="")?getFiled('Q5Wa3S5', $schoolUserID) : "N/A"; ?>
+                        
                     </div>
                 </div>
                 <div class="form-group row">
@@ -686,34 +379,24 @@
                         <label>Staffroom </label>
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa4S1"
-                               type="number" name="Q5Wa4S1"
-                               placeholder="<?php if (isset($data['Q5Wa4S1'])) echo $data['Q5Wa4S1'] ?>"
-                               value="<?php echo set_value('Q5Wa4S1'); ?>"/>
+					<?php echo (getFiled('Q5Wa4S1', $schoolUserID)!="")?getFiled('Q5Wa4S1', $schoolUserID) : "N/A"; ?>
+                        
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa4S2"
-                               type="number" name="Q5Wa4S2"
-                               placeholder="<?php if (isset($data['Q5Wa4S2'])) echo $data['Q5Wa4S2'] ?>"
-                               value="<?php echo set_value('Q5Wa4S2'); ?>"/>
+					<?php echo (getFiled('Q5Wa4S2', $schoolUserID)!="")?getFiled('Q5Wa4S2', $schoolUserID) : "N/A"; ?>
+                       
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa4S3"
-                               type="number" name="Q5Wa4S3"
-                               placeholder="<?php if (isset($data['Q5Wa4S3'])) echo $data['Q5Wa4S3'] ?>"
-                               value="<?php echo set_value('Q5Wa4S3'); ?>"/>
+					<?php echo (getFiled('Q5Wa4S3', $schoolUserID)!="")?getFiled('Q5Wa4S3', $schoolUserID) : "N/A"; ?>
+                       
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa4S4"
-                               type="number" name="Q5Wa4S4"
-                               placeholder="<?php if (isset($data['Q5Wa4S4'])) echo $data['Q5Wa4S4'] ?>"
-                               value="<?php echo set_value('Q5Wa4S4'); ?>"/>
+					<?php echo (getFiled('Q5Wa4S4', $schoolUserID)!="")?getFiled('Q5Wa4S4', $schoolUserID) : "N/A"; ?>
+                       
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa4S5"
-                               type="number" name="Q5Wa4S5"
-                               placeholder="<?php if (isset($data['Q5Wa4S5'])) echo $data['Q5Wa4S5'] ?>"
-                               value="<?php echo set_value('Q5Wa4S5'); ?>" readonly/>
+					<?php echo (getFiled('Q5Wa4S5', $schoolUserID)!="")?getFiled('Q5Wa4S5', $schoolUserID) : "N/A"; ?>
+                       
                     </div>
                 </div>
                 <div class="form-group row">
@@ -721,33 +404,24 @@
                         <label>Laboratory </label>
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa5S1"
-                               type="number" name="Q5Wa5S1"
-                               placeholder="<?php if (isset($data['Q5Wa5S1'])) echo $data['Q5Wa5S1'] ?>"
-                               value="<?php echo set_value('Q5Wa5S1'); ?>"/>
+					<?php echo (getFiled('Q5Wa5S1', $schoolUserID)!="")?getFiled('Q5Wa5S1', $schoolUserID) : "N/A"; ?>
+                        
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa5S2"
-                               type="number" name="Q5Wa5S2"
-                               placeholder="<?php if (isset($data['Q5Wa5S2'])) echo $data['Q5Wa5S2'] ?>"
-                               value="<?php echo set_value('Q5Wa5S2'); ?>"/>
+					<?php echo (getFiled('Q5Wa5S2', $schoolUserID)!="")?getFiled('Q5Wa5S2', $schoolUserID) : "N/A"; ?>
+                       
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa5S3"
-                               type="number" name="Q5Wa5S3"
-                               placeholder="<?php if (isset($data['Q5Wa5S3'])) echo $data['Q5Wa5S3'] ?>"
-                               value="<?php echo set_value('Q5Wa5S3'); ?>"/>
+					<?php echo (getFiled('Q5Wa5S3', $schoolUserID)!="")?getFiled('Q5Wa5S3', $schoolUserID) : "N/A"; ?>
+                       
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa5S4"
-                               type="number" name="Q5Wa5S4"
-                               placeholder="<?php if (isset($data['Q5Wa5S4'])) echo $data['Q5Wa5S4'] ?>"
-                               value="<?php echo set_value('Q5Wa5S4'); ?>"/>
+					<?php echo (getFiled('Q5Wa5S4', $schoolUserID)!="")?getFiled('Q5Wa5S4', $schoolUserID) : "N/A"; ?>
+                        
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" id="Q5Wa5S5" type="number" name="Q5Wa5S5"
-                               placeholder="<?php if (isset($data['Q5Wa5S5'])) echo $data['Q5Wa5S5'] ?>"
-                               value="<?php echo set_value('Q5Wa5S5'); ?>" readonly/>
+					<?php echo (getFiled('Q5Wa5S5', $schoolUserID)!="")?getFiled('Q5Wa5S5', $schoolUserID) : "N/A"; ?>
+                        
                     </div>
                 </div>
                 <div class="form-group row">
@@ -755,33 +429,24 @@
                         <label>Canteen </label>
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa6S1"
-                               type="number" name="Q5Wa6S1"
-                               placeholder="<?php if (isset($data['Q5Wa6S1'])) echo $data['Q5Wa6S1'] ?>"
-                               value="<?php echo set_value('Q5Wa6S1'); ?>"/>
+					<?php echo (getFiled('Q5Wa6S1', $schoolUserID)!="")?getFiled('Q5Wa6S1', $schoolUserID) : "N/A"; ?>
+                        
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa6S2"
-                               type="number" name="Q5Wa6S2"
-                               placeholder="<?php if (isset($data['Q5Wa6S2'])) echo $data['Q5Wa6S2'] ?>"
-                               value="<?php echo set_value('Q5Wa6S2'); ?>"/>
+					<?php echo (getFiled('Q5Wa6S2', $schoolUserID)!="")?getFiled('Q5Wa6S2', $schoolUserID) : "N/A"; ?>
+                       
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa6S3"
-                               type="number" name="Q5Wa6S3"
-                               placeholder="<?php if (isset($data['Q5Wa6S3'])) echo $data['Q5Wa6S3'] ?>"
-                               value="<?php echo set_value('Q5Wa6S3'); ?>"/>
+					<?php echo (getFiled('Q5Wa6S3', $schoolUserID)!="")?getFiled('Q5Wa6S3', $schoolUserID) : "N/A"; ?>
+                       
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa6S4"
-                               type="number" name="Q5Wa6S4"
-                               placeholder="<?php if (isset($data['Q5Wa6S4'])) echo $data['Q5Wa6S4'] ?>"
-                               value="<?php echo set_value('Q5Wa6S4'); ?>"/>
+					<?php echo (getFiled('Q5Wa6S4', $schoolUserID)!="")?getFiled('Q5Wa6S4', $schoolUserID) : "N/A"; ?>
+                        
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" id="Q5Wa6S5" type="number" name="Q5Wa6S5"
-                               placeholder="<?php if (isset($data['Q5Wa6S5'])) echo $data['Q5Wa6S5'] ?>"
-                               value="<?php echo set_value('Q5Wa6S5'); ?>" readonly/>
+					<?php echo (getFiled('Q5Wa6S5', $schoolUserID)!="")?getFiled('Q5Wa6S5', $schoolUserID) : "N/A"; ?>
+                        
                     </div>
                 </div>
                 <div class="form-group row">
@@ -789,34 +454,24 @@
                         <label>Clinic/sick room </label>
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa7S1"
-                               type="number" name="Q5Wa7S1"
-                               placeholder="<?php if (isset($data['Q5Wa7S1'])) echo $data['Q5Wa7S1'] ?>"
-                               value="<?php echo set_value('Q5Wa7S1'); ?>"/>
+					<?php echo (getFiled('Q5Wa7S1', $schoolUserID)!="")?getFiled('Q5Wa7S1', $schoolUserID) : "N/A"; ?>
+                       
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa7S2"
-                               type="number" name="Q5Wa7S2"
-                               placeholder="<?php if (isset($data['Q5Wa7S2'])) echo $data['Q5Wa7S2'] ?>"
-                               value="<?php echo set_value('Q5Wa7S2'); ?>"/>
+					<?php echo (getFiled('Q5Wa7S2', $schoolUserID)!="")?getFiled('Q5Wa7S2', $schoolUserID) : "N/A"; ?>
+                        
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa7S3"
-                               type="number" name="Q5Wa7S3"
-                               placeholder="<?php if (isset($data['Q5Wa7S3'])) echo $data['Q5Wa7S3'] ?>"
-                               value="<?php echo set_value('Q5Wa7S3'); ?>"/>
+					<?php echo (getFiled('Q5Wa7S3', $schoolUserID)!="")?getFiled('Q5Wa7S3', $schoolUserID) : "N/A"; ?>
+                       
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa7S4"
-                               type="number" name="Q5Wa7S4"
-                               placeholder="<?php if (isset($data['Q5Wa7S4'])) echo $data['Q5Wa7S4'] ?>"
-                               value="<?php echo set_value('Q5Wa7S4'); ?>"/>
+					<?php echo (getFiled('Q5Wa7S4', $schoolUserID)!="")?getFiled('Q5Wa7S4', $schoolUserID) : "N/A"; ?>
+                        
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa7S5"
-                               type="number" name="Q5Wa7S5"
-                               placeholder="<?php if (isset($data['Q5Wa7S5'])) echo $data['Q5Wa7S5'] ?>"
-                               value="<?php echo set_value('Q5Wa7S5'); ?>" readonly/>
+					<?php echo (getFiled('Q5Wa7S5', $schoolUserID)!="")?getFiled('Q5Wa7S5', $schoolUserID) : "N/A"; ?>
+                        
                     </div>
                 </div>
                 <div class="form-group row">
@@ -824,34 +479,24 @@
                         <label>Library </label>
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa8S1"
-                               type="number" name="Q5Wa8S1"
-                               placeholder="<?php if (isset($data['Q5Wa8S1'])) echo $data['Q5Wa8S1'] ?>"
-                               value="<?php echo set_value('Q5Wa8S1'); ?>"/>
+					<?php echo (getFiled('Q5Wa8S1', $schoolUserID)!="")?getFiled('Q5Wa8S1', $schoolUserID) : "N/A"; ?>
+                        
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa8S2"
-                               type="number" name="Q5Wa8S2"
-                               placeholder="<?php if (isset($data['Q5Wa8S2'])) echo $data['Q5Wa8S2'] ?>"
-                               value="<?php echo set_value('Q5Wa8S2'); ?>"/>
+					<?php echo (getFiled('Q5Wa8S2', $schoolUserID)!="")?getFiled('Q5Wa8S2', $schoolUserID) : "N/A"; ?>
+                        
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa8S3"
-                               type="number" name="Q5Wa8S3"
-                               placeholder="<?php if (isset($data['Q5Wa8S3'])) echo $data['Q5Wa8S3'] ?>"
-                               value="<?php echo set_value('Q5Wa8S3'); ?>"/>
+					<?php echo (getFiled('Q5Wa8S3', $schoolUserID)!="")?getFiled('Q5Wa8S3', $schoolUserID) : "N/A"; ?>
+                       
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa8S4"
-                               type="number" name="Q5Wa8S4"
-                               placeholder="<?php if (isset($data['Q5Wa8S4'])) echo $data['Q5Wa8S4'] ?>"
-                               value="<?php echo set_value('Q5Wa8S4'); ?>"/>
+					<?php echo (getFiled('Q5Wa8S4', $schoolUserID)!="")?getFiled('Q5Wa8S4', $schoolUserID) : "N/A"; ?>
+                        
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa8S5"
-                               type="number" name="Q5Wa8S5"
-                               placeholder="<?php if (isset($data['Q5Wa8S5'])) echo $data['Q5Wa8S5'] ?>"
-                               value="<?php echo set_value('Q5Wa8S5'); ?>" readonly/>
+					<?php echo (getFiled('Q5Wa8S5', $schoolUserID)!="")?getFiled('Q5Wa8S5', $schoolUserID) : "N/A"; ?>
+                      
                     </div>
                 </div>
                 <div class="form-group row">
@@ -859,34 +504,24 @@
                         <label>Toilets </label>
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa9S1"
-                               type="number" name="Q5Wa9S1"
-                               placeholder="<?php if (isset($data['Q5Wa9S1'])) echo $data['Q5Wa9S1'] ?>"
-                               value="<?php echo set_value('Q5Wa9S1'); ?>"/>
+					<?php echo (getFiled('Q5Wa9S1', $schoolUserID)!="")?getFiled('Q5Wa9S1', $schoolUserID) : "N/A"; ?>
+                        
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa9S2"
-                               type="number" name="Q5Wa9S2"
-                               placeholder="<?php if (isset($data['Q5Wa9S2'])) echo $data['Q5Wa9S2'] ?>"
-                               value="<?php echo set_value('Q5Wa9S2'); ?>"/>
+					<?php echo (getFiled('Q5Wa9S2', $schoolUserID)!="")?getFiled('Q5Wa9S2', $schoolUserID) : "N/A"; ?>
+                       
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa9S3"
-                               type="number" name="Q5Wa9S3"
-                               placeholder="<?php if (isset($data['Q5Wa9S3'])) echo $data['Q5Wa9S3'] ?>"
-                               value="<?php echo set_value('Q5Wa9S3'); ?>"/>
+					<?php echo (getFiled('Q5Wa9S3', $schoolUserID)!="")?getFiled('Q5Wa9S3', $schoolUserID) : "N/A"; ?>
+                      
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa9S4"
-                               type="number" name="Q5Wa9S4"
-                               placeholder="<?php if (isset($data['Q5Wa9S4'])) echo $data['Q5Wa9S4'] ?>"
-                               value="<?php echo set_value('Q5Wa9S4'); ?>"/>
+					<?php echo (getFiled('Q5Wa9S4', $schoolUserID)!="")?getFiled('Q5Wa9S4', $schoolUserID) : "N/A"; ?>
+                       
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa9S5"
-                               type="number" name="Q5Wa9S5"
-                               placeholder="<?php if (isset($data['Q5Wa9S5'])) echo $data['Q5Wa9S5'] ?>"
-                               value="<?php echo set_value('Q5Wa9S5'); ?>" readonly/>
+					<?php echo (getFiled('Q5Wa9S5', $schoolUserID)!="")?getFiled('Q5Wa9S5', $schoolUserID) : "N/A"; ?>
+                      
                     </div>
                 </div>
                 <div class="form-group row">
@@ -894,34 +529,24 @@
                         <label>Others </label>
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa10S1"
-                               type="number" name="Q5Wa10S1"
-                               placeholder="<?php if (isset($data['Q5Wa10S1'])) echo $data['Q5Wa10S1'] ?>"
-                               value="<?php echo set_value('Q5Wa10S1'); ?>"/>
+					<?php echo (getFiled('Q5Wa10S1', $schoolUserID)!="")?getFiled('Q5Wa10S1', $schoolUserID) : "N/A"; ?>
+                       
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa10S2"
-                               type="number" name="Q5Wa10S2"
-                               placeholder="<?php if (isset($data['Q5Wa10S2'])) echo $data['Q5Wa10S2'] ?>"
-                               value="<?php echo set_value('Q5Wa10S2'); ?>"/>
+					<?php echo (getFiled('Q5Wa10S2', $schoolUserID)!="")?getFiled('Q5Wa10S2', $schoolUserID) : "N/A"; ?>
+                       
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa10S3"
-                               type="number" name="Q5Wa10S3"
-                               placeholder="<?php if (isset($data['Q5Wa10S3'])) echo $data['Q5Wa10S3'] ?>"
-                               value="<?php echo set_value('Q5Wa10S3'); ?>"/>
+					<?php echo (getFiled('Q5Wa10S3', $schoolUserID)!="")?getFiled('Q5Wa10S3', $schoolUserID) : "N/A"; ?>
+                        
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa10S4"
-                               type="number" name="Q5Wa10S4"
-                               placeholder="<?php if (isset($data['Q5Wa10S4'])) echo $data['Q5Wa10S4'] ?>"
-                               value="<?php echo set_value('Q5Wa10S4'); ?>"/>
+					<?php echo (getFiled('Q5Wa10S4', $schoolUserID)!="")?getFiled('Q5Wa10S4', $schoolUserID) : "N/A"; ?>
+                        
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa10S5"
-                               type="number" name="Q5Wa10S5"
-                               placeholder="<?php if (isset($data['Q5Wa10S5'])) echo $data['Q5Wa10S5'] ?>"
-                               value="<?php echo set_value('Q5Wa10S5'); ?>" readonly/>
+					<?php echo (getFiled('Q5Wa10S5', $schoolUserID)!="")?getFiled('Q5Wa10S5', $schoolUserID) : "N/A"; ?>
+                        
                     </div>
                 </div>
                 <div class="form-group row">
@@ -929,29 +554,24 @@
                         <label>Total </label>
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" id="Q5Wa11S1" type="number" name="Q5Wa11S1"
-                               placeholder="<?php if (isset($data['Q5Wa11S1'])) echo $data['Q5Wa11S1'] ?>"
-                               value="<?php echo set_value('Q5Wa11S1'); ?>" readonly/>
+					<?php echo (getFiled('Q5Wa11S1', $schoolUserID)!="")?getFiled('Q5Wa11S1', $schoolUserID) : "N/A"; ?>
+                       
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" id="Q5Wa11S2" type="number" name="Q5Wa11S2"
-                               placeholder="<?php if (isset($data['Q5Wa11S2'])) echo $data['Q5Wa11S2'] ?>"
-                               value="<?php echo set_value('Q5Wa11S2'); ?>" readonly/>
+					<?php echo (getFiled('Q5Wa11S2', $schoolUserID)!="")?getFiled('Q5Wa11S2', $schoolUserID) : "N/A"; ?>
+                        
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" id="Q5Wa11S3" type="number" name="Q5Wa11S3"
-                               placeholder="<?php if (isset($data['Q5Wa11S3'])) echo $data['Q5Wa11S3'] ?>"
-                               value="<?php echo set_value('Q5Wa11S3'); ?>" readonly/>
+					<?php echo (getFiled('Q5Wa11S3', $schoolUserID)!="")?getFiled('Q5Wa11S3', $schoolUserID) : "N/A"; ?>
+                       
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" id="Q5Wa11S4" type="number" name="Q5Wa11S4"
-                               placeholder="<?php if (isset($data['Q5Wa11S4'])) echo $data['Q5Wa11S4'] ?>"
-                               value="<?php echo set_value('Q5Wa11S4'); ?>" readonly/>
+					<?php echo (getFiled('Q5Wa11S4', $schoolUserID)!="")?getFiled('Q5Wa11S4', $schoolUserID) : "N/A"; ?>
+                        
                     </div>
                     <div class="col-xs-2">
-                        <input class="form-control space-textbox" id="Q5Wa11S5" type="number" name="Q5Wa11S5"
-                               placeholder="<?php if (isset($data['Q5Wa11S5'])) echo $data['Q5Wa11S5'] ?>"
-                               value="<?php echo set_value('Q5Wa11S5'); ?>" readonly/>
+					<?php echo (getFiled('Q5Wa11S5', $schoolUserID)!="")?getFiled('Q5Wa11S5', $schoolUserID) : "N/A"; ?>
+                        
                     </div>
                 </div>
             </div>
@@ -963,12 +583,21 @@
                 • Pictures of playground with more than two dustbins<br>
                 Kindly attach the aforementioned documents along with the survey<br>
                 <br>
-                <button class="btn uploadbtn upload" data-id="Segregation Source Classrooms" data-toggle="modal"
-                        data-target="#airModal" type="button">UPLOAD FILES
+                <button class="btn uploadbtn upload" data-id="Segregation Source Classrooms" data-toggle="modal" data-target="#airModal" type="button">UPLOAD FILES
                 </button>
                 <br>
                 <br>
             </div>
+            <table width="100%" class="question uploadedfiles">
+                <thead>
+                <tr>
+                    <th>File name</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                                </tbody>
+            </table>
             <div class="form-group">
                 <label>
                     <h6>Task 3: How much waste does your school generate?</h6>
@@ -990,359 +619,213 @@
             <br>
             <div class="form-group">
                 <label class="control-label"><span class="cube">3</span>Determine the quantity of waste generated in
-                    your school. (in kilogram) <a class="tt"
-                                                   data-tooltip="Please note that some categories of waste may happen daily, weekly, monthly, bi-annually or annually. Please convert these to monthly average before entering."><span
-                                class="badge">?</span></a></label>
+                    your school. (in kilogram) </label>
             </div>
             <div class="form-group">
                 <label><span class="cube">a.</span>Biodegradable/Wet Waste</label>
-                <div class="form-group row">
-                    <div class="col-xs-6">
-                        <label>HOW MUCH WASTE DOES YOUR SCHOOL GENERATE? </label>
-                    </div>
-                    <div class="col-xs-6">
-                        <label>Quantity of solid waste generated(monthly average in kg) </label>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-xs-6">
-                        <label>Garden/horticulture waste </label>
-                    </div>
-                    <div class="col-xs-6">
-                        <input class="form-control space-textbox" onKeyUp="solidWaste()" id="Q6Wa1S1" type="number"
-                               name="Q6Wa1S1" placeholder="<?php if (isset($data['Q6Wa1S1'])) echo $data['Q6Wa1S1'] ?>"
-                               value="<?php echo set_value('Q6Wa1S1'); ?>"/>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-xs-6">
-                        <label>Kitchen waste—Raw </label>
-                    </div>
-                    <div class="col-xs-6">
-                        <input class="form-control space-textbox" onKeyUp="solidWaste()" id="Q6Wa1S2" type="number"
-                               name="Q6Wa1S2" placeholder="<?php if (isset($data['Q6Wa1S2'])) echo $data['Q6Wa1S2'] ?>"
-                               value="<?php echo set_value('Q6Wa1S2'); ?>"/>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-xs-6">
-                        <label>Kitchen waste—Cooked </label>
-                    </div>
-                    <div class="col-xs-6">
-                        <input class="form-control space-textbox" onKeyUp="solidWaste()" id="Q6Wa1S3" type="number"
-                               name="Q6Wa1S3" placeholder="<?php if (isset($data['Q6Wa1S3'])) echo $data['Q6Wa1S3'] ?>"
-                               value="<?php echo set_value('Q6Wa1S3'); ?>"/>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-xs-6">
-                        <label>Wet waste from classrooms etc. </label>
-                    </div>
-                    <div class="col-xs-6">
-                        <input class="form-control space-textbox" onKeyUp="solidWaste()" id="Q6Wa1S4" type="number"
-                               name="Q6Wa1S4" placeholder="<?php if (isset($data['Q6Wa1S4'])) echo $data['Q6Wa1S4'] ?>"
-                               value="<?php echo set_value('Q6Wa1S4'); ?>"/>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-xs-6">
-                        <label>Total amount of waste </label>
-                    </div>
-                    <div class="col-xs-6">
-                        <input class="form-control space-textbox" onKeyUp="solidWaste()" id="Q6Wa1S5" type="number"
-                               name="Q6Wa1S5" placeholder="<?php if (isset($data['Q6Wa1S5'])) echo $data['Q6Wa1S5'] ?>"
-                               value="<?php echo set_value('Q6Wa1S5'); ?>" readonly/>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-xs-6">
-                        <label>Per capita waste generation (a): </label>
-                    </div>
-                    <div class="col-xs-6">
-                        <input class="form-control space-textbox" onKeyUp="solidWaste()" id="Q6Wa1S6" type="number"
-                               name="Q6Wa1S6" placeholder="<?php if (isset($data['Q6Wa1S6'])) echo $data['Q6Wa1S6'] ?>"
-                               value="<?php echo set_value('Q6Wa1S6'); ?>" readonly/>
-                    </div>
-                </div>
+                
+	<table class="table table-bordered table-striped">
+        <tr>
+      
+          <th> HOW MUCH WASTE DOES YOUR SCHOOL GENERATE?</th>
+          <th>Quantity of solid waste generated(monthly average in kg) </th>
+          
+        </tr>
+        <tr>
+          <td> Garden/horticulture waste </td>
+          <td><?php echo (getFiled('Q6Wa1S1', $schoolUserID)!="")?getFiled('Q6Wa1S1', $schoolUserID) : "N/A"; ?></td>
+        </tr>
+        <tr>
+          <td> Kitchen waste—Raw </td>
+          <td><?php echo (getFiled('Q6Wa1S2', $schoolUserID)!="")?getFiled('Q6Wa1S2', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+        <tr>
+          <td> Kitchen waste—Cooked </td>
+          <td><?php echo (getFiled('Q6Wa1S3', $schoolUserID)!="")?getFiled('Q6Wa1S3', $schoolUserID) : "N/A"; ?> </td>
+         
+        </tr>
+        <tr>
+          <td> Wet waste from classrooms etc.</td>
+          <td><?php echo (getFiled('Q6Wa1S4', $schoolUserID)!="")?getFiled('Q6Wa1S4', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+        <tr>
+          <td> Total amount of waste </td>
+          <td><?php echo (getFiled('Q6Wa1S5', $schoolUserID)!="")?getFiled('Q6Wa1S5', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+		 <tr>
+          <td> Per capita waste generation (a):</td>
+          <td><?php echo (getFiled('Q6Wa1S6', $schoolUserID)!="")?getFiled('Q6Wa1S6', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+		
+     </table>	 
+  
             </div>
             <div class="form-group">
                 <label><span class="cube">b.</span>Dry/recyclable waste</label>
-                <div class="form-group row">
-                    <div class="col-xs-6">
-                        <label>HOW MUCH WASTE DOES YOUR SCHOOL GENERATE? </label>
-                    </div>
-                    <div class="col-xs-6">
-                        <label>Quantity of solid waste generated
-                            (monthly average in kg) </label>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-xs-6">
-                        <label>Plastic </label>
-                    </div>
-                    <div class="col-xs-6">
-                        <input class="form-control space-textbox" onKeyUp="solidRecyclable()" id="Q6Wa2S1" type="number"
-                               name="Q6Wa2S1" placeholder="<?php if (isset($data['Q6Wa2S1'])) echo $data['Q6Wa2S1'] ?>"
-                               value="<?php echo set_value('Q6Wa2S1'); ?>"/>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-xs-6">
-                        <label>Paper </label>
-                    </div>
-                    <div class="col-xs-6">
-                        <input class="form-control space-textbox" onKeyUp="solidRecyclable()" id="Q6Wa2S2" type="number"
-                               name="Q6Wa2S2" placeholder="<?php if (isset($data['Q6Wa2S2'])) echo $data['Q6Wa2S2'] ?>"
-                               value="<?php echo set_value('Q6Wa2S2'); ?>"/>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-xs-6">
-                        <label>Wood or classroom furniture </label>
-                    </div>
-                    <div class="col-xs-6">
-                        <input class="form-control space-textbox" onKeyUp="solidRecyclable()" id="Q6Wa2S3" type="number"
-                               name="Q6Wa2S3" placeholder="<?php if (isset($data['Q6Wa2S3'])) echo $data['Q6Wa2S3'] ?>"
-                               value="<?php echo set_value('Q6Wa2S3'); ?>"/>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-xs-6">
-                        <label>Glass </label>
-                    </div>
-                    <div class="col-xs-6">
-                        <input class="form-control space-textbox" onKeyUp="solidRecyclable()" id="Q6Wa2S4" type="number"
-                               name="Q6Wa2S4" placeholder="<?php if (isset($data['Q6Wa2S4'])) echo $data['Q6Wa2S4'] ?>"
-                               value="<?php echo set_value('Q6Wa2S4'); ?>"/>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-xs-6">
-                        <label>Metal </label>
-                    </div>
-                    <div class="col-xs-6">
-                        <input class="form-control space-textbox" onKeyUp="solidRecyclable()" id="Q6Wa2S5" type="number"
-                               name="Q6Wa2S5" placeholder="<?php if (isset($data['Q6Wa2S5'])) echo $data['Q6Wa2S5'] ?>"
-                               value="<?php echo set_value('Q6Wa2S5'); ?>"/>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-xs-6">
-                        <label>Thermocol </label>
-                    </div>
-                    <div class="col-xs-6">
-                        <input class="form-control space-textbox" onKeyUp="solidRecyclable()" id="Q6Wa2S6" type="number"
-                               name="Q6Wa2S6" placeholder="<?php if (isset($data['Q6Wa2S6'])) echo $data['Q6Wa2S6'] ?>"
-                               value="<?php echo set_value('Q6Wa2S6'); ?>"/>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-xs-6">
-                        <label>Tetra packs </label>
-                    </div>
-                    <div class="col-xs-6">
-                        <input class="form-control space-textbox" onKeyUp="solidRecyclable()" id="Q6Wa2S7" type="number"
-                               name="Q6Wa2S7" placeholder="<?php if (isset($data['Q6Wa2S7'])) echo $data['Q6Wa2S7'] ?>"
-                               value="<?php echo set_value('Q6Wa2S7'); ?>"/>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-xs-6">
-                        <label>Total amount of waste </label>
-                    </div>
-                    <div class="col-xs-6">
-                        <input class="form-control space-textbox" onKeyUp="solidRecyclable()" id="Q6Wa2S8" type="number"
-                               name="Q6Wa2S8" placeholder="<?php if (isset($data['Q6Wa2S8'])) echo $data['Q6Wa2S8'] ?>"
-                               value="<?php echo set_value('Q6Wa2S8'); ?>" readonly/>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-xs-6">
-                        <label>Per capita waste generation (b): </label>
-                    </div>
-                    <div class="col-xs-6">
-                        <input class="form-control space-textbox" onKeyUp="solidRecyclable()" id="Q6Wa2S9" type="number"
-                               name="Q6Wa2S9" placeholder="<?php if (isset($data['Q6Wa2S9'])) echo $data['Q6Wa2S9'] ?>"
-                               value="<?php echo set_value('Q6Wa2S9'); ?>" readonly/>
-                    </div>
-                </div>
+               
+	<table class="table table-bordered table-striped">
+        <tr>
+      
+          <th> HOW MUCH WASTE DOES YOUR SCHOOL GENERATE?</th>
+          <th>Quantity of solid waste generated(monthly average in kg) </th>
+          
+        </tr>
+        <tr>
+          <td> Plastic</td>
+          <td><?php echo (getFiled('Q6Wa2S1', $schoolUserID)!="")?getFiled('Q6Wa2S1', $schoolUserID) : "N/A"; ?></td>
+        </tr>
+        <tr>
+          <td> Paper </td>
+          <td><?php echo (getFiled('Q6Wa2S2', $schoolUserID)!="")?getFiled('Q6Wa2S2', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+        <tr>
+          <td> Wood or classroom furniture </td>
+          <td><?php echo (getFiled('Q6Wa2S3', $schoolUserID)!="")?getFiled('Q6Wa2S3', $schoolUserID) : "N/A"; ?> </td>
+         
+        </tr>
+        <tr>
+          <td> Glass</td>
+          <td><?php echo (getFiled('Q6Wa2S4', $schoolUserID)!="")?getFiled('Q6Wa2S4', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+        <tr>
+          <td> Metal </td>
+          <td><?php echo (getFiled('Q6Wa2S5', $schoolUserID)!="")?getFiled('Q6Wa2S5', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+		 <tr>
+          <td> Thermocol</td>
+          <td><?php echo (getFiled('Q6Wa2S6', $schoolUserID)!="")?getFiled('Q6Wa2S6', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+		<tr>
+          <td> Tetra packs</td>
+          <td><?php echo (getFiled('Q6Wa2S7', $schoolUserID)!="")?getFiled('Q6Wa2S7', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+		
+		<tr>
+          <td> Total amount of waste</td>
+          <td><?php echo (getFiled('Q6Wa2S8', $schoolUserID)!="")?getFiled('Q6Wa2S8', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+		<tr>
+          <td> Per capita waste generation (b):</td>
+          <td><?php echo (getFiled('Q6Wa2S9', $schoolUserID)!="")?getFiled('Q6Wa2S9', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+		
+		
+     </table>	 
+              
             </div>
             <div class="form-group">
                 <label><span class="cube">c.</span>Domestic hazardous waste</label>
-                <div class="form-group row">
-                    <div class="col-xs-6">
-                        <label>HOW MUCH WASTE DOES YOUR SCHOOL GENERATE? </label>
-                    </div>
-                    <div class="col-xs-6">
-                        <label>Quantity of solid waste generated(monthly average in kg) </label>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-xs-6">
-                        <label>Hazardous and toxic waste (Paints, lab waste, etc) </label>
-                    </div>
-                    <div class="col-xs-6">
-                        <input class="form-control space-textbox" onKeyUp="WasteDomestic()" id="Q6Wa3S1" type="number"
-                               name="Q6Wa3S1" placeholder="<?php if (isset($data['Q6Wa3S1'])) echo $data['Q6Wa3S1'] ?>"
-                               value="<?php echo set_value('Q6Wa3S1'); ?>"/>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-xs-6">
-                        <label>Oil from DG sets </label>
-                    </div>
-                    <div class="col-xs-6">
-                        <input class="form-control space-textbox" onKeyUp="WasteDomestic()" id="Q6Wa3S2" type="number"
-                               name="Q6Wa3S2" placeholder="<?php if (isset($data['Q6Wa3S2'])) echo $data['Q6Wa3S2'] ?>"
-                               value="<?php echo set_value('Q6Wa3S2'); ?>"/>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-xs-6">
-                        <label>Total amount of waste </label>
-                    </div>
-                    <div class="col-xs-6">
-                        <input class="form-control space-textbox" onKeyUp="WasteDomestic()" id="Q6Wa3S3" type="number"
-                               name="Q6Wa3S3" placeholder="<?php if (isset($data['Q6Wa3S3'])) echo $data['Q6Wa3S3'] ?>"
-                               value="<?php echo set_value('Q6Wa3S3'); ?>" readonly/>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-xs-6">
-                        <label>Per capita waste generation (c). </label>
-                    </div>
-                    <div class="col-xs-6">
-                        <input class="form-control space-textbox" onKeyUp="WasteDomestic()" id="Q6Wa3S4" type="number"
-                               name="Q6Wa3S4" placeholder="<?php if (isset($data['Q6Wa3S4'])) echo $data['Q6Wa3S4'] ?>"
-                               value="<?php echo set_value('Q6Wa3S4'); ?>" readonly/>
-                    </div>
-                </div>
+                
+	<table class="table table-bordered table-striped">
+        <tr>
+      
+          <th> HOW MUCH WASTE DOES YOUR SCHOOL GENERATE?</th>
+          <th>Quantity of solid waste generated(monthly average in kg) </th>
+          
+        </tr>
+        <tr>
+          <td> Hazardous and toxic waste (Paints, lab waste, etc)</td>
+          <td><?php echo (getFiled('Q6Wa3S1', $schoolUserID)!="")?getFiled('Q6Wa3S1', $schoolUserID) : "N/A"; ?></td>
+        </tr>
+        <tr>
+          <td> Oil from DG sets </td>
+          <td><?php echo (getFiled('Q6Wa3S2', $schoolUserID)!="")?getFiled('Q6Wa3S2', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+        <tr>
+          <td> Total amount of waste </td>
+          <td><?php echo (getFiled('Q6Wa3S3', $schoolUserID)!="")?getFiled('Q6Wa3S3', $schoolUserID) : "N/A"; ?> </td>
+         
+        </tr>
+        <tr>
+          <td> Per capita waste generation (c).</td>
+          <td><?php echo (getFiled('Q6Wa3S4', $schoolUserID)!="")?getFiled('Q6Wa3S4', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+		</table>
+               
             </div>
             <div class="form-group">
                 <label><span class="cube">d.</span>E-Waste</label>
-                <div class="form-group row">
-                    <div class="col-xs-6">
-                        <label>HOW MUCH WASTE DOES YOUR SCHOOL GENERATE? </label>
-                    </div>
-                    <div class="col-xs-6">
-                        <label>Quantity of solid waste generated(monthly average in kg) </label>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-xs-6">
-                        <label>E-waste </label>
-                    </div>
-                    <div class="col-xs-6">
-                        <input class="form-control space-textbox" onKeyUp="EWaste()" id="Q6Wa4S1" type="number"
-                               name="Q6Wa4S1" placeholder="<?php if (isset($data['Q6Wa4S1'])) echo $data['Q6Wa4S1'] ?>"
-                               value="<?php echo set_value('Q6Wa4S1'); ?>"/>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-xs-6">
-                        <label>Per capita waste generation (d): </label>
-                    </div>
-                    <div class="col-xs-6">
-                        <input class="form-control space-textbox" onKeyUp="EWaste()" id="Q6Wa4S2" type="number"
-                               name="Q6Wa4S2" placeholder="<?php if (isset($data['Q6Wa4S2'])) echo $data['Q6Wa4S2'] ?>"
-                               value="<?php echo set_value('Q6Wa4S2'); ?>" readonly/>
-                    </div>
-                </div>
+                
+	<table class="table table-bordered table-striped">
+        <tr>
+      
+          <th> HOW MUCH WASTE DOES YOUR SCHOOL GENERATE?</th>
+          <th>Quantity of solid waste generated(monthly average in kg) </th>
+          
+        </tr>
+        <tr>
+          <td> E-waste</td>
+          <td><?php echo (getFiled('Q6Wa4S1', $schoolUserID)!="")?getFiled('Q6Wa4S1', $schoolUserID) : "N/A"; ?></td>
+        </tr>
+        <tr>
+          <td> Per capita waste generation (d): </td>
+          <td><?php echo (getFiled('Q6Wa4S2', $schoolUserID)!="")?getFiled('Q6Wa4S2', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+		</table>
+                
             </div>
             <div class="form-group">
                 <label><span class="cube">e.</span>Biomedical waste</label>
-                <div class="form-group row">
-                    <div class="col-xs-6">
-                        <label>HOW MUCH WASTE DOES YOUR SCHOOL GENERATE? </label>
-                    </div>
-                    <div class="col-xs-6">
-                        <label>Quantity of solid waste generated(monthly average in kg) </label>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-xs-6">
-                        <label>Biomedical waste such as syringes, band–aids, expired medicines etc. </label>
-                    </div>
-                    <div class="col-xs-6">
-                        <input class="form-control space-textbox" onKeyUp="WasteBiomedical()" id="Q6Wa5S1" type="number"
-                               name="Q6Wa5S1" placeholder="<?php if (isset($data['Q6Wa5S1'])) echo $data['Q6Wa5S1'] ?>"
-                               value="<?php echo set_value('Q6Wa5S1'); ?>"/>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-xs-6">
-                        <label>Per capita waste generation (e): </label>
-                    </div>
-                    <div class="col-xs-6">
-                        <input class="form-control space-textbox" onKeyUp="WasteBiomedical()" id="Q6Wa5S2" type="number"
-                               name="Q6Wa5S2" placeholder="<?php if (isset($data['Q6Wa5S2'])) echo $data['Q6Wa5S2'] ?>"
-                               value="<?php echo set_value('Q6Wa5S2'); ?>" readonly/>
-                    </div>
-                </div>
+               
+				<table class="table table-bordered table-striped">
+        <tr>
+      
+          <th> HOW MUCH WASTE DOES YOUR SCHOOL GENERATE?</th>
+          <th>Quantity of solid waste generated(monthly average in kg) </th>
+          
+        </tr>
+        <tr>
+          <td> Biomedical waste such as syringes, band–aids, expired medicines etc.</td>
+          <td><?php echo (getFiled('Q6Wa5S1', $schoolUserID)!="")?getFiled('Q6Wa5S1', $schoolUserID) : "N/A"; ?></td>
+        </tr>
+        <tr>
+          <td> Per capita waste generation (e): </td>
+          <td><?php echo (getFiled('Q6Wa5S2', $schoolUserID)!="")?getFiled('Q6Wa5S2', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+		</table>
+               
             </div>
             <div class="form-group">
-                <label><span class="cube">f.</span>Sanitary waste </label>
-                <div class="form-group row">
-                    <div class="col-xs-6">
-                        <label>HOW MUCH WASTE DOES YOUR SCHOOL GENERATE? </label>
-                    </div>
-                    <div class="col-xs-6">
-                        <label>Quantity of solid waste generated(monthly average in kg) </label>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-xs-6">
-                        <label>Sanitary waste </label>
-                    </div>
-                    <div class="col-xs-6">
-                        <input class="form-control space-textbox" onKeyUp="WasteSanitary()" id="Q6Wa6S1" type="number"
-                               name="Q6Wa6S1" placeholder="<?php if (isset($data['Q6Wa6S1'])) echo $data['Q6Wa6S1'] ?>"
-                               value="<?php echo set_value('Q6Wa6S1'); ?>"/>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-xs-6">
-                        <label>Per capita waste generation (f): </label>
-                    </div>
-                    <div class="col-xs-6">
-                        <input class="form-control space-textbox" onKeyUp="WasteSanitary()" id="Q6Wa6S2" type="number"
-                               name="Q6Wa6S2" placeholder="<?php if (isset($data['Q6Wa6S2'])) echo $data['Q6Wa6S2'] ?>"
-                               value="<?php echo set_value('Q6Wa6S2'); ?>" readonly/>
-                    </div>
-                </div>
+              <label><span class="cube">f.</span>Sanitary waste </label>
+               
+	<table class="table table-bordered table-striped">
+        <tr>
+      
+          <th> HOW MUCH WASTE DOES YOUR SCHOOL GENERATE?</th>
+          <th>Quantity of solid waste generated(monthly average in kg) </th>
+          
+        </tr>
+        <tr>
+          <td> Sanitary waste</td>
+          <td><?php echo (getFiled('Q6Wa6S1', $schoolUserID)!="")?getFiled('Q6Wa6S1', $schoolUserID) : "N/A"; ?></td>
+        </tr>
+        <tr>
+          <td> Per capita waste generation (f): </td>
+          <td><?php echo (getFiled('Q6Wa6S2', $schoolUserID)!="")?getFiled('Q6Wa6S2', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+		</table>
+              
             </div>
             <div class="form-group">
-                <label><span class="cube">g.</span>Cc& D Waste</label>
-                <div class="form-group row">
-                    <div class="col-xs-6">
-                        <label>HOW MUCH WASTE DOES YOUR SCHOOL GENERATE? </label>
-                    </div>
-                    <div class="col-xs-6">
-                        <label>Quantity of solid waste generated(monthly average in kg) </label>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-xs-6">
-                        <label>Construction and demolition waste </label>
-                    </div>
-                    <div class="col-xs-6">
-                        <input class="form-control space-textbox" onKeyUp="WasteConstruction()" id="Q6Wa7S1"
-                               type="number" name="Q6Wa7S1"
-                               placeholder="<?php if (isset($data['Q6Wa7S1'])) echo $data['Q6Wa7S1'] ?>"
-                               value="<?php echo set_value('Q6Wa7S1'); ?>"/>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-xs-6">
-                        <label>Per capita waste generation (g): </label>
-                    </div>
-                    <div class="col-xs-6">
-                        <input class="form-control space-textbox" onKeyUp="WasteConstruction()" id="Q6Wa7S2"
-                               type="number" name="Q6Wa7S2"
-                               placeholder="<?php if (isset($data['Q6Wa7S2'])) echo $data['Q6Wa7S2'] ?>"
-                               value="<?php echo set_value('Q6Wa7S2'); ?>" readonly/>
-                    </div>
-                </div>
+        <label><span class="cube">g.</span>Cc&amp; D Waste</label>
+              
+		<table class="table table-bordered table-striped">
+        <tr>
+      
+          <th> HOW MUCH WASTE DOES YOUR SCHOOL GENERATE?</th>
+          <th>Quantity of solid waste generated(monthly average in kg) </th>
+          
+        </tr>
+        <tr>
+          <td> Construction and demolition waste </td>
+          <td><?php echo (getFiled('Q6Wa7S1', $schoolUserID)!="")?getFiled('Q6Wa7S1', $schoolUserID) : "N/A"; ?></td>
+        </tr>
+        <tr>
+          <td> Per capita waste generation (g): </td>
+          <td><?php echo (getFiled('Q6Wa7S2', $schoolUserID)!="")?getFiled('Q6Wa7S2', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+		</table>
+             
             </div>
             <br>
             <div class="form-group">
@@ -1352,12 +835,21 @@
                 • Picture of types of solid waste generated<br>
                 Kindly attach the aforementioned documents along with the survey<br>
                 <br>
-                <button class="btn uploadbtn upload" data-id="Audit Team Weighing Solid Waste" data-toggle="modal"
-                        data-target="#airModal" type="button">UPLOAD FILES
+                <button class="btn uploadbtn upload" data-id="Audit Team Weighing Solid Waste" data-toggle="modal" data-target="#airModal" type="button">UPLOAD FILES
                 </button>
                 <br>
                 <br>
             </div>
+            <table width="100%" class="question uploadedfiles">
+                <thead>
+                <tr>
+                    <th>File name</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                                </tbody>
+            </table>
             <div class="form-group">
                 <label>
                     <h6>Task 4: How much waste does your school treat/recycle?</h6>
@@ -1368,803 +860,230 @@
                     pit, paper recycling machine, etc. If you have a paper recycling unit, the person in charge will
                     definitely be recording the input and output from the unit. If the school is selling newspapers or
                     bottles or metal scrap to the local waste dealer (kabadiwala), that can also be included in the
-                    quantity recycled.<a class="tt" data-tooltip="Includes all waste recycled, reused or treated."
-                                         style="position:relative; top:-18px;"><span class="badge">?</span></a></p>
+                    quantity recycled.</p>
             </div>
             <br>
             <div class="form-group">
-                <label class="control-label"><span class="cube">4</span>Does your school recycle any generated waste? <a
-                            class="tt"
-                            data-tooltip=" In kg/day or kg/month, you can check daily waste generation and then find out how much of it goes for recycling or treatment."
-                            ><span class="badge">?</span></a><a class="kplink" href="http://www.greenschoolsprogramme.org/knowledge-bank/waste/#recyclingRefuse" target="_blank"> </a></label>
+                <label class="control-label"><span class="cube">4</span>Does your school recycle any generated waste? </label>
                 <div class="form-group">
-                    <label class="radio-inline text-gray">
-                        <input type="radio" name="Q8Wa1" onClick="WasteGenerated(1)" class="radio" id="Q8Wa1"
-                               value="<?php echo set_value('Q8Wa1', 'Y') ?>" <?php if (isset($data['Q8Wa1'])) echo $data['Q8Wa1'] == 'Y' ? "checked" : "" ?>>
-                        Yes </label>
-                    <label class="radio-inline text-gray">
-                        <input type="radio" name="Q8Wa1" onClick="WasteGenerated(2)" class="radio" id="Q8Wa1"
-                               value="<?php echo set_value('Q8Wa1', 'N') ?>" <?php if (isset($data['Q8Wa1'])) echo $data['Q8Wa1'] == 'N' ? "checked" : "" ?>>
-                        No </label>
+				<p> <?php echo (getFiled('Q8Wa1', $schoolUserID)!="")? (getFiled('Q8Wa1', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+                    
                 </div>
             </div>
-            <?php
-            if (isset($data['Q8Wa1']))
-                if ($data['Q8Wa1'] == 'Y') {
-                    ?>
-                    <div class="form-group" id="Q8Wa2">
+        
+            <div class="form-group" id="Q8Wa2">
+                
                         <label class="control-label"><span class="cube">4(a)</span>Please provide quantity of which is
                             applicable</label>
                         <div class="form-group">
                             <label><span class="cube">a.</span>Biodegradable/Wet Waste</label>
-                            <div class="form-group row">
-                                <div class="col-xs-6">
-                                    <label>HOW MUCH WASTE DOES YOUR SCHOOL REUSE/RECYCLE? </label>
-                                </div>
-                                <div class="col-xs-6">
-                                    <label>Quantity of solid waste reuse/recycled (monthly average in kg) </label>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-xs-6">
-                                    <label>Garden/horticulture waste </label>
-                                </div>
-                                <div class="col-xs-6">
-                                    <input class="form-control space-textbox" onKeyUp="solidWaste1()" id="Q8Wa1S1"
-                                           type="number" name="Q8Wa1S1"
-                                           placeholder="<?php if (isset($data['Q8Wa1S1'])) echo $data['Q8Wa1S1'] ?>"
-                                           value="<?php echo set_value('Q8Wa1S1'); ?>"/>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-xs-6">
-                                    <label>Kitchen waste—Raw </label>
-                                </div>
-                                <div class="col-xs-6">
-                                    <input class="form-control space-textbox" onKeyUp="solidWaste1()" id="Q8Wa1S2"
-                                           type="number" name="Q8Wa1S2"
-                                           placeholder="<?php if (isset($data['Q8Wa1S2'])) echo $data['Q8Wa1S2'] ?>"
-                                           value="<?php echo set_value('Q8Wa1S2'); ?>"/>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-xs-6">
-                                    <label>Kitchen waste—Cooked </label>
-                                </div>
-                                <div class="col-xs-6">
-                                    <input class="form-control space-textbox" onKeyUp="solidWaste1()" id="Q8Wa1S3"
-                                           type="number" name="Q8Wa1S3"
-                                           placeholder="<?php if (isset($data['Q8Wa1S3'])) echo $data['Q8Wa1S3'] ?>"
-                                           value="<?php echo set_value('Q8Wa1S3'); ?>"/>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-xs-6">
-                                    <label>Wet waste from classrooms etc. </label>
-                                </div>
-                                <div class="col-xs-6">
-                                    <input class="form-control space-textbox" onKeyUp="solidWaste1()" id="Q8Wa1S4"
-                                           type="number" name="Q8Wa1S4"
-                                           placeholder="<?php if (isset($data['Q8Wa1S4'])) echo $data['Q8Wa1S4'] ?>"
-                                           value="<?php echo set_value('Q8Wa1S4'); ?>"/>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-xs-6">
-                                    <label>Total amount of waste </label>
-                                </div>
-                                <div class="col-xs-6">
-                                    <input class="form-control space-textbox" onKeyUp="solidWaste()" id="Q8Wa1S5"
-                                           type="number" name="Q8Wa1S5"
-                                           placeholder="<?php if (isset($data['Q8Wa1S5'])) echo $data['Q8Wa1S5'] ?>"
-                                           value="<?php echo set_value('Q8Wa1S5'); ?>" readonly/>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-xs-6">
-                                    <label>Per capita waste reused/recycled (a): </label>
-                                </div>
-                                <div class="col-xs-6">
-                                    <input class="form-control space-textbox" onKeyUp="solidWaste()" id="Q8Wa1S6"
-                                           type="number" name="Q8Wa1S6"
-                                           placeholder="<?php if (isset($data['Q8Wa1S6'])) echo $data['Q8Wa1S6'] ?>"
-                                           value="<?php echo set_value('Q8Wa1S6'); ?>" readonly/>
-                                </div>
-                            </div>
+							
+		<table class="table table-bordered table-striped">
+        <tr>
+      
+          <th> HOW MUCH WASTE DOES YOUR SCHOOL REUSE/RECYCLE? </th>
+          <th>Quantity of solid waste reuse/recycled (monthly average in kg) </th>
+          
+        </tr>
+        <tr>
+          <td> Garden/horticulture waste </td>
+          <td><?php echo (getFiled('Q8Wa1S1', $schoolUserID)!="")?getFiled('Q8Wa1S1', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+        <tr>
+          <td> Kitchen waste—Raw</td>
+          <td><?php echo (getFiled('Q8Wa1S2', $schoolUserID)!="")?getFiled('Q8Wa1S2', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+        <tr>
+          <td> Kitchen waste—Cooked </td>
+          <td><?php echo (getFiled('Q8Wa1S3', $schoolUserID)!="")?getFiled('Q8Wa1S3', $schoolUserID) : "N/A"; ?> </td>
+         
+        </tr>
+        <tr>
+          <td> Wet waste from classrooms etc.</td>
+          <td><?php echo (getFiled('Q8Wa1S4', $schoolUserID)!="")?getFiled('Q8Wa1S4', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+		
+		<tr>
+          <td> Total amount of waste</td>
+          <td><?php echo (getFiled('Q8Wa1S5', $schoolUserID)!="")?getFiled('Q8Wa1S5', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+		
+		<tr>
+          <td> Per capita waste reused/recycled (a):</td>
+          <td><?php echo (getFiled('Q8Wa1S6', $schoolUserID)!="")?getFiled('Q8Wa1S6', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+		</table> 
                         </div>
                         <div class="form-group">
                             <label><span class="cube">b.</span>Dry/recyclable waste</label>
-                            <div class="form-group row">
-                                <div class="col-xs-6">
-                                    <label>HOW MUCH WASTE DOES YOUR SCHOOL REUSE/RECYCLE? </label>
-                                </div>
-                                <div class="col-xs-6">
-                                    <label>Quantity of solid waste generated
-                                        (monthly average in kg) </label>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-xs-6">
-                                    <label>Plastic </label>
-                                </div>
-                                <div class="col-xs-6">
-                                    <input class="form-control space-textbox" onKeyUp="solidRecyclable1()" id="Q8Wa2S1"
-                                           type="number" name="Q8Wa2S1"
-                                           placeholder="<?php if (isset($data['Q8Wa2S1'])) echo $data['Q8Wa2S1'] ?>"
-                                           value="<?php echo set_value('Q8Wa2S1'); ?>"/>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-xs-6">
-                                    <label>Paper </label>
-                                </div>
-                                <div class="col-xs-6">
-                                    <input class="form-control space-textbox" onKeyUp="solidRecyclable1()" id="Q8Wa2S2"
-                                           type="number" name="Q8Wa2S2"
-                                           placeholder="<?php if (isset($data['Q8Wa2S2'])) echo $data['Q8Wa2S2'] ?>"
-                                           value="<?php echo set_value('Q8Wa2S2'); ?>"/>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-xs-6">
-                                    <label>Wood or classroom furniture </label>
-                                </div>
-                                <div class="col-xs-6">
-                                    <input class="form-control space-textbox" onKeyUp="solidRecyclable1()" id="Q8Wa2S3"
-                                           type="number" name="Q8Wa2S3"
-                                           placeholder="<?php if (isset($data['Q8Wa2S3'])) echo $data['Q8Wa2S3'] ?>"
-                                           value="<?php echo set_value('Q8Wa2S3'); ?>"/>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-xs-6">
-                                    <label>Glass </label>
-                                </div>
-                                <div class="col-xs-6">
-                                    <input class="form-control space-textbox" onKeyUp="solidRecyclable1()" id="Q8Wa2S4"
-                                           type="number" name="Q8Wa2S4"
-                                           placeholder="<?php if (isset($data['Q8Wa2S4'])) echo $data['Q8Wa2S4'] ?>"
-                                           value="<?php echo set_value('Q8Wa2S4'); ?>"/>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-xs-6">
-                                    <label>Metal </label>
-                                </div>
-                                <div class="col-xs-6">
-                                    <input class="form-control space-textbox" onKeyUp="solidRecyclable1()" id="Q8Wa2S5"
-                                           type="number" name="Q8Wa2S5"
-                                           placeholder="<?php if (isset($data['Q8Wa2S5'])) echo $data['Q8Wa2S5'] ?>"
-                                           value="<?php echo set_value('Q8Wa2S5'); ?>"/>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-xs-6">
-                                    <label>Thermocol </label>
-                                </div>
-                                <div class="col-xs-6">
-                                    <input class="form-control space-textbox" onKeyUp="solidRecyclable1()" id="Q8Wa2S6"
-                                           type="number" name="Q8Wa2S6"
-                                           placeholder="<?php if (isset($data['Q8Wa2S6'])) echo $data['Q8Wa2S6'] ?>"
-                                           value="<?php echo set_value('Q8Wa2S6'); ?>"/>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-xs-6">
-                                    <label>Tetra packs </label>
-                                </div>
-                                <div class="col-xs-6">
-                                    <input class="form-control space-textbox" onKeyUp="solidRecyclable1()" id="Q8Wa2S7"
-                                           type="number" name="Q8Wa2S7"
-                                           placeholder="<?php if (isset($data['Q8Wa2S7'])) echo $data['Q8Wa2S7'] ?>"
-                                           value="<?php echo set_value('Q8Wa2S7'); ?>"/>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-xs-6">
-                                    <label>Total amount of waste </label>
-                                </div>
-                                <div class="col-xs-6">
-                                    <input class="form-control space-textbox" onKeyUp="solidRecyclable1()" id="Q8Wa2S8"
-                                           type="number" name="Q8Wa2S8"
-                                           placeholder="<?php if (isset($data['Q8Wa2S8'])) echo $data['Q8Wa2S8'] ?>"
-                                           value="<?php echo set_value('Q8Wa2S8'); ?>" readonly/>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-xs-6">
-                                    <label>Per capita waste reused/recycled (b): </label>
-                                </div>
-                                <div class="col-xs-6">
-                                    <input class="form-control space-textbox" onKeyUp="solidRecyclable1()" id="Q8Wa2S9"
-                                           type="number" name="Q8Wa2S9"
-                                           placeholder="<?php if (isset($data['Q8Wa2S9'])) echo $data['Q8Wa2S9'] ?>"
-                                           value="<?php echo set_value('Q8Wa2S9'); ?>" readonly/>
-                                </div>
-                            </div>
-                        </div>
+                            
+							
+	<table class="table table-bordered table-striped">
+        <tr>
+      
+          <th> HOW MUCH WASTE DOES YOUR SCHOOL REUSE/RECYCLE? </th>
+          <th>Quantity of solid waste reuse/recycled (monthly average in kg) </th>
+          
+        </tr>
+        <tr>
+          <td> Plastic </td>
+          <td><?php echo (getFiled('Q8Wa2S1', $schoolUserID)!="")?getFiled('Q8Wa2S1', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+        <tr>
+          <td> Paper</td>
+          <td><?php echo (getFiled('Q8Wa2S2', $schoolUserID)!="")?getFiled('Q8Wa2S2', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+        <tr>
+          <td> Wood or classroom furniture </td>
+          <td><?php echo (getFiled('Q8Wa2S3', $schoolUserID)!="")?getFiled('Q8Wa2S3', $schoolUserID) : "N/A"; ?> </td>
+         
+        </tr>
+        <tr>
+          <td> Glass</td>
+          <td><?php echo (getFiled('Q8Wa2S4', $schoolUserID)!="")?getFiled('Q8Wa2S4', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+		
+		<tr>
+          <td> Metal</td>
+          <td><?php echo (getFiled('Q8Wa2S5', $schoolUserID)!="")?getFiled('Q8Wa2S5', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+		
+		<tr>
+          <td> Thermocol</td>
+          <td><?php echo (getFiled('Q8Wa2S6', $schoolUserID)!="")?getFiled('Q8Wa2S6', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+		<tr>
+          <td> Tetra packs</td>
+          <td><?php echo (getFiled('Q8Wa2S7', $schoolUserID)!="")?getFiled('Q8Wa2S7', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+		<tr>
+          <td> Total amount of waste</td>
+          <td><?php echo (getFiled('Q8Wa2S8', $schoolUserID)!="")?getFiled('Q8Wa2S8', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+		<tr>
+          <td> Per capita waste reused/recycled (b):</td>
+          <td><?php echo (getFiled('Q8Wa2S9', $schoolUserID)!="")?getFiled('Q8Wa2S9', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+		
+		</table> </div>
                         <div class="form-group">
                             <label><span class="cube">c.</span>Domestic hazardous waste</label>
-                            <div class="form-group row">
-                                <div class="col-xs-6">
-                                    <label>HOW MUCH WASTE DOES YOUR SCHOOL REUSE/RECYCLE? </label>
-                                </div>
-                                <div class="col-xs-6">
-                                    <label>Quantity of solid waste generated(monthly average in kg) </label>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-xs-6">
-                                    <label>Hazardous and toxic waste(Paints, lab waste, etc) </label>
-                                </div>
-                                <div class="col-xs-6">
-                                    <input class="form-control space-textbox" onKeyUp="WasteDomestic1()" id="Q8Wa3S1"
-                                           type="number" name="Q8Wa3S1"
-                                           placeholder="<?php if (isset($data['Q8Wa3S1'])) echo $data['Q8Wa3S1'] ?>"
-                                           value="<?php echo set_value('Q8Wa3S1'); ?>"/>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-xs-6">
-                                    <label>Oil from DG sets </label>
-                                </div>
-                                <div class="col-xs-6">
-                                    <input class="form-control space-textbox" onKeyUp="WasteDomestic1()" id="Q8Wa3S2"
-                                           type="number" name="Q8Wa3S2"
-                                           placeholder="<?php if (isset($data['Q8Wa3S2'])) echo $data['Q8Wa3S2'] ?>"
-                                           value="<?php echo set_value('Q8Wa3S2'); ?>"/>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-xs-6">
-                                    <label>Total amount of waste </label>
-                                </div>
-                                <div class="col-xs-6">
-                                    <input class="form-control space-textbox" onKeyUp="WasteDomestic1()" id="Q8Wa3S3"
-                                           type="number" name="Q8Wa3S3"
-                                           placeholder="<?php if (isset($data['Q8Wa3S3'])) echo $data['Q8Wa3S3'] ?>"
-                                           value="<?php echo set_value('Q8Wa3S3'); ?>" readonly/>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-xs-6">
-                                    <label>Per capita waste reused/recycled (c). </label>
-                                </div>
-                                <div class="col-xs-6">
-                                    <input class="form-control space-textbox" onKeyUp="WasteDomestic1()" id="Q8Wa3S4"
-                                           type="number" name="Q8Wa3S4"
-                                           placeholder="<?php if (isset($data['Q8Wa3S4'])) echo $data['Q8Wa3S4'] ?>"
-                                           value="<?php echo set_value('Q8Wa3S4'); ?>" readonly/>
-                                </div>
-                            </div>
+                           
+		<table class="table table-bordered table-striped">
+        <tr>
+      
+          <th> HOW MUCH WASTE DOES YOUR SCHOOL REUSE/RECYCLE? </th>
+          <th>Quantity of solid waste reuse/recycled (monthly average in kg) </th>
+          
+        </tr>
+        <tr>
+          <td> Hazardous and toxic waste(Paints, lab waste, etc) </td>
+          <td><?php echo (getFiled('Q8Wa3S1', $schoolUserID)!="")?getFiled('Q8Wa3S1', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+        <tr>
+          <td> Oil from DG sets </td>
+          <td><?php echo (getFiled('Q8Wa3S2', $schoolUserID)!="")?getFiled('Q8Wa3S2', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+        <tr>
+          <td> Total amount of waste </td>
+          <td><?php echo (getFiled('Q8Wa3S3', $schoolUserID)!="")?getFiled('Q8Wa3S3', $schoolUserID) : "N/A"; ?> </td>
+         
+        </tr>
+        <tr>
+          <td> Per capita waste reused/recycled (c).</td>
+          <td><?php echo (getFiled('Q8Wa3S4', $schoolUserID)!="")?getFiled('Q8Wa3S4', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+		</table> 
                         </div>
                         <div class="form-group">
                             <label><span class="cube">d.</span>E-Waste</label>
-                            <div class="form-group row">
-                                <div class="col-xs-6">
-                                    <label>HOW MUCH WASTE DOES YOUR SCHOOL REUSE/RECYCLE? </label>
-                                </div>
-                                <div class="col-xs-6">
-                                    <label>Quantity of solid waste generated(monthly average in kg) </label>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-xs-6">
-                                    <label>E-waste </label>
-                                </div>
-                                <div class="col-xs-6">
-                                    <input class="form-control space-textbox" onKeyUp="EWaste1()" id="Q8Wa4S1"
-                                           type="number" name="Q8Wa4S1"
-                                           placeholder="<?php if (isset($data['Q8Wa4S1'])) echo $data['Q8Wa4S1'] ?>"
-                                           value="<?php echo set_value('Q8Wa4S1'); ?>"/>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-xs-6">
-                                    <label>Per capita waste reused/recycled (d): </label>
-                                </div>
-                                <div class="col-xs-6">
-                                    <input class="form-control space-textbox" onKeyUp="EWaste1()" id="Q8Wa4S2"
-                                           type="number" name="Q8Wa4S2"
-                                           placeholder="<?php if (isset($data['Q8Wa4S2'])) echo $data['Q8Wa4S2'] ?>"
-                                           value="<?php echo set_value('Q8Wa4S2'); ?>" readonly/>
-                                </div>
-                            </div>
-                        </div>
+                           
+		<table class="table table-bordered table-striped">
+        <tr>
+      
+          <th> HOW MUCH WASTE DOES YOUR SCHOOL REUSE/RECYCLE? </th>
+          <th>Quantity of solid waste reuse/recycled (monthly average in kg) </th>
+          
+        </tr>
+        <tr>
+          <td> E-waste </td>
+          <td><?php echo (getFiled('Q8Wa4S1', $schoolUserID)!="")?getFiled('Q8Wa4S1', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+        <tr>
+          <td> Per capita waste reused/recycled (d): </td>
+          <td><?php echo (getFiled('Q8Wa4S2', $schoolUserID)!="")?getFiled('Q8Wa4S2', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+		</table> 
+                </div>
                         <div class="form-group">
                             <label><span class="cube">e.</span>Biomedical waste</label>
-                            <div class="form-group row">
-                                <div class="col-xs-6">
-                                    <label>HOW MUCH WASTE DOES YOUR SCHOOL REUSE/RECYCLE? </label>
-                                </div>
-                                <div class="col-xs-6">
-                                    <label>Quantity of solid waste generated(monthly average in kg) </label>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-xs-6">
-                                    <label>Biomedical waste such as syringes, band–aids, expired medicines etc. </label>
-                                </div>
-                                <div class="col-xs-6">
-                                    <input class="form-control space-textbox" onKeyUp="WasteBiomedical1()" id="Q8Wa5S1"
-                                           type="number" name="Q8Wa5S1"
-                                           placeholder="<?php if (isset($data['Q8Wa5S1'])) echo $data['Q8Wa5S1'] ?>"
-                                           value="<?php echo set_value('Q8Wa5S1'); ?>"/>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-xs-6">
-                                    <label>Per capita waste reused/recycled (e): </label>
-                                </div>
-                                <div class="col-xs-6">
-                                    <input class="form-control space-textbox" onKeyUp="WasteBiomedical1()" id="Q8Wa5S2"
-                                           type="number" name="Q8Wa5S2"
-                                           placeholder="<?php if (isset($data['Q8Wa5S2'])) echo $data['Q8Wa5S2'] ?>"
-                                           value="<?php echo set_value('Q8Wa5S2'); ?>" readonly/>
-                                </div>
-                            </div>
+     <table class="table table-bordered table-striped">
+        <tr>
+      
+          <th> HOW MUCH WASTE DOES YOUR SCHOOL REUSE/RECYCLE? </th>
+          <th>Quantity of solid waste reuse/recycled (monthly average in kg) </th>
+          
+        </tr>
+        <tr>
+          <td>Biomedical waste such as syringes, band–aids, expired medicines etc. </td>
+          <td><?php echo (getFiled('Q8Wa5S1', $schoolUserID)!="")?getFiled('Q8Wa5S1', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+        <tr>
+          <td> Per capita waste reused/recycled (e): </td>
+          <td><?php echo (getFiled('Q8Wa5S2', $schoolUserID)!="")?getFiled('Q8Wa5S2', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+</table> 
+							
+                           
                         </div>
                         <div class="form-group">
                             <label><span class="cube">f.</span>Sanitary waste </label>
-                            <div class="form-group row">
-                                <div class="col-xs-6">
-                                    <label>HOW MUCH WASTE DOES YOUR SCHOOL REUSE/RECYCLE? </label>
-                                </div>
-                                <div class="col-xs-6">
-                                    <label>Quantity of solid waste generated(monthly average in kg) </label>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-xs-6">
-                                    <label>Sanitary waste </label>
-                                </div>
-                                <div class="col-xs-6">
-                                    <input class="form-control space-textbox" onKeyUp="WasteSanitary1()" id="Q8Wa6S1"
-                                           type="number" name="Q8Wa6S1"
-                                           placeholder="<?php if (isset($data['Q8Wa6S1'])) echo $data['Q8Wa6S1'] ?>"
-                                           value="<?php echo set_value('Q8Wa6S1'); ?>"/>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-xs-6">
-                                    <label>Per capita waste reused/recycled (f): </label>
-                                </div>
-                                <div class="col-xs-6">
-                                    <input class="form-control space-textbox" onKeyUp="WasteSanitary1()" id="Q8Wa6S2"
-                                           type="number" name="Q8Wa6S2"
-                                           placeholder="<?php if (isset($data['Q8Wa6S2'])) echo $data['Q8Wa6S2'] ?>"
-                                           value="<?php echo set_value('Q8Wa6S2'); ?>" readonly/>
-                                </div>
-                            </div>
+      <table class="table table-bordered table-striped">
+        <tr>
+      
+          <th> HOW MUCH WASTE DOES YOUR SCHOOL REUSE/RECYCLE? </th>
+          <th>Quantity of solid waste reuse/recycled (monthly average in kg) </th>
+          
+        </tr>
+        <tr>
+          <td>Sanitary waste </td>
+          <td><?php echo (getFiled('Q8Wa6S1', $schoolUserID)!="")?getFiled('Q8Wa6S1', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+        <tr>
+          <td> Per capita waste reused/recycled (f): </td>
+          <td><?php echo (getFiled('Q8Wa6S2', $schoolUserID)!="")?getFiled('Q8Wa6S2', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+</table> 
+                           
                         </div>
                         <div class="form-group">
-                            <label><span class="cube">g.</span>C & D Waste</label>
-                            <div class="form-group row">
-                                <div class="col-xs-6">
-                                    <label>HOW MUCH WASTE DOES YOUR SCHOOL REUSE/RECYCLE? </label>
-                                </div>
-                                <div class="col-xs-6">
-                                    <label>Quantity of solid waste generated(monthly average in kg) </label>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-xs-6">
-                                    <label>Construction and demolition waste </label>
-                                </div>
-                                <div class="col-xs-6">
-                                    <input class="form-control space-textbox" onKeyUp="WasteConstruction1()"
-                                           id="Q8Wa7S1" type="number" name="Q8Wa7S1"
-                                           placeholder="<?php if (isset($data['Q8Wa7S1'])) echo $data['Q8Wa7S1'] ?>"
-                                           value="<?php echo set_value('Q8Wa7S1'); ?>"/>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-xs-6">
-                                    <label>Per capita waste reused/recycled (g): </label>
-                                </div>
-                                <div class="col-xs-6">
-                                    <input class="form-control space-textbox" onKeyUp="WasteConstruction1()"
-                                           id="Q8Wa7S2" type="number" name="Q8Wa7S2"
-                                           placeholder="<?php if (isset($data['Q8Wa7S2'])) echo $data['Q8Wa7S2'] ?>"
-                                           value="<?php echo set_value('Q8Wa7S2'); ?>" readonly/>
-                                </div>
-                            </div>
+                            <label><span class="cube">g.</span>C &amp; D Waste</label>
+     <table class="table table-bordered table-striped">
+        <tr>
+      
+          <th> HOW MUCH WASTE DOES YOUR SCHOOL REUSE/RECYCLE? </th>
+          <th>Quantity of solid waste reuse/recycled (monthly average in kg) </th>
+          
+        </tr>
+        <tr>
+          <td>Construction and demolition waste  </td>
+          <td><?php echo (getFiled('Q8Wa7S1', $schoolUserID)!="")?getFiled('Q8Wa7S1', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+        <tr>
+          <td> Per capita waste reused/recycled (g): </td>
+          <td><?php echo (getFiled('Q8Wa7S2', $schoolUserID)!="")?getFiled('Q8Wa7S2', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+</table>
+                            
                         </div>
                     </div>
-                    <br>
-                    <?php
-                }
-            ?>
-            <div class="form-group" id="Q8Wa2" style="display: none;">
+     <br>
+       <br>
+    <div class="form-group">
+       <label class="control-label"><span class="cube">5</span>Does your school have a composting facility?</label>
                 <div class="form-group">
-                    <label><span class="cube">a.</span>Biodegradable/Wet Waste</label>
-                    <div class="form-group row">
-                        <div class="col-xs-6">
-                            <label>HOW MUCH WASTE DOES YOUR SCHOOL REUSE/RECYCLE? </label>
-                        </div>
-                        <div class="col-xs-6">
-                            <label>Quantity of solid waste reuse/recycled (monthly average in kg) </label>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-xs-6">
-                            <label>Garden/horticulture waste </label>
-                        </div>
-                        <div class="col-xs-6">
-                            <input class="form-control space-textbox" onKeyUp="solidWaste1()" id="Q8Wa2S1" type="number"
-                                   name="Q8Wa1S1"
-                                   placeholder="<?php if (isset($data['Q8Wa1S1'])) echo $data['Q8Wa1S1'] ?>"
-                                   value="<?php echo set_value('Q8Wa1S1'); ?>"/>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-xs-6">
-                            <label>Kitchen waste—Raw </label>
-                        </div>
-                        <div class="col-xs-6">
-                            <input class="form-control space-textbox" onKeyUp="solidWaste1()" id="Q8Wa1S2" type="number"
-                                   name="Q8Wa1S2"
-                                   placeholder="<?php if (isset($data['Q8Wa1S2'])) echo $data['Q8Wa1S2'] ?>"
-                                   value="<?php echo set_value('Q8Wa1S2'); ?>"/>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-xs-6">
-                            <label>Kitchen waste—Cooked </label>
-                        </div>
-                        <div class="col-xs-6">
-                            <input class="form-control space-textbox" onKeyUp="solidWaste1()" id="Q8Wa1S3" type="number"
-                                   name="Q8Wa1S3"
-                                   placeholder="<?php if (isset($data['Q8Wa1S3'])) echo $data['Q8Wa1S3'] ?>"
-                                   value="<?php echo set_value('Q8Wa1S3'); ?>"/>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-xs-6">
-                            <label>Wet waste from classrooms etc. </label>
-                        </div>
-                        <div class="col-xs-6">
-                            <input class="form-control space-textbox" onKeyUp="solidWaste1()" id="Q8Wa1S4" type="number"
-                                   name="Q8Wa1S4"
-                                   placeholder="<?php if (isset($data['Q8Wa1S4'])) echo $data['Q8Wa1S4'] ?>"
-                                   value="<?php echo set_value('Q8Wa1S4'); ?>"/>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-xs-6">
-                            <label>Total amount of waste </label>
-                        </div>
-                        <div class="col-xs-6">
-                            <input class="form-control space-textbox" onKeyUp="solidWaste1()" id="Q8Wa1S5" type="number"
-                                   name="Q8Wa1S5"
-                                   placeholder="<?php if (isset($data['Q8Wa1S5'])) echo $data['Q8Wa1S5'] ?>"
-                                   value="<?php echo set_value('Q8Wa1S5'); ?>" readonly/>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-xs-6">
-                            <label>Per capita waste reused/recycled (a): </label>
-                        </div>
-                        <div class="col-xs-6">
-                            <input class="form-control space-textbox" onKeyUp="solidWaste1()" id="Q8Wa1S6" type="number"
-                                   name="Q8Wa1S6"
-                                   placeholder="<?php if (isset($data['Q8Wa1S6'])) echo $data['Q8Wa1S6'] ?>"
-                                   value="<?php echo set_value('Q8Wa1S6'); ?>" readonly/>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label><span class="cube">b.</span>Dry/recyclable waste</label>
-                    <div class="form-group row">
-                        <div class="col-xs-6">
-                            <label>HOW MUCH WASTE DOES YOUR SCHOOL REUSE/RECYCLE? </label>
-                        </div>
-                        <div class="col-xs-6">
-                            <label>Quantity of solid waste generated
-                                (monthly average in kg) </label>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-xs-6">
-                            <label>Plastic </label>
-                        </div>
-                        <div class="col-xs-6">
-                            <input class="form-control space-textbox" onKeyUp="solidRecyclable1()" id="Q8Wa2S1"
-                                   type="number" name="Q8Wa2S1"
-                                   placeholder="<?php if (isset($data['Q8Wa2S1'])) echo $data['Q8Wa2S1'] ?>"
-                                   value="<?php echo set_value('Q8Wa2S1'); ?>"/>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-xs-6">
-                            <label>Paper </label>
-                        </div>
-                        <div class="col-xs-6">
-                            <input class="form-control space-textbox" onKeyUp="solidRecyclable1()" id="Q8Wa2S2"
-                                   type="number" name="Q8Wa2S2"
-                                   placeholder="<?php if (isset($data['Q8Wa2S2'])) echo $data['Q8Wa2S2'] ?>"
-                                   value="<?php echo set_value('Q8Wa2S2'); ?>"/>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-xs-6">
-                            <label>Wood or classroom furniture </label>
-                        </div>
-                        <div class="col-xs-6">
-                            <input class="form-control space-textbox" onKeyUp="solidRecyclable1()" id="Q8Wa2S3"
-                                   type="number" name="Q8Wa2S3"
-                                   placeholder="<?php if (isset($data['Q8Wa2S3'])) echo $data['Q8Wa2S3'] ?>"
-                                   value="<?php echo set_value('Q8Wa2S3'); ?>"/>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-xs-6">
-                            <label>Glass </label>
-                        </div>
-                        <div class="col-xs-6">
-                            <input class="form-control space-textbox" onKeyUp="solidRecyclable1()" id="Q8Wa2S4"
-                                   type="number" name="Q8Wa2S4"
-                                   placeholder="<?php if (isset($data['Q8Wa2S4'])) echo $data['Q8Wa2S4'] ?>"
-                                   value="<?php echo set_value('Q8Wa2S4'); ?>"/>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-xs-6">
-                            <label>Metal </label>
-                        </div>
-                        <div class="col-xs-6">
-                            <input class="form-control space-textbox" onKeyUp="solidRecyclable1()" id="Q8Wa2S5"
-                                   type="number" name="Q8Wa2S5"
-                                   placeholder="<?php if (isset($data['Q8Wa2S5'])) echo $data['Q8Wa2S5'] ?>"
-                                   value="<?php echo set_value('Q8Wa2S5'); ?>"/>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-xs-6">
-                            <label>Thermocol </label>
-                        </div>
-                        <div class="col-xs-6">
-                            <input class="form-control space-textbox" onKeyUp="solidRecyclable1()" id="Q8Wa2S6"
-                                   type="number" name="Q8Wa2S6"
-                                   placeholder="<?php if (isset($data['Q8Wa2S6'])) echo $data['Q8Wa2S6'] ?>"
-                                   value="<?php echo set_value('Q8Wa2S6'); ?>"/>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-xs-6">
-                            <label>Tetra packs </label>
-                        </div>
-                        <div class="col-xs-6">
-                            <input class="form-control space-textbox" onKeyUp="solidRecyclable1()" id="Q8Wa2S7"
-                                   type="number" name="Q8Wa2S7"
-                                   placeholder="<?php if (isset($data['Q8Wa2S7'])) echo $data['Q8Wa2S7'] ?>"
-                                   value="<?php echo set_value('Q8Wa2S7'); ?>"/>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-xs-6">
-                            <label>Total amount of waste </label>
-                        </div>
-                        <div class="col-xs-6">
-                            <input class="form-control space-textbox" onKeyUp="solidRecyclable1()" id="Q8Wa2S8"
-                                   type="number" name="Q8Wa2S8"
-                                   placeholder="<?php if (isset($data['Q8Wa2S8'])) echo $data['Q8Wa2S8'] ?>"
-                                   value="<?php echo set_value('Q8Wa2S8'); ?>" readonly/>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-xs-6">
-                            <label>Per capita waste generation (b): </label>
-                        </div>
-                        <div class="col-xs-6">
-                            <input class="form-control space-textbox" onKeyUp="solidRecyclable1()" id="Q8Wa2S9"
-                                   type="number" name="Q8Wa2S9"
-                                   placeholder="<?php if (isset($data['Q8Wa2S9'])) echo $data['Q8Wa2S9'] ?>"
-                                   value="<?php echo set_value('Q8Wa2S9'); ?>" readonly/>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label><span class="cube">C.</span>Domestic hazardous waste</label>
-                    <div class="form-group row">
-                        <div class="col-xs-6">
-                            <label>HOW MUCH WASTE DOES YOUR SCHOOL REUSE/RECYCLE? </label>
-                        </div>
-                        <div class="col-xs-6">
-                            <label>Quantity of solid waste generated(monthly average in kg) </label>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-xs-6">
-                            <label>Hazardous and toxic waste(Paints, lab waste, etc) </label>
-                        </div>
-                        <div class="col-xs-6">
-                            <input class="form-control space-textbox" onKeyUp="WasteDomestic1()" id="Q8Wa3S1"
-                                   type="number" name="Q8Wa3S1"
-                                   placeholder="<?php if (isset($data['Q8Wa3S1'])) echo $data['Q8Wa3S1'] ?>"
-                                   value="<?php echo set_value('Q8Wa3S1'); ?>"/>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-xs-6">
-                            <label>Oil from DG sets </label>
-                        </div>
-                        <div class="col-xs-6">
-                            <input class="form-control space-textbox" onKeyUp="WasteDomestic1()" id="Q8Wa3S2"
-                                   type="number" name="Q8Wa3S2"
-                                   placeholder="<?php if (isset($data['Q8Wa3S2'])) echo $data['Q8Wa3S2'] ?>"
-                                   value="<?php echo set_value('Q8Wa3S2'); ?>"/>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-xs-6">
-                            <label>Total amount of waste </label>
-                        </div>
-                        <div class="col-xs-6">
-                            <input class="form-control space-textbox" onKeyUp="WasteDomestic1()" id="Q8Wa3S3"
-                                   type="number" name="Q8Wa3S3"
-                                   placeholder="<?php if (isset($data['Q8Wa3S3'])) echo $data['Q8Wa3S3'] ?>"
-                                   value="<?php echo set_value('Q8Wa3S3'); ?>" readonly/>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-xs-6">
-                            <label>Per capita waste generation (c). </label>
-                        </div>
-                        <div class="col-xs-6">
-                            <input class="form-control space-textbox" onKeyUp="WasteDomestic1()" id="Q8Wa3S4"
-                                   type="number" name="Q8Wa3S4"
-                                   placeholder="<?php if (isset($data['Q8Wa3S4'])) echo $data['Q8Wa3S4'] ?>"
-                                   value="<?php echo set_value('Q8Wa3S4'); ?>" readonly/>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label><span class="cube">D.</span>E-Waste</label>
-                    <div class="form-group row">
-                        <div class="col-xs-6">
-                            <label>HOW MUCH WASTE DOES YOUR SCHOOL REUSE/RECYCLE? </label>
-                        </div>
-                        <div class="col-xs-6">
-                            <label>Quantity of solid waste generated(monthly average in kg) </label>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-xs-6">
-                            <label>E-waste </label>
-                        </div>
-                        <div class="col-xs-6">
-                            <input class="form-control space-textbox" onKeyUp="EWaste1()" id="Q8Wa4S1" type="number"
-                                   name="Q8Wa4S1"
-                                   placeholder="<?php if (isset($data['Q8Wa4S1'])) echo $data['Q8Wa4S1'] ?>"
-                                   value="<?php echo set_value('Q8Wa4S1'); ?>"/>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-xs-6">
-                            <label>Per capita waste generation (d): </label>
-                        </div>
-                        <div class="col-xs-6">
-                            <input class="form-control space-textbox" onKeyUp="EWaste1()" id="Q8Wa4S2" type="number"
-                                   name="Q8Wa4S2"
-                                   placeholder="<?php if (isset($data['Q8Wa4S2'])) echo $data['Q8Wa4S2'] ?>"
-                                   value="<?php echo set_value('Q8Wa4S2'); ?>" readonly/>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label><span class="cube">E.</span>Biomedical waste</label>
-                    <div class="form-group row">
-                        <div class="col-xs-6">
-                            <label>HOW MUCH WASTE DOES YOUR SCHOOL REUSE/RECYCLE? </label>
-                        </div>
-                        <div class="col-xs-6">
-                            <label>Quantity of solid waste generated(monthly average in kg) </label>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-xs-6">
-                            <label>Biomedical waste such as syringes, band–aids, expired medicines etc. </label>
-                        </div>
-                        <div class="col-xs-6">
-                            <input class="form-control space-textbox" onKeyUp="WasteBiomedical1()" id="Q8Wa5S1"
-                                   type="number" name="Q8Wa5S1"
-                                   placeholder="<?php if (isset($data['Q8Wa5S1'])) echo $data['Q8Wa5S1'] ?>"
-                                   value="<?php echo set_value('Q8Wa5S1'); ?>"/>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-xs-6">
-                            <label>Per capita waste generation (e): </label>
-                        </div>
-                        <div class="col-xs-6">
-                            <input class="form-control space-textbox" onKeyUp="WasteBiomedical1()" id="Q8Wa5S2"
-                                   type="number" name="Q8Wa5S2"
-                                   placeholder="<?php if (isset($data['Q8Wa5S2'])) echo $data['Q8Wa5S2'] ?>"
-                                   value="<?php echo set_value('Q8Wa5S2'); ?>" readonly/>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label><span class="cube">F.</span>Sanitary waste </label>
-                    <div class="form-group row">
-                        <div class="col-xs-6">
-                            <label>HOW MUCH WASTE DOES YOUR SCHOOL REUSE/RECYCLE? </label>
-                        </div>
-                        <div class="col-xs-6">
-                            <label>Quantity of solid waste generated(monthly average in kg) </label>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-xs-6">
-                            <label>Sanitary waste </label>
-                        </div>
-                        <div class="col-xs-6">
-                            <input class="form-control space-textbox" onKeyUp="WasteSanitary1()" id="Q8Wa6S1"
-                                   type="number" name="Q8Wa6S1"
-                                   placeholder="<?php if (isset($data['Q8Wa6S1'])) echo $data['Q8Wa6S1'] ?>"
-                                   value="<?php echo set_value('Q8Wa6S1'); ?>"/>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-xs-6">
-                            <label>Per capita waste generation (f): </label>
-                        </div>
-                        <div class="col-xs-6">
-                            <input class="form-control space-textbox" onKeyUp="WasteSanitary1()" id="Q8Wa6S2"
-                                   type="number" name="Q8Wa6S2"
-                                   placeholder="<?php if (isset($data['Q8Wa6S2'])) echo $data['Q8Wa6S2'] ?>"
-                                   value="<?php echo set_value('Q8Wa6S2'); ?>" readonly/>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label><span class="cube">G.</span>Cc& D Waste</label>
-                    <div class="form-group row">
-                        <div class="col-xs-6">
-                            <label>HOW MUCH WASTE DOES YOUR SCHOOL REUSE/RECYCLE? </label>
-                        </div>
-                        <div class="col-xs-6">
-                            <label>Quantity of solid waste generated(monthly average in kg) </label>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-xs-6">
-                            <label>Construction and demolition waste </label>
-                        </div>
-                        <div class="col-xs-6">
-                            <input class="form-control space-textbox" onKeyUp="WasteConstruction1()" id="Q8Wa7S1"
-                                   type="number" name="Q8Wa7S1"
-                                   placeholder="<?php if (isset($data['Q8Wa7S1'])) echo $data['Q8Wa7S1'] ?>"
-                                   value="<?php echo set_value('Q8Wa7S1'); ?>"/>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-xs-6">
-                            <label>Per capita waste generation (g): </label>
-                        </div>
-                        <div class="col-xs-6">
-                            <input class="form-control space-textbox" onKeyUp="WasteConstruction1()" id="Q8Wa7S2"
-                                   type="number" name="Q8Wa7S2"
-                                   placeholder="<?php if (isset($data['Q8Wa7S2'])) echo $data['Q8Wa7S2'] ?>"
-                                   value="<?php echo set_value('Q8Wa7S2'); ?>" readonly/>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <div class="form-group">
-                <label class="control-label"><span class="cube">5</span>Does your school have a composting
-                    facility?</label>
-                <div class="form-group">
-                    <label class="radio-inline text-gray">
-                        <input type="radio" name="Q9Wa1" onClick="WasteFacility(1)" class="radio" id="Q9Wa1_1"
-                               value="<?php echo set_value('Q9Wa1', 'Y') ?>" <?php if (isset($data['Q9Wa1'])) echo $data['Q9Wa1'] == 'Y' ? "checked" : "" ?>>
-                        Yes </label>
-                    <label class="radio-inline text-gray">
-                        <input type="radio" name="Q9Wa1" onClick="WasteFacility(2)" class="radio" id="Q9Wa1_2"
-                               value="<?php echo set_value('Q9Wa1', 'N') ?>" <?php if (isset($data['Q9Wa1'])) echo $data['Q9Wa1'] == 'N' ? "checked" : "" ?>>
-                        No </label>
+				<p> <?php echo (getFiled('Q9Wa1', $schoolUserID)!="")? (getFiled('Q9Wa1', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+                    
                 </div>
             </div>
             <br>
@@ -2173,170 +1092,102 @@
                 <br>
                 • Pictures of recycling units - composting pit<br>
                 <br>
-                <button class="btn uploadbtn upload" data-id="Composting Pit" data-toggle="modal"
-                        data-target="#airModal" type="button">UPLOAD FILES
+                <button class="btn uploadbtn upload" data-id="Composting Pit" data-toggle="modal" data-target="#airModal" type="button">UPLOAD FILES
                 </button>
                 <br>
             </div>
             <br>
-            <?php
-            if (isset($data['Q9Wa1']))
-            if ($data['Q9Wa1'] == 'Y')
-            {
-            ?>
+            <table width="100%" class="question uploadedfiles">
+                <thead>
+                <tr>
+                    <th>File name</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                                </tbody>
+            </table>
+            <div class="clearfix">&nbsp;</div>
+           
+                              <div class="form-group" id="Q9Wa2" style="display: block;">
+                                      
             <div class="form-group row" id="Q9Wa2">
-                <label><span class="cube">5(a)</span>What is the methodology used?</label>
-                <div class="text-gray">
-                    <label>
-                        <input type="checkbox" name="Q9Wa2S1"
-                               value="<?php echo set_value('Q9Wa2S1', 1); ?>" <?php if (isset($data['Q9Wa2S1'])) echo "checked" ?>>
-                        Natural composting without added microbes</label>
-                </div>
-                <div class="text-gray">
-                    <label>
-                        <input type="checkbox" name="Q9Wa2S2"
-                               value="<?php echo set_value('Q9Wa2S2', 1); ?>" <?php if (isset($data['Q9Wa2S2'])) echo "checked" ?>>
-                        Vermi composting</label>
-                </div>
-                <div class="text-gray">
-                    <label>
-                        <input type="checkbox" name="Q9Wa2S3"
-                               value="<?php echo set_value('Q9Wa2S3', 1); ?>" <?php if (isset($data['Q9Wa2S3'])) echo "checked" ?>>
-                        Mechanical composting</label>
-                </div>
-                <div class="text-gray">
-                    <label>Other: &nbsp
-                        <input type="text" name="Q9Wa2S4" value="<?php echo set_value('Q9Wa2S4'); ?>"
-                               placeholder="<?php if (isset($data['Q9Wa2S4'])) echo $data['Q9Wa2S4'] ?>">
-                    </label>
-                </div>
+                <label><span class="cube">5(a)</span>What is the methodology used?</label><br/>
+				
+				<?php 
+							 if(getFiled('Q9Wa2S1', $schoolUserID)==1):
+							 echo "Natural composting without added microbes";
+							 echo "<br/>";
+							 endif;  
+							 if(getFiled('Q9Wa2S2', $schoolUserID)==1):
+							 echo "Vermi composting";
+							 echo "<br/>" ;
+							 endif; 
+							 if(getFiled('Q9Wa2S3', $schoolUserID)==1):
+							 echo "Mechanical composting";
+							 echo "<br/>" ;
+							 endif; 
+							 if(getFiled('Q9Wa2S4', $schoolUserID)==1):
+							 echo " Other: &nbsp;";
+							 echo "<br/>" ;
+							 endif;
+							 
+?>  
+               
             </div>
+
+                              <div class="form-group" id="Q9Wa3" style="display: block;">
+                                      
             <div class="form-group" id="Q9Wa3">
                 <label for="username" class="control-label"><span class="cube">5(b)</span>What is the quantity of
                     compost that is generated per month (in kilogram)?</label>
                 <br>
-                <input type="text" name="Q9Wa3" class="form-control space-textbox"
-                       placeholder="<?php if (isset($data['Q9Wa3'])) echo $data['Q9Wa3'] ?>"
-                       value="<?php echo set_value('Q9Wa3'); ?>">
+				<?php echo (getFiled('Q9Wa3', $schoolUserID)!="")?getFiled('Q9Wa3', $schoolUserID) : "N/A"; ?>
+               
             </div>
         </div>
     <br>
+
+                      <div class="form-group" id="Q9Wa4" style="display: block;">
+                                      
         <div class="form-group row" id="Q9Wa4">
             <label><span class="cube">5(c)</span> What is the purpose of the compost that is generated per month?
             </label>
-            <div class="form-group row">
-                <label class="text-gray">
-                    <input type="checkbox" name="Q9Wa4S1"
-                           value="<?php echo set_value('Q9Wa4S1', 1); ?>" <?php if (isset($data['Q9Wa4S1'])) echo "checked" ?>>
-                    For horticultural purposes </label>
-            </div>
-            <div class="form-group row">
-                <label class="text-gray">
-                    <input type="checkbox" name="Q9Wa4S2"
-                           value="<?php echo set_value('Q9Wa4S2', 1); ?>" <?php if (isset($data['Q9Wa4S2'])) echo "checked" ?>>
-                    For school garden</label>
-            </div>
-            <div class="form-group row">
-                <label class="text-gray">
-                    <input type="checkbox" name="Q9Wa4S3"
-                           value="<?php echo set_value('Q9Wa4S3', 1); ?>" <?php if (isset($data['Q9Wa4S3'])) echo "checked" ?>>
-                    For sale</label>
-            </div>
-            <div class="form-group row">
-                <label class="text-gray">
-                    <input type="checkbox" name="Q9Wa4S4"
-                           value="<?php echo set_value('Q9Wa4S4', 1); ?>" <?php if (isset($data['Q9Wa4S4'])) echo "checked" ?>>
-                    For charity</label>
-            </div>
+			<br/>
+							<?php 
+							 if(getFiled('Q9Wa4S1', $schoolUserID)==1):
+							 echo "For horticultural purposes";
+							 echo "<br/>";
+							 endif;  
+							 if(getFiled('Q9Wa4S2', $schoolUserID)==1):
+							 echo "For school garden";
+							 echo "<br/>" ;
+							 endif; 
+							 if(getFiled('Q9Wa4S3', $schoolUserID)==1):
+							 echo "For sale";
+							 echo "<br/>" ;
+							 endif; 
+							 if(getFiled('Q9Wa4S4', $schoolUserID)==1):
+							 echo "For charity";
+							 echo "<br/>" ;
+							 endif;
+							 
+?>
+            
         </div>
-    <?php
-    }
-    ?>
-        <div class="form-group row" id="Q9Wa2" style="display: none;">
-            <label><span class="cube">5(a)</span>What is the methodology used?</label>
-            <div class=" text-gray">
-                <label>
-                    <input type="checkbox" name="Q9Wa2S1"
-                           value="<?php echo set_value('Q9Wa2S1', 1); ?>" <?php if (isset($data['Q9Wa2S1'])) echo "checked" ?>>
-                    Natural composting without added microbes</label>
-            </div>
-            <div class=" text-gray">
-                <label>
-                    <input type="checkbox" name="Q9Wa2S2"
-                           value="<?php echo set_value('Q9Wa2S2', 1); ?>" <?php if (isset($data['Q9Wa2S2'])) echo "checked" ?>>
-                    Vermi composting</label>
-            </div>
-            <div class=" text-gray">
-                <label>
-                    <input type="checkbox" name="Q9Wa2S3"
-                           value="<?php echo set_value('Q9Wa2S3', 1); ?>" <?php if (isset($data['Q9Wa2S3'])) echo "checked" ?>>
-                    Mechanical composting</label>
-            </div>
-            <div class="text-gray">
-                <label>Other: &nbsp
-                    <input type="text" name="Q9Wa2S4" value="<?php echo set_value('Q9Wa2S4'); ?>"
-                           placeholder="<?php if (isset($data['Q9Wa2S4'])) echo $data['Q9Wa2S4'] ?>">
-                </label>
-            </div>
-        </div>
-        <div class="form-group" id="Q9Wa3" style="display: none;">
-            <label for="username" class="control-label"><span class="cube">5(b)</span>What is the quantity of compost
-                that is generated per month (in kilogram)?</label>
-            <br>
-            <input type="text" name="Q9Wa3" class="form-control space-textbox"
-                   placeholder="<?php if (isset($data['Q9Wa3'])) echo $data['Q9Wa3'] ?>"
-                   value="<?php echo set_value('Q9Wa3'); ?>">
-        </div>
-        <br>
-        <div class="form-group row" id="Q9Wa4" style="display: none;">
-            <label><span class="cube">5(c)</span> What is the purpose of the compost that is generated per month?
-            </label>
-            <div class="text-gray">
-                <label>
-                    <input type="checkbox" name="Q9Wa3S1"
-                           value="<?php echo set_value('Q9Wa3S1', 1); ?>" <?php if (isset($data['Q9Wa3S1'])) echo "checked" ?>>
-                    For horticultural purposes </label>
-            </div>
-            <div class="text-gray">
-                <label>
-                    <input type="checkbox" name="Q9Wa3S2"
-                           value="<?php echo set_value('Q9Wa3S2', 1); ?>" <?php if (isset($data['Q9Wa3S2'])) echo "checked" ?>>
-                    For school garden</label>
-            </div>
-            <div class="text-gray">
-                <label>
-                    <input type="checkbox" name="Q9Wa3S3"
-                           value="<?php echo set_value('Q9Wa3S3', 1); ?>" <?php if (isset($data['Q9Wa3S3'])) echo "checked" ?>>
-                    For sale</label>
-            </div>
-            <div class="text-gray">
-                <label>
-                    <input type="checkbox" name="Q9Wa3S4"
-                           value="<?php echo set_value('Q9Wa3S4', 1); ?>" <?php if (isset($data['Q9Wa3S4'])) echo "checked" ?>>
-                    For charity</label>
-            </div>
-        </div>
+  
+
         <div class="form-group">
-            <label class="control-label"><span class="cube">6</span>Does your school encourage students & teachers to
-                reuse textbooks? <a class="kplink"
-                                    href="http://www.greenschoolsprogramme.org/knowledge-bank/waste/#chomp"
-                                    target="_blank"></a></label>
+            <label class="control-label"><span class="cube">6</span>Does your school encourage students &amp; teachers to
+                reuse textbooks? <a class="kplink" href="http://www.greenschoolsprogramme.org/knowledge-bank/waste/#chomp" target="_blank"></a></label>
             <div class="form-group">
-                <label class="radio-inline text-gray">
-                    <input type="radio" name="Q10Wa1" class="radio" id="Q10Wa1_1"
-                           value="<?php echo set_value('Q10Wa1', 'Y') ?>" <?php if (isset($data['Q10Wa1'])) echo $data['Q10Wa1'] == 'Y' ? "checked" : "" ?>>
-                    Yes </label>
-                <label class="radio-inline text-gray">
-                    <input type="radio" name="Q10Wa1" class="radio" id="Q10Wa1_2"
-                           value="<?php echo set_value('Q10Wa1', 'N') ?>" <?php if (isset($data['Q10Wa1'])) echo $data['Q10Wa1'] == 'N' ? "checked" : "" ?>>
-                    No </label>
+			<p> <?php echo (getFiled('Q10Wa1', $schoolUserID)!="")? (getFiled('Q10Wa1', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+                
             </div>
         </div>
         <div class="form-group">
             <label class="control-label"><span class="cube">7</span>Please fill the table to understand whether waste
-                recycling procedures are applied to waste. <a class="kplink"
-                                                              href="http://www.greenschoolsprogramme.org/knowledge-bank/waste/#whatWeDo"
-                                                              target="_blank"> </a></label>
+                recycling procedures are applied to waste. <a class="kplink" href="http://www.greenschoolsprogramme.org/knowledge-bank/waste/#whatWeDo" target="_blank"> </a></label>
             <div class="form-group row">
                 <div class="col-xs-2">
                     <label>Category of waste </label>
@@ -2359,20 +1210,36 @@
                     <label>Paper </label>
                 </div>
                 <div class="col-xs-2">
-                    <input type="checkbox" id="Q11Wa1S1" name="Q11Wa1S1"
-                           value="<?php echo set_value('Q11Wa1S1', 1); ?>" <?php if (isset($data['Q11Wa1S1'])) if ($data['Q11Wa1S1'] == 1) echo set_checkbox('Q11Wa1S1', '1', true); ?> <?php if (isset($data['Q6Wa2S2'])) if ($data['Q6Wa2S2'] < 1) echo "disabled"; ?>>
+				<?php if(getFiled('Q11Wa1S1', $schoolUserID)==1):
+							 echo "1";
+							 else:
+							 echo "0";
+							 endif; ?>
+                    <!--<input type="checkbox" id="Q11Wa1S1" name="Q11Wa1S1" value="1">-->
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" id="Q11Wa1S2" type="checkbox" name="Q11Wa1S2"
-                           value="<?php echo set_value('Q11Wa1S2', 1); ?>" <?php if (isset($data['Q11Wa1S2'])) if ($data['Q11Wa1S2'] == 1) echo set_checkbox('Q11Wa1S2', '1', true); ?> <?php if (isset($data['Q6Wa2S2'])) if ($data['Q6Wa2S2'] < 1) echo "disabled"; ?>/>
+				<?php if(getFiled('Q11Wa1S2', $schoolUserID)==1):
+							 echo "1";
+							 else:
+							 echo "0";
+							 endif; ?>
+                    <!--<input class="form-control space-textbox" id="Q11Wa1S2" type="checkbox" name="Q11Wa1S2" value="1">-->
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" id="Q11Wa1S3" type="checkbox" name="Q11Wa1S3"
-                           value="<?php echo set_value('Q11Wa1S3', 1); ?>" <?php if (isset($data['Q11Wa1S3'])) if ($data['Q11Wa1S3'] == 1) echo set_checkbox('Q11Wa1S3', '1', true); ?> <?php if (isset($data['Q6Wa2S2'])) if ($data['Q6Wa2S2'] < 1) echo "disabled"; ?>/>
+				<?php if(getFiled('Q11Wa1S3', $schoolUserID)==1):
+							 echo "1";
+							 else:
+							 echo "0";
+							 endif; ?>
+                   <!-- <input class="form-control space-textbox" id="Q11Wa1S3" type="checkbox" name="Q11Wa1S3" value="1">-->
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" id="Q11Wa1S4" type="checkbox" name="Q11Wa1S4"
-                           value="<?php echo set_value('Q11Wa1S4', 1); ?>" <?php if (isset($data['Q11Wa1S4'])) if ($data['Q11Wa1S4'] == 1) echo set_checkbox('Q11Wa1S4', '1', true); ?> <?php if (isset($data['Q6Wa2S2'])) if ($data['Q6Wa2S2'] < 1) echo "disabled"; ?>/>
+				<?php if(getFiled('Q11Wa1S4', $schoolUserID)==1):
+							 echo "1";
+							 else:
+							 echo "0";
+							 endif; ?>
+                    <!--<input class="form-control space-textbox" id="Q11Wa1S4" type="checkbox" name="Q11Wa1S4" value="1">-->
                 </div>
             </div>
             <div class="form-group row">
@@ -2380,20 +1247,36 @@
                     <label>Plastic </label>
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" id="Q11Wa2S1" type="checkbox" name="Q11Wa2S1"
-                           value="<?php echo set_value('Q11Wa2S1', 1); ?>" <?php if (isset($data['Q11Wa2S1'])) if ($data['Q11Wa2S1'] == 1) echo set_checkbox('Q11Wa2S1', '1', true); ?> <?php if (isset($data['Q6Wa2S1'])) if ($data['Q6Wa2S1'] < 1) echo "disabled"; ?>/>
+				<?php if(getFiled('Q11Wa2S1', $schoolUserID)==1):
+							 echo "1";
+							 else:
+							 echo "0";
+							 endif; ?>
+                    <!--<input class="form-control space-textbox" id="Q11Wa2S1" type="checkbox" name="Q11Wa2S1" value="1">-->
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" id="Q11Wa2S2" type="checkbox" name="Q11Wa2S2"
-                           value="<?php echo set_value('Q11Wa2S2', 1); ?>" <?php if (isset($data['Q11Wa2S2'])) if ($data['Q11Wa2S2'] == 1) echo set_checkbox('Q11Wa2S2', '1', true); ?> <?php if (isset($data['Q6Wa2S1'])) if ($data['Q6Wa2S1'] < 1) echo "disabled"; ?>/>
+				<?php if(getFiled('Q11Wa2S2', $schoolUserID)==1):
+							 echo "1";
+							 else:
+							 echo "0";
+							 endif; ?>
+                    <!--<input class="form-control space-textbox" id="Q11Wa2S2" type="checkbox" name="Q11Wa2S2" value="1">-->
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" id="Q11Wa2S3" type="checkbox" name="Q11Wa2S3"
-                           value="<?php echo set_value('Q11Wa2S3', 1); ?>" <?php if (isset($data['Q11Wa2S3'])) if ($data['Q11Wa2S3'] == 1) echo set_checkbox('Q11Wa2S3', '1', true); ?> <?php if (isset($data['Q6Wa2S1'])) if ($data['Q6Wa2S1'] < 1) echo "disabled"; ?>/>
+				<?php if(getFiled('Q11Wa2S3', $schoolUserID)==1):
+							 echo "1";
+							 else:
+							 echo "0";
+							 endif; ?>
+                    <!--<input class="form-control space-textbox" id="Q11Wa2S3" type="checkbox" name="Q11Wa2S3" value="1">-->
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" id="Q11Wa2S4" type="checkbox" name="Q11Wa2S4"
-                           value="<?php echo set_value('Q11Wa2S4', 1); ?>" <?php if (isset($data['Q11Wa2S4'])) if ($data['Q11Wa2S4'] == 1) echo set_checkbox('Q11Wa2S4', '1', true); ?> <?php if (isset($data['Q6Wa2S1'])) if ($data['Q6Wa2S1'] < 1) echo "disabled"; ?>/>
+				<?php if(getFiled('Q11Wa2S4', $schoolUserID)==1):
+							 echo "1";
+							 else:
+							 echo "0";
+							 endif; ?>
+                    <!--<input class="form-control space-textbox" id="Q11Wa2S4" type="checkbox" name="Q11Wa2S4" value="1">-->
                 </div>
             </div>
             <div class="form-group row">
@@ -2401,20 +1284,36 @@
                     <label>Horticultural waste </label>
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" id="Q11Wa3S1" type="checkbox" name="Q11Wa3S1"
-                           value="<?php echo set_value('Q11Wa3S1', 1); ?>" <?php if (isset($data['Q11Wa3S1'])) if ($data['Q11Wa3S1'] == 1) echo set_checkbox('Q11Wa3S1', '1', true); ?> <?php if (isset($data['Q6Wa1S1'])) if ($data['Q6Wa1S1'] < 1) echo "disabled"; ?>/>
+				<?php if(getFiled('Q11Wa3S1', $schoolUserID)==1):
+							 echo "1";
+							 else:
+							 echo "0";
+							 endif; ?>
+                    <!--<input class="form-control space-textbox" id="Q11Wa3S1" type="checkbox" name="Q11Wa3S1" value="1">-->
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" id="Q11Wa3S2" type="checkbox" name="Q11Wa3S2"
-                           value="<?php echo set_value('Q11Wa3S2', 1); ?>" <?php if (isset($data['Q11Wa3S2'])) if ($data['Q11Wa3S2'] == 1) echo set_checkbox('Q11Wa3S2', '1', true); ?> <?php if (isset($data['Q6Wa1S1'])) if ($data['Q6Wa1S1'] < 1) echo "disabled"; ?>/>
+				<?php if(getFiled('Q11Wa3S2', $schoolUserID)==1):
+							 echo "1";
+							 else:
+							 echo "0";
+							 endif; ?>
+                    <!--<input class="form-control space-textbox" id="Q11Wa3S2" type="checkbox" name="Q11Wa3S2" value="1">-->
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" id="Q11Wa3S3" type="checkbox" name="Q11Wa3S3"
-                           value="<?php echo set_value('Q11Wa3S3', 1); ?>" <?php if (isset($data['Q11Wa3S3'])) if ($data['Q11Wa3S3'] == 1) echo set_checkbox('Q11Wa3S3', '1', true); ?> <?php if (isset($data['Q6Wa1S1'])) if ($data['Q6Wa1S1'] < 1) echo "disabled"; ?>/>
+				<?php if(getFiled('Q11Wa3S3', $schoolUserID)==1):
+							 echo "1";
+							 else:
+							 echo "0";
+							 endif; ?>
+                    <!--<input class="form-control space-textbox" id="Q11Wa3S3" type="checkbox" name="Q11Wa3S3" value="1">-->
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" id="Q11Wa3S4" type="checkbox" name="Q11Wa3S4"
-                           value="<?php echo set_value('Q11Wa3S4', 1); ?>" <?php if (isset($data['Q11Wa3S4'])) if ($data['Q11Wa3S4'] == 1) echo set_checkbox('Q11Wa3S4', '1', true); ?> <?php if (isset($data['Q6Wa1S1'])) if ($data['Q6Wa1S1'] < 1) echo "disabled"; ?>/>
+				<?php if(getFiled('Q11Wa3S4', $schoolUserID)==1):
+							 echo "1";
+							 else:
+							 echo "0";
+							 endif; ?>
+                   <!-- <input class="form-control space-textbox" id="Q11Wa3S4" type="checkbox" name="Q11Wa3S4" value="1">-->
                 </div>
             </div>
             <div class="form-group row">
@@ -2422,20 +1321,36 @@
                     <label>E-waste </label>
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" id="Q11Wa4S1" type="checkbox" name="Q11Wa4S1"
-                           value="<?php echo set_value('Q11Wa4S1', 1); ?>" <?php if (isset($data['Q11Wa4S1'])) if ($data['Q11Wa4S1'] == 1) echo set_checkbox('Q11Wa4S1', '1', true); ?> <?php if (isset($data['Q6Wa4S1'])) if ($data['Q6Wa4S1'] < 1) echo "disabled"; ?>/>
+				<?php if(getFiled('Q11Wa4S1', $schoolUserID)==1):
+							 echo "1";
+							 else:
+							 echo "0";
+							 endif; ?>
+                    <!--<input class="form-control space-textbox" id="Q11Wa4S1" type="checkbox" name="Q11Wa4S1" value="1">-->
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" id="Q11Wa4S2" type="checkbox" name="Q11Wa4S2"
-                           value="<?php echo set_value('Q11Wa4S2', 1); ?>" <?php if (isset($data['Q11Wa4S2'])) if ($data['Q11Wa4S2'] == 1) echo set_checkbox('Q11Wa4S2', '1', true); ?> <?php if (isset($data['Q6Wa4S1'])) if ($data['Q6Wa4S1'] < 1) echo "disabled"; ?>/>
+				<?php if(getFiled('Q11Wa4S2', $schoolUserID)==1):
+							 echo "1";
+							 else:
+							 echo "0";
+							 endif; ?>
+                   <!-- <input class="form-control space-textbox" id="Q11Wa4S2" type="checkbox" name="Q11Wa4S2" value="1">-->
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" id="Q11Wa4S3" type="checkbox" name="Q11Wa4S3"
-                           value="<?php echo set_value('Q11Wa4S3', 1); ?>" <?php if (isset($data['Q11Wa4S3'])) if ($data['Q11Wa4S3'] == 1) echo set_checkbox('Q11Wa4S3', '1', true); ?> <?php if (isset($data['Q6Wa4S1'])) if ($data['Q6Wa4S1'] < 1) echo "disabled"; ?>/>
+				<?php if(getFiled('Q11Wa4S3', $schoolUserID)==1):
+							 echo "1";
+							 else:
+							 echo "0";
+							 endif; ?>
+                   <!-- <input class="form-control space-textbox" id="Q11Wa4S3" type="checkbox" name="Q11Wa4S3" value="1">-->
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" id="Q11Wa4S4" type="checkbox" name="Q11Wa4S4"
-                           value="<?php echo set_value('Q11Wa4S4', 1); ?>" <?php if (isset($data['Q11Wa4S4'])) if ($data['Q11Wa4S4'] == 1) echo set_checkbox('Q11Wa4S4', '1', true); ?> <?php if (isset($data['Q6Wa4S1'])) if ($data['Q6Wa4S1'] < 1) echo "disabled"; ?>/>
+				<?php if(getFiled('Q11Wa4S4', $schoolUserID)==1):
+							 echo "1";
+							 else:
+							 echo "0";
+							 endif; ?>
+                    <!--<input class="form-control space-textbox" id="Q11Wa4S4" type="checkbox" name="Q11Wa4S4" value="1">-->
                 </div>
             </div>
             <div class="form-group row">
@@ -2443,20 +1358,36 @@
                     <label>Hazardous waste </label>
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" id="Q11Wa5S1" type="checkbox" name="Q11Wa5S1"
-                           value="<?php echo set_value('Q11Wa5S1', 1); ?>" <?php if (isset($data['Q11Wa5S1'])) if ($data['Q11Wa5S1'] == 1) echo set_checkbox('Q11Wa5S1', '1', true); ?> <?php if (isset($data['Q6Wa3S1'])) if ($data['Q6Wa3S1'] < 1) echo "disabled"; ?>/>
+				<?php if(getFiled('Q11Wa5S1', $schoolUserID)==1):
+							 echo "1";
+							 else:
+							 echo "0";
+							 endif; ?>
+                    <!--<input class="form-control space-textbox" id="Q11Wa5S1" type="checkbox" name="Q11Wa5S1" value="1">-->
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" id="Q11Wa5S2" type="checkbox" name="Q11Wa5S2"
-                           value="<?php echo set_value('Q11Wa5S2', 1); ?>" <?php if (isset($data['Q11Wa5S2'])) if ($data['Q11Wa5S2'] == 1) echo set_checkbox('Q11Wa5S2', '1', true); ?> <?php if (isset($data['Q6Wa3S1'])) if ($data['Q6Wa3S1'] < 1) echo "disabled"; ?>/>
+				<?php if(getFiled('Q11Wa5S2', $schoolUserID)==1):
+							 echo "1";
+							 else:
+							 echo "0";
+							 endif; ?>
+                    <!--<input class="form-control space-textbox" id="Q11Wa5S2" type="checkbox" name="Q11Wa5S2" value="1">-->
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" id="Q11Wa5S3" type="checkbox" name="Q11Wa5S3"
-                           value="<?php echo set_value('Q11Wa5S3', 1); ?>" <?php if (isset($data['Q11Wa5S3'])) if ($data['Q11Wa5S3'] == 1) echo set_checkbox('Q11Wa5S3', '1', true); ?> <?php if (isset($data['Q6Wa3S1'])) if ($data['Q6Wa3S1'] < 1) echo "disabled"; ?>/>
+				<?php if(getFiled('Q11Wa5S3', $schoolUserID)==1):
+							 echo "1";
+							 else:
+							 echo "0";
+							 endif; ?>
+                    <!--<input class="form-control space-textbox" id="Q11Wa5S3" type="checkbox" name="Q11Wa5S3" value="1">-->
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" id="Q11Wa5S4" type="checkbox" name="Q11Wa5S4"
-                           value="<?php echo set_value('Q11Wa5S4', 1); ?>" <?php if (isset($data['Q11Wa5S4'])) if ($data['Q11Wa5S4'] == 1) echo set_checkbox('Q11Wa5S4', '1', true); ?> <?php if (isset($data['Q6Wa3S1'])) if ($data['Q6Wa3S1'] < 1) echo "disabled"; ?>/>
+				<?php if(getFiled('Q11Wa5S4', $schoolUserID)==1):
+							 echo "1";
+							 else:
+							 echo "0";
+							 endif; ?>
+                    <!--<input class="form-control space-textbox" id="Q11Wa5S4" type="checkbox" name="Q11Wa5S4" value="1">-->
                 </div>
             </div>
             <div class="form-group row">
@@ -2464,20 +1395,36 @@
                     <label>Wood, glass, metal </label>
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" id="Q11Wa6S1" type="checkbox" name="Q11Wa6S1"
-                           value="<?php echo set_value('Q11Wa6S1', 1); ?>" <?php if (isset($data['Q11Wa6S1'])) if ($data['Q11Wa6S1'] == 1) echo set_checkbox('Q11Wa6S1', '1', true); ?> <?php if (isset($data['Q6Wa2S3'])) if ($data['Q6Wa2S3'] < 1) echo "disabled"; ?>/>
+				<?php if(getFiled('Q11Wa6S1', $schoolUserID)==1):
+							 echo "1";
+							 else:
+							 echo "0";
+							 endif; ?>
+                    <!--<input class="form-control space-textbox" id="Q11Wa6S1" type="checkbox" name="Q11Wa6S1" value="1">-->
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" id="Q11Wa6S2" type="checkbox" name="Q11Wa6S2"
-                           value="<?php echo set_value('Q11Wa6S2', 1); ?>" <?php if (isset($data['Q11Wa6S2'])) if ($data['Q11Wa6S2'] == 1) echo set_checkbox('Q11Wa6S2', '1', true); ?> <?php if (isset($data['Q6Wa2S3'])) if ($data['Q6Wa2S3'] < 1) echo "disabled"; ?>/>
+				<?php if(getFiled('Q11Wa6S2', $schoolUserID)==1):
+							 echo "1";
+							 else:
+							 echo "0";
+							 endif; ?>
+                    <!--<input class="form-control space-textbox" id="Q11Wa6S2" type="checkbox" name="Q11Wa6S2" value="1">-->
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" id="Q11Wa6S3" type="checkbox" name="Q11Wa6S3"
-                           value="<?php echo set_value('Q11Wa6S3', 1); ?>" <?php if (isset($data['Q11Wa6S3'])) if ($data['Q11Wa6S3'] == 1) echo set_checkbox('Q11Wa6S3', '1', true); ?> <?php if (isset($data['Q6Wa2S3'])) if ($data['Q6Wa2S3'] < 1) echo "disabled"; ?>/>
+				<?php if(getFiled('Q11Wa6S3', $schoolUserID)==1):
+							 echo "1";
+							 else:
+							 echo "0";
+							 endif; ?>
+                    <!--<input class="form-control space-textbox" id="Q11Wa6S3" type="checkbox" name="Q11Wa6S3" value="1">-->
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" id="Q11Wa6S4" type="checkbox" name="Q11Wa6S4"
-                           value="<?php echo set_value('Q11Wa6S4', 1); ?>" <?php if (isset($data['Q11Wa6S4'])) if ($data['Q11Wa6S4'] == 1) echo set_checkbox('Q11Wa6S4', '1', true); ?> <?php if (isset($data['Q6Wa2S3'])) if ($data['Q6Wa2S3'] < 1) echo "disabled"; ?>/>
+				<?php if(getFiled('Q11Wa6S4', $schoolUserID)==1):
+							 echo "1";
+							 else:
+							 echo "0";
+							 endif; ?>
+                   <!-- <input class="form-control space-textbox" id="Q11Wa6S4" type="checkbox" name="Q11Wa6S4" value="1">-->
                 </div>
             </div>
             <div class="form-group row">
@@ -2485,20 +1432,36 @@
                     <label>Biomedical waste </label>
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" id="Q11Wa7S1" type="checkbox" name="Q11Wa7S1"
-                           value="<?php echo set_value('Q11Wa7S1', 1); ?>" <?php if (isset($data['Q11Wa7S1'])) if ($data['Q11Wa7S1'] == 1) echo set_checkbox('Q11Wa7S1', '1', true); ?> <?php if (isset($data['Q6Wa5S1'])) if ($data['Q6Wa5S1'] < 1) echo "disabled"; ?>/>
+				<?php if(getFiled('Q11Wa7S1', $schoolUserID)==1):
+							 echo "1";
+							 else:
+							 echo "0";
+							 endif; ?>
+                    <!--<input class="form-control space-textbox" id="Q11Wa7S1" type="checkbox" name="Q11Wa7S1" value="1">-->
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" id="Q11Wa7S2" type="checkbox" name="Q11Wa7S2"
-                           value="<?php echo set_value('Q11Wa7S2', 1); ?>" <?php if (isset($data['Q11Wa7S2'])) if ($data['Q11Wa7S2'] == 1) echo set_checkbox('Q11Wa7S2', '1', true); ?> <?php if (isset($data['Q6Wa5S1'])) if ($data['Q6Wa5S1'] < 1) echo "disabled"; ?>/>
+				<?php if(getFiled('Q11Wa7S2', $schoolUserID)==1):
+							 echo "1";
+							 else:
+							 echo "0";
+							 endif; ?>
+                    <!--<input class="form-control space-textbox" id="Q11Wa7S2" type="checkbox" name="Q11Wa7S2" value="1">-->
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" id="Q11Wa7S3" type="checkbox" name="Q11Wa7S3"
-                           value="<?php echo set_value('Q11Wa7S3', 1); ?>" <?php if (isset($data['Q11Wa7S3'])) if ($data['Q11Wa7S3'] == 1) echo set_checkbox('Q11Wa7S3', '1', true); ?> <?php if (isset($data['Q6Wa5S1'])) if ($data['Q6Wa5S1'] < 1) echo "disabled"; ?>/>
+				<?php if(getFiled('Q11Wa7S3', $schoolUserID)==1):
+							 echo "1";
+							 else:
+							 echo "0";
+							 endif; ?>
+                    <!--<input class="form-control space-textbox" id="Q11Wa7S3" type="checkbox" name="Q11Wa7S3" value="1">-->
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" id="Q11Wa7S4" type="checkbox" name="Q11Wa7S4"
-                           value="<?php echo set_value('Q11Wa7S4', 1); ?>" <?php if (isset($data['Q11Wa7S4'])) if ($data['Q11Wa7S4'] == 1) echo set_checkbox('Q11Wa7S4', '1', true); ?> <?php if (isset($data['Q6Wa5S1'])) if ($data['Q6Wa5S1'] < 1) echo "disabled"; ?>/>
+				<?php if(getFiled('Q11Wa7S4', $schoolUserID)==1):
+							 echo "1";
+							 else:
+							 echo "0";
+							 endif; ?>
+                   <!-- <input class="form-control space-textbox" id="Q11Wa7S4" type="checkbox" name="Q11Wa7S4" value="1">-->
                 </div>
             </div>
             <div class="form-group row">
@@ -2506,20 +1469,36 @@
                     <label>Others </label>
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" id="Q11Wa8S1" type="checkbox" name="Q11Wa8S1"
-                           value="<?php echo set_value('Q11Wa8S1', 1); ?>" <?php if (isset($data['Q11Wa8S1'])) if ($data['Q11Wa8S1'] == 1) echo set_checkbox('Q11Wa8S1', '1', true); ?>/>
+				<?php if(getFiled('Q11Wa8S1', $schoolUserID)==1):
+							 echo "1";
+							 else:
+							 echo "0";
+							 endif; ?>
+                    <!--<input class="form-control space-textbox" id="Q11Wa8S1" type="checkbox" name="Q11Wa8S1" value="1">-->
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" id="Q11Wa8S2" type="checkbox" name="Q11Wa8S2"
-                           value="<?php echo set_value('Q11Wa8S2', 1); ?>" <?php if (isset($data['Q11Wa8S2'])) if ($data['Q11Wa8S2'] == 1) echo set_checkbox('Q11Wa8S2', '1', true); ?>/>
+				<?php if(getFiled('Q11Wa8S2', $schoolUserID)==1):
+							 echo "1";
+							 else:
+							 echo "0";
+							 endif; ?>
+                    <!--<input class="form-control space-textbox" id="Q11Wa8S2" type="checkbox" name="Q11Wa8S2" value="1">-->
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" id="Q11Wa8S3" type="checkbox" name="Q11Wa8S3"
-                           value="<?php echo set_value('Q11Wa8S3', 1); ?>" <?php if (isset($data['Q11Wa8S3'])) if ($data['Q11Wa8S3'] == 1) echo set_checkbox('Q11Wa8S3', '1', true); ?>/>
+				<?php if(getFiled('Q11Wa8S3', $schoolUserID)==1):
+							 echo "1";
+							 else:
+							 echo "0";
+							 endif; ?>
+                    <!--<input class="form-control space-textbox" id="Q11Wa8S3" type="checkbox" name="Q11Wa8S3" value="1">-->
                 </div>
                 <div class="col-xs-2">
-                    <input class="form-control space-textbox" id="Q11Wa8S4" type="checkbox" name="Q11Wa8S4"
-                           value="<?php echo set_value('Q11Wa8S4', 1); ?>" <?php if (isset($data['Q11Wa8S4'])) if ($data['Q11Wa8S4'] == 1) echo set_checkbox('Q11Wa8S4', '1', true); ?>/>
+				<?php if(getFiled('Q11Wa8S4', $schoolUserID)==1):
+							 echo "1";
+							 else:
+							 echo "0";
+							 endif; ?>
+                    <!--<input class="form-control space-textbox" id="Q11Wa8S4" type="checkbox" name="Q11Wa8S4" value="1">-->
                 </div>
             </div>
             <!-- <div class="form-group row">
@@ -2528,16 +1507,16 @@
     </label>
   </div>
   <div class="col-xs-2">
-   <input class="form-control space-textbox" onkeyup="computeRecycling()" id="Q11Wa9S1" type="checkbox" name="Q11Wa9S1" placeholder="<?php if (isset($data['Q11Wa9S1'])) echo $data['Q11Wa9S1'] ?>" value="<?php echo set_value('Q11Wa9S1'); ?>" readonly/>
+   <input class="form-control space-textbox" onkeyup="computeRecycling()" id="Q11Wa9S1" type="checkbox" name="Q11Wa9S1" placeholder="" value="" readonly/>
  </div>
  <div class="col-xs-2">
-   <input class="form-control space-textbox" onkeyup="computeRecycling()" id="Q11Wa9S2" type="checkbox" name="Q11Wa9S2" placeholder="<?php if (isset($data['Q11Wa9S2'])) echo $data['Q11Wa9S2'] ?>" value="<?php echo set_value('Q11Wa9S2'); ?>" readonly/>
+   <input class="form-control space-textbox" onkeyup="computeRecycling()" id="Q11Wa9S2" type="checkbox" name="Q11Wa9S2" placeholder="" value="" readonly/>
  </div>
  <div class="col-xs-2">
-   <input class="form-control space-textbox" onkeyup="computeRecycling()" id="Q11Wa9S3" type="checkbox" name="Q11Wa9S3" placeholder="<?php if (isset($data['Q11Wa9S3'])) echo $data['Q11Wa9S3'] ?>" value="<?php echo set_value('Q11Wa9S3'); ?>" readonly/>
+   <input class="form-control space-textbox" onkeyup="computeRecycling()" id="Q11Wa9S3" type="checkbox" name="Q11Wa9S3" placeholder="" value="" readonly/>
  </div>
  <div class="col-xs-2">
-   <input class="form-control space-textbox" onkeyup="computeRecycling()" id="Q11Wa9S4" type="checkbox" name="Q11Wa9S4" placeholder="<?php if (isset($data['Q11Wa9S4'])) echo $data['Q11Wa9S4'] ?>" value="<?php echo set_value('Q11Wa9S4'); ?>" readonly/>
+   <input class="form-control space-textbox" onkeyup="computeRecycling()" id="Q11Wa9S4" type="checkbox" name="Q11Wa9S4" placeholder="" value="" readonly/>
  </div>
 
 </div>
@@ -2548,13 +1527,23 @@
             <label class="control-label">Please upload supporting documents:</label>
             <br>
             • Pictures of recycling units - paper recycling machine, selling paper to kabadiwala, recyclers,etc<br><br>
-            <button class="btn uploadbtn upload" data-id="Recycling Machine" data-toggle="modal" data-target="#airModal"
-                    type="button">UPLOAD FILES
+            <button class="btn uploadbtn upload" data-id="Recycling Machine" data-toggle="modal" data-target="#airModal" type="button">UPLOAD FILES
             </button>
             <br>
             <br>
         </div>
         <br>
+        <table width="100%" class="question uploadedfiles">
+            <thead>
+            <tr>
+                <th>File name</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+                        </tbody>
+        </table>
+        <div class="clearfix">&nbsp;</div>
         <div class="form-group">
             <label class="control-label"><span class="cube">8</span>Does your school have the following? If yes, please
                 give the numbers of items in working condition and those that are not.</label></div>
@@ -2580,24 +1569,20 @@
                 <label>TVs </label>
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa1S1" type="number"
-                       name="Q12Wa1S1" placeholder="<?php if (isset($data['Q12Wa1S1'])) echo $data['Q12Wa1S1'] ?>"
-                       value="<?php echo set_value('Q12Wa1S1'); ?>"/>
+			<?php echo (getFiled('Q12Wa1S1', $schoolUserID)!="")?getFiled('Q12Wa1S1', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa1S2" type="number"
-                       name="Q12Wa1S2" placeholder="<?php if (isset($data['Q12Wa1S2'])) echo $data['Q12Wa1S2'] ?>"
-                       value="<?php echo set_value('Q12Wa1S2'); ?>"/>
+			<?php echo (getFiled('Q12Wa1S2', $schoolUserID)!="")?getFiled('Q12Wa1S2', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa1S3" type="number"
-                       name="Q12Wa1S3" placeholder="<?php if (isset($data['Q12Wa1S3'])) echo $data['Q12Wa1S3'] ?>"
-                       value="<?php echo set_value('Q12Wa1S3'); ?>"/>
+			<?php echo (getFiled('Q12Wa1S3', $schoolUserID)!="")?getFiled('Q12Wa1S3', $schoolUserID) : "N/A"; ?>
+               
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa1S4" type="number"
-                       name="Q12Wa1S4" placeholder="<?php if (isset($data['Q12Wa1S4'])) echo $data['Q12Wa1S4'] ?>"
-                       value="<?php echo set_value('Q12Wa1S4'); ?>" readonly/>
+			<?php echo (getFiled('Q12Wa1S4', $schoolUserID)!="")?getFiled('Q12Wa1S4', $schoolUserID) : "N/A"; ?>
+               
             </div>
         </div>
         <div class="form-group row">
@@ -2605,24 +1590,20 @@
                 <label>VCR or DVD players </label>
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa2S1" type="number"
-                       name="Q12Wa2S1" placeholder="<?php if (isset($data['Q12Wa2S1'])) echo $data['Q12Wa2S1'] ?>"
-                       value="<?php echo set_value('Q12Wa2S1'); ?>"/>
+			<?php echo (getFiled('Q12Wa2S1', $schoolUserID)!="")?getFiled('Q12Wa2S1', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa2S2" type="number"
-                       name="Q12Wa2S2" placeholder="<?php if (isset($data['Q12Wa2S2'])) echo $data['Q12Wa2S2'] ?>"
-                       value="<?php echo set_value('Q12Wa2S2'); ?>"/>
+			<?php echo (getFiled('Q12Wa2S2', $schoolUserID)!="")?getFiled('Q12Wa2S2', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa2S3" type="number"
-                       name="Q12Wa2S3" placeholder="<?php if (isset($data['Q12Wa2S3'])) echo $data['Q12Wa2S3'] ?>"
-                       value="<?php echo set_value('Q12Wa2S3'); ?>"/>
+			<?php echo (getFiled('Q12Wa2S3', $schoolUserID)!="")?getFiled('Q12Wa2S3', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa2S4" type="number"
-                       name="Q12Wa2S4" placeholder="<?php if (isset($data['Q12Wa2S4'])) echo $data['Q12Wa2S4'] ?>"
-                       value="<?php echo set_value('Q12Wa2S4'); ?>" readonly/>
+			<?php echo (getFiled('Q12Wa2S4', $schoolUserID)!="")?getFiled('Q12Wa2S4', $schoolUserID) : "N/A"; ?>
+                
             </div>
         </div>
         <div class="form-group row">
@@ -2630,24 +1611,20 @@
                 <label>Refrigerators and freezers </label>
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa3S1" type="number"
-                       name="Q12Wa3S1" placeholder="<?php if (isset($data['Q12Wa3S1'])) echo $data['Q12Wa3S1'] ?>"
-                       value="<?php echo set_value('Q12Wa3S1'); ?>"/>
+			<?php echo (getFiled('Q12Wa3S1', $schoolUserID)!="")?getFiled('Q12Wa3S1', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa3S2" type="number"
-                       name="Q12Wa3S2" placeholder="<?php if (isset($data['Q12Wa3S2'])) echo $data['Q12Wa3S2'] ?>"
-                       value="<?php echo set_value('Q12Wa3S2'); ?>"/>
+			<?php echo (getFiled('Q12Wa3S2', $schoolUserID)!="")?getFiled('Q12Wa3S2', $schoolUserID) : "N/A"; ?>
+              
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa3S3" type="number"
-                       name="Q12Wa3S3" placeholder="<?php if (isset($data['Q12Wa3S3'])) echo $data['Q12Wa3S3'] ?>"
-                       value="<?php echo set_value('Q12Wa3S3'); ?>"/>
+			<?php echo (getFiled('Q12Wa3S3', $schoolUserID)!="")?getFiled('Q12Wa3S3', $schoolUserID) : "N/A"; ?>
+               
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa3S4" type="number"
-                       name="Q12Wa3S4" placeholder="<?php if (isset($data['Q12Wa3S4'])) echo $data['Q12Wa3S4'] ?>"
-                       value="<?php echo set_value('Q12Wa3S4'); ?>" readonly/>
+			<?php echo (getFiled('Q12Wa3S4', $schoolUserID)!="")?getFiled('Q12Wa3S4', $schoolUserID) : "N/A"; ?>
+                
             </div>
         </div>
         <div class="form-group row">
@@ -2655,24 +1632,20 @@
                 <label>Washing machines </label>
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa4S1" type="number"
-                       name="Q12Wa4S1" placeholder="<?php if (isset($data['Q12Wa4S1'])) echo $data['Q12Wa4S1'] ?>"
-                       value="<?php echo set_value('Q12Wa4S1'); ?>"/>
+			<?php echo (getFiled('Q12Wa4S1', $schoolUserID)!="")?getFiled('Q12Wa4S1', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa4S2" type="number"
-                       name="Q12Wa4S2" placeholder="<?php if (isset($data['Q12Wa4S2'])) echo $data['Q12Wa4S2'] ?>"
-                       value="<?php echo set_value('Q12Wa4S2'); ?>"/>
+			<?php echo (getFiled('Q12Wa4S2', $schoolUserID)!="")?getFiled('Q12Wa4S2', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa4S3" type="number"
-                       name="Q12Wa4S3" placeholder="<?php if (isset($data['Q12Wa4S3'])) echo $data['Q12Wa4S3'] ?>"
-                       value="<?php echo set_value('Q12Wa4S3'); ?>"/>
+			<?php echo (getFiled('Q12Wa4S3', $schoolUserID)!="")?getFiled('Q12Wa4S3', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa4S4" type="number"
-                       name="Q12Wa4S4" placeholder="<?php if (isset($data['Q12Wa4S4'])) echo $data['Q12Wa4S4'] ?>"
-                       value="<?php echo set_value('Q12Wa4S4'); ?>" readonly/>
+			<?php echo (getFiled('Q12Wa4S4', $schoolUserID)!="")?getFiled('Q12Wa4S4', $schoolUserID) : "N/A"; ?>
+                
             </div>
         </div>
         <div class="form-group row">
@@ -2680,24 +1653,20 @@
                 <label>Air conditioners </label>
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa5S1" type="number"
-                       name="Q12Wa5S1" placeholder="<?php if (isset($data['Q12Wa5S1'])) echo $data['Q12Wa5S1'] ?>"
-                       value="<?php echo set_value('Q12Wa5S1'); ?>"/>
+			<?php echo (getFiled('Q12Wa5S1', $schoolUserID)!="")?getFiled('Q12Wa5S1', $schoolUserID) : "N/A"; ?>
+               
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa5S2" type="number"
-                       name="Q12Wa5S2" placeholder="<?php if (isset($data['Q12Wa5S2'])) echo $data['Q12Wa5S2'] ?>"
-                       value="<?php echo set_value('Q12Wa5S2'); ?>"/>
+			<?php echo (getFiled('Q12Wa5S2', $schoolUserID)!="")?getFiled('Q12Wa5S2', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa5S3" type="number"
-                       name="Q12Wa5S3" placeholder="<?php if (isset($data['Q12Wa5S3'])) echo $data['Q12Wa5S3'] ?>"
-                       value="<?php echo set_value('Q12Wa5S3'); ?>"/>
+			<?php echo (getFiled('Q12Wa5S3', $schoolUserID)!="")?getFiled('Q12Wa5S3', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa5S4" type="number"
-                       name="Q12Wa5S4" placeholder="<?php if (isset($data['Q12Wa5S4'])) echo $data['Q12Wa5S4'] ?>"
-                       value="<?php echo set_value('Q12Wa5S4'); ?>" readonly/>
+			<?php echo (getFiled('Q12Wa5S4', $schoolUserID)!="")?getFiled('Q12Wa5S4', $schoolUserID) : "N/A"; ?>
+                
             </div>
         </div>
         <div class="form-group row">
@@ -2705,24 +1674,20 @@
                 <label>Heaters </label>
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa6S1" type="number"
-                       name="Q12Wa6S1" placeholder="<?php if (isset($data['Q12Wa6S1'])) echo $data['Q12Wa6S1'] ?>"
-                       value="<?php echo set_value('Q12Wa6S1'); ?>"/>
+			<?php echo (getFiled('Q12Wa6S1', $schoolUserID)!="")?getFiled('Q12Wa6S1', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa6S2" type="number"
-                       name="Q12Wa6S2" placeholder="<?php if (isset($data['Q12Wa6S2'])) echo $data['Q12Wa6S2'] ?>"
-                       value="<?php echo set_value('Q12Wa6S2'); ?>"/>
+			<?php echo (getFiled('Q12Wa6S2', $schoolUserID)!="")?getFiled('Q12Wa6S2', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa6S3" type="number"
-                       name="Q12Wa6S3" placeholder="<?php if (isset($data['Q12Wa6S3'])) echo $data['Q12Wa6S3'] ?>"
-                       value="<?php echo set_value('Q12Wa6S3'); ?>"/>
+			<?php echo (getFiled('Q12Wa6S3', $schoolUserID)!="")?getFiled('Q12Wa6S3', $schoolUserID) : "N/A"; ?>
+               
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa6S4" type="number"
-                       name="Q12Wa6S4" placeholder="<?php if (isset($data['Q12Wa6S4'])) echo $data['Q12Wa6S4'] ?>"
-                       value="<?php echo set_value('Q12Wa6S4'); ?>" readonly/>
+			<?php echo (getFiled('Q12Wa6S4', $schoolUserID)!="")?getFiled('Q12Wa6S4', $schoolUserID) : "N/A"; ?>
+               
             </div>
         </div>
         <div class="form-group row">
@@ -2730,24 +1695,20 @@
                 <label>Microwaves </label>
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa7S1" type="number"
-                       name="Q12Wa7S1" placeholder="<?php if (isset($data['Q12Wa7S1'])) echo $data['Q12Wa7S1'] ?>"
-                       value="<?php echo set_value('Q12Wa7S1'); ?>"/>
+			<?php echo (getFiled('Q12Wa7S1', $schoolUserID)!="")?getFiled('Q12Wa7S1', $schoolUserID) : "N/A"; ?>
+               
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa7S2" type="number"
-                       name="Q12Wa7S2" placeholder="<?php if (isset($data['Q12Wa7S2'])) echo $data['Q12Wa7S2'] ?>"
-                       value="<?php echo set_value('Q12Wa7S2'); ?>"/>
+			<?php echo (getFiled('Q12Wa7S2', $schoolUserID)!="")?getFiled('Q12Wa7S2', $schoolUserID) : "N/A"; ?>
+              
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa7S3" type="number"
-                       name="Q12Wa7S3" placeholder="<?php if (isset($data['Q12Wa7S3'])) echo $data['Q12Wa7S3'] ?>"
-                       value="<?php echo set_value('Q12Wa7S3'); ?>"/>
+			<?php echo (getFiled('Q12Wa7S3', $schoolUserID)!="")?getFiled('Q12Wa7S3', $schoolUserID) : "N/A"; ?>
+               
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa7S4" type="number"
-                       name="Q12Wa7S4" placeholder="<?php if (isset($data['Q12Wa7S4'])) echo $data['Q12Wa7S4'] ?>"
-                       value="<?php echo set_value('Q12Wa7S4'); ?>" readonly/>
+			<?php echo (getFiled('Q12Wa7S4', $schoolUserID)!="")?getFiled('Q12Wa7S4', $schoolUserID) : "N/A"; ?>
+               
             </div>
         </div>
         <div class="form-group row">
@@ -2755,24 +1716,20 @@
                 <label>Ovens </label>
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa8S1" type="number"
-                       name="Q12Wa8S1" placeholder="<?php if (isset($data['Q12Wa8S1'])) echo $data['Q12Wa8S1'] ?>"
-                       value="<?php echo set_value('Q12Wa8S1'); ?>"/>
+			<?php echo (getFiled('Q12Wa8S1', $schoolUserID)!="")?getFiled('Q12Wa8S1', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa8S2" type="number"
-                       name="Q12Wa8S2" placeholder="<?php if (isset($data['Q12Wa8S2'])) echo $data['Q12Wa8S2'] ?>"
-                       value="<?php echo set_value('Q12Wa8S2'); ?>"/>
+			<?php echo (getFiled('Q12Wa8S2', $schoolUserID)!="")?getFiled('Q12Wa8S2', $schoolUserID) : "N/A"; ?>
+              
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa8S3" type="number"
-                       name="Q12Wa8S3" placeholder="<?php if (isset($data['Q12Wa8S3'])) echo $data['Q12Wa8S3'] ?>"
-                       value="<?php echo set_value('Q12Wa8S3'); ?>"/>
+			<?php echo (getFiled('Q12Wa8S3', $schoolUserID)!="")?getFiled('Q12Wa8S3', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa8S4" type="number"
-                       name="Q12Wa8S4" placeholder="<?php if (isset($data['Q12Wa8S4'])) echo $data['Q12Wa8S4'] ?>"
-                       value="<?php echo set_value('Q12Wa8S4'); ?>" readonly/>
+			<?php echo (getFiled('Q12Wa8S4', $schoolUserID)!="")?getFiled('Q12Wa8S4', $schoolUserID) : "N/A"; ?>
+               
             </div>
         </div>
         <div class="form-group row">
@@ -2780,24 +1737,20 @@
                 <label>Toasters </label>
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa9S1" type="number"
-                       name="Q12Wa9S1" placeholder="<?php if (isset($data['Q12Wa9S1'])) echo $data['Q12Wa9S1'] ?>"
-                       value="<?php echo set_value('Q12Wa9S1'); ?>"/>
+			<?php echo (getFiled('Q12Wa9S1', $schoolUserID)!="")?getFiled('Q12Wa9S1', $schoolUserID) : "N/A"; ?>
+               <!--  <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa9S1" type="number" name="Q12Wa9S1" placeholder="" value="">-->
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa9S2" type="number"
-                       name="Q12Wa9S2" placeholder="<?php if (isset($data['Q12Wa9S2'])) echo $data['Q12Wa9S2'] ?>"
-                       value="<?php echo set_value('Q12Wa9S2'); ?>"/>
+			<?php echo (getFiled('Q12Wa9S2', $schoolUserID)!="")?getFiled('Q12Wa9S2', $schoolUserID) : "N/A"; ?>
+              
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa9S3" type="number"
-                       name="Q12Wa9S3" placeholder="<?php if (isset($data['Q12Wa9S3'])) echo $data['Q12Wa9S3'] ?>"
-                       value="<?php echo set_value('Q12Wa9S3'); ?>"/>
+			<?php echo (getFiled('Q12Wa9S3', $schoolUserID)!="")?getFiled('Q12Wa9S3', $schoolUserID) : "N/A"; ?>
+              
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa9S4" type="number"
-                       name="Q12Wa9S4" placeholder="<?php if (isset($data['Q12Wa9S4'])) echo $data['Q12Wa9S4'] ?>"
-                       value="<?php echo set_value('Q12Wa9S4'); ?>" readonly/>
+			<?php echo (getFiled('Q12Wa9S4', $schoolUserID)!="")?getFiled('Q12Wa9S4', $schoolUserID) : "N/A"; ?>
+               
             </div>
         </div>
         <div class="form-group row">
@@ -2805,24 +1758,20 @@
                 <label>Electric kettles </label>
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa10S1" type="number"
-                       name="Q12Wa10S1" placeholder="<?php if (isset($data['Q12Wa10S1'])) echo $data['Q12Wa10S1'] ?>"
-                       value="<?php echo set_value('Q12Wa10S1'); ?>"/>
+			<?php echo (getFiled('Q12Wa10S1', $schoolUserID)!="")?getFiled('Q12Wa10S1', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa10S2" type="number"
-                       name="Q12Wa10S2" placeholder="<?php if (isset($data['Q12Wa10S2'])) echo $data['Q12Wa10S2'] ?>"
-                       value="<?php echo set_value('Q12Wa10S2'); ?>"/>
+			<?php echo (getFiled('Q12Wa10S2', $schoolUserID)!="")?getFiled('Q12Wa10S2', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa10S3" type="number"
-                       name="Q12Wa10S3" placeholder="<?php if (isset($data['Q12Wa10S3'])) echo $data['Q12Wa10S3'] ?>"
-                       value="<?php echo set_value('Q12Wa10S3'); ?>"/>
+			<?php echo (getFiled('Q12Wa10S3', $schoolUserID)!="")?getFiled('Q12Wa10S3', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa10S4" type="number"
-                       name="Q12Wa10S4" placeholder="<?php if (isset($data['Q12Wa10S4'])) echo $data['Q12Wa10S4'] ?>"
-                       value="<?php echo set_value('Q12Wa10S4'); ?>" readonly/>
+			<?php echo (getFiled('Q12Wa10S4', $schoolUserID)!="")?getFiled('Q12Wa10S4', $schoolUserID) : "N/A"; ?>
+               
             </div>
         </div>
         <div class="form-group row">
@@ -2830,24 +1779,20 @@
                 <label>Personal computers (CPU, mouse, screen and keyboard included) </label>
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa11S1" type="number"
-                       name="Q12Wa11S1" placeholder="<?php if (isset($data['Q12Wa11S1'])) echo $data['Q12Wa11S1'] ?>"
-                       value="<?php echo set_value('Q12Wa11S1'); ?>"/>
+			<?php echo (getFiled('Q12Wa11S1', $schoolUserID)!="")?getFiled('Q12Wa11S1', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa11S2" type="number"
-                       name="Q12Wa11S2" placeholder="<?php if (isset($data['Q12Wa11S2'])) echo $data['Q12Wa11S2'] ?>"
-                       value="<?php echo set_value('Q12Wa11S2'); ?>"/>
+			<?php echo (getFiled('Q12Wa11S2', $schoolUserID)!="")?getFiled('Q12Wa11S2', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa11S3" type="number"
-                       name="Q12Wa11S3" placeholder="<?php if (isset($data['Q12Wa11S3'])) echo $data['Q12Wa11S3'] ?>"
-                       value="<?php echo set_value('Q12Wa11S3'); ?>"/>
+			<?php echo (getFiled('Q12Wa11S3', $schoolUserID)!="")?getFiled('Q12Wa11S3', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa11S4" type="number"
-                       name="Q12Wa11S4" placeholder="<?php if (isset($data['Q12Wa11S4'])) echo $data['Q12Wa11S4'] ?>"
-                       value="<?php echo set_value('Q12Wa11S4'); ?>" readonly/>
+			<?php echo (getFiled('Q12Wa11S4', $schoolUserID)!="")?getFiled('Q12Wa11S4', $schoolUserID) : "N/A"; ?>
+               
             </div>
         </div>
         <div class="form-group row">
@@ -2855,24 +1800,20 @@
                 <label>Laptop computer (CPU, mouse, screen and keyboard included) </label>
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa12S1" type="number"
-                       name="Q12Wa12S1" placeholder="<?php if (isset($data['Q12Wa12S1'])) echo $data['Q12Wa12S1'] ?>"
-                       value="<?php echo set_value('Q12Wa12S1'); ?>"/>
+			<?php echo (getFiled('Q12Wa12S1', $schoolUserID)!="")?getFiled('Q12Wa12S1', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa12S2" type="number"
-                       name="Q12Wa12S2" placeholder="<?php if (isset($data['Q12Wa12S2'])) echo $data['Q12Wa12S2'] ?>"
-                       value="<?php echo set_value('Q12Wa12S2'); ?>"/>
+			<?php echo (getFiled('Q12Wa12S2', $schoolUserID)!="")?getFiled('Q12Wa12S2', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa12S3" type="number"
-                       name="Q12Wa12S3" placeholder="<?php if (isset($data['Q12Wa12S3'])) echo $data['Q12Wa12S3'] ?>"
-                       value="<?php echo set_value('Q12Wa12S3'); ?>"/>
+			<?php echo (getFiled('Q12Wa12S3', $schoolUserID)!="")?getFiled('Q12Wa12S3', $schoolUserID) : "N/A"; ?>
+               
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa12S4" type="number"
-                       name="Q12Wa12S4" placeholder="<?php if (isset($data['Q12Wa12S4'])) echo $data['Q12Wa12S4'] ?>"
-                       value="<?php echo set_value('Q12Wa12S4'); ?>" readonly/>
+			<?php echo (getFiled('Q12Wa12S4', $schoolUserID)!="")?getFiled('Q12Wa12S4', $schoolUserID) : "N/A"; ?>
+                
             </div>
         </div>
         <div class="form-group row">
@@ -2880,24 +1821,20 @@
                 <label>Notebook computers </label>
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa13S1" type="number"
-                       name="Q12Wa13S1" placeholder="<?php if (isset($data['Q12Wa13S1'])) echo $data['Q12Wa13S1'] ?>"
-                       value="<?php echo set_value('Q12Wa13S1'); ?>"/>
+			<?php echo (getFiled('Q12Wa13S1', $schoolUserID)!="")?getFiled('Q12Wa13S1', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa13S2" type="number"
-                       name="Q12Wa13S2" placeholder="<?php if (isset($data['Q12Wa13S2'])) echo $data['Q12Wa13S2'] ?>"
-                       value="<?php echo set_value('Q12Wa13S2'); ?>"/>
+			<?php echo (getFiled('Q12Wa13S2', $schoolUserID)!="")?getFiled('Q12Wa13S2', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa13S3" type="number"
-                       name="Q12Wa13S3" placeholder="<?php if (isset($data['Q12Wa13S3'])) echo $data['Q12Wa13S3'] ?>"
-                       value="<?php echo set_value('Q12Wa13S3'); ?>"/>
+			<?php echo (getFiled('Q12Wa13S3', $schoolUserID)!="")?getFiled('Q12Wa13S3', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa13S4" type="number"
-                       name="Q12Wa13S4" placeholder="<?php if (isset($data['Q12Wa13S4'])) echo $data['Q12Wa13S4'] ?>"
-                       value="<?php echo set_value('Q12Wa13S4'); ?>" readonly/>
+			<?php echo (getFiled('Q12Wa13S4', $schoolUserID)!="")?getFiled('Q12Wa13S4', $schoolUserID) : "N/A"; ?>
+                
             </div>
         </div>
         <div class="form-group row">
@@ -2905,24 +1842,20 @@
                 <label>Notepad computers </label>
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa14S1" type="number"
-                       name="Q12Wa14S1" placeholder="<?php if (isset($data['Q12Wa14S1'])) echo $data['Q12Wa14S1'] ?>"
-                       value="<?php echo set_value('Q12Wa14S1'); ?>"/>
+			<?php echo (getFiled('Q12Wa14S1', $schoolUserID)!="")?getFiled('Q12Wa14S1', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa14S2" type="number"
-                       name="Q12Wa14S2" placeholder="<?php if (isset($data['Q12Wa14S2'])) echo $data['Q12Wa14S2'] ?>"
-                       value="<?php echo set_value('Q12Wa14S2'); ?>"/>
+			<?php echo (getFiled('Q12Wa14S2', $schoolUserID)!="")?getFiled('Q12Wa14S2', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa14S3" type="number"
-                       name="Q12Wa14S3" placeholder="<?php if (isset($data['Q12Wa14S3'])) echo $data['Q12Wa14S3'] ?>"
-                       value="<?php echo set_value('Q12Wa14S3'); ?>"/>
+			<?php echo (getFiled('Q12Wa14S3', $schoolUserID)!="")?getFiled('Q12Wa14S3', $schoolUserID) : "N/A"; ?>
+               
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa14S4" type="number"
-                       name="Q12Wa14S4" placeholder="<?php if (isset($data['Q12Wa14S4'])) echo $data['Q12Wa14S4'] ?>"
-                       value="<?php echo set_value('Q12Wa14S4'); ?>" readonly/>
+			<?php echo (getFiled('Q12Wa14S4', $schoolUserID)!="")?getFiled('Q12Wa14S4', $schoolUserID) : "N/A"; ?>
+                
             </div>
         </div>
         <div class="form-group row">
@@ -2930,24 +1863,20 @@
                 <label>Printers </label>
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa15S1" type="number"
-                       name="Q12Wa15S1" placeholder="<?php if (isset($data['Q12Wa15S1'])) echo $data['Q12Wa15S1'] ?>"
-                       value="<?php echo set_value('Q12Wa15S1'); ?>"/>
+			<?php echo (getFiled('Q12Wa15S1', $schoolUserID)!="")?getFiled('Q12Wa15S1', $schoolUserID) : "N/A"; ?>
+               
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa15S2" type="number"
-                       name="Q12Wa15S2" placeholder="<?php if (isset($data['Q12Wa15S2'])) echo $data['Q12Wa15S2'] ?>"
-                       value="<?php echo set_value('Q12Wa15S2'); ?>"/>
+			<?php echo (getFiled('Q12Wa15S2', $schoolUserID)!="")?getFiled('Q12Wa15S2', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa15S3" type="number"
-                       name="Q12Wa15S3" placeholder="<?php if (isset($data['Q12Wa15S3'])) echo $data['Q12Wa15S3'] ?>"
-                       value="<?php echo set_value('Q12Wa15S3'); ?>"/>
+			<?php echo (getFiled('Q12Wa15S3', $schoolUserID)!="")?getFiled('Q12Wa15S3', $schoolUserID) : "N/A"; ?>
+               
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa15S4" type="number"
-                       name="Q12Wa15S4" placeholder="<?php if (isset($data['Q12Wa15S4'])) echo $data['Q12Wa15S4'] ?>"
-                       value="<?php echo set_value('Q12Wa15S4'); ?>" readonly/>
+			<?php echo (getFiled('Q12Wa15S4', $schoolUserID)!="")?getFiled('Q12Wa15S4', $schoolUserID) : "N/A"; ?>
+                
             </div>
         </div>
         <div class="form-group row">
@@ -2955,24 +1884,20 @@
                 <label>Copying equipment (photocopiers) </label>
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa16S1" type="number"
-                       name="Q12Wa16S1" placeholder="<?php if (isset($data['Q12Wa16S1'])) echo $data['Q12Wa16S1'] ?>"
-                       value="<?php echo set_value('Q12Wa16S1'); ?>"/>
+			<?php echo (getFiled('Q12Wa16S1', $schoolUserID)!="")?getFiled('Q12Wa16S1', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa16S2" type="number"
-                       name="Q12Wa16S2" placeholder="<?php if (isset($data['Q12Wa16S2'])) echo $data['Q12Wa16S2'] ?>"
-                       value="<?php echo set_value('Q12Wa16S2'); ?>"/>
+			<?php echo (getFiled('Q12Wa16S2', $schoolUserID)!="")?getFiled('Q12Wa16S2', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa16S3" type="number"
-                       name="Q12Wa16S3" placeholder="<?php if (isset($data['Q12Wa16S3'])) echo $data['Q12Wa16S3'] ?>"
-                       value="<?php echo set_value('Q12Wa16S3'); ?>"/>
+			<?php echo (getFiled('Q12Wa16S3', $schoolUserID)!="")?getFiled('Q12Wa16S3', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa16S4" type="number"
-                       name="Q12Wa16S4" placeholder="<?php if (isset($data['Q12Wa16S4'])) echo $data['Q12Wa16S4'] ?>"
-                       value="<?php echo set_value('Q12Wa16S4'); ?>" readonly/>
+			<?php echo (getFiled('Q12Wa16S4', $schoolUserID)!="")?getFiled('Q12Wa16S4', $schoolUserID) : "N/A"; ?>
+                
             </div>
         </div>
         <div class="form-group row">
@@ -2980,24 +1905,20 @@
                 <label>Projectors </label>
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa17S1" type="number"
-                       name="Q12Wa17S1" placeholder="<?php if (isset($data['Q12Wa17S1'])) echo $data['Q12Wa17S1'] ?>"
-                       value="<?php echo set_value('Q12Wa17S1'); ?>"/>
+			<?php echo (getFiled('Q12Wa17S1', $schoolUserID)!="")?getFiled('Q12Wa17S1', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa17S2" type="number"
-                       name="Q12Wa17S2" placeholder="<?php if (isset($data['Q12Wa17S2'])) echo $data['Q12Wa17S2'] ?>"
-                       value="<?php echo set_value('Q12Wa17S2'); ?>"/>
+			<?php echo (getFiled('Q12Wa17S2', $schoolUserID)!="")?getFiled('Q12Wa17S2', $schoolUserID) : "N/A"; ?>
+               
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa17S3" type="number"
-                       name="Q12Wa17S3" placeholder="<?php if (isset($data['Q12Wa17S3'])) echo $data['Q12Wa17S3'] ?>"
-                       value="<?php echo set_value('Q12Wa17S3'); ?>"/>
+			<?php echo (getFiled('Q12Wa17S3', $schoolUserID)!="")?getFiled('Q12Wa17S3', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa17S4" type="number"
-                       name="Q12Wa17S4" placeholder="<?php if (isset($data['Q12Wa17S4'])) echo $data['Q12Wa17S4'] ?>"
-                       value="<?php echo set_value('Q12Wa17S4'); ?>" readonly/>
+			<?php echo (getFiled('Q12Wa17S4', $schoolUserID)!="")?getFiled('Q12Wa17S4', $schoolUserID) : "N/A"; ?>
+               
             </div>
         </div>
         <div class="form-group row">
@@ -3005,24 +1926,20 @@
                 <label>Whiteboards </label>
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa18S1" type="number"
-                       name="Q12Wa18S1" placeholder="<?php if (isset($data['Q12Wa18S1'])) echo $data['Q12Wa18S1'] ?>"
-                       value="<?php echo set_value('Q12Wa18S1'); ?>"/>
+			<?php echo (getFiled('Q12Wa18S1', $schoolUserID)!="")?getFiled('Q12Wa18S1', $schoolUserID) : "N/A"; ?>
+               
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa18S2" type="number"
-                       name="Q12Wa18S2" placeholder="<?php if (isset($data['Q12Wa18S2'])) echo $data['Q12Wa18S2'] ?>"
-                       value="<?php echo set_value('Q12Wa18S2'); ?>"/>
+			<?php echo (getFiled('Q12Wa18S2', $schoolUserID)!="")?getFiled('Q12Wa18S2', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa18S3" type="number"
-                       name="Q12Wa18S3" placeholder="<?php if (isset($data['Q12Wa18S3'])) echo $data['Q12Wa18S3'] ?>"
-                       value="<?php echo set_value('Q12Wa18S3'); ?>"/>
+			<?php echo (getFiled('Q12Wa18S3', $schoolUserID)!="")?getFiled('Q12Wa18S3', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa18S4" type="number"
-                       name="Q12Wa18S4" placeholder="<?php if (isset($data['Q12Wa18S4'])) echo $data['Q12Wa18S4'] ?>"
-                       value="<?php echo set_value('Q12Wa18S4'); ?>" readonly/>
+			<?php echo (getFiled('Q12Wa18S4', $schoolUserID)!="")?getFiled('Q12Wa18S4', $schoolUserID) : "N/A"; ?>
+                
             </div>
         </div>
         <div class="form-group row">
@@ -3030,24 +1947,20 @@
                 <label>Electrical and electronic typewriters </label>
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa19S1" type="number"
-                       name="Q12Wa19S1" placeholder="<?php if (isset($data['Q12Wa19S1'])) echo $data['Q12Wa19S1'] ?>"
-                       value="<?php echo set_value('Q12Wa19S1'); ?>"/>
+			<?php echo (getFiled('Q12Wa19S1', $schoolUserID)!="")?getFiled('Q12Wa19S1', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa19S2" type="number"
-                       name="Q12Wa19S2" placeholder="<?php if (isset($data['Q12Wa19S2'])) echo $data['Q12Wa19S2'] ?>"
-                       value="<?php echo set_value('Q12Wa19S2'); ?>"/>
+			<?php echo (getFiled('Q12Wa19S2', $schoolUserID)!="")?getFiled('Q12Wa19S2', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa19S3" type="number"
-                       name="Q12Wa19S3" placeholder="<?php if (isset($data['Q12Wa19S3'])) echo $data['Q12Wa19S3'] ?>"
-                       value="<?php echo set_value('Q12Wa19S3'); ?>"/>
+			<?php echo (getFiled('Q12Wa19S3', $schoolUserID)!="")?getFiled('Q12Wa19S3', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa19S4" type="number"
-                       name="Q12Wa19S4" placeholder="<?php if (isset($data['Q12Wa19S4'])) echo $data['Q12Wa19S4'] ?>"
-                       value="<?php echo set_value('Q12Wa19S4'); ?>" readonly/>
+			<?php echo (getFiled('Q12Wa19S4', $schoolUserID)!="")?getFiled('Q12Wa19S4', $schoolUserID) : "N/A"; ?>
+                
             </div>
         </div>
         <div class="form-group row">
@@ -3055,24 +1968,20 @@
                 <label>Pocket and desk calculators </label>
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa20S1" type="number"
-                       name="Q12Wa20S1" placeholder="<?php if (isset($data['Q12Wa20S1'])) echo $data['Q12Wa20S1'] ?>"
-                       value="<?php echo set_value('Q12Wa20S1'); ?>"/>
+			<?php echo (getFiled('Q12Wa20S1', $schoolUserID)!="")?getFiled('Q12Wa20S1', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa20S2" type="number"
-                       name="Q12Wa20S2" placeholder="<?php if (isset($data['Q12Wa20S2'])) echo $data['Q12Wa20S2'] ?>"
-                       value="<?php echo set_value('Q12Wa20S2'); ?>"/>
+			<?php echo (getFiled('Q12Wa20S2', $schoolUserID)!="")?getFiled('Q12Wa20S2', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa20S3" type="number"
-                       name="Q12Wa20S3" placeholder="<?php if (isset($data['Q12Wa20S3'])) echo $data['Q12Wa20S3'] ?>"
-                       value="<?php echo set_value('Q12Wa20S3'); ?>"/>
+			<?php echo (getFiled('Q12Wa20S3', $schoolUserID)!="")?getFiled('Q12Wa20S3', $schoolUserID) : "N/A"; ?>
+               
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa20S4" type="number"
-                       name="Q12Wa20S4" placeholder="<?php if (isset($data['Q12Wa20S4'])) echo $data['Q12Wa20S4'] ?>"
-                       value="<?php echo set_value('Q12Wa20S4'); ?>" readonly/>
+			<?php echo (getFiled('Q12Wa20S4', $schoolUserID)!="")?getFiled('Q12Wa20S4', $schoolUserID) : "N/A"; ?>
+                
             </div>
         </div>
         <div class="form-group row">
@@ -3080,24 +1989,20 @@
                 <label>Fax machines </label>
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa21S1" type="number"
-                       name="Q12Wa21S1" placeholder="<?php if (isset($data['Q12Wa21S1'])) echo $data['Q12Wa21S1'] ?>"
-                       value="<?php echo set_value('Q12Wa21S1'); ?>"/>
+			<?php echo (getFiled('Q12Wa21S1', $schoolUserID)!="")?getFiled('Q12Wa21S1', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa21S2" type="number"
-                       name="Q12Wa21S2" placeholder="<?php if (isset($data['Q12Wa21S2'])) echo $data['Q12Wa21S2'] ?>"
-                       value="<?php echo set_value('Q12Wa21S2'); ?>"/>
+			<?php echo (getFiled('Q12Wa21S2', $schoolUserID)!="")?getFiled('Q12Wa21S2', $schoolUserID) : "N/A"; ?>
+               
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa21S3" type="number"
-                       name="Q12Wa21S3" placeholder="<?php if (isset($data['Q12Wa21S3'])) echo $data['Q12Wa21S3'] ?>"
-                       value="<?php echo set_value('Q12Wa21S3'); ?>"/>
+			<?php echo (getFiled('Q12Wa21S3', $schoolUserID)!="")?getFiled('Q12Wa21S3', $schoolUserID) : "N/A"; ?>
+               
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa21S4" type="number"
-                       name="Q12Wa21S4" placeholder="<?php if (isset($data['Q12Wa21S4'])) echo $data['Q12Wa21S4'] ?>"
-                       value="<?php echo set_value('Q12Wa21S4'); ?>" readonly/>
+			<?php echo (getFiled('Q12Wa21S4', $schoolUserID)!="")?getFiled('Q12Wa21S4', $schoolUserID) : "N/A"; ?>
+                
             </div>
         </div>
         <div class="form-group row">
@@ -3105,24 +2010,20 @@
                 <label>Telex </label>
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa22S1" type="number"
-                       name="Q12Wa22S1" placeholder="<?php if (isset($data['Q12Wa22S1'])) echo $data['Q12Wa22S1'] ?>"
-                       value="<?php echo set_value('Q12Wa22S1'); ?>"/>
+			<?php echo (getFiled('Q12Wa22S1', $schoolUserID)!="")?getFiled('Q12Wa22S1', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa22S2" type="number"
-                       name="Q12Wa22S2" placeholder="<?php if (isset($data['Q12Wa22S2'])) echo $data['Q12Wa22S2'] ?>"
-                       value="<?php echo set_value('Q12Wa22S2'); ?>"/>
+			<?php echo (getFiled('Q12Wa22S2', $schoolUserID)!="")?getFiled('Q12Wa22S2', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa22S3" type="number"
-                       name="Q12Wa22S3" placeholder="<?php if (isset($data['Q12Wa22S3'])) echo $data['Q12Wa22S3'] ?>"
-                       value="<?php echo set_value('Q12Wa22S3'); ?>"/>
+			<?php echo (getFiled('Q12Wa22S3', $schoolUserID)!="")?getFiled('Q12Wa22S3', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa22S4" type="number"
-                       name="Q12Wa22S4" placeholder="<?php if (isset($data['Q12Wa22S4'])) echo $data['Q12Wa22S4'] ?>"
-                       value="<?php echo set_value('Q12Wa22S4'); ?>" readonly/>
+			<?php echo (getFiled('Q12Wa22S4', $schoolUserID)!="")?getFiled('Q12Wa22S4', $schoolUserID) : "N/A"; ?>
+                
             </div>
         </div>
         <div class="form-group row">
@@ -3130,24 +2031,20 @@
                 <label>Telephones </label>
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa23S1" type="number"
-                       name="Q12Wa23S1" placeholder="<?php if (isset($data['Q12Wa23S1'])) echo $data['Q12Wa23S1'] ?>"
-                       value="<?php echo set_value('Q12Wa23S1'); ?>"/>
+			<?php echo (getFiled('Q12Wa23S1', $schoolUserID)!="")?getFiled('Q12Wa23S1', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa23S2" type="number"
-                       name="Q12Wa23S2" placeholder="<?php if (isset($data['Q12Wa23S2'])) echo $data['Q12Wa23S2'] ?>"
-                       value="<?php echo set_value('Q12Wa23S2'); ?>"/>
+			<?php echo (getFiled('Q12Wa23S2', $schoolUserID)!="")?getFiled('Q12Wa23S2', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa23S3" type="number"
-                       name="Q12Wa23S3" placeholder="<?php if (isset($data['Q12Wa23S3'])) echo $data['Q12Wa23S3'] ?>"
-                       value="<?php echo set_value('Q12Wa23S3'); ?>"/>
+			<?php echo (getFiled('Q12Wa23S3', $schoolUserID)!="")?getFiled('Q12Wa23S3', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa23S4" type="number"
-                       name="Q12Wa23S4" placeholder="<?php if (isset($data['Q12Wa23S4'])) echo $data['Q12Wa23S4'] ?>"
-                       value="<?php echo set_value('Q12Wa23S4'); ?>" readonly/>
+			<?php echo (getFiled('Q12Wa23S4', $schoolUserID)!="")?getFiled('Q12Wa23S4', $schoolUserID) : "N/A"; ?>
+                
             </div>
         </div>
         <div class="form-group row">
@@ -3155,49 +2052,41 @@
                 <label>Pay telephones </label>
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa24S1" type="number"
-                       name="Q12Wa24S1" placeholder="<?php if (isset($data['Q12Wa24S1'])) echo $data['Q12Wa24S1'] ?>"
-                       value="<?php echo set_value('Q12Wa24S1'); ?>"/>
+			<?php echo (getFiled('Q12Wa24S1', $schoolUserID)!="")?getFiled('Q12Wa24S1', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa24S2" type="number"
-                       name="Q12Wa24S2" placeholder="<?php if (isset($data['Q12Wa24S2'])) echo $data['Q12Wa24S2'] ?>"
-                       value="<?php echo set_value('Q12Wa24S2'); ?>"/>
+			<?php echo (getFiled('Q12Wa24S2', $schoolUserID)!="")?getFiled('Q12Wa24S2', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa24S3" type="number"
-                       name="Q12Wa24S3" placeholder="<?php if (isset($data['Q12Wa24S3'])) echo $data['Q12Wa24S3'] ?>"
-                       value="<?php echo set_value('Q12Wa24S3'); ?>"/>
+			<?php echo (getFiled('Q12Wa24S3', $schoolUserID)!="")?getFiled('Q12Wa24S3', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa24S4" type="number"
-                       name="Q12Wa24S4" placeholder="<?php if (isset($data['Q12Wa24S4'])) echo $data['Q12Wa24S4'] ?>"
-                       value="<?php echo set_value('Q12Wa24S4'); ?>" readonly/>
-            </div>
+			<?php echo (getFiled('Q12Wa24S4', $schoolUserID)!="")?getFiled('Q12Wa24S4', $schoolUserID) : "N/A"; ?>
+                
         </div>
+		</div>
         <div class="form-group row">
             <div class="col-xs-4">
                 <label>Mobiles </label>
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa25S1" type="number"
-                       name="Q12Wa25S1" placeholder="<?php if (isset($data['Q12Wa25S1'])) echo $data['Q12Wa25S1'] ?>"
-                       value="<?php echo set_value('Q12Wa25S1'); ?>"/>
+			<?php echo (getFiled('Q12Wa25S1', $schoolUserID)!="")?getFiled('Q12Wa25S1', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa25S2" type="number"
-                       name="Q12Wa25S2" placeholder="<?php if (isset($data['Q12Wa25S2'])) echo $data['Q12Wa25S2'] ?>"
-                       value="<?php echo set_value('Q12Wa25S2'); ?>"/>
+			<?php echo (getFiled('Q12Wa25S2', $schoolUserID)!="")?getFiled('Q12Wa25S2', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa25S3" type="number"
-                       name="Q12Wa25S3" placeholder="<?php if (isset($data['Q12Wa25S3'])) echo $data['Q12Wa25S3'] ?>"
-                       value="<?php echo set_value('Q12Wa25S3'); ?>"/>
+			<?php echo (getFiled('Q12Wa25S3', $schoolUserID)!="")?getFiled('Q12Wa25S3', $schoolUserID) : "N/A"; ?>
+               
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa25S4" type="number"
-                       name="Q12Wa25S4" placeholder="<?php if (isset($data['Q12Wa25S4'])) echo $data['Q12Wa25S4'] ?>"
-                       value="<?php echo set_value('Q12Wa25S4'); ?>" readonly/>
+			<?php echo (getFiled('Q12Wa25S4', $schoolUserID)!="")?getFiled('Q12Wa25S4', $schoolUserID) : "N/A"; ?>
+                
             </div>
         </div>
         <div class="form-group row">
@@ -3205,24 +2094,20 @@
                 <label>Answering systems </label>
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa26S1" type="number"
-                       name="Q12Wa26S1" placeholder="<?php if (isset($data['Q12Wa26S1'])) echo $data['Q12Wa26S1'] ?>"
-                       value="<?php echo set_value('Q12Wa26S1'); ?>"/>
+			<?php echo (getFiled('Q12Wa26S1', $schoolUserID)!="")?getFiled('Q12Wa26S1', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa26S2" type="number"
-                       name="Q12Wa26S2" placeholder="<?php if (isset($data['Q12Wa26S2'])) echo $data['Q12Wa26S2'] ?>"
-                       value="<?php echo set_value('Q12Wa26S2'); ?>"/>
+			<?php echo (getFiled('Q12Wa26S2', $schoolUserID)!="")?getFiled('Q12Wa26S2', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa26S3" type="number"
-                       name="Q12Wa26S3" placeholder="<?php if (isset($data['Q12Wa26S3'])) echo $data['Q12Wa26S3'] ?>"
-                       value="<?php echo set_value('Q12Wa26S3'); ?>"/>
+			<?php echo (getFiled('Q12Wa26S3', $schoolUserID)!="")?getFiled('Q12Wa26S3', $schoolUserID) : "N/A"; ?>
+               
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa26S4" type="number"
-                       name="Q12Wa26S4" placeholder="<?php if (isset($data['Q12Wa26S4'])) echo $data['Q12Wa26S4'] ?>"
-                       value="<?php echo set_value('Q12Wa26S4'); ?>" readonly/>
+			<?php echo (getFiled('Q12Wa26S4', $schoolUserID)!="")?getFiled('Q12Wa26S4', $schoolUserID) : "N/A"; ?>
+               
             </div>
         </div>
         <div class="form-group row">
@@ -3230,24 +2115,20 @@
                 <label>Induction cookers </label>
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa27S1" type="number"
-                       name="Q12Wa27S1" placeholder="<?php if (isset($data['Q12Wa27S1'])) echo $data['Q12Wa27S1'] ?>"
-                       value="<?php echo set_value('Q12Wa27S1'); ?>"/>
+			<?php echo (getFiled('Q12Wa27S1', $schoolUserID)!="")?getFiled('Q12Wa27S1', $schoolUserID) : "N/A"; ?>
+               
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa27S2" type="number"
-                       name="Q12Wa27S2" placeholder="<?php if (isset($data['Q12Wa27S2'])) echo $data['Q12Wa27S2'] ?>"
-                       value="<?php echo set_value('Q12Wa27S2'); ?>"/>
+			<?php echo (getFiled('Q12Wa27S2', $schoolUserID)!="")?getFiled('Q12Wa27S2', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa27S3" type="number"
-                       name="Q12Wa27S3" placeholder="<?php if (isset($data['Q12Wa27S3'])) echo $data['Q12Wa27S3'] ?>"
-                       value="<?php echo set_value('Q12Wa27S3'); ?>"/>
+			<?php echo (getFiled('Q12Wa27S3', $schoolUserID)!="")?getFiled('Q12Wa27S3', $schoolUserID) : "N/A"; ?>
+               
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa27S4" type="number"
-                       name="Q12Wa27S4" placeholder="<?php if (isset($data['Q12Wa27S4'])) echo $data['Q12Wa27S4'] ?>"
-                       value="<?php echo set_value('Q12Wa27S4'); ?>" readonly/>
+			<?php echo (getFiled('Q12Wa27S4', $schoolUserID)!="")?getFiled('Q12Wa27S4', $schoolUserID) : "N/A"; ?>
+                
             </div>
         </div>
         <div class="form-group row">
@@ -3255,24 +2136,20 @@
                 <label>Geysers/water heaters </label>
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa28S1" type="number"
-                       name="Q12Wa28S1" placeholder="<?php if (isset($data['Q12Wa28S1'])) echo $data['Q12Wa28S1'] ?>"
-                       value="<?php echo set_value('Q12Wa28S1'); ?>"/>
+			<?php echo (getFiled('Q12Wa28S1', $schoolUserID)!="")?getFiled('Q12Wa28S1', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa28S2" type="number"
-                       name="Q12Wa28S2" placeholder="<?php if (isset($data['Q12Wa28S2'])) echo $data['Q12Wa28S2'] ?>"
-                       value="<?php echo set_value('Q12Wa28S2'); ?>"/>
+			<?php echo (getFiled('Q12Wa28S2', $schoolUserID)!="")?getFiled('Q12Wa28S2', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa28S3" type="number"
-                       name="Q12Wa28S3" placeholder="<?php if (isset($data['Q12Wa28S3'])) echo $data['Q12Wa28S3'] ?>"
-                       value="<?php echo set_value('Q12Wa28S3'); ?>"/>
+			<?php echo (getFiled('Q12Wa28S3', $schoolUserID)!="")?getFiled('Q12Wa28S3', $schoolUserID) : "N/A"; ?>
+                
             </div>
             <div class="col-xs-2">
-                <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa28S4" type="number"
-                       name="Q12Wa28S4" placeholder="<?php if (isset($data['Q12Wa28S4'])) echo $data['Q12Wa28S4'] ?>"
-                       value="<?php echo set_value('Q12Wa28S4'); ?>" readonly/>
+			<?php echo (getFiled('Q12Wa28S4', $schoolUserID)!="")?getFiled('Q12Wa28S4', $schoolUserID) : "N/A"; ?>
+                
             </div>
         </div>
         <br>
@@ -3282,62 +2159,52 @@
             • Pictures of Electronic items used by school and storage of non-working electronic items<br>
             • Certificate of disposing e-waste from authorized dealer/dismantler<br>
             <br>
-            <button class="btn uploadbtn upload" data-id="E-Waste" data-toggle="modal" data-target="#airModal"
-                    type="button">UPLOAD FILES
+            <button class="btn uploadbtn upload" data-id="E-Waste" data-toggle="modal" data-target="#airModal" type="button">UPLOAD FILES
             </button>
             <br>
             <br>
         </div>
+        <div class="clearfix">&nbsp;</div>
+        <table width="100%" class="question uploadedfiles">
+            <thead>
+            <tr>
+                <th>File name</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+                        </tbody>
+        </table>
+        <div class="clearfix">&nbsp;</div>
         <div class="form-group">
             <label class="control-label"><span class="cube">9</span>Do you know that your e-waste can be collected by an
                 authorized dealer or dismantler? </label>
             <div class="form-group">
-                <label class="radio-inline text-gray">
-                    <input type="radio" name="Q13Wa1" onClick="WasteDealer (1)" class="radio" id="Q13Wa1"
-                           value="<?php echo set_value('Q13Wa1', 'Y') ?>" <?php if (isset($data['Q13Wa1'])) echo $data['Q13Wa1'] == 'Y' ? "checked" : "" ?>>
-                    Yes </label>
-                <label class="radio-inline text-gray">
-                    <input type="radio" name="Q13Wa1" onClick="WasteDealer(2)" class="radio" id="Q13Wa1"
-                           value="<?php echo set_value('Q13Wa1', 'N') ?>" <?php if (isset($data['Q13Wa1'])) echo $data['Q13Wa1'] == 'N' ? "checked" : "" ?>>
-                    No </label>
+			<p> <?php echo (getFiled('Q13Wa1', $schoolUserID)!="")? (getFiled('Q13Wa1', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+                
             </div>
         </div>
-        <?php
-        if (isset($data['Q13Wa1']))
-            if ($data['Q13Wa1'] == 'Y') {
-                ?>
-                <div class="form-group" id="Q13Wa2">
-                    <label class="control-label"><span class="cube">9(a)</span>Who collects your e-waste, when not in
-                        working condition?</label>
-                    <div class="radio">
-                        <label>
-                            <input type="radio" name="Q13Wa2"
-                                   value="<?php echo set_value('Q13Wa2', 1) ?>" <?php if (isset($data['Q13Wa2'])) echo $data['Q13Wa2'] == 1 ? "checked" : "" ?>>
-                            Kabadiwalla/ Scrapdealer </label>
-                    </div>
-                    <div class="radio">
-                        <label>
-                            <input type="radio" name="Q13Wa2"
-                                   value="<?php echo set_value('Q13Wa2', 2) ?>" <?php if (isset($data['Q13Wa2'])) echo $data['Q13Wa2'] == 2 ? "checked" : "" ?>>
-                            Taken back by manufacturer/vendor </label>
-                    </div>
-                    <div class="radio">
-                        <label>
-                            <input type="radio" name="Q13Wa2"
-                                   value="<?php echo set_value('Q13Wa2', 3) ?>" <?php if (isset($data['Q13Wa2'])) echo $data['Q13Wa2'] == 3 ? "checked" : "" ?>>
-                            Authorised dealer </label>
-                    </div>
-                    <div class="radio">
-                        <label>
-                            <input type="radio" name="Q13Wa2"
-                                   value="<?php echo set_value('Q13Wa2', 4) ?>" <?php if (isset($data['Q13Wa2'])) echo $data['Q13Wa2'] == 4 ? "checked" : "" ?>>
-                            Authorised dismantler </label>
-                    </div>
+        
+
+                 <div class="form-group" id="Q13Wa21">
+                                        
+                    <label class="control-label"><span class="cube">9(a)</span>Who collects your e-waste, when not in working condition?</label><br/>
+					<?php 
+							  if(getFiled('Q13Wa2', $schoolUserID)==1):
+								 echo "Kabadiwalla/ Scrapdealer";
+								 elseif(getFiled('Q13Wa2', $schoolUserID)==2):
+								 echo "Taken back by manufacturer/vendor";
+								 elseif(getFiled('Q13Wa2', $schoolUserID)==3):
+								 echo " Authorised dealer";
+								 elseif(getFiled('Q13Wa2', $schoolUserID)==4):
+								 echo " Authorised dismantler";
+								 
+								 endif;
+?>
+                    
                     <div class="form-group row">
-                        <label>Other: &nbsp
-                            <input type="text" name="Q13Wa2" value="<?php echo set_value('Q13Wa2'); ?>"
-                                   placeholder="<?php if (isset($data['Q13Wa2'])) echo $data['Q13Wa2'] ?>">
-                        </label>
+                        <label>Other: &nbsp;</label>
+						<?php echo (getFiled('Q13Wa2O', $schoolUserID)!="")?getFiled('Q13Wa2O', $schoolUserID) : "N/A"; ?>
                     </div>
                 </div>
                 <div class="form-group">
@@ -3345,51 +2212,14 @@
                     <br>
                     • Certificate of disposing e-waste from authorised dealer/dismantler<br>
                     <br>
-                    <button class="btn uploadbtn upload" data-id="E-waste authorised dealer" data-toggle="modal"
-                            data-target="#airModal" type="button">UPLOAD FILES
+                    <button class="btn uploadbtn upload" data-id="E-waste authorised dealer" data-toggle="modal" data-target="#airModal" type="button">UPLOAD FILES
                     </button>
                     <br>
                     <br>
                 </div>
 
                 <br>
-                <?php
-            }
-        ?>
-        <div class="form-group" id="Q13Wa2" style="display: none;">
-            <label class="control-label"><span class="cube">9(a)</span>Who collects your e-waste, when not in working
-                condition?</label>
-            <div class="radio">
-                <label>
-                    <input type="radio" name="Q13Wa2"
-                           value="<?php echo set_value('Q13Wa2', 1) ?>" <?php if (isset($data['Q13Wa2'])) echo $data['Q13Wa2'] == 1 ? "checked" : "" ?>>
-                    Kabadiwalla/ Scrapdealer </label>
-            </div>
-            <div class="radio">
-                <label>
-                    <input type="radio" name="Q13Wa2"
-                           value="<?php echo set_value('Q13Wa2', 2) ?>" <?php if (isset($data['Q13Wa2'])) echo $data['Q13Wa2'] == 2 ? "checked" : "" ?>>
-                    Taken back by manufacturer/vendor </label>
-            </div>
-            <div class="radio">
-                <label>
-                    <input type="radio" name="Q13Wa2"
-                           value="<?php echo set_value('Q13Wa2', 3) ?>" <?php if (isset($data['Q13Wa2'])) echo $data['Q13Wa2'] == 3 ? "checked" : "" ?>>
-                    Authorised dealer </label>
-            </div>
-            <div class="radio">
-                <label>
-                    <input type="radio" name="Q13Wa2"
-                           value="<?php echo set_value('Q13Wa2', 4) ?>" <?php if (isset($data['Q13Wa2'])) echo $data['Q13Wa2'] == 4 ? "checked" : "" ?>>
-                    Authorised dismantler </label>
-            </div>
-            <div class="form-group row">
-                <label>Other: &nbsp
-                    <input type="text" name="Q13Wa2" value="<?php echo set_value('Q13Wa2'); ?>"
-                           placeholder="<?php if (isset($data['Q13Wa2'])) echo $data['Q13Wa2'] ?>">
-                </label>
-            </div>
-        </div>
+         
         <br>
         <div class="form-group">
             <label>
@@ -3400,33 +2230,21 @@
         <br>
         <div class="form-group">
             <label class="control-label"><span class="cube">10</span>What is the final destination for waste from your
-                school that is disposed of externally? <a class="kplink"
-                                                          href="http://www.greenschoolsprogramme.org/knowledge-bank/waste/#landfillingPractices"
-                                                          target="_blank"> </a></label>
-            <div class="radio">
-                <label>
-                    <input type="radio" name="Q14Wa1"
-                           value="<?php echo set_value('Q14Wa1', 1) ?>" <?php if (isset($data['Q14Wa1'])) echo $data['Q14Wa1'] == 1 ? "checked" : "" ?>>
-                    Open dumping </label>
-            </div>
-            <div class="radio">
-                <label>
-                    <input type="radio" name="Q14Wa1"
-                           value="<?php echo set_value('Q14Wa1', 2) ?>" <?php if (isset($data['Q14Wa1'])) echo $data['Q14Wa1'] == 2 ? "checked" : "" ?>>
-                    Designated dumping site (Dhalao) </label>
-            </div>
-            <div class="radio">
-                <label>
-                    <input type="radio" name="Q14Wa1"
-                           value="<?php echo set_value('Q14Wa1', 3) ?>" <?php if (isset($data['Q14Wa1'])) echo $data['Q14Wa1'] == 3 ? "checked" : "" ?>>
-                    Landfill Site </label>
-            </div>
-            <div class="radio">
-                <label>
-                    <input type="radio" name="Q14Wa1"
-                           value="<?php echo set_value('Q14Wa1', 4) ?>" <?php if (isset($data['Q14Wa1'])) echo $data['Q14Wa1'] == 4 ? "checked" : "" ?>>
-                    Don’t know </label>
-            </div>
+                school that is disposed of externally? </label>
+				<br/>
+					<?php 
+							  if(getFiled('Q14Wa1', $schoolUserID)==1):
+								 echo "Open dumping";
+								 elseif(getFiled('Q14Wa1', $schoolUserID)==2):
+								 echo "Designated dumping site (Dhalao)";
+								 elseif(getFiled('Q14Wa1', $schoolUserID)==3):
+								 echo " Landfill Site";
+								 elseif(getFiled('Q14Wa1', $schoolUserID)==4):
+								 echo "Don’t know";
+								 
+								 endif;
+?>
+            
         </div>
         <br>
         <br>
@@ -3435,23 +2253,28 @@
             <br>
             • Pictures of housekeeping staff disposing different types of solid waste<br>
             <br>
-            <button class="btn uploadbtn upload" data-id="Buring Waste" data-toggle="modal" data-target="#airModal"
-                    type="button">UPLOAD FILES
+            <button class="btn uploadbtn upload" data-id="Housekeeping" data-toggle="modal" data-target="#airModal" type="button">UPLOAD FILES
             </button>
             <br>
             <br>
         </div>
+        <div class="clearfix">&nbsp;</div>
+        <table width="100%" class="question uploadedfiles">
+            <thead>
+            <tr>
+                <th>File name</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+                        </tbody>
+        </table>
+        <div class="clearfix">&nbsp;</div>
         <div class="form-group">
             <label class="control-label"><span class="cube">11</span>Does your school burn waste? </label>
             <div class="form-group">
-                <label class="radio-inline text-gray">
-                    <input type="radio" name="Q15Wa1" onClick="WasteBurn(1)" class="radio" id="Q15Wa1"
-                           value="<?php echo set_value('Q15Wa1', 'Y') ?>" <?php if (isset($data['Q15Wa1'])) echo $data['Q15Wa1'] == 'Y' ? "checked" : "" ?>>
-                    Yes </label>
-                <label class="radio-inline text-gray">
-                    <input type="radio" name="Q15Wa1" onClick="WasteBurn(2)" class="radio" id="Q15Wa1"
-                           value="<?php echo set_value('Q15Wa1', 'N') ?>" <?php if (isset($data['Q15Wa1'])) echo $data['Q15Wa1'] == 'N' ? "checked" : "" ?>>
-                    No </label>
+			<p> <?php echo (getFiled('Q15Wa1', $schoolUserID)!="")? (getFiled('Q15Wa1', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+                
             </div>
         </div>
         <br>
@@ -3460,138 +2283,78 @@
             <br>
             • Pictures of burning waste<br>
             <br>
-            <button class="btn uploadbtn upload" data-id="Buring Waste" data-toggle="modal" data-target="#airModal"
-                    type="button">UPLOAD FILES
+            <button class="btn uploadbtn upload" data-id="Buring Waste" data-toggle="modal" data-target="#airModal" type="button">UPLOAD FILES
             </button>
             <br>
             <br>
         </div>
-        <?php
-        if (isset($data['Q15Wa1']))
-            if ($data['Q15Wa1']) {
-                ?>
-                <div class="form-group" id="Q15Wa2">
-                    <label class="control-label"><span class="cube">11(a)</span>Where does your school burn
+        <table width="100%" class="question uploadedfiles">
+            <thead>
+            <tr>
+                <th>File name</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+                        </tbody>
+        </table>
+                      <div class="form-group" id="Q15Wa2">
+                        <label class="control-label"><span class="cube">11(a)</span>Where does your school burn
                         waste?</label>
                     <div class="form-group">
-                        <ul>
-                            <li>
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" name="Q15Wa2" class="radio" id="Q15Wa2"
-                                           value="<?php echo set_value('Q15Wa2', 1) ?>" <?php if (isset($data['Q15Wa2'])) echo $data['Q15Wa2'] == 1 ? "checked" : "" ?>>
-                                    Inside the school </label>
-                            </li>
-                            <li>
-                                <label class="radio-inline text-gray">
-                                    <input type="radio" name="Q15Wa2" class="radio" id="Q15Wa2"
-                                           value="<?php echo set_value('Q15Wa2', 2) ?>" <?php if (isset($data['Q15Wa2'])) echo $data['Q15Wa2'] == 2 ? "checked" : "" ?>>
-                                    Outside the school </label>
-                            </li>
-                        </ul>
+					<?php 
+							  if(getFiled('Q15Wa2', $schoolUserID)==1):
+								 echo "Inside the school";
+								 elseif(getFiled('Q15Wa2', $schoolUserID)==2):
+								 echo "Outside the school";
+								 
+								 endif;
+?>
+                        
                     </div>
                 </div>
                 <div class="clearfix">&nbsp;</div>
-                <div class="form-group" id="Q15Wa3">
+        
+                      <div class="form-group" id="Q15Wa3">
+                  
                     <label class="control-label"><span class="cube">11(b)</span>What kind of waste is burnt/
-                        incinerated?</label>
+                        incinerated?</label><br/>
                     <div class="form-group">
-                        <ul>
-                            <li>
-                                <label class="radio-inline text-gray">
-                                    <input type="checkbox" name="Q15Wa2S1"
-                                           value="<?php echo set_value('Q15Wa2S1', 1); ?>" <?php if (isset($data['Q15Wa2S1'])) echo "checked" ?>>
-                                    Horticultural </label>
-                            </li>
-                            <li>
-                                <label class="radio-inline text-gray">
-                                    <input type="checkbox" name="Q15Wa2S2"
-                                           value="<?php echo set_value('Q15Wa2S2', 1); ?>" <?php if (isset($data['Q15Wa2S2'])) echo "checked" ?>>
-                                    Plastic </label>
-                            </li>
-                            <li>
-                                <label class="radio-inline text-gray">
-                                    <input type="checkbox" name="Q15Wa2S3"
-                                           value="<?php echo set_value('Q15Wa2S3', 1); ?>" <?php if (isset($data['Q15Wa2S3'])) echo "checked" ?>>
-                                    Tyres </label>
-                            </li>
-                            <li>
-                                <label class="radio-inline text-gray">
-                                    <input type="checkbox" name="Q15Wa2S4"
-                                           value="<?php echo set_value('Q15Wa2S4', 1); ?>" <?php if (isset($data['Q15Wa2S4'])) echo "checked" ?>>
-                                    Paper </label>
-                            </li>
-                        </ul>
+					
+<?php 
+							 if(getFiled('Q15Wa2S1', $schoolUserID)==1):
+							 echo " Horticultural";
+							 echo "<br/>";
+							 endif;  
+							 if(getFiled('Q15Wa2S2', $schoolUserID)==1):
+							 echo "Plastic";
+							 echo "<br/>" ;
+							 endif; 
+							 if(getFiled('Q15Wa2S3', $schoolUserID)==1):
+							 echo "Tyres";
+							 echo "<br/>" ;
+							 endif; 
+							 if(getFiled('Q15Wa2S4', $schoolUserID)==1):
+							 echo " Paper";
+							 echo "<br/>" ;
+							 endif;
+							 
+?>     
                     </div>
                 </div>
                 <div class="clearfix">&nbsp;</div>
-                <?php
-            }
-        ?>
-        <div class="form-group" id="Q15Wa2" style="display: none;">
-            <label class="control-label"><span class="cube">11(a)</span>Does your school burn waste? </label>
-            <div class="form-group">
-                <ul>
-                    <li>
-                        <label class="radio-inline text-gray">
-                            <input type="radio" name="Q15Wa2" class="radio" id="Q15Wa2"
-                                   value="<?php echo set_value('Q15Wa2', 1) ?>" <?php if (isset($data['Q15Wa2'])) echo $data['Q15Wa2'] == 1 ? "checked" : "" ?>>
-                            Inside the school </label>
-                    </li>
-                    <li>
-                        <label class="radio-inline text-gray">
-                            <input type="radio" name="Q15Wa2" class="radio" id="Q15Wa2"
-                                   value="<?php echo set_value('Q15Wa2', 2) ?>" <?php if (isset($data['Q15Wa2'])) echo $data['Q15Wa2'] == 2 ? "checked" : "" ?>>
-                            Outside the school </label>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="form-group" id="Q15Wa3" style="display: none;">
-            <label class="control-label"><span class="cube">11(b)</span>Does your school burn waste? </label>
-            <div class="form-group">
-                <ul>
-                    <li>
-                        <label class="radio-inline text-gray">
-                            <input type="checkbox" name="Q15Wa2S1"
-                                   value="<?php echo set_value('Q15Wa2S1', 1); ?>" <?php if (isset($data['Q15Wa2S1'])) echo "checked" ?>>
-                            Horticultural </label>
-                    </li>
-                    <li>
-                        <label class="radio-inline text-gray">
-                            <input type="checkbox" name="Q15Wa2S2"
-                                   value="<?php echo set_value('Q15Wa2S2', 1); ?>" <?php if (isset($data['Q15Wa2S2'])) echo "checked" ?>>
-                            Plastic </label>
-                    </li>
-                    <li>
-                        <label class="radio-inline text-gray">
-                            <input type="checkbox" name="Q15Wa2S3"
-                                   value="<?php echo set_value('Q15Wa2S3', 1); ?>" <?php if (isset($data['Q15Wa2S3'])) echo "checked" ?>>
-                            Tyres </label>
-                    </li>
-                    <li>
-                        <label class="radio-inline text-gray">
-                            <input type="checkbox" name="Q15Wa2S4"
-                                   value="<?php echo set_value('Q15Wa2S4', 1); ?>" <?php if (isset($data['Q15Wa2S4'])) echo "checked" ?>>
-                            Paper </label>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!---<div class="form-group">
+       
+        <div class="form-group">
   <label class="control-label"><span class="cube">12</span>Do you know that your E-waste can be collected by an authorised dealer or dismantler? </label>
   <div class="form-group">
-    <label class="radio-inline text-gray">
-    <input type="radio" name="Q16Wa1" class="radio" id="Q16Wa1" value="<?php echo set_value('Q16Wa1', 'Y') ?>" <?php if (isset($data['Q16Wa1'])) echo $data['Q16Wa1'] == 'Y' ? "checked" : "" ?>>
-    Yes </label>
-    <label class="radio-inline text-gray">
-    <input type="radio" name="Q16Wa1"class="radio" id="Q16Wa1" value="<?php echo set_value('Q16Wa1', 'N') ?>" <?php if (isset($data['Q16Wa1'])) echo $data['Q16Wa1'] == 'N' ? "checked" : "" ?>>
-    No </label>
+  <p> <?php echo (getFiled('Q16Wa1', $schoolUserID)!="")? (getFiled('Q16Wa1', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+    
   </div>
-</div>-->
+</div>
         <br>
         <div class="form-group">
             <label>
-                <h6>Task 6: Choose your Waste Audit Team.</h6>
+                <h6>Task 6: School's initiatives.</h6>
             </label>
             <br>
             It is important to appreciate the initiatives taken by the management on issues related to waste. The
@@ -3603,163 +2366,79 @@
         <div class="form-group">
             <label class="control-label"><span class="cube">13</span>Does the school have a policy on waste?</label>
             <div class="form-group">
-                <label class="radio-inline text-gray">
-                    <input type="radio" name="Q17Wa1" class="radio" onClick="WastePolicy(1)" id="Q17Wa1"
-                           value="<?php echo set_value('Q17Wa1', 'Y') ?>" <?php if (isset($data['Q17Wa1'])) echo $data['Q17Wa1'] == 'Y' ? "checked" : "" ?>>
-                    Yes </label>
-                <label class="radio-inline text-gray">
-                    <input type="radio" name="Q17Wa1" class="radio" onClick="WastePolicy(2)" id="Q17Wa1"
-                           value="<?php echo set_value('Q17Wa1', 'N') ?>" <?php if (isset($data['Q17Wa1'])) echo $data['Q17Wa1'] == 'N' ? "checked" : "" ?>>
-                    No </label>
+			<p> <?php echo (getFiled('Q17Wa1', $schoolUserID)!="")? (getFiled('Q17Wa1', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+               
             </div>
         </div>
         <br>
-        <?php if (isset($data['Q17Wa1']))
-            if ($data['Q17Wa1'] == 'Y') {
-                ?>
-                <br>
+                        <br>
                 <div class="form-group" id="WastePolicy">
                     <label class="control-label">Please upload supporting documents:</label>
                     <br>
                     • Waste Policy<br>
                     <br>
-                    <button class="btn uploadbtn upload" data-id="Waste Policy" data-toggle="modal"
-                            data-target="#airModal" type="button">UPLOAD FILES
+                    <button class="btn uploadbtn upload" data-id="Waste Policy" data-toggle="modal" data-target="#airModal" type="button">UPLOAD FILES
                     </button>
                     <br>
                     <br>
                 </div>
-                <?php
-            } ?>
-        <br>
-        <div class="form-group" id="WastePolicy" style="display: none;">
+                        <br>
+        <div class="form-group" id="WastePolicy" >
             <label class="control-label">Please upload supporting documents:</label>
             <br>
             • Waste Policy<br>
             <br>
-            <button class="btn uploadbtn upload" data-id="Water Policy" data-toggle="modal" data-target="#airModal"
-                    type="button">UPLOAD FILES
+            <button class="btn uploadbtn upload" data-id="Water Policy" data-toggle="modal" data-target="#airModal" type="button">UPLOAD FILES
             </button>
             <br>
         </div>
         <div class="form-group">
             <label class="control-label"><span class="cube">14</span>Are there awareness drives with regard to Reduce,
-                Recycle and Reuse? <a class="kplink"
-                                      href="http://www.greenschoolsprogramme.org/knowledge-bank/waste/#partnerInOperation"
-                                      target="_blank"></a></label>
+                Recycle and Reuse? <a class="kplink" href="http://www.greenschoolsprogramme.org/knowledge-bank/waste/#partnerInOperation" target="_blank"></a></label>
             <div class="form-group">
-                <label class="radio-inline text-gray">
-                    <input type="radio" name="Q18Wa1" class="radio" onClick="WasteAwareness(1)" id="Q18Wa1"
-                           value="<?php echo set_value('Q18Wa1', 'Y') ?>" <?php if (isset($data['Q18Wa1'])) echo $data['Q18Wa1'] == 'Y' ? "checked" : "" ?>>
-                    Yes </label>
-                <label class="radio-inline text-gray">
-                    <input type="radio" name="Q18Wa1" class="radio" onClick="WasteAwareness(2)" id="Q18Wa1"
-                           value="<?php echo set_value('Q18Wa1', 'N') ?>" <?php if (isset($data['Q18Wa1'])) echo $data['Q18Wa1'] == 'N' ? "checked" : "" ?>>
-                    No </label>
+			<p> <?php echo (getFiled('Q18Wa1', $schoolUserID)!="")? (getFiled('Q18Wa1', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+                
             </div>
         </div>
         <br>
-        <?php if (isset($data['Q18Wa1']))
-            if ($data['Q18Wa1'] == 'Y') {
-                ?>
+        
+                          <div class="form-group" id="awareness">
+                                 
+
                 <br>
-                <div class="form-group" id="awareness">
                     <label class="control-label">Please upload supporting documents:</label>
                     <br>
                     • Pictures of various school initiatives e.g. rally, debate, street play, art competition, etc<br>
                     <br>
-                    <button class="btn uploadbtn upload" data-id="School Initiatives" data-toggle="modal"
-                            data-target="#airModal" type="button">UPLOAD FILES
+                    <button class="btn uploadbtn upload" data-id="School Initiatives" data-toggle="modal" data-target="#airModal" type="button">UPLOAD FILES
                     </button>
                     <br>
                     <br>
                 </div>
-                <div class="form-group" id="Q18Wa3">
+
+                          <div class="form-group" id="Q18Wa3">
+                                 
                     <label class="control-label"><span class="cube">14(a)</span>What form do these awareness drives
                         take? </label>
-                    <ul>
-                        <li>
-                            <div class="form-group">
-                                <label class="radio text-gray">
-                                    <input type="checkbox" name="Q18Wa2S1"
-                                           value="<?php echo set_value('Q18Wa2S1', 1); ?>" <?php if (isset($data['Q18Wa2S1'])) echo "checked" ?>>
-                                    As part of the curriculum </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="form-group">
-                                <label class="radio text-gray">
-                                    <input type="checkbox" name="Q18Wa2S2"
-                                           value="<?php echo set_value('Q18Wa2S2', 2); ?>" <?php if (isset($data['Q18Wa2S2'])) echo "checked" ?>>
-                                    As part of extracurricular activities such as guest lectures </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="form-group">
-                                <label class="radio text-gray">
-                                    <input type="checkbox" name="Q18Wa2S3"
-                                           value="<?php echo set_value('Q18Wa2S3', 3); ?>" <?php if (isset($data['Q18Wa2S3'])) echo "checked" ?>>
-                                    By the showcasing of posters and stickers </label>
-                            </div>
-                        </li>
-                    </ul>
+						<?php 
+							  if(getFiled('Q18Wa2S1', $schoolUserID)==1):
+								 echo "As part of the curriculum";
+								 elseif(getFiled('Q18Wa2S2', $schoolUserID)==2):
+								 echo " As part of extracurricular activities such as guest lectures ";
+								 elseif(getFiled('Q18Wa2S3', $schoolUserID)==3):
+								 echo " By the showcasing of posters and stickers  ";
+								
+								 
+								 endif;
+?>
+                   
                 </div>
-                <?php
-            } ?>
-        <div class="form-group" id="awareness" style="display: none;">
-            <label class="control-label">Please upload supporting documents:</label>
-            <br>
-            • Waste Policy<br>
-            <br>
-            <button class="btn uploadbtn upload" data-id="Waste Policy" data-toggle="modal" data-target="#airModal"
-                    type="button">UPLOAD FILES
-            </button>
-            <br>
-        </div>
-        <div class="form-group" id="Q18Wa3" style="display: none;">
-            <label class="control-label"><span class="cube">14(a)</span>What form do these awareness drives take?
-            </label>
-            <div class="form-group">
-                <ul>
-                    <li>
-                        <div class="form-group">
-                            <label class="radio text-gray">
-                                <input type="checkbox" name="Q18Wa2S1"
-                                       value="<?php echo set_value('Q18Wa2S1', 1); ?>" <?php if (isset($data['Q18Wa2S1'])) echo "checked" ?>>
-                                As part of the curriculum </label>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="form-group">
-                            <label class="radio text-gray">
-                                <input type="checkbox" name="Q18Wa2S2"
-                                       value="<?php echo set_value('Q18Wa2S2', 2); ?>" <?php if (isset($data['Q18Wa2S2'])) echo "checked" ?>>
-                                As part of extracurricular activities such as guest lectures </label>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="form-group">
-                            <label class="radio text-gray">
-                                <input type="checkbox" name="Q18Wa2S3"
-                                       value="<?php echo set_value('Q18Wa2S3', 3); ?>" <?php if (isset($data['Q18Wa2S3'])) echo "checked" ?>>
-                                By the showcasing of posters and stickers </label>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
         <div class="form-group">
             <label class="control-label"><span class="cube">15</span>Is the study of the environment integrated into the
                 curriculum?</label>
             <div class="form-group">
-                <label class="radio-inline text-gray">
-                    <input type="radio" name="Q19Wa1" class="radio" onClick="WasteWwareness(1)" id="Q19Wa1"
-                           value="<?php echo set_value('Q19Wa1', 'Y') ?>" <?php if (isset($data['Q19Wa1'])) echo $data['Q19Wa1'] == 'Y' ? "checked" : "" ?>>
-                    Yes </label>
-                <label class="radio-inline text-gray">
-                    <input type="radio" name="Q19Wa1" class="radio" onClick="WasteWwareness(2)" id="Q19Wa1"
-                           value="<?php echo set_value('Q19Wa1', 'N') ?>" <?php if (isset($data['Q19Wa1'])) echo $data['Q19Wa1'] == 'N' ? "checked" : "" ?>>
-                    No </label>
+			<p> <?php echo (getFiled('Q19Wa1', $schoolUserID)!="")? (getFiled('Q19Wa1', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+                
             </div>
         </div>
         <br>
@@ -3771,19 +2450,27 @@
             following formats: PDF Document (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg) <br>
             File size per document should not exceed 500 KB.<br>
             <br>
-            <button class="btn uploadbtn upload" data-id="Audit Team Doing Survey Waste" data-toggle="modal"
-                    data-target="#airModal" type="button">UPLOAD FILES
+            <button class="btn uploadbtn upload" data-id="Audit Team Doing Survey Waste" data-toggle="modal" data-target="#airModal" type="button">UPLOAD FILES
             </button>
             <br>
         </div>
+        <table width="100%" class="question uploadedfiles">
+            <thead>
+            <tr>
+                <th>File name</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+                        </tbody>
+        </table>
         <div class="text-center">
             <button type="button" class="org-btn" id="btnWastePrevious">Previous</button>
             <button type="submit" class="org-btn" id="wastenext" value="movenext">Next</button>
-            <button type="button" class="org-btn" class="submit button" id="wastesave">Save and Resume Later</button>
+            <button type="button" class="org-btn" id="wastesave">Save and Resume Later</button>
         </div>
     </div>
 </div>
-<?php echo form_close(); ?>
 <style type="text/css">
     .text-gray {
         color: #666666 !important;
@@ -3791,17 +2478,200 @@
     }
 </style>
 <!-- /.container -->
-<?php $this->load->view('footer'); ?>
+<style type="text/css">
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+}
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px;
+}
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 35px;
+}
+#copyright{ color:#FFFFFF; font-size:10px; padding:6px 0px 6px 0px;}
+</style>
+<a class="" onclick="topFunction()" id="myBtn" data-original-title="" title="" style="display: inline;"><strong><img src="http://localhost/gsp-portal-new/assets/img/top.png"></strong></a>
+<link rel="stylesheet" href="http://localhost/gsp-portal-new/assets/css/jquery.fileuploader.css">
+<link href="http://localhost/gsp-portal-new/assets/css/jquery.fileuploader-theme-onebutton.css" media="all" rel="stylesheet">
+<style>
+    .alert{
+        height: 50px !important;
+        padding:15px !important;
+        font-weight: bold;
+        border-radius: 0px;
+    }
+    .alert-success
+    {
+        border: 2px solid green;
+    }
+    .alert-danger
+    {
+        border: 2px solid red;
+    }
+</style>
+<div id="airModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header" style="background: rgb(232, 101, 73); color:#fff;">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h4 class="modal-title">Upload your files</h4>
+            </div>
+
+            <div class="modal-body" id="test">
+
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="http://localhost/gsp-portal-new/assets/js/jquery.fileuploader.js"></script>
+<script>
+    //Get Data When Modal Open
+    $("#airModal").on('shown.bs.modal', function (e) {
+        var id = e.relatedTarget.dataset.id;
+        $.get('http://localhost/gsp-portal-new/upload_files/getHtml', function (data) {
+            $('#test').html(data);
+            $('#Fules_bill').val(id);
+            //alert($('#Fules_bill').val());
+        });
+    });
+    //Remove Data When Modal Close
+    $("#airModal").on("hidden.bs.modal", function () {
+        $('#test').html("");
+        var fd = $('#' + document.forms[0].id).serialize();
+        ///alert(fd);
+        var redirect = '';
+        switch (document.forms[0].id)
+        {
+            case "air":
+                redirect = "airprevious";
+                break;
+            case "food":
+                redirect = "foodajax";
+                break;
+            case "energy":
+                redirect = "energyajax";
+                break;
+            case "land":
+                redirect = "landajax";
+                break;
+            case "water":
+                redirect = "waterajax";
+                break;
+            case "PrimaryWater":
+                redirect = "waterajax";
+                break;
+            case "waste":
+                redirect = "wasteajax";
+                break;
+            case "PrimaryWaste":
+                redirect = "wasteajax";
+                break;
+            case "PrimaryAir":
+                //alert('Case Called');
+                redirect="airprevious";
+                break;
+            case "PrimaryEnergy":
+                redirect = "energyajax";
+                break;
+            case "PrimaryFood":
+                redirect = "foodajax";
+                break;
+			case "PrimaryLand":
+                redirect= "landajax";
+        }
+
+        //console.log(fd);
+        $.ajax({
+            type: 'POST',
+            url: 'http://localhost/gsp-portal-new/previous/' + redirect,
+            data: fd,
+            success: function (data) {
+                location.reload();
+            }
+        });
+    });
+</script>
+<!--Ends Here-->
+<div id="ChangePass" class="modal fade" role="dialog">
+                  <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                      <div class="modal-header" style="background: rgb(232, 101, 73); color:#fff;">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h4 class="modal-title">Change Password </h4>
+                      </div>
+
+                      <div class="modal-body">
+                        <div class="col-lg-12">
+                          <div class="col-lg-12">
+                            <p></p>
+                          </div>
+                         <form action="http://localhost/gsp-portal-new/Login/ChangePass" method="post" accept-charset="utf-8">
+                            <div class="col-lg-6">
+                              <div class="form-group">
+							      <label>Old Password</label>
+                                <input type="Password" name="oldPassword" class="form-control">
+                              </div>
+                              <div class="form-group">
+                                <label>New Password</label>
+                                <input type="Password" name="pass" pattern=".{8,12}" required="" title="8 to 12 characters" class="form-control">
+                              </div>
+                            </div>
+                          
+                        </form></div>
+                        
+
+                        
+                      </div>
+                      <div class="modal-footer">
+                          <button class="btn btn-default" type="submit">Submit</button> 
+                          <button type="button" class="btn btn-default" data-dismiss="modal" id="movenextbtn" style="margin:0px;">Return to survey</button>
+                      </div>
+                                          </div>
+                  </div>
+                </div>
+
+
+
+<footer>
+  <!--div class="container">
+  <ul class="links list-inline">
+   <li class="store"><a href="http://csestore.cse.org.in/" target="_blank"><img src="http://localhost/gsp-portal-new/assets/img/store.jpg" class="img-responsive"></a></li>
+   <li class="portal"><a href="http://www.indiaenvironmentportal.org.in/" target="_blank"><img src="http://localhost/gsp-portal-new/assets/img/portal.jpg" class="img-responsive"></a></li>
+   <li class="earth"><a href="http://www.downtoearth.org.in/" target="_blank"><img src="http://localhost/gsp-portal-new/assets/img/earth.jpg" class="img-responsive"></a></li>
+   <li class="rain"><a href="http://www.rainwaterharvesting.org/" target="_blank"><img src="http://localhost/gsp-portal-new/assets/img/rain.jpg" class="img-responsive"></a></li>
+   <li class="times"><a href="http://www.gobartimes.org/" target="_blank"><img src="http://localhost/gsp-portal-new/assets/img/times.jpg" class="img-responsive"></a></li>
+  </ul>
+ </div-->
+  <div class="text-center" id="copyright">Copyright © 2017 Centre for Science and Environment</div>
+</footer>
 <div id="videoModal" class="modal fade" role="dialog">
     <div class="modal-dialog">
         <!-- Modal content-->
         <div class="modal-content" style="background:transparent; border-radius:0px;">
             <div class="modal-header" style="background: rgb(232, 101, 73); color:#fff;">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <button type="button" class="close" data-dismiss="modal">×</button>
                 <h4 class="modal-title">View video tutorial</h4>
             </div>
-            <iframe width="100%" height="330px" src="https://www.youtube.com/embed/CI-iGmii5Yk" frameborder="0"
-                    allowfullscreen></iframe>
+            <iframe width="100%" height="330px" src="https://www.youtube.com/embed/CI-iGmii5Yk" frameborder="0" allowfullscreen=""></iframe>
         </div>
     </div>
 </div>
@@ -3819,11 +2689,11 @@
             //console.log(fd);
             $.ajax({
                 type: 'POST',
-                url: '<?php echo base_url('previous/wasteajax') ?>',
+                url: 'http://localhost/gsp-portal-new/previous/wasteajax',
                 data: fd,
                 success: function (data)
                 {
-                    window.location.href = "<?php echo base_url('water'); ?>";
+                    window.location.href = "http://localhost/gsp-portal-new/water";
                 }
             });
         });
@@ -3832,13 +2702,45 @@
             //console.log(fd);
             $.ajax({
                 type: 'POST',
-                url: '<?php echo base_url('previous/wasteajax') ?>',
+                url: 'http://localhost/gsp-portal-new/previous/wasteajax',
                 data: fd,
                 success: function (data)
                 {
-                    window.location.href = "<?php echo base_url('logout'); ?>";
+                    window.location.href = "http://localhost/gsp-portal-new/logout";
                 }
             });
         });
+
+        //delete air files
+        $('body').on('click', '.air-delete-files', function (data) {
+            var test = confirm("Are you sure you want to delete this file");
+            if (test == true)
+            {
+                var divId = $(this).attr('data-id');
+                $.ajax({
+                    url: 'http://localhost/gsp-portal-new/upload_files/deletFiles',
+                    type: 'POST',
+                    data: {id: $(this).attr('data-id')},
+                    success: function (data)
+                    {
+                        if (data == "success")
+                        {
+                            console.log('index' + divId);
+                            $('#msg').html('<div class="alert alert-success">' +
+                                '<strong>&#10004; Success!</strong> Files deleted successfully.' +
+                                '</div>');
+                            $('#index' + divId).html('');
+                        } else if (data == "error")
+                        {
+                            $('#msg').html('<div class="alert alert-danger">' +
+                                '<strong>&#x2716; Error!</strong> There is an error deleting your files.' +
+                                '</div>');
+                        }
+                    }
+                });
+            }
+        });
     });
 </script>
+</div></form></div></div>
+<?php $this->load->view('admin/survey/footer'); ?>
