@@ -94,7 +94,18 @@ class Audit_started_2017 extends CI_Controller {
         $data['schoolUserID']=$data['school']->userid;
         $this->load->view('admin/survey/land', $data);
     }
-
+/*
+     * Generate Response Food
+     */
+	public function food($argID)
+    {
+        $data['title'] = 'Home | Food';
+        $data['id']=$argID;
+        $data['school']=$this->Audit_started_model->getSchoolById($argID);
+        $data['schoolUserID']=$data['school']->userid;
+        $this->load->view('admin/survey/food', $data);
+    }
+	 
     /*
      * Generate Response Land
      */
