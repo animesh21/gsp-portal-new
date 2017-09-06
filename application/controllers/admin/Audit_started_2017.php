@@ -71,5 +71,51 @@ class Audit_started_2017 extends CI_Controller {
         $this->load->view('admin/survey/air', $data);
 
     }
+    /*
+     * Generate Response Energy
+     */
+    public function energy($argID)
+    {
+        $data['title'] = 'Home | Energy';
+        $data['id']=$argID;
+        $data['school']=$this->Audit_started_model->getSchoolById($argID);
+        $data['schoolUserID']=$data['school']->userid;
+        $this->load->view('admin/survey/energy', $data);
+    }
 
+    /*
+     * Generate Response Land
+     */
+    public function land($argID)
+    {
+        $data['title'] = 'Home | Land';
+        $data['id']=$argID;
+        $data['school']=$this->Audit_started_model->getSchoolById($argID);
+        $data['schoolUserID']=$data['school']->userid;
+        $this->load->view('admin/survey/land', $data);
+    }
+
+    /*
+     * Generate Response Land
+     */
+    public function water($argID)
+    {
+        $data['title'] = 'Home | Water';
+        $data['id']=$argID;
+        $data['school']=$this->Audit_started_model->getSchoolById($argID);
+        $data['schoolUserID']=$data['school']->userid;
+        $this->load->view('admin/survey/water', $data);
+    }
+
+    /*
+     * Generate Response Waste
+     */
+    public function waste($argID)
+    {
+        $data['title'] = 'Home | Waste';
+        $data['id']=$argID;
+        $data['school']=$this->Audit_started_model->getSchoolById($argID);
+        $data['schoolUserID']=$data['school']->userid;
+        $this->load->view('admin/survey/waste', $data);
+    }
 }
