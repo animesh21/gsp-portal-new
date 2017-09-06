@@ -221,33 +221,90 @@
                     ?></p>
             </div>
 
-            <div class="form-group">
-                <label for="exampleInputEmail1"> <span class="cube">6</span>  Month(s) in which the GSP audit was carried out? </label>
-                <p class="formanswertext">
-                    <?php echo (getFiled('Q7G1', $schoolUserID)
-                        !='') ? getFiled('Q7G1', $schoolUserID): "";
-                    ?>
-                </p>
-            </div>
-
-            <div class="form-group">
-                <label for="exampleInputEmail1"> <span class="cube">7</span>  Where is the school located?</label>
-                <?php //echo $schoolUserID; ?>
-                <p class="formanswertext">
-                    <?php
-                        $arrSchoolType=array(
-                            '1'=>'Governmanet School',
-                            '2'=>'Government – Aided School',
-                            '3'=>'Private School'
-                        );
-                    ?>
-                    <?php echo (getFiled('Q7G1', $schoolUserID)
-                        !='') ? $arrSchoolType[getFiled('Q7G1',
-                        $schoolUserID)]: "";
-                    ?>
-                </p>
-            </div>
-
+           <div class="form-group">
+        <label for="exampleInputEmail1"> <span class="cube">6</span> Please select the month(s) in which the GSP audit was carried out? </label>
+        <p class="formanswertext"> 
+		    <?php 
+              if(getFiled('Q7G1', $schoolUserID)==1){
+              echo "Jan".",";
+              }
+              if(getFiled('Q7G2', $schoolUserID)==2)
+              {
+              echo  "Feb".",";
+              }
+              if(getFiled('Q7G3', $schoolUserID)==3)
+              {
+              echo  "Mar".",";
+              }
+              if(getFiled('Q7G4', $schoolUserID)==4)
+              {
+              echo "April".",";
+              }
+              if(getFiled('Q7G5', $schoolUserID)==5)
+              {
+              echo "May".",";
+              }
+			  if(getFiled('Q7G6', $schoolUserID)==6)
+              {
+              echo "June".",";
+              }
+			  if(getFiled('Q7G7', $schoolUserID)==7)
+              {
+              echo "July".",";
+              }
+			  if(getFiled('Q7G8', $schoolUserID)==8)
+              {
+              echo "Aug".",";
+              }
+			  if(getFiled('Q7G9', $schoolUserID)==9)
+              {
+              echo "Sept".",";
+              }
+			  if(getFiled('Q7G10', $schoolUserID)==10)
+              {
+              echo "Oct".",";
+              }
+			  if(getFiled('Q7G11', $schoolUserID)==11)
+              {
+              echo "Nov".",";
+              }
+			  if(getFiled('Q7G12', $schoolUserID)==12)
+              {
+              echo "Dec.",",";
+              }
+          ?> </p>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1"> <span class="cube">7</span> Where is the school located?</label>
+        <?php //echo $schoolUserID; ?>
+        <p class="formanswertext">
+          <?php
+             if(getFiled('Q8G1', $schoolUserID)==1){
+              echo "Urban Area";
+              }
+              if(getFiled('Q8G1', $schoolUserID)==2)
+              {
+              echo "Rural Area";
+              }
+              ?> </p>
+      </div>
+	  <div class="form-group">
+        <label for="exampleInputEmail1"> <span class="cube">8</span> Where is the school located?</label>
+        <p class="formanswertext">
+          <?php
+             if(getFiled('Q9G1', $schoolUserID)==1){
+              echo "Government School";
+              }
+              if(getFiled('Q9G1', $schoolUserID)==2)
+              {
+              echo "Government – Aided School";
+              }
+			  if(getFiled('Q9G1', $schoolUserID)==3)
+              {
+              echo "Private School";
+              }
+              ?> </p>
+      </div>
 
             <center>
                 <a class="btn org-btn" href="<?php echo base_url('admin/audit_started_2017/response/'.$id) ?>">PREVIOUS</a>
