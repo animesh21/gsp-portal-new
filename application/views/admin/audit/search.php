@@ -1,5 +1,5 @@
 <div class="top-area">
-    <h2>REGISTRATION BY STATE</h2>
+    <h2>REGISTRATION BY STATE  <a href="<?php echo base_url('admin/audit_started/excel/'.$val) ?>"><button class="exportBtn">Export to Excel</button></a></h2>
 </div>
 <div class="row" style="margin: 20px 0;">
     <?php echo form_open(base_url('admin/audit_started/search')); ?>
@@ -11,7 +11,7 @@
     </div>
     <?php echo form_close(); ?>
 </div>
-<table id="example" class="display dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
+<table class="display dataTable no-footer tablepluging" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
     <thead>
         <tr role="row">
             <th>S.No</th>
