@@ -15,8 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>assets/css/custom.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>assets/css/responsive.css" rel="stylesheet">
-
-<!---GoogleAnalyticsObject Code ---->		
+//GoogleAnalyticsObject Code	
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
