@@ -17,6 +17,7 @@ class Energy extends CI_Controller {
     }
 
     public function index() {
+        if (!$_SERVER['HTTP_REFERER']) redirect('air');
         $data['title'] = 'Energy';
         //Validation
         if ($this->session->userdata('USER_ID') == '') {

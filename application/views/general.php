@@ -1,3 +1,4 @@
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 <?php $this->load->view('header'); ?>
 
 <div class="container">
@@ -14,7 +15,7 @@
             </ul>
         </div>
         <div id="pprg" class="newprog progress" style="text-align:center">
-            <div id="samplt" class="fin-prog progress-bar" role="progressbar" style="width: 5%; height: 35px;">5%</div>
+             <div id="samplt" class="fin-prog progress-bar" role="progressbar" style="width: <?php echo progressBarValue($this->session->userdata('USER_ID')).'%'; ?>; height: 35px;"><?php echo progressBarValue($this->session->userdata('USER_ID')).'%'; ?></div>
         </div>
         <h1>GENERAL QUESTIONS</h1>
         <?php echo form_open('general/set',array('id'=>'general-form')); ?>

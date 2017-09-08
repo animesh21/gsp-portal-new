@@ -18,6 +18,7 @@ class Food extends CI_Controller {
     }
 
     public function index() {
+        if (!$_SERVER['HTTP_REFERER']) redirect('energy');
         $data['title'] = 'Food';
         if ($this->session->userdata('USER_ID') == '') {
 

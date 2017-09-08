@@ -60,10 +60,26 @@ if (!function_exists('updateProgress')) {
     function updateProgress($argID, $argProgress) {
         $arr = array('progress' => $argProgress);
         $CI = & get_instance();
-        $CI->db->where('userid', $argID);
-        $CI->db->update('gsp_school', $arr);
+        $temp = $CI->db->get_where('gsp_school', array('userid' => $argID))->row();
+        if ($argProgress > $temp->progress) {
+            $CI->db->where('userid', $argID);
+            $CI->db->update('gsp_school', $arr);
+        }
+        //print_r($temp); exit;
     }
 
+}
+
+/*
+ * Progress Bar Value
+ */
+if (!function_exists('progressBarValue')) {
+    function progressBarValue($argID)
+    {
+        $CI= get_instance();
+        $temp=$CI->db->get_where('gsp_school', array('userid'=>$argID))->row();
+        return $temp->progress;
+    }
 }
 
 /*
@@ -210,14 +226,4 @@ if (!function_exists('getAirPoints')) {
         return $total_air_points;
     }
 
-}
-
-/*
- * Get Energy Points Here
- */
-if (!function_exists('getEnergyPoints')) {
-    function getEnergyPoints($argID)
-    {
-        
-    }
 }

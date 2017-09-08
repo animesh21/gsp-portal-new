@@ -17,6 +17,7 @@ class Waste extends CI_Controller {
     }
 
     public function index() {
+        if (!$_SERVER['HTTP_REFERER']) redirect('water');
         $data['title'] = 'Waste';
         if ($this->session->userdata('USER_ID') == '') {
 

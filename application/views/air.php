@@ -30,7 +30,7 @@
       </ul>
     </div>
     <div id="pprg" class="newprog progress" style="text-align:center">
-      <div id="samplt" class="fin-prog progress-bar" role="progressbar" style="width:10%; height: 35px;">10%</div>
+      <div id="samplt" class="fin-prog progress-bar" role="progressbar" style="width: <?php echo progressBarValue($this->session->userdata('USER_ID')).'%'; ?>; height: 35px;"><?php echo progressBarValue($this->session->userdata('USER_ID')).'%'; ?></div>
     </div>
     <div class="intro">
       <h1>AIR</h1>

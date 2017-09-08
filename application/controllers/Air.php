@@ -1,6 +1,5 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
 class Air extends CI_Controller {
   
   public function __construct() {
@@ -16,6 +15,7 @@ class Air extends CI_Controller {
     }
 
     public function index() {
+        if (!$_SERVER['HTTP_REFERER']) redirect('general');
       	$data['title'] = 'Air';
         //Validation
         if ($this->session->userdata('USER_ID') == '') {

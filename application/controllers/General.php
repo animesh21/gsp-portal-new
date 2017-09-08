@@ -1,6 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-
+if (!defined('BASEPATH')) exit('No direct script access allowed');
 class General extends CI_Controller {
   
   public function __construct() {
@@ -21,6 +20,7 @@ class General extends CI_Controller {
     }
 
     public function index() {
+           if (!$_SERVER['HTTP_REFERER']) redirect('school');
       	   $data['title'] = 'General';
             if ($this->session->userdata('USER_ID') == '') {
         

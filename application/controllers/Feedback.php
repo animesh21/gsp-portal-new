@@ -20,6 +20,7 @@ class Feedback extends CI_Controller {
     }
 
     public function index() {
+        if (!$_SERVER['HTTP_REFERER']) redirect('waste');
     	$data['title'] = 'Feedback';
         $argPost['userid'] = $this->session->userdata('USER_ID');
         $argPost['type'] = 8 ;
