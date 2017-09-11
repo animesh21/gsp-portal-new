@@ -16,6 +16,7 @@ class School_model extends CI_Model {
         if ($query->num_rows() > 0) {
             $row = $query->row();
             $school = array(
+                'userid'=>$row->userid,
                 'name' => $row->name,
                 'address1' => $row->address1,
                 'address2' => $row->address2,
@@ -32,7 +33,9 @@ class School_model extends CI_Model {
                 'mobile' => $row->mobile,
                 'coname' => $row->coname,
                 'coemail' => $row->coemail,
-                'comobile' => $row->comobile
+                'comobile' => $row->comobile,
+                'progress'=>$row->progress,
+                
             );
 
             return $school;
