@@ -489,7 +489,7 @@
                         data-target="#airModal" type="button">UPLOAD FILES </button>
                 <table width="100%" class="question uploadedfiles">
                     <thead>
-                        <tr>
+											<tr><th>image</th>
                             <th>File name</th>
                             <th>Action</th>
                         </tr>
@@ -498,6 +498,7 @@
 <?php foreach ($midDayMeal as $f) { ?>
                             <tr id="index<?php echo $f->id; ?>">
     <?php $name = str_replace(" ", "_", $f->name . "_Mid_Day_Meal_"); ?>
+															<td><img src="<?php echo base_url('uploads/files/'.$f->file_name);?>" style="height:100px;width:100px"></img></td>
                                 <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
                                 <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
                             </tr>
@@ -2215,7 +2216,7 @@ if (isset($data['Q11F1'])) {
                                                                                             </div>
                                                                                             <table width="100%" class="question uploadedfiles">
                                                                                                             <thead>
-                                                                                                                <tr>
+                                                                                                                <tr><th>image</th>
                                                                                                                     <th>File name</th>
                                                                                                                     <th>Action</th>
                                                                                                                 </tr>
@@ -2224,7 +2225,8 @@ if (isset($data['Q11F1'])) {
 <?php foreach ($files as $f) { ?>
                                                                                                                     <tr id="index<?php echo $f->id; ?>">
     <?php $name = str_replace(" ", "_", $f->name . "_Audit_Team_doing_Survey_"); ?>
-                                                                                                                        <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+																																																											<td><img src="<?php echo base_url('uploads/files/'.$f->file_name);?>" style="height:100px;width:100px"></img></td>
+																																																											<td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
                                                                                                                         <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
                                                                                                                     </tr>
 <?php } ?>
@@ -2426,7 +2428,7 @@ if (isset($data['Q13F1'])) {
                                                                                                     <div class="clearfix">&nbsp;</div>
                                                                                                         <table width="100%" class="question uploadedfiles">
                                                                                                             <thead>
-                                                                                                                <tr>
+                                                                                                                <tr><th>image</th>
                                                                                                                     <th>File name</th>
                                                                                                                     <th>Action</th>
                                                                                                                 </tr>
@@ -2435,6 +2437,7 @@ if (isset($data['Q13F1'])) {
 <?php foreach ($uppc as $u) { ?>
                                                                                                                     <tr id="index<?php echo $u->id; ?>">
     <?php $name = str_replace(" ", "_", $u->name . "_UPPF_"); ?>
+																																																											<td><img src="<?php echo base_url('uploads/files/'.$u->file_name);?>" style="height:100px;width:100px"></img></td>
                                                                                                                         <td class="upload edit"><?php echo str_replace($name, "", $u->file_name); ?></td>
                                                                                                                         <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $u->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
                                                                                                                     </tr>
