@@ -969,7 +969,7 @@
 </div>
 <table width="100%" class="question uploadedfiles">
   <thead>
-		<tr><th>image</th>
+		<tr>
       <th>File name</th>
       <th>Action</th>
     </tr>
@@ -978,7 +978,7 @@
     <?php foreach ($segregationClassroom as $f) { ?>
     <tr id="index<?php echo $f->id; ?>">
       <?php $name = str_replace(" ", "_", $f->name . "_Segregation_Source_Classrooms_"); ?>
-			<td><img src="<?php echo base_url('uploads/files/'.$f->file_name);?>" style="height:100px;width:100px"></img></td>
+			
       <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
       <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
     </tr>
@@ -1374,7 +1374,7 @@
 </div>
 <table width="100%" class="question uploadedfiles">
   <thead>
-		<tr><th>image</th>
+		<tr>
       <th>File name</th>
       <th>Action</th>
     </tr>
@@ -1383,7 +1383,7 @@
     <?php foreach ($solidWaste as $f) { ?>
     <tr id="index<?php echo $f->id; ?>">
       <?php $name = str_replace(" ", "_", $f->name . "_Audit_Team_Weighing_Solid_Waste_"); ?>
-			<td><img src="<?php echo base_url('uploads/files/'.$f->file_name);?>" style="height:100px;width:100px"></img></td>
+			
       <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
       <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
     </tr>
@@ -1838,7 +1838,7 @@
 <br>
 <table width="100%" class="question uploadedfiles">
   <thead>
-		<tr><th>image</th>
+		<tr>
       <th>File name</th>
       <th>Action</th>
     </tr>
@@ -1847,7 +1847,7 @@
     <?php foreach ($composingPit as $f) { ?>
     <tr id="index<?php echo $f->id; ?>">
       <?php $name = str_replace(" ", "_", $f->name . "_Composting_Pit_"); ?>
-			<td><img src="<?php echo base_url('uploads/files/'.$f->file_name);?>" style="height:100px;width:100px"></img></td>
+			
       <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
       <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
     </tr>
@@ -2196,7 +2196,7 @@
 <br>
 <table width="100%" class="question uploadedfiles">
   <thead>
-		<tr><th>image</th>
+		<tr>
       <th>File name</th>
       <th>Action</th>
     </tr>
@@ -2205,7 +2205,7 @@
     <?php foreach ($recycleMachine as $f) { ?>
     <tr id="index<?php echo $f->id; ?>">
       <?php $name = str_replace(" ", "_", $f->name . "_Recycling_Machine_"); ?>
-			<td><img src="<?php echo base_url('uploads/files/'.$f->file_name);?>" style="height:100px;width:100px"></img></td>
+			
       <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
       <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
     </tr>
@@ -2949,7 +2949,7 @@
 <div class="clearfix">&nbsp;</div>
 <table width="100%" class="question uploadedfiles">
   <thead>
-		<tr><th>image</th>
+		<tr>
       <th>File name</th>
       <th>Action</th>
     </tr>
@@ -2958,7 +2958,7 @@
     <?php foreach ($eWaste as $f) { ?>
     <tr id="index<?php echo $f->id; ?>">
       <?php $name = str_replace(" ", "_", $f->name . "_E-Waste_"); ?>
-			<td><img src="<?php echo base_url('uploads/files/'.$f->file_name);?>" style="height:100px;width:100px"></img></td>
+			
       <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
       <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
     </tr>
@@ -3093,7 +3093,7 @@
     <?php foreach ($houseKeeping as $f) { ?>
     <tr id="index<?php echo $f->id; ?>">
       <?php $name = str_replace(" ", "_", $f->name . "_Housekeeping_"); ?>
-			<td><img src="<?php echo base_url('uploads/files/'.$f->file_name);?>" style="height:100px;width:100px"></img></td>
+			
       <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
       <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
     </tr>
@@ -3127,7 +3127,7 @@
 </div>
 <table width="100%" class="question uploadedfiles">
   <thead>
-		<tr><th>image</th>
+		<tr>
       <th>File name</th>
       <th>Action</th>
     </tr>
@@ -3136,7 +3136,7 @@
     <?php foreach ($burningWaste as $f) { ?>
     <tr id="index<?php echo $f->id; ?>">
       <?php $name = str_replace(" ", "_", $f->name . "_Buring_Waste_"); ?>
-			<td><img src="<?php echo base_url('uploads/files/'.$f->file_name);?>" style="height:100px;width:100px"></img></td>
+			
       <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
       <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
     </tr>
@@ -3392,7 +3392,7 @@
           </div>
           <table width="100%" class="question uploadedfiles">
             <thead>
-							<tr><th>image</th>
+							<tr>
                 <th>File name</th>
                 <th>Action</th>
               </tr>
@@ -3401,7 +3401,7 @@
               <?php foreach ($teamDoingWaste as $f) { ?>
               <tr id="index<?php echo $f->id; ?>">
                 <?php $name = str_replace(" ", "_", $f->name . "_Audit_Team_Doing_Survey_"); ?>
-								<td><img src="<?php echo base_url('uploads/files/'.$f->file_name);?>" style="height:100px;width:100px"></img></td>
+								
                 <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
                 <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
               </tr>
