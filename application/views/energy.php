@@ -471,7 +471,7 @@
                         <br>
                         <table width="100%" class="question uploadedfiles">
                         <thead>
-							<tr><th>image</th>
+							<tr>
                                 <th>File name</th>
                                 <th>Action</th>
                             </tr>
@@ -480,7 +480,7 @@
                             <?php foreach ($electricityBills as $f) { ?>
                                 <tr id="index<?php echo $f->id; ?>">
                                     <?php $name = str_replace(" ", "_", $f->name . "_Electricity_Bill_"); ?>
-									<td><img src="<?php echo base_url('uploads/files/'.$f->file_name);?>" style="height:100px;width:100px"></img></td>
+									
                                     <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
                                     <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
                                 </tr>
@@ -1021,7 +1021,7 @@ else echo "0"; ?>"
             </div>
             <table width="100%" class="question uploadedfiles">
     <thead>
-		<tr><th>image</th>
+		<tr>
             <th>File name</th>
             <th>Action</th>
         </tr>
@@ -1030,7 +1030,7 @@ else echo "0"; ?>"
         <?php foreach ($fulesBills as $f) { ?>
             <tr id="index<?php echo $f->id; ?>">
                 <?php $name = str_replace(" ", "_", $f->name . "_Fuels_Bills_"); ?>
-				<td><img src="<?php echo base_url('uploads/files/'.$f->file_name);?>" style="height:100px;width:100px"></img></td>
+				
                 <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
                 <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
             </tr>
@@ -1188,7 +1188,7 @@ else echo "0"; ?>"
             </div>
             <table width="100%" class="question uploadedfiles">
                 <thead>
-					<tr><th>images</th>
+					<tr>
                         <th>File name</th>
                         <th>Action</th>
                     </tr>
@@ -1197,7 +1197,7 @@ else echo "0"; ?>"
                     <?php foreach ($appliancesBills as $f) { ?>
                         <tr id="index<?php echo $f->id; ?>">
                             <?php $name = str_replace(" ", "_", $f->name . "_Five_Star_Appliances_"); ?>
-							<td><img src="<?php echo base_url('uploads/files/'.$f->file_name);?>" style="height:100px;width:100px"></img></td>
+							
                             <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
                             <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
                         </tr>
@@ -1259,7 +1259,7 @@ if (isset($data['Q9E1']))
                                 data-target="#airModal" type="button">UPLOAD FILES </button>
                         <table width="100%" class="question uploadedfiles">
     <thead>
-		<tr><th>image</th>
+		<tr>
             <th>File name</th>
             <th>Action</th>
         </tr>
@@ -1268,7 +1268,7 @@ if (isset($data['Q9E1']))
         <?php foreach ($alternativeResource as $f) { ?>
             <tr id="index<?php echo $f->id; ?>">
                 <?php $name = str_replace(" ", "_", $f->name . "_Alternative_Source_of_Energy_"); ?>
-				<td><img src="<?php echo base_url('uploads/files/'.$f->file_name);?>" style="height:100px;width:100px"></img></td>
+				
                 <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
                 <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
             </tr>
@@ -1355,7 +1355,7 @@ if (isset($data['Q9E1']))
                             <div class="clearfix">&nbsp</div>
             <table width="100%" class="question uploadedfiles">
                 <thead>
-					<tr><th>image</th>
+					<tr>
                         <th>File name</th>
                         <th>Action</th>
                     </tr>
@@ -1364,7 +1364,7 @@ if (isset($data['Q9E1']))
                     <?php foreach ($energySupport as $f) { ?>
                         <tr id="index<?php echo $f->id; ?>">
                             <?php $name = str_replace(" ", "_", $f->name . "_Supporting_Document_Energy_"); ?>
-							<td><img src="<?php echo base_url('uploads/files/'.$f->file_name);?>" style="height:100px;width:100px"></img></td>
+							
                             <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
                             <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
                         </tr>
