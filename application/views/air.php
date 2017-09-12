@@ -1070,7 +1070,7 @@
   <div class="clearfix">&nbsp;</div>
   <table width="100%" class="question uploadedfiles">
     <thead>
-	    <tr><th>image</th>
+	    <tr>
         <th>File name</th>
         <th>Action</th>
       </tr>
@@ -1079,7 +1079,7 @@
       <?php foreach ($pucCertificate as $a) { ?>
       <tr id="index<?php echo $a->id; ?>">
         <?php $Text = str_replace(" ", "_", $a->name . "_PUC_Certificate_"); ?>
-	 <td><img src="<?php echo base_url('uploads/files/'.$a->file_name);?>" style="height:100px;width:100px"></img></td>     
+	    
         <td class="upload edit"><?php echo str_replace($Text, " ", $a->file_name); ?></td>
         <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $a->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
       </tr>
