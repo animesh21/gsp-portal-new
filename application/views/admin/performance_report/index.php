@@ -429,8 +429,11 @@
                         $c_and_d = (getFiled('Q6Wa7S2', $r->userid) != '') ? getFiled('Q6Wa7S2', $r->userid) : 0;
                         $total_pop = (getFiled('Q4G4S3', $r->userid) != '') ? getFiled('Q4G4S3', $r->userid) : 0;
                         $perday = ($biogradble + $dry + $domestic + $ewaste + $biomedical + $sanotary + $c_and_d) * 1000;
-                        $percapita_person = $perday / $total_pop;
-                        echo number_format((float) $percapita_person, 2, '.', '');
+                        if($total_pop!=0)
+                        {
+                            $percapita_person = $perday / $total_pop;
+                            echo number_format((float) $percapita_person, 2, '.', '');
+                        }
                         ?>
                     </td>
                     <!--Ends Here-->
