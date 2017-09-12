@@ -978,7 +978,7 @@
                         <div class="clearfix">&nbsp;</div>
                         <table width="100%" class="question uploadedfiles">
                             <thead>
-                            <tr>
+								<tr><th>image</th>
                                 <th>File name</th>
                                 <th>Action</th>
                             </tr>
@@ -987,6 +987,7 @@
                             <?php foreach ($task4supporting as $f) { ?>
                                 <tr id="index<?php echo $f->id; ?>">
                                     <?php $name = str_replace(" ", "_", $f->name . "_Task_4_Supporting_docs_"); ?>
+									<td><img src="<?php echo base_url('uploads/files/'.$f->file_name);?>" style="height:100px;width:100px"></img></td>
                                     <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
                                     <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
                                 </tr>
@@ -2592,7 +2593,7 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
                                                 </div>
                                                 <table width="100%" class="question uploadedfiles">
                                                     <thead>
-                                                    <tr>
+														<tr><th>image</th>
                                                         <th>File name</th>
                                                         <th>Action</th>
                                                     </tr>
@@ -2601,6 +2602,7 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
                                                     <?php foreach ($flowChartHandDrawn as $f) { ?>
                                                         <tr id="index<?php echo $f->id; ?>">
                                                             <?php $name = str_replace(" ", "_", $f->name . "_Flow_Chart_Hand_Drwan_"); ?>
+															<td><img src="<?php echo base_url('uploads/files/'.$f->file_name);?>" style="height:100px;width:100px"></img></td>
                                                             <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
                                                             <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
                                                         </tr>
@@ -2626,7 +2628,7 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
                                                 </div>
                                                 <table width="100%" class="question uploadedfiles">
                                                     <thead>
-                                                    <tr>
+														<tr><th>image</th>
                                                         <th>File name</th>
                                                         <th>Action</th>
                                                     </tr>
@@ -2635,6 +2637,7 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
                                                     <?php foreach ($supportDocWater as $f) { ?>
                                                         <tr id="index<?php echo $f->id; ?>">
                                                             <?php $name = str_replace(" ", "_", $f->name . "_Supporting_Document_Water_"); ?>
+															<td><img src="<?php echo base_url('uploads/files/'.$f->file_name);?>" style="height:100px;width:100px"></img></td>
                                                             <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
                                                             <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
                                                         </tr>
