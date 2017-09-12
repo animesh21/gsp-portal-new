@@ -82,7 +82,7 @@ class School_model extends CI_Model {
             $config['mailtype'] = 'html';
             $this->email->initialize($config);
             $from = "support@greenschoolsprogramme.org";
-            $arrMails=array($query->schoolemail, $query->coemail, 'ajanta@cseindia.org', 'ranjita@cseindia.org', 'aditi.sharma@cseindia.org', 'contact@studiotesseract.biz');
+            $arrMails=array($query->schoolemail, $query->coemail, 'ranjita@cseindia.org', 'aditi.sharma@cseindia.org', 'contact@studiotesseract.biz');
             $to = $arrMails;
             $subject = "GSP Audit Registration";
             $msg = "Dear &nbsp;";
