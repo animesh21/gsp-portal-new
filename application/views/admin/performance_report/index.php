@@ -243,7 +243,7 @@
                     <td><?php echo (getFiled('Q9E1', $r->userid) != '') ? (getFiled('Q9E1', $r->userid) == "N") ? "No" : "Yes" : "N/A"; ?></td>
                     <!--Ends Here-->
                     <!--                    Energy Ponits-->
-                    <td><?php //echo getEnergyPoints($r->userid);    ?>N/A</td>
+                    <td><?php echo getEnergyPoints($r->userid); ?></td>
                     <!--                    Ends Here-->
                     <!--                    Food Served in Canteen-->
                     <td>
@@ -297,7 +297,173 @@
                     <!--Ends Here-->
                     <!--Distribution of Chocolate/similar products during events-->
                     <td>
-                         <?php echo (getFiled('Q10F1', $r->userid) != '') ? (getFiled('Q10F1', $r->userid) == "Y") ? "Yes" : "No" : "N/A"; ?>
+                        <?php echo (getFiled('Q10F1', $r->userid) != '') ? (getFiled('Q10F1', $r->userid) == "Y") ? "Yes" : "No" : "N/A"; ?>
+                    </td>
+                    <!--                    Ends Here-->
+                    <!--                    Name of Products-->
+                    <td>
+                        <?php echo (getFiled('Q10F2', $r->userid) != '') ? getFiled('Q10F2', $r->userid) : "N/A"; ?>
+                    </td>
+                    <!--Ends Here-->
+                    <!--Events sponsored by Food companies-->
+                    <td><?php echo (getFiled('Q11F1', $r->userid) != '') ? getFiled('Q11F1', $r->userid) : "N/A"; ?></td>
+                    <!--                    Ends Here-->
+                    <!--                    Brand Banners-->
+                    <td>
+                        <?php
+                        if (getFiled('Q11F1', $r->userid) == 'Y') {
+                            echo (getFiled('Q11F2', $r->userid) != '') ? getFiled('Q11F2', $r->userid) : "N/A";
+                        }
+                        ?>
+                    </td>
+                    <!--Ends Here-->
+                    <!--                    Banners, brochures, hoardings, stalls put-up during events-->
+                    <td>
+                        <?php echo (getFiled('Q11F3', $r->userid) != '') ? getFiled('Q11F3', $r->userid) : "N/A"; ?>
+                    </td>
+                    <!--Ends Here-->
+                    <!--                    Points in Food Section-->
+                    <td>
+                        <?php echo getFoodPoints($r->userid); ?>
+                    </td>
+                    <td>
+                        N/A
+                    </td>
+                    <td>
+                        N/A
+                    </td>
+                    <td>
+                        <?php echo (getFiled('Q6L1', $r->userid) != '') ? getFiled('Q6L1', $r->userid) : ""; ?>
+                    </td>
+                    <td>
+                        <?php echo getLandPoints($r->userid); ?>
+                    </td>
+                    <!-- Ends Here-->
+                    <!--                    Total Water Consumption-->
+                    <td>
+                        <?php echo (getFiled('Q4W11', $r->userid) != '') ? getFiled('Q4W11', $r->userid) : ""; ?>
+                    </td>
+                    <!--Ends Here-->
+                    <!-- Water Per Day Cap Jool-->
+                    <td>
+                        <?php
+                        $total_populatuion = getFiled('Q4G4S3', $r->userid);
+                        $total_water_consumption = getFiled('Q4W11', $r->userid);
+                        if (($total_populatuion != 0 ) && ($total_populatuion != "") && ($total_water_consumption != 0 ) && ($total_water_consumption != "")) {
+                            echo $per = number_format($total_water_consumption / $total_populatuion, 2);
+                        }
+                        ?>
+                    </td>
+                    <!--                    Ends Here-->
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <!--                    Rain Water Harvesting-->
+                    <td><?php echo (getFiled('Q8W2', $r->userid) != '') ? getFiled('Q8W2', $r->userid) : "N/A"; ?></td>
+                    <!--Ends Here-->
+                    <!--                    Types of Rain Water Harvesting System-->
+                    <td><?php $arr = array('By Storing', '') ?></td>
+                    <!--Ends Here-->
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <!--                    Solid Waste Segregation-->
+                    <td><?php echo (getFiled('Q4Wa1', $r->userid) != '') ? (getFiled('Q4Wa1', $r->userid) == 'Y') ? "Yes" : "No" : ""; ?></td>
+                    <!--                     Ends Here-->
+                    <td>
+                        <!--Waste Solid Segregator at source-->
+                        <?php
+                        $st = getFiled('Q4Wa1', $r->userid);
+                        if ($st == 'Y' && $st != '') {
+                            $e = array();
+                            if (getFiled('Q4Wa2S1', $r->userid) != "") {
+                                $e[] = "Students and Teachers";
+                            }
+                            if (getFiled('Q4Wa2S2', $r->userid) != "") {
+                                $e[] = "Housekeeping(Sweeper)";
+                            }
+                            if (getFiled('Q4Wa2S3', $r->userid) != "") {
+                                $e[] = "Gardner";
+                            }
+                            if (getFiled('Q4Wa2S4', $r->userid) != "") {
+                                $e[] = "Ragpickers";
+                            }
+                            if (getFiled('Q4Wa2S5', $r->userid) != "") {
+                                $e[] = "Other";
+                            }
+                            echo implode($e, ', ');
+                        }
+                        ?>
+                        <!--                        Ends Here-->
+                    </td>
+                    <!--                    No. of waste collection points with no bin-->
+                    <td>
+                        <?php echo (getFiled('Q5Wa11S1', $r->userid) != '') ? getFiled('Q5Wa11S1', $r->userid) : ""; ?>
+                    </td>
+                    <!--Ends Here-->
+                    <!--                    Waste Collection Points with 1 Bin-->
+                    <td>
+                        <?php echo (getFiled('Q5Wa11S2', $r->userid) != '') ? getFiled('Q5Wa11S2', $r->userid) : ""; ?>
+                    </td>
+                    <!--Ends Here-->
+                    <!--                    Waste Collection Points with 2 Bin-->
+                    <td>
+                        <?php echo (getFiled('Q5Wa11S3', $r->userid) != '') ? getFiled('Q5Wa11S3', $r->userid) : ""; ?>
+                    </td>
+                    <!--                    Ends Here-->
+                    <!--                    Waste Collection Points with 3 Bin-->
+                    <td>
+                        <?php echo (getFiled('Q5Wa11S4', $r->userid) != '') ? getFiled('Q5Wa11S4', $r->userid) : ""; ?>
+                    </td>
+                    <!--                    Ends Here-->
+                    <!--                    Waste Per Cap/Day-->
+                    <td>
+                        <?php
+                        $biogradble = (getFiled('Q6Wa1S6', $r->userid) != '') ? getFiled('Q6Wa1S6', $r->userid) : 0;
+                        $dry = (getFiled('Q6Wa2S9', $r->userid) != '') ? getFiled('Q6Wa2S9', $r->userid) : 0;
+                        $domestic = (getFiled('Q6Wa3S4', $r->userid) != '') ? getFiled('Q6Wa3S4', $r->userid) : 0;
+                        $ewaste = (getFiled('Q6Wa4S2', $r->userid) != '') ? getFiled('Q6Wa4S2', $r->userid) : 0;
+                        $biomedical = (getFiled('Q6Wa5S2', $r->userid) != '') ? getFiled('Q6Wa5S2', $r->userid) : 0;
+                        $sanotary = (getFiled('Q6Wa6S2', $r->userid) != '') ? getFiled('Q6Wa6S2', $r->userid) : 0;
+                        $c_and_d = (getFiled('Q6Wa7S2', $r->userid) != '') ? getFiled('Q6Wa7S2', $r->userid) : 0;
+                        $total_pop = (getFiled('Q4G4S3', $r->userid) != '') ? getFiled('Q4G4S3', $r->userid) : 0;
+                        $perday = ($biogradble + $dry + $domestic + $ewaste + $biomedical + $sanotary + $c_and_d) * 1000;
+                        $percapita_person = $perday / $total_pop;
+                        echo number_format((float) $percapita_person, 2, '.', '');
+                        ?>
+                    </td>
+                    <!--Ends Here-->
+                    <!--                    Recycle Solid Waste-->
+                    <td>
+                        <?php echo (getFiled('Q8Wa1', $r->userid) != '') ? getFiled('Q8Wa1', $r->userid) : ""; ?>
+                    </td>
+                    <!--Ends Here-->
+                    <!--                    Total Waste Generated in Grams-->
+                    <td>
+                        <?php
+                        $biogradble = (getFiled('Q6Wa1S5', $r->userid) != '') ? getFiled('Q6Wa1S5', $r->userid) : 0;
+                        $dry = (getFiled('Q6Wa2S8', $r->userid) != '') ? getFiled('Q6Wa2S8', $r->userid) : 0;
+                        $domestic = (getFiled('Q6Wa3S3', $r->userid) != '') ? getFiled('Q6Wa3S3', $r->userid) : 0;
+                        echo ($biogradble+$dry+$domestic)*1000;
+                        ?>
+                    </td>
+                    <!--Ends Here-->
+                    <!-- Total Amount of Recycled Waste-->
+                    <td>
+                        <?php
+                            $recycled=(getFiled('Q8Wa1', $r->userid) != '') ? getFiled('Q8Wa1', $r->userid) : "";
+                            $value='';
+                            if($recycled=='Y')
+                            {
+                                $biograde=(getFiled('Q8Wa1S5', $r->userid) != '') ? getFiled('Q8Wa1S5', $r->userid) : 0;
+                                $dry=(getFiled('Q8Wa2S8', $r->userid) != '') ? getFiled('Q8Wa2S8', $r->userid) : 0;
+                                $domestic=(getFiled('Q8Wa3S3', $r->userid) != '') ? getFiled('Q8Wa3S3', $r->userid) : 0;
+                                $value=($biogradble+$dry+$domestic)*1000;
+                            } else {
+                                $value="";
+                            }
+                        ?>
                     </td>
                     <!--                    Ends Here-->
                 </tr>

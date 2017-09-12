@@ -74,12 +74,13 @@ if (!function_exists('updateProgress')) {
  * Progress Bar Value
  */
 if (!function_exists('progressBarValue')) {
-    function progressBarValue($argID)
-    {
-        $CI= get_instance();
-        $temp=$CI->db->get_where('gsp_school', array('userid'=>$argID))->row();
+
+    function progressBarValue($argID) {
+        $CI = get_instance();
+        $temp = $CI->db->get_where('gsp_school', array('userid' => $argID))->row();
         return $temp->progress;
     }
+
 }
 
 /*
@@ -226,4 +227,216 @@ if (!function_exists('getAirPoints')) {
         return $total_air_points;
     }
 
+}
+
+/*
+ * Get Energy Points Here
+ */
+if (!function_exists('getEnergyPoints')) {
+
+    function getEnergyPoints($argUserID) {
+        $energy_points = array();
+        //Total Points
+        $total_population = (getFiled('Q4G4S3', $argUserID) != '') ? getFiled('Q4G4S3', $argUserID) : 0;
+
+//        //Total Energy Consumption
+        $total_energy_consumtion_mj = (getFiled('Q6E15S2', $argUserID) != '') ? (getFiled('Q6E15S2', $argUserID)) : 0;
+
+        if ($total_population == 0) {
+            $energy_points['Q3_energy'] = 0;
+        } else {
+            //per day energy
+            $per_day_energy = ($total_energy_consumtion_mj) / 30;
+            //echo 'Total Population' . $total_population . 'Per_day_energy' . $per_day_energy;
+            $megajole_per_cepta_day = $per_day_energy / $total_population;
+            //school type
+            $school_type = (getFiled('Q1S1', $argUserID) != '') ? getFiled('Q1S1', $argUserID) : 0;
+
+            //Day Scholar
+            if (($school_type == 1) && ($megajole_per_cepta_day <= 46.2)) { // condition for Day Scholar school.
+                $energy_points['Q3_energy'] = 1;
+            } else if (($school_type == 2) && ($megajole_per_cepta_day <= 49.8)) { // condition for Day Boarding school.
+                $energy_points['Q3_energy'] = 1;
+            } else if (($school_type == 3) && ($megajole_per_cepta_day <= 24.6)) { // condition for Residential school.
+                $energy_points['Q3_energy'] = 1;
+            } else if (($school_type == 4) && ($megajole_per_cepta_day <= 48.0)) { // condition for Day Scholar + Day Boarding school.
+                $energy_points['Q3_energy'] = 1;
+            } else if (($school_type == 5) && ($megajole_per_cepta_day <= 46.2)) { // condition for Day Boarding + Residential school.
+                $energy_points['Q3_energy'] = 1;
+            } else if (($school_type == 6) && ($megajole_per_cepta_day <= 49.8)) { // condition for Day Scholar + Residential school.
+                $energy_points['Q3_energy'] = 1;
+            } else if (($school_type == 7) && ($megajole_per_cepta_day <= 46.2)) { // condition for Day Scholar + Day Boarding + Residential school.
+                $energy_points['Q3_energy'] = 1;
+            }
+            if (!isset($energy_points['Q3_energy'])) {
+                $energy_points['Q3_energy'] = 0;
+            }
+        }
+        //Q Are there any alternate sources of energy employed/ installed in your school?
+        if (((getFiled('Q9E1', $argUserID) != '') ? (getFiled('Q9E1', $argUserID)) : "") != "") {
+            if (((getFiled('Q9E1', $argUserID) != '') ? (getFiled('Q9E1', $argUserID)) : 0) == "Y") {
+                $energy_points['Q6_energy'] = 1;
+            } else if (((getFiled('Q9E1', $argUserID) != '') ? (getFiled('Q9E1', $argUserID)) : 0) == "N") {
+                $energy_points['Q6_energy'] = 0;
+            }
+        }
+        //echo '<pre>'; print_r($energy_points);
+        return number_format(array_sum($energy_points), 2);
+    }
+
+}
+
+/*
+ * Get Food Points
+ */
+if (!function_exists('getFoodPoints')) {
+
+    function getFoodPoints($argUserID) {
+        $food_points = array();
+        //Q.3 What kind of food is being served/sold in your school?
+        $totalFlavourVariaint=array();
+        $totalItemSold=array();
+        $monthFoodSold=array();
+        for($i=2; $i<=10; $i++)
+        {
+            $totalFlavourVariaint[]=(getFiled('Q6F'.$i.'S1', $argUserID) != '') ? (getFiled('Q6F'.$i.'S1', $argUserID)) : 0;
+            $totalItemSold[]=(getFiled('Q6F'.$i.'S2', $argUserID) != '') ? (getFiled('Q6F'.$i.'S2', $argUserID)) : 0;
+            $monthFoodSold[]=(getFiled('Q6F'.$i.'S3', $argUserID) != '') ? (getFiled('Q6F'.$i.'S3', $argUserID)) : 0;
+        }
+        $packageditem= array_sum($totalFlavourVariaint) +array_sum($totalItemSold) + array_sum($monthFoodSold);
+        if($packageditem =="" || $packageditem==0)
+	{ 
+		$food_points['q3_served'] = 2;   
+	}else{
+		$food_points['q3_serverd'] = 0;  
+	}
+        //Q4 Does your school serve traditional Indian snacks?
+        $q4=(getFiled('Q7F1', $argUserID) != '') ? getFiled('Q7F1', $argUserID) : "";
+        if($q4 !='')
+        {
+            if($q4=='Y')
+            {
+               $samosa=(getFiled('Q7F1S1', $argUserID) != '') ? getFiled('Q7F1S1', $argUserID) : "";
+               $sambhar=(getFiled('Q7F1S2', $argUserID) != '') ? getFiled('Q7F1S2', $argUserID) : "";
+               $pavBhaji=(getFiled('Q7F1S3', $argUserID) != '') ? getFiled('Q7F1S3', $argUserID) : "";
+               $momos=(getFiled('Q7F1S4', $argUserID) != '') ? getFiled('Q7F1S4', $argUserID) : "";
+               $other=(getFiled('Q7F1S5', $argUserID) != '') ? getFiled('Q7F1S5', $argUserID) : "";
+               if(($samosa =='' || $samosa==0) && ($sambhar =='' || $sambhar==0) && ($pavBhaji =='' || $pavBhaji==0) || ($momos =='' || $momos==0) || ($other =='' || $other==0))
+               {
+                    $food_points['q4_trad_snack'] = 0; 
+               } else {
+                    $food_points['q4_trad_snack'] = 2; 
+               }
+            }else if($q4=='N')
+            {
+                $food_points['q4_trad_snack'] = 0;  
+            }
+        }
+        
+        ///Q5 Does your school serve traditional Indian beverages?
+        $q5=(getFiled('Q8F1', $argUserID) != '') ? getFiled('Q8F1', $argUserID) : "";
+        if($q5 !=='')
+        {
+            if($q5=='Y')
+            {
+               $nimbopani=(getFiled('Q8F1S1', $argUserID) != '') ? getFiled('Q8F1S1', $argUserID) : "";
+               $lassi=(getFiled('Q8F1S2', $argUserID) != '') ? getFiled('Q8F1S2', $argUserID) : "";
+               $buttermilk=(getFiled('Q8F1S3', $argUserID) != '') ? getFiled('Q8F1S3', $argUserID) : "";
+               $aampana=(getFiled('Q8F1S4', $argUserID) != '') ? getFiled('Q8F1S4', $argUserID) : "";
+               $other=(getFiled('Q8F1S5', $argUserID) != '') ? getFiled('Q8F1S5', $argUserID) : "";
+               if(($nimbopani =='' || $nimbopani==0) && ($lassi =='' || $lassi==0) && ($buttermilk =='' || $buttermilk==0) || ($aampana =='' || $aampana==0) || ($other =='' || $other==0))
+               {
+                    $food_points['q4_trad_beverages'] = 0; 
+               } else {
+                    $food_points['q4_trad_beverages'] = 2; 
+               }
+            }else if($q5=='N')
+            {
+                $food_points['q4_trad_beverages'] = 0;
+            }
+        }
+        //What kind of food does your school promote? 
+        //Q6 Does the school distribute packaged food items as rewards during schools events?
+        $q6=(getFiled('Q9F1', $argUserID) != '') ? getFiled('Q9F1', $argUserID) : "";
+        if($q6=='Y')
+        {
+            $food_points['q6_pack_food'] = 0;
+        }else
+        {
+            $food_points['q6_pack_food'] = 1;
+        }
+        //Q7 Does the school distribute chocolates/similar products as refreshments during schools events?
+        $q7=(getFiled('Q10F1', $argUserID) != '') ? getFiled('Q10F1', $argUserID) : "";
+        if($q7=='Y')
+        {
+            $food_points['q7_pack_food'] = 0;
+        }else
+        {
+            $food_points['q7_pack_food'] = 1;
+        }
+        //Q8 Are your school events such as quiz shows, talent shows, debates sponsored by food companies/brands?
+        $q8=(getFiled('Q11F1', $argUserID) != '') ? getFiled('Q11F1', $argUserID) : "";
+        if($q8=='Y')
+        {
+            $food_points['q8_food_company'] = 0;
+        }else
+        {
+            $food_points['q8_food_company'] = 1;
+        }
+        return array_sum($food_points);
+    }
+
+}
+
+/*
+ * Lands Point
+ */
+if (!function_exists('getLandPoints')) {
+    
+    function getLandPoints($argUserID)
+    {
+        $land_points =array();
+        // Explore the number of species of plants and animals in your school
+        $total_site_area=(getFiled('Q4L2', $argUserID) != '') ? getFiled('Q4L2', $argUserID) : 0 + (getFiled('Q4L3', $argUserID) != '') ? getFiled('Q4L3', $argUserID) : 0 + (getFiled('Q4L4', $argUserID) != '') ? getFiled('Q4L4', $argUserID) : 0 + (getFiled('Q4L5', $argUserID) != '') ? getFiled('Q4L5', $argUserID) : 0 + (getFiled('Q4L6', $argUserID) != '') ? getFiled('Q4L6', $argUserID) : 0 + (getFiled('Q4L7', $argUserID) != '') ? getFiled('Q4L7', $argUserID) : 0 + (getFiled('Q4L8', $argUserID) != '') ? getFiled('Q4L8', $argUserID) : 0;
+        
+        //Q2 How many species of plants and animals exist in your school
+        $plants=(getFiled('Q5L1S1', $argUserID) != '') ? getFiled('Q5L1S1', $argUserID) : 0;
+        $animals=(getFiled('Q5L2S1', $argUserID) != '') ? getFiled('Q5L2S1', $argUserID) : 0;
+        if($plants==100)
+        {
+            $land_points['Q2_plants'] =2;
+        }else if($plants >100)
+        {
+            $land_points['Q2_plants'] =2;
+        }else if($plants <100)
+        {
+            $land_points['Q2_plants']=($plants/100)*2;
+        }
+        //Animals
+        if($animals==50)
+        {
+            $land_points['Q2_animals'] =2;
+        }else if($animals >50)
+        {
+            $land_points['Q2_animals'] =2;
+        }else if($animals < 50)
+        {
+            $land_points['Q2_plants']=($plants/50)*2;
+        }
+        
+        //Find out if your school uses chemical-based pesticides 
+        //Q3 Do you use chemical-based pesticides in your school green cover?
+        $pestiside=(getFiled('Q6L1', $argUserID) != '') ? getFiled('Q6L1', $argUserID) : "";
+        if($pestiside !='')
+        {
+            if($pestiside=='Y')
+            {
+                $land_points['Q3_pestiside'] =0;
+            }else if($pestiside=='N')
+            {
+                $land_points['Q3_pestiside'] =1;
+            }
+        }
+        return array_sum($land_points);
+    }
 }
