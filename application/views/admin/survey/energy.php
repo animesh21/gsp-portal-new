@@ -192,14 +192,25 @@
       <div class="form-group" id="ebill">
         <label class="control-label">Please upload the most recent electricity bill here</label>
         <br>
-        <table width="100%" class="table table-bordered question uploadedfiles">
+        <table width="100%" class="table  question uploadedfiles">
           <thead>
             <tr>
+			<th>image</th>
               <th>File name</th>
-              <th>Action</th>
+             
             </tr>
           </thead>
+		  
           <tbody>
+		  <?php foreach ($electricityBills as $f) { ?>
+                                <tr id="index<?php echo $f->id; ?>">
+                                    <?php $name = str_replace(" ", "_", $f->name . "_Electricity_Bill_"); ?>
+									<td><img src="<?php echo base_url('uploads/files/'.$f->file_name);?>"class="img-thumbnail" style="height:80px;width:80px;"></img></td>
+									
+                                    <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+									
+                                </tr>
+                            <?php } ?>
           </tbody>
         </table>
       </div>
@@ -298,14 +309,23 @@ Total</th><th><?php echo (getFiled('Q6E15S1', $schoolUserID)!="")? getFiled('Q6E
       </div>
       <div class="form-group">
         <label class="control-label">Please upload fuel bills</label>
-       <table width="100%" class="table table-bordered question uploadedfiles">
+       <table width="100%" class="table question uploadedfiles">
         <thead>
           <tr>
+			<th>image</th>
             <th>File name</th>
-            <th>Action</th>
+          
           </tr>
         </thead>
         <tbody>
+		<?php foreach ($fulesBills as $f) { ?>
+            <tr id="index<?php echo $f->id; ?>">
+                <?php $name = str_replace(" ", "_", $f->name . "_Fuels_Bills_"); ?>
+				<td><img src="<?php echo base_url('uploads/files/'.$f->file_name);?>" class="img-thumbnail" style="height:80px;width:80px;"></img></td>
+                <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+               
+            </tr>
+        <?php } ?>
         </tbody>
       </table>
       </div>
@@ -419,11 +439,20 @@ Total</th><th><?php echo (getFiled('Q6E15S1', $schoolUserID)!="")? getFiled('Q6E
       <table width="100%" class="table table-bordered question uploadedfiles">
         <thead>
           <tr>
+            <th>image</th>
             <th>File name</th>
-            <th>Action</th>
+            
           </tr>
         </thead>
         <tbody>
+		 <?php foreach ($energySupport as $f) { ?>
+                        <tr id="index<?php echo $f->id; ?>">
+                            <?php $name = str_replace(" ", "_", $f->name . "_Supporting_Document_Energy_"); ?>
+							<td><img src="<?php echo base_url('uploads/files/'.$f->file_name);?>" class="img-thumbnail" style="height:80px;width:80px;"></img></td>
+                            <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                            
+                        </tr>
+                    <?php } ?>
         </tbody>
       </table>
       <div class="clearfix">&nbsp;</div>
