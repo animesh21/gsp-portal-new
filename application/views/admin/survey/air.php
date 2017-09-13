@@ -202,7 +202,7 @@
    <?php endfor; ?>
    <tr><td>Total</td>  <td><?php echo getFiled('Q5A110S2', $schoolUserID); ?></td> <td><?php echo getFiled('Q5A110S3', $schoolUserID); ?></td> <td></td> </tr>
    </table>
-    <div class="form-group1 row" id="A1S1" style="display:none;">
+    <div class="form-group1 row" id="A1S1">
       <div class="col-xs-3">
         <input class="form-control space-textbox" onchange="computePercent()" id="Q5A1S1" type="text" min="0" name="Q5A1S1" placeholder="" value="">
       </div>
@@ -216,7 +216,7 @@
         <input class="form-control space-textbox" onchange="computePercent()" id="Q5A1S4" type="number" min="0" name="Q5A1S4" placeholder="" value="" readonly="">
       </div>
     </div>
-    <div class="form-group1 row" id="A1S2" style="display:none;">
+    <div class="form-group1 row" id="A1S2">
       <div class="col-xs-3">
         <input class="form-control space-textbox" onchange="computePercent()" id="Q5A2S1" type="text" min="0" name="Q5A2S1" placeholder="" value="">
       </div>
@@ -230,7 +230,7 @@
         <input class="form-control space-textbox" onchange="computePercent()" id="Q5A2S4" type="number" min="0" name="Q5A2S4" placeholder="" value="" readonly="">
       </div>
     </div>
-    <div class="form-group1 row" id="A1S3" style="display:none;">
+    <div class="form-group1 row" id="A1S3">
       <div class="col-xs-3">
         <input class="form-control space-textbox" onchange="computePercent()" id="Q5A3S1" type="text" min="0" name="Q5A3S1" placeholder="" value="">
       </div>
@@ -244,7 +244,7 @@
         <input class="form-control space-textbox" onchange="computePercent()" id="Q5A3S4" type="number" min="0" name="Q5A3S4" placeholder="" value="" readonly="">
       </div>
     </div>
-    <div class="form-group1 row" id="A1S4" style="display:none;">
+    <div class="form-group1 row" id="A1S4" >
       <div class="col-xs-3">
         <input class="form-control space-textbox" onchange="computePercent()" id="Q5A4S1" type="text" min="0" name="Q5A4S1" placeholder="" value="">
       </div>
@@ -258,7 +258,7 @@
         <input class="form-control space-textbox" onchange="computePercent()" id="Q5A4S4" type="number" min="0" name="Q5A4S4" placeholder="" value="" readonly="">
       </div>
     </div>
-    <div class="form-group1 row" id="A1S5" style="display:none;">
+    <div class="form-group1 row" id="A1S5" >
       <div class="col-xs-3">
         <input class="form-control space-textbox" onchange="computePercent()" id="Q5A5S1" type="text" min="0" name="Q5A5S1" placeholder="" value="">
       </div>
@@ -272,7 +272,7 @@
         <input class="form-control space-textbox" onchange="computePercent()" id="Q5A5S4" type="number" min="0" name="Q5A5S4" placeholder="" value="" readonly="">
       </div>
     </div>
-    <div class="form-group1 row" id="A1S6" style="display:none;">
+    <div class="form-group1 row" id="A1S6">
       <div class="col-xs-3">
         <input class="form-control space-textbox" onchange="computePercent()" id="Q5A6S1" type="text" min="0" name="Q5A6S1" placeholder="" value="">
       </div>
@@ -286,7 +286,7 @@
         <input class="form-control space-textbox" onchange="computePercent()" id="Q5A6S4" type="number" min="0" name="Q5A6S4" placeholder="" value="" readonly="">
       </div>
     </div>
-    <div class="form-group1 row" id="A1S7" style="display:none;">
+    <div class="form-group1 row" id="A1S7">
       <div class="col-xs-3">
         <input class="form-control space-textbox" onchange="computePercent()" id="Q5A7S1" type="text" min="0" name="Q5A7S1" placeholder="" value="">
       </div>
@@ -300,7 +300,7 @@
         <input class="form-control space-textbox" onchange="computePercent()" id="Q5A7S4" type="number" min="0" name="Q5A7S4" placeholder="" value="" readonly="">
       </div>
     </div>
-    <div class="form-group1 row" id="A1S8" style="display:none;">
+    <div class="form-group1 row" id="A1S8">
       <div class="col-xs-3">
         <input class="form-control space-textbox" onchange="computePercent()" id="Q5A8S1" type="text" min="0" name="Q5A8S1" placeholder="" value="">
       </div>
@@ -314,7 +314,7 @@
         <input class="form-control space-textbox" onchange="computePercent()" id="Q5A8S4" type="number" min="0" name="Q5A8S4" placeholder="" value="" readonly="">
       </div>
     </div>
-    <div class="form-group1 row" id="A1S9" style="display:none;">
+    <div class="form-group1 row" id="A1S9" >
       <div class="col-xs-3">
         <input class="form-control space-textbox" onchange="computePercent()" id="Q5A9S1" type="text" min="0" name="Q5A9S1" placeholder="" value="">
       </div>
@@ -328,7 +328,7 @@
         <input class="form-control space-textbox" onchange="computePercent()" id="Q5A9S4" type="number" min="0" name="Q5A9S4" placeholder="" value="" readonly="">
       </div>
     </div>
-    <div class="form-group1 row" id="A1S10" style="display:none;">
+    <div class="form-group1 row" id="A1S10">
       <div class="col-xs-3">
         <input class="form-control space-textbox" onchange="computePercent()" id="Q5A10S1" type="text" min="0" name="Q5A10S1" placeholder="" value="">
       </div>
@@ -519,17 +519,25 @@
     Uploaded files must be in one of the following formats: PDF Document (.pdf), Word Document (.doc, .docx), Image
     File (.jpg, .jpeg). File size per document should not exceed 500 KB. </div>
   <div class="clearfix">&nbsp;</div>
-  <table width="100%" class="table table-bordered question uploadedfiles">
+  <table width="100%" class="table  question uploadedfiles">
     <thead>
-      <tr>
+    <tr><th>image</th>
         <th>File name</th>
-        <th>Action</th>
+       
       </tr>
     </thead>
     <tbody>
+	<?php foreach ($pucCertificate as $a) { ?>
+      <tr id="index<?php echo $a->id; ?>">
+        <?php $Text = str_replace(" ", "_", $a->name . "_PUC_Certificate_"); ?>
+		<td><img src="<?php echo base_url('uploads/files/'.$a->file_name);?>" class="img-thumbnail" style="height:80px;width:80px;"></img></td>
+        <td class="upload edit"><?php echo str_replace($Text, " ", $a->file_name); ?></td>
+		
+      </tr>
+      <?php } ?>
     </tbody>
   </table>
-  <div class="form-group" id="vehicle2" style="display:none;">
+  <div class="form-group" id="vehicle2">
     <label class="control-label"><span class="cube">3(b)</span>Specify the type of fuel used by your school?s vehicles: <a class="tt" data-tooltip="The below is an indicative list of type of vehicles.  If the school has other than these vehicles, please provide details in ?Other vehicles? section."><span class="badge">?</span></a></label>
     <table class="table">
       <tbody>
@@ -604,14 +612,24 @@
     Uploaded files must be in one of the following formats: PDF Document (.pdf), Word Document (.doc, .docx), Image
     File (.jpg, .jpeg). File size per document should not exceed 500 KB.
     <div class="clearfix">&nbsp;</div>
-    <table width="100%" class="table table-bordered question uploadedfiles">
+    <table width="100%" class="table question uploadedfiles">
       <thead>
-        <tr>
+        <tr><th>image</th>
           <th>File name</th>
-          <th>Action</th>
+          
         </tr>
       </thead>
       <tbody>
+	   <?php foreach ($filesfules as $b) { ?>
+    <tr id="index<?php echo $b->id; ?>">
+	
+      <?php $Text = str_replace(" ", "_", $b->name . "_Fuels_"); ?>
+	 <td><img src="<?php echo base_url('uploads/files/'.$b->file_name);?>" class="img-thumbnail" style="height:80px;width:80px;"></img></td>
+      <td class="upload edit"><?php echo str_replace($Text, " ", $b->file_name); ?></td>
+	   
+     
+    </tr>
+    <?php } ?>
       </tbody>
     </table>
   </div>
@@ -630,7 +648,7 @@
       </li>
     </ul>
   </div>
-  <div class="form-group" id="Q6A3S1" style="display:none;">
+  <div class="form-group" id="Q6A3S1">
     <label class="control-label"><span class="cube">3(c)a</span>IS CNG AVAILABLE IN YOUR AREA?</label>
     <ul class="list-inline">
       <li>
@@ -827,14 +845,24 @@
     following formats: PDF Document (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg). File size per
     document should not exceed 500 KB.<br>
     <br>
-    <table width="100%" class="table table-bordered question uploadedfiles">
+    <table width="100%" class="table  question uploadedfiles">
       <thead>
         <tr>
+          <th>image</th>
           <th>File name</th>
-          <th>Action</th>
+         
         </tr>
       </thead>
       <tbody>
+	   <?php foreach ($airQualityMonitering as $f) { ?>
+    <tr id="index<?php echo $f->id; ?>">
+      <?php $name = str_replace(" ", "_", $f->name . "_Air_Quality_Monitoring_"); ?>
+     <td><img src="<?php echo base_url('uploads/files/'.$f->file_name);?>" class="img-thumbnail" style="height:80px;width:80px;"></img></td>
+     <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+	  
+     
+    </tr>
+    <?php } ?>
       </tbody>
     </table>
   </div>
@@ -858,11 +886,20 @@
     <table width="100%" class="table table-bordered question uploadedfiles">
       <thead>
         <tr>
+          <th>image</th>
           <th>File name</th>
-          <th>Action</th>
+          
         </tr>
       </thead>
       <tbody>
+	  <?php foreach ($files as $f) { ?>
+    <tr id="index<?php echo $f->id; ?>">
+      <?php $name = str_replace(" ", "_", $f->name . "_Supporting_Document_Air_"); ?>
+	   <td><img src="<?php echo base_url('uploads/files/'.$f->file_name);?>" class="img-thumbnail" style="height:80px;width:80px;"></img></td>
+      <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+      
+	  </tr>
+    <?php } ?>
       </tbody>
     </table>
   </div>
