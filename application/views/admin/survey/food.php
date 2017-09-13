@@ -230,7 +230,7 @@
                     <div class="form-group" id="Q5F1SF" style="display: none;">
              <label class="control-label">Please upload photographs of lunch boxes</label>
                             <br>
-            <button class="btn uploadbtn upload" data-id="Lunch Boxes" data-toggle="modal" data-target="#airModal" type="button">UPLOAD FILES </button>
+           
                             <br>
                          </div>
      <div class="form-group" id="Q5F1S2">
@@ -703,7 +703,7 @@ products as refreshments during schools events?</label>
  Please upload all supporting documents related to this section here. Note: files must be in one of the
  following formats: PDF Document (.pdf), Word Document .doc, .docx), Image File (.jpg, .jpeg). File size per document should not exceed 500 KB.<br>
                                  <br>
-  <button class="btn uploadbtn upload" data-id="Audit Team doing Survey" data-toggle="modal" data-target="#airModal" type="button"> UPLOAD FILES </button>
+  
                               <br>
                </div>
  <table width="100%" class="question uploadedfiles">

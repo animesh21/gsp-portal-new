@@ -94,7 +94,7 @@
       <label class="control-label">Students (maximum of ten students can be part of the team):</label>
       <table class="table table-bordered table-striped">
         <tr>
-          <th></th>
+          <th>Sr no</th>
           <th> First Name </th>
           <th> Last Name </th>
           <th> Grade </th>
@@ -140,6 +140,7 @@
           <td><?php echo (getFiled('Q3A7S1', $schoolUserID)!="")?getFiled('Q3A7S1', $schoolUserID) : "N/A"; ?> </td>
           <td><?php echo (getFiled('Q3A7S2', $schoolUserID)!="")?getFiled('Q3A7S2', $schoolUserID) : "N/A"; ?> </td>
           <td><?php echo (getFiled('Q3A7S3', $schoolUserID)!="")?getFiled('Q3A7S3', $schoolUserID) : "N/A"; ?> </td>
+          
         </tr>
         <tr>
           <td> 8</td>
@@ -201,147 +202,83 @@
      </tr>
    <?php endfor; ?>
    <tr><td>Total</td>  <td><?php echo getFiled('Q5A110S2', $schoolUserID); ?></td> <td><?php echo getFiled('Q5A110S3', $schoolUserID); ?></td> <td></td> </tr>
-   </table>
-    <div class="form-group1 row" id="A1S1">
-      <div class="col-xs-3">
-        <input class="form-control space-textbox" onchange="computePercent()" id="Q5A1S1" type="text" min="0" name="Q5A1S1" placeholder="" value="">
-      </div>
-      <div class="col-xs-3">
-        <input class="form-control space-textbox" onchange="computePercent()" id="Q5A1S2" type="number" min="0" name="Q5A1S2" placeholder="" value="">
-      </div>
-      <div class="col-xs-3">
-        <input class="form-control space-textbox" onchange="computePercent()" id="Q5A1S3" type="number" min="0" name="Q5A1S3" placeholder="" value="">
-      </div>
-      <div class="col-xs-3">
-        <input class="form-control space-textbox" onchange="computePercent()" id="Q5A1S4" type="number" min="0" name="Q5A1S4" placeholder="" value="" readonly="">
-      </div>
-    </div>
-    <div class="form-group1 row" id="A1S2">
-      <div class="col-xs-3">
-        <input class="form-control space-textbox" onchange="computePercent()" id="Q5A2S1" type="text" min="0" name="Q5A2S1" placeholder="" value="">
-      </div>
-      <div class="col-xs-3">
-        <input class="form-control space-textbox" onchange="computePercent()" id="Q5A2S2" type="number" min="0" name="Q5A2S2" placeholder="" value="">
-      </div>
-      <div class="col-xs-3">
-        <input class="form-control space-textbox" onchange="computePercent()" id="Q5A2S3" type="number" min="0" name="Q5A2S3" placeholder="" value="">
-      </div>
-      <div class="col-xs-3">
-        <input class="form-control space-textbox" onchange="computePercent()" id="Q5A2S4" type="number" min="0" name="Q5A2S4" placeholder="" value="" readonly="">
-      </div>
-    </div>
-    <div class="form-group1 row" id="A1S3">
-      <div class="col-xs-3">
-        <input class="form-control space-textbox" onchange="computePercent()" id="Q5A3S1" type="text" min="0" name="Q5A3S1" placeholder="" value="">
-      </div>
-      <div class="col-xs-3">
-        <input class="form-control space-textbox" onchange="computePercent()" id="Q5A3S2" type="number" min="0" name="Q5A3S2" placeholder="" value="">
-      </div>
-      <div class="col-xs-3">
-        <input class="form-control space-textbox" onchange="computePercent()" id="Q5A3S3" type="number" min="0" name="Q5A3S3" placeholder="" value="">
-      </div>
-      <div class="col-xs-3">
-        <input class="form-control space-textbox" onchange="computePercent()" id="Q5A3S4" type="number" min="0" name="Q5A3S4" placeholder="" value="" readonly="">
-      </div>
-    </div>
-    <div class="form-group1 row" id="A1S4" >
-      <div class="col-xs-3">
-        <input class="form-control space-textbox" onchange="computePercent()" id="Q5A4S1" type="text" min="0" name="Q5A4S1" placeholder="" value="">
-      </div>
-      <div class="col-xs-3">
-        <input class="form-control space-textbox" onchange="computePercent()" id="Q5A4S2" type="number" min="0" name="Q5A4S2" placeholder="" value="">
-      </div>
-      <div class="col-xs-3">
-        <input class="form-control space-textbox" onchange="computePercent()" id="Q5A4S3" type="number" min="0" name="Q5A4S3" placeholder="" value="">
-      </div>
-      <div class="col-xs-3">
-        <input class="form-control space-textbox" onchange="computePercent()" id="Q5A4S4" type="number" min="0" name="Q5A4S4" placeholder="" value="" readonly="">
-      </div>
-    </div>
-    <div class="form-group1 row" id="A1S5" >
-      <div class="col-xs-3">
-        <input class="form-control space-textbox" onchange="computePercent()" id="Q5A5S1" type="text" min="0" name="Q5A5S1" placeholder="" value="">
-      </div>
-      <div class="col-xs-3">
-        <input class="form-control space-textbox" onchange="computePercent()" id="Q5A5S2" type="number" min="0" name="Q5A5S2" placeholder="" value="">
-      </div>
-      <div class="col-xs-3">
-        <input class="form-control space-textbox" onchange="computePercent()" id="Q5A5S3" type="number" min="0" name="Q5A5S3" placeholder="" value="">
-      </div>
-      <div class="col-xs-3">
-        <input class="form-control space-textbox" onchange="computePercent()" id="Q5A5S4" type="number" min="0" name="Q5A5S4" placeholder="" value="" readonly="">
-      </div>
-    </div>
-    <div class="form-group1 row" id="A1S6">
-      <div class="col-xs-3">
-        <input class="form-control space-textbox" onchange="computePercent()" id="Q5A6S1" type="text" min="0" name="Q5A6S1" placeholder="" value="">
-      </div>
-      <div class="col-xs-3">
-        <input class="form-control space-textbox" onchange="computePercent()" id="Q5A6S2" type="number" min="0" name="Q5A6S2" placeholder="" value="">
-      </div>
-      <div class="col-xs-3">
-        <input class="form-control space-textbox" onchange="computePercent()" id="Q5A6S3" type="number" min="0" name="Q5A6S3" placeholder="" value="">
-      </div>
-      <div class="col-xs-3">
-        <input class="form-control space-textbox" onchange="computePercent()" id="Q5A6S4" type="number" min="0" name="Q5A6S4" placeholder="" value="" readonly="">
-      </div>
-    </div>
-    <div class="form-group1 row" id="A1S7">
-      <div class="col-xs-3">
-        <input class="form-control space-textbox" onchange="computePercent()" id="Q5A7S1" type="text" min="0" name="Q5A7S1" placeholder="" value="">
-      </div>
-      <div class="col-xs-3">
-        <input class="form-control space-textbox" onchange="computePercent()" id="Q5A7S2" type="number" min="0" name="Q5A7S2" placeholder="" value="">
-      </div>
-      <div class="col-xs-3">
-        <input class="form-control space-textbox" onchange="computePercent()" id="Q5A7S3" type="number" min="0" name="Q5A7S3" placeholder="" value="">
-      </div>
-      <div class="col-xs-3">
-        <input class="form-control space-textbox" onchange="computePercent()" id="Q5A7S4" type="number" min="0" name="Q5A7S4" placeholder="" value="" readonly="">
-      </div>
-    </div>
-    <div class="form-group1 row" id="A1S8">
-      <div class="col-xs-3">
-        <input class="form-control space-textbox" onchange="computePercent()" id="Q5A8S1" type="text" min="0" name="Q5A8S1" placeholder="" value="">
-      </div>
-      <div class="col-xs-3">
-        <input class="form-control space-textbox" onchange="computePercent()" id="Q5A8S2" type="number" min="0" name="Q5A8S2" placeholder="" value="">
-      </div>
-      <div class="col-xs-3">
-        <input class="form-control space-textbox" onchange="computePercent()" id="Q5A8S3" type="number" min="0" name="Q5A8S3" placeholder="" value="">
-      </div>
-      <div class="col-xs-3">
-        <input class="form-control space-textbox" onchange="computePercent()" id="Q5A8S4" type="number" min="0" name="Q5A8S4" placeholder="" value="" readonly="">
-      </div>
-    </div>
-    <div class="form-group1 row" id="A1S9" >
-      <div class="col-xs-3">
-        <input class="form-control space-textbox" onchange="computePercent()" id="Q5A9S1" type="text" min="0" name="Q5A9S1" placeholder="" value="">
-      </div>
-      <div class="col-xs-3">
-        <input class="form-control space-textbox" onchange="computePercent()" id="Q5A9S2" type="number" min="0" name="Q5A9S2" placeholder="" value="">
-      </div>
-      <div class="col-xs-3">
-        <input class="form-control space-textbox" onchange="computePercent()" id="Q5A9S3" type="number" min="0" name="Q5A9S3" placeholder="" value="">
-      </div>
-      <div class="col-xs-3">
-        <input class="form-control space-textbox" onchange="computePercent()" id="Q5A9S4" type="number" min="0" name="Q5A9S4" placeholder="" value="" readonly="">
-      </div>
-    </div>
-    <div class="form-group1 row" id="A1S10">
-      <div class="col-xs-3">
-        <input class="form-control space-textbox" onchange="computePercent()" id="Q5A10S1" type="text" min="0" name="Q5A10S1" placeholder="" value="">
-      </div>
-      <div class="col-xs-3">
-        <input class="form-control space-textbox" onchange="computePercent()" id="Q5A10S2" type="number" min="0" name="Q5A10S2" placeholder="" value="">
-      </div>
-      <div class="col-xs-3">
-        <input class="form-control space-textbox" onchange="computePercent()" id="Q5A10S3" type="number" min="0" name="Q5A10S3" placeholder="" value="">
-      </div>
-      <div class="col-xs-3">
-        <input class="form-control space-textbox" onchange="computePercent()" id="Q5A10S4" type="number" min="0" name="Q5A10S4" placeholder="" value="" readonly="">
-      </div>
-    </div>
+  
+        
+        <tr>
+         
+          <td><?php echo (getFiled('Q5A1S1', $schoolUserID)!="")?getFiled('Q5A1S1', $schoolUserID) : "N/A"; ?> </td>
+		  <td><?php echo (getFiled('Q5A1S2', $schoolUserID)!="")?getFiled('Q5A1S2', $schoolUserID) : "N/A"; ?> </td>
+          <td><?php echo (getFiled('Q5A1S3', $schoolUserID)!="")?getFiled('Q5A1S3', $schoolUserID) : "N/A"; ?> </td>
+		  <td><?php echo (getFiled('Q5A1S4', $schoolUserID)!="")?getFiled('Q5A1S4', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+        <tr>
+         
+          <td><?php echo (getFiled('Q5A2S1', $schoolUserID)!="")?getFiled('Q5A2S1', $schoolUserID) : "N/A"; ?> </td>
+          <td><?php echo (getFiled('Q5A2S2', $schoolUserID)!="")?getFiled('Q5A2S2', $schoolUserID) : "N/A"; ?> </td>
+          <td><?php echo (getFiled('Q5A2S3', $schoolUserID)!="")?getFiled('Q5A2S3', $schoolUserID) : "N/A"; ?> </td>
+          <td><?php echo (getFiled('Q5A2S4', $schoolUserID)!="")?getFiled('Q5A2S4', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+        <tr>
+         
+          <td><?php echo (getFiled('Q5A3S1', $schoolUserID)!="")?getFiled('Q5A3S1', $schoolUserID) : "N/A"; ?> </td>
+          <td><?php echo (getFiled('Q5A3S2', $schoolUserID)!="")?getFiled('Q5A3S2', $schoolUserID) : "N/A"; ?> </td>
+          <td><?php echo (getFiled('Q3A3S3', $schoolUserID)!="")?getFiled('Q3A3S3', $schoolUserID) : "N/A"; ?> </td>
+          <td><?php echo (getFiled('Q5A3S4', $schoolUserID)!="")?getFiled('Q5A3S4', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+        <tr>
+         
+          <td><?php echo (getFiled('Q5A4S1', $schoolUserID)!="")?getFiled('Q5A4S1', $schoolUserID) : "N/A"; ?> </td>
+          <td><?php echo (getFiled('Q5A4S2', $schoolUserID)!="")?getFiled('Q5A4S2', $schoolUserID) : "N/A"; ?> </td>
+          <td><?php echo (getFiled('Q5A4S3', $schoolUserID)!="")?getFiled('Q5A4S3', $schoolUserID) : "N/A"; ?> </td>
+          <td><?php echo (getFiled('Q5A4S4', $schoolUserID)!="")?getFiled('Q5A4S4', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+        <tr>
+          
+          <td><?php echo (getFiled('Q5A5S1', $schoolUserID)!="")?getFiled('Q5A5S1', $schoolUserID) : "N/A"; ?> </td>
+          <td><?php echo (getFiled('Q5A5S2', $schoolUserID)!="")?getFiled('Q5A5S2', $schoolUserID) : "N/A"; ?> </td>
+          <td><?php echo (getFiled('Q5A5S3', $schoolUserID)!="")?getFiled('Q5A5S3', $schoolUserID) : "N/A"; ?> </td>
+          <td><?php echo (getFiled('Q5A5S4', $schoolUserID)!="")?getFiled('Q5A5S4', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+        <tr>
+        
+          <td><?php echo (getFiled('Q5A6S1', $schoolUserID)!="")?getFiled('Q5A6S1', $schoolUserID) : "N/A"; ?> </td>
+          <td><?php echo (getFiled('Q5A6S2', $schoolUserID)!="")?getFiled('Q5A6S2', $schoolUserID) : "N/A"; ?> </td>
+          <td><?php echo (getFiled('Q5A6S3', $schoolUserID)!="")?getFiled('Q5A6S3', $schoolUserID) : "N/A"; ?> </td>
+          <td><?php echo (getFiled('Q5A6S4', $schoolUserID)!="")?getFiled('Q5A6S4', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+        <tr>
+          
+          <td><?php echo (getFiled('Q5A7S1', $schoolUserID)!="")?getFiled('Q5A7S1', $schoolUserID) : "N/A"; ?> </td>
+          <td><?php echo (getFiled('Q5A7S2', $schoolUserID)!="")?getFiled('Q5A7S2', $schoolUserID) : "N/A"; ?> </td>
+          <td><?php echo (getFiled('Q5A7S3', $schoolUserID)!="")?getFiled('Q5A7S3', $schoolUserID) : "N/A"; ?> </td>
+          <td><?php echo (getFiled('Q5A7S4', $schoolUserID)!="")?getFiled('Q5A7S4', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+        <tr>
+          
+          <td><?php echo (getFiled('Q5A8S1', $schoolUserID)!="")?getFiled('Q5A8S1', $schoolUserID) : "N/A"; ?> </td>
+          <td><?php echo (getFiled('Q5A8S2', $schoolUserID)!="")?getFiled('Q5A8S2', $schoolUserID) : "N/A"; ?> </td>
+          <td><?php echo (getFiled('Q5A8S3', $schoolUserID)!="")?getFiled('Q5A8S3', $schoolUserID) : "N/A"; ?> </td>
+          <td><?php echo (getFiled('Q5A8S4', $schoolUserID)!="")?getFiled('Q5A8S4', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+        <tr>
+          
+          <td><?php echo (getFiled('Q5A9S1', $schoolUserID)!="")?getFiled('Q5A9S1', $schoolUserID) : "N/A"; ?> </td>
+          <td><?php echo (getFiled('Q5A9S2', $schoolUserID)!="")?getFiled('Q5A9S2', $schoolUserID) : "N/A"; ?> </td>
+          <td><?php echo (getFiled('Q5A9S3', $schoolUserID)!="")?getFiled('Q5A9S3', $schoolUserID) : "N/A"; ?> </td>
+          <td><?php echo (getFiled('Q5A9S4', $schoolUserID)!="")?getFiled('Q5A9S4', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+        <tr>
+         
+          <td><?php echo (getFiled('Q5A10S1', $schoolUserID)!="")?getFiled('Q5A10S1', $schoolUserID) : "N/A"; ?> </td>
+          <td><?php echo (getFiled('Q5A10S2', $schoolUserID)!="")?getFiled('Q5A10S2', $schoolUserID) : "N/A"; ?> </td>
+          <td><?php echo (getFiled('Q5A10S3', $schoolUserID)!="")?getFiled('Q5A10S3', $schoolUserID) : "N/A"; ?> </td>
+          <td><?php echo (getFiled('Q5A10S4', $schoolUserID)!="")?getFiled('Q5A10S4', $schoolUserID) : "N/A"; ?> </td>
+        </tr>
+      </table>
+   
+   
+   
+    
   </div>
   <div class="form-group">
     <label>
@@ -355,9 +292,9 @@
     school? Please choose what is applicable.</label>
     <br/>
     <?php echo (getFiled('Q6A1', $schoolUserID)!="")?getFiled('Q6A1', $schoolUserID) : "N/A"; ?> </div>
-  <div class="form-group" id="vehicle" style="display:none;">
+  <div class="form-group" id="vehicle">
     <label class="control-label"><span class="cube">3(a)</span>Provide details of school-owned motorised
-    vehicles <a class="tt" data-tooltip="Schools who use a combination of school-owned and operator-owned vehicles have to upload information only about school-owned vehicles. Do not add any personal vehicles."><span class="badge">?</span></a></label>
+    vehicles </label>
     <div class="form-group-1 row">
       <div class="col-xs-2">
         <label>Vehicle Details</label>
@@ -383,131 +320,154 @@
         <label>No. of vehicles</label>
       </div>
       <div class="col-xs-2">
-        <input class="form-control space-textbox" onkeyup="details()" id="b1" type="number" min="0" name="Q6A2S1B1" placeholder="" value="">
+	  <td><?php echo (getFiled('Q6A2S1B1', $schoolUserID)!="")?getFiled('Q6A2S1B1', $schoolUserID) : "N/A"; ?> </td>
+       
       </div>
       <div class="col-xs-2">
-        <input class="form-control space-textbox" onkeyup="details()" id="c1" type="number" min="0" name="Q6A2S1C1" placeholder="" value="">
+	  <td><?php echo (getFiled('Q6A2S1C1', $schoolUserID)!="")?getFiled('Q6A2S1C1', $schoolUserID) : "N/A"; ?> </td>
+        
       </div>
       <div class="col-xs-2">
-        <input class="form-control space-textbox" onkeyup="details()" id="v1" type="number" min="0" name="Q6A2S1V1" placeholder="" value="">
+	  <td><?php echo (getFiled('Q6A2S1V1', $schoolUserID)!="")?getFiled('Q6A2S1V1', $schoolUserID) : "N/A"; ?> </td>
+       
       </div>
       <div class="col-xs-2">
-        <input class="form-control space-textbox" onkeyup="details()" id="o1" type="number" min="0" name="Q6A2S1O1" placeholder="" value="">
+	   <td><?php echo (getFiled('Q6A2S1O1', $schoolUserID)!="")?getFiled('Q6A2S1O1', $schoolUserID) : "N/A"; ?> </td>
+        
       </div>
       <div class="col-xs-2">
-        <input class="form-control space-textbox" onkeyup="details()" id="t1" type="number" min="0" name="Q6A2S1T1" placeholder="" value="" readonly="">
+	   <td><?php echo (getFiled('Q6A2S1T1', $schoolUserID)!="")?getFiled('Q6A2S1T1', $schoolUserID) : "N/A"; ?> </td>
+        
       </div>
     </div>
+	<hr>
     <div class="form-group1 row">
       <div class="col-xs-2">
         <label>No. of vehicles more than eight years old</label>
       </div>
       <div class="col-xs-2">
-        <input class="form-control space-textbox" onkeyup="details()" id="b2" type="number" min="0" name="Q6A2S1B2" placeholder="" value="">
+	   <td><?php echo (getFiled('Q6A2S1B2', $schoolUserID)!="")?getFiled('Q6A2S1B2', $schoolUserID) : "N/A"; ?> </td>
+        
       </div>
       <div class="col-xs-2">
-        <input class="form-control space-textbox" onkeyup="details()" id="c2" type="number" min="0" name="Q6A2S1C2" placeholder="" value="">
+	   <td><?php echo (getFiled('Q6A2S1C2', $schoolUserID)!="")?getFiled('Q6A2S1C2', $schoolUserID) : "N/A"; ?> </td>
+        
       </div>
       <div class="col-xs-2">
-        <input class="form-control space-textbox" onkeyup="details()" id="v2" type="number" min="0" name="Q6A2S1V2" placeholder="" value="">
+	  <td><?php echo (getFiled('Q6A2S1V2', $schoolUserID)!="")?getFiled('Q6A2S1V2', $schoolUserID) : "N/A"; ?> </td>
+       
       </div>
       <div class="col-xs-2">
-        <input class="form-control space-textbox" onkeyup="details()" id="o2" type="number" min="0" name="Q6A2S1O2" placeholder="" value="">
+	   <td><?php echo (getFiled('Q6A2S1O2', $schoolUserID)!="")?getFiled('Q6A2S1O2', $schoolUserID) : "N/A"; ?> </td>
+        
       </div>
       <div class="col-xs-2">
-        <input class="form-control space-textbox" onkeyup="details()" id="t2" type="number" min="0" name="Q6A2S1T2" placeholder="" value="" readonly="">
+	  <td><?php echo (getFiled('Q6A2S1T2', $schoolUserID)!="")?getFiled('Q6A2S1T2', $schoolUserID) : "N/A"; ?> </td>
+        
       </div>
     </div>
+	<hr>
     <div class="form-group1 row">
       <div class="col-xs-2">
         <label>No. of Air conditioned vehicles</label>
       </div>
       <div class="col-xs-2">
-        <input class="form-control space-textbox" onkeyup="details()" id="b3" type="number" min="0" name="Q6A2S1B3" placeholder="" value="">
+	   <td><?php echo (getFiled('Q6A2S1B3', $schoolUserID)!="")?getFiled('Q6A2S1B3', $schoolUserID) : "N/A"; ?> </td>
+       
       </div>
       <div class="col-xs-2">
-        <input class="form-control space-textbox" onkeyup="details()" id="c3" type="number" min="0" name="Q6A2S1C3" placeholder="" value="">
+	  <td><?php echo (getFiled('Q6A2S1C3', $schoolUserID)!="")?getFiled('Q6A2S1C3', $schoolUserID) : "N/A"; ?> </td>
+        
       </div>
       <div class="col-xs-2">
-        <input class="form-control space-textbox" onkeyup="details()" id="v3" type="number" min="0" name="Q6A2S1V3" placeholder="" value="">
+	   <td><?php echo (getFiled('Q6A2S1V3', $schoolUserID)!="")?getFiled('Q6A2S1V3', $schoolUserID) : "N/A"; ?> </td>
+       
       </div>
       <div class="col-xs-2">
-        <input class="form-control space-textbox" onkeyup="details()" id="o3" type="number" min="0" name="Q6A2S1O3" placeholder="" value="">
+	   <td><?php echo (getFiled('Q6A2S1O3', $schoolUserID)!="")?getFiled('Q6A2S1O3', $schoolUserID) : "N/A"; ?> </td>
+        
       </div>
       <div class="col-xs-2">
-        <input class="form-control space-textbox" onkeyup="details()" id="t3" type="number" min="0" name="Q6A2S1T3" placeholder="" value="" readonly="">
+	  <td><?php echo (getFiled('Q6A2S1T3', $schoolUserID)!="")?getFiled('Q6A2S1T3', $schoolUserID) : "N/A"; ?> </td>
+        
       </div>
     </div>
+	<hr>
     <div class="form-group1 row">
       <div class="col-xs-2">
         <label>PUC done</label>
       </div>
       <div class="col-xs-2">
-        <input class="form-control space-textbox" onkeyup="details()" id="b4" type="number" min="0" name="Q6A2S1B4" placeholder="" value="">
+	   <td><?php echo (getFiled('Q6A2S1B4', $schoolUserID)!="")?getFiled('Q6A2S1B4', $schoolUserID) : "N/A"; ?> </td>
+        
       </div>
       <div class="col-xs-2">
-        <input class="form-control space-textbox" onkeyup="details()" id="c4" type="number" min="0" name="Q6A2S1C4" placeholder="" value="">
+	  <td><?php echo (getFiled('Q6A2S1C4', $schoolUserID)!="")?getFiled('Q6A2S1C4', $schoolUserID) : "N/A"; ?> </td>
+        
       </div>
       <div class="col-xs-2">
-        <input class="form-control space-textbox" onkeyup="details()" id="v4" type="number" min="0" name="Q6A2S1V4" placeholder="" value="">
+	  <td><?php echo (getFiled('Q6A2S1V4', $schoolUserID)!="")?getFiled('Q6A2S1V4', $schoolUserID) : "N/A"; ?> </td>
+        
       </div>
       <div class="col-xs-2">
-        <input class="form-control space-textbox" onkeyup="details()" id="o4" type="number" min="0" name="Q6A2S1O4" placeholder="" value="">
+	  <td><?php echo (getFiled('Q6A2S1O4', $schoolUserID)!="")?getFiled('Q6A2S1O4', $schoolUserID) : "N/A"; ?> </td>
+       
       </div>
       <div class="col-xs-2">
-        <input class="form-control space-textbox" onkeyup="details()" id="t4" type="number" min="0" name="Q6A2S1T4" placeholder="" value="" readonly="">
+	   <td><?php echo (getFiled('Q6A2S1T4', $schoolUserID)!="")?getFiled('Q6A2S1T4', $schoolUserID) : "N/A"; ?> </td>
+       
       </div>
     </div>
+	<hr>
     <div class="form-group1 row">
       <div class="col-xs-2">
-        <label>Authorised parking available <a class="tt" data-tooltip="For parking area, give the number of vehicles (Of the total) that have designated parking areas."><span class="badge">?</span></a></label>
+        <label>Authorised parking available </label>
       </div>
       <div class="col-xs-2">
-        <input class="form-control space-textbox" onkeyup="details()" id="b5" type="number" min="0" name="Q6A2S1B5" placeholder="" value="">
+	   <td><?php echo (getFiled('Q6A2S1B5', $schoolUserID)!="")?getFiled('Q6A2S1B5', $schoolUserID) : "N/A"; ?> </td>
+        
       </div>
       <div class="col-xs-2">
-        <input class="form-control space-textbox" onkeyup="details()" id="c5" type="number" min="0" name="Q6A2S1C5" placeholder="" value="">
+	  <td><?php echo (getFiled('Q6A2S1C5', $schoolUserID)!="")?getFiled('Q6A2S1C5', $schoolUserID) : "N/A"; ?> </td>
+       
       </div>
       <div class="col-xs-2">
-        <input class="form-control space-textbox" onkeyup="details()" id="v5" type="number" min="0" name="Q6A2S1V5" placeholder="" value="">
+	   <td><?php echo (getFiled('Q6A2S1V5', $schoolUserID)!="")?getFiled('Q6A2S1V5', $schoolUserID) : "N/A"; ?> </td>
+        
       </div>
       <div class="col-xs-2">
-        <input class="form-control space-textbox" onkeyup="details()" id="o5" type="number" min="0" name="Q6A2S1O5" placeholder="" value="">
+	   <td><?php echo (getFiled('Q6A2S1O5', $schoolUserID)!="")?getFiled('Q6A2S1O5', $schoolUserID) : "N/A"; ?> </td>
+       
       </div>
       <div class="col-xs-2">
-        <input class="form-control space-textbox" onkeyup="details()" id="t5" type="number" min="0" name="Q6A2S1T5" placeholder="" value="" readonly="">
+	  <td><?php echo (getFiled('Q6A2S1T5', $schoolUserID)!="")?getFiled('Q6A2S1T5', $schoolUserID) : "N/A"; ?> </td>
+        
       </div>
     </div>
+	<hr>
     <div class="form-group1 row">
       <div class="col-xs-2">
         <label>Annual road worthiness certificate (Yes / No)</label>
       </div>
       <div class="col-xs-2">
-        <select class="form-control space-textbox" onchange="details()" id="b6" type="text" min="0" name="Q6A2S1B6">
-          <option value="Yes" selected="">Yes</option>
-          <option value="No">No</option>
-        </select>
+	  <p> <?php echo (getFiled('Q6A2S1B6', $schoolUserID)!="")? (getFiled('Q6A2S1B6', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>  
+       
       </div>
       <div class="col-xs-2">
-        <select class="form-control space-textbox" onchange="details()" id="c6" type="text" min="0" name="Q6A2S1C6">
-          <option value="Yes" selected="">Yes</option>
-          <option value="No">No</option>
-        </select>
+	  <p> <?php echo (getFiled('Q6A2S1C6', $schoolUserID)!="")? (getFiled('Q6A2S1C6', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p> 
+        
       </div>
       <div class="col-xs-2">
-        <select class="form-control space-textbox" onchange="details()" id="v6" type="text" min="0" name="Q6A2S1V6">
-          <option value="Yes" selected="">Yes</option>
-          <option value="No">No</option>
-        </select>
+	  <p> <?php echo (getFiled('Q6A2S1V6', $schoolUserID)!="")? (getFiled('Q6A2S1V6', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p> 
+        
       </div>
       <div class="col-xs-2">
-        <select class="form-control space-textbox" onchange="details()" id="o6" type="text" min="0" name="Q6A2S1O6">
-          <option value="Yes" selected="">Yes</option>
-          <option value="No">No</option>
-        </select>
+	  <p> <?php echo (getFiled('Q6A2S1O6', $schoolUserID)!="")? (getFiled('Q6A2S1O6', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p> 
+        
       </div>
       <div class="col-xs-2">
-        <input class="form-control space-textbox" onkeyup="details()" id="t6" type="text" min="0" name="Q6A2S1T6" placeholder="" value="">
+	  <td><?php echo (getFiled('Q6A2S1T6', $schoolUserID)!="")?getFiled('Q6A2S1T6', $schoolUserID) : "N/A"; ?> </td>
+       
       </div>
     </div>
   </div>
@@ -538,7 +498,7 @@
     </tbody>
   </table>
   <div class="form-group" id="vehicle2">
-    <label class="control-label"><span class="cube">3(b)</span>Specify the type of fuel used by your school?s vehicles: <a class="tt" data-tooltip="The below is an indicative list of type of vehicles.  If the school has other than these vehicles, please provide details in ?Other vehicles? section."><span class="badge">?</span></a></label>
+    <label class="control-label"><span class="cube">3(b)</span>Specify the type of fuel used by your school?s vehicles:</label>
     <table class="table">
       <tbody>
         <tr class="text-center">
@@ -553,53 +513,123 @@
         </tr>
         <tr>
           <td>Buses</td>
-          <td><input class="form-control space-textbox" onkeyup="details2()" onchange="details2()" id="S3D1" type="number" min="0" name="Q6A2S3D1" placeholder="" value=""></td>
-          <td><input class="form-control space-textbox" onkeyup="details2()" onchange="details2()" id="S3P1" type="number" min="0" name="Q6A2S3P1" placeholder="" value=""></td>
-          <td><input class="form-control space-textbox" onkeyup="details2()" onchange="details2()" id="S3L1" type="number" min="0" name="Q6A2S3L1" placeholder="" value=""></td>
-          <td><input class="form-control space-textbox" onkeyup="details2()" onchange="details2()" id="S3C1" type="number" min="0" name="Q6A2S3C1" placeholder="" value=""></td>
-          <td><input class="form-control space-textbox" onkeyup="details2()" onchange="details2()" id="S3E1" type="number" min="0" name="Q6A2S3E1" placeholder="" value=""></td>
-          <td><input class="form-control space-textbox" onkeyup="details2()" onchange="details2()" id="S3H1" type="number" min="0" name="Q6A2S3H1" placeholder="" value=""></td>
-          <td><input class="form-control space-textbox" onkeyup="details2()" onchange="details2()" id="S3B1" type="number" min="0" name="Q6A2S3B1" placeholder="" value=""></td>
+          <td>
+		  <p> <?php echo (getFiled('Q6A2S3D1', $schoolUserID)!="")? (getFiled('Q6A2S3D1', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p> 
+		 
+          <td>
+		  <p> <?php echo (getFiled('Q6A2S3P1', $schoolUserID)!="")? (getFiled('Q6A2S3P1', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+		  
+          <td>
+		  <p> <?php echo (getFiled('Q6A2S3L1', $schoolUserID)!="")? (getFiled('Q6A2S3L1', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+		  <
+          <td>
+		  <p> <?php echo (getFiled('Q6A2S3C1', $schoolUserID)!="")? (getFiled('Q6A2S3C1', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+		 
+          <td>
+		  <p> <?php echo (getFiled('Q6A2S3E1', $schoolUserID)!="")? (getFiled('Q6A2S3E1', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+		  
+          <td>
+		   <p> <?php echo (getFiled('Q6A2S3H1', $schoolUserID)!="")? (getFiled('Q6A2S3H1', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+		  
+          <td>
+		  <p> <?php echo (getFiled('Q6A2S3B1', $schoolUserID)!="")? (getFiled('Q6A2S3B1', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+		  
         </tr>
         <tr>
           <td>Cars</td>
-          <td><input class="form-control space-textbox" onkeyup="details2()" onchange="details2()" id="S3D2" type="number" min="0" name="Q6A2S3B1" placeholder="" value=""></td>
-          <td><input class="form-control space-textbox" onkeyup="details2()" onchange="details2()" id="S3P2" type="number" min="0" name="Q6A2S3D2" placeholder="" value=""></td>
-          <td><input class="form-control space-textbox" onkeyup="details2()" onchange="details2()" id="S3L2" type="number" min="0" name="Q6A2S3P2" placeholder="" value=""></td>
-          <td><input class="form-control space-textbox" onkeyup="details2()" onchange="details2()" id="S3C2" type="number" min="0" name="Q6A2S3L2" placeholder="" value=""></td>
-          <td><input class="form-control space-textbox" onkeyup="details2()" onchange="details2()" id="S3E2" type="number" min="0" name="Q6A2S3C2" placeholder="" value=""></td>
-          <td><input class="form-control space-textbox" onkeyup="details2()" onchange="details2()" id="S3H2" type="number" min="0" name="Q6A2S3E2" placeholder="" value=""></td>
-          <td><input class="form-control space-textbox" onkeyup="details2()" onchange="details2()" id="S3B2" type="number" min="0" name="Q6A2S3H2" placeholder="" value=""></td>
+          <td>
+		  <p> <?php echo (getFiled('Q6A2S3B1', $schoolUserID)!="")? (getFiled('Q6A2S3B1', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+		  
+          <td>
+		  <p> <?php echo (getFiled('Q6A2S3D2', $schoolUserID)!="")? (getFiled('Q6A2S3D2', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+		  
+          <td>
+		  <p> <?php echo (getFiled('Q6A2S3P2', $schoolUserID)!="")? (getFiled('Q6A2S3P2', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+		  
+          <td>
+		  <p> <?php echo (getFiled('Q6A2S3L2', $schoolUserID)!="")? (getFiled('Q6A2S3L2', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+		  
+          <td>
+		  <p> <?php echo (getFiled('Q6A2S3C2', $schoolUserID)!="")? (getFiled('Q6A2S3C2', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+		 
+          <td>
+		  <p> <?php echo (getFiled('Q6A2S3E2', $schoolUserID)!="")? (getFiled('Q6A2S3E2', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+		  
+          <td>
+		  <p> <?php echo (getFiled('Q6A2S3H2', $schoolUserID)!="")? (getFiled('Q6A2S3H2', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+
         </tr>
         <tr>
           <td>Vans</td>
-          <td><input class="form-control space-textbox" onkeyup="details2()" onchange="details2()" id="S3D3" type="number" min="0" name="Q6A2S3D3" placeholder="" value=""></td>
-          <td><input class="form-control space-textbox" onkeyup="details2()" onchange="details2()" id="S3P3" type="number" min="0" name="Q6A2S3P3" placeholder="" value=""></td>
-          <td><input class="form-control space-textbox" onkeyup="details2()" onchange="details2()" id="S3L3" type="number" min="0" name="Q6A2S3L3" placeholder="" value=""></td>
-          <td><input class="form-control space-textbox" onkeyup="details2()" onchange="details2()" id="S3C3" type="number" min="0" name="Q6A2S3C3" placeholder="" value=""></td>
-          <td><input class="form-control space-textbox" onkeyup="details2()" onchange="details2()" id="S3E3" type="number" min="0" name="Q6A2S3E3" placeholder="" value=""></td>
-          <td><input class="form-control space-textbox" onkeyup="details2()" onchange="details2()" id="S3H3" type="number" min="0" name="Q6A2S3H3" placeholder="" value=""></td>
-          <td><input class="form-control space-textbox" onkeyup="details2()" onchange="details2()" id="S3B3" type="number" min="0" name="Q6A2S3B3" placeholder="" value=""></td>
+          <td>
+		  <p> <?php echo (getFiled('Q6A2S3D3', $schoolUserID)!="")? (getFiled('Q6A2S3D3', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+		  
+          <td>
+		  <p> <?php echo (getFiled('Q6A2S3P3', $schoolUserID)!="")? (getFiled('Q6A2S3P3', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+		  
+          <td>
+		  <p> <?php echo (getFiled('Q6A2S3L3', $schoolUserID)!="")? (getFiled('Q6A2S3L3', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+		  
+          <td>
+		   <p> <?php echo (getFiled('Q6A2S3C3', $schoolUserID)!="")? (getFiled('Q6A2S3C3', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+		  
+          <td>
+		  <p> <?php echo (getFiled('Q6A2S3E3', $schoolUserID)!="")? (getFiled('Q6A2S3E3', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+		  
+          <td>
+		  <p> <?php echo (getFiled('Q6A2S3H3', $schoolUserID)!="")? (getFiled('Q6A2S3H3', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+		  
+          <td>
+		  <p> <?php echo (getFiled('Q6A2S3B3', $schoolUserID)!="")? (getFiled('Q6A2S3B3', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+		  
         </tr>
         <tr>
           <td>Other vehicles</td>
-          <td><input class="form-control space-textbox" onkeyup="details2()" onchange="details2()" id="S3D4" type="number" min="0" name="Q6A2S3D4" placeholder="" value=""></td>
-          <td><input class="form-control space-textbox" onkeyup="details2()" onchange="details2()" id="S3P4" type="number" min="0" name="Q6A2S3P4" placeholder="" value=""></td>
-          <td><input class="form-control space-textbox" onkeyup="details2()" onchange="details2()" id="S3L4" type="number" min="0" name="Q6A2S3L4" placeholder="" value=""></td>
-          <td><input class="form-control space-textbox" onkeyup="details2()" onchange="details2()" id="S3C4" type="number" min="0" name="Q6A2S3C4" placeholder="" value=""></td>
-          <td><input class="form-control space-textbox" onkeyup="details2()" onchange="details2()" id="S3E4" type="number" min="0" name="Q6A2S3E4" placeholder="" value=""></td>
-          <td><input class="form-control space-textbox" onkeyup="details2()" onchange="details2()" id="S3H4" type="number" min="0" name="Q6A2S3H4" placeholder="" value=""></td>
-          <td><input class="form-control space-textbox" onkeyup="details2()" onchange="details2()" id="S3B4" type="number" min="0" name="Q6A2S3B4" placeholder="" value=""></td>
+          <td>
+		   <p> <?php echo (getFiled('Q6A2S3D4', $schoolUserID)!="")? (getFiled('Q6A2S3D4', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+		  
+          <td>
+		  <p> <?php echo (getFiled('Q6A2S3P4', $schoolUserID)!="")? (getFiled('Q6A2S3P4', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+		  
+          <td>
+		  <p> <?php echo (getFiled('Q6A2S3L4', $schoolUserID)!="")? (getFiled('Q6A2S3L4', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+		  
+          <td>
+		  <p> <?php echo (getFiled('Q6A2S3C4', $schoolUserID)!="")? (getFiled('Q6A2S3C4', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+		  
+          <td>
+		   <p> <?php echo (getFiled('Q6A2S3E4', $schoolUserID)!="")? (getFiled('Q6A2S3E4', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+		  
+          <td>
+		  <p> <?php echo (getFiled('Q6A2S3H4', $schoolUserID)!="")? (getFiled('Q6A2S3H4', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+		  
+          <td>
+		  <p> <?php echo (getFiled('Q6A2S3B4', $schoolUserID)!="")? (getFiled('Q6A2S3B4', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+		  
         </tr>
         <tr>
           <td>Sub-Total</td>
-          <td><input class="form-control space-textbox" onkeyup="details2()" onchange="details2()" id="S3D5" type="number" min="0" name="Q6A2S3D5" placeholder="" value="" readonly=""></td>
-          <td><input class="form-control space-textbox" onkeyup="details2()" onchange="details2()" id="S3P5" type="number" min="0" name="Q6A2S3P5" placeholder="" value="" readonly=""></td>
-          <td><input class="form-control space-textbox" onkeyup="details2()" onchange="details2()" id="S3L5" type="number" min="0" name="Q6A2S3L5" placeholder="" value="" readonly=""></td>
-          <td><input class="form-control space-textbox" onkeyup="details2()" onchange="details2()" id="S3C5" type="number" min="0" name="Q6A2S3C5" placeholder="" value="" readonly=""></td>
-          <td><input class="form-control space-textbox" onkeyup="details2()" onchange="details2()" id="S3E5" type="number" min="0" name="Q6A2S3E5" placeholder="" value="" readonly=""></td>
-          <td><input class="form-control space-textbox" onkeyup="details2()" onchange="details2()" id="S3H5" type="number" min="0" name="Q6A2S3H5" placeholder="" value="" readonly=""></td>
-          <td><input class="form-control space-textbox" onkeyup="details2()" onchange="details2()" id="S3B5" type="number" min="0" name="Q6A2S3B5" placeholder="" value="" readonly=""></td>
+          <td>
+		   <p> <?php echo (getFiled('Q6A2S3D5', $schoolUserID)!="")? (getFiled('Q6A2S3D5', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+		  
+          <td>
+		  <p> <?php echo (getFiled('Q6A2S3P5', $schoolUserID)!="")? (getFiled('Q6A2S3P5', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+		  
+          <td>
+		  <p> <?php echo (getFiled('Q6A2S3L5', $schoolUserID)!="")? (getFiled('Q6A2S3L5', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+		  
+          <td>
+		  <p> <?php echo (getFiled('Q6A2S3C5', $schoolUserID)!="")? (getFiled('Q6A2S3C5', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+		 
+          <td>
+		  <p> <?php echo (getFiled('Q6A2S3E5', $schoolUserID)!="")? (getFiled('Q6A2S3E5', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+		 
+          <td>
+		  <p> <?php echo (getFiled('Q6A2S3H5', $schoolUserID)!="")? (getFiled('Q6A2S3H5', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+		  
+          <td>
+		  <p> <?php echo (getFiled('Q6A2S3B5', $schoolUserID)!="")? (getFiled('Q6A2S3B5', $schoolUserID)=="Y")? "Yes" : "No" : "N/A"; ?></p>
+		  
         </tr>
       </tbody>
     </table>

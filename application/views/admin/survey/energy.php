@@ -217,7 +217,7 @@
       <div class="form-group" id="ebill" style="display:none">
         <label class="control-label">Please upload the most recent electricity bill here</label>
         <br>
-        <button class="btn uploadbtn upload" data-id="Electricity Bill" data-toggle="modal" data-target="#airModal" type="button">UPLOAD FILES </button>
+       
       </div>
       <input type="hidden" id="Q6A1Val" value="">
       <div class="form-group">
@@ -432,7 +432,7 @@ Total</th><th><?php echo (getFiled('Q6E15S1', $schoolUserID)!="")? getFiled('Q6E
         following formats: PDF Document (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg) <br>
         File size per document should not exceed 500 KB. <br>
         <br>
-        <button class="btn uploadbtn upload" data-id="Supporting Document Energy" data-toggle="modal" data-target="#airModal" type="button">UPLOAD FILES </button>
+       
         <br>
       </div>
       <div class="clearfix">&nbsp;</div>
