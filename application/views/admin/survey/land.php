@@ -346,14 +346,23 @@
             (.doc, .docx), Image File (.jpg, .jpeg). File size per document
             should not exceed 500 KB.
       <br>
-        <table width="100%" class="table table-bordered table-striped">
+        <table width="100%" class="table table-striped">
             <thead>
-            <tr>
+            <tr><th>image</th>
                 <th>File name</th>
-                <th>Action</th>
+                
             </tr>
             </thead>
             <tbody>
+			 <?php foreach ($greenCover as $f) { ?>
+                <tr id="index<?php echo $f->id; ?>">
+				
+                    <?php $name = str_replace(" ", "_", $f->name . "_Green_Cover_"); //echo $name; ?>
+					 <td><img src="<?php echo base_url('uploads/files/'.$f->file_name);?>" class="img-thumbnail" style="height:80px;width:80px;"></img></td>
+                    <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                   
+                </tr>
+            <?php } ?>
            </tbody>
         </table>
         </div>

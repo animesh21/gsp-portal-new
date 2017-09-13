@@ -536,19 +536,28 @@
                             <label style="font-color: white !important; ">Please upload all supporting documents related
                                 to this section here. Note: files must be in one of the following formats: PDF Document
                                 (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg)</label>
-                            <button class="btn uploadbtn upload" data-id="Task 4 Supporting docs" data-toggle="modal" data-target="#uploadModal" type="button">UPLOAD FILES
-                            </button>
+                            
+							
+                            
                             <br><br>
                         </div>
                         <div class="clearfix">&nbsp;</div>
                         <table width="100%" class="question uploadedfiles">
                             <thead>
-                            <tr>
+                            <tr><th>image</th>
                                 <th>File name</th>
-                                <th>Action</th>
+                            
                             </tr>
                             </thead>
                             <tbody>
+							<?php foreach ($task4supporting as $f) { ?>
+                                <tr id="index<?php echo $f->id; ?>">
+                                    <?php $name = str_replace(" ", "_", $f->name . "_Task_4_Supporting_docs_"); ?>
+									 <td><img src="<?php echo base_url('uploads/files/'.$f->file_name);?>" class="img-thumbnail" style="height:80px;width:80px;"></img></td> 
+                                    <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                                   
+                                </tr>
+                            <?php } ?>
                                                         </tbody>
                         </table>
                         <div class="clearfix">&nbsp;</div>
@@ -967,12 +976,20 @@
                             </label>
                             <table width="100%" class="question uploadedfiles">
                                 <thead>
-                                <tr>
+                                <tr><th>image</th>
                                     <th>File name</th>
-                                    <th>Action</th>
+                                   
                                 </tr>
                                 </thead>
                                 <tbody>
+								<?php foreach ($waterTreatment as $f) { ?>
+                                    <tr id="index<?php echo $f->id; ?>">
+                                        <?php $name = str_replace(" ", "_", $f->name . "_Water_Treatment_Process_"); ?>
+										 <td><img src="<?php echo base_url('uploads/files/'.$f->file_name);?>" class="img-thumbnail" style="height:80px;width:80px;"></img></td>
+                                        <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                                       
+                                    </tr>
+                                <?php } ?>
                                                                 </tbody>
                             </table>
                         </div>
@@ -1386,11 +1403,20 @@
           <table width="100%" class="question uploadedfiles">
                <thead>
                      <tr>
+					 <th>image</th>
                       <th>File name</th>
-                       <th>Action</th>
+                      
                      </tr>
                </thead>
               <tbody>
+			  <?php foreach ($flowChartHandDrawn as $f) { ?>
+                                                        <tr id="index<?php echo $f->id; ?>">
+                                                            <?php $name = str_replace(" ", "_", $f->name . "_Flow_Chart_Hand_Drwan_"); ?>
+															 <td><img src="<?php echo base_url('uploads/files/'.$f->file_name);?>" class="img-thumbnail" style="height:80px;width:80px;"></img></td>
+                                                            <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                                                            
+                                                        </tr>
+                                                    <?php } ?>
                                                                                                         </tbody>
           </table>
        <div class="form-group" id="WastePolicy">
@@ -1409,11 +1435,20 @@
          <table width="100%" class="question uploadedfiles">
           <thead>
                  <tr>
+                   <th>image</th>
                    <th>File name</th>
-                    <th>Action</th>
+                 
                  </tr>
            </thead>
         <tbody>
+		<?php foreach ($supportDocWater as $f) { ?>
+                                                        <tr id="index<?php echo $f->id; ?>">
+                                                            <?php $name = str_replace(" ", "_", $f->name . "_Supporting_Document_Water_"); ?>
+															 <td><img src="<?php echo base_url('uploads/files/'.$f->file_name);?>" class="img-thumbnail" style="height:80px;width:80px;"></img></td>
+                                                            <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                                                           
+                                                        </tr>
+                                                    <?php } ?>
                                                                                                         </tbody>
          </table>
      <div class="text-center">

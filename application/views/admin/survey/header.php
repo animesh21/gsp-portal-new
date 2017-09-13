@@ -134,7 +134,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         id="link" onClick="javascript:window.location.href='<?php echo base_url('admin/audit_started_2017/waste/'.$id) ?>';">Waste
                     </li>
                     <li class="row <?php echo ($this->router->fetch_class() == 'feedback') ? "current" : "missing"; ?>"
-                        id="link" onClick="javascript:window.location.href='<?php echo base_url('admin/audit_started_2017/feedbask/'.$id) ?>';">
+                        id="link" onClick="javascript:window.location.href='<?php echo base_url('admin/audit_started_2017/feedback/'.$id) ?>';">
                         Feedback
                     </li>
                 </ol>

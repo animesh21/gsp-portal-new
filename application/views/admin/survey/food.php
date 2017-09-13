@@ -185,19 +185,27 @@
             
         </ul>
     </div>
-                <div class="form-group" id="meals1" style="display: none;">
+                <div class="form-group" id="meals1">
             <label class="control-label">Please upload picture of Mid-day meal being 
             served</label>
                 <br>
-                <button class="btn uploadbtn upload" data-id="Mid Day Meal" data-toggle="modal" data-target="#airModal" type="button">UPLOAD FILES </button>
+                
                 <table width="100%" class="question uploadedfiles">
                     <thead>
-                        <tr>
+                        <tr><th>image</th>
                             <th>File name</th>
-                            <th>Action</th>
+                            
                         </tr>
                     </thead>
                     <tbody>
+					<?php foreach ($midDayMeal as $f) { ?>
+                            <tr id="index<?php echo $f->id; ?>">
+    <?php $name = str_replace(" ", "_", $f->name . "_Mid_Day_Meal_"); ?>
+	<td><img src="<?php echo base_url('uploads/files/'.$f->file_name);?>" class="img-thumbnail" style="height:80px;width:80px;"></img></td>
+                                <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                                
+                            </tr>
+                            <?php } ?>
                     </tbody>
                 </table>
             </div>
@@ -559,7 +567,25 @@
          <div class="form-group" id="Q7F2S1" style="display: block;">
      <label class="control-label">Please upload picture of traditional food items sol in canteen</label>
         <br>
-      <button class="btn uploadbtn upload" data-id="Traditional Food Items In Canteen" data-toggle="modal" data-target="#airModal" type="button"> UPLOAD FILES </button>
+      <table width="100%" class="question uploadedfiles">
+                    <thead>
+                        <tr>
+						<th>image</th>
+                            <th>File name</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+<?php foreach ($midDayMeal as $f) { ?>
+                            <tr id="index<?php echo $f->id; ?>">
+    <?php $name = str_replace(" ", "_", $f->name . "_Mid_Day_Meal_"); ?>
+	<td><img src="<?php echo base_url('uploads/files/'.$f->file_name);?>" style="height:100px;width:100px"></img></td>
+                                <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                                
+                            </tr>
+                            <?php } ?>
+                    </tbody>
+                </table>
           <br>
   <br>
         </div>
@@ -683,12 +709,20 @@ products as refreshments during schools events?</label>
  <table width="100%" class="question uploadedfiles">
                                                                                                             <thead>
                                                                                                                 <tr>
-                                                                                                                    <th>File name</th>
-                                                                                                                    <th>Action</th>
-                                                                                                                </tr>
-                                                                                                            </thead>
-                                                                                                            <tbody>
-                                                                                                            </tbody>
+                                         <th>File name</th>
+                            <th>Action</th>
+                     </tr>
+                           </thead>
+                                <tbody>
+								<?php foreach ($files as $f) { ?>
+                                                                                                                    <tr id="index<?php echo $f->id; ?>">
+    <?php $name = str_replace(" ", "_", $f->name . "_Audit_Team_doing_Survey_"); ?>
+	<td><img src="<?php echo base_url('uploads/files/'.$f->file_name);?>" class="img-thumbnail" style="height:80px;width:80px;"></img></td>
+                                                                                                                        <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                                                                                                                       
+                                                                                                                    </tr>
+<?php } ?>
+                                    </tbody>
                                                                                                         </table>
  <div class="form-group">
    <label>
@@ -749,11 +783,20 @@ products as refreshments during schools events?</label>
                                                                                                         <table width="100%" class="question uploadedfiles">
                                                                                                             <thead>
                                                                                                                 <tr>
-                                                                                                                    <th>File name</th>
-                                                                                                                    <th>Action</th>
+									<th>image</th>
+                                 <th>File name</th>
+                                                                                                                    
                                                                                                                 </tr>
                                                                                                             </thead>
                                                                                                             <tbody>
+<?php foreach ($uppc as $u) { ?>
+                    <tr id="index<?php echo $u->id; ?>">
+    <?php $name = str_replace(" ", "_", $u->name . "_UPPF_"); ?>
+	<td><img src="<?php echo base_url('uploads/files/'.$u->file_name);?>" class="img-thumbnail" style="height:80px;width:80px;"></img></td>
+                                                                                                                        <td class="upload edit"><?php echo str_replace($name, "", $u->file_name); ?></td>
+                                                                                                                        
+                                                                                                                    </tr>
+<?php } ?>
                                                                                                             </tbody>
                                                                                                         </table>
  <div class="text-center">

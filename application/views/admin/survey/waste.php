@@ -583,19 +583,26 @@
                 • Pictures of playground with more than two dustbins<br>
                 Kindly attach the aforementioned documents along with the survey<br>
                 <br>
-                <button class="btn uploadbtn upload" data-id="Segregation Source Classrooms" data-toggle="modal" data-target="#airModal" type="button">UPLOAD FILES
-                </button>
+                
                 <br>
                 <br>
             </div>
             <table width="100%" class="question uploadedfiles">
                 <thead>
-                <tr>
+                <tr><th>image</th>
                     <th>File name</th>
-                    <th>Action</th>
+                    
                 </tr>
                 </thead>
                 <tbody>
+				 <?php foreach ($segregationClassroom as $f) { ?>
+                    <tr id="index<?php echo $f->id; ?>">
+                        <?php $name = str_replace(" ", "_", $f->name . "_Segregation_Source_Classrooms_"); ?>
+						 <td><img src="<?php echo base_url('uploads/files/'.$f->file_name);?>" class="img-thumbnail" style="height:80px;width:80px;"></img></td>
+                        <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                        
+                    </tr>
+                <?php } ?>
                                 </tbody>
             </table>
             <div class="form-group">
@@ -835,19 +842,25 @@
                 • Picture of types of solid waste generated<br>
                 Kindly attach the aforementioned documents along with the survey<br>
                 <br>
-                <button class="btn uploadbtn upload" data-id="Audit Team Weighing Solid Waste" data-toggle="modal" data-target="#airModal" type="button">UPLOAD FILES
-                </button>
+                
                 <br>
                 <br>
             </div>
             <table width="100%" class="question uploadedfiles">
                 <thead>
-                <tr>
+                <tr><th>image</th>
                     <th>File name</th>
-                    <th>Action</th>
+                    
                 </tr>
                 </thead>
                 <tbody>
+				 <?php foreach ($solidWaste as $f) { ?>
+                    <tr id="index<?php echo $f->id; ?>">
+                        <?php $name = str_replace(" ", "_", $f->name . "_Audit_Team_Weighing_Solid_Waste_"); ?>
+						 <td><img src="<?php echo base_url('uploads/files/'.$f->file_name);?>" class="img-thumbnail" style="height:80px;width:80px;"></img></td>
+                        <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                                           </tr>
+                <?php } ?>
                                 </tbody>
             </table>
             <div class="form-group">
@@ -1092,19 +1105,26 @@
                 <br>
                 • Pictures of recycling units - composting pit<br>
                 <br>
-                <button class="btn uploadbtn upload" data-id="Composting Pit" data-toggle="modal" data-target="#airModal" type="button">UPLOAD FILES
-                </button>
+                
                 <br>
             </div>
             <br>
             <table width="100%" class="question uploadedfiles">
                 <thead>
-                <tr>
+                <tr><th>image</th>
                     <th>File name</th>
-                    <th>Action</th>
+                   
                 </tr>
                 </thead>
                 <tbody>
+				<?php foreach ($composingPit as $f) { ?>
+                    <tr id="index<?php echo $f->id; ?>">
+                        <?php $name = str_replace(" ", "_", $f->name . "_Composting_Pit_"); ?>
+						 <td><img src="<?php echo base_url('uploads/files/'.$f->file_name);?>" class="img-thumbnail" style="height:80px;width:80px;"></img></td>
+                        <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                       
+                    </tr>
+                <?php } ?>
                                 </tbody>
             </table>
             <div class="clearfix">&nbsp;</div>
@@ -1527,20 +1547,27 @@
             <label class="control-label">Please upload supporting documents:</label>
             <br>
             • Pictures of recycling units - paper recycling machine, selling paper to kabadiwala, recyclers,etc<br><br>
-            <button class="btn uploadbtn upload" data-id="Recycling Machine" data-toggle="modal" data-target="#airModal" type="button">UPLOAD FILES
-            </button>
+            
             <br>
             <br>
         </div>
         <br>
         <table width="100%" class="question uploadedfiles">
             <thead>
-            <tr>
+            <tr><th>image</th>
                 <th>File name</th>
-                <th>Action</th>
+               
             </tr>
             </thead>
             <tbody>
+			<?php foreach ($recycleMachine as $f) { ?>
+                <tr id="index<?php echo $f->id; ?>">
+                    <?php $name = str_replace(" ", "_", $f->name . "_Recycling_Machine_"); ?>
+					 <td><img src="<?php echo base_url('uploads/files/'.$f->file_name);?>" class="img-thumbnail" style="height:80px;width:80px;"></img></td>
+                    <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                   
+                </tr>
+            <?php } ?>
                         </tbody>
         </table>
         <div class="clearfix">&nbsp;</div>
@@ -2159,20 +2186,28 @@
             • Pictures of Electronic items used by school and storage of non-working electronic items<br>
             • Certificate of disposing e-waste from authorized dealer/dismantler<br>
             <br>
-            <button class="btn uploadbtn upload" data-id="E-Waste" data-toggle="modal" data-target="#airModal" type="button">UPLOAD FILES
-            </button>
+            
             <br>
             <br>
         </div>
         <div class="clearfix">&nbsp;</div>
         <table width="100%" class="question uploadedfiles">
             <thead>
-            <tr>
+            <tr><th>image</th>
                 <th>File name</th>
-                <th>Action</th>
+               
             </tr>
             </thead>
             <tbody>
+			 <?php foreach ($eWaste as $f) { ?>
+                <tr id="index<?php echo $f->id; ?>">
+                    <?php $name = str_replace(" ", "_", $f->name . "_E-Waste_"); ?>
+					<td><img src="<?php echo base_url('uploads/files/'.$f->file_name);?>" class="img-thumbnail" style="height:80px;width:80px;"></img></td>
+                    <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+					 
+                  
+                </tr>
+            <?php } ?>
                         </tbody>
         </table>
         <div class="clearfix">&nbsp;</div>
@@ -2212,8 +2247,7 @@
                     <br>
                     • Certificate of disposing e-waste from authorised dealer/dismantler<br>
                     <br>
-                    <button class="btn uploadbtn upload" data-id="E-waste authorised dealer" data-toggle="modal" data-target="#airModal" type="button">UPLOAD FILES
-                    </button>
+                   
                     <br>
                     <br>
                 </div>
@@ -2253,20 +2287,27 @@
             <br>
             • Pictures of housekeeping staff disposing different types of solid waste<br>
             <br>
-            <button class="btn uploadbtn upload" data-id="Housekeeping" data-toggle="modal" data-target="#airModal" type="button">UPLOAD FILES
-            </button>
+            
             <br>
             <br>
         </div>
         <div class="clearfix">&nbsp;</div>
         <table width="100%" class="question uploadedfiles">
             <thead>
-            <tr>
+            <tr><th>image</th>
                 <th>File name</th>
-                <th>Action</th>
+                
             </tr>
             </thead>
             <tbody>
+			<?php foreach ($houseKeeping as $f) { ?>
+                <tr id="index<?php echo $f->id; ?>">
+                    <?php $name = str_replace(" ", "_", $f->name . "_Housekeeping_"); ?>
+					 <td><img src="<?php echo base_url('uploads/files/'.$f->file_name);?>" class="img-thumbnail" style="height:80px;width:80px;"></img></td>
+                    <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                  
+                </tr>
+            <?php } ?>
                         </tbody>
         </table>
         <div class="clearfix">&nbsp;</div>
@@ -2283,19 +2324,25 @@
             <br>
             • Pictures of burning waste<br>
             <br>
-            <button class="btn uploadbtn upload" data-id="Buring Waste" data-toggle="modal" data-target="#airModal" type="button">UPLOAD FILES
-            </button>
+            
             <br>
             <br>
         </div>
         <table width="100%" class="question uploadedfiles">
             <thead>
-            <tr>
+            <tr><th>image</th>
                 <th>File name</th>
-                <th>Action</th>
+               
             </tr>
             </thead>
             <tbody>
+			<?php foreach ($burningWaste as $f) { ?>
+                <tr id="index<?php echo $f->id; ?>">
+                    <?php $name = str_replace(" ", "_", $f->name . "_Buring_Waste_"); ?>
+					 <td><img src="<?php echo base_url('uploads/files/'.$f->file_name);?>" class="img-thumbnail" style="height:80px;width:80px;"></img></td>
+                    <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                                    </tr>
+            <?php } ?>
                         </tbody>
         </table>
                       <div class="form-group" id="Q15Wa2">
@@ -2376,21 +2423,14 @@
                     <label class="control-label">Please upload supporting documents:</label>
                     <br>
                     • Waste Policy<br>
-                    <br>
-                    <button class="btn uploadbtn upload" data-id="Waste Policy" data-toggle="modal" data-target="#airModal" type="button">UPLOAD FILES
-                    </button>
-                    <br>
-                    <br>
+                    
                 </div>
                         <br>
         <div class="form-group" id="WastePolicy" >
             <label class="control-label">Please upload supporting documents:</label>
             <br>
             • Waste Policy<br>
-            <br>
-            <button class="btn uploadbtn upload" data-id="Water Policy" data-toggle="modal" data-target="#airModal" type="button">UPLOAD FILES
-            </button>
-            <br>
+            
         </div>
         <div class="form-group">
             <label class="control-label"><span class="cube">14</span>Are there awareness drives with regard to Reduce,
@@ -2409,11 +2449,7 @@
                     <label class="control-label">Please upload supporting documents:</label>
                     <br>
                     • Pictures of various school initiatives e.g. rally, debate, street play, art competition, etc<br>
-                    <br>
-                    <button class="btn uploadbtn upload" data-id="School Initiatives" data-toggle="modal" data-target="#airModal" type="button">UPLOAD FILES
-                    </button>
-                    <br>
-                    <br>
+                    
                 </div>
 
                           <div class="form-group" id="Q18Wa3">
@@ -2456,12 +2492,20 @@
         </div>
         <table width="100%" class="question uploadedfiles">
             <thead>
-            <tr>
+            <tr><th>image</th>
                 <th>File name</th>
-                <th>Action</th>
+               
             </tr>
             </thead>
             <tbody>
+			 <?php foreach ($teamDoingWaste as $f) { ?>
+                <tr id="index<?php echo $f->id; ?>">
+                    <?php $name = str_replace(" ", "_", $f->name . "_Audit_Team_Doing_Survey_"); ?>
+					 <td><img src="<?php echo base_url('uploads/files/'.$f->file_name);?>" class="img-thumbnail" style="height:80px;width:80px;"></img></td>
+                    <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                    
+                </tr>
+            <?php } ?>
                         </tbody>
         </table>
         <div class="text-center">
