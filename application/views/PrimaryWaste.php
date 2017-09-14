@@ -24,7 +24,7 @@
             </ul>
         </div>
         <div id="pprg" class="newprog progress" style="text-align:center">
-            <div id="samplt" class="fin-prog progress-bar" role="progressbar" style="width:75%; height: 35px;">75%</div>
+            <div id="samplt" class="fin-prog progress-bar" role="progressbar" style="width: <?php echo progressBarValue($this->session->userdata('USER_ID')).'%'; ?>; height: 35px;"><?php echo progressBarValue($this->session->userdata('USER_ID')).'%'; ?></div>
         </div>
         <div class="intro">
             <h1>WASTE<span style="text-transform:capitalize">(Primary)</span></h1>
