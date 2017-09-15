@@ -28,5 +28,70 @@ class Dashboard_model extends CI_Model {
                         ->order_by('a.id', 'desc')
                         ->get()->result();
     }
+	
+	public function totalschool()
+	{
+		return $this->db->select('*')
+					->from('gsp_school')
+					->get()->result();
+	}
+	
+	public function school_started_audit()
+	{
+		return $this->db->select('*')
+					->from('gsp_school')
+					->where( 'progress >5')
+					->get()->result();
+	}
+	
+	public function getschool_started_audit() {
+		$this->db->where('progress >', 5);
+		return $this->db->count_all_results('gsp_school');
+        
+	}
+	
+	public function school_that_complete_audit()
+	{
+		return $this->db->select('*')
+					->from('gsp_school')
+					->where('progress=100')
+					->get()->result();
+	}
+	public function getschool_that_complete_audit() {
+		$this->db->where('progress = 100');
+		return $this->db->count_all_results('gsp_school');
+        
+	}
+	
+	public function school_start_but_not_complete()
+	{
+		return $this->db->select('*')
+					->from('gsp_school')
+					->where('progress >', 5)
+					->where('progress <', 100)
+					->get()->result();
+	}
+	
+	public function getschool_start_but_not_complete() {
+		$this->db->where('progress >', 5);
+		$this->db->where('progress <', 100);
+		return $this->db->count_all_results('gsp_school');
+        
+	}
+	
+	public function schools_not_start_the_audit()
+	{
+		return $this->db->select('*')
+						->from('gsp_school')
+						->where('progress=5')
+						->get()->result();
+	}
+	public function getschools_not_start_the_audit() {
+		$this->db->where('progress = 5');
+		return $this->db->count_all_results('gsp_school');
 
 }
+}
+
+
+
