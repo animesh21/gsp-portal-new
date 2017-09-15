@@ -84,6 +84,23 @@ if (!function_exists('progressBarValue')) {
 }
 
 /*
+ * Get Upload File
+ */
+if (!function_exists('getUploadData')) {
+    function getUploadData($argText, $argUserID)
+    {
+       $CI= get_instance();
+       $temp=$CI->db->select('*')
+                     ->from('files')
+                     ->where('userid', $argUserID)
+                     ->like('file_name', $argText)
+                     ->get()->result();
+       return $temp;
+    }
+
+}
+
+/*
  * Get Air Point Calculation
  */
 if (!function_exists('getAirPoints')) {
@@ -438,5 +455,113 @@ if (!function_exists('getLandPoints')) {
             }
         }
         return array_sum($land_points);
+    }
+}
+
+/*
+ * Get Waste Point
+ */
+if (!function_exists('getWastePoints')) {
+    function getWastePoints($argUserID)
+    {
+        $waste_points=array();
+        //2(a) How many categories does your school segregate waste into? 
+        $total_two_bins=(getFiled('Q5Wa11S3', $argUserID) != '') ? getFiled('Q5Wa11S3', $argUserID) : 0;
+        $total_three_bins=(getFiled('Q5Wa11S4', $argUserID) != '') ? getFiled('Q5Wa11S4', $argUserID) : 0;
+        $total_collection_point=(getFiled('Q5Wa11S5', $argUserID) != '') ? getFiled('Q5Wa11S5', $argUserID) : 0;
+        
+        $total_with_no_bins=(getFiled('Q5Wa11S1', $argUserID) != '') ? getFiled('Q5Wa11S1', $argUserID) : 0;
+        $total_with_one_bin=(getFiled('Q5Wa11S2', $argUserID) != '') ? getFiled('Q5Wa11S2', $argUserID) : 0;
+        $total_with_three_bin=(getFiled('Q5Wa11S4', $argUserID) != '') ? getFiled('Q5Wa11S4', $argUserID) : 0;
+        if($total_collection_point==($total_three_bins+$total_two_bins))
+        {
+            $waste_points['Q2_segregate']=10;
+        }else if($total_collection_point==($total_with_no_bins+$total_with_one_bin))
+        {
+            $waste_points['Q2_segregate']=0;
+        }else if($total_two_bins==$total_collection_point)
+        {
+            $waste_points['Q2_segregate']=10;
+        }else if($total_with_three_bin==$total_collection_point)
+        {
+            $waste_points['Q2_segregate']=10;
+        }else if(($total_two_bins+$total_with_three_bin) < $total_collection_point)
+        {
+            $waste_points['Q2_segregate']=($total_two_bins+$total_with_three_bin)*10/$total_collection_point;
+        }
+        
+        ///Point Calculation Water recycled
+        //Total Amount of Generated Waste
+        //Biodigradble
+        $A=(getFiled('Q6Wa1S5', $argUserID) != '') ? getFiled('Q6Wa1S5', $argUserID) : 0;
+        //Dry/Recycalbe
+        $B=(getFiled('Q6Wa2S8', $argUserID) != '') ? getFiled('Q6Wa2S8', $argUserID) : 0;
+        //Domestic
+        $C=(getFiled('Q6Wa3S3', $argUserID) != '') ? getFiled('Q6Wa3S3', $argUserID) : 0;
+        //E-Watse
+        $D=(getFiled('Q6Wa4S1', $argUserID) != '') ? getFiled('Q6Wa4S1', $argUserID) : 0;
+        //Biomedical waste
+        $E=(getFiled('Q6Wa5S1', $argUserID) != '') ? getFiled('Q6Wa5S1', $argUserID) : 0;
+        //Sanitary
+        $F=(getFiled('Q6Wa6S1', $argUserID) != '') ? getFiled('Q6Wa6S1', $argUserID) : 0;
+        //Cc&&D
+        $G=(getFiled('Q6Wa7S1', $argUserID) != '') ? getFiled('Q6Wa7S1', $argUserID) : 0;
+        $total_generated_waste=$A+$B+$C+$D+$E+$F+$G;
+        //Recycled Watse
+        $A1=(getFiled('Q8Wa1S5', $argUserID) != '') ? getFiled('Q8Wa1S5', $argUserID) : 0;
+        //Dry/Recycalbe
+        $B1=(getFiled('Q8Wa2S8', $argUserID) != '') ? getFiled('Q8Wa2S8', $argUserID) : 0;
+        //Domestic
+        $C1=(getFiled('Q8Wa3S3', $argUserID) != '') ? getFiled('Q8Wa3S3', $argUserID) : 0;
+        //E-Watse
+        $D1=(getFiled('Q8Wa4S1', $argUserID) != '') ? getFiled('Q8Wa4S1', $argUserID) : 0;
+        //Biomedical waste
+        $E1=(getFiled('Q8Wa5S1', $argUserID) != '') ? getFiled('Q8Wa5S1', $argUserID) : 0;
+        //Sanitary
+        $F1=(getFiled('Q8Wa6S1', $argUserID) != '') ? getFiled('Q8Wa6S1', $argUserID) : 0;
+        //Cc&&D
+        $G1=(getFiled('Q8Wa7S1', $argUserID) != '') ? getFiled('Q8Wa7S1', $argUserID) : 0;
+        $total_recycled_waste=$A1+$B1+$C1+$D1+$E1+$F1+$G1;
+        if($total_generated_waste !=0)
+        {
+        $percentage_of_genrated_waste=($total_recycled_waste/$total_generated_waste)*100;
+        if($percentage_of_genrated_waste > 50)
+        {
+            $waste_points['Q4_recycled_waste']=20;
+        }
+        }
+        //Q5 Does your school have a composting facility?
+        $composition_facility=(getFiled('Q9Wa1', $argUserID) != '') ? getFiled('Q9Wa1', $argUserID) : "";
+        if($composition_facility!='')
+        {
+            if($composition_facility=='Y')
+            {
+                $waste_points['Q5_facility']=5;
+            }else if($composition_facility=='N')
+            {
+                $waste_points['Q5_facility']=0;
+            }
+        }
+        //Q5 a. What is the methodology used?
+        $methodology=(getFiled('Q9Wa2S1', $argUserID) != '') ? getFiled('Q9Wa2S1', $argUserID) : "";
+        if($methodology !='')
+        {
+            $waste_points['Q5_facility']=10;
+        }
+        
+        //What is the waste segregation system in your school?
+        //Q1 Does your school segregate waste
+        $segregateWaste=(getFiled('Q4Wa1', $argUserID) != '') ? getFiled('Q4Wa1', $argUserID) : "";
+        if($segregateWaste!='')
+        {
+            if($segregateWaste=='Y')
+            {
+                $waste_points['Q2_segregate_wasre']=5;
+            }else if($segregateWaste=='N')
+            {
+                $waste_points['Q2_segregate_wasre']=0;
+            }
+        }
+        return number_format(array_sum($waste_points), 2);
     }
 }
