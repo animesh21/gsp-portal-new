@@ -101,8 +101,8 @@ class Gsp extends REST_Controller {
      * 
      */
 
-    public function image_post() {
-        $id = $this->post("userid");
+    public function image_get() {
+        $id = $this->get("userid");
         $temp = $this->db->get_where('files', array('userid' => $id))->result();
         if (!empty($temp)) {
             $this->set_response($temp, REST_Controller::HTTP_CREATED);
