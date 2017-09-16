@@ -1,4 +1,5 @@
 <?php
+
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method");
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
@@ -21,11 +22,9 @@ require APPPATH . '/libraries/REST_Controller.php';
  * @license         MIT
  * @link            https://github.com/chriskacerguis/codeigniter-restserver
  */
-class Gsp extends REST_Controller
-{
+class Gsp extends REST_Controller {
 
-    function __construct()
-    {
+    function __construct() {
         // Construct the parent class
         parent::__construct();
 
@@ -39,77 +38,78 @@ class Gsp extends REST_Controller
         $this->load->model('User_model');
     }
 
-    public function users_get()
-    {
+    public function users_get() {
         $email = $this->get('email');
         $password = $this->get('password');
         $email = str_replace("-", "@", $email);
-        if (isset($email) && isset($password))
-        {
+        if (isset($email) && isset($password)) {
             $details['email'] = $email;
             $details['password'] = $password;
             $users = $this->User_model->Login($details);
 
-            if ($users)
-            {
+            if ($users) {
                 $detail['school'] = $this->School_model->getSchool($users);
                 $detail['data'] = $this->Answer_model->Answers($users);
                 $detail['states'] = $this->User_model->getStates($users);
 
                 $this->set_response($detail, REST_Controller::HTTP_CREATED); // CREATED (201) being the HTTP response code
                 // OK (200) being the HTTP response code
-            }
-            else
-            {
+            } else {
 
                 $this->response([
                     'status' => FALSE,
                     'message' => 'No users were found',
                     'id' => $details
-                ], REST_Controller::HTTP_NOT_FOUND); // NOT_FOUND (404) being the HTTP response code
+                        ], REST_Controller::HTTP_NOT_FOUND); // NOT_FOUND (404) being the HTTP response code
             }
         }
     }
-    public function states_get()
-    {
+
+    public function states_get() {
         $id = $this->get("stateid");
-        if (isset($id))
-        {
+        if (isset($id)) {
             $city = $this->User_model->getCitiesAll($id);
 
             $this->set_response($city, REST_Controller::HTTP_CREATED); // CREATED (201) being the HTTP response code
-        }
-        else
-        {
+        } else {
 
             $this->response([
                 'status' => FALSE,
                 'message' => 'Please Specify State ID',
                 'id' => $id
-            ], REST_Controller::HTTP_NOT_FOUND); // NOT_FOUND (404) being the HTTP response code
+                    ], REST_Controller::HTTP_NOT_FOUND); // NOT_FOUND (404) being the HTTP response code
         }
-
     }
-    public function users_post()
-    {
+
+    public function users_post() {
         $details = $this->post('survey');
         if (isset($details)) {
             foreach ($details as $data) {
                 //print_r($data);*
-                if($data["questionid"] != "username" && !preg_match("/.*next.*$/",$data['questionid']) && !preg_match("/.*previous.*$/",$data['questionid']) && !preg_match("/.*submit.*$/",$data['questionid']))
-                if (preg_match("/^Q.*$/",$data['questionid']))
-                {
-                    $this->Answer_model->SubmitAPIAnswers($data);
-
-                }
-                else
-                {
-                    print_r($this->School_model->SubmitAPIAnswers($data));
-
-                }
-
-
+                if ($data["questionid"] != "username" && !preg_match("/.*next.*$/", $data['questionid']) && !preg_match("/.*previous.*$/", $data['questionid']) && !preg_match("/.*submit.*$/", $data['questionid']))
+                    if (preg_match("/^Q.*$/", $data['questionid'])) {
+                        $this->Answer_model->SubmitAPIAnswers($data);
+                    } else {
+                        print_r($this->School_model->SubmitAPIAnswers($data));
+                    }
             }
+        }
+    }
+
+    /*
+     * Get User Image
+     * 
+     */
+
+    public function image($argId) {
+        $temp = $this->db->get_where('files', array('userid' => $argId))->result();
+        if (!empty($temp)) {
+            $this->set_response($temp, REST_Controller::HTTP_CREATED);
+        } else {
+            $this->response([
+                'status' => FALSE,
+                'message' => 'No User Id Found'
+                    ], REST_Controller::HTTP_NOT_FOUND);
         }
     }
 
