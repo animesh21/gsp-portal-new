@@ -119,10 +119,10 @@ if(isset($_REQUEST['submit']))
      {
         if(value=='2015')
         {
-            location.href="http://localhost/GSP/old/";
+            location.href="http://www.greenschoolsprogramme.org/audit2017/old/index.php";
         }else if(value=='2017')
         {
-            location.href="http://localhost/GSP/admin/";
+            location.href="http://www.greenschoolsprogramme.org/audit2017/admin";
         }
      }
 </script>

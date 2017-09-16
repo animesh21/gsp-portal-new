@@ -73,14 +73,14 @@
 <!-- Include all compiled plugins (below), or include individual files as needed --> 
 <script src="<?php echo base_url('')?>assets/js/bootstrap.min.js"></script>
 <script>
-     function redirect(value)
+      function redirect(value)
      {
         if(value=='2015')
         {
-            location.href="http://localhost/GSP/old/";
+            location.href="http://www.greenschoolsprogramme.org/audit2017/old/index.php";
         }else if(value=='2017')
         {
-            location.href="http://localhost/GSP/admin/";
+            location.href="http://www.greenschoolsprogramme.org/audit2017/admin";
         }
      }
 </script>
