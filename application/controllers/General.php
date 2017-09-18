@@ -51,7 +51,7 @@ class General extends CI_Controller {
     	$post = $this->input->post();
         
       	$this->Answer_model->submitAnswers($post,1);
-			  updateProgress($this->session->userdata('USER_ID'), 10);
+	updateProgress($this->session->userdata('USER_ID'), 10);
       	redirect(base_url("air"));
      }
   
