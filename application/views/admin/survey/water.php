@@ -340,7 +340,7 @@
             </div>
             <div class="form-group">
                 <label>
-                    <h6>Task 3: What Are The Sources, Supply and Storage of Water in your School? <a class="kplink" href="http://www.greenschoolsprogramme.org/knowledge-bank/water/#sourceOfWater" target="_blank"> </a>
+                    <h6>Task 3: What Are The Sources, Supply and Storage of Water in your School? 
                     </h6>
                 </label>
                 <p> To understand water, it is important to know the source of water in your school premises. As you know,
@@ -571,7 +571,7 @@
             <div class="clearfix">&nbsp;</div>
             <div class="form-group">
                 <label>
-                    <h6>Task 5: Does your school harvest rainwater? <a class="kplink" href="http://www.greenschoolsprogramme.org/knowledge-bank/water/#rainFalls" target="_blank"> </a></h6>
+                    <h6>Task 5: Does your school harvest rainwater? </h6>
                 </label>
 
                 <br>
@@ -579,7 +579,7 @@
                 will find out how much rainwater your school can catch, and how much your school can
                 harvest. Rainwater harvesting is a traditional, time-tested method of collecting rainwater
                 and using it to recharge groundwater or storing it for other uses.<br>
-                To know the types of catchment <a class="kplink" href="http://www.greenschoolsprogramme.org/knowledge-bank/water/#rainFalls" target="_blank"> </a></div>
+                To know the types of catchment </div>
             <div class="form-group">
                 <label><span class="cube">6</span>Do you have Rainwater harvesting (RWH) system in your
                     school?</label>
@@ -1459,9 +1459,8 @@
                 </div>
             <?php } ?>
             <div class="text-center">
-                <button type="button" class="org-btn" id="btnWaterPrevious">Previous</button>
-                <button type="submit" id="movenextbtn" value="movenext" name="movenext" accesskey="n" class="submit button">Next</button>
-                <button type="button" class="org-btn" id="watersave">Save and Resume Later</button>
+                <a class="btn org-btn" href="<?php echo base_url('admin/audit_started_2017/land/' . $id) ?>">PREVIOUS</a>
+        <a class="btn org-btn" href="<?php echo base_url('admin/audit_started_2017/waste/' . $id) ?>">NEXT</a>
             </div>
         </form> </div></div>
 <?php $this->load->view('admin/survey/footer'); ?>
