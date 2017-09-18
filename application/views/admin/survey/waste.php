@@ -1217,7 +1217,7 @@
 
                     <div class="form-group">
                         <label class="control-label"><span class="cube">6</span>Does your school encourage students &amp; teachers to
-                            reuse textbooks? <a class="kplink" href="http://www.greenschoolsprogramme.org/knowledge-bank/waste/#chomp" target="_blank"></a></label>
+                            reuse textbooks?</label>
                         <div class="form-group">
                             <p> <?php echo (getFiled('Q10Wa1', $schoolUserID) != "") ? (getFiled('Q10Wa1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
 
@@ -1225,7 +1225,7 @@
                     </div>
                     <div class="form-group">
                         <label class="control-label"><span class="cube">7</span>Please fill the table to understand whether waste
-                            recycling procedures are applied to waste. <a class="kplink" href="http://www.greenschoolsprogramme.org/knowledge-bank/waste/#whatWeDo" target="_blank"> </a></label>
+                            recycling procedures are applied to waste. </label>
                         <div class="form-group row">
                             <div class="col-xs-2">
                                 <label>Category of waste </label>
@@ -1851,7 +1851,7 @@
                         </div>
                         <div class="col-xs-2">
                             <?php echo (getFiled('Q12Wa9S1', $schoolUserID) != "") ? getFiled('Q12Wa9S1', $schoolUserID) : "N/A"; ?>
-                           <!--  <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa9S1" type="number" name="Q12Wa9S1" placeholder="" value="">-->
+                          
                         </div>
                         <div class="col-xs-2">
                             <?php echo (getFiled('Q12Wa9S2', $schoolUserID) != "") ? getFiled('Q12Wa9S2', $schoolUserID) : "N/A"; ?>
@@ -2625,9 +2625,8 @@
                         </div>
                     <?php } ?>
                     <div class="text-center">
-                        <button type="button" class="org-btn" id="btnWastePrevious">Previous</button>
-                        <button type="submit" class="org-btn" id="wastenext" value="movenext">Next</button>
-                        <button type="button" class="org-btn" id="wastesave">Save and Resume Later</button>
+                         <a class="btn org-btn" href="<?php echo base_url('admin/audit_started_2017/water/' . $id) ?>">PREVIOUS</a>
+        <a class="btn org-btn" href="<?php echo base_url('admin/audit_started_2017/feedback/' . $id) ?>">NEXT</a>
                     </div>
                 </div>
             </div>
@@ -2821,7 +2820,7 @@
                  <li class="times"><a href="http://www.gobartimes.org/" target="_blank"><img src="http://localhost/gsp-portal-new/assets/img/times.jpg" class="img-responsive"></a></li>
                 </ul>
                </div-->
-                <div class="text-center" id="copyright">Copyright © 2017 Centre for Science and Environment</div>
+              
             </footer>
             <div id="videoModal" class="modal fade" role="dialog">
                 <div class="modal-dialog">

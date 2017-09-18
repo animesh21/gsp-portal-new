@@ -209,11 +209,13 @@
         <div class="form-group hide" id="Question11a">
             <label><span class="cube">11(a)</span> If your answer is yes, why did they enjoy doing outdoor activities?
             </label>
-            <input type="text" name="Q1Fe12" id="Q1Fe11" class="form-control">
+			<?php echo (getFiled('Q1Fe12', $schoolUserID) != "") ? getFiled('Q1Fe12', $schoolUserID) : "N/A"; ?>
+            
         </div>
         <div class="form-group hide" id="Question11b">
            <label><span class="cube">11(a)</span>If your answer is no, please state why? </label>
-           <input type="text" name="Q1Fe12" id="Q1Fe11" class="form-control">
+		   <?php echo (getFiled('Q1Fe12', $schoolUserID) != "") ? getFiled('Q1Fe12', $schoolUserID) : "N/A"; ?>
+           
         </div>
         <div class="form-group">
             <label>
@@ -364,11 +366,7 @@
         </div>
 
         <div class="navbar navbar-default" role="navigation">
-            <button type="button" class="org-btn" id="btnFeedbackPrevious">Previous</button>
-            <button type="submit" id="movesubmitbtn" value="movesubmit" name="movesubmit" accesskey="l" class="submit button">Submit Audit
-            </button>
-            <button type="submit" id="saveallbtn" value="saveall" name="saveall" class="saveall submit button bottomMargin100">Save &amp; Resume later
-            </button>
+            <a class="btn org-btn" href="<?php echo base_url('admin/audit_started_2017/waste/' . $id) ?>">PREVIOUS</a>
 
         </div>
         </form> </div>
