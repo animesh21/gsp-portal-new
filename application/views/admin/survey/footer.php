@@ -1,4 +1,4 @@
-<style>
+<style type="text/css">
 
 .btn-circle {
   width: 30px;
@@ -26,7 +26,6 @@
   border-radius: 35px;
 }
 #copyright{ color:#FFFFFF; font-size:10px; padding:6px 0px 6px 0px;}
-
 </style>
 <a class="" onclick="topFunction()" id="myBtn" ><strong><img src="<?php echo base_url(); ?>assets/img/top.png"></strong></a>
 <?php $this->load->view('modals/air_modal'); ?>

@@ -820,9 +820,8 @@
         </div>
     <?php } ?>
     <div class="text-center">
-        <button type="button" class="org-btn" id="btnFoodPrevious"> Previous </button>
-        <button type="submit" class="org-btn" id="foodnext" value="movenext"> Next </button>
-        <button type="button" class="org-btn submit button" id="foodsave"> Save and Resume Later</button>
+        <a class="btn org-btn" href="<?php echo base_url('admin/audit_started_2017/energy/' . $id) ?>">PREVIOUS</a>
+        <a class="btn org-btn" href="<?php echo base_url('admin/audit_started_2017/land/' . $id) ?>">NEXT</a>
     </div>
 </div>
 <?php $this->load->view('admin/survey/footer'); ?>

@@ -80,6 +80,109 @@
                 <th>Air quality monitoring close to school</th>
                 <th>Points in <br />
                     Air Section</th>
+                <th>Electricity Bill</th>
+                <th>School has own vehicle</th>
+                <th>Quantity consumed <br> Electricity from Board (Kwh)</th>
+                <th>Quantity consumed <br>Electricity from Generator (Diesel)</th>
+                <th>Quantity consumed <br>Petrol (litres) </th>
+                <th>Quantity consumed <br>Diesel (lts)</th>
+                <th>Quantity consumed <br>CNG (Kg)</th>
+                <th>Quantity consumed <br>Kerosene (lts)</th>
+                <th>Quantity consumed <br>Coal (Kg)</th>
+                <th>Quantity consumed <br>Wood (kg)</th>
+                <th>Quantity consumed <br>Animal Waste (kg)</th>
+                <th>Quantity consumed <br>Solar (kwh)</th>
+                <th>Quantity consumed <br>Wind (kwh)</th>
+                <th>Quantity consumed <br>LPG (Kg)</th>
+                <th>Quantity consumed <br>PNG (Kg)</th>
+                <th>Quantity consumed <br>Biogas (Kg)</th>
+                <th>Others</th>
+                <th>Electricity from the board (MJ)  </th>
+                <th>Electricity from generator (MJ) </th>
+                <th>Petrol (MJ) </th>
+                <th>Diesel (MJ) </th>
+                <th>CNG (MJ) </th>
+                <th>Kerosene (MJ) </th>
+                <th>Coal (MJ) </th>
+                <th>Wood (MJ) </th>
+                <th>Animal waste (MJ) </th>
+                <th>Solar (MJ) </th>
+                <th>Wind (MJ)  </th>
+                <th>LPG (MJ)  </th>
+                <th>Piped Natural Gas (MJ)  </th>
+                <th>Biogas (MJ)  </th>
+                <th>Other (MJ)  </th>
+                <th>Total MJ  </th>
+                <th>Per capita <br>Energy Consumption  </th>
+                <th>No.of Air<br> conditioner</th>
+                <th>Size of Air <br> conditioner</th>
+                <th>BEE Star rating<br> Air conditioner</th>
+                <th>No.of <br>Refrigerator</th>
+                <th>Size of<br> Refrigerator</th>
+                <th>BEE Star <br> rating Refrigerator</th>
+                <th>No of <br> Microwave</th>
+                <th>Size of <br> Microwave</th>
+                <th>BEE Star<br> rating Microwave</th>
+                <th>No.of<br> Tubelight</th>
+                <th>Size of<br> Tubelight</th>
+                <th>BEE Star<br> rating Tubelight</th>
+                <th>No.of <br>CFL bulb</th>
+                <th>Size of <br>CFL bulb</th>
+                <th>BEE Star <br>rating CFL bulb</th>
+                <th>No.of <br>LED bulb</th>
+                <th>Size of <br>LED bulb</th>
+                <th>BEE Star <br>rating LED bulb</th>
+                <th>No.of <br>Fans</th>
+                <th>Size of <br>Fans</th>
+                <th>BEE Star <br>rating Fans</th>
+                <th>Average number of sunny days</th>
+                <th>Alternate Source <br />
+                    of Energy</th>
+                <th>Solar</th>
+                <th>Wind</th>
+                <th>Hydro</th>
+                <th>Biogas <br>Plant</th>
+                <th>Combination of <br>solar and wind</th>
+                <th>Use of Solar <br> water heater</th>
+                <th>Total points in Energy</th>
+                <th>Provison of<br> Packed Food</th>
+                <th>Serve <br>Mid-day Meal</th>
+                <th>Students bring<br> own lunch</th>
+                <th>How many students<br> bring home-made lunch</th>
+                <th>how many bring <br>packaged food as home-made lunch</th>
+                <th>Teachers have <br>responsibility to check</th>
+                <th>Savouary Snacks<br> count of flavour</th>
+                <th>Savouary Snacks<br> no.of item sold</th>
+                <th>Month</th>
+                <th>Instand Noodles<br> count of flavour</th>
+                <th>Instand Noodles<br> no.of item sold</th>
+                <th>month</th>
+                <th>Potato Fries<br> Count of flavour</th>
+                <th>Potato Fries <br>no.of item sold</th>
+                <th>month</th>
+                <th>Confectionary - count<br> of flavour</th>
+                <th>Confectionary<br> no.of item sold</th>
+                <th>month</th>
+                <th>Ice Cream count<br> of flavour</th>
+                <th>Ice Cream no.of items sold</th>
+                <th>Months</th>
+                <th>Carbonatd beverages count of flavour</th>
+                <th>carbonated beverages no.of items sold</th>
+                <th>month</th>
+                <th>Sugar sweetened non-carbonated beverages count of flavour</th>
+                <th>Sugar sweetened non-carbonated beverages no.of items sold</th>
+                <th>month</th>
+                <th>Packaged/bottled nimboo paani/lassi/flavoured milk  - count of flavour</th>
+                <th>Packaged/bottled nimboo paani/lassi/flavoured milk -no.of item sold</th>
+                <th>Month</th>
+                <th>Packaged/bottled energy drinks count of flavour</th>
+                <th>Packaged/bottled energy drinks no.of items sold</th>
+                <th>Month</th>
+                <th>School serve traditional Indian snacks</th>
+                <th>Samosas</th>
+                <th>Idli/vada</th>
+                <th>Pav Bhaji</th>
+                <th>Momos</th>
 <!--                <th>Vehicles on CNG</th>
                 <th>Details of Buses on CNG</th>
                 <th>Details of Car on CNG</th>
@@ -90,12 +193,7 @@
                 <th>Sustainble Motorised Vehicles: Percentgae</th>
                 <th>Non Polluting Transport: Numbers</th>
                 <th>Non Polluting Transport: Percentage</th>-->
-                <th>Energy: Per cap/day (MJ)</th>
-                <th>Source of Energy</th>
-                <th>Alternate Source <br />
-                    of Energy</th>
-                <th>Points in <br />
-                    Energy Section</th>
+<!--                <th>Source of Energy</th>
                 <th>Food Served in Canteen</th>
                 <th>Packaged Food distribution as Rewards</th>
                 <th>Details of Packaged Food</th>
@@ -143,7 +241,7 @@
                 <th>E-waste Disposal</th>
                 <th>Who collects E-waste</th>
                 <th>Points in Waste Section</th>
-                <th>Total Points</th>
+                <th>Total Points</th>-->
                 <!--<th>Bonus Points</th>-->
             </tr>
         </thead> 
@@ -560,456 +658,755 @@
                     <!--                    Points in air section-->
                     <td><?php echo getAirPoints($r->userid); ?></td>
                     <!--Ends Here-->
-<!--                    Total Vehicle ON CNG
-                    <td> <?php echo (getFiled('Q6A2S3C5', $r->userid) != '') ? getFiled('Q6A2S3C5', $r->userid) : 0; ?></td>
-                    Ends Here
-                    Buses on CNG
-                    <td> <?php echo (getFiled('Q6A2S3C1', $r->userid) != '') ? getFiled('Q6A2S3C1', $r->userid) : 0; ?></td>
-                    Ends Here
-                    Cars on CNG
-                    <td> <?php echo (getFiled('Q6A2S3L2', $r->userid) != '') ? getFiled('Q6A2S3L2', $r->userid) : 0; ?></td>
-                    Ends Here
-                    Vans on CNG
-                    <td> <?php echo (getFiled('Q6A2S3C3', $r->userid) != '') ? getFiled('Q6A2S3C3', $r->userid) : 0; ?></td>
-                    Ends Here
-                    Total Population in GQ
-                    <td> <?php echo (getFiled('Q4G4S3', $r->userid) != '') ? getFiled('Q4G4S3', $r->userid) : 0; ?></td>
-                    Ends Here
-                    Total Population in Air
-                    <td> <?php echo (getFiled('Q4G4S3', $r->userid) != '') ? getFiled('Q4G4S3', $r->userid) : 0; ?></td>
-                    Ends Here
-                                         Sustainable Motorised Vehicles
-                    <td> <?php echo getFiled('Q7A1S4', $r->userid) + getFiled('Q7A2S4', $r->userid) + getFiled('Q7A3S4', $r->userid) + getFiled('Q7A4S4', $r->userid) + getFiled('Q7A5S4', $r->userid) + getFiled('Q7A6S4', $r->userid) ?></td>
-                    Ends Here
-                                         Sustainable Motorised Vehicles Percantage
-                    <td>
-                        <?php
-                        $total_sustainable_vehicle = getFiled('Q7A1S4', $r->userid) + getFiled('Q7A2S4', $r->userid) + getFiled('Q7A3S4', $r->userid) + getFiled('Q7A4S4', $r->userid) + getFiled('Q7A5S4', $r->userid) + getFiled('Q7A6S4', $r->userid);
-                        $total_population = (getFiled('Q4G4S3', $r->userid) != '') ? getFiled('Q4G4S3', $r->userid) : 0;
-                        if ($total_population != 0) {
-                            $per_smv = (($total_sustainable_vehicle / $total_population) * 100);
-                            echo number_format((float) $per_smv, 2, '.', '');
-                        }
-                        ?>
-                    </td>
-                    Ends Here
-                                        Non Polluting Transport: Numbers
-                    <td> <?php echo (getFiled('Q7A12S4', $r->userid) != '') ? getFiled('Q7A12S4', $r->userid) : 0; ?></td>
-                    Ends Here
-                                        Non Polluting Transport: Numbers
-                    <td>
-                        <?php
-                        $total_nonpolluting_vehicle = (getFiled('Q7A12S4', $r->userid) != '') ? getFiled('Q7A12S4', $r->userid) : 0;
-                        $total_population = (getFiled('Q4G4S3', $r->userid) != '') ? getFiled('Q4G4S3', $r->userid) : 0;
-                        if ($total_population != 0) {
-                            //echo $total_nonpolluting_vehicle.$total_pop;
-                            $nonplluting_per = ($total_nonpolluting_vehicle / $total_population) * 100;
-                            echo number_format((float) $nonplluting_per, 2, '.', '');
-                        }
-                        ?>
-                    </td>-->
+                    <!--                    Electricity Bill-->
+                    <td><?php
+                        if (getFiled('Q4E1', $r->userid) == 'Y'): echo "Yes";
+                        elseif (getFiled('Q4E1', $r->userid) == 'N'): echo "No";
+                        endif;
+                        ?></td>
+                    <!--Ends Here-->
+                    <!--                    School has owned vehicle's-->
+                    <td><?php
+                        if (getFiled('Q5E1', $r->userid) == 'Y'): echo "Yes";
+                        elseif (getFiled('Q5E1', $r->userid) == 'N'): echo "No";
+                        endif;
+                        ?></td>
+                    <!--Ends Here-->
+                    <!--                    Quantity consumed Electricity from Board (Kwh)-->
+                    <td><?php echo (getFiled('Q6E1S1', $r->userid) != '') ? getFiled('Q6E1S1', $r->userid) : 0; ?></td>
+                    <!--Ends Here-->
+                    <!--                    Quantity consumed Electricity from Generator (Diesel)-->
+                    <td><?php echo (getFiled('Q6E2S1', $r->userid) != '') ? getFiled('Q6E2S1', $r->userid) : 0; ?></td>
+                    <!--Ends Here-->
+                    <!--                    Quantity consumed Petrol (litres) -->
+                    <td><?php echo (getFiled('Q6E3S1', $r->userid) != '') ? getFiled('Q6E3S1', $r->userid) : 0; ?></td>
+                    <!--Ends Here-->
+                    <!--                    Quantity consumed Diesel (lts)-->
+                    <td><?php echo (getFiled('Q6E4S1', $r->userid) != '') ? getFiled('Q6E4S1', $r->userid) : 0; ?></td>
                     <!--                    Ends Here-->
-                    <!-- Energy Per Cap Jool-->
+                    <!--                    Quantity consumed CNG (Kg)-->
+                    <td><?php echo (getFiled('Q6E5S1', $r->userid) != '') ? getFiled('Q6E5S1', $r->userid) : 0; ?></td>
+                    <!--                    Ends Here-->
+                    <!--                    Quantity consumed Kerosene (lts)-->
+                    <td><?php echo (getFiled('Q6E6S1', $r->userid) != '') ? getFiled('Q6E6S1', $r->userid) : 0; ?></td>
+                    <!--                    Ends Here-->
+                    <!--                    Quantity consumed Coal (Kg)-->
+                    <td><?php echo (getFiled('Q6E7S1', $r->userid) != '') ? getFiled('Q6E7S1', $r->userid) : 0; ?></td>
+                    <!--                    Ends Here-->
+                    <!--                    Quantity consumed Wood (kg)-->
+                    <td><?php echo (getFiled('Q6E16S1', $r->userid) != '') ? getFiled('Q6E16S1', $r->userid) : 0; ?></td>
+                    <!--                    Ends Here-->
+                    <!--                    Quantity consumed Animal Waste (kg)-->
+                    <td><?php echo (getFiled('Q6E8S1', $r->userid) != '') ? getFiled('Q6E8S1', $r->userid) : 0; ?></td>
+                    <!--                    Ends Here-->
+                    <!--                    Quantity consumed Solar (kwh)-->
+                    <td><?php echo (getFiled('Q6E9S1', $r->userid) != '') ? getFiled('Q6E9S1', $r->userid) : 0; ?></td>
+                    <!--                    Ends Here-->
+                    <!--                    Quantity consumed Wind (kwh)-->
+                    <td><?php echo (getFiled('Q6E10S1', $r->userid) != '') ? getFiled('Q6E10S1', $r->userid) : 0; ?></td>
+                    <!--Ends Here-->
+                    <!--                    Quantity consumed LPG (Kg)-->
+                    <td><?php echo (getFiled('Q6E11S1', $r->userid) != '') ? getFiled('Q6E11S1', $r->userid) : 0; ?></td>
+                    <!--                    Ends Here-->
+                    <!--                    Quantity consumed PNG (Kg)-->
+                    <td><?php echo (getFiled('Q6E12S1', $r->userid) != '') ? getFiled('Q6E12S1', $r->userid) : 0; ?></td>
+                    <!--                    Ends Here-->
+                    <!--                    Quantity consumed Biogas (Kg)-->
+                    <td><?php echo (getFiled('Q6E13S1', $r->userid) != '') ? getFiled('Q6E13S1', $r->userid) : 0; ?></td>
+                    <!--                    Ends Here-->
+                    <!--                    Others-->
+                    <td><?php echo (getFiled('Q6E14S1', $r->userid) != '') ? getFiled('Q6E14S1', $r->userid) : 0; ?></td>
+                    <!--                    Ends Here-->
+                    <!--                    Electricity from the board (MJ) -->
+                    <td><?php echo (getFiled('Q6E1S2', $r->userid) != '') ? getFiled('Q6E1S2', $r->userid) : 0; ?></td>
+                    <!--                    Ends Here-->
+                    <!--                    Electricity from generator (MJ)-->
+                    <td><?php echo (getFiled('Q6E2S2', $r->userid) != '') ? getFiled('Q6E2S2', $r->userid) : 0; ?></td>
+                    <!--                    Ends Here-->
+                    <!--                    Petrol (MJ)-->
+                    <td><?php echo (getFiled('Q6E3S1', $r->userid) != '') ? getFiled('Q6E3S1', $r->userid) : 0; ?></td>
+                    <!--                    Ends Here-->
+                    <!--                    Diesel (MJ)-->
+                    <td><?php echo (getFiled('Q6E4S2', $r->userid) != '') ? getFiled('Q6E4S2', $r->userid) : 0; ?></td>
+                    <!--                    Ends Here-->
+                    <!--                    CNG (MJ)-->
+                    <td><?php echo (getFiled('Q6E5S2', $r->userid) != '') ? getFiled('Q6E5S2', $r->userid) : 0; ?></td>
+                    <!--                    Ends Here-->
+                    <!--                    Kerosine(MJ)-->
+                    <td><?php echo (getFiled('Q6E6S2', $r->userid) != '') ? getFiled('Q6E6S2', $r->userid) : 0; ?></td>
+                    <!--                    Ends Here-->
+                    <!--                    Coal (MJ)-->
+                    <td><?php echo (getFiled('Q6E7S2', $r->userid) != '') ? getFiled('Q6E7S2', $r->userid) : 0; ?></td>
+                    <!--Ends Here-->
+                    <!--                    Wood-->
+                    <td><?php echo (getFiled('Q6E16S2', $r->userid) != '') ? getFiled('Q6E16S2', $r->userid) : 0; ?></td>
+                    <!--Ends Here-->
+                    <!--                    Animal waste (MJ)-->
+                    <td><?php echo (getFiled('Q6E8S2', $r->userid) != '') ? getFiled('Q6E8S2', $r->userid) : 0; ?></td>
+                    <!--                    Ends Here-->
+                    <!--                    Solar (MJ)-->
+                    <td><?php echo (getFiled('Q6E9S2', $r->userid) != '') ? getFiled('Q6E9S2', $r->userid) : 0; ?></td>
+                    <!--                    Ends Here-->
+                    <!--                    Wind (MJ)-->
+                    <td><?php echo (getFiled('Q6E10S2', $r->userid) != '') ? getFiled('Q6E10S2', $r->userid) : 0; ?></td>
+                    <!--Ends Here-->
+                    <!--                    LPG (MJ)-->
+                    <td><?php echo (getFiled('Q6E11S2', $r->userid) != '') ? getFiled('Q6E11S2', $r->userid) : 0; ?></td>
+                    <!--                    Ends Here-->
+                    <!--                    Pipelined Natural Gas-->
+                    <td><?php echo (getFiled('Q6E12S3', $r->userid) != '') ? getFiled('Q6E12S3', $r->userid) : 0; ?></td>
+                    <!--                    Ends Here-->
+                    <!--                    Bio Gas-->
+                    <td><?php echo (getFiled('Q6E13S2', $r->userid) != '') ? getFiled('Q6E13S2', $r->userid) : 0; ?></td>
+                    <!--                    Ends Here-->
+                    <!--                    Others MJ-->
+                    <td><?php echo (getFiled('Q6E14S2', $r->userid) != '') ? getFiled('Q6E14S2', $r->userid) : 0; ?></td>
+                    <!--Ends Here-->
+                    <!--                    Total MJ-->
+                    <td><?php echo (getFiled('Q6E14S2', $r->userid) != '') ? getFiled('Q6E14S2', $r->userid) : 0; ?></td>
+                    <!--Ends Here-->
+                    <!--                    Per Day Energy Cosumption-->
                     <td> <?php echo (getFiled('Q6E15S2', $r->userid) != '') ? getFiled('Q6E15S2', $r->userid) : 0; ?></td>
+                    <!--Ends Here-->
+                    <!--                    No.of Air conditioner-->
+                    <td> <?php echo (getFiled('Q7E2S1', $r->userid) != '') ? getFiled('Q7E2S1', $r->userid) : 0; ?></td>
+                    <!--Ends Here-->
+                    <!--                    Size of Air conditioners-->
+                    <td> <?php echo (getFiled('Q7E2S1', $r->userid) != '') ? getFiled('Q7E2S1', $r->userid) : 0; ?></td>
                     <!--                    Ends Here-->
-                    <!--                    Source Of Energy-->
-                    <td>
-                        <?php
-                        $arr = array();
-                        //Board
-                        $arr[] = (getFiled('Q6E1S1', $r->userid) != '') ? (getFiled('Q6E1S1', $r->userid) != 0) ? "Electricity from the board" : "" : "";
-                        //Electricity Disel
-                        $arr[] = (getFiled('Q6E2S1', $r->userid) != '') ? (getFiled('Q6E2S1', $r->userid) != 0) ? "Electricity from generator(Diesel)" : "" : "";
-                        //Petrol
-                        $arr[] = (getFiled('Q6E3S1', $r->userid) != '') ? (getFiled('Q6E3S1', $r->userid) != 0) ? "Petrol" : "" : "";
-                        //Diesel
-                        $arr[] = (getFiled('Q6E4S1', $r->userid) != '') ? (getFiled('Q6E4S1', $r->userid) != 0) ? "Diesel" : "" : "";
-                        //CNG
-                        $arr[] = (getFiled('Q6E5S1', $r->userid) != '') ? (getFiled('Q6E5S1', $r->userid) != 0) ? "CNG" : "" : "";
-                        //Kerosine
-                        $arr[] = (getFiled('Q6E6S1', $r->userid) != '') ? (getFiled('Q6E6S1', $r->userid) != 0) ? "Kerosine" : "" : "";
-                        //Coal
-                        $arr[] = (getFiled('Q6E7S1', $r->userid) != '') ? (getFiled('Q6E7S1', $r->userid) != 0) ? "Coal" : "" : "";
-                        //Wood
-                        $arr[] = (getFiled('Q6E16S1', $r->userid) != '') ? (getFiled('Q6E16S1', $r->userid) != 0) ? "Wood" : "" : "";
-                        //Animal Waste
-                        $arr[] = (getFiled('Q6E8S1', $r->userid) != '') ? (getFiled('Q6E8S1', $r->userid) != 0) ? "Animal Waste" : "" : "";
-                        //Solar
-                        $arr[] = (getFiled('Q6E9S1', $r->userid) != '') ? (getFiled('Q6E9S1', $r->userid) != 0) ? "Solar" : "" : "";
-                        //Wind
-                        $arr[] = (getFiled('Q6E10S1', $r->userid) != '') ? (getFiled('Q6E10S1', $r->userid) != 0) ? "Wind" : "" : "";
-                        //LPG
-                        $arr[] = (getFiled('Q6E11S1', $r->userid) != '') ? (getFiled('Q6E11S1', $r->userid) != 0) ? "LPG" : "" : "";
-                        //Piped Natural Gas
-                        $arr[] = (getFiled('Q6E12S1', $r->userid) != '') ? (getFiled('Q6E12S1', $r->userid) != 0) ? "Piped Natural Gas" : "" : "";
-                        //Biogas
-                        $arr[] = (getFiled('Q6E13S1', $r->userid) != '') ? (getFiled('Q6E13S1', $r->userid) != 0) ? "Biogas" : "" : "";
-                        //Other
-                        $arr[] = (getFiled('Q6E14S1', $r->userid) != '') ? (getFiled('Q6E14S1', $r->userid) != 0) ? "Other" : "" : "";
-                        echo implode(',', array_filter($arr));
-                        ?>
-                    </td>
-                    <!--                        Ends Here-->
+                    <!--                    BEE Star rating Air conditioners-->
+                    <td> <?php echo (getFiled('Q7E2S3', $r->userid) != '') ? getFiled('Q7E2S3', $r->userid) : 0; ?></td>
+                    <!--                    Ends Here-->
+                    <!--                    No of Refrigerator-->
+                    <td> <?php echo (getFiled('Q7E3S1', $r->userid) != '') ? getFiled('Q7E3S1', $r->userid) : 0; ?></td>
+                    <!--Ends Here-->
+                    <!--                    Size of Refrigerator-->
+                    <td> <?php echo (getFiled('Q7E3S2', $r->userid) != '') ? getFiled('Q7E3S2', $r->userid) : 0; ?></td>
+                    <!--                    Ends Here-->
+                    <!--                    BEE Star rating Refrigerator-->
+                    <td> <?php echo (getFiled('Q7E3S3', $r->userid) != '') ? getFiled('Q7E3S3', $r->userid) : 0; ?></td>
+                    <!--                    Ends Here-->
+                    <!--                    No.of Microwave-->
+                    <td><?php echo (getFiled('Q7E4S1', $r->userid) != '') ? getFiled('Q7E4S1', $r->userid) : 0; ?></td>
+                    <!--                    Ends Here-->
+                    <!--                    Size of Microwave-->
+                    <td><?php echo (getFiled('Q7E4S2', $r->userid) != '') ? getFiled('Q7E4S2', $r->userid) : 0; ?></td>
+                    <!--                    Ends Here-->
+                    <!--BEE Star rating Microwave-->
+                    <td><?php echo (getFiled('Q7E4S3', $r->userid) != '') ? getFiled('Q7E4S3', $r->userid) : 0; ?></td>
+                    <!--Ends Here-->
+                    <!--                    No.of Tubelight-->
+                    <td><?php echo (getFiled('Q7E5S1', $r->userid) != '') ? getFiled('Q7E5S1', $r->userid) : 0; ?></td>
+                    <!--                    Ends Here-->
+                    <!--                    Size of Tubelight-->
+                    <td><?php echo (getFiled('Q7E5S2', $r->userid) != '') ? getFiled('Q7E5S2', $r->userid) : 0; ?></td>
+                    <!--                    Ends Here-->
+                    <!--                    BEE Star rating Tubelight-->
+                    <td><?php echo (getFiled('Q7E5S3', $r->userid) != '') ? getFiled('Q7E5S3', $r->userid) : 0; ?></td>
+                    <!--                    Ends Here-->
+                    <!--                    No.of CFL bulb's-->
+                    <td><?php echo (getFiled('Q7E6S1', $r->userid) != '') ? getFiled('Q7E6S1', $r->userid) : 0; ?></td>
+                    <!--                    Ends Here-->
+                    <!--Size of CFL bulb-->
+                    <td><?php echo (getFiled('Q7E6S2', $r->userid) != '') ? getFiled('Q7E6S2', $r->userid) : 0; ?></td>
+                    <!--Ends Here-->
+                    <!--BEE Star rating CFL bulb-->
+                    <td><?php echo (getFiled('Q7E6S3', $r->userid) != '') ? getFiled('Q7E6S3', $r->userid) : 0; ?></td>
+                    <!--Ends Here-->
+                    <!--No.of LED bulb's-->
+                    <td><?php echo (getFiled('Q7E7S1', $r->userid) != '') ? getFiled('Q7E7S1', $r->userid) : 0; ?></td>
+                    <!--Ends Here-->
+                    <!--Size of LED bulb's-->
+                    <td><?php echo (getFiled('Q7E7S2', $r->userid) != '') ? getFiled('Q7E7S2', $r->userid) : 0; ?></td>
+                    <!--Ends Here-->
+                    <!--BEE Star rating LED bulb-->
+                    <td><?php echo (getFiled('Q7E7S3', $r->userid) != '') ? getFiled('Q7E7S3', $r->userid) : 0; ?></td>
+                    <!--Ends Here-->
+                    <!--No.of Fans-->
+                    <td><?php echo (getFiled('Q7E8S1', $r->userid) != '') ? getFiled('Q7E8S1', $r->userid) : 0; ?></td>
+                    <!--Ends Here-->
+                    <!--Size of Fans-->
+                    <td><?php echo (getFiled('Q7E8S2', $r->userid) != '') ? getFiled('Q7E8S2', $r->userid) : 0; ?></td>
+                    <!--Ends Here-->
+                    <!--BEE Star rating Fans-->
+                    <td><?php echo (getFiled('Q7E8S3', $r->userid) != '') ? getFiled('Q7E8S3', $r->userid) : 0; ?></td>
+                    <!--Ends Here-->
+                    <!--                     Average no.of sunny dayspring-->
+                    <td><?php echo (getFiled('Q8E1', $r->userid) != '') ? getFiled('Q8E1', $r->userid) : 0; ?></td>
+                    <!--                     Ends Here-->
                     <!--                    Alertarnative Source OF Energy-->
                     <td><?php echo (getFiled('Q9E1', $r->userid) != '') ? (getFiled('Q9E1', $r->userid) == "N") ? "No" : "Yes" : "N/A"; ?></td>
                     <!--Ends Here-->
-                    <!--                    Energy Ponits-->
+                    <!--                    Solar-->
+                    <td></td>
+                    <!--                    Ends Here-->
+                    <!--                    Wind-->
+                    <td></td>
+                    <!--                    Ends Here-->
+                    <!--                    Hydro-->
+                    <td></td>
+                    <!--Ends Here-->
+                    <!--    Biogas Plant-->
+                    <td></td>
+                    <!--    Ends Here-->
+                    <!--                    Combination of solar and wind-->
+                    <td></td>
+                    <!--Ends Here-->
+                    <!--Use of Solar water heater-->
+                    <td></td>
+                    <!--Ends Here-->
+                    <!--                    Total points in Energy-->
                     <td><?php echo getEnergyPoints($r->userid); ?></td>
+                    <!--Ends Here-->
+                    <!--                    Provision of packaged food-->
+                    <td><?php echo (getFiled('Q4F1', $r->userid) != '') ? getFiled('Q4F1', $r->userid) : 0; ?></td>
+                    <!--Ends Here-->
+                    <!--                    Serve Mid-day Meal-->
+                    <td><?php echo (getFiled('Q5F1', $r->userid) != '') ? getFiled('Q5F1', $r->userid) : 0; ?></td>
                     <!--                    Ends Here-->
-                    <!--                    Food Served in Canteen-->
-                    <td>
-                        <?php
-                        $val = getFiled('Q4F1', $r->userid);
-                        if ($val == 'Y') {
-                            $c = array();
-                            if ((getFiled('Q6F2S1', $r->userid) != '') && (getFiled('Q6F2S1', $r->userid) != 0)) {
-                                $c[] = "Savoury snacks and similar packaged food ";
-                            }
-                            if (getFiled('Q6F3S1', $r->userid) != '' && getFiled('Q6F3S1', $r->userid) != 0) {
-                                $c[] = "Instant Noodles";
-                            }
-                            if (getFiled('Q6F4S1', $r->userid) != '' && getFiled('Q6F4S1', $r->userid) != 0) {
-                                $c[] = "Potato fries and Burgers";
-                            }
-                            if (getFiled('Q6F5S1', $r->userid) != '' && getFiled('Q6F5S1', $r->userid) != 0) {
-                                $c[] = "Confectionery items";
-                            }
-                            if (getFiled('Q6F6S1', $r->userid) != '' && getFiled('Q6F6S1', $r->userid) != 0) {
-                                $c[] = "Ice-cream";
-                            }
-                            if (getFiled('Q6F7S1', $r->userid) != '' && getFiled('Q6F7S1', $r->userid) != 0) {
-                                $c[] = "Carbonated beverages";
-                            }
-                            if (getFiled('Q6F8S1', $r->userid) != '' && getFiled('Q6F8S1', $r->userid) != 0) {
-                                $c[] = "Sugar sweetened non-carbonated beverages";
-                            }
-                            if (getFiled('Q6F9S1', $r->userid) != '' && getFiled('Q6F9S1', $r->userid) != 0) {
-                                $c[] = "Packaged/Bottled Nimboo Paani/ Lassi/ Flavoured milk";
-                            }
-                            if (getFiled('Q6F10S1', $r->userid) != '' && getFiled('Q6F10S1', $r->userid) != 0) {
-                                $c[] = "Packaged/Bottled Energy Drinks";
-                            }
-                            echo implode(',', $c);
-                        } else {
-                            echo 'No Canteen';
-                        }
-                        ?>
-                    </td>
+                    <!--                    Students bring own lunched-->
+                    <td><?php echo (getFiled('Q5F1S1', $r->userid) != '') ? getFiled('Q5F1S1', $r->userid) : 0; ?></td>
                     <!--                    Ends Here-->
-                    <!--Food Promotions Reviews-->
-                    <td>
-                        <?php echo (getFiled('Q9F1', $r->userid) != '') ? (getFiled('Q9E1', $r->userid) == "Y") ? "Yes" : "No" : "N/A"; ?>
-                    </td>
+                    <!--                    How many students bring home-made lunch-->
+                    <td><?php echo (getFiled('Q5F1S2', $r->userid) != '') ? getFiled('Q5F1S2', $r->userid) : 0; ?></td>
                     <!--                    Ends Here-->
-                    <!--                    Details Of Packed Food-->
-                    <td>
-                        <?php echo (getFiled('Q9F2', $r->userid) != '') ? getFiled('Q9F2', $r->userid) : "N/A"; ?>
-                    </td>
-                    <!--Ends Here-->
-                    <!--Distribution of Chocolate/similar products during events-->
-                    <td>
-                        <?php echo (getFiled('Q10F1', $r->userid) != '') ? (getFiled('Q10F1', $r->userid) == "Y") ? "Yes" : "No" : "N/A"; ?>
-                    </td>
+                    <!--                    how many bring packaged food as home-made lunched-->
+                    <td><?php echo (getFiled('Q5F1S3', $r->userid) != '') ? getFiled('Q5F1S3', $r->userid) : 0; ?></td>
                     <!--                    Ends Here-->
-                    <!--                    Name of Products-->
-                    <td>
-                        <?php echo (getFiled('Q10F2', $r->userid) != '') ? getFiled('Q10F2', $r->userid) : "N/A"; ?>
-                    </td>
+                    <!--                    Teachers have responsibility to check-->
+                    <td><?php echo (getFiled('Q5F1S4', $r->userid) != '') ? getFiled('Q5F1S4', $r->userid) : 0; ?></td>
+                    <!--                    End Here-->
+                    <!--                    Savouary Snacks count of flavour-->
+                    <td><?php echo (getFiled('Q6F2S1', $r->userid) != '') ? getFiled('Q6F2S1', $r->userid) : 0; ?></td>
                     <!--Ends Here-->
-                    <!--Events sponsored by Food companies-->
-                    <td><?php echo (getFiled('Q11F1', $r->userid) != '') ? getFiled('Q11F1', $r->userid) : "N/A"; ?></td>
+                    <!--                    Savouary Snacks no.of item sold-->
+                    <td><?php echo (getFiled('Q6F2S2', $r->userid) != '') ? getFiled('Q6F2S2', $r->userid) : 0; ?></td>
                     <!--                    Ends Here-->
-                    <!--                    Brand Banners-->
-                    <td>
-                        <?php
-                        if (getFiled('Q11F1', $r->userid) == 'Y') {
-                            echo (getFiled('Q11F2', $r->userid) != '') ? getFiled('Q11F2', $r->userid) : "N/A";
-                        }
-                        ?>
-                    </td>
-                    <!--Ends Here-->
-                    <!--                    Banners, brochures, hoardings, stalls put-up during events-->
-                    <td>
-                        <?php echo (getFiled('Q11F3', $r->userid) != '') ? getFiled('Q11F3', $r->userid) : "N/A"; ?>
-                    </td>
-                    <!--Ends Here-->
-                    <!--                    Points in Food Section-->
-                    <td>
-                        <?php echo getFoodPoints($r->userid); ?>
-                    </td>
-                    <td>
-                        N/A
-                    </td>
-                    <td>
-                        N/A
-                    </td>
-                    <td>
-                        <?php echo (getFiled('Q6L1', $r->userid) != '') ? getFiled('Q6L1', $r->userid) : ""; ?>
-                    </td>
-                    <td>
-                        <?php echo getLandPoints($r->userid); ?>
-                    </td>
-                    <!-- Ends Here-->
-                    <!--                    Total Water Consumption-->
-                    <td>
-                        <?php echo (getFiled('Q4W11', $r->userid) != '') ? getFiled('Q4W11', $r->userid) : ""; ?>
-                    </td>
-                    <!--Ends Here-->
-                    <!-- Water Per Day Cap Jool-->
-                    <td>
-                        <?php
-                        $total_populatuion = getFiled('Q4G4S3', $r->userid);
-                        $total_water_consumption = getFiled('Q4W11', $r->userid);
-                        if (($total_populatuion != 0 ) && ($total_populatuion != "") && ($total_water_consumption != 0 ) && ($total_water_consumption != "")) {
-                            echo $per = number_format($total_water_consumption / $total_populatuion, 2);
-                        }
-                        ?>
-                    </td>
+                    <!--                    Month-->
+                    <td><?php echo (getFiled('Q6F2S3', $r->userid) != '') ? getFiled('Q6F2S3', $r->userid) : 0; ?></td>
                     <!--                    Ends Here-->
-                    <td>N/A</td>
-                    <td>N/A</td>
-                    <td>N/A</td>
-                    <td>N/A</td>
-                    <!--                    Rain Water Harvesting-->
-                    <td><?php echo (getFiled('Q8W2', $r->userid) != '') ? getFiled('Q8W2', $r->userid) : "N/A"; ?></td>
+                    <!--                    Instand Noodles count of flavour-->
+                    <td><?php echo (getFiled('Q6F3S1', $r->userid) != '') ? getFiled('Q6F3S1', $r->userid) : 0; ?></td>
                     <!--Ends Here-->
-                    <!--                    Types of Rain Water Harvesting System-->
-                    <td><?php $arr = array('By Storing', '') ?></td>
-                    <!--Ends Here-->
-                    <td>N/A</td>
-                    <td>N/A</td>
-                    <td>N/A</td>
-                    <!--                    Solid Waste Segregation-->
-                    <td><?php echo (getFiled('Q4Wa1', $r->userid) != '') ? (getFiled('Q4Wa1', $r->userid) == 'Y') ? "Yes" : "No" : ""; ?></td>
-                    <!--                     Ends Here-->
-                    <td>
-                        <!--Waste Solid Segregator at source-->
-                        <?php
-                        $st = getFiled('Q4Wa1', $r->userid);
-                        if ($st == 'Y' && $st != '') {
-                            $e = array();
-                            if (getFiled('Q4Wa2S1', $r->userid) != "") {
-                                $e[] = "Students and Teachers";
-                            }
-                            if (getFiled('Q4Wa2S2', $r->userid) != "") {
-                                $e[] = "Housekeeping(Sweeper)";
-                            }
-                            if (getFiled('Q4Wa2S3', $r->userid) != "") {
-                                $e[] = "Gardner";
-                            }
-                            if (getFiled('Q4Wa2S4', $r->userid) != "") {
-                                $e[] = "Ragpickers";
-                            }
-                            if (getFiled('Q4Wa2S5', $r->userid) != "") {
-                                $e[] = "Other";
-                            }
-                            echo implode($e, ', ');
-                        }
-                        ?>
-                        <!--                        Ends Here-->
-                    </td>
-                    <!--                    No. of waste collection points with no bin-->
-                    <td>
-                        <?php echo (getFiled('Q5Wa11S1', $r->userid) != '') ? getFiled('Q5Wa11S1', $r->userid) : ""; ?>
-                    </td>
-                    <!--Ends Here-->
-                    <!--                    Waste Collection Points with 1 Bin-->
-                    <td>
-                        <?php echo (getFiled('Q5Wa11S2', $r->userid) != '') ? getFiled('Q5Wa11S2', $r->userid) : ""; ?>
-                    </td>
-                    <!--Ends Here-->
-                    <!--                    Waste Collection Points with 2 Bin-->
-                    <td>
-                        <?php echo (getFiled('Q5Wa11S3', $r->userid) != '') ? getFiled('Q5Wa11S3', $r->userid) : ""; ?>
-                    </td>
+                    <!--                    Instand Noodles no.of item soldan-->
+                    <td><?php echo (getFiled('Q6F3S3', $r->userid) != '') ? getFiled('Q6F3S3', $r->userid) : 0; ?></td>
                     <!--                    Ends Here-->
-                    <!--                    Waste Collection Points with 3 Bin-->
-                    <td>
-                        <?php echo (getFiled('Q5Wa11S4', $r->userid) != '') ? getFiled('Q5Wa11S4', $r->userid) : ""; ?>
-                    </td>
+                    <!--                    Month -->
+                    <td><?php echo (getFiled('Q6F3S3', $r->userid) != '') ? getFiled('Q6F3S3', $r->userid) : 0; ?></td>
                     <!--                    Ends Here-->
-                    <!--                    Waste Per Cap/Day-->
-                    <td>
-                        <?php
-                        $biogradble = (getFiled('Q6Wa1S6', $r->userid) != '') ? getFiled('Q6Wa1S6', $r->userid) : 0;
-                        $dry = (getFiled('Q6Wa2S9', $r->userid) != '') ? getFiled('Q6Wa2S9', $r->userid) : 0;
-                        $domestic = (getFiled('Q6Wa3S4', $r->userid) != '') ? getFiled('Q6Wa3S4', $r->userid) : 0;
-                        $ewaste = (getFiled('Q6Wa4S2', $r->userid) != '') ? getFiled('Q6Wa4S2', $r->userid) : 0;
-                        $biomedical = (getFiled('Q6Wa5S2', $r->userid) != '') ? getFiled('Q6Wa5S2', $r->userid) : 0;
-                        $sanotary = (getFiled('Q6Wa6S2', $r->userid) != '') ? getFiled('Q6Wa6S2', $r->userid) : 0;
-                        $c_and_d = (getFiled('Q6Wa7S2', $r->userid) != '') ? getFiled('Q6Wa7S2', $r->userid) : 0;
-                        $total_pop = (getFiled('Q4G4S3', $r->userid) != '') ? getFiled('Q4G4S3', $r->userid) : 0;
-                        $perday = ($biogradble + $dry + $domestic + $ewaste + $biomedical + $sanotary + $c_and_d) * 1000;
-                        if ($total_pop != 0) {
-                            $percapita_person = $perday / $total_pop;
-                            echo number_format((float) $percapita_person, 2, '.', '');
-                        }
-                        ?>
-                    </td>
+                    <!--                    Potato Fries Count of flavour-->
+                    <td><?php echo (getFiled('Q6F4S1', $r->userid) != '') ? getFiled('Q6F4S1', $r->userid) : 0; ?></td>
                     <!--Ends Here-->
-                    <!--                    Recycle Solid Waste-->
-                    <td>
-                        <?php echo (getFiled('Q8Wa1', $r->userid) != '') ? getFiled('Q8Wa1', $r->userid) : ""; ?>
-                    </td>
+                    <!--Potato Fries no.of item soldan-->
+                    <td><?php echo (getFiled('Q6F4S3', $r->userid) != '') ? getFiled('Q6F4S3', $r->userid) : 0; ?></td>
                     <!--Ends Here-->
-                    <!--                    Total Waste Generated in Grams-->
-                    <td>
-                        <?php
-                        $biogradble = (getFiled('Q6Wa1S5', $r->userid) != '') ? getFiled('Q6Wa1S5', $r->userid) : 0;
-                        $dry = (getFiled('Q6Wa2S8', $r->userid) != '') ? getFiled('Q6Wa2S8', $r->userid) : 0;
-                        $domestic = (getFiled('Q6Wa3S3', $r->userid) != '') ? getFiled('Q6Wa3S3', $r->userid) : 0;
-                        echo ($biogradble + $dry + $domestic) * 1000;
-                        ?>
-                    </td>
-                    <!--Ends Here-->
-                    <!-- Total Amount of Recycled Waste-->
-                    <td>
-                        <?php
-                        $recycled = (getFiled('Q8Wa1', $r->userid) != '') ? getFiled('Q8Wa1', $r->userid) : "";
-                        $value = '';
-                        if ($recycled == 'Y') {
-                            $biograde = (getFiled('Q8Wa1S5', $r->userid) != '') ? getFiled('Q8Wa1S5', $r->userid) : 0;
-                            $dry = (getFiled('Q8Wa2S8', $r->userid) != '') ? getFiled('Q8Wa2S8', $r->userid) : 0;
-                            $domestic = (getFiled('Q8Wa3S3', $r->userid) != '') ? getFiled('Q8Wa3S3', $r->userid) : 0;
-                            $value = ($biogradble + $dry + $domestic) * 1000;
-                        } else {
-                            $value = "";
-                        }
-                        echo $value;
-                        ?>
-                    </td>
+                    <!--Month-->
+                    <td><?php echo (getFiled('Q6F4S2', $r->userid) != '') ? getFiled('Q6F4S2', $r->userid) : 0; ?></td>
                     <!--                    Ends Here-->
-                    <!--                    Recycled Waste-->
-                    <td>
-                        <?php
-                        $percentRecycledWaste = '';
-                        $totalWaste = (getFiled('Q6Wa1S5', $r->userid) != '') ? getFiled('Q6Wa1S5', $r->userid) : 0 + (getFiled('Q6Wa2S8', $r->userid) != '') ? getFiled('Q6Wa2S8', $r->userid) : 0 + (getFiled('Q6Wa3S3', $r->userid) != '') ? getFiled('Q6Wa3S3', $r->userid) : 0;
-                        $recycledWaste = (getFiled('Q8Wa1S5', $r->userid) != '') ? getFiled('Q8Wa1S5', $r->userid) : 0 + (getFiled('Q8Wa2S8', $r->userid) != '') ? getFiled('Q8Wa2S8', $r->userid) : 0 + (getFiled('Q8Wa3S3', $r->userid) != '') ? getFiled('Q8Wa3S3', $r->userid) : 0;
-                        if ($totalWaste != 0) {
-                            $percentRecycledWaste = ($recycledWaste / $totalWaste) * 100;
-                            echo $percentRecycledWaste . '%';
-                        }
-                        ?>
-                    </td>
-                    <!--Ends Here-->
-                    <!--Waste Composting Facility-->
-                    <td>
-                        <?php echo (getFiled('Q9Wa1', $r->userid) != '') ? getFiled('Q9Wa1', $r->userid) : ""; ?>
-                    </td>
+                    <!--                    Confectionary - count of flavour-->
+                    <td><?php echo (getFiled('Q6F5S1', $r->userid) != '') ? getFiled('Q6F5S1', $r->userid) : 0; ?></td>
                     <!--                    Ends Here-->
-                    <!--Waste Composting Methodology-->
-                    <td>
-                        <?php
-                        $f = array();
-                        if (getFiled('Q9Wa2S1', $r->userid) != "") {
-                            $f[] = "Natural composting without added microbes";
-                        }
-                        if (getFiled('Q9Wa2S2', $r->userid) != "") {
-                            $f[] = "Vermi composting";
-                        }
-                        if (getFiled('Q9Wa2S3', $r->userid) != "") {
-                            $f[] = "Mechanical composting";
-                        }
-                        if (getFiled('Q9Wa2S4', $r->userid) != "") {
-                            $f[] = getFiled('Q9Wa2S4', $r->userid);
-                        }
-                        echo implode($f, ',');
-                        ?>
-                    </td>
+                    <!--Confectionary no.of item sold-->
+                    <td><?php echo (getFiled('Q6F5S3', $r->userid) != '') ? getFiled('Q6F5S3', $r->userid) : 0; ?></td>
+                    <!--Ends Here-->
+                    <!--Month-->
+                    <td><?php echo (getFiled('Q6F5S2', $r->userid) != '') ? getFiled('Q6F5S2', $r->userid) : 0; ?></td>
+                    <!--Ends Here-->
+                    <!--                    Ice Cream count of flavour-->
+                    <td><?php echo (getFiled('Q6F6S1', $r->userid) != '') ? getFiled('Q6F6S1', $r->userid) : 0; ?></td>
+                    <!--Ends Here-->
+                    <!--                    Ice Cream count Month the food items were sold in-->
+                    <td><?php echo (getFiled('Q6F6S3', $r->userid) != '') ? getFiled('Q6F6S3', $r->userid) : 0; ?></td>
                     <!--                    Ends Here-->
-                    <!--                    quantity of compost that is generated per month (in kilogram)? -->
-                    <td>
-                        <?php echo (getFiled('Q9Wa3', $r->userid) != '') ? getFiled('Q9Wa3', $r->userid) : ""; ?>
-                    </td>
+                    <!--                    Month-->
+                    <td><?php echo (getFiled('Q6F6S2', $r->userid) != '') ? getFiled('Q6F6S2', $r->userid) : 0; ?></td>
                     <!--Ends Here-->
-                    <!--                    Reuse Textbook-->
-                    <td>
-                        <?php
-                        if (getFiled('Q10Wa1', $r->userid) == 'Y') {
-                            echo 'Yes';
-                        } else {
-                            echo 'No';
-                        }
-                        ?>
-                    </td>
-                    <!--Ends Here-->
-                    <!--                    Water Disposal-->
-                    <td>
-                        <?php
-                        if (getFiled('Q14Wa1', $r->userid) == 1) {
-                            echo "<strong>Disposal Destination: </strong>";
-                            echo "Open dumping";
-                        } elseif (getFiled('Q14Wa1', $r->userid) == 2) {
-                            echo "<strong>Disposal Destination: </strong>";
-                            echo "Designated dumping site (Dhalao)";
-                        } elseif (getFiled('Q14Wa1', $r->userid) == 3) {
-                            echo "<strong>Disposal Destination: </strong>";
-                            echo "Landfill Site";
-                        } elseif (getFiled('Q14Wa1', $r->userid) == 4) {
-                            echo "<strong>Disposal Destination: </strong>";
-                            echo "Don’t know";
-                        }
-                        ?>
-                    </td>
-                    <!--Ends Here-->
-                    <!--                    School Burn Waste-->
-                    <td>
-                        <?php
-                        if (getFiled('Q15Wa1', $r->userid) == 'Y') {
-                            echo 'Yes';
-                        } else {
-                            echo 'No';
-                        }
-                        ?>
-                    </td>
-                    <!--Ends Here-->
-                    <!--                    Where does your school burn waste?-->
-                    <td>
-                        <?php
-                        if (getFiled('Q15Wa2', $r->userid) != "") {
-                            if (getFiled('Q15Wa2', $r->userid) == 1) {
-                                echo 'Inside the school';
-                            } else if (getFiled('Q15Wa2', $r->userid) == 2) {
-                                echo 'Outside the school';
-                            }
-                        }
-                        ?>
-                    </td>
+                    <!--                    Carbonatd beverages count of flavour-->
+                    <td><?php echo (getFiled('Q6F7S1', $r->userid) != '') ? getFiled('Q6F7S1', $r->userid) : 0; ?></td>
                     <!--                    Ends Here-->
-                    <!--                    What kind of waste is burnt/ incinerated?-->
-                    <td>
-                        <?php
-                        $g = array();
-                        if (getFiled('Q15Wa2S1', $r->userid) != "") {
-                            $g[] = "Horticultural";
-                        }
-                        if (getFiled('Q15Wa2S2', $r->userid) != "") {
-                            $g[] = "Plastic";
-                        }
-                        if (getFiled('Q15Wa2S3', $r->userid) != "") {
-                            $g[] = "Tyres";
-                        }
-                        if (getFiled('Q15Wa2S4', $r->userid) != "") {
-                            $g[] = "Paper";
-                        }
-                        echo implode($g, ',');
-                        ?>
-                    </td>
+                    <!--                    Carbonated beverages no.of items solda-->
+                    <td><?php echo (getFiled('Q6F7S3', $r->userid) != '') ? getFiled('Q6F7S3', $r->userid) : 0; ?></td>
+                    <!--                    Ends Here-->
+                    <!--                    month-->
+                    <td><?php echo (getFiled('Q6F7S2', $r->userid) != '') ? getFiled('Q6F7S2', $r->userid) : 0; ?></td>
+                    <!--                    Ends Here-->
+                    <!--                    Sugar sweetened non-carbonated beverages count of flavour-->
+                    <td><?php echo (getFiled('Q6F7S2', $r->userid) != '') ? getFiled('Q6F7S2', $r->userid) : 0; ?></td>
                     <!--Ends Here-->
-                    <!--                    E-Wasete Disposal-->
-                    <td>
-                        Not Found
-                    </td>
+                    <!--                    Sugar sweetened non-carbonated beverages no.of items sold-->
+                    <td><?php echo (getFiled('Q6F8S3', $r->userid) != '') ? getFiled('Q6F8S3', $r->userid) : 0; ?></td>
+                    <!--                    Ends Here-->
+                    <!--month-->
+                    <td><?php echo (getFiled('Q6F8S2', $r->userid) != '') ? getFiled('Q6F8S2', $r->userid) : 0; ?></td>
+                    <!--Emds Here-->
+                    <!--                    Packaged/bottled nimboo paani/lassi/flavoured milk  - count of flavour-->
+                    <td><?php echo (getFiled('Q6F9S1', $r->userid) != '') ? getFiled('Q6F9S1', $r->userid) : 0; ?></td>
                     <!--Ends Here-->
-                    <!--                    Who Collects E-watse-->
-                    <td>
-                        Not Found
-                    </td>
+                    <!--Packaged/bottled nimboo paani/lassi/flavoured milk -no.of item soldan-->
+                    <td><?php echo (getFiled('Q6F9S3', $r->userid) != '') ? getFiled('Q6F9S3', $r->userid) : 0; ?></td>
                     <!--Ends Here-->
-                    <!--                    Points in Water Section-->
-                    <td><?php echo getWastePoints($r->userid); ?></td>
+                    <!--Month-->
+                    <td><?php echo (getFiled('Q6F9S2', $r->userid) != '') ? getFiled('Q6F9S2', $r->userid) : 0; ?></td>
                     <!--Ends Here-->
-                    <td>N/A</td>
+                    <!--                    Packaged/bottled energy drinks count of flavour-->
+                    <td><?php echo (getFiled('Q6F10S1', $r->userid) != '') ? getFiled('Q6F10S1', $r->userid) : 0; ?></td>
+                    <!--                    Ends Here-->
+                    <!--Packaged/bottled energy drinks no.of items soldan-->
+                    <td><?php echo (getFiled('Q6F10S3', $r->userid) != '') ? getFiled('Q6F10S3', $r->userid) : 0; ?></td>
+                    <!--Ends Here-->
+                    <!--                    Month-->
+                    <td><?php echo (getFiled('Q6F10S2', $r->userid) != '') ? getFiled('Q6F10S2', $r->userid) : 0; ?></td>
+                    <!--                    Ends Here-->
+                    <!--                    School serve traditional Indian snacks-->
+                    <td><?php echo (getFiled('Q7F1', $r->userid) != '') ? getFiled('Q7F1', $r->userid) : 0; ?></td>
+                    <!--Ends Here-->
+                    <!--                    Samosas-->
+                    <td><?php echo (getFiled('Q7F1S1', $r->userid) != '') ? getFiled('Q7F1S1', $r->userid) : 0; ?></td>
+                    <!--Ends Here-->
+                    <!--   Idli Wada-->
+                    <td><?php echo (getFiled('Q7F1S2', $r->userid) != '') ? getFiled('Q7F1S2', $r->userid) : 0; ?></td>
+                    <!--                    Ends Here-->
+                    <!--                                        Total Vehicle ON CNG
+                                                            <td> <?php echo (getFiled('Q6A2S3C5', $r->userid) != '') ? getFiled('Q6A2S3C5', $r->userid) : 0; ?></td>
+                                                            Ends Here
+                                                            Buses on CNG
+                                                            <td> <?php echo (getFiled('Q6A2S3C1', $r->userid) != '') ? getFiled('Q6A2S3C1', $r->userid) : 0; ?></td>
+                                                            Ends Here
+                                                            Cars on CNG
+                                                            <td> <?php echo (getFiled('Q6A2S3L2', $r->userid) != '') ? getFiled('Q6A2S3L2', $r->userid) : 0; ?></td>
+                                                            Ends Here
+                                                            Vans on CNG
+                                                            <td> <?php echo (getFiled('Q6A2S3C3', $r->userid) != '') ? getFiled('Q6A2S3C3', $r->userid) : 0; ?></td>
+                                                            Ends Here
+                                                            Total Population in GQ
+                                                            <td> <?php echo (getFiled('Q4G4S3', $r->userid) != '') ? getFiled('Q4G4S3', $r->userid) : 0; ?></td>
+                                                            Ends Here
+                                                            Total Population in Air
+                                                            <td> <?php echo (getFiled('Q4G4S3', $r->userid) != '') ? getFiled('Q4G4S3', $r->userid) : 0; ?></td>
+                                                            Ends Here
+                                                                                 Sustainable Motorised Vehicles
+                                                            <td> <?php echo getFiled('Q7A1S4', $r->userid) + getFiled('Q7A2S4', $r->userid) + getFiled('Q7A3S4', $r->userid) + getFiled('Q7A4S4', $r->userid) + getFiled('Q7A5S4', $r->userid) + getFiled('Q7A6S4', $r->userid) ?></td>
+                                                            Ends Here
+                                                                                 Sustainable Motorised Vehicles Percantage
+                                                            <td>
+                    <?php
+                    $total_sustainable_vehicle = getFiled('Q7A1S4', $r->userid) + getFiled('Q7A2S4', $r->userid) + getFiled('Q7A3S4', $r->userid) + getFiled('Q7A4S4', $r->userid) + getFiled('Q7A5S4', $r->userid) + getFiled('Q7A6S4', $r->userid);
+                    $total_population = (getFiled('Q4G4S3', $r->userid) != '') ? getFiled('Q4G4S3', $r->userid) : 0;
+                    if ($total_population != 0) {
+                        $per_smv = (($total_sustainable_vehicle / $total_population) * 100);
+                        echo number_format((float) $per_smv, 2, '.', '');
+                    }
+                    ?>
+                                                            </td>
+                                                            Ends Here
+                                                                                Non Polluting Transport: Numbers
+                                                            <td> <?php echo (getFiled('Q7A12S4', $r->userid) != '') ? getFiled('Q7A12S4', $r->userid) : 0; ?></td>
+                                                            Ends Here
+                                                                                Non Polluting Transport: Numbers
+                                                            <td>
+                    <?php
+                    $total_nonpolluting_vehicle = (getFiled('Q7A12S4', $r->userid) != '') ? getFiled('Q7A12S4', $r->userid) : 0;
+                    $total_population = (getFiled('Q4G4S3', $r->userid) != '') ? getFiled('Q4G4S3', $r->userid) : 0;
+                    if ($total_population != 0) {
+                        //echo $total_nonpolluting_vehicle.$total_pop;
+                        $nonplluting_per = ($total_nonpolluting_vehicle / $total_population) * 100;
+                        echo number_format((float) $nonplluting_per, 2, '.', '');
+                    }
+                    ?>
+                                                            </td>
+                                                            Ends Here
+                                                            Source Of Energy
+                                        <td>
+                    <?php
+                    $arr = array();
+                    //Board
+                    $arr[] = (getFiled('Q6E1S1', $r->userid) != '') ? (getFiled('Q6E1S1', $r->userid) != 0) ? "Electricity from the board" : "" : "";
+                    //Electricity Disel
+                    $arr[] = (getFiled('Q6E2S1', $r->userid) != '') ? (getFiled('Q6E2S1', $r->userid) != 0) ? "Electricity from generator(Diesel)" : "" : "";
+                    //Petrol
+                    $arr[] = (getFiled('Q6E3S1', $r->userid) != '') ? (getFiled('Q6E3S1', $r->userid) != 0) ? "Petrol" : "" : "";
+                    //Diesel
+                    $arr[] = (getFiled('Q6E4S1', $r->userid) != '') ? (getFiled('Q6E4S1', $r->userid) != 0) ? "Diesel" : "" : "";
+                    //CNG
+                    $arr[] = (getFiled('Q6E5S1', $r->userid) != '') ? (getFiled('Q6E5S1', $r->userid) != 0) ? "CNG" : "" : "";
+                    //Kerosine
+                    $arr[] = (getFiled('Q6E6S1', $r->userid) != '') ? (getFiled('Q6E6S1', $r->userid) != 0) ? "Kerosine" : "" : "";
+                    //Coal
+                    $arr[] = (getFiled('Q6E7S1', $r->userid) != '') ? (getFiled('Q6E7S1', $r->userid) != 0) ? "Coal" : "" : "";
+                    //Wood
+                    $arr[] = (getFiled('Q6E16S1', $r->userid) != '') ? (getFiled('Q6E16S1', $r->userid) != 0) ? "Wood" : "" : "";
+                    //Animal Waste
+                    $arr[] = (getFiled('Q6E8S1', $r->userid) != '') ? (getFiled('Q6E8S1', $r->userid) != 0) ? "Animal Waste" : "" : "";
+                    //Solar
+                    $arr[] = (getFiled('Q6E9S1', $r->userid) != '') ? (getFiled('Q6E9S1', $r->userid) != 0) ? "Solar" : "" : "";
+                    //Wind
+                    $arr[] = (getFiled('Q6E10S1', $r->userid) != '') ? (getFiled('Q6E10S1', $r->userid) != 0) ? "Wind" : "" : "";
+                    //LPG
+                    $arr[] = (getFiled('Q6E11S1', $r->userid) != '') ? (getFiled('Q6E11S1', $r->userid) != 0) ? "LPG" : "" : "";
+                    //Piped Natural Gas
+                    $arr[] = (getFiled('Q6E12S1', $r->userid) != '') ? (getFiled('Q6E12S1', $r->userid) != 0) ? "Piped Natural Gas" : "" : "";
+                    //Biogas
+                    $arr[] = (getFiled('Q6E13S1', $r->userid) != '') ? (getFiled('Q6E13S1', $r->userid) != 0) ? "Biogas" : "" : "";
+                    //Other
+                    $arr[] = (getFiled('Q6E14S1', $r->userid) != '') ? (getFiled('Q6E14S1', $r->userid) != 0) ? "Other" : "" : "";
+                    echo implode(',', array_filter($arr));
+                    ?>
+                                        </td>
+                                                                Ends Here
+                                                            Food Served in Canteen
+                                        <td>
+                    <?php
+                    $val = getFiled('Q4F1', $r->userid);
+                    if ($val == 'Y') {
+                        $c = array();
+                        if ((getFiled('Q6F2S1', $r->userid) != '') && (getFiled('Q6F2S1', $r->userid) != 0)) {
+                            $c[] = "Savoury snacks and similar packaged food ";
+                        }
+                        if (getFiled('Q6F3S1', $r->userid) != '' && getFiled('Q6F3S1', $r->userid) != 0) {
+                            $c[] = "Instant Noodles";
+                        }
+                        if (getFiled('Q6F4S1', $r->userid) != '' && getFiled('Q6F4S1', $r->userid) != 0) {
+                            $c[] = "Potato fries and Burgers";
+                        }
+                        if (getFiled('Q6F5S1', $r->userid) != '' && getFiled('Q6F5S1', $r->userid) != 0) {
+                            $c[] = "Confectionery items";
+                        }
+                        if (getFiled('Q6F6S1', $r->userid) != '' && getFiled('Q6F6S1', $r->userid) != 0) {
+                            $c[] = "Ice-cream";
+                        }
+                        if (getFiled('Q6F7S1', $r->userid) != '' && getFiled('Q6F7S1', $r->userid) != 0) {
+                            $c[] = "Carbonated beverages";
+                        }
+                        if (getFiled('Q6F8S1', $r->userid) != '' && getFiled('Q6F8S1', $r->userid) != 0) {
+                            $c[] = "Sugar sweetened non-carbonated beverages";
+                        }
+                        if (getFiled('Q6F9S1', $r->userid) != '' && getFiled('Q6F9S1', $r->userid) != 0) {
+                            $c[] = "Packaged/Bottled Nimboo Paani/ Lassi/ Flavoured milk";
+                        }
+                        if (getFiled('Q6F10S1', $r->userid) != '' && getFiled('Q6F10S1', $r->userid) != 0) {
+                            $c[] = "Packaged/Bottled Energy Drinks";
+                        }
+                        echo implode(',', $c);
+                    } else {
+                        echo 'No Canteen';
+                    }
+                    ?>
+                                        </td>
+                                                            Ends Here
+                                        Food Promotions Reviews
+                                        <td>
+                    <?php echo (getFiled('Q9F1', $r->userid) != '') ? (getFiled('Q9E1', $r->userid) == "Y") ? "Yes" : "No" : "N/A"; ?>
+                                        </td>
+                                                            Ends Here
+                                                            Details Of Packed Food
+                                        <td>
+                    <?php echo (getFiled('Q9F2', $r->userid) != '') ? getFiled('Q9F2', $r->userid) : "N/A"; ?>
+                                        </td>
+                                        Ends Here
+                                        Distribution of Chocolate/similar products during events
+                                        <td>
+                    <?php echo (getFiled('Q10F1', $r->userid) != '') ? (getFiled('Q10F1', $r->userid) == "Y") ? "Yes" : "No" : "N/A"; ?>
+                                        </td>
+                                                            Ends Here
+                                                            Name of Products
+                                        <td>
+                    <?php echo (getFiled('Q10F2', $r->userid) != '') ? getFiled('Q10F2', $r->userid) : "N/A"; ?>
+                                        </td>
+                                        Ends Here
+                                        Events sponsored by Food companies
+                                        <td><?php echo (getFiled('Q11F1', $r->userid) != '') ? getFiled('Q11F1', $r->userid) : "N/A"; ?></td>
+                                                            Ends Here
+                                                            Brand Banners
+                                        <td>
+                    <?php
+                    if (getFiled('Q11F1', $r->userid) == 'Y') {
+                        echo (getFiled('Q11F2', $r->userid) != '') ? getFiled('Q11F2', $r->userid) : "N/A";
+                    }
+                    ?>
+                                        </td>
+                                        Ends Here
+                                                            Banners, brochures, hoardings, stalls put-up during events
+                                        <td>
+                    <?php echo (getFiled('Q11F3', $r->userid) != '') ? getFiled('Q11F3', $r->userid) : "N/A"; ?>
+                                        </td>
+                                        Ends Here
+                                                            Points in Food Section
+                                        <td>
+                    <?php echo getFoodPoints($r->userid); ?>
+                                        </td>
+                                        <td>
+                                            N/A
+                                        </td>
+                                        <td>
+                                            N/A
+                                        </td>
+                                        <td>
+                    <?php echo (getFiled('Q6L1', $r->userid) != '') ? getFiled('Q6L1', $r->userid) : ""; ?>
+                                        </td>
+                                        <td>
+                    <?php echo getLandPoints($r->userid); ?>
+                                        </td>
+                                         Ends Here
+                                                            Total Water Consumption
+                                        <td>
+                    <?php echo (getFiled('Q4W11', $r->userid) != '') ? getFiled('Q4W11', $r->userid) : ""; ?>
+                                        </td>
+                                        Ends Here
+                                         Water Per Day Cap Jool
+                                        <td>
+                    <?php
+                    $total_populatuion = getFiled('Q4G4S3', $r->userid);
+                    $total_water_consumption = getFiled('Q4W11', $r->userid);
+                    if (($total_populatuion != 0 ) && ($total_populatuion != "") && ($total_water_consumption != 0 ) && ($total_water_consumption != "")) {
+                        echo $per = number_format($total_water_consumption / $total_populatuion, 2);
+                    }
+                    ?>
+                                        </td>
+                                                            Ends Here
+                                        <td>N/A</td>
+                                        <td>N/A</td>
+                                        <td>N/A</td>
+                                        <td>N/A</td>
+                                                            Rain Water Harvesting
+                                        <td><?php echo (getFiled('Q8W2', $r->userid) != '') ? getFiled('Q8W2', $r->userid) : "N/A"; ?></td>
+                                        Ends Here
+                                                            Types of Rain Water Harvesting System
+                                        <td><?php $arr = array('By Storing', '') ?></td>
+                                        Ends Here
+                                        <td>N/A</td>
+                                        <td>N/A</td>
+                                        <td>N/A</td>
+                                                            Solid Waste Segregation
+                                        <td><?php echo (getFiled('Q4Wa1', $r->userid) != '') ? (getFiled('Q4Wa1', $r->userid) == 'Y') ? "Yes" : "No" : ""; ?></td>
+                                                             Ends Here
+                                        <td>
+                                            Waste Solid Segregator at source
+                    <?php
+                    $st = getFiled('Q4Wa1', $r->userid);
+                    if ($st == 'Y' && $st != '') {
+                        $e = array();
+                        if (getFiled('Q4Wa2S1', $r->userid) != "") {
+                            $e[] = "Students and Teachers";
+                        }
+                        if (getFiled('Q4Wa2S2', $r->userid) != "") {
+                            $e[] = "Housekeeping(Sweeper)";
+                        }
+                        if (getFiled('Q4Wa2S3', $r->userid) != "") {
+                            $e[] = "Gardner";
+                        }
+                        if (getFiled('Q4Wa2S4', $r->userid) != "") {
+                            $e[] = "Ragpickers";
+                        }
+                        if (getFiled('Q4Wa2S5', $r->userid) != "") {
+                            $e[] = "Other";
+                        }
+                        echo implode($e, ', ');
+                    }
+                    ?>
+                                                                    Ends Here
+                                        </td>
+                                                            No. of waste collection points with no bin
+                                        <td>
+                    <?php echo (getFiled('Q5Wa11S1', $r->userid) != '') ? getFiled('Q5Wa11S1', $r->userid) : ""; ?>
+                                        </td>
+                                        Ends Here
+                                                            Waste Collection Points with 1 Bin
+                                        <td>
+                    <?php echo (getFiled('Q5Wa11S2', $r->userid) != '') ? getFiled('Q5Wa11S2', $r->userid) : ""; ?>
+                                        </td>
+                                        Ends Here
+                                                            Waste Collection Points with 2 Bin
+                                        <td>
+                    <?php echo (getFiled('Q5Wa11S3', $r->userid) != '') ? getFiled('Q5Wa11S3', $r->userid) : ""; ?>
+                                        </td>
+                                                            Ends Here
+                                                            Waste Collection Points with 3 Bin
+                                        <td>
+                    <?php echo (getFiled('Q5Wa11S4', $r->userid) != '') ? getFiled('Q5Wa11S4', $r->userid) : ""; ?>
+                                        </td>
+                                                            Ends Here
+                                                            Waste Per Cap/Day
+                                        <td>
+                    <?php
+                    $biogradble = (getFiled('Q6Wa1S6', $r->userid) != '') ? getFiled('Q6Wa1S6', $r->userid) : 0;
+                    $dry = (getFiled('Q6Wa2S9', $r->userid) != '') ? getFiled('Q6Wa2S9', $r->userid) : 0;
+                    $domestic = (getFiled('Q6Wa3S4', $r->userid) != '') ? getFiled('Q6Wa3S4', $r->userid) : 0;
+                    $ewaste = (getFiled('Q6Wa4S2', $r->userid) != '') ? getFiled('Q6Wa4S2', $r->userid) : 0;
+                    $biomedical = (getFiled('Q6Wa5S2', $r->userid) != '') ? getFiled('Q6Wa5S2', $r->userid) : 0;
+                    $sanotary = (getFiled('Q6Wa6S2', $r->userid) != '') ? getFiled('Q6Wa6S2', $r->userid) : 0;
+                    $c_and_d = (getFiled('Q6Wa7S2', $r->userid) != '') ? getFiled('Q6Wa7S2', $r->userid) : 0;
+                    $total_pop = (getFiled('Q4G4S3', $r->userid) != '') ? getFiled('Q4G4S3', $r->userid) : 0;
+                    $perday = ($biogradble + $dry + $domestic + $ewaste + $biomedical + $sanotary + $c_and_d) * 1000;
+                    if ($total_pop != 0) {
+                        $percapita_person = $perday / $total_pop;
+                        echo number_format((float) $percapita_person, 2, '.', '');
+                    }
+                    ?>
+                                        </td>
+                                        Ends Here
+                                                            Recycle Solid Waste
+                                        <td>
+                    <?php echo (getFiled('Q8Wa1', $r->userid) != '') ? getFiled('Q8Wa1', $r->userid) : ""; ?>
+                                        </td>
+                                        Ends Here
+                                                            Total Waste Generated in Grams
+                                        <td>
+                    <?php
+                    $biogradble = (getFiled('Q6Wa1S5', $r->userid) != '') ? getFiled('Q6Wa1S5', $r->userid) : 0;
+                    $dry = (getFiled('Q6Wa2S8', $r->userid) != '') ? getFiled('Q6Wa2S8', $r->userid) : 0;
+                    $domestic = (getFiled('Q6Wa3S3', $r->userid) != '') ? getFiled('Q6Wa3S3', $r->userid) : 0;
+                    echo ($biogradble + $dry + $domestic) * 1000;
+                    ?>
+                                        </td>
+                                        Ends Here
+                                         Total Amount of Recycled Waste
+                                        <td>
+                    <?php
+                    $recycled = (getFiled('Q8Wa1', $r->userid) != '') ? getFiled('Q8Wa1', $r->userid) : "";
+                    $value = '';
+                    if ($recycled == 'Y') {
+                        $biograde = (getFiled('Q8Wa1S5', $r->userid) != '') ? getFiled('Q8Wa1S5', $r->userid) : 0;
+                        $dry = (getFiled('Q8Wa2S8', $r->userid) != '') ? getFiled('Q8Wa2S8', $r->userid) : 0;
+                        $domestic = (getFiled('Q8Wa3S3', $r->userid) != '') ? getFiled('Q8Wa3S3', $r->userid) : 0;
+                        $value = ($biogradble + $dry + $domestic) * 1000;
+                    } else {
+                        $value = "";
+                    }
+                    echo $value;
+                    ?>
+                                        </td>
+                                                            Ends Here
+                                                            Recycled Waste
+                                        <td>
+                    <?php
+                    $percentRecycledWaste = '';
+                    $totalWaste = (getFiled('Q6Wa1S5', $r->userid) != '') ? getFiled('Q6Wa1S5', $r->userid) : 0 + (getFiled('Q6Wa2S8', $r->userid) != '') ? getFiled('Q6Wa2S8', $r->userid) : 0 + (getFiled('Q6Wa3S3', $r->userid) != '') ? getFiled('Q6Wa3S3', $r->userid) : 0;
+                    $recycledWaste = (getFiled('Q8Wa1S5', $r->userid) != '') ? getFiled('Q8Wa1S5', $r->userid) : 0 + (getFiled('Q8Wa2S8', $r->userid) != '') ? getFiled('Q8Wa2S8', $r->userid) : 0 + (getFiled('Q8Wa3S3', $r->userid) != '') ? getFiled('Q8Wa3S3', $r->userid) : 0;
+                    if ($totalWaste != 0) {
+                        $percentRecycledWaste = ($recycledWaste / $totalWaste) * 100;
+                        echo $percentRecycledWaste . '%';
+                    }
+                    ?>
+                                        </td>
+                                        Ends Here
+                                        Waste Composting Facility
+                                        <td>
+                    <?php echo (getFiled('Q9Wa1', $r->userid) != '') ? getFiled('Q9Wa1', $r->userid) : ""; ?>
+                                        </td>
+                                                            Ends Here
+                                        Waste Composting Methodology
+                                        <td>
+                    <?php
+                    $f = array();
+                    if (getFiled('Q9Wa2S1', $r->userid) != "") {
+                        $f[] = "Natural composting without added microbes";
+                    }
+                    if (getFiled('Q9Wa2S2', $r->userid) != "") {
+                        $f[] = "Vermi composting";
+                    }
+                    if (getFiled('Q9Wa2S3', $r->userid) != "") {
+                        $f[] = "Mechanical composting";
+                    }
+                    if (getFiled('Q9Wa2S4', $r->userid) != "") {
+                        $f[] = getFiled('Q9Wa2S4', $r->userid);
+                    }
+                    echo implode($f, ',');
+                    ?>
+                                        </td>
+                                                            Ends Here
+                                                            quantity of compost that is generated per month (in kilogram)? 
+                                        <td>
+                    <?php echo (getFiled('Q9Wa3', $r->userid) != '') ? getFiled('Q9Wa3', $r->userid) : ""; ?>
+                                        </td>
+                                        Ends Here
+                                                            Reuse Textbook
+                                        <td>
+                    <?php
+                    if (getFiled('Q10Wa1', $r->userid) == 'Y') {
+                        echo 'Yes';
+                    } else {
+                        echo 'No';
+                    }
+                    ?>
+                                        </td>
+                                        Ends Here
+                                                            Water Disposal
+                                        <td>
+                    <?php
+                    if (getFiled('Q14Wa1', $r->userid) == 1) {
+                        echo "<strong>Disposal Destination: </strong>";
+                        echo "Open dumping";
+                    } elseif (getFiled('Q14Wa1', $r->userid) == 2) {
+                        echo "<strong>Disposal Destination: </strong>";
+                        echo "Designated dumping site (Dhalao)";
+                    } elseif (getFiled('Q14Wa1', $r->userid) == 3) {
+                        echo "<strong>Disposal Destination: </strong>";
+                        echo "Landfill Site";
+                    } elseif (getFiled('Q14Wa1', $r->userid) == 4) {
+                        echo "<strong>Disposal Destination: </strong>";
+                        echo "Don’t know";
+                    }
+                    ?>
+                                        </td>
+                                        Ends Here
+                                                            School Burn Waste
+                                        <td>
+                    <?php
+                    if (getFiled('Q15Wa1', $r->userid) == 'Y') {
+                        echo 'Yes';
+                    } else {
+                        echo 'No';
+                    }
+                    ?>
+                                        </td>
+                                        Ends Here
+                                                            Where does your school burn waste?
+                                        <td>
+                    <?php
+                    if (getFiled('Q15Wa2', $r->userid) != "") {
+                        if (getFiled('Q15Wa2', $r->userid) == 1) {
+                            echo 'Inside the school';
+                        } else if (getFiled('Q15Wa2', $r->userid) == 2) {
+                            echo 'Outside the school';
+                        }
+                    }
+                    ?>
+                                        </td>
+                                                            Ends Here
+                                                            What kind of waste is burnt/ incinerated?
+                                        <td>
+                    <?php
+                    $g = array();
+                    if (getFiled('Q15Wa2S1', $r->userid) != "") {
+                        $g[] = "Horticultural";
+                    }
+                    if (getFiled('Q15Wa2S2', $r->userid) != "") {
+                        $g[] = "Plastic";
+                    }
+                    if (getFiled('Q15Wa2S3', $r->userid) != "") {
+                        $g[] = "Tyres";
+                    }
+                    if (getFiled('Q15Wa2S4', $r->userid) != "") {
+                        $g[] = "Paper";
+                    }
+                    echo implode($g, ',');
+                    ?>
+                                        </td>
+                                        Ends Here
+                                                            E-Wasete Disposal
+                                        <td>
+                                            Not Found
+                                        </td>
+                                        Ends Here
+                                                            Who Collects E-watse
+                                        <td>
+                                            Not Found
+                                        </td>
+                                        Ends Here
+                                                            Points in Water Section
+                                        <td><?php echo getWastePoints($r->userid); ?></td>
+                                        Ends Here
+                                        <td>N/A</td>-->
                 </tr>
                 <?php
                 $i++;

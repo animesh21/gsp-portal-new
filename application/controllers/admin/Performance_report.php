@@ -27,5 +27,21 @@ class Performance_report extends CI_Controller {
         $data['record'] = $this->Performance_model->getData();
         $this->load->view('admin/includes/template', $data);
     }
+    
+//    public function excel()
+//    {
+//        $arrUserID=array();
+//        $this->load->dbutil();
+//        $record= $this->Performance_model->getData();
+//        foreach($record as $r)
+//        {
+//            $arrUserID[]=$r->userid;
+//        }
+//        //echo '<pre>'; print_r($arrUserID); exit;
+//        $row = $this->Performance_model->getExcel($arrUserID);
+//        $name = 'registration2017_by_state.csv';
+//        force_download($name, $row);
+//    }
+    
 
 }
