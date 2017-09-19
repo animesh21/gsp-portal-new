@@ -1,12 +1,12 @@
-  </div>
-  <!--close content-form-->
+</div>
+<!--close content-form-->
 </div>
 <!--close container-->
 <footer>
-  <div class="container">
-      <p>Copyright &COPY; 2017 Centre for Science and Environment</p>
-  </div>
-  <!--close container-->
+    <div class="container">
+        <p>Copyright &COPY; 2017 Centre for Science and Environment</p>
+    </div>
+    <!--close container-->
 </footer>
 <!--close footer-->
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -22,42 +22,50 @@
 <script src="<?php echo base_url(); ?>assets/front/js/buttons.html5.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/front/js/buttons.print.min.js"></script>
 <script type="text/javascript">
-$(document).ready(function() {
- //alert("test");
-      $('#example').DataTable( {
-        dom: 'lBfrtip',
-        buttons: [
-            'excel'
-        ],
-		 "aLengthMenu": [[10,25, 50, 75, -1], [10,25, 50, 75, "All"]],
-        "iDisplayLength": 25
-    } );
-    $('#example1').DataTable( {
-        dom: 'lfrtip',
-		 "aLengthMenu": [[10,25, 50, 75, -1], [10,25, 50, 75, "All"]],
-        "iDisplayLength": 25
-    } );
-    $('.tablepluging').DataTable( {
-        dom: 'lfrtip',
-		 "aLengthMenu": [[10,25, 50, 75, -1], [10,25, 50, 75, "All"]],
-        "iDisplayLength": 25
-    } );
-} );
+    $(document).ready(function () {
+        //alert("test");
+        $('#example').DataTable({
+            dom: 'lBfrtip',
+            buttons: [
+                'excel'
+            ],
+            "aLengthMenu": [[10, 25, 50, 75, -1], [10, 25, 50, 75, "All"]],
+            "iDisplayLength": 25
+        });
+        $('#example1').DataTable({
+            dom: 'lfrtip',
+            "aLengthMenu": [[10, 25, 50, 75, -1], [10, 25, 50, 75, "All"]],
+            "iDisplayLength": 25
+        });
+        $('#tablePerformance').DataTable({
+            dom: 'lBfrtip',
+            buttons: [
+                'excel'
+            ],
+            "aLengthMenu": [[10, 25, 50, 75, -1], [10, 25, 50, 75, "All"]],
+            "iDisplayLength": 25
+        });
+        $('.tablepluging').DataTable({
+            dom: 'lfrtip',
+            "aLengthMenu": [[10, 25, 50, 75, -1], [10, 25, 50, 75, "All"]],
+            "iDisplayLength": 25
+        });
+    });
 </script>
 <div id="shadowbox_overlay"></div>
 <div id="shadowbox_container">
-  <div id="shadowbox">
-    <div id="shadowbox_title">
-      <div id="shadowbox_title_inner"></div>
+    <div id="shadowbox">
+        <div id="shadowbox_title">
+            <div id="shadowbox_title_inner"></div>
+        </div>
+        <div id="shadowbox_body">
+            <div id="shadowbox_body_inner"></div>
+            <div id="shadowbox_loading"></div>
+        </div>
+        <div id="shadowbox_toolbar">
+            <div id="shadowbox_toolbar_inner"></div>
+        </div>
     </div>
-    <div id="shadowbox_body">
-      <div id="shadowbox_body_inner"></div>
-      <div id="shadowbox_loading"></div>
-    </div>
-    <div id="shadowbox_toolbar">
-      <div id="shadowbox_toolbar_inner"></div>
-    </div>
-  </div>
 </div>
 
 </body>
