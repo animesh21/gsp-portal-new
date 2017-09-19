@@ -72,10 +72,6 @@ class Audit_started_2017 extends CI_Controller {
         $data['id']=$argID;
         $data['school']=$this->Audit_started_model->getSchoolById($argID);
         $data['schoolUserID']=$data['school']->userid;
-		$data['files']=$this->file->getFilesData($this->session->userdata('USER_ID'));
-        $data['filesfules']=$this->file->getFilesDatafules($this->session->userdata('USER_ID'));
-        $data['airQualityMonitering']=$this->file->AirQuality($this->session->userdata('USER_ID'));
-        $data['pucCertificate']=$this->file->pucCertificate($this->session->userdata('USER_ID'));
 		//echo '<pre>'; print_r($data['image']);exit();
         $this->load->view('admin/survey/air', $data);
 
