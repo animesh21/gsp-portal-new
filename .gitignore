@@ -29,4 +29,11 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 *.sublime-workspace
 *.sublime-project
 
-## application/config/database.php
+# configuration files
+application/config/database.php
+old/2015/website_db.php
+old/2015/config.php
+old/2016/website_db.php
+old/2016/config.php
+old/config.php
+old/website_db.php
