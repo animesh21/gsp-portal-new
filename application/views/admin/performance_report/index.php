@@ -1210,18 +1210,45 @@
                     <!--------- Total-------->  
                     <td><?php echo (getFiled('Q4W11', $r->userid) != "") ? getFiled('Q4W11', $r->userid) : 0; ?> </td>
                     <!--Per capita/day water consumption</th>----> 
-                <!--Ground Water as source</th>----> 
+                     <td><?php echo 'NA'; ?></td>
+                <!--Ground Water as source</th>---->
+                 <td><?php echo 'NA'; ?></td>
                 <!--Surface water as source</th>----> 
-                <!--Rainwater as source</th>----> 
-                <!--Recycled waste water as source</th>----> 
+                 <td><?php echo 'NA'; ?></td>
+                <!--Rainwater as source</th>---->
+                 <td><?php echo 'NA'; ?></td>
+                <!--Recycled waste water as source</th>---->
+                 <td><?php echo 'NA'; ?></td>
                 <!--Municipality as supplier</th>----> 
+                 <td><?php echo 'NA'; ?></td>
                 <!--Panchayat as supplier</th>----> 
-                <!--PHED as supplier </th>----> 
-                <!--Private Supplier </th>----> 
+                 <td><?php echo 'NA'; ?></td>
+                <!--PHED as supplier </th>---->
+                 <td><?php echo 'NA'; ?></td>
+                <!--Private Supplier </th>---->
+                 <td><?php echo 'NA'; ?></td>
                 <!--School's own supply </th>-->
+                <td><?php echo 'NA'; ?></td>
                 <!--School gets daily water supply </th>-->
+                <td><?php echo (getFiled('Q7W1', $schoolUserID) != "") ? (getFiled('Q7W1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></td>
                 <!--Duration of water supply </th>-->
+                <td>
+                    <?php
+                            if (getFiled('Q7W2', $schoolUserID) == 1):
+                                echo "≤1 hours";
+                            elseif (getFiled('Q7W2', $schoolUserID) == 2):
+                                echo "2-6 hours";
+                            elseif (getFiled('Q7W2', $schoolUserID) == 3):
+                                echo "7-12 hours";
+                            elseif (getFiled('Q7W2', $schoolUserID) == 4):
+                                echo "13-18 hours";
+                            elseif (getFiled('Q7W2', $schoolUserID) == 5):
+                                echo "19-24 hours";
+                            endif;
+                            ?>
+                </td>
                 <!--Does your school have any water and sanitation policy </th>-->
+                <td><?php echo (getFiled('Q8W1S1', $schoolUserID) != "") ? (getFiled('Q8W1S1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?> </td>
 
 
                     <!--                    Ends Here-->
