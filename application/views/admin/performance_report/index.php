@@ -183,66 +183,146 @@
                 <th>Idli/vada</th>
                 <th>Pav Bhaji</th>
                 <th>Momos</th>
+                <th>Others</th>
+                <th>Uploaded</th>
+                <th>Descripation</th>
+                <th>School name</th>
+                <th>Niboo Pani</th>
+                <th>Sweet Lassi</th>
+                <th>Salted  Butter Milk</th>
+                <th>Aam Panna</th>
+                <th>Others</th>
+                <th>Schools distributes packaged food items as rewards</th>
+                <th>Details</th>
+                <th>school distribute chocolates/similar products as refreshments during schools events</th>
+                <th>details</th>
+                <th>school events sponsored by food companies/brands</th>
+                <th>details</th>
+                <th>Are their banners, brochures, hoardings put up during the events</th>
+                <th>Uploaded</th>
+                <th>school measure height and weight of all the student</th>
+                <th>How regularly height & weight is measured</th>
+                <th>Is cooking part of any regular subjects or extracurricular activities</th>
+                <th>Details</th>
+                <th>Uploaded</th>
+                <th>Total points Food </th>
+                <!----LAND------------------> 
+                <th>Site area in square meter (m2) </th>
+                <th>Ground coverage area  </th>
+                <th>Green Landscaped area on ground </th>
+                <th>Play area that has grass on ground</th>
+                <th>Green area on ground </th>
+                <th>Play area that is paved/concrete on ground  </th>
+                <th>Surface parking area  </th>
+                <th>Service area on ground</th>
+                <th>Roof and terrace area </th>
+                <th>Green cover on exposed roof and terrace  </th>
+                <th>Total built-up/constructed area </th>
+                <th>Total number of floors (excluding ground floor)</th>
+                <th>Total Area</th>
+                <th>Total Green Area</th>
+                <th>Percentage of Green Area</th>
+                <th>Total Plants</th>
+                <th>Native Plants</th>
+                <th>Exotic Plants</th>
+                <th>Total Animals</th>
+                <th>Native Animals</th>
+                <th>Exotic Animals</th>
+                <th>Use of Chemical Pesticides</th>
+                <th>Uploaded documents</th>
+                <th>Total Points Land</th>
+                <!----Water------------------>
+                <th>Drinking </th>
+                <th>Toilet flushing </th>
+                <th>Personal cleaning </th>
+                <th>Washing clothes </th>
+                <th>Cooking </th>
+                <th>Cleaning Utensils </th>
+                <th>Washing Vegetables </th>
+                <th>Mopping floors </th>
+                <th>Gardening </th>
+                <th>Others </th>
+                <th>Total water consumption per day </th>
+                <th>Per capita/day water consumption</th>
+                <th>Ground Water as source</th>
+                <th>Surface water as source</th>
+                <th>Rainwater as source</th>
+                <th>Recycled waste water as source</th>
+                <th>Municipality as supplier</th>
+                <th>Panchayat as supplier</th>
+                <th>PHED as supplier </th>
+                <th>Private Supplier </th>
+                <th>School's own supply </th>
+                <th>School gets daily water supply </th>
+                <th>Duration of water supply </th>
+                <th>Does your school have any water and sanitation policy </th>
+                
+                
+                
+                                
+
+
+
 <!--                <th>Vehicles on CNG</th>
-                <th>Details of Buses on CNG</th>
-                <th>Details of Car on CNG</th>
-                <th>Details of Van on CNG</th>
-                <th>Total Population GQ</th>
-                <th>Total Population in Air</th>
-                <th>Sustainble Motorised Vehicles: Numbers</th>
-                <th>Sustainble Motorised Vehicles: Percentgae</th>
-                <th>Non Polluting Transport: Numbers</th>
-                <th>Non Polluting Transport: Percentage</th>-->
+<th>Details of Buses on CNG</th>
+<th>Details of Car on CNG</th>
+<th>Details of Van on CNG</th>
+<th>Total Population GQ</th>
+<th>Total Population in Air</th>
+<th>Sustainble Motorised Vehicles: Numbers</th>
+<th>Sustainble Motorised Vehicles: Percentgae</th>
+<th>Non Polluting Transport: Numbers</th>
+<th>Non Polluting Transport: Percentage</th>-->
 <!--                <th>Source of Energy</th>
-                <th>Food Served in Canteen</th>
-                <th>Packaged Food distribution as Rewards</th>
-                <th>Details of Packaged Food</th>
-                <th>Distribution of Chocolate/similar products during events</th>
-                <th>Names of Products</th>
-                <th>Events sponsored by Food companies</th>
-                <th>Brand Banners</th>
-                <th>Banners, brochures, hoardings, stalls put-up during events</th>
-                <th>Points in <br />
-                    Food Section</th>
-                <th>Total of Green Cover(m<sup>2</sup>)</th>
-                <th>Percentage of Green Cover(%)</th>
-                <th>Use of Chemical based pesticides</th>
-                <th>Points in Land Section</th>
-                <th>Water: Total Consumption(ltrs)</th>
-                <th>Water: per cap/day(ltrs)</th>
-                <th>Load on Drinking Water Taps</th>
-                <th>Load on Ablution Taps</th>
-                <th>Load on Urinals</th>
-                <th>Load on Water Closet</th>
-                <th>Rainwater Harvesting System</th>
-                <th>Type of Rainwater Harvesting System</th>
-                <th>Waste Water Reuse/Recycle</th>
-                <th>Treat Waste Water</th>
-                <th>Points in Water Section</th>
-                <th>Solid Waste Segregation</th>
-                <th>Segregator at Source</th>
-                <th>Waste Collection points with 0 bin</th>
-                <th>Waste Collection points with 1 bin</th>
-                <th>Waste Collection points with 2 bins</th>
-                <th>Waste Collection points with 3 bins</th>
-                <th>Waste: Per cap/day(Grams)</th>
-                <th>Recyle Solid Waste</th>
-                <th>Total Waste Generated(Grams)</th>
-                <th>Total Waste Recycled(Grams)</th>
-                <th>Percentage of Waste Recycled</th>
-                <th>Composting Facility</th>
-                <th>Composting Methodology</th>
-                <th>Quantity of Compost generated per month</th>
-                <th>Reuse Textbook</th>
-                <th>Waste Disposal</th>
-                <th>Burn Waste</th>
-                <th>Where do you burn waste</th>
-                <th>Kind of waste burnt</th>
-                <th>E-waste Disposal</th>
-                <th>Who collects E-waste</th>
-                <th>Points in Waste Section</th>
-                <th>Total Points</th>-->
-                <!--<th>Bonus Points</th>-->
+<th>Food Served in Canteen</th>
+<th>Packaged Food distribution as Rewards</th>
+<th>Details of Packaged Food</th>
+<th>Distribution of Chocolate/similar products during events</th>
+<th>Names of Products</th>
+<th>Events sponsored by Food companies</th>
+<th>Brand Banners</th>
+<th>Banners, brochures, hoardings, stalls put-up during events</th>
+<th>Points in <br />
+    Food Section</th>
+<th>Total of Green Cover(m<sup>2</sup>)</th>
+<th>Percentage of Green Cover(%)</th>
+<th>Use of Chemical based pesticides</th>
+<th>Points in Land Section</th>
+<th>Water: Total Consumption(ltrs)</th>
+<th>Water: per cap/day(ltrs)</th>
+<th>Load on Drinking Water Taps</th>
+<th>Load on Ablution Taps</th>
+<th>Load on Urinals</th>
+<th>Load on Water Closet</th>
+<th>Rainwater Harvesting System</th>
+<th>Type of Rainwater Harvesting System</th>
+<th>Waste Water Reuse/Recycle</th>
+<th>Treat Waste Water</th>
+<th>Points in Water Section</th>
+<th>Solid Waste Segregation</th>
+<th>Segregator at Source</th>
+<th>Waste Collection points with 0 bin</th>
+<th>Waste Collection points with 1 bin</th>
+<th>Waste Collection points with 2 bins</th>
+<th>Waste Collection points with 3 bins</th>
+<th>Waste: Per cap/day(Grams)</th>
+<th>Recyle Solid Waste</th>
+<th>Total Waste Generated(Grams)</th>
+<th>Total Waste Recycled(Grams)</th>
+<th>Percentage of Waste Recycled</th>
+<th>Composting Facility</th>
+<th>Composting Methodology</th>
+<th>Quantity of Compost generated per month</th>
+<th>Reuse Textbook</th>
+<th>Waste Disposal</th>
+<th>Burn Waste</th>
+<th>Where do you burn waste</th>
+<th>Kind of waste burnt</th>
+<th>E-waste Disposal</th>
+<th>Who collects E-waste</th>
+<th>Points in Waste Section</th>
+<th>Total Points</th>-->
+<!--<th>Bonus Points</th>-->
             </tr>
         </thead> 
         <tbody>
@@ -965,6 +1045,185 @@
                     <!--Ends Here-->
                     <!--   Idli Wada-->
                     <td><?php echo (getFiled('Q7F1S2', $r->userid) != '') ? getFiled('Q7F1S2', $r->userid) : 0; ?></td>
+                    <!-- pav baji-->
+                    <td><?php echo (getFiled('Q7F1S3', $r->userid) != "") ? getFiled('Q7F1S3', $r->userid) : 0; ?> </td>
+                    <!--momos--->
+                    <td> <?php echo (getFiled('Q7F1S4', $r->userid) != "") ? getFiled('Q7F1S4', $r->userid) : 0; ?> </td>
+                    <!--others--->
+                    <td><?php echo (getFiled('Q7F1S5', $r->userid) != "") ? getFiled('Q7F1S5', $r->userid) : 0; ?></td>
+                    <!--upload--->
+                    <td><?php echo 'NA'; ?></td>
+                    <!--descripation--->
+                    <td><?php echo 'NA'; ?></td>
+                    <!--school--->
+                    <td><?php echo 'NA'; ?></td>
+                    <!--Nimboo Pani--->
+                    <td><?php echo (getFiled('Q8F1S1', $r->userid) != "") ? getFiled('Q8F1S1', $r->userid) : 0; ?> </td>
+                    <!--Sweet Lassi--->
+                    <td><?php echo (getFiled('Q8F1S2', $r->userid) != "") ? getFiled('Q8F1S2', $r->userid) : 0; ?> </td>
+                    <!--Salted  Butter Milk--->
+                    <td><?php echo (getFiled('Q8F1S3', $r->userid) != "") ? getFiled('Q8F1S3', $r->userid) : 0; ?> </td>
+                    <!--Aam Panna--->
+                    <td><?php echo (getFiled('Q8F1S4', $r->userid) != "") ? getFiled('Q8F1S4', $r->userid) : 0; ?> </td>
+                    <!--others--->
+                    <td><?php echo (getFiled('Q8F1S5', $r->userid) != "") ? getFiled('Q8F1S5', $r->userid) : 0; ?></td>
+                    <!--Schools distributes packaged food items as rewards--->
+                    <td><?php echo (getFiled('Q9F1', $r->userid) != "") ? (getFiled('Q9F1', $r->userid) == "Y") ? "Yes" : "No" : "N/A"; ?></td>
+
+                    <!--Details--->
+                    <td><?php echo (getFiled('Q9F2', $r->userid) != "") ? getFiled('Q9F2', $r->userid) : 0; ?></td>
+                    <!--school distribute chocolates/similar products--->
+                    <td><?php echo (getFiled('Q10F1', $r->userid) != "") ? (getFiled('Q10F1', $r->userid) == "Y") ? "Yes" : "No" : "N/A"; ?></td>
+                    <!--details--->
+                    <td><?php echo (getFiled('Q10F2', $r->userid) != "") ? getFiled('Q10F2', $r->userid) : 0; ?></td>
+                    <!--Are your school events such as quiz shows--->
+                    <td><?php echo (getFiled('Q11F1', $r->userid) != "") ? getFiled('Q11F1', $r->userid) ? "Yes" : "No" : "N/A"; ?></td>
+
+                    <!--school events sponsored by food companies/brands--->
+                    <td><?php echo (getFiled('Q11F2', $r->userid) != "") ? getFiled('Q11F2', $r->userid) : 0; ?></td>
+                    <!--detail--->
+                    <!--kfjfjfbj --->  <td><?php echo (getFiled('Q11F3', $r->userid) != "") ? (getFiled('Q11F3', $r->userid) == "Y") ? "Yes" : "No" : "N/A"; ?></td>
+                    <!--Are their banners, brochures, hoardings put up during the eventsl--->
+                    <td><?php echo (getFiled('Q11F3', $r->userid) != "") ? (getFiled('Q11F3', $r->userid) == "Y") ? "Yes" : "No" : "N/A"; ?></td>
+
+                    <!--upload--->
+                    <td><?php echo 'NA'; ?></td>
+                    <!--How regularly height & weight is measured--->
+                    <td><?php echo (getFiled('Q12F1', $r->userid) != "") ? (getFiled('Q12F1', $r->userid) == "Y") ? "Yes" : "No" : "N/A"; ?></td>
+                    <!--Is cooking part of any regular subjects or extracurricular activities--->
+                    <td><?php echo (getFiled('Q13F1', $r->userid) != "") ? (getFiled('Q13F1', $r->userid) == "Y") ? "Yes" : "No" : "N/A"; ?></td>
+
+                    <!--details--->
+                    <td><?php echo (getFiled('Q13F2', $r->userid) != "") ? getFiled('Q13F2', $r->userid) : "N/A"; ?></td>
+                    <!--upload--->
+                    <td><?php echo 'NA'; ?></td>
+                    <!--total--->
+                    <td> <?php echo getFoodPoints($r->userid); ?></td>
+                    <!---------------------------- LAND -------------------------------------------------------------------->  
+
+                    <!--------------Site area in square meter ----> 
+                    <td><?php echo (getFiled('Q4L1', $r->userid) != "") ? getFiled('Q4L1', $r->userid) : 0; ?></td>
+
+                    <!-------------- Ground coverage area----> 
+                    <td><?php echo (getFiled('Q4L2', $r->userid) != "") ? getFiled('Q4L2', $r->userid) : 0; ?></td>
+
+                    <!-------------- Green Landscaped area on ground----> 
+
+
+                    <td><?php echo (getFiled('Q4L3', $r->userid) != "") ? getFiled('Q4L3', $r->userid) : 0; ?></td>
+                    <!-------------- Play area that has grass on ground---->  
+                    <td><?php echo (getFiled('Q4L4', $r->userid) != "") ? getFiled('Q4L4', $r->userid) : 0; ?></td> 
+                    <!-------------- Green area on ground----> 
+
+                    <td><?php echo (getFiled('Q4L5', $r->userid) != "") ? getFiled('Q4L5', $r->userid) : 0; ?></td> 
+                    <!-------------- Play area that is paved/concrete on ground----> 
+                    <td><?php echo (getFiled('Q4L6', $r->userid) != "") ? getFiled('Q4L6', $r->userid) : 0; ?></td> 
+                    <!-------------- Surface parking area----> 
+                    <td><?php echo (getFiled('Q4L7', $r->userid) != "") ? getFiled('Q4L7', $r->userid) : 0; ?></td> 
+                    <!--------------) Service area on ground----> 
+                    <td><?php echo (getFiled('Q4L8', $r->userid) != "") ? getFiled('Q4L8', $r->userid) : 0; ?></td> 
+
+                    <!-------------- Roof and terrace area----> 
+                    <td><?php echo (getFiled('Q4L9', $r->userid) != "") ? getFiled('Q4L9', $r->userid) : 0; ?></td> 
+                    <!-------------- Green cover on exposed roof and terrace---->  
+                    <td><?php echo (getFiled('Q4L10', $r->userid) != "") ? getFiled('Q4L10', $r->userid) : 0; ?></td> 
+                    <!-------------- Total built-up/constructed area---->  
+                    <td><?php echo (getFiled('Q4L11', $r->userid) != "") ? getFiled('Q4L11', $r->userid) : 0; ?></td> 
+                    <!--------------Total number of floors (excluding ground floor)----> 
+                    <td><?php echo (getFiled('Q4L12', $r->userid) != "") ? getFiled('Q4L12', $r->userid) : 0; ?></td>
+                    <!-------Total Area---> 
+                    <td><?php echo 'NA'; ?></td>
+                    <!-------Total Green Area---> 
+                    <td><?php echo 'NA'; ?></td>
+                    <!-------Percentage of Green Area---> 
+                    <td><?php echo 'NA'; ?></td>
+                    <!-------Total Plants---> 
+                    <td>
+                        <?php echo (getFiled('Q5L1S3', $r->userid) != "") ? getFiled('Q5L1S3', $r->userid) : "N/A"; ?>
+                    </td>
+                    <!-------Native Plants--->
+                    <td>
+                        <?php echo (getFiled('Q5L1S1', $r->userid) != "") ? getFiled('Q5L1S1', $r->userid) : "N/A"; ?>
+                    </td>
+                    <!-------Exotic Plants---> 
+                    <td>
+                        <?php echo (getFiled('Q5L1S2', $r->userid) != "") ? getFiled('Q5L1S2', $r->userid) : "N/A"; ?>
+                    </td>
+                    <!------- Total Animals--->
+                    <td><?php echo (getFiled('Q5L2S3', $r->userid) != "") ? getFiled('Q5L2S3', $r->userid) : "N/A"; ?>
+                    </td>
+                    <!-------Native Animals---> 
+                    <td>
+                        <?php echo (getFiled('Q5L2S1', $r->userid) != "") ? getFiled('Q5L2S1', $r->userid) : "N/A"; ?>
+                    </td>
+                    <!-------Exotic Animals---> 
+                    <td><?php echo (getFiled('Q5L2S2', $r->userid) != "") ? getFiled('Q5L2S2', $r->userid) : "N/A"; ?>
+                    </td>
+                    <!-------Use of Chemical Pesticides---> 
+                    <td><?php echo (getFiled('Q6L1', $r->userid) != "") ? (getFiled('Q6L1', $r->userid) == "Y") ? "Yes" : "No" : "N/A"; ?></td>
+                    <!-------Uploaded documents--->
+                    <td><?php echo "N/A"; ?></td>
+                    <!-------Total Points Land--->
+                    <td> <?php echo getLandPoints($r->userid); ?></td>
+                    <!---------------------------- WATER -------------------------------------------------------------------->                
+                    <!--------- Drinking -------->  
+                    <td><?php echo (getFiled('Q4W1', $r->userid) != "") ? getFiled('Q4W1', $r->userid) : 0; ?> </td>
+
+
+                    <!--------- Toilet flushing-------->  
+                    <td><?php echo (getFiled('Q4W2', $r->userid) != "") ? getFiled('Q4W2', $r->userid) : 0; ?> </td>
+
+
+                    <!--------- Personal cleaning -------->  
+                    <td><?php echo (getFiled('Q4W3', $r->userid) != "") ? getFiled('Q4W3', $r->userid) : 0; ?> </td>
+
+
+
+                    <!--------- Washing clothes-------->  
+                    <td><?php echo (getFiled('Q4W4', $r->userid) != "") ? getFiled('Q4W4', $r->userid) : 0; ?> </td>
+
+
+                    <!--------- Cooking-------->  
+                    <td><?php echo (getFiled('Q4W5', $r->userid) != "") ? getFiled('Q4W5', $r->userid) : 0; ?> </td>
+
+
+                    <!--------- Cleaning Utensils</td>
+                      <td><?php echo (getFiled('Q4W6', $r->userid) != "") ? getFiled('Q4W6', $r->userid) : 0; ?> </td>
+                  
+                  
+                    <!--------- Washing Vegetables-------->  
+                    <td><?php echo (getFiled('Q4W7', $r->userid) != "") ? getFiled('Q4W7', $r->userid) : 0; ?> </td>
+
+
+                    <!--------- Mopping floors-------->  
+                    <td><?php echo (getFiled('Q4W8', $r->userid) != "") ? getFiled('Q4W8', $r->userid) : 0; ?> </td>
+
+
+                    <!--------- Gardening-------->  
+                    <td><?php echo (getFiled('Q4W9', $r->userid) != "") ? getFiled('Q4W9', $r->userid) : 0; ?> </td>
+
+
+                    <!--------- Others-------->  
+                    <td><?php echo (getFiled('Q4W10', $r->userid) != "") ? getFiled('Q4W10', $r->userid) : 0; ?> </td>
+
+
+                    <!--------- Total-------->  
+                    <td><?php echo (getFiled('Q4W11', $r->userid) != "") ? getFiled('Q4W11', $r->userid) : 0; ?> </td>
+                    <!--Per capita/day water consumption</th>----> 
+                <!--Ground Water as source</th>----> 
+                <!--Surface water as source</th>----> 
+                <!--Rainwater as source</th>----> 
+                <!--Recycled waste water as source</th>----> 
+                <!--Municipality as supplier</th>----> 
+                <!--Panchayat as supplier</th>----> 
+                <!--PHED as supplier </th>----> 
+                <!--Private Supplier </th>----> 
+                <!--School's own supply </th>-->
+                <!--School gets daily water supply </th>-->
+                <!--Duration of water supply </th>-->
+                <!--Does your school have any water and sanitation policy </th>-->
+
+
                     <!--                    Ends Here-->
                     <!--                                        Total Vehicle ON CNG
                                                             <td> <?php echo (getFiled('Q6A2S3C5', $r->userid) != '') ? getFiled('Q6A2S3C5', $r->userid) : 0; ?></td>

@@ -3161,7 +3161,308 @@ $(document).ready(function(){
         }
 
     });
+    $('#school-form').submit(function(event){
 
+        var radioCheck = $("input[name=Q1S1]:checked").val();
+        if(radioCheck != 1 && radioCheck != 2 && radioCheck != 3)
+        if(radioCheck != 1 && radioCheck != 2 && radioCheck != 3 && radioCheck != 4 && radioCheck != 5 && radioCheck != 6 && radioCheck != 7)
+        {
+            alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 15");
+            $('input[name=Q1S1]').focus();
+            $('input[name=Q1S1]').css('border-color', 'red');
+            event.preventDefault();
+        }
+
+        var radioCheck = $("input[name=Q2S1]:checked").val();
+        if(radioCheck != 1 && radioCheck != 2 && radioCheck != 3)
+        {
+            alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 16");
+            $('input[name=Q2S1]').focus();
+            $('input[name=Q2S1]').css('border-color', 'red');
+            event.preventDefault();
+        }
+    });
+    $('#feedback').submit(function(event){
+
+        var radioCheck = $("input[name=Q1Fe1]:checked").val();
+        if(radioCheck != 'Y' && radioCheck != 'N')
+        {
+            alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 1");
+            $('input[name=Q1Fe1]').focus();
+            $('input[name=Q1Fe1]').css('border-color', 'red');
+            event.preventDefault();
+        }
+        
+        var radioCheck = $("input[name=Q1Fe2]:checked").val();
+        if(radioCheck != 'Y' && radioCheck != 'N')
+        {
+            alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 2");
+            $('input[name=Q1Fe2]').focus();
+            $('input[name=Q1Fe2]').css('border-color', 'red');
+            event.preventDefault();
+        }
+        var radioCheck = $("input[name=Q1Fe3]:checked").val();
+        if(radioCheck != 'Y' && radioCheck != 'N')
+        {
+            alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 3");
+            $('input[name=Q1Fe3]').focus();
+            $('input[name=Q1Fe3]').css('border-color', 'red');
+            event.preventDefault();
+        }
+        var radioCheck = $("input[name=Q1Fe4]:checked").val();
+        if(radioCheck != 'Y' && radioCheck != 'N')
+        {
+            alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 4");
+            $('input[name=Q1Fe4]').focus();
+            $('input[name=Q1Fe4]').css('border-color', 'red');
+            event.preventDefault();
+        }
+        var radioCheck = $("input[name=Q8Fe1]:checked").val();
+        if(radioCheck != 1 && radioCheck != 2 && radioCheck != 3)
+        {
+            alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 6");
+            $('input[name=Q8Fe1]').focus();
+            $('input[name=Q8Fe1]').css('border-color', 'red');
+            event.preventDefault();
+        }
+        var radioCheck = $("input[name=Q8Fe2]:checked").val();
+        if(radioCheck != 1 && radioCheck != 2 && radioCheck != 3)
+        {
+            alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 6");
+            $('input[name=Q8Fe2]').focus();
+            $('input[name=Q8Fe2]').css('border-color', 'red');
+            event.preventDefault();
+        }
+        var radioCheck = $("input[name=Q8Fe3]:checked").val();
+        if(radioCheck != 1 && radioCheck != 2 && radioCheck != 3)
+        {
+            alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 6");
+            $('input[name=Q8Fe3]').focus();
+            $('input[name=Q8Fe3]').css('border-color', 'red');
+            event.preventDefault();
+        }
+        var radioCheck = $("input[name=Q8Fe4]:checked").val();
+        if(radioCheck != 1 && radioCheck != 2 && radioCheck != 3)
+        {
+            alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 6");
+            $('input[name=Q8Fe4]').focus();
+            $('input[name=Q8Fe4]').css('border-color', 'red');
+            event.preventDefault();
+        }
+        var radioCheck = $("input[name=Q1Fe7]:checked").val();
+        if(radioCheck != 'Y' && radioCheck != 'N')
+        {
+            alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 7");
+            $('input[name=Q1Fe7]').focus();
+            $('input[name=Q1Fe7]').css('border-color', 'red');
+            event.preventDefault();
+        }
+        
+        var radioCheck = $("input[name=Q1Fe8]:checked").val();
+        if(radioCheck != 'Y' && radioCheck != 'N')
+        {
+            alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 8");
+            $('input[name=Q1Fe8]').focus();
+            $('input[name=Q1Fe8]').css('border-color', 'red');
+            event.preventDefault();
+        }
+        var radioCheck = $("input[name=Q1Fe9]:checked").val();
+        if(radioCheck != 1 && radioCheck != 2 && radioCheck != 3 && radioCheck != 4)
+        {
+            alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 9");
+            $('input[name=Q1Fe9]').focus();
+            $('input[name=Q1Fe9]').css('border-color', 'red');
+            event.preventDefault();
+        }
+
+        var radioCheck = $("input[name=Q1Fe10]:checked").val();
+        if(radioCheck != 'Y' && radioCheck != 'N')
+        {
+            alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 10");
+            $('input[name=Q1Fe10]').focus();
+            $('input[name=Q1Fe10]').css('border-color', 'red');
+            event.preventDefault();
+        }
+        var radioCheck = $("input[name=Q1Fe11]:checked").val();
+        if(radioCheck != 'Y' && radioCheck != 'N')
+        {
+            alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 11");
+            $('input[name=Q1Fe11]').focus();
+            $('input[name=Q1Fe11]').css('border-color', 'red');
+            event.preventDefault();
+        }
+
+
+    });
+
+    $("#general-form").submit(function (event)
+    {
+        
+        var radioCheck = $("input[name=Q2G1]:checked").val();
+        if(radioCheck != 1 && radioCheck != 2 && radioCheck != 3)
+        {
+            alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 2");
+            $('#Q2G1').focus();
+            $('#Q2G1').css('border-color', 'red');
+            event.preventDefault();
+        }
+
+        var radioCheck = $("input[name=Q3G1]:checked").val();
+        if(radioCheck != 1 && radioCheck != 2 && radioCheck != 3 && radioCheck != 4 && radioCheck != 5)
+        {
+            alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 3");
+            $('#Q3G1').focus();
+            $('#Q3G1').css('border-color', 'red');
+            event.preventDefault();
+        }
+        else if(radioCheck == 1)
+        {
+            var Q8A1 = parseInt(document.getElementById('select').value);
+            if(Q8A1 == 0)
+            {
+                alert("Please write 0(zero) if you do not have any input/entry");
+                $('#select').focus();
+                $('#select').css('border-color', 'red');
+                event.preventDefault();
+            }
+            
+        }
+        else if(radioCheck == 5)
+        {
+            var Q8A2 = document.getElementById('Q3G1O').plwaceholder;
+            var Q8A1 = document.getElementById('Q3G1O').value;
+            if(Q8A1 == "" && Q8A2 == "")
+            {
+                alert("Please write 0(zero) if you do not have any input/entry");
+                $('#Q3G1O').focus();
+                $('#Q3G1O').css('border-color', 'red');
+                event.preventDefault();
+            }
+           
+        }
+        
+        var id1 = "male";
+        var id2 = "female";
+        var id3 = "mixed";
+
+        var element1 = parseInt(document.getElementById(id1).value);
+        var element11 = parseInt(document.getElementById(id1).placeholder);
+
+        var element2 = parseInt(document.getElementById(id2).value);
+        var element21 = parseInt(document.getElementById(id2).placeholder);
+
+        var element3 = parseInt(document.getElementById(id3).value);
+        var element31 = parseInt(document.getElementById(id3).placeholder);
+
+        if(isNaN(element1) && isNaN(element11) && isNaN(element2) && isNaN(element21) && isNaN(element3) && isNaN(element31))
+        {
+            alert("Please write 0(zero) if you do not have any input/entry");
+            $('#'+id1).focus();
+            $('#'+id1).css('border-color', 'red');
+            $('#'+id2).focus();
+            $('#'+id2).css('border-color', 'red');
+            $('#'+id3).focus();
+            $('#'+id3).css('border-color', 'red');
+        
+            event.preventDefault();
+        }
+
+        var id1 = "teacherMale";
+        var id2 = "teacherFemale";
+        var id3 = "teacherMixed";
+
+        var element1 = parseInt(document.getElementById(id1).value);
+        var element11 = parseInt(document.getElementById(id1).placeholder);
+
+        var element2 = parseInt(document.getElementById(id2).value);
+        var element21 = parseInt(document.getElementById(id2).placeholder);
+
+        var element3 = parseInt(document.getElementById(id3).value);
+        var element31 = parseInt(document.getElementById(id3).placeholder);
+
+        if(isNaN(element1) && isNaN(element11) && isNaN(element2) && isNaN(element21) && isNaN(element3) && isNaN(element31))
+        {
+            alert("Please write 0(zero) if you do not have any input/entry");
+            $('#'+id1).focus();
+            $('#'+id1).css('border-color', 'red');
+            $('#'+id2).focus();
+            $('#'+id2).css('border-color', 'red');
+            $('#'+id3).focus();
+            $('#'+id3).css('border-color', 'red');
+        
+            event.preventDefault();
+        }
+
+        var id1 = "NteacherMale";
+        var id2 = "NteacherFemale";
+        var id3 = "NteacherMixed";
+
+        var element1 = parseInt(document.getElementById(id1).value);
+        var element11 = parseInt(document.getElementById(id1).placeholder);
+
+        var element2 = parseInt(document.getElementById(id2).value);
+        var element21 = parseInt(document.getElementById(id2).placeholder);
+
+        var element3 = parseInt(document.getElementById(id3).value);
+        var element31 = parseInt(document.getElementById(id3).placeholder);
+
+        if(isNaN(element1) && isNaN(element11) && isNaN(element2) && isNaN(element21) && isNaN(element3) && isNaN(element31))
+        {
+            alert("Please write 0(zero) if you do not have any input/entry");
+            $('#'+id1).focus();
+            $('#'+id1).css('border-color', 'red');
+            $('#'+id2).focus();
+            $('#'+id2).css('border-color', 'red');
+            $('#'+id3).focus();
+            $('#'+id3).css('border-color', 'red');
+        
+            event.preventDefault();
+        }
+        
+        var q1 = parseInt(document.getElementById('Q5G1').value);
+        var q2 = parseInt(document.getElementById('Q5G1').placeholder);
+
+        if(isNaN(q1) && isNaN(q2))
+        {
+            alert("Please write 0(zero) if you do not have any input/entry");
+            $('#Q5G1').focus();
+            $('#Q5G1').css('border-color', 'red');
+            event.preventDefault();
+
+        }
+
+        var q1 = parseInt(document.getElementById('Q6G1').value);
+        var q2 = parseInt(document.getElementById('Q6G1').placeholder);
+
+        if(isNaN(q1) && isNaN(q2))
+        {
+            alert("Please write 0(zero) if you do not have any input/entry");
+            $('#Q6G1').focus();
+            $('#Q6G1').css('border-color', 'red');
+            event.preventDefault();
+
+        }
+
+        var radioCheck = $("input[name=Q8G1]:checked").val();
+        if(radioCheck != 1 && radioCheck != 2)
+        {
+            alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 7");
+            $('input[name=Q8G1]').focus();
+            $('input[name=Q8G1]').css('border-color', 'red');
+            event.preventDefault();
+        }
+
+        var radioCheck = $("input[name=Q9G1]:checked").val();
+        if(radioCheck != 1 && radioCheck != 2 && radioCheck != 3)
+        {
+            alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 8");
+            $('input[name=Q9G1]').focus();
+            $('input[name=Q9G1]').css('border-color', 'red');
+            event.preventDefault();
+        }
+        
+        
+    });
 
     $("#air").submit(function( event ) { //Air Submit
 
