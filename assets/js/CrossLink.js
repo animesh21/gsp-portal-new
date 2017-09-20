@@ -554,7 +554,7 @@ $(document).ready(function(){
             {
                 alert("Please Enter Value in Surface parking area, Or remove Authorized Parking form Air Section");
                 $('#Q4L7').css('border-color', 'red');
-                $('#Q4L7').focus(); 
+                $('#Q4L7').focus();
 
             }
         }
@@ -2043,7 +2043,7 @@ $(document).ready(function(){
 
     $("#Q9Wa31").keypress(function(e){
         var val = parseFloat(this.value + e.key);
-       
+
         if (val < 1 )
         {
             alert("Please Enter value more than 0.");
@@ -2051,7 +2051,7 @@ $(document).ready(function(){
         }
 
     });
-    
+
     $("#waste").submit(function( event ) { //Waste Submit
 
         var count1 = 0;
@@ -2221,10 +2221,10 @@ $(document).ready(function(){
             event.preventDefault();
         }
         var id = ""
-        error = false;   
+        error = false;
         for(i=1;i<11;i++)
         {
-            
+
             for(j=1;j<5;j++)
             {
                 var id1 = "Q5WazSk".replace('z',i);
@@ -2240,7 +2240,7 @@ $(document).ready(function(){
                     error = true;
                     break;
                 }
-                    
+
             }
             if(error == true)
                 break;
@@ -2256,12 +2256,12 @@ $(document).ready(function(){
 
         for(i=1;i<5;i++)
         {
-            
+
             var id1 = "Q6Wa1Sz".replace('z',i);
             var element1 = document.getElementById(id1).value;
             var element11 = document.getElementById(id1).placeholder;
 
-            
+
 
             if(isNaN(element1) && isNaN(element11))
             {
@@ -2269,26 +2269,26 @@ $(document).ready(function(){
                 error = true;
                 break;
             }
-                
+
         }
         if(error)
         {
             alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 3(a)");
             $("#"+id).focus(); $('#'+id).css('border-color', 'red');
             event.preventDefault();
-        }   
+        }
 
 
         error = false;
 
         for(i=1;i<8;i++)
         {
-            
+
             var id1 = "Q6Wa2Sz".replace('z',i);
             var element1 = document.getElementById(id1).value;
             var element11 = document.getElementById(id1).placeholder;
 
-            
+
 
             if(isNaN(element1) && isNaN(element11))
             {
@@ -2296,7 +2296,7 @@ $(document).ready(function(){
                 error = true;
                 break;
             }
-                
+
         }
         if(error)
         {
@@ -2309,12 +2309,12 @@ $(document).ready(function(){
 
         for(i=1;i<3;i++)
         {
-            
+
             var id1 = "Q6Wa3Sz".replace('z',i);
             var element1 = document.getElementById(id1).value;
             var element11 = document.getElementById(id1).placeholder;
 
-            
+
 
             if(isNaN(element1) && isNaN(element11))
             {
@@ -2322,25 +2322,25 @@ $(document).ready(function(){
                 error = true;
                 break;
             }
-                
+
         }
         if(error)
         {
             alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 3(c)");
             $("#"+id).focus(); $('#'+id).css('border-color', 'red');
             event.preventDefault();
-        }   
+        }
 
         error = false;
 
         for(i=3;i<8;i++)
         {
-            
+
             var id1 = "Q6WazS1".replace('z',i);
             var element1 = document.getElementById(id1).value;
             var element11 = document.getElementById(id1).placeholder;
 
-            
+
 
             if(isNaN(element1) && isNaN(element11))
             {
@@ -2348,14 +2348,14 @@ $(document).ready(function(){
                 error = true;
                 break;
             }
-                
+
         }
         if(error)
         {
             alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. ");
             $("#"+id).focus(); $('#'+id).css('border-color', 'red');
             event.preventDefault();
-        }   
+        }
 
         var radioCheck = $("input[name=Q8Wa1]:checked").val();
         if(radioCheck != 'Y' && radioCheck != 'N')
@@ -2370,12 +2370,12 @@ $(document).ready(function(){
 
             for(i=1;i<5;i++)
             {
-                
+
                 var id1 = "Q8Wa1Sz".replace('z',i);
                 var element1 = document.getElementById(id1).value;
                 var element11 = document.getElementById(id1).placeholder;
 
-                
+
 
                 if(isNaN(element1) && isNaN(element11))
                 {
@@ -2383,26 +2383,26 @@ $(document).ready(function(){
                     error = true;
                     break;
                 }
-                    
+
             }
             if(error)
             {
                 alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 4(a)");
                 $("#"+id).focus(); $('#'+id).css('border-color', 'red');
                 event.preventDefault();
-            }   
+            }
 
 
             error = false;
 
             for(i=1;i<8;i++)
             {
-                
+
                 var id1 = "Q8Wa2Sz".replace('z',i);
                 var element1 = document.getElementById(id1).value;
                 var element11 = document.getElementById(id1).placeholder;
 
-                
+
 
                 if(isNaN(element1) && isNaN(element11))
                 {
@@ -2410,7 +2410,7 @@ $(document).ready(function(){
                     error = true;
                     break;
                 }
-                    
+
             }
             if(error)
             {
@@ -2423,12 +2423,12 @@ $(document).ready(function(){
 
             for(i=1;i<3;i++)
             {
-                
+
                 var id1 = "Q8Wa3Sz".replace('z',i);
                 var element1 = document.getElementById(id1).value;
                 var element11 = document.getElementById(id1).placeholder;
 
-                
+
 
                 if(isNaN(element1) && isNaN(element11))
                 {
@@ -2436,25 +2436,25 @@ $(document).ready(function(){
                     error = true;
                     break;
                 }
-                    
+
             }
             if(error)
             {
                 alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 4(c)");
                 $("#"+id).focus(); $('#'+id).css('border-color', 'red');
                 event.preventDefault();
-            }   
+            }
 
             error = false;
 
             for(i=3;i<8;i++)
             {
-                
+
                 var id1 = "Q8WazS1".replace('z',i);
                 var element1 = document.getElementById(id1).value;
                 var element11 = document.getElementById(id1).placeholder;
 
-                
+
 
                 if(isNaN(element1) && isNaN(element11))
                 {
@@ -2462,7 +2462,7 @@ $(document).ready(function(){
                     error = true;
                     break;
                 }
-                    
+
             }
             if(error)
             {
@@ -2481,15 +2481,15 @@ $(document).ready(function(){
         }
         else if(radioCheck == 'Y')
         {
-                var val = $("input[name=Q9Wa3]").val();
-                var val1 = $("input[name=Q9Wa3]").attr('placeholder');
+            var val = $("input[name=Q9Wa3]").val();
+            var val1 = $("input[name=Q9Wa3]").attr('placeholder');
 
-                if(val == "" && val1 == "")
-                {
-                    alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 5(a)");
-                    $("#"+id).focus(); $('#'+id).css('border-color', 'red');
-                    event.preventDefault();       
-                }  
+            if(val == "" && val1 == "")
+            {
+                alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 5(a)");
+                $("#"+id).focus(); $('#'+id).css('border-color', 'red');
+                event.preventDefault();
+            }
         }
         var radioCheck = $("input[name=Q10Wa1]:checked").val();
         if(radioCheck != 'Y' && radioCheck != 'N')
@@ -2498,11 +2498,11 @@ $(document).ready(function(){
             $('#Q10Wa1').focus(); $('#Q10Wa1').css('border-color', 'red');
             event.preventDefault();
         }
-        
-        error = false;   
+
+        error = false;
         for(i=1;i<29;i++)
         {
-            
+
             for(j=1;j<5;j++)
             {
                 var id1 = "Q12WazSk".replace('z',i);
@@ -2510,7 +2510,7 @@ $(document).ready(function(){
                 var element1 = document.getElementById(id1).value;
                 var element11 = document.getElementById(id1).placeholder;
 
-                
+
 
                 if(isNaN(element1) && isNaN(element11))
                 {
@@ -2518,7 +2518,7 @@ $(document).ready(function(){
                     error = true;
                     break;
                 }
-                    
+
             }
             if(error == true)
                 break;
@@ -2570,10 +2570,10 @@ $(document).ready(function(){
                 alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 11(a)");
                 $('#Q15Wa2').focus(); $('#Q15Wa2').css('border-color', 'red');
                 event.preventDefault();
-            }   
+            }
         }
 
-        
+
         var radioCheck = $("input[name=Q17Wa1]:checked").val();
         if(radioCheck != 'Y' && radioCheck != 'N')
         {
@@ -3165,13 +3165,13 @@ $(document).ready(function(){
 
         var radioCheck = $("input[name=Q1S1]:checked").val();
         if(radioCheck != 1 && radioCheck != 2 && radioCheck != 3)
-        if(radioCheck != 1 && radioCheck != 2 && radioCheck != 3 && radioCheck != 4 && radioCheck != 5 && radioCheck != 6 && radioCheck != 7)
-        {
-            alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 15");
-            $('input[name=Q1S1]').focus();
-            $('input[name=Q1S1]').css('border-color', 'red');
-            event.preventDefault();
-        }
+            if(radioCheck != 1 && radioCheck != 2 && radioCheck != 3 && radioCheck != 4 && radioCheck != 5 && radioCheck != 6 && radioCheck != 7)
+            {
+                alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 15");
+                $('input[name=Q1S1]').focus();
+                $('input[name=Q1S1]').css('border-color', 'red');
+                event.preventDefault();
+            }
 
         var radioCheck = $("input[name=Q2S1]:checked").val();
         if(radioCheck != 1 && radioCheck != 2 && radioCheck != 3)
@@ -3192,7 +3192,7 @@ $(document).ready(function(){
             $('input[name=Q1Fe1]').css('border-color', 'red');
             event.preventDefault();
         }
-        
+
         var radioCheck = $("input[name=Q1Fe2]:checked").val();
         if(radioCheck != 'Y' && radioCheck != 'N')
         {
@@ -3257,7 +3257,7 @@ $(document).ready(function(){
             $('input[name=Q1Fe7]').css('border-color', 'red');
             event.preventDefault();
         }
-        
+
         var radioCheck = $("input[name=Q1Fe8]:checked").val();
         if(radioCheck != 'Y' && radioCheck != 'N')
         {
@@ -3297,7 +3297,7 @@ $(document).ready(function(){
 
     $("#general-form").submit(function (event)
     {
-        
+
         var radioCheck = $("input[name=Q2G1]:checked").val();
         if(radioCheck != 1 && radioCheck != 2 && radioCheck != 3)
         {
@@ -3325,7 +3325,7 @@ $(document).ready(function(){
                 $('#select').css('border-color', 'red');
                 event.preventDefault();
             }
-            
+
         }
         else if(radioCheck == 5)
         {
@@ -3338,9 +3338,9 @@ $(document).ready(function(){
                 $('#Q3G1O').css('border-color', 'red');
                 event.preventDefault();
             }
-           
+
         }
-        
+
         var id1 = "male";
         var id2 = "female";
         var id3 = "mixed";
@@ -3363,7 +3363,7 @@ $(document).ready(function(){
             $('#'+id2).css('border-color', 'red');
             $('#'+id3).focus();
             $('#'+id3).css('border-color', 'red');
-        
+
             event.preventDefault();
         }
 
@@ -3389,7 +3389,7 @@ $(document).ready(function(){
             $('#'+id2).css('border-color', 'red');
             $('#'+id3).focus();
             $('#'+id3).css('border-color', 'red');
-        
+
             event.preventDefault();
         }
 
@@ -3415,10 +3415,10 @@ $(document).ready(function(){
             $('#'+id2).css('border-color', 'red');
             $('#'+id3).focus();
             $('#'+id3).css('border-color', 'red');
-        
+
             event.preventDefault();
         }
-        
+
         var q1 = parseInt(document.getElementById('Q5G1').value);
         var q2 = parseInt(document.getElementById('Q5G1').placeholder);
 
@@ -3460,8 +3460,8 @@ $(document).ready(function(){
             $('input[name=Q9G1]').css('border-color', 'red');
             event.preventDefault();
         }
-        
-        
+
+
     });
 
     $("#air").submit(function( event ) { //Air Submit
@@ -3879,7 +3879,7 @@ $(document).ready(function(){
                 alert("Total members of the school community in Q4 ("+student+") should be equal to student permanent population of the school in General Questions Q4a ("+current_student+")")
                 $('#Q7A12S1').focus();
                 $('#Q7A12S1').css('border-color', 'red');
-                    
+
                 event.preventDefault();
             }
         if(current_teacher > 0)
@@ -3896,7 +3896,7 @@ $(document).ready(function(){
                 alert("Total members of the school community in Q4 ("+teacher+") should be equal to total teaching population of the school in General Questions Q4a ("+current_teacher+")")
                 $('#Q7A12S2').focus();
                 $('#Q7A12S2').css('border-color', 'red');
-                    
+
                 event.preventDefault();
             }
 
@@ -4366,7 +4366,7 @@ $(document).ready(function(){
                 alert("Total members of the school community in Q4 ("+total+") should be equal to total permanent population of the school in General Questions Q4a ("+current_pop+")")
                 $('#Q7A12S3').focus();
                 $('#Q7A12S3').css('border-color', 'red');
-                
+
                 event.preventDefault();
             }
         }
@@ -4515,21 +4515,21 @@ $(document).ready(function(){
                 {
                     $('#'+id1).focus();
                     $('#'+id1).css('border-color', 'red');
-                
+
                     event.preventDefault();
                 }
                 else if(isNaN(element2) && isNaN(element21))
                 {
                     $('#'+id2).focus();
                     $('#'+id2).css('border-color', 'red');
-                
+
                     event.preventDefault();
                 }
                 else if(isNaN(element3) && isNaN(element31))
                 {
                     $('#'+id3).focus();
                     $('#'+id3).css('border-color', 'red');
-                
+
                     event.preventDefault();
                 }
 
@@ -4541,7 +4541,7 @@ $(document).ready(function(){
                 alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 1");
                 $('#Q4F1').focus();
                 $('#'+id1).css('border-color', 'red');
-                
+
                 event.preventDefault();
             }
             var radioCheck = $("input[name=Q5F1]:checked").val();
@@ -4560,7 +4560,7 @@ $(document).ready(function(){
                     alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 3");
                     $('#Q5F1S1').focus();
                     $('#Q5F1S1').css('border-color', 'red');
-                
+
                     event.preventDefault();
                 }
                 var id = "";
@@ -4581,7 +4581,7 @@ $(document).ready(function(){
                     alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. Test");
                     $('#'+id).focus();
                     $('#'+id).css('border-color', 'red');
-                
+
                     event.preventDefault();
                 }
                 var student = parseInt($('#Q5F3S1').val());
@@ -4591,7 +4591,7 @@ $(document).ready(function(){
                     alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed.");
                     $('#Q5F3S1').focus();
                     $('#Q5F3S1').css('border-color', 'red');
-                
+
                     event.preventDefault();
                 }
             }
@@ -4603,7 +4603,7 @@ $(document).ready(function(){
                     alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed.");
                     $('#Q5F1S1').focus();
                     $('#Q5F1S1').css('border-color', 'red');
-                
+
                     event.preventDefault();
                 }
                 else if(radioCheck == 'Y')
@@ -4615,7 +4615,7 @@ $(document).ready(function(){
                         alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed.");
                         $('#Q5F1S2A').focus();
                         $('#Q5F1S2A').css('border-color', 'red');
-                
+
                         event.preventDefault();
                     }
                     var student = parseInt($('#Q5F1S3A').val());
@@ -4625,7 +4625,7 @@ $(document).ready(function(){
                         alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed.");
                         $('#Q5F1S3A').focus();
                         $('#Q5F1S3A').css('border-color', 'red');
-                
+
                         event.preventDefault();
                     }
                     var radioCheck = $("input[name=Q5F1S4]:checked").val();
@@ -4634,7 +4634,7 @@ $(document).ready(function(){
                         alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed.");
                         $('#Q5F1S4').focus();
                         $('#Q5F1S4').css('border-color', 'red');
-                
+
                         event.preventDefault();
                     }
 
@@ -4654,7 +4654,7 @@ $(document).ready(function(){
                     {
                         $('#'+id1).focus();
                         $('#'+id1).css('border-color', 'red');
-                
+
                         alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed.");
                         event.preventDefault();
                     }
@@ -4667,7 +4667,7 @@ $(document).ready(function(){
                 {
                     $('#Q7F3S1').focus();
                     $('#Q7F3S1').css('border-color', 'red');
-                
+
                     alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed.");
                     event.preventDefault();
                 }
