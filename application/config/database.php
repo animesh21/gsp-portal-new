@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
@@ -76,8 +77,10 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
+	'username' => 'gspaudit17_usr',
+	'password' => 'Gl!k6x7zQ',
+//    'username' => 'animesh',
+//    'password' => 'user',
 	'database' => 'gsp_audit17',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',

@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "123456";
+$username = "audit2016";
+$password = "ByJ^zyY7K(m";
 $dbname = "gsp_audit16";
 
 
@@ -25,9 +25,9 @@ $token_request_id = "";
 
 $sql_token_details = $token_request_id;
 
-//$sql_data = mysql_fetch_array(mysql_query("SELECT * FROM lime_survey_266617 WHERE `token` = '".$sql_token_details."'"));   
+//$sql_data = mysql_fetch_array(mysql_query("SELECT * FROM lime_survey_266617 WHERE `token` = '".$sql_token_details."'"));
 
-$sql_data = mysql_fetch_assoc(mysql_query("SELECT * FROM lime_survey_266617 WHERE `token` = '".$sql_token_details."'"));   
+$sql_data = mysql_fetch_assoc(mysql_query("SELECT * FROM lime_survey_266617 WHERE `token` = '".$sql_token_details."'"));
 
 $sql_country = mysql_fetch_assoc(mysql_query("SELECT `name` FROM `countries` WHERE `id` = '".$sql_data['266617X34X1593']."'"));
 

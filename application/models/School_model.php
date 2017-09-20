@@ -2,21 +2,23 @@
 header('Access-Control-Allow-Origin: *');
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class School_model extends CI_Model {
-
-    public function __construct() {
+class School_model extends CI_Model
+{
+    public function __construct()
+    {
         parent::__construct();
     }
 
-    public function getSchool($argPost) {
+    public function getSchool($argPost)
+    {
         $query = $this->db->select('*')
-                ->from('gsp_school')
-                ->where(array('userid' => $argPost))
-                ->get();
+            ->from('gsp_school')
+            ->where(array('userid' => $argPost))
+            ->get();
         if ($query->num_rows() > 0) {
             $row = $query->row();
             $school = array(
-                'userid'=>$row->userid,
+                'userid' => $row->userid,
                 'name' => $row->name,
                 'address1' => $row->address1,
                 'address2' => $row->address2,
@@ -34,17 +36,22 @@ class School_model extends CI_Model {
                 'coname' => $row->coname,
                 'coemail' => $row->coemail,
                 'comobile' => $row->comobile,
+//<<<<<<< Updated upstream
                 'progress'=>$row->progress,
-                
-            );
 
+//            );
+//=======
+//                'progress' => $row->progress,
+//>>>>>>> Stashed changes
+
+            );
             return $school;
         }
         return $school = array("name" => "Sunil");
     }
 
-    public function RegisterUser($argPost) {
-
+    public function RegisterUser($argPost)
+    {
         $update = array(
             'userid' => $argPost['userid'],
             'name' => $argPost['name'],
@@ -64,30 +71,33 @@ class School_model extends CI_Model {
             'coname' => $argPost['coname'],
             'coemail' => $argPost['coemail'],
             'comobile' => $argPost['comobile'],
-            'date_added'=>date('Y-m-d H:i:s')
+            'date_added' => date('Y-m-d H:i:s')
         );
-
         if ($this->db->insert('gsp_school', $update)) {
             //Sending Mail To The School
             $insert_id = $this->db->insert_id();
             $query = $this->db->select('a.*, b.email AS emailfiled, b.password, b.username, c.name AS state_name, d.name AS district_name')
-                            ->from('gsp_school AS a')
-                            ->join('gsp_user AS b', 'a.userid=b.id', 'left')
-                            ->join('states AS c', 'a.state=c.id', 'left')
-                            ->join('cities AS d', 'a.district=d.id', 'left')
-                            ->where('a.id', $insert_id)
-                            ->get()->row();
+                ->from('gsp_school AS a')
+                ->join('gsp_user AS b', 'a.userid=b.id', 'left')
+                ->join('states AS c', 'a.state=c.id', 'left')
+                ->join('cities AS d', 'a.district=d.id', 'left')
+                ->where('a.id', $insert_id)
+                ->get()->row();
             //echo '<pre>'; print_r($query); exit;
             $this->load->library('email');
             $config['mailtype'] = 'html';
             $this->email->initialize($config);
             $from = "support@greenschoolsprogramme.org";
+//<<<<<<< Updated upstream
             $arrMails=array($query->schoolemail, $query->coemail);
+//=======
+//            $arrMails = array($query->schoolemail, $query->coemail, 'nirma.bora@cseindia.org', 'ranjita@cseindia.org', 'aditi.sharma@cseindia.org', 'contact@studiotesseract.biz');
+//>>>>>>> Stashed changes
             $to = $arrMails;
             $subject = "GSP Audit Registration";
             $msg = "Dear &nbsp;";
-            $msg .= $query->coname. "," . "<br/><br/>";
-            $msg .= "Thank you for registering your school '".$query->name."', for GSP (Green Schools Programme) Audit 2017. Your account has been successfully created.<br><br>";
+            $msg .= $query->coname . "," . "<br/><br/>";
+            $msg .= "Thank you for registering your school '" . $query->name . "', for GSP (Green Schools Programme) Audit 2017. Your account has been successfully created.<br><br>";
             $msg .= "To participate in GSP Audit 2017, please remember to save your username and password given below.<br><br>";
 //            $msg .= "The launch date of GSP Audit 2017 will be announced at www.greenschoolsprogramme.org, in July 2017.<br><br>";
             $msg .= "URL: http://www.greenschoolsprogramme.org/audit2017 <br/><br/>";
@@ -100,11 +110,11 @@ class School_model extends CI_Model {
             $msg .= "Name of School: " . $query->name . "<br><br>";
             $msg .= "Address Line 1: " . $query->address1 . "<br><br>";
             $msg .= "Address Line 2: " . $query->address2 . "<br><br>";
-            $msg .= "State: " . $query->state_name. "<br><br>";
-            $msg .= "District: " . $query->district_name. "<br><br>";
+            $msg .= "State: " . $query->state_name . "<br><br>";
+            $msg .= "District: " . $query->district_name . "<br><br>";
             $msg .= "City: " . $query->city . "<br><br>";
             $msg .= "Pincode: " . $query->pincode . "<br><br>";
-            $msg .= "Land Line No: "."91 - ".$query->std." - ".$query->telephone . "<br><br>";
+            $msg .= "Land Line No: " . "91 - " . $query->std . " - " . $query->telephone . "<br><br>";
             $msg .= "Principal's Name: " . $query->principle_name . "<br><br>";
             $msg .= "Moblile Number: " . $query->mobile . "<br><br>";
             $msg .= "GSP Coordinator's Name: " . $query->coname . "<br><br>";
@@ -122,26 +132,28 @@ class School_model extends CI_Model {
         }
     }
 
-    public function GetRegistered() {
+    public function GetRegistered()
+    {
         $query = $this->db->select('*')
-                ->from('gsp_school')
-                ->get();
+            ->from('gsp_school')
+            ->get();
         if ($query->num_rows() > 0) {
             $row = $query->result_array();
             return $row;
         }
     }
 
-    public function getSchools() {
+    public function getSchools()
+    {
         $query = $this->db->select('COUNT(*) count')
-                ->from('gsp_school')
-                ->get();
-
+            ->from('gsp_school')
+            ->get();
         $row = $query->row();
         return $row->count;
     }
 
-    public function getState($stateID) {
+    public function getState($stateID)
+    {
         $data = $this->db->select('*')->where('id ', $stateID)->from('states')->get()->row()->name;
         return $data;
     }
@@ -149,32 +161,25 @@ class School_model extends CI_Model {
     /*
      * Get Cities
      */
-
-    public function getCity($cityID) {
+    public function getCity($cityID)
+    {
         $data = $this->db->select('*')->where('id ', $cityID)->from('cities')->get()->row()->name;
         return $data;
     }
+
     public function SubmitAPIAnswers($data)
     {
-        if(isset($data))
-        {
-            try
-            {
+        if (isset($data)) {
+            try {
                 $this->db->set($data['questionid'], $data['answer'])
-                    ->where( array('userid' => $data['userid'])) //which row want to upgrade
+                    ->where(array('userid' => $data['userid']))//which row want to upgrade
                     ->update('gsp_school');
                 return "SCHOOL Updated";
-
-            }
-            catch(Exception $e)
-            {
+            } catch (Exception $e) {
                 return "Invalid Key";
             }
-
-
-
         }
     }
 }
-?>
 
+?>

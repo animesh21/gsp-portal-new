@@ -1,7 +1,8 @@
 <?php
+
 $servername = "localhost";
-$username = "root";
-$password = "123456";
+$username = "gsp_audit";
+$password = "Sma46o!u8";
 $dbname = "gsp_audit";
 
 
