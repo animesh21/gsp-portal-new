@@ -23,6 +23,7 @@ class Performance_model extends CI_Model {
                         ->join('gsp_user AS d', 'a.userid=d.id', 'left')
                         ->where('a.progress', 100)
                         ->order_by('a.id', 'desc')
+                        ->limit(2)
                         ->get()->result();
     }
 
