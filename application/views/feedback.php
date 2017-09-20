@@ -22,7 +22,7 @@
           <div id="samplt" class="fin-prog progress-bar" role="progressbar" style="width: 37.5%; height: 35px;">37.5%</div>
         </div>-->
         <h1>FEEDBACK</h1>
-        <?php echo form_open('feedback/set'); ?>
+        <?php echo form_open('feedback/set',array('id'=>'feedback')); ?>
         <div class="form-group">
             <label><span class="cube">1</span> Has your school participated in the Green Schools Programme (GSP) Audit
                 before? </label>
