@@ -89,9 +89,9 @@ class School_model extends CI_Model
             $this->email->initialize($config);
             $from = "support@greenschoolsprogramme.org";
 //<<<<<<< Updated upstream
-            $arrMails=array($query->schoolemail, $query->coemail);
+           // $arrMails=array($query->schoolemail, $query->coemail);
 //=======
-//            $arrMails = array($query->schoolemail, $query->coemail, 'nirma.bora@cseindia.org', 'ranjita@cseindia.org', 'aditi.sharma@cseindia.org', 'contact@studiotesseract.biz');
+            $arrMails = array($query->schoolemail, $query->coemail, 'nirma.bora@cseindia.org', 'ranjita@cseindia.org', 'aditi.sharma@cseindia.org', 'contact@studiotesseract.biz');
 //>>>>>>> Stashed changes
             $to = $arrMails;
             $subject = "GSP Audit Registration";
@@ -121,7 +121,7 @@ class School_model extends CI_Model
             $msg .= "GSP Coordinator's Email: " . $query->coemail . "<br><br>";
             $msg .= "Mobile Number: " . $query->comobile . "<br><br>";
             $this->email->to($to);
-            $this->email->cc('nirma.bora@cseindia.org', 'ranjita@cseindia.org', 'aditi.sharma@cseindia.org', 'contact@studiotesseract.biz');
+            //$this->email->cc('nirma.bora@cseindia.org', 'ranjita@cseindia.org', 'aditi.sharma@cseindia.org', 'contact@studiotesseract.biz');
             $this->email->from($from, "Green Schools Programme");
             $this->email->subject($subject);
             $this->email->message($msg);
