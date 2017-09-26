@@ -69,8 +69,7 @@
   <div class="col-xs-3">
     <label>Email ID</label>
   </div>
-</div>
-</div>
+</div></div>
 <div class="form-group row">
   <div class="col-xs-1"> 1</div>
   <div class="col-xs-3"> <?php echo form_error('name'); ?>
@@ -1810,8 +1809,6 @@
     </div>
   </div>
 </div>
-</div>
-
 <br>
 <br>
 <div class="form-group">
@@ -1957,6 +1954,9 @@
                            value="<?php echo set_value('Q9Wa4S4', 1); ?>" <?php if (isset($data['Q9Wa4S4'])) echo "checked" ?>>
     For charity</label>
   </div>
+</div>
+</div>
+</div>
 </div>
 <div class="form-group">
   <label class="control-label"><span class="cube">6</span>Does your school encourage students & teachers to
@@ -3420,7 +3420,6 @@
       </div>
     </div>
   </div>
-  </div>
 </div>
 <?php echo form_close(); ?>
 <style type="text/css">
@@ -3443,6 +3442,8 @@
                     allowfullscreen></iframe>
     </div>
   </div>
+</div>
+</div>
 </div>
 <script type="text/javascript">
     $('.close').click(function () {
