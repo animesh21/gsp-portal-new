@@ -70,6 +70,7 @@
     <label>Email ID</label>
   </div>
 </div>
+</div>
 <div class="form-group row">
   <div class="col-xs-1"> 1</div>
   <div class="col-xs-3"> <?php echo form_error('name'); ?>
@@ -1809,6 +1810,8 @@
     </div>
   </div>
 </div>
+</div>
+</div>
 <br>
 <br>
 <div class="form-group">
@@ -3416,6 +3419,7 @@
         </div>
       </div>
     </div>
+  </div>
   </div>
 </div>
 <?php echo form_close(); ?>
