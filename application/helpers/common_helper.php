@@ -87,15 +87,15 @@ if (!function_exists('progressBarValue')) {
  * Get Upload File
  */
 if (!function_exists('getUploadData')) {
-    function getUploadData($argText, $argUserID)
-    {
-       $CI= get_instance();
-       $temp=$CI->db->select('*')
-                     ->from('files')
-                     ->where('userid', $argUserID)
-                     ->like('file_name', $argText)
-                     ->get()->result();
-       return $temp;
+
+    function getUploadData($argText, $argUserID) {
+        $CI = get_instance();
+        $temp = $CI->db->select('*')
+                        ->from('files')
+                        ->where('userid', $argUserID)
+                        ->like('file_name', $argText)
+                        ->get()->result();
+        return $temp;
     }
 
 }
@@ -311,93 +311,77 @@ if (!function_exists('getFoodPoints')) {
     function getFoodPoints($argUserID) {
         $food_points = array();
         //Q.3 What kind of food is being served/sold in your school?
-        $totalFlavourVariaint=array();
-        $totalItemSold=array();
-        $monthFoodSold=array();
-        for($i=2; $i<=10; $i++)
-        {
-            $totalFlavourVariaint[]=(getFiled('Q6F'.$i.'S1', $argUserID) != '') ? (getFiled('Q6F'.$i.'S1', $argUserID)) : 0;
-            $totalItemSold[]=(getFiled('Q6F'.$i.'S2', $argUserID) != '') ? (getFiled('Q6F'.$i.'S2', $argUserID)) : 0;
-            $monthFoodSold[]=(getFiled('Q6F'.$i.'S3', $argUserID) != '') ? (getFiled('Q6F'.$i.'S3', $argUserID)) : 0;
+        $totalFlavourVariaint = array();
+        $totalItemSold = array();
+        $monthFoodSold = array();
+        for ($i = 2; $i <= 10; $i++) {
+            $totalFlavourVariaint[] = (getFiled('Q6F' . $i . 'S1', $argUserID) != '') ? (getFiled('Q6F' . $i . 'S1', $argUserID)) : 0;
+            $totalItemSold[] = (getFiled('Q6F' . $i . 'S2', $argUserID) != '') ? (getFiled('Q6F' . $i . 'S2', $argUserID)) : 0;
+            $monthFoodSold[] = (getFiled('Q6F' . $i . 'S3', $argUserID) != '') ? (getFiled('Q6F' . $i . 'S3', $argUserID)) : 0;
         }
-        $packageditem= array_sum($totalFlavourVariaint) +array_sum($totalItemSold) + array_sum($monthFoodSold);
-        if($packageditem =="" || $packageditem==0)
-	{ 
-		$food_points['q3_served'] = 2;   
-	}else{
-		$food_points['q3_serverd'] = 0;  
-	}
+        $packageditem = array_sum($totalFlavourVariaint) + array_sum($totalItemSold) + array_sum($monthFoodSold);
+        if ($packageditem == "" || $packageditem == 0) {
+            $food_points['q3_served'] = 2;
+        } else {
+            $food_points['q3_serverd'] = 0;
+        }
         //Q4 Does your school serve traditional Indian snacks?
-        $q4=(getFiled('Q7F1', $argUserID) != '') ? getFiled('Q7F1', $argUserID) : "";
-        if($q4 !='')
-        {
-            if($q4=='Y')
-            {
-               $samosa=(getFiled('Q7F1S1', $argUserID) != '') ? getFiled('Q7F1S1', $argUserID) : "";
-               $sambhar=(getFiled('Q7F1S2', $argUserID) != '') ? getFiled('Q7F1S2', $argUserID) : "";
-               $pavBhaji=(getFiled('Q7F1S3', $argUserID) != '') ? getFiled('Q7F1S3', $argUserID) : "";
-               $momos=(getFiled('Q7F1S4', $argUserID) != '') ? getFiled('Q7F1S4', $argUserID) : "";
-               $other=(getFiled('Q7F1S5', $argUserID) != '') ? getFiled('Q7F1S5', $argUserID) : "";
-               if(($samosa =='' || $samosa==0) && ($sambhar =='' || $sambhar==0) && ($pavBhaji =='' || $pavBhaji==0) || ($momos =='' || $momos==0) || ($other =='' || $other==0))
-               {
-                    $food_points['q4_trad_snack'] = 0; 
-               } else {
-                    $food_points['q4_trad_snack'] = 2; 
-               }
-            }else if($q4=='N')
-            {
-                $food_points['q4_trad_snack'] = 0;  
+        $q4 = (getFiled('Q7F1', $argUserID) != '') ? getFiled('Q7F1', $argUserID) : "";
+        if ($q4 != '') {
+            if ($q4 == 'Y') {
+                $samosa = (getFiled('Q7F1S1', $argUserID) != '') ? getFiled('Q7F1S1', $argUserID) : "";
+                $sambhar = (getFiled('Q7F1S2', $argUserID) != '') ? getFiled('Q7F1S2', $argUserID) : "";
+                $pavBhaji = (getFiled('Q7F1S3', $argUserID) != '') ? getFiled('Q7F1S3', $argUserID) : "";
+                $momos = (getFiled('Q7F1S4', $argUserID) != '') ? getFiled('Q7F1S4', $argUserID) : "";
+                $other = (getFiled('Q7F1S5', $argUserID) != '') ? getFiled('Q7F1S5', $argUserID) : "";
+                if (($samosa == '' || $samosa == 0) && ($sambhar == '' || $sambhar == 0) && ($pavBhaji == '' || $pavBhaji == 0) || ($momos == '' || $momos == 0) || ($other == '' || $other == 0)) {
+                    $food_points['q4_trad_snack'] = 0;
+                } else {
+                    $food_points['q4_trad_snack'] = 2;
+                }
+            } else if ($q4 == 'N') {
+                $food_points['q4_trad_snack'] = 0;
             }
         }
-        
+
         ///Q5 Does your school serve traditional Indian beverages?
-        $q5=(getFiled('Q8F1', $argUserID) != '') ? getFiled('Q8F1', $argUserID) : "";
-        if($q5 !=='')
-        {
-            if($q5=='Y')
-            {
-               $nimbopani=(getFiled('Q8F1S1', $argUserID) != '') ? getFiled('Q8F1S1', $argUserID) : "";
-               $lassi=(getFiled('Q8F1S2', $argUserID) != '') ? getFiled('Q8F1S2', $argUserID) : "";
-               $buttermilk=(getFiled('Q8F1S3', $argUserID) != '') ? getFiled('Q8F1S3', $argUserID) : "";
-               $aampana=(getFiled('Q8F1S4', $argUserID) != '') ? getFiled('Q8F1S4', $argUserID) : "";
-               $other=(getFiled('Q8F1S5', $argUserID) != '') ? getFiled('Q8F1S5', $argUserID) : "";
-               if(($nimbopani =='' || $nimbopani==0) && ($lassi =='' || $lassi==0) && ($buttermilk =='' || $buttermilk==0) || ($aampana =='' || $aampana==0) || ($other =='' || $other==0))
-               {
-                    $food_points['q4_trad_beverages'] = 0; 
-               } else {
-                    $food_points['q4_trad_beverages'] = 2; 
-               }
-            }else if($q5=='N')
-            {
+        $q5 = (getFiled('Q8F1', $argUserID) != '') ? getFiled('Q8F1', $argUserID) : "";
+        if ($q5 !== '') {
+            if ($q5 == 'Y') {
+                $nimbopani = (getFiled('Q8F1S1', $argUserID) != '') ? getFiled('Q8F1S1', $argUserID) : "";
+                $lassi = (getFiled('Q8F1S2', $argUserID) != '') ? getFiled('Q8F1S2', $argUserID) : "";
+                $buttermilk = (getFiled('Q8F1S3', $argUserID) != '') ? getFiled('Q8F1S3', $argUserID) : "";
+                $aampana = (getFiled('Q8F1S4', $argUserID) != '') ? getFiled('Q8F1S4', $argUserID) : "";
+                $other = (getFiled('Q8F1S5', $argUserID) != '') ? getFiled('Q8F1S5', $argUserID) : "";
+                if (($nimbopani == '' || $nimbopani == 0) && ($lassi == '' || $lassi == 0) && ($buttermilk == '' || $buttermilk == 0) || ($aampana == '' || $aampana == 0) || ($other == '' || $other == 0)) {
+                    $food_points['q4_trad_beverages'] = 0;
+                } else {
+                    $food_points['q4_trad_beverages'] = 2;
+                }
+            } else if ($q5 == 'N') {
                 $food_points['q4_trad_beverages'] = 0;
             }
         }
         //What kind of food does your school promote? 
         //Q6 Does the school distribute packaged food items as rewards during schools events?
-        $q6=(getFiled('Q9F1', $argUserID) != '') ? getFiled('Q9F1', $argUserID) : "";
-        if($q6=='Y')
-        {
+        $q6 = (getFiled('Q9F1', $argUserID) != '') ? getFiled('Q9F1', $argUserID) : "";
+        if ($q6 == 'Y') {
             $food_points['q6_pack_food'] = 0;
-        }else
-        {
+        } else {
             $food_points['q6_pack_food'] = 1;
         }
         //Q7 Does the school distribute chocolates/similar products as refreshments during schools events?
-        $q7=(getFiled('Q10F1', $argUserID) != '') ? getFiled('Q10F1', $argUserID) : "";
-        if($q7=='Y')
-        {
+        $q7 = (getFiled('Q10F1', $argUserID) != '') ? getFiled('Q10F1', $argUserID) : "";
+        if ($q7 == 'Y') {
             $food_points['q7_pack_food'] = 0;
-        }else
-        {
+        } else {
             $food_points['q7_pack_food'] = 1;
         }
         //Q8 Are your school events such as quiz shows, talent shows, debates sponsored by food companies/brands?
-        $q8=(getFiled('Q11F1', $argUserID) != '') ? getFiled('Q11F1', $argUserID) : "";
-        if($q8=='Y')
-        {
+        $q8 = (getFiled('Q11F1', $argUserID) != '') ? getFiled('Q11F1', $argUserID) : "";
+        if ($q8 == 'Y') {
             $food_points['q8_food_company'] = 0;
-        }else
-        {
+        } else {
             $food_points['q8_food_company'] = 1;
         }
         return array_sum($food_points);
@@ -408,160 +392,483 @@ if (!function_exists('getFoodPoints')) {
 /*
  * Lands Point
  */
+if (!function_exists('getTotalArea')) {
+
+    function getTotalArea($argUserID) {
+       $a=getFiled('Q4L2', $argUserID); 
+       $b=getFiled('Q4L5', $argUserID); 
+       $c=getFiled('Q4L6', $argUserID); 
+       $d=getFiled('Q4L7', $argUserID); 
+       $e=getFiled('Q4L8', $argUserID); 
+       $total = $a+$b+$c+$d+$e;
+       return $total;
+    }
+}
+if (!function_exists('getPercentageArea')) {
+
+    function getPercentageArea($argUserID) {
+       $total=getTotalArea($argUserID);
+       $b=getFiled('Q4L5', $argUserID);
+      if($total>0){ 
+       $percentage = ($b/$total)*100;
+      
+       $terrace=getFiled('Q4L10', $argUserID); 
+       $percentage1 = ($terrace/$total)*100;
+      }
+    else {
+          return 0;
+      }
+       return ($percentage+$percentage1);
+    }
+}
+
+
 if (!function_exists('getLandPoints')) {
-    
-    function getLandPoints($argUserID)
-    {
-        $land_points =array();
+
+    function getLandPoints($argUserID) {
+        $land_points = array();
         // Explore the number of species of plants and animals in your school
-        $total_site_area=(getFiled('Q4L2', $argUserID) != '') ? getFiled('Q4L2', $argUserID) : 0 + (getFiled('Q4L3', $argUserID) != '') ? getFiled('Q4L3', $argUserID) : 0 + (getFiled('Q4L4', $argUserID) != '') ? getFiled('Q4L4', $argUserID) : 0 + (getFiled('Q4L5', $argUserID) != '') ? getFiled('Q4L5', $argUserID) : 0 + (getFiled('Q4L6', $argUserID) != '') ? getFiled('Q4L6', $argUserID) : 0 + (getFiled('Q4L7', $argUserID) != '') ? getFiled('Q4L7', $argUserID) : 0 + (getFiled('Q4L8', $argUserID) != '') ? getFiled('Q4L8', $argUserID) : 0;
-        
+        $total_site_area = (getFiled('Q4L2', $argUserID) != '') ? getFiled('Q4L2', $argUserID) : 0 + (getFiled('Q4L3', $argUserID) != '') ? getFiled('Q4L3', $argUserID) : 0 + (getFiled('Q4L4', $argUserID) != '') ? getFiled('Q4L4', $argUserID) : 0 + (getFiled('Q4L5', $argUserID) != '') ? getFiled('Q4L5', $argUserID) : 0 + (getFiled('Q4L6', $argUserID) != '') ? getFiled('Q4L6', $argUserID) : 0 + (getFiled('Q4L7', $argUserID) != '') ? getFiled('Q4L7', $argUserID) : 0 + (getFiled('Q4L8', $argUserID) != '') ? getFiled('Q4L8', $argUserID) : 0;
+
         //Q2 How many species of plants and animals exist in your school
-        $plants=(getFiled('Q5L1S1', $argUserID) != '') ? getFiled('Q5L1S1', $argUserID) : 0;
-        $animals=(getFiled('Q5L2S1', $argUserID) != '') ? getFiled('Q5L2S1', $argUserID) : 0;
-        if($plants==100)
-        {
-            $land_points['Q2_plants'] =2;
-        }else if($plants >100)
-        {
-            $land_points['Q2_plants'] =2;
-        }else if($plants <100)
-        {
-            $land_points['Q2_plants']=($plants/100)*2;
+        $plants = (getFiled('Q5L1S1', $argUserID) != '') ? getFiled('Q5L1S1', $argUserID) : 0;
+        $animals = (getFiled('Q5L2S1', $argUserID) != '') ? getFiled('Q5L2S1', $argUserID) : 0;
+        if ($plants == 100) {
+            $land_points['Q2_plants'] = 2;
+        } else if ($plants > 100) {
+            $land_points['Q2_plants'] = 2;
+        } else if ($plants < 100) {
+            $land_points['Q2_plants'] = ($plants / 100) * 2;
         }
         //Animals
-        if($animals==50)
-        {
-            $land_points['Q2_animals'] =2;
-        }else if($animals >50)
-        {
-            $land_points['Q2_animals'] =2;
-        }else if($animals < 50)
-        {
-            $land_points['Q2_plants']=($plants/50)*2;
+        if ($animals == 50) {
+            $land_points['Q2_animals'] = 2;
+        } else if ($animals > 50) {
+            $land_points['Q2_animals'] = 2;
+        } else if ($animals < 50) {
+            $land_points['Q2_plants'] = ($plants / 50) * 2;
         }
-        
+
         //Find out if your school uses chemical-based pesticides 
         //Q3 Do you use chemical-based pesticides in your school green cover?
-        $pestiside=(getFiled('Q6L1', $argUserID) != '') ? getFiled('Q6L1', $argUserID) : "";
-        if($pestiside !='')
-        {
-            if($pestiside=='Y')
-            {
-                $land_points['Q3_pestiside'] =0;
-            }else if($pestiside=='N')
-            {
-                $land_points['Q3_pestiside'] =1;
+        $pestiside = (getFiled('Q6L1', $argUserID) != '') ? getFiled('Q6L1', $argUserID) : "";
+        if ($pestiside != '') {
+            if ($pestiside == 'Y') {
+                $land_points['Q3_pestiside'] = 0;
+            } else if ($pestiside == 'N') {
+                $land_points['Q3_pestiside'] = 1;
             }
         }
+        $site=getTotalArea($argUserID);
+        
+        $total=getPercentageArea($argUserID);
+        if($site>0){
+        if($total>=35){
+           $land_points['total']=5; 
+        } else {
+            $land_points['total']=($total/(.35*$site))*5; 
+        }
+      } else {
+           $land_points['total']=0;
+      }
         return array_sum($land_points);
     }
+
 }
 
 /*
  * Get Waste Point
  */
 if (!function_exists('getWastePoints')) {
-    function getWastePoints($argUserID)
-    {
-        $waste_points=array();
+
+    function getWastePoints($argUserID) {
+        $waste_points = array();
         //2(a) How many categories does your school segregate waste into? 
-        $total_two_bins=(getFiled('Q5Wa11S3', $argUserID) != '') ? getFiled('Q5Wa11S3', $argUserID) : 0;
-        $total_three_bins=(getFiled('Q5Wa11S4', $argUserID) != '') ? getFiled('Q5Wa11S4', $argUserID) : 0;
-        $total_collection_point=(getFiled('Q5Wa11S5', $argUserID) != '') ? getFiled('Q5Wa11S5', $argUserID) : 0;
-        
-        $total_with_no_bins=(getFiled('Q5Wa11S1', $argUserID) != '') ? getFiled('Q5Wa11S1', $argUserID) : 0;
-        $total_with_one_bin=(getFiled('Q5Wa11S2', $argUserID) != '') ? getFiled('Q5Wa11S2', $argUserID) : 0;
-        $total_with_three_bin=(getFiled('Q5Wa11S4', $argUserID) != '') ? getFiled('Q5Wa11S4', $argUserID) : 0;
-        if($total_collection_point==($total_three_bins+$total_two_bins))
-        {
-            $waste_points['Q2_segregate']=10;
-        }else if($total_collection_point==($total_with_no_bins+$total_with_one_bin))
-        {
-            $waste_points['Q2_segregate']=0;
-        }else if($total_two_bins==$total_collection_point)
-        {
-            $waste_points['Q2_segregate']=10;
-        }else if($total_with_three_bin==$total_collection_point)
-        {
-            $waste_points['Q2_segregate']=10;
-        }else if(($total_two_bins+$total_with_three_bin) < $total_collection_point)
-        {
-            $waste_points['Q2_segregate']=($total_two_bins+$total_with_three_bin)*10/$total_collection_point;
+        $total_two_bins = (getFiled('Q5Wa11S3', $argUserID) != '') ? getFiled('Q5Wa11S3', $argUserID) : 0;
+        $total_three_bins = (getFiled('Q5Wa11S4', $argUserID) != '') ? getFiled('Q5Wa11S4', $argUserID) : 0;
+        $total_collection_point = (getFiled('Q5Wa11S5', $argUserID) != '') ? getFiled('Q5Wa11S5', $argUserID) : 0;
+
+        $total_with_no_bins = (getFiled('Q5Wa11S1', $argUserID) != '') ? getFiled('Q5Wa11S1', $argUserID) : 0;
+        $total_with_one_bin = (getFiled('Q5Wa11S2', $argUserID) != '') ? getFiled('Q5Wa11S2', $argUserID) : 0;
+        $total_with_three_bin = (getFiled('Q5Wa11S4', $argUserID) != '') ? getFiled('Q5Wa11S4', $argUserID) : 0;
+        if ($total_collection_point == ($total_three_bins + $total_two_bins)) {
+            $waste_points['Q2_segregate'] = 10;
+        } else if ($total_collection_point == ($total_with_no_bins + $total_with_one_bin)) {
+            $waste_points['Q2_segregate'] = 0;
+        } else if ($total_two_bins == $total_collection_point) {
+            $waste_points['Q2_segregate'] = 10;
+        } else if ($total_with_three_bin == $total_collection_point) {
+            $waste_points['Q2_segregate'] = 10;
+        } else if (($total_two_bins + $total_with_three_bin) < $total_collection_point) {
+            $waste_points['Q2_segregate'] = ($total_two_bins + $total_with_three_bin) * 10 / $total_collection_point;
         }
-        
+
         ///Point Calculation Water recycled
         //Total Amount of Generated Waste
         //Biodigradble
-        $A=(getFiled('Q6Wa1S5', $argUserID) != '') ? getFiled('Q6Wa1S5', $argUserID) : 0;
+        $A = (getFiled('Q6Wa1S5', $argUserID) != '') ? getFiled('Q6Wa1S5', $argUserID) : 0;
         //Dry/Recycalbe
-        $B=(getFiled('Q6Wa2S8', $argUserID) != '') ? getFiled('Q6Wa2S8', $argUserID) : 0;
+        $B = (getFiled('Q6Wa2S8', $argUserID) != '') ? getFiled('Q6Wa2S8', $argUserID) : 0;
         //Domestic
-        $C=(getFiled('Q6Wa3S3', $argUserID) != '') ? getFiled('Q6Wa3S3', $argUserID) : 0;
+        $C = (getFiled('Q6Wa3S3', $argUserID) != '') ? getFiled('Q6Wa3S3', $argUserID) : 0;
         //E-Watse
-        $D=(getFiled('Q6Wa4S1', $argUserID) != '') ? getFiled('Q6Wa4S1', $argUserID) : 0;
+        $D = (getFiled('Q6Wa4S1', $argUserID) != '') ? getFiled('Q6Wa4S1', $argUserID) : 0;
         //Biomedical waste
-        $E=(getFiled('Q6Wa5S1', $argUserID) != '') ? getFiled('Q6Wa5S1', $argUserID) : 0;
+        $E = (getFiled('Q6Wa5S1', $argUserID) != '') ? getFiled('Q6Wa5S1', $argUserID) : 0;
         //Sanitary
-        $F=(getFiled('Q6Wa6S1', $argUserID) != '') ? getFiled('Q6Wa6S1', $argUserID) : 0;
+        $F = (getFiled('Q6Wa6S1', $argUserID) != '') ? getFiled('Q6Wa6S1', $argUserID) : 0;
         //Cc&&D
-        $G=(getFiled('Q6Wa7S1', $argUserID) != '') ? getFiled('Q6Wa7S1', $argUserID) : 0;
-        $total_generated_waste=$A+$B+$C+$D+$E+$F+$G;
+        $G = (getFiled('Q6Wa7S1', $argUserID) != '') ? getFiled('Q6Wa7S1', $argUserID) : 0;
+        $total_generated_waste = $A + $B + $C + $D + $E + $F + $G;
         //Recycled Watse
-        $A1=(getFiled('Q8Wa1S5', $argUserID) != '') ? getFiled('Q8Wa1S5', $argUserID) : 0;
+        $A1 = (getFiled('Q8Wa1S5', $argUserID) != '') ? getFiled('Q8Wa1S5', $argUserID) : 0;
         //Dry/Recycalbe
-        $B1=(getFiled('Q8Wa2S8', $argUserID) != '') ? getFiled('Q8Wa2S8', $argUserID) : 0;
+        $B1 = (getFiled('Q8Wa2S8', $argUserID) != '') ? getFiled('Q8Wa2S8', $argUserID) : 0;
         //Domestic
-        $C1=(getFiled('Q8Wa3S3', $argUserID) != '') ? getFiled('Q8Wa3S3', $argUserID) : 0;
+        $C1 = (getFiled('Q8Wa3S3', $argUserID) != '') ? getFiled('Q8Wa3S3', $argUserID) : 0;
         //E-Watse
-        $D1=(getFiled('Q8Wa4S1', $argUserID) != '') ? getFiled('Q8Wa4S1', $argUserID) : 0;
+        $D1 = (getFiled('Q8Wa4S1', $argUserID) != '') ? getFiled('Q8Wa4S1', $argUserID) : 0;
         //Biomedical waste
-        $E1=(getFiled('Q8Wa5S1', $argUserID) != '') ? getFiled('Q8Wa5S1', $argUserID) : 0;
+        $E1 = (getFiled('Q8Wa5S1', $argUserID) != '') ? getFiled('Q8Wa5S1', $argUserID) : 0;
         //Sanitary
-        $F1=(getFiled('Q8Wa6S1', $argUserID) != '') ? getFiled('Q8Wa6S1', $argUserID) : 0;
+        $F1 = (getFiled('Q8Wa6S1', $argUserID) != '') ? getFiled('Q8Wa6S1', $argUserID) : 0;
         //Cc&&D
-        $G1=(getFiled('Q8Wa7S1', $argUserID) != '') ? getFiled('Q8Wa7S1', $argUserID) : 0;
-        $total_recycled_waste=$A1+$B1+$C1+$D1+$E1+$F1+$G1;
-        if($total_generated_waste !=0)
-        {
-        $percentage_of_genrated_waste=($total_recycled_waste/$total_generated_waste)*100;
-        if($percentage_of_genrated_waste > 50)
-        {
-            $waste_points['Q4_recycled_waste']=20;
-        }
+        $G1 = (getFiled('Q8Wa7S1', $argUserID) != '') ? getFiled('Q8Wa7S1', $argUserID) : 0;
+        $total_recycled_waste = $A1 + $B1 + $C1 + $D1 + $E1 + $F1 + $G1;
+        if ($total_generated_waste != 0) {
+            $percentage_of_genrated_waste = ($total_recycled_waste / $total_generated_waste) * 100;
+            if ($percentage_of_genrated_waste > 50) {
+                $waste_points['Q4_recycled_waste'] = 20;
+            }
         }
         //Q5 Does your school have a composting facility?
-        $composition_facility=(getFiled('Q9Wa1', $argUserID) != '') ? getFiled('Q9Wa1', $argUserID) : "";
-        if($composition_facility!='')
-        {
-            if($composition_facility=='Y')
-            {
-                $waste_points['Q5_facility']=5;
-            }else if($composition_facility=='N')
-            {
-                $waste_points['Q5_facility']=0;
+        $composition_facility = (getFiled('Q9Wa1', $argUserID) != '') ? getFiled('Q9Wa1', $argUserID) : "";
+        if ($composition_facility != '') {
+            if ($composition_facility == 'Y') {
+                $waste_points['Q5_facility'] = 5;
+            } else if ($composition_facility == 'N') {
+                $waste_points['Q5_facility'] = 0;
             }
         }
         //Q5 a. What is the methodology used?
-        $methodology=(getFiled('Q9Wa2S1', $argUserID) != '') ? getFiled('Q9Wa2S1', $argUserID) : "";
-        if($methodology !='')
-        {
-            $waste_points['Q5_facility']=10;
+        $methodology = (getFiled('Q9Wa2S1', $argUserID) != '') ? getFiled('Q9Wa2S1', $argUserID) : "";
+        if ($methodology != '') {
+            $waste_points['Q5_facility'] = 10;
         }
-        
+
         //What is the waste segregation system in your school?
         //Q1 Does your school segregate waste
-        $segregateWaste=(getFiled('Q4Wa1', $argUserID) != '') ? getFiled('Q4Wa1', $argUserID) : "";
-        if($segregateWaste!='')
-        {
-            if($segregateWaste=='Y')
-            {
-                $waste_points['Q2_segregate_wasre']=5;
-            }else if($segregateWaste=='N')
-            {
-                $waste_points['Q2_segregate_wasre']=0;
+        $segregateWaste = (getFiled('Q4Wa1', $argUserID) != '') ? getFiled('Q4Wa1', $argUserID) : "";
+        if ($segregateWaste != '') {
+            if ($segregateWaste == 'Y') {
+                $waste_points['Q2_segregate_wasre'] = 5;
+            } else if ($segregateWaste == 'N') {
+                $waste_points['Q2_segregate_wasre'] = 0;
             }
         }
         return number_format(array_sum($waste_points), 2);
     }
+
 }
+if (!function_exists('getWaterPoints')) {
+
+    function getWaterPoints($argUserID) {
+        $water_points = array();
+        $water_use = array();
+        $water_consumed_per_day = 0;
+        $i = 0;
+        for ($i = 1; $i <= 10; $i++) {
+            $water_consumed_per_day = $water_consumed_per_day + getFiled('Q4W'.$i, $argUserID);
+        }
+        $total_population = getFiled('Q4G4S3', $argUserID);
+        $arr = array('1' => 'Day-Scholar',
+            '2' => 'Day-Boarding',
+            '3' => 'Residential',
+            '4' => 'Day-Scholar+Day Boarding',
+            '5' => 'Day-Boarding+Residential',
+            '6' => 'Day-Scholar+Residential',
+            '7' => 'Day-Scholar+Day-Boarding+Residential'
+        );
+        
+        $c=getFiled('Q1S1', $argUserID);
+        if(!empty($c) && isset($c) && $c>=1 && $c<=7){
+             
+        $type_school = $arr[$c];
+        } else {
+        $type_school='other';    
+        }
+        if($total_population>0){
+        $per_capita_per_day_water_consumption = ($water_consumed_per_day / $total_population);
+        switch ($type_school) {
+            case 'Day-Scholar':
+                if ($per_capita_per_day_water_consumption > 17) {
+                    $water_points['per_day'] = 0;
+                } elseif ($per_capita_per_day_water_consumption < 13) {
+                    $water_points['per_day'] = ($per_capita_per_day_water_consumption / 13) * 7;
+                } else {
+                    $water_points['per_day'] = 7;
+                }
+
+                break;
+            case 'Day-Boarding':
+                if ($per_capita_per_day_water_consumption > 25) {
+                    $water_points['per_day'] = 0;
+                } elseif ($per_capita_per_day_water_consumption < 15) {
+                    $water_points['per_day'] = ($per_capita_per_day_water_consumption / 15) * 7;
+                } else {
+                    $water_points['per_day'] = 7;
+                }
+                break;
+            case 'Residential':
+                if ($per_capita_per_day_water_consumption > 135) {
+                    $water_points['per_day'] = 0;
+                } elseif ($per_capita_per_day_water_consumption < 125) {
+                    $water_points['per_day'] = ($per_capita_per_day_water_consumption / 125) * 7;
+                } else {
+                    $water_points['per_day'] = 7;
+                }
+                break;
+            case 'Day-Scholar+Day Boarding':
+                if ($per_capita_per_day_water_consumption > 25) {
+                    $water_points['per_day'] = 0;
+                } elseif ($per_capita_per_day_water_consumption < 15) {
+                    $water_points['per_day'] = ($per_capita_per_day_water_consumption / 15) * 7;
+                } else {
+                    $water_points['per_day'] = 7;
+                }
+                break;
+            case 'Day-Boarding+Residential':
+                if ($per_capita_per_day_water_consumption > 135) {
+                    $water_points['per_day'] = 0;
+                } elseif ($per_capita_per_day_water_consumption < 25) {
+                    $water_points['per_day'] = ($per_capita_per_day_water_consumption / 25) * 7;
+                } else {
+                    $water_points['per_day'] = 7;
+                }
+                break;
+            case 'Day-Scholar+Residential':
+                if ($per_capita_per_day_water_consumption > 135) {
+                    $water_points['per_day'] = 0;
+                } elseif ($per_capita_per_day_water_consumption < 17) {
+                    $water_points['per_day'] = ($per_capita_per_day_water_consumption / 17) * 7;
+                } else {
+                    $water_points['per_day'] = 7;
+                }
+                break;
+            case 'Day-Scholar+Day-Boarding+Residential':
+                if ($per_capita_per_day_water_consumption > 135) {
+                    $water_points['per_day'] = 0;
+                } elseif ($per_capita_per_day_water_consumption < 15) {
+                    $water_points['per_day'] = ($per_capita_per_day_water_consumption / 15) * 7;
+                } else {
+                    $water_points['per_day'] = 7;
+                }
+                break;
+            default :
+                $water_points['per_day']=0;
+        }
+    } else {
+        $water_points['per_day'] = 0;      
+    }    
+        
+        for ($i = 2; $i <= 4; $i++) {
+            $water_use[$i] = getFiled('Q5W' . $i, $argUserID);
+        }
+        $ground = getFiled('Q5W1', $argUserID);
+        $sum = array_sum($water_use);
+        if ($sum == 3) {
+            $water_points['water_use'] = 4;
+        } elseif ($sum == 2) {
+            $water_points['water_use'] = 2;
+        } elseif ($sum == 1 && $water_use[2] != 1) {
+            $water_points['water_use'] = 1;
+        } elseif ($sum == 1 && $ground == 1) {
+            $water_points['water_use'] = 2;
+        } else {
+            $water_points['water_use'] = 0;
+        }
+
+        $count = 0;
+
+        for ($i = 3; $i <= 10; $i++) {
+            if (getFiled('Q8W1S' . $i, $argUserID) == 'Y') {
+                $count++;
+            }
+        }
+        if (getFiled('Q8W1S7', $argUserID) == 'Y') {
+            $count--;
+        }
+        $water_points['conservation'] = $count;
+        if (getFiled('Q8W2', $argUserID) == "Y") {
+            $water_points['harvest'] = 2;
+        } else {
+            $water_points['harvest'] = 0;
+        }
+
+        if (getFiled('Q8W2S1S1', $argUserID) == 7) {
+            $water_points['catchment '] = 4;
+        } elseif (getFiled('Q8W2S1S1', $argUserID) == 1 || getFiled('Q8W2S1S1', $argUserID) == 2 || getFiled('Q8W2S1S1', $argUserID) == 3 || getFiled('Q8W2S1S1', $argUserID) == 4 || getFiled('Q8W2S1S1', $argUserID) == 5 || getFiled('Q8W2S1S1', $argUserID) == 6) {
+            $water_points['catchment '] = 2;
+        }
+
+        if (getFiled('Q8W2S4', $argUserID) >= 7) {
+            $water_points['area'] = 10;
+        } elseif (getFiled('Q8W2S4', $argUserID) >= 7) {
+            $water_points['area'] = 8;
+        } elseif (getFiled('Q8W2S4', $argUserID) >= 5 && getFiled('Q8W2S4', $argUserID) <= 6) {
+            $water_points['area'] = 6;
+        } elseif (getFiled('Q8W2S4', $argUserID) >= 3 && getFiled('Q8W2S4', $argUserID) <= 4) {
+            $water_points['area'] = 4;
+        } elseif (getFiled('Q8W2S4', $argUserID) >= 2 && getFiled('Q8W2S4', $argUserID) <= 1) {
+            $water_points['area'] = 2;
+        }
+        if (getFiled('Q8W2S5', $argUserID) == 1) {
+            $water_points['cleaness'] = 3;
+        } elseif (getFiled('Q8W2S5', $argUserID) == 2) {
+            $water_points['cleaness'] = 1;
+        } else {
+            $water_points['cleaness'] = 0;
+        }
+        if (getFiled('Q8W2S61', $argUserID) == "Y") {
+            $water_points['clean-system'] = 2;
+        } else {
+            $water_points['clean-system'] = 0;
+        }
+        if (getFiled('Q8W2S8', $argUserID) == "Y") {
+            $water_points['rainwater'] = 1;
+        } else {
+            $water_points['rainwater'] = 0;
+        }
+        $count1 = 0;
+
+        for ($i = 4; $i <= 8; $i++) {
+            if (getFiled('Q8W3S' . $i, $argUserID) == 'Y') {
+                $count1++;
+            }
+        }
+        if (getFiled('Q8W3S1', $argUserID) == 'Y') {
+            $count1++;
+        }
+        $water_points['sanitation'] = $count1;
+
+        if (getFiled('Q16W1', $argUserID) == "Y") {
+            $water_points['storage'] = 1;
+        }
+        if (getFiled('Q21W1', $argUserID) == "Y") {
+            $water_points['supply'] = 1;
+        }
+        if (getFiled('Q18W1', $argUserID) == "Y") {
+            $water_points['toilets'] = 1;
+        }
+        if (getFiled('Q19W1', $argUserID) == "Y") {
+            $water_points['treat-water'] = 5;
+        }
+        if (getFiled('Q20W1', $argUserID) == "Y") {
+            if (!empty(getFiled('Q20W1', $argUserID))) {
+                $water_points['reuse-water'] = 5;
+            }
+        }
+        if (!empty(getFiled('Q9W1', $argUserID))) {
+            $load_drinking_water_tap = ($total_population / getFiled('Q9W1', $argUserID));
+        
+        if ($load_drinking_water_tap < 50) {
+            $water_points['load_drinking_water_tap'] = 1;
+        }
+    }
+        if (!empty(getFiled('Q11W1', $argUserID))) {
+            $load_ablution_tap = ($total_population / getFiled('Q11W1', $argUserID));
+        
+        if ($load_ablution_tap < 50) {
+            $water_points['load_ablution_tap'] = 1;
+        }
+    } 
+        if (!empty(getFiled('Q13W1S4', $argUserID))) {
+            $load_closets = ($total_population / getFiled('Q13W1S4', $argUserID));
+        
+        if (!empty(getFiled('Q14W1', $argUserID))) {
+            $load_urinals = ($total_population / getFiled('Q14W1', $argUserID));
+        
+        switch ($type_school) {
+            case 'Day-Scholar':
+                if ($load_urinals < 50) {
+                    $water_points['load_urinals'] = 1;
+                }
+                if ($load_closets < 45) {
+                    $water_points['load_closets'] = 1;
+                }
+                break;
+            case 'Day-Boarding':
+                if ($load_urinals < 40) {
+                    $water_points['load_urinals'] = 1;
+                }
+                if ($load_closets < 35) {
+                    $water_points['load_closets'] = 1;
+                }
+                break;
+            case 'Residential':
+                if ($load_urinals < 30) {
+                    $water_points['load_urinals'] = 1;
+                }
+                if ($load_closets < 25) {
+                    $water_points['load_closets'] = 1;
+                }
+                break;
+            case 'Day-Scholar+Day Boarding':
+                if ($load_urinals < 50) {
+                    $water_points['load_urinals'] = 1;
+                }
+                if ($load_closets < 35) {
+                    $water_points['load_closets'] = 1;
+                }
+                break;
+            case 'Day-Boarding+Residential':
+                if ($load_urinals < 35) {
+                    $water_points['load_urinals'] = 1;
+                }
+                if ($load_closets < 30) {
+                    $water_points['load_closets'] = 1;
+                }
+                break;
+            case 'Day-Scholar+Residential':
+                if ($load_urinals < 50) {
+                    $water_points['load_urinals'] = 1;
+                }
+                if ($load_closets < 40) {
+                    $water_points['load_closets'] = 1;
+                }
+                break;
+            default :
+                $water_points['load_closets']=0;    
+        }
+        }
+        }
+
+        $handpump = getFiled('Q10W1', $argUserID);
+        if ($handpump > 1) {
+            $water_points['handpump'] = 0;
+        }
+        $outlet = getFiled('Q15W1', $argUserID);
+        if ($outlet > 1) {
+            $water_points['outlet'] = 0;
+        }
+   
+
+
+        return array_sum($water_points);
+    }
+
+    if (!function_exists('getTotalPoints')) {
+
+        function getTotalPoints($argUserID) {
+          $total['air']=getAirPoints($argUserID);
+          $total['energy']=getEnergyPoints($argUserID);
+          $total['water']=getWaterPoints($argUserID);
+          $total['waste']=getWastePoints($argUserID);
+          $total['land']=getLandPoints($argUserID);
+          $total['food']=getFoodPoints($argUserID);
+          
+          return array_sum($total);
+        }
+
+    }
+}   

@@ -24,14 +24,7 @@
 <script type="text/javascript">
     $(document).ready(function () {
         //alert("test");
-        $('#example').DataTable({
-            dom: 'lBfrtip',
-            buttons: [
-                'excel'
-            ],
-            "aLengthMenu": [[10, 25, 50, 75, -1], [10, 25, 50, 75, "All"]],
-            "iDisplayLength": 25
-        });
+        
         $('#example1').DataTable({
             dom: 'lfrtip',
             "aLengthMenu": [[10, 25, 50, 75, -1], [10, 25, 50, 75, "All"]],

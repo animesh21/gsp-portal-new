@@ -1,6 +1,6 @@
- <div class="top-area">
-        <h2>Total no. Of School Registration</h2>
-         </div>
+<div class="top-area">
+        <h2>Total New Registration<a href="<?php echo base_url('admin/audit_started_2017/excel') ?>"><button class="exportBtn">Export to Excel</button></a></h2>
+</div>
       <table id="example" class="display dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
         <thead>
           <tr role="row">
