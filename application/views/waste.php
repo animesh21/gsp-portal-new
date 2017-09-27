@@ -69,7 +69,7 @@
   <div class="col-xs-3">
     <label>Email ID</label>
   </div>
-</div>
+</div></div>
 <div class="form-group row">
   <div class="col-xs-1"> 1</div>
   <div class="col-xs-3"> <?php echo form_error('name'); ?>
@@ -325,7 +325,7 @@
     </div>
     <div class="col-xs-3">
       <input class="form-control space-textbox" id="Q3Wa5S2" type="text" name="Q3Wa5S2"
-                               placeholder="<?php if (isset($data['Q3Wa5S2'])) echo $data['Q2A5S2'] ?>"
+                               placeholder="<?php if (isset($data['Q3Wa5S2'])) echo $data['Q3Wa5S2'] ?>"
                                value="<?php echo set_value('Q3Wa5S2'); ?>"/>
     </div>
     <div class="col-xs-3">
@@ -1955,6 +1955,9 @@
     For charity</label>
   </div>
 </div>
+</div>
+</div>
+</div>
 <div class="form-group">
   <label class="control-label"><span class="cube">6</span>Does your school encourage students & teachers to
   reuse textbooks? <a class="kplink"
@@ -3439,6 +3442,8 @@
                     allowfullscreen></iframe>
     </div>
   </div>
+</div>
+</div>
 </div>
 <script type="text/javascript">
     $('.close').click(function () {
