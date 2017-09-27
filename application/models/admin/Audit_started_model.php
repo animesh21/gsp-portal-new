@@ -23,6 +23,14 @@ class Audit_started_model extends CI_Model {
                         ->order_by('a.id', 'desc')
                         ->get()->result();
     }
+	
+	/*
+     * Get User By Id
+     */
+    public function getUserById($argID)
+    {
+        return $this->db->get_where('gsp_user', array('id'=>$argID))->row();
+    }
 
     /*
      * Generate Excel Data
