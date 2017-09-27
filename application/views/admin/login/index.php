@@ -45,10 +45,10 @@
        </div>
      <div class="form-group">
          <select name="year" class="form-control" onchange="redirect(this.value)">
-             <!--<option value="">Please Select Year</option>-->
-              <option value="2015">2015</option>
-              <option value="2017" selected="selected">2017</option>
-          </select>
+            <option value="2015">2015</option>
+             <option value="2016">2016</option>
+             <option value="2017" selected="selected">2017</option>
+         </select>
       </div>
     <button type="submit" class="btn org-btn width100">Next</button>
   </div>
@@ -74,14 +74,11 @@
 <script src="<?php echo base_url('')?>assets/js/bootstrap.min.js"></script>
 <script>
       function redirect(value)
-     {
-        if(value=='2015')
-        {
-            location.href="http://www.greenschoolsprogramme.org/audit2017/old/index.php";
-        }else if(value=='2017')
-        {
-            location.href="http://www.greenschoolsprogramme.org/audit2017/admin";
-        }
-     }
+    {
+       if(value=='2015' || value=='2016')
+       {
+           location.href="http://localhost/GSP/old/index.php";
+       }
+    }
 </script>
 </body></html>
