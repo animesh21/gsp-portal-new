@@ -245,6 +245,55 @@ class Audit_started_2017 extends CI_Controller {
         $data['schoolUserID'] = $data['school']->userid;
         $this->load->view('admin/survey/feedback', $data);
     }
+	public function edit($argID) {
+       $data['title'] = 'Home | Edit';
+       $data['main'] = 'admin/survey/edit';
+       $data['states'] = $this->User_model->getStates();
+       $data['school'] = $this->Audit_started_model->getSchoolById($argID);
+       $data['cities'] = $this->User_model->getCitiesAll($data['school']->state);
+       $data['user'] = $this->Audit_started_model->getUserById($data['school']->userid);
+       $this->load->view('admin/includes/template', $data);
+   }
+   
+   /*
+    * Update Function
+    */
+   public function update($argID)
+   {
+       //echo $argID;
+       $post = $this->security->xss_clean($this->input->post());
+       //echo '<pre>'; print_r($this->input->post());
+       $this->db->where('id', $argID);
+       if($this->db->update('gsp_school', $post))
+       {
+           $this->session->set_flashdata('success', 'School Infomation Successfully Updated');
+       } else {
+           $this->session->set_flashdata('error', 'There is an error updating school information !');
+       }
+       redirect(base_url('admin/audit_started_2017/edit/'.$argID), 'refresh');
+   }
+   
+   /*
+    * Update Function
+    */
+   public function update_user()
+   {
+       $argID=$this->input->post('userid');
+       $schoolid=$this->input->post('schoolid');
+       //unset($this->input->post('userid'), $this->input->post('schoolid'));
+       //unset();
+       $post = $this->security->xss_clean($this->input->post());
+       unset($post['schoolid'], $post['userid']);
+       //echo '<pre>'; print_r($this->input->post());
+       $this->db->where('id', $argID);
+       if($this->db->update('gsp_user', $post))
+       {
+           $this->session->set_flashdata('success', 'User Details Successfully Updated');
+       } else {
+           $this->session->set_flashdata('error', 'There is an error updating user details !');
+       }
+       redirect(base_url('admin/audit_started_2017/edit/'.$schoolid), 'refresh');
+   }
 
 }
 
