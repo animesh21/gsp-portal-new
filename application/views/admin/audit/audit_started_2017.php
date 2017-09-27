@@ -34,7 +34,9 @@
                 <td class="action"><a target="_blank" href="<?php echo base_url('admin/audit_started_2017/response/').$r->id; ?>" title="View Responses">
                 <img src="<?php echo base_url() ?>assets/front/images/1446146277_view6.png"></a>
                 <a target="_blank" href="<?php echo base_url('admin/audit_started_2017/pdf/').$r->id; ?>" title="Download PDF"><img src="<?php echo base_url() ?>assets/front/images/1446327681_1-02.png" height="20" width="20"></a></td>
-            </tr>
+          						<br>
+                <a target="_blank" href="<?php echo base_url('admin/audit_started_2017/edit/').$r->id; ?>" title="Edit Record"><img src="<?php echo base_url() ?>assets/front/images/edit.png" height="20" width="20"></a>  
+										</tr>
           <?php $i++; } ?>
         </tbody>
       </table>
