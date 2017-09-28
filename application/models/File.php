@@ -166,6 +166,15 @@ class File extends CI_Model {
                         ->like('a.file_name', 'UPPF')
                         ->get()->result();
     }
+	 //Get Food Files Data
+    public function getLunchBoxData($argID) {
+        return $this->db->select('a.*, b.name')
+                        ->from('files AS a')
+                        ->join('gsp_school AS b', 'a.userid=b.userid', 'left')
+                        ->where('a.userid', $argID)
+                        ->like('a.file_name', 'Lunch_Boxes')
+                        ->get()->result();
+    }
     
     //Get Air Quality Atrachmen
     public function AirQuality($argID)
