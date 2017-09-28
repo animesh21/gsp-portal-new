@@ -36,6 +36,7 @@ class Food extends CI_Controller {
             $data['canteen']=$this->file->getCanteen($this->session->userdata('USER_ID'));
             $data['files']=$this->file->getFoodFilesData($this->session->userdata('USER_ID'));
             $data['uppc']=$this->file->getFoodUPPCData($this->session->userdata('USER_ID'));
+	    $data['lunch']=$this->file->getLunchBoxData($this->session->userdata('USER_ID'));		
             if(isset($data['other']['Q1G1']) && isset($data['other']['Q1G2']))
                 if($data['other']['Q1G1'] < 6 && $data['other']['Q1G2'] < 6)
                 {  //  print("Primaryland");
