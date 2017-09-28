@@ -1365,7 +1365,7 @@
                 <div class="form-group">
                     <?php
                     if (getFiled('Q20W2', $schoolUserID) == 1):
-                        echo "Wastewater flows directly to the drains";
+                        echo "Gardening";
                     elseif (getFiled('Q20W2', $schoolUserID) == 2):
                         echo "Flushing";
                     elseif (getFiled('Q20W2', $schoolUserID) == 3):
