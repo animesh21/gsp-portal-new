@@ -255,45 +255,44 @@ class Audit_started_2017 extends CI_Controller {
        $this->load->view('admin/includes/template', $data);
    }
    
-   /*
-    * Update Function
-    */
-   public function update($argID)
-   {
-       //echo $argID;
-       $post = $this->security->xss_clean($this->input->post());
-       //echo '<pre>'; print_r($this->input->post());
-       $this->db->where('id', $argID);
-       if($this->db->update('gsp_school', $post))
-       {
-           $this->session->set_flashdata('success', 'School Infomation Successfully Updated');
-       } else {
-           $this->session->set_flashdata('error', 'There is an error updating school information !');
-       }
-       redirect(base_url('admin/audit_started_2017/edit/'.$argID), 'refresh');
-   }
+   
    
    /*
-    * Update Function
-    */
-   public function update_user()
-   {
-       $argID=$this->input->post('userid');
-       $schoolid=$this->input->post('schoolid');
-       //unset($this->input->post('userid'), $this->input->post('schoolid'));
-       //unset();
-       $post = $this->security->xss_clean($this->input->post());
-       unset($post['schoolid'], $post['userid']);
-       //echo '<pre>'; print_r($this->input->post());
-       $this->db->where('id', $argID);
-       if($this->db->update('gsp_user', $post))
-       {
-           $this->session->set_flashdata('success', 'User Details Successfully Updated');
-       } else {
-           $this->session->set_flashdata('error', 'There is an error updating user details !');
-       }
-       redirect(base_url('admin/audit_started_2017/edit/'.$schoolid), 'refresh');
-   }
+     * Update Function
+     */
+    public function update($argSchoolID, $argUserID)
+    {
+        $arrSchool=array(
+            'name'=>$this->input->post('name'),
+            'address1'=>$this->input->post('address1'),
+            'address2'=>$this->input->post('address2'),
+            'state'=>$this->input->post('state'),
+            'district'=>$this->input->post('district'),
+            'city'=>$this->input->post('city'),
+            'pincode'=>$this->input->post('pincode'),
+            'mobile'=>$this->input->post('mobile'),
+            'principle_name'=>$this->input->post('principle_name'),
+            'coname'=>$this->input->post('coname'),
+            'coemail'=>$this->input->post('coemail'),
+            'comobile'=>$this->input->post('comobile')
+        );
+        ///echo '<pre>'; print_r($this->input->post()); exit;
+        $this->db->where('id', $argSchoolID);
+        if($this->db->update('gsp_school', $arrSchool))
+        {
+            //update user data as well
+            $arrUser=array(
+                'email'=>$this->input->post('coemail'),
+                'password'=>$this->input->post('password')
+            );
+            $this->db->where('id', $argUserID);
+            $this->db->update('gsp_user', $arrUser);
+            $this->session->set_flashdata('success', 'School Infomation Successfully Updated');
+        } else {
+            $this->session->set_flashdata('error', 'There is an error updating school information !');
+        }
+        redirect(base_url('admin/audit_started_2017/edit/'.$argSchoolID), 'refresh');
+    }
 
 }
 
