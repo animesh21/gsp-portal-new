@@ -14,7 +14,7 @@ class Audit_started_2017 extends CI_Controller {
         }
         $this->load->helper(array('form', 'security', 'common_helper'));
         $this->load->library('form_validation');
-        $this->load->model(array('Answer_model', 'file'));
+        $this->load->model(array('Answer_model', 'file','User_model'));
         $this->load->helper(array('download', 'common_helper', 'form'));
         $this->load->model('admin/Audit_started_model');
         $this->session->userdata('USER_ID') == '';
