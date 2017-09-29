@@ -1361,11 +1361,11 @@
             <div class="form-group" id="Q20W1Q">
 
                 <label class="control-label"><span class="cube">18(a)</span>How does your
-                    school reuse wastewater?</label>
+                    school reuse waste water?</label>
                 <div class="form-group">
                     <?php
                     if (getFiled('Q20W2', $schoolUserID) == 1):
-                        echo "Wastewater flows directly to the drains";
+                        echo "Grdening";
                     elseif (getFiled('Q20W2', $schoolUserID) == 2):
                         echo "Flushing";
                     elseif (getFiled('Q20W2', $schoolUserID) == 3):

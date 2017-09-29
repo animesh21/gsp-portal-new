@@ -1833,27 +1833,28 @@
   <br>
   <button class="btn uploadbtn upload" data-id="Composting Pit" data-toggle="modal"
                         data-target="#airModal" type="button">UPLOAD FILES </button>
-  <br>
+   <table width="100%" class="question uploadedfiles">
+        <thead>
+        <tr>
+            <th>File name</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+<?php foreach ($composingPit as $u) { ?>
+    <tr id="index<?php echo $u->id; ?>">
+    <?php $name = str_replace(" ", "_", $u->name . "_Composting_Pit_"); ?>
+																																																											
+    <td class="upload edit"><?php echo str_replace($name, "", $u->file_name); ?></td>
+    <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $u->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+    </tr>
+<?php } ?>
+        </tbody>
+    </table>
+  
 </div>
 <br>
-<table width="100%" class="question uploadedfiles">
-  <thead>
-		<tr>
-      <th>File name</th>
-      <th>Action</th>
-    </tr>
-  </thead>
-  <tbody>
-    <?php foreach ($composingPit as $f) { ?>
-    <tr id="index<?php echo $f->id; ?>">
-      <?php $name = str_replace(" ", "_", $f->name . "_Composting_Pit_"); ?>
-			
-      <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
-      <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
-    </tr>
-    <?php } ?>
-  </tbody>
-</table>
+
 <div class="clearfix">&nbsp;</div>
 <?php
                   if(isset($data['Q9Wa1']))
@@ -3029,8 +3030,24 @@
   <br>
   <button class="btn uploadbtn upload" data-id="E-waste authorised dealer" data-toggle="modal"
                             data-target="#airModal" type="button">UPLOAD FILES </button>
-  <br>
-  <br>
+  <table width="100%" class="question uploadedfiles">
+        <thead>
+        <tr>
+            <th>File name</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+<?php foreach ($authorised_dealer as $u) { ?>
+    <tr id="index<?php echo $u->id; ?>">
+    <?php $name = str_replace(" ", "_", $u->name . "_E-waste_authorised_dealer_"); ?>
+																																																											
+    <td class="upload edit"><?php echo str_replace($name, "", $u->file_name); ?></td>
+    <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $u->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+    </tr>
+<?php } ?>
+        </tbody>
+    </table>
 </div>
 <br>
 <br>

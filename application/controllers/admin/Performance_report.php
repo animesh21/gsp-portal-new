@@ -14,6 +14,7 @@ class Performance_report extends CI_Controller {
         }
         $this->load->model('admin/Performance_model');
         $this->load->helper('common_helper');
+        $this->load->helper('form');
     }
 
     /*
@@ -54,6 +55,44 @@ class Performance_report extends CI_Controller {
         $data['title'] = 'Home | Perofrmance Report';
         $data['record'] = $this->Performance_model->getData();
         $this->load->view('admin/includes/template', $data);
+    }
+    
+    public function PerformanceId() {
+        $this->config->load('array_config');
+        $data['main'] = 'admin/performance_report/PdfById';
+        $data['title'] = 'Home | Perofrmance Report';
+       
+            
+        $this->load->view('admin/includes/template', $data);    
+    }        
+            
+            
+    
+    public function PdfById() {
+        $this->config->load('array_config');
+        
+        $data = array(
+          'gsp_userid' => $this->input->post('dname')
+            );
+           //print_r($data['gsp_userid']);
+            //die();
+        $d['performance'] = $this->Performance_model->getDataById($data['gsp_userid']);
+        //print_r($d);
+        $html=$this->load->view('admin/performance_report/Performance', $d,true);
+           
+
+            //this the the PDF filename that user will get to download
+            $pdfFilePath = "performance-report.pdf";
+
+            //load mPDF library
+           $this->load->library('M_pdf');
+
+            //generate the PDF from the given html
+           $this->m_pdf->pdf->WriteHTML($html);
+
+            //download it.
+            $this->m_pdf->pdf->Output($pdfFilePath, "I");
+        
     }
     
 //    public function excel()

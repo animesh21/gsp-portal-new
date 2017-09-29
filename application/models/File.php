@@ -156,8 +156,53 @@ class File extends CI_Model {
                         ->like('a.file_name', 'Audit_Team_doing_Survey')
                         ->get()->result();
     }
+     //Get Food Files Data
+    public function getLunchBoxData($argID) {
+        return $this->db->select('a.*, b.name')
+                        ->from('files AS a')
+                        ->join('gsp_school AS b', 'a.userid=b.userid', 'left')
+                        ->where('a.userid', $argID)
+                        ->like('a.file_name', 'Lunch_Boxes')
+                        ->get()->result();
+    }
     
-    //Get Food Files UPPC Data
+     //Get composit waste
+    public function getWasteData($argID) {
+        return $this->db->select('a.*, b.name')
+                        ->from('files AS a')
+                        ->join('gsp_school AS b', 'a.userid=b.userid', 'left')
+                        ->where('a.userid', $argID)
+                        ->like('a.file_name', 'Composting_Pit')
+                        ->get()->result();
+    }
+    //E-waste_authorised_dealer
+    public function getAuthorisedDealer($argID) {
+        return $this->db->select('a.*, b.name')
+                        ->from('files AS a')
+                        ->join('gsp_school AS b', 'a.userid=b.userid', 'left')
+                        ->where('a.userid', $argID)
+                        ->like('a.file_name', 'E-waste_authorised_dealer')
+                        ->get()->result();
+    }
+    //Waste_Policy
+    public function getWastePolicy($argID) {
+        return $this->db->select('a.*, b.name')
+                        ->from('files AS a')
+                        ->join('gsp_school AS b', 'a.userid=b.userid', 'left')
+                        ->where('a.userid', $argID)
+                        ->like('a.file_name', 'Waste_Policy')
+                        ->get()->result();
+    } 
+    //Initiatives
+    public function getInitiatives($argID) {
+        return $this->db->select('a.*, b.name')
+                        ->from('files AS a')
+                        ->join('gsp_school AS b', 'a.userid=b.userid', 'left')
+                        ->where('a.userid', $argID)
+                        ->like('a.file_name', 'Initiatives')
+                        ->get()->result();
+    }
+   //Get Food Files UPPC Data
     public function getFoodUPPCData($argID) {
         return $this->db->select('a.*, b.name')
                         ->from('files AS a')

@@ -7,7 +7,7 @@ class Waste extends CI_Controller {
         parent::__construct();
         $this->load->helper(array('form', 'security', 'common_helper'));
         $this->load->library('form_validation');
-        $this->load->model('Answer_model');
+        $this->load->model(array('Answer_model','file'));
         $user = 1;
         if ($this->session->userdata('USER_ID') == '') {
 
@@ -33,7 +33,7 @@ class Waste extends CI_Controller {
             $data['segregationClassroom']=uploadHelper
             ($this->session->userdata('USER_ID'), 'Segregation_Source_Classrooms');
             $data['solidWaste']=uploadHelper($this->session->userdata('USER_ID'), 'Audit_Team_Weighing_Solid_Waste');
-            $data['composingPit']=uploadHelper($this->session->userdata('USER_ID'), 'Composting_Pit');
+            //$data['composingPit']=uploadHelper($this->session->userdata('USER_ID'), 'Composting_Pit');
             $data['recycleMachine']=uploadHelper($this->session->userdata('USER_ID'), 'Recycling_Machine');
             $data['eWaste']=uploadHelper($this->session->userdata('USER_ID'),
                 'E-Waste');
@@ -45,13 +45,16 @@ class Waste extends CI_Controller {
             $data['eWasteDisposing']=uploadHelper($this->session->userdata('USER_ID'), 'E-Waste_Disposing_Certificate');
             $data['pictures']=uploadHelper($this->session->userdata
             ('USER_ID'), 'Pictures_of_Audit_Team');
-//            print_r($data['other']['Q1G1']);
-//            print_r($data['other']['Q1G2']);
+            $data['composingPit']=$this->file->getWasteData($this->session->userdata('USER_ID'));
+            $data['authorised_dealer']=$this->file->getAuthorisedDealer($this->session->userdata('USER_ID'));
+            
+            $data['Initiatives']=$this->file->getInitiatives($this->session->userdata('USER_ID'));
+            $data['chikoo']=$this->file->getWastePolicy($this->session->userdata('USER_ID'));
 
-            if(isset($data['other']['Q1G1']) && isset($data['other']['Q1G2']))
-            {
-                if($data['other']['Q1G1'] < 6 && $data['other']['Q1G2'] < 6)
-                {
+            if( isset($data['other']['Q1G2']))
+            {  
+                if( $data['other']['Q1G2'] < 6)
+                {   
                     $this->load->view('PrimaryWaste',$data);
                 }
                 else

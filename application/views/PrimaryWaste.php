@@ -1810,6 +1810,27 @@
                                                         &bull; Waste Policy<br>
                                                         <br/>
                                                         <button class="btn uploadbtn upload" data-id="Waste Policy" data-toggle="modal" data-target="#airModal" type="button">UPLOAD FILES</button>
+                     <table width="100%" class="question uploadedfiles">
+        <thead>
+        <tr>
+            <th>File name</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+           
+<?php
+  
+foreach ($chikoo as $u) { ?>
+    <tr id="index<?php echo $u->id; ?>">
+    <?php $name = str_replace(" ", "_", $u->name . "_Waste_Policy_"); ?>
+																																																											
+    <td class="upload edit"><?php echo str_replace($name, "", $u->file_name); ?></td>
+    <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $u->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+    </tr>
+<?php } ?>
+        </tbody>
+    </table>                                                
                                                     </div>
                                                     <?php
                                                 }?>
@@ -1818,7 +1839,8 @@
                                                 <br>
                                                 &bull; Waste Policy<br>
                                                 <button class="btn uploadbtn upload" data-id="Waste Policy" data-toggle="modal" data-target="#airModal" type="button">UPLOAD FILES</button>
-                                                <br>
+                                                
+                               
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label"><span class="cube">12</span>Are there awareness drives with regard to Reduce, Recycle and Reuse? </label>
@@ -1847,7 +1869,24 @@
                                                         <br/>
                                                         <button class="btn uploadbtn upload" data-id="School Initiatives" data-toggle="modal" data-target="#airModal" type="button">UPLOAD FILES</button>
                                                         <br>
-                                                        <br>
+                                                        <table width="100%" class="question uploadedfiles">
+        <thead>
+        <tr>
+            <th>File name</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+<?php foreach ($Initiatives as $u) { ?>
+    <tr id="index<?php echo $u->id; ?>">
+    <?php $name = str_replace(" ", "_", $u->name . "_Initiatives_"); ?>
+																																																											
+    <td class="upload edit"><?php echo str_replace($name, "", $u->file_name); ?></td>
+    <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $u->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+    </tr>
+<?php } ?>
+        </tbody>
+    </table>
                                                     </div>
                                                     <div class="form-group" id="Q18Wa3">
                                                         <label class="control-label"><span class="cube">13(a)</span>What form do these awareness drives take? </label>
