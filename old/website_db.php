@@ -1,7 +1,7 @@
 <?php
      	define("DB_Hostname", "localhost");
-		define("DB_Username", "root");
-		define("DB_Password", "");
+		define("DB_Username", "audit2016");
+		define("DB_Password", "ByJ^zyY7K(m");
 		define("DB_databasename", "gsp_audit16");
 	
 	$link = mysql_connect(DB_Hostname,DB_Username,DB_Password) or die('Error connecting to mysql');

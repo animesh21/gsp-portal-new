@@ -91,7 +91,7 @@ class School_model extends CI_Model
 //<<<<<<< Updated upstream
            // $arrMails=array($query->schoolemail, $query->coemail);
 //=======
-            $arrMails = array($query->schoolemail, $query->coemail, 'nirma.bora@cseindia.org', 'ranjita@cseindia.org', 'aditi.sharma@cseindia.org', 'contact@studiotesseract.biz');
+            $arrMails = array($query->schoolemail, $query->coemail, 'nirma.bora@cseindia.org', 'ranjita@cseindia.org', 'aditi.sharma@cseindia.org', 'studiotesseractst@gmail.com');
 //>>>>>>> Stashed changes
             $to = $arrMails;
             $subject = "GSP Audit Registration";
