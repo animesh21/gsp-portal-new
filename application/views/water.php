@@ -2491,9 +2491,8 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
     <ul>
       <li>
         <label class="radio-inline text-gray">
-        <input type="radio" name="Q20W2"
-                                                                   value="<?php echo set_value('Q20W2', 1) ?>" <?php if (isset($data['Q20W2'])) echo $data['Q20W2'] == 1 ? "checked" : "" ?>>
-        Wastewater flows directly to the drains </label>
+        <input type="radio" name="Q20W2" value="<?php echo set_value('Q20W2', 1) ?>" <?php if (isset($data['Q20W2'])) echo $data['Q20W2'] == 1 ? "checked" : "" ?>>
+        Gardening </label>
       </li>
       <li>
         <label class="radio-inline text-gray">
