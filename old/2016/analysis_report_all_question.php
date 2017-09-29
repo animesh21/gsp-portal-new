@@ -416,7 +416,7 @@ include('header.php');
                             <th>Water Supplier (Panchayat)</th>
                             <th>Water Supplier (Public Health Engineering Department (PHED))</th>
                             <th>Water Supplier (Private supplier)</th>
-                            <th>Water Supplier (School’s own supply )</th>
+                            <th>Water Supplier (Schoolï¿½s own supply )</th>
                             
                             
                             
@@ -1945,7 +1945,7 @@ while ($sql_data_array = mysql_fetch_assoc($sql_data)) {
                                 <!-- Start Water Section Questions -->
 
                                
-      <!--Q1.  Calculate your school’s water consumption, per activity -->
+      <!--Q1.  Calculate your schoolï¿½s water consumption, per activity -->
     <?php
     if ($sql_data_array['266617X37X1883SQ001_SQ001'] != "") {
         $Drinking = $sql_data_array['266617X37X1883SQ001_SQ001'];
@@ -3026,7 +3026,7 @@ while ($sql_data_array = mysql_fetch_assoc($sql_data)) {
                                         echo "Landfill Site";
                                     } elseif ($sql_data_array['266617X38X2076'] == "A4") {
                                         
-                                        echo "Don’t know";
+                                        echo "Donï¿½t know";
                                     }
                                     ?>
                                 </td><!--Quantity of Compost generated per month-->

@@ -1,16 +1,16 @@
 <?php
 $servername = "localhost";
-$username = "audit2016";
-$password = "ByJ^zyY7K(m";
+$username = "root";
+$password = "";
 $dbname = "gsp_audit16";
 
 
 // Create connection
-$conn = mysqli_connect($servername, $username, $password,$dbname);
+$conn = mysql_connect($servername, $username, $password,$dbname);
 
 // Check connection
 if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
+    die("Connection failed: " .mysql_error());
 }
 
 
@@ -31,7 +31,7 @@ $sql_data = mysql_fetch_assoc(mysql_query("SELECT * FROM lime_survey_266617 WHER
 
 $sql_country = mysql_fetch_assoc(mysql_query("SELECT `name` FROM `countries` WHERE `id` = '".$sql_data['266617X34X1593']."'"));
 
-$sql_state = mysql_fetch_assoc(mysql_query("SELECT `name` FROM `states_india` WHERE `state_id` = '".$sql_data['266617X34X1594']."'"));
+//$sql_state = mysql_fetch_assoc(mysql_query("SELECT `name` FROM `states_india` WHERE `state_id` = '".$sql_data['266617X34X1594']."'"));
 
 //for percentage
 $sql_percentage = mysql_fetch_assoc(mysql_query("select `completeness` from `lime_answers_for_progress` where `token` = '".$sql_token_details."'"));

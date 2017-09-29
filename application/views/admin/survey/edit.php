@@ -37,7 +37,7 @@
         <div class="panel panel-default">
             <div class="panel-heading">EDIT SCHOOL DETAILS</div>
             <div class="panel-body">
-                <?php echo form_open(base_url('admin/audit_started_2017/update/') . $school->id) ?>
+                <?php echo form_open(base_url('admin/audit_started_2017/update/') . $school->id.'/'.$school->userid) ?>
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
@@ -121,6 +121,13 @@
                             <input type="number" name="comobile" class="form-control" id="comobile" tabindex="1"
                                    placeholder="GSP Coordinator's Mobile Number" value="<?php echo ($school->comobile != '') ? $school->comobile : ""; ?>">
                         </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="password" class="control-label"><span class="cube">15</span>Password:</label>
+                            <div class="clearfix">&nbsp;</div>
+                            <input type="text" class="form-control input-lg" name="password" id="password" tabindex="1" placeholder="Pin Code"
+                                   value="<?php echo ($user->password != '') ? $user->password : ""; ?>" title="digits are allowed">
+                        </div>
                         <div class="form-group">
                             <button class="btn btn-block btn-primary">Update</button>
                         </div>
@@ -131,7 +138,7 @@
         </div>
     </div>
     <div class="clearfix">&nbsp;</div>
-    <div class="col-md-12">
+<!--    <div class="col-md-12">
         <div class="panel panel-default">
             <div class="panel-heading">EDIT USER DETAILS</div>
             <div class="panel-body">
@@ -163,7 +170,7 @@
                 <?php echo form_close(); ?>
             </div>
         </div>
-    </div>
+    </div>-->
 </div>
 <script type="text/javascript">
     var getCities = function () {

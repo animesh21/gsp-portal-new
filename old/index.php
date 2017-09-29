@@ -2,7 +2,7 @@
 session_start();
 ob_start();
 if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
-    header('location:/audit2107/old/' . $_SESSION['year'] . '/dashboard.php');
+    header('location:/gsp/old/' . $_SESSION['year'] . '/dashboard.php');
 }
 include('website_db.php');
 $error = "";

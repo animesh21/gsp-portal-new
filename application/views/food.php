@@ -610,9 +610,9 @@ if (isset($data['Q5F1S1'])) {
                                                 data-toggle="modal" data-target="#airModal" type="button">UPLOAD
                                             FILES </button>
                                         <br>
-                                    <table width="100%" class="question uploadedfiles">
-                                                                                                            <thead>
-                                                                                                                <tr>
+				  <table width="100%" class="question uploadedfiles">
+                                  <thead>
+                                   <tr>
                                                                                                                     <th>File name</th>
                                                                                                                     <th>Action</th>
                                                                                                                 </tr>
