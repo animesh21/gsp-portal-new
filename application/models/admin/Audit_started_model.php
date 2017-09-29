@@ -123,7 +123,83 @@ class Audit_started_model extends CI_Model {
                         ->get()->result();
     }
     
+  
     
+    
+    public function getStateWiseSchool($state,$school) {
+       // $sql="SELECT * FROM `gsp_school` WHERE `userid` IN ?";
+       //SELECT a.userid,a.name,a.principle_name,s.name,a.id FROM states AS s,gsp_school AS a INNER JOIN gsp_answers as b on a.userid=b.userid WHERE b.questionid='Q1G2' AND b.answer>5 AND s.id= a.state;
+      
+      if($state != 0 && $school != 2){
+        if($school==1){  
+        $sql= $this->db->select('a.*,s.name as state_name')
+                       ->from('gsp_school AS a')
+                        ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
+                        ->join('states AS s','a.state=s.id')
+                        ->where('b.questionid','Q1G2')
+                        ->where('b.answer >','5')
+                        ->where('a.state',$state)
+                        ->order_by('a.id', 'desc')
+                        ->get()->result();
+        //echo $sql->num_rows();die;
+        return $sql;
+            
+        }elseif ($school==0) {
+                $sql= $this->db->select('a.*,s.name as state_name')
+                       ->from('gsp_school AS a')
+                        ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
+                        ->join('states AS s','a.state=s.id')
+                        ->where('b.questionid','Q1G2')
+                        ->where('b.answer <','6')
+                        ->where('a.state',$state)
+                        ->order_by('a.id', 'desc')
+                        ->get()->result();
+                return $sql;
+                
+            }
+        
+      }elseif ($state == 0 && $school != 2) {
+          if($school==1){  
+        $sql= $this->db->select('a.*,s.name as state_name')
+                        ->from('states AS s')
+                        ->from('gsp_school AS a')
+                        ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
+                        ->where('b.questionid','Q1G2')
+                        ->where('b.answer >','5')
+                        ->where('s.id= a.state')
+                        ->order_by('a.id', 'desc')
+                        ->get()->result();
+         
+            return $sql;
+            
+        }elseif ($school==0) {
+                $sql= $this->db->select('a.*,s.name as state_name')
+                        ->from('states AS s')
+                        ->from('gsp_school AS a')
+                        ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
+                        ->where('b.questionid','Q1G2')
+                        ->where('b.answer <','6')
+                        ->where('s.id= a.state')
+                        ->order_by('a.id', 'desc')
+                        ->get()->result();
+                
+                return $sql;
+                
+            }
+            
+        }elseif ($state != 0 && $school == 2) {
+           $sql = $this->db->select('a.*, b.name AS state_name')
+                        ->from('gsp_school AS a')
+                        ->join('states AS b', 'a.state=b.id', 'left')
+                        ->where('a.state', $state)
+                        ->order_by('a.id', 'desc')
+                        ->get()->result();
+          
+           return $sql;
+        }
+        
+        
+    }
     /*
      * Generate Excel Data
      */
