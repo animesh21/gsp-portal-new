@@ -12,6 +12,7 @@ class Login extends CI_Controller {
         $this->load->helper(array('form', 'security'));
         $this->load->library('form_validation');
         $this->load->model('admin/Login_model');
+        $this->load->model('admin/Audit_started_model');
     }
 
     public function index() {
@@ -32,6 +33,25 @@ class Login extends CI_Controller {
             }
         }
         $this->load->view('admin/login/index', $data);
+    }
+    
+    public function Auth(){
+        $password = $this->input->post();
+        $userid = $this->input->post('userid');
+       // print_r($userid);        die();
+        $auth = $this->Login_model->checkAuth($password);
+        if($auth){
+        $this->Audit_started_model->row_delete($userid); 
+       
+        }
+        else{
+            
+           // $message = "Something Went Wrong";
+         //   echo "<script type='text/javascript'>alert('$message');</script>";
+            redirect(base_url('admin/audit_started_2017'));
+        }
+       //redirect(base_url('admin/audit_started_2017'));
+        
     }
 
 }

@@ -23,8 +23,21 @@ class Audit_started_model extends CI_Model {
                         ->order_by('a.id', 'desc')
                         ->get()->result();
     }
-	
-	/*
+    public function row_delete($id){
+    $user_id=$this->db->select('a.userid')
+                       ->from('gsp_school AS a')
+                       ->where('id',$id)
+                       ->get()->result(); 
+    //  print_r ($user_id[0]->userid);       die();
+    $this->db->where('userid', $user_id[0]->userid);
+    $this->db->delete('gsp_school');
+    $this->db->where('id', $user_id[0]->userid);
+    $this->db->delete('gsp_user');
+    
+    }
+
+
+    /*
      * Get User By Id
      */
     public function getUserById($argID)
@@ -137,7 +150,7 @@ class Audit_started_model extends CI_Model {
                         ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
                         ->join('states AS s','a.state=s.id')
                         ->where('b.questionid','Q1G2')
-                        ->where('b.answer >','5')
+                        ->where('b.answer >',5)
                         ->where('a.state',$state)
                         ->order_by('a.id', 'desc')
                         ->get()->result();
@@ -146,11 +159,11 @@ class Audit_started_model extends CI_Model {
             
         }elseif ($school==0) {
                 $sql= $this->db->select('a.*,s.name as state_name')
-                       ->from('gsp_school AS a')
+                        ->from('gsp_school AS a')
                         ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
                         ->join('states AS s','a.state=s.id')
                         ->where('b.questionid','Q1G2')
-                        ->where('b.answer <','6')
+                        ->where('b.answer <',6)
                         ->where('a.state',$state)
                         ->order_by('a.id', 'desc')
                         ->get()->result();
@@ -165,7 +178,7 @@ class Audit_started_model extends CI_Model {
                         ->from('gsp_school AS a')
                         ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
                         ->where('b.questionid','Q1G2')
-                        ->where('b.answer >','5')
+                        ->where('b.answer >',5)
                         ->where('s.id= a.state')
                         ->order_by('a.id', 'desc')
                         ->get()->result();
@@ -178,7 +191,7 @@ class Audit_started_model extends CI_Model {
                         ->from('gsp_school AS a')
                         ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
                         ->where('b.questionid','Q1G2')
-                        ->where('b.answer <','6')
+                        ->where('b.answer <',6)
                         ->where('s.id= a.state')
                         ->order_by('a.id', 'desc')
                         ->get()->result();
