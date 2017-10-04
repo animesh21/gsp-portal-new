@@ -35,7 +35,7 @@ class Dashboard extends CI_Controller {
         $data['main']='admin/audit/register_2017';
         $data['title']='Registration 2017';
         $data['record']=$this->Dashboard_model->getData();
-		
+		//echo '<pre>'; print_r($data['record']);exit();
         $data['Schools'] = $this->School_model->getSchools();
 		//echo '<pre>'; print_r($data['Schools']);exit();
         $data['schoolcount']=$this->Dashboard_model->schoolCount();
@@ -63,7 +63,7 @@ class Dashboard extends CI_Controller {
 	{
 		$data['main']='admin/audit/complete_school';
 		$data['complete']=$this->Dashboard_model->school_that_complete_audit();
-		//echo '<pre>'; print_r($data['audit']);exit();
+		//echo '<pre>'; print_r($data['complete']);exit();
 		$this->load->view('admin/includes/template', $data);
 	}
 	

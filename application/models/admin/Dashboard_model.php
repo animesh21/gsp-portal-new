@@ -21,9 +21,10 @@ class Dashboard_model extends CI_Model {
     }
 
     public function getData() {
-        return $this->db->select('a.*, b.name AS state_name')
+        return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
+						->join('cities AS c', 'a.district=c.id', 'left')
                         ->where('YEAR(a.date_added)', 2017)
                         ->order_by('a.id', 'desc')
                         ->get()->result();
@@ -31,17 +32,23 @@ class Dashboard_model extends CI_Model {
 	
 	public function totalschool()
 	{
-		return $this->db->select('*')
-					->from('gsp_school')
+		return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
+					->from('gsp_school AS a')
+					->join('states AS b', 'a.state=b.id', 'left')
+					->join('cities AS c', 'a.district=c.id', 'left')
+					->order_by('a.id', 'desc')
 					->get()->result();
 	}
 	
 	public function school_started_audit()
 	{
-		return $this->db->select('*')
-					->from('gsp_school')
-					->where( 'progress >5')
-					->get()->result();
+		return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
+                        ->from('gsp_school AS a')
+                        ->join('states AS b', 'a.state=b.id', 'left')
+						->join('cities AS c', 'a.district=c.id', 'left')
+						->where( 'progress >5')
+						->order_by('a.id', 'desc')
+						->get()->result();
 	}
 	
 	public function getschool_started_audit() {
@@ -52,9 +59,12 @@ class Dashboard_model extends CI_Model {
 	
 	public function school_that_complete_audit()
 	{
-		return $this->db->select('*')
-					->from('gsp_school')
+		return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
+					->from('gsp_school AS a')
+					->join('states AS b', 'a.state=b.id', 'left')
+					->join('cities AS c', 'a.district=c.id', 'left')
 					->where('progress=100')
+					->order_by('a.id', 'desc')
 					->get()->result();
 	}
 	public function getschool_that_complete_audit() {
@@ -65,10 +75,13 @@ class Dashboard_model extends CI_Model {
 	
 	public function school_start_but_not_complete()
 	{
-		return $this->db->select('*')
-					->from('gsp_school')
+		return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
+					->from('gsp_school AS a')
+					->join('states AS b', 'a.state=b.id', 'left')
+					->join('cities AS c', 'a.district=c.id', 'left')
 					->where('progress >', 5)
 					->where('progress <', 100)
+					->order_by('a.id', 'desc')
 					->get()->result();
 	}
 	
@@ -81,9 +94,12 @@ class Dashboard_model extends CI_Model {
 	
 	public function schools_not_start_the_audit()
 	{
-		return $this->db->select('*')
-						->from('gsp_school')
+		return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
+						->from('gsp_school AS a')
+						->join('states AS b', 'a.state=b.id', 'left')
+						->join('cities AS c', 'a.district=c.id', 'left')
 						->where('progress=5')
+						->order_by('a.id', 'desc')
 						->get()->result();
 	}
 	public function getschools_not_start_the_audit() {

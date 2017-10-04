@@ -100,6 +100,12 @@
                             <input type="text" name="principle_name" class="text empty" id="principal" tabindex="1"
                                    placeholder="Principal's Name:" value="<?php echo ($school->principle_name != '') ? $school->principle_name : ""; ?>">
                         </div>
+						<div class="form-group">
+                            <label for="coname" class="control-label"><span class="cube">12</span>Enter GSP School_Email:</label>
+                            <div class="clearfix">&nbsp;</div>
+                            <input type="text" name="coname" class="text empty" id="cordinatorname" tabindex="1"
+                                   placeholder="GSP Coordinator's Name" value="<?php echo ($school->coname != '') ? $school->schoolemail : ""; ?>">
+                        </div>
                         <div class="form-group">
                             <label for="coname" class="control-label"><span class="cube">12</span>Enter GSP Coordinator's Name:</label>
                             <div class="clearfix">&nbsp;</div>
