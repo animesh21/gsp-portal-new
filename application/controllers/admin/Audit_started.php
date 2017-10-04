@@ -72,7 +72,7 @@ class Audit_started extends CI_Controller {
                 'protocol' => 'smtp',
                 'smtp_host' => 'ssl://smtp.googlemail.com',
                 'smtp_port' => 465,
-                'smtp_user' => 'siddhantkulshreshtha@gmail.com',
+                'smtp_user' => '7417rohitarora@gmail.com',
                 'smtp_pass' => '123456',
                 'mailtype' => 'html',
                 'charset' => 'utf-8',
