@@ -16,10 +16,10 @@ class Audit_started_model extends CI_Model {
      */
 
     public function getData() {
-        return $this->db->select('a.*, b.name AS state_name')
+        return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
-//                        ->where('YEAR(a.date_added)', 2017)
+                        ->join('cities AS c', 'a.district=c.id', 'left')
                         ->order_by('a.id', 'desc')
                         ->get()->result();
     }

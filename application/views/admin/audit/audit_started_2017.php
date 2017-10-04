@@ -8,6 +8,7 @@
             <th>Sch.Id</th>
             <th>School Name</th>
             <th>State</th>
+            <th>District</th>
             <th>City</th>
             <th>Co-ord. Name</th>
             <th>Co-ord. Email</th>
@@ -26,6 +27,7 @@
                 <td><?php echo $r->id; ?></td>
                 <td><?php echo $r->name; ?></td>
                 <td><?php echo $r->state_name; ?></td>
+                <td><?php echo $r->district_name; ?></td>
                 <td><?php echo $r->city; ?></td>
                 <td><?php echo $r->coname; ?></td>
                 <td><?php echo $r->coemail; ?></td>
