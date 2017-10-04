@@ -11,6 +11,7 @@
 <link href="<?php echo base_url(); ?>assets/front/css/shadowbox.css" type="text/css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>assets/front/css/custom.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>assets/front/css/responsive.css" rel="stylesheet">
+<link href="<?php echo base_url(); ?>assets/front/css/chosen.css" rel="stylesheet">
 <!-- begin js --->
 <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 
@@ -54,6 +55,7 @@
                   <li class=""><a href="<?php echo base_url('admin/audit_started'); ?>">AUDIT STARTED</a></li>
                   <li><a href="<?php echo base_url('admin/audit_started_2017'); ?>">REGISTRATIONS 2017</a></li>
                   <li><a href="<?php echo base_url('admin/audit_started/statewise'); ?>">REGISTRATIONS BY STATE</a></li>
+				   <li><a href="<?php echo base_url('admin/audit_started/feedback'); ?>">Feedback</a></li>
                 </ul>
               </li>
               <li class=""><a href="#">AUDIT COMPLETED<span class="caret"></span></a>
