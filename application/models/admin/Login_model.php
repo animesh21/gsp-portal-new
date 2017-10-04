@@ -31,5 +31,19 @@ class Login_model extends CI_Model {
         return false;
     }
     
+    /*
+     * Check Auth for delete record
+     */
+    public function checkAuth($argPost) {
+        $query = $this->db->select('*')
+                ->from('tbl_admin')
+                ->where(array('password' => $argPost['password'], 'status' => '1'))
+                ->get();
+        if ($query->num_rows() == 1) {
+            
+            return true;
+        }
+        return false;
+    }
 
 }
