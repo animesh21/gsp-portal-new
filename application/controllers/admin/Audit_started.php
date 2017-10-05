@@ -104,7 +104,10 @@ class Audit_started extends CI_Controller {
                 $this->email->from($from, "GSP Team");
                 $this->email->subject($subject);
                 $this->email->message($msg);
-                $this->email->send();
+                if($this->email->send())
+				{echo 'sucess';
+				}else{echo 'failed';
+				}
               //echo $this->email->print_debugger();
                // die();
           }
