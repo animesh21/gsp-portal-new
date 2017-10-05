@@ -88,7 +88,7 @@ class Audit_started extends CI_Controller {
                 $rec=explode(',', $record[$i]);
 				
 			 // Set to, from, message, etc.
-				$from = "siddhantkulshreshtha@gmail.com";
+				$from = "7417rohitarora@gmail.com";
                 $subject = $this->input->post('subject');
 				$message=$this->input->post('message');
 				$data['messag']=array($rec[0],
@@ -100,15 +100,16 @@ class Audit_started extends CI_Controller {
 				//echo "<pre>";					
 				//print_r($data['messag']);
               $msg = $this->load->view('admin/audit/template', $data, true);
-                $this->email->to($rec[0]);
-                $this->email->from($from, "GSP Team");
+			// print_r($msg);exit;
+               $this->email->to($rec[0]);
+			   $this->email->from($from, "GSP Team");
                 $this->email->subject($subject);
-                $this->email->message($msg);
-                if($this->email->send())
+             $this->email->message($msg);
+			  if($this->email->send())
 				{echo 'sucess';
 				}else{echo 'failed';
 				}
-              //echo $this->email->print_debugger();
+             // echo $this->email->print_debugger();
                // die();
           }
 		   

@@ -366,15 +366,15 @@ Sizes: [
                                                             <table border="0" cellpadding="30" cellspacing="0" width="500" class="flexibleContainer">
                                                                 <tr>
                                                                     <td valign="top" width="500" class="flexibleContainerCell">
-                                                                        <h3>Hi</h3>
-																		<?php echo $messag['$rec[1]'];?>
-                                                                        </br>
-																		from <?php echo $messag['$rec[0]'];?>
+																	<?php //print_r($messag);exit;?>
+                                                                        <h3>Hi <?php echo $messag[1];?></h3>
+																		<b>message from</b>
+																		</br><?php echo $messag[2];?>
 																		<br/>
-																		subject<br/>
-																		<?php echo $messag['$subject'];?>
-																		Message<br/>
-																		<?php echo $messag['$message'];?>
+																		<b>subject</b><br/>
+																		<?php echo $messag[3];?><br/>
+																		<b>Message</b><br/>
+																		<?php echo $messag[4];?>
 																		  
                                                                     </td>
                                                                 </tr>
