@@ -81,6 +81,7 @@ class Audit_started extends CI_Controller {
             $this->load->library('email', $config);
             $this->email->set_newline("\r\n");
 		*/	
+		$this->load->library('email');
 		    $record = $this->input->post('email');
 			
             for ($i = 0; $i < count($record); $i++) { 
@@ -88,6 +89,7 @@ class Audit_started extends CI_Controller {
 	
 			 // Set to, from, message, etc.
 				$from = "7417rohitarora@gmail.com";
+				$args_admin="Green School";
                 $subject = $this->input->post('subject');
 				$message=$this->input->post('message');
 				$data['messag']=array($rec[0],
@@ -102,8 +104,9 @@ class Audit_started extends CI_Controller {
 			   $this->email->from($from, "GSP Team");
                $this->email->subject($subject);
 			   $headers .= "MIME-Version: 1.0\r\n";
-               $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n"; 
-			   mail("sunnykul024@gmail.com",$subject,$message,$header);
+               $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+               $headers .= "From: " . $args_admin . "<" . $from . ">" . "\r\n";
+			    mail("sunnykul024@gmail.com",$subject,$message,$headers);
 		
 		 /*  print_r($m);exit;
 			if( $this->email->send())
