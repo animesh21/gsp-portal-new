@@ -68,7 +68,7 @@ class Audit_started extends CI_Controller {
             //echo '<pre>';
             //print_r($this->input->post());
             //exit;
-             $config = Array(
+            /* $config = Array(
                 'protocol' => 'smtp',
                 'smtp_host' => 'ssl://smtp.googlemail.com',
                 'smtp_port' => 465,
@@ -80,13 +80,12 @@ class Audit_started extends CI_Controller {
             );
             $this->load->library('email', $config);
             $this->email->set_newline("\r\n");
-			$record = $this->input->post('email');
+		*/	
+		    $record = $this->input->post('email');
 			
-			
-            for ($i = 0; $i < count($record); $i++) {
-			 
+            for ($i = 0; $i < count($record); $i++) { 
                 $rec=explode(',', $record[$i]);
-				
+	
 			 // Set to, from, message, etc.
 				$from = "7417rohitarora@gmail.com";
                 $subject = $this->input->post('subject');
@@ -97,20 +96,21 @@ class Audit_started extends CI_Controller {
 									$subject,
 									$message
 									);
-				//echo "<pre>";					
-				//print_r($data['messag']);
-              $msg = $this->load->view('admin/audit/template', $data, true);
-			// print_r($msg);exit;
-               $this->email->to($rec[0]);
+			   $msg = $this->load->view('admin/audit/template', $data, true);
+			   $this->email->clear();
+               $to =$this->email->to($rec[0]);
 			   $this->email->from($from, "GSP Team");
-                $this->email->subject($subject);
-             $this->email->message($msg);
-			  if($this->email->send())
-				{echo 'sucess';
-				}else{echo 'failed';
-				}
-             // echo $this->email->print_debugger();
-               // die();
+               $this->email->subject($subject);
+			   $headers .= "MIME-Version: 1.0\r\n";
+               $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n"; 
+			   mail("sunnykul024@gmail.com",$subject,$message,$header);
+		
+		 /*  print_r($m);exit;
+			if( $this->email->send())
+			{
+				
+			}*/
+		  
           }
 		   
         }
