@@ -89,25 +89,24 @@ class Audit_started extends CI_Controller {
                 $rec=explode(',', $record[$i]);
 	
 			 // Set to, from, message, etc.
-				$from = "7417rohitarora@gmail.com";
-				$args_admin="Green School";
+		$from = "7417rohitarora@gmail.com";
+		$args_admin="Green School";
                 $subject = $this->input->post('subject');
-				$message=$this->input->post('message');
-				$data['messag']=array($rec[0],
-									$rec[1],
-									$from,
-									$subject,
-									$message
-									);
-			   $msg = $this->load->view('admin/audit/template', $data, true);
-			   $this->email->clear();
-               $to =$this->email->to($rec[0]);
-			   $this->email->from($from, "GSP Team");
+		$message1=$this->input->post('message');
+		$data['messag']=array($rec[0],$rec[1],$from,$subject,$message);
+	       $msg = $this->load->view('admin/audit/template', $data, true);
+               $this->email->clear();
+               //$to =$this->email->to($rec[0]);
+	       $this->email->from($from, "GSP Team");
                $this->email->subject($subject);
-			   $headers .= "MIME-Version: 1.0\r\n";
+	       $headers .= "MIME-Version: 1.0\r\n";
                $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
                $headers .= "From: " . $args_admin . "<" . $from . ">" . "\r\n";
-	       $s=mail("sunnykul024@gmail.com",$subject,$message,$headers);
+	       $message= "Hii $rec[1] ,\n";
+	       
+	       $message .="Subject: $subject \n";
+		$message .="Message: $message1";     
+	       $s=mail($rec[0],$subject,$message,$headers);
 		if($s){
 		 echo 'success';	
 		}else{
