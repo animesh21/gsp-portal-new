@@ -61,7 +61,9 @@ class Audit_started extends CI_Controller {
 	ini_set('display_errors', '0');    
         $data['main'] = 'admin/audit/feedback';
         $data['title'] = 'Home | Send Feedback';
-        $data['school'] = $this->Audit_started_model->getCordinatorsEmail();
+        //$data['school'] = $this->Audit_started_model->getCordinatorsEmail();
+	    
+        $data['school'] = $this->Audit_started_model->getCorEmail();		    
         $this->form_validation->set_rules('subject', 'Subject', 'required');
         if ($this->form_validation->run() == FALSE) {
             $this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');
