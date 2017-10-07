@@ -107,8 +107,12 @@ class Audit_started extends CI_Controller {
 			   $headers .= "MIME-Version: 1.0\r\n";
                $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
                $headers .= "From: " . $args_admin . "<" . $from . ">" . "\r\n";
-			    mail("sunnykul024@gmail.com",$subject,$message,$headers);
-		
+	       $s=mail("sunnykul024@gmail.com",$subject,$message,$headers);
+		if($s){
+		 echo 'success';	
+		}else{
+		echo 'failed';
+		}	
 		 /*  print_r($m);exit;
 			if( $this->email->send())
 			{
