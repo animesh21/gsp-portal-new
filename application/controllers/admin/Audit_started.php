@@ -110,7 +110,7 @@ class Audit_started extends CI_Controller {
 		$message .="Message: $message1";     
 	       $s=mail($record[$i],$subject,$message,$headers);
 		if($s){
-		 echo 'success';	
+		 echo 'success'.$record[$i].'.......';	
 		}else{
 		echo 'failed';
 		}	
