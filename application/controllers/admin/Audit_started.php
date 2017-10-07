@@ -104,8 +104,8 @@ class Audit_started extends CI_Controller {
 	       $headers .= "MIME-Version: 1.0\r\n";
                $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
                $headers .= "From: " . $args_admin . "<" . $from . ">" . "\r\n";
-	       $message= "Hii $rec[1] ,\n";
-	       
+	       //$message= "Hii $rec[1] ,\n";
+	       $message= "Hii ,\n";
 	       $message .="Subject: $subject \n";
 		$message .="Message: $message1";     
 	       $s=mail($rec[0],$subject,$message,$headers);
