@@ -290,5 +290,10 @@ class Audit_started_model extends CI_Model {
     {
         return $this->db->get('gsp_school')->result();
     }
+     
+    public function getCorEmail()
+    {
+        return $this->db->get('mail')->result();
+    }	
 
 }
