@@ -58,6 +58,7 @@ class Audit_started extends CI_Controller {
      */
 
     public function feedback() {
+	ini_set('display_errors', '0');    
         $data['main'] = 'admin/audit/feedback';
         $data['title'] = 'Home | Send Feedback';
         $data['school'] = $this->Audit_started_model->getCordinatorsEmail();
