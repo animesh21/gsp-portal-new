@@ -75,25 +75,24 @@ class Audit_started extends CI_Controller {
 	    $message=$this->input->post('message');
         for ($i = 0; $i < count($record); $i++) {
 			 
-            $rec[]=explode(',', $record[$i]);
-        }
-        for ($i = 0; $i < count($record); $i++) {
-            $arrMails[]=$rec[$i][0];
-            $arrMsg[]=$rec[$i][1];
-        }    //$arrMails = array($query->schoolemail, $query->coemail, 'nirma.bora@cseindia.org', 'ranjita@cseindia.org', 'aditi.sharma@cseindia.org', 'studiotesseractst@gmail.com');
-            $to = $arrMails;
+            $rec=explode(',', $record[$i]);
+	//$to = $arrMails;
             $msg = "Dear &nbsp;";
-            $msg .= "School,<br/><br/>";
+            $msg .= "School,".rec[$i][1]."<br/><br/>";
             $msg .= "Message: &nbsp; &nbsp; ".$message . "," . "<br/><br/>";
             
             $msg .= "In case of any further queries please feel free to write back to us.<br><br>";
             $msg .= "Thanks,<br><br>";
             
-            $this->email->to($to);
+            $this->email->to($rec[$i][0]);
             $this->email->from($from, "GSP Team");
             $this->email->subject($subject);
             $this->email->message($msg);
-            $this->email->send();
+            $this->email->send();	
+		
+        }
+         //$arrMails = array($query->schoolemail, $query->coemail, 'nirma.bora@cseindia.org', 'ranjita@cseindia.org', 'aditi.sharma@cseindia.org', 'studiotesseractst@gmail.com');
+            
               
            
 		   
