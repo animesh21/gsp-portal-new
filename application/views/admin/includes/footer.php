@@ -21,6 +21,7 @@
 <script src="<?php echo base_url(); ?>assets/front/js/vfs_fonts.js"></script>
 <script src="<?php echo base_url(); ?>assets/front/js/buttons.html5.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/front/js/buttons.print.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/front/js/chosen.jquery.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
         //alert("test");

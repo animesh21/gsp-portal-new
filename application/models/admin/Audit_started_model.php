@@ -283,5 +283,18 @@ class Audit_started_model extends CI_Model {
 
         return $output;
     }
-	
-    }   
+
+	/*
+     * Get COrdinator mail
+     */
+    public function getCordinatorsEmail()
+    {
+        return $this->db->get('gsp_school')->result();
+    }
+     
+    public function getCorEmail()
+    {
+        return $this->db->get('mail')->result();
+    }	
+
+}
