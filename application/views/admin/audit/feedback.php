@@ -38,8 +38,8 @@
 					<label for="pwd">Email:</label><br/>
 					<select class="form-control chosen" name="email[]" data-placeholder="Select cordinator's email..." multiple id="email">
                         <?php foreach ($school as $s) { ?>
-                           <!-- <option value="<?php //echo $s->coemail . ',' . $s->name; ?>"><?php //echo $s->coemail; ?></option> -->
-			<option value="<?php echo $s->email; ?>"><?php echo $s->email; ?></option>
+                          <option value="<?php echo $s->coemail . ',' . $s->name; ?>"><?php echo $s->coemail; ?></option>
+			<!--<option value="<?php //echo $s->coemail; ?>"><?php //echo $s->coemail; ?></option> -->
                         <?php } ?>
                     </select>
                 </div>
