@@ -76,12 +76,13 @@ class Audit_started extends CI_Controller {
         for ($i = 0; $i < count($record); $i++) {
 			 
             $rec=explode(',', $record[$i]);
-	    $data['school']=$rec[1];
-            $data['from']="support@greenschoolsprogramme.org";
-            $data['message']=$message;
-            $data['subject']=$subject;
+	    $msg = "Dear &nbsp;";
+            $msg .= "School,".$rec[1]."<br/><br/>";
+            $msg .= "Message: &nbsp; &nbsp; ".$message . "," . "<br/><br/>";
             
-            $msg  = $this->load->view('admin/audit/template', $data);
+            $msg .= "In case of any further queries please feel free to write back to us.<br><br>";
+            $msg .= "Thanks,<br><br>";
+            
             
             $this->email->to($rec[0]);
             $this->email->from($from, "GSP Team");
