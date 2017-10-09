@@ -85,7 +85,7 @@ class Audit_started extends CI_Controller {
             $msg = "Dear &nbsp;";
             $msg .= "School,<br/><br/>";
             $msg .= "Message: &nbsp; &nbsp; ".$message . "," . "<br/><br/>";
-            $msg .= "URL: http://www.greenschoolsprogramme.org/audit2017 <br/><br/>";
+            
             $msg .= "In case of any further queries please feel free to write back to us.<br><br>";
             $msg .= "Thanks,<br><br>";
             
