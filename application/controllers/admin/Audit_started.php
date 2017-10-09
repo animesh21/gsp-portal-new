@@ -83,8 +83,8 @@ class Audit_started extends CI_Controller {
         }    //$arrMails = array($query->schoolemail, $query->coemail, 'nirma.bora@cseindia.org', 'ranjita@cseindia.org', 'aditi.sharma@cseindia.org', 'studiotesseractst@gmail.com');
             $to = $arrMails;
             $msg = "Dear &nbsp;";
-            $msg .= "School," . "<br/><br/>";
-            $msg .= $message . "," . "<br/><br/>";
+            $msg .= "School," .$arrMsg. "<br/><br/>";
+            $msg .= "Message: &nbsp; &nbsp; ".$message . "," . "<br/><br/>";
             $msg .= "URL: http://www.greenschoolsprogramme.org/audit2017 <br/><br/>";
             $msg .= "In case of any further queries please feel free to write back to us.<br><br>";
             $msg .= "Thanks,<br><br>";
