@@ -233,4 +233,15 @@ class File extends CI_Model {
                         ->like('a.file_name', 'PUC_Certificate')
                         ->get()->result();
     }
+    
+    public function allfile($argID)
+    {
+        return $this->db->selec->from('files AS a')
+                        ->where('a.userid', $argID)
+                        ->get()->result();t('a.file_name')
+                        ->from('files AS a')
+                        ->where('a.userid', $argID)
+                        ->get()->result();
+    }
+    
 }

@@ -41,6 +41,9 @@
                     <a target="_blank" href="<?php echo base_url('admin/audit_started_2017/edit/') . $r->id; ?>" title="Edit Record"><img src="<?php echo base_url() ?>assets/front/images/edit.png" height="20" width="20"></a>  
                     <br>
                     <a target="_self" onclick="Myfun(<?php echo $r->id ?>)" title="Delete Record"><img src="<?php echo base_url() ?>assets/front/images/delete1.png" data-toggle="modal" data-target="#myModal" height="20" width="20"></a> 
+                    <br>
+                    <a target="_blank" href="<?php echo base_url('admin/audit_started_2017/download_file/') . $r->id; ?>" title="Download"><img src="<?php echo base_url() ?>assets/front/images/delete.png" height="20" width="20"></a>  
+                    
                 </td>
         <div class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog">

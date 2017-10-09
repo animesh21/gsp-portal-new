@@ -293,6 +293,30 @@ class Audit_started_2017 extends CI_Controller {
         }
         redirect(base_url('admin/audit_started_2017/edit/'.$argSchoolID), 'refresh');
     }
+    
+    public function download_file($argID){
+        $this->load->helper('download');
+        $this->load->library('zip'); 
+        $data['id'] = $argID;
+        
+        $data['schoolUserID'] = $this->session->userdata('USER_ID'); // $data['school']->userid;
+        $data['all'] = $this->file->allfile(699);
+       // echo "prev";print_r($data['all']);exit;
+       
+       // $file_path = 'uploads/files';
+        
+        //$data['download_path'] = $file_path; 
+        foreach ($data['all'] as $r){
+            //print($r->file_name);die;
+            if(preg_match("/.jpg/",$r->file_name)) {
+            $image['download'][] = $r;
+            }
+        }            
+            $this->load->view("admin/download",$image);
+            //redirect("same url", "refresh"); 
+            
+            
+    }
 
 }
 
