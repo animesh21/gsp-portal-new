@@ -58,32 +58,48 @@ class Audit_started extends CI_Controller {
      */
 
     public function feedback() {
-	echo "hello";
-        
-	$config = array(
-               'protocol' => 'smtp',
-               'smtp_host' => 'ssl://smtp.gmail.com',
-               'smtp_port' => 587,
-               'smtp_user' => 'guruvachanj@gmail.com',
-                'smtp_pass' => 'chikoo!96',
-               'mailtype' => 'html',
-               'charset' => 'iso-8859-1',
-               'wordwrap' => TRUE
-           );    
-
-        $this->load->library('email', $config);
-
-        $this->email->from('guruvachanj@gmail.com', 'invoice');
-        $this->email->to('guruvachan@studiotesseract.biz');
-        $this->email->subject('Invoice');
-        $this->email->message('Test');
-        
-        $this->email->send();
-       echo $this->email->print_debugger();      
+        $data['main'] = 'admin/audit/feedback';
+        $data['title'] = 'Home | Send Feedback';
+        $data['school'] = $this->Audit_started_model->getCordinatorsEmail();
+        $this->form_validation->set_rules('subject', 'Subject', 'required');
+        if ($this->form_validation->run() == FALSE) {
+            $this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');
+        } else {
+            
+            $this->load->library('email');
+            $config['mailtype'] = 'html';
+            $this->email->initialize($config);
+            $from = "support@greenschoolsprogramme.org";
+            $record = $this->input->post('email');
+            $subject = $this->input->post('subject');
+	    $message=$this->input->post('message');
+        for ($i = 0; $i < count($record); $i++) {
+			 
+            $rec[]=explode(',', $record[$i]);
+        }
+        for ($i = 0; $i < count($record); $i++) {
+            $arrMails[]=$rec[$i][0];
+            $arrMsg[]=$rec[$i][1];
+        }    //$arrMails = array($query->schoolemail, $query->coemail, 'nirma.bora@cseindia.org', 'ranjita@cseindia.org', 'aditi.sharma@cseindia.org', 'studiotesseractst@gmail.com');
+            $to = $arrMails;
+            $msg = "Dear &nbsp;";
+            $msg .= "School," . "<br/><br/>";
+            $msg .= $message . "," . "<br/><br/>";
+            $msg .= "URL: http://www.greenschoolsprogramme.org/audit2017 <br/><br/>";
+            $msg .= "In case of any further queries please feel free to write back to us.<br><br>";
+            $msg .= "Thanks,<br><br>";
+            
+            $this->email->to($to);
+            $this->email->from($from, "GSP Team");
+            $this->email->subject($subject);
+            $this->email->message($msg);
+            $this->email->send();
+              
+           
 		   
-        
+        }
+        $this->load->view('admin/includes/template', $data);
     }
-
     /*
      * Success Message
      */
