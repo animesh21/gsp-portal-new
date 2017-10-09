@@ -67,7 +67,7 @@ class Audit_started extends CI_Controller {
                'smtp_user' => 'guruvachanj@gmail.com',
                 'smtp_pass' => 'chikoo!96',
                'mailtype' => 'html',
-               'charset' => 'utf-8',
+               'charset' => 'iso-8859-1',
                'wordwrap' => TRUE
            );    
 
