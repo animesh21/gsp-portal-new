@@ -83,7 +83,7 @@ class Audit_started extends CI_Controller {
             );
             $this->load->library('email', $config);
             $this->email->set_newline("\r\n");
-		*/	
+		
 		//$this->load->library('email');
 		    //$record = $this->input->post('email');
 		$record= 'guruvachanj@gmail.com';	
