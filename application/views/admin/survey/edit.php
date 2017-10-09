@@ -80,6 +80,19 @@
                             <input type="text" class="form-control text empty" name="city" id="username" tabindex="1"
                                    placeholder="City" value="<?php echo ($school->city != '') ? $school->city : ""; ?>">
                         </div>
+			<div class="form-group">
+                            <label for="landline" class="control-label"><span class="cube">16</span>Landline number:</label>
+                            <div class="clearfix">&nbsp;</div>
+                            <div class="cName cCode">
+                                <input type="text" name="country_code" id="tisd" class="form-control placeholder"value="<?php echo set_value('country_code', '+91'); ?>" placeholder="Country Code" readonly>
+                            </div>
+                            <div class="cEmail iniCname">
+                                <input type="text" name="std" id="tstd" class="form-control placeholder" value="<?php echo ($school->std != '') ? $school->std : ""; ?>" placeholder="STD">
+                           </div>
+                           <div class="mNumber">
+                               <input type="text" name="telephone" class="form-control placeholder" value="<?php echo ($school->telephone != '') ? $school->telephone : ""; ?>" placeholder="Landline Number*">
+                          </div>    
+                        </div>    
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
