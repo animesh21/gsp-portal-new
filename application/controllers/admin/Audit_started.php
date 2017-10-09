@@ -63,7 +63,7 @@ class Audit_started extends CI_Controller {
 	$config = array(
                'protocol' => 'smtp',
                'smtp_host' => 'ssl://smtp.gmail.com',
-               'smtp_port' => 465,
+               'smtp_port' => 587,
                'smtp_user' => 'guruvachanj@gmail.com',
                 'smtp_pass' => 'chikoo!96',
                'mailtype' => 'html',
