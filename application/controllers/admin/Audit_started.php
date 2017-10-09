@@ -68,59 +68,26 @@ class Audit_started extends CI_Controller {
         if ($this->form_validation->run() == FALSE) {
             $this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');
         } else {
-            //echo '<pre>';
-            //print_r($this->input->post());
-            //exit;
-             $config = Array(
-                'protocol' => 'smtp',
-                'smtp_host' => 'ssl://smtp.googlemail.com',
-                'smtp_port' => 465,
-                'smtp_user' => '7417rohitarora@gmail.com',
-                'smtp_pass' => '1rohitarora',
-                'mailtype' => 'html',
-                'charset' => 'utf-8',
-                'wordwrap' => TRUE
-            );
-            $this->load->library('email', $config);
-            $this->email->set_newline("\r\n");
-		
-		//$this->load->library('email');
-		    //$record = $this->input->post('email');
-		$record= 'guruvachanj@gmail.com';	
-           // for ($i = 0; $i < count($record); $i++) { 
-             //   $rec=explode(',', $record[$i]);
-	
-			 // Set to, from, message, etc.
-		$from = "7417rohitarora@gmail.com";
-		$args_admin="Green School";
-                $subject = $this->input->post('subject');
-		$message1=$this->input->post('message');
-		//$data['messag']=array($rec[0],$rec[1],$from,$subject,$message);
-	       //$msg = $this->load->view('admin/audit/template', $data, true);
-               $this->email->clear();
-               $to =$this->email->to($record);
-	       $this->email->from($from, "GSP Team");
-               $this->email->subject($subject);
-	      // $headers .= "MIME-Version: 1.0\r\n";
-               //$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
-               //$headers .= "From: " . $args_admin . "<" . $from . ">" . "\r\n";
-	       //$message= "Hii $rec[1] ,\n";
-	       $message= "Hii ,\n";
-	       $message .="Subject: $subject \n";
-		$message .="Message: $message1"; 
-		$s=$this->email->send();
-		if($s){
-		echo 'hello';
-		}	
-	      // $s=mail($record[0],$subject,$message,$headers);
-			
-		 /*  print_r($m);exit;
-			if( $this->email->send())
-			{
-				
-			}*/
-		  
-          //}
+            $config = Array(
+            'protocol'  => 'smtp',
+            'smtp_host' => 'ssl://smtp.googlemail.com',
+            'smtp_port' => '465',
+            'smtp_user' => 'guruvachanj@gmail.com',
+            'smtp_pass' => 'Chikoo!96',
+            'mailtype'  => 'html',
+            'starttls'  => true,
+            'newline'   => "\r\n"
+        );
+
+        $this->load->library('email', $config);
+
+        $this->email->from('guruvachanj@gmail.com', 'invoice');
+        $this->email->to('guruvachan@studiotesseract.biz');
+        $this->email->subject('Invoice');
+        $this->email->message('Test');
+        echo $this->email->print_debugger();
+        $this->email->send();
+             
 		   
         }
         $this->load->view('admin/includes/template', $data);
