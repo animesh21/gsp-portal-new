@@ -78,7 +78,7 @@ class Audit_started extends CI_Controller {
             $rec=explode(',', $record[$i]);
 	//$to = $arrMails;
             $msg = "Dear &nbsp;";
-            $msg .= "School,".rec[1]."<br/><br/>";
+            $msg .= "School,".$rec[1]."<br/><br/>";
             $msg .= "Message: &nbsp; &nbsp; ".$message . "," . "<br/><br/>";
             
             $msg .= "In case of any further queries please feel free to write back to us.<br><br>";
