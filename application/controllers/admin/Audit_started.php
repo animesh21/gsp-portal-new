@@ -78,13 +78,13 @@ class Audit_started extends CI_Controller {
             $rec=explode(',', $record[$i]);
 	//$to = $arrMails;
             $msg = "Dear &nbsp;";
-            $msg .= "School,".rec[$i][1]."<br/><br/>";
+            $msg .= "School,".rec[1]."<br/><br/>";
             $msg .= "Message: &nbsp; &nbsp; ".$message . "," . "<br/><br/>";
             
             $msg .= "In case of any further queries please feel free to write back to us.<br><br>";
             $msg .= "Thanks,<br><br>";
             
-            $this->email->to($rec[$i][0]);
+            $this->email->to($rec[0]);
             $this->email->from($from, "GSP Team");
             $this->email->subject($subject);
             $this->email->message($msg);
