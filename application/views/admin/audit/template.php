@@ -367,14 +367,14 @@ Sizes: [
                                                                 <tr>
                                                                     <td valign="top" width="500" class="flexibleContainerCell">
 																	<?php //print_r($messag);exit;?>
-                                                                        <h3>Hi <?php echo $messag[1];?></h3>
+                                                                        <h3>Hi <?php echo $school;?></h3>
 																		<b>message from</b>
-																		</br><?php echo $messag[2];?>
+																		</br><?php echo $from;;?>
 																		<br/>
 																		<b>subject</b><br/>
-																		<?php echo $messag[3];?><br/>
+																		<?php echo $subject;?><br/>
 																		<b>Message</b><br/>
-																		<?php echo $messag[4];?>
+																		<?php echo $message;?>
 																		  
                                                                     </td>
                                                                 </tr>
