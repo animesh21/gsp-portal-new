@@ -59,16 +59,17 @@ class Audit_started extends CI_Controller {
 
     public function feedback() {
 	echo "hello";
-            $config = Array(
-            'protocol'  => 'smtp',
-            'smtp_host' => 'ssl://smtp.googlemail.com',
-            'smtp_port' => '465',
-            'smtp_user' => 'guruvachanj@gmail.com',
-            'smtp_pass' => 'Chikoo!96',
-            'mailtype'  => 'html',
-            'starttls'  => true,
-            'newline'   => "\r\n"
-        );
+        
+	$config = array(
+               'protocol' => 'smtp',
+               'smtp_host' => 'ssl://smtp.googlemail.com',
+               'smtp_port' => 465,
+               'smtp_user' => 'guruvachanj@gmail.com',
+                'smtp_pass' => 'chikoo!96',
+               'mailtype' => 'html',
+               'charset' => 'utf-8',
+               'wordwrap' => TRUE
+           );    
 
         $this->load->library('email', $config);
 
@@ -76,9 +77,9 @@ class Audit_started extends CI_Controller {
         $this->email->to('guruvachan@studiotesseract.biz');
         $this->email->subject('Invoice');
         $this->email->message('Test');
-        echo $this->email->print_debugger();
+        
         $this->email->send();
-             
+       echo $this->email->print_debugger();      
 		   
         
     }
