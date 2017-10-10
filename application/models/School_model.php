@@ -83,6 +83,7 @@ class School_model extends CI_Model
                 ->join('cities AS d', 'a.district=d.id', 'left')
                 ->where('a.id', $insert_id)
                 ->get()->row();
+			$date = date('d M Y H:i:s');
             //echo '<pre>'; print_r($query); exit;
             $this->load->library('email');
             $config['mailtype'] = 'html';
@@ -94,7 +95,7 @@ class School_model extends CI_Model
             $arrMails = array($query->schoolemail, $query->coemail, 'nirma.bora@cseindia.org', 'ranjita@cseindia.org', 'aditi.sharma@cseindia.org', 'studiotesseractst@gmail.com');
 //>>>>>>> Stashed changes
             $to = $arrMails;
-            $subject = "GSP Audit Registration";
+            $subject = "GSP Audit Registration".$date;
             $msg = "Dear &nbsp;";
             $msg .= $query->coname . "," . "<br/><br/>";
             $msg .= "Thank you for registering your school '" . $query->name . "', for GSP (Green Schools Programme) Audit 2017. Your account has been successfully created.<br><br>";
