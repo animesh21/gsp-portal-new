@@ -42,8 +42,14 @@ class User_model extends CI_Model
             'password' => $argPost['Password'],
             'username' => $argPost['username']
         );
+		 $query1 = $this->db->select('COUNT(*) as count')
+                ->from('gsp_user')
+                ->where('email', $argPost['email'])    
+                ->get()->result();
+        
+        if($query1[0]->count==0){
         $this->db->insert('gsp_user', $update);//insert if does not exist
-
+        }
         $query = $this->db
             ->select('id')
             ->from('gsp_user')
