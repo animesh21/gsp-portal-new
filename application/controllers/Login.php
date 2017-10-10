@@ -38,6 +38,7 @@ class Login extends CI_Controller {
         $data['states'] = $this->User_model->getStates();
         $this->form_validation->set_rules('captcha', 'Captcha', 'callback_validate_captcha');
         $this->form_validation->set_rules('state', 'State', 'required');
+		$this->form_validation->set_rules('coemail', 'Cordinator Email', 'required|valid_email|is_unique[gsp_school.coemail]');
         if ($this->form_validation->run() == FALSE) {
             $this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');
             $this->load->helper('captcha');
