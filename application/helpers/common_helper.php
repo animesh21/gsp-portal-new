@@ -768,24 +768,24 @@ if (!function_exists('getWaterPoints')) {
                 $water_points['reuse-water'] = 5;
             }
         }
-        if (!empty(getFiled('Q9W1', $argUserID))) {
+        if (!empty(getFiled('Q9W1', $argUserID)) && getFiled('Q9W1', $argUserID)!=0) {
             $load_drinking_water_tap = ($total_population / getFiled('Q9W1', $argUserID));
         
         if ($load_drinking_water_tap < 50) {
             $water_points['load_drinking_water_tap'] = 1;
         }
     }
-        if (!empty(getFiled('Q11W1', $argUserID))) {
+        if (!empty(getFiled('Q11W1', $argUserID)) &&  getFiled('Q11W1', $argUserID)!=0) {
             $load_ablution_tap = ($total_population / getFiled('Q11W1', $argUserID));
         
         if ($load_ablution_tap < 50) {
             $water_points['load_ablution_tap'] = 1;
         }
     } 
-        if (!empty(getFiled('Q13W1S4', $argUserID))) {
+        if (!empty(getFiled('Q13W1S4', $argUserID)) && getFiled('Q13W1S4', $argUserID)!=0) {
             $load_closets = ($total_population / getFiled('Q13W1S4', $argUserID));
         
-        if (!empty(getFiled('Q14W1', $argUserID))) {
+        if (!empty(getFiled('Q14W1', $argUserID)) && getFiled('Q14W1', $argUserID)!=0 ) {
             $load_urinals = ($total_population / getFiled('Q14W1', $argUserID));
         
         switch ($type_school) {
