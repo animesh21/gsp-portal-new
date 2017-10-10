@@ -18,6 +18,7 @@ class Audit_started_2017 extends CI_Controller {
         $this->load->helper(array('download', 'common_helper', 'form'));
         $this->load->model('admin/Audit_started_model');
         $this->session->userdata('USER_ID') == '';
+	$this->load->helper('date');    
     }
 
     public function index() {
@@ -270,6 +271,9 @@ class Audit_started_2017 extends CI_Controller {
             'district'=>$this->input->post('district'),
             'city'=>$this->input->post('city'),
             'pincode'=>$this->input->post('pincode'),
+	     'std'=>$this->input->post('std'),
+            'telephone'=>$this->input->post('telephone'),
+            'schoolemail'=>$this->input->post('schoolemail'),	
             'mobile'=>$this->input->post('mobile'),
             'principle_name'=>$this->input->post('principle_name'),
             'coname'=>$this->input->post('coname'),
