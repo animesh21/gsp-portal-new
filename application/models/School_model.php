@@ -83,7 +83,7 @@ class School_model extends CI_Model
                 ->join('cities AS d', 'a.district=d.id', 'left')
                 ->where('a.id', $insert_id)
                 ->get()->row();
-			$date = date('d M Y H:i:s');
+			$date = date('d M Y');
             //echo '<pre>'; print_r($query); exit;
             $this->load->library('email');
             $config['mailtype'] = 'html';
