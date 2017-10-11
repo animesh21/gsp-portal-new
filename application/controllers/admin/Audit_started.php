@@ -111,6 +111,53 @@ class Audit_started extends CI_Controller {
         }
         $this->load->view('admin/includes/template', $data);
     }
+	
+     public function feedback1() {
+        $data['main'] = 'admin/audit/feedback1';
+        $data['title'] = 'Home | Send Feedback';
+        $data['school'] = $this->Audit_started_model->getCordinatorsEmail();
+        $this->form_validation->set_rules('subject', 'Subject', 'required');
+        if ($this->form_validation->run() == FALSE) {
+            $this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');
+        } else {
+            
+            $this->load->library('email');
+            $config['mailtype'] = 'html';
+            $this->email->initialize($config);
+            $from = "support@greenschoolsprogramme.org";
+            $record = $this->input->post('email');
+            $subject = $this->input->post('subject');
+	    $message=$this->input->post('message');
+        for ($i = 0; $i < count($record); $i++) {
+			 
+            $rec=explode(',', $record[$i]);
+	   // $msg = "Dear &nbsp;";
+           // $msg .= "School,".$rec[1]."<br/><br/>";
+           // $msg .= "Message: &nbsp; &nbsp; ".$message . "," . "<br/><br/>";
+            
+          //  $msg .= "In case of any further queries please feel free to write back to us.<br><br>";
+            //$msg .= "Thanks,<br><br>";
+	    $data['from']=$from;
+            $data['school']=$rec[0][1];
+            $data['message']=$message;
+            $data['subject']=$subject;
+            $msg  = $this->load->view('admin/audit/template', $data,TRUE);
+            
+            $this->email->to($rec[0]);
+            $this->email->from($from, "GSP Team");
+            $this->email->subject($subject);
+            $this->email->message($msg);
+            $this->email->send();	
+		
+        }
+         //$arrMails = array($query->schoolemail, $query->coemail, 'nirma.bora@cseindia.org', 'ranjita@cseindia.org', 'aditi.sharma@cseindia.org', 'studiotesseractst@gmail.com');
+            
+              
+           
+		   
+        }
+        $this->load->view('admin/includes/template', $data);
+    }	
     /*
      * Success Message
      */
