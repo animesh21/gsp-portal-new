@@ -1429,7 +1429,7 @@ if (isset($data['Q9E1']))
                                 }
                             });
                         });
-	/delete  files
+	//delete  files
         $('body').on('click', '.air-delete-files', function (data) {
             var test = confirm("Are you sure you want to delete this file");
             if (test == true)
