@@ -1429,8 +1429,36 @@ if (isset($data['Q9E1']))
                                 }
                             });
                         });
-                        
-                        
-                    });
+	//delete  files
+        $('body').on('click', '.air-delete-files', function (data) {
+            var test = confirm("Are you sure you want to delete this file");
+            if (test == true)
+            {
+                var divId = $(this).attr('data-id');
+                $.ajax({
+                    url: '<?php echo base_url('upload_files/deletFiles') ?>',
+                    type: 'POST',
+                    data: {id: $(this).attr('data-id')},
+                    success: function (data)
+                    {
+                        if (data == "success")
+                        {
+                            console.log('index' + divId);
+                            $('#msg').html('<div class="alert alert-success">' +
+                                    '<strong>&#10004; Success!</strong> Files deleted successfully.' +
+                                    '</div>');
+                            $('#index' + divId).html('');
+                        } else if (data == "error")
+                        {
+                            $('#msg').html('<div class="alert alert-danger">' +
+                                    '<strong>&#x2716; Error!</strong> There is an error deleting your files.' +
+                                    '</div>');
+                        }
+                    }
+                });
+            }
+        });
+			    
+     });
 
                 </script>
