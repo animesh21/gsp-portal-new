@@ -43,7 +43,7 @@ class User_model extends CI_Model
             'username' => $argPost['username']
         );
         $this->db->insert('gsp_user', $update);//insert if does not exist
-
+        
         $query = $this->db
             ->select('id')
             ->from('gsp_user')

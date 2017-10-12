@@ -295,6 +295,6 @@ class Audit_started_model extends CI_Model {
     public function getCorEmail()
     {
         return $this->db->get('mail')->result();
-    }	
-
-}
+    }
+   
+          }

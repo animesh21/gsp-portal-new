@@ -80,7 +80,7 @@
                             <input type="text" class="form-control text empty" name="city" id="username" tabindex="1"
                                    placeholder="City" value="<?php echo ($school->city != '') ? $school->city : ""; ?>">
                         </div>
-                    </div>
+                            </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="pincode" class="control-label"><span class="cube">8</span>Pin Code:</label>

@@ -245,7 +245,7 @@ class Audit_started_2017 extends CI_Controller {
         $data['schoolUserID'] = $data['school']->userid;
         $this->load->view('admin/survey/feedback', $data);
     }
-	public function edit($argID) {
+    public function edit($argID) {
        $data['title'] = 'Home | Edit';
        $data['main'] = 'admin/survey/edit';
        $data['states'] = $this->User_model->getStates();
@@ -261,7 +261,7 @@ class Audit_started_2017 extends CI_Controller {
      * Update Function
      */
     public function update($argSchoolID, $argUserID)
-    {
+    {   
         $arrSchool=array(
             'name'=>$this->input->post('name'),
             'address1'=>$this->input->post('address1'),
@@ -296,25 +296,11 @@ class Audit_started_2017 extends CI_Controller {
     
     public function download_file($argID){
         $this->load->helper('download');
-        $this->load->library('zip'); 
-        $data['id'] = $argID;
         
-        $data['schoolUserID'] = $this->session->userdata('USER_ID'); // $data['school']->userid;
-        $data['all'] = $this->file->allfile(699);
-       // echo "prev";print_r($data['all']);exit;
-       
-       // $file_path = 'uploads/files';
-        
-        //$data['download_path'] = $file_path; 
-        foreach ($data['all'] as $r){
-            //print($r->file_name);die;
-            if(preg_match("/.jpg/",$r->file_name)) {
-            $image['download'][] = $r;
-            }
-        }            
-            $this->load->view("admin/download",$image);
-            //redirect("same url", "refresh"); 
-            
+        $data = file_get_contents(base_url()."/uploads/files/".$argUserID); // Read the file's contents
+        $name = $argUserID;
+ 
+        force_download($name, $data);    
             
     }
 

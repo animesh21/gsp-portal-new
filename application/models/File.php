@@ -236,9 +236,7 @@ class File extends CI_Model {
     
     public function allfile($argID)
     {
-        return $this->db->selec->from('files AS a')
-                        ->where('a.userid', $argID)
-                        ->get()->result();t('a.file_name')
+        return $this->db->select('a.file_name')
                         ->from('files AS a')
                         ->where('a.userid', $argID)
                         ->get()->result();

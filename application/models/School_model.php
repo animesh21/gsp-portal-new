@@ -36,13 +36,8 @@ class School_model extends CI_Model
                 'coname' => $row->coname,
                 'coemail' => $row->coemail,
                 'comobile' => $row->comobile,
-//<<<<<<< Updated upstream
                 'progress'=>$row->progress,
 
-//            );
-//=======
-//                'progress' => $row->progress,
-//>>>>>>> Stashed changes
 
             );
             return $school;
@@ -88,13 +83,10 @@ class School_model extends CI_Model
             $config['mailtype'] = 'html';
             $this->email->initialize($config);
             $from = "support@greenschoolsprogramme.org";
-//<<<<<<< Updated upstream
-           // $arrMails=array($query->schoolemail, $query->coemail);
-//=======
             $arrMails = array($query->schoolemail, $query->coemail, 'nirma.bora@cseindia.org', 'ranjita@cseindia.org', 'aditi.sharma@cseindia.org', 'studiotesseractst@gmail.com');
-//>>>>>>> Stashed changes
+
             $to = $arrMails;
-            $subject = "GSP Audit Registration";
+            $subject = "GSP Audit Registration".$date;
             $msg = "Dear &nbsp;";
             $msg .= $query->coname . "," . "<br/><br/>";
             $msg .= "Thank you for registering your school '" . $query->name . "', for GSP (Green Schools Programme) Audit 2017. Your account has been successfully created.<br><br>";
