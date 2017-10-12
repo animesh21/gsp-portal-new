@@ -78,7 +78,7 @@ class Audit_started extends CI_Controller {
             $this->load->library('email');
             $config['mailtype'] = 'html';
             $this->email->initialize($config);
-            $from = "support@greenschoolsprogramme.org";
+            $from = "chikoodaphnis@gmail.com";
             $record = $this->input->post('email');
             $subject = $this->input->post('subject');
 	    $message=$this->input->post('message');
