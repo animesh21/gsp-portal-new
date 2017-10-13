@@ -201,6 +201,7 @@
                         <tr>
                             <th>image</th>
                             <th>File name</th>
+                            <th>Download</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -208,6 +209,8 @@
                             <tr>
                                 <td><img src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
                                 <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Electricity_Bill_"), " ", $a->file_name); ?></td>
+                                <td><a href="<?php echo base_url() ?>admin/audit_started_2017/download_file/<?php echo $a->file_name ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+                       
                             </tr>
                         <?php } ?>
                     </tbody>
@@ -322,6 +325,7 @@
                         <tr>
                             <th>image</th>
                             <th>File name</th>
+                            <th>Download</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -329,6 +333,8 @@
                             <tr>
                                 <td><img src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
                                 <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Fuels_Bills_"), " ", $a->file_name); ?></td>
+                                <td><a href="<?php echo base_url() ?>admin/audit_started_2017/download_file/<?php echo $a->file_name ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+                       
                             </tr>
                         <?php } ?>
                     </tbody>
@@ -365,6 +371,7 @@
                         <tr>
                             <th>image</th>
                             <th>File name</th>
+                            <th>Download</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -372,6 +379,8 @@
                             <tr>
                                 <td><img src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
                                 <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Five_Star_Appliances_"), " ", $a->file_name); ?></td>
+                                <td><a href="<?php echo base_url() ?>admin/audit_started_2017/download_file/<?php echo $a->file_name ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+                       
                             </tr>
                         <?php } ?>
                     </tbody>
@@ -412,6 +421,7 @@
                         <tr>
                             <th>image</th>
                             <th>File name</th>
+                            <th>Download</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -419,6 +429,8 @@
                             <tr>
                                 <td><img src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
                                 <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Alternative_Source_of_Energy_"), " ", $a->file_name); ?></td>
+                                <td><a href="<?php echo base_url() ?>admin/audit_started_2017/download_file/<?php echo $a->file_name ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+                       
                             </tr>
                         <?php } ?>
                     </tbody>
@@ -481,6 +493,7 @@
                     <tr>
                         <th>image</th>
                         <th>File name</th>
+                        <th>Download</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -488,6 +501,8 @@
                         <tr>
                             <td><img src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
                             <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Supporting_Document_Energy_"), " ", $a->file_name); ?></td>
+                            <td><a href="<?php echo base_url() ?>admin/audit_started_2017/download_file/<?php echo $a->file_name ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+                       
                         </tr>
                     <?php } ?>
                 </tbody>
