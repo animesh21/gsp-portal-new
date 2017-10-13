@@ -299,8 +299,7 @@ class Audit_started_2017 extends CI_Controller {
     }
     
     public function download_file($argID){
-	echo 'hello';die;    
-        $this->load->helper('download');
+	$this->load->helper('download');
         
         $data = file_get_contents(base_url()."/uploads/files/".$argUserID); // Read the file's contents
         $name = $argUserID;
