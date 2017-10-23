@@ -2067,18 +2067,18 @@
                                                                                                                     <li>
                                                                                                                         <label class="radio-inline text-gray">
                                                                                                                             <input type="radio"
-                                                                                                                                   name="Q10F1"
+                                                                                                                                   name="Q9F2"
                                                                                                                                    onclick="ComputePackaged(1)"
-                                                                                                                                   value="<?php echo set_value('Q10F1', 'Y') ?>" <?php if (isset($data['Q10F1'])) echo $data['Q10F1'] == 'Y' ? "checked" : "" ?>>
+                                                                                                                                   value="<?php echo set_value('Q9F2', 'Y') ?>" <?php if (isset($data['Q9F2'])) echo $data['Q9F2'] == 'Y' ? "checked" : "" ?>>
                                                                                                                             Yes
                                                                                                                         </label>
                                                                                                                     </li>
                                                                                                                     <li>
                                                                                                                         <label class="radio-inline text-gray">
                                                                                                                             <input type="radio"
-                                                                                                                                   name="Q10F1"
+                                                                                                                                   name="Q9F2"
                                                                                                                                    onclick="ComputePackaged(2)"
-                                                                                                                                   value="<?php echo set_value('Q10F1', 'N') ?>" <?php if (isset($data['Q10F1'])) echo $data['Q10F1'] == 'N' ? "checked" : "" ?>/>
+                                                                                                                                   value="<?php echo set_value('Q9F2', 'N') ?>" <?php if (isset($data['Q9F2'])) echo $data['Q9F2'] == 'N' ? "checked" : "" ?>/>
                                                                                                                             No
                                                                                                                         </label>
                                                                                                                     </li>
