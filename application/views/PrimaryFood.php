@@ -2678,7 +2678,7 @@
                                                                                                         <tbody>
                                                                                                         <?php foreach ($uppc as $u) { ?>
                                                                                                             <tr id="index<?php echo $u->id; ?>">
-                                                                                                                <?php $name = str_replace(" ", "_", $f->name . "_UPPF_"); ?>
+                                                                                                                <?php $name = str_replace(" ", "_", $u->name . "_UPPF_"); ?>
                                                                                                                 <td class="upload edit"><?php echo str_replace($name, "", $u->file_name); ?></td>
                                                                                                                 <td>
                                                                                                                     <a href="javascript:void(0)"
