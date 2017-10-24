@@ -636,6 +636,7 @@
                     <!--                    School Category-->
                     <td>
                         <?php
+		    ini_set('display_errors', 1);
                         $arr = array(
                             '1' => 'Day Scholar',
                             '2' => 'Day Boarding',
