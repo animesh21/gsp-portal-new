@@ -3886,8 +3886,7 @@ function Toilets()
             CommonVal = 0;
         else
             CommonVal = CommonPlace;
-	var a = GirlsVal+BoysVal+CommonVal;
-	alert(a);
+	
     $("#Q13W1S4").val(GirlsVal+BoysVal+CommonVal);
 
 }
