@@ -308,10 +308,10 @@ public function excel2017() {
     public function download_file($argID){
 	$this->load->helper('download');
         
-        $data = file_get_contents(base_url()."/uploads/files/".$argUserID); // Read the file's contents
+        $data =base_url()."/uploads/files/".$argUserID; // Read the file's contents
         $name = $argUserID;
  
-        force_download($name, $data);    
+        force_download($data,NULL);    
             
     }
 
