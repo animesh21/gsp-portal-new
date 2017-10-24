@@ -32,11 +32,14 @@
             <th>S.No</th>
             <th>Sch.Id</th>
             <th>School Name</th>
+			<th>Pincode</th>
             <th>State</th>
             <th>City</th>
+			<th>District</th>
             <th>Co-ord. Name</th>
             <th>Co-ord. Email</th>
             <th>Co-ord. Mobile</th>
+			<th>Progress</th>
 <!--            <th>Completeness</th>-->
 <!--            <th>Reg. Date</th>-->
             <th>Action</th>
@@ -50,11 +53,15 @@
                 <td><?php echo $i; ?></td>
                 <td><?php echo $r->id; ?></td>
                 <td><?php echo $r->name; ?></td>
+				<td><?php echo $r->pincode; ?></td>
                 <td><?php echo $r->state_name; ?></td>
                 <td><?php echo $r->city; ?></td>
+				<td><?php echo $r->district_name; ?></td>
+					
                 <td><?php echo $r->coname; ?></td>
                 <td><?php echo $r->coemail; ?></td>
                 <td><?php echo $r->comobile; ?></td>
+				 <td><?php echo $r->progress; ?></td>
                 <td class="action"><a target="_blank" href="#" title="View Responses"><img src="<?php echo base_url() ?>assets/front/images/1446146277_view6.png"></a></td>
             </tr>
             <?php $i++;
