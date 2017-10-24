@@ -58,8 +58,7 @@
                             '5'=>'Others'
                         );
                     ?>
-                    <?php echo (getFiled('Q3G1', $schoolUserID)!="") ?
-                        $arrBoard[getFiled('Q3G1', $schoolUserID)] : ""; ?>
+                   
                 </p>
             </div>
 
