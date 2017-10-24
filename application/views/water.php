@@ -2314,9 +2314,7 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
       <label class="text-gray"> Girls</label>
       <input class="form-control space-textbox" onKeyUp="Toilets()" id="Q13W1S1"
                                            type="number" min="0" name="Q13W1S1"
-                                           placeholder="<?php 
-														//if (isset($data['Q13W1S1']))// 
-														echo $data['Q13W1S1'] ?>"
+                                           placeholder="<?php if (isset($data['Q13W1S1'])) echo $data['Q13W1S1'] ?>"
                                            value="<?php echo set_value('Q13W1S1'); ?>"/>
     </div>
     <div class="col-xs-2">
