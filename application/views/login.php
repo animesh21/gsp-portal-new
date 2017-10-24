@@ -76,7 +76,7 @@
                         <p>If you would like to register, please visit our <a href="<?php echo base_url('register') ?>"
                                                                               target="_blank">registration page.</a></p>
                         <!--<p>GSP Audit 2016 Questions <a href='http://www.greenschoolsprogramme.org/GSP-Audit2016-Questions.pdf' target='_blank'>click here</a></p>-->
-                        <p class="deadline">Deadline to submit the audit is Friday, 17 November,2017.</p>
+                        <p class="deadline">Deadline to submit the audit is Friday,November 17,2017.</p>
                         <p class="errortext"></p>
                         <?php
                         if($this->session->flashdata('error'))
