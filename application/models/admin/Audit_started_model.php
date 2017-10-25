@@ -142,7 +142,7 @@ class Audit_started_model extends CI_Model {
     public function getStateWiseSchool($state,$school) {
        // $sql="SELECT * FROM `gsp_school` WHERE `userid` IN ?";
        //SELECT a.userid,a.name,a.principle_name,s.name,a.id FROM states AS s,gsp_school AS a INNER JOIN gsp_answers as b on a.userid=b.userid WHERE b.questionid='Q1G2' AND b.answer>5 AND s.id= a.state;
-      
+      echo $state $school;die;
       if($state != 0 && $school != 2){
         if($school==1){  
         $sql= $this->db->select('a.*,s.name as state_name,c.name As district_name')
