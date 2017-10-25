@@ -145,9 +145,10 @@ class Audit_started_model extends CI_Model {
       
       if($state != 0 && $school != 2){
         if($school==1){  
-        $sql= $this->db->select('a.*,s.name as state_name')
+        $sql= $this->db->select('a.*,s.name as state_name,c.name As district_name')
                        ->from('gsp_school AS a')
                         ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
+			->join('cities AS c', 'a.district=c.id', 'left')
                         ->join('states AS s','a.state=s.id')
                         ->where('b.questionid','Q1G2')
                         ->where('b.answer >',5)
@@ -158,9 +159,10 @@ class Audit_started_model extends CI_Model {
         return $sql;
             
         }elseif ($school==0) {
-                $sql= $this->db->select('a.*,s.name as state_name')
+                $sql= $this->db->select('a.*,s.name as state_name,c.name As district_name')
                         ->from('gsp_school AS a')
                         ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
+			->join('cities AS c', 'a.district=c.id', 'left')
                         ->join('states AS s','a.state=s.id')
                         ->where('b.questionid','Q1G2')
                         ->where('b.answer <',6)
@@ -173,11 +175,12 @@ class Audit_started_model extends CI_Model {
         
       }elseif ($state == 0 && $school != 2) {
           if($school==1){  
-        $sql= $this->db->select('a.*,s.name as state_name')
+        $sql= $this->db->select('a.*,s.name as state_name,c.name As district_name')
                         ->from('states AS s')
                         ->from('gsp_school AS a')
                         ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
-                        ->where('b.questionid','Q1G2')
+			->join('cities AS c', 'a.district=c.id', 'left')
+			->where('b.questionid','Q1G2')
                         ->where('b.answer >',5)
                         ->where('s.id= a.state')
                         ->order_by('a.id', 'desc')
@@ -186,10 +189,11 @@ class Audit_started_model extends CI_Model {
             return $sql;
             
         }elseif ($school==0) {
-                $sql= $this->db->select('a.*,s.name as state_name')
+                $sql= $this->db->select('a.*,s.name as state_name,c.name As district_name')
                         ->from('states AS s')
                         ->from('gsp_school AS a')
                         ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
+			->join('cities AS c', 'a.district=c.id', 'left')
                         ->where('b.questionid','Q1G2')
                         ->where('b.answer <',6)
                         ->where('s.id= a.state')
@@ -201,9 +205,10 @@ class Audit_started_model extends CI_Model {
             }
             
         }elseif ($state != 0 && $school == 2) {
-           $sql = $this->db->select('a.*, b.name AS state_name')
+           $sql = $this->db->select('a.*, b.name AS state_name,c.name As district_name')
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
+		   	->join('cities AS c', 'a.district=c.id', 'left')
                         ->where('a.state', $state)
                         ->order_by('a.id', 'desc')
                         ->get()->result();
