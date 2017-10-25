@@ -50,7 +50,7 @@ class Login extends CI_Controller {
          //   echo "<script type='text/javascript'>alert('$message');</script>";
             redirect(base_url('admin/audit_started_2017'));
         }
-       //redirect(base_url('admin/audit_started_2017'));
+       redirect(base_url('admin/audit_started_2017'));
         
     }
 
