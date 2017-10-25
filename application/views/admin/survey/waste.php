@@ -599,7 +599,7 @@
                             <tr>
                                 <td><img src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
                                 <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Segregation_Source_Classrooms_"), " ", $a->file_name); ?></td>
-                                <td><a href="<?php echo base_url() ?>admin/Audit_started_2017/download_file/<?php echo $a->file_name ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+                                <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name; ?>" download="<?php echo $a->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
                        
                             </tr>
                         <?php } ?>
@@ -875,7 +875,7 @@
                             <tr>
                                 <td><img src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
                                 <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Composting_Pit_"), " ", $a->file_name); ?></td>
-                                <td><a href="<?php echo base_url() ?>admin/Audit_started_2017/download_file/<?php echo $a->file_name ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+                                <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name; ?>" download="<?php echo $a->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
                        
                             </tr>
                         <?php } ?>
@@ -1145,7 +1145,7 @@
                             <tr>
                                 <td><img src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
                                 <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Composting_Pit_"), " ", $a->file_name); ?></td>
-                                <td><a href="<?php echo base_url() ?>admin/Audit_started_2017/download_file/<?php echo $a->file_name ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+                                <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name; ?>" download="<?php echo $a->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
                        
                             </tr>
                         <?php } ?>
@@ -1657,7 +1657,7 @@
                                     <tr>
                                         <td><img src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
                                         <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Recycling_Machine_"), " ", $a->file_name); ?></td>
-                                        <td><a href="<?php echo base_url() ?>admin/Audit_started_2017/download_file/<?php echo $a->file_name ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+                                        <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name; ?>" download="<?php echo $a->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
                        
                                     </tr>
                                 <?php } ?>
@@ -2302,7 +2302,7 @@
                                     <tr>
                                         <td><img src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
                                         <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_E-Waste_"), " ", $a->file_name); ?></td>
-                                        <td><a href="<?php echo base_url() ?>admin/Audit_started_2017/download_file/<?php echo $a->file_name ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+                                        <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name; ?>" download="<?php echo $a->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
                        
                                     </tr>
                                 <?php } ?>
@@ -2368,7 +2368,7 @@
                                     <tr>
                                         <td><img src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
                                         <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_E-waste_authorised_dealer_"), " ", $a->file_name); ?></td>
-                                        <td><a href="<?php echo base_url() ?>admin/Audit_started_2017/download_file/<?php echo $a->file_name ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+                                        <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name; ?>" download="<?php echo $a->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
                        
                                     </tr>
                                 <?php } ?>
@@ -2429,7 +2429,7 @@
                                     <tr>
                                         <td><img src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
                                         <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Housekeeping_"), " ", $a->file_name); ?></td>
-                                        <td><a href="<?php echo base_url() ?>admin/Audit_started_2017/download_file/<?php echo $a->file_name ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+                                        <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name; ?>" download="<?php echo $a->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
                        
                                     </tr>
                                 <?php } ?>
@@ -2472,7 +2472,7 @@
                                     <tr>
                                         <td><img src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
                                         <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Buring_Waste_"), " ", $a->file_name); ?></td>
-                                        <td><a href="<?php echo base_url() ?>admin/Audit_started_2017/download_file/<?php echo $a->file_name ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+                                        <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name; ?>" download="<?php echo $a->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
                        
                                     </tr>
                                 <?php } ?>
@@ -2640,7 +2640,7 @@
                                     <tr>
                                         <td><img src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
                                         <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Audit_Team_Doing_Survey_Waste_"), " ", $a->file_name); ?></td>
-                                        <td><a href="<?php echo base_url() ?>admin/Audit_started_2017/download_file/<?php echo $a->file_name ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+                                        <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name; ?>" download="<?php echo $a->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
                        
                                     </tr>
                                 <?php } ?>
