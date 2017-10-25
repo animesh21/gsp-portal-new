@@ -305,15 +305,18 @@ public function excel2017() {
         redirect(base_url('admin/audit_started_2017/edit/'.$argSchoolID), 'refresh');
     }
     
-    public function download_file($argID){
-	$this->load->helper('download');
-	echo "hello";
-	    echo $argID; exit;
+  
+	public function download_file($argID){		     
+  	$this->load->helper('download');		  	
+          		          
+         $data = file_get_contents(base_url()."/uploads/files/".$argID); // Read the file's contents
+          $name = $argID;		        
+   		  
+         force_download($name, $data);    		   
+              		              
+      
 	    
-        $data =base_url()."/uploads/files/".$argID; // Read the file's contents
-        $name = $argUserID;
- 
-        force_download($data,NULL);    
+	    
             
     }
 
