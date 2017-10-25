@@ -17,7 +17,7 @@
     <div class="col-lg-5">
         <div class="input-group">
           <h5>School-Category</h5>  
-          <?php echo form_dropdown('school', array('0' => 'Primary', '1' => 'Secondary','2'=>'Please select'), $this->input->post('school'), array('class' => 'form-control', 'id' => 'school-select')); ?>
+          <?php echo form_dropdown('school', array('0' => 'Primary', '1' => 'Secondary','2'=>'Please select,'3'=>All'), $this->input->post('school'), array('class' => 'form-control', 'id' => 'school-select')); ?>
 
         </div>
 </div>
