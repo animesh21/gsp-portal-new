@@ -1380,6 +1380,162 @@ if (isset($data['Q4F1']))
         if (isset($data['Q7F1']))
             if ($data['Q7F1'] == 'Y') {
                 ?>
+							<div class="form-group" id="traditional">
+                                                                                                                <label class="control-label"><span class="cube">4(a)</span>Please
+                                                                                                                    provide
+                                                                                                                    the
+                                                                                                                    details:<a class="tt" data-tooltip="If space is limited, please create the table in a word document and upload as attachment. Option to upload has been provided at the end of the section."> <span class="badge">?</span> </a></label>
+                                                                                                                <div class="form-group row">
+                                                                                                                    <div class="col-xs-3">
+                                                                                                                        <label>Traditional
+                                                                                                                            Indian
+                                                                                                                            snacks</label>
+                                                                                                                    </div>
+                                                                                                                    <div class="col-xs-5">
+                                                                                                                        <label>Number
+                                                                                                                            of
+                                                                                                                            servings
+                                                                                                                            sold
+                                                                                                                            when
+                                                                                                                            on
+                                                                                                                            the
+                                                                                                                            menu</label>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                                <div class="form-group row">
+                                                                                                                    <div class="col-xs-3">
+                                                                                                                        <label>Samosas</label>
+                                                                                                                    </div>
+                                                                                                                    <div class="col-xs-5">
+                                                                                                                        <input class="form-control space-textbox"
+                                                                                                                               id="Q7F1S1"
+                                                                                                                               type="number"
+                                                                                                                               name="Q7F1S1"
+                                                                                                                               placeholder="<?php if (isset($data['Q7F1S1'])) echo $data['Q7F1S1'] ?>"
+                                                                                                                               value="<?php echo set_value('Q7F1S1'); ?>"/>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                                <div class="form-group row">
+                                                                                                                    <div class="col-xs-3">
+                                                                                                                        <label>Idli/vada
+                                                                                                                            and
+                                                                                                                            sambhar</label>
+                                                                                                                    </div>
+                                                                                                                    <div class="col-xs-5">
+                                                                                                                        <input class="form-control space-textbox"
+                                                                                                                               id="Q7F1S2"
+                                                                                                                               type="number"
+                                                                                                                               name="Q7F1S2"
+                                                                                                                               placeholder="<?php if (isset($data['Q7F1S2'])) echo $data['Q7F1S2'] ?>"
+                                                                                                                               value="<?php echo set_value('Q7F1S2'); ?>"/>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                                <div class="form-group row">
+                                                                                                                    <div class="col-xs-3">
+                                                                                                                        <label>Pav
+                                                                                                                            bhaji</label>
+                                                                                                                    </div>
+                                                                                                                    <div class="col-xs-5">
+                                                                                                                        <input class="form-control space-textbox"
+                                                                                                                               id="Q7F1S3"
+                                                                                                                               type="number"
+                                                                                                                               name="Q7F1S3"
+                                                                                                                               placeholder="<?php if (isset($data['Q7F1S3'])) echo $data['Q7F1S3'] ?>"
+                                                                                                                               value="<?php echo set_value('Q7F1S3'); ?>"/>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                                <div class="form-group row">
+                                                                                                                    <div class="col-xs-3">
+                                                                                                                        <label>Momos</label>
+                                                                                                                    </div>
+                                                                                                                    <div class="col-xs-5">
+                                                                                                                        <input class="form-control space-textbox"
+                                                                                                                               id="Q7F1S4"
+                                                                                                                               type="number"
+                                                                                                                               name="Q7F1S4"
+                                                                                                                               placeholder="<?php if (isset($data['Q7F1S4'])) echo $data['Q7F1S4'] ?>"
+                                                                                                                               value="<?php echo set_value('Q7F1S4'); ?>"/>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                                <div class="form-group row">
+                                                                                                                    <div class="col-xs-3">
+                                                                                                                        <label>Others</label>
+                                                                                                                    </div>
+                                                                                                                    <div class="col-xs-5">
+                                                                                                                        <input class="form-control space-textbox"
+                                                                                                                               id="Q7F1S5"
+                                                                                                                               type="number"
+                                                                                                                               name="Q7F1S5"
+                                                                                                                               placeholder="<?php if (isset($data['Q7F1S5'])) echo $data['Q7F1S5'] ?>"
+                                                                                                                               value="<?php echo set_value('Q7F1S5'); ?>"/>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                            <div class="form-group"
+                                                                                                                 id="Q7F2S1">
+                                                                                                                <label class="control-label">Please
+                                                                                                                    upload
+                                                                                                                    picture
+                                                                                                                    of
+                                                                                                                    traditional
+                                                                                                                    food
+                                                                                                                    items
+                                                                                                                    sold
+                                                                                                                    in
+                                                                                                                    canteen</label>
+                                                                                                                <br/>
+                                                                                                                <button class="btn uploadbtn upload"
+                                                                                                                        data-id="Canteen Food Items"
+                                                                                                                        data-toggle="modal"
+                                                                                                                        data-target="#airModal"
+                                                                                                                        type="button"> UPLOAD
+                                                                                                                    FILES </button>
+                                                                                                                <br>
+                                                                                                                <br>
+                                                                                                            </div>
+                                                                                                    <table width="100%" class="question uploadedfiles">
+    <thead>
+        <tr>
+            <th>File name</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($canteen as $f) { ?>
+            <tr id="index<?php echo $f->id; ?>">
+                <?php $name = str_replace(" ", "_", $f->name . "_Canteen_Food_Items_"); ?>
+                <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+            </tr>
+        <?php } ?>
+    </tbody>
+</table>
+                                                                                                    
+                                                                                                            <div class="form-group"
+                                                                                                                 id="Q7F3S1">
+                                                                                                                <label class="control-label"><span
+                                                                                                                        class="cube">4(b)</span>Give
+                                                                                                                    descriptions
+                                                                                                                    for
+                                                                                                                    rare
+                                                                                                                    local
+                                                                                                                    snacks
+                                                                                                                    served
+                                                                                                                    in
+                                                                                                                    your
+                                                                                                                    school:</label>
+                                                                                                                <textarea
+                                                                                                                    type="textbox"
+                                                                                                                    rows="5"
+                                                                                                                    name="Q7F3S1"
+                                                                                                                    placeholder="<?php if (isset($data['Q7F3S1'])) echo $data['Q7F3S1'] ?>"
+                                                                                                                    value="<?php echo set_value('Q7F3S1'); ?>"></textarea>
+                                                                                                                <br>
+                                                                                                            </div>
+                <?php
+            }
+													?>
+													
                                                                                                             
                                                                                             <div class="form-group"
                                                                                                  id="traditional"
