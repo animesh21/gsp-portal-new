@@ -44,6 +44,8 @@ class Audit_started extends CI_Controller {
         $state=$this->input->post('state');
         $school=$this->input->post('school');
         $data['record'] = $this->Audit_started_model->getStateWiseSchool($state,$school);   
+	 echo '<pre>';
+	 print_r( $data['record'])  ;exit; 
        
         
         //echo '<pre>'; print_r($data['record']); exit;
