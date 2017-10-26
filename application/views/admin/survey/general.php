@@ -92,7 +92,7 @@
                             Students
                             <input type="hidden" value="" id="java266617X32X33SQ001" name="java266617X32X33SQ001" class="form-control">
                         </th>
-                        <?php echo $schoolUserID; ?>
+                        
                         <td class="answer_cell_00SQ001 question-item answer-item  numeric-item text-item  numberonly">
                             <input type="hidden" value="<?php  echo getFiled('Q4G1S1',
                                 $schoolUserID); ?>"
