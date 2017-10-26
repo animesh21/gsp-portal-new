@@ -318,7 +318,7 @@
             </div>
             <div class="col-xs-3">
                 <input class="form-control space-textbox" id="Q3L5S2" type="text" name="Q3L5S2"
-                       placeholder="<?php if (isset($data['Q3L5S2'])) echo $data['Q2L5S2'] ?>"
+                       placeholder="<?php if (isset($data['Q3L5S2'])) echo $data['Q2L5S2']  ?>"
                        value="<?php echo set_value('Q3L5S2'); ?>"/>
             </div>
             <div class="col-xs-3">
