@@ -53,6 +53,8 @@ class Previous extends CI_Controller {
     public function foodajax() {
         $staus = 'success';
         $post = $this->input->post();
+		echo '<pre>';
+		print_r($post); die;
         $this->Answer_model->submitAnswers($post, 4);
         echo $staus;
     }
