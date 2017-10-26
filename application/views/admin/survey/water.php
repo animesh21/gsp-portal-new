@@ -380,26 +380,26 @@
                 <label class="control-label"> <span class="cube">3</span>Who supplies the water in your school? (please tick
                     the correct options):</label>
                 <br>
-                <ul class="list-unstyled">
+               <ul class="list-unstyled">
                     <?php
                     if (getFiled('Q6W1', $schoolUserID) == 1):
-                        echo "Ground water";
+                        echo "Municipality";
                         echo "<br/>";
                     endif;
                     if (getFiled('Q6W2', $schoolUserID) == 1):
-                        echo "Surface water";
+                        echo "Panchayat";
                         echo "<br/>";
                     endif;
                     if (getFiled('Q6W3', $schoolUserID) == 1):
-                        echo "Rain water";
+                        echo "Public Health Engineering Department (PHED)";
                         echo "<br/>";
                     endif;
                     if (getFiled('Q6W4', $schoolUserID) == 1):
-                        echo "Recycled waste water";
+                        echo "Private supplier";
                         echo "<br/>";
                     endif;
                     if (getFiled('Q6W5', $schoolUserID) == 1):
-                        echo "Recycled waste water";
+                        echo "School’s own supply (bore well, rainwater harvesting facility, etc)";
                     endif;
                     ?>
 
