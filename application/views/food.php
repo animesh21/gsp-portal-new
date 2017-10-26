@@ -1,5 +1,5 @@
-<?php $this->load->view('header'); ?>
-<!-- 
+
+<!-- <?php $this->load->view('header'); ?>
   <style type="text/css">
       .form-group{
           margin-bottom:20px;
