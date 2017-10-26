@@ -1380,7 +1380,7 @@ if (isset($data['Q4F1']))
         if (isset($data['Q7F1']))
             if ($data['Q7F1'] == 'Y') {
                 ?>
-							<div class="form-group" id="traditional">
+                                                                                                            <div class="form-group" id="traditional">
                                                                                                                 <label class="control-label"><span class="cube">4(a)</span>Please
                                                                                                                     provide
                                                                                                                     the
@@ -1534,9 +1534,7 @@ if (isset($data['Q4F1']))
                                                                                                             </div>
                 <?php
             }
-													?>
-													
-                                                                                                            
+?>
                                                                                             <div class="form-group"
                                                                                                  id="traditional"
                                                                                                  style="display: none;">
@@ -1571,7 +1569,7 @@ if (isset($data['Q4F1']))
                                                                                                                id="Q7F1S1"
                                                                                                                type="number"
                                                                                                                name="Q7F1S1"
-                                                                                                               placeholder="<?php if (isset($data['Q7F1S1'])) echo $data['Q7F1S1'] ?>"
+                                                                                                               placeholder=45."<?php if (isset($data['Q7F1S1'])) echo $data['Q7F1S1'] ?>"
                                                                                                                value="<?php echo set_value('Q7F1S1'); ?>"/>
                                                                                                     </div>
                                                                                                 </div>
@@ -2331,7 +2329,7 @@ if (isset($data['Q12F1'])) {
                                                                                                                 <input type="radio"
                                                                                                                        name="Q12F2"
                                                                                                                        value="<?php echo set_value('Q12F2', 2) ?>" <?php if (isset($data['Q12F2'])) echo $data['Q12F2'] == 2 ? "checked" : "" ?>
-                                                                                                                       /I>
+                                                                                                                       >
                                                                                                                        Quarterly </label>
                                                                                                         </li>
                                                                                                         <li>
@@ -2339,7 +2337,7 @@ if (isset($data['Q12F1'])) {
                                                                                                                 <input type="radio"
                                                                                                                        name="Q12F2"
                                                                                                                        value="<?php echo set_value('Q12F2', 3) ?>" <?php if (isset($data['Q12F2'])) echo $data['Q12F2'] == 3 ? "checked" : "" ?>
-                                                                                                                       /I>
+                                                                                                                       >
                                                                                                                        Bi-annually </label>
                                                                                                         </li>
                                                                                                         <li>
@@ -2347,7 +2345,7 @@ if (isset($data['Q12F1'])) {
                                                                                                                 <input type="radio"
                                                                                                                        name="Q12F2"
                                                                                                                        value="<?php echo set_value('Q12F2', 4) ?>" <?php if (isset($data['Q12F2'])) echo $data['Q12F2'] == 4 ? "checked" : "" ?>
-                                                                                                                       /I>
+                                                                                                                       >
                                                                                                                        Annually </label>
                                                                                                         </li>
                                                                                                     </ul>
