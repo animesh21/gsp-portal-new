@@ -2386,13 +2386,14 @@ if (isset($data['Q13F1'])) {
                                                                     $(document).ready(function () {
                                                                         $('#btnFoodPrevious').on('click', function (data) {
                                                                             var fd = $('#food').serialize();
-                                                                            //console.log(fd);
+                                                                            console.log(fd);
                                                                             $.ajax({
                                                                                 type: 'POST',
                                                                                 url: '<?php echo base_url('previous/foodajax') ?>',
                                                                                 data: fd,
                                                                                 success: function (data) {
-                                                                                    window.location.href = "<?php echo base_url('energy'); ?>";
+										    console.log(data);	
+                                                                                    
                                                                                 }
                                                                             });
                                                                         });
