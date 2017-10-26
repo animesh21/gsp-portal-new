@@ -202,79 +202,14 @@
                     <td><?php echo getFiled('Q5A' . $var_row . 'S4', $schoolUserID); ?></td>
                 </tr>
             <?php endfor; ?>
-            <tr><td>Total</td>  <td><?php echo getFiled('Q5A110S2', $schoolUserID); ?></td> <td><?php echo getFiled('Q5A110S3', $schoolUserID); ?></td> <td></td> </tr>
+            <tr><td>Total</td>  
+		<td><?php echo getFiled('Q5A110S2', $schoolUserID); ?></td> 
+		<td><?php echo getFiled('Q5A110S3', $schoolUserID); ?></td> 
+		<td></td> 
+	    </tr>
 
 
-            <tr>
-
-                <td><?php echo (getFiled('Q5A1S1', $schoolUserID) != "") ? getFiled('Q5A1S1', $schoolUserID) : "N/A"; ?> </td>
-                <td><?php echo (getFiled('Q5A1S2', $schoolUserID) != "") ? getFiled('Q5A1S2', $schoolUserID) : "N/A"; ?> </td>
-                <td><?php echo (getFiled('Q5A1S3', $schoolUserID) != "") ? getFiled('Q5A1S3', $schoolUserID) : "N/A"; ?> </td>
-                <td><?php echo (getFiled('Q5A1S4', $schoolUserID) != "") ? getFiled('Q5A1S4', $schoolUserID) : "N/A"; ?> </td>
-            </tr>
-            <tr>
-
-                <td><?php echo (getFiled('Q5A2S1', $schoolUserID) != "") ? getFiled('Q5A2S1', $schoolUserID) : "N/A"; ?> </td>
-                <td><?php echo (getFiled('Q5A2S2', $schoolUserID) != "") ? getFiled('Q5A2S2', $schoolUserID) : "N/A"; ?> </td>
-                <td><?php echo (getFiled('Q5A2S3', $schoolUserID) != "") ? getFiled('Q5A2S3', $schoolUserID) : "N/A"; ?> </td>
-                <td><?php echo (getFiled('Q5A2S4', $schoolUserID) != "") ? getFiled('Q5A2S4', $schoolUserID) : "N/A"; ?> </td>
-            </tr>
-            <tr>
-
-                <td><?php echo (getFiled('Q5A3S1', $schoolUserID) != "") ? getFiled('Q5A3S1', $schoolUserID) : "N/A"; ?> </td>
-                <td><?php echo (getFiled('Q5A3S2', $schoolUserID) != "") ? getFiled('Q5A3S2', $schoolUserID) : "N/A"; ?> </td>
-                <td><?php echo (getFiled('Q3A3S3', $schoolUserID) != "") ? getFiled('Q3A3S3', $schoolUserID) : "N/A"; ?> </td>
-                <td><?php echo (getFiled('Q5A3S4', $schoolUserID) != "") ? getFiled('Q5A3S4', $schoolUserID) : "N/A"; ?> </td>
-            </tr>
-            <tr>
-
-                <td><?php echo (getFiled('Q5A4S1', $schoolUserID) != "") ? getFiled('Q5A4S1', $schoolUserID) : "N/A"; ?> </td>
-                <td><?php echo (getFiled('Q5A4S2', $schoolUserID) != "") ? getFiled('Q5A4S2', $schoolUserID) : "N/A"; ?> </td>
-                <td><?php echo (getFiled('Q5A4S3', $schoolUserID) != "") ? getFiled('Q5A4S3', $schoolUserID) : "N/A"; ?> </td>
-                <td><?php echo (getFiled('Q5A4S4', $schoolUserID) != "") ? getFiled('Q5A4S4', $schoolUserID) : "N/A"; ?> </td>
-            </tr>
-            <tr>
-
-                <td><?php echo (getFiled('Q5A5S1', $schoolUserID) != "") ? getFiled('Q5A5S1', $schoolUserID) : "N/A"; ?> </td>
-                <td><?php echo (getFiled('Q5A5S2', $schoolUserID) != "") ? getFiled('Q5A5S2', $schoolUserID) : "N/A"; ?> </td>
-                <td><?php echo (getFiled('Q5A5S3', $schoolUserID) != "") ? getFiled('Q5A5S3', $schoolUserID) : "N/A"; ?> </td>
-                <td><?php echo (getFiled('Q5A5S4', $schoolUserID) != "") ? getFiled('Q5A5S4', $schoolUserID) : "N/A"; ?> </td>
-            </tr>
-            <tr>
-
-                <td><?php echo (getFiled('Q5A6S1', $schoolUserID) != "") ? getFiled('Q5A6S1', $schoolUserID) : "N/A"; ?> </td>
-                <td><?php echo (getFiled('Q5A6S2', $schoolUserID) != "") ? getFiled('Q5A6S2', $schoolUserID) : "N/A"; ?> </td>
-                <td><?php echo (getFiled('Q5A6S3', $schoolUserID) != "") ? getFiled('Q5A6S3', $schoolUserID) : "N/A"; ?> </td>
-                <td><?php echo (getFiled('Q5A6S4', $schoolUserID) != "") ? getFiled('Q5A6S4', $schoolUserID) : "N/A"; ?> </td>
-            </tr>
-            <tr>
-
-                <td><?php echo (getFiled('Q5A7S1', $schoolUserID) != "") ? getFiled('Q5A7S1', $schoolUserID) : "N/A"; ?> </td>
-                <td><?php echo (getFiled('Q5A7S2', $schoolUserID) != "") ? getFiled('Q5A7S2', $schoolUserID) : "N/A"; ?> </td>
-                <td><?php echo (getFiled('Q5A7S3', $schoolUserID) != "") ? getFiled('Q5A7S3', $schoolUserID) : "N/A"; ?> </td>
-                <td><?php echo (getFiled('Q5A7S4', $schoolUserID) != "") ? getFiled('Q5A7S4', $schoolUserID) : "N/A"; ?> </td>
-            </tr>
-            <tr>
-
-                <td><?php echo (getFiled('Q5A8S1', $schoolUserID) != "") ? getFiled('Q5A8S1', $schoolUserID) : "N/A"; ?> </td>
-                <td><?php echo (getFiled('Q5A8S2', $schoolUserID) != "") ? getFiled('Q5A8S2', $schoolUserID) : "N/A"; ?> </td>
-                <td><?php echo (getFiled('Q5A8S3', $schoolUserID) != "") ? getFiled('Q5A8S3', $schoolUserID) : "N/A"; ?> </td>
-                <td><?php echo (getFiled('Q5A8S4', $schoolUserID) != "") ? getFiled('Q5A8S4', $schoolUserID) : "N/A"; ?> </td>
-            </tr>
-            <tr>
-
-                <td><?php echo (getFiled('Q5A9S1', $schoolUserID) != "") ? getFiled('Q5A9S1', $schoolUserID) : "N/A"; ?> </td>
-                <td><?php echo (getFiled('Q5A9S2', $schoolUserID) != "") ? getFiled('Q5A9S2', $schoolUserID) : "N/A"; ?> </td>
-                <td><?php echo (getFiled('Q5A9S3', $schoolUserID) != "") ? getFiled('Q5A9S3', $schoolUserID) : "N/A"; ?> </td>
-                <td><?php echo (getFiled('Q5A9S4', $schoolUserID) != "") ? getFiled('Q5A9S4', $schoolUserID) : "N/A"; ?> </td>
-            </tr>
-            <tr>
-
-                <td><?php echo (getFiled('Q5A10S1', $schoolUserID) != "") ? getFiled('Q5A10S1', $schoolUserID) : "N/A"; ?> </td>
-                <td><?php echo (getFiled('Q5A10S2', $schoolUserID) != "") ? getFiled('Q5A10S2', $schoolUserID) : "N/A"; ?> </td>
-                <td><?php echo (getFiled('Q5A10S3', $schoolUserID) != "") ? getFiled('Q5A10S3', $schoolUserID) : "N/A"; ?> </td>
-                <td><?php echo (getFiled('Q5A10S4', $schoolUserID) != "") ? getFiled('Q5A10S4', $schoolUserID) : "N/A"; ?> </td>
-            </tr>
+            
         </table>
 
 
