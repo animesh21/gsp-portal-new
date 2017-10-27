@@ -44,12 +44,16 @@
         <div class="form-group hide" id="Question1a">
             <label><span class="cube">1(a)</span> If your answer is yes, in which year did your school first participate
                 in the audit? </label>
-            <input type="text" name="" id="" class="form-control"/>
+            <input type="text" name="Q1Fe211" id="Q1Fe211" class="form-control"
+				   placeholder="<?php if (isset($data['Q1Fe211'])) echo $data['Q1Fe211']; ?>"
+                           value="<?php echo set_value('Q1Fe211'); ?>"/>
         </div>
         <div class="form-group hide" id="Question1b">
             <label><span class="cube">1(b)</span> If your answer is yes, how many times have you done the audit?
             </label>
-            <input type="text" name="" id="" class="form-control"/>
+            <input type="text" name="Q1Fe212" id="Q1Fe212" class="form-control"
+				   placeholder="<?php if (isset($data['Q1Fe212'])) echo $data['Q1Fe212']; ?>"
+                           value="<?php echo set_value('Q1Fe212'); ?>"/>
         </div>
         <div class="form-group">
             <label><span class="cube">2</span> Did you find the online information relevant to your environmental
@@ -58,20 +62,22 @@
                 <li>
                     <label class="radio-inline">
                         <input type="radio" name="Q1Fe2"
-                               value="<?php echo set_value('Q1Fe1', 'Y') ?>" <?php if (isset($data['Q1Fe1'])) echo $data['Q1Fe1'] == 'Y' ? "checked" : "" ?>>
+                               value="<?php echo set_value('Q1Fe2', 'Y') ?>" <?php if (isset($data['Q1Fe2'])) echo $data['Q1Fe2'] == 'Y' ? "checked" : "" ?>>
                         Yes</label>
                 </li>
                 <li>
                     <label class="radio-inline">
                         <input type="radio" name="Q1Fe2"
-                               value="<?php echo set_value('Q1Fe1', 'N') ?>" <?php if (isset($data['Q1Fe1'])) echo $data['Q1Fe1'] == 'N' ? "checked" : "" ?>>
+                               value="<?php echo set_value('Q1Fe2', 'N') ?>" <?php if (isset($data['Q1Fe2'])) echo $data['Q1Fe2'] == 'N' ? "checked" : "" ?>>
                         No</label>
                 </li>
             </ul>
         </div>
         <div class="form-group hide" id="Question2a">
             <label><span class="cube">2(a)</span> If your answer is no, please share your suggestions: </label>
-            <input type="text" name="" id="" class="form-control"/>
+            <input type="text" name="Q1Fe221" id="Q1Fe221" class="form-control"
+				   placeholder="<?php if (isset($data['Q1Fe221'])) echo $data['Q1Fe221']; ?>"
+                           value="<?php echo set_value('Q1Fe221'); ?>"/>
         </div>
         <div class="form-group">
             <label><span class="cube">3</span> Was the audit easy to understand and self-explanatory? </label>
@@ -79,13 +85,13 @@
                 <li>
                     <label class="radio-inline">
                         <input type="radio" name="Q1Fe3"
-                               value="<?php echo set_value('Q1Fe1', 'Y') ?>" <?php if (isset($data['Q1Fe1'])) echo $data['Q1Fe1'] == 'Y' ? "checked" : "" ?>>
+                               value="<?php echo set_value('Q1Fe3', 'Y') ?>" <?php if (isset($data['Q1Fe3'])) echo $data['Q1Fe3'] == 'Y' ? "checked" : "" ?>>
                         Yes</label>
                 </li>
                 <li>
                     <label class="radio-inline">
                         <input type="radio" name="Q1Fe3"
-                               value="<?php echo set_value('Q1Fe1', 'N') ?>" <?php if (isset($data['Q1Fe1'])) echo $data['Q1Fe1'] == 'N' ? "checked" : "" ?>>
+                               value="<?php echo set_value('Q1Fe3', 'N') ?>" <?php if (isset($data['Q1Fe3'])) echo $data['Q1Fe3'] == 'N' ? "checked" : "" ?>>
                         No</label>
                 </li>
             </ul>
@@ -97,25 +103,29 @@
                 <li>
                     <label class="radio-inline">
                         <input type="radio" name="Q1Fe4"
-                               value="<?php echo set_value('Q1Fe1', 'Y') ?>" <?php if (isset($data['Q1Fe1'])) echo $data['Q1Fe1'] == 'Y' ? "checked" : "" ?>>
+                               value="<?php echo set_value('Q1Fe4', 'Y') ?>" <?php if (isset($data['Q1Fe4'])) echo $data['Q1Fe4'] == 'Y' ? "checked" : "" ?>>
                         Yes</label>
                 </li>
                 <li>
                     <label class="radio-inline">
                         <input type="radio" name="Q1Fe4"
-                               value="<?php echo set_value('Q1Fe1', 'N') ?>" <?php if (isset($data['Q1Fe1'])) echo $data['Q1Fe1'] == 'N' ? "checked" : "" ?>>
+                               value="<?php echo set_value('Q1Fe4', 'N') ?>" <?php if (isset($data['Q1Fe4'])) echo $data['Q1Fe4'] == 'N' ? "checked" : "" ?>>
                         No</label>
                 </li>
             </ul>
         </div>
         <div class="form-group hide" id="Question4a">
             <label><span class="cube">4(a)</span> If your answer is no, why? </label>
-            <input type="text" name="" id="" class="form-control"/>
+            <input type="text" name="Q1Fe411" id="Q1Fe411" class="form-control"
+				    placeholder="<?php if (isset($data['Q1Fe411'])) echo $data['Q1Fe411']; ?>"
+                           value="<?php echo set_value('Q1Fe411'); ?>"/>
         </div>
         <div class="form-group">
             <label><span class="cube">5</span> What would be the help required to make your school a Green School?
             </label>
-            <input type="text" name="" id="" class="form-control"/>
+            <input type="text" name="Q1Fe511" id="Q1Fe511" class="form-control"
+				   placeholder="<?php if (isset($data['Q1Fe511'])) echo $data['Q1Fe511']; ?>"
+                           value="<?php echo set_value('Q1Fe511'); ?>"/>
         </div>
         <div class="form-group">
             <label><span class="cube">6</span> How would you rate the overall design of the audit? </label>
@@ -208,7 +218,9 @@
         </div>
         <div class="form-group hide" id="Question7a">
             <label><span class="cube">7(a)</span> If your answer is yes, please share your suggestions: </label>
-            <input type="text" name="" id="" class="form-control"/>
+            <input type="text" name="Q1Fe711" id="Q1Fe711" class="form-control"
+				   placeholder="<?php if (isset($data['Q1Fe711'])) echo $data['Q1Fe711']; ?>"
+                           value="<?php echo set_value('Q1Fe711'); ?>"/>
         </div>
         <div class="form-group">
             <label><span class="cube">8</span> Could you finish all the tasks in given period of time (August?October)?
@@ -235,25 +247,25 @@
                 <li>
                     <label class="radio-inline">
                         <input type="radio" name="Q1Fe9"
-                               value="<?php echo set_value('Q1Fe1', 1) ?>" <?php if (isset($data['Q1Fe1'])) echo $data['Q1Fe1'] == 1 ? "checked" : "" ?>>
+                               value="<?php echo set_value('Q1Fe9', 1) ?>" <?php if (isset($data['Q1Fe1'])) echo $data['Q1Fe9'] == 1 ? "checked" : "" ?>>
                         Never</label>
                 </li>
                 <li>
                     <label class="radio-inline">
                         <input type="radio" name="Q1Fe9"
-                               value="<?php echo set_value('Q1Fe1', 2) ?>" <?php if (isset($data['Q1Fe1'])) echo $data['Q1Fe1'] == 2 ? "checked" : "" ?>>
+                               value="<?php echo set_value('Q1Fe9', 2) ?>" <?php if (isset($data['Q1Fe1'])) echo $data['Q1Fe9'] == 2 ? "checked" : "" ?>>
                         Once</label>
                 </li>
                 <li>
                     <label class="radio-inline">
                         <input type="radio" name="Q1Fe9"
-                               value="<?php echo set_value('Q1Fe1', 3) ?>" <?php if (isset($data['Q1Fe1'])) echo $data['Q1Fe1'] == 3 ? "checked" : "" ?>>
+                               value="<?php echo set_value('Q1Fe9', 3) ?>" <?php if (isset($data['Q1Fe1'])) echo $data['Q1Fe9'] == 3 ? "checked" : "" ?>>
                         Twice</label>
                 </li>
                 <li>
                     <label class="radio-inline">
                         <input type="radio" name="Q1Fe9"
-                               value="<?php echo set_value('Q1Fe1', 4) ?>" <?php if (isset($data['Q1Fe1'])) echo $data['Q1Fe1'] == 4 ? "checked" : "" ?>>
+                               value="<?php echo set_value('Q1Fe9', 4) ?>" <?php if (isset($data['Q1Fe1'])) echo $data['Q1Fe9'] == 4 ? "checked" : "" ?>>
                         More than twice</label>
                 </li>
             </ul>
@@ -265,20 +277,22 @@
                 <li>
                     <label class="radio-inline">
                         <input type="radio" name="Q1Fe10"
-                               value="<?php echo set_value('Q1Fe1', 'Y') ?>" <?php if (isset($data['Q1Fe1'])) echo $data['Q1Fe1'] == 'Y' ? "checked" : "" ?>>
+                               value="<?php echo set_value('Q1Fe10', 'Y') ?>" <?php if (isset($data['Q1Fe10'])) echo $data['Q1Fe10'] == 'Y' ? "checked" : "" ?>>
                         Yes</label>
                 </li>
                 <li>
                     <label class="radio-inline">
                         <input type="radio" name="Q1Fe10"
-                               value="<?php echo set_value('Q1Fe1', 'N') ?>" <?php if (isset($data['Q1Fe1'])) echo $data['Q1Fe1'] == 'N' ? "checked" : "" ?>>
+                               value="<?php echo set_value('Q1Fe10', 'N') ?>" <?php if (isset($data['Q1Fe10'])) echo $data['Q1Fe10'] == 'N' ? "checked" : "" ?>>
                         No</label>
                 </li>
             </ul>
         </div>
         <div class="form-group hide" id="Question10a">
             <label><span class="cube">10(a)</span> If your answer is no, please share your suggestions </label>
-            <input type="text" name="" id="" class="form-control"/>
+            <input type="text" name="Q1Fe1011" id="Q1Fe1011" class="form-control"
+				    placeholder="<?php if (isset($data['Q1Fe1011'])) echo $data['Q1Fe1011']; ?>"
+                           value="<?php echo set_value('Q1Fe1011'); ?>"/>
         </div>
         <div class="form-group">
             <label><span class="cube">11</span> Did your students enjoy doing Water activities?</label>
@@ -286,13 +300,13 @@
                 <li>
                     <label class="radio-inline">
                         <input type="radio" name="Q1Fe11"
-                               value="<?php echo set_value('Q1Fe1', 'Y') ?>" <?php if (isset($data['Q1Fe1'])) echo $data['Q1Fe1'] == 'Y' ? "checked" : "" ?>>
+                               value="<?php echo set_value('Q1Fe11', 'Y') ?>" <?php if (isset($data['Q1Fe11'])) echo $data['Q1Fe11'] == 'Y' ? "checked" : "" ?>>
                         Yes</label>
                 </li>
                 <li>
                     <label class="radio-inline">
                         <input type="radio" name="Q1Fe11"
-                               value="<?php echo set_value('Q1Fe1', 'N') ?>" <?php if (isset($data['Q1Fe1'])) echo $data['Q1Fe1'] == 'N' ? "checked" : "" ?>>
+                               value="<?php echo set_value('Q1Fe11', 'N') ?>" <?php if (isset($data['Q1Fe11'])) echo $data['Q1Fe11'] == 'N' ? "checked" : "" ?>>
                         No</label>
                 </li>
             </ul>
@@ -300,11 +314,15 @@
         <div class="form-group hide" id="Question11a">
             <label><span class="cube">11(a)</span> If your answer is yes, why did they enjoy doing outdoor activities?
             </label>
-            <input type="text" name="Q1Fe12" id="Q1Fe11" class="form-control"/>
+            <input type="text" name="Q1Fe1111" id="Q1Fe1111" class="form-control"
+				   placeholder="<?php if (isset($data['Q1Fe1111'])) echo $data['Q1Fe1111']; ?>"
+                           value="<?php echo set_value('Q1Fe1111'); ?>"/>
         </div>
         <div class="form-group hide" id="Question11b">
             <label><span class="cube">11(a)</span>If your answer is no, please state why? </label>
-            <input type="text" name="Q1Fe12" id="Q1Fe11" class="form-control"/>
+            <input type="text" name="Q1Fe1112" id="Q1Fe1112" class="form-control"
+				   placeholder="<?php if (isset($data['Q1Fe1112'])) echo $data['Q1Fe1112']; ?>"
+                           value="<?php echo set_value('Q1Fe1112'); ?>"/>
         </div>
         <div class="form-group">
             <label>
