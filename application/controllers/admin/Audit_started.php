@@ -28,7 +28,7 @@ class Audit_started extends CI_Controller {
         $data['main'] = 'admin/audit/statewise';
         $data['title'] = 'Home | Audit State Wise';
         $data['states'] = getStates();
-	 $data['states'][0]="Please select";    
+	 $data['states'][0]="All";    
         //$data['record']=$this->Audit_started_model->getData();
         $this->load->view('admin/includes/template', $data);
     }
@@ -37,7 +37,7 @@ class Audit_started extends CI_Controller {
         $data['main'] = 'admin/audit/search';
         $data['title'] = 'Home | Audit State Wise';
         $data['states'] = getStates();
-        $data['states'][0]="Please select";
+        $data['states'][0]="All";
         $data['val'] = $this->input->post('state');
         $data['school'] = $this->input->post('school');
       
