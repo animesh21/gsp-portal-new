@@ -169,11 +169,11 @@ class Answer_model extends CI_Model {
                 else
                 {
                     $update = array('userid'=>$this->session->userdata('USER_ID'),'questionid'=>$key,'answer'=>$post[$key],'type'=>$type);
-                    echo '<pre>';
-                    print_r($update);
+                    //echo '<pre>';
+                    //print_r($update);
 		    	
 	            $this->db->insert('gsp_answers',$update);//insert if does not exist
-		   echo ($this->db->last_query());	
+		   //echo ($this->db->last_query());	
                     print_r("insert");
 
                 }
