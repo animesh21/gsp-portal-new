@@ -1744,7 +1744,7 @@ if (isset($data['Q9F1']))
                                                                                                         <div class="form-group"
                                                                                                              id="Q9F2">
                                                                                                             <label class="control-label"><span
-                                                                                                                    class="cube">6(a)</span>Please
+                                                                                                                    class="cube">6(a).1</span>Please
                                                                                                                 provide
                                                                                                                 details:<a
                                                                                                                     class="tt"
@@ -1767,7 +1767,7 @@ if (isset($data['Q9F1']))
                                                                                                      id="Q9F2"
                                                                                                      style="display: none;">
                                                                                                     <label class="control-label"><span
-                                                                                                            class="cube">6(a)</span>Please
+                                                                                                            class="cube">6(a).2</span>Please
                                                                                                         provide
                                                                                                         details:<a
                                                                                                             class="tt"
