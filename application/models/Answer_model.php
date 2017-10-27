@@ -93,7 +93,7 @@ class Answer_model extends CI_Model {
                 $this->db->like('questionid', 'Q8W2S2S');
                 $this->db->delete('gsp_answers');
             }
-            if(isset($post['Q6W1']) || isset($post['Q6W2']) || isset($post['Q6W3']) || isset($post['Q6W4']) || isset($post['Q6W4']))
+            if(isset($post['Q6W1']) || isset($post['Q6W2']) || isset($post['Q6W3']) || isset($post['Q6W4']) || isset($post['Q6W5']))
             {
                 $this->db->where('userid', $this->session->userdata('USER_ID'));
                 $this->db->where('questionid', 'Q6W1');
