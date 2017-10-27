@@ -143,7 +143,7 @@ class Audit_started_model extends CI_Model {
        // $sql="SELECT * FROM `gsp_school` WHERE `userid` IN ?";
        //SELECT a.userid,a.name,a.principle_name,s.name,a.id FROM states AS s,gsp_school AS a INNER JOIN gsp_answers as b on a.userid=b.userid WHERE b.questionid='Q1G2' AND b.answer>5 AND s.id= a.state;
       
-	if($state==0 && $school==3)
+	if($state==0 && $school==2)
 	{
 		
 		  $sql = $this->db->select('a.*, b.name AS state_name,c.name As district_name')
@@ -163,7 +163,7 @@ class Audit_started_model extends CI_Model {
 			->join('cities AS c', 'a.district=c.id', 'left')
                         ->join('states AS s','a.state=s.id')
                         ->where('b.questionid','Q1G2')
-                        ->where('b.answer >',5)
+                        ->where('b.answer >=',6)
                         ->where('a.state',$state)
                         ->order_by('a.id', 'desc')
                         ->get()->result();
@@ -193,7 +193,7 @@ class Audit_started_model extends CI_Model {
                         ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
 			->join('cities AS c', 'a.district=c.id', 'left')
 			->where('b.questionid','Q1G2')
-                        ->where('b.answer >',5)
+                        ->where('b.answer >=',6)
                         ->where('s.id= a.state')
                         ->order_by('a.id', 'desc')
                         ->get()->result();
