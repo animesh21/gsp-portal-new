@@ -41,14 +41,37 @@
                 </li>
             </ul>
         </div>
-        <div class="form-group hide" id="Question1a">
+        <div class="form-group hide" id="Question1a"
+	     <?php
+if (isset($data['Q1Fe1'])) {
+    if ($data['Q1Fe1'] == 'Y') {
+        echo 'style="display:block;"';
+    } else {
+        echo 'style="display:none;"';
+    }
+} else {
+    echo 'style="display:none;"';
+}
+?> >
             <label><span class="cube">1(a)</span> If your answer is yes, in which year did your school first participate
                 in the audit? </label>
             <input type="text" name="Q1Fe211" id="Q1Fe211" class="form-control"
 				   placeholder="<?php if (isset($data['Q1Fe211'])) echo $data['Q1Fe211']; ?>"
                            value="<?php echo set_value('Q1Fe211'); ?>"/>
         </div>
-        <div class="form-group hide" id="Question1b">
+        <div class="form-group hide" id="Question1b"
+  <?php
+  if (isset($data['Q1Fe1'])) {
+    if ($data['Q1Fe1'] == 'Y') {
+        echo 'style="display:block;"';
+    } else {
+        echo 'style="display:none;"';
+    }
+} else {
+    echo 'style="display:none;"';
+}
+?> >	     
+	
             <label><span class="cube">1(b)</span> If your answer is yes, how many times have you done the audit?
             </label>
             <input type="text" name="Q1Fe212" id="Q1Fe212" class="form-control"
@@ -73,7 +96,18 @@
                 </li>
             </ul>
         </div>
-        <div class="form-group hide" id="Question2a">
+        <div class="form-group hide" id="Question2a"
+	     <?php
+if (isset($data['Q1Fe2'])) {
+    if ($data['Q1Fe2'] == 'Y') {
+        echo 'style="display:block;"';
+    } else {
+        echo 'style="display:none;"';
+    }
+} else {
+    echo 'style="display:none;"';
+}
+?> >
             <label><span class="cube">2(a)</span> If your answer is no, please share your suggestions: </label>
             <input type="text" name="Q1Fe221" id="Q1Fe221" class="form-control"
 				   placeholder="<?php if (isset($data['Q1Fe221'])) echo $data['Q1Fe221']; ?>"
@@ -114,7 +148,18 @@
                 </li>
             </ul>
         </div>
-        <div class="form-group hide" id="Question4a">
+        <div class="form-group hide" id="Question4a"
+	      <?php
+if (isset($data['Q1Fe4'])) {
+    if ($data['Q1Fe4'] == 'Y') {
+        echo 'style="display:block;"';
+    } else {
+        echo 'style="display:none;"';
+    }
+} else {
+    echo 'style="display:none;"';
+}
+?> >
             <label><span class="cube">4(a)</span> If your answer is no, why? </label>
             <input type="text" name="Q1Fe411" id="Q1Fe411" class="form-control"
 				    placeholder="<?php if (isset($data['Q1Fe411'])) echo $data['Q1Fe411']; ?>"
@@ -216,7 +261,18 @@
                 </li>
             </ul>
         </div>
-        <div class="form-group hide" id="Question7a">
+        <div class="form-group hide" id="Question7a"
+	        <?php
+if (isset($data['Q1Fe7'])) {
+    if ($data['Q1Fe7'] == 'Y') {
+        echo 'style="display:block;"';
+    } else {
+        echo 'style="display:none;"';
+    }
+} else {
+    echo 'style="display:none;"';
+}
+?>>
             <label><span class="cube">7(a)</span> If your answer is yes, please share your suggestions: </label>
             <input type="text" name="Q1Fe711" id="Q1Fe711" class="form-control"
 				   placeholder="<?php if (isset($data['Q1Fe711'])) echo $data['Q1Fe711']; ?>"
@@ -288,7 +344,18 @@
                 </li>
             </ul>
         </div>
-        <div class="form-group hide" id="Question10a">
+        <div class="form-group hide" id="Question10a"
+	     <?php
+if (isset($data['Q1Fe10'])) {
+    if ($data['Q1Fe10'] == 'Y') {
+        echo 'style="display:block;"';
+    } else {
+        echo 'style="display:none;"';
+    }
+} else {
+    echo 'style="display:none;"';
+}
+?>>
             <label><span class="cube">10(a)</span> If your answer is no, please share your suggestions </label>
             <input type="text" name="Q1Fe1011" id="Q1Fe1011" class="form-control"
 				    placeholder="<?php if (isset($data['Q1Fe1011'])) echo $data['Q1Fe1011']; ?>"
@@ -311,14 +378,36 @@
                 </li>
             </ul>
         </div>
-        <div class="form-group hide" id="Question11a">
+        <div class="form-group hide" id="Question11a"
+	       <?php
+if (isset($data['Q1Fe11'])) {
+    if ($data['Q1Fe11'] == 'Y') {
+        echo 'style="display:block;"';
+    } else {
+        echo 'style="display:none;"';
+    }
+} else {
+    echo 'style="display:none;"';
+}
+?>>
             <label><span class="cube">11(a)</span> If your answer is yes, why did they enjoy doing outdoor activities?
             </label>
             <input type="text" name="Q1Fe1111" id="Q1Fe1111" class="form-control"
 				   placeholder="<?php if (isset($data['Q1Fe1111'])) echo $data['Q1Fe1111']; ?>"
                            value="<?php echo set_value('Q1Fe1111'); ?>"/>
         </div>
-        <div class="form-group hide" id="Question11b">
+        <div class="form-group hide" id="Question11b"
+	       <?php
+if (isset($data['Q1Fe11'])) {
+    if ($data['Q1Fe11'] == 'N') {
+        echo 'style="display:block;"';
+    } else {
+        echo 'style="display:none;"';
+    }
+} else {
+    echo 'style="display:none;"';
+}
+?>>
             <label><span class="cube">11(a)</span>If your answer is no, please state why? </label>
             <input type="text" name="Q1Fe1112" id="Q1Fe1112" class="form-control"
 				   placeholder="<?php if (isset($data['Q1Fe1112'])) echo $data['Q1Fe1112']; ?>"
