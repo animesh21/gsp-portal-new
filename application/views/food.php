@@ -1912,9 +1912,9 @@ if (isset($data['Q11F1'])) {
 <?php
 if (isset($data['Q11F1'])) {
     if ($data['Q11F1'] == 'Y') {
-        echo 'style="display:none;"';
-    } else {
         echo 'style="display:block;"';
+    } else {
+        echo 'style="display:none;"';
     }
 } else {
     echo 'style="display:none;"';
