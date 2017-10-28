@@ -348,73 +348,73 @@
                             <li>
                                 <label for="ex3">Jan</label>
                                 <br/>
-                                <input type="checkbox" name="Q7G1"
+                                <input type="checkbox" class="Question7G1" name="Q7G1"
                                        value="<?php echo set_value('Q7G1', 1); ?>" <?php if (isset($data['Q7G1'])) echo "checked" ?> />
                             </li>
                             <li>
                                 <label for="ex3">Feb</label>
                                 <br/>
-                                <input type="checkbox" name="Q7G2"
+                                <input type="checkbox" class="Question7G1" name="Q7G2"
                                        value="<?php echo set_value('Q7G2', 2); ?>" <?php if (isset($data['Q7G2'])) echo "checked" ?> />
                             </li>
                             <li>
                                 <label for="ex3">Mar</label>
                                 <br/>
-                                <input type="checkbox" name="Q7G3"
+                                <input type="checkbox" class="Question7G1" name="Q7G3"
                                        value="<?php echo set_value('Q7G3', 3); ?>" <?php if (isset($data['Q7G3'])) echo "checked" ?>/>
                             </li>
                             <li>
                                 <label for="ex3">April</label>
                                 <br/>
-                                <input type="checkbox" name="Q7G4"
+                                <input type="checkbox" class="Question7G1" name="Q7G4"
                                        value="<?php echo set_value('Q7G4', 4); ?>" <?php if (isset($data['Q7G4'])) echo "checked" ?>/>
                             </li>
                             <li>
                                 <label for="ex3">May</label>
                                 <br/>
-                                <input type="checkbox" name="Q7G5"
+                                <input type="checkbox" class="Question7G1" name="Q7G5"
                                        value="<?php echo set_value('Q7G5', 5); ?>" <?php if (isset($data['Q7G5'])) echo "checked" ?>/>
                             </li>
                             <li>
                                 <label for="ex3">June</label>
                                 <br/>
-                                <input type="checkbox" name="Q7G6"
+                                <input type="checkbox" class="Question7G1" name="Q7G6"
                                        value="<?php echo set_value('Q7G6', 6); ?>" <?php if (isset($data['Q7G6'])) echo "checked" ?>/>
                             </li>
                             <li>
                                 <label for="ex3">July</label>
                                 <br/>
-                                <input type="checkbox" name="Q7G7"
+                                <input type="checkbox" class="Question7G1" name="Q7G7"
                                        value="<?php echo set_value('Q7G7', 7); ?>" <?php if (isset($data['Q7G7'])) echo "checked" ?>/>
                             </li>
                             <li>
                                 <label for="ex3">Aug</label>
                                 <br/>
-                                <input type="checkbox" name="Q7G8"
+                                <input type="checkbox" class="Question7G1" name="Q7G8"
                                        value="<?php echo set_value('Q7G8', 8); ?>" <?php if (isset($data['Q7G8'])) echo "checked" ?>/>
                             </li>
                             <li>
                                 <label for="ex3">Sept</label>
                                 <br/>
-                                <input type="checkbox" name="Q7G9"
+                                <input type="checkbox" class="Question7G1" name="Q7G9"
                                        value="<?php echo set_value('Q7G9', 9); ?>" <?php if (isset($data['Q7G9'])) echo "checked" ?>/>
                             </li>
                             <li>
                                 <label for="ex3">Oct</label>
                                 <br/>
-                                <input type="checkbox" name="Q7G10"
+                                <input type="checkbox" class="Question7G1" name="Q7G10"
                                        value="<?php echo set_value('Q7G10', 10); ?>" <?php if (isset($data['Q7G10'])) echo "checked" ?>/>
                             </li>
                             <li>
                                 <label for="ex3">Nov</label>
                                 <br/>
-                                <input type="checkbox" name="Q7G11"
+                                <input type="checkbox" class="Question7G1" name="Q7G11"
                                        value="<?php echo set_value('Q7G11', 11); ?>" <?php if (isset($data['Q7G11'])) echo "checked" ?>/>
                             </li>
                             <li>
                                 <label for="ex3">Dec</label>
                                 <br/>
-                                <input type="checkbox" name="Q7G12"
+                                <input type="checkbox" class="Question7G1" name="Q7G12"
                                        value="<?php echo set_value('Q7G12', 12); ?>" <?php if (isset($data['Q7G12'])) echo "checked" ?>/>
                             </li>
                         </ul>
@@ -487,7 +487,13 @@
                         data: fd,
                         success: function (data)
                         {
-                            window.location.href = "<?php echo base_url('school'); ?>";
+							if($('.Question7G1:checked').length<=0){
+                             alert("Please Fill The Question 7.");
+                            }
+                           else{
+                             window.location.href = "<?php echo base_url('school'); ?>";
+                            }
+                            
                         }
                     });
                 });
