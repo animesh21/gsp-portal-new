@@ -1,4 +1,3 @@
-
 <style>
     .panel
     {
@@ -10,62 +9,189 @@
         font-size: 12px !important;
         font-weight: bold !important;
     }
+	.list-unstyled li{ list-style:none; padding:3px 3px 3px 3px;}
+	.list-unstyled li input[type="checkbox"]{ opacity:0.7;  padding:3px 3px 3px 3px;}
+	.list-unstyled li input[type="radio"]{ opacity:0.7;  padding:3px 3px 3px 3px;}
+	
+	.list-inline li{ list-style:none; padding:3px 3px 3px 3px;}
+	.list-inline li input[type="checkbox"]{ opacity:0.7;  padding:3px 3px 3px 3px;}
+	.list-inline li input[type="radio"]{ opacity:0.7;  padding:3px 3px 3px 3px;}
 </style>
 <div class="top-area">
-    <h2>Send FeedBack</h2>
+  <h2>Send FeedBack</h2>
 </div>
 <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-        <div class="panel panel-default">
-            <div class="panel-heading">Select School</div>
-            <div class="panel-body">
-                <?php
-                if ($this->session->flashdata('error')) {
-                    echo '<div class="alert alert-danger alert-dismissable">';
-                    echo $this->session->flashdata('error');
-                    echo '</div></div>';
-                }
-                ?>
-                <?php echo validation_errors(); ?>
-                <?php echo form_open(base_url('admin/audit_started/feedback'), array('id' => 'feedbackform')); ?>
-                <div class="form-group">
-                    <label>Subject:</label>
-                    <input type="text" class="form-control" name="subject" id="subject">
-                </div>
-				<input type="checkbox" id="select_all" name="checkbox" value="value" style="opacity: 1 !important; position: inherit !important;">Select-All&nbsp;&nbsp;&nbsp;
-					<input type="checkbox" id="select_all1" name="checkbox1" value="value1" style="opacity: 1 !important; position: inherit !important;">UnSelect-All
-                <div class="form-group" id="hiso">
-					<label for="pwd">Email:</label><br/>
-					<select class="form-control chosen" name="email[]" data-placeholder="Select cordinator's email..." multiple id="email">
-                        <?php foreach ($school as $s) { ?>
-                          <option value="<?php echo $s->coemail . ',' . $s->name; ?>"><?php echo $s->coemail; ?></option>
-			<!--<option value="<?php //echo $s->coemail; ?>"><?php //echo $s->coemail; ?></option> -->
-                        <?php } ?>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="pwd">Message:</label>
-                    <textarea class="form-control" id="message" name="message"></textarea>
-                </div>
-                <button type="submit" class="btn btn-default btn-block btn-lg" style="background: #e86549 !important; color: #fff">Submit</button>
-                <?php echo form_close(); ?>
-            </div>
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">Select Filters</div>
+      <form method="post" id="frmSendblukemail">
+        <div class="panel-body">
+        <div class="form-group">
+          <label>Subject:</label>
+          <input type="text" class="form-control" name="subject" id="subject">
         </div>
+        <div class="form-group">
+          <label for="pwd">Message:</label>
+          <textarea class="form-control" id="message" name="message"></textarea>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="pwd">Select User Email-Id:</label>
+          <ul class="list-unstyled list-inline" style="margin:0; padding:0;">
+            <li>
+              <label class="checkbox-inline">
+              <input type="checkbox" value="coemail" name="coemail" id="coemail"/>
+              Coordinator Email</label>
+            </li>
+            <li>
+              <label class="checkbox-inline">
+              <input type="checkbox" value="schoolemail" name="coemail" id="schoolemail" />
+              School Email</label>
+            </li>
+          </ul>
+        </div>
+        <div class="form-group col-md-8">
+          <label for="pwd">Select Progress Based User:</label>
+          <ul class="list-unstyled list-inline" style="margin:0; padding:0;">
+            <li>
+              <label class="radio-inline">
+              <input type="radio" value="=5" name="progress" id="progress"  />
+              Progress equal to 5</label>
+            </li>
+            <li>
+              <label class="radio-inline">
+              <input type="radio" value=" < 50" name="progress" id="progress" />
+              Progress greater than 5% but less than 50% or equal</label>
+            </li>
+            <li>
+              <label class="radio-inline">
+              <input type="radio" value=" BETWEEN 50 AND 75" name="progress" id="progress"  />
+              Progress greater than 50% but less than 75% or equal</label>
+            </li>
+            <li>
+              <label class="radio-inline">
+              <input type="radio" value="=100" name="progress" id="progress" />
+              Progress complete 100%</label>
+            </li>
+            <li>
+              <label class="radio-inline">
+              <input type="radio" value=" BETWEEN 75 AND 100" name="progress" id="progress" />
+              75% Uncomplete</label>
+            </li>
+          </ul>
+        </div>
+        <div class="form-group col-md-12">
+          <label for="pwd">Select All Email-Id:</label>
+          <br/>
+          <input type="checkbox" name="email_list_all" id="email_list_all" style="opacity: 0.8; margin-top:-1px;" />
+          <br/>
+          <br/>
+          <table id="email_table"  class="display dataTable no-footer tablepluging" cellspacing="0" style="width:100%;">
+            <thead>
+              <tr>
+                <th>Sr. No.</th>
+                <th>School Id</th>
+                <th>List Of Email-Id</th>
+                <th>Check</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+          <button type="submit" class="btn btn-default btn-block btn-lg" style="background: #e86549 !important; color: #fff">Submit</button>
+        </div>
+      </form>
     </div>
+  </div>
 </div>
-
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript">
-   $('#select_all').click(function() {
-    $('#email option').prop('selected', true);
-});
-$('#select_all1').click(function() {
-    $('#email option').prop('selected', false);
+$("input[name='coemail'],input[name='progress']").change('click',function(){
+  var email="";
+  var progress=$("input[name='progress']:checked").val();
+  $("input[name='coemail']:checked").each(function(){
+    var temp = $(this).val();
+    email = email+ temp +",";
+  });
+  $.ajax({
+		url:'<?php echo base_url("admin/audit_started/filter_email");?>',
+		type:'POST',
+		data:{'coemail':email,'progress':'progress'+progress},
+		success: function (data) {
+			$("#email_table tbody").empty();
+			$("#email_table tbody").append(data);
+		}
+	});
 });
 
-$("#select_all").click(function(){
-        $("#hiso").hide();
-    });
-    $("#select_all1").click(function(){
-        $("#hiso").show();
-    });
+
+/*
+$( document ).ready(function() {
+                $('#example1').dataTable({
+                 "bProcessing": true,
+                 "sAjaxSource": "functions-hs/list-cpa-json.php",
+                 "aoColumns": [
+				        { mData: 'id' }
+                        { mData: 'invoice_id' },
+						{ mData: 'posted_date' },
+						{ mData: 'amount_of_invoice' },
+						
+                ]
+        });   
+});*/
+  
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+$('#state').on('change',function(){
+     var email="";
+     $("input[name='coemail']:checked").each(function(){ 
+      var temp = $(this).val();
+      email = email+ temp +",";
+     });
+		var state = $(this).val();
+		$.ajax({
+			url:'<?php echo base_url("admin/audit_started/filter_email");?>',
+			data:{'coemail':email,'state':'state='+state},
+			type:'post',
+			success:function(data){
+		     	$("#email_table tbody").empty();
+				$('#email_table tbody').append(data);
+			}
+	    });
+	});
+});
+</script>
+<script type="text/javascript">
+ jQuery('#frmSendblukemail').submit(function(e){
+	e.preventDefault();
+	var subject=$("#subject").val();
+	var message=$("#message").val();
+	$('input[name="email_list[]"]:checked').each(function(){
+	  jQuery.ajax({
+	  url:"https://api.elasticemail.com/v2/email/send",
+	  type:"POST",
+	  data:{"api_key":"a62876ee-8ef8-4c83-a35c-c6eaa0f29765","from":"support@greenschoolsprogramme.org","to":$(this).val(),"subject":subject,"body_text":message},
+	  success:function(reponse){
+	    alert("Email has been send successful...");
+	  }
+	}); 
+  });
+});
+	/*
+	var formData = new FormData(jQuery('#frmSendblukemail')[0]);
+	formData.append('action','create_events');
+	jQuery.ajax({
+	  url:"<?php echo base_url("");?>/bulk-email.php",
+	  type:"POST",
+	  data:formData,
+	  cache: false,
+      contentType: false,
+      processData: false,
+	  success:function(reponse){
+		location.reload();
+	  }
+	});*/
+$("#email_list_all").click(function(){
+  $(".checkbox").attr('checked', true);
+});
 </script>
