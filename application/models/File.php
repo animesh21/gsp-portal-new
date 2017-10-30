@@ -199,7 +199,7 @@ class File extends CI_Model {
                         ->from('files AS a')
                         ->join('gsp_school AS b', 'a.userid=b.userid', 'left')
                         ->where('a.userid', $argID)
-                        ->like('a.file_name', 'Initiatives')
+                        ->like('a.file_name', 'School_Initiatives')
                         ->get()->result();
     }
    //Get Food Files UPPC Data
