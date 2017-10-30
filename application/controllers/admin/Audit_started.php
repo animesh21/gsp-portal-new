@@ -174,6 +174,7 @@ class Audit_started extends CI_Controller {
      */
 
     public function filter_email() {
+	$sr_no=0;    
 	$args_email_type= $this->input->post('coemail');
 	if($this->input->post('progress'))
 	{
@@ -192,7 +193,7 @@ class Audit_started extends CI_Controller {
 	if(strcmp($args_email_type1,"coemail")==0):
 	   $data=$this->db->select($args_email_type1.",id")->from('gsp_school')->where($condition)->get()->result();
 	  //echo $this->db->last_query();die;
-	    $sr_no=0;
+	    
 	    foreach ($data as $data1): 
 		 $email_list .='<tr class="odd"><td>'.++$sr_no.'</td><td>'.$data1->id.'</td><td>'.$data1->coemail.'</td><td><label class="checkbox-inline"><input type="checkbox" class="checkbox" name="email_list[]" value='.$data1->coemail.' style="opacity: 0.8; margin-top:-1px;" /></label></td></tr>';
 		endforeach;
