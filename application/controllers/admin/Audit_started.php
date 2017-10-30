@@ -169,5 +169,44 @@ class Audit_started extends CI_Controller {
         //echo 'Hi'; exit;
         $this->load->view('admin/audit/template');
     }
+    /*
+     * Filter Message
+     */
+
+    public function filter_email() {
+	$args_email_type= $this->input->post('coemail');
+	if($this->input->post('progress'))
+	{
+		$args_progress= $this->input->post('progress');
+		//print_r($args_progress);exit;
+		$condition=$args_progress;
+	}
+	if($this->input->post('state'))
+	{
+		$args_state= $this->input->post('state');
+		$condition=$args_state;
+	}
+	$args_email_type=explode(',',$args_email_type);
+	$email_list="";
+	foreach($args_email_type as $args_email_type1):
+	if(strcmp($args_email_type1,"coemail")==0):
+	   $data=$this->db->select($args_email_type1.",id")->from('gsp_school')->where($condition)->get()->result();
+	  //echo $this->db->last_query();die;
+	    $sr_no=0;
+	    foreach ($data as $data1): 
+		 $email_list .='<tr class="odd"><td>'.++$sr_no.'</td><td>'.$data1->id.'</td><td>'.$data1->coemail.'</td><td><label class="checkbox-inline"><input type="checkbox" class="checkbox" name="email_list[]" value='.$data1->coemail.' style="opacity: 0.8; margin-top:-1px;" /></label></td></tr>';
+		endforeach;
+		endif; 
+		
+	if(strcmp($args_email_type1,"schoolemail")==0):
+       $data=$this->db->select($args_email_type1.",id")->from('gsp_school')->where($condition)->get()->result();
+	   foreach ($data as $data1):    
+	  $email_list .='<tr class="even"><td>'.++$sr_no.'</td><td>'.$data1->id.'</td><td>'.$data1->schoolemail.'</td><td><label class="checkbox-inline"><input type="checkbox" name="email_list[]" class="checkbox" value='.$data1->schoolemail.' style="opacity: 0.8; margin-top:-1px;" /></label></td></tr>';
+	   // echo $this->db->last_query();die;
+	  endforeach;
+		 endif;
+	endforeach;
+	echo $email_list;
+    }	
 
 }
