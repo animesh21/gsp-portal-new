@@ -449,7 +449,7 @@ To understand water, it is important to know the source of water in your school 
   </div>
   </label>
 </div>
-<div class="question-text"><span class="cube">1</span> Calculate your school’s water consumption, per activity:
+<div class="question-text"> <strong>Calculate your school’s water consumption, per activity:</strong>
   <p>&nbsp; </p>
   <p><strong>&nbsp;To collect data:</strong></p>
   <p> The school will use a glass (250 ml) for drinking during the audit period; they should know the volume
