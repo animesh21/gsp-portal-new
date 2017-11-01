@@ -23,6 +23,13 @@
     </a>
     <div class="title">Schools Completed The Audit</div>
 </div>
+<div class="schools-statics"> <a href="<?php base_url()?>dashboard/school_that_submit_audit">
+        <div class="statics-circle"> <span><?php echo $submitcount;?></span>
+            <label>view</label>
+        </div>
+    </a>
+    <div class="title">Schools Submitted The Audit</div>
+</div>
 <div class="schools-statics"><a href="<?php base_url()?>dashboard/audit_started_but_not_complete" target="_blank">
         <div class="statics-circle"> <span><?php echo $uncompletecount;?></span>
             <label>view</label>
