@@ -191,25 +191,81 @@
         <table class="table table-bordered table-striped">
             <tr><th>Details of the classroom (e.g. Class II section b)</th> <th>X = Area of floor (LxB) (square meters)</th> <th>Y = Sum of area of openings ? (LxH)</th> <th>Percentage of the floor area being ventilated (Y/X x 100)</th></tr>
 
-            <?php
-            $var_tr_count = getFiled('Q4A1', $schoolUserID);
-            for ($var_row = 1; $var_row <= $var_tr_count; ++$var_row):
-                ?>
-                <tr>
-                    <td><?php echo getFiled('Q5A' . $var_row . 'S1', $schoolUserID); ?></td>
-                    <td><?php echo getFiled('Q5A' . $var_row . 'S2', $schoolUserID); ?></td>
-                    <td><?php echo getFiled('Q5A' . $var_row . 'S3', $schoolUserID); ?></td>
-                    <td><?php echo getFiled('Q5A' . $var_row . 'S4', $schoolUserID); ?></td>
-                </tr>
-            <?php endfor; ?>
-            <tr><td>Total</td>  
-		<td><?php echo getFiled('Q5A110S2', $schoolUserID); ?></td> 
-		<td><?php echo getFiled('Q5A110S3', $schoolUserID); ?></td> 
-		<td></td> 
-	    </tr>
+         
+           
 
 
-            
+            <tr>
+
+                <td><?php echo (getFiled('Q5A1S1', $schoolUserID) != "") ? getFiled('Q5A1S1', $schoolUserID) : "N/A"; ?> </td>
+                <td><?php echo (getFiled('Q5A1S2', $schoolUserID) != "") ? getFiled('Q5A1S2', $schoolUserID) : "N/A"; ?> </td>
+                <td><?php echo (getFiled('Q5A1S3', $schoolUserID) != "") ? getFiled('Q5A1S3', $schoolUserID) : "N/A"; ?> </td>
+                <td><?php echo (getFiled('Q5A1S4', $schoolUserID) != "") ? getFiled('Q5A1S4', $schoolUserID) : "N/A"; ?> </td>
+            </tr>
+            <tr>
+
+                <td><?php echo (getFiled('Q5A2S1', $schoolUserID) != "") ? getFiled('Q5A2S1', $schoolUserID) : "N/A"; ?> </td>
+                <td><?php echo (getFiled('Q5A2S2', $schoolUserID) != "") ? getFiled('Q5A2S2', $schoolUserID) : "N/A"; ?> </td>
+                <td><?php echo (getFiled('Q5A2S3', $schoolUserID) != "") ? getFiled('Q5A2S3', $schoolUserID) : "N/A"; ?> </td>
+                <td><?php echo (getFiled('Q5A2S4', $schoolUserID) != "") ? getFiled('Q5A2S4', $schoolUserID) : "N/A"; ?> </td>
+            </tr>
+            <tr>
+
+                <td><?php echo (getFiled('Q5A3S1', $schoolUserID) != "") ? getFiled('Q5A3S1', $schoolUserID) : "N/A"; ?> </td>
+                <td><?php echo (getFiled('Q5A3S2', $schoolUserID) != "") ? getFiled('Q5A3S2', $schoolUserID) : "N/A"; ?> </td>
+                <td><?php echo (getFiled('Q5A3S3', $schoolUserID) != "") ? getFiled('Q5A3S3', $schoolUserID) : "N/A"; ?> </td>
+                <td><?php echo (getFiled('Q5A3S4', $schoolUserID) != "") ? getFiled('Q5A3S4', $schoolUserID) : "N/A"; ?> </td>
+            </tr>
+            <tr>
+
+                <td><?php echo (getFiled('Q5A4S1', $schoolUserID) != "") ? getFiled('Q5A4S1', $schoolUserID) : "N/A"; ?> </td>
+                <td><?php echo (getFiled('Q5A4S2', $schoolUserID) != "") ? getFiled('Q5A4S2', $schoolUserID) : "N/A"; ?> </td>
+                <td><?php echo (getFiled('Q5A4S3', $schoolUserID) != "") ? getFiled('Q5A4S3', $schoolUserID) : "N/A"; ?> </td>
+                <td><?php echo (getFiled('Q5A4S4', $schoolUserID) != "") ? getFiled('Q5A4S4', $schoolUserID) : "N/A"; ?> </td>
+            </tr>
+            <tr>
+
+                <td><?php echo (getFiled('Q5A5S1', $schoolUserID) != "") ? getFiled('Q5A5S1', $schoolUserID) : "N/A"; ?> </td>
+                <td><?php echo (getFiled('Q5A5S2', $schoolUserID) != "") ? getFiled('Q5A5S2', $schoolUserID) : "N/A"; ?> </td>
+                <td><?php echo (getFiled('Q5A5S3', $schoolUserID) != "") ? getFiled('Q5A5S3', $schoolUserID) : "N/A"; ?> </td>
+                <td><?php echo (getFiled('Q5A5S4', $schoolUserID) != "") ? getFiled('Q5A5S4', $schoolUserID) : "N/A"; ?> </td>
+            </tr>
+            <tr>
+
+                <td><?php echo (getFiled('Q5A6S1', $schoolUserID) != "") ? getFiled('Q5A6S1', $schoolUserID) : "N/A"; ?> </td>
+                <td><?php echo (getFiled('Q5A6S2', $schoolUserID) != "") ? getFiled('Q5A6S2', $schoolUserID) : "N/A"; ?> </td>
+                <td><?php echo (getFiled('Q5A6S3', $schoolUserID) != "") ? getFiled('Q5A6S3', $schoolUserID) : "N/A"; ?> </td>
+                <td><?php echo (getFiled('Q5A6S4', $schoolUserID) != "") ? getFiled('Q5A6S4', $schoolUserID) : "N/A"; ?> </td>
+            </tr>
+            <tr>
+
+                <td><?php echo (getFiled('Q5A7S1', $schoolUserID) != "") ? getFiled('Q5A7S1', $schoolUserID) : "N/A"; ?> </td>
+                <td><?php echo (getFiled('Q5A7S2', $schoolUserID) != "") ? getFiled('Q5A7S2', $schoolUserID) : "N/A"; ?> </td>
+                <td><?php echo (getFiled('Q5A7S3', $schoolUserID) != "") ? getFiled('Q5A7S3', $schoolUserID) : "N/A"; ?> </td>
+                <td><?php echo (getFiled('Q5A7S4', $schoolUserID) != "") ? getFiled('Q5A7S4', $schoolUserID) : "N/A"; ?> </td>
+            </tr>
+            <tr>
+
+                <td><?php echo (getFiled('Q5A8S1', $schoolUserID) != "") ? getFiled('Q5A8S1', $schoolUserID) : "N/A"; ?> </td>
+                <td><?php echo (getFiled('Q5A8S2', $schoolUserID) != "") ? getFiled('Q5A8S2', $schoolUserID) : "N/A"; ?> </td>
+                <td><?php echo (getFiled('Q5A8S3', $schoolUserID) != "") ? getFiled('Q5A8S3', $schoolUserID) : "N/A"; ?> </td>
+                <td><?php echo (getFiled('Q5A8S4', $schoolUserID) != "") ? getFiled('Q5A8S4', $schoolUserID) : "N/A"; ?> </td>
+            </tr>
+            <tr>
+
+                <td><?php echo (getFiled('Q5A9S1', $schoolUserID) != "") ? getFiled('Q5A9S1', $schoolUserID) : "N/A"; ?> </td>
+                <td><?php echo (getFiled('Q5A9S2', $schoolUserID) != "") ? getFiled('Q5A9S2', $schoolUserID) : "N/A"; ?> </td>
+                <td><?php echo (getFiled('Q5A9S3', $schoolUserID) != "") ? getFiled('Q5A9S3', $schoolUserID) : "N/A"; ?> </td>
+                <td><?php echo (getFiled('Q5A9S4', $schoolUserID) != "") ? getFiled('Q5A9S4', $schoolUserID) : "N/A"; ?> </td>
+            </tr>
+            <tr>
+
+                <td><?php echo (getFiled('Q5A10S1', $schoolUserID) != "") ? getFiled('Q5A10S1', $schoolUserID) : "N/A"; ?> </td>
+                <td><?php echo (getFiled('Q5A10S2', $schoolUserID) != "") ? getFiled('Q5A10S2', $schoolUserID) : "N/A"; ?> </td>
+                <td><?php echo (getFiled('Q5A10S3', $schoolUserID) != "") ? getFiled('Q5A10S3', $schoolUserID) : "N/A"; ?> </td>
+                <td><?php echo (getFiled('Q5A10S4', $schoolUserID) != "") ? getFiled('Q5A10S4', $schoolUserID) : "N/A"; ?> </td>
+            </tr>
+			 <tr><td>Total</td>  <td><?php echo getFiled('Q5A110S2', $schoolUserID); ?></td> <td><?php echo getFiled('Q5A110S3', $schoolUserID); ?></td> <td></td> </tr>
         </table>
 
 
@@ -227,7 +283,18 @@
         <label class="control-label"><span class="cube">3</span>What is the ownership of the vehicles used by your
             school? Please choose what is applicable.</label>
         <br/>
-        <?php echo (getFiled('Q6A1', $schoolUserID) != "") ? getFiled('Q6A1', $schoolUserID) : "N/A"; ?> </div>
+        <?php 
+		  $arrBoard=array(
+                            '1'=>'School does not use or own vehicles',
+                            '2'=>'Operator-owned vehicles',
+                            '3'=>'School-owned vehicles',
+                            '4'=>'A combination of school-owned and operator-owned vehicles',
+                            '5'=>'Hired vehicles (JNV schools)'
+                        );
+						echo (getFiled('Q6A1', $schoolUserID)!="") ?
+                        $arrBoard[getFiled('Q6A1', $schoolUserID)] : "";
+		
+		?> </div>
     <div class="form-group" id="vehicle">
         <label class="control-label"><span class="cube">3(a)</span>Provide details of school-owned motorised
             vehicles </label>
@@ -617,35 +684,10 @@
             </div>
         <?php } ?>
     </div>
-    <div class="form-group" id="Q6A3" style="display:none;">
-        <label class="control-label"><span class="cube">3(c)</span>IS CNG AVAILABLE IN YOUR STATE?</label>
-        <ul class="list-inline">
-            <li>
-                <label>
-                    <input type="radio" name="Q6A3" id="Q6A3Answer" onclick="AvailableState(1)" value="Y">
-                    Yes </label>
-            </li>
-            <li>
-                <label>
-                    <input type="radio" name="Q6A3" id="Q6A3Answer" onclick="AvailableState(2)" value="N">
-                    No </label>
-            </li>
-        </ul>
-    </div>
-    <div class="form-group" id="Q6A3S1">
-        <label class="control-label"><span class="cube">3(c)a</span>IS CNG AVAILABLE IN YOUR AREA?</label>
-        <ul class="list-inline">
-            <li>
-                <label>
-                    <input type="radio" name="Q6A4S1" id="Q6A3S1Answer" value="Y">
-                    Yes </label>
-            </li>
-            <li>
-                <label>
-                    <input type="radio" name="Q6A4S1" id="Q6A3S1Answer" value="N">
-                    No </label>
-            </li>
-        </ul>
+   <div class="form-group" id="Q6A3S1">
+        <label class="control-label"><span class="cube">3(c)a</span>IS CNG AVAILABLE IN YOUR AREA?</label><br/>
+        <?php echo (getFiled('Q9A1', $schoolUserID) != "") ? (getFiled('Q9A1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?>
+		
     </div>
     <div class="form-group">
         <label>
@@ -739,10 +781,10 @@
                 <td><label>Total</label>
                 </td>
             </tr>
-            <tr>
+             <tr>
                 <td><label>Personal four-wheeler</label>
                 </td>
-                <td><?php echo getFiled('Q7A7S1', $schoolUserID) ? getFiled('Q7A7S1', $schoolUserID) : "N/A"; ?></td>
+                <td><?php echo (getFiled('Q7A7S1', $schoolUserID) != "") ? getFiled('Q7A7S1', $schoolUserID) : "N/A"; ?></td>
                 <td><?php echo (getFiled('Q7A7S2', $schoolUserID) != "") ? getFiled('Q7A7S2', $schoolUserID) : "N/A"; ?></td>
                 <td><?php echo (getFiled('Q7A7S3', $schoolUserID) != "") ? getFiled('Q7A7S3', $schoolUserID) : "N/A"; ?></td>
                 <td><?php echo (getFiled('Q7A7S4', $schoolUserID) != "") ? getFiled('Q7A7S4', $schoolUserID) : "N/A"; ?></td>
