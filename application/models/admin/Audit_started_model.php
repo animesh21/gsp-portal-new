@@ -383,5 +383,16 @@ public function getExcel2017Data() {
     {
         return $this->db->get('mail')->result();
     }
-   
-          }
+	
+    /*School Image Zip Download Now*/
+	public function getZipImagesOfSchool($argsUserId)
+	{
+	   $data=$this->db->select("*")
+	   ->from("files")
+	   ->where("userid=".$argsUserId)
+	   ->get()
+	   ->result();
+	   return $data;
+	}
+	   
+}
