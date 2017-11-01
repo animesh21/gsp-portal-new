@@ -18,7 +18,8 @@ class Audit_started_2017 extends CI_Controller {
         $this->load->helper(array('download', 'common_helper', 'form'));
         $this->load->model('admin/Audit_started_model');
         $this->session->userdata('USER_ID') == '';
-	$this->load->helper('date');    
+	$this->load->helper('date');
+	$this->load->library('zip');
     }
 
     public function index() {
