@@ -70,8 +70,24 @@ class Dashboard_model extends CI_Model {
 	public function getschool_that_complete_audit() {
 		$this->db->where('progress = 100');
 		return $this->db->count_all_results('gsp_school');
-        
 	}
+	
+	public function getschool_that_submit_audit() {
+		$this->db->where("status='1'");
+		return $this->db->count_all_results('gsp_aduit_submitted');
+	}
+	
+	public function getschool_that_submit_audit_data() {
+		$this->db->where("status='1'");
+		return $this->db->select('a.*,b.name AS state_name,c.name As district_name')
+		            ->from('gsp_school AS a')
+					->join('gsp_aduit_submitted AS e','e.userid=a.userid', 'left')
+					->join('states AS b', 'a.state=b.id', 'left')
+					->join('cities AS c', 'a.district=c.id', 'left')
+					->where('e.status="1"')
+					->get()->result();
+	}
+	
 	
 	public function school_start_but_not_complete()
 	{
