@@ -24,6 +24,7 @@ class Dashboard extends CI_Controller {
         $data['Schools'] = $this->School_model->getSchools();
         $data['schoolcount']=$this->Dashboard_model->schoolCount();
 		$data['completecount']=$this->Dashboard_model->getschool_that_complete_audit();
+	        $data['submitcount']=$this->Dashboard_model->getschool_that_submit_audit();
 		$data['uncompletecount']=$this->Dashboard_model->getschool_start_but_not_complete();
 		$data['notstartcount']=$this->Dashboard_model->getschools_not_start_the_audit();
 		//echo '<pre>'; print_r($data['uncompletecount']);exit();
@@ -63,6 +64,14 @@ class Dashboard extends CI_Controller {
 	{
 		$data['main']='admin/audit/complete_school';
 		$data['complete']=$this->Dashboard_model->school_that_complete_audit();
+		//echo '<pre>'; print_r($data['complete']);exit();
+		$this->load->view('admin/includes/template', $data);
+	}
+	
+	public function school_that_submit_audit()
+	{
+		$data['main']='admin/audit/complete_audit_submit';
+		$data['complete_submit']=$this->Dashboard_model->getschool_that_submit_audit_data();
 		//echo '<pre>'; print_r($data['complete']);exit();
 		$this->load->view('admin/includes/template', $data);
 	}
