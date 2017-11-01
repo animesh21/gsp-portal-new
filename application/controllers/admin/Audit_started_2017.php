@@ -306,21 +306,29 @@ public function excel2017() {
     }
     
   
-	public function download_file($argID){	
-	echo "hello";
-	echo $argID;die;	
-  	$this->load->helper('download');		  	
-          		          
-         $data = file_get_contents(base_url()."/uploads/files/".$argID); // Read the file's contents
-          $name = $argID;		        
-   		  
-         force_download($name, $data);    		   
-              		              
-      
+	/*Download image*/
+	
+	public function download_file($argID){
+	$this->load->helper('download');
+	echo "hello";die;
+	    echo $argID; exit;
 	    
-	    
+        $data =base_url()."/uploads/files/".$argID; // Read the file's contents
+        $name = $argUserID;
+ 
+        force_download($data,NULL);    
             
     }
-
+	/*Download zip image*/
+	public function downloadzip($argID){
+	      $data=$this->Audit_started_model->getZipImagesOfSchool($argID);
+	      foreach($data as $r):
+		   $filedata=$r->file_name;
+		   $filename=base_url()."uploads/files/".$r->file_name;
+           $this->zip->add_data($filedata,file_get_contents($filename)); 
+	   endforeach; 
+            $this->zip->download(date('d-M-Y'));
+	}
+	
 }
 
