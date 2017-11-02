@@ -54,5 +54,5 @@ class Feedback extends CI_Controller {
 	   $shool_record=array("school_id"=>$get_school_id,"userid"=>$get_current_user,"year"=>$get_current_year,"status"=>'1');
 	   $this->db->insert('gsp_aduit_submitted',$shool_record);
 	   }	
-	
+    }
 }
