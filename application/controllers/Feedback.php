@@ -43,16 +43,20 @@ class Feedback extends CI_Controller {
     public function set()
     {	
        $post = $this->input->post();
-       $this->Answer_model->submitAnswers($post,8);
-       redirect(base_url("Feedback/end_aduit"));    
+       $this->Answer_model->submitAnswers($post,8);   
 	   $get_current_user=$this->session->userdata('USER_ID');
 	   $get_current_year=date('Y');
 	   $data=$this->db->select("id")->from('gsp_school')->where("userid=".$get_current_user)->get()->result();
 	   $get_school_id=$data[0]->id;
-	   $result=$this->db->select("*")->from('gsp_school')->where("userid=".$get_current_user)->where("school_id=".$get_school_id)->where("year=".$get_current_year)->get()->result();
-	   if($result>0){
-	   $shool_record=array("school_id"=>$get_school_id,"userid"=>$get_current_user,"year"=>$get_current_year,"status"=>'1');
-	   $this->db->insert('gsp_aduit_submitted',$shool_record);
+	   $result=$this->db->select("*")->from('gsp_aduit_submitted')->where("userid=".$get_current_user)->where("school_id=".$get_school_id)->where("year=".$get_current_year)->get()->result();
+	   if($result){
+       redirect(base_url("Feedback/end_aduit")); 
+	   }
+	   else
+	   {
+	    $shool_record=array("school_id"=>$get_school_id,"userid"=>$get_current_user,"year"=>$get_current_year,"status"=>'1');
+	    $this->db->insert('gsp_aduit_submitted',$shool_record);
+		redirect(base_url("Feedback/end_aduit")); 
 	   }	
     }
 }
