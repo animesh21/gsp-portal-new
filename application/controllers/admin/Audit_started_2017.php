@@ -39,7 +39,72 @@ class Audit_started_2017 extends CI_Controller {
         $name = 'registration_2017.csv';
         force_download($name, $row);
     }
+ /*
+     * Generate Excel By Condition
+     */
 
+    public function excelByProgress() {
+	    $varProgress="a.progress > '5' && a.progress < '100'";
+        $this->load->dbutil();
+        $row = $this->Audit_started_model->getExcelDataByProgress( $varProgress);
+        $name = 'registration_2017.csv';
+		force_download($name, $row);
+    }
+	
+	/*
+     * Generate Excel By Condition
+     */
+
+    public function excelByProgress1() {
+	    $varProgress="a.progress > '5'";
+        $this->load->dbutil();
+        $row = $this->Audit_started_model->getExcelDataByProgress( $varProgress);
+        $name = 'SCHOOL_THAT_STARTED_THE_AUDIT'.date('d-m-Y').'.csv';
+		force_download($name, $row);
+    }
+    
+	/*
+     * Generate Excel By Condition
+     */
+
+    public function excelByProgress2() {
+	    $varProgress="a.progress = '100'";
+        $this->load->dbutil();
+        $row = $this->Audit_started_model->getExcelDataByProgress( $varProgress);
+        $name = 'SCHOOL_THAT_STARTED_THE_AUDIT'.date('d-m-Y').'.csv';
+		force_download($name, $row);
+    }
+
+/*
+     * Generate Excel By Condition
+     */
+
+    public function excelByProgress3() {
+	    $varProgress="a.progress = '5'";
+        $this->load->dbutil();
+        $row = $this->Audit_started_model->getExcelDataByProgress($varProgress);
+        $name = 'SCHOOL_THAT_STARTED_THE_AUDIT'.date('d-m-Y').'.csv';
+		force_download($name, $row);
+    }
+
+    /*
+     * Generate Excel By Condition
+     */
+
+    public function excelByProgress4() {
+	    $varProgress="a.progress = '100'";
+        $this->load->dbutil();
+        $row = $this->Audit_started_model->getExcelDataByProgress1($varProgress);
+        $name = 'School_That_Submit_Audit'.date('d-m-Y').'.csv';
+		force_download($name, $row);
+    }
+
+	
+	 /*
+     * Generate Excel 2017
+     */
+	
+	
 public function excel2017() {
         $this->load->dbutil();
         $row = $this->Audit_started_model->getExcel2017Data();
