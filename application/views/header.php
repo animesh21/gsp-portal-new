@@ -145,7 +145,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         id="link" >Waste
                     </li>
                     <li class="row <?php echo ($this->router->fetch_class() == 'feedback') ? "current" : "missing"; ?>"
-                        id="link" onClick="javascript:window.location.href='<?php echo base_url("feedback") ?>';">
+                        id="link">
                         Feedback
                     </li>
                 </ol>
