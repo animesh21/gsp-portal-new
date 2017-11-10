@@ -29,7 +29,7 @@ class Performance_report extends CI_Controller {
         $this->load->view('admin/includes/template', $data);
     }
     public function air_land() {
-	    
+	ini_set('max_execution_time', 300);    
         $this->config->load('array_config');
 	ini_set('memory_limit', '-1');    
 	ini_set('display_errors', 1);
@@ -39,6 +39,7 @@ class Performance_report extends CI_Controller {
         $this->load->view('admin/includes/template', $data);
     }
     public function water() {
+	ini_set('max_execution_time', 300);    
         $this->config->load('array_config');
         $data['main'] = 'admin/performance_report/wate_to_waste';
         $data['title'] = 'Home | Perofrmance Report';
@@ -46,6 +47,7 @@ class Performance_report extends CI_Controller {
         $this->load->view('admin/includes/template', $data);
     }
     public function waste() {
+	    ini_set('max_execution_time', 300);
         $this->config->load('array_config');
         $data['main'] = 'admin/performance_report/waste';
         $data['title'] = 'Home | Perofrmance Report';
@@ -53,6 +55,7 @@ class Performance_report extends CI_Controller {
         $this->load->view('admin/includes/template', $data);
     }
     public function feedback() {
+	    ini_set('max_execution_time', 300);
         $this->config->load('array_config');
         $data['main'] = 'admin/performance_report/feedback_points';
         $data['title'] = 'Home | Perofrmance Report';
