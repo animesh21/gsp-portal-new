@@ -34,7 +34,7 @@ class Login extends CI_Controller {
     }
 
     public function Register() {
-        ini_set("memory_limit","256M");
+     
         $data['states'] = $this->User_model->getStates();
         $this->form_validation->set_rules('captcha', 'Captcha', 'callback_validate_captcha');
         $this->form_validation->set_rules('state', 'State', 'required');
