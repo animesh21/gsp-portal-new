@@ -29,6 +29,34 @@ class Audit_started_2017 extends CI_Controller {
         $this->load->view('admin/includes/template', $data);
     }
 
+     public function getSchoolData()
+    {   
+       $records=$this->Audit_started_model->getData();
+	   $arr_school=array();
+	   $i=0;
+	   foreach($records as $record):
+		   $arr_school[]=array('sr_no'=>++$i,
+		    'id'=>$record->id,
+		    'name'=>$record->name,
+		    'state_name'=>$record->state_name,
+		    'district_name'=>$record->district_name,
+		    'city'=>$record->city,
+		    'coname'=>$record->coname,
+		    'coemail'=>$record->coemail,
+		    'comobile'=>$record->comobile,
+		    'progress'=>$record->progress,
+		    'date_added'=>$record->date_added);
+	   endforeach;
+		$data['record']=array(
+            "sEcho" => 1,
+            "iTotalRecords" => count($arr_school),
+            "iTotalDisplayRecords" => count($arr_school),
+            "aaData"=>$arr_school);
+		    echo json_encode($data['record']);
+   }		
+	
+	
+	
     /*
      * Generate Excel
      */
