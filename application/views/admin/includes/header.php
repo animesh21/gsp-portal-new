@@ -14,7 +14,6 @@
 <link href="<?php echo base_url(); ?>assets/front/css/chosen.css" rel="stylesheet">
 <!-- begin js --->
 <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-
 <script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
 <script type="text/javascript" language="javascript" src="https://nightly.datatables.net/buttons/js/buttons.html5.min.js"></script>
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -25,14 +24,11 @@
     <![endif]-->
 <script src="<?php echo base_url(); ?>assets/front/js/jquery.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/front/js/bootstrap.min.js"></script>
-
-
 <!--<script src="Scripts/yui-utilities.js" type="text/javascript"></script>
 <script src="Scripts/shadowbox-yui.js" type="text/javascript"></script>
 <script src="Scripts/shadowbox.js" type="text/javascript"></script>
 <script src="Scripts/admin.js"></script>
 <script src="Scripts/AC_RunActiveContent.js" type="text/javascript"></script>-->
-
 </head>
 <body>
 <header class="form-hdr ">
@@ -50,13 +46,13 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
               <li class="<?php echo ($this->router->fetch_class()=='dashboard') ? "active" : ""; ?>"><a href="<?php echo base_url('admin/dashboard'); ?>">HOME</a></li>
-              <li class=""><a href="<?php base_url()?>total_school_registration">REGISTRATIONS<span class="caret"></span></a>
+              <li class=""><a href="<?php base_url('admin/audit_started_2017')?>">REGISTRATIONS<span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li class=""><a href="<?php echo base_url('admin/audit_started'); ?>">AUDIT STARTED</a></li>
                   <li><a href="<?php echo base_url('admin/audit_started_2017'); ?>">REGISTRATIONS 2017</a></li>
                   <li><a href="<?php echo base_url('admin/audit_started/statewise'); ?>">REGISTRATIONS BY STATE</a></li>
-		  <li><a href="<?php echo base_url('admin/audit_started/feedback'); ?>">Feedback</a></li>
-		<li><a href="<?php echo base_url('admin/audit_started/feedback1'); ?>">Feedback-1</a></li>	
+                  <li><a href="<?php echo base_url('admin/audit_started/feedback'); ?>">Feedback</a></li>
+                  <li><a href="<?php echo base_url('admin/audit_started/feedback1'); ?>">Feedback-1</a></li>
                 </ul>
               </li>
               <li class=""><a href="#">AUDIT COMPLETED<span class="caret"></span></a>
@@ -66,7 +62,6 @@
                   <li class=""><a href="<?php echo base_url('admin/performance_report/water'); ?>">Water</a> </li>
                   <li class=""><a href="<?php echo base_url('admin/performance_report/waste'); ?>">Waste</a> </li>
                   <li class=""><a href="<?php echo base_url('admin/performance_report/feedback'); ?>">Feedback And Points</a> </li>
-                 
                   <li><a href="analysis_report_all_question.php">All Responses</a></li>
                 </ul>
               </li>
@@ -121,5 +116,4 @@
 </header>
 <!--close header-->
 <div class="container">
-  <div class="content-form wrapper">
-    
+<div class="content-form wrapper">
