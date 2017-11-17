@@ -40,16 +40,6 @@
     <button class="exportBtn">Export to Excel</button>
     </a></h2>
 </div>
-<?php echo form_open("admin/Audit_started_2017/searchSchool"); ?>
-<div class="input-group col-md-4">
-  <input type="text" class="form-control" placeholder="Search" name="search_data">
-  <div class="input-group-btn">
-    <button class="btn btn-default" type="submit" style="background: #e86549 !important; color:#fff;"> Search </button>
-  </div>
-</div>
-<?php form_close(); ?>
-<br/>
-<br/>
 <table id="example1" class="display dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
   <thead>
     <tr role="row">
