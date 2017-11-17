@@ -137,9 +137,9 @@ class Answer_model extends CI_Model {
             $this->db->like('questionid', 'Q4Wa2S');
             $this->db->delete('gsp_answers');
 
-            $this->db->where('userid', $this->session->userdata('USER_ID'));
-            $this->db->like('questionid', 'Q8Wa1S');
-            $this->db->delete('gsp_answers');
+            //$this->db->where('userid', $this->session->userdata('USER_ID'));
+            //$this->db->like('questionid', 'Q8Wa1S');
+            //$this->db->delete('gsp_answers');
 
             $this->db->where('userid', $this->session->userdata('USER_ID'));
             $this->db->like('questionid', 'Q15Wa2S');
