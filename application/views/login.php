@@ -98,9 +98,9 @@
                             <p><a class="lptext" title="Forgot Password Form" href="javascript:void(0)" rel="shadowbox;"
                                   width="580" height="360" data-toggle="modal" data-target="#myModal">Forgot password?</a></p>
                         </div>
-                        <div class="btn-group">
+                       /* <div class="btn-group">
                             <input class="org-btn" type="submit" value="Continue">
-                        </div>
+                        </div> */
 <?php echo form_close(); ?>
                         <p class="help">Need help? Email: <a href="mailto:support@greenschoolsprogramme.org">support@greenschoolsprogramme.org</a>
                             or call 011-4061600, ext – 219, 300. <br>
