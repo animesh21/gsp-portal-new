@@ -28,14 +28,12 @@ class Performance_report extends CI_Controller {
         $data['record'] = $this->Performance_model->getData();
         $this->load->view('admin/includes/template', $data);
     }
-    public function air_land() {
-	ini_set('max_execution_time', 300);    
+    public function air() {
         $this->config->load('array_config');
-	ini_set('memory_limit', '-1');    
-	ini_set('display_errors', 1);
         $data['main'] = 'admin/performance_report/air_to_land';
         $data['title'] = 'Home | Perofrmance Report';
-        $data['record'] = $this->Performance_model->getData();
+        $data['record1'] = $this->Performance_model->air_performance();
+	//echo '<pre>'; print_r($data['record1']); exit;
         $this->load->view('admin/includes/template', $data);
     }
     public function water() {
