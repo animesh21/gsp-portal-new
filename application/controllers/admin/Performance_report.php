@@ -15,6 +15,11 @@ class Performance_report extends CI_Controller {
         $this->load->model('admin/Performance_model');
         $this->load->helper('common_helper');
         $this->load->helper('form');
+	$this->output->set_header('HTTP/1.0 200 OK');
+	$this->output->set_header('HTTP/1.1 200 OK');
+	$this->output->set_header('Cache-Control: no-store, no-cache, must-revalidate');
+	$this->output->set_header('Cache-Control: post-check=0, pre-check=0');
+	$this->output->set_header('Pragma: no-cache');
     }
 
     /*
@@ -29,15 +34,22 @@ class Performance_report extends CI_Controller {
         $this->load->view('admin/includes/template', $data);
     }
     public function air() {
-        //$this->config->load('array_config');
+        $this->config->load('array_config');
         $data['main'] = 'admin/performance_report/air_to_land';
         $data['title'] = 'Home | Perofrmance Report';
         $data['record1'] = $this->Performance_model->air_performance();
 	//echo '<pre>'; print_r($data['record1']); exit;
         $this->load->view('admin/includes/template', $data);
     }
+    public function schoolgeneral() {
+        $this->config->load('array_config');
+        $data['main'] = 'admin/performance_report/schoolgeneral';
+        $data['title'] = 'Home | Perofrmance Report';
+        $data['record1'] = $this->Performance_model->schoolgeneral_performance();
+	//echo '<pre>'; print_r($data['record1']); exit;
+        $this->load->view('admin/includes/template', $data);
+    }
     public function water() {
-	ini_set('max_execution_time', 300);    
         $this->config->load('array_config');
         $data['main'] = 'admin/performance_report/wate_to_waste';
         $data['title'] = 'Home | Perofrmance Report';
@@ -45,8 +57,6 @@ class Performance_report extends CI_Controller {
         $this->load->view('admin/includes/template', $data);
     }
     public function waste() {
-	    //ini_set('max_execution_time', 300);
-        ini_set('display_errors', '1');
         $this->config->load('array_config');
         $data['main'] = 'admin/performance_report/waste';
         $data['title'] = 'Home | Perofrmance Report';
@@ -54,23 +64,43 @@ class Performance_report extends CI_Controller {
         $this->load->view('admin/includes/template', $data);
     }
     public function feedback() {
-	ini_set('max_execution_time', 500);
-	ini_set('display_errors', '1');
         $this->config->load('array_config');
         $data['main'] = 'admin/performance_report/feedback_points';
         $data['title'] = 'Home | Perofrmance Report';
-        $data['record'] = $this->Performance_model->getData();
+        $data['record'] = $this->Performance_model->feedback_performance();
+	//echo '<pre>'; print_r($data['record']); exit;
         $this->load->view('admin/includes/template', $data);
     }
     
-    public function PerformanceId() {
-        $this->config->load('array_config');
-        $data['main'] = 'admin/performance_report/PdfById';
-        $data['title'] = 'Home | Perofrmance Report';
-       
-            
-        $this->load->view('admin/includes/template', $data);    
-    }        
+    public function land()
+    {
+        $data['main']='admin/performance_report/land';
+        $data['title']='Land';
+         
+        $data['records']=$this->Performance_model->land();
+        //echo '<pre>'; print_r($data['records']);exit();
+         $this->load->view('admin/includes/template', $data);
+    }
+    
+     public function food()
+    {
+        $data['main']='admin/performance_report/food';
+        $data['title']='Food';
+         
+        $data['records']=$this->Performance_model->food();
+        //echo '<pre>'; print_r($data['records']);exit();
+         $this->load->view('admin/includes/template', $data);
+    }
+    
+    public function energy()
+    {
+        $data['main']='admin/performance_report/energy';
+        $data['title']='Energy';
+         
+        $data['records']=$this->Performance_model->energy();
+        //echo '<pre>'; print_r($data['records']);exit();
+         $this->load->view('admin/includes/template', $data);
+    }
             
             
     
