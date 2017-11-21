@@ -47,15 +47,17 @@ class Performance_report extends CI_Controller {
         $this->load->view('admin/includes/template', $data);
     }
     public function waste() {
-	    ini_set('max_execution_time', 300);
+	    //ini_set('max_execution_time', 300);
+        ini_set('display_errors', '1');
         $this->config->load('array_config');
-        $data['main'] = 'admin/performance_report/waste';
+        $data['main'] = 'admin/performance_report/waste;
         $data['title'] = 'Home | Perofrmance Report';
         $data['record'] = $this->Performance_model->getData();
         $this->load->view('admin/includes/template', $data);
     }
     public function feedback() {
-	    ini_set('max_execution_time', 300);
+	ini_set('max_execution_time', 500);
+	ini_set('display_errors', '1');
         $this->config->load('array_config');
         $data['main'] = 'admin/performance_report/feedback_points';
         $data['title'] = 'Home | Perofrmance Report';
