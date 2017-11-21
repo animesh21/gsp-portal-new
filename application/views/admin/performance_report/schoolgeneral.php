@@ -1,5 +1,5 @@
 <div class="top-area">
-    <h2>2017 Registration</h2>
+    <h2>SCHOOL PROFILE & GENERAL</h2>
 </div>
 <div style="overflow: scroll"> 
     <table class="display dataTable no-footer" id="tablePerformance">
