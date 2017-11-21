@@ -50,7 +50,7 @@ class Performance_report extends CI_Controller {
 	    //ini_set('max_execution_time', 300);
         ini_set('display_errors', '1');
         $this->config->load('array_config');
-        $data['main'] = 'admin/performance_report/waste;
+        $data['main'] = 'admin/performance_report/waste';
         $data['title'] = 'Home | Perofrmance Report';
         $data['record'] = $this->Performance_model->getData();
         $this->load->view('admin/includes/template', $data);
