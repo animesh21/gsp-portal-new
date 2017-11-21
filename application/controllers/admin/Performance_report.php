@@ -1,5 +1,5 @@
 <?php
-
+ini_set('memory_limit', '-1');
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Performance_report extends CI_Controller {
@@ -33,7 +33,7 @@ class Performance_report extends CI_Controller {
         $data['record'] = $this->Performance_model->getData();
         $this->load->view('admin/includes/template', $data);
     }
-    public function air() {
+    public function air() {    
         $this->config->load('array_config');
         $data['main'] = 'admin/performance_report/air_to_land';
         $data['title'] = 'Home | Perofrmance Report';
