@@ -37,6 +37,12 @@ return $this->db->select('a.*, b.name AS state_name, c.name AS district_name, d.
        ->order_by('a.id', 'desc')
        ->get()->result();
 }
-	
+ public function air_performance() {
+	return $this->db->select('a.*, b.id, b.name, c.category, c.population')
+			->from('tbl_air AS a')
+			->join('gsp_school AS b', 'a.userid=b.userid', 'left')
+			->join('tbl_general AS c', 'a.userid=c.userid', 'left')
+			->get()->result();
+    }	
 
 }
