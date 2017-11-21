@@ -29,7 +29,7 @@ class Performance_report extends CI_Controller {
         $this->load->view('admin/includes/template', $data);
     }
     public function air() {
-        $this->config->load('array_config');
+        //$this->config->load('array_config');
         $data['main'] = 'admin/performance_report/air_to_land';
         $data['title'] = 'Home | Perofrmance Report';
         $data['record1'] = $this->Performance_model->air_performance();
