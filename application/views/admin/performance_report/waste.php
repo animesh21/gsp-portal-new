@@ -1240,7 +1240,7 @@
                 <!-----------------------Uploaded documents----------------------->
                 <td><?php echo "NA"; ?></td>
                 <!-----------------------Total Waste points----------------------->
-                <td><?php echo getWastePoints($r->userid); ?></td>
+                <td><?php echo 'hii'; //getWastePoints($r->userid); ?></td>
                 
            
             </tr>
