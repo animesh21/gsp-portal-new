@@ -58,10 +58,14 @@
               <li class=""><a href="#">AUDIT COMPLETED<span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li class=""><a href="#">PERFORMANCE REPORT</a> </li>
-                  <li class=""><a href="<?php echo base_url('admin/performance_report/air_land'); ?>">Air-Land</a> </li>
+                  <li class=""><a href="<?php echo base_url('admin/performance_report/schoolgeneral'); ?>">School Profile & General</a> </li>
+                  <li class=""><a href="<?php echo base_url('admin/performance_report/air'); ?>">Air</a> </li>
+		  <li class=""><a href="<?php echo base_url('admin/performance_report/energy'); ?>">Energy</a> </li>
+		  <li class=""><a href="<?php echo base_url('admin/performance_report/food'); ?>">Food</a> </li>
+		  <li class=""><a href="<?php echo base_url('admin/performance_report/land'); ?>">Land</a> </li>
                   <li class=""><a href="<?php echo base_url('admin/performance_report/water'); ?>">Water</a> </li>
                   <li class=""><a href="<?php echo base_url('admin/performance_report/waste'); ?>">Waste</a> </li>
-                  <li class=""><a href="<?php echo base_url('admin/performance_report/feedback'); ?>">Feedback And Points</a> </li>
+                  <li class=""><a href="<?php echo base_url('admin/performance_report/feedback'); ?>">Feedback</a> </li>
                   <li><a href="analysis_report_all_question.php">All Responses</a></li>
                 </ul>
               </li>
