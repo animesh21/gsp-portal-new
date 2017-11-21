@@ -39,15 +39,15 @@ class Performance_model extends CI_Model {
 //	return $query->result();
 //    }
 
-   
-
-    public function schoolgeneral_performance() { public function air_performance() {
+    public function air_performance() {
 	return $this->db->select('a.*, b.id, b.name, c.category, c.population')
 			->from('tbl_air AS a')
 			->join('gsp_school AS b', 'a.userid=b.userid', 'left')
 			->join('tbl_general AS c', 'a.userid=c.userid', 'left')
 			->get()->result();
     }
+
+    public function schoolgeneral_performance() {
 	return $this->db->select('a.*, b.id, c.name AS state_name, d.name AS district_name')
 			->from('tbl_general AS a')
 			->join('gsp_school AS b', 'a.userid=b.userid', 'left')
