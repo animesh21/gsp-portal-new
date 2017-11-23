@@ -86,5 +86,12 @@ class Performance_model extends CI_Model {
                     ->join('tbl_general AS c', 'b.userid=c.userid', 'left')
                     ->get()->result();
     }
+  
+ public function getDataWater() {
+   return $this->db->select('a.*,b.name,c.population,c.category')->from('tbl_water AS a')
+       ->join('gsp_school AS b', 'a.userid=b.userid', 'left')
+	   ->join('tbl_general AS c', 'a.userid=c.userid', 'left')
+       ->get()->result();
+ }
 
 }
