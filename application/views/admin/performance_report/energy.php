@@ -5,13 +5,12 @@
  <table class="display dataTable no-footer" id="tablePerformance">
         <thead>
           <tr role="row">
-		<th>Sr.No</th>
-				<th>School ID</th>
+				<th>Sr.No</th>
+				<th>School Id</th>
 				<th>School Name</th>
-				<th>School Category</th>
+				<th>Category</th>
 				<th>Population</th>
 				<th>Electricity Bill</th>
-<!--				<th>Uploaded document</th>-->
 				<th>School has its own vehicle</th>
 				<th>Quantity consumed Electricity from Board (Kwh)</th>
 				<th>Quantity consumed Electricity from Generator (Diesel)</th>
@@ -45,7 +44,6 @@
 				<th>Others (MJ)</th>
 				<th>Total MJ</th>
 				<th>Per capita Energy Consumption</th>
-<!--				<th>Uploaded document </th>-->
 				<th>No.of Air conditioner</th>
 				<th>Size of Air conditioner</th>
 				<th>BEE Star rating Air conditioner</th>
@@ -67,17 +65,14 @@
 				<th>No.of Fans</th>
 				<th>Size of Fans</th>
 				<th>BEE Star rating Fans</th>
-<!--				<th>Uploaded document</th>-->
 				<th>Average no.of sunny days</th>
 				<th>Alternate source of energy</th>
-<!--				<th>Uploaded document</th>-->
 				<th>Solar</th>
 				<th>Wind</th>
 				<th>Hydro</th>
 				<th>Biogas Plant </th>
 				<th>Combination of solar and wind</th>
 				<th>Use of Solar water heater</th>
-<!--				<th>Uploaded document</th>-->
 				<th>Total points in Energy</th>
           </tr>
         </thead>
@@ -85,15 +80,14 @@
         <tbody>
           <?php $i=0; foreach($records as $r){ ?>
             <tr role="row" class="<?php echo ($i%2==0) ? "even" : "odd"; ?>">
-               <td><?php echo $i + 1; ?></td>
-              <td><?php echo $r->id; ?></td>
-                <td><?php echo $r->name; ?></td>
+                <td><?php echo $i + 1; ?></td>
+				<td><?php echo $r->id; ?></td>
+				<td><?php echo $r->name; ?></td>
                 <td><?php echo $r->category; ?></td>
                 <td><?php echo $r->population; ?></td>
                 <td><?php echo $r->Q4E1; ?></td>
-<!--                <td><?php echo $r->upload; ?></td>-->
-                 <td><?php echo $r->Q5E1; ?></td>
-               <td><?php echo $r->Q6E1S1; ?></td>
+				<td><?php echo $r->Q5E1; ?></td>
+				<td><?php echo $r->Q6E1S1; ?></td>
                 <td><?php echo $r->Q6E2S1; ?></td>
                 <td><?php echo $r->Q6E3S1; ?></td>
                 <td><?php echo $r->Q6E4S1 ; ?></td>
@@ -124,7 +118,7 @@
 				<td><?php echo $r->Q6E13S2; ?></td>
 				<td><?php echo $r->Q6E14S2; ?></td>
 				<td><?php echo $r->Q6E15S2 ; ?></td>
-<!--				<td><?php echo $r->upload1; ?></td>-->
+				<td><?php echo $r->percatitaaa ; ?></td>
 				<td><?php echo $r->Q7E2S1; ?></td>
 				<td><?php echo $r->Q7E2S2; ?></td>
 				<td><?php echo $r->Q7E2S3; ?></td>
@@ -146,22 +140,74 @@
 				<td><?php echo $r->Q7E8S1; ?></td>
 				<td><?php echo $r->Q7E8S2; ?></td>
 				<td><?php echo $r->Q7E8S3; ?></td>
-<!--				<td><?php echo $r->upload2; ?></td>-->
 				<td><?php echo $r->Q8E1; ?></td>
 				<td><?php echo $r->Q9E1; ?></td>
-<!--				<td><?php echo $r->upload3; ?></td>-->
-				<td><?php echo $r->Q9E1S1; ?></td>
-				<td><?php echo $r->Q9E1S2; ?></td>
-				<td><?php echo $r->Q9E1S3; ?></td>
-				<td><?php echo $r->Q9E1S5; ?></td>
-				<td><?php echo $r->Q9E1S4; ?></td>
+				
+				
+				
+				<td><?php if(($r->Q9E1S1)==1) 
+				{
+					echo 'Solar';
+				}
+				
+				if(($r->Q9E1S1)!='1') 
+				{
+					echo 'N/A';
+				}	
+				
+				?></td>
+				<td><?php if(($r->Q9E1S2)==1)
+				{
+					echo 'Wind';
+				}
+
+				
+				if(($r->Q9E1S2)!='1')
+				{
+					echo 'N/A';
+				}	
+
+					?></td>
+				<td><?php if(( $r->Q9E1S3)==1)
+				{
+					echo 'Hydro';
+				}
+				
+				if(( $r->Q9E1S3)!='1')
+				{
+					echo 'N/A';
+				}
+					?></td>
+				<td><?php if(( $r->Q9E1S5)==1)
+				{
+					echo 'Biogas Plant';
+				}
+				if(( $r->Q9E1S5)!='1')
+				{
+					echo 'N/A';
+				}
+
+					?></td>
+				<td><?php if(( $r->Q9E1S4)==1) 
+				{
+					echo 'Combination of solar and wind';
+				}	
+				if(( $r->Q9E1S4)!='1') 
+				{
+					echo 'N/A';
+				}	
+				
+				?></td>
+				
+				
+				
+				
                 <td><?php echo $r->Q10E1; ?></td>
-                <td><?php echo $r->upload4; ?></td>
-				 
-                <td><?php echo $r->Point; ?></td>
+               <td><?php echo $r->Point; ?></td>
                
             </tr>
           <?php $i++; } ?>
         </tbody>
       </table>
-</div>
+	  </div>
+	  
