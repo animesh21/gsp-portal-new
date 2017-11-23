@@ -11,9 +11,7 @@
 		<th>School Category</th>
 		<th>School Population</th>
 		<th>No.of Classrooms</th>
-		<th>Area of floor</th>
-		<th>Sum of area of openings </th>
-		<th>Window-floor Ratio</th>
+		<th>Window-floor Ratio(%)</th>
 		<th>Ownership of Vehicles</th>
 		<th>No.of Vehicles</th>
 		<th>No.of Vehicles more than eight years old</th>
@@ -126,8 +124,6 @@
     		<td><?php echo $record1[$i]->category; ?></td>
     		<td><?php echo $record1[$i]->population; ?></td>
     		<td><?php echo $record1[$i]->Q4A1; ?></td>
-    		<td><?php echo $record1[$i]->Q5A110S2; ?></td>
-    		<td><?php echo $record1[$i]->Q5A110S3; ?></td>
     		<td>
     <?php
     $var = 0;
@@ -138,13 +134,41 @@
     echo number_format($var, 2);
     ?>
     		</td>
-    		<td><?php echo $record1[$i]->Q6A1; ?></td>
+    		<td>
+		    <?php 
+//			$arr = array(
+//                            '1' => 'School does not use or own vehicles',
+//                            '2' => 'Operator-owned vehicles',
+//                            '3' => 'School-owned vehicles',
+//                            '4' => 'A combination of school-owned and operator-owned vehicles',
+//                            '5' => 'Hired vehicles (JNV schools)',
+//                        );
+			if($record1[$i]->Q6A1==1)
+			{
+			    echo 'School does not use or own vehicles';
+			}else if($record1[$i]->Q6A1==2)
+			{
+			    echo 'Operator-owned vehicles';
+			}else if($record1[$i]->Q6A1==3)
+			{
+			    echo 'School-owned vehicles';
+			}else if($record1[$i]->Q6A1==4)
+			{
+			    echo 'A combination of school-owned and operator-owned vehicles';
+			}else if($record1[$i]->Q6A1==5)
+			{
+			    echo 'Hired vehicles (JNV schools)';
+			}
+			
+		    ?>
+		</td>
     		<td><?php echo $record1[$i]->Q6A2S1T1; ?></td>
     		<td><?php echo $record1[$i]->Q6A2S1T2; ?></td>
     		<td><?php echo $record1[$i]->Q6A2S1T3; ?></td>
     		<td><?php echo $record1[$i]->Q6A2S1T4; ?></td>
     		<td><?php echo $record1[$i]->Q6A2S1T5; ?></td>
     		<td><?php echo $record1[$i]->Q6A2S1T6; ?></td>
+		<td><?php echo getFiled('Q6A2S3B4', $record1[$i]->userid); ?></td>
     		<td><?php echo $record1[$i]->Q6A2S3D5; ?></td>
     		<td><?php echo $record1[$i]->Q6A2S3D1; ?></td>
     		<td><?php echo $record1[$i]->Q6A2S3P1; ?></td>
@@ -183,8 +207,28 @@
     		<td><?php echo $record1[$i]->total_hybrid; ?></td>
     		<td><?php echo $record1[$i]->total_electric; ?></td>
     		<td><?php echo $record1[$i]->total_biofuel; ?></td>
-    		<td><?php echo $record1[$i]->Q6A3; ?></td>
-    		<td><?php echo $record1[$i]->Q6A4S1; ?></td>
+    		<td>
+		    <?php 
+			if($record1[$i]->Q6A3=="Y")
+			{
+			    echo 'Yes';
+			}else if($record1[$i]->Q6A3=="N")
+			{
+			    echo 'No';
+			}
+		    ?>
+		</td>
+    		<td>
+		    <?php 
+			if($record1[$i]->Q6A4S1=="Y")
+			{
+			    echo 'Yes';
+			}else if($record1[$i]->Q6A4S1=="N")
+			{
+			     echo 'No';
+			}
+		?>
+		</td>
     		<td><?php echo $record1[$i]->Q7A1S1; ?></td>
     		<td><?php echo $record1[$i]->Q7A1S2; ?></td>
     		<td><?php echo $record1[$i]->Q7A1S3; ?></td>
@@ -217,7 +261,7 @@
     		<td><?php echo $record1[$i]->Q7A8S2; ?></td>
     		<td><?php echo $record1[$i]->Q7A8S2; ?></td>
     		<td><?php echo $record1[$i]->Q7A8S3; ?></td>
-    		<td><?php echo $record1[$i]->Q7A8S4; ?></td>
+<!--    		<td><?php echo $record1[$i]->Q7A8S4; ?></td>-->
     		<td><?php echo $record1[$i]->Q7A9S1; ?></td>
     		<td><?php echo $record1[$i]->Q7A9S2; ?></td>
     		<td><?php echo $record1[$i]->Q7A9S3; ?></td>
@@ -231,8 +275,28 @@
     		<td><?php echo $record1[$i]->Q7A11S3; ?></td>
     		<td><?php echo $record1[$i]->Q7A11S4; ?></td>
     		<td><?php echo $record1[$i]->Q8A1; ?></td>
-    		<td><?php echo $record1[$i]->Q9A1; ?></td>
-    		<td><?php echo $record1[$i]->Q9A2; ?></td>
+    		<td>
+		    <?php 
+			if($record1[$i]->Q9A1=="Y")
+			{
+			    echo "Yes";
+			}else if($record1[$i]->Q9A1=="N")
+			{
+			     echo "No";
+			}
+		    ?>
+		</td>
+    		<td><?php //echo $record1[$i]->Q9A2; ?>
+		    <?php 
+			if($record1[$i]->Q9A2=="Y")
+			{
+			    echo "Yes";
+			}else if($record1[$i]->Q9A2=="N")
+			{
+			     echo "No";
+			}
+		    ?>
+		</td>
     		<td><?php echo number_format($record1[$i]->points, 2); ?></td>
     	    </tr>
     <?php
