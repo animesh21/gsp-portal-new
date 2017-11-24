@@ -38,6 +38,7 @@ class Audit_started_2017 extends CI_Controller {
 		   $arr_school[]=array('sr_no'=>++$i,
 		    'id'=>$record->id,
 		    'name'=>$record->name,
+		   'userid'=>$record->userid,
 		    'state_name'=>$record->state_name,
 		    'district_name'=>$record->district_name,
 		    'city'=>$record->city,
@@ -422,6 +423,17 @@ public function excel2017() {
            $this->zip->add_data($filedata,file_get_contents($filename)); 
 	   endforeach; 
             $this->zip->download(date('d-M-Y'));
+	}
+	
+	public function delete_school($argID)
+	{
+		$check1= $this->Audit_started_model->school_delete($argID);
+		
+		if($check1){
+		   redirect('Admin/Audit_started_2017');
+	   }else{
+				echo "record failed";
+			} 
 	}
 	
 }
