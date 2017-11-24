@@ -1,7 +1,9 @@
 <div class="top-area">
-  <h2>2017 Registration<a href="<?php echo base_url('admin/Performance_report/excel') ?>">
+  <h2>2017 Registration
+	  
+    <!--<a href="<?php echo base_url('admin/Performance_report/excel') ?>">
     <button class="exportBtn">Export to Excel</button>
-    </a></h2>
+    </a>--> </h2>
 </div>
 <div style="overflow: scroll">
   <table class="display dataTable no-footer" id="tablePerformance">
