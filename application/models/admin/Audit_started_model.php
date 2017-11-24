@@ -541,5 +541,18 @@ public function getExcel2017Data() {
 	   ->result();
 	   return $data;
 	}
+	
+	public function school_delete($argID)
+	{
+	$this->db->where('userid', $argID);
+	if($this->db->delete('gsp_school'))
+	{
+		$this->db->where('id', $argID);
+		$this->db->delete('gsp_user');
+	}
+	return true;	
+	
+	   
+}
 	   
 }
