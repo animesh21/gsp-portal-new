@@ -59,7 +59,7 @@
   </thead>
 	
 	
-</table>
+
 <div class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog">
         <div class="modal-content">
@@ -106,7 +106,7 @@
                 </div>
             </div>
         </div>
-
+</table>
 <!----- Badge Model Code  ------>
 <div class="modal fade" id="myModal1" role="dialog">
   <div class="modal-dialog modal-md">
