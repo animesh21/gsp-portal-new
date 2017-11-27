@@ -57,7 +57,12 @@
       <th>Action</th>
     </tr>
   </thead>
+	
+	
 </table>
+
+ 
+
 <!----- Badge Model Code  ------>
 <div class="modal fade" id="myModal1" role="dialog">
   <div class="modal-dialog modal-md">
