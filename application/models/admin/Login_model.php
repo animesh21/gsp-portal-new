@@ -34,16 +34,18 @@ class Login_model extends CI_Model {
     /*
      * Check Auth for delete record
      */
-    public function checkAuth($argPost) {
+    public function checkAuth($argPassword,$argUserId) {
         $query = $this->db->select('*')
                 ->from('tbl_admin')
-                ->where(array('password' => $argPost['password'], 'status' => '1'))
+                ->where('password=',$argPassword)
+				->where('status=','1')
                 ->get();
-        if ($query->num_rows() == 1) {
-            
-            return true;
+        if ($query) 
+		{
+		   $this->db->delete("gsp_school",array("userid"=>$argUserId));
+		   $this->db->delete("gsp_user",array("id"=>$argUserId));
+		   $this->db->delete("gsp_answers",array("userid"=>$argUserId));
+		   echo $this->db->last_query();
         }
-        return false;
     }
-
 }
