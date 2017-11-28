@@ -72,6 +72,20 @@ class Performance_report extends CI_Controller {
         $this->load->view('admin/includes/template', $data);
     }
     
+    public function totalCalculation() {
+        $this->config->load('array_config');
+        $data['main'] = 'admin/performance_report/total-point-calculation';
+        $data['title'] = 'Home | Total Calculation';
+        $data['record'] = $this->Performance_model->getTotalCalculation();
+        $this->load->view('admin/includes/template', $data);
+    }	
+	
+	
+	
+	
+	
+	
+	
     public function land()
     {
         $data['main']='admin/performance_report/land';
