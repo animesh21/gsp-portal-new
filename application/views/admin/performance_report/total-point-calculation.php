@@ -25,7 +25,7 @@
 	    foreach($record as $t){
 		?>
       <tr>
-        <td><?php echo $i + 1; ?></td>
+        <td><?php echo ++$i; ?></td>
         <td><?php echo $t->id; ?></td>
 		<td><?php echo $t->userid; ?></td>
         <td><?php echo $t->name; ?></td>
