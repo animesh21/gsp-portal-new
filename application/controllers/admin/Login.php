@@ -36,22 +36,10 @@ class Login extends CI_Controller {
     }
     
     public function Auth(){
-        $password = $this->input->post();
+        $password = $this->input->post('password');
         $userid = $this->input->post('userid');
-       // print_r($userid);        die();
-        $auth = $this->Login_model->checkAuth($password);
-        if($auth){
-        $this->Audit_started_model->row_delete($userid); 
-       
-        }
-        else{
-            
-           // $message = "Something Went Wrong";
-         //   echo "<script type='text/javascript'>alert('$message');</script>";
-            redirect(base_url('admin/audit_started_2017'));
-        }
-       redirect(base_url('admin/audit_started_2017'));
-        
+        $auth = $this->Login_model->checkAuth($password,$userid);
+        redirect(base_url('admin/audit_started_2017'));
     }
 
 }
