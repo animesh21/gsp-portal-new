@@ -17,6 +17,9 @@
         <th>Total Land Point</th>
         <th>Total Water Point</th>
         <th>Total Waste Point</th>
+		<th>Total Point</th>
+		<th>Total Point In Percentage</th>
+		<th>Remark</th>
       </tr>
     </thead>
     <tbody>
@@ -37,6 +40,25 @@
         <td><?php echo $t->land_point; ?></td>
 		<td><?php echo $t->water_point; ?></td>
         <td><?php echo $t->waste_point; ?></td>
+		<td><?php echo $t->air_point + $t->energy_point + $t->food_point + $t->land_point + $t->water_point + $t->waste_point; ?></td>
+		<td><?php 
+		  $total=$t->air_point + $t->energy_point + $t->food_point + $t->land_point + $t->water_point + $t->waste_point; 
+		  $percentage= ($total/164)*100;
+		  echo $percentage;
+		 ?></td>
+		 <td> 
+		 <?php
+		  if($percentage>70):
+		   echo "<label class='label label-success'>Green</label>";
+		  elseif($percentage>50 || $percentage<=69.9):
+		  		   echo "<label class='label label-warning' style='background:yellow; color:black;'>Yellow</label>";
+		  elseif($percentage>35 || $percentage<=49.9):
+		  		   echo "<label class='label label-success' style='background:orange; color:black;'>Orange</label>";
+		  elseif($percentage>34.9):
+		  		   echo "<label class='label label-danger'>Red</label>";
+		  endif;
+		  
+		?></td>
       </tr>
       <?php
 }
