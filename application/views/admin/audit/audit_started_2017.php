@@ -66,7 +66,8 @@
         <h4 class="modal-title" id="myModalLabel"> GSP Auth </h4>
       </div>
       <!-- Modal Body -->
-      <div class="modal-body"> <?php echo form_open('admin/Login/Auth'); ?>
+      <div class="modal-body"> 
+	    <?php echo form_open('admin/Login/Auth'); ?>
         <div class="form-group">
           <div class="col-sm-10">
             <input type="password" class="form-control" name="password" placeholder="Please enter Passcode"/>
@@ -80,7 +81,8 @@
         <div class="form-group">
           <div class=" col-sm-10"> <?php echo form_submit(array('id' => 'submit', 'value' => 'Submit')); ?> </div>
         </div>
-        <?php echo form_close(); ?> </div>
+        <?php echo form_close(); ?> 
+	  </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
@@ -111,6 +113,10 @@ function Myfun(argID){
    $('#schoolid').val(argID);
    $('#myModal').css('display','');
 }
+$('#submit').click(function(){
+   alert("School Has Deleted Successfully...");
+   location.reload();
+});
 function getBadgeCode(userid)
 {	
 	$.ajax({
