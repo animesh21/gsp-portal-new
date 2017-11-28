@@ -1,7 +1,7 @@
 <div class="top-area">
-  <!--<h2>2017 Registration<a href="<?php echo base_url('admin/Performance_report/excel') ?>">
-    <button class="exportBtn">Export to Excel</button>
-    </a></h2>-->
+  <h2>2017 Registration<!--<a href="<?php echo base_url('admin/Performance_report/excel') ?>">
+    <button class="exportBtn">Export to Excel</button>-->
+    </a></h2>
 </div>
 <div style="overflow: scroll">
   <table class="display dataTable no-footer" id="tablePerformance">
@@ -110,89 +110,91 @@
         <td><?php echo  $r->name; ?></td>
         <td><?php echo $r->category; ?></td>
         <td><?php echo $r->population; ?></td>
-        <td><?php echo  $r->Q4W1; ?></td>
-        <td><?php echo  $r->Q4W2; ?></td>
-        <td><?php echo  $r->Q4W3; ?></td>
-        <td><?php echo  $r->Q4W4; ?></td>
-        <td><?php echo  $r->Q4W5; ?></td>
-        <td><?php echo  $r->Q4W6; ?></td>
-        <td><?php echo  $r->Q4W7; ?></td>
-        <td><?php echo  $r->Q4W8; ?></td>
-        <td><?php echo  $r->Q4W9; ?></td>
-        <td><?php echo  $r->Q4W10; ?></td>
-        <td><?php echo  $r->Q4W11; ?></td>
-        <td><?php echo  $r->Q4W11/$r->population; ?></td>
-        <td><?php echo  $r->Q5W1; ?></td>
-        <td><?php echo  $r->Q5W2; ?></td>
-        <td><?php echo  $r->Q5W3; ?></td>
-        <td><?php echo  $r->Q5W4; ?></td>
-        <td><?php echo  $r->Q6W1; ?></td>
-        <td><?php echo  $r->Q6W2; ?></td>
-        <td><?php echo  $r->Q6W3; ?></td>
-        <td><?php echo  $r->Q6W4; ?></td>
-        <td><?php echo  $r->Q6W5; ?></td>
-        <td><?php echo  $r->Q7W1; ?></td>
-        <td><?php echo  $r->Q7W2; ?></td>
-        <td><?php echo  $r->Q8W1S1; ?></td>
-        <td><?php echo  $r->Q8W1S2; ?></td>
-        <td><?php echo  $r->Q8W1S3; ?></td>
-        <td><?php echo  $r->Q8W1S4; ?></td>
-        <td><?php echo  $r->Q8W1S5; ?></td>
-        <td><?php echo  $r->Q8W1S6; ?></td>
-        <td><?php echo  $r->Q8W1S7; ?></td>
-        <td><?php echo  $r->Q8W1S8; ?></td>
-        <td><?php echo  $r->Q8W1S9; ?></td>
-        <td><?php echo  $r->Q8W1S10; ?></td>
-        <td><?php echo  $r->Q8W1S11; ?></td>
-        <td><?php echo  $r->Q8W2; ?></td>
-        <td><?php echo  $r->Q8W2S1; ?></td>
-        <td><?php echo  $r->Q8W2S1S1; ?></td>
-        <td><?php echo  $r->Q8W2S2; ?></td>
-        <td><?php echo  $r->Q8W2S2S1; ?></td>
-        <td><?php echo  $r->Q8W2S2S2; ?></td>
-        <td><?php echo  $r->Q8W2S2S7; ?></td>
-        <td><?php echo  $r->Q8W2S2S10; ?></td>
-        <td><?php echo  $r->Q8W2S4; ?></td>
-        <td><?php echo  $r->Q8W2S31; ?></td>
-        <td><?php echo  $r->Q8W2S4S1; ?></td>
-        <td><?php echo  $r->Q8W2S4S22; ?></td>
-        <td><?php echo  $r->Q8W2S5; ?></td>
-        <td><?php echo  $r->Q8W2S7; ?></td>
-        <td><?php echo  $r->Q8W2S61; ?></td>
-        <td><?php echo  $r->Q8W2S9; ?></td>
-        <td><?php echo  $r->Q8W2S8; ?></td>
-        <td><?php echo  $r->Q8W2S10; ?></td>
-        <td><?php echo  $r->Q8W2S10; ?></td>
-        <td><?php echo  $r->Q8W2S12; ?></td>
-        <td><?php echo  $r->Q8W2S13; ?></td>
-        <td><?php echo  $r->Q8W3S1; ?></td>
-        <td><?php echo  $r->Q8W3S2; ?></td>
-        <td><?php echo  $r->Q8W3S3; ?></td>
-        <td><?php echo  $r->Q8W3S4; ?></td>
-        <td><?php echo  $r->Q8W3S5; ?></td>
-        <td><?php echo  $r->Q8W3S6; ?></td>
-        <td><?php echo  $r->Q8W3S7; ?></td>
-        <td><?php echo  $r->Q8W3S8; ?></td>
-        <td><?php echo  $r->Q9W1; ?></td>
-        <td><?php echo  $r->Q9W1/$r->population; ?></td>
-        <td><?php echo  $r->Q10W1; ?></td>
-        <td><?php echo  $r->Q11W1; ?></td>
-        <td><?php echo  $r->Q11W1/$r->population; ?></td>
-        <td><?php echo  $r->Q13W1S1; ?></td>
-        <td><?php echo  $r->Q13W1S2; ?></td>
-        <td><?php echo  $r->Q13W1S3; ?></td>
-        <td><?php echo  $r->Q13W1S4; ?></td>
-        <td><?php echo  $r->Q13W1S4/$r->population; ?></td>
-        <td><?php echo  $r->Q14W1; ?></td>
-        <td><?php echo  $r->Q15W1; ?></td>
-        <td><?php echo  $r->Q15W1; ?></td>
-        <td><?php echo  $r->Q16W1; ?></td>
-        <td><?php echo  $r->Q21W1; ?></td>
-        <td><?php echo  $r->Q18W1; ?></td>
-        <td><?php echo  $r->Q19W1; ?></td>
-        <td><?php echo  $r->Q20W1; ?></td>
-        <td><?php echo  $r->Q20W2; ?></td>
-        <td><?php echo  $r->points; ?></td>
+       
+<td><?php echo  $r->Q4W1; ?></td>
+<td><?php echo  $r->Q4W2; ?></td>
+<td><?php echo  $r->Q4W3; ?></td>
+<td><?php echo  $r->Q4W4; ?></td>
+<td><?php echo  $r->Q4W5; ?></td>
+<td><?php echo  $r->Q4W6; ?></td>
+<td><?php echo  $r->Q4W7; ?></td>
+<td><?php echo  $r->Q4W8; ?></td>
+<td><?php echo  $r->Q4W9; ?></td>
+<td><?php echo  $r->Q4W10; ?></td>
+<td><?php echo  $r->Q4W11; ?></td>
+<td><?php echo  $r->population/$r->Q4W11; ?></td>
+<td><?php echo  $r->Q5W1; ?></td>
+<td><?php echo  $r->Q5W2; ?></td>
+<td><?php echo  $r->Q5W3; ?></td>
+<td><?php echo  $r->Q5W4; ?></td>
+<td><?php echo  $r->Q6W1; ?></td>
+<td><?php echo  $r->Q6W2; ?></td>
+<td><?php echo  $r->Q6W3; ?></td>
+<td><?php echo  $r->Q6W4; ?></td>
+<td><?php echo  $r->Q6W5; ?></td>
+<td><?php echo  $r->Q7W1; ?></td>
+<td><?php echo  $r->Q7W2; ?></td>
+<td><?php echo  $r->Q8W1S1; ?></td>
+<td><?php echo  $r->Q8W1S2; ?></td>
+<td><?php echo  $r->Q8W1S3; ?></td>
+<td><?php echo  $r->Q8W1S4; ?></td>
+<td><?php echo  $r->Q8W1S5; ?></td>
+<td><?php echo  $r->Q8W1S6; ?></td>
+<td><?php echo  $r->Q8W1S7; ?></td>
+<td><?php echo  $r->Q8W1S8; ?></td>
+<td><?php echo  $r->Q8W1S9; ?></td>
+<td><?php echo  $r->Q8W1S10; ?></td>
+<td><?php echo  $r->Q8W1S11; ?></td>
+<td><?php echo  $r->Q8W2; ?></td>
+<td><?php echo  $r->Q8W2S1; ?></td>
+<td><?php echo  $r->Q8W2S1S1; ?></td>
+<td><?php echo  $r->Q8W2S2; ?></td>
+<td><?php echo  $r->Q8W2S2S1; ?></td>
+<td><?php echo  $r->Q8W2S2S2; ?></td>
+<td><?php echo  $r->Q8W2S2S7; ?></td>
+<td><?php echo  $r->Q8W2S2S10; ?></td>
+<td><?php echo  $r->Q8W2S4; ?></td>
+<td><?php echo  $r->Q8W2S31; ?></td>
+<td><?php echo  $r->Q8W2S4S1; ?></td>
+<td><?php echo  $r->Q8W2S4S22; ?></td>
+<td><?php echo  $r->Q8W2S5; ?></td>
+<td><?php echo  $r->Q8W2S61; ?></td>
+<td><?php echo  $r->Q8W2S7; ?></td>
+<td><?php echo  $r->Q8W2S9; ?></td>
+<td><?php echo  $r->Q8W2S8; ?></td>
+<td><?php echo  $r->Q8W2S10; ?></td>
+<td><?php echo  $r->Q8W2S10; ?></td>
+<td><?php echo  $r->Q8W2S12; ?></td>
+<td><?php echo  $r->Q8W2S13; ?></td>
+<td><?php echo  $r->Q8W3S1; ?></td>
+<td><?php echo  $r->Q8W3S2; ?></td>
+<td><?php echo  $r->Q8W3S3; ?></td>
+<td><?php echo  $r->Q8W3S4; ?></td>
+<td><?php echo  $r->Q8W3S5; ?></td>
+<td><?php echo  $r->Q8W3S6; ?></td>
+<td><?php echo  $r->Q8W3S7; ?></td>
+<td><?php echo  $r->Q8W3S8; ?></td>
+<td><?php echo  $r->Q9W1; ?></td>
+<td><?php echo  $r->population/$r->Q9W1; ?></td>
+<td><?php echo  $r->Q10W1; ?></td>
+<td><?php echo  $r->Q11W1; ?></td>
+<td><?php echo  $r->population/$r->Q11W1; ?></td>
+<td><?php echo  $r->Q13W1S1; ?></td>
+<td><?php echo  $r->Q13W1S2; ?></td>
+<td><?php echo  $r->Q13W1S3; ?></td>
+<td><?php echo  $r->Q13W1S4; ?></td>
+<td><?php echo  $r->population/$r->Q13W1S4; ?></td>
+<td><?php echo  $r->Q14W1; ?></td>
+<td><?php echo  $r->Q15W1; ?></td>
+<td><?php echo  $r->Q15W1; ?></td>
+<td><?php echo  $r->Q16W1; ?></td>
+<td><?php echo  $r->Q21W1; ?></td>
+<td><?php echo  $r->Q18W1; ?></td>
+<td><?php echo  $r->Q19W1; ?></td>
+<td><?php echo  $r->Q20W1; ?></td>
+<td><?php echo  $r->Q20W2; ?></td>
+<td><?php echo  $r->points; ?></td>
+
       </tr>
       <?php
             $i++;
