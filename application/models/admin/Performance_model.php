@@ -110,6 +110,7 @@ return $this->db->select('a.*,a.name,a.id,a.userid,c.population,c.category,d.poi
 	   ->join('tbl_food AS f', 'a.userid=f.userid', 'left')
 	   ->join('tbl_land AS g', 'a.userid=g.userid', 'left')
 	   ->join('tbl_water AS h', 'a.userid=h.userid', 'left')
+	->where('a.progress=100')
            ->get()->result();
       }
 	
