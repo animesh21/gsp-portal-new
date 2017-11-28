@@ -93,11 +93,26 @@ class Performance_model extends CI_Model {
 	   ->join('tbl_general AS c', 'a.userid=c.userid', 'left')
        ->get()->result();
  }
+ 
  public function getDataWaste() {
-return $this->db->select('a.*,b.name,b.id,c.population,c.category')->from('tbl_waste AS a')
+  return $this->db->select('a.*,b.name,b.id,c.population,c.category')->from('tbl_waste AS a')
       ->join('gsp_school AS b', 'a.userid=b.userid', 'left')
 	   ->join('tbl_general AS c', 'a.userid=c.userid', 'left')
        ->get()->result();
-}	
-
+  }	
+  
+ public function getTotalCalculation() {
+return $this->db->select('a.*,a.name,a.id,a.userid,c.population,c.category,d.points AS air_point,e.Point AS energy_point ,f.Point As food_point,g.Point AS land_point,h.points AS water_point,b.points AS waste_point')->from('gsp_school AS a')
+       ->join('tbl_waste AS b', 'a.userid=b.userid', 'left')
+	   ->join('tbl_general AS c', 'a.userid=c.userid', 'left')
+	   ->join('tbl_air AS d', 'a.userid=d.userid', 'left')
+	   ->join('tbl_energy AS e', 'a.userid=e.userid', 'left')
+	   ->join('tbl_food AS f', 'a.userid=f.userid', 'left')
+	   ->join('tbl_land AS g', 'a.userid=g.userid', 'left')
+	   ->join('tbl_water AS h', 'a.userid=h.userid', 'left')
+       ->limit(5)->get()->result();
+    echo $this->db->last_query();
+  }
+	
+	
 }
