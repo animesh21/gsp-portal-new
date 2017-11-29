@@ -109,7 +109,16 @@
             <ul class="list">
                 <li>
                     <p class="orange"><span>1</span><span>How many levels does your school have? Please choose what is applicable.</span></p>
-                    <table class="table question1ge tick">
+					
+					 <p class="formanswertext">
+                    Lowest level of grade:<?php echo getFiled('Q1G1',
+                        $schoolUserID);
+                    ?>         </p>
+                <p>
+                    Highest level of grade:<?php echo getFiled('Q1G2',
+                        $schoolUserID);
+                    ?> </p>
+                    <?php /*?><table class="table question1ge tick">
                         <tr>
                             <th>Pre-Primary</th>
                             <th>1st</th>
@@ -164,7 +173,7 @@
                                 <img src="images/1445961880_cross.png">
                             </td>
                         </tr>
-                    </table>
+                    </table><?php */?>
                 </li>
                 <li>
                     <p class="orange"><span>2</span><span> Is your school single gender or mixed gender?</span></p>
@@ -567,76 +576,7 @@
                         </td> 
                         <td></td> 
                     </tr>
-                    <tr>
-
-                        <td><?php echo (getFiled('Q5A1S1', $schoolUserID) != "") ? getFiled('Q5A1S1', $schoolUserID) : "N/A"; ?> </td>
-                        <td><?php echo (getFiled('Q5A1S2', $schoolUserID) != "") ? getFiled('Q5A1S2', $schoolUserID) : "N/A"; ?> </td>
-                        <td><?php echo (getFiled('Q5A1S3', $schoolUserID) != "") ? getFiled('Q5A1S3', $schoolUserID) : "N/A"; ?> </td>
-                        <td><?php echo (getFiled('Q5A1S4', $schoolUserID) != "") ? getFiled('Q5A1S4', $schoolUserID) : "N/A"; ?> </td>
-                    </tr>
-                    <tr>
-
-                        <td><?php echo (getFiled('Q5A2S1', $schoolUserID) != "") ? getFiled('Q5A2S1', $schoolUserID) : "N/A"; ?> </td>
-                        <td><?php echo (getFiled('Q5A2S2', $schoolUserID) != "") ? getFiled('Q5A2S2', $schoolUserID) : "N/A"; ?> </td>
-                        <td><?php echo (getFiled('Q5A2S3', $schoolUserID) != "") ? getFiled('Q5A2S3', $schoolUserID) : "N/A"; ?> </td>
-                        <td><?php echo (getFiled('Q5A2S4', $schoolUserID) != "") ? getFiled('Q5A2S4', $schoolUserID) : "N/A"; ?> </td>
-                    </tr>
-                    <tr>
-
-                        <td><?php echo (getFiled('Q5A3S1', $schoolUserID) != "") ? getFiled('Q5A3S1', $schoolUserID) : "N/A"; ?> </td>
-                        <td><?php echo (getFiled('Q5A3S2', $schoolUserID) != "") ? getFiled('Q5A3S2', $schoolUserID) : "N/A"; ?> </td>
-                        <td><?php echo (getFiled('Q3A3S3', $schoolUserID) != "") ? getFiled('Q3A3S3', $schoolUserID) : "N/A"; ?> </td>
-                        <td><?php echo (getFiled('Q5A3S4', $schoolUserID) != "") ? getFiled('Q5A3S4', $schoolUserID) : "N/A"; ?> </td>
-                    </tr>
-                    <tr>
-
-                        <td><?php echo (getFiled('Q5A4S1', $schoolUserID) != "") ? getFiled('Q5A4S1', $schoolUserID) : "N/A"; ?> </td>
-                        <td><?php echo (getFiled('Q5A4S2', $schoolUserID) != "") ? getFiled('Q5A4S2', $schoolUserID) : "N/A"; ?> </td>
-                        <td><?php echo (getFiled('Q5A4S3', $schoolUserID) != "") ? getFiled('Q5A4S3', $schoolUserID) : "N/A"; ?> </td>
-                        <td><?php echo (getFiled('Q5A4S4', $schoolUserID) != "") ? getFiled('Q5A4S4', $schoolUserID) : "N/A"; ?> </td>
-                    </tr>
-                    <tr>
-
-                        <td><?php echo (getFiled('Q5A5S1', $schoolUserID) != "") ? getFiled('Q5A5S1', $schoolUserID) : "N/A"; ?> </td>
-                        <td><?php echo (getFiled('Q5A5S2', $schoolUserID) != "") ? getFiled('Q5A5S2', $schoolUserID) : "N/A"; ?> </td>
-                        <td><?php echo (getFiled('Q5A5S3', $schoolUserID) != "") ? getFiled('Q5A5S3', $schoolUserID) : "N/A"; ?> </td>
-                        <td><?php echo (getFiled('Q5A5S4', $schoolUserID) != "") ? getFiled('Q5A5S4', $schoolUserID) : "N/A"; ?> </td>
-                    </tr>
-                    <tr>
-
-                        <td><?php echo (getFiled('Q5A6S1', $schoolUserID) != "") ? getFiled('Q5A6S1', $schoolUserID) : "N/A"; ?> </td>
-                        <td><?php echo (getFiled('Q5A6S2', $schoolUserID) != "") ? getFiled('Q5A6S2', $schoolUserID) : "N/A"; ?> </td>
-                        <td><?php echo (getFiled('Q5A6S3', $schoolUserID) != "") ? getFiled('Q5A6S3', $schoolUserID) : "N/A"; ?> </td>
-                        <td><?php echo (getFiled('Q5A6S4', $schoolUserID) != "") ? getFiled('Q5A6S4', $schoolUserID) : "N/A"; ?> </td>
-                    </tr>
-                    <tr>
-
-                        <td><?php echo (getFiled('Q5A7S1', $schoolUserID) != "") ? getFiled('Q5A7S1', $schoolUserID) : "N/A"; ?> </td>
-                        <td><?php echo (getFiled('Q5A7S2', $schoolUserID) != "") ? getFiled('Q5A7S2', $schoolUserID) : "N/A"; ?> </td>
-                        <td><?php echo (getFiled('Q5A7S3', $schoolUserID) != "") ? getFiled('Q5A7S3', $schoolUserID) : "N/A"; ?> </td>
-                        <td><?php echo (getFiled('Q5A7S4', $schoolUserID) != "") ? getFiled('Q5A7S4', $schoolUserID) : "N/A"; ?> </td>
-                    </tr>
-                    <tr>
-
-                        <td><?php echo (getFiled('Q5A8S1', $schoolUserID) != "") ? getFiled('Q5A8S1', $schoolUserID) : "N/A"; ?> </td>
-                        <td><?php echo (getFiled('Q5A8S2', $schoolUserID) != "") ? getFiled('Q5A8S2', $schoolUserID) : "N/A"; ?> </td>
-                        <td><?php echo (getFiled('Q5A8S3', $schoolUserID) != "") ? getFiled('Q5A8S3', $schoolUserID) : "N/A"; ?> </td>
-                        <td><?php echo (getFiled('Q5A8S4', $schoolUserID) != "") ? getFiled('Q5A8S4', $schoolUserID) : "N/A"; ?> </td>
-                    </tr>
-                    <tr>
-
-                        <td><?php echo (getFiled('Q5A9S1', $schoolUserID) != "") ? getFiled('Q5A9S1', $schoolUserID) : "N/A"; ?> </td>
-                        <td><?php echo (getFiled('Q5A9S2', $schoolUserID) != "") ? getFiled('Q5A9S2', $schoolUserID) : "N/A"; ?> </td>
-                        <td><?php echo (getFiled('Q5A9S3', $schoolUserID) != "") ? getFiled('Q5A9S3', $schoolUserID) : "N/A"; ?> </td>
-                        <td><?php echo (getFiled('Q5A9S4', $schoolUserID) != "") ? getFiled('Q5A9S4', $schoolUserID) : "N/A"; ?> </td>
-                    </tr>
-                    <tr>
-
-                        <td><?php echo (getFiled('Q5A10S1', $schoolUserID) != "") ? getFiled('Q5A10S1', $schoolUserID) : "N/A"; ?> </td>
-                        <td><?php echo (getFiled('Q5A10S2', $schoolUserID) != "") ? getFiled('Q5A10S2', $schoolUserID) : "N/A"; ?> </td>
-                        <td><?php echo (getFiled('Q5A10S3', $schoolUserID) != "") ? getFiled('Q5A10S3', $schoolUserID) : "N/A"; ?> </td>
-                        <td><?php echo (getFiled('Q5A10S4', $schoolUserID) != "") ? getFiled('Q5A10S4', $schoolUserID) : "N/A"; ?> </td>
-                    </tr>
+                    
                 </table>
             </li>
         </ul>
@@ -647,7 +587,18 @@
         </div>  
 
         <p class="orange"><span>3</span><span> What is the ownership used by the vehicles used in your school? Please choose what is applicable? </span></p>
-        <p><?php echo (getFiled('Q6A1', $schoolUserID) != "") ? getFiled('Q6A1', $schoolUserID) : "N/A"; ?> </p>
+        <p> <?php 
+		  $arrBoard=array(
+                            '1'=>'School does not use or own vehicles',
+                            '2'=>'Operator-owned vehicles',
+                            '3'=>'School-owned vehicles',
+                            '4'=>'A combination of school-owned and operator-owned vehicles',
+                            '5'=>'Hired vehicles (JNV schools)'
+                        );
+						echo (getFiled('Q6A1', $schoolUserID)!="") ?
+                        $arrBoard[getFiled('Q6A1', $schoolUserID)] : "";
+		
+		?>  </p>
 
 
         <p class="orange"><span>3a</span><span>Provide details of school-owned motorised vehicles</span></p>
@@ -892,13 +843,13 @@
                 </td>
                 <td>Non-Teaching Staff
                 </td>
-                <td>Total>
+                <td>Total
                 </td>
             </tr>
             <tr>
                 <td>Personal four-wheeler
                 </td>
-                <td><?php echo getFiled('Q7A7S1', $schoolUserID) ? getFiled('Q7A7S1', $schoolUserID) : "N/A"; ?></td>
+               <td><?php echo (getFiled('Q7A7S1', $schoolUserID) != "") ? getFiled('Q7A7S1', $schoolUserID) : "N/A"; ?></td>
                 <td><?php echo (getFiled('Q7A7S2', $schoolUserID) != "") ? getFiled('Q7A7S2', $schoolUserID) : "N/A"; ?></td>
                 <td><?php echo (getFiled('Q7A7S3', $schoolUserID) != "") ? getFiled('Q7A7S3', $schoolUserID) : "N/A"; ?></td>
                 <td><?php echo (getFiled('Q7A7S4', $schoolUserID) != "") ? getFiled('Q7A7S4', $schoolUserID) : "N/A"; ?></td>
@@ -1385,7 +1336,7 @@
 
 
         <li>
-            <p>(a).If yes, do you use:</p>
+            
             <p class="orange"><span>5a</span><span> Name the alternate sources of energy employed/ installed in your school?</span></p>
             <p><?php
                 $var_answer = "";
@@ -1477,7 +1428,7 @@
             </tr>
             <tr>
                 <td> 3</td>
-                <td><?php echo (getFiled('Q1F3S1', $schoolUserID) != "") ? getFiled('Q1A3S1', $schoolUserID) : "N/A"; ?> </td>
+                <td><?php echo (getFiled('Q1F3S1', $schoolUserID) != "") ? getFiled('Q1F3S1', $schoolUserID) : "N/A"; ?> </td>
                 <td><?php echo (getFiled('Q1F3S3', $schoolUserID) != "") ? getFiled('Q1F3S3', $schoolUserID) : "N/A"; ?> </td>
                 <td><?php echo (getFiled('Q1F3S2', $schoolUserID) != "") ? getFiled('Q1F3S2', $schoolUserID) : "N/A"; ?> </td>
             </tr>
@@ -2746,27 +2697,27 @@
         </ul>
         <p class="orange"><span>3.2</span> Who supplies the water in your school? (please tick the correct options):</p>
         <ul class="list-unstyled">
-            <?php
-            if (getFiled('Q6W1', $schoolUserID) == 1):
-                echo "Ground water";
-                echo "<br/>";
-            endif;
-            if (getFiled('Q6W2', $schoolUserID) == 1):
-                echo "Surface water";
-                echo "<br/>";
-            endif;
-            if (getFiled('Q6W3', $schoolUserID) == 1):
-                echo "Rain water";
-                echo "<br/>";
-            endif;
-            if (getFiled('Q6W4', $schoolUserID) == 1):
-                echo "Recycled waste water";
-                echo "<br/>";
-            endif;
-            if (getFiled('Q6W5', $schoolUserID) == 1):
-                echo "Recycled waste water";
-            endif;
-            ?>
+             <?php
+                    if (getFiled('Q6W1', $schoolUserID) == 1):
+                        echo "Municipality";
+                        echo "<br/>";
+                    endif;
+                    if (getFiled('Q6W2', $schoolUserID) == 1):
+                        echo "Panchayat";
+                        echo "<br/>";
+                    endif;
+                    if (getFiled('Q6W3', $schoolUserID) == 1):
+                        echo "Public Health Engineering Department (PHED)";
+                        echo "<br/>";
+                    endif;
+                    if (getFiled('Q6W4', $schoolUserID) == 1):
+                        echo "Private supplier";
+                        echo "<br/>";
+                    endif;
+                    if (getFiled('Q6W5', $schoolUserID) == 1):
+                        echo "School’s own supply (bore well, rainwater harvesting facility, etc)";
+                    endif;
+                    ?>
 
         </ul>
 
@@ -2948,15 +2899,15 @@
 
 
         <p class="orange"><span>5.1.(b)</span> How does your school harvest rainwater? </p>
-        <p<?php
-        if (getFiled('Q8W2S2', $schoolUserID) == 1):
-            echo "By storing";
-        elseif (getFiled('Q8W2S2', $schoolUserID) == 2):
-            echo "By recharging groundwater";
-        elseif (getFiled('Q8W2S2', $schoolUserID) == 3):
-            echo "Combination of both";
-        endif;
-        ?></p>
+        <p><?php
+                    if (getFiled('Q8W2S2', $schoolUserID) == 1):
+                        echo "By storing";
+                    elseif (getFiled('Q8W2S2', $schoolUserID) == 2):
+                        echo "By recharging groundwater";
+                    elseif (getFiled('Q8W2S2', $schoolUserID) == 3):
+                        echo "Combination of both";
+                    endif;
+                    ?></p>
 
         <p class="orange"><span class="cube">5.1.(b)(1)</span>If your school only stores rainwater, please select
             the use of stored rainwater: </p>
@@ -4268,6 +4219,24 @@
             <tr>
                 <td> Per capita waste generation (f): </td>
                 <td><?php echo (getFiled('Q6Wa6S2', $schoolUserID) != "") ? getFiled('Q6Wa6S2', $schoolUserID) : "N/A"; ?> </td>
+            </tr>
+        </table>
+
+<table class="table">
+            <thead><h6>g. Cc& D Waste</h6></thead>   
+            <tr>
+
+                <th> HOW MUCH WASTE DOES YOUR SCHOOL GENERATE?</th>
+                <th>Quantity of solid waste generated(monthly average in kg) </th>
+
+            </tr>
+            <tr>
+                <td> Construction and demolition waste</td>
+                <td><?php echo (getFiled('Q6Wa7S1', $schoolUserID) != "") ? getFiled('Q6Wa7S1', $schoolUserID) : "N/A"; ?></td>
+            </tr>
+            <tr>
+                <td> Per capita waste generation (f): </td>
+                <td><?php echo (getFiled('Q6Wa7S2', $schoolUserID) != "") ? getFiled('Q6Wa7S2', $schoolUserID) : "N/A"; ?> </td>
             </tr>
         </table>
 
