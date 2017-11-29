@@ -49,15 +49,21 @@
       </span>
                 </label>
                 <p class="formanswertext">
-                    <?php
-                        $arrBoard=array(
-                            '1'=>'State board of education',
-                            '2'=>'Central Board of Secondary Education',
-                            '3'=>'Indian Certificate of Secondary Education',
-                            '4'=>'International Baccalaureate (IB)/International General Certificate of Secondary Education (IGCSE) combination',
-                            '5'=>'Others'
-                        );
-                    ?>
+                   <?php
+                        if (getFiled('Q3G1', $schoolUserID) == 1):
+                            echo " State board of education (please specify your state)";
+                        elseif (getFiled('Q3G1', $schoolUserID) == 2):
+                            echo " Central Board of Secondary Education ";
+                        elseif (getFiled('Q3G1', $schoolUserID) == 3):
+                            echo "Indian Certificate of Secondary Education";
+                        elseif (getFiled('Q3G1', $schoolUserID) == 4):
+                            echo "International Baccalaureate (IB)/International General Certificate of Secondary Education (IGCSE)
+                    combination";
+                        elseif (getFiled('Q3G1', $schoolUserID) == 5):
+                            echo "  Others";
+
+                        endif;
+                        ?>
                    
                 </p>
             </div>
