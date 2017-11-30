@@ -120,8 +120,17 @@
 
             <ul class="list">
                 <li>
-                    <p class="orange"><span>1</span><span>How many levels does your school have? Please choose what is applicable.</span></p>
-                    <table class="table question1ge tick">
+                    <p class="orange"><span>1</span><span>How many levels does your school have</span></p>
+					
+					 <p class="formanswertext">
+                    Lowest level of grade:<?php echo getFiled('Q1G1',
+                        $schoolUserID);
+                    ?>         </p>
+                <p>
+                    Highest level of grade:<?php echo getFiled('Q1G2',
+                        $schoolUserID);
+                    ?> </p>
+                    <?php /*?><table class="table question1ge tick">
                         <tr>
                             <th width="16%">Pre-Primary</th>
                             <th width="6%">1st</th>
@@ -176,7 +185,7 @@
                                 <img src="images/1445961880_cross.png">
                             </td>
                         </tr>
-                    </table>
+                    </table><?php */?>
                 </li>
                 <li>
                     <p class="orange"><span>2</span><span> Is your school single gender or mixed gender?</span></p>
