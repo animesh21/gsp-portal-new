@@ -424,6 +424,23 @@ public function excel2017() {
 	   endforeach; 
             $this->zip->download(date('d-M-Y'));
 	}
+	/*School Generate Badge Code*/
+	public function generatebadge($argID){
+	      $data=$this->Audit_started_model->getgeneratebadge($argID);
+		  redirect(base_url("admin/audit_started_2017"));  
+	}
+	
+	/*Get School Badge Code*/
+	public function printBadge(){
+	      $argID=$this->input->post('userid');
+	      $data=$this->Audit_started_model->getprintbadgecode($argID);
+		 foreach($data as  $r):
+		     echo $r->badge_code;
+		 endforeach;
+		 
+	}
+	
+	
 	
 	public function delete_school($argID)
 	{
