@@ -338,7 +338,7 @@
                             </div>
                             <div class="mNumber">
                                 <input type="text" name="comobile" id="gspmno" class="form-control placeholder" 
-                                       value="<?php echo set_value('comobile'); ?>" placeholder="Mobile Number*">
+                                       value="<?php echo set_value('comobile'); ?>" placeholder="Mobile Number*" maxlength="10">
 
                             </div>
                         </div>
