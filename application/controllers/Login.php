@@ -17,18 +17,22 @@ class Login extends CI_Controller {
         //Validation
         $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
         $this->form_validation->set_rules('password', 'Password', 'trim|required');
-        if ($this->form_validation->run() == FALSE) {
+       if ($this->form_validation->run() == FALSE) {
             $this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');
         } else {
             $post = $this->security->xss_clean($this->input->post());
             $varCheckLogin = $this->User_model->UserLogin($post);
-            
             if ($varCheckLogin) {
+			    if($varCheckLogin=="success"){
                 redirect(base_url('school'));
-            } else {
+				}
+				elseif($varCheckLogin=="warning")
+				{
+				  $this->session->set_flashdata('error', "The School Have Completed The GSP Audit So The School Can't Submit Audit Again");
+				}
+            } else if($varCheckLogin=="error") {
                 $this->session->set_flashdata('error', 'Invalid Email/Password!');
             }
-            
         }
         $this->load->view('login', $data);
     }
