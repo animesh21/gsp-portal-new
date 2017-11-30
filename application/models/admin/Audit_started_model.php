@@ -554,5 +554,42 @@ public function getExcel2017Data() {
 	
 	   
 }
+	/*School Generate Badge Now*/
+	public function getgeneratebadge($argsUserId)
+	{
+	   $get_current_year=date('Y');
+	   $data=$this->db->select("id,date_added")->from('gsp_school')->where("userid=".$argsUserId)->get()->result();
+	   $get_school_id=$data[0]->id;
+	   $date_start=date('d-m-Y',strtotime($data[0]->date_added));
+	   $end_date=date('Y-m-d', strtotime($date_start .'+1 day'));
+	   $result=$this->db->select("*")->from('gsp_school')->where("userid=".$argsUserId)->where("id=".$get_school_id)
+	               ->get()->result();
+				   $badge_code="<script>
+			/*School Badge Code*/
+			function get_badge_code(){
+			var date1 = new Date();
+			var date2 = new Date('".date('m-d-Y', strtotime($end_date))."');
+			var timeDiff = Math.abs(date2.getTime() - date1.getTime());
+			var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
+			if(diffDays > 0){
+			 $('.badge').append('<img src=http://localhost/gsp/assets/img/logo.png />');
+			}
+			}
+			window.onload = function(){
+			  get_badge_code();
+			};
+			</script>
+			<div class='badge' style='height:200px; height:200px;'></div>";
+				   $shool_record=array("userid"=>$argsUserId,"school_id"=>$get_school_id,"badge_code"=>$badge_code,"date_start"=>$date_start,"end_date"=>$end_date,"year"=>$get_current_year);
+				   $this->db->insert('gsp_badge',$shool_record);
+}	
+        /*Get School Generate Badge Code Now*/
+        public function getprintbadgecode($argsUserId){
+			$data=$this->db->select("*")->from("gsp_badge")
+			     ->where("userid=".$argsUserId)
+			     ->get()
+				 ->result();
+				 return $data;
+		} 
 	   
 }
