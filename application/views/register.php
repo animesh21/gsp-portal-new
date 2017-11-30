@@ -290,7 +290,7 @@
                         </div>
                         <div class="code">
                             <input type="text" name="pincode" id="pinc" class="form-control placeholder"
-                                   value="<?php echo set_value('pincode'); ?>" placeholder="Pin Code*">
+                                   value="<?php echo set_value('pincode'); ?>" placeholder="Pin Code*" maxlength="6">
                         </div>
                     </div>
                     <div class="form-group marginN">
@@ -324,7 +324,7 @@
                             </div>
                             <div class="mNumber">
                                 <input type="text" name="mobile" id="pno" class="form-control placeholder"
-                                       value="<?php echo set_value('mobile'); ?>" placeholder="Mobile Number*">
+                                       value="<?php echo set_value('mobile'); ?>" placeholder="Mobile Number*" maxlength="10">
                             </div>
                         </div>
                         <div class="form-group marginN">
