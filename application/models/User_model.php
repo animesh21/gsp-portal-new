@@ -9,24 +9,35 @@ class User_model extends CI_Model
         parent::__construct();
     }
 
-    public function UserLogin($argPost)
+   public function UserLogin($argPost)
     {
+		$msg=''; 
         $query = $this->db->select('*')
             ->from('gsp_user')
-            ->where(array('email' => $argPost['email'], 'password' => $argPost['password'], 'status' => '0'))
+            ->where(array('email' => $argPost['email'], 'password' => $argPost['password']))
             ->get();
         if ($query->num_rows() > 0) {
             $row = $query->row();
-            $userData = array(
-                'USERNAME' => $row->username,
-                'USER_ID' => $row->id,
-                'status' => $row->status,
-                'lastid' => $row->lastQuestionId
-            );
-            $this->session->set_userdata($userData);
-            return true;
-        }
-        return false;
+			if($row->login_status==0)
+			{
+				$userData = array(
+					'USERNAME' => $row->username,
+					'USER_ID' => $row->id,
+					'status' => $row->status,
+					'lastid' => $row->lastQuestionId
+				);
+            	$this->session->set_userdata($userData);
+            	$msg='success';
+			}
+			else
+			{
+			 	$msg='warning';
+			}
+        }else
+		{
+		   $msg='error';
+		}
+        return $msg;
     }
 
     public function CreateUser($argPost)
