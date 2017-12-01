@@ -820,7 +820,24 @@
             </div>
             <div class="form-group">
                 <label><span class="cube">g.</span>Cc&amp; D Waste</label>
+	<table class="table">
+	
+            <thead></thead>   
+            <tr>
 
+                <th> HOW MUCH WASTE DOES YOUR SCHOOL GENERATE?</th>
+                <th>Quantity of solid waste generated(monthly average in kg) </th>
+
+            </tr>
+            <tr>
+                <td> Construction and demolition waste</td>
+                <td><?php echo (getFiled('Q6Wa7S1', $schoolUserID) != "") ? getFiled('Q6Wa7S1', $schoolUserID) : "N/A"; ?></td>
+            </tr>
+            <tr>
+                <td> Per capita waste generation (f): </td>
+                <td><?php echo (getFiled('Q6Wa7S2', $schoolUserID) != "") ? getFiled('Q6Wa7S2', $schoolUserID) : "N/A"; ?> </td>
+            </tr>
+        </table>
                 <?php
                 $arrImages = getUploadData(str_replace(' ', '_', $school->name) . '_Audit_Team_Weighing_Solid_Waste_', $schoolUserID);
                 if (!empty($arrImages)) {
