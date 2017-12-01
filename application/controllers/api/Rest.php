@@ -19,7 +19,7 @@ class Rest extends CI_Controller {
         $record = array();
         $varResponse = array();
         $varPost = json_decode(file_get_contents('php://input'), true);
-       /* $record = array(
+        $record = array(
             'firstname' => $varPost['firstname'],
             'lastname' => $varPost['lastname'],
             'email' => $varPost['email'],
@@ -39,7 +39,7 @@ class Rest extends CI_Controller {
                 $varResponse = array('error' => false);
             }
         }
-        $this->output->set_output(json_encode($varResponse));*/
+        $this->output->set_output(json_encode($varResponse));
     }
 
     //Login Function
@@ -60,7 +60,7 @@ class Rest extends CI_Controller {
                 $detail['school'] = $this->School_model->getSchool($users);
                 $detail['data'] = $this->Answer_model->Answers($users);
                 //print_r($details);
-                //$this->set_response($detail, REST_Controller::HTTP_CREATED); // CREATED (201) being the HTTP response code
+                $this->set_response($detail, REST_Controller::HTTP_CREATED); // CREATED (201) being the HTTP response code
                  // OK (200) being the HTTP response code
             }
         }
