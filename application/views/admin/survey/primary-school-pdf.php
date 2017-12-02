@@ -1229,7 +1229,7 @@
 
                 <ul class="list">
 
-                    <p class="orange"><span>2.1</span><span> Does your school have access to an electricity bill?</span></p>
+                    <p class="orange"><span>1</span><span> Does your school have access to an electricity bill?</span></p>
                     <p><?php echo (getFiled('Q4E1', $schoolUserID) != "") ? (getFiled('Q4E1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
 
                     <h6>Please upload the most recent electricity bill here</h6>
@@ -1249,10 +1249,10 @@
 
                     </table>
 
-                    <p class="orange"><span>2.2</span><span> Does your school have its own vehicles?</span></p>
+                    <p class="orange"><span>2</span><span> Does your school have its own vehicles?</span></p>
                     <p><?php echo (getFiled('Q5E1', $schoolUserID) != "") ? (getFiled('Q5E1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
 
-                    <p class="orange"><span>2.3</span><span>Provide the details of total energy consumed by the school</span></p>
+                    <p class="orange"><span>3</span><span>Provide the details of total energy consumed by the school</span></p>
                     <table class="table">
                         <tr><th>Source of energy</th>
                             <th>Quantity consumed/monthly average</th>
@@ -1380,7 +1380,7 @@
                     </table>
 
                     <li>
-                        <p><span>2.4</span> What appliances does your school have? </p>
+                        <p><span>4</span> What appliances does your school have? </p>
                         <table class="table">
                             <tr><th>Appliances/Equipments</th><th>Number</th><th>Please do not fill</th><th>Please do not fill</th></tr>
                             <tr><td>Air Conditioners</td><td><?php echo (getFiled('Q7E2S1', $schoolUserID) != "") ? getFiled('Q7E2S1', $schoolUserID) : "N/A"; ?></td><td><?php echo (getFiled('Q7E2S2', $schoolUserID) != "") ? getFiled('Q7E2S2', $schoolUserID) : "N/A"; ?></td><td><?php echo (getFiled('Q7E2S3', $schoolUserID) != "") ? getFiled('Q7E2S3', $schoolUserID) : "N/A"; ?></td></tr>
@@ -1400,14 +1400,15 @@
             <div class="task-area">
                 <h3 class="task">Task 3: Is your school using any renewable sources of energy? </h3>
 
-
-                <p class="orange"><span>3.2</span><span> Are there any alternate sources of energy employed/ installed in your school?</span></p>
+<p class="orange"><span>5</span>What is the average number of sunny days in your area? </label>
+            <p> <?php echo (getFiled('Q8E1', $schoolUserID) != "") ? getFiled('Q8E1', $schoolUserID) : "N/A"; ?></p>
+                <p class="orange"><span>6</span><span> Are there any alternate sources of energy employed/ installed in your school?</span></p>
                 <p><?php echo (getFiled('Q9E1', $schoolUserID) != "") ? (getFiled('Q9E1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
 
-
+			 
                 <li>
-                    <p>(a).If yes, do you use:</p>
-                    <p class="orange"><span>5a</span><span> Name the alternate sources of energy employed/ installed in your school?</span></p>
+                   
+                    <p class="orange"><span>6(a)</span><span> If yes, do you use</span></p>
                     <p><?php
                         $var_answer = "";
                         if (getFiled('Q9E1S1', $schoolUserID) == 1) {
@@ -1428,7 +1429,7 @@
                         ?></p>
                 </li>
 
-                <p class="orange"><span>3.3</span><span> Does your school use solar water heater:</span></p>
+                <p class="orange"><span>7</span><span> Does your school use solar water heater:</span></p>
                 <?php echo (getFiled('Q10E1', $schoolUserID) != "") ? (getFiled('Q10E1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
 
 
@@ -1498,7 +1499,7 @@
                     </tr>
                     <tr>
                         <td> 3</td>
-                        <td><?php echo (getFiled('Q1F3S1', $schoolUserID) != "") ? getFiled('Q1A3S1', $schoolUserID) : "N/A"; ?> </td>
+                        <td><?php echo (getFiled('Q1F3S1', $schoolUserID) != "") ? getFiled('Q1F3S1', $schoolUserID) : "N/A"; ?> </td>
                         <td><?php echo (getFiled('Q1F3S3', $schoolUserID) != "") ? getFiled('Q1F3S3', $schoolUserID) : "N/A"; ?> </td>
                         <td><?php echo (getFiled('Q1F3S2', $schoolUserID) != "") ? getFiled('Q1F3S2', $schoolUserID) : "N/A"; ?> </td>
                     </tr>
@@ -1642,11 +1643,11 @@
                         </table>
                     </li>
                     <li>
-                        <p class="orange"><span>2(a)</span>If yes, then midday meal is served under:</p>
+                        <p class="orange"><span>2</span>If yes, then midday meal is served under:</p>
                         <p> <?php echo (getFiled('Q5F1S1', $schoolUserID) != "") ? (getFiled('Q5F1S1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p> 
                     </li>
                     <li>
-                        <p class="orange"><span>2(b)</span>Do students bring their own lunch from home?</p>
+                        <p class="orange"><span>2(a)</span>Do students bring their own lunch from home?</p>
                         <p> <?php echo (getFiled('Q5F1S1', $schoolUserID) != "") ? (getFiled('Q5F1S1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p> 
                     </li>
                     <li>
@@ -1774,10 +1775,221 @@
                 <h3 class="task">Task 3: What kind of food is served/sold in your school.</h3>
 
 
-                <p class="orange"><span>3.1</span>Doesyourschool serve traditional Indian  beverages?</p>
+<p class="orange"><span>3</span>What  kind of food is being served / sold in your school?</p>
+		<table class="table table-bordered table-striped">
+                        <tbody>
+                            <tr>
+                                <th width="442px">Packaged food items served / sold inside school campus</th>
+                                <th width="192px">Please count all flavours/variants available in the school separately</th>
+                                <th width="192px">Total no. of items sold, on an average, in a month</th>
+                                <th width="192px">Month the food items were sold in</th>
+                            </tr>
+                            <tr>
+                                <td> Savoury snacks and
+                                    similar packaged
+                                    food like chips,
+                                    Kurkure, Cheetos,
+                                    potato crisps, corn
+                                    snacks, nuts and
+                                    seeds, etc </td>
+                                <td>
+                                    <?php echo (getFiled('Q6F2S1', $schoolUserID) != "") ? getFiled('Q6F2S1', $schoolUserID) : "N/A"; ?>
+
+                                </td>
+                                <td>
+                                    <?php echo (getFiled('Q6F2S2', $schoolUserID) != "") ? getFiled('Q6F2S2', $schoolUserID) : "N/A"; ?>
+                                </td>
+                                <td>
+                                    <?php echo (getFiled('Q6F4S3', $schoolUserID) != "") ? getFiled('Q6F4S3', $schoolUserID) : "N/A"; ?>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> Instant Noodles like
+                                    Knorr,
+                                    Cup-a-noodles, Top
+                                    Ramen, Wai-wai,
+                                    Yippee, Foodles,
+                                    Maggi, etc </td>
+                                <td>
+                                    <?php echo (getFiled('Q6F3S1', $schoolUserID) != "") ? getFiled('Q6F3S1', $schoolUserID) : "N/A"; ?>																					
+
+                                </td>
+                                <td>
+                                    <?php echo (getFiled('Q6F3S2', $schoolUserID) != "") ? getFiled('Q6F3S2', $schoolUserID) : "N/A"; ?>																							
+                                </td>
+                                <td>
+                                    <?php echo (getFiled('Q6F3S3', $schoolUserID) != "") ? getFiled('Q6F3S3', $schoolUserID) : "N/A"; ?>																							
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> Potato fries and
+                                    burgers </td>
+                                <td>
+                                    <?php echo (getFiled('Q6F4S1', $schoolUserID) != "") ? getFiled('Q6F4S1', $schoolUserID) : "N/A"; ?>																							
+                                </td>
+                                <td>
+                                    <?php echo (getFiled('Q6F4S2', $schoolUserID) != "") ? getFiled('Q6F4S2', $schoolUserID) : "N/A"; ?>																							
+                                </td>
+                                <td>
+
+                                    <?php echo (getFiled('Q6F4S3', $schoolUserID) != "") ? getFiled('Q6F4S3', $schoolUserID) : "N/A"; ?>																							
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> Confectionery items
+                                    (chocolate, candies,
+                                    gums) </td>
+                                <td>
+                                    <?php echo (getFiled('Q6F5S1', $schoolUserID) != "") ? getFiled('Q6F5S1', $schoolUserID) : "N/A"; ?>																							
+                                </td>
+                                <td>
+                                    <?php echo (getFiled('Q6F5S2', $schoolUserID) != "") ? getFiled('Q6F5S2', $schoolUserID) : "N/A"; ?>																							
+                                </td>
+                                <td>
+                                    <?php echo (getFiled('Q6F5S3', $schoolUserID) != "") ? getFiled('Q6F5S3', $schoolUserID) : "N/A"; ?>																							
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> Ice cream </td>
+                                <td>
+                                    <?php echo (getFiled('Q6F6S1', $schoolUserID) != "") ? getFiled('Q6F6S1', $schoolUserID) : "N/A"; ?>																							
+                                </td>
+                                <td>
+                                    <?php echo (getFiled('Q6F6S2', $schoolUserID) != "") ? getFiled('Q6F6S2', $schoolUserID) : "N/A"; ?>																							
+                                </td>
+                                <td>
+                                    <?php echo (getFiled('Q6F6S3', $schoolUserID) != "") ? getFiled('Q6F6S3', $schoolUserID) : "N/A"; ?>																							
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> Carbonated beverages </td>
+                                <td>
+                                    <?php echo (getFiled('Q6F7S1', $schoolUserID) != "") ? getFiled('Q6F7S1', $schoolUserID) : "N/A"; ?>																							
+                                </td>
+                                <td>
+                                    <?php echo (getFiled('Q6F7S2', $schoolUserID) != "") ? getFiled('Q6F7S2', $schoolUserID) : "N/A"; ?>																							
+                                </td>
+                                <td>
+                                    <?php echo (getFiled('Q6F7S3', $schoolUserID) != "") ? getFiled('Q6F7S3', $schoolUserID) : "N/A"; ?>																							
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> Sugar sweetened
+                                    non-carbonated
+                                    beverages </td>
+                                <td>
+                                    <?php echo (getFiled('Q6F8S1', $schoolUserID) != "") ? getFiled('Q6F8S1', $schoolUserID) : "N/A"; ?>																							
+                                </td>
+                                <td>
+                                    <?php echo (getFiled('Q6F8S2', $schoolUserID) != "") ? getFiled('Q6F8S2', $schoolUserID) : "N/A"; ?>																							
+                                </td>
+                                <td>
+                                    <?php echo (getFiled('Q6F8S3', $schoolUserID) != "") ? getFiled('Q6F8S3', $schoolUserID) : "N/A"; ?>																							
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> Packaged/bottled
+                                    nimboo
+                                    paani/lassi/flavoured
+                                    milk </td>
+                                <td>
+                                    <?php echo (getFiled('Q6F9S1', $schoolUserID) != "") ? getFiled('Q6F9S1', $schoolUserID) : "N/A"; ?>																							
+                                </td>
+                                <td>
+                                    <?php echo (getFiled('Q6F9S2', $schoolUserID) != "") ? getFiled('Q6F9S2', $schoolUserID) : "N/A"; ?>																							
+                                </td>
+                                <td>
+                                    <?php echo (getFiled('Q6F9S3', $schoolUserID) != "") ? getFiled('Q6F9S3', $schoolUserID) : "N/A"; ?>																							
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> Packaged/bottled
+                                    energy drinks </td>
+                                <td>
+                                    <?php echo (getFiled('Q6F10S1', $schoolUserID) != "") ? getFiled('Q6F10S1', $schoolUserID) : "N/A"; ?>																							
+                                </td>
+                                <td>
+                                    <?php echo (getFiled('Q6F10S2', $schoolUserID) != "") ? getFiled('Q6F10S2', $schoolUserID) : "N/A"; ?>																							
+                                </td>
+                                <td>
+                                    <?php echo (getFiled('Q6F10S3', $schoolUserID) != "") ? getFiled('Q6F10S3', $schoolUserID) : "N/A"; ?>																							
+                                </td>
+                            </tr>
+                        </tbody></table>
+						
+						 <p class="orange"><span>4</span>Does your school serve traditional Indian snacks?</label>
+	<p> <?php echo (getFiled('Q7F1', $schoolUserID) != "") ? (getFiled('Q7F1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p> 
+	
+	 <p class="orange"><span class="cube">4(a)</span>Please provide the details: </p>
+	
+	<table class="table table-bordered table-striped">
+                        <tr>
+
+                            <th>Traditional Indian snacks </th>
+                            <th> Number of servings sold when on the menu </th>
+
+                        </tr>
+                        <tr>
+                            <td> Samosas</td>
+                            <td><?php echo (getFiled('Q7F1S1', $schoolUserID) != "") ? getFiled('Q7F1S1', $schoolUserID) : "N/A"; ?> </td>
+
+                        </tr>
+                        <tr>
+                            <td> Idli/vada and sambhar</td>
+                            <td><?php echo (getFiled('Q7F1S2', $schoolUserID) != "") ? getFiled('Q7F1S2', $schoolUserID) : "N/A"; ?> </td>
+
+                        </tr>
+                        <tr>
+                            <td> Pav bhaji</td>
+                            <td><?php echo (getFiled('Q7F1S3', $schoolUserID) != "") ? getFiled('Q7F1S3', $schoolUserID) : "N/A"; ?> </td>
+
+                        </tr>
+                        <tr>
+                            <td> Momos</td>
+                            <td> <?php echo (getFiled('Q7F1S4', $schoolUserID) != "") ? getFiled('Q7F1S4', $schoolUserID) : "N/A"; ?> </td>
+
+                        </tr>
+                        <tr>
+                            <td> Others</td>
+                            <td><?php echo (getFiled('Q7F1S5', $schoolUserID) != "") ? getFiled('Q7F1S5', $schoolUserID) : "N/A"; ?></td>
+
+                        </tr>
+                    </table>
+	<div class="form-group" id="Q7F2S1" style="display: block;">
+                    <label class="control-label">Please upload picture of traditional food items sol in canteen</label>
+                    <br>
+                    <table width="100%" class="question uploadedfiles">
+                        <thead>
+                            <tr>
+                                <th>image</th>
+                                <th>File name</th>
+                                <th>Download</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($midDayMeal as $f) { ?>
+                                <tr id="index<?php echo $f->id; ?>">
+                                    <?php $name = str_replace(" ", "_", $f->name . "_Mid_Day_Meal_"); ?>
+                                    <td><img src="<?php echo base_url('uploads/files/' . $f->file_name); ?>" style="height:100px;width:100px"></img></td>
+                                    <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                                    <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+                       
+                                </tr>
+                            <?php } ?>
+                        </tbody>
+                    </table>
+                    <br>
+                    <br>
+                </div>
+				
+				 <p class="orange"><span>4(b)</span>Give descriptions for rare local snacks served in your school:</label>
+			 <p> <?php echo (getFiled('Q7F3S1', $schoolUserID) != "") ? getFiled('Q7F3S1', $schoolUserID) : "N/A"; ?></p>
+	
+                <p class="orange"><span>5</span>Doesyourschool serve traditional Indian  beverages?</p>
                 <p> <?php echo (getFiled('Q8F1', $schoolUserID) != "") ? (getFiled('Q8F1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>                                                                                                </ul>
 
-                <p class="orange"><span>3.1.(a)</span>Please provide details: </p>
+                <p class="orange"><span>5(a)</span>Please provide details: </p>
                 <table class="table">
                     <tr>
 
@@ -1819,27 +2031,27 @@
                 <p> <?php echo (getFiled('Q9F1', $schoolUserID) != "") ? (getFiled('Q9F1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>																									
 
 
-                <p class="orange"><span>4.2</span>Does the school distribute packaged food items as rewards during schools events?</p>
+                <p class="orange"><span>6</span>Does the school distribute packaged food items as rewards during schools events?</p>
                 <p> <?php echo (getFiled('Q10F1', $schoolUserID) != "") ? (getFiled('Q10F1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>																									
 
-                <p class="orange"><span>4.2.a</span>Please provide details:</p>
+                <p class="orange"><span>6(a)</span>Please provide details:</p>
                 <p> <?php echo (getFiled('Q10F2', $schoolUserID) != "") ? getFiled('Q10F2', $schoolUserID) : "N/A"; ?>
                 </p>
-                <p class="orange"><span>4.2.c</span>Does the school distribute chocolates/similar
+                <p class="orange"><span>7</span>Does the school distribute chocolates/similar
                     products as refreshments during schools events?</p>
                 <p> <?php echo (getFiled('Q10F1', $schoolUserID) != "") ? (getFiled('Q10F1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>																									
 
-                <p class="orange"><span>4.2.d</span>Please provide the names:</p>
+                <p class="orange"><span>7(a)</span>Please provide the names:</p>
                 <p> <?php echo (getFiled('Q10F2', $schoolUserID) != "") ? getFiled('Q10F2', $schoolUserID) : "N/A"; ?>
                 </p>
 
-                <p class="orange"><span>4.3</span>Are your school events such as quiz shows, talent shows, debates sponsored by food companies/brands?</p>
+                <p class="orange"><span>8</span>Are your school events such as quiz shows, talent shows, debates sponsored by food companies/brands?</p>
                 <p> <?php echo (getFiled('Q11F1', $schoolUserID) != "") ? (getFiled('Q11F1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>																									
 
-                <p class="orange"><span>4.3.a</span>Please provide the names of sponsors:</p>
+                <p class="orange"><span>8(a)</span>Please provide the names of sponsors:</p>
                 <p> <?php echo (getFiled('Q11F2', $schoolUserID) != "") ? getFiled('Q11F2', $schoolUserID) : "N/A"; ?></p>																									
 
-                <p class="orange"><span>4.3.b</span>Are their banners, brochures, hoardings, stalls etc. put up during the events?</p>
+                <p class="orange"><span>8(b)</span>Are their banners, brochures, hoardings, stalls etc. put up during the events?</p>
                 <p> <?php echo (getFiled('Q11F3', $schoolUserID) != "") ? (getFiled('Q11F3', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>																									
 
                 <p class="orange">Please upload pictures of events sponsored by UPPF (ultra-processed packaged food) companies</p>
@@ -1874,10 +2086,10 @@
 
             <div class="task-area">
                 <h3 class="task">Task 5: School Initiatives</h3>
-                <p class="orange"><span>5.1</span>Does your school measure height and weight  of all the students?</p>
+                <p class="orange"><span>9	</span>Does your school measure height and weight  of all the students?</p>
                 <p> <?php echo (getFiled('Q12F1', $schoolUserID) != "") ? (getFiled('Q12F1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>																									
 
-                <p class="orange"><span>5.1.a</span>How regularly is height and weight of the students measured?</p>
+                <p class="orange"><span>9(a)</span>How regularly is height and weight of the students measured?</p>
                 <p> <?php
                     if (getFiled('Q12F2', $schoolUserID) == 1):
                         echo "Monthly";
@@ -1890,10 +2102,10 @@
                     endif;
                     ?></p>
 
-                <p class="orange"><span>5.3</span>Is cooking part of  any regular subjects or extracurricular activities?</p>
+                <p class="orange"><span>10</span>Is cooking part of  any regular subjects or extracurricular activities?</p>
                 <p> <?php echo (getFiled('Q13F1', $schoolUserID) != "") ? (getFiled('Q13F1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>																									
 
-                <p class="orange"><span>5.3.a</span>If  yes, please share the details</p>
+                <p class="orange"><span>10(a)</span>If  yes, please share the details</p>
                 <p> <?php echo (getFiled('Q13F2', $schoolUserID) != "") ? getFiled('Q13F2', $schoolUserID) : "N/A"; ?></p>																									
             </div>
 
@@ -2548,7 +2760,7 @@
                 </p>
                 <p> The questions below will help students to understand where their water is coming from – at a cost. </p>
 
-                <p class="orange"><span>3.1</span> Where does the water your school uses, come from? (please tick the correct options):</p>
+                <p class="orange"><span>2</span> Where does the water your school uses, come from? (please tick the correct options):</p>
                 <ul>
                     <?php
                     if (getFiled('Q5W1', $schoolUserID) == 1):
@@ -2570,11 +2782,38 @@
 
                 </ul>
 
+<p class="orange"><span>3</span>Who supplies the water in your school? (please tick the correct options):</p>
+<br/>
+<ul class="list-unstyled">
+                    <?php
+                    if (getFiled('Q6W1', $schoolUserID) == 1):
+                        echo "Municipality";
+                        echo "<br/>";
+                    endif;
+                    if (getFiled('Q6W2', $schoolUserID) == 1):
+                        echo "Panchayat";
+                        echo "<br/>";
+                    endif;
+                    if (getFiled('Q6W3', $schoolUserID) == 1):
+                        echo "Public Health Engineering Department (PHED)";
+                        echo "<br/>";
+                    endif;
+                    if (getFiled('Q6W4', $schoolUserID) == 1):
+                        echo "Private supplier";
+                        echo "<br/>";
+                    endif;
+                    if (getFiled('Q6W5', $schoolUserID) == 1):
+                        echo "School’s own supply (bore well, rainwater harvesting facility, etc)";
+                    endif;
+                    ?>
 
-                <p class="orange"><span>3.2</span> Does your school get daily water supply?</p>
+                </ul>
+
+
+                <p class="orange"><span>4</span> Does your school get daily water supply?</p>
                 <p> <?php echo (getFiled('Q7W1', $schoolUserID) != "") ? (getFiled('Q7W1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
 
-                <p class="orange"><span>3.2.(a)</span> Does your school get daily water supply?</p>
+                <p class="orange"><span>4(a)</span> Does your school get daily water supply?</p>
                 <ul class="list-unstyled">
                     <p> <?php
                         if (getFiled('Q7W2', $schoolUserID) == 1):
@@ -2592,7 +2831,7 @@
 
                 </ul>
 
-                <p class="orange"><span>3.2.(b)</span> Does your school get daily water supply?</p>
+                <p class="orange"><span>4(b)</span> Does your school get daily water supply?</p>
                 <ul>
                     <p> <?php
                         if (getFiled('Q7W3', $schoolUserID) == 1):
