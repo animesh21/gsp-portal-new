@@ -79,6 +79,14 @@ class Performance_report extends CI_Controller {
         $data['record'] = $this->Performance_model->getTotalCalculation();
         $this->load->view('admin/includes/template', $data);
     }	
+ 
+  public function allExcelDump() {
+        $this->config->load('array_config');
+        $data['main'] = 'admin/performance_report/total-point';
+        $data['title'] = 'Home | Total Calculation';
+        $data['record1'] = $this->Performance_model->combinedPerformancePoint();
+        $this->load->view('admin/includes/template', $data);
+    }
 	
 	
 	
