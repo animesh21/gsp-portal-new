@@ -48,17 +48,17 @@ class Gsp1 extends REST_Controller {
             $users = $this->User_model->Login($details);
 
             if ($users) {
-              /*  $detail['school'] = $this->School_model->getSchool($users);
+                $detail['school'] = $this->School_model->getSchool($users);
                 $detail['data'] = $this->Answer_model->Answers($users);
                 $detail['states'] = $this->User_model->getStates($users);
 				
                 $this->set_response($detail, REST_Controller::HTTP_CREATED); // CREATED (201) being the HTTP response code
-               */
-			$this->response([
+               
+		/*	$this->response([
                     'status' => FALSE,
                     'message' => 'Survey has been closed',
                     'id' => $details
-                        ], REST_Controller::HTTP_NOT_FOUND);	
+                        ], REST_Controller::HTTP_NOT_FOUND);	*/
 				
 			// OK (200) being the HTTP response code
             } else {
