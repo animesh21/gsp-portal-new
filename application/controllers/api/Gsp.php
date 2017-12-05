@@ -22,7 +22,7 @@ require APPPATH . '/libraries/REST_Controller.php';
  * @license         MIT
  * @link            https://github.com/chriskacerguis/codeigniter-restserver
  */
-class Gsp1 extends REST_Controller {
+class Gsp extends REST_Controller {
 
     function __construct() {
         // Construct the parent class
