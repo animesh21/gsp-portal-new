@@ -1,6 +1,6 @@
 <div>
   <div class="top-area">
-    <h2>AIR</h2>
+    <h2>All Excel Dump</h2>
   </div>
   <div style="overflow: scroll">
     <table class="display dataTable no-footer" id="tablePerformance">
@@ -395,8 +395,8 @@
           <td>Collection points with three bins</td>
           <td>Total Collection points</td>
           <td>Garden waste generated</td>
-          <td>Kitchen waste뾕aw generated</td>
-          <td>Kitchen waste뾅ooked generated</td>
+          <td>Kitchen waste혰Raw generated</td>
+          <td>Kitchen waste혰Cooked generated</td>
           <td>Wet waste generated</td>
           <td>Total biodegradable waste generated</td>
           <td>PCPD of biodegradable</td>
@@ -423,8 +423,8 @@
           <td>PCPD C&D waste generated</td>
           <td>School recycle any generated waste?</td>
           <td>Garden waste recycled</td>
-          <td>Kitchen waste뾕aw recycled</td>
-          <td>Kitchen waste뾅ooked recycled</td>
+          <td>Kitchen waste혰Raw recycled</td>
+          <td>Kitchen waste혰Cooked recycled</td>
           <td>Wet waste recycled</td>
           <td>Total biodegradable waste recycled</td>
           <td>PCPD of biodegradable recycled </td>
