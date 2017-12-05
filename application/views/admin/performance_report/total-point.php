@@ -1006,7 +1006,7 @@
 <td><?php echo  $record1[$i]->Q4W9; ?></td>
 <td><?php echo  $record1[$i]->Q4W10; ?></td>
 <td><?php echo  $record1[$i]->Q4W11; ?></td>
-<td><?php if($record1[$i]->population!=0): echo  $record1[$i]->population/$record1[$i]->Q4W11; else: echo "N/A"; ?></td>
+<td><?php if($record1[$i]->population!=0): echo  $record1[$i]->population/$record1[$i]->Q4W11; else: echo "N/A"; endif; ?></td>
 <td><?php echo  $record1[$i]->Q5W1; ?></td>
 <td><?php echo  $record1[$i]->Q5W2; ?></td>
 <td><?php echo  $record1[$i]->Q5W3; ?></td>
@@ -1059,15 +1059,15 @@
 <td><?php echo  $record1[$i]->Q8W3S7; ?></td>
 <td><?php echo  $record1[$i]->Q8W3S8; ?></td>
 <td><?php echo  $record1[$i]->Q9W1; ?></td>
-<td><?php if(!$record1[$i]->population): echo  $record1[$i]->population/$record1[$i]->Q9W1; else: echo "N/A";  ?></td>
+<td><?php if(!$record1[$i]->population): echo  $record1[$i]->population/$record1[$i]->Q9W1; else: echo "N/A"; endif;  ?></td>
 <td><?php echo  $record1[$i]->Q10W1; ?></td>
 <td><?php echo  $record1[$i]->Q11W1; ?></td>
-<td><?php  if(!$record1[$i]->population): echo  $record1[$i]->population/$record1[$i]->Q11W1; else: echo "N/A"; ?></td>
+<td><?php  if(!$record1[$i]->population): echo  $record1[$i]->population/$record1[$i]->Q11W1; else: echo "N/A"; endif; ?></td>
 <td><?php echo  $record1[$i]->Q13W1S1; ?></td>
 <td><?php echo  $record1[$i]->Q13W1S2; ?></td>
 <td><?php echo  $record1[$i]->Q13W1S3; ?></td>
 <td><?php echo  $record1[$i]->Q13W1S4; ?></td>
-<td><?php  if(!$record1[$i]->population): echo  $record1[$i]->population/$record1[$i]->Q13W1S4; else: echo "N/A"; ?></td>
+<td><?php  if(!$record1[$i]->population): echo  $record1[$i]->population/$record1[$i]->Q13W1S4; else: echo "N/A"; endif; ?></td>
 <td><?php echo  $record1[$i]->Q14W1; ?></td>
 <td><?php echo  $record1[$i]->Q15W1; ?></td>
 <td><?php echo  $record1[$i]->Q15W1; ?></td>
