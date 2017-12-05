@@ -113,6 +113,9 @@ return $this->db->select('a.*,a.name,a.id,a.userid,c.population,c.category,d.poi
 	->where('a.progress=100')
            ->get()->result();
       }
-	
+  public function combinedPerformancePoint() {
+return $this->db->select('*')->from('tbl_total')
+       ->get()->result();
+  }	
 	
 }
