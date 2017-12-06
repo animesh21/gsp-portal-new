@@ -423,7 +423,7 @@
     		<td><?php echo $record1[$i]->Q7A7S3; ?></td>
     		<td><?php echo $record1[$i]->Q7A7S4; ?></td>
     		<td><?php echo $record1[$i]->Q7A8S1; ?></td>
-    		<td><?php echo $record1[$i]->Q7A8S2; ?></td>
+    		<!--<td><?php //echo $record1[$i]->Q7A8S2; ?></td>-->
     		<td><?php echo $record1[$i]->Q7A8S2; ?></td>
     		<td><?php echo $record1[$i]->Q7A8S3; ?></td>
     		<td><?php echo $record1[$i]->Q7A8S4; ?></td>
