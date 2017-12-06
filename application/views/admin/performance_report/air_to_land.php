@@ -168,8 +168,7 @@
     		<td><?php echo $record1[$i]->Q6A2S1T4; ?></td>
     		<td><?php echo $record1[$i]->Q6A2S1T5; ?></td>
     		<td><?php echo $record1[$i]->Q6A2S1T6; ?></td>
-		<!--<td><?php //echo getFiled('Q6A2S3B4', $record1[$i]->userid); ?></td>-->
-    		<td><?php echo $record1[$i]->Q6A2S3D5; ?></td>
+    		<td><?php echo $record1[$i]->Q6A2S3D1+$record1[$i]->Q6A2S3P1+$record1[$i]->Q6A2S3L1+$record1[$i]->Q6A2S3C1+$record1[$i]->Q6A2S3E1+$record1[$i]->Q6A2S3H1+$record1[$i]->Q6A2S3B1; ?></td>
     		<td><?php echo $record1[$i]->Q6A2S3D1; ?></td>
     		<td><?php echo $record1[$i]->Q6A2S3P1; ?></td>
     		<td><?php echo $record1[$i]->Q6A2S3L1; ?></td>
@@ -260,11 +259,8 @@
     		<td><?php echo $record1[$i]->Q7A7S4; ?></td>
     		<td><?php echo $record1[$i]->Q7A8S1; ?></td>
     		<td><?php echo $record1[$i]->Q7A8S2; ?></td>
-			
     		<td><?php echo $record1[$i]->Q7A8S3; ?></td>
 			<td><?php echo $record1[$i]->Q7A8S4; ?></td>
-    		<!-- <td><?php //echo $record1[$i]->Q7A8S2; ?></td>-?
-<!--    		<td><?php //echo $record1[$i]->Q7A8S4; ?></td>-->
     		<td><?php echo $record1[$i]->Q7A9S1; ?></td>
     		<td><?php echo $record1[$i]->Q7A9S2; ?></td>
     		<td><?php echo $record1[$i]->Q7A9S3; ?></td>
@@ -289,7 +285,7 @@
 			}
 		    ?>
 		</td>
-    		<td><?php //echo $record1[$i]->Q9A2; ?>
+    		<td>
 		    <?php 
 			if($record1[$i]->Q9A2=="Y")
 			{
