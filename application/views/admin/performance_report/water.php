@@ -1,4 +1,4 @@
-<div class="top-area">
+div class="top-area">
   <h2>Water<!--<a href="<?php echo base_url('admin/Performance_report/excel') ?>">
     <button class="exportBtn">Export to Excel</button>-->
     </a></h2>
@@ -162,8 +162,8 @@
 <td><?php echo  $r->Q8W2S7; ?></td>
 <td><?php echo  $r->Q8W2S9; ?></td>
 <td><?php echo  $r->Q8W2S8; ?></td>
-<td><?php echo  $r->Q8W2S10; ?></td>
-<td><?php echo  $r->Q8W2S10; ?></td>
+<td><?php echo  $r->Q8W2S10;  ?></td>
+<td><?php echo  $r->Q8W2S11; ?></td>
 <td><?php echo  $r->Q8W2S12; ?></td>
 <td><?php echo  $r->Q8W2S13; ?></td>
 <td><?php echo  $r->Q8W3S1; ?></td>
