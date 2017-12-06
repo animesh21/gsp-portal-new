@@ -371,7 +371,7 @@
         <td><?php echo  $r->Q8Wa2S3; ?></td>
         <td><?php echo  $r->Q8Wa2S4; ?></td>
         <td><?php echo  $r->Q8Wa2S5; ?></td>
-        <td><?php echo  $r->Q8Wa2S5; ?></td>
+        <td><?php echo  $r->Q8Wa2S6; ?></td>
         <td><?php echo  $r->Q8Wa2S7; ?></td>
         <td><?php echo  $r->Q8Wa2S8; ?></td>
         <td><?php echo  $r->Q8Wa2S9; ?></td>
