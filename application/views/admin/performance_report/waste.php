@@ -1,5 +1,5 @@
 <div class="top-area">
-  <h2>2017 Registration
+  <h2>Waste
 	  
     <!--<a href="<?php echo base_url('admin/Performance_report/excel') ?>">
     <button class="exportBtn">Export to Excel</button>
