@@ -160,8 +160,8 @@ div class="top-area">
 <td><?php echo  $r->Q8W2S5; ?></td>
 <td><?php echo  $r->Q8W2S61; ?></td>
 <td><?php echo  $r->Q8W2S7; ?></td>
-<td><?php echo  $r->Q8W2S9; ?></td>
 <td><?php echo  $r->Q8W2S8; ?></td>
+<td><?php echo  $r->Q8W2S9; ?></td>
 <td><?php echo  $r->Q8W2S10;  ?></td>
 <td><?php echo  $r->Q8W2S11; ?></td>
 <td><?php echo  $r->Q8W2S12; ?></td>
