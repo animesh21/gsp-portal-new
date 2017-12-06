@@ -114,7 +114,7 @@ return $this->db->select('a.*,a.name,a.id,a.userid,c.population,c.category,d.poi
            ->get()->result();
       }
   public function combinedPerformancePoint() {
-return $this->db->select('*,b.name AS state_name, c.name AS district_name')->from('tbl_total AS a')
+return $this->db->select('a.*,b.name AS state_name, c.name AS district_name')->from('tbl_total AS a')
        ->join('states AS b', 'a.state=b.id', 'left')
        ->join('cities AS c', 'a.district=c.id', 'left')
        ->get()->result();
