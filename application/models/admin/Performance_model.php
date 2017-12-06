@@ -91,6 +91,7 @@ class Performance_model extends CI_Model {
    return $this->db->select('a.*,b.name,b.id,c.population,c.category')->from('tbl_water AS a')
        ->join('gsp_school AS b', 'a.userid=b.userid', 'left')
 	   ->join('tbl_general AS c', 'a.userid=c.userid', 'left')
+	->limit(2)   
        ->get()->result();
  }
  
