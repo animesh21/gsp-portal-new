@@ -1,4 +1,4 @@
-div class="top-area">
+<div class="top-area">
   <h2>Water<!--<a href="<?php echo base_url('admin/Performance_report/excel') ?>">
     <button class="exportBtn">Export to Excel</button>-->
     </a></h2>
