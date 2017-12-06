@@ -168,7 +168,7 @@
     		<td><?php echo $record1[$i]->Q6A2S1T4; ?></td>
     		<td><?php echo $record1[$i]->Q6A2S1T5; ?></td>
     		<td><?php echo $record1[$i]->Q6A2S1T6; ?></td>
-		<td><?php echo getFiled('Q6A2S3B4', $record1[$i]->userid); ?></td>
+		<!--<td><?php //echo getFiled('Q6A2S3B4', $record1[$i]->userid); ?></td>-->
     		<td><?php echo $record1[$i]->Q6A2S3D5; ?></td>
     		<td><?php echo $record1[$i]->Q6A2S3D1; ?></td>
     		<td><?php echo $record1[$i]->Q6A2S3P1; ?></td>
