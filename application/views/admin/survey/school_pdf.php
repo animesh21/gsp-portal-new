@@ -460,7 +460,7 @@
                     <th></th>
                     <th> First Name </th>
                     <th> Last Name </th>
-                    <th> Email ID </th>
+                    <th> Grade </th>
                 </tr>
                 <tr>
                     <td> 1</td>
