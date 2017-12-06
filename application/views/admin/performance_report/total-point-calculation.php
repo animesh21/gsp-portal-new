@@ -45,6 +45,7 @@
 		  global $percentage;
 		  $total=$t->air_point + $t->energy_point + $t->food_point + $t->land_point + $t->water_point + $t->waste_point; 
 		  $percentage= ($total/164)*100;
+		  $percentage=number_format($percentage,1);
 		  echo $percentage;
 		 ?></td>
 		 <td> 
