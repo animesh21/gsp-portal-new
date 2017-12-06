@@ -44,7 +44,6 @@ class Performance_model extends CI_Model {
 			->from('tbl_air AS a')
 			->join('gsp_school AS b', 'a.userid=b.userid', 'left')
 			->join('tbl_general AS c', 'a.userid=c.userid', 'left')
-		        ->limit(2)
 			->get()->result();
     }
 
