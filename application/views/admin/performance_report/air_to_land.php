@@ -178,6 +178,7 @@
     		<td><?php echo $record1[$i]->Q6A2S3H1; ?></td>
     		<td><?php echo $record1[$i]->Q6A2S3B1; ?></td>
     		<td><?php echo $record1[$i]->total_cars; ?></td>
+		<td><?php echo $record1[$i]->Q6A2S3B1; ?></td>    
     		<td><?php echo $record1[$i]->Q6A2S3D2; ?></td>
     		<td><?php echo $record1[$i]->Q6A2S3P2; ?></td>
     		<td><?php echo $record1[$i]->Q6A2S3L2; ?></td>
