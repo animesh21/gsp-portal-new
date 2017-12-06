@@ -122,7 +122,7 @@
 <td><?php echo  $r->Q4W9; ?></td>
 <td><?php echo  $r->Q4W10; ?></td>
 <td><?php echo  $r->Q4W11; ?></td>
-<td><?php echo  $r->population/$r->Q4W11; ?></td>
+<td><?php if($r->population!="" && $r->population!=0): echo  $r->population/$r->Q4W11; else: echo "N/A"; endif; ?></td>
 <td><?php echo  $r->Q5W1; ?></td>
 <td><?php echo  $r->Q5W2; ?></td>
 <td><?php echo  $r->Q5W3; ?></td>
@@ -163,9 +163,9 @@
 <td><?php echo  $r->Q8W2S8; ?></td>
 <td><?php echo  $r->Q8W2S9; ?></td>
 <td><?php echo  $r->Q8W2S10;  ?></td>
-<td><?php echo  $r->Q8W2S11; ?></td>
 <td><?php echo  $r->Q8W2S12; ?></td>
 <td><?php echo  $r->Q8W2S13; ?></td>
+<td><?php echo  $r->Q8W2S6; ?></td>
 <td><?php echo  $r->Q8W3S1; ?></td>
 <td><?php echo  $r->Q8W3S2; ?></td>
 <td><?php echo  $r->Q8W3S3; ?></td>
@@ -175,15 +175,15 @@
 <td><?php echo  $r->Q8W3S7; ?></td>
 <td><?php echo  $r->Q8W3S8; ?></td>
 <td><?php echo  $r->Q9W1; ?></td>
-<td><?php echo  $r->population/$r->Q9W1; ?></td>
+<td><?php if($r->population=="" && $r->population==0): echo "N/A"; else:  echo $r->population/$r->Q9W1; endif; ?></td>
 <td><?php echo  $r->Q10W1; ?></td>
 <td><?php echo  $r->Q11W1; ?></td>
-<td><?php echo  $r->population/$r->Q11W1; ?></td>
+<td><?php if($r->population=="" && $r->population==0): echo "N/A";  else: echo $r->population/$r->Q11W1; endif; ?></td>
 <td><?php echo  $r->Q13W1S1; ?></td>
 <td><?php echo  $r->Q13W1S2; ?></td>
 <td><?php echo  $r->Q13W1S3; ?></td>
 <td><?php echo  $r->Q13W1S4; ?></td>
-<td><?php echo  $r->population/$r->Q13W1S4; ?></td>
+<td><?php if($r->population=="" && $r->population==0): echo "N/A";  else: echo $r->population/$r->Q13W1S4; endif; ?></td>
 <td><?php echo  $r->Q14W1; ?></td>
 <td><?php echo  $r->Q15W1; ?></td>
 <td><?php echo  $r->Q15W1; ?></td>
