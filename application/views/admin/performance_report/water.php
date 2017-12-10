@@ -175,15 +175,18 @@
 <td><?php echo  $r->Q8W3S7; ?></td>
 <td><?php echo  $r->Q8W3S8; ?></td>
 <td><?php echo  $r->Q9W1; ?></td>
-<td><?php if($r->population=="" && $r->population==0): echo "N/A"; else:  echo $r->population/$r->Q9W1; endif; ?></td>
+<td><?php     
+							try{ echo  $r->population/$r->Q9W1; } catch(Exception $e){ echo "N/A"; } ?></td>
 <td><?php echo  $r->Q10W1; ?></td>
 <td><?php echo  $r->Q11W1; ?></td>
-<td><?php if($r->population=="" && $r->population==0): echo "N/A";  else: echo $r->population/$r->Q11W1; endif; ?></td>
+<td><?php 
+							try{ echo  $r->population/$r->Q11W1; } catch(Exception $e){ echo "N/A"; }  ?></td>
 <td><?php echo  $r->Q13W1S1; ?></td>
 <td><?php echo  $r->Q13W1S2; ?></td>
 <td><?php echo  $r->Q13W1S3; ?></td>
 <td><?php echo  $r->Q13W1S4; ?></td>
-<td><?php if($r->population=="" && $r->population==0): echo "N/A";  else: echo $r->population/$r->Q13W1S4; endif; ?></td>
+<td><?php 
+								try{ echo  $r->population/$r->Q13W1S4; } catch(Exception $e){ echo "N/A"; } ?></td>
 <td><?php echo  $r->Q14W1; ?></td>
 <td><?php echo  $r->Q15W1; ?></td>
 <td><?php echo  $r->Q15W1; ?></td>
