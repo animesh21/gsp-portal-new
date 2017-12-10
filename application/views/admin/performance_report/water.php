@@ -130,7 +130,7 @@
 	 }
 	 else{
 		echo  $r->$r/population->Q4W11;  
-	 } ?></td>
+	         } ?></td>
 <td><?php echo  $r->Q5W1; ?></td>
 <td><?php echo  $r->Q5W2; ?></td>
 <td><?php echo  $r->Q5W3; ?></td>
