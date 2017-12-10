@@ -129,7 +129,7 @@
 	        echo "N/A";
 	 }
 	 else{
-		echo  $r->$r/population->Q4W11;  
+		echo  $r->Q4W11/$r->Q4W11;  
 	         } ?></td>
 <td><?php echo  $r->Q5W1; ?></td>
 <td><?php echo  $r->Q5W2; ?></td>
