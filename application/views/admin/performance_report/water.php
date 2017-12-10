@@ -110,8 +110,7 @@
         <td><?php echo  $r->name; ?></td>
         <td><?php echo $r->category; ?></td>
         <td><?php echo $r->population; ?></td>
-       
-<td><?php echo  $r->Q4W1; ?></td>
+       <td><?php echo  $r->Q4W1; ?></td>
 <td><?php echo  $r->Q4W2; ?></td>
 <td><?php echo  $r->Q4W3; ?></td>
 <td><?php echo  $r->Q4W4; ?></td>
