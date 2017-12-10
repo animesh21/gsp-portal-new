@@ -122,7 +122,7 @@
 <td><?php echo  $r->Q4W9; ?></td>
 <td><?php echo  $r->Q4W10; ?></td>
 <td><?php echo  $r->Q4W11; ?></td>
-<td><?php if($r->population!="" && $r->population!=0): echo  $r->population/$r->Q4W11; else: echo "N/A"; endif; ?></td>
+<td><?php try{ echo  $r->population/$r->Q4W11; } catch(Exception $e){ echo "N/A"; } ?></td>
 <td><?php echo  $r->Q5W1; ?></td>
 <td><?php echo  $r->Q5W2; ?></td>
 <td><?php echo  $r->Q5W3; ?></td>
