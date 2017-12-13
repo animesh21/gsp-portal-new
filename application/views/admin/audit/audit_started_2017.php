@@ -1,4 +1,20 @@
 
+<!----- Badge Model Code  ------>
+<div class="modal fade" id="myModal1" role="dialog">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header" style="background:#e86549 !important; color:#FFFFFF;">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Badge Code</h4>
+      </div>
+      <div class="modal-body">
+        <textarea class="badge_code form-control">
+		
+		</textarea>
+      </div>
+    </div>
+  </div>
+</div>
 <style type="text/css">
 .dropdown-menu {
     position: absolute;
@@ -66,8 +82,7 @@
         <h4 class="modal-title" id="myModalLabel"> GSP Auth </h4>
       </div>
       <!-- Modal Body -->
-      <div class="modal-body"> 
-	    <?php echo form_open('admin/Login/Auth'); ?>
+      <div class="modal-body"> <?php echo form_open('admin/Login/Auth'); ?>
         <div class="form-group">
           <div class="col-sm-10">
             <input type="password" class="form-control" name="password" placeholder="Please enter Passcode"/>
@@ -81,26 +96,9 @@
         <div class="form-group">
           <div class=" col-sm-10"> <?php echo form_submit(array('id' => 'submit', 'value' => 'Submit')); ?> </div>
         </div>
-        <?php echo form_close(); ?> 
-	  </div>
+        <?php echo form_close(); ?> </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!----- Badge Model Code  ------>
-<div class="modal fade" id="myModal1" role="dialog">
-  <div class="modal-dialog modal-md">
-    <div class="modal-content">
-      <div class="modal-header" style="background:#e86549 !important; color:#FFFFFF;">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Badge Code</h4>
-      </div>
-      <div class="modal-body">
-        <textarea class="badge_code form-control">
-		
-		</textarea>
       </div>
     </div>
   </div>
