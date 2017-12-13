@@ -1,6 +1,6 @@
 <div>
   <div class="top-area">
-    <h2>All Excel Dump</h2>
+    <h2>ALL EXCEL DUMP</h2>
   </div>
   <div style="overflow: scroll">
     <table class="display dataTable no-footer" id="tablePerformance">
@@ -23,7 +23,6 @@
 		<th>Principal&#39;s Name</th>
 		<th>GSP Coordintor Name</th>
 		<th>GSP Coordintor Email</th>
-		<th>Password</th>
 		<th>GSP Coordintor Mobile</th>
 		<th>School Category</th>
 		<th>No.of Shifts</th>
@@ -620,9 +619,10 @@
       </thead>
       <tbody>
 	      <?php
-	    ini_set('memory_limit', '-1');
-	    for ($i = 0; $i < count($record1); $i++) {
-		?>
+		error_reporting(0);
+	        ini_set('memory_limit', '-1');
+	        for ($i = 0; $i < count($record1); $i++) {
+		    ?>
     	    <tr>
     		<td><?php echo $i + 1; ?></td>
     		<td><?php echo $record1[$i]->school_id; ?></td>
@@ -641,7 +641,6 @@
     		<td><?php echo $record1[$i]->principal; ?></td>
     		<td><?php echo $record1[$i]->codinator; ?></td>
     		<td><?php echo $record1[$i]->codinator_mail; ?></td>
-    		<td><?php echo $record1[$i]->password; ?></td>
     		<td><?php echo $record1[$i]->codinator_mobile; ?></td>
     		<td><?php echo $record1[$i]->category; ?></td>
     		<td><?php echo $record1[$i]->shifts; ?></td>
@@ -660,22 +659,7 @@
     		<td><?php echo $record1[$i]->audit_period; ?></td>
     		<td><?php echo $record1[$i]->location; ?></td>
     		<td><?php echo $record1[$i]->aid; ?></td>
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-    		<td><?php echo $record1[$i]->Q4A1; ?></td>
+			<td><?php echo $record1[$i]->Q4A1; ?></td>
     		<td>
     <?php
     $var = 0;
@@ -719,8 +703,7 @@
     		<td><?php echo $record1[$i]->Q6A2S1T4; ?></td>
     		<td><?php echo $record1[$i]->Q6A2S1T5; ?></td>
     		<td><?php echo $record1[$i]->Q6A2S1T6; ?></td>
-		<td><?php echo getFiled('Q6A2S3B4', $record1[$i]->userid); ?></td>
-    		<td><?php echo $record1[$i]->Q6A2S3D5; ?></td>
+    		<td><?php echo $record1[$i]->Q6A2S3D1+$record1[$i]->Q6A2S3P1+$record1[$i]->Q6A2S3L1+$record1[$i]->Q6A2S3C1+$record1[$i]->Q6A2S3E1+$record1[$i]->Q6A2S3H1+$record1[$i]->Q6A2S3B1; ?></td>
     		<td><?php echo $record1[$i]->Q6A2S3D1; ?></td>
     		<td><?php echo $record1[$i]->Q6A2S3P1; ?></td>
     		<td><?php echo $record1[$i]->Q6A2S3L1; ?></td>
@@ -729,6 +712,7 @@
     		<td><?php echo $record1[$i]->Q6A2S3H1; ?></td>
     		<td><?php echo $record1[$i]->Q6A2S3B1; ?></td>
     		<td><?php echo $record1[$i]->total_cars; ?></td>
+		<td><?php echo $record1[$i]->Q6A2S3B1; ?></td>    
     		<td><?php echo $record1[$i]->Q6A2S3D2; ?></td>
     		<td><?php echo $record1[$i]->Q6A2S3P2; ?></td>
     		<td><?php echo $record1[$i]->Q6A2S3L2; ?></td>
@@ -810,9 +794,8 @@
     		<td><?php echo $record1[$i]->Q7A7S4; ?></td>
     		<td><?php echo $record1[$i]->Q7A8S1; ?></td>
     		<td><?php echo $record1[$i]->Q7A8S2; ?></td>
-    		<td><?php echo $record1[$i]->Q7A8S2; ?></td>
     		<td><?php echo $record1[$i]->Q7A8S3; ?></td>
-    		<td><?php echo $record1[$i]->Q7A8S4; ?></td>
+			<td><?php echo $record1[$i]->Q7A8S4; ?></td>
     		<td><?php echo $record1[$i]->Q7A9S1; ?></td>
     		<td><?php echo $record1[$i]->Q7A9S2; ?></td>
     		<td><?php echo $record1[$i]->Q7A9S3; ?></td>
@@ -837,7 +820,7 @@
 			}
 		    ?>
 		</td>
-    		<td><?php //echo $record1[$i]->Q9A2; ?>
+    		<td>
 		    <?php 
 			if($record1[$i]->Q9A2=="Y")
 			{
@@ -906,6 +889,7 @@
 				<td><?php echo $record1[$i]->Q7E8S1; ?></td>
 				<td><?php echo $record1[$i]->Q7E8S2; ?></td>
 				<td><?php echo $record1[$i]->Q7E8S3; ?></td>
+				<td><?php echo $record1[$i]->Q8E1; ?></td>
 				<td><?php echo $record1[$i]->Q9E1; ?></td>
 				
 				
@@ -965,7 +949,7 @@
 				
 				
                 <td><?php echo $record1[$i]->Q10E1; ?></td>
-               <td><?php echo $record1[$i]->energy_point; ?></td>
+               <td><?php echo $record1[$i]->energy_points; ?></td>
 			   
 			   
 			   <td><?php echo $record1[$i]->Q4F1; ?></td>
@@ -1086,7 +1070,7 @@
 <td><?php echo  $record1[$i]->Q4W9; ?></td>
 <td><?php echo  $record1[$i]->Q4W10; ?></td>
 <td><?php echo  $record1[$i]->Q4W11; ?></td>
-<td><?php if($record1[$i]->population!=0 || $record1[$i]->population!=""): echo  $record1[$i]->population/$record1[$i]->Q4W11; else: echo "Wrong Population"; endif; ?></td>
+<td><?php if($record1[$i]->population!="" && $record1[$i]->population!=0): echo  $record1[$i]->Q4W11/$record1[$i]->population; else: echo "N/A"; endif; ?></td>
 <td><?php echo  $record1[$i]->Q5W1; ?></td>
 <td><?php echo  $record1[$i]->Q5W2; ?></td>
 <td><?php echo  $record1[$i]->Q5W3; ?></td>
@@ -1124,12 +1108,12 @@
 <td><?php echo  $record1[$i]->Q8W2S5; ?></td>
 <td><?php echo  $record1[$i]->Q8W2S61; ?></td>
 <td><?php echo  $record1[$i]->Q8W2S7; ?></td>
-<td><?php echo  $record1[$i]->Q8W2S9; ?></td>
 <td><?php echo  $record1[$i]->Q8W2S8; ?></td>
-<td><?php echo  $record1[$i]->Q8W2S10; ?></td>
-<td><?php echo  $record1[$i]->Q8W2S10; ?></td>
+<td><?php echo  $record1[$i]->Q8W2S9; ?></td>
+<td><?php echo  $record1[$i]->Q8W2S10;  ?></td>
 <td><?php echo  $record1[$i]->Q8W2S12; ?></td>
 <td><?php echo  $record1[$i]->Q8W2S13; ?></td>
+<td><?php echo  $record1[$i]->Q8W2S6; ?></td>
 <td><?php echo  $record1[$i]->Q8W3S1; ?></td>
 <td><?php echo  $record1[$i]->Q8W3S2; ?></td>
 <td><?php echo  $record1[$i]->Q8W3S3; ?></td>
@@ -1139,15 +1123,15 @@
 <td><?php echo  $record1[$i]->Q8W3S7; ?></td>
 <td><?php echo  $record1[$i]->Q8W3S8; ?></td>
 <td><?php echo  $record1[$i]->Q9W1; ?></td>
-<td><?php if($record1[$i]->population!=0 || $record1[$i]->population!=""): echo  $record1[$i]->population/$record1[$i]->Q9W1; else: echo "Wrong Population"; endif; ?></td>
+<td><?php if($record1[$i]->population=="" && $record1[$i]->population==0): echo "N/A"; else:  echo $record1[$i]->population/$record1[$i]->Q9W1; endif; ?></td>
 <td><?php echo  $record1[$i]->Q10W1; ?></td>
 <td><?php echo  $record1[$i]->Q11W1; ?></td>
-<td><?php if($record1[$i]->population!=0 || $record1[$i]->population!=""): echo  $record1[$i]->population/$record1[$i]->Q11W1; else: echo "Wrong Population"; endif; ?></td>
+<td><?php if($record1[$i]->population=="" && $record1[$i]->population==0): echo "N/A";  else: echo $record1[$i]->population/$record1[$i]->Q11W1; endif; ?></td>
 <td><?php echo  $record1[$i]->Q13W1S1; ?></td>
 <td><?php echo  $record1[$i]->Q13W1S2; ?></td>
 <td><?php echo  $record1[$i]->Q13W1S3; ?></td>
 <td><?php echo  $record1[$i]->Q13W1S4; ?></td>
-<td><?php if($record1[$i]->population!=0 || $record1[$i]->population!=""): echo  $record1[$i]->population/$record1[$i]->Q13W1S4;  else: echo "Wrong Population"; endif; ?></td>
+<td><?php if($record1[$i]->population=="" && $record1[$i]->population==0): echo "N/A";  else: echo $record1[$i]->population/$record1[$i]->Q13W1S4; endif; ?></td>
 <td><?php echo  $record1[$i]->Q14W1; ?></td>
 <td><?php echo  $record1[$i]->Q15W1; ?></td>
 <td><?php echo  $record1[$i]->Q15W1; ?></td>
@@ -1158,7 +1142,7 @@
 <td><?php echo  $record1[$i]->Q20W1; ?></td>
 <td><?php echo  $record1[$i]->Q20W2; ?></td>
 <td><?php echo  $record1[$i]->water_points; ?></td>
-<td><?php echo  $record1[$i]->Q4Wa1; ?></td>
+ <td><?php echo  $record1[$i]->Q4Wa1; ?></td>
         <td><?php echo  $record1[$i]->Q4Wa2; ?></td>
         <td><?php echo  $record1[$i]->Q5Wa1S1; ?></td>
         <td><?php echo  $record1[$i]->Q5Wa1S2; ?></td>
@@ -1254,7 +1238,7 @@
         <td><?php echo  $record1[$i]->Q8Wa2S3; ?></td>
         <td><?php echo  $record1[$i]->Q8Wa2S4; ?></td>
         <td><?php echo  $record1[$i]->Q8Wa2S5; ?></td>
-        <td><?php echo  $record1[$i]->Q8Wa2S5; ?></td>
+        <td><?php echo  $record1[$i]->Q8Wa2S6; ?></td>
         <td><?php echo  $record1[$i]->Q8Wa2S7; ?></td>
         <td><?php echo  $record1[$i]->Q8Wa2S8; ?></td>
         <td><?php echo  $record1[$i]->Q8Wa2S9; ?></td>
@@ -1404,21 +1388,20 @@
         <td><?php echo  $record1[$i]->Q19Wa1; ?></td>
         <td><?php echo $record1[$i]->waste_points; ?></td>
 		
-		<td><?php echo $record1[$i]->air_points + $record1[$i]->energy_point + $record1[$i]->food_points + $record1[$i]->land_points + $record1[$i]->water_points + $record1[$i]->waste_points; ?></td>
+		<td><?php echo $record1[$i]->air_points + $record1[$i]->energy_points + $record1[$i]->food_points + $record1[$i]->land_points + $record1[$i]->water_points + $record1[$i]->waste_points; ?></td>
 		<td><?php 
 		  global $percentage;
-		  $total=$record1[$i]->air_points + $record1[$i]->energy_point + $record1[$i]->food_points + $record1[$i]->land_points + $record1[$i]->water_points + $record1[$i]->waste_points; 
+		  $total=$record1[$i]->air_points + $record1[$i]->energy_points + $record1[$i]->food_points + $record1[$i]->land_points + $record1[$i]->water_points + $record1[$i]->waste_points; 
 		  $percentage= ($total/164)*100;
-		  $percentage=number_format($percentage,1);
 		  echo $percentage;
 		 ?></td>
 		 <td> 
 		 <?php
-		  if($percentage>=70):
+		  if($percentage>70):
 		   echo "<label class='label label-success'>Green</label>";
-		  elseif($percentage>=50 && $percentage<=69.9):
+		  elseif($percentage>50 && $percentage<=69.9):
 		  		   echo "<label class='label label-warning' style='background:yellow; color:black;'>Yellow</label>";
-		  elseif($percentage>=35 && $percentage<=49.9):
+		  elseif($percentage>35 && $percentage<=49.9):
 		  		   echo "<label class='label label-success' style='background:orange; color:black;'>Orange</label>";
 		  elseif($percentage<=34.9):
 		  		   echo "<label class='label label-danger'>Red</label>";
