@@ -100,9 +100,10 @@
     </thead>
     <tbody>
       <?php
+	    error_reporting(0);
             $i = 1;
             foreach ($record as $r) {
-                ?>
+         ?>
       <tr>
         <td><?php echo $i; ?></td>
         <td><?php echo  $r->userid; ?></td>
