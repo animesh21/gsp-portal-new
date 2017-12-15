@@ -1089,9 +1089,9 @@ if (isset($data['Q4F1']))
                                                                                                 <th width="442px">Packaged food items served / sold inside school campus</th>
                                                                                                 <th width="192px">Please count all flavours/variants available in the school separately</th>
                                                                                                 <th width="192px">Total no. of items sold, on an average, in a month</th>
-                                                                                                <th width="192px"><a class="tt"
-                                                                                                       data-tooltip="For the month writing month should be numeric As January as 1, february as 2"><span
-                                                                                                    class="badge">?</span></a>Month the food items were sold in</th>
+                                                                                                <th width="192px">Month the food items were sold in <a class="tt"
+                                                                                                       data-tooltip="Please enter the month in numeric form e.g. 1 for January, 2 for February, and so on"><span
+                                                                                                    class="badge">?</span></a></th>
                                                                                             </tr>
                                                                                             <tr>
                                                                                                 <td> Savoury snacks and
