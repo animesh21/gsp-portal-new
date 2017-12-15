@@ -101,7 +101,8 @@ class User_model extends CI_Model
      */
     public function getCIties($argID)
     {
-        $cities = array();
+        $cities = array();    
+	$this->db->order_by("name");
         $data = $this->db->get_where('cities', array('state_id =' => $argID))->result();
         return $data;
     }
