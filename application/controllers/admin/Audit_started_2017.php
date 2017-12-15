@@ -56,7 +56,7 @@ class Audit_started_2017 extends CI_Controller {
 		    echo json_encode($data['record']);
    }		
 
-     public function getPartnerSchoolData()
+      public function getPartnerSchoolData()
    {   
        $records=$this->Audit_started_model->getPartnerData();
 	   $arr_school=array();
@@ -88,7 +88,7 @@ class Audit_started_2017 extends CI_Controller {
         $data['main'] = 'admin/audit/partners';
         $data['title'] = 'Home | Partners Registration 2017';
         $this->load->view('admin/includes/template', $data);
-   }	
+   }
 	
 	
     /*
