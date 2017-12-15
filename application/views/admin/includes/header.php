@@ -145,7 +145,7 @@
                   <li><a href="<?php echo base_url('admin/audit_started_2017'); ?>">REGISTRATIONS 2017</a></li>
                   <li><a href="<?php echo base_url('admin/audit_started/statewise'); ?>">REGISTRATIONS BY STATE</a></li>
                   <li><a href="<?php echo base_url('admin/audit_started/feedback'); ?>">Feedback</a></li>
-                  <li><a href="<?php echo base_url('admin/audit_started/feedback1'); ?>">Feedback-1</a></li>
+                  <li><a href="<?php echo base_url('admin/audit_started_2017/partnersList'); ?>">Partner Details</a></li> 
                 </ul>
               </li>
              <li class=""><a href="#">AUDIT COMPLETED<span class="caret"></span></a>
