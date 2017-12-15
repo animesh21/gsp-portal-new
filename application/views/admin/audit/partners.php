@@ -65,7 +65,6 @@
       <th>Co-ord. Mobile</th>
       <th>Completeness</th>
       <th>Reg. Date</th>
-	  <th>Type</th>
       <th>Action</th>
     </tr>
   </thead>
@@ -153,22 +152,6 @@ function getBadgeCode(userid)
 						{ mData: 'comobile' },
 						{ mData: 'progress'},
 						{ mData: 'date_added' },
-						{ mData: 'school_status',
-						 "orderable": false,
-                         "searchable": false,
-                         "render": function(data,type,row,meta) { // render event defines the markup of the cell text 
-                          if(row.school_status==1)
-						    {
-							var a ='<label class="label label-info">Secondary School</label>';                            
-							return a;
-							}
-							else if(row.school_status==0)
-							{
-							var a ='<label class="label label-success">Primary School</label>';                            
-							return a;
-							}
-							}
-						},
 						{ mData: 'id',
 						 "orderable": false,
                         "searchable": false,
