@@ -167,6 +167,105 @@ class Performance_report extends CI_Controller {
 //        $name = 'registration2017_by_state.csv';
 //        force_download($name, $row);
 //    }
+	
+	 public function landPrimary()
+	{
+		
+		
+		$data['main']='admin/performance_report/primary_land';
+        $data['title']='Primary_Land';
+		$data['records']=$this->Performance_model->getLandPrimarySchool();
+		//echo "<pre>";print_r($data['records']);exit;
+		$this->load->view('admin/includes/template', $data);
+		
+	}
+        
+        
+        public function foodPrimary()
+	{
+		
+		
+		$data['main']='admin/performance_report/primary_food';
+                $data['title']='Primary_Food';
+		$data['records']=$this->Performance_model->getFoodPrimarySchool();
+		//echo "<pre>";print_r($data['records']);exit;
+		$this->load->view('admin/includes/template', $data);
+		
+	}
+	
+	  public function energyPrimary()
+	{
+		
+		
+		$data['main']='admin/performance_report/primary_energy';
+                $data['title']='Primary_Energy';
+		$data['records']=$this->Performance_model->getEnergyPrimarySchool();
+		//echo "<pre>";print_r($data['records']);exit;
+		$this->load->view('admin/includes/template', $data);
+		
+	}
+	
+	 public function wastePrimary()
+	{
+		
+		
+		$data['main']='admin/performance_report/primary_waste';
+                $data['title']='Primary_Waste';
+		$data['records']=$this->Performance_model->getWastePrimarySchool();
+		//echo "<pre>";print_r($data['records']);exit;
+		$this->load->view('admin/includes/template', $data);
+		
+	}
+	
+	public function waterPrimary()
+	{
+		 error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
+		
+		$data['main']='admin/performance_report/primary_water';
+                $data['title']='Primary_Waste';
+		$data['records']=$this->Performance_model->getWaterPrimarySchool();
+		//echo "<pre>";print_r($data['records']);exit;
+		$this->load->view('admin/includes/template', $data);
+		
+	}
+	
+	public function airPrimary()
+	{
+		 
+		
+		$data['main']='admin/performance_report/primary_air';
+                $data['title']='Primary_Air';
+		$data['record1']=$this->Performance_model->getAirPrimarySchool();
+		//echo "<pre>";print_r($data['records']);exit;
+		$this->load->view('admin/includes/template', $data);
+		
+	}
+	
+	
+	public function schoolgeneralPrimary()
+	{
+		 
+		
+		$data['main']='admin/performance_report/primary_schoolgeneral';
+                $data['title']='Primary_School&Genaral';
+		$data['record1']=$this->Performance_model->getSchoolgeneralPrimarySchool();
+		//echo "<pre>";print_r($data['records']);exit;
+		$this->load->view('admin/includes/template', $data);
+		
+	}
+	
+	 public function feedbackPrimary()
+	{
+		
+		
+		$data['main']='admin/performance_report/primary_feedback';
+                $data['title']='Primary_Feedback';
+		$data['records']=$this->Performance_model->getFeedbackPrimarySchool();
+		//echo "<pre>";print_r($data['records']);exit;
+		$this->load->view('admin/includes/template', $data);
+		
+	}
+	
     
 
 }
