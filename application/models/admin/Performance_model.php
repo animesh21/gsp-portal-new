@@ -39,14 +39,29 @@ class Performance_model extends CI_Model {
 //	return $query->result();
 //    }
 
-    public function air_performance() {
-	return $this->db->select('a.*, b.id, b.name, c.category, c.population')
-			->from('tbl_air AS a')
-			->join('gsp_school AS b', 'a.userid=b.userid', 'left')
-			->join('tbl_general AS c', 'a.userid=c.userid', 'left')
-			->get()->result();
-    }
+   // public function air_performance() {
+	//return $this->db->select('a.*, b.id, b.name, c.category, c.population')
+		//	->from('tbl_air AS a')
+		//	->join('gsp_school AS b', 'a.userid=b.userid', 'left')
+		//	->join('tbl_general AS c', 'a.userid=c.userid', 'left')
+		//	->get()->result();
+  //  }
 
+	 public function air_performance()
+	{
+			
+			return $this->db->select('a.*,b.userid,b.questionid,b.answer,c.name,c.id,d.category,d.population')
+							->from('tbl_air AS a')	
+			                ->join('gsp_answers As b','a.userid=b.userid','left')
+							->join('gsp_school AS c','b.userid=c.userid', 'left')
+                 			->join('tbl_general AS d', 'c.userid=d.userid', 'left')
+							->where('b.questionid','Q1G2')
+							->where('b.answer >', 5)
+							->get()->result();
+		
+		
+	} 
+	
     public function schoolgeneral_performance() {
 	return $this->db->select('a.*, b.id, c.name AS state_name, d.name AS district_name')
 			->from('tbl_general AS a')
@@ -119,5 +134,117 @@ return $this->db->select('a.*,b.name AS state_name, c.name AS district_name')->f
        ->join('cities AS c', 'a.district=c.id', 'left')
        ->get()->result();
   }
+	
+	public function getLandPrimarySchool()
+	{
+			
+			return $this->db->select('a.*,b.userid,b.questionid,b.answer,c.name,c.id,d.category,d.population')
+							->from('tbl_land AS a')	
+			                ->join('gsp_answers As b','a.userid=b.userid','left')
+							->join('gsp_school AS c','b.userid=c.userid', 'left')
+                 			->join('tbl_general AS d', 'c.userid=d.userid', 'left')
+							->where('b.questionid','Q1G2')
+							->where('b.answer <=', 5)
+							->get()->result();
+			
+		
+	 }
+         
+         
+         
+         public function getFoodPrimarySchool()
+	{
+			
+			return $this->db->select('a.*,b.userid,b.questionid,b.answer,c.name,c.id,d.category,d.population')
+							->from('tbl_food AS a')	
+			                ->join('gsp_answers As b','a.userid=b.userid','left')
+							->join('gsp_school AS c','b.userid=c.userid', 'left')
+                 			->join('tbl_general AS d', 'c.userid=d.userid', 'left')
+							->where('b.questionid','Q1G2')
+							->where('b.answer <=', 5)
+							->get()->result();
+			
+		
+	 }
+	 
+	  public function getEnergyPrimarySchool()
+	{
+			
+			return $this->db->select('a.*,b.userid,b.questionid,b.answer,c.name,c.id,d.category,d.population')
+							->from('tbl_energy AS a')	
+			                ->join('gsp_answers As b','a.userid=b.userid','left')
+							->join('gsp_school AS c','b.userid=c.userid', 'left')
+                 			->join('tbl_general AS d', 'c.userid=d.userid', 'left')
+							->where('b.questionid','Q1G2')
+							->where('b.answer <=', 5)
+							->get()->result();
+			
+		
+	 }
+	 
+	  public function getWastePrimarySchool()
+	{
+			
+			return $this->db->select('a.*,b.userid,b.questionid,b.answer,c.name,c.id,d.category,d.population')
+							->from('tbl_waste AS a')	
+			                ->join('gsp_answers As b','a.userid=b.userid','left')
+							->join('gsp_school AS c','b.userid=c.userid', 'left')
+                 			->join('tbl_general AS d', 'c.userid=d.userid', 'left')
+							->where('b.questionid','Q1G2')
+							->where('b.answer <=', 5)
+							->get()->result();
+			
+		
+	 }
+	
+	public function getWaterPrimarySchool()
+	{
+			
+			return $this->db->select('a.*,b.userid,b.questionid,b.answer,c.name,c.id,d.category,d.population')
+							->from('tbl_water AS a')	
+			                ->join('gsp_answers As b','a.userid=b.userid','left')
+							->join('gsp_school AS c','b.userid=c.userid', 'left')
+                 			->join('tbl_general AS d', 'c.userid=d.userid', 'left')
+							->where('b.questionid','Q1G2')
+							->where('b.answer <=', 5)
+							->get()->result();
+			
+		
+	 }
+	 
+	 
+	 public function getAirPrimarySchool()
+	 
+		{
+			
+			return $this->db->select('a.*,b.userid,b.questionid,b.answer,c.name,c.id,d.category,d.population')
+							->from('tbl_air AS a')	
+			                ->join('gsp_answers As b','a.userid=b.userid','left')
+							->join('gsp_school AS c','b.userid=c.userid', 'left')
+                 			->join('tbl_general AS d', 'c.userid=d.userid', 'left')
+							->where('b.questionid','Q1G2')
+							->where('b.answer <=', 5)
+							->get()->result();
+		
+		}
+		
+		
+		 public function getSchoolgeneralPrimarySchool()
+	 
+		{
+			
+			return $this->db->select('a.*,b.userid,b.questionid,b.answer,c.name,c.id,d.category,d.population ,e.name AS state_name, f.name AS district_name')
+							->from('tbl_general AS a')	
+			                ->join('gsp_answers As b','a.userid=b.userid','left')
+							->join('gsp_school AS c','b.userid=c.userid', 'left')
+                 			->join('tbl_general AS d', 'c.userid=d.userid', 'left')
+							->join('states AS e', 'a.state=e.id', 'left')
+							->join('cities AS f', 'a.district=f.id', 'left')
+							->where('b.questionid','Q1G2')
+							->where('b.answer <=', 5)
+							->get()->result();
+		
+		}
+		
 	
 }
