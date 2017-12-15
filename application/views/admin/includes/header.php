@@ -13,6 +13,99 @@
 <link href="<?php echo base_url(); ?>assets/front/css/responsive.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>assets/front/css/chosen.css" rel="stylesheet">
 <!-- begin js --->
+<style type="text/css">
+ 
+.dropdown-menu > li.kopie > a {
+    padding-left:5px;
+}
+ 
+.dropdown-submenu {
+    position:relative;
+}
+.dropdown-submenu>.dropdown-menu {
+   top:0;left:100%;
+   margin-top:-6px;margin-left:-1px;
+   -webkit-border-radius:0 6px 6px 6px;-moz-border-radius:0 6px 6px 6px;border-radius:0 6px 6px 6px;
+ }
+  
+.dropdown-submenu > a:after {
+  border-color: transparent transparent transparent #333;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  content: " ";
+  display: block;
+  float: right;  
+  height: 0;     
+  margin-right: -10px;
+  margin-top: 5px;
+  width: 0;
+}
+ 
+.dropdown-submenu:hover>a:after {
+    border-left-color:#555;
+ }
+
+.dropdown-menu > li > a:hover, .dropdown-menu > .active > a:hover {
+  text-decoration: none;
+}  
+  
+@media (max-width: 767px) {
+
+  .navbar-nav  {
+     display: inline;
+  }
+  .navbar-default .navbar-brand {
+    display: inline;
+  }
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+  }
+  .navbar-default .navbar-nav .dropdown-menu > li > a {
+    color: red;
+    background-color: #ccc;
+    border-radius: 4px;
+    margin-top: 2px;   
+  }
+   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+     color: #333;
+   }
+   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+   .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+     background-color: #ccc;
+   }
+
+   .navbar-nav .open .dropdown-menu {
+     border-bottom: 1px solid white; 
+     border-radius: 0;
+   }
+  .dropdown-menu {
+      padding-left: 10px;
+  }
+  .dropdown-menu .dropdown-menu {
+      padding-left: 20px;
+   }
+   .dropdown-menu .dropdown-menu .dropdown-menu {
+      padding-left: 30px;
+   }
+   li.dropdown.open {
+    border: 0px solid red;
+   }
+
+}
+ 
+@media (min-width: 768px) {
+  ul.nav li:hover > ul.dropdown-menu {
+    display: block;
+  }
+  #navbar {
+    text-align: center;
+  }
+}  
+
+</style>	
+	
+	
+	
 <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
 <script type="text/javascript" language="javascript" src="https://nightly.datatables.net/buttons/js/buttons.html5.min.js"></script>
@@ -55,21 +148,39 @@
                   <li><a href="<?php echo base_url('admin/audit_started/feedback1'); ?>">Feedback-1</a></li>
                 </ul>
               </li>
-              <li class=""><a href="#">AUDIT COMPLETED<span class="caret"></span></a>
+             <li class=""><a href="#">AUDIT COMPLETED<span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li class=""><a href="#">PERFORMANCE REPORT</a> </li>
-                  <li class=""><a href="<?php echo base_url('admin/performance_report/schoolgeneral'); ?>">School Profile & General</a> </li>
-                  <li class=""><a href="<?php echo base_url('admin/performance_report/air'); ?>">Air</a> </li>
-		  <li class=""><a href="<?php echo base_url('admin/performance_report/energy'); ?>">Energy</a> </li>
-		  <li class=""><a href="<?php echo base_url('admin/performance_report/food'); ?>">Food</a> </li>
-		  <li class=""><a href="<?php echo base_url('admin/performance_report/land'); ?>">Land</a> </li>
-                  <li class=""><a href="<?php echo base_url('admin/performance_report/water'); ?>">Water</a> </li>
-                  <li class=""><a href="<?php echo base_url('admin/performance_report/waste'); ?>">Waste</a> </li>
-                  <li class=""><a href="<?php echo base_url('admin/performance_report/feedback'); ?>">Feedback</a> </li>
-			<li class=""><a href="<?php echo base_url('admin/performance_report/totalCalculation'); ?>">Total Points Calculation</a> </li>
-			<li><a href="<?php echo base_url('admin/performance_report/allExcelDump'); ?>">All Excel Dump</a></li>
-			
-			<li><a href="analysis_report_all_question.php">All Responses</a></li>
+                  <li class=""><a href="#">PERFORMANCE REPORT</a></li>
+				  <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">PRIMARY AUDIT</a>
+								<ul class="dropdown-menu">
+								 <li><a href="<?php echo base_url('admin/performance_report/schoolgeneralPrimary'); ?>">School Profile & General </a></li>
+                                    <li><a href="<?php echo base_url('admin/performance_report/airPrimary'); ?>">AIR</a></li>
+									<li><a href="<?php echo base_url('admin/performance_report/energyPrimary'); ?>">ENERGY</a></li>
+									<li><a href="<?php echo base_url('admin/performance_report/foodPrimary'); ?>">Food</a></li>
+									<li><a href="<?php echo base_url('admin/performance_report/landPrimary'); ?>">LAND</a></li>
+									<li><a href="<?php echo base_url('admin/performance_report/waterPrimary'); ?>">WATER</a></li>
+                                    <li><a href="<?php echo base_url('admin/performance_report/wastePrimary'); ?>">WASTE</a></li>
+									<li><a href="<?php echo base_url('admin/performance_report/feedbackPrimary'); ?>">FEEDBACK</a></li>
+									
+								</ul>
+							</li>
+				  <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">SECONDARY AUDIT</a>
+								<ul class="dropdown-menu">
+					 <li><a href="<?php echo base_url('admin/performance_report/schoolgeneral'); ?>">School Profile & General</a> </li>
+                                    <li><a href="<?php echo base_url('admin/performance_report/air'); ?>">AIR</a></li>
+									<li><a href="<?php echo base_url('admin/performance_report/energy'); ?>">ENERGY</a></li>
+									<li><a href="<?php echo base_url('admin/performance_report/food'); ?>">FOOD</a></li>
+									<li><a href="<?php echo base_url('admin/performance_report/land'); ?>">LAND</a></li>
+									<li><a href="<?php echo base_url('admin/performance_report/water'); ?>">WATER</a></li>
+                                    <li><a href="<?php echo base_url('admin/performance_report/waste'); ?>">WASTE</a></li>                    
+									<li><a href="<?php echo base_url('admin/performance_report/feedback'); ?>">Feedback</a> </li>
+
+								</ul>
+							</li>
+                 <li class=""><a href="<?php echo base_url('admin/performance_report/totalCalculation'); ?>">Total Points Calculation</a> </li>
+				<li><a href="analysis_report_all_question.php">All Responses</a></li>
+                 
+                 
                 </ul>
               </li>
               <li class=""><a href="#">ANALYTICS<span class="caret"></span></a>
