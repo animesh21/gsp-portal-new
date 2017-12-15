@@ -7,7 +7,7 @@
         <link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet">
         <link href="<?php echo base_url(); ?>assets/css/style.css" rel="stylesheet">
 
-
+<link href="<?php echo base_url(); ?>assets/css/jquery.typeahead.css" rel="stylesheet">
         <script src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script>
         <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
         <script src="<?php echo base_url(); ?>assets/js/jquery.dataTables.min.js"></script>
@@ -249,10 +249,14 @@
                     ?>
                     <?php echo validation_errors(); ?>
                     <?php echo form_open('login/register', array('id' => 'registration-form')); ?>
-                    <div class="form-group">
-                        <input type="text" name="name" class="form-control name placeholder"
+                    <div class="form-group typeahead__container">
+    <div class="typeahead__field">
+      <div class="typeahead__query">
+        <input type="text" name="name" class="schoolname name form-control  placeholder"
                                value="<?php echo set_value('name'); ?>" placeholder="Name of the School*" id="name">
-                    </div>
+      </div>
+    </div>
+  </div>
                     <div class="form-group">
                         <input type="text" name="address1" id="address1" class="form-control address placeholder"
                                value="<?php echo set_value('address1'); ?>" placeholder="Address Line 1*">
@@ -382,3 +386,23 @@
         </footer>
     </body>
 </html>
+<script src="<?php echo base_url(); ?>assets/js/jquery.typeahead.min.js"></script>
+<script type="text/javascript">
+$.typeahead({
+             input: '.schoolname',
+             order: "desc",
+             source: {
+             data: [
+            "KENDRIYA VIDYALAYA", "JNV", "Satya Bharti"
+        ]
+    },
+    callback: {
+        onInit: function (node) {
+            console.log('Typeahead Initiated on ' + node.selector);
+        }
+    }
+});
+
+
+
+</script>
