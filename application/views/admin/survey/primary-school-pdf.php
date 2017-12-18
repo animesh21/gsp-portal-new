@@ -1546,25 +1546,20 @@
                     </li>
                     <li>
                         <p class="orange"><span>2</span>If yes, then midday meal is served under:</p>
-                        <p> <?php echo (getFiled('Q5F1S1', $schoolUserID) != "") ? (getFiled('Q5F1S1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p> 
+                        <p> <?php 
+				if(getFiled('Q5F1S1', $schoolUserID)==1)
+				    echo 'Government Scheme';
+				elseif(getFiled('Q5F1S1', $schoolUserID)==2)
+				    echo 'School’s personal initiative';
+				elseif(getFiled('Q5F1S1', $schoolUserID)==3)
+				    echo 'Others';
+				?></p> 
                     </li>
                     <li>
                         <p class="orange"><span>2(a)</span>Do students bring their own lunch from home?</p>
                         <p> <?php echo (getFiled('Q5F1S1', $schoolUserID) != "") ? (getFiled('Q5F1S1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p> 
                     </li>
-                    <li>
-
-                        <p class="orange"><span>2(a)(1)</span> How many students out of total student population bring home-made lunch? </p>
-                        <p><?php echo (getFiled('Q5F1S2', $schoolUserID) != "") ? getFiled('Q5F1S2', $schoolUserID) : "N/A"; ?></p> 
-                    </li>    
-                    <li>
-                        <p class="orange"><span>2(a)(2)</span>Of the students who  bring lunch from home, how many bring packaged food?</p>
-                        <p><?php echo (getFiled('Q5F1S3', $schoolUserID) != "") ? getFiled('Q5F1S3', $schoolUserID) : "N/A"; ?></p> 					   
-                    </li>
-                    <li>
-                        <p class="orange"><span>2(a)(3)</span>Do teachers have the responsibility to ensure that students are carrying lunch from home?</p>
-                        <p> <?php echo (getFiled('Q5F1S4', $schoolUserID) != "") ? (getFiled('Q5F1S4', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
-                    </li>
+                   
                     <li>
                         <p class="orange"><span>2(b)</span>What kind of food items are served in midday meal?</p>
 
