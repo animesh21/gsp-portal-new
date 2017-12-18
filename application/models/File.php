@@ -250,7 +250,17 @@ class File extends CI_Model {
                         ->where('a.userid', $argID)
                         ->like('a.file_name', 'Green_Cover')
                         ->get()->result();
-    } 	
+    }
+	
+    public function SupportingWater($argID)
+    {
+        return $this->db->select('a.*, b.name')
+                        ->from('files AS a')
+                        ->join('gsp_school AS b', 'a.userid=b.userid', 'left')
+                        ->where('a.userid', $argID)
+                        ->like('a.file_name', 'Supporting_Document_Water')
+                        ->get()->result();
+    } 		
     
     //Get PUC  Doc
     public function pucCertificate($argID)
