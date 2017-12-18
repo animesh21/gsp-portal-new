@@ -1186,131 +1186,99 @@
                     <p class="orange"><span>2</span><span> Does your school have its own vehicles?</span></p>
                     <p><?php echo (getFiled('Q5E1', $schoolUserID) != "") ? (getFiled('Q5E1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
 
-                    <p class="orange"><span>3</span><span>Provide the details of total energy consumed by the school</span></p>
+                    <p class="orange"><span>3</span><span>Please share if your school uses the following types of energy</span></p>
                     <table class="table">
-                        <tr><th>Source of energy</th>
-                            <th>Quantity consumed/monthly average</th>
-                            <th>Energy consumed in Megajoules (mj)</th>
-                            <th>Type of use</th>
-                        </tr>
+                        
                         <tr>
                             <td>Electricity from the board (kwh)</td>
-                            <td><?php echo (getFiled('Q6E1S1', $schoolUserID) != "") ? getFiled('Q6E1S1', $schoolUserID) : "N/A"; ?></td>
-                            <td><?php echo (getFiled('Q6E1S2', $schoolUserID) != "") ? getFiled('Q6E1S2', $schoolUserID) : "N/A"; ?>
-                            </td><td><?php echo (getFiled('Q6E1S3', $schoolUserID) != "") ? getFiled('Q6E1S3', $schoolUserID) : "N/A"; ?>
-                            </td>
+			    <td><p><?php echo (getFiled('Q6E1', $schoolUserID) != "") ? (getFiled('Q6E1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
+	                    </td> 
+                            
                         </tr>
 
                         <tr>
                             <td>Electricity from generator (diesel) (litres)</td>
-                            <td><?php echo (getFiled('Q6E2S1', $schoolUserID) != "") ? getFiled('Q6E2S1', $schoolUserID) : "N/A"; ?></td>
-                            <td><?php echo (getFiled('Q6E2S2', $schoolUserID) != "") ? getFiled('Q6E2S2', $schoolUserID) : "N/A"; ?></td>
-                            <td><?php echo (getFiled('Q6E2S3', $schoolUserID) != "") ? getFiled('Q6E2S3', $schoolUserID) : "N/A"; ?></td>
+			    <td><p><?php echo (getFiled('Q6E2', $schoolUserID) != "") ? (getFiled('Q6E2', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
+	                    </td>	
                         </tr>
 
                         <tr>
                             <td>Petrol (litres)</td>
-                            <td><?php echo (getFiled('Q6E3S1', $schoolUserID) != "") ? getFiled('Q6E3S1', $schoolUserID) : "N/A"; ?></td>
-                            <td><?php echo (getFiled('Q6E3S2', $schoolUserID) != "") ? getFiled('Q6E3S2', $schoolUserID) : "N/A"; ?></td>
-                            <td><?php echo (getFiled('Q6E3S3', $schoolUserID) != "") ? getFiled('Q6E3S3', $schoolUserID) : "N/A"; ?></td>
-                        </tr>
+                           <td><p><?php echo (getFiled('Q6E3', $schoolUserID) != "") ? (getFiled('Q6E3', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
+	                    </td>    
+			</tr>
                         <tr>
                             <td>Diesel (litres)</td>
-                            <td><?php echo (getFiled('Q6E4S1', $schoolUserID) != "") ? getFiled('Q6E4S1', $schoolUserID) : "N/A"; ?></td>
-                            <td><?php echo (getFiled('Q6E4S2', $schoolUserID) != "") ? getFiled('Q6E4S2', $schoolUserID) : "N/A"; ?></td>
-                            <td><?php echo (getFiled('Q6E4S3', $schoolUserID) != "") ? getFiled('Q6E4S3', $schoolUserID) : "N/A"; ?></td>
-                        </tr>
+                            <td><p><?php echo (getFiled('Q6E4', $schoolUserID) != "") ? (getFiled('Q6E4', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
+	                    </td>
+			</tr>
 
                         <tr>
                             <td>CNG (kilogrammes)</td>
-                            <td><?php echo (getFiled('Q6E5S1', $schoolUserID) != "") ? getFiled('Q6E5S1', $schoolUserID) : "N/A"; ?></td>
-                            <td><?php echo (getFiled('Q6E5S2', $schoolUserID) != "") ? getFiled('Q6E5S2', $schoolUserID) : "N/A"; ?></td>
-                            <td><?php echo (getFiled('Q6E5S3', $schoolUserID) != "") ? getFiled('Q6E5S3', $schoolUserID) : "N/A"; ?></td>
-                        </tr>
+			    <td><p><?php echo (getFiled('Q6E5', $schoolUserID) != "") ? (getFiled('Q6E5', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
+	                    </td>	
+                         </tr>
 
 
                         <tr>
                             <td>Kerosene (litres)</td>
-                            <td><?php echo (getFiled('Q6E6S1', $schoolUserID) != "") ? getFiled('Q6E6S1', $schoolUserID) : "N/A"; ?></td>
-                            <td><?php echo (getFiled('Q6E6S2', $schoolUserID) != "") ? getFiled('Q6E6S2', $schoolUserID) : "N/A"; ?></td>
-                            <td><?php echo (getFiled('Q6E6S3', $schoolUserID) != "") ? getFiled('Q6E6S3', $schoolUserID) : "N/A"; ?></td>
-                        </tr>
+                           <td><p><?php echo (getFiled('Q6E6', $schoolUserID) != "") ? (getFiled('Q6E6', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
+	                    </td>
+			</tr>
 
 
                         <tr>
                             <td>Coal (kilogrammes)</td>
-                            <td><?php echo (getFiled('Q6E7S1', $schoolUserID) != "") ? getFiled('Q6E7S1', $schoolUserID) : "N/A"; ?></td>
-                            <td><?php echo (getFiled('Q6E7S2', $schoolUserID) != "") ? getFiled('Q6E7S2', $schoolUserID) : "N/A"; ?></td>
-                            <td><?php echo (getFiled('Q6E7S3', $schoolUserID) != "") ? getFiled('Q6E7S3', $schoolUserID) : "N/A"; ?></td>
+			    <td><p><?php echo (getFiled('Q67', $schoolUserID) != "") ? (getFiled('Q6E7', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
+	                    </td>	
                         </tr>
 
 
                         <tr>
                             <td>Wood (kilogrammes)</td>
-                            <td><?php echo (getFiled('Q6E16S1', $schoolUserID) != "") ? getFiled('Q6E16S1', $schoolUserID) : "N/A"; ?>
-                            </td><td><?php echo (getFiled('Q6E16S2', $schoolUserID) != "") ? getFiled('Q6E16S2', $schoolUserID) : "N/A"; ?></td>
-                            <td><?php echo (getFiled('Q6E16S3', $schoolUserID) != "") ? getFiled('Q6E16S3', $schoolUserID) : "N/A"; ?></td>
-                        </tr>
+		            <td><p><?php echo (getFiled('Q6E8', $schoolUserID) != "") ? (getFiled('Q6E8', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
+	                    </td>		
+                         </tr>
 
                         <tr>
                             <td>Animal waste (kilogrammes)</td>
-                            <td><?php echo (getFiled('Q6E8S1', $schoolUserID) != "") ? getFiled('Q6E8S1', $schoolUserID) : "N/A"; ?></td>
-                            <td><?php echo (getFiled('Q6E8S2', $schoolUserID) != "") ? getFiled('Q6E8S2', $schoolUserID) : "N/A"; ?></td>
-                            <td><?php echo (getFiled('Q6E8S3', $schoolUserID) != "") ? getFiled('Q6E8S3', $schoolUserID) : "N/A"; ?></td>
-                        </tr>
+		            <td><p><?php echo (getFiled('Q6E9', $schoolUserID) != "") ? (getFiled('Q6E9', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
+	                    </td>		
+                         </tr>
 
 
                         <tr>
                             <td>Solar (kwh)</td>
-                            <td><?php echo (getFiled('Q6E9S1', $schoolUserID) != "") ? getFiled('Q6E9S1', $schoolUserID) : "N/A"; ?></td>
-                            <td><?php echo (getFiled('Q6E9S2', $schoolUserID) != "") ? getFiled('Q6E9S2', $schoolUserID) : "N/A"; ?></td>
-                            <td><?php echo (getFiled('Q6E9S3', $schoolUserID) != "") ? getFiled('Q6E9S3', $schoolUserID) : "N/A"; ?></td>
-                        </tr>
+		            <td><p><?php echo (getFiled('Q6E10', $schoolUserID) != "") ? (getFiled('Q6E10', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
+	                    </td>
+                         </tr>
 
 
                         <tr>
                             <td>Wind (kwh)</td>
-                            <td><?php echo (getFiled('Q6E10S1', $schoolUserID) != "") ? getFiled('Q6E10S1', $schoolUserID) : "N/A"; ?></td>
-                            <td><?php echo (getFiled('Q6E10S2', $schoolUserID) != "") ? getFiled('Q6E10S2', $schoolUserID) : "N/A"; ?></td>
-                            <td><?php echo (getFiled('Q6E10S3', $schoolUserID) != "") ? getFiled('Q6E10S3', $schoolUserID) : "N/A"; ?></td>
-                        </tr>
+			    <td><p><?php echo (getFiled('Q6E11', $schoolUserID) != "") ? (getFiled('Q6E11', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
+	                    </td>	
+                         </tr>
 
                         <tr>
                             <td>LPG (kilogrammes)</td>
-                            <td><?php echo (getFiled('Q6E11S1', $schoolUserID) != "") ? getFiled('Q6E11S1', $schoolUserID) : "N/A"; ?></td>
-                            <td><?php echo (getFiled('Q6E11S2', $schoolUserID) != "") ? getFiled('Q6E11S2', $schoolUserID) : "N/A"; ?></td>
-                            <td><?php echo (getFiled('Q6E11S3', $schoolUserID) != "") ? getFiled('Q6E11S3', $schoolUserID) : "N/A"; ?></td>
+			    <td><p><?php echo (getFiled('Q6E12', $schoolUserID) != "") ? (getFiled('Q6E12', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
+	                    </td>	
                         </tr>
 
                         <tr>
                             <td>Piped Natural Gas (kilogrammes)</td>
-                            <td><?php echo (getFiled('Q6E12S1', $schoolUserID) != "") ? getFiled('Q6E12S1', $schoolUserID) : "N/A"; ?></td>
-                            <td><?php echo (getFiled('Q6E12S2', $schoolUserID) != "") ? getFiled('Q6E12S2', $schoolUserID) : "N/A"; ?></td>
-                            <td><?php echo (getFiled('Q6E12S3', $schoolUserID) != "") ? getFiled('Q6E12S3', $schoolUserID) : "N/A"; ?></td>
-                        </tr>
+			  <td><p><?php echo (getFiled('Q6E13', $schoolUserID) != "") ? (getFiled('Q6E13', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
+	                    </td>
+			    	
+                         </tr>
 
                         <tr>
                             <td>Biogas</td>
-                            <td><?php echo (getFiled('Q6E13S1', $schoolUserID) != "") ? getFiled('Q6E13S1', $schoolUserID) : "N/A"; ?></td>
-                            <td><?php echo (getFiled('Q6E13S2', $schoolUserID) != "") ? getFiled('Q6E13S2', $schoolUserID) : "N/A"; ?></td>
-                            <td><?php echo (getFiled('Q6E13S3', $schoolUserID) != "") ? getFiled('Q6E13S3', $schoolUserID) : "N/A"; ?></td>
-                        </tr>
-
-
-                        <tr>
-                            <td>Others (specify)</td>
-                            <td><?php echo (getFiled('Q6E14S1', $schoolUserID) != "") ? getFiled('Q6E14S1', $schoolUserID) : "N/A"; ?></td>
-                            <td><?php echo (getFiled('Q6E14S2', $schoolUserID) != "") ? getFiled('Q6E14S2', $schoolUserID) : "N/A"; ?></td>
-                            <td><?php echo (getFiled('Q6E14S3', $schoolUserID) != "") ? getFiled('Q6E14S3', $schoolUserID) : "N/A"; ?></td>
-                        </tr>
-
-
-                        <tr class="total">
-                            <td>Total</td>
-                            <td><?php echo (getFiled('Q6E15S1', $schoolUserID) != "") ? getFiled('Q6E15S1', $schoolUserID) : "N/A"; ?></td>
-                            <td><?php echo (getFiled('Q6E15S2', $schoolUserID) != "") ? getFiled('Q6E15S2', $schoolUserID) : "N/A"; ?></td>
-                            <td></td>
-                        </tr>
+			    <td><p><?php echo (getFiled('Q6E14', $schoolUserID) != "") ? (getFiled('Q5E14', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
+	                    </td>	
+                          </tr>
+			
                     </table>
 
                     <li>
