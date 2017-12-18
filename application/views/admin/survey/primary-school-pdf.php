@@ -805,11 +805,7 @@
                 teachers, and forward the data to the audit team. After completing the survey, provide the compiled information
                 below.</p>
 
-			<div class="form-group" id="Q6A3S1">
-         <p class="orange"><span class="cube">3(c)a</span>IS CNG AVAILABLE IN YOUR AREA?</p><br/>
-        <?php echo (getFiled('Q9A1', $schoolUserID) != "") ? (getFiled('Q9A1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?>
-		
-    		</div>
+			
 
             <p class="orange"><span>4</span><span>How many members of the school community use each type of transport:</span></p>
             <table class="table">
