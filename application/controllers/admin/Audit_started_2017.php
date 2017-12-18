@@ -232,7 +232,7 @@ public function excel2017() {
         $data['task4supporting'] = uploadHelper($this->session->userdata('USER_ID'), 'Task_4_Supporting_docs');
         $data['waterTreatment'] = uploadHelper($this->session->userdata('USER_ID'), 'Water_Treatment_Process');
         $data['flowChartHandDrawn'] = uploadHelper($this->session->userdata('USER_ID'), 'Flow_Chart_Hand_Drwan');
-        $data['supportDocWater'] = uploadHelper($this->session->userdata('USER_ID'), 'Supporting_Document_Water');
+        $data['supportDocWater'] = $this->file->SupportingWater($this->session->userdata('USER_ID'));
         
         $rank=getFiled('Q1G2',$data['schoolUserID']);
         
