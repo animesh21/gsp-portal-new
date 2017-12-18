@@ -2111,9 +2111,7 @@
             </div>
 
             <?php
-            $arrImages = getUploadData(str_replace(' ', '_', $school->name) . '_Green_Cover_', $schoolUserID);
-
-            if (!empty($arrImages)) {
+            if (!empty($greenCover)) {
                 ?>
                 <div>
                     <table class="table support-docs">
@@ -2123,10 +2121,11 @@
                             <th>File name</th>
                         </tr>
 
-                        <?php foreach ($arrImages as $a) { ?>
-                            <tr>
-                                <td><img src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
-                                <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Green_Cover_"), " ", $a->file_name); ?></td>
+                        <?php foreach ($greenCover as $f) { ?>
+                           <tr id="index<?php echo $f->id; ?>">
+                                <?php $name = str_replace(" ", "_", $f->name . "_Green_Cover_"); ?>
+                                <td><img src="<?php echo base_url('uploads/files/' . $f->file_name); ?>"class="img-thumbnail" style="height:80px;width:80px;"></img></td>
+                                <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
                             </tr>
                         <?php } ?>
                     </table>
