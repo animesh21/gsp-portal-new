@@ -1763,7 +1763,7 @@
             </div>
 
             <?php
-            if (!empty($getFoodUPPCData)) {
+            if (!empty($uppc)) {
                 ?>
                 <div>
                     <table class="table support-docs">
@@ -1773,7 +1773,7 @@
                             <th>File name</th>
                         </tr>
 
-                         <?php foreach ($getFoodUPPCData as $f) { ?>
+                         <?php foreach ($uppc as $f) { ?>
                             <tr id="index<?php echo $f->id; ?>">
                                 <?php $name = str_replace(" ", "_", $f->name . "_UPPF_"); ?>
                                 <td><img src="<?php echo base_url('uploads/files/' . $f->file_name); ?>"class="img-thumbnail" style="height:80px;width:80px;"></img></td>
