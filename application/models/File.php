@@ -232,6 +232,15 @@ class File extends CI_Model {
                         ->like('a.file_name', 'Supporting_Document_Air')
                         ->get()->result();
     }
+  public function AuditTeamD($argID)
+    {
+        return $this->db->select('a.*, b.name')
+                        ->from('files AS a')
+                        ->join('gsp_school AS b', 'a.userid=b.userid', 'left')
+                        ->where('a.userid', $argID)
+                        ->like('a.file_name', 'Audit_Team_doing_Survey')
+                        ->get()->result();
+    }	
     
     //Get PUC  Doc
     public function pucCertificate($argID)
