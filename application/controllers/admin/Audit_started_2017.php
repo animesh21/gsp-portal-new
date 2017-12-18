@@ -212,6 +212,7 @@ public function excel2017() {
         $data['canteen'] = $this->file->getCanteen($this->session->userdata('USER_ID'));
         $data['files'] = $this->file->getFoodFilesData($this->session->userdata('USER_ID'));
         $data['uppc'] = $this->file->getFoodUPPCData($this->session->userdata('USER_ID'));
+        $data['AuditTeamD'] = $this->file->AuditTeamD($this->session->userdata('USER_ID'));	    
         //land
         $data['greenCover'] = uploadHelper($this->session->userdata('USER_ID'), 'Green_Cover');
         //waste
