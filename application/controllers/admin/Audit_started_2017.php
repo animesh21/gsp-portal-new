@@ -214,7 +214,7 @@ public function excel2017() {
         $data['uppc'] = $this->file->getFoodUPPCData($this->session->userdata('USER_ID'));
         $data['AuditTeamD'] = $this->file->AuditTeamD($this->session->userdata('USER_ID'));	    
         //land
-        $data['greenCover'] = uploadHelper($this->session->userdata('USER_ID'), 'Green_Cover');
+        $data['greenCover'] = $this->file->Green_Cover($this->session->userdata('USER_ID'));
         //waste
         $data['segregationClassroom'] = uploadHelper($this->session->userdata('USER_ID'), 'Segregation_Source_Classrooms');
         $data['solidWaste'] = uploadHelper($this->session->userdata('USER_ID'), 'Audit_Team_Weighing_Solid_Waste');
