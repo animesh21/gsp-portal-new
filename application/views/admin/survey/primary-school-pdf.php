@@ -220,7 +220,7 @@
                 </li>
                 <li>
                     <p class="orange"><span>3.1</span><span> Select State for Board of Education:</span></p>
-                    <p><?php echo (getFiled('Q3G2', $schoolUserID) != "") ? getFiled('Q3G2', $schoolUserID) : "N/A"; ?></p>
+                    <p><?php echo (getFiled('Q3G1', $schoolUserID) != "") ? getFiled('Q3G1', $schoolUserID) : "N/A"; ?></p>
                 </li>    
                 <li>
                     <p class="orange"><span>4</span><span> Total population of the school</span></p>
