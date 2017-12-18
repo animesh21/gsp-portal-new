@@ -583,7 +583,7 @@ public function getExcel2017Data() {
 			  get_date_difference('".date('m-d-Y',strtotime($end_date))."');
 			}
 			</script>
-			<div class='badge' style='height:200px; height:200px;'></div>";
+			<div class='badges' style='height:200px; height:200px;'></div>";
 			$school_record=array("userid"=>$argsUserId,"school_id"=>$get_school_id,"badge_code"=>$badge_code,"date_start"=>$date_start,"end_date"=>$end_date,"year"=>$get_current_year);
 				   $result=$this->db->select('*')->from("gsp_badge")->where("school_id=",$get_school_id)->get()->result();
 				   if($result):
