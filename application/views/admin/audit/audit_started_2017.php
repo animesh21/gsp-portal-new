@@ -8,9 +8,7 @@
         <h4 class="modal-title">Badge Code</h4>
       </div>
       <div class="modal-body">
-        <textarea class="badge_code form-control">
-		
-		</textarea>
+        <textarea class="badge_code form-control" style="height:300px;"></textarea>
       </div>
     </div>
   </div>
