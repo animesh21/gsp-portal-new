@@ -68,7 +68,7 @@
 			  get_date_difference('12-20-2017');
 			}
 			</script>
-			<div class='badge' style='height:200px; height:200px;'></div>
+			<div class='badges' style='height:200px; height:200px;'></div>
 <footer class="mrg30">
     <div class="container">
         <p>Copyright © 2015 Centre for Science and Environment</p>
