@@ -4350,7 +4350,7 @@
 
                             <?php foreach ($teamDoingWaste as $f) { ?>
                                 <tr id="index<?php echo $f->id; ?>">
-                                <?php $name = str_replace(" ", "_", $f->name . "_Audit_Team_Doing_Survey_Waste_"); ?>
+                                <?php $name = str_replace(" ", "_", $f->name . "_Pictures_of_Audit_Team_Waste_"); ?>
                                 <td><img src="<?php echo base_url('uploads/files/' . $f->file_name); ?>"class="img-thumbnail" style="height:80px;width:80px;"></img></td>
                                 <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
                             </tr>
