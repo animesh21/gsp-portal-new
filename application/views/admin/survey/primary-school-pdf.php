@@ -4339,8 +4339,7 @@
                     File size per document should not exceed 500 KB.</p>
 
                 <?php
-                $arrImages = getUploadData(str_replace(' ', '_', $school->name) . '_Audit_Team_Doing_Survey_Waste_', $schoolUserID);
-                if (!empty($arrImages)) {
+                if (!empty($teamDoingWaste)) {
                     ?><div>
                         <table  class="table">
 
@@ -4349,11 +4348,12 @@
                                 <th>File name</th>
                             </tr>
 
-                            <?php foreach ($arrImages as $a) { ?>
-                                <tr>
-                                    <td><img src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
-                                    <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Audit_Team_Doing_Survey_Waste_"), " ", $a->file_name); ?></td>
-                                </tr>
+                            <?php foreach ($teamDoingWaste as $f) { ?>
+                                <tr id="index<?php echo $f->id; ?>">
+                                <?php $name = str_replace(" ", "_", $f->name . "_Audit_Team_Doing_Survey_Waste_"); ?>
+                                <td><img src="<?php echo base_url('uploads/files/' . $f->file_name); ?>"class="img-thumbnail" style="height:80px;width:80px;"></img></td>
+                                <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                            </tr>
                             <?php } ?>
 
                         </table></div>
