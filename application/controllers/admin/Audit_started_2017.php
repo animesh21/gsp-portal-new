@@ -199,8 +199,9 @@ public function excel2017() {
         $data['files'] = $this->file->getFilesData($this->session->userdata('USER_ID'));
         $data['filesfules'] = $this->file->getFilesDatafules($this->session->userdata('USER_ID'));
         $data['airQualityMonitering'] = $this->file->AirQuality($this->session->userdata('USER_ID'));
-        
-        $data['pucCertificate'] = $this->file->pucCertificate($this->session->userdata('USER_ID'));
+        $data['SupportiveAir'] = $this->file->SupportiveAir($this->session->userdata('USER_ID'));
+       
+	$data['pucCertificate'] = $this->file->pucCertificate($this->session->userdata('USER_ID'));
         $data['electricityBills'] = $this->file->getElectricityFulesBillsData($this->session->userdata('USER_ID'));
         $data['fulesBills'] = $this->file->getEnergyFulesBillsData($this->session->userdata('USER_ID'));
         $data['appliancesBills'] = $this->file->getEnergyApplianceBillsData($this->session->userdata('USER_ID'));
