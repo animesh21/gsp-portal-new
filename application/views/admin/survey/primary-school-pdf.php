@@ -976,7 +976,7 @@
 
             <?php
             
-            if (!empty(SupportiveAir)) {
+            if (!empty($SupportiveAir)) {
                 ?>
                 <div>
                     <table class="table support-docs">
@@ -986,7 +986,7 @@
                             <th>File name</th>
 
                         </tr>
-                        <?php foreach (SupportiveAir as $f) { ?>
+                        <?php foreach ($SupportiveAir as $f) { ?>
                             <tr id="index<?php echo $f->id; ?>">
                                 <?php $name = str_replace(" ", "_", $f->name . "_Supporting_Document_Air_"); ?>
                                 <td><img src="<?php echo base_url('uploads/files/' . $f->file_name); ?>"class="img-thumbnail" style="height:80px;width:80px;"></img></td>
