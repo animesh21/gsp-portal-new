@@ -1730,10 +1730,10 @@
 
             <div class="task-area">
                 <h3 class="task">Task 4: School Initiatives</h3>
-                <p class="orange"><span>9	</span>Does your school measure height and weight  of all the students?</p>
+                <p class="orange"><span>7</span>Does your school measure height and weight  of all the students?</p>
                 <p> <?php echo (getFiled('Q12F1', $schoolUserID) != "") ? (getFiled('Q12F1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>																									
 
-                <p class="orange"><span>9(a)</span>How regularly is height and weight of the students measured?</p>
+                <p class="orange"><span>7(a)</span>How regularly is height and weight of the students measured?</p>
                 <p> <?php
                     if (getFiled('Q12F2', $schoolUserID) == 1):
                         echo "Monthly";
@@ -1746,10 +1746,10 @@
                     endif;
                     ?></p>
 
-                <p class="orange"><span>10</span>Is cooking part of  any regular subjects or extracurricular activities?</p>
+                <p class="orange"><span>8</span>Is cooking part of  any regular subjects or extracurricular activities?</p>
                 <p> <?php echo (getFiled('Q13F1', $schoolUserID) != "") ? (getFiled('Q13F1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>																									
 
-                <p class="orange"><span>10(a)</span>If  yes, please share the details</p>
+                <p class="orange"><span>8(a)</span>If  yes, please share the details</p>
                 <p> <?php echo (getFiled('Q13F2', $schoolUserID) != "") ? getFiled('Q13F2', $schoolUserID) : "N/A"; ?></p>																									
             </div>
 
@@ -1763,8 +1763,7 @@
             </div>
 
             <?php
-            $arrImages = getUploadData(str_replace(' ', '_', $school->name) . '_UPPF_', $schoolUserID);
-            if (!empty($arrImages)) {
+            if (!empty($getFoodUPPCData)) {
                 ?>
                 <div>
                     <table class="table support-docs">
@@ -1774,10 +1773,11 @@
                             <th>File name</th>
                         </tr>
 
-                        <?php foreach ($arrImages as $a) { ?>
-                            <tr>
-                                <td><img src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
-                                <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_UPPF_"), " ", $a->file_name); ?></td>
+                         <?php foreach ($getFoodUPPCData as $f) { ?>
+                            <tr id="index<?php echo $f->id; ?>">
+                                <?php $name = str_replace(" ", "_", $f->name . "_UPPF_"); ?>
+                                <td><img src="<?php echo base_url('uploads/files/' . $f->file_name); ?>"class="img-thumbnail" style="height:80px;width:80px;"></img></td>
+                                <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
                             </tr>
                         <?php } ?>
 
