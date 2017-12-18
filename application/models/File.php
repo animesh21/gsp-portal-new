@@ -247,7 +247,7 @@ class File extends CI_Model {
                         ->from('files AS a')
                         ->join('gsp_school AS b', 'a.userid=b.userid', 'left')
                         ->where('a.userid', $argID)
-                        ->like('a.file_name', 'Audit_Team_Doing_Survey_Waste')
+                        ->like('a.file_name', 'Pictures_of_Audit_Team_Waste')
                         ->get()->result();
     }	
 	
