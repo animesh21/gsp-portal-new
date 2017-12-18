@@ -2424,39 +2424,10 @@
                     ?>
 
                 </ul>
-
-<p class="orange"><span>3</span>Who supplies the water in your school? (please tick the correct options):</p>
-<br/>
-<ul class="list-unstyled">
-                    <?php
-                    if (getFiled('Q6W1', $schoolUserID) == 1):
-                        echo "Municipality";
-                        echo "<br/>";
-                    endif;
-                    if (getFiled('Q6W2', $schoolUserID) == 1):
-                        echo "Panchayat";
-                        echo "<br/>";
-                    endif;
-                    if (getFiled('Q6W3', $schoolUserID) == 1):
-                        echo "Public Health Engineering Department (PHED)";
-                        echo "<br/>";
-                    endif;
-                    if (getFiled('Q6W4', $schoolUserID) == 1):
-                        echo "Private supplier";
-                        echo "<br/>";
-                    endif;
-                    if (getFiled('Q6W5', $schoolUserID) == 1):
-                        echo "School’s own supply (bore well, rainwater harvesting facility, etc)";
-                    endif;
-                    ?>
-
-                </ul>
-
-
-                <p class="orange"><span>4</span> Does your school get daily water supply?</p>
+	<p class="orange"><span>3</span> Does your school get daily water supply?</p>
                 <p> <?php echo (getFiled('Q7W1', $schoolUserID) != "") ? (getFiled('Q7W1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
 
-                <p class="orange"><span>4(a)</span> Does your school get daily water supply?</p>
+                <p class="orange"><span>3(a)</span> Does your school get daily water supply?</p>
                 <ul class="list-unstyled">
                     <p> <?php
                         if (getFiled('Q7W2', $schoolUserID) == 1):
@@ -2474,7 +2445,7 @@
 
                 </ul>
 
-                <p class="orange"><span>4(b)</span> Does your school get daily water supply?</p>
+                <p class="orange"><span>3(b)</span> Does your school get daily water supply?</p>
                 <ul>
                     <p> <?php
                         if (getFiled('Q7W3', $schoolUserID) == 1):
@@ -2776,8 +2747,8 @@
 
                 <p class="orange"><label><span class="cube">5.9</span>Is the water supply
                         sufficient?</label></p>
-                <p> <?php echo (getFiled('Q21W1', $schoolUserID) != "") ? (getFiled('Q21W1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
-                <p class="orange"><label><span class="cube">6.10</span>Are the toilets cleaned?</label></p>
+                <p> <?php echo (getFiled('Q17W1', $schoolUserID) != "") ? (getFiled('Q17W1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
+                <p class="orange"><label><span class="cube">5.10</span>Are the toilets cleaned?</label></p>
                 <p> <?php echo (getFiled('Q18W1', $schoolUserID) != "") ? (getFiled('Q18W1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
 
                 <p class="orange"><label><span class="cube">5.10.(a)</span>If yes, please
@@ -2865,8 +2836,7 @@
                 File size per document should not exceed 500 KB.
             </p>
             <?php
-            $arrImages = getUploadData(str_replace(' ', '_', $school->name) . '_Supporting_Document_Water_', $schoolUserID);
-            if (!empty($arrImages)) {
+            if (!empty($supportDocWater)) {
                 ?><div>
                     <table  class="table">
 
@@ -2874,14 +2844,14 @@
                             <th>image</th>
                             <th>File name</th>
                         </tr>
-
-                        <?php foreach ($arrImages as $a) { ?>
-                            <tr>
-                                <td><img src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
-                                <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Supporting_Document_Water_"), " ", $a->file_name); ?></td>
+			<?php foreach ($supportDocWater as $f) { ?>
+                            <tr id="index<?php echo $f->id; ?>">
+                                <?php $name = str_replace(" ", "_", $f->name . "_Supporting_Document_Water_"); ?>
+                                <td><img src="<?php echo base_url('uploads/files/' . $f->file_name); ?>"class="img-thumbnail" style="height:80px;width:80px;"></img></td>
+                                <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
                             </tr>
                         <?php } ?>
-
+		
                     </table></div>
             <?php } else { ?>
                 <div class="support_files">
