@@ -223,7 +223,7 @@ public function excel2017() {
         $data['eWaste'] = uploadHelper($this->session->userdata('USER_ID'), 'E-Waste');
         $data['houseKeeping'] = uploadHelper($this->session->userdata('USER_ID'), 'Housekeeping');
         $data['burningWaste'] = uploadHelper($this->session->userdata('USER_ID'), 'Buring_Waste');
-        $data['teamDoingWaste'] = uploadHelper($this->session->userdata('USER_ID'), 'Audit_Team_Doing_Survey');
+        $data['teamDoingWaste'] = $this->file->AuditTeamWaste($this->session->userdata('USER_ID'));
         $data['ewasteStorage'] = uploadHelper($this->session->userdata('USER_ID'), 'E-Waste_Storage');
         $data['disposing'] = uploadHelper($this->session->userdata('USER_ID'), 'Disposing');
         $data['eWasteDisposing'] = uploadHelper($this->session->userdata('USER_ID'), 'E-Waste_Disposing_Certificate');
