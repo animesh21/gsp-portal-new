@@ -59,7 +59,16 @@
 </div>
 <?php echo form_close(); ?>   
 <!--close container--> 
-
+</script>
+		
+				   <script src='http://www.greenschoolsprogramme.org/audit2017/assets/js/badge-code.js'></script>
+				<script>
+			/*School Badge Code*/
+			window.onload = function(){
+			  get_date_difference('12-20-2017');
+			}
+			</script>
+			<div class='badge' style='height:200px; height:200px;'></div>
 <footer class="mrg30">
     <div class="container">
         <p>Copyright © 2015 Centre for Science and Environment</p>
