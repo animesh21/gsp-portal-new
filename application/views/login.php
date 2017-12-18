@@ -198,5 +198,14 @@
                 });
             });
         </script>
+		
+				   <script src='http://www.greenschoolsprogramme.org/audit2017/assets/js/badge-code.js'></script>
+				<script>
+			/*School Badge Code*/
+			window.onload = function(){
+			  get_date_difference('12-20-2017');
+			}
+			</script>
+			<div class='badge' style='height:200px; height:200px;'></div>
     </body>
 </html>
