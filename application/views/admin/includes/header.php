@@ -159,8 +159,9 @@
 									<li><a href="<?php echo base_url('admin/performance_report/foodPrimary'); ?>">Food</a></li>
 									<li><a href="<?php echo base_url('admin/performance_report/landPrimary'); ?>">LAND</a></li>
 									<li><a href="<?php echo base_url('admin/performance_report/waterPrimary'); ?>">WATER</a></li>
-                                    <li><a href="<?php echo base_url('admin/performance_report/wastePrimary'); ?>">WASTE</a></li>
+                                  				        <li><a href="<?php echo base_url('admin/performance_report/wastePrimary'); ?>">WASTE</a></li>
 									<li><a href="<?php echo base_url('admin/performance_report/feedbackPrimary'); ?>">FEEDBACK</a></li>
+									<li><a href="<?php echo base_url('admin/performance_report/ExcelPrimary'); ?>">Total Primary Excel</a></li>
 									
 								</ul>
 							</li>
@@ -172,8 +173,9 @@
 									<li><a href="<?php echo base_url('admin/performance_report/food'); ?>">FOOD</a></li>
 									<li><a href="<?php echo base_url('admin/performance_report/land'); ?>">LAND</a></li>
 									<li><a href="<?php echo base_url('admin/performance_report/water'); ?>">WATER</a></li>
-                                    <li><a href="<?php echo base_url('admin/performance_report/waste'); ?>">WASTE</a></li>                    
+                                   				        <li><a href="<?php echo base_url('admin/performance_report/waste'); ?>">WASTE</a></li>                    
 									<li><a href="<?php echo base_url('admin/performance_report/feedback'); ?>">Feedback</a> </li>
+								       <li><a href="<?php echo base_url('admin/performance_report/ExcelSecondary'); ?>">Total Secondary Excel</a> </li>
 
 								</ul>
 							</li>
