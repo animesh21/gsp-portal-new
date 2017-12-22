@@ -3,14 +3,7 @@
 <meta charset="utf-8">
 <title>Green School Programms Audit Portal</title>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/css/pdf.css" media="all">
-</head>
-<body>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js "></script>
-<script type="text/javascript">
-$(document).ready(function(){
-   $(".orange span:first-child").css("display","block");
-});
-</script>
 <script type="text/php">
 	if ( isset($pdf) ) {
 	$font = Font_Metrics::get_font("helvetica", "bold");
@@ -36,6 +29,8 @@ $(document).ready(function(){
 .heading.waste {background: #7265ad;}
 .heading.section > img {position: absolute; left: 0; top: -25px;}
 </style>
+</head>
+<body>
 <div class="cover"> <img src="<?php echo base_url() ?>assets/img/images/logo.png" width="436" height="118" class="logo">
   <h1>Responses For Green Schools Programme Audit 2015</h1>
   <div class="school-detail">
