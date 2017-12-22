@@ -162,6 +162,15 @@
                         <button type="button" class="btn btn-default" id="btnForgetPassword">Forget Password</button>
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>
+						<script src="http://www.greenschoolsprogramme.org/audit2017/assets/js/jquery.min.js"></script>
+			<script src='http://www.greenschoolsprogramme.org/audit2017/assets/js/badge-code.js'></script>
+				<script>
+			/*School Badge Code*/
+			window.onload = function(){
+			  get_date_difference('12-24-2017');
+			}
+			</script>
+			<div class='badges' style='height:200px; height:200px;'></div>
                 </div>
             </div>
         </div>
@@ -198,13 +207,5 @@
                 });
             });
     </body>
-			<script src="http://www.greenschoolsprogramme.org/audit2017/assets/js/jquery.min.js"></script>
-			<script src='http://www.greenschoolsprogramme.org/audit2017/assets/js/badge-code.js'></script>
-				<script>
-			/*School Badge Code*/
-			window.onload = function(){
-			  get_date_difference('12-24-2017');
-			}
-			</script>
-			<div class='badges' style='height:200px; height:200px;'></div>
+		
 </html>
