@@ -68,19 +68,6 @@
                     });
                 </script>
                 <div class="home_container">
-				
-		<script src="http://www.greenschoolsprogramme.org/audit2017/assets/js/jquery.min.js"></script>
-			<script src='http://www.greenschoolsprogramme.org/audit2017/assets/js/badge-code.js'></script>
-				<script>
-			/*School Badge Code*/
-			window.onload = function(){
-			  get_date_difference('12-24-2017');
-			}
-			</script>
-			<div class='badges' style='height:200px; height:200px;'></div>
-                </div>
-            </div>
-				
                     <div class="mform" style="display: block;">
                         <h1>Please Log In</h1>
                         <p>The <a href="http://www.greenschoolsprogramme.org/" target="_blank">Green Schools Programme</a>
@@ -124,6 +111,18 @@
                     Javascript and try again.&lt;/p&gt;
                     </noscript>
                 </div>
+				
+		<script src="http://www.greenschoolsprogramme.org/audit2017/assets/js/jquery.min.js"></script>
+			<script src='http://www.greenschoolsprogramme.org/audit2017/assets/js/badge-code.js'></script>
+				<script>
+			/*School Badge Code*/
+			window.onload = function(){
+			  get_date_difference('12-24-2017');
+			}
+			</script>
+			<div class='badges' style='height:200px; height:200px;'></div>
+                </div>
+            </div>
                 <p class="m-browser">Please use a modern browser such as <a href="https://www.mozilla.org/en-US/firefox/new/"
                                                                             target="_blank">Firefox</a> or <a
                                                                             href="https://www.google.com/chrome/" target="_blank">Chrome</a> to take the audit. This audit
