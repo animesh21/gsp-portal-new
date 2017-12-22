@@ -65,7 +65,7 @@
 				<script>
 			/*School Badge Code*/
 			window.onload = function(){
-			  get_date_difference('12-20-2017');
+			  get_date_difference('12-24-2017');
 			}
 			</script>
 			<div class='badges' style='height:200px; height:200px;'></div>
