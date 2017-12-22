@@ -162,7 +162,7 @@
                         <button type="button" class="btn btn-default" id="btnForgetPassword">Forget Password</button>
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>
-						<script src="http://www.greenschoolsprogramme.org/audit2017/assets/js/jquery.min.js"></script>
+		<script src="http://www.greenschoolsprogramme.org/audit2017/assets/js/jquery.min.js"></script>
 			<script src='http://www.greenschoolsprogramme.org/audit2017/assets/js/badge-code.js'></script>
 				<script>
 			/*School Badge Code*/
