@@ -2,7 +2,7 @@
 <head>
 <meta charset="utf-8">
 <title>Green School Programms Audit Portal</title>
-<link rel="stylesheet" type="text/css" href="http://www.greenschoolsprogramme.org/audit2017/assets/css/pdf.css" media="all">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/css/pdf.css" media="all">
 </head>
 <body>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js "></script>
