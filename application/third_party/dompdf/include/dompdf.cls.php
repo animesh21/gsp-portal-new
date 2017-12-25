@@ -193,7 +193,7 @@ class DOMPDF {
     $this->save_locale();
     
     $this->_messages = array();
-    $this->_xml = new DomDocument();
+    $this->_xml = new DOMDocument();
     $this->_xml->preserveWhiteSpace = true;
     $this->_tree = new Frame_Tree($this->_xml);
     $this->_css = new Stylesheet();
