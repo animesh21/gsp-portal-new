@@ -20,7 +20,7 @@
     <p><span>Address:</span><span><?php echo $school->address1; ?></span></p>
     <p><span>Coordinator Name:</span><span><?php echo $school->coname; ?></span></p>
   </div>
-  <div class="address-wrap"> <img src="assets/img/images/cover.jpg" width="100%">
+  <div class="address-wrap"> <img src="assets/img/images/cover.png" width="100%">
     <div class="address">
       <p>Green Schools Programme <br />
         Centre for Science and Environment</p>
