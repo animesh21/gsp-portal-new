@@ -243,7 +243,7 @@ public function excel2017() {
                $html1 = $this->load->view('admin/survey/primary-school-pdf', $data, true);
             }
 
-            //this the the PDF filename that user will get to download
+          /*  //this the the PDF filename that user will get to download
             $pdfFilePath = "school_pdf_name.pdf";
 
             //load mPDF library
@@ -253,7 +253,13 @@ public function excel2017() {
             $this->m_pdf->pdf->WriteHTML($html1);
 
             //download it.
-            $this->m_pdf->pdf->Output($pdfFilePath, "I");
+            $this->m_pdf->pdf->Output($pdfFilePath, "I");*/
+			
+			  $this->load->library('dompdf_lib');
+			  $this->dompdf->set_paper("A4");
+			$this->dompdf->load_html($html1);
+		    $this->dompdf->render();
+		    $this->dompdf->stream("welcome.pdf", array("Attachment" => false));
         
     }
 
