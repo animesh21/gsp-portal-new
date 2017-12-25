@@ -763,7 +763,7 @@ class DOMPDF {
    *    on (1) by default
    *
    *
-   * @param array  $options options (see above)
+   * @param array  $options options (see above) 
    * @return string
    */
   function output($options = null) {
