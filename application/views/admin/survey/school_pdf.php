@@ -693,7 +693,7 @@
       </table>
     </li>
     <li>
-      <p class="orange"><span>3(c)</span> IS CNG AVAILABLE IN YOUR AREA? </p>
+      <p class="orange"><span>3(c)</span> IS CNG AVAILABLE IN YOUR STATE? </p>
       <p><?php echo (getFiled('Q6A3', $schoolUserID) != "") ? (getFiled('Q6A3', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?> </p>
     </li>
     <?php if(strcmp(getFiled('Q6A3', $schoolUserID),'Y')==0): ?>
@@ -1489,7 +1489,14 @@
       <?php if(strcmp(getFiled('Q5F1', $schoolUserID),'Y')==0): ?>
       <li>
         <p class="orange"><span>2</span>If yes, then midday meal is served under:</p>
-        <p> <?php echo (getFiled('Q5F1S1', $schoolUserID) != "") ? (getFiled('Q5F1S1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
+        <p> <?php
+		   if(getFiled('Q5F1S1', $schoolUserID)==1):
+		   echo "Government Scheme";
+		   elseif(getFiled('Q5F1S1', $schoolUserID)==2):
+		   echo "School’s personal initiative";
+		   elseif(getFiled('Q5F1S1', $schoolUserID)==3):
+		   echo "Others";
+		   endif; ?></p>
       </li>
       <?php endif; ?>
       <li>
