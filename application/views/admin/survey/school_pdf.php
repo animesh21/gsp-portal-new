@@ -1596,10 +1596,12 @@
         </table>
       </li>
       <?php endif; ?>
+	  <?php if(getFiled('Q1S1', $schoolUserID)>=3 && getFiled('Q1S1', $schoolUserID)!=4): ?>
       <li>
         <p class="orange"><span>2.1</span>Does your school serve whole day’s meals?</p>
         <p><?php echo (getFiled('Q5F2', $schoolUserID) != "") ? (getFiled('Q5F2', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
       </li>
+	  <?php endif; ?>
     </ul>
   </div>
   <div class="task-area">
