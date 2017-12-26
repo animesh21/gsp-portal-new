@@ -1262,6 +1262,7 @@
         <p class="orange"><span>6</span><span> Are there any alternate sources of energy employed/ installed in your school?</span> </p>
         <p><?php echo (getFiled('Q9E1', $schoolUserID) != "") ? (getFiled('Q9E1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
       </li>
+	   <?php if(strcmp(getFiled('Q9E1', $schoolUserID),'Y')==0): ?>
       <li>
         <p class="orange"><span>6a</span><span> Name the alternate sources of energy employed/ installed in your school?</span></p>
         <p>
@@ -1285,6 +1286,7 @@
                 ?>
         </p>
       </li>
+	  <?php endif; ?>
       <li>
         <p class="orange"><span>7</span><span> Does your school use solar water heater:</span></p>
         <?php echo (getFiled('Q10E1', $schoolUserID) != "") ? (getFiled('Q10E1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?>
