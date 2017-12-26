@@ -2542,7 +2542,7 @@
                         echo "<br/>";
                     endif;
                     if (getFiled('Q6W5', $schoolUserID) == 1):
-                        echo "School’s own supply (bore well, rainwater harvesting facility, etc)";
+                        echo "School's own supply (bore well, rainwater harvesting facility, etc)";
                     endif;
                     ?>
         </ul>
