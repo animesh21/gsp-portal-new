@@ -2697,11 +2697,16 @@
       <p class="orange"><span>6</span>Do you have Rainwater harvesting (RWH) system in your school?</p>
       <p> <?php echo (getFiled('Q8W2', $schoolUserID) != "") ? (getFiled('Q8W2', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
     </li>
+	 <?php if(strcmp(getFiled('Q8W2', $schoolUserID),'N')==0): ?>
     <li>
+      <p class="orange"><span>6(a)</span>Calculate your school’s rainwater harvesting potential (in litres). </p>
+      <p> <?php echo (getFiled('Q8W2S6A', $schoolUserID) != "") ? getFiled('Q8W2S6A', $schoolUserID)  : "N/A"; ?></p>
+    </li>
+	 <?php elseif(strcmp(getFiled('Q8W2', $schoolUserID),'Y')==0): ?>
+	 <li>
       <p class="orange"><span>6(a)</span>Does your school harvest different catchments? </p>
       <p> <?php echo (getFiled('Q8W2S1', $schoolUserID) != "") ? (getFiled('Q8W2S1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
     </li>
-	 <?php if(strcmp(getFiled('Q8W2', $schoolUserID),'Y')==0): ?>
     <li>
       <p class="orange"><span>6(a)(1)</span>Which is the catchment area being harvested by your school? </p>
   <p>  <?php
@@ -3022,9 +3027,7 @@
         endif;
         ?></p>
     </li>
-	<?php endif; ?>
-  </ul>
-  <p class="orange">
+    <p class="orange">
     <label>Please upload a flow chart (hand drawn) of the wastewater treatment process.<br>
     </label>
   </p>
@@ -3049,7 +3052,6 @@
   <?php } else { ?>
   <div class="support_files"> <strong>No Uploaded Document!</strong> </div>
   <?php } ?>
-  <ul class="list">
     <li>
       <p class="orange">
         <label><span class="cube">6(f)</span>Does your school clean your catchment and system </label>
@@ -3149,6 +3151,7 @@
       </p>
       <p> <?php echo (getFiled('Q8W2S13', $schoolUserID) != "") ? (getFiled('Q8W2S13', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
     </li>
+	<?php endif; ?>
   </ul>
   <p class="orange">
     <label>To calculate the maximum rainwater harvesting potential:</label>
