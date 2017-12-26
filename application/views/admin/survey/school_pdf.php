@@ -97,7 +97,6 @@
     </ul>
   </div>
 </div>
-<div style="text-align: center; padding: 0;">&nbsp;&nbsp;&nbsp;&nbsp;</div>
 <h2 class="heading page_break">General Questions</h2>
 <div class="wrapper">
   <ul class="list">
@@ -271,7 +270,7 @@
   </ul>
 </div>
 <div style="text-align: center; padding: 0;">&nbsp;&nbsp;&nbsp;&nbsp;</div>
-<h2 class="heading section air page_break"><img src="assets/img/images/air.png" width="94" height="94">Air</h2>
+<h2 class="heading section air"><img src="assets/img/images/air.png" width="94" height="94">Air</h2>
 <div class="wrapper">
   <div class="task-area">
     <h3 class="task">Task 1: Air Audit Team</h3>
