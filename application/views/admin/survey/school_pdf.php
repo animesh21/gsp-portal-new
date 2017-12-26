@@ -279,7 +279,7 @@
       issues. Do include the school transport in-charge and the drivers of the school vehicles in your
       audit team.</p>
   </div>
-  <p class="orange"><span>Teachers (maximum of three teachers can be part of the team):</span></p>
+  <p class="orange"><span>Teachers:</span></p>
   <table class="table">
     <tr>
       <th></th>
@@ -306,7 +306,7 @@
       <td><?php echo (getFiled('Q1A3S2', $schoolUserID) != "") ? getFiled('Q1A3S2', $schoolUserID) : "N/A"; ?> </td>
     </tr>
   </table>
-  <p class="orange"><span>Administrative staff (maximum of five staff can be part of theteam):</span></p>
+  <p class="orange"><span>Administrative staff:</span></p>
   <table class="table">
     <tr>
       <th></th>
@@ -345,7 +345,7 @@
       <td><?php echo (getFiled('Q2A5S2', $schoolUserID) != "") ? getFiled('Q2A5S2', $schoolUserID) : "N/A"; ?> </td>
     </tr>
   </table>
-  <p class="orange"><span>Students (maximum of ten students can be part of the team):</span></p>
+  <p class="orange"><span>Students:</span></p>
   <table class="table">
     <tr>
       <th></th>
