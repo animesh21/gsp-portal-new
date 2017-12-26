@@ -1604,6 +1604,7 @@
 	  <?php endif; ?>
     </ul>
   </div>
+  <?php if(strcmp(getFiled('Q4F1', $schoolUserID),'Y')==0): ?>
   <div class="task-area">
     <h3 class="task">Task 3: What kind of food is served/sold in your school.</h3>
     <ul class="list">
@@ -1690,11 +1691,12 @@
             <td><?php echo (getFiled('Q6F10S2', $schoolUserID) != "") ? getFiled('Q6F10S2', $schoolUserID) : "N/A"; ?> </td>
             <td><?php echo (getFiled('Q6F10S3', $schoolUserID) != "") ? getFiled('Q6F10S3', $schoolUserID) : "N/A"; ?> </td>
           </tr>
-        </table>
+        </table></li>
       <li>
         <p class="orange"><span>4</span>Does your school serve traditional Indian snacks?</p>
         <p><?php echo (getFiled('Q7F1', $schoolUserID) != "") ? (getFiled('Q7F1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
       </li>
+	  <?php if(strcmp(getFiled('Q7F1', $schoolUserID),'Y')==0): ?>
       <li>
         <p class="orange"><span>4(a)</span>Please provide the details: </p>
         <table class="table">
@@ -1724,6 +1726,7 @@
           </tr>
         </table>
       </li>
+	  <?php endif; ?>
       <li>
         <p class="orange">Please upload picture of traditional food items sol in canteen</p>
         <table width="100%" class="table">
@@ -1748,6 +1751,7 @@
         <p class="orange"><span>5</span>Doesyourschool serve traditional Indian  beverages?</p>
         <p> <?php echo (getFiled('Q8F1', $schoolUserID) != "") ? (getFiled('Q8F1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
       </li>
+	  <?php if(strcmp(getFiled('Q8F1', $schoolUserID),'Y')==0): ?>
       <li>
         <p class="orange"><span>5(a)</span>Please provide details: </p>
         <table class="table">
@@ -1777,8 +1781,10 @@
           </tr>
         </table>
       </li>
+	  <?php ?>
     </ul>
   </div>
+  <?php endif; ?>
   <div class="task-area">
     <h3 class="task">Task 4: What kind  of food does your school promote?</h3>
     <ul class="list">
