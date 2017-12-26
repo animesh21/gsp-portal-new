@@ -254,7 +254,7 @@
       </p>
     </li>
     <li>
-      <p class="orange"><span>8</span><span> Whether your school is:</span></p>
+      <p class="orange"><span>8</span> Whether your school is:</p>
       <p>
         <?php
                         if (getFiled('Q9G1', $schoolUserID) == 1) {
@@ -267,7 +267,7 @@
                             echo "Private School";
                         }
                         ?>
-      </p>
+      </p></li>
   </ul>
 </div>
 <div style="text-align: center; padding: 0;">&nbsp;&nbsp;&nbsp;&nbsp;</div>
