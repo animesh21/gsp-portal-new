@@ -1488,7 +1488,7 @@
       </li>
       <?php if(strcmp(getFiled('Q5F1', $schoolUserID),'Y')==0): ?>
       <li>
-        <p class="orange"><span>2</span>If yes, then midday meal is served under:</p>
+        <p class="orange"><span>2(a)</span>If yes, then midday meal is served under:</p>
         <p> <?php
 		   if(getFiled('Q5F1S1', $schoolUserID)==1):
 		   echo "Government Scheme";
@@ -1496,13 +1496,15 @@
 		   echo "School’s personal initiative";
 		   elseif(getFiled('Q5F1S1', $schoolUserID)==3):
 		   echo "Others";
-		   endif; ?></p>
+		   endif; 
+		   ?></p>
       </li>
-      <?php endif; ?>
-      <li>
+	  <?php elseif(strcmp(getFiled('Q5F1', $schoolUserID),'N')==0):  ?>
+	  <li>
         <p class="orange"><span>2(a)</span>Do students bring their own lunch from home?</p>
         <p> <?php echo (getFiled('Q5F1S1', $schoolUserID) != "") ? (getFiled('Q5F1S1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
       </li>
+      <?php endif; ?>
       <?php if(strcmp(getFiled('Q5F1S1', $schoolUserID),'Y')==0): ?>
       <li>
         <p class="orange"><span>2(a)(1)</span> How many students out of total student population bring home-made lunch? </p>
