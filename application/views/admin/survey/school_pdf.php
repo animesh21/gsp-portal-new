@@ -143,10 +143,10 @@
                         ?>
       </p>
     </li>
-    <li>
+   <!-- <li>
       <p class="orange"><span>3.1</span><span> Select State for Board of Education:</span></p>
-      <p><?php echo (getFiled('Q3G2', $schoolUserID) != "") ? getFiled('Q3G2', $schoolUserID) : "N/A"; ?></p>
-    </li>
+      <p><?php //echo (getFiled('Q3G2', $schoolUserID) != "") ? getFiled('Q3G2', $schoolUserID) : "N/A"; ?></p>
+    </li>-->
     <li>
       <p class="orange"><span>4</span><span> Total population of the school</span></p>
       <table class="table">
@@ -253,7 +253,7 @@
       </p>
     </li>
     <li>
-      <p class="orange"><span>8</span> Whether your school is:</p>
+      <p class="orange"><span>8</span> <span>Whether your school is:</span></p>
       <p>
         <?php
                         if (getFiled('Q9G1', $schoolUserID) == 1) {
@@ -878,7 +878,7 @@
 </div>
 <ul class="list">
   <li>
-    <p class="cover"><span>6(a)</span> If No, is there an air quality monitoring station(private or government) close to your school? </p>
+    <p class="orange"><span>6(a)</span> If No, is there an air quality monitoring station(private or government) close to your school? </p>
     <p> <?php echo (getFiled('Q9A2', $schoolUserID) != "") ? (getFiled('Q9A2', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?> </p>
   </li>
 </ul>
@@ -913,7 +913,7 @@
       </tr>
       <tr>
         <td> 3</td>
-        <td><?php echo (getFiled('Q1E3S1', $schoolUserID) != "") ? getFiled('Q1A3S1', $schoolUserID) : "N/A"; ?> </td>
+        <td><?php echo (getFiled('Q1E3S1', $schoolUserID) != "") ? getFiled('Q1E3S1', $schoolUserID) : "N/A"; ?> </td>
         <td><?php echo (getFiled('Q1E3S3', $schoolUserID) != "") ? getFiled('Q1E3S3', $schoolUserID) : "N/A"; ?> </td>
         <td><?php echo (getFiled('Q1E3S2', $schoolUserID) != "") ? getFiled('Q1E3S2', $schoolUserID) : "N/A"; ?> </td>
       </tr>
