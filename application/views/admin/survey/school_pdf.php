@@ -1289,16 +1289,10 @@
 	  <?php endif; ?>
       <li>
         <p class="orange"><span>7</span><span> Does your school use solar water heater:</span></p>
-        <?php echo (getFiled('Q10E1', $schoolUserID) != "") ? (getFiled('Q10E1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?>
+        <p> <?php echo (getFiled('Q10E1', $schoolUserID) != "") ? (getFiled('Q10E1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?>
         </p>
       </li>
     </ul>
-    <div class="support_files_head">Supporting Documents</div>
-    <label class="support-docs">Please upload supporting documents:</label>
-    <p> •Pictures of audit team doing survey<br>
-      Please upload all supporting documents related to this section here. Note, files must be one of the
-      following formats: PDF Document (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg) <br>
-      File size per document should not exceed 500 KB. </p>
     <?php
             $arrImages = getUploadData(str_replace(' ', '_', $school->name) .'_Supporting_Document_Energy_', $schoolUserID);
             
@@ -1319,7 +1313,7 @@
       </table>
     </div>
     <?php } else { ?>
-    <div class="support_files"> <strong>No Uploaded Document!</strong> </div>
+    <div class="support_files"> No documents uploaded by the school. </div>
     <?php } ?>
   </div>
 </div>
