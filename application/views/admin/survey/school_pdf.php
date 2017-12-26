@@ -891,7 +891,7 @@
       co-ordinator may be a science or social science teacher, with an interest in air pollution
       issues. Do include the school transport in-charge and the drivers of the school vehicles in your
       audit team.</p>
-    <p class="orange"><span>Teachers (maximum of three teachers can be part of the team):</span></p>
+    <p class="orange"><span>Teachers:</span></p>
     <table class="table">
       <tr>
         <th></th>
@@ -918,7 +918,7 @@
         <td><?php echo (getFiled('Q1E3S2', $schoolUserID) != "") ? getFiled('Q1E3S2', $schoolUserID) : "N/A"; ?> </td>
       </tr>
     </table>
-    <p class="orange"><span>Administrative staff (maximum of five staff can be part of theteam):</span></p>
+    <p class="orange"><span>Administrative staff:</span></p>
     <table class="table">
       <tr>
         <th></th>
@@ -957,7 +957,7 @@
         <td><?php echo (getFiled('Q2E5S2', $schoolUserID) != "") ? getFiled('Q2E5S2', $schoolUserID) : "N/A"; ?> </td>
       </tr>
     </table>
-    <p class="orange"><span>Students (maximum of ten students can be part of the team):</span></p>
+    <p class="orange"><span>Students:</span></p>
     <table class="table">
       <tr>
         <th></th>
@@ -1326,7 +1326,7 @@
 <div class="wrapper">
 <div class="task-area">
   <h3 class="task">Task 1: Food Audit Team</h3>
-  <p class="orange"><span>Teachers (maximum of three teachers can be part of the team):</span></p>
+  <p class="orange"><span>Teachers:</span></p>
   <table class="table">
     <tr>
       <th></th>
@@ -1353,7 +1353,7 @@
       <td><?php echo (getFiled('Q1F3S2', $schoolUserID) != "") ? getFiled('Q1F3S2', $schoolUserID) : "N/A"; ?> </td>
     </tr>
   </table>
-  <p class="orange"><span>Administrative staff (maximum of five staff can be part of theteam):</span></p>
+  <p class="orange"><span>Administrative staff:</span></p>
   <table class="table">
     <tr>
       <th></th>
@@ -1392,7 +1392,7 @@
       <td><?php echo (getFiled('Q2F5S2', $schoolUserID) != "") ? getFiled('Q2F5S2', $schoolUserID) : "N/A"; ?> </td>
     </tr>
   </table>
-  <p class="orange"><span>Students (maximum of ten students can be part of the team):</span></p>
+  <p class="orange"><span>Students:</span></p>
   <table class="table">
     <tr>
       <th></th>
