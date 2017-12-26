@@ -869,14 +869,13 @@
   </table>
 </div>
 <?php } else { ?>
-<div class="support_files"> <strong>No Uploaded Document!</strong> </div>
+<div class="support_files"> No documents uploaded by the school. </div>
 <?php } ?>
 </div>
 <ul class="list">
   <li>
     <p class="cover"><span>6(a)</span> If No, is there an air quality monitoring station(private or government) close to your school? </p>
     <p> <?php echo (getFiled('Q9A2', $schoolUserID) != "") ? (getFiled('Q9A2', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?> </p>
-    </div>
   </li>
 </ul>
 <div style="text-align: center; padding: 0;">&nbsp;&nbsp;&nbsp;&nbsp;</div>
