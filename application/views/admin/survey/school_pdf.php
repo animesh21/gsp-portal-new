@@ -1751,7 +1751,7 @@
         <p class="orange"><span>5</span>Doesyourschool serve traditional Indian  beverages?</p>
         <p> <?php echo (getFiled('Q8F1', $schoolUserID) != "") ? (getFiled('Q8F1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
       </li>
-	  <?php if(strcmp(getFiled('Q8F1', $schoolUserID),'Y')==0): ?>
+	  <?php if(strcmp(getFiled('Q7F1', $schoolUserID),'Y')==0): ?>
       <li>
         <p class="orange"><span>5(a)</span>Please provide details: </p>
         <table class="table">
@@ -1781,7 +1781,7 @@
           </tr>
         </table>
       </li>
-	  <?php ?>
+	  <?php endif ?>
     </ul>
   </div>
   <?php endif; ?>
