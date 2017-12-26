@@ -3567,6 +3567,7 @@
         <p class="orange"><span class="cube">1</span> Does your school segregate solid waste?</p>
         <p> <?php echo (getFiled('Q4Wa1', $schoolUserID) != "") ? (getFiled('Q4Wa1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
       </li>
+	   <?php if(strcmp(getFiled('Q4Wa1', $schoolUserID),'Y')==0): ?>
       <li>
         <p class="orange"><span class="cube">1(a)</span> Who segregates the waste at source?</p>
         <?php
@@ -3592,6 +3593,7 @@
         endif;
         ?>
       </li>
+	  <?php endif; ?>
       <li>
         <p class="orange"><span class="cube">2</span>How many categories does your school segregate waste into? </p>
         <?php
@@ -3605,6 +3607,7 @@
         endif;
         ?>
       </li>
+	    <?php if(strcmp(getFiled('Q4Wa2', $schoolUserID),'Y')==0): ?>
       <li>
         <p class="orange"><span class="cube">2(a)</span> How many categories does your school
           segregate waste into?</p>
@@ -3707,6 +3710,7 @@
           </tr>
         </table>
       </li>
+	   <?php endif; ?>
     </ul>
     <p class="orange">
       <label class="control-label">Please upload supporting documents:</label>
@@ -3995,6 +3999,7 @@
         </p>
         <p> <?php echo (getFiled('Q8Wa1', $schoolUserID) != "") ? (getFiled('Q8Wa1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
       </li>
+	   <?php if(strcmp(getFiled('Q8Wa1', $schoolUserID),'Y')==0): ?>
       <li>
         <p class="orange">
           <label><span class="cube">4(a)</span>Please provide quantity of which is applicable</label>
@@ -4200,13 +4205,16 @@
         <div class="support_files"> <strong>No Uploaded Document!</strong> </div>
         <?php } ?>
       </li>
+	  <?php endif; ?>
     </ul>
-    <ul class="list">
-      <li>
+  </div>
+  <ul class="list">
+    <?php if(strcmp(getFiled('Q9Wa1', $schoolUserID),'Y')==0): ?>
+	 <li>
         <p class="orange">
           <label><span class="cube">5(a)</span>What is the methodology used?</label>
         </p>
-        <?php
+       <p> <?php
         if (getFiled('Q9Wa2S1', $schoolUserID) == 1):
             echo "Natural composting without added microbes";
             echo "<br/>";
@@ -4223,22 +4231,19 @@
             echo " Other: &nbsp;";
             echo "<br/>";
         endif;
-        ?>
+        ?></p>
       </li>
-    </ul>
-  </div>
-  <ul class="list">
-    <li>
+     <li>
       <p class="orange">
         <label for="username"><span class="cube">5(b)</span>What is the quantity of compost that is generated per month (in kilogram)?</label>
       </p>
       <p><?php echo (getFiled('Q9Wa3', $schoolUserID) != "") ? getFiled('Q9Wa3', $schoolUserID) : "N/A"; ?></p>
     </li>
-    <li>
+     <li>
       <p class="orange">
         <label><span class="cube">5(c)</span> What is the purpose of the compost that is generated per month? </label>
       </p>
-      <?php
+     <p> <?php
     if (getFiled('Q9Wa4S1', $schoolUserID) == 1):
         echo "For horticultural purposes";
         echo "<br/>";
@@ -4255,8 +4260,9 @@
         echo "For charity";
         echo "<br/>";
     endif;
-    ?>
+    ?></p>
     </li>
+	<?php endif; ?>
     <li>
       <p class="orange">
         <label><span class="cube">6</span>Does your school encourage students &amp; teachers to reuse textbooks? <a class="kplink" href="http://www.greenschoolsprogramme.org/knowledge-bank/waste/#chomp" target="_blank"></a></label>
@@ -4585,11 +4591,6 @@
       </table>
     </li>
   </ul>
-  <p class="orange">
-    <label>Please upload supporting documents:</label>
-  </p>
-  <p> • Pictures of recycling units - paper recycling machine, selling paper to kabadiwala, recyclers,etc<br>
-  </p>
   <?php
     $arrImages = getUploadData(str_replace(' ', '_', $school->name) . '_Recycling_Machine_', $schoolUserID);
     if (!empty($arrImages)) {
@@ -4602,14 +4603,14 @@
       </tr>
       <?php foreach ($arrImages as $a) { ?>
       <tr>
-        <td><img src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+        <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
         <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Recycling_Machine_"), " ", $a->file_name); ?></td>
       </tr>
       <?php } ?>
     </table>
   </div>
   <?php } else { ?>
-  <div class="support_files"> <strong>No Uploaded Document!</strong> </div>
+  <div class="support_files"> No documents uploaded by the school.</div>
   <?php } ?>
   <ul class="list">
     <li>
@@ -4825,11 +4826,6 @@
       </table>
     </li>
   </ul>
-  <p class="orange">
-    <label>Please upload supporting documents:</label>
-  </p>
-  <p> • Pictures of Electronic items used by school and storage of non-working electronic items<br>
-    • Certificate of disposing e-waste from authorized dealer/dismantler </p>
   <?php
     $arrImages = getUploadData(str_replace(' ', '_', $school->name) . '_E-Waste_', $schoolUserID);
     if (!empty($arrImages)) {
@@ -4849,20 +4845,21 @@
     </table>
   </div>
   <?php } else { ?>
-  <div class="support_files"> <strong>No Uploaded Document!</strong> </div>
+  <div class="support_files">No documents uploaded by the school.</div>
   <?php } ?>
   <ul class="list">
     <li>
       <p class="orange">
-        <label><span class="cube">9</span>Do you know that your e-waste can be collected by an authorized dealer or dismantler? </label>
+       <span class="cube">9</span>Do you know that your e-waste can be collected by an authorized dealer or dismantler? 
       </p>
       <p> <?php echo (getFiled('Q13Wa1', $schoolUserID) != "") ? (getFiled('Q13Wa1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
     </li>
+	<?php if(strcmp(getFiled('Q13Wa1', $schoolUserID),'Y')==0): ?>
     <li>
       <p class="orange">
-        <label ><span class="cube">9(a)</span>Who collects your e-waste, when not in working condition?</label>
+        <span class="cube">9(a)</span>Who collects your e-waste, when not in working condition?
       </p>
-      <?php
+     <p> <?php
     if (getFiled('Q13Wa2', $schoolUserID) == 1):
         echo "Kabadiwalla/ Scrapdealer";
     elseif (getFiled('Q13Wa2', $schoolUserID) == 2):
@@ -4873,16 +4870,15 @@
         echo " Authorised dismantler";
 
     endif;
-    ?>
+    ?>>
     </li>
+	<?php endif; ?>
   </ul>
   <p class="orange">
     <label>Other: &nbsp;</label>
   </p>
   <p><?php echo (getFiled('Q13Wa2O', $schoolUserID) != "") ? getFiled('Q13Wa2O', $schoolUserID) : "N/A"; ?></p>
-  <p class="orange">
-    <label>Please upload supporting documents:</label>
-  </p>
+
   <p>• Certificate of disposing e-waste from authorised dealer/dismantler</p>
   <?php
     $arrImages = getUploadData(str_replace(' ', '_', $school->name) . '_E-waste_authorised_dealer_', $schoolUserID);
@@ -4903,7 +4899,7 @@
     </table>
   </div>
   <?php } else { ?>
-  <div class="support_files"> <strong>No Uploaded Document!</strong> </div>
+  <div class="support_files"> No documents uploaded by the school. </div>
   <?php } ?>
 </div>
 <div class="task-area">
@@ -4926,9 +4922,6 @@
     ?>
     </li>
     <li>
-      <p class="orange">
-        <label class="control-label">Please upload supporting documents:</label>
-      </p>
       <p> • Pictures of housekeeping staff disposing different types of solid waste<br>
       </p>
       <?php
@@ -4950,7 +4943,7 @@
         </table>
       </div>
       <?php } else { ?>
-      <div class="support_files"> <strong>No Uploaded Document!</strong> </div>
+      <div class="support_files">No documents uploaded by the school. </div>
       <?php } ?>
     </li>
     <li>
@@ -4983,9 +4976,10 @@
         </table>
       </div>
       <?php } else { ?>
-      <div class="support_files"> <strong>No Uploaded Document!</strong> </div>
+      <div class="support_files"> No documents uploaded by the school. </div>
       <?php } ?>
     </li>
+	<?php if(strcmp(getFiled('Q15Wa1', $schoolUserID),'Y')==0): ?>
     <li>
       <p class="orange"> <span>11(a)</span>Where does your school burn
         waste? </p>
@@ -4998,6 +4992,7 @@
     endif;
     ?>
     </li>
+	<?php endif; ?>
     <li>
       <p class="orange"> <span>11(b)</span>What kind of waste is burnt/ncinerated? </p>
       <?php
@@ -5037,14 +5032,11 @@
       <p> <?php echo (getFiled('Q17Wa1', $schoolUserID) != "") ? (getFiled('Q17Wa1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
     </li>
     <li>
-      <p class="orange">
-        <label class="control-label">Please upload supporting documents:</label>
-      </p>
-      <p>• Waste Policy</p>
       <p class="orange"><span>14</span> Are there awareness drives with regard to Reduce,
         Recycle and Reuse? <a class="kplink" href="http://www.greenschoolsprogramme.org/knowledge-bank/waste/#partnerInOperation" target="_blank"></a></p>
       <p> <?php echo (getFiled('Q18Wa1', $schoolUserID) != "") ? (getFiled('Q18Wa1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
     </li>
+	<?php if(strcmp(getFiled('Q18Wa1', $schoolUserID),'Y')==0): ?>
     <li>
       <p class="orange">
         <label class="control-label">Please upload supporting documents:</label>
@@ -5064,6 +5056,7 @@
     endif;
     ?>
     </li>
+	<?php endif; ?>
     <li>
       <p class="orange"><span>15</span> Is the study of the environment integrated into the
         curriculum?</p>
