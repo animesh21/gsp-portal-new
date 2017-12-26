@@ -693,9 +693,15 @@
     </table>
   </li>
   <li>
-    <p class="orange"><span>3(c)a</span> IS CNG AVAILABLE IN YOUR AREA? </p>
-    <p><?php echo (getFiled('Q9A1', $schoolUserID) != "") ? (getFiled('Q9A1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?> </p>
+    <p class="orange"><span>3(c)</span> IS CNG AVAILABLE IN YOUR AREA? </p>
+    <p><?php echo (getFiled('Q6A3', $schoolUserID) != "") ? (getFiled('Q6A3', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?> </p>
   </li>
+  <?php if(strcmp(getFiled('Q6A3', $schoolUserID),'Y')==0): ?>
+  <li>
+    <p class="orange"><span>3(c)a</span> IS CNG AVAILABLE IN YOUR AREA? </p>
+    <p><?php echo (getFiled('Q6A4S1', $schoolUserID) != "") ? (getFiled('Q6A4S1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?> </p>
+  </li>
+  <?php endif; ?>
 </ul>
 <div class="task-area">
   <h3 class="task">Task 4: How do you travel to school every day? </h3>
