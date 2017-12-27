@@ -2716,6 +2716,7 @@
       <p class="orange"><span>6(a)</span>Does your school harvest different catchments? </p>
       <p> <?php echo (getFiled('Q8W2S1', $schoolUserID) != "") ? (getFiled('Q8W2S1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
     </li>
+<?php if(!empty(getFiled('Q8W2S1', $schoolUserID)) && getFiled('Q8W2S1', $schoolUserID) == "Y")){ ?>	  
     <li>
       <p class="orange"><span>6(a)(1)</span>Which is the catchment area being harvested by your school? </p>
       <p>
@@ -2739,6 +2740,7 @@
             ?>
       </p>
     </li>
+<?php } ?>	  
     <li>
       <p class="orange"><span>6(b)</span> How does your school harvest rainwater? </p>
       <p>
@@ -2753,6 +2755,8 @@
                     ?>
       </p>
     </li>
+<?php if(!empty(getFiled('Q8W2S2', $schoolUserID))){
+	  if(getFiled('Q8W2S2', $schoolUserID) == 1 || getFiled('Q8W2S2', $schoolUserID) == 3){ ?>	  
     <li>
       <p class="orange"><span class="cube">6(b)(1)</span>If your school only stores rainwater, please select
         the use of stored rainwater: </p>
@@ -2921,6 +2925,7 @@
         ?>
       </p>
     </li>
+<?php } } ?>	  
     <li>
       <p class="orange">
         <label><span class="cube">6(c)</span>How much area in your school is harvested? </label>
@@ -2991,6 +2996,7 @@
         ?>
       </p>
     </li>
+<?php if (getFiled('Q8W2S33', $schoolUserID) == 1){ ?>	  
     <li>
       <p class="orange">
         <label><span class="cube">6(d)(1)</span> Where is your filter unit? </label>
@@ -3034,6 +3040,7 @@
         ?>
       </p>
     </li>
+ <?php } ?>	  
     <li>
       <p class="orange">
         <label><span class="cube">6(e)</span>Rate your catchment on cleanliness: </label>
@@ -3082,6 +3089,7 @@
       </p>
       <p> <?php echo (getFiled('Q8W2S61', $schoolUserID) != "") ? (getFiled('Q8W2S61', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
     </li>
+<?php if(!empty(getFiled('Q8W2S61', $schoolUserID)) && getFiled('Q8W2S61', $schoolUserID) == "Y"){ ?>	  
     <li>
       <p class="orange">
         <label><span class="cube">6(f)(1)</span>Please specify when does your school clean the
@@ -3098,6 +3106,7 @@
         endif;
         ?>
     </li>
+<?php } ?>	  
     <li>
       <p class="orange">
         <label><span class="cube">6(g)</span>Does your school monitor the rainwater harvesting
@@ -3105,6 +3114,7 @@
       </p>
       <p> <?php echo (getFiled('Q8W2S8', $schoolUserID) != "") ? (getFiled('Q8W2S8', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
     </li>
+<?php if(!empty(getFiled('Q8W2S8', $schoolUserID)) && getFiled('Q8W2S8', $schoolUserID) == "Y"){ ?>	  
     <li>
       <p class="orange">
         <label><span class="cube">6(g)(1)</span>Please specify when does your school monitor the
@@ -3121,6 +3131,7 @@
         endif;
         ?>
     </li>
+<?php } ?>	  
     <li>
       <p class="orange">
         <label><span class="cube">6(h)</span>What is the trend of groundwater level in your school
