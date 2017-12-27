@@ -196,8 +196,8 @@ public function excel2017() {
         $data['id'] = $argID;
         $data['states'] = getStates();
         $data['school'] = $this->Audit_started_model->getSchoolById($argID);
-	echo '<pre>'; print_r($data['school']);  die();  
-        $data['schoolUserID'] = $data['school']->userid;
+	//echo '<pre>'; print_r($data['school']);  die();  
+        $data['schoolUserID'] = $data['school'][0]->userid;
         $data['files'] = $this->file->getFilesData($this->session->userdata('USER_ID'));
         $data['filesfules'] = $this->file->getFilesDatafules($this->session->userdata('USER_ID'));
         $data['airQualityMonitering'] = $this->file->AirQuality($this->session->userdata('USER_ID'));
@@ -235,7 +235,7 @@ public function excel2017() {
         $data['waterTreatment'] = uploadHelper($this->session->userdata('USER_ID'), 'Water_Treatment_Process');
         $data['flowChartHandDrawn'] = uploadHelper($this->session->userdata('USER_ID'), 'Flow_Chart_Hand_Drwan');
         $data['supportDocWater'] = $this->file->SupportingWater($this->session->userdata('USER_ID'));
-        echo '<pre>'; print_r($data);die;
+        //echo '<pre>'; print_r($data);die;
         $rank=getFiled('Q1G2',$data['schoolUserID']);
         
         if ($rank >= 6 ) { 
