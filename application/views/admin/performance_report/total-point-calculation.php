@@ -7,10 +7,14 @@
       <tr>
         <th>Sr.No</th>
         <th>School ID</th>
-		<th>User Id</th>
+	<th>User Id</th>
         <th>School Name</th>
         <th>School Category</th>
         <th>School Population</th>
+	 <th>State</th>
+	 <th>District</th>
+	  <th>CoEmail</th>
+	  <th>CoMobile</th>      
         <th>Total Air Point</th>
         <th>Total Food Point</th>
         <th>Total Energy Point</th>
@@ -30,10 +34,15 @@
       <tr>
         <td><?php echo ++$i; ?></td>
         <td><?php echo $t->id; ?></td>
-		<td><?php echo $t->userid; ?></td>
+	<td><?php echo $t->userid; ?></td>
         <td><?php echo $t->name; ?></td>
         <td><?php echo $t->category; ?></td>
         <td><?php echo $t->population; ?></td>
+	<td><?php echo $t->state_name; ?></td>
+	      <td><?php echo $t->district_name; ?></td>
+	      <td><?php echo $t->coemail; ?></td>
+	      <td><?php echo $t->comobile; ?></td>
+	      
         <td><?php echo $t->air_point; ?></td>
         <td><?php echo $t->energy_point; ?></td>
         <td><?php echo $t->food_point; ?></td>
