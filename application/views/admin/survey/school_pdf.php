@@ -43,31 +43,51 @@
         <p><?php echo $school->address1; ?>, <?php echo $school->address2; ?></p>
       </li>
       <li>
-        <p class="orange"><span>3</span><span>Telephone Number (Landline Number with STD code)</span></p>
+        <p class="orange"><span>3</span><span>Country</span></p>
+        <p><?php echo 'India'; ?></p>
+      </li>
+      <li>
+        <p class="orange"><span>4</span><span>State</span></p>
+        <p><?php echo $school->state_name; ?></p>
+      </li>
+      <li>
+        <p class="orange"><span>5</span><span>District</span></p>
+        <p><?php echo $school->district; ?></p>
+      </li>
+      <li>
+        <p class="orange"><span>6</span><span>City</span></p>
+        <p><?php echo $school->city; ?></p>
+      </li>
+      <li>
+        <p class="orange"><span>7</span><span>Pincode</span></p>
+        <p><?php echo $school->pincode; ?></p>
+      </li>	    
+      <li>
+        <p class="orange"><span>8</span><span>Telephone Number (Landline Number with STD code)</span></p>
         <p>(ISD) &nbsp;91  &nbsp;&nbsp; (STD) &nbsp;<?php echo $school->std; ?> &nbsp;&nbsp; (Number)<?php echo $school->telephone; ?></p>
       </li>
       <li>
-        <p class="orange"><span>4</span><span>Mobile Number (Mobile Number with STD code)</span></p>
+        <p class="orange"><span>9</span><span>Mobile Number (Mobile Number with STD code)</span></p>
         <p>(ISD) 91  &nbsp;&nbsp; (Number) <?php echo $school->mobile; ?></p>
       </li>
       <li>
-        <p class="orange"><span>5</span><span>Principal Name</span></p>
+        <p class="orange"><span>10</span><span>Principal Name</span></p>
         <p><?php echo $school->principle_name; ?></p>
       </li>
       <li>
-        <p class="orange"><span>6</span><span>GSP Coordinator Name</span></p>
+        <p class="orange"><span>11</span><span>GSP Coordinator Name</span></p>
         <p><?php echo $school->coname; ?></p>
       </li>
       <li>
-        <p class="orange"><span>7</span><span>GSP Coordinator Email</span></p>
+        <p class="orange"><span>12</span><span>GSP Coordinator Email</span></p>
         <p><?php echo $school->coemail; ?></p>
       </li>
       <li>
-        <p class="orange"><span>8</span><span>GSP Coordinator Mobile Number</span></p>
+        <p class="orange"><span>13</span><span>GSP Coordinator Mobile Number</span></p>
         <p>(ISD) 91  &nbsp;&nbsp; (Number) <?php echo $school->comobile; ?></p>
       </li>
       <li>
-        <p class="orange"><span>9</span><span>Category Of The School</span></p>
+        <p class="orange"><span>14</span><span>Category Of The School</span></p>
         <p>
           <?php
                             $arr = array(
@@ -83,7 +103,7 @@
           <?php echo (getFiled('Q1S1', $schoolUserID) != '') ? $arr[getFiled('Q1S1', $schoolUserID)] : ""; ?> </p>
       </li>
       <li>
-        <p class="orange"><span>10</span><span>Category For Your School (Not Applicable in Case of Residential Category)</span></p>
+        <p class="orange"><span>15</span><span>Category For Your School (Not Applicable in Case of Residential Category)</span></p>
         <p>
           <?php
                             $arr1 = array(
