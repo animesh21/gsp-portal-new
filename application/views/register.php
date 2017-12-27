@@ -249,6 +249,16 @@
                     ?>
                     <?php echo validation_errors(); ?>
                     <?php echo form_open('login/register', array('id' => 'registration-form')); ?>
+					 <div class="form-group typeahead__container">
+    <div class="typeahead__field">
+      <div class="typeahead__query">
+        <input type="text" name="udice" class="schoolname name form-control  placeholder"
+                               value="" placeholder="Name of the U-Dice Code*" id="udice">
+      </div>
+    </div>
+  </div>
+					
+					
                     <div class="form-group typeahead__container">
     <div class="typeahead__field">
       <div class="typeahead__query">
