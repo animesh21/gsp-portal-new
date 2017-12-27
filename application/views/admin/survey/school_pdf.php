@@ -564,7 +564,7 @@
 		?>
       </p>
     </li>
-<?php if(getFiled('Q6A1', $schoolUserID)!=1 || getFiled('Q6A1', $schoolUserID)!=2)){ ?>	  
+<?php if(getFiled('Q6A1', $schoolUserID)!=1 || getFiled('Q6A1', $schoolUserID)!=2){ ?>	  
     <li>
       <p class="orange"><span>3a</span><span>Provide details of school-owned motorised vehicles</span></p>
       <table class="table">
