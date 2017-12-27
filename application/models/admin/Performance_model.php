@@ -203,7 +203,7 @@ class Performance_model extends CI_Model {
 	
 	
  public function getTotalCalculation() {
-return $this->db->select('b.name AS state_name, c.name AS district_name,a.coemail,a.comobile,a.name,a.id,a.userid,c.population,c.category,d.points AS air_point,e.Point AS energy_point ,f.Point As food_point,g.Point AS land_point,h.points AS water_point,b.points AS waste_point')
+return $this->db->select('y.name AS state_name, z.name AS district_name,a.coemail,a.comobile,a.name,a.id,a.userid,c.population,c.category,d.points AS air_point,e.Point AS energy_point ,f.Point As food_point,g.Point AS land_point,h.points AS water_point,b.points AS waste_point')
 	    ->from('gsp_school AS a')
 	    ->where('a.progress=100')
 	    ->join('states AS y', 'a.state=y.id', 'left')
