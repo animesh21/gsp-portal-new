@@ -235,7 +235,7 @@ public function excel2017() {
         $data['waterTreatment'] = uploadHelper($this->session->userdata('USER_ID'), 'Water_Treatment_Process');
         $data['flowChartHandDrawn'] = uploadHelper($this->session->userdata('USER_ID'), 'Flow_Chart_Hand_Drwan');
         $data['supportDocWater'] = $this->file->SupportingWater($this->session->userdata('USER_ID'));
-        
+        echo '<pre>'; print_r($data);die;
         $rank=getFiled('Q1G2',$data['schoolUserID']);
         
         if ($rank >= 6 ) { 
