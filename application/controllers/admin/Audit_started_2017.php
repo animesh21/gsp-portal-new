@@ -196,7 +196,7 @@ public function excel2017() {
         $data['id'] = $argID;
         $data['states'] = getStates();
         $data['school'] = $this->Audit_started_model->getSchoolById($argID);
-	echo '<pre>'; print_r($data['school']);  die();  
+	//echo '<pre>'; print_r($data['school']);  die();  
         $data['schoolUserID'] = $data['school']->userid;
         $data['files'] = $this->file->getFilesData($this->session->userdata('USER_ID'));
         $data['filesfules'] = $this->file->getFilesDatafules($this->session->userdata('USER_ID'));
