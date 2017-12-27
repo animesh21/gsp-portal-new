@@ -191,6 +191,7 @@ public function excel2017() {
      */
 
     public function pdf($argID) {
+	 ini_set('memory_limit', '256M');
         $data['title'] = 'Home';
         $data['id'] = $argID;
         $data['states'] = getStates();
