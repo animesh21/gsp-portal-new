@@ -16,9 +16,9 @@
 <div class="cover"> <img src="assets/img/images/logo.png" width="436" height="118" class="logo">
   <h1>Responses For Green Schools Programme Audit 2017</h1>
   <div class="school-detail">
-    <p><span>School Name:</span><span><?php echo $school->name; ?></span></p>
-    <p><span>Address:</span><span><?php echo $school->address1; ?></span></p>
-    <p><span>Coordinator Name:</span><span><?php echo $school->coname; ?></span></p>
+    <p><span>School Name:</span><span><?php echo $school[0]->name; ?></span></p>
+    <p><span>Address:</span><span><?php echo $school[0]->address1; ?></span></p>
+    <p><span>Coordinator Name:</span><span><?php echo $school[0]->coname; ?></span></p>
   </div>
   <div class="address-wrap"> <img src="assets/img/images/cover.png" width="100%">
     <div class="address">
@@ -3089,7 +3089,7 @@
       </label>
     </p>
     <?php
-        $arrImages = getUploadData(str_replace(' ', '_', $school->name) . '_Water_Treatment_Process_', $schoolUserID);
+        $arrImages = getUploadData(str_replace(' ', '_', $school[0]->name) . '_Water_Treatment_Process_', $schoolUserID);
         if (!empty($arrImages)) {
             ?>
     <div>
