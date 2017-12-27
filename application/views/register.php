@@ -403,7 +403,7 @@ $.typeahead({
              order: "desc",
              source: {
              data: [
-            "KENDRIYA VIDYALAYA","JNV","Jawahar Navodaya Vidyalaya","Satya Bharti","Montfort","Zila Parishad","Mount Litera"
+            "KENDRIYA VIDYALAYA","Jawahar Navodaya Vidyalaya","Satya Bharti","Montfort","Zila Parishad","Mount Litera"
         ]
     },
     callback: {
