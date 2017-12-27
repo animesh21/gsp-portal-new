@@ -897,12 +897,14 @@
   <?php } else { ?>
   <div class="support_files"> No documents uploaded by the school. </div>
   <?php } ?>
+<?php if(getFiled('Q9A1', $schoolUserID) != "Y"){ ?>	
   <ul class="list">
     <li>
       <p class="orange"><span>6(a)</span> If No, is there an air quality monitoring station(private or government) close to your school? </p>
       <p> <?php echo (getFiled('Q9A2', $schoolUserID) != "") ? (getFiled('Q9A2', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?> </p>
     </li>
   </ul>
+<?php } ?>	
 </div>
 <div style="text-align: center; padding: 0;">&nbsp;&nbsp;&nbsp;&nbsp;</div>
 <h2 class="heading section energy page_break"><img src="assets/img/images/energy.png" width="94" height="94">Energy</h2>
@@ -1516,7 +1518,7 @@
 		   if(getFiled('Q5F1S1', $schoolUserID)==1):
 		   echo "Government Scheme";
 		   elseif(getFiled('Q5F1S1', $schoolUserID)==2):
-		   echo "School’s personal initiative";
+		   echo "School's personal initiative";
 		   elseif(getFiled('Q5F1S1', $schoolUserID)==3):
 		   echo "Others";
 		   endif; 
@@ -1545,7 +1547,7 @@
       <?php endif; ?>
       <?php if(strcmp(getFiled('Q5F1', $schoolUserID),'Y')==0): ?>
       <li>
-        <p class="orange"><span>2(b)</span>Whatkind of food items are served in midday meal?</p>
+        <p class="orange"><span>2(b)</span>What kind of food items are served in midday meal?</p>
         <table class="table">
           <tr>
             <td>1</td>
@@ -1626,6 +1628,10 @@
         <p><?php echo (getFiled('Q5F2', $schoolUserID) != "") ? (getFiled('Q5F2', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
       </li>
       <?php endif; ?>
+      <li>
+        <p class="orange"><span>2(b)(1)</span>How many students out of total students population avail of the midday meal service provided ?</p>
+        <p><?php echo (getFiled('Q5F3S1', $schoolUserID) != "") ? (getFiled('Q5F3S1', $schoolUserID)): 0 ; ?></p>
+      </li> 
     </ul>
   </div>
   <?php if(strcmp(getFiled('Q4F1', $schoolUserID),'Y')==0): ?>
