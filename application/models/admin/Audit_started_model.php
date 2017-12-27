@@ -280,7 +280,12 @@ class Audit_started_model extends CI_Model {
      */
 
     public function getSchoolById($argID) {
-        return $this->db->get_where('gsp_school', array('id' => $argID))->row();
+        return $this->db->select('a.*,b.name AS state_name,c.name AS district')
+			->from('gsp_school as a')
+			->where('a.id', $argID)
+			->join('states AS b', 'a.state=b.id', 'left')
+			->join('cities AS c', 'a.district=c.id', 'left')
+		//get_where('gsp_school', array('id' => $argID))->row();
     }
 
     /*
