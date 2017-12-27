@@ -252,8 +252,8 @@
 					 <div class="form-group typeahead__container">
     <div class="typeahead__field">
       <div class="typeahead__query">
-        <input type="text" name="udice" class="schoolname name form-control  placeholder"
-                               value="" placeholder="Name of the U-Dice Code*" id="udice">
+        <input type="text" name="udise" class="schoolname name form-control  placeholder"
+                               value="" placeholder="Name of the U-Dise Code*" id="udise">
       </div>
     </div>
   </div>
