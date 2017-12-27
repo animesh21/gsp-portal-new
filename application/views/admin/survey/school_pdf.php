@@ -564,7 +564,7 @@
 		?>
       </p>
     </li>
-<?php $dat=getFiled('Q6A1', $schoolUserID); if(($dat)!=1 || ($dat)!=2){ ?>	  
+<?php $dat=getFiled('Q6A1', $schoolUserID); if(($dat)==3 || ($dat)==4 || ($dat)==5){ ?>	  
     <li>
       <p class="orange"><span>3a</span><span>Provide details of school-owned motorised vehicles</span></p>
       <table class="table">
