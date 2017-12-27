@@ -3668,7 +3668,7 @@
         endif;
         ?>
       </li>
-      <?php if(strcmp(getFiled('Q4Wa2', $schoolUserID),'Y')==0): ?>
+      <?php if(!empty(getFiled('Q4Wa2', $schoolUserID))): ?>
       <li>
         <p class="orange"><span class="cube">2(a)</span> How many categories does your school
           segregate waste into?</p>
