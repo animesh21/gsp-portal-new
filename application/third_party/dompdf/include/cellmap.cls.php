@@ -396,7 +396,7 @@ class Cellmap {
     $node = $frame->get_node();
     
     // Determine where this cell is going
-    $colspan = $node->getAttribute("colspan");
+    /*$colspan = $node->getAttribute("colspan");
     $rowspan = $node->getAttribute("rowspan");
 
     if ( !$colspan ) {
@@ -407,7 +407,9 @@ class Cellmap {
     if ( !$rowspan ) {
       $rowspan = 1;
       $node->setAttribute("rowspan",1);
-    }
+    }*/
+		$colspan = 1;
+		$rowspan = 1;
     $key = $frame->get_id();
 
     $bp = $style->get_border_properties();
