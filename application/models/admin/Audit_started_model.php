@@ -284,7 +284,7 @@ class Audit_started_model extends CI_Model {
 			->from('gsp_school as a')
 			->where('a.id', $argID)
 			->join('states AS b', 'a.state=b.id', 'left')
-			->join('cities AS c', 'a.district=c.id', 'left')
+			->join('cities AS c', 'a.district=c.id', 'left');
 		//get_where('gsp_school', array('id' => $argID))->row();
     }
 
