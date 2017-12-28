@@ -231,6 +231,7 @@
 
                 </div>
             </div>
+	<?php if(getFiled('Q4Wa1', $schoolUserID) == "Y"){ ?>	
             <div class="form-group row" id="Q1A">
                 <label><span class="cube">1(a)</span>Who segregates the waste at source? </label><br/>
                 <?php
@@ -257,7 +258,7 @@
                 ?>  
 
             </div>
-
+         <?php } ?>
             <div class="form-group">
                 <label><span class="cube">2</span>How many categories does your school segregate waste into? </label><br/>
                 <?php
@@ -923,7 +924,7 @@
 
                 </div>
             </div>
-
+        <?php if(getFiled('Q8Wa1', $schoolUserID) == "Y"){ ?>
             <div class="form-group" id="Q8Wa2">
 
                 <label class="control-label"><span class="cube">4(a)</span>Please provide quantity of which is
@@ -1132,6 +1133,7 @@
             </div>
             <br>
             <br>
+	<?php } ?>	
             <div class="form-group">
                 <label class="control-label"><span class="cube">5</span>Does your school have a composting facility?</label>
                 <div class="form-group">
@@ -1174,7 +1176,7 @@
                 </div>
             <?php } ?>
             <div class="clearfix">&nbsp;</div>
-
+           <?php if(getFiled('Q9Wa1', $schoolUserID) == "Y"){ ?>
             <div class="form-group" id="Q9Wa2" style="display: block;">
 
                 <div class="form-group row" id="Q9Wa2">
@@ -1239,8 +1241,8 @@
                         ?>
 
                     </div>
-
-
+  	
+		<?php } ?>
                     <div class="form-group">
                         <label class="control-label"><span class="cube">6</span>Does your school encourage students &amp; teachers to
                             reuse textbooks?</label>
@@ -2339,7 +2341,7 @@
 
                         </div>
                     </div>
-
+           <?php if(getFiled('Q13Wa1', $schoolUserID) == "Y"){ ?>
 
                     <div class="form-group" id="Q13Wa21">
 
@@ -2362,6 +2364,7 @@
                             <?php echo (getFiled('Q13Wa2O', $schoolUserID) != "") ? getFiled('Q13Wa2O', $schoolUserID) : "N/A"; ?>
                         </div>
                     </div>
+		<?php } ?>	
                     <div class="form-group">
                         <label class="control-label">Please upload supporting documents:</label>
                         <br>
@@ -2500,6 +2503,7 @@
                             <strong>No Uploaded Document!</strong>
                         </div>
                     <?php } ?>
+	   <?php if(getFiled('Q15Wa1', $schoolUserID) == "Y"){ ?>		
                     <div class="form-group" id="Q15Wa2">
                         <label class="control-label"><span class="cube">11(a)</span>Where does your school burn
                             waste?</label>
@@ -2543,6 +2547,7 @@
                             ?>     
                         </div>
                     </div>
+	   <?php } ?>		
                     <div class="clearfix">&nbsp;</div>
 
                     <div class="form-group">
@@ -2605,24 +2610,25 @@
                         • Pictures of various school initiatives e.g. rally, debate, street play, art competition, etc<br>
 
                     </div>
-
+         <?php if(getFiled('Q18Wa1', $schoolUserID) == "Y"){ ?>
                     <div class="form-group" id="Q18Wa3">
 
-                        <label class="control-label"><span class="cube">14(a)</span>What form do these awareness drives
-                            take? </label>
+                       <p> <label class="control-label"><span class="cube">14(a)</span>What form do these awareness drives
+			       take? </label></p>
                         <?php
                         if (getFiled('Q18Wa2S1', $schoolUserID) == 1):
-                            echo "As part of the curriculum";
-                        elseif (getFiled('Q18Wa2S2', $schoolUserID) == 2):
-                            echo " As part of extracurricular activities such as guest lectures ";
-                        elseif (getFiled('Q18Wa2S3', $schoolUserID) == 3):
-                            echo " By the showcasing of posters and stickers  ";
+                            echo "As part of the curriculum <br/>";
+                        if (getFiled('Q18Wa2S2', $schoolUserID) == 2):
+                            echo " As part of extracurricular activities such as guest lectures <br/>";
+                        if (getFiled('Q18Wa2S3', $schoolUserID) == 3):
+                            echo " By the showcasing of posters and stickers <br/> ";
 
 
                         endif;
                         ?>
 
                     </div>
+		<?php } ?>	
                     <div class="form-group">
                         <label class="control-label"><span class="cube">15</span>Is the study of the environment integrated into the
                             curriculum?</label>
