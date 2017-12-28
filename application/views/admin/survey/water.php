@@ -917,7 +917,7 @@
 
                 </div>
             </div>
-		<?php } ?>	
+	<?php } if(getFiled('Q8W2S33', $schoolUserID) == 1) { ?>	
             <div class="form-group" id="Q8W2S4S1">
                 <label><span class="cube">6(d)(1)</span> Where is your filter unit? </label>
                 <div class="form-group">
@@ -935,6 +935,7 @@
 
                 </div>
             </div>
+	
             <div class="form-group" id="Q8W2S4S2">
                 <label><span class="cube">6(d)(2)</span>Types of filter used in your school: </label>
                 <div class="form-group">
@@ -960,6 +961,7 @@
 
                 </div>
             </div>
+	<?php } ?>		
             <div class="form-group" id="Q8W2S5">
                 <label><span class="cube">6(e)</span>Rate your catchment on cleanliness: </label>
                 <div class="form-group">
