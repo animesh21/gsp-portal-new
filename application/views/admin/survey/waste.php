@@ -2616,16 +2616,13 @@
                        <p> <label class="control-label"><span class="cube">14(a)</span>What form do these awareness drives
 			       take? </label></p>
                         <?php
-                        if (getFiled('Q18Wa2S1', $schoolUserID) == 1):
-                            echo "As part of the curriculum <br/>";
-                        if (getFiled('Q18Wa2S2', $schoolUserID) == 2):
-                            echo " As part of extracurricular activities such as guest lectures <br/>";
-                        if (getFiled('Q18Wa2S3', $schoolUserID) == 3):
-                            echo " By the showcasing of posters and stickers <br/> ";
-
-
-                        endif;
-                        ?>
+                        if (getFiled('Q18Wa2S1', $schoolUserID) == 1){
+                            echo "As part of the curriculum <br/>";}
+                        if (getFiled('Q18Wa2S2', $schoolUserID) == 2){
+                            echo " As part of extracurricular activities such as guest lectures <br/>";}
+                        if (getFiled('Q18Wa2S3', $schoolUserID) == 3){
+                            echo " By the showcasing of posters and stickers <br/> ";}
+			?>
 
                     </div>
 		<?php } ?>	
