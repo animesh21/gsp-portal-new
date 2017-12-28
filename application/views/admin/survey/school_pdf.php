@@ -4070,7 +4070,7 @@
     <ul class="list">
       <li>
         <p class="orange">
-          <label><span class="cube">4</span>Does your school recycle any generated waste? </label>
+          <span class="cube">4</span>Does your school recycle any generated waste?
         </p>
         <p> <?php echo (getFiled('Q8Wa1', $schoolUserID) != "") ? (getFiled('Q8Wa1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
       </li>
@@ -5060,9 +5060,9 @@
     ?>
       </p>
     </li>
-    <?php endif; ?>
+    
     <li>
-      <p class="orange"> <span>11(b)</span>What kind of waste is burnt/ncinerated? </p>
+      <p class="orange"> <span>11(b)</span>What kind of waste is burnt/incinerated? </p>
       <p>
         <?php
     if (getFiled('Q15Wa2S1', $schoolUserID) == 1):
@@ -5084,6 +5084,7 @@
     ?>
       </p>
     </li>
+  <?php endif; ?>	  
     <li>
       <p class="orange"> <span>12</span>Do you know that your E-waste can be collected by an authorised dealer or dismantler? </p>
       <p> <?php echo (getFiled('Q16Wa1', $schoolUserID) != "") ? (getFiled('Q16Wa1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
@@ -5106,27 +5107,24 @@
         Recycle and Reuse? <a class="kplink" href="http://www.greenschoolsprogramme.org/knowledge-bank/waste/#partnerInOperation" target="_blank"></a></p>
       <p> <?php echo (getFiled('Q18Wa1', $schoolUserID) != "") ? (getFiled('Q18Wa1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
     </li>
-    <?php if(strcmp(getFiled('Q18Wa1', $schoolUserID),'Y')==0): ?>
+    <?php if(getFiled('Q18Wa1', $schoolUserID) == "Y"){ ?>
     <li>
       <p class="orange">
         <label class="control-label">Please upload supporting documents:</label>
       </p>
-      <p> • Pictures of various school initiatives e.g. rally, debate, street play, art competition, etc</p>
+      <p> Pictures of various school initiatives e.g. rally, debate, street play, art competition, etc</p>
       <p class="orange"><span>14(a)</span> What form do these awareness drives
         take? </p>
       <?php
-    if (getFiled('Q18Wa2S1', $schoolUserID) == 1):
-        echo "As part of the curriculum";
-    elseif (getFiled('Q18Wa2S2', $schoolUserID) == 2):
-        echo " As part of extracurricular activities such as guest lectures ";
-    elseif (getFiled('Q18Wa2S3', $schoolUserID) == 3):
-        echo " By the showcasing of posters and stickers  ";
-
-
-    endif;
-    ?>
+     if (getFiled('Q18Wa2S1', $schoolUserID) == 1){
+        echo "As part of the curriculum";}
+     if (getFiled('Q18Wa2S2', $schoolUserID) == 2){
+        echo " As part of extracurricular activities such as guest lectures ";}
+      if (getFiled('Q18Wa2S3', $schoolUserID) == 3){
+        echo " By the showcasing of posters and stickers  ";}
+	?>
     </li>
-    <?php endif; ?>
+    <?php } ?>
     <li>
       <p class="orange"><span>15</span> Is the study of the environment integrated into the
         curriculum?</p>
