@@ -593,7 +593,7 @@
 
                 </div>
             </div>
-			<?php if(getFiled('Q5W3', $schoolUserID) == 1)){ ?>
+			<?php if(getFiled('Q5W3', $schoolUserID) == 1){ ?>
             <div class="form-group" id="Q8W2S1" style="display:block;">
                 <label><span class="cube">6(a)</span>Does your school harvest different catchments? </label>
                 <div class="form-group">
