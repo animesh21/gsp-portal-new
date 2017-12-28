@@ -3415,7 +3415,7 @@
       </p>
       <p> <?php echo (getFiled('Q20W1', $schoolUserID) != "") ? (getFiled('Q20W1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
     </li>
-    <?php if(strcmp(getFiled('Q18W1', $schoolUserID),'N')==0): ?>
+    <?php if(strcmp(getFiled('Q20W1', $schoolUserID),'Y')==0): ?>
     <li>
       <p class="orange"><span class="cube">18(a)</span>How does your
         school reuse wastewater?</p>
