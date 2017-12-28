@@ -86,7 +86,7 @@
     {
        if(value=='2015' || value=='2016')
        {
-           location.href="http://localhost/GSP/old/index.php";
+           location.href="http://http://greenschoolsprogramme.org/audit2017/old/index.php";
        }
     }
 </script>
