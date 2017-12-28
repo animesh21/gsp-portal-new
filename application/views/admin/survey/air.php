@@ -684,10 +684,17 @@
         <?php } ?>
     </div>
    <div class="form-group" id="Q6A3S1">
+        <label class="control-label"><span class="cube">3(c)</span>IS CNG AVAILABLE IN YOUR STATE?</label><br/>
+        <?php echo (getFiled('Q6A3', $schoolUserID) != "") ? (getFiled('Q6A3', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?>
+		
+    </div> 
+<?php if(getFiled('Q6A3', $schoolUserID) == "Y"){ ?>	
+   <div class="form-group" id="Q6A3S1">
         <label class="control-label"><span class="cube">3(c)a</span>IS CNG AVAILABLE IN YOUR AREA?</label><br/>
-        <?php echo (getFiled('Q9A1', $schoolUserID) != "") ? (getFiled('Q9A1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?>
+        <?php echo (getFiled('Q6A4S1', $schoolUserID) != "") ? (getFiled('Q6A4S1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?>
 		
     </div>
+<?php } ?>	
     <div class="form-group">
         <label>
             <h6> Task 4: How do you travel to school every day? </h6>
@@ -899,12 +906,14 @@
             </div>
         <?php } ?>
     </div>
+ <?php if(getFiled('Q9A1', $schoolUserID) != "Y"){ ?>	
     <div class="form-group" id="lab" style="display: block;">
         <label class="control-label"><span class="cube">6(a)</span>If No, is there an air quality monitoring
             station
             (private or government) close to your school?</label>
         <p> <?php echo (getFiled('Q9A2', $schoolUserID) != "") ? (getFiled('Q9A2', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?> </p>
     </div>
+ <?php } ?>	
     <div class="form-group" id="WastePolicy">
         <label class="control-label">
             <h6>Please upload supporting documents:</h6>
