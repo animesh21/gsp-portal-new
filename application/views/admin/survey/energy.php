@@ -189,6 +189,7 @@
                 bill?</label>
             <p> <?php echo (getFiled('Q4E1', $schoolUserID) != "") ? (getFiled('Q4E1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
         </div>
+		<?php if(getFiled('Q4E1', $schoolUserID) == "Y"){ ?>
         <div class="form-group" id="ebill">
             <label class="control-label">Please upload the most recent electricity bill here</label>
             <br>
@@ -221,6 +222,7 @@
                 </div>
             <?php } ?>
         </div>
+		<?php } ?>
         <div class="form-group" id="ebill" style="display:none">
             <label class="control-label">Please upload the most recent electricity bill here</label>
             <br>
@@ -408,6 +410,7 @@
 
 
         </div>
+	<?php if(getFiled('Q9E1', $schoolUserID) == "Y") { ?>
         <div class="form-group" id="alternativeEnergy">
             <label class="control-label">If yes, please upload a picture of alternative source of energy
                 installed that is currently in use.</label>
@@ -464,6 +467,7 @@
                     ?></p> 
             </div>
         </div>
+		<?php } ?>
         <div class="form-group">
             <div class="form-group">
                 <label><span class="cube">7</span>Does your school use solar water heater:</label>
