@@ -279,7 +279,7 @@ class Audit_started_model extends CI_Model {
      * Get School By Id
      */
 
-    public function getSchoolById($argID) {
+    public function getSchoolByIdRecoad($argID) {
         return $this->db->select('a.*,b.name AS state_name,c.name AS district')
 			->from('gsp_school as a')
 			->where('a.id', $argID)
@@ -288,7 +288,12 @@ class Audit_started_model extends CI_Model {
 		        ->get()->result();
 		//get_where('gsp_school', array('id' => $argID))->row();
     }
-
+   
+    public function getSchoolById($argID) {
+	return $this->db->get_where('gsp_school', array('id' => $argID))->row(); 
+    }
+	
+	
     /*
      * Get Data By State
      */
