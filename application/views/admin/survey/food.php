@@ -224,7 +224,14 @@
                 <div class="form-group" id="meals11" style="display: block;">
                     <label class="control-label"><span class="cube">2(a)</span>If yes, then midday meal is served under:</label>
                     <ul class="list-inline">
-                        <p> <?php echo (getFiled('Q5F1S1', $schoolUserID) != "") ? (getFiled('Q5F1S1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p> 
+                        <p> <?php if(getFiled('Q5F1S1', $schoolUserID) == 1){ 
+			    ``		echo "Government Scheme ";}
+			          elseif(getFiled('Q5F1S1', $schoolUserID) == 2){
+					  echo "School Personal initiative";}
+				  elseif(getFiled('Q5F1S1', $schoolUserID) == 3){
+					  echo "others";}
+			    	?>
+			    </p> 
 
 
                     </ul>
