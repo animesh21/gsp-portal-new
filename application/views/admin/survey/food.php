@@ -225,11 +225,11 @@
                     <label class="control-label"><span class="cube">2(a)</span>If yes, then midday meal is served under:</label>
                     <ul class="list-inline">
                         <p> <?php if(getFiled('Q5F1S1', $schoolUserID) == 1){ 
-			    ``		echo "Government Scheme ";}
+			    ``		echo ("Government Scheme") ;}
 			          elseif(getFiled('Q5F1S1', $schoolUserID) == 2){
-					  echo "School Personal initiative";}
+					  echo ("School Personal initiative") ;}
 				  elseif(getFiled('Q5F1S1', $schoolUserID) == 3){
-					  echo "others";}
+					  echo ("others") ;}
 			    	?>
 			    </p> 
 
