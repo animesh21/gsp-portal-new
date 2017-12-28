@@ -185,6 +185,7 @@
 
                     </ul>
                 </div>
+			<?php if(getFiled('Q5F1', $schoolUserID) == "Y"){ ?>	
                 <div class="form-group" id="meals1">
                     <label class="control-label">Please upload picture of Mid-day meal being 
                         served</label>
@@ -220,7 +221,7 @@
                     <?php } ?>
                 </div>
                 <input type="hidden" value="400" id="Q4G4S3">
-                <div class="form-group" id="meals11" style="display: none;">
+                <div class="form-group" id="meals11" style="display: block;">
                     <label class="control-label"><span class="cube">2(a)</span>If yes, then midday meal is served under:</label>
                     <ul class="list-inline">
                         <p> <?php echo (getFiled('Q5F1S1', $schoolUserID) != "") ? (getFiled('Q5F1S1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p> 
@@ -228,6 +229,7 @@
 
                     </ul>
                 </div>
+				<?php } if(getFiled('Q5F1', $schoolUserID) != "Y"){ ?>
                 <div class="form-group" id="meals2" style="display: block;">
                     <label class="control-label"><span class="cube">2(a)</span>Do students bring their own lunch from home?</label>
                     <ul class="list-inline">
@@ -237,7 +239,8 @@
 
                     </ul>
                 </div>
-                <div class="form-group" id="Q5F1SF" style="display: none;">
+				<?php if(getFiled('Q5F1S1', $schoolUserID) == "Y") { ?>
+                <div class="form-group" id="Q5F1SF" style="display: block;">
                     <label class="control-label">Please upload photographs of lunch boxes</label>
                     <br>
 
@@ -269,6 +272,8 @@
                           </li>-->
                     </ul>
                 </div>
+				<?php } } ?>
+				<?php if(getFiled('Q5F1', $schoolUserID) == "Y"){ ?>
                 <div class="form-group" id="Q5F2">
                     <label class="control-label"><span class="cube">2(b)</span>Whatkind of food items are served in midday
                         meal?</label>
@@ -362,7 +367,7 @@
                     </table>
 
                 </div>
-                <div class="form-group" id="Q5F3" style="display: none;">
+                <div class="form-group" id="Q5F3" style="display: block;">
                     <label class="control-label"><span class="cube">2(b)(1)</span>How many students out of total student population avail of the midday meal services provided?</label>
                     <div class="form-group">
                         <?php echo (getFiled('Q5F3S1', $schoolUserID) != "") ? getFiled('Q5F3S1', $schoolUserID) : "N/A"; ?>
@@ -377,6 +382,7 @@
 
                     </ul>
                 </div>
+				<?php } ?>
                 <div class="form-group">
                     <label class="control-label">
                         <h6> Task 3: What kind of food is served/sold in your school </h6>
