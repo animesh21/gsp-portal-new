@@ -4020,11 +4020,12 @@
         <div>
           <table class="table">
             
+            <tr>
             
-            <thead>
               <th>image</th>
               <th>File name</th>
-            </thead>
+            
+           </tr>		    
             <?php foreach ($arrImages as $a) { ?>
             <tr>
               <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
