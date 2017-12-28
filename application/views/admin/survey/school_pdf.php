@@ -3174,6 +3174,7 @@
         endif;
         ?>
     </li>
+ <?php if(getFiled('Q8W2S10', $schoolUserID) != 3){ ?>	  
     <li>
       <p class="orange">
         <label><span class="cube">6(h)(1)</span>Please specify how much was the decrease? </label>
@@ -3204,6 +3205,7 @@
         endif;
         ?>
     </li>
+<?php } ?>	  
     <li>
       <p class="orange">
         <label><span class="cube">6(i)</span>If your school's RWH structure is more than a year old,
@@ -4017,14 +4019,12 @@
             ?>
         <div>
           <table class="table">
-            <thead>
-            <h6>g. Cc&amp; D Waste</h6>
-            </thead>
             
-            <tr>
+            
+            <thead>
               <th>image</th>
               <th>File name</th>
-            </tr>
+            </thead>
             <?php foreach ($arrImages as $a) { ?>
             <tr>
               <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
