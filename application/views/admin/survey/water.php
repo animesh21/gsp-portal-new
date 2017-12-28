@@ -412,6 +412,7 @@
 
                 </div>
             </div>
+			<?php if(getFiled('Q7W1', $schoolUserID) == "Y"){ ?>
             <div class="form-group" id="Q7W2" style="display: block;">
                 <label class="control-label"> <span class="cube">4(a)</span>Does your school get daily water supply?</label>
                 <div class="form-group">
@@ -433,6 +434,7 @@
                     </ul>
                 </div>
             </div>
+			<?php }else{ ?>
             <div class="form-group" id="Q7W3">
 
                 <label class="control-label"> <span class="cube">4(b)</span>Does your school get daily water supply?</label>
@@ -455,7 +457,7 @@
                     </ul>
                 </div>
             </div>
-
+        <?php } ?>
             <div class="form-group">
                 <label>
                     <h6>Task 4: What are the water conservation practices followed in your school?</h6>
@@ -591,6 +593,7 @@
 
                 </div>
             </div>
+			<?php if(getFiled('Q5W3', $schoolUserID) == 1)){ ?>
             <div class="form-group" id="Q8W2S1" style="display:block;">
                 <label><span class="cube">6(a)</span>Does your school harvest different catchments? </label>
                 <div class="form-group">
@@ -640,6 +643,7 @@
 
                 </div>
             </div>
+			<?php if(getFiled('Q8W2S2', $schoolUserID) == 1 || getFiled('Q8W2S2', $schoolUserID) == 3){ ?>
             <div class="form-group" id="Q8W2S2S1">
                 <label><span class="cube">6(b)(1)</span>If your school only stores rainwater, please select
                     the use of stored rainwater: </label>
@@ -697,6 +701,7 @@
 
                 </div>
             </div>
+			<?php if(getFiled('Q8W2S2S2', $schoolUserID) == "Y"){ ?>
             <div class="form-group" id="Q8W2S2S3">
                 <label><span class="cube">6(b)(2) A</span>If yes, please provide: </label>
                 <div class="form-group">
@@ -758,6 +763,7 @@
                     </ul>
                 </div>
             </div>
+			<?php } ?>
             <div class="form-group" id="Q8W2S27">
                 <label><span class="cube">6(b)(3)</span>Does your school have groundwater recharge
                     structure? </label>
@@ -766,6 +772,7 @@
 
                 </div>
             </div>
+			<?php if(getFiled('Q8W2S2S7', $schoolUserID) == "Y"){ ?>
             <div class="form-group" id="Q8W2S2S8">
                 <label><span class="cube">6(b)(3) i</span>If yes, please provide: </label>
                 <div class="form-group">
@@ -813,6 +820,7 @@
                     ?>     
                 </div>
             </div>
+			<?php } ?>
             <div class="form-group" id="Q8W2S2S10">
                 <label><span class="cube">6(b)(4)</span>If your school practices rainwater harvesting, then
                     what is the ratio between storage and recharge </label>
@@ -835,6 +843,7 @@
 
                 </div>
             </div>
+			<?php } ?>
             <div class="form-group" id="Q8W2S3">
                 <label><span class="cube">6(c)</span>How much area in your school is harvested?
                 </label>
@@ -908,6 +917,7 @@
 
                 </div>
             </div>
+		<?php } ?>	
             <div class="form-group" id="Q8W2S4S1">
                 <label><span class="cube">6(d)(1)</span> Where is your filter unit? </label>
                 <div class="form-group">
@@ -1318,6 +1328,7 @@
 
                 </div>
             </div>
+			<?php if(getFiled('Q18W1', $schoolUserID) == "Y"){ ?>
             <div class="form-group" id="Q18W2" style="display: block;">
                 <label class="control-label"><span class="cube">16(a)</span>If yes, please
                     specify</label>
@@ -1335,7 +1346,7 @@
 
                 </div>
             </div>
-
+         <?php } ?>
             <div class="form-group">
                 <label>
                     <h6>Task 7: Does your school reuse/recycle waste water? 
@@ -1363,7 +1374,7 @@
                 </div>
             </div>
 
-
+          <?php if(getFiled('Q20W1', $schoolUserID) == "Y"){ ?>
             <div class="form-group" id="Q20W1Q">
 
                 <label class="control-label"><span class="cube">18(a)</span>How does your
@@ -1382,8 +1393,8 @@
 
                 </div>
             </div>
-
-
+         
+       <?php }else{ ?>
             <div class="form-group" id="Q19W2">
 
                 <label class="control-label"><span class="cube">18(a)</span>Please specify the fate of wastewater:</label>
@@ -1401,6 +1412,7 @@
 
                 </div>
             </div>
+		<?php } ?>	
             <div class="form-group">
                 <label>Please upload a flow chart (hand drawn) of the wastewatertreatment process.</label><br>
             </div>
