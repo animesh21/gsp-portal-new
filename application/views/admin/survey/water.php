@@ -1078,38 +1078,41 @@
 
                 </div>
             </div>
+	<?php if(getFiled('Q8W2S10', $schoolUserID) == 1){ ?>	
             <div class="form-group" id="Q8W2S11" >
                 <label><span class="cube">6(h)(1)</span>Please specify how much was the decrease? </label>
                 <div class="form-group">
                     <?php
                     if (getFiled('Q8W2S11', $schoolUserID) == 1):
-                        echo "Less than a metre annually";
+                        echo "Less than a meter annually";
                     elseif (getFiled('Q8W2S11', $schoolUserID) == 2):
-                        echo "1-5 metre annually ";
+                        echo "1-5 meter annually ";
                     elseif (getFiled('Q8W2S11', $schoolUserID) == 3):
-                        echo "More than 5 metres annually ";
+                        echo "More than 5 meters annually ";
 
                     endif;
                     ?>
 
                 </div>
             </div>
+	 <?php }elseif(getFiled('Q8W2S10', $schoolUserID) == 2){ ?>	
             <div class="form-group" id="Q8W2S12">
                 <label><span class="cube">6(h)(1)</span>Please specify how much was the increase? </label>
                 <div class="form-group">
                     <?php
                     if (getFiled('Q8W2S12', $schoolUserID) == 1):
-                        echo "Less than a metre annually";
+                        echo "Less than a meter annually";
                     elseif (getFiled('Q8W2S12', $schoolUserID) == 2):
-                        echo "1-5 metre annually ";
+                        echo "1-5 meter annually ";
                     elseif (getFiled('Q8W2S12', $schoolUserID) == 3):
-                        echo "More than 5 metres annually ";
+                        echo "More than 5 meters annually ";
 
                     endif;
                     ?>
 
                 </div>
             </div>
+	<?php } ?>	
             <div class="form-group" id="Q8W2S13">
                 <label><span class="cube">6(i)</span>If your school's RWH structure is more than a year old,
                     is there any improvement in the groundwater quality after the implementation of the RWH
