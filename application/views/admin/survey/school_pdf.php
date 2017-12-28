@@ -5117,9 +5117,9 @@
         take? </p>
       <?php
      if (getFiled('Q18Wa2S1', $schoolUserID) == 1){
-        echo "As part of the curriculum";}
+        echo "As part of the curriculum <br/>";}
      if (getFiled('Q18Wa2S2', $schoolUserID) == 2){
-        echo " As part of extracurricular activities such as guest lectures ";}
+        echo " As part of extracurricular activities such as guest lectures <br/>";}
       if (getFiled('Q18Wa2S3', $schoolUserID) == 3){
         echo " By the showcasing of posters and stickers  ";}
 	?>
