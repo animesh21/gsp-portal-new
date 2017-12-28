@@ -2577,14 +2577,7 @@
                         </div>
                     </div>
                     <br>
-                    <br>
-                    <div class="form-group" id="WastePolicy">
-                        <label class="control-label">Please upload supporting documents:</label>
-                        <br>
-                        • Waste Policy<br>
-
-                    </div>
-                    <br>
+                    
                     <div class="form-group" id="WastePolicy" >
                         <label class="control-label">Please upload supporting documents:</label>
                         <br>
