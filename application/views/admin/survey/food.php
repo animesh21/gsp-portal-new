@@ -388,6 +388,7 @@
                         <h6> Task 3: What kind of food is served/sold in your school </h6>
                     </label>
                 </div>
+		<?php if(getFiled('Q4F1', $schoolUserID) == "Y"){ ?>    
                 <div class="form-group" id="Q6F1">
                     <label class="control-label"><span class="cube">3</span>What  kind of food is being served / sold in your school?</label>
 
@@ -540,7 +541,7 @@
 
                     </ul>
                 </div>
-
+               <?php if(getFiled('Q7F1', $schoolUserID) == "Y"){ ?>
                 <div class="form-group" id="traditional" style="display: block;">
 
                     <label class="control-label"><span class="cube">4(a)</span>Please provide the details: </label>
@@ -607,18 +608,21 @@
                     <br>
                     <br>
                 </div>
+	   
                 <div class="form-group" id="Q7F3S1" style="display: block;">
                     <label class="control-label"><span class="cube">4(b)</span>Give descriptions for rare local snacks served in your school:</label>
                     <br/>
                     <?php echo (getFiled('Q7F3S1', $schoolUserID) != "") ? getFiled('Q7F3S1', $schoolUserID) : "N/A"; ?>                                                                                               
                     <br>
                 </div>
+	   <?php } ?>
                 <div class="form-group" id="Q8F1" style="display: block;">
                     <label class="control-label"><span class="cube">5</span>Doesyourschool serve traditional Indian  beverages?</label>
                     <ul class="list-inline">
 
                         <p> <?php echo (getFiled('Q8F1', $schoolUserID) != "") ? (getFiled('Q8F1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>                                                                                                </ul>
                 </div>
+	   <?php if(getFiled('Q8F1', $schoolUserID) == "Y"){ ?>
                 <div class="form-group" id="beverages" style="display: block;">
                     <label class="control-label"><span class="cube">5(a)</span>Please provide details: </label>
                     <table class="table table-bordered table-striped">
@@ -656,6 +660,7 @@
                     </table>
 
                 </div>
+	<?php }} ?>
                 <div class="form-group">
                     <label>
                         <h6> Task 4: What kind  of food does your school promote?</h6>
@@ -669,6 +674,7 @@
                     </ul>
                 </div>
             </div>
+         <?php if(getFiled('Q9F1', $schoolUserID) == "Y"){ ?>
             <div class="form-group" id="Q9F2" style="display: block;">
                 <label class="control-label"><span class="cube">6(a)</span>Please provide details: </label>
                 <br/>
@@ -680,7 +686,7 @@
                 <?php echo (getFiled('Q9F2', $schoolUserID) != "") ? getFiled('Q9F2', $schoolUserID) : "N/A"; ?>																										
                 <br>
             </div>
-
+          <?php } ?>
             <div class="form-group">
                 <label class="control-label"><span class="cube">7</span>Does the school distribute chocolates/similar
                     products as refreshments during schools events?</label>
@@ -689,18 +695,21 @@
 
                 </ul>
             </div> 
+        <?php if(getFiled('Q10F1', $schoolUserID) == "Y"){ ?>
             <div class="form-group" id="Q10F2" style="display: block;">
                 <label class="control-label"><span class="cube">7(a)</span>Please provide the names: </label>
                 <?php echo (getFiled('Q10F2', $schoolUserID) != "") ? getFiled('Q10F2', $schoolUserID) : "N/A"; ?>
                 <!--<textarea type="text" id="Q10F2" rows="5" name="Q10F2" placeholder="" value=""></textarea>-->
                 <br>
             </div>
+         <?php } ?>
             <div class="form-group">
                 <label class="control-label"><span class="cube">8</span>Are your school events such as quiz shows, talent shows, debates sponsored by food companies/brands?</label>
                 <ul class="list-inline">
                     <p> <?php echo (getFiled('Q11F1', $schoolUserID) != "") ? (getFiled('Q11F1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>                                                                                                       
                 </ul>
             </div>
+            <?php if(getFiled('Q11F1', $schoolUserID) == "Y"){ ?>
             <div class="form-group" id="Q11F2" style="display: block;">
                 <label class="control-label"><span class="cube">8(a)</span> Please provide the names of sponsors:</label>
                 <br/>																								<?php echo (getFiled('Q11F2', $schoolUserID) != "") ? getFiled('Q11F2', $schoolUserID) : "N/A"; ?>
@@ -714,6 +723,7 @@
 
                 </ul>
             </div>
+           <?php } ?>
         </form></div>
     <div class="form-group">
         <label>Please upload pictures of events sponsored by UPPF (ultra-processed packaged food) companies</label>
@@ -764,6 +774,7 @@
 
         </ul>
     </div>
+   <?php if(getFiled('Q12F1', $schoolUserID) == "Y"){ ?>
     <div class="form-group" id="Q12F2" style="display:block;">
         <label class="control-label"><span class="cube">9(a)</span>How regularly is height and weight of the students measured?</label>
         <div class="form-group">
@@ -781,6 +792,7 @@
             </ul>
         </div>
     </div>
+  <?php } ?>
     <div class="form-group">
         <label class="control-label"><span class="cube">10</span>Is cooking part of  any regular subjects or extracurricular activities?</label>
         <ul class="list-inline">
@@ -789,6 +801,7 @@
 
         </ul>
     </div>
+   <?php if(getFiled('Q13F1', $schoolUserID) == "Y"){ ?>
     <div class="form-group" id="Q13F2" style="display:block">
         <label for="username" class="control-label"><span class="cube">10(a)</span>If  yes, please share the details</label>
         <br/>
@@ -796,6 +809,7 @@
 
 
     </div>
+<?php } ?>
     <div class="form-group">
         <label class="control-label">Please upload pictures your Audit Team doing the survey</label>
         <br>
