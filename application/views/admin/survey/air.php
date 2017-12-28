@@ -295,7 +295,7 @@
                         $arrBoard[getFiled('Q6A1', $schoolUserID)] : "";
 		
 		?> </div>
-<?php if(getFiled('Q6A1', $schoolUserID)==3 ||getFiled('Q6A1', $schoolUserID)==4 || getFiled('Q6A1', $schoolUserID)==5) ?>	
+<?php if(getFiled('Q6A1', $schoolUserID)==3 ||getFiled('Q6A1', $schoolUserID)==4 || getFiled('Q6A1', $schoolUserID)==5){ ?>	
     <div class="form-group" id="vehicle">
         <label class="control-label"><span class="cube">3(a)</span>Provide details of school-owned motorised
             vehicles </label>
