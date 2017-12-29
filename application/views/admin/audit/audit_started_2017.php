@@ -167,12 +167,12 @@ function getBadgeCode(userid)
 function sendResponseReport(schoolid){
  var subject="Response Report Testing";
  var message="Response Report Testing";
- var bodytext="Please download Email <a href='<?php echo "http://www.greenschoolsprogramme.org/audit2017/admin/audit_started_2017/pdf/"?>"+schoolid+"'>Download</a>";
+ var bodytext="Please download Email <a href='<?php echo "http://www.greenschoolsprogramme.org/audit2017/responsreport/pdf/"?>"+schoolid+"'>Download</a>";
  jQuery.ajax({
 	  url:"https://api.elasticemail.com/v2/email/send",
 	  type:"POST",
 	  content_type: "application/pdf",
-	  data:{"api_key":"3dc010df-18e2-4bb9-9ac7-ac4d8382c490","from":"siddhartha2488@gmail.com","to":"erhamender@gmail.com","subject":subject,"bodyHtml":bodytext},
+	  data:{"api_key":"3dc010df-18e2-4bb9-9ac7-ac4d8382c490","from":"siddhartha2488@gmail.com","to":"sunnykul024@gmail.com","subject":subject,"bodyHtml":bodytext},
 	  success:function(reponse){
 	    alert("Email has been send successful...");
 	  }
