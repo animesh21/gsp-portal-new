@@ -164,17 +164,18 @@ function getBadgeCode(userid)
 <link type="text/css" rel="stylesheet" type="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript">
-function sendResponseReport(schoolid){
- var subject="Response Report Testing";
- var message="Response Report Testing";
- var bodytext="Please download Email <a href='<?php echo "http://www.greenschoolsprogramme.org/audit2017/responsreport/pdf/"?>"+schoolid+"'>Download</a>";
+function sendResponseReport(schoolid,coemail){
+ var subject="Response Report 2017";
+ var message="Response Report 2017";
+ var bodytext="Please download Response Report 2017 
+ <br/><a href='<?php echo "http://www.greenschoolsprogramme.org/audit2017/responsreport/pdf/"?>"+schoolid+"'>Download</a>";
  jQuery.ajax({
 	  url:"https://api.elasticemail.com/v2/email/send",
 	  type:"POST",
 	  content_type: "application/pdf",
-	  data:{"api_key":"3dc010df-18e2-4bb9-9ac7-ac4d8382c490","from":"siddhartha2488@gmail.com","to":"erhamender@gmail.com","subject":subject,"bodyHtml":bodytext},
+	  data:{"api_key":"a62876ee-8ef8-4c83-a35c-c6eaa0f29765","from":"support@greenschoolsprogramme.org","to":coemail,"subject":subject,"bodyHtml":bodytext},
 	  success:function(reponse){
-	    alert("Email has been send successful...");
+	    alert("Response Report 2017 Email has been send successful");
 	  }
 	}); 
 }
