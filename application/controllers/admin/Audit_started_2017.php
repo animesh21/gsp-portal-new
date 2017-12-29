@@ -502,8 +502,8 @@ public function excel2017() {
     global $username, $apikey;
 	$filepath="uploads/files/ARMY_PUBLIC_SCHOOL_PANCHKULA_2237.pdf"; 
 	$filename="ARMY_PUBLIC_SCHOOL_PANCHKULA_2237.pdf";
-	$username = "siddhartha2488@gmail.com";
-    $apikey = "3dc010df-18e2-4bb9-9ac7-ac4d8382c490";
+	$username = "erhamender@gmail.com";
+    $apikey = "493d4406-6956-455b-bd4b-8e6b67ac283d";
     $data = http_build_query(array('username' => $username,'api_key' => $apikey,'file' => $filename));
     $file = file_get_contents($filepath);
     $result = ''; 
@@ -534,15 +534,15 @@ public function excel2017() {
 	
 	public function sendElasticEmail()
 	{
-	 $from="siddhartha2488@gmail.com.com";
+	 $from="erhamender@gmail.com";
 	 $subject="GreenSchoolProgramme";
 	 $body_text="ResponseReport 2017";
 	 $body_html="ResponseReport 2017";
-	 $to="sunnykul024@gmail.com";
+	 $to="yhamender@gmail.com";
 	 $attachments=$this->uploadAttachment();
 	 $fromName= "GreenSchoolProgramme";
 	 $username = "siddhartha2488@gmail.com";
-     $apikey = "3dc010df-18e2-4bb9-9ac7-ac4d8382c490";
+     $apikey = "493d4406-6956-455b-bd4b-8e6b67ac283d";
 	 $res = "";
 	 $data = "username=".$username;
 	 $data .= "&api_key=".$apikey;
