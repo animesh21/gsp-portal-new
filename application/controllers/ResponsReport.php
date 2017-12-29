@@ -14,9 +14,7 @@ class ResponsReport extends CI_Controller {
         $this->load->helper(array('download', 'common_helper', 'form'));
         $this->load->model('admin/Audit_started_model');
         $this->session->userdata('USER_ID') == '';
-		$this->load->library('zip');
-		$this->load->library('pagination');
-		$this->load->helper('form');
+	$this->load->library('pagination');
     }
 
     public function index() {
