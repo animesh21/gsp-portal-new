@@ -20,9 +20,8 @@ class ResponsReport extends CI_Controller {
     }
 
     public function index() {
-        $data['main'] = 'admin/audit/audit_started_2017';
-        $data['title'] = 'Home | Registration 2017';
-        $this->load->view('admin/includes/template', $data);
+        $data['main'] = 'Response Report 2017';
+        $data['title'] = 'Home | Response Report 2017';
     }	
 
     /*
