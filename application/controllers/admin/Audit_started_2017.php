@@ -491,12 +491,85 @@ public function excel2017() {
 	public function delete_school($argID)
 	{
 		$check1= $this->Audit_started_model->school_delete($argID);
-		
 		if($check1){
 		   redirect('Admin/Audit_started_2017');
-	   }else{
-				echo "record failed";
-			} 
+	        }
+		else{
+	          echo "record failed";
+	        } 
+	}
+	 public function uploadAttachment() {
+    global $username, $apikey;
+	$filepath="uploads/files/ARMY_PUBLIC_SCHOOL_PANCHKULA_2237.pdf"; 
+	$filename="ARMY_PUBLIC_SCHOOL_PANCHKULA_2237.pdf";
+	$username = "siddhartha2488@gmail.com";
+    $apikey = "3dc010df-18e2-4bb9-9ac7-ac4d8382c490";
+    $data = http_build_query(array('username' => $username,'api_key' => $apikey,'file' => $filename));
+    $file = file_get_contents($filepath);
+    $result = ''; 
+    $fp = fsockopen('ssl://api.elasticemail.com', 443, $errno, $errstr, 30); 
+	 if ($fp){
+	 fputs($fp, "PUT /attachments/upload?".$data." HTTP/1.1\r\n");
+	 fputs($fp, "Host: api.elasticemail.com\r\n");
+	 fputs($fp, "Content-type: application/x-www-form-urlencoded\r\n");
+	 fputs($fp, "Content-length: ". strlen($file) ."\r\n");
+	 fputs($fp, "Connection: close\r\n\r\n");
+	 fputs($fp, $file);
+	 while(!feof($fp)) {
+	 $result .= fgets($fp, 128);
+	 }
+	 } else { 
+	 return array(
+	 'status'=>false,
+	 'error'=>$errstr.'('.$errno.')',
+	 'result'=>$result);
+	 }
+	 fclose($fp);
+	 $result = explode("\r\n\r\n", $result, 2); 
+	 return array(
+	 'status' => true,
+	 'attachId' => isset($result[1]) ? $result[1] : ''
+	 );
+	}
+	
+	public function sendElasticEmail()
+	{
+	 $from="siddhartha2488@gmail.com.com";
+	 $subject="GreenSchoolProgramme";
+	 $body_text="ResponseReport 2017";
+	 $body_html="ResponseReport 2017";
+	 $to="sunnykul024@gmail.com";
+	 $attachments=$this->uploadAttachment();
+	 $fromName= "GreenSchoolProgramme";
+	 $username = "siddhartha2488@gmail.com";
+     $apikey = "3dc010df-18e2-4bb9-9ac7-ac4d8382c490";
+	 $res = "";
+	 $data = "username=".$username;
+	 $data .= "&api_key=".$apikey;
+	 $data .= "&from=".urlencode($from);
+	 $data .= "&from_name=".urlencode($fromName);
+	 $data .= "&to=".urlencode($to);
+	 $data .= "&subject=".urlencode($subject);
+	 if($body_html)
+	 $data .= "&body_html=".urlencode($body_html);
+	 if($body_text)
+	 $data .= "&body_text=".urlencode($body_text);
+	 if($attachments)
+	 $data .= "&attachments=".urlencode($attachments['attachId']);
+	 $header = "POST /mailer/send HTTP/1.0\r\n";
+	 $header .= "Content-Type: application/x-www-form-urlencoded\r\n";
+	 $header .= "Content-Length: " . strlen($data) . "\r\n\r\n";
+	 $fp = fsockopen('ssl://api.elasticemail.com', 443, $errno, $errstr, 30);
+	 if(!$fp)
+	 return "ERROR. Could not open connection";
+	 else {
+	 fputs ($fp, $header.$data);
+	 while (!feof($fp)) {
+	 $res .= fread ($fp, 1024);
+	 }
+	 fclose($fp);
+	 }
+	 echo $res; 
 	}
 	
 }
