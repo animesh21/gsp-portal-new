@@ -823,7 +823,7 @@
   <?php } ?>
 </div>
 <div style="text-align: center; padding: 0;">&nbsp;&nbsp;&nbsp;&nbsp;</div>
-<h2 class="heading section energy page_break"><img src="<?php echo base_url() ?>assets/img/images/energy.png" width="94" height="94">Energy(Primary)</h2>
+<h2 class="heading section energy page_break"><img src="assets/img/images/energy.png" width="94" height="94">Energy</h2>
 <div class="wrapper">
   <div class="task-area">
     <h3 class="task">Task 1:Energy Audit Team</h3>
@@ -986,7 +986,7 @@
           <?php foreach ($electricityBills as $f) { ?>
           <tr id="index<?php echo $f->id; ?>">
             <?php $name = str_replace(" ", "_", $f->name . "_Electricity_Bill_"); ?>
-            <td><img src="<?php echo base_url('uploads/files/' . $f->file_name); ?>"class="img-thumbnail" style="height:80px;width:80px;"></img></td>
+            <td><img src="uploads/files/<?php echo $f->file_name; ?>" class="img-thumbnail" style="height:80px;width:80px;"></img></td>
             <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
           </tr>
           <?php } ?>
