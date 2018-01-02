@@ -31,12 +31,12 @@
 </style>
 </head>
 <body>
-<div class="cover"> <img src="<?php echo base_url() ?>assets/img/images/logo.png" width="436" height="118" class="logo">
+<div class="cover"> <img src="assets/img/images/logo.png" width="436" height="118" class="logo">
   <h1>Responses For Green Schools Programme Audit 2015</h1>
-  <div class="school-detail">
+ <div class="school-detail">
     <p><span>School Name:</span> <span><?php echo $school[0]->name; ?></span></p>
-    <p><span>Address:</span> <span><?php echo $school->address1; ?>, <?php echo $school->address2; ?></span></p>
-    <p><span>Coordinator Name:</span> <span><?php echo $school->coname; ?></span></p>
+    <p><span>Address:</span> <span><?php echo $school[0]->address1; ?>, <?php echo $school[0]->address2;?></span></p>
+    <p><span>Coordinator Name:</span> <span><?php echo $school[0]->coname; ?></span></p>
   </div>
   <div class="address-wrap" style="background:url('<?php echo base_url() ?>assets/img/images/cover.jpg') center no-repeat; width:980px;">
     <div class="address" style="text-align: center; margin-top:250px; ">
@@ -60,52 +60,52 @@
       <li>
         <div class="numbering">2</div>
         <p style="color: #e86549;">Address</p>
-        <p><?php echo $school->address1; ?>, <?php echo $school->address2; ?></p>
+        <p><?php echo $school[0]->address1; ?>, <?php echo $school->address2; ?></p>
       </li>
       <li>
         <div class="numbering">2.1</div>
         <p style="color: #e86549;">Country</p>
-        <p><?php echo $school->country; ?></p>
+        <p><?php echo 'India'; ?></p>
       </li>
       <li>
         <div class="numbering">2.2</div>
         <p style="color: #e86549;">City</p>
-        <p><?php echo $school->city; ?></p>
+        <p><?php echo $school[0]->city; ?></p>
       </li>
       <li>
         <div class="numbering">2.3</div>
         <p style="color: #e86549;">Pincode</p>
-        <p><?php echo $school->pincode; ?></p>
+        <p><?php  echo $school[0]->pincode; ?></p>
       </li>
       <li>
         <div class="numbering">3</div>
         <p style="color: #e86549;">Telephone Number (Landline Number with STD code)</p>
-        <p>(ISD) &nbsp;91  &nbsp;&nbsp; (STD) &nbsp;<?php echo $school->std; ?> &nbsp;&nbsp; (Number)<?php echo $school->telephone; ?></p>
+        <p>(ISD) &nbsp;91  &nbsp;&nbsp; (STD) &nbsp;<?php echo $school[0]->std; ?> &nbsp;&nbsp; (Number)<?php echo echo $school[0]->telephone; ?></p>
       </li>
       <li>
         <div class="numbering">4</div>
         <p style="color: #e86549;">Mobile Number (Mobile Number with STD code)</p>
-        <p>(ISD) 91  &nbsp;&nbsp; (Number) <?php echo $school->mobile; ?></p>
+        <p>(ISD) 91  &nbsp;&nbsp; (Number) <?php echo $school[0]->mobile; ?></p>
       </li>
       <li>
         <div class="numbering">5</div>
         <p style="color: #e86549;">Principal Name</p>
-        <p><?php echo $school->principle_name; ?></p>
+        <p><?php echo $school[0]->principle_name; ?></p>
       </li>
       <li>
         <div class="numbering">6</div>
         <p style="color: #e86549;">GSP Coordinator Name</p>
-        <p><?php echo $school->coname; ?></p>
+        <p><?php echo $school[0]->coname; ?></p>
       </li>
       <li>
         <div class="numbering">7</div>
         <p style="color: #e86549;">GSP Coordinator Email</p>
-        <p><?php echo $school->coemail; ?></p>
+        <p><?php echo $school[0]->coemail; ?></p>
       </li>
       <li>
         <div class="numbering">8</div>
         <p style="color: #e86549;">GSP Coordinator Mobile Number</p>
-        <p>(ISD) 91  &nbsp;&nbsp; (Number) <?php echo $school->comobile; ?></p>
+        <p>(ISD) 91  &nbsp;&nbsp; (Number) <?php echo $school[0]->comobile; ?></p>
       </li>
       <li>
         <div class="numbering">9</div>
