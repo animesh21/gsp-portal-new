@@ -38,8 +38,8 @@
     <p><span>Address:</span> <span><?php echo $school[0]->address1; ?>, <?php echo $school[0]->address2;?></span></p>
     <p><span>Coordinator Name:</span> <span><?php echo $school[0]->coname; ?></span></p>
   </div>
-  <div class="address-wrap" style="background:url('<?php echo base_url() ?>assets/img/images/cover.jpg') center no-repeat; width:980px;">
-    <div class="address" style="text-align: center; margin-top:250px; ">
+  <div class="address-wrap"> <img src="assets/img/images/cover.png" width="100%">
+    <div class="address">
       <p>Green Schools Programme <br/>
         Centre for Science and Environment</p>
       <p>41, Tughlakabad Institutional Area, New Delhi. India - 110062<br/>
