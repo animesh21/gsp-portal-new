@@ -34,7 +34,7 @@
 <div class="cover"> <img src="<?php echo base_url() ?>assets/img/images/logo.png" width="436" height="118" class="logo">
   <h1>Responses For Green Schools Programme Audit 2015</h1>
   <div class="school-detail">
-    <p><span>School Name:</span> <span><?php echo $school[0]['name']; ?></span></p>
+    <p><span>School Name:</span> <span><?php echo $school[0]->name; ?></span></p>
     <p><span>Address:</span> <span><?php echo $school->address1; ?>, <?php echo $school->address2; ?></span></p>
     <p><span>Coordinator Name:</span> <span><?php echo $school->coname; ?></span></p>
   </div>
@@ -55,7 +55,7 @@
       <li>
         <div class="numbering">1</div>
         <p style="color: #e86549;">Name of the School / Institution</p>
-        <p><?php echo $school[0]['name']; ?></p>
+        <p><?php echo $school[0]->name; ?></p>
       </li>
       <li>
         <div class="numbering">2</div>
