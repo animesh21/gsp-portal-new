@@ -80,7 +80,7 @@
       <li>
         <div class="numbering">3</div>
         <p style="color: #e86549;">Telephone Number (Landline Number with STD code)</p>
-        <p>(ISD) &nbsp;91  &nbsp;&nbsp; (STD) &nbsp;<?php echo $school[0]->std; ?> &nbsp;&nbsp; (Number)<?php echo echo $school[0]->telephone; ?></p>
+        <p>(ISD) &nbsp;91  &nbsp;&nbsp; (STD) &nbsp;<?php echo $school[0]->std; ?> &nbsp;&nbsp; (Number)<?php echo $school[0]->telephone; ?></p>
       </li>
       <li>
         <div class="numbering">4</div>
