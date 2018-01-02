@@ -52,64 +52,53 @@
   <h2 class="heading">School Profile</h2>
   <div class="wrapper">
     <ul class="list">
-      <li>
-        <div class="numbering">1</div>
-        <p style="color: #e86549;">Name of the School / Institution</p>
+      
+        <li>
+        <p class="orange"><span>1</span><span>Name of the School / Institution</span></p>
         <p><?php echo $school[0]->name; ?></p>
       </li>
       <li>
-        <div class="numbering">2</div>
-        <p style="color: #e86549;">Address</p>
-        <p><?php echo $school[0]->address1; ?> <br/> <?php echo $school[0]->address2; ?></p>
+         <p class="orange"><span>2</span><span>Address</span></p>
+       <p><?php echo $school[0]->address1; ?>, <?php echo $school[0]->address2; ?></p>
       </li>
       <li>
-        <div class="numbering">2.1</div>
-        <p style="color: #e86549;">Country</p>
+        <p class="orange"><span>3</span><span>Country</span></p>
         <p><?php echo 'India'; ?></p>
       </li>
       <li>
-        <div class="numbering">2.2</div>
-        <p style="color: #e86549;">City</p>
+       <p class="orange"><span>4</span><span>City</span></p>
         <p><?php echo $school[0]->city; ?></p>
       </li>
       <li>
-        <div class="numbering">2.3</div>
-        <p style="color: #e86549;">Pincode</p>
+         <p class="orange"><span>5</span><span>Pincode</span></p>
         <p><?php  echo $school[0]->pincode; ?></p>
       </li>
       <li>
-        <div class="numbering">3</div>
-        <p style="color: #e86549;">Telephone Number (Landline Number with STD code)</p>
+        <p class="orange"><span>6</span><span>Telephone Number (Landline Number with STD code)</span></p>
         <p>(ISD) &nbsp;91  &nbsp;&nbsp; (STD) &nbsp;<?php echo $school[0]->std; ?> &nbsp;&nbsp; (Number)<?php echo $school[0]->telephone; ?></p>
       </li>
       <li>
-        <div class="numbering">4</div>
-        <p style="color: #e86549;">Mobile Number (Mobile Number with STD code)</p>
+         <p class="orange"><span>7</span><span>Mobile Number (Mobile Number with STD code)</span></p>
         <p>(ISD) 91  &nbsp;&nbsp; (Number) <?php echo $school[0]->mobile; ?></p>
       </li>
       <li>
-        <div class="numbering">5</div>
-        <p style="color: #e86549;">Principal Name</p>
+         <p class="orange"><span>8</span><span>Principal Name</span></p>
         <p><?php echo $school[0]->principle_name; ?></p>
       </li>
       <li>
-        <div class="numbering">6</div>
-        <p style="color: #e86549;">GSP Coordinator Name</p>
+         <p class="orange"><span>9</span><span>GSP Coordinator Name</span></p>
         <p><?php echo $school[0]->coname; ?></p>
       </li>
       <li>
-        <div class="numbering">7</div>
-        <p style="color: #e86549;">GSP Coordinator Email</p>
+        <p class="orange"><span>10</span><span>GSP Coordinator Email</span></p>
         <p><?php echo $school[0]->coemail; ?></p>
       </li>
       <li>
-        <div class="numbering">8</div>
-        <p style="color: #e86549;">GSP Coordinator Mobile Number</p>
+         <p class="orange"><span>11</span><span>GSP Coordinator Mobile Number</span></p>
         <p>(ISD) 91  &nbsp;&nbsp; (Number) <?php echo $school[0]->comobile; ?></p>
       </li>
       <li>
-        <div class="numbering">9</div>
-        <p style="color: #e86549;">Category Of The School</p>
+        <p class="orange"><span>12</span><span>Category Of The School</span></p>
         <p>
           <?php
                             $arr = array(
@@ -125,8 +114,7 @@
           <?php echo (getFiled('Q1S1', $schoolUserID) != '') ? $arr[getFiled('Q1S1', $schoolUserID)] : ""; ?></p>
       </li>
       <li>
-        <div class="numbering">10</div>
-        <p style="color: #e86549;">Category For Your School (Not Applicable in Case of Residential Category)</p>
+         <p class="orange"><span>13</span><span>Category For Your School (Not Applicable in Case of Residential Category)</span></p>
         <p>
           <?php
                             $arr1 = array(
@@ -140,13 +128,11 @@
     </ul>
   </div>
 </div>
-<div style="text-align: center; padding: 0;">&nbsp;&nbsp;&nbsp;&nbsp;</div>
-<h2 class="heading">General Questions</h2>
+<h2 class="heading page_break">General Questions</h2>
 <div class="wrapper">
   <ul class="list">
     <li>
-      <div class="numbering">1</div>
-      <p style="color: #e86549;">How many levels does your school have? Please choose what is applicable.</p>
+      <p class="orange"><span>1</span><span>How many levels does your school have? Please choose what is applicable.</span></p>
     <p class="formanswertext"> Lowest level of grade:<?php echo getFiled('Q1G1',
                         $schoolUserID);
                     ?> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Highest level of grade:<?php echo getFiled('Q1G2',
@@ -154,8 +140,7 @@
                     ?></p>
     </li>
     <li>
-      <div class="numbering">2</div>
-      <p style="color: #e86549;">Is your school single gender or mixed gender?</p>
+      <p class="orange"><span>2</span><span> Is your school single gender or mixed gender?</span></p>
       <p>
         <?php
                         if (getFiled('Q2G1', $schoolUserID) == 1):
