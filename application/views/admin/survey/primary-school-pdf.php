@@ -2,7 +2,7 @@
 <head>
 <meta charset="utf-8">
 <title>Green School Programms Audit Portal</title>
-<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/css/pdf.css" media="all">
+<link href="assets/css/pdf.css" rel="stylesheet">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js "></script>
 <script type="text/php">
 	if ( isset($pdf) ) {
