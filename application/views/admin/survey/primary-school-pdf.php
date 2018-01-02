@@ -3,34 +3,17 @@
 <meta charset="utf-8">
 <title>Green School Programms Audit Portal</title>
 <link href="assets/css/pdf.css" rel="stylesheet">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js "></script>
+</head>
+<body>
 <script type="text/php">
+	<?php
 	if ( isset($pdf) ) {
 	$font = Font_Metrics::get_font("helvetica", "bold");
 	$pdf->page_text(280, 15, "{PAGE_NUM} of {PAGE_COUNT}", $font, 10, array(0,0,0));
-	}
+	} 
+	?>
 </script>
-<style type="text/css">
-.numbering{ display:block; text-align: center; font-size: 13px; width:76px; height: 25px; padding-top: 7px; background: #e86549; color: #fff;  margin: 0 15px 0 0; float:left;}
-.text {color: #e86549; padding:0px 20px; float:left; display: inline!important; position:relative;}
-.list li p.orange {color: #e86549; padding: 0;}
-.answer{ margin: 0px 125px!important; font-size: 14px; margin: 0px; display:block!important;}
-.list li p:first-child {color: #e86549; padding:10px 0 0 95px!important; }
-.list li p {padding:10px 0 0 95px!important; font-size: 14px; margin: 0px;}
-.heading {text-transform: uppercase; color: #fff; background: #9397a0; padding: 8px 20px; margin: 0px; font-size: 18px; position: relative;}
-.heading.section {padding-left: 100px; margin: 20px 0 10px;}
-.heading.section > img {margin-left: -10px;}
-.heading.section:before {content: ''; width: 15px; height: 100%; background: #fff; position: absolute; left: 0; top: 0;}
-.heading.air {background: #d5bb2b!important;}
-.heading.energy {background: #e29e15;}
-.heading.food {background: #f153a8;}
-.heading.land {background: #a5b642;}
-.heading.water {background: #0072bc;}
-.heading.waste {background: #7265ad;}
-.heading.section > img {position: absolute; left: 0; top: -25px;}
-</style>
-</head>
-<body>
+
 <div class="cover"> <img src="assets/img/images/logo.png" width="436" height="118" class="logo">
   <h1>Responses For Green Schools Programme Audit 2015</h1>
  <div class="school-detail">
