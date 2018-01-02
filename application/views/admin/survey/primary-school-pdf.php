@@ -1705,7 +1705,7 @@
   <?php } ?>
 </div>
 <div style="text-align: center; padding: 0;">&nbsp;&nbsp;&nbsp;&nbsp;</div>
-<h2 class="heading section land page_break"><img src="<?php echo base_url() ?>assets/img/images/land.png" width="94" height="94">Land(Primary)</h2>
+<h2 class="heading section land page_break"><img src="assets/img/images/land.png" width="94" height="94">Land(Primary)</h2>
 <div class="wrapper">
   <div class="task-area">
     <h3 class="task">Task 1: Land Audit Team</h3>
@@ -1963,7 +1963,7 @@
       should not exceed 500 KB.</p>
   </div>
   <?php
-            $arrImages = getUploadData(str_replace(' ', '_', $school->name) . '_Green_Cover_', $schoolUserID);
+            $arrImages = getUploadData(str_replace(' ', '_', $school[0]->name) . '_Green_Cover_', $schoolUserID);
 
             if (!empty($arrImages)) {
                 ?>
@@ -1975,8 +1975,8 @@
       </tr>
       <?php foreach ($arrImages as $a) { ?>
       <tr>
-        <td><img src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
-        <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Green_Cover_"), " ", $a->file_name); ?></td>
+        <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+        <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Green_Cover_"), " ", $a->file_name); ?></td>
       </tr>
       <?php } ?>
     </table>
