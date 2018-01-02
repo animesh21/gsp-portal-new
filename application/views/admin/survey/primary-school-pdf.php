@@ -116,10 +116,8 @@
   <ul class="list">
     <li>
       <p class="orange"><span>1</span><span>How many levels does your school have? Please choose what is applicable.</span></p>
-    <p class="formanswertext"> Lowest level of grade:<?php echo getFiled('Q1G1',
-                        $schoolUserID);
-                    ?> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Highest level of grade:<?php echo getFiled('Q1G2',
-                        $schoolUserID);
+    <p class="formanswertext"> Lowest level of grade:<?php echo getFiled('Q1G1', $schoolUserID);
+                    ?> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Highest level of grade:<?php echo getFiled('Q1G2', $schoolUserID);
                     ?></p>
     </li>
     <li>
@@ -138,8 +136,7 @@
       </p>
     </li>
     <li>
-      <div class="numbering">3</div>
-      <p style="color: #e86549;"> Which board of education does the school follow?</p>
+       <p class="orange"><span>3</span><span> Which board of education does the school follow?</span></p>
       <p>
         <?php
                         if (getFiled('Q3G1', $schoolUserID) == 1):
@@ -159,13 +156,11 @@
       </p>
     </li>
     <li>
-      <div class="numbering">3.1</div>
-      <p style="color: #e86549;">Select State for Board of Education:</p>
+      <p class="orange"><span>3.1</span><span> Select State for Board of Education:</span></p>
       <p><?php echo (getFiled('Q3G2', $schoolUserID) != "") ? getFiled('Q3G2', $schoolUserID) : "N/A"; ?></p>
     </li>
     <li>
-      <div class="numbering">4</div>
-      <p style="color: #e86549;">Total population of the school</p>
+       <p class="orange"><span>4</span><span> Total population of the school</span></p>
       <table class="table">
         <tr>
           <th></th>
@@ -201,24 +196,20 @@
       </p>
     </li>
     <li>
-      <div class="numbering">4(b)</div>
-      <p style="color: #e86549;"> How many visitors visit your school </p>
+       <p class="orange"><span class="cube">4(b)</span>How many visitors visit your school </p>
       <p><?php echo (getFiled('Q5G1', $schoolUserID) != "") ? getFiled('Q5G1', $schoolUserID) : "N/A"; ?></p>
     </li>
     <li>
-      <div class="numbering">4(c)</div>
-      <p style="color: #e86549;">How many family members stay in the
+      <p class="orange"><span class="cube">4(c)</span>How many family members stay in the
         school campus? </p>
       <p><?php echo (getFiled('Q5G2', $schoolUserID) != "") ? getFiled('Q5G2', $schoolUserID) : "N/A"; ?> </p>
     </li>
     <li>
-      <div class="numbering">5</div>
-      <p style="color: #e86549;">What is the total number of working days of your school in a year?</p>
+      <p class="orange"><span>5</span><span> What is the total number of working days of your school in a year?</span></p>
       <p><?php echo (getFiled('Q6G1', $schoolUserID) != "") ? getFiled('Q6G1', $schoolUserID) : "N/A"; ?></p>
     </li>
     <li>
-      <div class="numbering">6</div>
-      <p style="color: #e86549;">Month(s) in which the GSP audit was carried out?</p>
+       <p class="orange"><span>6</span><span> Month(s) in which the GSP audit was carried out?</span></p>
       <p>
         <?php
                         if (getFiled('Q7G1', $schoolUserID) == 1) {
@@ -261,8 +252,7 @@
       </p>
     </li>
     <li>
-      <div class="numbering">7</div>
-      <p style="color: #e86549;">Where is the school located?</p>
+      <p class="orange"><span>7</span><span> Where is the school located?</span></p>
       <p>
         <?php
                         if (getFiled('Q8G1', $schoolUserID) == 1) {
@@ -275,8 +265,7 @@
       </p>
     </li>
     <li>
-      <div class="numbering">8</div>
-      <p style="color: #e86549;"> Whether your school is:</p>
+     <p class="orange"><span>8</span> <span>Whether your school is:</span></p>
       <p>
         <?php
                         if (getFiled('Q9G1', $schoolUserID) == 1) {
