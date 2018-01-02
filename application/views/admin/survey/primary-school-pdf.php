@@ -1242,7 +1242,7 @@
   </div>
 </div>
 <div style="text-align: center; padding: 0;">&nbsp;&nbsp;&nbsp;&nbsp;</div>
-<h2 class="heading section food page_break"><img src="<?php echo base_url() ?>assets/img/images/food.png" width="94" height="94">Food(Primary)</h2>
+<h2 class="heading section food page_break"><img src="assets/img/images/food.png" width="94" height="94">Food(Primary)</h2>
 <div class="wrapper">
   <div class="task-area">
     <h3 class="task">Task 1: Food Audit Team</h3>
@@ -1399,7 +1399,7 @@
         <p style="color: #e86549;">
           <label class="control-label">Please upload picture of Mid-day meal being served</label>
         <p>
-        <table class="table">
+       <table class="table">
           <tr>
             <th>image</th>
             <th>File name</th>
@@ -1407,7 +1407,7 @@
           <?php foreach ($midDayMeal as $f) { ?>
           <tr id="index<?php echo $f->id; ?>">
             <?php $name = str_replace(" ", "_", $f->name . "_Mid_Day_Meal_"); ?>
-            <td><img src="<?php echo base_url('uploads/files/' . $f->file_name); ?>" class="img-thumbnail" style="height:80px;width:80px;"></img></td>
+            <td><img src="<?php echo 'uploads/files/' . $f->file_name ?>" class="img-thumbnail" style="height:80px;width:80px;"></img></td>
             <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
           </tr>
           <?php } ?>
@@ -1617,8 +1617,8 @@
           following formats: PDF Document (.pdf), Word Document .doc, .docx), Image File (.jpg, .jpeg). File size per document should not exceed 500 KB.</p>
       </li>
     </ul>
-    <?php
-                $arrImages = getUploadData(str_replace(' ', '_', $school->name) . '_Audit_Team_doing_Survey_', $schoolUserID);
+   <?php
+                $arrImages = getUploadData(str_replace(' ', '_', $school[0]->name) . '_Audit_Team_doing_Survey_', $schoolUserID);
                 if (!empty($arrImages)) {
                     ?>
     <div>
@@ -1629,8 +1629,8 @@
         </tr>
         <?php foreach ($arrImages as $a) { ?>
         <tr>
-          <td><img src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
-          <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Audit_Team_doing_Survey_"), " ", $a->file_name); ?></td>
+          <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+          <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Audit_Team_doing_Survey_"), " ", $a->file_name); ?></td>
         </tr>
         <?php } ?>
       </table>
@@ -1682,8 +1682,8 @@
       following formats: PDF Document .pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg). File
       size per document should not  exceed 500 KB.</p>
   </div>
-  <?php
-            $arrImages = getUploadData(str_replace(' ', '_', $school->name) . '_UPPF_', $schoolUserID);
+ <?php
+            $arrImages = getUploadData(str_replace(' ', '_', $school[0]->name) . '_UPPF_', $schoolUserID);
             if (!empty($arrImages)) {
                 ?>
   <div>
@@ -1694,8 +1694,8 @@
       </tr>
       <?php foreach ($arrImages as $a) { ?>
       <tr>
-        <td><img src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
-        <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_UPPF_"), " ", $a->file_name); ?></td>
+        <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+        <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_UPPF_"), " ", $a->file_name); ?></td>
       </tr>
       <?php } ?>
     </table>
