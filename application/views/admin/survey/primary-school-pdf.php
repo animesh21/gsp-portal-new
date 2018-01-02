@@ -55,7 +55,7 @@
       <li>
         <div class="numbering">1</div>
         <p style="color: #e86549;">Name of the School / Institution</p>
-        <p><?php echo $school->name; ?></p>
+        <p><?php echo $school['name']; ?></p>
       </li>
       <li>
         <div class="numbering">2</div>
