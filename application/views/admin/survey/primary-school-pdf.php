@@ -1230,7 +1230,7 @@
         </tr>
         <?php foreach ($arrImages as $a) { ?>
         <tr>
-          <td><img src="<?php uploads/files/<?php echo $a->file_name;  ?>" class="img-responsive" width="100" height="100" /></td>
+          <td><img src="uploads/files/<?php echo $a->file_name; ?>" class="img-responsive" width="100" height="100" /></td>
           <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name .'_Supporting_Document_Energy_'), " ", $a->file_name); ?></td>
         </tr>
         <?php } ?>
