@@ -35,7 +35,7 @@
   <h1>Responses For Green Schools Programme Audit 2015</h1>
  <div class="school-detail">
     <p><span>School Name:</span> <span><?php echo $school[0]->name; ?></span></p>
-    <p><span>Address:</span> <span><?php echo $school[0]->address1; ?>, <?php echo $school[0]->address2;?></span></p>
+    <p><span>Address:</span> <span><?php echo $school[0]->address1; ?></span></p>
     <p><span>Coordinator Name:</span> <span><?php echo $school[0]->coname; ?></span></p>
   </div>
   <div class="address-wrap"> <img src="assets/img/images/cover.png" width="100%">
@@ -60,7 +60,7 @@
       <li>
         <div class="numbering">2</div>
         <p style="color: #e86549;">Address</p>
-        <p><?php echo $school[0]->address1; ?>, <?php echo $school[0]->address2; ?></p>
+        <p><?php echo $school[0]->address1; ?> <br/> <?php echo $school[0]->address2; ?></p>
       </li>
       <li>
         <div class="numbering">2.1</div>
