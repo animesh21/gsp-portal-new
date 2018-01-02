@@ -800,7 +800,7 @@
     following formats: PDF Document (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg). File size per
     document should not exceed 500 KB.</p>
   <?php
-            $arrImages = getUploadData(str_replace(' ', '_', $school->name) . '_Supporting_Document_Air', $schoolUserID);
+            $arrImages = getUploadData(str_replace(' ', '_', $school[0]->name) . '_Supporting_Document_Air', $schoolUserID);
             
             if (!empty($arrImages)) {
                 ?>
@@ -812,8 +812,8 @@
       </tr>
       <?php foreach ($arrImages as $a) { ?>
       <tr>
-        <td><img src="<?php echo base_url() ?>/uploads/files/<?php echo $a->file_name; ?>" class="img-responsive" width="100" height="100" /></td>
-        <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Supporting_Document_Air"), " ", $a->file_name); ?></td>
+        <td><img src="uploads/files/<?php echo $a->file_name; ?>" class="img-responsive" width="100" height="100" /></td>
+        <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Supporting_Document_Air"), " ", $a->file_name); ?></td>
       </tr>
       <?php } ?>
     </table>
