@@ -60,7 +60,7 @@
       <li>
         <div class="numbering">2</div>
         <p style="color: #e86549;">Address</p>
-        <p><?php echo $school[0]->address1; ?>, <?php echo $school->address2; ?></p>
+        <p><?php echo $school[0]->address1; ?>, <?php echo $school[0]->address2; ?></p>
       </li>
       <li>
         <div class="numbering">2.1</div>
@@ -147,37 +147,11 @@
     <li>
       <div class="numbering">1</div>
       <p style="color: #e86549;">How many levels does your school have? Please choose what is applicable.</p>
-      <table class="table question1ge tick">
-        <tr>
-          <th width="16%">Pre-Primary</th>
-          <th width="6%">1st</th>
-          <th width="6%">2nd</th>
-          <th width="6%">3rd</th>
-          <th width="6%">4th</th>
-          <th width="6%">5th</th>
-          <th width="6%">6th</th>
-          <th width="6%">7th</th>
-          <th width="6%">8th</th>
-          <th width="6%">9th</th>
-          <th width="6%">10th</th>
-          <th width="6%">11th</th>
-          <th width="6%">12th</th>
-        </tr>
-        <tr>
-          <td class="answer_cell_00SQ004 question-item answer-item  checkbox-item"><img src="images/1445961880_cross.png"> </td>
-          <td class="answer_cell_00SQ004 question-item answer-item  checkbox-item"><img src="images/1445961880_cross.png"> </td>
-          <td class="answer_cell_00SQ004 question-item answer-item  checkbox-item"><img src="images/1445961880_cross.png"> </td>
-          <td class="answer_cell_00SQ004 question-item answer-item  checkbox-item"><img src="images/1445961880_cross.png"> </td>
-          <td class="answer_cell_00SQ004 question-item answer-item  checkbox-item"><img src="images/1445961880_cross.png"> </td>
-          <td class="answer_cell_00SQ004 question-item answer-item  checkbox-item"><img src="images/1445961880_cross.png"> </td>
-          <td class="answer_cell_00SQ004 question-item answer-item  checkbox-item"><img src="images/1445961880_cross.png"> </td>
-          <td class="answer_cell_00SQ004 question-item answer-item  checkbox-item"><img src="images/1445961880_cross.png"> </td>
-          <td class="answer_cell_00SQ004 question-item answer-item  checkbox-item"><img src="images/1445961880_cross.png"> </td>
-          <td class="answer_cell_00SQ004 question-item answer-item  checkbox-item"><img src="images/1445961880_cross.png"> </td>
-          <td class="answer_cell_00SQ004 question-item answer-item  checkbox-item"><img src="images/1445961880_cross.png"> </td>
-          <td class="answer_cell_00SQ004 question-item answer-item  checkbox-item"><img src="images/1445961880_cross.png"> </td>
-        </tr>
-      </table>
+    <p class="formanswertext"> Lowest level of grade:<?php echo getFiled('Q1G1',
+                        $schoolUserID);
+                    ?> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Highest level of grade:<?php echo getFiled('Q1G2',
+                        $schoolUserID);
+                    ?></p>
     </li>
     <li>
       <div class="numbering">2</div>
@@ -350,7 +324,7 @@
       </p>
   </ul>
 </div>
-<h2 class="heading section air page_break"><img src="<?php echo base_url() ?>assets/img/images/air.png" width="94" height="94">Air(Primary)</h2>
+<h2 class="heading section air"><img src="assets/img/images/air.png" width="94" height="94">Air</h2>
 <div class="wrapper">
   <div class="task-area">
     <h3 class="task">Task 1: Air Audit Team</h3>
