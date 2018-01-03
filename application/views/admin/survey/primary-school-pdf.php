@@ -2306,19 +2306,19 @@
         <p> <?php echo (getFiled('Q8W2S2S2', $schoolUserID) != "") ? (getFiled('Q8W2S2S2', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
       </li>
       <li>
-        <p class="orange"><span class="cube">4 (b)(2) A</span>If yes, please provide: </p>
+        <p class="orange"><span class="cube">4b2A</span>If yes, please provide: </p>
         <p> <strong>Total number of storage tank (litres): </strong><br/>
           <?php echo (getFiled('Q8W2S2S3', $schoolUserID) != "") ? getFiled('Q8W2S2S3', $schoolUserID) : "N/A"; ?></p>
       </li>
       <li>
-       <p class="orange"><span class="cube">4(b)(2) B</span>If yes, please provide: </p>
+       <p class="orange"><span class="cube">4b2B</span>If yes, please provide: </p>
         <p style="color: #e86549;">If yes, please provide: </p>
         <p><strong>Total capacity of each storage tank
           (litres): </strong><br/>
           <?php echo (getFiled('Q8W2S2S4', $schoolUserID) != "") ? getFiled('Q8W2S2S4', $schoolUserID) : "N/A"; ?> </p>
       </li>
       <li>
-         <p class="orange"><span class="cube">4(b)(2) C</span>Location of tanks:</p>
+         <p class="orange"><span class="cube">4b2C</span>Location of tanks:</p>
         <ul>
           <?php
                     if (getFiled('Q8W2S2S5', $schoolUserID) == 1):
@@ -2339,7 +2339,7 @@
         </ul>
       </li>
       <li>
-        <p class="orange"><span class="cube">4(b)(2) D</span>Material options for tanks:</p>
+        <p class="orange"><span class="cube">4b2D</span>Material options for tanks:</p>
         <ul>
           <?php
                     if (getFiled('Q8W2S2S6', $schoolUserID) == 1):
@@ -2357,12 +2357,12 @@
         </ul>
       </li>
       <li>
-       <p class="orange"><span class="cube">4.1(b)(3)Does your school have groundwater recharge
+	      <p class="orange"><span class="cube">4b3</span>Does your school have groundwater recharge
           structure? </p>
         <p> <?php echo (getFiled('Q8W2S2S7', $schoolUserID) != "") ? (getFiled('Q8W2S2S7', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
       </li>
       <li>
-        <p class="orange"><span class="cube">4.1(b)(3) i</span>Please tick the type of groundwater recharge
+        <p class="orange"><span class="cube">4b3i</span>Please tick the type of groundwater recharge
         structure used in your school: </p>
         <p>
           <?php
@@ -2387,7 +2387,7 @@
       </li>
       <li>
 	  
-        <div class="numbering">4.1.(c)</div>
+        <div class="numbering">4c</div>
         <p style="color: #e86549;">
        Does your school clean your catchment and system
         </p>
@@ -2845,7 +2845,7 @@
         </p>
       </li>
       <li>
-        <div class="numbering">2.2.(a)</div>
+        <div class="numbering">2.2a</div>
          <p class="orange"><span class="cube">2(a)</span> How many categories does your school
           segregate waste into?</p>
         <table class="table">
