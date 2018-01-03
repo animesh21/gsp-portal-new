@@ -26,11 +26,11 @@
       <div class="panel-heading">Select Filters</div>
       <form method="post" id="frmSendblukemail">
         <div class="panel-body">
-        <div class="form-group">
+        <div class="form-group col-md-12">
           <label>Subject:</label>
           <input type="text" class="form-control" name="subject" id="subject">
         </div>
-        <div class="form-group">
+        <div class="form-group col-md-12">
           <label for="pwd">Message:</label>
           <textarea class="form-control" id="message" name="message"></textarea>
         </div>
@@ -54,28 +54,113 @@
           <ul class="list-unstyled list-inline" style="margin:0; padding:0;">
             <li>
               <label class="radio-inline">
-              <input type="radio" value="=5" name="progress" id="progress"  />
-              Progress equal to 5</label>
+              <input type="radio" value="" name="progress" id="progress" onclick="get_all_submit_shcool();"  />
+              Audit Submitted</label>
             </li>
             <li>
               <label class="radio-inline">
-              <input type="radio" value=" < 50" name="progress" id="progress" />
-              Progress greater than 5% but less than 50% or equal</label>
+              <input type="radio" value=" =100" name="progress" id="progress" />
+              100 percent </label>
             </li>
             <li>
               <label class="radio-inline">
-              <input type="radio" value=" BETWEEN 50 AND 75" name="progress" id="progress"  />
-              Progress greater than 50% but less than 75% or equal</label>
+              <input type="radio" value=" =75" name="progress" id="progress" />
+              75 percent</label>
             </li>
             <li>
               <label class="radio-inline">
-              <input type="radio" value="=100" name="progress" id="progress" />
-              Progress complete 100%</label>
+              <input type="radio" value="=50" name="progress" id="progress" />
+              50 percent</label>
             </li>
             <li>
               <label class="radio-inline">
-              <input type="radio" value=" BETWEEN 75 AND 100" name="progress" id="progress" />
-              75% Uncomplete</label>
+              <input type="radio" value=" BETWEEN 10 AND 40" name="progress" id="progress"  />
+              10-40 percent</label>
+            </li>
+            <li>
+              <label class="radio-inline">
+              <input type="radio" value=" =5" name="progress" id="progress"  />
+              5 percent</label>
+            </li>
+          </ul>
+        </div>
+		<div class="form-group col-md-12">
+          <label for="pwd">Select School Category :</label>
+          <ul class="list-unstyled list-inline" style="margin:0; padding:0;">
+            <li>
+              <label class="radio-inline">
+              <input type="radio" value="" name="school_category" id="school_category"/>
+              Day Scholar</label>
+            </li>
+            <li>
+              <label class="radio-inline">
+               <input type="radio" value="" name="school_category" id="school_category"/>
+             Day Boarding </label>
+            </li>
+			<li>
+              <label class="radio-inline">
+              <input type="radio" value="" name="school_category" id="school_category"/>
+              Residential</label>
+            </li>
+            <li>
+              <label class="radio-inline">
+               <input type="radio" value="" name="school_category" id="school_category"/>
+              Day Scholar + Day Boarding </label>
+            </li>
+			<li>
+              <label class="radio-inline">
+              <input type="radio" value="" name="school_category" id="school_category"/>
+              Day Boarding + Residential</label>
+            </li>
+            <li>
+              <label class="radio-inline">
+               <input type="radio" value="" name="school_category" id="school_category"/>
+              Day Scholar + Residential </label>
+            </li>
+			 <li>
+              <label class="radio-inline">
+               <input type="radio" value="" name="school_category" id="school_category"/>
+              Day Scholar + Day Boarding + Residential </label>
+            </li>
+          </ul>
+        </div>
+		<div class="form-group col-md-4">
+          <label for="pwd">Select School Type :</label>
+          <ul class="list-unstyled list-inline" style="margin:0; padding:0;">
+            <li>
+              <label class="radio-inline">
+              <input type="radio" value="" name="school_type" id="school_type"/>
+             Only boys  </label>
+            </li>
+            <li>
+              <label class="radio-inline">
+               <input type="radio" value="" name="school_type" id="school_type"/>
+             Only Girls   </label>
+            </li>
+			 <li>
+              <label class="radio-inline">
+               <input type="radio" value="" name="school_type" id="school_type"/>
+              Mixed/Co-education </label>
+            </li>
+          </ul>
+        </div>
+		<div class="form-group col-md-8">
+          <label for="pwd">Select Type of Aid:</label>
+          <ul class="list-unstyled list-inline" style="margin:0; padding:0;">
+            <li>
+              <label class="radio-inline">
+              <input type="radio" value="" name="school_aid" id="school_type"/>
+              Government School</label>
+            </li>
+            <li>
+              <label class="radio-inline">
+               <input type="radio" value="" name="school_aid" id="school_type"/>
+              Government - Aided School </label>
+            </li>
+			 <li>
+              <label class="radio-inline">
+               <input type="radio" value="" name="school_aid" id="school_type"/>
+              Private School </label>
             </li>
           </ul>
         </div>
@@ -85,12 +170,13 @@
           <input type="checkbox" name="email_list_all" id="email_list_all" style="opacity: 0.8; margin-top:-1px;" />
           <br/>
           <br/>
-          <table id="email_table"  class="display dataTable no-footer tablepluging" cellspacing="0" style="width:100%;">
+          <table id="tablePerformance1" class="display dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
             <thead>
               <tr>
                 <th>Sr. No.</th>
                 <th>School Id</th>
                 <th>List Of Email-Id</th>
+                <th>Progress</th>
                 <th>Check</th>
               </tr>
             </thead>
@@ -102,6 +188,7 @@
       </form>
     </div>
   </div>
+</div>
 </div>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript">
