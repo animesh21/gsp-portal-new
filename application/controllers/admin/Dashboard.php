@@ -19,19 +19,21 @@ class Dashboard extends CI_Controller {
     public function index() {
         $data['main']='admin/dashboard/index';
         $data['title']='Home | Dashboard';
-		$data['audit1']=$this->Dashboard_model->getschool_started_audit();
+		
+		$data['audit1']=$this->Dashboard_model->getschool_started_audit_phase_2();
 		//echo '<pre>'; print_r($data['audit1']);exit();
         $data['Schools'] = $this->School_model->getSchools();
         $data['schoolcount']=$this->Dashboard_model->schoolCount();
 		$data['completecount']=$this->Dashboard_model->getschool_that_complete_audit();
-	        $data['submitcount']=$this->Dashboard_model->getschool_that_submit_audit();
+		$data['submitcount']=$this->Dashboard_model->getschool_that_submit_audit();
 		$data['uncompletecount']=$this->Dashboard_model->getschool_start_but_not_complete();
 		$data['notstartcount']=$this->Dashboard_model->getschools_not_start_the_audit();
 		//echo '<pre>'; print_r($data['uncompletecount']);exit();
         $this->load->view('admin/includes/template', $data);
     }
     
-   public function audit_pahse_1(){
+	
+	public function audit_pahse_1(){
 	    $data['main']='admin/dashboard/audit-pahse-1';
         $data['title']='Home | Audit Phase 1';
 		$data['audit1']=$this->Dashboard_model->getschool_started_audit();
@@ -174,6 +176,7 @@ class Dashboard extends CI_Controller {
 		$data['notstart']=$this->Dashboard_model->schools_not_start_the_audit_phase_2();
 		$this->load->view('admin/includes/template', $data);
 	}
+ 
  
 }
 	
