@@ -31,14 +31,38 @@ class Dashboard extends CI_Controller {
         $this->load->view('admin/includes/template', $data);
     }
     
+   public function audit_pahse_1(){
+	    $data['main']='admin/dashboard/audit-pahse-1';
+        $data['title']='Home | Audit Phase 1';
+		$data['audit1']=$this->Dashboard_model->getschool_started_audit();
+        $data['Schools'] = $this->School_model->getSchools();
+        $data['schoolcount']=$this->Dashboard_model->schoolCount();
+		$data['completecount']=$this->Dashboard_model->getschool_that_complete_audit();
+		$data['submitcount']=$this->Dashboard_model->getschool_that_submit_audit();
+		$data['uncompletecount']=$this->Dashboard_model->getschool_start_but_not_complete();
+		$data['notstartcount']=$this->Dashboard_model->getschools_not_start_the_audit();
+	    $this->load->view('admin/includes/template', $data);
+	}
+	
+	public function audit_pahse_2(){
+	    $data['main']='admin/dashboard/audit-pahse-2';
+        $data['title']='Home | Audit Phase 2';
+		$data['audit1']=$this->Dashboard_model->getschool_started_audit_phase_2();
+        $data['Schools_pahse2'] = $this->School_model->getSchools_phase_2();
+        $data['schoolcount']=$this->Dashboard_model->schoolCount();
+		$data['completecount']=$this->Dashboard_model->getschool_that_complete_audit_phase_2();
+		$data['submitcount']=$this->Dashboard_model->getschool_that_submit_audit_phase_2();
+		$data['uncompletecount']=$this->Dashboard_model->getschool_start_but_not_complete();
+		$data['notstartcount']=$this->Dashboard_model->getschools_not_start_the_audit_phase_2();
+	    $this->load->view('admin/includes/template', $data);
+	}
+	
     public function  registration_2017()
     {
         $data['main']='admin/audit/register_2017';
         $data['title']='Registration 2017';
         $data['record']=$this->Dashboard_model->getData();
-		//echo '<pre>'; print_r($data['record']);exit();
         $data['Schools'] = $this->School_model->getSchools();
-		//echo '<pre>'; print_r($data['Schools']);exit();
         $data['schoolcount']=$this->Dashboard_model->schoolCount();
         $this->load->view('admin/includes/template', $data);
     }
@@ -46,11 +70,9 @@ class Dashboard extends CI_Controller {
 	public function total_school_registration()
 	{
 		$data['main']='admin/audit/total_school';
-		$data['title']='Total no. of school';
-		 
+		$data['title']='Total no. of school'; 
 		$data['records']=$this->Dashboard_model->totalschool();
-		//echo '<pre>'; print_r($data['records']);exit();
-		 $this->load->view('admin/includes/template', $data);
+		$this->load->view('admin/includes/template', $data);
 	}
 	
 	public function school_that_started_audit()
@@ -64,7 +86,6 @@ class Dashboard extends CI_Controller {
 	{
 		$data['main']='admin/audit/complete_school';
 		$data['complete']=$this->Dashboard_model->school_that_complete_audit();
-		//echo '<pre>'; print_r($data['complete']);exit();
 		$this->load->view('admin/includes/template', $data);
 	}
 	
@@ -72,7 +93,6 @@ class Dashboard extends CI_Controller {
 	{
 		$data['main']='admin/audit/complete_audit_submit';
 		$data['complete_submit']=$this->Dashboard_model->getschool_that_submit_audit_data();
-		//echo '<pre>'; print_r($data['complete']);exit();
 		$this->load->view('admin/includes/template', $data);
 	}
 	
@@ -80,7 +100,6 @@ class Dashboard extends CI_Controller {
 	{
 		$data['main']='admin/audit/uncomplete_school';
 		$data['uncomplete']=$this->Dashboard_model->school_start_but_not_complete();
-		//echo '<pre>'; print_r($data['uncomplete']);exit();
 		$this->load->view('admin/includes/template', $data);
 	}
 	
@@ -88,9 +107,73 @@ class Dashboard extends CI_Controller {
 	{
 		$data['main']='admin/audit/notstart_school';
 		$data['notstart']=$this->Dashboard_model->schools_not_start_the_audit();
-		//echo '<pre>'; print_r($data['notstart']);exit();
 		$this->load->view('admin/includes/template', $data);
 	}
-
+     
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	  public function  registration_2017_phase_2()
+    {
+        $data['main']='admin/audit/register_2017_phase_2';
+        $data['title']='Registration 2017';
+        $data['record']=$this->Dashboard_model->getData_phase_2();
+        $data['Schools'] = $this->School_model->getSchools_phase_2();
+        $data['schoolcount']=$this->Dashboard_model->schoolCount_phase_2();
+        $this->load->view('admin/includes/template', $data);
+    }
+	
+	public function total_school_registration_phase_2()
+	{
+		$data['main']='admin/audit/total_school_phase_2';
+		$data['title']='Total no. of school'; 
+		$data['records']=$this->Dashboard_model->totalschool_phase_2();
+		$this->load->view('admin/includes/template', $data);
+	}
+	
+	public function school_that_started_audit_phase_2()
+	{
+		$data['main']='admin/audit/started_audit_phase_2';
+		$data['audit']=$this->Dashboard_model->school_started_audit_phase_2();
+		$this->load->view('admin/includes/template', $data);
+	}
+	
+	public function school_that_complete_audit_phase_2()
+	{
+		$data['main']='admin/audit/complete_school_phase_2';
+		$data['complete']=$this->Dashboard_model->school_that_complete_audit_phase_2();
+		$this->load->view('admin/includes/template', $data);
+	}
+	
+	public function school_that_submit_audit_phase_2()
+	{
+		$data['main']='admin/audit/complete_audit_submit_phase_2';
+		$data['complete_submit']=$this->Dashboard_model->getschool_that_submit_audit_data_phase_2();
+		$this->load->view('admin/includes/template', $data);
+	}
+	
+	public function audit_started_but_not_complete_phase_2()
+	{
+		$data['main']='admin/audit/uncomplete_school_phase_2';
+		$data['uncomplete']=$this->Dashboard_model->school_start_but_not_complete_phase_2();
+		$this->load->view('admin/includes/template', $data);
+	}
+	
+	public function schools_did_not_start_the_audit_phase_2()
+	{
+		$data['main']='admin/audit/notstart_school_phase_2';
+		$data['notstart']=$this->Dashboard_model->schools_not_start_the_audit_phase_2();
+		$this->load->view('admin/includes/template', $data);
+	}
+ 
 }
 	
