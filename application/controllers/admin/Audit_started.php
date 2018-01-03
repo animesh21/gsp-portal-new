@@ -191,7 +191,7 @@ class Audit_started extends CI_Controller {
 	$email_list="";
 	foreach($args_email_type as $args_email_type1):
 	if(strcmp($args_email_type1,"coemail")==0):
-	   $data=$this->db->select($args_email_type1.",id")->from('gsp_school')->where($condition)->get()->result();
+	   $data=$this->db->select("id,name,progress,state,district,".$args_email_type1)->from('gsp_school')->where($condition)->get()->result();
 	  //echo $this->db->last_query();die;
 	    
 	    foreach ($data as $data1): 
@@ -200,7 +200,7 @@ class Audit_started extends CI_Controller {
 		endif; 
 		
 	if(strcmp($args_email_type1,"schoolemail")==0):
-       $data=$this->db->select($args_email_type1.",id")->from('gsp_school')->where($condition)->get()->result();
+       $data=$this->db->select("id,name,progress,state,district,".$args_email_type1)->from('gsp_school')->where($condition)->get()->result();
 	   foreach ($data as $data1):    
 	  $email_list .='<tr class="even"><td>'.++$sr_no.'</td><td>'.$data1->id.'</td><td>'.$data1->schoolemail.'</td><td>'.$data1->progress.'</td><td><label class="checkbox-inline"><input type="checkbox" name="email_list[]" class="checkbox" value='.$data1->schoolemail.' style="opacity: 0.8; margin-top:-1px;" /></label></td></tr>';
 	   // echo $this->db->last_query();die;
