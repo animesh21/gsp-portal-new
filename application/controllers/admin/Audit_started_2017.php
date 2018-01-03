@@ -265,6 +265,70 @@ public function excel2017() {
 		    $this->dompdf->stream("welcome.pdf", array("Attachment" => false));
         
     }
+	
+	
+function getdigitalCertificate($argID) {
+   $data['title']="GSP Digital Certificates";
+   $this->load->library('dompdf_lib');
+   //Students Records
+   $students = $this->count_certificates_stuents($argID);
+   $staffadmin = $this->count_certificates_staffamin($argID);
+//    echo '<pre>';
+//    print_r($students);
+//    echo '<pre>';
+//    print_r($staffadmin);
+//    exit;
+   $data['students'] = $students;
+   $data['staffadmin'] = $staffadmin;
+   $html1 = $this->load->view('admin/survey/digital-certificate', $data, true);
+   $this->dompdf->load_html($html1);
+   $this->dompdf->render();
+   $this->dompdf->stream("Digital Certificate.pdf", array("Attachment" => false));
+  }
+	
+	public function count_certificates_stuents($argID) {
+   //Stuents
+   $arrStudents = array();
+   $question_alphabet = array("A", "E", "F", "L", "W", "Wa");
+   foreach ($question_alphabet as $q) {
+       for ($i = 1; $i <= 10; $i++) {
+       //Students
+       $arrStudents[] = array(
+       'name' => getFiled("Q3".$q. $i . "S1", $argID) . " " . getFiled("Q3" .$q.$i . "S2", $argID),
+       'grade' => getFiled("Q3" .$q.$i . "S3", $argID)
+       );
+       }
+   }
+   return $arrStudents;
+  }
+
+  public function count_certificates_staffamin($argID) {
+   $airTeachers=array();
+   $arrStaff = array();
+   $question_alphabet = array("A", "E", "F", "L", "W", "Wa");
+   foreach ($question_alphabet as $q) {
+       //Teachers
+       for ($i = 1; $i <= 3; $i++) {
+       if((getFiled("Q1" . $q . $i . "S1", $argID) !="0") && (getFiled("Q1" . $q . $i . "S1", $argID) !='') || (getFiled("Q1" . $q . $i . "S3", $argID) !="0") && (getFiled("Q1" . $q . $i . "S3", $argID) !=''))
+       {
+       $airTeachers[] = getFiled("Q1" . $q . $i . "S1", $argID) . " " . getFiled("Q1" . $q . $i . "S3", $argID);
+       }
+       }
+       //Staff
+       for ($i = 1; $i <= 5; $i++) {
+       if((getFiled("Q2" . $q . $i . "S1", $argID) !="0") && (getFiled("Q2" . $q . $i . "S1", $argID) !='') || (getFiled("Q2" . $q . $i . "S3", $argID) !="0") && (getFiled("Q2" . $q . $i . "S3", $argID) !='')){
+       $arrStaff[$i] = getFiled("Q2" . $q . $i . "S1", $argID) . " " . getFiled("Q2" . $q . $i . "S3", $argID
+       );
+       }
+       }
+   }
+//    $value="0"." "."0";
+//    $temp= array_search($value, $arrStaff);
+//    print_r($temp);
+   //echo '<pre>'; print_r($airTeachers);
+   //echo '<pre>'; print_r($arrStaff);
+   return array_merge($airTeachers, $arrStaff);
+  }
 
     /*
      * Generate Response General
