@@ -400,7 +400,10 @@
 <script type="text/javascript">
 $.typeahead({
              input: '.schoolname',
-             order: "desc",
+             minLength: 1,
+             order: "asc",
+             offset: true,
+             hint: true,
              source: {
              data: [
             "KENDRIYA VIDYALAYA","Jawahar Navodaya Vidyalaya","Satya Bharti","Montfort","Zila Parishad","Mount Litera"
