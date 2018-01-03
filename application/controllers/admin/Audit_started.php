@@ -195,14 +195,14 @@ class Audit_started extends CI_Controller {
 	  //echo $this->db->last_query();die;
 	    
 	    foreach ($data as $data1): 
-		 $email_list .='<tr class="odd"><td>'.++$sr_no.'</td><td>'.$data1->id.'</td><td>'.$data1->coemail.'</td><td><label class="checkbox-inline"><input type="checkbox" class="checkbox" name="email_list[]" value='.$data1->coemail.' style="opacity: 0.8; margin-top:-1px;" /></label></td></tr>';
+			 $email_list .='<tr class="odd"><td>'.++$sr_no.'</td><td>'.$data1->id.'</td><td>'.$data1->coemail.'</td><td>'.$data1->progress.'</td><td><label class="checkbox-inline"><input type="checkbox" class="checkbox" name="email_list[]" value='.$data1->coemail.' style="opacity: 0.8; margin-top:-1px;" /></label></td></tr>';
 		endforeach;
 		endif; 
 		
 	if(strcmp($args_email_type1,"schoolemail")==0):
        $data=$this->db->select($args_email_type1.",id")->from('gsp_school')->where($condition)->get()->result();
 	   foreach ($data as $data1):    
-	  $email_list .='<tr class="even"><td>'.++$sr_no.'</td><td>'.$data1->id.'</td><td>'.$data1->schoolemail.'</td><td><label class="checkbox-inline"><input type="checkbox" name="email_list[]" class="checkbox" value='.$data1->schoolemail.' style="opacity: 0.8; margin-top:-1px;" /></label></td></tr>';
+	  $email_list .='<tr class="even"><td>'.++$sr_no.'</td><td>'.$data1->id.'</td><td>'.$data1->schoolemail.'</td><td>'.$data1->progress.'</td><td><label class="checkbox-inline"><input type="checkbox" name="email_list[]" class="checkbox" value='.$data1->schoolemail.' style="opacity: 0.8; margin-top:-1px;" /></label></td></tr>';
 	   // echo $this->db->last_query();die;
 	  endforeach;
 		 endif;
