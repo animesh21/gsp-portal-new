@@ -147,7 +147,7 @@
                             echo "Indian Certificate of Secondary Education";
                         elseif (getFiled('Q3G1', $schoolUserID) == 4):
                             echo "International Baccalaureate (IB)/International General Certificate of Secondary Education (IGCSE)
-                    combination"
+                    combination";
                         elseif (getFiled('Q3G1', $schoolUserID) == 5):
                             echo "  Others";
 
