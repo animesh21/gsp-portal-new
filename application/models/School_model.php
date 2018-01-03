@@ -143,6 +143,15 @@ class School_model extends CI_Model
         $row = $query->row();
         return $row->count;
     }
+    
+    public function getSchools_phase_2()
+    {
+	  $this->db->where('YEAR(date_added)', 2017);
+	  $this->db->where('date_added >', '2017-11-20 00:00:00');
+	  return $this->db->count_all_results('gsp_school');
+    }
+	
+        	
 
     public function getState($stateID)
     {
