@@ -49,6 +49,7 @@ class School_model extends CI_Model
     {
         $update = array(
             'userid' => $argPost['userid'],
+	    'udise' =>	$argPost['udise'],
             'name' => $argPost['name'],
             'address1' => $argPost['address1'],
             'address2' => $argPost['address2'],
