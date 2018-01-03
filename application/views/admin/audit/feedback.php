@@ -170,7 +170,7 @@
           <input type="checkbox" name="email_list_all" id="email_list_all" style="opacity: 0.8; margin-top:-1px;" />
           <br/>
           <br/>
-          <table id="tablePerformance1" class="display dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
+          <table id="email_table" class="display dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
             <thead>
               <tr>
                 <th>Sr. No.</th>
