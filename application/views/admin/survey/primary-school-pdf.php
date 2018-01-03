@@ -147,7 +147,7 @@
                             echo "Indian Certificate of Secondary Education";
                         elseif (getFiled('Q3G1', $schoolUserID) == 4):
                             echo "International Baccalaureate (IB)/International General Certificate of Secondary Education (IGCSE)
-                    combination";
+                    combination"
                         elseif (getFiled('Q3G1', $schoolUserID) == 5):
                             echo "  Others";
 
@@ -3545,8 +3545,7 @@
           <label class="control-label">Please upload supporting documents:</label>
         </p>
         <p>• Waste Policy</p>
-        <div class="numbering">6.2</div>
-        <p style="color: #e86549;">
+        <p class="orange"><span class="cube">6(a)</span> Who segregates the waste at source?</p>
           <label class="control-label">Are there awareness drives with regard to Reduce,
           Recycle and Reuse? <a class="kplink" href="http://www.greenschoolsprogramme.org/knowledge-bank/waste/#partnerInOperation" target="_blank"></a></label>
         </p>
@@ -3557,7 +3556,7 @@
           <label class="control-label">Please upload supporting documents:</label>
         </p>
         <p> • Pictures of various school initiatives e.g. rally, debate, street play, art competition, etc</p>
-        <p class="orange"><span class="cube">6(a)</span> Who segregates the waste at source?</p>
+        <p class="orange"><span class="cube">6(b)</span> Who segregates the waste at source?</p>
           <label class="control-label">What form do these awareness drives take? </label>
         </p>
         <p>
