@@ -2387,8 +2387,7 @@
       </li>
       <li>
 	  
-        <div class="numbering">4c</div>
-        <p style="color: #e86549;">
+        <p class="orange"><span class="cube">4b3ii</span>
        Does your school clean your catchment and system
         </p>
         <p> <?php echo (getFiled('Q8W2S61', $schoolUserID) != "") ? (getFiled('Q8W2S61', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
