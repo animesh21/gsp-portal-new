@@ -45,37 +45,42 @@
                             <div class="clearfix">&nbsp;</div>
                             <input type="text" class="form-control text empty" name="name" id="name" placeholder="Name of the School / Institution:" value="<?php echo ($school->name != '') ? $school->name : ""; ?>" >
                         </div>
+			 <div class="form-group">
+                            <label for="name" class="text-red"><span class="cube">2</span>Uid</label>
+                            <div class="clearfix">&nbsp;</div>
+                            <input type="text" class="form-control text empty" name="udise" id="udise" placeholder="udise of school" value="<?php echo ($school->udise != '') ? $school->udise : ""; ?>" >
+                        </div>
                         <div class="form-group">
-                            <label for="address1" class="control-label"><span class="cube">2</span>Address Line 1:</label>
+                            <label for="address1" class="control-label"><span class="cube">3</span>Address Line 1:</label>
                             <div class="clearfix">&nbsp;</div>
                             <input type="text" name="address1" id="address1" tabindex="1" class="form-control text empty"
                                    placeholder="Address 1" value="<?php echo ($school->address1 != '') ? $school->address1 : ""; ?>">
                         </div>
                         <div class="form-group">
-                            <label for="address2" class="control-label"><span class="cube">3</span>Address Line 2:</label>
+                            <label for="address2" class="control-label"><span class="cube">4</span>Address Line 2:</label>
                             <div class="clearfix">&nbsp;</div>
                             <input type="text" name="address2" id="username" tabindex="1" class="form-control text empty"
                                    placeholder="Address 2" value="<?php echo ($school->address2 != '') ? $school->address1 : ""; ?>">
                         </div>
                         <div class="form-group">
-                            <label for="username" class="control-label"><span class="cube">4</span>Country:</label>
+                            <label for="username" class="control-label"><span class="cube">5</span>Country:</label>
                             <div class="clearfix">&nbsp;</div>
                             <input type="text" name="username" id="username" tabindex="1" class="form-control text empty"
                                    placeholder="Country" value="India" disabled="disabled">
                         </div>
                         <div class="form-group">
-                            <label for="state" class="control-label"><span class="cube">5</span>State:</label>
+                            <label for="state" class="control-label"><span class="cube">6</span>State:</label>
                             <div class="clearfix">&nbsp;</div>
                             <?php echo form_dropdown('state', $states, set_value('state', $school->state), array('class' => 'form-control', 'id' => 'country-select', 'onchange' => 'getCities();')); ?>
 
                         </div>
                         <div class="form-group">
-                            <label for="district" class="control-label"><span class="cube">6</span>District:</label>
+                            <label for="district" class="control-label"><span class="cube">7</span>District:</label>
                             <div class="clearfix">&nbsp;</div>
                             <?php echo form_dropdown('district', $cities, set_value('district', $school->district), array('class' => 'form-control', 'id' => 'city-select')); ?>
                         </div>
                         <div class="form-group">
-                            <label for="city" class="control-label"><span class="cube">7</span>City:</label>
+                            <label for="city" class="control-label"><span class="cube">8</span>City:</label>
                             <div class="clearfix">&nbsp;</div>
                             <input type="text" class="form-control text empty" name="city" id="username" tabindex="1"
                                    placeholder="City" value="<?php echo ($school->city != '') ? $school->city : ""; ?>">
@@ -96,7 +101,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="pincode" class="control-label"><span class="cube">8</span>Pin Code:</label>
+                            <label for="pincode" class="control-label"><span class="cube">9</span>Pin Code:</label>
                             <div class="clearfix">&nbsp;</div>
                             <input type="number" class="form-control" name="pincode" id="username" tabindex="1" placeholder="Pin Code"
                                    value="<?php echo ($school->pincode != '') ? $school->pincode : ""; ?>" title="digits are allowed">
