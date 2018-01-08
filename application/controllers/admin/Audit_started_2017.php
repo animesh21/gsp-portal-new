@@ -37,6 +37,7 @@ class Audit_started_2017 extends CI_Controller {
 	   foreach($records as $record):
 		   $arr_school[]=array('sr_no'=>++$i,
 		    'id'=>$record->id,
+		    'udise'=>$record->udise,
 		    'name'=>$record->name,
 		   'userid'=>$record->userid,
 		    'state_name'=>$record->state_name,
