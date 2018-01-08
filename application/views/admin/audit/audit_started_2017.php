@@ -57,6 +57,7 @@
     <tr role="row">
       <th>S.No</th>
       <th>Sch.Id</th>
+      <th>Udise</th>
       <th>School Name</th>
       <th>State</th>
       <th>District</th>
@@ -135,7 +136,8 @@ function getBadgeCode(userid)
                  "aoColumns": [
 				        { mData: 'sr_no'},
 				        { mData: 'id' },
-                        { mData: 'name' },
+					 { mData: 'udise' },
+                        		{ mData: 'name' },
 						{ mData: 'state_name' },
 						{ mData: 'district_name' },
 						{ mData: 'city' },
