@@ -475,6 +475,7 @@ function getdigitalCertificate($argID) {
     {   
         $arrSchool=array(
             'name'=>$this->input->post('name'),
+	 'udise'=>$this->input->post('udise'),
             'address1'=>$this->input->post('address1'),
             'address2'=>$this->input->post('address2'),
             'state'=>$this->input->post('state'),
