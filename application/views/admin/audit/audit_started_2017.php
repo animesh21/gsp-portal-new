@@ -169,8 +169,7 @@ function getBadgeCode(userid)
 function sendResponseReport(schoolid,coemail){
  var subject="Response Report 2017";
  var message="Response Report 2017";
- var bodytext="Please download Response Report 2017 
- <br/><a href='<?php echo "http://www.greenschoolsprogramme.org/audit2017/responsreport/pdf/"?>"+schoolid+"'>Download</a>";
+ var bodytext="Please download Response Report 2017 <br/><a href='<?php echo "http://www.greenschoolsprogramme.org/audit2017/responsreport/pdf/"?>"+schoolid+"'>Download</a>";
  jQuery.ajax({
 	  url:"https://api.elasticemail.com/v2/email/send",
 	  type:"POST",
