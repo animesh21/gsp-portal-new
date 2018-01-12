@@ -261,4 +261,4 @@ function getBadgeCode(userid)
 }
 .content-form li a{ 
 	color: #000; }
-</style>
+</style> 
