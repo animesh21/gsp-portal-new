@@ -6,6 +6,7 @@
           <tr role="row">
             <th>S.No</th>
             <th>Sch.Id</th>
+	    <th>UDISE Code</th>
             <th>School Name</th>
             <th>pincode</th>
             <th>City</th>
@@ -26,6 +27,7 @@
             <tr role="row" class="<?php echo ($i%2==0) ? "even" : "odd"; ?>">
                 <td><?php echo $i; ?></td>
                 <td><?php echo $r->id; ?></td>
+		<td><?php echo $r->udise; ?></td>
                 <td><?php echo $r->name; ?></td>
                 <td><?php echo $r->pincode; ?></td>
                 <td><?php echo $r->city; ?></td>
