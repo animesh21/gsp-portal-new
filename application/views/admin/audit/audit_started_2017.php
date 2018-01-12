@@ -1,4 +1,4 @@
-
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
 <!----- Badge Model Code  ------>
 <div class="modal fade" id="myModal1" role="dialog">
   <div class="modal-dialog modal-md">
