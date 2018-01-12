@@ -76,6 +76,7 @@ class Audit_started_model extends CI_Model {
         $isdCode = '+91';
         $output .= '"S.No",';
         $output .= '"School ID",';
+	$output .= '"UDISE Code",';
         $output .= '"School Name",';
         $output .= '"Address1",';
         $output .= '"Address2",';
@@ -100,6 +101,7 @@ class Audit_started_model extends CI_Model {
         foreach ($arrRecord as $a) {
             $output .= '"' . $k . '",';
             $output .= '"' . $a->id . '",';
+	    $output .= '"' . $a->udise . '",';    
             $output .= '"' . $a->name . '",';
             $output .= '"' . $a->address1 . '",';
             $output .= '"' . $a->address2 . '",';
