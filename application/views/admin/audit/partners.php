@@ -1,3 +1,4 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
 <style type="text/css">
 .dropdown-menu {
     position: absolute;
@@ -51,24 +52,56 @@
     <button class="exportBtn">Export to Excel</button>
     </a></h2>
 </div>
-<table id="example1" class="display dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
-  <thead>
-    <tr role="row">
-      <th>S.No</th>
-      <th>Sch.Id</th>
-      <th>School Name</th>
-      <th>State</th>
-      <th>District</th>
-      <th>City</th>
-      <th>Co-ord. Name</th>
-      <th>Co-ord. Email</th>
-      <th>Co-ord. Mobile</th>
-      <th>Completeness</th>
-      <th>Reg. Date</th>
-      <th>Action</th>
-    </tr>
-  </thead>
-</table>
+<div id="exTab2" class="container">
+  <ul class="nav nav-tabs">
+    <li class="active"> <a  href="#1" data-toggle="tab">JAWAHAR NAVODYA VIDYALAYA</a> </li>
+    <li><a href="#2" data-toggle="tab">Montfort</a> </li>
+  </ul>
+  <div class="tab-content ">
+    <div class="tab-pane active" id="1">
+      <table id="example1" class="display dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
+        <thead>
+          <tr role="row">
+            <th>S.No</th>
+            <th>Sch.Id</th>
+			<th>UDISE Code</th>
+            <th>School Name</th>
+            <th>State</th>
+            <th>District</th>
+            <th>City</th>
+            <th>Co-ord. Name</th>
+            <th>Co-ord. Email</th>
+            <th>Co-ord. Mobile</th>
+            <th>Completeness</th>
+            <th>Reg. Date</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <div class="tab-pane" id="2">
+      <table id="example2" class="display dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
+        <thead>
+          <tr role="row">
+            <th>S.No</th>
+            <th>Sch.Id</th>
+			<th>UDISE Code</th>
+            <th>School Name</th>
+            <th>State</th>
+            <th>District</th>
+            <th>City</th>
+            <th>Co-ord. Name</th>
+            <th>Co-ord. Email</th>
+            <th>Co-ord. Mobile</th>
+            <th>Completeness</th>
+            <th>Reg. Date</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+  </div>
+</div>
 <div class="modal fade" id="myModal" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content" style="  height:150px;">
@@ -143,6 +176,7 @@ function getBadgeCode(userid)
                  "aoColumns": [
 				        { mData: 'sr_no'},
 				        { mData: 'id' },
+						{ mData: 'udise' },
                         { mData: 'name' },
 						{ mData: 'state_name' },
 						{ mData: 'district_name' },
@@ -155,19 +189,76 @@ function getBadgeCode(userid)
 						{ mData: 'id',
 						 "orderable": false,
                         "searchable": false,
-                        "render": function(data,type,row,meta) { // render event defines the markup of the cell text 
-                          /*  var a = '<a href="listing-house-details.php?listing_house='+row.list_id+'&invoice_id='+row.invoice_id+'&email="'+row.user_email+'">' + '<label class="label label-info">CPA</label>' +'</a>';*/ 
-						  
-						  // row object contains the row data
-						/*  
-						  var a='<div class="btn-group"><button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-chevron-down"></i></button><div class="dropdown-menu"><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/audit_started_2017/response/"); ?>'+row.id+'" title="View Responses"> <img src="<?php echo base_url() ?>assets/front/images/1446146277_view6.png"><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/audit_started_2017/pdf/"); ?>'+row.id+'" title="Download PDF"><img src="<?php echo base_url() ?>assets/front/images/1446327681_1-02.png" height="20" width="20"></a><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/audit_started_2017/edit/"); ?>'+row.id+'" title="Edit Record"><img src="<?php echo base_url() ?>assets/front/images/edit.png" height="20" width="20"></a><a class="dropdown-item" target="_self" onclick="Myfun('+row.id+')" title="Delete Record"><img src="<?php echo base_url() ?>assets/front/images/delete1.png" data-toggle="modal" data-target="#myModal" height="20" width="20"></a><a class="dropdown-item" target="_blank" href="<?php echo base_url('admin/audit_started_2017/downloadzip/'); ?>'+row.id+'" title="Download">Zip</a><a class="dropdown-item" target="_blank" href="<?php echo base_url('admin/audit_started_2017/generatebadge/'); ?>'+row.id+'" title="Download">Badge</a><a class="dropdown-item" href="#"  onclick="javascript:getBadgeCode('+row.id+')" data-toggle="modal" data-target="#myModal1">Badge Code</a></div></div>';  */
-						   var a='<div class="btn-group"><button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-chevron-down"></i></button><div class="dropdown-menu"><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/audit_started_2017/response/"); ?>'+row.id+'" title="View Responses">View Record</a><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/audit_started_2017/pdf/"); ?>'+row.id+'" title="Download PDF">Pdf Download</a><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/audit_started_2017/edit/"); ?>'+row.id+'" title="Edit Record">Edit Record</a><a class="dropdown-item" target="" href="#" onclick="javascript:Myfun('+row.userid+')" data-toggle="modal" data-target="#myModal"   title="Delete Record">Delete</a><a class="dropdown-item" target="_blank" href="<?php echo base_url('admin/audit_started_2017/downloadzip/'); ?>'+row.userid+'" title="Download">Zip</a><a class="dropdown-item" target="_blank" href="<?php echo base_url('admin/audit_started_2017/generatebadge/'); ?>'+row.userid+'" title="Download">Badge</a><a class="dropdown-item" href="#"  onclick="javascript:getBadgeCode('+row.userid+')" data-toggle="modal" data-target="#myModal1">Badge Code</a></div></div>'; 
+                        "render": function(data,type,row,meta) { 
+						var a='<div class="btn-group"><button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-chevron-down"></i></button><div class="dropdown-menu"><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/audit_started_2017/response/"); ?>'+row.id+'" title="View Responses">View Record</a><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/audit_started_2017/pdf/"); ?>'+row.id+'" title="Download PDF">Pdf Download</a><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/audit_started_2017/edit/"); ?>'+row.id+'" title="Edit Record">Edit Record</a><a class="dropdown-item" target="" href="#" onclick="javascript:Myfun('+row.userid+')" data-toggle="modal" data-target="#myModal"   title="Delete Record">Delete</a><a class="dropdown-item" target="_blank" href="<?php echo base_url('admin/audit_started_2017/downloadzip/'); ?>'+row.userid+'" title="Download">Zip</a><a class="dropdown-item" target="_blank" href="<?php echo base_url('admin/audit_started_2017/generatebadge/'); ?>'+row.userid+'" title="Download">Badge</a><a class="dropdown-item" href="#"  onclick="javascript:getBadgeCode('+row.userid+')" data-toggle="modal" data-target="#myModal1">Badge Code</a></div></div>'; 
                             return a;
 							}
 						}
                 ]
-        });   
+        }); 
+		
+		 $('#example2').dataTable({
+                 "bProcessing": true,
+                 "sAjaxSource": "<?php echo base_url("/admin/audit_started_2017/getPartnerSchoolData1");?>",
+                 "aoColumns": [
+				        { mData: 'sr_no'},
+				        { mData: 'id' },
+						{ mData: 'udise' },
+                        { mData: 'name' },
+						{ mData: 'state_name' },
+						{ mData: 'district_name' },
+						{ mData: 'city' },
+						{ mData: 'coname' },
+						{ mData: 'coemail' },
+						{ mData: 'comobile' },
+						{ mData: 'progress'},
+						{ mData: 'date_added' },
+						{ mData: 'id',
+						 "orderable": false,
+                        "searchable": false,
+                        "render": function(data,type,row,meta) { 
+						var a='<div class="btn-group"><button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-chevron-down"></i></button><div class="dropdown-menu"><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/audit_started_2017/response/"); ?>'+row.id+'" title="View Responses">View Record</a><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/audit_started_2017/pdf/"); ?>'+row.id+'" title="Download PDF">Pdf Download</a><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/audit_started_2017/edit/"); ?>'+row.id+'" title="Edit Record">Edit Record</a><a class="dropdown-item" target="" href="#" onclick="javascript:Myfun('+row.userid+')" data-toggle="modal" data-target="#myModal"   title="Delete Record">Delete</a><a class="dropdown-item" target="_blank" href="<?php echo base_url('admin/audit_started_2017/downloadzip/'); ?>'+row.userid+'" title="Download">Zip</a><a class="dropdown-item" target="_blank" href="<?php echo base_url('admin/audit_started_2017/generatebadge/'); ?>'+row.userid+'" title="Download">Badge</a><a class="dropdown-item" href="#"  onclick="javascript:getBadgeCode('+row.userid+')" data-toggle="modal" data-target="#myModal1">Badge Code</a></div></div>'; 
+                            return a;
+							}
+						}
+                ]
+        });     
 });
 </script>
 <link type="text/css" rel="stylesheet" type="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+    color: #fff;
+    cursor: default;
+    background-color:#e86549!important;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+}
+.tab-content{
+    border: solid 1px #cad6e2;
+	padding:22px 22px 22px 22px;
+}
+.content-form li {
+     margin: 0 0 0px 0!important; 
+    padding: 0;
+}
+.content-form ul {
+     margin: 0 0 0 0em!important; 
+    list-style-type: disc;
+    padding: 0;
+}
+.content-form li {
+    margin: 0 0 0px 0!important;
+    padding: 0;
+    cursor: default;
+    background-color:#ccc!important;
+    border-top: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+	border-right:none;
+    border-bottom-color: transparent;
+}
+.content-form li a{ 
+	color: #000; }
+</style>
