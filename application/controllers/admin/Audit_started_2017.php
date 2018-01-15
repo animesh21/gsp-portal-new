@@ -306,9 +306,9 @@ function getdigitalCertificate($argID) {
    $students = $this->count_certificates_stuents($argID);
    $staffadmin = $this->count_certificates_staffamin($argID);
 //    echo '<pre>';
-//    print_r($students);
+   // print_r($students);exit;
 //    echo '<pre>';
-//    print_r($staffadmin);
+  //  print_r($staffadmin);exit;
 //    exit;
    $data['students'] = $students;
    $data['staffadmin'] = $staffadmin;
@@ -322,14 +322,19 @@ function getdigitalCertificate($argID) {
    //Stuents
    $arrStudents = array();
    $question_alphabet = array("A", "E", "F", "L", "W", "Wa");
+   $username=$this->db->select('username')
+				->from('gsp_user')
+				->where('id',$argID)
+				->get()->row();
    foreach ($question_alphabet as $q) {
        for ($i = 1; $i <= 10; $i++) {
        //Students
        $arrStudents[] = array(
        'name' => getFiled("Q3".$q. $i . "S1", $argID) . " " . getFiled("Q3" .$q.$i . "S2", $argID),
-       'grade' => getFiled("Q3" .$q.$i . "S3", $argID)
-       );
-       }
+       'grade' => getFiled("Q3" .$q.$i . "S3", $argID),
+	   'school_name'=>$username->username,
+	   );
+	}
    }
    return $arrStudents;
   }
@@ -338,26 +343,32 @@ function getdigitalCertificate($argID) {
    $airTeachers=array();
    $arrStaff = array();
    $question_alphabet = array("A", "E", "F", "L", "W", "Wa");
+   $username=$this->db->select('username')
+				->from('gsp_user')
+				->where('id',$argID)
+				->get()->row();
    foreach ($question_alphabet as $q) {
        //Teachers
        for ($i = 1; $i <= 3; $i++) {
        if((getFiled("Q1" . $q . $i . "S1", $argID) !="0") && (getFiled("Q1" . $q . $i . "S1", $argID) !='') || (getFiled("Q1" . $q . $i . "S3", $argID) !="0") && (getFiled("Q1" . $q . $i . "S3", $argID) !=''))
        {
        $airTeachers[] = getFiled("Q1" . $q . $i . "S1", $argID) . " " . getFiled("Q1" . $q . $i . "S3", $argID);
+	   
        }
        }
        //Staff
        for ($i = 1; $i <= 5; $i++) {
        if((getFiled("Q2" . $q . $i . "S1", $argID) !="0") && (getFiled("Q2" . $q . $i . "S1", $argID) !='') || (getFiled("Q2" . $q . $i . "S3", $argID) !="0") && (getFiled("Q2" . $q . $i . "S3", $argID) !='')){
-       $arrStaff[$i] = getFiled("Q2" . $q . $i . "S1", $argID) . " " . getFiled("Q2" . $q . $i . "S3", $argID
-       );
+       $arrStaff['teacher'] = getFiled("Q2" . $q . $i . "S1", $argID) . " " . getFiled("Q2" . $q . $i . "S3", $argID);
+	   $arrStaff['school']= $username->username;
+       
        }
        }
    }
 //    $value="0"." "."0";
 //    $temp= array_search($value, $arrStaff);
 //    print_r($temp);
-   //echo '<pre>'; print_r($airTeachers);
+   //echo '<pre>'; print_r($airTeacher['school']); exit;
    //echo '<pre>'; print_r($arrStaff);
    return array_merge($airTeachers, $arrStaff);
   }
