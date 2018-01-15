@@ -5,7 +5,7 @@
         <form>
                     <div class="form-group">
                         <label for="exampleInputEmail1"> <span class="cube">1</span> Name of the School / Institution</label>
-                        <p class="formanswertext"><?php echo $school->name; ?></p>
+                       <p class="formanswertext"><?php echo $school->name; ?> &nbsp;&nbsp; ,  <b>Udise:-</b> (<?php echo $school->udise;?>)</p>
                     </div>
                     <div class="form-group">
 
