@@ -1,5 +1,5 @@
 <div class="top-area">
-        <h2>Schools Did Not Start The Audit<a href="<?php echo base_url('admin/audit_started_2017/excelByProgress3') ?>"><button class="exportBtn">Export to Excel</button></a></h2>
+        <h2>Schools Did Not Start The Audit<a href="<?php echo base_url('admin/audit_started_2017/excelByProgress3_phase1') ?>"><button class="exportBtn">Export to Excel</button></a></h2>
 </div>
       <table id="example1" class="display dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
         <thead>
