@@ -2268,7 +2268,7 @@
         </ul>
       </li>
       <li>
-        <p class="orange"><span>4(b)</span> How does your school harvest rainwater? </p>
+        <p class="orange"><span class="cube">4(b)</span> How does your school harvest rainwater? </p>
         <p>
           <?php
                 if (getFiled('Q8W2S2', $schoolUserID) == 1):
@@ -2493,26 +2493,26 @@
         </table>
       </li>
       <li>
-       <p class="orange"><span>5(a)</span>
+       <p class="orange"><span>6</span>
           <label>How many drinking water taps do you have?</label>
         </p>
         <p><?php echo (getFiled('Q9W1', $schoolUserID) != "") ? getFiled('Q9W1', $schoolUserID) : "N/A"; ?></p>
       </li>
       <li>
-        <p class="orange"><span>5(b)</span>
+        <p class="orange"><span>7</span>
           <label>How many hand pumps do you have?</label>
         </p>
         <p><?php echo (getFiled('Q10W1', $schoolUserID) != "") ? getFiled('Q10W1', $schoolUserID) : "N/A"; ?></p>
       </li>
       <li>
-       <p class="orange"><span>5(c)</span>
+       <p class="orange"><span>8</span>
           <label>How many ablution taps (taps used for washing hands only)
           do you have?</label>
         </p>
         <p><?php echo (getFiled('Q11W1', $schoolUserID) != "") ? getFiled('Q11W1', $schoolUserID) : "N/A"; ?></p>
       </li>
       <li>
-        <p class="orange"><span>5(d)</span>How many water closets (used for
+        <p class="orange"><span>9</span>How many water closets (used for
           defecation and urination) do you have?
         </p>
         <p><strong>Number of toilets</strong></p>
@@ -2532,39 +2532,39 @@
         </table>
       </li>
       <li>
-        <p class="orange"><span>5(e)</span>How many urinals (strictly used for urination only)
+        <p class="orange"><span>10</span>How many urinals (strictly used for urination only)
           do you have?
         </p>
         <p><?php echo (getFiled('Q14W1', $schoolUserID) != "") ? getFiled('Q14W1', $schoolUserID) : "N/A"; ?></p>
       </li>
       <li>
-        <p class="orange"><span>5(f)</span>How many other water outlets (example: taps in play
+        <p class="orange"><span>11</span>How many other water outlets (example: taps in play
           fields, sprinklers, swimming pool) do you have?
         </p>
         <p> <?php echo (getFiled('Q15W1', $schoolUserID) != "") ? getFiled('Q15W1', $schoolUserID) : "N/A"; ?> </p>
         <label><strong> Water supply and cleaning of toilets in your school: </strong></label>
       </li>
       <li>
-        <p class="orange"><span>5(g)</span>
+        <p class="orange"><span>12</span>
           <label>Is there a water storage system in
           place to supply water in the toilets?</label>
         </p>
         <p> <?php echo (getFiled('Q16W1', $schoolUserID) != "") ? (getFiled('Q16W1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
       </li>
       <li>
-        <p class="orange"><span>5(h)</span>Is the water supply
+        <p class="orange"><span>13</span>Is the water supply
           sufficient?</label>
         </p>
         <p> <?php echo (getFiled('Q21W1', $schoolUserID) != "") ? (getFiled('Q21W1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
       </li>
       <li>
-        <p class="orange"><span>6</span>Are the toilets cleaned?</label>
+        <p class="orange"><span>14</span>Are the toilets cleaned?</label>
         </p>
         <p> <?php echo (getFiled('Q18W1', $schoolUserID) != "") ? (getFiled('Q18W1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
       </li>
 	   <?php if(strcmp(getFiled('Q18W1', $schoolUserID),'Y')==0) {?>
       <li>
-        <p class="orange"><span>6(a)</span>If yes, please
+        <p class="orange"><span>14(a)</span>If yes, please
           specify </p>
         <?php
                 if (getFiled('Q18W2', $schoolUserID) == 1):
@@ -2586,19 +2586,19 @@
       purpose, is put to use again, it is then being reused.</p>
     <ul class="list">
       <li>
-        <p class="orange"><span>7</span> Does your school treat
+        <p class="orange"><span>15</span> Does your school treat
           wastewater?</p>
         <p> <?php echo (getFiled('Q19W1', $schoolUserID) != "") ? (getFiled('Q19W1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
       </li>
       <li>
-        <p class="orange"><span>7(a)</span>Does your school reuse the
+        <p class="orange"><span>16</span>Does your school reuse the
           treated wastewater?</label>
         </p>
         <p> <?php echo (getFiled('Q20W1', $schoolUserID) != "") ? (getFiled('Q20W1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
       </li>
 	   <?php if(strcmp(getFiled('Q20W1', $schoolUserID),'Y')==0) {?>
       <li>
-        <p class="orange"><span>7(b)</span>How does your
+        <p class="orange"><span>16a</span>How does your
           school reuse wastewater?</p>
         <p>
           <?php
@@ -2618,7 +2618,7 @@
 	   <?php if(strcmp(getFiled('Q20W1', $schoolUserID),'N')==0) {?>
 	  
       <li>
-       <p class="orange"><span>7(c)</span>
+       <p class="orange"><span>16a</span>
           <label>Please specify the fate of wastewater:</label>
         </p>
         <p>
@@ -2893,7 +2893,6 @@
       </li>
 	   <?php if(!empty(getFiled('Q4Wa2', $schoolUserID))): ?>
       <li>
-        <div class="numbering">2.2a</div>
          <p class="orange"><span class="cube">2(a)</span> How many categories does your school
           segregate waste into?</p>
         <table class="table">
@@ -3029,8 +3028,9 @@
     <h3 class="task">Task 3: How much waste does your school treat/recycle?</h3>
     <ul class="list">
       <li>
-        <div class="numbering">3</div>
-        <p style="color: #e86549;">
+       
+        <p class="orange">
+		<label><span class="cube">3</span>
           <label>Does your school recycle any generated waste? </label>
         </p>
         <p> <?php echo (getFiled('Q8Wa1', $schoolUserID) != "") ? (getFiled('Q8Wa1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
@@ -3093,7 +3093,7 @@
       </li>
 	  <?php endif; ?>
       <li>
-         <p class="orange"><span class="cube">4</span></p>
+         <p class="orange"><span class="cube">4</span>
           <label>Does your school have a composting facility?</label>
         </p>
         <p> <?php echo (getFiled('Q9Wa1', $schoolUserID) != "") ? (getFiled('Q9Wa1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
@@ -3151,10 +3151,8 @@
       </li>
 	  <?php endif; ?>
       <li>
-         <p class="orange"><span class="cube">5</span> 
-          <label>Does your school encourage students &amp; teachers to reuse textbooks? <a class="kplink" href="http://www.greenschoolsprogramme.org/knowledge-bank/waste/#chomp" target="_blank"></a></label></p>
-        </p>
-        <p> <?php echo (getFiled('Q10Wa1', $schoolUserID) != "") ? (getFiled('Q10Wa1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
+         <p class="orange"><span class="cube">5</span> Does your school encourage students &amp; teachers to reuse textbooks? </p>
+	<p> <?php echo (getFiled('Q10Wa1', $schoolUserID) != "") ? (getFiled('Q10Wa1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
       </li>
       <li>
         <p style="color: #e86549;">
@@ -3457,7 +3455,7 @@
       <li>
         <p class="orange"><span class="cube">8</span> What is the final destination for waste from your
           school that is disposed of externally?
-          </label>
+         
         </p>
         <?php
                 if (getFiled('Q14Wa1', $schoolUserID) == 1):
@@ -3501,9 +3499,7 @@
         <?php } ?>
       </li>
       <li>
-         <p class="orange"><span class="cube">9</span> 
-          <label class="control-label">Does your school burn waste? </label>
-        </p>
+         <p class="orange"><span class="cube">9</span> Does your school burn waste? </p>
         <p> <?php echo (getFiled('Q15Wa1', $schoolUserID) != "") ? (getFiled('Q15Wa1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
       </li>
       <li>
@@ -3574,9 +3570,11 @@
       </li>
 	  
 	 <?php endif; ?>
+	 <li>
         <p class="orange"><span class="cube">10</span>  Do you know that your E-waste can be collected by an authorised dealer or dismantler? </p>
         <p> <?php echo (getFiled('Q16Wa1', $schoolUserID) != "") ? (getFiled('Q16Wa1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
-      </li>
+		</li>
+     
     </ul>
   </div>
   <div class="task-area">
