@@ -177,7 +177,7 @@
 	<?php endif; ?>
 	
     <li>
-       <p class="orange"><span>4</span><span> Total population of the school</span></p>
+       <p class="orange"><span>4a</span><span> Total population of the school</span></p>
       <table class="table">
         <tr>
           <th></th>
@@ -216,11 +216,11 @@
        <p class="orange"><span class="cube">4(b)</span>How many visitors visit your school </p>
       <p><?php echo (getFiled('Q5G1', $schoolUserID) != "") ? getFiled('Q5G1', $schoolUserID) : "N/A"; ?></p>
     </li>
-    <li>
+    <!-- <li>
       <p class="orange"><span class="cube">4(c)</span>How many family members stay in the
         school campus? </p>
-      <p><?php echo (getFiled('Q5G2', $schoolUserID) != "") ? getFiled('Q5G2', $schoolUserID) : "N/A"; ?> </p>
-    </li>
+      <p><?php //echo (getFiled('Q5G2', $schoolUserID) != "") ? getFiled('Q5G2', $schoolUserID) : "N/A"; ?> </p>
+    </li> -->
     <li>
       <p class="orange"><span>5</span><span> What is the total number of working days of your school in a year?</span></p>
       <p><?php echo (getFiled('Q6G1', $schoolUserID) != "") ? getFiled('Q6G1', $schoolUserID) : "N/A"; ?></p>
@@ -503,6 +503,8 @@
             ?>
     </p>
   </li>
+  
+  <?php $dat=getFiled('Q6A1', $schoolUserID); if(($dat)==3 || ($dat)==4 || ($dat)==5){ ?>	
   <li>
     <p class="orange"><span>3a</span><span>Provide details of school-owned motorised vehicles</span></p>
     <table class="table">
@@ -548,8 +550,7 @@
       </tr>
     </table>
   </li>
-</ul>
-<ul class="list">
+
   <li>
     <p class="orange"><span>3b</span><span>Specify the type of fuel used by your school vehicles:</span></p>
     <table class="table">
@@ -617,6 +618,7 @@
         </tbody>
       </table>
   </li>
+  <?php } ?>
 </ul>
 <div class="task-area">
   <h3 class="task">Task 4: How do you travel to school every day? </h3>
@@ -1337,9 +1339,36 @@
         </table>
       </li>
 	  
-	  
-      <?php if(strcmp(getFiled('Q5F1', $schoolUserID),'Y')==0): ?>
+	
+	
+      <?php if(strcmp(getFiled('Q5F1', $schoolUserID),'N')==0):  ?>
       <li>
+        <p class="orange"><span>2(a)</span>Do students bring their own lunch from home?</p>
+        <p> <?php echo (getFiled('Q5F1S1', $schoolUserID) != "") ? (getFiled('Q5F1S1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
+      </li>
+      <?php endif; ?>
+	  
+	  
+      <?php if(strcmp(getFiled('Q5F1S1', $schoolUserID),'Y')==0): ?>
+      <li>
+        <p class="orange"><span>2a(1)</span> How many students out of total student population bring home-made lunch? </p>
+        <p><?php echo (getFiled('Q5F1S2', $schoolUserID) != "") ? getFiled('Q5F1S2', $schoolUserID) : "N/A"; ?></p>
+      </li>
+      <li>
+        <p class="orange"><span>2a(2)</span>Of the students who  bring lunch from home, how many bring packaged food?</p>
+        <p><?php echo (getFiled('Q5F1S3', $schoolUserID) != "") ? getFiled('Q5F1S3', $schoolUserID) : "N/A"; ?></p>
+      </li>
+      <li>
+        <p class="orange"><span>2a(3)</span>Do teachers have the responsibility to ensure that students are carrying lunch from home?</p>
+        <p> <?php echo (getFiled('Q5F1S4', $schoolUserID) != "") ? (getFiled('Q5F1S4', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
+      </li>
+      <?php endif; ?>
+	  
+	  
+	  
+	  <?php if(strcmp(getFiled('Q5F1', $schoolUserID),'Y')==0): ?>
+	 
+	 <li>
         <p class="orange"><span>2(a)</span>If yes, then midday meal is served under:</p>
         <p>
           <?php
@@ -1354,33 +1383,6 @@
         </p>
       </li>
 	  
-	  
-      <?php elseif(strcmp(getFiled('Q5F1', $schoolUserID),'N')==0):  ?>
-      <li>
-        <p class="orange"><span>2(a)</span>Do students bring their own lunch from home?</p>
-        <p> <?php echo (getFiled('Q5F1S1', $schoolUserID) != "") ? (getFiled('Q5F1S1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
-      </li>
-      <?php endif; ?>
-	  
-	  
-      <?php if(strcmp(getFiled('Q5F1S1', $schoolUserID),'Y')==0): ?>
-      <li>
-        <p class="orange"><span>2(a)(1)</span> How many students out of total student population bring home-made lunch? </p>
-        <p><?php echo (getFiled('Q5F1S2', $schoolUserID) != "") ? getFiled('Q5F1S2', $schoolUserID) : "N/A"; ?></p>
-      </li>
-      <li>
-        <p class="orange"><span>2(a)(2)</span>Of the students who  bring lunch from home, how many bring packaged food?</p>
-        <p><?php echo (getFiled('Q5F1S3', $schoolUserID) != "") ? getFiled('Q5F1S3', $schoolUserID) : "N/A"; ?></p>
-      </li>
-      <li>
-        <p class="orange"><span>2(a)(3)</span>Do teachers have the responsibility to ensure that students are carrying lunch from home?</p>
-        <p> <?php echo (getFiled('Q5F1S4', $schoolUserID) != "") ? (getFiled('Q5F1S4', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
-      </li>
-      <?php endif; ?>
-	  
-	  
-	  
-	  <?php if(strcmp(getFiled('Q5F1', $schoolUserID),'Y')==0): ?>
       <li>
          <p class="orange"><span>2(b)</span>What kind of food items are served in midday meal?</p>
         <table class="table">
@@ -1464,10 +1466,10 @@
         <p><?php echo (getFiled('Q5F3S1', $schoolUserID) != "") ? getFiled('Q5F3S1', $schoolUserID) : "N/A"; ?> </p>
       </li>
 	   <?php endif; ?>
-      <li>
+     <!-- <li>
         <p class="orange"><span>2.1</span>Does your school serve whole day’s meals?</p>
-        <p><?php echo (getFiled('Q5F2', $schoolUserID) != "") ? (getFiled('Q5F2', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
-      </li>
+        <p><?php //echo (getFiled('Q5F2', $schoolUserID) != "") ? (getFiled('Q5F2', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
+      </li> -->
     </ul>
   </div>
   
@@ -2080,10 +2082,7 @@
     <p> <strong>The bill method:</strong> If the school’s water meter is monitored regularly—water bills by the government/municipality state the actual amount used—students can simply compile bills to assess total consumption.</p>
     <p> <strong>Monitoring overhead tanks:</strong> If the bills are irregular and incorrect, then monitor the overhead tanks. Note the difference in levels of water in your overhead tank between the beginning and the end of the day. Ensure that the tanks are full when the day begins. Check the water level when school is over by noting the difference in levels of water in your overhead tank between beginning and end of a day. Estimate consumption.</p>
     <p> <strong>Using the motor method:</strong> If your school uses groundwater, take a bucket and know its measurement. Then switch on the underground-water pump. Let the water run out of the hosepipe into the bucket. Check how long it takes to fill up the bucket. You can now calculate the flow of water in litres per minute. Find out (from the gardener or other administrative staff) the number of hours the pump motor runs per day. Multiply the number of hours the motor runs by 60 to get the number of minutes the motor runs. Multiply the number of minutes the motor is run by how much water comes out from the hose pipe in a minute. The administrative staff and the plumber would be helpful in gauging the above. Conduct an audit for two or three days and then take an average to find the total consumption.</p>
-    <ul class="list">
-      <li>
-        <div class="numbering">1</div>
-        <p style="color: #e86549;"><span>Calculate your school’s water consumption, per activity:</span></p>
+	<p><strong>Calculate your school’s water consumption, per activity:</strong></p>
         <p><strong>&nbsp;To collect data:</strong></p>
         <p> The school will use a glass (250 ml) for drinking during the audit period; they should know the volume
           of flush tank (if they have a flush) or volume of bucket they are using for washing clothes, etc.</p>
@@ -2092,16 +2091,16 @@
           monitor over a period of 15 working days.</p>
         <p><strong>Gardening:</strong> To measure total water used in Gardening, first find out what is the method
           of watering garden.</p>
-        <ul>
-          <li> If water from water storage tank is used with hose pipes then measure the capacity of storage tank.
+		 <p> If water from water storage tank is used with hose pipes then measure the capacity of storage tank.
             Fill the storage tank before watering session. After watering the plants, measure the water left in
-            the tank. Subtract the quantity of water left in the tank by total storage capacity of the tank.&nbsp; </li>
-          <li> If garden is watered manually with buckets then measure the capacity of the bucket and multiply by
-            number of times the bucket is filled to water plants. </li>
-          <li> If sprinkler irrigation is used to water garden, then measure the quantity of water released by the
-            sprinklers and multiply it by the time the sprinkler system &nbsp;works.&nbsp; </li>
-        </ul>
-        <p class="orange"><span>1</span>Total water consumption of your school</p>
+            the tank. Subtract the quantity of water left in the tank by total storage capacity of the tank.</p>
+			<p>If garden is watered manually with buckets then measure the capacity of the bucket and multiply by
+            number of times the bucket is filled to water plants.
+			If sprinkler irrigation is used to water garden, then measure the quantity of water released by the
+            sprinklers and multiply it by the time the sprinkler system &nbsp;works.&nbsp;</p>
+    <ul class="list">
+      <li>
+       <p class="orange"><span>1</span>Total water consumption of your school</p>
         <table class="table">
           <tr>
             <th> Activity </th>
@@ -2294,38 +2293,38 @@
                         echo "Drinking";
                         echo "<br/>";
                     endif;
-                    if (getFiled('Q8W2S2S2', $schoolUserID) == 1):
+                    if (getFiled('Q8W2S2S1', $schoolUserID) == 2):
                         echo "Gardening";
                         echo "<br/>";
                     endif;
-                    if (getFiled('Q8W2S2S3', $schoolUserID) == 1):
+                    if (getFiled('Q8W2S2S1', $schoolUserID) == 3):
                         echo "Mopping";
                         echo "<br/>";
                     endif;
-                    if (getFiled('Q8W2S2S4', $schoolUserID) == 1):
+                    if (getFiled('Q8W2S2S1', $schoolUserID) == 4):
                         echo " Toilets";
                         echo "<br/>";
                     endif;
-                    if (getFiled('Q8W2S2S5', $schoolUserID) == 1):
+                    if (getFiled('Q8W2S2S1', $schoolUserID) == 5):
                         echo "Washing vehicles";
                         echo "<br/>";
                     endif;
-                    if (getFiled('Q8W2S2S6', $schoolUserID) == 1):
+                    if (getFiled('Q8W2S2S1', $schoolUserID) == 6):
                         echo "Kitchen (Cooking/Washing vegetables and utensils)";
                         echo "<br/>";
                     endif;
-                    if (getFiled('Q8W2S2S7', $schoolUserID) == 1):
+                    if (getFiled('Q8W2S2S1', $schoolUserID) == 7):
                         echo "Shower, Brushing teeth, Bathing, Hand washing";
                         echo "<br/>";
                     endif;
-                    if (getFiled('Q8W2S2S8', $schoolUserID) == 1):
+                    if (getFiled('Q8W2S2S1', $schoolUserID) == 8):
                         echo "Swimming Pool";
                     endif;
-                    if (getFiled('Q8W2S2S9', $schoolUserID) == 1):
+                    if (getFiled('Q8W2S2S1', $schoolUserID) == 9):
                         echo "Fire fighting";
                         echo "<br/>";
                     endif;
-                    if (getFiled('Q8W2S2S10', $schoolUserID) == 1):
+                    if (getFiled('Q8W2S2S1', $schoolUserID) == 10):
                         echo "Desert coolers";
                     endif;
                     ?>
@@ -2337,16 +2336,12 @@
       </li>
 	  <?php if(strcmp(getFiled('Q8W2S2S2', $schoolUserID),'Y')==0) {?>
       <li>
-        <p class="orange"><span class="cube">4b2A</span>If yes, please provide: </p>
-        <p> <strong>Total number of storage tank (litres): </strong><br/>
-          <?php echo (getFiled('Q8W2S2S3', $schoolUserID) != "") ? getFiled('Q8W2S2S3', $schoolUserID) : "N/A"; ?></p>
+        <p class="orange"><span class="cube">4b2A</span>Total number of storage tank (litres): </p>
+        <p> <?php echo (getFiled('Q8W2S2S3', $schoolUserID) != "") ? getFiled('Q8W2S2S3', $schoolUserID) : "N/A"; ?></p>
       </li>
       <li>
-       <p class="orange"><span class="cube">4b2B</span>If yes, please provide: </p>
-        <p style="color: #e86549;">If yes, please provide: </p>
-        <p><strong>Total capacity of each storage tank
-          (litres): </strong><br/>
-          <?php echo (getFiled('Q8W2S2S4', $schoolUserID) != "") ? getFiled('Q8W2S2S4', $schoolUserID) : "N/A"; ?> </p>
+       <p class="orange"><span class="cube">4b2B</span>Total capacity of each storage tank (litres): </p>
+       <p><?php echo (getFiled('Q8W2S2S4', $schoolUserID) != "") ? getFiled('Q8W2S2S4', $schoolUserID) : "N/A"; ?> </p>
       </li>
 	  <?php } ?>
       <li>
@@ -2555,7 +2550,7 @@
         <p class="orange"><span>13</span>Is the water supply
           sufficient?</label>
         </p>
-        <p> <?php echo (getFiled('Q21W1', $schoolUserID) != "") ? (getFiled('Q21W1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
+        <p> <?php echo (getFiled('Q17W1', $schoolUserID) != "") ? (getFiled('Q17W1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
       </li>
       <li>
         <p class="orange"><span>14</span>Are the toilets cleaned?</label>
@@ -2566,6 +2561,7 @@
       <li>
         <p class="orange"><span>14(a)</span>If yes, please
           specify </p>
+		  <p>
         <?php
                 if (getFiled('Q18W2', $schoolUserID) == 1):
                     echo "Once a day";
@@ -2576,6 +2572,7 @@
 
                 endif;
                 ?>
+				</p>
       </li>
 	   <?php } ?>
     </ul>
@@ -2936,14 +2933,7 @@
             <td><?php echo (getFiled('Q5Wa4S4', $schoolUserID) != "") ? getFiled('Q5Wa4S4', $schoolUserID) : "N/A"; ?> </td>
             <td><?php echo (getFiled('Q5Wa4S5', $schoolUserID) != "") ? getFiled('Q5Wa4S5', $schoolUserID) : "N/A"; ?> </td>
           </tr>
-          <tr>
-            <td> Laboratory </td>
-            <td><?php echo (getFiled('Q5Wa5S1', $schoolUserID) != "") ? getFiled('Q5Wa5S1', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa5S2', $schoolUserID) != "") ? getFiled('Q5Wa5S2', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa5S3', $schoolUserID) != "") ? getFiled('Q5Wa5S3', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa5S4', $schoolUserID) != "") ? getFiled('Q5Wa5S4', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa5S5', $schoolUserID) != "") ? getFiled('Q5Wa5S5', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
+          
           <tr>
             <td> Canteen </td>
             <td><?php echo (getFiled('Q5Wa6S1', $schoolUserID) != "") ? getFiled('Q5Wa6S1', $schoolUserID) : "N/A"; ?> </td>
@@ -3455,8 +3445,8 @@
       <li>
         <p class="orange"><span class="cube">8</span> What is the final destination for waste from your
           school that is disposed of externally?
-         
         </p>
+		<p>
         <?php
                 if (getFiled('Q14Wa1', $schoolUserID) == 1):
                     echo "Open dumping";
@@ -3469,6 +3459,7 @@
 
                 endif;
                 ?>
+				</p>
       </li>
       <li>
         <p style="color: #e86549;">
@@ -3609,19 +3600,17 @@
         <p> • Pictures of various school initiatives e.g. rally, debate, street play, art competition, etc</p>
 		</li>
 		<li>
-        <p class="orange"><span class="cube">13a</span>
+        <p class="orange"><span class="cube">12a</span>
           <label class="control-label">What form do these awareness drives take? </label>
         </p>
         <p>
           <?php
                 if (getFiled('Q18Wa2S1', $schoolUserID) == 1):
-                    echo "Horticultural";
+                    echo "As part of the curriculum";
                 elseif (getFiled('Q18Wa2S2', $schoolUserID) == 2):
-                    echo "Plastic";
+                    echo "As part of extracurricular activities such as guest lectures";
                 elseif (getFiled('Q18Wa2S3', $schoolUserID) == 3):
-                    echo "Tyres";
-                elseif (getFiled('Q18Wa2S3', $schoolUserID) == 4):
-                    echo "Paper";
+                    echo "By the showcasing of posters and stickers";
                 endif;
                 ?>
         </p>
