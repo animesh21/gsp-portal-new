@@ -70,17 +70,14 @@ class Audit_started_model extends CI_Model {
         return $this->db->get_where('gsp_user', array('id'=>$argID))->row();
     }
 
-    /*
-     * Generate Excel Data
-     */
-
-    public function getExcelData() {
+     public function getExcelData_phase1() {
         $output = "";
         $arrRecord = $this->db->select('a.*, b.name AS state_name, c.name AS district_name, d.password')
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
                         ->join('cities AS c', 'a.district=c.id', 'left')
                         ->join('gsp_user AS d', 'a.userid=d.id', 'left')
+						->where('a.date_added <', '2017-11-20 00:00:00')
                         ->order_by('a.id', 'desc')
                         ->get()->result();
         //echo '<pre>'; print_r($arrRecord); exit;
@@ -88,7 +85,7 @@ class Audit_started_model extends CI_Model {
         $isdCode = '+91';
         $output .= '"S.No",';
         $output .= '"School ID",';
-	$output .= '"UDISE Code",';
+		$output .= '"UDISE Code",';
         $output .= '"School Name",';
         $output .= '"Address1",';
         $output .= '"Address2",';
@@ -113,7 +110,7 @@ class Audit_started_model extends CI_Model {
         foreach ($arrRecord as $a) {
             $output .= '"' . $k . '",';
             $output .= '"' . $a->id . '",';
-	    $output .= '"' . $a->udise . '",';    
+			$output .= '"' . $a->udise . '",';
             $output .= '"' . $a->name . '",';
             $output .= '"' . $a->address1 . '",';
             $output .= '"' . $a->address2 . '",';
@@ -142,26 +139,23 @@ class Audit_started_model extends CI_Model {
         return $output;
     }
 	
-    /*
-     * Generate Excel Data
-     */
-
-    public function getExcelDataByProgress($progress) {
+	
+	public function getExcelData_phase2() {
         $output = "";
         $arrRecord = $this->db->select('a.*, b.name AS state_name, c.name AS district_name, d.password')
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
                         ->join('cities AS c', 'a.district=c.id', 'left')
                         ->join('gsp_user AS d', 'a.userid=d.id', 'left')
-                        ->where($progress)
-						->order_by('a.id', 'desc')
+						->where('a.date_added >', '2017-11-20 00:00:00')
+                        ->order_by('a.id', 'desc')
                         ->get()->result();
         //echo '<pre>'; print_r($arrRecord); exit;
         $k = 1;
         $isdCode = '+91';
         $output .= '"S.No",';
         $output .= '"School ID",';
-	$output .= '"UDISE Code",';
+		$output .= '"UDISE Code",';
         $output .= '"School Name",';
         $output .= '"Address1",';
         $output .= '"Address2",';
@@ -186,7 +180,167 @@ class Audit_started_model extends CI_Model {
         foreach ($arrRecord as $a) {
             $output .= '"' . $k . '",';
             $output .= '"' . $a->id . '",';
-		$output .= '"' . $a->udise . '",'; 
+			$output .= '"' . $a->udise . '",';
+            $output .= '"' . $a->name . '",';
+            $output .= '"' . $a->address1 . '",';
+            $output .= '"' . $a->address2 . '",';
+            $output .= '"' . $a->country . '",';
+            $output .= '"' . $a->state_name . '",';
+            $output .= '"' . $a->district_name . '",';
+            $output .= '"' . $a->city . '",';
+            $output .= '"' . $a->pincode . '",';
+            $output .= '"' . $isdCode . '",';
+            $output .= '"' . $a->std . '",';
+            $output .= '"' . $a->telephone . '",';
+            $output .= '"' . $a->schoolemail . '",';
+            $output .= '"' . $a->principle_name . '",';
+            $output .= '"' . $a->mobile . '",';
+            $output .= '"' . $a->coname . '",';
+            $output .= '"' . $a->coemail . '",';
+            $output .= '"' . $a->comobile . '",';
+            $output .= '"' . $a->password . '",';
+            //$output .='"'.date('d-m-Y H:i:s', strtotime($row['datetime'])).'",';
+            $output .= '"' . date('Y-m-d H:i:s', strtotime($a->date_added)) . '",';
+            $output .= '"' . $a->progress . '%",';
+            $output .= "\n";
+            $k++;
+        }
+
+        return $output;
+    }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+    /*
+     * Generate Excel Data
+     */
+
+    public function getExcelDataByProgress_phase1($progress) {
+        $output = "";
+        $arrRecord = $this->db->select('a.*, b.name AS state_name, c.name AS district_name, d.password')
+                        ->from('gsp_school AS a')
+                        ->join('states AS b', 'a.state=b.id', 'left')
+                        ->join('cities AS c', 'a.district=c.id', 'left')
+                        ->join('gsp_user AS d', 'a.userid=d.id', 'left')
+                        ->where($progress)
+						->where($progress)
+						->where('a.date_added <', '2017-11-20 00:00:00')
+						->order_by('a.id', 'desc')
+                        ->get()->result();
+        //echo '<pre>'; print_r($arrRecord); exit;
+        $k = 1;
+        $isdCode = '+91';
+        $output .= '"S.No",';
+        $output .= '"School ID",';
+        $output .= '"School Name",';
+        $output .= '"Address1",';
+        $output .= '"Address2",';
+        $output .= '"Country",';
+        $output .= '"State",';
+        $output .= '"District",';
+        $output .= '"City",';
+        $output .= '"Pincode",';
+        $output .= '"ISD Code",';
+        $output .= '"STD Code",';
+        $output .= '"Landline Number",';
+        $output .= '"School Email",';
+        $output .= '"Principal Name",';
+        $output .= '"Principal Mobile",';
+        $output .= '"Coordinator Name",';
+        $output .= '"Coordinator Email",';
+        $output .= '"Coordinator Mobile",';
+        $output .= '"Password",';
+        $output .= '"Date & Time",';
+        $output .= '"Completeness",';
+        $output .= "\n";
+        foreach ($arrRecord as $a) {
+            $output .= '"' . $k . '",';
+            $output .= '"' . $a->id . '",';
+            $output .= '"' . $a->name . '",';
+            $output .= '"' . $a->address1 . '",';
+            $output .= '"' . $a->address2 . '",';
+            $output .= '"' . $a->country . '",';
+            $output .= '"' . $a->state_name . '",';
+            $output .= '"' . $a->district_name . '",';
+            $output .= '"' . $a->city . '",';
+            $output .= '"' . $a->pincode . '",';
+            $output .= '"' . $isdCode . '",';
+            $output .= '"' . $a->std . '",';
+            $output .= '"' . $a->telephone . '",';
+            $output .= '"' . $a->schoolemail . '",';
+            $output .= '"' . $a->principle_name . '",';
+            $output .= '"' . $a->mobile . '",';
+            $output .= '"' . $a->coname . '",';
+            $output .= '"' . $a->coemail . '",';
+            $output .= '"' . $a->comobile . '",';
+            $output .= '"' . $a->password . '",';
+            //$output .='"'.date('d-m-Y H:i:s', strtotime($row['datetime'])).'",';
+            $output .= '"' . date('Y-m-d H:i:s', strtotime($a->date_added)) . '",';
+            $output .= '"' . $a->progress . '%",';
+            $output .= "\n";
+            $k++;
+        }
+
+        return $output;
+    }
+	
+	
+	
+	/*
+     * Generate Excel Data
+     */
+
+    public function getExcelDataByProgress_phase2($progress) {
+        $output = "";
+        $arrRecord = $this->db->select('a.*, b.name AS state_name, c.name AS district_name, d.password')
+                        ->from('gsp_school AS a')
+                        ->join('states AS b', 'a.state=b.id', 'left')
+                        ->join('cities AS c', 'a.district=c.id', 'left')
+                        ->join('gsp_user AS d', 'a.userid=d.id', 'left')
+                        ->where($progress)
+						->where($progress)
+						->where('a.date_added >', '2017-11-20 00:00:00')
+						->order_by('a.id', 'desc')
+                        ->get()->result();
+        //echo '<pre>'; print_r($arrRecord); exit;
+        $k = 1;
+        $isdCode = '+91';
+        $output .= '"S.No",';
+        $output .= '"School ID",';
+        $output .= '"School Name",';
+        $output .= '"Address1",';
+        $output .= '"Address2",';
+        $output .= '"Country",';
+        $output .= '"State",';
+        $output .= '"District",';
+        $output .= '"City",';
+        $output .= '"Pincode",';
+        $output .= '"ISD Code",';
+        $output .= '"STD Code",';
+        $output .= '"Landline Number",';
+        $output .= '"School Email",';
+        $output .= '"Principal Name",';
+        $output .= '"Principal Mobile",';
+        $output .= '"Coordinator Name",';
+        $output .= '"Coordinator Email",';
+        $output .= '"Coordinator Mobile",';
+        $output .= '"Password",';
+        $output .= '"Date & Time",';
+        $output .= '"Completeness",';
+        $output .= "\n";
+        foreach ($arrRecord as $a) {
+            $output .= '"' . $k . '",';
+            $output .= '"' . $a->id . '",';
             $output .= '"' . $a->name . '",';
             $output .= '"' . $a->address1 . '",';
             $output .= '"' . $a->address2 . '",';
@@ -215,11 +369,13 @@ class Audit_started_model extends CI_Model {
         return $output;
     }
 
+	
+
     /*
      * Generate Excel Data
      */
 
-    public function getExcelDataByProgress1($progress) {
+    public function getExcelDataByProgress1_phase1($progress) {
         $output = "";
         $arrRecord = $this->db->select('a.*, b.name AS state_name, c.name AS district_name, d.password')
                         ->from('gsp_school AS a')
@@ -229,6 +385,7 @@ class Audit_started_model extends CI_Model {
 						->join('gsp_aduit_submitted AS e', 'a.userid=e.userid', 'left')
                         ->where($progress)
 						->where("e.status='1'")
+						->where('a.date_added <', '2017-11-20 00:00:00')
 						->order_by('a.id', 'desc')
                         ->get()->result();
         //echo '<pre>'; print_r($arrRecord); exit;
@@ -236,7 +393,6 @@ class Audit_started_model extends CI_Model {
         $isdCode = '+91';
         $output .= '"S.No",';
         $output .= '"School ID",';
-	    $output .= '"UDISE Code",';
         $output .= '"School Name",';
         $output .= '"Address1",';
         $output .= '"Address2",';
@@ -261,7 +417,81 @@ class Audit_started_model extends CI_Model {
         foreach ($arrRecord as $a) {
             $output .= '"' . $k . '",';
             $output .= '"' . $a->id . '",';
-		$output .= '"' . $a->udise . '",'; 
+            $output .= '"' . $a->name . '",';
+            $output .= '"' . $a->address1 . '",';
+            $output .= '"' . $a->address2 . '",';
+            $output .= '"' . $a->country . '",';
+            $output .= '"' . $a->state_name . '",';
+            $output .= '"' . $a->district_name . '",';
+            $output .= '"' . $a->city . '",';
+            $output .= '"' . $a->pincode . '",';
+            $output .= '"' . $isdCode . '",';
+            $output .= '"' . $a->std . '",';
+            $output .= '"' . $a->telephone . '",';
+            $output .= '"' . $a->schoolemail . '",';
+            $output .= '"' . $a->principle_name . '",';
+            $output .= '"' . $a->mobile . '",';
+            $output .= '"' . $a->coname . '",';
+            $output .= '"' . $a->coemail . '",';
+            $output .= '"' . $a->comobile . '",';
+            $output .= '"' . $a->password . '",';
+            //$output .='"'.date('d-m-Y H:i:s', strtotime($row['datetime'])).'",';
+            $output .= '"' . date('Y-m-d H:i:s', strtotime($a->date_added)) . '",';
+            $output .= '"' . $a->progress . '%",';
+            $output .= "\n";
+            $k++;
+        }
+
+        return $output;
+    }
+
+
+ /*
+     * Generate Excel Data
+     */
+
+    public function getExcelDataByProgress1_phase2($progress) {
+        $output = "";
+        $arrRecord = $this->db->select('a.*, b.name AS state_name, c.name AS district_name, d.password')
+                        ->from('gsp_school AS a')
+                        ->join('states AS b', 'a.state=b.id', 'left')
+                        ->join('cities AS c', 'a.district=c.id', 'left')
+                        ->join('gsp_user AS d', 'a.userid=d.id', 'left')
+						->join('gsp_aduit_submitted AS e', 'a.userid=e.userid', 'left')
+                        ->where($progress)
+						->where("e.status='1'")
+						->where('a.date_added >', '2017-11-20 00:00:00')
+						->order_by('a.id', 'desc')
+                        ->get()->result();
+        //echo '<pre>'; print_r($arrRecord); exit;
+        $k = 1;
+        $isdCode = '+91';
+        $output .= '"S.No",';
+        $output .= '"School ID",';
+        $output .= '"School Name",';
+        $output .= '"Address1",';
+        $output .= '"Address2",';
+        $output .= '"Country",';
+        $output .= '"State",';
+        $output .= '"District",';
+        $output .= '"City",';
+        $output .= '"Pincode",';
+        $output .= '"ISD Code",';
+        $output .= '"STD Code",';
+        $output .= '"Landline Number",';
+        $output .= '"School Email",';
+        $output .= '"Principal Name",';
+        $output .= '"Principal Mobile",';
+        $output .= '"Coordinator Name",';
+        $output .= '"Coordinator Email",';
+        $output .= '"Coordinator Mobile",';
+        $output .= '"Password",';
+        $output .= '"Date & Time",';
+        $output .= '"Completeness",';
+        $output .= "\n";
+        foreach ($arrRecord as $a) {
+            $output .= '"' . $k . '",';
+            $output .= '"' . $a->id . '",';
             $output .= '"' . $a->name . '",';
             $output .= '"' . $a->address1 . '",';
             $output .= '"' . $a->address2 . '",';
