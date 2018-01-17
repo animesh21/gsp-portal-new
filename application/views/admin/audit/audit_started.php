@@ -1,5 +1,5 @@
  <div class="top-area">
-        <h2>AUDIT STARTED <a href="<?php echo base_url('admin/audit_started_2017/excel') ?>"><button class="exportBtn">Export to Excel</button></a></h2>
+        <h2>AUDIT STARTED <a href="<?php echo base_url('admin/audit_started_2017/excel_phase1') ?>"><button class="exportBtn">Export to Excel</button></a></h2>
          </div>
       <table class="display dataTable no-footer tablepluging" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
         <thead>
