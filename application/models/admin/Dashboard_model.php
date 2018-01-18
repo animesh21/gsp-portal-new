@@ -204,7 +204,8 @@ class Dashboard_model extends CI_Model {
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
 						->join('cities AS c', 'a.district=c.id', 'left')
-						->where('progress !=', 100)
+						->where('progress >=', 10)
+						->where('progress <=', 100)
 						->where('a.date_added >', '2017-11-29 00:00:00')
 						->order_by('a.id', 'desc')
 						->get()->result();
