@@ -212,7 +212,8 @@ class Dashboard_model extends CI_Model {
 	}
 	
 	public function getschool_started_audit_phase_2() {
-		$this->db->where('progress<', 100);
+		$this->db->where('progress >=', 10);
+		$this->db->where('progress <=', 100);
 		$this->db->where('date_added >', '2017-11-29 00:00:00');
 		return $this->db->count_all_results('gsp_school');
 	}
