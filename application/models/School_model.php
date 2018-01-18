@@ -138,17 +138,15 @@ class School_model extends CI_Model
 
     public function getSchools()
     {
-        $query = $this->db->select('COUNT(*) count')
-            ->from('gsp_school')
-            ->get();
+	    $this->db->where('date_added <=', '2017-11-29 00:00:00');
+        $query = $this->db->select('COUNT(*) count')->from('gsp_school')->get();
         $row = $query->row();
         return $row->count;
     }
-    
-    public function getSchools_phase_2()
+	
+	public function getSchools_phase_2()
     {
-	  $this->db->where('YEAR(date_added)', 2017);
-	  $this->db->where('date_added >', '2017-11-20 00:00:00');
+	  $this->db->where('date_added >', '2017-11-29 00:00:00');
 	  return $this->db->count_all_results('gsp_school');
     }
 	
