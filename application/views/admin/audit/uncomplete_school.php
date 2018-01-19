@@ -1,12 +1,12 @@
 <div class="top-area">
-        <h2>Schools Started The Audit But Did Not Complete<a href="<?php echo base_url('admin/audit_started_2017/excelByProgress_phase1') ?>"><button class="exportBtn">Export to Excel</button></a></h2>
+        <h2>Schools Started The Audit But Did Not Complete ( AUDIT PHASE 1 )<a href="<?php echo base_url('admin/audit_started_2017/excelByProgress5_phase1') ?>"><button class="exportBtn">Export to Excel</button></a></h2>
 </div>
       <table id="example1" class="display dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
         <thead>
           <tr role="row">
             <th>S.No</th>
             <th>Sch.Id</th>
-	    <th>UDISE Code</th>
+			<th>UDISE Code</th>
             <th>School Name</th>
             <th>pincode</th>
             <th>City</th>
@@ -27,7 +27,7 @@
             <tr role="row" class="<?php echo ($i%2==0) ? "even" : "odd"; ?>">
                 <td><?php echo $i; ?></td>
                 <td><?php echo $r->id; ?></td>
-		<td><?php echo $r->udise; ?></td>
+				<td><?php echo $r->udise; ?></td>
                 <td><?php echo $r->name; ?></td>
                 <td><?php echo $r->pincode; ?></td>
                 <td><?php echo $r->city; ?></td>
