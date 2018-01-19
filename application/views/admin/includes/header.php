@@ -106,7 +106,7 @@
     padding: 40px 25px;
     box-sizing: border-box;
     overflow: hidden;
-    min-height: 790px!important;
+    min-height: 890px!important;
 }
 </style>	
 	
