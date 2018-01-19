@@ -2735,7 +2735,7 @@
           </tr>
           <?php foreach ($arrImages as $a) { ?>
           <tr>
-            <td><img src="<?php echo $a->file_name 
+            <td><img src="<?php 
 			$allowed =  array('png' ,'jpg','JPG','jpeg','JPEG');
             $ext = pathinfo($a->file_name, PATHINFO_EXTENSION);
             if(!in_array($ext,$allowed) ) {
