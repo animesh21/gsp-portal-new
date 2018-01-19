@@ -231,6 +231,7 @@ class Audit_started_2017 extends CI_Controller {
 		force_download($name, $row);
     }
 	
+	
 	/* Generate Excel did not start */
 	public function excelByProgress6_phase1() {
 	    $varProgress="a.progress = '100'";
@@ -267,6 +268,17 @@ class Audit_started_2017 extends CI_Controller {
         $name = 'School_That_Submit_Audit'.date('d-m-Y').'.csv';
 		force_download($name, $row);
     }
+	
+	/* Schools Did Not Start The Audit phase2 */
+	public function excelByProgress6_phase2() {
+	    $varProgress="a.progress = '5'";
+        $this->load->dbutil();
+        $row = $this->Audit_started_model->getExcelDataByProgress_phase6($varProgress);
+        $name = 'SCHOOL_THAT_STARTED_THE_AUDIT'.date('d-m-Y').'.csv';
+		force_download($name, $row);
+    }
+	
+	
 	 /*
      * Generate Excel 2017
      */
