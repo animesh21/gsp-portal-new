@@ -29,13 +29,13 @@
           <label for="pwd">Select User Email-Id:</label>
           <ul class="list-unstyled list-inline" style="margin:0; padding:0;">
             <li>
-              <label class="checkbox-inline">
-              <input type="checkbox" value="coemail" name="coemail" id="coemail"/>
+              <label class="radio-inline">
+              <input type="radio" value="coemail" name="email" id="coemail"/>
               Coordinator Email</label>
             </li>
             <li>
-              <label class="checkbox-inline">
-              <input type="checkbox" value="schoolemail" name="coemail" id="schoolemail" />
+              <label class="radio-inline">
+              <input type="radio" value="schoolemail" name="email" id="schoolemail" />
               School Email</label>
             </li>
           </ul>
@@ -150,11 +150,22 @@
             </li>
           </ul>
         </div>
-		
-		<div class="form-group col-md-4">
-		<label for="pwd">Select State :</label>
-		<?php echo form_dropdown('state', $states, $this->input->post('state'), array('class' => 'form-control', 'id' => 'country-select')); ?></div>
-	 
+        <div class="form-group col-md-4">
+          <label for="pwd">Select State :</label>
+          <?php echo form_dropdown('state', $states, $this->input->post('state'), array('class' => 'form-control', 'id' => 'country-select')); ?></div>
+        <div class="form-group  col-lg-4">
+          <label for="pwd">School-Category :</label>
+          <?php echo form_dropdown('school', array('0' => 'Primary', '1' => 'Secondary','2'=>'All'), $this->input->post('school'), array('class' => 'form-control', 'id' => 'school-select')); ?> </div>
+		<div class="form-group  col-lg-4">
+          <label for="pwd">Ratings :</label>
+		  <select class="form-control">
+		    <option value="">Select Rating</option>
+		    <option value="">Green</option>
+			<option value="">Yellow</option>
+			<option value="">Orange</option>
+			<option value="">Red</option>
+		  </select>
+           </div>
         <div class="form-group col-md-12">
           <div class="col-md-6">
             <button type="submit" class="btn btn-default btn-block btn-lg" style="background: #e86549 !important; color: #fff">Filter Email</button>
