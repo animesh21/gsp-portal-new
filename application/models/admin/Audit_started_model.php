@@ -85,7 +85,7 @@ class Audit_started_model extends CI_Model {
         $isdCode = '+91';
         $output .= '"S.No",';
         $output .= '"School ID",';
-		$output .= '"UDISE Code",';
+	$output .= '"UDISE Code",';
         $output .= '"School Name",';
         $output .= '"Address1",';
         $output .= '"Address2",';
@@ -110,7 +110,7 @@ class Audit_started_model extends CI_Model {
         foreach ($arrRecord as $a) {
             $output .= '"' . $k . '",';
             $output .= '"' . $a->id . '",';
-			$output .= '"' . $a->udise . '",';
+	    $output .= '"' . $a->udise . '",';
             $output .= '"' . $a->name . '",';
             $output .= '"' . $a->address1 . '",';
             $output .= '"' . $a->address2 . '",';
@@ -394,6 +394,7 @@ class Audit_started_model extends CI_Model {
         $k = 1;
         $isdCode = '+91';
         $output .= '"S.No",';
+	$output .= '"Udise",';   
         $output .= '"School ID",';
         $output .= '"School Name",';
         $output .= '"Address1",';
@@ -418,6 +419,7 @@ class Audit_started_model extends CI_Model {
         $output .= "\n";
         foreach ($arrRecord as $a) {
             $output .= '"' . $k . '",';
+	    $output .= '"' . $a->udise. '",';
             $output .= '"' . $a->id . '",';
             $output .= '"' . $a->name . '",';
             $output .= '"' . $a->address1 . '",';
