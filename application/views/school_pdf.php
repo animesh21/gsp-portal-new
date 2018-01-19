@@ -564,7 +564,7 @@
 		?>
       </p>
     </li>
-	<?php if(!empty(getFiled('Q6A1', $schoolUserID)) && getFiled('Q6A1', $schoolUserID)!=1 && getFiled('Q6A1', $schoolUserID)!=2 ):    ?>
+    <?php if(!empty(getFiled('Q6A1', $schoolUserID)) && getFiled('Q6A1', $schoolUserID)!=1 && getFiled('Q6A1', $schoolUserID)!=2 ):    ?>
     <li>
       <p class="orange"><span>3a</span><span>Provide details of school-owned motorised vehicles</span></p>
       <table class="table">
@@ -697,7 +697,7 @@
       <p class="orange"><span>3(c)</span> IS CNG AVAILABLE IN YOUR STATE? </p>
       <p><?php echo (getFiled('Q6A3', $schoolUserID) != "") ? (getFiled('Q6A3', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?> </p>
     </li>
-	<?php endif; ?>
+    <?php endif; ?>
     <?php if(strcmp(getFiled('Q6A3', $schoolUserID),'Y')==0): ?>
     <li>
       <p class="orange"><span>3(c)a</span> IS CNG AVAILABLE IN YOUR AREA? </p>
@@ -868,7 +868,12 @@
       </tr>
       <?php foreach ($arrImages as $a) { ?>
       <tr>
-        <td><img src="<?php echo base_url() ?>/uploads/files/<?php echo $a->file_name; ?>" class="img-responsive" width="100" height="100" /></td>
+        <td><img src="<?php echo base_url() ?>/uploads/files/<?php 
+	 $allowed =  array('png' ,'jpg','JPG','jpeg','JPEG');
+     $ext = pathinfo($a->file_name, PATHINFO_EXTENSION);
+     if(!in_array($ext,$allowed) ) {
+       echo $a->file_name;
+     } ?>" class="img-responsive" width="100" height="100" /></td>
         <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Supporting_Document_Air"), " ", $a->file_name); ?></td>
       </tr>
       <?php } ?>
@@ -1063,7 +1068,13 @@
           <?php foreach ($electricityBills as $f) { ?>
           <tr id="index<?php echo $f->id; ?>">
             <?php $name = str_replace(" ", "_", $f->name . "_Electricity_Bill_"); ?>
-            <td><img src="<?php echo base_url('uploads/files/' . $f->file_name); ?>"class="img-thumbnail" style="height:80px;width:80px;"></img></td>
+            <td><img src="<?php 
+			$allowed =  array('png' ,'jpg','JPG','jpeg','JPEG');
+            $ext = pathinfo($f->file_name, PATHINFO_EXTENSION);
+            if(!in_array($ext,$allowed) ) {
+			echo 'uploads/files/' . $f->file_name; 
+            }
+			?>"class="img-thumbnail" style="height:80px;width:80px;"></img></td>
             <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
           </tr>
           <?php } ?>
@@ -1190,7 +1201,13 @@
           <?php foreach ($fulesBills as $f) { ?>
           <tr id="index<?php echo $f->id; ?>">
             <?php $name = str_replace(" ", "_", $f->name . "_Fuels_Bills_"); ?>
-            <td><img src="<?php echo base_url('uploads/files/' . $f->file_name); ?>" class="img-thumbnail" style="height:80px;width:80px;"></img></td>
+            <td><img src="<?php
+			$allowed =  array('png' ,'jpg','JPG','jpeg','JPEG');
+            $ext = pathinfo($f->file_name, PATHINFO_EXTENSION);
+            if(!in_array($ext,$allowed) ) {
+			echo 'uploads/files/' . $f->file_name; 
+            }
+			 ?>" class="img-thumbnail" style="height:80px;width:80px;"></img></td>
             <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
           </tr>
           <?php } ?>
@@ -1307,7 +1324,13 @@
         </tr>
         <?php foreach ($arrImages as $a) { ?>
         <tr>
-          <td><img src="<?php echo base_url() ?>/uploads/files/<?php echo $a->file_name; ?>" class="img-responsive" width="100" height="100" /></td>
+          <td><img src="<?php
+		    $allowed =  array('png' ,'jpg','JPG','jpeg','JPEG');
+            $ext = pathinfo($f->file_name, PATHINFO_EXTENSION);
+            if(!in_array($ext,$allowed) ) {
+			echo 'uploads/files/' . $f->file_name; 
+            }
+		  ?>" class="img-responsive" width="100" height="100" /></td>
           <td><?php echo str_replace(str_replace(' ', '_', $school->name .'_Supporting_Document_Energy_'), " ", $a->file_name); ?></td>
         </tr>
         <?php } ?>
@@ -1482,7 +1505,13 @@
           <?php foreach ($midDayMeal as $f) { ?>
           <tr id="index<?php echo $f->id; ?>">
             <?php $name = str_replace(" ", "_", $f->name . "_Mid_Day_Meal_"); ?>
-            <td><img src="<?php echo base_url('uploads/files/' . $f->file_name); ?>" class="img-thumbnail" style="height:80px;width:80px;"></img></td>
+            <td><img src="<?php
+			$allowed =  array('png' ,'jpg','JPG','jpeg','JPEG');
+            $ext = pathinfo($f->file_name, PATHINFO_EXTENSION);
+            if(!in_array($ext,$allowed) ) {
+			echo 'uploads/files/' . $f->file_name; 
+            }
+			?>" class="img-thumbnail" style="height:80px;width:80px;"></img></td>
             <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
           </tr>
           <?php } ?>
@@ -1742,7 +1771,13 @@
           <?php foreach ($midDayMeal as $f) { ?>
           <tr id="index<?php echo $f->id; ?>">
             <?php $name = str_replace(" ", "_", $f->name . "_Mid_Day_Meal_"); ?>
-            <td><img src="<?php echo base_url('uploads/files/' . $f->file_name); ?>" style="height:100px;width:100px"></img></td>
+            <td><img src="<?php 
+			$allowed =  array('png' ,'jpg','JPG','jpeg','JPEG');
+            $ext = pathinfo($f->file_name, PATHINFO_EXTENSION);
+            if(!in_array($ext,$allowed) ) {
+			echo 'uploads/files/' . $f->file_name; 
+            }
+			?>" style="height:100px;width:100px"></img></td>
             <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
           </tr>
           <?php } ?>
@@ -1843,7 +1878,13 @@
       <tbody>
         <?php foreach ($arrImages as $a) { ?>
         <tr>
-          <td><img src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+          <td><img src="<?php 
+		    $allowed =  array('png' ,'jpg','JPG','jpeg','JPEG');
+            $ext = pathinfo($f->file_name, PATHINFO_EXTENSION);
+            if(!in_array($ext,$allowed) ) {
+			echo 'uploads/files/' . $f->file_name; 
+            }
+		  ?>" class="img-responsive" width="100" height="100" /></td>
           <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Audit_Team_doing_Survey_"), " ", $a->file_name); ?></td>
         </tr>
         <?php } ?>
@@ -1903,7 +1944,13 @@
       </tr>
       <?php foreach ($arrImages as $a) { ?>
       <tr>
-        <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+        <td><img src="<?php
+		    $allowed =  array('png' ,'jpg','JPG','jpeg','JPEG');
+            $ext = pathinfo($a->file_name, PATHINFO_EXTENSION);
+            if(!in_array($ext,$allowed) ) {
+			echo 'uploads/files/' . $a->file_name; 
+            }
+		?>" class="img-responsive" width="100" height="100" /></td>
         <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_UPPF_"), " ", $a->file_name); ?></td>
       </tr>
       <?php } ?>
@@ -2245,7 +2292,13 @@
       </tr>
       <?php foreach ($arrImages as $a) { ?>
       <tr>
-        <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+        <td><img src="<?php
+		    $allowed =  array('png' ,'jpg','JPG','jpeg','JPEG');
+            $ext = pathinfo($a->file_name, PATHINFO_EXTENSION);
+            if(!in_array($ext,$allowed) ) {
+			echo 'uploads/files/' . $a->file_name; 
+            }
+		?>" class="img-responsive" width="100" height="100" /></td>
         <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Green_Cover_"), " ", $a->file_name); ?></td>
       </tr>
       <?php } ?>
@@ -2682,7 +2735,13 @@
           </tr>
           <?php foreach ($arrImages as $a) { ?>
           <tr>
-            <td><img src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+            <td><img src="<?php echo $a->file_name 
+			$allowed =  array('png' ,'jpg','JPG','jpeg','JPEG');
+            $ext = pathinfo($a->file_name, PATHINFO_EXTENSION);
+            if(!in_array($ext,$allowed) ) {
+			echo 'uploads/files/' . $a->file_name; 
+            }
+			?>" class="img-responsive" width="100" height="100" /></td>
             <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Task_4_Supporting_docs_"), " ", $a->file_name); ?></td>
           </tr>
           <?php } ?>
@@ -3067,7 +3126,13 @@
         </tr>
         <?php foreach ($arrImages as $a) { ?>
         <tr>
-          <td><img src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+          <td><img src="<?php 
+		    $allowed =  array('png' ,'jpg','JPG','jpeg','JPEG');
+            $ext = pathinfo($a->file_name, PATHINFO_EXTENSION);
+            if(!in_array($ext,$allowed) ) {
+			echo 'uploads/files/' . $a->file_name; 
+            }
+			?>" class="img-responsive" width="100" height="100" /></td>
           <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Water_Treatment_Process_"), " ", $a->file_name); ?></td>
         </tr>
         <?php } ?>
@@ -3426,7 +3491,12 @@
         </tr>
         <?php foreach ($arrImages as $a) { ?>
         <tr>
-          <td><img src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+          <td><img src="<?php 
+		    $allowed =  array('png' ,'jpg','JPG','jpeg','JPEG');
+            $ext = pathinfo($a->file_name, PATHINFO_EXTENSION);
+            if(!in_array($ext,$allowed) ) {
+			echo 'uploads/files/' . $a->file_name; 
+            } ?>" class="img-responsive" width="100" height="100" /></td>
           <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Flow_Chart_Hand_Drwan_"), " ", $a->file_name); ?></td>
         </tr>
         <?php } ?>
@@ -3450,7 +3520,13 @@
     </tr>
     <?php foreach ($arrImages as $a) { ?>
     <tr>
-      <td><img src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+      <td><img src="<?php 
+		$allowed =  array('png' ,'jpg','JPG','jpeg','JPEG');
+		$ext = pathinfo($a->file_name, PATHINFO_EXTENSION);
+		if(!in_array($ext,$allowed) ) {
+		echo 'uploads/files/' . $a->file_name; 
+		}
+	  ?>" class="img-responsive" width="100" height="100" /></td>
       <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Supporting_Document_Water_"), " ", $a->file_name); ?></td>
     </tr>
     <?php } ?>
@@ -3774,7 +3850,13 @@
         </tr>
         <?php foreach ($arrImages as $a) { ?>
         <tr>
-          <td><img src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+          <td><img src="<?php 
+		$allowed =  array('png' ,'jpg','JPG','jpeg','JPEG');
+		$ext = pathinfo($a->file_name, PATHINFO_EXTENSION);
+		if(!in_array($ext,$allowed) ) {
+		echo 'uploads/files/' . $a->file_name; 
+		}
+	    ?>" class="img-responsive" width="100" height="100" /></td>
           <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Segregation_Source_Classrooms_"), " ", $a->file_name); ?></td>
         </tr>
         <?php } ?>
@@ -3990,7 +4072,13 @@
             </tr>
             <?php foreach ($arrImages as $a) { ?>
             <tr>
-              <td><img src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+              <td><img src="<?php 
+		$allowed =  array('png' ,'jpg','JPG','jpeg','JPEG');
+		$ext = pathinfo($a->file_name, PATHINFO_EXTENSION);
+		if(!in_array($ext,$allowed) ) {
+		echo 'uploads/files/' . $a->file_name; 
+		}
+	  ?>" class="img-responsive" width="100" height="100" /></td>
               <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Audit_Team_Weighing_Solid_Waste_"), " ", $a->file_name); ?></td>
             </tr>
             <?php } ?>
@@ -4011,7 +4099,13 @@
             </tr>
             <?php foreach ($arrImages as $a) { ?>
             <tr>
-              <td><img src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+              <td><img src="<?php 
+		$allowed =  array('png' ,'jpg','JPG','jpeg','JPEG');
+		$ext = pathinfo($a->file_name, PATHINFO_EXTENSION);
+		if(!in_array($ext,$allowed) ) {
+		echo 'uploads/files/' . $a->file_name; 
+		}
+	  ?>" class="img-responsive" width="100" height="100" /></td>
               <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Composting_Pit_"), " ", $a->file_name); ?></td>
             </tr>
             <?php } ?>
@@ -4235,7 +4329,13 @@
           </tr>
           <?php foreach ($arrImages as $a) { ?>
           <tr>
-            <td><img src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+            <td><img src="<?php 
+		$allowed =  array('png' ,'jpg','JPG','jpeg','JPEG');
+		$ext = pathinfo($a->file_name, PATHINFO_EXTENSION);
+		if(!in_array($ext,$allowed) ) {
+		echo 'uploads/files/' . $a->file_name; 
+		  }
+	     ?>" class="img-responsive" width="100" height="100" /></td>
             <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Composting_Pit_"), " ", $a->file_name); ?></td>
           </tr>
           <?php } ?>
@@ -4643,7 +4743,13 @@
       </tr>
       <?php foreach ($arrImages as $a) { ?>
       <tr>
-        <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+        <td><img src="<?php 
+		$allowed =  array('png' ,'jpg','JPG','jpeg','JPEG');
+		$ext = pathinfo($a->file_name, PATHINFO_EXTENSION);
+		if(!in_array($ext,$allowed) ) {
+		echo 'uploads/files/' . $a->file_name; 
+		}
+	  ?>" class="img-responsive" width="100" height="100" /></td>
         <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Recycling_Machine_"), " ", $a->file_name); ?></td>
       </tr>
       <?php } ?>
@@ -4925,7 +5031,13 @@
       </tr>
       <?php foreach ($arrImages as $a) { ?>
       <tr>
-        <td><img src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+        <td><img src="<?php 
+		$allowed =  array('png' ,'jpg','JPG','jpeg','JPEG');
+		$ext = pathinfo($a->file_name, PATHINFO_EXTENSION);
+		if(!in_array($ext,$allowed) ) {
+		echo 'uploads/files/' . $a->file_name; 
+		}
+	  ?>" class="img-responsive" width="100" height="100" /></td>
         <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_E-waste_authorised_dealer_"), " ", $a->file_name); ?></td>
       </tr>
       <?php } ?>
@@ -4998,7 +5110,13 @@
           </tr>
           <?php foreach ($arrImages as $a) { ?>
           <tr>
-            <td><img src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+            <td><img src="<?php 
+		$allowed =  array('png' ,'jpg','JPG','jpeg','JPEG');
+		$ext = pathinfo($a->file_name, PATHINFO_EXTENSION);
+		if(!in_array($ext,$allowed) ) {
+		echo 'uploads/files/' . $a->file_name; 
+		}
+	  ?>" class="img-responsive" width="100" height="100" /></td>
             <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Buring_Waste_"), " ", $a->file_name); ?></td>
           </tr>
           <?php } ?>
@@ -5108,7 +5226,13 @@
       </tr>
       <?php foreach ($arrImages as $a) { ?>
       <tr>
-        <td><img src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+        <td><img src="<?php 
+		$allowed =  array('png' ,'jpg','JPG','jpeg','JPEG');
+		$ext = pathinfo($a->file_name, PATHINFO_EXTENSION);
+		if(!in_array($ext,$allowed) ) {
+		echo 'uploads/files/' . $a->file_name; 
+		}
+	  ?>" class="img-responsive" width="100" height="100" /></td>
         <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Audit_Team_Doing_Survey_Waste_"), " ", $a->file_name); ?></td>
       </tr>
       <?php } ?>
