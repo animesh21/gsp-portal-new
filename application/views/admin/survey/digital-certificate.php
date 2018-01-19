@@ -11,7 +11,7 @@
 			//echo '<pre>'; print_r($students);exit;
 		if ($students[$i]['name'] !="") {
 		    echo "<div class='container' 
-style='background:url(assets/img/images/Certificate-2017.jpg) no-repeat; width:1024px; height:485px; margin:0 auto;'><div class='first_name'>" . $students[$i]['name'] . "&nbsp;&nbsp;(" .  $students[$i]['grade'] . ")&nbsp;(".$students[$i]['school_name'].")</div></div>";
+style='background:url(assets/img/images/Certificate-2017.jpg) 5% 65%  no-repeat; width:1024px; height:791px; margin:0px auto;'><div class='first_name'>" . $students[$i]['name'] . "&nbsp;&nbsp;" .  $students[$i]['grade'] . "</div>&nbsp;<div class='school_name'>".$students[$i]['school_name']."</div></div>";
 		}
 	    }
 	}
@@ -19,7 +19,7 @@ style='background:url(assets/img/images/Certificate-2017.jpg) no-repeat; width:1
 	    for ($i = 0; $i < count($staffadmin); $i++) {
 		if ($staffadmin != '') {
 		    echo "<div class='container' 
-style='background:url(assets/img/images/Certificate-2017.jpg) no-repeat; width:1024px; height:500px; margin:0 auto;'><div class='first_name'>" . $staffadmin['teacher'] . "&nbsp;(" .  $staffadmin['school'] . ")</div></div>";
+style='background:url(assets/img/images/Certificate-2017.jpg) 5% 65%  no-repeat; width:1024px; height:791px; margin:0px auto;'><div class='first_name'>" . $staffadmin['teacher'] . "</div>&nbsp;<div class='school_name'>" .  $staffadmin['school'] . "</div></div>";
 		}
 	    }
 	}
@@ -27,6 +27,7 @@ style='background:url(assets/img/images/Certificate-2017.jpg) no-repeat; width:1
     </body>
 </html>
 <style type="text/css">
-    .first_name{ position:absolute; top:280px; left:300px}
+    .first_name{ position:absolute; top:420px; left:240px}
+	.school_name{ position:absolute; top:469px; left:100px}
     .grade{position:absolute; top:280px; left:650px}
 </style>
