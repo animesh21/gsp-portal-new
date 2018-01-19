@@ -761,17 +761,15 @@ class Audit_started_model extends CI_Model {
 
     public function getExcelDataByProgress1_phase2($progress) {
         $output = "";
-        $arrRecord = $this->db->select('a.*, b.name AS state_name, c.name AS district_name, d.password')
-                        ->from('gsp_school AS a')
-                        ->join('states AS b', 'a.state=b.id', 'left')
-                        ->join('cities AS c', 'a.district=c.id', 'left')
-                        ->join('gsp_user AS d', 'a.userid=d.id', 'left')
-						->join('gsp_aduit_submitted AS e', 'a.userid=e.userid', 'left')
-                        ->where($progress)
-						->where("e.status='1'")
-						->where('a.date_added >', '2017-11-20 00:00:00')
-						->order_by('a.id', 'desc')
-                        ->get()->result();
+       $arrRecord = $this->db->select('a.*,b.name AS state_name,c.name As district_name , d.password')
+								->from('gsp_school AS a')
+								->join('states AS b', 'a.state=b.id', 'left')
+								->join('cities AS c', 'a.district=c.id', 'left')
+								 ->join('gsp_user AS d', 'a.userid=d.id', 'left')
+								->join('gsp_aduit_submitted AS e','a.userid=e.userid', 'left')
+								->where('e.status=','1')
+								->where('e.date_on >', '2017-11-29 00:00:00')
+								->get()->result();
         //echo '<pre>'; print_r($arrRecord); exit;
         $k = 1;
         $isdCode = '+91';
