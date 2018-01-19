@@ -266,9 +266,9 @@ class Audit_started_model extends CI_Model {
         $output .= "\n";
         foreach ($arrRecord as $a) {
             $output .= '"' . $k . '",';
-            $output .= '"' . $a->id . '",';
 	    $output .= '"' . $a->udise . '",';
-            $output .= '"' . $a->name . '",';
+            $output .= '"' . $a->id . '",';
+	   $output .= '"' . $a->name . '",';
             $output .= '"' . $a->address1 . '",';
             $output .= '"' . $a->address2 . '",';
             $output .= '"' . $a->country . '",';
