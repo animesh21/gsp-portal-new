@@ -101,7 +101,13 @@
     text-align: center;
   }
 }  
-
+.content-form {
+    background: #fff;
+    padding: 40px 25px;
+    box-sizing: border-box;
+    overflow: hidden;
+    min-height: 790px!important;
+}
 </style>	
 	
 	
