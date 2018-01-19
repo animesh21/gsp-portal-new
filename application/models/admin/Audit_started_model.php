@@ -607,7 +607,7 @@ class Audit_started_model extends CI_Model {
 								->from('gsp_school AS a')
 								->join('states AS b', 'a.state=b.id', 'left')
 								->join('cities AS c', 'a.district=c.id', 'left')
-								 ->join('gsp_user AS d', 'a.userid=d.id', 'left')
+								->join('gsp_user AS d', 'a.userid=d.id', 'left')
 								->join('gsp_aduit_submitted AS e','a.userid=e.userid', 'left')
 								->where('progress=5')
 								->where('a.date_added >', '2017-11-29 00:00:00')
@@ -618,6 +618,7 @@ class Audit_started_model extends CI_Model {
         $k = 1;
         $isdCode = '+91';
         $output .= '"S.No",';
+        $output .= '"Udise",';
         $output .= '"School ID",';
         $output .= '"School Name",';
         $output .= '"Address1",';
@@ -642,6 +643,7 @@ class Audit_started_model extends CI_Model {
         $output .= "\n";
         foreach ($arrRecord as $a) {
             $output .= '"' . $k . '",';
+	    $output .= '"' . $a->udise . '",';
             $output .= '"' . $a->id . '",';
             $output .= '"' . $a->name . '",';
             $output .= '"' . $a->address1 . '",';
