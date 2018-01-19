@@ -675,10 +675,11 @@ class Audit_started_model extends CI_Model {
 
     public function getExcelDataByProgress1_phase1($progress) {
         $output = "";
-        $arrRecord = $this->db->select('a.*,b.name AS state_name,c.name As district_name')
+        $arrRecord = $this->db->select('a.*,b.name AS state_name,c.name As district_name , d.password')
 		            ->from('gsp_school AS a')
 					->join('states AS b', 'a.state=b.id', 'left')
 					->join('cities AS c', 'a.district=c.id', 'left')
+		                        ->join('gsp_user AS d', 'a.userid=d.id', 'left')
 					->join('gsp_aduit_submitted AS e','e.userid=a.userid', 'left')
 					->where('e.date_on <=', '2017-11-29')
 					->where('e.status','1')
