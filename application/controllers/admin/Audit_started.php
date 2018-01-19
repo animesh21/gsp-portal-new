@@ -76,16 +76,29 @@ class Audit_started extends CI_Controller {
      * Send Filter Feedback
      */ 
 	public function filter_email() {
-	   $data['main'] = 'admin/audit/feedback-with-filter';
-	   $data['title'] = 'Home | Send Feedback With Filters';
-	   $data['states'] = getStates();
+	 $data['states'] = getStates();
+	   $data['states'][0]="All";
 	   $progress= $this->input->post('progress');
 	   $school_category= $this->input->post('school_category');
 	   $school_type= $this->input->post('school_type');
 	   $state= $this->input->post('state');
-       $data['record'] = $this->Audit_started_model->emailFilter($state,$progress,$school_category,$school_type);
-       $this->load->view('admin/includes/template', $data);
-	  
+	   $email=$this->input->post('email');
+	   $school=$this->input->post('school');
+	   if(!empty($progress)){
+	      $condition=array("a.progress="=>$progress,'a.state='=>$state,"d.questionid="=>'Q1S1',"d.answer="=>$school_category);
+	   }
+	   $data['title'] = 'Home | Send Feedback With Filters';
+	   if(strcmp($email,"coemail")==0){
+	   $data['main'] = 'admin/audit/feedback-with-filter';
+           $data['record'] = $this->Audit_started_model->emailFilter($condition);
+	   $this->load->view('admin/includes/template', $data); 
+	   }
+	   else if(strcmp($email,"schoolemail")==0)
+	   {
+	   $data['main'] = 'admin/audit/feedback-with-filter-1';
+           $data['record'] = $this->Audit_started_model->emailFilter1($condition);
+	   $this->load->view('admin/includes/template', $data); 
+	   }	
     }
 
 }
