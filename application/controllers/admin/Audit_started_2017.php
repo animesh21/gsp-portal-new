@@ -225,6 +225,32 @@ class Audit_started_2017 extends CI_Controller {
 		force_download($name, $row);
     }
 
+	/* Generate Excel started but did not complete */
+	 public function excelByProgress5_phase1() {
+	    $varProgress="a.progress = '100'";
+        $this->load->dbutil();
+        $row = $this->Audit_started_model->getExcelDataByProgress5_phase1($varProgress);
+        $name = 'School_That_Submit_Audit'.date('d-m-Y').'.csv';
+		force_download($name, $row);
+    }
+	
+	/* Generate Excel did not start */
+	public function excelByProgress6_phase1() {
+	    $varProgress="a.progress = '100'";
+        $this->load->dbutil();
+        $row = $this->Audit_started_model->getExcelDataByProgress6_phase1($varProgress);
+        $name = 'School_That_Submit_Audit'.date('d-m-Y').'.csv';
+		force_download($name, $row);
+    }
+	/* Generate Excel 2017 school */
+	public function excelByProgress7_phase1() {
+	    $varProgress="a.progress = '100'";
+        $this->load->dbutil();
+        $row = $this->Audit_started_model->getExcelDataByProgress7_phase1($varProgress);
+        $name = 'School_That_Submit_Audit'.date('d-m-Y').'.csv';
+		force_download($name, $row);
+    }
+	
     /*
      * Generate Excel By Condition
      */
@@ -365,7 +391,6 @@ function getdigitalCertificate($argID) {
    $data['staffadmin'] = $staffadmin;
    $html1 = $this->load->view('admin/survey/digital-certificate', $data, true);
    $this->dompdf->load_html($html1);
-   $this->dompdf->set_paper(array(0, 0, 505, 691), 'portrait');
    $this->dompdf->render();
    $this->dompdf->stream("Digital Certificate.pdf", array("Attachment" => false));
   }
