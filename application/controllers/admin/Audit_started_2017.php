@@ -185,15 +185,12 @@ class Audit_started_2017 extends CI_Controller {
 		force_download($name, $row);
     }
     
-	/*
-     * Generate Excel By Condition
-     */
-
-    public function excelByProgress2_phase1() {
+	/* Generate Excel That started the audit */
+	public function excelByProgress2_phase1() {
 	    $varProgress="a.progress = '100'";
         $this->load->dbutil();
-        $row = $this->Audit_started_model->getExcelDataByProgress_phase1( $varProgress);
-        $name = 'SCHOOL_THAT_STARTED_THE_AUDIT'.date('d-m-Y').'.csv';
+        $row = $this->Audit_started_model->getExcelDataByProgress2_phase1($varProgress);
+        $name = 'School_That_Submit_Audit'.date('d-m-Y').'.csv';
 		force_download($name, $row);
     }
 	
