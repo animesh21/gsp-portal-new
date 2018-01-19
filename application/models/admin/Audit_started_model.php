@@ -1252,22 +1252,29 @@ public function getExcel2017Data() {
 				 ->result();
 				 return $data;
 		} 
-	/*Email Filter*/
-		public function emailFilter($state,$progress,$school_category,$school_type)
+	     
+		/*Email Filter For Coordinators*/
+		public function emailFilter($args)
 		{
 		  $sql = $this->db->distinct()->select('a.*, b.name AS state_name,c.name As district_name,d.answer AS answer_type')
 		  ->from('gsp_school AS a')
 		  ->join('states AS b', 'a.state=b.id', 'left')
 		  ->join('cities AS c', 'a.district=c.id', 'left')
 		  ->join('gsp_answers AS d', 'a.userid=d.userid', 'left')
-		  ->where('a.progress',$progress)
-		  ->where('a.state',$state)
-		  ->or_where('d.questionid','Q1S1')
-		  ->or_where('d.answer',$school_category)
-		  ->or_where('d.questionid','Q2G1')
-		  ->or_where('d.answer',$school_type)
-		  ->or_where('d.questionid','Q9G1')
-		  ->or_where('d.answer',$school_type)
+		  ->where($args)
+		  ->order_by('a.id', 'asc')
+		  ->get()->result();
+		  return $sql;
+		} 
+	       /*Email Filter For SchoolEmail*/
+		public function emailFilter1($args)
+		{
+		  $sql = $this->db->distinct()->select('a.*, b.name AS state_name,c.name As district_name,d.answer AS answer_type')
+		  ->from('gsp_school AS a')
+		  ->join('states AS b', 'a.state=b.id', 'left')
+		  ->join('cities AS c', 'a.district=c.id', 'left')
+		  ->join('gsp_answers AS d', 'a.userid=d.userid', 'left')
+		  ->where($args)
 		  ->order_by('a.id', 'asc')
 		  ->get()->result();
 		  return $sql;
