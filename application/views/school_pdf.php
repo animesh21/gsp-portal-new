@@ -13,6 +13,7 @@
 	} 
 	?>
 </script>
+	<?php $school=json_decode($school); ?>
 <div class="cover"> <img src="assets/img/images/logo.png" width="436" height="118" class="logo">
   <h1>Responses For Green Schools Programme Audit 2017</h1>
   <div class="school-detail">
