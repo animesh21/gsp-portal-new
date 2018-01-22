@@ -73,8 +73,34 @@ class Dashboard extends CI_Controller {
 	public function school_that_submit_audit()
 	{
 		$data['main']='admin/audit/complete_audit_submit';
-		$data['complete_submit']=$this->Dashboard_model->getschool_that_submit_audit_data();
 		$this->load->view('admin/includes/template', $data);
+	}
+	public function school_that_submit_audit_emailsend_phase_email()
+	{
+	   $records=$this->Dashboard_model->getschool_that_submit_audit_data();
+	   $arr_school=array();
+	   $i=0;
+	   foreach($records as $record):
+		   $arr_school[]=array('sr_no'=>++$i,
+		    'id'=>$record->id,
+		    'udise'=>$record->udise,
+		    'name'=>$record->name,
+		    'userid'=>$record->userid,
+		    'state_name'=>$record->state_name,
+		    'district_name'=>$record->district_name,
+		    'city'=>$record->city,
+		    'coname'=>$record->coname,
+		    'coemail'=>$record->coemail,
+		    'comobile'=>$record->comobile,
+		    'progress'=>$record->progress,
+		    'date_added'=>$record->date_added);
+	   endforeach;
+		$data['record']=array(
+            "sEcho" => 1,
+            "iTotalRecords" => count($arr_school),
+            "iTotalDisplayRecords" => count($arr_school),
+            "aaData"=>$arr_school);
+		    echo json_encode($data['record']);
 	}
 	
 	public function audit_started_but_not_complete()
