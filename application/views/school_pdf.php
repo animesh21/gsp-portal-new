@@ -68,19 +68,19 @@
       </li>
       <li>
         <p class="orange"><span>9</span><span>Mobile Number (Mobile Number with STD code)</span></p>
-        <p>(ISD) 91  &nbsp;&nbsp; (Number) <?php echo $school[0]->mobile; ?></p>
+        <p>(ISD) 91  &nbsp;&nbsp; (Number) <?php echo $school->mobile; ?></p>
       </li>
       <li>
         <p class="orange"><span>10</span><span>Principal Name</span></p>
-        <p><?php echo $school[0]->principle_name; ?></p>
+        <p><?php echo $school->principle_name; ?></p>
       </li>
       <li>
         <p class="orange"><span>11</span><span>GSP Coordinator Name</span></p>
-        <p><?php echo $school[0]->coname; ?></p>
+        <p><?php echo $school->coname; ?></p>
       </li>
       <li>
         <p class="orange"><span>12</span><span>GSP Coordinator Email</span></p>
-        <p><?php echo $school[0]->coemail; ?></p>
+        <p><?php echo $school->coemail; ?></p>
       </li>
       <li>
         <p class="orange"><span>13</span><span>GSP Coordinator Mobile Number</span></p>
