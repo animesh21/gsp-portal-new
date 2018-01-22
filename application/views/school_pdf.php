@@ -17,8 +17,8 @@
   <h1>Responses For Green Schools Programme Audit 2017</h1>
   <div class="school-detail">
     <p><span>School Name:</span><span><?php echo $school->name; ?></span></p>
-    <p><span>Address:</span><span><?php echo $school[0]->address1; ?></span></p>
-    <p><span>Coordinator Name:</span><span><?php echo $school[0]->coname; ?></span></p>
+    <p><span>Address:</span><span><?php echo $school->address1; ?></span></p>
+    <p><span>Coordinator Name:</span><span><?php echo $school->coname; ?></span></p>
   </div>
   <div class="address-wrap"> <img src="assets/img/images/cover.png" width="100%">
     <div class="address">
@@ -36,11 +36,11 @@
     <ul class="list">
       <li>
         <p class="orange"><span>1</span><span>Name of the School / Institution</span></p>
-        <p><?php echo $school[0]->name; ?></p>
+        <p><?php echo $school->name; ?></p>
       </li>
       <li>
         <p class="orange"><span>2</span><span>Address</span></p>
-        <p><?php echo $school[0]->address1; ?>, <?php echo $school[0]->address2; ?></p>
+        <p><?php echo $school->address1; ?>, <?php echo $school[0]->address2; ?></p>
       </li>
       <li>
         <p class="orange"><span>3</span><span>Country</span></p>
@@ -48,23 +48,23 @@
       </li>
       <li>
         <p class="orange"><span>4</span><span>State</span></p>
-        <p><?php echo $school[0]->state_name; ?></p>
+        <p><?php echo $school->state_name; ?></p>
       </li>
       <li>
         <p class="orange"><span>5</span><span>District</span></p>
-        <p><?php echo $school[0]->district; ?></p>
+        <p><?php echo $school->district; ?></p>
       </li>
       <li>
         <p class="orange"><span>6</span><span>City</span></p>
-        <p><?php echo $school[0]->city; ?></p>
+        <p><?php echo $school->city; ?></p>
       </li>
       <li>
         <p class="orange"><span>7</span><span>Pincode</span></p>
-        <p><?php echo $school[0]->pincode; ?></p>
+        <p><?php echo $school->pincode; ?></p>
       </li>	    
       <li>
         <p class="orange"><span>8</span><span>Telephone Number (Landline Number with STD code)</span></p>
-        <p>(ISD) &nbsp;91  &nbsp;&nbsp; (STD) &nbsp;<?php echo $school[0]->std; ?> &nbsp;&nbsp; (Number)<?php echo $school[0]->telephone; ?></p>
+        <p>(ISD) &nbsp;91  &nbsp;&nbsp; (STD) &nbsp;<?php echo $school->std; ?> &nbsp;&nbsp; (Number)<?php echo $school->telephone; ?></p>
       </li>
       <li>
         <p class="orange"><span>9</span><span>Mobile Number (Mobile Number with STD code)</span></p>
