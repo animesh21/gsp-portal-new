@@ -103,7 +103,7 @@ function sendResponseReport(schoolid,coemail,name){
 "Stay tuned!"+
 "<br/><br/><br/>"+
 "GSP Team"+
-" 011-40616000 Extn-300, 320 <br/><br/><a href='<?php echo "http://www.greenschoolsprogramme.org/audit2017/responsreport/pdf/"?>"+schoolid+"'>Download</a>";
+" 011-40616000 Extn-300, 320 <br/><br/><a href='<?php echo "http://www.greenschoolsprogramme.org/audit2017/admin/responsreport/pdf/"?>"+schoolid+"'>Download</a>";
 jQuery.ajax({
 	  url:"https://api.elasticemail.com/v2/email/send",
 	  type:"POST",
