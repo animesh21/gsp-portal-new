@@ -43,51 +43,31 @@
         <p><?php echo $school->address1; ?>, <?php echo $school->address2; ?></p>
       </li>
       <li>
-        <p class="orange"><span>3</span><span>Country</span></p>
-        <p><?php echo 'India'; ?></p>
-      </li>
-      <li>
-        <p class="orange"><span>4</span><span>State</span></p>
-        <p><?php echo $school->state_name; ?></p>
-      </li>
-      <li>
-        <p class="orange"><span>5</span><span>District</span></p>
-        <p><?php echo $school->district; ?></p>
-      </li>
-      <li>
-        <p class="orange"><span>6</span><span>City</span></p>
-        <p><?php echo $school->city; ?></p>
-      </li>
-      <li>
-        <p class="orange"><span>7</span><span>Pincode</span></p>
-        <p><?php echo $school->pincode; ?></p>
-      </li>	    
-      <li>
-        <p class="orange"><span>8</span><span>Telephone Number (Landline Number with STD code)</span></p>
+        <p class="orange"><span>3</span><span>Telephone Number (Landline Number with STD code)</span></p>
         <p>(ISD) &nbsp;91  &nbsp;&nbsp; (STD) &nbsp;<?php echo $school->std; ?> &nbsp;&nbsp; (Number)<?php echo $school->telephone; ?></p>
       </li>
       <li>
-        <p class="orange"><span>9</span><span>Mobile Number (Mobile Number with STD code)</span></p>
+        <p class="orange"><span>4</span><span>Mobile Number (Mobile Number with STD code)</span></p>
         <p>(ISD) 91  &nbsp;&nbsp; (Number) <?php echo $school->mobile; ?></p>
       </li>
       <li>
-        <p class="orange"><span>10</span><span>Principal Name</span></p>
+        <p class="orange"><span>5</span><span>Principal Name</span></p>
         <p><?php echo $school->principle_name; ?></p>
       </li>
       <li>
-        <p class="orange"><span>11</span><span>GSP Coordinator Name</span></p>
+        <p class="orange"><span>6</span><span>GSP Coordinator Name</span></p>
         <p><?php echo $school->coname; ?></p>
       </li>
       <li>
-        <p class="orange"><span>12</span><span>GSP Coordinator Email</span></p>
+        <p class="orange"><span>7</span><span>GSP Coordinator Email</span></p>
         <p><?php echo $school->coemail; ?></p>
       </li>
       <li>
-        <p class="orange"><span>13</span><span>GSP Coordinator Mobile Number</span></p>
+        <p class="orange"><span>8</span><span>GSP Coordinator Mobile Number</span></p>
         <p>(ISD) 91  &nbsp;&nbsp; (Number) <?php echo $school->comobile; ?></p>
       </li>
       <li>
-        <p class="orange"><span>14</span><span>Category Of The School</span></p>
+        <p class="orange"><span>9</span><span>Category Of The School</span></p>
         <p>
           <?php
                             $arr = array(
@@ -103,7 +83,7 @@
           <?php echo (getFiled('Q1S1', $schoolUserID) != '') ? $arr[getFiled('Q1S1', $schoolUserID)] : ""; ?> </p>
       </li>
       <li>
-        <p class="orange"><span>15</span><span>Category For Your School (Not Applicable in Case of Residential Category)</span></p>
+        <p class="orange"><span>10</span><span>Category For Your School (Not Applicable in Case of Residential Category)</span></p>
         <p>
           <?php
                             $arr1 = array(
@@ -584,7 +564,7 @@
 		?>
       </p>
     </li>
-<?php $dat=getFiled('Q6A1', $schoolUserID); if(($dat)==3 || ($dat)==4 || ($dat)==5){ ?>	  
+    <?php if(!empty(getFiled('Q6A1', $schoolUserID)) && getFiled('Q6A1', $schoolUserID)!=1 && getFiled('Q6A1', $schoolUserID)!=2 ):    ?>
     <li>
       <p class="orange"><span>3a</span><span>Provide details of school-owned motorised vehicles</span></p>
       <table class="table">
@@ -717,13 +697,13 @@
       <p class="orange"><span>3(c)</span> IS CNG AVAILABLE IN YOUR STATE? </p>
       <p><?php echo (getFiled('Q6A3', $schoolUserID) != "") ? (getFiled('Q6A3', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?> </p>
     </li>
+    <?php endif; ?>
     <?php if(strcmp(getFiled('Q6A3', $schoolUserID),'Y')==0): ?>
     <li>
       <p class="orange"><span>3(c)a</span> IS CNG AVAILABLE IN YOUR AREA? </p>
       <p><?php echo (getFiled('Q6A4S1', $schoolUserID) != "") ? (getFiled('Q6A4S1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?> </p>
     </li>
     <?php endif; ?>
-<?php } ?>	  
   </ul>
   <div class="task-area">
     <h3 class="task">Task 4: How do you travel to school every day? </h3>
@@ -888,7 +868,12 @@
       </tr>
       <?php foreach ($arrImages as $a) { ?>
       <tr>
-        <td><img src="uploads/files/<?php echo $a->file_name; ?>" class="img-responsive" width="100" height="100" /></td>
+        <td><img src="<?php echo base_url() ?>/uploads/files/<?php 
+	 $allowed =  array('png' ,'jpg','JPG','jpeg','JPEG');
+     $ext = pathinfo($a->file_name, PATHINFO_EXTENSION);
+     if(!in_array($ext,$allowed) ) {
+       echo $a->file_name;
+     } ?>" class="img-responsive" width="100" height="100" /></td>
         <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Supporting_Document_Air"), " ", $a->file_name); ?></td>
       </tr>
       <?php } ?>
@@ -897,14 +882,12 @@
   <?php } else { ?>
   <div class="support_files"> No documents uploaded by the school. </div>
   <?php } ?>
-<?php if(getFiled('Q9A1', $schoolUserID) != "Y"){ ?>	
   <ul class="list">
     <li>
       <p class="orange"><span>6(a)</span> If No, is there an air quality monitoring station(private or government) close to your school? </p>
       <p> <?php echo (getFiled('Q9A2', $schoolUserID) != "") ? (getFiled('Q9A2', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?> </p>
     </li>
   </ul>
-<?php } ?>	
 </div>
 <div style="text-align: center; padding: 0;">&nbsp;&nbsp;&nbsp;&nbsp;</div>
 <h2 class="heading section energy page_break"><img src="assets/img/images/energy.png" width="94" height="94">Energy</h2>
@@ -1085,7 +1068,13 @@
           <?php foreach ($electricityBills as $f) { ?>
           <tr id="index<?php echo $f->id; ?>">
             <?php $name = str_replace(" ", "_", $f->name . "_Electricity_Bill_"); ?>
-            <td><img src="uploads/files/<?php echo $f->file_name; ?>" class="img-thumbnail" style="height:80px;width:80px;"></img></td>
+            <td><img src="<?php 
+			$allowed =  array('png' ,'jpg','JPG','jpeg','JPEG');
+            $ext = pathinfo($f->file_name, PATHINFO_EXTENSION);
+            if(!in_array($ext,$allowed) ) {
+			echo 'uploads/files/' . $f->file_name; 
+            }
+			?>"class="img-thumbnail" style="height:80px;width:80px;"></img></td>
             <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
           </tr>
           <?php } ?>
@@ -1212,7 +1201,13 @@
           <?php foreach ($fulesBills as $f) { ?>
           <tr id="index<?php echo $f->id; ?>">
             <?php $name = str_replace(" ", "_", $f->name . "_Fuels_Bills_"); ?>
-            <td><img src="uploads/files/<?php echo $f->file_name; ?>" class="img-thumbnail" style="height:80px;width:80px;"></img></td>
+            <td><img src="<?php
+			$allowed =  array('png' ,'jpg','JPG','jpeg','JPEG');
+            $ext = pathinfo($f->file_name, PATHINFO_EXTENSION);
+            if(!in_array($ext,$allowed) ) {
+			echo 'uploads/files/' . $f->file_name; 
+            }
+			 ?>" class="img-thumbnail" style="height:80px;width:80px;"></img></td>
             <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
           </tr>
           <?php } ?>
@@ -1329,7 +1324,13 @@
         </tr>
         <?php foreach ($arrImages as $a) { ?>
         <tr>
-          <td><img src="uploads/files/<?php echo $a->file_name; ?>" class="img-responsive" width="100" height="100" /></td>
+          <td><img src="<?php
+		    $allowed =  array('png' ,'jpg','JPG','jpeg','JPEG');
+            $ext = pathinfo($f->file_name, PATHINFO_EXTENSION);
+            if(!in_array($ext,$allowed) ) {
+			echo 'uploads/files/' . $f->file_name; 
+            }
+		  ?>" class="img-responsive" width="100" height="100" /></td>
           <td><?php echo str_replace(str_replace(' ', '_', $school->name .'_Supporting_Document_Energy_'), " ", $a->file_name); ?></td>
         </tr>
         <?php } ?>
@@ -1504,7 +1505,13 @@
           <?php foreach ($midDayMeal as $f) { ?>
           <tr id="index<?php echo $f->id; ?>">
             <?php $name = str_replace(" ", "_", $f->name . "_Mid_Day_Meal_"); ?>
-            <td><img src="<?php echo 'uploads/files/' . $f->file_name; ?>" class="img-thumbnail" style="height:80px;width:80px;"></img></td>
+            <td><img src="<?php
+			$allowed =  array('png' ,'jpg','JPG','jpeg','JPEG');
+            $ext = pathinfo($f->file_name, PATHINFO_EXTENSION);
+            if(!in_array($ext,$allowed) ) {
+			echo 'uploads/files/' . $f->file_name; 
+            }
+			?>" class="img-thumbnail" style="height:80px;width:80px;"></img></td>
             <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
           </tr>
           <?php } ?>
@@ -1518,7 +1525,7 @@
 		   if(getFiled('Q5F1S1', $schoolUserID)==1):
 		   echo "Government Scheme";
 		   elseif(getFiled('Q5F1S1', $schoolUserID)==2):
-		   echo "School's personal initiative";
+		   echo "School’s personal initiative";
 		   elseif(getFiled('Q5F1S1', $schoolUserID)==3):
 		   echo "Others";
 		   endif; 
@@ -1547,7 +1554,7 @@
       <?php endif; ?>
       <?php if(strcmp(getFiled('Q5F1', $schoolUserID),'Y')==0): ?>
       <li>
-        <p class="orange"><span>2(b)</span>What kind of food items are served in midday meal?</p>
+        <p class="orange"><span>2(b)</span>Whatkind of food items are served in midday meal?</p>
         <table class="table">
           <tr>
             <td>1</td>
@@ -1628,10 +1635,6 @@
         <p><?php echo (getFiled('Q5F2', $schoolUserID) != "") ? (getFiled('Q5F2', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
       </li>
       <?php endif; ?>
-      <li>
-        <p class="orange"><span>2(b)(1)</span>How many students out of total students population avail of the midday meal service provided ?</p>
-        <p><?php echo (getFiled('Q5F3S1', $schoolUserID) != "") ? (getFiled('Q5F3S1', $schoolUserID)): 0 ; ?></p>
-      </li> 
     </ul>
   </div>
   <?php if(strcmp(getFiled('Q4F1', $schoolUserID),'Y')==0): ?>
@@ -1768,7 +1771,13 @@
           <?php foreach ($midDayMeal as $f) { ?>
           <tr id="index<?php echo $f->id; ?>">
             <?php $name = str_replace(" ", "_", $f->name . "_Mid_Day_Meal_"); ?>
-            <td><img src="<?php echo 'uploads/files/' . $f->file_name ?>" style="height:100px;width:100px"></img></td>
+            <td><img src="<?php 
+			$allowed =  array('png' ,'jpg','JPG','jpeg','JPEG');
+            $ext = pathinfo($f->file_name, PATHINFO_EXTENSION);
+            if(!in_array($ext,$allowed) ) {
+			echo 'uploads/files/' . $f->file_name; 
+            }
+			?>" style="height:100px;width:100px"></img></td>
             <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
           </tr>
           <?php } ?>
@@ -1869,7 +1878,13 @@
       <tbody>
         <?php foreach ($arrImages as $a) { ?>
         <tr>
-          <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+          <td><img src="<?php 
+		    $allowed =  array('png' ,'jpg','JPG','jpeg','JPEG');
+            $ext = pathinfo($f->file_name, PATHINFO_EXTENSION);
+            if(!in_array($ext,$allowed) ) {
+			echo 'uploads/files/' . $f->file_name; 
+            }
+		  ?>" class="img-responsive" width="100" height="100" /></td>
           <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Audit_Team_doing_Survey_"), " ", $a->file_name); ?></td>
         </tr>
         <?php } ?>
@@ -1929,7 +1944,13 @@
       </tr>
       <?php foreach ($arrImages as $a) { ?>
       <tr>
-        <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+        <td><img src="<?php
+		    $allowed =  array('png' ,'jpg','JPG','jpeg','JPEG');
+            $ext = pathinfo($a->file_name, PATHINFO_EXTENSION);
+            if(!in_array($ext,$allowed) ) {
+			echo 'uploads/files/' . $a->file_name; 
+            }
+		?>" class="img-responsive" width="100" height="100" /></td>
         <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_UPPF_"), " ", $a->file_name); ?></td>
       </tr>
       <?php } ?>
@@ -2271,7 +2292,13 @@
       </tr>
       <?php foreach ($arrImages as $a) { ?>
       <tr>
-        <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+        <td><img src="<?php
+		    $allowed =  array('png' ,'jpg','JPG','jpeg','JPEG');
+            $ext = pathinfo($a->file_name, PATHINFO_EXTENSION);
+            if(!in_array($ext,$allowed) ) {
+			echo 'uploads/files/' . $a->file_name; 
+            }
+		?>" class="img-responsive" width="100" height="100" /></td>
         <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Green_Cover_"), " ", $a->file_name); ?></td>
       </tr>
       <?php } ?>
@@ -2708,7 +2735,13 @@
           </tr>
           <?php foreach ($arrImages as $a) { ?>
           <tr>
-            <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+            <td><img src="<?php 
+			$allowed =  array('png' ,'jpg','JPG','jpeg','JPEG');
+            $ext = pathinfo($a->file_name, PATHINFO_EXTENSION);
+            if(!in_array($ext,$allowed) ) {
+			echo 'uploads/files/' . $a->file_name; 
+            }
+			?>" class="img-responsive" width="100" height="100" /></td>
             <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Task_4_Supporting_docs_"), " ", $a->file_name); ?></td>
           </tr>
           <?php } ?>
@@ -2742,7 +2775,6 @@
       <p class="orange"><span>6(a)</span>Does your school harvest different catchments? </p>
       <p> <?php echo (getFiled('Q8W2S1', $schoolUserID) != "") ? (getFiled('Q8W2S1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
     </li>
-<?php if(!empty(getFiled('Q8W2S1', $schoolUserID)) && getFiled('Q8W2S1', $schoolUserID) == "Y"){ ?>	  
     <li>
       <p class="orange"><span>6(a)(1)</span>Which is the catchment area being harvested by your school? </p>
       <p>
@@ -2766,7 +2798,6 @@
             ?>
       </p>
     </li>
-<?php } ?>	  
     <li>
       <p class="orange"><span>6(b)</span> How does your school harvest rainwater? </p>
       <p>
@@ -2781,8 +2812,6 @@
                     ?>
       </p>
     </li>
-<?php if(!empty(getFiled('Q8W2S2', $schoolUserID))){
-	  if(getFiled('Q8W2S2', $schoolUserID) == 1 || getFiled('Q8W2S2', $schoolUserID) == 3){ ?>	  
     <li>
       <p class="orange"><span class="cube">6(b)(1)</span>If your school only stores rainwater, please select
         the use of stored rainwater: </p>
@@ -2951,7 +2980,6 @@
         ?>
       </p>
     </li>
-<?php } } ?>	  
     <li>
       <p class="orange">
         <label><span class="cube">6(c)</span>How much area in your school is harvested? </label>
@@ -3022,7 +3050,6 @@
         ?>
       </p>
     </li>
-<?php if (getFiled('Q8W2S33', $schoolUserID) == 1){ ?>	  
     <li>
       <p class="orange">
         <label><span class="cube">6(d)(1)</span> Where is your filter unit? </label>
@@ -3066,7 +3093,6 @@
         ?>
       </p>
     </li>
- <?php } ?>	  
     <li>
       <p class="orange">
         <label><span class="cube">6(e)</span>Rate your catchment on cleanliness: </label>
@@ -3100,7 +3126,13 @@
         </tr>
         <?php foreach ($arrImages as $a) { ?>
         <tr>
-          <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+          <td><img src="<?php 
+		    $allowed =  array('png' ,'jpg','JPG','jpeg','JPEG');
+            $ext = pathinfo($a->file_name, PATHINFO_EXTENSION);
+            if(!in_array($ext,$allowed) ) {
+			echo 'uploads/files/' . $a->file_name; 
+            }
+			?>" class="img-responsive" width="100" height="100" /></td>
           <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Water_Treatment_Process_"), " ", $a->file_name); ?></td>
         </tr>
         <?php } ?>
@@ -3115,7 +3147,6 @@
       </p>
       <p> <?php echo (getFiled('Q8W2S61', $schoolUserID) != "") ? (getFiled('Q8W2S61', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
     </li>
-<?php if(!empty(getFiled('Q8W2S61', $schoolUserID)) && getFiled('Q8W2S61', $schoolUserID) == "Y"){ ?>	  
     <li>
       <p class="orange">
         <label><span class="cube">6(f)(1)</span>Please specify when does your school clean the
@@ -3132,7 +3163,6 @@
         endif;
         ?>
     </li>
-<?php } ?>	  
     <li>
       <p class="orange">
         <label><span class="cube">6(g)</span>Does your school monitor the rainwater harvesting
@@ -3140,7 +3170,6 @@
       </p>
       <p> <?php echo (getFiled('Q8W2S8', $schoolUserID) != "") ? (getFiled('Q8W2S8', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
     </li>
-<?php if(!empty(getFiled('Q8W2S8', $schoolUserID)) && getFiled('Q8W2S8', $schoolUserID) == "Y"){ ?>	  
     <li>
       <p class="orange">
         <label><span class="cube">6(g)(1)</span>Please specify when does your school monitor the
@@ -3157,7 +3186,6 @@
         endif;
         ?>
     </li>
-<?php } ?>	  
     <li>
       <p class="orange">
         <label><span class="cube">6(h)</span>What is the trend of groundwater level in your school
@@ -3174,7 +3202,6 @@
         endif;
         ?>
     </li>
- <?php if(getFiled('Q8W2S10', $schoolUserID) != 3){ ?>	  
     <li>
       <p class="orange">
         <label><span class="cube">6(h)(1)</span>Please specify how much was the decrease? </label>
@@ -3205,7 +3232,6 @@
         endif;
         ?>
     </li>
-<?php } ?>	  
     <li>
       <p class="orange">
         <label><span class="cube">6(i)</span>If your school's RWH structure is more than a year old,
@@ -3417,7 +3443,7 @@
       </p>
       <p> <?php echo (getFiled('Q20W1', $schoolUserID) != "") ? (getFiled('Q20W1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
     </li>
-    <?php if(strcmp(getFiled('Q20W1', $schoolUserID),'Y')==0): ?>
+    <?php if(strcmp(getFiled('Q18W1', $schoolUserID),'N')==0): ?>
     <li>
       <p class="orange"><span class="cube">18(a)</span>How does your
         school reuse wastewater?</p>
@@ -3465,7 +3491,12 @@
         </tr>
         <?php foreach ($arrImages as $a) { ?>
         <tr>
-          <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+          <td><img src="<?php 
+		    $allowed =  array('png' ,'jpg','JPG','jpeg','JPEG');
+            $ext = pathinfo($a->file_name, PATHINFO_EXTENSION);
+            if(!in_array($ext,$allowed) ) {
+			echo 'uploads/files/' . $a->file_name; 
+            } ?>" class="img-responsive" width="100" height="100" /></td>
           <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Flow_Chart_Hand_Drwan_"), " ", $a->file_name); ?></td>
         </tr>
         <?php } ?>
@@ -3489,7 +3520,13 @@
     </tr>
     <?php foreach ($arrImages as $a) { ?>
     <tr>
-      <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+      <td><img src="<?php 
+		$allowed =  array('png' ,'jpg','JPG','jpeg','JPEG');
+		$ext = pathinfo($a->file_name, PATHINFO_EXTENSION);
+		if(!in_array($ext,$allowed) ) {
+		echo 'uploads/files/' . $a->file_name; 
+		}
+	  ?>" class="img-responsive" width="100" height="100" /></td>
       <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Supporting_Document_Water_"), " ", $a->file_name); ?></td>
     </tr>
     <?php } ?>
@@ -3696,7 +3733,7 @@
         endif;
         ?>
       </li>
-      <?php if(!empty(getFiled('Q4Wa2', $schoolUserID))): ?>
+      <?php if(strcmp(getFiled('Q4Wa2', $schoolUserID),'Y')==0): ?>
       <li>
         <p class="orange"><span class="cube">2(a)</span> How many categories does your school
           segregate waste into?</p>
@@ -3813,7 +3850,13 @@
         </tr>
         <?php foreach ($arrImages as $a) { ?>
         <tr>
-          <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+          <td><img src="<?php 
+		$allowed =  array('png' ,'jpg','JPG','jpeg','JPEG');
+		$ext = pathinfo($a->file_name, PATHINFO_EXTENSION);
+		if(!in_array($ext,$allowed) ) {
+		echo 'uploads/files/' . $a->file_name; 
+		}
+	    ?>" class="img-responsive" width="100" height="100" /></td>
           <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Segregation_Source_Classrooms_"), " ", $a->file_name); ?></td>
         </tr>
         <?php } ?>
@@ -4019,16 +4062,23 @@
             ?>
         <div>
           <table class="table">
+            <thead>
+            <h6>g. Cc&amp; D Waste</h6>
+            </thead>
             
             <tr>
-            
               <th>image</th>
               <th>File name</th>
-            
-           </tr>		    
+            </tr>
             <?php foreach ($arrImages as $a) { ?>
             <tr>
-              <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+              <td><img src="<?php 
+		$allowed =  array('png' ,'jpg','JPG','jpeg','JPEG');
+		$ext = pathinfo($a->file_name, PATHINFO_EXTENSION);
+		if(!in_array($ext,$allowed) ) {
+		echo 'uploads/files/' . $a->file_name; 
+		}
+	  ?>" class="img-responsive" width="100" height="100" /></td>
               <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Audit_Team_Weighing_Solid_Waste_"), " ", $a->file_name); ?></td>
             </tr>
             <?php } ?>
@@ -4049,7 +4099,13 @@
             </tr>
             <?php foreach ($arrImages as $a) { ?>
             <tr>
-              <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+              <td><img src="<?php 
+		$allowed =  array('png' ,'jpg','JPG','jpeg','JPEG');
+		$ext = pathinfo($a->file_name, PATHINFO_EXTENSION);
+		if(!in_array($ext,$allowed) ) {
+		echo 'uploads/files/' . $a->file_name; 
+		}
+	  ?>" class="img-responsive" width="100" height="100" /></td>
               <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Composting_Pit_"), " ", $a->file_name); ?></td>
             </tr>
             <?php } ?>
@@ -4071,7 +4127,7 @@
     <ul class="list">
       <li>
         <p class="orange">
-          <span class="cube">4</span>Does your school recycle any generated waste?
+          <label><span class="cube">4</span>Does your school recycle any generated waste? </label>
         </p>
         <p> <?php echo (getFiled('Q8Wa1', $schoolUserID) != "") ? (getFiled('Q8Wa1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
       </li>
@@ -4273,7 +4329,13 @@
           </tr>
           <?php foreach ($arrImages as $a) { ?>
           <tr>
-            <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+            <td><img src="<?php 
+		$allowed =  array('png' ,'jpg','JPG','jpeg','JPEG');
+		$ext = pathinfo($a->file_name, PATHINFO_EXTENSION);
+		if(!in_array($ext,$allowed) ) {
+		echo 'uploads/files/' . $a->file_name; 
+		  }
+	     ?>" class="img-responsive" width="100" height="100" /></td>
             <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Composting_Pit_"), " ", $a->file_name); ?></td>
           </tr>
           <?php } ?>
@@ -4681,7 +4743,13 @@
       </tr>
       <?php foreach ($arrImages as $a) { ?>
       <tr>
-        <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+        <td><img src="<?php 
+		$allowed =  array('png' ,'jpg','JPG','jpeg','JPEG');
+		$ext = pathinfo($a->file_name, PATHINFO_EXTENSION);
+		if(!in_array($ext,$allowed) ) {
+		echo 'uploads/files/' . $a->file_name; 
+		}
+	  ?>" class="img-responsive" width="100" height="100" /></td>
         <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Recycling_Machine_"), " ", $a->file_name); ?></td>
       </tr>
       <?php } ?>
@@ -4916,7 +4984,7 @@
       </tr>
       <?php foreach ($arrImages as $a) { ?>
       <tr>
-        <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+        <td><img src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
         <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_E-Waste_"), " ", $a->file_name); ?></td>
       </tr>
       <?php } ?>
@@ -4963,7 +5031,13 @@
       </tr>
       <?php foreach ($arrImages as $a) { ?>
       <tr>
-        <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+        <td><img src="<?php 
+		$allowed =  array('png' ,'jpg','JPG','jpeg','JPEG');
+		$ext = pathinfo($a->file_name, PATHINFO_EXTENSION);
+		if(!in_array($ext,$allowed) ) {
+		echo 'uploads/files/' . $a->file_name; 
+		}
+	  ?>" class="img-responsive" width="100" height="100" /></td>
         <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_E-waste_authorised_dealer_"), " ", $a->file_name); ?></td>
       </tr>
       <?php } ?>
@@ -5007,7 +5081,7 @@
           </tr>
           <?php foreach ($arrImages as $a) { ?>
           <tr>
-            <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+            <td><img src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
             <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Housekeeping_"), " ", $a->file_name); ?></td>
           </tr>
           <?php } ?>
@@ -5036,7 +5110,13 @@
           </tr>
           <?php foreach ($arrImages as $a) { ?>
           <tr>
-            <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+            <td><img src="<?php 
+		$allowed =  array('png' ,'jpg','JPG','jpeg','JPEG');
+		$ext = pathinfo($a->file_name, PATHINFO_EXTENSION);
+		if(!in_array($ext,$allowed) ) {
+		echo 'uploads/files/' . $a->file_name; 
+		}
+	  ?>" class="img-responsive" width="100" height="100" /></td>
             <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Buring_Waste_"), " ", $a->file_name); ?></td>
           </tr>
           <?php } ?>
@@ -5061,9 +5141,9 @@
     ?>
       </p>
     </li>
-    
+    <?php endif; ?>
     <li>
-      <p class="orange"> <span>11(b)</span>What kind of waste is burnt/incinerated? </p>
+      <p class="orange"> <span>11(b)</span>What kind of waste is burnt/ncinerated? </p>
       <p>
         <?php
     if (getFiled('Q15Wa2S1', $schoolUserID) == 1):
@@ -5085,7 +5165,6 @@
     ?>
       </p>
     </li>
-  <?php endif; ?>	  
     <li>
       <p class="orange"> <span>12</span>Do you know that your E-waste can be collected by an authorised dealer or dismantler? </p>
       <p> <?php echo (getFiled('Q16Wa1', $schoolUserID) != "") ? (getFiled('Q16Wa1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
@@ -5108,24 +5187,27 @@
         Recycle and Reuse? <a class="kplink" href="http://www.greenschoolsprogramme.org/knowledge-bank/waste/#partnerInOperation" target="_blank"></a></p>
       <p> <?php echo (getFiled('Q18Wa1', $schoolUserID) != "") ? (getFiled('Q18Wa1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
     </li>
-    <?php if(getFiled('Q18Wa1', $schoolUserID) == "Y"){ ?>
+    <?php if(strcmp(getFiled('Q18Wa1', $schoolUserID),'Y')==0): ?>
     <li>
       <p class="orange">
         <label class="control-label">Please upload supporting documents:</label>
       </p>
-      <p> Pictures of various school initiatives e.g. rally, debate, street play, art competition, etc</p>
+      <p> • Pictures of various school initiatives e.g. rally, debate, street play, art competition, etc</p>
       <p class="orange"><span>14(a)</span> What form do these awareness drives
         take? </p>
       <?php
-     if (getFiled('Q18Wa2S1', $schoolUserID) == 1){
-        echo "As part of the curriculum <br/>";}
-     if (getFiled('Q18Wa2S2', $schoolUserID) == 2){
-        echo " As part of extracurricular activities such as guest lectures <br/>";}
-      if (getFiled('Q18Wa2S3', $schoolUserID) == 3){
-        echo " By the showcasing of posters and stickers  ";}
-	?>
+    if (getFiled('Q18Wa2S1', $schoolUserID) == 1):
+        echo "As part of the curriculum";
+    elseif (getFiled('Q18Wa2S2', $schoolUserID) == 2):
+        echo " As part of extracurricular activities such as guest lectures ";
+    elseif (getFiled('Q18Wa2S3', $schoolUserID) == 3):
+        echo " By the showcasing of posters and stickers  ";
+
+
+    endif;
+    ?>
     </li>
-    <?php } ?>
+    <?php endif; ?>
     <li>
       <p class="orange"><span>15</span> Is the study of the environment integrated into the
         curriculum?</p>
@@ -5144,7 +5226,13 @@
       </tr>
       <?php foreach ($arrImages as $a) { ?>
       <tr>
-        <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+        <td><img src="<?php 
+		$allowed =  array('png' ,'jpg','JPG','jpeg','JPEG');
+		$ext = pathinfo($a->file_name, PATHINFO_EXTENSION);
+		if(!in_array($ext,$allowed) ) {
+		echo 'uploads/files/' . $a->file_name; 
+		}
+	  ?>" class="img-responsive" width="100" height="100" /></td>
         <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Audit_Team_Doing_Survey_Waste_"), " ", $a->file_name); ?></td>
       </tr>
       <?php } ?>
