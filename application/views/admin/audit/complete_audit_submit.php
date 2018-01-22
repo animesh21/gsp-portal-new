@@ -92,3 +92,26 @@
     border: 0;
 }
 </style>
+<script type="text/javascript">
+function sendResponseReport(schoolid,coemail,name){
+ var subject="Response Report 2017";
+ var message="Response Report 2017";
+ var bodytext="Dear GSP Audit team,<br/><br/>"+
+"Greetings from the Green Schools Programme!<br/><br/>"+
+"We are pleased to inform you that this year too we had a positive response for GSP Audit 2017 from across India."+ " We had 2860 registrations from the 29 states and five Union Territories of India. Of the total national"+ " footprint, 1185 schools submitted the GSP Audit on time. 559 schools had started filing the GSP Audit"+ " report but couldn't submit within the deadline. Both registrations and submissions have seen a year-on-year increase of 12 per cent and 40 per cent, respectively.<br/><br/>"+
+"Please <a href='<?php echo "http://www.greenschoolsprogramme.org/audit2017/responsreport/pdf/"?>"+schoolid+"'> Download here </a> your response report of the GSP Audit 2017 for your records. Please save the attached as we"+ " do not keep a copy with us and we recommend that the pdf be saved with a few other teachers of the GSP Audit team. <br/><br/>We will announce the GSP Audit 2017 results on February 7, 2018, also the day we have the award ceremony held. The results will be up on the GSP website on http://www.greenschoolsprogramme.org/.<br/><br/>"+
+"Stay tuned!"+
+"<br/><br/><br/>"+
+"GSP Team"+
+" 011-40616000 Extn-300, 320 <br/><br/><a href='<?php echo "http://www.greenschoolsprogramme.org/audit2017/responsreport/pdf/"?>"+schoolid+"'>Download</a>";
+jQuery.ajax({
+	  url:"https://api.elasticemail.com/v2/email/send",
+	  type:"POST",
+	  content_type: "application/pdf",
+	  data:{"api_key":"a62876ee-8ef8-4c83-a35c-c6eaa0f29765","from":"support@greenschoolsprogramme.org","to":coemail,"subject":subject,"bodyHtml":bodytext},
+	  success:function(reponse){
+	    alert("Response Report 2017 Email has been send successful");
+	  }
+	}); 
+}
+</script>
