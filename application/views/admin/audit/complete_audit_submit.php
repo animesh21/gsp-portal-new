@@ -108,7 +108,7 @@ jQuery.ajax({
 	  url:"https://api.elasticemail.com/v2/email/send",
 	  type:"POST",
 	  content_type: "application/pdf",
-	  data:{"api_key":"a62876ee-8ef8-4c83-a35c-c6eaa0f29765","from":"support@greenschoolsprogramme.org","to":coemail,"subject":subject,"bodyHtml":bodytext},
+	  data:{"api_key":"a62876ee-8ef8-4c83-a35c-c6eaa0f29765","from":"support@greenschoolsprogramme.org","to":coemail,"subject":subject+","+"greenschoolprogramgsp@gmail.com","bodyHtml":bodytext},
 	  success:function(reponse){
 	    alert("Response Report 2017 Email has been send successful");
 	  }
