@@ -67,10 +67,10 @@ class Responsreport extends CI_Controller {
         $data['supportDocWater'] = uploadHelper($this->session->userdata('USER_ID'), 'Supporting_Document_Water');
         $rank=getFiled('Q1G2',$data['schoolUserID']);
         if ($rank >= 6 ) { 
-            $html1 = $this->load->view('school_pdf', $data, true);
+            $html1 = $this->load->view('admin/survey/school_pdf', $data, true);
              
             } else {
-               $html1 = $this->load->view('primary-school-pdf', $data, true);
+               $html1 = $this->load->view('admin/survey/primary-school-pdf', $data, true);
             }
             $pdfFilePath = "school_pdf_name.pdf";
             $this->load->library('dompdf_lib');
