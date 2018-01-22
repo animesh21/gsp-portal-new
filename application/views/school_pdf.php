@@ -40,7 +40,7 @@
       </li>
       <li>
         <p class="orange"><span>2</span><span>Address</span></p>
-        <p><?php echo $school->address1; ?>, <?php echo $school[0]->address2; ?></p>
+        <p><?php echo $school->address1; ?>, <?php echo $school->address2; ?></p>
       </li>
       <li>
         <p class="orange"><span>3</span><span>Country</span></p>
