@@ -85,7 +85,7 @@ class Audit_started extends CI_Controller {
 	   $email=$this->input->post('email');
 	   $school=$this->input->post('school');
 	   if(!empty($progress)){
-	      $condition=array("a.progress="=>$progress,'a.state='=>$state,"d.questionid="=>'Q1S1',"d.answer="=>$school_category);
+	      $condition=array("a.progress="=>$progress,'a.state='=>$state);
 	   }
 	   $data['title'] = 'Home | Send Feedback With Filters';
 	   if(strcmp($email,"coemail")==0){
