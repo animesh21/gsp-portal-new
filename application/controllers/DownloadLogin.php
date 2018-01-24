@@ -21,7 +21,7 @@ class DownloadLogin extends CI_Controller {
             $this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');
         } else {
             $post = $this->security->xss_clean($this->input->post());
-            $varCheckLogin = $this->User_model->UserLogin($post);
+            $varCheckLogin = $this->User_model->UserLoginDownload($post);
             if ($varCheckLogin) {
 			    if($varCheckLogin=="success"){
                 redirect(base_url('download/downloadFiles'));
