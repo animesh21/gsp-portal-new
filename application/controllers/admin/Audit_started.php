@@ -67,10 +67,11 @@ class Audit_started extends CI_Controller {
      * Send Feedback
      */
      public function feedback() {
+	 $data['states'] = getStates();
+	 $data['states'][0]="All"; 
 	 $data['main'] = 'admin/audit/feedback';
 	 $data['title'] = 'Home | Send Feedback';
-	 $data['states'] = getStates();
-     $this->load->view('admin/includes/template', $data);
+         $this->load->view('admin/includes/template', $data);
      }
 	/*
      * Send Filter Feedback
