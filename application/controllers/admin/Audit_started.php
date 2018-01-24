@@ -127,7 +127,7 @@ class Audit_started extends CI_Controller {
          $conditions[] = "a.name LIKE '%$bySchoolName%'";
         }
 	//school rating
-	if(! empty($bySchoolName)) {
+	if(! empty($rating)) {
          $conditions[] = "a.remark LIKE '%$rating%'";
         }	
 		
