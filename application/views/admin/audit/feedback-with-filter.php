@@ -27,18 +27,10 @@
         </div>
         <div class="form-group col-md-4">
           <label for="pwd">Select User Email-Id:</label>
-          <ul class="list-unstyled list-inline" style="margin:0; padding:0;">
-            <li>
-              <label class="radio-inline">
-              <input type="radio" value="coemail" name="email" id="coemail"/>
-              Coordinator Email</label>
-            </li>
-            <li>
-              <label class="radio-inline">
-              <input type="radio" value="schoolemail" name="email" id="schoolemail" />
-              School Email</label>
-            </li>
-          </ul>
+         <select  class="form-control" name="email">
+		     <option value="coemail"> Coordinator Email</option>
+			 <option value="schoolemail">  School Email</option>
+		  </select>
         </div>
         <div class="form-group col-md-8">
           <label for="pwd">Select Progress Based User:</label>
