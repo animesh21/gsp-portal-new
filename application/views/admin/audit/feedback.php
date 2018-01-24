@@ -166,6 +166,16 @@
 			<option value="">Red</option>
 		  </select>
            </div>
+		   <div class="form-group col-md-4">
+		   		<label for="pwd">Select Name :</label>
+				<select class="form-control" name="schoolname">
+				<option value="">Select School</option>
+					<option value="Satya Bharti">Satya Bharti</option>
+					<option value="Mount Litera">Mount Litera</option>
+					<option value="Kendriya Vidyalaya">KVS</option>
+					<option value="Jawahar Navodya">JNV</option>
+		  	    </select>
+		   </div>
         <div class="form-group col-md-12">
           <div class="col-md-6">
             <button type="submit" class="btn btn-default btn-block btn-lg" style="background: #e86549 !important; color: #fff">Filter Email</button>
@@ -175,3 +185,7 @@
       <?php echo form_close(); ?> </div>
   </div>
 </div>
+<script type="text/javascript">
+   var email="", user, category, type, aid, state, school_category, rating;
+   
+</script>
