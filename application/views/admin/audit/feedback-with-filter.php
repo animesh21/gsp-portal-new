@@ -181,6 +181,7 @@
 				<th>Type of Aid</th>
 				<th>Coemail</th>
                 <th>Progress</th>
+		      <th>Rating</th>
                 <th style="width:90px;"> <label class="checkbox-inline"><input type="checkbox" name="email_list_all" id="email_list_all" style="opacity: 0.8; margin-top:-1px;" /> Check</label></th>
               </tr>
             </thead>
@@ -219,8 +220,11 @@
 								<?php if(isset($record[$i]['schoolemail'])): echo $record[$i]['schoolemail']; endif  ?>
 							</td>
 							<td><?php if($record[$i]['progress']!=''): echo $record[$i]['progress']; endif ?></td>
-							<td><?php if($record[$i]['progress']!=''): echo $record[$i]['progress']; endif ?></td>
-						</tr>
+							
+						<td><?php if($record[$i]['remark']!=''): echo "<label class='label label-".$record[$i]['remark']."'>".$record[$i]['remark']."</label>"; endif ?></td>
+<td></td>
+		     
+		     </tr>
 				   <?php }?>
 				</tr>
 			 </tbody>
