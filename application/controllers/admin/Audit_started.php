@@ -77,7 +77,7 @@ class Audit_started extends CI_Controller {
      * Send Filter Feedback
      */ 
 	public function filter_email() {
-	  	//echo '<pre>'; print_r($_POST);
+	  	echo '<pre>'; print_r($_POST); exit;
 		$filed='';
 		$byMail=$this->input->post('email');
 		if($byMail=='coemail')
