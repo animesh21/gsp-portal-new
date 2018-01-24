@@ -36,6 +36,14 @@
             .alert-danger {
                 border: 2px solid red;
             }
+			.schools-statics {padding: 35px 15px 15px; border-radius: 6px; font-size: 16px; width: 48%; min-height: 200px; margin: 10px 10px; display: inline-block; vertical-align: top; border: 1px solid #ccc; background: rgba(232, 101, 73, 0.1); position: relative;}
+.schools-statics:nth-child(even) {margin-right: 0;}
+.schools-statics .title {display: block; margin: 20px; text-align: center;}
+.schools-statics .statics-circle {width: 80px; height: 80px; background: rgb(232, 101, 73); color: #fff; text-align: center; border-radius: 50%; padding: 12px; transition: all 0.5s ease-in-out; border: 5px solid #fff; margin: 0 auto;}
+.schools-statics .statics-circle:hover {border: 5px solid rgb(232, 101, 73);}
+.schools-statics .statics-circle span {font-weight: bold; font-size: 18px; display: block; margin: 0;}
+.schools-statics label {color: #000; font-size: 12px; font-weight: normal; cursor: pointer;}
+.schools-statics a {text-decoration: none;}
         </style>
 </head>
 <body class="lang-en groupbygroup showqnumcode-X">
@@ -53,22 +61,35 @@
     </div>
     <div class="container">
       <div class="col-md-12">
-        <table id="example1" class="display dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
-          <thead>
-            <tr role="row">
-              <th>S.No</th>
-              <th>Sch.Id</th>
-              <th>School Name</th>
-              <th>State</th>
-              <th>District</th>
-              <th>City</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-        </table>
+        <h1><strong>GSP Audit 2017 Reports & Certificate</strong></h1>
+      </div>
+      <div class="col-md-4">
+        <div class="schools-statics" style="width:100%;"> <a href="<?php echo base_url("/admin/responsreport/pdf/").$this->session->userdata('USER_ID'); ?>" target="_blank">
+          <div class="statics-circle"> <span><i class="fa fa-file-text-o fa-2x"></i></span>
+          </div>
+          </a>
+          <div class="title"><strong>Response Report</strong></div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="schools-statics" style="width:100%;"> <a href="dashboard/audit_pahse_1" target="_blank">
+          <div class="statics-circle"> <span><i class="fa fa-file-text-o fa-2x"></i></span>
+          </div>
+          </a>
+          <div class="title"><strong>Performance Report</strong></div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="schools-statics" style="width:100%;"> <a href="<?php echo base_url('admin/audit_started_2017/getdigitalCertificate/').$this->session->userdata('USER_ID') ?>" target="_blank">
+          <div class="statics-circle"> <span><i class="fa fa-file-text-o fa-2x"></i></span>
+          </div>
+          </a>
+          <div class="title"><strong>Digital Certificate</strong></div>
+        </div>
       </div>
     </div>
   </div>
+</div>
 </div>
 <footer>
   <div class="container">
@@ -103,27 +124,4 @@
 <script src="<?php echo base_url(); ?>assets/front/js/buttons.html5.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/front/js/buttons.print.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/front/js/chosen.jquery.js"></script>
-<script type="text/javascript">
-				$( document ).ready(function() {
-                $('#example1').dataTable({
-                 "bProcessing": true,
-                 "sAjaxSource": "<?php echo base_url("/download/getSchoolDataAfterlogin/".$this->session->userdata('USER_ID'));?>",
-                 "aoColumns": [
-				        { mData: 'sr_no'},
-				        { mData: 'id' },
-                        { mData: 'name' },
-						{ mData: 'state_name' },
-						{ mData: 'district_name' },
-						{ mData: 'city' },
-						{ mData: 'id',
-						 "orderable": false,
-                        "searchable": false,
-                        "render": function(data,type,row,meta) { 
-						   var a='<ul class="list-inline"><li><a class="btn btn-danger" target="_blank" href="" title="View Responses"><i class="fa fa-file-text"></i></a></li><li><a class="btn btn-danger" target="_blank" href="<?php echo base_url("/admin/responsreport/pdf/").$this->session->userdata('USER_ID'); ?>" title="View Responses"><i class="fa fa-file-text"></i></a></li><li><a class="btn btn-danger" target="_blank" href="<?php echo base_url('admin/audit_started_2017/getdigitalCertificate/').$this->session->userdata('USER_ID') ?>" title="View Responses"><i class="fa fa-file-text"></i></a></li></ul>'; 
-                            return a;
-							}
-						}
-                ]
-        });   
-});
-</script>
+
