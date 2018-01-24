@@ -158,13 +158,13 @@
           <?php echo form_dropdown('school', array('0' => 'Primary', '1' => 'Secondary','2'=>'All'), $this->input->post('school'), array('class' => 'form-control', 'id' => 'school-select')); ?> </div>
 		<div class="form-group  col-lg-4">
           <label for="pwd">Ratings :</label>
-		  <select class="form-control" name="rating">
-		    <option value="">Select Rating</option>
-		    <option value="">Green</option>
-			<option value="">Yellow</option>
-			<option value="">Orange</option>
-			<option value="">Red</option>
-		  </select>
+		<select class="form-control" name="schoolname">
+				<option value="">Select School</option>
+					<option value="Satya Bharti">Satya Bharti</option>
+					<option value="Mount Litera">Mount Litera</option>
+					<option value="Kendriya Vidyalaya">KVS</option>
+					<option value="Jawahar Navodya">JNV</option>
+		  	    </select>
            </div>
 		   <div class="form-group col-md-4">
 		   		<label for="pwd">Select Name :</label>
