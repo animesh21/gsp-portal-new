@@ -64,7 +64,7 @@
         <h1><strong>GSP Audit 2017 Reports & Certificate</strong></h1>
         <a href="<?php echo base_url('logout'); ?>" class="pull-right">Logout</a> </div>
       <div class="col-md-4">
-        <div class="schools-statics" style="width:100%;"> <a href="<?php echo base_url("/audit2017/admin/responsreport/pdf/").$this->session->userdata('USER_ID'); ?>" target="_blank">
+        <div class="schools-statics" style="width:100%;"> <a href="<?php echo base_url("/admin/responsreport/pdf/").$this->session->userdata('USER_ID'); ?>" target="_blank">
           <div class="statics-circle"> <span><i class="fa fa-file-text-o fa-2x"></i></span> </div>
           </a>
           <div class="title"><strong>Response Report</strong></div>
