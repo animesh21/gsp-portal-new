@@ -92,7 +92,8 @@ class Audit_started extends CI_Controller {
 		$byAidType=$this->input->post('school_aid');
 		$byState=$this->input->post('state');
 		$bySchoolName=$this->input->post('schoolname');
-		$query = "SELECT a.id, a.udise, a.userid, a.name, a.country, a.state, a.district, a.city, a.progress, a.Q1S1, a.Q2G1, a.Q9G1, $filed, b.name AS state_name, c.name AS district_name FROM tbl_sendmail AS a LEFT JOIN states AS b ON a.state=b.id LEFT JOIN cities AS c ON a.district=c.id";
+		$rating=$this->input->post('rating');
+		$query = "SELECT a.id, a.udise, a.userid, a.name, a.country, a.state, a.district, a.city, a.progress, a.Q1S1, a.Q2G1, a.Q9G1, $filed, b.name AS state_name, c.name AS district_name,a.remark FROM tbl_sendmail AS a LEFT JOIN states AS b ON a.state=b.id LEFT JOIN cities AS c ON a.district=c.id";
         $conditions = array();
 		
 		//Progress Condition
@@ -124,6 +125,11 @@ class Audit_started extends CI_Controller {
 		if(! empty($bySchoolName)) {
          $conditions[] = "a.name LIKE '%$bySchoolName%'";
         }
+	//school rating
+	if(! empty($bySchoolName)) {
+         $conditions[] = "a.remark LIKE '%$rating%'";
+        }	
+		
 		$sql = $query;
 		
         if (count($conditions) > 0) {
