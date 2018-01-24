@@ -139,7 +139,9 @@ class Audit_started extends CI_Controller {
 		//echo $sql; exit;
         $query =$this->db->query($sql);
 		///$data=$query->result_array();
+		
 		$data['states'] = getStates();
+	        $data['states'][0]="All"; 
 		$data['main'] = 'admin/audit/feedback-with-filter';
 		$data['record']=$query->result_array();
         $this->load->view('admin/includes/template', $data);
