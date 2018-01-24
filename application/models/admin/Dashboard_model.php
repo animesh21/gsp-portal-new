@@ -114,6 +114,18 @@ class Dashboard_model extends CI_Model {
 					->get()->result();
 	}
 	
+	public function getschool_that_submit_audit_data1($userId) {
+		return $this->db->select('a.*,b.name AS state_name,c.name As district_name')
+		            ->from('gsp_school AS a')
+					->join('states AS b', 'a.state=b.id', 'left')
+					->join('cities AS c', 'a.district=c.id', 'left')
+					->join('gsp_aduit_submitted AS e','e.userid=a.userid', 'left')
+					->where('e.date_on <=', '2017-11-29')
+					->where('e.status','1')
+					->where('a.userid',$userId)
+					->order_by('a.id', 'desc')
+					->get()->result();
+	}
 	
 	public function school_start_but_not_complete()
 	{
