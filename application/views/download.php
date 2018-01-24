@@ -62,27 +62,24 @@
     <div class="container">
       <div class="col-md-12">
         <h1><strong>GSP Audit 2017 Reports & Certificate</strong></h1>
-      </div>
+        <a href="<?php echo base_url('logout'); ?>" class="pull-right">Logout</a> </div>
       <div class="col-md-4">
         <div class="schools-statics" style="width:100%;"> <a href="<?php echo base_url("/admin/responsreport/pdf/").$this->session->userdata('USER_ID'); ?>" target="_blank">
-          <div class="statics-circle"> <span><i class="fa fa-file-text-o fa-2x"></i></span>
-          </div>
+          <div class="statics-circle"> <span><i class="fa fa-file-text-o fa-2x"></i></span> </div>
           </a>
           <div class="title"><strong>Response Report</strong></div>
         </div>
       </div>
       <div class="col-md-4">
         <div class="schools-statics" style="width:100%;"> <a href="dashboard/audit_pahse_1" target="_blank">
-          <div class="statics-circle"> <span><i class="fa fa-file-text-o fa-2x"></i></span>
-          </div>
+          <div class="statics-circle"> <span><i class="fa fa-file-text-o fa-2x"></i></span> </div>
           </a>
           <div class="title"><strong>Performance Report</strong></div>
         </div>
       </div>
       <div class="col-md-4">
         <div class="schools-statics" style="width:100%;"> <a href="<?php echo base_url('admin/audit_started_2017/getdigitalCertificate/').$this->session->userdata('USER_ID') ?>" target="_blank">
-          <div class="statics-circle"> <span><i class="fa fa-file-text-o fa-2x"></i></span>
-          </div>
+          <div class="statics-circle"> <span><i class="fa fa-file-text-o fa-2x"></i></span> </div>
           </a>
           <div class="title"><strong>Digital Certificate</strong></div>
         </div>
@@ -124,4 +121,3 @@
 <script src="<?php echo base_url(); ?>assets/front/js/buttons.html5.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/front/js/buttons.print.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/front/js/chosen.jquery.js"></script>
-
