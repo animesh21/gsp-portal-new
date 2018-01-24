@@ -132,7 +132,7 @@ class Download extends CI_Controller {
 		    $this->dompdf->stream("welcome.pdf", array("Attachment" => false));
     }
 	
-	function getdigitalCertificate($argID) {
+function getdigitalCertificate($argID) {
    $data['title']="GSP Digital Certificates";
    $this->load->library('dompdf_lib');
    $students = $this->count_certificates_stuents($argID);
@@ -165,6 +165,40 @@ class Download extends CI_Controller {
 	}
    }
    return $arrStudents;
+  }
+
+  public function count_certificates_staffamin($argID) {
+   $airTeachers=array();
+   $arrStaff = array();
+   $question_alphabet = array("A", "E", "F", "L", "W", "Wa");
+   $username=$this->db->select('username')
+				->from('gsp_user')
+				->where('id',$argID)
+				->get()->row();
+   foreach ($question_alphabet as $q) {
+       //Teachers
+       for ($i = 1; $i <= 3; $i++) {
+       if((getFiled("Q1" . $q . $i . "S1", $argID) !="0") && (getFiled("Q1" . $q . $i . "S1", $argID) !='') || (getFiled("Q1" . $q . $i . "S3", $argID) !="0") && (getFiled("Q1" . $q . $i . "S3", $argID) !=''))
+       {
+       $airTeachers[] = getFiled("Q1" . $q . $i . "S1", $argID) . " " . getFiled("Q1" . $q . $i . "S3", $argID);
+	   
+       }
+       }
+       //Staff
+       for ($i = 1; $i <= 5; $i++) {
+       if((getFiled("Q2" . $q . $i . "S1", $argID) !="0") && (getFiled("Q2" . $q . $i . "S1", $argID) !='') || (getFiled("Q2" . $q . $i . "S3", $argID) !="0") && (getFiled("Q2" . $q . $i . "S3", $argID) !='')){
+       $arrStaff['teacher'] = getFiled("Q2" . $q . $i . "S1", $argID) . " " . getFiled("Q2" . $q . $i . "S3", $argID);
+	   $arrStaff['school']= $username->username;
+       
+       }
+       }
+   }
+//    $value="0"." "."0";
+//    $temp= array_search($value, $arrStaff);
+//    print_r($temp);
+   //echo '<pre>'; print_r($airTeacher['school']); exit;
+   //echo '<pre>'; print_r($arrStaff);
+   return array_merge($airTeachers, $arrStaff);
   }
 }
 
