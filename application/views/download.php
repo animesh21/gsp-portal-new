@@ -119,7 +119,7 @@
 						 "orderable": false,
                         "searchable": false,
                         "render": function(data,type,row,meta) { 
-						   var a='<ul class="list-inline"><li><a class="btn btn-danger" target="_blank" href="" title="View Responses"><i class="fa fa-file-text"></i></a></li><li><a class="btn btn-danger" target="_blank" href="<?php echo base_url("audit2017/admin/responsreport/pdf/").$this->session->userdata('USER_ID'); ?>" title="View Responses"><i class="fa fa-file-text"></i></a></li><li><a class="btn btn-danger" target="_blank" href="<?php echo base_url('admin/audit_started_2017/getdigitalCertificate/').$this->session->userdata('USER_ID') ?>" title="View Responses"><i class="fa fa-file-text"></i></a></li></ul>'; 
+						   var a='<ul class="list-inline"><li><a class="btn btn-danger" target="_blank" href="" title="View Responses"><i class="fa fa-file-text"></i></a></li><li><a class="btn btn-danger" target="_blank" href="<?php echo "http://www.greenschoolsprogramme.org/audit2017/admin/responsreport/pdf/".$this->session->userdata('USER_ID'); ?>" title="View Responses"><i class="fa fa-file-text"></i></a></li><li><a class="btn btn-danger" target="_blank" href="<?php echo base_url('admin/audit_started_2017/getdigitalCertificate/').$this->session->userdata('USER_ID') ?>" title="View Responses"><i class="fa fa-file-text"></i></a></li></ul>'; 
                             return a;
 							}
 						}
