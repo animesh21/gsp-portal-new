@@ -336,3 +336,13 @@ $("#email_list_all").click(function(){
  } 
 });*/
 </script>
+<style type="text/css">
+.label-orange{background:orange; color:black;}
+.label-yellow{background:yellow; color:black}
+.label-red {
+    background-color: #d9534f; color:black;
+}
+.label-green {
+    background-color: #5cb85c; color:black;
+}
+</style>
