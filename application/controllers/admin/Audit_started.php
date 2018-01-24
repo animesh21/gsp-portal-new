@@ -76,29 +76,66 @@ class Audit_started extends CI_Controller {
      * Send Filter Feedback
      */ 
 	public function filter_email() {
-	 $data['states'] = getStates();
-	   $data['states'][0]="All";
-	   $progress= $this->input->post('progress');
-	   $school_category= $this->input->post('school_category');
-	   $school_type= $this->input->post('school_type');
-	   $state= $this->input->post('state');
-	   $email=$this->input->post('email');
-	   $school=$this->input->post('school');
-	   if(!empty($progress)){
-	      $condition=array("a.progress="=>$progress,'a.state='=>$state);
-	   }
-	   $data['title'] = 'Home | Send Feedback With Filters';
-	   if(strcmp($email,"coemail")==0){
-	   $data['main'] = 'admin/audit/feedback-with-filter';
-           $data['record'] = $this->Audit_started_model->emailFilter($condition);
-	   $this->load->view('admin/includes/template', $data); 
-	   }
-	   else if(strcmp($email,"schoolemail")==0)
-	   {
-	   $data['main'] = 'admin/audit/feedback-with-filter-1';
-           $data['record'] = $this->Audit_started_model->emailFilter1($condition);
-	   $this->load->view('admin/includes/template', $data); 
-	   }	
+	  	//echo '<pre>'; print_r($_POST);
+		$filed='';
+		$byMail=$this->input->post('email');
+		if($byMail=='coemail')
+		{
+		   $filed="a.coemail";
+		}else if($byMail=='schoolemail')
+		{
+		   $filed="a.schoolemail";
+		}
+		$byProgress=$this->input->post('progress');
+		$byCategory=$this->input->post('school_category');
+		$bySchoolType=$this->input->post('school_type');
+		$byAidType=$this->input->post('school_aid');
+		$byState=$this->input->post('state');
+		$bySchoolName=$this->input->post('schoolname');
+		$query = "SELECT a.id, a.udise, a.userid, a.name, a.country, a.state, a.district, a.city, a.progress, a.Q1S1, a.Q2G1, a.Q9G1, $filed, b.name AS state_name, c.name AS district_name FROM tbl_sendmail AS a LEFT JOIN states AS b ON a.state=b.id LEFT JOIN cities AS c ON a.district=c.id";
+        $conditions = array();
+		
+		//Progress Condition
+		if(! empty($byProgress)) {
+         $conditions[] = "a.progress='$byProgress'";
+        }
+		
+		//Category
+		if(! empty($byCategory)) {
+         $conditions[] = "a.Q1S1='$byCategory'";
+        }
+		
+		//Schoo Type
+		if(! empty($bySchoolType)) {
+         $conditions[] = "a.Q2G1='$bySchoolType'";
+        }
+		
+		//School type aid
+		if(! empty($byAidType)) {
+         $conditions[] = "a.Q9G1='$byAidType'";
+        }
+		
+		//State
+		if(! empty($byState)) {
+         $conditions[] = "a.state='$byState'";
+        }
+		
+		//school Name
+		if(! empty($bySchoolName)) {
+         $conditions[] = "a.name LIKE '%$bySchoolName%'";
+        }
+		$sql = $query;
+		
+        if (count($conditions) > 0) {
+          $sql .= " WHERE " . implode(' AND ', $conditions);
+        }
+		//echo $sql; exit;
+        $query =$this->db->query($sql);
+		///$data=$query->result_array();
+		$data['states'] = getStates();
+		$data['main'] = 'admin/audit/feedback-with-filter';
+		$data['record']=$query->result_array();
+        $this->load->view('admin/includes/template', $data);
     }
 
 }
