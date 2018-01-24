@@ -15,8 +15,8 @@
   <div class="col-md-12">
     <div class="panel panel-default">
       <div class="panel-heading">Select Filters</div>
-      <?php echo form_open('admin/audit_started/filter_email/',array('id'=>'frmSendblukemail')); ?>
-      <div class="panel-body">
+       <?php echo form_open('admin/audit_started/filter_email/',array('id'=>'frmSendblukemail')); ?>
+       <div class="panel-body">
         <div class="form-group col-md-12">
           <label>Subject:</label>
           <input type="text" class="form-control" name="subject" id="subject">
@@ -173,43 +173,57 @@
                 <th>Sr. No.</th>
                 <th>School Id</th>
                 <th>Name</th>
-                <th>Pincode</th>
                 <th>State</th>
 				<th>City</th>
                 <th>District</th>
+				<th>School Category</th>
 				<th>School Type</th>
 				<th>Type of Aid</th>
-				<th>Coname</th>
 				<th>Coemail</th>
-				<th>Comobile</th>
                 <th>Progress</th>
                 <th style="width:90px;"> <label class="checkbox-inline"><input type="checkbox" name="email_list_all" id="email_list_all" style="opacity: 0.8; margin-top:-1px;" /> Check</label></th>
               </tr>
             </thead>
-            <tbody>
-              <?php 
-			  ini_set('memory_limit', '-1');
-			  $i = 1;
-              foreach ($record as $r) { ?>
-              <tr role="row" class="<?php echo ($i % 2 == 0) ? "even" : "odd"; ?>">
-                <td><?php echo $i; ?></td>
-                <td><?php echo $r->id; ?></td>
-                <td><?php echo $r->name; ?></td>
-                <td><?php echo $r->pincode; ?></td>
-                <td><?php echo $r->state_name; ?></td>
-                <td><?php echo $r->city; ?></td>
-                <td><?php echo $r->district_name; ?></td>
-				<td><?php if($r->answer_type==1){ echo "Only boys"; }else if($r->answer_type==2){ echo " Only Girls"; } else if($r->answer_type==3){ echo "Mixed/Co-education"; } ?></td>
-				<td><?php if($r->answer_type==1){ echo "Government School"; }else if($r->answer_type==2){ echo " Government - Aided School"; } else if($r->answer_type==3){ echo "Private School"; } ?></td>
-                <td><?php echo $r->coname; ?></td>
-                <td><?php echo $r->coemail; ?></td>
-                <td><?php echo $r->comobile; ?></td>
-                <td><?php echo $r->progress; ?></td>
-                <td class="action"><input type="checkbox" name="email_list[]" class="checkbox" value='.$data1->schoolemail.' style="opacity: 0.8; margin-top:-1px;" /></td>
-              </tr>
-              <?php $i++;
-} ?>
-            </tbody>
+             <tbody>
+			    <?php //echo '<pre>'; print_r($record); ?>
+				<tr>
+				   <?php for($i=0; $i<count($record); $i++){ ?>
+				   		<?php $arr=array(
+                                '1'=>'Day Scholar',
+                                '2'=>'Day Boarding',
+                                '3'=>'Residential',
+                                '4'=>'Day Scholar + Day Boarding',
+                                '5'=>'Day Boarding + Residential',
+                                '6'=>'Day Scholar + Residential',
+                                '7'=>'Day Scholar + Day Boarding + Residential'
+                            );
+							$arrGender=array('1'=>'Only Boys', '2'=>'Only Girls', '3'=>'Mixed/Co-education');
+							$schoolType=array(
+								'1'=>'Government School',
+								'2'=>'Government &#45; Aided School',
+								'3'=>'Private School'
+							); 
+						?>
+				   		<tr>
+							<td><?php echo $i+1; ?></td>
+							<td><?php if($record[$i]['id']!=''): echo $record[$i]['id']; endif  ?></td>
+							<td><?php if($record[$i]['name']!=''): echo $record[$i]['name']; endif ?></td>
+							<td><?php if($record[$i]['state_name']!=''): echo $record[$i]['state_name']; endif ?></td>
+							<td><?php if($record[$i]['city']!=''): echo $record[$i]['city']; endif ?></td>
+							<td><?php if($record[$i]['district_name']!=''): echo $record[$i]['district_name']; endif  ?></td>
+							<td><?php if($record[$i]['Q1S1']!=''): echo $arr[$record[$i]['Q1S1']]; endif ?></td>
+							<td><?php if($record[$i]['Q2G1']!=''): echo $arrGender[$record[$i]['Q2G1']]; endif  ?></td>
+							<td><?php if($record[$i]['Q9G1']!=''): echo $schoolType[$record[$i]['Q9G1']]; endif ?></td>
+							<td>
+								<?php if(isset($record[$i]['coemail'])): echo $record[$i]['coemail']; endif  ?>
+								<?php if(isset($record[$i]['schoolemail'])): echo $record[$i]['schoolemail']; endif  ?>
+							</td>
+							<td><?php if($record[$i]['progress']!=''): echo $record[$i]['progress']; endif ?></td>
+							<td><?php if($record[$i]['progress']!=''): echo $record[$i]['progress']; endif ?></td>
+						</tr>
+				   <?php }?>
+				</tr>
+			 </tbody>
           </table>
         </div>
         <div class="col-md-6">
@@ -219,8 +233,9 @@
           <button type="submit" class="btn btn-default btn-block btn-lg" style="background: #e86549 !important; color: #fff">Send Email</button>
         </div>
       </div> 
-      <?php echo form_close(); ?>
-    </div> </div>
+       <?php echo form_close(); ?>
+      </div> 
+	</div>
 </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -291,7 +306,7 @@ $('#state').on('change',function(){
 });*/
 </script>
 <script type="text/javascript">
- jQuery('#frmSendblukemail').submit(function(e){
+ /*jQuery('#frmSendblukemail').submit(function(e){
 	e.preventDefault();
 	var subject=$("#subject").val();
 	var message=$("#message").val();
@@ -315,5 +330,5 @@ $("#email_list_all").click(function(){
  {
   $(".checkbox").attr('checked', false);
  } 
-});
+});*/
 </script>
