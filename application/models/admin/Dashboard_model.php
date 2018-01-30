@@ -220,7 +220,7 @@ class Dashboard_model extends CI_Model {
 						->join('cities AS c', 'a.district=c.id', 'left')
 						->where('progress >=', 10)
 						->where('progress <=', 100)
-						->where('a.date_added >', '2017-11-29 00:00:00')
+						->where('a.complete_status =', '0')
 						->order_by('a.id', 'desc')
 						->get()->result();
 	}
@@ -228,7 +228,7 @@ class Dashboard_model extends CI_Model {
 	public function getschool_started_audit_phase_2() {
 		$this->db->where('progress >=', 10);
 		$this->db->where('progress <=', 100);
-		$this->db->where('date_added >', '2017-11-29 00:00:00');
+		$this->db->where('complete_status =', '0');
 		return $this->db->count_all_results('gsp_school');
 	}
 	
@@ -277,7 +277,7 @@ class Dashboard_model extends CI_Model {
 					->join('cities AS c', 'a.district=c.id', 'left')
 					->where('progress >', 5)
 					->where('progress <=', 75)
-					->where('a.date_added >', '2017-11-29 00:00:00')
+					->where('a.complete_status =', '0')
 					->order_by('a.id', 'desc')
 					->get()->result();
 	}
@@ -285,7 +285,7 @@ class Dashboard_model extends CI_Model {
 	public function getschool_start_but_not_complete_phase_2() {
 		$this->db->where('progress >', 5);
 		$this->db->where('progress <=', 75);
-		$this->db->where('date_added >', '2017-11-29 00:00:00');
+		$this->db->where('complete_status =', '0');
 		return $this->db->count_all_results('gsp_school');
         
 	}
@@ -297,14 +297,14 @@ class Dashboard_model extends CI_Model {
 						->join('states AS b', 'a.state=b.id', 'left')
 						->join('cities AS c', 'a.district=c.id', 'left')
 						->where('progress=5')
-						->where('a.date_added >', '2017-11-29 00:00:00')
+						->where('complete_status =', '0')
 						->order_by('a.id', 'desc')
 						->get()->result();
 	}
 	
 	public function getschools_not_start_the_audit_phase_2() {
 		$this->db->where('progress =','5');
-		$this->db->where('date_added >', '2017-11-29 00:00:00');
+		$this->db->where('complete_status =', '0');
 		return $this->db->count_all_results('gsp_school');
     }
 }
