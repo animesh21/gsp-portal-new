@@ -149,7 +149,7 @@ class Audit_started_2017 extends CI_Controller {
      */
 
     public function excelByProgress_phase1() {
-	    $varProgress="a.progress > '5' && a.progress < '100'";
+	    $varProgress="a.progress_phase_1 > '5' && a.progress_phase_1 < '100'";
         $this->load->dbutil();
         $row = $this->Audit_started_model->getExcelDataByProgress_phase1( $varProgress);
         $name = 'registration_2017.csv';
@@ -170,7 +170,7 @@ class Audit_started_2017 extends CI_Controller {
      */
 
     public function excelByProgress1_phase1() {
-	    $varProgress="a.progress > '5'";
+	    $varProgress="a.progress_phase_1 > '5'";
         $this->load->dbutil();
         $row = $this->Audit_started_model->getExcelDataByProgress_phase1( $varProgress);
         $name = 'SCHOOL_THAT_STARTED_THE_AUDIT'.date('d-m-Y').'.csv';
@@ -187,7 +187,7 @@ class Audit_started_2017 extends CI_Controller {
     
 	/* Generate Excel That started the audit */
 	public function excelByProgress2_phase1() {
-	    $varProgress="a.progress = '100'";
+	    $varProgress="a.progress_phase_1 = '100'";
         $this->load->dbutil();
         $row = $this->Audit_started_model->getExcelDataByProgress2_phase1($varProgress);
         $name = 'School_That_Submit_Audit'.date('d-m-Y').'.csv';
@@ -207,7 +207,7 @@ class Audit_started_2017 extends CI_Controller {
      */
 
     public function excelByProgress3_phase1() {
-	    $varProgress="a.progress = '5'";
+	    $varProgress="a.progress_phase_1 = '5'";
         $this->load->dbutil();
         $row = $this->Audit_started_model->getExcelDataByProgress_phase1($varProgress);
         $name = 'SCHOOL_THAT_STARTED_THE_AUDIT'.date('d-m-Y').'.csv';
@@ -224,7 +224,7 @@ class Audit_started_2017 extends CI_Controller {
 
 	/* Generate Excel started but did not complete */
 	 public function excelByProgress5_phase1() {
-	    $varProgress="a.progress = '100'";
+	    $varProgress="a.progress_phase_1 = '100'";
         $this->load->dbutil();
         $row = $this->Audit_started_model->getExcelDataByProgress5_phase1($varProgress);
         $name = 'School_That_Submit_Audit'.date('d-m-Y').'.csv';
@@ -234,7 +234,7 @@ class Audit_started_2017 extends CI_Controller {
 	
 	/* Generate Excel did not start */
 	public function excelByProgress6_phase1() {
-	    $varProgress="a.progress = '100'";
+	    $varProgress="a.progress_phase_1 = '100'";
         $this->load->dbutil();
         $row = $this->Audit_started_model->getExcelDataByProgress6_phase1($varProgress);
         $name = 'School_That_Submit_Audit'.date('d-m-Y').'.csv';
@@ -242,7 +242,7 @@ class Audit_started_2017 extends CI_Controller {
     }
 	/* Generate Excel 2017 school */
 	public function excelByProgress7_phase1() {
-	    $varProgress="a.progress = '100'";
+	    $varProgress="a.progress_phase_1 = '100'";
         $this->load->dbutil();
         $row = $this->Audit_started_model->getExcelDataByProgress7_phase1($varProgress);
         $name = 'School_That_Submit_Audit'.date('d-m-Y').'.csv';
@@ -254,7 +254,7 @@ class Audit_started_2017 extends CI_Controller {
      */
 
     public function excelByProgress4_phase1() {
-	    $varProgress="a.progress = '100'";
+	    $varProgress="a.progress_phase_1 = '100'";
         $this->load->dbutil();
         $row = $this->Audit_started_model->getExcelDataByProgress1_phase1($varProgress);
         $name = 'School_That_Submit_Audit'.date('d-m-Y').'.csv';
