@@ -15,6 +15,20 @@ if (!function_exists('getStates')) {
     }
 
 }
+/******
+* GET SCHOOL ID
+*
+*******/
+if (!function_exists('getSchoolId')) {
+       function getSchoolId($argUserID)
+	   {
+	     $CI = & get_instance();
+         $temp = $CI->db->get_where('gsp_school', array('userid' => $argUserID))->row();
+		 return $temp->id;
+	   }
+}
+
+
 /*
  * Get Filed
  */
