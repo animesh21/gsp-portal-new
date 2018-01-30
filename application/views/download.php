@@ -71,7 +71,7 @@
           <div class="title"><strong>Response Report</strong></div>
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 hide">
         <div class="schools-statics" style="width:100%;"> <a href="dashboard/audit_pahse_1" target="_blank">
           <div class="statics-circle"> <span><i class="fa fa-file-text-o fa-2x"></i></span> </div>
           </a>
