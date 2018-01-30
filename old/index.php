@@ -7,7 +7,7 @@ if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
 include('website_db.php');
 $error = "";
 if (isset($_REQUEST['submit'])) {
-
+    echo '<pre>'; print_r($_REQUEST); die();
     if ($d_year == "") {
         $error = "Please select year.";
     } else {
