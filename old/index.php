@@ -1,4 +1,5 @@
 <?php
+$d_year='';
 session_start();
 ob_start();
 if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
@@ -7,7 +8,7 @@ if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
 include('website_db.php');
 $error = "";
 if (isset($_REQUEST['submit'])) {
-    echo '<pre>'; print_r($_REQUEST); die();
+    //echo '<pre>'; print_r($_REQUEST); die();
     if ($d_year == "") {
         $error = "Please select year.";
     } else {
@@ -17,6 +18,7 @@ if (isset($_REQUEST['submit'])) {
     $password = mysql_real_escape_string($_REQUEST['password']);
     $d_year = mysql_real_escape_string($_REQUEST['year']);
     $sql_check = mysql_query("select * from `dashboard_login` where `username`='" . $username . "' AND `password` = '" . $password . "'");
+    ///echo $sql_check; die();
     if (mysql_num_rows($sql_check) > 0) {
         $sql_data_array = mysql_fetch_array($sql_check);
         $_SESSION['username'] = $sql_data_array['username'];
@@ -63,7 +65,7 @@ if (isset($_REQUEST['submit'])) {
 
         </header>
         <!--close header-->
-        <form name="login" method="post" action="">
+        <form name="login" method="post" action="#">
             <div class="container">
                 <div class="home_container">
                     <h1>Please Log In To Enter Dashboard</h1>
@@ -115,7 +117,7 @@ if (isset($_REQUEST['submit'])) {
                         if (value == '2017')
                         {
 
-                            location.href = "http://www.greenschoolsprogramme.org/audit2017/admin/";
+                            location.href = "http://localhost/GSP/admin";
                         }
                     }
         </script>
