@@ -610,7 +610,7 @@ class Audit_started_model extends CI_Model {
 								->join('gsp_user AS d', 'a.userid=d.id', 'left')
 								->join('gsp_aduit_submitted AS e','a.userid=e.userid', 'left')
 								->where('progress=5')
-								->where('a.date_added >', '2017-11-29 00:00:00')
+								->where('a.complete_status =', '0')
 								->order_by('a.id', 'desc')
 								->get()->result();
 	
