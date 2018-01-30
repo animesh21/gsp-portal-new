@@ -684,7 +684,7 @@ class Audit_started_model extends CI_Model {
                         ->join('gsp_user AS d', 'a.userid=d.id', 'left')
                         ->where($progress)
 						->where($progress)
-						->where('a.date_added >', '2017-11-20 00:00:00')
+						->where('a.complete_status =', '0')
 						->order_by('a.id', 'desc')
                         ->get()->result();
         //echo '<pre>'; print_r($arrRecord); exit;
