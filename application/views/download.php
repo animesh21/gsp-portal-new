@@ -22,21 +22,21 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
-            .alert {
-                height: 50px !important;
-                padding: 15px !important;
-                font-weight: bold;
-                border-radius: 0px;
-            }
+.alert {
+	height: 50px !important;
+	padding: 15px !important;
+	font-weight: bold;
+	border-radius: 0px;
+}
 
-            .alert-success {
-                border: 2px solid green;
-            }
+.alert-success {
+	border: 2px solid green;
+}
 
-            .alert-danger {
-                border: 2px solid red;
-            }
-			.schools-statics {padding: 35px 15px 15px; border-radius: 6px; font-size: 16px; width: 48%; min-height: 200px; margin: 10px 10px; display: inline-block; vertical-align: top; border: 1px solid #ccc; background: rgba(232, 101, 73, 0.1); position: relative;}
+.alert-danger {
+	border: 2px solid red;
+}
+.schools-statics {padding: 35px 15px 15px; border-radius: 6px; font-size: 16px; width: 48%; min-height: 200px; margin: 10px 10px; display: inline-block; vertical-align: top; border: 1px solid #ccc; background: rgba(232, 101, 73, 0.1); position: relative;}
 .schools-statics:nth-child(even) {margin-right: 0;}
 .schools-statics .title {display: block; margin: 20px; text-align: center;}
 .schools-statics .statics-circle {width: 80px; height: 80px; background: rgb(232, 101, 73); color: #fff; text-align: center; border-radius: 50%; padding: 12px; transition: all 0.5s ease-in-out; border: 5px solid #fff; margin: 0 auto;}
@@ -59,10 +59,11 @@
                                  id="image"></div>
       </header>
     </div>
-    <div class="container">
+    <div class="container" style="height:600px;">
       <div class="col-md-12">
-        <h1><strong>GSP Audit 2017 Reports & Certificate</strong></h1>
-        <a href="<?php echo base_url('logout'); ?>" class="pull-right">Logout</a> </div>
+        <h1><strong>GSP Audit 2017-18 Reports & Certificate</strong></h1>
+        <a href="<?php echo base_url('logout'); ?>" class="pull-right">Logout</a> 
+		<hr/></div>
       <div class="col-md-4">
         <div class="schools-statics" style="width:100%;"> <a href="<?php echo base_url("/admin/responsreport/pdf/").$this->session->userdata('USER_ID'); ?>" target="_blank">
           <div class="statics-circle"> <span><i class="fa fa-file-text-o fa-2x"></i></span> </div>
