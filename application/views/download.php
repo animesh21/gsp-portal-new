@@ -62,7 +62,7 @@
     <div class="container" style="height:600px;">
       <div class="col-md-12">
         <h1><strong>GSP Audit 2017-18 Reports & Certificate</strong></h1>
-        <a href="<?php echo base_url('logout'); ?>" class="pull-right">Logout</a> 
+        <a href="<?php echo base_url('Downloadlogout'); ?>" class="pull-right">Logout</a> 
 		<hr/></div>
       <div class="col-md-4">
         <div class="schools-statics" style="width:100%;"> <a href="<?php echo base_url("/admin/responsreport/pdf/").$this->session->userdata('USER_ID'); ?>" target="_blank">
