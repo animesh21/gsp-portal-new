@@ -15,6 +15,6 @@ class Downloadlogout extends CI_Controller{
     public function index(){
         $this->session->unset_userdata(array('USERNAME', 'USER_ID'));
         $this->session->set_flashdata('success', 'Successfully logged out!');
-	    redirect(base_url('http://www.greenschoolsprogramme.org/schools/gsp-award-2016-2017/is-your-school-green/'));
+	    redirect('http://www.greenschoolsprogramme.org/schools/gsp-award-2016-2017/is-your-school-green/');
     }
 }
