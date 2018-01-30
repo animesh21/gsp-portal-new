@@ -144,9 +144,9 @@ class School_model extends CI_Model
         return $row->count;
     }
 	
-	public function getSchools_phase_2()
+     public function getSchools_phase_2()
     {
-	  $this->db->where('date_added >', '2017-11-29 00:00:00');
+	   $this->db->where('complete_status=', '0');
 	  return $this->db->count_all_results('gsp_school');
     }
 	
