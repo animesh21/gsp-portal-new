@@ -1,0 +1,100 @@
+/* GSP Performance Report CSS */
+
+* {box-sizing: border-box; margin: 0; padding: 0;}
+body {font-family: arial, sans-serif; font-weight: normal; font-size: 12px; line-height: 1.4; color: #5b5d64; max-width: 700px; margin: 0 auto;}
+h1, h2, h3, h4, h5, h6 {font-weight: normal; line-height: 1.2;}
+h2 {font-size: 19px; margin-bottom: 30px; color: #e86549; border-bottom: 2px dashed #e1e1e1;}
+h3 {font-size: 18px; color: #d5bb2b; margin-bottom: 10px;}
+h4 {font-size: 15px; color: #d5bb2b; margin-bottom: 10px;}
+p {margin: 0 0 15px 0;}
+a {color: #5b5d64;}
+a: focus, a: hover {text-decoration: none}
+ol, ul {list-style: none}
+th {font-size: 16px;}
+td {font-size: 13px;}
+.page-break-after {page-break-after: always;}
+.page-break-before {page-break-befor: always;}
+.pull-left {float: left !important}
+.pull-right {float: right !important}
+@page {margin: 15mm 15mm 0 15mm;}
+
+
+/* ============ Report Container =============== */
+.report-container {width: 100%; margin: 0 auto}
+
+/* ============ Report Cover =============== */
+.cover {width: 100%; position: relative}
+.cover figure img {width: 100%;}
+.report-title {position: absolute; left: 50px; top: 525px; color: #4a5358}
+.report-title h4 {font-size: 23px; margin-bottom: 2px;}
+.report-title h3 {font-size: 31px; margin-bottom: 17px;}
+.report-title p {margin: 0; font-size: 20px;}
+
+/* ============== All Sections Common =============== */
+.introduction, .air, .energy, .food, .land, .water, .waste {}
+
+/* header */
+h2 {page-break-before: always;}
+h2 label {display: inline-block;}
+h2 span {font-size: 11px; color: #898585; background: #efefef; padding: 5px; float: right; margin-top: 20px;}
+h2 figure {display: inline-block; vertical-align: middle; margin-right: 5px;}
+
+/* footer */
+.footer {background: #efefef; color: #898585; height: 34px; line-height: 34px; margin: 15px 0;}
+.footer p {display: inline-block; vertical-align: middle; width: 95%; font-size: 11px; text-indent: 15px;}
+.footer .p-number {display: inline-block; font-size: 25px; }
+
+/* introduction */
+p.intro-text {font-size: 14px !important;}
+.remember {background: #f6f0d0; padding: 15px 12px 20px 12px; margin: 20px 0;}
+.remember ul {padding-left: 14px;}
+.remember li {list-style-image: url("../images/remember-list.png"); line-height: 22px;}
+
+/* performance */
+.performance-category {margin: 30px 0 20px 0}
+.performance-category ul {overflow: hidden}
+.performance-category li {margin-bottom: 24px; overflow: hidden}
+.performance-category figure {float: left; width: 20%; margin-right: 20px;}
+.performance-category .description {float: left; width: 77%;}
+
+/* ============ Introduction Page =============== */
+.introduction h2 span {margin-top: 0;}
+.introduction p {font-size: 13px;}
+.intro-heading {padding-bottom: 10px;}
+
+.introduction-graph {margin: 25px 0 25px 0; overflow: hidden}
+.introduction-graph figcaption {margin: 15px 0 0 0;}
+
+.intro-table {border: 1px solid #c0bfbf; border-collapse: collapse; margin-bottom: 20px;}
+.intro-table th {background: #e86549; color: #fff; font-weight: 400; padding: 10px; border-left: 1px solid #fff;}
+.intro-table th:first-child {border: none;}
+.intro-table td {text-align: center; padding: 10px; border: 1px solid #c0bfbf;}
+
+/* ============== Air ============== */
+.air h2 label {color: #d5bb2b;}
+.air p, .energy p {font-size: 12px;}
+
+/* ============== Energy ============== */
+.energy h2 label, .energy h3, .energy h4 {color: #e29e15}
+.energy .remember {background: #f9eacc}
+.energy .remember li {list-style-image: url("../images/energy-list.png");}
+
+/* ============== Food ============== */
+.food h2 label, .food h3, .food h4 {color: #ef3997}
+.food .remember {background: #fbd4e8}
+.food .remember li {list-style-image: url("../images/food-list.png")}
+
+/* ============== Land ============== */
+.land h2 label, .land h3, .land h4 {color: #a5b642}
+.land .remember {background: #ebefd5}
+.land .remember li {list-style-image: url("../images/land-list.png")}
+
+/* ============== Water ============== */
+.water h2 label, .water h3, .water h4 {color: #0071bc}
+.water .remember {background: #c7e0f0}
+.water .remember li {list-style-image: url("../images/water-list.png")}
+
+/* ============== Waste ============== */
+.waste h2 label, .waste h3, .waste h4 {color: #7265ad}
+.waste .remember {background: #d3cafa}
+.waste .remember li {list-style-image: url("../images/waste-list.png")}
