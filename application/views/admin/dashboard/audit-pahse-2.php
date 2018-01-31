@@ -41,7 +41,7 @@
   </a>
   <div class="title">Schools Did Not Start The Audit</div>
 </div>
-<div class="schools-statics"> <a href="../<?php base_url()?>dashboard/registration_2017_phase_2">
+<div class="schools-statics"> <a href="../<?php base_url()?>dashboard/registration_2017_phase_new_2">
   <div class="statics-circle"> <span><?php echo $schoolcount;?></span>
     <label>view</label>
   </div>
