@@ -307,8 +307,7 @@ $('#state').on('change',function(){
 });*/
 </script>
 <script type="text/javascript">
- /*jQuery('#frmSendblukemail').submit(function(e){
-	e.preventDefault();
+jQuery('#send_email').click(function(){
 	var subject=$("#subject").val();
 	var message=$("#message").val();
 	$('input[name="email_list[]"]:checked').each(function(){
@@ -331,7 +330,7 @@ $("#email_list_all").click(function(){
  {
   $(".checkbox").attr('checked', false);
  } 
-});*/
+});
 </script>
 <style type="text/css">
 .label-orange{background:orange; color:black;}
