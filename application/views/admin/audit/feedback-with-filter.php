@@ -314,7 +314,7 @@ jQuery('#send_email').click(function(){
 	  jQuery.ajax({
 	  url:"https://api.elasticemail.com/v2/email/send",
 	  type:"POST",
-	  data:{"api_key":"3dc010df-18e2-4bb9-9ac7-ac4d8382c490","from":"siddhartha2488@gmail.com","to":$(this).val(),"subject":subject,"body_text":message},
+	  data:{"api_key":"a62876ee-8ef8-4c83-a35c-c6eaa0f29765","from":"support@greenschoolsprogramme.org","to":$(this).val(),"subject":subject,"body_text":message},
 	  success:function(reponse){
 	    alert("Email has been send successful...");
 	  }
