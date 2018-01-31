@@ -33,115 +33,120 @@
 		  </select>
         </div>
         <div class="form-group col-md-8">
-          <label for="pwd">Select Progress Based User:</label>
-          <ul class="list-unstyled list-inline" style="margin:0; padding:0;">
-            <li>
-              <label class="radio-inline">
-              <input type="radio" value="100" name="progress" id="progress"  />
-              Audit Submitted</label>
-            </li>
-            <li>
-              <label class="radio-inline">
-              <input type="radio" value="75" name="progress" id="progress" />
-              75 percent</label>
-            </li>
-            <li>
-              <label class="radio-inline">
-              <input type="radio" value="50" name="progress" id="progress" />
-              50 percent</label>
-            </li>
-            <li>
-              <label class="radio-inline">
-              <input type="radio" value=" BETWEEN 10 AND 40" name="progress" id="progress"  />
-              10-40 percent</label>
-            </li>
-            <li>
-              <label class="radio-inline">
-              <input type="radio" value="5" name="progress" id="progress"  />
-              5 percent</label>
-            </li>
-          </ul>
-        </div>
-        <div class="form-group col-md-12">
-          <label for="pwd">Select School Category :</label>
-          <ul class="list-unstyled list-inline" style="margin:0; padding:0;">
-            <li>
-              <label class="radio-inline">
-              <input type="radio" value="1" name="school_category" id="school_category"/>
-              Day Scholar</label>
-            </li>
-            <li>
-              <label class="radio-inline">
-              <input type="radio" value="2" name="school_category" id="school_category"/>
-              Day Boarding </label>
-            </li>
-            <li>
-              <label class="radio-inline">
-              <input type="radio" value="3" name="school_category" id="school_category"/>
-              Residential</label>
-            </li>
-            <li>
-              <label class="radio-inline">
-              <input type="radio" value="4" name="school_category" id="school_category"/>
-              Day Scholar + Day Boarding </label>
-            </li>
-            <li>
-              <label class="radio-inline">
-              <input type="radio" value="5" name="school_category" id="school_category"/>
-              Day Boarding + Residential</label>
-            </li>
-            <li>
-              <label class="radio-inline">
-              <input type="radio" value="6" name="school_category" id="school_category"/>
-              Day Scholar + Residential </label>
-            </li>
-            <li>
-              <label class="radio-inline">
-              <input type="radio" value="7" name="school_category" id="school_category"/>
-              Day Scholar + Day Boarding + Residential </label>
-            </li>
-          </ul>
-        </div>
-        <div class="form-group col-md-4">
-          <label for="pwd">Select School Type :</label>
-          <ul class="list-unstyled list-inline" style="margin:0; padding:0;">
-            <li>
-              <label class="radio-inline">
-              <input type="radio" value="1" name="school_type" id="school_type"/>
-              Only boys </label>
-            </li>
-            <li>
-              <label class="radio-inline">
-              <input type="radio" value="2" name="school_type" id="school_type"/>
-              Only Girls </label>
-            </li>
-            <li>
-              <label class="radio-inline">
-              <input type="radio" value="3" name="school_type" id="school_type"/>
-              Mixed/Co-education </label>
-            </li>
-          </ul>
-        </div>
-        <div class="form-group col-md-8">
-          <label for="pwd">Select Type of Aid:</label>
-          <ul class="list-unstyled list-inline" style="margin:0; padding:0;">
-            <li>
-              <label class="radio-inline">
-              <input type="radio" value="1" name="school_aid" id="school_type"/>
-              Government School</label>
-            </li>
-            <li>
-              <label class="radio-inline">
-              <input type="radio" value="2" name="school_aid" id="school_type"/>
-              Government - Aided School </label>
-            </li>
-            <li>
-              <label class="radio-inline">
-              <input type="radio" value="3" name="school_aid" id="school_type"/>
-              Private School </label>
-            </li>
-          </ul>
-        </div>
+		    <label for="pwd">Select Progress Based User:</label>
+		    <ul class="list-unstyled list-inline" style="margin:0; padding:0;">
+			<li>
+			    <label class="checkbox-inline">
+				<input type="checkbox" value="100" name="progress[]" id="progress"  />
+				Audit Submitted</label>
+			</li>
+			<li>
+			    <label class="checkbox-inline">
+				<input type="checkbox" value="100" name="progress[]" id="progress"  />
+				100 percent</label>
+			</li>
+			<li>
+			    <label class="checkbox-inline">
+				<input type="checkbox" value="75" name="progress[]" id="progress" />
+				75 percent</label>
+			</li>
+			<li>
+			    <label class="checkbox-inline">
+				<input type="checkbox" value="50" name="progress[]" id="progress" />
+				50 percent</label>
+			</li>
+			<li>
+			    <label class="checkbox-inline">
+				<input type="checkbox" value=" BETWEEN 10 AND 40" name="progress[]" id="progress"  />
+				10-40 percent</label>
+			</li>
+			<li>
+			    <label class="checkbox-inline">
+				<input type="checkbox" value="5" name="progress[]" id="progress"  />
+				5 percent</label>
+			</li>
+		    </ul>
+		</div>
+		<div class="form-group col-md-12">
+		    <label for="pwd">Select School Category :</label>
+		    <ul class="list-unstyled list-inline" style="margin:0; padding:0;">
+			<li>
+			    <label class="checkbox-inline">
+				<input type="checkbox" value="1" name="school_category[]" id="school_category"/>
+				Day Scholar</label>
+			</li>
+			<li>
+			    <label class="checkbox-inline">
+				<input type="checkbox" value="2" name="school_category[]" id="school_category"/>
+				Day Boarding </label>
+			</li>
+			<li>
+			    <label class="checkbox-inline">
+				<input type="checkbox" value="3" name="school_category[]" id="school_category"/>
+				Residential</label>
+			</li>
+			<li>
+			    <label class="checkbox-inline">
+				<input type="checkbox" value="4" name="school_category[]" id="school_category"/>
+				Day Scholar + Day Boarding </label>
+			</li>
+			<li>
+			    <label class="checkbox-inline">
+				<input type="checkbox" value="5" name="school_category[]" id="school_category"/>
+				Day Boarding + Residential</label>
+			</li>
+			<li>
+			    <label class="checkbox-inline">
+				<input type="checkbox" value="6" name="school_category[]" id="school_category"/>
+				Day Scholar + Residential </label>
+			</li>
+			<li>
+			    <label class="checkbox-inline">
+				<input type="checkbox" value="7" name="school_category[]" id="school_category"/>
+				Day Scholar + Day Boarding + Residential </label>
+			</li>
+		    </ul>
+		</div>
+		<div class="form-group col-md-4">
+		    <label for="pwd">Select School Type :</label>
+		    <ul class="list-unstyled list-inline" style="margin:0; padding:0;">
+			<li>
+			    <label class="checkbox-inline">
+				<input type="checkbox" value="1" name="school_type[]" id="school_type"/>
+				Only boys </label>
+			</li>
+			<li>
+			    <label class="checkbox-inline">
+				<input type="checkbox" value="2" name="school_type[]" id="school_type"/>
+				Only Girls </label>
+			</li>
+			<li>
+			    <label class="checkbox-inline">
+				<input type="checkbox" value="3" name="school_type[]" id="school_type"/>
+				Mixed/Co-education </label>
+			</li>
+		    </ul>
+		</div>
+		<div class="form-group col-md-8">
+		    <label for="pwd">Select Type of Aid:</label>
+		    <ul class="list-unstyled list-inline" style="margin:0; padding:0;">
+			<li>
+			    <label class="checkbox-inline">
+				<input type="checkbox" value="1" name="school_aid[]" id="school_type"/>
+				Government School</label>
+			</li>
+			<li>
+			    <label class="checkbox-inline">
+				<input type="checkbox" value="2" name="school_aid[]" id="school_type"/>
+				Government - Aided School </label>
+			</li>
+			<li>
+			    <label class="checkbox-inline">
+				<input type="checkbox" value="3" name="school_aid[]" id="school_type"/>
+				Private School </label>
+			</li>
+		    </ul>
+		</div>
         <div class="form-group col-md-4">
           <label for="pwd">Select State :</label>
           <?php echo form_dropdown('state', $states, $this->input->post('state'), array('class' => 'form-control', 'id' => 'country-select')); ?></div>
@@ -150,7 +155,7 @@
           <?php echo form_dropdown('school', array('0' => 'Primary', '1' => 'Secondary','2'=>'All'), $this->input->post('school'), array('class' => 'form-control', 'id' => 'school-select')); ?> </div>
 		<div class="form-group  col-lg-4">
           <label for="pwd">Ratings :</label>
-		<select class="form-control" name="rating">
+		  <select class="form-control" name="rating">
 		    <option value="">Select Rating</option>
 		    <option value="Green">Green</option>
 			<option value="Yellow">Yellow</option>
@@ -173,7 +178,7 @@
 				<th>Type of Aid</th>
 				<th>Coemail</th>
                 <th>Progress</th>
-		      <th>Rating</th>
+				<th>Rating</th>
                 <th style="width:90px;"> <label class="checkbox-inline"><input type="checkbox" name="email_list_all" id="email_list_all" style="opacity: 0.8; margin-top:-1px;" /> Check</label></th>
               </tr>
             </thead>
@@ -213,10 +218,10 @@
 							</td>
 							<td><?php if($record[$i]['progress']!=''): echo $record[$i]['progress']; endif ?></td>
 							
-						<td><?php if($record[$i]['remark']!=''): echo "<label class='label label-".$record[$i]['remark']."'>".$record[$i]['remark']."</label>"; endif ?></td>
-<td></td>
-		     
-		     </tr>
+								<td><?php if($record[$i]['remark']!=''): echo "<label class='label label-".$record[$i]['remark']."'>".$record[$i]['remark']."</label>"; endif ?></td>
+								<td><input type="checkbox" name="email_list[]" class="checkbox" value='.$data1->schoolemail.' style="opacity: 0.8; margin-top:-1px;" /></td>
+
+						</tr>
 				   <?php }?>
 				</tr>
 			 </tbody>
@@ -226,7 +231,7 @@
           <button type="submit" class="btn btn-default btn-block btn-lg" style="background: #e86549 !important; color: #fff">Filter Email</button>
         </div>
         <div class="col-md-6">
-          <button type="submit" class="btn btn-default btn-block btn-lg" style="background: #e86549 !important; color: #fff">Send Email</button>
+          <button type="button" id="send_email" class="btn btn-default btn-block btn-lg" style="background: #e86549 !important; color: #fff">Send Email</button>
         </div>
       </div> 
        <?php echo form_close(); ?>
