@@ -137,7 +137,7 @@ class Dashboard extends CI_Controller {
     {
         $data['main']='admin/audit/register_2017_phase_2';
         $data['title']='Registration 2017';
-        $data['record']=$this->Dashboard_model->getData_phase_2();
+        $data['record']=$this->Dashboard_model->getData_phase_2_1();
         $data['Schools'] = $this->School_model->getSchools_phase_2();
         $data['schoolcount']=$this->Dashboard_model->schoolCount_phase_2();
         $this->load->view('admin/includes/template', $data);
