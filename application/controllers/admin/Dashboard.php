@@ -143,6 +143,17 @@ class Dashboard extends CI_Controller {
         $this->load->view('admin/includes/template', $data);
     }
 	
+	public function  registration_2017_phase_new_2()
+        {
+        $data['main']='admin/audit/register_2017_phase_new_2';
+        $data['title']='Registration 2017';
+        $data['record']=$this->Dashboard_model->getData_phase_2_1();
+        $data['Schools'] = $this->School_model->getSchools_phase_2();
+        $data['schoolcount']=$this->Dashboard_model->schoolCount_phase_2();
+        $this->load->view('admin/includes/template', $data);
+        }
+	
+	
 	public function total_school_registration_phase_2()
 	{
 		$data['main']='admin/audit/total_school_phase_2';
