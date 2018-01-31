@@ -2,9 +2,9 @@
 session_start();
 ob_start();
         if(isset($_SESSION['year']))
-        header('location:/audit2017/old/'.$_SESSION['year'].'/dashboard.php');
+        header('location:/audit2017/np/'.$_SESSION['year'].'/dashboard.php');
         else
-        header('location:/audit2017/old/'); 
+        header('location:/audit2017/np/'); 
        
 include('website_db.php');
 $error = "";
