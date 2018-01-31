@@ -1,5 +1,5 @@
 <div class="top-area">
-        <h2>2017 Registration<a href="<?php echo base_url('admin/audit_started_2017/excel_phase2') ?>"><button class="exportBtn">Export to Excel</button></a></h2>
+        <h2>2017 Registration<a href="<?php echo base_url('admin/audit_started_2017/excel_phase2_1') ?>"><button class="exportBtn">Export to Excel</button></a></h2>
          </div>
 	
       <table id="example1" class="display dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="example_info">
