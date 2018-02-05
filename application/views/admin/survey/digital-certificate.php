@@ -28,7 +28,7 @@ style='background:url(assets/img/images/Certificate-2017.jpg) 0% 17%  no-repeat;
     </body>
 </html>
 <style type="text/css">
-    .first_name{ position:absolute; top:400px; left:240px}
-	.school_name{ position:absolute; top:449px; left:100px}
-    .grade{position:absolute; top:260px; left:650px}
+    .first_name{ position:absolute; top:405px; left:240px}
+	.school_name{ position:absolute; top:452px; left:100px}
+    .grade{position:absolute; top:265px; left:650px}
 </style>
