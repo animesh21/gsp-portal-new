@@ -423,12 +423,15 @@ function getdigitalCertificate($argID) {
    foreach ($question_alphabet as $q) {
        for ($i = 1; $i <= 10; $i++) {
        //Students
+       if(getFiled("Q3".$q. $i . "S1", $argID)!="" && getFiled("Q3" .$q.$i . "S2", $argID) !="")
+       {
        $arrStudents[] = array(
        'name' => getFiled("Q3".$q. $i . "S1", $argID) . " " . getFiled("Q3" .$q.$i . "S2", $argID),
        'grade' => getFiled("Q3" .$q.$i . "S3", $argID),
 	   'school_name'=>$username->username,
 	   );
 	}
+       }
    }
    return $arrStudents;
   }
