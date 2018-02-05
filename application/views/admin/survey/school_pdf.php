@@ -2282,7 +2282,7 @@
   <?php } ?>
 </div>
 <div style="text-align: center; padding: 0;">&nbsp;&nbsp;&nbsp;&nbsp;</div>
-<h2 class="heading section waterpage_break"><img src="assets/img/images/water.png" width="94" height="94">Water</h2>
+<h2 class="heading section waterpage_break page_break"><img src="assets/img/images/water.png" width="94" height="94">Water</h2>
 <div class="wrapper">
   <div class="task-area">
     <h3 class="task">Task 1: Choose your Water Audit Team</h3>
