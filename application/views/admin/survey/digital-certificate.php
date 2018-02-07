@@ -10,7 +10,7 @@
 			//echo '<pre>'; print_r($students);exit;
 		if ($students[$i]['name'] !="") {
 		    echo "<div class='container' 
-style='background:url(assets/img/images/Certificate-2017.jpg) 0% 17%  no-repeat; width:1124px; height:791px; margin:0px auto;'><div class='first_name'>" . $students[$i]['name'] . "&nbsp;&nbsp;" . numberToRomanRepresentation($students[$i]['grade']) . "</div>&nbsp;<div class='school_name'>".$students[$i]['school_name']."</div></div>";
+style='background:url(assets/img/images/Certificate-2017.jpg) 0% 17%  no-repeat; width:1124px; height:791px; margin:0px auto;'><div class='first_name'>" . $students['name'] . "&nbsp;&nbsp;" . numberToRomanRepresentation($students['grade']) . "</div>&nbsp;<div class='school_name'>".$students['school_name']."</div></div>";
 		}
 	    }
 	}
