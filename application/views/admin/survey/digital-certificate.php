@@ -18,7 +18,7 @@ style='background:url(assets/img/images/Certificate-2017.jpg) 0% 17%  no-repeat;
 	    for ($i = 0; $i < count($staffadmin); $i++) {
 		if ($staffadmin != '') {
 		    echo "<div class='container' 
-style='background:url(assets/img/images/Certificate-2017.jpg) 0% 17%  no-repeat; width:1124px; height:791px; margin:0px auto;'><div class='first_name'>" . $staffadmin['teacher'] . "</div>&nbsp;<div class='school_name'>" .  $staffadmin['school'] . "</div></div>";
+style='background:url(assets/img/images/Certificate-2017.jpg) 0% 17%  no-repeat; width:1124px; height:791px; margin:0px auto;'><div class='first_name'>" . $staffadmin[$i]['teacher'] . "</div>&nbsp;<div class='school_name'>" .  $staffadmin[$i]['school'] . "</div></div>";
 		}
 	    }
 	}
