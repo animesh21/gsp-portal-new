@@ -1,8 +1,8 @@
 <?php
-$servername = "localhost";
-$username = "gsp_audit";
-$password = "Sma46o!u8";
-$dbname = "gsp_audit";
+$servername = "148.72.232.125";
+$username = "studio_gsp2015";
+$password = "Studio@123";
+$dbname = "gsp_2015";
 
 
 // Create connection
