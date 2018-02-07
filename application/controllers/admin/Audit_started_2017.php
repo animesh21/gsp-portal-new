@@ -424,7 +424,7 @@ function getdigitalCertificate($argID) {
    foreach ($question_alphabet as $q) {
        for ($i = 1; $i <= 10; $i++) {
        //Students
-       if(getFiled("Q3".$q. $i . "S1", $argID)!="")
+       if(getFiled("Q3".$q. $i . "S1", $argID)!="" && getFiled("Q3" .$q.$i . "S2", $argID) !="")
        {
        $arrStudents[] = array(
        'name' => getFiled("Q3".$q. $i . "S1", $argID) . " " . getFiled("Q3" .$q.$i . "S2", $argID),
@@ -448,7 +448,7 @@ function getdigitalCertificate($argID) {
    foreach ($question_alphabet as $q) {
        //Teachers
        for ($i = 1; $i <= 3; $i++) {
-       if((getFiled("Q1" . $q . $i . "S1", $argID) !="0")  || (getFiled("Q1" . $q . $i . "S3", $argID) !="0") && (getFiled("Q1" . $q . $i . "S3", $argID) !=''))
+       if((getFiled("Q1" . $q . $i . "S1", $argID) !="0") && (getFiled("Q1" . $q . $i . "S1", $argID) !='') || (getFiled("Q1" . $q . $i . "S3", $argID) !="0") && (getFiled("Q1" . $q . $i . "S3", $argID) !=''))
        {
        $airTeachers[] = array("teacher"=>getFiled("Q1" . $q . $i . "S1", $argID) . " " . getFiled("Q1" . $q . $i . "S3", $argID),"school"=>$username->username);
 	   
@@ -456,7 +456,7 @@ function getdigitalCertificate($argID) {
        }
        //Staff
        for ($i = 1; $i <= 5; $i++) {
-       if((getFiled("Q2" . $q . $i . "S1", $argID) !="0") || (getFiled("Q2" . $q . $i . "S3", $argID) !="0") && (getFiled("Q2" . $q . $i . "S3", $argID) !='')){
+       if((getFiled("Q2" . $q . $i . "S1", $argID) !="0") && (getFiled("Q2" . $q . $i . "S1", $argID) !='') || (getFiled("Q2" . $q . $i . "S3", $argID) !="0") && (getFiled("Q2" . $q . $i . "S3", $argID) !='')){
        $arrStaff[] = array("teacher"=>getFiled("Q2" . $q . $i . "S1", $argID) . " " . getFiled("Q2" . $q . $i . "S3", $argID),"school"=>$username->username);
 	
        }
