@@ -1,6 +1,6 @@
 <?php
 
-define("DB_Hostname", "148.72.232.125");
+define("DB_Hostname", "43.255.154.31");
 		define("DB_Username", "studio_gsp2015");
 		define("DB_Password", "Studio@123");
 		define("DB_databasename", "gsp_2015");
