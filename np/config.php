@@ -1,13 +1,10 @@
 <?php
-$servername = "43.255.154.31";
-$username = "studio_gsp2015";
-$password = "Studio@123";
-$dbname = "gsp_2015";
-
-
+$servername = "localhost";
+$username = "audit2016";
+$password = "ByJ^zyY7K(m";
+$dbname = "gsp_audit";
 // Create connection
 $conn = mysqli_connect($servername, $username, $password,$dbname);
-
 // Check connection
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
