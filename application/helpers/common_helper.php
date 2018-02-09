@@ -54,6 +54,12 @@ if (!function_exists('getFiled')) {
 */
 if (!function_exists('numberToRomanRepresentation')) {
 function numberToRomanRepresentation($number) {
+   $roman_no=array("I","II","III","IV","V","VI","VII","VIII","IX","X","XI","XII");
+	if(array_search($number,$roman_no)){
+	  return $number;
+	}
+	else
+	{
     $map = array('M' => 1000, 'CM' => 900, 'D' => 500, 'CD' => 400, 'C' => 100, 'XC' => 90, 'L' => 50, 'XL' => 40, 'X' => 10, 'IX' => 9, 'V' => 5, 'IV' => 4, 'I' => 1);
     $returnValue = '';
     while ($number > 0) {
@@ -66,6 +72,7 @@ function numberToRomanRepresentation($number) {
         }
     }
     return $returnValue;
+	}
 }
 }
 
