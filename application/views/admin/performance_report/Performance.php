@@ -1,106 +1,113 @@
-<?php
-//echo '<pre>';
-//print_r($performance);
-//die();
-
-?>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Performance Report</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="<?php echo base_url(); ?>assets/css/performance.css" rel="stylesheet">
-        <link href="<?php echo base_url(); ?>assets/css/performance.css" rel="stylesheet" media="print">
-    </head>
-    <body>
-
-        <div class="report-container">
-            <div class="cover">
-                <figure class="banner"><img src="<?php echo base_url() ?>assets/img/performance/title-page.jpg"></figure>
-                <div class="report-title">
-                    <h4>GSP Audit 2016</h4>
-                    <h3>Performance Report</h3>
-                    <p><strong><?php echo $performance[0]->name ?></strong></p>
-                    <p><strong><?php echo $performance[0]->city; ?>, <?php echo $performance[0]->state; ?></strong></p>
-                    <p>Audit Coordinator: <?php echo $performance[0]->coname; ?></p>
-                    <p> <?php //echo $total_audit_points;   ?>/157</p>
-                    <p>Category: <?php //echo $school_category;   ?> School</p>
-                </div>
-            </div> 
-            <div class="introduction page-break-before">
-                <h2 class="intro-heading">
-                    <label>Introduction</label>
-                    <span>Green Schools Programme Audit 2016</span></h2>
-                <p>Dear Principal,</p>
-                <p>Thank you for taking part in GSP Audit 2016, an initiative to make your school resource efficient and to inculcate green practices in your students.</p>
-                <p>As Anil Agarwal, founder-director, CSE, rightly said, '...that as they (children) grow older, it is important they begin to understand how human beings and human societies interact with their environment for their survival and their growth, how these human-nature interactions become a part of a society's culture, and why it is important to rationalize our relationship with our environment.'</p>
-                <p>The Green Schools Programme (GSP) is about fostering environmental literacy. It takes the classroom into our lives. The joy is not just in the learning. The joy is in the experience of making change in our environment. We then live the change. GSP has been built on the twin objectives of "Learning by doing" and "making change work" to help schools audit the consumption of natural resources within their premises, and assess themselves as environment managers.</p>
-                <p>Like last year, we were overwhelmed with the response we received from across India. More than 2500 schools registered for the Audit, and 700 submitted the Audit. The performance report of the school is based on the data submitted by the schools. Therefore, the school needs to make sure that the data entered is correct to the best of their knowledge. We hope that as the school continues to audit their consumption each year, they will refine the data collection and complete the report with honesty. Our endeavor is to provide India with a green report card of schools with credible data and this can be done only if schools provide accurate data.</p>
-
-                <p>We hope that your students immersed themselves in the activities and learnt about rainwater harvesting, waste segregation at source, non-polluting modes of transport, eating healthy, etc. While the performance report will give schools the baselines and is an indicator of the progress that the schools make on the environment front - year-on-year, we hope that your school continues to participate each year, and build a generation of environmentally responsible citizens.</p>
-                <p>This report will help you move beyond "awareness activities" such as cleanliness drives, poster-making, debates etc, which are, undoubtedly, important, but will also help you to identify long term activities that will deliver measurable impacts.</p>
-                <p>Hope, that in coming years, your school continues to participate and manage resources efficiently within your school.</p>
-                <p>Look forward to receiving your Audit report in 2017!</p>
-                <p>Warmly,</p>
-                <p>The GSP team</p>
-                <div class="footer">
-                    <p>Performance Report | <?php echo $performance[0]->name; ?></p>
-
-                </div>
-                <h2 class="intro-heading">
-                    <label>Introduction</label>
-                    <span>Green Schools Programme Audit 2016</span></h2>
-                <p>A snapshot GSP Audit 2016 is as follows:</p>
-                <table width="100%" class="intro-table" cellspacing="0">
-                    <tr>
-                        <th width="22%">Rating</th>
-                        <th width="44%">Score (Percentage)</th>
-                        <th width="34%">Number of Schools</th>
-                    </tr>
-                    <tr>
-                        <td>GREEN</td>
-                        <td>70% & above</td>
-                        <td>71</td>
-                    </tr>
-                    <tr>
-                        <td>YELLOW</td>
-                        <td>Between 50-69.9%</td>
-                        <td>208</td>
-                    </tr>
-                    <tr>
-                        <td>ORANGE</td>
-                        <td>Between 35-49.9% </td>
-                        <td>352</td>
-                    </tr>
-                    <tr>
-                        <td>RED</td>
-                        <td>Below 34.9%</td>
-                        <td>69</td>
-                    </tr>
-                </table>
-                <figure> <img  src="<?php echo base_url() ?>assets/img/performance/categories.jpg"> </figure>
-                <div class="footer">
-                    <p>Performance Report | <?php echo $performance[0]->name; ?></p>
-
-                </div>
-            </div> 
-
-            <div class="air">
-                <h2>
-                    <figure><img src="<?php echo base_url() ?>assets/img/performance/Air_logo.jpg"></figure>
-                    <label>Air</label>
-                    <span>Green Schools Programme Audit 2016</span></h2>
-                <p>Sources of air pollution are many and diverse. But none are as lethal as vehicles as they are responsible for very high exposure. Vehicular emissions take place in the breathing zone of people. Experts say that those who live or work in close proximity to heavily travelled roadways are subject to high levels of exposure.  No wonder that during the past few years, we have been desperately looking out for tools to assess the problem and find ways to combat the menace.</p>
-                <section class="remember">
-                    <h3>Remember:</h3>
-                    <ul>
-                        <li>Circulation of fresh air keeps the mind and body healthy, therefore the total window-floor ratio of a class-room should be more than five per cent.</li>
-                        <li>The fuel type should be switched from diesel to petrol to CNG to prevent ambient air quality from deteriorating further.</li>
-                        <li>Your school should motivate most of the permanent population to use non-polluting mode of transport such as walking or cycling, or at least use a sustainably motorized vehicles such as buses, public transport.</li>
-                    </ul>
-                </section>
-                <h3>Your School's Performance</h3>
-                <?php
+<head>
+<meta charset="utf-8">
+<title>Performance Report</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="<?php echo base_url(); ?>assets/css/performance.css" rel="stylesheet">
+<link href="<?php echo base_url(); ?>assets/css/performance.css" rel="stylesheet" media="print">
+</head>
+<body>
+<div class="report-container">
+  <div class="cover">
+    <figure class="banner"><img src="assets/img/performance/title-page.jpg"></figure>
+    <div class="report-title">
+      <h4>GSP Audit 2016</h4>
+      <h3>Performance Report</h3>
+      <p><strong><?php echo $performance[0]->name ?></strong></p>
+      <p><strong><?php echo $performance[0]->city; ?>, <?php echo $performance[0]->state; ?></strong></p>
+      <p>Audit Coordinator: <?php echo $performance[0]->coname; ?></p>
+      <p>Category:
+        <?php 
+		$schoolUserID = $performance[0]->userid;
+		if(getFiled('Q1S1', $schoolUserID)==1){
+		  echo "Day Scholar";
+		}else if(getFiled('Q1S1', $schoolUserID)==2){
+		  echo "Day Boarding";
+		}else if(getFiled('Q1S1', $schoolUserID)==3){
+		  echo "Residential";
+		}else if(getFiled('Q1S1', $schoolUserID)==4){
+		  echo "Day Scholar + Day Boarding";
+		}else if(getFiled('Q1S1', $schoolUserID)==5){
+		  echo "Day Boarding + Residential";
+		}else if(getFiled('Q1S1', $schoolUserID)==6){
+		  echo "Day Scholar + Residential";
+		}else if(getFiled('Q1S1', $schoolUserID)==7){
+		  echo " Day Scholar + Day Boarding + Residential";
+		}
+		 ?>
+        School</p>
+    </div>
+  </div>
+  <div class="introduction page-break-before">
+    <h2 class="intro-heading">
+      <label>Introduction</label>
+      <span>Green Schools Programme Audit 2016</span></h2>
+    <p>Dear Principal,</p>
+    <p>Thank you for taking part in GSP Audit 2016, an initiative to make your school resource efficient and to inculcate green practices in your students.</p>
+    <p>As Anil Agarwal, founder-director, CSE, rightly said, '...that as they (children) grow older, it is important they begin to understand how human beings and human societies interact with their environment for their survival and their growth, how these human-nature interactions become a part of a society's culture, and why it is important to rationalize our relationship with our environment.'</p>
+    <p>The Green Schools Programme (GSP) is about fostering environmental literacy. It takes the classroom into our lives. The joy is not just in the learning. The joy is in the experience of making change in our environment. We then live the change. GSP has been built on the twin objectives of "Learning by doing" and "making change work" to help schools audit the consumption of natural resources within their premises, and assess themselves as environment managers.</p>
+    <p>Like last year, we were overwhelmed with the response we received from across India. More than 2500 schools registered for the Audit, and 700 submitted the Audit. The performance report of the school is based on the data submitted by the schools. Therefore, the school needs to make sure that the data entered is correct to the best of their knowledge. We hope that as the school continues to audit their consumption each year, they will refine the data collection and complete the report with honesty. Our endeavor is to provide India with a green report card of schools with credible data and this can be done only if schools provide accurate data.</p>
+    <p>We hope that your students immersed themselves in the activities and learnt about rainwater harvesting, waste segregation at source, non-polluting modes of transport, eating healthy, etc. While the performance report will give schools the baselines and is an indicator of the progress that the schools make on the environment front - year-on-year, we hope that your school continues to participate each year, and build a generation of environmentally responsible citizens.</p>
+    <p>This report will help you move beyond "awareness activities" such as cleanliness drives, poster-making, debates etc, which are, undoubtedly, important, but will also help you to identify long term activities that will deliver measurable impacts.</p>
+    <p>Hope, that in coming years, your school continues to participate and manage resources efficiently within your school.</p>
+    <p>Look forward to receiving your Audit report in 2017!</p>
+    <p>Warmly,</p>
+    <p>The GSP team</p>
+    <div class="footer">
+      <p>Performance Report | <?php echo $performance[0]->name; ?></p>
+    </div>
+    <h2 class="intro-heading">
+      <label>Introduction</label>
+      <span>Green Schools Programme Audit 2016</span></h2>
+    <p>A snapshot GSP Audit 2016 is as follows:</p>
+    <table width="100%" class="intro-table" cellspacing="0">
+      <tr>
+        <th width="22%">Rating</th>
+        <th width="44%">Score (Percentage)</th>
+        <th width="34%">Number of Schools</th>
+      </tr>
+      <tr>
+        <td>GREEN</td>
+        <td>70% & above</td>
+        <td>71</td>
+      </tr>
+      <tr>
+        <td>YELLOW</td>
+        <td>Between 50-69.9%</td>
+        <td>208</td>
+      </tr>
+      <tr>
+        <td>ORANGE</td>
+        <td>Between 35-49.9% </td>
+        <td>352</td>
+      </tr>
+      <tr>
+        <td>RED</td>
+        <td>Below 34.9%</td>
+        <td>69</td>
+      </tr>
+    </table>
+    <figure> <img  src="assets/img/performance/categories.jpg"> </figure>
+    <div class="footer">
+      <p>Performance Report | <?php echo $performance[0]->name; ?></p>
+    </div>
+  </div>
+  <div class="air">
+    <h2>
+      <figure><img src="assets/img/performance/Air_logo.jpg"></figure>
+      <label>Air</label>
+      <span>Green Schools Programme Audit 2016</span></h2>
+    <p>Sources of air pollution are many and diverse. But none are as lethal as vehicles as they are responsible for very high exposure. Vehicular emissions take place in the breathing zone of people. Experts say that those who live or work in close proximity to heavily travelled roadways are subject to high levels of exposure.  No wonder that during the past few years, we have been desperately looking out for tools to assess the problem and find ways to combat the menace.</p>
+    <section class="remember">
+      <h3>Remember:</h3>
+      <ul>
+        <li>Circulation of fresh air keeps the mind and body healthy, therefore the total window-floor ratio of a class-room should be more than five per cent.</li>
+        <li>The fuel type should be switched from diesel to petrol to CNG to prevent ambient air quality from deteriorating further.</li>
+        <li>Your school should motivate most of the permanent population to use non-polluting mode of transport such as walking or cycling, or at least use a sustainably motorized vehicles such as buses, public transport.</li>
+      </ul>
+    </section>
+    <h3>Your School's Performance</h3>
+    <?php
                 $total_air_points = number_format(getAirPoints($performance[0]->userid), 2);
                 if ($total_air_points == 12)
                     $point_performance_msg_a = "Your school fulfils all the norms of Air Quality check. Overall, school has done very well in air section.  ";
@@ -111,23 +118,22 @@
                 elseif ($total_air_points < 5)
                     $point_performance_msg_a = "Your school fulfils very few norms of Air Quality check. You can improve by considering the recommendations through the assessment below.  Overall, your school needs to improve the Air Quality.";
                 ?>
-                <p><?php echo $point_performance_msg_a ?></p>
-                <section class="performance-category">
-                    <ul>
-                        <li>
-                            <figure> <img src="<?php echo base_url() ?>assets/img/performance/window.jpg"> </figure>
-                            <div class="description">
-                                <h3>Classrooms Window Floor Ratio (WFR)</h3>
-                                <?php
-                                $schoolUserID = $performance[0]->userid;
-                                $window_floor = getFiled('Q5A110S2', $schoolUserID);
-                                $area_opening = getFiled('Q5A110S3', $schoolUserID);
-
-                                $avg = ($window_floor / $area_opening) * 100;
-                                $view_avg = number_format($avg, 2);
-                                ?>
-                                <h4><?php echo $view_avg; ?> % Average WFR</h4>
-                                <?php
+    <p><?php echo $point_performance_msg_a ?></p>
+    <section class="performance-category">
+      <ul>
+        <li>
+          <figure> <img src="assets/img/performance/window.jpg"> </figure>
+          <div class="description">
+            <h3>Classrooms Window Floor Ratio (WFR)</h3>
+            <?php
+			    $schoolUserID = $performance[0]->userid;
+			    $window_floor = getFiled('Q5A110S2', $schoolUserID);
+			    $area_opening = getFiled('Q5A110S3', $schoolUserID);
+			    $avg = ($window_floor / $area_opening) * 100;
+		    	$view_avg = number_format($avg, 2);
+			?>
+            <h4><?php echo $view_avg; ?> % Average WFR</h4>
+            <?php
                                 if ($view_avg < 5) {
                                     $window_floor_msg = "Your window-floor ratio is less than five per cent. It suggests that your school does not fulfil the oxygen requirement of the school community. If possible, consider increasing the window-floor ratio by providing more openings for better air circulation. Please note that this result is from the sample you have provided.";
                                 } else if ($view_avg >= 5 && $view_avg < 10) {
@@ -136,14 +142,14 @@
                                     $window_floor_msg = "Your window-floor ratio is more than ten per cent. It suggests that your school fulfills the oxygen requirement of the community by providing more openings for better air circulation. Please note that this result is from the sample you have provided.";
                                 }
                                 ?>
-                                <p><?php echo $window_floor_msg; ?></p>
-                            </div>
-                        </li>
-                        <li>
-                            <figure><img src="<?php echo base_url() ?>assets/img/performance/key.jpg"></figure>
-                            <div class="description">
-                                <h3>Ownership of Vehicles</h3>
-                                <?php
+            <p><?php echo $window_floor_msg; ?></p>
+          </div>
+        </li>
+        <li>
+          <figure><img src="assets/img/performance/key.jpg"></figure>
+          <div class="description">
+            <h3>Ownership of Vehicles</h3>
+            <?php
                                 
                                     $data = getFiled('Q6A1', $schoolUserID);
                                     switch ($data) {
@@ -173,28 +179,26 @@
                                     }
                                 
                                 ?>
-                                <h4><?php echo $ownership; ?></h4>
-                                <p><?php echo $ownership_msg; ?></p>
-                            </div>
-                        </li>
-                    </ul>
-                </section>
-                
-            </div>  
-<?php 
+            <h4><?php echo $ownership; ?></h4>
+            <p><?php echo $ownership_msg; ?></p>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </div>
+  <?php 
 if ($data == 3 || $data == 4) { ?>
-    
-        <h2>
-        <figure><img src="<?php echo base_url() ?>assets/img/performance/Air_logo.jpg"></figure>
-            <label>Air</label>
-            <span>Green Schools Programme Audit 2016</span></h2>
-            <section class="performance-category">
-                <ul>
-                <li>
-                    <figure><img src="<?php echo base_url() ?>assets/img/performance/age.jpg"></figure>
-                    <div class="description">
-                    <h3>Age of Vehicles</h3>
-    <?php
+  <h2>
+    <figure><img src="assets/img/performance/Air_logo.jpg"></figure>
+    <label>Air</label>
+    <span>Green Schools Programme Audit 2016</span></h2>
+  <section class="performance-category">
+    <ul>
+      <li>
+        <figure><img src="assets/img/performance/age.jpg"></figure>
+        <div class="description">
+          <h3>Age of Vehicles</h3>
+          <?php
     $totalvehicle = getFiled('Q6A2S1T1', $schoolUserID);
     $oldvehicles = getFiled('Q6A2S1T2', $schoolUserID);
     if($totalvehicle==0){
@@ -216,15 +220,15 @@ if ($data == 3 || $data == 4) { ?>
         $vehicle_msg = "As you know that vehicles that are older than 15 years emit very high Levels of pollutants. We suggest that that you keep a check on the age of all vehicles.";
     }
     ?>
-    <h4><?php echo $vehicletype; ?></h4>
-    <p><?php echo $vehicle_msg; ?></p>
-    </div>
- </li>
- <li>
-        <figure><img src="<?php echo base_url() ?>assets/img/performance/ac.jpg"></figure>
+          <h4><?php echo $vehicletype; ?></h4>
+          <p><?php echo $vehicle_msg; ?></p>
+        </div>
+      </li>
+      <li>
+        <figure><img src="assets/img/performance/ac.jpg"></figure>
         <div class="description">
-            <h3>Air Conditioning in Vehicles</h3>
-            <?php
+          <h3>Air Conditioning in Vehicles</h3>
+          <?php
                                 
                                 $acvehicles = getFiled('Q6A2S1T3', $schoolUserID);
                                 if($totalvehicle==0){
@@ -246,16 +250,15 @@ if ($data == 3 || $data == 4) { ?>
                                     $acvehicle_msg = "All vehicles in your school are fitted with Acs! Air conditioners in vehicles use a lot of fuel and release harmful toxins further polluting the air. We suggest that when you need to replace your vehicles, then you shift to operator-owned buses that are not fitted with ACs.";
                                 }
                                 ?>
-            <h4><?php echo $vehicleactype; ?></h4>
-            <p><?php echo $acvehicle_msg; ?></p>
-          </div>
-        </li>
-     
-        <li>
-          <figure><img src="<?php echo base_url() ?>assets/img/performance/puc.jpg"></figure>
-          <div class="description">
-            <h3>PUC Certificates</h3>
-            <?php
+          <h4><?php echo $vehicleactype; ?></h4>
+          <p><?php echo $acvehicle_msg; ?></p>
+        </div>
+      </li>
+      <li>
+        <figure><img src="assets/img/performance/puc.jpg"></figure>
+        <div class="description">
+          <h3>PUC Certificates</h3>
+          <?php
                                 
                                 $puc_done = getFiled('Q6A2S1T4', $schoolUserID);
                                 
@@ -277,15 +280,15 @@ if ($data == 3 || $data == 4) { ?>
                                     $puc_done_msg = "PUC certification should be up to date for all your vehicles. Please ensure that you update all your vehicles' PUCs at the earliest.";
                                 }
                                 ?>
-            <h4><?php echo $vehicleapuctype; ?></h4>
-            <p><?php echo $puc_done_msg; ?></p>
-          </div>
-        </li>
-        <li>
-          <figure><img src="<?php echo base_url() ?>assets/img/performance/parking.jpg"></figure>
-          <div class="description">
-            <h3>Parking Area for Vehicles</h3>
-            <?php
+          <h4><?php echo $vehicleapuctype; ?></h4>
+          <p><?php echo $puc_done_msg; ?></p>
+        </div>
+      </li>
+      <li>
+        <figure><img src="assets/img/performance/parking.jpg"></figure>
+        <div class="description">
+          <h3>Parking Area for Vehicles</h3>
+          <?php
                                
                                 $Parking_Area = getFiled('Q6A2S1T5', $schoolUserID);
                                  if($totalvehicle==0){
@@ -307,15 +310,15 @@ if ($data == 3 || $data == 4) { ?>
                                     $vehicle_parking_msg = "There should be adequate parking area for school-owned vehicles. More the vehicles, more the area required. Thus, encouraging students to use public transport will ensure more space for school.";
                                 }
                                 ?>
-            <h4><?php echo $vehicle_parking ?></h4>
-            <p><?php echo $vehicle_parking_msg; ?></p>
-          </div>
-        </li>
-        <li>
-          <figure><img src="<?php echo base_url() ?>assets/img/performance/fuel.jpg"></figure>
-          <div class="description">
-            <h3>Type of Fuel</h3>
-            <?php
+          <h4><?php echo $vehicle_parking ?></h4>
+          <p><?php echo $vehicle_parking_msg; ?></p>
+        </div>
+      </li>
+      <li>
+        <figure><img src="assets/img/performance/fuel.jpg"></figure>
+        <div class="description">
+          <h3>Type of Fuel</h3>
+          <?php
                                 $Diesel = getFiled('Q6A2S3D5', $schoolUserID); // Total Diesel vehicle
                                 
                                 $Petrol = getFiled('Q6A2S3P5', $schoolUserID); // Total Petrol vehicle
@@ -392,30 +395,27 @@ if ($data == 3 || $data == 4) { ?>
                                 }
                                 
                                 ?>
-<!--            <h4><?php echo implode(",",$typeofFuel); ?></h4>-->
-            <?php 
+          <!--            <h4><?php echo implode(",",$typeofFuel); ?></h4>-->
+          <?php 
             foreach ($typeoffuel_msg as $value)
             {
                 ?>
-           <p><?php echo $value; ?></p>
-            <?php
+          <p><?php echo $value; ?></p>
+          <?php
              }
             ?>
-          </div>
-        </li>
-        </ul>
-        </section>
-       
-                   
-    <?php } ?>
-     
-    <section class="performance-category">
-      <ul>
-        <li>
-          <figure><img src="<?php echo base_url() ?>assets/img/performance/mode.jpg"></figure>
-          <div class="description">
-            <h3>Mode of Commuting</h3>
-            <?php
+        </div>
+      </li>
+    </ul>
+  </section>
+  <?php } ?>
+  <section class="performance-category">
+    <ul>
+      <li>
+        <figure><img src="assets/img/performance/mode.jpg"></figure>
+        <div class="description">
+          <h3>Mode of Commuting</h3>
+          <?php
                                 $total_population = (getFiled('Q4G4S3', $schoolUserID) != '') ? getFiled('Q4G4S3', $schoolUserID) : 0;;
                                  // Sustainable Motorized Vehicle (SMV) 
                                 if($total_population==0){
@@ -445,18 +445,18 @@ if ($data == 3 || $data == 4) { ?>
                                     $members_use_transport_msg = "Your school mostly uses private vehicles for transportation. We recommend that you encourage the staff and students to use public transport and also to car pool.";
                                 }
                                 ?>
-            <h4><?php echo $members_use_transport_type; ?></h4>
-            <p><?php echo $members_use_transport_msg; ?></p>
-          </div>
-        </li>
-      </ul>
-    </section>
-    <div class="footer">
-         <p>Performance Report | <?php echo $performance[0]->name; ?></p>
-    </div>        
-    <div class="energy">
+          <h4><?php echo $members_use_transport_type; ?></h4>
+          <p><?php echo $members_use_transport_msg; ?></p>
+        </div>
+      </li>
+    </ul>
+  </section>
+  <div class="footer">
+    <p>Performance Report | <?php echo $performance[0]->name; ?></p>
+  </div>
+  <div class="energy">
     <h2>
-      <figure><img src="<?php echo base_url() ?>assets/img/performance/energy.jpg"></figure>
+      <figure><img src="assets/img/performance/energy.jpg"></figure>
       <label>Energy</label>
       <span>Green Schools Programme Audit 2016</span></h2>
     <p>The impact of 'global warming' has already reached scorching levels, and is rising rapidly. Saving energy is the first step to energy conservation. Switching off electrical gadgets when they are not in use and switching the usage of bulbs to CFLs/ LEDs are great ways to start.</p>
@@ -482,7 +482,7 @@ if ($data == 3 || $data == 4) { ?>
     <section class="performance-category">
       <ul>
         <li>
-          <figure><img src="<?php echo base_url() ?>assets/img/performance/percapita.jpg"></figure>
+          <figure><img src="assets/img/performance/percapita.jpg"></figure>
           <div class="description">
             <h3>Energy per capita per day consumption</h3>
             <?php
@@ -503,44 +503,40 @@ if ($data == 3 || $data == 4) { ?>
             ?>
             <h4><?php echo $mjpcpd_per_day; ?></h4>
             <p><?php echo $mjpcpd_per_day_msg; ?></p>
-            
           </div>
           <table width="100%" class="intro-table" cellspacing="0" style="margin-bottom: 0">
-             <tr>
-                 <th width="50%" class="performance-orange-bg">Category</th>
-                 <th width="50%" class="performance-orange-bg">Per capita/day energy consumption</th>
-             </tr>
-             <tr>
-               <td>Day Scholar</td>
-               <td>46.2 MJ</td>
-
-             </tr>
-             <tr>
-               <td>Day Boarding</td>
-               <td>49.8 MJ</td>
-
-             </tr>
-             <tr>
-               <td>Residential</td>
-               <td>24.6 MJ</td>
-
-             </tr>
-             <tr>
-               <td>Scholar + Boarding</td>
-               <td>48.0 MJ</td>                                      
-             </tr>
-             <tr>
-               <td>Scholar + Residential</td>
-               <td>49.8 MJ</td>                                      
-             </tr>
-             <tr>
-               <td>Boarding + Residential</td>
-               <td>46.2 MJ</td>                                      
-             </tr>
-           </table>
+            <tr>
+              <th width="50%" class="performance-orange-bg">Category</th>
+              <th width="50%" class="performance-orange-bg">Per capita/day energy consumption</th>
+            </tr>
+            <tr>
+              <td>Day Scholar</td>
+              <td>46.2 MJ</td>
+            </tr>
+            <tr>
+              <td>Day Boarding</td>
+              <td>49.8 MJ</td>
+            </tr>
+            <tr>
+              <td>Residential</td>
+              <td>24.6 MJ</td>
+            </tr>
+            <tr>
+              <td>Scholar + Boarding</td>
+              <td>48.0 MJ</td>
+            </tr>
+            <tr>
+              <td>Scholar + Residential</td>
+              <td>49.8 MJ</td>
+            </tr>
+            <tr>
+              <td>Boarding + Residential</td>
+              <td>46.2 MJ</td>
+            </tr>
+          </table>
         </li>
         <li>
-          <figure><img src="<?php echo base_url() ?>assets/img/performance/source.jpg"></figure>
+          <figure><img src="assets/img/performance/source.jpg"></figure>
           <div class="description">
             <h3>Sources of Energy</h3>
             <?php
@@ -598,20 +594,19 @@ if ($data == 3 || $data == 4) { ?>
                                     $energyuse = "No";
                                 }
                                 ?>
-<!--            <h4><?php echo $energyuse; ?></h4>-->
+            <!--            <h4><?php echo $energyuse; ?></h4>-->
             <p><?php echo $sourceofenergy_msg; ?></p>
           </div>
         </li>
       </ul>
     </section>
     <div class="footer">
-        <p>Performance Report | <?php echo $performance[0]->name; ?></p>
-
+      <p>Performance Report | <?php echo $performance[0]->name; ?></p>
     </div>
-</div>
-<div class="food">
+  </div>
+  <div class="food">
     <h2>
-      <figure><img src="<?php echo base_url() ?>assets/img/performance/food.jpg"></figure>
+      <figure><img src="assets/img/performance/food.jpg"></figure>
       <label>Food</label>
       <span>Green Schools Programme Audit 2016</span></h2>
     <p>Food has been at the centre of policy debate in India for many years, as more than 20 per cent of the country's population suffers from undernourishment. Meanwhile, childhood obesity is also alarmingly on the rise globally as well as in India.Given India's dubious distinction of carrying the twin burden of under nutrition and overfeeding, we need to be extra cautious.</p>
@@ -637,7 +632,7 @@ if ($data == 3 || $data == 4) { ?>
     <section class="performance-category">
       <ul>
         <li>
-          <figure><img src="<?php echo base_url() ?>assets/img/performance/sale.jpg"></figure>
+          <figure><img src="assets/img/performance/sale.jpg"></figure>
           <div class="description">
             <h3>What kind of food is being served / sold in your school</h3>
             <?php
@@ -659,12 +654,12 @@ if ($data == 3 || $data == 4) { ?>
             $packageitem_served_msg = "Your school sells ultra processed packaged food (UPPF) items daily in the campus - a practice that needs to be discouraged as UPPF items are high in fats, salt and sugar and harm children. We suggest that with the beginning of the new academic session, unhealthy food items be substituted with local and seasonal delicacies.";
             }
         ?>
-<!--        <h4><?php echo $packageitem_served; ?></h4>-->
+            <!--        <h4><?php echo $packageitem_served; ?></h4>-->
             <p><?php echo $packageitem_served_msg; ?></p>
           </div>
         </li>
         <li>
-          <figure><img src="<?php echo base_url() ?>assets/img/performance/sale.jpg"></figure>
+          <figure><img src="assets/img/performance/sale.jpg"></figure>
           <div class="description">
             <h3>Does the school distribute packaged food items as rewards during schools events.</h3>
             <?php
@@ -680,14 +675,12 @@ if ($data == 3 || $data == 4) { ?>
             <p><?php echo $distributepackaged_food_msg; ?></p>
           </div>
         </li>
-            </ul>
-            </section>
-           
-            
-      <section class="performance-category">
+      </ul>
+    </section>
+    <section class="performance-category">
       <ul>
         <li>
-          <figure><img src="<?php echo base_url() ?>assets/img/performance/sale.jpg"></figure>
+          <figure><img src="assets/img/performance/sale.jpg"></figure>
           <div class="description">
             <h3>Does the school distribute chocolates/similar products as refreshments during schools events? </h3>
             <?php
@@ -704,7 +697,7 @@ if ($data == 3 || $data == 4) { ?>
           </div>
         </li>
         <li>
-          <figure><img src="<?php echo base_url() ?>assets/img/performance/sale.jpg"></figure>
+          <figure><img src="assets/img/performance/sale.jpg"></figure>
           <div class="description">
             <h3>Are your school events such as quiz shows, talent shows, debates sponsored by food companies/brands?</h3>
             <?php
@@ -724,11 +717,11 @@ if ($data == 3 || $data == 4) { ?>
     </section>
     <div class="footer">
       <p>Performance Report | <?php echo $performance[0]->name; ?></p>
-    </div> 
     </div>
-    <div class="land">
+  </div>
+  <div class="land">
     <h2>
-      <figure><img src="<?php echo base_url() ?>assets/img/performance/land.jpg"></figure>
+      <figure><img src="assets/img/performance/land.jpg"></figure>
       <label>Land</label>
       <span>Green Schools Programme Audit 2016</span></h2>
     <p>Your school grounds can provide excellent educational opportunities for creating awareness about land resources and the natural world around you, as well as the land-use pattern. The biological diversity 
@@ -760,7 +753,7 @@ if ($data == 3 || $data == 4) { ?>
     <section class="performance-category">
       <ul>
         <li>
-          <figure><img src="<?php echo base_url() ?>assets/img/performance/green.jpg"></figure>
+          <figure><img src="assets/img/performance/green.jpg"></figure>
           <div class="description">
             <h3>Total Green Cover</h3>
             <?php
@@ -778,12 +771,12 @@ if ($data == 3 || $data == 4) { ?>
                         $greencover_msg = "Your school does not have the required green cover so aim to increase the cover by at least 30  percent in the next two years.";
                     }
                 ?>
-<!--            <h4><?php echo $green_cover_perc; ?></h4>-->
+            <!--            <h4><?php echo $green_cover_perc; ?></h4>-->
             <p><?php echo $greencover_msg; ?></p>
           </div>
         </li>
         <li>
-          <figure><img src="<?php echo base_url() ?>assets/img/performance/pest.jpg"></figure>
+          <figure><img src="assets/img/performance/pest.jpg"></figure>
           <div class="description">
             <h3>Use of Pesticide</h3>
             <?php
@@ -800,17 +793,16 @@ if ($data == 3 || $data == 4) { ?>
           </div>
         </li>
       </ul>
-        
     </section>
     <div class="footer">
       <p>Performance Report | <?php echo $performance[0]->name; ?></p>
-    </div> 
-</div>
-<div class="water">
+    </div>
+  </div>
+  <div class="water">
     <h2>
-    <figure><img src="<?php echo base_url() ?>assets/img/performance/tap.jpg"></figure>
-    <label>Water</label>
-    <span>Green Schools Programme Audit 2016</span></h2>
+      <figure><img src="assets/img/performance/tap.jpg"></figure>
+      <label>Water</label>
+      <span>Green Schools Programme Audit 2016</span></h2>
     <p>The right to water is really the right to life and livelihood. Just as we cannot live without water, a country cannot survive if it is water-stressed. This resource determines our future, and acts as a driving force for our economic growth. Even today, the government admits to not being able to provide' safe drinking water to more than half the country's population. Poor sanitation and unsafe drinking water account for a substantial part of the disease burden in India, contributing to diarrhea, cholera, typhoid and jaundice.</p>
     <section class="remember">
       <h3>Remember:</h3>
@@ -838,7 +830,7 @@ if ($data == 3 || $data == 4) { ?>
     <section class="performance-category">
       <ul>
         <li>
-          <figure><img src="<?php echo base_url() ?>assets/img/performance/water-consume.jpg"></figure>
+          <figure><img src="assets/img/performance/water-consume.jpg"></figure>
           <div class="description">
             <h3>Per Capita Water Consumption</h3>
             <?php
@@ -904,61 +896,55 @@ if ($data == 3 || $data == 4) { ?>
                                 ?>
             <h4><?php echo $lpcd; ?> litres per person/day (<?php echo $pcw_condition?>)</h4>
             <p><?php echo $pcw_message?></p>
-            
-             
-    </div>
-          
-        <table width="100%" class="intro-table" cellspacing="0">
+          </div>
+          <table width="100%" class="intro-table" cellspacing="0">
             <tr>
-                 <th width="100%" colspan="2" class="performance-blue-bg">School Average - CSE recommended consumption of water, per capita per day</th>             
+              <th width="100%" colspan="2" class="performance-blue-bg">School Average - CSE recommended consumption of water, per capita per day</th>
             </tr>
             <tr>
-                 <th width="50%" class="performance-blue-bg">Type of School</th>
-                 <th width="50%" class="performance-blue-bg">Average consumption(in Litres)</th>
+              <th width="50%" class="performance-blue-bg">Type of School</th>
+              <th width="50%" class="performance-blue-bg">Average consumption(in Litres)</th>
             </tr>
             <tr>
-               <td>Day Scholar</td>
-               <td>13-17</td>
-
-             </tr>
-             <tr>
-               <td>Day Boarding</td>
-               <td>15-25</td>
-
-             </tr>
-             <tr>
-               <td>Residential</td>
-               <td>125-135</td>
-
-             </tr>
-             <tr>
-               <td>Scholar + Boarding</td>
-               <td>14-21</td>                                      
-             </tr>
-             <tr>
-               <td>Boarding + Residential</td>
-               <td>70-80</td>                                      
-             </tr>
-             <tr>
-               <td>Scholar + Residential</td>
-               <td>50-76</td>                                      
-             </tr>
-             <tr>
-               <td>Scholar + Boarding +Residential</td>
-               <td>51-59</td>                                      
-             </tr>
-           </table>
+              <td>Day Scholar</td>
+              <td>13-17</td>
+            </tr>
+            <tr>
+              <td>Day Boarding</td>
+              <td>15-25</td>
+            </tr>
+            <tr>
+              <td>Residential</td>
+              <td>125-135</td>
+            </tr>
+            <tr>
+              <td>Scholar + Boarding</td>
+              <td>14-21</td>
+            </tr>
+            <tr>
+              <td>Boarding + Residential</td>
+              <td>70-80</td>
+            </tr>
+            <tr>
+              <td>Scholar + Residential</td>
+              <td>50-76</td>
+            </tr>
+            <tr>
+              <td>Scholar + Boarding +Residential</td>
+              <td>51-59</td>
+            </tr>
+          </table>
         </li>
-    </ul>
+      </ul>
     </section>
-    
-        <section class="performance-category">
-        <ul>
+    <section class="performance-category">
+      <ul>
         <li>
-          <figure><img src="<?php echo base_url() ?>assets/img/performance/water-source.jpg"></figure>
+          <figure><img src="assets/img/performance/water-source.jpg"></figure>
           <div class="description">
             <h3>Source of Water</h3>
             <?php
+			   $wcombination=array();
                 $Groundwater= (getFiled('Q6W1', $schoolUserID) != "") ? (getFiled('Q6W1', $schoolUserID) == 1) ? "Y" : "N" : "N/A";              
                 $Surfacewater = (getFiled('Q6W2', $schoolUserID) != "") ? (getFiled('Q6W2', $schoolUserID) == 1) ? "Y" : "N" : "N/A";
                 $Rainwater = (getFiled('Q6W3', $schoolUserID) != "") ? (getFiled('Q6W3', $schoolUserID) == 1) ? "Y" : "N" : "N/A";
@@ -1011,12 +997,12 @@ if ($data == 3 || $data == 4) { ?>
                                     $SourceofWater_msg = "Your source of water is combination of $wcombination_msg. Which is not sufficient to fulfill the water requirements of your school. You should expand your source of water to more options such as surface water, rainwater and recycled wastewater.";
                                 }
                                 ?>
-<!--            <h4><?php echo $SourceofWater; ?></h4>-->
+            <!--            <h4><?php echo $SourceofWater; ?></h4>-->
             <p><?php echo $SourceofWater_msg; ?></p>
           </div>
         </li>
         <li>
-          <figure><img src="<?php echo base_url() ?>assets/img/performance/water-source.jpg"></figure>
+          <figure><img src="assets/img/performance/water-source.jpg"></figure>
           <div class="description">
             <h3>Does your school get daily water supply?</h3>
             <?php
@@ -1034,7 +1020,7 @@ if ($data == 3 || $data == 4) { ?>
           </div>
         </li>
         <li>
-          <figure><img src="<?php echo base_url() ?>assets/img/performance/conserve.jpg"></figure>
+          <figure><img src="assets/img/performance/conserve.jpg"></figure>
           <div class="description">
             <h3>Water Conservation Practices</h3>
             <?php
@@ -1092,13 +1078,12 @@ if ($data == 3 || $data == 4) { ?>
 //                                    $Conservation_Practices_msg = "Your school should look into these water conservation practices to become more water efficient: Float valves installed to stop overflow, Spill proof taps to check overflow, Appliances with a quick-wash setting, Dual flush systems installed in the toilets, Local plant species which require limited amount of water to grow, In initiating any water conservation steps in the schools and outside, Using a drip or irrigation system";
 //                                }
                                 ?>
-<!--            <h4><?php echo $Conservation_Practices; ?></h4>-->
+            <!--            <h4><?php echo $Conservation_Practices; ?></h4>-->
             <p><?php echo $Conservation_Practices_msg; ?></p>
           </div>
         </li>
-     
         <li>
-          <figure><img src="<?php echo base_url() ?>assets/img/performance/harvesting.jpg"></figure>
+          <figure><img src="assets/img/performance/harvesting.jpg"></figure>
           <div class="description">
             <h3>Rainwater Harvesting</h3>
             <?php
@@ -1114,43 +1099,36 @@ if ($data == 3 || $data == 4) { ?>
             <p><?php echo $RainwaterHarvesting_msg; ?></p>
           </div>
         </li>
-        <?php 
-                          if(getFiled('Q8W2', $schoolUserID)=="N")
-                          {                              
-                              ?>
-                          <li>
-                          <figure><img src="<?php echo base_url() ?>assets/img/performance/catchment.jpg"></figure>
-                          <div class="description">
-                          <h3>RWH Potential</h3>
-<!--                          <h4>Rooftop</h4>-->
-                          <p>Your RWH potential is '<?php echo $sql_data_array['266617X37X2476'] ?>' litres. Please explore the options of Rainwater Harvesting in your School.</p>
-                          </div>
-                          </li>
-                          <?php }  ?>
-        
         <li>
-          <figure><img src="<?php echo base_url() ?>assets/img/performance/catchment.jpg"></figure>
+          <figure><img src="assets/img/performance/catchment.jpg"></figure>
           <div class="description">
             <h3>Does your school harvest different catchments</h3>
             <?php
                                     if (getFiled('Q8W2S1', $schoolUserID) == "Y") {
                                         $catchments = "Yes";
                                         $catchments_msg = "";
+										?>
+										
+            <h4><?php echo $catchments; ?></h4>
+            <p><?php echo $catchments_msg; ?></p>
+										<?php
                                     } else if (getFiled('Q8W2S1', $schoolUserID) == "N") {
                                         $catchments = "No";
                                         $catchments_msg = "Your school has rainwater harvesting system, which indirectly means your school must be catching rainwater from atleast one of the catchments: Rooftop, Paved area or Unpaved area. Please fill in the correct details for better analysis of your reports.";
-                                    }
-                                    ?>
+										?>
+										
             <h4><?php echo $catchments; ?></h4>
             <p><?php echo $catchments_msg; ?></p>
+										<?php
+                                    }
+                                    ?>
           </div>
         </li>
-        
         <?php
                         if (getFiled('Q8W2S1', $schoolUserID) == "Y") {
                             ?>
         <li>
-          <figure><img src="<?php echo base_url() ?>assets/img/performance/catchment.jpg"></figure>
+          <figure><img src="assets/img/performance/catchment.jpg"></figure>
           <div class="description">
             <h3>Which is the catchment area being harvested by your school</h3>
             <?php
@@ -1183,30 +1161,42 @@ if ($data == 3 || $data == 4) { ?>
         </li>
         <?php } ?>
         <li>
-          <figure><img src="<?php echo base_url() ?>assets/img/performance/area.jpg"></figure>
+          <figure><img src="assets/img/performance/area.jpg"></figure>
           <div class="description">
             <h3>Harvested Area</h3>
             <?php
                                 if (getFiled('Q8W2S2', $schoolUserID) == 1) {
                                     $rainwater_harvested = "By storing";
                                     $rainwater_harvested_msg = "A good Practice.";
+								?>
+								
+            <h4><?php echo $rainwater_harvested; ?></h4>
+            <p><?php echo $rainwater_harvested_msg; ?></p>
+								<?php	
                                 } elseif (getFiled('Q8W2S2', $schoolUserID) == 2) {
                                     $rainwater_harvested = "By recharge ground";
                                     $rainwater_harvested_msg = "Recharging the ground water is a very good practice.";
-                                } elseif (getFiled('Q8W2S2', $schoolUserID) == 3) {
-                                    $rainwater_harvested = "Combination of both";
-                                    $rainwater_harvested_msg = "An excellent practice. Hope that you use the RWH systems to its full potential.";
-                                }
-                                ?>
+									?>
+									
             <h4><?php echo $rainwater_harvested; ?></h4>
             <p><?php echo $rainwater_harvested_msg; ?></p>
+								<?php	
+                                } elseif (getFiled('Q8W2S2', $schoolUserID) == 3) {
+                                    $rainwater_harvested = "Combination of both";
+                                    $rainwater_harvested_msg = "An excellent practice. Hope that you use the RWH systems to its full potential."; ?>
+									
+            <h4><?php echo $rainwater_harvested; ?></h4>
+            <p><?php echo $rainwater_harvested_msg; ?></p>
+									<?php
+                                }
+                                ?>
           </div>
         </li>
         <?php
                         if (getFiled('Q8W2S2', $schoolUserID) == 2) {
                             ?>
         <li>
-          <figure><img src="<?php echo base_url() ?>assets/img/performance/clean.jpg"></figure>
+          <figure><img src="assets/img/performance/clean.jpg"></figure>
           <div class="description">
             <h3>Groundwater recharge structure</h3>
             <?php
@@ -1221,7 +1211,7 @@ if ($data == 3 || $data == 4) { ?>
         </li>
         <?php } ?>
         <li>
-          <figure><img src="<?php echo base_url() ?>assets/img/performance/clean.jpg"></figure>
+          <figure><img src="assets/img/performance/clean.jpg"></figure>
           <div class="description">
             <h3>How much area in your school is harvested</h3>
             <?php
@@ -1238,6 +1228,11 @@ if ($data == 3 || $data == 4) { ?>
                                     $school_harvested = "91 to 100 per cent";
                                     //$school_harvested = "91 to 100 per cent";
                                     $school_harvested_msg = "It's great that your school's rainwater harvesting area is more than 90%! We hope you continue with this green practice.";
+									?>
+									
+            <h4><?php echo $school_harvested; // Need to discuss with ravi sir/ client   ?></h4>
+            <p><?php echo $school_harvested_msg; ?></p>
+									<?php
                                 } else if ($school_harvested_area == 5 || $school_harvested_area == 6) {
                                     
                                     if($school_harvested_area ==5) 
@@ -1245,27 +1240,43 @@ if ($data == 3 || $data == 4) { ?>
                                     elseif($school_harvested_area ==6) 
                                     $school_harvested = "61 to 70 per cent";
                                     //$school_harvested = "61 to 70 per cent";
-                                    $school_harvested_msg = "It's great that your school's rainwater harvesting area is more than 50%! We hope you continue with this green practice and increase the catchment area in the near future.  Your school has the potential!";
+                                    $school_harvested_msg = "It's great that your school's rainwater harvesting area is more than 50%! We hope you continue with this green practice and increase the catchment area in the near future.  Your school has the potential!";?>
+									
+            <h4><?php echo $school_harvested; // Need to discuss with ravi sir/ client   ?></h4>
+            <p><?php echo $school_harvested_msg; ?></p>
+									<?php
                                 } else if ($school_harvested_area == 4) {
                                     $school_harvested = "41 to 50 per cent";
-                                    $school_harvested_msg = "Your school's rainwater harvesting area is between ".$school_harvested."! We hope you continue with this green practice and increase the catchment area in the near future.  Your school has the potential!";
+                                    $school_harvested_msg = "Your school's rainwater harvesting area is between ".$school_harvested."! We hope you continue with this green practice and increase the catchment area in the near future.  Your school has the potential!"; ?>
+								
+            <h4><?php echo $school_harvested; // Need to discuss with ravi sir/ client   ?></h4>
+            <p><?php echo $school_harvested_msg; ?></p>
+								<?php	
                                 } else if ($school_harvested_area == 3) {
                                     $school_harvested = "31 to 40 per cent";
                                     $school_harvested_msg = "Your school's rainwater harvesting area is ".$school_harvested."! We hope you continue with this green practice and expand the area in the near future.";
+									?>
+									
+            <h4><?php echo $school_harvested; // Need to discuss with ravi sir/ client   ?></h4>
+            <p><?php echo $school_harvested_msg; ?></p>
+									<?php
                                 } else if ($school_harvested_area == 1 || $school_harvested_area == 2) {
                                     if($school_harvested_area ==1) 
                                     $school_harvested = "10 to 20 per cent";
                                     else
                                     $school_harvested = "21 to 30 per cent";
                                     $school_harvested_msg = "Your school's rainwater harvesting area is ".$school_harvested."! We hope you continue with this green practice and expand the area in the near future.";
-                                }
-                                ?>
+									?>
+									
             <h4><?php echo $school_harvested; // Need to discuss with ravi sir/ client   ?></h4>
             <p><?php echo $school_harvested_msg; ?></p>
+									<?php
+                                }
+                                ?>
           </div>
         </li>
         <li>
-          <figure><img src="<?php echo base_url() ?>assets/img/performance/clean.jpg"></figure>
+          <figure><img src="assets/img/performance/clean.jpg"></figure>
           <div class="description">
             <h3>Catchment Cleanliness</h3>
             <?php
@@ -1287,28 +1298,35 @@ if ($data == 3 || $data == 4) { ?>
           </div>
         </li>
         <li>
-          <figure><img src="<?php echo base_url() ?>assets/img/performance/monitor.jpg"></figure>
+          <figure><img src="assets/img/performance/monitor.jpg"></figure>
           <div class="description">
             <h3>Does your school clean your catchment and system</h3>
             <?php
                                 if (getFiled('Q8W2S61', $schoolUserID) == "Y") {
                                     $catchment_system = "Yes";
                                     $catchment_system_msg = "Good you are regular with cleaning the catchment.";
+								?>
+								
+            <h4><?php echo $catchment_system; ?></h4>
+            <p><?php echo $catchment_system_msg; ?></p>
+								<?php	
                                 } elseif (getFiled('Q8W2S61', $schoolUserID) == "N") {
                                     $catchment_system = "No";
                                     $catchment_system_msg = "Clean your catchments twice a year! Unclean catchments can lead to a lot unwanted problems - could be a breeding place for mosquitoes.";
-                                }
+                                ?>
+								
+            <h4><?php echo $catchment_system; ?></h4>
+            <p><?php echo $catchment_system_msg; ?></p>
+								<?php }
 //                                else {
 //                                    $catchment_system = "No";
 //                                    $catchment_system_msg = "Clean your catchments twice a year! Unclean catchments can lead to a lot unwanted problems - could be a breeding place for mosquitoes.";
 //                                }
                                 ?>
-            <h4><?php echo $catchment_system; ?></h4>
-            <p><?php echo $catchment_system_msg; ?></p>
           </div>
         </li>
         <li>
-          <figure><img src="<?php echo base_url() ?>assets/img/performance/monitor.jpg"></figure>
+          <figure><img src="assets/img/performance/monitor.jpg"></figure>
           <div class="description">
             <h3>Monitoring Rainwater Harvesting Efficiency</h3>
             <?php
@@ -1316,22 +1334,29 @@ if ($data == 3 || $data == 4) { ?>
                                 if (getFiled('Q8W2S8', $schoolUserID) == "Y") {
                                     $Rainwater_Harvesting = "Yes";
                                     $Rainwater_Harvesting_msg = "Its good that your school monitors the structure for its efficiency.";
-                                } elseif (getFiled('Q8W2S8', $schoolUserID) == "N") {
-                                    $Rainwater_Harvesting = "No";
-                                    $Rainwater_Harvesting_msg = "You should ensure that the rainwater harvesting structure is monitored for its efficiency.";
-                                }
-                                
-                                ?>
+							?>
+									
             <h4><?php echo $Rainwater_Harvesting; ?></h4>
             <p><?php echo $Rainwater_Harvesting_msg; ?></p>
+								<?php
+                                } elseif (getFiled('Q8W2S8', $schoolUserID) == "N") {
+                                    $Rainwater_Harvesting = "No";
+                                    $Rainwater_Harvesting_msg = "You should ensure that the rainwater harvesting structure is monitored for its efficiency."; ?>
+									
+            <h4><?php echo $Rainwater_Harvesting; ?></h4>
+            <p><?php echo $Rainwater_Harvesting_msg; ?></p>
+									<?php
+                                   }
+                                ?>
           </div>
         </li>
         <li>
-          <figure><img src="<?php echo base_url() ?>assets/img/performance/monitor.jpg"></figure>
+          <figure><img src="assets/img/performance/monitor.jpg"></figure>
           <div class="description">
             <h3>If your school's RWH structure is more than a year old, is there any improvement in the groundwater
               quality after the implementation of the RWH structure?</h3>
             <?php
+			global $RWH_structure,$RWH_structure_msg;
                                 //Question 6.i Water Section.
                                 if (getFiled('Q8W2S13', $schoolUserID) == "Y") {
                                     $RWH_structure = "Yes";
@@ -1345,12 +1370,11 @@ if ($data == 3 || $data == 4) { ?>
             <p><?php echo $RWH_structure_msg; ?></p>
           </div>
         </li>
-        
-<!--        <li>
+        <!--        <li>
           <figure><img src="performance/images/hygene.jpg"></figure>
           <div class="description">
             <h3>Sanitation and Hygiene Practices</h3>-->
-            <?php
+        <?php
 //Q.7: Please share details about sanitation and hygiene practices in your school. //6 points
 
                                 $separate_toilets = getFiled('Q8W3S1', $schoolUserID); //Does the school have separate toilets for males and females?
@@ -1367,17 +1391,16 @@ if ($data == 3 || $data == 4) { ?>
                                     $Hygiene_Practices_Msg = "To make your school more hygiene friendly, please consider the following practices: Separate toilets for males and females, making toilets accessible and safe to use for children, making toilets accessible and safe to use for differently abled children, making  toilets accessible and safe to use for differently abled staff,  considering the right location for toilets in terms of privacy and safety,  ensure sufficient light during day time.";
                                 }
                                 ?>
-<!--            <h4><?php echo $Hygiene_Practices; ?></h4>
+        <!--            <h4><?php echo $Hygiene_Practices; ?></h4>
             <p><?php echo $Hygiene_Practices_Msg; ?></p>
           </div>
         </li>-->
       </ul>
     </section>
-
     <section class="performance-category">
       <ul>
         <li>
-          <figure><img src="<?php echo base_url() ?>assets/img/performance/drink.jpg"></figure>
+          <figure><img src="assets/img/performance/drink.jpg"></figure>
           <div class="description">
             <h3>Load on Drinking Water Taps</h3>
             <?php        //Q.8 discuss regarding msg. for $DrinkingWaterTabs variable. 
@@ -1392,68 +1415,63 @@ if ($data == 3 || $data == 4) { ?>
                                     $DrinkingWaterTabs_Msg = "You do not have the required number of drinking water taps in your school. Please refer to the table for prescribed norm.";
                                 }
                                 ?>
-<!--            <h4><?php echo $DrinkingWaterTabs; ?></h4>-->
+            <!--            <h4><?php echo $DrinkingWaterTabs; ?></h4>-->
             <p><?php echo $DrinkingWaterTabs_Msg; ?></p>
           </div>
-              <table width="100%" class="intro-table" cellspacing="0" style="margin-bottom: 0">
-             <tr>
-                 <th class="performance-blue-bg">Category</th>
-                 <th class="performance-blue-bg">Load per drinking water tap</th>
-                 <th class="performance-blue-bg">Load per ablution tap</th>
-                 <th class="performance-blue-bg">Load per urinal</th>
-                 <th class="performance-blue-bg">Load per water closet  </th>
-                 
-             </tr>
-             <tr>
-               <td>Day Scholar</td>
-               <td>50 people</td>
-               <td>50 people</td>
-               <td>50 people</td>
-               <td>45 people</td>
-               
-
-             </tr>
-             <tr>
-               <td>Day Boarding</td>
-               <td>50 people</td>
-               <td>50 people</td>
-               <td>40 people</td>
-               <td>35 people</td>
-
-             </tr>
-             <tr>
-               <td>Residential</td>
-               <td>50 people</td>
-               <td>50 people</td>
-               <td>30 people</td>
-               <td>25 people</td>
-
-             </tr>
-             <tr>
-               <td>Day scholar + Residential</td>
-               <td>50 people</td>
-               <td>50 people</td>
-               <td>50 people</td>
-               <td>35 people</td>                            
-             </tr>
-             <tr>
-               <td>Day boarding + Residential</td>
-               <td>50 people</td>
-               <td>50 people</td>
-               <td>35 people</td>
-               <td>30 people</td>                                
-             </tr>
-             <tr>
-               <td>Day Scholar + Boarding </td>
-               <td>50 people</td>
-               <td>50 people</td>
-               <td>50 people</td>
-               <td>40 people</td>                               
-             </tr>
-           </table>
+          <table width="100%" class="intro-table" cellspacing="0" style="margin-bottom: 0">
+            <tr>
+              <th class="performance-blue-bg">Category</th>
+              <th class="performance-blue-bg">Load per drinking water tap</th>
+              <th class="performance-blue-bg">Load per ablution tap</th>
+              <th class="performance-blue-bg">Load per urinal</th>
+              <th class="performance-blue-bg">Load per water closet </th>
+            </tr>
+            <tr>
+              <td>Day Scholar</td>
+              <td>50 people</td>
+              <td>50 people</td>
+              <td>50 people</td>
+              <td>45 people</td>
+            </tr>
+            <tr>
+              <td>Day Boarding</td>
+              <td>50 people</td>
+              <td>50 people</td>
+              <td>40 people</td>
+              <td>35 people</td>
+            </tr>
+            <tr>
+              <td>Residential</td>
+              <td>50 people</td>
+              <td>50 people</td>
+              <td>30 people</td>
+              <td>25 people</td>
+            </tr>
+            <tr>
+              <td>Day scholar + Residential</td>
+              <td>50 people</td>
+              <td>50 people</td>
+              <td>50 people</td>
+              <td>35 people</td>
+            </tr>
+            <tr>
+              <td>Day boarding + Residential</td>
+              <td>50 people</td>
+              <td>50 people</td>
+              <td>35 people</td>
+              <td>30 people</td>
+            </tr>
+            <tr>
+              <td>Day Scholar + Boarding </td>
+              <td>50 people</td>
+              <td>50 people</td>
+              <td>50 people</td>
+              <td>40 people</td>
+            </tr>
+          </table>
         </li>
         <li>
-          <figure><img src="<?php echo base_url() ?>assets/img/performance/pump.jpg"></figure>
+          <figure><img src="assets/img/performance/pump.jpg"></figure>
           <div class="description">
             <h3>Hand Pumps</h3>
             <?php
@@ -1469,12 +1487,12 @@ if ($data == 3 || $data == 4) { ?>
                         $handpumps_msg = "You have many hand pumps in your school. Please ensure that you are not extracting too much of ground water.";
                         }
                                 ?>
-<!--            <h4><?php echo $handpumps; ?></h4>-->
+            <!--            <h4><?php echo $handpumps; ?></h4>-->
             <p><?php echo $handpumps_msg; ?></p>
           </div>
         </li>
         <li>
-          <figure><img src="<?php echo base_url() ?>assets/img/performance/ablution.jpg"></figure>
+          <figure><img src="assets/img/performance/ablution.jpg"></figure>
           <div class="description">
             <h3>Load on Ablution Taps</h3>
             <?php
@@ -1490,12 +1508,12 @@ if ($data == 3 || $data == 4) { ?>
                                     $abulation_tabs_msg = "You do not have the required number of ablution taps in your school. Please refer to the table for prescribed norm.";
                                 }
                                 ?>
-<!--            <h4><?php echo $abulation_tabs; ?></h4>-->
+            <!--            <h4><?php echo $abulation_tabs; ?></h4>-->
             <p><?php echo $abulation_tabs_msg; ?></p>
           </div>
         </li>
         <li class="page-break-before-new">
-          <figure><img src="<?php echo base_url() ?>assets/img/performance/wc.jpg"></figure>
+          <figure><img src="assets/img/performance/wc.jpg"></figure>
           <div class="description">
             <h3>Load on Water Closets</h3>
             <?php          
@@ -1530,15 +1548,14 @@ if ($data == 3 || $data == 4) { ?>
         $waterclosets_msg = "You do not have the required number of water closets (used for defecation and urination) in your school. Please refer to the table for prescribed norm.";
     }
     ?>
-<!--    <h4><?php echo $waterclosets; ?></h4>-->
+            <!--    <h4><?php echo $waterclosets; ?></h4>-->
             <p><?php echo $waterclosets_msg; ?></p>
-    </div>
-    </li>
-    <li>
-          <figure><img src="<?php echo base_url() ?>assets/img/performance/uninal.jpg"></figure>
+          </div>
+        </li>
+        <li>
+          <figure><img src="assets/img/performance/uninal.jpg"></figure>
           <div class="description">
             <h3>Load on Urinals</h3>
-            
             <?php
                                 //Q.12 How many urinals (strictly used for urination only) do you have?
             $water_urinals_q12 = getFiled('Q14W1', $schoolUserID);
@@ -1570,17 +1587,16 @@ if ($data == 3 || $data == 4) { ?>
                                     $Load_for_urinals_msg = "You do not have the required number of urinals (strictly used for urination only) in your school. Please refer to the table for prescribed norm.";
                                 }
                                 ?>
-<!--            <h4><?php echo $Load_for_urinals; ?> people per Urinal</h4>-->
+            <!--            <h4><?php echo $Load_for_urinals; ?> people per Urinal</h4>-->
             <p><?php echo $Load_for_urinals_msg; ?></p>
           </div>
         </li>
-           </ul>
+      </ul>
     </section>
-   
     <section class="performance-category">
       <ul>
         <li>
-          <figure><img src="<?php echo base_url() ?>assets/img/performance/outlet.jpg"></figure>
+          <figure><img src="assets/img/performance/outlet.jpg"></figure>
           <div class="description">
             <h3>Water Outlets</h3>
             <?php
@@ -1597,13 +1613,12 @@ if ($data == 3 || $data == 4) { ?>
                                     $water_outlets_msg = "You do not have many water outlets in your school. Good that your school is not extracting a lot of ground water.";
                                 }
                                 ?>
-<!--            <h4><?php echo $water_outlets; ?> people per outlet</h4>-->
+            <!--            <h4><?php echo $water_outlets; ?> people per outlet</h4>-->
             <p><?php echo $water_outlets_msg; ?></p>
           </div>
         </li>
-      
         <li>
-          <figure><img src="<?php echo base_url() ?>assets/img/performance/water_storage.jpg"></figure>
+          <figure><img src="assets/img/performance/water_storage.jpg"></figure>
           <div class="description">
             <h3>Is there a water storage system in place to supply water in the toilets?</h3>
             <?php
@@ -1624,9 +1639,8 @@ if ($data == 3 || $data == 4) { ?>
             <p><?php echo $water_supply; ?></p>
           </div>
         </li>
-        
         <li>
-          <figure><img src="<?php echo base_url() ?>assets/img/performance/water_supply.jpg"></figure>
+          <figure><img src="assets/img/performance/water_supply.jpg"></figure>
           <div class="description">
             <h3>Is the water supply sufficient?</h3>
             <?php
@@ -1644,9 +1658,8 @@ if ($data == 3 || $data == 4) { ?>
             <p><?php echo $water_supply15; ?></p>
           </div>
         </li>
-        
         <li>
-          <figure><img src="<?php echo base_url() ?>assets/img/performance/cleaned_toilets.jpg"></figure>
+          <figure><img src="assets/img/performance/cleaned_toilets.jpg"></figure>
           <div class="description">
             <h3>Are the toilets cleaned?</h3>
             <?php
@@ -1665,9 +1678,8 @@ if ($data == 3 || $data == 4) { ?>
             <p><?php echo $water_supply16; ?></p>
           </div>
         </li>
-        
-          <li>
-          <figure><img src="<?php echo base_url() ?>assets/img/performance/wastewater_treatment.jpg"></figure>
+        <li>
+          <figure><img src="assets/img/performance/wastewater_treatment.jpg"></figure>
           <div class="description">
             <h3>Does your school have a wastewater treatment facility</h3>
             <?php
@@ -1686,13 +1698,12 @@ if ($data == 3 || $data == 4) { ?>
             <p><?php echo $water_supply17; ?></p>
           </div>
         </li>
-                </ul>
+      </ul>
     </section>
-    
     <section class="performance-category">
       <ul>
-          <li>
-          <figure><img src="<?php echo base_url() ?>assets/img/performance/reuse_wastewater.jpg"></figure>
+        <li>
+          <figure><img src="assets/img/performance/reuse_wastewater.jpg"></figure>
           <div class="description">
             <h3>Does your school reuse the treated wastewater?</h3>
             <?php
@@ -1707,21 +1718,20 @@ if ($data == 3 || $data == 4) { ?>
                                  $water_supply18 = "Your school should consider ways to use the treated wastewater.";
                                 }
                                 ?>
-<!--            <h4><?php echo $storage_heading_q18; ?></h4>-->
+            <!--            <h4><?php echo $storage_heading_q18; ?></h4>-->
             <p><?php echo $water_supply18; ?></p>
           </div>
         </li>
-        
       </ul>
     </section>
     <div class="footer">
       <p>Performance Report | <?php echo $performance[0]->name; ?></p>
-<!--      <span class="p-number">14</span>-->
+      <!--      <span class="p-number">14</span>-->
     </div>
-</div> 
-<div class="waste">
+  </div>
+  <div class="waste">
     <h2>
-      <figure><img src="<?php echo base_url() ?>assets/img/performance/waste.jpg"></figure>
+      <figure><img src="assets/img/performance/waste.jpg"></figure>
       <label>Waste</label>
       <span>Green Schools Programme Audit 2016</span></h2>
     <p>Waste is another headache arising at an alarming level. Where to dispose waste? How to dispose waste? What to do with the waste? We feel one of the easiest solution could be waste segregation. We should feed it into our system that no matter what, we will segregate our waste, even if it gets mixed after it goes out from our homes/schools.</p>
@@ -1753,7 +1763,7 @@ if ($data == 3 || $data == 4) { ?>
     <section class="performance-category">
       <ul>
         <li>
-          <figure><img src="<?php echo base_url() ?>assets/img/performance/segregate.jpg"></figure>
+          <figure><img src="assets/img/performance/segregate.jpg"></figure>
           <div class="description">
             <h3>Segregation of Solid Waste</h3>
             <?php
@@ -1772,7 +1782,7 @@ if ($data == 3 || $data == 4) { ?>
           </div>
         </li>
         <li>
-          <figure><img src="<?php echo base_url() ?>assets/img/performance/collection.jpg"></figure>
+          <figure><img src="assets/img/performance/collection.jpg"></figure>
           <?php
                             //Qn 2 : Waste collection points in your school.
                             // Total Sum of (0,1,2 and 3 bins);
@@ -1818,13 +1828,12 @@ if ($data == 3 || $data == 4) { ?>
             <p><?php echo $msg_waste2;?></p>
           </div>
         </li>
-            </ul>
+      </ul>
     </section>
-    
     <section class="performance-category">
       <ul>
         <li>
-          <figure><img src="<?php echo base_url() ?>assets/img/performance/quantity.jpg"></figure>
+          <figure><img src="assets/img/performance/quantity.jpg"></figure>
           <div class="description">
             <?php
             //$school_type = $sql_data_array['266617X34X1608'];
@@ -1894,55 +1903,71 @@ if ($data == 3 || $data == 4) { ?>
             }
         ?>
             <h3>Quantity of Waste Generated</h3>
-<!--            <h4><?php echo $waste_msg1; ?></h4>-->
+            <!--            <h4><?php echo $waste_msg1; ?></h4>-->
             <p><?php echo $waste_msg2; ?></p>
           </div>
         </li>
-    
         <li>
-          <figure><img src="<?php echo base_url() ?>assets/img/performance/recycle.jpg"></figure>
+          <figure><img src="assets/img/performance/recycle.jpg"></figure>
           <div class="description">
+		  
+            <h3>Recycling of Waste</h3>
             <?php
 //4) Does your school recycle any generated waste?
 $waste_recycle = getFiled('Q8Wa1', $schoolUserID);
 if ($waste_recycle == "Y") {
-
-    $total_generated_waste = $sql_data_array['266617X38X2125SQ009_SQ001'];
-    $total_recycled_waste = $sql_data_array['266617X38X2042SQ010_SQ001'];
+    $rw=(getFiled('Q6Wa1S5', $schoolUserID) != '') ? getFiled('Q6Wa1S5', $schoolUserID) : 0;
+	$rw1=(getFiled('Q6Wa2S8', $schoolUserID) != '') ? getFiled('Q6Wa2S8', $schoolUserID) : 0;
+	$rw2=(getFiled('Q6Wa3S3', $schoolUserID) != '') ? getFiled('Q6Wa3S3', $schoolUserID) : 0;
+  
+    $rcw=(getFiled('Q6Wa1S6', $schoolUserID) != '') ? getFiled('Q6Wa1S6', $schoolUserID) : 0;
+	$rcw1=(getFiled('Q6Wa2S9', $schoolUserID) != '') ? getFiled('Q6Wa2S9', $schoolUserID) : 0;
+	$rcw2=(getFiled('Q6Wa3S4', $schoolUserID) != '') ? getFiled('Q6Wa3S4', $schoolUserID) : 0;
+    $total_generated_waste = $rw + $rw1 + $rw2;
+    $total_recycled_waste = $rcw + $rcw1 + $rcw2;
     $waste_recycled_percent = round((($total_recycled_waste * 100) / $total_generated_waste), 2);
-
     if ($waste_recycled_percent == 100) {    //100%
         $waste_msg41 = "School recycles 100% of the waste";
         $waste_msg42 = "Your school recycles a lot of its waste. You recycle " . $waste_recycled_percent . " per cent of waste. We hope you are able to become waste efficient school at the earliest.";
+		?>
+		
+            <h4><?php echo $waste_msg41 ?></h4>
+            <p><?php echo $waste_msg42 ?></p>
+		<?php
+		
     } elseif ($waste_recycled_percent >= 50 && $waste_recycled_percent < 100) {    //50%
         $waste_msg41 = "School recycles 50% or above of it's waste ";
         $waste_msg42 = "Your school recycles most of it's waste. You recycle " . $waste_recycled_percent . " per cent of waste. We hope you are able to become waste efficient school at the earliest.";
+		?>
+		
+            <h4><?php echo $waste_msg41 ?></h4>
+            <p><?php echo $waste_msg42 ?></p>
+		<?php
     } elseif ($waste_recycled_percent >= 0 && $waste_recycled_percent <= 49.9) {   //0%-49.9%
         $waste_msg41 = "School recycles 0%-49.9% of it's waste";
         $waste_msg42 = "Your school recycles some of its waste. You recycle " . $waste_recycled_percent . " per cent of waste. We hope you are able to become waste efficient school at the earliest.";
+		?>
+		
+            <h4><?php echo $waste_msg41 ?></h4>
+            <p><?php echo $waste_msg42 ?></p>
+		<?php
     }
     elseif ($waste_recycled_percent > 100) { 
         $waste_msg42 = "Calculation Error : Your school did not submit the correct data therefore there is a calculation error here. Please fill the correct data for better analysis.";
+		?>
+		
+            <h4><?php echo $waste_msg41 ?></h4>
+            <p><?php echo $waste_msg42 ?></p>
+		<?php
             } 
 }
 ?>
-            <h3>Recycling of Waste</h3>
-            <?php
-                if ($waste_msg41 != "" && $waste_msg42 != "") {
-                ?>
-<!--            <h4><?php echo $waste_msg41 ?></h4>-->
-            <p><?php echo $waste_msg42 ?></p>
-            <?php
-            } else {
-            ?>
+         
             <p>School does not recycle the waste</p>
-            <?php
-}
-?>
           </div>
         </li>
         <li>
-          <figure><img src="<?php echo base_url() ?>assets/img/performance/compose.jpg"></figure>
+          <figure><img src="assets/img/performance/compose.jpg"></figure>
           <div class="description">
             <?php
 //Qn 5 : Does your school have a composting facility?
@@ -1962,7 +1987,7 @@ if ($waste_recycle == "Y") {
         </li>
         <!-- Textbook Reuse Start -->
         <li>
-          <figure><img src="<?php echo base_url() ?>assets/img/performance/book.jpg"></figure>
+          <figure><img src="assets/img/performance/book.jpg"></figure>
           <div class="description">
             <?php
 //Qn 6 : Does your school encourage students & teachers to reuse textbooks?
@@ -1981,9 +2006,8 @@ if ($reuse_textbook == "Y") {
           </div>
         </li>
         <!-- Textbook Reuse End --->
-        
         <li>
-          <figure><img src="<?php echo base_url() ?>assets/img/performance/destination.jpg"></figure>
+          <figure><img src="assets/img/performance/destination.jpg"></figure>
           <?php
 //Qn 8 Final destination for waste from your school
         $waste_destination = getFiled('Q14Wa1', $schoolUserID);
@@ -2007,14 +2031,13 @@ if ($reuse_textbook == "Y") {
             <p><?php echo $msg_waste8; ?></p>
           </div>
         </li>
-          </ul>
+      </ul>
     </section>
-   
     <section class="performance-category">
       <ul>
         <!-- Burning of Waste Start -->
         <li>
-          <figure><img src="<?php echo base_url() ?>assets/img/performance/trash.jpg"></figure>
+          <figure><img src="assets/img/performance/trash.jpg"></figure>
           <div class="description">
             <?php
 //Qn 9 : Does your school burn waste?
@@ -2032,16 +2055,14 @@ if ($burn_waste == "Y") {
             <p><?php echo $msg_waste9; ?></p>
           </div>
         </li>
-        
         <!-- Burning of Waste End --->
-        
         <?php
 //Qn 11 Do you know that your E-waste can be collected by an authorised dealer or dismantler?
 $authorised_dealer = getFiled('Q16Wa1', $schoolUserID);
 if ($authorised_dealer == "Y") {
     ?>
         <li>
-          <figure><img src="<?php echo base_url() ?>assets/img/performance/e-waste.jpg"></figure>
+          <figure><img src="assets/img/performance/e-waste.jpg"></figure>
           <div class="description">
             <?php
                             ////Qn 11(a)  Who collects your e-waste, when not in working condition?
@@ -2077,11 +2098,9 @@ if ($authorised_dealer == "Y") {
     <p>Hope that each year your school will participate in the GSP audit and build a cadre of environmentally responsible citizens, in addition to moving up the rank to become the # 1 Green School in India!</p>
     <div class="footer">
       <p>Performance Report | <?php echo $performance[0]->name; ?></p>
-<!--      <span class="p-number">17</span>-->
+      <!--      <span class="p-number">17</span>-->
     </div>
-  </div>            
-            
-</div>            
-            
-</body> 
-</html>    
+  </div>
+</div>
+</body>
+</html>
