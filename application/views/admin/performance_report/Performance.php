@@ -1603,8 +1603,11 @@ if ($data == 3 || $data == 4) { ?>
                                 //Q.13 How many other water outlets (example: taps in play fields, sprinklers, swimming pool) do you have? ( 1 Points )
 
                 $other_water_outlets_q13 = getFiled('Q15W1', $schoolUserID);
+				if(isset($other_water_outlets_q13)&& $other_water_outlets_q13!=0){
                 $Load_for_other_water_outlets = $total_population / $other_water_outlets_q13;
-
+				}else{
+				   $Load_for_other_water_outlets=0;
+				}
                     if ($other_water_outlets_q13 > 1) { //not provided by cse
                                     $water_outlets = $Load_for_other_water_outlets;
                                     $water_outlets_msg = "You have many water outlets in your school. Please ensure that you are not extracting too much of ground water.";
