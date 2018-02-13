@@ -1068,19 +1068,23 @@ if ($data == 3 || $data == 4) { ?>
                                 if(in_array($check_count,$question_count_array))
                                 {
                                  $Conservation_Practices_msg = "Your school should look into these water conservation practices to become more water efficient: Float valves installed to stop overflow, Spill proof taps to check overflow, Appliances with a quick-wash setting, Dual flush systems installed in the toilets, Local plant species which require limited amount of water to grow, In initiating any water conservation steps in the schools and outside, Using a drip or irrigation system";   
-                                }
+                               ?><p><?php echo $Conservation_Practices_msg; ?></p> <?php
+				}
                                elseif($check_count == 6)
                                 {
                                  $Conservation_Practices_msg = "Your school should look into this water conservation practices to become more water efficient: Float valves installed to stop overflow, Spill proof taps to check overflow, Appliances with a quick-wash setting, Dual flush systems installed in the toilets, Local plant species which require limited amount of water to grow, In initiating any water conservation steps in the schools and outside, Using a drip or irrigation system";   
-                                }
+                                ?><p><?php echo $Conservation_Practices_msg; ?></p> <?php
+			       }
                                 elseif($check_count ==7)
                                 {
                                   $Conservation_Practices_msg = "Your school Follows all the good water conservation practices. Please keep up the good work. Promote students to practice these things even at home.";    
-                                }
+                                 ?><p><?php echo $Conservation_Practices_msg; ?></p> <?php
+				}
                                 elseif($check_count ==7 && $other_check == 'Yes')
                                 {
                                   $Conservation_Practices_msg = "Your school should look into these water conservation practices to become more water efficient: Float valves installed to stop overflow, Spill proof taps to check overflow, Appliances with a quick-wash setting, Dual flush systems installed in the toilets, Local plant species which require limited amount of water to grow, In initiating any water conservation steps in the schools and outside, Using a drip or irrigation system.";    
-                                }
+                                ?><p><?php echo $Conservation_Practices_msg; ?></p> <?php
+				} ?>
 //                                if ($tanksintheschool == "A1" && $drinkingwaterpoints == "A1" && $appliancesquickwash == "A1" && $flushsystems == "A1" && $growlocalplant == "A1" && $conservation == "A1" && $irrigation == "A1") {
 //                                    $Conservation_Practices = "Yes";
 //                                    $Conservation_Practices_msg = "Your school Follows all the good water conservation practices. Please keep up the good work. Promote students to practice these things even at home.";
@@ -1090,7 +1094,7 @@ if ($data == 3 || $data == 4) { ?>
 //                                }
                                 ?>
             
-            <p><?php echo $Conservation_Practices_msg; ?></p>
+            
           </div>
         </li>
         <li>
