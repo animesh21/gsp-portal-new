@@ -761,8 +761,11 @@ if ($data == 3 || $data == 4) { ?>
 
                 //Green landscaped area on-ground + Green cover on exposed roof & terrace + Play area that has grass on ground
                 $total_green_cover_area = getFiled('Q4L2', $schoolUserID) + getFiled('Q4L4', $schoolUserID) + getFiled('Q4L10', $schoolUserID);
-
+				if($total_site_area==0){
+				  $green_cover_perc=0;
+				}else{
                 $green_cover_perc = number_format((($total_green_cover_area / $total_site_area) * 100), 2);
+				}
                      if ($green_cover_perc >= 33) {
                          $greencover_msg = "Your school has the required green cover but aim to increase the cover by 10 - 15 percent in the next two years.";
                     } else if ($green_cover_perc >= 15 && $green_cover_perc <= 32.9) {
@@ -1202,11 +1205,13 @@ if ($data == 3 || $data == 4) { ?>
             <?php
                                     if (getFiled('Q8W2S2S97', $schoolUserID) == 1) {
                                         $gw_recharge_structure = "Yes";
-                                        $gw_recharge_structure_msg = "Recharging the ground water is a very good practice.";
-                                    }
-                                    ?>
+                                        $gw_recharge_structure_msg = "Recharging the ground water is a very good practice."; ?>
+										
             <h4><?php echo $gw_recharge_structure; ?></h4>
             <p><?php echo $gw_recharge_structure_msg; ?></p>
+										<?php
+                                    }
+                                    ?>
           </div>
         </li>
         <?php } ?>
