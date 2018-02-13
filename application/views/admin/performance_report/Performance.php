@@ -1043,7 +1043,7 @@ if ($data == 3 || $data == 4) { ?>
                 $growlocalplant = getFiled('Q8W1S8', $schoolUserID); //Does your school grow local plant species which require limited amount of water to grow?
                 $conservation = getFiled('Q8W1S9', $schoolUserID); //Has your school initiated any water conservation steps in the school or outside, in the past one year?	
                 $irrigation = getFiled('Q8W1S10', $schoolUserID); //Does your school use a drip or irrigation system?
-
+				$check_c=array();
                                 if($tanksintheschool == 'Y')
                                     $check_c[0] = 1;
                                 if($drinkingwaterpoints == 'Y')
@@ -1089,7 +1089,7 @@ if ($data == 3 || $data == 4) { ?>
 //                                    $Conservation_Practices_msg = "Your school should look into these water conservation practices to become more water efficient: Float valves installed to stop overflow, Spill proof taps to check overflow, Appliances with a quick-wash setting, Dual flush systems installed in the toilets, Local plant species which require limited amount of water to grow, In initiating any water conservation steps in the schools and outside, Using a drip or irrigation system";
 //                                }
                                 ?>
-            <!--            <h4><?php echo $Conservation_Practices; ?></h4>-->
+            
             <p><?php echo $Conservation_Practices_msg; ?></p>
           </div>
         </li>
