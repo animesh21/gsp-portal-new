@@ -1422,8 +1422,11 @@ if ($data == 3 || $data == 4) { ?>
             <h3>Load on Drinking Water Taps</h3>
             <?php        //Q.8 discuss regarding msg. for $DrinkingWaterTabs variable. 
                                 $drinking_water_taps_8 = getFiled('Q9W1', $schoolUserID);
-                                $Load_for_drinking_water_tap = $total_population / $drinking_water_taps_8;
-
+		  if($drinking_water_taps_8){
+			  $Load_for_drinking_water_tap=0;
+		  }else{
+		  $Load_for_drinking_water_tap = $total_population / $drinking_water_taps_8;
+		  }
                                 if ($Load_for_drinking_water_tap <= 50 && $drinking_water_taps_8 != "" && $drinking_water_taps_8 != 0) {
                                     $DrinkingWaterTabs = "If equal to the load";
                                     $DrinkingWaterTabs_Msg = "You have the required number of drinking water taps in your school. Please refer to the table for prescribed norm.";
