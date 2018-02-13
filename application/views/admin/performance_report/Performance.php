@@ -1579,8 +1579,12 @@ if ($data == 3 || $data == 4) { ?>
             <?php
                                 //Q.12 How many urinals (strictly used for urination only) do you have?
             $water_urinals_q12 = getFiled('Q14W1', $schoolUserID);
+	if($water_urinals_q12==0){
+		$Load_for_urinals=0;
+	}else{
             $Load_for_urinals = number_format(($total_population / $water_urinals_q12),2,".","");
-            //$school_type = $sql_data_array['266617X34X1608']; //q15. get appropriate category for your school like Day Scholar,Day Boarding etc.
+	}
+		//$school_type = $sql_data_array['266617X34X1608']; //q15. get appropriate category for your school like Day Scholar,Day Boarding etc.
             if ($school_type == 1 && $Load_for_urinals <= 50 && $water_urinals_q12 != "" && $water_urinals_q12 != 0) { //school type Day Scholar
                 //$Load_for_urinals = $Load_for_urinals;
                 $Load_for_urinals_msg = "You have the required number of urinals (strictly used for urination only) in your school.";
