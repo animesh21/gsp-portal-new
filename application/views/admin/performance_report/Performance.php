@@ -129,7 +129,7 @@
 			    $schoolUserID = $performance[0]->userid;
 			    $window_floor = getFiled('Q5A110S2', $schoolUserID);
 			    $area_opening = getFiled('Q5A110S3', $schoolUserID);
-				if($area_opening){
+				if($area_opening==0){
 				$avg=0;
 				}else{
 			    $avg = ($window_floor / $area_opening) * 100;
