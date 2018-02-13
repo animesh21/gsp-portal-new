@@ -1044,7 +1044,7 @@ if ($data == 3 || $data == 4) { ?>
                 $conservation = getFiled('Q8W1S9', $schoolUserID); //Has your school initiated any water conservation steps in the school or outside, in the past one year?	
                 $irrigation = getFiled('Q8W1S10', $schoolUserID); //Does your school use a drip or irrigation system?
 
-                                if($tanksintheschool == 'Y'){
+                                if($tanksintheschool == 'Y')
                                     $check_c[0] = 1;
                                 if($drinkingwaterpoints == 'Y')
                                     $check_c[1] = 1 ;
