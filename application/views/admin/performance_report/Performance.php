@@ -1515,8 +1515,11 @@ if ($data == 3 || $data == 4) { ?>
             <?php
                                 //Q.10 How many ablution taps (taps used for washing hands only) do you have?
                                 $ablution_taps_q10 = getFiled('Q11W1', $schoolUserID);
+		          if($ablution_taps_q10==0){
+				  $Load_for_ablution_taps=0;
+			  }else{
                                 $Load_for_ablution_taps = $total_population / $ablution_taps_q10;
-
+			  }
                                 if ($Load_for_ablution_taps <= 50 && $ablution_taps_q10 != "" && $ablution_taps_q10 != 0) {
                                     $abulation_tabs = "Equal to or less than the load";
                                     $abulation_tabs_msg = "You have the required number of ablution taps in your school.";
