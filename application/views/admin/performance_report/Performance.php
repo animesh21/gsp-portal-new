@@ -129,7 +129,11 @@
 			    $schoolUserID = $performance[0]->userid;
 			    $window_floor = getFiled('Q5A110S2', $schoolUserID);
 			    $area_opening = getFiled('Q5A110S3', $schoolUserID);
+				if($area_opening){
+				$avg=0;
+				}else{
 			    $avg = ($window_floor / $area_opening) * 100;
+				}
 		    	$view_avg = number_format($avg, 2);
 			?>
             <h4><?php echo $view_avg; ?> % Average WFR</h4>
@@ -436,17 +440,21 @@ if ($data == 3 || $data == 4) { ?>
                                 } 
                                 if ($total_population_smv_percentage > 50 && $total_population_npm_percentage < 50 ) {
                                     $members_use_transport_type = "More than 50% population using sustainable motorized vehicles and less than 50% population using Non- polluting mode of transport";
-                                    $members_use_transport_msg = "Good most of the students and staff use Sustainable Motorized Vehicle (SMV). School should now motivate them to use Non- polluting mode of transport (NPT).";
+                                    $members_use_transport_msg = "Good most of the students and staff use Sustainable Motorized Vehicle (SMV). School should now motivate them to use Non- polluting mode of transport (NPT)."; ?> <h4><?php echo $members_use_transport_type; ?></h4>
+          <p><?php echo $members_use_transport_msg; ?></p> <?php
                                 } elseif ($total_population_smv_percentage < 50 && $total_population_npm_percentage > 50) {
                                     $members_use_transport_type = "More than 50% population using Non- polluting mode of transport and less than 50% population using sustainable motorized vehicles";
-                                    $members_use_transport_msg = "Good most of the students and staff use Non- polluting mode of transport (NPT). School should now motivate rest of the population to use Non- polluting mode of transport.";
+                                    $members_use_transport_msg = "Good most of the students and staff use Non- polluting mode of transport (NPT). School should now motivate rest of the population to use Non- polluting mode of transport."; ?><h4><?php echo $members_use_transport_type; ?></h4>
+          <p><?php echo $members_use_transport_msg; ?></p>
+							<?php		
                                 } elseif ($private_veh_population_percentage > 50) {
                                     $members_use_transport_type = "More than 50% population using Private vehicles";
-                                    $members_use_transport_msg = "Your school mostly uses private vehicles for transportation. We recommend that you encourage the staff and students to use public transport and also to car pool.";
-                                }
+                                    $members_use_transport_msg = "Your school mostly uses private vehicles for transportation. We recommend that you encourage the staff and students to use public transport and also to car pool."; ?>
+						<h4><?php echo $members_use_transport_type; ?></h4>
+          <p><?php echo $members_use_transport_msg; ?></p>			
+                               <?php }
                                 ?>
-          <h4><?php echo $members_use_transport_type; ?></h4>
-          <p><?php echo $members_use_transport_msg; ?></p>
+          
         </div>
       </li>
     </ul>
@@ -1036,21 +1044,21 @@ if ($data == 3 || $data == 4) { ?>
                 $conservation = getFiled('Q8W1S9', $schoolUserID); //Has your school initiated any water conservation steps in the school or outside, in the past one year?	
                 $irrigation = getFiled('Q8W1S10', $schoolUserID); //Does your school use a drip or irrigation system?
 
-                                if($tanksintheschool == 'Y')
-                                    $check_count = 1;
+                                if($tanksintheschool == 'Y'){
+                                    $check_c[0] = 1;
                                 if($drinkingwaterpoints == 'Y')
-                                    $check_count += 1 ;
+                                    $check_c[1] = 1 ;
                                 if($appliancesquickwash == 'Y')
-                                    $check_count += 1 ;
+                                    $check_c[2] = 1 ;
                                 if($flushsystems == 'Y')
-                                    $check_count +=1 ;
+                                    $check_c[3] =1 ;
                                 if($growlocalplant == 'Y')
-                                    $check_count += 1 ;
+                                    $check_c[4] = 1 ;
                                 if($conservation == 'Y')
-                                    $check_count += 1 ;
+                                    $check_c[5] = 1 ;
                                 if($irrigation == 'Y')
-                                    $check_count += 1 ;
-                                //echo $check_count;
+                                    $check_c[6] = 1 ;
+                           $check_count = array_sum($check_c);
                                 If(getFiled('Q8W1S1', $schoolUserID) == "Y" && getFiled('Q8W1S2', $schoolUserID)== 'Y' && getFiled('Q8W1S5', $schoolUserID)== 'Y' && getFiled('Q8W1S11', $schoolUserID)== 'Y' )
                                 {
                                   $other_check = 'Yes';  
@@ -1806,35 +1814,66 @@ if ($data == 3 || $data == 4) { ?>
 
                             // Column 5 (2bins) and Column 6 (3or more bins) is equal to Sum of Total no. of collection points
                             if ($two_three_bin_percentage >= 76 && $two_three_bin_percentage <=100) {
-                                $msg_waste2 = "Most of the collection points have two or more than two dustbins for different categories of waste. A good practice! We encourage that students learn to segregate waste at source.";
+                                $msg_waste2 = "Most of the collection points have two or more than two dustbins for different categories of waste. A good practice! We encourage that students learn to segregate waste at source.";?>
+								<div class="description">
+            <h3>Waste Collection Points</h3>
+            <!--                                <h4>2.3 average</h4>-->
+            <p><?php echo $msg_waste2;?></p>
+          </div>
+								<?php
                             }
 
                             //   Column 5 (2bins) and Column 6 (3or more bins) is very less than Sum of Total no. of collection 
                             elseif ($two_three_bin_percentage >= 50 && $two_three_bin_percentage <=75) {
-                                $msg_waste2 = "Most of the collection points have two or more than two dustbins for different categories of waste. A good practice! We encourage that students learn to segregate waste at source.";
+                                $msg_waste2 = "Most of the collection points have two or more than two dustbins for different categories of waste. A good practice! We encourage that students learn to segregate waste at source.";?>
+								<div class="description">
+            <h3>Waste Collection Points</h3>
+            <!--                                <h4>2.3 average</h4>-->
+            <p><?php echo $msg_waste2;?></p>
+          </div>
+								<?php
                             }
 
                               //Column 5 (2bins) and Column 6 (3 or more bins) is less than Sum of Total no. of collection 
                             elseif ($two_three_bin_percentage >= 25 && $two_three_bin_percentage <=49) {
                                 $msg_waste2 = "Waste segregation at source is not efficient in your school. We strongly recommend that your school considers putting more collection points with two or more dustbins! We encourage that students learn to segregate waste at source.";
-                            }
-                            
-                             elseif ($two_three_bin_percentage < 25) {
-                                $msg_waste2 = "Waste segregation at source is not efficient in your school. We strongly recommend that your school considers putting more collection points with two or more dustbins! We encourage that students learn to segregate waste at source.";
-                            }
-                            //'Column 3 (No bin) and Column 4 (1 bin) is equal to Sum of Total no. of collection points the school 
-                            elseif ($total_collection_0_1_bins == $total_collection_bins) {
-                                $msg_waste2 = "Waste segregation at source is not efficient in your school. We strongly recommend that your school considers putting more collection points with two or more dustbins! We encourage that students learn to segregate waste at source. ";
-                            }
-
-                          
-                        
                             ?>
-          <div class="description">
+							<div class="description">
             <h3>Waste Collection Points</h3>
             <!--                                <h4>2.3 average</h4>-->
             <p><?php echo $msg_waste2;?></p>
           </div>
+							<?php
+							}
+                            
+                             elseif ($two_three_bin_percentage < 25) {
+                                $msg_waste2 = "Waste segregation at source is not efficient in your school. We strongly recommend that your school considers putting more collection points with two or more dustbins! We encourage that students learn to segregate waste at source.";
+                           ?>
+						   <div class="description">
+            <h3>Waste Collection Points</h3>
+            <!--                                <h4>2.3 average</h4>-->
+            <p><?php echo $msg_waste2;?></p>
+          </div>
+						   <?php
+						    }
+                            //'Column 3 (No bin) and Column 4 (1 bin) is equal to Sum of Total no. of collection points the school 
+                            elseif ($total_collection_0_1_bins == $total_collection_bins) {
+                                $msg_waste2 = "Waste segregation at source is not efficient in your school. We strongly recommend that your school considers putting more collection points with two or more dustbins! We encourage that students learn to segregate waste at source. ";
+                            ?>
+							<div class="description">
+            <h3>Waste Collection Points</h3>
+            <!--                                <h4>2.3 average</h4>-->
+            <p><?php echo $msg_waste2;?></p>
+          </div>
+		  
+		  <?php
+							
+							}
+
+                          
+                        
+                            ?>
+          
         </li>
       </ul>
     </section>
