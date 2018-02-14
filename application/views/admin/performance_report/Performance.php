@@ -2058,7 +2058,7 @@ $authorised_dealer = getFiled('Q16Wa1', $schoolUserID);
 if ($authorised_dealer == "Y") {
     ?>
         <li>
-          <figure><img src="assets/img/performance/e-waste.jpg"></figure>
+          <figure style="margin-left:-12px; margin-bottom:0px;"><img src="assets/img/performance/e-waste.jpg"></figure>
           <div class="description">
             <?php
                             ////Qn 11(a)  Who collects your e-waste, when not in working condition?
