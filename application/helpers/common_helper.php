@@ -15,6 +15,15 @@ if (!function_exists('getStates')) {
     }
 
 }
+
+if (!function_exists('getStateById')) {
+    function getStateById($stateId) {
+        $arrState = array();
+        $CI = & get_instance();
+        $temp = $CI->db->get_where('states',array('id'=>$stateId))->row();
+        return $temp->name;
+    }
+}
 /******
 * GET SCHOOL ID
 *
