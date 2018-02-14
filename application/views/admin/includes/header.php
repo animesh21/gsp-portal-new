@@ -194,12 +194,12 @@
               </li>
               <li class=""><a href="#">ANALYTICS<span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="report1.php">Participation By Zone</a></li>
-                  <li><a href="report2.php">Participation By State</a></li>
-                  <li><a href="report3.php">Performance By State</a></li>
+                   <li><a href="<?php echo base_url('admin/reports/'); ?>">Participation By Zone</a></li>
+                  <li><a href="<?php echo base_url('admin/reports/getParticipationByState'); ?>">Participation By State</a></li>
+                  <li><a href="<?php echo base_url('admin/reports/getPerformanceByState'); ?>">Performance By State</a></li>
                   <li><a href="report4.php">Performance Comparison Report</a></li>
                   <li><a href="report5.php">Waste Generation Report</a></li>
-                  <li><a href="report6.php">e-Waste Disposal Report</a></li>
+                  <li><a href="<?php echo base_url('admin/reports/geteWasteDisposalReport'); ?>">e-Waste Disposal Report</a></li>
                 </ul>
               </li>
               <li class=""> <a href="#">ANALYTICAL TABLES<span class="caret"></span></a>
