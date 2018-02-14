@@ -1171,7 +1171,7 @@ if ($data == 3 || $data == 4) { ?>
         </li>
         <?php } ?>
         <li>
-          <figure><img src="assets/img/performance/area.jpg"></figure>
+          <figure style="margin-left:-12px; margin-bottom:0px;"><img src="assets/img/performance/area.jpg"></figure>
           <div class="description">
             <h3>Harvested Area</h3>
             <?php
@@ -1350,7 +1350,7 @@ if ($data == 3 || $data == 4) { ?>
           </div>
         </li>
         <li>
-          <figure><img src="assets/img/performance/monitor.jpg"></figure>
+          <figure style="margin-left:-12px; margin-bottom:0px;"><img src="assets/img/performance/monitor.jpg"></figure>
           <div class="description">
             <h3>If your school's RWH structure is more than a year old, is there any improvement in the groundwater
               quality after the implementation of the RWH structure?</h3>
@@ -1491,7 +1491,7 @@ if ($data == 3 || $data == 4) { ?>
           </div>
         </li>
         <li>
-          <figure><img src="assets/img/performance/ablution.jpg"></figure>
+          <figure style="margin-left:-12px; margin-bottom:0px;"><img src="assets/img/performance/ablution.jpg"></figure>
           <div class="description">
             <h3>Load on Ablution Taps</h3>
             <?php
