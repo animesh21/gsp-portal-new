@@ -132,6 +132,8 @@
 			    $schoolUserID = $performance[0]->userid;
 			    $window_floor = getFiled('Q5A110S2', $schoolUserID);
 			    $area_opening = getFiled('Q5A110S3', $schoolUserID);
+				if(isset($area_opening) && $area_opening!=0)
+				{
 			    $avg = ($window_floor / $area_opening) * 100;
 		    	$view_avg = number_format($avg, 2);
 			?>
@@ -145,7 +147,7 @@
                                     $window_floor_msg = "Your window-floor ratio is more than ten per cent. It suggests that your school fulfills the oxygen requirement of the community by providing more openings for better air circulation. Please note that this result is from the sample you have provided.";
                                 }
                                 ?>
-            <p><?php echo $window_floor_msg; ?></p>
+            <p><?php echo $window_floor_msg;} ?></p>
           </div>
         </li>
         <li>
@@ -1171,7 +1173,7 @@ if ($data == 3 || $data == 4) { ?>
         </li>
         <?php } ?>
         <li>
-          <figure style="margin-left:-12px; margin-bottom:0px;"><img src="assets/img/performance/area.jpg"></figure>
+          <figure style="margin-left:-12px; margin-bottom:0px;"><img src="assets/img/performance/area.jpg" style="width:147px!important;"></figure>
           <div class="description">
             <h3>Harvested Area</h3>
             <?php
@@ -1350,7 +1352,7 @@ if ($data == 3 || $data == 4) { ?>
           </div>
         </li>
         <li>
-          <figure style="margin-left:-12px; margin-bottom:0px;"><img src="assets/img/performance/monitor.jpg"></figure>
+          <figure style="margin-left:-12px; margin-bottom:0px;"><img src="assets/img/performance/monitor.jpg" style="width:147px!important;"></figure>
           <div class="description">
             <h3>If your school's RWH structure is more than a year old, is there any improvement in the groundwater
               quality after the implementation of the RWH structure?</h3>
@@ -1491,7 +1493,7 @@ if ($data == 3 || $data == 4) { ?>
           </div>
         </li>
         <li>
-          <figure style="margin-left:-12px; margin-bottom:0px;"><img src="assets/img/performance/ablution.jpg"></figure>
+          <figure style="margin-left:-12px; margin-bottom:0px;"><img src="assets/img/performance/ablution.jpg" style="width:147px!important;"></figure>
           <div class="description">
             <h3>Load on Ablution Taps</h3>
             <?php
@@ -2058,7 +2060,7 @@ $authorised_dealer = getFiled('Q16Wa1', $schoolUserID);
 if ($authorised_dealer == "Y") {
     ?>
         <li>
-          <figure style="margin-left:-12px; margin-bottom:0px;"><img src="assets/img/performance/e-waste.jpg"></figure>
+          <figure style="margin-left:-12px; margin-bottom:0px;"><img src="assets/img/performance/e-waste.jpg" style="width:147px!important;"></figure>
           <div class="description">
             <?php
                             ////Qn 11(a)  Who collects your e-waste, when not in working condition?
