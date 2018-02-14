@@ -14,7 +14,7 @@
   <div class="cover">
     <figure class="banner"><img src="assets/img/performance/title-page.jpg"></figure>
     <div class="report-title">
-      <h4>GSP Audit 2016</h4>
+      <h4>GSP Audit 2017-2018</h4>
       <h3>Performance Report</h3>
       <p><strong><?php echo $performance[0]->name ?></strong></p>
       <p><strong><?php echo $performance[0]->city; ?>, <?php echo $performance[0]->state_name; ?></strong></p>
@@ -44,9 +44,9 @@
   <div class="introduction page-break-before">
     <h2 class="intro-heading">
       <label>Introduction</label>
-      <span>Green Schools Programme Audit 2016</span></h2>
+      <span>Green Schools Programme Audit 2017-2018</span></h2>
     <p>Dear Principal,</p>
-    <p>Thank you for taking part in GSP Audit 2016, an initiative to make your school resource efficient and to inculcate green practices in your students.</p>
+    <p>Thank you for taking part in GSP Audit 2017-2018, an initiative to make your school resource efficient and to inculcate green practices in your students.</p>
     <p>As Anil Agarwal, founder-director, CSE, rightly said, '...that as they (children) grow older, it is important they begin to understand how human beings and human societies interact with their environment for their survival and their growth, how these human-nature interactions become a part of a society's culture, and why it is important to rationalize our relationship with our environment.'</p>
     <p>The Green Schools Programme (GSP) is about fostering environmental literacy. It takes the classroom into our lives. The joy is not just in the learning. The joy is in the experience of making change in our environment. We then live the change. GSP has been built on the twin objectives of "Learning by doing" and "making change work" to help schools audit the consumption of natural resources within their premises, and assess themselves as environment managers.</p>
     <p>Like last year, we were overwhelmed with the response we received from across India. More than 2500 schools registered for the Audit, and 700 submitted the Audit. The performance report of the school is based on the data submitted by the schools. Therefore, the school needs to make sure that the data entered is correct to the best of their knowledge. We hope that as the school continues to audit their consumption each year, they will refine the data collection and complete the report with honesty. Our endeavor is to provide India with a green report card of schools with credible data and this can be done only if schools provide accurate data.</p>
@@ -61,8 +61,8 @@
     </div>
     <h2 class="intro-heading">
       <label>Introduction</label>
-      <span>Green Schools Programme Audit 2016</span></h2>
-    <p>A snapshot GSP Audit 2016 is as follows:</p>
+      <span>Green Schools Programme Audit 2017-2018</span></h2>
+    <p>A snapshot GSP Audit 2017-2018 is as follows:</p>
     <table width="100%" class="intro-table" cellspacing="0">
       <tr>
         <th width="22%">Rating</th>
@@ -99,7 +99,7 @@
     <h2>
       <figure><img src="assets/img/performance/Air_logo.jpg"></figure>
       <label>Air</label>
-      <span>Green Schools Programme Audit 2016</span></h2>
+      <span>Green Schools Programme Audit 2017-2018</span></h2>
     <p>Sources of air pollution are many and diverse. But none are as lethal as vehicles as they are responsible for very high exposure. Vehicular emissions take place in the breathing zone of people. Experts say that those who live or work in close proximity to heavily travelled roadways are subject to high levels of exposure.  No wonder that during the past few years, we have been desperately looking out for tools to assess the problem and find ways to combat the menace.</p>
     <section class="remember">
       <h3>Remember:</h3>
@@ -196,7 +196,7 @@ if ($data == 3 || $data == 4) { ?>
   <h2>
     <figure><img src="assets/img/performance/Air_logo.jpg"></figure>
     <label>Air</label>
-    <span>Green Schools Programme Audit 2016</span></h2>
+    <span>Green Schools Programme Audit 2017-2018</span></h2>
   <section class="performance-category">
     <ul>
       <li>
@@ -469,7 +469,7 @@ if ($data == 3 || $data == 4) { ?>
     <h2>
       <figure><img src="assets/img/performance/energy.jpg"></figure>
       <label>Energy</label>
-      <span>Green Schools Programme Audit 2016</span></h2>
+      <span>Green Schools Programme Audit 2017-2018</span></h2>
     <p>The impact of 'global warming' has already reached scorching levels, and is rising rapidly. Saving energy is the first step to energy conservation. Switching off electrical gadgets when they are not in use and switching the usage of bulbs to CFLs/ LEDs are great ways to start.</p>
     <section class="remember">
       <h3>Remember</h3>
@@ -619,7 +619,7 @@ if ($data == 3 || $data == 4) { ?>
     <h2>
       <figure><img src="assets/img/performance/food.jpg"></figure>
       <label>Food</label>
-      <span>Green Schools Programme Audit 2016</span></h2>
+      <span>Green Schools Programme Audit 2017-2018</span></h2>
     <p>Food has been at the centre of policy debate in India for many years, as more than 20 per cent of the country's population suffers from undernourishment. Meanwhile, childhood obesity is also alarmingly on the rise globally as well as in India.Given India's dubious distinction of carrying the twin burden of under nutrition and overfeeding, we need to be extra cautious.</p>
     <p>We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) that has high fat, sugar and salt content in it. This UPPF category is one of the most popular categories in today's market. </p>
     <section class="remember">
@@ -734,7 +734,7 @@ if ($data == 3 || $data == 4) { ?>
     <h2>
       <figure><img src="assets/img/performance/land.jpg"></figure>
       <label>Land</label>
-      <span>Green Schools Programme Audit 2016</span></h2>
+      <span>Green Schools Programme Audit 2017-2018</span></h2>
     <p>Your school grounds can provide excellent educational opportunities for creating awareness about land resources and the natural world around you, as well as the land-use pattern. The biological diversity 
       supported by an area is a good indicator of its ecological well-being. A proper management of land resources can transform the grounds into biologically diverse outdoor classrooms and healthy open spaces.</p>
     <section class="remember">
@@ -816,7 +816,7 @@ if ($data == 3 || $data == 4) { ?>
     <h2>
       <figure><img src="assets/img/performance/tap.jpg"></figure>
       <label>Water</label>
-      <span>Green Schools Programme Audit 2016</span></h2>
+      <span>Green Schools Programme Audit 2017-2018</span></h2>
     <p>The right to water is really the right to life and livelihood. Just as we cannot live without water, a country cannot survive if it is water-stressed. This resource determines our future, and acts as a driving force for our economic growth. Even today, the government admits to not being able to provide' safe drinking water to more than half the country's population. Poor sanitation and unsafe drinking water account for a substantial part of the disease burden in India, contributing to diarrhea, cholera, typhoid and jaundice.</p>
     <section class="remember">
       <h3>Remember:</h3>
@@ -1737,7 +1737,7 @@ if ($data == 3 || $data == 4) { ?>
     <h2>
       <figure><img src="assets/img/performance/waste.jpg"></figure>
       <label>Waste</label>
-      <span>Green Schools Programme Audit 2016</span></h2>
+      <span>Green Schools Programme Audit 2017-2018</span></h2>
     <p>Waste is another headache arising at an alarming level. Where to dispose waste? How to dispose waste? What to do with the waste? We feel one of the easiest solution could be waste segregation. We should feed it into our system that no matter what, we will segregate our waste, even if it gets mixed after it goes out from our homes/schools.</p>
     <section class="remember">
       <h3>Remember:</h3>
