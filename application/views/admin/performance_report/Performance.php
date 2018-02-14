@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="<?php echo base_url(); ?>assets/css/performance.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>assets/css/performance.css" rel="stylesheet" media="print">
+<style type="text/css">
+/*img{ width:137px!important; height:125px!important;}*/
+</style>
 </head>
 <body>
 <div class="report-container">
@@ -129,11 +132,7 @@
 			    $schoolUserID = $performance[0]->userid;
 			    $window_floor = getFiled('Q5A110S2', $schoolUserID);
 			    $area_opening = getFiled('Q5A110S3', $schoolUserID);
-				if($area_opening==0){
-				$avg=0;
-				}else{
 			    $avg = ($window_floor / $area_opening) * 100;
-				}
 		    	$view_avg = number_format($avg, 2);
 			?>
             <h4><?php echo $view_avg; ?> % Average WFR</h4>
@@ -416,7 +415,7 @@ if ($data == 3 || $data == 4) { ?>
   <section class="performance-category">
     <ul>
       <li>
-        <figure><img src="assets/img/performance/mode.jpg"></figure>
+        <figure style="margin-left:26px;"><img src="assets/img/performance/mode.jpg"></figure>
         <div class="description">
           <h3>Mode of Commuting</h3>
           <?php
@@ -440,21 +439,23 @@ if ($data == 3 || $data == 4) { ?>
                                 } 
                                 if ($total_population_smv_percentage > 50 && $total_population_npm_percentage < 50 ) {
                                     $members_use_transport_type = "More than 50% population using sustainable motorized vehicles and less than 50% population using Non- polluting mode of transport";
-                                    $members_use_transport_msg = "Good most of the students and staff use Sustainable Motorized Vehicle (SMV). School should now motivate them to use Non- polluting mode of transport (NPT)."; ?> <h4><?php echo $members_use_transport_type; ?></h4>
-          <p><?php echo $members_use_transport_msg; ?></p> <?php
+                                    $members_use_transport_msg = "Good most of the students and staff use Sustainable Motorized Vehicle (SMV). School should now motivate them to use Non- polluting mode of transport (NPT)."; ?>
+          <h4><?php echo $members_use_transport_type; ?></h4>
+          <p><?php echo $members_use_transport_msg; ?></p>
+          <?php
                                 } elseif ($total_population_smv_percentage < 50 && $total_population_npm_percentage > 50) {
                                     $members_use_transport_type = "More than 50% population using Non- polluting mode of transport and less than 50% population using sustainable motorized vehicles";
-                                    $members_use_transport_msg = "Good most of the students and staff use Non- polluting mode of transport (NPT). School should now motivate rest of the population to use Non- polluting mode of transport."; ?><h4><?php echo $members_use_transport_type; ?></h4>
+                                    $members_use_transport_msg = "Good most of the students and staff use Non- polluting mode of transport (NPT). School should now motivate rest of the population to use Non- polluting mode of transport."; ?>
+          <h4><?php echo $members_use_transport_type; ?></h4>
           <p><?php echo $members_use_transport_msg; ?></p>
-							<?php		
+          <?php		
                                 } elseif ($private_veh_population_percentage > 50) {
                                     $members_use_transport_type = "More than 50% population using Private vehicles";
                                     $members_use_transport_msg = "Your school mostly uses private vehicles for transportation. We recommend that you encourage the staff and students to use public transport and also to car pool."; ?>
-						<h4><?php echo $members_use_transport_type; ?></h4>
-          <p><?php echo $members_use_transport_msg; ?></p>			
-                               <?php }
-                                ?>
-          
+          <h4><?php echo $members_use_transport_type; ?></h4>
+          <p><?php echo $members_use_transport_msg; ?></p>
+          <?php }
+          ?>
         </div>
       </li>
     </ul>
@@ -705,7 +706,7 @@ if ($data == 3 || $data == 4) { ?>
           </div>
         </li>
         <li>
-          <figure><img src="assets/img/performance/sale.jpg"></figure>
+          <figure style="margin-left:-12px; margin-bottom:0px;"><img src="assets/img/performance/sale.jpg"></figure>
           <div class="description">
             <h3>Are your school events such as quiz shows, talent shows, debates sponsored by food companies/brands?</h3>
             <?php
@@ -951,7 +952,7 @@ if ($data == 3 || $data == 4) { ?>
     <section class="performance-category">
       <ul>
         <li>
-          <figure><img src="assets/img/performance/water-source.jpg"></figure>
+          <figure style="margin-left:-12px; margin-bottom:0px;"><img src="assets/img/performance/water-source.jpg" style="width:137px;"></figure>
           <div class="description">
             <h3>Source of Water</h3>
             <?php
@@ -1008,7 +1009,7 @@ if ($data == 3 || $data == 4) { ?>
                                     $SourceofWater_msg = "Your source of water is combination of $wcombination_msg. Which is not sufficient to fulfill the water requirements of your school. You should expand your source of water to more options such as surface water, rainwater and recycled wastewater.";
                                 }
                                 ?>
-            <!--            <h4><?php echo $SourceofWater; ?></h4>-->
+                        <h4><?php echo $SourceofWater; ?></h4>
             <p><?php echo $SourceofWater_msg; ?></p>
           </div>
         </li>
@@ -1043,7 +1044,7 @@ if ($data == 3 || $data == 4) { ?>
                 $growlocalplant = getFiled('Q8W1S8', $schoolUserID); //Does your school grow local plant species which require limited amount of water to grow?
                 $conservation = getFiled('Q8W1S9', $schoolUserID); //Has your school initiated any water conservation steps in the school or outside, in the past one year?	
                 $irrigation = getFiled('Q8W1S10', $schoolUserID); //Does your school use a drip or irrigation system?
-				$check_c=array();
+
                                 if($tanksintheschool == 'Y')
                                     $check_c[0] = 1;
                                 if($drinkingwaterpoints == 'Y')
@@ -1068,23 +1069,19 @@ if ($data == 3 || $data == 4) { ?>
                                 if(in_array($check_count,$question_count_array))
                                 {
                                  $Conservation_Practices_msg = "Your school should look into these water conservation practices to become more water efficient: Float valves installed to stop overflow, Spill proof taps to check overflow, Appliances with a quick-wash setting, Dual flush systems installed in the toilets, Local plant species which require limited amount of water to grow, In initiating any water conservation steps in the schools and outside, Using a drip or irrigation system";   
-                               ?><p><?php echo $Conservation_Practices_msg; ?></p> <?php
-				}
+                                }
                                elseif($check_count == 6)
                                 {
                                  $Conservation_Practices_msg = "Your school should look into this water conservation practices to become more water efficient: Float valves installed to stop overflow, Spill proof taps to check overflow, Appliances with a quick-wash setting, Dual flush systems installed in the toilets, Local plant species which require limited amount of water to grow, In initiating any water conservation steps in the schools and outside, Using a drip or irrigation system";   
-                                ?><p><?php echo $Conservation_Practices_msg; ?></p> <?php
-			       }
+                                }
                                 elseif($check_count ==7)
                                 {
                                   $Conservation_Practices_msg = "Your school Follows all the good water conservation practices. Please keep up the good work. Promote students to practice these things even at home.";    
-                                 ?><p><?php echo $Conservation_Practices_msg; ?></p> <?php
-				}
+                                }
                                 elseif($check_count ==7 && $other_check == 'Yes')
                                 {
                                   $Conservation_Practices_msg = "Your school should look into these water conservation practices to become more water efficient: Float valves installed to stop overflow, Spill proof taps to check overflow, Appliances with a quick-wash setting, Dual flush systems installed in the toilets, Local plant species which require limited amount of water to grow, In initiating any water conservation steps in the schools and outside, Using a drip or irrigation system.";    
-                                ?><p><?php echo $Conservation_Practices_msg; ?></p> <?php
-				} ?>
+                                }
 //                                if ($tanksintheschool == "A1" && $drinkingwaterpoints == "A1" && $appliancesquickwash == "A1" && $flushsystems == "A1" && $growlocalplant == "A1" && $conservation == "A1" && $irrigation == "A1") {
 //                                    $Conservation_Practices = "Yes";
 //                                    $Conservation_Practices_msg = "Your school Follows all the good water conservation practices. Please keep up the good work. Promote students to practice these things even at home.";
@@ -1093,8 +1090,8 @@ if ($data == 3 || $data == 4) { ?>
 //                                    $Conservation_Practices_msg = "Your school should look into these water conservation practices to become more water efficient: Float valves installed to stop overflow, Spill proof taps to check overflow, Appliances with a quick-wash setting, Dual flush systems installed in the toilets, Local plant species which require limited amount of water to grow, In initiating any water conservation steps in the schools and outside, Using a drip or irrigation system";
 //                                }
                                 ?>
-            
-            
+            <!--            <h4><?php echo $Conservation_Practices; ?></h4>-->
+            <p><?php echo $Conservation_Practices_msg; ?></p>
           </div>
         </li>
         <li>
@@ -1123,18 +1120,16 @@ if ($data == 3 || $data == 4) { ?>
                                         $catchments = "Yes";
                                         $catchments_msg = "";
 										?>
-										
             <h4><?php echo $catchments; ?></h4>
             <p><?php echo $catchments_msg; ?></p>
-										<?php
+            <?php
                                     } else if (getFiled('Q8W2S1', $schoolUserID) == "N") {
                                         $catchments = "No";
                                         $catchments_msg = "Your school has rainwater harvesting system, which indirectly means your school must be catching rainwater from atleast one of the catchments: Rooftop, Paved area or Unpaved area. Please fill in the correct details for better analysis of your reports.";
 										?>
-										
             <h4><?php echo $catchments; ?></h4>
             <p><?php echo $catchments_msg; ?></p>
-										<?php
+            <?php
                                     }
                                     ?>
           </div>
@@ -1184,32 +1179,29 @@ if ($data == 3 || $data == 4) { ?>
                                     $rainwater_harvested = "By storing";
                                     $rainwater_harvested_msg = "A good Practice.";
 								?>
-								
             <h4><?php echo $rainwater_harvested; ?></h4>
             <p><?php echo $rainwater_harvested_msg; ?></p>
-								<?php	
+            <?php	
                                 } elseif (getFiled('Q8W2S2', $schoolUserID) == 2) {
                                     $rainwater_harvested = "By recharge ground";
                                     $rainwater_harvested_msg = "Recharging the ground water is a very good practice.";
 									?>
-									
             <h4><?php echo $rainwater_harvested; ?></h4>
             <p><?php echo $rainwater_harvested_msg; ?></p>
-								<?php	
+            <?php	
                                 } elseif (getFiled('Q8W2S2', $schoolUserID) == 3) {
                                     $rainwater_harvested = "Combination of both";
                                     $rainwater_harvested_msg = "An excellent practice. Hope that you use the RWH systems to its full potential."; ?>
-									
             <h4><?php echo $rainwater_harvested; ?></h4>
             <p><?php echo $rainwater_harvested_msg; ?></p>
-									<?php
+            <?php
                                 }
                                 ?>
           </div>
         </li>
         <?php
-                        if (getFiled('Q8W2S2', $schoolUserID) == 2) {
-                            ?>
+         if (getFiled('Q8W2S2', $schoolUserID) == 2) {
+        ?>
         <li>
           <figure><img src="assets/img/performance/clean.jpg"></figure>
           <div class="description">
@@ -1218,10 +1210,9 @@ if ($data == 3 || $data == 4) { ?>
                                     if (getFiled('Q8W2S2S97', $schoolUserID) == 1) {
                                         $gw_recharge_structure = "Yes";
                                         $gw_recharge_structure_msg = "Recharging the ground water is a very good practice."; ?>
-										
             <h4><?php echo $gw_recharge_structure; ?></h4>
             <p><?php echo $gw_recharge_structure_msg; ?></p>
-										<?php
+            <?php
                                     }
                                     ?>
           </div>
@@ -1246,10 +1237,9 @@ if ($data == 3 || $data == 4) { ?>
                                     //$school_harvested = "91 to 100 per cent";
                                     $school_harvested_msg = "It's great that your school's rainwater harvesting area is more than 90%! We hope you continue with this green practice.";
 									?>
-									
             <h4><?php echo $school_harvested; // Need to discuss with ravi sir/ client   ?></h4>
             <p><?php echo $school_harvested_msg; ?></p>
-									<?php
+            <?php
                                 } else if ($school_harvested_area == 5 || $school_harvested_area == 6) {
                                     
                                     if($school_harvested_area ==5) 
@@ -1258,25 +1248,22 @@ if ($data == 3 || $data == 4) { ?>
                                     $school_harvested = "61 to 70 per cent";
                                     //$school_harvested = "61 to 70 per cent";
                                     $school_harvested_msg = "It's great that your school's rainwater harvesting area is more than 50%! We hope you continue with this green practice and increase the catchment area in the near future.  Your school has the potential!";?>
-									
             <h4><?php echo $school_harvested; // Need to discuss with ravi sir/ client   ?></h4>
             <p><?php echo $school_harvested_msg; ?></p>
-									<?php
+            <?php
                                 } else if ($school_harvested_area == 4) {
                                     $school_harvested = "41 to 50 per cent";
                                     $school_harvested_msg = "Your school's rainwater harvesting area is between ".$school_harvested."! We hope you continue with this green practice and increase the catchment area in the near future.  Your school has the potential!"; ?>
-								
             <h4><?php echo $school_harvested; // Need to discuss with ravi sir/ client   ?></h4>
             <p><?php echo $school_harvested_msg; ?></p>
-								<?php	
+            <?php	
                                 } else if ($school_harvested_area == 3) {
                                     $school_harvested = "31 to 40 per cent";
                                     $school_harvested_msg = "Your school's rainwater harvesting area is ".$school_harvested."! We hope you continue with this green practice and expand the area in the near future.";
 									?>
-									
             <h4><?php echo $school_harvested; // Need to discuss with ravi sir/ client   ?></h4>
             <p><?php echo $school_harvested_msg; ?></p>
-									<?php
+            <?php
                                 } else if ($school_harvested_area == 1 || $school_harvested_area == 2) {
                                     if($school_harvested_area ==1) 
                                     $school_harvested = "10 to 20 per cent";
@@ -1284,10 +1271,9 @@ if ($data == 3 || $data == 4) { ?>
                                     $school_harvested = "21 to 30 per cent";
                                     $school_harvested_msg = "Your school's rainwater harvesting area is ".$school_harvested."! We hope you continue with this green practice and expand the area in the near future.";
 									?>
-									
             <h4><?php echo $school_harvested; // Need to discuss with ravi sir/ client   ?></h4>
             <p><?php echo $school_harvested_msg; ?></p>
-									<?php
+            <?php
                                 }
                                 ?>
           </div>
@@ -1323,18 +1309,16 @@ if ($data == 3 || $data == 4) { ?>
                                     $catchment_system = "Yes";
                                     $catchment_system_msg = "Good you are regular with cleaning the catchment.";
 								?>
-								
             <h4><?php echo $catchment_system; ?></h4>
             <p><?php echo $catchment_system_msg; ?></p>
-								<?php	
+            <?php	
                                 } elseif (getFiled('Q8W2S61', $schoolUserID) == "N") {
                                     $catchment_system = "No";
                                     $catchment_system_msg = "Clean your catchments twice a year! Unclean catchments can lead to a lot unwanted problems - could be a breeding place for mosquitoes.";
                                 ?>
-								
             <h4><?php echo $catchment_system; ?></h4>
             <p><?php echo $catchment_system_msg; ?></p>
-								<?php }
+            <?php }
 //                                else {
 //                                    $catchment_system = "No";
 //                                    $catchment_system_msg = "Clean your catchments twice a year! Unclean catchments can lead to a lot unwanted problems - could be a breeding place for mosquitoes.";
@@ -1352,17 +1336,15 @@ if ($data == 3 || $data == 4) { ?>
                                     $Rainwater_Harvesting = "Yes";
                                     $Rainwater_Harvesting_msg = "Its good that your school monitors the structure for its efficiency.";
 							?>
-									
             <h4><?php echo $Rainwater_Harvesting; ?></h4>
             <p><?php echo $Rainwater_Harvesting_msg; ?></p>
-								<?php
+            <?php
                                 } elseif (getFiled('Q8W2S8', $schoolUserID) == "N") {
                                     $Rainwater_Harvesting = "No";
                                     $Rainwater_Harvesting_msg = "You should ensure that the rainwater harvesting structure is monitored for its efficiency."; ?>
-									
             <h4><?php echo $Rainwater_Harvesting; ?></h4>
             <p><?php echo $Rainwater_Harvesting_msg; ?></p>
-									<?php
+            <?php
                                    }
                                 ?>
           </div>
@@ -1422,11 +1404,8 @@ if ($data == 3 || $data == 4) { ?>
             <h3>Load on Drinking Water Taps</h3>
             <?php        //Q.8 discuss regarding msg. for $DrinkingWaterTabs variable. 
                                 $drinking_water_taps_8 = getFiled('Q9W1', $schoolUserID);
-		  if($drinking_water_taps_8){
-			  $Load_for_drinking_water_tap=0;
-		  }else{
-		  $Load_for_drinking_water_tap = $total_population / $drinking_water_taps_8;
-		  }
+                                $Load_for_drinking_water_tap = $total_population / $drinking_water_taps_8;
+
                                 if ($Load_for_drinking_water_tap <= 50 && $drinking_water_taps_8 != "" && $drinking_water_taps_8 != 0) {
                                     $DrinkingWaterTabs = "If equal to the load";
                                     $DrinkingWaterTabs_Msg = "You have the required number of drinking water taps in your school. Please refer to the table for prescribed norm.";
@@ -1518,11 +1497,8 @@ if ($data == 3 || $data == 4) { ?>
             <?php
                                 //Q.10 How many ablution taps (taps used for washing hands only) do you have?
                                 $ablution_taps_q10 = getFiled('Q11W1', $schoolUserID);
-		          if($ablution_taps_q10==0){
-				  $Load_for_ablution_taps=0;
-			  }else{
                                 $Load_for_ablution_taps = $total_population / $ablution_taps_q10;
-			  }
+
                                 if ($Load_for_ablution_taps <= 50 && $ablution_taps_q10 != "" && $ablution_taps_q10 != 0) {
                                     $abulation_tabs = "Equal to or less than the load";
                                     $abulation_tabs_msg = "You have the required number of ablution taps in your school.";
@@ -1582,12 +1558,8 @@ if ($data == 3 || $data == 4) { ?>
             <?php
                                 //Q.12 How many urinals (strictly used for urination only) do you have?
             $water_urinals_q12 = getFiled('Q14W1', $schoolUserID);
-	if($water_urinals_q12==0){
-		$Load_for_urinals=0;
-	}else{
             $Load_for_urinals = number_format(($total_population / $water_urinals_q12),2,".","");
-	}
-		//$school_type = $sql_data_array['266617X34X1608']; //q15. get appropriate category for your school like Day Scholar,Day Boarding etc.
+            //$school_type = $sql_data_array['266617X34X1608']; //q15. get appropriate category for your school like Day Scholar,Day Boarding etc.
             if ($school_type == 1 && $Load_for_urinals <= 50 && $water_urinals_q12 != "" && $water_urinals_q12 != 0) { //school type Day Scholar
                 //$Load_for_urinals = $Load_for_urinals;
                 $Load_for_urinals_msg = "You have the required number of urinals (strictly used for urination only) in your school.";
@@ -1709,7 +1681,7 @@ if ($data == 3 || $data == 4) { ?>
           </div>
         </li>
         <li>
-          <figure><img src="assets/img/performance/wastewater_treatment.jpg"></figure>
+          <figure style="margin-left:-12px; margin-bottom:0px;"><img src="assets/img/performance/wastewater_treatment.jpg"></figure>
           <div class="description">
             <h3>Does your school have a wastewater treatment facility</h3>
             <?php
@@ -1828,66 +1800,35 @@ if ($data == 3 || $data == 4) { ?>
 
                             // Column 5 (2bins) and Column 6 (3or more bins) is equal to Sum of Total no. of collection points
                             if ($two_three_bin_percentage >= 76 && $two_three_bin_percentage <=100) {
-                                $msg_waste2 = "Most of the collection points have two or more than two dustbins for different categories of waste. A good practice! We encourage that students learn to segregate waste at source.";?>
-								<div class="description">
-            <h3>Waste Collection Points</h3>
-            <!--                                <h4>2.3 average</h4>-->
-            <p><?php echo $msg_waste2;?></p>
-          </div>
-								<?php
+                                $msg_waste2 = "Most of the collection points have two or more than two dustbins for different categories of waste. A good practice! We encourage that students learn to segregate waste at source.";
                             }
 
                             //   Column 5 (2bins) and Column 6 (3or more bins) is very less than Sum of Total no. of collection 
                             elseif ($two_three_bin_percentage >= 50 && $two_three_bin_percentage <=75) {
-                                $msg_waste2 = "Most of the collection points have two or more than two dustbins for different categories of waste. A good practice! We encourage that students learn to segregate waste at source.";?>
-								<div class="description">
-            <h3>Waste Collection Points</h3>
-            <!--                                <h4>2.3 average</h4>-->
-            <p><?php echo $msg_waste2;?></p>
-          </div>
-								<?php
+                                $msg_waste2 = "Most of the collection points have two or more than two dustbins for different categories of waste. A good practice! We encourage that students learn to segregate waste at source.";
                             }
 
                               //Column 5 (2bins) and Column 6 (3 or more bins) is less than Sum of Total no. of collection 
                             elseif ($two_three_bin_percentage >= 25 && $two_three_bin_percentage <=49) {
                                 $msg_waste2 = "Waste segregation at source is not efficient in your school. We strongly recommend that your school considers putting more collection points with two or more dustbins! We encourage that students learn to segregate waste at source.";
-                            ?>
-							<div class="description">
-            <h3>Waste Collection Points</h3>
-            <!--                                <h4>2.3 average</h4>-->
-            <p><?php echo $msg_waste2;?></p>
-          </div>
-							<?php
-							}
+                            }
                             
                              elseif ($two_three_bin_percentage < 25) {
                                 $msg_waste2 = "Waste segregation at source is not efficient in your school. We strongly recommend that your school considers putting more collection points with two or more dustbins! We encourage that students learn to segregate waste at source.";
-                           ?>
-						   <div class="description">
-            <h3>Waste Collection Points</h3>
-            <!--                                <h4>2.3 average</h4>-->
-            <p><?php echo $msg_waste2;?></p>
-          </div>
-						   <?php
-						    }
+                            }
                             //'Column 3 (No bin) and Column 4 (1 bin) is equal to Sum of Total no. of collection points the school 
                             elseif ($total_collection_0_1_bins == $total_collection_bins) {
                                 $msg_waste2 = "Waste segregation at source is not efficient in your school. We strongly recommend that your school considers putting more collection points with two or more dustbins! We encourage that students learn to segregate waste at source. ";
-                            ?>
-							<div class="description">
-            <h3>Waste Collection Points</h3>
-            <!--                                <h4>2.3 average</h4>-->
-            <p><?php echo $msg_waste2;?></p>
-          </div>
-		  
-		  <?php
-							
-							}
+                            }
 
                           
                         
                             ?>
-          
+          <div class="description">
+            <h3>Waste Collection Points</h3>
+            <!--                                <h4>2.3 average</h4>-->
+            <p><?php echo $msg_waste2;?></p>
+          </div>
         </li>
       </ul>
     </section>
@@ -1969,9 +1910,8 @@ if ($data == 3 || $data == 4) { ?>
           </div>
         </li>
         <li>
-          <figure><img src="assets/img/performance/recycle.jpg"></figure>
+          <figure style="margin-left:-12px; margin-bottom:0px;"><img src="assets/img/performance/recycle.jpg"></figure>
           <div class="description">
-		  
             <h3>Recycling of Waste</h3>
             <?php
 //4) Does your school recycle any generated waste?
@@ -1991,39 +1931,34 @@ if ($waste_recycle == "Y") {
         $waste_msg41 = "School recycles 100% of the waste";
         $waste_msg42 = "Your school recycles a lot of its waste. You recycle " . $waste_recycled_percent . " per cent of waste. We hope you are able to become waste efficient school at the earliest.";
 		?>
-		
             <h4><?php echo $waste_msg41 ?></h4>
             <p><?php echo $waste_msg42 ?></p>
-		<?php
+            <?php
 		
     } elseif ($waste_recycled_percent >= 50 && $waste_recycled_percent < 100) {    //50%
         $waste_msg41 = "School recycles 50% or above of it's waste ";
         $waste_msg42 = "Your school recycles most of it's waste. You recycle " . $waste_recycled_percent . " per cent of waste. We hope you are able to become waste efficient school at the earliest.";
 		?>
-		
             <h4><?php echo $waste_msg41 ?></h4>
             <p><?php echo $waste_msg42 ?></p>
-		<?php
+            <?php
     } elseif ($waste_recycled_percent >= 0 && $waste_recycled_percent <= 49.9) {   //0%-49.9%
         $waste_msg41 = "School recycles 0%-49.9% of it's waste";
         $waste_msg42 = "Your school recycles some of its waste. You recycle " . $waste_recycled_percent . " per cent of waste. We hope you are able to become waste efficient school at the earliest.";
 		?>
-		
             <h4><?php echo $waste_msg41 ?></h4>
             <p><?php echo $waste_msg42 ?></p>
-		<?php
+            <?php
     }
     elseif ($waste_recycled_percent > 100) { 
         $waste_msg42 = "Calculation Error : Your school did not submit the correct data therefore there is a calculation error here. Please fill the correct data for better analysis.";
 		?>
-		
             <h4><?php echo $waste_msg41 ?></h4>
             <p><?php echo $waste_msg42 ?></p>
-		<?php
+            <?php
             } 
 }
 ?>
-         
             <p>School does not recycle the waste</p>
           </div>
         </li>
