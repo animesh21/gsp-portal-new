@@ -17,7 +17,7 @@
       <h4>GSP Audit 2016</h4>
       <h3>Performance Report</h3>
       <p><strong><?php echo $performance[0]->name ?></strong></p>
-      <p><strong><?php echo $performance[0]->city; ?>, <?php echo $performance[0]->state; ?></strong></p>
+      <p><strong><?php echo $performance[0]->city; ?>, <?php echo $performance[0]->state_name; ?></strong></p>
       <p>Audit Coordinator: <?php echo $performance[0]->coname; ?></p>
       <p>Category:
         <?php 
