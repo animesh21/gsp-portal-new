@@ -1802,35 +1802,57 @@ if ($data == 3 || $data == 4) { ?>
 
                             // Column 5 (2bins) and Column 6 (3or more bins) is equal to Sum of Total no. of collection points
                             if ($two_three_bin_percentage >= 76 && $two_three_bin_percentage <=100) {
-                                $msg_waste2 = "Most of the collection points have two or more than two dustbins for different categories of waste. A good practice! We encourage that students learn to segregate waste at source.";
-                            }
+                                $msg_waste2 = "Most of the collection points have two or more than two dustbins for different categories of waste. A good practice! We encourage that students learn to segregate waste at source.";?>
+							<div class="description">
+            <h3>Waste Collection Points</h3>
+            <!--                                <h4>2.3 average</h4>-->
+            <p><?php echo $msg_waste2;?></p>
+          </div>	
+                        <?php    }
 
                             //   Column 5 (2bins) and Column 6 (3or more bins) is very less than Sum of Total no. of collection 
                             elseif ($two_three_bin_percentage >= 50 && $two_three_bin_percentage <=75) {
-                                $msg_waste2 = "Most of the collection points have two or more than two dustbins for different categories of waste. A good practice! We encourage that students learn to segregate waste at source.";
-                            }
+                                $msg_waste2 = "Most of the collection points have two or more than two dustbins for different categories of waste. A good practice! We encourage that students learn to segregate waste at source.";?>
+							<div class="description">
+            <h3>Waste Collection Points</h3>
+            <!--                                <h4>2.3 average</h4>-->
+            <p><?php echo $msg_waste2;?></p>
+          </div>	
+                        <?php    }
 
                               //Column 5 (2bins) and Column 6 (3 or more bins) is less than Sum of Total no. of collection 
                             elseif ($two_three_bin_percentage >= 25 && $two_three_bin_percentage <=49) {
                                 $msg_waste2 = "Waste segregation at source is not efficient in your school. We strongly recommend that your school considers putting more collection points with two or more dustbins! We encourage that students learn to segregate waste at source.";
-                            }
-                            
-                             elseif ($two_three_bin_percentage < 25) {
-                                $msg_waste2 = "Waste segregation at source is not efficient in your school. We strongly recommend that your school considers putting more collection points with two or more dustbins! We encourage that students learn to segregate waste at source.";
-                            }
-                            //'Column 3 (No bin) and Column 4 (1 bin) is equal to Sum of Total no. of collection points the school 
-                            elseif ($total_collection_0_1_bins == $total_collection_bins) {
-                                $msg_waste2 = "Waste segregation at source is not efficient in your school. We strongly recommend that your school considers putting more collection points with two or more dustbins! We encourage that students learn to segregate waste at source. ";
-                            }
-
-                          
-                        
-                            ?>
-          <div class="description">
+								?>
+								<div class="description">
             <h3>Waste Collection Points</h3>
             <!--                                <h4>2.3 average</h4>-->
             <p><?php echo $msg_waste2;?></p>
           </div>
+                            <?php }
+                            
+                             elseif ($two_three_bin_percentage < 25) {
+                                $msg_waste2 = "Waste segregation at source is not efficient in your school. We strongly recommend that your school considers putting more collection points with two or more dustbins! We encourage that students learn to segregate waste at source.";
+								?>
+								<div class="description">
+            <h3>Waste Collection Points</h3>
+            <!--                                <h4>2.3 average</h4>-->
+            <p><?php echo $msg_waste2;?></p>
+          </div>
+								<?php
+                            }
+                            //'Column 3 (No bin) and Column 4 (1 bin) is equal to Sum of Total no. of collection points the school 
+                            elseif ($total_collection_0_1_bins == $total_collection_bins) {
+                                $msg_waste2 = "Waste segregation at source is not efficient in your school. We strongly recommend that your school considers putting more collection points with two or more dustbins! We encourage that students learn to segregate waste at source. ";
+								?>
+								<div class="description">
+            <h3>Waste Collection Points</h3>
+            <!--                                <h4>2.3 average</h4>-->
+            <p><?php echo $msg_waste2;?></p>
+          </div>
+								<?php
+                            }
+                            ?>
         </li>
       </ul>
     </section>
