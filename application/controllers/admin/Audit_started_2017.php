@@ -317,7 +317,8 @@ public function excel2017() {
      */
 
     public function pdf($argID) {
-	 ini_set('memory_limit', '256M');
+	// ini_set('memory_limit', '256M');
+	    ini_set('memory_limit', '-1');
 	 ini_set('max_execution_time', 300);   
         $data['title'] = 'Home';
         $data['id'] = $argID;
