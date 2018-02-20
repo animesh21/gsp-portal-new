@@ -1,33 +1,30 @@
 <!DOCTYPE html>
 <!-- saved from url=(0050)http://www.greenschoolsprogramme.org/registration/ -->
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Registration Form - Green Schools Programme Audit 2016</title>
-        <link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet">
-        <link href="<?php echo base_url(); ?>assets/css/style.css" rel="stylesheet">
-
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Registration Form - Green Schools Programme Audit 2016</title>
+<link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="<?php echo base_url(); ?>assets/css/style.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>assets/css/jquery.typeahead.css" rel="stylesheet">
-        <script src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script>
-        <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
-        <script src="<?php echo base_url(); ?>assets/js/jquery.dataTables.min.js"></script>
-        <script src="<?php echo base_url(); ?>assets/js/dataTables.buttons.min.js"></script>
-        <script src="<?php echo base_url(); ?>assets/js/buttons.flash.min.js"></script>
-        <script src="<?php echo base_url(); ?>assets/js/vfs_fonts.js"></script>
-        <script src="<?php echo base_url(); ?>assets/js/buttons.html5.min.js(1)"></script>
-        <script src="<?php echo base_url(); ?>assets/js/buttons.print.min.js"></script>
-        <script src="<?php echo base_url(); ?>assets/js/yui-utilities.js" type="text/javascript"></script>
-        <script src="<?php echo base_url(); ?>assets/js/shadowbox-yui.js" type="text/javascript"></script>
-        <script src="<?php echo base_url(); ?>assets/js/shadowbox.js" type="text/javascript"></script>
-        <script src="<?php echo base_url(); ?>assets/js/admin.js"></script>
-        <script src="<?php echo base_url(); ?>assets/js/AC_RunActiveContent.js" type="text/javascript"></script>
-
-        <script src="<?php echo base_url(); ?>assets/js/jquery.validate.js"></script>
-        <style type="text/css">
+<script src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/jquery.dataTables.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/dataTables.buttons.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/buttons.flash.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/vfs_fonts.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/buttons.html5.min.js(1)"></script>
+<script src="<?php echo base_url(); ?>assets/js/buttons.print.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/yui-utilities.js" type="text/javascript"></script>
+<script src="<?php echo base_url(); ?>assets/js/shadowbox-yui.js" type="text/javascript"></script>
+<script src="<?php echo base_url(); ?>assets/js/shadowbox.js" type="text/javascript"></script>
+<script src="<?php echo base_url(); ?>assets/js/admin.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/AC_RunActiveContent.js" type="text/javascript"></script>
+<script src="<?php echo base_url(); ?>assets/js/jquery.validate.js"></script>
+<style type="text/css">
             .error {
                 font-size: 12px !important;
             }
-
             .form-control {
                 display: block;
                 width: 100%;
@@ -47,10 +44,9 @@
                 transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
             }
         </style>
-        <script type="text/javascript">
+<script type="text/javascript">
             $(document).ready(function () {
                 $('.wrapper').show();
-
                 $('#registration-form').validate({
                     rules: {
                         name: {
@@ -165,10 +161,9 @@
                 });
             });
         </script>
-        <script type="text/javascript">
+<script type="text/javascript">
             window.onload = function () {
                 Shadowbox.init();
-
             };
             var getCities = function () {
                 var value = new Object();
@@ -184,8 +179,7 @@
                 });
             };
         </script>
-
-        <style type="text/css">
+<style type="text/css">
             #loader {
                 display: none;
                 position: fixed;
@@ -197,7 +191,6 @@
                 background: #FFFFFF;
                 opacity: .7;
             }
-
             #loader img {
                 position: absolute;
                 top: 50%;
@@ -205,51 +198,43 @@
                 margin-left: -32px;
                 margin-top: -32px;
             }
-
             .placeholder {
                 color: #aaa;
             }
         </style>
-    </head>
-    <body>
-        <div id="loader"><img src="<?php echo base_url(); ?>assets/img/loader.gif" width="64" height="64"></div>
-        <div class="container">
-            <header>
-                <a href="http://www.greenschoolsprogramme.org/registration/">
-                    <img src="<?php echo base_url(); ?>assets/img/header-2.jpg" width="1028" height="117"></a>
-                <img src="<?php echo base_url(); ?>assets/img/icons.png" width="605" height="94" class="icon">
-            </header>
-        </div>
-        <main class="bdr">
-            <div class="container">
-                <div class="wrapper" style="display: block;">
-                    <div class="top-area">
-                        <h2>REGISTRATION Form</h2>
-                        <p>The CSE's Green Schools Programme Audit 2017 is now open.
-                            Please complete and submit this form to register for the GSP Audit 2017.
-                            On submission of registration form, you will receive an email with login
-                            credentials (username and password) for completing the Audit. Please
-                            save your login credentials to be used when you want to access the GSP
-                            Audit 2017. There are no fees for participation.</p>
-                        <p class="required">All fields marked * are required.</p>
-                    </div>
-                    <?php if ($this->session->flashdata('success')) { ?>
-                        <div class="top-area">
-                            <div class="alert alert-success"
-                                 style="boredr-radius:0px !important; border: 1px solid green !important">
-                                <a href="#" class="close" data-dismiss="alert" aria-label="close"><strong>&times;</strong></a>
-                                <?php echo $this->session->flashdata('success'); ?>
-                            </div>
-                        </div>
-                    <?php } ?>
-                    <?php
+</head>
+<body>
+<div id="loader"><img src="<?php echo base_url(); ?>assets/img/loader.gif" width="64" height="64"></div>
+<div class="container">
+  <header> <a href="http://www.greenschoolsprogramme.org/registration/"> <img src="<?php echo base_url(); ?>assets/img/header-2.jpg" width="1028" height="117"></a> <img src="<?php echo base_url(); ?>assets/img/icons.png" width="605" height="94" class="icon"> </header>
+</div>
+<main class="bdr">
+<div class="container">
+<div class="wrapper" style="display: block;">
+  <div class="top-area">
+    <h2>REGISTRATION Form</h2>
+    <p>The CSE's Green Schools Programme Audit 2018 is now open.
+      Please complete and submit this form to register for the GSP Audit 2018.
+      On submission of registration form, you will receive an email with login
+      credentials (username and password) for completing the Audit. Please
+      save your login credentials to be used when you want to access the GSP
+      Audit 2018. There are no fees for participation.</p>
+    <strong>Please spell the name of your school correctly – the name provided by you will appear in the digital certificates and other documents. </strong>
+    <p class="required">All fields marked * are required.</p>
+  </div>
+  <?php if ($this->session->flashdata('success')) { ?>
+  <div class="top-area">
+    <div class="alert alert-success"
+                                 style="boredr-radius:0px !important; border: 1px solid green !important"> <a href="#" class="close" data-dismiss="alert" aria-label="close"><strong>&times;</strong></a> <?php echo $this->session->flashdata('success'); ?> </div>
+  </div>
+  <?php } ?>
+  <?php
                     if ($this->session->flashdata('error')) {
                         echo '<h4 class="text-danger">' . $this->session->flashdata('error') . '</h4>';
                     }
                     ?>
-                    <?php echo validation_errors(); ?>
-                    <?php echo form_open('login/register', array('id' => 'registration-form')); ?>
-					 <div class="form-group typeahead__container">
+  <?php echo validation_errors(); ?> <?php echo form_open('login/register', array('id' => 'registration-form')); ?>
+  <div class="form-group typeahead__container">
     <div class="typeahead__field">
       <div class="typeahead__query">
         <input type="text" name="udise" class="schoolname name form-control  placeholder"
@@ -257,144 +242,131 @@
       </div>
     </div>
   </div>
-					
-					
-                    <div class="form-group typeahead__container">
+  <div class="form-group typeahead__container">
     <div class="typeahead__field">
       <div class="typeahead__query">
         <input type="text" name="name" class="schoolname name form-control  placeholder"
-                               value="<?php echo set_value('name'); ?>" placeholder="Name of the School*" id="name">
+                               value="<?php echo set_value('name'); ?>" placeholder="Name of the School*" id="name">
       </div>
     </div>
   </div>
-                    <div class="form-group">
-                        <input type="text" name="address1" id="address1" class="form-control address placeholder"
+  <div class="form-group">
+    <input type="text" name="address1" id="address1" class="form-control address placeholder"
                                value="<?php echo set_value('address1'); ?>" placeholder="Address Line 1*">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="address2" class="form-control address placeholder"
+  </div>
+  <div class="form-group">
+    <input type="text" name="address2" class="form-control address placeholder"
                                value="<?php echo set_value('address2'); ?>" placeholder="Address Line 2">
-                    </div>
-                    <div class="form-group">
-                        <div class="country">
-                            <input type="text" name="country" class="form-control" value="India" readonly=""
+  </div>
+  <div class="form-group">
+    <div class="country">
+      <input type="text" name="country" class="form-control" value="India" readonly=""
                                    placeholder="Country Name">
-                        </div>
-                        <div class="country state">
-                            <?php echo form_dropdown('state', $states, set_select('state'), array('class' => 'form-control', 'id' => 'country-select', 'onchange' => 'getCities();')); ?>
-                        </div>
-
-                        <div class="district state">
-                            <select class="form-control" id="city-select" name="district">
-                                <option value="">Select District</option>
-                            </select>
-                        </div>
-
-                        <!--
+    </div>
+    <div class="country state"> <?php echo form_dropdown('state', $states, set_select('state'), array('class' => 'form-control', 'id' => 'country-select', 'onchange' => 'getCities();')); ?> </div>
+    <div class="district state">
+      <select class="form-control" id="city-select" name="district">
+        <option value="">Select District</option>
+      </select>
+    </div>
+    <!--
                               <div class="district">
                                <input type="text" name="district"  class="form-control" value="<?php echo set_value('address2'); ?>"  placeholder="District*">
                               </div>
                         -->
-
-                    </div>
-                    <div class="form-group">
-                        <div class="city">
-                            <input type="text" name="city" class="form-control placeholder"
+  </div>
+  <div class="form-group">
+    <div class="city">
+      <input type="text" name="city" class="form-control placeholder"
                                    value="<?php echo set_value('city'); ?>" placeholder="City*">
-                        </div>
-                        <div class="code">
-                            <input type="text" name="pincode" id="pinc" class="form-control placeholder"
+    </div>
+    <div class="code">
+      <input type="text" name="pincode" id="pinc" class="form-control placeholder"
                                    value="<?php echo set_value('pincode'); ?>" placeholder="Pin Code*" maxlength="6">
-                        </div>
-                    </div>
-                    <div class="form-group marginN">
-                        <div class="cName cCode">
-                            <input type="text" name="country_code" id="tisd" class="form-control placeholder"
+    </div>
+  </div>
+  <div class="form-group marginN">
+    <div class="cName cCode">
+      <input type="text" name="country_code" id="tisd" class="form-control placeholder"
                                    value="<?php echo set_value('country_code', '+91'); ?>" placeholder="Country Code" readonly>
-                        </div>
-                        <div class="cEmail iniCname">
-                            <input type="text" name="std" id="tstd" class="form-control placeholder"
+    </div>
+    <div class="cEmail iniCname">
+      <input type="text" name="std" id="tstd" class="form-control placeholder"
                                    value="<?php echo set_value('std'); ?>" placeholder="STD">
-                        </div>
-                        <div class="mNumber">
-                            <input type="text" name="telephone" class="form-control placeholder"
+    </div>
+    <div class="mNumber">
+      <input type="text" name="telephone" class="form-control placeholder"
                                    value="<?php echo set_value('telephone'); ?>" placeholder="Landline Number*">
-                        </div>
-                        <div class="mNumber ceCode">
-                            <input type="text" name="schoolemail" class="form-control placeholder"
+    </div>
+    <div class="mNumber ceCode">
+      <input type="text" name="schoolemail" class="form-control placeholder"
                                    value="<?php echo set_value('schoolemail'); ?>" placeholder="School Email Address*">
-                        </div>
-                    </div>
-
-                    <!--        <div class="form-group wrap">
+    </div>
+  </div>
+  <!--        <div class="form-group wrap">
                               <input type="text" name="telephone_number" class="form-control number"  placeholder="Telephone Number*">
                           <span>Landline Number with STD code</span>
                         </div>-->
-                    <div class="form-2">
-                        <div class="form-group">
-                            <div class="pName">
-                                <input type="text" name="principle_name" class="form-control placeholder"
+  <div class="form-2">
+    <div class="form-group">
+      <div class="pName">
+        <input type="text" name="principle_name" class="form-control placeholder"
                                        value="<?php echo set_value('principle_name'); ?>" placeholder="Principal&#39;s Name*">
-                            </div>
-                            <div class="mNumber">
-                                <input type="text" name="mobile" id="pno" class="form-control placeholder"
+      </div>
+      <div class="mNumber">
+        <input type="text" name="mobile" id="pno" class="form-control placeholder"
                                        value="<?php echo set_value('mobile'); ?>" placeholder="Mobile Number*" maxlength="10">
-                            </div>
-                        </div>
-                        <div class="form-group marginN">
-                            <div class="cName wrap">
-                                <input type="text" name="coname" class="form-control placeholder"
+      </div>
+    </div>
+    <div class="form-group marginN">
+      <div class="cName wrap">
+        <input type="text" name="coname" class="form-control placeholder"
                                        value="<?php echo set_value('coname'); ?>" placeholder="GSP Coordinator&#39;s Name*">
-                                <span>Name of teacher responsible for GSP audit</span></div>
-                            <div class="cEmail">
-                                <input type="text" name="coemail" class="form-control placeholder"
+        <span>Name of teacher responsible for GSP audit</span></div>
+      <div class="cEmail">
+        <input type="text" name="coemail" class="form-control placeholder"
                                        value="<?php echo set_value('coemail'); ?>" placeholder="GSP Coordinator&#39;s Email*">
-                            </div>
-                            <div class="mNumber">
-                                <input type="text" name="comobile" id="gspmno" class="form-control placeholder" 
+      </div>
+      <div class="mNumber">
+        <input type="text" name="comobile" id="gspmno" class="form-control placeholder" 
                                        value="<?php echo set_value('comobile'); ?>" placeholder="Mobile Number*" maxlength="10">
-
-                            </div>
-                        </div>
-                        <div class="form-2">
-
-                        </div>
-                        <div class="form-group marginN">
-                            <div class="cEmail">
-                                <input type="text" class="form-control" name="captcha" placeholder="Enter Captcha"/>
-                            </div>
-                            <?php echo $captcha_image; ?>
-                        </div>
-                        <div class="form-group text-center">
-                            <input type="submit" name="submit" value="Submit" class="btn btn-default">
-                        </div>
-                        <?php echo form_close(); ?>
-                    </div>
-                    <noscript>
-                    &lt;p class="disabled"&gt;This form requires JavaScript for proper functioning. Please enable JavaScript
-                    or use another browser.&lt;/p&gt;
-                    </noscript>
-                </div>
-        </main>
-        <footer>
-            <div class="container">
-                <ul class="links">
-                    <li class="store"><a href="http://csestore.cse.org.in/" target="_blank"><img
+      </div>
+    </div>
+    <div class="form-2"> </div>
+    <div class="form-group marginN">
+      <div class="cEmail">
+        <input type="text" class="form-control" name="captcha" placeholder="Enter Captcha"/>
+      </div>
+      <?php echo $captcha_image; ?> </div>
+    <div class="form-group text-center">
+      <input type="submit" name="submit" value="Submit" class="btn btn-default">
+    </div>
+    <?php echo form_close(); ?> </div>
+  <noscript>
+  &lt;p class="disabled"&gt;This form requires JavaScript for proper functioning. Please enable JavaScript
+  or use another browser.&lt;/p&gt;
+  </noscript>
+</div>
+</main>
+<footer>
+  <div class="container">
+    <ul class="links">
+      <li class="store"><a href="http://csestore.cse.org.in/" target="_blank"><img
                                 src="<?php echo base_url(); ?>assets/img/store.jpg" class="img-responsive"></a></li>
-                    <li class="portal"><a href="http://www.indiaenvironmentportal.org.in/" target="_blank"><img
+      <li class="portal"><a href="http://www.indiaenvironmentportal.org.in/" target="_blank"><img
                                 src="<?php echo base_url(); ?>assets/img/portal.jpg" class="img-responsive"></a></li>
-                    <li class="earth"><a href="http://www.downtoearth.org.in/" target="_blank"><img
+      <li class="earth"><a href="http://www.downtoearth.org.in/" target="_blank"><img
                                 src="<?php echo base_url(); ?>assets/img/earth.jpg" class="img-responsive"></a></li>
-                    <li class="rain"><a href="http://www.rainwaterharvesting.org/" target="_blank"><img
+      <li class="rain"><a href="http://www.rainwaterharvesting.org/" target="_blank"><img
                                 src="<?php echo base_url(); ?><?php echo base_url(); ?>assets/img/rain.jpg"
                                 class="img-responsive"></a></li>
-                    <li class="times"><a href="http://www.gobartimes.org/" target="_blank"><img
+      <li class="times"><a href="http://www.gobartimes.org/" target="_blank"><img
                                 src="<?php echo base_url(); ?>assets/img/times.jpg" class="img-responsive"></a></li>
-                </ul>
-            </div>
-            <div class="text-center">Copyright Â© 2017 Centre for Science and Environment</div>
-        </footer>
-    </body>
+    </ul>
+  </div>
+  <div class="text-center">Copyright Â© 2017 Centre for Science and Environment</div>
+</footer>
+</body>
 </html>
 <script src="<?php echo base_url(); ?>assets/js/jquery.typeahead.min.js"></script>
 <script type="text/javascript">
@@ -415,7 +387,4 @@ $.typeahead({
         }
     }
 });
-
-
-
 </script>
