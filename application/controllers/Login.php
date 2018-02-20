@@ -28,7 +28,7 @@ class Login extends CI_Controller {
 				}
 				elseif($varCheckLogin=="warning")
 				{
-				  $this->session->set_flashdata('error', "The School Have Completed The GSP Audit So The School Can't Submit Audit Again");
+				  $this->session->set_flashdata('error', "The GSP Audit For 2017 Session Has Been Completed.");
 				}
             } else if($varCheckLogin=="error") {
                 $this->session->set_flashdata('error', 'Invalid Email/Password!');
