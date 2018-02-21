@@ -259,13 +259,13 @@ class Performance_report extends CI_Controller {
 		$this->load->view('admin/includes/template', $data);	
 	}
 	
-     public function air_phase2() {    
-        $this->config->load('array_config');
-        $data['main'] = 'admin/performance_report/air_to_land_phase2';
-        $data['title'] = 'Home | Perofrmance Report';
-        $data['record1'] = $this->Performance_model->air_performance_phase2();
-        $this->load->view('admin/includes/template', $data);
-    }
+         public function airPrimary_phase2()
+	 {
+	        $data['main']='admin/performance_report/primary_air_phase2';
+                $data['title']='Primary_Air_phase2';
+		$data['record1']=$this->Performance_model->getAirPrimarySchool_phase2();
+		$this->load->view('admin/includes/template', $data);
+	 }
 	
 	public function schoolgeneral_phase2() {
         $this->config->load('array_config');
