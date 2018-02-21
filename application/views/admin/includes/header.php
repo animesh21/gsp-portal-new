@@ -108,10 +108,7 @@
     overflow: hidden;
     min-height: 850px!important;
 }
-</style>	
-	
-	
-	
+</style>
 <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
 <script type="text/javascript" language="javascript" src="https://nightly.datatables.net/buttons/js/buttons.html5.min.js"></script>
@@ -151,50 +148,72 @@
                   <li><a href="<?php echo base_url('admin/audit_started_2017'); ?>">REGISTRATIONS 2017</a></li>
                   <li><a href="<?php echo base_url('admin/audit_started/statewise'); ?>">REGISTRATIONS BY STATE</a></li>
                   <li><a href="<?php echo base_url('admin/audit_started/feedback'); ?>">Feedback</a></li>
-                  <li><a href="<?php echo base_url('admin/audit_started_2017/partnersList'); ?>">Partner Details</a></li> 
+                  <li><a href="<?php echo base_url('admin/audit_started_2017/partnersList'); ?>">Partner Details</a></li>
                 </ul>
               </li>
-             <li class=""><a href="#">AUDIT COMPLETED<span class="caret"></span></a>
+              <li class=""><a href="#">AUDIT COMPLETED<span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li class=""><a href="#">PERFORMANCE REPORT</a></li>
-				  <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">PRIMARY AUDIT</a>
-								<ul class="dropdown-menu">
-								 <li><a href="<?php echo base_url('admin/performance_report/schoolgeneralPrimary'); ?>">School Profile & General </a></li>
-                                    <li><a href="<?php echo base_url('admin/performance_report/airPrimary'); ?>">AIR</a></li>
-									<li><a href="<?php echo base_url('admin/performance_report/energyPrimary'); ?>">ENERGY</a></li>
-									<li><a href="<?php echo base_url('admin/performance_report/foodPrimary'); ?>">Food</a></li>
-									<li><a href="<?php echo base_url('admin/performance_report/landPrimary'); ?>">LAND</a></li>
-									<li><a href="<?php echo base_url('admin/performance_report/waterPrimary'); ?>">WATER</a></li>
-                                  				        <li><a href="<?php echo base_url('admin/performance_report/wastePrimary'); ?>">WASTE</a></li>
-									<li><a href="<?php echo base_url('admin/performance_report/feedbackPrimary'); ?>">FEEDBACK</a></li>
-									<li><a href="<?php echo base_url('admin/performance_report/ExcelPrimary'); ?>">Total Primary Excel</a></li>
-									
-								</ul>
-							</li>
-				  <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">SECONDARY AUDIT</a>
-								<ul class="dropdown-menu">
-					 <li><a href="<?php echo base_url('admin/performance_report/schoolgeneral'); ?>">School Profile & General</a> </li>
-                                    <li><a href="<?php echo base_url('admin/performance_report/air'); ?>">AIR</a></li>
-									<li><a href="<?php echo base_url('admin/performance_report/energy'); ?>">ENERGY</a></li>
-									<li><a href="<?php echo base_url('admin/performance_report/food'); ?>">FOOD</a></li>
-									<li><a href="<?php echo base_url('admin/performance_report/land'); ?>">LAND</a></li>
-									<li><a href="<?php echo base_url('admin/performance_report/water'); ?>">WATER</a></li>
-                                   				        <li><a href="<?php echo base_url('admin/performance_report/waste'); ?>">WASTE</a></li>                    
-									<li><a href="<?php echo base_url('admin/performance_report/feedback'); ?>">Feedback</a> </li>
-								       <li><a href="<?php echo base_url('admin/performance_report/ExcelSecondary'); ?>">Total Secondary Excel</a> </li>
-
-								</ul>
-							</li>
-			<li><a href="<?php echo base_url('admin/performance_report/allExcelDump'); ?>">All Excel Dump</a></li>
-                 <li class=""><a href="<?php echo base_url('admin/performance_report/totalCalculation'); ?>">Total Points Calculation</a> </li>
-				<li><a href="analysis_report_all_question.php">All Responses</a></li>
-                 
-                 
+                  <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">PRIMARY AUDIT PHASE I</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="<?php echo base_url('admin/performance_report/schoolgeneralPrimary'); ?>">School Profile & General </a></li>
+                      <li><a href="<?php echo base_url('admin/performance_report/airPrimary'); ?>">AIR</a></li>
+                      <li><a href="<?php echo base_url('admin/performance_report/energyPrimary'); ?>">ENERGY</a></li>
+                      <li><a href="<?php echo base_url('admin/performance_report/foodPrimary'); ?>">Food</a></li>
+                      <li><a href="<?php echo base_url('admin/performance_report/landPrimary'); ?>">LAND</a></li>
+                      <li><a href="<?php echo base_url('admin/performance_report/waterPrimary'); ?>">WATER</a></li>
+                      <li><a href="<?php echo base_url('admin/performance_report/wastePrimary'); ?>">WASTE</a></li>
+                      <li><a href="<?php echo base_url('admin/performance_report/feedbackPrimary'); ?>">FEEDBACK</a></li>
+                      <li><a href="<?php echo base_url('admin/performance_report/ExcelPrimary'); ?>">Total Primary Excel</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">SECONDARY AUDIT PHASE I</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="<?php echo base_url('admin/performance_report/schoolgeneral'); ?>">School Profile & General</a> </li>
+                      <li><a href="<?php echo base_url('admin/performance_report/air'); ?>">AIR</a></li>
+                      <li><a href="<?php echo base_url('admin/performance_report/energy'); ?>">ENERGY</a></li>
+                      <li><a href="<?php echo base_url('admin/performance_report/food'); ?>">FOOD</a></li>
+                      <li><a href="<?php echo base_url('admin/performance_report/land'); ?>">LAND</a></li>
+                      <li><a href="<?php echo base_url('admin/performance_report/water'); ?>">WATER</a></li>
+                      <li><a href="<?php echo base_url('admin/performance_report/waste'); ?>">WASTE</a></li>
+                      <li><a href="<?php echo base_url('admin/performance_report/feedback'); ?>">Feedback</a> </li>
+                      <li><a href="<?php echo base_url('admin/performance_report/ExcelSecondary'); ?>">Total Secondary Excel</a> </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">PRIMARY AUDIT PHASE II</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="<?php echo base_url('admin/performance_report/schoolgeneralPrimary_phase2'); ?>">School Profile & General </a></li>
+                      <li><a href="<?php echo base_url('admin/performance_report/airPrimary_phase2'); ?>">AIR</a></li>
+                      <li><a href="<?php echo base_url('admin/performance_report/energyPrimary_phase2'); ?>">ENERGY</a></li>
+                      <li><a href="<?php echo base_url('admin/performance_report/foodPrimary_phase2'); ?>">Food</a></li>
+                      <li><a href="<?php echo base_url('admin/performance_report/landPrimary_phase2'); ?>">LAND</a></li>
+                      <li><a href="<?php echo base_url('admin/performance_report/waterPrimary_phase2'); ?>">WATER</a></li>
+                      <li><a href="<?php echo base_url('admin/performance_report/wastePrimary_phase2'); ?>">WASTE</a></li>
+                      <li><a href="<?php echo base_url('admin/performance_report/feedbackPrimary_phase2'); ?>">FEEDBACK</a></li>
+                      <li><a href="<?php echo base_url('admin/performance_report/ExcelPrimary_phase2'); ?>">Total Primary Excel</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">SECONDARY AUDIT PHASE II</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="<?php echo base_url('admin/performance_report/schoolgeneral_phase2'); ?>">School Profile & General</a> </li>
+                      <li><a href="<?php echo base_url('admin/performance_report/air_phase2'); ?>">AIR</a></li>
+                      <li><a href="<?php echo base_url('admin/performance_report/energy_phase2'); ?>">ENERGY</a></li>
+                      <li><a href="<?php echo base_url('admin/performance_report/food_phase2'); ?>">FOOD</a></li>
+                      <li><a href="<?php echo base_url('admin/performance_report/land_phase2'); ?>">LAND</a></li>
+                      <li><a href="<?php echo base_url('admin/performance_report/water_phase2'); ?>">WATER</a></li>
+                      <li><a href="<?php echo base_url('admin/performance_report/waste_phase2'); ?>">WASTE</a></li>
+                      <li><a href="<?php echo base_url('admin/performance_report/feedback_phase2'); ?>">Feedback</a> </li>
+                      <li><a href="<?php echo base_url('admin/performance_report/ExcelSecondary_phase2'); ?>">Total Secondary Excel</a> </li>
+                    </ul>
+                  </li>
+                  <li><a href="<?php echo base_url('admin/performance_report/allExcelDump'); ?>">All Excel Dump</a></li>
+                  <li class=""><a href="<?php echo base_url('admin/performance_report/totalCalculation'); ?>">Total Points Calculation</a> </li>
+                  <li><a href="analysis_report_all_question.php">All Responses</a></li>
                 </ul>
               </li>
               <li class=""><a href="#">ANALYTICS<span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                   <li><a href="<?php echo base_url('admin/reports/'); ?>">Participation By Zone</a></li>
+                  <li><a href="<?php echo base_url('admin/reports/'); ?>">Participation By Zone</a></li>
                   <li><a href="<?php echo base_url('admin/reports/getParticipationByState'); ?>">Participation By State</a></li>
                   <li><a href="<?php echo base_url('admin/reports/getPerformanceByState'); ?>">Performance By State</a></li>
                   <li><a href="report4.php">Performance Comparison Report</a></li>
