@@ -252,16 +252,126 @@ class Performance_report extends CI_Controller {
 	
 	public function ExcelSecondary()
 	{
-		 
-		
 		$data['main']='admin/performance_report/secondarytotal_point';
                 $data['title']='Secondary_Excel';
 		$data['record1']=$this->Performance_model->getExcelSecondarySchool();
 		//echo "<pre>";print_r($data['records']);exit;
-		$this->load->view('admin/includes/template', $data);
-		
+		$this->load->view('admin/includes/template', $data);	
 	}
 	
-    
+     public function air_phase2() {    
+        $this->config->load('array_config');
+        $data['main'] = 'admin/performance_report/air_to_land_phase2';
+        $data['title'] = 'Home | Perofrmance Report';
+        $data['record1'] = $this->Performance_model->air_performance_phase2();
+        $this->load->view('admin/includes/template', $data);
+    }
+	
+	public function schoolgeneral_phase2() {
+        $this->config->load('array_config');
+        $data['main'] = 'admin/performance_report/schoolgeneral_phase2';
+        $data['title'] = 'Home | Perofrmance Report';
+        $data['record1'] = $this->Performance_model->schoolgeneral_performance_phase2();
+        $this->load->view('admin/includes/template', $data);
+    }
+	
+	 public function water_phase2() {
+       $this->config->load('array_config');
+        $data['main'] = 'admin/performance_report/water_phase2';
+        $data['title'] = 'Home | Water';
+        $data['record'] = $this->Performance_model->getDataWater_phase2();
+        $this->load->view('admin/includes/template', $data);
+    }
+	
+	 public function waste_phase2() {
+        $this->config->load('array_config');
+         $data['main'] = 'admin/performance_report/waste';
+        $data['title'] = 'Home | Perofrmance Report';
+        $data['record'] = $this->Performance_model->getDataWaste_phase2();
+        $this->load->view('admin/includes/template', $data);
+    }
+	
+	 public function land_phase2()
+    {
+        $data['main']='admin/performance_report/land_phase2';
+        $data['title']='Land';
+        $data['records']=$this->Performance_model->land_phase2();
+        $this->load->view('admin/includes/template', $data);
+    }
+	
+    public function food_phase2()
+    {
+        $data['main']='admin/performance_report/food_phase2';
+        $data['title']='Food';
+        $data['records']=$this->Performance_model->food_phase2();
+        $this->load->view('admin/includes/template', $data);
+    }
+	
+	public function energy_phase2()
+    {
+        $data['main']='admin/performance_report/energy_phase2';
+        $data['title']='Energy';
+        $data['records']=$this->Performance_model->energy_phase2();
+        $this->load->view('admin/includes/template', $data);
+    }
+	
+	public function landPrimary_phase2()
+	{
+	    $data['main']='admin/performance_report/primary_land_phase2';
+            $data['title']='Primary_Land';
+		$data['records']=$this->Performance_model->getLandPrimarySchool_phase2();
+		$this->load->view('admin/includes/template', $data);	
+	}
+	
+	public function foodPrimary_phase2()
+	 {
+		$data['main']='admin/performance_report/primary_food_phase2';
+        $data['title']='Primary_Food';
+		$data['records']=$this->Performance_model->getFoodPrimarySchool_phase2();
+		$this->load->view('admin/includes/template', $data);
+	 }
+	 public function energyPrimary_phase2()
+	 {
+		$data['main']='admin/performance_report/primary_energy_phase2';
+        $data['title']='Primary_Energy';
+		$data['records']=$this->Performance_model->getEnergyPrimarySchool_phase2();
+		$this->load->view('admin/includes/template', $data);
+	 }
+	
+	public function wastePrimary_phase2()
+	 {
+		$data['main']='admin/performance_report/primary_waste_phase2';
+        $data['title']='Primary_Waste';
+		$data['records']=$this->Performance_model->getWastePrimarySchool_phase2();
+		$this->load->view('admin/includes/template', $data);
+	 }
+	
+	public function waterPrimary_phase2()
+	 {
+		error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
+		$data['main']='admin/performance_report/primary_waste_phase2';
+        $data['title']='Primary_Waste';
+		$data['records']=$this->Performance_model->getWaterPrimarySchool_phase2();
+		$this->load->view('admin/includes/template', $data);
+	 }
+	
+	public function airPrimary_phase2()
+	 {
+	    $data['main']='admin/performance_report/primary_air_phase2';
+        $data['title']='Primary_Air_phase2';
+		$data['record1']=$this->Performance_model->getAirPrimarySchool_phase2();
+		$this->load->view('admin/includes/template', $data);
+	 }
+	
+	public function schoolgeneralPrimary_phase2()
+	{
+		$data['main']='admin/performance_report/primary_schoolgeneral_phase2';
+        $data['title']='Primary_School&Genaral';
+		$data['record1']=$this->Performance_model->getSchoolgeneralPrimarySchool_phase2();
+		$this->load->view('admin/includes/template', $data);
+	}
+	
+	
+	
 
 }
