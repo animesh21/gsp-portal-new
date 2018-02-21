@@ -391,7 +391,7 @@ return $this->db->select('a.*,b.name AS state_name, c.name AS district_name')->f
 	 
 		{
 			
-			return $this->db->select('a.*,b.userid,b.questionid,b.answer,c.name,c.id,d.category,d.population ,e.name AS state_name, f.name AS district_name')
+			return $this->db->select('a.*,b.userid,b.questionid,b.answer,c.name,c.id,d.category,d.population ,e.name AS state_name, f.name AS district_name, c.id AS school_id')
 							->from('tbl_general_phase_2 AS a')	
 			                ->join('gsp_answers As b','a.userid=b.userid','left')
 							->join('gsp_school AS c','b.userid=c.userid', 'left')
