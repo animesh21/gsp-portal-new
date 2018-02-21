@@ -372,6 +372,197 @@ return $this->db->select('a.*,b.name AS state_name, c.name AS district_name')->f
 		
 		}
 		
+	 public function air_performance_phase2()
+	{
+			
+			return $this->db->select('a.*,b.userid,b.questionid,b.answer,c.name,c.id,d.category,d.population')
+							->from('tbl_air_phase_2 AS a')	
+			                ->join('gsp_answers As b','a.userid=b.userid','left')
+							->join('gsp_school AS c','b.userid=c.userid', 'left')
+                 			->join('tbl_general_phase_2 AS d', 'c.userid=d.userid', 'left')
+							->where('b.questionid','Q1G2')
+							->where('b.answer >', 5)
+							->get()->result();
 		
+		
+	} 
+	
+	            public function schoolgeneral_performance_phase2()
+	 
+		{
+			
+			return $this->db->select('a.*,b.userid,b.questionid,b.answer,c.name,c.id,d.category,d.population ,e.name AS state_name, f.name AS district_name')
+							->from('tbl_general_phase_2 AS a')	
+			                ->join('gsp_answers As b','a.userid=b.userid','left')
+							->join('gsp_school AS c','b.userid=c.userid', 'left')
+                 			->join('tbl_general_phase_2 AS d', 'c.userid=d.userid', 'left')
+							->join('states AS e', 'a.state=e.id', 'left')
+							->join('cities AS f', 'a.district=f.id', 'left')
+							->where('b.questionid','Q1G2')
+							->where('b.answer >', 5)
+							->get()->result();
+		
+		}
+	
+	public function land_phase2() {
+		return $this->db->select('a.*,b.userid,b.questionid,b.answer,c.name,c.id,d.category,d.population')
+							->from('tbl_land_phase_2 AS a')	
+			                ->join('gsp_answers As b','a.userid=b.userid','left')
+							->join('gsp_school AS c','b.userid=c.userid', 'left')
+                 			->join('tbl_general_phase_2 AS d', 'c.userid=d.userid', 'left')
+							->where('b.questionid','Q1G2')
+							->where('b.answer >', 5)
+							->get()->result();	
+		}
+	
+	 public function food_phase2() {
+		return $this->db->select('a.*,b.userid,b.questionid,b.answer,c.name,c.id,d.category,d.population')
+							->from('tbl_food_phase_2 AS a')	
+			                ->join('gsp_answers As b','a.userid=b.userid','left')
+							->join('gsp_school AS c','b.userid=c.userid', 'left')
+                 			->join('tbl_general_phase_2 AS d', 'c.userid=d.userid', 'left')
+							->where('b.questionid','Q1G2')
+							->where('b.answer >', 5)
+							->get()->result();	
+		
+		}
+	
+	public function energy_phase2() {
+		return $this->db->select('a.*,b.userid,b.questionid,b.answer,c.name,c.id,d.category,d.population')
+							->from('tbl_energy_phase_2 AS a')	
+			                ->join('gsp_answers As b','a.userid=b.userid','left')
+							->join('gsp_school AS c','b.userid=c.userid', 'left')
+                 			->join('tbl_general_phase_2 AS d', 'c.userid=d.userid', 'left')
+							->where('b.questionid','Q1G2')
+							->where('b.answer >', 5)
+							->get()->result();	
+		
+		}
+	
+	public function getDataWater_phase2() {
+		return $this->db->select('a.*,b.userid,b.questionid,b.answer,c.name,c.id,d.category,d.population')
+							->from('tbl_water_phase_2 AS a')	
+			                ->join('gsp_answers As b','a.userid=b.userid','left')
+							->join('gsp_school AS c','b.userid=c.userid', 'left')
+                 			->join('tbl_general_phase_2 AS d', 'c.userid=d.userid', 'left')
+							->where('b.questionid','Q1G2')
+							->where('b.answer >', 5)
+							->get()->result();	
+		
+		}
+	
+	        public function getDataWaste_phase2() {
+	
+		return $this->db->select('a.*,b.userid,b.questionid,b.answer,c.name,c.id,d.category,d.population')
+							->from('tbl_waste_phase_2 AS a')	
+			                ->join('gsp_answers As b','a.userid=b.userid','left')
+							->join('gsp_school AS c','b.userid=c.userid', 'left')
+                 			->join('tbl_general_phase_2 AS d', 'c.userid=d.userid', 'left')
+							->where('b.questionid','Q1G2')
+							->where('b.answer >', 5)
+							->get()->result();	
+		
+		}
+	
+	 public function getLandPrimarySchool_phase2()
+	{
+		return $this->db->select('a.*,b.userid,b.questionid,b.answer,c.name,c.id,d.category,d.population')
+							->from('tbl_land_phase_2 AS a')	
+			                ->join('gsp_answers As b','a.userid=b.userid','left')
+							->join('gsp_school AS c','b.userid=c.userid', 'left')
+                 			->join('tbl_general_phase_2 AS d', 'c.userid=d.userid', 'left')
+							->where('b.questionid','Q1G2')
+							->where('b.answer <=', 5)
+							->get()->result();
+	 }
+	
+	 public function getFoodPrimarySchool_phase2()
+	 {
+			return $this->db->select('a.*,b.userid,b.questionid,b.answer,c.name,c.id,d.category,d.population')
+							->from('tbl_food_phase_2 AS a')	
+			                ->join('gsp_answers As b','a.userid=b.userid','left')
+							->join('gsp_school AS c','b.userid=c.userid', 'left')
+                 			->join('tbl_general_phase_2 AS d', 'c.userid=d.userid', 'left')
+							->where('b.questionid','Q1G2')
+							->where('b.answer <=', 5)
+							->get()->result();
+	 }
+	
+	  public function getEnergyPrimarySchool_phase2()
+	{
+			
+			return $this->db->select('a.*,b.userid,b.questionid,b.answer,c.name,c.id,d.category,d.population')
+							->from('tbl_energy_phase_2 AS a')	
+			                ->join('gsp_answers As b','a.userid=b.userid','left')
+							->join('gsp_school AS c','b.userid=c.userid', 'left')
+                 			->join('tbl_general_phase_2 AS d', 'c.userid=d.userid', 'left')
+							->where('b.questionid','Q1G2')
+							->where('b.answer <=', 5)
+							->get()->result();
+			
+		
+	 }
+	
+	 public function getWastePrimarySchool_phase2()
+	 {
+			return $this->db->select('a.*,b.userid,b.questionid,b.answer,c.name,c.id,d.category,d.population')
+							->from('tbl_waste_phase_2 AS a')	
+			                ->join('gsp_answers As b','a.userid=b.userid','left')
+							->join('gsp_school AS c','b.userid=c.userid', 'left')
+                 			->join('tbl_general_phase_2 AS d', 'c.userid=d.userid', 'left')
+							->where('b.questionid','Q1G2')
+							->where('b.answer <=', 5)
+							->get()->result();	
+	 }
+	
+	 public function getWaterPrimarySchool_phase2()
+	{
+			return $this->db->select('a.*,b.userid,b.questionid,b.answer,c.name,c.id,d.category,d.population')
+							->from('tbl_water_phase_2 AS a')	
+			                ->join('gsp_answers As b','a.userid=b.userid','left')
+							->join('gsp_school AS c','b.userid=c.userid', 'left')
+                 			->join('tbl_general_phase_2 AS d', 'c.userid=d.userid', 'left')
+							->where('b.questionid','Q1G2')
+							->where('b.answer <=', 5)
+							->get()->result();
+			
+		
+	 }
+	
+	public function getAirPrimarySchool_phase2()
+		{
+		  return $this->db->select('a.*,b.userid,b.questionid,b.answer,c.name,c.id,d.category AS category,d.population')
+							->from('tbl_air_phase_2 AS a')	
+			                ->join('gsp_answers As b','a.userid=b.userid','left')
+							->join('gsp_school AS c','b.userid=c.userid', 'left')
+                 			->join('tbl_general_phase_2 AS d', 'c.userid=d.userid', 'left')
+							->where('b.questionid','Q1G2')
+							->where('b.answer <=', 5)
+							->get()->result();
+		}
+	
+	 public function getSchoolgeneralPrimarySchool_phase2()
+		{
+			
+			return $this->db->select('a.*,b.userid,b.questionid,b.answer,c.name,c.id,d.category,d.population ,e.name AS state_name, f.name AS district_name')
+							->from('tbl_general_phase_2 AS a')	
+			                ->join('gsp_answers As b','a.userid=b.userid','left')
+							->join('gsp_school AS c','b.userid=c.userid', 'left')
+                 			->join('tbl_general_phase_2 AS d', 'c.userid=d.userid', 'left')
+							->join('states AS e', 'a.state=e.id', 'left')
+							->join('cities AS f', 'a.district=f.id', 'left')
+							->where('b.questionid','Q1G2')
+							->where('b.answer <=', 5)
+							->get()->result();
+		
+		}
+	
+	
+	
+	
+		
+	
+	
+	
 	
 }
