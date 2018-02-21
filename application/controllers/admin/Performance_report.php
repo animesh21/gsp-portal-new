@@ -371,7 +371,24 @@ class Performance_report extends CI_Controller {
         $data['record1'] = $this->Performance_model->air_performance_phase2();
         $this->load->view('admin/includes/template', $data);
        }
-	
+	/******************************************************************/
+	/******************************************************************/
+	public function ExcelPrimary_Phase2()
+	{
+		$data['main']='admin/performance_report/primarytotal_point_phase2';
+        $data['title']='Primary_Excel';
+		$data['record1']=$this->Performance_model->getExcelPrimarySchool_phase2();
+		$this->load->view('admin/includes/template', $data);
+	}
+	/******************************************************************/
+	/******************************************************************/
+	public function ExcelSecondary_Phase2()
+	{
+		$data['main']='admin/performance_report/secondarytotal_point_phase2';
+        $data['title']='Secondary_Excel';
+		$data['record1']=$this->Performance_model->getExcelSecondarySchool_phase2();
+		$this->load->view('admin/includes/template', $data);
+	} 
 	
 
 }
