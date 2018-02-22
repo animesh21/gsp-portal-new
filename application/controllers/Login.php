@@ -28,7 +28,13 @@ class Login extends CI_Controller {
 				}
 				elseif($varCheckLogin=="warning")
 				{
-				  $this->session->set_flashdata('error', "The GSP Audit For 2017 Session Has Been Completed.");
+				  $this->session->set_flashdata('error', "Dear
+
+GSP Audit 2017 is closed and GSP Audit 2018 will be open for participation by mid-2018. Please log in to the website for updates. In case you would like to update information such as GSP co-ordinator's name, principal's name, mobile number, email address, etc, please send a mail with changes required to  support@greenschoolsprogramme.org
+
+If your school has not registered earlier for the GSP Audit, please register here.
+
+With best wishes, The GSP Team");
 				}
             } else if($varCheckLogin=="error") {
                 $this->session->set_flashdata('error', 'Invalid Email/Password!');
