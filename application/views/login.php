@@ -19,7 +19,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <style>
             .alert {
-                height: 50px !important;
+               height: 132px !important;
                 padding: 15px !important;
                 font-weight: bold;
                 border-radius: 0px;
