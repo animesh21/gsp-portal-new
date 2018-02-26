@@ -21,6 +21,7 @@
 		<th>Landline No.</th>
 		<th>Mobile No.</th>
 		<th>Principal&#39;s Name</th>
+		<th>School Email-Id</th>
 		<th>GSP Coordintor Name</th>
 		<th>GSP Coordintor Email</th>
 		<th>GSP Coordintor Mobile</th>
@@ -639,6 +640,7 @@
     		<td><?php echo $record1[$i]->landline; ?></td>
     		<td><?php echo $record1[$i]->mobile; ?></td>
     		<td><?php echo $record1[$i]->principal; ?></td>
+		<td><?php echo $record1[$i]->schoolemail; ?></td>
     		<td><?php echo $record1[$i]->codinator; ?></td>
     		<td><?php echo $record1[$i]->codinator_mail; ?></td>
     		<td><?php echo $record1[$i]->codinator_mobile; ?></td>
