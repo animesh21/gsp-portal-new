@@ -400,11 +400,7 @@ function getdigitalCertificate($argID) {
    //Students Records
    $students = $this->count_certificates_stuents($argID);
    $staffadmin = $this->count_certificates_staffamin($argID);
-//    echo '<pre>';
-   // print_r($students);exit;
-//    echo '<pre>';
-  //  print_r($staffadmin);exit;
-//    exit;
+
    $data['students'] = $students;
    $data['staffadmin'] = $staffadmin;
    $html1 = $this->load->view('admin/survey/digital-certificate', $data, true);
