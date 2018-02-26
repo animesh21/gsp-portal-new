@@ -26,13 +26,14 @@ class Dashboard extends CI_Controller {
     
 	
 	public function audit_pahse_1(){
-	    $data['main']='admin/dashboard/audit-pahse-1';
-        $data['title']='Home | Audit Phase 1';
+	        $data['main']='admin/dashboard/audit-pahse-1';
+                $data['title']='Home | Audit Phase 1';
 		$data['audit1']=$this->Dashboard_model->getschool_started_audit();
-        $data['Schools'] = $this->School_model->getSchools();
-        $data['schoolcount']=$this->Dashboard_model->schoolCount();
+                $data['Schools'] = $this->School_model->getSchools();
+                $data['schoolcount']=$this->Dashboard_model->schoolCount();
 		$data['completecount']=$this->Dashboard_model->getschool_that_complete_audit();
 		$data['submitcount']=$this->Dashboard_model->getschool_that_submit_audit();
+		$data['submitcount2']=$this->Dashboard_model->getschool_that_submit_audit_phase_2();
 		$data['uncompletecount']=$this->Dashboard_model->getschool_start_but_not_complete();
 		$data['notstartcount']=$this->Dashboard_model->getschools_not_start_the_audit();
 	    $this->load->view('admin/includes/template', $data);
