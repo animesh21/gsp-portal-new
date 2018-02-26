@@ -13,20 +13,29 @@
   </a>
   <div class="title">Schools That Started The Audit</div>
 </div>
-<div class="schools-statics"> <a href="../<?php base_url()?>dashboard/school_that_complete_audit">
-  <div class="statics-circle"> <span><?php echo $completecount;?></span>
+<!--<div class="schools-statics"> <a href="../<?php //base_url()?>dashboard/school_that_complete_audit">
+  <div class="statics-circle"> <span><?php //echo $completecount;?></span>
     <label>view</label>
   </div>
   </a>
   <div class="title">Schools Completed The Audit But Not Submitted</div>
-</div>
+</div>-->
 <div class="schools-statics"> <a href="../<?php base_url()?>dashboard/school_that_submit_audit">
   <div class="statics-circle"> <span><?php echo $submitcount;?></span>
     <label>view</label>
   </div>
   </a>
-  <div class="title">Schools Submitted The Audit</div>
+  <div class="title">School submitted the Audit in Phase 1</div>
 </div>
+<div class="schools-statics"> <a href="../<?php base_url()?>dashboard/school_that_submit_audit_phase_2">
+  <div class="statics-circle"> <span><?php echo $submitcount2;?></span>
+    <label>view</label>
+  </div>
+  </a>
+  <div class="title">School submitted the Audit in Phase 2</div>
+</div>
+
+
 <div class="schools-statics"><a href="../<?php base_url()?>dashboard/audit_started_but_not_complete" target="_blank">
   <div class="statics-circle"> <span><?php echo $uncompletecount;?></span>
     <label>view</label>
