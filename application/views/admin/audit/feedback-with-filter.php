@@ -28,7 +28,8 @@
         <div class="form-group col-md-4">
           <label for="pwd">Select User Email-Id:</label>
          <select  class="form-control" name="email">
-		     <option value="coemail"> Coordinator Email</option>
+		         <option value="allemail"> All Email</option>
+		         <option value="coemail"> Coordinator Email</option>
 			 <option value="schoolemail">  School Email</option>
 		  </select>
         </div>
