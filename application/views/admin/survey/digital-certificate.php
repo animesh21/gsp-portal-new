@@ -27,7 +27,7 @@ style='background:url(assets/img/images/Certificate-2017.jpg) 0% 17%  no-repeat;
 	    for ($i = 0; $i < count($principal); $i++) {
 		if ($principal != '') {
 		    echo "<div class='container' 
-style='background:url(assets/img/images/Certificate-2017.jpg) 0% -17%  no-repeat; width:1124px; height:791px; margin:0px auto;'><div class='first_name'>" . $principal[$i]['name'] . "</div>&nbsp;<div class='school_name'>" .  $principal[$i]['schoolname'] . "</div></div>";
+style='background:url(assets/img/images/Certificate-2017.jpg) 0% -17%  no-repeat; width:1124px; height:791px; margin:0px auto;'><div class='first_name1'>" . $principal[$i]['name'] . "</div>&nbsp;<div class='school_name1'>" .  $principal[$i]['schoolname'] . "</div></div>";
 		}
 	    }
 	}
@@ -36,7 +36,9 @@ style='background:url(assets/img/images/Certificate-2017.jpg) 0% -17%  no-repeat
     </body>
 </html>
 <style type="text/css">
-    .first_name{ position:absolute; top:405px; left:240px}
-	.school_name{ position:absolute; top:452px; left:100px}
-    .grade{position:absolute; top:265px; left:650px}
+        .first_name{ position:absolute; top:405px; left:240px}
+	    .school_name{ position:absolute; top:452px; left:100px}
+		.first_name1{ position:absolute; top:400px; left:240px}
+	    .school_name1{ position:absolute; top:447px; left:100px}
+        .grade{position:absolute; top:265px; left:650px}
 </style>
