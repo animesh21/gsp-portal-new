@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "GSP_2016";
+$username = "GSP_2015";
 $password = "Studio@123";
-$dbname = "GSP_2016";
+$dbname = "GSP_2015";
 // Create connection
 $conn = mysqli_connect($servername, $username, $password,$dbname);
 // Check connection
