@@ -400,9 +400,11 @@ function getdigitalCertificate($argID) {
    //Students Records
    $students = $this->count_certificates_stuents($argID);
    $staffadmin = $this->count_certificates_staffamin($argID);
-
+   $principal=$this->digital_certificate_for_principal_coordinator($argID);
+	
    $data['students'] = $students;
    $data['staffadmin'] = $staffadmin;
+   $data['principal'] = $principal;	
    $html1 = $this->load->view('admin/survey/digital-certificate', $data, true);
    $this->dompdf->load_html($html1);
    $this->dompdf->set_paper(array(0, 0, 505, 691), 'portrait');
@@ -434,6 +436,26 @@ function getdigitalCertificate($argID) {
    return $arrStudents;
   }
 
+public function digital_certificate_for_principal_coordinator($argID)
+  {
+   $arrForcoordinator_principal=array();
+   $principal_coordinator=$this->db->select('principle_name,coname')
+				->from('gsp_school')
+				->where('userid',$argID)
+				->get()->row();
+   $username=$this->db->select('username')
+				->from('gsp_user')
+				->where('id',$argID)
+				->get()->row();
+   foreach ($principal_coordinator as $q) {
+     $arrForcoordinator_principal[]=array('name'=>$q,'schoolname'=>$username->username);
+   }
+   return $arrForcoordinator_principal;
+  }
+	
+	
+	
+	
   public function count_certificates_staffamin($argID) {
    $airTeachers=array();
    $arrStaff = array();
