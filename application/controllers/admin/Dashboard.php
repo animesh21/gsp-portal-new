@@ -17,17 +17,19 @@ class Dashboard extends CI_Controller {
     }
 
     public function index() {
-        $data['main']='admin/dashboard/index';
+	$data['main']='admin/dashboard/year';
+        $data['title']='Home | Dashboard';
+	
+        $this->load->view('admin/includes/template', $data);    
+	    
+       
+    }
+	
+    public function year() {
+         $data['main']='admin/dashboard/index';
         $data['title']='Home | Dashboard';
 	$data['audit1']=$this->School_model->getSchools();
 	$data['audit2']=$this->School_model->getSchools_phase_2();
-        $this->load->view('admin/includes/template', $data);
-    }
-	
-    public function Year() {
-        $data['main']='admin/dashboard/year';
-        $data['title']='Home | Dashboard';
-	
         $this->load->view('admin/includes/template', $data);
     }
 	
