@@ -3,7 +3,7 @@ $d_year='';
 session_start();
 ob_start();
 if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
-    header('location:/audit2017/old/' . $_SESSION['year'] . '/dashboard.php');
+    header('location:/audit2017/np/' . $_SESSION['year'] . '/dashboard.php');
 }
 include('website_db.php');
 $error = "";
@@ -25,9 +25,9 @@ if (isset($_REQUEST['submit'])) {
         $_SESSION['name'] = $sql_data_array['name'];
         $_SESSION['year'] = $_REQUEST['year'];
         if ($d_year == '2015')
-            header('location:/audit2017/old/2015/dashboard.php');
+            header('location:/audit2017/np/2015/dashboard.php');
         else if ($d_year == '2016')
-            header('location:/audit2017/old/2016/dashboard.php');
+            header('location:/audit2017/np/2016/dashboard.php');
     }
     else {
         $error = "Please enter correct login credentials.";
