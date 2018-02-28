@@ -28,7 +28,7 @@
 		<div class="form-group col-md-4">
 		    <label for="pwd">Select User Email-Id:</label>
 		    <select  class="form-control" name="email">
-			<option value="allemail"> All Email</option>
+                        <option value="allemail" selected="selected"> All Email</option>
 			<option value="coemail"> Coordinator Email</option>
 			<option value="schoolemail">  School Email</option>
 		    </select>
@@ -150,7 +150,7 @@
 		</div>
 		<div class="form-group col-md-4">
 		    <label for="pwd">Select State :</label>
-		    <?php echo form_dropdown('state', $states, $this->input->post('state'), array('class' => 'form-control', 'id' => 'country-select')); ?></div>
+		    <?php echo form_dropdown('state', $states, 0, array('class' => 'form-control', 'id' => 'country-select')); ?></div>
 		<div class="form-group  col-lg-4">
 		    <label for="pwd">School-Category :</label>
 		    <?php echo form_dropdown('school', array('0' => 'Primary', '1' => 'Secondary', '2' => 'All'), $this->input->post('school'), array('class' => 'form-control', 'id' => 'school-select')); ?> </div>
