@@ -110,7 +110,7 @@ class School_model extends CI_Model
             $msg .= "Pincode: " . $query->pincode . "<br><br>";
             $msg .= "Land Line No: " . "91 - " . $query->std . " - " . $query->telephone . "<br><br>";
             $msg .= "Principal's Name: " . $query->principle_name . "<br><br>";
-            $msg .= "Moblile Number: " . $query->mobile . "<br><br>";
+            $msg .= "Mobile Number: " . $query->mobile . "<br><br>";
             $msg .= "GSP Coordinator's Name: " . $query->coname . "<br><br>";
             $msg .= "GSP Coordinator's Email: " . $query->coemail . "<br><br>";
             $msg .= "Mobile Number: " . $query->comobile . "<br><br>";
