@@ -22,7 +22,15 @@ style='background:url(assets/img/images/Certificate-2017.jpg) 0% 17%  no-repeat;
 		}
 	    }
 	}
-	
+	    
+	if (!empty($principal)) {
+	    for ($i = 0; $i < count($principal); $i++) {
+		if ($principal != '') {
+		    echo "<div class='container' 
+style='background:url(assets/img/images/Certificate-2017.jpg) 0% -17%  no-repeat; width:1124px; height:791px; margin:0px auto;'><div class='first_name'>" . $principal[$i]['name'] . "</div>&nbsp;<div class='school_name'>" .  $principal[$i]['schoolname'] . "</div></div>";
+		}
+	    }
+	}
 	
 	?>
     </body>
