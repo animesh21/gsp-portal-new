@@ -23,7 +23,13 @@ class Dashboard extends CI_Controller {
 	$data['audit2']=$this->School_model->getSchools_phase_2();
         $this->load->view('admin/includes/template', $data);
     }
-    
+	
+    public function Year() {
+        $data['main']='admin/dashboard/year';
+        $data['title']='Home | Dashboard';
+	
+        $this->load->view('admin/includes/template', $data);
+    }
 	
 	public function audit_pahse_1(){
 	        $data['main']='admin/dashboard/audit-pahse-1';
