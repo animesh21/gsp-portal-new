@@ -744,7 +744,7 @@ class Audit_started_model extends CI_Model {
 	
     public function getExcelDataByProgress_phase2($progress) {
         $output = "";
-        $arrRecord = $this->db->select('a.*, b.name AS state_name, c.name AS district_name, d.password')
+       /* $arrRecord = $this->db->select('a.*, b.name AS state_name, c.name AS district_name, d.password')
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
                         ->join('cities AS c', 'a.district=c.id', 'left')
@@ -753,7 +753,15 @@ class Audit_started_model extends CI_Model {
 						->where($progress)
 						->where('a.complete_status =', '0')
 						->order_by('a.id', 'desc')
-                        ->get()->result();
+                        ->get()->result(); */
+	  $arrRecord = $this->db->select('a.*, b.name AS state_name,c.name As district_name')
+					->from('gsp_school AS a')
+					->join('states AS b', 'a.state=b.id', 'left')
+					->join('cities AS c', 'a.district=c.id', 'left')
+					->where('progress=100')
+					->where('date_added >', '2017-11-29 00:00:00')
+					->order_by('a.id', 'desc')
+					->get()->result();    
         //echo '<pre>'; print_r($arrRecord); exit;
         $k = 1;
         $isdCode = '+91';
