@@ -658,7 +658,7 @@ if ($data == 3 || $data == 4) { ?>
             }
             $packageditem = array_sum($totalFlavourVariaint) + array_sum($totalItemSold) + array_sum($monthFoodSold);
             
-            if ($packageditem == "" || $packageditem < 1) {
+            if ( $packageditem < 1) {
                 $packageitem_served = "Yes";
                 $packageitem_served_msg = "Your school has scored points in the food section as your canteen does not sell ultra processed packaged food and packaged/bottled drinks.";
             } else {
