@@ -773,7 +773,9 @@ if ($data == 3 || $data == 4) { ?>
 
                 //Green landscaped area on-ground + Green cover on exposed roof & terrace + Play area that has grass on ground
                 $total_green_cover_area = getFiled('Q4L2', $schoolUserID) + getFiled('Q4L4', $schoolUserID) + getFiled('Q4L10', $schoolUserID);
-				if($total_site_area==0){
+		echo $total_site_area.'bjkhgujghg'.$total_green_cover_area; 			
+	    	
+	    if($total_site_area==0){
 				  $green_cover_perc=0;
 				}else{
                 $green_cover_perc = number_format((($total_green_cover_area / $total_site_area) * 100), 2);
