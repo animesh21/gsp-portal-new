@@ -769,8 +769,8 @@ if ($data == 3 || $data == 4) { ?>
           <div class="description">
             <h3>Total Green Cover</h3>
             <?php
-                $total_site_area = (getFiled('Q4L2', $schoolUserID) != '') ? getFiled('Q4L2', $schoolUserID) : 0 + (getFiled('Q4L3', $schoolUserID) != '') ? getFiled('Q4L3', $schoolUserID) : 0 + (getFiled('Q4L4', $schoolUserID) != '') ? getFiled('Q4L4', $schoolUserID) : 0 + (getFiled('Q4L5', $schoolUserID) != '') ? getFiled('Q4L5', $schoolUserID) : 0 + (getFiled('Q4L6', $schoolUserID) != '') ? getFiled('Q4L6', $schoolUserID) : 0 + (getFiled('Q4L7', $schoolUserID) != '') ? getFiled('Q4L7', $schoolUserID) : 0 + (getFiled('Q4L8', $schoolUserID) != '') ? getFiled('Q4L8', $schoolUserID) : 0;
-
+                $total_site_area = ((getFiled('Q4L2', $schoolUserID) != '') ? getFiled('Q4L2', $schoolUserID) : 0) + ((getFiled('Q4L3', $schoolUserID) != '') ? getFiled('Q4L3', $schoolUserID) : 0) + ((getFiled('Q4L4', $schoolUserID) != '') ? getFiled('Q4L4', $schoolUserID) : 0) + ((getFiled('Q4L5', $schoolUserID) != '') ? getFiled('Q4L5', $schoolUserID) : 0) + ((getFiled('Q4L6', $schoolUserID) != '') ? getFiled('Q4L6', $schoolUserID) : 0) + ((getFiled('Q4L7', $schoolUserID) != '') ? getFiled('Q4L7', $schoolUserID) : 0) + ((getFiled('Q4L8', $schoolUserID) != '') ? getFiled('Q4L8', $schoolUserID) : 0);
+	
                 //Green landscaped area on-ground + Green cover on exposed roof & terrace + Play area that has grass on ground
                 $total_green_cover_area = getFiled('Q4L2', $schoolUserID) + getFiled('Q4L4', $schoolUserID) + getFiled('Q4L10', $schoolUserID);
 		echo $total_site_area.'bjkhgujghg'.$total_green_cover_area; 			
