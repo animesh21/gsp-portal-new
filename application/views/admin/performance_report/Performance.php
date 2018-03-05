@@ -983,7 +983,7 @@ if ($data == 3 || $data == 4) { ?>
                                     $wcombination_msg =implode(",",$wcombination);                                     
                                     
                                     $SourceofWater =$wcombination_msg;
-                                    $SourceofWater_msg = "Your source of water is combination of $wcombination_msg. Which is not sufficient to fulfill the water requirements of your school. You should expand your source of water to more options such as surface water, rainwater and recycled wastewater.";
+                                    $SourceofWater_msg = "Your source of water is combination of '".$wcombination_msg."'. Which is not sufficient to fulfill the water requirements of your school. You should expand your source of water to more options such as surface water, rainwater and recycled wastewater.";
                                 }else if ($Surfacewater == "Y" || $Rainwater == "Y" || $Recycledwastewater == "Y" || $Groundwater == "Y") {
                                     
                                     if($Surfacewater == "Y")
@@ -1009,7 +1009,7 @@ if ($data == 3 || $data == 4) { ?>
                                      $wcombination_msg =implode(",",$wcombination);                                     
                                     
                                     $SourceofWater =$wcombination_msg;
-                                    $SourceofWater_msg = "Your source of water is combination of $wcombination_msg. Which is not sufficient to fulfill the water requirements of your school. You should expand your source of water to more options such as surface water, rainwater and recycled wastewater.";
+                                    $SourceofWater_msg = "Your source of water is combination of '".$wcombination_msg."'. Which is not sufficient to fulfill the water requirements of your school. You should expand your source of water to more options such as surface water, rainwater and recycled wastewater.";
                                 }
                                 ?>
                         <h4><?php echo $SourceofWater; ?></h4>
