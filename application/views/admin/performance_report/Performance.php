@@ -1505,7 +1505,7 @@ if ($data == 3 || $data == 4) { ?>
 		  		if(isset($ablution_taps_q10) && !empty($ablution_taps_q10)){
                                 $ablution_taps_q10 = $ablution_taps_q10;
 				}else{
-				    $ablution_taps_q10 = 1
+				    $ablution_taps_q10 = 1;
 				}
 		  		$Load_for_ablution_taps = $total_population / $ablution_taps_q10;
                                 if ($Load_for_ablution_taps <= 50 && $ablution_taps_q10 != "" && $ablution_taps_q10 != 0) {
