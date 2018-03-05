@@ -657,7 +657,6 @@ if ($data == 3 || $data == 4) { ?>
                 $monthFoodSold[] = (getFiled('Q6F' . $i . 'S3', $schoolUserID) != '') ? (getFiled('Q6F' . $i . 'S3', $schoolUserID)) : 0;
             } 
             $packageditem = array_sum($totalFlavourVariaint) + array_sum($totalItemSold) + array_sum($monthFoodSold);
-            echo array_sum($totalFlavourVariaint).'dfs'.array_sum($totalItemSold) .'kkgk'.array_sum($monthFoodSold).'gjhjh'.$packageditem;
             if ( $packageditem >= 0 && $packageditem < 1) {
                 $packageitem_served = "Yes";
                 $packageitem_served_msg = "Good that your school canteen doesn't sells ultra processed packaged food, beverages and packaged/bottled drinks.";
