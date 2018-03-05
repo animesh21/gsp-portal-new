@@ -1988,9 +1988,10 @@ if ($waste_recycle == "Y") {
             <p><?php echo $waste_msg42 ?></p>
             <?php
             } 
-}
-?>
-            <p>School does not recycle the waste</p>
+}else{ ?>
+    <p>School does not recycle the waste</p>	
+<?php } ?>
+            
           </div>
         </li>
         <li>
