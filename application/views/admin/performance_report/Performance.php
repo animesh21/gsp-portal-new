@@ -658,15 +658,15 @@ if ($data == 3 || $data == 4) { ?>
             } 
             $packageditem = array_sum($totalFlavourVariaint) + array_sum($totalItemSold) + array_sum($monthFoodSold);
             echo array_sum($totalFlavourVariaint).'dfs'.array_sum($totalItemSold) .'kkgk'.array_sum($monthFoodSold).'gjhjh'.$packageditem;
-            if ( $packageditem > 0 && $packageditem < 1) {
+            if ( $packageditem >= 0 && $packageditem < 1) {
                 $packageitem_served = "Yes";
-                $packageitem_served_msg = "Your school has scored points in the food section as your canteen does not sell ultra processed packaged food and packaged/bottled drinks.";
+                $packageitem_served_msg = "Good that your school canteen doesn't sells ultra processed packaged food, beverages and packaged/bottled drinks.";
             } else {
             $packageitem_served = "No";
             $packageitem_served_msg = "Your school sells ultra processed packaged food (UPPF) items daily in the campus - a practice that needs to be discouraged as UPPF items are high in fats, salt and sugar and harm children. We suggest that with the beginning of the new academic session, unhealthy food items be substituted with local and seasonal delicacies.";
             }
         ?>
-            <!--        <h4><?php echo $packageitem_served; ?></h4>-->
+          
             <p><?php echo $packageitem_served_msg; ?></p>
           </div>
         </li>
