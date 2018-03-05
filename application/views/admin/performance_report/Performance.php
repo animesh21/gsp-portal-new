@@ -134,7 +134,7 @@
 			    $area_opening = getFiled('Q5A110S3', $schoolUserID);
 				if(isset($area_opening) && $area_opening!=0)
 				{
-			    $avg = ($window_floor / $area_opening) * 100;
+			    $avg = ($area_opening / $window_floor ) * 100;
 					
 		           $view_avg = number_format($avg, 2);
 			?>
