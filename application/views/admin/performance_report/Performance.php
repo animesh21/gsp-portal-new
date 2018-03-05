@@ -655,9 +655,9 @@ if ($data == 3 || $data == 4) { ?>
                 $totalFlavourVariaint[] = (getFiled('Q6F' . $i . 'S1', $schoolUserID) != '') ? (getFiled('Q6F' . $i . 'S1', $schoolUserID)) : 0;
                 $totalItemSold[] = (getFiled('Q6F' . $i . 'S2', $schoolUserID) != '') ? (getFiled('Q6F' . $i . 'S2', $schoolUserID)) : 0;
                 $monthFoodSold[] = (getFiled('Q6F' . $i . 'S3', $schoolUserID) != '') ? (getFiled('Q6F' . $i . 'S3', $schoolUserID)) : 0;
-            }
+            } 
             $packageditem = array_sum($totalFlavourVariaint) + array_sum($totalItemSold) + array_sum($monthFoodSold);
-            
+            echo $totalFlavourVariaint.'dfs'.$totalItemSold.'kkgk'.$monthFoodSold.'gjhjh'.$packageditem;
             if ( $packageditem < 1) {
                 $packageitem_served = "Yes";
                 $packageitem_served_msg = "Your school has scored points in the food section as your canteen does not sell ultra processed packaged food and packaged/bottled drinks.";
