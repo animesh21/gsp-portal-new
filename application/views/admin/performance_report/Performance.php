@@ -455,6 +455,26 @@ if ($data == 3 || $data == 4) { ?>
                                 if($total_population==0){
                                   $total_population_smv_percentage=$total_population_npm_percentage=$total_population_npm_percentage=0;  
                                 }else{
+				 if(getFiled('Q7A1S4', $schoolUserID)!=0){
+					$smv[0]= 'school bus';
+				 }
+				if(getFiled('Q7A2S4', $schoolUserID)!=0){
+					$smv[1]= 'public bus';
+				 }
+				if(getFiled('Q7A3S4', $schoolUserID)!=0){
+					$smv[2]= 'School transport(other than bus)';
+				 }
+				 if(getFiled('Q7A4S4', $schoolUserID)!=0){
+					$smv[3]= 'public transport(other than bus)';
+				 }
+				if(getFiled('Q7A5S4', $schoolUserID)!=0){
+					$smv[4]= 'Taxi four wheeler';
+				 }
+				if(getFiled('Q7A6S4', $schoolUserID)!=0){
+					$smv[5]= 'Taxi three wheeler';
+				 }
+				$smv_wheel= implode(',',$smv);
+    					
                                 $total_population_smv = getFiled('Q7A1S4', $schoolUserID)+getFiled('Q7A2S4', $schoolUserID)+getFiled('Q7A3S4', $schoolUserID)+getFiled('Q7A4S4', $schoolUserID)+getFiled('Q7A5S4', $schoolUserID)+getFiled('Q7A6S4', $schoolUserID);
                                  //Non polluting mode(NPM)
                                 $total_population_smv_percentage = round((($total_population_smv * 100)/$total_population),2);
@@ -470,7 +490,7 @@ if ($data == 3 || $data == 4) { ?>
                                 } 
                                 if ($total_population_smv_percentage > 50 && $total_population_npm_percentage < 50 ) {
                                     $members_use_transport_type = "More than 50% population using sustainable motorized vehicles and less than 50% population using Non- polluting mode of transport";
-                                    $members_use_transport_msg = "Good, most of the students and staff use Sustainable Motorized Transport. "; ?>
+                                    $members_use_transport_msg = "Good, most of the students and staff use Sustainable Motorized Transport. (". $smv_wheel.')'; ?>
           <h4><?php echo $members_use_transport_type; ?></h4>
           <p><?php echo $members_use_transport_msg; ?></p>
           <?php
