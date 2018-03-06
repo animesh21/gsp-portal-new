@@ -480,11 +480,27 @@ if ($data == 3 || $data == 4) { ?>
                                 $total_population_smv_percentage = round((($total_population_smv * 100)/$total_population),2);
                                 
                                 $total_population_npm = getFiled('Q7A9S4', $schoolUserID)+getFiled('Q7A10S4', $schoolUserID)+getFiled('Q7A11S4', $schoolUserID);
-                                
+                                if(getFiled('Q7A9S4', $schoolUserID)!=0){
+					$npm[0]= 'Bicycle';
+				 }
+				 if(getFiled('Q7A10S4', $schoolUserID)!=0){
+					$npm[1]= 'On foot';
+				 }
+				 if(getFiled('Q7A11S4', $schoolUserID)!=0){
+					$npm[2]= 'Other non-motersied';
+				 }	
+				$npm_wheel= implode(',',$npm);	
                                 $total_population_npm_percentage = round((($total_population_npm * 100)/$total_population),2);
                                  //Private vehicles population
                                 $private_veh_population = getFiled('Q7A7S4', $schoolUserID) + getFiled('Q7A8S4', $schoolUserID);
-                                $total_smv_npm = $total_population_smv + $total_population_npm;
+                                if(getFiled('Q7A7S4', $schoolUserID)!=0){
+					$private[0]= 'Personal four wheeler';
+				 }
+				 if(getFiled('Q7A8S4', $schoolUserID)!=0){
+					$private[1]= 'Personal two wheeler';
+				 }
+				$private_wheel= implode(',',$private);
+				$total_smv_npm = $total_population_smv + $total_population_npm;
                                 
                                 $private_veh_population_percentage = round((($private_veh_population * 100)/$total_population),2);
                                 } 
@@ -496,13 +512,13 @@ if ($data == 3 || $data == 4) { ?>
           <?php
                                 } elseif ($total_population_smv_percentage < 50 && $total_population_npm_percentage > 50) {
                                     $members_use_transport_type = "More than 50% population using Non- polluting mode of transport and less than 50% population using sustainable motorized vehicles";
-                                    $members_use_transport_msg = "Good, most of the students and staff use Non- polluting mode of transport (NPT)."; ?>
+                                    $members_use_transport_msg = "Good, most of the students and staff use Non- polluting mode of transport (NPT).(". $smv_wheel.')(.'$npm_wheel .')'; ?>
           <h4><?php echo $members_use_transport_type; ?></h4>
           <p><?php echo $members_use_transport_msg; ?></p>
           <?php		
                                 } elseif ($private_veh_population_percentage > 50) {
                                     $members_use_transport_type = "More than 50% population using Private vehicles";
-                                    $members_use_transport_msg = "Your school mostly uses private vehicles for transportation. We recommend that you encourage the staff and students to use public transport and also to car pool. "; ?>
+                                    $members_use_transport_msg = "Your school mostly uses private vehicles for transportation. We recommend that you encourage the staff and students to use public transport and also to car pool.<br/> (". $private_wheel.')'; ?>
           <h4><?php echo $members_use_transport_type; ?></h4>
           <p><?php echo $members_use_transport_msg; ?></p>
           <?php }
