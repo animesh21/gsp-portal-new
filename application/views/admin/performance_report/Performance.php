@@ -7,6 +7,18 @@
 <link href="<?php echo base_url(); ?>assets/css/performance.css" rel="stylesheet" media="print">
 <style type="text/css">
 /*img{ width:137px!important; height:125px!important;}*/
+.label {
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+}	
 </style>
 </head>
 <body>
