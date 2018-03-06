@@ -442,19 +442,19 @@ if ($data == 3 || $data == 4) { ?>
                                 } 
                                 if ($total_population_smv_percentage > 50 && $total_population_npm_percentage < 50 ) {
                                     $members_use_transport_type = "More than 50% population using sustainable motorized vehicles and less than 50% population using Non- polluting mode of transport";
-                                    $members_use_transport_msg = "Good most of the students and staff use Sustainable Motorized Vehicle (SMV). School should now motivate them to use Non- polluting mode of transport (NPT)."; ?>
+                                    $members_use_transport_msg = "Good, most of the students and staff use Sustainable Motorized Transport. "; ?>
           <h4><?php echo $members_use_transport_type; ?></h4>
           <p><?php echo $members_use_transport_msg; ?></p>
           <?php
                                 } elseif ($total_population_smv_percentage < 50 && $total_population_npm_percentage > 50) {
                                     $members_use_transport_type = "More than 50% population using Non- polluting mode of transport and less than 50% population using sustainable motorized vehicles";
-                                    $members_use_transport_msg = "Good most of the students and staff use Non- polluting mode of transport (NPT). School should now motivate rest of the population to use Non- polluting mode of transport."; ?>
+                                    $members_use_transport_msg = "Good, most of the students and staff use Non- polluting mode of transport (NPT)."; ?>
           <h4><?php echo $members_use_transport_type; ?></h4>
           <p><?php echo $members_use_transport_msg; ?></p>
           <?php		
                                 } elseif ($private_veh_population_percentage > 50) {
                                     $members_use_transport_type = "More than 50% population using Private vehicles";
-                                    $members_use_transport_msg = "Your school mostly uses private vehicles for transportation. We recommend that you encourage the staff and students to use public transport and also to car pool."; ?>
+                                    $members_use_transport_msg = "Your school mostly uses private vehicles for transportation. We recommend that you encourage the staff and students to use public transport and also to car pool. "; ?>
           <h4><?php echo $members_use_transport_type; ?></h4>
           <p><?php echo $members_use_transport_msg; ?></p>
           <?php }
