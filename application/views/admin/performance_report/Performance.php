@@ -473,8 +473,9 @@ if ($data == 3 || $data == 4) { ?>
 				if(getFiled('Q7A6S4', $schoolUserID)!=0){
 					$smv[5]= 'Taxi three wheeler';
 				 }
+				if(isset($smv)){	
 				$smv_wheel= implode(',',$smv);
-    					
+				}	
                                 $total_population_smv = getFiled('Q7A1S4', $schoolUserID)+getFiled('Q7A2S4', $schoolUserID)+getFiled('Q7A3S4', $schoolUserID)+getFiled('Q7A4S4', $schoolUserID)+getFiled('Q7A5S4', $schoolUserID)+getFiled('Q7A6S4', $schoolUserID);
                                  //Non polluting mode(NPM)
                                 $total_population_smv_percentage = round((($total_population_smv * 100)/$total_population),2);
@@ -488,8 +489,10 @@ if ($data == 3 || $data == 4) { ?>
 				 }
 				 if(getFiled('Q7A11S4', $schoolUserID)!=0){
 					$npm[2]= 'Other non-motersied';
-				 }	
-				$npm_wheel= implode(',',$npm);	
+				 }
+				if(isset($npm)){	
+				$npm_wheel= implode(',',$npm);
+				}	
                                 $total_population_npm_percentage = round((($total_population_npm * 100)/$total_population),2);
                                  //Private vehicles population
                                 $private_veh_population = getFiled('Q7A7S4', $schoolUserID) + getFiled('Q7A8S4', $schoolUserID);
@@ -499,7 +502,9 @@ if ($data == 3 || $data == 4) { ?>
 				 if(getFiled('Q7A8S4', $schoolUserID)!=0){
 					$private[1]= 'Personal two wheeler';
 				 }
+			if(isset($private)){	
 				$private_wheel= implode(',',$private);
+			}
 				$total_smv_npm = $total_population_smv + $total_population_npm;
                                 
                                 $private_veh_population_percentage = round((($private_veh_population * 100)/$total_population),2);
