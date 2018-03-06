@@ -39,6 +39,23 @@
 		}
 		 ?>
         School</p>
+      <p><strong>School Rating:&nbsp;
+        <?php $percentage=getSchoolRating($schoolUserID); ?>
+        <?php
+		  if($percentage>=70):
+		   echo "<label class='label label-success'>Green</label>";
+		  elseif($percentage>=50 && $percentage<=69.9):
+		  		   echo "<label class='label label-warning' style='background:yellow; color:black;'>Yellow</label>";
+		  elseif($percentage>=35 && $percentage<=49.9):
+		  		   echo "<label class='label label-success' style='background:orange; color:black;'>Orange</label>";
+		  elseif($percentage<=34.9):
+		  		   echo "<label class='label label-danger'>Red</label>";
+		  else:
+		    echo "Not Rated";
+		  endif;
+		  
+		?>
+        </strong></p>
     </div>
   </div>
   <div class="introduction page-break-before">
@@ -46,16 +63,15 @@
       <label>Introduction</label>
       <span>Green Schools Programme Audit 2017-2018</span></h2>
     <p>Dear Principal,</p>
-    <p>Thank you for taking part in GSP Audit 2017-2018, an initiative to make your school resource efficient and to inculcate green practices in your students.</p>
-    <p>As Anil Agarwal, founder-director, CSE, rightly said, '...that as they (children) grow older, it is important they begin to understand how human beings and human societies interact with their environment for their survival and their growth, how these human-nature interactions become a part of a society's culture, and why it is important to rationalize our relationship with our environment.'</p>
-    <p>The Green Schools Programme (GSP) is about fostering environmental literacy. It takes the classroom into our lives. The joy is not just in the learning. The joy is in the experience of making change in our environment. We then live the change. GSP has been built on the twin objectives of "Learning by doing" and "making change work" to help schools audit the consumption of natural resources within their premises, and assess themselves as environment managers.</p>
-    <p>Like last year, we were overwhelmed with the response we received from across India. More than 2500 schools registered for the Audit, and 700 submitted the Audit. The performance report of the school is based on the data submitted by the schools. Therefore, the school needs to make sure that the data entered is correct to the best of their knowledge. We hope that as the school continues to audit their consumption each year, they will refine the data collection and complete the report with honesty. Our endeavor is to provide India with a green report card of schools with credible data and this can be done only if schools provide accurate data.</p>
-    <p>We hope that your students immersed themselves in the activities and learnt about rainwater harvesting, waste segregation at source, non-polluting modes of transport, eating healthy, etc. While the performance report will give schools the baselines and is an indicator of the progress that the schools make on the environment front - year-on-year, we hope that your school continues to participate each year, and build a generation of environmentally responsible citizens.</p>
-    <p>This report will help you move beyond "awareness activities" such as cleanliness drives, poster-making, debates etc, which are, undoubtedly, important, but will also help you to identify long term activities that will deliver measurable impacts.</p>
-    <p>Hope, that in coming years, your school continues to participate and manage resources efficiently within your school.</p>
-    <p>Look forward to receiving your Audit report in 2017!</p>
-    <p>Warmly,</p>
-    <p>The GSP team</p>
+    <p>Thank you for taking part in GSP Audit 2017-2018, an initiative to make your school resource efficient and to inculcate green practices in your students. As Anil Agarwal, founder-director, CSE, rightly said, '...as they (children) grow older, it is important they begin to understand how human beings and human societies interact with their environment for their survival and their growth, how these human-nature interactions become a part of a society's culture, and why it is important to rationalize our relationship with our environment.' </p>
+    <p> The Green Schools Programme (GSP) takes the students outside the classroom and helps them learn with joy. GSP has been built on the twin objectives of "Learning by doing" and "making change work" to help schools audit the consumption of natural resources within their premises, and assess themselves as environment managers. </p>
+    <p> Like last year, we were overwhelmed with the response we received from across India. More than 2800 schools registered for the Audit, and around 1200 schools submitted the Audit - a jump of 70 per cent, when compared to last year. </p>
+    <p> The performance report of the school is based on the data submitted by the schools. Therefore, the school needs to make sure that the data entered is correct to the best of their knowledge. We hope that as the school continues to audit their consumption each year, they will refine the data collection and complete the report with honesty. We hope that your students immersed themselves in the activities and learnt about rainwater harvesting, waste segregation at source, non-polluting modes of transport, eating healthy, etc. While the performance report will give schools the baselines and is an indicator of the progress that the schools make on the environment front year-on-year, we hope that your school continues to participate each year, and build a generation of environmentally responsible citizens. </p>
+    <p> The report will help your school in assessing the initiatives undertaken and move towards filling in the gaps by the next GSP Audit. Our focus will be on measuring the change over the previous years’ performance. The school’s actions for bettering the environment and sensitivity towards environment will be looked at from the baseline year (the year the school did the Audit for the first time). And the degree of change will be appreciated and recognised. To find out how schools have brought about change, please take a look at the videos available at www.greenschoolsprogramme.org</p>
+    <p> We have dispatched the certificates, and if you don’t receive by March 20, 2018, please email or call (details given below). Hope you have downloaded the digital certificates of all those whose names were provided online. </p>
+    <p> Hope, that in coming years, your school continues to participate and manage resources efficiently within your school. The GSP Audit 2018 will open by mid-year, and we look forward to receiving your Audit report by the deadline!</p>
+    <p> Warmly, </p>
+    <p> The GSP team</p>
     <div class="footer">
       <p>Performance Report | <?php echo $performance[0]->name; ?></p>
     </div>
@@ -665,7 +681,6 @@ if ($data == 3 || $data == 4) { ?>
             $packageitem_served_msg = "Your school sells ultra processed packaged food (UPPF) items daily in the campus - a practice that needs to be discouraged as UPPF items are high in fats, salt and sugar and harm children. We suggest that with the beginning of the new academic session, unhealthy food items be substituted with local and seasonal delicacies.";
             }
         ?>
-          
             <p><?php echo $packageitem_served_msg; ?></p>
           </div>
         </li>
@@ -1013,7 +1028,7 @@ if ($data == 3 || $data == 4) { ?>
                                     $SourceofWater_msg = "Your source of water is combination of '".$wcombination_msg."'. Which is not sufficient to fulfill the water requirements of your school. You should expand your source of water to more options such as surface water, rainwater and recycled wastewater.";
                                 }
                                 ?>
-                        <h4><?php echo $SourceofWater; ?></h4>
+            <h4><?php echo $SourceofWater; ?></h4>
             <p><?php echo $SourceofWater_msg; ?></p>
           </div>
         </li>
@@ -1809,54 +1824,54 @@ if ($data == 3 || $data == 4) { ?>
                             // Column 5 (2bins) and Column 6 (3or more bins) is equal to Sum of Total no. of collection points
                             if ($two_three_bin_percentage >= 76 && $two_three_bin_percentage <=100) {
                                 $msg_waste2 = "Most of the collection points have two or more than two dustbins for different categories of waste. A good practice! We encourage that students learn to segregate waste at source.";?>
-							<div class="description">
+          <div class="description">
             <h3>Waste Collection Points</h3>
             <!--                                <h4>2.3 average</h4>-->
             <p><?php echo $msg_waste2;?></p>
-          </div>	
-                        <?php    }
+          </div>
+          <?php    }
 
                             //   Column 5 (2bins) and Column 6 (3or more bins) is very less than Sum of Total no. of collection 
                             elseif ($two_three_bin_percentage >= 50 && $two_three_bin_percentage <=75) {
                                 $msg_waste2 = "Most of the collection points have two or more than two dustbins for different categories of waste. A good practice! We encourage that students learn to segregate waste at source.";?>
-							<div class="description">
+          <div class="description">
             <h3>Waste Collection Points</h3>
             <!--                                <h4>2.3 average</h4>-->
             <p><?php echo $msg_waste2;?></p>
-          </div>	
-                        <?php    }
+          </div>
+          <?php    }
 
                               //Column 5 (2bins) and Column 6 (3 or more bins) is less than Sum of Total no. of collection 
                             elseif ($two_three_bin_percentage >= 25 && $two_three_bin_percentage <=49) {
                                 $msg_waste2 = "Waste segregation at source is not efficient in your school. We strongly recommend that your school considers putting more collection points with two or more dustbins! We encourage that students learn to segregate waste at source.";
 								?>
-								<div class="description">
+          <div class="description">
             <h3>Waste Collection Points</h3>
             <!--                                <h4>2.3 average</h4>-->
             <p><?php echo $msg_waste2;?></p>
           </div>
-                            <?php }
+          <?php }
                             
                              elseif ($two_three_bin_percentage < 25) {
                                 $msg_waste2 = "Waste segregation at source is not efficient in your school. We strongly recommend that your school considers putting more collection points with two or more dustbins! We encourage that students learn to segregate waste at source.";
 								?>
-								<div class="description">
+          <div class="description">
             <h3>Waste Collection Points</h3>
             <!--                                <h4>2.3 average</h4>-->
             <p><?php echo $msg_waste2;?></p>
           </div>
-								<?php
+          <?php
                             }
                             //'Column 3 (No bin) and Column 4 (1 bin) is equal to Sum of Total no. of collection points the school 
                             elseif ($total_collection_0_1_bins == $total_collection_bins) {
                                 $msg_waste2 = "Waste segregation at source is not efficient in your school. We strongly recommend that your school considers putting more collection points with two or more dustbins! We encourage that students learn to segregate waste at source. ";
 								?>
-								<div class="description">
+          <div class="description">
             <h3>Waste Collection Points</h3>
             <!--                                <h4>2.3 average</h4>-->
             <p><?php echo $msg_waste2;?></p>
           </div>
-								<?php
+          <?php
                             }
                             ?>
         </li>
@@ -1988,9 +2003,8 @@ if ($waste_recycle == "Y") {
             <?php
             } 
 }else{ ?>
-    <p>School does not recycle the waste</p>	
-<?php } ?>
-            
+            <p>School does not recycle the waste</p>
+            <?php } ?>
           </div>
         </li>
         <li>
