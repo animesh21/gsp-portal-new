@@ -517,7 +517,7 @@ if ($data == 3 || $data == 4) { ?>
           <?php
                                 } elseif ($total_population_smv_percentage < 50 && $total_population_npm_percentage > 50) {
                                     $members_use_transport_type = "More than 50% population using Non- polluting mode of transport and less than 50% population using sustainable motorized vehicles";
-                                    $members_use_transport_msg = "Good, most of the students and staff use Non- polluting mode of transport (NPT).(". $smv_wheel.')('.$npm_wheel .')'; ?>
+                                    $members_use_transport_msg = "Good, most of the students and staff use Non- polluting mode of transport (NPT). <br/>   (". $npm_wheel.')'; ?>
           <h4><?php echo $members_use_transport_type; ?></h4>
           <p><?php echo $members_use_transport_msg; ?></p>
           <?php		
