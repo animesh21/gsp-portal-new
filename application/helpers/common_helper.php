@@ -66,7 +66,7 @@ if (!function_exists('getSchoolRating')) {
         $test = '';
         $CI = & get_instance();
         $temp = $CI->db->get_where('tbl_total', array('userid' => $argschoolID))->row();
-	echo '<pre>';print_r($temp); die();    
+	 
         if (!empty($temp)) {
             $test = $temp->air_points+$temp->energy_points+$temp->food_points+$temp->land_points+$temp->water_points+$temp->waste_points;
             ;
