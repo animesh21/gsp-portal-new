@@ -60,10 +60,10 @@
 				<td><?php echo $r->Q4L1; ?></td>
 				<td><?php echo $r->Q4L5; ?></td>
 				<td><?php echo $r->PercentageArea; ?></td>
-				<td><?php echo ($r->Q5L1S1+$r->Q5L1S2); ?></td> 	
+				<td><?php echo ($r->Q5L1S3); ?></td> 	
 				<td><?php echo $r->Q5L1S1; ?></td>
 				<td><?php echo $r->Q5L1S2; ?></td>
-				<td><?php echo ($r->Q5L2S1+$r->Q5L2S2); ?></td>
+				<td><?php echo ($r->Q5L2S3); ?></td>
 				<td><?php echo $r->Q5L2S1; ?></td>
 				<td><?php echo $r->Q5L2S2; ?></td>
 				<td><?php echo $r->Q6L1; ?></td>
