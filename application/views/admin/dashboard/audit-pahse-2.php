@@ -14,7 +14,7 @@
   <div class="title">Schools That Started The Audit</div>
 </div>
 <div class="schools-statics"> <a href="../<?php base_url()?>dashboard/school_that_complete_audit_phase_2">
-  <div class="statics-circle"> <span><?php echo $completecount;  ?></span>
+  <div class="statics-circle"> <span><?php echo $completecount + $completecount1;?></span>
     <label>view</label>
   </div>
   </a>
