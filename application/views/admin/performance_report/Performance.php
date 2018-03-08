@@ -186,9 +186,9 @@
           <?php
                     $arrImages = getUploadData(str_replace(' ', '_', $performance[0]->name) . '_PUC_Certificate', $schoolUserID);
 	
-			echo count($arrImages) ;
+			$count = count($arrImages) ;
 		
-                                if(count($arrImages)>0) { ?>
+                                if($count == 0) { ?>
                                   <h4> <?php echo "NO" ; ?> </h4>
           			  <p> <?php echo "Road worthiness certificate should be obtained for all the vehicles<br/>If your vehicles have this certificate,it means that they are in good operating condition and meet the acceptable standards for safe driving."; ?></p>
                                 } else {
