@@ -151,13 +151,13 @@ function getdigitalCertificate($argID) {
    $this->dompdf->stream("Digital Certificate.pdf", array("Attachment" => false));
   }
 	
-   public function count_certificates_stuents($argID) {
+ public function count_certificates_stuents($argID) {
    //Stuents
    $arrStudents = array();
    $question_alphabet = array("A", "E", "F", "L", "W", "Wa");
-   $username=$this->db->select('username')
-				->from('gsp_user')
-				->where('id',$argID)
+   $username=$this->db->select('name')
+				->from('gsp_school')
+				->where('userid',$argID)
 				->get()->row();
    foreach ($question_alphabet as $q) {
        for ($i = 1; $i <= 10; $i++) {
@@ -167,7 +167,7 @@ function getdigitalCertificate($argID) {
        $arrStudents[] = array(
        'name' => getFiled("Q3".$q. $i . "S1", $argID) . " " . getFiled("Q3" .$q.$i . "S2", $argID),
        'grade' => getFiled("Q3" .$q.$i . "S3", $argID),
-	   'school_name'=>$username->username,
+	   'school_name'=>$username->name,
 	   );
 	}
        }
@@ -179,23 +179,23 @@ function getdigitalCertificate($argID) {
    $airTeachers=array();
    $arrStaff = array();
    $question_alphabet = array("A", "E", "F", "L", "W", "Wa");
-   $username=$this->db->select('username')
-				->from('gsp_user')
-				->where('id',$argID)
+   $username=$this->db->select('name')
+				->from('gsp_school')
+				->where('userid',$argID)
 				->get()->row();
    foreach ($question_alphabet as $q) {
        //Teachers
        for ($i = 1; $i <= 3; $i++) {
        if((getFiled("Q1" . $q . $i . "S1", $argID) !="0") && (getFiled("Q1" . $q . $i . "S1", $argID) !='') || (getFiled("Q1" . $q . $i . "S3", $argID) !="0") && (getFiled("Q1" . $q . $i . "S3", $argID) !=''))
        {
-       $airTeachers[] = array("teacher"=>getFiled("Q1" . $q . $i . "S1", $argID) . " " . getFiled("Q1" . $q . $i . "S3", $argID),"school"=>$username->username);
+       $airTeachers[] = array("teacher"=>getFiled("Q1" . $q . $i . "S1", $argID) . " " . getFiled("Q1" . $q . $i . "S3", $argID),"school"=>$username->name);
 	   
        }
        }
        //Staff
        for ($i = 1; $i <= 5; $i++) {
        if((getFiled("Q2" . $q . $i . "S1", $argID) !="0") && (getFiled("Q2" . $q . $i . "S1", $argID) !='') || (getFiled("Q2" . $q . $i . "S3", $argID) !="0") && (getFiled("Q2" . $q . $i . "S3", $argID) !='')){
-       $arrStaff[] = array("teacher"=>getFiled("Q2" . $q . $i . "S1", $argID) . " " . getFiled("Q2" . $q . $i . "S3", $argID),"school"=>$username->username);
+       $arrStaff[] = array("teacher"=>getFiled("Q2" . $q . $i . "S1", $argID) . " " . getFiled("Q2" . $q . $i . "S3", $argID),"school"=>$username->name);
 	
        }
        }
@@ -215,12 +215,12 @@ function getdigitalCertificate($argID) {
 				->from('gsp_school')
 				->where('userid',$argID)
 				->get()->row();
-   $username=$this->db->select('username')
-				->from('gsp_user')
-				->where('id',$argID)
+   $username=$this->db->select('name')
+				->from('gsp_school')
+				->where('userid',$argID)
 				->get()->row();
    foreach ($principal_coordinator as $q) {
-     $arrForcoordinator_principal[]=array('name'=>$q,'schoolname'=>$username->username);
+     $arrForcoordinator_principal[]=array('name'=>$q,'schoolname'=>$username->name);
    }
    return $arrForcoordinator_principal;
   }	
