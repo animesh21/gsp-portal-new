@@ -1655,7 +1655,11 @@ if ($data == 3 || $data == 4) { ?>
             <?php
                                 //Q.12 How many urinals (strictly used for urination only) do you have?
             $water_urinals_q12 = getFiled('Q14W1', $schoolUserID);
+	    if(isset($water_urinals_q12) && $water_urinals_q12==0){
+		    $Load_for_urinals = 0;
+	    }else{    
             $Load_for_urinals = number_format(($total_population / $water_urinals_q12),2,".","");
+	    }    
             //$school_type = $sql_data_array['266617X34X1608']; //q15. get appropriate category for your school like Day Scholar,Day Boarding etc.
             if ($school_type == 1 && $Load_for_urinals <= 50 && $water_urinals_q12 != "" && $water_urinals_q12 != 0) { //school type Day Scholar
                 //$Load_for_urinals = $Load_for_urinals;
@@ -1663,25 +1667,25 @@ if ($data == 3 || $data == 4) { ?>
             } else if ($school_type == 2 && $Load_for_urinals <= 40 && $water_urinals_q12 != "" && $water_urinals_q12 != 0) { //Day Boarding 
                 //$Load_for_urinals = $Load_for_urinals;
                 $Load_for_urinals_msg = "You have the required number of urinals (strictly used for urination only) in your school.";
-                } else if ($school_type == 3 && $Load_for_urinals <= 30 && $water_urinals_q12 != "" && $water_urinals_q12 != 0) { //Residential 
+            } else if ($school_type == 3 && $Load_for_urinals <= 30 && $water_urinals_q12 != "" && $water_urinals_q12 != 0) { //Residential 
                   //  $Load_for_urinals = $Load_for_urinals;
                     $Load_for_urinals_msg = "You have the required number of urinals (strictly used for urination only) in your school.";
-                    } else if ($school_type == 4 && $Load_for_urinals <= 50 && $water_urinals_q12 != "" && $water_urinals_q12 != 0) { //Day Scholar + Day Boarding
+            } else if ($school_type == 4 && $Load_for_urinals <= 50 && $water_urinals_q12 != "" && $water_urinals_q12 != 0) { //Day Scholar + Day Boarding
                     //    $Load_for_urinals = $Load_for_urinals;
                                     $Load_for_urinals_msg = "You have the required number of urinals (strictly used for urination only) in your school.";
-                                } else if ($school_type == 5 && $Load_for_urinals <= 35 && $water_urinals_q12 != "" && $water_urinals_q12 != 0) { //Day Boarding + Residential
+              } else if ($school_type == 5 && $Load_for_urinals <= 35 && $water_urinals_q12 != "" && $water_urinals_q12 != 0) { //Day Boarding + Residential
                         //            $Load_for_urinals = $Load_for_urinals;
                                    $Load_for_urinals_msg = "You have the required number of urinals (strictly used for urination only) in your school.";
-                                } else if ($school_type == 6 && $Load_for_urinals <= 50 && $water_urinals_q12 != "" && $water_urinals_q12 != 0) { //Day Scholar + Residential
+             } else if ($school_type == 6 && $Load_for_urinals <= 50 && $water_urinals_q12 != "" && $water_urinals_q12 != 0) { //Day Scholar + Residential
                           //          $Load_for_urinals = $Load_for_urinals;
                                     $Load_for_urinals_msg = "You have the required number of urinals (strictly used for urination only) in your school.";
-                                } else if ($school_type == 7 && $Load_for_urinals <= 30 && $water_urinals_q12 != "" && $water_urinals_q12 != 0) { //Day Scholar + Day Boarding + Residential (ref value not provided)
+              } else if ($school_type == 7 && $Load_for_urinals <= 30 && $water_urinals_q12 != "" && $water_urinals_q12 != 0) { //Day Scholar + Day Boarding + Residential (ref value not provided)
                             //        $Load_for_urinals = $Load_for_urinals;
                                     $Load_for_urinals_msg = "You have the required number of urinals (strictly used for urination only) in your school.";
-                                } else {
+               } else {
                             //        $Load_for_urinals = $Load_for_urinals;
                                     $Load_for_urinals_msg = "You do not have the required number of urinals (strictly used for urination only) in your school. Please refer to the table for prescribed norm.";
-                                }
+                }
                                 ?>
             <!--            <h4><?php echo $Load_for_urinals; ?> people per Urinal</h4>-->
             <p><?php echo $Load_for_urinals_msg; ?></p>
