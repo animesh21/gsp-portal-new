@@ -179,6 +179,33 @@
             <p><?php echo $window_floor_msg;} ?></p>
           </div>
         </li>
+	<li>
+          <figure> <img src="assets/img/performance/window.jpg"> </figure>
+          <div class="description">
+            <h3>Classrooms Window Floor Ratio (WFR)</h3>
+            <?php
+			    $schoolUserID = $performance[0]->userid;
+			    $window_floor = getFiled('Q5A110S2', $schoolUserID);
+			    $area_opening = getFiled('Q5A110S3', $schoolUserID);
+				if(isset($area_opening) && $area_opening!=0)
+				{
+			    $avg = ($area_opening / $window_floor ) * 100;
+					
+		           $view_avg = number_format($avg, 2);
+			?>
+            <h4><?php echo $view_avg; ?> % Average WFR</h4>
+            <?php
+                                if ($view_avg < 5) {
+                                    $window_floor_msg = "Your window-floor ratio is less than five per cent. It suggests that your school does not fulfil the oxygen requirement of the school community. If possible, consider increasing the window-floor ratio by providing more openings for better air circulation. Please note that this result is from the sample you have provided.";
+                                } else if ($view_avg >= 5 && $view_avg < 10) {
+                                    $window_floor_msg = "Your window-floor ratio is between five-10 per cent. It suggests that your school fulfills the oxygen requirement of the community. Please note that this result is from the sample you have provided.";
+                                } elseif ($view_avg >= 10) {
+                                    $window_floor_msg = "Your window-floor ratio is more than ten per cent. It suggests that your school fulfills the oxygen requirement of the community by providing more openings for better air circulation. Please note that this result is from the sample you have provided.";
+                                }
+                                ?>
+            <p><?php echo $window_floor_msg;} ?></p>
+          </div>
+        </li>      
         <li>
           <figure><img src="assets/img/performance/key.jpg"></figure>
           <div class="description">
