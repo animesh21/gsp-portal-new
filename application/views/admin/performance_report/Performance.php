@@ -191,7 +191,7 @@
                                 if($count == 0) { ?>
                                   <h4> <?php echo "NO" ; ?> </h4>
           			  <p> <?php echo "Road worthiness certificate should be obtained for all the vehicles<br/>If your vehicles have this certificate,it means that they are in good operating condition and meet the acceptable standards for safe driving."; ?></p>
-                                } else {
+                              <?php  } else { ?>
 	      			  <h4><?php echo "Yes"; ?></h4>
          			   <p><?php echo "It is good that your school has a road worthiness certificate for your vehicles<br/>This means that your vehicles are in good operating condition and meet the acceptable standards for safe driving."; ?></p>
                              <?php   } ?>
