@@ -266,13 +266,13 @@ class Dashboard_model extends CI_Model {
 	
 	public function school_that_complete_audit_phase_2_count()
 	{
-	        $this->db->select('a.*, b.name AS state_name,c.name As district_name')
+	        return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
 					->from('gsp_school AS a')
 					->join('states AS b', 'a.state=b.id', 'left')
 					->join('cities AS c', 'a.district=c.id', 'left')
 					->where('a.complete_status','0')
-                                        ->where('a.progress',100);
-	      return $this->db->count_all_results('gsp_school');		
+                                        ->where('a.progress',100)
+					->get()->result();		
 	}		
 	
 	public function getschool_that_complete_audit_phase_2() {
