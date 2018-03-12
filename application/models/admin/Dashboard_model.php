@@ -271,7 +271,7 @@ class Dashboard_model extends CI_Model {
 					->join('states AS b', 'a.state=b.id', 'left')
 					->join('cities AS c', 'a.district=c.id', 'left')
 					->where('a.complete_status','0')
-                                        ->where('a.progress',100)
+                                        ->where('a.progress',100);
 	      return $this->db->count_all_results('gsp_school');		
 	}		
 	
