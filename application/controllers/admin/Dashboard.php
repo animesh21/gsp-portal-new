@@ -141,6 +141,7 @@ class Dashboard extends CI_Controller {
 		$data['audit1']=$this->Dashboard_model->getschool_started_audit_phase_2();
         $data['Schools_pahse2'] = $this->School_model->getSchools_phase_2();
         $data['schoolcount']=$this->Dashboard_model->schoolCount_phase_2();
+	$data['complete_audit_phase_2_count']= $this->Dashboard_model->school_that_complete_audit_phase_2_count();
 		$data['completecount']=$this->Dashboard_model->getschool_that_complete_audit_phase_2();
 		$data['completecount1']=$this->Dashboard_model->getschool_that_complete_audit_phase_2_1();
 		$data['submitcount']=$this->Dashboard_model->getschool_that_submit_audit_phase_2();
