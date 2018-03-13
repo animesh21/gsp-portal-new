@@ -218,7 +218,7 @@ class Dashboard extends CI_Controller {
 	/************** 2018 ******************/
     public function total18_registration()
    {
-		$data['main']='admin/audit18/total_school';
+		$data['main']='admin/audit/total_school';
 		$data['title']='Total no. of school'; 
 		$data['records']=$this->Dashboard_model->getSchool_18data();
 		$this->load->view('admin/includes/template', $data);
