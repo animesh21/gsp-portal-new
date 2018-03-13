@@ -130,4 +130,12 @@ class Reports extends CI_Controller {
 		$data['others_count']=$this->Report->geteWasteDisposalReport1($state1,"Q13Wa2O");
 		$this->load->view('admin/includes/template', $data);
 	}
+	public function geteAirQuestionReport()
+	{   
+	   $data['main'] = 'admin/reports/report_air';
+	   
+	   $this->load->view('admin/includes/template', $data);
+	}
+	
+	
 }
