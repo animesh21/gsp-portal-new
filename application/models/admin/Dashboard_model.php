@@ -362,6 +362,12 @@ public function getSchool_18data(){
                         ->order_by('a.id', 'desc')
                         ->get()->result();
     }
+   
+ public function getMasterData(){
+        return $this->db->select('a.*')
+                        ->from('masterview AS a')
+                        ->get()->result();
+    } 	
 	 
 }
 ?>
