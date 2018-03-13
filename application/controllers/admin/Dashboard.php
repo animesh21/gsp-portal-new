@@ -232,6 +232,13 @@ class Dashboard extends CI_Controller {
         $this->load->view('admin/includes/template', $data);   
       
     }
+   public function year18_phase1() {
+        $data['main']='admin/dashboard/year18_phase1';
+        $data['title']='Home | Dashboard';
+       $data['school']=$this->Dashboard_model->getSchool_18data();
+	
+        $this->load->view('admin/includes/template', $data);
+    }	
 	 
 }
 	
