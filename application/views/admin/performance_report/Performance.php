@@ -419,7 +419,7 @@ if ($data == 3 || $data == 4) { ?>
                                 if ($cng_percentage >= 71) {
                                     $typeofFuel[] = "Consuming CNG for Vehicles";
                                     $typeoffuel_msg[] = "Good that most of your vehicles run on CNG!";
-                                
+				}
                                 elseif ($cng_percentage >= 36 && $cng_percentage <= 70.9 ) {
                                     $typeofFuel[] = "Consuming CNG for Vehicles";
                                     $typeoffuel_msg[] = "Good that some of your schools vehicles run on CNG! Try switching over to CNG as a fuel for all your vehicles.";
