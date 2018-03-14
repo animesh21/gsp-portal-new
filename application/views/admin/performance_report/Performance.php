@@ -1066,7 +1066,7 @@ if ($data == 3 || $data == 4) { ?>
                         } else if (($Surfacewater == "Y" && $Rainwater == "Y") || ($Surfacewater == "Y" && $Recycledwastewater == "Y") || ($Rainwater == "Y" && $Recycledwastewater == "Y")) {
                                     $SourceofWater = "'surface + rainwater or surface + recycled water or rainwater + recycled water";
                                     $SourceofWater_msg = "You use a combination of either surface + rainwater or surface + recycled water or rainwater + recycled water.  All of these combinations demonstrate that your school is not extracting ground water, but is making an effort to either catch rainwater or treat waste water for further use.";
-                                }else if ($Groundwater == "Y" && $Rainwater == "Y") {
+                       }else if ($Groundwater == "Y" && $Rainwater == "Y") {
                                     if($Surfacewater == "Y")
                                         $wcombination[] = "Surface water";
                                      if($Rainwater == "Y")
@@ -1082,15 +1082,17 @@ if ($data == 3 || $data == 4) { ?>
                                 }else if ($Surfacewater == "Y" || $Rainwater == "Y" || $Recycledwastewater == "Y" || $Groundwater == "Y") {
                                     
                                     if($Surfacewater == "Y")
-                                        $wcombination = "Surface water";
+                                        $wcombination[] = "Surface water";
                                      elseif($Rainwater == "Y")
-                                        $wcombination = "Rain water";
+                                        $wcombination[] = "Rain water";
                                      elseif($Recycledwastewater == "Y")
-                                        $wcombination = "Recycled waste water";
+                                        $wcombination[] = "Recycled waste water";
                                      elseif($Groundwater == "Y")
-                                        $wcombination = "Ground water";
-                                    $SourceofWater = $wcombination;
-                                    $SourceofWater_msg = "Your source of water is '".$wcombination."'. You should expand your source of water to more options and combinations of surface water, rainwater and recycled wastewater. ";
+                                        $wcombination[] = "Ground water";
+			
+			           $wcombination_msg =implode(",",$wcombination); 
+                                    $SourceofWater = $wcombination_msg;
+                                    $SourceofWater_msg = "Your source of water is '".$wcombination_msg."'. You should expand your source of water to more options and combinations of surface water, rainwater and recycled wastewater. ";
                                 } else {
                                     
                                      if($Surfacewater == "Y")
@@ -1101,7 +1103,8 @@ if ($data == 3 || $data == 4) { ?>
                                         $wcombination[] = "Recycled waste water";
                                      if($Groundwater == "Y")
                                         $wcombination []= "Ground water";
-                                     $wcombination_msg =implode(",",$wcombination);                                     
+                                     
+			       $wcombination_msg =implode(",",$wcombination);                                     
                                     
                                     $SourceofWater =$wcombination_msg;
                                     $SourceofWater_msg = "Your source of water is combination of '".$wcombination_msg."'. Which is not sufficient to fulfill the water requirements of your school. You should expand your source of water to more options such as surface water, rainwater and recycled wastewater.";
