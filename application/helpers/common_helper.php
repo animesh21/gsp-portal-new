@@ -77,7 +77,8 @@ if (!function_exists('getSchoolRating')) {
             $test = $temp1->air_points+$temp1->energy_points+$temp1->food_points+$temp1->land_points+$temp1->water_points+$temp1->waste_points;
         }
 	     
-		return $test;
+	  $rate = ($test*0.61)  
+		return $rate;
     }
 }
 
