@@ -73,7 +73,7 @@ if (!function_exists('getSchoolRating')) {
         }else{
             
             $temp1 = $CI->db->get_where('tbl_total_phase2', array('userid' => $argschoolID))->row();
-	
+	  echo '<pre>'; print_r($temp1);die();
             $test = $temp1->air_points+$temp->energy_points+$temp->food_points+$temp->land_points+$temp->water_points+$temp->waste_points;
         }
 		return $test;
