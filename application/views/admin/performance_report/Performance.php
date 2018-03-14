@@ -2054,7 +2054,7 @@ if ($waste_recycle == "Y") {
 	$rcw2=(getFiled('Q6Wa3S4', $schoolUserID) != '') ? getFiled('Q6Wa3S4', $schoolUserID) : 0;
     $total_generated_waste = $rw + $rw1 + $rw2;
     $total_recycled_waste = $rcw + $rcw1 + $rcw2;
-    $waste_recycled_percent = (($total_recycled_waste * 100) / $total_generated_waste);
+    $waste_recycled_percent = round((($total_recycled_waste * 100) / $total_generated_waste), 2);
     if ($waste_recycled_percent == 100) {    //100%
         $waste_msg41 = "School recycles 100% of the waste";
         $waste_msg42 = "Your school recycles a lot of its waste. You recycle " . $waste_recycled_percent . " per cent of waste. We hope you are able to become waste efficient school at the earliest.";
