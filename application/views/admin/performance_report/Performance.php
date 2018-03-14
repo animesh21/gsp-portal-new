@@ -57,7 +57,7 @@
 	          $percentage= ceil($percentage) ;
 	      
 		  if($percentage>=70){
-		   echo "<label class='label label-success'>Green</label>";
+		   echo "<label class='label label-success' style='background:green; color:black;'>Green</label>";
 		  }elseif($percentage>=50 && $percentage<=69.9){
 		   echo "<label class='label label-warning' style='background:yellow; color:black;'>Yellow</label>";
 		  }	  
