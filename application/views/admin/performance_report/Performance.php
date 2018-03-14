@@ -52,8 +52,10 @@
 		 ?>
         School</p>
       <p><strong>School Rating:&nbsp;
-        <?php $percentage=getSchoolRating($schoolUserID); ?>
-        <?php
+        <?php 
+	      $percentage=getSchoolRating($schoolUserID);
+	      echo $percentage;die();
+	          
 		  if($percentage>=70):
 		   echo "<label class='label label-success'>Green</label>";
 		  elseif($percentage>=50 && $percentage<=69.9):
@@ -401,7 +403,7 @@ if ($data == 3 || $data == 4) { ?>
                                 
                                 if ($desiel_petrol_percentage >= 71) {
                                     $typeofFuel[] = "Consumption of Diesel and Petrol";
-                                    $typeoffuel_msg[] = "Your diesel/ petrol consumption is too high. Consider switching to cleaner sources of energy.";
+                                    $typeoffuel_msg[] = "Your diesel/petrol consumption is too high. Consider switching to cleaner sources of energy.";
                                 } 
                                 elseif ($desiel_petrol_percentage >= 36 && $desiel_petrol_percentage <= 70.9 ) {
                                     $typeofFuel[] = "Consumption of Diesel and Petrol";
@@ -413,15 +415,15 @@ if ($data == 3 || $data == 4) { ?>
                                 }
                                 elseif ($desiel_petrol_percentage == 0) {
                                     $typeofFuel[] = "Consumption of Diesel and Petrol";
-                                    $typeoffuel_msg[] = "Good your school doesn't use diesal or petrol as a fuel.";
+                                    $typeoffuel_msg[] = "Good your school does not use diesal or petrol as a fuel.";
                                 }
                                 if ($cng_percentage >= 71) {
                                     $typeofFuel[] = "Consuming CNG for Vehicles";
                                     $typeoffuel_msg[] = "Good that most of your vehicles run on CNG!";
-                                }
+                                '
                                 elseif ($cng_percentage >= 36 && $cng_percentage <= 70.9 ) {
                                     $typeofFuel[] = "Consuming CNG for Vehicles";
-                                    $typeoffuel_msg[] = "Good that some of your schools' vehicles run on CNG! Try switching over to CNG as a fuel for all your vehicles.";
+                                    $typeoffuel_msg[] = "Good that some of your schools vehicles run on CNG! Try switching over to CNG as a fuel for all your vehicles.";
                                 }
                                 elseif ($cng_percentage > 0 && $cng_percentage <= 35.9 ) {
                                     $typeofFuel[] = "Consuming CNG for Vehicles";
@@ -429,7 +431,7 @@ if ($data == 3 || $data == 4) { ?>
                                 }
                                 elseif ($cng_percentage == 0) {
                                     $typeofFuel[] = "Consuming CNG for Vehicles";
-                                    $typeoffuel_msg[] = "Your school doesn't use CNG as a fuel. Consider switching to CNG as a fuel in future.";
+                                    $typeoffuel_msg[] = "Your school does not use CNG as a fuel. Consider switching to CNG as a fuel in future.";
                                 }
                                 if ($lpg_percentage >= 71 ) {
                                     $typeofFuel[] = "Consuming LPG for Vehicles";
@@ -446,7 +448,7 @@ if ($data == 3 || $data == 4) { ?>
                                 
                                 elseif ($lpg_percentage == 0) {
                                     $typeofFuel[] = "Consuming LPG for Vehicles";
-                                    $typeoffuel_msg[] = "Good that your school doesn’t use LPG as a fuel.";
+                                    $typeoffuel_msg[] = "Good that your school does not use LPG as a fuel.";
                                 }
                                 
                                 ?>
