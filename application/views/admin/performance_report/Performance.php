@@ -1075,8 +1075,10 @@ if ($data == 3 || $data == 4) { ?>
                                         $wcombination[] = "Recycled waste water";
                                      if($Groundwater == "Y")
                                         $wcombination []= "Ground water";
+					   
+			            echo '<pre>'; print_r($wcombination); 
                                     $wcombination_msg =implode(",",$wcombination);                                     
-                                    
+                                    print ($wcombination_msg);
                                     $SourceofWater =$wcombination_msg;
                                     $SourceofWater_msg = "Your source of water is combination of '".$wcombination_msg."'. Which is not sufficient to fulfill the water requirements of your school. You should expand your source of water to more options such as surface water, rainwater and recycled wastewater.";
                                 }else if ($Surfacewater == "Y" || $Rainwater == "Y" || $Recycledwastewater == "Y" || $Groundwater == "Y") {
@@ -1089,8 +1091,10 @@ if ($data == 3 || $data == 4) { ?>
                                         $wcombination[] = "Recycled waste water";
                                      elseif($Groundwater == "Y")
                                         $wcombination[] = "Ground water";
-			
+			           
+			           echo '<pre>'; print_r($wcombination); 
 			           $wcombination_msg =implode(",",$wcombination); 
+			            print ($wcombination_msg);
                                     $SourceofWater = $wcombination_msg;
                                     $SourceofWater_msg = "Your source of water is '".$wcombination_msg."'. You should expand your source of water to more options and combinations of surface water, rainwater and recycled wastewater. ";
                                 } else {
@@ -1103,9 +1107,10 @@ if ($data == 3 || $data == 4) { ?>
                                         $wcombination[] = "Recycled waste water";
                                      if($Groundwater == "Y")
                                         $wcombination []= "Ground water";
-                                     
+                               
+			      
 			       $wcombination_msg =implode(",",$wcombination);                                     
-                                    
+                                 echo '<pre>'; print_r($wcombination); print ($wcombination_msg);    
                                     $SourceofWater =$wcombination_msg;
                                     $SourceofWater_msg = "Your source of water is combination of '".$wcombination_msg."'. Which is not sufficient to fulfill the water requirements of your school. You should expand your source of water to more options such as surface water, rainwater and recycled wastewater.";
                                 }
