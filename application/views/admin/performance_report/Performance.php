@@ -473,7 +473,7 @@ if ($data == 3 || $data == 4) { ?>
         <div class="description">
           <h3>Mode of Commuting</h3>
           <?php
-                                $total_population = (getFiled('Q4G4S3', $schoolUserID) != '') ? getFiled('Q4G4S3', $schoolUserID) : 0;;
+                                $total_population = (getFiled('Q4G4S3', $schoolUserID) != '') ? getFiled('Q4G4S3', $schoolUserID) : 0;
                                  // Sustainable Motorized Vehicle (SMV) 
                                 if($total_population==0){
                                   $total_population_smv_percentage=$total_population_npm_percentage=$total_population_npm_percentage=0;  
