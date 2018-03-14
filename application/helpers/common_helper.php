@@ -69,7 +69,12 @@ if (!function_exists('getSchoolRating')) {
 	 
         if (!empty($temp)) {
             $test = $temp->air_points+$temp->energy_points+$temp->food_points+$temp->land_points+$temp->water_points+$temp->waste_points;
-            ;
+            
+        }else{
+            
+            $temp1 = $CI->db->get_where('tbl_total_phase2', array('userid' => $argschoolID))->row();
+	
+            $test = $temp1->air_points+$temp->energy_points+$temp->food_points+$temp->land_points+$temp->water_points+$temp->waste_points;
         }
 		return $test;
     }
