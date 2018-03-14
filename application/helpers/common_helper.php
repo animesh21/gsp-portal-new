@@ -51,7 +51,7 @@ if (!function_exists('getFiled')) {
         //print_r($temp);
         if (!empty($temp)) {
             $test = $temp->answer;
-            ;
+            
         }
         return $test;
     }
@@ -77,7 +77,7 @@ if (!function_exists('getSchoolRating')) {
             $test = $temp1->air_points+$temp1->energy_points+$temp1->food_points+$temp1->land_points+$temp1->water_points+$temp1->waste_points;
         }
 	     
-	  $rate = ($test*0.61)  
+	  $rate = ($test*0.61) ; 
 		return $rate;
     }
 }
