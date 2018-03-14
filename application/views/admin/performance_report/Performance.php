@@ -70,7 +70,7 @@
 		  else{
 		    echo "Not Rated";
 		  }
-		  echo $percentage;
+		 
 		?>
         </strong></p>
     </div>
