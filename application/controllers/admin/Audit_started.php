@@ -174,7 +174,7 @@ class Audit_started extends CI_Controller {
         if (count($conditions) > 0) {
             $sql .= implode(' AND ', $conditions);
         }
-        ///echo $sql; exit;
+        echo $sql; exit;
         $query = $this->db->query($sql);
         ///$data=$query->result_array();
 
