@@ -1078,10 +1078,10 @@ if ($data == 3 || $data == 4) { ?>
             <h3>Source of Water</h3>
             <?php
 			   $wcombination=array();
-                $Groundwater= (getFiled('Q6W1', $schoolUserID) != "") ? (getFiled('Q6W1', $schoolUserID) == 1) ? "Y" : "N" : "N/A";              
-                $Surfacewater = (getFiled('Q6W2', $schoolUserID) != "") ? (getFiled('Q6W2', $schoolUserID) == 1) ? "Y" : "N" : "N/A";
-                $Rainwater = (getFiled('Q6W3', $schoolUserID) != "") ? (getFiled('Q6W3', $schoolUserID) == 1) ? "Y" : "N" : "N/A";
-                $Recycledwastewater = (getFiled('Q6W4', $schoolUserID) != "") ? (getFiled('Q6W4', $schoolUserID) == 1) ? "Y" : "N" : "N/A";
+                $Groundwater= (getFiled('Q5W1', $schoolUserID) != "") ? (getFiled('Q5W1', $schoolUserID) == 1) ? "Y" : "N" : "N/A";              
+                $Surfacewater = (getFiled('Q5W2', $schoolUserID) != "") ? (getFiled('Q5W2', $schoolUserID) == 1) ? "Y" : "N" : "N/A";
+                $Rainwater = (getFiled('Q5W3', $schoolUserID) != "") ? (getFiled('Q5W3', $schoolUserID) == 1) ? "Y" : "N" : "N/A";
+                $Recycledwastewater = (getFiled('Q5W4', $schoolUserID) != "") ? (getFiled('Q5W4', $schoolUserID) == 1) ? "Y" : "N" : "N/A";
                 $harvestrainwater6b = (getFiled('Q6W5', $schoolUserID) != "") ? (getFiled('Q6W5', $schoolUserID) == 1) ? "Y" : "N" : "N/A";
                 if (($Surfacewater == "Y" && $Rainwater == "Y" && $Recycledwastewater == "Y" && $Groundwater == "Y") || ($Surfacewater == "Y" && $Rainwater == "Y" && $Recycledwastewater == "Y")) {
                     $SourceofWater = "All 4 or Surface+ rainwater+ recycle water";
