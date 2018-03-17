@@ -1082,8 +1082,7 @@ if ($data == 3 || $data == 4) { ?>
                 $Surfacewater = (getFiled('Q5W2', $schoolUserID) != "") ? (getFiled('Q5W2', $schoolUserID) == 1) ? "Y" : "N" : "N/A";
                 $Rainwater = (getFiled('Q5W3', $schoolUserID) != "") ? (getFiled('Q5W3', $schoolUserID) == 1) ? "Y" : "N" : "N/A";
                 $Recycledwastewater = (getFiled('Q5W4', $schoolUserID) != "") ? (getFiled('Q5W4', $schoolUserID) == 1) ? "Y" : "N" : "N/A";
-                $harvestrainwater6b = (getFiled('Q6W5', $schoolUserID) != "") ? (getFiled('Q6W5', $schoolUserID) == 1) ? "Y" : "N" : "N/A";
-                if (($Surfacewater == "Y" && $Rainwater == "Y" && $Recycledwastewater == "Y" && $Groundwater == "Y") || ($Surfacewater == "Y" && $Rainwater == "Y" && $Recycledwastewater == "Y")) {
+               if (($Surfacewater == "Y" && $Rainwater == "Y" && $Recycledwastewater == "Y" && $Groundwater == "Y") || ($Surfacewater == "Y" && $Rainwater == "Y" && $Recycledwastewater == "Y")) {
                     $SourceofWater = "All 4 or Surface+ rainwater+ recycle water";
                     $SourceofWater_msg = "Your source of water is surface, recycled water and rainwater which are viable sources for Water usage. Good you know where your water comes from!";
                         } else if (($Surfacewater == "Y" && $Rainwater == "Y") || ($Surfacewater == "Y" && $Recycledwastewater == "Y") || ($Rainwater == "Y" && $Recycledwastewater == "Y")) {
