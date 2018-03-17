@@ -146,7 +146,7 @@
                 <ul class="dropdown-menu">
                   <li class=""><a href="<?php echo base_url('admin/audit_started'); ?>">AUDIT STARTED</a></li>
                   <li><a href="<?php echo base_url('admin/audit_started_2017'); ?>">REGISTRATIONS 2017</a></li>
-		  <li><a href="<?php echo base_url('admin/audit_started_2018'); ?>">REGISTRATIONS 2017</a></li>	
+		  <li><a href="<?php echo base_url('admin/dashboard/total18_registration'); ?>">REGISTRATIONS 2018</a></li>	
                   <li><a href="<?php echo base_url('admin/audit_started/statewise'); ?>">REGISTRATIONS BY STATE</a></li>
                   <li><a href="<?php echo base_url('admin/audit_started/feedback'); ?>">Feedback</a></li>
                   <li><a href="<?php echo base_url('admin/audit_started_2017/partnersList'); ?>">Partner Details</a></li>
