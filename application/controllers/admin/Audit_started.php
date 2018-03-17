@@ -80,7 +80,7 @@ class Audit_started extends CI_Controller {
      * Send Filter Feedback
      */ 
    public function filter_email() {
-        
+        ini_set('memory_limit', '-1');
         $mail = '';
         $filed = '';
         $byMail = $this->input->post('email');
