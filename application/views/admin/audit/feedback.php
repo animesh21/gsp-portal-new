@@ -17,6 +17,14 @@
 	    <div class="panel-heading">Select Filters</div>
 	    <?php echo form_open('admin/audit_started/filter_email/', array('id' => 'frmSendblukemail')); ?>
 	    <div class="panel-body">
+                <div class="form-group col-md-4">
+		    <label for="pwd">Select Phase:</label>
+		    <select  class="form-control" name="phase">
+                        <option value="0"> Both</option>
+                        <option value="1"> First Phase</option>
+			<option value="2"> Second Phase</option>
+		    </select>
+		</div>
 		<div class="form-group col-md-12">
 		    <label>Subject:</label>
 		    <input type="text" class="form-control" name="subject" id="subject">
