@@ -9,272 +9,303 @@
     .list-inline li input[type="radio"]{ opacity:0.7;  padding:3px 3px 3px 3px;}
 </style>
 <div class="top-area">
-  <h2>Send FeedBack</h2>
+    <h2>Send FeedBack</h2>
 </div>
 <div class="row">
-  <div class="col-md-12">
-    <div class="panel panel-default">
-      <div class="panel-heading">Select Filters</div>
-      <?php echo form_open('admin/audit_started/filter_email/', array('id' => 'frmSendblukemail')); ?>
-      <div class="panel-body">
-        <div class="form-group col-md-12">
-          <label>Subject:</label>
-          <input type="text" class="form-control" name="subject" id="subject">
-        </div>
-        <div class="form-group col-md-12">
-          <label for="pwd">Message:</label>
-          <textarea class="form-control" id="message" name="message"></textarea>
-        </div>
-        <div class="form-group col-md-4">
-          <label for="pwd">Select User Email-Id:</label>
-          <select  class="form-control" name="email">
-            <option value="allemail" selected="selected"> All Email</option>
-            <option value="coemail"> Coordinator Email</option>
-            <option value="schoolemail"> School Email</option>
-          </select>
-        </div>
-        <div class="form-group col-md-8">
-          <label for="pwd">Select Progress Based User:</label>
-          <ul class="list-unstyled list-inline" style="margin:0; padding:0;">
-            <li>
-              <label class="checkbox-inline">
-              <input type="checkbox" value="100" name="progress[]" id="progress"  />
-              Audit Submitted</label>
-            </li>
-            <li>
-              <label class="checkbox-inline">
-              <input type="checkbox" value="100" name="progress[]" id="progress"  />
-              100 percent</label>
-            </li>
-            <li>
-              <label class="checkbox-inline">
-              <input type="checkbox" value="75" name="progress[]" id="progress" />
-              75 percent</label>
-            </li>
-            <li>
-              <label class="checkbox-inline">
-              <input type="checkbox" value="50" name="progress[]" id="progress" />
-              50 percent</label>
-            </li>
-            <li>
-              <label class="checkbox-inline">
-              <input type="checkbox" value=" BETWEEN 10 AND 40" name="progress[]" id="progress"  />
-              10-40 percent</label>
-            </li>
-            <li>
-              <label class="checkbox-inline">
-              <input type="checkbox" value="5" name="progress[]" id="progress"  />
-              5 percent</label>
-            </li>
-          </ul>
-        </div>
-        <div class="form-group col-md-12">
-          <label for="pwd">Select School Category :</label>
-          <ul class="list-unstyled list-inline" style="margin:0; padding:0;">
-            <li>
-              <label class="checkbox-inline">
-              <input type="checkbox" value="1" name="school_category[]" id="school_category"/>
-              Day Scholar</label>
-            </li>
-            <li>
-              <label class="checkbox-inline">
-              <input type="checkbox" value="2" name="school_category[]" id="school_category"/>
-              Day Boarding </label>
-            </li>
-            <li>
-              <label class="checkbox-inline">
-              <input type="checkbox" value="3" name="school_category[]" id="school_category"/>
-              Residential</label>
-            </li>
-            <li>
-              <label class="checkbox-inline">
-              <input type="checkbox" value="4" name="school_category[]" id="school_category"/>
-              Day Scholar + Day Boarding </label>
-            </li>
-            <li>
-              <label class="checkbox-inline">
-              <input type="checkbox" value="5" name="school_category[]" id="school_category"/>
-              Day Boarding + Residential</label>
-            </li>
-            <li>
-              <label class="checkbox-inline">
-              <input type="checkbox" value="6" name="school_category[]" id="school_category"/>
-              Day Scholar + Residential </label>
-            </li>
-            <li>
-              <label class="checkbox-inline">
-              <input type="checkbox" value="7" name="school_category[]" id="school_category"/>
-              Day Scholar + Day Boarding + Residential </label>
-            </li>
-          </ul>
-        </div>
-        <div class="form-group col-md-4">
-          <label for="pwd">Select School Type :</label>
-          <ul class="list-unstyled list-inline" style="margin:0; padding:0;">
-            <li>
-              <label class="checkbox-inline">
-              <input type="checkbox" value="1" name="school_type[]" id="school_type"/>
-              Only boys </label>
-            </li>
-            <li>
-              <label class="checkbox-inline">
-              <input type="checkbox" value="2" name="school_type[]" id="school_type"/>
-              Only Girls </label>
-            </li>
-            <li>
-              <label class="checkbox-inline">
-              <input type="checkbox" value="3" name="school_type[]" id="school_type"/>
-              Mixed/Co-education </label>
-            </li>
-          </ul>
-        </div>
-        <div class="form-group col-md-8">
-          <label for="pwd">Select Type of Aid:</label>
-          <ul class="list-unstyled list-inline" style="margin:0; padding:0;">
-            <li>
-              <label class="checkbox-inline">
-              <input type="checkbox" value="1" name="school_aid[]" id="school_type"/>
-              Government School</label>
-            </li>
-            <li>
-              <label class="checkbox-inline">
-              <input type="checkbox" value="2" name="school_aid[]" id="school_type"/>
-              Government - Aided School </label>
-            </li>
-            <li>
-              <label class="checkbox-inline">
-              <input type="checkbox" value="3" name="school_aid[]" id="school_type"/>
-              Private School </label>
-            </li>
-          </ul>
-        </div>
-        <div class="form-group col-md-4">
-          <label for="pwd">Select State :</label>
-          <?php echo form_dropdown('state', $states, 0, array('class' => 'form-control', 'id' => 'country-select')); ?></div>
-        <div class="form-group  col-lg-4">
-          <label for="pwd">School-Category :</label>
-          <?php echo form_dropdown('school', array('0' => 'Primary', '1' => 'Secondary', '2' => 'All'), $this->input->post('school'), array('class' => 'form-control', 'id' => 'school-select')); ?> </div>
-        <div class="form-group  col-lg-4">
-          <label for="pwd">Ratings :</label>
-          <select class="form-control" name="rating">
-            <option value="">Select Rating</option>
-            <option value="Green">Green</option>
-            <option value="Yellow">Yellow</option>
-            <option value="Orange">Orange</option>
-            <option value="Red">Red</option>
-          </select>
-        </div>
-        <div class="form-group col-md-12">
-          <table id="tablePerformance" class="display dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
-            <thead>
-              <tr>
-                <th>Sr. No.</th>
-                <th>School Id</th>
-                <th>UDISE Code</th>
-                <th>Name</th>
-                <th class="hide">Address 1</th>
-                <th class="hide">Address 2</th>
-                <th>Country</th>
-                <th>State</th>
-                <th>District</th>
-                <th>City</th>
-                <th class="hide">Pincode</th>
-                <th class="hide">ISD Code</th>
-                <th class="hide">STD Code</th>
-                <th class="hide">Landline Number</th>
-                <th class="hide">School Email</th>
-                <th class="hide">Principal Name</th>
-                <th class="hide">Principal Mobile</th>
-                <th class="hide">Coordinator Name</th>
-                <th class="hide">Coordinator Mobile</th>
-                <th class="hide">Password</th>
-                <th class="hide">Date & Time</th>
-                <th>Completeness</th>
-                <!--<th>School Category</th>
-				<th>School Type</th>
-				<th>Type of Aid</th>-->
-                <!--
-				<th>Coemail</th>-->
-                <th>Rating</th>
-                <th style="width:90px;"> <label class="checkbox-inline">
-                  <input type="checkbox" name="email_list_all" id="email_list_all" style="opacity: 0.8; margin-top:-1px;" />
-                  Check</label></th>
-              </tr>
-            </thead>
-            <tbody>
-              <?php for($i=0; $i<count($record); $i++){ ?>
-              <?php $arr=array(
-                                '1'=>'Day Scholar',
-                                '2'=>'Day Boarding',
-                                '3'=>'Residential',
-                                '4'=>'Day Scholar + Day Boarding',
-                                '5'=>'Day Boarding + Residential',
-                                '6'=>'Day Scholar + Residential',
-                                '7'=>'Day Scholar + Day Boarding + Residential'
-                            );
-							$arrGender=array('1'=>'Only Boys', '2'=>'Only Girls', '3'=>'Mixed/Co-education');
-							$schoolType=array(
-								'1'=>'Government School',
-								'2'=>'Government &#45; Aided School',
-								'3'=>'Private School'
-							); 
-						?>
-              <tr>
-                <td><?php echo $i+1; ?></td>
-                <td><?php if($record[$i]['id']!=''): echo $record[$i]['id']; endif  ?></td>
-                <td><?php if($record[$i]['udise']!=''): echo $record[$i]['udise']; endif ?></td>
-                <td><?php if($record[$i]['name']!=''): echo $record[$i]['name']; endif ?></td>
-                <td class="hide"><?php if($record[$i]['address1']!=''): echo $record[$i]['address1']; endif ?></td>
-                <td class="hide"><?php if($record[$i]['address2']!=''): echo $record[$i]['address2']; endif ?></td>
-                <td><?php if($record[$i]['country']!=''): echo $record[$i]['country']; endif ?></td>
-                <td><?php if($record[$i]['state_name']!=''): echo $record[$i]['state_name']; endif ?></td>
-                <td><?php if($record[$i]['district_name']!=''): echo $record[$i]['district_name']; endif  ?></td>
-                <td><?php if($record[$i]['city']!=''): echo $record[$i]['city']; endif ?></td>
-                <td class="hide"><?php if($record[$i]['pincode']!=''): echo $record[$i]['pincode']; endif ?></td>
-                <td class="hide"><?php if($record[$i]['country_code']!=''): echo $record[$i]['country_code']; endif ?></td>
-                <td class="hide"><?php if($record[$i]['std']!=''): echo $record[$i]['std']; endif ?></td>
-                <td class="hide"><?php if($record[$i]['telephone']!=''): echo $record[$i]['telephone']; endif ?></td>
-                <td class="hide"><?php if($record[$i]['schoolemail']!=''): echo $record[$i]['schoolemail']; endif ?></td>
-                <td class="hide"><?php if($record[$i]['principle_name']!=''): echo $record[$i]['principle_name']; endif ?></td>
-                <td class="hide"><?php if($record[$i]['mobile']!=''): echo $record[$i]['mobile']; endif ?></td>
-                <td class="hide"><?php if($record[$i]['coname']!=''): echo $record[$i]['coname']; endif ?></td>
-                <td class="hide"><?php if($record[$i]['coemail']!=''): echo $record[$i]['coemail']; endif ?></td>
-                <td class="hide"><?php if($record[$i]['password']!=''): echo $record[$i]['password']; endif ?></td>
-                <td class="hide"><?php if($record[$i]['date_added']!=''): echo $record[$i]['date_added']; endif ?></td>
-                <td><?php if($record[$i]['progress']!=''): echo $record[$i]['progress']; endif ?></td>
-                <!--	
-							<td><?php //if($record[$i]['Q1S1']!=''): echo $arr[$record[$i]['Q1S1']]; endif ?></td>
-							<td><?php //if($record[$i]['Q2G1']!=''): echo $arrGender[$record[$i]['Q2G1']]; endif  ?></td>
-							<td><?php //if($record[$i]['Q9G1']!=''): echo $schoolType[$record[$i]['Q9G1']]; endif ?></td>-->
-                <!--<td>
-								<?php //if(isset($record[$i]['coemail'])): echo $record[$i]['coemail']; endif  ?>
-								<?php //if(isset($record[$i]['schoolemail'])): echo $record[$i]['schoolemail']; endif  ?>
-							</td>
-							<td><?php //if($record[$i]['progress']!=''): echo $record[$i]['progress']; endif ?></td>-->
-                <td><?php if($record[$i]['remark']!=''): echo "<label class='label label-".$record[$i]['remark']."'>".$record[$i]['remark']."</label>"; endif ?></td>
-                <td><?php //echo $mail_status; ?>
-                  <?php if ($mail_status == "coemail") { ?>
-                  <input type="checkbox" name="email_list[]" class="checkbox" value="<?php echo ($record[$i]['coemail'] != '') ? $record[$i]['coemail'] : ""; ?>" style="opacity: 0.8; margin-top:-1px;" />
-                  <?php } else if ($mail_status == "schoolemail") { ?>
-                  <input type="checkbox" name="email_list[]" class="checkbox" value="<?php echo ($record[$i]['schoolemail'] != "") ? $record[$i]['schoolemail'] : ""; ?>" style="opacity: 0.8; margin-top:-1px;" />
-                  <?php } else if ($mail_status == "both") { ?>
-                  <input type="checkbox" name="email_list[]" class="checkbox" value="<?php echo $record[$i]['coemail'] . '/' . $record[$i]['schoolemail']; ?>" style="opacity: 0.8; margin-top:-1px;" />
-                  <?php } ?>
-                </td>
-              </tr>
-              <?php }?>
-            </tbody>
-          </table>
-        </div>
-        <div class="col-md-6">
-          <button type="submit" class="btn btn-default btn-block btn-lg" style="background: #e86549 !important; color: #fff">Filter Email</button>
-        </div>
-        <div class="col-md-6">
-          <button type="button" id="send_email" class="btn btn-default btn-block btn-lg" style="background: #e86549 !important; color: #fff">Send Email</button>
-        </div>
-      </div>
-      <?php echo form_close(); ?> </div>
-  </div>
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">Select Filters</div>
+            <?php echo form_open('admin/audit_started/filter_email/', array('id' => 'frmSendblukemail')); ?>
+            <div class="panel-body">
+                <div class="form-group col-md-4">
+                    <label for="pwd">Select Phase:</label>
+                    <select  class="form-control" name="phase">
+                        <option value="0"> Both</option>
+                        <option value="1"> First Phase</option>
+                        <option value="2"> Second Phase</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-12">
+                    <label>Subject:</label>
+                    <input type="text" class="form-control" name="subject" id="subject">
+                </div>
+                <div class="form-group col-md-12">
+                    <label for="pwd">Message:</label>
+                    <textarea class="form-control" id="message" name="message"></textarea>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="pwd">Select User Email-Id:</label>
+                    <select  class="form-control" name="email">
+                        <option value="allemail" selected="selected"> All Email</option>
+                        <option value="coemail"> Coordinator Email</option>
+                        <option value="schoolemail"> School Email</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-8">
+                    <label for="pwd">Select Progress Based User:</label>
+                    <ul class="list-unstyled list-inline" style="margin:0; padding:0;">
+                        <li>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" value="100" name="progress[]" id="progress"  />
+                                Audit Submitted</label>
+                        </li>
+                        <li>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" value="100" name="progress[]" id="progress"  />
+                                100 percent</label>
+                        </li>
+                        <li>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" value="75" name="progress[]" id="progress" />
+                                75 percent</label>
+                        </li>
+                        <li>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" value="50" name="progress[]" id="progress" />
+                                50 percent</label>
+                        </li>
+                        <li>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" value=" BETWEEN 10 AND 40" name="progress[]" id="progress"  />
+                                10-40 percent</label>
+                        </li>
+                        <li>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" value="5" name="progress[]" id="progress"  />
+                                5 percent</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="form-group col-md-12">
+                    <label for="pwd">Select School Category :</label>
+                    <ul class="list-unstyled list-inline" style="margin:0; padding:0;">
+                        <li>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" value="1" name="school_category[]" id="school_category"/>
+                                Day Scholar</label>
+                        </li>
+                        <li>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" value="2" name="school_category[]" id="school_category"/>
+                                Day Boarding </label>
+                        </li>
+                        <li>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" value="3" name="school_category[]" id="school_category"/>
+                                Residential</label>
+                        </li>
+                        <li>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" value="4" name="school_category[]" id="school_category"/>
+                                Day Scholar + Day Boarding </label>
+                        </li>
+                        <li>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" value="5" name="school_category[]" id="school_category"/>
+                                Day Boarding + Residential</label>
+                        </li>
+                        <li>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" value="6" name="school_category[]" id="school_category"/>
+                                Day Scholar + Residential </label>
+                        </li>
+                        <li>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" value="7" name="school_category[]" id="school_category"/>
+                                Day Scholar + Day Boarding + Residential </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="pwd">Select School Type :</label>
+                    <ul class="list-unstyled list-inline" style="margin:0; padding:0;">
+                        <li>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" value="1" name="school_type[]" id="school_type"/>
+                                Only boys </label>
+                        </li>
+                        <li>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" value="2" name="school_type[]" id="school_type"/>
+                                Only Girls </label>
+                        </li>
+                        <li>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" value="3" name="school_type[]" id="school_type"/>
+                                Mixed/Co-education </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="form-group col-md-8">
+                    <label for="pwd">Select Type of Aid:</label>
+                    <ul class="list-unstyled list-inline" style="margin:0; padding:0;">
+                        <li>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" value="1" name="school_aid[]" id="school_type"/>
+                                Government School</label>
+                        </li>
+                        <li>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" value="2" name="school_aid[]" id="school_type"/>
+                                Government - Aided School </label>
+                        </li>
+                        <li>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" value="3" name="school_aid[]" id="school_type"/>
+                                Private School </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="pwd">Select State :</label>
+                    <?php echo form_dropdown('state', $states, 0, array('class' => 'form-control', 'id' => 'country-select')); ?></div>
+                <div class="form-group  col-lg-4">
+                    <label for="pwd">School-Category :</label>
+                    <?php echo form_dropdown('school', array('0' => 'Primary', '1' => 'Secondary', '2' => 'All'), $this->input->post('school'), array('class' => 'form-control', 'id' => 'school-select')); ?> </div>
+                <div class="form-group  col-lg-4">
+                    <label for="pwd">Ratings :</label>
+                    <select class="form-control" name="rating">
+                        <option value="">Select Rating</option>
+                        <option value="Green">Green</option>
+                        <option value="Yellow">Yellow</option>
+                        <option value="Orange">Orange</option>
+                        <option value="Red">Red</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-12">
+                    <table id="tablePerformance" class="display dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
+                        <thead>
+                            <tr>
+                                <th>Sr. No.</th>
+                                <th>School Id</th>
+                                <th>UDISE Code</th>
+                                <th>Name</th>
+                                <th class="hide">Address 1</th>
+                                <th class="hide">Address 2</th>
+                                <th>Country</th>
+                                <th>State</th>
+                                <th>District</th>
+                                <th>City</th>
+                                <th class="hide">Pincode</th>
+                                <th class="hide">ISD Code</th>
+                                <th class="hide">STD Code</th>
+                                <th class="hide">Landline Number</th>
+                                <th class="hide">School Email</th>
+                                <th class="hide">Principal Name</th>
+                                <th class="hide">Principal Mobile</th>
+                                <th class="hide">Coordinator Name</th>
+                                <th class="hide">Coordinator Mobile</th>
+                                <th class="hide">Password</th>
+                                <th class="hide">Date & Time</th>
+                                <th>Completeness</th>
+                                <!--<th>School Category</th>
+                                                <th>School Type</th>
+                                                <th>Type of Aid</th>-->
+                                <!--
+                                                <th>Coemail</th>-->
+                                <th>Rating</th>
+                                <th style="width:90px;"> <label class="checkbox-inline">
+                                        <input type="checkbox" name="email_list_all" id="email_list_all" style="opacity: 0.8; margin-top:-1px;" />
+                                        Check</label></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php for ($i = 0; $i < count($record); $i++) { ?>
+                                <?php
+                                $arr = array(
+                                    '1' => 'Day Scholar',
+                                    '2' => 'Day Boarding',
+                                    '3' => 'Residential',
+                                    '4' => 'Day Scholar + Day Boarding',
+                                    '5' => 'Day Boarding + Residential',
+                                    '6' => 'Day Scholar + Residential',
+                                    '7' => 'Day Scholar + Day Boarding + Residential'
+                                );
+                                $arrGender = array('1' => 'Only Boys', '2' => 'Only Girls', '3' => 'Mixed/Co-education');
+                                $schoolType = array(
+                                    '1' => 'Government School',
+                                    '2' => 'Government &#45; Aided School',
+                                    '3' => 'Private School'
+                                );
+                                ?>
+                                <tr>
+                                    <td><?php echo $i + 1; ?></td>
+                                    <td><?php if ($record[$i]['id'] != ''): echo $record[$i]['id'];
+                                endif ?></td>
+                                    <td><?php if ($record[$i]['udise'] != ''): echo $record[$i]['udise'];
+                                endif ?></td>
+                                    <td><?php if ($record[$i]['name'] != ''): echo $record[$i]['name'];
+                                endif ?></td>
+                                    <td class="hide"><?php if ($record[$i]['address1'] != ''): echo $record[$i]['address1'];
+                                endif ?></td>
+                                    <td class="hide"><?php if ($record[$i]['address2'] != ''): echo $record[$i]['address2'];
+                                endif ?></td>
+                                    <td><?php if ($record[$i]['country'] != ''): echo $record[$i]['country'];
+                                endif ?></td>
+                                    <td><?php if ($record[$i]['state_name'] != ''): echo $record[$i]['state_name'];
+                                endif ?></td>
+                                    <td><?php if ($record[$i]['district_name'] != ''): echo $record[$i]['district_name'];
+                                endif ?></td>
+                                    <td><?php if ($record[$i]['city'] != ''): echo $record[$i]['city'];
+                                endif ?></td>
+                                    <td class="hide"><?php if ($record[$i]['pincode'] != ''): echo $record[$i]['pincode'];
+                                endif ?></td>
+                                    <td class="hide"><?php if ($record[$i]['country_code'] != ''): echo $record[$i]['country_code'];
+                                endif ?></td>
+                                    <td class="hide"><?php if ($record[$i]['std'] != ''): echo $record[$i]['std'];
+                                endif ?></td>
+                                    <td class="hide"><?php if ($record[$i]['telephone'] != ''): echo $record[$i]['telephone'];
+                                endif ?></td>
+                                    <td class="hide"><?php if ($record[$i]['schoolemail'] != ''): echo $record[$i]['schoolemail'];
+                                endif ?></td>
+                                    <td class="hide"><?php if ($record[$i]['principle_name'] != ''): echo $record[$i]['principle_name'];
+                                endif ?></td>
+                                    <td class="hide"><?php if ($record[$i]['mobile'] != ''): echo $record[$i]['mobile'];
+                                endif ?></td>
+                                    <td class="hide"><?php if ($record[$i]['coname'] != ''): echo $record[$i]['coname'];
+                                    endif ?></td>
+                                    <td class="hide"><?php if ($record[$i]['coemail'] != ''): echo $record[$i]['coemail'];
+                                    endif ?></td>
+                                    <td class="hide"><?php if ($record[$i]['password'] != ''): echo $record[$i]['password'];
+                                    endif ?></td>
+                                    <td class="hide"><?php if ($record[$i]['date_added'] != ''): echo $record[$i]['date_added'];
+                                    endif ?></td>
+                                    <td><?php if ($record[$i]['progress'] != ''): echo $record[$i]['progress'];
+                                    endif ?></td>
+                                    <!--	
+                                                                            <td><?php //if($record[$i]['Q1S1']!=''): echo $arr[$record[$i]['Q1S1']]; endif  ?></td>
+                                                                            <td><?php //if($record[$i]['Q2G1']!=''): echo $arrGender[$record[$i]['Q2G1']]; endif   ?></td>
+                                                                            <td><?php //if($record[$i]['Q9G1']!=''): echo $schoolType[$record[$i]['Q9G1']]; endif  ?></td>-->
+                                    <!--<td>
+    <?php //if(isset($record[$i]['coemail'])): echo $record[$i]['coemail']; endif   ?>
+    <?php //if(isset($record[$i]['schoolemail'])): echo $record[$i]['schoolemail']; endif   ?>
+                                                                            </td>
+                                                                            <td><?php //if($record[$i]['progress']!=''): echo $record[$i]['progress']; endif  ?></td>-->
+                                    <td><?php if ($record[$i]['remark'] != ''): echo "<label class='label label-" . $record[$i]['remark'] . "'>" . $record[$i]['remark'] . "</label>";
+    endif ?></td>
+                                    <td><?php //echo $mail_status;  ?>
+    <?php if ($mail_status == "coemail") { ?>
+                                            <input type="checkbox" name="email_list[]" class="checkbox" value="<?php echo ($record[$i]['coemail'] != '') ? $record[$i]['coemail'] : ""; ?>" style="opacity: 0.8; margin-top:-1px;" />
+    <?php } else if ($mail_status == "schoolemail") { ?>
+                                            <input type="checkbox" name="email_list[]" class="checkbox" value="<?php echo ($record[$i]['schoolemail'] != "") ? $record[$i]['schoolemail'] : ""; ?>" style="opacity: 0.8; margin-top:-1px;" />
+    <?php } else if ($mail_status == "both") { ?>
+                                            <input type="checkbox" name="email_list[]" class="checkbox" value="<?php echo $record[$i]['coemail'] . '/' . $record[$i]['schoolemail']; ?>" style="opacity: 0.8; margin-top:-1px;" />
+    <?php } ?>
+                                    </td>
+                                </tr>
+<?php } ?>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-6">
+                    <button type="submit" class="btn btn-default btn-block btn-lg" style="background: #e86549 !important; color: #fff">Filter Email</button>
+                </div>
+                <div class="col-md-6">
+                    <button type="button" id="send_email" class="btn btn-default btn-block btn-lg" style="background: #e86549 !important; color: #fff">Send Email</button>
+                </div>
+            </div>
+<?php echo form_close(); ?> </div>
+    </div>
 </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -396,10 +427,8 @@
                     alert("Email has been send successful...");
                 }
             });
-
         });
         $('input[name="email_list[]"]:checked').map(function () {
-
 //	  jQuery.ajax({
 //	  url:"https://api.elasticemail.com/v2/email/send",
 //	  type:"POST",
