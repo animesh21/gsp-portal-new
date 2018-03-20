@@ -21,7 +21,7 @@ if (!function_exists('getDistricts')) {
     function getDistricts() {
         $arrDistrict = array();
         $CI = & get_instance();
-        $temp = $CI->db->get('countries')->result();
+        $temp = $CI->db->get('cities')->result();
         foreach ($temp as $t) {
             $arrDistrict[$t->id] = $t->name;
         }
