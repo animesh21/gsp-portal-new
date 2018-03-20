@@ -182,6 +182,11 @@
 			<option value="Jawahar Navodya">JNV</option>
 		    </select>
 		</div>
+		<div class="form-group col-md-4">
+		    <label for="pwd">Select District :</label>
+		    <?php echo form_dropdown('district', $district, 0, array('class' => 'form-control', 'id' => 'district-select')); ?>
+		</div>
+		    
 		<div class="form-group col-md-12">
 		    <div class="col-md-6">
 			<button type="submit" class="btn btn-default btn-block btn-lg" style="background: #e86549 !important; color: #fff">Filter Email</button>
