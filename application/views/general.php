@@ -440,7 +440,7 @@
                     </div>
                     <br>
                     <div class="form-group">
-                        <label class="control-label"><span class="cube">8</span>Whether your school is:
+                        <label class="control-label"><span class="cube">8</span>What type is your school:
                             <!-- <a class="tt" data-tooltip=""><span class="badge">?</span></a> -->
                         </label>
                         <div class="radio">
