@@ -186,6 +186,10 @@
 		    <label for="pwd">Select District :</label>
 		    <?php echo form_dropdown('district', $district, 0, array('class' => 'form-control', 'id' => 'district-select')); ?>
 		</div>
+		<div class="form-group col-md-4">
+		    <label for="pwd">BY School Alphabate :</label>
+		    <input type="text" name = "alphabate" />
+		</div>    
 		    
 		<div class="form-group col-md-12">
 		    <div class="col-md-6">
