@@ -294,7 +294,7 @@
               ?> </p>
       </div>
 	  <div class="form-group">
-        <label for="exampleInputEmail1"> <span class="cube">8</span> Whether your school is?</label>
+        <label for="exampleInputEmail1"> <span class="cube">8</span> What type is your school?</label>
         <p class="formanswertext">
           <?php
              if(getFiled('Q9G1', $schoolUserID)==1){
