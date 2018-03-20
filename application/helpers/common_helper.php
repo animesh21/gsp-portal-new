@@ -16,6 +16,20 @@ if (!function_exists('getStates')) {
 
 }
 
+if (!function_exists('getDistricts')) {
+
+    function getDistricts() {
+        $arrDistrict = array();
+        $CI = & get_instance();
+        $temp = $CI->db->get('countries')->result();
+        foreach ($temp as $t) {
+            $arrDistrict[$t->id] = $t->name;
+        }
+        return $arrDistrict;
+    }
+
+}
+
 if (!function_exists('getStateById')) {
     function getStateById($stateId) {
         $arrState = array();
