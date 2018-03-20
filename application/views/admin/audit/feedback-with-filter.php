@@ -172,6 +172,10 @@
                         <option value="Red">Red</option>
                     </select>
                 </div>
+		 <div class="form-group col-md-4">
+		    <label for="pwd">Select District :</label>
+		    <?php echo form_dropdown('district', $district, 0, array('class' => 'form-control', 'id' => 'district-select')); ?>
+		 </div>
                 <div class="form-group col-md-12">
                     <table id="tablePerformance" class="display dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
                         <thead>
