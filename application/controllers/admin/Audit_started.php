@@ -69,6 +69,8 @@ class Audit_started extends CI_Controller {
      public function feedback() {
 	 $data['states'] = getStates();
 	 $data['states'][0]="All"; 
+	 $data['district'] = getDistricts();
+	 $data['district'][0]="All";     
 	 $data['main'] = 'admin/audit/feedback';
 	 $data['title'] = 'Home | Send Feedback';
          $this->load->view('admin/includes/template', $data);
@@ -102,6 +104,7 @@ class Audit_started extends CI_Controller {
         $bySchoolType = $this->input->post('school_type');
         $byAidType = $this->input->post('school_aid');
         $byState = $this->input->post('state');
+        $byDistrict = $this->input->post('district');   
         $bySchoolName = $this->input->post('schoolname');
         $rating = $this->input->post('rating');
        // $query = "SELECT a.id, a.udise, a.userid, a.name, a.country, a.state, a.district, a.city, a.progress, $filed, b.name AS state_name, c.name AS district_name, d.remark, d.phase FROM gsp_school AS a LEFT JOIN states AS b ON a.state=b.id LEFT JOIN cities AS c ON a.district=c.id LEFT JOIN tbl_sendmail AS d ON a.id=d.school_id  WHERE";
@@ -118,6 +121,14 @@ class Audit_started extends CI_Controller {
                 $conditions[] = " a.state='$byState'";
             }
         }
+	
+	if ($byDistrict != '') {
+            if ($byDistrict == "0") {
+                $conditions[] = " a.district!='$byDistrict'";
+            } else {
+                $conditions[] = " a.district='$byDistrict'";
+            }
+        }   
 
         //school Name
         if (!empty($bySchoolName)) {
@@ -182,6 +193,8 @@ class Audit_started extends CI_Controller {
 
         $data['states'] = getStates();
         $data['states'][0] = "All";
+	$data['district'] = getDistricts();
+        $data['district'][0]="All";   
         $data['main'] = 'admin/audit/feedback-with-filter';
         $data['record'] = $query->result_array();
         $data['mail_status'] = $mail;
