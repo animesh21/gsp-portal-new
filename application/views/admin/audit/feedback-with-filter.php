@@ -230,7 +230,7 @@
                                 ?>
                                 <tr>
                                     <td><?php echo $i + 1; ?></td>
-                                    <td><?php if ($record[$i]['id'] != ''): echo $record[$i]['id'];
+                                    <td><?php if ($record[$i]['school_id'] != ''): echo $record[$i]['school_id'];
                                 endif ?></td>
                                     <td><?php if ($record[$i]['udise'] != ''): echo $record[$i]['udise'];
                                 endif ?></td>
