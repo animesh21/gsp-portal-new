@@ -290,9 +290,9 @@
                                     endif ?></td>
                                     <td><?php if ($record[$i]['progress'] != ''): echo $record[$i]['progress'];
                                     endif ?></td>
-                                    <td><?php if($record[$i]['Q1S1']!=''): echo $arr[$record[$i]['Q1S1']]; endif  ?></td>
-                                     <td><?php if($record[$i]['Q2G1']!=''): echo $arrGender[$record[$i]['Q2G1']]; endif   ?></td>
-                                      <td><?php if($record[$i]['Q9G1']!=''): echo $schoolType[$record[$i]['Q9G1']]; endif  ?></td>
+                                    <td><?php if(isset($record[$i]['Q1S1'])){ echo $arr[$record[$i]['Q1S1']]; }else{echo "N/A";}  ?></td>
+                                     <td><?php if(isset($record[$i]['Q2G1'])){ echo $arrGender[$record[$i]['Q2G1']]; }else{echo "N/A";}   ?></td>
+                                      <td><?php if(isset($record[$i]['Q9G1'])){ echo $schoolType[$record[$i]['Q9G1']]; }else{echo "N/A";}  ?></td>
                                     <!--<td>
     <?php //if(isset($record[$i]['coemail'])): echo $record[$i]['coemail']; endif   ?>
     <?php //if(isset($record[$i]['schoolemail'])): echo $record[$i]['schoolemail']; endif   ?>
