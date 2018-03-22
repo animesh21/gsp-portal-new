@@ -137,7 +137,7 @@ class Audit_started extends CI_Controller {
         }
 	
 	if (!empty($byAlphabate)) {
-            $conditions[] = " a.name LIKE '%$byAlphabate%'";
+            $conditions[] = " a.name LIKE '$byAlphabate%'";
         }   
 
         //Schoo Type
