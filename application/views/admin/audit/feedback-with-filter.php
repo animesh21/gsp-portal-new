@@ -231,6 +231,7 @@
                             <?php for ($i = 0; $i < count($record); $i++) { ?>
                                 <?php
                                 $arr = array(
+				    '0' => 'Day Scholar'
                                     '1' => 'Day Scholar',
                                     '2' => 'Day Boarding',
                                     '3' => 'Residential',
@@ -239,8 +240,9 @@
                                     '6' => 'Day Scholar + Residential',
                                     '7' => 'Day Scholar + Day Boarding + Residential'
                                 );
-                                $arrGender = array('1' => 'Only Boys', '2' => 'Only Girls', '3' => 'Mixed/Co-education');
+                                $arrGender = array('0' => 'Only Boys','1' => 'Only Boys', '2' => 'Only Girls', '3' => 'Mixed/Co-education');
                                 $schoolType = array(
+				    '0' =>  'Government School',	
                                     '1' => 'Government School',
                                     '2' => 'Government &#45; Aided School',
                                     '3' => 'Private School'
@@ -290,9 +292,9 @@
                                     endif ?></td>
                                     <td><?php if ($record[$i]['progress'] != ''): echo $record[$i]['progress'];
                                     endif ?></td>
-                                    <td><?php if(isset($record[$i]['Q1S1'])){ echo $record[$i]['Q1S1']; }else{echo "N/A";}  ?></td>
-                                     <td><?php if(isset($record[$i]['Q2G1'])){ echo $record[$i]['Q2G1']; }else{echo "N/A";}   ?></td>
-                                      <td><?php if(isset($record[$i]['Q9G1'])){ echo $record[$i]['Q9G1']; }else{echo "N/A";}  ?></td>
+                                    <td><?php if(isset($record[$i]['Q1S1'])){ echo $arr[$record[$i]['Q1S1']]; }else{echo "N/A";}  ?></td>
+                                     <td><?php if(isset($record[$i]['Q2G1'])){ echo $arrGender[$record[$i]['Q2G1']]; }else{echo "N/A";}   ?></td>
+                                      <td><?php if(isset($record[$i]['Q9G1'])){ echo $schoolType[$record[$i]['Q9G1']]; }else{echo "N/A";}  ?></td>
                                     <!--<td>
     <?php //if(isset($record[$i]['coemail'])): echo $record[$i]['coemail']; endif   ?>
     <?php //if(isset($record[$i]['schoolemail'])): echo $record[$i]['schoolemail']; endif   ?>
