@@ -216,9 +216,9 @@
                                 <th class="hide">Password</th>
                                 <th class="hide">Date & Time</th>
                                 <th>Completeness</th>
-                                <th>School Category</th>
+                             <!--   <th>School Category</th>
                                                 <th>School Type</th>
-                                                <th>Type of Aid</th>
+                                                <th>Type of Aid</th> -->
                                 <!--
                                                 <th>Coemail</th>-->
                                 <th>Rating</th>
@@ -292,9 +292,9 @@
                                     endif ?></td>
                                     <td><?php if ($record[$i]['progress'] != ''): echo $record[$i]['progress'];
                                     endif ?></td>
-                                    <td><?php if(isset($record[$i]['Q1S1'])){ echo $arr[$record[$i]['Q1S1']]; }else{echo "N/A";}  ?></td>
-                                     <td><?php if(isset($record[$i]['Q2G1'])){ echo $arrGender[$record[$i]['Q2G1']]; }else{echo "N/A";}   ?></td>
-                                      <td><?php if(isset($record[$i]['Q9G1'])){ echo $schoolType[$record[$i]['Q9G1']]; }else{echo "N/A";}  ?></td>
+                         <!---           <td><?php //if(isset($record[$i]['Q1S1'])){ echo $arr[$record[$i]['Q1S1']]; }else{echo "N/A";}  ?></td>
+                                     <td><?php //if(isset($record[$i]['Q2G1'])){ echo $arrGender[$record[$i]['Q2G1']]; }else{echo "N/A";}   ?></td>
+                                      <td><?php //if(isset($record[$i]['Q9G1'])){ echo $schoolType[$record[$i]['Q9G1']]; }else{echo "N/A";}  ?></td> -->
                                     <!--<td>
     <?php //if(isset($record[$i]['coemail'])): echo $record[$i]['coemail']; endif   ?>
     <?php //if(isset($record[$i]['schoolemail'])): echo $record[$i]['schoolemail']; endif   ?>
