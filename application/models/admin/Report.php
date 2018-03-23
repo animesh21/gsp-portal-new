@@ -163,4 +163,108 @@ class Report extends CI_Model {
 	   ->get()->row();
 	  return $data->countlabel;
 	}
+	
+	/*************************Air Question*******************************/
+	/********************************************************************/
+	
+	
+	public function SchoolDoesNotOwnVehicles($question_id,$answer)
+		{
+					$this->db->where('questionid',$question_id);
+					$this->db->where('answer', $answer);
+			 return $this->db->count_all_results('gsp_answers');
+					
+		}
+		
+		public function Operatorownedvehicles($question_id,$answer)
+		{
+					$this->db->where('questionid',$question_id);
+					$this->db->where('answer', $answer);
+			 return $this->db->count_all_results('gsp_answers');
+					
+		}
+		
+		public function Schoolownedvehicles($question_id,$answer)
+		{
+					$this->db->where('questionid',$question_id);
+					$this->db->where('answer', $answer);
+			 return $this->db->count_all_results('gsp_answers');
+					
+		}
+		
+		public function CombinationSchoolandOperatorvehicles($question_id,$answer)
+		{
+					$this->db->where('questionid',$question_id);
+					$this->db->where('answer', $answer);
+			 return $this->db->count_all_results('gsp_answers');
+					
+		}
+		
+		public function Hiredvehicles($question_id,$answer)
+		{
+					$this->db->where('questionid',$question_id);
+					$this->db->where('answer', $answer);
+			        return $this->db->count_all_results('gsp_answers');
+					
+		}
+		
+		
+		
+		public function Airconditionedvehicles($question_id)
+		{
+			$this->db->select_sum('answer');
+			$this->db->where('questionid',$question_id);
+			$this->db->from('gsp_answers');
+            return $this->db->get()->row(); 
+			//echo $this->db->last_query();
+					
+		}
+		
+		public function BusesonDiesel($question_id)
+		{
+			$this->db->select_sum('answer');
+			$this->db->where('questionid',$question_id);
+            $this->db->from('gsp_answers');
+            return $this->db->get()->row(); 
+			//echo $this->db->last_query();
+					
+		}
+		
+		public function BusesonPetrol($question_id)
+		{
+			$this->db->select_sum('answer');
+			$this->db->where('questionid',$question_id);
+            $this->db->from('gsp_answers');
+            return $this->db->get()->row(); 
+			//echo $this->db->last_query();
+					
+		}
+		
+		public function AirReportData($question_id)
+		{
+		  return $this->db->select('sum(a.answer) as total')
+						  ->from('gsp_answers as a')
+			              ->where('questionid',$question_id)
+						  ->get()->result(); 
+			//echo $this->db->last_query();
+					
+		}
+		
+		public function getAirVehicle($question_id){
+            return $this->db->select('Avg(a.answer) as avg')
+                     ->from('gsp_answers as a')
+                     ->like('a.questionid', $question_id)
+                     ->get()->result();
+            
+        }
+        
+        public function getAirQuality($question_id){
+            return $this->db->select('a.answer,count(a.answer) as total')
+                     ->from('gsp_answers as a')
+                     ->like('a.questionid', $question_id)
+                     ->group_by('a.answer')
+                     ->get()->result();
+            
+        }
+	
 }
