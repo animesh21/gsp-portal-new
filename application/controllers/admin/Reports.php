@@ -138,4 +138,52 @@ class Reports extends CI_Controller {
 	}
 	
 	
+	
+	<!--  Air report   -->
+	
+	public function getair(){
+		
+		$data['main'] = 'admin/reports/air_graph';
+		
+		
+		$data['NotOwnVehicles_count'] = $this->Report->SchoolDoesNotOwnVehicles("Q6A1","1");
+		$data['Operatorowned_count'] = $this->Report->Operatorownedvehicles("Q6A1","2");
+		$data['OwnVehicles_count'] = $this->Report->Schoolownedvehicles("Q6A1","3");
+        $data['CombinationSchoolandOperatorvehicles'] = $this->Report->CombinationSchoolandOperatorvehicles("Q6A1","4");
+		$data['Hiredvehicles'] = $this->Report->Hiredvehicles("Q6A1","5");
+		
+		
+		$data['Airconditionedvehicles'] = $this->Report->Airconditionedvehicles("Q6A2S1B3");
+		//print_r($data['Airconditionedvehicles']);
+		//$data['BusesonDiesel'] = $this->Report->BusesonDiesel("Q6A2S3D1","20");
+		$data['Bus']['petrol'] = $this->Report->AirReportData("Q6A2S3P1");
+		$data['Bus']['diesel'] = $this->Report->AirReportData("Q6A2S3D1");
+		$data['Bus']['cng'] = $this->Report->AirReportData("Q6A2S3C1");
+		$data['Bus']['electric'] = $this->Report->AirReportData("Q6A2S3E2");
+		
+		
+		//*****************Sustainable Motorised Vehicles ********************************* //   
+           $data['sustain']['Q7A1S4'] = $this->Report->getAirVehicle('Q7A1S4');
+           $data['sustain']['Q7A2S4'] = $this->Report->getAirVehicle('Q7A2S4');
+           $data['sustain']['Q7A3S4'] = $this->Report->getAirVehicle('Q7A3S4');
+           $data['sustain']['Q7A4S4'] = $this->Report->getAirVehicle('Q7A4S4');
+           $data['sustain']['Q7A5S4'] = $this->Report->getAirVehicle('Q7A5S4');
+           $data['sustain']['Q7A6S4'] = $this->Report->getAirVehicle('Q7A6S4');
+          
+       //****************Private vehicles *********************************//  
+            $data['private']['Q7A7S4'] = $this->Report->getAirVehicle('Q7A7S4');
+            $data['private']['Q7A8S4'] = $this->Report->getAirVehicle('Q7A8S4');
+       //**************** Non-Polluting Mode *****************************//
+            $data['np']['Q7A9S4'] = $this->Report->getAirVehicle('Q7A9S4');
+            $data['np']['Q7A10S4'] = $this->Report->getAirVehicle('Q7A10S4');
+            $data['np']['Q7A11S4'] = $this->Report->getAirVehicle('Q7A11S4');
+            
+        //******************* Air quality ******************************//
+            $data['quality']['Q9A1'] = $this->Report->getAirQuality('Q9A1');
+            
+            
+	   $this->load->view('admin/includes/template', $data);
+	}
+	
+	
 }
