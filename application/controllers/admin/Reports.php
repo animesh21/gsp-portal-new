@@ -166,7 +166,14 @@ class Reports extends CI_Controller {
            	 $data['sustain']['Q7A5S4'] = $this->Report->getAirVehicle('Q7A5S4');
            	 $data['sustain']['Q7A6S4'] = $this->Report->getAirVehicle('Q7A6S4');
 		
+		$data['private']['Q7A7S4'] = $this->Report->getAirVehicle('Q7A7S4');
+                $data['private']['Q7A8S4'] = $this->Report->getAirVehicle('Q7A8S4');
 		
+		 $data['np']['Q7A9S4'] = $this->Report->getAirVehicle('Q7A9S4');
+                 $data['np']['Q7A10S4'] = $this->Report->getAirVehicle('Q7A10S4');
+                 $data['np']['Q7A11S4'] = $this->Report->getAirVehicle('Q7A11S4');
+		
+		 $data['quality']['Q9A1'] = $this->Report->getAirQuality('Q9A1');
 		
             
             
