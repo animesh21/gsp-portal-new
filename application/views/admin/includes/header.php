@@ -221,6 +221,7 @@
                   <li><a href="report4.php">Performance Comparison Report</a></li>
                   <li><a href="report5.php">Waste Generation Report</a></li>
                   <li><a href="<?php echo base_url('admin/reports/geteWasteDisposalReport'); ?>">e-Waste Disposal Report</a></li>
+		  <li><a href="<?php echo base_url('admin/reports/getair'); ?>">Air Report</a></li>
                 </ul>
               </li>
               <li class=""> <a href="#">ANALYTICAL TABLES<span class="caret"></span></a>
