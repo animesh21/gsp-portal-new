@@ -130,13 +130,13 @@ $decomposed_waste_day_scholar_boarding_residential = round($sql_query_day_schola
 // Final Arrays
 $final_array_poss = array($possible_waste_combined,$possible_waste_dayscholer, $possible_waste_daybording, $possible_waste_residential,$possible_waste_day_scholar_day_boarding,$possible_waste_day_boarding_residential,$possible_waste_day_scholar_residential,$possible_waste_day_scholar_boarding_residential);
 $final_poss_data = json_encode($final_array_poss);
-//print_r($final_poss_data);
-//echo "<br>";
+print_r($final_poss_data);
+echo "<br>";
 
 $final_array_act = array($actual_waste_combined,$actual_waste_dayscholer, $actual_waste_daybording, $actual_waste_residential,$actual_waste_day_scholar_day_boarding,$actual_waste_day_boarding_residential,$actual_waste_day_scholar_residential,$actual_waste_day_scholar_boarding_residential);
 $final_act_data = json_encode($final_array_act);
-//print_r($final_act_data);
-//echo "<br>";
+print_r($final_act_data);
+echo "<br>"; 
 
 $final_array_recy = array($recycled_waste_combined,$recycled_waste_dayscholer, $recycled_waste_daybording, $recycled_waste_residential,$recycled_waste_day_scholar_day_boarding,$recycled_waste_day_boarding_residential,$recycled_waste_day_scholar_residential,$recycled_waste_day_scholar_boarding_residential);
 $final_recy_data = json_encode($final_array_recy);
