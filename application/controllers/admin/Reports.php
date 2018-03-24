@@ -201,4 +201,17 @@ class Reports extends CI_Controller {
 	}
 	
 	
+	
+	public function getland()
+	{   
+	   $data['main'] = 'admin/reports/land_graph';
+           
+            $data['Q4L5'] = $this->Report->getLand_1();
+            $data['Q6L1'] = $this->Report->getLand_2();
+           
+           
+	   $this->load->view('admin/includes/template', $data);
+	}
+	
+	
 }
