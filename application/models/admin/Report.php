@@ -267,4 +267,76 @@ class Report extends CI_Model {
             
         }
 	
+	
+	/*************************Energy Question*******************************/
+	/********************************************************************/
+	
+	public function Airconditioner($question_id)
+	{
+		    $this->db->select_sum('answer');
+			$this->db->where('questionid',$question_id);
+			$this->db->from('gsp_answers');
+            return $this->db->get()->row();
+	}
+	
+	public function Tubelight($question_id)
+	{
+		    $this->db->select_sum('answer');
+			$this->db->where('questionid',$question_id);
+			$this->db->from('gsp_answers');
+            return $this->db->get()->row();
+	}
+	public function CFLbulb($question_id)
+	{
+		    $this->db->select_sum('answer');
+			$this->db->where('questionid',$question_id);
+			$this->db->from('gsp_answers');
+            return $this->db->get()->row();
+	}
+	public function LEDbulb($question_id)
+	{
+		    $this->db->select_sum('answer');
+			$this->db->where('questionid',$question_id);
+			$this->db->from('gsp_answers');
+            return $this->db->get()->row();
+	}
+	public function SchoolHavingAlternateSourceOfEnergy($question_id)
+	{
+		   
+			$this->db->where('questionid',$question_id);
+			$this->db->where('answer','Y');
+	  return $this->db->count_all_results('gsp_answers');
+			 
+	}
+	
+	public function getEnergyReport(){
+            return $this->db->select('Avg(a.Q6E1S2) as board, sum(a.percatitaaa) as capita')
+                     ->from('tbl_energy as a')
+                     ->get()->result();
+            
+        }
+        
+        public function getEnergyGeneratorSchool(){
+            return $this->db->select('count(a.Q6E2S1) as generator')
+                     ->from('tbl_energy as a')
+                     ->where('a.Q6E2S1 != ',0,FALSE)
+                     ->get()->result();
+            
+        }
+        
+         public function getEnergyBiogasSchool(){
+            return $this->db->select('count(a.Q6E13S1) as biogas')
+                     ->from('tbl_energy as a')
+                     ->where('a.Q6E13S1 != ',0,FALSE)
+                     ->get()->result();
+            
+        }
+         public function getEnergySolarSchool(){
+            return $this->db->select('count(a.Q6E9S1) as solar')
+                     ->from('tbl_energy as a')
+                     ->where('a.Q6E9S1 != ',0,FALSE)
+                     ->get()->result();
+            
+        }
+	
 }
