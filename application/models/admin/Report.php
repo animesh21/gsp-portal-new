@@ -339,4 +339,23 @@ class Report extends CI_Model {
             
         }
 	
+	/*************************Land Question*******************************/
+	/********************************************************************/
+		public function getLand_1(){
+            return $this->db->select('Avg(a.answer) as avg')
+                     ->from('gsp_answers as a')
+                     ->like('a.questionid','Q4L5')
+                     ->get()->result();
+            
+        }
+        
+        public function getLand_2(){
+            return $this->db->select('a.answer,count(a.answer) as total')
+                     ->from('gsp_answers as a')
+                     ->like('a.questionid','Q6L1')
+                     ->group_by('a.answer')
+                     ->get()->result();
+            
+        }
+	
 }
