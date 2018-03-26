@@ -215,7 +215,7 @@ class Reports extends CI_Controller {
 	
 	public function getWater()
 	{   
-	   $data['main'] = 'admin/audit18/water-report';
+	   $data['main'] = 'admin/reports/water-report';
            
            $data['water']['Q5W1'] = $this->Report->getWaterSchool('Q5W1');
            $data['water']['Q5W2'] = $this->Report->getWaterSchool('Q5W2');
@@ -242,7 +242,7 @@ class Reports extends CI_Controller {
         
          public function getWaste()
 	{ 
-           $data['main'] = 'admin/audit18/waste-report';
+           $data['main'] = 'admin/reports/waste-report';
            
            $data['waste']['Q5Wa11S1'] = $this->Report->getAirVehicle('Q5Wa11S1');
            $data['waste']['Q5Wa11S2'] = $this->Report->getAirVehicle('Q5Wa11S2');
