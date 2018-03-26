@@ -358,4 +358,30 @@ class Report extends CI_Model {
             
         }
 	
+	public function getWaterSchool($question_id){
+            return $this->db->select('count(a.answer) as total')
+                     ->from('gsp_answers as a')
+                     ->where('a.questionid',$question_id)
+                     ->get()->result();
+            
+        }
+        
+        public function getWaterByAnswer($question_id,$answer){
+            return $this->db->select('count(a.answer) as total')
+                    ->from('gsp_answers as a')
+                    ->where('a.questionid',$question_id)
+                    ->where('a.answer',$answer)   
+                    ->get()->result();
+            
+        }
+        
+        public function getAnswerByGroup(){
+            return $this->db->select('a.answer, count(a.answer) as total')
+                     ->from('gsp_answers as a')
+                     ->where('a.questionid','Q8W2')
+                     ->group_by('a.answer')
+                     ->get()->result();
+            
+        }
+	
 }
