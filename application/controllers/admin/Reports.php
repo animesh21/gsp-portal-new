@@ -271,7 +271,7 @@ class Reports extends CI_Controller {
            $data['ewaste']['authorized_dealer'] = $this->Report->getWaterSchool('Q11Wa4S2');
            $data['ewaste']['dumped'] = $this->Report->getWaterSchool('Q11Wa4S3');
            $data['ewaste']['internal_procedure'] = $this->Report->getWaterSchool('Q11Wa4S4');
-           
+           $data['burn']['Q15Wa1'] = $this->Report->getAirQuality('Q15Wa1');
            $this->load->view('admin/includes/template', $data);
              
          } 	
