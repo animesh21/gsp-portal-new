@@ -58,31 +58,44 @@ $others = (round($np['Q7A11S4'][0]->avg));
 $air_no = $quality['Q9A1'][0]->total;
 $air_yes = $quality['Q9A1'][1]->total;
 // Final Arrays
-$final_array_poss6 = array('',$personal_four,'');
+$final_array_poss6 = array('',$personal_four,'','');
 $final_four = json_encode($final_array_poss6);
-$final_array_poss7 = array('',$personal_three,'');
+
+$final_array_poss7 = array('',$personal_three,'','');
 $final_three = json_encode($final_array_poss7);
-$final_array_poss = array($school_bus,'','');
+
+$final_array_poss = array($school_bus,'','','');
 $final_school_bus = json_encode($final_array_poss);
-$final_array_poss1 = array($public_bus,'','');
+
+$final_array_poss1 = array($public_bus,'','','');
 $final_public_bus = json_encode($final_array_poss1);
-$final_array_poss2 = array($school_transport,'','');
+
+$final_array_poss2 = array($school_transport,'','','');
 $final_school_transport = json_encode($final_array_poss2);
-$final_array_poss3 = array($school_public_transport,'','');
+
+$final_array_poss3 = array($school_public_transport,'','','');
 $final_school_public_transport = json_encode($final_array_poss3);
-$final_array_poss4 = array($four_wheeler,'','');
+
+$final_array_poss4 = array($four_wheeler,'','','');
 $final_four_wheeler = json_encode($final_array_poss4);
-$final_array_poss5 = array($three_wheeler,'','');
+
+$final_array_poss5 = array($three_wheeler,'','','');
 $final_three_wheeler = json_encode($final_array_poss5);
-$final_array_poss8 = array('','',$bicycle);
+
+$final_array_poss8 = array('','',$bicycle,'');
 $final_bicycle = json_encode($final_array_poss8);
-$final_array_poss9 = array('','',$on_foot);
+
+$final_array_poss9 = array('','',$on_foot,'');
 $final_on_foot = json_encode($final_array_poss9);
-$final_array_poss10 = array('','',$others);
+
+$final_array_poss10 = array('','',$others,'');
 $final_other = json_encode($final_array_poss10);
-$final_array_poss11 = array($air_no);
+
+
+$final_array_poss11 = array('','','',(int)$air_no);
 $final_yes = json_encode($final_array_poss11);
-$final_array_poss12 = array($air_yes);
+
+$final_array_poss12 = array('','','',(int)$air_yes);
 $final_no = json_encode($final_array_poss12);
 ?>
 
@@ -203,16 +216,6 @@ $final_no = json_encode($final_array_poss12);
             ],
             crosshair: true
         },
-        labels: {
-        items: [{
-            html: 'Total fruit consumption',
-            style: {
-                left: '50px',
-                top: '18px',
-                color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
-            }
-        }]
-    },
         
         yAxis: { 
             min: 0,
@@ -269,25 +272,15 @@ $final_no = json_encode($final_array_poss12);
         }, {
             name: 'Others',
             data: <?php echo $final_other; ?>
-        },  {
-        type: 'pie',
-        name: 'Air Quality Monitor',
-        data: [{
+        },{
             name: 'Yes(no. of school)',
-            y: <?php echo $air_no; ?>,
-            color: Highcharts.getOptions().colors[0] // Jane's color
+            data: <?php echo $final_yes; ?>,
+            
         }, {
             name: 'No(no. of school)',
-            y: <?php echo $air_yes; ?>,
-            color: Highcharts.getOptions().colors[1] // John's color
-        }],
-        center: [400, 85],
-        size: 150,
-        showInLegend: false,
-        dataLabels: {
-            enabled: false
-        }
-    }]
+            data: <?php echo $final_no; ?>,
+           
+        }]
     });
 </script>
 
