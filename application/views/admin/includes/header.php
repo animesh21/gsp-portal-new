@@ -223,6 +223,7 @@
                   <li><a href="<?php echo base_url('admin/reports/geteWasteDisposalReport'); ?>">e-Waste Disposal Report</a></li>
 		  <li><a href="<?php echo base_url('admin/reports/getair'); ?>">Air Report</a></li>
 	          <li><a href="<?php echo base_url('admin/reports/getenergy'); ?>">Energy Report</a></li>
+		  <li><a href="<?php echo base_url('admin/reports/getFood'); ?>">Food Report</a></li>		
 		  <li><a href="<?php echo base_url('admin/reports/getland'); ?>">Land Report</a></li>
 		  <li><a href="<?php echo base_url('admin/reports/getWater'); ?>">Water Report</a></li>
 		  <li><a href="<?php echo base_url('admin/reports/getWaste'); ?>">Waste Report</a></li>	
