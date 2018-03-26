@@ -275,7 +275,7 @@ class Reports extends CI_Controller {
            $this->load->view('admin/includes/template', $data);
              
          } 	
-	public function getWaste()
+	public function getFood()
 	{ 
            $data['main'] = 'admin/reports/food-report';
 	   $data['food']['Q4F1'] = $this->Report->getAirQuality('Q4F1');
