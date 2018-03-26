@@ -275,6 +275,29 @@ class Reports extends CI_Controller {
            $this->load->view('admin/includes/template', $data);
              
          } 	
+	public function getWaste()
+	{ 
+           $data['main'] = 'admin/reports/food-report';
+	   $data['food']['Q4F1'] = $this->Report->getAirQuality('Q4F1');
+           $data['food']['Q5F1'] = $this->Report->getAirQuality('Q5F1');
+           
+           $data['food']['Q5F1S2'] = $this->Report->getAirVehicle('Q5F1S2');
+           
+           $data['food']['snacks'] = $this->Report->getAirQuality('Q7F1');
+           $data['food']['beverages'] = $this->Report->getAirQuality('Q8F1');
+           
+           $data['food']['rewards'] = $this->Report->getAirQuality('Q9F1');
+           $data['food']['event'] = $this->Report->getAirQuality('Q10F1');
+           $data['food']['quiz'] = $this->Report->getAirQuality('Q11F1');
+           $data['food']['height'] = $this->Report->getAirQuality('Q12F1');
+           
+           $data['height']['monthly'] = $this->Report->getWaterByAnswer('Q12F2',1);
+           $data['height']['quarterly'] = $this->Report->getWaterByAnswer('Q12F2',2);
+           $data['height']['bi_annually'] = $this->Report->getWaterByAnswer('Q12F2',3);
+           $data['height']['annually'] = $this->Report->getWaterByAnswer('Q12F2',4);	
+		
+	  $this->load->view('admin/includes/template', $data);	
+	}	
 	
 	
 }
