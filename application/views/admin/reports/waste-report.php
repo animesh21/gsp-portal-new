@@ -38,39 +38,47 @@ $ewaste_authorized_dealer = round($ewaste['authorized_dealer'][0]->total);
 $ewaste_dumped = round($ewaste['dumped'][0]->total);
 $ewaste_internal_procedure = round($ewaste['internal_procedure'][0]->total);
 
+$burn_no = round($burn['Q15Wa1'][0]->total);
+$burn_yes = round($burn['Q15Wa1'][1]->total);
+
 // Final Arrays
 
 
-$final_array_poss6 = array($no_bins,'','','');
+$final_array_poss6 = array($no_bins,'','','','');
 $final_no = json_encode($final_array_poss6);
 
-$final_array_poss7 = array($one_bins,'','','');
+$final_array_poss7 = array($one_bins,'','','','');
 $final_one= json_encode($final_array_poss7);
 
-$final_array_poss = array($two_bins,'','','');
+$final_array_poss = array($two_bins,'','','','');
 $final_two = json_encode($final_array_poss);
 
-$final_array_poss1 = array($three_bins,'','','');
+$final_array_poss1 = array($three_bins,'','','','');
 $final_three= json_encode($final_array_poss1);
 
-$final_array_poss2 = array('',$composting_facility_no,'','');
+$final_array_poss2 = array('',$composting_facility_no,'','','');
 $final_composting_facility_no= json_encode($final_array_poss2);
-$final_array_poss8 = array('',$composting_facility_yes,'','');
+$final_array_poss8 = array('',$composting_facility_yes,'','','');
 $final_composting_facility_yes= json_encode($final_array_poss8);
 
-$final_array_poss3 = array('','',$natural_composting,'');
+$final_array_poss3 = array('','',$natural_composting,'','');
 $final_natural_composting= json_encode($final_array_poss3);
-$final_array_poss4 = array('','',$vermi_composting,'');
+$final_array_poss4 = array('','',$vermi_composting,'','');
 $final_vermi_composting= json_encode($final_array_poss4);
-$final_array_poss5 = array('','',$mechanical_composting,'');
+$final_array_poss5 = array('','',$mechanical_composting,'','');
 $final_mechanical_composting= json_encode($final_array_poss5);
-$final_array_poss9 = array('','',$other,'');
+$final_array_poss9 = array('','',$other,'','');
 $final_other= json_encode($final_array_poss9);
 
-$final_array_poss10 = array('','','',$reuse_book_no);
+$final_array_poss10 = array('','','',$reuse_book_no,'');
 $final_reuse_book_no= json_encode($final_array_poss10);
-$final_array_poss11 = array('','','',$reuse_book_yes);
+$final_array_poss11 = array('','','',$reuse_book_yes,'');
 $final_reuse_book_yes= json_encode($final_array_poss11);
+
+$final_array_poss24 = array('','','','',$burn_no);
+$final_burn_no= json_encode($final_array_poss24);
+$final_array_poss25 = array('','','','',$burn_yes);
+$final_burn_yes= json_encode($final_array_poss25);
 
 $final_array_poss12 = array($paper_kabadiwala,'','');
 $final_kabadiwala= json_encode($final_array_poss12);
@@ -130,7 +138,8 @@ $final_ewaste_internal= json_encode($final_array_poss23);
 		'Collection Points with Bins',
                 'Composting facility(No. of school)',
                 'Methodology of composting(No. of school)',
-                'Reuse textbooks(No. of school)'
+                'Reuse textbooks(No. of school)',
+		'Burn Waste(No. of school)'    
                 
             ],
             crosshair: true
@@ -206,6 +215,14 @@ $final_ewaste_internal= json_encode($final_array_poss23);
         },{
             name: 'Reuse textbooks(Yes)',
             data: <?php echo $final_reuse_book_yes; ?>
+
+        },{
+            name: 'Burn Waste(No)',
+            data: <?php echo $final_burn_no; ?>
+
+        },{
+            name: 'Burn Waste(Yes)',
+            data: <?php echo $final_burn_yes; ?>
 
         }]
     });
