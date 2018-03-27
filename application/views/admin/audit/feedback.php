@@ -156,6 +156,17 @@
 			</li>
 		    </ul>
 		</div>
+                <div class="form-group  col-md-4">
+		    <label for="pwd">Board of Education:</label>
+		    <select class="form-control" name="board">
+			<option value="">All</option>
+			<option value="1">State board of education</option>
+			<option value="2">Central Board of Secondary Education</option>
+			<option value="3">Indian Certificate of Secondary Educations</option>
+			<option value="4">IB/IGCSE</option>
+                        <option value="5">Others</option>
+		    </select>
+		</div>
 		<div class="form-group col-md-4">
 		    <label for="pwd">Select State :</label>
 		    <?php echo form_dropdown('state', $states, 0, array('class' => 'form-control', 'id' => 'country-select')); ?></div>
