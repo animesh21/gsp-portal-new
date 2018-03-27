@@ -185,11 +185,11 @@ class Reports extends CI_Controller {
 		
 		$data['main'] = 'admin/reports/energy_graph';
 		
-		$data['energy']['Airconditioner_count'] = $this->Report->Airconditioner("Q7E2S1");
-		$data['energy']['Tubelight_count'] = $this->Report->Tubelight("Q7E5S1");
-		$data['energy']['CFLbulb_count'] = $this->Report->CFLbulb("Q7E6S1");
-		$data['energy']['LEDbulb_count'] = $this->Report->LEDbulb("Q7E7S1");
-		$data['energy']['SchoolHavingAlternateSourceOfEnergy'] = $this->Report->SchoolHavingAlternateSourceOfEnergy("Q9E1");
+		$data['energy']['Airconditioner_count'] = $this->Report->getWaterSchool("Q7E2S1");
+		$data['energy']['Tubelight_count'] = $this->Report->getWaterSchool("Q7E5S1");
+		$data['energy']['CFLbulb_count'] = $this->Report->getWaterSchool("Q7E6S1");
+		$data['energy']['LEDbulb_count'] = $this->Report->getWaterSchool("Q7E7S1");
+		$data['energy']['SchoolHavingAlternateSourceOfEnergy'] = $this->Report->getWaterSchool("Q9E1");
 		
 		
 		$data['energy1'] = $this->Report->getEnergyReport();
