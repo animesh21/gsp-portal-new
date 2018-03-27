@@ -170,9 +170,11 @@ class Report extends CI_Model {
 	
 	public function SchoolDoesNotOwnVehicles($question_id,$answer)
 		{
-					$this->db->where('questionid',$question_id);
-					$this->db->where('answer', $answer);
-			 return $this->db->count_all_results('gsp_answers');
+				 $this->db->where('questionid',$question_id);
+			         $this->db->where('answer', $answer);
+		                 $this->db->join('gsp_school as b','a.userid=b.userid','left'); 
+                                 $this->db->where('b.complete_status',1);
+			 return $this->db->count_all_results('gsp_answers as a');
 					
 		}
 		
@@ -180,6 +182,7 @@ class Report extends CI_Model {
 		{
 					$this->db->where('questionid',$question_id);
 					$this->db->where('answer', $answer);
+			 
 			 return $this->db->count_all_results('gsp_answers');
 					
 		}
@@ -243,17 +246,21 @@ class Report extends CI_Model {
 		public function AirReportData($question_id)
 		{
 		  return $this->db->select('sum(a.answer) as total')
-						  ->from('gsp_answers as a')
-			              ->where('questionid',$question_id)
-						  ->get()->result(); 
-			//echo $this->db->last_query();
+				  ->from('gsp_answers as a')
+			          ->where('questionid',$question_id)
+			          ->join('gsp_school as b','a.userid=b.userid','left') 
+                                  ->where('b.complete_status',1)
+				  ->get()->result(); 
+			
 					
 		}
 		
 		public function getAirVehicle($question_id){
             return $this->db->select('Avg(a.answer) as avg')
                      ->from('gsp_answers as a')
-                     ->like('a.questionid', $question_id)
+                     ->where('a.questionid', $question_id)
+		     ->join('gsp_school as b','a.userid=b.userid','left') 
+                     ->where('b.complete_status',1)
                      ->get()->result();
             
         }
@@ -261,7 +268,9 @@ class Report extends CI_Model {
         public function getAirQuality($question_id){
             return $this->db->select('a.answer,count(a.answer) as total')
                      ->from('gsp_answers as a')
-                     ->like('a.questionid', $question_id)
+                     ->where('a.questionid', $question_id)
+		     ->join('gsp_school as b','a.userid=b.userid','left') 
+                     ->where('b.complete_status',1)
                      ->group_by('a.answer')
                      ->get()->result();
             
@@ -312,6 +321,8 @@ class Report extends CI_Model {
 	public function getEnergyReport(){
             return $this->db->select('Avg(a.Q6E1S2) as board, sum(a.percatitaaa) as capita')
                      ->from('tbl_energy as a')
+		     ->join('gsp_school as b','a.userid=b.userid','left') 
+                     ->where('b.complete_status',1)
                      ->get()->result();
             
         }
@@ -320,6 +331,8 @@ class Report extends CI_Model {
             return $this->db->select('count(a.Q6E2S1) as generator')
                      ->from('tbl_energy as a')
                      ->where('a.Q6E2S1 != ',0,FALSE)
+		     ->join('gsp_school as b','a.userid=b.userid','left') 
+                     ->where('b.complete_status',1)
                      ->get()->result();
             
         }
@@ -328,6 +341,8 @@ class Report extends CI_Model {
             return $this->db->select('count(a.Q6E13S1) as biogas')
                      ->from('tbl_energy as a')
                      ->where('a.Q6E13S1 != ',0,FALSE)
+		     ->join('gsp_school as b','a.userid=b.userid','left') 
+                     ->where('b.complete_status',1)
                      ->get()->result();
             
         }
@@ -335,6 +350,8 @@ class Report extends CI_Model {
             return $this->db->select('count(a.Q6E9S1) as solar')
                      ->from('tbl_energy as a')
                      ->where('a.Q6E9S1 != ',0,FALSE)
+		     ->join('gsp_school as b','a.userid=b.userid','left') 
+                     ->where('b.complete_status',1)
                      ->get()->result();
             
         }
@@ -344,7 +361,9 @@ class Report extends CI_Model {
 		public function getLand_1(){
             return $this->db->select('Avg(a.answer) as avg')
                      ->from('gsp_answers as a')
-                     ->like('a.questionid','Q4L5')
+                     ->where('a.questionid','Q4L5')
+		     ->join('gsp_school as b','a.userid=b.userid','left') 
+                     ->where('b.complete_status',1)
                      ->get()->result();
             
         }
@@ -352,7 +371,9 @@ class Report extends CI_Model {
         public function getLand_2(){
             return $this->db->select('a.answer,count(a.answer) as total')
                      ->from('gsp_answers as a')
-                     ->like('a.questionid','Q6L1')
+                     ->where('a.questionid','Q6L1')
+		     ->join('gsp_school as b','a.userid=b.userid','left') 
+                     ->where('b.complete_status',1)
                      ->group_by('a.answer')
                      ->get()->result();
             
@@ -362,6 +383,8 @@ class Report extends CI_Model {
             return $this->db->select('count(a.answer) as total')
                      ->from('gsp_answers as a')
                      ->where('a.questionid',$question_id)
+		    ->join('gsp_school as b','a.userid=b.userid','left') 
+                     ->where('b.complete_status',1)
                      ->get()->result();
             
         }
@@ -370,7 +393,9 @@ class Report extends CI_Model {
             return $this->db->select('count(a.answer) as total')
                     ->from('gsp_answers as a')
                     ->where('a.questionid',$question_id)
-                    ->where('a.answer',$answer)   
+                    ->where('a.answer',$answer)
+		    ->join('gsp_school as b','a.userid=b.userid','left') 
+                    ->where('b.complete_status',1)
                     ->get()->result();
             
         }
@@ -379,6 +404,8 @@ class Report extends CI_Model {
             return $this->db->select('a.answer, count(a.answer) as total')
                      ->from('gsp_answers as a')
                      ->where('a.questionid','Q8W2')
+		     ->join('gsp_school as b','a.userid=b.userid','left') 
+                     ->where('b.complete_status',1)
                      ->group_by('a.answer')
                      ->get()->result();
             
