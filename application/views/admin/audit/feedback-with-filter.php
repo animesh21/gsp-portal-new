@@ -216,7 +216,7 @@
                                 <th>District</th>
                                 <th>City</th>
                                 <th class="hide">Pincode</th>
-                                <th class="hide">ISD Code</th>
+                               
                                 <th class="hide">STD Code</th>
                                 <th class="hide">Landline Number</th>
                                 <th class="hide">School Email</th>
@@ -288,8 +288,7 @@
                                 endif ?></td>
                                     <td class="hide"><?php if ($record[$i]['pincode'] != ''): echo $record[$i]['pincode'];
                                 endif ?></td>
-                                    <td class="hide"><?php if ($record[$i]['country_code'] != ''): echo $record[$i]['country_code'];
-                                endif ?></td>
+                                    
                                     <td class="hide"><?php if ($record[$i]['std'] != ''): echo $record[$i]['std'];
                                 endif ?></td>
                                     <td class="hide"><?php if ($record[$i]['telephone'] != ''): echo $record[$i]['telephone'];
