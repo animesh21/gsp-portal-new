@@ -107,9 +107,11 @@ class Audit_started extends CI_Controller {
         $byDistrict = $this->input->post('district');   
         $bySchoolName = $this->input->post('schoolname');
         $rating = $this->input->post('rating');
-	$byAlphabate = $this->input->post('alphabate');   
+	$byAlphabate = $this->input->post('alphabate');
+	 $byBoard=$this->input->post('board');   
        // $query = "SELECT a.id, a.udise, a.userid, a.name, a.country, a.state, a.district, a.city, a.progress, $filed, b.name AS state_name, c.name AS district_name, d.remark, d.phase FROM gsp_school AS a LEFT JOIN states AS b ON a.state=b.id LEFT JOIN cities AS c ON a.district=c.id LEFT JOIN tbl_sendmail AS d ON a.id=d.school_id  WHERE";
-       $query = "SELECT a.id,a.school_id,a.Q1S1,a.Q2G1,a.Q9G1, a.udise, a.userid,a.country, a.name, a.city, a.progress, $filed, b.name AS state_name, c.name AS district_name, a.remark, a.phase FROM tbl_sendmail AS a LEFT JOIN states AS b ON a.state=b.id LEFT JOIN cities AS c ON a.district=c.id  WHERE";
+      // $query = "SELECT a.id,a.school_id,a.Q1S1,a.Q2G1,a.Q9G1, a.udise, a.userid,a.country, a.name, a.city, a.progress, $filed, b.name AS state_name, c.name AS district_name, a.remark, a.phase FROM tbl_sendmail AS a LEFT JOIN states AS b ON a.state=b.id LEFT JOIN cities AS c ON a.district=c.id  WHERE";
+      $query = "SELECT a.id,a.Q3G1,a.Q1S1,a.Q2G1,a.Q9G1, a.udise, a.userid,a.country, a.name, a.city, a.progress, $filed, b.name AS state_name, c.name AS district_name, a.remark, a.phase FROM gsp_filter AS a LEFT JOIN states AS b ON a.state=b.id LEFT JOIN cities AS c ON a.district=c.id  WHERE";
       
 	$conditions = array();
 
@@ -180,6 +182,11 @@ class Audit_started extends CI_Controller {
         if (!empty($rating)) {
             $conditions[] = " a.remark LIKE '%$rating%'";
         }
+	
+	if($byBoard !=0)
+        {
+            $conditions[] = "a.Q3G1='$byBoard'";
+        }   
         
         //By Phase
         if($byPhase !=0)
