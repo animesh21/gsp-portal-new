@@ -172,6 +172,17 @@
                         <option value="Red">Red</option>
                     </select>
                 </div>
+                <div class="form-group  col-md-4">
+		    <label for="pwd">Board of Education:</label>
+		    <select class="form-control" name="board">
+			<option value="">All</option>
+			<option value="1">State board of education</option>
+			<option value="2">Central Board of Secondary Education</option>
+			<option value="3">Indian Certificate of Secondary Educations</option>
+			<option value="4">IB/IGCSE</option>
+                        <option value="5">Others</option>
+		    </select>
+		</div>
 		<div class="form-group col-md-4">
 		    <label for="pwd">Select Name :</label>
 		    <select class="form-control" name="schoolname">
@@ -217,10 +228,9 @@
                                 <th class="hide">Date & Time</th>
                                 <th>Completeness</th>
                                 <th>School Category</th>
-                                                <th>School Type</th>
-                                                <th>Type of Aid</th> 
-                                <!--
-                                                <th>Coemail</th>-->
+                                 <th>School Type</th>
+                                 <th>Type of Aid</th> 
+                                 <th>Board</th>
                                 <th>Rating</th>
                                 <th style="width:90px;"> <label class="checkbox-inline">
                                         <input type="checkbox" name="email_list_all" id="email_list_all" style="opacity: 0.8; margin-top:-1px;" />
@@ -231,7 +241,7 @@
                             <?php for ($i = 0; $i < count($record); $i++) { ?>
                                 <?php
                                 $arr = array(
-				    '0' => 'Day Scholar',
+				   
                                     '1' => 'Day Scholar',
                                     '2' => 'Day Boarding',
                                     '3' => 'Residential',
@@ -242,15 +252,23 @@
                                 );
                                 $arrGender = array('0' => 'Only Boys','1' => 'Only Boys', '2' => 'Only Girls', '3' => 'Mixed/Co-education');
                                 $schoolType = array(
-				    '0' =>  'Government School',	
+				   	
                                     '1' => 'Government School',
                                     '2' => 'Government &#45; Aided School',
                                     '3' => 'Private School'
                                 );
+                                
+                                $board = array(
+                                    '1'=> 'State board',
+                                    '2'=>'Central board',
+                                    '3'=>'Indian certificate',
+                                    '4'=> 'IB/IGCSE',
+                                    '5'=> 'Others'
+                                );
                                 ?>
                                 <tr>
                                     <td><?php echo $i + 1; ?></td>
-                                    <td><?php if ($record[$i]['school_id'] != ''): echo $record[$i]['school_id'];
+                                    <td><?php if ($record[$i]['id'] != ''): echo $record[$i]['id'];
                                 endif ?></td>
                                     <td><?php if ($record[$i]['udise'] != ''): echo $record[$i]['udise'];
                                 endif ?></td>
@@ -295,11 +313,9 @@
                                    <td><?php if(isset($record[$i]['Q1S1'])){ echo $arr[$record[$i]['Q1S1']]; }else{echo "N/A";}  ?></td>
                                      <td><?php if(isset($record[$i]['Q2G1'])){ echo $arrGender[$record[$i]['Q2G1']]; }else{echo "N/A";}   ?></td>
                                       <td><?php if(isset($record[$i]['Q9G1'])){ echo $schoolType[$record[$i]['Q9G1']]; }else{echo "N/A";}  ?></td> 
-                                    <!--<td>
-    <?php //if(isset($record[$i]['coemail'])): echo $record[$i]['coemail']; endif   ?>
-    <?php //if(isset($record[$i]['schoolemail'])): echo $record[$i]['schoolemail']; endif   ?>
-                                                                            </td>
-                                                                            <td><?php //if($record[$i]['progress']!=''): echo $record[$i]['progress']; endif  ?></td>-->
+                                    <td><?php if(isset($record[$i]['Q3G1'])){ echo $board[$record[$i]['Q3G1']]; }else{echo "N/A";}  ?></td>  
+                                      
+                                    <!-- <td><?php //if($record[$i]['progress']!=''): echo $record[$i]['progress']; endif  ?></td>-->
                                     <td><?php if ($record[$i]['remark'] != ''): echo "<label class='label label-" . $record[$i]['remark'] . "'>" . $record[$i]['remark'] . "</label>";
     endif ?></td>
                                     <td><?php //echo $mail_status;  ?>
