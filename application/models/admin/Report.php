@@ -180,34 +180,41 @@ class Report extends CI_Model {
 		
 		public function Operatorownedvehicles($question_id,$answer)
 		{
-					$this->db->where('questionid',$question_id);
-					$this->db->where('answer', $answer);
-			 
-			 return $this->db->count_all_results('gsp_answers');
+		          $this->db->where('a.questionid',$question_id);
+			  $this->db->where('a.answer', $answer);
+			  $this->db->join('gsp_school as b','a.userid=b.userid','left'); 
+                          $this->db->where('b.complete_status',1);
+			 return $this->db->count_all_results('gsp_answers as a');
 					
 		}
 		
 		public function Schoolownedvehicles($question_id,$answer)
 		{
-					$this->db->where('questionid',$question_id);
-					$this->db->where('answer', $answer);
-			 return $this->db->count_all_results('gsp_answers');
+			 $this->db->where('a.questionid',$question_id);
+			  $this->db->where('a.answer', $answer);
+			  $this->db->join('gsp_school as b','a.userid=b.userid','left'); 
+                          $this->db->where('b.complete_status',1);
+			 return $this->db->count_all_results('gsp_answers as a');
 					
 		}
 		
 		public function CombinationSchoolandOperatorvehicles($question_id,$answer)
 		{
-					$this->db->where('questionid',$question_id);
-					$this->db->where('answer', $answer);
-			 return $this->db->count_all_results('gsp_answers');
+			 $this->db->where('a.questionid',$question_id);
+			  $this->db->where('a.answer', $answer);
+			  $this->db->join('gsp_school as b','a.userid=b.userid','left'); 
+                          $this->db->where('b.complete_status',1);
+			 return $this->db->count_all_results('gsp_answers as a');
 					
 		}
 		
 		public function Hiredvehicles($question_id,$answer)
 		{
-					$this->db->where('questionid',$question_id);
-					$this->db->where('answer', $answer);
-			        return $this->db->count_all_results('gsp_answers');
+			 $this->db->where('a.questionid',$question_id);
+			  $this->db->where('a.answer', $answer);
+			  $this->db->join('gsp_school as b','a.userid=b.userid','left'); 
+                          $this->db->where('b.complete_status',1);
+			 return $this->db->count_all_results('gsp_answers as a');
 					
 		}
 		
