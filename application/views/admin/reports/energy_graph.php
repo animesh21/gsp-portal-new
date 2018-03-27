@@ -1,10 +1,10 @@
 <?php
 //echo '<pre>'; print_r($energy);die();
-$Airconditioner_count = $energy['Airconditioner_count']->answer;
-$Tubelight_count = $energy['Tubelight_count']->answer;
-$CFLbulb_count = $energy['CFLbulb_count']->answer;
-$LEDbulb_count = $energy['LEDbulb_count']->answer;
-$SchoolHavingAlternateSourceOfEnergy = $energy['SchoolHavingAlternateSourceOfEnergy'];
+$Airconditioner_count = $energy['Airconditioner_count'][0]->total;
+$Tubelight_count = $energy['Tubelight_count'][0]->total;
+$CFLbulb_count = $energy['CFLbulb_count'][0]->total;
+$LEDbulb_count = $energy['LEDbulb_count'][0]->total;
+$SchoolHavingAlternateSourceOfEnergy = $energy['SchoolHavingAlternateSourceOfEnergy'][0]->total;
 
 $final_array_poss = array((int)$Airconditioner_count,'');
 $final_Airconditioner_count = json_encode($final_array_poss);
