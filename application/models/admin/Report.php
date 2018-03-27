@@ -328,8 +328,7 @@ class Report extends CI_Model {
 	public function getEnergyReport(){
             return $this->db->select('Avg(a.Q6E1S2) as board, sum(a.percatitaaa) as capita')
                      ->from('tbl_energy as a')
-		     ->join('gsp_school as b','a.userid=b.userid','left') 
-                     ->where('b.complete_status',1)
+		     
                      ->get()->result();
             
         }
@@ -338,9 +337,7 @@ class Report extends CI_Model {
             return $this->db->select('count(a.Q6E2S1) as generator')
                      ->from('tbl_energy as a')
                      ->where('a.Q6E2S1 != ',0,FALSE)
-		     ->join('gsp_school as b','a.userid=b.userid','left') 
-                     ->where('b.complete_status',1)
-                     ->get()->result();
+		     ->get()->result();
             
         }
         
@@ -348,18 +345,14 @@ class Report extends CI_Model {
             return $this->db->select('count(a.Q6E13S1) as biogas')
                      ->from('tbl_energy as a')
                      ->where('a.Q6E13S1 != ',0,FALSE)
-		     ->join('gsp_school as b','a.userid=b.userid','left') 
-                     ->where('b.complete_status',1)
-                     ->get()->result();
+		     ->get()->result();
             
         }
          public function getEnergySolarSchool(){
             return $this->db->select('count(a.Q6E9S1) as solar')
                      ->from('tbl_energy as a')
                      ->where('a.Q6E9S1 != ',0,FALSE)
-		     ->join('gsp_school as b','a.userid=b.userid','left') 
-                     ->where('b.complete_status',1)
-                     ->get()->result();
+		     ->get()->result();
             
         }
 	
