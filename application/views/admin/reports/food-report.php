@@ -1,9 +1,5 @@
 <?php
 
-//echo '<pre>';
-//print_r($food);
-//print_r($height);
-//die();
 
 $packaged_food_no = round($food['Q4F1'][0]->total);
 $packaged_food_yes = round($food['Q4F1'][1]->total);
@@ -34,21 +30,21 @@ $height_quarterly = round($height['quarterly'][0]->total);
 $height_bi_annually =  round($height['bi_annually'][0]->total);
 $height_annually = round($height['annually'][0]->total);
 
-
+$Avg = round($food['Q5F1S2'][0]->avg);
 
 // Final Arrays
 
 
-$final_array_poss6 = array($packaged_food_no,'','','','','','','','');
+$final_array_poss6 = array($packaged_food_no,'','','','','','','','','');
 $final_packaged_food_no = json_encode($final_array_poss6);
 
-$final_array_poss7 = array($packaged_food_yes,'','','','','','','','');
+$final_array_poss7 = array($packaged_food_yes,'','','','','','','','','');
 $final_packaged_food_yes = json_encode($final_array_poss7);
 
-$final_array_poss = array('',$mid_day_meal_no,'','','','','','','');
+$final_array_poss = array('',$mid_day_meal_no,'','','','','','','','');
 $final_mid_day_meal_no = json_encode($final_array_poss);
 
-$final_array_poss1 = array('',$mid_day_meal_yes,'','','','','','','');
+$final_array_poss1 = array('',$mid_day_meal_yes,'','','','','','','','');
 $final_mid_day_meal_yes = json_encode($final_array_poss1);
 
 $final_array_poss2 = array('','',$snacks_no,'','','','','','','');
@@ -60,40 +56,43 @@ $final_snacks_yes = json_encode($final_array_poss3);
 $final_array_poss4 = array('','','',$beverages_no,'','','','','','');
 $final_beverages_no = json_encode($final_array_poss4);
 
-$final_array_poss5 = array('','','',$beverages_yes,'','','','','');
+$final_array_poss5 = array('','','',$beverages_yes,'','','','','','');
 $final_beverages_yes = json_encode($final_array_poss5);
 
-$final_array_poss8 = array('','','','',$rewards_no,'','','','');
+$final_array_poss8 = array('','','','',$rewards_no,'','','','','');
 $final_rewards_no = json_encode($final_array_poss8);
 
-$final_array_poss9 = array('','','','',$rewards_yes,'','','','');
+$final_array_poss9 = array('','','','',$rewards_yes,'','','','','');
 $final_rewards_yes = json_encode($final_array_poss9);
 
-$final_array_poss10 = array('','','','','',$event_no,'','','');
+$final_array_poss10 = array('','','','','',$event_no,'','','','');
 $final_event_no = json_encode($final_array_poss10);
 
-$final_array_poss11 = array('','','','','',$event_yes,'','','');
+$final_array_poss11 = array('','','','','',$event_yes,'','','','');
 $final_event_yes = json_encode($final_array_poss11);
 
-$final_array_poss12 = array('','','','','','',$height_no,'','');
+$final_array_poss12 = array('','','','','','',$height_no,'','','');
 $final_height_no= json_encode($final_array_poss12);
 
-$final_array_poss13 = array('','','','','','',$height_yes,'','');
+$final_array_poss13 = array('','','','','','',$height_yes,'','','');
 $final_height_yes = json_encode($final_array_poss13);
 
-$final_array_poss14 = array('','','','','','','',$height_monthly,'');
+$final_array_poss14 = array('','','','','','','',$height_monthly,'','');
 $final_height_monthly = json_encode($final_array_poss14);
-$final_array_poss15 = array('','','','','','','',$height_quarterly,'');
+$final_array_poss15 = array('','','','','','','',$height_quarterly,'','');
 $final_height_quarterly = json_encode($final_array_poss15);
-$final_array_poss16 = array('','','','','','','',$height_bi_annually,'');
+$final_array_poss16 = array('','','','','','','',$height_bi_annually,'','');
 $final_height_bi_annually = json_encode($final_array_poss16);
-$final_array_poss17 = array('','','','','','','',$height_annually,'');
+$final_array_poss17 = array('','','','','','','',$height_annually,'','');
 $final_height_annually = json_encode($final_array_poss17);
 
-$final_array_poss18 = array('','','','','','','','',$quiz_no);
+$final_array_poss18 = array('','','','','','','','',$quiz_no,'');
 $final_quiz_no = json_encode($final_array_poss18);
-$final_array_poss19 = array('','','','','','','','',$quiz_yes);
+$final_array_poss19 = array('','','','','','','','',$quiz_yes,'');
 $final_quiz_yes = json_encode($final_array_poss19);
+
+$final_array_poss20 = array('','','','','','','','','',$Avg);
+$final_Avg = json_encode($final_array_poss20);
 
 
 ?>
@@ -131,6 +130,7 @@ $final_quiz_yes = json_encode($final_array_poss19);
                 'measure height and weight',
                 'How regularly height & weight',
                 'sponsored by food Brands',
+                'Bring Lunch'
             ],
             crosshair: true
         },
@@ -236,6 +236,10 @@ $final_quiz_yes = json_encode($final_array_poss19);
         },{
             name: 'sponsored by food companies(Yes)',
             data: <?php echo $final_quiz_yes; ?>,
+           
+        },{
+            name: 'How many Students bring',
+            data: <?php echo $final_Avg; ?>,
            
         }]
     
