@@ -28,8 +28,8 @@ $treated_wastewater_no = round($water['reuse'][0]->total);
 $treated_wastewater_yes = round($water['reuse'][1]->total);
 //RWH structures  //
 // @ one question is remaining//
-print_r($water['RWH']);die();
-$rwh_structure_yes = round($water['RWH'][0]->total + $water['RWH'][1]->total);
+
+$rwh_structure_yes = round($water['RWH'][0]->total );
 
 // Final Arrays
 
