@@ -25,8 +25,12 @@ $final_SchoolHavingAlternateSourceOfEnergy = json_encode($final_array_poss4);
 ?>
 <?php
 
-$board = round($energy1[0]->board);
-$capita = (round($energy1[0]->capita));
+$board1 = round($energy1[0]->board);
+$capita1 = (round($energy1[0]->capita));
+$board2 = round($energy2[0]->board);
+$capita2 = (round($energy2[0]->capita));
+  $board = $board1+$board2;
+ $capita=$capita1+$capita2;
 $generator = (round($generator[0]->generator));
 $biogas = (round($biogas[0]->biogas));
 $solar = (round($solar[0]->solar));
@@ -37,10 +41,10 @@ $solar = (round($solar[0]->solar));
 // Final Arrays
 
 
-$final_array_poss6 = array($board,'');
+$final_array_poss6 = array((int)$board,'');
 $final_four = json_encode($final_array_poss6);
 
-$final_array_poss7 = array($capita,'');
+$final_array_poss7 = array((int)$capita,'');
 $final_three = json_encode($final_array_poss7);
 
 $final_array_poss = array('',$solar);
