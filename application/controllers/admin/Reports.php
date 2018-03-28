@@ -193,10 +193,12 @@ class Reports extends CI_Controller {
 		
 		$data['energy2'] = $this->Report->getEnergyReport_2();
 		$data['energy1'] = $this->Report->getEnergyReport();
-        $data['generator'] = $this->Report->getEnergyGeneratorSchool();
-        $data['biogas'] = $this->Report->getEnergyBiogasSchool();
-        $data['solar'] = $this->Report->getEnergySolarSchool();
-		     
+        $data['generator1'] = $this->Report->getEnergyGeneratorSchool();
+        $data['biogas1'] = $this->Report->getEnergyBiogasSchool();
+        $data['solar1'] = $this->Report->getEnergySolarSchool();
+             $data['generator2'] = $this->Report->getEnergyGeneratorSchool_2();
+             $data['biogas2'] = $this->Report->getEnergyBiogasSchool_2();
+            $data['solar2'] = $this->Report->getEnergySolarSchool_2();     
 	   $this->load->view('admin/includes/template', $data);
 	}
 	
