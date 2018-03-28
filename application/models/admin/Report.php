@@ -348,6 +348,13 @@ class Report extends CI_Model {
 		     ->get()->result();
             
         }
+	 public function getEnergyGeneratorSchool_2(){
+            return $this->db->select('count(a.Q6E2S1) as generator')
+                     ->from('tbl_energy_phase_2 as a')
+                     ->where('a.Q6E2S1 != ',0,FALSE)
+		     ->get()->result();
+            
+        }
         
          public function getEnergyBiogasSchool(){
             return $this->db->select('count(a.Q6E13S1) as biogas')
@@ -356,9 +363,24 @@ class Report extends CI_Model {
 		     ->get()->result();
             
         }
+	public function getEnergyBiogasSchool_2(){
+            return $this->db->select('count(a.Q6E13S1) as biogas')
+                     ->from('tbl_energy_phase_2 as a')
+                     ->where('a.Q6E13S1 != ',0,FALSE)
+		     ->get()->result();
+            
+        }
          public function getEnergySolarSchool(){
             return $this->db->select('count(a.Q6E9S1) as solar')
                      ->from('tbl_energy as a')
+                     ->where('a.Q6E9S1 != ',0,FALSE)
+		     ->get()->result();
+            
+        }
+	
+	public function getEnergySolarSchool_2(){
+            return $this->db->select('count(a.Q6E9S1) as solar')
+                     ->from('tbl_energy_phase_2 as a')
                      ->where('a.Q6E9S1 != ',0,FALSE)
 		     ->get()->result();
             
