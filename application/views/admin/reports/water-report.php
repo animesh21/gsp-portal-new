@@ -28,9 +28,14 @@ $treated_wastewater_no = round($water['reuse'][0]->total);
 $treated_wastewater_yes = round($water['reuse'][1]->total);
 //RWH structures  //
 // @ one question is remaining//
-echo '<pre>', print_r($RWH);exit;
-
-$rwh_structure_yes = round($water['RWH'][0]->total );
+$Conduits = round($RWH['Conduits'][0]->total);
+$Gutters = round($RWH['Gutters'][0]->total);
+$Filter = round($RWH['Filter'][0]->total);
+$First = round($RWH['First'][0]->total);
+$Storage = round($RWH['Storage'][0]->total);
+$Collection  = round($RWH['Collection '][0]->total);
+$Pump = round($RWH['Pump'][0]->total);
+$Recharge = round($RWH['Recharge'][0]->total);
 
 // Final Arrays
 
@@ -76,10 +81,22 @@ $final_treated_wastewater_no  = json_encode($final_array_poss14);
 $final_array_poss15 = array('','','','','',$treated_wastewater_yes,'');
 $final_treated_wastewater_yes  = json_encode($final_array_poss15);
 
-$final_array_poss16 = array('','','','','','',$rwh_structure_yes);
-$final_rwh_structure_yes  = json_encode($final_array_poss16);
-
-
+$final_array_poss16 = array('','','','','','',$Conduits);
+$final_Conduits  = json_encode($final_array_poss16);
+$final_array_poss17 = array('','','','','','',$Gutters);
+$final_Gutters  = json_encode($final_array_poss17);
+$final_array_poss18 = array('','','','','','',$Filter);
+$final_Filter = json_encode($final_array_poss18);
+$final_array_poss19 = array('','','','','','',$First);
+$final_First  = json_encode($final_array_poss19);
+$final_array_poss20 = array('','','','','','',$Storage);
+$final_Storage  = json_encode($final_array_poss20);
+$final_array_poss21 = array('','','','','','',$Collection);
+$final_Collection  = json_encode($final_array_poss21);
+$final_array_poss22 = array('','','','','','',$Pump);
+$final_Pump  = json_encode($final_array_poss22);
+$final_array_poss23 = array('','','','','','',$Recharge);
+$final_Recharge  = json_encode($final_array_poss23);
 
 
 ?>
@@ -208,9 +225,29 @@ $final_rwh_structure_yes  = json_encode($final_array_poss16);
             data: <?php echo $final_treated_wastewater_yes; ?>
 
         },{
-            name: 'RWH Structure',
-            data: <?php echo $final_rwh_structure_yes; ?>
-
+            name: 'RWH Structure(Conduits)',
+            data: <?php echo $final_Conduits; ?>
+        },{
+            name: 'RWH Structure(Gutters)',
+            data: <?php echo $final_Gutters; ?>
+        },{
+            name: 'RWH Structure(First)',
+            data: <?php echo $final_First; ?>
+        },{
+            name: 'RWH Structure(Storage)',
+            data: <?php echo $final_Storage; ?>
+        },{
+            name: 'RWH Structure(Collection)',
+            data: <?php echo $final_Collection; ?>
+        },{
+            name: 'RWH Structure(Pump)',
+            data: <?php echo $final_Pump; ?>
+        },{
+            name: 'RWH Structure(Recharge)',
+            data: <?php echo $final_Recharge; ?>
+        },{
+            name: 'RWH Structure(Filter)',
+            data: <?php echo $final_Filter; ?>
         }]
     });
 
