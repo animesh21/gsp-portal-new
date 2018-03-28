@@ -191,7 +191,7 @@ class Reports extends CI_Controller {
 		$data['energy']['LEDbulb_count'] = $this->Report->getWaterSchool("Q7E7S1");
 		$data['energy']['SchoolHavingAlternateSourceOfEnergy'] = $this->Report->getWaterSchool("Q9E1");
 		
-		
+		$data['energy2'] = $this->Report->getEnergyReport_2();
 		$data['energy1'] = $this->Report->getEnergyReport();
         $data['generator'] = $this->Report->getEnergyGeneratorSchool();
         $data['biogas'] = $this->Report->getEnergyBiogasSchool();
