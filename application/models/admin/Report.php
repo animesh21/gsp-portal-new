@@ -173,7 +173,7 @@ class Report extends CI_Model {
 				 $this->db->where('a.questionid',$question_id);
 			         $this->db->where('a.answer', $answer);
 		                 $this->db->join('gsp_school as b','a.userid=b.userid','left'); 
-                                 $this->db->where('b.complete_status',1);
+                                 $this->db->where('b.complete_status','1');
 			 return $this->db->count_all_results('gsp_answers as a');
 					
 		}
@@ -183,7 +183,7 @@ class Report extends CI_Model {
 		          $this->db->where('a.questionid',$question_id);
 			  $this->db->where('a.answer', $answer);
 			  $this->db->join('gsp_school as b','a.userid=b.userid','left'); 
-                          $this->db->where('b.complete_status',1);
+                          $this->db->where('b.complete_status','1');
 			 return $this->db->count_all_results('gsp_answers as a');
 					
 		}
@@ -193,7 +193,7 @@ class Report extends CI_Model {
 			 $this->db->where('a.questionid',$question_id);
 			  $this->db->where('a.answer', $answer);
 			  $this->db->join('gsp_school as b','a.userid=b.userid','left'); 
-                          $this->db->where('b.complete_status',1);
+                          $this->db->where('b.complete_status','1');
 			 return $this->db->count_all_results('gsp_answers as a');
 					
 		}
@@ -203,7 +203,7 @@ class Report extends CI_Model {
 			 $this->db->where('a.questionid',$question_id);
 			  $this->db->where('a.answer', $answer);
 			  $this->db->join('gsp_school as b','a.userid=b.userid','left'); 
-                          $this->db->where('b.complete_status',1);
+                          $this->db->where('b.complete_status','1');
 			 return $this->db->count_all_results('gsp_answers as a');
 					
 		}
@@ -213,7 +213,7 @@ class Report extends CI_Model {
 			 $this->db->where('a.questionid',$question_id);
 			  $this->db->where('a.answer', $answer);
 			  $this->db->join('gsp_school as b','a.userid=b.userid','left'); 
-                          $this->db->where('b.complete_status',1);
+                          $this->db->where('b.complete_status','1');
 			 return $this->db->count_all_results('gsp_answers as a');
 					
 		}
@@ -256,7 +256,7 @@ class Report extends CI_Model {
 				  ->from('gsp_answers as a')
 			          ->where('questionid',$question_id)
 			          ->join('gsp_school as b','a.userid=b.userid','left') 
-                                  ->where('b.complete_status',1)
+                                  ->where('b.complete_status','1')
 				  ->get()->result(); 
 			
 					
@@ -267,7 +267,7 @@ class Report extends CI_Model {
                      ->from('gsp_answers as a')
                      ->where('a.questionid', $question_id)
 		     ->join('gsp_school as b','a.userid=b.userid','left') 
-                     ->where('b.complete_status',1)
+                     ->where('b.complete_status','1')
                      ->get()->result();
             
         }
@@ -277,7 +277,7 @@ class Report extends CI_Model {
                      ->from('gsp_answers as a')
                      ->where('a.questionid', $question_id)
 		     ->join('gsp_school as b','a.userid=b.userid','left') 
-                     ->where('b.complete_status',1)
+                     ->where('b.complete_status','1')
                      ->group_by('a.answer')
                      ->get()->result();
             
@@ -363,7 +363,7 @@ class Report extends CI_Model {
                      ->from('gsp_answers as a')
                      ->where('a.questionid','Q4L5')
 		     ->join('gsp_school as b','a.userid=b.userid','left') 
-                     ->where('b.complete_status',1)
+                     ->where('b.complete_status','1')
                      ->get()->result();
             
         }
@@ -373,7 +373,7 @@ class Report extends CI_Model {
                      ->from('gsp_answers as a')
                      ->where('a.questionid','Q6L1')
 		     ->join('gsp_school as b','a.userid=b.userid','left') 
-                     ->where('b.complete_status',1)
+                     ->where('b.complete_status','1')
                      ->group_by('a.answer')
                      ->get()->result();
             
@@ -384,7 +384,7 @@ class Report extends CI_Model {
                      ->from('gsp_answers as a')
                      ->where('a.questionid',$question_id)
 		    ->join('gsp_school as b','a.userid=b.userid','left') 
-                     ->where('b.complete_status',1)
+                     ->where('b.complete_status','1')
                      ->get()->result();
             
         }
@@ -395,7 +395,7 @@ class Report extends CI_Model {
                     ->where('a.questionid',$question_id)
                     ->where('a.answer',$answer)
 		    ->join('gsp_school as b','a.userid=b.userid','left') 
-                    ->where('b.complete_status',1)
+                    ->where('b.complete_status','1')
                     ->get()->result();
             
         }
@@ -405,7 +405,7 @@ class Report extends CI_Model {
                      ->from('gsp_answers as a')
                      ->where('a.questionid','Q8W2')
 		     ->join('gsp_school as b','a.userid=b.userid','left') 
-                     ->where('b.complete_status',1)
+                     ->where('b.complete_status','1')
                      ->group_by('a.answer')
                      ->get()->result();
             
