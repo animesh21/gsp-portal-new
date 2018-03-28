@@ -326,9 +326,19 @@ class Report extends CI_Model {
 	}
 	
 	public function getEnergyReport(){
-            return $this->db->select('Avg(a.Q6E1S2) as board, sum(a.percatitaaa) as capita')
+            return $this->db->select('Avg(a.Q6E1S2) as board, Avg(a.percatitaaa) as capita')
                      ->from('tbl_energy as a')
-		     
+		     ->join('gsp_school as b','a.userid=b.userid','left') 
+                     ->where('b.complete_status','1')
+                     ->get()->result();
+            
+        }
+	
+	public function getEnergyReport_2(){
+            return $this->db->select('Avg(a.Q6E1S2) as board, Avg(a.percatitaaa) as capita')
+                     ->from('tbl_energy_phase_2 as a')
+		     ->join('gsp_school as b','a.userid=b.userid','left') 
+                     ->where('b.complete_status','1')
                      ->get()->result();
             
         }
