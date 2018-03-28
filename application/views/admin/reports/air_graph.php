@@ -127,7 +127,7 @@ $final_no = json_encode($final_array_poss12);
         },
         xAxis: {
             categories: [
-				'Ownership of Vechile',
+				'Ownership of Vehicles',
                 'Bus'
                 
             ],
