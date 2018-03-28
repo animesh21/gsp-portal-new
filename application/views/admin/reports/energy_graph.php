@@ -31,9 +31,17 @@ $board2 = round($energy2[0]->board);
 $capita2 = (round($energy2[0]->capita));
   $board = $board1+$board2;
  $capita=$capita1+$capita2;
-$generator = (round($generator[0]->generator));
-$biogas = (round($biogas[0]->biogas));
-$solar = (round($solar[0]->solar));
+$generator1 = (round($generator1[0]->generator));
+$biogas1 = (round($biogas1[0]->biogas));
+$solar1 = (round($solar1[0]->solar));
+$generator2 = (round($generator2[0]->generator));
+$biogas2 = (round($biogas2[0]->biogas));
+$solar2 = (round($solar2[0]->solar));
+
+$generator=$generator1+$generator2;
+$biogas=$biogas1+$biogas2;
+$solar=$solar2+$solar1;
+
 
 
 
@@ -47,13 +55,13 @@ $final_four = json_encode($final_array_poss6);
 $final_array_poss7 = array((int)$capita,'');
 $final_three = json_encode($final_array_poss7);
 
-$final_array_poss = array('',$solar);
+$final_array_poss = array('',(int)$solar);
 $final_school_bus = json_encode($final_array_poss);
 
-$final_array_poss1 = array('',$biogas);
+$final_array_poss1 = array('',(int)$biogas);
 $final_public_bus = json_encode($final_array_poss1);
 
-$final_array_poss2 = array('',$generator);
+$final_array_poss2 = array('',(int)$generator);
 $final_school_transport = json_encode($final_array_poss2);
 
 ?>
