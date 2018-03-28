@@ -271,6 +271,21 @@ class Report extends CI_Model {
                      ->get()->result();
             
         }
+	
+	public function getAirphase_1($question_id){
+            return $this->db->select('Avg(a.answer) as avg')
+                     ->from('tbl_air as a')
+                     ->get()->result();
+            
+        }
+	
+	public function getAirPhase_2($question_id){
+            return $this->db->select('Avg(a.'.$question_id.') as avg')
+                     ->from('tbl_air_phase_2 as a')
+                     ->get()->result();
+            
+        }
+	
         
         public function getAirQuality($question_id){
             return $this->db->select('a.answer,count(a.answer) as total')
