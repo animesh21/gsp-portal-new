@@ -232,8 +232,17 @@ class Reports extends CI_Controller {
            $data['Q8W2S2']['recharge'] = $this->Report->getWaterByAnswer('Q8W2S2',2);
            $data['Q8W2S2']['both'] = $this->Report->getWaterByAnswer('Q8W2S2',3);
            
-           $data['water']['RWH'] = $this->Report->getAirQuality('Q8W2S31');
-           $data['water']['reuse'] = $this->Report->getAirQuality('Q20W1');
+           $data['RWH']['Conduits'] = $this->Report->getWaterSchool('Q8W2S31');
+           $data['RWH']['Gutters'] = $this->Report->getWaterSchool('Q8W2S32');
+		$data['RWH']['Filter'] = $this->Report->getWaterSchool('Q8W2S33');
+		$data['RWH']['First'] = $this->Report->getWaterSchool('Q8W2S34');
+		$data['RWH']['Storage'] = $this->Report->getWaterSchool('Q8W2S35');
+		$data['RWH']['Collection '] = $this->Report->getWaterSchool('Q8W2S36');
+		$data['RWH']['Pump'] = $this->Report->getWaterSchool('Q8W2S37');
+		$data['RWH']['Recharge'] = $this->Report->getWaterSchool('Q8W2S38');
+		
+		
+	    $data['water']['reuse'] = $this->Report->getAirQuality('Q20W1');
            
            $data['Q20W2']['gardening'] = $this->Report->getWaterByAnswer('Q20W2',1);
            $data['Q20W2']['flushing'] = $this->Report->getWaterByAnswer('Q20W2',2);
