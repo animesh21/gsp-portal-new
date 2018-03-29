@@ -291,6 +291,7 @@ h3{ font-size:13px!important;}
       </ul>
     </section>
   </div>
+  <div class="air">
   <?php 
 if ($data == 3 || $data == 4) { ?>
   <h2>
@@ -518,7 +519,7 @@ if ($data == 3 || $data == 4) { ?>
   <section class="performance-category">
     <ul>
       <li>
-        <figure ><img src="assets/img/performance/mode.jpg"></figure>
+        <figure><img src="assets/img/performance/mode.jpg"></figure>
         <div class="description">
           <h3>Mode of Commuting</h3>
           <?php
@@ -607,6 +608,7 @@ if ($data == 3 || $data == 4) { ?>
   <div class="footer">
     <p>Performance Report | <?php echo $performance[0]->name; ?></p>
   </div>
+</div>  
   <div class="energy">
     <h2>
       <figure><img src="assets/img/performance/energy.jpg"></figure>
