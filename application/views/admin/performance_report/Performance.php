@@ -18,6 +18,29 @@
     white-space: nowrap;
     vertical-align: baseline;
     border-radius: .25em;
+}
+section ul li figure img{ width:137px!important; height:125px!important;}
+ul li{ margin-top:0px; padding-top:0px; display:block; margin-bottom:0px;}
+ul li figure{margin-left:-12px;}
+section ul li figure{ height:auto;}
+.performance-category li {
+     margin-bottom:15px!important; 
+    overflow: hidden;
+}
+.performance-category {
+     margin: 0px 0 0px 0!important; 
+}
+p{
+  letter-spacing: 0px!important;
+    word-wrap: normal!important;
+    word-spacing: -1px!important;
+}
+h3{ font-size:13px!important;}
+.performance-category .description {
+    margin-bottom: -13px!important;
+}
+.introduction, .air, .energy, .food, .land, .water, .waste {
+    margin: 6px 6px!important;
 }	
 </style>
 </head>
@@ -825,7 +848,7 @@ if ($data == 3 || $data == 4) { ?>
           </div>
         </li>
         <li>
-          <figure style="margin-left:-12px; margin-bottom:0px;"><img src="assets/img/performance/sale.jpg"></figure>
+          <figure><img src="assets/img/performance/sale.jpg"></figure>
           <div class="description">
             <h3>Are your school events such as quiz shows, talent shows, debates sponsored by food companies/brands?</h3>
             <?php
@@ -1073,7 +1096,7 @@ if ($data == 3 || $data == 4) { ?>
     <section class="performance-category">
       <ul>
         <li>
-          <figure style="margin-left:-12px; margin-bottom:0px;"><img src="assets/img/performance/water-source.jpg" style="width:137px;"></figure>
+          <figure><img src="assets/img/performance/water-source.jpg" style="width:137px;"></figure>
           <div class="description">
             <h3>Source of Water</h3>
             <?php
@@ -1299,7 +1322,7 @@ if ($data == 3 || $data == 4) { ?>
         </li>
         <?php } ?>
         <li>
-          <figure style="margin-left:-12px; margin-bottom:0px;"><img src="assets/img/performance/area.jpg" style="width:147px!important;"></figure>
+          <figure><img src="assets/img/performance/area.jpg" ></figure>
           <div class="description">
             <h3>Harvested Area</h3>
             <?php
@@ -1478,7 +1501,7 @@ if ($data == 3 || $data == 4) { ?>
           </div>
         </li>
         <li>
-          <figure style="margin-left:-12px; margin-bottom:0px;"><img src="assets/img/performance/monitor.jpg" style="width:147px!important;"></figure>
+          <figure><img src="assets/img/performance/monitor.jpg" ></figure>
           <div class="description">
             <h3>If your school's RWH structure is more than a year old, is there any improvement in the groundwater
               quality after the implementation of the RWH structure?</h3>
@@ -1619,7 +1642,7 @@ if ($data == 3 || $data == 4) { ?>
           </div>
         </li>
         <li>
-          <figure style="margin-left:-12px; margin-bottom:0px;"><img src="assets/img/performance/ablution.jpg" style="width:147px!important;"></figure>
+          <figure><img src="assets/img/performance/ablution.jpg" ></figure>
           <div class="description">
             <h3>Load on Ablution Taps</h3>
             <?php
@@ -1817,7 +1840,7 @@ if ($data == 3 || $data == 4) { ?>
           </div>
         </li>
         <li>
-          <figure style="margin-left:-12px; margin-bottom:0px;"><img src="assets/img/performance/wastewater_treatment.jpg"></figure>
+          <figure><img src="assets/img/performance/wastewater_treatment.jpg"></figure>
           <div class="description">
             <h3>Does your school have a wastewater treatment facility</h3>
             <?php
@@ -2068,7 +2091,7 @@ if ($data == 3 || $data == 4) { ?>
           </div>
         </li>
         <li>
-          <figure style="margin-left:-12px; margin-bottom:0px;"><img src="assets/img/performance/recycle.jpg"></figure>
+          <figure><img src="assets/img/performance/recycle.jpg"></figure>
           <div class="description">
             <h3>Recycling of Waste</h3>
             <?php
@@ -2225,7 +2248,7 @@ $authorised_dealer = getFiled('Q16Wa1', $schoolUserID);
 if ($authorised_dealer == "Y") {
     ?>
         <li>
-          <figure style="margin-left:-12px; margin-bottom:0px;"><img src="assets/img/performance/e-waste.jpg" style="width:147px!important;"></figure>
+          <figure><img src="assets/img/performance/e-waste.jpg" ></figure>
           <div class="description">
             <?php
                             ////Qn 11(a)  Who collects your e-waste, when not in working condition?
