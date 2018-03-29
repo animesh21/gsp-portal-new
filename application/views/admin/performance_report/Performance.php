@@ -518,7 +518,7 @@ if ($data == 3 || $data == 4) { ?>
   <section class="performance-category">
     <ul>
       <li>
-        <figure style="margin-left:26px;"><img src="assets/img/performance/mode.jpg"></figure>
+        <figure ><img src="assets/img/performance/mode.jpg"></figure>
         <div class="description">
           <h3>Mode of Commuting</h3>
           <?php
