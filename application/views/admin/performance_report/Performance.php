@@ -41,6 +41,10 @@ h3{ font-size:13px!important;}
 .cover figure img {
     width: 700px;
 }
+h2 span {
+    display: inline-block;
+    font-size:10px;
+}	
 </style>
 </head>
 <body>
