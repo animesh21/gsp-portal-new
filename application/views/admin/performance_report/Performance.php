@@ -1424,7 +1424,7 @@ if ($data == 3 || $data == 4) { ?>
           </div>
         </li>
         <li style="height:130px!important;">
-          <figure><img src="assets/img/performance/clean.jpg" style="width:127px!important;"></figure>
+          <figure><img src="assets/img/performance/clean.jpg"></figure>
           <div class="description">
             <h3>Catchment Cleanliness</h3>
             <?php
