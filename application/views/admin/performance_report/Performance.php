@@ -1656,7 +1656,7 @@ if ($data == 3 || $data == 4) { ?>
             <p><?php echo $abulation_tabs_msg; ?></p>
           </div>
         </li>
-        <li class="page-break-before-new">
+        <li>
           <figure><img src="assets/img/performance/wc.jpg"></figure>
           <div class="description">
             <h3>Load on Water Closets</h3>
