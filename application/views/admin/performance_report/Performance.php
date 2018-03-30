@@ -511,7 +511,7 @@ if ($data == 3 || $data == 4) { ?>
   <?php } ?>
   <div class="air">
     <section class="performance-category">
-      <ul>
+      <ul style="margin-top:-24px;">
         <li>
           <figure><img src="assets/img/performance/mode.jpg"></figure>
           <div class="description">
