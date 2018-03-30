@@ -5,8 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="<?php echo base_url(); ?>assets/css/performance.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>assets/css/performance.css" rel="stylesheet" media="print">
-<style type="text/css">
-/*img{ width:137px!important; height:125px!important;}*/
+<style type="text/css" media="all">
 .label {
     display: inline;
     padding: .2em .6em .3em;
@@ -39,9 +38,9 @@ h3{ font-size:13px!important;}
 .performance-category .description {
     margin-bottom: -13px!important;
 }
-.introduction, .air, .energy, .food, .land, .water, .waste {
-    margin: 6px 6px!important;
-}	
+.cover figure img {
+    width: 700px;
+}
 </style>
 </head>
 <body>
@@ -75,8 +74,8 @@ h3{ font-size:13px!important;}
 		 ?>
         School</p>
       <p><strong>School Rating:&nbsp;
-      <?php $percentage=getSchoolRating($schoolUserID); ?>  
-	      <?php
+        <?php $percentage=getSchoolRating($schoolUserID); ?>
+        <?php
 	          $percentage= ceil($percentage) ;
 	      
 		  if($percentage>=70){
@@ -165,8 +164,9 @@ h3{ font-size:13px!important;}
         <li>Your school should motivate most of the permanent population to use non-polluting mode of transport such as walking or cycling, or at least use a sustainably motorized vehicles such as buses, public transport.</li>
       </ul>
     </section>
-    <h3>Your School's Performance</h3>
-    <?php
+    <div class="description">
+      <h3>Your School's Performance</h3>
+      <?php
                 $total_air_points = number_format(getAirPoints($performance[0]->userid), 2);
                 if ($total_air_points == 12)
                     $point_performance_msg_a = "Your school fulfils all the norms of Air Quality check. Overall, school has done very well in air section.  ";
@@ -177,7 +177,8 @@ h3{ font-size:13px!important;}
                 elseif ($total_air_points < 5)
                     $point_performance_msg_a = "Your school fulfils very few norms of Air Quality check. You can improve by considering the recommendations through the assessment below.  Overall, your school needs to improve the Air Quality.";
                 ?>
-    <p><?php echo $point_performance_msg_a ?></p>
+      <p><?php echo $point_performance_msg_a ?></p>
+    </div>
     <section class="performance-category">
       <ul>
         <li>
@@ -207,11 +208,11 @@ h3{ font-size:13px!important;}
             <p><?php echo $window_floor_msg;} ?></p>
           </div>
         </li>
-	<li>
-         <figure><img src="assets/img/performance/parking.jpg"></figure>
-        <div class="description">
-          <h3>Road Worthiness Certificate</h3>
-          <?php
+        <li>
+          <figure><img src="assets/img/performance/parking.jpg"></figure>
+          <div class="description">
+            <h3>Road Worthiness Certificate</h3>
+            <?php
                    // $arrImages = getUploadData(str_replace(' ', '_', $performance[0]->name) . '_PUC_Certificate', $schoolUserID);
 	         $road_count= array();
 		$data1 = getFiled('Q6A2S1B6', $schoolUserID);
@@ -240,16 +241,14 @@ h3{ font-size:13px!important;}
 		 }
 		if(array_sum($road_count) > 0){
 		 ?>
-                     <h4> <?php echo "NO" ; ?> </h4>
-          	     <p> <?php echo "Road worthiness certificate should be obtained for all the vehicles<br/>If your vehicles have this certificate,it means that they are in good operating condition and meet the acceptable standards for safe driving."; ?></p>
-                   <?php  } else { ?>
-	      		 <h4><?php echo "Yes"; ?></h4>
-         		 <p><?php echo "It is good that your school has a road worthiness certificate for your vehicles<br/>This means that your vehicles are in good operating condition and meet the acceptable standards for safe driving."; ?></p>
-                  <?php   } ?>
-          
-        </div>
-      
-        </li>      
+            <h4> <?php echo "NO" ; ?> </h4>
+            <p> <?php echo "Road worthiness certificate should be obtained for all the vehicles<br/>If your vehicles have this certificate,it means that they are in good operating condition and meet the acceptable standards for safe driving."; ?></p>
+            <?php  } else { ?>
+            <h4><?php echo "Yes"; ?></h4>
+            <p><?php echo "It is good that your school has a road worthiness certificate for your vehicles<br/>This means that your vehicles are in good operating condition and meet the acceptable standards for safe driving."; ?></p>
+            <?php   } ?>
+          </div>
+        </li>
         <li>
           <figure><img src="assets/img/performance/key.jpg"></figure>
           <div class="description">
@@ -291,20 +290,20 @@ h3{ font-size:13px!important;}
       </ul>
     </section>
   </div>
-  <div class="air">
   <?php 
 if ($data == 3 || $data == 4) { ?>
-  <h2>
-    <figure><img src="assets/img/performance/Air_logo.jpg"></figure>
-    <label>Air</label>
-    <span>Green Schools Programme Audit 2017-2018</span></h2>
-  <section class="performance-category">
-    <ul>
-      <li>
-        <figure><img src="assets/img/performance/age.jpg"></figure>
-        <div class="description">
-          <h3>Age of Vehicles</h3>
-          <?php
+  <div class="air">
+    <h2>
+      <figure><img src="assets/img/performance/Air_logo.jpg"></figure>
+      <label>Air</label>
+      <span>Green Schools Programme Audit 2017-2018</span></h2>
+    <section class="performance-category">
+      <ul>
+        <li>
+          <figure><img src="assets/img/performance/age.jpg"></figure>
+          <div class="description">
+            <h3>Age of Vehicles</h3>
+            <?php
     $totalvehicle = getFiled('Q6A2S1T1', $schoolUserID);
     $oldvehicles = getFiled('Q6A2S1T2', $schoolUserID);
     if($totalvehicle==0){
@@ -314,7 +313,6 @@ if ($data == 3 || $data == 4) { ?>
          $almostvicleper = (($oldvehicles / $totalvehicle) * 100);
     }
    
-
     if ($oldvehicles > 0 && $oldvehicles < $totalvehicle) {
         $vehicletype = "Combination of old and new vehicles";
         $vehicle_msg = "As you know that vehicles that are older than 15 years emit very high Levels of pollutants. We suggest that that you keep a check on your vehicle's age.";
@@ -326,25 +324,23 @@ if ($data == 3 || $data == 4) { ?>
         $vehicle_msg = "As you know that vehicles that are older than 15 years emit very high Levels of pollutants. We suggest that that you keep a check on the age of all vehicles.";
     }
     ?>
-          <h4><?php echo $vehicletype; ?></h4>
-          <p><?php echo $vehicle_msg; ?></p>
-        </div>
-      </li>
-      <li>
-        <figure><img src="assets/img/performance/ac.jpg"></figure>
-        <div class="description">
-          <h3>Air Conditioning in Vehicles</h3>
-          <?php
+            <h4><?php echo $vehicletype; ?></h4>
+            <p><?php echo $vehicle_msg; ?></p>
+          </div>
+        </li>
+        <li>
+          <figure><img src="assets/img/performance/ac.jpg"></figure>
+          <div class="description">
+            <h3>Air Conditioning in Vehicles</h3>
+            <?php
                                 
                                 $acvehicles = getFiled('Q6A2S1T3', $schoolUserID);
                                 if($totalvehicle==0){
                                     $acvehicles == 0 ;
-
                                 } else {
                                      $almostacvicleper = (($acvehicles / $totalvehicle) * 100);
                                 }
                                 
-
                                 if ($acvehicles < $totalvehicle && $acvehicles > 0) {
                                     $vehicleactype = "Combination of vehicles with Acs and without Acs";
                                     $acvehicle_msg = "Air conditioners in vehicles use a lot of fuel. We suggest that that you keep a check that your fuel consumption does not go up because of the Air conditioners. Also, ACs release harmful toxins further polluting the air.";
@@ -356,25 +352,23 @@ if ($data == 3 || $data == 4) { ?>
                                     $acvehicle_msg = "All vehicles in your school are fitted with Acs! Air conditioners in vehicles use a lot of fuel and release harmful toxins further polluting the air. We suggest that when you need to replace your vehicles, then you shift to operator-owned buses that are not fitted with ACs.";
                                 }
                                 ?>
-          <h4><?php echo $vehicleactype; ?></h4>
-          <p><?php echo $acvehicle_msg; ?></p>
-        </div>
-      </li>
-      <li>
-        <figure><img src="assets/img/performance/puc.jpg"></figure>
-        <div class="description">
-          <h3>PUC Certificates</h3>
-          <?php
+            <h4><?php echo $vehicleactype; ?></h4>
+            <p><?php echo $acvehicle_msg; ?></p>
+          </div>
+        </li>
+        <li>
+          <figure><img src="assets/img/performance/puc.jpg"></figure>
+          <div class="description">
+            <h3>PUC Certificates</h3>
+            <?php
                                 
                                 $puc_done = getFiled('Q6A2S1T4', $schoolUserID);
                                 
                                 if($totalvehicle==0){
                                     $puc_done == 0 ;
-
                                 } else {
                                      $almost_puc_vicleper = (($puc_done / $totalvehicle) * 100);
                                 }
-
                                 if ( $puc_done > 0 && $puc_done < $totalvehicle  ) {
                                     $vehicleapuctype = "Combination of vehicles with PUC done and not done";
                                     $puc_done_msg = "PUC certification should be up to date for all your vehicles. Please ensure that you update the PUCs at the earliest.";
@@ -386,25 +380,23 @@ if ($data == 3 || $data == 4) { ?>
                                     $puc_done_msg = "PUC certification should be up to date for all your vehicles. Please ensure that you update all your vehicles' PUCs at the earliest.";
                                 }
                                 ?>
-          <h4><?php echo $vehicleapuctype; ?></h4>
-          <p><?php echo $puc_done_msg; ?></p>
-        </div>
-      </li>
-      <li>
-        <figure><img src="assets/img/performance/parking.jpg"></figure>
-        <div class="description">
-          <h3>Parking Area for Vehicles</h3>
-          <?php
+            <h4><?php echo $vehicleapuctype; ?></h4>
+            <p><?php echo $puc_done_msg; ?></p>
+          </div>
+        </li>
+        <li>
+          <figure><img src="assets/img/performance/parking.jpg"></figure>
+          <div class="description">
+            <h3>Parking Area for Vehicles</h3>
+            <?php
                                
                                 $Parking_Area = getFiled('Q6A2S1T5', $schoolUserID);
                                  if($totalvehicle==0){
                                     $Parking_Area == 0 ;
-
                                 } else {
                                     $almost_parking_area = (($Parking_Area / $totalvehicle) * 100);
                                 }
                                 
-
                                 if ($Parking_Area > 0 && $Parking_Area < $totalvehicle) {
                                     $vehicle_parking = "Parking space for few vehicles";
                                     $vehicle_parking_msg = "There should be adequate parking area for school-owned vehicles. More the vehicles, more the area required. Thus, encouraging students to use public transport will ensure more space for school.";
@@ -416,16 +408,15 @@ if ($data == 3 || $data == 4) { ?>
                                     $vehicle_parking_msg = "There should be adequate parking area for school-owned vehicles. More the vehicles, more the area required. Thus, encouraging students to use public transport will ensure more space for school.";
                                 }
                                 ?>
-          <h4><?php echo $vehicle_parking ?></h4>
-          <p><?php echo $vehicle_parking_msg; ?></p>
-        </div>
-      </li>
-
-    <li>
-        <figure><img src="assets/img/performance/fuel.jpg"></figure>
-        <div class="description">
-          <h3>Type of Fuel</h3>
-          <?php
+            <h4><?php echo $vehicle_parking ?></h4>
+            <p><?php echo $vehicle_parking_msg; ?></p>
+          </div>
+        </li>
+        <li>
+          <figure><img src="assets/img/performance/fuel.jpg"></figure>
+          <div class="description">
+            <h3>Type of Fuel</h3>
+            <?php
                                 $Diesel = getFiled('Q6A2S3D5', $schoolUserID); // Total Diesel vehicle
                                 
                                 $Petrol = getFiled('Q6A2S3P5', $schoolUserID); // Total Petrol vehicle
@@ -502,27 +493,29 @@ if ($data == 3 || $data == 4) { ?>
                                 }
                                 
                                 ?>
-          <!--            <h4><?php echo implode(",",$typeofFuel); ?></h4>-->
-          <?php 
+            <!--            <h4><?php echo implode(",",$typeofFuel); ?></h4>-->
+            <?php 
             foreach ($typeoffuel_msg as $value)
             {
                 ?>
-          <p><?php echo $value; ?></p>
-          <?php
+            <p><?php echo $value; ?></p>
+            <?php
              }
             ?>
-        </div>
-      </li>
-    </ul>
-  </section>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </div>
   <?php } ?>
-  <section class="performance-category">
-    <ul>
-      <li>
-        <figure><img src="assets/img/performance/mode.jpg"></figure>
-        <div class="description">
-          <h3>Mode of Commuting</h3>
-          <?php
+  <div class="air">
+    <section class="performance-category">
+      <ul>
+        <li>
+          <figure><img src="assets/img/performance/mode.jpg"></figure>
+          <div class="description">
+            <h3>Mode of Commuting</h3>
+            <?php
                                 $total_population = (getFiled('Q4G4S3', $schoolUserID) != '') ? getFiled('Q4G4S3', $schoolUserID) : 0;
                                  // Sustainable Motorized Vehicle (SMV) 
                                 if($total_population==0){
@@ -585,30 +578,30 @@ if ($data == 3 || $data == 4) { ?>
                                 if ($total_population_smv_percentage > 50 && $total_population_npm_percentage < 50 ) {
                                     $members_use_transport_type = "More than 50% population using sustainable motorized vehicles and less than 50% population using Non- polluting mode of transport";
                                     $members_use_transport_msg = "Good, most of the students and staff use Sustainable Motorized Transport. <br/>   (". $smv_wheel.')'; ?>
-          <h4><?php echo $members_use_transport_type; ?></h4>
-          <p><?php echo $members_use_transport_msg; ?></p>
-          <?php
+            <h4><?php echo $members_use_transport_type; ?></h4>
+            <p><?php echo $members_use_transport_msg; ?></p>
+            <?php
                                 } elseif ($total_population_smv_percentage < 50 && $total_population_npm_percentage > 50) {
                                     $members_use_transport_type = "More than 50% population using Non- polluting mode of transport and less than 50% population using sustainable motorized vehicles";
                                     $members_use_transport_msg = "Good, most of the students and staff use Non- polluting mode of transport (NPT). <br/>   (". $npm_wheel.')'; ?>
-          <h4><?php echo $members_use_transport_type; ?></h4>
-          <p><?php echo $members_use_transport_msg; ?></p>
-          <?php		
+            <h4><?php echo $members_use_transport_type; ?></h4>
+            <p><?php echo $members_use_transport_msg; ?></p>
+            <?php		
                                 } elseif ($private_veh_population_percentage > 50) {
                                     $members_use_transport_type = "More than 50% population using Private vehicles";
                                     $members_use_transport_msg = "Your school mostly uses private vehicles for transportation. We recommend that you encourage the staff and students to use public transport and also to car pool.<br/> (". $private_wheel.')'; ?>
-          <h4><?php echo $members_use_transport_type; ?></h4>
-          <p><?php echo $members_use_transport_msg; ?></p>
-          <?php }
+            <h4><?php echo $members_use_transport_type; ?></h4>
+            <p><?php echo $members_use_transport_msg; ?></p>
+            <?php }
           ?>
-        </div>
-      </li>
-    </ul>
-  </section>
-  <div class="footer">
-    <p>Performance Report | <?php echo $performance[0]->name; ?></p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <div class="footer">
+      <p>Performance Report | <?php echo $performance[0]->name; ?></p>
+    </div>
   </div>
-</div>  
   <div class="energy">
     <h2>
       <figure><img src="assets/img/performance/energy.jpg"></figure>
@@ -1037,7 +1030,6 @@ if ($data == 3 || $data == 4) { ?>
                                 {
                                     $pcw_condition ="Per capita consumption within the range according to their category";
                                     $pcw_message ="Your school's per person per day consumption is within the norms. Good that you manage your water efficiently.";
-
                                 }                                                                     
                                 elseif($lpcd < $llimit)
                                 {
@@ -1098,7 +1090,7 @@ if ($data == 3 || $data == 4) { ?>
     <section class="performance-category">
       <ul>
         <li>
-          <figure><img src="assets/img/performance/water-source.jpg" style="width:137px;"></figure>
+          <figure><img src="assets/img/performance/water-source.jpg"></figure>
           <div class="description">
             <h3>Source of Water</h3>
             <?php
@@ -1166,8 +1158,8 @@ if ($data == 3 || $data == 4) { ?>
             <p><?php echo $SourceofWater_msg; ?></p>
           </div>
         </li>
-        <li>
-          <figure><img src="assets/img/performance/water-source.jpg"></figure>
+        <li style="height:130px!important;">
+          <figure><img src="assets/img/performance/water-source.jpg" style="width:127px!important;"></figure>
           <div class="description">
             <h3>Does your school get daily water supply?</h3>
             <?php
@@ -1197,7 +1189,6 @@ if ($data == 3 || $data == 4) { ?>
                 $growlocalplant = getFiled('Q8W1S8', $schoolUserID); //Does your school grow local plant species which require limited amount of water to grow?
                 $conservation = getFiled('Q8W1S9', $schoolUserID); //Has your school initiated any water conservation steps in the school or outside, in the past one year?	
                 $irrigation = getFiled('Q8W1S10', $schoolUserID); //Does your school use a drip or irrigation system?
-
                                 if($tanksintheschool == 'Y')
                                     $check_c[0] = 1;
                                 if($drinkingwaterpoints == 'Y')
@@ -1431,8 +1422,8 @@ if ($data == 3 || $data == 4) { ?>
                                 ?>
           </div>
         </li>
-        <li>
-          <figure><img src="assets/img/performance/clean.jpg"></figure>
+        <li style="height:130px!important;">
+          <figure><img src="assets/img/performance/clean.jpg" style="width:127px!important;"></figure>
           <div class="description">
             <h3>Catchment Cleanliness</h3>
             <?php
@@ -1503,7 +1494,7 @@ if ($data == 3 || $data == 4) { ?>
           </div>
         </li>
         <li>
-          <figure><img src="assets/img/performance/monitor.jpg" ></figure>
+          <figure><img src="assets/img/performance/monitor.jpg"></figure>
           <div class="description">
             <h3>If your school's RWH structure is more than a year old, is there any improvement in the groundwater
               quality after the implementation of the RWH structure?</h3>
@@ -1528,7 +1519,6 @@ if ($data == 3 || $data == 4) { ?>
             <h3>Sanitation and Hygiene Practices</h3>-->
         <?php
 //Q.7: Please share details about sanitation and hygiene practices in your school. //6 points
-
                                 $separate_toilets = getFiled('Q8W3S1', $schoolUserID); //Does the school have separate toilets for males and females?
                                 $toilets_accessible = getFiled('Q8W3S4', $schoolUserID);
                                 $differently_abled_children = getFiled('Q8W3S5', $schoolUserID);
@@ -1552,13 +1542,12 @@ if ($data == 3 || $data == 4) { ?>
     <section class="performance-category">
       <ul>
         <li>
-          <figure><img src="assets/img/performance/drink.jpg"></figure>
+          <figure style="margin-left:-12px;"><img src="assets/img/performance/drink.jpg"></figure>
           <div class="description">
             <h3>Load on Drinking Water Taps</h3>
             <?php        //Q.8 discuss regarding msg. for $DrinkingWaterTabs variable. 
                                 $drinking_water_taps_8 = getFiled('Q9W1', $schoolUserID);
                                 $Load_for_drinking_water_tap = $total_population / $drinking_water_taps_8;
-
                                 if ($Load_for_drinking_water_tap <= 50 && $drinking_water_taps_8 != "" && $drinking_water_taps_8 != 0) {
                                     $DrinkingWaterTabs = "If equal to the load";
                                     $DrinkingWaterTabs_Msg = "You have the required number of drinking water taps in your school. Please refer to the table for prescribed norm.";
@@ -1622,15 +1611,14 @@ if ($data == 3 || $data == 4) { ?>
             </tr>
           </table>
         </li>
-        <li>
-          <figure><img src="assets/img/performance/pump.jpg"></figure>
-          <div class="description">
+        <li style="height:130px!important;">
+          <figure><img src="assets/img/performance/pump.jpg" style="width:127px!important;"></figure>
+          <div class="description" style="margin-left:-12px;">
             <h3>Hand Pumps</h3>
             <?php
                                 //Q.9 How many hand pumps do you have?
                 $hand_pumps = getFiled('Q10W1', $schoolUserID);
                                 //$Load_for_hand_pumps=$total_population/$hand_pumps;
-
                 if ($hand_pumps <= 1) { //Ref not provided in table
                     $handpumps = "1 or 0";
                     $handpumps_msg = "You do not have the hand pumps in your school. Good that your school is not extracting a lot of ground water.";
@@ -1644,7 +1632,7 @@ if ($data == 3 || $data == 4) { ?>
           </div>
         </li>
         <li>
-          <figure><img src="assets/img/performance/ablution.jpg" ></figure>
+          <figure><img src="assets/img/performance/ablution.jpg"></figure>
           <div class="description">
             <h3>Load on Ablution Taps</h3>
             <?php
@@ -1761,7 +1749,6 @@ if ($data == 3 || $data == 4) { ?>
             <h3>Water Outlets</h3>
             <?php
                                 //Q.13 How many other water outlets (example: taps in play fields, sprinklers, swimming pool) do you have? ( 1 Points )
-
                 $other_water_outlets_q13 = getFiled('Q15W1', $schoolUserID);
 				if(isset($other_water_outlets_q13)&& $other_water_outlets_q13!=0){
                 $Load_for_other_water_outlets = $total_population / $other_water_outlets_q13;
@@ -1786,10 +1773,8 @@ if ($data == 3 || $data == 4) { ?>
             <h3>Is there a water storage system in place to supply water in the toilets?</h3>
             <?php
                                 //Q.14 Is there a water storage system in place to supply water in the toilets?
-
                                 $storage_system_q14 = getFiled('Q16W1', $schoolUserID);
                                 //$Load_for_other_water_outlets=$total_population/$other_water_outlets_q13;
-
                                 if ($storage_system_q14  == 'Y') { //not provided by cse
                                     $storage_heading_q14 = "Yes";
                                     $water_supply = "You have a water storage system in place to supply water in the toilets";
@@ -1952,13 +1937,11 @@ if ($data == 3 || $data == 4) { ?>
                             $total_collection_bins = getFiled('Q5Wa11S5', $schoolUserID);
                             // Total Sum of (0,1 bins);     
                             $total_collection_0_1_bins = getFiled('Q5Wa11S1', $schoolUserID) + getFiled('Q5Wa11S2', $schoolUserID);
-
                             // Total Sum of (2,3 bins);
                             $total_collection_2_3_bins = getFiled('Q5Wa11S3', $schoolUserID) + getFiled('Q5Wa11S4', $schoolUserID);
                             
                             // Percentage of 2 and 3 bins
                             $two_three_bin_percentage = number_format(($total_collection_2_3_bins/$total_collection_bins)*100,2,".","");
-
                             // Column 5 (2bins) and Column 6 (3or more bins) is equal to Sum of Total no. of collection points
                             if ($two_three_bin_percentage >= 76 && $two_three_bin_percentage <=100) {
                                 $msg_waste2 = "Most of the collection points have two or more than two dustbins for different categories of waste. A good practice! We encourage that students learn to segregate waste at source.";?>
@@ -1968,7 +1951,6 @@ if ($data == 3 || $data == 4) { ?>
             <p><?php echo $msg_waste2;?></p>
           </div>
           <?php    }
-
                             //   Column 5 (2bins) and Column 6 (3or more bins) is very less than Sum of Total no. of collection 
                             elseif ($two_three_bin_percentage >= 50 && $two_three_bin_percentage <=75) {
                                 $msg_waste2 = "Most of the collection points have two or more than two dustbins for different categories of waste. A good practice! We encourage that students learn to segregate waste at source.";?>
@@ -1978,7 +1960,6 @@ if ($data == 3 || $data == 4) { ?>
             <p><?php echo $msg_waste2;?></p>
           </div>
           <?php    }
-
                               //Column 5 (2bins) and Column 6 (3 or more bins) is less than Sum of Total no. of collection 
                             elseif ($two_three_bin_percentage >= 25 && $two_three_bin_percentage <=49) {
                                 $msg_waste2 = "Waste segregation at source is not efficient in your school. We strongly recommend that your school considers putting more collection points with two or more dustbins! We encourage that students learn to segregate waste at source.";
@@ -2022,8 +2003,6 @@ if ($data == 3 || $data == 4) { ?>
           <div class="description">
             <?php
             //$school_type = $sql_data_array['266617X34X1608'];
-
-
             if ($school_type == 1) { //Day Scholar
                 $per_capita = 100;
             } else if ($school_type == 2) { //Day Boarding (8 hours)
@@ -2073,12 +2052,9 @@ if ($data == 3 || $data == 4) { ?>
             
             $total_waste = ($generated_solid_waste * 1000);                   //in grams	
             //$total_population = $sql_data_array['266617X32X33SQ004_SQ003'];
-
             $per_day_waste_generation = $total_waste / 30;
             $per_capita_waste_generation = $per_day_waste_generation / $total_population;
             $per_capita_waste_generation = round($per_capita_waste_generation, 2);
-
-
             if ($per_capita_waste_generation <= $per_capita) {
                 $waste_msg1 = "Your school's per capita waste consumption (" . $per_capita_waste_generation . " gms per person) is according to the norms (" . $per_capita . " gms per person) for your school type";
                 $waste_msg2 = "Well done! Your school's per person per day waste generation is according to the norms.";
@@ -2154,14 +2130,14 @@ if ($waste_recycle == "Y") {
             <?php } ?>
           </div>
         </li>
-        <li>
-          <figure><img src="assets/img/performance/compose.jpg"></figure>
+        <li style="height:130px;">
+          <figure><img src="assets/img/performance/compose.jpg" style="width:127px!important;"></figure>
           <div class="description">
             <?php
 //Qn 5 : Does your school have a composting facility?
         $waste_composting = getFiled('Q9Wa1', $schoolUserID);
                 if ($waste_composting == "Y") {
-                     $st_waste5 = "Yes";
+                    $st_waste5 = "Yes";
                     $msg_waste5 = "Your school has a composting facility and we hope that you are using it to its potential.";
                 } elseif ($waste_composting == "N") {
                     $st_waste5 = "No";
@@ -2250,7 +2226,7 @@ $authorised_dealer = getFiled('Q16Wa1', $schoolUserID);
 if ($authorised_dealer == "Y") {
     ?>
         <li>
-          <figure><img src="assets/img/performance/e-waste.jpg" ></figure>
+          <figure><img src="assets/img/performance/e-waste.jpg"></figure>
           <div class="description">
             <?php
                             ////Qn 11(a)  Who collects your e-waste, when not in working condition?
