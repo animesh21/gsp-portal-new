@@ -1090,7 +1090,7 @@ if ($data == 3 || $data == 4) { ?>
     </section>
     <section class="performance-category">
       <ul>
-        <li>
+        <li <?php if(getFiled('Q5W1', $schoolUserID) == "" && getFiled('Q5W2', $schoolUserID) == "" && getFiled('Q5W3', $schoolUserID) == "" && getFiled('Q5W4', $schoolUserID) == ""){ echo "style='display:none;'"; } ?>>
           <figure><img src="assets/img/performance/water-source.jpg"></figure>
           <div class="description">
             <h3>Source of Water</h3>
@@ -1159,7 +1159,7 @@ if ($data == 3 || $data == 4) { ?>
             <p><?php echo $SourceofWater_msg; ?></p>
           </div>
         </li>
-        <li style="height:130px!important;">
+        <li <?php if(getFiled('Q7W1', $schoolUserID) == ""){ echo "style='display:none; height:130px!important;'";} ?>>
           <figure><img src="assets/img/performance/water-source.jpg" style="width:127px!important;"></figure>
           <div class="description">
             <h3>Does your school get daily water supply?</h3>
@@ -1177,7 +1177,7 @@ if ($data == 3 || $data == 4) { ?>
             <p><?php echo $daily_water_msg; ?></p>
           </div>
         </li>
-        <li>
+        <li <?php if(getFiled('Q8W1S3', $schoolUserID) == "" && getFiled('Q8W1S4', $schoolUserID) == "" && getFiled('Q8W1S5', $schoolUserID) == "" && getFiled('Q8W1S6', $schoolUserID) == "" && getFiled('Q8W1S8', $schoolUserID) == "" && getFiled('Q8W1S9', $schoolUserID) == ""  && getFiled('Q8W1S10', $schoolUserID) == ""){ echo "style='display:none;'"; } ?>>
           <figure><img src="assets/img/performance/conserve.jpg"></figure>
           <div class="description">
             <h3>Water Conservation Practices</h3>
@@ -1239,7 +1239,7 @@ if ($data == 3 || $data == 4) { ?>
             <p><?php echo $Conservation_Practices_msg; ?></p>
           </div>
         </li>
-        <li>
+        <li <?php if(getFiled('Q8W2', $schoolUserID) == ""){ echo "style='display:none;'";} ?>>
           <figure><img src="assets/img/performance/harvesting.jpg"></figure>
           <div class="description">
             <h3>Rainwater Harvesting</h3>
@@ -1256,7 +1256,7 @@ if ($data == 3 || $data == 4) { ?>
             <p><?php echo $RainwaterHarvesting_msg; ?></p>
           </div>
         </li>
-        <li>
+        <li <?php if(getFiled('Q8W2S1', $schoolUserID) == ""){ echo "style='display:none;'";} ?>>
           <figure><img src="assets/img/performance/catchment.jpg"></figure>
           <div class="description">
             <h3>Does your school harvest different catchments</h3>
@@ -1282,7 +1282,7 @@ if ($data == 3 || $data == 4) { ?>
         <?php
                         if (getFiled('Q8W2S1', $schoolUserID) == "Y") {
                             ?>
-        <li>
+        <li <?php if(getFiled('Q8W2S1', $schoolUserID) == ""){ echo "style='display:none;'";} ?>>
           <figure><img src="assets/img/performance/catchment.jpg"></figure>
           <div class="description">
             <h3>Which is the catchment area being harvested by your school</h3>
@@ -1315,7 +1315,7 @@ if ($data == 3 || $data == 4) { ?>
           </div>
         </li>
         <?php } ?>
-        <li>
+        <li <?php if(getFiled('Q8W2S2', $schoolUserID) == ""){ echo "style='display:none;'";} ?>>
           <figure><img src="assets/img/performance/area.jpg" ></figure>
           <div class="description">
             <h3>Harvested Area</h3>
@@ -1347,7 +1347,7 @@ if ($data == 3 || $data == 4) { ?>
         <?php
          if (getFiled('Q8W2S2', $schoolUserID) == 2) {
         ?>
-        <li>
+        <li <?php if(getFiled('Q8W2S2', $schoolUserID) == ""){ echo "style='display:none;'";} ?>>
           <figure><img src="assets/img/performance/clean.jpg"></figure>
           <div class="description">
             <h3>Groundwater recharge structure</h3>
@@ -1363,7 +1363,7 @@ if ($data == 3 || $data == 4) { ?>
           </div>
         </li>
         <?php } ?>
-        <li>
+        <li <?php if(getFiled('Q8W2S4', $schoolUserID) == ""){ echo "style='display:none;'";} ?>>
           <figure><img src="assets/img/performance/clean.jpg"></figure>
           <div class="description">
             <h3>How much area in your school is harvested</h3>
@@ -1423,7 +1423,7 @@ if ($data == 3 || $data == 4) { ?>
                                 ?>
           </div>
         </li>
-        <li style="height:130px!important;">
+        <li style="height:130px!important;" <?php if(getFiled('Q8W2S5', $schoolUserID) == ""){ echo "style='display:none;'";} ?>>
           <figure><img src="assets/img/performance/clean.jpg"></figure>
           <div class="description">
             <h3>Catchment Cleanliness</h3>
@@ -1445,7 +1445,7 @@ if ($data == 3 || $data == 4) { ?>
             <p><?php echo $Rateyourcatchment_msg; ?></p>
           </div>
         </li>
-        <li>
+        <li  <?php if(getFiled('Q8W2S61', $schoolUserID) == ""){ echo "style='display:none;'";} ?>>
           <figure><img src="assets/img/performance/monitor.jpg" style="width:127px!important;"></figure>
           <div class="description">
             <h3>Does your school clean your catchment and system</h3>
@@ -1471,7 +1471,7 @@ if ($data == 3 || $data == 4) { ?>
                                 ?>
           </div>
         </li>
-        <li>
+        <li <?php if(getFiled('Q8W2S8', $schoolUserID) == ""){ echo "style='display:none;'";} ?>>
           <figure><img src="assets/img/performance/monitor.jpg"></figure>
           <div class="description">
             <h3>Monitoring Rainwater Harvesting Efficiency</h3>
@@ -1494,7 +1494,7 @@ if ($data == 3 || $data == 4) { ?>
                                 ?>
           </div>
         </li>
-        <li>
+        <li <?php if(getFiled('Q8W2S13', $schoolUserID) == ""){ echo "style='display:none;'";} ?>>
           <figure><img src="assets/img/performance/monitor.jpg"></figure>
           <div class="description">
             <h3>If your school's RWH structure is more than a year old, is there any improvement in the groundwater
@@ -1542,7 +1542,7 @@ if ($data == 3 || $data == 4) { ?>
     </section>
     <section class="performance-category">
       <ul>
-        <li>
+        <li <?php if(getFiled('Q9W1', $schoolUserID) == ""){ echo "style='display:none;'";} ?>>
           <figure style="margin-left:-12px;"><img src="assets/img/performance/drink.jpg"></figure>
           <div class="description">
             <h3>Load on Drinking Water Taps</h3>
@@ -1612,7 +1612,7 @@ if ($data == 3 || $data == 4) { ?>
             </tr>
           </table>
         </li>
-        <li style="height:130px!important;">
+        <li style="height:130px!important;" <?php if(getFiled('Q10W1', $schoolUserID) == ""){ echo "style='display:none;'";} ?>>
           <figure><img src="assets/img/performance/pump.jpg" style="width:127px!important;"></figure>
           <div class="description" style="margin-left:-12px;">
             <h3>Hand Pumps</h3>
@@ -1632,7 +1632,7 @@ if ($data == 3 || $data == 4) { ?>
             <p><?php echo $handpumps_msg; ?></p>
           </div>
         </li>
-        <li>
+        <li <?php if(getFiled('Q11W1', $schoolUserID) == ""){ echo "style='display:none;'";} ?>>
           <figure><img src="assets/img/performance/ablution.jpg"></figure>
           <div class="description">
             <h3>Load on Ablution Taps</h3>
@@ -1657,7 +1657,7 @@ if ($data == 3 || $data == 4) { ?>
             <p><?php echo $abulation_tabs_msg; ?></p>
           </div>
         </li>
-        <li>
+        <li <?php if(getFiled('Q13W1S4', $schoolUserID) == ""){ echo "style='display:none;'";} ?>>
           <figure><img src="assets/img/performance/wc.jpg"></figure>
           <div class="description">
             <h3>Load on Water Closets</h3>
@@ -1697,7 +1697,7 @@ if ($data == 3 || $data == 4) { ?>
             <p><?php echo $waterclosets_msg; ?></p>
           </div>
         </li>
-        <li>
+        <li <?php if(getFiled('Q14W1', $schoolUserID) == ""){ echo "style='display:none;'";} ?>>
           <figure><img src="assets/img/performance/uninal.jpg"></figure>
           <div class="description">
             <h3>Load on Urinals</h3>
@@ -1744,7 +1744,7 @@ if ($data == 3 || $data == 4) { ?>
     </section>
     <section class="performance-category">
       <ul>
-        <li>
+        <li <?php if(getFiled('Q15W1', $schoolUserID) == ""){ echo "style='display:none;'";} ?>>
           <figure><img src="assets/img/performance/outlet.jpg"></figure>
           <div class="description">
             <h3>Water Outlets</h3>
@@ -1768,7 +1768,7 @@ if ($data == 3 || $data == 4) { ?>
             <p><?php echo $water_outlets_msg; ?></p>
           </div>
         </li>
-        <li>
+        <li <?php if(getFiled('Q16W1', $schoolUserID) == ""){ echo "style='display:none;'";} ?>>
           <figure><img src="assets/img/performance/water_storage.jpg"></figure>
           <div class="description">
             <h3>Is there a water storage system in place to supply water in the toilets?</h3>
@@ -1788,7 +1788,7 @@ if ($data == 3 || $data == 4) { ?>
             <p><?php echo $water_supply; ?></p>
           </div>
         </li>
-        <li>
+        <li <?php if(getFiled('Q21W1', $schoolUserID) == ""){ echo "style='display:none;'";} ?>>
           <figure><img src="assets/img/performance/water_supply.jpg"></figure>
           <div class="description">
             <h3>Is the water supply sufficient?</h3>
@@ -1807,8 +1807,8 @@ if ($data == 3 || $data == 4) { ?>
             <p><?php echo $water_supply15; ?></p>
           </div>
         </li>
-        <li>
-          <figure><img src="assets/img/performance/cleaned_toilets.jpg"></figure>
+        <li <?php if(getFiled('Q18W1', $schoolUserID) == ""){ echo "style='display:none; height:130px;'";}else{echo "style='height:130px;'";} ?>>
+          <figure><img src="assets/img/performance/cleaned_toilets.jpg" style="width:127px!important;"></figure>
           <div class="description">
             <h3>Are the toilets cleaned?</h3>
             <?php
@@ -1827,7 +1827,7 @@ if ($data == 3 || $data == 4) { ?>
             <p><?php echo $water_supply16; ?></p>
           </div>
         </li>
-        <li>
+        <li <?php if(getFiled('Q19W1', $schoolUserID) == ""){ echo "style='display:none;'";} ?>>
           <figure><img src="assets/img/performance/wastewater_treatment.jpg"></figure>
           <div class="description">
             <h3>Does your school have a wastewater treatment facility</h3>
@@ -1851,7 +1851,7 @@ if ($data == 3 || $data == 4) { ?>
     </section>
     <section class="performance-category">
       <ul>
-        <li>
+        <li <?php if(getFiled('Q20W1', $schoolUserID) == ""){ echo "style='display:none;'";} ?>>
           <figure><img src="assets/img/performance/reuse_wastewater.jpg"></figure>
           <div class="description">
             <h3>Does your school reuse the treated wastewater?</h3>
