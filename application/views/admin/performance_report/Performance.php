@@ -1446,7 +1446,7 @@ if ($data == 3 || $data == 4) { ?>
           </div>
         </li>
         <li>
-          <figure><img src="assets/img/performance/monitor.jpg"></figure>
+          <figure><img src="assets/img/performance/monitor.jpg" style="width:127px!important;"></figure>
           <div class="description">
             <h3>Does your school clean your catchment and system</h3>
             <?php
