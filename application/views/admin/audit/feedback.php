@@ -46,7 +46,7 @@
 		    <ul class="list-unstyled list-inline" style="margin:0; padding:0;">
 			<li>
 			    <label class="checkbox-inline">
-				<input type="checkbox" value="100" name="progress[]" id="progress"  />
+				<input type="checkbox" value="100" name="complete" id="complete"  />
 				Audit Submitted</label>
 			</li>
 			<li>
