@@ -116,10 +116,7 @@ class Audit_started extends CI_Controller {
 	$conditions = array();
 
         
-	if($byComplete !='')
-        {
-            $conditions[] = "a.complete_status=1";
-        }   
+	
 	   
        
         if ($byState != '') {
@@ -198,6 +195,11 @@ class Audit_started extends CI_Controller {
         {
             $conditions[] = "a.phase='$byPhase'";
         }
+	   
+	if($byComplete !='')
+        {
+            $conditions[] = "a.complete_status= '1'";
+        }      
 
         $sql = $query;
 
