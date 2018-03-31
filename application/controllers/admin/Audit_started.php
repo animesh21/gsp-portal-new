@@ -99,6 +99,7 @@ class Audit_started extends CI_Controller {
         $category = array();
         $aid = array();
         $byPhase=$this->input->post('phase');
+	$progress_range= $this->input->post('progress_range');   		
 	$byComplete = $this->input->post('complete');   
         $byProgress = $this->input->post('progress');
         $byCategory = $this->input->post('school_category');
@@ -161,7 +162,10 @@ class Audit_started extends CI_Controller {
             }
             $conditions[] = "(" . implode(' OR ', $test) . ")";
         }
-
+	
+	if (!empty($progress_range)) {
+            $conditions[] = " a.progress '%$progress_range%'";
+        }   
 
         //Category
         if (!empty($byCategory)) {
