@@ -118,7 +118,7 @@ class Audit_started extends CI_Controller {
         
 	if($byComplete !='')
         {
-            $conditions[] = "a.complete_status='$byComplete'";
+            $conditions[] = "a.complete_status=1";
         }   
 	   
        
