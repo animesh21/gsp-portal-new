@@ -164,7 +164,7 @@ class Audit_started extends CI_Controller {
         }
 	
 	if (!empty($progress_range)) {
-            $conditions[] = " a.progress '%$progress_range%'";
+            $conditions[] = " a.progress '$progress_range'";
         }   
 
         //Category
