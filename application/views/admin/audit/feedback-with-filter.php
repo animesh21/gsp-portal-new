@@ -66,7 +66,7 @@
                         </li>
                         <li>
                             <label class="checkbox-inline">
-                                <input type="checkbox" value=" BETWEEN 10 AND 40" name="progress[]" id="progress"  />
+                                <input type="checkbox" value=" BETWEEN 10 AND 40" name="progress_range" id="progress_range" />
                                 10-40 percent</label>
                         </li>
                         <li>
