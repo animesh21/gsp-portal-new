@@ -2069,7 +2069,7 @@ if ($data == 3 || $data == 4) { ?>
             }
         ?>
             <h3>Quantity of Waste Generated</h3>
-            <!--            <h4><?php echo $waste_msg1; ?></h4>-->
+            <h4><?php echo $waste_msg1; ?></h4>
             <p><?php echo $waste_msg2; ?></p>
           </div>
         </li>
@@ -2099,7 +2099,7 @@ if ($waste_recycle == "Y") {
 	
     $total_generated_waste = $rw + $rw1 + $rw2 +$rw3 + $rw4 + $rw5 +$rw6;
     $total_recycled_waste = $rcw + $rcw1 + $rcw2 + $rcw3 + $rcw4 + $rcw5 + $rcw6;
-    $waste_recycled_percent = round((($total_recycled_waste * 100) / $total_generated_waste), 2);
+    $waste_recycled_percent = round((($total_recycled_waste * 100) / $total_generated_waste), 4);
     if ($waste_recycled_percent == 100) {    //100%
         $waste_msg41 = "School recycles 100% of the waste";
         $waste_msg42 = "Your school recycles a lot of its waste. You recycle " . $waste_recycled_percent . " per cent of waste. We hope you are able to become waste efficient school at the earliest.";
@@ -2115,7 +2115,7 @@ if ($waste_recycle == "Y") {
             <h4><?php echo $waste_msg41 ?></h4>
             <p><?php echo $waste_msg42 ?></p>
             <?php
-    } elseif ($waste_recycled_percent >= 0 && $waste_recycled_percent <= 49.9) {   //0%-49.9%
+    } elseif ($waste_recycled_percent > 0 && $waste_recycled_percent <= 49.9) {   //0%-49.9%
         $waste_msg41 = "School recycles 0%-49.9% of it's waste";
         $waste_msg42 = "Your school recycles some of its waste. You recycle " . $waste_recycled_percent . " per cent of waste. We hope you are able to become waste efficient school at the earliest.";
 		?>
