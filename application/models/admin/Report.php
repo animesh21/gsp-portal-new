@@ -263,7 +263,7 @@ class Report extends CI_Model {
 		}
 		
 		public function getAirVehicle($question_id){
-            return $this->db->select('Avg(a.answer) as avg')
+            return $this->db->select('sum(a.answer) as avg')
                      ->from('gsp_answers as a')
                      ->where('a.questionid', $question_id)
 		     ->join('gsp_school as b','a.userid=b.userid','left') 
