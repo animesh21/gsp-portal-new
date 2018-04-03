@@ -922,12 +922,12 @@ if ($data == 3 || $data == 4) { ?>
                      if ($green_cover_perc >= 60) {
                          $greencover_msg = "Your school has the required green cover but aim to increase the cover by 10 - 15 percent in the next two years.";
                     } else if ($green_cover_perc >= 15 && $green_cover_perc <= 59.99) {
-                        $greencover_msg = "Your school does not have the required green cover so aim to increase the cover by at least 20  percent in the next two years.";
+                        $greencover_msg = "Your school have the  green cover area is".$green_cover_perc. "so aim to increase the cover by at least 10-15  percent in the next two years.";
                     } else if ($green_cover_perc <= 14.9) {
-                        $greencover_msg = "Your school does not have the required green cover so aim to increase the cover by at least 30  percent in the next two years.";
+                        $greencover_msg = "Your school have the  green cover area is".$green_cover_perc. "so aim to increase the cover by at least 10-15  percent in the next two years.";
                     }
                 ?>
-            <h4><?php echo $green_cover_perc; ?></h4>
+
             <p><?php echo $greencover_msg; ?></p>
           </div>
         </li>
