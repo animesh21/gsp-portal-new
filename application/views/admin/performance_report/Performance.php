@@ -868,9 +868,7 @@ if ($data == 3 || $data == 4) { ?>
         </li>
       </ul>
     </section>
-    <div class="footer">
-      <p>Performance Report | <?php echo $performance[0]->name; ?></p>
-    </div>
+    
   </div>
   <div class="land">
     <h2>
