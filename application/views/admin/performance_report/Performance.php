@@ -213,47 +213,7 @@ h2 span {
             <p><?php echo $window_floor_msg;} ?></p>
           </div>
         </li>
-        <li>
-          <figure><img src="assets/img/performance/parking.jpg"></figure>
-          <div class="description">
-            <h3>Road Worthiness Certificate</h3>
-            <?php
-                   // $arrImages = getUploadData(str_replace(' ', '_', $performance[0]->name) . '_PUC_Certificate', $schoolUserID);
-	         $road_count= array();
-		$data1 = getFiled('Q6A2S1B6', $schoolUserID);
-		 if(strtolower($data1)=='yes'){
-		    $road_count[0] = 1;	
-		   }else{
-		     $road_count[0] = 0;	
-		 }	   
-		 $data2 = getFiled('Q6A2S1C6', $schoolUserID);
-		if(strtolower($data2)=='yes'){
-		    $road_count[1] = 1;	
-		   }else{
-		     $road_count[1] = 0;	
-		 }
-	        $data3 = getFiled('Q6A2S1V6', $schoolUserID);
-		if(strtolower($data3)=='yes'){
-		    $road_count[2] = 1;	
-		   }else{
-		     $road_count[2] = 0;	
-		 }
-		$data4 = getFiled('Q6A2S1O6', $schoolUserID);
-		if(strtolower($data4)=='yes'){
-		    $road_count[3] = 1;	
-		   }else{
-		     $road_count[3] = 0;	
-		 }
-		if(array_sum($road_count) > 0){
-		 ?>
-            <h4> <?php echo "NO" ; ?> </h4>
-            <p> <?php echo "Road worthiness certificate should be obtained for all the vehicles<br/>If your vehicles have this certificate,it means that they are in good operating condition and meet the acceptable standards for safe driving."; ?></p>
-            <?php  } else { ?>
-            <h4><?php echo "Yes"; ?></h4>
-            <p><?php echo "It is good that your school has a road worthiness certificate for your vehicles<br/>This means that your vehicles are in good operating condition and meet the acceptable standards for safe driving."; ?></p>
-            <?php   } ?>
-          </div>
-        </li>
+        
         <li>
           <figure><img src="assets/img/performance/key.jpg"></figure>
           <div class="description">
@@ -417,6 +377,48 @@ if ($data == 3 || $data == 4) { ?>
             <p><?php echo $vehicle_parking_msg; ?></p>
           </div>
         </li>
+	<li>
+          <figure><img src="assets/img/performance/parking.jpg"></figure>
+          <div class="description">
+            <h3>Road Worthiness Certificate</h3>
+            <?php
+                   // $arrImages = getUploadData(str_replace(' ', '_', $performance[0]->name) . '_PUC_Certificate', $schoolUserID);
+	         $road_count= array();
+		$data1 = getFiled('Q6A2S1B6', $schoolUserID);
+		 if(strtolower($data1)=='yes'){
+		    $road_count[0] = 1;	
+		   }else{
+		     $road_count[0] = 0;	
+		 }	   
+		 $data2 = getFiled('Q6A2S1C6', $schoolUserID);
+		if(strtolower($data2)=='yes'){
+		    $road_count[1] = 1;	
+		   }else{
+		     $road_count[1] = 0;	
+		 }
+	        $data3 = getFiled('Q6A2S1V6', $schoolUserID);
+		if(strtolower($data3)=='yes'){
+		    $road_count[2] = 1;	
+		   }else{
+		     $road_count[2] = 0;	
+		 }
+		$data4 = getFiled('Q6A2S1O6', $schoolUserID);
+		if(strtolower($data4)=='yes'){
+		    $road_count[3] = 1;	
+		   }else{
+		     $road_count[3] = 0;	
+		 }
+		if(array_sum($road_count) > 0){
+		 ?>
+            <h4> <?php echo "NO" ; ?> </h4>
+            <p> <?php echo "Road worthiness certificate should be obtained for all the vehicles<br/>If your vehicles have this certificate,it means that they are in good operating condition and meet the acceptable standards for safe driving."; ?></p>
+            <?php  } else { ?>
+            <h4><?php echo "Yes"; ?></h4>
+            <p><?php echo "It is good that your school has a road worthiness certificate for your vehicles<br/>This means that your vehicles are in good operating condition and meet the acceptable standards for safe driving."; ?></p>
+            <?php   } ?>
+          </div>
+        </li>      
+	      
         <li>
           <figure><img src="assets/img/performance/fuel.jpg"></figure>
           <div class="description">
