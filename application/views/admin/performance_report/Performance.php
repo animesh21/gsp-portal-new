@@ -698,28 +698,28 @@ if ($data == 3 || $data == 4) { ?>
                                 if (getFiled('Q9E1', $schoolUserID) == "Y") {
                                     //$sourceofenergy_msg = "Your school uses 'x' as a renewable source of energy. We hope that in the near future you switch to 100% renewable sources of Energy!";
                                     //$energy = array();
-                                    if (getFiled('Q9E1S1', $schoolUserID) == 1) {
+                                    if (getFiled('Q9E1S1', $schoolUserID) == '1') {
                                         $solar_energy = "Solar";
                                     }
                                     else
                                     {
                                         $solar_energy = "";
                                     }
-                                    if (getFiled('Q9E1S2', $schoolUserID) == 1) {
+                                    if (getFiled('Q9E1S2', $schoolUserID) == '1') {
                                         $wind_energy = "Wind";
                                     }
                                     else
                                     {
                                         $wind_energy = "";
                                     }
-                                    if (getFiled('Q9E1S3', $schoolUserID) == 1) {
+                                    if (getFiled('Q9E1S3', $schoolUserID) == '1') {
                                         $hydro_energy = "Hydro";
                                     }
                                     else
                                     {
                                         $hydro_energy = "";
                                     }
-                                    if (getFiled('Q9E1S4', $schoolUserID) == 1) {
+                                    if (getFiled('Q9E1S4', $schoolUserID) == '1') {
                                         $solar_wind_energy = "Combination of solar and wind";
                                     }
                                     else
@@ -749,7 +749,7 @@ if ($data == 3 || $data == 4) { ?>
                                     $energyuse = "No";
                                 }
                                 ?>
-            <!--            <h4><?php echo $energyuse; ?></h4>-->
+             <h4><?php echo $energyuse; ?></h4>
             <p><?php echo $sourceofenergy_msg; ?></p>
           </div>
         </li>
