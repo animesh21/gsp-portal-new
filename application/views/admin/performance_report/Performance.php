@@ -640,8 +640,8 @@ if ($data == 3 || $data == 4) { ?>
             <h3>Energy per capita per day consumption</h3>
             <?php
                     $total_energy_con_mj = (getFiled('Q6E15S2', $schoolUserID) != '') ? (getFiled('Q6E15S2', $schoolUserID)) : 0;
-        
-                    $mjprd = number_format(($total_energy_con_mj / $total_population),2,".","");                                
+                    $total_energy_con_mj_day = $total_energy_con_mj/30;
+                    $mjprd = number_format(($total_energy_con_mj_day / $total_population),2,".","");                                
                     
                     $school_category_array = array(1=>46.2,2=>49.8,3=>24.6,4=>48.0,5=>46.2,6=>49.8);
                     $school_category = getFiled('Q1S1', $schoolUserID);  // School Category
