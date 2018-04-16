@@ -1038,6 +1038,34 @@ if ($data == 3 || $data == 4) { ?>
             <p><?php echo $greencover_msg; ?></p>
           </div>
         </li>
+	<li>
+          <figure><img src="assets/img/performance/pest.jpg"></figure>
+          <div class="description">
+            <h3>How many species of plants and animals exist in your school ?</h3>
+            <?php
+		 $plant = getFiled('Q5L1S3', $schoolUserID); 
+		 $animal = getFiled('Q5L2S3', $schoolUserID);  
+                if ($plant >= 100 ) {
+                    $plant_c = "Equal to or more than 100 plants";
+                    $plant_msg = "We appreciate your efforts to conserve biodiversity within your school campus. Your school has maintained plant biodiversity very well.";
+                } elseif($plant< 100) {
+                    $plant_c = "Less than 100 plants species";
+                    $plant_msg = "Biodiversity is very important to conserve nature. We recommend you to increase your flora biodiversity by ensuring minimum 100 species of plants within your school campus";
+                }
+		if ($animal >= 50 ) {
+                    $animal_c = "Equal to or more than 50 animal species plants";
+                    $animal_msg = "We appreciate your efforts to conserve biodiversity within your school campus. Your school has maintained fauna biodiversity";
+                } elseif($animal< 50) {
+                    $animal_c = "Less than 50 animals species";
+                    $animal_msg = "Biodiversity is very important to conserve nature. We recommend you to increase your fauna biodiversity by ensuring minimum 50 species of animals within your school campus";
+                }  
+            ?>
+            <h4><?php echo $plant_c; ?></h4>
+            <p><?php echo $plant_msg; ?></p>
+	    <h4><?php echo $animal_c; ?></h4>
+            <p><?php echo $animal_msg; ?></p>	  
+          </div>
+        </li>      
         <li>
           <figure><img src="assets/img/performance/pest.jpg"></figure>
           <div class="description">
