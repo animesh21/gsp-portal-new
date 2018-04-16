@@ -2119,7 +2119,7 @@ if ($waste_recycle == "Y") {
             <h4><?php echo $waste_msg41 ?></h4>
             <p><?php echo $waste_msg42 ?></p>
             <?php
-    } elseif ($waste_recycled_percent > 0 && $waste_recycled_percent <= 49.9) {   //0%-49.9%
+    } elseif ($waste_recycled_percent > 0 && $waste_recycled_percent < 50) {   //0%-49.9%
         $waste_msg41 = "School recycles 0%-49.9% of it's waste";
         $waste_msg42 = "Your school recycles some of its waste. You recycle " . $waste_recycled_percent . " per cent of waste. We hope you are able to become waste efficient school at the earliest.";
 		?>
@@ -2133,14 +2133,12 @@ if ($waste_recycle == "Y") {
             <h4><?php echo $waste_msg41 ?></h4>
             <p><?php echo $waste_msg42 ?></p>
             <?php
-    }else{ 
-	    
-		  ?>
+    }else{  ?>
 		  
                  <p>School does not recycle the waste</p>
     
   <?php  } 
-}else{ ?>
+}elseif ($waste_recycle == "N"){ ?>
             <p>School does not recycle the waste</p>
             <?php } ?>
           </div>
