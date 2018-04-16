@@ -894,10 +894,10 @@ if ($data == 3 || $data == 4) { ?>
                     if($total_land_points >= 6)
                         $point_performance_msg_l = "Good your school has plenty of green cover and that too, without using any chemical-based pesticides. Though the norms say that minimum 35% of your total land should be green cover, we encourage that you target to increase your green cover by 10 - 15 per cent in next two years!";
                     elseif($total_land_points >=4 && $total_land_points < 6  )
-                        $point_performance_msg_l= "Your school has done average in this section.  Though the norms say that minimum 33% of your total land should be green cover, we encourage that you target to increase your green cover by 10 - 15 per cent in next two years!";
+                        $point_performance_msg_l= "Your school has done average in this section.  Though the norms say that minimum 35% of your total land should be green cover, we encourage that you target to increase your green cover by 10 - 15 per cent in next two years!";
                     
                     elseif($total_land_points < 4 )
-                        $point_performance_msg_l= "Your school does not meet the Green Cover norms. Though the norms say that minimum 33% of your total land should be green cover, we encourage that you target to increase your green cover to 40% in next two years!";
+                        $point_performance_msg_l= "Your school does not meet the Green Cover norms. Though the norms say that minimum 35% of your total land should be green cover, we encourage that you target to increase your green cover to 40% in next two years!";
                                      
                 ?>
     <p><?php echo $point_performance_msg_l ?></p>
@@ -1286,7 +1286,7 @@ if ($data == 3 || $data == 4) { ?>
         <?php
                         if (getFiled('Q8W2S1', $schoolUserID) == "Y") {
                             ?>
-        <li <?php if(getFiled('Q8W2S1', $schoolUserID) == ""){ echo "style='display:none;'";} ?>>
+        <li <?php if(getFiled('Q8W2S1', $schoolUserID) == ""){ echo "style='display:none;'";} ?> >
           <figure><img src="assets/img/performance/catchment.jpg"></figure>
           <div class="description">
             <h3>Which is the catchment area being harvested by your school</h3>
@@ -1319,10 +1319,11 @@ if ($data == 3 || $data == 4) { ?>
           </div>
         </li>
         <?php } ?>
+	<?php if (getFiled('Q8W2', $schoolUserID) == "Y") { ?>      
         <li <?php if(getFiled('Q8W2S2', $schoolUserID) == ""){ echo "style='display:none;'";} ?>>
           <figure><img src="assets/img/performance/area.jpg" ></figure>
           <div class="description">
-            <h3>Harvested Area</h3>
+            <h3>How does your school harvest rainwater?</h3>
             <?php
                                 if (getFiled('Q8W2S2', $schoolUserID) == 1) {
                                     $rainwater_harvested = "By storing";
@@ -1343,20 +1344,19 @@ if ($data == 3 || $data == 4) { ?>
                                     $rainwater_harvested_msg = "An excellent practice. Hope that you use the RWH systems to its full potential."; ?>
             <h4><?php echo $rainwater_harvested; ?></h4>
             <p><?php echo $rainwater_harvested_msg; ?></p>
-            <?php
-                                }
-                                ?>
+            <?php }  ?>
           </div>
         </li>
+	<?php } ?>      
         <?php
-         if (getFiled('Q8W2S2', $schoolUserID) == 2) {
+         if (getFiled('Q8W2S2', $schoolUserID) == '1' || getFiled('Q8W2S2', $schoolUserID) == '3') {
         ?>
-        <li <?php if(getFiled('Q8W2S2', $schoolUserID) == ""){ echo "style='display:none;'";} ?>>
+        <li <?php if(getFiled('Q8W2S2S7', $schoolUserID) == ""){ echo "style='display:none;'";} ?>>
           <figure><img src="assets/img/performance/clean.jpg"></figure>
           <div class="description">
             <h3>Groundwater recharge structure</h3>
             <?php
-                                    if (getFiled('Q8W2S2S97', $schoolUserID) == 1) {
+                                    if (getFiled('Q8W2S2S7', $schoolUserID) == 1) {
                                         $gw_recharge_structure = "Yes";
                                         $gw_recharge_structure_msg = "Recharging the ground water is a very good practice."; ?>
             <h4><?php echo $gw_recharge_structure; ?></h4>
@@ -1427,6 +1427,8 @@ if ($data == 3 || $data == 4) { ?>
                                 ?>
           </div>
         </li>
+   <?php
+             if (getFiled('Q8W2', $schoolUserID) == "Y") { ?>	      
         <li style="height:130px!important;" <?php if(getFiled('Q8W2S5', $schoolUserID) == ""){ echo "style='display:none;'";} ?>>
           <figure><img src="assets/img/performance/clean.jpg"></figure>
           <div class="description">
@@ -1449,6 +1451,7 @@ if ($data == 3 || $data == 4) { ?>
             <p><?php echo $Rateyourcatchment_msg; ?></p>
           </div>
         </li>
+  <?php } ?>	      
         <li  <?php if(getFiled('Q8W2S61', $schoolUserID) == ""){ echo "style='display:none;'";} ?>>
           <figure><img src="assets/img/performance/monitor.jpg" style="width:127px!important;"></figure>
           <div class="description">
