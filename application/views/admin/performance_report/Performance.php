@@ -764,52 +764,7 @@ if ($data == 3 || $data == 4) { ?>
             <p><?php echo $sourceofenergy_msg; ?></p>
           </div>
         </li>       
-        <li>
-          <figure><img src="assets/img/performance/source.jpg"></figure>
-          <div class="description">
-            <h3>Is your school using any renewable sources of energy ?</h3>
-            <?php
-		  $energy = array();
-                                if (getFiled('Q9E1', $schoolUserID) == "Y") {
-                                    //$sourceofenergy_msg = "Your school uses 'x' as a renewable source of energy. We hope that in the near future you switch to 100% renewable sources of Energy!";
-                                    //$energy = array();
-                                    if (getFiled('Q9E1S1', $schoolUserID) == '1') {
-                                        $energy[0] = "Solar";
-                                    }
-                                    
-                                    if (getFiled('Q9E1S2', $schoolUserID) == '1') {
-                                        $energy[1] = "Wind";
-                                    }
-                                    
-                                    if (getFiled('Q9E1S3', $schoolUserID) == '1') {
-                                         $energy[2] = "Hydro";
-                                    }
-                                    
-                                    if (getFiled('Q9E1S4', $schoolUserID) == '1') {
-                                         $energy[3] = "Combination of solar and wind";
-                                    }
-                                
-			         
-                                   
-                                    //$energyuse = implode($energy, ',');
-				if(isset($energy) && !empty($energy)){
-				 $renew =implode(",",$energy); 	
-				
-				 $renewuse ="Yes";
-                                 $renewenergy_msg = "'Your school uses '".$renew."' as a renewable source of energy. We hope that in the near future you switch to 100% renewable sources of Energy!' " ;
-                                	
-				}elseif(isset($energy) && empty($energy)){
-				 $renewuse ="No";
-                                 $renewenergy_msg =  "Your school does not use any renewable source of energy. We hope that in the near future you switch to 100% renewable sources of Energy!" ;
-                                	
-				}
-		  
-                                    
-                                ?>
-             <h4><?php echo $renewuse; ?></h4>
-            <p><?php echo $renewenergy_msg; ?></p>
-          </div>
-        </li>
+       
       </ul>
     </section>
     <div class="footer">
