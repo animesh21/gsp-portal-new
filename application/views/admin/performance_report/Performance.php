@@ -891,13 +891,13 @@ if ($data == 3 || $data == 4) { ?>
                     // Land Points
                     $total_land_points = number_format(getLandPoints($schoolUserID),2);
                     //echo $total_land_points;
-                    if($total_land_points >= 6)
-                        $point_performance_msg_l = "Good your school has plenty of green cover and that too, without using any chemical-based pesticides. Though the norms say that minimum 35% of your total land should be green cover, we encourage that you target to increase your green cover by 10 - 15 per cent in next two years!";
-                    elseif($total_land_points >=4 && $total_land_points < 6  )
-                        $point_performance_msg_l= "Your school has done average in this section.  Though the norms say that minimum 35% of your total land should be green cover, we encourage that you target to increase your green cover by 10 - 15 per cent in next two years!";
+                    if($total_land_points >= 10)
+              $point_performance_msg_l = "Good your school has plenty of green cover and that too, without using any chemical-based pesticides. Though the norms say that minimum 35 % of your total land should be green cover, we encourage that you target to increase your green cover by 10 - 15 per cent in next two years!";
+                    elseif($total_land_points >=5 && $total_land_points < 10  )
+             $point_performance_msg_l= "Your school has done average in this section.  Though the norms say that minimum 35% of your total land should be green cover, we encourage that you target to increase your green cover by 10 - 15 per cent in next two years!";
                     
-                    elseif($total_land_points < 4 )
-                        $point_performance_msg_l= "Your school does not meet the Green Cover norms. Though the norms say that minimum 35% of your total land should be green cover, we encourage that you target to increase your green cover to 40% in next two years!";
+                    elseif($total_land_points < 5 )
+                $point_performance_msg_l= "Your school does not meet the Green Cover norms. Though the norms say that minimum 35% of your total land should be green cover, we encourage that you target to increase your green cover to 40% in next two years!";
                                      
                 ?>
     <p><?php echo $point_performance_msg_l ?></p>
@@ -1906,14 +1906,14 @@ if ($data == 3 || $data == 4) { ?>
     <h3>Your School's Performance</h3>
     <?php
                     $total_waste_points = number_format(getWastePoints($schoolUserID),2);
-                    if($total_waste_points >= 61 && $total_waste_points <=  65 )
-                        $point_performance_msg_w = "You have done very well in this section. Your school manages all of its waste very efficiently. We are glad that your school has created a waste-wise society.";
-                    elseif($total_waste_points >= 45 && $total_waste_points <= 60.9 )
+                    if($total_waste_points >= 56 && $total_waste_points <=  60 )
+               $point_performance_msg_w = "You have done very well in this section. You school manages all of its waste very efficiently. We are glad that your school has created a waste-wise society.";
+                    elseif($total_waste_points >= 40 && $total_waste_points < 56 )
                         $point_performance_msg_w = "You have done good in this section. Your school manages most of the waste. We hope that through the assessment below you will take what is required to make your school a waste management efficient school.";
-                    elseif($total_waste_points >= 15 && $total_waste_points <= 44.9)
+                    elseif($total_waste_points >= 15 && $total_waste_points <40)
                         $point_performance_msg_w = "You have done average in this section. Your school manages most of the waste. We hope that through the assessment below you will take what is required to make your school a waste management efficient school.";
                     elseif($total_waste_points < 15)
-                        $point_performance_msg_w = "You have done poorly  in this section. Your school needs to manage its waste. We hope that through the assessment below you will take what is required to make your school a waste management efficient school. ";                   
+                        $point_performance_msg_w = "You have done poorly  in this section. Your school needs to manage its waste. We hope that through the assessment below you will take what is required to make your school a waste management efficient school.";                   
                 ?>
     <p><?php echo $point_performance_msg_w; ?></p>
     <section class="performance-category">
