@@ -224,7 +224,7 @@ h2 span {
                                     switch ($data) {
                                         case 1:
                                             $ownership = "School does not use or own vehicles";
-                                            $ownership_msg = "This is a very good practice. Some schools do not have their own buses, but hire from a transport contractor. This indicates that students, teaching staff and others are using sustainable modes of transport to commute to school and back. ";
+                                            $ownership_msg = "This is a very good practice. Some schools do not have their own buses, but hire from a transport contractor. This indicates that students, teaching staff and others are using sustainable modes of transport to commute to school and back.";
                                             break;
                                         case 2:
                                             $ownership = "Operator-owned vehicles";
@@ -232,15 +232,15 @@ h2 span {
                                             break;
                                         case 3:
                                             $ownership = "School-owned vehicles";
-                                            $ownership_msg = "This is not an ideal situation as it is better for schools to hire buses rather than owning them. Sharing buses with an operator is recommended";
+                                            $ownership_msg = "This is not an ideal situation as it is better for schools to hire buses rather then owning them. Sharing buses with an operator is recommended.";
                                             break;
                                         case 4:
                                             $ownership = "A combination of school-owned and operator-owned vehicles";
-                                            $ownership_msg = "Good that your school uses 'operator owned' vehicles. It will be ideal if you can reduce the number of school-owned vehicles, and move to operator-owned. Hope your school has enough space within the school premises to park the vehicles owned by  the school. ";
+                                            $ownership_msg = "Good that your school uses 'operator owned' vehicles. It will be ideal if you can reduce the number of school-owned vehicles, and move to operator-owned. Hope your school has enough space within the school premises to park the vehicles owned by  the school.";
                                             break;
                                         case 5:
                                             $ownership = "Hired vehicles (JNV schools)";
-                                            $ownership_msg = "Good that your school uses 'Hired' vehicles. It will be ideal if you can reduce the number of school-owned vehicles, and move to operator-owned. Hope your school has enough space within the school premises to park the vehicles owned by  the school. ";
+                                            $ownership_msg = "This is not a ideal situation. It will be ideal to move to operator-owned vehicles. Hope your school has enough space within the school premises to park the hired vehicles ";
                                             break;
                                         default :
                                             $ownership = "No Answer";
@@ -282,11 +282,11 @@ if ($data == 3 || $data == 4) { ?>
         $vehicletype = "Combination of old and new vehicles";
         $vehicle_msg = "As you know that vehicles that are older than 15 years emit very high Levels of pollutants. We suggest that that you keep a check on your vehicle's age.";
     } elseif ($oldvehicles == 0 || $oldvehicles == " ") {
-        $vehicletype = "All new vehicles or around five years";
-        $vehicle_msg = "Good that your school keeps a check on the age of the vehicles. It's very important that the norms are followed for better Air Quality around us!  Old vehicles emit very high Levels of pollutants.";
+        $vehicletype = "All new vehicles or around eight years";
+        $vehicle_msg = "Good that your school keeps a check on the age of the vehicles. It's very important that the norms are followed for better air quality around us!  Old vehicles emit very high levels of pollutants";
     } elseif ($oldvehicles == $totalvehicle) {
-        $vehicletype = "Almost all vehicles are old";
-        $vehicle_msg = "As you know that vehicles that are older than 15 years emit very high Levels of pollutants. We suggest that that you keep a check on the age of all vehicles.";
+        $vehicletype = "All vehicles are old (more than eight years)";
+        $vehicle_msg = "As you know that vehicles that are older then 15 years emit very high levels of pollutants. We suggest that that you keep a check on the age of all vehicles.";
     }
     ?>
             <h4><?php echo $vehicletype; ?></h4>
@@ -370,7 +370,7 @@ if ($data == 3 || $data == 4) { ?>
                                     $vehicle_parking_msg = "Its good that there is adequate parking area for school-owned vehicles. More the vehicles, more the area required. Therefore, encouraging students to use public transport will ensure more space for school or move to operator-owned vehicles, when your school needs to replace vehicles.";
                                 } elseif ($Parking_Area == 0) {
                                     $vehicle_parking = "No Parking space for vehicles";
-                                    $vehicle_parking_msg = "There should be adequate parking area for school-owned vehicles. More the vehicles, more the area required. Thus, encouraging students to use public transport will ensure more space for school.";
+                                    $vehicle_parking_msg = "Sad that your school doesnot have parking space for any of the vehicles. There should be adequate parking area for school-owned vehicles. More the vehicles, more the area required. Thus, encouraging students to use public transport or share their vehicles will ensure more space for school.";
                                 }
                                 ?>
             <h4><?php echo $vehicle_parking ?></h4>
@@ -800,28 +800,62 @@ if ($data == 3 || $data == 4) { ?>
                 $monthFoodSold[] = (getFiled('Q6F' . $i . 'S3', $schoolUserID) != '') ? (getFiled('Q6F' . $i . 'S3', $schoolUserID)) : 0;
             } 
             $packageditem = array_sum($totalFlavourVariaint) + array_sum($totalItemSold) + array_sum($monthFoodSold);
-            if ( $packageditem >= 0 && $packageditem < 1) {
+            if ( $packageditem == 0) {
                 $packageitem_served = "Yes";
-                $packageitem_served_msg = "Good that your school canteen doesn't sells ultra processed packaged food, beverages and packaged/bottled drinks.";
-            } else {
+                $packageitem_served_msg = "Good that your school canteen doesn't sells ultra processed packaged food, beverages and packaged/bottled drinks. ";
+            } elseif($packageditem > 0) {
             $packageitem_served = "No";
-            $packageitem_served_msg = "Your school sells ultra processed packaged food (UPPF) items daily in the campus - a practice that needs to be discouraged as UPPF items are high in fats, salt and sugar and harm children. We suggest that with the beginning of the new academic session, unhealthy food items be substituted with local and seasonal delicacies.";
+            $packageitem_served_msg = "Your school sells ultra processed packaged food (UPPF), beverages, packaged/bottled drinks, etc items daily in the campus - a practice that needs to be discouraged as UPPF items are high in fats, salt and sugar and harm children. We suggest that with the beginning of the new academic session, unhealthy food items be substituted with local and seasonal delicacies. ";
             }
         ?>
             <p><?php echo $packageitem_served_msg; ?></p>
           </div>
         </li>
+	 <li>
+          <figure><img src="assets/img/performance/sale.jpg"></figure>
+          <div class="description">
+            <h3>Does your school serve traditional Indian snacks?</h3>
+            <?php
+                                if (getFiled('Q7F1', $schoolUserID) == "Y" ) {
+                                    $snack_food = "Yes";
+                                    $snack_food_msg = "Good that your school canteen sells traditional Indian or local snacks.";
+                                }elseif(getFiled('Q7F1', $schoolUserID) == "N") {
+                                    $snack_food = "No";
+                                    $snack_food_msg = "Your school does not give option of Indian snacks in the school canteen. We suggest that unhealthy food items be substituted with local and seasonal snacks. ";
+                                }
+                                ?>
+            <h4><?php echo $snack_food; ?></h4>
+            <p><?php echo $snack_food_msg; ?></p>
+          </div>
+        </li>
+	  <li>
+          <figure><img src="assets/img/performance/sale.jpg"></figure>
+          <div class="description">
+            <h3>Does your school serve traditional Indian beveragess?</h3>
+            <?php
+                                if (getFiled('Q8F1', $schoolUserID) == "Y") {
+                                    $bever_food = "Yes";
+                                    $bever_food_msg = "Good that your school canteen sells traditional Indian or local beverages.";
+                                }elseif(getFiled('Q8F1', $schoolUserID) == "N") {
+                                    $bever_food = "No";
+                                    $bever_food_msg = "Your school does not give option of Indian or fresh beverages in the school canteen. We suggest that unhealthy drinks and beverages be substituted with local and fresh drinks. ";
+                                }
+                                ?>
+            <h4><?php echo $bever_food; ?></h4>
+            <p><?php echo $bever_food_msg; ?></p>
+          </div>
+        </li>     
         <li>
           <figure><img src="assets/img/performance/sale.jpg"></figure>
           <div class="description">
             <h3>Does the school distribute packaged food items as rewards during schools events.</h3>
             <?php
-                                if (getFiled('Q9F1', $schoolUserID) == "Y") {
+                                if (getFiled('Q9F1', $schoolUserID) == "Y" && getFiled('Q9F2', $schoolUserID) != " ") {
                                     $distributepackaged_food = "Yes";
-                                    $distributepackaged_food_msg = "Ultra processed packaged food (UPPF) not only has ill effects on the health of the students but are also negative environmental impacts. We hope you replace these with local/ traditional snacks.";
-                                } else {
+                                    $distributepackaged_food_msg = "Ultra processed packaged food (UPPF) not only has ill effects on the health of the students but also has negative environmental impacts. We hope you replace these with local/ traditional snacks.";
+                                }elseif(getFiled('Q9F1', $schoolUserID) == "N") {
                                     $distributepackaged_food = "No";
-                                    $distributepackaged_food_msg = "Ultra processed packaged food (UPPF) not only has ill effects on the health of the students but are also negative environmental impacts. We hope you that you serve local/ traditional snacks and discourage students from eat UPPF.";
+                                    $distributepackaged_food_msg = "Ultra processed packaged food (UPPF) not only has ill effects on the health of the students but are also negative environmental impacts. Good that your school doesn't distribute packaged food items as rewards. We hope that you serve local/ traditional snacks and discourage students to eat UPPF. ";
                                 }
                                 ?>
             <h4><?php echo $distributepackaged_food; ?></h4>
@@ -837,12 +871,12 @@ if ($data == 3 || $data == 4) { ?>
           <div class="description">
             <h3>Does the school distribute chocolates/similar products as refreshments during schools events? </h3>
             <?php
-                                if (getFiled('Q10F1', $schoolUserID) == "Y") { //Food Q.7
+                                if (getFiled('Q10F1', $schoolUserID) == "Y" && getFiled('Q10F2', $schoolUserID) != " ") { //Food Q.7
                                     $chocolatespackaged_food = "Yes";
-                                    $chocolatespackaged_food_msg = "Students are easily influenced by the fancy brand advertisement and promotions. We would like to request you to discourage promotions of UPPF.";
-                                } else {
+                                    $chocolatespackaged_food_msg = "Ultra processed packaged food (UPPF) not only has ill effects on the health of the students but also has negative environmental impacts. Schools should not promote unhealthy food. We recommend you to not give UPPF as refreshments during events. We hope you promte local/ traditional snacks by serving as refreshments";
+                                } elseif(getFiled('Q10F1', $schoolUserID) == "N") {
                                     $chocolatespackaged_food = "No";
-                                    $chocolatespackaged_food_msg = "Students are easily influenced by the fancy brand advertisement and promotions. It is great that your school doesn't promote such brand promotions and advertisements.";
+                                    $chocolatespackaged_food_msg = "Ultra processed packaged food (UPPF) not only has ill effects on the health of the students but also has negative environmental impacts. Schools should not promote unhealthy food. We appreciate your efforts of promoting local/ traditional snacks as refreshments";
                                 }
                                 ?>
             <h4><?php echo $chocolatespackaged_food; ?></h4>
@@ -854,18 +888,35 @@ if ($data == 3 || $data == 4) { ?>
           <div class="description">
             <h3>Are your school events such as quiz shows, talent shows, debates sponsored by food companies/brands?</h3>
             <?php
-                                if (getFiled('Q11F1', $schoolUserID) == "Y") { //Food Q.7
+                                if (getFiled('Q11F1', $schoolUserID) == "Y" && getFiled('Q11F2', $schoolUserID) != " ") { //Food Q.7
                                     $sponsored_event = "Yes";
                                     $sponsored_event_msg = "Students are easily influenced by the fancy brand advertisement and promotions. We would like to request you to discourage promotions of UPPF.";
-                                } else {
+                                } elseif(getFiled('Q11F1', $schoolUserID) == "N") {
                                     $sponsored_event = "No";
-                                    $sponsored_event_msg = "Students are easily influenced by the fancy brand advertisement and promotions. It is great that your school doesn't promote such brand promotions and advertisements.";
+                                    $sponsored_event_msg = "Students are easily influenced by the fancy brand advertisement and promotions. It is great that your school doesn’t promote such brand promotions and advertisements.";
                                 }
                                 ?>
             <h4><?php echo $sponsored_event; ?></h4>
             <p><?php echo $sponsored_event_msg; ?></p>
           </div>
         </li>
+	<li>
+          <figure><img src="assets/img/performance/sale.jpg"></figure>
+          <div class="description">
+            <h3>Does your school measure height and weight of all the student?</h3>
+            <?php
+                                if (getFiled('Q12F1', $schoolUserID) == "Y" && getFiled('Q12F2', $schoolUserID) != " ") { //Food Q.7
+                                    $sponsored_event = "Yes";
+                                    $sponsored_event_msg = "BMI helps to determine if a person is in a healthy range. We appreciate your efforts to monitoring weight and height of all the students ";
+                                } elseif(getFiled('Q12F1', $schoolUserID) == "N") {
+                                    $sponsored_event = "No";
+                                    $sponsored_event_msg = "BMI helps to determine if a person is in a healthy range. We recommend your school should start monitoring weight and height of all the students to monitor their health.";
+                                }
+                                ?>
+            <h4><?php echo $sponsored_event; ?></h4>
+            <p><?php echo $sponsored_event_msg; ?></p>
+          </div>
+        </li>      
       </ul>
     </section>
     
