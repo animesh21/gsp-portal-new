@@ -811,7 +811,7 @@ if ($data == 3 || $data == 4) { ?>
             <p><?php echo $packageitem_served_msg; ?></p>
           </div>
         </li>
-	 <li>
+	 <li  <?php if(getFiled('Q7F1', $schoolUserID) == ""){ echo "style='display:none;'"; } ?>  >
           <figure><img src="assets/img/performance/sale.jpg"></figure>
           <div class="description">
             <h3>Does your school serve traditional Indian snacks?</h3>
@@ -828,7 +828,7 @@ if ($data == 3 || $data == 4) { ?>
             <p><?php echo $snack_food_msg; ?></p>
           </div>
         </li>
-	  <li>
+	  <li <?php if(getFiled('Q8F1', $schoolUserID) == ""){ echo "style='display:none;'"; } ?> >
           <figure><img src="assets/img/performance/sale.jpg"></figure>
           <div class="description">
             <h3>Does your school serve traditional Indian beveragess?</h3>
