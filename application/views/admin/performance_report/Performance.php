@@ -777,10 +777,10 @@ if ($data == 3 || $data == 4) { ?>
     <?php               
                $total_food_points = number_format(getAirPoints($performance[0]->userid),2);
                
-                    if($total_food_points >= 4)
-                        $point_performance_msg_f = "Good that your school provides quality and nutritious food in your school canteen. You have scored good in this section.";
-                    elseif($total_food_points < 4 )
-                        $point_performance_msg_f = "The food sold in your school canteen is processed, packaged or fast food, which is not good for the students. We recommend that you push students towards Good Food.";
+                    if($total_food_points >= 10)
+               $point_performance_msg_f = "Your school has scored points in the food section as your canteen does not sell ultra processed packaged food and packaged/bottled drinks.  Good that your school provides quality and nutritious food. You have scored good in Food section.";
+                    elseif($total_food_points < 10 )
+            $point_performance_msg_f = "Your school sells ultra processed packaged food (UPPF) items daily in the campus - a practice that needs to be discouraged as UPPF items are high in fats, salt and sugar and harm children. We suggest that with the beginning of the new academic session, unhealthy food items be substituted with local and seasonal delicacies. The your school promotes processed, packaged or fast food, which is not good for the students. We recommend that you motivate students to opt for Good Food.";
                                      
                 ?>
     <p><?php echo $point_performance_msg_f ?></p>
