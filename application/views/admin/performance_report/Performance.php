@@ -690,67 +690,123 @@ if ($data == 3 || $data == 4) { ?>
             </tr>
           </table>
         </li>
-        <li>
+        	
+	<li>
           <figure><img src="assets/img/performance/source.jpg"></figure>
           <div class="description">
             <h3>Sources of Energy</h3>
             <?php
-                                if (getFiled('Q9E1', $schoolUserID) == "Y") {
-                                    //$sourceofenergy_msg = "Your school uses 'x' as a renewable source of energy. We hope that in the near future you switch to 100% renewable sources of Energy!";
-                                    //$energy = array();
-                                    if (getFiled('Q9E1S1', $schoolUserID) == '1') {
+                              
+                                    if (getFiled('Q6E9S1', $schoolUserID) > 0 ) {
                                         $solar_energy = "Solar";
                                     }
                                     else
                                     {
                                         $solar_energy = "";
                                     }
-                                    if (getFiled('Q9E1S2', $schoolUserID) == '1') {
+                                    if (getFiled('Q6E10S1', $schoolUserID) > 0) {
                                         $wind_energy = "Wind";
                                     }
                                     else
                                     {
                                         $wind_energy = "";
                                     }
-                                    if (getFiled('Q9E1S3', $schoolUserID) == '1') {
-                                        $hydro_energy = "Hydro";
+                                    if (getFiled('Q6E8S1', $schoolUserID) > 0) {
+                                        $animal_energy = "Animal sources
+";
                                     }
                                     else
                                     {
-                                        $hydro_energy = "";
+                                        $animal_energy = "";
                                     }
-                                    if (getFiled('Q9E1S4', $schoolUserID) == '1') {
-                                        $solar_wind_energy = "Combination of solar and wind";
+                                    if (getFiled('Q6E5S1', $schoolUserID) > 0) {
+                                        $cng_energy = "CNG";
                                     }
                                     else
                                     {
-                                        $solar_wind_energy = "";
+                                        $cng_energy = "";
+                                    }
+		  		    if (getFiled('Q6E16S1', $schoolUserID) > 0) {
+                                        $wood_energy = "WOOD";
+                                    }
+                                    else
+                                    {
+                                        $wood_energy = "";
+                                    }
+		                     if (getFiled('Q6E11S1', $schoolUserID) > 0) {
+                                        $lpg_energy = "LPG";
+                                    }
+                                    else
+                                    {
+                                        $lpg_energy = "";
                                     }
                                    
-                                    //$energyuse = implode($energy, ',');
-                                    if($solar_wind_energy == "Combination of solar and wind" && $solar_energy =="" && $wind_energy =="" && $hydro_energy =="")
+                                   
+                                    if($solar_energy == "Solar" ||  $wind_energy =="Wind")
                                     {
                                         $energyuse ="All Renewable sources of Energy ";
                                         $sourceofenergy_msg = "Good that the source of the energy used by your school is not exhaustive in the near future." ;
                                     }
-                                    elseif($solar_wind_energy == "Combination of solar and wind" && ($solar_energy !="" || $wind_energy !="" || $hydro_energy !=""))
+                                    elseif(($solar_energy == "Solar" ||  $wind_energy =="Wind") && ($lpg_energy != "" || $wood_energy != "" || $cng_energy != "" || $animal_energy != "" ) )
                                     {
                                         $energyuse ="Combination of renewable and non- renewable sources";
                                         $sourceofenergy_msg ="Good that the source of the energy used by your school is not exhaustive in the near future.  We recommend that you expand/ increase your use of renewable sources of energy." ;
                                     }
-                                     elseif($solar_wind_energy == "" && ($solar_energy !="" || $wind_energy !="" || $hydro_energy !=""))
+                                     elseif($solar_energy == "" &&  $wind_energy =="")
                                     {
                                         $energyuse ="Non-renewable sources";
                                         $sourceofenergy_msg ="Your school uses more sources of energy that could be exhausted in the near future. We recommend that you expand/ increase your use of renewable sources of energy. " ;
                                     }
                                                                         
-                                } else {
-                                    $sourceofenergy_msg = "Your school does not use any renewable source of energy. We hope that in the near future you switch to 100% renewable sources of Energy!";
-                                    $energyuse = "No";
-                                }
+                                
                                 ?>
              <h4><?php echo $energyuse; ?></h4>
             <p><?php echo $sourceofenergy_msg; ?></p>
+          </div>
+        </li>       
+        <li>
+          <figure><img src="assets/img/performance/source.jpg"></figure>
+          <div class="description">
+            <h3>Is your school using any renewable sources of energy ?</h3>
+            <?php
+		  $energy = array();
+                                if (getFiled('Q9E1', $schoolUserID) == "Y") {
+                                    //$sourceofenergy_msg = "Your school uses 'x' as a renewable source of energy. We hope that in the near future you switch to 100% renewable sources of Energy!";
+                                    //$energy = array();
+                                    if (getFiled('Q9E1S1', $schoolUserID) == '1') {
+                                        $energy[] = "Solar";
+                                    }
+                                    
+                                    if (getFiled('Q9E1S2', $schoolUserID) == '1') {
+                                        $energy[] = "Wind";
+                                    }
+                                    
+                                    if (getFiled('Q9E1S3', $schoolUserID) == '1') {
+                                         $energy[] = "Hydro";
+                                    }
+                                    
+                                    if (getFiled('Q9E1S4', $schoolUserID) == '1') {
+                                         $energy[] = "Combination of solar and wind";
+                                    }
+                                
+			         
+                                   
+                                    //$energyuse = implode($energy, ',');
+				if(isset($energy) && !empty($energy)){
+				 $renew =implode(",",$energy); 	
+				 $renewuse ="Yes";
+                                 $renewenergy_msg = "'Your school uses'.<?php echo $renew; ?>. 'as a renewable source of energy. We hope that in the near future you switch to 100% renewable sources of Energy!' " ;
+                                	
+				}elseif(isset($energy) && empty($energy)){
+				 $renewuse ="No";
+                                 $renewenergy_msg =  "Your school does not use any renewable source of energy. We hope that in the near future you switch to 100% renewable sources of Energy!" ;
+                                	
+				}
+		  
+                                    
+                                ?>
+             <h4><?php echo $renewuse; ?></h4>
+            <p><?php echo $renewenergy_msg; ?></p>
           </div>
         </li>
       </ul>
