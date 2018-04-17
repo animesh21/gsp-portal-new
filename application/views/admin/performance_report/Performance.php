@@ -839,7 +839,8 @@ if ($data == 3 || $data == 4) { ?>
             $point_performance_msg_f = "Your school sells ultra processed packaged food (UPPF) items daily in the campus - a practice that needs to be discouraged as UPPF items are high in fats, salt and sugar and harm children. We suggest that with the beginning of the new academic session, unhealthy food items be substituted with local and seasonal delicacies. The your school promotes processed, packaged or fast food, which is not good for the students. We recommend that you motivate students to opt for Good Food.";
                                      
                 ?>
-    <p><?php echo $point_performance_msg_f ?></p>
+    <p><?php echo $total_food_points; ?></p>	  
+    <p><?php echo $point_performance_msg_f; ?></p>
     <section class="performance-category">
       <ul>
         <li>
