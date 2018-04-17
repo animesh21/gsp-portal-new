@@ -1488,25 +1488,7 @@ if ($data == 3 || $data == 4) { ?>
           </div>
         </li>
 	<?php } ?>      
-        <?php
-         if (getFiled('Q8W2S2', $schoolUserID) == '1' || getFiled('Q8W2S2', $schoolUserID) == '3') {
-        ?>
-        <li <?php if(getFiled('Q8W2S2S7', $schoolUserID) == ""){ echo "style='display:none;'";} ?>>
-          <figure><img src="assets/img/performance/clean.jpg"></figure>
-          <div class="description">
-            <h3>Groundwater recharge structure</h3>
-            <?php
-                                    if (getFiled('Q8W2S2S7', $schoolUserID) == 1) {
-                                        $gw_recharge_structure = "Yes";
-                                        $gw_recharge_structure_msg = "Recharging the ground water is a very good practice."; ?>
-            <h4><?php echo $gw_recharge_structure; ?></h4>
-            <p><?php echo $gw_recharge_structure_msg; ?></p>
-            <?php
-                                    }
-                                    ?>
-          </div>
-        </li>
-        <?php } ?>
+        
         <li <?php if(getFiled('Q8W2S4', $schoolUserID) == ""){ echo "style='display:none;'";} ?>>
           <figure><img src="assets/img/performance/clean.jpg"></figure>
           <div class="description">
