@@ -626,7 +626,7 @@ if ($data == 3 || $data == 4) { ?>
     <h3>Your School's Performance</h3>
     <?php               
         $total_energy_points = number_format(getEnergyPoints($performance[0]->userid),2);
-                    if($total_energy_points == 7)
+                    if($total_energy_points >= 7)
                         $point_performance_msg_e = "The energy consumption of your school falls within the norms. Your school has scored well in energy section.";
                     elseif($total_energy_points >= 4 && $total_energy_points < 7 )
                         $point_performance_msg_e = "The energy consumption of your school partially falls within the norms. Your school has scored average in energy section. It is recommended that your school explores or experiment with renewable energy sources.";
