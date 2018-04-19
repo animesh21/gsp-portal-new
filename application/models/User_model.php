@@ -46,7 +46,7 @@ class User_model extends CI_Model
         $query = $this->db->select('a.*, b.email AS emailfiled, b.password')
             ->from('gsp_school AS a')
             ->join('gsp_user AS b', 'a.userid=b.id', 'left')
-            ->where(array('email' => $argPost['email'], 'password' => $argPost['password']))
+            ->where(array('emailfiled' => $argPost['email'], 'password' => $argPost['password']))
             ->get();
         if ($query->num_rows() > 0) {
             $row = $query->row();
