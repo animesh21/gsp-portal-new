@@ -44,12 +44,12 @@ class User_model extends CI_Model
     {
 		$msg=''; 
         $query = $this->db->select('*')
-            ->from('gsp_user')
+            ->from('gsp_school')
             ->where(array('email' => $argPost['email'], 'password' => $argPost['password']))
             ->get();
         if ($query->num_rows() > 0) {
             $row = $query->row();
-			if($row->login_status==1)
+			if($row->complete_status==1)
 			{
 				$userData = array(
 					'USERNAME' => $row->username,
