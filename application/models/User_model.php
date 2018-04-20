@@ -65,14 +65,17 @@ class User_model extends CI_Model
 			{
 			 	$msg='warning';
 			}
-		       if($row->complete_status==0 || $row->progress<100)
+        }
+	   elseif($row->complete_status==0 || $row->progress<100)
 			{
 			  $msg='incomplete';
-			}
-        }else
+	    }
+	       else
 		{
 		   $msg='error';
 		}
+	   
+		       
         return $msg;
     }
 	
