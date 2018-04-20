@@ -105,6 +105,7 @@
 <style type="text/css">
 #myModal{ display:table!important; margin:auto 320px;}
 #myModal1{ display:table!important; margin:auto 320px;}
+.navbar-nav li a{ z-index:1000000; display:block;}	
 .dropdown-menu{ z-index:1000000;}		
 </style>
 <script>
