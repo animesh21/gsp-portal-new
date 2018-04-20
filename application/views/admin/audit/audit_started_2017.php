@@ -103,8 +103,8 @@
   </div>
 </div>
 <style type="text/css">
-#myModal{ display:table!important; margin:auto 320px;}
-#myModal1{ display:table!important; margin:auto 320px;}
+#myModal{ display:table!important; margin:auto 320px; z-index:1000;}
+#myModal1{ display:table!important; margin:auto 320px; z-index:1000;}
 .navbar-nav li{ z-index:10000; display:block;}	
 .dropdown-menu{ z-index:1000000;}		
 </style>
