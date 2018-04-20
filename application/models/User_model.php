@@ -61,6 +61,10 @@ class User_model extends CI_Model
             	$this->session->set_userdata($userData);
             	$msg='success';
 			}
+		    elseif($row->status!=1)
+			{
+			  $msg='incomplete';
+			}
 			else
 			{
 			 	$msg='warning';
