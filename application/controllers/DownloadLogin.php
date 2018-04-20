@@ -44,7 +44,7 @@ class User_model extends CI_Model
     {
 		$msg=''; 
         $query = $this->db->select('*')
-            ->from('gsp_user AS a')
+            ->from('gsp_user')
             ->where(array('a.email' => $argPost['email'], 'a.password' => $argPost['password']))
             ->get();
         if ($query->num_rows() > 0) {
