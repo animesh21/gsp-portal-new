@@ -223,4 +223,12 @@ class Audit_started extends CI_Controller {
         $data['mail_status'] = $mail;
         $this->load->view('admin/includes/template', $data);
     }
+	
+    /**Get Smmary Data**/
+	/*24-04-2018*/
+	public function getSummary(){
+	 $data['main'] = 'admin/audit/summary';
+	 $data['title'] = 'Summary';
+         $this->load->view('admin/includes/template', $data);
+	}	
 }
