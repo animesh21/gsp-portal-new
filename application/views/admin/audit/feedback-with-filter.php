@@ -473,7 +473,7 @@
 //	}); 
         });
     });
-    $("#email_list_all").click(function () {
+   /* $("#email_list_all").click(function () {
         if ($("#email_list_all").prop('checked'))
         {
             $(".checkbox").attr('checked', true);
@@ -481,15 +481,19 @@
         {
             $(".checkbox").attr('checked', false);
         }
-    });
+    });*/
 	
-	$(document).ready(function () { 
+$(document).ready(function () { 
     var oTable = $('#tablePerformance').dataTable({
         stateSave: true
     });
-
-    $("#email_list_all").on("change", function(){
-        oTable.$("input[type='checkbox']").attr('checked', $(this.checked));  
+    $("#email_list_all").on('change',function(){
+	     if ($(this).is(':checked')){
+          oTable.$("input[type='checkbox']").prop('checked', $(this.checked));
+		 }else{
+		  oTable.$("input[type='checkbox']").prop('checked', false);
+		  window.reload();
+		 }  
     });
 });
 </script>
