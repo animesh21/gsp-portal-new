@@ -482,6 +482,16 @@
             $(".checkbox").attr('checked', false);
         }
     });
+	
+	$(document).ready(function () { 
+    var oTable = $('#tablePerformance').dataTable({
+        stateSave: true
+    });
+
+    $("#email_list_all").on("change", function(){
+        oTable.$("input[type='checkbox']").attr('checked', $(this.checked));  
+    });
+});
 </script>
 <style type="text/css">
     .label-orange{background:orange; color:black;}
