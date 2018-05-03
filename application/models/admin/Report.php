@@ -298,6 +298,14 @@ class Report extends CI_Model {
             
         }
 	
+	public function getAirQuality_recheck($question_id){
+            return $this->db->select('a.'.$question_id.',count(a.'.$question_id.') as total')
+                     ->from('tbl_total as a')
+                     ->group_by('(a.'.$question_id.')')
+                     ->get()->result();
+  
+        }
+	
 	
 	/*************************Energy Question*******************************/
 	/********************************************************************/
