@@ -45,6 +45,15 @@
           <td>1181</td>
           <td>187</td>
         </tr>
+	<tr role="row" class="odd">
+          <td class="sorting_1">Total</td>
+          <td>3051</td>
+          <td>1794</td>
+          <td>1194</td>
+          <td>570</td>
+          <td>1069</td>
+          <td>1758</td>
+        </tr>      
       </tbody>
     </table>
   </div>
