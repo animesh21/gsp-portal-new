@@ -173,7 +173,7 @@ class Reports extends CI_Controller {
                  $data['np']['Q7A10S4'] = $this->Report->getAirVehicle('Q7A10S4');
                  $data['np']['Q7A11S4'] = $this->Report->getAirVehicle('Q7A11S4');
 		
-		 $data['quality']['Q9A1'] = $this->Report->getAirQuality('Q9A1');
+		 $data['quality']['Q9A1'] = $this->Report->getAirQuality_recheck('Q9A1');
 		
             
             
