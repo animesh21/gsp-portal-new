@@ -48,11 +48,11 @@
 	<tr role="row" class="odd">
           <td class="sorting_1">Total</td>
           <td>3051</td>
-          <td>1794</td>
-          <td>1194</td>
-          <td>570</td>
-          <td>1069</td>
-          <td>1758</td>
+          <td>2397</td>
+          <td>1265</td>
+          <td>1166</td>
+          <td>2250</td>
+          <td>1945</td>
         </tr>      
       </tbody>
     </table>
