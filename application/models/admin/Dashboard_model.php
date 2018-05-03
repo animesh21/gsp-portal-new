@@ -365,7 +365,7 @@ public function getSchool_18data(){
    
  public function getMasterData(){
         return $this->db->select('a.*')
-                        ->from('masterview AS a')
+                        ->from('tbl_masterlist AS a')
                         ->get()->result();
     } 	
 	 
