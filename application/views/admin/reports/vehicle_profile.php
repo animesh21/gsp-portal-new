@@ -58,10 +58,10 @@
                 <td><?php echo $r->Q6A2S1T2; ?></td>
                 <td><?php echo $r->Q6A2S1T3; ?></td>
                 <td><?php echo $r->Q6A2S1T4; ?></td>
-                <td><?php echo $r->Q6A2S3D5; ?></td>
-                <td><?php echo $r->Q6A2S3P5; ?></td>
-                <td><?php echo $r->Q6A2S3L5; ?></td>
-                <td><?php echo $r->Q6A2S3C5; ?></td>  
+                <td><?php echo $r->total_disel; ?></td>
+                <td><?php echo $r->total_petrol; ?></td>
+                <td><?php echo $r->total_lpg; ?></td>
+                <td><?php echo $r->total_cng; ?></td>  
                     
            </tr>
           <?php $i++; } ?>
