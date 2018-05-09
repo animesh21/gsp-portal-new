@@ -19,6 +19,7 @@ class Analytics extends CI_Controller {
 	/*******************************************************************/
 	/*******************************************************************/
 	public function eWasteReport(){
+		ini_set('memory_limit', '-1');
 	    $data['main'] = 'admin/reports/e_waste_report';
 		$east_india = array("36", "26", "16", "1", "5");
 	  $north_india = array("28", "15", "13", "29", "14", "34", "35", "10", "6");
