@@ -127,6 +127,177 @@ function numberToRomanRepresentation($number) {
 }
 
 
+/**
+*
+*
+**/
+if (!function_exists('getAllDetailsByState')) {
+  function getAllDetailsByState($stateId){
+     $CI = & get_instance();
+	 $CI->db->where("state",$stateId);
+	 $data=$CI->db->select("*")
+	 ->from("tbl_total")->get()->row();
+	 return $data;
+  }
+}
+
+
+
+/**
+*
+*
+**/
+if (!function_exists('calculatePopulation')) {
+  function calculatePopulation($stateId){
+     $CI = & get_instance();
+	 $CI->db->where("state",$stateId);
+	 $data=$CI->db->select("SUM(population) AS totalPopulation")
+	 ->from("tbl_total")->get()->row();
+	 return $data->totalPopulation;
+  }
+}
+
+/**
+*
+*
+**/
+if (!function_exists('calculateWaterconsumption')) {
+  function calculateWaterconsumption($stateId){
+     $CI = & get_instance();
+	 $CI->db->where("state",$stateId);
+	 $data=$CI->db->select("SUM(Q4W11) AS totalWaterconsumption")
+	 ->from("tbl_total")->get()->row();
+	 return $data->totalWaterconsumption;
+  }
+}
+
+/**
+*
+*
+**/
+if (!function_exists('calculateGroundCoverageArea')) {
+  function calculateGroundCoverageArea($stateId){
+     $CI = & get_instance();
+	 $CI->db->where("state",$stateId);
+	 $data=$CI->db->select("SUM(Q4L2) AS totalGroundCoverageArea")
+	 ->from("tbl_total")->get()->row();
+	 return $data->totalGroundCoverageArea;
+  }
+}
+
+/**
+*
+*
+**/
+if (!function_exists('calculateNumberOfFloors')) {
+  function calculateNumberOfFloors($stateId){
+     $CI = & get_instance();
+	 $CI->db->where("state",$stateId);
+	 $data=$CI->db->select("SUM(Q4L12) AS totalNumberOfFloors")
+	 ->from("tbl_total")->get()->row();
+	 return $data->totalNumberOfFloors;
+  }
+}
+
+/**
+*
+*
+**/
+if (!function_exists('calculateBuildUpconstructedArea')) {
+  function calculateBuildUpconstructedArea($stateId){
+     $CI = & get_instance();
+	 $CI->db->where("state",$stateId);
+	 $data=$CI->db->select("SUM(Q4L11) AS totalBuildUpconstructedArea")
+	 ->from("tbl_total")->get()->row();
+	 return $data->totalBuildUpconstructedArea;
+  }
+}
+
+/**
+*
+*
+**/
+if (!function_exists('calculateRoofTopArea')) {
+  function calculateRoofTopArea($stateId){
+     $CI = & get_instance();
+	 $CI->db->where("state",$stateId);
+	 $data=$CI->db->select("SUM(Q4L9) AS totalRoofTopArea")
+	 ->from("tbl_total")->get()->row();
+	 return $data->totalRoofTopArea;
+  }
+}
+
+/**
+*
+*
+**/
+if (!function_exists('calculateGreenLandscaped')) {
+  function calculateGreenLandscaped($stateId){
+     $CI = & get_instance();
+	 $CI->db->where("state",$stateId);
+	 $data=$CI->db->select("SUM(Q4L3) AS totalGreenLandscaped")
+	 ->from("tbl_total")->get()->row();
+	 return $data->totalGreenLandscaped;
+  }
+}
+
+
+/**
+*
+*
+**/
+if (!function_exists('calculateTerracegreen')) {
+  function calculateTerracegreen($stateId){
+     $CI = & get_instance();
+	 $CI->db->where("state",$stateId);
+	 $data=$CI->db->select("SUM(Q4L10) AS totalTerracegreen")
+	 ->from("tbl_total")->get()->row();
+	 return $data->totalTerracegreen;
+  }
+}
+
+
+/**
+*
+*
+**/
+if (!function_exists('calculateGrassGreenPlayArea')) {
+  function calculateGrassGreenPlayArea($stateId){
+     $CI = & get_instance();
+	 $CI->db->where("state",$stateId);
+	 $data=$CI->db->select("SUM(Q4L4) AS totalTerracegreen")
+	 ->from("tbl_total")->get()->row();
+	 return $data->totalTerracegreen;
+  }
+}
+
+/**
+*
+*
+**/
+if (!function_exists('calculateTotalSiteArea')) {
+  function calculateTotalSiteArea($stateId){
+     $CI = & get_instance();
+	 $CI->db->where("state",$stateId);
+	 $data=$CI->db->select("(Q4L2 + Q4L5 + Q4L6 + Q4L7 + Q4L8) AS totalSiteArea")
+	 ->from("tbl_total")->get()->row();
+	 return $data->totalSiteArea;
+  }
+}
+/**
+*
+*
+**/
+if (!function_exists('calculateGreenCoverTotalArea')) {
+  function calculateGreenCoverTotalArea($stateId){
+     $CI = & get_instance();
+	 $CI->db->where("state",$stateId);
+	 $data=$CI->db->select("(Q4L5/(Q4L2 + Q4L5 + Q4L6 + Q4L7 + Q4L8))*100 AS totalGreenCoverTotalArea")
+	 ->from("tbl_total")->get()->row();
+	 return $data->totalGreenCoverTotalArea;
+  }
+}
+
 
 
 /*
