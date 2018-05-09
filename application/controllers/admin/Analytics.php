@@ -282,4 +282,36 @@ class Analytics extends CI_Controller {
 	  $data['records']=$wcpatternList;
 	  $this->load->view('admin/includes/template',$data);	
 	}
+	
+	public function VehicleProfile(){
+           $data['zone']=$this->Report->getVehicleProfile();
+           $data['main'] = 'admin/reports/vehicle_profile';
+           $this->load->view('admin/includes/template', $data);
+        
+        }
+	public function FoodBrandSponser(){
+           $data['zone']=$this->Report->getFoodBrandSponser();
+           $data['main'] = 'admin/reports/brand_sponser';
+           $this->load->view('admin/includes/template', $data);
+        
+        }
+	public function FoodFlavour(){
+           $data['zone']=$this->Report->getFoodFlavour();
+           $data['main'] = 'admin/reports/food_item_flavour';
+           $this->load->view('admin/includes/template', $data);
+        
+        }
+	public function FoodProfileTraditional(){
+           $data['zone']=$this->Report->getFoodProfileTraditional();
+           $data['main'] = 'admin/reports/food_traditional';
+           $this->load->view('admin/includes/template', $data);
+        
+        }
+	public function FoodItemSell(){
+           $data['zone']=$this->Report->getFoodItemSell();
+           $data['main'] = 'admin/reports/food_item_sell';
+           $this->load->view('admin/includes/template', $data);
+        
+        }
+	
 }
