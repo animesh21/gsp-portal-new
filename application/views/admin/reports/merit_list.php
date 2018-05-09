@@ -18,6 +18,7 @@
         <?php 
 	       error_reporting(0);
 	        ini_set('memory_limit', '-1');
+	      ini_set('memory_limit', '512M');
 	     $srno=0;
 	     for($i=0; $i<sizeof($records); ++$i){ 
 	    ?>
