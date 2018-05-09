@@ -168,123 +168,101 @@ class Report extends CI_Model {
 	/********************************************************************/
 	
 	
-	public function SchoolDoesNotOwnVehicles($question_id,$answer)
+	    public function SchoolDoesNotOwnVehicles($question_id,$answer)
 		{
-				 $this->db->where('a.questionid',$question_id);
-			         $this->db->where('a.answer', $answer);
-		                 $this->db->join('gsp_school as b','a.userid=b.userid','left'); 
-                                 $this->db->where('b.complete_status','1');
-			 return $this->db->count_all_results('gsp_answers as a');
-					
+			 $this->db->where('a.'.$question_id,$answer);
+		     $this->db->join('gsp_school as b','a.userid=b.userid','left'); 
+             $this->db->where('b.complete_status','1');
+			 return $this->db->count_all_results('tbl_total as a');		
 		}
 		
 		public function Operatorownedvehicles($question_id,$answer)
 		{
-		          $this->db->where('a.questionid',$question_id);
-			  $this->db->where('a.answer', $answer);
-			  $this->db->join('gsp_school as b','a.userid=b.userid','left'); 
-                          $this->db->where('b.complete_status','1');
-			 return $this->db->count_all_results('gsp_answers as a');
-					
+		     $this->db->where('a.'.$question_id,$answer);
+			 $this->db->join('gsp_school as b','a.userid=b.userid','left'); 
+             $this->db->where('b.complete_status','1');
+			 return $this->db->count_all_results('tbl_total as a');			
 		}
 		
 		public function Schoolownedvehicles($question_id,$answer)
 		{
-			 $this->db->where('a.questionid',$question_id);
-			  $this->db->where('a.answer', $answer);
-			  $this->db->join('gsp_school as b','a.userid=b.userid','left'); 
-                          $this->db->where('b.complete_status','1');
-			 return $this->db->count_all_results('gsp_answers as a');
+			$this->db->where('a.'.$question_id,$answer);
+			$this->db->join('gsp_school as b','a.userid=b.userid','left'); 
+            $this->db->where('b.complete_status','1');
+			return $this->db->count_all_results('tbl_total as a');
 					
 		}
 		
 		public function CombinationSchoolandOperatorvehicles($question_id,$answer)
 		{
-			 $this->db->where('a.questionid',$question_id);
-			  $this->db->where('a.answer', $answer);
-			  $this->db->join('gsp_school as b','a.userid=b.userid','left'); 
-                          $this->db->where('b.complete_status','1');
-			 return $this->db->count_all_results('gsp_answers as a');
+			 $this->db->where('a.'.$question_id,$answer);
+			 $this->db->join('gsp_school as b','a.userid=b.userid','left'); 
+             $this->db->where('b.complete_status','1');
+			 return $this->db->count_all_results('tbl_total as a');
 					
 		}
 		
 		public function Hiredvehicles($question_id,$answer)
 		{
-			 $this->db->where('a.questionid',$question_id);
-			  $this->db->where('a.answer', $answer);
-			  $this->db->join('gsp_school as b','a.userid=b.userid','left'); 
-                          $this->db->where('b.complete_status','1');
-			 return $this->db->count_all_results('gsp_answers as a');
-					
+			 $this->db->where('a.'.$question_id,$answer);
+			 $this->db->join('gsp_school as b','a.userid=b.userid','left'); 
+             $this->db->where('b.complete_status','1');
+			 return $this->db->count_all_results('tbl_total as a');		
 		}
 		
 		
 		
 		public function Airconditionedvehicles($question_id)
 		{
-			$this->db->select_sum('answer');
-			$this->db->where('questionid',$question_id);
-			$this->db->from('gsp_answers');
+			$this->db->select_sum("'".$question_id."'");
+			$this->db->from('tbl_total');
             return $this->db->get()->row(); 
-			//echo $this->db->last_query();
-					
 		}
 		
 		public function BusesonDiesel($question_id)
 		{
-			$this->db->select_sum('answer');
-			$this->db->where('questionid',$question_id);
-            $this->db->from('gsp_answers');
+			$this->db->select_sum("'".$question_id."'");
+            $this->db->from('tbl_total');
             return $this->db->get()->row(); 
-			//echo $this->db->last_query();
-					
 		}
 		
 		public function BusesonPetrol($question_id)
 		{
-			$this->db->select_sum('answer');
-			$this->db->where('questionid',$question_id);
-            $this->db->from('gsp_answers');
+			$this->db->select_sum("'".$question_id."'");
+            $this->db->from('tbl_total');
             return $this->db->get()->row(); 
-			//echo $this->db->last_query();
-					
 		}
 		
 		public function AirReportData($question_id)
 		{
-		  return $this->db->select('sum(a.answer) as total')
-				  ->from('gsp_answers as a')
-			          ->where('questionid',$question_id)
-			          ->join('gsp_school as b','a.userid=b.userid','left') 
-                                  ->where('b.complete_status','1')
-				  ->get()->result(); 
-			
-					
+		  return $this->db->select('sum(a.'.$question_id.') as total')
+		  ->from('tbl_total as a')
+		  ->join('gsp_school as b','a.userid=b.userid','left') 
+          ->where('b.complete_status','1')
+		  ->get()->result(); 		
 		}
 		
 		public function getAirVehicle($question_id){
-            return $this->db->select('sum(a.answer) as avg')
-                     ->from('gsp_answers as a')
-                     ->where('a.questionid', $question_id)
-		     ->join('gsp_school as b','a.userid=b.userid','left') 
-                     ->where('b.complete_status','1')
-                     ->get()->result();
-            
+            return $this->db->select('sum(a.'.$question_id.') as avg')
+            ->from('tbl_total as a')
+		    ->join('gsp_school as b','a.userid=b.userid','left') 
+            ->where('b.complete_status','1')
+            ->get()->result();
         }
 	
 	public function getAirphase_1($question_id){
-            return $this->db->select('Avg(a.answer) as avg')
-                     ->from('tbl_air as a')
+            return $this->db->select('Avg(a.'.$question_id.') as avg')
+                     ->from('tbl_total as a')
                      ->get()->result();
             
         }
 	
-	public function getAirPhase_2($question_id){
+	  /*public function getAirPhase_2($question_id){
             return $this->db->select('Avg(a.'.$question_id.') as avg')
                      ->from('tbl_air_phase_2 as a')
                      ->get()->result();
             
-        }
+        }*/
 	
         
         public function getAirQuality($question_id){
@@ -312,48 +290,40 @@ class Report extends CI_Model {
 	
 	public function Airconditioner($question_id)
 	{
-		    $this->db->select_sum('answer');
-			$this->db->where('questionid',$question_id);
-			$this->db->from('gsp_answers');
+		    $this->db->select_sum('$question_id');
+			$this->db->from('tbl_total');
             return $this->db->get()->row();
 	}
 	
 	public function Tubelight($question_id)
 	{
-		    $this->db->select_sum('answer');
-			$this->db->where('questionid',$question_id);
-			$this->db->from('gsp_answers');
+		    $this->db->select_sum('$question_id');
+			$this->db->from('tbl_total');
             return $this->db->get()->row();
 	}
 	public function CFLbulb($question_id)
 	{
-		    $this->db->select_sum('answer');
-			$this->db->where('questionid',$question_id);
-			$this->db->from('gsp_answers');
+		    $this->db->select_sum('$question_id');
+			$this->db->from('tbl_total');
             return $this->db->get()->row();
 	}
 	public function LEDbulb($question_id)
 	{
-		    $this->db->select_sum('answer');
-			$this->db->where('questionid',$question_id);
-			$this->db->from('gsp_answers');
+		    $this->db->select_sum('$question_id');
+			$this->db->from('tbl_total');
             return $this->db->get()->row();
 	}
 	public function SchoolHavingAlternateSourceOfEnergy($question_id)
 	{
-		   
-			$this->db->where('questionid',$question_id);
-			$this->db->where('answer','Y');
-	  return $this->db->count_all_results('gsp_answers');
+		    $this->db->where('$question_id','Y');
+	        return $this->db->count_all_results('tbl_total');
 			 
 	}
 	
 	public function getEnergyReport(){
             return $this->db->select('Avg(a.Q6E1S2) as board, Avg(a.percatitaaa) as capita')
-                     ->from('tbl_energy as a')
-		    
-                     ->get()->result();
-            
+            ->from('tbl_total as a')
+            ->get()->result();
         }
 	
 	public function getEnergyReport_2(){
@@ -366,7 +336,7 @@ class Report extends CI_Model {
         
         public function getEnergyGeneratorSchool(){
             return $this->db->select('count(a.Q6E2S1) as generator')
-                     ->from('tbl_energy as a')
+                     ->from('tbl_total as a')
                      ->where('a.Q6E2S1 != ',0,FALSE)
 		     ->get()->result();
             
@@ -381,7 +351,7 @@ class Report extends CI_Model {
         
          public function getEnergyBiogasSchool(){
             return $this->db->select('count(a.Q6E13S1) as biogas')
-                     ->from('tbl_energy as a')
+                     ->from('tbl_total as a')
                      ->where('a.Q6E13S1 != ',0,FALSE)
 		     ->get()->result();
             
@@ -395,7 +365,7 @@ class Report extends CI_Model {
         }
          public function getEnergySolarSchool(){
             return $this->db->select('count(a.Q6E9S1) as solar')
-                     ->from('tbl_energy as a')
+                     ->from('tbl_total as a')
                      ->where('a.Q6E9S1 != ',0,FALSE)
 		     ->get()->result();
             
@@ -412,9 +382,8 @@ class Report extends CI_Model {
 	/*************************Land Question*******************************/
 	/********************************************************************/
 		public function getLand_1(){
-            return $this->db->select('Avg(a.answer) as avg')
-                     ->from('gsp_answers as a')
-                     ->where('a.questionid','Q4L5')
+            return $this->db->select('Avg(a.Q4L5) as avg')
+                     ->from('tbl_total as a')
 		     ->join('gsp_school as b','a.userid=b.userid','left') 
                      ->where('b.complete_status','1')
                      ->get()->result();
@@ -452,6 +421,7 @@ class Report extends CI_Model {
                     ->get()->result();
             
         }
+        
         
         public function getAnswerByGroup(){
             return $this->db->select('a.answer, count(a.answer) as total')
