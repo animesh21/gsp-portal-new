@@ -466,7 +466,7 @@ class Report extends CI_Model {
 	/********* food_ultra_processed_sales Report*************/
         /******* author:guruvachan@studiotesseract *************/
         public function getFoodItemSell(){
-            return $this->db->select("a.state,b.name AS state_name,a.location,a.category,a.Q6F2S2,a.Q6F3S2,a.Q6F4S2,a.Q6F5S2,a.Q6F6S2,a.Q6F7S2,a.Q6F8S2,a.Q6F9S2,a.Q6F10S2")
+            return $this->db->select("a.state,a.name,b.name AS state_name,a.location,a.category,a.Q6F2S2,a.Q6F3S2,a.Q6F4S2,a.Q6F5S2,a.Q6F6S2,a.Q6F7S2,a.Q6F8S2,a.Q6F9S2,a.Q6F10S2")
             ->from('tbl_total AS a')
             ->join('states AS b', 'a.state=b.id', 'left')
             ->get()->result();
@@ -475,7 +475,7 @@ class Report extends CI_Model {
         /********* FOOD PROFILING TRADITIONAL Report*************/
         /******* author:guruvachan@studiotesseract *************/
         public function getFoodProfileTraditional(){
-            return $this->db->select("a.state,b.name AS state_name,a.location,a.category,a.Q7F1S1,a.Q7F1S2,a.Q7F1S3,a.Q7F1S4,a.Q7F1S5")
+            return $this->db->select("a.state,a.name,b.name AS state_name,a.location,a.category,a.Q7F1S1,a.Q7F1S2,a.Q7F1S3,a.Q7F1S4,a.Q7F1S5")
             ->from('tbl_total AS a')
             ->join('states AS b', 'a.state=b.id', 'left')
             ->get()->result();
@@ -484,7 +484,7 @@ class Report extends CI_Model {
         /********* FOOD ULTRA PROCESSED FLAVOUR Report*************/
         /******* author:guruvachan@studiotesseract *************/
         public function getFoodFlavour(){
-            return $this->db->select("a.state,b.name AS state_name,a.location,a.category,a.Q6F2S1,a.Q6F3S1,a.Q6F4S1,a.Q6F5S1,a.Q6F6S1,a.Q6F7S1,a.Q6F8S1,a.Q6F9S1,a.Q6F10S1")
+            return $this->db->select("a.state,a.name,b.name AS state_name,a.location,a.category,a.Q6F2S1,a.Q6F3S1,a.Q6F4S1,a.Q6F5S1,a.Q6F6S1,a.Q6F7S1,a.Q6F8S1,a.Q6F9S1,a.Q6F10S1")
             ->from('tbl_total AS a')
             ->join('states AS b', 'a.state=b.id', 'left')
             ->get()->result();
@@ -493,7 +493,7 @@ class Report extends CI_Model {
         /********* BRANDS SPONSORING EVENTS Report*************/
         /******* author:guruvachan@studiotesseract *************/
         public function getFoodBrandSponser(){
-            return $this->db->select("a.state,b.name AS state_name,a.location,a.category,a.Q11F2,a.Q11F3")
+            return $this->db->select("a.state,a.name,b.name AS state_name,a.location,a.category,a.Q11F2,a.Q11F3")
             ->from('tbl_total AS a')
             ->join('states AS b', 'a.state=b.id', 'left')
             ->get()->result();
@@ -502,7 +502,7 @@ class Report extends CI_Model {
         /********* VEHICLE PROFILING Report*************/
         /******* author:guruvachan@studiotesseract *************/
         public function getVehicleProfile(){
-            return $this->db->select("a.state,b.name AS state_name,a.location,a.category,a.Q6A2S1T1,a.Q6A2S1T2,a.Q6A2S1T3,a.Q6A2S1T4,a.Q6A2S3D5,a.Q6A2S3P5,a.Q6A2S3L5,a.Q6A2S3C5")
+            return $this->db->select("a.state,a.name,b.name AS state_name,a.location,a.category,a.Q6A2S1T1,a.Q6A2S1T2,a.Q6A2S1T3,a.Q6A2S1T4,a.Q6A2S3D5,a.Q6A2S3P5,a.Q6A2S3L5,a.Q6A2S3C5")
             ->from('tbl_total AS a')
             ->join('states AS b', 'a.state=b.id', 'left')
             ->get()->result();
