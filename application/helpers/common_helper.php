@@ -299,6 +299,14 @@ if (!function_exists('calculateGreenCoverTotalArea')) {
 }
 
 
+if (!function_exists('getStateIdByName')) {
+    function getStateIdByName($stateName) {
+        $arrState = array();
+        $CI = & get_instance();
+        $temp = $CI->db->get_where('states',array('name'=>$stateName))->row();
+        return $temp->id;
+    }
+}
 
 /*
  * Upload Helper Function
