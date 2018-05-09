@@ -13,6 +13,7 @@ class Analytics extends CI_Controller {
             redirect(base_url('admin/login'));
         }
 		$this->load->model('admin/Analytics_Model');
+	        $this->load->model('admin/Report');
         $this->load->helper(array('common_helper', 'form', 'download'));
     }
 	/*******************************************************************/
