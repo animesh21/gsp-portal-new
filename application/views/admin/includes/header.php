@@ -231,11 +231,11 @@
                 </ul>
               </li>
               <li class=""> <a href="#">ANALYTICAL TABLES<span class="caret"></span></a>
-                <ul class="dropdown-menu">
+               <ul class="dropdown-menu">
                   <li><a href="participation_report.php">Participation Report</a></li>
                   <li><a href="school_profiling_report.php">Schools Profiling Report</a></li>
-                  <li><a href="merit_list.php">Merit List</a></li>
-                  <li><a href="e_waste_report.php">e-Waste Report</a></li>
+                  <li><a href="<?php echo base_url('admin/analytics/meritList'); ?>">Merit List</a></li>
+                  <li><a href="<?php echo base_url('admin/analytics/eWasteReport'); ?>">e-Waste Report</a></li>
                   <li><a href="yes_no_report.php">Yes/No Report</a></li>
                   <li><a href="vehicle_profiling_report.php">Vehicle Profiling Report</a></li>
                   <li><a href="commuting_practices_profiling_report.php">Commuting Practices Profiling Report</a></li>
@@ -244,10 +244,10 @@
                   <li><a href="food_profiling_traditional.php">Food Profiling Traditional</a></li>
                   <li><a href="food_ultra_processed_flavour.php">Food Ultra Processed flavour</a></li>
                   <li><a href="food_ultra_processed_sales.php">Food Ultra Processed Sales</a></li>
-                  <li><a href="green_cover_report.php">Green Cover Report</a></li>
-                  <li><a href="builtup_area_profiling_report.php">Built-up Area Profiling Report</a></li>
-                  <li><a href="toilet_profiling_report.php">Toilet Profiling Report</a></li>
-                  <li><a href="water_consumption_pattern_report.php">Water Consumption Pattern Report</a></li>
+                  <li><a href="<?php echo base_url('admin/analytics/getGreenCoverReport'); ?>">Green Cover Report</a></li>
+                  <li><a href="<?php echo base_url('admin/analytics/getbuiltupAreaProfilingReport'); ?>">Built-up Area Profiling Report</a></li>
+                  <li><a href="<?php echo base_url('admin/analytics/getToiletProfilingReport'); ?>">Toilet Profiling Report</a></li>
+                  <li><a href="<?php echo base_url('admin/analytics/getWaterConsumptionPatternReport'); ?>">Water Consumption Pattern Report</a></li>
                 </ul>
               </li>
               <li class=""><a href="#">Feedback Analytics<span class="caret"></span></a>
