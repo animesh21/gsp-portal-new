@@ -16,8 +16,6 @@
       </thead>
       <tbody>
         <?php 
-	       error_reporting(0);
-	        ini_set('memory_limit', '-1');
 	     $srno=0;
 	     for($i=0; $i<sizeof($records); ++$i){ 
 	    ?>
