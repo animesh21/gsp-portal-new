@@ -472,7 +472,7 @@ class Report extends CI_Model {
         /********* VEHICLE PROFILING Report*************/
         /******* author:guruvachan@studiotesseract *************/
         public function getVehicleProfile(){
-            return $this->db->select("a.state,a.name,b.name AS state_name,a.location,a.category,a.Q6A2S1T1,a.Q6A2S1T2,a.Q6A2S1T3,a.Q6A2S1T4,a.Q6A2S3D5,a.Q6A2S3P5,a.Q6A2S3L5,a.Q6A2S3C5")
+            return $this->db->select("a.state,a.name,b.name AS state_name,a.location,a.category,a.Q6A2S1T1,a.Q6A2S1T2,a.Q6A2S1T3,a.Q6A2S1T4,a.total_disel,a.total_petrol,a.total_lpg,a.total_cng")
             ->from('tbl_total AS a')
             ->join('states AS b', 'a.state=b.id', 'left')
             ->get()->result();
