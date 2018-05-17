@@ -2,7 +2,13 @@
 
 <?php
 echo '<pre>';
-print_r($_SERVER);die();
+print_r($_SERVER);
+echo "hiiiii";
+echo basename($_SERVER['SCRIPT_NAME']);
+echo $_SERVER['SCRIPT_NAME'] ;
+echo "guru";
+echo str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']);
+die();
 ?>
 
 <div class="schools-statics "> <a href="<?php base_url()?>dashboard/year18" target="_blank">
