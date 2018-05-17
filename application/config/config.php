@@ -36,7 +36,7 @@ $config['base_url'] = '';
 |
 */
 $ark_root  = "http://".$_SERVER['HTTP_HOST'];
-$ark_root .= str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']);
+//$ark_root .= str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']);
 $config['base_url'] = $ark_root;
 
 /*
