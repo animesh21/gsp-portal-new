@@ -60,7 +60,6 @@
 </div>
 <script type="text/javascript">
  $(document).ready(function(){
-   alert();
    $("#totalSchoolRegistration").append(parseInt($("table tr:nth-child(1) td:nth-child(2)").text())+parseInt($("table tr:nth-child(2) td:nth-child(2)").text()));
     $("#totalStartedSchoolAudit").append(parseInt($("table tr:nth-child(1) td:nth-child(3)").text())+parseInt($("table tr:nth-child(2) td:nth-child(3)").text()));
 	$("#totalSchoolsubmittedAudit").append(parseInt($("table tr:nth-child(1) td:nth-child(4)").text())+parseInt($("table tr:nth-child(2) td:nth-child(4)").text()));
