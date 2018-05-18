@@ -216,11 +216,12 @@
               </li>
               <li class=""><a href="#">ANALYTICS<span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="<?php echo base_url('admin/reports/'); ?>">Participation By Zone</a></li>
+                 <li><a href="<?php echo base_url('admin/reports/'); ?>">Participation By Zone</a></li>
                   <li><a href="<?php echo base_url('admin/reports/getParticipationByState'); ?>">Participation By State</a></li>
                   <li><a href="<?php echo base_url('admin/reports/getPerformanceByState'); ?>">Performance By State</a></li>
-                  <li><a href="report4.php">Performance Comparison Report</a></li>
-                  <li><a href="report5.php">Waste Generation Report</a></li>
+				  <li><a href="<?php echo base_url('admin/reports/getParticipationByStateComparison'); ?>">Participation Comparison Report</a></li>
+                  <li><a href="<?php echo base_url('admin/reports/getPerformanceByStateComparison'); ?>">Performance Comparison Report</a></li>
+                  <li><a href="<?php echo base_url('admin/reports/getWasteGenerationReport'); ?>">Waste Generation Report</a></li>
                   <li><a href="<?php echo base_url('admin/reports/geteWasteDisposalReport'); ?>">e-Waste Disposal Report</a></li>
 		  <li><a href="<?php echo base_url('admin/reports/getair'); ?>">Air Report</a></li>
 	          <li><a href="<?php echo base_url('admin/reports/getenergy'); ?>">Energy Report</a></li>
