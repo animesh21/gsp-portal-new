@@ -9,7 +9,8 @@ class Reports extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
-        if ($this->session->userdata('ADMIN_ID') == '') {
+        if ($this->
+session->userdata('ADMIN_ID') == '') {
             redirect(base_url('admin/login'));
         }
         $this->load->model('admin/Report');
@@ -130,6 +131,70 @@ class Reports extends CI_Controller {
 		$data['others_count']=$this->Report->geteWasteDisposalReport1($state1,"Q13Wa2O");
 		$this->load->view('admin/includes/template', $data);
 	}
+	
+	
+	public function getPerformanceByStateComparison()
+	{   
+	    $data['states'] = getStates();
+	    $data['states'][0] = "All";
+	    $data['main'] = 'admin/reports/report7';
+		$this->load->view('admin/includes/template', $data);
+	}
+	
+	public function setPerformanceByStateComparison()
+	{   
+	    $data['states'] = getStates();
+	    $data['states'][0] = "All";
+	    $data['main'] = 'admin/reports/report7-graph';
+		$data['state_id1'] = $this->input->post('state1');
+		$data['state_id2'] = $this->input->post('state2');
+		$state1=$this->input->post('state1');
+		$state2=$this->input->post('state2');
+		$data['performance_1']=$this->Report->percentage_70_percent($state1);
+		$data['performance_2']=$this->Report->percentage_50_69_percent($state1);
+		$data['performance_3']=$this->Report->percentage_35_49_percent($state1);
+		$data['performance_4']=$this->Report->percentage_0_34_percent($state1);
+		/***************/
+		$data['performance_1_2']=$this->Report->percentage_70_percent($state2);
+		$data['performance_2_2']=$this->Report->percentage_50_69_percent($state2);
+		$data['performance_3_2']=$this->Report->percentage_35_49_percent($state2);
+		$data['performance_4_2']=$this->Report->percentage_0_34_percent($state2);
+		$this->load->view('admin/includes/template', $data);
+	}
+	
+	
+	public function getWasteGenerationReport()
+	{   
+	    $data['states'] = getStates();
+	    $data['states'][0] = "Waste Generation Report";
+	    $data['main'] = 'admin/reports/report5';
+		$this->load->view('admin/includes/template', $data);
+	}
+	
+	public function setWasteGenerationReport()
+	{   
+	    $data['states'] = getStates();
+	    $data['states'][0] = "Waste Generation Report";
+		$data['state_id']=$this->input->post('state');
+	    $data['main'] = 'admin/reports/report5-graph';
+		$this->load->view('admin/includes/template', $data);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	public function geteAirQuestionReport()
 	{   
 	   $data['main'] = 'admin/reports/report_air';
@@ -311,4 +376,4 @@ class Reports extends CI_Controller {
 	}	
 	
 	
-}
+} 
