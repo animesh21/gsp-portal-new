@@ -45,16 +45,27 @@
           <td>1181</td>
           <td>187</td>
         </tr>
-	<tr role="row" class="odd">
+		<tr role="row" class="even">
           <td class="sorting_1">Total</td>
-          <td>3051</td>
-          <td>2397</td>
-          <td>1265</td>
-          <td>1166</td>
-          <td>2250</td>
-          <td>1945</td>
-        </tr>      
+          <td id="totalSchoolRegistration"></td>
+          <td id="totalStartedSchoolAudit"></td>
+          <td id="totalSchoolsubmittedAudit"></td>
+          <td id="totalSchoolsStartedAuditNotComplete"></td>
+          <td id="totalSchoolsDidNotStartTheAudit"></td>
+          <td id="totalSchool2017Registration"></td>
+        </tr>
       </tbody>
     </table>
   </div>
 </div>
+<script type="text/javascript">
+ $(document).ready(function(){
+   alert();
+   $("#totalSchoolRegistration").append(parseInt($("table tr:nth-child(1) td:nth-child(2)").text())+parseInt($("table tr:nth-child(2) td:nth-child(2)").text()));
+    $("#totalStartedSchoolAudit").append(parseInt($("table tr:nth-child(1) td:nth-child(3)").text())+parseInt($("table tr:nth-child(2) td:nth-child(3)").text()));
+	$("#totalSchoolsubmittedAudit").append(parseInt($("table tr:nth-child(1) td:nth-child(4)").text())+parseInt($("table tr:nth-child(2) td:nth-child(4)").text()));
+	$("#totalSchoolsStartedAuditNotComplete").append(parseInt($("table tr:nth-child(1) td:nth-child(5)").text())+parseInt($("table tr:nth-child(2) td:nth-child(5)").text()));
+	$("#totalSchoolsDidNotStartTheAudit").append(parseInt($("table tr:nth-child(1) td:nth-child(6)").text())+parseInt($("table tr:nth-child(2) td:nth-child(6)").text()));
+	$("#totalSchool2017Registration").append(parseInt($("table tr:nth-child(1) td:nth-child(7)").text())+parseInt($("table tr:nth-child(2) td:nth-child(7)").text()));
+ });
+</script>
