@@ -207,6 +207,6 @@
                     }
                 });
             });
-    </body>
-		
+	</script>	
+    </body>	
 </html>
