@@ -1,4 +1,4 @@
-<h1>PARTICIPATION BY STATE</h1>
+<h1>PERFORMANCE BY STATE</h1>
 <div class="container"> <?php echo form_open('admin/reports/setPerformanceByState',array('id'=>'performanceByState')); ?>
     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
       <label for="pwd">Select State :</label>
