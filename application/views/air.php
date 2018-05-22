@@ -1080,8 +1080,13 @@
     <tbody>
       <?php foreach ($pucCertificate as $a) { ?>
       <tr id="index<?php echo $a->id; ?>">
+	 <?php  $extension = explode('.',$a->file_name); 
+	  if($extension[1]=='pdf' || $extension[1]=='doc' || $extension[1]=='docx'){ ?>
+	   <td> <img src="<?php echo base_url() ?>assets/img/download (1).jpg" class="img-responsive" width="50" height="50" /></td>
+         <?php else{?>
+	   
 	 <td> <img src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="50" height="50" /></td>
-      
+       <?php } ?>
         <?php $Text = str_replace(" ", "_", $a->name . "_PUC_Certificate_"); ?>
 	    
         <td class="upload edit"><?php echo str_replace($Text, " ", $a->file_name); ?></td>
