@@ -1073,7 +1073,8 @@
 	    <tr>
 	<th>Image</th>	    
         <th>File name</th>
-        <th>Action</th>
+        <th>Delete</th>
+	<th>Download</th>	    
       </tr>
     </thead>
     <tbody>
@@ -1085,7 +1086,9 @@
 	    
         <td class="upload edit"><?php echo str_replace($Text, " ", $a->file_name); ?></td>
         <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $a->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
-      </tr>
+        <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name; ?>" download="<?php echo $a->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+                             
+</tr>
       <?php } ?>
     </tbody>
   </table>
