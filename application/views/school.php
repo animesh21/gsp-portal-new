@@ -17,6 +17,18 @@
             }
         });
     };
+
+function checkPincode(){
+  var pincode=$("#pincode").val();
+  if(pincode>6){
+   alert("The pincode must contain 6 digits.");
+  }else if(pincode<6){
+   alert("The pincode must contain 6 digits.");  
+ } 
+}    
+function checkUpdate(){
+  alert("If you want to change the details, then please send a mail to support@greenschoolsprogramme.org, with new details: name, email id and mobile number.");
+}
 </script>
 <div class="container">
     <div class="content-form">
