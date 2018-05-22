@@ -73,13 +73,10 @@ if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
 } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
     browser = 'Firefox';
 }
-if(browserVersion === 0){
-    browserVersion = parseFloat(new Number(RegExp.$1));
-}
 if(browser==="Opera" || browser==="MSIE" || browser==="Netscape" || browser==="Safari"){
 	window.location.href="<?php echo base_url("login/browser_check"); ?>";  
 }
-if(browser==="Chrome" || browser==="Firefox"){
+else if(browser==="Chrome" || browser==="Firefox"){
 	window.location.href="<?php echo base_url("login"); ?>";  
 }
 });
