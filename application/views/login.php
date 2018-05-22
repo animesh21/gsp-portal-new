@@ -60,18 +60,27 @@ var browserVersion = 0;
 
 if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
     browser = 'Opera';
-	window.location.href="<?php echo base_url("login/browser_check"); ?>";  
 } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
     browser = 'MSIE';
-	window.location.href="<?php echo base_url("login/browser_check"); ?>";  
 } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
     browser = 'Netscape';
-	window.location.href="<?php echo base_url("login/browser_check"); ?>";  
-}  else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+} else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+    browser = 'Chrome';
+} else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
     browser = 'Safari';
-	window.location.href="<?php echo base_url("login/browser_check"); ?>";  
     /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
     browserVersion = new Number(RegExp.$1);
+} else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+    browser = 'Firefox';
+}
+if(browserVersion === 0){
+    browserVersion = parseFloat(new Number(RegExp.$1));
+}
+if(browser==="Opera" || browser==="MSIE" || browser==="Netscape" || browser==="Safari"){
+	window.location.href="<?php echo base_url("login/browser_check"); ?>";  
+}
+if(browser==="Chrome" || browser==="Firefox"){
+	window.location.href="<?php echo base_url("login"); ?>";  
 }
 });
 					
