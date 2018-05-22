@@ -50,23 +50,36 @@
                     $(document).ready(function () {
                         $("li").removeAttr("title");
                     });
-					$(document).ready(function () {
-					   if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 ) 
-    {
-        alert('Opera browser does not support our audit');
-		window.location.href="<?php echo base_url("login/browser_check"); ?>"; 
-    }
-    else if(navigator.userAgent.indexOf("Safari") != -1)
-    {
-        alert('Safari browser does not support our audit');
-		window.location.href="<?php echo base_url("login/browser_check"); ?>"; 
-    }
-    else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) //IF IE > 10
-    {
-      alert('IE browser does not support our audit');
-	  window.location.href="<?php echo base_url("login/browser_check"); ?>";  
-    }  
-					});
+
+					
+				/***Browser Compatability Code Test***/	
+					
+					$(document).ready(function(){
+  var browser = '';
+var browserVersion = 0;
+
+if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+    browser = 'Opera';
+	window.location.href="<?php echo base_url("login/browser_check"); ?>";  
+} else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+    browser = 'MSIE';
+	window.location.href="<?php echo base_url("login/browser_check"); ?>";  
+} else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+    browser = 'Netscape';
+	window.location.href="<?php echo base_url("login/browser_check"); ?>";  
+}  else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+    browser = 'Safari';
+	window.location.href="<?php echo base_url("login/browser_check"); ?>";  
+    /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+    browserVersion = new Number(RegExp.$1);
+}
+});
+					
+					
+					
+					
+					
+					
                 </script>
     <script src="<?php echo base_url(''); ?>assets/js/main.js"></script>
     <!-- Gem jQuery -->
