@@ -93,14 +93,14 @@ function checkUpdate(){
         <div class="form-group">
             <label for="username" class="control-label"><span class="cube">5</span>State:</label>
             <div class="clearfix">&nbsp;</div>
-            <?php echo form_dropdown('state', $states, set_value("state", $data["state"]), array('class' => 'form-control', 'id' => 'country-select', 'onchange' => 'getCities();')); ?>
+            <?php echo form_dropdown('state', $states, set_value("state", $data["state"]), array('class' => 'form-control', 'id' => 'country-select', 'onchange' => 'getCities(),checkUpdate();')); ?>
             <!--input type="text" class="text empty" name="username" id="username" tabindex="1" class="form-control" placeholder="State" value="<?php echo $data["state"]; ?>"-->
         </div>
         <br>
         <div class="form-group">
             <label for="username" class="control-label"><span class="cube">6</span>District:</label>
             <div class="clearfix">&nbsp;</div>
-            <?php echo form_dropdown('district', $cities, set_value("district", $data["district"]), array('class' => 'form-control', 'id' => 'city-select')); ?>
+            <?php echo form_dropdown('district', $cities, set_value("district", $data["district"]), array('class' => 'form-control', 'id' => 'city-select','onchange' => 'checkUpdate();')); ?>
             <!--input type="text" name="username" id="username" class="text empty" tabindex="1"  placeholder="District" value="<?php echo $data["district"]; ?>" -->
         </div>
         <br>
@@ -115,8 +115,8 @@ function checkUpdate(){
             <label for="username" class="control-label"><span class="cube">8</span>Pin Code:</label>
             <div class="clearfix">&nbsp;</div>
             <input type="number" class="form-control" name="username" id="username" tabindex="1" placeholder="Pin Code"
-                   value="<?php echo $data["pincode"]; ?>" title="digits are allowed">
-        </div>
+                   value="<?php echo $data["pincode"]; ?>" title="digits are allowed" onchange = 'checkPincode();'>
+        </div> 
         <br>
         <div class="form-group">
             <div class="form-group">
@@ -146,7 +146,7 @@ function checkUpdate(){
             <label for="username" class="control-label"><span class="cube">11</span>Principal's Name:</label>
             <div class="clearfix">&nbsp;</div>
             <input type="text" name="username" class="text empty" id="principal" tabindex="1"
-                   placeholder="Principal's Name:" value="<?php echo $data["principle_name"]; ?>">
+                   placeholder="Principal's Name:" value="<?php echo $data["principle_name"]; ?>" onchange = 'checkUpdate();'>
         </div>
         <br>
         <div class="form-group">
@@ -156,7 +156,7 @@ function checkUpdate(){
                             class="badge">?</span></a></label>
             <div class="clearfix">&nbsp;</div>
             <input type="text" name="username" class="text empty" id="cordinatorname" tabindex="1"
-                   placeholder="GSP Coordinator's Name" value="<?php echo $data["coname"]; ?>">
+                   placeholder="GSP Coordinator's Name" value="<?php echo $data["coname"]; ?>" onchange = 'checkUpdate();'>
         </div>
         <br>
         <div class="form-group">
