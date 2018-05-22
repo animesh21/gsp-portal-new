@@ -1080,7 +1080,7 @@
     <tbody>
       <?php foreach ($pucCertificate as $a) { ?>
       <tr id="index<?php echo $a->id; ?>">
-	 <td> <iframe style="width:62px, height:46px" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="50" height="50"></iframe></td>
+	 <td> <iframe style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="50" height="50"></iframe></td>
      
         <?php $Text = str_replace(" ", "_", $a->name . "_PUC_Certificate_"); ?>
 	    
