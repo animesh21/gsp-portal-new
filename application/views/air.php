@@ -1071,6 +1071,7 @@
   <table width="100%" class="question uploadedfiles">
     <thead>
 	    <tr>
+	<th>Image</th>	    
         <th>File name</th>
         <th>Action</th>
       </tr>
@@ -1078,6 +1079,8 @@
     <tbody>
       <?php foreach ($pucCertificate as $a) { ?>
       <tr id="index<?php echo $a->id; ?>">
+	 <td> <img src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+      
         <?php $Text = str_replace(" ", "_", $a->name . "_PUC_Certificate_"); ?>
 	    
         <td class="upload edit"><?php echo str_replace($Text, " ", $a->file_name); ?></td>
