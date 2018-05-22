@@ -490,21 +490,25 @@
                         data-target="#airModal" type="button">UPLOAD FILES </button>
                 <table width="100%" class="question uploadedfiles">
                     <thead>
-											<tr>
-                            <th>File name</th>
-                            <th>Action</th>
+		        <tr>
+                           <th>Image</th>	    
+			   <th>File name</th>
+			   <th>Delete</th>
+			   <th>Download</th>
                         </tr>
                     </thead>
                     <tbody>
-<?php foreach ($midDayMeal as $f) { ?>
-                            <tr id="index<?php echo $f->id; ?>">
-    <?php $name = str_replace(" ", "_", $f->name . "_Mid_Day_Meal_"); ?>
-															
-                                <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
-                                <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
-                            </tr>
-                            <?php } ?>
-                    </tbody>
+     <?php foreach ($midDayMeal as $f) { ?>
+          <tr id="index<?php echo $f->id; ?>">
+	     <td> <iframe style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" width="50" height="50"></iframe></td>
+     	     <?php $name = str_replace(" ", "_", $f->name . "_Mid_Day_Meal_"); ?>
+	     <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+             <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+             <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+ 		  
+           </tr>
+         <?php } ?>
+       </tbody>
                 </table>
             </div>
             <input type="hidden" value="<?php if (isset($other['Q4G4S3'])) echo $other['Q4G4S3']; ?>"
@@ -614,18 +618,24 @@ if (isset($data['Q5F1S1'])) {
 				  <table width="100%" class="question uploadedfiles">
                                   <thead>
                                    <tr>
-                                                                                                                    <th>File name</th>
-                                                                                                                    <th>Action</th>
-                                                                                                                </tr>
-                                                                                                            </thead>
-                                                                                                            <tbody>
+                                        <th>Image</th>	    
+					<th>File name</th>
+					<th>Delete</th>
+					<th>Download</th>
+                                    </tr>
+                                 </thead>
+                <tbody>
 <?php foreach ($lunch as $u) { ?>
-                                                                                                                    <tr id="index<?php echo $u->id; ?>">
+     <tr id="index<?php echo $u->id; ?>">
+	<td> <iframe style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $u->file_name ?>" class="img-responsive" width="50" height="50"></iframe></td>
+       
     <?php $name = str_replace(" ", "_", $u->name . "_Lunch_Boxes_"); ?>
 																																																											
-                                                                                                                        <td class="upload edit"><?php echo str_replace($name, "", $u->file_name); ?></td>
-                                                                                                                        <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $u->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
-                                                                                                                    </tr>
+             <td class="upload edit"><?php echo str_replace($name, "", $u->file_name); ?></td>
+             <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $u->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+            <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $u->file_name; ?>" download="<?php echo $u->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+
+	</tr>
 <?php } ?>
                                                                                                             </tbody>
                                                                                                         </table>    
@@ -1497,17 +1507,22 @@ if (isset($data['Q4F1']))
                                                                                                     <table width="100%" class="question uploadedfiles">
     <thead>
         <tr>
-            <th>File name</th>
-            <th>Action</th>
+           <th>Image</th>	    
+	   <th>File name</th>
+	   <th>Delete</th>
+	   <th>Download</th>
         </tr>
     </thead>
     <tbody>
         <?php foreach ($canteen as $f) { ?>
             <tr id="index<?php echo $f->id; ?>">
+	        <td> <iframe style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" width="50" height="50"></iframe></td>
                 <?php $name = str_replace(" ", "_", $f->name . "_Canteen_Food_Items_"); ?>
                 <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
                 <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
-            </tr>
+                <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+      
+	    </tr>
         <?php } ?>
     </tbody>
 </table>
@@ -1994,18 +2009,23 @@ if (isset($data['Q11F1'])) {
                                                                                             <table width="100%" class="question uploadedfiles">
                                                                                                             <thead>
                                                                                                                 <tr>
-                                                                                                                    <th>File name</th>
-                                                                                                                    <th>Action</th>
+                                                                                                                    <th>Image</th>	    
+														    <th>File name</th>
+														    <th>Delete</th>
+														    <th>Download</th>
                                                                                                                 </tr>
                                                                                                             </thead>
                                                                                                             <tbody>
 <?php foreach ($files as $f) { ?>
-                                                                                                                    <tr id="index<?php echo $f->id; ?>">
+  <tr id="index<?php echo $f->id; ?>">
+    <td> <iframe style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" width="50" height="50"></iframe></td>
+     	  
     <?php $name = str_replace(" ", "_", $f->name . "_Audit_Team_doing_Survey_"); ?>
 																																																											
-																																																											<td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
-                                                                                                                        <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
-                                                                                                                    </tr>
+     <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+     <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+    <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>      
+</tr>
 <?php } ?>
                                                                                                             </tbody>
                                                                                                         </table>
@@ -2206,18 +2226,23 @@ if (isset($data['Q13F1'])) {
                                                                                                         <table width="100%" class="question uploadedfiles">
                                                                                                             <thead>
                                                                                                                 <tr>
-                                                                                                                    <th>File name</th>
-                                                                                                                    <th>Action</th>
-                                                                                                                </tr>
+                                                                                                                    <th>Image</th>	    
+															<th>File name</th>
+															<th>Delete</th>
+															<th>Download</th>
+														</tr>
                                                                                                             </thead>
                                                                                                             <tbody>
 <?php foreach ($uppc as $u) { ?>
-                                                                                                                    <tr id="index<?php echo $u->id; ?>">
+    <tr id="index<?php echo $u->id; ?>">
+    <td> <iframe style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $u->file_name ?>" class="img-responsive" width="50" height="50"></iframe></td>	    
     <?php $name = str_replace(" ", "_", $u->name . "_UPPF_"); ?>
 																																																											
-                                                                                                                        <td class="upload edit"><?php echo str_replace($name, "", $u->file_name); ?></td>
-                                                                                                                        <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $u->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
-                                                                                                                    </tr>
+    <td class="upload edit"><?php echo str_replace($name, "", $u->file_name); ?></td>
+    <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $u->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+    <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $u->file_name; ?>" download="<?php echo $u->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+  
+</tr>
 <?php } ?>
                                                                                                             </tbody>
                                                                                                         </table>
