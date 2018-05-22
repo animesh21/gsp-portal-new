@@ -879,22 +879,26 @@
         <br>
         <table width="100%" class="question uploadedfiles">
             <thead>
-				<tr>
-                <th>File name</th>
-                <th>Action</th>
+	   <tr>
+                <th>Image</th>	    
+		<th>File name</th>
+		<th>Delete</th>
+		<th>Download</th>
             </tr>
             </thead>
             <tbody>
             <?php //echo '<pre>'; print_r($greenCover);  ?>
             <?php foreach ($greenCover as $f) { ?>
                 <tr id="index<?php echo $f->id; ?>">
+		   <td> <iframe style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" width="50" height="50"></iframe></td>
+	
                     <?php $name = str_replace(" ", "_", $f->name . "_Green_Cover_"); //echo $name; ?>
 					
                     <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
                     <td><a href="javascript:void(0)" class="air-delete-files"
-                           data-id="<?php echo $f->id; ?>"><img
-                                    src="<?php echo base_url(); ?>assets/front/images/delete.png"
+                           data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png"
                                     style="position:relative; top:5px"/></a></td>
+		    <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>	
                 </tr>
             <?php } ?>
             </tbody>
