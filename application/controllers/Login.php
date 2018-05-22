@@ -144,7 +144,14 @@ If your school has not registered earlier for the GSP Audit, please register her
         $data['title'] = 'Green School';
         $this->load->view('welcome-message', $data);
     }
+  /*************** browser check ***********/
+    public function browser_check() {
+        $data['title'] = 'Green School';
+        $this->load->view('browser-check', $data);
+    }
 
+	
+	
     /*
      * Check Duplicate Mail
      */
