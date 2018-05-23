@@ -218,9 +218,9 @@ if (navigator.appName == 'Microsoft Internet Explorer' ||  !!(navigator.userAgen
 {
   window.location.href="<?php echo base_url("login/browser_check"); ?>";
 }
-	if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
-    window.location.href="<?php echo base_url("login/browser_check"); ?>";
-} 
+if (/Edge/.test(navigator.userAgent)) {
+     window.location.href="<?php echo base_url("login/browser_check"); ?>";
+}
 	</script>
 </body>
 </html>
