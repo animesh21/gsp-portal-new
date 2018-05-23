@@ -201,6 +201,23 @@
                     }
                 });
             });
+	
+		//All Standards and Compatibility Mode
+
+
+var isIE = /MSIE/.test(navigator.userAgent) && /Microsoft Internet Explorer/.test(navigator.vendor);
+var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
+var isOpera = /Opera/.test(navigator.userAgent) && /Opera/.test(navigator.vendor);
+
+if (isOpera){ 
+window.location.href="<?php echo base_url("login/browser_check"); ?>";}
+if (isSafari){ 
+window.location.href="<?php echo base_url("login/browser_check"); ?>";}
+
+if (navigator.appName == 'Microsoft Internet Explorer' ||  !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv:11/)) || (typeof $.browser !== "undefined" && $.browser.msie == 1))
+{
+  window.location.href="<?php echo base_url("login/browser_check"); ?>";
+}
 	</script>
 </body>
 </html>
