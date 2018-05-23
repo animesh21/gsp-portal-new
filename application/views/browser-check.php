@@ -66,7 +66,7 @@
                 </script>
     <div class="home_container">
       <div class="mform" style="display: block;">
-       <p class="m-browser">Please use a modern browser such as <a href="https://www.mozilla.org/en-US/firefox/new/"
+       <p class="m-browser col-md-12">Please use a modern browser such as <a href="https://www.mozilla.org/en-US/firefox/new/"
                                                                             target="_blank">Firefox</a> or <a
                                                                             href="https://www.google.com/chrome/" target="_blank">Chrome</a> to take the audit. This audit
   requires Javascript to be enabled in your browser and will not function properly without it.</p>
