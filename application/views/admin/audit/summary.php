@@ -15,7 +15,7 @@
 <div class="row">
   <div class="col-md-12">
     <h2>2017 Audit</h2> 
-    <table class="display dataTable no-footer">
+    <table class="display dataTable no-footer table1">
       <thead>
         <tr role="row">
           <th>Phase</th>
@@ -58,9 +58,10 @@
       </tbody>
     </table><br/>
 	<h2>2016 Audit</h2> 
-	<table class="display dataTable no-footer table1">
+	<table class="display dataTable no-footer">
       <thead>
         <tr role="row">
+		  <th>Details</th>
           <th>Total School Registrations</th>
           <th>Schools That Started The Audit</th>
           <th>School submitted the Audit in Phase 1</th>
@@ -71,7 +72,7 @@
       </thead>
       <tbody>
         <tr role="row" class="odd">
-	<td class="sorting_1">Details</td>
+		 <td class="sorting_1">Audit 2016</td>
           <td>2518</td>
           <td>1306</td>
           <td>700</td>
@@ -79,8 +80,8 @@
           <td>1212</td>
           <td>1079</td>
         </tr>
-       <tr>
-	  <td class="sorting_1">Total</td>
+		<tr>
+		  <td class="sorting_1">Total</td>
           <td>2518</td>
           <td>1306</td>
           <td>700</td>
@@ -95,6 +96,7 @@
 	<table class="display dataTable no-footer">
       <thead>
         <tr role="row">
+		<th>Details</th>
           <th>Total School Registrations</th>
           <th>Schools That Started The Audit</th>
           <th>School submitted the Audit in Phase 1</th>
@@ -105,7 +107,7 @@
       </thead>
       <tbody>
         <tr role="row" class="odd">
-		<td class="sorting_1">Details</td>
+		 <td class="sorting_1">Audit 2016</td>
           <td>1439</td>
           <td>867</td>
           <td>534</td>
@@ -128,12 +130,12 @@
 </div>
 <script type="text/javascript">
  $(document).ready(function(){
-   $("#totalSchoolRegistration").append(parseInt($("table tr:nth-child(1) td:nth-child(2)").text())+parseInt($("table tr:nth-child(2) td:nth-child(2)").text()));
-    $("#totalStartedSchoolAudit").append(parseInt($("table tr:nth-child(1) td:nth-child(3)").text())+parseInt($("table tr:nth-child(2) td:nth-child(3)").text()));
-	$("#totalSchoolsubmittedAudit").append(parseInt($("table tr:nth-child(1) td:nth-child(4)").text())+parseInt($("table tr:nth-child(2) td:nth-child(4)").text()));
-	$("#totalSchoolsStartedAuditNotComplete").append(parseInt($("table tr:nth-child(1) td:nth-child(5)").text())+parseInt($("table tr:nth-child(2) td:nth-child(5)").text()));
-	$("#totalSchoolsDidNotStartTheAudit").append(parseInt($("table tr:nth-child(1) td:nth-child(6)").text())+parseInt($("table tr:nth-child(2) td:nth-child(6)").text()));
-	$("#totalSchool2017Registration").append(parseInt($("table tr:nth-child(1) td:nth-child(7)").text())+parseInt($("table tr:nth-child(2) td:nth-child(7)").text()));
+   $("#totalSchoolRegistration").append(parseInt($(".table1 tr:nth-child(1) td:nth-child(2)").text())+parseInt($("table tr:nth-child(2) td:nth-child(2)").text()));
+    $("#totalStartedSchoolAudit").append(parseInt($(".table1 tr:nth-child(1) td:nth-child(3)").text())+parseInt($("table tr:nth-child(2) td:nth-child(3)").text()));
+	$("#totalSchoolsubmittedAudit").append(parseInt($(".table1 tr:nth-child(1) td:nth-child(4)").text())+parseInt($("table tr:nth-child(2) td:nth-child(4)").text()));
+	$("#totalSchoolsStartedAuditNotComplete").append(parseInt($(".table1 tr:nth-child(1) td:nth-child(5)").text())+parseInt($("table tr:nth-child(2) td:nth-child(5)").text()));
+	$("#totalSchoolsDidNotStartTheAudit").append(parseInt($(".table1 tr:nth-child(1) td:nth-child(6)").text())+parseInt($("table tr:nth-child(2) td:nth-child(6)").text()));
+	$("#totalSchool2017Registration").append(parseInt($(".table1 tr:nth-child(1) td:nth-child(7)").text())+parseInt($("table tr:nth-child(2) td:nth-child(7)").text()));
  });
  
 </script>
