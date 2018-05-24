@@ -130,12 +130,12 @@
 </div>
 <script type="text/javascript">
  $(document).ready(function(){
-   $("#totalSchoolRegistration").append(parseInt($(".table1 tr:nth-child(1) td:nth-child(2)").text())+parseInt($("table tr:nth-child(2) td:nth-child(2)").text()));
-    $("#totalStartedSchoolAudit").append(parseInt($(".table1 tr:nth-child(1) td:nth-child(3)").text())+parseInt($("table tr:nth-child(2) td:nth-child(3)").text()));
-	$("#totalSchoolsubmittedAudit").append(parseInt($(".table1 tr:nth-child(1) td:nth-child(4)").text())+parseInt($("table tr:nth-child(2) td:nth-child(4)").text()));
-	$("#totalSchoolsStartedAuditNotComplete").append(parseInt($(".table1 tr:nth-child(1) td:nth-child(5)").text())+parseInt($("table tr:nth-child(2) td:nth-child(5)").text()));
-	$("#totalSchoolsDidNotStartTheAudit").append(parseInt($(".table1 tr:nth-child(1) td:nth-child(6)").text())+parseInt($("table tr:nth-child(2) td:nth-child(6)").text()));
-	$("#totalSchool2017Registration").append(parseInt($(".table1 tr:nth-child(1) td:nth-child(7)").text())+parseInt($("table tr:nth-child(2) td:nth-child(7)").text()));
+   $("#totalSchoolRegistration").append(parseInt($(".table1 tr:nth-child(1) td:nth-child(2)").text())+parseInt($(".table1 tr:nth-child(2) td:nth-child(2)").text()));
+    $("#totalStartedSchoolAudit").append(parseInt($(".table1 tr:nth-child(1) td:nth-child(3)").text())+parseInt($(".table1 tr:nth-child(2) td:nth-child(3)").text()));
+	$("#totalSchoolsubmittedAudit").append(parseInt($(".table1 tr:nth-child(1) td:nth-child(4)").text())+parseInt($(".table1 tr:nth-child(2) td:nth-child(4)").text()));
+	$("#totalSchoolsStartedAuditNotComplete").append(parseInt($(".table1 tr:nth-child(1) td:nth-child(5)").text())+parseInt($(".table1 tr:nth-child(2) td:nth-child(5)").text()));
+	$("#totalSchoolsDidNotStartTheAudit").append(parseInt($(".table1 tr:nth-child(1) td:nth-child(6)").text())+parseInt($(".table1 tr:nth-child(2) td:nth-child(6)").text()));
+	$("#totalSchool2017Registration").append(parseInt($(".table1 tr:nth-child(1) td:nth-child(7)").text())+parseInt($(".table1 tr:nth-child(2) td:nth-child(7)").text()));
  });
  
 </script>
