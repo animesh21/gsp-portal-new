@@ -56,7 +56,7 @@
           <td id="totalSchool2017Registration"></td>
         </tr>
       </tbody>
-    </table>
+    </table><br/>
 	<h2>2016 Audit</h2> 
 	<table class="display dataTable no-footer">
       <thead>
@@ -86,7 +86,7 @@
           <td id="totalSchool2017Registration"></td>
         </tr>
       </tbody>
-    </table>
+    </table><br/>
 	<h2>2015 Audit</h2> 
 	<table class="display dataTable no-footer">
       <thead>
