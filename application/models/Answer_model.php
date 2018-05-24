@@ -39,6 +39,44 @@ class Answer_model extends CI_Model {
         }
         return $school = array("test"=>"nil");
     }
+	
+   public function submitSchoolAnswers($post){
+      $type = 0;
+      //echo $this->session->userdata('USER_ID');
+      //echo '<pre>';print_r($post);die();
+        foreach ($post as $key => $value) {
+            if(isset($post[$key]) && $post[$key] != "")
+            {
+                $query = $this->db->select('*')
+                    ->from('gsp_answers')
+                    ->where(array('userid' => $this->session->userdata('USER_ID'),'type' => $type,'questionid' => $key))
+                    ->get();
+                if($query->num_rows() > 0)
+                {
+                    $this->db->set('answer', $value)
+                        ->where( array('userid' => $this->session->userdata('USER_ID'),'questionid'=>$key,'type'=>$type )) //which row want to upgrade
+                        ->update('gsp_answers');
+                    //print_r("Update");
+                }
+                else
+                {
+                    $update = array('userid'=>$this->session->userdata('USER_ID'),
+                                   'questionid'=>$key,
+                                   'answer'=>$value,
+                                   'type'=>$type);
+                    
+		    	
+	            $this->db->insert('gsp_answers',$update);//insert if does not exist
+		   //echo ($this->db->last_query());	
+                  //  print_r("insert");
+
+                }
+            }
+        }
+      
+    }	
+	
+	
     public function submitAnswers($post,$type)
     {
         if($type == 1)
