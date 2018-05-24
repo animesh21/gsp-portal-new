@@ -71,6 +71,7 @@
       </thead>
       <tbody>
         <tr role="row" class="odd">
+	<td class="sorting_1">Details</td>
           <td>2518</td>
           <td>1306</td>
           <td>700</td>
@@ -78,8 +79,8 @@
           <td>1212</td>
           <td>1079</td>
         </tr>
-		<tr>
-		  <td class="sorting_1">Total</td>
+       <tr>
+	  <td class="sorting_1">Total</td>
           <td>2518</td>
           <td>1306</td>
           <td>700</td>
@@ -104,6 +105,7 @@
       </thead>
       <tbody>
         <tr role="row" class="odd">
+		<td class="sorting_1">Details</td>
           <td>1439</td>
           <td>867</td>
           <td>534</td>
