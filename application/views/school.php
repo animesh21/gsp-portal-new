@@ -114,7 +114,7 @@ function checkUpdate(){
         <div class="form-group">
             <label for="username" class="control-label"><span class="cube">8</span>Pin Code:</label>
             <div class="clearfix">&nbsp;</div>
-            <input type="number" class="form-control" name="pincode" id="pincode" tabindex="1" placeholder="Pin Code"
+            <input type="text" class="form-control" name="pincode" id="pincode" tabindex="1" pattern="\d*" maxlength="6" placeholder="Pin Code"
                    value="<?php echo $data["pincode"]; ?>" title="digits are allowed" onchange = 'checkPincode();'>
         </div> 
         <br>
