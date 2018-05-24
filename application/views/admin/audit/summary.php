@@ -78,13 +78,14 @@
           <td>1212</td>
           <td>1079</td>
         </tr>
+		<tr>
 		  <td class="sorting_1">Total</td>
-          <td id="totalSchoolRegistration1"></td>
-          <td id="totalStartedSchoolAudit1"></td>
-          <td id="totalSchoolsubmittedAudit1"></td>
-          <td id="totalSchoolsStartedAuditNotComplete1"></td>
-          <td id="totalSchoolsDidNotStartTheAudit1"></td>
-          <td id="totalSchool2017Registration1"></td>
+          <td>2518</td>
+          <td>1306</td>
+          <td>700</td>
+          <td>606</td>
+          <td>1212</td>
+          <td>1079</td>
         </tr>
       </tbody>
     </table>
@@ -110,12 +111,14 @@
           <td>572</td>
           <td>1439</td>
         </tr>
-          <td id="totalSchoolRegistration2"></td>
-          <td id="totalStartedSchoolAudit2"></td>
-          <td id="totalSchoolsubmittedAudit2"></td>
-          <td id="totalSchoolsStartedAuditNotComplete2"></td>
-          <td id="totalSchoolsDidNotStartTheAudit2"></td>
-          <td id="totalSchool2017Registration2"></td>
+		<tr>
+		<td class="sorting_1">Total</td>
+           <td>1439</td>
+          <td>867</td>
+          <td>534</td>
+          <td>333</td>
+          <td>572</td>
+          <td>1439</td>
         </tr>
       </tbody>
     </table>
@@ -131,12 +134,4 @@
 	$("#totalSchool2017Registration").append(parseInt($("table tr:nth-child(1) td:nth-child(7)").text())+parseInt($("table tr:nth-child(2) td:nth-child(7)").text()));
  });
  
- $(document).ready(function(){
-   $("#totalSchoolRegistration1").append(parseInt($(".table1 tr:nth-child(1) td:nth-child(2)").text())+parseInt($("table tr:nth-child(2) td:nth-child(2)").text()));
-    $("#totalStartedSchoolAudit1").append(parseInt($(".table1 tr:nth-child(1) td:nth-child(3)").text())+parseInt($("table tr:nth-child(2) td:nth-child(3)").text()));
-	$("#totalSchoolsubmittedAudit1").append(parseInt($(".table1 tr:nth-child(1) td:nth-child(4)").text())+parseInt($("table tr:nth-child(2) td:nth-child(4)").text()));
-	$("#totalSchoolsStartedAuditNotComplete1").append(parseInt($(".table1 tr:nth-child(1) td:nth-child(5)").text())+parseInt($("table tr:nth-child(2) td:nth-child(5)").text()));
-	$("#totalSchoolsDidNotStartTheAudit1").append(parseInt($(".table1 tr:nth-child(1) td:nth-child(6)").text())+parseInt($("table tr:nth-child(2) td:nth-child(6)").text()));
-	$("#totalSchool2017Registration1").append(parseInt($(".table1 tr:nth-child(1) td:nth-child(7)").text())+parseInt($("table tr:nth-child(2) td:nth-child(7)").text()));
- });
 </script>
