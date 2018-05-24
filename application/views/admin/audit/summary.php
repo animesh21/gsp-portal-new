@@ -14,6 +14,7 @@
 </div>
 <div class="row">
   <div class="col-md-12">
+    <h2>2017 Audit</h2> 
     <table class="display dataTable no-footer">
       <thead>
         <tr role="row">
@@ -47,6 +48,66 @@
         </tr>
 		<tr role="row" class="even">
           <td class="sorting_1">Total</td>
+          <td id="totalSchoolRegistration"></td>
+          <td id="totalStartedSchoolAudit"></td>
+          <td id="totalSchoolsubmittedAudit"></td>
+          <td id="totalSchoolsStartedAuditNotComplete"></td>
+          <td id="totalSchoolsDidNotStartTheAudit"></td>
+          <td id="totalSchool2017Registration"></td>
+        </tr>
+      </tbody>
+    </table>
+	<h2>2016 Audit</h2> 
+	<table class="display dataTable no-footer">
+      <thead>
+        <tr role="row">
+          <th>Total School Registrations</th>
+          <th>Schools That Started The Audit</th>
+          <th>School submitted the Audit in Phase 1</th>
+          <th>Schools Started The Audit But Did Not Complete</th>
+          <th>Schools Did Not Start The Audit</th>
+          <th>2016 Registration</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr role="row" class="odd">
+          <td>2518</td>
+          <td>1306</td>
+          <td>700</td>
+          <td>606</td>
+          <td>1212</td>
+          <td>1079</td>
+        </tr>
+          <td id="totalSchoolRegistration"></td>
+          <td id="totalStartedSchoolAudit"></td>
+          <td id="totalSchoolsubmittedAudit"></td>
+          <td id="totalSchoolsStartedAuditNotComplete"></td>
+          <td id="totalSchoolsDidNotStartTheAudit"></td>
+          <td id="totalSchool2017Registration"></td>
+        </tr>
+      </tbody>
+    </table>
+	<h2>2015 Audit</h2> 
+	<table class="display dataTable no-footer">
+      <thead>
+        <tr role="row">
+          <th>Total School Registrations</th>
+          <th>Schools That Started The Audit</th>
+          <th>School submitted the Audit in Phase 1</th>
+          <th>Schools Started The Audit But Did Not Complete</th>
+          <th>Schools Did Not Start The Audit</th>
+          <th>2015 Registration</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr role="row" class="odd">
+          <td>1439</td>
+          <td>867</td>
+          <td>534</td>
+          <td>333</td>
+          <td>572</td>
+          <td>1439</td>
+        </tr>
           <td id="totalSchoolRegistration"></td>
           <td id="totalStartedSchoolAudit"></td>
           <td id="totalSchoolsubmittedAudit"></td>
