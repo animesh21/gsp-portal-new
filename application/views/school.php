@@ -146,7 +146,7 @@ function checkUpdate(){
             <label for="username" class="control-label"><span class="cube">11</span>Principal's Name:</label>
             <div class="clearfix">&nbsp;</div>
             <input type="text" name="principle_name" class="text empty" id="principle_name" tabindex="1"
-                   placeholder="Principal's Name:" value="<?php echo $data["principle_name"]; ?>" onchange = 'checkUpdate();'>
+                   placeholder="Principal's Name:" value="<?php echo $data["principle_name"]; ?>" onchange = 'checkUpdate();' readonly>
         </div>
         <br>
         <div class="form-group">
@@ -156,15 +156,15 @@ function checkUpdate(){
                             class="badge">?</span></a></label>
             <div class="clearfix">&nbsp;</div>
             <input type="text" name="coname" class="text empty" id="coname" tabindex="1"
-                   placeholder="GSP Coordinator's Name" value="<?php echo $data["coname"]; ?>" onchange = 'checkUpdate();'>
+                   placeholder="GSP Coordinator's Name" value="<?php echo $data["coname"]; ?>" onchange = 'checkUpdate();' readonly>
         </div>
-        <br>
+        <br> 
         <div class="form-group">
             <label for="username" class="control-label"><span class="cube">13</span>Enter GSP Coordinator's
                 Email:</label>
             <div class="clearfix">&nbsp;</div>
             <input type="email" name="coemail" class="form-control" id="coemail" tabindex="1"
-                   placeholder="GSP Coordinator's Email" value="<?php echo $data["coemail"]; ?>">
+                   placeholder="GSP Coordinator's Email" value="<?php echo $data["coemail"]; ?>" readonly>
         </div>
         <br>
         <div class="form-group">
@@ -172,7 +172,7 @@ function checkUpdate(){
                 Number:</label>
             <div class="clearfix">&nbsp;</div>
             <input type="number" name="comobile" class="form-control" id="comobile" tabindex="1"
-                   placeholder="GSP Coordinator's Mobile Number" value="<?php echo $data["comobile"]; ?>">
+                   placeholder="GSP Coordinator's Mobile Number" value="<?php echo $data["comobile"]; ?>" readonly>
         </div>
         <br>
         <div class="form-group">
