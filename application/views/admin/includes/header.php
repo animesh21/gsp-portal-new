@@ -149,9 +149,9 @@
 		  <!--<li><a href="<?php //echo base_url('admin/dashboard/total18_registration'); ?>">REGISTRATIONS 2018</a></li>-->	
                   <li><a href="<?php echo base_url('admin/audit_started/statewise'); ?>">REGISTRATIONS BY STATE</a></li>
                   <li><a href="<?php echo base_url('admin/audit_started/feedback'); ?>">E-Mail Blast</a></li>
-                  <li><a href="<?php echo base_url('admin/audit_started_2017/partnersList'); ?>">Partner Details</a></li>
-		  <li><a href="<?php echo base_url('admin/audit_started/getSummary'); ?>">Summary 2017</a></li>															
-		  <li><a href="<?php echo base_url('admin/dashboard/masterList'); ?>">Master View</a></li>
+                  <li><a href="<?php echo base_url('admin/audit_started_2017/partnersList'); ?>">Master List Partners</a></li>
+		  <li><a href="<?php echo base_url('admin/audit_started/getSummary'); ?>">Summary of Audit</a></li>															
+		  <li><a href="<?php echo base_url('admin/dashboard/masterList'); ?>">Master list Y-O-Y</a></li>
                 </ul>
               </li>
               <li class=""><a href="#">AUDIT COMPLETED<span class="caret"></span></a>
