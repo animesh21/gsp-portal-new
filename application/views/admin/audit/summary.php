@@ -58,7 +58,7 @@
       </tbody>
     </table><br/>
 	<h2>2016 Audit</h2> 
-	<table class="display dataTable no-footer">
+	<table class="display dataTable no-footer table1">
       <thead>
         <tr role="row">
           <th>Total School Registrations</th>
@@ -78,15 +78,17 @@
           <td>1212</td>
           <td>1079</td>
         </tr>
-          <td id="totalSchoolRegistration"></td>
-          <td id="totalStartedSchoolAudit"></td>
-          <td id="totalSchoolsubmittedAudit"></td>
-          <td id="totalSchoolsStartedAuditNotComplete"></td>
-          <td id="totalSchoolsDidNotStartTheAudit"></td>
-          <td id="totalSchool2017Registration"></td>
+		  <td class="sorting_1">Total</td>
+          <td id="totalSchoolRegistration1"></td>
+          <td id="totalStartedSchoolAudit1"></td>
+          <td id="totalSchoolsubmittedAudit1"></td>
+          <td id="totalSchoolsStartedAuditNotComplete1"></td>
+          <td id="totalSchoolsDidNotStartTheAudit1"></td>
+          <td id="totalSchool2017Registration1"></td>
         </tr>
       </tbody>
-    </table><br/>
+    </table>
+	<br/>
 	<h2>2015 Audit</h2> 
 	<table class="display dataTable no-footer">
       <thead>
@@ -108,12 +110,12 @@
           <td>572</td>
           <td>1439</td>
         </tr>
-          <td id="totalSchoolRegistration"></td>
-          <td id="totalStartedSchoolAudit"></td>
-          <td id="totalSchoolsubmittedAudit"></td>
-          <td id="totalSchoolsStartedAuditNotComplete"></td>
-          <td id="totalSchoolsDidNotStartTheAudit"></td>
-          <td id="totalSchool2017Registration"></td>
+          <td id="totalSchoolRegistration2"></td>
+          <td id="totalStartedSchoolAudit2"></td>
+          <td id="totalSchoolsubmittedAudit2"></td>
+          <td id="totalSchoolsStartedAuditNotComplete2"></td>
+          <td id="totalSchoolsDidNotStartTheAudit2"></td>
+          <td id="totalSchool2017Registration2"></td>
         </tr>
       </tbody>
     </table>
@@ -127,5 +129,14 @@
 	$("#totalSchoolsStartedAuditNotComplete").append(parseInt($("table tr:nth-child(1) td:nth-child(5)").text())+parseInt($("table tr:nth-child(2) td:nth-child(5)").text()));
 	$("#totalSchoolsDidNotStartTheAudit").append(parseInt($("table tr:nth-child(1) td:nth-child(6)").text())+parseInt($("table tr:nth-child(2) td:nth-child(6)").text()));
 	$("#totalSchool2017Registration").append(parseInt($("table tr:nth-child(1) td:nth-child(7)").text())+parseInt($("table tr:nth-child(2) td:nth-child(7)").text()));
+ });
+ 
+ $(document).ready(function(){
+   $("#totalSchoolRegistration1").append(parseInt($(".table1 tr:nth-child(1) td:nth-child(2)").text())+parseInt($("table tr:nth-child(2) td:nth-child(2)").text()));
+    $("#totalStartedSchoolAudit1").append(parseInt($(".table1 tr:nth-child(1) td:nth-child(3)").text())+parseInt($("table tr:nth-child(2) td:nth-child(3)").text()));
+	$("#totalSchoolsubmittedAudit1").append(parseInt($(".table1 tr:nth-child(1) td:nth-child(4)").text())+parseInt($("table tr:nth-child(2) td:nth-child(4)").text()));
+	$("#totalSchoolsStartedAuditNotComplete1").append(parseInt($(".table1 tr:nth-child(1) td:nth-child(5)").text())+parseInt($("table tr:nth-child(2) td:nth-child(5)").text()));
+	$("#totalSchoolsDidNotStartTheAudit1").append(parseInt($(".table1 tr:nth-child(1) td:nth-child(6)").text())+parseInt($("table tr:nth-child(2) td:nth-child(6)").text()));
+	$("#totalSchool2017Registration1").append(parseInt($(".table1 tr:nth-child(1) td:nth-child(7)").text())+parseInt($("table tr:nth-child(2) td:nth-child(7)").text()));
  });
 </script>
