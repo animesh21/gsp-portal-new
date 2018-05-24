@@ -51,7 +51,7 @@ function checkUpdate(){
             <p> In this section, all questions are compulsory. The school contact details should match with the details
                 provided during the time of registration to the Green Schools Programme (GSP) Audit.</p>
         </div>
-        <?php echo form_open('school/set', array('id' => 'school-form')); ?>
+        <?php echo form_open('school/schoolAnswer', array('id' => 'school-form')); ?>
         <div class="alert alert-danger" role="alert"
             <?php if ($this->session->flashdata('error') != null)
                 echo 'style="display:block;"';
@@ -65,28 +65,28 @@ function checkUpdate(){
         <div class="form-group">
             <label for="username" class="text-red"><span class="cube">1</span>Name of the School / Institution:</label>
             <div class="clearfix">&nbsp;</div>
-            <input type="text" class="form-control text empty" name="username" id="username"
+            <input type="text" class="form-control text empty" name="name" id="name"
                    placeholder="Name of the School / Institution:" value="<?php echo $data["name"]; ?>" readonly>
         </div>
         <br>
         <div class="form-group">
             <label for="username" class="control-label"><span class="cube">2</span>Address Line 1:</label>
             <div class="clearfix">&nbsp;</div>
-            <input type="text" name="username" id="username" tabindex="1" class="form-control text empty"
+            <input type="text" name="address1" id="address1" tabindex="1" class="form-control text empty"
                    placeholder="Address 1" value="<?php echo $data["address1"]; ?>" readonly>
         </div>
         <br>
         <div class="form-group">
             <label for="username" class="control-label"><span class="cube">3</span>Address Line 2:</label>
             <div class="clearfix">&nbsp;</div>
-            <input type="text" name="username" id="username" tabindex="1" class="form-control text empty"
+            <input type="text" name="address2" id="address2" tabindex="1" class="form-control text empty"
                    placeholder="Address 2" value="<?php echo $data["address2"]; ?>" readonly>
         </div>
         <br>
         <div class="form-group">
             <label for="username" class="control-label"><span class="cube">4</span>Country:</label>
             <div class="clearfix">&nbsp;</div>
-            <input type="text" name="username" id="username" tabindex="1" class="form-control text empty"
+            <input type="text" name="country" id="country" tabindex="1" class="form-control text empty"
                    placeholder="Country" value="<?php echo $data["country"]; ?>" readonly>
         </div>
         <br>
@@ -107,14 +107,14 @@ function checkUpdate(){
         <div class="form-group">
             <label for="username" class="control-label"><span class="cube">7</span>City:</label>
             <div class="clearfix">&nbsp;</div>
-            <input type="text" class="form-control text empty" name="username" id="username" tabindex="1"
-                   placeholder="City" value="<?php echo $data["city"]; ?>">
+            <input type="text" class="form-control text empty" name="city" id="city" tabindex="1"
+                   placeholder="City" value="<?php echo $data["city"]; ?>"  readonly>
         </div>
         <br>
         <div class="form-group">
             <label for="username" class="control-label"><span class="cube">8</span>Pin Code:</label>
             <div class="clearfix">&nbsp;</div>
-            <input type="number" class="form-control" name="username" id="pincode" tabindex="1" placeholder="Pin Code"
+            <input type="number" class="form-control" name="pincode" id="pincode" tabindex="1" placeholder="Pin Code"
                    value="<?php echo $data["pincode"]; ?>" title="digits are allowed" onchange = 'checkPincode();'>
         </div> 
         <br>
@@ -124,11 +124,11 @@ function checkUpdate(){
                     Number):</label>
             </div>
             <div class="col-xs-2">
-                <input type="text" name="username" class="form-control" id="std" tabindex="1" placeholder="Std Code"
+                <input type="text" name="std" class="form-control" id="std" tabindex="1" placeholder="Std Code"
                        value="<?php echo $data["std"]; ?>" min="000" title="Only digits in range 3 to 6 is allowed">
             </div>
             <div class="col-xs-8">
-                <input type="text" name="username" class="form-control" id="telephone" tabindex="1"
+                <input type="text" name="telephone" class="form-control" id="telephone" tabindex="1"
                        placeholder="Telephone" value="<?php echo $data["telephone"]; ?>">
             </div>
         </div>
@@ -138,14 +138,14 @@ function checkUpdate(){
         <div class="form-group">
             <label for="username" class="control-label"><span class="cube">10</span>Enter Mobile number:</label>
             <div class="clearfix">&nbsp;</div>
-            <input type="text" name="username" class="text empty" id="mobile" tabindex="1" placeholder="Mobile Number"
+            <input type="text" name="mobile" class="text empty" id="mobile" tabindex="1" placeholder="Mobile Number"
                    value="<?php echo $data["mobile"]; ?>">
         </div>
         <br>
         <div class="form-group">
             <label for="username" class="control-label"><span class="cube">11</span>Principal's Name:</label>
             <div class="clearfix">&nbsp;</div>
-            <input type="text" name="username" class="text empty" id="principal" tabindex="1"
+            <input type="text" name="principle_name" class="text empty" id="principle_name" tabindex="1"
                    placeholder="Principal's Name:" value="<?php echo $data["principle_name"]; ?>" onchange = 'checkUpdate();'>
         </div>
         <br>
@@ -155,7 +155,7 @@ function checkUpdate(){
                         data-tooltip="Coordinating teacher's name/ Name of the teacher responsible for GSP Audit"><span
                             class="badge">?</span></a></label>
             <div class="clearfix">&nbsp;</div>
-            <input type="text" name="username" class="text empty" id="cordinatorname" tabindex="1"
+            <input type="text" name="coname" class="text empty" id="coname" tabindex="1"
                    placeholder="GSP Coordinator's Name" value="<?php echo $data["coname"]; ?>" onchange = 'checkUpdate();'>
         </div>
         <br>
@@ -163,7 +163,7 @@ function checkUpdate(){
             <label for="username" class="control-label"><span class="cube">13</span>Enter GSP Coordinator's
                 Email:</label>
             <div class="clearfix">&nbsp;</div>
-            <input type="email" name="username" class="form-control" id="username" tabindex="1"
+            <input type="email" name="coemail" class="form-control" id="coemail" tabindex="1"
                    placeholder="GSP Coordinator's Email" value="<?php echo $data["coemail"]; ?>">
         </div>
         <br>
@@ -171,7 +171,7 @@ function checkUpdate(){
             <label for="username" class="control-label"><span class="cube">14</span>Enter GSP Coordinator's Mobile
                 Number:</label>
             <div class="clearfix">&nbsp;</div>
-            <input type="number" name="username" class="form-control" id="comobile" tabindex="1"
+            <input type="number" name="comobile" class="form-control" id="comobile" tabindex="1"
                    placeholder="GSP Coordinator's Mobile Number" value="<?php echo $data["comobile"]; ?>">
         </div>
         <br>
