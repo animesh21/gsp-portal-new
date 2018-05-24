@@ -50,4 +50,13 @@ class School extends CI_Controller {
         //print_r($post);
     }
 	
+     public function schoolAnswer()
+    {
+        
+        $post = $this->input->post(); 
+        $this->Answer_model->submitSchoolAnswers($post);
+        redirect(base_url("general"));
+       
+    }	
+	
 }
