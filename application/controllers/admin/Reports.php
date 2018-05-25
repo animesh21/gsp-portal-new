@@ -67,22 +67,22 @@ session->userdata('ADMIN_ID') == '') {
 	    $data['states'] = getStates();
 	    $data['states'][0] = "All";
 		$state1=$this->input->post('state1');
-		$state2=$this->input->post('state2');
+		//$state2=$this->input->post('state2');
 		$data['state_id1'] = $this->input->post('state1');
-		$data['state_id2'] = $this->input->post('state2');
+		//$data['state_id2'] = $this->input->post('state2');
 	    $data['main'] = 'admin/reports/report2-graphs';
         $data['title'] = 'Participation By State';
 		$data['registerd_audit_1']=$this->Report->singleregisterparticipationByZone($state1);
 		$data['total_started_audit_1']=$this->Report->singlestartparticipationByZone($state1);
 		$data['completed_1']=$this->Report->singlecompleteparticipationByZone($state1);
 		$data['total_notstarted_audit_1']=$this->Report->singlenotstartparticipationByZone($state1);
-		/***************/
+		/**************
 		$data['registerd_audit_2']=$this->Report->singleregisterparticipationByZone($state2);
 		$data['total_started_audit_2']=$this->Report->singlestartparticipationByZone($state2);
 		$data['completed_2']=$this->Report->singlecompleteparticipationByZone($state2);
-		$data['total_notstarted_audit_2']=$this->Report->singlenotstartparticipationByZone($state2);
+		$data['total_notstarted_audit_2']=$this->Report->singlenotstartparticipationByZone($state2);*/
 		$data['stateId1']=$state1;
-		$data['stateId2']=$state2;
+		//$data['stateId2']=$state2;
 		$this->load->view('admin/includes/template', $data);
 	}
 	
