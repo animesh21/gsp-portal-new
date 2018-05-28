@@ -18,7 +18,8 @@ class School_model extends CI_Model
         if ($query->num_rows() > 0) {
             $row = $query->row();
             $school = array(
-                'userid' => $row->userid,
+		'userid' => $row->userid,     
+                'udise' => $row->udise,
                 'name' => $row->name,
                 'address1' => $row->address1,
                 'address2' => $row->address2,
