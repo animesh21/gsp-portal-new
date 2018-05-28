@@ -519,24 +519,3 @@
             });
         </script>
 	<script src="http://jwpsrv.com/library/A7o4ns39EeS3agp+lcGdIw.js"></script>
-<div>
-  <button id="button">Play</button>
-</div>
-
-<audio id="player">
-  <source src='<?php echo base_url(); ?>assets/sad.mp3;' type='audio/mp3'/>
-</audio>
-<script type='text/javascript'>
-   var button = document.getElementById("button");
-var audio = document.getElementById("player");
-
-button.addEventListener("click", function(){
-  if(audio.paused){
-    audio.play();
-    button.innerHTML = "Pause";
-  } else {
-    audio.pause();
-    button.innerHTML = "Play";
-  }
-});
-</script>    
