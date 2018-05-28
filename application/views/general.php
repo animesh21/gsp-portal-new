@@ -522,7 +522,7 @@
 
 <script type='text/javascript'>
     jwplayer('playerzpumcZwzBZKD').setup({
-        file: '<?php echo base_url() ?>assets/img/jana_gana_mana.mp3',
+        file: '<?php echo base_url() ?>assets/sad.mp3',
         image: '<?php echo base_url() ?>assets/img/download.jpg',
         width: '30%',
         aspectratio: '16:9'
