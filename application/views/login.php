@@ -169,6 +169,7 @@
     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
   </div>
 </div>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.5.min.js" type="text/javascript"></script>
 <script type="text/javascript">
             $(document).ready(function () {
                 $('#btnForgetPassword').on('click', function () {
