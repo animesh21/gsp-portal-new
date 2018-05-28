@@ -61,7 +61,12 @@ function checkUpdate(){
         >
             <strong><?php echo $this->session->flashdata('error'); ?></strong>
         </div>
-
+        <div class="form-group">
+      <label for="username" class="text-red"><span class="cube">0</span>UDISE Code of the School / Institution:</label>
+      <div class="clearfix">&nbsp;</div>
+      <input type="text" class="form-control text empty" name="udise" id="udise"
+                   placeholder="UDISE Code of the School / Institution" value="<?php echo $data["udise"]; ?>" readonly>
+    </div><br/>
         <div class="form-group">
             <label for="username" class="text-red"><span class="cube">1</span>Name of the School / Institution:</label>
             <div class="clearfix">&nbsp;</div>
