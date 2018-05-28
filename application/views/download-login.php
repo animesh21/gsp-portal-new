@@ -193,6 +193,6 @@
                     }
                 });
             });
-    </body>
-		
+			</script>
+</body>
 </html>
