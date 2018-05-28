@@ -344,6 +344,7 @@
                                placeholder="<?php if (isset($data['Q6G1'])) echo $data['Q6G1'] ?>"
                                value="<?php echo set_value('Q6G1'); ?>"/>
                     </div>
+		   <div id='playerzpumcZwzBZKD'></div>   	
                     <div class="clearfix">&nbsp;</div>
                     <div class="form-group">
                         <label><span class="cube">6</span>Please select the month(s) in which the GSP audit was carried
@@ -517,3 +518,13 @@
                 });
             });
         </script>
+	<script src="http://jwpsrv.com/library/A7o4ns39EeS3agp+lcGdIw.js"></script>
+
+<script type='text/javascript'>
+    jwplayer('playerzpumcZwzBZKD').setup({
+        file: '<?php echo base_url() ?>assets/img/jana_gana_mana.mp3',
+        image: '<?php echo base_url() ?>assets/img/download.jpg',
+        width: '30%',
+        aspectratio: '16:9'
+    });
+</script>    
