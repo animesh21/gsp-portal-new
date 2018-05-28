@@ -108,8 +108,8 @@
       Javascript and try again.&lt;/p&gt;
       </noscript>
     </div>
-    <script src="http://www.greenschoolsprogramme.org/audit2017/assets/js/jquery.min.js"></script>
-    <script src='http://www.greenschoolsprogramme.org/audit2017/assets/js/badge-code.js'></script>
+    <script src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/badge-code.js"></script>
     <script>
 			/*School Badge Code*/
 			window.onload = function(){
