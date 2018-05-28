@@ -2074,7 +2074,7 @@ if (isset($data['Q9A1']))
 	   sumFloorAreaBeingVentilated= parseFloat(sumFloorAreaBeingVentilated) + parseFloat($("#Q5A"+i+"S4").attr("placeholder"));
 	  }
 	}
-	$("#Q5A110S4").val(Math.ceil(sumFloorAreaBeingVentilated));
+	$("#Q5A110S4").val(sumFloorAreaBeingVentilated.toFixed(2));
  });
 /*This Function Used For Accpect Student Grade 1 to 12*/ 
   $("#Q3A1S3").change(function (event) {
