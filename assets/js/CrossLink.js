@@ -4545,8 +4545,7 @@ $(document).ready(function(){
                 event.preventDefault();
             }
             var radioCheck = $("input[name=Q5F1]:checked").val();
-		console.log(radioCheck);
-		console.log('guru');
+		
             if(radioCheck != 'Y' && radioCheck != 'N')
             {
                 alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 2");
@@ -4555,9 +4554,9 @@ $(document).ready(function(){
                 event.preventDefault();
             }
             else if(radioCheck == 'Y')
-            {   console.log('hello'); console.log(radioCheck);
+            {   
                 var radioCheck = $("input[name=Q5F1S1]:checked").val();
-			    console.log(radioCheck);
+			   
                 if(radioCheck != 1 && radioCheck != 2 && radioCheck != 3)
                 {
                     alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 3");
