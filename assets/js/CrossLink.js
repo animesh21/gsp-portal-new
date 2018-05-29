@@ -4545,6 +4545,8 @@ $(document).ready(function(){
                 event.preventDefault();
             }
             var radioCheck = $("input[name=Q5F1]:checked").val();
+		console.log(radioCheck);
+		console.log('guru');
             if(radioCheck != 'Y' && radioCheck != 'N')
             {
                 alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 2");
