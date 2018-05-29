@@ -105,7 +105,7 @@ function checkUpdate(){
         <div class="form-group">
             <label for="username" class="control-label"><span class="cube">6</span>District:</label>
             <div class="clearfix">&nbsp;</div>
-            <?php echo form_dropdown('district', $cities, set_value("district", $data["district"]), array('class' => 'form-control', 'id' => 'city-select','onchange' => 'checkUpdate();')); ?>
+            <?php echo form_dropdown('district', $cities, set_value("district", $data["district"]), array('class' => 'form-control', 'id' => 'city-select','onchange' => 'checkUpdate();','disabled'=>'')); ?>
             <!--input type="text" name="username" id="username" class="text empty" tabindex="1"  placeholder="District" value="<?php echo $data["district"]; ?>" -->
         </div>
         <br>
