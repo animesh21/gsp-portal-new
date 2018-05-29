@@ -130,11 +130,11 @@ function checkUpdate(){
             </div>
             <div class="col-xs-2">
                 <input type="text" name="std" class="form-control" id="std" tabindex="1" placeholder="Std Code"
-                       value="<?php echo $data["std"]; ?>" min="000" title="Only digits in range 3 to 6 is allowed" readonly>
+                       value="<?php echo $data["std"]; ?>" min="000" title="Only digits in range 3 to 6 is allowed" readonly="">
             </div>
             <div class="col-xs-8">
                 <input type="text" name="telephone" class="form-control" id="telephone" tabindex="1"
-                       placeholder="Telephone" value="<?php echo $data["telephone"]; ?>" readonly>
+                       placeholder="Telephone" value="<?php echo $data["telephone"]; ?>" readonly="">
             </div>
         </div>
         <br>
@@ -143,15 +143,14 @@ function checkUpdate(){
         <div class="form-group">
             <label for="username" class="control-label"><span class="cube">10</span>Enter Mobile number:</label>
             <div class="clearfix">&nbsp;</div>
-            <input type="text" name="mobile" class="text empty" id="mobile" tabindex="1" placeholder="Mobile Number"
-                   value="<?php echo $data["mobile"]; ?>" readonly>
+            <input type="text" name="mobile" class="text empty" id="mobile" tabindex="1" placeholder="Mobile Number" value="<?php echo $data["mobile"]; ?>" readonly="">
         </div>
         <br>
         <div class="form-group">
             <label for="username" class="control-label"><span class="cube">11</span>Principal's Name:</label>
             <div class="clearfix">&nbsp;</div>
             <input type="text" name="principle_name" class="text empty" id="principle_name" tabindex="1"
-                   placeholder="Principal's Name:" value="<?php echo $data["principle_name"]; ?>" onchange = 'checkUpdate();' readonly>
+                   placeholder="Principal's Name:" value="<?php echo $data["principle_name"]; ?>" onchange = 'checkUpdate();' readonly="">
         </div>
         <br>
         <div class="form-group">
