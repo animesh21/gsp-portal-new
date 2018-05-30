@@ -1083,7 +1083,7 @@
     <tbody>
       <?php foreach ($pucCertificate as $a) { ?>
       <tr id="index<?php echo $a->id; ?>">
-        <td><iframe style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="50" height="50"></iframe></td>
+        <td><iframe style="width:62px; height:46px;" src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="50" height="50"></iframe></td>
         <?php $Text = str_replace(" ", "_", $a->name . "_PUC_Certificate_"); ?>
         <td class="upload edit"><?php echo str_replace($Text, " ", $a->file_name); ?></td>
         <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $a->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
@@ -1295,7 +1295,7 @@
   <tbody>
     <?php foreach ($filesfules as $a) { ?>
     <tr id="index<?php echo $a->id; ?>">
-      <td><iframe style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="50" height="50"></iframe></td>
+      <td><iframe style="width:62px; height:46px;" src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="50" height="50"></iframe></td>
       <?php $Text = str_replace(" ", "_", $a->name . "_Fuels_"); ?>
       <td class="upload edit"><?php echo str_replace($Text, " ", $a->file_name); ?></td>
       <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $a->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
@@ -1863,7 +1863,7 @@ if (isset($data['Q9A1']))
   <tbody>
     <?php foreach ($airQualityMonitering as $f) { ?>
     <tr id="index<?php echo $f->id; ?>">
-      <td><iframe style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" width="50" height="50"></iframe></td>
+      <td><iframe style="width:62px; height:46px;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" width="50" height="50"></iframe></td>
       <?php $name = str_replace(" ", "_", $f->name . "_Air_Quality_Monitoring_"); ?>
       <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
       <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
@@ -1886,8 +1886,7 @@ if (isset($data['Q9A1']))
         echo "style=\"display: none;\"";
 
     } ?>
-
->
+ >
   <label class="control-label"><span class="cube">6(a)</span>If No, is there an air quality monitoring
   station
   (private or government) close to your school?</label>
@@ -1935,7 +1934,7 @@ if (isset($data['Q9A1']))
   <tbody>
     <?php foreach ($files as $f) { ?>
     <tr id="index<?php echo $f->id; ?>">
-      <td><iframe style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" width="50" height="50"></iframe></td>
+      <td><iframe style="width:62px; height:46px;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" width="50" height="50"></iframe></td>
       <?php $name = str_replace(" ", "_", $f->name . "_Supporting_Document_Air_"); ?>
       <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
       <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
