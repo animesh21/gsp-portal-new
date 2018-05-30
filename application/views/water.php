@@ -978,8 +978,17 @@ To understand water, it is important to know the source of water in your school 
   <tbody>
     <?php foreach ($task4supporting as $f) { ?>
     <tr id="index<?php echo $f->id; ?>">
-	  <td> <iframe style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" width="50" height="50"></iframe></td>	
-      <?php $name = str_replace(" ", "_", $f->name . "_Task_4_Supporting_docs_"); ?>
+      <?php 
+            $array = explode('.',$f->file_name); 
+            $count = count($array);
+            $extension = $array[$count-1];
+            ?>
+       <?php if($extension == "jpg" || $extension == "jpeg"){ ?>	    
+      <td> <img style="width:62px; height:46px;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" /></td>	
+       <?php }else{ ?>
+	<td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
+      <?php }?>   
+   <?php $name = str_replace(" ", "_", $f->name . "_Task_4_Supporting_docs_"); ?>
       <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
       <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
       <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
@@ -1836,8 +1845,16 @@ To understand water, it is important to know the source of water in your school 
     <tbody>
       <?php foreach ($waterTreatment as $f) { ?>
       <tr id="index<?php echo $f->id; ?>">
-		<td> <iframe style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" width="50" height="50"></iframe></td>
-       
+	  <?php 
+            $array = explode('.',$f->file_name); 
+            $count = count($array);
+            $extension = $array[$count-1];
+            ?>
+       <?php if($extension == "jpg" || $extension == "jpeg"){ ?>    
+	<td> <img style="width:62px; height:46px;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" /></td>
+       <?php }else{ ?>
+	<td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
+      <?php }?>
         <?php $name = str_replace(" ", "_", $f->name . "_Water_Treatment_Process_"); ?>
         <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
         <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
@@ -2580,8 +2597,16 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
       <tbody>
         <?php foreach ($flowChartHandDrawn as $f) { ?>
         <tr id="index<?php echo $f->id; ?>">
-		  <td> <iframe style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" width="50" height="50"></iframe></td>
-     	
+	<?php 
+            $array = explode('.',$f->file_name); 
+            $count = count($array);
+            $extension = $array[$count-1];
+            ?>
+       <?php if($extension == "jpg" || $extension == "jpeg"){ ?>	
+	<td> <img style="width:62px; height:46px;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" /></td>
+     	<?php }else{ ?>
+	<td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
+      <?php }?>
           <?php $name = str_replace(" ", "_", $f->name . "_Flow_Chart_Hand_Drwan_"); ?>
           <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
           <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
@@ -2619,8 +2644,17 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
       <tbody>
         <?php foreach ($supportDocWater as $f) { ?>
         <tr id="index<?php echo $f->id; ?>">
-		  <td> <iframe style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" width="50" height="50"></iframe></td>	
-          <?php $name = str_replace(" ", "_", $f->name . "_Supporting_Document_Water_"); ?>
+	 <?php 
+            $array = explode('.',$f->file_name); 
+            $count = count($array);
+            $extension = $array[$count-1];
+            ?>
+       <?php if($extension == "jpg" || $extension == "jpeg"){ ?>	
+	  <td> <img style="width:62px; height:46px;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" /></td>	
+        <?php }else{ ?>
+	<td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
+      <?php }?> 
+	<?php $name = str_replace(" ", "_", $f->name . "_Supporting_Document_Water_"); ?>
           <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
           <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
           <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
