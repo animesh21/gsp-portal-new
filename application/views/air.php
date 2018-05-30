@@ -1944,11 +1944,10 @@ if (isset($data['Q9A1']))
     <?php foreach ($files as $f) { ?>
     <tr id="index<?php echo $f->id; ?>">
       <?php 
-	   echo '<pre>'; 
-	    print_r($f); 		  
-            $array = explode('.',$f->name); 
+	    		  
+            $array = explode('.',$f->file_name); 
             $count = count($array);
-	   echo $count; echo $f->name; echo '<pre>'; print_r($array);			  
+	  // echo $count; echo $f->name; echo '<pre>'; print_r($array);			  
             $extension = $array[$count-1];
             ?>
     <?php if($extension == "jpg" || $extension == "jpeg"){ ?>	    
