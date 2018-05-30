@@ -1934,6 +1934,7 @@ if (isset($data['Q9A1']))
   <tbody>
     <?php foreach ($files as $f) { ?>
     <tr id="index<?php echo $f->id; ?>">
+    	    
       <td><iframe style="width:62px; height:46px;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" width="50" height="50"></iframe></td>
       <?php $name = str_replace(" ", "_", $f->name . "_Supporting_Document_Air_"); ?>
       <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
