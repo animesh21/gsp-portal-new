@@ -2092,7 +2092,7 @@ if (isset($data['Q9A1']))
 	   sumFloorAreaBeingVentilated= parseFloat(sumFloorAreaBeingVentilated) + parseFloat($("#Q5A"+i+"S4").attr("placeholder"));
 	  }
 	}
-	$("#Q5A110S4").val(sumFloorAreaBeingVentilated.toFixed(2));
+	$("#Q5A110S4").val(sumFloorAreaBeingVentilated);
  });
 /*This Function Used For Accpect Student Grade 1 to 12*/ 
   $("#Q3A1S3").change(function (event) {
@@ -2105,5 +2105,135 @@ if (isset($data['Q9A1']))
 			else{
 			 alert("School must enter grade between 1-12");
 			}
+});
+$("#Q3A2S3").change(function (event) {
+     if($("#Q3A2S3").attr("placeholder")>1 && $("#Q3A2S3").attr("placeholder") <13){
+	 $(this).val($(this).val().replace(/[^0-9\.]/g,''));
+            if ((event.which != 46 || $(this).val().indexOf('.') != -1) && (event.which < 48 || event.which > 57)) {
+                event.preventDefault();
+            }
+			}
+			else{
+			 alert("School must enter grade between 1-12");
+			}
+});
+$("#Q3A3S3").change(function (event) {
+     if($("#Q3A3S3").attr("placeholder")>1 && $("#Q3A3S3").attr("placeholder") <13){
+	 $(this).val($(this).val().replace(/[^0-9\.]/g,''));
+            if ((event.which != 46 || $(this).val().indexOf('.') != -1) && (event.which < 48 || event.which > 57)) {
+                event.preventDefault();
+            }
+			}
+			else{
+			 alert("School must enter grade between 1-12");
+			}
+});
+$("#Q3A4S3").change(function (event) {
+     if($("#Q3A4S3").attr("placeholder")>1 && $("#Q3A4S3").attr("placeholder") <13){
+	 $(this).val($(this).val().replace(/[^0-9\.]/g,''));
+            if ((event.which != 46 || $(this).val().indexOf('.') != -1) && (event.which < 48 || event.which > 57)) {
+                event.preventDefault();
+            }
+			}
+			else{
+			 alert("School must enter grade between 1-12");
+			}
+});
+$("#Q3A5S3").change(function (event) {
+     if($("#Q3A5S3").attr("placeholder")>1 && $("#Q3A5S3").attr("placeholder") <13){
+	 $(this).val($(this).val().replace(/[^0-9\.]/g,''));
+            if ((event.which != 46 || $(this).val().indexOf('.') != -1) && (event.which < 48 || event.which > 57)) {
+                event.preventDefault();
+            }
+			}
+			else{
+			 alert("School must enter grade between 1-12");
+			}
+});
+$("#Q3A6S3").change(function (event) {
+     if($("#Q3A6S3").attr("placeholder")>1 && $("#Q3A6S3").attr("placeholder") <13){
+	 $(this).val($(this).val().replace(/[^0-9\.]/g,''));
+            if ((event.which != 46 || $(this).val().indexOf('.') != -1) && (event.which < 48 || event.which > 57)) {
+                event.preventDefault();
+            }
+			}
+			else{
+			 alert("School must enter grade between 1-12");
+			}
+});
+$("#Q3A7S3").change(function (event) {
+     if($("#Q3A7S3").attr("placeholder")>1 && $("#Q3A7S3").attr("placeholder") <13){
+	 $(this).val($(this).val().replace(/[^0-9\.]/g,''));
+            if ((event.which != 46 || $(this).val().indexOf('.') != -1) && (event.which < 48 || event.which > 57)) {
+                event.preventDefault();
+            }
+			}
+			else{
+			 alert("School must enter grade between 1-12");
+			}
+});
+$("#Q3A8S3").change(function (event) {
+     if($("#Q3A8S3").attr("placeholder")>1 && $("#Q3A8S3").attr("placeholder") <13){
+	 $(this).val($(this).val().replace(/[^0-9\.]/g,''));
+            if ((event.which != 46 || $(this).val().indexOf('.') != -1) && (event.which < 48 || event.which > 57)) {
+                event.preventDefault();
+            }
+			}
+			else{
+			 alert("School must enter grade between 1-12");
+			}
+});
+$("#Q3A9S3").change(function (event) {
+     if($("#Q3A9S3").attr("placeholder")>1 && $("#Q3A9S3").attr("placeholder") <13){
+	 $(this).val($(this).val().replace(/[^0-9\.]/g,''));
+            if ((event.which != 46 || $(this).val().indexOf('.') != -1) && (event.which < 48 || event.which > 57)) {
+                event.preventDefault();
+            }
+			}
+			else{
+			 alert("School must enter grade between 1-12");
+			}
+});
+$("#Q3A10S3").change(function (event) {
+     if($("#Q3A10S3").attr("placeholder")>1 && $("#Q3A10S3").attr("placeholder") <13){
+	 $(this).val($(this).val().replace(/[^0-9\.]/g,''));
+            if ((event.which != 46 || $(this).val().indexOf('.') != -1) && (event.which < 48 || event.which > 57)) {
+                event.preventDefault();
+            }
+			}
+			else{
+			 alert("School must enter grade between 1-12");
+			}
+});
+/*Teacher Record Validation*/
+/*Teachers (maximum of three teachers can be part of the team): */
+$("#airnext").click(function(){
+   if($("#Q1A1S1").val()=="" || $("#Q1A1S1").attr('placeholder')=="" && $("#Q1A2S1").val()=="" || $("#Q1A2S1").attr('placeholder')=="" && $("#Q1A3S1").val()=="" || $("#Q1A3S1").attr('placeholder')==""){ 
+    alert("School Must Add Teacher First Name.");
+   }
+    if($("#Q1A1S3").val()=="" || $("#Q1A1S3").attr('placeholder')=="" && $("#Q1A2S3").val()=="" || $("#Q1A2S3").attr('placeholder')=="" && $("#Q1A3S3").val()=="" || $("#Q1A3S3").attr('placeholder')==""){ 
+    alert("School Must Add Teacher Last Name.");
+   }
+   if($("#Q1A1S2").val()=="" || $("#Q1A1S2").attr('placeholder')=="" && $("#Q1A2S2").val()=="" || $("#Q1A2S2").attr('placeholder')=="" && $("#Q1A3S2").val()=="" || $("#Q1A3S2").attr('placeholder')==""){ 
+    alert("School Must Add Teacher Email ID.");
+   }
+});
+/*Administrative Record Validation*/
+/*Administrative staff (maximum of five staff can be part of the team): */
+$("#airnext").click(function(){
+   if($("#Q2A1S1").val()=="" || $("#Q2A1S1").attr('placeholder')=="" && $("#Q2A2S1").val()=="" || $("#Q2A2S1").attr('placeholder')=="" && $("#Q2A3S1").val()=="" || $("#Q2A3S1").attr('placeholder')=="" && $("#Q2A4S1").val()=="" || $("#Q2A4S1").attr('placeholder')=="" && $("#Q2A5S1").val()=="" || $("#Q2A5S1").attr('placeholder')==""){ 
+    alert("School Must Add Administrative Staff  First Name.");
+   }
+    if($("#Q2A1S3").val()=="" || $("#Q2A1S3").attr('placeholder')=="" && $("#Q2A2S3").val()=="" || $("#Q2A2S3").attr('placeholder')=="" && $("#Q2A3S3").val()=="" || $("#Q2A3S3").attr('placeholder')=="" && $("#Q2A4S3").val()=="" || $("#Q2A4S3").attr('placeholder')=="" && $("#Q2A5S3").val()=="" || $("#Q2A5S3").attr('placeholder')==""){ 
+    alert("School Must Add Administrative Staff Last Name.");
+   }
+   if($("#Q2A1S2").val()=="" || $("#Q2A1S2").attr('placeholder')=="" && $("#Q2A2S2").val()=="" || $("#Q2A2S2").attr('placeholder')=="" && $("#Q2A3S2").val()=="" || $("#Q2A3S2").attr('placeholder')=="" && $("#Q2A4S2").val()=="" || $("#Q2A4S2").attr('placeholder')=="" && $("#Q2A5S2").val()=="" || $("#Q2A5S2").attr('placeholder')==""){ 
+    alert("School Must Add Administrative Staff Email ID.");
+   }
+});
+$("#Q2A1S1").on("change",function(){
+    if($("#Q2A1S1").val()==""){
+    $("#airnext").prop("disabled",true);
+	}
 });
 </script>
