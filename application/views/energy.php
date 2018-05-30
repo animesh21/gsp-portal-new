@@ -1031,8 +1031,16 @@ else echo "0"; ?>"
     <tbody>
         <?php foreach ($fulesBills as $f) { ?>
             <tr id="index<?php echo $f->id; ?>">
-		<td> <iframe style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" width="50" height="50"></iframe></td>
-         
+		<?php 
+	    	    $array = explode('.',$f->file_name); 
+		    $count = count($array);
+		   $extension = $array[$count-1];
+                ?>
+		<?php if($extension == "jpg" || $extension == "jpeg"){ ?>    
+		<td> <img style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" /></td>
+                <?php }else{ ?>
+	     <td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
+               <?php }?> 
                 <?php $name = str_replace(" ", "_", $f->name . "_Fuels_Bills_"); ?>
 				
                 <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
@@ -1204,8 +1212,17 @@ else echo "0"; ?>"
                 <tbody>
                     <?php foreach ($appliancesBills as $f) { ?>
                         <tr id="index<?php echo $f->id; ?>">
-			  <td> <iframe style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" width="50" height="50"></iframe></td>
-     	
+			<?php 
+	    		  
+			    $array = explode('.',$f->file_name); 
+			    $count = count($array);
+			  $extension = $array[$count-1];
+			    ?>
+            <?php if($extension == "jpg" || $extension == "jpeg"){ ?>	
+			  <td> <img style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" /></td>
+     	     <?php }else{ ?>
+	<td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
+            <?php }?> 
                             <?php $name = str_replace(" ", "_", $f->name . "_Five_Star_Appliances_"); ?>
 							
                             <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
@@ -1281,8 +1298,17 @@ if (isset($data['Q9E1']))
     <tbody>
         <?php foreach ($alternativeResource as $f) { ?>
             <tr id="index<?php echo $f->id; ?>">
-		<td> <iframe style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" width="50" height="50"></iframe></td>
-    
+		<?php 
+	    		  
+		    $array = explode('.',$f->file_name); 
+		    $count = count($array);
+		  $extension = $array[$count-1];
+		    ?>
+    	<?php if($extension == "jpg" || $extension == "jpeg"){ ?>     
+		<td> <img style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" /></td>
+              <?php }else{ ?>
+	<td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
+      <?php }?>   
                 <?php $name = str_replace(" ", "_", $f->name . "_Alternative_Source_of_Energy_"); ?>
 				
                 <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
@@ -1383,8 +1409,17 @@ if (isset($data['Q9E1']))
                 <tbody>
                     <?php foreach ($energySupport as $f) { ?>
                         <tr id="index<?php echo $f->id; ?>">
-			    <td> <iframe style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" width="50" height="50"></iframe></td>
-	
+			  <?php 
+	    		  
+			    $array = explode('.',$f->file_name); 
+			    $count = count($array);
+			  $extension = $array[$count-1];
+			    ?>
+		    <?php if($extension == "jpg" || $extension == "jpeg"){ ?>	
+			    <td> <img style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" /></td>
+	            <?php }else{ ?>
+		<td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
+	      <?php }?> 
                             <?php $name = str_replace(" ", "_", $f->name . "_Supporting_Document_Energy_"); ?>
 							
                             <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
