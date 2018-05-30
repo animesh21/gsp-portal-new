@@ -1866,7 +1866,7 @@ if (isset($data['Q9A1']))
        <?php 
             $array = explode('.',$f->name); 
             $count = count($array);
-            $extension = $array[$count];
+            $extension = $array[$count-1];
             ?>
        <?php if($extension == "jpg" || $extension == "jpeg"){ ?>	    
       <td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" /></td>
@@ -1946,7 +1946,7 @@ if (isset($data['Q9A1']))
       <?php 
             $array = explode('.',$f->name); 
             $count = count($array);
-            $extension = $array[$count];
+            $extension = $array[$count-1];
             ?>
     <?php if($extension == "jpg" || $extension == "jpeg"){ ?>	    
       <td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" /></td>
