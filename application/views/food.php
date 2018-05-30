@@ -500,8 +500,18 @@
                     <tbody>
      <?php foreach ($midDayMeal as $f) { ?>
           <tr id="index<?php echo $f->id; ?>">
-	     <td> <iframe style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" width="50" height="50"></iframe></td>
-     	     <?php $name = str_replace(" ", "_", $f->name . "_Mid_Day_Meal_"); ?>
+	    <?php 
+	    		  
+            $array = explode('.',$f->file_name); 
+            $count = count($array);
+	  $extension = $array[$count-1];
+            ?>
+    <?php if($extension == "jpg" || $extension == "jpeg"){ ?>	  
+	     <td> <img style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" /></td>
+     <?php }else{ ?>
+	<td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
+      <?php }?>   
+	     <?php $name = str_replace(" ", "_", $f->name . "_Mid_Day_Meal_"); ?>
 	     <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
              <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
              <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
@@ -627,8 +637,16 @@ if (isset($data['Q5F1S1'])) {
                 <tbody>
 <?php foreach ($lunch as $u) { ?>
      <tr id="index<?php echo $u->id; ?>">
-	<td> <iframe style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $u->file_name ?>" class="img-responsive" width="50" height="50"></iframe></td>
-       
+	 <?php 
+	    		  
+            $array = explode('.',$u->file_name); 
+            $count = count($array);
+	  $extension = $array[$count-1];
+            ?>    
+	<td> <img style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $u->file_name ?>" class="img-responsive" /></td>
+        <?php }else{ ?>
+	<td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
+      <?php }?>  
     <?php $name = str_replace(" ", "_", $u->name . "_Lunch_Boxes_"); ?>
 																																																											
              <td class="upload edit"><?php echo str_replace($name, "", $u->file_name); ?></td>
@@ -1495,8 +1513,17 @@ if (isset($data['Q4F1']))
     <tbody>
         <?php foreach ($canteen as $f) { ?>
             <tr id="index<?php echo $f->id; ?>">
-	        <td> <iframe style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" width="50" height="50"></iframe></td>
-                <?php $name = str_replace(" ", "_", $f->name . "_Canteen_Food_Items_"); ?>
+		<?php 
+	    	   $array = explode('.',$f->file_name); 
+		    $count = count($array);
+		  $extension = $array[$count-1];
+		    ?>
+	    <?php if($extension == "jpg" || $extension == "jpeg"){ ?>    
+	        <td> <img style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" /></td>
+             <?php }else{ ?>
+	<td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
+      <?php }?>    
+		<?php $name = str_replace(" ", "_", $f->name . "_Canteen_Food_Items_"); ?>
                 <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
                 <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
                 <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
@@ -1984,8 +2011,17 @@ if (isset($data['Q11F1'])) {
                                                                                                             <tbody>
 <?php foreach ($files as $f) { ?>
   <tr id="index<?php echo $f->id; ?>">
-    <td> <iframe style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" width="50" height="50"></iframe></td>
-     	  
+  <?php 
+	    		  
+            $array = explode('.',$f->file_name); 
+            $count = count($array);
+	  $extension = $array[$count-1];
+            ?>
+    <?php if($extension == "jpg" || $extension == "jpeg"){ ?>	  
+    <td> <img style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" /></td>
+    <?php }else{ ?>
+	<td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
+      <?php }?> 	  
     <?php $name = str_replace(" ", "_", $f->name . "_Audit_Team_doing_Survey_"); ?>
 																																																											
      <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
@@ -2201,7 +2237,17 @@ if (isset($data['Q13F1'])) {
                                                                                                             <tbody>
 <?php foreach ($uppc as $u) { ?>
     <tr id="index<?php echo $u->id; ?>">
-    <td> <iframe style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $u->file_name ?>" class="img-responsive" width="50" height="50"></iframe></td>	    
+   <?php 
+	    		  
+            $array = explode('.',$u->file_name); 
+            $count = count($array);
+	  $extension = $array[$count-1];
+            ?>
+    <?php if($extension == "jpg" || $extension == "jpeg"){ ?> 	    
+    <td> <img style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $u->file_name ?>" class="img-responsive" /></td>	    
+    <?php }else{ ?>
+	<td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
+      <?php }?>
     <?php $name = str_replace(" ", "_", $u->name . "_UPPF_"); ?>
 																																																											
     <td class="upload edit"><?php echo str_replace($name, "", $u->file_name); ?></td>
