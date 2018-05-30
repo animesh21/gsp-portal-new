@@ -1946,7 +1946,7 @@ if (isset($data['Q9A1']))
       <?php 
             $array = explode('.',$f->name); 
             $count = count($array);
-	   echo $count; echo '<pre>'; print_r($array);			  
+	   echo $count; echo $f->name; echo '<pre>'; print_r($array);			  
             $extension = $array[$count-1];
             ?>
     <?php if($extension == "jpg" || $extension == "jpeg"){ ?>	    
