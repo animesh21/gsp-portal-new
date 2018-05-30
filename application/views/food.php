@@ -1077,23 +1077,9 @@ if (isset($data['Q4F1']))
                                                                                             kind of food is being
                                                                                             served / sold in your
                                                                                             school? <a class="tt"
-                                                                                                       data-tooltip="For types and varieties of packaged food items, please mention each brand and flavor available in your school. For example, if Lay’s chips are available, mention if it is Baked, Herbs and onions, Original salted, Sunkissed tomatoes, American style cream and onion, etc. (Please note it is advisable not to have hawkers, vendors and shops selling ultra processed packaged items near the school.)"><span
+                                                                                                       data-tooltip="For types and varieties of packaged food items, please count each brand and flavor available in your school.For example, if Lay’s chips and five of its variants (Baked, Herbs and onions, Original salted, Sunkissed tomatoes, American style cream) are available, then please count as 5. (Please note it is advisable not to have hawkers, vendors and shops selling ultra processed packaged items near the school.)"><span
                                                                                                     class="badge">?</span></a> </label>
-                                                                                        <!--div class=" row">
-                <div class="col-xs-3">
-                 <label >Packaged food items served / sold inside school campus</label>
-
-               </div>
-               <div class="col-xs-3">
-                 <input class="form-control space-textbox" id="ex2" type="number" name="Q6F1S1" placeholder="<?php if (isset($data['Q6F1S1'])) echo $data['Q6F1S1'] ?>" value="<?php echo set_value('Q6F1S2'); ?>"/>
-               </div>
-               <div class="col-xs-3">
-                 <input class="form-control space-textbox" id="ex3" type="number" name="Q6F1S2" placeholder="<?php if (isset($data['Q6F1S2'])) echo $data['Q6F1S2'] ?>" value="<?php echo set_value('Q6F1S3'); ?>" />
-               </div>
-               <div class="col-xs-3">
-                 <input class="form-control space-textbox" id="ex3" type="text" name="Q6F1S3" placeholder="<?php if (isset($data['Q6F1S3'])) echo $data['Q6F1S3'] ?>" value="<?php echo set_value('Q6F1S4'); ?>"/>
-               </div>
-             </div-->
+                                                                        
                                                                                         <table class="table">
                                                                                             <tr>
                                                                                                 <th width="442px">Packaged food items served / sold inside school campus</th>
@@ -1403,14 +1389,7 @@ if (isset($data['Q4F1']))
                                                                                                                             snacks</label>
                                                                                                                     </div>
                                                                                                                     <div class="col-xs-5">
-                                                                                                                        <label>Number
-                                                                                                                            of
-                                                                                                                            servings
-                                                                                                                            sold
-                                                                                                                            when
-                                                                                                                            on
-                                                                                                                            the
-                                                                                                                            menu</label>
+                                                                                                                        <label>Number of servings sold when on the menu</label>
                                                                                                                     </div>
                                                                                                                 </div>
                                                                                                                 <div class="form-group row">
@@ -1418,7 +1397,7 @@ if (isset($data['Q4F1']))
                                                                                                                         <label>Samosas</label>
                                                                                                                     </div>
                                                                                                                     <div class="col-xs-5">
-                                                                                                                        <input class="form-control space-textbox"
+                                                                                                               <input class="form-control space-textbox"
                                                                                                                                id="Q7F1S1"
                                                                                                                                type="number"
                                                                                                                                name="Q7F1S1"
