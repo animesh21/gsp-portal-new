@@ -1083,8 +1083,17 @@
     <tbody>
       <?php foreach ($pucCertificate as $a) { ?>
       <tr id="index<?php echo $a->id; ?>">
-        <td><iframe style="width:62px; height:46px;" src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="50" height="50"></iframe></td>
-        <?php $Text = str_replace(" ", "_", $a->name . "_PUC_Certificate_"); ?>
+	<?php 
+	    $array = explode('.',$a->file_name); 
+            $count = count($array);
+	    $extension = $array[$count-1];
+            ?>	
+    <?php if($extension == "jpg" || $extension == "jpeg"){ ?>	      
+        <td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" /></td>
+     <?php }else{ ?>
+	<td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
+      <?php }?>  
+	 <?php $Text = str_replace(" ", "_", $a->name . "_PUC_Certificate_"); ?>
         <td class="upload edit"><?php echo str_replace($Text, " ", $a->file_name); ?></td>
         <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $a->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
         <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name; ?>" download="<?php echo $a->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
@@ -1295,7 +1304,16 @@
   <tbody>
     <?php foreach ($filesfules as $a) { ?>
     <tr id="index<?php echo $a->id; ?>">
-      <td><iframe style="width:62px; height:46px;" src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="50" height="50"></iframe></td>
+      <?php 
+	    $array = explode('.',$a->file_name); 
+            $count = count($array);
+	    $extension = $array[$count-1];
+            ?>	
+    <?php if($extension == "jpg" || $extension == "jpeg"){ ?>	    
+      <td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" /></td>
+      <?php }else{ ?>
+	<td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
+      <?php }?>
       <?php $Text = str_replace(" ", "_", $a->name . "_Fuels_"); ?>
       <td class="upload edit"><?php echo str_replace($Text, " ", $a->file_name); ?></td>
       <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $a->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
@@ -1864,7 +1882,7 @@ if (isset($data['Q9A1']))
     <?php foreach ($airQualityMonitering as $f) { ?>
     <tr id="index<?php echo $f->id; ?>">
        <?php 
-            $array = explode('.',$f->name); 
+            $array = explode('.',$f->file_name); 
             $count = count($array);
             $extension = $array[$count-1];
             ?>
@@ -1947,8 +1965,7 @@ if (isset($data['Q9A1']))
 	    		  
             $array = explode('.',$f->file_name); 
             $count = count($array);
-	  // echo $count; echo $f->name; echo '<pre>'; print_r($array);			  
-            $extension = $array[$count-1];
+	  $extension = $array[$count-1];
             ?>
     <?php if($extension == "jpg" || $extension == "jpeg"){ ?>	    
       <td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" /></td>
