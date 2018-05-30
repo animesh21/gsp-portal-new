@@ -1975,7 +1975,7 @@ if (isset($data['Q9A1']))
       <?php $name = str_replace(" ", "_", $f->name . "_Supporting_Document_Air_"); ?>
       <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
       <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
-      <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" ><span class="glyphicon glyphicon-download-alt"></span></a></td>
+      <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
     </tr>
     <?php } ?>
   </tbody>
