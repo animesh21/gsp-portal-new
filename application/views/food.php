@@ -1735,25 +1735,12 @@ if (isset($data['Q4F1']))
 if (isset($data['Q9F1']))
     if ($data['Q9F1'] == 'Y') {
         ?>
-                                                                                                        <div class="form-group"
-                                                                                                             id="Q9F2">
-                                                                                                            <label class="control-label"><span
-                                                                                                                    class="cube">6(a)</span>Please
-                                                                                                                provide
-                                                                                                                details:<a
-                                                                                                                    class="tt"
-                                                                                                                    data-tooltip="For example, Kitkat chocolate as consolation prize or food/discount coupons of Dominos/Pizza Hut"
-                                                                                                                    href="#"><span
-                                                                                                                        class="badge">?</span></a></label>
-                                                                                                            <textarea
-                                                                                                                type="text"
-                                                                                                                rows="5"
-                                                                                                                id="Q9F2"
-                                                                                                                name="Q9F2"
-                                                                                                                placeholder="<?php if (isset($data['Q9F2'])) echo $data['Q9F2'] ?>"
-                                                                                                                value="<?php echo set_value('Q9F2'); ?>"></textarea>
-                                                                                                            <br>
-                                                                                                        </div>
+                                                                                         <div class="form-group" id="Q9F2">
+                                                                                           <label class="control-label"><span class="cube">6(a)</span>Please provide details:<a class="tt" data-tooltip="For example, Kitkat chocolate as consolation prize or food/discount coupons of Dominos/Pizza Hut"
+                                                                                                                    href="#"><span class="badge">?</span></a></label>
+                                                                                          <textarea type="text" rows="5" id="Q9F2" name="Q9F2" placeholder="<?php if (isset($data['Q9F2'])) echo $data['Q9F2'] ?>" value="<?php echo set_value('Q9F2'); ?>"></textarea>
+                                                                                           <br>
+                                                                                     </div>
         <?php
     }
 ?>
