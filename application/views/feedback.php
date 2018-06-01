@@ -279,7 +279,7 @@ if (isset($data['Q1Fe7'])) {
                            value="<?php echo set_value('Q1Fe711'); ?>"/>
         </div>
         <div class="form-group">
-            <label><span class="cube">8</span> Could you finish all the tasks in given period of time (August?October)?
+            <label><span class="cube">8</span> Could you finish all the tasks in given period of time (July to October)?
             </label>
             <ul class="list-inline">
                 <li>
