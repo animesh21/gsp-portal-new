@@ -107,7 +107,7 @@ class Report extends CI_Model {
 	{
 	   $this->db->where("state",$region);
 	   $this->db->where("percentage>",'70');
-	   $data=$this->db->select("COUNT(id) AS countlabel")->from('tbl_sendmail')->get()->row();
+	   $data=$this->db->select("COUNT(id) AS countlabel")->from('tbl_phase1-graph')->get()->row();
 	   return $data->countlabel;
 	  
 	}
@@ -118,7 +118,7 @@ class Report extends CI_Model {
 	   $this->db->where("state",$region);
 	   $this->db->where("percentage>=",'50');
 	   $this->db->where("percentage<=",'69.9');
-	   $data=$this->db->select("COUNT(id) AS countlabel")->from('tbl_sendmail')->get()->row();
+	   $data=$this->db->select("COUNT(id) AS countlabel")->from('tbl_phase1-graph')->get()->row();
 	   return $data->countlabel;
 	  
 	}
@@ -129,7 +129,7 @@ class Report extends CI_Model {
 	   $this->db->where("state",$region);
 	   $this->db->where("percentage>=",'35');
 	   $this->db->where("percentage<=",'49.9');
-	   $data=$this->db->select("COUNT(id) AS countlabel")->from('tbl_sendmail')->get()->row();
+	   $data=$this->db->select("COUNT(id) AS countlabel")->from('tbl_phase1-graph')->get()->row();
 	   return $data->countlabel;
 	  
 	}
@@ -139,7 +139,7 @@ class Report extends CI_Model {
 	{
 	   $this->db->where("state",$region);
 	   $this->db->where("percentage<=",'34.9');
-	   $data=$this->db->select("COUNT(id) AS countlabel")->from('tbl_sendmail')->get()->row();
+	   $data=$this->db->select("COUNT(id) AS countlabel")->from('tbl_phase1-graph')->get()->row();
 	   return $data->countlabel;
 	  
 	}
