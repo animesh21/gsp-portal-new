@@ -43,6 +43,7 @@ $(document).ready(function(){
     $("#Q6E2S1").change(function(){
         var min = document.getElementById('Q6A1Val').value;
         var val = $('#Q6E2S1').val();
+		var checkval = $('#dieselValidation').val();
         var placeholder = document.getElementById('Q6E2S1').placeholder;
 
 
@@ -55,37 +56,36 @@ $(document).ready(function(){
             else
                 val = placeholder;
 
+    if(checkval>0){
         if(val < 1 && min > 2)
         {
-
-            if (confirm("You have 1 or more vehicles with Petrol in air section, this value cannot be 0") == true)
+            if (confirm("You have 1 or more vehicles with Diesel in air section, this value cannot be 0") == true)
             {
                 $('#Q6E2S1').removeAttr('value');
                 $('#Q6E2S1').css('border-color', 'red');
-
+                $('#Q6E2S1').val(" ");
             }
             else
             {
-
+                $('#Q6E2S1').css('border-color', '#cad6e2');
             }
-
         }
         else
         {
             $('#Q6E2S1').css('border-color', 'solid 1px #cad6e2');
         }
-
-
+      }
     });
     $("#Q6E3S1").change(function(){
         var min = document.getElementById('Q6A1Val').value;
         var val = $('#Q6E3S1').val();
+		var checkval1 = $('#PetrolValidation').val();
         var placeholder = document.getElementById('Q6E3S1').placeholder;
 
 
         val = parseInt(val);
         placeholder = parseInt(placeholder);
-
+      if(checkval1>0){ 
         if(isNaN(val))
             if(isNaN(placeholder))
                 val = 0;
@@ -110,19 +110,20 @@ $(document).ready(function(){
         {
             $('#Q6E3S1').css('border-color', 'solid 1px #cad6e2');
         }
-
+	  }
 
     });
 
     $("#Q6E4S1").change(function(){
         var min = document.getElementById('Q6A1Val').value;
         var val = $('#Q6E4S1').val();
+		var checkval = $('#dieselValidation').val();
         var placeholder = document.getElementById('Q6E4S1').placeholder;
 
 
         val = parseInt(val);
         placeholder = parseInt(placeholder);
-
+      if(checkval1>0){ 
         if(isNaN(val))
             if(isNaN(placeholder))
                 val = 0;
@@ -147,7 +148,7 @@ $(document).ready(function(){
         {
             $('#Q6E4S1').css('border-color', 'solid 1px #cad6e2');
         }
-
+	  }
 
     });
 
