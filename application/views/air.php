@@ -1253,31 +1253,31 @@
       <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3D5"
                        type="number" min="0" name="Q6A2S3D5"
                        placeholder="<?php if (isset($data['Q6A2S3D5'])) echo $data['Q6A2S3D5'] ?>"
-                       value="<?php echo set_value('Q6A2S3D5'); ?>" readonly/></td>
+                       value="<?php if (isset($data['Q6A2S3D5'])) echo $data['Q6A2S3D5'] ?>" readonly/></td>
       <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3P5"
                        type="number" min="0" name="Q6A2S3P5"
                        placeholder="<?php if (isset($data['Q6A2S3P5'])) echo $data['Q6A2S3P5'] ?>"
-                       value="<?php echo set_value('Q6A2S3P5'); ?>" readonly/></td>
+                       value="<?php if (isset($data['Q6A2S3P5'])) echo $data['Q6A2S3P5'] ?>" readonly/></td>
       <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3L5"
                        type="number" min="0" name="Q6A2S3L5"
                        placeholder="<?php if (isset($data['Q6A2S3L5'])) echo $data['Q6A2S3L5'] ?>"
-                       value="<?php echo set_value('Q6A2S3L5'); ?>" readonly/></td>
+                       value="<?php if (isset($data['Q6A2S3L5'])) echo $data['Q6A2S3L5'] ?>" readonly/></td>
       <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3C5"
                        type="number" min="0" name="Q6A2S3C5"
                        placeholder="<?php if (isset($data['Q6A2S3C5'])) echo $data['Q6A2S3C5'] ?>"
-                       value="<?php echo set_value('Q6A2S3C5'); ?>" readonly/></td>
+                       value="<?php if (isset($data['Q6A2S3C5'])) echo $data['Q6A2S3C5'] ?>" readonly/></td>
       <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3E5"
                        type="number" min="0" name="Q6A2S3E5"
                        placeholder="<?php if (isset($data['Q6A2S3E5'])) echo $data['Q6A2S3E5'] ?>"
-                       value="<?php echo set_value('Q6A2S3E5'); ?>" readonly/></td>
+                       value="<?php if (isset($data['Q6A2S3E5'])) echo $data['Q6A2S3E5'] ?>" readonly/></td>
       <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3H5"
                        type="number" min="0" name="Q6A2S3H5"
                        placeholder="<?php if (isset($data['Q6A2S3H5'])) echo $data['Q6A2S3H5'] ?>"
-                       value="<?php echo set_value('Q6A2S3H5'); ?>" readonly/></td>
+                       value="<?php if (isset($data['Q6A2S3H5'])) echo $data['Q6A2S3H5'] ?>" readonly/></td>
       <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3B5"
                        type="number" min="0" name="Q6A2S3B5"
                        placeholder="<?php if (isset($data['Q6A2S3B5'])) echo $data['Q6A2S3B5'] ?>"
-                       value="<?php echo set_value('Q6A2S3B5'); ?>" readonly/></td>
+                       value="<?php if (isset($data['Q6A2S3B5'])) echo $data['Q6A2S3B5'] ?>" readonly/></td>
     </tr>
   </table>
 </div>
