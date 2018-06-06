@@ -38,6 +38,12 @@
             <p class="unit"><strong>The unit of measurement to be used in the Energy section is megajoule (mj).</strong> </p>
         </div>
         <?php echo form_open('energy/set', array('id' => "energy")); ?>
+	    	<!---Store Value For Vidation----->
+		 <input type="hidden" name="dieselValidation" id="dieselValidation" value="<?php if (isset($other['Q6A2S3D5'])) echo $other['Q6A2S3D5'] ?>" />
+		 <input type="hidden" name="PetrolValidation" id="PetrolValidation" value="<?php if (isset($other['Q6A2S3P5'])) echo $other['Q6A2S3P5'] ?>" />
+		 <input type="hidden" name="CNGValidation" id="CNGValidation" value="<?php if (isset($other['Q6A2S3C5'])) echo $other['Q6A2S3C5'] ?>" />
+		<!---Store Value For Vidation----->
+	    
         <div class="form-group">
             <label>
                 <h6>Task 1: Choose your Energy Audit Team</h6>
@@ -1195,7 +1201,7 @@ else echo "0"; ?>"
                 </div>
             </div>
             <div class="form-group">
-                <label class="control-label">Please upload picture of five start appliances used by school</label>
+                <label class="control-label">Please upload picture of five star appliances used by school</label>
                 <br>
                 <button class="btn uploadbtn upload" data-id="Five Star Appliances" data-toggle="modal" data-target="#airModal"
                         type="button">UPLOAD FILES </button>
@@ -1251,7 +1257,10 @@ else echo "0"; ?>"
                 <label class="control-label"><span class="cube">6</span>Are there any alternate sources of energy
                     employed/ installed in your school? <a class="kplink"
                                                            href="http://www.greenschoolsprogramme.org/knowledge-&#10;&#10;bank/energy/#averageConsumption"
-                                                           target="_blank"> </a></label>
+                                                           target="_blank"> </a> <a class="kplink"
+                                                           href="http://www.greenschoolsprogramme.org/knowledge-&#10;&#10;bank/energy/#averageConsumption"
+                                                           target="_blank"> </a> <a class="tt" data-tooltip="Do not add solar water heater(s) here. Consider only solar panels which provide electricity."><span
+                            class="badge">?</span></a></label>
                 <ul class="list-inline">
                     <li>
                         <label class="">
