@@ -15,6 +15,13 @@
       .form-group-1{
           margin-bottom:20px;
       }
+     .tt {
+      display: inline-block;
+      color: #fff;
+      height: 27px;
+      position: absolute!important;
+      top: 3px;
+   }
   </style>
   <div class="container">
       <div class="content-form">
