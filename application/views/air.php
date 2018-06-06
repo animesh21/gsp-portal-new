@@ -1151,9 +1151,9 @@
                        placeholder="<?php if (isset($data['Q6A2S3H1'])) echo $data['Q6A2S3H1'] ?>"
                        value="<?php echo set_value('Q6A2S3H1'); ?>"/></td>
       <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3B1"
-                       type="number" min="0" name="Q6A2S3B1"
-                       placeholder="<?php if (isset($data['Q6A2S3B1'])) echo $data['Q6A2S3B1'] ?>"
-                       value="<?php echo set_value('Q6A2S3B1'); ?>"/></td>
+                       type="number" min="0" name="Q6A2S3B1R"
+                       placeholder="<?php if (isset($data['Q6A2S3B1R'])) echo $data['Q6A2S3B1R'] ?>"
+                       value="<?php echo set_value('Q6A2S3B1R'); ?>"/></td>
     </tr>
     <tr>
       <td>Cars</td>
