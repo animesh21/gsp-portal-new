@@ -800,7 +800,7 @@
 if (empty($data['Q6E8S1']))
     $data['Q6E8S1'] = 0;
 
-$attribs = array('name' => 'Q6E8S1', 'placeholder' => $data['Q6E8S1'], "placeholder" => "form-control space-textbox", "id" => "Q6E8S1", "type" => "number", "onchange" => "MegajoulesAnimal(this.value,'Q6E8S2')", "min" => "0");
+$attribs = array('name' => 'Q6E8S1', 'placeholder' => $data['Q6E8S1'], "class" => "form-control space-textbox", "id" => "Q6E8S1", "type" => "number", "onchange" => "MegajoulesAnimal(this.value,'Q6E8S2')", "min" => "0");
 echo form_input($attribs);
 ?>
                     </div>
