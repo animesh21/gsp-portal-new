@@ -551,7 +551,7 @@
                         if (empty($data['Q6E1S1']))
                             $data['Q6E1S1'] = 0;
 
-                        $attribs = array('name' => 'Q6E1S1', 'value' => $data['Q6E1S1'], "class" => "form-control space-textbox", "id" => "Q6E1S1", "type" => "number", "onchange" => "Megajoules(this.value)", "min" => "0");
+                        $attribs = array('name' => 'Q6E1S1', 'placeholder' => $data['Q6E1S1'], "class" => "form-control space-textbox", "id" => "Q6E1S1", "type" => "number", "onchange" => "Megajoules(this.value)", "min" => "0");
 
                         echo form_input($attribs);
                         ?>
@@ -583,7 +583,7 @@
                             $data['Q6E2S1'] = 0;
 
                         $attribs = array();
-                        $attribs = array('name' => 'Q6E2S1', 'value' => $data['Q6E2S1'], "class" => "form-control space-textbox", "id" => "Q6E2S1", "type" => "number", "onchange" => "MegajoulesDiesel(this.value,'Q6E2S2')", "min" => "0");
+                        $attribs = array('name' => 'Q6E2S1', 'placeholder' => $data['Q6E2S1'], "class" => "form-control space-textbox", "id" => "Q6E2S1", "type" => "number", "onchange" => "MegajoulesDiesel(this.value,'Q6E2S2')", "min" => "0");
                         echo form_input($attribs);
                         ?>
                     </div>
@@ -613,7 +613,7 @@
                         if (empty($data['Q6E3S1']))
                             $data['Q6E3S1'] = 0;
 
-                        $attribs = array('name' => 'Q6E3S1', 'value' => $data['Q6E3S1'], "class" => "form-control space-textbox", "id" => "Q6E3S1", "type" => "number", "onchange" => "MegajoulesPetrol(this.value,'Q6E3S2')", "min" => "0");
+                        $attribs = array('name' => 'Q6E3S1', 'placeholder' => $data['Q6E3S1'], "class" => "form-control space-textbox", "id" => "Q6E3S1", "type" => "number", "onchange" => "MegajoulesPetrol(this.value,'Q6E3S2')", "min" => "0");
                         echo form_input($attribs);
                         ?>
                     </div>
@@ -644,7 +644,7 @@
                             $data['Q6E4S1'] = 0;
 
 
-                        $attribs = array('name' => 'Q6E4S1', 'value' => $data['Q6E4S1'], "class" => "form-control space-textbox", "id" => "Q6E4S1", "type" => "number", "onchange" => "MegajoulesDiesel(this.value,'Q6E4S2')", "min" => "0");
+                        $attribs = array('name' => 'Q6E4S1', 'placeholder' => $data['Q6E4S1'], "class" => "form-control space-textbox", "id" => "Q6E4S1", "type" => "number", "onchange" => "MegajoulesDiesel(this.value,'Q6E4S2')", "min" => "0");
 
                         echo form_input($attribs);
                         ?>
@@ -681,7 +681,7 @@
                         if (empty($data['Q6E5S1']))
                             $data['Q6E5S1'] = 0;
 
-                        $attribs = array('name' => 'Q6E5S1', 'value' => $data['Q6E5S1'], "class" => "form-control space-textbox", "id" => "Q6E5S1", "type" => "number", "onchange" => "MegajoulesCNG(this.value,'Q6E5S2')", "min" => "0");
+                        $attribs = array('name' => 'Q6E5S1', 'placeholder' => $data['Q6E5S1'], "class" => "form-control space-textbox", "id" => "Q6E5S1", "type" => "number", "onchange" => "MegajoulesCNG(this.value,'Q6E5S2')", "min" => "0");
                         echo form_input($attribs);
                         ?>
                     </div>
@@ -711,7 +711,7 @@
                         if (empty($data['Q6E6S1']))
                             $data['Q6E6S1'] = 0;
 
-                        $attribs = array('name' => 'Q6E6S1', 'value' => $data['Q6E6S1'], "class" => "form-control space-textbox", "id" => "Q6E6S1", "type" => "number", "onchange" => "MegajoulesKerosene(this.value,'Q6E6S2')", "min" => "0");
+                        $attribs = array('name' => 'Q6E6S1', 'placeholder' => $data['Q6E6S1'], "class" => "form-control space-textbox", "id" => "Q6E6S1", "type" => "number", "onchange" => "MegajoulesKerosene(this.value,'Q6E6S2')", "min" => "0");
                         echo form_input($attribs);
                         ?>
                     </div>
@@ -740,7 +740,7 @@
                         if (empty($data['Q6E7S1']))
                             $data['Q6E7S1'] = 0;
 
-                        $attribs = array('name' => 'Q6E7S1', 'value' => $data['Q6E7S1'], "class" => "form-control space-textbox", "id" => "Q6E7S1", "type" => "number", "onchange" => "MegajoulesCoal(this.value)", "min" => "0");
+                        $attribs = array('name' => 'Q6E7S1', 'placeholder' => $data['Q6E7S1'], "class" => "form-control space-textbox", "id" => "Q6E7S1", "type" => "number", "onchange" => "MegajoulesCoal(this.value)", "min" => "0");
                         echo form_input($attribs);
                         ?>
                     </div>
@@ -770,7 +770,7 @@
                         if (empty($data['Q6E16S1']))
                             $data['Q6E16S1'] = 0;
 
-                        $attribs = array('name' => 'Q6E16S1', 'value' => $data['Q6E16S1'], "class" => "form-control space-textbox", "id" => "Q6E16S1", "type" => "number", "onchange" => "MegajoulesWood(this.value,'Q6E16S2')", "min" => "0");
+                        $attribs = array('name' => 'Q6E16S1', 'placeholder' => $data['Q6E16S1'], "class" => "form-control space-textbox", "id" => "Q6E16S1", "type" => "number", "onchange" => "MegajoulesWood(this.value,'Q6E16S2')", "min" => "0");
                         echo form_input($attribs);
                         ?>
                     </div>
@@ -800,7 +800,7 @@
 if (empty($data['Q6E8S1']))
     $data['Q6E8S1'] = 0;
 
-$attribs = array('name' => 'Q6E8S1', 'value' => $data['Q6E8S1'], "class" => "form-control space-textbox", "id" => "Q6E8S1", "type" => "number", "onchange" => "MegajoulesAnimal(this.value,'Q6E8S2')", "min" => "0");
+$attribs = array('name' => 'Q6E8S1', 'placeholder' => $data['Q6E8S1'], "placeholder" => "form-control space-textbox", "id" => "Q6E8S1", "type" => "number", "onchange" => "MegajoulesAnimal(this.value,'Q6E8S2')", "min" => "0");
 echo form_input($attribs);
 ?>
                     </div>
@@ -830,7 +830,7 @@ echo form_input('Q6E8S3', $data['Q6E8S3'], $attribs);
 if (empty($data['Q6E9S1']))
     $data['Q6E9S1'] = 0;
 
-$attribs = array('name' => 'Q6E9S1', 'value' => $data['Q6E9S1'], "class" => "form-control space-textbox", "id" => "Q6E9S1", "type" => "number", "min" => "0", "onchange" => "ComputeCrossLinkEnergy('Solar',this.value)");
+$attribs = array('name' => 'Q6E9S1', 'placeholder' => $data['Q6E9S1'], "class" => "form-control space-textbox", "id" => "Q6E9S1", "type" => "number", "min" => "0", "onchange" => "ComputeCrossLinkEnergy('Solar',this.value)");
 echo form_input($attribs);
 ?>
                     </div>
@@ -845,7 +845,7 @@ echo form_input($attribs);
 if (empty($data['Q6E9S3']))
     $data['Q6E9S3'] = 0;
 
-$attribs = array('name' => 'Q6E9S3', 'value' => $data['Q6E9S3'], "class" => "form-control space-textbox", "id" => "Q6E9S3", "type" => "text", "min" => "0");
+$attribs = array('name' => 'Q6E9S3', 'placeholder' => $data['Q6E9S3'], "class" => "form-control space-textbox", "id" => "Q6E9S3", "type" => "text", "min" => "0");
 echo form_input('Q6E9S3', $data['Q6E9S3'], $attribs);
 ?>
                     </div>
@@ -859,7 +859,7 @@ echo form_input('Q6E9S3', $data['Q6E9S3'], $attribs);
 if (empty($data['Q6E10S1']))
     $data['Q6E10S1'] = 0;
 
-$attribs = array('name' => 'Q6E10S1', 'value' => $data['Q6E10S1'], "class" => "form-control space-textbox", "id" => "Q6E10S1", "type" => "number", "min" => "0", "onchange" => "ComputeCrossLinkEnergy('Wind',this.value)");
+$attribs = array('name' => 'Q6E10S1', 'placeholder' => $data['Q6E10S1'], "class" => "form-control space-textbox", "id" => "Q6E10S1", "type" => "number", "min" => "0", "onchange" => "ComputeCrossLinkEnergy('Wind',this.value)");
 echo form_input($attribs);
 ?>
                     </div>
@@ -889,7 +889,7 @@ echo form_input('Q6E10S3', $data['Q6E10S3'], $attribs);
 if (empty($data['Q6E11S1']))
     $data['Q6E11S1'] = 0;
 
-$attribs = array('name' => 'Q6E11S1', 'value' => $data['Q6E11S1'], "class" => "form-control space-textbox", "id" => "Q6E11S1", "type" => "number", "onchange" => "MegajoulesLPG(this.value,'Q6E11S2')", "min" => "0");
+$attribs = array('name' => 'Q6E11S1', 'placeholder' => $data['Q6E11S1'], "class" => "form-control space-textbox", "id" => "Q6E11S1", "type" => "number", "onchange" => "MegajoulesLPG(this.value,'Q6E11S2')", "min" => "0");
 echo form_input($attribs);
 ?>
                     </div>
@@ -918,7 +918,7 @@ echo form_input('Q6E11S3', $data['Q6E11S3'], $attribs);
 if (empty($data['Q6E12S1']))
     $data['Q6E12S1'] = 0;
 
-$attribs = array('name' => 'Q6E12S1', 'value' => $data['Q6E12S1'], "class" => "form-control space-textbox", "id" => "Q6E12S1", "type" => "number", "onchange" => "MegajoulesBiomas(this.value,'Q6E12S2')", "min" => "0");
+$attribs = array('name' => 'Q6E12S1', 'placeholder' => $data['Q6E12S1'], "class" => "form-control space-textbox", "id" => "Q6E12S1", "type" => "number", "onchange" => "MegajoulesBiomas(this.value,'Q6E12S2')", "min" => "0");
 echo form_input($attribs);
 ?>
                     </div>
@@ -948,7 +948,7 @@ echo form_input('Q6E12S3', $data['Q6E12S3'], $attribs);
 if (empty($data['Q6E13S1']))
     $data['Q6E13S1'] = 0;
 
-$attribs = array('name' => 'Q6E13S1', 'value' => $data['Q6E13S1'], "class" => "form-control space-textbox", "id" => "Q6E13S1", "type" => "number", "onchange" => "MegajoulesBiomas(this.value,'Q6E13S2')", "min" => "0");
+$attribs = array('name' => 'Q6E13S1', 'placeholder' => $data['Q6E13S1'], "class" => "form-control space-textbox", "id" => "Q6E13S1", "type" => "number", "onchange" => "MegajoulesBiomas(this.value,'Q6E13S2')", "min" => "0");
 echo form_input($attribs);
 ?>
                     </div>
@@ -977,7 +977,7 @@ echo form_input($attribs);
 if (empty($data['Q6E14S1']))
     $data['Q6E14S1'] = 0;
 
-$attribs = array('name' => 'Q6E14S1', 'value' => $data['Q6E14S1'], "class" => "form-control space-textbox", "id" => "Q6E14S1", "type" => "number", "min" => "0");
+$attribs = array('name' => 'Q6E14S1', 'placeholder' => $data['Q6E14S1'], "class" => "form-control space-textbox", "id" => "Q6E14S1", "type" => "number", "min" => "0");
 
 echo form_input($attribs);
 ?>
