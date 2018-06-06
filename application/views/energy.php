@@ -1257,8 +1257,6 @@ else echo "0"; ?>"
                 <label class="control-label"><span class="cube">6</span>Are there any alternate sources of energy
                     employed/ installed in your school? <a class="kplink"
                                                            href="http://www.greenschoolsprogramme.org/knowledge-&#10;&#10;bank/energy/#averageConsumption"
-                                                           target="_blank"> </a> <a class="kplink"
-                                                           href="http://www.greenschoolsprogramme.org/knowledge-&#10;&#10;bank/energy/#averageConsumption"
                                                            target="_blank"> </a> <a class="tt" data-tooltip="Do not add solar water heater(s) here. Consider only solar panels which provide electricity."><span
                             class="badge">?</span></a></label>
                 <ul class="list-inline">
