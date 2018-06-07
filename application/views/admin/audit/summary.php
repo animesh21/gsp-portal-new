@@ -48,12 +48,12 @@
         </tr>
 		<tr role="row" class="even">
           <td class="sorting_1">Total</td>
-          <td id="totalSchoolRegistration"></td>
-          <td id="totalStartedSchoolAudit"></td>
-          <td id="totalSchoolsubmittedAudit"></td>
-          <td id="totalSchoolsStartedAuditNotComplete"></td>
-          <td id="totalSchoolsDidNotStartTheAudit"></td>
-          <td id="totalSchool2017Registration"></td>
+          <td id="totalSchoolRegistration">2863</td>
+          <td id="totalStartedSchoolAudit">1794</td>
+          <td id="totalSchoolsubmittedAudit">1265</td>
+          <td id="totalSchoolsStartedAuditNotComplete">596</td>
+          <td id="totalSchoolsDidNotStartTheAudit">1181</td>
+          <td id="totalSchool2017Registration">1758</td>
         </tr>
       </tbody>
     </table><br/>
@@ -107,7 +107,7 @@
       </thead>
       <tbody>
         <tr role="row" class="odd">
-		 <td class="sorting_1">Audit 2015</td>
+		 <td class="sorting_1">Audit 2016</td>
           <td>1439</td>
           <td>867</td>
           <td>534</td>
@@ -129,13 +129,13 @@
   </div>
 </div>
 <script type="text/javascript">
- $(document).ready(function(){
+ /*$(document).ready(function(){
    $("#totalSchoolRegistration").append(parseInt($(".table1 tr:nth-child(1) td:nth-child(2)").text())+parseInt($(".table1 tr:nth-child(2) td:nth-child(2)").text()));
     $("#totalStartedSchoolAudit").append(parseInt($(".table1 tr:nth-child(1) td:nth-child(3)").text())+parseInt($(".table1 tr:nth-child(2) td:nth-child(3)").text()));
 	$("#totalSchoolsubmittedAudit").append(parseInt($(".table1 tr:nth-child(1) td:nth-child(4)").text())+parseInt($(".table1 tr:nth-child(2) td:nth-child(4)").text()));
 	$("#totalSchoolsStartedAuditNotComplete").append(parseInt($(".table1 tr:nth-child(1) td:nth-child(5)").text())+parseInt($(".table1 tr:nth-child(2) td:nth-child(5)").text()));
 	$("#totalSchoolsDidNotStartTheAudit").append(parseInt($(".table1 tr:nth-child(1) td:nth-child(6)").text())+parseInt($(".table1 tr:nth-child(2) td:nth-child(6)").text()));
 	$("#totalSchool2017Registration").append(parseInt($(".table1 tr:nth-child(1) td:nth-child(7)").text())+parseInt($(".table1 tr:nth-child(2) td:nth-child(7)").text()));
- });
+ });*/
  
 </script>
