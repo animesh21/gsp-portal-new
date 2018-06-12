@@ -28,7 +28,7 @@
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-   $.getJSON( "<?php echo base_url(); ?>audit/assets/state-data.json", function( data ) {
+   $.getJSON( "<?php echo base_url(); ?>audit/assets/jason/state-data.json", function( data ) {
     $.each( data, function( key, val ) {
      $("#stateList1").append("<option value="+val['id']+">"+val['statename']+"</option>")
      //console.log(val);
@@ -36,7 +36,7 @@ $(document).ready(function(){
     });
  });
 $(document).ready(function(){
-   $.getJSON( "<?php echo base_url(); ?>audit/assets/state-data.json", function( data ) {
+   $.getJSON( "<?php echo base_url(); ?>audit/assets/jason/state-data.json", function( data ) {
     $.each( data, function( key, val ) {
      $("#stateList2").append("<option value="+val['id']+">"+val['statename']+"</option>")
      //console.log(val);
@@ -46,7 +46,7 @@ $(document).ready(function(){
 
 $("#stateParticipation").click(function(){
         var q=$("#stateList1").val();
-        $.getJSON("<?php echo base_url(); ?>audit/assets/state-data.json", function(data){ 
+        $.getJSON("<?php echo base_url(); ?>audit/assets/jason/state-data.json", function(data){ 
             $.each(data, function(i, val) {
                 if (val.id===q) {
       Highcharts.chart('container',{
@@ -87,7 +87,7 @@ $("#stateParticipation").click(function(){
 	
 	$("#stateParticipation").click(function(){
         var q=$("#stateList2").val();
-        $.getJSON("<?php echo base_url(); ?>audit/assets/state-data.json", function(data){ 
+        $.getJSON("<?php echo base_url(); ?>audit/assets/jason/state-data.json", function(data){ 
             $.each(data, function(i, val) {
                 if (val.id===q) {
       Highcharts.chart('container2',{
