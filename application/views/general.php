@@ -176,6 +176,30 @@
                     echo "readonly"; ?>/>
             </div>
         </div>
+	<div class="clearfix">&nbsp;</div>
+<div class="form-group">
+  <label for="username" class="control-label"><span class="cube">3(a)</span> School Level:</label>
+  <div class="radio">
+    <label>
+    <input type="radio" name="Q10G1"  value="<?php echo set_value('Q10G1', 1) ?>"  <?php if (isset($data['Q10G1'])) echo $data['Q10G1'] == 1 ? "checked" : "" ?>>
+    Is your school a primary school (upto Class 5)? </label>
+  </div>
+  <div class="radio">
+    <label>
+    <input type="radio" name="Q10G1" value="<?php echo set_value('Q10G1', 2) ?>" <?php if (isset($data['Q10G1'])) echo $data['Q10G1'] == 2 ? "checked" : "" ?>>
+    Is your school an elementary school (upto Class 8)? </label>
+  </div>
+  <div class="radio">
+    <label>
+    <input type="radio" name="Q10G1" value="<?php echo set_value('Q10G1', 3) ?>" <?php if (isset($data['Q10G1'])) echo $data['Q10G1'] == 3 ? "checked" : "" ?>>
+    Is your school a secondary school (upto Class 10)? </label>
+  </div>
+  <div class="radio">
+    <label>
+    <input type="radio" name="Q10G1" value="<?php echo set_value('Q10G1', 4) ?>" <?php if (isset($data['Q10G1'])) echo $data['Q10G1'] == 4 ? "checked" : "" ?>>
+    Is your school a higher secondary school (upto Class 12)? </label>
+  </div>
+</div>        
         <div class="clearfix">&nbsp;</div>
         <?php
         if (isset($data['Q3G1'])){
