@@ -176,7 +176,6 @@
                     echo "readonly"; ?>/>
             </div>
         </div>
-	<div class="clearfix">&nbsp;</div>
 <div class="form-group">
   <label for="username" class="control-label"><span class="cube">3(a)</span> School Level:</label>
   <div class="radio">
