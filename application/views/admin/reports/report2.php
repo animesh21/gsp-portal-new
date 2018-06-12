@@ -17,7 +17,7 @@
 </div>
 <script type="text/javascript">
  $(document).ready(function(){
-   $.getJSON( "<?php echo base_url(); ?>audit/assets/state-data.json", function( data ) {
+   $.getJSON( "<?php echo base_url(); ?>assets/state-data.json", function( data ) {
     $.each( data, function( key, val ) {
      $("#stateList").append("<option value="+val['id']+">"+val['statename']+"</option>")
      //console.log(val);
@@ -41,7 +41,7 @@ $("#stateParticipation").click(function(){
 <script type="text/javascript">
 $("#stateParticipation").click(function(){
         var q=$("#stateList").val();
-        $.getJSON("<?php echo base_url(); ?>audit/assets/state-data.json", function(data){ 
+        $.getJSON("<?php echo base_url(); ?>assets/state-data.json", function(data){ 
             $.each(data, function(i, val) {
                 if (val.id===q) {
       Highcharts.chart('container',{
