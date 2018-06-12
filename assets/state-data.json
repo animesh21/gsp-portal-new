@@ -208,6 +208,7 @@
 	   "registerbutnotstart":"3"
    },
    {
+       "id":"27",
        "statename":"Arunachal Pradesh (AR)",
 	   "totalregisteration":"8",
 	   "auditcomplete":"1",
@@ -215,7 +216,7 @@
 	   "registerbutnotstart":"2"
    },
    {
-       "id":"27",
+       "id":"28",
        "statename":"Manipur (MN)",
 	   "totalregisteration":"8",
 	   "auditcomplete":"3",
@@ -223,7 +224,7 @@
 	   "registerbutnotstart":"4"
    },
    {
-       "id":"28",
+       "id":"29",
        "statename":"Mizoram (MZ)",
 	   "totalregisteration":"6",
 	   "auditcomplete":"5",
@@ -231,7 +232,7 @@
 	   "registerbutnotstart":"1"
    },
    {
-       "id":"29",
+       "id":"30",
        "statename":"Meghalaya (ML)",
 	   "totalregisteration":"5",
 	   "auditcomplete":"3",
@@ -239,7 +240,7 @@
 	   "registerbutnotstart":"1"
    },
    {
-       "id":"30",
+       "id":"31",
        "statename":"Andaman and Nicobar (AN)",
 	   "totalregisteration":"2",
 	   "auditcomplete":"0",
@@ -247,7 +248,7 @@
 	   "registerbutnotstart":"2"
    },
    {
-       "id":"31",
+       "id":"32",
        "statename":"Nagaland (NL)",
 	   "totalregisteration":"2",
 	   "auditcomplete":"",
@@ -255,7 +256,7 @@
 	   "registerbutnotstart":"1"
    },
    {
-       "id":"32",
+       "id":"33",
        "statename":"Puducherry (PY)",
 	   "totalregisteration":"2",
 	   "auditcomplete":"0",
@@ -263,7 +264,7 @@
 	   "registerbutnotstart":"1"
    },
    {
-       "id":"33", 
+       "id":"34", 
        "statename":"Dadra and Nagar Haveli (DN)",
 	   "totalregisteration":"1",
 	   "auditcomplete":"0",
