@@ -17,7 +17,7 @@
 </div>
 <script type="text/javascript">
  $(document).ready(function(){
-   $.getJSON( "<?php echo base_url(); ?>assets/state-data.json", function( data ) {
+   $.getJSON("<?php echo base_url(); ?>assets/state-data.json", function( data ) {
     $.each( data, function( key, val ) {
      $("#stateList").append("<option value="+val['id']+">"+val['statename']+"</option>")
      //console.log(val);
