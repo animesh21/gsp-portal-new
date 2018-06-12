@@ -792,8 +792,10 @@
       <label>
       <h6> Task 3: How eco-friendly are the vehicles in your school?</h6>
       </label>
-      <p> In this section, you will maintain a record of vehicles used by your school. Two critical parameters
-        indicate if your vehicles are eco-friendly. One—type of fuel—is given in the table below.</p>
+      <p> <!--In this section, you will maintain a record of vehicles used by your school. Two critical parameters
+        indicate if your vehicles are eco-friendly. One—type of fuel—is given in the table below.
+		-->
+		In this section, you will maintain a record of vehicles used by your school. The type of fuel used by the vehicles is a critical parameter that indicates if your vehicles are eco-friendly.</p>
     </div>
     <div class="form-group">
       <label class="control-label"><span class="cube">3</span>What is the ownership of the vehicles used by your
@@ -955,7 +957,7 @@
       </div>
       <div class="form-group1 row">
         <div class="col-xs-2">
-          <label>PUC done</label>
+          <label>PUC done <a class="tt" data-tooltip="Pollution Under Control (PUC) Certificate is legal mandatory requirement for all motor vehicles plying on Indian roads Motor Vehicles Act, 1988"><span class="badge">?</span></a></label>
         </div>
         <div class="col-xs-2">
           <input class="form-control space-textbox" onKeyUp="details()" id="b4" type="number" min="0"
