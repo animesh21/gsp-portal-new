@@ -27,7 +27,9 @@ function checkPincode(){
  } 
 }    
 $("#country-select").hover(function(){
-	alert("If you want to change the details, then please send a mail to support@greenschoolsprogramme.org, with new details: name, email id and mobile number.");
+    if (this.readOnly) {
+        alert("If you want to change the details, then please send a mail to support@greenschoolsprogramme.org, with new details: name, email id and mobile number.");
+    }
 });	
 function checkUpdate(){
   alert("If you want to change the details, then please send a mail to support@greenschoolsprogramme.org, with new details: name, email id and mobile number.");
