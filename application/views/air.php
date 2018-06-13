@@ -2111,8 +2111,8 @@ if (isset($data['Q9A1']))
 	  if($("#Q5A"+i+"S4").attr("placeholder")!="undefined"){
 	   sumFloorAreaBeingVentilated= parseFloat(sumFloorAreaBeingVentilated) + parseFloat($("#Q5A"+i+"S4").attr("placeholder"));
 	  }
-		sumFloorAreaBeingVentilated=sumFloorAreaBeingVentilated/x;
 	}
+	sumFloorAreaBeingVentilated=sumFloorAreaBeingVentilated/x;
 	$("#Q5A110S4").val(sumFloorAreaBeingVentilated.toFixed(2));
  });
 /*Teacher Record Validation*/
