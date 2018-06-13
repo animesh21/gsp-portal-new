@@ -26,7 +26,7 @@ function checkPincode(){
    alert("The pincode must contain 6 digits.");  
  } 
 }    
-$("#country-select,#city-select,#country").focusin(function(){
+$("#country-select").hover(function(){
 	alert("If you want to change the details, then please send a mail to support@greenschoolsprogramme.org, with new details: name, email id and mobile number.");
 });	
 function checkUpdate(){
