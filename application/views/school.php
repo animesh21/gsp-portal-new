@@ -97,7 +97,7 @@ function checkUpdate(){
             <label for="username" class="control-label"><span class="cube">4</span>Country:</label>
             <div class="clearfix">&nbsp;</div>
             <input type="text" name="country" id="country" tabindex="1" class="form-control text empty"
-                   placeholder="Country" value="<?php echo $data["country"]; ?>" readonly>
+                   placeholder="Country" value="<?php echo $data["country"]; ?>" readonly="true">
         </div>
         <br>
         <div class="form-group">
