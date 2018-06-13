@@ -31,7 +31,7 @@ var state= [
    {
        "id":"1",
        "statename":"Andhra Pradesh (AP)",
-	   "totalregisteration":"547",
+	   "totalregisteration":"549",
 	   "auditcomplete":"169",
 	   "auditstartbutnotcomplete":"164",
 	   "registerbutnotstart":"216"
@@ -39,7 +39,7 @@ var state= [
    {
        "id":"2",
        "statename":"Punjab (PB)",
-	   "totalregisteration":"304",
+	   "totalregisteration":"305",
 	   "auditcomplete":"78",
 	   "auditstartbutnotcomplete":"60",
 	   "registerbutnotstart":"167"
