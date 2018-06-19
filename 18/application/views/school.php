@@ -101,14 +101,14 @@ function checkUpdate(){
     <div class="form-group">
       <label for="username" class="control-label"><span class="cube">5</span>State:</label>
       <div class="clearfix">&nbsp;</div>
-      <?php echo form_dropdown('state', $states, set_value("state", $data["state"]), array('class' => 'form-control', 'id' => 'country-select', 'onchange' => 'getCities(),checkUpdate();')); ?>
+      <?php echo form_dropdown('state', $states, set_value("state", $data["state"]), array('class' => 'form-control', 'id' => 'country-select', 'onchange' => 'getCities(),checkUpdate();','disabled'=>'')); ?>
       <!--input type="text" class="text empty" name="username" id="username" tabindex="1" class="form-control" placeholder="State" value="<?php echo $data["state"]; ?>"-->
     </div>
     <br>
     <div class="form-group">
       <label for="username" class="control-label"><span class="cube">6</span>District:</label>
       <div class="clearfix">&nbsp;</div>
-      <?php echo form_dropdown('district', $cities, set_value("district", $data["district"]), array('class' => 'form-control', 'id' => 'city-select','onchange' => 'checkUpdate();')); ?>
+      <?php echo form_dropdown('district', $cities, set_value("district", $data["district"]), array('class' => 'form-control', 'id' => 'city-select','onchange' => 'checkUpdate();','disabled'=>'')); ?>
       <!--input type="text" name="username" id="username" class="text empty" tabindex="1"  placeholder="District" value="<?php echo $data["district"]; ?>" -->
     </div>
     <br>
