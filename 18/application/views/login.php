@@ -97,7 +97,7 @@
                                   width="580" height="360" data-toggle="modal" data-target="#myModal">Forgot password?</a></p>
         </div>
         <div class="btn-group">
-          <input class="org-btn" type="button" value="Continue">
+          <input class="org-btn" type="submit" value="Continue">
         </div>
         <?php echo form_close(); ?>
         <p class="help">Need help? Email: <a href="mailto:support@greenschoolsprogramme.org">support@greenschoolsprogramme.org</a> or call 011-4061600, ext – 219, 300. <br>
@@ -108,8 +108,8 @@
       Javascript and try again.&lt;/p&gt;
       </noscript>
     </div>
-    <script src="http://www.greenschoolsprogramme.org/audit2017/assets/js/jquery.min.js"></script>
-    <script src='http://www.greenschoolsprogramme.org/audit2017/assets/js/badge-code.js'></script>
+    <script src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/badge-code.js"></script>
     <script>
 			/*School Badge Code*/
 			window.onload = function(){
@@ -169,6 +169,7 @@
     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
   </div>
 </div>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.5.min.js" type="text/javascript"></script>
 <script type="text/javascript">
             $(document).ready(function () {
                 $('#btnForgetPassword').on('click', function () {
