@@ -56,7 +56,7 @@ If your school has not registered earlier for the GSP Audit, please register her
 //                'img_path' => './uploads/',
 //                'img_url' => 'http://studio-tesseract.co/GSP/uploads/',
                 'img_path' => './uploads/',
-                'img_url' => 'http://www.greenschoolsprogramme.org/audit2017/uploads/',
+                'img_url' => 'http://www.greenschoolsprogramme.org/audit/18/uploads/',
                 'img_width' => '230',
                 'img_height' => 50,
                 'expiration' => 3600,
