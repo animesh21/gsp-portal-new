@@ -101,14 +101,14 @@ function checkUpdate(){
     <div class="form-group">
       <label for="username" class="control-label"><span class="cube">5</span>State:</label>
       <div class="clearfix">&nbsp;</div>
-      <?php echo form_dropdown('state', $states, set_value("state", $data["state"]), array('class' => 'form-control', 'id' => 'country-select', 'onchange' => 'getCities(),checkUpdate();','disabled'=>'')); ?>
+      <?php echo form_dropdown('state', $states, set_value("state", $data["state"]), array('class' => 'form-control', 'id' => 'country-select', 'onchange' => 'getCities(),checkUpdate();')); ?>
       <!--input type="text" class="text empty" name="username" id="username" tabindex="1" class="form-control" placeholder="State" value="<?php echo $data["state"]; ?>"-->
     </div>
     <br>
     <div class="form-group">
       <label for="username" class="control-label"><span class="cube">6</span>District:</label>
       <div class="clearfix">&nbsp;</div>
-      <?php echo form_dropdown('district', $cities, set_value("district", $data["district"]), array('class' => 'form-control', 'id' => 'city-select','onchange' => 'checkUpdate();','disabled'=>'')); ?>
+      <?php echo form_dropdown('district', $cities, set_value("district", $data["district"]), array('class' => 'form-control', 'id' => 'city-select','onchange' => 'checkUpdate();')); ?>
       <!--input type="text" name="username" id="username" class="text empty" tabindex="1"  placeholder="District" value="<?php echo $data["district"]; ?>" -->
     </div>
     <br>
@@ -254,29 +254,29 @@ function checkUpdate(){
         Both </label>
       </div>
     </div>
-	<div class="form-group">
-  <label for="username" class="control-label"><span class="cube">17</span> School Level:</label>
-  <div class="radio">
-    <label>
-    <input type="radio" name="Q10G1"  value="<?php echo set_value('Q10G1', 1) ?>"  <?php if (isset($data['Q10G1'])) echo $data['Q10G1'] == 1 ? "checked" : "" ?>>
-    Is your school a primary school (upto Class 5)? </label>
-  </div>
-  <div class="radio">
-    <label>
-    <input type="radio" name="Q10G1" value="<?php echo set_value('Q10G1', 2) ?>" <?php if (isset($data['Q10G1'])) echo $data['Q10G1'] == 2 ? "checked" : "" ?>>
-    Is your school an elementary school (upto Class 8)? </label>
-  </div>
-  <div class="radio">
-    <label>
-    <input type="radio" name="Q10G1" value="<?php echo set_value('Q10G1', 3) ?>" <?php if (isset($data['Q10G1'])) echo $data['Q10G1'] == 3 ? "checked" : "" ?>>
-    Is your school a secondary school (upto Class 10)? </label>
-  </div>
-  <div class="radio">
-    <label>
-    <input type="radio" name="Q10G1" value="<?php echo set_value('Q10G1', 4) ?>" <?php if (isset($data['Q10G1'])) echo $data['Q10G1'] == 4 ? "checked" : "" ?>>
-    Is your school a higher secondary school (upto Class 12)? </label>
-  </div>
-</div>
+    <div class="form-group">
+      <label for="username" class="control-label"><span class="cube">17</span> School Level:</label>
+      <div class="radio">
+        <label>
+        <input type="radio" name="Q10G1"  value="<?php echo set_value('Q10G1', 1) ?>"  <?php if (isset($data['Q10G1'])) echo $data['Q10G1'] == 1 ? "checked" : "" ?>>
+        Is your school a primary school (upto Class 5)? </label>
+      </div>
+      <div class="radio">
+        <label>
+        <input type="radio" name="Q10G1" value="<?php echo set_value('Q10G1', 2) ?>" <?php if (isset($data['Q10G1'])) echo $data['Q10G1'] == 2 ? "checked" : "" ?>>
+        Is your school an elementary school (upto Class 8)? </label>
+      </div>
+      <div class="radio">
+        <label>
+        <input type="radio" name="Q10G1" value="<?php echo set_value('Q10G1', 3) ?>" <?php if (isset($data['Q10G1'])) echo $data['Q10G1'] == 3 ? "checked" : "" ?>>
+        Is your school a secondary school (upto Class 10)? </label>
+      </div>
+      <div class="radio">
+        <label>
+        <input type="radio" name="Q10G1" value="<?php echo set_value('Q10G1', 4) ?>" <?php if (isset($data['Q10G1'])) echo $data['Q10G1'] == 4 ? "checked" : "" ?>>
+        Is your school a higher secondary school (upto Class 12)? </label>
+      </div>
+    </div>
     <div class="text-center">
       <button type="submit" class="org-btn" id="schoolnext" value="movenext">Next</button>
       <input type="submit" class="org-btn submit button" value="Save and Resume Later"  id="schoolresume"/>
