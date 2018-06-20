@@ -3271,6 +3271,7 @@ function computePercent()
     x = parseFloat(x.value);
     var sumHor = 0;
     var sumVert = 0;
+	var totalsum=0;
 
     if(!isNaN(x))
     {	if(x > 10)
@@ -3322,16 +3323,17 @@ function computePercent()
 
             sumHor += element1;
             sumVert += element2;
+			totalsum+=value;
 
 
         }
         $('#Q5A110S2').val(sumHor);
         $('#Q5A110S3').val(sumVert);
+		$('#Q5A110S4').val((totalsum/x).toFixed(2));
         console.log(sumHor,sumVert);
         sumHor = 0;
         sumVert = 0;
-
-
+        totalsum=0;
     }
 }
 
