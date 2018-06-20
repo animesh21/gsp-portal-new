@@ -1308,7 +1308,7 @@ public function getExcel2017Data() {
 				<script>
 			/*School Badge Code*/
 			window.onload = function(){
-			  get_date_difference('".date('m-d-Y',strtotime($end_date))."');
+			  get_date_difference('".date('M',strtotime($end_date))." ".date('d',strtotime($end_date))." ".date('Y',strtotime($end_date))."');
 			}
 			</script>
 			<div class='badges' style='height:200px; height:200px;'></div>";
