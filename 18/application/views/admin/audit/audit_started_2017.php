@@ -48,7 +48,7 @@
 }
 </style>
 <div class="top-area">
-  <h2>REGISTRATION 2017 <a href="">
+  <h2>REGISTRATION 2017 <a href="<?php echo base_url('admin/audit_started_2017/excel_phase1') ?>">
     <button class="exportBtn">Export to Excel</button>
     </a></h2>
 </div>
@@ -110,7 +110,7 @@
 .dropdown-menu{ z-index:1000000;}		
 </style>
 <script>
-/* function Myfun(argID){
+function Myfun(argID){
    $('#schoolid').val(argID);
    $('#myModal').css('display','');
 }
@@ -129,10 +129,10 @@ function getBadgeCode(userid)
 				$('.badge_code').val(data);
 			}
 	    });
-} */
+}
 </script>
 <script type="text/javascript">
-				/* $( document ).ready(function() {
+				$( document ).ready(function() {
                 $('#example3').dataTable({
                  "bProcessing": true,
                  "sAjaxSource": "<?php echo base_url("/admin/audit_started_2017/getSchoolData");?>",
@@ -152,24 +152,24 @@ function getBadgeCode(userid)
 						{ mData: 'id',
 						 "orderable": false,
                         "searchable": false,
-                        "render": function(data,type,row,meta) { */ // render event defines the markup of the cell text 
+                        "render": function(data,type,row,meta) { // render event defines the markup of the cell text 
                           /*  var a = '<a href="listing-house-details.php?listing_house='+row.list_id+'&invoice_id='+row.invoice_id+'&email="'+row.user_email+'">' + '<label class="label label-info">CPA</label>' +'</a>';*/ 
 						  
 						  // row object contains the row data
 						/*  
 						  var a='<div class="btn-group"><button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-chevron-down"></i></button><div class="dropdown-menu"><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/audit_started_2017/response/"); ?>'+row.id+'" title="View Responses"> <img src="<?php echo base_url() ?>assets/front/images/1446146277_view6.png"><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/audit_started_2017/pdf/"); ?>'+row.id+'" title="Download PDF"><img src="<?php echo base_url() ?>assets/front/images/1446327681_1-02.png" height="20" width="20"></a><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/audit_started_2017/edit/"); ?>'+row.id+'" title="Edit Record"><img src="<?php echo base_url() ?>assets/front/images/edit.png" height="20" width="20"></a><a class="dropdown-item" target="_self" onclick="Myfun('+row.id+')" title="Delete Record"><img src="<?php echo base_url() ?>assets/front/images/delete1.png" data-toggle="modal" data-target="#myModal" height="20" width="20"></a><a class="dropdown-item" target="_blank" href="<?php echo base_url('admin/audit_started_2017/downloadzip/'); ?>'+row.id+'" title="Download">Zip</a><a class="dropdown-item" target="_blank" href="<?php echo base_url('admin/audit_started_2017/generatebadge/'); ?>'+row.id+'" title="Download">Badge</a><a class="dropdown-item" href="#"  onclick="javascript:getBadgeCode('+row.id+')" data-toggle="modal" data-target="#myModal1">Badge Code</a><a class="dropdown-item" href="<?php echo base_url('admin/audit_started_2017/sendElasticEmail/'); ?>">Send mail</a></div></div>';  */
-						   /* var a='<div class="btn-group"><button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-chevron-down"></i></button><div class="dropdown-menu"><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/audit_started_2017/response/"); ?>'+row.id+'" title="View Responses">View Record</a><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/audit_started_2017/pdf/"); ?>'+row.id+'" title="Download PDF">Pdf Download</a><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/performance_report/PdfById/"); ?>'+row.id+'" title="Performance Report">Performance Report</a><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/audit_started_2017/edit/"); ?>'+row.id+'" title="Edit Record">Edit Record</a><a class="dropdown-item" target="" href="#" onclick="javascript:Myfun('+row.userid+')" data-toggle="modal" data-target="#myModal"   title="Delete Record">Delete</a><a class="dropdown-item" target="_blank" href="<?php echo base_url('admin/audit_started_2017/downloadzip/'); ?>'+row.userid+'" title="Download">Zip</a><a class="dropdown-item" target="_blank" href="<?php echo base_url('admin/audit_started_2017/getdigitalCertificate/'); ?>'+row.userid+'" title="Certificates">Certifcates</a><a class="dropdown-item" target="_blank" href="<?php echo base_url('admin/audit_started_2017/generatebadge/'); ?>'+row.userid+'" title="Download">Badge</a><a class="dropdown-item" href="#"  onclick="javascript:getBadgeCode('+row.userid+')" data-toggle="modal" data-target="#myModal1">Badge Code</a><a href="#" class="dropdown-item" onclick="sendResponseReport('+row.id+','+"'"+row.coemail+"'"+','+"'"+row.name+"'"+');">Send mail</a></div></div>'; 
+						   var a='<div class="btn-group"><button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-chevron-down"></i></button><div class="dropdown-menu"><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/audit_started_2017/response/"); ?>'+row.id+'" title="View Responses">View Record</a><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/audit_started_2017/pdf/"); ?>'+row.id+'" title="Download PDF">Pdf Download</a><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/performance_report/PdfById/"); ?>'+row.id+'" title="Performance Report">Performance Report</a><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/audit_started_2017/edit/"); ?>'+row.id+'" title="Edit Record">Edit Record</a><a class="dropdown-item" target="" href="#" onclick="javascript:Myfun('+row.userid+')" data-toggle="modal" data-target="#myModal"   title="Delete Record">Delete</a><a class="dropdown-item" target="_blank" href="<?php echo base_url('admin/audit_started_2017/downloadzip/'); ?>'+row.userid+'" title="Download">Zip</a><a class="dropdown-item" target="_blank" href="<?php echo base_url('admin/audit_started_2017/getdigitalCertificate/'); ?>'+row.userid+'" title="Certificates">Certifcates</a><a class="dropdown-item" target="_blank" href="<?php echo base_url('admin/audit_started_2017/generatebadge/'); ?>'+row.userid+'" title="Download">Badge</a><a class="dropdown-item" href="#"  onclick="javascript:getBadgeCode('+row.userid+')" data-toggle="modal" data-target="#myModal1">Badge Code</a><a href="#" class="dropdown-item" onclick="sendResponseReport('+row.id+','+"'"+row.coemail+"'"+','+"'"+row.name+"'"+');">Send mail</a></div></div>'; 
                             return a;
 							}
 						}
                 ]
         });   
-}); */
+});
 </script>
 <link type="text/css" rel="stylesheet" type="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript">
-/* function sendResponseReport(schoolid,coemail,name){
+function sendResponseReport(schoolid,coemail,name){
  var subject="Response Report 2017";
  var message="Response Report 2017";
  var bodytext="Dear GSP Audit team,<br/><br/>"+
@@ -189,5 +189,5 @@ jQuery.ajax({
 	    alert("Response Report 2017 Email has been send successful");
 	  }
 	}); 
-} */
+}
 </script>
