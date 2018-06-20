@@ -488,4 +488,4 @@
 			   else if(selectedValue==="4"){$("#Q1G2 option[value='12']").attr("selected",true);}
 			});
         </script>
-<script src="http://jwpsrv.com/library/A7o4ns39EeS3agp+lcGdIw.js"></script>
+<!---<script src="http://jwpsrv.com/library/A7o4ns39EeS3agp+lcGdIw.js"></script>-->
