@@ -478,7 +478,8 @@
                     });
                 });
             });
-			$(document).ready(function(){
+		    
+		    $(document).ready(function(){
 			   var selectedValue="<?php echo getFiled("Q10G1",$this->session->userdata('USER_ID')); ?>";
 			   $("#Q1G2 option").removeAttr('selected');
 			   if(selectedValue==="1"){$("#Q1G2 option[value='5']").attr("selected",true);}
