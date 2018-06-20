@@ -2129,6 +2129,7 @@ if (isset($data['Q9A1']))
 	   sumFloorAreaBeingVentilated= parseFloat(sumFloorAreaBeingVentilated) + parseFloat($("#Q5A"+i+"S4").attr("placeholder"));
 	  }
 	}
+	sumFloorAreaBeingVentilated=sumFloorAreaBeingVentilated/x;
 	$("#Q5A110S4").val(sumFloorAreaBeingVentilated.toFixed(2));
  });
 /*Teacher Record Validation*/
