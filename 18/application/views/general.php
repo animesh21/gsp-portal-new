@@ -481,7 +481,7 @@
 		    
 		    $(document).ready(function(){
 			   var selectedValue="<?php echo getFiled("Q10G1",$this->session->userdata('USER_ID')); ?>";
-			   $("#Q1G2 option").removeAttr('selected');
+			   //$("#Q1G2 option").removeAttr('selected');
 			   if(selectedValue==="1"){$("#Q1G2 option[value='5']").attr("selected",true);}
 			   else if(selectedValue==="2"){$("#Q1G2 option[value='8']").attr("selected",true);}
 			   else if(selectedValue==="3"){$("#Q1G2 option[value='10']").attr("selected",true);}
