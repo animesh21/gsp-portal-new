@@ -30,7 +30,7 @@
     <source src="<?php echo base_url(); ?>assets/img/jana_gana_mana.mp3" type="audio/mpeg">
     Your browser does not support the audio tag. </audio>
 </div>
-<div class="form-group"> Lowest level of grade:
+<div class="form-group"> Lowest level of Grade/ Class:
   <select name="Q1G1" id="Q1G1" onChange="ComputePrimary()" class="form-control"
                     style="display:inline; width:10%; margin-left:10px;">
     <option <?php echo set_value('Q1G1', 1); ?> <?php if (isset($data['Q1G1'])) echo $data['Q1G1'] == 1 ? "selected" : ""; ?>> 1 </option>
@@ -48,7 +48,7 @@
   </select>
 </div>
 <div class="clear-fix">&nbsp;</div>
-<div class="form-group"> Highest level of grade:
+<div class="form-group"> Highest level of Grade/ Class:
   <select name="Q1G2" id="Q1G2" onChange="ComputePrimary()" class="form-control"
                     style="display:inline; width:10%; margin-left:7px;">
     <option value="<?php echo set_value('Q1G2', 1); ?>" <?php if (isset($data['Q1G2'])) echo $data['Q1G2'] == 1 ? "selected" : ""; ?>> 1 </option>
