@@ -795,7 +795,7 @@
       <p> <!--In this section, you will maintain a record of vehicles used by your school. Two critical parameters
         indicate if your vehicles are eco-friendly. One—type of fuel—is given in the table below.
 		-->
-		In this section, you will maintain a record of vehicles used by your school. The type of fuel used by the vehicles is a critical parameter that indicates if your vehicles are eco-friendly.
+		In this section, you will maintain a record of vehicles used by your school. The type of fuel used by the vehicles is a critical parameters that indicates if your vehicles are eco-friendly.
 		</p>
     </div>
     <div class="form-group">
@@ -1114,7 +1114,7 @@
         echo '<div class="form-group" id="vehicle2" style="display:none;">';
     ?>
   <label class="control-label"><span class="cube">3(b)</span>Specify the type of fuel used by your school’s vehicles: <a class="tt"
-           data-tooltip="The below is an indicative list of type of vehicles.  If the school has other than these vehicles, please provide details in ‘Other vehicles’ section."><span
+           data-tooltip="The below is an indicative list of type of vehicles.  If the school has other than these vehicles, please provide details in ‘Other vehicles’ section.Enter the number of vehicles run on each type of fuel"><span
                     class="badge">?</span></a></label>
   <table class="table">
     <tr class="text-center">
