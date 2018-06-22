@@ -309,4 +309,16 @@ $("#city-select").click(function () {
     }
 });
 
+	/**This Function Used For Save & Logout**/
+$('#schoolresume').on('click', function (data) {
+            var fd = $('#school-form').serialize();
+            $.ajax({
+                type: 'POST',
+                url: '<?php echo base_url('school/schoolAnswer') ?>',
+                data: fd,
+                success: function (data) {
+                    window.location.href = "<?php echo base_url('logout'); ?>";
+                }
+            });
+        });
 </script>
