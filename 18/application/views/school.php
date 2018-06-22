@@ -279,7 +279,7 @@ function checkUpdate(){
     </div>
     <div class="text-center">
       <button type="submit" class="org-btn" id="schoolnext" value="movenext">Next</button>
-      <input type="submit" class="org-btn submit button" value="Save and Resume Later"  id="schoolresume"/>
+     <input type="button" class="org-btn submit button" value="Save and Resume Later" id="schoolresume" style="border:none;" />
     </div>
     <?php echo form_close(); ?> </div>
 </div>
