@@ -538,9 +538,9 @@
                         staff rooms, office area, auditoriums, corridors, and
                         balconies and terraces, multiplied
                         by the number of floors.</p>
-                    <p> 10. Other will include paved paths and other open area
+                    <!--<p> 10. Other will include paved paths and other open area
                         that your school has but is not
-                        covered in the list above.</p>
+                        covered in the list above.</p>-->
                 </div>
             </label>
             <div class="answer clearfix"></div>
