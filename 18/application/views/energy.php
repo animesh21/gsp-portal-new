@@ -1245,7 +1245,7 @@ else echo "0"; ?>"
                 </label>
             </div>
             <div class="form-group">
-                <label><span class="cube">5</span>What is the average number of sunny days in your area? <a
+                <label><span class="cube">5</span>What is the average number of sunny days (in one year) in your area? <a
                         class="kplink"
                         href="http://www.greenschoolsprogramme.org/knowledge-bank/energy/#averageConsumption"
                         target="_blank"> </a></label>
