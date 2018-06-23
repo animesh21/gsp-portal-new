@@ -502,7 +502,7 @@
                     <strong>To find out the land/ site area of your school, you
                         need to measure:</strong>
                     <p> 1. Ground coverage area includes all permanent structure
-                        building, such as
+                        buildings, such as
                         administration block, auditorium, school building, etc.
                         It does not include floors.</p>
                     <p> 2. Green cover or green, landscaped area on ground
