@@ -1474,7 +1474,7 @@ if (isset($data['Q9E1']))
 					  var fd = $('#energy').serialize();
 							$.ajax({
 								type: 'POST',
-								url: '<?php echo base_url('previous/airprevious') ?>',
+								url: '<?php echo base_url('previous/energyajax') ?>',
 								data: fd,
 								success: function (data) {
 									<!--window.location.href = "<?php echo base_url('general'); ?>";-->
