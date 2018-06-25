@@ -579,7 +579,7 @@
         </div>
         <div class="form-group">
             <label><span class="cube">1A</span>Total green cover <a class="tt"
-                                                                    data-tooltip="Ideally, green area on ground should be 35 per cent of the total site area, out of which 15 per cent should be from green landscape area on ground."><span
+                                                                    data-tooltip="Ideally, total green landscaped area on-ground available in school should be 35 per cent of total site area (in square meters), out of which 15 per cent should be from green landscaped area on ground."><span
                             class="badge">?</span></a> </label>
         </div>
         <div class="form-group1 row">
