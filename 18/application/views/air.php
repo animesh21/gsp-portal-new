@@ -2162,4 +2162,15 @@ $("#airnext").click(function(e){
 	}
    }
 });
+
+/*This Code Used For Stopping Enter 'E' Alphabet In Textbox Type 'Number'*/
+$(document).ready(function(){
+   $("input[type='number']").keypress(function (evt) {
+    if (evt.which != 8 && evt.which != 0 && evt.which < 48 || evt.which > 57)
+    {
+        evt.preventDefault();
+    }
+  });
+});	
 </script>
+
