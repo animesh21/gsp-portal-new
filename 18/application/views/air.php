@@ -425,7 +425,7 @@
       <div class="clearfix">&nbsp;</div>
       <div class="form-group">
         <label>
-        <h6>Task 2: Are the rooms in your school well-ventilated?</h6>
+        <h6>Task 2: Are the rooms in your school well-ventilated. Please do not consider/add doors.?</h6>
         </label>
         <br>
         1. For this exercise, classrooms that are occupied by students regularly should be considered. Do not
@@ -795,7 +795,8 @@
       <p> <!--In this section, you will maintain a record of vehicles used by your school. Two critical parameters
         indicate if your vehicles are eco-friendly. One—type of fuel—is given in the table below.
 		-->
-		In this section, you will maintain a record of vehicles used by your school. The type of fuel used by the vehicles is a critical parameter that indicates if your vehicles are eco-friendly.
+		In this section, you will maintain a record of vehicles used by your school. The type of fuel used
+by the vehicles is a critical parameter that indicates if your vehicles are eco-friendly.
 		</p>
     </div>
     <div class="form-group">
