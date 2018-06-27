@@ -795,7 +795,7 @@
       <p> <!--In this section, you will maintain a record of vehicles used by your school. Two critical parameters
         indicate if your vehicles are eco-friendly. One—type of fuel—is given in the table below.
 		-->
-		In this section, you will maintain a record of vehicles used by your school. The type of fuel used by the vehicles is a critical parameters that indicates if your vehicles are eco-friendly.
+		In this section, you will maintain a record of vehicles used by your school. The type of fuel used by the vehicles is a critical parameter that indicates if your vehicles are eco-friendly.
 		</p>
     </div>
     <div class="form-group">
