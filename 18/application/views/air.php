@@ -425,13 +425,13 @@
       <div class="clearfix">&nbsp;</div>
       <div class="form-group">
         <label>
-        <h6>Task 2: Are the rooms in your school well-ventilated. Please do not consider/add doors.?</h6>
+        <h6>Task 2: Are the rooms in your school well-ventilated.?</h6>
         </label>
         <br>
         1. For this exercise, classrooms that are occupied by students regularly should be considered. Do not
         add laboratories or the auditorium.<br>
         2. Openings: are there any windows and ventilators which can be opened on regular basis and can be
-        opened anytime? <br>
+        opened anytime.Please do not consider/add doors.? <br>
         3. This exercise should be done by schools with centrally air conditioning system also. <br>
         4. The exercise should be carried out for ten classrooms only. Sample size should have representation
         from all sections of classes: two classrooms each from pre-primary, primary, middle, secondary and
