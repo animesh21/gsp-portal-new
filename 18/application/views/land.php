@@ -1058,5 +1058,22 @@ $(document).ready(function(){
         evt.preventDefault();
     }
   });
-});	
+});
+/*Validation For Ground Coverage Area*/
+$("input[name='Q4L2']").change(function(){
+  if($(this).val()==0){
+    alert("Zero as an entry should not be allowed.");
+	$("input[name='Q4L2']").attr('placeholder','Please enter correct data');
+	$("input[name='Q4L2']").val(' ');
+  }
+});
+/*Validation For Total built-up/constructed area*/
+$("input[name='Q4L11']").change(function(){
+  if($(this).val()==0){
+    alert("Zero as an entry should not be allowed.");
+	$("input[name='Q4L11']").attr('placeholder','Please enter correct data');
+	$("input[name='Q4L11']").val(' ');
+  }
+});		
+	
 </script>
