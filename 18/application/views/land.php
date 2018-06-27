@@ -1075,5 +1075,4 @@ $("input[name='Q4L11']").change(function(){
 	$("input[name='Q4L11']").val(' ');
   }
 });		
-	
 </script>
