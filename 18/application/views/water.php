@@ -655,12 +655,12 @@ To understand water, it is important to know the source of water in your school 
       <li>
         <input type="checkbox" id="Q5W3" name="Q5W3"
                                value="<?php echo set_value('Q5W3', 1); ?>" <?php if (isset($data['Q5W3'])) echo set_checkbox('Q5W3', '1', true); ?>/>
-        <label class="text-gray">Rain water</label>
+        <label class="text-gray">Rainwater</label>
       </li>
       <li>
         <input type="checkbox" name="Q5W4"
                                value="<?php echo set_value('Q5W4', 1); ?>" <?php if (isset($data['Q5W4'])) echo set_checkbox('Q5W4', '1', true); ?>/>
-        <label class="text-gray">Recycled waste water</label>
+        <label class="text-gray">Recycled wastewater</label>
       </li>
     </ul>
   </div>
@@ -951,8 +951,28 @@ To understand water, it is important to know the source of water in your school 
                                                value="<?php echo set_value('Q8W1S11', 'N') ?>" <?php if (isset($data['Q8W1S11'])) echo $data['Q8W1S11'] == 'N' ? "checked" : "" ?>/>
       No </label>
     </div>
+	<div class="form-group">
+      <label class="radio-inline text-gray col-xs-10"> Provision for storage of leftover water in bottles at water coolers
+Any other step taken for water conservation? (if Yes, please specify): 
+ </label>
+      <label class="radio-inline text-gray">
+      <input type="radio" name="Q8W1S12"
+                                               value="<?php echo set_value('Q8W1S12', 'Y') ?>" <?php if (isset($data['Q8W1S12'])) echo $data['Q8W1S12'] == 'Y' ? "checked" : "" ?>>
+      Yes </label>
+      <label class="radio-inline text-gray">
+      <input type="radio" name="Q8W1S12"
+                                               value="<?php echo set_value('Q8W1S12', 'N') ?>" <?php if (isset($data['Q8W1S12'])) echo $data['Q8W1S12'] == 'N' ? "checked" : "" ?>/>
+      No </label>
+    </div>
+    <br/>
+	<div class="form-group question_Q8W1S12 hide">
+      <label class="radio-inline text-gray col-xs-12" style="padding-bottom:12px; z-index: 10;">
+	   <textarea class="form-control" id="" name=""></textarea>
+      </label>
+    </div>
   </div>
 </div>
+<br/>
 <div class="form-group">
   <label>Upload supporting documents</label>
   <br>
@@ -978,8 +998,17 @@ To understand water, it is important to know the source of water in your school 
   <tbody>
     <?php foreach ($task4supporting as $f) { ?>
     <tr id="index<?php echo $f->id; ?>">
-	  <td> <iframe style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" width="50" height="50"></iframe></td>	
-      <?php $name = str_replace(" ", "_", $f->name . "_Task_4_Supporting_docs_"); ?>
+      <?php 
+            $array = explode('.',$f->file_name); 
+            $count = count($array);
+            $extension = $array[$count-1];
+            ?>
+       <?php if($extension == "jpg" || $extension == "jpeg"){ ?>	    
+      <td> <img style="width:62px; height:46px;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" /></td>	
+       <?php }else{ ?>
+	<td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
+      <?php }?>   
+   <?php $name = str_replace(" ", "_", $f->name . "_Task_4_Supporting_docs_"); ?>
       <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
       <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
       <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
@@ -1155,62 +1184,62 @@ To understand water, it is important to know the source of water in your school 
     <ul>
       <li>
         <label class="radio-inline text-gray">
-        <input type="checkbox" name="Q8W2S2S1"
-                                                   value="<?php echo set_value('Q8W2S2S1', 1) ?>" <?php if (isset($data['Q8W2S2S1'])) echo set_checkbox('Q8W2S2S1', '1', true); ?>>
+        <input type="checkbox" name="Q8W2S2S14"
+                                                   value="<?php echo set_value('Q8W2S2S14', 1) ?>" <?php if (isset($data['Q8W2S2S14'])) echo set_checkbox('Q8W2S2S14', '1', true); ?>>
         Drinking </label>
       </li>
       <li>
         <label class="radio-inline text-gray">
-        <input type="checkbox" name="Q8W2S2S2"
-                                                   value="<?php echo set_value('Q8W2S2S2', 1) ?>" <?php if (isset($data['Q8W2S2S2'])) echo set_checkbox('Q8W2S2S2', '1', true); ?>/>
+        <input type="checkbox" name="Q8W2S2S25"
+                                                   value="<?php echo set_value('Q8W2S2S25', 1) ?>" <?php if (isset($data['Q8W2S2S25'])) echo set_checkbox('Q8W2S2S25', '1', true); ?>/>
         Gardening </label>
       </li>
       <li>
         <label class="radio-inline text-gray">
-        <input type="checkbox" name="Q8W2S2S3"
-                                                   value="<?php echo set_value('Q8W2S2S3', 1) ?>" <?php if (isset($data['Q8W2S2S3'])) echo set_checkbox('Q8W2S2S3', '1', true); ?>/>
+        <input type="checkbox" name="Q8W2S2S36"
+                                                   value="<?php echo set_value('Q8W2S2S36', 1) ?>" <?php if (isset($data['Q8W2S2S36'])) echo set_checkbox('Q8W2S2S36', '1', true); ?>/>
         Mopping </label>
       </li>
       <li>
         <label class="radio-inline text-gray">
         <input type="checkbox" name="Q8W2S2S4"
-                                                   value="<?php echo set_value('Q8W2S2S4', 1) ?>" <?php if (isset($data['Q8W2S2S4'])) echo set_checkbox('Q8W2S2S4', '1', true); ?>/>
+                                                   value="<?php echo set_value('Q8W2S2S47', 1) ?>" <?php if (isset($data['Q8W2S2S47'])) echo set_checkbox('Q8W2S2S47', '1', true); ?>/>
         Toilets </label>
       </li>
       <li>
         <label class="radio-inline text-gray">
         <input type="checkbox" name="Q8W2S2S5"
-                                                   value="<?php echo set_value('Q8W2S2S5', 1) ?>" <?php if (isset($data['Q8W2S2S5'])) echo set_checkbox('Q8W2S2S5', '1', true); ?>/>
+                                                   value="<?php echo set_value('Q8W2S2S58', 1) ?>" <?php if (isset($data['Q8W2S2S58'])) echo set_checkbox('Q8W2S2S58', '1', true); ?>/>
         Washing vehicles </label>
       </li>
       <li>
         <label class="radio-inline text-gray">
-        <input type="checkbox" name="Q8W2S2S6"
-                                                   value="<?php echo set_value('Q8W2S2S6', 1) ?>" <?php if (isset($data['Q8W2S2S6'])) echo set_checkbox('Q8W2S2S6', '1', true); ?>/>
+        <input type="checkbox" name="Q8W2S2S69"
+                                                   value="<?php echo set_value('Q8W2S2S69', 1) ?>" <?php if (isset($data['Q8W2S2S69'])) echo set_checkbox('Q8W2S2S69', '1', true); ?>/>
         Kitchen (Cooking/Washing vegetables and utensils) </label>
       </li>
       <li>
         <label class="radio-inline text-gray">
-        <input type="checkbox" name="Q8W2S2S7"
-                                                   value="<?php echo set_value('Q8W2S2S7', 1) ?>" <?php if (isset($data['Q8W2S2S7'])) echo set_checkbox('Q8W2S2S7', '1', true); ?>/>
+        <input type="checkbox" name="Q8W2S2S723"
+                                                   value="<?php echo set_value('Q8W2S2S723', 1) ?>" <?php if (isset($data['Q8W2S2S723'])) echo set_checkbox('Q8W2S2S723', '1', true); ?>/>
         Shower, Brushing teeth, Bathing, Hand washing </label>
       </li>
       <li>
         <label class="radio-inline text-gray">
-        <input type="checkbox" name="Q8W2S2S8"
-                                                   value="<?php echo set_value('Q8W2S2S8', 1) ?>" <?php if (isset($data['Q8W2S2S8'])) echo set_checkbox('Q8W2S2S8', '1', true); ?>/>
+        <input type="checkbox" name="Q8W2S2S811"
+                                                   value="<?php echo set_value('Q8W2S2S811', 1) ?>" <?php if (isset($data['Q8W2S2S8'])) echo set_checkbox('Q8W2S2S8', '1', true); ?>/>
         Swimming Pool </label>
       </li>
       <li>
         <label class="radio-inline text-gray">
-        <input type="checkbox" name="Q8W2S2S9"
-                                                   value="<?php echo set_value('Q8W2S2S9', 1) ?>" <?php if (isset($data['Q8W2S2S9'])) echo set_checkbox('Q8W2S2S9', '1', true); ?>/>
+        <input type="checkbox" name="Q8W2S2S912"
+                                                   value="<?php echo set_value('Q8W2S2S912', 1) ?>" <?php if (isset($data['Q8W2S2S912'])) echo set_checkbox('Q8W2S2S912', '1', true); ?>/>
         Fire fighting </label>
       </li>
       <li>
         <label class="radio-inline text-gray">
-        <input type="checkbox" name="Q8W2S2S10"
-                                                   value="<?php echo set_value('Q8W2S2S10', 1) ?>" <?php if (isset($data['Q8W2S2S10'])) echo set_checkbox('Q8W2S2S10', '1', true); ?>/>
+        <input type="checkbox" name="Q8W2S2S1013"
+                                                   value="<?php echo set_value('Q8W2S2S1013', 1) ?>" <?php if (isset($data['Q8W2S2S1013'])) echo set_checkbox('Q8W2S2S1013', '1', true); ?>/>
         Desert coolers </label>
       </li>
     </ul>
@@ -1286,6 +1315,12 @@ To understand water, it is important to know the source of water in your school 
                                        value="<?php echo set_value('Q8W2S2S4') ?>"
                                        placeholder="<?php if (isset($data['Q8W2S2S4'])) echo $data['Q8W2S2S4'] ?>">
   </div>
+</div>
+<div class="form-group hide" id="Q8W2S2S31">
+ <label>Since you have selected ‘Combination of both’, please provide information on storage tank (s): </label>
+    <input class="form-control space-textbox" id="Q8W2S2S3A1" type="text" name="Q8W2S2S31"
+                                       value="<?php echo set_value('Q8W2S2S31') ?>"
+                                       placeholder="<?php if (isset($data['Q8W2S2S31'])) echo $data['Q8W2S2S31'] ?>">
 </div>
 <div class="form-group" id="Q8W2S2S5"
                             <?php
@@ -1400,7 +1435,7 @@ To understand water, it is important to know the source of water in your school 
                             }
                             ?>
 
-                        >
+                        >						
   <label><span class="cube">6(b)(3)</span>Does your school have groundwater recharge
   structure? </label>
   <div class="form-group">
@@ -1413,6 +1448,12 @@ To understand water, it is important to know the source of water in your school 
                                            value="<?php echo set_value('Q8W2S2S7', 'N') ?>" <?php if (isset($data['Q8W2S2S7'])) echo $data['Q8W2S2S7'] == 'N' ? "checked" : "" ?>/>
     No </label>
   </div>
+</div>
+<div class="form-group hide" id="Q8W2S2S71">
+ <label>Since you have selected ‘Combination of both’, please provide information on recharge structure (s): </label>
+    <input class="form-control space-textbox" id="Q8W2S2S712" type="text" name="Q8W2S2S71"
+                                       value="<?php echo set_value('Q8W2S2S71') ?>"
+                                       placeholder="<?php if (isset($data['Q8W2S2S71'])) echo $data['Q8W2S2S71'] ?>">
 </div>
 <div class="form-group" id="Q8W2S2S8"
                             <?php
@@ -1803,7 +1844,7 @@ To understand water, it is important to know the source of water in your school 
   </div>
 </div>
 <br>
-<div class="form-group" id="file"
+<div class="form-group hide" id="file"
                             <?php
                             if (isset($data['Q8W2']))
                                 if ($data['Q8W2'] == 'Y') {
@@ -1836,8 +1877,16 @@ To understand water, it is important to know the source of water in your school 
     <tbody>
       <?php foreach ($waterTreatment as $f) { ?>
       <tr id="index<?php echo $f->id; ?>">
-		<td> <iframe style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" width="50" height="50"></iframe></td>
-       
+	  <?php 
+            $array = explode('.',$f->file_name); 
+            $count = count($array);
+            $extension = $array[$count-1];
+            ?>
+       <?php if($extension == "jpg" || $extension == "jpeg"){ ?>    
+	<td> <img style="width:62px; height:46px;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" /></td>
+       <?php }else{ ?>
+	<td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
+      <?php }?>
         <?php $name = str_replace(" ", "_", $f->name . "_Water_Treatment_Process_"); ?>
         <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
         <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
@@ -2132,7 +2181,7 @@ To understand water, it is important to know the source of water in your school 
                                    placeholder="<?php if (isset($data['Q8W2S6'])) echo $data['Q8W2S6']; ?>"
                                    value="<?php echo set_value('Q8W2S6'); ?>"/>
 </div>
-<div class="form-group">
+<div class="form-group hide">
   <label>To calculate the maximum rainwater harvesting potential:</label>
   <br>
   <br>
@@ -2314,10 +2363,10 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
 <br>
 <div class="form-group">
   <label class="control-label"><span class="cube">11</span>How many water closets (used for
-  defecation and urination) do you have?</label>
+  defecation and urination) do you have? <a class="tt" data-tooltip="Toilets for women include wash basin and water closet; Toilets for men include wash basin and water closet and may or may not include urinals."><span class="badge">?</span></a></label>
   <div class="form-group row">
     <div class="col-xs-2">
-      <label class="text-gray">Number of toilets</label>
+      <label class="text-gray">Number of water closets </label>
     </div>
     <div class="col-xs-2">
       <label class="text-gray"> Girls</label>
@@ -2467,8 +2516,108 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
     No </label>
   </div>
 </div>
+<div class="form-group hide" id="new_question17_a_i">
+  <label class="control-label"><span class="cube">17(a)(i)</span>Where does the water get treated? </label>
+  <div class="form-group">
+    <label class="radio-inline text-gray">
+    <input type="radio" name="Q19W11" value="<?php echo set_value('Q19W11', '1') ?>" <?php if (isset($data['Q19W11'])) echo $data['Q19W11'] == '1' ? "checked" : "" ?>>
+   Inside your school  </label>
+    <label class="radio-inline text-gray">
+    <input type="radio" name="Q19W11" value="<?php echo set_value('Q19W11', '2') ?>" <?php if (isset($data['Q19W11'])) echo $data['Q19W11'] == '2' ? "checked" : "" ?>>
+    Outside your school
+
+ </label>
+  </div>
+</div>
+<div class="form-group hide" id="new_question17_a_ii">
+  <label class="control-label"><span class="cube">17(a)(ii)</span>Who treats the wastewater outside your school? </label>
+  <div class="form-group">
+    <label class="radio-inline text-gray">
+    <input type="radio" name="Q19W12" value="<?php echo set_value('Q19W12', '1') ?>" <?php if (isset($data['Q19W12'])) echo $data['Q19W12'] == '1' ? "checked" : "" ?>>
+  Municipality </label>
+    <label class="radio-inline text-gray">
+    <input type="radio" name="Q19W12" value="<?php echo set_value('Q19W12', '2') ?>" <?php if (isset($data['Q19W12'])) echo $data['Q19W12'] == '2' ? "checked" : "" ?>>
+  Physical Health Engineering Department (PHED)</label>
+	<label class="radio-inline text-gray">
+    <input type="radio" name="Q19W12" value="<?php echo set_value('Q19W12', '1') ?>" <?php if (isset($data['Q19W12'])) echo $data['Q19W12'] == '1' ? "checked" : "" ?>>
+  Panchayat  </label>
+    <label class="radio-inline text-gray">
+    <input type="radio" name="Q19W12" value="<?php echo set_value('Q19W12', '2') ?>" <?php if (isset($data['Q19W12'])) echo $data['Q19W12'] == '2' ? "checked" : "" ?>>
+    Community driven initiative</label>
+  </div>
+</div>
+<div class="form-group hide" id="new_question17_b">
+  <label class="control-label"><span class="cube">17(b)</span>Please specify the fate of wastewater </label>
+  <div class="form-group">
+    <label class="radio-inline text-gray">
+    <input type="radio" name="Q19W13" value="<?php echo set_value('Q19W13', '1') ?>" <?php if (isset($data['Q19W13'])) echo $data['Q19W13'] == '1' ? "checked" : "" ?>>
+ Wastewater flows directly to the drains </label>
+    <label class="radio-inline text-gray">
+    <input type="radio" name="Q19W13" value="<?php echo set_value('Q19W13', '2') ?>" <?php if (isset($data['Q19W13'])) echo $data['Q19W13'] == '2' ? "checked" : "" ?>>
+ Used for groundwater recharge</label>
+	<label class="radio-inline text-gray">
+    <input type="radio" name="Q19W13" value="<?php echo set_value('Q19W13', '3') ?>" <?php if (isset($data['Q19W13'])) echo $data['Q19W13'] == '3' ? "checked" : "" ?>>
+  Used for gardening and horticulture  </label>
+  </div>
+</div>
+<div class="form-group hide" id="new_question17_b_i">
+  <label class="control-label"><span class="cube">17(b)(i)</span>Does your school buy treated waste water?  </label>
+  <div class="form-group">
+    <label class="radio-inline text-gray">
+    <input type="radio" name="Q19W14" value="<?php echo set_value('Q19W14', 'Y') ?>" <?php if (isset($data['Q19W14'])) echo $data['Q19W14'] == 'Y' ? "checked" : "" ?>>
+ Yes</label>
+    <label class="radio-inline text-gray">
+    <input type="radio" name="Q19W14" value="<?php echo set_value('Q19W14', 'N') ?>" <?php if (isset($data['Q19W14'])) echo $data['Q19W14'] == 'N' ? "checked" : "" ?>>
+ No</label>
+  </div>
+</div>
+
 <div class="form-group">
-  <label class="control-label"><span class="cube">18</span>Does your school reuse the
+  <label>
+  <h6>TASK 8 Does your school reuse the treated Wastewater? </h6></label></div>
+<div class="form-group">
+  <label class="control-label"><span class="cube">18</span>Does your school reuse the wastewater from RO plant or Air conditioner drain pipes?</label>
+  <div class="form-group">
+    <label class="radio-inline text-gray">
+    <input type="radio" name="Q19W15" value="<?php echo set_value('Q19W15', 'Y') ?>" <?php if (isset($data['Q19W15'])) echo $data['Q19W15'] == 'Y' ? "checked" : "" ?>>
+ Yes</label>
+    <label class="radio-inline text-gray">
+    <input type="radio" name="Q19W15" value="<?php echo set_value('Q19W15', 'N') ?>" <?php if (isset($data['Q19W15'])) echo $data['Q19W15'] == 'N' ? "checked" : "" ?>>
+ No</label>
+  </div>
+</div>
+
+<div class="form-group hide" id="new_question18_i">
+  <label class="control-label"><span class="cube">18 (i)</span>If yes, How does your school reuse wastewater from RO plant or AC?</label>
+  <div class="form-group">
+    <label class="radio-inline text-gray">
+    <input type="radio" name="Q19W16" value="<?php echo set_value('Q19W16', '1') ?>" <?php if (isset($data['Q19W16'])) echo $data['Q19W16'] == '1' ? "checked" : "" ?>>
+ Used for  cleaning purposes (mopping, washing vehicles, etc)</label>
+    <label class="radio-inline text-gray">
+    <input type="radio" name="Q19W16" value="<?php echo set_value('Q19W16', '2') ?>" <?php if (isset($data['Q19W16'])) echo $data['Q19W16'] == '2' ? "checked" : "" ?>>
+ Used for gardening and horticulture</label>
+  <label class="radio-inline text-gray">
+    <input type="radio" name="Q19W16" value="<?php echo set_value('Q19W16', '3') ?>" <?php if (isset($data['Q19W16'])) echo $data['Q19W16'] == '3' ? "checked" : "" ?>>
+ Flushing</label>
+  </div>
+</div>
+<div class="form-group hide" id="new_question18_ii">
+  <label class="control-label"><span class="cube">18 (i)</span>If no, How does your school reuse wastewater from RO plant or AC?</label>
+  <div class="form-group">
+    <label class="radio-inline text-gray">
+    <input type="radio" name="Q19W17" value="<?php echo set_value('Q19W17', '1') ?>" <?php if (isset($data['Q19W17'])) echo $data['Q19W17'] == '1' ? "checked" : "" ?>>
+ Used for  cleaning purposes (mopping, washing vehicles, etc)</label>
+  </div>
+</div>
+
+
+
+
+
+
+
+<div class="form-group">
+  <label class="control-label"><span class="cube">19</span>Does your school reuse the
   treated wastewater?</label>
   <div class="form-group">
     <label class="radio-inline text-gray">
@@ -2494,7 +2643,7 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
                                         } else { ?>
 <div class="form-group" id="Q20W1Q" style="display: none;">
   <?php } ?>
-  <label class="control-label"><span class="cube">18(a)</span>How does your
+  <label class="control-label"><span class="cube">19(a)</span>How does your
   school reuse wastewater?</label>
   <div class="form-group">
     <ul>
@@ -2531,7 +2680,7 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
                                                 } else { ?>
     <div class="form-group" id="Q19W2" style="display: none;">
       <?php } ?>
-      <label class="control-label"><span class="cube">18(a)</span>Please
+      <label class="control-label"><span class="cube">19(a)</span>Please
       specify the fate of wastewater:</label>
       <div class="form-group">
         <ul>
@@ -2580,8 +2729,16 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
       <tbody>
         <?php foreach ($flowChartHandDrawn as $f) { ?>
         <tr id="index<?php echo $f->id; ?>">
-		  <td> <iframe style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" width="50" height="50"></iframe></td>
-     	
+	<?php 
+            $array = explode('.',$f->file_name); 
+            $count = count($array);
+            $extension = $array[$count-1];
+            ?>
+       <?php if($extension == "jpg" || $extension == "jpeg"){ ?>	
+	<td> <img style="width:62px; height:46px;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" /></td>
+     	<?php }else{ ?>
+	<td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
+      <?php }?>
           <?php $name = str_replace(" ", "_", $f->name . "_Flow_Chart_Hand_Drwan_"); ?>
           <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
           <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
@@ -2619,8 +2776,17 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
       <tbody>
         <?php foreach ($supportDocWater as $f) { ?>
         <tr id="index<?php echo $f->id; ?>">
-		  <td> <iframe style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" width="50" height="50"></iframe></td>	
-          <?php $name = str_replace(" ", "_", $f->name . "_Supporting_Document_Water_"); ?>
+	 <?php 
+            $array = explode('.',$f->file_name); 
+            $count = count($array);
+            $extension = $array[$count-1];
+            ?>
+       <?php if($extension == "jpg" || $extension == "jpeg"){ ?>	
+	  <td> <img style="width:62px; height:46px;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" /></td>	
+        <?php }else{ ?>
+	<td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
+      <?php }?> 
+	<?php $name = str_replace(" ", "_", $f->name . "_Supporting_Document_Water_"); ?>
           <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
           <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
           <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
@@ -2898,3 +3064,109 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
                                                 });
                                             });
                                         </script>
+
+<script type="text/javascript">
+/*This Code Used For Stopping Enter 'E' Alphabet In Textbox Type 'Number'*/
+$(document).ready(function(){
+   $("input[type='number']").keypress(function (evt) {
+    if (evt.which != 8 && evt.which != 0 && evt.which < 48 || evt.which > 57)
+    {
+        evt.preventDefault();
+    }
+  });
+});
+/**/ 
+$(document).ready(function(){ 
+  if($("input[name='Q8W1S12']").val()==='Y'){ $(".question_Q8W1S12").removeClass("hide");}
+  else{$(".question_Q8W1S12").addClass("hide");}
+  /**/
+  if($("input[name='Q8W2S2S2']:checked").val()==='N' && $("input[name='Q8W2S2']:checked").val()==3){
+     $("#Q8W2S2S31").removeClass('hide');
+  }
+  /**/
+  if($("input[name='Q8W2S2S7']:checked").val()==='N' && $("input[name='Q8W2S2']:checked").val()==3){
+     $("#Q8W2S2S71").removeClass('hide');
+  }
+  
+});
+/*This Code Used For Question 5 last Sub Question Yes/No*/
+/*What are the water conservation practices your school follows */
+$("input[name='Q8W1S12']").click(function(){
+   if($(this).val()==='Y'){ $(".question_Q8W1S12").removeClass("hide");}
+   else{$(".question_Q8W1S12").addClass("hide");}
+});
+/**/
+$("input[name='Q8W2S2S2']").click(function(){
+   if($(this).val()==='N' && $("input[name='Q8W2S2']:checked").val()==3){
+     $("#Q8W2S2S31").removeClass('hide');
+   }
+});
+/**/
+$("input[name='Q8W2S2S7']").click(function(){
+   if($(this).val()==='N' && $("input[name='Q8W2S2']:checked").val()==3){
+     $("#Q8W2S2S71").removeClass('hide');
+   }
+});
+/*************************************************************************/
+/*This Code Perform Radio Button Click Event*/
+/*This Validation Used For New Question 17(a)(i),17(a)(ii),17(b),17(b)(i)*/
+$("input[name='Q19W1']").click(function(){
+  if($(this).val()==='Y'){
+    $("#new_question17_a_i").removeClass("hide");
+	$("#new_question17_a_ii").removeClass("hide");
+  }else{
+    $("#new_question17_a_i").addClass("hide");
+	$("#new_question17_a_ii").addClass("hide");
+  }
+  if($(this).val()==='N'){
+    $("#new_question17_b").removeClass("hide");
+	$("#new_question17_b_i").removeClass("hide");
+  }else{
+    $("#new_question17_b").addClass("hide");
+	$("#new_question17_b_i").addClass("hide");
+  } 
+});
+/*************************************************************************/
+/*On Page Load Event*/
+/*This Validation Used For New Question 17(a)(i),17(a)(ii),17(b),17(b)(i)*/
+$(document).ready(function(){
+  if($("input[name='Q19W1']:checked").val()==='Y'){
+    $("#new_question17_a_i").removeClass("hide");
+	$("#new_question17_a_ii").removeClass("hide");
+  }else{
+    $("#new_question17_a_i").addClass("hide");
+	$("#new_question17_a_ii").addClass("hide");
+  }
+  if($("input[name='Q19W1']:checked").val()==='N'){
+    $("#new_question17_b").removeClass("hide");
+	$("#new_question17_b_i").removeClass("hide");
+  }else{
+    $("#new_question17_b").addClass("hide");
+	$("#new_question17_b_i").addClass("hide");
+  } 
+});
+/*************************************************************************/
+/*This Code Perform Radio Button Click Event*/
+/*This Validation Used For New Question 18*/
+$("input[name='Q19W15']").click(function(){
+  if($(this).val()==="Y"){
+   $("#new_question18_i").removeClass("hide");
+   $("#new_question18_ii").addClass("hide");
+  }else{ 
+    $("#new_question18_i").addClass("hide");
+   $("#new_question18_ii").removeClass("hide");
+  }
+});
+/*************************************************************************/
+/*On Page Load Event*/
+/*This Validation Used For New Question 18*/
+$(document).ready(function(){
+ if($("input[name='Q19W15']:checked").val()==="Y"){
+   $("#new_question18_i").removeClass("hide");
+   $("#new_question18_ii").addClass("hide");
+  }else{ 
+    $("#new_question18_i").addClass("hide");
+   $("#new_question18_ii").removeClass("hide");
+  }
+});
+</script>
