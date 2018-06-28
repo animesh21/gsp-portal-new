@@ -3182,4 +3182,19 @@ $(document).ready(function(){
    $("#new_question18_ii").removeClass("hide");
   }
 });
+/****************************************************************************/
+$("#movenextbtn").click(function(e){
+  if($("input[name='Q8W2S2S31']").val()==""){
+    alert("Please Fill The Data Of Given Question: Since you have selected ‘Combination of both’, please provide information on storage tank (s)");
+	e.preventDefault();
+  }
+  if($("input[name='Q8W2S2S71']").val()==""){
+    alert("Please Fill The Data Of Given Question: Since you have selected ‘Combination of both’, please provide information on recharge structure (s)");
+	e.preventDefault();
+  }
+  if($("input[name='Q8W2S2S8']").val()==""){
+    alert("Please Fill The Data Of Given Question: Please share the total number of groundwater recharge structures");
+	e.preventDefault();
+  }
+});	
 </script>
