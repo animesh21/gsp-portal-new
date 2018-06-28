@@ -2606,7 +2606,7 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
   <div class="form-group">
     <label class="radio-inline text-gray">
     <input type="radio" name="Q19W17" value="<?php echo set_value('Q19W17', '1') ?>" <?php if (isset($data['Q19W17'])) echo $data['Q19W17'] == '1' ? "checked" : "" ?>>
- Used for  cleaning purposes (mopping, washing vehicles, etc)</label>
+Wastewater flows directly to the drains</label>
   </div>
 </div>
 
