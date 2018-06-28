@@ -3113,10 +3113,10 @@ $("input[name='Q8W2S2S7']").click(function(){
 $("input[name='Q19W1']").click(function(){
   if($(this).val()==='Y'){
     $("#new_question17_a_i").removeClass("hide");
-	$("#new_question17_a_ii").removeClass("hide");
+	//$("#new_question17_a_ii").removeClass("hide");
   }else{
     $("#new_question17_a_i").addClass("hide");
-	$("#new_question17_a_ii").addClass("hide");
+	//$("#new_question17_a_ii").addClass("hide");
   }
   if($(this).val()==='N'){
     $("#new_question17_b").removeClass("hide");
@@ -3132,11 +3132,8 @@ $("input[name='Q19W1']").click(function(){
 $(document).ready(function(){
   if($("input[name='Q19W1']:checked").val()==='Y'){
     $("#new_question17_a_i").removeClass("hide");
-	$("#new_question17_a_ii").removeClass("hide");
   }else{
-    $("#new_question17_a_i").addClass("hide");
-	$("#new_question17_a_ii").addClass("hide");
-  }
+    $("#new_question17_a_i").addClass("hide");  }
   if($("input[name='Q19W1']:checked").val()==='N'){
     $("#new_question17_b").removeClass("hide");
 	$("#new_question17_b_i").removeClass("hide");
@@ -3145,6 +3142,22 @@ $(document).ready(function(){
 	$("#new_question17_b_i").addClass("hide");
   } 
 });
+/*Validation For Question 17(a)(ii)*/
+/*Where does the water get treated?*/
+/*Click Event On Radio Button*/
+/*************************************************************************/
+$("input[name='Q19W11']").click(function(){
+  if($(this).val()==='1'){$("#new_question17_a_ii").addClass("hide");}
+  else{$("#new_question17_a_ii").removeClass("hide");}
+});
+/*Validation For Question 17(a)(ii)*/
+/*Where does the water get treated?*/
+/*Load Event On Body*/
+/*************************************************************************/
+ $(document).ready(function(){
+     if($("input[name='Q19W11']:checked").val()==='1'){$("#new_question17_a_ii").addClass("hide");}
+     else{$("#new_question17_a_ii").removeClass("hide");}
+ });
 /*************************************************************************/
 /*This Code Perform Radio Button Click Event*/
 /*This Validation Used For New Question 18*/
