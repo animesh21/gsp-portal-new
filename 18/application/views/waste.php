@@ -3665,37 +3665,4 @@ $(document).ready(function(){
     }
   });
 });
-/*This Validation Apply On Validate BEE Star Rating*/
-$("input[name='Q12Wa3S1']").change(function () {
-   if($("#beestarRatingRefrigerators").val()!=0){
-    if($(this).val()==0){
-	alert("Please Fill Correct Bee Start Rating Of Refrigerators and freezers");
-	 if($($(this).val()!=$("#beestarRatingRefrigerators").val())){
-	  alert("Bee Star Rating Refrigerators In Energy Section "+ $("#beestarRatingRefrigerators").val());
-	 }
-	}
-  }
-});
-/*This Validation Apply On Validate BEE Star Rating*/
-$("input[name='Q12Wa5S1']").change(function () {
-   if($("#beestarRatingAirConditioners").val()!=0){
-    if($(this).val()==0){
-	alert("Please Fill Correct Bee Start Rating Of Refrigerators and freezers");
-	 if($($(this).val()!=$("#beestarRatingAirConditioners").val())){
-	  alert("Bee Star Rating Air conditioners In Energy Section "+ $("#beestarRatingAirConditioners").val());
-	 }
-	}
-  }
-});
-/*This Validation Apply On Validate BEE Star Rating*/ 
-$("input[name='Q12Wa5S1']").change(function () {
-   if($("#beestarRatingAirConditioners").val()!=0){
-    if($(this).val()==0){
-	alert("Please Fill Correct Bee Start Rating Of Refrigerators and freezers");
-	 if($($(this).val()!=$("#beestarRatingAirConditioners").val())){
-	  alert("Bee Star Rating Air conditioners In Energy Section "+ $("#beestarRatingAirConditioners").val());
-	 }
-	}
-  }
-}); 
 </script>
