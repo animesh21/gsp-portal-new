@@ -1411,7 +1411,7 @@
     definitely be recording the input and output from the unit. If the school is selling newspapers or
     bottles or metal scrap to the local waste dealer (kabadiwala), that can also be included in the
     quantity recycled.<a class="tt" data-tooltip="Includes all waste recycled, reused or treated."
-                                         style="position:relative; top:-18px;"><span class="badge">?</span></a></p>
+                                         style="position:relative; top:0px;"><span class="badge">?</span></a></p>
 </div>
 <br>
 <div class="form-group">
