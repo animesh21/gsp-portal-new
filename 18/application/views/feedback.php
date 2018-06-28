@@ -226,21 +226,21 @@ if (isset($data['Q1Fe4'])) {
                                    value="<?php echo set_value('Q8Fe3', 3) ?>" <?php if (isset($data['Q8Fe3'])) echo $data['Q8Fe3'] == 3 ? "checked" : "" ?>>
                             Bad</label></th>
                 </tr>
-                <tr>
+                <!--<tr>
                     <th>Sequencing of questions</th>
                     <th><label class="radio-inline">
                             <input type="radio" name="Q8Fe4"
-                                   value="<?php echo set_value('Q8Fe4', 1) ?>" <?php if (isset($data['Q8Fe4'])) echo $data['Q8Fe4'] == 1 ? "checked" : "" ?>>
+                                   value="<?php //echo set_value('Q8Fe4', 1) ?>" <?php //if (isset($data['Q8Fe4'])) echo $data['Q8Fe4'] == 1 ? "checked" : "" ?>>
                             Good</label></th>
                     <th><label class="radio-inline">
                             <input type="radio" name="Q8Fe4"
-                                   value="<?php echo set_value('Q8Fe4', 2) ?>" <?php if (isset($data['Q8Fe4'])) echo $data['Q8Fe4'] == 2 ? "checked" : "" ?>>
+                                   value="<?php //echo set_value('Q8Fe4', 2) ?>" <?php //if (isset($data['Q8Fe4'])) echo $data['Q8Fe4'] == 2 ? "checked" : "" ?>>
                             Average</label></th>
                     <th><label class="radio-inline">
                             <input type="radio" name="Q8Fe4"
-                                   value="<?php echo set_value('Q8Fe4', 3) ?>" <?php if (isset($data['Q8Fe4'])) echo $data['Q8Fe4'] == 3 ? "checked" : "" ?>>
+                                   value="<?php //echo set_value('Q8Fe4', 3) ?>" <?php //if (isset($data['Q8Fe4'])) echo $data['Q8Fe4'] == 3 ? "checked" : "" ?>>
                             Bad</label></th>
-                </tr>
+                </tr>-->
             </table>
         </div>
         <div class="form-group">
@@ -279,7 +279,7 @@ if (isset($data['Q1Fe7'])) {
                            value="<?php echo set_value('Q1Fe711'); ?>"/>
         </div>
         <div class="form-group">
-            <label><span class="cube">8</span> Could you finish all the tasks in given period of time (August?October)?
+            <label><span class="cube">8</span> Could you finish all the tasks in given period of time (July to October)?
             </label>
             <ul class="list-inline">
                 <li>
@@ -603,7 +603,7 @@ if (isset($data['Q1Fe11'])) {
                 <li>
                     <label class="checkbox-inline">
                         <input type="checkbox" name="Q18Fe"
-                               value="<?php echo set_value('Q18Fe', 1); ?>" <?php if (isset($data['Q18Fe'])) echo "checked" ?>>
+                               value="<?php echo set_value('Q18Fe', 1); ?>" <?php if (isset($data['Q18Fe'])) echo "checked" ?> checked="checked">
                         Please enter my school for Green School Awards.</label>
                 </li>
             </ul>
