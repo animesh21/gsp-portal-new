@@ -478,12 +478,18 @@
                     });
                 });
             });
-		    
-		    $(document).ready(function(){
+	     $(document).ready(function(){
 			   var selectedValue="<?php echo getFiled("Q10G1",$this->session->userdata('USER_ID')); ?>";
-			   //$("#Q1G2 option").removeAttr('selected');
+			   var value="<?php echo getFiled("Q1G2",$this->session->userdata('USER_ID')); ?>";
+			   alert(value);
+			   if(selectedValue==="2"){
+			     if(value==='8'){
+			       $("#Q1G2 option[value='"+value+"']").attr("selected",true);}
+				 else if(value==='9'{  
+			       $("#Q1G2 option[value='"+value+"']").attr("selected",true);}
+				 }
+			   }
 			   if(selectedValue==="1"){$("#Q1G2 option[value='5']").attr("selected",true);}
-			   else if(selectedValue==="2"){$("#Q1G2 option[value='8']").attr("selected",true);}
 			   else if(selectedValue==="3"){$("#Q1G2 option[value='10']").attr("selected",true);}
 			   else if(selectedValue==="4"){$("#Q1G2 option[value='12']").attr("selected",true);}
 			});
