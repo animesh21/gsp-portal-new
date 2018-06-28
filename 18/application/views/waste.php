@@ -1209,7 +1209,7 @@
   </div>
   <div class="form-group row">
     <div class="col-xs-6">
-      <label>Oil from DG sets </label>
+      <label>Oil from diesel generator sets </label>
     </div>
     <div class="col-xs-6">
       <input class="form-control space-textbox" onKeyUp="WasteDomestic()" id="Q6Wa3S2" type="number"
