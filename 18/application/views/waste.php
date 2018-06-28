@@ -551,7 +551,7 @@
 </div>
 <div class="form-group">
   <label class="control-label"><span class="cube">2(a)</span> How many categories does your school
-  segregate waste into?</label>
+  segregate waste into?  <a class="tt" data-tooltip="Collection points are the areas (classroom, playground, sick room, etc) where dustbins have been placed. "><span class="badge">?</span></a></label>
   <div class="form-group row">
     <div class="col-xs-2">
       <label>Area </label>
@@ -3286,18 +3286,18 @@
     </div>
   </div>
   <div class="clearfix">&nbsp;</div>
-  <div class="form-group">
+  <!--<div class="form-group">
     <label class="control-label"><span class="cube">12</span>Do you know that your E-waste can be collected by an authorised dealer or dismantler? </label>
     <div class="form-group">
       <label class="radio-inline text-gray">
-      <input type="radio" name="Q16Wa1" class="radio" id="Q16Wa1" value="<?php echo set_value('Q16Wa1', 'Y') ?>" <?php if (isset($data['Q16Wa1'])) echo $data['Q16Wa1'] == 'Y' ? "checked" : "" ?>>
+      <input type="radio" name="Q16Wa1" class="radio" id="Q16Wa1" value="<?php //echo set_value('Q16Wa1', 'Y') ?>" <?php //if (isset($data['Q16Wa1'])) echo $data['Q16Wa1'] == 'Y' ? "checked" : "" ?>>
       Yes </label>
       <label class="radio-inline text-gray">
-      <input type="radio" name="Q16Wa1"class="radio" id="Q16Wa1" value="<?php echo set_value('Q16Wa1', 'N') ?>" <?php if (isset($data['Q16Wa1'])) echo $data['Q16Wa1'] == 'N' ? "checked" : "" ?>>
+      <input type="radio" name="Q16Wa1"class="radio" id="Q16Wa1" value="<?php //echo set_value('Q16Wa1', 'N') ?>" <?php //if (isset($data['Q16Wa1'])) echo $data['Q16Wa1'] == 'N' ? "checked" : "" ?>>
       No </label>
     </div>
   </div>
-  <br>
+  <br>-->
   <div class="form-group">
     <label>
     <h6>Task 6: School's initiatives.</h6>
@@ -3543,7 +3543,7 @@
             <tbody>
               <?php foreach ($teamDoingWaste as $f) { ?>
               <tr id="index<?php echo $f->id; ?>">
-	       <td> <iframe style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" width="50" height="50"></iframe></td>
+	       <td> <iframe style="width:62px; height:46px;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" width="50" height="50"></iframe></td>
      	      
                 <?php $name = str_replace(" ", "_", $f->name . "_Audit_Team_Doing_Survey_"); ?>
 								
@@ -3655,4 +3655,47 @@
             }
         });
     });
+
+/*This Code Used For Stopping Enter 'E' Alphabet In Textbox Type 'Number'*/
+$(document).ready(function(){
+   $("input[type='number']").keypress(function (evt) {
+    if (evt.which != 8 && evt.which != 0 && evt.which < 48 || evt.which > 57)
+    {
+        evt.preventDefault();
+    }
+  });
+});
+/*This Validation Apply On Validate BEE Star Rating*/
+$("input[name='Q12Wa3S1']").change(function () {
+   if($("#beestarRatingRefrigerators").val()!=0){
+    if($(this).val()==0){
+	alert("Please Fill Correct Bee Start Rating Of Refrigerators and freezers");
+	 if($($(this).val()!=$("#beestarRatingRefrigerators").val())){
+	  alert("Bee Star Rating Refrigerators In Energy Section "+ $("#beestarRatingRefrigerators").val());
+	 }
+	}
+  }
+});
+/*This Validation Apply On Validate BEE Star Rating*/
+$("input[name='Q12Wa5S1']").change(function () {
+   if($("#beestarRatingAirConditioners").val()!=0){
+    if($(this).val()==0){
+	alert("Please Fill Correct Bee Start Rating Of Refrigerators and freezers");
+	 if($($(this).val()!=$("#beestarRatingAirConditioners").val())){
+	  alert("Bee Star Rating Air conditioners In Energy Section "+ $("#beestarRatingAirConditioners").val());
+	 }
+	}
+  }
+});
+/*This Validation Apply On Validate BEE Star Rating*/ 
+$("input[name='Q12Wa5S1']").change(function () {
+   if($("#beestarRatingAirConditioners").val()!=0){
+    if($(this).val()==0){
+	alert("Please Fill Correct Bee Start Rating Of Refrigerators and freezers");
+	 if($($(this).val()!=$("#beestarRatingAirConditioners").val())){
+	  alert("Bee Star Rating Air conditioners In Energy Section "+ $("#beestarRatingAirConditioners").val());
+	 }
+	}
+  }
+}); 
 </script>
