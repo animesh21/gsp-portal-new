@@ -2519,7 +2519,7 @@ $(document).ready(function(){
 
             if(val == "" && val1 == "")
             {
-                alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 5(a)");
+                alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 5(b)");
                 $("#"+id).focus(); $('#'+id).css('border-color', 'red');
                 event.preventDefault();
             }
