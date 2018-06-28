@@ -979,7 +979,7 @@
   <tbody>
     <?php foreach ($segregationClassroom as $f) { ?>
     <tr id="index<?php echo $f->id; ?>">
-      <td> <iframe style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" width="50" height="50"></iframe></td>	    
+      <td> <iframe style="width:62px; height:46px;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" width="50" height="50"></iframe></td>	    
       <?php $name = str_replace(" ", "_", $f->name . "_Segregation_Source_Classrooms_"); ?>
 			
       <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
@@ -1021,7 +1021,7 @@
       <label>HOW MUCH WASTE DOES YOUR SCHOOL GENERATE? </label>
     </div>
     <div class="col-xs-6">
-      <label>Quantity of solid waste generated(monthly average in kg) </label>
+      <label>Quantity of solid waste generated (monthly average in kg) </label>
     </div>
   </div>
   <div class="form-group row">
