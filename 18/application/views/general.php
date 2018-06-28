@@ -466,7 +466,6 @@
 				
                 $('#generalsave').on('click', function (data) {
                     var fd = $('#general-form').serialize();
-                    //console.log(fd);
                     $.ajax({
                         type: 'POST',
                         url: '<?php echo base_url('previous/generalajax') ?>',
@@ -481,7 +480,6 @@
 	     $(document).ready(function(){
 			   var selectedValue="<?php echo getFiled("Q10G1",$this->session->userdata('USER_ID')); ?>";
 			   var value="<?php echo getFiled("Q1G2",$this->session->userdata('USER_ID')); ?>";
-			   alert(value);
 			   if(selectedValue==="2"){
 			     if(value==='8'){
 			       $("#Q1G2 option[value='"+value+"']").attr("selected",true);}
