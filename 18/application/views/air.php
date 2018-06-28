@@ -431,7 +431,7 @@
         1. For this exercise, classrooms that are occupied by students regularly should be considered. Do not
         add laboratories or the auditorium.<br>
         2. Openings: are there any windows and ventilators which can be opened on regular basis and can be
-        opened anytime.Please do not consider/add doors.? <br>
+        opened anytime.Please do not consider/add doors.<br>
         3. This exercise should be done by schools with centrally air conditioning system also. <br>
         4. The exercise should be carried out for ten classrooms only. Sample size should have representation
         from all sections of classes: two classrooms each from pre-primary, primary, middle, secondary and
