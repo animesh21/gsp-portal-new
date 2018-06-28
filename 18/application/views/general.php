@@ -485,9 +485,8 @@
 			   if(selectedValue==="2"){
 			     if(value==='8'){
 			       $("#Q1G2 option[value='"+value+"']").attr("selected",true);}
-				 else if(value==='9'{  
+			     else if(value==='9'){  
 			       $("#Q1G2 option[value='"+value+"']").attr("selected",true);}
-				 }
 			   }
 			   if(selectedValue==="1"){$("#Q1G2 option[value='5']").attr("selected",true);}
 			   else if(selectedValue==="3"){$("#Q1G2 option[value='10']").attr("selected",true);}
