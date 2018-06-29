@@ -1031,7 +1031,6 @@ $("input[name='Q4L8']").change(function(){
   Site_Plot_area_in_square_meter=$("input[name='Q4L1']").val();
   /**/
   Total_green_cover=parseInt(Ground_coverage_area)+parseInt(Green_area_on_ground)+parseInt(Play_area_that_is_paved_concrete_on_ground)+parseInt(Surface_parking_area)+parseInt(Service_area_on_ground);
-  alert(Site_Plot_area_in_square_meter);
   if(Site_Plot_area_in_square_meter>Total_green_cover){
     
   }
