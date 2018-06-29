@@ -1072,8 +1072,7 @@ if ($data['Q4F1'] == 'Y') {
             <label class="control-label"><span class="cube">3</span>What
             kind of food is being
             served / sold in your
-            school? <a class="tt"
-																	   data-tooltip="For types and varieties of packaged food items, please mention each brand and flavor available in your school. For example, if Lay’s chips are available, mention if it is Baked, Herbs and onions, Original salted, Sunkissed tomatoes, American style cream and onion, etc. (Please note it is advisable not to have hawkers, vendors and shops selling ultra processed packaged items near the school.)"><span
+            school? <a class="tt" data-tooltip="For types and varieties of packaged food items, please count each brand and flavor available in your school. For example, if Lay’s chips and five of its variants (Baked, Herbs and onions, Original salted, Sunkissed tomatoes, American style cream) are available, then please count as 5. (Please note it is advisable not to have hawkers, vendors and shops selling ultra processed packaged items near the school.)"><span
 																	class="badge">?</span></a> </label>
             <!--div class=" row">
 <div class="col-xs-3">
@@ -1095,8 +1094,7 @@ if ($data['Q4F1'] == 'Y') {
                 <th width="442px">Packaged food items served / sold inside school campus</th>
                 <th width="192px">Please count all flavours/variants available in the school separately</th>
                 <th width="192px">Total no. of items sold, on an average, in a month</th>
-                <th width="192px">Month the food items were sold in <a class="tt"
-																	   data-tooltip="Please enter the month in numeric form e.g. 1 for January, 2 for February, and so on"><span
+                <th width="192px">Month the food items were sold in <a class="tt" data-tooltip="Please enter the month in numeric form: e.g: 1 for January, 2 for February and so on. If a particular item is not sold, then enter ‘0’ in all fields. "><span
 																	class="badge">?</span></a></th>
               </tr>
               <tr>
