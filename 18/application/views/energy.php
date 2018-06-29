@@ -1632,5 +1632,14 @@ $("input[name='Q7E8S3']").change(function(){
 	$(this).attr("placeholder","BEE Star rating (0 to 5)")
   }
 });
-						
+/**Validation For CNG (kilogrammes)**/
+$("input[name='Q6E5S1']").change(function(){
+  if($("#CNGValidation").val()==0){
+    if($("#CNGValidation").val()<$("input[name='Q6E5S1']").val()){
+	  alert("CNG (kilogrammes) "+$("#CNGValidation").val()+" in Air Section");
+	  $("input[name='Q6E5S1']").val(0);
+	  $("input[name='Q6E5S2']").val(0);
+	}
+  }
+});						
 </script>
