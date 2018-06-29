@@ -22,7 +22,7 @@
         </div>
 </div>
     <span class="input-group-btn col-lg-2">
-        <input type="button" class="btn" style="background-color: rgb(232, 101, 73); color: #fff;" value="Submit" name="Submit">     
+        <input type="submit" class="btn" style="background-color: rgb(232, 101, 73); color: #fff;" value="Submit" name="Submit">     
     </span>
     <?php echo form_close(); ?>
 </div>
@@ -47,23 +47,25 @@
     </thead>
     <?php //echo '<pre>'; print_r($record); ?>
     <tbody>
-       
-            <tr role="row" class="">
-                <td></td>
-                <td></td>
-                <td></td>
-				<td></td>
-                <td></td>
-                <td></td>
-				<td></td>
+        <?php $i = 1;
+        foreach ($record as $r) { ?>
+            <tr role="row" class="<?php echo ($i % 2 == 0) ? "even" : "odd"; ?>">
+                <td><?php echo $i; ?></td>
+                <td><?php echo $r->id; ?></td>
+                <td><?php echo $r->name; ?></td>
+				<td><?php echo $r->pincode; ?></td>
+                <td><?php echo $r->state_name; ?></td>
+                <td><?php echo $r->city; ?></td>
+				<td><?php echo $r->district_name; ?></td>
 					
-                <td></td>
-                <td></td>
-                <td></td>
-				 <td></td>
+                <td><?php echo $r->coname; ?></td>
+                <td><?php echo $r->coemail; ?></td>
+                <td><?php echo $r->comobile; ?></td>
+				 <td><?php echo $r->progress; ?></td>
                 <td class="action"><a target="_blank" href="#" title="View Responses"><img src="<?php echo base_url() ?>assets/front/images/1446146277_view6.png"></a></td>
             </tr>
-           
+            <?php $i++;
+} ?>
     </tbody>
 </table>
 <div class="clearfix">&nbsp;</div>
