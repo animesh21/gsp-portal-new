@@ -1587,49 +1587,49 @@ $("input[name='Q7E2S3']").change(function(){
   if($(this).val()>5){
     alert("BEE star rating cannot be more than 5");
 	$(this).val("");
-	$(this).attr("placeholder","BEE Star rating (1 to 5)")
+	$(this).attr("placeholder","BEE Star rating (0 to 5)")
   }
 });
 $("input[name='Q7E3S3']").change(function(){
   if($(this).val()>5){
     alert("BEE star rating cannot be more than 5");
 	$(this).val("");
-	$(this).attr("placeholder","BEE Star rating (1 to 5)")
+	$(this).attr("placeholder","BEE Star rating (0 to 5)")
   }
 });
 $("input[name='Q7E4S3']").change(function(){
   if($(this).val()>5){
     alert("BEE star rating cannot be more than 5");
 	$(this).val("");
-	$(this).attr("placeholder","BEE Star rating (1 to 5)")
+	$(this).attr("placeholder","BEE Star rating (0 to 5)")
   }
 });
 $("input[name='Q7E5S3']").change(function(){
   if($(this).val()>5){
     alert("BEE star rating cannot be more than 5");
 	$(this).val("");
-	$(this).attr("placeholder","BEE Star rating (1 to 5)")
+	$(this).attr("placeholder","BEE Star rating (0 to 5)")
   }
 });
 $("input[name='Q7E6S3']").change(function(){
   if($(this).val()>5){
     alert("BEE star rating cannot be more than 5");
 	$(this).val("");
-	$(this).attr("placeholder","BEE Star rating (1 to 5)")
+	$(this).attr("placeholder","BEE Star rating (0 to 5)")
   }
 });
 $("input[name='Q7E7S3']").change(function(){
   if($(this).val()>5){
     alert("BEE star rating cannot be more than 5");
 	$(this).val("");
-	$(this).attr("placeholder","BEE Star rating (1 to 5)")
+	$(this).attr("placeholder","BEE Star rating (0 to 5)")
   }
 });
 $("input[name='Q7E8S3']").change(function(){
   if($(this).val()>5){
     alert("BEE star rating cannot be more than 5");
 	$(this).val("");
-	$(this).attr("placeholder","BEE Star rating (1 to 5)")
+	$(this).attr("placeholder","BEE Star rating (0 to 5)")
   }
 });
 						
