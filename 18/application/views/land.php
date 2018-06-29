@@ -1076,3 +1076,35 @@ $("input[name='Q4L11']").change(function(){
   }
 });		
 </script>
+<script>
+/*Teacher Record Validation*/
+/*Teachers (maximum of three teachers can be part of the team): */
+$("#movenextbtn").click(function(e){
+if($("#Q1L1S1").attr('placeholder')==""  || $("#Q1L1S3").attr('placeholder')==""  || $("#Q1L1S2").attr('placeholder')==""){ 
+if($("#Q1L1S1").val()==""  || $("#Q1L1S3").val()==""  || $("#Q1L1S2").val()==""){ 
+alert("School Must Add Teacher First Name, Last Name & Email ID.");
+e.preventDefault();
+}
+}
+});
+/*Administrative Record Validation*/
+/*Administrative staff (maximum of five staff can be part of the team): */
+$("#movenextbtn").click(function(e){
+if($("#Q2L1S1").attr('placeholder')==""  || $("#Q2L1S3").attr('placeholder')==""  || $("#Q2L1S2").attr('placeholder')==""){
+if($("#Q2L1S1").val()=="" || $("#Q2L1S3").val()==""  || $("#Q2L1S2").val()==""){  
+alert("School Must Add Administrative Staff  First Name, Last Name & Email ID.");
+e.preventDefault();
+}
+}
+});
+/*Student Record Validation*/
+/*Student (maximum of five staff can be part of the team): */
+$("#movenextbtn").click(function(e){
+if($("#Q3L1S1").attr('placeholder')==""  || $("#Q3L1S2").attr('placeholder')==""  || $("#Q3L1S3").attr('placeholder')==""){ 
+if($("#Q3L1S1").val()==""  || $("#Q3L1S2").val()==""  || $("#Q3L1S3").val()==""){ 
+alert("School Must Add Administrative Staff  First Name, Last Name & Grade.");
+e.preventDefault();
+}
+}
+});
+</script>
