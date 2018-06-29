@@ -2547,13 +2547,13 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
   <label class="control-label"><span class="cube">17(b)</span>Please specify the fate of wastewater </label>
   <div class="form-group">
     <label class="radio-inline text-gray">
-    <input type="radio" name="Q19W13" value="<?php echo set_value('Q19W13', '1') ?>" <?php if (isset($data['Q19W13'])) echo $data['Q19W13'] == '1' ? "checked" : "" ?>>
+    <input type="checkbox" name="Q19W13" value="<?php echo set_value('Q19W13', '1') ?>" <?php if (isset($data['Q19W13'])) echo $data['Q19W13'] == '1' ? "checked" : "" ?>>
  Wastewater flows directly to the drains </label>
     <label class="radio-inline text-gray">
-    <input type="radio" name="Q19W13" value="<?php echo set_value('Q19W13', '2') ?>" <?php if (isset($data['Q19W13'])) echo $data['Q19W13'] == '2' ? "checked" : "" ?>>
+    <input type="checkbox" name="Q19W131" value="<?php echo set_value('Q19W131', '2') ?>" <?php if (isset($data['Q19W131'])) echo $data['Q19W131'] == '2' ? "checked" : "" ?>>
  Used for groundwater recharge</label>
 	<label class="radio-inline text-gray">
-    <input type="radio" name="Q19W13" value="<?php echo set_value('Q19W13', '3') ?>" <?php if (isset($data['Q19W13'])) echo $data['Q19W13'] == '3' ? "checked" : "" ?>>
+    <input type="checkbox" name="Q19W13" value="<?php echo set_value('Q19W132', '3') ?>" <?php if (isset($data['Q19W132'])) echo $data['Q19W132'] == '3' ? "checked" : "" ?>>
   Used for gardening and horticulture  </label>
   </div>
 </div>
@@ -3105,7 +3105,7 @@ $("input[name='Q19W1']").click(function(){
 	//$("#new_question17_a_ii").removeClass("hide");
   }else{
     $("#new_question17_a_i").addClass("hide");
-	//$("#new_question17_a_ii").addClass("hide");
+    $("#new_question17_a_ii").addClass("hide");    
   }
   if($(this).val()==='N'){
     $("#new_question17_b").removeClass("hide");
