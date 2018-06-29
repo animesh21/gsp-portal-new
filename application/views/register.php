@@ -43,6 +43,8 @@
                 -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
                 transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
             }
+	.btn-danger{ background:#e86549; border:1px solid #e86549;}
+			.btn-danger:hover{ background:#e86549; border:1px solid #e86549;}
         </style>
 <script type="text/javascript">
             $(document).ready(function () {
@@ -347,6 +349,25 @@
   or use another browser.&lt;/p&gt;
   </noscript>
 </div>
+<div id="myModal" class="modal fade in" role="dialog" style="display: block; padding-right: 17px; background:rgba(0, 0, 0, 0.57);">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header"  style="background:#e86549; color:#FFFFFF;">
+        <!--<button type="button" class="close" data-dismiss="modal">&times;</button>-->
+        <h4 class="modal-title">GSP Audit 2018</h4>
+      </div>
+      <div class="modal-body">
+        <p>The CSE's Green Schools Programme Audit 2018 is now open. Please complete and submit this form to register for the GSP Audit 2018. On submission of registration form, you will receive an email with login credentials (username and password) for completing the Audit. Please save your login credentials to be used when you want to access the GSP Audit 2018. There are no fees for participation.</p>
+		 <p class="text-center"><a href="http://www.greenschoolsprogramme.org/audit/18/register" target="_blank" class="btn btn-danger btn-block btn-lg">Registration For GSP Audit 2018</a></p>
+      </div>
+      <!--<div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>-->
+    </div>
+
+  </div>
+</div>	
 </main>
 <footer>
   <div class="container">
