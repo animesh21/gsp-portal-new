@@ -2656,6 +2656,11 @@ Used for  cleaning purposes (mopping, washing vehicles, etc)</label>
         <input type="checkbox" name="Q20W22" value="<?php echo set_value('Q20W22', 3) ?>" <?php if (isset($data['Q20W22'])) echo $data['Q20W22'] == 3 ? "checked" : "" ?>>
         Recharge Ground Water</label>
       </li>
+	  <li>
+        <label class="radio-inline text-gray">
+        <input type="checkbox" name="Q20W22" value="<?php echo set_value('Q20W22', 4) ?>" <?php if (isset($data['Q20W22'])) echo $data['Q20W22'] == 4 ? "checked" : "" ?>>
+        Cleaning (mopping, washing vehicles, etc)</label>
+      </li>
     </ul>
   </div>
 </div>
