@@ -1009,7 +1009,7 @@
     });
 /*Validation For This Question*/
 /*Site/ Plot area in square meter (m2): Backend: A+B3+C+D+E = 1A*/
-$("input[name='Q4L8']").change(function(){
+$("input[name='Q4L8'],input[name='Q4L2']").change(function(){
   var Site_Plot_area_in_square_meter;
   var Total_green_cover;
   var Ground_coverage_area;
