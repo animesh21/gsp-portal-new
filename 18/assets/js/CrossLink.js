@@ -3274,14 +3274,14 @@ $(document).ready(function(){
             $('input[name=Q8Fe3]').css('border-color', 'red');
             event.preventDefault();
         }
-        var radioCheck = $("input[name=Q8Fe4]:checked").val();
+       /* var radioCheck = $("input[name=Q8Fe4]:checked").val();
         if(radioCheck != 1 && radioCheck != 2 && radioCheck != 3)
         {
             alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 6");
             $('input[name=Q8Fe4]').focus();
             $('input[name=Q8Fe4]').css('border-color', 'red');
             event.preventDefault();
-        }
+        }*/
         var radioCheck = $("input[name=Q1Fe7]:checked").val();
         if(radioCheck != 'Y' && radioCheck != 'N')
         {
