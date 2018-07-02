@@ -300,7 +300,7 @@
             </div>
             <div class="col-xs-3">
                 <input class="form-control space-textbox" id="Q3L1S3"
-                       type="text" name="Q3L1S3"
+                       type="number" name="Q3L1S3"
                        placeholder="<?php if (isset($data['Q3L1S3'])) echo $data['Q3L1S3'] ?>"
                        value="<?php echo set_value('Q3L1S3'); ?>"/>
             </div>
@@ -321,7 +321,7 @@
             </div>
             <div class="col-xs-3">
                 <input class="form-control space-textbox" id="Q3L2S3"
-                       type="text" name="Q3L2S3"
+                       type="number" name="Q3L2S3"
                        placeholder="<?php if (isset($data['Q3L2S3'])) echo $data['Q3L2S3'] ?>"
                        value="<?php echo set_value('Q3L2S3'); ?>"/>
             </div>
@@ -342,7 +342,7 @@
             </div>
             <div class="col-xs-3">
                 <input class="form-control space-textbox" id="Q3L3S3"
-                       type="text" name="Q3L3S3"
+                       type="number" name="Q3L3S3"
                        placeholder="<?php if (isset($data['Q3L3S3'])) echo $data['Q3L3S3'] ?>"
                        value="<?php echo set_value('Q3L3S3'); ?>"/>
             </div>
@@ -363,7 +363,7 @@
             </div>
             <div class="col-xs-3">
                 <input class="form-control space-textbox" id="Q3L4S3"
-                       type="text" name="Q3L4S3"
+                       type="number" name="Q3L4S3"
                        placeholder="<?php if (isset($data['Q3L4S3'])) echo $data['Q3L4S3'] ?>"
                        value="<?php echo set_value('Q3L4S3'); ?>"/>
             </div>
@@ -384,7 +384,7 @@
             </div>
             <div class="col-xs-3">
                 <input class="form-control space-textbox" id="Q3L5S3"
-                       type="text" name="Q3L5S3"
+                       type="number" name="Q3L5S3"
                        placeholder="<?php if (isset($data['Q3L5S3'])) echo $data['Q3L5S3'] ?>"
                        value="<?php echo set_value('Q3L5S3'); ?>"/>
             </div>
@@ -405,7 +405,7 @@
             </div>
             <div class="col-xs-3">
                 <input class="form-control space-textbox" id="Q3L6S3"
-                       type="text" name="Q3L6S3"
+                       type="number" name="Q3L6S3"
                        placeholder="<?php if (isset($data['Q3L6S3'])) echo $data['Q3L6S3'] ?>"
                        value="<?php echo set_value('Q3L6S3'); ?>"/>
             </div>
@@ -426,7 +426,7 @@
             </div>
             <div class="col-xs-3">
                 <input class="form-control space-textbox" id="Q3L7S3"
-                       type="text" name="Q3L7S3"
+                       type="number" name="Q3L7S3"
                        placeholder="<?php if (isset($data['Q3L7S3'])) echo $data['Q3L7S3'] ?>"
                        value="<?php echo set_value('Q3L7S3'); ?>"/>
             </div>
@@ -447,7 +447,7 @@
             </div>
             <div class="col-xs-3">
                 <input class="form-control space-textbox" id="Q3L8S3"
-                       type="text" name="Q3L8S3"
+                       type="number" name="Q3L8S3"
                        placeholder="<?php if (isset($data['Q3L8S3'])) echo $data['Q3L8S3'] ?>"
                        value="<?php echo set_value('Q3L8S3'); ?>"/>
             </div>
@@ -468,7 +468,7 @@
             </div>
             <div class="col-xs-3">
                 <input class="form-control space-textbox" id="Q3L9S3"
-                       type="text" name="Q3L9S3"
+                       type="number" name="Q3L9S3"
                        placeholder="<?php if (isset($data['Q3L9S3'])) echo $data['Q3L9S3'] ?>"
                        value="<?php echo set_value('Q3L9S3'); ?>"/>
             </div>
@@ -489,7 +489,7 @@
             </div>
             <div class="col-xs-3">
                 <input class="form-control space-textbox" id="Q3L10S3"
-                       type="text" name="Q3L10S3"
+                       type="number" name="Q3L10S3"
                        placeholder="<?php if (isset($data['Q3L10S3'])) echo $data['Q3L10S3'] ?>"
                        value="<?php echo set_value('Q3L10S3'); ?>"/>
             </div>
@@ -890,7 +890,7 @@
             <?php //echo '<pre>'; print_r($greenCover);  ?>
             <?php foreach ($greenCover as $f) { ?>
                 <tr id="index<?php echo $f->id; ?>">
-		   <td> <iframe style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" width="50" height="50"></iframe></td>
+		   <td> <iframe style="width:62px; height:46px;"  src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" width="50" height="50"></iframe></td>
 	
                     <?php $name = str_replace(" ", "_", $f->name . "_Green_Cover_"); //echo $name; ?>
 					
