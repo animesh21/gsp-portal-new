@@ -1066,6 +1066,9 @@ $(document).ready(function(){
         evt.preventDefault();
     }
   });
+  $('input[type=number]').on('wheel', function(e){
+    return false;
+  });	
 });
 /*Validation For Ground Coverage Area*/
 $("input[name='Q4L2']").change(function(){
