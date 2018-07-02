@@ -54,7 +54,7 @@
   </div>
   <!--close home_container--> 
   <!-- <p class="log-p">Need help? <a href="mailto:support@greenschoolsprogramme.org"> Email support@greenschoolsprogramme.org</a> or call 98-105-05283 or 98-739-26822.</p>-->
-  <p class="log-p">Access to the dashboard is restricted to authorized personnel only.</p>
+  <p class="log-p text-center">Access to the dashboard is restricted to authorized personnel only.</p>
   
 </div>
 <?php echo form_close(); ?>   
