@@ -2172,6 +2172,9 @@ $(document).ready(function(){
         evt.preventDefault();
     }
   });
+  $('input[type=number]').on('wheel', function(e){
+    return false;
+  });	
 });	
 </script>
 
