@@ -967,7 +967,7 @@ Any other step taken for water conservation? (if Yes, please specify):
     <br/>
 	<div class="form-group question_Q8W1S12 hide">
       <label class="radio-inline text-gray col-xs-12" style="padding-bottom:12px; z-index: 10;">
-	   <textarea class="form-control" id="" name=""></textarea>
+	   <textarea class="form-control" id="Q8W1S123443" name="Q8W1S123443"><?php if(isset($data['Q8W1S123443'])){ echo $data['Q8W1S123443'];} ?></textarea>
       </label>
     </div>
   </div>
@@ -1313,12 +1313,6 @@ Any other step taken for water conservation? (if Yes, please specify):
                                        placeholder="<?php if (isset($data['Q8W2S2S4'])) echo $data['Q8W2S2S4'] ?>">
   </div>
 </div>
-<div class="form-group hide" id="Q8W2S2S31">
- <label>Since you have selected ‘Combination of both’, please provide information on storage tank (s): </label>
-    <input class="form-control space-textbox" id="Q8W2S2S3A1" type="text" name="Q8W2S2S31"
-                                       value="<?php echo set_value('Q8W2S2S31') ?>"
-                                       placeholder="<?php if (isset($data['Q8W2S2S31'])) echo $data['Q8W2S2S31'] ?>">
-</div>
 <div class="form-group" id="Q8W2S2S5"
                             <?php
                             if (isset($data['Q8W2S2']))
@@ -1445,12 +1439,6 @@ Any other step taken for water conservation? (if Yes, please specify):
                                            value="<?php echo set_value('Q8W2S2S7', 'N') ?>" <?php if (isset($data['Q8W2S2S7'])) echo $data['Q8W2S2S7'] == 'N' ? "checked" : "" ?>/>
     No </label>
   </div>
-</div>
-<div class="form-group hide" id="Q8W2S2S71">
- <label>Since you have selected ‘Combination of both’, please provide information on recharge structure (s): </label>
-    <input class="form-control space-textbox" id="Q8W2S2S712" type="text" name="Q8W2S2S71"
-                                       value="<?php echo set_value('Q8W2S2S71') ?>"
-                                       placeholder="<?php if (isset($data['Q8W2S2S71'])) echo $data['Q8W2S2S71'] ?>">
 </div>
 <div class="form-group" id="Q8W2S2S8"
                             <?php
@@ -3068,21 +3056,46 @@ $(document).ready(function(){
         evt.preventDefault();
     }
   });
+  $('input[type=number]').on('wheel', function(e){
+    return false;
+  });
 });
 /**/ 
 $(document).ready(function(){ 
   if($("input[name='Q8W1S12']").val()==='Y'){ $(".question_Q8W1S12").removeClass("hide");}
   else{$(".question_Q8W1S12").addClass("hide");}
   /**/
-  if($("input[name='Q8W2S2S2']:checked").val()==='N' && $("input[name='Q8W2S2']:checked").val()==3){
-     $("#Q8W2S2S31").removeClass('hide');
+  if($("input[name='Q8W2S2']:checked").val()==3){
+	 $("input[name='Q8W2S2S2']").attr("checked",true);
   }
   /**/
-  if($("input[name='Q8W2S2S7']:checked").val()==='N' && $("input[name='Q8W2S2']:checked").val()==3){
-     $("#Q8W2S2S71").removeClass('hide');
+  if($("input[name='Q8W2S2']:checked").val()==3){
+	 $("input[name='Q8W2S2S7']").attr("checked",true);
   }
-  
+  if($("input[name='Q8W2S2S2']:checked").val()==='Y'){
+	   $("#Q8W2S2S3,#Q8W2S2S4,#Q8W2S2S5,#Q8W2S2S6").css("display","block");
+  }
+  if($("input[name='Q8W2S2S7']:checked").val()==='Y'){
+	   $("#Q8W2S2S8,#Q8W2S2S9").css("display","block");
+  }
 });
+$("input[name='Q8W2S2S2']").click(function(){
+    if($("input[name='Q8W2S2']:checked").val()==3 && $(this).val()==='N'){
+	  alert("Since you have selected ‘Combination of both’, please provide information on storage tank (s)");
+	  $("input[name='Q8W2S2S2'][value='N']").attr("checked",false);
+	  $("input[name='Q8W2S2S2'][value='Y']").prop("checked",true);
+	  $("#Q8W2S2S3,#Q8W2S2S4,#Q8W2S2S5,#Q8W2S2S6").css("display","block");
+	}
+});
+$("input[name='Q8W2S2S7']").click(function(){
+    if($("input[name='Q8W2S2']:checked").val()==3 && $(this).val()==='N'){
+	alert("Since you have selected ‘Combination of both’, please provide information on storage tank (s)");
+	  $("input[name='Q8W2S2S7'][value='N']").attr("checked",false);
+	  $("input[name='Q8W2S2S7'][value='Y']").prop("checked",true);
+	  $("#Q8W2S2S8,#Q8W2S2S9").css("display","block");
+	}
+});
+
 /*This Code Used For Question 5 last Sub Question Yes/No*/
 /*What are the water conservation practices your school follows */
 $("input[name='Q8W1S12']").click(function(){
@@ -3178,17 +3191,17 @@ $(document).ready(function(){
 });
 /****************************************************************************/
 $("#movenextbtn").click(function(e){
-  if($("input[name='Q8W2S2S31']").val()==""){
+/*  if($("input[name='Q8W2S2S31']").val()==""){
     alert("Please Fill The Data Of Given Question: Since you have selected ‘Combination of both’, please provide information on storage tank (s)");
 	e.preventDefault();
   }
   if($("input[name='Q8W2S2S71']").val()==""){
     alert("Please Fill The Data Of Given Question: Since you have selected ‘Combination of both’, please provide information on recharge structure (s)");
 	e.preventDefault();
-  }
-  if($("input[name='Q8W2S2S8']").val()==""){
+  }*/
+/*  if($("input[name='Q8W2S2S8']").val()==""){
     alert("Please Fill The Data Of Given Question: Please share the total number of groundwater recharge structures");
 	e.preventDefault();
-  }
+  }*/
 });
 </script>
