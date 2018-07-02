@@ -25,10 +25,10 @@
                         class="cube">1</span>How many levels does your school have <a class="tt"
                                                                                       data-tooltip="If your school has classes from Grade 6 to 11, your response will be lowest level of grade: Grade 6 and Highest level of grade: Grade 11. If your school has only one Grade (Grade 7) then your response for both will be Grade 7"><span
                             class="badge">?</span></a></label>
-  <audio controls>
+  <!--<audio controls>
     <source src="<?php echo base_url(); ?>assets/img/jana_gana_mana.ogg" type="audio/ogg">
     <source src="<?php echo base_url(); ?>assets/img/jana_gana_mana.mp3" type="audio/mpeg">
-    Your browser does not support the audio tag. </audio>
+    Your browser does not support the audio tag. </audio>-->
 </div>
 <div class="form-group"> Lowest level of Grade/ Class:
   <select name="Q1G1" id="Q1G1" onChange="ComputePrimary()" class="form-control"
