@@ -501,7 +501,17 @@ data-target="#airModal" type="button">UPLOAD FILES </button>
     <tbody>
       <?php foreach ($midDayMeal as $f) { ?>
       <tr id="index<?php echo $f->id; ?>">
-        <td><iframe style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" width="50" height="50"></iframe></td>
+        <?php 
+	      $array = explode('.',$f->file_name); 
+		  $count = count($array);
+		  $extension = $array[$count-1];
+          ?>
+		 <?php if($extension == "jpg" || $extension == "jpeg"){ ?>
+      <td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" /></td>
+      <?php }else{ ?>
+      <td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
+      <?php }?>
+		
         <?php $name = str_replace(" ", "_", $f->name . "_Mid_Day_Meal_"); ?>
         <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
         <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
