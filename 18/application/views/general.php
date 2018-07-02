@@ -485,7 +485,7 @@
 			       $("#Q1G2 option[value='"+value+"']").attr("selected",true);}
 			     else if(value==='9'){  
 			       $("#Q1G2 option[value='"+value+"']").attr("selected",true);}
-			     else if(value==''){
+			     else if(value===''){
 			       $("#Q1G2 option[value='8']").attr("selected",true);
 			     } 	   
 			   }
