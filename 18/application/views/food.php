@@ -628,12 +628,12 @@ if ($data['Q5F1S1'] == 'Y') {
       <?php foreach ($lunch as $u) { ?>
       <tr id="index<?php echo $u->id; ?>">
         <?php 
-	      $array = explode('.',$f->file_name); 
+	      $array = explode('.',$u->file_name); 
 		  $count = count($array);
 		  $extension = $array[$count-1];
                 ?>
         <?php if($extension == "jpg" || $extension == "jpeg"){ ?>
-        <td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" /></td>
+        <td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>uploads/files/<?php echo $u->file_name ?>" class="img-responsive" /></td>
         <?php }else{ ?>
         <td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
         <?php }?>
