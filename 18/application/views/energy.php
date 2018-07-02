@@ -1574,6 +1574,9 @@ $(document).ready(function(){
         evt.preventDefault();
     }
   });
+  $('input[type=number]').on('wheel', function(e){
+    return false;
+  });	
 });
 /**Validation For Question 4 BEE Star Rating**/
 /*Event Perform On Keypress*/
