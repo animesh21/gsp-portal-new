@@ -26,7 +26,7 @@
         $('#file').fileuploader({
             addMore: true,
             theme: 'onebutton',
-            limit: 1,
+            limit: 5,
             extensions: ['jpg', 'jpeg', 'png','pdf','doc','docx'],
             captions: {
                 button: "Select File"
