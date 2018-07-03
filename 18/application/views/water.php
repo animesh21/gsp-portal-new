@@ -2893,15 +2893,15 @@ Used for  cleaning purposes (mopping, washing vehicles, etc)</label>
                                                     addMore: true,
                                                     theme: 'onebutton',
                                                     limit: 5,
-                                                    fileMaxSize:0.5,
+                                                   // fileMaxSize:0.5,
                                                     extensions: ['jpg', 'jpeg', 'png','pdf','doc','docx'],
                                                     captions: {
                                                         button: "Select File",
-                                                        errors: {
-                                                            fileSize: '${name} is too large! Please choose a file up ' +
-                                                            'to 512KB.',
+                                                     //   errors: {
+                                                         //   fileSize: '${name} is too large! Please choose a file up ' +
+                                                            //'to 512KB.',
 
-                                                        }
+                                                     //   }
                                                     }
                                                 });
                                                 //Ends Here....
