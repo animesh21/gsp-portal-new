@@ -151,8 +151,8 @@
         <h4 class="modal-title">GSP Audit 2018</h4>
       </div>
       <div class="modal-body">
-        <p>The CSE's Green Schools Programme Audit 2018 is not now open yet. If you want to download the reports of previous year CSE's Green Schools Programme Audit 2017. Please click the bleow button </p>
-        <p class="text-center"><a href="http://www.greenschoolsprogramme.org/audit/downloadLogin" target="_blank" class="btn btn-danger btn-block btn-lg">Login For GSP Audit 2017</a></p>
+        <p>The CSE's Green Schools Programme Audit 2018 is not now open yet. If you want to download the reports of previous year CSE's Green Schools Programme Audit 2017. Please click the below button </p>
+        <p class="text-center"><a href="http://www.greenschoolsprogramme.org/audit/downloadLogin" target="_blank" class="btn btn-danger btn-block btn-lg">Download Reports For GSP Audit 2017</a></p>
       </div>
       <!--<div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
