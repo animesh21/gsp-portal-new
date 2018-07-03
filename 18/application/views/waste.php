@@ -3767,196 +3767,196 @@ $(document).ready(function(){
 /*Event Perform On Keypress*/
 $("input[name='Q12Wa1S1']").change(function(){
   if($(this).val()>5){
-    alert("BEE Star Rating must be between 1 to 5.");
+    alert("BEE star rating cannot be more than 5");
 	$(this).val("");
 	$(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa2S1']").change(function(){
   if($(this).val()>5){
-    alert("BEE Star Rating must be between 1 to 5.");
+    alert("BEE star rating cannot be more than 5");
 	$(this).val("");
 	$(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa3S1']").change(function(){
   if($(this).val()>5){
-    alert("BEE Star Rating must be between 1 to 5.");
+    alert("BEE star rating cannot be more than 5");
 	$(this).val("");
 	$(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa4S1']").change(function(){
   if($(this).val()>5){
-    alert("BEE Star Rating must be between 1 to 5.");
+    alert("BEE star rating cannot be more than 5");
 	$(this).val("");
 	$(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa5S1']").change(function(){
   if($(this).val()>5){
-    alert("BEE Star Rating must be between 1 to 5.");
+    alert("BEE star rating cannot be more than 5");
 	$(this).val("");
 	$(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa6S1']").change(function(){
   if($(this).val()>5){
-    alert("BEE Star Rating must be between 1 to 5.");
+    alert("BEE star rating cannot be more than 5");
 	$(this).val("");
 	$(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa7S1']").change(function(){
   if($(this).val()>5){
-    alert("BEE Star Rating must be between 1 to 5.");
+    alert("BEE star rating cannot be more than 5");
 	$(this).val("");
 	$(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa8S1']").change(function(){
   if($(this).val()>5){
-    alert("BEE Star Rating must be between 1 to 5.");
+    alert("BEE star rating cannot be more than 5");
 	$(this).val("");
 	$(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa9S1']").change(function(){
   if($(this).val()>5){
-    alert("BEE Star Rating must be between 1 to 5.");
+    alert("BEE star rating cannot be more than 5");
 	$(this).val("");
 	$(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa10S1']").change(function(){
   if($(this).val()>5){
-    alert("BEE Star Rating must be between 1 to 5.");
+    alert("BEE star rating cannot be more than 5");
 	$(this).val("");
 	$(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa11S1']").change(function(){
   if($(this).val()>5){
-    alert("BEE Star Rating must be between 1 to 5.");
+    alert("BEE star rating cannot be more than 5");
 	$(this).val("");
 	$(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa12S1']").change(function(){
   if($(this).val()>5){
-    alert("BEE Star Rating must be between 1 to 5.");
+    alert("BEE star rating cannot be more than 5");
 	$(this).val("");
 	$(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa13S1']").change(function(){
   if($(this).val()>5){
-    alert("BEE Star Rating must be between 1 to 5.");
+    alert("BEE star rating cannot be more than 5");
 	$(this).val("");
 	$(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa14S1']").change(function(){
   if($(this).val()>5){
-    alert("BEE Star Rating must be between 1 to 5.");
+    alert("BEE star rating cannot be more than 5");
 	$(this).val("");
 	$(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa15S1']").change(function(){
   if($(this).val()>5){
-    alert("BEE Star Rating must be between 1 to 5.");
+    alert("BEE star rating cannot be more than 5");
 	$(this).val("");
 	$(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa16S1']").change(function(){
   if($(this).val()>5){
-    alert("BEE Star Rating must be between 1 to 5.");
+    alert("BEE star rating cannot be more than 5");
 	$(this).val("");
 	$(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa17S1']").change(function(){
   if($(this).val()>5){
-    alert("BEE Star Rating must be between 1 to 5.");
+    alert("BEE star rating cannot be more than 5");
 	$(this).val("");
 	$(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa18S1']").change(function(){
   if($(this).val()>5){
-    alert("BEE Star Rating must be between 1 to 5.");
+    alert("BEE star rating cannot be more than 5");
 	$(this).val("");
 	$(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa19S1']").change(function(){
   if($(this).val()>5){
-    alert("BEE Star Rating must be between 1 to 5.");
+    alert("BEE star rating cannot be more than 5");
 	$(this).val("");
 	$(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa20S1']").change(function(){
   if($(this).val()>5){
-    alert("BEE Star Rating must be between 1 to 5.");
+    alert("BEE star rating cannot be more than 5");
 	$(this).val("");
 	$(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa21S1']").change(function(){
   if($(this).val()>5){
-    alert("BEE Star Rating must be between 1 to 5.");
+    alert("BEE star rating cannot be more than 5");
 	$(this).val("");
 	$(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa22S1']").change(function(){
   if($(this).val()>5){
-    alert("BEE Star Rating must be between 1 to 5.");
+    alert("BEE star rating cannot be more than 5");
 	$(this).val("");
 	$(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa23S1']").change(function(){
   if($(this).val()>5){
-    alert("BEE Star Rating must be between 1 to 5.");
+    alert("BEE star rating cannot be more than 5");
 	$(this).val("");
 	$(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa24S1']").change(function(){
   if($(this).val()>5){
-    alert("BEE Star Rating must be between 1 to 5.");
+    alert("BEE star rating cannot be more than 5");
 	$(this).val("");
 	$(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa25S1']").change(function(){
   if($(this).val()>5){
-    alert("BEE Star Rating must be between 1 to 5.");
+    alert("BEE star rating cannot be more than 5");
 	$(this).val("");
 	$(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa26S1']").change(function(){
   if($(this).val()>5){
-    alert("BEE Star Rating must be between 1 to 5.");
+    alert("BEE star rating cannot be more than 5");
 	$(this).val("");
 	$(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa27S1']").change(function(){
   if($(this).val()>5){
-    alert("BEE Star Rating must be between 1 to 5.");
+    alert("BEE star rating cannot be more than 5");
 	$(this).val("");
 	$(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa28S1']").change(function(){
   if($(this).val()>5){
-    alert("BEE Star Rating must be between 1 to 5.");
+    alert("BEE star rating cannot be more than 5");
 	$(this).val("");
 	$(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
