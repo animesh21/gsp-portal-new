@@ -2166,7 +2166,7 @@ Any other step taken for water conservation? (if Yes, please specify):
                                    placeholder="<?php if (isset($data['Q8W2S6'])) echo $data['Q8W2S6']; ?>"
                                    value="<?php echo set_value('Q8W2S6'); ?>"/>
 </div>
-<div class="form-group hide">
+<div class="form-group hide" id="rainwaterHarvestingFormula">
   <label>To calculate the maximum rainwater harvesting potential:</label>
   <br>
   <br>
@@ -3203,5 +3203,13 @@ $("#movenextbtn").click(function(e){
     alert("Please Fill The Data Of Given Question: Please share the total number of groundwater recharge structures");
 	e.preventDefault();
   }*/
+});
+$("input[name='Q8W2']").click(function(){
+   if($(this).val()==='Y'){$("#rainwaterHarvestingFormula").addClass("hide");}
+   else{$("#rainwaterHarvestingFormula").removeClass("hide");}
+});
+$(document).ready(function(){
+   if($(this).val()==='Y'){$("#rainwaterHarvestingFormula").addClass("hide");}
+   else{$("#rainwaterHarvestingFormula").removeClass("hide");}
 });
 </script>
