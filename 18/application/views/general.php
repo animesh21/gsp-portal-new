@@ -482,6 +482,7 @@
 			   var value="<?php echo getFiled("Q1G2",$this->session->userdata('USER_ID')); ?>";
 			   if(selectedValue==="2"){
 			     if(value==='8'){
+			       $("#Q1G2 option").removeAttr();	     
 			       $("#Q1G2 option[value='"+value+"']").attr("selected",true);}
 				 else if(value==='9'){  
 			       $("#Q1G2 option[value='"+value+"']").attr("selected",true);}
@@ -492,6 +493,7 @@
 			   if(selectedValue==="1"){$("#Q1G2 option[value='5']").attr("selected",true);}
 			   else if(selectedValue==="3"){
 			      if(value==='9'){
+			       $("#Q1G2 option").removeAttr();	      
 			       $("#Q1G2 option[value='"+value+"']").attr("selected",true);}
 				 else if(value==='10'){  
 			       $("#Q1G2 option[value='"+value+"']").attr("selected",true);}
@@ -502,6 +504,7 @@
 			   }
 			   else if(selectedValue==="4"){
 			     if(value==='11'){
+			       $("#Q1G2 option").removeAttr();	     
 			       $("#Q1G2 option[value='"+value+"']").attr("selected",true);}
 				 else if(value==='12'){  
 			       $("#Q1G2 option[value='"+value+"']").attr("selected",true);}
