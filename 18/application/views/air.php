@@ -33,8 +33,9 @@
       <div id="samplt" class="fin-prog progress-bar" role="progressbar" style="width: <?php echo progressBarValue($this->session->userdata('USER_ID')).'%'; ?>; height: 35px;"><?php echo progressBarValue($this->session->userdata('USER_ID')).'%'; ?></div>
     </div>
     <div class="intro">
-      <h1>AIR</h1>
-      <div class="video"><a class="lptext" href="#" data-toggle="modal" data-target="#myModal"><img
+      <h1>AIR <small class="pull-right"><i class="h6">If the new changes are not saved, please press Ctrl+F5</i><small></h1>
+      <div class="video"><a class="lptext" href="#" data-toggle="modal" data-target="#myModal">
+	  <img
                             src="http://greenschoolsprogramme.org/audit2015/upload/templates/tfr_responsive/images/video-icon.png"
                             style="width: 45px; height: 40px; margin-top:47px;"></a></div>
       <p> The Air section involves finding out your school's contribution in polluting the air. The information
