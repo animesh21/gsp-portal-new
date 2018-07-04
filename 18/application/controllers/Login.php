@@ -36,6 +36,9 @@ If your school has not registered earlier for the GSP Audit, please register her
 
 ");
 				}
+		    else if($varCheckLogin=="error") {
+                     $this->session->set_flashdata('error', 'Invalid Email/Password!');
+                   }
             } else if($varCheckLogin=="error") {
                 $this->session->set_flashdata('error', 'Invalid Email/Password!');
             }
