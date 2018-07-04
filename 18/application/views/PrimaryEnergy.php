@@ -28,15 +28,17 @@
 <div id="pprg" class="newprog progress" style="text-align:center">
   <div id="samplt" class="fin-prog progress-bar" role="progressbar" style="width: <?php echo progressBarValue($this->session->userdata('USER_ID')).'%'; ?>; height: 35px;"><?php echo progressBarValue($this->session->userdata('USER_ID')).'%'; ?></div>
     </div>
-</div>
 <div class="intro">
-  <h1>ENERGY <span style="text-transform:capitalize">(Primary)</span></h1>
+  <h1>ENERGY <span style="text-transform:capitalize">(Primary)</span> <small class="pull-right" style="position: relative;
+    top: -28px;
+    font-weight: bolder;"><i class="h6"><strong>If the new changes are not saved, please press Ctrl+F5</strong></i></small></h1>
   <div class="video"><a class="lptext" href="#" data-toggle="modal" data-target="#videoModal"><img
                             src="http://greenschoolsprogramme.org/audit2015/upload/templates/tfr_responsive/images/video-icon.png"
                             style="width: 45px; height: 40px; margin-top:47px;"></a></div>
 <!--  <p> Prior to answering these questions, please consider using a meter to measure the monthly average amount
     of energy used from the respective energy sources.</p>-->
   <p class="unit"><strong>The unit of measurement to be used in the Energy section is megajoule (mj).</strong> </p>
+</div>
 </div>
 <?php echo form_open('energy/set', array('id' => "PrimaryEnergy")); ?>
 <div class="form-group">
