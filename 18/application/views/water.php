@@ -3191,6 +3191,14 @@ $(document).ready(function(){
 });
 /****************************************************************************/
 $("#movenextbtn").click(function(e){
+  if($("input[name='Q8W2']:checked").val()==='N'){
+    if($("input[name='Q8W2S6']").attr('placeholder')==''){
+      if($("input[name='Q8W2S6']").val()==''){
+       alert("Please Fill The Answer Of This Question:Calculate your school’s rainwater harvesting potential (in litres).");
+	  e.preventDefault();    
+      }
+    }  
+  }	
 /*  if($("input[name='Q8W2S2S31']").val()==""){
     alert("Please Fill The Data Of Given Question: Since you have selected ‘Combination of both’, please provide information on storage tank (s)");
 	e.preventDefault();
