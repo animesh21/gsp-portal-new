@@ -483,15 +483,31 @@
 			   if(selectedValue==="2"){
 			     if(value==='8'){
 			       $("#Q1G2 option[value='"+value+"']").attr("selected",true);}
-			     else if(value==='9'){  
+				 else if(value==='9'){  
 			       $("#Q1G2 option[value='"+value+"']").attr("selected",true);}
-			     else if(value===''){
-			       $("#Q1G2 option[value='8']").attr("selected",true);
-			     } 	   
+				 else{
+			     $("#Q1G2 option[value='8']").attr("selected",true);}
 			   }
+			   
 			   if(selectedValue==="1"){$("#Q1G2 option[value='5']").attr("selected",true);}
-			   else if(selectedValue==="3"){$("#Q1G2 option[value='10']").attr("selected",true);}
-			   else if(selectedValue==="4"){$("#Q1G2 option[value='12']").attr("selected",true);}
+			   else if(selectedValue==="3"){
+			      if(value==='9'){
+			       $("#Q1G2 option[value='"+value+"']").attr("selected",true);}
+				 else if(value==='10'){  
+			       $("#Q1G2 option[value='"+value+"']").attr("selected",true);}
+				 else if(value==='11'){  
+			       $("#Q1G2 option[value='"+value+"']").attr("selected",true);}
+				 else{
+			     $("#Q1G2 option[value='10']").attr("selected",true);}  
+			   }
+			   else if(selectedValue==="4"){
+			     if(value==='11'){
+			       $("#Q1G2 option[value='"+value+"']").attr("selected",true);}
+				 else if(value==='12'){  
+			       $("#Q1G2 option[value='"+value+"']").attr("selected",true);}
+				 else{
+			     $("#Q1G2 option[value='12']").attr("selected",true);}  
+			   }
 			});
         </script>
 <!---<script src="http://jwpsrv.com/library/A7o4ns39EeS3agp+lcGdIw.js"></script>-->
