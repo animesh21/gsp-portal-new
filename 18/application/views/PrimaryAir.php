@@ -28,15 +28,17 @@
     <div id="pprg" class="newprog progress" style="text-align:center">
       <div id="samplt" class="fin-prog progress-bar" role="progressbar" style="width: <?php echo progressBarValue($this->session->userdata('USER_ID')).'%'; ?>; height: 35px;"><?php echo progressBarValue($this->session->userdata('USER_ID')).'%'; ?></div>
     </div>
-  </div>
-  <div class="intro">
-    <h1>AIR <span style="text-transform:capitalize">(Primary)</span></h1>
+    <div class="intro">
+    <h1>AIR <span style="text-transform:capitalize">(Primary)</span> <small class="pull-right" style="position: relative;
+    top: -28px;
+    font-weight: bolder;"><i class="h6"><strong>If the new changes are not saved, please press Ctrl+F5</strong></i></small></h1>
     <div class="video"><a class="lptext" href="#" data-toggle="modal" data-target="#myModal"><img
                             src="http://greenschoolsprogramme.org/audit2015/upload/templates/tfr_responsive/images/video-icon.png"
                             style="width: 45px; height: 40px; margin-top:47px;"></a></div>
     <p> The Air section involves finding out your school's contribution in polluting the air. The information
       will help in devising strategies for clean air in the coming years.</p>
     <p> <strong>The unit of measurement to be used in the Air section is square meter (m<sup>2</sup>).</strong> </p>
+  </div>
   </div>
   <div class="form-group">
     <label for="exampleInputEmail1">
