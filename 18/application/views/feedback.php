@@ -21,7 +21,9 @@
         <!--<div id="pprg" class="newprog progress" style="text-align:center">
           <div id="samplt" class="fin-prog progress-bar" role="progressbar" style="width: 37.5%; height: 35px;">37.5%</div>
         </div>-->
-        <h1>FEEDBACK</h1>
+        <h1>FEEDBACK <small class="pull-right" style="position: relative;
+    top: -28px;
+    font-weight: bolder;"><i class="h6"><strong>If the new changes are not saved, please press Ctrl+F5</strong></i></small></h1>
         <?php echo form_open('feedback/set',array('id'=>'feedback')); ?>
         <div class="form-group">
             <label><span class="cube">1</span> Has your school participated in the Green Schools Programme (GSP) Audit
