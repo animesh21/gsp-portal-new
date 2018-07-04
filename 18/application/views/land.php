@@ -1040,10 +1040,7 @@ $("input[name='Q4L8']").change(function(){
   Site_Plot_area_in_square_meter=$("input[name='Q4L1']").val();
   /**/
   Total_green_cover=parseInt(Ground_coverage_area)+parseInt(Green_area_on_ground)+parseInt(Play_area_that_is_paved_concrete_on_ground)+parseInt(Surface_parking_area)+parseInt(Service_area_on_ground);
-  if(Site_Plot_area_in_square_meter>Total_green_cover){
-    
-  }
-  else{
+  if(Site_Plot_area_in_square_meter<Total_green_cover){
    alert("The total of 1A cannot exceed the total site area");
    /*Placeholder Value*/
    $("input[name='Q4L2']").attr('placeholder','Please enter correct data');
