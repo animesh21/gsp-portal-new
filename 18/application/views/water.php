@@ -3195,9 +3195,30 @@ $("#movenextbtn").click(function(e){
     if($("input[name='Q8W2S6']").attr('placeholder')==''){
       if($("input[name='Q8W2S6']").val()==''){
        alert("Please Fill The Answer Of This Question:Calculate your school’s rainwater harvesting potential (in litres).");
-	  e.preventDefault();    
+	   e.preventDefault();
       }
-    }  
+	}  
+  }
+   if($("input[name='Q8W1S12']:checked").val()==='Y'){
+      if($("input[name='Q8W1S123443']").val()===''){
+       alert("Please Fill The Answer Of This Question:Provision for storage of leftover water in bottles at water coolers Any other step taken for water conservation? (if Yes, please specify):).");
+	   e.preventDefault();
+	}  
+  }
+  
+    if($("input[name='Q8W2S2S2']:checked").val()==='Y'){
+      if($("input[name='Q8W2S2S3']").val()==='' && $("input[name='Q8W2S2S4']").val()===''){
+       alert("Please Fill The Answer Of This Question:6(b)(2) A If yes, please provide:");
+	    alert("Please Fill The Answer Of This Question:6(b)(2) B If yes, please provide:");
+	   e.preventDefault();
+	}  
+  }
+  
+    if($("input[name='Q8W2S2S7']:checked").val()==='Y'){
+      if($("input[name='Q8W2S2S8']").val()===''){
+       alert("Please share the total number of groundwater recharge structures..");
+	   e.preventDefault();
+	}  
   }	
 /*  if($("input[name='Q8W2S2S31']").val()==""){
     alert("Please Fill The Data Of Given Question: Since you have selected ‘Combination of both’, please provide information on storage tank (s)");
