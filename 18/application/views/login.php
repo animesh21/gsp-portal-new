@@ -172,7 +172,7 @@
 <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.5.min.js" type="text/javascript"></script>
 <script type="text/javascript">
             $(document).ready(function () {
-                $('#btnForgetPassword').on('click', function () {
+                $('#btnForgetPassword').click(function () {
                     var emailval = $('input[name="email_id"]').val();
                     var pattern = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i;
                     if (emailval == '') {
