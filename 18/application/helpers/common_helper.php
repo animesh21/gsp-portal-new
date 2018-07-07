@@ -51,6 +51,19 @@ if (!function_exists('getSchoolId')) {
 	   }
 }
 
+/******
+* GET USER ID
+*
+*******/
+if (!function_exists('getUserId')) {
+       function getUserId($argSchoolID)
+	   {
+	     $CI = & get_instance();
+         $temp = $CI->db->get_where('gsp_school', array('id' => $argSchoolID))->row();
+		 return $temp->userid;
+	   }
+}
+
 
 /*
  * Get Filed
