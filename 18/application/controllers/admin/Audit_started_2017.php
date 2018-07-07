@@ -630,18 +630,19 @@ public function digital_certificate_for_principal_coordinator($argID)
    /*
      * Update Function
      */
+	/**Add Code To Update GSP Answer (7/08/2019)**/  
     public function update($argSchoolID, $argUserID)
     {   
         $arrSchool=array(
             'name'=>$this->input->post('name'),
-	 'udise'=>$this->input->post('udise'),
+	        'udise'=>$this->input->post('udise'),
             'address1'=>$this->input->post('address1'),
             'address2'=>$this->input->post('address2'),
             'state'=>$this->input->post('state'),
             'district'=>$this->input->post('district'),
             'city'=>$this->input->post('city'),
             'pincode'=>$this->input->post('pincode'),
-	     'std'=>$this->input->post('std'),
+	        'std'=>$this->input->post('std'),
             'telephone'=>$this->input->post('telephone'),
             'schoolemail'=>$this->input->post('schoolemail'),	
             'mobile'=>$this->input->post('mobile'),
@@ -650,10 +651,87 @@ public function digital_certificate_for_principal_coordinator($argID)
             'coemail'=>$this->input->post('coemail'),
             'comobile'=>$this->input->post('comobile')
         );
+		$arrSchool1=array(
+		    'questionid'=>'udise',
+		    'answer'=>$this->input->post('udise'));
+		 $arrSchool2=array(
+		    'questionid'=>'address1',
+		    'answer'=>$this->input->post('address1'));
+		$arrSchool3=array(
+		    'questionid'=>'address2',
+		    'answer'=>$this->input->post('address2'));
+		$arrSchool4=array(
+		    'questionid'=>'state',
+		    'answer'=>$this->input->post('state'));			
+		$arrSchool5=array(
+		    'questionid'=>'district',
+		    'answer'=>$this->input->post('district'));
+		$arrSchool6=array(
+		    'questionid'=>'city',
+		    'answer'=>$this->input->post('city'));
+		$arrSchool7=array(
+		    'questionid'=>'pincode',
+		    'answer'=>$this->input->post('pincode'));	
+		$arrSchool8=array(
+		    'questionid'=>'std',
+		    'answer'=>$this->input->post('std'));
+		$arrSchool9=array(
+		    'questionid'=>'telephone',
+		    'answer'=>$this->input->post('telephone'));
+		$arrSchool10=array(
+		    'questionid'=>'schoolemail',
+		    'answer'=>$this->input->post('schoolemail'));	
+		$arrSchool11=array(
+		    'questionid'=>'mobile',
+		    'answer'=>$this->input->post('mobile'));
+		$arrSchool12=array(
+		    'questionid'=>'principle_name',
+		    'answer'=>$this->input->post('principle_name'));
+		$arrSchool13=array(
+		    'questionid'=>'coname',
+		    'answer'=>$this->input->post('coname'));
+		$arrSchool14=array(
+		    'questionid'=>'coemail',
+		    'answer'=>$this->input->post('coemail'));			
+		$arrSchool15=array(
+		    'questionid'=>'comobile',
+		    'answer'=>$this->input->post('comobile'));			
+         $this->db->where('id', $argSchoolID);
         ///echo '<pre>'; print_r($this->input->post()); exit;
         $this->db->where('id', $argSchoolID);
         if($this->db->update('gsp_school', $arrSchool))
         {
+		    $userid=getUserId($argSchoolID);
+		    $this->db->where('userid', $userid);
+		    $this->db->update('gsp_answers',$arrSchool1);
+			$this->db->where('userid', $userid);
+		    $this->db->update('gsp_answers',$arrSchool2);
+			$this->db->where('userid', $userid);
+		    $this->db->update('gsp_answers',$arrSchool3);
+			$this->db->where('userid', $userid);
+		    $this->db->update('gsp_answers',$arrSchool4);
+			$this->db->where('userid', $userid);
+		    $this->db->update('gsp_answers',$arrSchool5);
+			$this->db->where('userid', $userid);
+		    $this->db->update('gsp_answers',$arrSchool6);
+			$this->db->where('userid', $userid);
+		    $this->db->update('gsp_answers',$arrSchool7);
+			$this->db->where('userid', $userid);
+		    $this->db->update('gsp_answers',$arrSchool8);
+			$this->db->where('userid', $userid);
+		    $this->db->update('gsp_answers',$arrSchool9);
+			$this->db->where('userid', $userid);
+		    $this->db->update('gsp_answers',$arrSchool10);
+			$this->db->where('userid', $userid);
+		    $this->db->update('gsp_answers',$arrSchool11);
+			$this->db->where('userid', $userid);
+		    $this->db->update('gsp_answers',$arrSchool12);
+			$this->db->where('userid', $userid);
+		    $this->db->update('gsp_answers',$arrSchool13);
+			$this->db->where('userid', $userid);
+		    $this->db->update('gsp_answers',$arrSchool14);
+			$this->db->where('userid', $userid);
+		    $this->db->update('gsp_answers',$arrSchool15);
             //update user data as well
             $arrUser=array(
                 'email'=>$this->input->post('coemail'),
