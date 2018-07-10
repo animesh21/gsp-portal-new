@@ -512,5 +512,10 @@
 			     $("#Q1G2 option[value='12']").attr("selected",true);}  
 			   }
 			});
+		    $("#movenextbtn").click(function(){ 
+			if($("input[name='Q7G1']").length=="" && $("input[name='Q7G2']").length=="" && $("input[name='Q7G3']").length=="" && $("input[name='Q7G4']").length=="" && $("input[name='Q7G5']").length=="" && $("input[name='Q7G6']").length=="" && $("input[name='Q7G7']").length=="" && $("input[name='Q7G8']").length=="" && $("input[name='Q7G9']").length=="" && $("input[name='Q7G10']").length=="" && $("input[name='Q7G11']").length=="" && $("input[name='Q7G12']").length==""){
+			 alert("Q6:Please select the month(s) in which the GSP audit was carried out?");
+			}
+			});
         </script>
 <!---<script src="http://jwpsrv.com/library/A7o4ns39EeS3agp+lcGdIw.js"></script>-->
