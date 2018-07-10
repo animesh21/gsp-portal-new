@@ -3140,9 +3140,9 @@ $("input[name='Q19W1']").click(function(){
 /*This Validation Used For New Question 17(a)(i),17(a)(ii),17(b),17(b)(i)*/
 $(document).ready(function(){
   if($("input[name='Q19W1']:checked").val()==='Y'){
-    $("#new_question17_a_i").removeClass("hide");
+    $("#new_question17_a_i").removeClass("hide"); $("#new_question17_a_ii").removeClass("hide");
   }else{
-    $("#new_question17_a_i").addClass("hide");  }
+    $("#new_question17_a_i").addClass("hide"); $("#new_question17_a_ii").addClass("hide");  }
   if($("input[name='Q19W1']:checked").val()==='N'){
     $("#new_question17_b").removeClass("hide");
 	$("#new_question17_b_i").removeClass("hide");
