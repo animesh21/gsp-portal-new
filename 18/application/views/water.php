@@ -3236,11 +3236,11 @@ $("#movenextbtn").click(function(e){
   }*/
 });
 $("input[name='Q8W2']").click(function(){
-   if($(this).val()==='N'){$("#rainwaterHarvestingFormula").addClass("hide");}
+   if($(this).val()==='Y'){$("#rainwaterHarvestingFormula").addClass("hide");}
    else{$("#rainwaterHarvestingFormula").removeClass("hide");}
 });
 $(document).ready(function(){
-   if($(this).val()==='Y'){$("#rainwaterHarvestingFormula").addClass("hide");}
+   if($("input[name='Q8W2']:checked").val()==='Y'){$("#rainwaterHarvestingFormula").addClass("hide");}
    else{$("#rainwaterHarvestingFormula").removeClass("hide");}
 });
 </script>
