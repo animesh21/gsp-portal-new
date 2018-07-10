@@ -1,12 +1,21 @@
 <h1>PARTICIPATION BY ZONE </h1>
-  <div class="wrapper">
-    <div id="container"> </div>
-  </div>
+<div class="wrapper">
+  <div id="container"> </div>
+  <p><strong>Export Graph:</strong></p>
+  <select id="ExportOption" style="border-radius:0px;">
+    <option value="PNG">PNG Image</option>
+    <option value="JPEG">JPEG Image</option>
+    <option value="PDF">PDF Document</option>
+    <option value="SVG">SVG Vector Image</option>
+  </select>
+  <button id="buttonExport" class="btn btn-danger" style="background: #e86549 !important; border:1px solid #e86549; border-radius:0px;">Export chart</button>
+  <button id="buttonPrint" class="btn btn-danger" style="background: #e86549 !important; border:1px solid #e86549; border-radius:0px;">Print chart</button>
+</div>
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/modules/data.js"></script>
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
 <script type="text/javascript">
-    Highcharts.chart('container',{
+  var chart= Highcharts.chart('container',{
         chart: {
             type: 'column'
         },
@@ -55,4 +64,32 @@
         }		
 		],
 });
+// the button handler    
+    $('#buttonExport').click(function() {
+        var e = document.getElementById("ExportOption");
+        var ExportAs = e.options[e.selectedIndex].value;   
+        
+        if(ExportAs == 'PNG')
+        {
+            chart.exportChart({type: 'image/png', filename: 'my-png'}, {subtitle: {text:''}});
+        }
+        if(ExportAs == 'JPEG')
+        {
+            chart.exportChart({type: 'image/jpeg', filename: 'my-jpg'}, {subtitle: {text:''}});
+        }
+        if(ExportAs == 'PDF')
+        {
+            chart.exportChart({type: 'application/pdf', filename: 'my-pdf'}, {subtitle: {text:''}});
+        }
+        if(ExportAs == 'SVG')
+        {
+            chart.exportChart({type: 'image/svg+xml', filename: 'my-svg'}, {subtitle: {text:''}});
+        }
+    }); 
+
+    $('#buttonPrint').click(function() {
+        chart.setTitle(null, { text: ' ' });
+        chart.print();
+        chart.setTitle(null, { text: 'Click and drag in the plot area to zoom in' });
+    });
 </script>
