@@ -6,7 +6,7 @@
     <div class="col-lg-5">
         <div class="input-group">
 
-            <?php echo form_dropdown('state', $states, $this->input->post('state'), array('class' => 'form-control', 'id' => 'country-select')); ?>
+            <?php echo form_dropdown('All','state', $states, $this->input->post('state'), array('class' => 'form-control', 'id' => 'country-select')); ?>
 
         </div>
 
