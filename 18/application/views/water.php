@@ -2648,7 +2648,7 @@ Used for  cleaning purposes (mopping, washing vehicles, etc)</label>
       </li>
 	  <li>
         <label class="radio-inline text-gray">
-        <input type="checkbox" name="Q20W22" value="<?php echo set_value('Q20W22', 4) ?>" <?php if (isset($data['Q20W22'])) echo $data['Q20W22'] == 4 ? "checked" : "" ?>>
+        <input type="checkbox" name="Q20W23" value="<?php echo set_value('Q20W23', 4) ?>" <?php if (isset($data['Q20W23'])) echo $data['Q20W23'] == 4 ? "checked" : "" ?>>
         Cleaning (mopping, washing vehicles, etc)</label>
       </li>
     </ul>
@@ -3253,3 +3253,40 @@ if($("input[name='Q19W1']:checked").val()==='N'){
  }
 });
 </script>
+	
+	<script>
+	$("#movenextbtn").click(function(e){
+if($("input[name='Q5W1']").prop('checked') == false && $("input[name='Q5W2']").prop('checked') == false && $("input[name='Q5W3']").prop('checked') == false && $("input[name='Q5W4']").prop('checked') == false){
+  alert("2 Where does the water your school uses, come from");
+  e.preventDefault();
+}
+});	
+	</script>
+	
+	<script>
+	$("#movenextbtn").click(function(e){
+if($("input[name='Q6W1']").prop('checked') == false && $("input[name='Q6W2']").prop('checked') == false && $("input[name='Q6W3']").prop('checked') == false && $("input[name='Q6W4']").prop('checked') == false && $("input[name='Q6W5']").prop('checked') == false){
+  alert("3 Who supplies the water in your school");
+  e.preventDefault();
+}
+});	
+	</script>
+	
+	<script>
+	$("#movenextbtn").click(function(e){
+if($("input[name='Q19W16']").prop('checked') == false && $("input[name='Q19W161']").prop('checked') == false && $("input[name='Q19W162']").prop('checked') == false){
+  alert("18(i) If yes, How does your school reuse wastewater from RO plant or AC");
+  e.preventDefault();
+}
+});	
+	</script>
+	
+	<script>
+	$("#movenextbtn").click(function(e){
+if($("input[name='Q20W2']").prop('checked') == false && $("input[name='Q20W21']").prop('checked') == false && $("input[name='Q20W22']").prop('checked') == false  && $("input[name='Q20W23']").prop('checked') == false){
+  alert("19(a) How does your school reuse wastewater?");
+  e.preventDefault();
+}
+});	
+	</script>
+	
