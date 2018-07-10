@@ -3156,7 +3156,7 @@ $(document).ready(function(){
 /*Click Event On Radio Button*/
 /*************************************************************************/
 $("input[name='Q19W11']").click(function(){
-  if($(this).val()==='1'){$("#new_question17_a_ii").addClass("hide");}
+  if($(this).val()==='N'){$("#new_question17_a_ii").addClass("hide");}
   else{$("#new_question17_a_ii").removeClass("hide");}
 });
 /*Validation For Question 17(a)(ii)*/
@@ -3164,7 +3164,7 @@ $("input[name='Q19W11']").click(function(){
 /*Load Event On Body*/
 /*************************************************************************/
  $(document).ready(function(){
-     if($("input[name='Q19W11']:checked").val()==='1'){$("#new_question17_a_ii").addClass("hide");}
+     if($("input[name='Q19W11']:checked").val()==='N'){$("#new_question17_a_ii").addClass("hide");}
      else{$("#new_question17_a_ii").removeClass("hide");}
  });
 /*************************************************************************/
