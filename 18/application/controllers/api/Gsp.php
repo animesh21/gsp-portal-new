@@ -55,7 +55,7 @@ class Gsp extends REST_Controller {
              //   $this->set_response($detail, REST_Controller::HTTP_CREATED); // CREATED (201) being the HTTP response code
                
 		$this->response([
-                    'status' => FALSE,
+                    'status' => TRUE,
                     'message' => 'Survey has been closed',
                     'id' => $details
                         ], REST_Controller::HTTP_NOT_FOUND);	
@@ -81,7 +81,7 @@ class Gsp extends REST_Controller {
         } else {
 
             $this->response([
-                'status' => FALSE,
+                'status' => TRUE,
                 'message' => 'Please Specify State ID',
                 'id' => $id
                     ], REST_Controller::HTTP_NOT_FOUND); // NOT_FOUND (404) being the HTTP response code
