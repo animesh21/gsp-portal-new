@@ -1147,19 +1147,19 @@ $("#movenextbtn").click(function(e){
     alert("Surface parking area");
 	   e.preventDefault();
   }
-  if($("input[name='Q4L9']").val==""){
+  if($("input[name='Q4L9']").val=="" || input[name='Q4L9']").val=="m²"){
     alert("Roof and terrace area");
 	   e.preventDefault();
   }
-  if($("input[name='Q4L10']").val==""){
+  if($("input[name='Q4L10']").val=="" || input[name='Q4L9']").val=="m²"){
     alert("Green cover on exposed roof and terrace");
 	   e.preventDefault();
   }
-  if($("input[name='Q4L11']").val==""){
+  if($("input[name='Q4L11']").val=="" || input[name='Q4L9']").val=="m²"){
     alert("Total built-up/constructed area");
 	   e.preventDefault();
   }
-  if($("input[name='Q4L12']").val==""){
+  if($("input[name='Q4L12']").val=="" || input[name='Q4L9']").val=="m²"){
     alert("Total number of floors (excluding ground floor)");
 	   e.preventDefault();
   }	
