@@ -518,4 +518,13 @@
 			}
 			});
         </script>
+	
+	<script>
+		$("#movenextbtn").click(function(e){
+      if($("input[name='Q7G1']").prop('checked') == false && $("input[name='Q7G2']").prop('checked') == false && $("input[name='Q7G3']").prop('checked') == false && $("input[name='Q7G4']").prop('checked') == false && $("input[name='Q7G5']").prop('checked') == false && $("input[name='Q7G6']").prop('checked') == false && $("input[name='Q7G7']").prop('checked') == false && $("input[name='Q7G8']").prop('checked') == false && $("input[name='Q7G9']").prop('checked') == false && $("input[name='Q7G10']").prop('checked') == false && $("input[name='Q7G11']").prop('checked') == false && $("input[name='Q7G12']").prop('checked') == false){
+           alert("6 Please select the month(s) in which the GSP audit was carried out.");
+        e.preventDefault();
+          }
+          });
+	</script>
 <!---<script src="http://jwpsrv.com/library/A7o4ns39EeS3agp+lcGdIw.js"></script>-->
