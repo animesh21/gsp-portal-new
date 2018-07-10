@@ -64,7 +64,7 @@ class Gsp extends REST_Controller {
             } else {
 
                 $this->response([
-                    'status' => FALSE,
+                    'status' => TRUE,
                     'message' => 'No users were found',
                     'id' => $details
                         ], REST_Controller::HTTP_NOT_FOUND); // NOT_FOUND (404) being the HTTP response code
