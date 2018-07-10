@@ -513,7 +513,7 @@
 			   }
 			});
 		    $("#movenextbtn").click(function(){ 
-			if($("input[name='Q7G1']").length=="" && $("input[name='Q7G2']").length=="" && $("input[name='Q7G3']").length=="" && $("input[name='Q7G4']").length=="" && $("input[name='Q7G5']").length=="" && $("input[name='Q7G6']").length=="" && $("input[name='Q7G7']").length=="" && $("input[name='Q7G8']").length=="" && $("input[name='Q7G9']").length=="" && $("input[name='Q7G10']").length=="" && $("input[name='Q7G11']").length=="" && $("input[name='Q7G12']").length==""){
+			if($("input[name='Q7G1']").length==0 && $("input[name='Q7G2']").length==0 && $("input[name='Q7G3']").length==0 && $("input[name='Q7G4']").length==0 && $("input[name='Q7G5']").length==0 && $("input[name='Q7G6']").length==0 && $("input[name='Q7G7']").length==0 && $("input[name='Q7G8']").length==0 && $("input[name='Q7G9']").length==0 && $("input[name='Q7G10']").length==0 && $("input[name='Q7G11']").length==0 && $("input[name='Q7G12']").length==0){
 			 alert("Q6:Please select the month(s) in which the GSP audit was carried out?");
 			}
 			});
