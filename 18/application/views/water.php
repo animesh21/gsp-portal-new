@@ -2543,7 +2543,7 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
     <input type="checkbox" name="Q19W131" value="<?php echo set_value('Q19W131', '2') ?>" <?php if (isset($data['Q19W131'])) echo $data['Q19W131'] == '2' ? "checked" : "" ?>>
  Used for groundwater recharge</label>
 	<label class="radio-inline text-gray">
-    <input type="checkbox" name="Q19W13" value="<?php echo set_value('Q19W132', '3') ?>" <?php if (isset($data['Q19W132'])) echo $data['Q19W132'] == '3' ? "checked" : "" ?>>
+    <input type="checkbox" name="Q19W132" value="<?php echo set_value('Q19W132', '3') ?>" <?php if (isset($data['Q19W132'])) echo $data['Q19W132'] == '3' ? "checked" : "" ?>>
   Used for gardening and horticulture  </label>
   </div>
 </div>
@@ -3242,5 +3242,12 @@ $("input[name='Q8W2']").click(function(){
 $(document).ready(function(){
    if($("input[name='Q8W2']:checked").val()==='Y'){$("#rainwaterHarvestingFormula").addClass("hide");}
    else{$("#rainwaterHarvestingFormula").removeClass("hide");}
+});
+
+$("#movenextbtn").click(function(e){
+ if($("input[name='Q19W13']").prop('checked') == false && $("input[name='Q19W131']").prop('checked') == false && $("input[name='Q19W132']").prop('checked') == false){
+   alert("17(b) Please specify the fate of wastewater");
+   e.preventDefault();
+ }
 });
 </script>
