@@ -3245,9 +3245,11 @@ $(document).ready(function(){
 });
 
 $("#movenextbtn").click(function(e){
+if($("input[name='Q19W1']:checked").val()==='N'){
  if($("input[name='Q19W13']").prop('checked') == false && $("input[name='Q19W131']").prop('checked') == false && $("input[name='Q19W132']").prop('checked') == false){
    alert("17(b) Please specify the fate of wastewater");
    e.preventDefault();
+  }
  }
 });
 </script>
