@@ -3279,14 +3279,25 @@ if($("input[name='Q19W16']").prop('checked') == false && $("input[name='Q19W161'
   e.preventDefault();
 }
 });	
-	</script>
+</script>
 	
-	<script>
+<script>
 	$("#movenextbtn").click(function(e){
 if($("input[name='Q20W2']").prop('checked') == false && $("input[name='Q20W21']").prop('checked') == false && $("input[name='Q20W22']").prop('checked') == false  && $("input[name='Q20W23']").prop('checked') == false){
   alert("19(a) How does your school reuse wastewater?");
   e.preventDefault();
 }
 });	
-	</script>
+
+/**********************************************************************************/
+/*This Validation Used For Q6 & Q6(a)*/
+$("input[name='Q8W2']").click(function(){
+  if($(this).val()==="Y"){
+     if($("input[name='Q8W2S1']").val()==='N'){ 
+       $("input[name='Q8W2S1'][value='N']").prop("checked",false);
+	 }
+     $("input[name='Q8W2S1'][value='Y']").prop("checked",true);
+  }
+});	
+</script>
 	
