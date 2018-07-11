@@ -3299,6 +3299,15 @@ $("input[name='Q8W2']").click(function(){
      $("input[name='Q8W2S1'][value='Y']").prop("checked",true);
   }
 });
+$("input[name='Q8W2S1']").click(function(){
+   if($("input[name='Q8W2']:checked").val()==="Y"){
+      if($("input[name='Q8W2S1']:checked").val()==="N"){
+	   alert("Q6:Do you have Rainwater harvesting (RWH) system in your school? Selected Yes As Answer");
+       $("input[name='Q8W2S1'][value='Y']").prop("checked",true);
+      }
+   }
+});
+	
 /*This Validation Used For Q6 & Q6(a) Load Event*/
 $(document).ready(function(){
   $("input[name='Q8W2']").click(function(){
