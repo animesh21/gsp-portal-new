@@ -4060,5 +4060,14 @@ if($("input[name='Q4Wa2S1']").prop('checked') == false && $("input[name='Q4Wa2S2
 });	
 	</script>
 	
+	<script>
+	$("#wastenext").click(function(e){
+if($("input[name='Q15Wa2S1']").prop('checked') == false && $("input[name='Q15Wa2S2']").prop('checked') == false && $("input[name='Q15Wa2S3']").prop('checked') == false && $("input[name='Q15Wa2S4']").prop('checked') == false){
+	 alert("9(b) What kind of waste is being burnt/ incinerated?");
+	 e.preventDefault();
+}
+});	
+	</script>
+	
 	
 	
