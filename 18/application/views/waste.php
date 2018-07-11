@@ -3964,3 +3964,90 @@ $("input[name='Q12Wa28S1']").change(function(){
   }
 });	
 </script>
+	
+	<script>
+	$("#movenextbtn").click(function(e){
+if($("input[name='Q11Wa1S1']").prop('checked') == false && $("input[name='Q11Wa1S2']").prop('checked') == false && $("input[name='Q11Wa1S3']").prop('checked') == false && $("input[name='Q11Wa1S4']").prop('checked') == false){
+  alert("Q7 fill the Paper section.");
+  e.preventDefault();
+}
+});	
+	</script>
+	
+	<script>
+	$("#movenextbtn").click(function(e){
+if($("input[name='Q11Wa2S1']").prop('checked') == false && $("input[name='Q11Wa2S2']").prop('checked') == false && $("input[name='Q11Wa2S3']").prop('checked') == false && $("input[name='Q11Wa2S4']").prop('checked') == false){
+  alert("Q7 fill the Plastic section.");
+  e.preventDefault();
+}
+});	
+		
+		
+	</script>
+	
+	<script>
+	$("#movenextbtn").click(function(e){
+if($("input[name='Q11Wa3S1']").prop('checked') == false && $("input[name='Q11Wa3S2']").prop('checked') == false && $("input[name='Q11Wa3S3']").prop('checked') == false && $("input[name='Q11Wa3S4']").prop('checked') == false){
+  alert("Q7 fill the Horticultural waste section.");
+  e.preventDefault();
+}
+});	
+	</script>
+	
+	<script>
+	$("#movenextbtn").click(function(e){
+if($("input[name='Q11Wa4S1']").prop('checked') == false && $("input[name='Q11Wa4S2']").prop('checked') == false && $("input[name='Q11Wa4S3']").prop('checked') == false && $("input[name='Q11Wa4S4']").prop('checked') == false){
+  alert("Q7 fill the Horticultural waste section.");
+  e.preventDefault();
+}
+});	
+	</script>
+	
+	<script>
+	$("#movenextbtn").click(function(e){
+if($("input[name='Q11Wa4S1']").prop('checked') == false && $("input[name='Q11Wa4S2']").prop('checked') == false && $("input[name='Q11Wa4S3']").prop('checked') == false && $("input[name='Q11Wa4S4']").prop('checked') == false){
+  alert("Q7 fill the E-waste section.");
+  e.preventDefault();
+}
+});	
+	</script>
+	
+	<script>
+	$("#movenextbtn").click(function(e){
+if($("input[name='Q11Wa5S1']").prop('checked') == false && $("input[name='Q11Wa5S2']").prop('checked') == false && $("input[name='Q11Wa5S3']").prop('checked') == false && $("input[name='Q11Wa5S4']").prop('checked') == false){
+  alert("Q7 fill the Hazardous waste section.");
+  e.preventDefault();
+}
+});	
+	</script>
+	
+	<script>
+	$("#movenextbtn").click(function(e){
+if($("input[name='Q11Wa6S1']").prop('checked') == false && $("input[name='Q11Wa6S2']").prop('checked') == false && $("input[name='Q11Wa6S3']").prop('checked') == false && $("input[name='Q11Wa6S4']").prop('checked') == false){
+  alert("Q7 fill the Wood, glass, metal section.");
+  e.preventDefault();
+}
+});	
+	</script>
+	
+	<script>
+	$("#movenextbtn").click(function(e){
+if($("input[name='Q11Wa7S1']").prop('checked') == false && $("input[name='Q11Wa7S2']").prop('checked') == false && $("input[name='Q11Wa7S3']").prop('checked') == false && $("input[name='Q11Wa7S4']").prop('checked') == false){
+  alert("Q7 fill the Biomedical waste section.");
+  e.preventDefault();
+}
+});	
+	</script>
+	
+	<script>
+	$("#movenextbtn").click(function(e){
+if($("input[name='Q11Wa8S1']").prop('checked') == false && $("input[name='Q11Wa8S2']").prop('checked') == false && $("input[name='Q11Wa8S3']").prop('checked') == false && $("input[name='Q11Wa8S4']").prop('checked') == false){
+  alert("Q7 fill the Biomedical waste section.");
+  e.preventDefault();
+}
+});	
+	</script>
+	
+	
+	
+	
