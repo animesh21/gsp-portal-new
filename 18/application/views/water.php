@@ -3290,7 +3290,7 @@ if($("input[name='Q20W2']").prop('checked') == false && $("input[name='Q20W21']"
 });	
 
 /**********************************************************************************/
-/*This Validation Used For Q6 & Q6(a)*/
+/*This Validation Used For Q6 & Q6(a) Radio Button Click*/
 $("input[name='Q8W2']").click(function(){
   if($(this).val()==="Y"){
      if($("input[name='Q8W2S1']").val()==='N'){ 
@@ -3298,6 +3298,17 @@ $("input[name='Q8W2']").click(function(){
 	 }
      $("input[name='Q8W2S1'][value='Y']").prop("checked",true);
   }
+});
+/*This Validation Used For Q6 & Q6(a) Load Event*/
+$(document).ready(function(){
+  $("input[name='Q8W2']").click(function(){
+  if($(this).val()==="Y"){
+     if($("input[name='Q8W2S1']").val()==='N'){ 
+       $("input[name='Q8W2S1'][value='N']").prop("checked",false);
+	 }
+     $("input[name='Q8W2S1'][value='Y']").prop("checked",true);
+  }
+});
 });	
 </script>
 	
