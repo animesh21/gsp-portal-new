@@ -4066,6 +4066,52 @@ if($("input[name='Q15Wa2S1']").prop('checked') == false && $("input[name='Q15Wa2
 	 alert("11(b) What kind of waste is being burnt/ incinerated?");
 	 e.preventDefault();
 }
+
+		/*Vlidation Code On Question Q1,Q2,Q4,Q5,Q6,Q9,Q10,Q11,Q12,Q13,Q14,Q15*/
+	 if($("input[name='Q8Wa1']").prop('checked') == false){
+	   alert("Q1: Does your school segregate solid waste?");
+	   e.preventDefault();
+	 }
+	 if($("input[name='Q8Wa1']").prop('checked') == false){
+	   alert("Q2: How many categories does your school segregate waste into? ");
+	   e.preventDefault();
+	 }
+	 if($("input[name='Q8Wa1']").prop('checked') == false){
+	   alert("Q4: Does your school recycle any generated waste?");
+	   e.preventDefault();
+	 }
+	 if($("input[name='Q9Wa1']").prop('checked') == false){
+	   alert("Q5: Does your school have a composting facility?");
+	   e.preventDefault();
+	 } 
+	 if($("input[name='Q10Wa1']").prop('checked') == false){
+	   alert("Q6: Does your school encourage students & teachers to reuse textbooks?");
+	   e.preventDefault();
+	 } 
+	 if($("input[name='Q13Wa1']").prop('checked') == false){
+	   alert("Q9: Do you know that your e-waste can be collected by an authorized dealer or dismantler?");
+	   e.preventDefault();
+	 } 
+	 if($("input[name='Q14Wa1']").prop('checked') == false){
+	   alert("Q10: What is the final destination for waste from your school that is disposed of externally? ");
+	   e.preventDefault();
+	 } 
+     if($("input[name='Q15Wa1']").prop('checked') == false){
+	   alert("Q11: Does your school burn waste?");
+	   e.preventDefault();
+	 }
+     if($("input[name='Q17Wa1']").prop('checked') == false){
+	   alert("Q13: Does the school have a policy on waste?");
+	   e.preventDefault();
+	 }
+	 if($("input[name='Q18Wa1']").prop('checked') == false){
+	   alert("Q14: Are there awareness drives with regard to Reduce, Recycle and Reuse?");
+	   e.preventDefault();
+	 }   
+	 if($("input[name='Q19Wa1']").prop('checked') == false){
+	   alert("Q15: Is the study of the environment integrated into the curriculum?");
+	   e.preventDefault();
+	 }  
 });	
 	</script>
 	
