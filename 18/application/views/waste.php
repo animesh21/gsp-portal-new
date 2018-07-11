@@ -4053,8 +4053,8 @@ if($("input[name='Q11Wa8S1']").prop('checked') == false && $("input[name='Q11Wa8
 if($("input[name='Q4Wa2S1']").prop('checked') == false && $("input[name='Q4Wa2S2']").prop('checked') == false && $("input[name='Q4Wa2S3']").prop('checked') == false && $("input[name='Q4Wa2S4']").prop('checked') == false){
 	if("input[name='Q4Wa2S5'].val()==''"){
   alert("Q1(a) Who segregates the waste at source?");
-  e.preventDefault();
-	}
+ }
+	 e.preventDefault();
 }
 });	
 	</script>
