@@ -1119,49 +1119,49 @@ e.preventDefault();
 });
 
 $("#movenextbtn").click(function(e){ 
-  if($("input[name='Q4L1']").val==""){
+  if($("input[name='Q4L1']").val()==""){
     alert("Site area in square meter (m2)");
 	   e.preventDefault();
   }
-  if($("input[name='Q4L2']").val==""){
+  if($("input[name='Q4L2']").val()==""){
     alert("Ground coverage area");
 	   e.preventDefault();
   }
-  if($("input[name='Q4L3']").val==""){
+  if($("input[name='Q4L3']").val()==""){
     alert("Green Landscaped area on ground");
 	   e.preventDefault();
   }
-  if($("input[name='Q4L4']").val==""){
+  if($("input[name='Q4L4']").val()==""){
     alert("Play area that has grass on ground");
 	   e.preventDefault();
   }
-  if($("input[name='Q4L6']").val==""){
+  if($("input[name='Q4L6']").val()==""){
     alert("Play area that is paved/concrete on ground");
 	   e.preventDefault();
   }
-  if($("input[name='Q4L7']").val==""){
+  if($("input[name='Q4L7']").val()==""){
     alert("Surface parking area");
 	   e.preventDefault();
   }
-  if($("input[name='Q4L8']").val==""){
+  if($("input[name='Q4L8']").val()==""){
     alert("Surface parking area");
 	   e.preventDefault();
   }
-  if($("input[name='Q4L9']").val=="" || input[name='Q4L9']").val=="m²"){
+  if($("input[name='Q4L9']").val()=="" || $("input[name='Q4L9']").val()==='m²'){
     alert("Roof and terrace area");
 	   e.preventDefault();
   }
-  if($("input[name='Q4L10']").val=="" || input[name='Q4L9']").val=="m²"){
+  if($("input[name='Q4L10']").val()=="" || $("input[name='Q4L9']").val()==='m²'){
     alert("Green cover on exposed roof and terrace");
 	   e.preventDefault();
   }
-  if($("input[name='Q4L11']").val=="" || input[name='Q4L9']").val=="m²"){
+  if($("input[name='Q4L11']").val()=="" || $("input[name='Q4L9']").val()==='m²'){
     alert("Total built-up/constructed area");
 	   e.preventDefault();
   }
-  if($("input[name='Q4L12']").val=="" || input[name='Q4L9']").val=="m²"){
+  if($("input[name='Q4L12']").val()=="" || $("input[name='Q4L9']").val()==='m²'){
     alert("Total number of floors (excluding ground floor)");
 	   e.preventDefault();
   }	
-});		
+});	
 </script>
