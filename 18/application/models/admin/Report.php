@@ -59,8 +59,8 @@ class Report extends CI_Model {
 	/********************************************************/
     public function singlenotstartparticipationByZone($region)
 	{
-	   $this->db->where("state",$region);
-	   $this->db->where("complete_status",'0');
+	   $this->db->where("state",$region);/*
+	   $this->db->where("complete_status",'0');*/
 	   $this->db->where("progress=",'5');
 	   /*$this->db->where("date_added <",'2017-11-20'); */
 	   $data=$this->db->select("COUNT(id) AS countlabel")->from('gsp_school')->get()->row();
