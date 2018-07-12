@@ -59,7 +59,7 @@
       <th>Sch.Id</th>
       <th>Udise</th>
       <th>School Name</th>
-      <th>State</th>
+      <th style="width:150px">State</th>
       <th>District</th>
       <th>City</th>
       <th>Co-ord. Name</th>
