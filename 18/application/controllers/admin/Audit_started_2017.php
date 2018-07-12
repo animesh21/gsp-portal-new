@@ -634,21 +634,22 @@ public function digital_certificate_for_principal_coordinator($argID)
     {   
         $arrSchool=array(
             'name'=>$this->input->post('name'),
-	        'udise'=>$this->input->post('udise'),
+	    'udise'=>$this->input->post('udise'),
             'address1'=>$this->input->post('address1'),
             'address2'=>$this->input->post('address2'),
             'state'=>$this->input->post('state'),
             'district'=>$this->input->post('district'),
             'city'=>$this->input->post('city'),
             'pincode'=>$this->input->post('pincode'),
-	        'std'=>$this->input->post('std'),
+	    'std'=>$this->input->post('std'),
             'telephone'=>$this->input->post('telephone'),
             'schoolemail'=>$this->input->post('schoolemail'),	
             'mobile'=>$this->input->post('mobile'),
             'principle_name'=>$this->input->post('principle_name'),
             'coname'=>$this->input->post('coname'),
             'coemail'=>$this->input->post('coemail'),
-            'comobile'=>$this->input->post('comobile')
+            'comobile'=>$this->input->post('comobile'),
+	    'partner_status'=>$this->input->post('partner_list')
         );
         ///echo '<pre>'; print_r($this->input->post()); exit;
         $this->db->where('id', $argSchoolID);
