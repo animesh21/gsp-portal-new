@@ -1,4 +1,28 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<div class="top-area">
+  <h2>REGISTRATION 2018 <a href="<?php echo base_url('admin/audit_started_2017/excel_phase1') ?>">
+    <button class="exportBtn">Export to Excel</button>
+    </a></h2>
+</div>
+<table id="example3" class="display dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
+  <thead>
+    <tr role="row">
+      <th>S.No</th>
+      <th>Sch.Id</th>
+      <th>Udise</th>
+      <th>School Name</th>
+      <th style="width:150px">State</th>
+      <th>District</th>
+      <th>City</th>
+      <th>Co-ord. Name</th>
+      <th>Co-ord. Email</th>
+      <th>Co-ord. Mobile</th>
+      <th>Completeness</th>
+      <th>Reg. Date</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+</table>
 <!----- Badge Model Code  ------>
 <div class="modal fade" id="myModal1" role="dialog">
   <div class="modal-dialog modal-md">
@@ -47,30 +71,6 @@
     border: 0;
 }
 </style>
-<div class="top-area">
-  <h2>REGISTRATION 2018 <a href="<?php echo base_url('admin/audit_started_2017/excel_phase1') ?>">
-    <button class="exportBtn">Export to Excel</button>
-    </a></h2>
-</div>
-<table id="example3" class="display dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
-  <thead>
-    <tr role="row">
-      <th>S.No</th>
-      <th>Sch.Id</th>
-      <th>Udise</th>
-      <th>School Name</th>
-      <th style="width:150px">State</th>
-      <th>District</th>
-      <th>City</th>
-      <th>Co-ord. Name</th>
-      <th>Co-ord. Email</th>
-      <th>Co-ord. Mobile</th>
-      <th>Completeness</th>
-      <th>Reg. Date</th>
-      <th>Action</th>
-    </tr>
-  </thead>
-</table>
 <style type="text/css">
 #myModal{ display:table!important; margin:auto 320px;}
 #myModal1{ display:table!important; margin:auto 320px;}
