@@ -255,7 +255,7 @@
     </div>
   </div>
   <div class="form-group">
-	   <strong>Select Franchise / Institution:</strong>
+	   <strong>Select Franchise / Institution: <a class="tt" data-tooltip="If your school is a member of any of the following, please select the option or else, select 'Not Applicable (NA)'"><span class="badge" style="color:#FFFFFF;">?</span></a></strong>
    <ul class="list-inline">
      <li><input type="radio" name="partner_list" value="1" /> Church of South India</li>
 	 <li><input type="radio" name="partner_list" value="2" /> Jawahar Navodaya Vidyalaya</li>
@@ -414,3 +414,43 @@ $.typeahead({
     }
 });
 </script>
+<style type="text/css">
+/* ============= TOOL TIP ============= */
+.tt {display: inline-block; color: #fff; height: 27px;}
+.tt:hover {color: #fff;}
+[data-tooltip], .tooltip {position: relative; cursor: pointer;}
+.badge {background-color: #9b9796; font-size: 19px; display: inline-block; width: 27px; height: 27px; margin-left: 5px; border-radius: 50%; text-align: center; vertical-align: top; line-height: 27px; font-family: 'Lato Bold', sans-serif; font-weight: normal;}
+
+.tooltip {position: absolute; z-index: 1070; display: block; visibility: visible; font-size: 12px; line-height: 1.4; opacity: 0; filter: alpha(opacity=0);}
+.tooltip.in {opacity: 0.9; filter: alpha(opacity=90);}
+.tooltip.top {margin-top: -3px; padding: 5px 0;}
+.tooltip.right {margin-left: 3px; padding: 0 5px;}
+.tooltip.bottom {margin-top: 3px; padding: 5px 0;}
+.tooltip.left {margin-left: -3px; padding: 0 5px;}
+.tooltip-inner {max-width: 200px; padding: 3px 8px; color: #fff; text-align: center; text-decoration: none; background-color: #000; border-radius: 4px;}
+
+/* tooltip arrow */
+.tooltip-arrow {position: absolute; width: 0; height: 0; border-color: transparent; border-style: solid;}
+.tooltip.top .tooltip-arrow {bottom: 0; left: 50%; margin-left: -5px; border-width: 5px 5px 0; border-top-color: #000;}
+.tooltip.top-left .tooltip-arrow {bottom: 0; left: 5px; border-width: 5px 5px 0; border-top-color: #000;}
+.tooltip.top-right .tooltip-arrow {bottom: 0; right: 5px; border-width: 5px 5px 0; border-top-color: #000;}
+.tooltip.right .tooltip-arrow {top: 50%; left: 0; margin-top: -5px; border-width: 5px 5px 5px 0; border-right-color: #000;}
+.tooltip.left .tooltip-arrow {top: 50%; right: 0; margin-top: -5px; border-width: 5px 0 5px 5px; border-left-color: #000;}
+.tooltip.bottom .tooltip-arrow {top: 0; left: 50%; margin-left: -5px; border-width: 0 5px 5px; border-bottom-color: #000;}
+.tooltip.bottom-left .tooltip-arrow {top: 0; left: 5px; border-width: 0 5px 5px; border-bottom-color: #000;}
+.tooltip.bottom-right .tooltip-arrow {top: 0; right: 5px; border-width: 0 5px 5px; border-bottom-color: #000;}
+/* Base styles for the entire tooltip */
+[data-tooltip]:before, [data-tooltip]:after, .tooltip:before, .tooltip:after {position: absolute; visibility: hidden; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+opacity: 0; -webkit-transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out, -webkit-transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24); -moz-transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out, -moz-transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24); transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out, transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24); -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); pointer-events: none;}
+
+/* Show the entire tooltip on hover and focus */
+[data-tooltip]:hover:before, [data-tooltip]:hover:after, [data-tooltip]:focus:before, [data-tooltip]:focus:after, .tooltip:hover:before, .tooltip:hover:after, .tooltip:focus:before, .tooltip:focus:after {visibility: visible; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+opacity: 1;}
+
+/* Base styles for the tooltip's directional arrow */
+.tooltip:before, [data-tooltip]:before {z-index: 1001; border: 6px solid transparent; background: transparent; content: "";}
+
+
+/* ===== Base styles for the tooltip's content area ====== */
+.tooltip:after, [data-tooltip]:after {font-family: 'Lato', sans-serif; font-weight: normal; color: #666666; font-size: 13px; line-height: 1.3; border-radius: 4px; border: 1px solid #999999; background-color: rgba(240, 240, 240, .95); z-index: 1000; padding: 8px; min-width: 400px; content: attr(data-tooltip);  }
+</style>	
