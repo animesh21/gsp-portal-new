@@ -255,7 +255,17 @@
     </div>
   </div>
   <div class="form-group">
-    <select class="schoolname name form-control  placeholder" name="partner_list" id="partner_list">
+	   <strong>Select Franchise / Institution:</strong>
+   <ul class="list-inline">
+     <li><input type="radio" name="partner_list" value="1" /> Church of South India</li>
+	 <li><input type="radio" name="partner_list" value="2" /> Jawahar Navodaya Vidyalaya</li>
+	 <li><input type="radio" name="partner_list" value="3" /> Kendriya Vidyalaya Sangathan (KVS)</li>
+	 <li><input type="radio" name="partner_list" value="4" /> Montfortian Education Foundation</li>
+	 <li><input type="radio" name="partner_list" value="5" /> Mount Litera Zee Schools</li>
+	 <li><input type="radio" name="partner_list" value="6" /> Satya Bharti Foundation</li>
+	 <li><input type="radio" name="partner_list" value="0" /> Not Applicable (NA)</li>
+   </ul>
+   <!-- <select class="schoolname name form-control  placeholder" name="partner_list" id="partner_list">
 	  <option value>Select Partner</option>
 	  <option value="0">If Your Are Not Partner Then Select This Option</option>
 	  <option value="1">Church of South India</option>
@@ -264,7 +274,7 @@
 	  <option value="4">Montfortian Education Foundation</option>
 	  <option value="5">Mount Litera Zee Schools</option>
 	  <option value="6">Satya Bharti Foundation</option>
-	</select>
+	</select>-->
   </div>
   <div class="form-group">
     <input type="text" name="address1" id="address1" class="form-control address placeholder"
