@@ -56,69 +56,18 @@ class Audit_started_2017 extends CI_Controller {
             "aaData"=>$arr_school);
 		    echo json_encode($data['record']);
    }		
-
-      public function getPartnerSchoolData()
-   {   
-       $records=$this->Audit_started_model->getPartnerData();
-	   $arr_school=array();
-	   $i=0;
-	   foreach($records as $record):
-		   $arr_school[]=array('sr_no'=>++$i,
-		    'id'=>$record->id,
-		    'userid'=>$record->userid,
-		    'udise'=>$record->udise,
-		    'name'=>$record->name,
-		    'state_name'=>$record->state_name,
-		    'district_name'=>$record->district_name,
-		    'city'=>$record->city,
-		    'coname'=>$record->coname,
-		    'coemail'=>$record->coemail,
-		    'comobile'=>$record->comobile,
-		    'progress'=>$record->progress,
-		    'date_added'=>$record->date_added);
-	   endforeach;
-		$data['record']=array(
-            "sEcho" => 1,
-            "iTotalRecords" => count($arr_school),
-            "iTotalDisplayRecords" => count($arr_school),
-            "aaData"=>$arr_school);
-		    echo json_encode($data['record']);
-   }	
-   
-   public function getPartnerSchoolData1()
-   {   
-       $records=$this->Audit_started_model->getPartnerData1();
-	   $arr_school=array();
-	   $i=0;
-	   foreach($records as $record):
-		   $arr_school[]=array('sr_no'=>++$i,
-		    'id'=>$record->id,
-			'userid'=>$record->userid,
-			'udise'=>$record->udise,
-		    'name'=>$record->name,
-		    'state_name'=>$record->state_name,
-		    'district_name'=>$record->district_name,
-		    'city'=>$record->city,
-		    'coname'=>$record->coname,
-		    'coemail'=>$record->coemail,
-		    'comobile'=>$record->comobile,
-		    'progress'=>$record->progress,
-		    'date_added'=>$record->date_added);
-	   endforeach;
-		$data['record']=array(
-            "sEcho" => 1,
-            "iTotalRecords" => count($arr_school),
-            "iTotalDisplayRecords" => count($arr_school),
-            "aaData"=>$arr_school);
-		    echo json_encode($data['record']);
-   }	
-   	
-	
+	   	
 	
    public function partnersList(){
-        $data['main'] = 'admin/audit/partners';
+       $data['main'] = 'admin/audit/partners';
         $data['title'] = 'Home | Partners Registration 2017';
-        $this->load->view('admin/includes/template', $data);
+	    $data['list_school1']=$this->Audit_started_model->getPartnerData('1');
+	    $data['list_school2']=$this->Audit_started_model->getPartnerData('2');
+	    $data['list_school3']=$this->Audit_started_model->getPartnerData('3');
+	    $data['list_school4']=$this->Audit_started_model->getPartnerData('4');
+	    $data['list_school5']=$this->Audit_started_model->getPartnerData('5');
+	    $data['list_school6']=$this->Audit_started_model->getPartnerData('6');
+		$this->load->view('admin/includes/template', $data);
    }
 	
 	
