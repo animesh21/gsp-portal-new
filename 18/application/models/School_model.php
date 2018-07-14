@@ -174,7 +174,7 @@ class School_model extends CI_Model
     {
         if (isset($data)) {
             try {
-		$getProgress=$this->db->select("*")->from("gsp_school")->where('userid' => $data['userid'])->get()->row();
+		$getProgress=$this->db->select("*")->from("gsp_school")->where(array('userid' => $data['userid']))->get()->row();
 		$progress= $getProgress   ->progress;
 		if($progress>$data['userid']){
 		  unset($data['$progress'])
