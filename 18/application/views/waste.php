@@ -3998,8 +3998,10 @@ if($("input[name='Q11Wa3S1']").prop('checked') == false && $("input[name='Q11Wa3
 	<script>
 	$("#wastenext").click(function(e){
 if($("input[name='Q11Wa4S1']").prop('checked') == false && $("input[name='Q11Wa4S2']").prop('checked') == false && $("input[name='Q11Wa4S3']").prop('checked') == false && $("input[name='Q11Wa4S4']").prop('checked') == false){
+if($("input[name='Q11Wa4S1']").hasAttribute('checked') == false && $("input[name='Q11Wa4S2']").hasAttribute('checked') == false && $("input[name='Q11Wa4S3']").hasAttribute('checked') == false && $("input[name='Q11Wa4S4']").hasAttribute('checked') == false){
   alert("Q7 fill the Horticultural waste section.");
   e.preventDefault();
+ }
 }
 });	
 	</script>
