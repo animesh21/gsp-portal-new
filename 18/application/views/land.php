@@ -1117,7 +1117,8 @@ e.preventDefault();
 }
 }
 });
-
+/*Validation Code Used For Q1*/
+/*What is the total site/plot area of your school?  */
 $("#movenextbtn").click(function(e){ 
   if($("input[name='Q4L1']").val()==""){
     alert("Site area in square meter (m2)");
@@ -1161,6 +1162,14 @@ $("#movenextbtn").click(function(e){
   }
   if($("input[name='Q4L12']").val()=="" || $("input[name='Q4L9']").val()==='m²'){
     alert("Total number of floors (excluding ground floor)");
+	   e.preventDefault();
+  }	
+});
+/*Validation Code Used For Q2*/
+/*How many species of plants and animals exist in your school? */
+$("#movenextbtn").click(function(e){ 
+  if($("input[name='Q5L1S1']").val()=="" || $("input[name='Q5L1S2']").val()=="" || $("input[name='Q5L2S1']").val()=="" || $("input[name='Q5L2S2']").val()==""){
+    alert("Q2: How many species of plants and animals exist in your school?");
 	   e.preventDefault();
   }	
 });	
