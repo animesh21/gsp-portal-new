@@ -601,6 +601,7 @@ public function digital_certificate_for_principal_coordinator($argID)
 	        'partner_status'=>$this->input->post('partner_list')
         );
         ///echo '<pre>'; print_r($this->input->post()); exit;
+		$arrSchool0=array('answer'=>$this->input->post('name'));
 		$arrSchool1=array('answer'=>$this->input->post('udise'));
 		$arrSchool2=array('answer'=>$this->input->post('address1'));
 		$arrSchool3=array('answer'=>$this->input->post('address2'));
@@ -619,6 +620,11 @@ public function digital_certificate_for_principal_coordinator($argID)
         if($this->db->update('gsp_school', $arrSchool))
         {
             
+			$userid=getUserId($argSchoolID);
+		    $this->db->where('userid', $userid);
+			$this->db->where('questionid','name');
+		    $this->db->update('gsp_answers',$arrSchool0);
+			
 			$userid=getUserId($argSchoolID);
 		    $this->db->where('userid', $userid);
 			$this->db->where('questionid','udise');
