@@ -173,7 +173,6 @@ class School_model extends CI_Model
     public function SubmitAPIAnswers($data)
     {
         if (isset($data)) {
-		print_r($data);
             try {
 		$getProgress=$this->db->select("*")->from("gsp_school")->where(array('userid' => $data['userid']))->get()->row();
 		$progress= $getProgress->progress;
