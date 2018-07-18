@@ -38,6 +38,27 @@ if (!function_exists('getStateById')) {
         return $temp->name;
     }
 }
+
+
+if (!function_exists('get_partner')) {
+    function get_partner($partnerId) {
+	 $arrState = array();
+        $CI = & get_instance();
+        $temp = $CI->db->select('a.*, b.name AS state_name,c.name As district_name')
+                        ->from('gsp_school AS a')
+                        ->join('states AS b', 'a.state=b.id', 'left')
+                        ->join('cities AS c', 'a.district=c.id', 'left')
+						->where('a.partner_status',$partnerId)
+                        ->order_by('a.id', 'desc')
+                        ->get()->result();
+					//echo $CI->db->last_query(); exit;	
+						
+		            return $temp;
+    }
+}
+
+
+
 /******
 * GET SCHOOL ID
 *
