@@ -61,6 +61,18 @@ class Audit_started extends CI_Controller {
         force_download($name, $row);
     }
 
+	/*
+     * PArtner Excel Generation
+     */
+
+   public function partnerexcel() {
+        $this->load->dbutil();
+        $row =$this->Audit_started_model->getallPartnerData();
+        $name = 'Partner List.csv';
+        force_download($name, $row);
+    }
+
+	
 
     /*
      * Send Feedback
