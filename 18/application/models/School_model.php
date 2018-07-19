@@ -179,26 +179,26 @@ class School_model extends CI_Model
 		  $progress.=$data['answer'].",";
 		} 
 		$getProgress=$this->db->select("*")->from("gsp_school")->where(array('userid' => $data['userid']))->get()->row();
-		$progress= $getProgress->progress; 
-                $length=explode(",",$progress);
-		print_r($length);
-		if(count($length)==2)
+		$updateprogress= $getProgress->progress; 
+                $progress=explode(",",$progress);
+		print_r($progress);
+		if(count($progress)==2)
 		{
-		  if($length[1]<$progress){
+		  if($progress[1]<$updateprogress){
 		    $this->db->where(array('userid' => $data['userid']));
-		    $this->db->update("gsp_school",array("progress"=>$progress));
+		    $this->db->update("gsp_school",array("progress"=>$updateprogress));
 		  }else{
 		    $this->db->where(array('userid' => $data['userid']));
-		    $this->db->update("gsp_school",array("progress"=>$length[1]));
+		    $this->db->update("gsp_school",array("progress"=>$progress[1]));
 		  }
 		}
-		if(count($length)==1){
-		  if($length[0]<$progress){
+		if(count($progress)==1){
+		  if($length[0]<$updateprogress){
 		    $this->db->where(array('userid' => $data['userid']));
-		    $this->db->update("gsp_school",array("progress"=>$progress));
+		    $this->db->update("gsp_school",array("progress"=>$updateprogress));
 		  }else{
 		    $this->db->where(array('userid' => $data['userid']));
-		    $this->db->update("gsp_school",array("progress"=>$length[0]));
+		    $this->db->update("gsp_school",array("progress"=>$progress[0]));
 		  }
 		}
 		 
