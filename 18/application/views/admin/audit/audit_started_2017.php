@@ -4,6 +4,7 @@
     <button class="exportBtn">Export to Excel</button>
     </a></h2>
 </div>
+<div style="overflow-x:auto;">
 <table id="example3" class="display dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
   <thead>
     <tr role="row">
@@ -24,6 +25,8 @@
     </tr>
   </thead>
 </table>
+	
+</div>
 <!----- Badge Model Code  ------>
 <div class="modal fade" id="myModal1" role="dialog">
   <div class="modal-dialog modal-md">
