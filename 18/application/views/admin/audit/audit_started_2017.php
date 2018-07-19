@@ -19,6 +19,7 @@
       <th>Co-ord. Mobile</th>
       <th>Completeness</th>
       <th>Reg. Date</th>
+      <th>Make School Partner</th>
       <th>Action</th>
     </tr>
   </thead>
@@ -114,14 +115,42 @@ function getBadgeCode(userid)
 						{ mData: 'id',
 						 "orderable": false,
                         "searchable": false,
-                        "render": function(data,type,row,meta) { // render event defines the markup of the cell text 
+                        "render": function(data,type,row,meta) {
+						
+						if(row.partner_status==0){
+						 var a='<select style="width:100px;" id="partner_data" onChange="get_value('+row.id+',this.value)"><option value="No partner" selected="selected"> No partner</option><option value="Church of South India"> Church of South India</option><option value="Jawahar Navodaya Vidyalaya"> Jawahar Navodaya Vidyalaya</option><option value="Kendriya Vidyalaya Sangathan (KVS)"> Kendriya Vidyalaya Sangathan (KVS)</option><option value="Montfortian Education Foundation"> Montfortian Education Foundation</option><option value="Mount Litera Zee Schools"> Mount Litera Zee Schools</option><option value="Satya Bharti Foundation"> Satya Bharti Foundation</option></select>';                         }else if(row.partner_status==1){
+						 var a='<select style="width:100px;" id="partner_data" onChange="get_value('+row.id+',this.value)"><option value="No partner"> No partner</option><option value="Church of South India" selected="selected"> Church of South India</option><option value="Jawahar Navodaya Vidyalaya"> Jawahar Navodaya Vidyalaya</option><option value="Kendriya Vidyalaya Sangathan (KVS)"> Kendriya Vidyalaya Sangathan (KVS)</option><option value="Montfortian Education Foundation"> Montfortian Education Foundation</option><option value="Mount Litera Zee Schools"> Mount Litera Zee Schools</option><option value="Satya Bharti Foundation"> Satya Bharti Foundation</option></select>';       
+						 } else if(row.partner_status==2) {
+						  var a='<select style="width:100px;" id="partner_data" onChange="get_value('+row.id+',this.value)"><option value="No partner"> No partner </option><option value="Church of South India"> Church of South India</option><option value="Jawahar Navodaya Vidyalaya" selected="selected"> Jawahar Navodaya Vidyalaya</option><option value="Kendriya Vidyalaya Sangathan (KVS)"> Kendriya Vidyalaya Sangathan (KVS)</option><option value="Montfortian Education Foundation"> Montfortian Education Foundation</option><option value="Mount Litera Zee Schools"> Mount Litera Zee Schools</option><option value="Satya Bharti Foundation"> Satya Bharti Foundation</option></select>';
+						 }else if(row.partner_status==3) {
+						  var a='<select style="width:100px;" id="partner_data" onChange="get_value('+row.id+',this.value)"><option value="No partner"> No partner </option><option value="Church of South India"> Church of South India</option><option value="Jawahar Navodaya Vidyalaya"> Jawahar Navodaya Vidyalaya</option><option value="Kendriya Vidyalaya Sangathan (KVS)" selected="selected"> Kendriya Vidyalaya Sangathan (KVS)</option><option value="Montfortian Education Foundation"> Montfortian Education Foundation</option><option value="Mount Litera Zee Schools"> Mount Litera Zee Schools</option><option value="Satya Bharti Foundation"> Satya Bharti Foundation</option></select>';
+						 }else if(row.partner_status==4) {
+						  var a='<select style="width:100px;" id="partner_data" onChange="get_value('+row.id+',this.value)"><option value="No partner"> No partner </option><option value="Church of South India"> Church of South India</option><option value="Jawahar Navodaya Vidyalaya"> Jawahar Navodaya Vidyalaya</option><option value="Kendriya Vidyalaya Sangathan (KVS)" => Kendriya Vidyalaya Sangathan (KVS)</option><option value="Montfortian Education Foundation" selected="selected"> Montfortian Education Foundation</option><option value="Mount Litera Zee Schools"> Mount Litera Zee Schools</option><option value="Satya Bharti Foundation"> Satya Bharti Foundation</option></select>';
+						 }else if(row.partner_status==5) {
+						  var a='<select style="width:100px;" id="partner_data" onChange="get_value('+row.id+',this.value)"><option value="No partner"> No partner </option><option value="Church of South India"> Church of South India</option><option value="Jawahar Navodaya Vidyalaya"> Jawahar Navodaya Vidyalaya</option><option value="Kendriya Vidyalaya Sangathan (KVS)"> Kendriya Vidyalaya Sangathan (KVS)</option><option value="Montfortian Education Foundation"> Montfortian Education Foundation</option><option value="Mount Litera Zee Schools" selected="selected"> Mount Litera Zee Schools</option><option value="Satya Bharti Foundation"> Satya Bharti Foundation</option></select>';
+						 }else{
+						  var a='<select style="width:100px;" id="partner_data" onChange="get_value('+row.id+',this.value)"><option value="No partner"> No partner </option><option value="Church of South India"> Church of South India</option><option value="Jawahar Navodaya Vidyalaya" selected="selected"> Jawahar Navodaya Vidyalaya</option><option value="Kendriya Vidyalaya Sangathan (KVS)"> Kendriya Vidyalaya Sangathan (KVS)</option><option value="Montfortian Education Foundation"> Montfortian Education Foundation</option><option value="Mount Litera Zee Schools"> Mount Litera Zee Schools</option><option value="Satya Bharti Foundation" selected="selected"> Satya Bharti Foundation</option></select>';
+						 }
+						 
+						 
+						 return a;
+						 }
+						}, 
+						{ mData: 'id',
+						 "orderable": false,
+                        "searchable": false,
+                        "render": function(data,type,row,meta) { 
+						
+						
+						
+						 // render event defines the markup of the cell text 
                           /*  var a = '<a href="listing-house-details.php?listing_house='+row.list_id+'&invoice_id='+row.invoice_id+'&email="'+row.user_email+'">' + '<label class="label label-info">CPA</label>' +'</a>';*/ 
 						  
 						  // row object contains the row data
 						/*  
 						  var a='<div class="btn-group"><button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-chevron-down"></i></button><div class="dropdown-menu"><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/audit_started_2017/response/"); ?>'+row.id+'" title="View Responses"> <img src="<?php echo base_url() ?>assets/front/images/1446146277_view6.png"><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/audit_started_2017/pdf/"); ?>'+row.id+'" title="Download PDF"><img src="<?php echo base_url() ?>assets/front/images/1446327681_1-02.png" height="20" width="20"></a><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/audit_started_2017/edit/"); ?>'+row.id+'" title="Edit Record"><img src="<?php echo base_url() ?>assets/front/images/edit.png" height="20" width="20"></a><a class="dropdown-item" target="_self" onclick="Myfun('+row.id+')" title="Delete Record"><img src="<?php echo base_url() ?>assets/front/images/delete1.png" data-toggle="modal" data-target="#myModal" height="20" width="20"></a><a class="dropdown-item" target="_blank" href="<?php echo base_url('admin/audit_started_2017/downloadzip/'); ?>'+row.id+'" title="Download">Zip</a><a class="dropdown-item" target="_blank" href="<?php echo base_url('admin/audit_started_2017/generatebadge/'); ?>'+row.id+'" title="Download">Badge</a><a class="dropdown-item" href="#"  onclick="javascript:getBadgeCode('+row.id+')" data-toggle="modal" data-target="#myModal1">Badge Code</a><a class="dropdown-item" href="<?php echo base_url('admin/audit_started_2017/sendElasticEmail/'); ?>">Send mail</a></div></div>';  */
-						   var a='<div class="btn-group"><button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-chevron-down"></i></button><div class="dropdown-menu"><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/audit_started_2017/response/"); ?>'+row.id+'" title="View Responses">View Record</a><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/audit_started_2017/pdf/"); ?>'+row.id+'" title="Download PDF">Pdf Download</a><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/performance_report/PdfById/"); ?>'+row.id+'" title="Performance Report">Performance Report</a><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/audit_started_2017/edit/"); ?>'+row.id+'" title="Edit Record">Edit Record</a><a class="dropdown-item" target="blank_" onclick="javascript:Myfun('+row.userid+')" href="<?php echo base_url('admin/audit_started/getSchoolDelete/')."?schoolid="; ?>'+row.userid+'" title="Delete Record">Delete</a><a class="dropdown-item" target="_blank" href="<?php echo base_url('admin/audit_started_2017/downloadzip/'); ?>'+row.userid+'" title="Download">Zip</a><a class="dropdown-item" target="_blank" href="<?php echo base_url('admin/audit_started_2017/getdigitalCertificate/'); ?>'+row.userid+'" title="Certificates">Certifcates</a><a class="dropdown-item" target="_blank" href="<?php echo base_url('admin/audit_started_2017/generatebadge/'); ?>'+row.userid+'" title="Download">Badge</a><a class="dropdown-item" href="#"  onclick="javascript:getBadgeCode('+row.userid+')" data-toggle="modal" data-target="#myModal1">Badge Code</a><a href="#" class="dropdown-item" onclick="sendResponseReport('+row.id+','+"'"+row.coemail+"'"+','+"'"+row.name+"'"+');">Send mail</a></div></div>'; 
-                            return a;
+						   var i='<div class="btn-group"><button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-chevron-down"></i></button><div class="dropdown-menu"><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/audit_started_2017/response/"); ?>'+row.id+'" title="View Responses">View Record</a><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/audit_started_2017/pdf/"); ?>'+row.id+'" title="Download PDF">Pdf Download</a><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/performance_report/PdfById/"); ?>'+row.id+'" title="Performance Report">Performance Report</a><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/audit_started_2017/edit/"); ?>'+row.id+'" title="Edit Record">Edit Record</a><a class="dropdown-item" target="blank_" onclick="javascript:Myfun('+row.userid+')" href="<?php echo base_url('admin/audit_started/getSchoolDelete/')."?schoolid="; ?>'+row.userid+'" title="Delete Record">Delete</a><a class="dropdown-item" target="_blank" href="<?php echo base_url('admin/audit_started_2017/downloadzip/'); ?>'+row.userid+'" title="Download">Zip</a><a class="dropdown-item" target="_blank" href="<?php echo base_url('admin/audit_started_2017/getdigitalCertificate/'); ?>'+row.userid+'" title="Certificates">Certifcates</a><a class="dropdown-item" target="_blank" href="<?php echo base_url('admin/audit_started_2017/generatebadge/'); ?>'+row.userid+'" title="Download">Badge</a><a class="dropdown-item" href="#"  onclick="javascript:getBadgeCode('+row.userid+')" data-toggle="modal" data-target="#myModal1">Badge Code</a><a href="#" class="dropdown-item" onclick="sendResponseReport('+row.id+','+"'"+row.coemail+"'"+','+"'"+row.name+"'"+');">Send mail</a></div></div>'; 
+                            return i;
 							}
 						}
                 ]
@@ -153,3 +182,24 @@ jQuery.ajax({
 	}); 
 }
 </script>
+
+
+<script>
+function get_value(school_id,partner)
+{
+$.ajax({
+url:'<?php echo base_url("admin/Audit_started_2017/update_school_partner");?>',
+type: 'POST',
+data: {'partner':partner,'school_id':school_id },
+success: function (data){
+alert('School Partner Successfully Updated');
+location.reload();
+}
+});
+
+
+}
+
+
+</script>
+
