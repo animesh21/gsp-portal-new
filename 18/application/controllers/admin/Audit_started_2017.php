@@ -47,6 +47,7 @@ class Audit_started_2017 extends CI_Controller {
 		    'coemail'=>$record->coemail,
 		    'comobile'=>$record->comobile,
 		    'progress'=>$record->progress,
+		     'partner_status'=>$record->partner_status,
 		    'date_added'=>$record->date_added);
 	   endforeach;
 		$data['record']=array(
