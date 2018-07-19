@@ -46,6 +46,10 @@
             ],
             crosshair: true
         },
+		
+		legend: {
+        enabled: false
+    },
         exporting: { enabled: false },
         credits: {enabled: false},
         tooltip: {
@@ -57,6 +61,16 @@
             useHTML: true
         },
         plotOptions: {
+		
+		 series: {
+            borderWidth: 0,
+            dataLabels: {
+                enabled: true,
+                format: '{point.y:.1f}%'
+            }
+        },
+		
+		
             column: {
                 pointPadding: 0.2,
                 borderWidth: 0
@@ -121,6 +135,12 @@
             ],
             crosshair: true
         },
+		
+		legend: {
+        enabled: false
+    },
+    
+		
         exporting: { enabled: false },
         credits: {enabled: false},
         tooltip: {
@@ -132,6 +152,14 @@
             useHTML: true
         },
         plotOptions: {
+		     series: {
+            borderWidth: 0,
+            dataLabels: {
+                enabled: true,
+                format: '{point.y:.1f}%'
+            }
+        },
+		
             column: {
                 pointPadding: 0.2,
                 borderWidth: 0
@@ -175,10 +203,10 @@
         }
     }); 
 
-    $('#buttonPrint1').click(function() {
-        chart2.setTitle(null, { text: ' ' });
-        chart2.print();
-        chart2.setTitle(null, { text: 'Click and drag in the plot area to zoom in' });
+    $('#buttonPrint').click(function() {
+        chart.setTitle(null, { text: ' ' });
+        chart.print();
+        chart.setTitle(null, { text: 'Click and drag in the plot area to zoom in' });
     });
 
 
