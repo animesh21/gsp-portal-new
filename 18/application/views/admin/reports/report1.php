@@ -113,7 +113,7 @@
             type: 'column'
         },
         title: {
-            text: 'Schools Participation Report'
+            text: 'Schools Participation Report In India'
         },
         xAxis: {
             categories: [
