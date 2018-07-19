@@ -176,9 +176,10 @@ class School_model extends CI_Model
             try {
 		echo "<pre>"; 
 		if(strcmp($data['questionid'],"progress")==0){
-		  echo $data['answer'];
-		}    
-		print_r($data);    
+		  $progress=$data['answer'].",";
+		} 
+		echo $progress;    
+		//print_r($data);    
                 $this->db->set($data['questionid'], $data['answer'])
                     ->where(array('userid' => $data['userid']))//which row want to upgrade
                     ->update('gsp_school');
