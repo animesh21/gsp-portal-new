@@ -180,7 +180,7 @@ class School_model extends CI_Model
 		} 
 		$getProgress=$this->db->select("*")->from("gsp_school")->where(array('userid' => $data['userid']))->get()->row();
 		$progress= $getProgress->progress; 
-                $length=split(",",$progress);
+                $length=str_split(",",$progress);
 		print_r($length);
 		if(count($length)==2)
 		{
