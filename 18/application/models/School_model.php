@@ -178,10 +178,10 @@ class School_model extends CI_Model
 		 if(strcmp($data['questionid'],"progress")==0){
 		  $progress.=$data['answer'].",";
 		} 
-		echo $progress."".$length[1];
 		$getProgress=$this->db->select("*")->from("gsp_school")->where(array('userid' => $data['userid']))->get()->row();
 		$progress= $getProgress->progress; 
                 $length=explode(",",$progress);
+		echo $progress."".$length[1];
 		if(count($length)==2)
 		{
 		  if($length[1]<$progress){
