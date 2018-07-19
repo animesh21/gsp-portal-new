@@ -1,6 +1,7 @@
 <h1>PARTICIPATION BY ZONE </h1>
 <div class="wrapper">
   <div id="container"> </div>
+	<div id="container1"> </div>
   <p><strong>Export Graph:</strong></p>
   <select id="ExportOption" style="border-radius:0px;">
     <option value="PNG">PNG Image</option>
@@ -93,3 +94,55 @@
         chart.setTitle(null, { text: 'Click and drag in the plot area to zoom in' });
     });
 </script>
+
+<script type="text/javascript">
+    Highcharts.chart('container1',{
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Schools Participation Report'
+        },
+        xAxis: {
+            categories: [
+                'All India',
+            ],
+            crosshair: true
+        },
+        exporting: { enabled: false },
+        credits: {enabled: false},
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0;font-size:12px;">{series.name}: </td>' +
+                '<td style="padding:0;font-size:12px;">{point.y:.1f}</td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [{
+            name: 'Registered for Audit',
+            data: <?php echo json_encode(array("0"=>array_sum($audit_register))); ?> //NORTH
+            //Registration, Audit Started, Audit Completed, Feedback Recieved
+        }, {
+            name: 'Audit Started',
+            data: <?php echo json_encode(array("0"=>array_sum($audit_start))); ?> //South
+
+        }, {
+            name: 'Audit Completed',
+            data: <?php echo json_encode(array("0"=>array_sum($audit_complete))); ?> //East
+
+        }		
+		],
+});
+</script>
+
+
+
+
+
