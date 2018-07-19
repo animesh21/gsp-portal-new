@@ -173,35 +173,11 @@ class School_model extends CI_Model
     public function SubmitAPIAnswers($data)
     {
       if (isset($data)) {
-        try {
+          try {
 		 $progress='';    
 		 if(strcmp($data['questionid'],"progress")==0){
 		  $progress.=$data['answer'].",";
 		} 
-		$getProgress=$this->db->select("*")->from("gsp_school")->where(array('userid' => $data['userid']))->get()->row();
-		$updateprogress= $getProgress->progress; 
-                $progress=explode(",",$progress);
-		print_r($progress);
-		if(count($progress)==2)
-		{
-		  if($progress[1]<$updateprogress){
-		    $this->db->where(array('userid' => $data['userid']));
-		    $this->db->update("gsp_school",array("progress"=>$updateprogress));
-		  }else{
-		    $this->db->where(array('userid' => $data['userid']));
-		    $this->db->update("gsp_school",array("progress"=>$progress[1]));
-		  }
-		}
-		if(count($progress)==1){
-		  if($progress[0]<$updateprogress){
-		    $this->db->where(array('userid' => $data['userid']));
-		    $this->db->update("gsp_school",array("progress"=>$updateprogress));
-		  }else{
-		    $this->db->where(array('userid' => $data['userid']));
-		    $this->db->update("gsp_school",array("progress"=>$progress[0]));
-		  }
-		}
-		 
 		//print_r($data);    
                 $this->db->set($data['questionid'], $data['answer'])
                     ->where(array('userid' => $data['userid']))//which row want to upgrade
@@ -210,7 +186,7 @@ class School_model extends CI_Model
             } catch (Exception $e) {
                 return "Invalid Key";
         }
-    }
+      }
     }
 }
 
