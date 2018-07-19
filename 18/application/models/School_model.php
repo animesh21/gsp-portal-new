@@ -176,7 +176,7 @@ class School_model extends CI_Model
           try {
 		 $progress='';    
 		 if(strcmp($data['questionid'],"progress")==0){
-		  $progress.=$data['answer'].",";
+		  $progress=$data['answer'];
 		} 
 		//print_r($data);    
                 $this->db->set($data['questionid'], $data['answer'])
