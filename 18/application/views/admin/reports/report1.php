@@ -156,7 +156,7 @@
     $('#buttonExport1').click(function() {
         var e = document.getElementById("ExportOption1");
 		var ExportAs = e.options[e.selectedIndex].value;   
-        alert(ExportAs)
+       
         if(ExportAs == 'PNG')
         {
             chart2.exportChart({type: 'image/png', filename: 'my-png'}, {subtitle: {text:''}});
@@ -175,10 +175,10 @@
         }
     }); 
 
-    $('#buttonPrint').click(function() {
-        chart.setTitle(null, { text: ' ' });
-        chart.print();
-        chart.setTitle(null, { text: 'Click and drag in the plot area to zoom in' });
+    $('#buttonPrint1').click(function() {
+        chart2.setTitle(null, { text: ' ' });
+        chart2.print();
+        chart2.setTitle(null, { text: 'Click and drag in the plot area to zoom in' });
     });
 
 
