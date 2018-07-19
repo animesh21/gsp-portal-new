@@ -193,7 +193,7 @@ class School_model extends CI_Model
 		  }
 		}
 		if(count($progress)==1){
-		  if($length[0]<$updateprogress){
+		  if($progress[0]<$updateprogress){
 		    $this->db->where(array('userid' => $data['userid']));
 		    $this->db->update("gsp_school",array("progress"=>$updateprogress));
 		  }else{
