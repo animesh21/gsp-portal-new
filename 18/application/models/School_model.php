@@ -178,7 +178,7 @@ class School_model extends CI_Model
                 $this->db->set($data['questionid'], $data['answer'])
                     ->where(array('userid' => $data['userid']))//which row want to upgrade
                     ->update('gsp_school');
-                return "SCHOOL Updated";
+                //return "SCHOOL Updated";
             } catch (Exception $e) {
                 return "Invalid Key";
             }
