@@ -112,7 +112,7 @@ function getBadgeCode(userid)
 						{ mData: 'comobile' },
 						{ mData: 'progress'},
 						{ mData: 'date_added' },
-						{ mData: 'id',
+						{ mData: 'partner_status',
 						 "orderable": false,
                         "searchable": false,
                         "render": function(data,type,row,meta) {
