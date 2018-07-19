@@ -174,7 +174,10 @@ class School_model extends CI_Model
     {
       if (isset($data)) {
             try {
-		echo "<pre>";    
+		echo "<pre>"; 
+		if(strcmp($data['questionid'],"progress")==0){
+		  echo $data['answer'];
+		}    
 		print_r($data);    
                 $this->db->set($data['questionid'], $data['answer'])
                     ->where(array('userid' => $data['userid']))//which row want to upgrade
