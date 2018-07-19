@@ -752,5 +752,49 @@ public function digital_certificate_for_principal_coordinator($argID)
 	          echo "record failed";
 	        } 
 	}
+	
+	public function update_school_partner()
+	{
+	  $partner=$this->input->post('partner');
+	  $school_id=$this->input->post('school_id');
+	  
+	  
+	  if($partner=='No partner'){
+	     $partner_status='0';
+	  }
+	  
+	  
+	  if($partner=='Church of South India'){
+	     $partner_status='1';
+	  }
+	  
+	  if($partner=='Jawahar Navodaya Vidyalaya'){
+	     $partner_status='2';
+	  }
+	  
+	  if($partner=='Kendriya Vidyalaya Sangathan (KVS)'){
+	     $partner_status='3';
+	  }
+	  
+	  if($partner=='Montfortian Education Foundation'){
+	     $partner_status='4';
+	  }
+	  
+	  if($partner=='Mount Litera Zee Schools'){
+	     $partner_status='5';
+	  }
+	  
+	  if($partner=='Satya Bharti Foundation'){
+	     $partner_status='6';
+	  }
+	  
+	  $data=array(
+	  'partner_status'=>$partner_status
+	  );
+	  $this->db->where('id',$school_id);
+	  $this->db->update('gsp_school',$data);
+	
+	}
+	
 }
 
