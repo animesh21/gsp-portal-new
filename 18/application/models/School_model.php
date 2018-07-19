@@ -174,7 +174,7 @@ class School_model extends CI_Model
     {
       if (isset($data)) {
             try {
-		print_r($data);    
+		print_r($data['answer']);    
                 $this->db->set($data['questionid'], $data['answer'])
                     ->where(array('userid' => $data['userid']))//which row want to upgrade
                     ->update('gsp_school');
