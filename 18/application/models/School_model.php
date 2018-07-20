@@ -174,7 +174,7 @@ class School_model extends CI_Model
     {
       if (isset($data)) {
           try {
-		 $progress='';    
+		 $currentProgress='';    
 		 if(strcmp($data['questionid'],"progress")==0){
 		  $currentProgress=$data['answer'];
 		} 
