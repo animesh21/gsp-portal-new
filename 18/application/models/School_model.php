@@ -176,13 +176,27 @@ class School_model extends CI_Model
           try {
 		 $progress='';    
 		 if(strcmp($data['questionid'],"progress")==0){
-		  $progress=$data['answer'];
+		  $currentProgress=$data['answer'];
 		} 
-		  echo $progress;
-		//print_r($data);    
-                $this->db->set($data['questionid'], $data['answer'])
+	        echo $progress;
+		      $this->db->set($data['questionid'], $data['answer'])
+                      ->where(array('userid' => $data['userid']))//which row want to upgrade
+                      ->update('gsp_school');  
+		$getProgress=$this->db->select("*")->from("gsp_school")->where(array('userid' => $data['userid']))->get()->row();
+		$fetchProgress= $getProgress->progress;
+		if($currentProgress<$fetchProgress){
+		    $this->db->set(array("progress"=>$fetchProgress))
                     ->where(array('userid' => $data['userid']))//which row want to upgrade
                     ->update('gsp_school');
+		}else{
+		    $this->db->set(array("progress"=>$currentProgress))
+                    ->where(array('userid' => $data['userid']))//which row want to upgrade
+                    ->update('gsp_school');
+		}  
+		//print_r($data);    
+              //  $this->db->set($data['questionid'], $data['answer'])
+                  //  ->where(array('userid' => $data['userid']))//which row want to upgrade
+                   // ->update('gsp_school');
                 //return "SCHOOL Updated";
             } catch (Exception $e) {
                 return "Invalid Key";
