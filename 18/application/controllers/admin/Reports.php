@@ -22,7 +22,8 @@ session->userdata('ADMIN_ID') == '') {
         $data['title'] = 'Participation By Zone';
 		$east_india = array("36", "26", "16", "1", "5");
 		$north_india = array("28", "15", "13", "29", "14", "34", "35", "10", "6");
-		$north_east_india = array("2", "4", "22", "23", "24", "25", "30", "33");
+		//Old data array $north_east_india = array("2", "4", "22", "23", "24", "25", "30", "33");
+	    $north_east_india = array("4", "22", "23", "24", "25", "30", "33");
         $south_india = array("2", "17", "18", "31", "32", "19", "27");
 		$west_india = array("12", "21", "11", "9", "8");
         $central_india = array("7", "20");
