@@ -1381,6 +1381,102 @@ class Audit_started_model extends CI_Model {
 	
         
     }
+	
+	
+	
+	public function getRegionWiseSchool($region,$school)
+	{
+	    if($region=='East')
+		{
+		  $region1=array("36", "26", "16", "1", "5"); //$east_india
+		}
+		
+		if($region=='West')
+		{
+		  $region1=array("12", "21", "11", "9", "8"); //$west_india
+		}
+		
+		if($region=='North')
+		{
+		  $region1=array("28", "15", "13", "29", "14", "34", "35", "10", "6"); //$north_india
+		}
+		
+		if($region=='South')
+		{
+		  $region1=array("2", "17", "18", "31", "32", "19", "27"); //$south_india
+		}
+		
+		if($region=='North East')
+		{
+		  $region1=array("2", "4", "22", "23", "24", "25", "30", "33"); //$north_east_india
+		}
+		
+		if($region=='Central')
+		{
+		  $region1=array("7", "20"); //$central_india
+		}
+		
+		if($region=='All')
+		{
+		  $region1=array("36", "26", "16", "1", "5","12", "21", "11", "9", "8","28", "15", "13", "29", "14",          "34", "35", "10", "6","2", "17", "18", "31", "32", "19", "27","2", "4", "22", "23", "24", "25", "30",          "33","7", "20"); //$all
+		}
+		
+		if($school==0){
+		
+		$sql = $this->db->select('a.*, b.name AS state_name,c.name As district_name')
+                        ->from('gsp_school AS a')
+                        ->join('states AS b', 'a.state=b.id', 'left')
+		   	            ->join('cities AS c', 'a.district=c.id', 'left')
+						->join('gsp_answers as d', 'a.userid=d.userid', 'left')
+						->where('d.questionid','Q1G2')
+                        ->where('d.answer <',6)
+						->where_in('state',$region1)
+                        ->order_by('a.id', 'desc')
+                        ->get()->result();
+						
+						return $sql;
+				}
+				
+		if($school==1){
+		
+		$sql = $this->db->select('a.*, b.name AS state_name,c.name As district_name')
+                        ->from('gsp_school AS a')
+                        ->join('states AS b', 'a.state=b.id', 'left')
+		   	            ->join('cities AS c', 'a.district=c.id', 'left')
+						->join('gsp_answers as d', 'a.userid=d.userid', 'left')
+						->where('d.questionid','Q1G2')
+                        ->where('d.answer >',5)
+						->where_in('state',$region1)
+                        ->order_by('a.id', 'desc')
+                        ->get()->result();
+						return $sql;
+						//echo $this->db->last_query(); exit;
+				}
+		
+		if($school==2){
+		
+		$sql = $this->db->select('a.*, b.name AS state_name,c.name As district_name')
+                        ->from('gsp_school AS a')
+                        ->join('states AS b', 'a.state=b.id', 'left')
+		   	            ->join('cities AS c', 'a.district=c.id', 'left')
+						->join('gsp_answers as d', 'a.userid=d.userid', 'left')
+						->where_in('state',$region1)
+                        ->order_by('a.id', 'desc')
+                        ->get()->result();
+						return $sql;
+						
+						//echo $this->db->last_query(); exit;
+				}						
+					//echo $this->db->last_query(); exit;
+	
+	}
+	
+	
+	
+	
+	
+	
+	
     /*
      * Generate Excel Data
      */
