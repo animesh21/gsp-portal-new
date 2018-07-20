@@ -61,6 +61,33 @@ class Audit_started extends CI_Controller {
         force_download($name, $row);
     }
 
+	public function regionwise() {
+        $data['main'] = 'admin/audit/regionwise';
+        $data['title'] = 'Home | Audit Region Wise';
+        //$data['record']=$this->Audit_started_model->getData();
+        $this->load->view('admin/includes/template', $data);
+    }
+	
+	public function regionsearch() {
+	
+	
+        $data['main'] = 'admin/audit/regionsearch';
+        $data['title'] = 'Home | Audit Region Wise';
+        $data['region'] = $this->input->post('region');
+        $data['school'] = $this->input->post('school');
+		 $region=$this->input->post('region');
+		 
+        $school=$this->input->post('school');
+		//echo $school;exit;
+        $data['record'] = $this->Audit_started_model->getRegionWiseSchool($region,$school);   
+	  
+        //echo '<pre>'; print_r($data['record']); exit;
+        $this->load->view('admin/includes/template', $data);
+    }
+	
+	
+	
+	
 	/*
      * PArtner Excel Generation
      */
