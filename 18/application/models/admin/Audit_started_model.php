@@ -1462,6 +1462,7 @@ class Audit_started_model extends CI_Model {
 						->join('gsp_answers as d', 'a.userid=d.userid', 'left')
 						->where_in('state',$region1)
                         ->order_by('a.id', 'desc')
+			->group_by('a.id')
                         ->get()->result();
 						return $sql;
 						
