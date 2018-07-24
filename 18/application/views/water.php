@@ -3290,10 +3290,18 @@ if($("input[name='Q6W1']").prop('checked') == false && $("input[name='Q6W2']").p
 	
 <script>
   $("#movenextbtn").click(function(e){
+  if($('input[name="Q20W1"]:checked').val()==='Y'){
    if($("input[name='Q20W2']").prop('checked') == false && $("input[name='Q20W21']").prop('checked') == false && $("input[name='Q20W22']").prop('checked') == false  && $("input[name='Q20W23']").prop('checked') == false){
       alert("19(a) How does your school reuse wastewater?");
      e.preventDefault();
    }
+  }else if($('input[name="Q20W1"]:checked').val()==='N'){
+         if($("input[name='Q20W3']").prop('checked') == false && $("input[name='Q20W31']").prop('checked') == false && $("input[name='Q20W32']").prop('checked') == false){
+	   alert("18(i) If no, How does your school reuse wastewater from RO plant or AC?");
+            e.preventDefault();
+	 }
+     }	
+			  
 });	
 
 /**********************************************************************************/
