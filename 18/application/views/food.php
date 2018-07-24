@@ -2441,6 +2441,27 @@ e.preventDefault();
 }
 }
 });
+/**Q6(a) Validation**/	
+$("#foodnext").click(function(e){
+ if($("input[name='Q9F1']").val()==='Y'){
+  if($("input[name='Q9F2']").val()==""){
+	 alert("Q6(a) Please Provide Details.."); 
+	 e.preventDefault();
+   }
+  }
+ /**Q10 Validation**/
+ if($("input[name='Q13F1']").val()==""){
+	 alert("Q10 Is cooking part of any regular subjects or extracurricular activities?.."); 
+	 e.preventDefault();
+  }
+ /**Q10(a) Validation**/	
+ if($("input[name='Q13F1']").val()==='Y'){
+  if($("input[name='Q13F2']").val()==""){
+	 alert("Q10(a) Please Provide Details.."); 
+	 e.preventDefault();
+   }
+ }	
+});
 </script>	
 <style type="text/css">
 .tt{ top:-21px;}
