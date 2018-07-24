@@ -2450,7 +2450,7 @@ $("#foodnext").click(function(e){
    }
   }
  /**Q10 Validation**/
- if($("input[name='Q13F1']").val()==""){
+ if($("input[name='Q13F1']").val()=="" && $("input[name='Q13F1']").attr("placeholder")==""){
 	 alert("Q10 Is cooking part of any regular subjects or extracurricular activities?.."); 
 	 e.preventDefault();
   }
