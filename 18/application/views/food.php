@@ -2464,7 +2464,18 @@ $("#foodnext").click(function(e){
 	 alert("Q10(a) Please Provide Details.."); 
 	 e.preventDefault();
    }
- }	
+ }
+ /****/
+	 if($("input[name='Q5F1']:checked").val()==='Y'){
+	   if($('input[name="Q5F1S1"]:checked').length == 0){
+	      alert("Q2(a) If yes, then midday meal is served under:.."); 
+	      e.preventDefault();
+	   }
+	   if($('input[name="Q5F2S1"]:checked').length == 0 || $('input[name="Q5F2S2"]:checked').length == 0 || $('input[name="Q5F2S3"]:checked').length == 0 || $('input[name="Q5F2S4"]:checked').length == 0 || $('input[name="Q5F2S5"]:checked').length == 0 || $('input[name="Q5F2S6"]:checked').length == 0 || $('input[name="Q5F2S7"]:checked').length == 0 || $('input[name="Q5F2S8"]:checked').length == 0 || $('input[name="Q5F2S9"]:checked').length == 0 || $('input[name="Q5F2S10"]:checked').length == 0 || $('input[name="Q5F2S11"]:checked').length == 0 || $('input[name="Q5F2S12"]:checked').length == 0 || $('input[name="Q5F2S13"]:checked').length == 0 || $('input[name="Q5F2S13"]:checked').length == 0){
+	     alert("Q2(b) What kind of food items are served in midday meal?.."); 
+	    e.preventDefault();
+         }	 
+	}
 });
 </script>	
 <style type="text/css">
