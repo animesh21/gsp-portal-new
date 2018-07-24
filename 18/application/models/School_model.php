@@ -181,7 +181,8 @@ class School_model extends CI_Model
 	        echo $currentProgress; 
 		$getProgress=$this->db->select("*")->from("gsp_school")->where(array('userid' => $data['userid']))->get()->row();
 		$fetchProgress= $getProgress->progress;
-		if($currentProgress<$fetchProgress){
+		if(strcmp($data['questionid'],"dieselValidation")!=0){  
+		 if($currentProgress<$fetchProgress){
 		    $this->db->set($data['questionid'], $data['answer'])
                     ->where(array('userid' => $data['userid']))//which row want to upgrade
                     ->update('gsp_school'); 
@@ -189,14 +190,15 @@ class School_model extends CI_Model
 		    $this->db->set(array("progress"=>$fetchProgress))
                     ->where(array('userid' => $data['userid']))//which row want to upgrade
                     ->update('gsp_school');
-		}else{
+		 }else{
 		    $this->db->set($data['questionid'], $data['answer'])
                     ->where(array('userid' => $data['userid']))//which row want to upgrade
                     ->update('gsp_school'); 	
 		    $this->db->set(array("progress"=>$currentProgress))
                     ->where(array('userid' => $data['userid']))//which row want to upgrade
                     ->update('gsp_school');
-		}  
+		 } 
+		}
 		//print_r($data);    
               //  $this->db->set($data['questionid'], $data['answer'])
                   //  ->where(array('userid' => $data['userid']))//which row want to upgrade
