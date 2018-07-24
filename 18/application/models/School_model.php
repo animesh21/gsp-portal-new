@@ -181,7 +181,7 @@ class School_model extends CI_Model
 	        echo $currentProgress; 
 		$getProgress=$this->db->select("*")->from("gsp_school")->where(array('userid' => $data['userid']))->get()->row();
 		$fetchProgress= $getProgress->progress;
-		if(strcmp($data['questionid'],"dieselValidation")!=0){  
+		if(strcmp($data['questionid'],"dieselValidation")!=0 && strcmp($data['questionid'],"PetrolValidation")!=0){  
 		 if($currentProgress<$fetchProgress){
 		    $this->db->set($data['questionid'], $data['answer'])
                     ->where(array('userid' => $data['userid']))//which row want to upgrade
