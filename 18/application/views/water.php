@@ -3270,23 +3270,30 @@ if($("input[name='Q6W1']").prop('checked') == false && $("input[name='Q6W2']").p
   e.preventDefault();
 }
 });	
-	</script>
+</script>
 	
 	<script>
 	$("#movenextbtn").click(function(e){
-if($("input[name='Q19W16']").prop('checked') == false && $("input[name='Q19W161']").prop('checked') == false && $("input[name='Q19W162']").prop('checked') == false){
-  alert("18(i) If yes, How does your school reuse wastewater from RO plant or AC");
-  e.preventDefault();
-}
+      if($('input[name="Q19W15"]:checked').val()==='Y'){
+      if($("input[name='Q19W16']").prop('checked') == false && $("input[name='Q19W161']").prop('checked') == false && $("input[name='Q19W162']").prop('checked') == false){
+        alert("18(i) If yes, How does your school reuse wastewater from RO plant or AC");
+        e.preventDefault();
+       }
+     }else if($('input[name="Q19W15"]:checked').val()==='N'){
+         if($("input[name='Q19W17']").prop('checked') == false){
+	   alert("18(i) If no, How does your school reuse wastewater from RO plant or AC?");
+            e.preventDefault();
+	 }
+     }		
 });	
 </script>
 	
 <script>
-	$("#movenextbtn").click(function(e){
-if($("input[name='Q20W2']").prop('checked') == false && $("input[name='Q20W21']").prop('checked') == false && $("input[name='Q20W22']").prop('checked') == false  && $("input[name='Q20W23']").prop('checked') == false){
-  alert("19(a) How does your school reuse wastewater?");
-  e.preventDefault();
-}
+  $("#movenextbtn").click(function(e){
+   if($("input[name='Q20W2']").prop('checked') == false && $("input[name='Q20W21']").prop('checked') == false && $("input[name='Q20W22']").prop('checked') == false  && $("input[name='Q20W23']").prop('checked') == false){
+      alert("19(a) How does your school reuse wastewater?");
+     e.preventDefault();
+   }
 });	
 
 /**********************************************************************************/
