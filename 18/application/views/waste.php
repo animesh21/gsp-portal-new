@@ -4080,11 +4080,11 @@ if($("input[name='Q11Wa8S1']").prop('checked') == false && $("input[name='Q11Wa8
   }
 
 		/*Vlidation Code On Question Q1,Q2,Q4,Q5,Q6,Q9,Q10,Q11,Q12,Q13,Q14,Q15*/
-	 if($("input[name='Q8Wa1']").prop('checked') == false){
+	 if($("input[name='Q4Wa1']").prop('checked') == false){
 	   alert("Q1: Does your school segregate solid waste?");
 	   e.preventDefault();
 	 }
-	 if($("input[name='Q8Wa1']").prop('checked') == false){
+	 if($("input[name='Q4Wa2']").prop('checked') == false){
 	   alert("Q2: How many categories does your school segregate waste into? ");
 	   e.preventDefault();
 	 }
