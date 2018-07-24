@@ -2444,6 +2444,7 @@ e.preventDefault();
 /**Q6(a) Validation**/	
 $("#foodnext").click(function(e){
  if($("input[name='Q9F1']:checked").val()==='Y'){
+	 alert("Ok");
   if($("input[name='Q9F2']").val()=="" || $("input[name='Q9F2']").attr("placeholder")==""){
 	 alert("Q6(a) Please Provide Details.."); 
 	 e.preventDefault();
