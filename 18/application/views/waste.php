@@ -4059,7 +4059,7 @@ if($("input[name='Q11Wa8S1']").prop('checked') == false && $("input[name='Q11Wa8
 	
 	<script>
 	$("#wastenext").click(function(e){
-     if($("input[name='Q4Wa1']:checked").val()==='Y')
+     if($("input[name='Q4Wa1']:checked").val()==='Y'){
      if($("input[name='Q4Wa2S1']").prop('checked') == false && $("input[name='Q4Wa2S2']").prop('checked') == false && $("input[name='Q4Wa2S3']").prop('checked') == false && $("input[name='Q4Wa2S4']").prop('checked') == false){
 	if($("input[name='Q4Wa2S5']").val()==''){
          alert("Q1(a) Who segregates the waste at source?");
@@ -4072,10 +4072,12 @@ if($("input[name='Q11Wa8S1']").prop('checked') == false && $("input[name='Q11Wa8
 	
 	<script>
 	$("#wastenext").click(function(e){
-if($("input[name='Q15Wa2S1']").prop('checked') == false && $("input[name='Q15Wa2S2']").prop('checked') == false && $("input[name='Q15Wa2S3']").prop('checked') == false && $("input[name='Q15Wa2S4']").prop('checked') == false){
+  if($("input[name='Q15Wa1']:checked").val()==='Y'){    
+   if($("input[name='Q15Wa2S1']").prop('checked') == false && $("input[name='Q15Wa2S2']").prop('checked') == false && $("input[name='Q15Wa2S3']").prop('checked') == false && $("input[name='Q15Wa2S4']").prop('checked') == false){
 	 alert("11(b) What kind of waste is being burnt/ incinerated?");
 	 e.preventDefault();
-}
+   }
+  }
 
 		/*Vlidation Code On Question Q1,Q2,Q4,Q5,Q6,Q9,Q10,Q11,Q12,Q13,Q14,Q15*/
 	 if($("input[name='Q8Wa1']").prop('checked') == false){
