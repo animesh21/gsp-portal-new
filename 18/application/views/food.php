@@ -2443,7 +2443,7 @@ e.preventDefault();
 });
 /**Q6(a) Validation**/	
 $("#foodnext").click(function(e){
- if($("input[name='Q9F1']").val()==='Y'){
+ if($("input[name='Q9F1']:checked").val()==='Y'){
   if($("input[name='Q9F2']").val()=="" && $("input[name='Q9F2']").attr("placeholder")==""){
 	 alert("Q6(a) Please Provide Details.."); 
 	 e.preventDefault();
@@ -2455,7 +2455,7 @@ $("#foodnext").click(function(e){
 	 e.preventDefault();
   }
  /**Q10(a) Validation**/	
- if($("input[name='Q13F1']").val()==='Y'){
+ if($("input[name='Q13F1']:checked").val()==='Y'){
   if($("input[name='Q13F2']").val()==""){
 	 alert("Q10(a) Please Provide Details.."); 
 	 e.preventDefault();
