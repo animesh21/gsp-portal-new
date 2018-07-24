@@ -2126,7 +2126,12 @@ if (isset($data['Q9A1']))
 /*This Function Used For Runtime Calculation Below Field*/
 /*Percentage of the floor area being ventilated (Y/X x 100)*/
  $(document).ready(function(){
-    var x =$("input[name='Q4A1']").val();
+       var x;
+       if($("input[name='Q4A1']").val()>10){
+        x =10;
+       }else{
+	x=$("input[name='Q4A1']").val();
+	}
 	var sumFloorAreaBeingVentilated=0;
 	for(i=1; i<=x; ++i){
 	  if($("#Q5A"+i+"S4").attr("placeholder")!="undefined"){
