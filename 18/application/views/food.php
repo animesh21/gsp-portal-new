@@ -2454,7 +2454,7 @@ $("#foodnext").click(function(e){
    }
   }
  /**Q10 Validation**/
- if($("input[name='Q13F1']").val()=="" && $("input[name='Q13F1']").attr("placeholder")=="" && $("input[name='Q13F1']").val()=="undefined"){
+ if($("input[name='Q13F1']").val()=="" && $("input[name='Q13F1']").attr("placeholder")=="" && $("input[name='Q13F1']").val()===undefined){
 	 alert("Q10 Is cooking part of any regular subjects or extracurricular activities?.."); 
 	 e.preventDefault();
   }
