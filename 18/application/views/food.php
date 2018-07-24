@@ -2444,13 +2444,13 @@ e.preventDefault();
 /**Q6(a) Validation**/	
 $("#foodnext").click(function(e){
  if($("input[name='Q9F1']:checked").val()==='Y'){
-  if($("input[name='Q9F2']").val()=="" && $("input[name='Q9F2']").attr("placeholder")==""){
+  if($("input[name='Q9F2']").val()=="" || $("input[name='Q9F2']").attr("placeholder")==""){
 	 alert("Q6(a) Please Provide Details.."); 
 	 e.preventDefault();
    }
   }
  /**Q10 Validation**/
- if($("input[name='Q13F1']").val()=="" && $("input[name='Q13F1']").attr("placeholder")==""){
+ if($("input[name='Q13F1']").val()=="" || $("input[name='Q13F1']").attr("placeholder")==""){
 	 alert("Q10 Is cooking part of any regular subjects or extracurricular activities?.."); 
 	 e.preventDefault();
   }
