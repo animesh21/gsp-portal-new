@@ -2544,7 +2544,12 @@ $("#foodnext").click(function(e){
             alert("Q10(a) If yes, please share the details: .."); 
              e.preventDefault();
        }
-  }	
+  }
+/*Q3 Validation*/
+	if($('input[name="Q6F2S1"]').val()=="" || $('input[name="Q6F2S2"]').val()=="" || $('input[name="Q6F2S3"]').val()==""){
+	    alert("Q3 What kind of food is being served / sold in your school? ..(Savoury snacks and similar packaged food like chips, Kurkure, Cheetos, potato crisps, corn snacks, nuts and seeds, etc)"); 
+            e.preventDefault(); 
+	}
 });
 </script>	
 <style type="text/css">
