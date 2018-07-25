@@ -21,7 +21,13 @@ class Audit_started_2018 extends CI_Controller {
 	     $this->load->helper('date');
 	     $this->load->library('zip');
     }
-    
+   
+	public function excel_all_total_school() {
+        $this->load->dbutil();
+        $row = $this->Audit_started_model->getExcelallTotalSchool();
+        $name = 'All registration.csv';
+        force_download($name, $row);
+    }
     
     public function excel_total_school() {
         $this->load->dbutil();
