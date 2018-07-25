@@ -3333,6 +3333,57 @@ $(document).ready(function(){
      $("input[name='Q8W2S1'][value='Y']").prop("checked",true);
   }
 });
-});	
+});
+/*This Validation Used For Q5 Submit Button Click Event*/	
+$("#movenextbtn").click(function(e){
+   if($('input[name="Q8W1S1"]:checked').length == 0){
+	alert("Q5 What are the water conservation practices your school follows..(Does your school have any water and sanitation policy?)"); 
+	e.preventDefault();   
+   }
+  if($('input[name="Q8W1S2"]:checked').length == 0){
+	alert("Q5 What are the water conservation practices your school follows..(If your school has an eco-club, do they have water component?)"); 
+	e.preventDefault();   
+   }
+  if($('input[name="Q8W1S3"]:checked').length == 0){
+	alert("Q5 What are the water conservation practices your school follows..(Do all tanks in the school have float valves installed to stop overflow?)"); 
+	e.preventDefault();   
+   }
+ if($('input[name="Q8W1S4"]:checked').length == 0){
+	alert("Q5 What are the water conservation practices your school follows..(Do the drinking water points have spill proof taps to check overflow?)"); 
+	e.preventDefault();   
+   }
+ if($('input[name="Q8W1S5"]:checked').length == 0){
+	alert("Q5 What are the water conservation practices your school follows..(Does your school use appliances with a quick-wash setting?)"); 
+	e.preventDefault();   
+   }
+ if($('input[name="Q8W1S6"]:checked').length == 0){
+	alert("Q5 What are the water conservation practices your school follows..(Are dual flush systems installed in the toilets?)"); 
+	e.preventDefault();   
+   }
+if($('input[name="Q8W1S7"]:checked').length == 0){
+	alert("Q5 What are the water conservation practices your school follows..(Does your school encourage bottled water for drinking water?)"); 
+	e.preventDefault();   
+   }
+if($('input[name="Q8W1S8"]:checked').length == 0){
+	alert("Q5 What are the water conservation practices your school follows..(Does your school grow local plant species which require limited amount of water to grow?)"); 
+	e.preventDefault();   
+   }
+if($('input[name="Q8W1S9"]:checked').length == 0){
+	alert("Q5 What are the water conservation practices your school follows..(Has your school initiated any water conservation steps in the school or outside, in the past one year?)"); 
+	e.preventDefault();   
+   }	
+if($('input[name="Q8W1S10"]:checked').length == 0){
+	alert("Q5 What are the water conservation practices your school follows..(Does your school use a drip or irrigation system?)"); 
+	e.preventDefault();   
+   }	
+if($('input[name="Q8W1S11"]:checked').length == 0){
+	alert("Q5 What are the water conservation practices your school follows..(Any other step taken for water conservation? (if Yes, please specify))"); 
+	e.preventDefault();   
+   }
+if($('input[name="Q8W1S11"]:checked').length == 0){
+	alert("Q5 What are the water conservation practices your school follows..(Provision for storage of leftover water in bottles at water coolers Any other step taken for water conservation? (if Yes, please specify):))"); 
+	e.preventDefault();   
+   }		
+});
 </script>
 	
