@@ -2554,6 +2554,34 @@ $("#foodnext").click(function(e){
 	    alert("Q3 What kind of food is being served / sold in your school? ..(Instant Noodles like Knorr, Cup-a-noodles, Top Ramen, Wai-wai, Yippee, Foodles, Maggi, etc)"); 
             e.preventDefault(); 
 	}
+	if($('input[name="Q6F4S1"]').val()=="" || $('input[name="Q6F4S2"]').val()=="" || $('input[name="Q6F4S3"]').val()==""){
+	    alert("Q3 What kind of food is being served / sold in your school? ..(Potato fries and burgers)"); 
+            e.preventDefault(); 
+	}
+	if($('input[name="Q6F5S1"]').val()=="" || $('input[name="Q6F5S2"]').val()=="" || $('input[name="Q6F5S3"]').val()==""){
+	    alert("Q3 What kind of food is being served / sold in your school? ..(Confectionery items (chocolate, candies, gums))"); 
+            e.preventDefault(); 
+	}
+	if($('input[name="Q6F6S1"]').val()=="" || $('input[name="Q6F6S2"]').val()=="" || $('input[name="Q6F6S3"]').val()==""){
+	    alert("Q3 What kind of food is being served / sold in your school? ..(Ice cream))"); 
+            e.preventDefault(); 
+	}
+	if($('input[name="Q6F7S1"]').val()=="" || $('input[name="Q6F7S2"]').val()=="" || $('input[name="Q6F7S3"]').val()==""){
+	    alert("Q3 What kind of food is being served / sold in your school? ..(Carbonated beverages))"); 
+            e.preventDefault(); 
+	}
+	if($('input[name="Q6F8S1"]').val()=="" || $('input[name="Q6F8S2"]').val()=="" || $('input[name="Q6F8S3"]').val()==""){
+	    alert("Q3 What kind of food is being served / sold in your school? ..(Sugar sweetened non-carbonated beverages))"); 
+            e.preventDefault(); 
+	}
+	if($('input[name="Q6F9S1"]').val()=="" || $('input[name="Q6F9S2"]').val()=="" || $('input[name="Q6F9S3"]').val()==""){
+	    alert("Q3 What kind of food is being served / sold in your school? ..(Packaged/bottled nimboo paani/lassi/flavoured milk))"); 
+            e.preventDefault(); 
+	}
+	if($('input[name="Q6F10S1"]').val()=="" || $('input[name="Q6F10S2"]').val()=="" || $('input[name="Q6F10S3"]').val()==""){
+	    alert("Q3 What kind of food is being served / sold in your school? ..(Packaged/bottled energy drinks))"); 
+            e.preventDefault(); 
+	}
 });
 </script>	
 <style type="text/css">
