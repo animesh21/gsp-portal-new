@@ -7,7 +7,7 @@
     </a>
     <div class="title">Gsp Audit Phase 1</div>
 </div>
-<div class="schools-statics"> <a href="#" target="_blank">
+<div class="schools-statics"> <a href="#">
         <div class="statics-circle"> <span>
 		  0
 		</span>
