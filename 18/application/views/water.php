@@ -3383,7 +3383,12 @@ if($('input[name="Q8W1S11"]:checked').length == 0){
 if($('input[name="Q8W1S11"]:checked').length == 0){
 	alert("Q5 What are the water conservation practices your school follows..(Provision for storage of leftover water in bottles at water coolers Any other step taken for water conservation? (if Yes, please specify):))"); 
 	e.preventDefault();   
-   }		
+   }
+/**Q8 How many drinking water taps do you have? (Validation)**/
+	 if($('input[name="Q8W1S11"]').val() =="" && $('input[name="Q8W1S11"]').attr("placeholder")==""){
+	   alert("Q8 How many drinking water taps do you have?");
+	   e.preventDefault(); 	 
+	 }
 });
 </script>
 	
