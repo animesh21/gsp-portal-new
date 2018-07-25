@@ -216,6 +216,16 @@ class Dashboard extends CI_Controller {
 	} 
 	
 	/************** 2018 ******************/
+	
+	public function total_registration()
+   {
+		$data['main']='admin/audit/all_total_school';
+		$data['title']='Total no. of school'; 
+		$data['records']=$this->Dashboard_model->getSchool_alldata();
+		$this->load->view('admin/includes/template', $data);
+	}
+	
+	
    public function total18_registration()
    {
 		$data['main']='admin/audit/total_school18';
@@ -276,6 +286,7 @@ class Dashboard extends CI_Controller {
    public function year18_phase1() {
         $data['main']='admin/dashboard/year18_phase1';
         $data['title']='Home | Dashboard';
+	   $data['total_school']=$this->Dashboard_model->getSchool_alldata();
         $data['school']=$this->Dashboard_model->getSchool_18data();
         $data['startedtheaudit']=$this->Dashboard_model->getstartedtheaudit_18data();
         $data['CompletedAuditButNotSubmitted']=$this->Dashboard_model->getCompletedAuditButNotSubmitted_18data();
