@@ -2550,6 +2550,10 @@ $("#foodnext").click(function(e){
 	    alert("Q3 What kind of food is being served / sold in your school? ..(Savoury snacks and similar packaged food like chips, Kurkure, Cheetos, potato crisps, corn snacks, nuts and seeds, etc)"); 
             e.preventDefault(); 
 	}
+	if($('input[name="Q6F3S1"]').val()=="" || $('input[name="Q6F3S2"]').val()=="" || $('input[name="Q6F3S3"]').val()==""){
+	    alert("Q3 What kind of food is being served / sold in your school? ..(Instant Noodles like Knorr, Cup-a-noodles, Top Ramen, Wai-wai, Yippee, Foodles, Maggi, etc)"); 
+            e.preventDefault(); 
+	}
 });
 </script>	
 <style type="text/css">
