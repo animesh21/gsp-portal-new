@@ -4238,9 +4238,9 @@ if($("input[name='Q11Wa8S1']").prop('checked') == false && $("input[name='Q11Wa8
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Geysers/water heaters)");
 	   e.preventDefault();
 	}
-	if($("input[name='Q12Wa28S1']:checked").val()==="Y"){
+	if($("input[name='Q4Wa1']:checked").val()==="Y"){
 	   if($("input[name='Q4Wa2S1']:checked").val()=="" && $("input[name='Q4Wa2S2']:checked").val()=="" && $("input[name='Q4Wa2S3']:checked").val()==""
-	     && $("input[name='Q4Wa2S4']:checked").val()==""){
+	     && $("input[name='Q4Wa2S4']:checked").val()=="" && $("input[name='Q4Wa2S5']:checked").val()==""){
 	       alert("1(a) Who segregates the waste at source?");
 		e.preventDefault();   
 	   }
