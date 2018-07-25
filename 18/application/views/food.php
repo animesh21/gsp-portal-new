@@ -2534,6 +2534,17 @@ $("#foodnext").click(function(e){
              e.preventDefault();
        }
   }
+ /*Q10a Validation*/
+	if($("input[name='Q13F1']:checked").val()==='Y'){
+	   if($('input[name="Q13F2"]').val()==""){
+	      alert("Q8(a) Please provide the names of sponsors: .."); 
+	      e.preventDefault();
+	   }
+       if($("input[name='Q13F2']").val()===undefined){	 
+            alert("Q8(a) Please provide the names of sponsors: .."); 
+             e.preventDefault();
+       }
+  }	
 });
 </script>	
 <style type="text/css">
