@@ -216,11 +216,52 @@ class Dashboard extends CI_Controller {
 	} 
 	
 	/************** 2018 ******************/
-    public function total18_registration()
+   public function total18_registration()
    {
 		$data['main']='admin/audit/total_school18';
 		$data['title']='Total no. of school'; 
 		$data['records']=$this->Dashboard_model->getSchool_18data();
+		$this->load->view('admin/includes/template', $data);
+	}
+	
+	public function total18_startedtheaudit()
+   {
+		$data['main']='admin/audit/startedtheaudit_school18';
+		$data['title']='Total no. of school'; 
+		$data['records']=$this->Dashboard_model->getstartedtheaudit_18data();
+		$this->load->view('admin/includes/template', $data);
+	}
+	
+	public function total18_CompletedAuditButNotSubmitted()
+   {
+		$data['main']='admin/audit/CompletedAuditButNotSubmitted_school18';
+		$data['title']='Total no. of school'; 
+		$data['records']=$this->Dashboard_model->getCompletedAuditButNotSubmitted_18data();
+		$this->load->view('admin/includes/template', $data);
+	}
+	
+	
+	public function total18_SubmittedTheAudit()
+   {
+		$data['main']='admin/audit/SubmittedTheAudit_school18';
+		$data['title']='Total no. of school'; 
+		$data['records']=$this->Dashboard_model->getSubmittedTheAudit_18data();
+		$this->load->view('admin/includes/template', $data);
+	}
+	
+	public function total18_StartedAuditButDidNotComplete()
+   {
+		$data['main']='admin/audit/StartedAuditButDidNotComplete_school18';
+		$data['title']='Total no. of school'; 
+		$data['records']=$this->Dashboard_model->getStartedAuditButDidNotComplete_18data();
+		$this->load->view('admin/includes/template', $data);
+	}
+	
+	public function total18_NotStartTheAudit()
+   {
+		$data['main']='admin/audit/NotStartTheAudit_school18';
+		$data['title']='Total no. of school'; 
+		$data['records']=$this->Dashboard_model->getNotStartTheAudit_18data();
 		$this->load->view('admin/includes/template', $data);
 	}
 	
