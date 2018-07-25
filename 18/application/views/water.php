@@ -3384,9 +3384,29 @@ if($('input[name="Q8W1S11"]:checked').length == 0){
 	alert("Q5 What are the water conservation practices your school follows..(Provision for storage of leftover water in bottles at water coolers Any other step taken for water conservation? (if Yes, please specify):))"); 
 	e.preventDefault();   
    }
-/**Q8 How many drinking water taps do you have? (Validation)**/
-	 if($('input[name="Q8W1S11"]').val() =="" && $('input[name="Q8W1S11"]').attr("placeholder")==""){
+        /**Q8 How many drinking water taps do you have? (Validation)**/
+	 if($('input[name="Q9W1"]').val() =="" && $('input[name="Q9W1"]').attr("placeholder")==""){
 	   alert("Q8 How many drinking water taps do you have?");
+	   e.preventDefault(); 	 
+	 }
+	  /**Q9 How many drinking water taps do you have? (Validation)**/
+	 if($('input[name="Q10W1"]').val() =="" && $('input[name="Q10W1"]').attr("placeholder")==""){
+	   alert("Q9 How many hand pumps do you have?");
+	   e.preventDefault(); 	 
+	 }
+	/**Q10 How many ablution taps (taps used for washing hands only) do you have? (Validation)**/
+	 if($('input[name="Q11W1"]').val() =="" && $('input[name="Q11W1"]').attr("placeholder")==""){
+	   alert("Q10 How many ablution taps (taps used for washing hands only) do you have?");
+	   e.preventDefault(); 	 
+	 }
+	/**Q12 How many urinals (strictly used for urination only) do you have?  (Validation)**/
+	 if($('input[name="Q14W1"]').val() =="" && $('input[name="Q14W1"]').attr("placeholder")==""){
+	   alert("Q12 How many urinals (strictly used for urination only) do you have?");
+	   e.preventDefault(); 	 
+	 }
+	/**Q13 How many other water outlets (example: taps in play fields, sprinklers, swimming pool) do you have?  (Validation)**/
+	 if($('input[name="Q15W1"]').val() =="" && $('input[name="Q15W1"]').attr("placeholder")==""){
+	   alert("Q13 How many other water outlets (example: taps in play fields, sprinklers, swimming pool) do you have?");
 	   e.preventDefault(); 	 
 	 }
 });
