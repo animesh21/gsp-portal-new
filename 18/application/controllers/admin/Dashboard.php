@@ -235,7 +235,13 @@ class Dashboard extends CI_Controller {
    public function year18_phase1() {
         $data['main']='admin/dashboard/year18_phase1';
         $data['title']='Home | Dashboard';
-       $data['school']=$this->Dashboard_model->getSchool_18data();
+        $data['school']=$this->Dashboard_model->getSchool_18data();
+        $data['startedtheaudit']=$this->Dashboard_model->getstartedtheaudit_18data();
+        $data['CompletedAuditButNotSubmitted']=$this->Dashboard_model->getCompletedAuditButNotSubmitted_18data();
+        $data['SubmittedTheAudit']=$this->Dashboard_model->getSubmittedTheAudit_18data();
+        $data['StartedAuditButDidNotComplete']=$this->Dashboard_model->getStartedAuditButDidNotComplete_18data();
+        $data['NotStartTheAudit']=$this->Dashboard_model->getNotStartTheAudit_18data();
+      
 	
         $this->load->view('admin/includes/template', $data);
     }	
