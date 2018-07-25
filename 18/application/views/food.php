@@ -2448,10 +2448,10 @@ $("#foodnext").click(function(e){
      alert("Q6(a) Please Provide Details.."); 
       e.preventDefault();
    }
-   if($("input[name='Q9F2']").val()=="" || $("input[name='Q9F2']").attr("placeholder")==""){
+   /*if($("input[name='Q9F2']").val()=="" || $("input[name='Q9F2']").attr("placeholder")==""){
       alert("Q6(a) Please Provide Details.."); 
       e.preventDefault();
-   }
+   }*/
   }
  /**Q10 Validation**/
  if($("input[name='Q13F1']").val()=="" && $("input[name='Q13F1']").attr("placeholder")=="" && $("input[name='Q13F1']").val()===undefined){
