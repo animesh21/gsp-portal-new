@@ -353,22 +353,98 @@ class Dashboard_model extends CI_Model {
 	}
 	
 	/******************************  2018 **************************/
-public function getSchool_18data(){
+      public function getSchool_18data(){
         return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
-                        ->from('gsp_school AS a')
-                        ->join('states AS b', 'a.state=b.id', 'left')
-			->join('cities AS c', 'a.district=c.id', 'left')
-                        ->where('a.date_added >=', '2018-02-20 00:00:00')
-                        ->order_by('a.id', 'desc')
-                        ->get()->result();
-    }
+        ->from('gsp_school AS a')
+        ->join('states AS b', 'a.state=b.id', 'left')
+		->join('cities AS c', 'a.district=c.id', 'left')
+        ->where('a.date_added >=', '2018-02-21 00:00:00')
+        ->order_by('a.id', 'desc')
+        ->get()->result();
+      }
+	  
+	   public function getstartedtheaudit_18data(){
+        return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
+        ->from('gsp_school AS a')
+        ->join('states AS b', 'a.state=b.id', 'left')
+		->join('cities AS c', 'a.district=c.id', 'left')
+        ->where('a.date_added >=', '2018-02-21 00:00:00')
+		->where('a.progress>=', 10)
+		->where('a.progress<=', 100)
+        ->order_by('a.id', 'desc')
+        ->get()->result();
+      }
+	  
+	  
+	  public function getCompletedAuditButNotSubmitted_18data(){
+        return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
+        ->from('gsp_school AS a')
+        ->join('states AS b', 'a.state=b.id', 'left')
+		->join('cities AS c', 'a.district=c.id', 'left')
+        ->where('a.date_added >=', '2018-02-21 00:00:00')
+		->where('a.progress', '100')
+		->where('a.complete_status','0')
+        ->order_by('a.id', 'desc')
+        ->get()->result();
+		//echo $this->db->last_query(); exit;
+      }
    
- public function getMasterData(){
+      public function getSubmittedTheAudit_18data(){
+        return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
+        ->from('gsp_school AS a')
+        ->join('states AS b', 'a.state=b.id', 'left')
+		->join('cities AS c', 'a.district=c.id', 'left')
+        ->where('a.date_added >=', '2018-02-21 00:00:00')
+		->where('a.progress', '100')
+		->where('a.complete_status','1')
+        ->order_by('a.id', 'desc')
+        ->get()->result();
+		
+		
+      }
+	  
+	   public function getStartedAuditButDidNotComplete_18data(){
+        return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
+        ->from('gsp_school AS a')
+        ->join('states AS b', 'a.state=b.id', 'left')
+		->join('cities AS c', 'a.district=c.id', 'left')
+        ->where('a.date_added >=', '2018-02-21 00:00:00')
+		->where('progress >','5')
+		->where('progress <=','75')
+        ->order_by('a.id', 'desc')
+        ->get()->result();
+		
+		
+      }
+   
+     
+	 public function getNotStartTheAudit_18data(){
+        return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
+        ->from('gsp_school AS a')
+        ->join('states AS b', 'a.state=b.id', 'left')
+		->join('cities AS c', 'a.district=c.id', 'left')
+        ->where('a.date_added >=', '2018-02-21 00:00:00')
+		->where('progress =','5')
+        ->order_by('a.id', 'desc')
+        ->get()->result();
+		
+		
+      }
+   
+   
+   
+      public function getMasterData(){
         return $this->db->select('a.*')
-                        ->from('tbl_masterlist AS a')
-                        ->get()->result();
-    } 	
+        ->from('tbl_masterlist AS a')
+        ->get()->result();
+      } 	
 	 
+       public function getAirQuality($question_id){
+           return $this->db->select('a.'.$question_id.',count(a.'.$question_id.') as total')
+           ->from('tbl_total as a')
+           ->group_by('(a.'.$question_id.')')
+           ->get()->result();
+       }	  
 }
 ?>
 
