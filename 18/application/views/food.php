@@ -2465,7 +2465,7 @@ $("#foodnext").click(function(e){
 	 e.preventDefault();
    }
  }
- /****/
+ /**Q2 Validation**/
 	 if($("input[name='Q5F1']:checked").val()==='Y'){
 	   if($('input[name="Q5F1S1"]:checked').length == 0){
 	      alert("Q2(a) If yes, then midday meal is served under:.."); 
@@ -2476,6 +2476,64 @@ $("#foodnext").click(function(e){
 	    e.preventDefault();
          }	 
 	}
+ /**Q1 Validation**/
+  if($('input[name="Q4F1"]:checked').length == 0){
+	      alert("Q1 Does your school have a provision/space to sell packaged food items within the campus.."); 
+	      e.preventDefault();
+ }
+ /**Q4 Validation**/
+  if($('input[name="Q7F1"]:checked').length == 0){
+	      alert("Q4 Does your school serve traditional Indian snacks?.."); 
+	      e.preventDefault();
+ }
+ /**Q5 Validation**/
+  if($('input[name="Q8F1"]:checked').length == 0){
+	      alert("Q5 Does your school serve traditional Indian beverages?.."); 
+	      e.preventDefault();
+ }
+
+ /**Q7 Validation**/
+  if($('input[name="Q10F1"]:checked').length == 0){
+	      alert("Q7 Does the school distribute chocolates/similar products as refreshments during schools events?.."); 
+	      e.preventDefault();
+ }
+ /**Q8 Validation**/
+  if($('input[name="Q11F1"]:checked').length == 0){
+	      alert("Q8 Are your school events such as quiz shows, talent shows, debates sponsored by food companies/brands?.."); 
+	      e.preventDefault();
+ }
+ /**Q9 Validation**/
+  if($('input[name="Q12F1"]:checked').length == 0){
+	      alert("Q9 Does your school measure height and weight of all the students?.."); 
+	      e.preventDefault();
+ }
+ /**Q10 Validation**/
+  if($('input[name="Q13F1"]:checked').length == 0){
+	      alert("Q10 Is cooking part of any regular subjects or extracurricular activities?.."); 
+	      e.preventDefault();
+ }
+/*Q7a Validation*/
+  if($("input[name='Q10F1']:checked").val()==='Y'){
+	   if($('input[name="Q10F2"]').val()==""){
+	      alert("Q7(a) Please provide the names: .."); 
+	      e.preventDefault();
+	   }
+       if($("input[name='Q10F2']").val()===undefined){	 
+            alert("Q7(a) Please provide the names: .."); 
+             e.preventDefault();
+       }
+  }
+/*Q8a Validation*/
+	if($("input[name='Q11F1']:checked").val()==='Y'){
+	   if($('input[name="Q11F2"]').val()==""){
+	      alert("Q8(a) Please provide the names of sponsors: .."); 
+	      e.preventDefault();
+	   }
+       if($("input[name='Q11F2']").val()===undefined){	 
+            alert("Q8(a) Please provide the names of sponsors: .."); 
+             e.preventDefault();
+       }
+  }
 });
 </script>	
 <style type="text/css">
