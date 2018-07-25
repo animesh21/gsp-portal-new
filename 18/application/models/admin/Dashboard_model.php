@@ -368,7 +368,7 @@ class Dashboard_model extends CI_Model {
         ->from('gsp_school AS a')
         ->join('states AS b', 'a.state=b.id', 'left')
 		->join('cities AS c', 'a.district=c.id', 'left')
-        ->where('a.date_added >=', '2018-02-21 00:00:00')
+       
 		->where('a.progress>=', 10)
 		->where('a.progress<=', 100)
         ->order_by('a.id', 'desc')
@@ -381,7 +381,7 @@ class Dashboard_model extends CI_Model {
         ->from('gsp_school AS a')
         ->join('states AS b', 'a.state=b.id', 'left')
 		->join('cities AS c', 'a.district=c.id', 'left')
-        ->where('a.date_added >=', '2018-02-21 00:00:00')
+       
 		->where('a.progress', '100')
 		->where('a.complete_status','0')
         ->order_by('a.id', 'desc')
@@ -394,7 +394,7 @@ class Dashboard_model extends CI_Model {
         ->from('gsp_school AS a')
         ->join('states AS b', 'a.state=b.id', 'left')
 		->join('cities AS c', 'a.district=c.id', 'left')
-        ->where('a.date_added >=', '2018-02-21 00:00:00')
+       
 		->where('a.progress', '100')
 		->where('a.complete_status','1')
         ->order_by('a.id', 'desc')
@@ -408,7 +408,7 @@ class Dashboard_model extends CI_Model {
         ->from('gsp_school AS a')
         ->join('states AS b', 'a.state=b.id', 'left')
 		->join('cities AS c', 'a.district=c.id', 'left')
-        ->where('a.date_added >=', '2018-02-21 00:00:00')
+       
 		->where('progress >','5')
 		->where('progress <=','75')
         ->order_by('a.id', 'desc')
@@ -423,7 +423,7 @@ class Dashboard_model extends CI_Model {
         ->from('gsp_school AS a')
         ->join('states AS b', 'a.state=b.id', 'left')
 		->join('cities AS c', 'a.district=c.id', 'left')
-        ->where('a.date_added >=', '2018-02-21 00:00:00')
+        
 		->where('progress =','5')
         ->order_by('a.id', 'desc')
         ->get()->result();
