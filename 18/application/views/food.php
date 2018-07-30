@@ -2482,6 +2482,7 @@ $("#foodnext").click(function(e){
 	      e.preventDefault();
  }
  /**Q4 Validation**/
+if($('input[name="Q4F1"]:checked').val()==='Y'){	
   if($('input[name="Q7F1"]:checked').length == 0){
 	      alert("Q4 Does your school serve traditional Indian snacks?.."); 
 	      e.preventDefault();
@@ -2491,6 +2492,7 @@ $("#foodnext").click(function(e){
 	      alert("Q5 Does your school serve traditional Indian beverages?.."); 
 	      e.preventDefault();
  }
+}	
 
  /**Q7 Validation**/
   if($('input[name="Q10F1"]:checked').length == 0){
@@ -2546,6 +2548,7 @@ $("#foodnext").click(function(e){
        }
   }
 /*Q3 Validation*/
+  if($('input[name="Q4F1"]:checked').val()==='Y'){	
 	if($('input[name="Q6F2S1"]').val()=="" || $('input[name="Q6F2S2"]').val()=="" || $('input[name="Q6F2S3"]').val()==""){
 	    alert("Q3 What kind of food is being served / sold in your school? ..(Savoury snacks and similar packaged food like chips, Kurkure, Cheetos, potato crisps, corn snacks, nuts and seeds, etc)"); 
             e.preventDefault(); 
@@ -2582,6 +2585,7 @@ $("#foodnext").click(function(e){
 	    alert("Q3 What kind of food is being served / sold in your school? ..(Packaged/bottled energy drinks))"); 
             e.preventDefault(); 
 	}
+  }	  
 });
 </script>	
 <style type="text/css">
