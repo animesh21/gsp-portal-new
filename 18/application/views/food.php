@@ -2531,7 +2531,7 @@ if($('input[name="Q4F1"]:checked').val()==='Y'){
 	      alert("Q8(a) Please provide the names of sponsors: .."); 
 	      e.preventDefault();
 	   }
-       if($("input[name='Q11F2']").val()===undefined){	 
+       if(escape($("input[name='Q11F2']").val())===undefined){	 
             alert("Q8(a) Please provide the names of sponsors: .."); 
              e.preventDefault();
        }
