@@ -2520,7 +2520,7 @@ if($('input[name="Q4F1"]:checked').val()==='Y'){
 	      alert("Q7(a) Please provide the names: .."); 
 	      e.preventDefault();
 	   }
-       if($("input[name='Q10F2']").val()===undefined && $('input[name="Q10F2"]').attr("placeholder")===undefined){	 
+     if(escape($("input[name='Q10F2']").val())===undefined && escape($('input[name="Q10F2"]').attr("placeholder"))===undefined){	 
             alert("Q7(a) Please provide the names: .."); 
              e.preventDefault();
        }
