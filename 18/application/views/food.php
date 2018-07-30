@@ -2516,7 +2516,7 @@ if($('input[name="Q4F1"]:checked').val()==='Y'){
  }
 /*Q7a Validation*/
   if($("input[name='Q10F1']:checked").val()==='Y'){
-	   if($('input[name="Q10F2"]').val()==""){
+	   if($('input[name="Q10F2"]').val()=="" && $('input[name="Q10F2"]').attr("placeholder")==""){
 	      alert("Q7(a) Please provide the names: .."); 
 	      e.preventDefault();
 	   }
