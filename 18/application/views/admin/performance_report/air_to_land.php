@@ -114,105 +114,106 @@
 	<tbody>
 
 	    <?php
-	    
+	    ini_set('memory_limit', '-1');
 	    for ($i = 0; $i < count($record1); $i++) {
 		?>
     	    <tr>
     		<td><?php echo $i + 1; ?></td>
     		<td><?php echo $record1[$i]->id; ?></td>
     		<td><?php echo $record1[$i]->name; ?></td>
-    		<td><?php echo $record1[$i]->category; ?></td>
-    		<td><?php echo $record1[$i]->population; ?></td>
-    		<td><?php echo $record1[$i]->Q4A1; ?></td>
+    		<td><?php 
+			 $category=array("Day Scholar"=>"1","Day Boarding"=>"2","Residential"=>"3","Day Scholar + Day Boarding"=>"4","Day Boarding + Residential"=>"5","Day Scholar + Residential"=>"6","Day Scholar + Day Boarding + Residential"=>"7");
+			$serach_category=(getFiled('Q1S1',$record1[$i]->userid) != '') ? getFiled('Q1S1', $record1[$i]->userid) : "";;
+			echo array_search($serach_category,$category); ?></td>
+    		<td><?php echo(getFiled('Q4G4S3',$record1[$i]->userid) != '') ? getFiled('Q4G4S3', $record1[$i]->userid) : "";?></td>
+    		<td><?php echo(getFiled('Q4A1',$record1[$i]->userid) != '') ? getFiled('Q4A1', $record1[$i]->userid) : "";?></td>
     		<td>
     <?php
     $var = 0;
-    if ((isset($record1[$i]->Q5A110S3) && $record1[$i]->Q5A110S3 != 0) && (isset($record1[$i]->Q5A110S2) && $record1[$i]->Q5A110S2 != 0)) {
-	$var = ($record1[$i]->Q5A110S3 / $record1[$i]->Q5A110S2) * 100;
+	$Q5A110S3=(getFiled('Q5A110S3',$record1[$i]->userid) != '') ? getFiled('Q5A110S3', $record1[$i]->userid) : "";
+	$Q5A110S2=(getFiled('Q5A110S2',$record1[$i]->userid) != '') ? getFiled('Q5A110S2', $record1[$i]->userid) : "";
+    if ($Q5A110S3!="" && $Q5A110S2!="") {
+	$var = ($Q5A110S3 / $Q5A110S2) * 100;
     }
-
     echo number_format($var, 2);
     ?>
     		</td>
     		<td>
 		    <?php 
-//			$arr = array(
-//                            '1' => 'School does not use or own vehicles',
-//                            '2' => 'Operator-owned vehicles',
-//                            '3' => 'School-owned vehicles',
-//                            '4' => 'A combination of school-owned and operator-owned vehicles',
-//                            '5' => 'Hired vehicles (JNV schools)',
-//                        );
-			if($record1[$i]->Q6A1==1)
+			$Q6A1=(getFiled('Q6A1',$record1[$i]->userid) != '') ? getFiled('Q6A1', $record1[$i]->userid) : "";
+			if($Q6A1==1)
 			{
 			    echo 'School does not use or own vehicles';
-			}else if($record1[$i]->Q6A1==2)
+			}else if($Q6A1==2)
 			{
 			    echo 'Operator-owned vehicles';
-			}else if($record1[$i]->Q6A1==3)
+			}else if($Q6A1==3)
 			{
 			    echo 'School-owned vehicles';
-			}else if($record1[$i]->Q6A1==4)
+			}else if($Q6A1==4)
 			{
 			    echo 'A combination of school-owned and operator-owned vehicles';
-			}else if($record1[$i]->Q6A1==5)
+			}else if($Q6A1==5)
 			{
 			    echo 'Hired vehicles (JNV schools)';
 			}
 			
 		    ?>
 		</td>
-    		<td><?php echo $record1[$i]->Q6A2S1T1; ?></td>
-    		<td><?php echo $record1[$i]->Q6A2S1T2; ?></td>
-    		<td><?php echo $record1[$i]->Q6A2S1T3; ?></td>
-    		<td><?php echo $record1[$i]->Q6A2S1T4; ?></td>
-    		<td><?php echo $record1[$i]->Q6A2S1T5; ?></td>
-    		<td><?php echo $record1[$i]->Q6A2S1T6; ?></td>
-    		<td><?php echo $record1[$i]->Q6A2S3D1+$record1[$i]->Q6A2S3P1+$record1[$i]->Q6A2S3L1+$record1[$i]->Q6A2S3C1+$record1[$i]->Q6A2S3E1+$record1[$i]->Q6A2S3H1+$record1[$i]->Q6A2S3B1; ?></td>
-    		<td><?php echo $record1[$i]->Q6A2S3D1; ?></td>
-    		<td><?php echo $record1[$i]->Q6A2S3P1; ?></td>
-    		<td><?php echo $record1[$i]->Q6A2S3L1; ?></td>
-    		<td><?php echo $record1[$i]->Q6A2S3C1; ?></td>
-    		<td><?php echo $record1[$i]->Q6A2S3E1; ?></td>
-    		<td><?php echo $record1[$i]->Q6A2S3H1; ?></td>
-    		<td><?php echo $record1[$i]->Q6A2S3B1; ?></td>
-    		<td><?php echo $record1[$i]->total_cars; ?></td>
-		<td><?php echo $record1[$i]->Q6A2S3B1; ?></td>    
-    		<td><?php echo $record1[$i]->Q6A2S3D2; ?></td>
-    		<td><?php echo $record1[$i]->Q6A2S3P2; ?></td>
-    		<td><?php echo $record1[$i]->Q6A2S3L2; ?></td>
-    		<td><?php echo $record1[$i]->Q6A2S3C2; ?></td>
-    		<td><?php echo $record1[$i]->Q6A2S3E2; ?></td>
-    		<td><?php echo $record1[$i]->Q6A2S3H2; ?></td>
-    		<td><?php echo $record1[$i]->total_vans; ?></td>
-    		<td><?php echo $record1[$i]->Q6A2S3D3; ?></td>
-    		<td><?php echo $record1[$i]->Q6A2S3P3; ?></td>
-    		<td><?php echo $record1[$i]->Q6A2S3L3; ?></td>
-    		<td><?php echo $record1[$i]->Q6A2S3C3; ?></td>
-    		<td><?php echo $record1[$i]->Q6A2S3E3; ?></td>
-    		<td><?php echo $record1[$i]->Q6A2S3H3; ?></td>
-    		<td><?php echo $record1[$i]->Q6A2S3B3; ?></td>
-    		<td><?php echo $record1[$i]->total_other; ?></td>
-    		<td><?php echo $record1[$i]->Q6A2S3D4; ?></td>
-    		<td><?php echo $record1[$i]->Q6A2S3P4; ?></td>
-    		<td><?php echo $record1[$i]->Q6A2S3L4; ?></td>
-    		<td><?php echo $record1[$i]->Q6A2S3C4; ?></td>
-    		<td><?php echo $record1[$i]->Q6A2S3E4; ?></td>
-    		<td><?php echo $record1[$i]->Q6A2S3H4; ?></td>
-    		<td><?php echo $record1[$i]->Q6A2S3B4; ?></td>
-    		<td><?php echo $record1[$i]->total_disel; ?></td>
-    		<td><?php echo $record1[$i]->total_petrol; ?></td>
-    		<td><?php echo $record1[$i]->total_lpg; ?></td>
-    		<td><?php echo $record1[$i]->total_cng; ?></td>
-    		<td><?php echo $record1[$i]->total_hybrid; ?></td>
-    		<td><?php echo $record1[$i]->total_electric; ?></td>
-    		<td><?php echo $record1[$i]->total_biofuel; ?></td>
+    		<td><?php echo(getFiled('Q6A2S1T1',$record1[$i]->userid) != '') ? getFiled('Q6A2S1T1', $record1[$i]->userid) : "";?></td>
+    		<td><?php echo (getFiled('Q6A2S1T2',$record1[$i]->userid) != '') ? getFiled('Q6A2S1T2', $record1[$i]->userid) : "";?></td>
+    		<td><?php echo (getFiled('Q6A2S1T3',$record1[$i]->userid) != '') ? getFiled('Q6A2S1T3', $record1[$i]->userid) : "";?></td>
+    		<td><?php echo (getFiled('Q6A2S1T4',$record1[$i]->userid) != '') ? getFiled('Q6A2S1T4', $record1[$i]->userid) : "";?></td>
+    		<td><?php echo (getFiled('Q6A2S1T5',$record1[$i]->userid) != '') ? getFiled('Q6A2S1T5', $record1[$i]->userid) : "";?></td>
+    		<td><?php echo (getFiled('Q6A2S1T6',$record1[$i]->userid) != '') ? getFiled('Q6A2S1T6', $record1[$i]->userid) : "";?></td>
+    		<td><?php 
+			echo (getFiled('Q6A2S3D1',$record1[$i]->userid) != '') ? getFiled('Q6A2S3D1', $record1[$i]->userid) : ""+(getFiled('Q6A2S3P1',$record1[$i]->userid) != '') ? getFiled('Q6A2S3P1', $record1[$i]->userid) : ""+(getFiled('Q6A2S3L1',$record1[$i]->userid) != '') ? getFiled('Q6A2S3L1', $record1[$i]->userid) : ""+(getFiled('Q6A2S3C1',$record1[$i]->userid) != '') ? getFiled('Q6A2S3C1', $record1[$i]->userid) : ""+(getFiled('Q6A2S3E1',$record1[$i]->userid) != '') ? getFiled('Q6A2S3E1', $record1[$i]->userid) : ""+(getFiled('Q6A2S3H1',$record1[$i]->userid) != '') ? getFiled('Q6A2S3H1', $record1[$i]->userid) : ""+(getFiled('Q6A2S3B1',$record1[$i]->userid) != '') ? getFiled('Q6A2S3B1', $record1[$i]->userid) : "";
+			?></td>
+    		<td><?php echo (getFiled('Q6A2S3D1',$record1[$i]->userid) != '') ? getFiled('Q6A2S3D1', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q6A2S3P1',$record1[$i]->userid) != '') ? getFiled('Q6A2S3P1', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q6A2S3L1',$record1[$i]->userid) != '') ? getFiled('Q6A2S3L1', $record1[$i]->userid) : "";?></td>
+    		<td><?php echo (getFiled('Q6A2S3C1',$record1[$i]->userid) != '') ? getFiled('Q6A2S3C1', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q6A2S3E1',$record1[$i]->userid) != '') ? getFiled('Q6A2S3E1', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q6A2S3H1',$record1[$i]->userid) != '') ? getFiled('Q6A2S3H1', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q6A2S3B1',$record1[$i]->userid) != '') ? getFiled('Q6A2S3B1', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('total_cars',$record1[$i]->userid) != '') ? getFiled('total_cars', $record1[$i]->userid) : ""; ?></td>
+		<td><?php echo (getFiled('Q6A2S3B1',$record1[$i]->userid) != '') ? getFiled('Q6A2S3B1', $record1[$i]->userid) : ""; ?></td>    
+    		<td><?php echo (getFiled('Q6A2S3D2',$record1[$i]->userid) != '') ? getFiled('Q6A2S3D2', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q6A2S3P2',$record1[$i]->userid) != '') ? getFiled('Q6A2S3P2', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q6A2S3L2',$record1[$i]->userid) != '') ? getFiled('Q6A2S3L2', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q6A2S3C2',$record1[$i]->userid) != '') ? getFiled('Q6A2S3C2', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q6A2S3E2',$record1[$i]->userid) != '') ? getFiled('Q6A2S3E2', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q6A2S3H2',$record1[$i]->userid) != '') ? getFiled('Q6A2S3H2', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('total_vans',$record1[$i]->userid) != '') ? getFiled('total_vans', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q6A2S3D3',$record1[$i]->userid) != '') ? getFiled('Q6A2S3D3', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q6A2S3P3',$record1[$i]->userid) != '') ? getFiled('Q6A2S3P3', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q6A2S3L3',$record1[$i]->userid) != '') ? getFiled('Q6A2S3L3', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q6A2S3C3',$record1[$i]->userid) != '') ? getFiled('Q6A2S3C3', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php  echo (getFiled('Q6A2S3E3',$record1[$i]->userid) != '') ? getFiled('Q6A2S3E3', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q6A2S3H3',$record1[$i]->userid) != '') ? getFiled('Q6A2S3H3', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q6A2S3B3',$record1[$i]->userid) != '') ? getFiled('Q6A2S3B3', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('total_other',$record1[$i]->userid) != '') ? getFiled('total_other', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q6A2S3D4',$record1[$i]->userid) != '') ? getFiled('Q6A2S3D4', $record1[$i]->userid) : "";  ?></td>
+    		<td><?php echo (getFiled('Q6A2S3P4',$record1[$i]->userid) != '') ? getFiled('Q6A2S3P4', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q6A2S3L4',$record1[$i]->userid) != '') ? getFiled('Q6A2S3L4', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q6A2S3C4',$record1[$i]->userid) != '') ? getFiled('Q6A2S3C4', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q6A2S3E4',$record1[$i]->userid) != '') ? getFiled('Q6A2S3E4', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php  echo (getFiled('Q6A2S3H4',$record1[$i]->userid) != '') ? getFiled('Q6A2S3H4', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q6A2S3B4',$record1[$i]->userid) != '') ? getFiled('Q6A2S3B4', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('total_disel',$record1[$i]->userid) != '') ? getFiled('total_disel', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('total_petrol',$record1[$i]->userid) != '') ? getFiled('total_petrol', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('total_lpg',$record1[$i]->userid) != '') ? getFiled('total_lpg', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('total_cng',$record1[$i]->userid) != '') ? getFiled('total_cng', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('total_hybrid',$record1[$i]->userid) != '') ? getFiled('total_hybrid', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('total_electric',$record1[$i]->userid) != '') ? getFiled('total_electric', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('total_biofuel',$record1[$i]->userid) != '') ? getFiled('total_biofuel', $record1[$i]->userid) : ""; ?></td>
     		<td>
 		    <?php 
-			if($record1[$i]->Q6A3=="Y")
+			$Q6A3=(getFiled('Q6A3',$record1[$i]->userid) != '') ? getFiled('Q6A3', $record1[$i]->userid) : "";
+			if($Q6A3=="Y")
 			{
 			    echo 'Yes';
-			}else if($record1[$i]->Q6A3=="N")
+			}else if($Q6A3=="N")
 			{
 			    echo 'No';
 			}
@@ -220,66 +221,68 @@
 		</td>
     		<td>
 		    <?php 
-			if($record1[$i]->Q6A4S1=="Y")
+			$Q6A4S1=(getFiled('Q6A4S1',$record1[$i]->userid) != '') ? getFiled('Q6A4S1', $record1[$i]->userid) : "";
+			if($Q6A4S1=="Y")
 			{
 			    echo 'Yes';
-			}else if($record1[$i]->Q6A4S1=="N")
+			}else if($Q6A4S1=="N")
 			{
 			     echo 'No';
 			}
 		?>
 		</td>
-    		<td><?php echo $record1[$i]->Q7A1S1; ?></td>
-    		<td><?php echo $record1[$i]->Q7A1S2; ?></td>
-    		<td><?php echo $record1[$i]->Q7A1S3; ?></td>
-    		<td><?php echo $record1[$i]->Q7A1S4; ?></td>
-    		<td><?php echo $record1[$i]->Q7A2S1; ?></td>
-    		<td><?php echo $record1[$i]->Q7A2S2; ?></td>
-    		<td><?php echo $record1[$i]->Q7A2S3; ?></td>
-    		<td><?php echo $record1[$i]->Q7A2S4; ?></td>
-    		<td><?php echo $record1[$i]->Q7A3S1; ?></td>
-    		<td><?php echo $record1[$i]->Q7A3S2; ?></td>
-    		<td><?php echo $record1[$i]->Q7A3S3; ?></td>
-    		<td><?php echo $record1[$i]->Q7A3S4; ?></td>
-    		<td><?php echo $record1[$i]->Q7A4S1; ?></td>
-    		<td><?php echo $record1[$i]->Q7A4S2; ?></td>
-    		<td><?php echo $record1[$i]->Q7A4S3; ?></td>
-    		<td><?php echo $record1[$i]->Q7A4S4; ?></td>
-    		<td><?php echo $record1[$i]->Q7A5S1; ?></td>
-    		<td><?php echo $record1[$i]->Q7A5S2; ?></td>
-    		<td><?php echo $record1[$i]->Q7A5S3; ?></td>
-    		<td><?php echo $record1[$i]->Q7A5S4; ?></td>
-    		<td><?php echo $record1[$i]->Q7A6S1; ?></td>
-    		<td><?php echo $record1[$i]->Q7A6S2; ?></td>
-    		<td><?php echo $record1[$i]->Q7A6S3; ?></td>
-    		<td><?php echo $record1[$i]->Q7A6S4; ?></td>
-    		<td><?php echo $record1[$i]->Q7A7S1; ?></td>
-    		<td><?php echo $record1[$i]->Q7A7S2; ?></td>
-    		<td><?php echo $record1[$i]->Q7A7S3; ?></td>
-    		<td><?php echo $record1[$i]->Q7A7S4; ?></td>
-    		<td><?php echo $record1[$i]->Q7A8S1; ?></td>
-    		<td><?php echo $record1[$i]->Q7A8S2; ?></td>
-    		<td><?php echo $record1[$i]->Q7A8S3; ?></td>
-			<td><?php echo $record1[$i]->Q7A8S4; ?></td>
-    		<td><?php echo $record1[$i]->Q7A9S1; ?></td>
-    		<td><?php echo $record1[$i]->Q7A9S2; ?></td>
-    		<td><?php echo $record1[$i]->Q7A9S3; ?></td>
-    		<td><?php echo $record1[$i]->Q7A9S4; ?></td>
-    		<td><?php echo $record1[$i]->Q7A10S1; ?></td>
-    		<td><?php echo $record1[$i]->Q7A10S2; ?></td>
-    		<td><?php echo $record1[$i]->Q7A10S3; ?></td>
-    		<td><?php echo $record1[$i]->Q7A10S4; ?></td>
-    		<td><?php echo $record1[$i]->Q7A11S1; ?></td>
-    		<td><?php echo $record1[$i]->Q7A11S2; ?></td>
-    		<td><?php echo $record1[$i]->Q7A11S3; ?></td>
-    		<td><?php echo $record1[$i]->Q7A11S4; ?></td>
-    		<td><?php echo $record1[$i]->Q8A1; ?></td>
+    		<td><?php echo (getFiled('Q7A1S1',$record1[$i]->userid) != '') ? getFiled('Q7A1S1', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q7A1S2',$record1[$i]->userid) != '') ? getFiled('Q7A1S2', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q7A1S3',$record1[$i]->userid) != '') ? getFiled('Q7A1S3', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q7A1S4',$record1[$i]->userid) != '') ? getFiled('Q7A1S4', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q7A2S1',$record1[$i]->userid) != '') ? getFiled('Q7A2S1', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q7A2S2',$record1[$i]->userid) != '') ? getFiled('Q7A2S2', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q7A2S3',$record1[$i]->userid) != '') ? getFiled('Q7A2S3', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q7A2S4',$record1[$i]->userid) != '') ? getFiled('Q7A2S4', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q7A3S1',$record1[$i]->userid) != '') ? getFiled('Q7A3S1', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q7A3S2',$record1[$i]->userid) != '') ? getFiled('Q7A3S2', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q7A3S3',$record1[$i]->userid) != '') ? getFiled('Q7A3S3', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q7A3S4',$record1[$i]->userid) != '') ? getFiled('Q7A3S4', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q7A4S1',$record1[$i]->userid) != '') ? getFiled('Q7A4S1', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q7A4S2',$record1[$i]->userid) != '') ? getFiled('Q7A4S2', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q7A4S3',$record1[$i]->userid) != '') ? getFiled('Q7A4S3', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q7A4S4',$record1[$i]->userid) != '') ? getFiled('Q7A4S4', $record1[$i]->userid) : "";?></td>
+    		<td><?php echo (getFiled('Q7A5S1',$record1[$i]->userid) != '') ? getFiled('Q7A5S1', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q7A5S2',$record1[$i]->userid) != '') ? getFiled('Q7A5S2', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q7A5S3',$record1[$i]->userid) != '') ? getFiled('Q7A5S3', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q7A5S4',$record1[$i]->userid) != '') ? getFiled('Q7A5S4', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php  echo (getFiled('Q7A6S1',$record1[$i]->userid) != '') ? getFiled('Q7A6S1', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php  echo (getFiled('Q7A6S2',$record1[$i]->userid) != '') ? getFiled('Q7A6S2', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q7A6S3',$record1[$i]->userid) != '') ? getFiled('Q7A6S3', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q7A6S4',$record1[$i]->userid) != '') ? getFiled('Q7A6S4', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q7A7S1',$record1[$i]->userid) != '') ? getFiled('Q7A7S1', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q7A7S2',$record1[$i]->userid) != '') ? getFiled('Q7A7S2', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q7A7S3',$record1[$i]->userid) != '') ? getFiled('Q7A7S3', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q7A7S4',$record1[$i]->userid) != '') ? getFiled('Q7A7S4', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q7A8S1',$record1[$i]->userid) != '') ? getFiled('Q7A8S1', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q7A8S2',$record1[$i]->userid) != '') ? getFiled('Q7A8S2', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q7A8S3',$record1[$i]->userid) != '') ? getFiled('Q7A8S3', $record1[$i]->userid) : ""; ?></td>
+			<td><?php echo (getFiled('Q7A8S4',$record1[$i]->userid) != '') ? getFiled('Q7A8S4', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php  echo (getFiled('Q7A9S1',$record1[$i]->userid) != '') ? getFiled('Q7A9S1', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q7A9S2',$record1[$i]->userid) != '') ? getFiled('Q7A9S2', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q7A9S3',$record1[$i]->userid) != '') ? getFiled('Q7A9S3', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q7A9S4',$record1[$i]->userid) != '') ? getFiled('Q7A9S4', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q7A10S1',$record1[$i]->userid) != '') ? getFiled('Q7A10S1', $record1[$i]->userid) : "";  ?></td>
+    		<td><?php echo (getFiled('Q7A10S2',$record1[$i]->userid) != '') ? getFiled('Q7A10S2', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php  echo (getFiled('Q7A10S3',$record1[$i]->userid) != '') ? getFiled('Q7A10S3', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q7A10S4',$record1[$i]->userid) != '') ? getFiled('Q7A10S4', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q7A11S1',$record1[$i]->userid) != '') ? getFiled('Q7A11S1', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q7A11S2',$record1[$i]->userid) != '') ? getFiled('Q7A11S2', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q7A11S3',$record1[$i]->userid) != '') ? getFiled('Q7A11S3', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php echo (getFiled('Q7A11S4',$record1[$i]->userid) != '') ? getFiled('Q7A11S4', $record1[$i]->userid) : ""; ?></td>
+    		<td><?php  echo (getFiled('Q8A1',$record1[$i]->userid) != '') ? getFiled('Q8A1', $record1[$i]->userid) : "";  ?></td>
     		<td>
 		    <?php 
-			if($record1[$i]->Q9A1=="Y")
+			$Q9A1=(getFiled('Q9A1',$record1[$i]->userid) != '') ? getFiled('Q9A1', $record1[$i]->userid) : "";
+			if($Q9A1=="Y")
 			{
 			    echo "Yes";
-			}else if($record1[$i]->Q9A1=="N")
+			}else if($Q9A1=="N")
 			{
 			     echo "No";
 			}
@@ -287,10 +290,11 @@
 		</td>
     		<td>
 		    <?php 
-			if($record1[$i]->Q9A2=="Y")
+			$Q9A2=(getFiled('Q9A2',$record1[$i]->userid) != '') ? getFiled('Q9A2', $record1[$i]->userid) : "";
+			if($Q9A2=="Y")
 			{
 			    echo "Yes";
-			}else if($record1[$i]->Q9A2=="N")
+			}else if($Q9A2=="N")
 			{
 			     echo "No";
 			}
