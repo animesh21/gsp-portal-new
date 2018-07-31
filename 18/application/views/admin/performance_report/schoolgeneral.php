@@ -183,7 +183,7 @@
 			echo array_search($school_type_search,$school_type);
 			?></td>
 			<td><?php echo (getFiled('Q4A1',$record1[$i]->userid) != '') ? getFiled('Q4A1', $record1[$i]->userid) : ""; ?></td>
-    		<td>
+
 			</tr>
     <?php
 }
