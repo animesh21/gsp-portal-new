@@ -14,12 +14,21 @@ class Performance_model extends CI_Model {
     /*
      * Get Data
      */
-
-    public function getData() {
+   public function getData() {
+        return $this->db->select('a.*, b.name AS state_name, c.name AS district_name, d.password')
+                ->from('gsp_school AS a')
+                ->join('states AS b', 'a.state=b.id', 'left')
+                ->join('cities AS c', 'a.district=c.id', 'left')
+                ->join('gsp_user AS d', 'a.userid=d.id', 'left')
+                ->where('a.progress', 100)
+                ->order_by('a.id', 'desc')
+                ->get()->result();	   
+   }
+   /* public function getData() {
 	$query = $this->db->query("SELECT DISTINCT * FROM tbl_general LEFT JOIN tbl_air ON tbl_general.userid=tbl_air.userid LEFT JOIN tbl_energy ON tbl_general.userid=tbl_energy.userid LEFT JOIN tbl_food ON tbl_general.userid=tbl_energy.userid LEFT JOIN tbl_land ON tbl_general.userid=tbl_land.userid LEFT JOIN tbl_water ON tbl_general.userid=tbl_water.userid LEFT JOIN tbl_waste ON tbl_general.userid=tbl_waste.userid LEFT JOIN tbl_feedback ON tbl_general.userid=tbl_feedback.userid  LIMIT 4");
 	$data = $query->result();
 	return $data;
-    }
+    }*/
 
     public function getDataById($id = 1446) {
 	return $this->db->select('a.*, b.name AS state_name, c.name AS district_name, d.password')
