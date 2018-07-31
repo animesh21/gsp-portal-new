@@ -182,8 +182,14 @@
 			$school_type_search=(getFiled('Q9G1',$record1[$i]->userid) != '') ? getFiled('Q9G1',$record1[$i]->userid) : ""; 
 			echo array_search($school_type_search,$school_type);
 			?></td>
-			<td><?php echo (getFiled('Q4A1',$record1[$i]->userid) != '') ? getFiled('Q4A1', $record1[$i]->userid) : ""; ?></td>
-
+			<td><?php 
+			$school_level=array("Is your school a primary school (upto Class 5)?"=>"1",
+			"Is your school an elementary school (upto Class 8)?"=>"2",
+			"Is your school a secondary school (upto Class 10)?"=>"3",
+			"Is your school a higher secondary school (upto Class 12)?"=>"4");
+			$serach_school_level=(getFiled('Q10G1',$record1[$i]->userid) != '') ? getFiled('Q10G1', $record1[$i]->userid) : ""; 
+			echo array_search($serach_school_level,$school_level);
+			?></td>
 			</tr>
     <?php
 }
