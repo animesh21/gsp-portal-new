@@ -113,8 +113,9 @@ class Performance_report extends CI_Controller {
     {
         $data['main']='admin/performance_report/food';
         $data['title']='Food';
-         
-        $data['records']=$this->Performance_model->food();
+          $data['records']=$this->Performance_model->getData();
+          /*Old Code*/ //$data['records']=$this->Performance_model->food();
+       
         //echo '<pre>'; print_r($data['records']);exit();
          $this->load->view('admin/includes/template', $data);
     }
