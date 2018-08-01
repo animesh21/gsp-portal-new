@@ -105,6 +105,7 @@
     <tbody>
       <?php
 	    error_reporting(0);
+ini_set('memory_limit', '-1');
             $i = 1;
             foreach ($record as $r) {
          ?>
