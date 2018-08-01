@@ -1386,7 +1386,7 @@ class Audit_started_model extends CI_Model {
 	
 	public function getRegionWiseSchool($region,$school)
 	{
-	    if($region=='East')
+	   if($region=='East')
 		{
 		  $region1=array("36", "26", "16", "1", "5"); //$east_india
 		}
@@ -1416,12 +1416,10 @@ class Audit_started_model extends CI_Model {
 		  $region1=array("7", "20"); //$central_india
 		}
 		
-		
-		  if($region=='All')
+		if($region=='All')
 		{
 		  $region1=array("3","36", "26", "16", "1", "5","12", "21", "11", "9", "8","28", "15", "13", "29", "14", "34", "35", "10", "6","2", "17", "18", "31", "32", "19", "27","7", "20","4", "22", "23", "24", "25", "30", "33"); //$all
 		}
-		
 		
 		if($school==0){
 		
@@ -1430,28 +1428,37 @@ class Audit_started_model extends CI_Model {
                         ->join('states AS b', 'a.state=b.id', 'left')
 		   	            ->join('cities AS c', 'a.district=c.id', 'left')
 						->join('gsp_answers as d', 'a.userid=d.userid', 'left')
-						->where('d.questionid','Q1G2')
+						->like('d.questionid','Q1G2')
                         ->where('d.answer <',6)
 						->where_in('state',$region1)
                         ->order_by('a.id', 'desc')
-                        ->get()->result();
-						
-						return $sql;
+						->get()->result();
+						//echo $this->db->last_query(); exit;
+						return  $sql;
 				}
 				
 		if($school==1){
 		
-		$sql = $this->db->select('a.*, b.name AS state_name,c.name As district_name')
-                        ->from('gsp_school AS a')
-                        ->join('states AS b', 'a.state=b.id', 'left')
-		   	            ->join('cities AS c', 'a.district=c.id', 'left')
-						->join('gsp_answers as d', 'a.userid=d.userid', 'left')
-						->where('d.questionid','Q1G2')
-                        ->where('d.answer >',5)
-						->where_in('state',$region1)
+                          $this->db->where('d.answer >',5);
+					      $this->db->where_in('state',$region1);
+		                  $sql1 = $this->db->select('a.*, b.name AS state_name,c.name As district_name')
+                           ->from('gsp_school AS a')
+                           ->join('states AS b', 'a.state=b.id', 'left')
+		   	                ->join('cities AS c', 'a.district=c.id', 'left')
+						    ->join('gsp_answers as d', 'a.userid=d.userid', 'left')
+						->like('d.questionid','Q1G2')
                         ->order_by('a.id', 'desc')
+						->group_by('a.id')
                         ->get()->result();
-						return $sql;
+						
+						 $regionss = join("','",$region1);
+	                  $sql2=$this->db->query("SELECT gsp_school.*, states.name AS state_name,cities.name As district_name FROM `gsp_school` INNER JOIN states ON gsp_school.state=states.id INNER JOIN cities ON gsp_school.district=cities.id WHERE `userid` NOT IN(SELECT userid FROM gsp_answers) AND `state`IN ('$regionss')")->result(); 
+						
+					$sql3=array_merge($sql1,$sql2);	
+						
+						
+						
+						return $sql3;
 						//echo $this->db->last_query(); exit;
 				}
 		
@@ -1461,16 +1468,14 @@ class Audit_started_model extends CI_Model {
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
 		   	            ->join('cities AS c', 'a.district=c.id', 'left')
-						->join('gsp_answers as d', 'a.userid=d.userid', 'left')
 						->where_in('state',$region1)
                         ->order_by('a.id', 'desc')
-			->group_by('a.id')
+						->group_by('a.id')
                         ->get()->result();
 						return $sql;
 						
 						//echo $this->db->last_query(); exit;
-				}						
-					//echo $this->db->last_query(); exit;
+				}	
 	
 	}
 	
