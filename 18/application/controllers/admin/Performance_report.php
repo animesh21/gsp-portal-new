@@ -56,7 +56,8 @@ class Performance_report extends CI_Controller {
        $this->config->load('array_config');
         $data['main'] = 'admin/performance_report/water';
         $data['title'] = 'Home | Water';
-        $data['record'] = $this->Performance_model->getDataWater();
+	    $data['record'] = $this->Performance_model->getData();
+      /*Old Data*/ // $data['record'] = $this->Performance_model->getDataWater();
         $this->load->view('admin/includes/template', $data);
     }
     public function waste() {
