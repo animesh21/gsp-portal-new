@@ -91,7 +91,6 @@
 			echo array_search($serach_category,$category); ?></td>
     		<td><?php echo(getFiled('Q4G4S3',$r->userid) != '') ? getFiled('Q4G4S3', $r->userid) : "";?></td>
     		<td><?php echo(getFiled('Q4A1',$r->userid) != '') ? getFiled('Q4A1',$r->userid) : "";?></td>
-    		<td>
                 <td><?php echo(getFiled('Q4E1',$r->userid) != '') ? getFiled('Q4E1', $r->userid) : "N/A";?></td>
 				<td><?php echo(getFiled('Q5E1',$r->userid) != '') ? getFiled('Q5E1', $r->userid) : "N/A";?></td>
 				<td><?php echo(getFiled('Q6E1S1',$r->userid) != '') ? getFiled('Q6E1S1', $r->userid) : "N/A";?></td>
@@ -150,7 +149,7 @@
 				<td><?php echo(getFiled('Q8E1',$r->userid) != '') ? getFiled('Q8E1', $r->userid) : "N/A";?></td>
 				<td><?php echo(getFiled('Q9E1',$r->userid) != '') ? getFiled('Q9E1', $r->userid) : "N/A";?></td>
 
-				<td>
+			
 				<?php 
 				$Q9E1S1=(getFiled('Q9E1S1',$r->userid) != '') ? getFiled('Q9E1S1', $r->userid) : "N/A";
 				if($Q9E1S1==1) 
