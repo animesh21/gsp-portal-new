@@ -75,95 +75,101 @@
         <tbody>
           <?php $i=0; foreach($records as $r){ ?>
             <tr role="row" class="<?php echo ($i%2==0) ? "even" : "odd"; ?>">
-				<td><?php echo $i + 1; ?></td>
-				<td><?php echo $r->id; ?></td>
-				<td><?php echo $r->name; ?></td>
-                <td><?php echo $r->category; ?></td>
-                <td><?php echo $r->population; ?></td>
-				<td><?php echo $r->Q4F1; ?></td>
-				<td><?php echo $r->Q5F1; ?></td>
-				<td><?php echo $r->Q5F1S1; ?></td>
-				<td><?php echo $r->Q5F1S2; ?></td>
-                <td><?php echo $r->Q5F1S3; ?></td>
-                <td><?php echo $r->Q5F1S4; ?></td>
-				<td><?php echo $r->Q6F2S1; ?></td>
-                <td><?php echo $r->Q6F2S2; ?></td>
-				<td><?php echo $r->Q6F2S3; ?></td>
-				<td><?php echo $r->Q6F3S1; ?></td>
-				<td><?php echo $r->Q6F3S2; ?></td>
-				<td><?php echo $r->Q6F3S3; ?></td>
-				<td><?php echo $r->Q6F4S1; ?></td>
-				<td><?php echo $r->Q6F4S2; ?></td>
-				<td><?php echo $r->Q6F4S3; ?></td>
-				<td><?php echo $r->Q6F5S1; ?></td>
-				<td><?php echo $r->Q6F5S2; ?></td>
-				<td><?php echo $r->Q6F5S3; ?></td>
-				<td><?php echo $r->Q6F6S1; ?></td>
-				<td><?php echo $r->Q6F6S2; ?></td>
-				<td><?php echo $r->Q6F6S3; ?></td>
-				<td><?php echo $r->Q6F7S1; ?></td>
-				<td><?php echo $r->Q6F7S2; ?></td>
-				<td><?php echo $r->Q6F7S3; ?></td>
-				<td><?php echo $r->Q6F8S1; ?></td>
-				<td><?php echo $r->Q6F8S2; ?></td>
-				<td><?php echo $r->Q6F8S3; ?></td>
-				<td><?php echo $r->Q6F9S1; ?></td>
-				<td><?php echo $r->Q6F9S2; ?></td>
-				<td><?php echo $r->Q6F9S3; ?></td>
-				<td><?php echo $r->Q6F10S1; ?></td>
-				<td><?php echo $r->Q6F10S2; ?></td>
-				<td><?php echo $r->Q6F10S3 ; ?></td>
-				<td><?php echo $r->Q7F1; ?></td>
-				<td><?php echo $r->Q7F1S1; ?></td>
-				<td><?php echo $r->Q7F1S2; ?></td>
-				<td><?php echo $r->Q7F1S3; ?></td>
-				<td><?php echo $r->Q7F1S4; ?></td>
-				<td><?php echo $r->Q7F1S5; ?></td>
-				<td><?php echo $r->Q7F3S1; ?></td>
-				<td><?php echo $r->Q8F1; ?></td>
-				<td><?php echo $r->Q8F1S1; ?></td>
-				<td><?php echo $r->Q8F1S2; ?></td>
-				<td><?php echo $r->Q8F1S3; ?></td>
-				<td><?php echo $r->Q8F1S4; ?></td>
-				<td><?php echo $r->Q8F1S5; ?></td>
-				<td><?php echo $r->Q9F1; ?></td>
-				<td><?php echo $r->Q9F2; ?></td>
-				<td><?php echo $r->Q10F1; ?></td>
-				<td><?php echo $r->Q10F2; ?></td>
-				<td><?php echo $r->Q11F1; ?></td>
-				<td><?php echo $r->Q11F2; ?></td>
-				<td><?php echo $r->Q11F3; ?></td>
-				<td><?php echo $r->Q12F1; ?></td>
+				    <td><?php echo $i + 1; ?></td>
+    		<td><?php echo $r->id; ?></td>
+    		<td><?php echo $r->name; ?></td>
+    		<td><?php 
+			 $category=array("Day Scholar"=>"1","Day Boarding"=>"2","Residential"=>"3","Day Scholar + Day Boarding"=>"4","Day Boarding + Residential"=>"5","Day Scholar + Residential"=>"6","Day Scholar + Day Boarding + Residential"=>"7");
+			$serach_category=(getFiled('Q1S1',$r->userid) != '') ? getFiled('Q1S1', $r->userid) : "N/A";
+			echo array_search($serach_category,$category); ?></td>
+    		<td><?php echo(getFiled('Q4G4S3',$r->userid) != '') ? getFiled('Q4G4S3', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q4F1',$r->userid) != '') ? getFiled('Q4F1', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q5F1',$r->userid) != '') ? getFiled('Q5F1', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q5F1S1',$r->userid) != '') ? getFiled('Q5F1S1', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q5F1S2',$r->userid) != '') ? getFiled('Q5F1S2', $r->userid) : "N/A";?></td>
+                <td><?php echo(getFiled('Q5F1S3',$r->userid) != '') ? getFiled('Q5F1S3', $r->userid) : "N/A";?></td>
+                <td><?php echo(getFiled('Q5F1S4',$r->userid) != '') ? getFiled('Q5F1S4', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q6F2S1',$r->userid) != '') ? getFiled('Q6F2S1', $r->userid) : "N/A";?></td>
+                <td><?php echo(getFiled('Q6F2S2',$r->userid) != '') ? getFiled('Q6F2S2', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q6F2S3',$r->userid) != '') ? getFiled('Q6F2S3', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q6F3S1',$r->userid) != '') ? getFiled('Q6F3S1', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q6F3S2',$r->userid) != '') ? getFiled('Q6F3S2', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q6F3S3',$r->userid) != '') ? getFiled('Q6F3S3', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q6F4S1',$r->userid) != '') ? getFiled('Q6F4S1', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q6F4S2',$r->userid) != '') ? getFiled('Q6F4S2', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q6F4S3',$r->userid) != '') ? getFiled('Q6F4S3', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q6F5S1',$r->userid) != '') ? getFiled('Q6F5S1', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q6F5S2',$r->userid) != '') ? getFiled('Q6F5S2', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q6F5S3',$r->userid) != '') ? getFiled('Q6F5S3', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q6F6S1',$r->userid) != '') ? getFiled('Q6F6S1', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q6F6S2',$r->userid) != '') ? getFiled('Q6F6S2', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q6F6S3',$r->userid) != '') ? getFiled('Q6F6S3', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q6F7S1',$r->userid) != '') ? getFiled('Q6F7S1', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q6F7S2',$r->userid) != '') ? getFiled('Q6F7S2', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q6F7S3',$r->userid) != '') ? getFiled('Q6F7S3', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q6F8S1',$r->userid) != '') ? getFiled('Q6F8S1', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q6F8S2',$r->userid) != '') ? getFiled('Q6F8S2', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q6F8S3',$r->userid) != '') ? getFiled('Q6F8S3', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q6F9S1',$r->userid) != '') ? getFiled('Q6F9S1', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q6F9S2',$r->userid) != '') ? getFiled('Q6F9S2', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q6F9S3',$r->userid) != '') ? getFiled('Q6F9S3', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q6F10S1',$r->userid) != '') ? getFiled('Q6F10S1', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q6F10S2',$r->userid) != '') ? getFiled('Q6F10S2', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q6F10S3',$r->userid) != '') ? getFiled('Q6F10S3', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q7F1',$r->userid) != '') ? getFiled('Q7F1', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q7F1S1',$r->userid) != '') ? getFiled('Q7F1S1', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q7F1S2',$r->userid) != '') ? getFiled('Q7F1S2', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q7F1S3',$r->userid) != '') ? getFiled('Q7F1S3', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q7F1S4',$r->userid) != '') ? getFiled('Q7F1S4', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q7F1S5',$r->userid) != '') ? getFiled('Q7F1S5', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q7F3S1',$r->userid) != '') ? getFiled('Q7F3S1', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q8F1',$r->userid) != '') ? getFiled('Q8F1', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q8F1S1',$r->userid) != '') ? getFiled('Q8F1S1', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q8F1S2',$r->userid) != '') ? getFiled('Q8F1S2', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q8F1S3',$r->userid) != '') ? getFiled('Q8F1S3', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q8F1S4',$r->userid) != '') ? getFiled('Q8F1S4', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q8F1S5',$r->userid) != '') ? getFiled('Q8F1S5', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q9F1',$r->userid) != '') ? getFiled('Q9F1', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q9F2',$r->userid) != '') ? getFiled('Q9F2', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q10F1',$r->userid) != '') ? getFiled('Q10F1', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q10F2',$r->userid) != '') ? getFiled('Q10F2', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q11F1',$r->userid) != '') ? getFiled('Q11F1', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q11F2',$r->userid) != '') ? getFiled('Q11F2', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q11F3',$r->userid) != '') ? getFiled('Q11F3', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q12F1',$r->userid) != '') ? getFiled('Q12F1', $r->userid) : "N/A";?></td>
 				
-				<td><?php if(( $r->Q12F2)==1) 
+				<td><?php 
+				$Q12F2=(getFiled('Q12F1',$r->userid) != '') ? getFiled('Q12F1', $r->userid) : "N/A";
+				
+				if($Q12F2==1) 
 				{
 					echo 'Monthly';
 				}	
 				
-				if(( $r->Q12F2)==2) 
+				if($Q12F2==2) 
 				{
 					echo 'Quarterly';
 				}	
 				
-				if(( $r->Q12F2)==3) 
+				if($Q12F2==3) 
 				{
 					echo 'Bi-annually';
 				}	
 				
-				if(( $r->Q12F2)==4) 
+				if($Q12F2==4) 
 				{
 					echo 'Annually ';
 				}	
-				if(( $r->Q12F2)!=1&&2&&3&&4) 
+				if($Q12F2!=1&&2&&3&&4) 
 				{
 					echo 'N/A ';
 				}	
 				
 				?></td>
 				
-				<td><?php echo $r->Q13F1; ?></td>
-				<td><?php echo $r->Q13F2; ?></td>
-				<td><?php echo $r->Point; ?></td>
+				<td><?php echo(getFiled('Q13F1',$r->userid) != '') ? getFiled('Q13F1', $r->userid) : "N/A";?></td>
+				<td><?php echo(getFiled('Q13F2',$r->userid) != '') ? getFiled('Q13F2', $r->userid) : "N/A";?></td>
+				<td><?php //echo $r->Point; ?></td>
 				
             </tr>
           <?php $i++; } ?>
