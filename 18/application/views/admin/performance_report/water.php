@@ -290,7 +290,7 @@ $Q13W1S4=(getFiled('Q13W1S4',$r->userid) != '') ? getFiled('Q13W1S4', $r->userid
 	  if($Q19W16==1 || $Q19W161==2 || $Q19W162==3){
 	  echo $listresult;}else{echo "N/A";}
 	  ?></td>
-      <td><?php //echo  $r->points; ?></td>
+      <td><?php //echo  $r->points; ?> &nbsp;</td>
 
       </tr>
       <?php
