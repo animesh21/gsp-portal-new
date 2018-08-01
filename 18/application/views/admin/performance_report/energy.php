@@ -149,7 +149,7 @@
 				<td><?php echo(getFiled('Q8E1',$r->userid) != '') ? getFiled('Q8E1', $r->userid) : "N/A";?></td>
 				<td><?php echo(getFiled('Q9E1',$r->userid) != '') ? getFiled('Q9E1', $r->userid) : "N/A";?></td>
 
-			
+			<td>
 				<?php 
 				$Q9E1S1=(getFiled('Q9E1S1',$r->userid) != '') ? getFiled('Q9E1S1', $r->userid) : "N/A";
 				if($Q9E1S1==1) 
