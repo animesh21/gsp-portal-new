@@ -123,7 +123,8 @@ class Performance_report extends CI_Controller {
         $data['main']='admin/performance_report/energy';
         $data['title']='Energy';
          
-        $data['records']=$this->Performance_model->energy();
+        /*Old Code*/ //$data['records']=$this->Performance_model->energy();
+	    $data['records']=$this->Performance_model->getData();
         //echo '<pre>'; print_r($data['records']);exit();
          $this->load->view('admin/includes/template', $data);
     }
