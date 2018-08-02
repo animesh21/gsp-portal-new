@@ -5,15 +5,7 @@
   
     <div class="input-group">
       <label>Region </label>
-      <select name="region" class="form-control">
-        <option value="All">All</option>
-        <option value="North">North</option>
-        <option value="South">South</option>
-        <option value="East">East</option>
-        <option value="West">West</option>
-        <option value="North East">North East</option>
-        <option value="Central">Central</option>
-      </select>
+	  <?php echo form_dropdown('region', array('All'=>'All','North' => 'North', 'South' => 'South','East' => 'East','West' => 'West','North East' => 'North East','Central' => 'Central'), $this->input->post('region'), array('class' => 'form-control', 'id' => 'school-select')); ?>
     </div>
   </div>
   <div class="col-lg-5">
