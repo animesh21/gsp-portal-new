@@ -39,14 +39,23 @@
     <button class="exportBtn">Export to Excel</button>
     </a></h2>
 </div>
+<div class="wrapper">
+  <div id="container"> </div>
+   <div id="container2" style="display:none;"> </div>
+    <div id="container3" style="display:none;"> </div>
+	 <div id="container4" style="display:none;"> </div>
+	  <div id="container5" style="display:none;"> </div>
+	   <div id="container6" style="display:none;"> </div>
+</div>
+
 <div id="exTab2" class="container">
-  <ul class="nav nav-tabs">
-    <li class="active"> <a  href="#1" data-toggle="tab">Church of South India</a> </li>
-    <li><a href="#2" data-toggle="tab">Jawahar Navodaya Vidyalaya</a> </li>
-    <li><a href="#3" data-toggle="tab">Kendriya Vidyalaya Sangathan (KVS)</a> </li>
-    <li><a href="#4" data-toggle="tab">Montfortian Education Foundation</a> </li>
-    <li><a href="#5" data-toggle="tab">Mount Litera Zee Schools</a> </li>
-    <li><a href="#6" data-toggle="tab">Satya Bharti Foundation</a> </li>
+ <ul class="nav nav-tabs">
+    <li class="active"> <a href="#1" id="first" data-toggle="tab" >Church of South India</a> </li>
+    <li><a href="#2" id="second" data-toggle="tab">Jawahar Navodaya Vidyalaya</a> </li>
+    <li><a href="#3" id="third" data-toggle="tab">Kendriya Vidyalaya Sangathan (KVS)</a> </li>
+    <li><a href="#4" id="four" data-toggle="tab">Montfortian Education Foundation</a> </li>
+    <li><a href="#5" id="five" data-toggle="tab">Mount Litera Zee Schools</a> </li>
+    <li><a href="#6" id="six" data-toggle="tab">Satya Bharti Foundation</a> </li>
   </ul>
   <div class="tab-content">
     <div class="tab-pane active" id="1">
@@ -315,3 +324,290 @@ $(document).ready(function () {
         });
 		   });
 </script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/data.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script type="text/javascript">
+
+         Highcharts.chart('container',{
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie'
+            },
+            title: {
+                text: 'Participation Chart for Church of South India '
+            },
+            tooltip: {
+                pointFormat: '<b>{point.y} Schools</b>'
+            },
+                    exporting: { enabled: false },
+        credits: {enabled: false},    
+        plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+						 format: '{point.name}<br/><b> {point.y} Schools</b>',						  
+                    },
+                    showInLegend: true
+                }
+            },
+            series: [{
+                colorByPoint: true,
+                data: [{name: 'Registered for Audit', y: <?php echo $csi_registerd_audit; ?>}, {name: 'Audit Not Started', y: <?php echo $csi_total_notstarted_audit; ?>},{name: 'Audit Started', y: <?php echo $csi_total_started_audit; ?>}, {name: 'Audit Completed', y: <?php echo $csi_completed; ?>}]
+            }]
+        });
+		</script>
+		
+		<script type="text/javascript">
+
+         Highcharts.chart('container2',{
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie'
+            },
+            title: {
+                text: 'Participation Chart for Jawahar Navodaya Vidyalaya '
+            },
+            tooltip: {
+                pointFormat: '<b>{point.y} Schools</b>'
+            },
+                    exporting: { enabled: false },
+        credits: {enabled: false},    
+        plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+						 format: '{point.name}<br/><b> {point.y} Schools</b>',						  
+                    },
+                    showInLegend: true
+                }
+            },
+            series: [{
+                colorByPoint: true,
+                data: [{name: 'Registered for Audit', y: <?php echo $csi_registerd_audit2; ?>}, {name: 'Audit Not Started', y: <?php echo $csi_total_notstarted_audit2; ?>},{name: 'Audit Started', y: <?php echo $csi_total_started_audit2; ?>}, {name: 'Audit Completed', y: <?php echo $csi_completed2; ?>}]
+            }]
+        });
+		</script>
+		
+		<script type="text/javascript">
+
+         Highcharts.chart('container3',{
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie'
+            },
+            title: {
+                text: 'Participation Chart for Kendriya Vidyalaya Sangathan (KVS) '
+            },
+            tooltip: {
+                pointFormat: '<b>{point.y} Schools</b>'
+            },
+                    exporting: { enabled: false },
+        credits: {enabled: false},    
+        plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+						 format: '{point.name}<br/><b> {point.y} Schools</b>',						  
+                    },
+                    showInLegend: true
+                }
+            },
+            series: [{
+                colorByPoint: true,
+                data: [{name: 'Registered for Audit', y: <?php echo $csi_registerd_audit3; ?>}, {name: 'Audit Not Started', y: <?php echo $csi_total_notstarted_audit3; ?>},{name: 'Audit Started', y: <?php echo $csi_total_started_audit3; ?>}, {name: 'Audit Completed', y: <?php echo $csi_completed3; ?>}]
+            }]
+        });
+		</script>
+		
+		<script type="text/javascript">
+
+         Highcharts.chart('container4',{
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie'
+            },
+            title: {
+                text: 'Participation Chart for Montfortian Education Foundation'
+            },
+            tooltip: {
+                pointFormat: '<b>{point.y} Schools</b>'
+            },
+                    exporting: { enabled: false },
+        credits: {enabled: false},    
+        plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+						 format: '{point.name}<br/><b> {point.y} Schools</b>',						  
+                    },
+                    showInLegend: true
+                }
+            },
+            series: [{
+                colorByPoint: true,
+                data: [{name: 'Registered for Audit', y: <?php echo $csi_registerd_audit4; ?>}, {name: 'Audit Not Started', y: <?php echo $csi_total_notstarted_audit4; ?>},{name: 'Audit Started', y: <?php echo $csi_total_started_audit4; ?>}, {name: 'Audit Completed', y: <?php echo $csi_completed4; ?>}]
+            }]
+        });
+		</script>
+		
+		<script type="text/javascript">
+
+         Highcharts.chart('container5',{
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie'
+            },
+            title: {
+                text: 'Participation Chart for Mount Litera Zee Schools '
+            },
+            tooltip: {
+                pointFormat: '<b>{point.y} Schools</b>'
+            },
+                    exporting: { enabled: false },
+        credits: {enabled: false},    
+        plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+						 format: '{point.name}<br/><b> {point.y} Schools</b>',						  
+                    },
+                    showInLegend: true
+                }
+            },
+            series: [{
+                colorByPoint: true,
+                data: [{name: 'Registered for Audit', y: <?php echo $csi_registerd_audit5; ?>}, {name: 'Audit Not Started', y: <?php echo $csi_total_notstarted_audit5; ?>},{name: 'Audit Started', y: <?php echo $csi_total_started_audit5; ?>}, {name: 'Audit Completed', y: <?php echo $csi_completed5; ?>}]
+            }]
+        });
+		</script>
+		
+		<script type="text/javascript">
+
+         Highcharts.chart('container6',{
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie'
+            },
+            title: {
+                text: 'Participation Chart for Satya Bharti Foundation'
+            },
+            tooltip: {
+                pointFormat: '<b>{point.y} Schools</b>'
+            },
+                    exporting: { enabled: false },
+        credits: {enabled: false},    
+        plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+						 format: '{point.name}<br/><b> {point.y} Schools</b>',						  
+                    },
+                    showInLegend: true
+                }
+            },
+            series: [{
+                colorByPoint: true,
+                data: [{name: 'Registered for Audit', y: <?php echo $csi_registerd_audit6; ?>}, {name: 'Audit Not Started', y: <?php echo $csi_total_notstarted_audit6; ?>},{name: 'Audit Started', y: <?php echo $csi_total_started_audit6; ?>}, {name: 'Audit Completed', y: <?php echo $csi_completed6; ?>}]
+            }]
+        });
+		</script>
+		<div id="container"> </div>
+       <div id="container2" style="display:none;"> </div>
+    <div id="container3" style="display:none;"> </div>
+	 <div id="container4" style="display:none;"> </div>
+	  <div id="container5" style="display:none;"> </div>
+	   <div id="container6" style="display:none;"> </div>
+		<script>
+		$("#second").click(function(){
+         $("#container").hide();
+         $("#container3").hide();
+         $("#container4").hide();
+         $("#container5").hide();
+         $("#container6").hide();
+		  $("#container2").show();
+       });
+		
+		</script>
+		<script>
+		$("#third").click(function(){
+         $("#container").hide();
+         $("#container3").show();
+         $("#container4").hide();
+         $("#container5").hide();
+         $("#container6").hide();
+		  $("#container2").hide();
+       });
+		
+		</script>
+		
+		<script>
+		$("#four").click(function(){
+         $("#container").hide();
+         $("#container3").hide();
+         $("#container4").show();
+         $("#container5").hide();
+         $("#container6").hide();
+		  $("#container2").hide();
+       });
+		
+		</script>
+		
+		<script>
+		$("#five").click(function(){
+         $("#container").hide();
+         $("#container3").hide();
+         $("#container4").hide();
+         $("#container5").show();
+         $("#container6").hide();
+		  $("#container2").hide();
+       });
+		
+		</script>
+
+		<script>
+		$("#six").click(function(){
+         $("#container").hide();
+         $("#container3").hide();
+         $("#container4").hide();
+         $("#container5").hide();
+         $("#container6").show();
+		  $("#container2").hide();
+       });
+		
+		</script>
+		<script>
+		$("#first").click(function(){
+         $("#container").show();
+         $("#container3").hide();
+         $("#container4").hide();
+         $("#container5").hide();
+         $("#container6").hide();
+		  $("#container2").hide();
+       });
+		
+		</script>
