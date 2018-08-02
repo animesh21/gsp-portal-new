@@ -37,8 +37,7 @@ class Performance_report extends CI_Controller {
         $this->config->load('array_config');
         $data['main'] = 'admin/performance_report/air_to_land';
         $data['title'] = 'Home | Perofrmance Report';
-        /*Old Code*/ //$data['record1'] = $this->Performance_model->air_performance();
-		$data['record1'] = $this->Performance_model->getData();
+        $data['record1'] = $this->Performance_model->air_performance();
 	//echo '<pre>'; print_r($data['record1']); exit;
         $this->load->view('admin/includes/template', $data);
     }
@@ -46,9 +45,7 @@ class Performance_report extends CI_Controller {
         $this->config->load('array_config');
         $data['main'] = 'admin/performance_report/schoolgeneral';
         $data['title'] = 'Home | Perofrmance Report';
-        /**Old Code**/
-		$data['record1'] = $this->Performance_model->getData();
-		//$data['record1'] = $this->Performance_model->schoolgeneral_performance();
+        $data['record1'] = $this->Performance_model->schoolgeneral_performance();
 	//echo '<pre>'; print_r($data['record1']); exit;
         $this->load->view('admin/includes/template', $data);
     }
@@ -56,8 +53,7 @@ class Performance_report extends CI_Controller {
        $this->config->load('array_config');
         $data['main'] = 'admin/performance_report/water';
         $data['title'] = 'Home | Water';
-	    $data['record'] = $this->Performance_model->getData();
-      /*Old Data*/ // $data['record'] = $this->Performance_model->getDataWater();
+        $data['record'] = $this->Performance_model->getDataWater();
         $this->load->view('admin/includes/template', $data);
     }
     public function waste() {
@@ -88,8 +84,7 @@ class Performance_report extends CI_Controller {
         $this->config->load('array_config');
         $data['main'] = 'admin/performance_report/total-point';
         $data['title'] = 'Home | Total Calculation';
-        /*Old Code*/ //$data['record1'] = $this->Performance_model->combinedPerformancePoint();
-		$data['record1'] = $this->Performance_model->getData();
+        $data['record1'] = $this->Performance_model->combinedPerformancePoint();
         $this->load->view('admin/includes/template', $data);
     }
 	
@@ -104,8 +99,7 @@ class Performance_report extends CI_Controller {
         $data['main']='admin/performance_report/land';
         $data['title']='Land';
          
-       /*  $data['records']=$this->Performance_model->land(); */
-	   $data['record'] = $this->Performance_model->getData();
+        $data['records']=$this->Performance_model->land();
         //echo '<pre>'; print_r($data['records']);exit();
          $this->load->view('admin/includes/template', $data);
     }
@@ -114,9 +108,8 @@ class Performance_report extends CI_Controller {
     {
         $data['main']='admin/performance_report/food';
         $data['title']='Food';
-          $data['records']=$this->Performance_model->getData();
-          /*Old Code*/ //$data['records']=$this->Performance_model->food();
-       
+         
+        $data['records']=$this->Performance_model->food();
         //echo '<pre>'; print_r($data['records']);exit();
          $this->load->view('admin/includes/template', $data);
     }
@@ -126,8 +119,7 @@ class Performance_report extends CI_Controller {
         $data['main']='admin/performance_report/energy';
         $data['title']='Energy';
          
-        /*Old Code*/ //$data['records']=$this->Performance_model->energy();
-	    $data['records']=$this->Performance_model->getData();
+        $data['records']=$this->Performance_model->energy();
         //echo '<pre>'; print_r($data['records']);exit();
          $this->load->view('admin/includes/template', $data);
     }
@@ -226,7 +218,7 @@ class Performance_report extends CI_Controller {
 		 
 		
 		$data['main']='admin/performance_report/primary_schoolgeneral';
-        $data['title']='Primary_School&Genaral';
+                $data['title']='Primary_School&Genaral';
 		$data['record1']=$this->Performance_model->getSchoolgeneralPrimarySchool();
 		//echo "<pre>";print_r($data['records']);exit;
 		$this->load->view('admin/includes/template', $data);
