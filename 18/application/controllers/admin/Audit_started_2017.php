@@ -68,6 +68,37 @@ class Audit_started_2017 extends CI_Controller {
 	    $data['list_school4']=$this->Audit_started_model->getPartnerData('4');
 	    $data['list_school5']=$this->Audit_started_model->getPartnerData('5');
 	    $data['list_school6']=$this->Audit_started_model->getPartnerData('6');
+	   
+	   
+	        $data['csi_registerd_audit']=$this->Report->get_registeredpartner("1");
+		$data['csi_total_started_audit']=$this->Report->get_startedpartner("1");
+		$data['csi_completed']=$this->Report->get_completedpartner("1");
+		$data['csi_total_notstarted_audit']=$this->Report->get_notstartedpartner("1");
+		
+		$data['csi_registerd_audit2']=$this->Report->get_registeredpartner("2");
+		$data['csi_total_started_audit2']=$this->Report->get_startedpartner("2");
+		$data['csi_completed2']=$this->Report->get_completedpartner("2");
+		$data['csi_total_notstarted_audit2']=$this->Report->get_notstartedpartner("2");
+		
+		$data['csi_registerd_audit3']=$this->Report->get_registeredpartner("3");
+		$data['csi_total_started_audit3']=$this->Report->get_startedpartner("3");
+		$data['csi_completed3']=$this->Report->get_completedpartner("3");
+		$data['csi_total_notstarted_audit3']=$this->Report->get_notstartedpartner("3");
+		
+		$data['csi_registerd_audit4']=$this->Report->get_registeredpartner("4");
+		$data['csi_total_started_audit4']=$this->Report->get_startedpartner("4");
+		$data['csi_completed4']=$this->Report->get_completedpartner("4");
+		$data['csi_total_notstarted_audit4']=$this->Report->get_notstartedpartner("4");
+		
+		$data['csi_registerd_audit5']=$this->Report->get_registeredpartner("5");
+		$data['csi_total_started_audit5']=$this->Report->get_startedpartner("5");
+		$data['csi_completed5']=$this->Report->get_completedpartner("5");
+		$data['csi_total_notstarted_audit5']=$this->Report->get_notstartedpartner("5");
+		
+		$data['csi_registerd_audit6']=$this->Report->get_registeredpartner("6");
+		$data['csi_total_started_audit6']=$this->Report->get_startedpartner("6");
+		$data['csi_completed6']=$this->Report->get_completedpartner("6");
+		$data['csi_total_notstarted_audit6']=$this->Report->get_notstartedpartner("6");
 		$this->load->view('admin/includes/template', $data);
    }
 	
