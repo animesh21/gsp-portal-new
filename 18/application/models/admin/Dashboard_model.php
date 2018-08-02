@@ -394,7 +394,8 @@ class Dashboard_model extends CI_Model {
 	->join('cities AS c', 'a.district=c.id', 'left')
 	->join('gsp_aduit_submitted AS d','a.userid=d.userid','left')	
 	->where('a.progress', '100')
-	->where_not_in('b.userid=a.userid')	
+	->where_not_in('b.userid=a.userid')
+	->where('d.status','0')
         ->order_by('a.id', 'desc')
         ->get()->result();
 		//echo $this->db->last_query(); exit;
