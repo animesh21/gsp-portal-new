@@ -20,7 +20,7 @@ class Performance_total extends CI_Controller {
     
 	public function air() {
 	ini_set('memory_limit', '-1');
-	$uArray = $this->db->select('*')->from('gsp_school')->get()->result_array();
+	$uArray = $this->db->select('*')->from('gsp_school')->where("progress=","100")->get()->result_array();
 	$points=array();
 	$arr = array(
 	    '1' => 'Day Scholar',
@@ -49,7 +49,7 @@ class Performance_total extends CI_Controller {
 	);
 	$type_aid = array(
 	    '1' => 'Government School',
-	    '2' => 'Government – Aided School',
+	    '2' => 'Government â€“ Aided School',
 	    '3' => 'Private School',
 	);
 	for($i=0; $i<count($uArray); $i++)
@@ -872,7 +872,7 @@ class Performance_total extends CI_Controller {
                 $energy_points['Q3_energy'] = 0;
             }
         }
-        //Q Are there any alternate sources of energy employed/ installed in your school?
+        //Q AreÂ thereÂ anyÂ alternateÂ sourcesÂ ofÂ energyÂ employed/Â installedÂ inÂ yourÂ school?
         if (((getFiled('Q9E1', $argUserID) != '') ? (getFiled('Q9E1', $argUserID)) : "") != "") {
             if (((getFiled('Q9E1', $argUserID) != '') ? (getFiled('Q9E1', $argUserID)) : 0) == "Y") {
                 $energy_points['Q6_energy'] = 1;
@@ -1434,7 +1434,7 @@ public function feedback() {
 		$arrPoints['Q3_auth_parking'] = ($authorise_parking * 1) / $no_of_vehicle;
 	    }
 	}
-	//Q3b Specify the type of fuel used by your school’s vehicles
+	//Q3b Specify the type of fuel used by your schoolâ€™s vehicles
 	//echo '<pre>';
 	//print_r($arrPoints);
 	$total_cng_vehicle = ($this->getFiled('Q6A2S3C5', $argUserID) != '') ? $this->getFiled('Q6A2S3C5', $argUserID) : "";
