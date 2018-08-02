@@ -95,17 +95,12 @@
         <td>Does school treat waste water</td>
         <td>Does schools reuse treated wastewater</td>
         <td>how does your school reuse wastewater</td>
-		<td>Where does the water get treated?</td>
-		<td>Who treats the wastewater outside your school?</td>
-		<td>Does your school reuse the wastewater from RO plant or Air conditioner drain pipes?</td>
-		<td>If yes, How does your school reuse wastewater from RO plant or AC?</td>
         <td>Total points in Water</td>
       </tr>
     </thead>
     <tbody>
       <?php
 	    error_reporting(0);
-ini_set('memory_limit', '-1');
             $i = 1;
             foreach ($record as $r) {
          ?>
@@ -114,183 +109,129 @@ ini_set('memory_limit', '-1');
         <td><?php echo  $r->userid; ?></td>
         <td><?php echo  $r->id; ?></td>
         <td><?php echo  $r->name; ?></td>
-        <td><?php 
-			 $category=array("Day Scholar"=>"1","Day Boarding"=>"2","Residential"=>"3","Day Scholar + Day Boarding"=>"4","Day Boarding + Residential"=>"5","Day Scholar + Residential"=>"6","Day Scholar + Day Boarding + Residential"=>"7");
-			$serach_category=(getFiled('Q1S1',$r->userid) != '') ? getFiled('Q1S1', $r->userid) : "N/A";
-			echo array_search($serach_category,$category); ?></td>
-    		<td><?php echo(getFiled('Q4G4S3',$r->userid) != '') ? getFiled('Q4G4S3', $r->userid) : "N/A";?></td>
-       <td><?php echo(getFiled('Q4W1',$r->userid) != '') ? getFiled('Q4W1', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q4W2',$r->userid) != '') ? getFiled('Q4W2', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q4W3',$r->userid) != '') ? getFiled('Q4W3', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q4W4',$r->userid) != '') ? getFiled('Q4W4', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q4W5',$r->userid) != '') ? getFiled('Q4W5', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q4W6',$r->userid) != '') ? getFiled('Q4W6', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q4W7',$r->userid) != '') ? getFiled('Q4W7', $r->userid) : "N/A";?></td>
-
-<td><?php echo(getFiled('Q4W8',$r->userid) != '') ? getFiled('Q4W8', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q4W9',$r->userid) != '') ? getFiled('Q4W9', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q4W10',$r->userid) != '') ? getFiled('Q4W10', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q4W11',$r->userid) != '') ? getFiled('Q4W11', $r->userid) : "N/A";?></td>
+        <td><?php echo $r->category; ?></td>
+        <td><?php echo $r->population; ?></td>
+       <td><?php echo  $r->Q4W1; ?></td>
+<td><?php echo  $r->Q4W2; ?></td>
+<td><?php echo  $r->Q4W3; ?></td>
+<td><?php echo  $r->Q4W4; ?></td>
+<td><?php echo  $r->Q4W5; ?></td>
+<td><?php echo  $r->Q4W6; ?></td>
+<td><?php echo  $r->Q4W7; ?></td>
+<td><?php echo  $r->Q4W8; ?></td>
+<td><?php echo  $r->Q4W9; ?></td>
+<td><?php echo  $r->Q4W10; ?></td>
+<td><?php echo  $r->Q4W11; ?></td>
 <td><?php 
-$population=(getFiled('Q4G4S3',$r->userid) != '') ? getFiled('Q4G4S3', $r->userid) : "0";
-$Q4W11=(getFiled('Q4W11',$r->userid) != '') ? getFiled('Q4W11', $r->userid) : "N/A";
-	 if($population==0){
+	 if($r->population==0){
 	       echo "N/A";
 	 }
-         elseif($population==""){
+         elseif($r->population==""){
 	        echo "N/A";
 	 }
 	 else{
-		echo  $Q4W11/$population;  
+		echo  $r->Q4W11/$r->population;  
 	         } ?></td>
-<td><?php 
-  $Q5W1=(getFiled('Q5W1',$r->userid) != '') ? getFiled('Q5W1', $r->userid) : "N/A";
-  if($Q5W1==1){echo "Ground water";}else{echo $Q5W1;}
-?></td>
-<td><?php 
-   $Q5W2=(getFiled('Q5W2',$r->userid) != '') ? getFiled('Q5W2', $r->userid) : "N/A";
-   if($Q5W2==1){echo "Surface water";}else{echo $Q5W2;}
-?></td>
-<td><?php 
-   $Q5W3=(getFiled('Q5W3',$r->userid) != '') ? getFiled('Q5W3', $r->userid) : "N/A";
-   if($Q5W3==1){echo "Rainwater";}else{echo $Q5W3;}
-?></td>
-<td><?php $Q5W4=(getFiled('Q5W4',$r->userid) != '') ? getFiled('Q5W4', $r->userid) : "N/A";
-if($Q5W4==1){echo " Recycled wastewater";}else{echo $Q5W4;}
-?></td>
-<td><?php $Q6W1=(getFiled('Q6W1',$r->userid) != '') ? getFiled('Q6W1', $r->userid) : "N/A";
-if($Q6W1==1){echo "Municipality";}else{echo $Q6W1;}
-?></td>
-<td><?php $Q6W2=(getFiled('Q6W2',$r->userid) != '') ? getFiled('Q6W2', $r->userid) : "N/A";
-if($Q6W2==1){echo "Panchayat";}else{echo $Q6W2;}
-?></td>
-<td><?php $Q6W3=(getFiled('Q6W3',$r->userid) != '') ? getFiled('Q6W3', $r->userid) : "N/A";
-if($Q6W3==1){echo " Public Health Engineering Department (PHED)";}else{echo $Q6W3;}
-?></td>
-<td><?php $Q6W4=(getFiled('Q6W4',$r->userid) != '') ? getFiled('Q6W4', $r->userid) : "N/A";
-if($Q6W4==1){echo "Private supplier";}else{echo $Q6W4;}
-?></td>
-<td><?php $Q6W5=(getFiled('Q6W5',$r->userid) != '') ? getFiled('Q6W5', $r->userid) : "N/A";
-if($Q6W5==1){echo " School’s own supply (bore well, rainwater harvesting facility, etc)";}else{echo $Q6W5;}
-?></td>
-<td><?php echo(getFiled('Q7W1',$r->userid) != '') ? getFiled('Q7W1', $r->userid) : "N/A";?></td>
-<td><?php $Q7W2=(getFiled('Q7W2',$r->userid) != '') ? getFiled('Q7W2', $r->userid) : "N/A";
-      $array_list=array("≤1 hours"=>"1","2-6 hours"=>"2","7-12 hours"=>"3","13-18 hours"=>"4","19-24 hours"=>"5");
-	  echo array_search($Q7W2,$array_list);
-?></td>
-<td><?php echo(getFiled('Q8W1S1',$r->userid) != '') ? getFiled('Q8W1S1', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q8W1S2',$r->userid) != '') ? getFiled('Q8W1S2', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q8W1S3',$r->userid) != '') ? getFiled('Q8W1S3', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q8W1S4',$r->userid) != '') ? getFiled('Q8W1S4', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q8W1S5',$r->userid) != '') ? getFiled('Q8W1S5', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q8W1S6',$r->userid) != '') ? getFiled('Q8W1S6', $r->userid) : "N/A";?></td>	
-<td><?php echo(getFiled('Q8W1S7',$r->userid) != '') ? getFiled('Q8W1S7', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q8W1S8',$r->userid) != '') ? getFiled('Q8W1S8', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q8W1S9',$r->userid) != '') ? getFiled('Q8W1S9', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q8W1S10',$r->userid) != '') ? getFiled('Q8W1S10', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q8W1S11',$r->userid) != '') ? getFiled('Q8W1S11', $r->userid) : "N/A";?></td>			 				 
-<td><?php echo(getFiled('Q8W2',$r->userid) != '') ? getFiled('Q8W2', $r->userid) : "N/A";?></td>	
-<td><?php echo(getFiled('Q8W2S1',$r->userid) != '') ? getFiled('Q8W2S1', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q8W2S1S1',$r->userid) != '') ? getFiled('Q8W2S1S1', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q8W2S2',$r->userid) != '') ? getFiled('Q8W2S2', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q8W2S2S1',$r->userid) != '') ? getFiled('Q8W2S2S1', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q8W2S2S2',$r->userid) != '') ? getFiled('Q8W2S2S2', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q8W2S2S7',$r->userid) != '') ? getFiled('Q8W2S2S7', $r->userid) : "N/A";?></td>				 		
-<td><?php echo(getFiled('Q8W2S2S10',$r->userid) != '') ? getFiled('Q8W2S2S10', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q8W2S4',$r->userid) != '') ? getFiled('Q8W2S4', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q8W2S31',$r->userid) != '') ? getFiled('Q8W2S31', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q8W2S4S1',$r->userid) != '') ? getFiled('Q8W2S4S1', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q8W2S4S22',$r->userid) != '') ? getFiled('Q8W2S4S22', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q8W2S5',$r->userid) != '') ? getFiled('Q8W2S5', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q8W2S61',$r->userid) != '') ? getFiled('Q8W2S61', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q8W2S7',$r->userid) != '') ? getFiled('Q8W2S7', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q8W2S8',$r->userid) != '') ? getFiled('Q8W2S8', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q8W2S9',$r->userid) != '') ? getFiled('Q8W2S9', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q8W2S10',$r->userid) != '') ? getFiled('Q8W2S10', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q8W2S12',$r->userid) != '') ? getFiled('Q8W2S12', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q8W2S13',$r->userid) != '') ? getFiled('Q8W2S13', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q8W2S6',$r->userid) != '') ? getFiled('Q8W2S6', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q8W3S1',$r->userid) != '') ? getFiled('Q8W3S1', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q8W3S2',$r->userid) != '') ? getFiled('Q8W3S2', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q8W3S3',$r->userid) != '') ? getFiled('Q8W3S3', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q8W3S4',$r->userid) != '') ? getFiled('Q8W3S4', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q8W3S5',$r->userid) != '') ? getFiled('Q8W3S5', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q8W3S6',$r->userid) != '') ? getFiled('Q8W3S6', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q8W3S7',$r->userid) != '') ? getFiled('Q8W3S7', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q8W3S8',$r->userid) != '') ? getFiled('Q8W3S8', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q9W1',$r->userid) != '') ? getFiled('Q9W1', $r->userid) : "N/A";?></td>
-<td><?php  
-$population=(getFiled('Q4G4S3',$r->userid) != '') ? getFiled('Q4G4S3', $r->userid) : "0";
-$Q9W1=(getFiled('Q9W1',$r->userid) != '') ? getFiled('Q9W1', $r->userid) : "N/A";   
-	 if($population==0){
+<td><?php echo  $r->Q5W1; ?></td>
+<td><?php echo  $r->Q5W2; ?></td>
+<td><?php echo  $r->Q5W3; ?></td>
+<td><?php echo  $r->Q5W4; ?></td>
+<td><?php echo  $r->Q6W1; ?></td>
+<td><?php echo  $r->Q6W2; ?></td>
+<td><?php echo  $r->Q6W3; ?></td>
+<td><?php echo  $r->Q6W4; ?></td>
+<td><?php echo  $r->Q6W5; ?></td>
+<td><?php echo  $r->Q7W1; ?></td>
+<td><?php echo  $r->Q7W2; ?></td>
+<td><?php echo  $r->Q8W1S1; ?></td>
+<td><?php echo  $r->Q8W1S2; ?></td>
+<td><?php echo  $r->Q8W1S3; ?></td>
+<td><?php echo  $r->Q8W1S4; ?></td>
+<td><?php echo  $r->Q8W1S5; ?></td>
+<td><?php echo  $r->Q8W1S6; ?></td>
+<td><?php echo  $r->Q8W1S7; ?></td>
+<td><?php echo  $r->Q8W1S8; ?></td>
+<td><?php echo  $r->Q8W1S9; ?></td>
+<td><?php echo  $r->Q8W1S10; ?></td>
+<td><?php echo  $r->Q8W1S11; ?></td>
+<td><?php echo  $r->Q8W2; ?></td>
+<td><?php echo  $r->Q8W2S1; ?></td>
+<td><?php echo  $r->Q8W2S1S1; ?></td>
+<td><?php echo  $r->Q8W2S2; ?></td>
+<td><?php echo  $r->Q8W2S2S1; ?></td>
+<td><?php echo  $r->Q8W2S2S2; ?></td>
+<td><?php echo  $r->Q8W2S2S7; ?></td>
+<td><?php echo  $r->Q8W2S2S10; ?></td>
+<td><?php echo  $r->Q8W2S4; ?></td>
+<td><?php echo  $r->Q8W2S31; ?></td>
+<td><?php echo  $r->Q8W2S4S1; ?></td>
+<td><?php echo  $r->Q8W2S4S22; ?></td>
+<td><?php echo  $r->Q8W2S5; ?></td>
+<td><?php echo  $r->Q8W2S61; ?></td>
+<td><?php echo  $r->Q8W2S7; ?></td>
+<td><?php echo  $r->Q8W2S8; ?></td>
+<td><?php echo  $r->Q8W2S9; ?></td>
+<td><?php echo  $r->Q8W2S10;  ?></td>
+<td><?php echo  $r->Q8W2S12; ?></td>
+<td><?php echo  $r->Q8W2S13; ?></td>
+<td><?php echo  $r->Q8W2S6; ?></td>
+<td><?php echo  $r->Q8W3S1; ?></td>
+<td><?php echo  $r->Q8W3S2; ?></td>
+<td><?php echo  $r->Q8W3S3; ?></td>
+<td><?php echo  $r->Q8W3S4; ?></td>
+<td><?php echo  $r->Q8W3S5; ?></td>
+<td><?php echo  $r->Q8W3S6; ?></td>
+<td><?php echo  $r->Q8W3S7; ?></td>
+<td><?php echo  $r->Q8W3S8; ?></td>
+<td><?php echo  $r->Q9W1; ?></td>
+<td><?php     
+	 if($r->population==0){
 	       echo "N/A";
 	 }
-         elseif($population==""){
+         elseif($r->population==""){
 	        echo "N/A";
 	 }
 	 else{
-		echo  $population/$Q9W1;  
+		echo  $r->population/$r->Q9W1;  
 	 }    
 		    ?></td>
-<td><?php echo(getFiled('Q10W1',$r->userid) != '') ? getFiled('Q10W1', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q11W1',$r->userid) != '') ? getFiled('Q11W1', $r->userid) : "N/A";?></td>
+<td><?php echo  $r->Q10W1; ?></td>
+<td><?php echo  $r->Q11W1; ?></td>
 <td><?php 
-$population=(getFiled('Q4G4S3',$r->userid) != '') ? getFiled('Q4G4S3', $r->userid) : "0";
-$Q11W1=(getFiled('Q11W1',$r->userid) != '') ? getFiled('Q11W1', $r->userid) : "N/A";  
-	if($population==0){
+	if($r->population==0){
 	       echo "N/A";
 	 }
-         elseif($population==""){
+         elseif($r->population==""){
 	        echo "N/A";
 	 }
 	 else{
-		echo  $population/$Q11W1;  
+		echo  $r->population/$r->Q11W1;  
 	 }     ?></td>
-<td><?php echo(getFiled('Q13W1S1',$r->userid) != '') ? getFiled('Q13W1S1', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q13W1S2',$r->userid) != '') ? getFiled('Q13W1S2', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q13W1S3',$r->userid) != '') ? getFiled('Q13W1S3', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q13W1S4',$r->userid) != '') ? getFiled('Q13W1S4', $r->userid) : "N/A";?></td>
+<td><?php echo  $r->Q13W1S1; ?></td>
+<td><?php echo  $r->Q13W1S2; ?></td>
+<td><?php echo  $r->Q13W1S3; ?></td>
+<td><?php echo  $r->Q13W1S4; ?></td>
 <td><?php 
-$population=(getFiled('Q4G4S3',$r->userid) != '') ? getFiled('Q4G4S3', $r->userid) : "0";
-$Q13W1S4=(getFiled('Q13W1S4',$r->userid) != '') ? getFiled('Q13W1S4', $r->userid) : "N/A";  
-	 if($population==0){
+	 if($r->population==0){
 	       echo "N/A";
 	 }
-         elseif($population==""){
+         elseif($r->population==""){
 	        echo "N/A";
 	 }
 	 else{
-		echo  $population/$Q13W1S4;  
+		echo  $r->population/$r->Q13W1S4;  
 	 } 
           ?></td>
-<td><?php echo(getFiled('Q14W1',$r->userid) != '') ? getFiled('Q14W1', $r->userid) : "N/A";?></td>
-<td><?php echo(getFiled('Q15W1',$r->userid) != '') ? getFiled('Q15W1', $r->userid) : "N/A";?></td>
-      <td><?php echo(getFiled('Q16W1',$r->userid) != '') ? getFiled('Q16W1', $r->userid) : "N/A";?></td>
-      <td><?php echo(getFiled('Q21W1',$r->userid) != '') ? getFiled('Q21W1', $r->userid) : "N/A";?></td>
-      <td><?php echo(getFiled('Q18W1',$r->userid) != '') ? getFiled('Q18W1', $r->userid) : "N/A";?></td>
-      <td><?php echo(getFiled('Q19W1',$r->userid) != '') ? getFiled('Q19W1', $r->userid) : "N/A";?></td>
-      <td><?php echo(getFiled('Q20W1',$r->userid) != '') ? getFiled('Q20W1', $r->userid) : "N/A";?></td>
-      <td><?php echo(getFiled('Q20W2',$r->userid) != '') ? getFiled('Q20W2', $r->userid) : "N/A";?></td>
-	  <td><?php $Q19W11=(getFiled('Q19W11',$r->userid) != '') ? getFiled('Q19W11', $r->userid) : "N/A";
-	  $array_list1=array("Inside your school"=>"1","Outside your school"=>"2");
-	  echo array_search($Q19W11,$array_list1);
-	  ?></td>
-	  <td><?php $Q19W12=(getFiled('Q19W12',$r->userid) != '') ? getFiled('Q19W12', $r->userid) : "N/A";
-	  $array_list1=array("Municipality"=>"1","Physical Health Engineering Department (PHED) "=>"2","Panchayat"=>"3","Community driven initiative"=>"4");
-	  echo array_search($Q19W11,$array_list1);?></td>
-	  <td><?php echo(getFiled('Q19W15',$r->userid) != '') ? getFiled('Q19W15', $r->userid) : "N/A";?></td>
-	  <td><?php 
-	  $Q19W16=(getFiled('Q19W16',$r->userid) != '') ? getFiled('Q19W16', $r->userid) : "N/A";
-	  $Q19W161=(getFiled('Q19W161',$r->userid) != '') ? getFiled('Q19W161', $r->userid) : "N/A";
-	  $Q19W162=(getFiled('Q19W162',$r->userid) != '') ? getFiled('Q19W162', $r->userid) : "N/A";    
-	  $listresult='';
-	  if($Q19W16==1){ $listresult.="Used for cleaning purposes (mopping, washing vehicles, etc)".",";}
-	  if($Q19W161==2){$listresult.="Used for gardening and horticulture".",";}
-	  if($Q19W162==3){$listresult.="Flushing".",";}
-	  if($Q19W16==1 || $Q19W161==2 || $Q19W162==3){
-	  echo $listresult;}else{echo "N/A";}
-	  ?></td>
-      <td><?php //echo  $r->points; ?> &nbsp;</td>
+<td><?php echo  $r->Q14W1; ?></td>
+<td><?php echo  $r->Q15W1; ?></td>
+<td><?php echo  $r->Q15W1; ?></td>
+<td><?php echo  $r->Q16W1; ?></td>
+<td><?php echo  $r->Q21W1; ?></td>
+<td><?php echo  $r->Q18W1; ?></td>
+<td><?php echo  $r->Q19W1; ?></td>
+<td><?php echo  $r->Q20W1; ?></td>
+<td><?php echo  $r->Q20W2; ?></td>
+<td><?php echo  $r->points; ?></td>
 
       </tr>
       <?php
