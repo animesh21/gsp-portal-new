@@ -70,75 +70,15 @@ class Audit_started extends CI_Controller {
     }
 	
 	public function regionsearch() {
-	$data['main'] = 'admin/audit/regionsearch';
+        $data['main'] = 'admin/audit/regionsearch';
         $data['title'] = 'Home | Audit Region Wise';
         $data['region'] = $this->input->post('region');
         $data['school'] = $this->input->post('school');
-		$region=$this->input->post('region');
-		
-		//echo $region; exit;
-        $school=$this->input->post('school');
-		
-		//echo $school; 
-		
-		if(strcmp($region,"East")==0){
-		$regions=array("36", "26", "16", "1", "5");}
-		else if(strcmp($region,"North")==0){
-		$regions = array("28", "15", "13", "29", "14", "34", "35", "10", "6");}
-		else if(strcmp($region,"North East")==0){
-		$regions = array("3", "4", "22", "23", "24", "25", "30", "33");}
-		else if(strcmp($region,"South")==0){
-        $regions = array("2", "17", "18", "31", "32", "19", "27");}
-		else if(strcmp($region,"West")==0){
-		$regions = array("12", "21", "11", "9", "8");}
-		else if(strcmp($region,"Central")==0){
-        $regions = array("7", "20");
-		}else{
-        $regions = array("36", "26", "16", "1", "5","28", "15", "13", "29", "14", "34", "35", "10", "6","3", "4", "22", "23", "24", "25", "30", "33","2", "17", "18", "31", "32", "19", "27","12", "21", "11", "9", "8","7", "20");
-		}
-		
-		if($school==0){
-		$data['countdata']=$this->db->select('a.*')
-		                    ->from('gsp_school as a')
-							->join('gsp_answers as b', 'a.userid=b.userid', 'left')
-						    ->like('b.questionid','Q1G2')
-                            ->where('b.answer <',6)
-							->where_in('state',$regions)
-							->get()
-							->result();
-					 }
-					 
-		if($school==1){
-		$data1=$this->db->select('a.*')
-		                    ->from('gsp_school as a')
-							->join('gsp_answers as b', 'a.userid=b.userid', 'left')
-						    ->like('b.questionid','Q1G2')
-                            ->where('b.answer >',5)
-							->where_in('state',$regions)
-							->get()
-							->result();
-						
-		  $regionss = join("','",$regions);
-	      $data2=$this->db->query("SELECT * FROM `gsp_school` WHERE `userid` NOT IN(SELECT userid FROM gsp_answers) AND `state`IN ('$regionss')")->result(); 
-       
-    	$data['countdata']=array_merge($data1,$data2);
-       	 
-		 }	
-					 
-		if($school==2){
-		$data['countdata']=$this->db->select('a.*')
-		                    ->from('gsp_school as a')
-						    ->where_in('state',$regions)
-							->group_by('a.id')
-							->get()
-							->result();
-							
-					 }	
-        
-        $data['region']= $region;		
-		
-        $data['record'] = $this->Audit_started_model->getRegionWiseSchool($region,$school);   
-        $this->load->view('admin/includes/template', $data);
+		 $region=$this->input->post('region');
+		 $school=$this->input->post('school');
+		 $data['region']= $region;		
+		 $data['record'] = $this->Audit_started_model->getRegionWiseSchool($region,$school);   
+         $this->load->view('admin/includes/template', $data);
     }
 	
 	
