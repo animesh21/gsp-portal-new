@@ -407,7 +407,6 @@ class Dashboard_model extends CI_Model {
 	->join('cities AS c', 'a.district=c.id', 'left')
         ->join('gsp_aduit_submitted as d',"a.userid=d.userid")
 	->where('a.progress', '100')
-	->where('a.complete_status','1')
 	->where('d.status','1')
         ->order_by('a.id', 'desc')
         ->get()->result();
