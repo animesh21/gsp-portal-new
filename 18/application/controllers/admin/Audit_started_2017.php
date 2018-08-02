@@ -17,6 +17,7 @@ class Audit_started_2017 extends CI_Controller {
         $this->load->model(array('Answer_model', 'file','User_model','admin/Dashboard_model'));
         $this->load->helper(array('download', 'common_helper', 'form'));
         $this->load->model('admin/Audit_started_model');
+	    $this->load->model('admin/Report');
         $this->session->userdata('USER_ID') == '';
 	$this->load->helper('date');
 	$this->load->library('zip');
