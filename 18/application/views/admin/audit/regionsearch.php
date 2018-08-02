@@ -130,7 +130,7 @@
         },
         series: [{
             name: 'Registered for Audit',
-            data: [<?php echo count($countdata); ?>] //NORTH
+            data: [<?php echo count($record); ?>] //NORTH
             //Registration, Audit Started, Audit Completed, Feedback Recieved
         }
 		],
