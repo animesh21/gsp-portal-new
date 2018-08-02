@@ -479,4 +479,35 @@ class Report extends CI_Model {
             ->get()->result();
         }
 	
+	       public function get_registeredpartner($status)
+		{
+			$this->db->where('partner_status',$status);
+		    return $this->db->count_all_results('gsp_school');
+			
+		}
+		
+		public function get_startedpartner($status)
+		{
+			$this->db->where('partner_status',$status);
+		   $this->db->where("progress >",'5');
+		   $this->db->where("progress <",'100');
+		   return $this->db->count_all_results('gsp_school');
+		}
+		
+		public function get_completedpartner($status)
+		{
+			$this->db->where('partner_status',$status);
+		   $this->db->where("progress =",'100');
+		   return $this->db->count_all_results('gsp_school');
+			
+		}
+		
+		public function get_notstartedpartner($status)
+		{
+			$this->db->where('partner_status',$status);
+		   $this->db->where("progress=",'5');
+		   return $this->db->count_all_results('gsp_school');
+			
+		}
+	
 }
