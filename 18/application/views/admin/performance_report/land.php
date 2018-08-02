@@ -36,44 +36,38 @@
 				<th>Total Points Land</th>
           </tr>
         </thead>
-        <?php //echo '<pre>'; print_r($record);exit(); ?>
+        <?php //echo '<pre>'; print_r($record); ?>
         <tbody>
-          <?php 
-		  ini_set('memory_limit', '-1');
-		  $i=0; 
-		  foreach($record as $record1){ ?>
-                  <tr role="row" class="<?php echo ($i%2==0) ? "even" : "odd"; ?>">
-                   <td><?php echo $i + 1; ?></td>
-                   <td><?php echo $record1->id; ?></td>
-                   <td><?php echo $record1->name; ?></td>
-                   <td><?php 
-             $category=array("Day Scholar"=>"1","Day Boarding"=>"2","Residential"=>"3","Day Scholar + Day Boarding"=>"4","Day Boarding + Residential"=>"5","Day Scholar + Residential"=>"6","Day Scholar + Day Boarding + Residential"=>"7");
-            $serach_category=(getFiled('Q1S1',$record1->userid) != '') ? getFiled('Q1S1', $record1->userid) : "";
-            echo array_search($serach_category,$category); ?></td>
-			<td><?php echo(getFiled('Q4G4S3',$record1->userid) != '') ? getFiled('Q4G4S3', $record1->userid) : "N/A";?></td>
-                <td><?php echo (getFiled('Q4L1',$record1->userid) != '') ? getFiled('Q4L1', $record1->userid) : ""; ?> </td>
-                <td><?php echo (getFiled('Q4L2',$record1->userid) != '') ? getFiled('Q4L2', $record1->userid) : ""; ?></td>
-                <td><?php echo (getFiled('Q4L3',$record1->userid) != '') ? getFiled('Q4L3', $record1->userid) : "";?></td>
-				<td><?php echo (getFiled('Q4L4',$record1->userid) != '') ? getFiled('Q4L4', $record1->userid) : ""; ?></td>
-                <td><?php echo (getFiled('Q4L5',$record1->userid) != '') ? getFiled('Q4L5', $record1->userid) : ""; ?></td>
-                <td><?php echo (getFiled('Q4L6',$record1->userid) != '') ? getFiled('Q4L6', $record1->userid) : ""; ?></td>
-                <td><?php echo (getFiled('Q4L7',$record1->userid) != '') ? getFiled('Q4L7', $record1->userid) : ""; ?></td>
-                <td><?php echo (getFiled('Q4L8',$record1->userid) != '') ? getFiled('Q4L8', $record1->userid) : ""; ?></td>
-                <td><?php echo (getFiled('Q4L9',$record1->userid) != '') ? getFiled('Q4L9', $record1->userid) : ""; ?></td>
-				<td><?php echo (getFiled('Q4L10',$record1->userid) != '') ? getFiled('Q4L10', $record1->userid) : "";?></td>
-				<td><?php echo (getFiled('Q4L11',$record1->userid) != '') ? getFiled('Q4L11', $record1->userid) : "";?> </td>
-				<td><?php echo (getFiled('Q4L12',$record1->userid) != '') ? getFiled('Q4L12', $record1->userid) : "";?></td>
-				<td><?php echo (getFiled('Q4L1',$record1->userid) != '') ? getFiled('Q4L1', $record1->userid) : "";  ?></td>
-				<td><?php echo (getFiled('Q4L5',$record1->userid) != '') ? getFiled('Q4L5', $record1->userid) : ""; ?></td>
-				<td><?php echo 'N/A'; ?></td>
-				<td><?php echo (getFiled('Q5L1S3',$record1->userid) != '') ? getFiled('Q5L1S3', $record1->userid) : ""; ?></td> 	
-				<td><?php echo (getFiled('Q5L1S1',$record1->userid) != '') ? getFiled('Q5L1S1', $record1->userid) : "";  ?></td>
-				<td><?php echo (getFiled('Q5L1S2',$record1->userid) != '') ? getFiled('Q5L1S2', $record1->userid) : "";  ?></td>
-				<td><?php echo (getFiled('Q5L2S3',$record1->userid) != '') ? getFiled('Q5L2S3', $record1->userid) : "";  ?></td>
-				<td><?php echo (getFiled('Q5L2S1',$record1->userid) != '') ? getFiled('Q5L2S1', $record1->userid) : "";  ?></td>
-				<td><?php echo (getFiled('Q5L2S2',$record1->userid) != '') ? getFiled('Q5L2S2', $record1->userid) : "";  ?></td>
-				<td><?php echo (getFiled('Q6L1',$record1->userid) != '') ? getFiled('Q6L1', $record1->userid) : "";  ?></td>
-				<td><?php echo 'N/A'; ?></td>
+          <?php $i=0; foreach($records as $r){ ?>
+            <tr role="row" class="<?php echo ($i%2==0) ? "even" : "odd"; ?>">
+				<td><?php echo $i + 1; ?></td>
+				<td><?php echo $r->id; ?></td>
+                <td><?php echo $r->name; ?></td>
+                <td><?php echo $r->category; ?></td>
+                <td><?php echo $r->population; ?></td>
+                <td><?php echo $r->Q4L1; ?></td>
+                <td><?php echo $r->Q4L2; ?></td>
+                <td><?php echo $r->Q4L3; ?></td>
+				<td><?php echo $r->Q4L4; ?></td>
+                <td><?php echo $r->Q4L5; ?></td>
+                <td><?php echo $r->Q4L6; ?></td>
+                <td><?php echo $r->Q4L7; ?></td>
+                <td><?php echo $r->Q4L8; ?></td>
+                <td><?php echo $r->Q4L9; ?></td>
+				<td><?php echo $r->Q4L10; ?></td>
+				<td><?php echo $r->Q4L11; ?></td>
+				<td><?php echo $r->Q4L12; ?></td>
+				<td><?php echo $r->Q4L1; ?></td>
+				<td><?php echo $r->Q4L5; ?></td>
+				<td><?php echo $r->PercentageArea; ?></td>
+				<td><?php echo $r->Q5L1S3; ?></td> 	
+				<td><?php echo $r->Q5L1S1; ?></td>
+				<td><?php echo $r->Q5L1S2; ?></td>
+				<td><?php echo $r->Q5L2S3; ?></td>
+				<td><?php echo $r->Q5L2S1; ?></td>
+				<td><?php echo $r->Q5L2S2; ?></td>
+				<td><?php echo $r->Q6L1; ?></td>
+				<td><?php echo $r->Point; ?></td>
               
             </tr>
           <?php $i++; } ?>
