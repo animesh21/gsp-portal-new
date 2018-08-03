@@ -1530,4 +1530,129 @@ $("#airnext").click(function(e){
 	}
    }
 });
+	
+/*This Code Used For Stopping Enter 'E' Alphabet In Textbox Type 'Number'*/
+$(document).ready(function(){
+   $("input[type='number']").keypress(function (evt) {
+    if (evt.which != 8 && evt.which != 0 && evt.which < 48 || evt.which > 57)
+    {
+        evt.preventDefault();
+    }
+  });
+  $('input[type=number]').on('wheel', function(e){
+    return false;
+  });	
+});	
+$("#airnext").click(function(e){
+  /**Q1How many classrooms does your school have?**/ 
+  if($("input[name='Q4A1']").attr('placeholder')=="" && $("input[name='Q4A1']").val()==""){
+    alert("Q1: How many classrooms does your school have?");
+	e.preventDefault();
+  }
+  /**Q2: Are the rooms in your school well-ventilated?**/ 
+  if($("input[name='Q5A2']").attr('placeholder')=="" && $("input[name='Q5A2']").val()==""){
+    alert("Q2: Are the rooms in your school well-ventilated");
+	e.preventDefault();
+  }
+  /**Q3: What is the ownership of the vehicles used by your school? Please choose what is applicable.**/
+  if($("input[name='Q6A1']:checked").val()==""){
+    alert("Q3: What is the ownership of the vehicles used by your school? Please choose what is applicable.");
+  }
+  /**Q5: How many students suffer from breathing and coughing problems? **/ 
+  if($("input[name='Q8A1']").attr('placeholder')=="" && $("input[name='Q8A1']").val()==""){
+    alert("Q5: How many students suffer from breathing and coughing problems? ");
+	e.preventDefault();
+  }
+  /**Q4: Please specify how many members of the school community use each type of transport: **/ 
+  /*Q4(a) Sustainable Motorised Vehicles*/
+  if($("input[name='Q7A1S1']").attr('placeholder')=="" && $("input[name='Q7A1S1']").val()=="" || $("input[name='Q7A1S2']").attr('placeholder')=="" && $("input[name='Q7A1S2']").val()=="" || $("input[name='Q7A1S3']").attr('placeholder')=="" && $("input[name='Q7A1S3']").val()==""){
+    alert("Q4a: Sustainable Motorised Vehicles (School bus)");
+	e.preventDefault();
+  }
+   if($("input[name='Q7A2S1']").attr('placeholder')=="" && $("input[name='Q7A2S1']").val()=="" || $("input[name='Q7A2S2']").attr('placeholder')=="" && $("input[name='Q7A2S2']").val()=="" || $("input[name='Q7A2S3']").attr('placeholder')=="" && $("input[name='Q7A2S3']").val()==""){
+    alert("Q4a: Sustainable Motorised Vehicles (Public bus)");
+	e.preventDefault();
+  }
+    if($("input[name='Q7A3S1']").attr('placeholder')=="" && $("input[name='Q7A3S1']").val()=="" || $("input[name='Q7A3S2']").attr('placeholder')=="" && $("input[name='Q7A3S2']").val()=="" || $("input[name='Q7A3S3']").attr('placeholder')=="" && $("input[name='Q7A3S3']").val()==""){
+    alert("Q4a: Sustainable Motorised Vehicles (School transport (other than bus))");
+	e.preventDefault();
+  }
+  
+   if($("input[name='Q7A4S1']").attr('placeholder')=="" && $("input[name='Q7A4S1']").val()=="" || $("input[name='Q7A4S2']").attr('placeholder')=="" && $("input[name='Q7A4S2']").val()=="" || $("input[name='Q7A4S3']").attr('placeholder')=="" && $("input[name='Q7A4S3']").val()==""){
+    alert("Q4a: Sustainable Motorised Vehicles (Public transport (other than bus))");
+	e.preventDefault();
+  }
+  
+  if($("input[name='Q7A5S1']").attr('placeholder')=="" && $("input[name='Q7A5S1']").val()=="" || $("input[name='Q7A5S2']").attr('placeholder')=="" && $("input[name='Q7A5S2']").val()=="" || $("input[name='Q7A5S3']").attr('placeholder')=="" && $("input[name='Q7A5S3']").val()==""){
+    alert("Q4a: Sustainable Motorised Vehicles (Taxi four-wheeler)");
+	e.preventDefault();
+  }
+  
+  if($("input[name='Q7A6S1']").attr('placeholder')=="" && $("input[name='Q7A6S1']").val()=="" || $("input[name='Q7A6S2']").attr('placeholder')=="" && $("input[name='Q7A6S2']").val()=="" || $("input[name='Q7A6S3']").attr('placeholder')=="" && $("input[name='Q7A6S3']").val()==""){
+    alert("Q4a: Sustainable Motorised Vehicles (Taxi three-wheeler)");
+	e.preventDefault();
+  }
+  /*Q4(b) Private Vehicles*/
+  if($("input[name='Q7A7S1']").attr('placeholder')=="" && $("input[name='Q7A7S1']").val()=="" || $("input[name='Q7A7S2']").attr('placeholder')=="" && $("input[name='Q7A7S2']").val()=="" || $("input[name='Q7A7S3']").attr('placeholder')=="" && $("input[name='Q7A7S3']").val()==""){
+    alert("Q4a: Private Vehicles (Taxi three-wheeler)");
+	e.preventDefault();
+  }
+  if($("input[name='Q7A8S1']").attr('placeholder')=="" && $("input[name='Q7A8S1']").val()=="" || $("input[name='Q7A8S2']").attr('placeholder')=="" && $("input[name='Q7A8S2']").val()=="" || $("input[name='Q7A8S3']").attr('placeholder')=="" && $("input[name='Q7A8S3']").val()==""){
+    alert("Q4b: Private Vehicles (Personal four-wheeler)");
+	e.preventDefault();
+  }
+  /*Q4(b) Private Vehicles*/
+  if($("input[name='Q7A9S1']").attr('placeholder')=="" && $("input[name='Q7A9S1']").val()=="" || $("input[name='Q7A9S2']").attr('placeholder')=="" && $("input[name='Q7A9S2']").val()=="" || $("input[name='Q7A9S3']").attr('placeholder')=="" && $("input[name='Q7A9S3']").val()==""){
+    alert("Q4b: Non-Polluting Mode (Bicycle)");
+	e.preventDefault();
+  }
+  if($("input[name='Q7A10S1']").attr('placeholder')=="" && $("input[name='Q7A10S1']").val()=="" || $("input[name='Q7A10S2']").attr('placeholder')=="" && $("input[name='Q7A10S2']").val()=="" || $("input[name='Q7A10S3']").attr('placeholder')=="" && $("input[name='Q7A10S3']").val()==""){
+    alert("Q4a: Non-Polluting Mode (On foot)");
+	e.preventDefault();
+  }
+  if($("input[name='Q7A11S1']").attr('placeholder')=="" && $("input[name='Q7A11S1']").val()=="" || $("input[name='Q7A11S2']").attr('placeholder')=="" && $("input[name='Q7A11S2']").val()=="" || $("input[name='Q7A11S3']").attr('placeholder')=="" && $("input[name='Q7A11S3']").val()==""){
+    alert("Q4a: Non-Polluting Mode (Others (non-motorized))");
+	e.preventDefault();
+  }
+  
+  if($("input[name='Q6A1']:checked").val()==3){
+  /**Q3(a): Provide details of school-owned motorised vehicles **/
+  if($("input[name='Q6A2S1B1']").attr('placeholder')=="" && $("input[name='Q6A2S1B1']").val()=="" || $("input[name='Q6A2S1C1']").attr('placeholder')=="" && $("input[name='Q6A2S1C1']").val()=="" || $("input[name='Q6A2S1V1']").attr('placeholder')=="" && $("input[name='Q6A2S1V1']").val()=="" || $("input[name='Q6A2S1O1']").attr('placeholder')=="" && $("input[name='Q6A2S1O1']").val()==""){
+    alert("Q3a: Provide details of school-owned motorised vehicles (No. of vehicles))");
+	e.preventDefault();
+  }
+   if($("input[name='Q6A2S1B2']").attr('placeholder')=="" && $("input[name='Q6A2S1B2']").val()=="" || $("input[name='Q6A2S1C2']").attr('placeholder')=="" && $("input[name='Q6A2S1C2']").val()=="" || $("input[name='Q6A2S1V2']").attr('placeholder')=="" && $("input[name='Q6A2S1V2']").val()=="" || $("input[name='Q6A2S1O2']").attr('placeholder')=="" && $("input[name='Q6A2S1O2']").val()==""){
+    alert("Q3a: Provide details of school-owned motorised vehicles (No. of vehicles more than eight years old))");
+	e.preventDefault();
+  }
+  if($("input[name='Q6A2S1B3']").attr('placeholder')=="" && $("input[name='Q6A2S1B3']").val()=="" || $("input[name='Q6A2S1C3']").attr('placeholder')=="" && $("input[name='Q6A2S1C3']").val()=="" || $("input[name='Q6A2S1V3']").attr('placeholder')=="" && $("input[name='Q6A2S1V3']").val()=="" || $("input[name='Q6A2S1O3']").attr('placeholder')=="" && $("input[name='Q6A2S1O3']").val()==""){
+    alert("Q3a: Provide details of school-owned motorised vehicles (No. of Air conditioned vehicles))");
+	e.preventDefault();
+  }
+   if($("input[name='Q6A2S1B5']").attr('placeholder')=="" && $("input[name='Q6A2S1B5']").val()=="" || $("input[name='Q6A2S1C5']").attr('placeholder')=="" && $("input[name='Q6A2S1C5']").val()=="" || $("input[name='Q6A2S1V5']").attr('placeholder')=="" && $("input[name='Q6A2S1V5']").val()=="" || $("input[name='Q6A2S1O5']").attr('placeholder')=="" && $("input[name='Q6A2S1O5']").val()==""){
+    alert("Q3a: Provide details of school-owned motorised vehicles (Authorised parking available))");
+	e.preventDefault();
+  }
+  /**Q3(b): Specify the type of fuel used by your school’s vehicles **/
+   if($("input[name='Q6A2S3D1']").attr('placeholder')=="" && $("input[name='Q6A2S3D1']").val()=="" || $("input[name='Q6A2S3P1']").attr('placeholder')=="" && $("input[name='Q6A2S3P1']").val()=="" || $("input[name='Q6A2S3L1']").attr('placeholder')=="" && $("input[name='Q6A2S3L1']").val()=="" || $("input[name='Q6A2S3C1']").attr('placeholder')=="" && $("input[name='Q6A2S3C1']").val()=="" || $("input[name='Q6A2S3E1']").attr('placeholder')=="" && $("input[name='Q6A2S3E1']").val()=="" || $("input[name='Q6A2S3H1']").attr('placeholder')=="" && $("input[name='Q6A2S3H1']").val()==""){
+    alert("Q3b: Specify the type of fuel used by your school’s vehicles:  (Buses))");
+	e.preventDefault();
+  }
+  
+   if($("input[name='Q6A2S3B1']").attr('placeholder')=="" && $("input[name='Q6A2S3B1']").val()=="" || $("input[name='Q6A2S3D2']").attr('placeholder')=="" && $("input[name='Q6A2S3D2']").val()=="" || $("input[name='Q6A2S3P2']").attr('placeholder')=="" && $("input[name='Q6A2S3P2']").val()=="" || $("input[name='Q6A2S3L2']").attr('placeholder')=="" && $("input[name='Q6A2S3L2']").val()=="" || $("input[name='Q6A2S3C2']").attr('placeholder')=="" && $("input[name='Q6A2S3C2']").val()=="" || $("input[name='Q6A2S3E2']").attr('placeholder')=="" && $("input[name='Q6A2S3E2']").val()==""){
+    alert("Q3b: Specify the type of fuel used by your school’s vehicles:  (Cars))");
+	e.preventDefault();
+  }
+  
+   if($("input[name='Q6A2S3D3']").attr('placeholder')=="" && $("input[name='Q6A2S3D3']").val()=="" || $("input[name='Q6A2S3P3']").attr('placeholder')=="" && $("input[name='Q6A2S3P3']").val()=="" || $("input[name='Q6A2S3L3']").attr('placeholder')=="" && $("input[name='Q6A2S3L3']").val()=="" || $("input[name='Q6A2S3C3']").attr('placeholder')=="" && $("input[name='Q6A2S3C3']").val()=="" || $("input[name='Q6A2S3E3']").attr('placeholder')=="" && $("input[name='Q6A2S3E3']").val()=="" || $("input[name='Q6A2S3H3']").attr('placeholder')=="" && $("input[name='Q6A2S3H3']").val()==""){
+    alert("Q3b: Specify the type of fuel used by your school’s vehicles:  (Vans))");
+	e.preventDefault();
+  }
+  
+   if($("input[name='Q6A2S3D4']").attr('placeholder')=="" && $("input[name='Q6A2S3D4']").val()=="" || $("input[name='Q6A2S3P4']").attr('placeholder')=="" && $("input[name='Q6A2S3P4']").val()=="" || $("input[name='Q6A2S3L4']").attr('placeholder')=="" && $("input[name='Q6A2S3L4']").val()=="" || $("input[name='Q6A2S3C4']").attr('placeholder')=="" && $("input[name='Q6A2S3C4']").val()=="" || $("input[name='Q6A2S3E4']").attr('placeholder')=="" && $("input[name='Q6A2S3E4']").val()=="" || $("input[name='Q6A2S3H4']").attr('placeholder')=="" && $("input[name='Q6A2S3H4']").val()==""){
+    alert("Q3b: Specify the type of fuel used by your school’s vehicles:  (Vans))");
+	e.preventDefault();
+  }
+ }
+}); 	
 </script>
