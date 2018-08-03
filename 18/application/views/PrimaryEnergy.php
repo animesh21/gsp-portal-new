@@ -1575,7 +1575,7 @@ else echo "0"; ?>"
                         });
                     });
 
-*Teacher Record Validation*/
+/*Teacher Record Validation*/
 /*Teachers (maximum of three teachers can be part of the team): */
 $("#energynext").click(function(e){
    if($("#Q1E1S1").attr('placeholder')==""  || $("#Q1E1S3").attr('placeholder')==""  || $("#Q1E1S2").attr('placeholder')==""){ 
