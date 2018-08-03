@@ -13,6 +13,7 @@ class Audit_started extends CI_Controller {
             redirect(base_url('admin/login'));
         }
         $this->load->model('admin/Audit_started_model');
+	    $this->load->model('admin/Report');
         $this->load->helper(array('common_helper', 'form', 'download'));
         $this->load->library('form_validation');
     }
