@@ -510,7 +510,7 @@ class Report extends CI_Model {
 			
 		}
 	
-	        public function registerparticipationBystate($state)
+	       public function registerparticipationBystate($state)
 		{
 		return $this->db->select('*')
 			            ->from('gsp_school')
@@ -618,7 +618,7 @@ class Report extends CI_Model {
 					 ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
 			         ->where('a.state',$state)
 					 ->where('b.questionid','Q1G2')
-                     ->where('b.answer <',5)
+                     ->where('b.answer <',6)
 					 ->get()
 					 ->result();
 			
@@ -633,7 +633,7 @@ class Report extends CI_Model {
 					   ->where("a.progress >",'5')
 					   ->where("a.progress <",'100')
 					   ->where('b.questionid','Q1G2')
-                       ->where('b.answer <',5)
+                       ->where('b.answer <',6)
 		               ->get()
 					   ->result();
 		}
@@ -646,7 +646,7 @@ class Report extends CI_Model {
 			        ->where('a.state',$state)
 				    ->where("a.progress =",'100')
 				    ->where('b.questionid','Q1G2')
-                    ->where('b.answer <',5)
+                    ->where('b.answer <',6)
 					->get()
 					->result();
 			
@@ -660,8 +660,155 @@ class Report extends CI_Model {
 			         ->where('a.state',$state)
                      ->where("a.progress=",'5')
 					 ->where('b.questionid','Q1G2')
-                     ->where('b.answer <',5)
+                     ->where('b.answer <',6)
 		             ->get()
+					 ->result();
+			
+		}
+		
+		public function registerparticipationBystateall()
+		{
+			return $this->db->select('a.*')
+			         ->from('gsp_school As a')
+					 ->get()
+					 ->result();
+					 
+			
+		}
+		
+		public function startparticipationBystateall()
+		{
+			 return $this->db->select('a.*')
+			           ->from('gsp_school As a')
+					  ->where("a.progress >",'5')
+					   ->where("a.progress <",'100')
+					   ->get()
+					   ->result();
+		}
+		
+		public function completeparticipationBystateall()
+		{
+			return $this->db->select('a.*')
+			        ->from('gsp_school As a')
+				   ->where("a.progress =",'100')
+				   ->get()
+					->result();
+			
+		}
+		
+		public function notstartparticipationBystateall()
+		{
+			return $this->db->select('a.*')
+			         ->from('gsp_school As a')
+					->where("a.progress=",'5')
+					 ->get()
+					 ->result();
+			
+		}
+		
+		             
+		
+		public function registerparticipationBystateallsecondary()
+		{
+			return $this->db->select('a.*')
+			         ->from('gsp_school As a')
+					 ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
+					 ->where('b.questionid','Q1G2')
+                     ->where('b.answer  >=',6)
+					 ->get()
+					 ->result();
+					//echo $this->db->last_query();exit; 
+			
+		}
+		
+		public function startparticipationBystateallsecondary()
+		{
+			 return $this->db->select('a.*')
+			           ->from('gsp_school As a')
+					    ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
+					     ->where("a.progress >",'5')
+					    ->where("a.progress <",'100')
+					    ->where('b.questionid','Q1G2')
+                        ->where('b.answer >=',6)
+					    ->get()
+					    ->result();
+		}
+		
+		public function completeparticipationBystateallsecondary()
+		{
+			return $this->db->select('a.*')
+			        ->from('gsp_school As a')
+					->join('gsp_answers as b', 'a.userid=b.userid', 'left')
+				   ->where("a.progress =",'100')
+				    ->where('b.questionid','Q1G2')
+                     ->where('b.answer >=',6)
+				   ->get()
+					->result();
+			
+		}
+		
+		public function notstartparticipationBystateallsecondary()
+		{
+			return $this->db->select('a.*')
+			         ->from('gsp_school As a')
+					  ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
+					->where("a.progress=",'5')
+					->where('b.questionid','Q1G2')
+                     ->where('b.answer >=',6)
+					 ->get()
+					 ->result();
+			
+		}
+		
+		
+		public function registerparticipationBystateallprimary()
+		{
+			return $this->db->select('a.*')
+			         ->from('gsp_school As a')
+					 ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
+					 ->where('b.questionid','Q1G2')
+                     ->where('b.answer <',6)
+					 ->get()
+					 ->result();
+					 
+			
+		}
+		
+		public function startparticipationBystateallprimary()
+		{
+			 return $this->db->select('a.*')
+			           ->from('gsp_school As a')
+					    ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
+					     ->where("a.progress >",'5')
+					    ->where("a.progress <",'100')
+					    ->where('b.questionid','Q1G2')
+                       ->where('b.answer <',6)
+					    ->get()
+					    ->result();
+		}
+		
+		public function completeparticipationBystateallprimary()
+		{
+			return $this->db->select('a.*')
+			        ->from('gsp_school As a')
+					->join('gsp_answers as b', 'a.userid=b.userid', 'left')
+				   ->where("a.progress =",'100')
+				    ->where('b.questionid','Q1G2')
+                    ->where('b.answer <',6)
+				   ->get()
+					->result();
+			
+		}
+		
+		public function notstartparticipationBystateallprimary()
+		{
+			return $this->db->select('a.*')
+			         ->from('gsp_school As a')
+					  ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
+					->where("a.progress=",'5')
+					->where('b.questionid','Q1G2')
+                    ->where('b.answer <',6)
+					 ->get()
 					 ->result();
 			
 		}
