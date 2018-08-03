@@ -1439,11 +1439,11 @@ class Audit_started_model extends CI_Model {
 				
 		if($school==1){
 		
-                          $this->db->where('d.answer >',5);
+                           $this->db->where('d.answer >=',6);
 					      $this->db->where_in('state',$region1);
-		                  $sql1 = $this->db->select('a.*, b.name AS state_name,c.name As district_name')
-                           ->from('gsp_school AS a')
-                           ->join('states AS b', 'a.state=b.id', 'left')
+		                  $sql = $this->db->select('a.*, b.name AS state_name,c.name As district_name')
+                            ->from('gsp_school AS a')
+                            ->join('states AS b', 'a.state=b.id', 'left')
 		   	                ->join('cities AS c', 'a.district=c.id', 'left')
 						    ->join('gsp_answers as d', 'a.userid=d.userid', 'left')
 						->like('d.questionid','Q1G2')
@@ -1451,14 +1451,14 @@ class Audit_started_model extends CI_Model {
 						->group_by('a.id')
                         ->get()->result();
 						
-						 $regionss = join("','",$region1);
-	                  $sql2=$this->db->query("SELECT gsp_school.*, states.name AS state_name,cities.name As district_name FROM `gsp_school` INNER JOIN states ON gsp_school.state=states.id INNER JOIN cities ON gsp_school.district=cities.id WHERE `userid` NOT IN(SELECT userid FROM gsp_answers) AND `state`IN ('$regionss')")->result(); 
+						 /* $regionss = join("','",$region1);
+	                    $sql2=$this->db->query("SELECT gsp_school.*, states.name AS state_name,cities.name As district_name FROM `gsp_school` INNER JOIN states ON gsp_school.state=states.id INNER JOIN cities ON gsp_school.district=cities.id WHERE `userid` NOT IN(SELECT userid FROM gsp_answers) AND `state`IN ('$regionss')")->result();  */
 						
-					$sql3=array_merge($sql1,$sql2);	
+					        /* $sql3=array_merge($sql1,$sql2);	 */
 						
 						
 						
-						return $sql3;
+						return $sql;
 						//echo $this->db->last_query(); exit;
 				}
 		
