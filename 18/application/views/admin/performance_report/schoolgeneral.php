@@ -49,7 +49,7 @@
 		?>
     	    <tr>
     		<td><?php echo $i + 1; ?></td>
-    		<td><?php echo $record1[$i]->school_id; ?></td>
+    		<td><?php echo $record1[$i]->id; ?></td>
     		<td><?php echo $record1[$i]->name; ?></td>
     		<td><?php echo $record1[$i]->address1; ?></td>
     		<td><?php echo $record1[$i]->address2; ?></td>
