@@ -91,7 +91,7 @@
                 type: 'pie'
             },
             title: {
-                text: 'Participation Chart for Church of South India '
+                text: 'Participation Chart for <?php echo getStateByID($state_id1);?> '
             },
             tooltip: {
                 pointFormat: '<b>{point.y} Schools</b>'
