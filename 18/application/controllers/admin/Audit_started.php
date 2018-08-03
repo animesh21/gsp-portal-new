@@ -43,6 +43,31 @@ class Audit_started extends CI_Controller {
 		$state=$this->input->post('state');
 		$school=$this->input->post('school');
 		
+		if($school==2 && $state==1)
+		{
+			$data['registerd_audit_1']=$this->Report->registerparticipationBystateall();
+			$data['total_started_audit_1']=$this->Report->startparticipationBystateall();
+		    $data['completed_1']=$this->Report->completeparticipationBystateall();
+		    $data['total_notstarted_audit_1']=$this->Report->notstartparticipationBystateall();
+			
+		}else if($school==1 && $state==1){
+			
+			$data['registerd_audit_1']=$this->Report->registerparticipationBystateallsecondary();
+			$data['total_started_audit_1']=$this->Report->startparticipationBystateallsecondary();
+		    $data['completed_1']=$this->Report->completeparticipationBystateallsecondary();
+		    $data['total_notstarted_audit_1']=$this->Report->notstartparticipationBystateallsecondary();
+			
+			
+		} else if($school==0 && $state==1){
+			
+			$data['registerd_audit_1']=$this->Report->registerparticipationBystateallprimary();
+			$data['total_started_audit_1']=$this->Report->startparticipationBystateallprimary();
+		    $data['completed_1']=$this->Report->completeparticipationBystateallprimary();
+		    $data['total_notstarted_audit_1']=$this->Report->notstartparticipationBystateallprimary();
+			
+		}
+		else{
+		
 		if($school==0)
 		{
 		   $data['registerd_audit_1']=$this->Report->registerparticipationBystateprimary($state);
@@ -67,6 +92,7 @@ class Audit_started extends CI_Controller {
 		   $data['total_notstarted_audit_1']=$this->Report->notstartparticipationBystate($state);
 		}
 		
+		}
 		
 		
 		$data['record'] = $this->Audit_started_model->getStateWiseSchool($state,$school);   
