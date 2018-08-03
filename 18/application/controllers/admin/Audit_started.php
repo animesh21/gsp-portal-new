@@ -124,10 +124,76 @@ class Audit_started extends CI_Controller {
         $data['school'] = $this->input->post('school');
 		 $region=$this->input->post('region');
 		 $school=$this->input->post('school');
-		 $data['region']= $region;		
-		 $data['record'] = $this->Audit_started_model->getRegionWiseSchool($region,$school);   
+		 
+		 if($region=='East')
+		{
+		  $region1=array("36", "26", "16", "1", "5"); //$east_india
+		}
+		
+		if($region=='West')
+		{
+		  $region1=array("12", "21", "11", "9", "8"); //$west_india
+		}
+		
+		if($region=='North')
+		{
+		  $region1=array("28", "15", "13", "29", "14", "34", "35", "10", "6"); //$north_india
+		}
+		
+		if($region=='South')
+		{
+		  $region1=array("2", "17", "18", "31", "32", "19", "27"); //$south_india
+		}
+		
+		if($region=='North East')
+		{
+		  $region1=array("3", "4", "22", "23", "24", "25", "30", "33"); //$north_east_india
+		}
+		
+		if($region=='Central')
+		{
+		  $region1=array("7", "20"); //$central_india
+		}
+		
+		if($region=='All')
+		{
+		  $region1=array("3","36", "26", "16", "1", "5","12", "21", "11", "9", "8","28", "15", "13", "29", "14", "34", "35", "10", "6","2", "17", "18", "31", "32", "19", "27","7", "20","4", "22", "23", "24", "25", "30", "33"); //$all
+		}
+		 
+		 
+		 
+		 if($school==0)
+		{
+		   $data['registerd_audit_1']=$this->Report->registerparticipationByregionprimary($region1);
+		   $data['total_started_audit_1']=$this->Report->startparticipationByregionprimary($region1);
+		   $data['completed_1']=$this->Report->completeparticipationByregionprimary($region1);
+		   $data['total_notstarted_audit_1']=$this->Report->notstartparticipationByregionprimary($region1);
+		}
+		
+		if($school==1)
+		{
+		   $data['registerd_audit_1']=$this->Report->registerparticipationByregionsecondary($region1);
+		   $data['total_started_audit_1']=$this->Report->startparticipationByregionsecondary($region1);
+		   $data['completed_1']=$this->Report->completeparticipationByregionsecondary($region1);
+		   $data['total_notstarted_audit_1']=$this->Report->notstartparticipationByregionsecondary($region1);
+		}
+		
+		if($school==2)
+		{
+		   $data['registerd_audit_1']=$this->Report->registerparticipationByregion($region1);
+		   $data['total_started_audit_1']=$this->Report->startparticipationByregion($region1);
+		   $data['completed_1']=$this->Report->completeparticipationByregion($region1);
+		   $data['total_notstarted_audit_1']=$this->Report->notstartparticipationByregion($region1);
+		}
+		 
+		 
+		 
+		 
+		 $data['region']= $region;	
+          $data['record'] = $this->Audit_started_model->getRegionWiseSchool($region,$school);   
          $this->load->view('admin/includes/template', $data);
     }
+
 	
 	
 	
