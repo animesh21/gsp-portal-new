@@ -32,25 +32,46 @@ class Audit_started extends CI_Controller {
         $this->load->view('admin/includes/template', $data);
     }
 
-    public function search() {
+     public function search() {
         $data['main'] = 'admin/audit/search';
         $data['title'] = 'Home | Audit State Wise';
         $data['states'] = getStates();
         $data['states'][1]="All";
         $data['val'] = $this->input->post('state');
         $data['school'] = $this->input->post('school');
-      
-        $state=$this->input->post('state');
-        $school=$this->input->post('school');
-	    
-        $data['record'] = $this->Audit_started_model->getStateWiseSchool($state,$school);   
-	 
-       $data['state_id1']=$state;
-        
-        //echo '<pre>'; print_r($data['record']); exit;
+		$state=$this->input->post('state');
+		$school=$this->input->post('school');
+		
+		if($school==0)
+		{
+		   $data['registerd_audit_1']=$this->Report->registerparticipationBystateprimary($state);
+		   $data['total_started_audit_1']=$this->Report->startparticipationBystateprimary($state);
+		   $data['completed_1']=$this->Report->completeparticipationBystateprimary($state);
+		   $data['total_notstarted_audit_1']=$this->Report->notstartparticipationBystateprimary($state);
+		}
+		
+		if($school==1)
+		{
+		   $data['registerd_audit_1']=$this->Report->registerparticipationBystatesecondary($state);
+		   $data['total_started_audit_1']=$this->Report->startparticipationBystatesecondary($state);
+		   $data['completed_1']=$this->Report->completeparticipationBystatesecondary($state);
+		   $data['total_notstarted_audit_1']=$this->Report->notstartparticipationBystatesecondary($state);
+		}
+		
+		if($school==2)
+		{
+		   $data['registerd_audit_1']=$this->Report->registerparticipationBystate($state);
+		   $data['total_started_audit_1']=$this->Report->startparticipationBystate($state);
+		   $data['completed_1']=$this->Report->completeparticipationBystate($state);
+		   $data['total_notstarted_audit_1']=$this->Report->notstartparticipationBystate($state);
+		}
+		
+		
+		
+		$data['record'] = $this->Audit_started_model->getStateWiseSchool($state,$school);   
+	    $data['state_id1']=$state;
         $this->load->view('admin/includes/template', $data);
     }
-
     /*
      * State Wise Excel Generation
      */
