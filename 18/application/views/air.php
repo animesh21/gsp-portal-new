@@ -2164,8 +2164,8 @@ $("#airnext").click(function(e){
 /*Student Record Validation*/
 /*Student (maximum of five staff can be part of the team): */
 $("#airnext").click(function(e){
-   if($("#Q3E1S1").attr('placeholder')==""  || $("#Q3E1S2").attr('placeholder')==""  || $("#Q3E1S3").attr('placeholder')==""){ 
-    if($("#Q3E1S1").val()==""  || $("#Q3E1S2").val()==""  || $("#Q3E1S3").val()==""){ 
+   if($("#Q3A1S1").attr('placeholder')==""  || $("#Q3A1S2").attr('placeholder')==""  || $("#Q3A1S3").attr('placeholder')==""){ 
+    if($("#Q3A1S1").val()==""  || $("#Q3E1S2").val()==""  || $("#Q3E1S3").val()==""){ 
     alert("School Must Add Administrative Staff  First Name, Last Name & Grade.");
 	e.preventDefault();
 	}
