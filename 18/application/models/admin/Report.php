@@ -510,4 +510,160 @@ class Report extends CI_Model {
 			
 		}
 	
+	        public function registerparticipationBystate($state)
+		{
+		return $this->db->select('*')
+			            ->from('gsp_school')
+			         ->where('state',$state)
+					 ->get()
+					 ->result();
+		   
+			
+		}
+		
+		public function startparticipationBystate($state)
+		{
+			return $this->db->select('*')
+			         ->from('gsp_school')
+					 ->where('state',$state)
+					 ->where("progress >",'5')
+					 ->where("progress <",'100')
+		             ->get()
+					 ->result();
+		}
+		
+		public function completeparticipationBystate($state)
+		{
+			return $this->db->select('*')
+			         ->from('gsp_school')
+			->where('state',$state)
+		   ->where("progress =",'100')
+		    ->get()
+					 ->result();
+			
+		}
+		
+		public function notstartparticipationBystate($state)
+		{
+			return $this->db->select('*')
+			         ->from('gsp_school')
+			         ->where('state',$state)
+		             ->where("progress=",'5')
+		             ->get()
+					 ->result();
+			
+		}
+		
+		
+		
+		public function registerparticipationBystatesecondary($state)
+		{
+			return $this->db->select('a.*')
+			         ->from('gsp_school As a')
+					 ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
+			         ->where('a.state',$state)
+					 ->where('b.questionid','Q1G2')
+                     ->where('b.answer >=',6)
+					 ->get()
+					 ->result();
+			
+		}
+		
+		public function startparticipationBystatesecondary($state)
+		{
+			 return $this->db->select('a.*')
+			           ->from('gsp_school As a')
+					   ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
+					   ->where('a.state',$state)
+					   ->where("a.progress >",'5')
+					   ->where("a.progress <",'100')
+					   ->where('b.questionid','Q1G2')
+                       ->where('b.answer >=',6)
+		               ->get()
+					   ->result();
+		}
+		
+		public function completeparticipationBystatesecondary($state)
+		{
+			return $this->db->select('a.*')
+			        ->from('gsp_school As a')
+				    ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
+			        ->where('a.state',$state)
+				    ->where("a.progress =",'100')
+				    ->where('b.questionid','Q1G2')
+                    ->where('b.answer >=',6)
+					->get()
+					->result();
+			
+		}
+		
+		public function notstartparticipationBystatesecondary($state)
+		{
+			return $this->db->select('a.*')
+			         ->from('gsp_school As a')
+					 ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
+			         ->where('a.state',$state)
+                     ->where("a.progress=",'5')
+					 ->where('b.questionid','Q1G2')
+                     ->where('b.answer >=',6)
+		             ->get()
+					 ->result();
+			
+		}
+		
+		public function registerparticipationBystateprimary($state)
+		{
+			return $this->db->select('a.*')
+			         ->from('gsp_school As a')
+					 ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
+			         ->where('a.state',$state)
+					 ->where('b.questionid','Q1G2')
+                     ->where('b.answer <',5)
+					 ->get()
+					 ->result();
+			
+		}
+		
+		public function startparticipationBystateprimary($state)
+		{
+			 return $this->db->select('a.*')
+			           ->from('gsp_school As a')
+					   ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
+					   ->where('a.state',$state)
+					   ->where("a.progress >",'5')
+					   ->where("a.progress <",'100')
+					   ->where('b.questionid','Q1G2')
+                       ->where('b.answer <',5)
+		               ->get()
+					   ->result();
+		}
+		
+		public function completeparticipationBystateprimary($state)
+		{
+			return $this->db->select('a.*')
+			        ->from('gsp_school As a')
+				    ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
+			        ->where('a.state',$state)
+				    ->where("a.progress =",'100')
+				    ->where('b.questionid','Q1G2')
+                    ->where('b.answer <',5)
+					->get()
+					->result();
+			
+		}
+		
+		public function notstartparticipationBystateprimary($state)
+		{
+			return $this->db->select('a.*')
+			         ->from('gsp_school As a')
+					 ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
+			         ->where('a.state',$state)
+                     ->where("a.progress=",'5')
+					 ->where('b.questionid','Q1G2')
+                     ->where('b.answer <',5)
+		             ->get()
+					 ->result();
+			
+		}
+	
 }
