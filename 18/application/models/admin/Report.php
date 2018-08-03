@@ -813,4 +813,170 @@ class Report extends CI_Model {
 			
 		}
 	
+	/* Region Graph */
+		
+		
+		
+		public function registerparticipationByregionprimary($region1)
+		{
+			return $this->db->select('a.*')
+			         ->from('gsp_school As a')
+					 ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
+					 ->where_in('a.state',$region1)
+					 ->where('b.questionid','Q1G2')
+                     ->where('b.answer <',6)
+					 ->get()
+					 ->result();
+					 
+			
+		}
+		
+		public function startparticipationByregionprimary($region1)
+		{
+			 return $this->db->select('a.*')
+			           ->from('gsp_school As a')
+					    ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
+						->where_in('a.state',$region1)
+					     ->where("a.progress >",'5')
+					    ->where("a.progress <",'100')
+					    ->where('b.questionid','Q1G2')
+                       ->where('b.answer <',6)
+					    ->get()
+					    ->result();
+		}
+		
+		public function completeparticipationByregionprimary($region1)
+		{
+			return $this->db->select('a.*')
+			        ->from('gsp_school As a')
+					->join('gsp_answers as b', 'a.userid=b.userid', 'left')
+					->where_in('a.state',$region1)
+				   ->where("a.progress =",'100')
+				    ->where('b.questionid','Q1G2')
+                    ->where('b.answer <',6)
+				   ->get()
+					->result();
+			
+		}
+		
+		public function notstartparticipationByregionprimary($region1)
+		{
+			return $this->db->select('a.*')
+			         ->from('gsp_school As a')
+					  ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
+					  ->where_in('a.state',$region1)
+					->where("a.progress=",'5')
+					->where('b.questionid','Q1G2')
+                    ->where('b.answer <',6)
+					 ->get()
+					 ->result();
+			
+		}
+		
+		
+			
+		public function registerparticipationByregionsecondary($region1)
+		{
+			return $this->db->select('a.*')
+			         ->from('gsp_school As a')
+					 ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
+					 ->where_in('a.state',$region1)
+					 ->where('b.questionid','Q1G2')
+                     ->where('b.answer  >=',6)
+					 ->get()
+					 ->result();
+					//echo $this->db->last_query();exit; 
+			
+		}
+		
+		public function startparticipationByregionsecondary($region1)
+		{
+			 return $this->db->select('a.*')
+			           ->from('gsp_school As a')
+					    ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
+						->where_in('a.state',$region1)
+					     ->where("a.progress >",'5')
+					    ->where("a.progress <",'100')
+					    ->where('b.questionid','Q1G2')
+                        ->where('b.answer >=',6)
+					    ->get()
+					    ->result();
+		}
+		
+		public function completeparticipationByregionsecondary($region1)
+		{
+			return $this->db->select('a.*')
+			        ->from('gsp_school As a')
+					->join('gsp_answers as b', 'a.userid=b.userid', 'left')
+					->where_in('a.state',$region1)
+				   ->where("a.progress =",'100')
+				    ->where('b.questionid','Q1G2')
+                     ->where('b.answer >=',6)
+				   ->get()
+					->result();
+			
+		}
+		
+		public function notstartparticipationByregionsecondary($region1)
+		{
+			return $this->db->select('a.*')
+			         ->from('gsp_school As a')
+					  ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
+					  ->where_in('a.state',$region1)
+					->where("a.progress=",'5')
+					->where('b.questionid','Q1G2')
+                     ->where('b.answer >=',6)
+					 ->get()
+					 ->result();
+			
+		}
+		
+		
+		
+		public function registerparticipationByregion($region1)
+		{
+			return $this->db->select('a.*')
+			         ->from('gsp_school As a')
+					 ->where_in('a.state',$region1)
+					 ->get()
+					 ->result();
+					 
+			
+		}
+		
+		public function startparticipationByregion($region1)
+		{
+			 return $this->db->select('a.*')
+			           ->from('gsp_school As a')
+					   ->where_in('a.state',$region1)
+					  ->where("a.progress >",'5')
+					   ->where("a.progress <",'100')
+					   ->get()
+					   ->result();
+		}
+		
+		public function completeparticipationByregion($region1)
+		{
+			return $this->db->select('a.*')
+			        ->from('gsp_school As a')
+					->where_in('a.state',$region1)
+				   ->where("a.progress =",'100')
+				   ->get()
+					->result();
+			
+		}
+		
+		public function notstartparticipationByregion($region1)
+		{
+			return $this->db->select('a.*')
+			         ->from('gsp_school As a')
+					 ->where_in('a.state',$region1)
+					->where("a.progress=",'5')
+					 ->get()
+					 ->result();
+			
+		}
+		
+	
+	
 }
