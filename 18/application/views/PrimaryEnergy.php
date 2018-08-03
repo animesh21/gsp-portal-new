@@ -1605,4 +1605,26 @@ $("#energynext").click(function(e){
 	}
    }
 });
+	$("#energynext").click(function(e){
+/*Q1: Does your school have access to an electricity bill?*/
+if($("input[name='Q4E1']:checked").val()==""){
+alert("Q1: Does your school have access to an electricity bill?");
+	e.preventDefault();
+}
+/*Q2: Does your school have its own vehicles??*/
+if($("input[name='Q5E1']:checked").val()==""){
+ alert("Q2: Does your school have its own vehicles?");
+	e.preventDefault();
+}
+/*Q5: Are there any alternate sources of energy employed/ installed in your school?*/
+if($("input[name='Q9E1']:checked").val()==""){
+ alert("Q5: Are there any alternate sources of energy employed/ installed in your school? ");
+	e.preventDefault();
+}
+/*Q4:  What appliances does your school have?*/
+if($("input[name='Q7E2S1']").val()=="" && $("input[name='Q7E2S1']").attr("placeholder")=="" || $("input[name='Q7E3S1']").val()=="" && $("input[name='Q7E3S1']").attr("placeholder")=="" || $("input[name='Q7E4S1']").val()=="" && $("input[name='Q7E4S1']").attr("placeholder")==""|| $("input[name='Q7E5S1']").val()=="" && $("input[name='Q7E5S1']").attr("placeholder")==""|| $("input[name='Q7E6S1']").val()=="" && $("input[name='Q7E6S1']").attr("placeholder")==""|| $("input[name='Q7E7S1']").val()=="" && $("input[name='Q7E7S1']").attr("placeholder")==""|| $("input[name='Q7E8S1']").val()=="" && $("input[name='Q7E8S1']").attr("placeholder")==""|| $("input[name='Q7E9S1']").val()=="" && $("input[name='Q7E9S1']").attr("placeholder")=="" || $("input[name='Q7E10S1']").val()=="" && $("input[name='Q7E10S1']").attr("placeholder")=="" ){
+ alert("Q4:  What appliances does your school have?");
+	e.preventDefault();
+}
+});
                 </script>
