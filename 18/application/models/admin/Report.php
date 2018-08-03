@@ -18,7 +18,7 @@ class Report extends CI_Model {
 	  {
 	   $this->db->where("state",$regions);
 	   $this->db->where("complete_status",'0');
-	   $this->db->where("progress <",'100');
+	   $this->db->where("progress <=",'100');
 	   //$this->db->where("date_added <=",'2017-11-20'); 
 	   $startAudit=$this->db->count_all_results("gsp_school");
 	   $startAuditSum=$startAuditSum + $startAudit;
