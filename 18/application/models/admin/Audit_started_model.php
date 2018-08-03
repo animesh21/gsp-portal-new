@@ -1305,7 +1305,7 @@ class Audit_started_model extends CI_Model {
 		
            return $sql;	
 	}    
-      elseif($state != 0 && $school != 2){
+      elseif($state != 1 && $school != 2){
         if($school==1){  
         $sql= $this->db->select('a.*,s.name as state_name,c.name As district_name')
                        ->from('gsp_school AS a')
@@ -1335,7 +1335,7 @@ class Audit_started_model extends CI_Model {
                 
             }
         
-      }elseif ($state == 0 && $school != 2) {
+      }elseif ($state == 1 && $school != 2) {
           if($school==1){  
         $sql= $this->db->select('a.*,s.name as state_name,c.name As district_name')
                         ->from('states AS s')
@@ -1366,7 +1366,7 @@ class Audit_started_model extends CI_Model {
                 
             }
             
-        }elseif ($state != 0 && $school == 2) {
+        }elseif ($state != 1 && $school == 2) {
            $sql = $this->db->select('a.*, b.name AS state_name,c.name As district_name')
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
