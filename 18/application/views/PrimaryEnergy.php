@@ -1607,17 +1607,17 @@ $("#energynext").click(function(e){
 });
 	$("#energynext").click(function(e){
 /*Q1: Does your school have access to an electricity bill?*/
-if($("input[name='Q4E1']:checked").val()==""){
+if($("input[name='Q4E1']:checked").length==0){
 alert("Q1: Does your school have access to an electricity bill?");
 	e.preventDefault();
 }
 /*Q2: Does your school have its own vehicles??*/
-if($("input[name='Q5E1']:checked").val()==""){
+if($("input[name='Q5E1']:checked").length==0){
  alert("Q2: Does your school have its own vehicles?");
 	e.preventDefault();
 }
 /*Q5: Are there any alternate sources of energy employed/ installed in your school?*/
-if($("input[name='Q9E1']:checked").val()==""){
+if($("input[name='Q9E1']:checked").length==0){
  alert("Q5: Are there any alternate sources of energy employed/ installed in your school? ");
 	e.preventDefault();
 }
@@ -1682,6 +1682,12 @@ if($("input[name='Q6E13']:checked").length==0){
 if($("input[name='Q6E14']:checked").length==0){
  alert("Q3 Please share if your school uses the following types of energy:(Biogas (kilogrammes))?");
 	e.preventDefault();
+}
+if($("input[name='Q9E1']:checked").val()==="Y"){
+  if($("input[name='Q9E1S1']:checked").length==0 || $("input[name='Q9E1S2']:checked").length==0 || $("input[name='Q9E1S3']:checked").length==0 || $("input[name='Q9E1S4']:checked").length==0 || $("input[name='Q9E1S5']:checked").length==0){
+    alert("Q5(a)If yes, do you use:?");
+	e.preventDefault();
+  }
 }		
 });
                 </script>
