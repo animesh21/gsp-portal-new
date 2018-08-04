@@ -1626,5 +1626,62 @@ if($("input[name='Q7E2S1']").val()=="" && $("input[name='Q7E2S1']").attr("placeh
  alert("Q4:  What appliances does your school have?");
 	e.preventDefault();
 }
+/**Q3 Please share if your school uses the following types of energy:**/
+if($("input[name='Q6E1']:checked").length==0){
+ alert("Q3 Please share if your school uses the following types of energy:(Electricity from the board (kwh))?");
+	e.preventDefault();
+}
+if($("input[name='Q6E2']:checked").length==0){
+ alert("Q3 Please share if your school uses the following types of energy:(Electricity from generator (diesel) (litres))?");
+	e.preventDefault();
+}
+if($("input[name='Q6E3']:checked").length==0){
+ alert("Q3 Please share if your school uses the following types of energy:(Petrol (litres))?");
+	e.preventDefault();
+}
+if($("input[name='Q6E4']:checked").length==0){
+ alert("Q3 Please share if your school uses the following types of energy:(Diesel (litres))?");
+	e.preventDefault();
+}
+if($("input[name='Q6E5']:checked").length==0){
+ alert("Q3 Please share if your school uses the following types of energy:(CNG (kilogrammes))?");
+	e.preventDefault();
+}
+if($("input[name='Q6E6']:checked").length==0){
+ alert("Q3 Please share if your school uses the following types of energy:(Kerosene (litres))?");
+	e.preventDefault();
+}
+if($("input[name='Q6E7']:checked").length==0){
+ alert("Q3 Please share if your school uses the following types of energy:(Coal (kilogrammes))?");
+	e.preventDefault();
+}
+if($("input[name='Q6E8']:checked").length==0){
+ alert("Q3 Please share if your school uses the following types of energy:(Wood (kilogrammes))?");
+	e.preventDefault();
+}
+if($("input[name='Q6E9']:checked").length==0){
+ alert("Q3 Please share if your school uses the following types of energy:(Animal waste (kilogrammes))?");
+	e.preventDefault();
+}
+if($("input[name='Q6E10']:checked").length==0){
+ alert("Q3 Please share if your school uses the following types of energy:(Solar (kwh))?");
+	e.preventDefault();
+}
+if($("input[name='Q6E11']:checked").length==0){
+ alert("Q3 Please share if your school uses the following types of energy:(Wind (kwh))?");
+	e.preventDefault();
+}
+if($("input[name='Q6E12']:checked").length==0){
+ alert("Q3 Please share if your school uses the following types of energy:(LPG (kilogrammes))?");
+	e.preventDefault();
+}
+if($("input[name='Q6E13']:checked").length==0){
+ alert("Q3 Please share if your school uses the following types of energy:(Piped Natural Gas (kilogrammes))?");
+	e.preventDefault();
+}
+if($("input[name='Q6E14']:checked").length==0){
+ alert("Q3 Please share if your school uses the following types of energy:(Biogas (kilogrammes))?");
+	e.preventDefault();
+}		
 });
                 </script>
