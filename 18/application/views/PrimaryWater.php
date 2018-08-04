@@ -2221,12 +2221,12 @@ To understand water, it is important to know the source of water in your school 
       </li>
       <li>
         <label class="checkbox-inline text-gray">
-        <input type="checkbox" name="Q20W2" value="<?php echo set_value('Q20W2',2)?>" <?php if(isset($data['Q20W2'])) echo $data['Q20W2'] == 2?"checked":"" ?>>
+        <input type="checkbox" name="Q20W21" value="<?php echo set_value('Q20W21',2)?>" <?php if(isset($data['Q20W21'])) echo $data['Q20W21'] == 2?"checked":"" ?>>
         Flushing</label>
       </li>
       <li>
         <label class="checkbox-inline text-gray">
-        <input type="checkbox" name="Q20W2" value="<?php echo set_value('Q20W2',3)?>" <?php if(isset($data['Q20W2'])) echo $data['Q20W2'] == 3?"checked":"" ?>>
+        <input type="checkbox" name="Q20W22" value="<?php echo set_value('Q20W22',3)?>" <?php if(isset($data['Q20W22'])) echo $data['Q20W22'] == 3?"checked":"" ?>>
         Recharge Ground Water</label>
       </li>
     </ul>
@@ -2252,12 +2252,12 @@ To understand water, it is important to know the source of water in your school 
         </li>
         <li>
           <label class="checkbox-inline text-gray">
-          <input type="checkbox" name="Q20W3" value="<?php echo set_value('Q20W3',2)?>" <?php if(isset($data['Q20W3'])) echo $data['Q20W3'] == 2?"checked":"" ?>>
+          <input type="checkbox" name="Q20W31" value="<?php echo set_value('Q20W31',2)?>" <?php if(isset($data['Q20W31'])) echo $data['Q20W31'] == 2?"checked":"" ?>>
           Used for groundwater recharge </label>
         </li>
         <li>
           <label class="checkbox-inline text-gray">
-          <input type="checkbox" name="Q20W3" value="<?php echo set_value('Q20W3',3)?>" <?php if(isset($data['Q20W3'])) echo $data['Q20W3'] == 3?"checked":"" ?>>
+          <input type="checkbox" name="Q20W32" value="<?php echo set_value('Q20W32',3)?>" <?php if(isset($data['Q20W32'])) echo $data['Q20W32'] == 3?"checked":"" ?>>
           Used for gardening and horticulture </label>
         </li>
       </ul>
