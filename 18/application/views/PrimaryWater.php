@@ -2583,4 +2583,275 @@ To understand water, it is important to know the source of water in your school 
                                                 }
                                             });
                                         });
+	
+/*Teacher Record Validation*/
+/*Teachers (maximum of three teachers can be part of the team): */
+$("#movenextbtn").click(function(e){
+   if($("#Q1W1S1").attr('placeholder')==""  || $("#Q1W1S3").attr('placeholder')==""  || $("#Q1W1S2").attr('placeholder')==""){ 
+     if($("#Q1W1S1").val()==""  || $("#Q1W1S3").val()==""  || $("#Q1W1S2").val()==""){ 
+      alert("School Must Add Teacher First Name, Last Name & Email ID.");
+	  e.preventDefault();
+	}
+   }
+});
+/*Administrative Record Validation*/
+/*Administrative staff (maximum of five staff can be part of the team): */
+$("#movenextbtn").click(function(e){
+   if($("#Q2W1S1").attr('placeholder')==""  || $("#Q2W1S3").attr('placeholder')==""  || $("#Q2W1S2").attr('placeholder')==""){
+      if($("#Q2W1S1").val()=="" || $("#Q2W1S3").val()==""  || $("#Q2W1S2").val()==""){  
+    alert("School Must Add Administrative Staff  First Name, Last Name & Email ID.");
+	e.preventDefault();
+	}
+   }
+});
+/*Student Record Validation*/
+/*Student (maximum of five staff can be part of the team): */
+$("#movenextbtn").click(function(e){
+   if($("#Q3W1S1").attr('placeholder')==""  || $("#Q3W1S2").attr('placeholder')==""  || $("#Q3W1S3").attr('placeholder')==""){ 
+    if($("#Q3W1S1").val()==""  || $("#Q3W1S2").val()==""  || $("#Q3W1S3").val()==""){ 
+    alert("School Must Add Administrative Staff  First Name, Last Name & Grade.");
+	e.preventDefault();
+	}
+   }
+});
+$("#movenextbtn").click(function(e){
+/*Q1 Total water consumption of your school:*/
+if($("input[name='Q4W1']").attr('placeholder')==""){
+  alert("Q1 Total water consumption of your school: Drinking");
+  e.preventDefault();
+}
+if($("input[name='Q4W2']").attr('placeholder')==""){
+  alert("Q1 Total water consumption of your school: Toilet flushing");
+  e.preventDefault();
+}
+if($("input[name='Q4W3']").attr('placeholder')==""){
+  alert("Q1 Total water consumption of your school: Personal cleaning");
+  e.preventDefault();
+}
+if($("input[name='Q4W4']").attr('placeholder')==""){
+  alert("Q1 Total water consumption of your school: Washing clothes");
+  e.preventDefault();
+}
+if($("input[name='Q4W5']").attr('placeholder')==""){
+  alert("Q1 Total water consumption of your school: Cooking");
+  e.preventDefault();
+}
+if($("input[name='Q4W6']").attr('placeholder')==""){
+  alert("Q1 Total water consumption of your school: Cleaning Utensils");
+  e.preventDefault();
+}
+if($("input[name='Q4W7']").attr('placeholder')==""){
+  alert("Q1 Total water consumption of your school: Washing Vegetables");
+  e.preventDefault();
+}
+if($("input[name='Q4W8']").attr('placeholder')==""){
+  alert("Q1 Total water consumption of your school: Mopping floors");
+  e.preventDefault();
+}
+if($("input[name='Q4W9']").attr('placeholder')==""){
+  alert("Q1 Total water consumption of your school: Gardening");
+  e.preventDefault();
+}
+if($("input[name='Q4W10']").attr('placeholder')==""){
+  alert("Q1 Total water consumption of your school: Others");
+  e.preventDefault();
+}
+/*Q2 Where does the water your school uses, come from? (please tick the correct options):*/
+if($("input[name='Q5W1']:checked").length==0 && $("input[name='Q5W2']:checked").length==0 && $("input[name='Q5W3']:checked").length==0 && $("input[name='Q5W4']:checked").length==0){
+  alert("Q2 Where does the water your school uses, come from? (please tick the correct options):");
+  e.preventDefault();
+}
+/*Q3 Does your school get daily water supply?:*/
+if($("input[name='Q7W1']:checked").length==0){
+  alert("Q3 Does your school get daily water supply?:");
+  e.preventDefault();
+}
+/*Q4 Do you have Rainwater harvesting (RWH) system in your school?:*/
+if($("input[name='Q8W2']:checked").length==0){
+  alert("Q4 Do you have Rainwater harvesting (RWH) system in your school?:");
+  e.preventDefault();
+}
+/*Q6 How many drinking water taps do you have?:*/
+if($("input[name='Q9W1']").attr('placeholder')==""){
+  alert("Q6 How many drinking water taps do you have?:");
+  e.preventDefault();
+}
+/*Q7 How many hand pumps do you have?:*/
+if($("input[name='Q10W1']").attr('placeholder')==""){
+  alert("Q7 How many hand pumps do you have?:");
+  e.preventDefault();
+}
+/*Q8 How many ablution taps (taps used for washing hands only) do you have?:*/
+if($("input[name='Q11W1']").attr('placeholder')==""){
+  alert("Q8 How many ablution taps (taps used for washing hands only) do you have?:");
+  e.preventDefault();
+}
+/*Q8 How many ablution taps (taps used for washing hands only) do you have?:*/
+if($("input[name='Q11W1']").attr('placeholder')==""){
+  alert("Q8 How many ablution taps (taps used for washing hands only) do you have?:");
+  e.preventDefault();
+}
+/*Q9 How many water closets (used for defecation and urination) do you have?:*/
+if($("input[name='Q13W1S1']").attr('placeholder')=="" ||  $("input[name='Q13W1S2']").attr('placeholder')=="" || $("input[name='Q13W1S3']").attr('placeholder')==""){
+  alert("Q9 How many water closets (used for defecation and urination) do you have?:");
+  e.preventDefault();
+}
+/*Q10 How many urinals (strictly used for urination only) do you have?*/
+if($("input[name='Q14W1']").attr('placeholder')==""){
+  alert("Q10 How many urinals (strictly used for urination only) do you have?");
+  e.preventDefault();
+}
+/*Q11 How many other water outlets (example: taps in play fields, sprinklers, swimming pool) do you have?*/
+if($("input[name='Q15W1']").attr('placeholder')==""){
+  alert("Q11 How many other water outlets (example: taps in play fields, sprinklers, swimming pool) do you have?");
+  e.preventDefault();
+}
+/*Q12 Is there a water storage system in place to supply water in the toilets?:*/
+if($("input[name='Q16W1']:checked").length==0){
+  alert("Q12 Is there a water storage system in place to supply water in the toilets?:");
+  e.preventDefault();
+}
+/*Q13 Is the water supply sufficient?:*/
+if($("input[name='Q17W1']:checked").length==0){
+  alert("Q13 Is the water supply sufficient?:");
+  e.preventDefault();
+}
+/*Q14 Are the toilets cleaned?:*/
+if($("input[name='Q18W1']:checked").length==0){
+  alert("Q14 Are the toilets cleaned?:");
+  e.preventDefault();
+}
+/*Q15 Does your school treat wastewater?:*/
+if($("input[name='Q19W1']:checked").length==0){
+  alert("Q15 Does your school treat wastewater?:");
+  e.preventDefault();
+}
+/*Q16 Does your school reuse the treated wastewater?:*/
+if($("input[name='Q20W1']:checked").length==0){
+  alert("Q16 Does your school reuse the treated wastewater?:");
+  e.preventDefault();
+}
+/*Q14(a) Are the toilets cleaned?:*/
+if($("input[name='Q18W1']:checked").val()==="Y"){
+  if($("input[name='Q18W2']:checked").length==0){
+  alert("Q14(a) Are the toilets cleaned?:");
+  e.preventDefault();
+  }
+}
+/*Q16(a)How does your school reuse wastewater?*/
+if($("input[name='Q20W1']:checked").val()==="Y"){
+  if($("input[name='Q20W2']:checked").length==0 || $("input[name='Q20W21']:checked").length==0 || $("input[name='Q20W22']:checked").length==0){
+  alert("Q16(a)How does your school reuse wastewater?");
+  e.preventDefault();
+  }
+}
+/*Q16(a)How does your school reuse wastewater?*/
+if($("input[name='Q20W1']:checked").val()==="N"){
+  if($("input[name='Q20W3']:checked").length==0 || $("input[name='Q20W31']:checked").length==0 || $("input[name='Q20W32']:checked").length==0){
+  alert("Q16(a)How does your school reuse wastewater?");
+  e.preventDefault();
+  }
+}
+/**Q5 Please share details about sanitation and hygiene practices in your school:**/
+if($("input[name='Q8W3S1']:checked").length==0){
+  alert("Q5 Please share details about sanitation and hygiene practices in your school: (Does the school have separate toilets for males and females?)");
+  e.preventDefault();
+}
+if($("input[name='Q8W3S2']:checked").length==0){
+  alert("Q5 Please share details about sanitation and hygiene practices in your school: (Are there sufficient toilets for women in your school?)");
+  e.preventDefault();
+}
+if($("input[name='Q8W3S3']:checked").length==0){
+  alert("Q5 Please share details about sanitation and hygiene practices in your school: (Are there sufficient toilets for men in your school?)");
+  e.preventDefault();
+}
+if($("input[name='Q8W3S4']:checked").length==0){
+  alert("Q5 Please share details about sanitation and hygiene practices in your school: (Are the toilets accessible and safe to use for children?)");
+  e.preventDefault();
+}
+if($("input[name='Q8W3S5']:checked").length==0){
+  alert("Q5 Please share details about sanitation and hygiene practices in your school: (Are the toilets accessible and safe to use for differently abled children?)");
+  e.preventDefault();
+}
+if($("input[name='Q8W3S6']:checked").length==0){
+  alert("Q5 Please share details about sanitation and hygiene practices in your school: (Are the toilets accessible and safe to use for differently abled staff (teaching and non-teaching)?)");
+  e.preventDefault();
+}
+if($("input[name='Q8W3S7']:checked").length==0){
+  alert("Q5 Please share details about sanitation and hygiene practices in your school: (Are the toilets situated in the right location in terms of privacy and safety?)");
+  e.preventDefault();
+}
+if($("input[name='Q8W3S8']:checked").length==0){
+  alert("Q5 Please share details about sanitation and hygiene practices in your school: (Is there sufficient light during day time?)");
+  e.preventDefault();
+}
+if($("input[name='Q8W3S9']:checked").length==0){
+  alert("Q5 Please share details about sanitation and hygiene practices in your school: (Do you use soap to wash hands before and after lunch?)");
+  e.preventDefault();
+}
+if($("input[name='Q8W3S10']:checked").length==0){
+  alert("Q5 Please share details about sanitation and hygiene practices in your school: (Do you use soap to wash hands before and after using the toilet ?)");
+  e.preventDefault();
+}
+/************************************************************/
+/************************************************************/
+/************************************************************/
+if($("input[name='Q8W2']:checked").val()==="Y"){
+/************************************************************/
+/*Q4(a) Which is/are the catchment area(s) being harvested by your school?*/
+if($("input[name='Q8W2S1S1']:checked").length==0){
+   alert("Q4(a)Which is/are the catchment area(s) being harvested by your school?");
+  e.preventDefault();
+}
+/*Q4(b) How does your school harvest rainwater?*/
+if($("input[name='Q8W2S2']:checked").length==0){
+   alert("Q4(b) How does your school harvest rainwater?");
+  e.preventDefault();
+}
+/*Q4(b)(1)If your school only stores rainwater, please select the use of stored rainwater:?*/
+if($("input[name='Q8W2S2']:checked").val()==="3"){
+  if($("input[name='Q8W2S2S1']:checked").length==0 && $("input[name='Q8W2S2S11']:checked").length==0 && $("input[name='Q8W2S2S12']:checked").length==0 && $("input[name='Q8W2S2S13']:checked").length==0 && $("input[name='Q8W2S2S14']:checked").length==0 && $("input[name='Q8W2S2S15']:checked").length==0 && $("input[name='Q8W2S2S16']:checked").length==0 && $("input[name='Q8W2S2S17']:checked").length==0 && $("input[name='Q8W2S2S18']:checked").length==0 && $("input[name='Q8W2S2S19']:checked").length==0){
+   alert("4(b)(1) If your school only stores rainwater, please select the use of stored rainwater:?");
+   e.preventDefault();
+  }
+}
+/*Q4(b)(2) Does your school have rainwater storage tank?*/
+ if($("input[name='Q8W2S2S2']:checked").length==0){
+   alert("Q4(b)(2) Does your school have rainwater storage tank?");
+   e.preventDefault();
+ }
+/*********************************************************/
+if($("input[name='Q8W2S2S2']:checked").val()==="Y"){
+/*4(b)(2) A If yes, please provide: (Total number of storage tank (litres):) */
+  if($("input[name='Q8W2S2S3']").attr('placeholder')==""){
+   alert("4(b)(2) A If yes, please provide: (Total number of storage tank (litres):)?");
+   e.preventDefault();
+  }
+/*4(b)(2) B If yes, please provide: (Total number of storage tank (litres):) */
+  if($("input[name='Q8W2S2S4']").attr('placeholder')==""){
+   alert("4(b)(2) B If yes, please provide: (Total capacity of each storage tank (litres):)?");
+   e.preventDefault();
+  }  
+}
+/*Q4(b)(3)Does your school have groundwater recharge structure?*/
+ if($("input[name='Q8W2S2S7']:checked").length==0){
+   alert("Q4(b)(3)Does your school have groundwater recharge structure?");
+   e.preventDefault();
+ } 
+/**Q4(b)(3) iPlease tick the type of groundwater recharge structure used in your school:**/ 
+ if($("input[name='Q8W2S2S7']:checked").val()==="Y"){
+    if($("input[name='Q8W2S2S94']:checked").length==0 && $("input[name='Q8W2S2S95']:checked").length==0 && $("input[name='Q8W2S2S96']:checked").length==0){
+	 alert("Q4(b)(3) iPlease tick the type of groundwater recharge structure used in your school:");
+     e.preventDefault();
+	}
+ }
+/*Q4(c) Does your school clean your catchment and system?*/
+ if($("input[name='Q8W2S61']:checked").length==0){
+   alert("Q4(c)Does your school clean your catchment and system?");
+   e.preventDefault();
+ }  
+}
+});	
+	
+	
                                     </script>
