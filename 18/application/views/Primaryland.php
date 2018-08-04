@@ -733,4 +733,94 @@
             }
         });
     });
+
+/*Teacher Record Validation*/
+/*Teachers (maximum of three teachers can be part of the team): */
+$("#movenextbtn").click(function(e){
+   if($("#Q1L1S1").attr('placeholder')==""  || $("#Q1L1S3").attr('placeholder')==""  || $("#Q1L1S2").attr('placeholder')==""){ 
+     if($("#Q1L1S1").val()==""  || $("#Q1L1S3").val()==""  || $("#Q1L1S2").val()==""){ 
+      alert("School Must Add Teacher First Name, Last Name & Email ID.");
+	  e.preventDefault();
+	}
+   }
+});
+/*Administrative Record Validation*/
+/*Administrative staff (maximum of five staff can be part of the team): */
+$("#movenextbtn").click(function(e){
+   if($("#Q2L1S1").attr('placeholder')==""  || $("#Q2L1S3").attr('placeholder')==""  || $("#Q2L1S2").attr('placeholder')==""){
+      if($("#Q2L1S1").val()=="" || $("#Q2L1S3").val()==""  || $("#Q2L1S2").val()==""){  
+    alert("School Must Add Administrative Staff  First Name, Last Name & Email ID.");
+	e.preventDefault();
+	}
+   }
+});
+/*Student Record Validation*/
+/*Student (maximum of five staff can be part of the team): */
+$("#movenextbtn").click(function(e){
+   if($("#Q3L1S1").attr('placeholder')==""  || $("#Q3L1S2").attr('placeholder')==""  || $("#Q3L1S3").attr('placeholder')==""){ 
+    if($("#Q3L1S1").val()==""  || $("#Q3L1S2").val()==""  || $("#Q3L1S3").val()==""){ 
+    alert("School Must Add Administrative Staff  First Name, Last Name & Grade.");
+	e.preventDefault();
+	}
+   }
+});
+/************************************************************/
+$("#movenextbtn").click(function(e){
+/*Q1 Types of Area:*/
+if($("input[name='Q4L1']").attr('placeholder')==""){
+  alert("Q1 Types of Area: No. of Playgrounds");
+  e.preventDefault();
+}
+if($("input[name='Q4L2']").attr('placeholder')==""){
+  alert("Q1 Types of Area: No. of Kachcha (unpaved) playgrounds with grass");
+  e.preventDefault();
+}
+if($("input[name='Q4L3']").attr('placeholder')==""){
+  alert("Q1 Types of Area: No. of Kachcha (unpaved) playgrounds with grass");
+  e.preventDefault();
+}
+if($("input[name='Q4L4']").attr('placeholder')==""){
+  alert("Q1 Types of Area: No. of Pucca (paved) playgrounds");
+  e.preventDefault();
+}
+if($("input[name='Q4L5']").attr('placeholder')==""){
+  alert("Q1 Types of Area: No. of Pucca (paved) playgrounds");
+  e.preventDefault();
+}
+if($("input[name='Q4L6']").attr('placeholder')==""){
+  alert("Q1 Types of Area: No. of constructed buildings – Official");
+  e.preventDefault();
+}
+if($("input[name='Q4L7']").attr('placeholder')==""){
+  alert("Q1 Types of Area: No. of floors (does not include ground floor)");
+  e.preventDefault();
+}
+if($("input[name='Q4L8']").attr('placeholder')==""){
+  alert("Q1 Types of Area: Rooftop/Terrace Gardens");
+  e.preventDefault();
+}
+/**Q2 How many types of plants are there in your school?**/
+if($("input[name='Q5L1S1']").attr('placeholder')==""){
+  alert("Q2 How many types of plants are there in your school?");
+  e.preventDefault();
+}
+if($("input[name='Q5L1S2']").attr('placeholder')==""){
+  alert("Q2 How many types of plants are there in your school?");
+  e.preventDefault();
+}
+/**Q3 How many types of animals and birds are there in your school?**/
+if($("input[name='Q5L2S1']").attr('placeholder')==""){
+  alert("Q3 How many types of animals and birds are there in your school?");
+  e.preventDefault();
+}
+if($("input[name='Q5L2S2']").attr('placeholder')==""){
+  alert("Q3 How many types of animals and birds are there in your school?");
+  e.preventDefault();
+}
+/**Q4 Do you use chemical-based pesticides in your school green cover?**/
+if($("input[name='Q6L1']:checked").length==0){
+  alert("Q4 Do you use chemical-based pesticides in your school green cover?");
+  e.preventDefault();
+}
+});	
 </script>
