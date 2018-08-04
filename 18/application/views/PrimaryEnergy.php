@@ -1684,7 +1684,7 @@ if($("input[name='Q6E14']:checked").length==0){
 	e.preventDefault();
 }
 if($("input[name='Q9E1']:checked").val()==="Y"){
-  if($("input[name='Q9E1S1']:checked").length==0 || $("input[name='Q9E1S2']:checked").length==0 || $("input[name='Q9E1S3']:checked").length==0 || $("input[name='Q9E1S4']:checked").length==0 || $("input[name='Q9E1S5']:checked").length==0){
+  if($("input[name='Q9E1S1']:checked").length==0 && $("input[name='Q9E1S2']:checked").length==0 && $("input[name='Q9E1S3']:checked").length==0 && $("input[name='Q9E1S4']:checked").length==0 && $("input[name='Q9E1S5']:checked").length==0){
     alert("Q5(a)If yes, do you use:?");
 	e.preventDefault();
   }
