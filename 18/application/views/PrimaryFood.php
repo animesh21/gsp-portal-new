@@ -2810,4 +2810,113 @@
                                                                             }
                                                                         });
                                                                     });
+/*Teacher Record Validation*/
+/*Teachers (maximum of three teachers can be part of the team): */
+$("#foodnext").click(function(e){
+   if($("#Q1F1S1").attr('placeholder')==""  || $("#Q1F1S3").attr('placeholder')==""  || $("#Q1F1S2").attr('placeholder')==""){ 
+     if($("#Q1F1S1").val()==""  || $("#Q1F1S3").val()==""  || $("#Q1F1S2").val()==""){ 
+      alert("School Must Add Teacher First Name, Last Name & Email ID.");
+	  e.preventDefault();
+	}
+   }
+});
+/*Administrative Record Validation*/
+/*Administrative staff (maximum of five staff can be part of the team): */
+$("#foodnext").click(function(e){
+   if($("#Q2F1S1").attr('placeholder')==""  || $("#Q2F1S3").attr('placeholder')==""  || $("#Q2F1S2").attr('placeholder')==""){
+      if($("#Q2F1S1").val()=="" || $("#Q2F1S3").val()==""  || $("#Q2F1S2").val()==""){  
+    alert("School Must Add Administrative Staff  First Name, Last Name & Email ID.");
+	e.preventDefault();
+	}
+   }
+});
+/*Student Record Validation*/
+/*Student (maximum of five staff can be part of the team): */
+$("#foodnext").click(function(e){
+   if($("#Q3F1S1").attr('placeholder')==""  || $("#Q3F1S2").attr('placeholder')==""  || $("#Q3F1S3").attr('placeholder')==""){ 
+    if($("#Q3F1S1").val()==""  || $("#Q3F1S2").val()==""  || $("#Q3F1S3").val()==""){ 
+    alert("School Must Add Administrative Staff  First Name, Last Name & Grade.");
+	e.preventDefault();
+	}
+   }
+});
+$("#foodnext").click(function(e){
+/*Q1 Does your school have a provision/space to sell packaged food items within the campus*/
+if($("input[name='Q4F1']:checked").length==0){
+ alert("Q1 Does your school have a provision/space to sell packaged food items within the campus");
+ e.preventDefault();
+}
+/*Q2 Does your school serve midday meals?*/
+if($("input[name='Q5F1']:checked").length==0){
+ alert("Q1 Does your school have a provision/space to sell packaged food items within the campus");
+ e.preventDefault();
+}
+/*Q2(a) Do students bring their own lunch from home?*/
+if($("input[name='Q5F1']:checked").val()==="N"){
+  if($("input[name='Q5F1S1']:checked").length==0){
+ alert("Q2(a) Do students bring their own lunch from home?");
+ e.preventDefault();
+ }
+}
+/*Q3 Does your school allow students to bring packaged food items (from home) for lunch?*/
+if($("input[name='Q9F1']:checked").length==0){
+ alert("Q3 Does your school allow students to bring packaged food items (from home) for lunch?");
+ e.preventDefault();
+}
+/*Q4 Does the school distribute packaged food items as rewards during schools events?*/
+if($("input[name='Q9F2']:checked").length==0){
+ alert("Q4 Does the school distribute packaged food items as rewards during schools events?");
+ e.preventDefault();
+}
+/*Q5 Does the school distribute chocolates/similar products as refreshments during schools events?*/
+if($("input[name='Q10F1']:checked").length==0){
+ alert("Q5 Does the school distribute chocolates/similar products as refreshments during schools events?");
+ e.preventDefault();
+}
+/*Q6 Are your school events such as quiz shows, talent shows, debates sponsored by food companies/brands?*/
+if($("input[name='Q10F1']:checked").length==0){
+ alert("Q6 Are your school events such as quiz shows, talent shows, debates sponsored by food companies/brands?");
+ e.preventDefault();
+}
+/*Q7 Does your school measure height and weight of all the students?*/
+if($("input[name='Q12F1']:checked").length==0){
+ alert("Q7 Does your school measure height and weight of all the students?");
+ e.preventDefault();
+}
+/*Q7(a)How regularly is height and weight of the students measured?*/
+if($("input[name='Q12F1']:checked").val()==="Y"){
+  if($("input[name='Q12F2']:checked").length==0){
+ alert("Q7(a) How regularly is height and weight of the students measured?");
+ e.preventDefault();
+ }
+}
+/*Q8 Is cooking part of any regular subjects or extracurricular activities?*/
+if($("input[name='Q13F1']:checked").length==0){
+ alert("Q8 Is cooking part of any regular subjects or extracurricular activities?");
+ e.preventDefault();
+}
+/*Q5(a)Please provide details:*/
+if($("input[name='Q10F1']:checked").val()==="Y"){
+  if($("input[name='Q10F2']:checked").length==0){
+ alert("Q5(a) Please provide the names: ");
+ e.preventDefault();
+ }
+}
+/*Q6(a)Please provide details:*/
+if($("input[name='Q11F1']:checked").val()==="Y"){
+  if($("input[name='Q11F2']:checked").length==0){
+ alert("Q6(a) Please provide the names of sponsors:  ");
+ e.preventDefault();
+ }
+}
+/*Q8(a) If yes, please share the details:*/
+if($("input[name='Q13F1']:checked").val()==="Y"){
+  if($("input[name='Q13F2']:checked").length==0){
+ alert("Q8(a) If yes, please share the details");
+ e.preventDefault();
+ }
+}
+});
+																	
+																	
                                                                 </script>
