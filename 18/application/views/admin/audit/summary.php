@@ -24,7 +24,7 @@
           <th>School submitted the Audit in Phase 1</th>
           <th>Schools Started The Audit But Did Not Complete</th>
           <th>Schools Did Not Start The Audit</th>
-          <th>2017 Registration</th>
+          <th>Schools Completed The Audit But Not Submitted</th>
         </tr>
       </thead>
       <tbody>
@@ -35,7 +35,7 @@
           <td><?php echo count($SubmittedTheAudit_18data);?></td>
           <td><?php echo count($StartedAuditButDidNotComplete);?></td>
           <td><?php echo count($NotStartTheAudit_18data);?></td>
-          <td><?php echo count($school_2017);?></td>
+          <td><?php echo count($CompletedAuditButNotSubmitted_18data);?></td>
         </tr>
        
       </tbody>
