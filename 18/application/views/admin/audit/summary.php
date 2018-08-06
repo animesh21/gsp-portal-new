@@ -14,6 +14,34 @@
 </div>
 <div class="row">
   <div class="col-md-12">
+	  <h2>2018 Audit</h2> 
+    <table class="display dataTable no-footer table1">
+      <thead>
+        <tr role="row">
+          <th>Phase</th>
+          <th>Total School Registrations</th>
+          <th>Schools That Started The Audit</th>
+          <th>School submitted the Audit in Phase 1</th>
+          <th>Schools Started The Audit But Did Not Complete</th>
+          <th>Schools Did Not Start The Audit</th>
+          <th>2017 Registration</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr role="row" class="odd">
+          <td class="sorting_1">Phase-1</td>
+          <td><?php echo count($School_18data);?></td>
+          <td><?php echo count($startedtheaudit_18data);?></td>
+          <td><?php echo count($SubmittedTheAudit_18data);?></td>
+          <td><?php echo count($StartedAuditButDidNotComplete);?></td>
+          <td><?php echo count($NotStartTheAudit_18data);?></td>
+          <td><?php echo count($school_2017);?></td>
+        </tr>
+       
+      </tbody>
+    </table><br/>
+	  
+	  
     <h2>2017 Audit</h2> 
     <table class="display dataTable no-footer table1">
       <thead>
