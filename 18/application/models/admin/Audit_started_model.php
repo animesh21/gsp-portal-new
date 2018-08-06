@@ -2328,19 +2328,7 @@ public function getExcel2017Data() {
       }
 	  
 	  
-	   public function getCompletedAuditButNotSubmitted_18data(){
-        return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
-        ->from('gsp_school AS a')
-        ->join('states AS b', 'a.state=b.id', 'left')
-		->join('cities AS c', 'a.district=c.id', 'left')
-        ->where('a.date_added >=', '2018-02-21 00:00:00')
-		->where('a.progress', '100')
-		->where('a.complete_status','0')
-        ->order_by('a.id', 'desc')
-        ->get()->result();
-		//echo $this->db->last_query(); exit;
-      }
-   
+	  
        public function getSubmittedTheAudit_18data(){
         return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
         ->from('gsp_school AS a')
