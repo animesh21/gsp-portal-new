@@ -58,7 +58,41 @@ class Audit_started_2017 extends CI_Controller {
             "aaData"=>$arr_school);
 		    echo json_encode($data['record']);
    }		
-	   	
+   	   	
+   	 public function disabled_school() {
+        $data['main'] = 'admin/audit/disabled_school';
+        $data['title'] = 'Home | Disabled School';
+        $this->load->view('admin/includes/template', $data);
+    }
+	
+    public function getDisabledSchoolData()
+    {   
+       $records=$this->Audit_started_model->getDisabledSchool();
+	   $arr_school=array();
+	   $i=0;
+	   foreach($records as $record):
+		   $arr_school[]=array('sr_no'=>++$i,
+		    'id'=>$record->id,
+		    'udise'=>$record->udise,
+		    'name'=>$record->name,
+		    'userid'=>$record->userid,
+		    'state_name'=>$record->state_name,
+		    'district_name'=>$record->district_name,
+		    'city'=>$record->city,
+		    'coname'=>$record->coname,
+		    'coemail'=>$record->coemail,
+		    'comobile'=>$record->comobile,
+		    'progress'=>$record->progress,
+		     'partner_status'=>$record->partner_status,
+		    'date_added'=>$record->date_added);
+	   endforeach;
+		$data['record']=array(
+            "sEcho" => 1,
+            "iTotalRecords" => count($arr_school),
+            "iTotalDisplayRecords" => count($arr_school),
+            "aaData"=>$arr_school);
+		    echo json_encode($data['record']);
+   }
 	
    public function partnersList(){
        $data['main'] = 'admin/audit/partners';
@@ -112,6 +146,17 @@ class Audit_started_2017 extends CI_Controller {
         $this->load->dbutil();
         $row = $this->Audit_started_model->getExcelData_phase1();
         $name = 'registration_2017.csv';
+        force_download($name, $row);
+    }
+  
+ /*
+     * Disabled School Excel
+     */
+
+    public function disabled_school_excel() {
+        $this->load->dbutil();
+        $row = $this->Audit_started_model->disabled_school();
+        $name = 'Disabled School.csv';
         force_download($name, $row);
     }
 	
