@@ -2377,10 +2377,18 @@ public function getExcel2017Data() {
         ->get()->result();
 	  }	
 	  
-	   public function schoolCount() {
-        $this->db->where('YEAR(date_added)',2017);
-		$this->db->where('date_added <', '2017-11-29 00:00:00');
-        return $this->db->count_all_results('gsp_school');
-    }
+	    public function getCompletedAuditButNotSubmitted_18data(){
+        return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
+        ->from('gsp_school AS a')
+        ->join('states AS b', 'a.state=b.id', 'left')
+	->join('cities AS c', 'a.district=c.id', 'left')
+	->join('gsp_aduit_submitted AS d','a.userid=d.userid','left')
+    ->where('a.date_added >=', '2018-02-21 00:00:00')	
+	->where('a.progress', '100')
+	->where('a.complete_status','0')
+        ->order_by('a.id', 'desc')
+        ->get()->result();
+		//echo $this->db->last_query(); exit;
+      }
 	   
 }
