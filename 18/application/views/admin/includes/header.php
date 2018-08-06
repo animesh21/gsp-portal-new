@@ -146,6 +146,7 @@
                 <ul class="dropdown-menu">
                   <li class=""><a href="<?php echo base_url('admin/audit_started'); ?>">AUDIT STARTED</a></li>
                   <li><a href="<?php echo base_url('admin/audit_started_2017'); ?>">MASTER LIST REGISTRATIONS </a></li>
+		  <li><a href="<?php echo base_url('admin/audit_started_2017/disabled_school'); ?>">DISABLED SCHOOL LIST</a></li>	
 		  <!--<li><a href="<?php //echo base_url('admin/dashboard/total18_registration'); ?>">REGISTRATIONS 2018</a></li>-->	
                   <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">REGISTRATION</a>
 				  <ul class="dropdown-menu">
