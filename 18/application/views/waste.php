@@ -4142,7 +4142,7 @@ if($("input[name='Q11Wa8S1']").prop('checked') == false && $("input[name='Q11Wa8
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Washing machines)");
 	   e.preventDefault();
 	}
-	if($("input[name='Q12Wa5S1']").attr("placeholder"))=="" || $("input[name='Q12Wa5S2']").attr("placeholder")=="" || $("input[name='Q12Wa5S3']").attr("placeholder")==""){
+	if($("input[name='Q12Wa5S1']").attr("placeholder")=="" || $("input[name='Q12Wa5S2']").attr("placeholder")=="" || $("input[name='Q12Wa5S3']").attr("placeholder")==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Air conditioners)");
 	   e.preventDefault();
 	}
