@@ -1,4 +1,4 @@
-<?php $this->load->view('header'); ?>
+<?php $this->load->view('admin/survey/header'); ?>
 
 <div class="container">
     <div class="content-form">
