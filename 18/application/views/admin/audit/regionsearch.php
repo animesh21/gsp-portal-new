@@ -1,3 +1,8 @@
+<div class="top-area">
+<h2>REGISTRATION BY STATE  <a href="<?php echo base_url('admin/audit_started/excel_region/'.$region) ?>"><button class="exportBtn">Export to Excel</button></a></h2>
+</div>
+
+
 <div class="row" style="margin: 20px 0; min-height: 30px"> <?php echo form_open(base_url('admin/audit_started/regionsearch')); ?>
   <div class="col-lg-5">
   
