@@ -109,6 +109,50 @@ class Audit_started extends CI_Controller {
         $name = 'registration2017_by_state.csv';
         force_download($name, $row);
     }
+	
+	 public function excel_region($argID) {
+        $this->load->dbutil();
+		if($argID=='East')
+		{
+		  $argID1=array("36", "26", "16", "1", "5"); //$east_india
+		}
+		
+		if($argID=='West')
+		{
+		  $argID1=array("12", "21", "11", "9", "8"); //$west_india
+		}
+		
+		if($argID=='North')
+		{
+		  $argID1=array("28", "15", "13", "29", "14", "34", "35", "10", "6"); //$north_india
+		}
+		
+		if($argID=='South')
+		{
+		  $argID1=array("2", "17", "18", "31", "32", "19", "27"); //$south_india
+		}
+		
+		if($argID=='North East')
+		{
+		  $argID1=array("3", "4", "22", "23", "24", "25", "30", "33"); //$north_east_india
+		}
+		
+		if($argID=='Central')
+		{
+		  $argID1=array("7", "20"); //$central_india
+		}
+		
+		if($argID=='All')
+		{
+		  $argID1=array("3","36", "26", "16", "1", "5","12", "21", "11", "9", "8","28", "15", "13", "29", "14", "34", "35", "10", "6","2", "17", "18", "31", "32", "19", "27","7", "20","4", "22", "23", "24", "25", "30", "33"); //$all
+		}
+	    $row = $this->Audit_started_model->getExcelDataByRegion($argID1);
+        $name = 'registration2018_by_region.csv';
+        force_download($name, $row);
+    }
+	
+	
+	
 
 	public function regionwise() {
         $data['main'] = 'admin/audit/regionwise';
