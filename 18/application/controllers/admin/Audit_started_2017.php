@@ -693,7 +693,8 @@ public function digital_certificate_for_principal_coordinator($argID)
 		$arrSchool11=array('answer'=>$this->input->post('mobile'));
 		$arrSchool12=array('answer'=>$this->input->post('principle_name'));
 		$arrSchool13=array('answer'=>$this->input->post('coname'));
-		$arrSchool14=array('answer'=>$this->input->post('coemail'));	
+		$arrSchool14=array('answer'=>$this->input->post('coemail'));
+	        $arrSchool15=array('answer'=>$this->input->post('comobile'));
         $this->db->where('id', $argSchoolID);
         if($this->db->update('gsp_school', $arrSchool))
         {
@@ -760,6 +761,9 @@ public function digital_certificate_for_principal_coordinator($argID)
 			$this->db->where('questionid','coemail');
 		    $this->db->update('gsp_answers',$arrSchool14);
 			
+		    $this->db->where('userid', $userid);
+		    $this->db->where('questionid','comobile');
+		    $this->db->update('gsp_answers',$arrSchool15);
 			
 			//update user data as well
             $arrUser=array(
