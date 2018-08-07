@@ -1,5 +1,5 @@
 <div class="top-area">
-<h2>REGISTRATION BY STATE  <a href="<?php echo base_url('admin/audit_started/excel_region/'.$region) ?>"><button class="exportBtn">Export to Excel</button></a></h2>
+<h2>REGISTRATION BY REGION  <a href="<?php echo base_url('admin/audit_started/excel_region/'.$region) ?>"><button class="exportBtn">Export to Excel</button></a></h2>
 </div>
 
 
