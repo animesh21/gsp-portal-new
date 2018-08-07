@@ -614,7 +614,7 @@
           <td>Does your school burn waste?</td>
           <td>Where does your school burn waste?</td>
           <td>What kind of waste is burnt/ incinerated?</td>
-          <td>Do you know that your E-waste can be collected by an authorised dealer or dismantler?</td>
+          <!--<td>Do you know that your E-waste can be collected by an authorised dealer or dismantler?</td>-->
           <td>Does the school have a policy on waste</td>
           <td>Are there awareness drives with regard to Reduce, Recycle and Reuse</td>
           <td>What form do these awareness drives take?</td>
@@ -1425,18 +1425,84 @@
           <td><?php echo  $record1[$i]->Q12Wa28S2; ?></td>
           <td><?php echo  $record1[$i]->Q12Wa28S3; ?></td>
           <td><?php echo  $record1[$i]->Q12Wa28S4; ?></td>
-          <td><?php echo  $record1[$i]->Q13Wa1; ?></td>
-          <td><?php echo  $record1[$i]->Q13Wa2; ?></td>
-          <td><?php echo  $record1[$i]->Q14Wa1; ?></td>
-          <td><?php echo  $record1[$i]->Q15Wa1; ?></td>
-          <td><?php echo  $record1[$i]->Q15Wa2; ?></td>
-          <td><?php echo  $record1[$i]->Q15Wa2S1; ?></td>
-          <td><?php echo  $record1[$i]->Q16Wa1; ?></td>
+		   <td><?php if(strcmp($record1[$i]->Q13Wa1,"Y")==0){echo "Yes";}else if(strcmp($record1[$i]->Q13Wa1,"N")==0){echo "No";}else{echo $record1[$i]->Q13Wa1;} ?></td>
+          <td><?php
+		  $your_ewaste="";
+		  if($record1[$i]->Q13Wa2==1){$your_ewaste.="Kabadiwalla/ Scrapdealer";}
+			if($record1[$i]->Q13Wa2==2){$your_ewaste.="Taken back by manufacturer/vendor";}
+			if($record1[$i]->Q13Wa2==3){$your_ewaste.="Authorised dealer";}
+			if($record1[$i]->Q13Wa2==4){$your_ewaste.="Authorised dismantler";}
+			if($record1[$i]->Q13Wa2==1 || $record1[$i]->Q13Wa2==2 || $record1[$i]->Q13Wa2==3 || $record1[$i]->Q13Wa2==4){echo $your_ewaste;}
+			else{ echo "NA";}
+		  
+		  ?></td>
+          <td><?php 
+		    $disposed_of_externally="";
+		    if($record1[$i]->Q14Wa1==1){$disposed_of_externally.="Open dumping";}
+			if($record1[$i]->Q14Wa1==2){$disposed_of_externally.="Designated dumping site (Dhalao)";}
+			if($record1[$i]->Q14Wa1==3){$disposed_of_externally.="Landfill Site";}
+			if($record1[$i]->Q14Wa1==4){$disposed_of_externally.="Don’t know";}
+			if($record1[$i]->Q14Wa1==1 || $record1[$i]->Q14Wa1==2 || $record1[$i]->Q14Wa1==3 || $record1[$i]->Q14Wa1==4){echo $disposed_of_externally;}
+			else{ echo "NA";}
+		  
+		   ?></td>
+		  <td><?php if(strcmp($record1[$i]->Q15Wa1,"Y")==0){echo "Yes";}else if(strcmp($record1[$i]->Q15Wa1,"N")==0){echo "No";}else{echo $record1[$i]->Q15Wa1;} ?></td>
+          <td><?php 
+		     $waste_burnt="";
+			 if($record1[$i]->Q15Wa2==1){
+				 $waste_burnt.="Inside the school".",";
+			 }
+			 if($record1[$i]->Q15Wa2==2){
+				 $waste_burnt.="Outside the school".",";
+			 }
+			 if($record1[$i]->Q15Wa2==1||$record1[$i]->Q15Wa2==2){
+			 echo $waste_burnt;}else{echo "NA";}
+		  ?></td>
+          <td>
+		  <?php 
+			 $waste_is_burnt_incinerated="";
+			 if($record1[$i]->Q15Wa2S1==1){
+				 $waste_is_burnt_incinerated.="Horticultural".",";
+			 }
+			 if($record1[$i]->Q15Wa2S2==1){
+				 $waste_is_burnt_incinerated.="Plastic".",";
+			 }
+			 if($record1[$i]->Q15Wa2S3==1){
+				 $waste_is_burnt_incinerated.="Tyres".","; 
+			 }
+			  if($record1[$i]->Q15Wa2S4==1){
+				 $waste_is_burnt_incinerated.="Paper".","; 
+			 }
+			 if($record1[$i]->Q15Wa2S1==1|| $record1[$i]->Q15Wa2S2==1 || $record1[$i]->Q15Wa2S3==1 || $record1[$i]->Q15Wa2S4==1){
+			 echo $waste_is_burnt_incinerated;}
+			 else{echo "NA";}
+			?> 
+		  </td>
+		  
+         <!-- <td><?php //echo  $record1[$i]->Q16Wa1; ?></td>-->
 		  <td><?php if(strcmp($record1[$i]->Q17Wa1,"Y")==0){echo "Yes";}else if(strcmp($record1[$i]->Q17Wa1,"N")==0){echo "No";}else{echo $record1[$i]->Q17Wa1;} ?></td>
 		  
 		  
 		  <td><?php if(strcmp($record1[$i]->Q18Wa1,"Y")==0){echo "Yes";}else if(strcmp($record1[$i]->Q18Wa1,"N")==0){echo "No";}else{echo $record1[$i]->Q18Wa1;} ?></td>
-          <td><?php echo  $record1[$i]->Q18Wa2S1; ?></td>
+          
+		  
+		  <td>
+		    <?php 
+			  $awareness_drive="";
+			 if($record1[$i]->Q18Wa2S1==1){
+				 $awareness_drive.="As part of the curriculum".",";
+			 }
+			 if($record1[$i]->Q18Wa2S2==2){
+				 $awareness_drive.="As part of extracurricular activities such as guest lectures".",";
+			 }
+			 if($record1[$i]->Q18Wa2S3==3){
+				 $awareness_drive.="By the showcasing of posters and stickers".","; 
+			 }
+			 echo $awareness_drive;
+			?> 
+		  
+		  </td>
+		  
           <td><?php if(strcmp($record1[$i]->Q19Wa1,"Y")==0){echo "Yes";}else if(strcmp($record1[$i]->Q19Wa1,"N")==0){echo "No";}else{echo $record1[$i]->Q19Wa1;} ?></td>
           <td><?php echo $record1[$i]->waste_points; ?></td>
           <td><?php echo $record1[$i]->air_points + $record1[$i]->energy_points + $record1[$i]->food_points + $record1[$i]->land_points + $record1[$i]->water_points + $record1[$i]->waste_points; ?></td>
