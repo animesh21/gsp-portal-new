@@ -836,7 +836,7 @@ public function digital_certificate_for_principal_coordinator($argID)
 	{
 		$check1= $this->Audit_started_model->school_delete($argID);
 		if($check1){
-		   redirect('Admin/Audit_started_2017');
+		   redirect(base_url('Admin/Audit_started_2017'));
 	        }
 		else{
 	          echo "record failed";
