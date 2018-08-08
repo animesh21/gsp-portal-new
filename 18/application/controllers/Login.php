@@ -136,7 +136,8 @@ If your school has not registered earlier for the GSP Audit, please register her
         $status = '';
         $temp = $this->User_model->forgetPassword();
         if ($temp) {
-            $status = 'success';
+            //$status = 'success';
+	    $status = $temp;
         } else {
             $status = 'error';
         }
