@@ -226,7 +226,8 @@ class User_model extends CI_Model
                 $this->email->send();
 //                echo $this->email->print_debugger();
 //                die();
-                return true;
+               // return true;
+		    return $varNewPass;
             } else {
                 return false;
             }
