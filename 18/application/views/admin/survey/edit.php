@@ -224,4 +224,16 @@
             }
         });
     };
+/**********************************/
+/**This Function Used For Change Password In Audit 2017**/
+$("button").click(function(){
+	 $.ajax({
+            url:'<?php echo base_url(); ?>setpassword-2017.php',
+            type: 'GET',
+            data: {"userId":<?php echo "'".$school->userid."'"; ?>,"setPassword":$("input[name='password']").val(),"function_name":"setPasswordGSPAudit2017"},
+            success: function (reponse) {
+			alert("OK");
+            }
+        });
+});
 </script>
