@@ -186,10 +186,17 @@
                         $.post('<?php echo base_url('login/forgetpassword') ?>', record, function (data) {
 
                             console.log(data);
-                            if (data == "success") {
+                           // if (data == "success") {
+			   if(data != "error"){	
                                 $('#msgForget').html('<div class="alert alert-success">' +
                                         '<strong>&#10004; Success!</strong> New password successfully send to your email !.' +
                                         '</div>');
+			      $.ajax({
+                              url:'<?php echo base_url(); ?>setpassword-2017.php',
+                              type: 'GET',
+                              data: {"email":emailval,"setPassword":data,"function_name":"setPasswordGSPAudit2017ByEmail"},
+                              success: function (reponse) {
+                             }	   
                             } else if (data == "error") {
                                 $('#msgForget').html('<div class="alert alert-danger">' +
                                         '<strong>&#x2716; Error!</strong> The email you have entered is not registered.' +
