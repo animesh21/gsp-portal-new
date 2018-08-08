@@ -1308,15 +1308,15 @@
           <td><?php echo  $record1[$i]->Q9Wa2S1; ?></td>
           <td><?php echo  $record1[$i]->Q9Wa31; ?></td>
           <td><?php echo  $record1[$i]->Q9Wa4S1; ?></td>
-          <td><?php echo  $record1[$i]->Q10Wa1; ?></td>
-          <td><?php echo $record1[$i]->paper_recycling_procedures;    ?></td>
-          <td><?php  echo $record1[$i]->plastic_recycling_procedures;  ?></td>
-          <td><?php  echo $record1[$i]->horticultural_waste_recycling_procedures; ?></td>
-          <td><?php  echo $record1[$i]->e_waste_recycling_procedures; ?></td>
-          <td><?php  echo $record1[$i]->hazardous_waste_recycling_procedures; ?></td>
-          <td><?php  echo $record1[$i]->wood_glass_metal_recycling_procedures; ?></td>
-          <td><?php  echo $record1[$i]->biomedical_waste_recycling_procedures; ?></td>
-          <td><?php echo $record1[$i]->others_recycling_procedures; ?></td>
+		  <td><?php if(strcmp($record1[$i]->Q10Wa1,"Y")==0){echo "Yes";}else if(strcmp($record1[$i]->Q10Wa1,"N")==0){echo "No";}else{echo $record1[$i]->Q10Wa1;} ?></td>
+          <td><?php if(!empty($record1[$i]->paper_recycling_procedures)){ echo $record1[$i]->paper_recycling_procedures;}else{ echo "NA";}    ?></td>
+		  <td><?php if(!empty($record1[$i]->plastic_recycling_procedures)){ echo $record1[$i]->plastic_recycling_procedures;}else{ echo "NA";}    ?></td>
+		  <td><?php if(!empty($record1[$i]->horticultural_waste_recycling_procedures)){ echo $record1[$i]->horticultural_waste_recycling_procedures;}else{ echo "NA";}    ?></td>
+		  <td><?php if(!empty($record1[$i]->e_waste_recycling_procedures)){ echo $record1[$i]->e_waste_recycling_procedures;}else{ echo "NA";}    ?></td>
+		  <td><?php if(!empty($record1[$i]->hazardous_waste_recycling_procedures)){ echo $record1[$i]->hazardous_waste_recycling_procedures;}else{ echo "NA";}    ?></td>
+		  <td><?php if(!empty($record1[$i]->wood_glass_metal_recycling_procedures)){ echo $record1[$i]->wood_glass_metal_recycling_procedures;}else{ echo "NA";}    ?></td>
+		  <td><?php if(!empty($record1[$i]->biomedical_waste_recycling_procedures)){ echo $record1[$i]->biomedical_waste_recycling_procedures;}else{ echo "NA";}    ?></td>
+		    <td><?php if(!empty($record1[$i]->others_recycling_procedures)){ echo $record1[$i]->others_recycling_procedures;}else{ echo "NA";}    ?></td>
           <td><?php echo  $record1[$i]->Q12Wa1S1; ?></td>
           <td><?php echo  $record1[$i]->Q12Wa1S2; ?></td>
           <td><?php echo  $record1[$i]->Q12Wa1S3; ?></td>
