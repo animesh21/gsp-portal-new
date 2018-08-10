@@ -20,7 +20,7 @@
       <th>Co-ord. Mobile</th>
       <th>Completeness</th>
       <th>Reg. Date</th>
-      <th>Make School Partner</th>
+    
       <th>Action</th>
     </tr>
   </thead>
@@ -114,30 +114,8 @@ function getBadgeCode(userid)
 						{ mData: 'coemail' },
 						{ mData: 'comobile' },
 						{ mData: 'progress'},
-						{ mData: 'date_added' },
-						{ mData: 'partner_status',
-						 "orderable": false,
-                        "searchable": false,
-                        "render": function(data,type,row,meta) {
-						
-						if(row.partner_status==0){
-						 var a='<select style="width:100px;" id="partner_data" onChange="get_value('+row.id+',this.value)"><option value="No partner" selected="selected"> No partner</option><option value="Church of South India"> Church of South India</option><option value="Jawahar Navodaya Vidyalaya"> Jawahar Navodaya Vidyalaya</option><option value="Kendriya Vidyalaya Sangathan (KVS)"> Kendriya Vidyalaya Sangathan (KVS)</option><option value="Montfortian Education Foundation"> Montfortian Education Foundation</option><option value="Mount Litera Zee Schools"> Mount Litera Zee Schools</option><option value="Satya Bharti Foundation"> Satya Bharti Foundation</option></select>';                         }else if(row.partner_status==1){
-						 var a='<select style="width:100px;" id="partner_data" onChange="get_value('+row.id+',this.value)"><option value="No partner"> No partner</option><option value="Church of South India" selected="selected"> Church of South India</option><option value="Jawahar Navodaya Vidyalaya"> Jawahar Navodaya Vidyalaya</option><option value="Kendriya Vidyalaya Sangathan (KVS)"> Kendriya Vidyalaya Sangathan (KVS)</option><option value="Montfortian Education Foundation"> Montfortian Education Foundation</option><option value="Mount Litera Zee Schools"> Mount Litera Zee Schools</option><option value="Satya Bharti Foundation"> Satya Bharti Foundation</option></select>';       
-						 } else if(row.partner_status==2) {
-						  var a='<select style="width:100px;" id="partner_data" onChange="get_value('+row.id+',this.value)"><option value="No partner"> No partner </option><option value="Church of South India"> Church of South India</option><option value="Jawahar Navodaya Vidyalaya" selected="selected"> Jawahar Navodaya Vidyalaya</option><option value="Kendriya Vidyalaya Sangathan (KVS)"> Kendriya Vidyalaya Sangathan (KVS)</option><option value="Montfortian Education Foundation"> Montfortian Education Foundation</option><option value="Mount Litera Zee Schools"> Mount Litera Zee Schools</option><option value="Satya Bharti Foundation"> Satya Bharti Foundation</option></select>';
-						 }else if(row.partner_status==3) {
-						  var a='<select style="width:100px;" id="partner_data" onChange="get_value('+row.id+',this.value)"><option value="No partner"> No partner </option><option value="Church of South India"> Church of South India</option><option value="Jawahar Navodaya Vidyalaya"> Jawahar Navodaya Vidyalaya</option><option value="Kendriya Vidyalaya Sangathan (KVS)" selected="selected"> Kendriya Vidyalaya Sangathan (KVS)</option><option value="Montfortian Education Foundation"> Montfortian Education Foundation</option><option value="Mount Litera Zee Schools"> Mount Litera Zee Schools</option><option value="Satya Bharti Foundation"> Satya Bharti Foundation</option></select>';
-						 }else if(row.partner_status==4) {
-						  var a='<select style="width:100px;" id="partner_data" onChange="get_value('+row.id+',this.value)"><option value="No partner"> No partner </option><option value="Church of South India"> Church of South India</option><option value="Jawahar Navodaya Vidyalaya"> Jawahar Navodaya Vidyalaya</option><option value="Kendriya Vidyalaya Sangathan (KVS)" => Kendriya Vidyalaya Sangathan (KVS)</option><option value="Montfortian Education Foundation" selected="selected"> Montfortian Education Foundation</option><option value="Mount Litera Zee Schools"> Mount Litera Zee Schools</option><option value="Satya Bharti Foundation"> Satya Bharti Foundation</option></select>';
-						 }else if(row.partner_status==5) {
-						  var a='<select style="width:100px;" id="partner_data" onChange="get_value('+row.id+',this.value)"><option value="No partner"> No partner </option><option value="Church of South India"> Church of South India</option><option value="Jawahar Navodaya Vidyalaya"> Jawahar Navodaya Vidyalaya</option><option value="Kendriya Vidyalaya Sangathan (KVS)"> Kendriya Vidyalaya Sangathan (KVS)</option><option value="Montfortian Education Foundation"> Montfortian Education Foundation</option><option value="Mount Litera Zee Schools" selected="selected"> Mount Litera Zee Schools</option><option value="Satya Bharti Foundation"> Satya Bharti Foundation</option></select>';
-						 }else{
-						  var a='<select style="width:100px;" id="partner_data" onChange="get_value('+row.id+',this.value)"><option value="No partner"> No partner </option><option value="Church of South India"> Church of South India</option><option value="Jawahar Navodaya Vidyalaya" selected="selected"> Jawahar Navodaya Vidyalaya</option><option value="Kendriya Vidyalaya Sangathan (KVS)"> Kendriya Vidyalaya Sangathan (KVS)</option><option value="Montfortian Education Foundation"> Montfortian Education Foundation</option><option value="Mount Litera Zee Schools"> Mount Litera Zee Schools</option><option value="Satya Bharti Foundation" selected="selected"> Satya Bharti Foundation</option></select>';
-						 }
+						{ mData: 'date_added'
 						 
-						 
-						 return a;
-						 }
 						}, 
 						{ mData: 'id',
 						 "orderable": false,
@@ -202,13 +180,13 @@ $.ajax({
  });
 }
 /****/
-function makeSchoolDisable(school_id){
+function makeSchoolUnable(school_id){
 $.ajax({
-       url:'<?php echo base_url("admin/Audit_started_2017/disable_school");?>',
+       url:'<?php echo base_url("admin/Audit_started_2017/unable_school");?>',
        type: 'POST',
        data: {'school_id':school_id },
        success: function (data){
-       alert('School Has Been Successfully Disabled');
+       alert('School Has Been Successfully Unabled');
        location.reload();
     }
  });
