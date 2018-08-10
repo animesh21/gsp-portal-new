@@ -823,6 +823,15 @@ public function digital_certificate_for_principal_coordinator($argID)
 	}
 	
 	/**This Function Used For Disabling A School**/
+	
+	public function unable_school(){
+	  $argID=$this->input->post("school_id");
+	  $check1= $this->Audit_started_model->unable_school($argID);
+	  if($check1){
+		   redirect('Admin/Audit_started_2017');
+	  }
+	}
+	
 	public function disable_school(){
 	  $argID=$this->input->post("school_id");
 	  $check1= $this->Audit_started_model->disable_school($argID);
