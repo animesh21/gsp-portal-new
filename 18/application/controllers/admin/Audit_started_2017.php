@@ -828,7 +828,7 @@ public function digital_certificate_for_principal_coordinator($argID)
 	  $argID=$this->input->post("school_id");
 	  $check1= $this->Audit_started_model->unable_school($argID);
 	  if($check1){
-		   redirect('Admin/Audit_started_2017');
+		   redirect('/admin/audit_started_2017');
 	  }
 	}
 	
