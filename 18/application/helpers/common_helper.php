@@ -30,6 +30,21 @@ if (!function_exists('getDistricts')) {
 
 }
 
+if(!function_exists('checkDigitalCertificate')) {
+   function checkDigitalCertificate($username,$schoolname){
+     $CI = & get_instance();
+	 $CI->db->like("certificate_username",$username);
+	 $CI->db->like("certificate_schoolname",$schoolname);
+	 $temp = $CI->db->select("*")->from("tblcertificate")->get()->result();
+	 if($temp){ 
+	     return 1;
+	   }
+	}
+}
+
+
+
+
 if (!function_exists('getStateById')) {
     function getStateById($stateId) {
         $arrState = array();
