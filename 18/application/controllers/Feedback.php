@@ -19,21 +19,91 @@ class Feedback extends CI_Controller {
     	}
     }
 
-    public function index() {
+     public function index() {
         if (!$_SERVER['HTTP_REFERER']) redirect('waste');
     	$data['title'] = 'Feedback';
         $argPost['userid'] = $this->session->userdata('USER_ID');
         $argPost['type'] = 8 ;
+		  $airTeachers=array();
+		  $argID=$this->session->userdata('USER_ID');
+   $arrStaff = array();
+   $question_alphabet = array("A", "E", "F", "L", "W", "Wa");
+   $username=$this->db->select('name')
+				->from('gsp_school')
+				->where('userid',$this->session->userdata('USER_ID'))
+				->get()->row();
+   foreach ($question_alphabet as $q) {
+       //Teachers
+       for ($i = 1; $i <= 3; $i++) {
+       if((getFiled("Q1" . $q . $i . "S1", $argID) !="0") && (getFiled("Q1" . $q . $i . "S1", $argID) !='') || (getFiled("Q1" . $q . $i . "S3", $argID) !="0") && (getFiled("Q1" . $q . $i . "S3", $argID) !=''))
+       {
+       $airTeachers[] = array("teacher"=>getFiled("Q1" . $q . $i . "S1", $argID) . " " . getFiled("Q1" . $q . $i . "S3", $argID),"school"=>$username->name);
+	   
+       }
+       }
+       //Staff
+       for ($i = 1; $i <= 5; $i++) {
+       if((getFiled("Q2" . $q . $i . "S1", $argID) !="0") && (getFiled("Q2" . $q . $i . "S1", $argID) !='') || (getFiled("Q2" . $q . $i . "S3", $argID) !="0") && (getFiled("Q2" . $q . $i . "S3", $argID) !='')){
+       $arrStaff[] = array("teacher"=>getFiled("Q2" . $q . $i . "S1", $argID) . " " . getFiled("Q2" . $q . $i . "S3", $argID),"school"=>$username->name);
+	
+       }
+       }
+	   }
+	    //Stuents
+   $arrStudents = array();
+   $question_alphabet = array("A", "E", "F", "L", "W", "Wa");
+   $username=$this->db->select('name')
+				->from('gsp_school')
+				->where('userid',$argID)
+				->get()->row();
+   foreach ($question_alphabet as $q) {
+       for ($i = 1; $i <= 10; $i++) {
+       //Students
+       if(getFiled("Q3".$q. $i . "S1", $argID)!="" && getFiled("Q3" .$q.$i . "S2", $argID) !="")
+       {
+       $arrStudents[] = array(
+       'name' => getFiled("Q3".$q. $i . "S1", $argID) . " " . getFiled("Q3" .$q.$i . "S2", $argID),
+       'grade' => getFiled("Q3" .$q.$i . "S3", $argID),
+	   'school_name'=>$username->name,
+	   );
+	    }
+       }
+	  }
+		$data['staff_certificate']=array_merge($airTeachers, $arrStaff);
+		$data['student_certificate']=$arrStudents;
         $data['data'] = $this->Answer_model->getAnswers($argPost);
         $this->load->view('feedback',$data);
         
     }
+	
+	public function generateDigitalCertificate(){
+	  extract($this->input->post());
+	  $result=$this->db->insert("tblcertificate",array("userid"=>$userid,"certificate_username"=>$membername,"certificate_schoolname"=>$school_name,"certificate_srno"=>rand(10201,10001)));
+	  if($result){echo "Data Has Been Send For Generating Digital Certificate.";}
+	}
+	
+	public function deleteDigitalCertificate(){
+		//print_r($this->input->post());exit;
+	  extract($this->input->post());
+	  $this->db->where("userid",$userid);
+	  $this->db->where("certificate_username",$membername);
+	  $this->db->where("certificate_schoolname",$school_name);
+	  $result=$this->db->delete("tblcertificate");
+	  if($result){echo "Generating Digital Certificate Has been Cancelled.";}
+	}
+	
+	
+	
+	
 
      public function end_aduit()
     {
        $this->load->view('end-message');
     }
    
+	
+	
+	
    /* public function set()
     {
         $post = $this->input->post();
