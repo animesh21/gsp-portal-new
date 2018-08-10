@@ -802,4 +802,36 @@ if (isset($data['Q1Fe11'])) {
             });
         });
     });
+	
+	/* digital certificate checkbox*/
+   $(".digitalCertificate").click(function(){
+	   var ckbox = $(this);
+	    if (ckbox.is(':checked')) {
+			 
+			 $.ajax({
+           url:'<?php echo base_url("feedback/generateDigitalCertificate"); ?>',
+           type: 'POST',
+           data: {"userid":<?php echo $this->session->userdata('USER_ID'); ?>,"membername":$(this).val(),"school_name":$("#certificate_schoolname").val()},
+           success: function (reponse) {
+			alert(reponse);
+			location.reload();
+			}
+        });
+        } else {
+			
+			 $.ajax({
+           url:'<?php echo base_url("feedback/deleteDigitalCertificate"); ?>',
+           type: 'POST',
+           data: {"userid":<?php echo $this->session->userdata('USER_ID'); ?>,"membername":$(this).val(),"school_name":$("#certificate_schoolname").val()},
+           success: function (reponse) {
+			alert(reponse);
+			location.reload();
+			}
+        });
+        }
+	   
+	   
+   });	
+	
+	
 </script>
