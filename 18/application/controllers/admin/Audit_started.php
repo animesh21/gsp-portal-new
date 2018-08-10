@@ -436,5 +436,11 @@ class Audit_started extends CI_Controller {
 	 $data['main'] = 'admin/audit/delete-school';
 	 $data['title'] = 'Summary';
          $this->load->view('admin/includes/template', $data);
-	}	
+	}
+	
+	public function getSchoolDisable(){
+	 $data['main'] = 'admin/audit/unable-school';
+	 $data['title'] = 'Summary';
+      $this->load->view('admin/includes/template', $data);
+	}
 }
