@@ -20,7 +20,7 @@ class Audit_started_model extends CI_Model {
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
                         ->join('cities AS c', 'a.district=c.id', 'left')
-		        ->where(array("a.make_school_disabled"=>"1"))
+		        ->where(array("a.make_school_disabled","1"))
                         ->order_by('a.id', 'desc')
                         ->get()->result();
     }
@@ -30,7 +30,7 @@ class Audit_started_model extends CI_Model {
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
                         ->join('cities AS c', 'a.district=c.id', 'left')
-						->where(array("a.make_school_disabled"=>"0"))
+			->where(array("a.make_school_disabled"=>"0"))
                         ->order_by('a.id', 'desc')
                         ->get()->result();
     }	
