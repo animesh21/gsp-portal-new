@@ -670,6 +670,7 @@ class Report extends CI_Model {
 		{
 			return $this->db->select('a.*')
 			         ->from('gsp_school As a')
+				->where('a.make_school_disabled','1')
 					 ->get()
 					 ->result();
 					 
@@ -682,6 +683,7 @@ class Report extends CI_Model {
 			           ->from('gsp_school As a')
 					  ->where("a.progress >",'5')
 					   ->where("a.progress <",'100')
+				 ->where('a.make_school_disabled','1')
 					   ->get()
 					   ->result();
 		}
@@ -691,6 +693,7 @@ class Report extends CI_Model {
 			return $this->db->select('a.*')
 			        ->from('gsp_school As a')
 				   ->where("a.progress =",'100')
+				->where('a.make_school_disabled','1')
 				   ->get()
 					->result();
 			
@@ -701,6 +704,7 @@ class Report extends CI_Model {
 			return $this->db->select('a.*')
 			         ->from('gsp_school As a')
 					->where("a.progress=",'5')
+				->where('a.make_school_disabled','1')
 					 ->get()
 					 ->result();
 			
@@ -715,6 +719,7 @@ class Report extends CI_Model {
 					 ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
 					 ->where('b.questionid','Q1G2')
                      ->where('b.answer  >=',6)
+				->where('a.make_school_disabled','1')
 					 ->get()
 					 ->result();
 					//echo $this->db->last_query();exit; 
@@ -730,6 +735,7 @@ class Report extends CI_Model {
 					    ->where("a.progress <",'100')
 					    ->where('b.questionid','Q1G2')
                         ->where('b.answer >=',6)
+				 ->where('a.make_school_disabled','1')
 					    ->get()
 					    ->result();
 		}
@@ -742,6 +748,7 @@ class Report extends CI_Model {
 				   ->where("a.progress =",'100')
 				    ->where('b.questionid','Q1G2')
                      ->where('b.answer >=',6)
+				->where('a.make_school_disabled','1')
 				   ->get()
 					->result();
 			
@@ -755,6 +762,7 @@ class Report extends CI_Model {
 					->where("a.progress=",'5')
 					->where('b.questionid','Q1G2')
                      ->where('b.answer >=',6)
+				->where('a.make_school_disabled','1')
 					 ->get()
 					 ->result();
 			
@@ -768,6 +776,7 @@ class Report extends CI_Model {
 					 ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
 					 ->where('b.questionid','Q1G2')
                      ->where('b.answer <',6)
+				->where('a.make_school_disabled','1')
 					 ->get()
 					 ->result();
 					 
@@ -783,6 +792,7 @@ class Report extends CI_Model {
 					    ->where("a.progress <",'100')
 					    ->where('b.questionid','Q1G2')
                        ->where('b.answer <',6)
+				 ->where('a.make_school_disabled','1')
 					    ->get()
 					    ->result();
 		}
@@ -795,6 +805,7 @@ class Report extends CI_Model {
 				   ->where("a.progress =",'100')
 				    ->where('b.questionid','Q1G2')
                     ->where('b.answer <',6)
+				->where('a.make_school_disabled','1')
 				   ->get()
 					->result();
 			
@@ -808,6 +819,7 @@ class Report extends CI_Model {
 					->where("a.progress=",'5')
 					->where('b.questionid','Q1G2')
                     ->where('b.answer <',6)
+				->where('a.make_school_disabled','1')
 					 ->get()
 					 ->result();
 			
@@ -825,6 +837,7 @@ class Report extends CI_Model {
 					 ->where_in('a.state',$region1)
 					 ->where('b.questionid','Q1G2')
                      ->where('b.answer <',6)
+				->where('a.make_school_disabled','1')
 					 ->get()
 					 ->result();
 					 
@@ -841,6 +854,7 @@ class Report extends CI_Model {
 					    ->where("a.progress <",'100')
 					    ->where('b.questionid','Q1G2')
                        ->where('b.answer <',6)
+				 ->where('a.make_school_disabled','1')
 					    ->get()
 					    ->result();
 		}
@@ -854,6 +868,7 @@ class Report extends CI_Model {
 				   ->where("a.progress =",'100')
 				    ->where('b.questionid','Q1G2')
                     ->where('b.answer <',6)
+				->where('a.make_school_disabled','1')
 				   ->get()
 					->result();
 			
@@ -868,6 +883,7 @@ class Report extends CI_Model {
 					->where("a.progress=",'5')
 					->where('b.questionid','Q1G2')
                     ->where('b.answer <',6)
+				->where('a.make_school_disabled','1')
 					 ->get()
 					 ->result();
 			
@@ -883,6 +899,7 @@ class Report extends CI_Model {
 					 ->where_in('a.state',$region1)
 					 ->where('b.questionid','Q1G2')
                      ->where('b.answer  >=',6)
+				->where('a.make_school_disabled','1')
 					 ->get()
 					 ->result();
 					//echo $this->db->last_query();exit; 
@@ -899,6 +916,7 @@ class Report extends CI_Model {
 					    ->where("a.progress <",'100')
 					    ->where('b.questionid','Q1G2')
                         ->where('b.answer >=',6)
+				 ->where('a.make_school_disabled','1')
 					    ->get()
 					    ->result();
 		}
@@ -912,6 +930,7 @@ class Report extends CI_Model {
 				   ->where("a.progress =",'100')
 				    ->where('b.questionid','Q1G2')
                      ->where('b.answer >=',6)
+				->where('a.make_school_disabled','1')
 				   ->get()
 					->result();
 			
@@ -926,6 +945,7 @@ class Report extends CI_Model {
 					->where("a.progress=",'5')
 					->where('b.questionid','Q1G2')
                      ->where('b.answer >=',6)
+				->where('a.make_school_disabled','1')
 					 ->get()
 					 ->result();
 			
@@ -938,6 +958,7 @@ class Report extends CI_Model {
 			return $this->db->select('a.*')
 			         ->from('gsp_school As a')
 					 ->where_in('a.state',$region1)
+				->where('a.make_school_disabled','1')
 					 ->get()
 					 ->result();
 					 
@@ -951,6 +972,7 @@ class Report extends CI_Model {
 					   ->where_in('a.state',$region1)
 					  ->where("a.progress >",'5')
 					   ->where("a.progress <",'100')
+				 ->where('a.make_school_disabled','1')
 					   ->get()
 					   ->result();
 		}
@@ -961,6 +983,7 @@ class Report extends CI_Model {
 			        ->from('gsp_school As a')
 					->where_in('a.state',$region1)
 				   ->where("a.progress =",'100')
+				->where('a.make_school_disabled','1')
 				   ->get()
 					->result();
 			
@@ -972,6 +995,7 @@ class Report extends CI_Model {
 			         ->from('gsp_school As a')
 					 ->where_in('a.state',$region1)
 					->where("a.progress=",'5')
+				->where('a.make_school_disabled','1')
 					 ->get()
 					 ->result();
 			
