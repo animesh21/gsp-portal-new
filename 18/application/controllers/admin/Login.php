@@ -41,5 +41,40 @@ class Login extends CI_Controller {
         $auth = $this->Login_model->checkAuth($password,$userid);
         redirect(base_url('admin/audit_started_2017'));
     }
+	
+	 public function Auth_unable(){
+		  $data['main'] = 'admin/audit/disabled_school';
+        $data['title'] = 'Home | Disabled School';
+		
+	  
+        $password = $this->input->post('password');
+		//echo $password;exit;
+		
+		if($password!=''){
+		
+		$userid = $this->input->post('userid');
+		
+		$auth_unabled = $this->Login_model->checkAuth_unable($password,$userid);
+		if($auth_unabled)
+			{
+				echo '<script language="javascript">';
+				echo 'alert("School Successfully Unable")';
+				echo '</script>';
+				
+				
+			}
+			else
+			{
+			 echo '<script language="javascript">';
+			 echo 'alert("Wrong Password")';
+			 echo '</script>';
+			}
+			
+		 $this->load->view('admin/includes/template', $data);
+		}else{
+			 $this->load->view('admin/includes/template', $data);
+			
+		}
+    }
 
 }
