@@ -415,6 +415,59 @@ if (isset($data['Q1Fe11'])) {
 				   placeholder="<?php if (isset($data['Q1Fe1112'])) echo $data['Q1Fe1112']; ?>"
                            value="<?php echo set_value('Q1Fe1112'); ?>"/>
         </div>
+	    
+	     <div class="form-group">
+      <label>
+      <h6>Generate Digital Certificates</h6>
+      </label>
+      <table class="table table-bordered table-striped">
+        <tr>
+          <th colspan="4">Digital Certificates Of Teachers & Staff Members</th>
+        </tr>
+        <tr>
+          <th>Sr No.</th>
+          <th>First-Name</th>
+          <th>School Name</th>
+          <th>Checked</th>
+        </tr>
+        <?php 
+		 for($i=0,$r=0;$i<sizeof($staff_certificate);++$i){ 
+		 ?>
+        <tr>
+          <th><?php echo ++$r; ?></th>
+          <th><?php echo $staff_certificate[$i]['teacher']; ?></th>
+          <th><?php echo $staff_certificate[$i]['school']; ?></th>
+          <th><input type="checkbox" class="digitalCertificate" value="<?php echo $staff_certificate[$i]['teacher']; ?>" <?php $condition=checkDigitalCertificate($staff_certificate[$i]['teacher'],$staff_certificate[$i]['school']); if($condition==1){ echo "checked    disbaled";} ?>   />
+		  <input type="hidden" id="certificate_schoolname" value="<?php echo $staff_certificate[$i]['school']; ?>" />
+		  </th>
+        </tr>
+        <?php }?>
+        <tr>
+          <th colspan="4">Digital Certificates Of Students</th>
+        </tr>
+        <tr>
+          <th>Sr No.</th>
+          <th>First-Name & Grade</th>
+          <th>School Name</th>
+          <th>Checked</th>
+        </tr>
+        <?php 
+		 for($i=0,$r=0;$i<sizeof($student_certificate);++$i){ 
+		 ?>
+        <tr>
+          <th><?php echo ++$r; ?></th>
+          <th><?php echo $student_certificate[$i]['name']." "."(".$student_certificate[$i]['grade'].")"; ?></th>
+          <th><?php echo $student_certificate[$i]['school_name']; ?></th>
+          <th><input type="checkbox" class="digitalCertificate" value="<?php echo $student_certificate[$i]['name']." "."(".$student_certificate[$i]['grade'].")"; ?>" <?php $condition=checkDigitalCertificate($student_certificate[$i]['name'],$student_certificate[$i]['school_name']); if($condition==1){ echo "checked";} ?> />
+		  </th>
+        </tr>
+        <?php } ?>
+      </table>
+    </div>
+	    
+	    
+	    
+	    
         <div class="form-group">
             <label>
                 <h6>Checklist of uploaded documents</h6>
