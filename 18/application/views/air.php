@@ -2155,10 +2155,10 @@ $("#airnext").click(function(e){
 /*Administrative staff (maximum of five staff can be part of the team): */
 $("#airnext").click(function(e){
    if($("#Q2A1S1").attr('placeholder')==""  || $("#Q2A1S3").attr('placeholder')==""  || $("#Q2A1S2").attr('placeholder')==""){
-      if($("#Q2A1S1").val()=="" || $("#Q2A1S3").val()==""  || $("#Q2A1S2").val()==""){  
+      //if($("#Q2A1S1").val()=="" || $("#Q2A1S3").val()==""  || $("#Q2A1S2").val()==""){  
     alert("School Must Add Administrative Staff  First Name, Last Name & Email ID.");
 	e.preventDefault();
-	}
+	//}
    }
 });
 /*Student Record Validation*/
