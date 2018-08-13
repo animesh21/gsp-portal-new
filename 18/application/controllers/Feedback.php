@@ -69,6 +69,10 @@ class Feedback extends CI_Controller {
 	    }
        }
 	  }
+	     $data['school_name']=$this->db->select('*')
+				 ->from('gsp_school')
+				 ->where('userid',$this->session->userdata('USER_ID'))
+				 ->get()->result();
 		$data['staff_certificate']=array_merge($airTeachers, $arrStaff);
 		$data['student_certificate']=$arrStudents;
         $data['data'] = $this->Answer_model->getAnswers($argPost);
