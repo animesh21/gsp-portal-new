@@ -420,49 +420,9 @@ if (isset($data['Q1Fe11'])) {
       <label>
       <h6>Generate Digital Certificates</h6>
       </label>
-      <table class="table table-bordered table-striped">
-        <tr>
-          <th colspan="4">Digital Certificates Of Teachers & Staff Members</th>
-        </tr>
-        <tr>
-          <th>Sr No.</th>
-          <th>First-Name</th>
-          <th>School Name</th>
-          <th>Checked</th>
-        </tr>
-        <?php 
-		 for($i=0,$r=0;$i<sizeof($staff_certificate);++$i){ 
-		 ?>
-        <tr>
-          <th><?php echo ++$r; ?></th>
-          <th><?php echo $staff_certificate[$i]['teacher']; ?></th>
-          <th><?php echo $staff_certificate[$i]['school']; ?></th>
-          <th><input type="checkbox" class="digitalCertificate" value="<?php echo $staff_certificate[$i]['teacher']; ?>" <?php $condition=checkDigitalCertificate($staff_certificate[$i]['teacher'],$staff_certificate[$i]['school']); if($condition==1){ echo "checked    disbaled";} ?>   />
-		  <input type="hidden" id="certificate_schoolname" value="<?php echo $staff_certificate[$i]['school']; ?>" />
-		  </th>
-        </tr>
-        <?php }?>
-        <tr>
-          <th colspan="4">Digital Certificates Of Students</th>
-        </tr>
-        <tr>
-          <th>Sr No.</th>
-          <th>First-Name & Grade</th>
-          <th>School Name</th>
-          <th>Checked</th>
-        </tr>
-        <?php 
-		 for($i=0,$r=0;$i<sizeof($student_certificate);++$i){ 
-		 ?>
-        <tr>
-          <th><?php echo ++$r; ?></th>
-          <th><?php echo $student_certificate[$i]['name']." "."(".$student_certificate[$i]['grade'].")"; ?></th>
-          <th><?php echo $student_certificate[$i]['school_name']; ?></th>
-          <th><input type="checkbox" class="digitalCertificate" value="<?php echo $student_certificate[$i]['name']." "."(".$student_certificate[$i]['grade'].")"; ?>" <?php $condition=checkDigitalCertificate($student_certificate[$i]['name'],$student_certificate[$i]['school_name']); if($condition==1){ echo "checked";} ?> />
-		  </th>
-        </tr>
-        <?php } ?>
-      </table>
+      <br/>
+	  <button class="lptext" type="button" title="Change Password Form" data-toggle="modal" data-target="#Certificate"
+                       href="#ChangePass" rel="shadowbox;width=580;height=500;">Digital Certificate</button>
     </div>
 	    
 	    
@@ -676,6 +636,80 @@ if (isset($data['Q1Fe11'])) {
         </div>
         <?php echo form_close(); ?> </div>
 </div>
+
+<div id="Certificate" class="modal fade" role="dialog">
+                  <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content" style="width: 834px; margin-left: -120px;">
+                      <div class="modal-header" style="background: rgb(232, 101, 73); color:#fff;">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Generate Your Digital Certificate </h4>
+                      </div>
+					  
+            <?php echo form_open('Feedback/insert_digitalcertificate/'.$school_name[0]->name);?>
+                      <div class="modal-body">
+                        <div class="col-lg-12">
+                          
+                         <table class="table table-bordered table-striped">
+        <tr>
+          <th colspan="4">Digital Certificates Of Teachers & Staff Members</th>
+        </tr>
+        <tr>
+          <th>Sr No.</th>
+          <th>First-Name</th>
+          <th>School Name</th>
+          <th>Checked</th>
+        </tr>
+        <?php 
+		 for($i=0,$r=0;$i<sizeof($staff_certificate);++$i){ 
+		 ?>
+        <tr>
+          <th><?php echo ++$r; ?></th>
+          <th><?php echo $staff_certificate[$i]['teacher']; ?></th>
+          <th><?php echo $staff_certificate[$i]['school']; ?></th>
+          <th><input type="checkbox" class="digitalCertificate" name="digitalCertificateName[]" value="<?php echo $staff_certificate[$i]['teacher']; ?>" <?php $condition=checkDigitalCertificate($staff_certificate[$i]['teacher'],$staff_certificate[$i]['school']); if($condition==1){ echo "checked    disbaled";} ?>   />
+		  <input type="hidden" id="certificate_schoolname" value="<?php echo $staff_certificate[$i]['school']; ?>" />
+		  </th>
+        </tr>
+        <?php }?>
+        <tr>
+          <th colspan="4">Digital Certificates Of Students</th>
+        </tr>
+        <tr>
+          <th>Sr No.</th>
+          <th>First-Name & Grade</th>
+          <th>School Name</th>
+          <th>Checked</th>
+        </tr>
+        <?php 
+		 for($i=0,$r=0;$i<sizeof($student_certificate);++$i){ 
+		 ?>
+        <tr>
+          <th><?php echo ++$r; ?></th>
+          <th><?php echo $student_certificate[$i]['name']." "."(".$student_certificate[$i]['grade'].")"; ?></th>
+          <th><?php echo $student_certificate[$i]['school_name']; ?></th>
+          <th><input type="checkbox" class="digitalCertificate" name="digitalCertificateName[]" value="<?php echo $student_certificate[$i]['name']." "."(".$student_certificate[$i]['grade'].")"; ?>" <?php $condition=checkDigitalCertificate($student_certificate[$i]['name'],$student_certificate[$i]['school_name']); if($condition==1){ echo "checked";} ?> />
+		  </th>
+        </tr>
+        <?php } ?>
+      </table>
+                          
+                        </div>
+                        
+
+                        
+                      </div>
+                      <div class="modal-footer">
+                          <button class="btn btn-default" type="submit">Submit</button> 
+                          <button type="button" class="btn btn-default" data-dismiss="modal" id="movenextbtn" style="margin:0px;">Return to survey</button>
+                      </div>
+                      <?php echo form_close(); ?>
+                    </div>
+                  </div>
+</div>
+
+
+
 </div>
 <!-- /.container -->
 <?php $this->load->view('footer'); ?>
@@ -802,36 +836,38 @@ if (isset($data['Q1Fe11'])) {
             });
         });
     });
+	$(".submit").click(function(e){
+		
+	 $.ajax({
+           url:'<?php echo base_url("feedback/getDigitalValue"); ?>',
+           type: 'POST',
+           data: {"userid":<?php echo $this->session->userdata('USER_ID'); ?>},
+           success: function (reponse) {
+			   if(reponse==='false')
+			   {
+				 alert('Please Sumbit Your Digital Certificate');
+			      window.location.href = "<?php echo base_url('feedback'); ?>";
+				
+			   }
+			}
+        });	
+		
+		
+	});
 	
-	/* digital certificate checkbox*/
-   $(".digitalCertificate").click(function(){
-	   var ckbox = $(this);
-	    if (ckbox.is(':checked')) {
-			 
-			 $.ajax({
-           url:'<?php echo base_url("feedback/generateDigitalCertificate"); ?>',
-           type: 'POST',
-           data: {"userid":<?php echo $this->session->userdata('USER_ID'); ?>,"membername":$(this).val(),"school_name":$("#certificate_schoolname").val()},
-           success: function (reponse) {
-			alert(reponse);
-			location.reload();
-			}
-        });
-        } else {
+	$(".submit").click(function(e){
+		var ckbox=$('.digitalCertificate:checkbox:checked')
+		if (ckbox.is(':checked')) {
 			
-			 $.ajax({
-           url:'<?php echo base_url("feedback/deleteDigitalCertificate"); ?>',
-           type: 'POST',
-           data: {"userid":<?php echo $this->session->userdata('USER_ID'); ?>,"membername":$(this).val(),"school_name":$("#certificate_schoolname").val()},
-           success: function (reponse) {
-			alert(reponse);
-			location.reload();
-			}
-        });
-        }
-	   
-	   
-   });	
+		}else{
+			 
+			 alert('Please Generate Your Digital Certificate');
+			e.preventDefault();
+			
+		}
+		
+	});
+	
 	
 	
 </script>
