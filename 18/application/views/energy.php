@@ -1562,7 +1562,7 @@ $("#energynext").click(function(e){
 $("#energynext").click(function(e){
    if($("#Q3E1S1").attr('placeholder')==""  || $("#Q3E1S2").attr('placeholder')==""  || $("#Q3E1S3").attr('placeholder')==""){ 
     if($("#Q3E1S1").val()==""  || $("#Q3E1S2").val()==""  || $("#Q3E1S3").val()==""){ 
-    alert("School Must Add Administrative Staff  First Name, Last Name & Grade.");
+    alert("School Must Add Student First Name, Last Name & Grade.");
 	e.preventDefault();
 	}
    }
