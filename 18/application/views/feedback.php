@@ -845,7 +845,7 @@ if (isset($data['Q1Fe11'])) {
            success: function (reponse) {
 			   if(reponse==='false')
 			   {
-				 alert('Please Sumbit Your Digital Certificate');
+				 alert('Please Sumbit Your Digital Certificate After Select');
 			      window.location.href = "<?php echo base_url('feedback'); ?>";
 				
 			   }
