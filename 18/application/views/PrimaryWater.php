@@ -2609,7 +2609,7 @@ $("#movenextbtn").click(function(e){
 $("#movenextbtn").click(function(e){
    if($("#Q3W1S1").attr('placeholder')==""  || $("#Q3W1S2").attr('placeholder')==""  || $("#Q3W1S3").attr('placeholder')==""){ 
     if($("#Q3W1S1").val()==""  || $("#Q3W1S2").val()==""  || $("#Q3W1S3").val()==""){ 
-    alert("School Must Add Administrative Staff  First Name, Last Name & Grade.");
+    alert("School Must Add Student First Name, Last Name & Grade.");
 	e.preventDefault();
 	}
    }
