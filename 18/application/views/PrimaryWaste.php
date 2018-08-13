@@ -2069,7 +2069,7 @@ $("#wastenext").click(function(e){
 $("#wastenext").click(function(e){
    if($("#Q3Wa1S1").attr('placeholder')==""  || $("#Q3Wa1S2").attr('placeholder')==""  || $("#Q3Wa1S3").attr('placeholder')==""){ 
     if($("#Q3Wa1S1").val()==""  || $("#Q3Wa1S2").val()==""  || $("#Q3Wa1S3").val()==""){ 
-    alert("School Must Add Administrative Staff  First Name, Last Name & Grade.");
+    alert("School Must Add Student First Name, Last Name & Grade.");
 	e.preventDefault();
 	}
    }
