@@ -76,6 +76,85 @@ class Feedback extends CI_Controller {
         
     }
 	
+	public function insert_digitalcertificate()
+	{
+		$query=$this->db->select('*')
+		        ->from('tblcertificate')
+				->where('userid',$this->session->userdata('USER_ID'))
+				->get()
+				->row();
+				if ($query) {
+					
+							$this->db->where('userid',$this->session->userdata('USER_ID'));
+							$finaldata=$this->db->delete('tblcertificate');
+							
+									if($finaldata)
+									{
+												extract($this->input->post());
+												$schoolname= $this->uri->segment(3);
+										
+												 $total_certificate=count($digitalCertificateName); 
+													for($i=0;$i<$total_certificate;$i++)
+													{
+														$data=array(
+														'userid'=>$this->session->userdata('USER_ID'),
+														'certificate_username'=>$digitalCertificateName[$i],
+														'certificate_schoolname'=> $schoolname,
+														'certificate_srno'=>rand(10201,10001)
+														);
+														$this->db->insert('tblcertificate',$data);
+													}
+										
+													   redirect('feedback');
+									}
+
+                }else{
+		
+						extract($this->input->post());
+						$schoolname= $this->uri->segment(3);
+						
+						$total_certificate=count($digitalCertificateName); 
+						for($i=0;$i<$total_certificate;$i++)
+						{
+							$data=array(
+							'userid'=>$this->session->userdata('USER_ID'),
+							'certificate_username'=>$digitalCertificateName[$i],
+							'certificate_schoolname'=> $schoolname,
+							'certificate_srno'=>rand(10201,10001)
+							);
+							
+							$this->db->insert('tblcertificate',$data);
+							
+						}
+						redirect('feedback');
+				}
+		
+		
+	}
+	
+	public function getDigitalValue()
+	{
+		$userid=$this->input->post('userid');
+		$data=$this->db->select('*')
+		         ->from('tblcertificate')
+				 ->where('userid',$userid)
+				 ->get()
+				 ->result();
+				 if($data)
+				 {
+					 echo 'true';
+				 }else{
+					 
+					 echo 'false';
+				 }
+		
+		
+	}
+	
+	
+	
+	
+	
 	public function generateDigitalCertificate(){
 	  extract($this->input->post());
 	  $result=$this->db->insert("tblcertificate",array("userid"=>$userid,"certificate_username"=>$membername,"certificate_schoolname"=>$school_name,"certificate_srno"=>rand(10201,10001)));
