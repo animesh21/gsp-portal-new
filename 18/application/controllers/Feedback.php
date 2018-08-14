@@ -209,6 +209,8 @@ class Feedback extends CI_Controller {
 	   {
 	    $shool_record=array("school_id"=>$get_school_id,"userid"=>$get_current_user,"year"=>$get_current_year,"status"=>'1');
 	    $this->db->insert('gsp_aduit_submitted',$shool_record);
+	    $this->db->where(array("userid"=>$get_current_user));	   
+	    $this->db->update("gsp_school",array("complete_status"=>'1'));	   
 		redirect(base_url("Feedback/end_aduit")); 
 	   }	
     }
