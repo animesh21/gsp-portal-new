@@ -78,7 +78,7 @@
     {
        if(value=='2015' || value=='2016')
        {
-           location.href="http://greenschoolsprogramme.org/audit/index.php";
+           location.href="http://greenschoolsprogramme.org/audit/old/index.php";
        }
        if(value=='2017'){
 	  location.href="http://greenschoolsprogramme.org/audit/index.php";
