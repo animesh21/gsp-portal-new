@@ -212,7 +212,7 @@ class User_model extends CI_Model
                 $config['mailtype'] = 'html';
                 $this->email->initialize($config);
                 $from = "support@greenschoolsprogramme.org";
-                $to =array($query->email,"ranjita@cseindia.org");
+                $to =array($query->email,"ranjita@cseindia.org","siddhartha2488@gmail.com");
                 $subject = "GSP Forget Password";
                 $msg = "Dear &nbsp;";
                 $msg .= $query->username . "," . "<br><br>";
