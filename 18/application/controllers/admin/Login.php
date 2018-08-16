@@ -105,10 +105,9 @@ class Login extends CI_Controller {
 			 echo '</script>';
 			}
 			
-			redirect('admin/audit_started_2017');
-		 
+			 $this->load->view('admin/includes/template', $data);
 		}else{
-			 redirect('admin/audit_started_2017');
+			 $this->load->view('admin/includes/template', $data);
 			
 		}
     }
