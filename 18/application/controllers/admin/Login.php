@@ -78,7 +78,7 @@ class Login extends CI_Controller {
     }
 	
 	public function Auth_unable1(){
-		  $data['main'] = 'admin/audit/disabled_school';
+		  $data['main'] = 'admin/audit/audit_started_2017';
         $data['title'] = 'Home | Disabled School';
 		
 	  
