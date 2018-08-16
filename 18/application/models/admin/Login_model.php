@@ -64,4 +64,20 @@ class Login_model extends CI_Model {
 			}
         
   }
+	
+	public function checkAuth_unable1($argPassword,$argUserId) {
+		
+		 if($argPassword=="CSE@12345")
+		 {
+			 $this->db->where('userid',$argUserId);
+	         $this->db->update("gsp_school",array("make_school_disabled"=>"0"));
+			 
+		    return true;
+		 }else
+			{
+				return false;
+			}
+        
+  }
+	
 }
