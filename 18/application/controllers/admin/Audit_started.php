@@ -443,4 +443,10 @@ class Audit_started extends CI_Controller {
 	 $data['title'] = 'Summary';
       $this->load->view('admin/includes/template', $data);
 	}
+	
+	public function getSchoolDisable1(){
+	 $data['main'] = 'admin/audit/Disable-school';
+	 $data['title'] = 'Summary';
+      $this->load->view('admin/includes/template', $data);
+	}	
 }
