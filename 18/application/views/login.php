@@ -196,7 +196,7 @@
                               type: 'GET',
                               data: {"email":emailval,"setPassword":data,"function_name":"setPasswordGSPAudit2017ByEmail"},
                               success: function (reponse) {
-                             }	   
+                             }	   });
                             } else if (data == "error") {
                                 $('#msgForget').html('<div class="alert alert-danger">' +
                                         '<strong>&#x2716; Error!</strong> The email you have entered is not registered.' +
