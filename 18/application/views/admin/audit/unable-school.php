@@ -10,12 +10,12 @@
 </style>
 <div class="top-area">
 
-  <h2>Unable Your School</h2>
+  <h2>Enable Your School</h2>
 </div>
 <div class="row">
   <div class="col-md-12">
    <div class="panel panel-default">
-      <div class="panel-heading">Unable Your School</div>
+      <div class="panel-heading">Enable Your School</div>
 	  <?php 
 	 
 	  echo form_open('admin/Login/Auth_unable'); ?>
