@@ -13,6 +13,7 @@ class Dashboard extends CI_Controller {
             redirect(base_url('admin/login'));
             
         }
+	$this->load->helper("common_helper");
         $this->load->model(array('School_model', 'admin/Dashboard_model'));
     }
 
