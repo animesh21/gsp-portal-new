@@ -289,7 +289,17 @@ if (!function_exists('getSchoolPointYOY')) {
   }
 }
 
-
+/*
+* Get The Unique Years In YOY
+*/
+  if (!function_exists('getUniqueyear')) {
+    function getUniqueyear(){
+	  $CI = & get_instance();
+	  $CI->db->distinct("year_ref");
+	  $UniqueYear=$CI->db->select("year_ref")->from("tbl_yoy")->get()->result();
+	  return $UniqueYear;
+	}
+  }
 
 
 /**
