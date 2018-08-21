@@ -2538,11 +2538,11 @@ if($('input[name="Q4F1"]:checked').val()==='Y'){
   }
  /*Q10a Validation*/
 	if($("input[name='Q13F1']:checked").val()==='Y'){
-	   if($('input[name="Q13F2"]').val()==""){
+	   if($("input[name='Q13F2']").attr('placeholder')==""){
 	      alert("Q10(a) If yes, please share the details .."); 
 	      e.preventDefault();
 	   }
-       if($("input[name='Q13F2']").attr('placeholder')===""){	 
+       if($("input[name='Q13F2']").attr('placeholder')==""){	 
             alert("Q10(a) If yes, please share the details: .."); 
              e.preventDefault();
        }
