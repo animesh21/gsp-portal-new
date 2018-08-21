@@ -262,6 +262,36 @@ if (!function_exists('calculateBuildUpconstructedArea')) {
   }
 }
 
+/******
+* GET SCHOOL DATA BY School ID
+*
+*******/
+if (!function_exists('getSchoolDaTaByScHooLId')) {
+ function getSchoolDaTaByScHooLId($schoolId){
+   $CI = & get_instance();
+   $data=$CI->db->select('a.*, b.name AS state_name,c.name As district_name')
+                        ->from('gsp_school AS a')
+                        ->join('states AS b', 'a.state=b.id', 'left')
+                        ->join('cities AS c', 'a.district=c.id', 'left')
+						->where(array("a.id"=>$schoolId))
+                        ->get()->result();
+			return $data;			
+ }
+}
+/*
+*GET SCHOOL POINT OF YOY
+*/
+if (!function_exists('getSchoolPointYOY')) {
+  function getSchoolPointYOY($school_Id,$year){
+         $CI = & get_instance();
+         $temp = $CI->db->get_where('tbl_yoy', array('school_id' => $school_Id,'year_ref'=>$year))->row();
+		 return $temp->point_percentage;
+  }
+}
+
+
+
+
 /**
 *
 *
