@@ -199,8 +199,6 @@ class Feedback extends CI_Controller {
        $this->Answer_model->submitAnswers($post,8);   
 	   $get_current_user=$this->session->userdata('USER_ID');
 	   $get_current_year=date('Y');
-	   schoolprofilegeneral($get_current_user);
-	   air($get_current_user);
 	   $data=$this->db->select("id")->from('gsp_school')->where("userid=".$get_current_user)->get()->result();
 	   $get_school_id=$data[0]->id;
 	   $result=$this->db->select("*")->from('gsp_aduit_submitted')->where("userid=".$get_current_user)->where("school_id=".$get_school_id)->where("year=".$get_current_year)->get()->result();
