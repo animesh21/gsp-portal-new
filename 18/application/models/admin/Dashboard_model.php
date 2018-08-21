@@ -445,8 +445,7 @@ class Dashboard_model extends CI_Model {
    
    
       public function getMasterData(){
-       $this->db->distinct("a.school_id");
-        return $this->db->select('a.school_id')
+        return $this->db->select('a.*')
         ->from('tbl_yoy AS a')
         ->get()->result();
       } 	
