@@ -10,6 +10,7 @@
         <th>Name of the Schools submitting GSP Audit in 2017</th>
         <th>State</th>
         <th>District</th>
+	<th>2018 Submission</th>
         <th>2017 Submission</th>
         <th>2016 Submission</th>
         <th>2015 submission</th>
@@ -25,6 +26,7 @@
         <td><?php echo $record[$i]->school_name; ?></td>
         <td><?php echo $record[$i]->state; ?></td>
         <td><?php echo $record[$i]->district; ?></td>
+	<td>NA</td>      
         <td <?php 
 		     if($record[$i]->data_2017>=70){?>style='background-color: Green; color:#000;' <?php }elseif($record[$i]->data_2017>=50 && $record[$i]->data_2017<=69.9){ ?>style='background:yellow; color:000;' <?php }elseif($record[$i]->data_2017>=35 && $record[$i]->data_2017<=49.9){ ?> style='background:orange; color:000;'  <?php }elseif($record[$i]->data_2017<=34.9 && $record[$i]->data_2017!="NA"){?> style='background:red; color:000;' <?php } ?> >
         <?php echo $record[$i]->data_2017; ?>
