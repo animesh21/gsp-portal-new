@@ -26,7 +26,10 @@
         <td><?php echo $record[$i]->school_name; ?></td>
         <td><?php echo $record[$i]->state; ?></td>
         <td><?php echo $record[$i]->district; ?></td>
-	<td>NA</td>      
+	<td <?php 
+		     if($record[$i]->data_2018>=70){?>style='background-color: Green; color:#000;' <?php }elseif($record[$i]->data_2018>=50 && $record[$i]->data_2018<=69.9){ ?>style='background:yellow; color:000;' <?php }elseif($record[$i]->data_2018>=35 && $record[$i]->data_2018<=49.9){ ?> style='background:orange; color:000;'  <?php }elseif($record[$i]->data_2018<=34.9 && $record[$i]->data_2018!="NA" & $record[$i]->data_2018!=" "){?> style='background:red; color:000;' <?php } ?> >
+        <?php if(!empty($record[$i]->data_2018)){echo $record[$i]->data_2018;}else{echo "NA";} ?>
+        </td>    
         <td <?php 
 		     if($record[$i]->data_2017>=70){?>style='background-color: Green; color:#000;' <?php }elseif($record[$i]->data_2017>=50 && $record[$i]->data_2017<=69.9){ ?>style='background:yellow; color:000;' <?php }elseif($record[$i]->data_2017>=35 && $record[$i]->data_2017<=49.9){ ?> style='background:orange; color:000;'  <?php }elseif($record[$i]->data_2017<=34.9 && $record[$i]->data_2017!="NA"){?> style='background:red; color:000;' <?php } ?> >
         <?php echo $record[$i]->data_2017; ?>
