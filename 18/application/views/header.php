@@ -125,30 +125,20 @@ ga('send', 'pageview');
 					>Air </li>
       <li id="Nav"
 					class="row <?php echo ($this->router->fetch_class() == 'energy') ? "current" : "missing"; ?>"
-			<?php 
-			$progress=progressBarValue($this->session->userdata('USER_ID'));
-			if($progress >= 20){?> onClick="javascript:window.location.href='<?php echo base_url("energy") ?>';" <?php } ?>		
+					
 					>Energy </li>
       <li id="Nav"
 					class="row <?php echo ($this->router->fetch_class() == 'food') ? "current" : "missing"; ?>"
-		<?php 
-			$progress=progressBarValue($this->session->userdata('USER_ID'));
-			if($progress >= 30){?> onClick="javascript:window.location.href='<?php echo base_url("food") ?>';" <?php } ?>	> Food </li>
+			> Food </li>
       <li id="Nav"
 					class="row <?php echo ($this->router->fetch_class() == 'land') ? "current" : "missing"; ?>"
-			<?php 
-			$progress=progressBarValue($this->session->userdata('USER_ID'));
-			if($progress >= 40){?> onClick="javascript:window.location.href='<?php echo base_url("land") ?>';" <?php } ?>		>Land </li>
+					>Land </li>
       <li id="Nav"
 					class="row <?php echo ($this->router->fetch_class() == 'water') ? "current" : "missing"; ?>"
-				<?php 
-			$progress=progressBarValue($this->session->userdata('USER_ID'));
-			if($progress >= 50){?> onClick="javascript:window.location.href='<?php echo base_url("water") ?>';" <?php } ?>		>Water </li>
+					>Water </li>
       <li id="Nav"
 					class="row <?php echo ($this->router->fetch_class() == 'waste') ? "current" : "missing"; ?>"
-			<?php 
-			$progress=progressBarValue($this->session->userdata('USER_ID'));
-			if($progress >= 75){?> onClick="javascript:window.location.href='<?php echo base_url("waste") ?>';" <?php } ?>			>Waste </li>
+						>Waste </li>
       <li class="row <?php echo ($this->router->fetch_class() == 'feedback') ? "current" : "missing"; ?>"
 					id="link"> Feedback </li>
     </ol>
