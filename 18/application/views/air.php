@@ -1028,24 +1028,28 @@ by the vehicles is a critical parameter that indicates if your vehicles are eco-
         </div>
         <div class="col-xs-2">
           <select class="form-control space-textbox" onChange="details()" id="b6" type="text" min="0" name="Q6A2S1B6">
+		    <option value="">Select</option> 
             <option value="Yes" <?php if(isset($data['Q6A2S1B6'])){ if(strcmp($data['Q6A2S1B6'],"Yes")==0) { echo "selected"; } }  ?>>Yes</option>
             <option value="No" <?php if(isset($data['Q6A2S1B6'])){ if(strcmp($data['Q6A2S1B6'],"No")==0) { echo "selected"; } }  ?>>No</option>
           </select>
         </div>
         <div class="col-xs-2">
           <select class="form-control space-textbox" onChange="details()" id="c6" type="text" min="0" name="Q6A2S1C6">
+		    <option value="">Select</option> 
             <option value="Yes" <?php if(isset($data['Q6A2S1C6'])){ if(strcmp($data['Q6A2S1C6'],"Yes")==0) { echo "selected"; } }  ?>>Yes</option>
             <option value="No" <?php if(isset($data['Q6A2S1C6'])){ if(strcmp($data['Q6A2S1C6'],"No")==0) { echo "selected"; } }  ?>>No</option>
           </select>
         </div>
         <div class="col-xs-2">
           <select class="form-control space-textbox" onChange="details()" id="v6" type="text" min="0" name="Q6A2S1V6">
+		    <option value="">Select</option> 
             <option value="Yes" <?php if(isset($data['Q6A2S1V6'])){ if(strcmp($data['Q6A2S1V6'],"Yes")==0) { echo "selected"; } }  ?>>Yes</option>
             <option value="No" <?php if(isset($data['Q6A2S1V6'])){ if(strcmp($data['Q6A2S1V6'],"No")==0) { echo "selected"; } }  ?>>No</option>
           </select>
         </div>
         <div class="col-xs-2">
           <select class="form-control space-textbox" onChange="details()" id="o6" type="text" min="0" name="Q6A2S1O6">
+		    <option value="">Select</option> 
             <option value="Yes" <?php if(isset($data['Q6A2S1O6'])){ if(strcmp($data['Q6A2S1O6'],"Yes")==0) { echo "selected"; } }  ?>>Yes</option>
             <option value="No" <?php if(isset($data['Q6A2S1O6'])){ if(strcmp($data['Q6A2S1O6'],"No")==0) { echo "selected"; } }  ?>>No</option>
           </select>
