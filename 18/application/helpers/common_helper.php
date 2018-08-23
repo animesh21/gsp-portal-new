@@ -87,6 +87,19 @@ if (!function_exists('getSchoolId')) {
 	   }
 }
 
+
+if (!function_exists('getSchoolNameBYUniqueId')) {
+           function getSchoolNameBYUniqueId($argUserID)
+	   {
+	     $CI = & get_instance();
+             $temp = $CI->db->get_where('gsp_school', array('userid' => $argUserID))->row();
+	     return $temp->name;
+	   }
+}
+
+
+
+
 /******
 * GET USER ID
 *
@@ -99,6 +112,9 @@ if (!function_exists('getUserId')) {
 		 return $temp->userid;
 	   }
 }
+
+
+
 
 
 /*
