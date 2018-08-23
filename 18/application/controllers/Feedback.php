@@ -95,7 +95,7 @@ class Feedback extends CI_Controller {
 									if($finaldata)
 									{
 												extract($this->input->post());
-												$schoolname= $this->uri->segment(3);
+												$schoolname= urlencoded($this->uri->segment(3));
 										
 												 $total_certificate=count($digitalCertificateName); 
 													for($i=0;$i<$total_certificate;$i++)
@@ -115,7 +115,7 @@ class Feedback extends CI_Controller {
                 }else{
 		
 						extract($this->input->post());
-						$schoolname= $this->uri->segment(3);
+						$schoolname= urlencoded($this->uri->segment(3));
 						
 						$total_certificate=count($digitalCertificateName); 
 						for($i=0;$i<$total_certificate;$i++)
