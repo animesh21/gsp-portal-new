@@ -646,7 +646,7 @@ if (isset($data['Q1Fe11'])) {
                         <h4 class="modal-title">Generate Your Digital Certificate </h4>
                       </div>
 					  
-            <?php echo form_open('Feedback/insert_digitalcertificate/'.str_replace(' ','@',$school_name[0]->name));?>
+            <?php echo form_open('Feedback/insert_digitalcertificate/'.$school_name[0]->userid);?>
                       <div class="modal-body">
                         <div class="col-lg-12">
                           
