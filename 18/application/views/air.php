@@ -1053,7 +1053,7 @@ by the vehicles is a critical parameter that indicates if your vehicles are eco-
         <div class="col-xs-2">
           <input class="form-control space-textbox" onKeyUp="details()" id="t6" type="text" min="0"
                            name="Q6A2S1T6" placeholder="<?php if (isset($data['Q6A2S1T6'])) echo $data['Q6A2S1T6'] ?>"
-                           value="<?php echo set_value('Q6A2S1T6'); ?>"/>
+                           value="<?php echo set_value('Q6A2S1T6'); ?>" readonly=""/>
         </div>
       </div>
     </div>
