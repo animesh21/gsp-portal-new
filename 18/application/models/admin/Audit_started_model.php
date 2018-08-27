@@ -2186,6 +2186,7 @@ public function getExcel2017Data() {
                        
 		                ->where('a.progress', '100')
 		                ->where('a.complete_status','1')
+		               ->where('a.make_school_disabled',1)
                         ->order_by('a.id', 'desc')
                         ->get()->result();
         
