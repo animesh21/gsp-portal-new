@@ -644,12 +644,13 @@ if (isset($data['Q1Fe11'])) {
                       <div class="modal-header" style="background: rgb(232, 101, 73); color:#fff;">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                         <h4 class="modal-title">Generate Your Digital Certificate </h4>
+						<h5><strong>Please ensure that you select unique names to avoid duplication in digital certificates</strong></h5>
                       </div>
 					  
             <?php echo form_open('Feedback/insert_digitalcertificate/'.$school_name[0]->userid);?>
                       <div class="modal-body">
                         <div class="col-lg-12">
-                          <h4>Please ensure that you select unique names to avoid duplication in digital certificates.</h4>
+                          <h4>Please ensure that you select unique names to avoid duplication in digital certificates</h4>
                          <table class="table table-bordered table-striped">
         <tr>
           <th colspan="4">Digital Certificates Of Teachers & Staff Members</th>
