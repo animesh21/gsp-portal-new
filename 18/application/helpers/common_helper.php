@@ -55,6 +55,61 @@ if (!function_exists('getStateById')) {
 }
 
 
+if(!function_exists('getPartnersCountByState')){
+  function getPartnersCountByState($stateId,$partnertype){
+    $CI = & get_instance();
+	$temp = $CI->db->select('COUNT("id") As CountLabel')->from("gsp_school")->where(array('state'=>$stateId,"partner_status"=>$partnertype))->get()->row();
+    return $temp->CountLabel;
+  }
+}
+
+if (!function_exists('getdistrictById')) {
+    function getdistrictById($citiesId) {
+        $arrState = array();
+        $CI = & get_instance();
+        $temp = $CI->db->get_where('cities',array('id'=>$citiesId))->row();
+        return $temp->name;
+    }
+}
+
+if(!function_exists('getPartnersCountBydistrict')){
+  function getPartnersCountBydistrict($citiesId,$partnertype){
+    $CI = & get_instance();
+	$temp = $CI->db->select('COUNT("id") As CountLabel')->from("gsp_school")->where(array('district'=>$citiesId,"partner_status"=>$partnertype))->get()->row();
+    return $temp->CountLabel;
+  }
+}
+
+
+if(!function_exists('getPartnerGraphByState')){
+function getPartnerGraphByState($partnerId){
+ $CI = & get_instance();
+	  $CI->db->distinct("state");
+	  $stateResult=$CI->db->select("state")
+	           ->from("gsp_school")->where("partner_status",$partnerId)->get()->result();
+		$arrState=array();
+		foreach($stateResult as $state){
+               $arrState[]=array("statename"=>getStateById($state->state),"partners"=>getPartnersCountByState($state->state,$partnerId));		
+		}	
+		return $arrState;   
+	}
+}
+
+if(!function_exists('getPartnerGraphByDistrict')){
+function getPartnerGraphByDistrict($partnerId){
+ $CI = & get_instance();
+	  $CI->db->distinct("district");
+	  $districtResult=$CI->db->select("district")
+	           ->from("gsp_school")->where("partner_status",$partnerId)->get()->result();
+		$arrDistrict=array();
+		foreach($districtResult as $district){
+               $arrDistrict[]=array("districtame"=>getdistrictById($district->district),"partners"=>getPartnersCountBydistrict($district->district,$partnerId));		
+		}	
+		return $arrDistrict;   
+	}
+}
+
+
 if (!function_exists('get_partner')) {
     function get_partner($partnerId) {
 	 $arrState = array();
