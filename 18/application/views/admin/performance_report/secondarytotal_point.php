@@ -1511,7 +1511,10 @@
 			 if($record1[$i]->Q18Wa2S3==3){
 				 $awareness_drive.="By the showcasing of posters and stickers".","; 
 			 }
-			 echo $awareness_drive;
+			 if($record1[$i]->Q18Wa2S1!=1 && $record1[$i]->Q18Wa2S2!=2 && $record1[$i]->Q18Wa2S3!=3 ){
+			 echo "000.000";
+			 }
+			 else{ echo $awareness_drive;}
 			?> 
 		  
 		  </td>
