@@ -137,6 +137,11 @@
           <th>Others Teachers</th>
           <th>Others non teaching</th>
           <th>Others Total</th>
+		  <th>Air-School population (Student)</th>
+		  <th>Air-School population (Teaching Staff)</th>
+		  <th>Air-School population (Non-Teaching Staff)</th>
+		  <th>Air-School population (Total)</th>
+		  
           <th>No.of students suffer from respiratory problems</th>
           <th>Air Quality Monitoring in School</th>
           <th>Air Quality Monitoring in close to school</th>
@@ -819,6 +824,10 @@
           <td><?php echo $record1[$i]->Q7A11S2; ?></td>
           <td><?php echo $record1[$i]->Q7A11S3; ?></td>
           <td><?php echo $record1[$i]->Q7A11S4; ?></td>
+		  <td><?php echo $record1[$i]->Q7A1S1+$record1[$i]->Q7A2S1+$record1[$i]->Q7A3S1+$record1[$i]->Q7A4S1+$record1[$i]->Q7A5S1+$record1[$i]->Q7A6S1+$record1[$i]->Q7A7S1+$record1[$i]->Q7A8S1+$record1[$i]->Q7A9S1+$record1[$i]->Q7A10S1+$record1[$i]->Q7A11S1; ?></td>
+		  <td><?php echo $record1[$i]->Q7A1S2+$record1[$i]->Q7A2S2+$record1[$i]->Q7A3S2+$record1[$i]->Q7A4S2+$record1[$i]->Q7A5S2+$record1[$i]->Q7A6S2+$record1[$i]->Q7A7S2+$record1[$i]->Q7A8S2+$record1[$i]->Q7A9S2+$record1[$i]->Q7A10S2+$record1[$i]->Q7A11S2; ?></td>
+		  <td><?php echo $record1[$i]->Q7A1S3+$record1[$i]->Q7A2S3+$record1[$i]->Q7A3S3+$record1[$i]->Q7A4S3+$record1[$i]->Q7A5S3+$record1[$i]->Q7A6S3+$record1[$i]->Q7A7S3+$record1[$i]->Q7A8S3+$record1[$i]->Q7A9S3+$record1[$i]->Q7A10S3+$record1[$i]->Q7A11S3; ?></td>
+		  <td><?php echo $record1[$i]->Q7A1S4+$record1[$i]->Q7A2S4+$record1[$i]->Q7A3S4+$record1[$i]->Q7A4S4+$record1[$i]->Q7A5S4+$record1[$i]->Q7A6S4+$record1[$i]->Q7A7S4+$record1[$i]->Q7A8S4+$record1[$i]->Q7A9S4+$record1[$i]->Q7A10S4+$record1[$i]->Q7A11S4; ?></td>
           <td><?php echo $record1[$i]->Q8A1; ?></td>
           <td><?php 
 			if($record1[$i]->Q9A1=="Y")
@@ -1076,24 +1085,97 @@
 		   <td><?php if(strcmp($record1[$i]->Q8W1S9,"Y")==0){echo "Yes";}else if(strcmp($record1[$i]->Q8W1S9,"N")==0){echo "No";}else{echo $record1[$i]->Q8W1S9;} ?></td>
 		   <td><?php if(strcmp($record1[$i]->Q8W1S10,"Y")==0){echo "Yes";}else if(strcmp($record1[$i]->Q8W1S10,"N")==0){echo "No";}else{echo $record1[$i]->Q8W1S10;} ?></td>
 		   <td><?php if(strcmp($record1[$i]->Q8W1S11,"Y")==0){echo "Yes";}else if(strcmp($record1[$i]->Q8W1S11,"N")==0){echo "No";}else{echo $record1[$i]->Q8W1S11;} ?></td>
-          <td><?php echo  $record1[$i]->Q8W2; ?></td>
-          <td><?php echo  $record1[$i]->Q8W2S1; ?></td>
-          <td><?php echo  $record1[$i]->Q8W2S1S1; ?></td>
-          <td><?php echo  $record1[$i]->Q8W2S2; ?></td>
+		   <td><?php if(strcmp($record1[$i]->Q8W2,"Y")==0){echo "Yes";}else if(strcmp($record1[$i]->Q8W2,"N")==0){echo "No";}else{echo $record1[$i]->Q8W2;} ?></td>
+		   <td><?php if(strcmp($record1[$i]->Q8W2S1,"Y")==0){echo "Yes";}else if(strcmp($record1[$i]->Q8W2S1,"N")==0){echo "No";}else{echo $record1[$i]->Q8W2S1;} ?></td>
+          <td><?php 
+		  if($record1[$i]->Q8W2S1S1==1){ echo "Rooftop";}
+		  elseif($record1[$i]->Q8W2S1S1==2){echo "Paved";}
+		  elseif($record1[$i]->Q8W2S1S1==3){echo "Unpaved";}
+		  elseif($record1[$i]->Q8W2S1S1==4){echo "Rooftop + paved";}
+		  elseif($record1[$i]->Q8W2S1S1==5){echo "Paved + unpaved ";}
+		  elseif($record1[$i]->Q8W2S1S1==6){echo "Rooftop + unpaved ";}
+		  elseif($record1[$i]->Q8W2S1S1==7){echo "Rooftop + paved + unpaved ";}
+		  else{ echo "000.000";}
+		  ?></td>
+          <td><?php 
+		  if($record1[$i]->Q8W2S2==1){ echo " By storing";}
+		  elseif($record1[$i]->Q8W2S2==2){echo "By recharging groundwater";}
+		  elseif($record1[$i]->Q8W2S2==3){echo "Combination of both";}
+		  else{echo $record1[$i]->Q8W2S2;}
+		  
+		  ?></td>
           <td><?php echo  $record1[$i]->Q8W2S2S1; ?></td>
           <td><?php echo  $record1[$i]->Q8W2S2S2; ?></td>
           <td><?php echo  $record1[$i]->Q8W2S2S7; ?></td>
-          <td><?php echo  $record1[$i]->Q8W2S2S10; ?></td>
-          <td><?php echo  $record1[$i]->Q8W2S4; ?></td>
-          <td><?php echo  $record1[$i]->Q8W2S31; ?></td>
-          <td><?php echo  $record1[$i]->Q8W2S4S1; ?></td>
+          <td><?php 
+		   $ratio_between_storage_and_recharge="";
+		   if($record1[$i]->Q8W2S2S10==1){$ratio_between_storage_and_recharge.="Storage = Recharge";}
+		   elseif($record1[$i]->Q8W2S2S10==2){$ratio_between_storage_and_recharge.="Storage > Recharge";}
+		   elseif($record1[$i]->Q8W2S2S10==3){$ratio_between_storage_and_recharge.="Recharge > Storage";}
+		   elseif($record1[$i]->Q8W2S2S10==4){$ratio_between_storage_and_recharge.="Only recharge";}
+		   elseif($record1[$i]->Q8W2S2S10==5){$ratio_between_storage_and_recharge.=" Only storage";}
+		   if(!empty($record1[$i]->Q8W2S2S10)){echo $ratio_between_storage_and_recharge;}
+		   else{echo "000.000";}
+		  ?></td>
+		   <td><?php 
+		  if($record1[$i]->Q8W2S4==1){ echo " 10 to 20 per cent";}
+		  elseif($record1[$i]->Q8W2S4==2){echo "21 to 30 per cent";}
+		  elseif($record1[$i]->Q8W2S4==3){echo "31 to 40 per cent";}
+		  elseif($record1[$i]->Q8W2S4==4){echo "41 to 50 per cent";}
+		  elseif($record1[$i]->Q8W2S4==5){echo "51 to 60 per cent";}
+		  elseif($record1[$i]->Q8W2S4==6){echo "61 to 70 per cent";}
+		  elseif($record1[$i]->Q8W2S4==7){echo "71 to 80 per cent";}
+		  elseif($record1[$i]->Q8W2S4==8){echo "81 to 90 per cent";}
+		  elseif($record1[$i]->Q8W2S4==9){echo "91 to 100 per cent";}
+		  else{echo $record1[$i]->Q8W2S4;}
+		  ?></td>
+          <td><?php 
+		    $harvesting_structures_present="";
+		   if($record1[$i]->Q8W2S31==1){$harvesting_structures_present.="Conduits";}
+		   if($record1[$i]->Q8W2S32==1){$harvesting_structures_present.="Gutters";}
+		   if($record1[$i]->Q8W2S33==1){$harvesting_structures_present.="Filter unit";}
+		   if($record1[$i]->Q8W2S34==1){$harvesting_structures_present.="First flush";}
+		   if($record1[$i]->Q8W2S35==1){$harvesting_structures_present.="Storage tank";}
+		   if($record1[$i]->Q8W2S36==1){$harvesting_structures_present.="Collection sump";}
+		   if($record1[$i]->Q8W2S37==1){$harvesting_structures_present.="Pump unit";}
+		   if($record1[$i]->Q8W2S38==1){$harvesting_structures_present.="Recharge structure";}
+		   if(!empty($harvesting_structures_present)){echo $harvesting_structures_present;}else{ echo  $record1[$i]->Q8W2S31;} ?></td>
+          <td><?php 
+		  if($record1[$i]->Q8W2S4S1==1){ echo "Before storage tank"; }
+		  elseif($record1[$i]->Q8W2S4S1==2){ echo "Before recharge system"; }
+		  elseif($record1[$i]->Q8W2S4S1==3){ echo "Before both storage tank and recharge system"; }
+		  elseif($record1[$i]->Q8W2S4S1==4){ echo "We do not use filters"; }
+		  else{echo $record1[$i]->Q8W2S4S1;}
+		  
+		  ?></td>
           <td><?php echo  $record1[$i]->Q8W2S4S22; ?></td>
-          <td><?php echo  $record1[$i]->Q8W2S5; ?></td>
+          <td><?php 
+		   if($record1[$i]->Q8W2S5==1){ echo "Good";}
+		   elseif($record1[$i]->Q8W2S5==2){echo "Average";}
+		   elseif($record1[$i]->Q8W2S5==3){echo "Poor";}
+		   else{echo $record1[$i]->Q8W2S5; }
+		  ?></td>
           <td><?php echo  $record1[$i]->Q8W2S61; ?></td>
-          <td><?php echo  $record1[$i]->Q8W2S7; ?></td>
+          <td><?php
+		  if($record1[$i]->Q8W2S7==1){echo "Pre-monsoon";}
+		  elseif($record1[$i]->Q8W2S7==2){ echo "Post-monsoon";}
+		  elseif($record1[$i]->Q8W2S7==3){echo "Do not follow any such pattern";}
+		  else{echo $record1[$i]->Q8W2S7;}
+		  ?></td>
           <td><?php echo  $record1[$i]->Q8W2S8; ?></td>
-          <td><?php echo  $record1[$i]->Q8W2S9; ?></td>
-          <td><?php echo  $record1[$i]->Q8W2S10;  ?></td>
+          <td><?php 
+		  if($record1[$i]->Q8W2S9==1){echo "Pre-monsoon";}
+		  elseif($record1[$i]->Q8W2S9==2){ echo "Post-monsoon";}
+		  elseif($record1[$i]->Q8W2S9==3){echo "Do not follow any such pattern";}
+		  else{echo $record1[$i]->Q8W2S9;}  
+		  
+		  ?></td>
+          <td><?php 
+		  if($record1[$i]->Q8W2S10==1){echo "If there was a decrease, please specify";}
+		  elseif($record1[$i]->Q8W2S10==2){ echo "If there was an increase, please specify";}
+		  elseif($record1[$i]->Q8W2S10==3){echo "No change";}
+		  else{echo $record1[$i]->Q8W2S10;}  
+		  ?></td>
           <td><?php echo  $record1[$i]->Q8W2S12; ?></td>
           <td><?php echo  $record1[$i]->Q8W2S13; ?></td>
           <td><?php echo  $record1[$i]->Q8W2S6; ?></td>
