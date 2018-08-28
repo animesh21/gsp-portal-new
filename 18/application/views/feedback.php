@@ -649,7 +649,7 @@ if (isset($data['Q1Fe11'])) {
             <?php echo form_open('Feedback/insert_digitalcertificate/'.$school_name[0]->userid);?>
                       <div class="modal-body">
                         <div class="col-lg-12">
-                          
+                          <h4>Please ensure that you select unique names to avoid duplication in digital certificates.</h4>
                          <table class="table table-bordered table-striped">
         <tr>
           <th colspan="4">Digital Certificates Of Teachers & Staff Members</th>
