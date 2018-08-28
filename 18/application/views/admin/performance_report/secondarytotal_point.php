@@ -914,31 +914,31 @@
           <td><?php if(($record1[$i]->Q9E1S1)==1) 
 				{
 					echo 'Solar';
-				}
+				}else{ echo "000.000";}
 					
 				
 				?></td>
           <td><?php if(($record1[$i]->Q9E1S2)==1)
 				{
 					echo 'Wind';
-				}
+				}else{ echo "000.000";}
 				
 					?></td>
           <td><?php if(( $record1[$i]->Q9E1S3)==1)
 				{
 					echo 'Hydro';
-				}
+				}else{ echo "000.000";}
 				
 					?></td>
           <td><?php if(( $record1[$i]->Q9E1S5)==1)
 				{
 					echo 'Biogas Plant';
-				}
+				}else{ echo "000.000";}
 					?></td>
           <td><?php if(( $record1[$i]->Q9E1S4)==1) 
 				{
 					echo 'Combination of solar and wind';
-				}	
+				}else{ echo "000.000";}	
 				
 				?></td>
 		  <td><?php if(strcmp($record1[$i]->Q10E1,"Y")==0){echo "Yes";}else if(strcmp($record1[$i]->Q10E1,"N")==0){echo "No";}else{echo $record1[$i]->Q10E1;} ?></td>
