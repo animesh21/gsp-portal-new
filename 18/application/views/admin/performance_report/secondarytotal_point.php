@@ -213,6 +213,7 @@
           <th>Provision of packaged food</th>
           <th>Serve Mid-day Meal</th>
           <th>Students bring own lunch</th>
+		  <th>If yes, then midday meal is served under</th>
           <th>How many students bring home-made lunch</th>
           <th>how many bring packaged food as home-made lunch</th>
           <th>Teachers have responsibility to check</th>
@@ -947,7 +948,12 @@
 		   <!---Starts Food Section---> 
 		  <td><?php if(strcmp($record1[$i]->Q4F1,"Y")==0){echo "Yes";}else if(strcmp($record1[$i]->Q4F1,"N")==0){echo "No";}else{echo $record1[$i]->Q4F1;} ?></td>
 		  <td><?php if(strcmp($record1[$i]->Q5F1,"Y")==0){echo "Yes";}else if(strcmp($record1[$i]->Q5F1,"N")==0){echo "No";}else{echo $record1[$i]->Q5F1;} ?></td>
-		   <td><?php if(strcmp($record1[$i]->Q5F1S1,"Y")==0){echo "Yes";}else if(strcmp($record1[$i]->Q5F1S1,"N")==0){echo "No";}else{echo $record1[$i]->Q5F1S1;} ?></td>
+		   <td><?php if(strcmp($record1[$i]->Q5F1S1,"Y")==0){echo "Yes";}else if(strcmp($record1[$i]->Q5F1S1,"N")==0){echo "No";}else{echo "000.000";} ?></td>
+		  <td><?php if(strcmp($record1[$i]->Q5F1S1,"Y")!=0 && strcmp($record1[$i]->Q5F1S1,"N")!=0){
+		   if($record1[$i]->Q5F1S1==1){ echo "Government Scheme";}
+		   elseif($record1[$i]->Q5F1S1==2){echo "School’s personal initiative";}
+		   elseif($record1[$i]->Q5F1S1==3){echo "Others";}
+		  }else{echo "000.000";} ?></td> 
           <td><?php echo $record1[$i]->Q5F1S2; ?></td>
           <td><?php echo $record1[$i]->Q5F1S3; ?></td>
 		   <td><?php if(strcmp($record1[$i]->Q5F1S4,"Y")==0){echo "Yes";}else if(strcmp($record1[$i]->Q5F1S4,"N")==0){echo "No";}else{echo $record1[$i]->Q5F1S4;} ?></td>
@@ -1105,7 +1111,8 @@
 		  
 		  ?></td>
           <td><?php echo  $record1[$i]->Q8W2S2S1; ?></td>
-          <td><?php echo  $record1[$i]->Q8W2S2S2; ?></td>
+          <td><?php 
+		  if(strcmp($record1[$i]->Q8W2S2S2,"Y")==0){echo "Yes";}else if(strcmp($record1[$i]->Q8W2S2S2,"N")==0){echo "No";}else{echo $record1[$i]->Q8W2S2S2;} ?></td>
           <td><?php echo  $record1[$i]->Q8W2S2S7; ?></td>
           <td><?php 
 		   $ratio_between_storage_and_recharge="";
@@ -1155,14 +1162,20 @@
 		   elseif($record1[$i]->Q8W2S5==3){echo "Poor";}
 		   else{echo $record1[$i]->Q8W2S5; }
 		  ?></td>
-          <td><?php echo  $record1[$i]->Q8W2S61; ?></td>
+          <td><?php 
+		  if(strcmp($record1[$i]->Q8W2S61,"Y")==0){echo "Yes";}
+		  elseif(strcmp($record1[$i]->Q8W2S61,"N")==0){echo "No";}
+		  else{echo $record1[$i]->Q8W2S61;} ?></td>
           <td><?php
 		  if($record1[$i]->Q8W2S7==1){echo "Pre-monsoon";}
 		  elseif($record1[$i]->Q8W2S7==2){ echo "Post-monsoon";}
 		  elseif($record1[$i]->Q8W2S7==3){echo "Do not follow any such pattern";}
 		  else{echo $record1[$i]->Q8W2S7;}
 		  ?></td>
-          <td><?php echo  $record1[$i]->Q8W2S8; ?></td>
+          <td><?php 
+		  if(strcmp($record1[$i]->Q8W2S8,"Y")==0){echo "Yes";}
+		  elseif(strcmp($record1[$i]->Q8W2S8,"N")==0){echo "No";}
+		  else{echo $record1[$i]->Q8W2S8;}  ?></td>
           <td><?php 
 		  if($record1[$i]->Q8W2S9==1){echo "Pre-monsoon";}
 		  elseif($record1[$i]->Q8W2S9==2){ echo "Post-monsoon";}
@@ -1177,7 +1190,10 @@
 		  else{echo $record1[$i]->Q8W2S10;}  
 		  ?></td>
           <td><?php echo  $record1[$i]->Q8W2S12; ?></td>
-          <td><?php echo  $record1[$i]->Q8W2S13; ?></td>
+          <td><?php 
+		  if(strcmp($record1[$i]->Q8W2S13,"Y")==0){echo "Yes";}
+		  elseif(strcmp($record1[$i]->Q8W2S13,"N")==0){echo "No";}
+		  else{echo $record1[$i]->Q8W2S13;} ?></td>
           <td><?php echo  $record1[$i]->Q8W2S6; ?></td>
 		  <td><?php if(strcmp($record1[$i]->Q8W3S1,"Y")==0){echo "Yes";}else if(strcmp($record1[$i]->Q8W3S1,"N")==0){echo "No";}else{echo $record1[$i]->Q8W3S1;} ?></td>
 		  <td><?php if(strcmp($record1[$i]->Q8W3S2,"Y")==0){echo "Yes";}else if(strcmp($record1[$i]->Q8W3S2,"N")==0){echo "No";}else{echo $record1[$i]->Q8W3S2;} ?></td>
