@@ -3409,6 +3409,29 @@ if($('input[name="Q8W1S11"]:checked').length == 0){
 	   alert("Q13 How many other water outlets (example: taps in play fields, sprinklers, swimming pool) do you have?");
 	   e.preventDefault(); 	 
 	 }
+	/**Q6 Do you have Rainwater harvesting (RWH) system in your school?**/	
+  if($('input[name="Q8W2"]:checked').length==0){
+   alert("Q6 Do you have Rainwater harvesting (RWH) system in your school?");
+	   e.preventDefault(); 
+  } 
+/**Q5(Last Option) Provision for storage of leftover water in bottles at water coolers Any other step taken for water conservation? (if Yes, please specify):**/
+	if($('input[name="Q8W1S12"]:checked').length==0){
+   alert("Q5 Provision for storage of leftover water in bottles at water coolers Any other step taken for water conservation? (if Yes, please specify):");
+	   e.preventDefault(); 
+   }
+/**/   
+   if($('input[name="Q8W1S12"]:checked').val()==='Y'){
+     alert("Q5 Provision for storage of leftover water in bottles at water coolers Any other step taken for water conservation? (if Yes, please specify):(Please Fill The Textarea Value.)");
+	 e.preventDefault();
+   }
+   /*6(a) Calculate your school’s rainwater harvesting potential (in litres).*/ 
+   if($('input[name="Q8W2"]:checked').val()==='N'){
+     if($('input[name="Q8W2S6"]').val()==0 || $('input[name="Q8W2S6"]').attr('placeholder')==0){
+      alert("Q6(a) Calculate your school’s rainwater harvesting potential (in litres). (The value in RWH potential must be more than zero)");
+	  e.preventDefault();
+	 }
+   }	
+	
 });
 </script>
 	
