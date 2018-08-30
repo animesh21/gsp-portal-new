@@ -43,7 +43,6 @@
   <div id="wrapper">
     <div id="container"> </div>
     <div id="containerStateWisePartner1"> </div>
-	<div id="containerDistrictWisePartner1"> </div>
 	<p><strong>Export Graph:</strong></p>
     <select id="ExportOption" style="border-radius:0px;">
       <option value="PNG">PNG Image</option>
@@ -58,6 +57,7 @@
   </div>
   <div id="wrapper2" style="display:none;">
     <div id="container2"> </div>
+	<div id="containerStateWisePartner2"> </div>
     <p><strong>Export Graph:</strong></p>
     <select id="ExportOption" style="border-radius:0px;">
       <option value="PNG">PNG Image</option>
@@ -72,6 +72,7 @@
   </div>
   <div id="wrapper3" style="display:none;">
     <div id="container3"> </div>
+	 <div id="containerStateWisePartner3"> </div>
     <p><strong>Export Graph:</strong></p>
     <select id="ExportOption" style="border-radius:0px;">
       <option value="PNG">PNG Image</option>
@@ -86,6 +87,7 @@
   </div>
   <div id="wrapper4" style="display:none;">
     <div id="container4"> </div>
+	 <div id="containerStateWisePartner4"> </div>
     <p><strong>Export Graph:</strong></p>
     <select id="ExportOption" style="border-radius:0px;">
       <option value="PNG">PNG Image</option>
@@ -100,6 +102,7 @@
   </div>
   <div id="wrapper5" style="display:none;">
     <div id="container5"> </div>
+	 <div id="containerStateWisePartner5"> </div>
     <p><strong>Export Graph:</strong></p>
     <select id="ExportOption" style="border-radius:0px;">
       <option value="PNG">PNG Image</option>
@@ -114,6 +117,7 @@
   </div>
   <div id="wrapper6" style="display:none;">
     <div id="container6"> </div>
+	 <div id="containerStateWisePartner6"> </div>
     <p><strong>Export Graph:</strong></p>
     <select id="ExportOption" style="border-radius:0px;">
       <option value="PNG">PNG Image</option>
@@ -416,100 +420,414 @@ $(document).ready(function () {
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/modules/data.js"></script>
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
-<?php $statewisegraph1=getPartnerGraphByState(1); ?>
+<?php 
+ $statewisegraph1=getPartnerGraphByState(1);
+?>
 <script type="text/javascript">
-       var chart =  Highcharts.chart('containerStateWisePartner1',{
-            chart: {
-                plotBackgroundColor: null,
-                plotBorderWidth: null,
-                plotShadow: false,
-                type: 'bar'
-            },
-			xAxis: {
+       Highcharts.chart('containerStateWisePartner1',{
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Participation By State Church of South India'
+        },
+        xAxis: {
             categories: [
-			<?php foreach($statewisegraph1 as $stateWG){ ?>
+             <?php foreach($statewisegraph1[0] as $stateWG){ ?>
 				<?php echo "'".$stateWG['statename']."'"; ?>,
-				<?php } ?>
+			<?php } ?>
             ],
             crosshair: true
         },
-            title: {
-                text: 'Participation By State Chart for Church of South India '
-            },
-            tooltip: {
-                pointFormat: '<b>{point.y} Schools</b>'
-            },
-                    exporting: { enabled: false },
-        credits: {enabled: false},    
-        plotOptions: {
-                bar: {
-                    allowPointSelect: true,
-                    cursor: 'pointer',
-                    dataLabels: {
-                        enabled: true,
-						 format: '{point.name}<br/><b> {point.y} Schools</b>',						  
-                    },
-                    showInLegend: true
-                }
-            },
-            series: [{
-                colorByPoint: true,
-                data: [
-				<?php foreach($statewisegraph1 as $stateWG){ ?>
-				{y: <?php echo $stateWG['partners']; ?>},
-				<?php } ?>
-				]
-            }]
-        });
-</script>	
-<?php $districtwisegraph1=getPartnerGraphByDistrict(1); ?>	
-<script type="text/javascript">
-       var chart =  Highcharts.chart('containerDistrictWisePartner1',{
-            chart: {
-                plotBackgroundColor: null,
-                plotBorderWidth: null,
-                plotShadow: false,
-                type: 'column'
-            },
-			xAxis: {
-            categories: [
-			<?php foreach($districtwisegraph1 as $districtWG){ ?>
-				<?php echo "'".$districtWG['districtame']."'"; ?>,
-				<?php } ?>
-            ],
-            crosshair: true
+		
+		legend: {
+        enabled: false
+    },
+        exporting: { enabled: true },
+        credits: {enabled: false},
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0;font-size:12px;">{series.name}: </td>' +
+                '<td style="padding:0;font-size:12px;">{point.y:.1f}</td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
         },
-            title: {
-                text: 'Participation By District Chart for Church of South India '
-            },
-            tooltip: {
-                pointFormat: '<b>{point.y} Schools</b>'
-            },
-                    exporting: { enabled: false },
-        credits: {enabled: false},    
         plotOptions: {
-                column: {
-                    allowPointSelect: true,
-                    cursor: 'pointer',
-                    dataLabels: {
-                        enabled: true,
-						 format: '{point.name}<br/><b> {point.y} Schools</b>',						  
-                    },
-                    showInLegend: true
-                }
-            },
-            series: [{
-                colorByPoint: true,
-                data: [
-				<?php foreach($districtwisegraph1 as $districtWG){ ?>
-				{ y: <?php echo $districtWG['partners']; ?>},
-				<?php } ?>
-				]
-            }]
-        });
+		
+		 series: {
+            borderWidth: 0,
+            dataLabels: {
+                enabled: true,
+                format: '{point.y:.1f}'
+            }
+        },
+		
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [{
+            name: 'Registered for Audit',
+            data: <?php echo json_encode(array_map('intval',$statewisegraph1[1])); ?> //NORTH
+            //Registration, Audit Started, Audit Completed, Feedback Recieved
+        }, {
+            name: 'Audit Not Started',
+            data: <?php echo json_encode(array_map('intval',$statewisegraph1[2])); ?> //South
+
+        }, {
+            name: 'Audit Started',
+            data: <?php echo json_encode(array_map('intval',$statewisegraph1[3])); ?> //South
+
+        }, {
+            name: 'Audit Completed',
+            data: <?php echo json_encode(array_map('intval',$statewisegraph1[4])); ?> //East
+
+        }		
+		],
+});   
 </script>
+<?php 
+ $statewisegraph2=getPartnerGraphByState(2);
+?>
+<script type="text/javascript">
+       Highcharts.chart('containerStateWisePartner2',{
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Participation By State Jawahar Navodaya Vidyalaya'
+        },
+        xAxis: {
+            categories: [
+             <?php foreach($statewisegraph2[0] as $stateWG){ ?>
+				<?php echo "'".$stateWG['statename']."'"; ?>,
+			<?php } ?>
+            ],
+            crosshair: true
+        },
+		
+		legend: {
+        enabled: false
+    },
+        exporting: { enabled: true },
+        credits: {enabled: false},
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0;font-size:12px;">{series.name}: </td>' +
+                '<td style="padding:0;font-size:12px;">{point.y:.1f}</td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        plotOptions: {
+		
+		 series: {
+            borderWidth: 0,
+            dataLabels: {
+                enabled: true,
+                format: '{point.y:.1f}'
+            }
+        },
+		
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [{
+            name: 'Registered for Audit',
+            data: <?php echo json_encode(array_map('intval',$statewisegraph2[1])); ?> //NORTH
+            //Registration, Audit Started, Audit Completed, Feedback Recieved
+        }, {
+            name: 'Audit Not Started',
+            data: <?php echo json_encode(array_map('intval',$statewisegraph2[2])); ?> //South
 
+        }, {
+            name: 'Audit Started',
+            data: <?php echo json_encode(array_map('intval',$statewisegraph2[3])); ?> //South
 
+        }, {
+            name: 'Audit Completed',
+            data: <?php echo json_encode(array_map('intval',$statewisegraph2[4])); ?> //East
+
+        }		
+		],
+}); 
+</script>
+<?php 
+ $statewisegraph3=getPartnerGraphByState(3);
+?>
+<script type="text/javascript">
+       Highcharts.chart('containerStateWisePartner3',{
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Participation By State Kendriya Vidyalaya Sangathan (KVS)'
+        },
+        xAxis: {
+            categories: [
+             <?php foreach($statewisegraph3[0] as $stateWG){ ?>
+				<?php echo "'".$stateWG['statename']."'"; ?>,
+			<?php } ?>
+            ],
+            crosshair: true
+        },
+		
+		legend: {
+        enabled: false
+    },
+        exporting: { enabled: true },
+        credits: {enabled: false},
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0;font-size:12px;">{series.name}: </td>' +
+                '<td style="padding:0;font-size:12px;">{point.y:.1f}</td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        plotOptions: {
+		
+		 series: {
+            borderWidth: 0,
+            dataLabels: {
+                enabled: true,
+                format: '{point.y:.1f}'
+            }
+        },
+		
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [{
+            name: 'Registered for Audit',
+            data: <?php echo json_encode(array_map('intval',$statewisegraph3[1])); ?> //NORTH
+            //Registration, Audit Started, Audit Completed, Feedback Recieved
+        }, {
+            name: 'Audit Not Started',
+            data: <?php echo json_encode(array_map('intval',$statewisegraph3[2])); ?> //South
+
+        }, {
+            name: 'Audit Started',
+            data: <?php echo json_encode(array_map('intval',$statewisegraph3[3])); ?> //South
+
+        }, {
+            name: 'Audit Completed',
+            data: <?php echo json_encode(array_map('intval',$statewisegraph3[4])); ?> //East
+
+        }		
+		],
+}); 
+</script>	
+<?php 
+ $statewisegraph4=getPartnerGraphByState(4);
+?>
+<script type="text/javascript">
+       Highcharts.chart('containerStateWisePartner4',{
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Participation By State Montfortian Education Foundation'
+        },
+        xAxis: {
+            categories: [
+             <?php foreach($statewisegraph4[0] as $stateWG){ ?>
+				<?php echo "'".$stateWG['statename']."'"; ?>,
+			<?php } ?>
+            ],
+            crosshair: true
+        },
+		
+		legend: {
+        enabled: false
+    },
+        exporting: { enabled: true },
+        credits: {enabled: false},
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0;font-size:12px;">{series.name}: </td>' +
+                '<td style="padding:0;font-size:12px;">{point.y:.1f}</td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        plotOptions: {
+		
+		 series: {
+            borderWidth: 0,
+            dataLabels: {
+                enabled: true,
+                format: '{point.y:.1f}'
+            }
+        },
+		
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [{
+            name: 'Registered for Audit',
+            data: <?php echo json_encode(array_map('intval',$statewisegraph4[1])); ?> //NORTH
+            //Registration, Audit Started, Audit Completed, Feedback Recieved
+        }, {
+            name: 'Audit Not Started',
+            data: <?php echo json_encode(array_map('intval',$statewisegraph4[2])); ?> //South
+
+        }, {
+            name: 'Audit Started',
+            data: <?php echo json_encode(array_map('intval',$statewisegraph4[3])); ?> //South
+
+        }, {
+            name: 'Audit Completed',
+            data: <?php echo json_encode(array_map('intval',$statewisegraph4[4])); ?> //East
+
+        }		
+		],
+}); 
+</script>	
+<?php 
+ $statewisegraph5=getPartnerGraphByState(5);
+?>
+<script type="text/javascript">
+       Highcharts.chart('containerStateWisePartner5',{
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Participation By State Mount Litera Zee Schools'
+        },
+        xAxis: {
+            categories: [
+             <?php foreach($statewisegraph5[0] as $stateWG){ ?>
+				<?php echo "'".$stateWG['statename']."'"; ?>,
+			<?php } ?>
+            ],
+            crosshair: true
+        },
+		
+		legend: {
+        enabled: false
+    },
+        exporting: { enabled: true },
+        credits: {enabled: false},
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0;font-size:12px;">{series.name}: </td>' +
+                '<td style="padding:0;font-size:12px;">{point.y:.1f}</td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        plotOptions: {
+		
+		 series: {
+            borderWidth: 0,
+            dataLabels: {
+                enabled: true,
+                format: '{point.y:.1f}'
+            }
+        },
+		
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [{
+            name: 'Registered for Audit',
+            data: <?php echo json_encode(array_map('intval',$statewisegraph5[1])); ?> //NORTH
+            //Registration, Audit Started, Audit Completed, Feedback Recieved
+        }, {
+            name: 'Audit Not Started',
+            data: <?php echo json_encode(array_map('intval',$statewisegraph5[2])); ?> //South
+
+        }, {
+            name: 'Audit Started',
+            data: <?php echo json_encode(array_map('intval',$statewisegraph5[3])); ?> //South
+
+        }, {
+            name: 'Audit Completed',
+            data: <?php echo json_encode(array_map('intval',$statewisegraph5[4])); ?> //East
+
+        }		
+		],
+}); 
+</script>
+<?php 
+ $statewisegraph6=getPartnerGraphByState(6);
+?>
+<script type="text/javascript">
+       Highcharts.chart('containerStateWisePartner6',{
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Participation By State Satya Bharti Foundation'
+        },
+        xAxis: {
+            categories: [
+             <?php foreach($statewisegraph6[0] as $stateWG){ ?>
+				<?php echo "'".$stateWG['statename']."'"; ?>,
+			<?php } ?>
+            ],
+            crosshair: true
+        },
+		
+		legend: {
+        enabled: false
+    },
+        exporting: { enabled: true },
+        credits: {enabled: false},
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0;font-size:12px;">{series.name}: </td>' +
+                '<td style="padding:0;font-size:12px;">{point.y:.1f}</td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        plotOptions: {
+		
+		 series: {
+            borderWidth: 0,
+            dataLabels: {
+                enabled: true,
+                format: '{point.y:.1f}'
+            }
+        },
+		
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [{
+            name: 'Registered for Audit',
+            data: <?php echo json_encode(array_map('intval',$statewisegraph6[1])); ?> //NORTH
+            //Registration, Audit Started, Audit Completed, Feedback Recieved
+        }, {
+            name: 'Audit Not Started',
+            data: <?php echo json_encode(array_map('intval',$statewisegraph6[2])); ?> //South
+
+        }, {
+            name: 'Audit Started',
+            data: <?php echo json_encode(array_map('intval',$statewisegraph6[3])); ?> //South
+
+        }, {
+            name: 'Audit Completed',
+            data: <?php echo json_encode(array_map('intval',$statewisegraph6[4])); ?> //East
+
+        }		
+		],
+}); 
+</script>
 <script type="text/javascript">
        var chart =  Highcharts.chart('container',{
             chart: {
