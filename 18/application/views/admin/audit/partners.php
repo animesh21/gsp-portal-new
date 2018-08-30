@@ -796,6 +796,11 @@ $(document).ready(function () {
         title: {
             text: 'Participation By State Satya Bharti Foundation'
         },
+		yAxis: {
+		  title: {
+            text: 'No. of Schools'
+          }
+		},
         xAxis: {
             categories: [
              <?php foreach($statewisegraph6[0] as $stateWG){ ?>
