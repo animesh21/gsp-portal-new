@@ -9,6 +9,7 @@
   <?php echo form_close();?> </div>
 <div class="wrapper">
   <div id="container"> </div>
+  <div id="containerDistrictWisePartner1"> </div>
 </div>
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/modules/data.js"></script>
@@ -27,7 +28,7 @@
             tooltip: {
                 pointFormat: '<b>{point.y} Schools</b>'
             },
-                    exporting: { enabled: false },
+        exporting: { enabled: true },
         credits: {enabled: false},    
         plotOptions: {
                 pie: {
@@ -46,3 +47,54 @@
             }]
         });
 		</script>
+<?php $districtwisegraph1=getDataGraphByDistrict($state_id1); ?>	
+<script type="text/javascript">
+       var chart =  Highcharts.chart('containerDistrictWisePartner1',{
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'column'
+            },
+			yAxis: {
+            title: {
+               text: "No. of Schools"
+              }
+            },
+			xAxis: {
+            categories: [
+			<?php foreach($districtwisegraph1 as $districtWG){ ?>
+				<?php echo "'".$districtWG['districtame']."'"; ?>,
+				<?php } ?>
+            ],
+            crosshair: true
+        },
+            title: {
+                text: 'Participation Chart Of <?php echo getStateById($state_id1); ?> By District '
+            },
+            tooltip: {
+                pointFormat: '<b>{point.y} Schools</b>'
+            },
+        exporting: { enabled: true },
+        credits: {enabled: false},   
+        plotOptions: {
+                column: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+						 format: '{point.name}<br/><b> {point.y} </b>',						  
+                    },
+                    showInLegend: false
+                }
+            },
+            series: [{
+                colorByPoint: false,
+                data: [
+				<?php foreach($districtwisegraph1 as $districtWG){ ?>
+				{ y: <?php echo $districtWG['partners']; ?>},
+				<?php } ?>
+				]
+            }]
+        });
+</script>
