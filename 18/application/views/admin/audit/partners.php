@@ -43,7 +43,7 @@
   <div id="wrapper">
     <div id="container"> </div>
     <div id="containerStateWisePartner1"> </div>
-	<p><strong>Export Graph:</strong></p>
+    <p><strong>Export Graph:</strong></p>
     <select id="ExportOption" style="border-radius:0px;">
       <option value="PNG">PNG Image</option>
       <option value="JPEG">JPEG Image</option>
@@ -57,7 +57,7 @@
   </div>
   <div id="wrapper2" style="display:none;">
     <div id="container2"> </div>
-	<div id="containerStateWisePartner2"> </div>
+    <div id="containerStateWisePartner2"> </div>
     <p><strong>Export Graph:</strong></p>
     <select id="ExportOption" style="border-radius:0px;">
       <option value="PNG">PNG Image</option>
@@ -72,7 +72,7 @@
   </div>
   <div id="wrapper3" style="display:none;">
     <div id="container3"> </div>
-	 <div id="containerStateWisePartner3"> </div>
+    <div id="containerStateWisePartner3"> </div>
     <p><strong>Export Graph:</strong></p>
     <select id="ExportOption" style="border-radius:0px;">
       <option value="PNG">PNG Image</option>
@@ -87,7 +87,7 @@
   </div>
   <div id="wrapper4" style="display:none;">
     <div id="container4"> </div>
-	 <div id="containerStateWisePartner4"> </div>
+    <div id="containerStateWisePartner4"> </div>
     <p><strong>Export Graph:</strong></p>
     <select id="ExportOption" style="border-radius:0px;">
       <option value="PNG">PNG Image</option>
@@ -102,7 +102,7 @@
   </div>
   <div id="wrapper5" style="display:none;">
     <div id="container5"> </div>
-	 <div id="containerStateWisePartner5"> </div>
+    <div id="containerStateWisePartner5"> </div>
     <p><strong>Export Graph:</strong></p>
     <select id="ExportOption" style="border-radius:0px;">
       <option value="PNG">PNG Image</option>
@@ -117,7 +117,7 @@
   </div>
   <div id="wrapper6" style="display:none;">
     <div id="container6"> </div>
-	 <div id="containerStateWisePartner6"> </div>
+    <div id="containerStateWisePartner6"> </div>
     <p><strong>Export Graph:</strong></p>
     <select id="ExportOption" style="border-radius:0px;">
       <option value="PNG">PNG Image</option>
@@ -431,6 +431,11 @@ $(document).ready(function () {
         title: {
             text: 'Participation By State Church of South India'
         },
+		yAxis: {
+		  title: {
+            text: 'No. of Schools'
+          }
+		},
         xAxis: {
             categories: [
              <?php foreach($statewisegraph1[0] as $stateWG){ ?>
@@ -499,6 +504,11 @@ $(document).ready(function () {
         title: {
             text: 'Participation By State Jawahar Navodaya Vidyalaya'
         },
+		yAxis: {
+		  title: {
+            text: 'No. of Schools'
+          }
+		},
         xAxis: {
             categories: [
              <?php foreach($statewisegraph2[0] as $stateWG){ ?>
@@ -567,6 +577,11 @@ $(document).ready(function () {
         title: {
             text: 'Participation By State Kendriya Vidyalaya Sangathan (KVS)'
         },
+		yAxis: {
+		  title: {
+            text: 'No. of Schools'
+          }
+		},
         xAxis: {
             categories: [
              <?php foreach($statewisegraph3[0] as $stateWG){ ?>
@@ -623,7 +638,7 @@ $(document).ready(function () {
         }		
 		],
 }); 
-</script>	
+</script>
 <?php 
  $statewisegraph4=getPartnerGraphByState(4);
 ?>
@@ -635,6 +650,11 @@ $(document).ready(function () {
         title: {
             text: 'Participation By State Montfortian Education Foundation'
         },
+		yAxis: {
+		  title: {
+            text: 'No. of Schools'
+          }
+		},
         xAxis: {
             categories: [
              <?php foreach($statewisegraph4[0] as $stateWG){ ?>
@@ -691,7 +711,7 @@ $(document).ready(function () {
         }		
 		],
 }); 
-</script>	
+</script>
 <?php 
  $statewisegraph5=getPartnerGraphByState(5);
 ?>
@@ -703,6 +723,11 @@ $(document).ready(function () {
         title: {
             text: 'Participation By State Mount Litera Zee Schools'
         },
+		yAxis: {
+		  title: {
+            text: 'No. of Schools'
+          }
+		},
         xAxis: {
             categories: [
              <?php foreach($statewisegraph5[0] as $stateWG){ ?>
