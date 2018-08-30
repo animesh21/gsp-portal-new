@@ -63,6 +63,32 @@ if(!function_exists('getPartnersCountByState')){
   }
 }
 
+if(!function_exists('getPartnersAuditNotStartedCountByState')){
+  function getPartnersAuditNotStartedCountByState($stateId,$partnertype,$progress){
+    $CI = & get_instance();
+	$temp = $CI->db->select('COUNT("id") As CountLabel')->from("gsp_school")->where(array('state'=>$stateId,"partner_status"=>$partnertype,"progress"=>$progress))->get()->row();
+    return $temp->CountLabel;
+  }
+}
+
+if(!function_exists('getPartnersAuditStartedCountByState')){
+  function getPartnersAuditStartedCountByState($stateId,$partnertype,$progress1,$progress2){
+    $CI = & get_instance();
+	$CI->db->where("progress>",$progress1);
+	$CI->db->where("progress<",$progress2);
+	$temp = $CI->db->select('COUNT("id") As CountLabel')->from("gsp_school")->where(array('state'=>$stateId,"partner_status"=>$partnertype))->get()->row();
+    return $temp->CountLabel;
+  }
+}
+if(!function_exists('getPartnersAuditCompletedCountByState')){
+  function getPartnersAuditCompletedCountByState($stateId,$partnertype,$progress1){
+    $CI = & get_instance();
+	$CI->db->where("progress",$progress1);
+	$temp = $CI->db->select('COUNT("id") As CountLabel')->from("gsp_school")->where(array('state'=>$stateId,"partner_status"=>$partnertype))->get()->row();
+    return $temp->CountLabel;
+  }
+}
+
 if (!function_exists('getdistrictById')) {
     function getdistrictById($citiesId) {
         $arrState = array();
@@ -72,10 +98,10 @@ if (!function_exists('getdistrictById')) {
     }
 }
 
-if(!function_exists('getPartnersCountBydistrict')){
-  function getPartnersCountBydistrict($citiesId,$partnertype){
+if(!function_exists('getSchoolCountBydistrict')){
+  function getSchoolCountBydistrict($citiesId){
     $CI = & get_instance();
-	$temp = $CI->db->select('COUNT("id") As CountLabel')->from("gsp_school")->where(array('district'=>$citiesId,"partner_status"=>$partnertype))->get()->row();
+	$temp = $CI->db->select('COUNT("id") As CountLabel')->from("gsp_school")->where(array('district'=>$citiesId))->get()->row();
     return $temp->CountLabel;
   }
 }
@@ -88,22 +114,31 @@ function getPartnerGraphByState($partnerId){
 	  $stateResult=$CI->db->select("state")
 	           ->from("gsp_school")->where("partner_status",$partnerId)->get()->result();
 		$arrState=array();
+		$arrRegister=array();
+		$arrAuditNotStarted=array();
+		$arrAuditStarted=array();
+		$arrAuditCompleted=array();
 		foreach($stateResult as $state){
-               $arrState[]=array("statename"=>getStateById($state->state),"partners"=>getPartnersCountByState($state->state,$partnerId));		
+               $arrState[]=array("statename"=>getStateById($state->state));
+			   $arrRegister[].=getPartnersCountByState($state->state,$partnerId);
+			   $arrAuditNotStarted[].=getPartnersAuditNotStartedCountByState($state->state,$partnerId,'5');
+			   $arrAuditStarted[].=getPartnersAuditStartedCountByState($state->state,$partnerId,'5','100');
+			   $arrAuditCompleted[].=getPartnersAuditCompletedCountByState($state->state,$partnerId,'100');		
 		}	
-		return $arrState;   
+		$completeArr=array("0"=>$arrState,"1"=>$arrRegister,"2"=>$arrAuditNotStarted,"3"=>$arrAuditStarted,"4"=>$arrAuditCompleted);
+		return $completeArr;   
 	}
 }
 
-if(!function_exists('getPartnerGraphByDistrict')){
-function getPartnerGraphByDistrict($partnerId){
+if(!function_exists('getDataGraphByDistrict')){
+function getDataGraphByDistrict($stateId){
  $CI = & get_instance();
 	  $CI->db->distinct("district");
 	  $districtResult=$CI->db->select("district")
-	           ->from("gsp_school")->where("partner_status",$partnerId)->get()->result();
+	           ->from("gsp_school")->where("state",$stateId)->get()->result();
 		$arrDistrict=array();
 		foreach($districtResult as $district){
-               $arrDistrict[]=array("districtame"=>getdistrictById($district->district),"partners"=>getPartnersCountBydistrict($district->district,$partnerId));		
+               $arrDistrict[]=array("districtame"=>getdistrictById($district->district),"partners"=>getSchoolCountBydistrict($district->district));		
 		}	
 		return $arrDistrict;   
 	}
