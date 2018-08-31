@@ -106,7 +106,7 @@ class Audit_started_model extends CI_Model {
             $output .= '"' . $a->coname . '",';
             $output .= '"' . $a->coemail . '",';
             $output .= '"' . $a->comobile . '",';
-            $output .= '"' . $a->password . '",';
+            $output .= '"' . getPasswordBySchoolUserId($a->coemail) . '",';
             //$output .='"'.date('d-m-Y H:i:s', strtotime($row['datetime'])).'",';
             $output .= '"' . date('Y-m-d H:i:s', strtotime($a->date_added)) . '",';
             $output .= '"' . $a->progress . '%",';
@@ -146,7 +146,7 @@ class Audit_started_model extends CI_Model {
             $output .= '"' . $a->coname . '",';
             $output .= '"' . $a->coemail . '",';
             $output .= '"' . $a->comobile . '",';
-            $output .= '"' . $a->password . '",';
+            $output .= '"' . getPasswordBySchoolUserId($a->coemail) . '",';
             //$output .='"'.date('d-m-Y H:i:s', strtotime($row['datetime'])).'",';
             $output .= '"' . date('Y-m-d H:i:s', strtotime($a->date_added)) . '",';
             $output .= '"' . $a->progress . '%",';
@@ -188,7 +188,7 @@ class Audit_started_model extends CI_Model {
             $output .= '"' . $a->coname . '",';
             $output .= '"' . $a->coemail . '",';
             $output .= '"' . $a->comobile . '",';
-            $output .= '"' . $a->password . '",';
+            $output .= '"' . getPasswordBySchoolUserId($a->coemail) . '",';
             //$output .='"'.date('d-m-Y H:i:s', strtotime($row['datetime'])).'",';
             $output .= '"' . date('Y-m-d H:i:s', strtotime($a->date_added)) . '",';
             $output .= '"' . $a->progress . '%",';
@@ -228,7 +228,7 @@ class Audit_started_model extends CI_Model {
             $output .= '"' . $a->coname . '",';
             $output .= '"' . $a->coemail . '",';
             $output .= '"' . $a->comobile . '",';
-            $output .= '"' . $a->password . '",';
+            $output .= '"' . getPasswordBySchoolUserId($a->coemail) . '",';
             //$output .='"'.date('d-m-Y H:i:s', strtotime($row['datetime'])).'",';
             $output .= '"' . date('Y-m-d H:i:s', strtotime($a->date_added)) . '",';
             $output .= '"' . $a->progress . '%",';
@@ -269,7 +269,7 @@ class Audit_started_model extends CI_Model {
             $output .= '"' . $a->coname . '",';
             $output .= '"' . $a->coemail . '",';
             $output .= '"' . $a->comobile . '",';
-            $output .= '"' . $a->password . '",';
+            $output .= '"' . getPasswordBySchoolUserId($a->coemail) . '",';
             //$output .='"'.date('d-m-Y H:i:s', strtotime($row['datetime'])).'",';
             $output .= '"' . date('Y-m-d H:i:s', strtotime($a->date_added)) . '",';
             $output .= '"' . $a->progress . '%",';
@@ -309,7 +309,7 @@ class Audit_started_model extends CI_Model {
             $output .= '"' . $a->coname . '",';
             $output .= '"' . $a->coemail . '",';
             $output .= '"' . $a->comobile . '",';
-            $output .= '"' . $a->password . '",';
+            $output .= '"' . getPasswordBySchoolUserId($a->coemail) . '",';
             //$output .='"'.date('d-m-Y H:i:s', strtotime($row['datetime'])).'",';
             $output .= '"' . date('Y-m-d H:i:s', strtotime($a->date_added)) . '",';
             $output .= '"' . $a->progress . '%",';
