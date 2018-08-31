@@ -89,6 +89,15 @@ if(!function_exists('getPartnersAuditCompletedCountByState')){
   }
 }
 
+if (!function_exists('getPasswordBySchoolUserId')) {
+    function getPasswordBySchoolUserId($coemail) {
+        $arrState = array();
+        $CI = & get_instance();
+        $temp = $CI->db->get_where('gsp_user',array('email'=>$coemail))->row();
+        return $temp->password;
+    }
+}
+
 if (!function_exists('getdistrictById')) {
     function getdistrictById($citiesId) {
         $arrState = array();
