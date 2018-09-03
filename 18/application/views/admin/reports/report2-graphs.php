@@ -47,54 +47,77 @@
             }]
         });
 		</script>
-<?php $districtwisegraph1=getDataGraphByDistrict($state_id1); ?>	
+<?php $districtwisegraph1=getDataGraphByDistrict($state_id1); ?>
 <script type="text/javascript">
-       var chart =  Highcharts.chart('containerDistrictWisePartner1',{
-            chart: {
-                plotBackgroundColor: null,
-                plotBorderWidth: null,
-                plotShadow: false,
-                type: 'column'
-            },
-			yAxis: {
-            title: {
-               text: "No. of Schools"
-              }
-            },
-			xAxis: {
+        Highcharts.chart('containerDistrictWisePartner1',{
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Participation Chart Of <?php echo getStateById($state_id1); ?> By District'
+        },
+		yAxis: {
+		  title: {
+            text: 'No. of Schools'
+          }
+		},
+        xAxis: {
             categories: [
-			<?php foreach($districtwisegraph1 as $districtWG){ ?>
+             <?php foreach($districtwisegraph1[0] as $districtWG){ ?>
 				<?php echo "'".$districtWG['districtame']."'"; ?>,
-				<?php } ?>
+			<?php } ?>
             ],
             crosshair: true
         },
-            title: {
-                text: 'Participation Chart Of <?php echo getStateById($state_id1); ?> By District '
-            },
-            tooltip: {
-                pointFormat: '<b>{point.y} Schools</b>'
-            },
+		
+		legend: {
+        enabled: true
+    },
         exporting: { enabled: true },
-        credits: {enabled: false},   
+        credits: {enabled: false},
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0;font-size:12px;">{series.name}: </td>' +
+                '<td style="padding:0;font-size:12px;">{point.y:.1f}</td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
         plotOptions: {
-                column: {
-                    allowPointSelect: true,
-                    cursor: 'pointer',
-                    dataLabels: {
-                        enabled: true,
-						 format: '{point.name}<br/><b> {point.y} </b>',						  
-                    },
-                    showInLegend: false
-                }
-            },
-            series: [{
-                colorByPoint: false,
-                data: [
-				<?php foreach($districtwisegraph1 as $districtWG){ ?>
-				{ y: <?php echo $districtWG['partners']; ?>},
-				<?php } ?>
-				]
-            }]
-        });
+		 series: {
+            borderWidth: 0,
+            dataLabels: {
+                enabled: true,
+                format: '{point.y:.1f}'
+            }
+        },
+		
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [{
+            name: 'Registered for Audit',
+			color:'rgb(124, 181, 236)',
+            data: <?php echo json_encode(array_map('intval',$districtwisegraph1[1])); ?> //NORTH
+            //Registration, Audit Started, Audit Completed, Feedback Recieved
+        }, {
+            name: 'Audit Not Started',
+			color:'#fc3300',
+            data: <?php echo json_encode(array_map('intval',$districtwisegraph1[2])); ?> //South
+
+        }, {
+            name: 'Audit Started',
+			color:'#fcfc00',
+            data: <?php echo json_encode(array_map('intval',$districtwisegraph1[3])); ?> //South
+
+        }, {
+            name: 'Audit Completed',
+			color:'#00ae4f',
+            data: <?php echo json_encode(array_map('intval',$districtwisegraph1[4])); ?> //East
+
+        }		
+		],
+}); 
 </script>
