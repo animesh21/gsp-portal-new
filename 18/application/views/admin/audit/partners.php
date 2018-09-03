@@ -446,7 +446,7 @@ $(document).ready(function () {
         },
 		
 		legend: {
-        enabled: false
+        enabled: true
     },
         exporting: { enabled: true },
         credits: {enabled: false},
@@ -475,18 +475,22 @@ $(document).ready(function () {
         },
         series: [{
             name: 'Registered for Audit',
+			color:'rgb(124, 181, 236)',
             data: <?php echo json_encode(array_map('intval',$statewisegraph1[1])); ?> //NORTH
             //Registration, Audit Started, Audit Completed, Feedback Recieved
         }, {
             name: 'Audit Not Started',
+			color:'#fc3300',
             data: <?php echo json_encode(array_map('intval',$statewisegraph1[2])); ?> //South
 
         }, {
             name: 'Audit Started',
+			color:'#fcfc00',
             data: <?php echo json_encode(array_map('intval',$statewisegraph1[3])); ?> //South
 
         }, {
             name: 'Audit Completed',
+			color:'#00ae4f',
             data: <?php echo json_encode(array_map('intval',$statewisegraph1[4])); ?> //East
 
         }		
@@ -519,7 +523,7 @@ $(document).ready(function () {
         },
 		
 		legend: {
-        enabled: false
+        enabled: true
     },
         exporting: { enabled: true },
         credits: {enabled: false},
@@ -532,7 +536,6 @@ $(document).ready(function () {
             useHTML: true
         },
         plotOptions: {
-		
 		 series: {
             borderWidth: 0,
             dataLabels: {
@@ -548,18 +551,22 @@ $(document).ready(function () {
         },
         series: [{
             name: 'Registered for Audit',
+			color:'rgb(124, 181, 236)',
             data: <?php echo json_encode(array_map('intval',$statewisegraph2[1])); ?> //NORTH
             //Registration, Audit Started, Audit Completed, Feedback Recieved
         }, {
             name: 'Audit Not Started',
+			color:'#fc3300',
             data: <?php echo json_encode(array_map('intval',$statewisegraph2[2])); ?> //South
 
         }, {
             name: 'Audit Started',
+			color:'#fcfc00',
             data: <?php echo json_encode(array_map('intval',$statewisegraph2[3])); ?> //South
 
         }, {
             name: 'Audit Completed',
+			color:'#00ae4f',
             data: <?php echo json_encode(array_map('intval',$statewisegraph2[4])); ?> //East
 
         }		
@@ -592,7 +599,7 @@ $(document).ready(function () {
         },
 		
 		legend: {
-        enabled: false
+        enabled: true
     },
         exporting: { enabled: true },
         credits: {enabled: false},
@@ -621,18 +628,22 @@ $(document).ready(function () {
         },
         series: [{
             name: 'Registered for Audit',
+			color:'rgb(124, 181, 236)',
             data: <?php echo json_encode(array_map('intval',$statewisegraph3[1])); ?> //NORTH
             //Registration, Audit Started, Audit Completed, Feedback Recieved
         }, {
             name: 'Audit Not Started',
+			color:'#fc3300',
             data: <?php echo json_encode(array_map('intval',$statewisegraph3[2])); ?> //South
 
         }, {
             name: 'Audit Started',
+			color:'#fcfc00',
             data: <?php echo json_encode(array_map('intval',$statewisegraph3[3])); ?> //South
 
         }, {
             name: 'Audit Completed',
+			color:'#00ae4f',
             data: <?php echo json_encode(array_map('intval',$statewisegraph3[4])); ?> //East
 
         }		
@@ -665,7 +676,7 @@ $(document).ready(function () {
         },
 		
 		legend: {
-        enabled: false
+        enabled: true
     },
         exporting: { enabled: true },
         credits: {enabled: false},
@@ -694,18 +705,22 @@ $(document).ready(function () {
         },
         series: [{
             name: 'Registered for Audit',
+			color:'rgb(124, 181, 236)',
             data: <?php echo json_encode(array_map('intval',$statewisegraph4[1])); ?> //NORTH
             //Registration, Audit Started, Audit Completed, Feedback Recieved
         }, {
             name: 'Audit Not Started',
+			color:'#fc3300',
             data: <?php echo json_encode(array_map('intval',$statewisegraph4[2])); ?> //South
 
         }, {
             name: 'Audit Started',
+			color:'#fcfc00',
             data: <?php echo json_encode(array_map('intval',$statewisegraph4[3])); ?> //South
 
         }, {
             name: 'Audit Completed',
+			color:'#00ae4f',
             data: <?php echo json_encode(array_map('intval',$statewisegraph4[4])); ?> //East
 
         }		
@@ -738,7 +753,7 @@ $(document).ready(function () {
         },
 		
 		legend: {
-        enabled: false
+        enabled: true
     },
         exporting: { enabled: true },
         credits: {enabled: false},
@@ -767,18 +782,22 @@ $(document).ready(function () {
         },
         series: [{
             name: 'Registered for Audit',
+			color:'rgb(124, 181, 236)',
             data: <?php echo json_encode(array_map('intval',$statewisegraph5[1])); ?> //NORTH
             //Registration, Audit Started, Audit Completed, Feedback Recieved
         }, {
             name: 'Audit Not Started',
+			color:'#fc3300',
             data: <?php echo json_encode(array_map('intval',$statewisegraph5[2])); ?> //South
 
         }, {
             name: 'Audit Started',
+			color:'#fcfc00',
             data: <?php echo json_encode(array_map('intval',$statewisegraph5[3])); ?> //South
 
         }, {
             name: 'Audit Completed',
+			color:'#00ae4f',
             data: <?php echo json_encode(array_map('intval',$statewisegraph5[4])); ?> //East
 
         }		
@@ -811,7 +830,7 @@ $(document).ready(function () {
         },
 		
 		legend: {
-        enabled: false
+        enabled: true
     },
         exporting: { enabled: true },
         credits: {enabled: false},
@@ -840,18 +859,22 @@ $(document).ready(function () {
         },
         series: [{
             name: 'Registered for Audit',
+			color:'rgb(124, 181, 236)',
             data: <?php echo json_encode(array_map('intval',$statewisegraph6[1])); ?> //NORTH
             //Registration, Audit Started, Audit Completed, Feedback Recieved
         }, {
             name: 'Audit Not Started',
+			color:'#fc3300',
             data: <?php echo json_encode(array_map('intval',$statewisegraph6[2])); ?> //South
 
         }, {
             name: 'Audit Started',
+			color:'#fcfc00',
             data: <?php echo json_encode(array_map('intval',$statewisegraph6[3])); ?> //South
 
         }, {
             name: 'Audit Completed',
+			color:'#00ae4f',
             data: <?php echo json_encode(array_map('intval',$statewisegraph6[4])); ?> //East
 
         }		
