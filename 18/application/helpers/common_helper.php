@@ -89,6 +89,33 @@ if(!function_exists('getPartnersAuditCompletedCountByState')){
   }
 }
 
+if(!function_exists('getPartnersAuditNotStartedCountByDistrict')){
+  function getPartnersAuditNotStartedCountByDistrict($districtId,$progress){
+    $CI = & get_instance();
+	$temp = $CI->db->select('COUNT("id") As CountLabel')->from("gsp_school")->where(array('district'=>$districtId,"progress"=>$progress))->get()->row();
+    return $temp->CountLabel;
+  }
+}
+
+if(!function_exists('getPartnersAuditStartedCountByDistrict')){
+  function getPartnersAuditStartedCountByDistrict($districtId,$progress1,$progress2){
+    $CI = & get_instance();
+	$CI->db->where("progress>",$progress1);
+	$CI->db->where("progress<",$progress2);
+	$temp = $CI->db->select('COUNT("id") As CountLabel')->from("gsp_school")->where(array('district'=>$districtId))->get()->row();
+    return $temp->CountLabel;
+  }
+}
+if(!function_exists('getPartnersAuditCompletedCountByDistrict')){
+  function getPartnersAuditCompletedCountByDistrict($districtId,$progress1){
+    $CI = & get_instance();
+	$CI->db->where("progress",$progress1);
+	$temp = $CI->db->select('COUNT("id") As CountLabel')->from("gsp_school")->where(array('district'=>$districtId))->get()->row();
+    return $temp->CountLabel;
+  }
+}
+
+
 if (!function_exists('getPasswordBySchoolUserId')) {
     function getPasswordBySchoolUserId($coemail) {
         $arrState = array();
@@ -146,10 +173,19 @@ function getDataGraphByDistrict($stateId){
 	  $districtResult=$CI->db->select("district")
 	           ->from("gsp_school")->where("state",$stateId)->get()->result();
 		$arrDistrict=array();
+		$arrRegister=array();
+		$arrAuditNotStarted=array();
+		$arrAuditStarted=array();
+		$arrAuditCompleted=array();
 		foreach($districtResult as $district){
-               $arrDistrict[]=array("districtame"=>getdistrictById($district->district),"partners"=>getSchoolCountBydistrict($district->district));		
+               $arrDistrict[]=array("districtame"=>getdistrictById($district->district));
+			   $arrRegister[].=getSchoolCountBydistrict($district->district);
+			   $arrAuditNotStarted[].=getPartnersAuditNotStartedCountByDistrict($district->district,'5');
+			   $arrAuditStarted[].=getPartnersAuditStartedCountByDistrict($district->district,'5','100');
+			   $arrAuditCompleted[].=getPartnersAuditCompletedCountByDistrict($district->district,'100');		
 		}	
-		return $arrDistrict;   
+		$completeArr=array("0"=>$arrDistrict,"1"=>$arrRegister,"2"=>$arrAuditNotStarted,"3"=>$arrAuditStarted,"4"=>$arrAuditCompleted);
+		return $completeArr;  
 	}
 }
 
