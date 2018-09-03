@@ -150,7 +150,7 @@
                             <label for="password" class="control-label"><span class="cube">15</span>Password:</label>
                             <div class="clearfix">&nbsp;</div>
                             <input type="text" class="form-control input-lg" name="password" id="password" tabindex="1" placeholder="Pin Code"
-                                   value="<?php echo ($user->password != '') ? $user->password : ""; ?>" title="digits are allowed">
+                                   value="<?php echo (!empty($user->password)) ? $user->password : ""; ?>" title="digits are allowed">
                         </div>
 			<div class="form-group">
                             <label for="password" class="control-label"><span class="cube">17</span>Make Your School GSP Partner:</label>
