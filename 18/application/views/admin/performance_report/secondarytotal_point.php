@@ -137,11 +137,10 @@
           <th>Others Teachers</th>
           <th>Others non teaching</th>
           <th>Others Total</th>
-		  <th>Air-School population (Student)</th>
-		  <th>Air-School population (Teaching Staff)</th>
-		  <th>Air-School population (Non-Teaching Staff)</th>
+		  <th>Total of sustainable motorised Vehicle</th>
+		  <th>Total of Non polluting mode</th>
+		  <th>Total of Private vehicles</th>
 		  <th>Air-School population (Total)</th>
-		  
           <th>No.of students suffer from respiratory problems</th>
           <th>Air Quality Monitoring in School</th>
           <th>Air Quality Monitoring in close to school</th>
@@ -281,8 +280,9 @@
           <th>Green cover on exposed roof and terrace </th>
           <th>Total built-up/constructed area </th>
           <th>Total number of floors (excluding ground floor)</th>
-          <th>Total Area</th>
-          <th>Total Green Area</th>
+          <!--<th>Total Area</th>-->
+          <!--<th>Total Green Area</th>-->
+		  <th>Total Area</th>
           <th>Percentage of Green Area</th>
           <th>Total Plants</th>
           <th>Native Plants</th>
@@ -667,7 +667,7 @@
           <td><?php echo $record1[$i]->higest_level; ?></td>
           <td><?php echo $record1[$i]->gender; ?></td>
           <td><?php echo $record1[$i]->educatio_board; ?></td>
-          <td><?php echo $record1[$i]->population; ?></td>
+          <td><?php if(!empty($record1[$i]->population)){echo $record1[$i]->population;}else{ echo $record1[$i]->students+$record1[$i]->teachers+$record1[$i]->nonteachers;} ?></td>
           <td><?php echo $record1[$i]->students; ?></td>
           <td><?php echo $record1[$i]->teachers; ?></td>
           <td><?php echo $record1[$i]->nonteachers; ?></td>
@@ -682,11 +682,11 @@
 	    <!---Starts Air Section---> 
           <td><?php echo $record1[$i]->Q4A1; ?></td>
           <td><?php
-    $var = 0;
-    if ((isset($record1[$i]->Q5A110S3) && $record1[$i]->Q5A110S3 != 0) && (isset($record1[$i]->Q5A110S2) && $record1[$i]->Q5A110S2 != 0)) {
-	$var = ($record1[$i]->Q5A110S3 / $record1[$i]->Q5A110S2) * 100;
-    }
-    echo number_format($var, 2);
+            $var = 0;
+            if ((isset($record1[$i]->Q5A110S3) && $record1[$i]->Q5A110S3 != 0) && (isset($record1[$i]->Q5A110S2) && $record1[$i]->Q5A110S2 != 0)) {
+	        $var = ($record1[$i]->Q5A110S3 / $record1[$i]->Q5A110S2) * 100;
+            }
+            echo number_format($var, 2);
     ?>
           </td>
           <td><?php 
@@ -1044,7 +1044,7 @@
           <td><?php echo $record1[$i]->Q4L10; ?></td>
           <td><?php echo $record1[$i]->Q4L11; ?></td>
           <td><?php echo $record1[$i]->Q4L12; ?></td>
-          <td><?php echo $record1[$i]->Q4L1; ?></td>
+          <!--<td><?php //echo $record1[$i]->Q4L1; ?></td>-->
           <td><?php echo $record1[$i]->TotalArea; ?></td>
           <td><?php echo number_format(($record1[$i]->Q4L5/$record1[$i]->TotalArea)*100,2); ?></td>
           <td><?php echo $record1[$i]->Q5L1S3; ?></td>
