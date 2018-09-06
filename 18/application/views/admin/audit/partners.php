@@ -478,7 +478,7 @@ $(document).ready(function () {
             type: 'column'
         },
         title: {
-            text: 'Participation By State Jawahar Navodaya Vidyalaya'
+            text: 'Participation By State Church of South India'
         },
 		yAxis: {
 		  title: {
@@ -666,7 +666,7 @@ $(document).ready(function () {
             type: 'column'
         },
         title: {
-            text: 'Participation By State Jawahar Navodaya Vidyalaya'
+            text: 'Participation By State Kendriya Vidyalaya Sangathan (KVS)'
         },
 		yAxis: {
 		  title: {
@@ -761,7 +761,7 @@ $(document).ready(function () {
             type: 'column'
         },
         title: {
-            text: 'Participation By State Jawahar Navodaya Vidyalaya'
+            text: 'Participation By State Montfortian Education Foundation'
         },
 		yAxis: {
 		  title: {
@@ -856,7 +856,7 @@ $(document).ready(function () {
             type: 'column'
         },
         title: {
-            text: 'Participation By State Jawahar Navodaya Vidyalaya'
+            text: 'Participation By State Mount Litera Zee Schools'
         },
 		yAxis: {
 		  title: {
@@ -950,7 +950,7 @@ $(document).ready(function () {
             type: 'column'
         },
         title: {
-            text: 'Participation By State Jawahar Navodaya Vidyalaya'
+            text: 'Participation By State Satya Bharti Foundation'
         },
 		yAxis: {
 		  title: {
