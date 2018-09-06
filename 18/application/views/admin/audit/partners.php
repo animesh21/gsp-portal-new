@@ -489,7 +489,8 @@ $(document).ready(function () {
             categories: [
 			<?php 
              for($r=0;$r<7;++$r){
-				  echo "'".$arrData1[$i][$y]['statename']."'"; ?>,
+			     if(!empty($arrData1[$i][$y]['statename'])){
+				  echo "'".$arrData1[$i][$y]['statename']."'"; } ?>,
              <?php $y++; 
 			 }?>  
             ],
@@ -582,7 +583,8 @@ $(document).ready(function () {
             categories: [
 			<?php 
              for($r=0;$r<7;++$r){
-				  echo "'".$arrData2[$i][$y]['statename']."'"; ?>,
+				 if(!empty($arrData2[$i][$y]['statename'])){
+				  echo "'".$arrData2[$i][$y]['statename']."'"; } ?>,
              <?php $y++; 
 			 }?>  
             ],
@@ -675,7 +677,8 @@ $(document).ready(function () {
             categories: [
 			<?php 
              for($r=0;$r<7;++$r){
-				  echo "'".$arrData3[$i][$y]['statename']."'"; ?>,
+				  if(!empty($arrData3[$i][$y]['statename'])){
+				  echo "'".$arrData3[$i][$y]['statename']."'"; } ?>,
              <?php $y++; 
 			 }?>  
             ],
@@ -769,7 +772,8 @@ $(document).ready(function () {
             categories: [
 			<?php 
              for($r=0;$r<7;++$r){
-				  echo "'".$arrData4[$i][$y]['statename']."'"; ?>,
+				 if(!empty($arrData4[$i][$y]['statename'])){
+				  echo "'".$arrData4[$i][$y]['statename']."'"; } ?>,
              <?php $y++; 
 			 }?>  
             ],
@@ -863,7 +867,8 @@ $(document).ready(function () {
             categories: [
 			<?php 
              for($r=0;$r<7;++$r){
-				  echo "'".$arrData5[$i][$y]['statename']."'"; ?>,
+				   if(!empty($arrData5[$i][$y]['statename'])){
+				  echo "'".$arrData5[$i][$y]['statename']."'"; } ?>,
              <?php $y++; 
 			 }?>  
             ],
@@ -956,7 +961,8 @@ $(document).ready(function () {
             categories: [
 			<?php 
              for($r=0;$r<7;++$r){
-				  echo "'".$arrData6[$i][$y]['statename']."'"; ?>,
+				  if(!empty($arrData6[$i][$y]['statename'])){
+				  echo "'".$arrData6[$i][$y]['statename']."'"; } ?>,
              <?php $y++; 
 			 }?>  
             ],
