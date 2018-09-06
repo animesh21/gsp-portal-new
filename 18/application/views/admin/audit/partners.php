@@ -42,7 +42,13 @@
 <div class="hello">
   <div id="wrapper">
     <div id="container"> </div>
-    <div id="containerStateWisePartner1"> </div>
+    <?php 
+    $statewisegraph1=getPartnerGraphByState(1);
+    $countArr1=count(array_chunk($statewisegraph1[0],7,true));
+    for($i=0;$i<$countArr1; $i++){
+    ?>
+	<div id="containerStateWisePartner1_<?php echo $i; ?>"> </div><br/>
+    <?php } ?>
     <p><strong>Export Graph:</strong></p>
     <select id="ExportOption" style="border-radius:0px;">
       <option value="PNG">PNG Image</option>
@@ -57,8 +63,14 @@
   </div>
   <div id="wrapper2" style="display:none;">
     <div id="container2"> </div>
-    <div id="containerStateWisePartner2"> </div>
-    <p><strong>Export Graph:</strong></p>
+    <?php 
+    $statewisegraph2=getPartnerGraphByState(2);
+    $countArr2=count(array_chunk($statewisegraph2[0],7,true));
+    for($i=0;$i<$countArr2; $i++){
+    ?>
+	<div id="containerStateWisePartner2_<?php echo $i; ?>"> </div><br/>
+    <?php } ?>
+	<p><strong>Export Graph:</strong></p>
     <select id="ExportOption" style="border-radius:0px;">
       <option value="PNG">PNG Image</option>
       <option value="JPEG">JPEG Image</option>
@@ -72,7 +84,13 @@
   </div>
   <div id="wrapper3" style="display:none;">
     <div id="container3"> </div>
-    <div id="containerStateWisePartner3"> </div>
+	<?php 
+    $statewisegraph3=getPartnerGraphByState(3);
+    $countArr3=count(array_chunk($statewisegraph3[0],7,true));
+    for($i=0;$i<$countArr3; $i++){
+    ?>
+	<div id="containerStateWisePartner3_<?php echo $i; ?>"> </div><br/>
+    <?php } ?>
     <p><strong>Export Graph:</strong></p>
     <select id="ExportOption" style="border-radius:0px;">
       <option value="PNG">PNG Image</option>
@@ -87,7 +105,13 @@
   </div>
   <div id="wrapper4" style="display:none;">
     <div id="container4"> </div>
-    <div id="containerStateWisePartner4"> </div>
+    <?php 
+    $statewisegraph4=getPartnerGraphByState(4);
+    $countArr4=count(array_chunk($statewisegraph4[0],7,true));
+    for($i=0;$i<$countArr4; $i++){
+    ?>
+	<div id="containerStateWisePartner4_<?php echo $i; ?>"> </div><br/>
+    <?php } ?>
     <p><strong>Export Graph:</strong></p>
     <select id="ExportOption" style="border-radius:0px;">
       <option value="PNG">PNG Image</option>
@@ -102,7 +126,13 @@
   </div>
   <div id="wrapper5" style="display:none;">
     <div id="container5"> </div>
-    <div id="containerStateWisePartner5"> </div>
+    <?php 
+    $statewisegraph5=getPartnerGraphByState(5);
+    $countArr5=count(array_chunk($statewisegraph5[0],7,true));
+    for($i=0;$i<$countArr5; $i++){
+    ?>
+	<div id="containerStateWisePartner5_<?php echo $i; ?>"> </div><br/>
+    <?php } ?>
     <p><strong>Export Graph:</strong></p>
     <select id="ExportOption" style="border-radius:0px;">
       <option value="PNG">PNG Image</option>
@@ -117,7 +147,13 @@
   </div>
   <div id="wrapper6" style="display:none;">
     <div id="container6"> </div>
-    <div id="containerStateWisePartner6"> </div>
+    <?php 
+    $statewisegraph6=getPartnerGraphByState(6);
+    $countArr6=count(array_chunk($statewisegraph6[0],7,true));
+    for($i=0;$i<$countArr6; $i++){
+    ?>
+	<div id="containerStateWisePartner6_<?php echo $i; ?>"> </div><br/>
+    <?php } ?>
     <p><strong>Export Graph:</strong></p>
     <select id="ExportOption" style="border-radius:0px;">
       <option value="PNG">PNG Image</option>
@@ -422,86 +458,22 @@ $(document).ready(function () {
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
 <?php 
  $statewisegraph1=getPartnerGraphByState(1);
+ $countArr1=count(array_chunk($statewisegraph1[0],7,true));
+ $countTotalArr1=count($statewisegraph1[0]);
+ $arrData1=array_chunk($statewisegraph1[0],7,true);
+ $arrData1_1=array_chunk($statewisegraph1[1],7,true);
+ $arrData1_2=array_chunk($statewisegraph1[2],7,true);
+ $arrData1_3=array_chunk($statewisegraph1[3],7,true);
+ $arrData1_4=array_chunk($statewisegraph1[4],7,true);
+ $dataCount1=array();
+ $countInteration1=0;
+ $y=0;
+ $s=0;
+ for($i=0,$t=0;$i<$countArr1; $i++){$dataCount1[]=$i;}
+ for($i=0,$t=0;$i<$countArr1; $i++){
 ?>
 <script type="text/javascript">
-       Highcharts.chart('containerStateWisePartner1',{
-        chart: {
-            type: 'column'
-        },
-        title: {
-            text: 'Participation By State Church of South India'
-        },
-		yAxis: {
-		  title: {
-            text: 'No. of Schools'
-          }
-		},
-        xAxis: {
-            categories: [
-             <?php foreach($statewisegraph1[0] as $stateWG){ ?>
-				<?php echo "'".$stateWG['statename']."'"; ?>,
-			<?php } ?>
-            ],
-            crosshair: true
-        },
-		
-		legend: {
-        enabled: true
-    },
-        exporting: { enabled: true },
-        credits: {enabled: false},
-        tooltip: {
-            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-            pointFormat: '<tr><td style="color:{series.color};padding:0;font-size:12px;">{series.name}: </td>' +
-                '<td style="padding:0;font-size:12px;">{point.y:.1f}</td></tr>',
-            footerFormat: '</table>',
-            shared: true,
-            useHTML: true
-        },
-        plotOptions: {
-		
-		 series: {
-            borderWidth: 0,
-            dataLabels: {
-                enabled: true,
-                format: '{point.y:.1f}'
-            }
-        },
-		
-            column: {
-                pointPadding: 0.2,
-                borderWidth: 0
-            }
-        },
-        series: [{
-            name: 'Registered for Audit',
-			color:'rgb(124, 181, 236)',
-            data: <?php echo json_encode(array_map('intval',$statewisegraph1[1])); ?> //NORTH
-            //Registration, Audit Started, Audit Completed, Feedback Recieved
-        }, {
-            name: 'Audit Not Started',
-			color:'#fc3300',
-            data: <?php echo json_encode(array_map('intval',$statewisegraph1[2])); ?> //South
-
-        }, {
-            name: 'Audit Started',
-			color:'#fcfc00',
-            data: <?php echo json_encode(array_map('intval',$statewisegraph1[3])); ?> //South
-
-        }, {
-            name: 'Audit Completed',
-			color:'#00ae4f',
-            data: <?php echo json_encode(array_map('intval',$statewisegraph1[4])); ?> //East
-
-        }		
-		],
-});   
-</script>
-<?php 
- $statewisegraph2=getPartnerGraphByState(2);
-?>
-<script type="text/javascript">
-       Highcharts.chart('containerStateWisePartner2',{
+       Highcharts.chart('containerStateWisePartner1_<?php echo $i; ?>',{
         chart: {
             type: 'column'
         },
@@ -515,9 +487,11 @@ $(document).ready(function () {
 		},
         xAxis: {
             categories: [
-             <?php foreach($statewisegraph2[0] as $stateWG){ ?>
-				<?php echo "'".$stateWG['statename']."'"; ?>,
-			<?php } ?>
+			<?php 
+             for($r=0;$r<7;++$r){
+				  echo "'".$arrData1[$i][$y]['statename']."'"; ?>,
+             <?php $y++; 
+			 }?>  
             ],
             crosshair: true
         },
@@ -552,37 +526,145 @@ $(document).ready(function () {
         series: [{
             name: 'Registered for Audit',
 			color:'rgb(124, 181, 236)',
-            data: <?php echo json_encode(array_map('intval',$statewisegraph2[1])); ?> //NORTH
+            data: <?php echo json_encode(array_map('intval',array_values($arrData1_1[$t]))); ?> //NORTH
             //Registration, Audit Started, Audit Completed, Feedback Recieved
         }, {
             name: 'Audit Not Started',
 			color:'#fc3300',
-            data: <?php echo json_encode(array_map('intval',$statewisegraph2[2])); ?> //South
+            data: <?php echo json_encode(array_map('intval',array_values($arrData1_2[$t]))); ?> //South
 
         }, {
             name: 'Audit Started',
 			color:'#fcfc00',
-            data: <?php echo json_encode(array_map('intval',$statewisegraph2[3])); ?> //South
+            data: <?php echo json_encode(array_map('intval',array_values($arrData1_3[$t]))); ?> //South
 
         }, {
             name: 'Audit Completed',
 			color:'#00ae4f',
-            data: <?php echo json_encode(array_map('intval',$statewisegraph2[4])); ?> //East
+            data: <?php echo json_encode(array_map('intval',array_values($arrData1_4[$t]))); ?> //East
 
         }		
 		],
 }); 
-</script>
+</script><?php
+  $t++;
+} ?>
+<?php 
+ $statewisegraph2=getPartnerGraphByState(2);
+ $countArr2=count(array_chunk($statewisegraph2[0],7,true));
+ $countTotalArr2=count($statewisegraph2[0]);
+ $arrData2=array_chunk($statewisegraph2[0],7,true);
+ $arrData2_1=array_chunk($statewisegraph2[1],7,true);
+ $arrData2_2=array_chunk($statewisegraph2[2],7,true);
+ $arrData2_3=array_chunk($statewisegraph2[3],7,true);
+ $arrData2_4=array_chunk($statewisegraph2[4],7,true);
+ $dataCount2=array();
+ $countInteration2=0;
+ $y=0;
+ $s=0;
+ for($i=0,$t=0;$i<$countArr2; $i++){$dataCount2[]=$i;}
+ for($i=0,$t=0;$i<$countArr2; $i++){
+?>
+<script type="text/javascript">
+       Highcharts.chart('containerStateWisePartner2_<?php echo $i; ?>',{
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Participation By State Jawahar Navodaya Vidyalaya'
+        },
+		yAxis: {
+		  title: {
+            text: 'No. of Schools'
+          }
+		},
+        xAxis: {
+            categories: [
+			<?php 
+             for($r=0;$r<7;++$r){
+				  echo "'".$arrData2[$i][$y]['statename']."'"; ?>,
+             <?php $y++; 
+			 }?>  
+            ],
+            crosshair: true
+        },
+		
+		legend: {
+        enabled: true
+    },
+        exporting: { enabled: true },
+        credits: {enabled: false},
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0;font-size:12px;">{series.name}: </td>' +
+                '<td style="padding:0;font-size:12px;">{point.y:.1f}</td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        plotOptions: {
+		 series: {
+            borderWidth: 0,
+            dataLabels: {
+                enabled: true,
+                format: '{point.y:.1f}'
+            }
+        },
+		
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [{
+            name: 'Registered for Audit',
+			color:'rgb(124, 181, 236)',
+            data: <?php echo json_encode(array_map('intval',array_values($arrData2_1[$t]))); ?> //NORTH
+            //Registration, Audit Started, Audit Completed, Feedback Recieved
+        }, {
+            name: 'Audit Not Started',
+			color:'#fc3300',
+            data: <?php echo json_encode(array_map('intval',array_values($arrData2_2[$t]))); ?> //South
+
+        }, {
+            name: 'Audit Started',
+			color:'#fcfc00',
+            data: <?php echo json_encode(array_map('intval',array_values($arrData2_3[$t]))); ?> //South
+
+        }, {
+            name: 'Audit Completed',
+			color:'#00ae4f',
+            data: <?php echo json_encode(array_map('intval',array_values($arrData2_4[$t]))); ?> //East
+
+        }		
+		],
+}); 
+</script><?php
+  $t++;
+} ?>
 <?php 
  $statewisegraph3=getPartnerGraphByState(3);
+ $countArr3=count(array_chunk($statewisegraph3[0],7,true));
+ $countTotalArr3=count($statewisegraph3[0]);
+ $arrData3=array_chunk($statewisegraph3[0],7,true);
+ $arrData3_1=array_chunk($statewisegraph3[1],7,true);
+ $arrData3_2=array_chunk($statewisegraph3[2],7,true);
+ $arrData3_3=array_chunk($statewisegraph3[3],7,true);
+ $arrData3_4=array_chunk($statewisegraph3[4],7,true);
+ $dataCount3=array();
+ $countInteration=0;
+ $y=0;
+ $s=0;
+ for($i=0,$t=0;$i<$countArr3; $i++){$dataCount3[]=$i;}
+ for($i=0,$t=0;$i<$countArr3; $i++){
 ?>
 <script type="text/javascript">
-       Highcharts.chart('containerStateWisePartner3',{
+       Highcharts.chart('containerStateWisePartner3_<?php echo $i; ?>',{
         chart: {
             type: 'column'
         },
         title: {
-            text: 'Participation By State Kendriya Vidyalaya Sangathan (KVS)'
+            text: 'Participation By State Jawahar Navodaya Vidyalaya'
         },
 		yAxis: {
 		  title: {
@@ -591,9 +673,11 @@ $(document).ready(function () {
 		},
         xAxis: {
             categories: [
-             <?php foreach($statewisegraph3[0] as $stateWG){ ?>
-				<?php echo "'".$stateWG['statename']."'"; ?>,
-			<?php } ?>
+			<?php 
+             for($r=0;$r<7;++$r){
+				  echo "'".$arrData3[$i][$y]['statename']."'"; ?>,
+             <?php $y++; 
+			 }?>  
             ],
             crosshair: true
         },
@@ -612,7 +696,6 @@ $(document).ready(function () {
             useHTML: true
         },
         plotOptions: {
-		
 		 series: {
             borderWidth: 0,
             dataLabels: {
@@ -629,37 +712,53 @@ $(document).ready(function () {
         series: [{
             name: 'Registered for Audit',
 			color:'rgb(124, 181, 236)',
-            data: <?php echo json_encode(array_map('intval',$statewisegraph3[1])); ?> //NORTH
+            data: <?php echo json_encode(array_map('intval',array_values($arrData3_1[$t]))); ?> //NORTH
             //Registration, Audit Started, Audit Completed, Feedback Recieved
         }, {
             name: 'Audit Not Started',
 			color:'#fc3300',
-            data: <?php echo json_encode(array_map('intval',$statewisegraph3[2])); ?> //South
+            data: <?php echo json_encode(array_map('intval',array_values($arrData3_2[$t]))); ?> //South
 
         }, {
             name: 'Audit Started',
 			color:'#fcfc00',
-            data: <?php echo json_encode(array_map('intval',$statewisegraph3[3])); ?> //South
+            data: <?php echo json_encode(array_map('intval',array_values($arrData3_3[$t]))); ?> //South
 
         }, {
             name: 'Audit Completed',
 			color:'#00ae4f',
-            data: <?php echo json_encode(array_map('intval',$statewisegraph3[4])); ?> //East
+            data: <?php echo json_encode(array_map('intval',array_values($arrData3_4[$t]))); ?> //East
 
         }		
 		],
 }); 
-</script>
+</script><?php
+  $t++;
+} ?>
+
 <?php 
  $statewisegraph4=getPartnerGraphByState(4);
+ $countArr4=count(array_chunk($statewisegraph4[0],7,true));
+ $countTotalArr4=count($statewisegraph4[0]);
+ $arrData4=array_chunk($statewisegraph4[0],7,true);
+ $arrData4_1=array_chunk($statewisegraph4[1],7,true);
+ $arrData4_2=array_chunk($statewisegraph4[2],7,true);
+ $arrData4_3=array_chunk($statewisegraph4[3],7,true);
+ $arrData4_4=array_chunk($statewisegraph4[4],7,true);
+ $dataCount4=array();
+ $countInteration4=0;
+ $y=0;
+ $s=0;
+ for($i=0,$t=0;$i<$countArr4; $i++){$dataCount4[]=$i;}
+ for($i=0,$t=0;$i<$countArr4; $i++){
 ?>
 <script type="text/javascript">
-       Highcharts.chart('containerStateWisePartner4',{
+       Highcharts.chart('containerStateWisePartner4_<?php echo $i; ?>',{
         chart: {
             type: 'column'
         },
         title: {
-            text: 'Participation By State Montfortian Education Foundation'
+            text: 'Participation By State Jawahar Navodaya Vidyalaya'
         },
 		yAxis: {
 		  title: {
@@ -668,9 +767,11 @@ $(document).ready(function () {
 		},
         xAxis: {
             categories: [
-             <?php foreach($statewisegraph4[0] as $stateWG){ ?>
-				<?php echo "'".$stateWG['statename']."'"; ?>,
-			<?php } ?>
+			<?php 
+             for($r=0;$r<7;++$r){
+				  echo "'".$arrData4[$i][$y]['statename']."'"; ?>,
+             <?php $y++; 
+			 }?>  
             ],
             crosshair: true
         },
@@ -689,7 +790,6 @@ $(document).ready(function () {
             useHTML: true
         },
         plotOptions: {
-		
 		 series: {
             borderWidth: 0,
             dataLabels: {
@@ -706,37 +806,53 @@ $(document).ready(function () {
         series: [{
             name: 'Registered for Audit',
 			color:'rgb(124, 181, 236)',
-            data: <?php echo json_encode(array_map('intval',$statewisegraph4[1])); ?> //NORTH
+            data: <?php echo json_encode(array_map('intval',array_values($arrData4_1[$t]))); ?> //NORTH
             //Registration, Audit Started, Audit Completed, Feedback Recieved
         }, {
             name: 'Audit Not Started',
 			color:'#fc3300',
-            data: <?php echo json_encode(array_map('intval',$statewisegraph4[2])); ?> //South
+            data: <?php echo json_encode(array_map('intval',array_values($arrData4_2[$t]))); ?> //South
 
         }, {
             name: 'Audit Started',
 			color:'#fcfc00',
-            data: <?php echo json_encode(array_map('intval',$statewisegraph4[3])); ?> //South
+            data: <?php echo json_encode(array_map('intval',array_values($arrData4_3[$t]))); ?> //South
 
         }, {
             name: 'Audit Completed',
 			color:'#00ae4f',
-            data: <?php echo json_encode(array_map('intval',$statewisegraph4[4])); ?> //East
+            data: <?php echo json_encode(array_map('intval',array_values($arrData4_4[$t]))); ?> //East
 
         }		
 		],
 }); 
-</script>
+</script><?php
+  $t++;
+} ?>
+
 <?php 
  $statewisegraph5=getPartnerGraphByState(5);
+ $countArr5=count(array_chunk($statewisegraph5[0],7,true));
+ $countTotalArr5=count($statewisegraph5[0]);
+ $arrData5=array_chunk($statewisegraph5[0],7,true);
+ $arrData5_1=array_chunk($statewisegraph5[1],7,true);
+ $arrData5_2=array_chunk($statewisegraph5[2],7,true);
+ $arrData5_3=array_chunk($statewisegraph5[3],7,true);
+ $arrData5_4=array_chunk($statewisegraph5[4],7,true);
+ $dataCount5=array();
+ $countInteration5=0;
+ $y=0;
+ $s=0;
+ for($i=0,$t=0;$i<$countArr5; $i++){$dataCount5[]=$i;}
+ for($i=0,$t=0;$i<$countArr5; $i++){
 ?>
 <script type="text/javascript">
-       Highcharts.chart('containerStateWisePartner5',{
+       Highcharts.chart('containerStateWisePartner5_<?php echo $i; ?>',{
         chart: {
             type: 'column'
         },
         title: {
-            text: 'Participation By State Mount Litera Zee Schools'
+            text: 'Participation By State Jawahar Navodaya Vidyalaya'
         },
 		yAxis: {
 		  title: {
@@ -745,9 +861,11 @@ $(document).ready(function () {
 		},
         xAxis: {
             categories: [
-             <?php foreach($statewisegraph5[0] as $stateWG){ ?>
-				<?php echo "'".$stateWG['statename']."'"; ?>,
-			<?php } ?>
+			<?php 
+             for($r=0;$r<7;++$r){
+				  echo "'".$arrData5[$i][$y]['statename']."'"; ?>,
+             <?php $y++; 
+			 }?>  
             ],
             crosshair: true
         },
@@ -766,7 +884,6 @@ $(document).ready(function () {
             useHTML: true
         },
         plotOptions: {
-		
 		 series: {
             borderWidth: 0,
             dataLabels: {
@@ -783,37 +900,52 @@ $(document).ready(function () {
         series: [{
             name: 'Registered for Audit',
 			color:'rgb(124, 181, 236)',
-            data: <?php echo json_encode(array_map('intval',$statewisegraph5[1])); ?> //NORTH
+            data: <?php echo json_encode(array_map('intval',array_values($arrData5_1[$t]))); ?> //NORTH
             //Registration, Audit Started, Audit Completed, Feedback Recieved
         }, {
             name: 'Audit Not Started',
 			color:'#fc3300',
-            data: <?php echo json_encode(array_map('intval',$statewisegraph5[2])); ?> //South
+            data: <?php echo json_encode(array_map('intval',array_values($arrData5_2[$t]))); ?> //South
 
         }, {
             name: 'Audit Started',
 			color:'#fcfc00',
-            data: <?php echo json_encode(array_map('intval',$statewisegraph5[3])); ?> //South
+            data: <?php echo json_encode(array_map('intval',array_values($arrData5_3[$t]))); ?> //South
 
         }, {
             name: 'Audit Completed',
 			color:'#00ae4f',
-            data: <?php echo json_encode(array_map('intval',$statewisegraph5[4])); ?> //East
+            data: <?php echo json_encode(array_map('intval',array_values($arrData5_4[$t]))); ?> //East
 
         }		
 		],
 }); 
-</script>
+</script><?php
+  $t++;
+} ?>
 <?php 
  $statewisegraph6=getPartnerGraphByState(6);
+ $countArr6=count(array_chunk($statewisegraph5[0],7,true));
+ $countTotalArr6=count($statewisegraph5[0]);
+ $arrData6=array_chunk($statewisegraph5[0],7,true);
+ $arrData6_1=array_chunk($statewisegraph5[1],7,true);
+ $arrData6_2=array_chunk($statewisegraph5[2],7,true);
+ $arrData6_3=array_chunk($statewisegraph5[3],7,true);
+ $arrData6_4=array_chunk($statewisegraph5[4],7,true);
+ $dataCount6=array();
+ $countInteration6=0;
+ $y=0;
+ $s=0;
+ for($i=0,$t=0;$i<$countArr6; $i++){$dataCount6[]=$i;}
+ for($i=0,$t=0;$i<$countArr6; $i++){
 ?>
 <script type="text/javascript">
-       Highcharts.chart('containerStateWisePartner6',{
+       Highcharts.chart('containerStateWisePartner6_<?php echo $i; ?>',{
         chart: {
             type: 'column'
         },
         title: {
-            text: 'Participation By State Satya Bharti Foundation'
+            text: 'Participation By State Jawahar Navodaya Vidyalaya'
         },
 		yAxis: {
 		  title: {
@@ -822,9 +954,11 @@ $(document).ready(function () {
 		},
         xAxis: {
             categories: [
-             <?php foreach($statewisegraph6[0] as $stateWG){ ?>
-				<?php echo "'".$stateWG['statename']."'"; ?>,
-			<?php } ?>
+			<?php 
+             for($r=0;$r<7;++$r){
+				  echo "'".$arrData6[$i][$y]['statename']."'"; ?>,
+             <?php $y++; 
+			 }?>  
             ],
             crosshair: true
         },
@@ -843,7 +977,6 @@ $(document).ready(function () {
             useHTML: true
         },
         plotOptions: {
-		
 		 series: {
             borderWidth: 0,
             dataLabels: {
@@ -860,27 +993,29 @@ $(document).ready(function () {
         series: [{
             name: 'Registered for Audit',
 			color:'rgb(124, 181, 236)',
-            data: <?php echo json_encode(array_map('intval',$statewisegraph6[1])); ?> //NORTH
+            data: <?php echo json_encode(array_map('intval',array_values($arrData6_1[$t]))); ?> //NORTH
             //Registration, Audit Started, Audit Completed, Feedback Recieved
         }, {
             name: 'Audit Not Started',
 			color:'#fc3300',
-            data: <?php echo json_encode(array_map('intval',$statewisegraph6[2])); ?> //South
+            data: <?php echo json_encode(array_map('intval',array_values($arrData6_2[$t]))); ?> //South
 
         }, {
             name: 'Audit Started',
 			color:'#fcfc00',
-            data: <?php echo json_encode(array_map('intval',$statewisegraph6[3])); ?> //South
+            data: <?php echo json_encode(array_map('intval',array_values($arrData6_3[$t]))); ?> //South
 
         }, {
             name: 'Audit Completed',
 			color:'#00ae4f',
-            data: <?php echo json_encode(array_map('intval',$statewisegraph6[4])); ?> //East
+            data: <?php echo json_encode(array_map('intval',array_values($arrData6_4[$t]))); ?> //East
 
         }		
 		],
 }); 
-</script>
+</script><?php
+  $t++;
+} ?>
 <script type="text/javascript">
        var chart =  Highcharts.chart('container',{
             chart: {
@@ -910,7 +1045,7 @@ $(document).ready(function () {
             },
             series: [{
                 colorByPoint: true,
-                data: [{name: 'Registered for Audit', y: <?php echo $csi_registerd_audit; ?>}, {name: 'Audit Not Started', y: <?php echo $csi_total_notstarted_audit; ?>},{name: 'Audit Started', y: <?php echo $csi_total_started_audit; ?>}, {name: 'Audit Completed', y: <?php echo $csi_completed; ?>}]
+                data: [{name: 'Registered for Audit', color:'rgb(124, 181, 236)', y: <?php echo $csi_registerd_audit; ?>}, {name: 'Audit Not Started', color:'#fc3300', y: <?php echo $csi_total_notstarted_audit; ?>},{name: 'Audit Started', color:'#fcfc00', y: <?php echo $csi_total_started_audit; ?>}, {name: 'Audit Completed', color:'#00ae4f', y: <?php echo $csi_completed; ?>}]
             }]
         });
 		
@@ -973,7 +1108,7 @@ $(document).ready(function () {
             },
             series: [{
                 colorByPoint: true,
-                data: [{name: 'Registered for Audit', y: <?php echo $csi_registerd_audit2; ?>}, {name: 'Audit Not Started', y: <?php echo $csi_total_notstarted_audit2; ?>},{name: 'Audit Started', y: <?php echo $csi_total_started_audit2; ?>}, {name: 'Audit Completed', y: <?php echo $csi_completed2; ?>}]
+                data: [{name: 'Registered for Audit',color:'rgb(124, 181, 236)', y: <?php echo $csi_registerd_audit2; ?>}, {name: 'Audit Not Started', color:'#fc3300', y: <?php echo $csi_total_notstarted_audit2; ?>},{name: 'Audit Started', color:'#fcfc00', y: <?php echo $csi_total_started_audit2; ?>}, {name: 'Audit Completed', color:'#00ae4f', y: <?php echo $csi_completed2; ?>}]
             }]
         });
 		
@@ -1035,7 +1170,7 @@ $(document).ready(function () {
             },
             series: [{
                 colorByPoint: true,
-                data: [{name: 'Registered for Audit', y: <?php echo $csi_registerd_audit3; ?>}, {name: 'Audit Not Started', y: <?php echo $csi_total_notstarted_audit3; ?>},{name: 'Audit Started', y: <?php echo $csi_total_started_audit3; ?>}, {name: 'Audit Completed', y: <?php echo $csi_completed3; ?>}]
+                data: [{name: 'Registered for Audit',color:'rgb(124, 181, 236)', y: <?php echo $csi_registerd_audit3; ?>}, {name: 'Audit Not Started', color:'#fc3300', y: <?php echo $csi_total_notstarted_audit3; ?>},{name: 'Audit Started', color:'#fcfc00', y: <?php echo $csi_total_started_audit3; ?>}, {name: 'Audit Completed',color:'#00ae4f', y: <?php echo $csi_completed3; ?>}]
             }]
         });
 		// the button handler    
@@ -1095,7 +1230,7 @@ $(document).ready(function () {
             },
             series: [{
                 colorByPoint: true,
-                data: [{name: 'Registered for Audit', y: <?php echo $csi_registerd_audit4; ?>}, {name: 'Audit Not Started', y: <?php echo $csi_total_notstarted_audit4; ?>},{name: 'Audit Started', y: <?php echo $csi_total_started_audit4; ?>}, {name: 'Audit Completed', y: <?php echo $csi_completed4; ?>}]
+                data: [{name: 'Registered for Audit',color:'rgb(124, 181, 236)', y: <?php echo $csi_registerd_audit4; ?>}, {name: 'Audit Not Started',color:'#fc3300', y: <?php echo $csi_total_notstarted_audit4; ?>},{name: 'Audit Started',color:'#fcfc00', y: <?php echo $csi_total_started_audit4; ?>}, {name: 'Audit Completed',color:'#00ae4f', y: <?php echo $csi_completed4; ?>}]
             }]
         });
 		// the button handler    
@@ -1155,7 +1290,7 @@ $(document).ready(function () {
             },
             series: [{
                 colorByPoint: true,
-                data: [{name: 'Registered for Audit', y: <?php echo $csi_registerd_audit5; ?>}, {name: 'Audit Not Started', y: <?php echo $csi_total_notstarted_audit5; ?>},{name: 'Audit Started', y: <?php echo $csi_total_started_audit5; ?>}, {name: 'Audit Completed', y: <?php echo $csi_completed5; ?>}]
+                data: [{name: 'Registered for Audit',color:'rgb(124, 181, 236)', y: <?php echo $csi_registerd_audit5; ?>}, {name: 'Audit Not Started',color:'#fc3300', y: <?php echo $csi_total_notstarted_audit5; ?>},{name: 'Audit Started',color:'#fcfc00', y: <?php echo $csi_total_started_audit5; ?>}, {name: 'Audit Completed',color:'#00ae4f', y: <?php echo $csi_completed5; ?>}]
             }]
         });
 		// the button handler    
@@ -1215,7 +1350,7 @@ $(document).ready(function () {
             },
             series: [{
                 colorByPoint: true,
-                data: [{name: 'Registered for Audit', y: <?php echo $csi_registerd_audit6; ?>}, {name: 'Audit Not Started', y: <?php echo $csi_total_notstarted_audit6; ?>},{name: 'Audit Started', y: <?php echo $csi_total_started_audit6; ?>}, {name: 'Audit Completed', y: <?php echo $csi_completed6; ?>}]
+                data: [{name: 'Registered for Audit',color:'rgb(124, 181, 236)', y: <?php echo $csi_registerd_audit6; ?>}, {name: 'Audit Not Started',color:'#fc3300', y: <?php echo $csi_total_notstarted_audit6; ?>},{name: 'Audit Started',color:'#fcfc00', y: <?php echo $csi_total_started_audit6; ?>}, {name: 'Audit Completed',color:'#00ae4f', y: <?php echo $csi_completed6; ?>}]
             }]
         });
 		// the button handler    
