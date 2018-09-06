@@ -825,9 +825,11 @@
           <td><?php echo $record1[$i]->Q7A11S2; ?></td>
           <td><?php echo $record1[$i]->Q7A11S3; ?></td>
           <td><?php echo $record1[$i]->Q7A11S4; ?></td>
-		  <td><?php echo $record1[$i]->Q7A1S1+$record1[$i]->Q7A2S1+$record1[$i]->Q7A3S1+$record1[$i]->Q7A4S1+$record1[$i]->Q7A5S1+$record1[$i]->Q7A6S1+$record1[$i]->Q7A7S1+$record1[$i]->Q7A8S1+$record1[$i]->Q7A9S1+$record1[$i]->Q7A10S1+$record1[$i]->Q7A11S1; ?></td>
-		  <td><?php echo $record1[$i]->Q7A1S2+$record1[$i]->Q7A2S2+$record1[$i]->Q7A3S2+$record1[$i]->Q7A4S2+$record1[$i]->Q7A5S2+$record1[$i]->Q7A6S2+$record1[$i]->Q7A7S2+$record1[$i]->Q7A8S2+$record1[$i]->Q7A9S2+$record1[$i]->Q7A10S2+$record1[$i]->Q7A11S2; ?></td>
-		  <td><?php echo $record1[$i]->Q7A1S3+$record1[$i]->Q7A2S3+$record1[$i]->Q7A3S3+$record1[$i]->Q7A4S3+$record1[$i]->Q7A5S3+$record1[$i]->Q7A6S3+$record1[$i]->Q7A7S3+$record1[$i]->Q7A8S3+$record1[$i]->Q7A9S3+$record1[$i]->Q7A10S3+$record1[$i]->Q7A11S3; ?></td>
+		  <td><?php 
+		   echo $record1[$i]->Q7A1S4+ $record1[$i]->Q7A2S4+$record1[$i]->Q7A3S4+$record1[$i]->Q7A4S4+$record1[$i]->Q7A5S4+$record1[$i]->Q7A6S4;
+		  //echo $record1[$i]->Q7A1S1+$record1[$i]->Q7A2S1+$record1[$i]->Q7A3S1+$record1[$i]->Q7A4S1+$record1[$i]->Q7A5S1+$record1[$i]->Q7A6S1+$record1[$i]->Q7A7S1+$record1[$i]->Q7A8S1+$record1[$i]->Q7A9S1+$record1[$i]->Q7A10S1+$record1[$i]->Q7A11S1; ?></td>
+		  <td><?php echo $record1[$i]->Q7A9S4+ $record1[$i]->Q7A10S4+$record1[$i]->Q7A11S4; //echo $record1[$i]->Q7A1S2+$record1[$i]->Q7A2S2+$record1[$i]->Q7A3S2+$record1[$i]->Q7A4S2+$record1[$i]->Q7A5S2+$record1[$i]->Q7A6S2+$record1[$i]->Q7A7S2+$record1[$i]->Q7A8S2+$record1[$i]->Q7A9S2+$record1[$i]->Q7A10S2+$record1[$i]->Q7A11S2; ?></td>
+		  <td><?php echo $record1[$i]->Q7A7S4+ $record1[$i]->Q7A8S4;  //echo $record1[$i]->Q7A1S3+$record1[$i]->Q7A2S3+$record1[$i]->Q7A3S3+$record1[$i]->Q7A4S3+$record1[$i]->Q7A5S3+$record1[$i]->Q7A6S3+$record1[$i]->Q7A7S3+$record1[$i]->Q7A8S3+$record1[$i]->Q7A9S3+$record1[$i]->Q7A10S3+$record1[$i]->Q7A11S3; ?></td>
 		  <td><?php echo $record1[$i]->Q7A1S4+$record1[$i]->Q7A2S4+$record1[$i]->Q7A3S4+$record1[$i]->Q7A4S4+$record1[$i]->Q7A5S4+$record1[$i]->Q7A6S4+$record1[$i]->Q7A7S4+$record1[$i]->Q7A8S4+$record1[$i]->Q7A9S4+$record1[$i]->Q7A10S4+$record1[$i]->Q7A11S4; ?></td>
           <td><?php echo $record1[$i]->Q8A1; ?></td>
           <td><?php 
@@ -1110,19 +1112,33 @@
 		  else{echo $record1[$i]->Q8W2S2;}
 		  
 		  ?></td>
-          <td><?php echo  $record1[$i]->Q8W2S2S1; ?></td>
+          <td><?php 
+		  $storedrainwater="";
+		  if($record1[$i]->Q8W2S2S14==1){$storedrainwater.="Drinking ".",";}
+		  if($record1[$i]->Q8W2S2S25==1){$storedrainwater.="Gardening  ".",";}
+		  if($record1[$i]->Q8W2S2S36==1){$storedrainwater.="Mopping  ".",";}
+		  if($record1[$i]->Q8W2S2S47==1){$storedrainwater.="Toilets  ".",";}
+		  if($record1[$i]->Q8W2S2S58==1){$storedrainwater.="Washing vehicles ".",";}
+		  if($record1[$i]->Q8W2S2S69==6){$storedrainwater.=" Kitchen (Cooking/Washing vegetables and utensils) ".",";}
+		  if($record1[$i]->Q8W2S2S723==1){$storedrainwater.="Shower, Brushing teeth, Bathing, Hand washing ".",";}
+		  if($record1[$i]->Q8W2S2S811==1){$storedrainwater.="Swimming Pool ".",";}
+		  if($record1[$i]->Q8W2S2S912==1){$storedrainwater.="Fire fighting ".",";}
+		  if($record1[$i]->Q8W2S2S1013==1){$storedrainwater.="Desert coolers ".",";}
+		  if(!empty($storedrainwater)){
+		  echo $storedrainwater;}else{ echo "000.000";} ?></td>
           <td><?php 
 		  if(strcmp($record1[$i]->Q8W2S2S2,"Y")==0){echo "Yes";}else if(strcmp($record1[$i]->Q8W2S2S2,"N")==0){echo "No";}else{echo $record1[$i]->Q8W2S2S2;} ?></td>
-          <td><?php echo  $record1[$i]->Q8W2S2S7; ?></td>
+		    <td><?php 
+		  if(strcmp($record1[$i]->Q8W2S2S7,"Y")==0){echo "Yes";}else if(strcmp($record1[$i]->Q8W2S2S7,"N")==0){echo "No";}else{echo $record1[$i]->Q8W2S2S7;} ?></td>
           <td><?php 
 		   $ratio_between_storage_and_recharge="";
 		   if($record1[$i]->Q8W2S2S10==1){$ratio_between_storage_and_recharge.="Storage = Recharge";}
 		   elseif($record1[$i]->Q8W2S2S10==2){$ratio_between_storage_and_recharge.="Storage > Recharge";}
 		   elseif($record1[$i]->Q8W2S2S10==3){$ratio_between_storage_and_recharge.="Recharge > Storage";}
 		   elseif($record1[$i]->Q8W2S2S10==4){$ratio_between_storage_and_recharge.="Only recharge";}
-		   elseif($record1[$i]->Q8W2S2S10==5){$ratio_between_storage_and_recharge.=" Only storage";}
+		   elseif($record1[$i]->Q8W2S2S10==5){$ratio_between_storage_and_recharge.=" Only storage";}else{echo "000.000";}
 		   if(!empty($record1[$i]->Q8W2S2S10)){echo $ratio_between_storage_and_recharge;}
-		   else{echo "000.000";}
+		   
 		  ?></td>
 		   <td><?php 
 		  if($record1[$i]->Q8W2S4==1){ echo " 10 to 20 per cent";}
@@ -1146,7 +1162,7 @@
 		   if($record1[$i]->Q8W2S36==1){$harvesting_structures_present.="Collection sump";}
 		   if($record1[$i]->Q8W2S37==1){$harvesting_structures_present.="Pump unit";}
 		   if($record1[$i]->Q8W2S38==1){$harvesting_structures_present.="Recharge structure";}
-		   if(!empty($harvesting_structures_present)){echo $harvesting_structures_present;}else{ echo  $record1[$i]->Q8W2S31;} ?></td>
+		   if(!empty($harvesting_structures_present)){echo $harvesting_structures_present;}else{ echo "000.000";} ?></td>
           <td><?php 
 		  if($record1[$i]->Q8W2S4S1==1){ echo "Before storage tank"; }
 		  elseif($record1[$i]->Q8W2S4S1==2){ echo "Before recharge system"; }
