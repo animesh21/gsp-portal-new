@@ -87,7 +87,8 @@
             categories: [
 			<?php 
              for($r=0;$r<7;++$r){
-				  echo "'".$arrData1[$i][$y]['districtame']."'"; ?>,
+		     if(!empty($arrData1[$i][$y]['districtame'])){
+				  echo "'".$arrData1[$i][$y]['districtame']."'"; } ?>,
              <?php $y++; 
 			 }?>  
             ],
