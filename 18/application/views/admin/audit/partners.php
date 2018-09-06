@@ -515,7 +515,7 @@ $(document).ready(function () {
             borderWidth: 0,
             dataLabels: {
                 enabled: true,
-                format: '{point.y:.1f}'
+                format: '{point.y}'
             }
         },
 		
@@ -609,7 +609,7 @@ $(document).ready(function () {
             borderWidth: 0,
             dataLabels: {
                 enabled: true,
-                format: '{point.y:.1f}'
+                format: '{point.y}'
             }
         },
 		
@@ -703,7 +703,7 @@ $(document).ready(function () {
             borderWidth: 0,
             dataLabels: {
                 enabled: true,
-                format: '{point.y:.1f}'
+                format: '{point.y}'
             }
         },
 		
@@ -798,7 +798,7 @@ $(document).ready(function () {
             borderWidth: 0,
             dataLabels: {
                 enabled: true,
-                format: '{point.y:.1f}'
+                format: '{point.y}'
             }
         },
 		
@@ -893,7 +893,7 @@ $(document).ready(function () {
             borderWidth: 0,
             dataLabels: {
                 enabled: true,
-                format: '{point.y:.1f}'
+                format: '{point.y}'
             }
         },
 		
@@ -987,7 +987,7 @@ $(document).ready(function () {
             borderWidth: 0,
             dataLabels: {
                 enabled: true,
-                format: '{point.y:.1f}'
+                format: '{point.y}'
             }
         },
 		
