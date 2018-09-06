@@ -87,8 +87,7 @@
             categories: [
 			<?php 
              for($r=0;$r<7;++$r){
-		       if(!empty($arrData1[$i][$y]['districtame'])){
-				  echo "'".$arrData1[$i][$y]['districtame']."'"; } ?>,
+				  echo "'".$arrData1[$i][$y]['districtame']."'"; ?>,
              <?php $y++; 
 			 }?>  
             ],
@@ -113,7 +112,7 @@
             borderWidth: 0,
             dataLabels: {
                 enabled: true,
-                format: '{point.y:.1f}'
+                format: '{point.y}'
             }
         },
 		
