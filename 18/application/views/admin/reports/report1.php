@@ -48,7 +48,7 @@
         },
 		
 		legend: {
-        enabled: false
+        enabled: true
     },
         exporting: { enabled: false },
         credits: {enabled: false},
@@ -66,7 +66,7 @@
             borderWidth: 0,
             dataLabels: {
                 enabled: true,
-                format: '{point.y:.1f}'
+                format: '{point.y}'
             }
         },
 		
@@ -78,14 +78,17 @@
         },
         series: [{
             name: 'Registered for Audit',
+			color:'rgb(124, 181, 236)',
             data: <?php echo json_encode($audit_register); ?> //NORTH
             //Registration, Audit Started, Audit Completed, Feedback Recieved
         }, {
             name: 'Audit Started',
+			color:'#fcfc00',
             data: <?php echo json_encode($audit_start); ?> //South
 
         }, {
             name: 'Audit Completed',
+			color:'#00ae4f',
             data: <?php echo json_encode($audit_complete); ?> //East
 
         }		
@@ -137,7 +140,7 @@
         },
 		
 		legend: {
-        enabled: false
+        enabled: true
     },
     
 		
@@ -156,7 +159,7 @@
             borderWidth: 0,
             dataLabels: {
                 enabled: true,
-                format: '{point.y:.1f}'
+                format: '{point.y}'
             }
         },
 		
@@ -167,14 +170,17 @@
         },
         series: [{
             name: 'Registered for Audit',
+			color:'rgb(124, 181, 236)',
             data: <?php echo json_encode(array("0"=>array_sum($audit_register))); ?> //NORTH
             //Registration, Audit Started, Audit Completed, Feedback Recieved
         }, {
             name: 'Audit Started',
+			color:'#fcfc00',
             data: <?php echo json_encode(array("0"=>array_sum($audit_start))); ?> //South
 
         }, {
             name: 'Audit Completed',
+			color:'#00ae4f',
             data: <?php echo json_encode(array("0"=>array_sum($audit_complete))); ?> //East
 
         }		
