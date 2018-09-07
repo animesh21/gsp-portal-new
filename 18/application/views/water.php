@@ -3435,46 +3435,56 @@ if($('input[name="Q8W1S11"]:checked').length == 0){
 	  /*Q6a Does your school harvest different catchments?*/
 	  if($('input[name="Q8W2S1"]:checked').length==0){
 	     alert("Q6a Does your school harvest different catchments?");
+		  e.preventDefault();
 	  }
 	  /*6(b) How does your school harvest rainwater?*/
 	  if($('input[name="Q8W2S2"]:checked').length==0){
 	     alert("6(b) How does your school harvest rainwater?");
+		  e.preventDefault();
 	  }
 	  /*6(c)How much area in your school is harvested?*/
 	  if($('input[name="Q8W2S4"]:checked').length==0){
 	     alert("6(c)How much area in your school is harvested?");
+		  e.preventDefault();
 	  }
 	  /*6(e)Rate your catchment on cleanliness:*/
 	  if($('input[name="Q8W2S5"]:checked').length==0){
 	     alert("6(e)Rate your catchment on cleanliness:");
+		  e.preventDefault();
 	  }
 	  /*6(f)Does your school clean your catchment and system*/
 	  if($('input[name="Q8W2S61"]:checked').length==0){
 	     alert("6(f)Does your school clean your catchment and system");
+		  e.preventDefault();
 	  }
 	  /*6(g)Does your school monitor the rainwater harvesting structure for its efficiency?*/
 	  if($('input[name="Q8W2S8"]:checked').length==0){
 	     alert("6(g)Does your school monitor the rainwater harvesting structure for its efficiency?");
+		  e.preventDefault();
 	  }
 	  /*6(h)What is the trend of groundwater level in your school across the year?*/
 	  if($('input[name="Q8W2S10"]:checked').length==0){
 	     alert("6(h)What is the trend of groundwater level in your school across the year?");
+		  e.preventDefault();
 	  }
 	  /*6(i)If your school's RWH structure is more than a year old, is there any improvement in the groundwater quality after the implementation of the RWH structure?*/
 	  if($('input[name="Q8W2S13"]:checked').length==0){
 	     alert("6(i)If your school's RWH structure is more than a year old, is there any improvement in the groundwater quality after the implementation of the RWH structure?");
+	     e.preventDefault();
 	  }
 	  /*6(h)(1)Please specify how much was the decrease?*/
 	  if($('input[name="Q8W2S10"]:checked').val()==1){
 	    if($('input[name="Q8W2S11"]:checked').length==0){
 	     alert("6(h)(1)Please specify how much was the decrease?");
-	   }
+	     e.preventDefault();
+	    }
 	  }
 	   /*6(h)(1)Please specify how much was the increase?*/
 	   if($('input[name="Q8W2S10"]:checked').val()==2){
 	    if($('input[name="Q8W2S12"]:checked').length==0){
 	     alert("6(h)(1)Please specify how much was the increase?");
-	   }
+	     e.preventDefault();
+	    }
 	  }
 	}	
 });
