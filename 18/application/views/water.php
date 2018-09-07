@@ -3486,6 +3486,18 @@ if($('input[name="Q8W1S11"]:checked').length == 0){
 	     e.preventDefault();
 	    }
 	  }
+	  if($('input[name="Q8W2S33"]:checked').val()==1){
+	    /*6(d)(1) Where is your filter unit?*/
+		if($('input[name="Q8W2S4S1"]:checked').length==0){
+	     alert("6(d)(1) Where is your filter unit?");
+		 e.preventDefault();
+	    }
+		/*6(d)(2)Types of filter used in your school?*/
+		if($('input[name="Q8W2S4S21"]:checked').length==0 && $('input[name="Q8W2S4S22"]:checked').length==0 && $('input[name="Q8W2S4S23"]:checked').length==0 && $('input[name="Q8W2S4S24"]:checked').length==0){
+	     alert("6(d)(2)Types of filter used in your school:?");
+		 e.preventDefault();
+	    }
+	  } 
 	}	
 });
 </script>
