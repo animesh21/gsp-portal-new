@@ -3420,7 +3420,7 @@ if($('input[name="Q8W1S11"]:checked').length == 0){
 	   e.preventDefault(); 
    }
 /**/   
-   if($('input[name="Q8W1S12"]:checked').val()==='Y'){
+   if($('input[name="Q8W1S12"]:checked').length==0){
      alert("Q5 Provision for storage of leftover water in bottles at water coolers Any other step taken for water conservation? (if Yes, please specify):(Please Fill The Textarea Value.)");
 	 e.preventDefault();
    }
