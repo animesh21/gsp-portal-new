@@ -3431,7 +3431,52 @@ if($('input[name="Q8W1S11"]:checked').length == 0){
 	  e.preventDefault();
 	 }
    }	
-	
+  if($('input[name="Q8W2"]:checked').val()==='Y'){
+	  /*Q6a Does your school harvest different catchments?*/
+	  if($('input[name="Q8W2S1"]:checked').length==0){
+	     alert("Q6a Does your school harvest different catchments?");
+	  }
+	  /*6(b) How does your school harvest rainwater?*/
+	  if($('input[name="Q8W2S2"]:checked').length==0){
+	     alert("6(b) How does your school harvest rainwater?");
+	  }
+	  /*6(c)How much area in your school is harvested?*/
+	  if($('input[name="Q8W2S4"]:checked').length==0){
+	     alert("6(c)How much area in your school is harvested?");
+	  }
+	  /*6(e)Rate your catchment on cleanliness:*/
+	  if($('input[name="Q8W2S5"]:checked').length==0){
+	     alert("6(e)Rate your catchment on cleanliness:");
+	  }
+	  /*6(f)Does your school clean your catchment and system*/
+	  if($('input[name="Q8W2S61"]:checked').length==0){
+	     alert("6(f)Does your school clean your catchment and system");
+	  }
+	  /*6(g)Does your school monitor the rainwater harvesting structure for its efficiency?*/
+	  if($('input[name="Q8W2S8"]:checked').length==0){
+	     alert("6(g)Does your school monitor the rainwater harvesting structure for its efficiency?");
+	  }
+	  /*6(h)What is the trend of groundwater level in your school across the year?*/
+	  if($('input[name="Q8W2S10"]:checked').length==0){
+	     alert("6(h)What is the trend of groundwater level in your school across the year?");
+	  }
+	  /*6(i)If your school's RWH structure is more than a year old, is there any improvement in the groundwater quality after the implementation of the RWH structure?*/
+	  if($('input[name="Q8W2S13"]:checked').length==0){
+	     alert("6(i)If your school's RWH structure is more than a year old, is there any improvement in the groundwater quality after the implementation of the RWH structure?");
+	  }
+	  /*6(h)(1)Please specify how much was the decrease?*/
+	  if($('input[name="Q8W2S10"]:checked').val()==1){
+	    if($('input[name="Q8W2S11"]:checked').length==0){
+	     alert("6(h)(1)Please specify how much was the decrease?");
+	   }
+	  }
+	   /*6(h)(1)Please specify how much was the increase?*/
+	   if($('input[name="Q8W2S10"]:checked').val()==2){
+	    if($('input[name="Q8W2S12"]:checked').length==0){
+	     alert("6(h)(1)Please specify how much was the increase?");
+	   }
+	  }
+	}	
 });
 </script>
 	
