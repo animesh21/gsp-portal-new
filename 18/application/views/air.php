@@ -2174,6 +2174,36 @@ $("#airnext").click(function(e){
 	e.preventDefault();
 	}
    }
+ /**Q2 To calculate the Window-floor ratio of classrooms in your school, please fill the table below:**/ 
+  var numberofloop=$('input[name="Q4A1"]').val()!=""?$('input[name="Q4A1"]').val():$('input[name="Q4A1"]').attr('placeholder');
+  if(numberofloop>11){
+    for(i=1;i<=10;i++){
+	 var firstColumn="Q5A"+i+"S1";
+	 var secondColumn="Q5A"+i+"S2";
+	 var thirdColumn="Q5A"+i+"S3";
+	  if($("input[name='"+firstColumn+"']").attr('placeholder')=="" || $("input[name='"+firstColumn+"']").attr('placeholder')==="undefined" || $("input[name='"+secondColumn+"']").attr('placeholder')=="" || $("input[name='"+secondColumn+"']").attr('placeholder')==="undefined" || $("input[name='"+thirdColumn+"']").attr('placeholder')=="" || $("input[name='"+thirdColumn+"']").attr('placeholder')==="undefined"){
+	     alert("Q2:To calculate the Window-floor ratio of classrooms in your school, please fill the table below:");
+		 evt.preventDefault();
+	  }
+	}
+  }
+  else{ 
+    for(i=0;i<=numberofloop;i++){
+	 var firstColumn="Q5A"+i+"S1";
+	 var secondColumn="Q5A"+i+"S2";
+	 var thirdColumn="Q5A"+i+"S3";
+	  $status=0;
+	  if($("input[name='"+firstColumn+"']").attr('placeholder')=="" || $("input[name='"+firstColumn+"']").attr('placeholder')==="undefined" || $("input[name='"+secondColumn+"']").attr('placeholder')=="" || $("input[name='"+secondColumn+"']").attr('placeholder')==="undefined" || $("input[name='"+thirdColumn+"']").attr('placeholder')=="" || $("input[name='"+thirdColumn+"']").attr('placeholder')==="undefined"){
+		$status=1;
+	  }else{
+	    $status=0;
+	  }
+	}
+	if($status==1){
+	     alert("Q2:To calculate the Window-floor ratio of classrooms in your school, please fill the table below:");
+		 evt.preventDefault();
+	}
+  }		
 });
 
 /*This Code Used For Stopping Enter 'E' Alphabet In Textbox Type 'Number'*/
