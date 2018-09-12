@@ -6,20 +6,20 @@ $CFLbulb_count = $energy['CFLbulb_count'][0]->total;
 $LEDbulb_count = $energy['LEDbulb_count'][0]->total;
 $SchoolHavingAlternateSourceOfEnergy = $energy['SchoolHavingAlternateSourceOfEnergy'][0]->total;
 
-$final_array_poss = array((int)$Airconditioner_count,'');
+$final_array_poss = array((int)$Airconditioner_count);
 $final_Airconditioner_count = json_encode($final_array_poss);
 
-$final_array_poss1 = array((int)$Tubelight_count,'');
+$final_array_poss1 = array((int)$Tubelight_count);
 $final_Tubelight_count = json_encode($final_array_poss1);
 
 
-$final_array_poss2 = array((int)$CFLbulb_count,'');
+$final_array_poss2 = array((int)$CFLbulb_count);
 $final_CFLbulb_count = json_encode($final_array_poss2);
 
-$final_array_poss3 = array((int)$LEDbulb_count,'');
+$final_array_poss3 = array((int)$LEDbulb_count);
 $final_LEDbulb_count = json_encode($final_array_poss3);
 
-$final_array_poss4 = array((int)$SchoolHavingAlternateSourceOfEnergy,'');
+$final_array_poss4 = array((int)$SchoolHavingAlternateSourceOfEnergy);
 $final_SchoolHavingAlternateSourceOfEnergy = json_encode($final_array_poss4);
 
 ?>
@@ -49,24 +49,22 @@ $solar=$solar2+$solar1;
 // Final Arrays
 
 
-$final_array_poss6 = array((int)$board,'');
+$final_array_poss6 = array((int)$board);
 $final_four = json_encode($final_array_poss6);
 
-$final_array_poss7 = array((int)$capita,'');
+$final_array_poss7 = array((int)$capita);
 $final_three = json_encode($final_array_poss7);
 
-$final_array_poss = array('',(int)$solar);
+$final_array_poss = array((int)$solar);
 $final_school_bus = json_encode($final_array_poss);
 
-$final_array_poss1 = array('',(int)$biogas);
+$final_array_poss1 = array((int)$biogas);
 $final_public_bus = json_encode($final_array_poss1);
 
-$final_array_poss2 = array('',(int)$generator);
+$final_array_poss2 = array((int)$generator);
 $final_school_transport = json_encode($final_array_poss2);
 
 ?>
-
-
 <h1>PARTICIPATION BY ENERGY </h1>
   <div class="wrapper">
     <div id="container"> </div>
@@ -75,11 +73,6 @@ $final_school_transport = json_encode($final_array_poss2);
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/modules/data.js"></script>
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
-
-
-
-
-
 <script type="text/javascript">
 
    Highcharts.chart('container',{
@@ -93,10 +86,7 @@ $final_school_transport = json_encode($final_array_poss2);
             text: ''
         },
         xAxis: {
-            categories: [
-				'Energy'
-                
-            ],
+            type:'Energy',
             crosshair: true
         },
         yAxis: {
@@ -113,9 +103,17 @@ $final_school_transport = json_encode($final_array_poss2);
             shared: true,
             useHTML: true
         },
-        exporting: { enabled: false },
+        exporting: { enabled: true },
         credits: {enabled: false},
         plotOptions: {
+		
+		 series: {
+            borderWidth: 0,
+            dataLabels: {
+                enabled: true,
+                format: '{point.y:.1f}'
+            }
+        },
             column: {
                 pointPadding: 0.2,
                 borderWidth: 0
@@ -181,9 +179,17 @@ $final_school_transport = json_encode($final_array_poss2);
             shared: true,
             useHTML: true
         },
-        exporting: { enabled: false },
+        exporting: { enabled: true },
         credits: {enabled: false},
         plotOptions: {
+		
+		 series: {
+            borderWidth: 0,
+            dataLabels: {
+                enabled: true,
+                format: '{point.y:.1f}'
+            }
+        },
             column: {
                 pointPadding: 0.2,
                 borderWidth: 0
