@@ -1,40 +1,20 @@
 <?php
-
-
-
 $no = round($Q6L1[0]->total);
 $yes = (round($Q6L1[1]->total));
 $Q4L5 = (round($Q4L5[0]->avg));
-
-
-
 // Final Arrays
-
-
-$final_array_poss6 = array($Q4L5,'');
+$final_array_poss6 = array($Q4L5);
 $final_four = json_encode($final_array_poss6);
-
-$final_array_poss7 = array('',$no);
+$final_array_poss7 = array($no);
 $final_three = json_encode($final_array_poss7);
-
-$final_array_poss = array('',$yes);
+$final_array_poss = array($yes);
 $final_school_bus = json_encode($final_array_poss);
-
-
-
 ?>
-
 <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/modules/data.js"></script>
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
-
-
-
-
 <script type="text/javascript">
  Highcharts.chart('container',{
         chart: {
