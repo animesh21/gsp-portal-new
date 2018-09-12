@@ -126,7 +126,7 @@ $final_Recharge  = json_encode($final_array_poss23);
         },
         xAxis: {
             categories: [
-		'Water as source',
+		    'Water as source',
             ],
             crosshair: true
         },
@@ -146,9 +146,16 @@ $final_Recharge  = json_encode($final_array_poss23);
             shared: true,
             useHTML: true
         },
-        exporting: { enabled: false },
+        exporting: { enabled: true },
         credits: {enabled: false},
         plotOptions: {
+		series: {
+            borderWidth: 0,
+            dataLabels: {
+                enabled: true,
+                format: '{point.y:.1f}'
+            }
+        },
             column: {
                 pointPadding: 0.2,
                 borderWidth: 0
@@ -208,9 +215,16 @@ $final_Recharge  = json_encode($final_array_poss23);
             shared: true,
             useHTML: true
         },
-        exporting: { enabled: false },
+        exporting: { enabled: true },
         credits: {enabled: false},
         plotOptions: {
+		series: {
+            borderWidth: 0,
+            dataLabels: {
+                enabled: true,
+                format: '{point.y:.1f}'
+            }
+        },
             column: {
                 pointPadding: 0.2,
                 borderWidth: 0
@@ -262,9 +276,16 @@ $final_Recharge  = json_encode($final_array_poss23);
             shared: true,
             useHTML: true
         },
-        exporting: { enabled: false },
+        exporting: { enabled: true },
         credits: {enabled: false},
         plotOptions: {
+		series: {
+            borderWidth: 0,
+            dataLabels: {
+                enabled: true,
+                format: '{point.y:.1f}'
+            }
+        },
             column: {
                 pointPadding: 0.2,
                 borderWidth: 0
@@ -316,9 +337,16 @@ $final_Recharge  = json_encode($final_array_poss23);
             shared: true,
             useHTML: true
         },
-        exporting: { enabled: false },
+        exporting: { enabled: true },
         credits: {enabled: false},
         plotOptions: {
+		series: {
+            borderWidth: 0,
+            dataLabels: {
+                enabled: true,
+                format: '{point.y:.1f}'
+            }
+        },
             column: {
                 pointPadding: 0.2,
                 borderWidth: 0
@@ -374,9 +402,16 @@ $final_Recharge  = json_encode($final_array_poss23);
             shared: true,
             useHTML: true
         },
-        exporting: { enabled: false },
+        exporting: { enabled: true },
         credits: {enabled: false},
         plotOptions: {
+		series: {
+            borderWidth: 0,
+            dataLabels: {
+                enabled: true,
+                format: '{point.y:.1f}'
+            }
+        },
             column: {
                 pointPadding: 0.2,
                 borderWidth: 0
@@ -432,9 +467,16 @@ $final_Recharge  = json_encode($final_array_poss23);
             shared: true,
             useHTML: true
         },
-        exporting: { enabled: false },
+        exporting: { enabled: true },
         credits: {enabled: false},
         plotOptions: {
+		series: {
+            borderWidth: 0,
+            dataLabels: {
+                enabled: true,
+                format: '{point.y:.1f}'
+            }
+        },
             column: {
                 pointPadding: 0.2,
                 borderWidth: 0
@@ -486,9 +528,16 @@ $final_Recharge  = json_encode($final_array_poss23);
             shared: true,
             useHTML: true
         },
-        exporting: { enabled: false },
+        exporting: { enabled: true },
         credits: {enabled: false},
         plotOptions: {
+		series: {
+            borderWidth: 0,
+            dataLabels: {
+                enabled: true,
+                format: '{point.y:.1f}'
+            }
+        },
             column: {
                 pointPadding: 0.2,
                 borderWidth: 0
