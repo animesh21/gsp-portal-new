@@ -51,13 +51,21 @@ $final_school_bus = json_encode($final_array_poss);
             shared: true,
             useHTML: true
         },
-        exporting: { enabled: false },
+        exporting: { enabled: true },
         credits: {enabled: false},
         plotOptions: {
+		 series: {
+            borderWidth: 0,
+            dataLabels: {
+                enabled: true,
+                format: '{point.y:.1f}'
+            }
+        },
             column: {
                 pointPadding: 0.2,
                 borderWidth: 0
-            }
+            },
+			
         },
         series: [{
             name: 'Percentage of Green Area',
