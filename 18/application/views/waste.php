@@ -4019,10 +4019,12 @@ if($("input[name='Q11Wa4S1']").hasAttribute('checked') == false && $("input[name
 	
 	<script>
 	$("#wastenext").click(function(e){
+	if($("input[name='Q11Wa5S1']").is(':disabled') == false && $("input[name='Q11Wa5S2']").is(':disabled') == false && $("input[name='Q11Wa5S3']").is(':disabled') == false && $("input[name='Q11Wa5S4']").is(':disabled') == false){
 if($("input[name='Q11Wa5S1']").prop('checked') == false && $("input[name='Q11Wa5S2']").prop('checked') == false && $("input[name='Q11Wa5S3']").prop('checked') == false && $("input[name='Q11Wa5S4']").prop('checked') == false){
   alert("Q7 fill the Hazardous waste section.");
   e.preventDefault();
-}
+ }
+ }
 });	
 	</script>
 	
