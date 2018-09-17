@@ -3977,14 +3977,15 @@ if($("input[name='Q11Wa1S1']").prop('checked') == false && $("input[name='Q11Wa1
 	
 	<script>
 	$("#wastenext").click(function(e){
+	if($("input[name='Q11Wa2S1']").is(':disabled') == false && $("input[name='Q11Wa2S2']").is(':disabled') == false && $("input[name='Q11Wa2S3']").is(':disabled') == false && $("input[name='Q11Wa2S4']").is(':disabled') == false){
 if($("input[name='Q11Wa2S1']").prop('checked') == false && $("input[name='Q11Wa2S2']").prop('checked') == false && $("input[name='Q11Wa2S3']").prop('checked') == false && $("input[name='Q11Wa2S4']").prop('checked') == false){
   alert("Q7 fill the Plastic section.");
   e.preventDefault();
 }
+}
 });	
-		
-		
 	</script>
+	
 	
 	<script>
 	$("#wastenext").click(function(e){
