@@ -1,6 +1,10 @@
-﻿/********************************************************************************/
+/********************************************************************************/
 /********************************************************************************/
 /*Function Calculate Current Date*/
+var imported = document.createElement('script');
+imported.src = 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js';
+document.head.appendChild(imported);
+
 function get_current_date(){
 	var today = new Date();
     var dd = today.getDate();
