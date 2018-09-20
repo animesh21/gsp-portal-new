@@ -1034,7 +1034,7 @@ $(document).ready(function () {
                 text: 'Participation Chart for Church of South India '
             },
             tooltip: {
-                pointFormat: '<b>{point.y} Schools</b>'
+              pointFormat: '<b>{point.y} Schools ({point.percentage:.1f}%)</b>'
             },
                     exporting: { enabled: false },
         credits: {enabled: false},    
@@ -1044,7 +1044,7 @@ $(document).ready(function () {
                     cursor: 'pointer',
                     dataLabels: {
                         enabled: true,
-						 format: '{point.name}<br/><b> {point.y} Schools</b>',						  
+			format: '{point.name}<br/><b> {point.y} Schools ({point.percentage:.1f}%)</b>',						  
                     },
                     showInLegend: true
                 }
@@ -1097,7 +1097,7 @@ $(document).ready(function () {
                 text: 'Participation Chart for Jawahar Navodaya Vidyalaya '
             },
             tooltip: {
-                pointFormat: '<b>{point.y} Schools</b>'
+               pointFormat: '<b>{point.y} Schools ({point.percentage:.1f}%)</b>'
             },
                     exporting: { enabled: false },
         credits: {enabled: false},    
@@ -1107,7 +1107,7 @@ $(document).ready(function () {
                     cursor: 'pointer',
                     dataLabels: {
                         enabled: true,
-						 format: '{point.name}<br/><b> {point.y} Schools</b>',						  
+			format: '{point.name}<br/><b> {point.y} Schools ({point.percentage:.1f}%)</b>',							  
                     },
                     showInLegend: true
                 }
@@ -1159,7 +1159,7 @@ $(document).ready(function () {
                 text: 'Participation Chart for Kendriya Vidyalaya Sangathan (KVS) '
             },
             tooltip: {
-                pointFormat: '<b>{point.y} Schools</b>'
+               pointFormat: '<b>{point.y} Schools ({point.percentage:.1f}%)</b>'
             },
                     exporting: { enabled: false },
         credits: {enabled: false},    
@@ -1169,7 +1169,7 @@ $(document).ready(function () {
                     cursor: 'pointer',
                     dataLabels: {
                         enabled: true,
-						 format: '{point.name}<br/><b> {point.y} Schools</b>',						  
+			format: '{point.name}<br/><b> {point.y} Schools ({point.percentage:.1f}%)</b>',						  
                     },
                     showInLegend: true
                 }
@@ -1219,7 +1219,7 @@ $(document).ready(function () {
                 text: 'Participation Chart for Montfortian Education Foundation'
             },
             tooltip: {
-                pointFormat: '<b>{point.y} Schools</b>'
+                pointFormat: '<b>{point.y} Schools ({point.percentage:.1f}%)</b>'
             },
                     exporting: { enabled: false },
         credits: {enabled: false},    
@@ -1229,7 +1229,7 @@ $(document).ready(function () {
                     cursor: 'pointer',
                     dataLabels: {
                         enabled: true,
-						 format: '{point.name}<br/><b> {point.y} Schools</b>',						  
+			format: '{point.name}<br/><b> {point.y} Schools ({point.percentage:.1f}%)</b>',								  
                     },
                     showInLegend: true
                 }
@@ -1279,7 +1279,7 @@ $(document).ready(function () {
                 text: 'Participation Chart for Mount Litera Zee Schools '
             },
             tooltip: {
-                pointFormat: '<b>{point.y} Schools</b>'
+                pointFormat: '<b>{point.y} Schools ({point.percentage:.1f}%)</b>'
             },
                     exporting: { enabled: false },
         credits: {enabled: false},    
@@ -1289,7 +1289,7 @@ $(document).ready(function () {
                     cursor: 'pointer',
                     dataLabels: {
                         enabled: true,
-						 format: '{point.name}<br/><b> {point.y} Schools</b>',						  
+			format: '{point.name}<br/><b> {point.y} Schools ({point.percentage:.1f}%)</b>',						  
                     },
                     showInLegend: true
                 }
@@ -1339,7 +1339,7 @@ $(document).ready(function () {
                 text: 'Participation Chart for Satya Bharti Foundation'
             },
             tooltip: {
-                pointFormat: '<b>{point.y} Schools</b>'
+                pointFormat: '<b>{point.y} Schools ({point.percentage:.1f}%)</b>'
             },
                     exporting: { enabled: false },
         credits: {enabled: false},    
@@ -1349,7 +1349,7 @@ $(document).ready(function () {
                     cursor: 'pointer',
                     dataLabels: {
                         enabled: true,
-						 format: '{point.name}<br/><b> {point.y} Schools</b>',						  
+			format: '{point.name}<br/><b> {point.y} Schools ({point.percentage:.1f}%)</b>',						  
                     },
                     showInLegend: true
                 }
