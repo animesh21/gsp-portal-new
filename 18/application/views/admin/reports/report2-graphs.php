@@ -33,7 +33,7 @@
                 text: 'Participation Chart for <?php echo getStateById($state_id1); ?>'
             },
             tooltip: {
-                pointFormat: '<b>{point.y} Schools</b>'
+               pointFormat: '<b>{point.y} Schools ({point.percentage:.1f}%)</b>'
             },
         exporting: { enabled: true },
         credits: {enabled: false},    
@@ -43,7 +43,7 @@
                     cursor: 'pointer',
                     dataLabels: {
                         enabled: true,
-						 format: '{point.name}<br/><b> {point.y} Schools</b>',						  
+			format: '{point.name}<br/><b> {point.y} Schools ({point.percentage:.1f}%)</b>',						  
                     },
                     showInLegend: true
                 }
