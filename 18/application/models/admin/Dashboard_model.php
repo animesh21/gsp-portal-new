@@ -355,6 +355,7 @@ class Dashboard_model extends CI_Model {
 	/******************************  2018 **************************/
 	
 	public function getSchool_alldata(){
+	$this->db->where("make_school_disabled","1");
         return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
         ->from('gsp_school AS a')
         ->join('states AS b', 'a.state=b.id', 'left')
@@ -365,6 +366,7 @@ class Dashboard_model extends CI_Model {
 	
 	
       public function getSchool_18data(){
+	$this->db->where("make_school_disabled","1");      
         return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
         ->from('gsp_school AS a')
         ->join('states AS b', 'a.state=b.id', 'left')
@@ -375,6 +377,7 @@ class Dashboard_model extends CI_Model {
       }
 	  
 	   public function getstartedtheaudit_18data(){
+	$this->db->where("make_school_disabled","1");	   
         return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
         ->from('gsp_school AS a')
         ->join('states AS b', 'a.state=b.id', 'left')
@@ -388,6 +391,7 @@ class Dashboard_model extends CI_Model {
 	  
 	  
   public function getCompletedAuditButNotSubmitted_18data(){
+	$this->db->where("make_school_disabled","1");  
         return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
         ->from('gsp_school AS a')
         ->join('states AS b', 'a.state=b.id', 'left')
@@ -401,6 +405,7 @@ class Dashboard_model extends CI_Model {
       }
    
       public function getSubmittedTheAudit_18data(){
+	$this->db->where("make_school_disabled","1");      
         return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
         ->from('gsp_school AS a')
         ->join('states AS b', 'a.state=b.id', 'left')
@@ -416,6 +421,7 @@ class Dashboard_model extends CI_Model {
       }
 	  
 	   public function getStartedAuditButDidNotComplete_18data(){
+	$this->db->where("make_school_disabled","1");	   
         return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
         ->from('gsp_school AS a')
         ->join('states AS b', 'a.state=b.id', 'left')
@@ -431,6 +437,7 @@ class Dashboard_model extends CI_Model {
    
      
 	 public function getNotStartTheAudit_18data(){
+	$this->db->where("make_school_disabled","1");	 
         return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
         ->from('gsp_school AS a')
         ->join('states AS b', 'a.state=b.id', 'left')
