@@ -30,7 +30,7 @@
                 type: 'pie'
             },
             title: {
-                text: 'Participation Chart for <?php if($state_id1!=0){ echo getStateById($state_id1);}else{ echo "All"; } ?>'
+                text: 'Participation Chart for <?php if($state_id1!=0){ echo getStateById($state_id1);}else{ echo "All"; } ?> Total Registrations <?php echo $registerd_audit_1; ?> Schools'
             },
             tooltip: {
                 pointFormat: '<b>{point.y} Schools ({point.percentage:.1f}%)</b>'
@@ -43,14 +43,14 @@
                     cursor: 'pointer',
                     dataLabels: {
                         enabled: true,
-						 format: '{point.name}<br/><b> {point.y} Schools ({point.percentage:.1f}%)</b>',						  
+						format: '{point.percentage:.1f}% {point.name}<br/><b> ({point.y} Schools)</b>',						  
                     },
                     showInLegend: true
                 }
             },
             series: [{
                 colorByPoint: true,
-                data: [{name: 'Registered for Audit',color:'rgb(124, 181, 236)', y: <?php echo $registerd_audit_1; ?>}, {name: 'Audit Not Started' ,color:'#fc3300', y: <?php echo $total_notstarted_audit_1; ?>},{name: 'Audit Started' ,color:'#fcfc00', y: <?php echo $total_started_audit_1; ?>}, {name: 'Audit Completed' ,color:'#00ae4f', y: <?php echo $completed_1; ?>}]
+                data: [{name: 'Audit Not Started' ,color:'#fc3300', y: <?php echo $total_notstarted_audit_1; ?>},{name: 'Audit Started' ,color:'#fcfc00', y: <?php echo $total_started_audit_1; ?>}, {name: 'Audit Completed' ,color:'#00ae4f', y: <?php echo $completed_1; ?>}]
             }]
         });
 		</script>
