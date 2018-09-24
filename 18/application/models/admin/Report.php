@@ -83,8 +83,9 @@ class Report extends CI_Model {
 	{
 	  if($region==0){ 
 	   $this->db->where("make_school_disabled","1");
-	   $this->db->where("progress >",'5');
-	   $this->db->where("progress <",'100');
+	   $this->db->where("complete_status",'0');
+	   $this->db->where("progress >=",'10');
+	   $this->db->where("progress <=",'100');
 	   $data=$this->db->select("COUNT(id) AS countlabel")->from('gsp_school')->get()->row();
 		return $data->countlabel;
 	  }else{
