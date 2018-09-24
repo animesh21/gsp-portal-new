@@ -30,10 +30,10 @@
                 type: 'pie'
             },
             title: {
-                text: 'Participation Chart for <?php echo getStateById($state_id1); ?>'
+                text: 'Participation Chart for <?php if($state_id1!=0){ echo getStateById($state_id1);}else{ echo "All"; } ?>'
             },
             tooltip: {
-               pointFormat: '<b>{point.y} Schools ({point.percentage:.1f}%)</b>'
+                pointFormat: '<b>{point.y} Schools ({point.percentage:.1f}%)</b>'
             },
         exporting: { enabled: true },
         credits: {enabled: false},    
@@ -43,7 +43,7 @@
                     cursor: 'pointer',
                     dataLabels: {
                         enabled: true,
-			format: '{point.name}<br/><b> {point.y} Schools ({point.percentage:.1f}%)</b>',						  
+						 format: '{point.name}<br/><b> {point.y} Schools ({point.percentage:.1f}%)</b>',						  
                     },
                     showInLegend: true
                 }
@@ -76,7 +76,7 @@
             type: 'column'
         },
         title: {
-            text: 'Participation Chart Of <?php echo getStateById($state_id1); ?> By District'
+            text: 'Participation Chart Of <?php if($state_id1!=0){ echo getStateById($state_id1);}else{ echo "All"; } ?> By District'
         },
 		yAxis: {
 		  title: {
@@ -87,8 +87,8 @@
             categories: [
 			<?php 
              for($r=0;$r<7;++$r){
-		     if(!empty($arrData1[$i][$y]['districtame'])){
-				  echo "'".$arrData1[$i][$y]['districtame']."'"; } ?>,
+			   if(!empty($arrData1[$i][$y]['districtame'])){
+				  echo "'".$arrData1[$i][$y]['districtame']."'"; }?>,
              <?php $y++; 
 			 }?>  
             ],
