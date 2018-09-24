@@ -60,56 +60,74 @@ class Report extends CI_Model {
 	  }
 	   return $registerAuditSum;
 	}
-	/********************************************************/
+/********************************************************/
 	/********************************************************/
     public function singlenotstartparticipationByZone($region)
 	{
-	   $this->db->where("state",$region);
-	    $this->db->where("make_school_disabled","1");
-	    /*
-	   $this->db->where("complete_status",'0');*/
+	  if($region==0){ 
+	   $this->db->where("make_school_disabled","1");
 	   $this->db->where("progress=",'5');
-	   /*$this->db->where("date_added <",'2017-11-20'); */
 	   $data=$this->db->select("COUNT(id) AS countlabel")->from('gsp_school')->get()->row();
 	   return $data->countlabel;
-	  
+	  }else{
+	   $this->db->where("state",$region);
+	   $this->db->where("make_school_disabled","1");
+	   $this->db->where("progress=",'5');
+	   $data=$this->db->select("COUNT(id) AS countlabel")->from('gsp_school')->get()->row();
+	   return $data->countlabel;
+	  }
 	}
 	/********************************************************/
 	/********************************************************/
     public function singlestartparticipationByZone($region)
 	{
-	   $this->db->where("state",$region);
-	   /*$this->db->where("complete_status",'0');*/
-	    $this->db->where("make_school_disabled","1");
+	  if($region==0){ 
+	   $this->db->where("make_school_disabled","1");
 	   $this->db->where("progress >",'5');
 	   $this->db->where("progress <",'100');
-	  /* $this->db->where("date_added <",'2017-11-20'); */
 	   $data=$this->db->select("COUNT(id) AS countlabel")->from('gsp_school')->get()->row();
 		return $data->countlabel;
+	  }else{
+	   $this->db->where("state",$region);
+	   $this->db->where("make_school_disabled","1");
+	   $this->db->where("progress >",'5');
+	   $this->db->where("progress <",'100');
+	   $data=$this->db->select("COUNT(id) AS countlabel")->from('gsp_school')->get()->row();
+		return $data->countlabel;
+	  }
 	  
 	}
 	/********************************************************/
 	/********************************************************/
     public function singlecompleteparticipationByZone($region)
 	{
-	   $this->db->where("state",$region);
-	    $this->db->where("make_school_disabled","1");
-	  /* $this->db->where("complete_status",'1');*/
+	  if($region==0){ 
+	   $this->db->where("make_school_disabled","1");
 	   $this->db->where("progress =",'100');
-	   /*$this->db->where("date_added <",'2017-11-20'); */
 	   $data=$this->db->select("COUNT(id) AS countlabel")->from('gsp_school')->get()->row();
 	   return $data->countlabel;
-	   
+	  }else{
+	   $this->db->where("state",$region);
+	   $this->db->where("make_school_disabled","1");
+	   $this->db->where("progress =",'100');
+	   $data=$this->db->select("COUNT(id) AS countlabel")->from('gsp_school')->get()->row();
+	   return $data->countlabel;
+	  }
 	}
 	/********************************************************/
 	/********************************************************/
     public function singleregisterparticipationByZone($region)
 	{
-	   $this->db->where("state",$region);
-	    $this->db->where("make_school_disabled","1");
-	  /* $this->db->where("date_added<",'2017-11-20'); */
+	  if($region==0){ 
+	   $this->db->where("make_school_disabled","1");
 	   $data=$this->db->select("COUNT(id) AS countlabel")->from('gsp_school')->get()->row();
 	   return $data->countlabel;
+	  }else{
+	   $this->db->where("state",$region);
+	   $this->db->where("make_school_disabled","1");
+	   $data=$this->db->select("COUNT(id) AS countlabel")->from('gsp_school')->get()->row();
+	   return $data->countlabel;
+	  }
 	}
 	/********************************************************/
 	/********************************************************/
