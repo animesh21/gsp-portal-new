@@ -1031,10 +1031,10 @@ $(document).ready(function () {
                 type: 'pie'
             },
             title: {
-                text: 'Participation Chart for Church of South India '
+                text: 'Participation Chart for Church of South India Total Registrations <?php echo $csi_registerd_audit; ?> Schools'
             },
             tooltip: {
-              pointFormat: '<b>{point.y} Schools ({point.percentage:.1f}%)</b>'
+                pointFormat: '<b>{point.y} Schools</b>'
             },
                     exporting: { enabled: false },
         credits: {enabled: false},    
@@ -1044,14 +1044,14 @@ $(document).ready(function () {
                     cursor: 'pointer',
                     dataLabels: {
                         enabled: true,
-			format: '{point.name}<br/><b> {point.y} Schools ({point.percentage:.1f}%)</b>',						  
+						 format: '{point.percentage:.1f}% {point.name}<br/><b> ({point.y} Schools)</b>',			
                     },
                     showInLegend: true
                 }
             },
             series: [{
                 colorByPoint: true,
-                data: [{name: 'Registered for Audit', color:'rgb(124, 181, 236)', y: <?php echo $csi_registerd_audit; ?>}, {name: 'Audit Not Started', color:'#fc3300', y: <?php echo $csi_total_notstarted_audit; ?>},{name: 'Audit Started', color:'#fcfc00', y: <?php echo $csi_total_started_audit; ?>}, {name: 'Audit Completed', color:'#00ae4f', y: <?php echo $csi_completed; ?>}]
+                data: [{name: 'Audit Not Started', color:'#fc3300', y: <?php echo $csi_total_notstarted_audit; ?>},{name: 'Audit Started', color:'#fcfc00', y: <?php echo $csi_total_started_audit; ?>}, {name: 'Audit Completed', color:'#00ae4f', y: <?php echo $csi_completed; ?>}]
             }]
         });
 		
@@ -1094,10 +1094,10 @@ $(document).ready(function () {
                 type: 'pie'
             },
             title: {
-                text: 'Participation Chart for Jawahar Navodaya Vidyalaya '
+                text: 'Participation Chart for Jawahar Navodaya Vidyalaya Total Registrations <?php echo $csi_registerd_audit2; ?> Schools'
             },
             tooltip: {
-               pointFormat: '<b>{point.y} Schools ({point.percentage:.1f}%)</b>'
+                pointFormat: '<b>{point.y} Schools</b>'
             },
                     exporting: { enabled: false },
         credits: {enabled: false},    
@@ -1107,14 +1107,14 @@ $(document).ready(function () {
                     cursor: 'pointer',
                     dataLabels: {
                         enabled: true,
-			format: '{point.name}<br/><b> {point.y} Schools ({point.percentage:.1f}%)</b>',							  
+						 format: '{point.percentage:.1f}% {point.name}<br/><b> ({point.y} Schools)</b>',			
                     },
                     showInLegend: true
                 }
             },
             series: [{
                 colorByPoint: true,
-                data: [{name: 'Registered for Audit',color:'rgb(124, 181, 236)', y: <?php echo $csi_registerd_audit2; ?>}, {name: 'Audit Not Started', color:'#fc3300', y: <?php echo $csi_total_notstarted_audit2; ?>},{name: 'Audit Started', color:'#fcfc00', y: <?php echo $csi_total_started_audit2; ?>}, {name: 'Audit Completed', color:'#00ae4f', y: <?php echo $csi_completed2; ?>}]
+                data: [{name: 'Audit Not Started', color:'#fc3300', y: <?php echo $csi_total_notstarted_audit2; ?>},{name: 'Audit Started', color:'#fcfc00', y: <?php echo $csi_total_started_audit2; ?>}, {name: 'Audit Completed', color:'#00ae4f', y: <?php echo $csi_completed2; ?>}]
             }]
         });
 		
@@ -1156,10 +1156,10 @@ $(document).ready(function () {
                 type: 'pie'
             },
             title: {
-                text: 'Participation Chart for Kendriya Vidyalaya Sangathan (KVS) '
+                text: 'Participation Chart for Kendriya Vidyalaya Sangathan (KVS) Total Registrations <?php echo $csi_registerd_audit3; ?> Schools'
             },
             tooltip: {
-               pointFormat: '<b>{point.y} Schools ({point.percentage:.1f}%)</b>'
+                pointFormat: '<b>{point.y} Schools</b>'
             },
                     exporting: { enabled: false },
         credits: {enabled: false},    
@@ -1169,14 +1169,14 @@ $(document).ready(function () {
                     cursor: 'pointer',
                     dataLabels: {
                         enabled: true,
-			format: '{point.name}<br/><b> {point.y} Schools ({point.percentage:.1f}%)</b>',						  
+						format: '{point.percentage:.1f}% {point.name}<br/><b> ({point.y} Schools)</b>',			
                     },
                     showInLegend: true
                 }
             },
             series: [{
                 colorByPoint: true,
-                data: [{name: 'Registered for Audit',color:'rgb(124, 181, 236)', y: <?php echo $csi_registerd_audit3; ?>}, {name: 'Audit Not Started', color:'#fc3300', y: <?php echo $csi_total_notstarted_audit3; ?>},{name: 'Audit Started', color:'#fcfc00', y: <?php echo $csi_total_started_audit3; ?>}, {name: 'Audit Completed',color:'#00ae4f', y: <?php echo $csi_completed3; ?>}]
+                data: [{name: 'Audit Not Started', color:'#fc3300', y: <?php echo $csi_total_notstarted_audit3; ?>},{name: 'Audit Started', color:'#fcfc00', y: <?php echo $csi_total_started_audit3; ?>}, {name: 'Audit Completed',color:'#00ae4f', y: <?php echo $csi_completed3; ?>}]
             }]
         });
 		// the button handler    
@@ -1216,10 +1216,10 @@ $(document).ready(function () {
                 type: 'pie'
             },
             title: {
-                text: 'Participation Chart for Montfortian Education Foundation'
+                text: 'Participation Chart for Montfortian Education Foundation Total Registrations <?php echo $csi_registerd_audit4; ?> Schools'
             },
             tooltip: {
-                pointFormat: '<b>{point.y} Schools ({point.percentage:.1f}%)</b>'
+                pointFormat: '<b>{point.y} Schools</b>'
             },
                     exporting: { enabled: false },
         credits: {enabled: false},    
@@ -1229,14 +1229,14 @@ $(document).ready(function () {
                     cursor: 'pointer',
                     dataLabels: {
                         enabled: true,
-			format: '{point.name}<br/><b> {point.y} Schools ({point.percentage:.1f}%)</b>',								  
+						format: '{point.percentage:.1f}% {point.name}<br/><b> ({point.y} Schools)</b>',			
                     },
                     showInLegend: true
                 }
             },
             series: [{
                 colorByPoint: true,
-                data: [{name: 'Registered for Audit',color:'rgb(124, 181, 236)', y: <?php echo $csi_registerd_audit4; ?>}, {name: 'Audit Not Started',color:'#fc3300', y: <?php echo $csi_total_notstarted_audit4; ?>},{name: 'Audit Started',color:'#fcfc00', y: <?php echo $csi_total_started_audit4; ?>}, {name: 'Audit Completed',color:'#00ae4f', y: <?php echo $csi_completed4; ?>}]
+                data: [{name: 'Audit Not Started',color:'#fc3300', y: <?php echo $csi_total_notstarted_audit4; ?>},{name: 'Audit Started',color:'#fcfc00', y: <?php echo $csi_total_started_audit4; ?>}, {name: 'Audit Completed',color:'#00ae4f', y: <?php echo $csi_completed4; ?>}]
             }]
         });
 		// the button handler    
@@ -1276,10 +1276,10 @@ $(document).ready(function () {
                 type: 'pie'
             },
             title: {
-                text: 'Participation Chart for Mount Litera Zee Schools '
+                text: 'Participation Chart for Mount Litera Zee Schools Total Registrations <?php echo $csi_registerd_audit5; ?> Schools'
             },
             tooltip: {
-                pointFormat: '<b>{point.y} Schools ({point.percentage:.1f}%)</b>'
+                pointFormat: '<b>{point.y} Schools</b>'
             },
                     exporting: { enabled: false },
         credits: {enabled: false},    
@@ -1289,14 +1289,14 @@ $(document).ready(function () {
                     cursor: 'pointer',
                     dataLabels: {
                         enabled: true,
-			format: '{point.name}<br/><b> {point.y} Schools ({point.percentage:.1f}%)</b>',						  
+						format: '{point.percentage:.1f}% {point.name}<br/><b> ({point.y} Schools)</b>',			
                     },
                     showInLegend: true
                 }
             },
             series: [{
                 colorByPoint: true,
-                data: [{name: 'Registered for Audit',color:'rgb(124, 181, 236)', y: <?php echo $csi_registerd_audit5; ?>}, {name: 'Audit Not Started',color:'#fc3300', y: <?php echo $csi_total_notstarted_audit5; ?>},{name: 'Audit Started',color:'#fcfc00', y: <?php echo $csi_total_started_audit5; ?>}, {name: 'Audit Completed',color:'#00ae4f', y: <?php echo $csi_completed5; ?>}]
+                data: [{name: 'Audit Not Started',color:'#fc3300', y: <?php echo $csi_total_notstarted_audit5; ?>},{name: 'Audit Started',color:'#fcfc00', y: <?php echo $csi_total_started_audit5; ?>}, {name: 'Audit Completed',color:'#00ae4f', y: <?php echo $csi_completed5; ?>}]
             }]
         });
 		// the button handler    
@@ -1336,10 +1336,10 @@ $(document).ready(function () {
                 type: 'pie'
             },
             title: {
-                text: 'Participation Chart for Satya Bharti Foundation'
+                text: 'Participation Chart for Satya Bharti Foundation Total Registrations <?php echo $csi_registerd_audit6; ?> Schools'
             },
             tooltip: {
-                pointFormat: '<b>{point.y} Schools ({point.percentage:.1f}%)</b>'
+                pointFormat: '<b>{point.y} Schools</b>'
             },
                     exporting: { enabled: false },
         credits: {enabled: false},    
@@ -1349,14 +1349,14 @@ $(document).ready(function () {
                     cursor: 'pointer',
                     dataLabels: {
                         enabled: true,
-			format: '{point.name}<br/><b> {point.y} Schools ({point.percentage:.1f}%)</b>',						  
+						format: '{point.percentage:.1f}% {point.name}<br/><b> ({point.y} Schools)</b>',			
                     },
                     showInLegend: true
                 }
             },
             series: [{
                 colorByPoint: true,
-                data: [{name: 'Registered for Audit',color:'rgb(124, 181, 236)', y: <?php echo $csi_registerd_audit6; ?>}, {name: 'Audit Not Started',color:'#fc3300', y: <?php echo $csi_total_notstarted_audit6; ?>},{name: 'Audit Started',color:'#fcfc00', y: <?php echo $csi_total_started_audit6; ?>}, {name: 'Audit Completed',color:'#00ae4f', y: <?php echo $csi_completed6; ?>}]
+                data: [{name: 'Audit Not Started',color:'#fc3300', y: <?php echo $csi_total_notstarted_audit6; ?>},{name: 'Audit Started',color:'#fcfc00', y: <?php echo $csi_total_started_audit6; ?>}, {name: 'Audit Completed',color:'#00ae4f', y: <?php echo $csi_completed6; ?>}]
             }]
         });
 		// the button handler    
