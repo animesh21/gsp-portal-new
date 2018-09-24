@@ -169,14 +169,27 @@ function getPartnerGraphByState($partnerId){
 if(!function_exists('getDataGraphByDistrict')){
 function getDataGraphByDistrict($stateId){
  $CI = & get_instance();
-	  $CI->db->distinct("district");
-	  $districtResult=$CI->db->select("district")
-	           ->from("gsp_school")->where("state",$stateId)->get()->result();
 		$arrDistrict=array();
 		$arrRegister=array();
 		$arrAuditNotStarted=array();
 		$arrAuditStarted=array();
 		$arrAuditCompleted=array();
+      if($stateId==0){
+	  $CI->db->distinct("district");
+	  $districtResult=$CI->db->select("district")
+	           ->from("gsp_school")->get()->result();
+			   foreach($districtResult as $district){
+               $arrDistrict[]=array("districtame"=>getdistrictById($district->district));
+			   $arrRegister[].=getSchoolCountBydistrict($district->district);
+			   $arrAuditNotStarted[].=getPartnersAuditNotStartedCountByDistrict($district->district,'5');
+			   $arrAuditStarted[].=getPartnersAuditStartedCountByDistrict($district->district,'5','100');
+			   $arrAuditCompleted[].=getPartnersAuditCompletedCountByDistrict($district->district,'100');		
+		}	
+		$completeArr=array("0"=>$arrDistrict,"1"=>$arrRegister,"2"=>$arrAuditNotStarted,"3"=>$arrAuditStarted,"4"=>$arrAuditCompleted);
+	     }else{
+		   $CI->db->distinct("district");
+	       $districtResult=$CI->db->select("district")
+	           ->from("gsp_school")->where("state",$stateId)->get()->result();
 		foreach($districtResult as $district){
                $arrDistrict[]=array("districtame"=>getdistrictById($district->district));
 			   $arrRegister[].=getSchoolCountBydistrict($district->district);
@@ -185,6 +198,7 @@ function getDataGraphByDistrict($stateId){
 			   $arrAuditCompleted[].=getPartnersAuditCompletedCountByDistrict($district->district,'100');		
 		}	
 		$completeArr=array("0"=>$arrDistrict,"1"=>$arrRegister,"2"=>$arrAuditNotStarted,"3"=>$arrAuditStarted,"4"=>$arrAuditCompleted);
+		 }
 		return $completeArr;  
 	}
 }
