@@ -42,7 +42,7 @@ else if($pagename == "feedback_audit_before.php" || $pagename == "feedback_self_
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Green Schools Programme Dashboard</title>
+<title>GSP Audit 2016 Dashboard</title>
 <!-- begin css --->
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="https://nightly.datatables.net/css/jquery.dataTables.min.css" rel="stylesheet"/>
