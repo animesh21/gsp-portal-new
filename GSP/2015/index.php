@@ -31,7 +31,7 @@ if(isset($_GET['year'];))
         header('location:/audit/GSP/'.$_SESSION['year'].'/dashboard.php');}
         else{
         header('location:/audit/GSP/');}
-if(isset($_GET['username']) && isset($_GET['password']))
+if(isset($_GET['username']))
 {
     $username = $_GET['username'];
     $password = $_GET['password'];
