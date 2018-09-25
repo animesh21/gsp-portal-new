@@ -4,6 +4,7 @@ session_start();
 ob_start();
 if(!empty($_GET['username'])){
 	$_SESSION['username']=$_GET['username'];
+	$_SESSION['year']=$_GET['year'];
 }
 if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
     header('location:/audit/GSP/' . $_SESSION['year'] . '/dashboard.php');
