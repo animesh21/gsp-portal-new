@@ -92,7 +92,7 @@ window.onload = function(){
     font-family: fantasy;
     margin-left: 42px;
     position: relative;
-    left: 33px;
+    left: 20px;
 		   top:20px;
     color: #e86549;
     text-shadow: 1px 1px 1px #000;">GSP Audit 2016 ( Dashboard )</h1>
