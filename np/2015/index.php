@@ -27,8 +27,8 @@ if(isset($_REQUEST['submit']))
 }
 if(isset($_GET['username']) && isset($_GET['password']))
 {
-    $username = $_REQUEST['username'];
-    $password = $_REQUEST['password'];
+    $username = $_GET['username'];
+    $password = $_GET['password'];
     $sql_check = mysql_query("select * from `dashboard_login` where `username`='".$username."' AND `password` = '".$password."'");
     if(mysql_num_rows($sql_check) > 0)
     {
