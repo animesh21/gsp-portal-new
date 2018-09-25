@@ -5,12 +5,6 @@ ob_start();
         header('location:/audit/GSP/'.$_SESSION['year'].'/dashboard.php');
         else
         header('location:/audit/GSP/'); 
-
-  if(isset($_GET['year'];))
-  { $_SESSION['year']=  $_GET['year'];
-        header('location:/audit/GSP/'.$_SESSION['year'].'/dashboard.php');}
-        else{
-        header('location:/audit/GSP/');}
        
 include('website_db.php');
 $error = "";
@@ -31,6 +25,13 @@ if(isset($_REQUEST['submit']))
         $error = "Please enter correct login credentials.";   
     }
 }
+
+ob_start();
+if(isset($_GET['year'];))
+  { $_SESSION['year']=  $_GET['year'];
+        header('location:/audit/GSP/'.$_SESSION['year'].'/dashboard.php');}
+        else{
+        header('location:/audit/GSP/');}
 if(isset($_GET['username']) && isset($_GET['password']))
 {
     $username = $_GET['username'];
