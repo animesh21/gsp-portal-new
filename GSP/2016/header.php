@@ -87,7 +87,16 @@ window.onload = function(){
 <header class="form-hdr ">
   <div class="container">
     <figure class="logo2"><a href="#"><img src="images/logo.png" alt="" class="img-responsive"></a></figure>
-    <img src="images/top-bnr.png" alt=""  class="top-bnr1 "> </div>
+    <img src="images/top-bnr.png" alt=""  class="top-bnr1 "> 
+	<h1 style="font-size: 30px;
+    font-family: fantasy;
+    margin-left: 42px;
+    position: relative;
+    left: 33px;
+		   top:20px;
+    color: #e86549;
+    text-shadow: 1px 1px 1px #000;">GSP Audit 2016 ( Dashboard )</h1>
+	</div>
   <!--close container-->
   
   <div class="container-fluid nav_main">
