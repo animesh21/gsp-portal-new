@@ -2,9 +2,9 @@
 session_start();
 ob_start();
         if(isset($_SESSION['year']))
-        header('location:/audit2017/old/'.$_SESSION['year'].'/dashboard.php');
+        header('location:/audit/np/'.$_SESSION['year'].'/dashboard.php');
         else
-        header('location:/audit2017/old/'); 
+        header('location:/audit/np/'); 
 
 if(isset($_GET['year'];))
   { $_SESSION['year']=  $_GET['year'];
@@ -32,7 +32,7 @@ if(isset($_REQUEST['submit']))
     }
 }
 
-if(isset($_GET['username']) && isset($_GET['password']))
+if(!empty($_GET['username']) && !empty($_GET['password']))
 {
     $username = $_GET['username'];
     $password = $_GET['password'];
