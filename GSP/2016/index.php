@@ -2,15 +2,15 @@
 session_start();
 ob_start();
         if(isset($_SESSION['year']))
-        header('location:/audit/np/'.$_SESSION['year'].'/dashboard.php');
+        header('location:/audit/GSP/'.$_SESSION['year'].'/dashboard.php');
         else
-        header('location:/audit/np/'); 
+        header('location:/audit/GSP/'); 
 
 if(isset($_GET['year'];))
   { $_SESSION['year']=  $_GET['year'];
-        header('location:/audit/np/'.$_SESSION['year'].'/dashboard.php');}
+        header('location:/audit/GSP/'.$_SESSION['year'].'/dashboard.php');}
         else{
-        header('location:/audit/np/');} 
+        header('location:/audit/GSP/');} 
 
 include('website_db.php');
 $error = "";
