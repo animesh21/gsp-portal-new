@@ -5,6 +5,12 @@ ob_start();
         header('location:/audit/np/'.$_SESSION['year'].'/dashboard.php');
         else
         header('location:/audit/np/'); 
+
+  if(isset($_GET['year'];))
+  { $_SESSION['year']=  $_GET['year'];
+        header('location:/audit/np/'.$_SESSION['year'].'/dashboard.php');}
+        else{
+        header('location:/audit/np/');}
        
 include('website_db.php');
 $error = "";
