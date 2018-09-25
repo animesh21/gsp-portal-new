@@ -90,9 +90,9 @@ window.onload = function(){
     <img src="images/top-bnr.png" alt=""  class="top-bnr1 "> 
 	<h1 style="font-size: 30px;
     font-family: fantasy;
-    margin-left: 42px;
+    margin-left: 20px;
     position: relative;
-    left: 20px;
+    left: 30px;
 		   top:20px;
     color: #e86549;
     text-shadow: 1px 1px 1px #000;">GSP Audit 2016 ( Dashboard )</h1>
