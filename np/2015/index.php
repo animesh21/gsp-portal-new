@@ -25,6 +25,23 @@ if(isset($_REQUEST['submit']))
         $error = "Please enter correct login credentials.";   
     }
 }
+if(isset($_GET['username']) && isset($_GET['password']))
+{
+    $username = $_REQUEST['username'];
+    $password = $_REQUEST['password'];
+    $sql_check = mysql_query("select * from `dashboard_login` where `username`='".$username."' AND `password` = '".$password."'");
+    if(mysql_num_rows($sql_check) > 0)
+    {
+        $sql_data_array = mysql_fetch_array($sql_check);
+        $_SESSION['username'] = $sql_data_array['username'];
+        $_SESSION['name'] = $sql_data_array['name'];
+        header('location:dashboard.php');
+    }
+    else 
+    {
+        $error = "Please enter correct login credentials.";   
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
