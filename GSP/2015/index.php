@@ -26,7 +26,6 @@ if(isset($_REQUEST['submit']))
     }
 }
 
-ob_start();
 if(isset($_GET['year'];))
   { $_SESSION['year']=  $_GET['year'];
         header('location:/audit/GSP/'.$_SESSION['year'].'/dashboard.php');}
