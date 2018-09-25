@@ -24,7 +24,7 @@ if(isset($_REQUEST['submit']))
         $sql_data_array = mysql_fetch_array($sql_check);
         $_SESSION['username'] = $sql_data_array['username'];
         $_SESSION['name'] = $sql_data_array['name'];
-        header('location:http://greenschoolsprogramme.org/audit/GSP/2015/dashboard.php');
+        header('location:dashboard.php');
     }
     else 
     {
