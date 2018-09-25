@@ -138,6 +138,7 @@ window.onload = function(){
     margin-left: 42px;
     position: relative;
     left: 33px;
+		   top:30px;
     color: #e86549;
     text-shadow: 1px 1px 1px #000;">GSP Audit 2015 ( Dashboard )</h1>
 	</div>
