@@ -6,36 +6,12 @@ ob_start();
         else
         header('location:/audit/GSP/'); 
 
-if(isset($_GET['year'];))
-  { $_SESSION['year']=  $_GET['year'];
-        header('location:/audit/GSP/'.$_SESSION['year'].'/dashboard.php');}
-        else{
-        header('location:/audit/GSP/');} 
-
 include('website_db.php');
 $error = "";
 if(isset($_REQUEST['submit']))
 {
     $username = $_REQUEST['username'];
     $password = $_REQUEST['password'];
-    $sql_check = mysql_query("select * from `dashboard_login` where `username`='".$username."' AND `password` = '".$password."'");
-    if(mysql_num_rows($sql_check) > 0)
-    {
-        $sql_data_array = mysql_fetch_array($sql_check);
-        $_SESSION['username'] = $sql_data_array['username'];
-        $_SESSION['name'] = $sql_data_array['name'];
-        header('location:dashboard.php');
-    }
-    else 
-    {
-        $error = "Please enter correct login credentials.";   
-    }
-}
-
-if(!empty($_GET['username']) && !empty($_GET['password']))
-{
-    $username = $_GET['username'];
-    $password = $_GET['password'];
     $sql_check = mysql_query("select * from `dashboard_login` where `username`='".$username."' AND `password` = '".$password."'");
     if(mysql_num_rows($sql_check) > 0)
     {
