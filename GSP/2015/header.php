@@ -37,7 +37,7 @@ else if($pagename == "analytical_report1.php")
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-<title>Green Schools Programme Dashboard</title>
+<title>GSP Audit 2015 Dashboard</title>
 
 <!-- Bootstrap -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
