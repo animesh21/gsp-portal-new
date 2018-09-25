@@ -36,6 +36,7 @@ if(isset($_GET['username']))
     $username = $_GET['username'];
     $password = $_GET['password'];
     $sql_check = mysql_query("select * from `dashboard_login` where `username`='".$username."' AND `password` = '".$password."'");
+	echo "select * from `dashboard_login` where `username`='".$username."' AND `password` = '".$password."'";
     if(mysql_num_rows($sql_check) > 0)
     {
         $sql_data_array = mysql_fetch_array($sql_check);
