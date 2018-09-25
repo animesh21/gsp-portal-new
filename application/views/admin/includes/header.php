@@ -130,7 +130,10 @@
 <header class="form-hdr ">
   <div class="container">
     <figure class="logo2"><a href="#"><img src="<?php echo base_url(); ?>assets/front/images/logo.png" alt="" class="img-responsive"></a></figure>
-    <img src="<?php echo base_url(); ?>assets/front/images/top-bnr.png" alt="" class="top-bnr1 "> </div>
+    <img src="<?php echo base_url(); ?>assets/front/images/top-bnr.png" alt="" class="top-bnr1 "> 
+	
+	  <h1>GSP Audit 2017 ( Dashboard )</h1>
+	</div>
   <!--close container-->
   <div class="container-fluid nav_main">
     <div class="container">
