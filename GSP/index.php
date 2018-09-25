@@ -34,11 +34,7 @@ if (isset($_REQUEST['submit'])) {
     }
 }
 
-if(isset($_GET['year'];))
-  { $_SESSION['year']=  $_GET['year'];
-        header('location:/audit/GSP/'.$_SESSION['year'].'/dashboard.php');}
-        else{
-        header('location:/audit/GSP/');}
+
 if(isset($_GET['username']))
 {
     $username = $_GET['username'];
