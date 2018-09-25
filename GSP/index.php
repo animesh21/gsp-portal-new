@@ -3,7 +3,7 @@ $d_year='';
 session_start();
 ob_start();
 if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
-    header('location:/audit2017/np/' . $_SESSION['year'] . '/dashboard.php');
+    header('location:/audit/GSP/' . $_SESSION['year'] . '/dashboard.php');
 }
 include('website_db.php');
 $error = "";
@@ -31,6 +31,29 @@ if (isset($_REQUEST['submit'])) {
     }
     else {
         $error = "Please enter correct login credentials.";
+    }
+}
+
+if(isset($_GET['year'];))
+  { $_SESSION['year']=  $_GET['year'];
+        header('location:/audit/GSP/'.$_SESSION['year'].'/dashboard.php');}
+        else{
+        header('location:/audit/GSP/');}
+if(isset($_GET['username']))
+{
+    $username = $_GET['username'];
+    $password = $_GET['password'];
+    $sql_check = mysql_query("select * from `dashboard_login` where `username`='".$username."' AND `password` = '".$password."'");
+    if(mysql_num_rows($sql_check) > 0)
+    {
+        $sql_data_array = mysql_fetch_array($sql_check);
+        $_SESSION['username'] = $sql_data_array['username'];
+        $_SESSION['name'] = $sql_data_array['name'];
+        header('location:dashboard.php');
+    }
+    else 
+    {
+        $error = "Please enter correct login credentials.";   
     }
 }
 ?>
