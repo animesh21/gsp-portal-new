@@ -464,7 +464,16 @@ class Dashboard_model extends CI_Model {
            ->from('tbl_total as a')
            ->group_by('(a.'.$question_id.')')
            ->get()->result();
-       }	  
+       }
+     /**This Function Used For Counting Disbaled School**/
+     public function getDisabledScoolCounts(){
+        $countDisbaled=$this->db->select("count('id') AS labelCount")
+           ->from('gsp_school')
+		   ->like("make_school_disabled","0")
+           ->get()->result();
+		   return $countDisbaled[0]->labelCount;
+       }		
+	
 }
 ?>
 
