@@ -2165,8 +2165,7 @@ Any other step taken for water conservation? (if Yes, please specify):
   <label><span class="cube">6(a)</span> Calculate your school’s rainwater harvesting potential
   (in litres).</label>
   <input class="form-control space-textbox" id="Q8W2S6A" type="number" min="0" name="Q8W2S6"
-                                   placeholder="<?php if (isset($data['Q8W2S6'])) echo $data['Q8W2S6']; ?>"
-                                   value="<?php echo set_value('Q8W2S6'); ?>"/>
+                                   value="<?php if (isset($data['Q8W2S6'])) echo $data['Q8W2S6']; ?>"/>
 </div>
 <div class="form-group hide" id="rainwaterHarvestingFormula">
   <label>To calculate the maximum rainwater harvesting potential:</label>
@@ -3426,7 +3425,7 @@ if($('input[name="Q8W1S11"]:checked').length == 0){
    }
    /*6(a) Calculate your school’s rainwater harvesting potential (in litres).*/ 
    if($('input[name="Q8W2"]:checked').val()==='N'){
-     if($('input[name="Q8W2S6"]').attr('placeholder')=="undefined" || $('input[name="Q8W2S6"]').attr('placeholder')==0){
+     if($('input[name="Q8W2S6"]').val()=="" || $('input[name="Q8W2S6"]').val()==null){
       alert("Q6(a) Calculate your school’s rainwater harvesting potential (in litres). (The value in RWH potential must be more than zero)");
 	  e.preventDefault();
 	 }
