@@ -3426,7 +3426,7 @@ if($('input[name="Q8W1S11"]:checked').length == 0){
    }
    /*6(a) Calculate your school’s rainwater harvesting potential (in litres).*/ 
    if($('input[name="Q8W2"]:checked').val()==='N'){
-     if($('input[name="Q8W2S6"]').val()==0 || $('input[name="Q8W2S6"]').attr('placeholder')==0){
+     if($('input[name="Q8W2S6"]').attr('placeholder')=="undefined" || $('input[name="Q8W2S6"]').attr('placeholder')==0){
       alert("Q6(a) Calculate your school’s rainwater harvesting potential (in litres). (The value in RWH potential must be more than zero)");
 	  e.preventDefault();
 	 }
