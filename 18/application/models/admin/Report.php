@@ -678,10 +678,10 @@ class Report extends CI_Model {
 			return $this->db->select('a.*')
 			        ->from('gsp_school As a')
 				    ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
-			        ->where('a.state',$state)
+			            ->where('a.state',$state)
 				    ->where("a.progress =",'100')
 				    ->where('b.questionid','Q1G2')
-                    ->where('b.answer <',6)
+                                    ->where('b.answer <',6)
 					->get()
 					->result();
 			
@@ -781,10 +781,10 @@ class Report extends CI_Model {
 			return $this->db->select('a.*')
 			        ->from('gsp_school As a')
 					->join('gsp_answers as b', 'a.userid=b.userid', 'left')
-				   ->where("a.progress =",'100')
+				     ->where("a.progress =",'100')
 				    ->where('b.questionid','Q1G2')
-                     ->where('b.answer >=',6)
-				->where('a.make_school_disabled','1')
+                                    ->where('b.answer >=',6)
+				    ->where('a.make_school_disabled','1')
 				   ->get()
 					->result();
 			
@@ -837,12 +837,12 @@ class Report extends CI_Model {
 		{
 			return $this->db->select('a.*')
 			        ->from('gsp_school As a')
-					->join('gsp_answers as b', 'a.userid=b.userid', 'left')
-				   ->where("a.progress =",'100')
-				    ->where('b.questionid','Q1G2')
-                    ->where('b.answer <',6)
-				->where('a.make_school_disabled','1')
-				   ->get()
+				  	->join('gsp_answers as b', 'a.userid=b.userid', 'left')
+				      ->where("a.progress =",'100')
+				     ->where('b.questionid','Q1G2')
+                                     ->where('b.answer <',6)
+				     ->where('a.make_school_disabled','1')
+				     ->get()
 					->result();
 			
 		}
