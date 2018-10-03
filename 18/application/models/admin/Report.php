@@ -543,6 +543,7 @@ class Report extends CI_Model {
 	
 	       public function registerparticipationBystate($state)
 		{
+		 $this->db->where("make_school_disabled","1");       
 		return $this->db->select('*')
 			            ->from('gsp_school')
 			         ->where('state',$state)
@@ -554,10 +555,11 @@ class Report extends CI_Model {
 		
 		public function startparticipationBystate($state)
 		{
+			$this->db->where("make_school_disabled","1");
 			return $this->db->select('*')
 			         ->from('gsp_school')
 					 ->where('state',$state)
-					 ->where("progress >",'5')
+					 ->where("progress >",'10')
 					 ->where("progress <",'100')
 		             ->get()
 					 ->result();
@@ -565,6 +567,8 @@ class Report extends CI_Model {
 		
 		public function completeparticipationBystate($state)
 		{
+			 $this->db->where("make_school_disabled","1");
+			 $this->db->where("complete_status","1");
 			return $this->db->select('*')
 			         ->from('gsp_school')
 			->where('state',$state)
@@ -576,6 +580,7 @@ class Report extends CI_Model {
 		
 		public function notstartparticipationBystate($state)
 		{
+			 $this->db->where("make_school_disabled","1");
 			return $this->db->select('*')
 			         ->from('gsp_school')
 			         ->where('state',$state)
