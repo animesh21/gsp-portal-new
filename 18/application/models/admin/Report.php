@@ -699,7 +699,7 @@ class Report extends CI_Model {
 		
 		public function registerparticipationBystateall()
 		{
-			$this->db->where('a.make_school_disabled','1') 
+			$this->db->where('a.make_school_disabled','1'); 
 			return $this->db->select('a.*')
 			         ->from('gsp_school As a')
 					 ->get()
