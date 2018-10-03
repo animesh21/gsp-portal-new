@@ -568,7 +568,6 @@ class Report extends CI_Model {
 		public function completeparticipationBystate($state)
 		{
 			 $this->db->where("make_school_disabled","1");
-			 $this->db->where("complete_status","1");
 			return $this->db->select('*')
 			         ->from('gsp_school')
 			->where('state',$state)
