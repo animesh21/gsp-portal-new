@@ -721,7 +721,7 @@ class Report extends CI_Model {
 		
 		public function completeparticipationBystateall()
 		{
-			$this->db->where("complete_status","1"); 
+			$this->db->where("complete_status=","1"); 
 			return $this->db->select('a.*')
 			        ->from('gsp_school As a')
 				   ->where("a.progress =",'100')
