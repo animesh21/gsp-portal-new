@@ -710,22 +710,22 @@ class Report extends CI_Model {
 		
 		public function startparticipationBystateall()
 		{
+			 $this->db->where('a.make_school_disabled','1'); 
 			 return $this->db->select('a.*')
 			           ->from('gsp_school As a')
 					  ->where("a.progress >",'10')
 					   ->where("a.progress <",'100')
-				 ->where('a.make_school_disabled','1')
 					   ->get()
 					   ->result();
 		}
 		
 		public function completeparticipationBystateall()
 		{
-			$this->db->where("complete_status=","1"); 
+			$this->db->where("complete_status","1");
+			 $this->db->where('a.make_school_disabled','1'); 
 			return $this->db->select('a.*')
 			        ->from('gsp_school As a')
-				   ->where("a.progress =",'100')
-				   ->where('a.make_school_disabled','1')
+				   ->where("a.progress=",'100')
 				   ->get()
 				   ->result();
 			
