@@ -712,7 +712,7 @@ class Report extends CI_Model {
 		{
 			 return $this->db->select('a.*')
 			           ->from('gsp_school As a')
-					  ->where("a.progress >",'5')
+					  ->where("a.progress >",'10')
 					   ->where("a.progress <",'100')
 				 ->where('a.make_school_disabled','1')
 					   ->get()
