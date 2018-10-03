@@ -703,7 +703,7 @@ class Report extends CI_Model {
 			return $this->db->select('a.*')
 			         ->from('gsp_school As a')
 					 ->get()
-					 ->row();
+					 ->result();
 					 
 			
 		}
@@ -763,7 +763,7 @@ class Report extends CI_Model {
 			 return $this->db->select('a.*')
 			           ->from('gsp_school As a')
 					    ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
-					     ->where("a.progress >",'5')
+					     ->where("a.progress >",'10')
 					    ->where("a.progress <",'100')
 					    ->where('b.questionid','Q1G2')
                         ->where('b.answer >=',6)
