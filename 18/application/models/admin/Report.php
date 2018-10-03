@@ -559,7 +559,7 @@ class Report extends CI_Model {
 			return $this->db->select('*')
 			         ->from('gsp_school')
 					 ->where('state',$state)
-					 ->where("progress >",'10')
+					 ->where("progress >",'5')
 					 ->where("progress <",'100')
 		             ->get()
 					 ->result();
