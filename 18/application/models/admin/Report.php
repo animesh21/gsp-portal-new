@@ -703,7 +703,7 @@ class Report extends CI_Model {
 			return $this->db->select('a.*')
 			         ->from('gsp_school As a')
 					 ->get()
-					 ->result();
+					 ->row();
 					 
 			
 		}
