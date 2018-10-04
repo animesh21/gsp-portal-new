@@ -60,7 +60,7 @@
                             <label for="address2" class="control-label"><span class="cube">4</span>Address Line 2:</label>
                             <div class="clearfix">&nbsp;</div>
                             <input type="text" name="address2" id="username" tabindex="1" class="form-control text empty"
-                                   placeholder="Address 2" value="<?php echo ($school->address2 != '') ? $school->address1 : ""; ?>">
+                                   placeholder="Address 2" value="<?php echo ($school->address2 != '') ? $school->address2 : ""; ?>">
                         </div>
                         <div class="form-group">
                             <label for="username" class="control-label"><span class="cube">5</span>Country:</label>
