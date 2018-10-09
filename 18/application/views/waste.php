@@ -1098,7 +1098,12 @@
   </div>
 </div>
 <div class="form-group">
-  <label><span class="cube">b.</span>Dry/recyclable waste</label>
+  <label><span class="cube">b.</span>Dry/recyclable waste
+  <audio controls id="TetraPak" class="audio hide">
+    <source src="<?php echo base_url(); ?>assets/audio-files/Tetra Pak.MP3" type="audio/mpeg">
+    Your browser does not support the audio element. </audio>
+  <a class="btn" id="btn" style="background:#e86549; color:#000000;">Play / Pause</a>
+  </label>
   <div class="form-group row">
     <div class="col-xs-6">
       <label>HOW MUCH WASTE DOES YOUR SCHOOL GENERATE? </label>
@@ -2025,7 +2030,14 @@
   <label class="control-label"><span class="cube">7</span>Please fill the table to understand whether waste
   recycling procedures are applied to waste. <a class="kplink"
                                                               href="http://www.greenschoolsprogramme.org/knowledge-bank/waste/#whatWeDo"
-                                                              target="_blank"> </a></label>
+                                                              target="_blank"> </a>
+															  
+															  <audio controls id="DESIGNATEDCOMMUNITYDUMPSITE" class="audio hide">
+    <source src="<?php echo base_url(); ?>assets/audio-files/Designated dump site.MP3" type="audio/mpeg">
+    Your browser does not support the audio element. </audio>
+  <a class="btn" id="btn1" style="background:#e86549; color:#000000;">Play / Pause</a> 
+															  
+															  </label>
   <div class="form-group row">
     <div class="col-xs-2">
       <label>Category of waste </label>
@@ -3149,7 +3161,13 @@
   <label class="control-label"><span class="cube">10</span>What is the final destination for waste from your
   school that is disposed of externally? <a class="kplink"
                                                           href="http://www.greenschoolsprogramme.org/knowledge-bank/waste/#landfillingPractices"
-                                                          target="_blank"> </a></label>
+                                                          target="_blank"> </a>
+													 <audio controls id="DESIGNATEDCOMMUNITYDUMPSITE" class="audio hide">
+    <source src="<?php echo base_url(); ?>assets/audio-files/Designated dump site.MP3" type="audio/mpeg">
+    Your browser does not support the audio element. </audio>
+  <a class="btn" id="btn2" style="background:#e86549; color:#000000;">Play / Pause</a> 	  
+														  
+														  </label>
   <div class="radio">
     <label>
     <input type="radio" name="Q14Wa1"
@@ -4250,6 +4268,60 @@ if($("input[name='Q11Wa8S1']").prop('checked') == false && $("input[name='Q11Wa8
 	}	
      });	
 </script>
-	
+<script>
+var nyan = document.getElementById('TetraPak');
+var nyanBtn = document.getElementById('btn');
+var nyan1 = document.getElementById('DESIGNATEDCOMMUNITYDUMPSITE');
+var nyanBtn1 = document.getElementById('btn1');
+var nyan2 = document.getElementById('DESIGNATEDCOMMUNITYDUMPSITE');
+var nyanBtn2 = document.getElementById('btn2');
+function playPause(song){
+   if (song.paused && song.currentTime >= 0 && !song.ended) {
+      song.play();
+   } else {
+      song.pause();
+   }
+}
+
+function reset(btn, song){
+   if(btn.classList.contains('playing')){
+      btn.classList.toggle('playing');
+   }
+   song.pause();
+   song.currentTime = 0;
+}
+
+function progress(btn, song){
+   setTimeout(function(){
+      var end = song.duration; 
+      var current = song.currentTime;
+      var percent = current/(end/100);
+      //check if song is at the end
+      if(current==end){
+         reset(btn, song);
+      }
+      //set inset box shadow
+      btn.style.boxShadow = "inset " + btn.offsetWidth * (percent/100) + "px 0px 0px 0px rgba(0,0,0,0.125)"
+      //call function again
+      progress(btn, song);     
+   }, 1000);
+}
+
+nyanBtn.addEventListener('click', function(){
+   nyanBtn.classList.toggle('playing');
+   playPause(nyan);
+   progress(nyanBtn, nyan);
+});
+nyanBtn1.addEventListener('click', function(){
+   nyanBtn1.classList.toggle('playing');
+   playPause(nyan1);
+   progress(nyanBtn1, nyan1);
+});
+nyanBtn2.addEventListener('click', function(){
+   nyanBtn2.classList.toggle('playing');
+   playPause(nyan2);
+   progress(nyanBtn2, nyan2);
+});
+</script>	
 	
 	
