@@ -3747,12 +3747,12 @@ nyanBtn15.addEventListener('click', function(){
               margin-bottom: 12px;
               color: #e86549;
            }
-		#btn{ 
+		#btn,#btn1,#btn2,#btn3,#btn4,#btn5,#btn6,#btn7,#btn8,#btn9,#btn10,#btn11,#btn12,#btn13,#btn14,#btn15{ 
 		background: rgb(232, 101, 73);
                 color: rgb(0, 0, 0);
                 box-shadow: rgba(0, 0, 0, 0.125) 0px 0px 0px 0px inset;
-               height: 20px;
-               position: relative;
-               padding-top: 0px;
+                height: 20px;
+                position: relative;
+                padding-top: 0px;
 		}	
 	</style>
