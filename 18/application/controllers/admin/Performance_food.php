@@ -227,7 +227,7 @@ class Performance_food extends CI_Controller {
 //	echo '<pre>';
 //	print_r($food_points);
 //	exit;
-	return array_sum($food_points);
+	echo array_sum($food_points);
     }
 
 	

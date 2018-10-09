@@ -241,7 +241,7 @@ class Performance_waste extends CI_Controller {
 	
 	   $points[$i]=array(
 	  'userid'=>$uArray[$i]['userid'],
-	  'school_id'=>$uArray[$i]['school_id'],
+	  //'school_id'=>$uArray[$i]['school_id'],
       'Q4Wa1'=>($this->getFiled('Q4Wa1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4Wa1', $uArray[$i]['userid']) : "N/A",
       'Q4Wa2'=>($this->getFiled('Q4Wa2', $uArray[$i]['userid']) != '') ? $Q4Wa2 : "N/A",
 /*'Q4Wa2S2'=>($this->getFiled('Q4Wa2S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4Wa2S2', $uArray[$i]['userid']) : "N/A",

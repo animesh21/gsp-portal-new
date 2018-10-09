@@ -22,7 +22,7 @@ class Performance_water extends CI_Controller {
 	ini_set('memory_limit', '-1');
 	
 	
-	$uArray = $this->db->select('a.*,a.id AS school_id')->from('gsp_school AS a')->join('gsp_aduit_submitted AS b','b.userid=a.userid','left')->where('a.progress="100"')->where('b.date_on > "2017-11-30"')->where('b.status="1"')->get()->result_array();
+	$uArray = $this->db->select('a.*,a.id AS school_id')->from('gsp_school AS a')->join('gsp_aduit_submitted AS b','b.userid=a.userid','left')->where('a.progress="100"')->where('b.status="1"')->get()->result_array();
 	$points=array();
 	 $Q5W1="";
 	for($i=0; $i<count($uArray); $i++)
@@ -209,7 +209,7 @@ class Performance_water extends CI_Controller {
 	
 	    $points[$i]=array(
 		'userid'=>$uArray[$i]['userid'],
-		'school_id'=>$uArray[$i]['school_id'],
+		//'school_id'=>$uArray[$i]['school_id'],
 		'Q4W1'=>($this->getFiled('Q4W1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4W1', $uArray[$i]['userid']) : "N/A",
 		'Q4W2'=>($this->getFiled('Q4W2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4W2', $uArray[$i]['userid']) : "N/A",
 		'Q4W3'=>($this->getFiled('Q4W3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4W3', $uArray[$i]['userid']) :"N/A",
@@ -688,7 +688,7 @@ class Performance_water extends CI_Controller {
 //	echo '<pre>';
 //	print_r($water_points);
 //	exit;
-	return array_sum($water_points);
+	echo array_sum($water_points);
     }
 
 	public function table() {
