@@ -838,7 +838,13 @@ To understand water, it is important to know the source of water in your school 
     </div>
     <div class="form-group">
       <label class="radio-inline text-gray col-xs-10"> Do all tanks in the school have
-      float valves installed to stop overflow? </label>
+      float valves installed to stop overflow? 
+	   <audio controls id="FLOATVALVES" class="audio hide">
+     <source src="<?php echo base_url(); ?>assets/audio-files/Float Valve.MP3" type="audio/mpeg">
+   Your browser does not support the audio element.
+  </audio>
+        <a class="btn" id="btn" style="background:#e86549; color:#000000;">Play / Pause</a>
+	  </label>
       <label class="radio-inline text-gray">
       <input type="radio" name="Q8W1S3"
                                                value="<?php echo set_value('Q8W1S3', 'Y') ?>" <?php if (isset($data['Q8W1S3'])) echo $data['Q8W1S3'] == 'Y' ? "checked" : "" ?>>
@@ -850,7 +856,13 @@ To understand water, it is important to know the source of water in your school 
     </div>
     <div class="form-group">
       <label class="radio-inline text-gray col-xs-10"> Do the drinking water points have
-      spill proof taps to check overflow? </label>
+      spill proof taps to check overflow? 
+	   <audio controls id="SPILLPROOFTAPS" class="audio hide">
+   <source src="<?php echo base_url(); ?>assets/audio-files/Spill proof taps.MP3" type="audio/mpeg">
+   Your browser does not support the audio element.
+  </audio>
+        <a class="btn" id="btn1" style="background:#e86549; color:#000000;">Play / Pause</a>
+	  </label>
       <label class="radio-inline text-gray">
       <input type="radio" name="Q8W1S4"
                                                value="<?php echo set_value('Q8W1S4', 'Y') ?>" <?php if (isset($data['Q8W1S4'])) echo $data['Q8W1S4'] == 'Y' ? "checked" : "" ?>>
@@ -874,7 +886,13 @@ To understand water, it is important to know the source of water in your school 
     </div>
     <div class="form-group">
       <label class="radio-inline text-gray col-xs-10"> Are dual flush systems installed in
-      the toilets? </label>
+      the toilets? 
+	   <audio controls id="DUALFLUSHTOILET" class="audio hide">
+   <source src="<?php echo base_url(); ?>assets/audio-files/Dual flush Toilet.MP3" type="audio/mpeg">
+   Your browser does not support the audio element.
+  </audio>
+        <a class="btn" id="btn2" style="background:#e86549; color:#000000;">Play / Pause</a>
+	  </label>
       <label class="radio-inline text-gray">
       <input type="radio" name="Q8W1S6"
                                                value="<?php echo set_value('Q8W1S6', 'Y') ?>" <?php if (isset($data['Q8W1S6'])) echo $data['Q8W1S6'] == 'Y' ? "checked" : "" ?>>
@@ -1486,27 +1504,57 @@ Any other step taken for water conservation? (if Yes, please specify):
       <li>
         <input type="checkbox" name="Q8W2S2S91"
                                                value="<?php echo set_value('Q8W2S2S91', 1); ?>" <?php if (isset($data['Q8W2S2S91'])) echo set_checkbox('Q8W2S2S91', '1', true); ?> />
-        <label col-xs-4>Percolation pit/tank</label>
+        <label col-xs-4>Percolation pit/tank
+		 <audio controls id="PERCOLATIONPIT" class="audio hide">
+		<source src="<?php echo base_url(); ?>assets/audio-files/Percolation pit.MP3" type="audio/mpeg">
+   Your browser does not support the audio element.
+  </audio>
+   <a class="btn" id="btn4" style="background:#e86549; color:#000000;">Play / Pause</a>
+		</label>
       </li>
       <li>
         <input type="checkbox" id="Q8W2S2S92" name="Q8W2S2S92"
                                                value="<?php echo set_value('Q8W2S2S92', 1); ?>" <?php if (isset($data['Q8W2S2S92']))  echo set_checkbox('Q8W2S2S92', '1', true); ?> />
-        <label class="text-gray">Recharge through abandoned dug well</label>
+        <label class="text-gray">Recharge through abandoned dug well
+		 <audio controls id="DUGWELL" class="audio hide">
+		 <source src="<?php echo base_url(); ?>assets/audio-files/dug well.MP3" type="audio/mpeg">
+   Your browser does not support the audio element.
+  </audio>
+   <a class="btn" id="btn5" style="background:#e86549; color:#000000;">Play / Pause</a>
+		</label>
       </li>
       <li>
         <input type="checkbox" id="Q8W2S2S93" name="Q8W2S2S93"
                                                value="<?php echo set_value('Q8W2S2S93', 1); ?>" <?php if (isset($data['Q8W2S2S93'])) echo set_checkbox('Q8W2S2S93', 1, true); ?>/>
-        <label class="text-gray">Recharge through abandoned tube well/bore well</label>
+        <label class="text-gray">Recharge through abandoned tube well/bore well
+		<audio controls id="TUBEWELL" class="audio hide">
+		 <source src="<?php echo base_url(); ?>assets/audio-files/tube well.MP3" type="audio/mpeg">
+   Your browser does not support the audio element.
+  </audio>
+   <a class="btn" id="btn6" style="background:#e86549; color:#000000;">Play / Pause</a>
+		</label>
       </li>
       <li>
         <input type="checkbox" name="Q8W2S2S94"
                                                value="<?php echo set_value('Q8W2S2S94', 1); ?>" <?php if (isset($data['Q8W2S2S94'])) echo set_checkbox('Q8W2S2S94', '1', true); ?>/>
-        <label class="text-gray">Recharge pits</label>
+        <label class="text-gray">Recharge pits
+		  <audio controls id="RECHARGEPIT" class="audio hide">
+		 <source src="<?php echo base_url(); ?>assets/audio-files/Recharge Pit.MP3" type="audio/mpeg">
+   Your browser does not support the audio element.
+  </audio>
+   <a class="btn" id="btn7" style="background:#e86549; color:#000000;">Play / Pause</a>
+		</label>
       </li>
       <li>
         <input type="checkbox" name="Q8W2S2S95"
                                                value="<?php echo set_value('Q8W2S2S95', 1); ?>" <?php if (isset($data['Q8W2S2S95'])) echo set_checkbox('Q8W2S2S95', '1', true); ?>/>
-        <label class="text-gray">Recharge trenches</label>
+        <label class="text-gray">Recharge trenches
+			 <audio controls id="RECHARGETRENCHES" class="audio hide">
+		 <source src="<?php echo base_url(); ?>assets/audio-files/Recharge Trench.MP3" type="audio/mpeg">
+   Your browser does not support the audio element.
+  </audio>
+   <a class="btn" id="btn8" style="background:#e86549; color:#000000;">Play / Pause</a>
+		</label>
       </li>
       <li>
         <input type="checkbox" name="Q8W2S2S96"
@@ -1516,7 +1564,13 @@ Any other step taken for water conservation? (if Yes, please specify):
       <li>
         <input type="checkbox" name="Q8W2S2S97"
                                                value="<?php echo set_value('Q8W2S2S97', 1); ?>" <?php if (isset($data['Q8W2S2S97'])) echo set_checkbox('Q8W2S2S97', '1', true); ?>/>
-        <label class="text-gray">Soak pit</label>
+        <label class="text-gray">Soak pit
+		  <audio controls id="SOAKPIT" class="audio hide">
+		 <source src="<?php echo base_url(); ?>assets/audio-files/Soak Pit.MP3" type="audio/mpeg">
+   Your browser does not support the audio element.
+  </audio>
+          <a class="btn" id="btn9" style="background:#e86549; color:#000000;">Play / Pause</a>
+		</label>
       </li>
     </ul>
   </div>
@@ -1667,23 +1721,47 @@ Any other step taken for water conservation? (if Yes, please specify):
       <li>
         <input type="checkbox" name="Q8W2S31"
                                                value="<?php echo set_value('Q8W2S31', 1); ?>" <?php if (isset($data['Q8W2S31'])) if ($data['Q8W2S31'] == 1) echo set_checkbox('Q8W2S31', '1', true); ?> />
-        <label class="text-gray">Conduits</label>
+        <label class="text-gray">Conduits
+		 <audio controls id="CONDUITS" class="audio hide">
+		 <source src="<?php echo base_url(); ?>assets/audio-files/Conduits.MP3" type="audio/mpeg">
+   Your browser does not support the audio element.
+  </audio>
+          <a class="btn" id="btn10" style="background:#e86549; color:#000000;">Play / Pause</a>
+		</label>
       </li>
       <li>
         <input type="checkbox" id="Q8W2S32" name="Q8W2S32"
                                                value="<?php echo set_value('Q8W2S32', 1); ?>" <?php if (isset($data['Q8W2S32'])) if ($data['Q8W2S32'] == 1) echo set_checkbox('Q8W2S32', '1', true); ?> />
-        <label class="text-gray">Gutters</label>
+        <label class="text-gray">Gutters
+		 <audio controls id="GUTTERS" class="audio hide">
+		 <source src="<?php echo base_url(); ?>assets/audio-files/Gutters.MP3" type="audio/mpeg">
+   Your browser does not support the audio element.
+  </audio>
+          <a class="btn" id="btn11" style="background:#e86549; color:#000000;">Play / Pause</a>
+		</label>
       </li>
       <li>
         <input type="checkbox" id="Q8W2S33" onClick="HarvestingStructure()"
                                                name="Q8W2S33"
                                                value="<?php echo set_value('Q8W2S33', 1); ?>" <?php if (isset($data['Q8W2S33'])) if ($data['Q8W2S33'] == 1) echo set_checkbox('Q8W2S33', 1, true); ?>/>
-        <label class="text-gray">Filter unit</label>
+        <label class="text-gray">Filter unit
+		 <audio controls id="FILTERUNIT" class="audio hide">
+		 <source src="<?php echo base_url(); ?>assets/audio-files/Filter Unit.MP3" type="audio/mpeg">
+   Your browser does not support the audio element.
+  </audio>
+          <a class="btn" id="btn12" style="background:#e86549; color:#000000;">Play / Pause</a>
+		</label>
       </li>
       <li>
         <input type="checkbox" name="Q8W2S34"
                                                value="<?php echo set_value('Q8W2S34', 1); ?>" <?php if (isset($data['Q8W2S34'])) if ($data['Q8W2S34'] == 1) echo set_checkbox('Q8W2S34', '1', true); ?>/>
-        <label class="text-gray">First flush</label>
+        <label class="text-gray">First flush
+		 <audio controls id="FIRSTFLUSH" class="audio hide">
+		 <source src="<?php echo base_url(); ?>assets/audio-files/first Flush.MP3" type="audio/mpeg">
+   Your browser does not support the audio element.
+  </audio>
+          <a class="btn" id="btn13" style="background:#e86549; color:#000000;">Play / Pause</a>
+		</label>
       </li>
       <li>
         <input type="checkbox" name="Q8W2S35"
@@ -1693,7 +1771,13 @@ Any other step taken for water conservation? (if Yes, please specify):
       <li>
         <input type="checkbox" name="Q8W2S36"
                                                value="<?php echo set_value('Q8W2S36', 1); ?>" <?php if (isset($data['Q8W2S36'])) if ($data['Q8W2S36'] == 1) echo set_checkbox('Q8W2S36', '1', true); ?>/>
-        <label class="text-gray">Collection sump</label>
+        <label class="text-gray">Collection sump
+		 <audio controls id="SUMP" class="audio hide">
+		 <source src="<?php echo base_url(); ?>assets/audio-files/Sump.MP3" type="audio/mpeg">
+   Your browser does not support the audio element.
+  </audio>
+          <a class="btn" id="btn14" style="background:#e86549; color:#000000;">Play / Pause</a>
+		</label>
       </li>
       <li>
         <input type="checkbox" name="Q8W2S37"
@@ -1703,7 +1787,13 @@ Any other step taken for water conservation? (if Yes, please specify):
       <li>
         <input type="checkbox" name="Q8W2S38"
                                                value="<?php echo set_value('Q8W2S38', 1); ?>" <?php if (isset($data['Q8W2S38'])) if ($data['Q8W2S38'] == 1) echo set_checkbox('Q8W2S38', '1', true); ?>/>
-        <label class="text-gray">Recharge structure</label>
+        <label class="text-gray">Recharge structure
+		 <audio controls id="RECHARGESTRUCTURES" class="audio hide">
+		 <source src="<?php echo base_url(); ?>assets/audio-files/Recharge structures.MP3" type="audio/mpeg">
+   Your browser does not support the audio element.
+  </audio>
+          <a class="btn" id="btn15" style="background:#e86549; color:#000000;">Play / Pause</a>
+		</label>
       </li>
     </ul>
   </div>
@@ -3500,4 +3590,227 @@ if($('input[name="Q8W1S11"]:checked').length == 0){
 	}	
 });
 </script>
-	
+<script>
+var nyan = document.getElementById('FLOATVALVES');
+var nyanBtn = document.getElementById('btn');
+var nyan1 = document.getElementById('SPILLPROOFTAPS');
+var nyanBtn1 = document.getElementById('btn1');
+var nyan2 = document.getElementById('DUALFLUSHTOILET');
+var nyanBtn2 = document.getElementById('btn2');
+var nyan3 = document.getElementById('SEMIUNDERGROUNDTANK');
+var nyanBtn3 = document.getElementById('btn3');
+var nyan4 = document.getElementById('PERCOLATIONPIT');
+var nyanBtn4= document.getElementById('btn4');
+var nyan5 = document.getElementById('DUGWELL');
+var nyanBtn5 = document.getElementById('btn5');
+var nyan6 = document.getElementById('TUBEWELL');
+var nyanBtn6 = document.getElementById('btn6');
+var nyan7 = document.getElementById('RECHARGEPIT');
+var nyanBtn7 = document.getElementById('btn7');
+var nyan8 = document.getElementById('RECHARGETRENCHES');
+var nyanBtn8 = document.getElementById('btn8');
+var nyan9 = document.getElementById('SOAKPIT');
+var nyanBtn9 = document.getElementById('btn9');
+
+var nyan10 = document.getElementById('CONDUITS');
+var nyanBtn10 = document.getElementById('btn10');
+var nyan11 = document.getElementById('GUTTERS');
+var nyanBtn11 = document.getElementById('btn11');
+var nyan12 = document.getElementById('FILTERUNIT');
+var nyanBtn12 = document.getElementById('btn12');
+var nyan13 = document.getElementById('FIRSTFLUSH');
+var nyanBtn13 = document.getElementById('btn13');
+var nyan14 = document.getElementById('SUMP');
+var nyanBtn14 = document.getElementById('btn14');
+var nyan15 = document.getElementById('RECHARGESTRUCTURES');
+var nyanBtn15 = document.getElementById('btn15');
+function playPause(song){
+   if (song.paused && song.currentTime >= 0 && !song.ended) {
+      song.play();
+   } else {
+      song.pause();
+   }
+}
+
+function reset(btn, song){
+   if(btn.classList.contains('playing')){
+      btn.classList.toggle('playing');
+   }
+   song.pause();
+   song.currentTime = 0;
+}
+
+function progress(btn, song){
+   setTimeout(function(){
+      var end = song.duration; 
+      var current = song.currentTime;
+      var percent = current/(end/100);
+      //check if song is at the end
+      if(current==end){
+         reset(btn, song);
+      }
+      //set inset box shadow
+      btn.style.boxShadow = "inset " + btn.offsetWidth * (percent/100) + "px 0px 0px 0px rgba(0,0,0,0.125)"
+      //call function again
+      progress(btn, song);     
+   }, 1000);
+}
+
+nyanBtn.addEventListener('click', function(){
+   nyanBtn.classList.toggle('playing');
+   playPause(nyan);
+   progress(nyanBtn, nyan);
+});
+nyanBtn1.addEventListener('click', function(){
+   nyanBtn1.classList.toggle('playing');
+   playPause(nyan1);
+   progress(nyanBtn1, nyan1);
+});
+nyanBtn2.addEventListener('click', function(){
+   nyanBtn2.classList.toggle('playing');
+   playPause(nyan2);
+   progress(nyanBtn2, nyan2);
+});
+nyanBtn3.addEventListener('click', function(){
+   nyanBtn3.classList.toggle('playing');
+   playPause(nyan3);
+   progress(nyanBtn3, nyan3);
+});
+nyanBtn4.addEventListener('click', function(){
+   nyanBtn4.classList.toggle('playing');
+   playPause(nyan4);
+   progress(nyanBtn4, nyan4);
+});
+nyanBtn5.addEventListener('click', function(){
+   nyanBtn5.classList.toggle('playing');
+   playPause(nyan5);
+   progress(nyanBtn5, nyan5);
+});
+nyanBtn6.addEventListener('click', function(){
+   nyanBtn6.classList.toggle('playing');
+   playPause(nyan6);
+   progress(nyanBtn6, nyan6);
+});
+nyanBtn7.addEventListener('click', function(){
+   nyanBtn7.classList.toggle('playing');
+   playPause(nyan7);
+   progress(nyanBtn7, nyan7);
+});
+nyanBtn8.addEventListener('click', function(){
+   nyanBtn8.classList.toggle('playing');
+   playPause(nyan8);
+   progress(nyanBtn8, nyan8);
+});
+</script>	
+<script>
+var nyan = document.getElementById('FLOATVALVES');
+var nyanBtn = document.getElementById('btn');
+var nyan1 = document.getElementById('SPILLPROOFTAPS');
+var nyanBtn1 = document.getElementById('btn1');
+var nyan2 = document.getElementById('DUALFLUSHTOILET');
+var nyanBtn2 = document.getElementById('btn2');
+var nyan3 = document.getElementById('SEMIUNDERGROUNDTANK');
+var nyanBtn3 = document.getElementById('btn3');
+var nyan4 = document.getElementById('PERCOLATIONPIT');
+var nyanBtn4= document.getElementById('btn4');
+var nyan5 = document.getElementById('DUGWELL');
+var nyanBtn5 = document.getElementById('btn5');
+var nyan6 = document.getElementById('TUBEWELL');
+var nyanBtn6 = document.getElementById('btn6');
+var nyan7 = document.getElementById('RECHARGEPIT');
+var nyanBtn7 = document.getElementById('btn7');
+var nyan8 = document.getElementById('RECHARGETRENCHES');
+var nyanBtn8 = document.getElementById('btn8');
+var nyan9 = document.getElementById('SOAKPIT');
+var nyanBtn9 = document.getElementById('btn9');
+
+var nyan10 = document.getElementById('CONDUITS');
+var nyanBtn10 = document.getElementById('btn10');
+var nyan11 = document.getElementById('GUTTERS');
+var nyanBtn11 = document.getElementById('btn11');
+var nyan12 = document.getElementById('FILTERUNIT');
+var nyanBtn12 = document.getElementById('btn12');
+var nyan13 = document.getElementById('FIRSTFLUSH');
+var nyanBtn13 = document.getElementById('btn13');
+var nyan14 = document.getElementById('SUMP');
+var nyanBtn14 = document.getElementById('btn14');
+var nyan15 = document.getElementById('RECHARGESTRUCTURES');
+var nyanBtn15 = document.getElementById('btn15');
+function playPause(song){
+   if (song.paused && song.currentTime >= 0 && !song.ended) {
+      song.play();
+   } else {
+      song.pause();
+   }
+}
+
+function reset(btn, song){
+   if(btn.classList.contains('playing')){
+      btn.classList.toggle('playing');
+   }
+   song.pause();
+   song.currentTime = 0;
+}
+
+function progress(btn, song){
+   setTimeout(function(){
+      var end = song.duration; 
+      var current = song.currentTime;
+      var percent = current/(end/100);
+      //check if song is at the end
+      if(current==end){
+         reset(btn, song);
+      }
+      //set inset box shadow
+      btn.style.boxShadow = "inset " + btn.offsetWidth * (percent/100) + "px 0px 0px 0px rgba(0,0,0,0.125)"
+      //call function again
+      progress(btn, song);     
+   }, 1000);
+}
+
+nyanBtn.addEventListener('click', function(){
+   nyanBtn.classList.toggle('playing');
+   playPause(nyan);
+   progress(nyanBtn, nyan);
+});
+nyanBtn1.addEventListener('click', function(){
+   nyanBtn1.classList.toggle('playing');
+   playPause(nyan1);
+   progress(nyanBtn1, nyan1);
+});
+nyanBtn2.addEventListener('click', function(){
+   nyanBtn2.classList.toggle('playing');
+   playPause(nyan2);
+   progress(nyanBtn2, nyan2);
+});
+nyanBtn3.addEventListener('click', function(){
+   nyanBtn3.classList.toggle('playing');
+   playPause(nyan3);
+   progress(nyanBtn3, nyan3);
+});
+nyanBtn4.addEventListener('click', function(){
+   nyanBtn4.classList.toggle('playing');
+   playPause(nyan4);
+   progress(nyanBtn4, nyan4);
+});
+nyanBtn5.addEventListener('click', function(){
+   nyanBtn5.classList.toggle('playing');
+   playPause(nyan5);
+   progress(nyanBtn5, nyan5);
+});
+nyanBtn6.addEventListener('click', function(){
+   nyanBtn6.classList.toggle('playing');
+   playPause(nyan6);
+   progress(nyanBtn6, nyan6);
+});
+nyanBtn7.addEventListener('click', function(){
+   nyanBtn7.classList.toggle('playing');
+   playPause(nyan7);
+   progress(nyanBtn7, nyan7);
+});
+nyanBtn8.addEventListener('click', function(){
+   nyanBtn8.classList.toggle('playing');
+   playPause(nyan8);
+   progress(nyanBtn8, nyan8);
+});
+</script>	
