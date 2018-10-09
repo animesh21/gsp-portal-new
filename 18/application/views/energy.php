@@ -1069,7 +1069,13 @@ else echo "0"; ?>"
   </tbody>
 </table>
 <div class="form-group">
-  <label><span class="cube">4</span> What appliances does your school have? </label>
+  <label><span class="cube">4</span> What appliances does your school have? 
+    <audio controls id="BEEstarrating" class="audio hide">
+      <source src="<?php echo base_url(); ?>assets/audio-files/BEE star rating.MP3" type="audio/mpeg">
+       Your browser does not support the audio element.
+      </audio>
+    <a class="btn" id="btn" style="background:#e86549; color:#000000;">Play / Pause</a>
+  </label>
   <div class="form-group-1 row">
     <div class="col-xs-3">
       <label>Appliances/Equipments</label>
@@ -1641,4 +1647,46 @@ $("input[name='Q6E5S1']").change(function(){
 	}
   }
 });						
+</script>
+<script>
+var nyan = document.getElementById('BEEstarrating');
+var nyanBtn = document.getElementById('btn');
+function playPause(song){
+   if (song.paused && song.currentTime >= 0 && !song.ended) {
+      song.play();
+   } else {
+      song.pause();
+   }
+}
+
+function reset(btn, song){
+   if(btn.classList.contains('playing')){
+      btn.classList.toggle('playing');
+   }
+   song.pause();
+   song.currentTime = 0;
+}
+
+function progress(btn, song){
+   setTimeout(function(){
+      var end = song.duration; 
+      var current = song.currentTime;
+      var percent = current/(end/100);
+      //check if song is at the end
+      if(current==end){
+         reset(btn, song);
+      }
+      //set inset box shadow
+      btn.style.boxShadow = "inset " + btn.offsetWidth * (percent/100) + "px 0px 0px 0px rgba(0,0,0,0.125)"
+      //call function again
+      progress(btn, song);     
+   }, 1000);
+}
+
+nyanBtn.addEventListener('click', function(){
+   nyanBtn.classList.toggle('playing');
+   playPause(nyan);
+   progress(nyanBtn, nyan);
+});
+
 </script>
