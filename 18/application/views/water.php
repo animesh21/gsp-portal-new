@@ -3814,3 +3814,13 @@ nyanBtn8.addEventListener('click', function(){
    progress(nyanBtn8, nyan8);
 });
 </script>	
+	<style type="text/css">
+	   .form-group > label {
+              font-family: 'Lato Bold', sans-serif;
+              font-weight: normal;
+              font-size: 16px;
+              line-height: 32px;
+              margin-bottom: 12px;
+              color: #e86549;
+           }
+	</style>
