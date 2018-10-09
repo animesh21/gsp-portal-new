@@ -4323,5 +4323,14 @@ nyanBtn2.addEventListener('click', function(){
    progress(nyanBtn2, nyan2);
 });
 </script>	
-	
+	<style>
+	     #btn,#btn1{ 
+		background: rgb(232, 101, 73);
+                color: rgb(0, 0, 0);
+                box-shadow: rgba(0, 0, 0, 0.125) 0px 0px 0px 0px inset;
+                height: 20px;
+                position: relative;
+                padding-top: 0px;
+		}	
+	</style>
 	
