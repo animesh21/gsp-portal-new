@@ -3754,5 +3754,6 @@ nyanBtn15.addEventListener('click', function(){
                 height: 20px;
                 position: relative;
                 padding-top: 0px;
+			font-weight:900;
 		}	
 	</style>
