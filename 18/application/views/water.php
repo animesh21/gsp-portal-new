@@ -3701,119 +3701,43 @@ nyanBtn8.addEventListener('click', function(){
    playPause(nyan8);
    progress(nyanBtn8, nyan8);
 });
-</script>	
-<script>
-var nyan = document.getElementById('FLOATVALVES');
-var nyanBtn = document.getElementById('btn');
-var nyan1 = document.getElementById('SPILLPROOFTAPS');
-var nyanBtn1 = document.getElementById('btn1');
-var nyan2 = document.getElementById('DUALFLUSHTOILET');
-var nyanBtn2 = document.getElementById('btn2');
-var nyan3 = document.getElementById('SEMIUNDERGROUNDTANK');
-var nyanBtn3 = document.getElementById('btn3');
-var nyan4 = document.getElementById('PERCOLATIONPIT');
-var nyanBtn4= document.getElementById('btn4');
-var nyan5 = document.getElementById('DUGWELL');
-var nyanBtn5 = document.getElementById('btn5');
-var nyan6 = document.getElementById('TUBEWELL');
-var nyanBtn6 = document.getElementById('btn6');
-var nyan7 = document.getElementById('RECHARGEPIT');
-var nyanBtn7 = document.getElementById('btn7');
-var nyan8 = document.getElementById('RECHARGETRENCHES');
-var nyanBtn8 = document.getElementById('btn8');
-var nyan9 = document.getElementById('SOAKPIT');
-var nyanBtn9 = document.getElementById('btn9');
-
-var nyan10 = document.getElementById('CONDUITS');
-var nyanBtn10 = document.getElementById('btn10');
-var nyan11 = document.getElementById('GUTTERS');
-var nyanBtn11 = document.getElementById('btn11');
-var nyan12 = document.getElementById('FILTERUNIT');
-var nyanBtn12 = document.getElementById('btn12');
-var nyan13 = document.getElementById('FIRSTFLUSH');
-var nyanBtn13 = document.getElementById('btn13');
-var nyan14 = document.getElementById('SUMP');
-var nyanBtn14 = document.getElementById('btn14');
-var nyan15 = document.getElementById('RECHARGESTRUCTURES');
-var nyanBtn15 = document.getElementById('btn15');
-function playPause(song){
-   if (song.paused && song.currentTime >= 0 && !song.ended) {
-      song.play();
-   } else {
-      song.pause();
-   }
-}
-
-function reset(btn, song){
-   if(btn.classList.contains('playing')){
-      btn.classList.toggle('playing');
-   }
-   song.pause();
-   song.currentTime = 0;
-}
-
-function progress(btn, song){
-   setTimeout(function(){
-      var end = song.duration; 
-      var current = song.currentTime;
-      var percent = current/(end/100);
-      //check if song is at the end
-      if(current==end){
-         reset(btn, song);
-      }
-      //set inset box shadow
-      btn.style.boxShadow = "inset " + btn.offsetWidth * (percent/100) + "px 0px 0px 0px rgba(0,0,0,0.125)"
-      //call function again
-      progress(btn, song);     
-   }, 1000);
-}
-
-nyanBtn.addEventListener('click', function(){
-   nyanBtn.classList.toggle('playing');
-   playPause(nyan);
-   progress(nyanBtn, nyan);
+nyanBtn9.addEventListener('click', function(){
+   nyanBtn9.classList.toggle('playing');
+   playPause(nyan9);
+   progress(nyanBtn9, nyan9);
 });
-nyanBtn1.addEventListener('click', function(){
-   nyanBtn1.classList.toggle('playing');
-   playPause(nyan1);
-   progress(nyanBtn1, nyan1);
+nyanBtn10.addEventListener('click', function(){
+   nyanBtn10.classList.toggle('playing');
+   playPause(nyan10);
+   progress(nyanBtn10, nyan10);
 });
-nyanBtn2.addEventListener('click', function(){
-   nyanBtn2.classList.toggle('playing');
-   playPause(nyan2);
-   progress(nyanBtn2, nyan2);
+nyanBtn11.addEventListener('click', function(){
+   nyanBtn11.classList.toggle('playing');
+   playPause(nyan11);
+   progress(nyanBtn11, nyan11);
 });
-nyanBtn3.addEventListener('click', function(){
-   nyanBtn3.classList.toggle('playing');
-   playPause(nyan3);
-   progress(nyanBtn3, nyan3);
+nyanBtn12.addEventListener('click', function(){
+   nyanBtn12.classList.toggle('playing');
+   playPause(nyan12);
+   progress(nyanBtn12, nyan12);
 });
-nyanBtn4.addEventListener('click', function(){
-   nyanBtn4.classList.toggle('playing');
-   playPause(nyan4);
-   progress(nyanBtn4, nyan4);
+nyanBtn13.addEventListener('click', function(){
+   nyanBtn13.classList.toggle('playing');
+   playPause(nyan13);
+   progress(nyanBtn13, nyan13);
 });
-nyanBtn5.addEventListener('click', function(){
-   nyanBtn5.classList.toggle('playing');
-   playPause(nyan5);
-   progress(nyanBtn5, nyan5);
+nyanBtn14.addEventListener('click', function(){
+   nyanBtn14.classList.toggle('playing');
+   playPause(nyan14);
+   progress(nyanBtn14, nyan14);
 });
-nyanBtn6.addEventListener('click', function(){
-   nyanBtn6.classList.toggle('playing');
-   playPause(nyan6);
-   progress(nyanBtn6, nyan6);
-});
-nyanBtn7.addEventListener('click', function(){
-   nyanBtn7.classList.toggle('playing');
-   playPause(nyan7);
-   progress(nyanBtn7, nyan7);
-});
-nyanBtn8.addEventListener('click', function(){
-   nyanBtn8.classList.toggle('playing');
-   playPause(nyan8);
-   progress(nyanBtn8, nyan8);
+nyanBtn15.addEventListener('click', function(){
+   nyanBtn15.classList.toggle('playing');
+   playPause(nyan15);
+   progress(nyanBtn15, nyan15);
 });
 </script>	
+	
 	<style type="text/css">
 	   .form-group > label {
               font-family: 'Lato Bold', sans-serif;
