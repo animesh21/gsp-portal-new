@@ -20,7 +20,7 @@ load->helper('common_helper');
     }
     
 	public function air() {
-	$query = $this->db->query("SELECT gsp_school.*,gsp_school.id As school_id FROM `gsp_school` INNER JOIN gsp_aduit_submitted ON gsp_school.userid=gsp_aduit_submitted.userid WHERE gsp_school.progress ='100' && gsp_aduit_submitted.status='1' && gsp_school.userid='1184'");
+	$query = $this->db->query("SELECT gsp_school.*,gsp_school.id As school_id FROM `gsp_school` INNER JOIN gsp_aduit_submitted ON gsp_school.userid=gsp_aduit_submitted.userid WHERE gsp_school.progress ='100' && gsp_aduit_submitted.status='1' && gsp_school.userid='1672'");
 	$uArray=$query->result_array();
 	$points=array();
 	
