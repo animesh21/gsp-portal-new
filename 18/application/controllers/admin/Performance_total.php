@@ -564,7 +564,7 @@ load->helper('common_helper');
 		'TotalArea'=>$this->getTotalArea($uArray[$i]['userid']),
 		
 		
-		'PercentageArea'=>($this->getPercentageArea($uArray[$i]['userid'])!= '')?,
+		'PercentageArea'=>($this->getPercentageArea($uArray[$i]['userid'])!= '')?$this->getPercentageArea($uArray[$i]['userid']):"000.000",
 		
 		'Q5L1S3'=>($this->getFiled('Q5L1S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5L1S3', $uArray[$i]['userid']) : "000.000",
 		'Q5L1S1'=>($this->getFiled('Q5L1S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5L1S1', $uArray[$i]['userid']) : "000.000",
