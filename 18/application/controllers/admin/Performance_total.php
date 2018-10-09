@@ -6,7 +6,8 @@ class Performance_total extends CI_Controller {
 
     public function __construct() {
 	parent::__construct();
-	$this->load->helper('common_helper');
+	$this->
+load->helper('common_helper');
     }
 
     public function getFiled($argWhere, $argUserID) {
@@ -19,9 +20,10 @@ class Performance_total extends CI_Controller {
     }
     
 	public function air() {
-	ini_set('memory_limit', '-1');
-	$uArray = $this->db->select('*')->from('gsp_school')->where("progress=","100")->get()->result_array();
+	$query = $this->db->query("SELECT gsp_school.*,gsp_school.id As school_id FROM `gsp_school` INNER JOIN gsp_aduit_submitted ON gsp_school.userid=gsp_aduit_submitted.userid WHERE gsp_school.progress ='100' && gsp_aduit_submitted.status='1'");
+	$uArray=$query->result_array();
 	$points=array();
+	
 	$arr = array(
 	    '1' => 'Day Scholar',
 	    '2' => 'Day Boarding',
@@ -52,22 +54,182 @@ class Performance_total extends CI_Controller {
 	    '2' => 'Government – Aided School',
 	    '3' => 'Private School',
 	);
-	for($i=0; $i<count($uArray); $i++)
-	{
-	     $vale = (getFiled('Q1S1', $uArray[$i]['id']) != '') ? getFiled('Q1S1', $uArray[$i]['id']) : "";
-	     $val_shift = (getFiled('Q2S1', $uArray[$i]['id']) != '') ? getFiled('Q2S1', $uArray[$i]['id']) : "";
-	    $val_board = (getFiled('Q3G1', $uArray[$i]['id']) != '') ? getFiled('Q3G1', $uArray[$i]['id']) : "";
-	    $val_area=(getFiled('Q8G1', $uArray[$i]['id']) != '') ? getFiled('Q8G1', $uArray[$i]['id']) : "";
-	    $val_aid=(getFiled('Q9G1', $uArray[$i]['id']) != '') ? getFiled('Q9G1', $uArray[$i]['id']) : "";
-		$arrPoints = array();
-	$Q3_b_CNG = "";
-	$Q3_b_ELE_BIO = "";
-	$Q3_b_LPG = "";
-	$Q3_b_PETROL = "";
-	$no_of_vehicle = "";
-	   $points[$i]=array(
-	    'userid'=>$uArray[$i]['userid'],
-		'school_id' => $uArray[$i]['id'],
+	
+	
+	for ($i = 0; $i < count($uArray); $i++) {
+	
+	$paper="";
+	if($this->getFiled('Q11Wa1S1', $uArray[$i]['userid'])==1){
+	 $paper.="Local scrap collector (kabadiwala)".",";
+	}if($this->getFiled('Q11Wa1S2', $uArray[$i]['userid'])==1){
+	 $paper.="Authorized dealer".",";
+	}if($this->getFiled('Q11Wa1S3', $uArray[$i]['userid'])==1){
+	 $paper.="Dumped at a designated community site".",";
+	}if($this->getFiled('Q11Wa1S4', $uArray[$i]['userid'])==1){
+	 $paper.="Internal procedure".",";
+	}
+	$plastic="";
+	if($this->getFiled('Q11Wa2S1', $uArray[$i]['userid'])==1){
+	 $plastic.="Local scrap collector (kabadiwala)".",";
+	}if($this->getFiled('Q11Wa2S2', $uArray[$i]['userid'])==1){
+	 $plastic.="Authorized dealer".",";
+	}if($this->getFiled('Q11Wa2S3', $uArray[$i]['userid'])==1){
+	 $plastic.="Dumped at a designated community site".",";
+	}if($this->getFiled('Q11Wa2S4', $uArray[$i]['userid'])==1){
+	 $plastic.="Internal procedure".",";
+	}
+	
+	$horticultural_waste="";
+	if($this->getFiled('Q11Wa3S1', $uArray[$i]['userid'])==1){
+	 $horticultural_waste.="Local scrap collector (kabadiwala)".",";
+	}if($this->getFiled('Q11Wa3S2', $uArray[$i]['userid'])==1){
+	 $horticultural_waste.="Authorized dealer".",";
+	}if($this->getFiled('Q11Wa3S3', $uArray[$i]['userid'])==1){
+	 $horticultural_waste.="Dumped at a designated community site".",";
+	}if($this->getFiled('Q11Wa3S4', $uArray[$i]['userid'])==1){
+	 $horticultural_waste.="Internal procedure".",";
+	}
+	
+	$e_waste="";
+	if($this->getFiled('Q11Wa4S1', $uArray[$i]['userid'])==1){
+	 $e_waste.="Local scrap collector (kabadiwala)".",";
+	}if($this->getFiled('Q11Wa4S2', $uArray[$i]['userid'])==1){
+	 $e_waste.="Authorized dealer".",";
+	}if($this->getFiled('Q11Wa4S3', $uArray[$i]['userid'])==1){
+	 $e_waste.="Dumped at a designated community site".",";
+	}if($this->getFiled('Q11Wa4S4', $uArray[$i]['userid'])==1){
+	 $e_waste.="Internal procedure".",";
+	}
+	
+	$hazardous_waste="";
+	if($this->getFiled('Q11Wa5S1', $uArray[$i]['userid'])==1){
+	 $hazardous_waste.="Local scrap collector (kabadiwala)".",";
+	}if($this->getFiled('Q11Wa5S2', $uArray[$i]['userid'])==1){
+	 $hazardous_waste.="Authorized dealer".",";
+	}if($this->getFiled('Q11Wa5S3', $uArray[$i]['userid'])==1){
+	 $hazardous_waste.="Dumped at a designated community site".",";
+	}if($this->getFiled('Q11Wa5S4', $uArray[$i]['userid'])==1){
+	 $hazardous_waste.="Internal procedure".",";
+	}
+	
+	$wood_glass_metal="";
+	if($this->getFiled('Q11Wa6S1', $uArray[$i]['userid'])==1){
+	 $wood_glass_metal.="Local scrap collector (kabadiwala)".",";
+	}if($this->getFiled('Q11Wa6S2', $uArray[$i]['userid'])==1){
+	 $wood_glass_metal.="Authorized dealer".",";
+	}if($this->getFiled('Q11Wa6S3', $uArray[$i]['userid'])==1){
+	 $wood_glass_metal.="Dumped at a designated community site".",";
+	}if($this->getFiled('Q11Wa6S4', $uArray[$i]['userid'])==1){
+	 $wood_glass_metal.="Internal procedure".",";
+	}
+	
+	$biomedical_waste="";
+	if($this->getFiled('Q11Wa7S1', $uArray[$i]['userid'])==1){
+	 $biomedical_waste.="Local scrap collector (kabadiwala)".",";
+	}if($this->getFiled('Q11Wa7S2', $uArray[$i]['userid'])==1){
+	 $biomedical_waste.="Authorized dealer".",";
+	}if($this->getFiled('Q11Wa7S3', $uArray[$i]['userid'])==1){
+	 $biomedical_waste.="Dumped at a designated community site".",";
+	}if($this->getFiled('Q11Wa7S4', $uArray[$i]['userid'])==1){
+	 $biomedical_waste.="Internal procedure".",";
+	}
+	
+	$others="";
+	if($this->getFiled('Q11Wa8S1', $uArray[$i]['userid'])==1){
+	 $others.="Local scrap collector (kabadiwala)".",";
+	}if($this->getFiled('Q11Wa8S2', $uArray[$i]['userid'])==1){
+	 $others.="Authorized dealer".",";
+	}if($this->getFiled('Q11Wa8S3', $uArray[$i]['userid'])==1){
+	 $others.="Dumped at a designated community site".",";
+	}if($this->getFiled('Q11Wa8S4', $uArray[$i]['userid'])==1){
+	 $others.="Internal procedure".",";
+	}
+	
+	$purpose_of_composite="";
+	if($this->getFiled('Q9Wa4S1', $uArray[$i]['userid'])==1){
+	  $purpose_of_composite.="For horticultural purposes".",";
+	}
+	if($this->getFiled('Q9Wa4S2', $uArray[$i]['userid'])==1){
+	 $purpose_of_composite.="For school garden".",";
+	}
+	if($this->getFiled('Q9Wa4S3', $uArray[$i]['userid'])==1){
+	 $purpose_of_composite.="For sale".",";
+	}
+	if($this->getFiled('Q9Wa4S4', $uArray[$i]['userid'])==1){
+	 $purpose_of_composite.="For charity".",";
+	}
+	$methodology="";
+	if($this->getFiled('Q9Wa2S1', $uArray[$i]['userid'])==1){
+	  $methodology.="Natural composting without added microbes".",";
+	}
+	if($this->getFiled('Q9Wa2S2', $uArray[$i]['userid'])==1){
+	 $methodology.="Vermi composting".",";
+	}
+	if($this->getFiled('Q9Wa2S3', $uArray[$i]['userid'])==1){
+	 $methodology.="Mechanical composting".",";
+	}
+	if($this->getFiled('Q9Wa2S4', $uArray[$i]['userid'])==1){
+	 $methodology.=$this->getFiled('Q9Wa2S4', $uArray[$i]['userid']).",";
+	}
+	
+	
+	
+	
+    $audit_period=null;
+	if(getFiled('Q7G1', $uArray[$i]['userid'])==1):
+	$audit_period=$audit_period."Jan".",";
+	endif;
+	if(getFiled('Q7G2', $uArray[$i]['userid'])==2):
+	$audit_period=$audit_period."Feb".",";
+	endif;
+	if(getFiled('Q7G3', $uArray[$i]['userid'])==3):
+	$audit_period=$audit_period."Mar".",";
+	endif;
+	if(getFiled('Q7G4', $uArray[$i]['userid'])==4):
+	$audit_period=$audit_period."April".",";
+	endif;
+	if(getFiled('Q7G5', $uArray[$i]['userid'])==5):
+	$audit_period=$audit_period."May".",";
+	endif;
+	if(getFiled('Q7G6', $uArray[$i]['userid'])==6):
+	$audit_period=$audit_period."June".",";
+	endif;
+	if(getFiled('Q7G7', $uArray[$i]['userid'])==7):
+	$audit_period=$audit_period."July".",";
+	endif;
+	if(getFiled('Q7G8', $uArray[$i]['userid'])==8):
+	$audit_period=$audit_period."Aug".",";
+	endif;
+	if(getFiled('Q7G9', $uArray[$i]['userid'])==9):
+	$audit_period=$audit_period."Sept".",";
+	endif;
+	if(getFiled('Q7G10', $uArray[$i]['userid'])==10):
+	$audit_period=$audit_period."Oct".",";
+	endif;
+	if(getFiled('Q7G11', $uArray[$i]['userid'])==11):
+	$audit_period=$audit_period."Nov".",";
+	endif;
+	if(getFiled('Q7G12', $uArray[$i]['userid'])==12):
+	$audit_period=$audit_period."Dec".",";
+	endif;
+	$gender=null;
+	if(getFiled('Q2G1', $uArray[$i]['userid'])==1):
+	$gender=$gender."only boys".",";
+	elseif(getFiled('Q2G1', $uArray[$i]['userid'])==2):
+	$gender=$gender."Only Girls".",";
+	elseif(getFiled('Q2G1', $uArray[$i]['userid'])==3):
+	$gender=$gender."Mixed/Co-education".",";
+	endif;
+	    $vale = (getFiled('Q1S1', $uArray[$i]['userid']) != '') ? getFiled('Q1S1', $uArray[$i]['userid']) : "";
+	    //echo $vale.$uArray[$i]['id'].'<br>';
+	    $val_shift = (getFiled('Q2S1', $uArray[$i]['userid']) != '') ? getFiled('Q2S1', $uArray[$i]['userid']) : "";
+	    $val_board = (getFiled('Q3G1', $uArray[$i]['userid']) != '') ? getFiled('Q3G1', $uArray[$i]['userid']) : "";
+	    $val_area = (getFiled('Q8G1', $uArray[$i]['userid']) != '') ? getFiled('Q8G1', $uArray[$i]['userid']) : "";
+	    $val_aid = (getFiled('Q9G1', $uArray[$i]['userid']) != '') ? getFiled('Q9G1', $uArray[$i]['userid']) : "";
+	    //echo $vale;
+	    $points[$i] = array(
+		'userid' => $uArray[$i]['userid'],
+		'school_id' => $uArray[$i]['school_id'],
 		'name' => $uArray[$i]['name'],
 		'address1' => $uArray[$i]['address1'],
 		'address2' => $uArray[$i]['address2'],
@@ -89,631 +251,757 @@ class Performance_total extends CI_Controller {
 		'codinator_mobile' => $uArray[$i]['comobile'],
 		'category' => ($vale != '') ? $arr[$vale] : "",
 		'shifts' => ($val_shift != '') ? $shifts[$val_shift] : "",
-		'lowest_level' => (getFiled('Q1G1', $uArray[$i]['id']) != '') ? getFiled('Q1G1', $uArray[$i]['id']) : "",
-		'higest_level' => (getFiled('Q1G2', $uArray[$i]['id']) != '') ? getFiled('Q1G2', $uArray[$i]['id']) : "",
-		'gender' => '',
+		'school_class_level' =>(getFiled('Q10G1', $uArray[$i]['userid']) != '') ? getFiled('Q10G1', $uArray[$i]['userid']) : "",
+		'lowest_level' => (getFiled('Q1G1', $uArray[$i]['userid']) != '') ? getFiled('Q1G1', $uArray[$i]['userid']) : "",
+		'higest_level' => (getFiled('Q1G2', $uArray[$i]['userid']) != '') ? getFiled('Q1G2', $uArray[$i]['userid']) : "",
+		'gender' => ($gender != '') ? $gender : "",
 		'educatio_board' => ($val_board != '') ? $arrBoard[$val_board] : "",
-		'population' => (getFiled('Q4G4S3', $uArray[$i]['id']) != '') ? getFiled('Q4G4S3', $uArray[$i]['id']) : "",
-		'students' => (getFiled('Q4G1S3', $uArray[$i]['id']) != '') ? getFiled('Q4G1S3', $uArray[$i]['id']) : "",
-		'teachers' => (getFiled('Q4G2S3', $uArray[$i]['id']) != '') ? getFiled('Q4G2S3', $uArray[$i]['id']) : "",
-		'nonteachers' => (getFiled('Q4G3S3', $uArray[$i]['id']) != '') ? getFiled('Q4G3S3', $uArray[$i]['id']) : "",
-		'male' => (getFiled('Q4G4S1', $uArray[$i]['id']) != '') ? getFiled('Q4G4S1', $uArray[$i]['id']) : "",
-		'female' => (getFiled('Q4G4S2', $uArray[$i]['id']) != '') ? getFiled('Q4G4S2', $uArray[$i]['id']) : "",
-		'visitor' => (getFiled('Q5G1', $uArray[$i]['id']) != '') ? getFiled('Q5G1', $uArray[$i]['id']) : "",
-		'working_days' => (getFiled('Q6G1', $uArray[$i]['id']) != '') ? getFiled('Q6G1', $uArray[$i]['id']) : "",
-		'audit_period' => (getFiled('Q7G1', $uArray[$i]['id']) != '') ? getFiled('Q7G1', $uArray[$i]['id']) : "",
+		'population' => (getFiled('Q4G4S3', $uArray[$i]['userid']) != '') ? getFiled('Q4G4S3', $uArray[$i]['userid']) : "",
+		'students' => (getFiled('Q4G1S3', $uArray[$i]['userid']) != '') ? getFiled('Q4G1S3', $uArray[$i]['userid']) : "",
+		'teachers' => (getFiled('Q4G2S3', $uArray[$i]['userid']) != '') ? getFiled('Q4G2S3', $uArray[$i]['userid']) : "",
+		'nonteachers' => (getFiled('Q4G3S3', $uArray[$i]['userid']) != '') ? getFiled('Q4G3S3', $uArray[$i]['userid']) : "",
+		'male' => (getFiled('Q4G4S1', $uArray[$i]['userid']) != '') ? getFiled('Q4G4S1', $uArray[$i]['userid']) : "",
+		'female' => (getFiled('Q4G4S2', $uArray[$i]['userid']) != '') ? getFiled('Q4G4S2', $uArray[$i]['userid']) : "",
+		'visitor' => (getFiled('Q5G1', $uArray[$i]['userid']) != '') ? getFiled('Q5G1', $uArray[$i]['userid']) : "",
+		'working_days' => (getFiled('Q6G1', $uArray[$i]['userid']) != '') ? getFiled('Q6G1', $uArray[$i]['userid']) : "",
+		'audit_period' => ($audit_period != '') ? $audit_period : "",
 		'location' => ($val_area != '') ? $area[$val_area] : "",
 		'aid' => ($val_aid != '') ? $type_aid[$val_aid] : "",
 	   
-	   'Q4A1' => ($this->getFiled('Q4A1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4A1', $uArray[$i]['userid']) : 0,
-		'Q5A110S2' => ($this->getFiled('Q5A110S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5A110S2', $uArray[$i]['userid']) : 0,
-		'Q6A1' => ($this->getFiled('Q6A1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A1', $uArray[$i]['userid']) : 0,
-		'Q6A2S1T1' => ($this->getFiled('Q6A2S1T1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S1T1', $uArray[$i]['userid']) : 0,
-		'Q6A2S1T2' => ($this->getFiled('Q6A2S1T2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S1T2', $uArray[$i]['userid']) : 0,
-		'Q6A2S1T3' => ($this->getFiled('Q6A2S1T3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S1T3', $uArray[$i]['userid']) : 0,
-		'Q6A2S1T4' => ($this->getFiled('Q6A2S1T4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S1T4', $uArray[$i]['userid']) : 0,
-		'Q6A2S1T5' => ($this->getFiled('Q6A2S1T5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S1T5', $uArray[$i]['userid']) : 0,
-		'Q6A2S1T6' => ($this->getFiled('Q6A2S1T6', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S1T6', $uArray[$i]['userid']) : 0,
-		'Q6A2S3D5' => ($this->getFiled('Q6A2S3D5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3D5', $uArray[$i]['userid']) : 0,
-		'Q6A2S3D1' => ($this->getFiled('Q6A2S3D1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3D1', $uArray[$i]['userid']) : 0,
-		'Q6A2S3P1' => ($this->getFiled('Q6A2S3P1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3P1', $uArray[$i]['userid']) : 0,
-		'Q6A2S3L1' => ($this->getFiled('Q6A2S3L1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3L1', $uArray[$i]['userid']) : 0,
-		'Q6A2S3C1' => ($this->getFiled('Q6A2S3C1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3C1', $uArray[$i]['userid']) : 0,
-		'Q6A2S3E1' => ($this->getFiled('Q6A2S3E1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3E1', $uArray[$i]['userid']) : 0,
-		'Q6A2S3H1' => ($this->getFiled('Q6A2S3H1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3H1', $uArray[$i]['userid']) : 0,
-		'Q6A2S3B1' => ($this->getFiled('Q6A2S3B1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3B1', $uArray[$i]['userid']) : 0,
-		'Q6A2S3D5' => ($this->getFiled('Q6A2S3D5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3D5', $uArray[$i]['userid']) : 0,
+	   'Q4A1' => ($this->getFiled('Q4A1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4A1', $uArray[$i]['userid']) : "000.000",
+		'Q5A110S2' => ($this->getFiled('Q5A110S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5A110S2', $uArray[$i]['userid']) : "000.000",
+		'Q5A110S3' => ($this->getFiled('Q5A110S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5A110S3', $uArray[$i]['userid']) : "000.000",
+		'Q6A1' => ($this->getFiled('Q6A1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A1', $uArray[$i]['userid']) : "000.000",
+		'Q6A2S1T1' => ($this->getFiled('Q6A2S1T1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S1T1', $uArray[$i]['userid']) : "000.000",
+		'Q6A2S1T2' => ($this->getFiled('Q6A2S1T2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S1T2', $uArray[$i]['userid']) : "000.000",
+		'Q6A2S1T3' => ($this->getFiled('Q6A2S1T3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S1T3', $uArray[$i]['userid']) : "000.000",
+		'Q6A2S1T4' => ($this->getFiled('Q6A2S1T4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S1T4', $uArray[$i]['userid']) : "000.000",
+		'Q6A2S1T5' => ($this->getFiled('Q6A2S1T5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S1T5', $uArray[$i]['userid']) : "000.000",
+		'Q6A2S1T6' => ($this->getFiled('Q6A2S1T6', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S1T6', $uArray[$i]['userid']) : "000.000",
+		'Q6A2S3D5' => ($this->getFiled('Q6A2S3D5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3D5', $uArray[$i]['userid']) : "000.000",
+		'Q6A2S3D1' => ($this->getFiled('Q6A2S3D1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3D1', $uArray[$i]['userid']) : "000.000",
+		'Q6A2S3P1' => ($this->getFiled('Q6A2S3P1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3P1', $uArray[$i]['userid']) : "000.000",
+		'Q6A2S3L1' => ($this->getFiled('Q6A2S3L1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3L1', $uArray[$i]['userid']) : "000.000",
+		'Q6A2S3C1' => ($this->getFiled('Q6A2S3C1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3C1', $uArray[$i]['userid']) : "000.000",
+		'Q6A2S3E1' => ($this->getFiled('Q6A2S3E1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3E1', $uArray[$i]['userid']) : "000.000",
+		'Q6A2S3H1' => ($this->getFiled('Q6A2S3H1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3H1', $uArray[$i]['userid']) : "000.000",
+		'Q6A2S3B1' => ($this->getFiled('Q6A2S3B1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3B1', $uArray[$i]['userid']) : "000.000",
+		'Q6A2S3D5' => ($this->getFiled('Q6A2S3D5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3D5', $uArray[$i]['userid']) : "000.000",
 		'total_cars' => $this->getFiled('Q6A2S3B1', $uArray[$i]['userid']) + $this->getFiled('Q6A2S3D2', $uArray[$i]['userid']) + $this->getFiled('Q6A2S3P2', $uArray[$i]['userid']) + $this->getFiled('Q6A2S3L2', $uArray[$i]['userid']) + $this->getFiled('Q6A2S3C2', $uArray[$i]['userid']) + $this->getFiled('Q6A2S3E2', $uArray[$i]['userid']) + $this->getFiled('Q6A2S3H2', $uArray[$i]['userid']),
-		'Q6A2S3B1' => ($this->getFiled('Q6A2S3B1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3B1', $uArray[$i]['userid']) : 0,
-		'Q6A2S3D2' => ($this->getFiled('Q6A2S3D2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3D2', $uArray[$i]['userid']) : 0,
-		'Q6A2S3P2' => ($this->getFiled('Q6A2S3P2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3P2', $uArray[$i]['userid']) : 0,
-		'Q6A2S3L2' => ($this->getFiled('Q6A2S3L2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3L2', $uArray[$i]['userid']) : 0,
-		'Q6A2S3C2' => ($this->getFiled('Q6A2S3C2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3C2', $uArray[$i]['userid']) : 0,
-		'Q6A2S3E2' => ($this->getFiled('Q6A2S3E2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3E2', $uArray[$i]['userid']) : 0,
-		'Q6A2S3H2' => ($this->getFiled('Q6A2S3H2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3H2', $uArray[$i]['userid']) : 0,
+		'Q6A2S3B1' => ($this->getFiled('Q6A2S3B1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3B1', $uArray[$i]['userid']) : "000.000",
+		'Q6A2S3D2' => ($this->getFiled('Q6A2S3D2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3D2', $uArray[$i]['userid']) : "000.000",
+		'Q6A2S3P2' => ($this->getFiled('Q6A2S3P2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3P2', $uArray[$i]['userid']) : "000.000",
+		'Q6A2S3L2' => ($this->getFiled('Q6A2S3L2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3L2', $uArray[$i]['userid']) : "000.000",
+		'Q6A2S3C2' => ($this->getFiled('Q6A2S3C2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3C2', $uArray[$i]['userid']) : "000.000",
+		'Q6A2S3E2' => ($this->getFiled('Q6A2S3E2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3E2', $uArray[$i]['userid']) : "000.000",
+		'Q6A2S3H2' => ($this->getFiled('Q6A2S3H2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3H2', $uArray[$i]['userid']) : "000.000",
 		'total_vans' => $this->getFiled('Q6A2S3D3', $uArray[$i]['userid']) + $this->getFiled('Q6A2S3P3', $uArray[$i]['userid']) + $this->getFiled('Q6A2S3L3', $uArray[$i]['userid']) + $this->getFiled('Q6A2S3C3', $uArray[$i]['userid']) + $this->getFiled('Q6A2S3E3', $uArray[$i]['userid']) + $this->getFiled('Q6A2S3H3', $uArray[$i]['userid']) + $this->getFiled('Q6A2S3B3', $uArray[$i]['userid']),
-		'Q6A2S3D3' => ($this->getFiled('Q6A2S3D3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3D3', $uArray[$i]['userid']) : 0,
-		'Q6A2S3P3' => ($this->getFiled('Q6A2S3P3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3P3', $uArray[$i]['userid']) : 0,
-		'Q6A2S3L3' => ($this->getFiled('Q6A2S3L3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3L3', $uArray[$i]['userid']) : 0,
-		'Q6A2S3C3' => ($this->getFiled('Q6A2S3C3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3C3', $uArray[$i]['userid']) : 0,
-		'Q6A2S3E3' => ($this->getFiled('Q6A2S3E3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3E3', $uArray[$i]['userid']) : 0,
-		'Q6A2S3H3' => ($this->getFiled('Q6A2S3H3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3H3', $uArray[$i]['userid']) : 0,
-		'Q6A2S3B3' => ($this->getFiled('Q6A2S3B3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3B3', $uArray[$i]['userid']) : 0,
+		'Q6A2S3D3' => ($this->getFiled('Q6A2S3D3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3D3', $uArray[$i]['userid']) : "000.000",
+		'Q6A2S3P3' => ($this->getFiled('Q6A2S3P3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3P3', $uArray[$i]['userid']) : "000.000",
+		'Q6A2S3L3' => ($this->getFiled('Q6A2S3L3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3L3', $uArray[$i]['userid']) : "000.000",
+		'Q6A2S3C3' => ($this->getFiled('Q6A2S3C3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3C3', $uArray[$i]['userid']) : "000.000",
+		'Q6A2S3E3' => ($this->getFiled('Q6A2S3E3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3E3', $uArray[$i]['userid']) : "000.000",
+
+		'Q6A2S3H3' => ($this->getFiled('Q6A2S3H3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3H3', $uArray[$i]['userid']) : "000.000",
+		'Q6A2S3B3' => ($this->getFiled('Q6A2S3B3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3B3', $uArray[$i]['userid']) : "000.000",
 		'total_other' => $this->getFiled('Q6A2S3D4', $uArray[$i]['userid']) + $this->getFiled('Q6A2S3P4', $uArray[$i]['userid']) + $this->getFiled('Q6A2S3L4', $uArray[$i]['userid']) + $this->getFiled('Q6A2S3C4', $uArray[$i]['userid']) + $this->getFiled('Q6A2S3E4', $uArray[$i]['userid']) + $this->getFiled('Q6A2S3H4', $uArray[$i]['userid']) + $this->getFiled('Q6A2S3B4', $uArray[$i]['userid']),
-		'Q6A2S3D4' => ($this->getFiled('Q6A2S3D4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3D4', $uArray[$i]['userid']) : 0,
-		'Q6A2S3P4' => ($this->getFiled('Q6A2S3P4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3P4', $uArray[$i]['userid']) : 0,
-		'Q6A2S3L4' => ($this->getFiled('Q6A2S3L4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3L4', $uArray[$i]['userid']) : 0,
-		'Q6A2S3C4' => ($this->getFiled('Q6A2S3C4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3C4', $uArray[$i]['userid']) : 0,
-		'Q6A2S3E4' => ($this->getFiled('Q6A2S3E4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3E4', $uArray[$i]['userid']) : 0,
-		'Q6A2S3H4' => ($this->getFiled('Q6A2S3H4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3H4', $uArray[$i]['userid']) : 0,
-		'Q6A2S3B4' => ($this->getFiled('Q6A2S3B4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3B4', $uArray[$i]['userid']) : 0,
-		'total_disel' => ($this->getFiled('Q6A2S3D5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3D5', $uArray[$i]['userid']) : 0,
-		'total_petrol' => ($this->getFiled('Q6A2S3P5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3P5', $uArray[$i]['userid']) : 0,
-		'total_lpg' => ($this->getFiled('Q6A2S3L5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3L5', $uArray[$i]['userid']) : 0,
-		'total_cng' => ($this->getFiled('Q6A2S3C5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3C5', $uArray[$i]['userid']) : 0,
-		'total_hybrid' => ($this->getFiled('Q6A2S3E5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3E5', $uArray[$i]['userid']) : 0,
-		'total_electric' => ($this->getFiled('Q6A2S3H5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3H5', $uArray[$i]['userid']) : 0,
-		'total_biofuel' => ($this->getFiled('Q6A2S3B5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3B5', $uArray[$i]['userid']) : 0,
-		'Q6A3' => ($this->getFiled('Q6A3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A3', $uArray[$i]['userid']) : 0,
-		'Q6A4S1' => ($this->getFiled('Q6A4S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A4S1', $uArray[$i]['userid']) : 0,
-		'Q7A1S1' => ($this->getFiled('Q7A1S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A1S1', $uArray[$i]['userid']) : 0,
-		'Q7A1S2' => ($this->getFiled('Q7A1S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A1S2', $uArray[$i]['userid']) : 0,
-		'Q7A1S3' => ($this->getFiled('Q7A1S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A1S3', $uArray[$i]['userid']) : 0,
-		'Q7A1S4' => ($this->getFiled('Q7A1S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A1S4', $uArray[$i]['userid']) : 0,
-		'Q7A2S1' => ($this->getFiled('Q7A2S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A2S1', $uArray[$i]['userid']) : 0,
-		'Q7A2S2' => ($this->getFiled('Q7A2S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A2S2', $uArray[$i]['userid']) : 0,
-		'Q7A2S3' => ($this->getFiled('Q7A2S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A2S3', $uArray[$i]['userid']) : 0,
-		'Q7A2S4' => ($this->getFiled('Q7A2S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A2S4', $uArray[$i]['userid']) : 0,
-		'Q7A3S1' => ($this->getFiled('Q7A3S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A3S1', $uArray[$i]['userid']) : 0,
-		'Q7A3S2' => ($this->getFiled('Q7A3S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A3S2', $uArray[$i]['userid']) : 0,
-		'Q7A3S3' => ($this->getFiled('Q7A3S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A3S3', $uArray[$i]['userid']) : 0,
-		'Q7A3S4' => ($this->getFiled('Q7A3S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A3S4', $uArray[$i]['userid']) : 0,
-		'Q7A4S1' => ($this->getFiled('Q7A4S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A4S1', $uArray[$i]['userid']) : 0,
-		'Q7A4S2' => ($this->getFiled('Q7A4S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A4S2', $uArray[$i]['userid']) : 0,
-		'Q7A4S3' => ($this->getFiled('Q7A4S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A4S3', $uArray[$i]['userid']) : 0,
-		'Q7A4S4' => ($this->getFiled('Q7A4S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A4S4', $uArray[$i]['userid']) : 0,
-		'Q7A5S1' => ($this->getFiled('Q7A5S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A5S1', $uArray[$i]['userid']) : 0,
-		'Q7A5S2' => ($this->getFiled('Q7A5S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A5S2', $uArray[$i]['userid']) : 0,
-		'Q7A5S3' => ($this->getFiled('Q7A5S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A5S3', $uArray[$i]['userid']) : 0,
-		'Q7A5S4' => ($this->getFiled('Q7A5S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A5S4', $uArray[$i]['userid']) : 0,
-		'Q7A6S1' => ($this->getFiled('Q7A6S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A6S1', $uArray[$i]['userid']) : 0,
-		'Q7A6S2' => ($this->getFiled('Q7A6S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A6S2', $uArray[$i]['userid']) : 0,
-		'Q7A6S3' => ($this->getFiled('Q7A6S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A6S3', $uArray[$i]['userid']) : 0,
-		'Q7A6S4' => ($this->getFiled('Q7A6S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A6S4', $uArray[$i]['userid']) : 0,
-		'Q7A7S1' => ($this->getFiled('Q7A7S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A7S1', $uArray[$i]['userid']) : 0,
-		'Q7A7S2' => ($this->getFiled('Q7A7S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A7S2', $uArray[$i]['userid']) : 0,
-		'Q7A7S3' => ($this->getFiled('Q7A7S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A7S3', $uArray[$i]['userid']) : 0,
-		'Q7A7S4' => ($this->getFiled('Q7A7S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A7S4', $uArray[$i]['userid']) : 0,
-		'Q7A8S1' => ($this->getFiled('Q7A8S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A8S1', $uArray[$i]['userid']) : 0,
-		'Q7A8S2' => ($this->getFiled('Q7A8S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A8S2', $uArray[$i]['userid']) : 0,
-		'Q7A8S3' => ($this->getFiled('Q7A8S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A8S3', $uArray[$i]['userid']) : 0,
-		'Q7A8S4' => ($this->getFiled('Q7A8S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A8S4', $uArray[$i]['userid']) : 0,
-		'Q7A9S1' => ($this->getFiled('Q7A9S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A9S1', $uArray[$i]['userid']) : 0,
-		'Q7A9S2' => ($this->getFiled('Q7A9S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A9S2', $uArray[$i]['userid']) : 0,
-		'Q7A9S3' => ($this->getFiled('Q7A9S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A9S3', $uArray[$i]['userid']) : 0,
-		'Q7A9S4' => ($this->getFiled('Q7A9S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A9S4', $uArray[$i]['userid']) : 0,
-		'Q7A10S1' => ($this->getFiled('Q7A10S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A10S1', $uArray[$i]['userid']) : 0,
-		'Q7A10S2' => ($this->getFiled('Q7A10S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A10S2', $uArray[$i]['userid']) : 0,
-		'Q7A10S3' => ($this->getFiled('Q7A10S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A10S3', $uArray[$i]['userid']) : 0,
-		'Q7A10S4' => ($this->getFiled('Q7A10S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A10S4', $uArray[$i]['userid']) : 0,
-		'Q7A11S1' => ($this->getFiled('Q7A11S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A11S1', $uArray[$i]['userid']) : 0,
-		'Q7A11S2' => ($this->getFiled('Q7A11S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A11S2', $uArray[$i]['userid']) : 0,
-		'Q7A11S3' => ($this->getFiled('Q7A11S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A11S3', $uArray[$i]['userid']) : 0,
-		'Q7A11S4' => ($this->getFiled('Q7A11S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A11S4', $uArray[$i]['userid']) : 0,
-		'Q8A1' => ($this->getFiled('Q8A1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8A1', $uArray[$i]['userid']) : 0,
-		'Q9A1' => ($this->getFiled('Q9A1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q9A1', $uArray[$i]['userid']) : 0,
-		'Q9A2' => ($this->getFiled('Q9A2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q9A2', $uArray[$i]['userid']) : 0,
+		'Q6A2S3D4' => ($this->getFiled('Q6A2S3D4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3D4', $uArray[$i]['userid']) : "000.000",
+		'Q6A2S3P4' => ($this->getFiled('Q6A2S3P4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3P4', $uArray[$i]['userid']) : "000.000",
+		'Q6A2S3L4' => ($this->getFiled('Q6A2S3L4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3L4', $uArray[$i]['userid']) : "000.000",
+		'Q6A2S3C4' => ($this->getFiled('Q6A2S3C4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3C4', $uArray[$i]['userid']) : "000.000",
+		'Q6A2S3E4' => ($this->getFiled('Q6A2S3E4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3E4', $uArray[$i]['userid']) : "000.000",
+		'Q6A2S3H4' => ($this->getFiled('Q6A2S3H4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3H4', $uArray[$i]['userid']) : "000.000",
+		'Q6A2S3B4' => ($this->getFiled('Q6A2S3B4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3B4', $uArray[$i]['userid']) : "000.000",
+		'total_disel' => ($this->getFiled('Q6A2S3D5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3D5', $uArray[$i]['userid']) : "000.000",
+		'total_petrol' => ($this->getFiled('Q6A2S3P5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3P5', $uArray[$i]['userid']) : "000.000",
+		'total_lpg' => ($this->getFiled('Q6A2S3L5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3L5', $uArray[$i]['userid']) : "000.000",
+		'total_cng' => ($this->getFiled('Q6A2S3C5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3C5', $uArray[$i]['userid']) : "000.000",
+		'total_hybrid' => ($this->getFiled('Q6A2S3E5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3E5', $uArray[$i]['userid']) : "000.000",
+		'total_electric' => ($this->getFiled('Q6A2S3H5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3H5', $uArray[$i]['userid']) : "000.000",
+		'total_biofuel' => ($this->getFiled('Q6A2S3B5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3B5', $uArray[$i]['userid']) : "000.000",
+		'Q6A3' => ($this->getFiled('Q6A3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A3', $uArray[$i]['userid']) : "000.000",
+		'Q6A4S1' => ($this->getFiled('Q6A4S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A4S1', $uArray[$i]['userid']) : "000.000",
+		'Q7A1S1' => ($this->getFiled('Q7A1S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A1S1', $uArray[$i]['userid']) : "000.000",
+		'Q7A1S2' => ($this->getFiled('Q7A1S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A1S2', $uArray[$i]['userid']) : "000.000",
+		'Q7A1S3' => ($this->getFiled('Q7A1S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A1S3', $uArray[$i]['userid']) : "000.000",
+		'Q7A1S4' => ($this->getFiled('Q7A1S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A1S4', $uArray[$i]['userid']) :"000.000",
+		'Q7A2S1' => ($this->getFiled('Q7A2S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A2S1', $uArray[$i]['userid']) : "000.000",
+		'Q7A2S2' => ($this->getFiled('Q7A2S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A2S2', $uArray[$i]['userid']) : "000.000",
+		'Q7A2S3' => ($this->getFiled('Q7A2S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A2S3', $uArray[$i]['userid']) : "000.000",
+		'Q7A2S4' => ($this->getFiled('Q7A2S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A2S4', $uArray[$i]['userid']) : "000.000",
+		'Q7A3S1' => ($this->getFiled('Q7A3S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A3S1', $uArray[$i]['userid']) : "000.000",
+		'Q7A3S2' => ($this->getFiled('Q7A3S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A3S2', $uArray[$i]['userid']) : "000.000",
+		'Q7A3S3' => ($this->getFiled('Q7A3S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A3S3', $uArray[$i]['userid']) : "000.000",
+		'Q7A3S4' => ($this->getFiled('Q7A3S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A3S4', $uArray[$i]['userid']) : "000.000",
+		'Q7A4S1' => ($this->getFiled('Q7A4S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A4S1', $uArray[$i]['userid']) : "000.000",
+		'Q7A4S2' => ($this->getFiled('Q7A4S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A4S2', $uArray[$i]['userid']) : "000.000",
+		'Q7A4S3' => ($this->getFiled('Q7A4S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A4S3', $uArray[$i]['userid']) : "000.000",
+		'Q7A4S4' => ($this->getFiled('Q7A4S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A4S4', $uArray[$i]['userid']) : "000.000",
+		'Q7A5S1' => ($this->getFiled('Q7A5S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A5S1', $uArray[$i]['userid']) : "000.000",
+		'Q7A5S2' => ($this->getFiled('Q7A5S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A5S2', $uArray[$i]['userid']) : "000.000",
+		'Q7A5S3' => ($this->getFiled('Q7A5S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A5S3', $uArray[$i]['userid']) : "000.000",
+		'Q7A5S4' => ($this->getFiled('Q7A5S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A5S4', $uArray[$i]['userid']) : "000.000",
+		'Q7A6S1' => ($this->getFiled('Q7A6S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A6S1', $uArray[$i]['userid']) : "000.000",
+		'Q7A6S2' => ($this->getFiled('Q7A6S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A6S2', $uArray[$i]['userid']) : "000.000",
+		'Q7A6S3' => ($this->getFiled('Q7A6S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A6S3', $uArray[$i]['userid']) : "000.000",
+		'Q7A6S4' => ($this->getFiled('Q7A6S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A6S4', $uArray[$i]['userid']) : "000.000",
+		'Q7A7S1' => ($this->getFiled('Q7A7S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A7S1', $uArray[$i]['userid']) : "000.000",
+		'Q7A7S2' => ($this->getFiled('Q7A7S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A7S2', $uArray[$i]['userid']) : "000.000",
+		'Q7A7S3' => ($this->getFiled('Q7A7S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A7S3', $uArray[$i]['userid']) : "000.000",
+		'Q7A7S4' => ($this->getFiled('Q7A7S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A7S4', $uArray[$i]['userid']) : "000.000",
+		'Q7A8S1' => ($this->getFiled('Q7A8S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A8S1', $uArray[$i]['userid']) : "000.000",
+		'Q7A8S2' => ($this->getFiled('Q7A8S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A8S2', $uArray[$i]['userid']) : "000.000",
+		'Q7A8S3' => ($this->getFiled('Q7A8S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A8S3', $uArray[$i]['userid']) : "000.000",
+		'Q7A8S4' => ($this->getFiled('Q7A8S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A8S4', $uArray[$i]['userid']) : "000.000",
+		'Q7A9S1' => ($this->getFiled('Q7A9S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A9S1', $uArray[$i]['userid']) : "000.000",
+		'Q7A9S2' => ($this->getFiled('Q7A9S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A9S2', $uArray[$i]['userid']) : "000.000",
+		'Q7A9S3' => ($this->getFiled('Q7A9S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A9S3', $uArray[$i]['userid']) : "000.000",
+		'Q7A9S4' => ($this->getFiled('Q7A9S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A9S4', $uArray[$i]['userid']) : "000.000",
+		'Q7A10S1' => ($this->getFiled('Q7A10S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A10S1', $uArray[$i]['userid']) : "000.000",
+		'Q7A10S2' => ($this->getFiled('Q7A10S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A10S2', $uArray[$i]['userid']) : "000.000",
+		'Q7A10S3' => ($this->getFiled('Q7A10S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A10S3', $uArray[$i]['userid']) : "000.000",
+		'Q7A10S4' => ($this->getFiled('Q7A10S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A10S4', $uArray[$i]['userid']) : "000.000",
+		'Q7A11S1' => ($this->getFiled('Q7A11S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A11S1', $uArray[$i]['userid']) : "000.000",
+		'Q7A11S2' => ($this->getFiled('Q7A11S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A11S2', $uArray[$i]['userid']) : "000.000",
+		'Q7A11S3' => ($this->getFiled('Q7A11S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A11S3', $uArray[$i]['userid']) : "000.000",
+		'Q7A11S4' => ($this->getFiled('Q7A11S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A11S4', $uArray[$i]['userid']) : "000.000",
+		'Q8A1' => ($this->getFiled('Q8A1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8A1', $uArray[$i]['userid']) : "000.000",
+		'Q9A1' => ($this->getFiled('Q9A1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q9A1', $uArray[$i]['userid']) : "000.000",
+		'Q9A2' => ($this->getFiled('Q9A2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q9A2', $uArray[$i]['userid']) : "000.000",
 		'air_points' => $this->Air_performance($uArray[$i]['userid']),
 	   
-	   'Q4E1'=>($this->getFiled('Q4E1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4E1', $uArray[$i]['userid']) : 0,
+	   'Q4E1'=>($this->getFiled('Q4E1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4E1', $uArray[$i]['userid']) : "000.000",
 		/*'upload'=>($this->getFiled('upload', $uArray[$i]['userid']) != '') ? $this->getFiled('upload', $uArray[$i]['userid']) : 0,*/
-		'Q5E1'=>($this->getFiled('Q5E1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5E1', $uArray[$i]['userid']) : 0,
-		'Q6E1S1'=>($this->getFiled('Q6E1S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E1S1', $uArray[$i]['userid']) : 0,
-		'Q6E2S1'=>($this->getFiled('Q6E2S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E2S1', $uArray[$i]['userid']) : 0,
-		'Q6E3S1'=>($this->getFiled('Q6E3S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E3S1', $uArray[$i]['userid']) : 0,
-		'Q6E4S1'=>($this->getFiled('Q6E4S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E4S1', $uArray[$i]['userid']) : 0,
-		'Q6E5S1'=>($this->getFiled('Q6E5S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E5S1', $uArray[$i]['userid']) : 0,
-		'Q6E6S1'=>($this->getFiled('Q6E6S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E6S1', $uArray[$i]['userid']) : 0,
-		'Q6E7S1'=>($this->getFiled('Q6E7S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E7S1', $uArray[$i]['userid']) : 0,
-		'Q6E16S1'=>($this->getFiled('Q6E16S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E16S1', $uArray[$i]['userid']) : 0,
-		'Q6E8S1'=>($this->getFiled('Q6E8S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E8S1', $uArray[$i]['userid']) : 0,
-		'Q6E9S1'=>($this->getFiled('Q6E9S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E9S1', $uArray[$i]['userid']) : 0,
-		'Q6E10S1'=>($this->getFiled('Q6E10S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E10S1', $uArray[$i]['userid']) : 0,
-		'Q6E11S1'=>($this->getFiled('Q6E11S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E11S1', $uArray[$i]['userid']) : 0,
-		'Q6E12S1'=>($this->getFiled('Q6E12S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E12S1', $uArray[$i]['userid']) : 0,
-		'Q6E13S1'=>($this->getFiled('Q6E13S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E13S1', $uArray[$i]['userid']) : 0,
-		'Q6E14S1'=>($this->getFiled('Q6E14S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E14S1', $uArray[$i]['userid']) : 0,
-		'Q6E1S2'=>($this->getFiled('Q6E1S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E1S2', $uArray[$i]['userid']) : 0,
-		'Q6E2S2'=>($this->getFiled('Q6E2S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E2S2', $uArray[$i]['userid']) : 0,
-		'Q6E3S2'=>($this->getFiled('Q6E3S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E3S2', $uArray[$i]['userid']) : 0,
-		'Q6E4S2'=>($this->getFiled('Q6E4S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E4S2', $uArray[$i]['userid']) : 0,
-		'Q6E5S2'=>($this->getFiled('Q6E5S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E5S2', $uArray[$i]['userid']) : 0,
-		'Q6E6S2'=>($this->getFiled('Q6E6S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E6S2', $uArray[$i]['userid']) : 0,
-		'Q6E7S2'=>($this->getFiled('Q6E7S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E7S2', $uArray[$i]['userid']) : 0,
-		'Q6E16S2'=>($this->getFiled('Q6E16S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E16S2', $uArray[$i]['userid']) : 0,
-		'Q6E8S2'=>($this->getFiled('Q6E8S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E8S2', $uArray[$i]['userid']) : 0,
-		'Q6E9S2'=>($this->getFiled('Q6E9S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E9S2', $uArray[$i]['userid']) : 0,
-		'Q6E10S2'=>($this->getFiled('Q6E10S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E10S2', $uArray[$i]['userid']) : 0,
-		'Q6E11S2'=>($this->getFiled('Q6E11S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E11S2', $uArray[$i]['userid']) : 0,
-		'Q6E12S2'=>($this->getFiled('Q6E12S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E12S2', $uArray[$i]['userid']) : 0,
-		'Q6E13S2'=>($this->getFiled('Q6E13S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E13S2', $uArray[$i]['userid']) : 0,
-		'Q6E14S2'=>($this->getFiled('Q6E14S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E14S2', $uArray[$i]['userid']) : 0,
-		'Q6E15S2'=>($this->getFiled('Q6E15S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E15S2', $uArray[$i]['userid']) : 0,
+		'Q5E1'=>($this->getFiled('Q5E1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5E1', $uArray[$i]['userid']) : "000.000",
+		'Q6E1S1'=>($this->getFiled('Q6E1S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E1S1', $uArray[$i]['userid']) : "000.000",
+		'Q6E2S1'=>($this->getFiled('Q6E2S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E2S1', $uArray[$i]['userid']) : "000.000",
+		'Q6E3S1'=>($this->getFiled('Q6E3S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E3S1', $uArray[$i]['userid']) : "000.000",
+		'Q6E4S1'=>($this->getFiled('Q6E4S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E4S1', $uArray[$i]['userid']) : "000.000",
+		'Q6E5S1'=>($this->getFiled('Q6E5S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E5S1', $uArray[$i]['userid']) : "000.000",
+		'Q6E6S1'=>($this->getFiled('Q6E6S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E6S1', $uArray[$i]['userid']) : "000.000",
+		'Q6E7S1'=>($this->getFiled('Q6E7S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E7S1', $uArray[$i]['userid']) : "000.000",
+		'Q6E16S1'=>($this->getFiled('Q6E16S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E16S1', $uArray[$i]['userid']) : "000.000",
+		'Q6E8S1'=>($this->getFiled('Q6E8S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E8S1', $uArray[$i]['userid']) : "000.000",
+		'Q6E9S1'=>($this->getFiled('Q6E9S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E9S1', $uArray[$i]['userid']) : "000.000",
+		'Q6E10S1'=>($this->getFiled('Q6E10S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E10S1', $uArray[$i]['userid']) : "000.000",
+		'Q6E11S1'=>($this->getFiled('Q6E11S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E11S1', $uArray[$i]['userid']) : "000.000",
+		'Q6E12S1'=>($this->getFiled('Q6E12S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E12S1', $uArray[$i]['userid']) : "000.000",
+		'Q6E13S1'=>($this->getFiled('Q6E13S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E13S1', $uArray[$i]['userid']) : "000.000",
+		'Q6E14S1'=>($this->getFiled('Q6E14S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E14S1', $uArray[$i]['userid']) : "000.000",
+		'Q6E1S2'=>($this->getFiled('Q6E1S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E1S2', $uArray[$i]['userid']) : "000.000",
+		'Q6E2S2'=>($this->getFiled('Q6E2S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E2S2', $uArray[$i]['userid']) : "000.000",
+		'Q6E3S2'=>($this->getFiled('Q6E3S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E3S2', $uArray[$i]['userid']) : "000.000",
+		'Q6E4S2'=>($this->getFiled('Q6E4S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E4S2', $uArray[$i]['userid']) : "000.000",
+		'Q6E5S2'=>($this->getFiled('Q6E5S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E5S2', $uArray[$i]['userid']) : "000.000",
+		'Q6E6S2'=>($this->getFiled('Q6E6S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E6S2', $uArray[$i]['userid']) : "000.000",
+		'Q6E7S2'=>($this->getFiled('Q6E7S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E7S2', $uArray[$i]['userid']) : "000.000",
+		'Q6E16S2'=>($this->getFiled('Q6E16S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E16S2', $uArray[$i]['userid']) : "000.000",
+		'Q6E8S2'=>($this->getFiled('Q6E8S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E8S2', $uArray[$i]['userid']) : "000.000",
+		'Q6E9S2'=>($this->getFiled('Q6E9S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E9S2', $uArray[$i]['userid']) : "000.000",
+		'Q6E10S2'=>($this->getFiled('Q6E10S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E10S2', $uArray[$i]['userid']) : "000.000",
+		'Q6E11S2'=>($this->getFiled('Q6E11S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E11S2', $uArray[$i]['userid']) : "000.000",
+		'Q6E12S2'=>($this->getFiled('Q6E12S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E12S2', $uArray[$i]['userid']) : "000.000",
+		'Q6E13S2'=>($this->getFiled('Q6E13S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E13S2', $uArray[$i]['userid']) : "000.000",
+		'Q6E14S2'=>($this->getFiled('Q6E14S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E14S2', $uArray[$i]['userid']) : "000.000",
+		'Q6E15S2'=>($this->getFiled('Q6E15S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E15S2', $uArray[$i]['userid']) : "000.000",
 		/*'upload'=>($this->getFiled('upload', $uArray[$i]['userid']) != '') ? $this->getFiled('upload', $uArray[$i]['userid']) : 0,*/
 		
 		
 		
 		
 		
-		'Q7E2S1'=>($this->getFiled('Q7E2S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7E2S1', $uArray[$i]['userid']) : 0,
+		'Q7E2S1'=>($this->getFiled('Q7E2S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7E2S1', $uArray[$i]['userid']) : "000.000",
 		
-		'Q7E2S2'=>($this->getFiled('Q7E2S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7E2S2', $uArray[$i]['userid']) : 0,
-		'Q7E2S3'=>($this->getFiled('Q7E2S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7E2S3', $uArray[$i]['userid']) : 0,
-		'Q7E3S1'=>($this->getFiled('Q7E3S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7E3S1', $uArray[$i]['userid']) : 0,
+		'Q7E2S2'=>($this->getFiled('Q7E2S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7E2S2', $uArray[$i]['userid']) : "000.000",
+		'Q7E2S3'=>($this->getFiled('Q7E2S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7E2S3', $uArray[$i]['userid']) : "000.000",
+		'Q7E3S1'=>($this->getFiled('Q7E3S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7E3S1', $uArray[$i]['userid']) : "000.000",
 		
-		'Q7E3S2'=>($this->getFiled('Q7E3S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7E3S2', $uArray[$i]['userid']) : 0,
-		'Q7E3S3'=>($this->getFiled('Q7E3S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7E3S3', $uArray[$i]['userid']) : 0,
-		'Q7E4S1'=>($this->getFiled('Q7E4S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7E4S1', $uArray[$i]['userid']) : 0,
+		'Q7E3S2'=>($this->getFiled('Q7E3S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7E3S2', $uArray[$i]['userid']) : "000.000",
+		'Q7E3S3'=>($this->getFiled('Q7E3S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7E3S3', $uArray[$i]['userid']) : "000.000",
+		'Q7E4S1'=>($this->getFiled('Q7E4S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7E4S1', $uArray[$i]['userid']) : "000.000",
 		
-		'Q7E4S2'=>($this->getFiled('Q7E4S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7E4S2', $uArray[$i]['userid']) : 0,
-		'Q7E4S3'=>($this->getFiled('Q7E4S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7E4S3', $uArray[$i]['userid']) : 0,
-		'Q7E5S1'=>($this->getFiled('Q7E5S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7E5S1', $uArray[$i]['userid']) : 0,
+		'Q7E4S2'=>($this->getFiled('Q7E4S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7E4S2', $uArray[$i]['userid']) : "000.000",
+		'Q7E4S3'=>($this->getFiled('Q7E4S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7E4S3', $uArray[$i]['userid']) : "000.000",
+		'Q7E5S1'=>($this->getFiled('Q7E5S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7E5S1', $uArray[$i]['userid']) : "000.000",
 		
-		'Q7E5S2'=>($this->getFiled('Q7E5S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7E5S2', $uArray[$i]['userid']) : 0,
-		'Q7E5S3'=>($this->getFiled('Q7E5S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7E5S3', $uArray[$i]['userid']) : 0,
-		'Q7E6S1'=>($this->getFiled('Q7E6S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7E6S1', $uArray[$i]['userid']) : 0,
+		'Q7E5S2'=>($this->getFiled('Q7E5S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7E5S2', $uArray[$i]['userid']) : "000.000",
+		'Q7E5S3'=>($this->getFiled('Q7E5S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7E5S3', $uArray[$i]['userid']) : "000.000",
+		'Q7E6S1'=>($this->getFiled('Q7E6S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7E6S1', $uArray[$i]['userid']) : "000.000",
 		
-		'Q7E6S2'=>($this->getFiled('Q7E6S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7E6S2', $uArray[$i]['userid']) : 0,
-		'Q7E6S3'=>($this->getFiled('Q7E6S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7E6S3', $uArray[$i]['userid']) : 0,
-		'Q7E7S1'=>($this->getFiled('Q7E7S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7E7S1', $uArray[$i]['userid']) : 0,
+		'Q7E6S2'=>($this->getFiled('Q7E6S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7E6S2', $uArray[$i]['userid']) : "000.000",
+		'Q7E6S3'=>($this->getFiled('Q7E6S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7E6S3', $uArray[$i]['userid']) : "000.000",
+		'Q7E7S1'=>($this->getFiled('Q7E7S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7E7S1', $uArray[$i]['userid']) : "000.000",
 		
-		'Q7E7S2'=>($this->getFiled('Q7E7S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7E7S2', $uArray[$i]['userid']) : 0,
-		'Q7E7S3'=>($this->getFiled('Q7E7S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7E7S3', $uArray[$i]['userid']) : 0,
-		'Q7E8S1'=>($this->getFiled('Q7E8S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7E8S1', $uArray[$i]['userid']) : 0,
+		'Q7E7S2'=>($this->getFiled('Q7E7S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7E7S2', $uArray[$i]['userid']) : "000.000",
+		'Q7E7S3'=>($this->getFiled('Q7E7S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7E7S3', $uArray[$i]['userid']) : "000.000",
+		'Q7E8S1'=>($this->getFiled('Q7E8S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7E8S1', $uArray[$i]['userid']) : "000.000",
 		
-		'Q7E8S2'=>($this->getFiled('Q7E8S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7E8S2', $uArray[$i]['userid']) : 0,
-		'Q7E8S3'=>($this->getFiled('Q7E8S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7E8S3', $uArray[$i]['userid']) : 0,
+		'Q7E8S2'=>($this->getFiled('Q7E8S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7E8S2', $uArray[$i]['userid']) : "000.000",
+		'Q7E8S3'=>($this->getFiled('Q7E8S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7E8S3', $uArray[$i]['userid']) : "000.000",
 	/*'upload'=>($this->getFiled('upload', $uArray[$i]['userid']) != '') ? $this->getFiled('upload', $uArray[$i]['userid']) : 0,
 	*/
 	
 	
 	
-		'Q8E1'=>($this->getFiled('Q8E1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8E1', $uArray[$i]['userid']) : 0,
-		'Q9E1'=>($this->getFiled('Q9E1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q9E1', $uArray[$i]['userid']) : 0,
+		'Q8E1'=>($this->getFiled('Q8E1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8E1', $uArray[$i]['userid']) : "000.000",
+		'Q9E1'=>($this->getFiled('Q9E1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q9E1', $uArray[$i]['userid']) : "000.000",
 	/*	'upload'=>($this->getFiled('upload', $uArray[$i]['userid']) != '') ? $this->getFiled('upload', $uArray[$i]['userid']) : 0,*/
 		
 		
-		'Q9E1S1'=>($this->getFiled('Q9E1S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q9E1S1', $uArray[$i]['userid']) : 0,
-		'Q9E1S2'=>($this->getFiled('Q9E1S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q9E1S2', $uArray[$i]['userid']) : 0,
-		'Q9E1S3'=>($this->getFiled('Q9E1S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q9E1S3', $uArray[$i]['userid']) : 0,
-		'Q9E1S5'=>($this->getFiled('Q9E1S5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q9E1S5', $uArray[$i]['userid']) : 0,
-		'Q9E1S4'=>($this->getFiled('Q9E1S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q9E1S4', $uArray[$i]['userid']) : 0,
-		'Q10E1'=>($this->getFiled('Q10E1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q10E1', $uArray[$i]['userid']) : 0,
+		'Q9E1S1'=>($this->getFiled('Q9E1S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q9E1S1', $uArray[$i]['userid']) : "000.000",
+		'Q9E1S2'=>($this->getFiled('Q9E1S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q9E1S2', $uArray[$i]['userid']) : "000.000",
+		'Q9E1S3'=>($this->getFiled('Q9E1S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q9E1S3', $uArray[$i]['userid']) : "000.000",
+		'Q9E1S5'=>($this->getFiled('Q9E1S5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q9E1S5', $uArray[$i]['userid']) : "000.000",
+		'Q9E1S4'=>($this->getFiled('Q9E1S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q9E1S4', $uArray[$i]['userid']) : "000.000",
+		'Q10E1'=>($this->getFiled('Q10E1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q10E1', $uArray[$i]['userid']) : "000.000",
 	/*	'upload'=>($this->getFiled('upload', $uArray[$i]['userid']) != '') ? $this->getFiled('upload', $uArray[$i]['userid']) : 0,*/
 		'energy_points'=>$this->getEnergyPoints($uArray[$i]['userid']),
 		
-	    'Q4F1'=>($this->getFiled('Q4F1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4F1', $uArray[$i]['userid']) : 0,
-		'Q5F1'=>($this->getFiled('Q5F1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5F1', $uArray[$i]['userid']) : 0,
-		'Q5F1S1'=>($this->getFiled('Q5F1S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5F1S1', $uArray[$i]['userid']) : 0,
-		'Q5F1S2'=>($this->getFiled('Q5F1S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5F1S2', $uArray[$i]['userid']) : 0,
-		'Q5F1S3'=>($this->getFiled('Q5F1S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5F1S3', $uArray[$i]['userid']) : 0,
-		'Q5F1S4'=>($this->getFiled('Q5F1S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5F1S4', $uArray[$i]['userid']) : 0,
-		'Q5F2'=>($this->getFiled('Q5F2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5F2', $uArray[$i]['userid']) : 0,
-		'Q6F2S1'=>($this->getFiled('Q6F2S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F2S1', $uArray[$i]['userid']) : 0,
-		'Q6F2S2'=>($this->getFiled('Q6F2S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F2S2', $uArray[$i]['userid']) : 0,
-		'Q6F2S3'=>($this->getFiled('Q6F2S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F2S3', $uArray[$i]['userid']) : 0,
-		'Q6F3S1'=>($this->getFiled('Q6F3S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F3S1', $uArray[$i]['userid']) : 0,
-		'Q6F3S2'=>($this->getFiled('Q6F3S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F3S2', $uArray[$i]['userid']) : 0,
-		'Q6F3S3'=>($this->getFiled('Q6F3S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F3S3', $uArray[$i]['userid']) : 0,
-		'Q6F4S1'=>($this->getFiled('Q6F4S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F4S1', $uArray[$i]['userid']) : 0,
-		'Q6F4S2'=>($this->getFiled('Q6F4S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F4S2', $uArray[$i]['userid']) : 0,
-		'Q6F4S3'=>($this->getFiled('Q6F4S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F4S3', $uArray[$i]['userid']) : 0,
-		'Q6F5S1'=>($this->getFiled('Q6F5S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F5S1', $uArray[$i]['userid']) : 0,
-		'Q6F5S2'=>($this->getFiled('Q6F5S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F5S2', $uArray[$i]['userid']) : 0,
+	    'Q4F1'=>($this->getFiled('Q4F1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4F1', $uArray[$i]['userid']) : "000.000",
+		'Q5F1'=>($this->getFiled('Q5F1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5F1', $uArray[$i]['userid']) : "000.000",
+		'Q5F1S1'=>($this->getFiled('Q5F1S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5F1S1', $uArray[$i]['userid']) : "000.000",
+		'Q5F1S2'=>($this->getFiled('Q5F1S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5F1S2', $uArray[$i]['userid']) : "000.000",
+		'Q5F1S3'=>($this->getFiled('Q5F1S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5F1S3', $uArray[$i]['userid']) : "000.000",
+		'Q5F1S4'=>($this->getFiled('Q5F1S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5F1S4', $uArray[$i]['userid']) : "000.000",
+		'Q5F2'=>($this->getFiled('Q5F2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5F2', $uArray[$i]['userid']) : "000.000",
+		'Q6F2S1'=>($this->getFiled('Q6F2S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F2S1', $uArray[$i]['userid']) : "000.000",
+		'Q6F2S2'=>($this->getFiled('Q6F2S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F2S2', $uArray[$i]['userid']) : "000.000",
+		'Q6F2S3'=>($this->getFiled('Q6F2S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F2S3', $uArray[$i]['userid']) : "000.000",
+		'Q6F3S1'=>($this->getFiled('Q6F3S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F3S1', $uArray[$i]['userid']) : "000.000",
+		'Q6F3S2'=>($this->getFiled('Q6F3S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F3S2', $uArray[$i]['userid']) : "000.000",
+		'Q6F3S3'=>($this->getFiled('Q6F3S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F3S3', $uArray[$i]['userid']) : "000.000",
+		'Q6F4S1'=>($this->getFiled('Q6F4S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F4S1', $uArray[$i]['userid']) : "000.000",
+		'Q6F4S2'=>($this->getFiled('Q6F4S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F4S2', $uArray[$i]['userid']) : "000.000",
+		'Q6F4S3'=>($this->getFiled('Q6F4S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F4S3', $uArray[$i]['userid']) : "000.000",
+		'Q6F5S1'=>($this->getFiled('Q6F5S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F5S1', $uArray[$i]['userid']) : "000.000",
+		'Q6F5S2'=>($this->getFiled('Q6F5S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F5S2', $uArray[$i]['userid']) : "000.000",
 		
 		
-		'Q6F5S3'=>($this->getFiled('Q6F5S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F5S3', $uArray[$i]['userid']) : 0,
-		'Q6F6S1'=>($this->getFiled('Q6F6S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F6S1', $uArray[$i]['userid']) : 0,
-		'Q6F6S2'=>($this->getFiled('Q6F6S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F6S2', $uArray[$i]['userid']) : 0,
-		'Q6F6S3'=>($this->getFiled('Q6F6S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F6S3', $uArray[$i]['userid']) : 0,
+		'Q6F5S3'=>($this->getFiled('Q6F5S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F5S3', $uArray[$i]['userid']) : "000.000",
+		'Q6F6S1'=>($this->getFiled('Q6F6S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F6S1', $uArray[$i]['userid']) : "000.000",
+		'Q6F6S2'=>($this->getFiled('Q6F6S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F6S2', $uArray[$i]['userid']) : "000.000",
+		'Q6F6S3'=>($this->getFiled('Q6F6S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F6S3', $uArray[$i]['userid']) : "000.000",
 		
 		
-		'Q6F7S1'=>($this->getFiled('Q6F7S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F7S1', $uArray[$i]['userid']) : 0,
-		'Q6F7S2'=>($this->getFiled('Q6F7S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F7S2', $uArray[$i]['userid']) : 0,
-		'Q6F7S3'=>($this->getFiled('Q6F7S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F7S3', $uArray[$i]['userid']) : 0,
+		'Q6F7S1'=>($this->getFiled('Q6F7S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F7S1', $uArray[$i]['userid']) : "000.000",
+		'Q6F7S2'=>($this->getFiled('Q6F7S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F7S2', $uArray[$i]['userid']) : "000.000",
+		'Q6F7S3'=>($this->getFiled('Q6F7S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F7S3', $uArray[$i]['userid']) : "000.000",
 		
 		
-		'Q6F8S1'=>($this->getFiled('Q6F8S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F8S1', $uArray[$i]['userid']) : 0,
-		'Q6F8S2'=>($this->getFiled('Q6F8S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F8S2', $uArray[$i]['userid']) : 0,
-		'Q6F8S3'=>($this->getFiled('Q6F8S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F8S3', $uArray[$i]['userid']) : 0,
+		'Q6F8S1'=>($this->getFiled('Q6F8S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F8S1', $uArray[$i]['userid']) : "000.000",
+		'Q6F8S2'=>($this->getFiled('Q6F8S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F8S2', $uArray[$i]['userid']) : "000.000",
+		'Q6F8S3'=>($this->getFiled('Q6F8S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F8S3', $uArray[$i]['userid']) : "000.000",
 		
 		
-		'Q6F9S1'=>($this->getFiled('Q6F9S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F9S1', $uArray[$i]['userid']) : 0,
-		'Q6F9S2'=>($this->getFiled('Q6F9S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F9S2', $uArray[$i]['userid']) : 0,
-		'Q6F9S3'=>($this->getFiled('Q6F9S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F9S3', $uArray[$i]['userid']) : 0,
+		'Q6F9S1'=>($this->getFiled('Q6F9S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F9S1', $uArray[$i]['userid']) : "000.000",
+		'Q6F9S2'=>($this->getFiled('Q6F9S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F9S2', $uArray[$i]['userid']) : "000.000",
+		'Q6F9S3'=>($this->getFiled('Q6F9S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F9S3', $uArray[$i]['userid']) : "000.000",
 		
 		
-		'Q6F10S1'=>($this->getFiled('Q6F10S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F10S1', $uArray[$i]['userid']) : 0,
-		'Q6F10S2'=>($this->getFiled('Q6F10S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F10S2', $uArray[$i]['userid']) : 0,
-		'Q6F10S3'=>($this->getFiled('Q6F10S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F10S3', $uArray[$i]['userid']) : 0,
+		'Q6F10S1'=>($this->getFiled('Q6F10S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F10S1', $uArray[$i]['userid']) : "000.000",
+		'Q6F10S2'=>($this->getFiled('Q6F10S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F10S2', $uArray[$i]['userid']) : "000.000",
+		'Q6F10S3'=>($this->getFiled('Q6F10S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6F10S3', $uArray[$i]['userid']) : "000.000",
 		
 		
 		
 		
-		'Q7F1'=>($this->getFiled('Q7F1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7F1', $uArray[$i]['userid']) : 0,
-		'Q7F1S1'=>($this->getFiled('Q7F1S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7F1S1', $uArray[$i]['userid']) : 0,
-		'Q7F1S2'=>($this->getFiled('Q7F1S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7F1S2', $uArray[$i]['userid']) : 0,
-		'Q7F1S3'=>($this->getFiled('Q7F1S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7F1S3', $uArray[$i]['userid']) : 0,
-		'Q7F1S4'=>($this->getFiled('Q7F1S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7F1S4', $uArray[$i]['userid']) : 0,
-		'Q7F1S5'=>($this->getFiled('Q7F1S5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7F1S5', $uArray[$i]['userid']) : 0,
+		'Q7F1'=>($this->getFiled('Q7F1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7F1', $uArray[$i]['userid']) : "000.000",
+		'Q7F1S1'=>($this->getFiled('Q7F1S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7F1S1', $uArray[$i]['userid']) : "000.000",
+		'Q7F1S2'=>($this->getFiled('Q7F1S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7F1S2', $uArray[$i]['userid']) : "000.000",
+		'Q7F1S3'=>($this->getFiled('Q7F1S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7F1S3', $uArray[$i]['userid']) : "000.000",
+		'Q7F1S4'=>($this->getFiled('Q7F1S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7F1S4', $uArray[$i]['userid']) : "000.000",
+		'Q7F1S5'=>($this->getFiled('Q7F1S5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7F1S5', $uArray[$i]['userid']) : "000.000",
 		/*'upload'=>($this->getFiled('upload', $uArray[$i]['userid']) != '') ? $this->getFiled('upload', $uArray[$i]['userid']) : 0,*/
-		'Q7F3S1'=>($this->getFiled('Q7F3S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7F3S1', $uArray[$i]['userid']) : 0,
+		'Q7F3S1'=>($this->getFiled('Q7F3S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7F3S1', $uArray[$i]['userid']) : "000.000",
 		
 		
 		
 		
-		'Q8F1'=>($this->getFiled('Q8F1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8F1', $uArray[$i]['userid']) : 0,
-		'Q8F1S1'=>($this->getFiled('Q8F1S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8F1S1', $uArray[$i]['userid']) : 0,
-		'Q8F1S2'=>($this->getFiled('Q8F1S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8F1S2', $uArray[$i]['userid']) : 0,
-		'Q8F1S3'=>($this->getFiled('Q8F1S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8F1S3', $uArray[$i]['userid']) : 0,
-		'Q8F1S4'=>($this->getFiled('Q8F1S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8F1S4', $uArray[$i]['userid']) : 0,
-		'Q8F1S5'=>($this->getFiled('Q8F1S5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8F1S5', $uArray[$i]['userid']) : 0,
+		'Q8F1'=>($this->getFiled('Q8F1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8F1', $uArray[$i]['userid']) : "000.000",
+		'Q8F1S1'=>($this->getFiled('Q8F1S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8F1S1', $uArray[$i]['userid']) : "000.000",
+		'Q8F1S2'=>($this->getFiled('Q8F1S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8F1S2', $uArray[$i]['userid']) : "000.000",
+		'Q8F1S3'=>($this->getFiled('Q8F1S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8F1S3', $uArray[$i]['userid']) : "000.000",
+		'Q8F1S4'=>($this->getFiled('Q8F1S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8F1S4', $uArray[$i]['userid']) : "000.000",
+		'Q8F1S5'=>($this->getFiled('Q8F1S5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8F1S5', $uArray[$i]['userid']) : "000.000",
 		
 		
 		
-		'Q9F1'=>($this->getFiled('Q9F1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q9F1', $uArray[$i]['userid']) : 0,
-		'Q9F2'=>($this->getFiled('Q9F2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q9F2', $uArray[$i]['userid']) : 0,
+		'Q9F1'=>($this->getFiled('Q9F1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q9F1', $uArray[$i]['userid']) : "000.000",
+		'Q9F2'=>($this->getFiled('Q9F2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q9F2', $uArray[$i]['userid']) : "000.000",
 		
 		
-		'Q10F1'=>($this->getFiled('Q10F1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q10F1', $uArray[$i]['userid']) : 0,
-		'Q10F2'=>($this->getFiled('Q10F2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q10F2', $uArray[$i]['userid']) : 0,
+		'Q10F1'=>($this->getFiled('Q10F1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q10F1', $uArray[$i]['userid']) : "000.000",
+		'Q10F2'=>($this->getFiled('Q10F2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q10F2', $uArray[$i]['userid']) : "000.000",
 		
 		
-		'Q11F1'=>($this->getFiled('Q11F1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q11F1', $uArray[$i]['userid']) : 0,
-		'Q11F2'=>($this->getFiled('Q11F2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q11F2', $uArray[$i]['userid']) : 0,
+		'Q11F1'=>($this->getFiled('Q11F1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q11F1', $uArray[$i]['userid']) : "000.000",
+		'Q11F2'=>($this->getFiled('Q11F2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q11F2', $uArray[$i]['userid']) : "000.000",
 		
 		
-		'Q11F3'=>($this->getFiled('Q11F3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q11F3', $uArray[$i]['userid']) : 0,
+		'Q11F3'=>($this->getFiled('Q11F3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q11F3', $uArray[$i]['userid']) : "000.000",
 	/*	'upload'=>($this->getFiled('upload', $uArray[$i]['userid']) != '') ? $this->getFiled('upload', $uArray[$i]['userid']) : 0,*/
 		
 		
-		'Q12F1'=>($this->getFiled('Q12F1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12F1', $uArray[$i]['userid']) : 0,
-		'Q12F2'=>($this->getFiled('Q12F2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12F2', $uArray[$i]['userid']) : 0,
-		'Q13F1'=>($this->getFiled('Q13F1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q13F1', $uArray[$i]['userid']) : 0,
-		'Q13F2'=>($this->getFiled('Q13F2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q13F2', $uArray[$i]['userid']) : 0,
+		'Q12F1'=>($this->getFiled('Q12F1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12F1', $uArray[$i]['userid']) : "000.000",
+		'Q12F2'=>($this->getFiled('Q12F2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12F2', $uArray[$i]['userid']) : "000.000",
+		'Q13F1'=>($this->getFiled('Q13F1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q13F1', $uArray[$i]['userid']) : "000.000",
+		'Q13F2'=>($this->getFiled('Q13F2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q13F2', $uArray[$i]['userid']) : "000.000",
 		/*'upload'=>($this->getFiled('upload', $uArray[$i]['userid']) != '') ? $this->getFiled('upload', $uArray[$i]['userid']) : 0,*/
 		'food_points'=>$this->getFoodPoints($uArray[$i]['userid']),
 		
-	   'Q4L1'=>($this->getFiled('Q4L1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4L1', $uArray[$i]['userid']) : 0,
-		'Q4L2'=>($this->getFiled('Q4L2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4L2', $uArray[$i]['userid']) : 0,
-		'Q4L3'=>($this->getFiled('Q4L3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4L3', $uArray[$i]['userid']) : 0,
-		'Q4L4'=>($this->getFiled('Q4L4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4L4', $uArray[$i]['userid']) : 0,
-		'Q4L5'=>($this->getFiled('Q4L5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4L5', $uArray[$i]['userid']) : 0,
-		'Q4L6'=>($this->getFiled('Q4L6', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4L6', $uArray[$i]['userid']) : 0,
-		'Q4L7'=>($this->getFiled('Q4L7', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4L7', $uArray[$i]['userid']) : 0,
-		'Q4L8'=>($this->getFiled('Q4L8', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4L8', $uArray[$i]['userid']) : 0,
-		'Q4L9'=>($this->getFiled('Q4L9', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4L9', $uArray[$i]['userid']) : 0,
-		'Q4L10'=>($this->getFiled('Q4L10', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4L10', $uArray[$i]['userid']) : 0,
-		'Q4L11'=>($this->getFiled('Q4L11', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4L11', $uArray[$i]['userid']) : 0,
-		'Q4L12'=>($this->getFiled('Q4L12', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4L12', $uArray[$i]['userid']) : 0,
+	   'Q4L1'=>($this->getFiled('Q4L1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4L1', $uArray[$i]['userid']) : "000.000",
+		'Q4L2'=>($this->getFiled('Q4L2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4L2', $uArray[$i]['userid']) : "000.000",
+		'Q4L3'=>($this->getFiled('Q4L3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4L3', $uArray[$i]['userid']) : "000.000",
+		'Q4L4'=>($this->getFiled('Q4L4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4L4', $uArray[$i]['userid']) : "000.000",
+		'Q4L5'=>($this->getFiled('Q4L5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4L5', $uArray[$i]['userid']) : "000.000",
+		'Q4L6'=>($this->getFiled('Q4L6', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4L6', $uArray[$i]['userid']) : "000.000",
+		'Q4L7'=>($this->getFiled('Q4L7', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4L7', $uArray[$i]['userid']) : "000.000",
+		'Q4L8'=>($this->getFiled('Q4L8', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4L8', $uArray[$i]['userid']) : "000.000",
+		'Q4L9'=>($this->getFiled('Q4L9', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4L9', $uArray[$i]['userid']) : "000.000",
+		'Q4L10'=>($this->getFiled('Q4L10', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4L10', $uArray[$i]['userid']) : "000.000",
+		'Q4L11'=>($this->getFiled('Q4L11', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4L11', $uArray[$i]['userid']) : "000.000",
+		'Q4L12'=>($this->getFiled('Q4L12', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4L12', $uArray[$i]['userid']) : "000.000",
 		'TotalArea'=>$this->getTotalArea($uArray[$i]['userid']),
 		
 		
-		'PercentageArea'=>$this->getPercentageArea($uArray[$i]['userid']),
+		'PercentageArea'=>($this->getPercentageArea($uArray[$i]['userid'])!= '')?,
 		
-		'Q5L1S3'=>($this->getFiled('Q5L1S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5L1S3', $uArray[$i]['userid']) : 0,
-		'Q5L1S1'=>($this->getFiled('Q5L1S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5L1S1', $uArray[$i]['userid']) : 0,
-		'Q5L1S2'=>($this->getFiled('Q5L1S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5L1S2', $uArray[$i]['userid']) : 0,
-		'Q5L2S3'=>($this->getFiled('Q5L2S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5L2S3', $uArray[$i]['userid']) : 0,
-		'Q5L2S2'=>($this->getFiled('Q5L2S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5L2S2', $uArray[$i]['userid']) : 0,
-		'Q5L2S1'=>($this->getFiled('Q5L2S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5L2S1', $uArray[$i]['userid']) : 0,
-		'Q6L1'=>($this->getFiled('Q6L1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6L1', $uArray[$i]['userid']) : 0,
+		'Q5L1S3'=>($this->getFiled('Q5L1S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5L1S3', $uArray[$i]['userid']) : "000.000",
+		'Q5L1S1'=>($this->getFiled('Q5L1S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5L1S1', $uArray[$i]['userid']) : "000.000",
+		'Q5L1S2'=>($this->getFiled('Q5L1S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5L1S2', $uArray[$i]['userid']) : "000.000",
+		'Q5L2S3'=>($this->getFiled('Q5L2S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5L2S3', $uArray[$i]['userid']) : "000.000",
+		'Q5L2S2'=>($this->getFiled('Q5L2S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5L2S2', $uArray[$i]['userid']) : "000.000",
+		'Q5L2S1'=>($this->getFiled('Q5L2S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5L2S1', $uArray[$i]['userid']) : "000.000",
+		'Q6L1'=>($this->getFiled('Q6L1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6L1', $uArray[$i]['userid']) : "000.000",
 		/*'upload'=>($this->getFiled('upload', $uArray[$i]['userid']) != '') ? $this->getFiled('upload', $uArray[$i]['userid']) : 0,*/
 		'land_points'=>$this->getLandPoints($uArray[$i]['userid']),
 	   
-	  'Q4W1'=>($this->getFiled('Q4W1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4W1', $uArray[$i]['userid']) : 0,
-		'Q4W2'=>($this->getFiled('Q4W2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4W2', $uArray[$i]['userid']) : 0,
-		'Q4W3'=>($this->getFiled('Q4W3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4W3', $uArray[$i]['userid']) : 0,
-		'Q4W4'=>($this->getFiled('Q4W4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4W4', $uArray[$i]['userid']) : 0,
-		'Q4W5'=>($this->getFiled('Q4W5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4W5', $uArray[$i]['userid']) : 0,
-		'Q4W6'=>($this->getFiled('Q4W6', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4W6', $uArray[$i]['userid']) : 0,
-		'Q4W7'=>($this->getFiled('Q4W7', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4W7', $uArray[$i]['userid']) : 0,
-		'Q4W8'=>($this->getFiled('Q4W8', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4W8', $uArray[$i]['userid']) : 0,
-		'Q4W9'=>($this->getFiled('Q4W9', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4W9', $uArray[$i]['userid']) : 0,
-		'Q4W10'=>($this->getFiled('Q4W10', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4W10', $uArray[$i]['userid']) : 0,
-		'Q4W11'=>($this->getFiled('Q4W11', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4W11', $uArray[$i]['userid']) : 0,
-		'Q5W1'=>($this->getFiled('Q5W1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5W1', $uArray[$i]['userid']) : 0,
-		'Q6W1'=>($this->getFiled('Q6W1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6W1', $uArray[$i]['userid']) : 0,
-		'Q6W4'=>($this->getFiled('Q6W4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6W4', $uArray[$i]['userid']) : 0,
-		'Q7W1'=>($this->getFiled('Q7W1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7W1', $uArray[$i]['userid']) : 0,
-		'Q7W2'=>($this->getFiled('Q7W2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7W2', $uArray[$i]['userid']) : 0,
-		'Q8W1S1'=>($this->getFiled('Q8W1S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W1S1', $uArray[$i]['userid']) : 0,
-		'Q8W1S2'=>($this->getFiled('Q8W1S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W1S2', $uArray[$i]['userid']) : 0,	
-		'Q8W1S3'=>($this->getFiled('Q8W1S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W1S3', $uArray[$i]['userid']) : 0,
-		'Q8W1S4'=>($this->getFiled('Q8W1S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W1S4', $uArray[$i]['userid']) : 0,
-		'Q8W1S5'=>($this->getFiled('Q8W1S5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W1S5', $uArray[$i]['userid']) : 0,
-		'Q8W1S6'=>($this->getFiled('Q8W1S6', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W1S6', $uArray[$i]['userid']) : 0,
-		'Q8W1S7'=>($this->getFiled('Q8W1S7', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W1S7', $uArray[$i]['userid']) : 0,
-		'Q8W1S8'=>($this->getFiled('Q8W1S8', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W1S8', $uArray[$i]['userid']) : 0,
-		'Q8W1S9'=>($this->getFiled('Q8W1S9', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W1S9', $uArray[$i]['userid']) : 0,
-		'Q8W1S10'=>($this->getFiled('Q8W1S10', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W1S10', $uArray[$i]['userid']) : 0,
-		'Q8W1S11'=>($this->getFiled('Q8W1S11', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W1S11', $uArray[$i]['userid']) : 0,
-		'Q8W2'=>($this->getFiled('Q8W2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2', $uArray[$i]['userid']) : 0,
-		'Q8W2S1S1'=>($this->getFiled('Q8W2S1S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2S1S1', $uArray[$i]['userid']) : 0,
-		'Q8W2S2S3'=>($this->getFiled('Q8W2S2S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2S2S3', $uArray[$i]['userid']) : 0,
-		'Q8W2S2S4'=>($this->getFiled('Q8W2S2S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2S2S4', $uArray[$i]['userid']) : 0,
-		'Q8W2S2S8'=>($this->getFiled('Q8W2S2S8', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2S2S8', $uArray[$i]['userid']) : 0,
-		'Q8W2S6'=>($this->getFiled('Q8W2S6', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2S6', $uArray[$i]['userid']) : 0,
-		'Q8W3S1'=>($this->getFiled('Q8W3S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W3S1', $uArray[$i]['userid']) : 0,
-		'Q8W3S2'=>($this->getFiled('Q8W3S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W3S2', $uArray[$i]['userid']) : 0,
-		'Q8W3S3'=>($this->getFiled('Q8W3S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W3S3', $uArray[$i]['userid']) : 0,
-		'Q8W3S4'=>($this->getFiled('Q8W3S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W3S4', $uArray[$i]['userid']) : 0,	
-		'Q8W3S5'=>($this->getFiled('Q8W3S5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W3S5', $uArray[$i]['userid']) : 0,
-		'Q8W3S6'=>($this->getFiled('Q8W3S6', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W3S6', $uArray[$i]['userid']) : 0,
-		'Q8W3S7'=>($this->getFiled('Q8W3S7', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W3S7', $uArray[$i]['userid']) : 0,
-		'Q8W3S8'=>($this->getFiled('Q8W3S8', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W3S8', $uArray[$i]['userid']) : 0,
-		'Q9W1'=>($this->getFiled('Q9W1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q9W1', $uArray[$i]['userid']) : 0,
-		'Q10W1'=>($this->getFiled('Q10W1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q10W1', $uArray[$i]['userid']) : 0,
-		'Q11W1'=>($this->getFiled('Q11W1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q11W1', $uArray[$i]['userid']) : 0,
-		'Q13W1S1'=>($this->getFiled('Q13W1S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q13W1S1', $uArray[$i]['userid']) : 0,
-		'Q13W1S2'=>($this->getFiled('Q13W1S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q13W1S2', $uArray[$i]['userid']) : 0,
-		'Q13W1S3'=>($this->getFiled('Q13W1S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q13W1S3', $uArray[$i]['userid']) : 0,
-		'Q13W1S4'=>($this->getFiled('Q13W1S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q13W1S4', $uArray[$i]['userid']) : 0,
-		'Q14W1'=>($this->getFiled('Q14W1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q14W1', $uArray[$i]['userid']) : 0,
-		'Q15W1'=>($this->getFiled('Q15W1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q15W1', $uArray[$i]['userid']) : 0,
-		'Q16W1'=>($this->getFiled('Q16W1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q16W1', $uArray[$i]['userid']) : 0,
-		'Q21W1'=>($this->getFiled('Q21W1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q21W1', $uArray[$i]['userid']) : 0,
-		'Q18W1'=>($this->getFiled('Q18W1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q18W1', $uArray[$i]['userid']) : 0	,
-		'Q18W2'=>($this->getFiled('Q18W2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q18W2', $uArray[$i]['userid']) : 0,
-		'Q19W1'=>($this->getFiled('Q19W1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q19W1', $uArray[$i]['userid']) : 0,
-		'Q20W1'=>($this->getFiled('Q20W1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q20W1', $uArray[$i]['userid']) : 0,
-		'Q20W2'=>($this->getFiled('Q20W2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q20W2', $uArray[$i]['userid']) : 0,
+	  'Q4W1'=>($this->getFiled('Q4W1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4W1', $uArray[$i]['userid']) : "000.000",
+		'Q4W2'=>($this->getFiled('Q4W2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4W2', $uArray[$i]['userid']) : "000.000",
+		'Q4W3'=>($this->getFiled('Q4W3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4W3', $uArray[$i]['userid']) : "000.000",
+		'Q4W4'=>($this->getFiled('Q4W4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4W4', $uArray[$i]['userid']) : "000.000",
+		'Q4W5'=>($this->getFiled('Q4W5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4W5', $uArray[$i]['userid']) : "000.000",
+		'Q4W6'=>($this->getFiled('Q4W6', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4W6', $uArray[$i]['userid']) : "000.000",
+		'Q4W7'=>($this->getFiled('Q4W7', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4W7', $uArray[$i]['userid']) : "000.000",
+		'Q4W8'=>($this->getFiled('Q4W8', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4W8', $uArray[$i]['userid']) : "000.000",
+		'Q4W9'=>($this->getFiled('Q4W9', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4W9', $uArray[$i]['userid']) : "000.000",
+		'Q4W10'=>($this->getFiled('Q4W10', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4W10', $uArray[$i]['userid']) : "000.000",
+		'Q4W11'=>($this->getFiled('Q4W11', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4W11', $uArray[$i]['userid']) : "000.000",
+		'Q5W1'=>($this->getFiled('Q5W1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5W1', $uArray[$i]['userid']) : "000.000",
+		'Q5W2'=>($this->getFiled('Q5W2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5W2', $uArray[$i]['userid']) : "000.000",
+		'Q5W3'=>($this->getFiled('Q5W3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5W3', $uArray[$i]['userid']) : "000.000",
+		'Q5W4'=>($this->getFiled('Q5W4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5W4', $uArray[$i]['userid']) : "000.000",
+		'Q6W1'=>($this->getFiled('Q6W1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6W1', $uArray[$i]['userid']) : "000.000",
+		'Q6W2'=>($this->getFiled('Q6W2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6W2', $uArray[$i]['userid']) : "000.000",
+		'Q6W3'=>($this->getFiled('Q6W3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6W3', $uArray[$i]['userid']) : "000.000",
+		'Q6W4'=>($this->getFiled('Q6W4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6W4', $uArray[$i]['userid']) : "000.000",
+		'Q6W5'=>($this->getFiled('Q6W5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6W5', $uArray[$i]['userid']) : "000.000",
+		'Q7W1'=>($this->getFiled('Q7W1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7W1', $uArray[$i]['userid']) : "000.000",
+		'Q7W2'=>($this->getFiled('Q7W2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7W2', $uArray[$i]['userid']) : "000.000",
+		'Q8W1S1'=>($this->getFiled('Q8W1S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W1S1', $uArray[$i]['userid']) : "000.000",
+		'Q8W1S2'=>($this->getFiled('Q8W1S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W1S2', $uArray[$i]['userid']) : "000.000",	
+		'Q8W1S3'=>($this->getFiled('Q8W1S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W1S3', $uArray[$i]['userid']) : "000.000",
+		'Q8W1S4'=>($this->getFiled('Q8W1S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W1S4', $uArray[$i]['userid']) : "000.000",
+		'Q8W1S5'=>($this->getFiled('Q8W1S5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W1S5', $uArray[$i]['userid']) : "000.000",
+		'Q8W1S6'=>($this->getFiled('Q8W1S6', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W1S6', $uArray[$i]['userid']) : "000.000",
+		'Q8W1S7'=>($this->getFiled('Q8W1S7', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W1S7', $uArray[$i]['userid']) : "000.000",
+		'Q8W1S8'=>($this->getFiled('Q8W1S8', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W1S8', $uArray[$i]['userid']) : "000.000",
+		'Q8W1S9'=>($this->getFiled('Q8W1S9', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W1S9', $uArray[$i]['userid']) : "000.000",
+		'Q8W1S10'=>($this->getFiled('Q8W1S10', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W1S10', $uArray[$i]['userid']) : "000.000",
+		'Q8W1S12'=>($this->getFiled('Q8W1S12', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W1S12', $uArray[$i]['userid']) : "000.000",
+		'Q8W1S11'=>($this->getFiled('Q8W1S11', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W1S11', $uArray[$i]['userid']) : "000.000",
+		'Q8W2'=>($this->getFiled('Q8W2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2', $uArray[$i]['userid']) : "000.000",
+		'Q8W2S1'=>($this->getFiled('Q8W2S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2S1', $uArray[$i]['userid']) : "000.000",
+		'Q8W2S1S1'=>($this->getFiled('Q8W2S1S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2S1S1', $uArray[$i]['userid']) : "000.000",
+		'Q8W2S2S3'=>($this->getFiled('Q8W2S2S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2S2S3', $uArray[$i]['userid']) : "000.000",
+		'Q8W2S2S4'=>($this->getFiled('Q8W2S2S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2S2S4', $uArray[$i]['userid']) : "000.000",
+		'Q8W2S2S8'=>($this->getFiled('Q8W2S2S8', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2S2S8', $uArray[$i]['userid']) : "000.000",
+		
+		'Q8W2S2'=>($this->getFiled('Q8W2S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2S2', $uArray[$i]['userid']) : "000.000",
+		
+		'Q8W2S2S1'=>($this->getFiled('Q8W2S2S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2S2S1', $uArray[$i]['userid']) : "000.000",
+		
+		
+		
+		
+		
+		
+		
+		
+		'Q8W2S2S14'=>($this->getFiled('Q8W2S2S14', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2S2S14', $uArray[$i]['userid']) : "000.000",
+		
+		'Q8W2S2S25'=>($this->getFiled('Q8W2S2S25', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2S2S25', $uArray[$i]['userid']) : "000.000",
+		
+		'Q8W2S2S36'=>($this->getFiled('Q8W2S2S36', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2S2S36', $uArray[$i]['userid']) : "000.000",
+		
+		'Q8W2S2S47'=>($this->getFiled('Q8W2S2S47', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2S2S47', $uArray[$i]['userid']) : "000.000",
+		
+		'Q8W2S2S58'=>($this->getFiled('Q8W2S2S58', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2S2S58', $uArray[$i]['userid']) : "000.000",
+		
+		'Q8W2S2S69'=>($this->getFiled('Q8W2S2S69', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2S2S69', $uArray[$i]['userid']) : "000.000",
+		
+		'Q8W2S2S723'=>($this->getFiled('Q8W2S2S723', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2S2S723', $uArray[$i]['userid']) : "000.000",
+		
+		'Q8W2S2S811'=>($this->getFiled('Q8W2S2S811', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2S2S811', $uArray[$i]['userid']) : "000.000",
+		
+		'Q8W2S2S912'=>($this->getFiled('Q8W2S2S912', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2S2S912', $uArray[$i]['userid']) : "000.000",
+		
+		
+		'Q8W2S2S1013'=>($this->getFiled('Q8W2S2S1013', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2S2S1013', $uArray[$i]['userid']) : "000.000",
+		
+		
+		
+		
+		
+		
+		
+		'Q8W2S2S2'=>($this->getFiled('Q8W2S2S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2S2S2', $uArray[$i]['userid']) : "000.000",
+		
+		'Q8W2S2S1'=>($this->getFiled('Q8W2S2S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2S2S1', $uArray[$i]['userid']) : "000.000",
+		'Q8W2S2S7'=>($this->getFiled('Q8W2S2S7', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2S2S7', $uArray[$i]['userid']) : "000.000",
+			'Q8W2S2S10'=>($this->getFiled('Q8W2S2S10', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2S2S10', $uArray[$i]['userid']) : "000.000",
+		'Q8W2S4'=>($this->getFiled('Q8W2S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2S4', $uArray[$i]['userid']) : "000.000",
+		'Q8W2S31'=>($this->getFiled('Q8W2S31', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2S31', $uArray[$i]['userid']) : "000.000",
+		'Q8W2S32'=>($this->getFiled('Q8W2S32', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2S32', $uArray[$i]['userid']) : "000.000",
+		'Q8W2S33'=>($this->getFiled('Q8W2S33', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2S33', $uArray[$i]['userid']) : "000.000",
+		'Q8W2S34'=>($this->getFiled('Q8W2S34', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2S34', $uArray[$i]['userid']) : "000.000",
+		'Q8W2S35'=>($this->getFiled('Q8W2S35', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2S35', $uArray[$i]['userid']) : "000.000",
+		'Q8W2S36'=>($this->getFiled('Q8W2S36', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2S36', $uArray[$i]['userid']) : "000.000",
+		'Q8W2S37'=>($this->getFiled('Q8W2S37', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2S37', $uArray[$i]['userid']) : "000.000",
+		'Q8W2S38'=>($this->getFiled('Q8W2S38', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2S38', $uArray[$i]['userid']) : "000.000",
+		'Q8W2S4S1'=>($this->getFiled('Q8W2S4S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2S4S1', $uArray[$i]['userid']) : "000.000",
+		'Q8W2S4S22'=>($this->getFiled('Q8W2S4S22', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2S4S22', $uArray[$i]['userid']) : "000.000",
+		'Q8W2S5'=>($this->getFiled('Q8W2S5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2S5', $uArray[$i]['userid']) : "000.000",
+		'Q8W2S7'=>($this->getFiled('Q8W2S7', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2S7', $uArray[$i]['userid']) : "000.000",
+		'Q8W2S61'=>($this->getFiled('Q8W2S61', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2S61', $uArray[$i]['userid']) : "000.000",
+		'Q8W2S9'=>($this->getFiled('Q8W2S9', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2S9', $uArray[$i]['userid']) : "000.000",
+		'Q8W2S8'=>($this->getFiled('Q8W2S8', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2S8', $uArray[$i]['userid']) : "000.000",
+		'Q8W2S10'=>($this->getFiled('Q8W2S10', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2S10', $uArray[$i]['userid']) : "000.000",
+		'Q8W2S12'=>($this->getFiled('Q8W2S12', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2S12', $uArray[$i]['userid']) : "000.000",
+		'Q8W2S13'=>($this->getFiled('Q8W2S13', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2S13', $uArray[$i]['userid']) : "000.000",
+		
+		
+		
+		'Q8W2S6'=>($this->getFiled('Q8W2S6', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W2S6', $uArray[$i]['userid']) : "000.000",
+		'Q8W3S1'=>($this->getFiled('Q8W3S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W3S1', $uArray[$i]['userid']) : "000.000",
+		'Q8W3S2'=>($this->getFiled('Q8W3S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W3S2', $uArray[$i]['userid']) : "000.000",
+		'Q8W3S3'=>($this->getFiled('Q8W3S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W3S3', $uArray[$i]['userid']) : "000.000",
+		'Q8W3S4'=>($this->getFiled('Q8W3S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W3S4', $uArray[$i]['userid']) : "000.000",	
+		'Q8W3S5'=>($this->getFiled('Q8W3S5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W3S5', $uArray[$i]['userid']) : "000.000",
+		'Q8W3S6'=>($this->getFiled('Q8W3S6', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W3S6', $uArray[$i]['userid']) : "000.000",
+		'Q8W3S7'=>($this->getFiled('Q8W3S7', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W3S7', $uArray[$i]['userid']) : "000.000",
+		'Q8W3S8'=>($this->getFiled('Q8W3S8', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W3S8', $uArray[$i]['userid']) : "000.000",
+		'Q9W1'=>($this->getFiled('Q9W1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q9W1', $uArray[$i]['userid']) : "000.000",
+		'Q10W1'=>($this->getFiled('Q10W1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q10W1', $uArray[$i]['userid']) : "000.000",
+		'Q11W1'=>($this->getFiled('Q11W1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q11W1', $uArray[$i]['userid']) : "000.000",
+		'Q13W1S1'=>($this->getFiled('Q13W1S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q13W1S1', $uArray[$i]['userid']) : "000.000",
+		'Q13W1S2'=>($this->getFiled('Q13W1S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q13W1S2', $uArray[$i]['userid']) : "000.000",
+		'Q13W1S3'=>($this->getFiled('Q13W1S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q13W1S3', $uArray[$i]['userid']) : "000.000",
+		'Q13W1S4'=>($this->getFiled('Q13W1S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q13W1S4', $uArray[$i]['userid']) : "000.000",
+		'Q14W1'=>($this->getFiled('Q14W1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q14W1', $uArray[$i]['userid']) : "000.000",
+		'Q15W1'=>($this->getFiled('Q15W1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q15W1', $uArray[$i]['userid']) : "000.000",
+		'Q16W1'=>($this->getFiled('Q16W1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q16W1', $uArray[$i]['userid']) : "000.000",
+		'Q21W1'=>($this->getFiled('Q21W1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q21W1', $uArray[$i]['userid']) : "000.000",
+		'Q18W1'=>($this->getFiled('Q18W1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q18W1', $uArray[$i]['userid']) : "000.000"	,
+		'Q18W2'=>($this->getFiled('Q18W2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q18W2', $uArray[$i]['userid']) : "000.000",
+		'Q19W1'=>($this->getFiled('Q19W1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q19W1', $uArray[$i]['userid']) : "000.000",
+		'Q19W11'=>($this->getFiled('Q19W11', $uArray[$i]['userid']) != '') ? $this->getFiled('Q19W11', $uArray[$i]['userid']) : "000.000",
+		'Q19W12'=>($this->getFiled('Q19W12', $uArray[$i]['userid']) != '') ? $this->getFiled('Q19W12', $uArray[$i]['userid']) : "000.000",
+		'Q19W13'=>($this->getFiled('Q19W13', $uArray[$i]['userid']) != '') ? $this->getFiled('Q19W13', $uArray[$i]['userid']) : "000.000",
+		'Q19W131'=>($this->getFiled('Q19W131', $uArray[$i]['userid']) != '') ? $this->getFiled('Q19W131', $uArray[$i]['userid']) : "000.000",
+		'Q19W132'=>($this->getFiled('Q19W132', $uArray[$i]['userid']) != '') ? $this->getFiled('Q19W132', $uArray[$i]['userid']) : "000.000",
+		'Q19W14'=>($this->getFiled('Q19W14', $uArray[$i]['userid']) != '') ? $this->getFiled('Q19W14', $uArray[$i]['userid']) : "000.000",
+		'Q19W15'=>($this->getFiled('Q19W15', $uArray[$i]['userid']) != '') ? $this->getFiled('Q19W15', $uArray[$i]['userid']) : "000.000",
+		'Q19W16'=>($this->getFiled('Q19W16', $uArray[$i]['userid']) != '') ? $this->getFiled('Q19W16', $uArray[$i]['userid']) : "000.000",
+		'Q19W161'=>($this->getFiled('Q19W161', $uArray[$i]['userid']) != '') ? $this->getFiled('Q19W161', $uArray[$i]['userid']) : "000.000",
+		'Q19W162'=>($this->getFiled('Q19W162', $uArray[$i]['userid']) != '') ? $this->getFiled('Q19W162', $uArray[$i]['userid']) : "000.000",
+		'Q20W1'=>($this->getFiled('Q20W1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q20W1', $uArray[$i]['userid']) : "000.000",
+		'Q20W2'=>($this->getFiled('Q20W2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q20W2', $uArray[$i]['userid']) : "000.000",
 		'water_points'=>getWaterPoints($uArray[$i]['userid']),
 	  
 	  
-      'Q4Wa1'=>($this->getFiled('Q4Wa1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4Wa1', $uArray[$i]['userid']) : 0,
-      'Q4Wa2S1'=>($this->getFiled('Q4Wa2S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4Wa2S1', $uArray[$i]['userid']) : 0,
-'Q4Wa2S2'=>($this->getFiled('Q4Wa2S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4Wa2S2', $uArray[$i]['userid']) : 0,
-'Q4Wa2S3'=>($this->getFiled('Q4Wa2S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4Wa2S3', $uArray[$i]['userid']) : 0,
-'Q4Wa2S5'=>($this->getFiled('Q4Wa2S5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4Wa2S5', $uArray[$i]['userid']) : 0,
-'Q4Wa2'=>($this->getFiled('Q4Wa2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4Wa2', $uArray[$i]['userid']) : 0,
-'Q5Wa1S1'=>($this->getFiled('Q5Wa1S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa1S1', $uArray[$i]['userid']) : 0,
-'Q5Wa1S2'=>($this->getFiled('Q5Wa1S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa1S2', $uArray[$i]['userid']) : 0,
-'Q5Wa1S3'=>($this->getFiled('Q5Wa1S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa1S3', $uArray[$i]['userid']) : 0,
-'Q5Wa1S4'=>($this->getFiled('Q5Wa1S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa1S4', $uArray[$i]['userid']) : 0,
-'Q5Wa1S5'=>($this->getFiled('Q5Wa1S5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa1S5', $uArray[$i]['userid']) : 0,
-'Q5Wa2S1'=>($this->getFiled('Q5Wa2S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa2S1', $uArray[$i]['userid']) : 0,
-'Q5Wa2S2'=>($this->getFiled('Q5Wa2S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa2S2', $uArray[$i]['userid']) : 0,
-'Q5Wa2S3'=>($this->getFiled('Q5Wa2S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa2S3', $uArray[$i]['userid']) : 0,
-'Q5Wa2S4'=>($this->getFiled('Q5Wa2S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa2S4', $uArray[$i]['userid']) : 0,
-'Q5Wa2S5'=>($this->getFiled('Q5Wa2S5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa2S5', $uArray[$i]['userid']) : 0,
-'Q5Wa3S1'=>($this->getFiled('Q5Wa3S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa3S1', $uArray[$i]['userid']) : 0,
-'Q5Wa3S2'=>($this->getFiled('Q5Wa3S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa3S2', $uArray[$i]['userid']) : 0,
-'Q5Wa3S3'=>($this->getFiled('Q5Wa3S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa3S3', $uArray[$i]['userid']) : 0,
-'Q5Wa3S4'=>($this->getFiled('Q5Wa3S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa3S4', $uArray[$i]['userid']) : 0,
-'Q5Wa3S5'=>($this->getFiled('Q5Wa3S5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa3S5', $uArray[$i]['userid']) : 0,
-'Q5Wa4S1'=>($this->getFiled('Q5Wa4S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa4S1', $uArray[$i]['userid']) : 0,
-'Q5Wa4S2'=>($this->getFiled('Q5Wa4S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa4S2', $uArray[$i]['userid']) : 0,
-'Q5Wa4S3'=>($this->getFiled('Q5Wa4S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa4S3', $uArray[$i]['userid']) : 0,
-'Q5Wa4S4'=>($this->getFiled('Q5Wa4S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa4S4', $uArray[$i]['userid']) : 0,
-'Q5Wa4S5'=>($this->getFiled('Q5Wa4S5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa4S5', $uArray[$i]['userid']) : 0,
-'Q5Wa5S1'=>($this->getFiled('Q5Wa5S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa5S1', $uArray[$i]['userid']) : 0,
-'Q5Wa5S2'=>($this->getFiled('Q5Wa5S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa5S2', $uArray[$i]['userid']) : 0,
-'Q5Wa5S3'=>($this->getFiled('Q5Wa5S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa5S3', $uArray[$i]['userid']) : 0,
-'Q5Wa5S4'=>($this->getFiled('Q5Wa5S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa5S4', $uArray[$i]['userid']) : 0,
-'Q5Wa5S5'=>($this->getFiled('Q5Wa5S5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa5S5', $uArray[$i]['userid']) : 0,
-'Q5Wa6S1'=>($this->getFiled('Q5Wa6S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa6S1', $uArray[$i]['userid']) : 0,
-'Q5Wa6S2'=>($this->getFiled('Q5Wa6S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa6S2', $uArray[$i]['userid']) : 0,
-'Q5Wa6S3'=>($this->getFiled('Q5Wa6S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa6S3', $uArray[$i]['userid']) : 0,
-'Q5Wa6S4'=>($this->getFiled('Q5Wa6S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa6S4', $uArray[$i]['userid']) : 0,
-'Q5Wa6S5'=>($this->getFiled('Q5Wa6S5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa6S5', $uArray[$i]['userid']) : 0,
-'Q5Wa7S1'=>($this->getFiled('Q5Wa7S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa7S1', $uArray[$i]['userid']) : 0,
-'Q5Wa7S2'=>($this->getFiled('Q5Wa7S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa7S2', $uArray[$i]['userid']) : 0,
-'Q5Wa7S3'=>($this->getFiled('Q5Wa7S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa7S3', $uArray[$i]['userid']) : 0,
-'Q5Wa7S4'=>($this->getFiled('Q5Wa7S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa7S4', $uArray[$i]['userid']) : 0,
-'Q5Wa7S5'=>($this->getFiled('Q5Wa7S5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa7S5', $uArray[$i]['userid']) : 0,
-'Q5Wa8S1'=>($this->getFiled('Q5Wa8S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa8S1', $uArray[$i]['userid']) : 0,
-'Q5Wa8S2'=>($this->getFiled('Q5Wa8S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa8S2', $uArray[$i]['userid']) : 0,
-'Q5Wa8S3'=>($this->getFiled('Q5Wa8S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa8S3', $uArray[$i]['userid']) : 0,
-'Q5Wa8S4'=>($this->getFiled('Q5Wa8S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa8S4', $uArray[$i]['userid']) : 0,
-'Q5Wa8S5'=>($this->getFiled('Q5Wa8S5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa8S5', $uArray[$i]['userid']) : 0,
-'Q5Wa9S1'=>($this->getFiled('Q5Wa9S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa9S1', $uArray[$i]['userid']) : 0,
-'Q5Wa9S2'=>($this->getFiled('Q5Wa9S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa9S2', $uArray[$i]['userid']) : 0,
-'Q5Wa9S3'=>($this->getFiled('Q5Wa9S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa9S3', $uArray[$i]['userid']) : 0,
-'Q5Wa9S4'=>($this->getFiled('Q5Wa9S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa9S4', $uArray[$i]['userid']) : 0,
-'Q5Wa9S5'=>($this->getFiled('Q5Wa9S5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa9S5', $uArray[$i]['userid']) : 0,
-'Q5Wa10S1'=>($this->getFiled('Q5Wa10S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa10S1', $uArray[$i]['userid']) : 0,
-'Q5Wa10S2'=>($this->getFiled('Q5Wa10S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa10S2', $uArray[$i]['userid']) : 0,
-'Q5Wa10S3'=>($this->getFiled('Q5Wa10S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa10S3', $uArray[$i]['userid']) : 0,
-'Q5Wa10S4'=>($this->getFiled('Q5Wa10S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa10S4', $uArray[$i]['userid']) : 0,
-'Q5Wa10S5'=>($this->getFiled('Q5Wa10S5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa10S5', $uArray[$i]['userid']) : 0,
-'Q5Wa11S1'=>($this->getFiled('Q5Wa11S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa11S1', $uArray[$i]['userid']) : 0,
-'Q5Wa11S2'=>($this->getFiled('Q5Wa11S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa11S2', $uArray[$i]['userid']) : 0,
-'Q5Wa11S3'=>($this->getFiled('Q5Wa11S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa11S3', $uArray[$i]['userid']) : 0,
-'Q5Wa11S4'=>($this->getFiled('Q5Wa11S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa11S4', $uArray[$i]['userid']) : 0,
-'Q5Wa11S5'=>($this->getFiled('Q5Wa11S5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa11S5', $uArray[$i]['userid']) : 0,
-'Q6Wa1S1'=>($this->getFiled('Q6Wa1S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa1S1', $uArray[$i]['userid']) : 0,
-'Q6Wa1S2'=>($this->getFiled('Q6Wa1S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa1S2', $uArray[$i]['userid']) : 0,
-'Q6Wa1S3'=>($this->getFiled('Q6Wa1S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa1S3', $uArray[$i]['userid']) : 0,
+      'Q4Wa1'=>($this->getFiled('Q4Wa1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4Wa1', $uArray[$i]['userid']) : "000.000",
+      'Q4Wa2S1'=>($this->getFiled('Q4Wa2S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4Wa2S1', $uArray[$i]['userid']) : "000.000",
+'Q4Wa2S2'=>($this->getFiled('Q4Wa2S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4Wa2S2', $uArray[$i]['userid']) : "000.000",
+'Q4Wa2S3'=>($this->getFiled('Q4Wa2S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4Wa2S3', $uArray[$i]['userid']) : "000.000",
+'Q4Wa2S5'=>($this->getFiled('Q4Wa2S5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4Wa2S5', $uArray[$i]['userid']) : "000.000",
+'Q4Wa2'=>($this->getFiled('Q4Wa2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4Wa2', $uArray[$i]['userid']) : "000.000",
+'Q5Wa1S1'=>($this->getFiled('Q5Wa1S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa1S1', $uArray[$i]['userid']) : "000.000",
+'Q5Wa1S2'=>($this->getFiled('Q5Wa1S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa1S2', $uArray[$i]['userid']) : "000.000",
+'Q5Wa1S3'=>($this->getFiled('Q5Wa1S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa1S3', $uArray[$i]['userid']) : "000.000",
+'Q5Wa1S4'=>($this->getFiled('Q5Wa1S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa1S4', $uArray[$i]['userid']) : "000.000",
+'Q5Wa1S5'=>($this->getFiled('Q5Wa1S5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa1S5', $uArray[$i]['userid']) : "000.000",
+'Q5Wa2S1'=>($this->getFiled('Q5Wa2S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa2S1', $uArray[$i]['userid']) : "000.000",
+'Q5Wa2S2'=>($this->getFiled('Q5Wa2S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa2S2', $uArray[$i]['userid']) : "000.000",
+'Q5Wa2S3'=>($this->getFiled('Q5Wa2S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa2S3', $uArray[$i]['userid']) : "000.000",
+'Q5Wa2S4'=>($this->getFiled('Q5Wa2S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa2S4', $uArray[$i]['userid']) : "000.000",
+'Q5Wa2S5'=>($this->getFiled('Q5Wa2S5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa2S5', $uArray[$i]['userid']) : "000.000",
+'Q5Wa3S1'=>($this->getFiled('Q5Wa3S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa3S1', $uArray[$i]['userid']) : "000.000",
+'Q5Wa3S2'=>($this->getFiled('Q5Wa3S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa3S2', $uArray[$i]['userid']) : "000.000",
+'Q5Wa3S3'=>($this->getFiled('Q5Wa3S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa3S3', $uArray[$i]['userid']) : "000.000",
+'Q5Wa3S4'=>($this->getFiled('Q5Wa3S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa3S4', $uArray[$i]['userid']) : "000.000",
+'Q5Wa3S5'=>($this->getFiled('Q5Wa3S5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa3S5', $uArray[$i]['userid']) : "000.000",
+'Q5Wa4S1'=>($this->getFiled('Q5Wa4S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa4S1', $uArray[$i]['userid']) : "000.000",
+'Q5Wa4S2'=>($this->getFiled('Q5Wa4S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa4S2', $uArray[$i]['userid']) : "000.000",
+'Q5Wa4S3'=>($this->getFiled('Q5Wa4S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa4S3', $uArray[$i]['userid']) : "000.000",
+'Q5Wa4S4'=>($this->getFiled('Q5Wa4S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa4S4', $uArray[$i]['userid']) : "000.000",
+'Q5Wa4S5'=>($this->getFiled('Q5Wa4S5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa4S5', $uArray[$i]['userid']) : "000.000",
+'Q5Wa5S1'=>($this->getFiled('Q5Wa5S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa5S1', $uArray[$i]['userid']) : "000.000",
+'Q5Wa5S2'=>($this->getFiled('Q5Wa5S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa5S2', $uArray[$i]['userid']) : "000.000",
+'Q5Wa5S3'=>($this->getFiled('Q5Wa5S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa5S3', $uArray[$i]['userid']) : "000.000",
+'Q5Wa5S4'=>($this->getFiled('Q5Wa5S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa5S4', $uArray[$i]['userid']) : "000.000",
+'Q5Wa5S5'=>($this->getFiled('Q5Wa5S5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa5S5', $uArray[$i]['userid']) : "000.000",
+'Q5Wa6S1'=>($this->getFiled('Q5Wa6S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa6S1', $uArray[$i]['userid']) : "000.000",
+'Q5Wa6S2'=>($this->getFiled('Q5Wa6S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa6S2', $uArray[$i]['userid']) : "000.000",
+'Q5Wa6S3'=>($this->getFiled('Q5Wa6S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa6S3', $uArray[$i]['userid']) : "000.000",
+'Q5Wa6S4'=>($this->getFiled('Q5Wa6S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa6S4', $uArray[$i]['userid']) : "000.000",
+'Q5Wa6S5'=>($this->getFiled('Q5Wa6S5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa6S5', $uArray[$i]['userid']) : "000.000",
+'Q5Wa7S1'=>($this->getFiled('Q5Wa7S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa7S1', $uArray[$i]['userid']) : "000.000",
+'Q5Wa7S2'=>($this->getFiled('Q5Wa7S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa7S2', $uArray[$i]['userid']) : "000.000",
+'Q5Wa7S3'=>($this->getFiled('Q5Wa7S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa7S3', $uArray[$i]['userid']) : "000.000",
+'Q5Wa7S4'=>($this->getFiled('Q5Wa7S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa7S4', $uArray[$i]['userid']) : "000.000",
+'Q5Wa7S5'=>($this->getFiled('Q5Wa7S5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa7S5', $uArray[$i]['userid']) : "000.000",
+'Q5Wa8S1'=>($this->getFiled('Q5Wa8S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa8S1', $uArray[$i]['userid']) : "000.000",
+'Q5Wa8S2'=>($this->getFiled('Q5Wa8S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa8S2', $uArray[$i]['userid']) : "000.000",
+'Q5Wa8S3'=>($this->getFiled('Q5Wa8S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa8S3', $uArray[$i]['userid']) : "000.000",
+'Q5Wa8S4'=>($this->getFiled('Q5Wa8S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa8S4', $uArray[$i]['userid']) : "000.000",
+'Q5Wa8S5'=>($this->getFiled('Q5Wa8S5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa8S5', $uArray[$i]['userid']) : "000.000",
+'Q5Wa9S1'=>($this->getFiled('Q5Wa9S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa9S1', $uArray[$i]['userid']) : "000.000",
+'Q5Wa9S2'=>($this->getFiled('Q5Wa9S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa9S2', $uArray[$i]['userid']) : "000.000",
+'Q5Wa9S3'=>($this->getFiled('Q5Wa9S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa9S3', $uArray[$i]['userid']) : "000.000",
+'Q5Wa9S4'=>($this->getFiled('Q5Wa9S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa9S4', $uArray[$i]['userid']) : "000.000",
+'Q5Wa9S5'=>($this->getFiled('Q5Wa9S5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa9S5', $uArray[$i]['userid']) : "000.000",
+'Q5Wa10S1'=>($this->getFiled('Q5Wa10S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa10S1', $uArray[$i]['userid']) : "000.000",
+'Q5Wa10S2'=>($this->getFiled('Q5Wa10S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa10S2', $uArray[$i]['userid']) : "000.000",
+'Q5Wa10S3'=>($this->getFiled('Q5Wa10S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa10S3', $uArray[$i]['userid']) : "000.000",
+'Q5Wa10S4'=>($this->getFiled('Q5Wa10S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa10S4', $uArray[$i]['userid']) : "000.000",
+'Q5Wa10S5'=>($this->getFiled('Q5Wa10S5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa10S5', $uArray[$i]['userid']) : "000.000",
+'Q5Wa11S1'=>($this->getFiled('Q5Wa11S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa11S1', $uArray[$i]['userid']) : "000.000",
+'Q5Wa11S2'=>($this->getFiled('Q5Wa11S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa11S2', $uArray[$i]['userid']) : "000.000",
+'Q5Wa11S3'=>($this->getFiled('Q5Wa11S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa11S3', $uArray[$i]['userid']) : "000.000",
+'Q5Wa11S4'=>($this->getFiled('Q5Wa11S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa11S4', $uArray[$i]['userid']) : "000.000",
+'Q5Wa11S5'=>($this->getFiled('Q5Wa11S5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5Wa11S5', $uArray[$i]['userid']) : "000.000",
+'Q6Wa1S1'=>($this->getFiled('Q6Wa1S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa1S1', $uArray[$i]['userid']) : "000.000",
+'Q6Wa1S2'=>($this->getFiled('Q6Wa1S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa1S2', $uArray[$i]['userid']) : "000.000",
+'Q6Wa1S3'=>($this->getFiled('Q6Wa1S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa1S3', $uArray[$i]['userid']) : "000.000",
 
-'Q6Wa1S4'=>($this->getFiled('Q6Wa1S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa1S4', $uArray[$i]['userid']) : 0,
-'Q6Wa1S5'=>($this->getFiled('Q6Wa1S5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa1S5', $uArray[$i]['userid']) : 0,
-'Q6Wa1S6'=>($this->getFiled('Q6Wa1S6', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa1S6', $uArray[$i]['userid']) : 0,
-'Q6Wa2S1'=>($this->getFiled('Q6Wa2S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa2S1', $uArray[$i]['userid']) : 0,
-'Q6Wa2S2'=>($this->getFiled('Q6Wa2S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa2S2', $uArray[$i]['userid']) : 0,
-'Q6Wa2S3'=>($this->getFiled('Q6Wa2S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa2S3', $uArray[$i]['userid']) : 0,
-'Q6Wa2S4'=>($this->getFiled('Q6Wa2S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa2S4', $uArray[$i]['userid']) : 0,
-'Q6Wa2S5'=>($this->getFiled('Q6Wa2S5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa2S5', $uArray[$i]['userid']) : 0,
-'Q6Wa2S6'=>($this->getFiled('Q6Wa2S6', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa2S6', $uArray[$i]['userid']) : 0,
-'Q6Wa2S7'=>($this->getFiled('Q6Wa2S7', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa2S7', $uArray[$i]['userid']) : 0,
-'Q6Wa2S8'=>($this->getFiled('Q6Wa2S8', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa2S8', $uArray[$i]['userid']) : 0,
-'Q6Wa2S9'=>($this->getFiled('Q6Wa2S9', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa2S9', $uArray[$i]['userid']) : 0,
-'Q6Wa3S1'=>($this->getFiled('Q6Wa3S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa3S1', $uArray[$i]['userid']) : 0,
-'Q6Wa3S2'=>($this->getFiled('Q6Wa3S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa3S2', $uArray[$i]['userid']) : 0,
-'Q6Wa3S3'=>($this->getFiled('Q6Wa3S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa3S3', $uArray[$i]['userid']) : 0,
-'Q6Wa3S4'=>($this->getFiled('Q6Wa3S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa3S4', $uArray[$i]['userid']) : 0,
-'Q6Wa4S1'=>($this->getFiled('Q6Wa4S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa4S1', $uArray[$i]['userid']) : 0,
-'Q6Wa4S2'=>($this->getFiled('Q6Wa4S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa4S2', $uArray[$i]['userid']) : 0,
-'Q6Wa5S1'=>($this->getFiled('Q6Wa5S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa5S1', $uArray[$i]['userid']) : 0,
-'Q6Wa5S2'=>($this->getFiled('Q6Wa5S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa5S2', $uArray[$i]['userid']) : 0,
-'Q6Wa6S1'=>($this->getFiled('Q6Wa6S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa6S1', $uArray[$i]['userid']) : 0,
-'Q6Wa6S2'=>($this->getFiled('Q6Wa6S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa6S2', $uArray[$i]['userid']) : 0,
-'Q6Wa7S1'=>($this->getFiled('Q6Wa7S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa7S1', $uArray[$i]['userid']) : 0,
-'Q6Wa7S2'=>($this->getFiled('Q6Wa7S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa7S2', $uArray[$i]['userid']) : 0,
-'Q8Wa1'=>($this->getFiled('Q8Wa1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa1', $uArray[$i]['userid']) : 0,
-'Q8Wa1S1'=>($this->getFiled('Q8Wa1S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa1S1', $uArray[$i]['userid']) : 0,
-'Q8Wa1S2'=>($this->getFiled('Q8Wa1S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa1S2', $uArray[$i]['userid']) : 0,
-'Q8Wa1S3'=>($this->getFiled('Q8Wa1S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa1S3', $uArray[$i]['userid']) : 0,
-'Q8Wa1S4'=>($this->getFiled('Q8Wa1S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa1S4', $uArray[$i]['userid']) : 0,
-'Q8Wa1S5'=>($this->getFiled('Q8Wa1S5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa1S5', $uArray[$i]['userid']) : 0,
-'Q8Wa1S6'=>($this->getFiled('Q8Wa1S6', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa1S6', $uArray[$i]['userid']) : 0,
-'Q8Wa2S1'=>($this->getFiled('Q8Wa2S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa2S1', $uArray[$i]['userid']) : 0,
-'Q8Wa2S2'=>($this->getFiled('Q8Wa2S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa2S2', $uArray[$i]['userid']) : 0,
-'Q8Wa2S3'=>($this->getFiled('Q8Wa2S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa2S3', $uArray[$i]['userid']) : 0,
-'Q8Wa2S4'=>($this->getFiled('Q8Wa2S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa2S4', $uArray[$i]['userid']) : 0,
-'Q8Wa2S5'=>($this->getFiled('Q8Wa2S5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa2S5', $uArray[$i]['userid']) : 0,
-'Q8Wa2S6'=>($this->getFiled('Q8Wa2S6', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa2S6', $uArray[$i]['userid']) : 0,
-'Q8Wa2S7'=>($this->getFiled('Q8Wa2S7', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa2S7', $uArray[$i]['userid']) : 0,
-'Q8Wa2S8'=>($this->getFiled('Q8Wa2S8', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa2S8', $uArray[$i]['userid']) : 0,
-'Q8Wa2S9'=>($this->getFiled('Q8Wa2S9', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa2S9', $uArray[$i]['userid']) : 0,
-'Q8Wa3S1'=>($this->getFiled('Q8Wa3S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa3S1', $uArray[$i]['userid']) : 0,
-'Q8Wa3S2'=>($this->getFiled('Q8Wa3S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa3S2', $uArray[$i]['userid']) : 0,
-'Q8Wa3S3'=>($this->getFiled('Q8Wa3S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa3S3', $uArray[$i]['userid']) : 0,
-'Q8Wa3S4'=>($this->getFiled('Q8Wa3S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa3S4', $uArray[$i]['userid']) : 0,
-'Q8Wa4S1'=>($this->getFiled('Q8Wa4S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa4S1', $uArray[$i]['userid']) : 0,
-'Q8Wa4S2'=>($this->getFiled('Q8Wa4S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa4S2', $uArray[$i]['userid']) : 0,
-'Q8Wa5S1'=>($this->getFiled('Q8Wa5S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa5S1', $uArray[$i]['userid']) : 0,
-'Q8Wa5S2'=>($this->getFiled('Q8Wa5S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa5S2', $uArray[$i]['userid']) : 0,
-'Q8Wa6S1'=>($this->getFiled('Q8Wa6S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa6S1', $uArray[$i]['userid']) : 0,
-'Q8Wa6S2'=>($this->getFiled('Q8Wa6S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa6S2', $uArray[$i]['userid']) : 0,
-'Q8Wa7S1'=>($this->getFiled('Q8Wa7S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa7S1', $uArray[$i]['userid']) : 0,
-'Q8Wa7S2'=>($this->getFiled('Q8Wa7S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa7S2', $uArray[$i]['userid']) : 0,
-'Q9Wa1'=>($this->getFiled('Q9Wa1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q9Wa1', $uArray[$i]['userid']) : 0,
-'Q9Wa2S4'=>($this->getFiled('Q9Wa2S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q9Wa2S4', $uArray[$i]['userid']) : 0,
-'Q9Wa3'=>($this->getFiled('Q9Wa3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q9Wa3', $uArray[$i]['userid']) : 0,
-'Q10Wa1'=>($this->getFiled('Q10Wa1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q10Wa1', $uArray[$i]['userid']) : 0,
-'paper_recycling_procedures'=>($this->getFiled('Q11Wa4S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q11Wa4S2', $uArray[$i]['userid']) : 0,
-'plastic_recycling_procedures'=>($this->getFiled('Q11Wa5S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q11Wa5S2', $uArray[$i]['userid']) : 0,
-'horticultural_waste_recycling_procedures'=>($this->getFiled('Q12Wa1S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa1S1', $uArray[$i]['userid']) : 0,
-'e_waste_recycling_procedures'=>($this->getFiled('Q12Wa1S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa1S2', $uArray[$i]['userid']) : 0,
-'hazardous_waste_recycling_procedures'=>($this->getFiled('Q12Wa1S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa1S3', $uArray[$i]['userid']) : 0,
-'wood_glass_metal_recycling_procedures'=>($this->getFiled('Q12Wa1S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa1S4', $uArray[$i]['userid']) : 0,
-'Q12Wa2S1'=>($this->getFiled('Q12Wa2S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa2S1', $uArray[$i]['userid']) : 0,
-'Q12Wa2S2'=>($this->getFiled('Q12Wa2S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa2S2', $uArray[$i]['userid']) : 0,
-'Q12Wa2S3'=>($this->getFiled('Q12Wa2S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa2S3', $uArray[$i]['userid']) : 0,
-'Q12Wa2S4'=>($this->getFiled('Q12Wa2S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa2S4', $uArray[$i]['userid']) : 0,
-'Q12Wa3S1'=>($this->getFiled('Q12Wa3S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa3S1', $uArray[$i]['userid']) : 0,
-'Q12Wa3S2'=>($this->getFiled('Q12Wa3S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa3S2', $uArray[$i]['userid']) : 0,
-'Q12Wa3S3'=>($this->getFiled('Q12Wa3S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa3S3', $uArray[$i]['userid']) : 0,
-'Q12Wa3S4'=>($this->getFiled('Q12Wa3S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa3S4', $uArray[$i]['userid']) : 0,
-'Q12Wa4S1'=>($this->getFiled('Q12Wa4S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa4S1', $uArray[$i]['userid']) : 0,
-'Q12Wa4S2'=>($this->getFiled('Q12Wa4S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa4S2', $uArray[$i]['userid']) : 0,
-'Q12Wa4S3'=>($this->getFiled('Q12Wa4S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa4S3', $uArray[$i]['userid']) : 0,
-'Q12Wa4S4'=>($this->getFiled('Q12Wa4S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa4S4', $uArray[$i]['userid']) : 0,
-'Q12Wa5S1'=>($this->getFiled('Q12Wa5S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa5S1', $uArray[$i]['userid']) : 0,
-'Q12Wa5S2'=>($this->getFiled('Q12Wa5S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa5S2', $uArray[$i]['userid']) : 0,
-'Q12Wa5S3'=>($this->getFiled('Q12Wa5S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa5S3', $uArray[$i]['userid']) : 0,
-'Q12Wa5S4'=>($this->getFiled('Q12Wa5S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa5S4', $uArray[$i]['userid']) : 0,
-'Q12Wa6S1'=>($this->getFiled('Q12Wa6S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa6S1', $uArray[$i]['userid']) : 0,
-'Q12Wa6S2'=>($this->getFiled('Q12Wa6S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa6S2', $uArray[$i]['userid']) : 0,
-'Q12Wa6S3'=>($this->getFiled('Q12Wa6S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa6S3', $uArray[$i]['userid']) : 0,
-'Q12Wa6S4'=>($this->getFiled('Q12Wa6S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa6S4', $uArray[$i]['userid']) : 0,
-'Q12Wa7S1'=>($this->getFiled('Q12Wa7S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa7S1', $uArray[$i]['userid']) : 0,
-'Q12Wa7S2'=>($this->getFiled('Q12Wa7S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa7S2', $uArray[$i]['userid']) : 0,
-'Q12Wa7S3'=>($this->getFiled('Q12Wa7S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa7S3', $uArray[$i]['userid']) : 0,
-'Q12Wa7S4'=>($this->getFiled('Q12Wa7S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa7S4', $uArray[$i]['userid']) : 0,
-'Q12Wa8S1'=>($this->getFiled('Q12Wa8S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa8S1', $uArray[$i]['userid']) : 0,
-'Q12Wa8S2'=>($this->getFiled('Q12Wa8S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa8S2', $uArray[$i]['userid']) : 0,
-'Q12Wa8S3'=>($this->getFiled('Q12Wa8S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa8S3', $uArray[$i]['userid']) : 0,
-'Q12Wa8S4'=>($this->getFiled('Q12Wa8S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa8S4', $uArray[$i]['userid']) : 0,
-'Q12Wa9S1'=>($this->getFiled('Q12Wa9S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa9S1', $uArray[$i]['userid']) : 0,
-'Q12Wa9S2'=>($this->getFiled('Q12Wa9S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa9S2', $uArray[$i]['userid']) : 0,
-'Q12Wa9S3'=>($this->getFiled('Q12Wa9S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa9S3', $uArray[$i]['userid']) : 0,
-'Q12Wa9S4'=>($this->getFiled('Q12Wa9S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa9S4', $uArray[$i]['userid']) : 0,
-'Q12Wa10S1'=>($this->getFiled('Q12Wa10S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa10S1', $uArray[$i]['userid']) : 0,
-'Q12Wa10S2'=>($this->getFiled('Q12Wa10S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa10S2', $uArray[$i]['userid']) : 0,
-'Q12Wa10S3'=>($this->getFiled('Q12Wa10S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa10S3', $uArray[$i]['userid']) : 0,
-'Q12Wa10S4'=>($this->getFiled('Q12Wa10S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa10S4', $uArray[$i]['userid']) : 0,
-'Q12Wa11S1'=>($this->getFiled('Q12Wa11S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa11S1', $uArray[$i]['userid']) : 0,
-'Q12Wa11S2'=>($this->getFiled('Q12Wa11S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa11S2', $uArray[$i]['userid']) : 0,
-'Q12Wa11S3'=>($this->getFiled('Q12Wa11S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa11S3', $uArray[$i]['userid']) : 0,
-'Q12Wa11S4'=>($this->getFiled('Q12Wa11S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa11S4', $uArray[$i]['userid']) : 0,
-'Q12Wa12S1'=>($this->getFiled('Q12Wa12S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa12S1', $uArray[$i]['userid']) : 0,
-'Q12Wa12S2'=>($this->getFiled('Q12Wa12S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa12S2', $uArray[$i]['userid']) : 0,
-'Q12Wa12S3'=>($this->getFiled('Q12Wa12S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa12S3', $uArray[$i]['userid']) : 0,
-'Q12Wa12S4'=>($this->getFiled('Q12Wa12S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa12S4', $uArray[$i]['userid']) : 0,
-'Q12Wa13S1'=>($this->getFiled('Q12Wa13S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa13S1', $uArray[$i]['userid']) : 0,
-'Q12Wa13S2'=>($this->getFiled('Q12Wa13S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa13S2', $uArray[$i]['userid']) : 0,
-'Q12Wa13S3'=>($this->getFiled('Q12Wa13S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa13S3', $uArray[$i]['userid']) : 0,
-'Q12Wa13S4'=>($this->getFiled('Q12Wa13S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa13S4', $uArray[$i]['userid']) : 0,
-'Q12Wa14S1'=>($this->getFiled('Q12Wa14S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa14S1', $uArray[$i]['userid']) : 0,
-'Q12Wa14S2'=>($this->getFiled('Q12Wa14S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa14S2', $uArray[$i]['userid']) : 0,
-'Q12Wa14S3'=>($this->getFiled('Q12Wa14S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa14S3', $uArray[$i]['userid']) : 0,
-'Q12Wa14S4'=>($this->getFiled('Q12Wa14S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa14S4', $uArray[$i]['userid']) : 0,
-'Q12Wa15S1'=>($this->getFiled('Q12Wa15S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa15S1', $uArray[$i]['userid']) : 0,
-'Q12Wa15S2'=>($this->getFiled('Q12Wa15S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa15S2', $uArray[$i]['userid']) : 0,
-'Q12Wa15S3'=>($this->getFiled('Q12Wa15S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa15S3', $uArray[$i]['userid']) : 0,
-'Q12Wa15S4'=>($this->getFiled('Q12Wa15S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa15S4', $uArray[$i]['userid']) : 0,
-'Q12Wa16S1'=>($this->getFiled('Q12Wa16S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa16S1', $uArray[$i]['userid']) : 0,
-'Q12Wa16S2'=>($this->getFiled('Q12Wa16S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa16S2', $uArray[$i]['userid']) : 0,
-'Q12Wa16S3'=>($this->getFiled('Q12Wa16S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa16S3', $uArray[$i]['userid']) : 0,
-'Q12Wa16S4'=>($this->getFiled('Q12Wa16S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa16S4', $uArray[$i]['userid']) : 0,
-'Q12Wa17S1'=>($this->getFiled('Q12Wa17S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa17S1', $uArray[$i]['userid']) : 0,
-'Q12Wa17S2'=>($this->getFiled('Q12Wa17S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa17S2', $uArray[$i]['userid']) : 0,
-'Q12Wa17S3'=>($this->getFiled('Q12Wa17S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa17S3', $uArray[$i]['userid']) : 0,
-'Q12Wa17S4'=>($this->getFiled('Q12Wa17S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa17S4', $uArray[$i]['userid']) : 0,
-'Q12Wa18S1'=>($this->getFiled('Q12Wa18S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa18S1', $uArray[$i]['userid']) : 0,
-'Q12Wa18S2'=>($this->getFiled('Q12Wa18S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa18S2', $uArray[$i]['userid']) : 0,
-'Q12Wa18S3'=>($this->getFiled('Q12Wa18S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa18S3', $uArray[$i]['userid']) : 0,
-'Q12Wa18S4'=>($this->getFiled('Q12Wa18S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa18S4', $uArray[$i]['userid']) : 0,
-'Q12Wa19S1'=>($this->getFiled('Q12Wa19S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa19S1', $uArray[$i]['userid']) : 0,
-'Q12Wa19S2'=>($this->getFiled('Q12Wa19S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa19S2', $uArray[$i]['userid']) : 0,
-'Q12Wa19S3'=>($this->getFiled('Q12Wa19S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa19S3', $uArray[$i]['userid']) : 0,
-'Q12Wa19S4'=>($this->getFiled('Q12Wa19S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa19S4', $uArray[$i]['userid']) : 0,
-'Q12Wa20S1'=>($this->getFiled('Q12Wa20S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa20S1', $uArray[$i]['userid']) : 0,
-'Q12Wa20S2'=>($this->getFiled('Q12Wa20S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa20S2', $uArray[$i]['userid']) : 0,
-'Q12Wa20S3'=>($this->getFiled('Q12Wa20S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa20S3', $uArray[$i]['userid']) : 0,
-'Q12Wa20S4'=>($this->getFiled('Q12Wa20S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa20S4', $uArray[$i]['userid']) : 0,
-'Q12Wa21S1'=>($this->getFiled('Q12Wa21S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa21S1', $uArray[$i]['userid']) : 0,
-'Q12Wa21S2'=>($this->getFiled('Q12Wa21S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa21S2', $uArray[$i]['userid']) : 0,
-'Q12Wa21S3'=>($this->getFiled('Q12Wa21S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa21S3', $uArray[$i]['userid']) : 0,
-'Q12Wa21S4'=>($this->getFiled('Q12Wa21S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa21S4', $uArray[$i]['userid']) : 0,
-'Q12Wa22S1'=>($this->getFiled('Q12Wa22S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa22S1', $uArray[$i]['userid']) : 0,
-'Q12Wa22S2'=>($this->getFiled('Q12Wa22S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa22S2', $uArray[$i]['userid']) : 0,
-'Q12Wa22S3'=>($this->getFiled('Q12Wa22S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa22S3', $uArray[$i]['userid']) : 0,
-'Q12Wa22S4'=>($this->getFiled('Q12Wa22S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa22S4', $uArray[$i]['userid']) : 0,
-'Q12Wa23S1'=>($this->getFiled('Q12Wa23S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa23S1', $uArray[$i]['userid']) : 0,
-'Q12Wa23S2'=>($this->getFiled('Q12Wa23S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa23S2', $uArray[$i]['userid']) : 0,
-'Q12Wa23S3'=>($this->getFiled('Q12Wa23S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa23S3', $uArray[$i]['userid']) : 0,
-'Q12Wa23S4'=>($this->getFiled('Q12Wa23S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa23S4', $uArray[$i]['userid']) : 0,
-'Q12Wa24S1'=>($this->getFiled('Q12Wa24S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa24S1', $uArray[$i]['userid']) : 0,
-'Q12Wa24S2'=>($this->getFiled('Q12Wa24S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa24S2', $uArray[$i]['userid']) : 0,
-'Q12Wa24S3'=>($this->getFiled('Q12Wa24S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa24S3', $uArray[$i]['userid']) : 0,
-'Q12Wa24S4'=>($this->getFiled('Q12Wa24S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa24S4', $uArray[$i]['userid']) : 0,
-'Q12Wa25S1'=>($this->getFiled('Q12Wa25S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa25S1', $uArray[$i]['userid']) : 0,
-'Q12Wa25S2'=>($this->getFiled('Q12Wa25S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa25S2', $uArray[$i]['userid']) : 0,
-'Q12Wa25S3'=>($this->getFiled('Q12Wa25S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa25S3', $uArray[$i]['userid']) : 0,
-'Q12Wa25S4'=>($this->getFiled('Q12Wa25S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa25S4', $uArray[$i]['userid']) : 0,
-'Q12Wa26S1'=>($this->getFiled('Q12Wa26S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa26S1', $uArray[$i]['userid']) : 0,
-'Q12Wa26S2'=>($this->getFiled('Q12Wa26S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa26S2', $uArray[$i]['userid']) : 0,
-'Q12Wa26S3'=>($this->getFiled('Q12Wa26S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa26S3', $uArray[$i]['userid']) : 0,
-'Q12Wa26S4'=>($this->getFiled('Q12Wa26S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa26S4', $uArray[$i]['userid']) : 0,
-'Q12Wa27S1'=>($this->getFiled('Q12Wa27S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa27S1', $uArray[$i]['userid']) : 0,
-'Q12Wa27S2'=>($this->getFiled('Q12Wa27S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa27S2', $uArray[$i]['userid']) : 0,
-'Q12Wa27S3'=>($this->getFiled('Q12Wa27S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa27S3', $uArray[$i]['userid']) : 0,
-'Q12Wa27S4'=>($this->getFiled('Q12Wa27S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa27S4', $uArray[$i]['userid']) : 0,
-'Q12Wa28S1'=>($this->getFiled('Q12Wa28S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa28S1', $uArray[$i]['userid']) : 0,
-'Q12Wa28S2'=>($this->getFiled('Q12Wa28S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa28S2', $uArray[$i]['userid']) : 0,
-'Q12Wa28S3'=>($this->getFiled('Q12Wa28S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa28S3', $uArray[$i]['userid']) : 0,
-'Q12Wa28S4'=>($this->getFiled('Q12Wa28S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa28S4', $uArray[$i]['userid']) : 0,
-'Q13Wa1'=>($this->getFiled('Q13Wa1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q13Wa1', $uArray[$i]['userid']) : 0,
-'Q13Wa2'=>($this->getFiled('Q13Wa2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q13Wa2', $uArray[$i]['userid']) : 0,
-'Q14Wa1'=>($this->getFiled('Q14Wa1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q14Wa1', $uArray[$i]['userid']) : 0,
-'Q15Wa1'=>($this->getFiled('Q15Wa1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q15Wa1', $uArray[$i]['userid']) : 0,
-'Q16Wa1'=>($this->getFiled('Q16Wa1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q16Wa1', $uArray[$i]['userid']) : 0,
-'Q17Wa1'=>($this->getFiled('Q17Wa1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q17Wa1', $uArray[$i]['userid']) : 0,
-'Q18Wa1'=>($this->getFiled('Q18Wa1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q18Wa1', $uArray[$i]['userid']) : 0,
-'Q19Wa1'=>($this->getFiled('Q19Wa1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q19Wa1', $uArray[$i]['userid']) : 0,
+'Q6Wa1S4'=>($this->getFiled('Q6Wa1S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa1S4', $uArray[$i]['userid']) : "000.000",
+'Q6Wa1S5'=>($this->getFiled('Q6Wa1S5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa1S5', $uArray[$i]['userid']) : "000.000",
+'Q6Wa1S6'=>($this->getFiled('Q6Wa1S6', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa1S6', $uArray[$i]['userid']) : "000.000",
+'Q6Wa2S1'=>($this->getFiled('Q6Wa2S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa2S1', $uArray[$i]['userid']) : "000.000",
+'Q6Wa2S2'=>($this->getFiled('Q6Wa2S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa2S2', $uArray[$i]['userid']) : "000.000",
+'Q6Wa2S3'=>($this->getFiled('Q6Wa2S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa2S3', $uArray[$i]['userid']) : "000.000",
+'Q6Wa2S4'=>($this->getFiled('Q6Wa2S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa2S4', $uArray[$i]['userid']) : "000.000",
+'Q6Wa2S5'=>($this->getFiled('Q6Wa2S5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa2S5', $uArray[$i]['userid']) : "000.000",
+'Q6Wa2S6'=>($this->getFiled('Q6Wa2S6', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa2S6', $uArray[$i]['userid']) : "000.000",
+'Q6Wa2S7'=>($this->getFiled('Q6Wa2S7', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa2S7', $uArray[$i]['userid']) : "000.000",
+'Q6Wa2S8'=>($this->getFiled('Q6Wa2S8', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa2S8', $uArray[$i]['userid']) : "000.000",
+'Q6Wa2S9'=>($this->getFiled('Q6Wa2S9', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa2S9', $uArray[$i]['userid']) : "000.000",
+'Q6Wa3S1'=>($this->getFiled('Q6Wa3S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa3S1', $uArray[$i]['userid']) : "000.000",
+'Q6Wa3S2'=>($this->getFiled('Q6Wa3S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa3S2', $uArray[$i]['userid']) : "000.000",
+'Q6Wa3S3'=>($this->getFiled('Q6Wa3S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa3S3', $uArray[$i]['userid']) : "000.000",
+'Q6Wa3S4'=>($this->getFiled('Q6Wa3S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa3S4', $uArray[$i]['userid']) : "000.000",
+'Q6Wa4S1'=>($this->getFiled('Q6Wa4S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa4S1', $uArray[$i]['userid']) : "000.000",
+'Q6Wa4S2'=>($this->getFiled('Q6Wa4S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa4S2', $uArray[$i]['userid']) : "000.000",
+'Q6Wa5S1'=>($this->getFiled('Q6Wa5S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa5S1', $uArray[$i]['userid']) : "000.000",
+'Q6Wa5S2'=>($this->getFiled('Q6Wa5S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa5S2', $uArray[$i]['userid']) : "000.000",
+'Q6Wa6S1'=>($this->getFiled('Q6Wa6S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa6S1', $uArray[$i]['userid']) : "000.000",
+'Q6Wa6S2'=>($this->getFiled('Q6Wa6S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa6S2', $uArray[$i]['userid']) : "000.000",
+'Q6Wa7S1'=>($this->getFiled('Q6Wa7S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa7S1', $uArray[$i]['userid']) : "000.000",
+'Q6Wa7S2'=>($this->getFiled('Q6Wa7S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6Wa7S2', $uArray[$i]['userid']) : "000.000",
+'Q8Wa1'=>($this->getFiled('Q8Wa1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa1', $uArray[$i]['userid']) : "000.000",
+'Q8Wa1S1'=>($this->getFiled('Q8Wa1S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa1S1', $uArray[$i]['userid']) : "000.000",
+'Q8Wa1S2'=>($this->getFiled('Q8Wa1S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa1S2', $uArray[$i]['userid']) : "000.000",
+'Q8Wa1S3'=>($this->getFiled('Q8Wa1S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa1S3', $uArray[$i]['userid']) : "000.000",
+'Q8Wa1S4'=>($this->getFiled('Q8Wa1S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa1S4', $uArray[$i]['userid']) : "000.000",
+'Q8Wa1S5'=>($this->getFiled('Q8Wa1S5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa1S5', $uArray[$i]['userid']) : "000.000",
+'Q8Wa1S6'=>($this->getFiled('Q8Wa1S6', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa1S6', $uArray[$i]['userid']) : "000.000",
+'Q8Wa2S1'=>($this->getFiled('Q8Wa2S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa2S1', $uArray[$i]['userid']) : "000.000",
+'Q8Wa2S2'=>($this->getFiled('Q8Wa2S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa2S2', $uArray[$i]['userid']) : "000.000",
+'Q8Wa2S3'=>($this->getFiled('Q8Wa2S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa2S3', $uArray[$i]['userid']) : "000.000",
+'Q8Wa2S4'=>($this->getFiled('Q8Wa2S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa2S4', $uArray[$i]['userid']) : "000.000",
+'Q8Wa2S5'=>($this->getFiled('Q8Wa2S5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa2S5', $uArray[$i]['userid']) : "000.000",
+'Q8Wa2S6'=>($this->getFiled('Q8Wa2S6', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa2S6', $uArray[$i]['userid']) : "000.000",
+'Q8Wa2S7'=>($this->getFiled('Q8Wa2S7', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa2S7', $uArray[$i]['userid']) : "000.000",
+'Q8Wa2S8'=>($this->getFiled('Q8Wa2S8', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa2S8', $uArray[$i]['userid']) : "000.000",
+'Q8Wa2S9'=>($this->getFiled('Q8Wa2S9', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa2S9', $uArray[$i]['userid']) : "000.000",
+'Q8Wa3S1'=>($this->getFiled('Q8Wa3S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa3S1', $uArray[$i]['userid']) : "000.000",
+'Q8Wa3S2'=>($this->getFiled('Q8Wa3S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa3S2', $uArray[$i]['userid']) : "000.000",
+'Q8Wa3S3'=>($this->getFiled('Q8Wa3S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa3S3', $uArray[$i]['userid']) : "000.000",
+'Q8Wa3S4'=>($this->getFiled('Q8Wa3S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa3S4', $uArray[$i]['userid']) : "000.000",
+'Q8Wa4S1'=>($this->getFiled('Q8Wa4S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa4S1', $uArray[$i]['userid']) : "000.000",
+'Q8Wa4S2'=>($this->getFiled('Q8Wa4S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa4S2', $uArray[$i]['userid']) : "000.000",
+'Q8Wa5S1'=>($this->getFiled('Q8Wa5S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa5S1', $uArray[$i]['userid']) : "000.000",
+'Q8Wa5S2'=>($this->getFiled('Q8Wa5S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa5S2', $uArray[$i]['userid']) : "000.000",
+'Q8Wa6S1'=>($this->getFiled('Q8Wa6S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa6S1', $uArray[$i]['userid']) : "000.000",
+'Q8Wa6S2'=>($this->getFiled('Q8Wa6S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa6S2', $uArray[$i]['userid']) : "000.000",
+'Q8Wa7S1'=>($this->getFiled('Q8Wa7S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa7S1', $uArray[$i]['userid']) : "000.000",
+'Q8Wa7S2'=>($this->getFiled('Q8Wa7S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8Wa7S2', $uArray[$i]['userid']) : "000.000",
+'Q9Wa1'=>($this->getFiled('Q9Wa1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q9Wa1', $uArray[$i]['userid']) : "000.000",
+'Q9Wa2S4'=>($this->getFiled('Q9Wa2S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q9Wa2S4', $uArray[$i]['userid']) : "000.000",
+'Q9Wa3'=>($this->getFiled('Q9Wa3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q9Wa3', $uArray[$i]['userid']) : "000.000",
+
+
+'Q9Wa2S1'=>$methodology,
+
+'Q9Wa31'=>($this->getFiled('Q9Wa31', $uArray[$i]['userid']) != '') ? $this->getFiled('Q9Wa31', $uArray[$i]['userid']) : "000.000",
+'Q9Wa4S1'=>$purpose_of_composite,
+
+'Q10Wa1'=>($this->getFiled('Q10Wa1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q10Wa1', $uArray[$i]['userid']) : "000.000",
+
+
+
+
+
+
+
+'paper_recycling_procedures'=>$paper,
+'plastic_recycling_procedures'=>$plastic,
+'horticultural_waste_recycling_procedures'=>$horticultural_waste,
+'e_waste_recycling_procedures'=>$e_waste,
+'hazardous_waste_recycling_procedures'=>$hazardous_waste,
+'wood_glass_metal_recycling_procedures'=>$wood_glass_metal,
+'biomedical_waste_recycling_procedures'=>$wood_glass_metal,
+'others_recycling_procedures'=>$wood_glass_metal,
+
+
+
+
+
+
+
+
+
+
+'Q12Wa1S1'=>($this->getFiled('Q12Wa1S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa1S1', $uArray[$i]['userid']) : "000.000",
+'Q12Wa1S2'=>($this->getFiled('Q12Wa1S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa1S2', $uArray[$i]['userid']) : "000.000",
+'Q12Wa1S3'=>($this->getFiled('Q12Wa1S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa1S3', $uArray[$i]['userid']) : "000.000",
+'Q12Wa1S4'=>($this->getFiled('Q12Wa1S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa1S4', $uArray[$i]['userid']) : "000.000",
+
+
+
+'Q12Wa2S1'=>($this->getFiled('Q12Wa2S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa2S1', $uArray[$i]['userid']) : "000.000",
+'Q12Wa2S2'=>($this->getFiled('Q12Wa2S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa2S2', $uArray[$i]['userid']) : "000.000",
+'Q12Wa2S3'=>($this->getFiled('Q12Wa2S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa2S3', $uArray[$i]['userid']) : "000.000",
+'Q12Wa2S4'=>($this->getFiled('Q12Wa2S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa2S4', $uArray[$i]['userid']) : "000.000",
+'Q12Wa3S1'=>($this->getFiled('Q12Wa3S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa3S1', $uArray[$i]['userid']) : "000.000",
+'Q12Wa3S2'=>($this->getFiled('Q12Wa3S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa3S2', $uArray[$i]['userid']) : "000.000",
+'Q12Wa3S3'=>($this->getFiled('Q12Wa3S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa3S3', $uArray[$i]['userid']) : "000.000",
+'Q12Wa3S4'=>($this->getFiled('Q12Wa3S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa3S4', $uArray[$i]['userid']) : "000.000",
+'Q12Wa4S1'=>($this->getFiled('Q12Wa4S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa4S1', $uArray[$i]['userid']) : "000.000",
+'Q12Wa4S2'=>($this->getFiled('Q12Wa4S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa4S2', $uArray[$i]['userid']) : "000.000",
+'Q12Wa4S3'=>($this->getFiled('Q12Wa4S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa4S3', $uArray[$i]['userid']) : "000.000",
+'Q12Wa4S4'=>($this->getFiled('Q12Wa4S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa4S4', $uArray[$i]['userid']) : "000.000",
+'Q12Wa5S1'=>($this->getFiled('Q12Wa5S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa5S1', $uArray[$i]['userid']) : "000.000",
+'Q12Wa5S2'=>($this->getFiled('Q12Wa5S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa5S2', $uArray[$i]['userid']) : "000.000",
+'Q12Wa5S3'=>($this->getFiled('Q12Wa5S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa5S3', $uArray[$i]['userid']) : "000.000",
+'Q12Wa5S4'=>($this->getFiled('Q12Wa5S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa5S4', $uArray[$i]['userid']) : "000.000",
+'Q12Wa6S1'=>($this->getFiled('Q12Wa6S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa6S1', $uArray[$i]['userid']) : "000.000",
+'Q12Wa6S2'=>($this->getFiled('Q12Wa6S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa6S2', $uArray[$i]['userid']) : "000.000",
+'Q12Wa6S3'=>($this->getFiled('Q12Wa6S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa6S3', $uArray[$i]['userid']) : "000.000",
+'Q12Wa6S4'=>($this->getFiled('Q12Wa6S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa6S4', $uArray[$i]['userid']) : "000.000",
+'Q12Wa7S1'=>($this->getFiled('Q12Wa7S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa7S1', $uArray[$i]['userid']) : "000.000",
+'Q12Wa7S2'=>($this->getFiled('Q12Wa7S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa7S2', $uArray[$i]['userid']) : "000.000",
+'Q12Wa7S3'=>($this->getFiled('Q12Wa7S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa7S3', $uArray[$i]['userid']) : "000.000",
+'Q12Wa7S4'=>($this->getFiled('Q12Wa7S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa7S4', $uArray[$i]['userid']) : "000.000",
+'Q12Wa8S1'=>($this->getFiled('Q12Wa8S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa8S1', $uArray[$i]['userid']) : "000.000",
+'Q12Wa8S2'=>($this->getFiled('Q12Wa8S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa8S2', $uArray[$i]['userid']) : "000.000",
+'Q12Wa8S3'=>($this->getFiled('Q12Wa8S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa8S3', $uArray[$i]['userid']) : "000.000",
+'Q12Wa8S4'=>($this->getFiled('Q12Wa8S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa8S4', $uArray[$i]['userid']) : "000.000",
+'Q12Wa9S1'=>($this->getFiled('Q12Wa9S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa9S1', $uArray[$i]['userid']) : "000.000",
+'Q12Wa9S2'=>($this->getFiled('Q12Wa9S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa9S2', $uArray[$i]['userid']) : "000.000",
+'Q12Wa9S3'=>($this->getFiled('Q12Wa9S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa9S3', $uArray[$i]['userid']) : "000.000",
+'Q12Wa9S4'=>($this->getFiled('Q12Wa9S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa9S4', $uArray[$i]['userid']) : "000.000",
+'Q12Wa10S1'=>($this->getFiled('Q12Wa10S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa10S1', $uArray[$i]['userid']) : "000.000",
+'Q12Wa10S2'=>($this->getFiled('Q12Wa10S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa10S2', $uArray[$i]['userid']) : "000.000",
+'Q12Wa10S3'=>($this->getFiled('Q12Wa10S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa10S3', $uArray[$i]['userid']) : "000.000",
+'Q12Wa10S4'=>($this->getFiled('Q12Wa10S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa10S4', $uArray[$i]['userid']) : "000.000",
+'Q12Wa11S1'=>($this->getFiled('Q12Wa11S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa11S1', $uArray[$i]['userid']) : "000.000",
+'Q12Wa11S2'=>($this->getFiled('Q12Wa11S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa11S2', $uArray[$i]['userid']) : "000.000",
+'Q12Wa11S3'=>($this->getFiled('Q12Wa11S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa11S3', $uArray[$i]['userid']) : "000.000",
+'Q12Wa11S4'=>($this->getFiled('Q12Wa11S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa11S4', $uArray[$i]['userid']) : "000.000",
+'Q12Wa12S1'=>($this->getFiled('Q12Wa12S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa12S1', $uArray[$i]['userid']) : "000.000",
+'Q12Wa12S2'=>($this->getFiled('Q12Wa12S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa12S2', $uArray[$i]['userid']) : "000.000",
+'Q12Wa12S3'=>($this->getFiled('Q12Wa12S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa12S3', $uArray[$i]['userid']) : "000.000",
+'Q12Wa12S4'=>($this->getFiled('Q12Wa12S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa12S4', $uArray[$i]['userid']) : "000.000",
+'Q12Wa13S1'=>($this->getFiled('Q12Wa13S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa13S1', $uArray[$i]['userid']) : "000.000",
+'Q12Wa13S2'=>($this->getFiled('Q12Wa13S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa13S2', $uArray[$i]['userid']) : "000.000",
+'Q12Wa13S3'=>($this->getFiled('Q12Wa13S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa13S3', $uArray[$i]['userid']) : "000.000",
+'Q12Wa13S4'=>($this->getFiled('Q12Wa13S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa13S4', $uArray[$i]['userid']) : "000.000",
+'Q12Wa14S1'=>($this->getFiled('Q12Wa14S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa14S1', $uArray[$i]['userid']) : "000.000",
+'Q12Wa14S2'=>($this->getFiled('Q12Wa14S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa14S2', $uArray[$i]['userid']) : "000.000",
+'Q12Wa14S3'=>($this->getFiled('Q12Wa14S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa14S3', $uArray[$i]['userid']) : "000.000",
+'Q12Wa14S4'=>($this->getFiled('Q12Wa14S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa14S4', $uArray[$i]['userid']) : "000.000",
+'Q12Wa15S1'=>($this->getFiled('Q12Wa15S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa15S1', $uArray[$i]['userid']) : "000.000",
+'Q12Wa15S2'=>($this->getFiled('Q12Wa15S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa15S2', $uArray[$i]['userid']) : "000.000",
+'Q12Wa15S3'=>($this->getFiled('Q12Wa15S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa15S3', $uArray[$i]['userid']) : "000.000",
+'Q12Wa15S4'=>($this->getFiled('Q12Wa15S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa15S4', $uArray[$i]['userid']) : "000.000",
+'Q12Wa16S1'=>($this->getFiled('Q12Wa16S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa16S1', $uArray[$i]['userid']) : "000.000",
+'Q12Wa16S2'=>($this->getFiled('Q12Wa16S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa16S2', $uArray[$i]['userid']) : "000.000",
+'Q12Wa16S3'=>($this->getFiled('Q12Wa16S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa16S3', $uArray[$i]['userid']) : "000.000",
+'Q12Wa16S4'=>($this->getFiled('Q12Wa16S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa16S4', $uArray[$i]['userid']) : "000.000",
+'Q12Wa17S1'=>($this->getFiled('Q12Wa17S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa17S1', $uArray[$i]['userid']) : "000.000",
+'Q12Wa17S2'=>($this->getFiled('Q12Wa17S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa17S2', $uArray[$i]['userid']) : "000.000",
+'Q12Wa17S3'=>($this->getFiled('Q12Wa17S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa17S3', $uArray[$i]['userid']) : "000.000",
+'Q12Wa17S4'=>($this->getFiled('Q12Wa17S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa17S4', $uArray[$i]['userid']) : "000.000",
+'Q12Wa18S1'=>($this->getFiled('Q12Wa18S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa18S1', $uArray[$i]['userid']) : "000.000",
+'Q12Wa18S2'=>($this->getFiled('Q12Wa18S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa18S2', $uArray[$i]['userid']) : "000.000",
+'Q12Wa18S3'=>($this->getFiled('Q12Wa18S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa18S3', $uArray[$i]['userid']) : "000.000",
+'Q12Wa18S4'=>($this->getFiled('Q12Wa18S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa18S4', $uArray[$i]['userid']) : "000.000",
+'Q12Wa19S1'=>($this->getFiled('Q12Wa19S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa19S1', $uArray[$i]['userid']) : "000.000",
+'Q12Wa19S2'=>($this->getFiled('Q12Wa19S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa19S2', $uArray[$i]['userid']) : "000.000",
+'Q12Wa19S3'=>($this->getFiled('Q12Wa19S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa19S3', $uArray[$i]['userid']) : "000.000",
+'Q12Wa19S4'=>($this->getFiled('Q12Wa19S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa19S4', $uArray[$i]['userid']) : "000.000",
+'Q12Wa20S1'=>($this->getFiled('Q12Wa20S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa20S1', $uArray[$i]['userid']) : "000.000",
+'Q12Wa20S2'=>($this->getFiled('Q12Wa20S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa20S2', $uArray[$i]['userid']) : "000.000",
+'Q12Wa20S3'=>($this->getFiled('Q12Wa20S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa20S3', $uArray[$i]['userid']) : "000.000",
+'Q12Wa20S4'=>($this->getFiled('Q12Wa20S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa20S4', $uArray[$i]['userid']) : "000.000",
+'Q12Wa21S1'=>($this->getFiled('Q12Wa21S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa21S1', $uArray[$i]['userid']) : "000.000",
+'Q12Wa21S2'=>($this->getFiled('Q12Wa21S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa21S2', $uArray[$i]['userid']) : "000.000",
+'Q12Wa21S3'=>($this->getFiled('Q12Wa21S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa21S3', $uArray[$i]['userid']) : "000.000",
+'Q12Wa21S4'=>($this->getFiled('Q12Wa21S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa21S4', $uArray[$i]['userid']) : "000.000",
+'Q12Wa22S1'=>($this->getFiled('Q12Wa22S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa22S1', $uArray[$i]['userid']) : "000.000",
+'Q12Wa22S2'=>($this->getFiled('Q12Wa22S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa22S2', $uArray[$i]['userid']) : "000.000",
+'Q12Wa22S3'=>($this->getFiled('Q12Wa22S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa22S3', $uArray[$i]['userid']) : "000.000",
+'Q12Wa22S4'=>($this->getFiled('Q12Wa22S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa22S4', $uArray[$i]['userid']) : "000.000",
+'Q12Wa23S1'=>($this->getFiled('Q12Wa23S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa23S1', $uArray[$i]['userid']) : "000.000",
+'Q12Wa23S2'=>($this->getFiled('Q12Wa23S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa23S2', $uArray[$i]['userid']) : "000.000",
+'Q12Wa23S3'=>($this->getFiled('Q12Wa23S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa23S3', $uArray[$i]['userid']) : "000.000",
+'Q12Wa23S4'=>($this->getFiled('Q12Wa23S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa23S4', $uArray[$i]['userid']) : "000.000",
+'Q12Wa24S1'=>($this->getFiled('Q12Wa24S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa24S1', $uArray[$i]['userid']) : "000.000",
+'Q12Wa24S2'=>($this->getFiled('Q12Wa24S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa24S2', $uArray[$i]['userid']) : "000.000",
+'Q12Wa24S3'=>($this->getFiled('Q12Wa24S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa24S3', $uArray[$i]['userid']) : "000.000",
+'Q12Wa24S4'=>($this->getFiled('Q12Wa24S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa24S4', $uArray[$i]['userid']) : "000.000",
+'Q12Wa25S1'=>($this->getFiled('Q12Wa25S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa25S1', $uArray[$i]['userid']) : "000.000",
+'Q12Wa25S2'=>($this->getFiled('Q12Wa25S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa25S2', $uArray[$i]['userid']) : "000.000",
+'Q12Wa25S3'=>($this->getFiled('Q12Wa25S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa25S3', $uArray[$i]['userid']) : "000.000",
+'Q12Wa25S4'=>($this->getFiled('Q12Wa25S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa25S4', $uArray[$i]['userid']) : "000.000",
+'Q12Wa26S1'=>($this->getFiled('Q12Wa26S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa26S1', $uArray[$i]['userid']) : "000.000",
+'Q12Wa26S2'=>($this->getFiled('Q12Wa26S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa26S2', $uArray[$i]['userid']) : "000.000",
+'Q12Wa26S3'=>($this->getFiled('Q12Wa26S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa26S3', $uArray[$i]['userid']) : "000.000",
+'Q12Wa26S4'=>($this->getFiled('Q12Wa26S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa26S4', $uArray[$i]['userid']) : "000.000",
+'Q12Wa27S1'=>($this->getFiled('Q12Wa27S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa27S1', $uArray[$i]['userid']) : "000.000",
+'Q12Wa27S2'=>($this->getFiled('Q12Wa27S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa27S2', $uArray[$i]['userid']) : "000.000",
+'Q12Wa27S3'=>($this->getFiled('Q12Wa27S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa27S3', $uArray[$i]['userid']) : "NA",
+'Q12Wa27S4'=>($this->getFiled('Q12Wa27S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa27S4', $uArray[$i]['userid']) : "000.000",
+'Q12Wa28S1'=>($this->getFiled('Q12Wa28S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa28S1', $uArray[$i]['userid']) : "000.000",
+'Q12Wa28S2'=>($this->getFiled('Q12Wa28S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa28S2', $uArray[$i]['userid']) : "000.000",
+'Q12Wa28S3'=>($this->getFiled('Q12Wa28S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa28S3', $uArray[$i]['userid']) : "000.000",
+'Q12Wa28S4'=>($this->getFiled('Q12Wa28S4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q12Wa28S4', $uArray[$i]['userid']) : "000.000",
+'Q13Wa1'=>($this->getFiled('Q13Wa1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q13Wa1', $uArray[$i]['userid']) : "000.000",
+'Q13Wa2'=>($this->getFiled('Q13Wa2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q13Wa2', $uArray[$i]['userid']) : "000.000",
+'Q14Wa1'=>($this->getFiled('Q14Wa1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q14Wa1', $uArray[$i]['userid']) : "000.000",
+'Q15Wa1'=>($this->getFiled('Q15Wa1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q15Wa1', $uArray[$i]['userid']) : "000.000",
+'Q15Wa2'=>($this->getFiled('Q15Wa2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q15Wa2', $uArray[$i]['userid']) : "000.000",
+'Q15Wa2S1'=>($this->getFiled('Q15Wa2S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q15Wa2S1', $uArray[$i]['userid']) : "000.000",
+
+'Q16Wa1'=>($this->getFiled('Q16Wa1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q16Wa1', $uArray[$i]['userid']) : "000.000",
+'Q17Wa1'=>($this->getFiled('Q17Wa1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q17Wa1', $uArray[$i]['userid']) : "000.000",
+'Q18Wa1'=>($this->getFiled('Q18Wa1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q18Wa1', $uArray[$i]['userid']) : "000.000",
+'Q18Wa2S1'=>($this->getFiled('Q18Wa2S1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q18Wa2S1', $uArray[$i]['userid']) : "000.000",
+'Q18Wa2S2'=>($this->getFiled('Q18Wa2S2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q18Wa2S2', $uArray[$i]['userid']) : "000.000",
+'Q18Wa2S3'=>($this->getFiled('Q18Wa2S3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q18Wa2S3', $uArray[$i]['userid']) : "000.000",
+'Q19Wa1'=>($this->getFiled('Q19Wa1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q19Wa1', $uArray[$i]['userid']) : "000.000",
 'waste_points'=>getWastePoints($uArray[$i]['userid']),
 /*'Q1Fe1' => ($this->getFiled('Q1Fe1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q1Fe1', $uArray[$i]['userid']) : 0,
 		'Q1Fe1_A' => '',
@@ -740,101 +1028,169 @@ class Performance_total extends CI_Controller {
 
 );
 	}
-	echo '<pre>'; print_r($points);
+	echo '
+<pre>
+'; print_r($points);
 	$this->db->insert_batch('tbl_total',$points,'userid');
     }
  
-       function getWastePoints($argUserID) {
-        $waste_points = array();
-        //2(a) How many categories does your school segregate waste into? 
-        $total_two_bins = (getFiled('Q5Wa11S3', $argUserID) != '') ? getFiled('Q5Wa11S3', $argUserID) : 0;
-        $total_three_bins = (getFiled('Q5Wa11S4', $argUserID) != '') ? getFiled('Q5Wa11S4', $argUserID) : 0;
-        $total_collection_point = (getFiled('Q5Wa11S5', $argUserID) != '') ? getFiled('Q5Wa11S5', $argUserID) : 0;
+        function getWastePoints($argUserID) {
+	$waste_points = array();
+	//Q1Does your school segregate solid waste
+	$Q1=(getFiled('Q4Wa1', $argUserID) != '') ? getFiled('Q4Wa1', $argUserID) : 0;
+	//echo 'Q1'.$Q1;
+	if($Q1=='Y')
+	{
+	    $waste_points['Q1_solid_waste']=5;
+	}else if($Q1=='N')
+	{
+	    $waste_points['Q1_solid_waste']=0;
+	}
+	//2(a) How many categories does your school segregate waste into? 
+	$total_two_bins = (getFiled('Q5Wa11S3', $argUserID) != '') ? getFiled('Q5Wa11S3', $argUserID) : 0;
+	$total_three_bins = (getFiled('Q5Wa11S4', $argUserID) != '') ? getFiled('Q5Wa11S4', $argUserID) : 0;
+	$total_collection_point = (getFiled('Q5Wa11S5', $argUserID) != '') ? getFiled('Q5Wa11S5', $argUserID) : 0;
 
-        $total_with_no_bins = (getFiled('Q5Wa11S1', $argUserID) != '') ? getFiled('Q5Wa11S1', $argUserID) : 0;
-        $total_with_one_bin = (getFiled('Q5Wa11S2', $argUserID) != '') ? getFiled('Q5Wa11S2', $argUserID) : 0;
-        $total_with_three_bin = (getFiled('Q5Wa11S4', $argUserID) != '') ? getFiled('Q5Wa11S4', $argUserID) : 0;
-        if ($total_collection_point == ($total_three_bins + $total_two_bins)) {
-            $waste_points['Q2_segregate'] = 10;
-        } else if ($total_collection_point == ($total_with_no_bins + $total_with_one_bin)) {
-            $waste_points['Q2_segregate'] = 0;
-        } else if ($total_two_bins == $total_collection_point) {
-            $waste_points['Q2_segregate'] = 10;
-        } else if ($total_with_three_bin == $total_collection_point) {
-            $waste_points['Q2_segregate'] = 10;
-        } else if (($total_two_bins + $total_with_three_bin) < $total_collection_point) {
-            $waste_points['Q2_segregate'] = ($total_two_bins + $total_with_three_bin) * 10 / $total_collection_point;
-        }
+	$total_with_no_bins = (getFiled('Q5Wa11S1', $argUserID) != '') ? getFiled('Q5Wa11S1', $argUserID) : 0;
+	$total_with_one_bin = (getFiled('Q5Wa11S2', $argUserID) != '') ? getFiled('Q5Wa11S2', $argUserID) : 0;
+	$total_with_three_bin = (getFiled('Q5Wa11S4', $argUserID) != '') ? getFiled('Q5Wa11S4', $argUserID) : 0;
+	if ($total_collection_point == ($total_three_bins + $total_two_bins)) {
+	    $waste_points['Q2_segregate'] = 10;
+	} else if ($total_collection_point == ($total_with_no_bins + $total_with_one_bin)) {
+	    $waste_points['Q2_segregate'] = 0;
+	} else if ($total_two_bins == $total_collection_point) {
+	    $waste_points['Q2_segregate'] = 10;
+	} else if ($total_with_three_bin == $total_collection_point) {
+	    $waste_points['Q2_segregate'] = 10;
+	} else if (($total_two_bins + $total_with_three_bin) < $total_collection_point) {
+	    $waste_points['Q2_segregate'] = ($total_two_bins + $total_with_three_bin) * 10 / $total_collection_point;
+	}
+	//Q3.How much waste does your school generate?
+	$_PER_CAPITA_VAL='';
+	//Determine the quantity of waste generated in your school.
+	$total_population = (getFiled('Q4G4S3', $argUserID) != '') ? getFiled('Q4G4S3', $argUserID) : 0;
+	//Biodigrable/Wet Waste
+	$biodigrable=(getFiled('Q6Wa1S5', $argUserID) != '') ? getFiled('Q6Wa1S5', $argUserID) : 0;
+	//Dry Recycable Waste
+	$total_dry_waste=(getFiled('Q6Wa2S8', $argUserID) != '') ? getFiled('Q6Wa2S8', $argUserID) : 0;
+	//Domestic hazardous waste
+	$total_hazardous_waste=(getFiled('Q6Wa3S3', $argUserID) != '') ? getFiled('Q6Wa3S3', $argUserID) : 0;
+	//E-Waste
+	$total_e_waste=(getFiled('Q6Wa4S1', $argUserID) != '') ? getFiled('Q6Wa4S1', $argUserID) : 0;
+	//Biomedical waste
+	$total_biomedical_waste=(getFiled('Q6Wa5S1', $argUserID) != '') ? getFiled('Q6Wa5S1', $argUserID) : 0;
+	//Sanitery Waste
+	$total_sanitary_waste=(getFiled('Q6Wa6S1', $argUserID) != '') ? getFiled('Q6Wa6S1', $argUserID) : 0;
+	//Cc and DD
+	$total_cc_and_dd=(getFiled('Q6Wa7S1', $argUserID) != '') ? getFiled('Q6Wa7S1', $argUserID) : 0;	
+	$PER_DAY_WASTE=($biodigrable+$total_dry_waste+$total_hazardous_waste+$total_e_waste+$total_biomedical_waste+$total_sanitary_waste+$total_cc_and_dd)/30;
+	$PER_CAPITA_WASTE=$PER_DAY_WASTE/$total_population;
+	$SCHOOL_CATGEORY=(getFiled('Q1S1', $argUserID) != '') ? getFiled('Q1S1', $argUserID) : 0;
+	//echo $PER_CAPITA_WASTE;
+	if($SCHOOL_CATGEORY==1)//Day Schoolar
+	{
+	    $_PER_CAPITA_VAL=100;
+	}else if($SCHOOL_CATGEORY==2)
+	{
+	    $_PER_CAPITA_VAL=150;
+	}else if($SCHOOL_CATGEORY==3)
+	{
+	    $_PER_CAPITA_VAL=300;
+	}else if($SCHOOL_CATGEORY==4)
+	{
+	    $_PER_CAPITA_VAL=150;
+	}else if($SCHOOL_CATGEORY==5)
+	{
+	    $_PER_CAPITA_VAL=300;
+	}else if($SCHOOL_CATGEORY==6)
+	{
+	    $_PER_CAPITA_VAL=300;
+	}else if($SCHOOL_CATGEORY==7)
+	{
+	     $_PER_CAPITA_VAL=300;
+	}
+	//echo $PER_CAPITA_WASTE;
+	if($PER_CAPITA_WASTE<=$_PER_CAPITA_VAL)
+	{
+	    $waste_points['Q3_percapita_waste']=10;
+	}else
+	{
+	    $waste_points['Q3_percapita_waste']=0;
+	}
+	//Total Amount of Generated Waste
+	//Biodigradble
+	$A = (getFiled('Q6Wa1S5', $argUserID) != '') ? getFiled('Q6Wa1S5', $argUserID) : 0;
+	//Dry/Recycalbe
+	$B = (getFiled('Q6Wa2S8', $argUserID) != '') ? getFiled('Q6Wa2S8', $argUserID) : 0;
+	//Domestic
+	$C = (getFiled('Q6Wa3S3', $argUserID) != '') ? getFiled('Q6Wa3S3', $argUserID) : 0;
+	//E-Watse
+	$D = (getFiled('Q6Wa4S1', $argUserID) != '') ? getFiled('Q6Wa4S1', $argUserID) : 0;
+	//Biomedical waste
+	$E = (getFiled('Q6Wa5S1', $argUserID) != '') ? getFiled('Q6Wa5S1', $argUserID) : 0;
+	//Sanitary
+	$F = (getFiled('Q6Wa6S1', $argUserID) != '') ? getFiled('Q6Wa6S1', $argUserID) : 0;
+	//Cc&&D
+	$G = (getFiled('Q6Wa7S1', $argUserID) != '') ? getFiled('Q6Wa7S1', $argUserID) : 0;
+	$total_generated_waste = $A + $B + $C + $D + $E + $F + $G;
+	//Recycled Watse
+	$A1 = (getFiled('Q8Wa1S5', $argUserID) != '') ? getFiled('Q8Wa1S5', $argUserID) : 0;
+	//Dry/Recycalbe
+	$B1 = (getFiled('Q8Wa2S8', $argUserID) != '') ? getFiled('Q8Wa2S8', $argUserID) : 0;
+	//Domestic
+	$C1 = (getFiled('Q8Wa3S3', $argUserID) != '') ? getFiled('Q8Wa3S3', $argUserID) : 0;
+	//E-Watse
+	$D1 = (getFiled('Q8Wa4S1', $argUserID) != '') ? getFiled('Q8Wa4S1', $argUserID) : 0;
+	//Biomedical waste
+	$E1 = (getFiled('Q8Wa5S1', $argUserID) != '') ? getFiled('Q8Wa5S1', $argUserID) : 0;
+	//Sanitary
+	$F1 = (getFiled('Q8Wa6S1', $argUserID) != '') ? getFiled('Q8Wa6S1', $argUserID) : 0;
+	//Cc&&D
+	$G1 = (getFiled('Q8Wa7S1', $argUserID) != '') ? getFiled('Q8Wa7S1', $argUserID) : 0;
+	$total_recycled_waste = $A1 + $B1 + $C1 + $D1 + $E1 + $F1 + $G1;
+	if ($total_generated_waste != 0) {
+	    $percentage_of_genrated_waste = ($total_recycled_waste / $total_generated_waste) * 100;
+	    if ($percentage_of_genrated_waste > 50) {
+		$waste_points['Q4_recycled_waste'] = 20;
+	    }
+	}
+	//Q5 Does your school have a composting facility?
+	$composition_facility = (getFiled('Q9Wa1', $argUserID) != '') ? getFiled('Q9Wa1', $argUserID) : "";
+	if ($composition_facility != '') {
+	    if ($composition_facility == 'Y') {
+		$waste_points['Q5_facility'] = 10;
+	    } else if ($composition_facility == 'N') {
+		$waste_points['Q5_facility'] = 0;
+	    }
+	}
+	//Q5 a. What is the methodology used?
+//	$methodology = (getFiled('Q9Wa2S1', $argUserID) != '') ? getFiled('Q9Wa2S1', $argUserID) : "";
+//	if ($methodology != '') {
+//	    $waste_points['Q5_facility'] = 10;
+//	}
 
-        ///Point Calculation Water recycled
-        //Total Amount of Generated Waste
-        //Biodigradble
-        $A = (getFiled('Q6Wa1S5', $argUserID) != '') ? getFiled('Q6Wa1S5', $argUserID) : 0;
-        //Dry/Recycalbe
-        $B = (getFiled('Q6Wa2S8', $argUserID) != '') ? getFiled('Q6Wa2S8', $argUserID) : 0;
-        //Domestic
-        $C = (getFiled('Q6Wa3S3', $argUserID) != '') ? getFiled('Q6Wa3S3', $argUserID) : 0;
-        //E-Watse
-        $D = (getFiled('Q6Wa4S1', $argUserID) != '') ? getFiled('Q6Wa4S1', $argUserID) : 0;
-        //Biomedical waste
-        $E = (getFiled('Q6Wa5S1', $argUserID) != '') ? getFiled('Q6Wa5S1', $argUserID) : 0;
-        //Sanitary
-        $F = (getFiled('Q6Wa6S1', $argUserID) != '') ? getFiled('Q6Wa6S1', $argUserID) : 0;
-        //Cc&&D
-        $G = (getFiled('Q6Wa7S1', $argUserID) != '') ? getFiled('Q6Wa7S1', $argUserID) : 0;
-        $total_generated_waste = $A + $B + $C + $D + $E + $F + $G;
-        //Recycled Watse
-        $A1 = (getFiled('Q8Wa1S5', $argUserID) != '') ? getFiled('Q8Wa1S5', $argUserID) : 0;
-        //Dry/Recycalbe
-        $B1 = (getFiled('Q8Wa2S8', $argUserID) != '') ? getFiled('Q8Wa2S8', $argUserID) : 0;
-        //Domestic
-        $C1 = (getFiled('Q8Wa3S3', $argUserID) != '') ? getFiled('Q8Wa3S3', $argUserID) : 0;
-        //E-Watse
-        $D1 = (getFiled('Q8Wa4S1', $argUserID) != '') ? getFiled('Q8Wa4S1', $argUserID) : 0;
-        //Biomedical waste
-        $E1 = (getFiled('Q8Wa5S1', $argUserID) != '') ? getFiled('Q8Wa5S1', $argUserID) : 0;
-        //Sanitary
-        $F1 = (getFiled('Q8Wa6S1', $argUserID) != '') ? getFiled('Q8Wa6S1', $argUserID) : 0;
-        //Cc&&D
-        $G1 = (getFiled('Q8Wa7S1', $argUserID) != '') ? getFiled('Q8Wa7S1', $argUserID) : 0;
-        $total_recycled_waste = $A1 + $B1 + $C1 + $D1 + $E1 + $F1 + $G1;
-        if ($total_generated_waste != 0) {
-            $percentage_of_genrated_waste = ($total_recycled_waste / $total_generated_waste) * 100;
-            if ($percentage_of_genrated_waste > 50) {
-                $waste_points['Q4_recycled_waste'] = 20;
-            }
-        }
-        //Q5 Does your school have a composting facility?
-        $composition_facility = (getFiled('Q9Wa1', $argUserID) != '') ? getFiled('Q9Wa1', $argUserID) : "";
-        if ($composition_facility != '') {
-            if ($composition_facility == 'Y') {
-                $waste_points['Q5_facility'] = 5;
-            } else if ($composition_facility == 'N') {
-                $waste_points['Q5_facility'] = 0;
-            }
-        }
-        //Q5 a. What is the methodology used?
-        $methodology = (getFiled('Q9Wa2S1', $argUserID) != '') ? getFiled('Q9Wa2S1', $argUserID) : "";
-        if ($methodology != '') {
-            $waste_points['Q5_facility'] = 10;
-        }
-
-        //What is the waste segregation system in your school?
-        //Q1 Does your school segregate waste
-        $segregateWaste = (getFiled('Q4Wa1', $argUserID) != '') ? getFiled('Q4Wa1', $argUserID) : "";
-        if ($segregateWaste != '') {
-            if ($segregateWaste == 'Y') {
-                $waste_points['Q2_segregate_wasre'] = 5;
-            } else if ($segregateWaste == 'N') {
-                $waste_points['Q2_segregate_wasre'] = 0;
-            }
-        }
-        return number_format(array_sum($waste_points), 2);
+	//Q9 Do you know that your e-waste can be collected by an authorized dealer or dismantler?
+	$author_waste=(getFiled('Q13Wa1', $argUserID) != '') ? getFiled('Q13Wa1', $argUserID) : "";
+	$authorize_e_easte=(getFiled('Q13Wa2', $argUserID) != '') ? getFiled('Q13Wa2', $argUserID) : "";
+	//echo $authorize_e_easte;
+	if($author_waste =='Y')
+	{
+	    if(($authorize_e_easte==2) || ($authorize_e_easte==3) || ($authorize_e_easte==4)){
+		$waste_points['Q9_Ewaste_scapping']=5;
+	    }else if($authorize_e_easte==1){
+		$waste_points['Q9_Ewaste_scapping']=0;
+	    }
+	}
+	//echo array_sum($waste_points);
+	//echo '<pre>'; print_r($waste_points);
+	return number_format(array_sum($waste_points), 2);
+	//print_r($waste_points);
     }
     
 	
 	
 	public function getEnergyPoints($argUserID) {
+	///$argUserID=2429;
         $energy_points = array();
         //Total Points
         $total_population = (getFiled('Q4G4S3', $argUserID) != '') ? getFiled('Q4G4S3', $argUserID) : 0;
@@ -849,6 +1205,7 @@ class Performance_total extends CI_Controller {
             $per_day_energy = ($total_energy_consumtion_mj) / 30;
             //echo 'Total Population' . $total_population . 'Per_day_energy' . $per_day_energy;
             $megajole_per_cepta_day = $per_day_energy / $total_population;
+	    //echo $megajole_per_cepta_day;
             //school type
             $school_type = (getFiled('Q1S1', $argUserID) != '') ? getFiled('Q1S1', $argUserID) : 0;
 
@@ -872,7 +1229,71 @@ class Performance_total extends CI_Controller {
                 $energy_points['Q3_energy'] = 0;
             }
         }
-        //Q Are there any alternate sources of energy employed/ installed in your school?
+        //Q Are?there?any?alternate?sources?of?energy?employed/?installed?in?your?school?
+	$point = array();
+	$totaL_energy = getFiled('Q6E15S2', $argUserID) ;
+	//echo $totaL_energy;
+	if(getFiled('Q6E9S2', $argUserID) != "" && getFiled('Q6E9S2', $argUserID) > 0) //Solar 
+	{
+	    $point['Solar']= (getFiled('Q6E9S2', $argUserID) / $totaL_energy) * 5;
+	}
+	if(getFiled('Q6E8S2', $argUserID) != "" && getFiled('Q6E8S2', $argUserID) > 0) //Animal Waste
+	{
+	    $point['Animal']= (getFiled('Q6E8S2', $argUserID) / $totaL_energy) * 5;
+	}
+	if(getFiled('Q6E10S2', $argUserID) != "" && getFiled('Q6E10S2', $argUserID) > 0) //Wind
+	{
+	    $point['Wind']= (getFiled('Q6E10S2', $argUserID) / $totaL_energy) * 5;
+	}
+	if(getFiled('Q6E13S2', $argUserID) != "" && getFiled('Q6E13S2', $argUserID) > 0) //BioGas
+	{
+	    $point['BioGas']= (getFiled('Q6E13S2', $argUserID) / $totaL_energy) * 5;
+	}
+	if(getFiled('Q6E5S2', $argUserID) != "" && getFiled('Q6E5S2', $argUserID) > 0) //CNG
+	{
+	    $point['CNG']= (getFiled('Q6E5S2', $argUserID) / $totaL_energy) * 3.33;
+	}
+	if(getFiled('Q6E16S2', $argUserID) != "" && getFiled('Q6E16S2', $argUserID) > 0) //Wood
+	{
+	    $point['Wood']= (getFiled('Q6E16S2', $argUserID) / $totaL_energy) * 3.33;
+	}
+	if(getFiled('Q6E11S2', $argUserID) != "" && getFiled('Q6E11S2', $argUserID) > 0) //LPG
+	{
+	    $point['LPG']= (getFiled('Q6E11S2', $argUserID) / $totaL_energy) * 3.33;
+	}
+	if(getFiled('Q6E12S2', $argUserID) != "" && getFiled('Q6E12S2', $argUserID) > 0) //PNG
+	{
+	    $point['PNG']= (getFiled('Q6E12S2', $argUserID) / $totaL_energy) * 3.33;
+	}
+	if(getFiled('Q6E1S2', $argUserID) != "" && getFiled('Q6E1S2', $argUserID) > 0) //Electricity From Board
+	{
+	    //echo getFiled('Q6E1S2', $argUserID);
+	    $point['ElectricityFboard']= (getFiled('Q6E1S2', $argUserID) / $totaL_energy) * 2.5;
+	    //echo "electricity".$point;
+	}
+	if(getFiled('Q6E1S2', $argUserID) != "" && getFiled('Q6E2S2', $argUserID) > 0) //Electricity From Generator
+	{
+	    $point['ElectricityGenrator']= (getFiled('Q6E2S2', $argUserID) / $totaL_energy) * 1.67;
+	}
+	
+	if(getFiled('Q6E3S2', $argUserID) != "" && getFiled('Q6E3S2', $argUserID) > 0) //Petrol
+	{
+	    $point['Petrol']= (getFiled('Q6E3S2', $argUserID) / $totaL_energy) * 1.67;
+	}
+	if(getFiled('Q6E4S2', $argUserID) != "" && getFiled('Q6E4S2', $argUserID) > 0) //Diesel
+	{
+	    $point['Disel']= (getFiled('Q6E4S2', $argUserID) / $totaL_energy) * 0.83;
+	}
+	if(getFiled('Q6E6S2', $argUserID) != "" && getFiled('Q6E6S2', $argUserID) > 0) //Kerosene
+	{
+	    $point['Kerosene']= (getFiled('Q6E6S2', $argUserID) / $totaL_energy) * 0.83;
+	}
+	if(getFiled('Q6E7S2', $argUserID) != "" && getFiled('Q6E7S2', $argUserID) > 0) // Coal
+	{
+	    $point['Coal']= (getFiled('Q6E7S2', $argUserID) / $totaL_energy) * 0.83;
+	}
+	//echo '<pre>'; print_r($point); exit;
+	$energy_points['source_energy']= array_sum($point);
         if (((getFiled('Q9E1', $argUserID) != '') ? (getFiled('Q9E1', $argUserID)) : "") != "") {
             if (((getFiled('Q9E1', $argUserID) != '') ? (getFiled('Q9E1', $argUserID)) : 0) == "Y") {
                 $energy_points['Q6_energy'] = 1;
@@ -880,375 +1301,473 @@ class Performance_total extends CI_Controller {
                 $energy_points['Q6_energy'] = 0;
             }
         }
-        //echo '<pre>'; print_r($energy_points);
+	///echo array_sum($energy_points);
+        
+		//echo '<pre>'; print_r($energy_points);
         return number_format(array_sum($energy_points), 2);
+		
     }
 	
 	
 	
-	function getWaterPoints($argUserID) {
-        $water_points = array();
-        $water_use = array();
-        $water_consumed_per_day = 0;
-        $i = 0;
-        for ($i = 1; $i <= 10; $i++) {
-            $water_consumed_per_day = $water_consumed_per_day + getFiled('Q4W'.$i, $argUserID);
-        }
-        $total_population = getFiled('Q4G4S3', $argUserID);
-        $arr = array('1' => 'Day-Scholar',
-            '2' => 'Day-Boarding',
-            '3' => 'Residential',
-            '4' => 'Day-Scholar+Day Boarding',
-            '5' => 'Day-Boarding+Residential',
-            '6' => 'Day-Scholar+Residential',
-            '7' => 'Day-Scholar+Day-Boarding+Residential'
-        );
-        
-        $c=getFiled('Q1S1', $argUserID);
-        if(!empty($c) && isset($c) && $c>=1 && $c<=7){
-             
-        $type_school = $arr[$c];
-        } else {
-        $type_school='other';    
-        }
-        if($total_population>0){
-        $per_capita_per_day_water_consumption = ($water_consumed_per_day / $total_population);
-        switch ($type_school) {
-            case 'Day-Scholar':
-                if ($per_capita_per_day_water_consumption > 17) {
-                    $water_points['per_day'] = 0;
-                } elseif ($per_capita_per_day_water_consumption < 13) {
-                    $water_points['per_day'] = ($per_capita_per_day_water_consumption / 13) * 7;
-                } else {
-                    $water_points['per_day'] = 7;
-                }
+	 public function getWaterPoints($argUserID) {
+	//WATER POINTS CALCULATIONS STARTS HERE
+	$water_points = array();
+	//Q1.Calculate your school’s water consumption, per activity:	(7 points)
+	//Total Water Consumption
+	$total_water_consumption = ($this->getFiled('Q4W11', $argUserID) != '') ? $this->getFiled('Q4W11', $argUserID) : 0;
+	$total_population = ($this->getFiled('Q4G4S3', $argUserID) != '') ? $this->getFiled('Q4G4S3', $argUserID) : 0;
+	$lpcd = $total_water_consumption / $total_population;
 
-                break;
-            case 'Day-Boarding':
-                if ($per_capita_per_day_water_consumption > 25) {
-                    $water_points['per_day'] = 0;
-                } elseif ($per_capita_per_day_water_consumption < 15) {
-                    $water_points['per_day'] = ($per_capita_per_day_water_consumption / 15) * 7;
-                } else {
-                    $water_points['per_day'] = 7;
-                }
-                break;
-            case 'Residential':
-                if ($per_capita_per_day_water_consumption > 135) {
-                    $water_points['per_day'] = 0;
-                } elseif ($per_capita_per_day_water_consumption < 125) {
-                    $water_points['per_day'] = ($per_capita_per_day_water_consumption / 125) * 7;
-                } else {
-                    $water_points['per_day'] = 7;
-                }
-                break;
-            case 'Day-Scholar+Day Boarding':
-                if ($per_capita_per_day_water_consumption > 25) {
-                    $water_points['per_day'] = 0;
-                } elseif ($per_capita_per_day_water_consumption < 15) {
-                    $water_points['per_day'] = ($per_capita_per_day_water_consumption / 15) * 7;
-                } else {
-                    $water_points['per_day'] = 7;
-                }
-                break;
-            case 'Day-Boarding+Residential':
-                if ($per_capita_per_day_water_consumption > 135) {
-                    $water_points['per_day'] = 0;
-                } elseif ($per_capita_per_day_water_consumption < 25) {
-                    $water_points['per_day'] = ($per_capita_per_day_water_consumption / 25) * 7;
-                } else {
-                    $water_points['per_day'] = 7;
-                }
-                break;
-            case 'Day-Scholar+Residential':
-                if ($per_capita_per_day_water_consumption > 135) {
-                    $water_points['per_day'] = 0;
-                } elseif ($per_capita_per_day_water_consumption < 17) {
-                    $water_points['per_day'] = ($per_capita_per_day_water_consumption / 17) * 7;
-                } else {
-                    $water_points['per_day'] = 7;
-                }
-                break;
-            case 'Day-Scholar+Day-Boarding+Residential':
-                if ($per_capita_per_day_water_consumption > 135) {
-                    $water_points['per_day'] = 0;
-                } elseif ($per_capita_per_day_water_consumption < 15) {
-                    $water_points['per_day'] = ($per_capita_per_day_water_consumption / 15) * 7;
-                } else {
-                    $water_points['per_day'] = 7;
-                }
-                break;
-            default :
-                $water_points['per_day']=0;
-        }
-    } else {
-        $water_points['per_day'] = 0;      
-    }    
-        
-        for ($i = 2; $i <= 4; $i++) {
-            $water_use[$i] = getFiled('Q5W' . $i, $argUserID);
-        }
-        $ground = getFiled('Q5W1', $argUserID);
-        $sum = array_sum($water_use);
-        if ($sum == 3) {
-            $water_points['water_use'] = 4;
-        } elseif ($sum == 2) {
-            $water_points['water_use'] = 2;
-        } elseif ($sum == 1 && $water_use[2] != 1) {
-            $water_points['water_use'] = 1;
-        } elseif ($sum == 1 && $ground == 1) {
-            $water_points['water_use'] = 2;
-        } else {
-            $water_points['water_use'] = 0;
-        }
+	$school_type = ($this->getFiled('Q1S1', $argUserID) != '') ? $this->getFiled('Q1S1', $argUserID) : 0;
+	if (($lpcd < 13) && ($lpcd !=0)) {
+	    $water_points['q1_water_consuption'] = ($lpcd * 7) / 13;
+	} else {
+	    if (($school_type == 1) && ($lpcd >= 13 && $lpcd <= 17)) { // condition for Day Scholar school.
+		$water_points['q1_water_consuption'] = 7;
+	    } else if (($school_type == 2) && ($lpcd >= 15 && $lpcd <= 25)) { // condition for Day Boarding school.
+		$water_points['q1_water_consuption'] = 7;
+	    } else if (($school_type == 3) && ($lpcd >= 125 && $lpcd <= 135)) { // condition for Residential school.
+		$water_points['q1_water_consuption'] = 7;
+	    } else if (($school_type == 4) && ($lpcd >= 15 && $lpcd <= 25)) { // condition for Day Scholar + Day Boarding school.
+		$water_points['q1_water_consuption'] = 7;
+	    } else if (($school_type == 5) && ($lpcd >= 25 && $lpcd <= 135)) { // condition for Day Boarding + Residential school.
+		$water_points['q1_water_consuption'] = 7;
+	    } else if (($school_type == 6) && ($lpcd >= 17 && $lpcd <= 135)) { // condition for Day Scholar + Residential school.
+		$water_points['q1_water_consuption'] = 7;
+	    } else if (($school_type == 7) && ($lpcd >= 15 && $lpcd <= 135)) { // condition for Day Scholar + Day Boarding + Residential school.
+		$water_points['q1_water_consuption'] = 7;
+	    } else {
+		$water_points['q1_water_consuption'] = 0;
+	    }
+	}
+	//Task 3: What Are The Sources, Supply and Storage of Water in your School?
+	//Q2.Where does the water your school uses, come from?
+	$A = ($this->getFiled('Q5W1', $argUserID) != '') ? $this->getFiled('Q5W1', $argUserID) : 0;
+	$B = ($this->getFiled('Q5W2', $argUserID) != '') ? $this->getFiled('Q5W2', $argUserID) : 0;
+	$C = ($this->getFiled('Q5W3', $argUserID) != '') ? $this->getFiled('Q5W3', $argUserID) : 0;
+	$D = ($this->getFiled('Q5W4', $argUserID) != '') ? $this->getFiled('Q5W4', $argUserID) : 0;
+	//echo 'A '.$A.'B '.$B.'C '.$C.' D'.$D;
+	if (($B != '') && ($C != '') && ($D != '')) {
+	    $water_points['q2_water_comes'] = 4;
+	}else if(($B !='') && ($C !=''))
+	{
+	    $water_points['q2_water_comes'] = 3;
+	}else if(($B !='') && ($D !=''))
+	{
+	    $water_points['q2_water_comes'] = 3;
+	}else if (($A != '') && ($B != '') && ($C != '') && ($D != ''))
+	{
+	    $water_points['q2_water_comes'] = 2;
+	}else if (($A != '') && ($D != ''))
+	{
+	    $water_points['q2_water_comes'] = 2;
+	}else if(($A != '') && ($C != ''))
+	{
+	    $water_points['q2_water_comes'] = 2;
+	}else if(($A != '') && ($B != '') && ($D != ''))
+	{
+	    $water_points['q2_water_comes'] = 2;
+	}else if(($A != '') && ($B != '') && ($C != ''))
+	{
+	    $water_points['q2_water_comes'] = 2;
+	}else if(($B != '') && ($A == '') && ($C == '') && ($D == ''))
+	{
+	     $water_points['q2_water_comes'] = 1;
+	}else if(($B != '') && ($A != ''))
+	{
+	    $water_points['q2_water_comes'] = 1;
+	}else if(($B == '') && ($A != '') && ($C == '') && ($D == ''))
+	{
+	    $water_points['q2_water_comes'] = 0;
+	}else if(($B == '') && ($A == '') && ($C != '') && ($D != ''))
+	{
+	    $water_points['q2_water_comes'] = 0;
+	}else if(($C != '') && ($A == '') && ($B == '') && ($D == ''))
+	{
+	    $water_points['q2_water_comes'] = 0;
+	}else if(($D != '') && ($A == '') && ($B == '') && ($C == ''))
+	{
+	    $water_points['q2_water_comes'] = 0;
+	}
+	//Task 4: What is the water conservation practices followed in your school?
+	//Q5What are the water conservation practices your school follows 
+	//Do all tanks in the school have float valves installed to stop overflow?
+	$q_5_3 = ($this->getFiled('Q8W1S3', $argUserID) != '') ? $this->getFiled('Q8W1S3', $argUserID) : 0;
+	if ($q_5_3 == "Y") {
+	    $water_points['q_5_3'] = 1;
+	} else {
+	    $water_points['q_5_3'] = 0;
+	}
+	//Do the drinking water points have spill proof taps to check overflow?
+	$q_5_4 = ($this->getFiled('Q8W1S4', $argUserID) != '') ? $this->getFiled('Q8W1S4', $argUserID) : 0;
+	if ($q_5_4 == "Y") {
+	    $water_points['q_5_4'] = 1;
+	} else {
+	    $water_points['q_5_4'] = 0;
+	}
+	//Does your school use appliances with a quick-wash setting?
+	$q_5_5 = ($this->getFiled('Q8W1S5', $argUserID) != '') ? $this->getFiled('Q8W1S5', $argUserID) : 0;
+	if ($q_5_5 == "Y") {
+	    $water_points['q_5_5'] = 1;
+	} else {
+	    $water_points['q_5_5'] = 0;
+	}
+	//Are dual flush systems installed in the toilets?
+	$q_5_6 = ($this->getFiled('Q8W1S6', $argUserID) != '') ? $this->getFiled('Q8W1S6', $argUserID) : 0;
+	if ($q_5_6 == "Y") {
+	    $water_points['q_5_6'] = 1;
+	} else {
+	    $water_points['q_5_6'] = 0;
+	}
+	//Does your school grow local plant species which require limited amount of water to grow?
+	$q_5_8 = ($this->getFiled('Q8W1S8', $argUserID) != '') ? $this->getFiled('Q8W1S8', $argUserID) : 0;
+	if ($q_5_8 == "Y") {
+	    $water_points['q_5_8'] = 1;
+	} else {
+	    $water_points['q_5_8'] = 0;
+	}
+	//Has your school initiated any water conservation steps in the school or outside, in the past one year?
+	$q_5_9 = ($this->getFiled('Q8W1S9', $argUserID) != '') ? $this->getFiled('Q8W1S9', $argUserID) : 0;
+	if ($q_5_9 == "Y") {
+	    $water_points['q_5_9'] = 1;
+	} else {
+	    $water_points['q_5_9'] = 0;
+	}
+	//Does your school use a drip or irrigation system?
+	$q_5_10 = ($this->getFiled('Q8W1S10', $argUserID) != '') ? $this->getFiled('Q8W1S10', $argUserID) : 0;
+	if ($q_5_10 == "Y") {
+	    $water_points['q_5_10'] = 1;
+	} else {
+	    $water_points['q_5_10'] = 0;
+	}
+	//Task 5: Does your school harvest rainwater? 
+	//Q6.Do you have Rainwater harvesting (RWH) system in your school?
+	$rain_water_harvest = ($this->getFiled('Q8W2', $argUserID) != '') ? $this->getFiled('Q8W2', $argUserID) : 0;
+	if ($rain_water_harvest == 'Y') {
+	    $water_points['q6_water_harvest'] = 2;
+	} else {
+	    $water_points['q6_water_harvest'] = 0;
+	}
+	//6(a)(1) Which is the catchment area being harvested by your school? 
+	$catchment_harested = ($this->getFiled('Q8W2S1S1', $argUserID) != '') ? $this->getFiled('Q8W2S1S1', $argUserID) : 0;
+	//echo '<pre>';
+	if (($catchment_harested == 1) || ($catchment_harested == 2) || ($catchment_harested == 3) || ($catchment_harested == 4) || ($catchment_harested == 5) || ($catchment_harested == 6)) {
+	    $water_points['q6_a_water_catchments'] = 2;
+	} else if ($catchment_harested == 7) {
+	    $water_points['q6_a_water_catchments'] = 4;
+	} else {
+	    $water_points['q6_a_water_catchments'] = 0;
+	}
+	//6(c) How much area in your school is harvested?
+	$school_harvested_area = ($this->getFiled('Q8W2S4', $argUserID) != '') ? $this->getFiled('Q8W2S4', $argUserID) : 0;
+	if ($school_harvested_area == 7 || $school_harvested_area == 8 || $school_harvested_area == 9) {
+	    $water_points['q6c_harvested_area'] = 10;
+	} else if ($school_harvested_area == 5 || $school_harvested_area == 6) {
+	    $water_points['q6c_harvested_area'] = 8;
+	} else if ($school_harvested_area == 4) {
+	    $water_points['q6c_harvested_area'] = 6;
+	} else if ($school_harvested_area == 3) {
+	    $water_points['q6c_harvested_area'] = 4;
+	} else if ($school_harvested_area == 1 || $school_harvested_area == 2) {
+	    $water_points['q6c_harvested_area'] = 2;
+	} else {
+	    $water_points['q6c_harvested_area'] = 0;
+	}
+	//Q6.eRate your catchment on cleanliness
+	$cleanliness = ($this->getFiled('Q8W2S5', $argUserID) != '') ? $this->getFiled('Q8W2S5', $argUserID) : 0;
+	if ($cleanliness == 1) {
+	    $water_points['q6e_cleanness'] = 3; //good
+	} else if ($cleanliness == 2) {
+	    $water_points['q6e_cleanness'] = 1; //Average
+	} else {
+	    $water_points['q6e_cleanness'] = 0; //Poor
+	}
+	//Q.6(f) Does your school clean your catchment and system (structure?)?
+	$catchmentsystem = $this->getFiled('Q8W2S61', $argUserID);
+	//echo $catchmentsystem;
+	if ($catchmentsystem == "Y") {
+	    $water_points['q6f_cathment_structure'] = 2; //If answer to above question is Yes, then your school will get 2 points.
+	} else {
+	    $water_points['q6f_cathment_structure'] = 0;
+	}
 
-        $count = 0;
+	////Q.6(g). Does your school monitor the rainwater harvesting structure for its efficiency?
+	$harvesting_structure = $this->getFiled('Q8W2S8', $argUserID);
+	if ($harvesting_structure == "Y") {
+	    $water_points['q6f_monitor'] = 1;
+	} else {
+	    $water_points['q6f_monitor'] = 0;
+	}
+	//Task 6: Are the plumbing and sanitation facilities in your school adequate?
+	//7 Please share details about sanitation and hygiene practices in your school:
+	$sperate_toilets = ($this->getFiled('Q8W3S1', $argUserID) != '') ? $this->getFiled('Q8W3S1', $argUserID) : "";
+	$toilet_accesible = ($this->getFiled('Q8W3S4', $argUserID) != '') ? $this->getFiled('Q8W3S4', $argUserID) : "";
+	$toilet_accesible_differently_abled = ($this->getFiled('Q8W3S5', $argUserID) != '') ? $this->getFiled('Q8W3S5', $argUserID) : "";
+	$differently_abled_teacher_nonteacher = ($this->getFiled('Q8W3S6', $argUserID) != '') ? $this->getFiled('Q8W3S6', $argUserID) : "";
+	$pivacy_safty = ($this->getFiled('Q8W3S7', $argUserID) != '') ? $this->getFiled('Q8W3S7', $argUserID) : "";
+	$light = ($this->getFiled('Q8W3S8', $argUserID) != '') ? $this->getFiled('Q8W3S8', $argUserID) : "";
+	if ($sperate_toilets == "Y") {
+	    $water_points['q7_seprate_toiltes'] = 1;
+	} else {
+	    $water_points['q7_seprate_toiltes'] = 0;
+	}
+	if ($toilet_accesible == "Y") {
+	    $water_points['q7_accible_toilets'] = 1;
+	} else {
+	    $water_points['q7_accible_toilets'] = 0;
+	}
+	if ($toilet_accesible_differently_abled == "Y") {
+	    $water_points['q7_accible_toilets_differently_abled'] = 1;
+	} else {
+	    $water_points['q7_accible_toilets_differently_abled'] = 0;
+	}
+	if ($differently_abled_teacher_nonteacher == "Y") {
+	    $water_points['q7_accible_toilets_differently_abled_teacher'] = 1;
+	} else {
+	    $water_points['q7_accible_toilets_differently_abled_teacher'] = 0;
+	}
+	if ($pivacy_safty == "Y") {
+	    $water_points['Q7_privacy_staff'] = 1;
+	} else {
+	    $water_points['Q7_privacy_staff'] = 0;
+	}
+	if ($light == "Y") {
+	    $water_points['Q7_light'] = 1;
+	} else {
+	    $water_points['Q7_light'] = 0;
+	}
+	//Q8How many drinking water taps do you have? 
+	$q8_drinkin_water_taps = ($this->getFiled('Q9W1', $argUserID) != '') ? $this->getFiled('Q9W1', $argUserID) : "";
+	$drinking_load = $total_population / $q8_drinkin_water_taps;
+	if($q8_drinkin_water_taps !=0)
+	{
+	if (($drinking_load < 50) ) {
+	    $water_points['Q8_Load_water_drinking'] = 1;
+	} else {
+	    $water_points['Q8_Load_water_drinking'] = 0;
+	}
+	}
+	//Q9How many hand pumps do you have?
+	$hand_pumps = ($this->getFiled('Q10W1', $argUserID) != '') ? $this->getFiled('Q10W1', $argUserID) : "";
+	if ($drinking_load <= 1) {
+	    $water_points['Q9_hand_pumps'] = 1;
+	} else {
+	    $water_points['Q9_hand_pumps'] = 0;
+	}
+	//Q10 How many ablution taps (taps used for washing hands only) do you have?
+	$ablution_taps_q10 = ($this->getFiled('Q11W1', $argUserID) != '') ? $this->getFiled('Q11W1', $argUserID) : "";
+	if (($ablution_taps_q10 != "") && ($ablution_taps_q10 != 0)) {
+	    $Load_for_ablution_taps = $total_population / $ablution_taps_q10;
 
-        for ($i = 3; $i <= 10; $i++) {
-            if (getFiled('Q8W1S' . $i, $argUserID) == 'Y') {
-                $count++;
-            }
-        }
-        if (getFiled('Q8W1S7', $argUserID) == 'Y') {
-            $count--;
-        }
-        $water_points['conservation'] = $count;
-        if (getFiled('Q8W2', $argUserID) == "Y") {
-            $water_points['harvest'] = 2;
-        } else {
-            $water_points['harvest'] = 0;
-        }
+	    if ($Load_for_ablution_taps <= 50 && $ablution_taps_q10 != "" && $ablution_taps_q10 != 0) {
+		$water_points['q10_abosultion_tap'] = 1;
+	    } else {
+		$water_points['q10_abosultion_tap'] = 0;
+	    }
+	}
+	////Q.11 How many water closets (used for defecation and urination) do you have?
+	$water_closets_q11 = ($this->getFiled('Q13W1S4', $argUserID) != '') ? $this->getFiled('Q13W1S4', $argUserID) : "";
+	if (($water_closets_q11 != '') && ($water_closets_q11 != 0)) {
+	    $Load_for_water_closets = $total_population / $water_closets_q11;
+	    if ($school_type == 1 && $Load_for_water_closets <= 45 && $water_closets_q11 != "" && $water_closets_q11 != 0) { //school type Day Scholar
+		$water_points['q11_water_closets'] = 1;
+	    } else if ($school_type == 2 && $Load_for_water_closets <= 35 && $water_closets_q11 != "" && $water_closets_q11 != 0) { //Day Boarding 
+		$water_points['q11_water_closets'] = 1;
+	    } else if ($school_type == 3 && $Load_for_water_closets <= 25 && $water_closets_q11 != "" && $water_closets_q11 != 0) { //Residential 
+		$water_points['q11_water_closets'] = 1;
+	    } else if ($school_type == 4 && $Load_for_water_closets <= 40 && $water_closets_q11 != "" && $water_closets_q11 != 0) { //Day Scholar + Day Boarding
+		$water_points['q11_water_closets'] = 1;
+	    } else if ($school_type == 5 && $Load_for_water_closets <= 30 && $water_closets_q11 != "" && $water_closets_q11 != 0) { //Day Boarding + Residential
+		$water_points['q11_water_closets'] = 1;
+	    } else if ($school_type == 6 && $Load_for_water_closets <= 35 && $water_closets_q11 != "" && $water_closets_q11 != 0) { //Day Scholar + Residential
+		$water_points['q11_water_closets'] = 1;
+	    } else if ($school_type == 7 && $Load_for_water_closets <= 25 && $water_closets_q11 != "" && $water_closets_q11 != 0) { //Day Scholar + Day Boarding + Residential (ref value not provided)
+		$water_points['q11_water_closets'] = 1;
+	    } else {
+		$water_points['q11_water_closets'] = 0;
+	    }
+	}
+	//Q.12 How many urinals (strictly used for urination only) do you have?
+	$water_urinals_q12 = ($this->getFiled('Q14W1', $argUserID) != '') ? $this->getFiled('Q14W1', $argUserID) : "";
+	if (($water_urinals_q12 != "") && ($water_urinals_q12 != 0)) {
+	    $Load_for_urinals = $total_population / $water_urinals_q12;
+	    if ($school_type == 1 && $Load_for_urinals <= 50 && $water_urinals_q12 != "" && $water_urinals_q12 != 0) { //school type Day Scholar
+		$water_points['q12_urinals'] = 1;
+	    } else if ($school_type == 2 && $Load_for_urinals <= 40 && $water_urinals_q12 != "" && $water_urinals_q12 != 0) { //Day Boarding 
+		$water_points['q12_urinals'] = 1;
+	    } else if ($school_type == 3 && $Load_for_urinals <= 30 && $water_urinals_q12 != "" && $water_urinals_q12 != 0) { //Residential 
+		$water_points['q12_urinals'] = 1;
+	    } else if ($school_type == 4 && $Load_for_urinals <= 50 && $water_urinals_q12 != "" && $water_urinals_q12 != 0) { //Day Scholar + Day Boarding
+		$water_points['q12_urinals'] = 1;
+	    } else if ($school_type == 5 && $Load_for_urinals <= 35 && $water_urinals_q12 != "" && $water_urinals_q12 != 0) { //Day Boarding + Residential
+		$water_points['q12_urinals'] = 1;
+	    } else if ($school_type == 6 && $Load_for_urinals <= 50 && $water_urinals_q12 != "" && $water_urinals_q12 != 0) { //Day Scholar + Residential
+		$water_points['q12_urinals'] = 1;
+	    } else if ($school_type == 7 && $Load_for_urinals <= 30 && $water_urinals_q12 != "" && $water_urinals_q12 != 0) { //Day Scholar + Day Boarding + Residential (ref value not provided)
+		$water_points['q12_urinals'] = 1;
+	    }
+	}
+	if (!isset($water_points['q12_urinals']))
+	    $water_points['q12_urinals'] = 0;
+	//Q.13 How many other water outlets (example: taps in play fields, sprinklers, swimming pool) do you have? ( 1 Points )
+	$other_water_outlets_q13 = ($this->getFiled('Q15W1', $argUserID) != '') ? $this->getFiled('Q15W1', $argUserID) : "";
+	//$Load_for_other_water_outlets=$total_population/$other_water_outlets_q13;
+	if ($other_water_outlets_q13 > 1) { //not provided by cse
+	    $water_points['q13_water_outlets'] = 0;
+	} else {
+	    $water_points['q13_water_outlets'] = 1;
+	}
+	//Q.14 Is there a water storage system in place to supply water in the toilets? ( 1 Points )
+	$supply_water_in_toilets = ($this->getFiled('Q16W1', $argUserID) != '') ? $this->getFiled('Q16W1', $argUserID) : "";
+	if ($supply_water_in_toilets == "Y") {
+	    $water_points['q14_water_in_toilets'] = 1;
+	} else {
+	    $water_points['q14_water_in_toilets'] = 0;
+	}
+	// Q.15. Is the water supply sufficient?  ( 1 Points )
+	$supply_sufficient = ($this->getFiled('Q21W1', $argUserID) != '') ? $this->getFiled('Q21W1', $argUserID) : "";
+	if ($supply_sufficient == "Y") {
+	    $water_points['q15_supply_sufficient'] = 1;
+	} else {
+	    $water_points['q15_supply_sufficient'] = 0;
+	}
+	//Q.16. Are the toilets cleaned? Yes. ( 1 Points )
+	$toilets_cleaned = ($this->getFiled('Q18W1', $argUserID) != '') ? $this->getFiled('Q18W1', $argUserID) : "";
+	if ($toilets_cleaned == "Y") {
+	    $water_points['q16_toilets_cleaned'] = 1;
+	} else {
+	    $water_points['q16_toilets_cleaned'] = 0;
+	}
+	//Q.17. Does your school treat wastewater? ( 5 Points )
+	$treat_wastewater = ($this->getFiled('Q19W1', $argUserID) != '') ? $this->getFiled('Q19W1', $argUserID) : "";
+	if ($treat_wastewater == "Y") {
+	    $water_points['q17_treat_wastewater'] = 5;
+	} else {
+	    $water_points['q17_treat_wastewater'] = 0;
+	}
+	//Q.18. Does your school reuse the treated wastewater? ( 5 Points )
+	//If Yes
+//Q.18.(a). How does your school reuse wastewater? (Multiple Choice)
+//If yes, and Q18(a) is answered,  your school gets five points
 
-        if (getFiled('Q8W2S1S1', $argUserID) == 7) {
-            $water_points['catchment '] = 4;
-        } elseif (getFiled('Q8W2S1S1', $argUserID) == 1 || getFiled('Q8W2S1S1', $argUserID) == 2 || getFiled('Q8W2S1S1', $argUserID) == 3 || getFiled('Q8W2S1S1', $argUserID) == 4 || getFiled('Q8W2S1S1', $argUserID) == 5 || getFiled('Q8W2S1S1', $argUserID) == 6) {
-            $water_points['catchment '] = 2;
-        }
-
-        if (getFiled('Q8W2S4', $argUserID) >= 7) {
-            $water_points['area'] = 10;
-        } elseif (getFiled('Q8W2S4', $argUserID) >= 7) {
-            $water_points['area'] = 8;
-        } elseif (getFiled('Q8W2S4', $argUserID) >= 5 && getFiled('Q8W2S4', $argUserID) <= 6) {
-            $water_points['area'] = 6;
-        } elseif (getFiled('Q8W2S4', $argUserID) >= 3 && getFiled('Q8W2S4', $argUserID) <= 4) {
-            $water_points['area'] = 4;
-        } elseif (getFiled('Q8W2S4', $argUserID) >= 2 && getFiled('Q8W2S4', $argUserID) <= 1) {
-            $water_points['area'] = 2;
-        }
-        if (getFiled('Q8W2S5', $argUserID) == 1) {
-            $water_points['cleaness'] = 3;
-        } elseif (getFiled('Q8W2S5', $argUserID) == 2) {
-            $water_points['cleaness'] = 1;
-        } else {
-            $water_points['cleaness'] = 0;
-        }
-        if (getFiled('Q8W2S61', $argUserID) == "Y") {
-            $water_points['clean-system'] = 2;
-        } else {
-            $water_points['clean-system'] = 0;
-        }
-        if (getFiled('Q8W2S8', $argUserID) == "Y") {
-            $water_points['rainwater'] = 1;
-        } else {
-            $water_points['rainwater'] = 0;
-        }
-        $count1 = 0;
-
-        for ($i = 4; $i <= 8; $i++) {
-            if (getFiled('Q8W3S' . $i, $argUserID) == 'Y') {
-                $count1++;
-            }
-        }
-        if (getFiled('Q8W3S1', $argUserID) == 'Y') {
-            $count1++;
-        }
-        $water_points['sanitation'] = $count1;
-
-        if (getFiled('Q16W1', $argUserID) == "Y") {
-            $water_points['storage'] = 1;
-        }
-        if (getFiled('Q21W1', $argUserID) == "Y") {
-            $water_points['supply'] = 1;
-        }
-        if (getFiled('Q18W1', $argUserID) == "Y") {
-            $water_points['toilets'] = 1;
-        }
-        if (getFiled('Q19W1', $argUserID) == "Y") {
-            $water_points['treat-water'] = 5;
-        }
-        if (getFiled('Q20W1', $argUserID) == "Y") {
-            if (!empty(getFiled('Q20W1', $argUserID))) {
-                $water_points['reuse-water'] = 5;
-            }
-        }
-        if (!empty(getFiled('Q9W1', $argUserID))) {
-            $load_drinking_water_tap = ($total_population / getFiled('Q9W1', $argUserID));
-        
-        if ($load_drinking_water_tap < 50) {
-            $water_points['load_drinking_water_tap'] = 1;
-        }
-    }
-        if (!empty(getFiled('Q11W1', $argUserID))) {
-            $load_ablution_tap = ($total_population / getFiled('Q11W1', $argUserID));
-        
-        if ($load_ablution_tap < 50) {
-            $water_points['load_ablution_tap'] = 1;
-        }
-    } 
-        if (!empty(getFiled('Q13W1S4', $argUserID))) {
-            $load_closets = ($total_population / getFiled('Q13W1S4', $argUserID));
-        
-        if (!empty(getFiled('Q14W1', $argUserID))) {
-            $load_urinals = ($total_population / getFiled('Q14W1', $argUserID));
-        
-        switch ($type_school) {
-            case 'Day-Scholar':
-                if ($load_urinals < 50) {
-                    $water_points['load_urinals'] = 1;
-                }
-                if ($load_closets < 45) {
-                    $water_points['load_closets'] = 1;
-                }
-                break;
-            case 'Day-Boarding':
-                if ($load_urinals < 40) {
-                    $water_points['load_urinals'] = 1;
-                }
-                if ($load_closets < 35) {
-                    $water_points['load_closets'] = 1;
-                }
-                break;
-            case 'Residential':
-                if ($load_urinals < 30) {
-                    $water_points['load_urinals'] = 1;
-                }
-                if ($load_closets < 25) {
-                    $water_points['load_closets'] = 1;
-                }
-                break;
-            case 'Day-Scholar+Day Boarding':
-                if ($load_urinals < 50) {
-                    $water_points['load_urinals'] = 1;
-                }
-                if ($load_closets < 35) {
-                    $water_points['load_closets'] = 1;
-                }
-                break;
-            case 'Day-Boarding+Residential':
-                if ($load_urinals < 35) {
-                    $water_points['load_urinals'] = 1;
-                }
-                if ($load_closets < 30) {
-                    $water_points['load_closets'] = 1;
-                }
-                break;
-            case 'Day-Scholar+Residential':
-                if ($load_urinals < 50) {
-                    $water_points['load_urinals'] = 1;
-                }
-                if ($load_closets < 40) {
-                    $water_points['load_closets'] = 1;
-                }
-                break;
-            default :
-                $water_points['load_closets']=0;    
-        }
-        }
-        }
-
-        $handpump = getFiled('Q10W1', $argUserID);
-        if ($handpump > 1) {
-            $water_points['handpump'] = 0;
-        }
-        $outlet = getFiled('Q15W1', $argUserID);
-        if ($outlet > 1) {
-            $water_points['outlet'] = 0;
-        }
-   
-
-
-        return array_sum($water_points);
+	$reusewastewater = ($this->getFiled('Q20W1', $argUserID) != '') ? $this->getFiled('Q20W1', $argUserID) : "";
+	//$reusewastewater_a=(getFiled('Q20W3', $argUserID) != '') ? getFiled('Q20W3', $argUserID) : "";
+	if ($reusewastewater == "Y") {
+	    $water_points['q18_reuse_water'] = 5;
+	} else {
+	    $water_points['q18_reuse_water'] = 0;
+	}
+//	echo '<pre>';
+//	print_r($water_points);
+//	exit;
+	return array_sum($water_points);
     }
 	
 	
-	public function getFoodPoints($argUserID) {
-        $food_points = array();
-        //Q.3 What kind of food is being served/sold in your school?
-        $totalFlavourVariaint = array();
-        $totalItemSold = array();
-        $monthFoodSold = array();
-        for ($i = 2; $i <= 10; $i++) {
-            $totalFlavourVariaint[] = (getFiled('Q6F' . $i . 'S1', $argUserID) != '') ? (getFiled('Q6F' . $i . 'S1', $argUserID)) : 0;
-            $totalItemSold[] = (getFiled('Q6F' . $i . 'S2', $argUserID) != '') ? (getFiled('Q6F' . $i . 'S2', $argUserID)) : 0;
-            $monthFoodSold[] = (getFiled('Q6F' . $i . 'S3', $argUserID) != '') ? (getFiled('Q6F' . $i . 'S3', $argUserID)) : 0;
-        }
-        $packageditem = array_sum($totalFlavourVariaint) + array_sum($totalItemSold) + array_sum($monthFoodSold);
-        if ($packageditem == "" || $packageditem == 0) {
-            $food_points['q3_served'] = 2;
-        } else {
-            $food_points['q3_serverd'] = 0;
-        }
-        //Q4 Does your school serve traditional Indian snacks?
-        $q4 = (getFiled('Q7F1', $argUserID) != '') ? getFiled('Q7F1', $argUserID) : "";
-        if ($q4 != '') {
-            if ($q4 == 'Y') {
-                $samosa = (getFiled('Q7F1S1', $argUserID) != '') ? getFiled('Q7F1S1', $argUserID) : "";
-                $sambhar = (getFiled('Q7F1S2', $argUserID) != '') ? getFiled('Q7F1S2', $argUserID) : "";
-                $pavBhaji = (getFiled('Q7F1S3', $argUserID) != '') ? getFiled('Q7F1S3', $argUserID) : "";
-                $momos = (getFiled('Q7F1S4', $argUserID) != '') ? getFiled('Q7F1S4', $argUserID) : "";
-                $other = (getFiled('Q7F1S5', $argUserID) != '') ? getFiled('Q7F1S5', $argUserID) : "";
-                if (($samosa == '' || $samosa == 0) && ($sambhar == '' || $sambhar == 0) && ($pavBhaji == '' || $pavBhaji == 0) || ($momos == '' || $momos == 0) || ($other == '' || $other == 0)) {
-                    $food_points['q4_trad_snack'] = 0;
-                } else {
-                    $food_points['q4_trad_snack'] = 2;
-                }
-            } else if ($q4 == 'N') {
-                $food_points['q4_trad_snack'] = 0;
-            }
-        }
+	Public function getFoodPoints($argUserID) {
+	$food_points = array();
+	//Q.3 What kind of food is being served/sold in your school?
+	$totalFlavourVariaint = array();
+	$totalItemSold = array();
+	$monthFoodSold = array();
+	$TASK_TWO = (getFiled('Q4F1', $argUserID) != '') ? getFiled('Q4F1', $argUserID) : "";
+	if ($TASK_TWO != '') {
+	    if ($TASK_TWO == "N") {
+		$food_points['q3_served'] = 6;
+	    } else if($TASK_TWO == "Y"){
+		for ($i = 2; $i <= 10; $i++) {
+		    $totalFlavourVariaint[] = (getFiled('Q6F' . $i . 'S1', $argUserID) != '') ? (getFiled('Q6F' . $i . 'S1', $argUserID)) : 0;
+		    $totalItemSold[] = (getFiled('Q6F' . $i . 'S2', $argUserID) != '') ? (getFiled('Q6F' . $i . 'S2', $argUserID)) : 0;
+		    $monthFoodSold[] = (getFiled('Q6F' . $i . 'S3', $argUserID) != '') ? (getFiled('Q6F' . $i . 'S3', $argUserID)) : 0;
+		}
+		$packageditem = array_sum($totalFlavourVariaint) + array_sum($totalItemSold) + array_sum($monthFoodSold);
+		if ($packageditem == "" || $packageditem == 0) {
+		    $food_points['q3_served'] = 2;
+		} else {
+		    $food_points['q3_serverd'] = 0;
+		}
+	    }
+	}else
+	{
+	    $food_points['q3_serverd'] = 0;
+	}
+	///$Task3 = getFiled('Q4F1', $argUserID) != "" ? (getFiled('Q4F1', $argUserID) == "N" ? 6 : 0) : 0;  //Need To This. If it is No then add 6 points else follow task 3
+	//Q4 Does your school serve traditional Indian snacks?
+	$q4 = (getFiled('Q7F1', $argUserID) != '') ? getFiled('Q7F1', $argUserID) : "";
+	//echo 'Traditional Foode'.$q4;
+	if ($q4 != '') {
+	    if ($q4 == 'Y') {
+		$samosa = (getFiled('Q7F1S1', $argUserID) != '') ? getFiled('Q7F1S1', $argUserID) : "";
+		$sambhar = (getFiled('Q7F1S2', $argUserID) != '') ? getFiled('Q7F1S2', $argUserID) : "";
+		$pavBhaji = (getFiled('Q7F1S3', $argUserID) != '') ? getFiled('Q7F1S3', $argUserID) : "";
+		$momos = (getFiled('Q7F1S4', $argUserID) != '') ? getFiled('Q7F1S4', $argUserID) : "";
+		$other = (getFiled('Q7F1S5', $argUserID) != '') ? getFiled('Q7F1S5', $argUserID) : "";
+		//echo $samosa.$sambhar.$pavBhaji.$momos.$other;
+		if (($samosa == '' || $samosa == 0) && ($sambhar == '' || $sambhar == 0) && ($pavBhaji == '' || $pavBhaji == 0) && ($momos == '' || $momos == 0) && ($other == '' || $other == 0)) {
+		    $food_points['q4_trad_snack'] = 0;
+		} else {
+		    $food_points['q4_trad_snack'] = 2;
+		}
+	    } else if ($q4 == 'N') {
+		$food_points['q4_trad_snack'] = 0;
+	    }
+	}
 
-        ///Q5 Does your school serve traditional Indian beverages?
-        $q5 = (getFiled('Q8F1', $argUserID) != '') ? getFiled('Q8F1', $argUserID) : "";
-        if ($q5 !== '') {
-            if ($q5 == 'Y') {
-                $nimbopani = (getFiled('Q8F1S1', $argUserID) != '') ? getFiled('Q8F1S1', $argUserID) : "";
-                $lassi = (getFiled('Q8F1S2', $argUserID) != '') ? getFiled('Q8F1S2', $argUserID) : "";
-                $buttermilk = (getFiled('Q8F1S3', $argUserID) != '') ? getFiled('Q8F1S3', $argUserID) : "";
-                $aampana = (getFiled('Q8F1S4', $argUserID) != '') ? getFiled('Q8F1S4', $argUserID) : "";
-                $other = (getFiled('Q8F1S5', $argUserID) != '') ? getFiled('Q8F1S5', $argUserID) : "";
-                if (($nimbopani == '' || $nimbopani == 0) && ($lassi == '' || $lassi == 0) && ($buttermilk == '' || $buttermilk == 0) || ($aampana == '' || $aampana == 0) || ($other == '' || $other == 0)) {
-                    $food_points['q4_trad_beverages'] = 0;
-                } else {
-                    $food_points['q4_trad_beverages'] = 2;
-                }
-            } else if ($q5 == 'N') {
-                $food_points['q4_trad_beverages'] = 0;
-            }
-        }
-        //What kind of food does your school promote? 
-        //Q6 Does the school distribute packaged food items as rewards during schools events?
-        $q6 = (getFiled('Q9F1', $argUserID) != '') ? getFiled('Q9F1', $argUserID) : "";
-        if ($q6 == 'Y') {
-            $food_points['q6_pack_food'] = 0;
-        } else {
-            $food_points['q6_pack_food'] = 1;
-        }
-        //Q7 Does the school distribute chocolates/similar products as refreshments during schools events?
-        $q7 = (getFiled('Q10F1', $argUserID) != '') ? getFiled('Q10F1', $argUserID) : "";
-        if ($q7 == 'Y') {
-            $food_points['q7_pack_food'] = 0;
-        } else {
-            $food_points['q7_pack_food'] = 1;
-        }
-        //Q8 Are your school events such as quiz shows, talent shows, debates sponsored by food companies/brands?
-        $q8 = (getFiled('Q11F1', $argUserID) != '') ? getFiled('Q11F1', $argUserID) : "";
-        if ($q8 == 'Y') {
-            $food_points['q8_food_company'] = 0;
-        } else {
-            $food_points['q8_food_company'] = 1;
-        }
-        return array_sum($food_points);
+	///Q5 Does your school serve traditional Indian beverages?
+	$q5 = (getFiled('Q8F1', $argUserID) != '') ? getFiled('Q8F1', $argUserID) : "";
+	if ($q5 !== '') {
+	    if ($q5 == 'Y') {
+		$nimbopani = (getFiled('Q8F1S1', $argUserID) != '') ? getFiled('Q8F1S1', $argUserID) : "";
+		$lassi = (getFiled('Q8F1S2', $argUserID) != '') ? getFiled('Q8F1S2', $argUserID) : "";
+		$buttermilk = (getFiled('Q8F1S3', $argUserID) != '') ? getFiled('Q8F1S3', $argUserID) : "";
+		$aampana = (getFiled('Q8F1S4', $argUserID) != '') ? getFiled('Q8F1S4', $argUserID) : "";
+		$other = (getFiled('Q8F1S5', $argUserID) != '') ? getFiled('Q8F1S5', $argUserID) : "";
+		if (($nimbopani == '' || $nimbopani == 0) && ($lassi == '' || $lassi == 0) && ($buttermilk == '' || $buttermilk == 0) && ($aampana == '' || $aampana == 0) && ($other == '' || $other == 0)) {
+		    $food_points['q4_trad_beverages'] = 0;
+		} else {
+		    $food_points['q4_trad_beverages'] = 2;
+		}
+	    } else if ($q5 == 'N') {
+		$food_points['q4_trad_beverages'] = 0;
+	    }
+	}
+	//What kind of food does your school promote? 
+	//Q6 Does the school distribute packaged food items as rewards during schools events?
+	$q6 = (getFiled('Q9F1', $argUserID) != '') ? getFiled('Q9F1', $argUserID) : "";
+	//echo  $q6 ;
+	if ($q6 == 'Y') {
+	    $food_points['q6_pack_food'] = 0;
+	} else {
+	    $food_points['q6_pack_food'] = 1;
+	}
+	//Q7 Does the school distribute chocolates/similar products as refreshments during schools events?
+	$q7 = (getFiled('Q10F1', $argUserID) != '') ? getFiled('Q10F1', $argUserID) : "";
+	if ($q7 == 'Y') {
+	    $food_points['q7_pack_food'] = 0;
+	} else {
+	    $food_points['q7_pack_food'] = 1;
+	}
+	//Q8 Are your school events such as quiz shows, talent shows, debates sponsored by food companies/brands?
+	$q8 = (getFiled('Q11F1', $argUserID) != '') ? getFiled('Q11F1', $argUserID) : "";
+	if ($q8 == 'Y') {
+	    $food_points['q8_food_company'] = 0;
+	} else {
+	    $food_points['q8_food_company'] = 1;
+	}
+
+	//Q9.Does your school measure height and weight of all the students?
+	$q9 = (getFiled('Q12F1', $argUserID) != '') ? getFiled('Q12F1', $argUserID) : "";
+	if ($q9 == 'Y') {
+	    $food_points['q9'] = 1;
+	} else {
+	    $food_points['q9'] = 0;
+	}
+//	echo array_sum($food_points);
+//	echo '<pre>';
+//	print_r($food_points);
+//	exit;
+	return array_sum($food_points);
     }
 	
 	 Public function getTotalArea($argUserID) {
@@ -1269,13 +1788,14 @@ class Performance_total extends CI_Controller {
       if($total>0){ 
        $percentage = ($b/$total)*100;
       
-       $terrace=getFiled('Q4L10', $argUserID); 
-       $percentage1 = ($terrace/$total)*100;
+       //$terrace=getFiled('Q4L10', $argUserID); 
+       //$percentage1 = ($terrace/$total)*100;
       }
     else {
           return 0;
       }
-       return ($percentage+$percentage1);
+       //echo($percentage+$percentage1);
+	   echo($percentage);
     }
 
 
@@ -1303,9 +1823,8 @@ class Performance_total extends CI_Controller {
         } else if ($animals > 50) {
             $land_points['Q2_animals'] = 2;
         } else if ($animals < 50) {
-            $land_points['Q2_plants'] = ($plants / 50) * 2;
+            $land_points['Q2_animals'] = ($animals / 50) * 2;
         }
-
         //Find out if your school uses chemical-based pesticides 
         //Q3 Do you use chemical-based pesticides in your school green cover?
         $pestiside = (getFiled('Q6L1', $argUserID) != '') ? getFiled('Q6L1', $argUserID) : "";
@@ -1329,12 +1848,14 @@ class Performance_total extends CI_Controller {
            $land_points['total']=0;
       }
         return array_sum($land_points);
+		//echo 
+		//print_r($land_points);
     }
 	    
 		
 
 
-public function feedback() {
+/*public function feedback() {
 	$data = array();
 	$uArray = $this->db->select('*')->from('gsp_school')->get()->result_array();
 	for ($i = 0; $i < count($uArray); $i++) {
@@ -1364,7 +1885,7 @@ public function feedback() {
 	    );
 	}
 	$this->db->insert_batch('tbl_feedback', $data);
-    }
+    }*/
 	  public function Air_performance($argUserID) {
 	$arrPoints = array();
 	$Q3_b_CNG = "";
@@ -1435,7 +1956,7 @@ public function feedback() {
 	    }
 	}
 	//Q3b Specify the type of fuel used by your school’s vehicles
-	//echo '<pre>';
+	//echo '';
 	//print_r($arrPoints);
 	$total_cng_vehicle = ($this->getFiled('Q6A2S3C5', $argUserID) != '') ? $this->getFiled('Q6A2S3C5', $argUserID) : "";
 	$total_elec_bio_vehicle = ($this->getFiled('Q6A2S3H5', $argUserID) != '') ? $this->getFiled('Q6A2S3H5', $argUserID) : "";
@@ -1500,9 +2021,10 @@ public function feedback() {
 		$arrPoints['q4_total_population'] = $score1 + $score2;
 	    }
 	}
-
+    
 	$total_air_points = array_sum($arrPoints);
+	//print_r($arrPoints);
 	return $total_air_points;
     }
 	
-}
+} 
