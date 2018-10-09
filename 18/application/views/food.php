@@ -433,7 +433,13 @@ class="badge">?</span></a></h6>
     <?php if (empty($data['Q4F1'])) if (isset($other['Q1S1'])) if ($other['Q1S1'] >= 3) $data['Q4F1'] = 'Y' ?>
     <label class="control-label"><span class="cube">1</span> Does your school have a provision/space
     to sell packaged food items within the campus<a class="tt" data-tooltip="Any place, permanent or temporary, run by school, outsourced to vendors, self help groups, shopkeepers to sell products during/after/before school timings/duration should be considered."><span
-class="badge">?</span></a></label>
+class="badge">?</span></a>
+     <audio controls id="BEEstarrating" style="float:left;" class="hide">
+    <source src="<?php echo base_url(); ?>assets/audio-files/Whole day meals.MP3" type="audio/mpeg">
+     Your browser does not support the audio element.
+    </audio>
+	 <a class="btn" id="btn" style="background:#e86549; color:#000000;">Play / Pause</a>
+   </label>
     <ul class="list-inline">
       <li>
         <label class="radio-inline text-gray">
@@ -2591,3 +2597,45 @@ if($('input[name="Q4F1"]:checked').val()==='Y'){
 <style type="text/css">
 .tt{ top:-21px;}
 </style>
+<script>
+var nyan = document.getElementById('BEEstarrating');
+var nyanBtn = document.getElementById('btn');
+function playPause(song){
+   if (song.paused && song.currentTime >= 0 && !song.ended) {
+      song.play();
+   } else {
+      song.pause();
+   }
+}
+
+function reset(btn, song){
+   if(btn.classList.contains('playing')){
+      btn.classList.toggle('playing');
+   }
+   song.pause();
+   song.currentTime = 0;
+}
+
+function progress(btn, song){
+   setTimeout(function(){
+      var end = song.duration; 
+      var current = song.currentTime;
+      var percent = current/(end/100);
+      //check if song is at the end
+      if(current==end){
+         reset(btn, song);
+      }
+      //set inset box shadow
+      btn.style.boxShadow = "inset " + btn.offsetWidth * (percent/100) + "px 0px 0px 0px rgba(0,0,0,0.125)"
+      //call function again
+      progress(btn, song);     
+   }, 1000);
+}
+
+nyanBtn.addEventListener('click', function(){
+   nyanBtn.classList.toggle('playing');
+   playPause(nyan);
+   progress(nyanBtn, nyan);
+});
+
+</script>
