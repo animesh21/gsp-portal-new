@@ -452,8 +452,7 @@ class Audit_started extends CI_Controller {
 	
 	public function foundationPartnerrexcel($partnerId){
 	 $this->load->library('Excel');
-	 ini_set('memory_limit', '-1');
-         ini_set('max_execution_time', '-1');
+	  ini_set('display_errors', 'On');
 	 $objPHPExcel = new PHPExcel();
 	   $styleArray1 = array(
         'font'  => array(
