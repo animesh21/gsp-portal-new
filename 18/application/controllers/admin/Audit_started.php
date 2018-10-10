@@ -934,11 +934,7 @@ class Audit_started extends CI_Controller {
      $objPHPExcel->setActiveSheetIndex(0);
      header('Content-Type: application/vnd.ms-excel; charset=UTF-8');
      header('Content-Disposition: attachment;filename="'.$filename.'"');
-     header('Cache-Control: max-age=0');
-     header('Cache-Control: max-age=1');
-     header ('Cache-Control: cache, must-revalidate'); // HTTP/1.1
-     header ('Pragma: public'); // HTTP/1.0
-     $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel5');
-     $objWriter->save('php://output');
+        $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel5');
+        $objWriter->save('php://output');
 	}
 }
