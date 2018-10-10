@@ -448,5 +448,497 @@ class Audit_started extends CI_Controller {
 	 $data['main'] = 'admin/audit/Disable-school';
 	 $data['title'] = 'Summary';
       $this->load->view('admin/includes/template', $data);
-	}	
+	}
+	
+	public function foundationPartnerrexcel($partnerId){
+	 $this->load->library('Excel');
+     $objPHPExcel = new PHPExcel();
+	   $styleArray1 = array(
+        'font'  => array(
+        'bold'  => true,
+		'name' => 'Calibri',
+		'size'  => 13,
+       ));
+	   
+	   
+	  $partner_countgreen_2018=getPartnerWithAllCOUNT($partnerId,"data_2018","green");
+	  $partner_countyellow_2018=getPartnerWithAllCOUNT($partnerId,"data_2018","yellow");
+	  $partner_countorange_2018=getPartnerWithAllCOUNT($partnerId,"data_2018","orange");
+	  $partner_countred_2018=getPartnerWithAllCOUNT($partnerId,"data_2018","red");
+	  
+	  $partner_countgreen_2017=getPartnerWithAllCOUNT($partnerId,"data_2017","green");
+	  $partner_countyellow_2017=getPartnerWithAllCOUNT($partnerId,"data_2017","yellow");
+	  $partner_countorange_2017=getPartnerWithAllCOUNT($partnerId,"data_2017","orange");
+	  $partner_countred_2017=getPartnerWithAllCOUNT($partnerId,"data_2017","red");
+	  
+	  $partner_countgreen_2016=getPartnerWithAllCOUNT($partnerId,"data_2016","green");
+	  $partner_countyellow_2016=getPartnerWithAllCOUNT($partnerId,"data_2016","yellow");
+	  $partner_countorange_2016=getPartnerWithAllCOUNT($partnerId,"data_2016","orange");
+	  $partner_countred_2016=getPartnerWithAllCOUNT($partnerId,"data_2016","red");
+	  
+	  $partner_countgreen_2015=getPartnerWithAllCOUNT($partnerId,"data_2015","green");
+	  $partner_countyellow_2015=getPartnerWithAllCOUNT($partnerId,"data_2015","yellow");
+	  $partner_countorange_2015=getPartnerWithAllCOUNT($partnerId,"data_2015","orange");
+	  $partner_countred_2015=getPartnerWithAllCOUNT($partnerId,"data_2015","red");
+	  $objPHPExcel->setActiveSheetIndex()->setCellValue("J3",$partner_countgreen_2018);
+	  $objPHPExcel->setActiveSheetIndex()->setCellValue("J4",$partner_countyellow_2018);
+	  $objPHPExcel->setActiveSheetIndex()->setCellValue("J5",$partner_countorange_2018);
+	  $objPHPExcel->setActiveSheetIndex()->setCellValue("J6",$partner_countred_2018);
+	  
+	  $objPHPExcel->setActiveSheetIndex()->setCellValue("K3",$partner_countgreen_2017);
+	  $objPHPExcel->setActiveSheetIndex()->setCellValue("K4",$partner_countyellow_2017);
+	  $objPHPExcel->setActiveSheetIndex()->setCellValue("K5",$partner_countorange_2017);
+	  $objPHPExcel->setActiveSheetIndex()->setCellValue("K6",$partner_countred_2017);
+	  
+	  $objPHPExcel->setActiveSheetIndex()->setCellValue("L3",$partner_countgreen_2016);
+	  $objPHPExcel->setActiveSheetIndex()->setCellValue("L4",$partner_countyellow_2016);
+	  $objPHPExcel->setActiveSheetIndex()->setCellValue("L5",$partner_countorange_2016);
+	  $objPHPExcel->setActiveSheetIndex()->setCellValue("L6",$partner_countred_2016);
+	  
+	  $objPHPExcel->setActiveSheetIndex()->setCellValue("M3",$partner_countgreen_2015);
+	  $objPHPExcel->setActiveSheetIndex()->setCellValue("M4",$partner_countyellow_2015);
+	  $objPHPExcel->setActiveSheetIndex()->setCellValue("M5",$partner_countorange_2015);
+	  $objPHPExcel->setActiveSheetIndex()->setCellValue("M6",$partner_countred_2015);
+	  
+	  $objPHPExcel->setActiveSheetIndex()->setCellValue("D4",$partner_countgreen_2018+$partner_countyellow_2018+$partner_countorange_2018+$partner_countred_2018);
+	  $objPHPExcel->setActiveSheetIndex()->setCellValue("E4",$partner_countgreen_2017+$partner_countyellow_2017+$partner_countorange_2017+$partner_countred_2017);
+	  $objPHPExcel->setActiveSheetIndex()->setCellValue("F4",$partner_countgreen_2016+$partner_countyellow_2016+$partner_countorange_2016+$partner_countred_2016);
+	  $objPHPExcel->setActiveSheetIndex()->setCellValue("G4",$partner_countgreen_2015+$partner_countyellow_2015+$partner_countorange_2015+$partner_countred_2015);
+	    
+	  
+	   
+	  $objPHPExcel->getActiveSheet()->getStyle('A7')->applyFromArray($styleArray1);
+	  $objPHPExcel->getActiveSheet()->getStyle('B7')->applyFromArray($styleArray1);
+	  $objPHPExcel->getActiveSheet()->getStyle('C7')->applyFromArray($styleArray1);
+	  $objPHPExcel->getActiveSheet()->getStyle('D7')->applyFromArray($styleArray1);
+	  $objPHPExcel->getActiveSheet()->getStyle('E7')->applyFromArray($styleArray1);
+	  $objPHPExcel->getActiveSheet()->getStyle('F7')->applyFromArray($styleArray1);
+	  $objPHPExcel->getActiveSheet()->getStyle('G7')->applyFromArray($styleArray1);
+	  $objPHPExcel->getActiveSheet()->getStyle('H7')->applyFromArray($styleArray1);
+	  $objPHPExcel->getActiveSheet()->getStyle('I7')->applyFromArray($styleArray1);
+	  $objPHPExcel->getActiveSheet()->getStyle('J7')->applyFromArray($styleArray1);
+	  $objPHPExcel->getActiveSheet()->getStyle('K7')->applyFromArray($styleArray1);
+	  $objPHPExcel->getActiveSheet()->getStyle('L7')->applyFromArray($styleArray1);
+	  $objPHPExcel->getActiveSheet()->getStyle('M7')->applyFromArray($styleArray1);
+	  $objPHPExcel->getActiveSheet()->getStyle('N7')->applyFromArray($styleArray1);
+	  $objPHPExcel->getActiveSheet()->getStyle('O7')->applyFromArray($styleArray1);
+	  $objPHPExcel->getActiveSheet()->getStyle('P7')->applyFromArray($styleArray1);
+	  $objPHPExcel->getActiveSheet()->getStyle('Q7')->applyFromArray($styleArray1);
+	  $objPHPExcel->getActiveSheet()->getStyle('R7')->applyFromArray($styleArray1);
+	  $objPHPExcel->getActiveSheet()->getStyle('C2')->applyFromArray($styleArray1);
+	  $objPHPExcel->getActiveSheet()->getStyle('C3')->applyFromArray($styleArray1);
+	  $objPHPExcel->getActiveSheet()->getStyle('C4')->applyFromArray($styleArray1);
+	  $objPHPExcel->getActiveSheet()->getStyle('C5')->applyFromArray($styleArray1);
+	  $objPHPExcel->getActiveSheet()->getStyle('C6')->applyFromArray($styleArray1);
+	  $objPHPExcel->getActiveSheet()->getStyle('D2')->applyFromArray($styleArray1);
+	  $objPHPExcel->getActiveSheet()->getStyle('E2')->applyFromArray($styleArray1);
+	  $objPHPExcel->getActiveSheet()->getStyle('F2')->applyFromArray($styleArray1);
+	  $objPHPExcel->getActiveSheet()->getStyle('G2')->applyFromArray($styleArray1);
+	  $objPHPExcel->getActiveSheet()->getStyle('H2')->applyFromArray($styleArray1);
+	  $objPHPExcel->getActiveSheet()->getStyle('I2')->applyFromArray($styleArray1);
+	  $objPHPExcel->getActiveSheet()->getStyle('I3')->applyFromArray($styleArray1);
+	  $objPHPExcel->getActiveSheet()->getStyle('I4')->applyFromArray($styleArray1);
+	  $objPHPExcel->getActiveSheet()->getStyle('I5')->applyFromArray($styleArray1);
+	  $objPHPExcel->getActiveSheet()->getStyle('I6')->applyFromArray($styleArray1);
+	   $objPHPExcel->getActiveSheet()->getStyle('J2')->applyFromArray($styleArray1);
+	  $objPHPExcel->getActiveSheet()->getStyle('K2')->applyFromArray($styleArray1);
+	  $objPHPExcel->getActiveSheet()->getStyle('L2')->applyFromArray($styleArray1);
+	  $objPHPExcel->getActiveSheet()->getStyle('M2')->applyFromArray($styleArray1);
+	  
+	  $styleArray = array(
+      'borders' => array(
+          'allborders' => array(
+              'style' => PHPExcel_Style_Border::BORDER_THIN
+          )
+      )
+     );
+	  
+	  
+	    $objDrawing = new PHPExcel_Worksheet_Drawing();
+        $objDrawing->setName("GSP LOGO");
+        $objDrawing->setDescription("GSP Partners Excel Dump");
+        $objDrawing->setWorksheet($objPHPExcel->getActiveSheet());
+		$logo="assets/img/excel1.jpg";
+        $objDrawing->setPath($logo);
+        $objDrawing->setWidth(160);
+        $objDrawing->setCoordinates('A1');
+		
+		$objDrawing1 = new PHPExcel_Worksheet_Drawing();
+        $objDrawing1->setName("GSP LOGO");
+        $objDrawing1->setDescription("GSP Partners Excel Dump");
+        $objDrawing1->setWorksheet($objPHPExcel->getActiveSheet());
+		$logo1="assets/img/excel2.jpg";
+        $objDrawing1->setPath($logo1);
+        $objDrawing1->setWidth(150);
+        $objDrawing1->setCoordinates('S1');
+	 
+      $objPHPExcel->getDefaultStyle()->applyFromArray($styleArray);
+	  $objPHPExcel->getActiveSheet()->getRowDimension(1)->setRowHeight("100px");
+	  $objPHPExcel->getActiveSheet()
+              ->getStyle("A1:Z1".$row,$data_2015)
+              ->getFill()
+              ->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
+              ->getStartColor()
+              ->setRGB('7fa656');
+	 $objPHPExcel->getActiveSheet()->getColumnDimension('C2')->setWidth('100'); 
+	 $objPHPExcel->getActiveSheet()->getColumnDimension('C3')->setWidth('50'); 
+	 $objPHPExcel->getActiveSheet()->getColumnDimension('C4')->setWidth('50'); 
+	 $objPHPExcel->getActiveSheet()->getColumnDimension('C5')->setWidth('50'); 
+	 $objPHPExcel->getActiveSheet()->getColumnDimension('C6')->setWidth('50');
+	 $objPHPExcel->getActiveSheet()->getColumnDimension('A')->setWidth('15'); 
+	 $objPHPExcel->getActiveSheet()->getColumnDimension('B')->setWidth('15'); 
+	 $objPHPExcel->getActiveSheet()->getColumnDimension('C')->setWidth('50'); 
+	 $objPHPExcel->getActiveSheet()->getColumnDimension('D')->setWidth('15'); 
+	 $objPHPExcel->getActiveSheet()->getColumnDimension('E')->setWidth('15'); 
+	 $objPHPExcel->getActiveSheet()->getColumnDimension('F')->setWidth('15'); 
+	 $objPHPExcel->getActiveSheet()->getColumnDimension('G')->setWidth('15'); 
+	 $objPHPExcel->getActiveSheet()->getColumnDimension('H')->setWidth('15'); 
+	 $objPHPExcel->getActiveSheet()->getColumnDimension('I')->setWidth('15'); 
+	 $objPHPExcel->getActiveSheet()->getColumnDimension('J')->setWidth('15'); 
+	 $objPHPExcel->getActiveSheet()->getColumnDimension('K')->setWidth('15'); 
+	 $objPHPExcel->getActiveSheet()->getColumnDimension('L')->setWidth('15'); 
+	 $objPHPExcel->getActiveSheet()->getColumnDimension('M')->setWidth('15'); 
+	 $objPHPExcel->getActiveSheet()->getColumnDimension('N')->setWidth('15');
+	 $objPHPExcel->getActiveSheet()->getColumnDimension('O')->setWidth('15'); 
+	 $objPHPExcel->getActiveSheet()->getColumnDimension('P')->setWidth('15');
+	 $objPHPExcel->getActiveSheet()->getColumnDimension('Q')->setWidth('15');
+	 $objPHPExcel->getActiveSheet()->getColumnDimension('R')->setWidth('15');
+	 $objPHPExcel->setActiveSheetIndex()
+	        ->setCellValue("C2"," ")
+			->setCellValue("C3","Total Registrations from Bharti Foundation")
+			->setCellValue("C4","Audit Completed")
+			->setCellValue("C5","Audit started but not completed")
+			->setCellValue("C6","Registered but not started")
+            ->setCellValue("D2","2018")
+            ->setCellValue("E2","2017")
+            ->setCellValue("F2","2016")
+			->setCellValue("G2","2015")
+			->setCellValue("H2"," ")
+			->setCellValue("I2","School Category")
+			->setCellValue("I3","Green")
+			->setCellValue("I4","Yellow")
+			->setCellValue("I5","Orange")
+			->setCellValue("I6","Red")
+			->setCellValue("J2","2018")
+			->setCellValue("K2","2017")
+			->setCellValue("L2","2016")
+			->setCellValue("M2","2015")
+			->setCellValue("A7","2015")
+			->setCellValue("B7","2015")
+			->setCellValue("C7","2015")
+			->setCellValue("A7","S. No")
+			->setCellValue("B7","School ID")
+			->setCellValue("C7","School Name")
+			->setCellValue("D7","State")
+			->setCellValue("E7","District")
+			->setCellValue("F7","City")
+			->setCellValue("G7","Pin code")
+			->setCellValue("H7","School Email")
+			->setCellValue("I7","Principal Name")
+			->setCellValue("J7","Principal Mobile")
+			->setCellValue("K7","Coordinator Name")
+			->setCellValue("L7","Coordinator Email")
+			->setCellValue("M7","Coordinator Mobile")
+			->setCellValue("N7","Completeness 2018")
+			->setCellValue("O7","Status 2018")
+			->setCellValue("P7","Status 2017")
+			->setCellValue("Q7","Status 2016")
+			->setCellValue("R7","Status 2015");
+		$partnerList=$this->Audit_started_model->getPartnerData($partnerId);
+		$row=7;
+		$sr_no=0;
+		foreach($partnerList as $r){
+		   ++$row;
+		   $rowsData=getPartnerWithAllYears($r->id);
+		   $data_2018=!empty($rowsData[0]->data_2018)?$rowsData[0]->data_2018:"NA";
+		   $data_2017=!empty($rowsData[0]->data_2017)?$rowsData[0]->data_2017:"NA";
+		   $data_2016=!empty($rowsData[0]->data_2016)?$rowsData[0]->data_2016:"NA";
+		   $data_2015=!empty($rowsData[0]->data_2015)?$rowsData[0]->data_2015:"NA";
+		   /**********************************************************/
+		   /*Column Color Code On Yearwise 2015-2018*/
+		   if($data_2015>=70){
+		     $objPHPExcel->getActiveSheet()
+              ->getStyle("R".$row,$data_2015)
+              ->getFill()
+              ->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
+              ->getStartColor()
+              ->setRGB('7fa656');
+		   }
+		   if($data_2015>=50 && $data_2015<=69.9){
+		      $objPHPExcel->getActiveSheet()
+              ->getStyle("R".$row,$data_2015)
+              ->getFill()
+              ->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
+              ->getStartColor()
+              ->setRGB('fcfc00');
+		   }
+		   if($data_2015>=35 && $data_2015<=49.9){
+		       $objPHPExcel->getActiveSheet()
+              ->getStyle("R".$row,$data_2015)
+              ->getFill()
+              ->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
+              ->getStartColor()
+              ->setRGB('d7851f');
+		   }
+		   if($data_2015<=34.9){
+		       $objPHPExcel->getActiveSheet()
+              ->getStyle("R".$row,$data_2015)
+              ->getFill()
+              ->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
+              ->getStartColor()
+              ->setRGB('fc3300');
+		   }
+		   if(strcmp($data_2015,"NA")==0 || $data_2015==""){
+		      $objPHPExcel->getActiveSheet()
+              ->getStyle("R".$row,$data_2015)
+              ->getFill()
+              ->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
+              ->getStartColor()
+              ->setRGB('ffffff');
+		   }
+		   /**********************************************************/
+		   /*Column Color Code On Yearwise 2015-2018*/
+		   if($data_2016>=70){
+		     $objPHPExcel->getActiveSheet()
+              ->getStyle("Q".$row,$data_2016)
+              ->getFill()
+              ->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
+              ->getStartColor()
+              ->setRGB('7fa656');
+		   }
+		   if($data_2016>=50 && $data_2016<=69.9){
+		      $objPHPExcel->getActiveSheet()
+              ->getStyle("Q".$row,$data_2016)
+              ->getFill()
+              ->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
+              ->getStartColor()
+              ->setRGB('fcfc00');
+		   }
+		   if($data_2016>=35 && $data_2016<=49.9){
+		       $objPHPExcel->getActiveSheet()
+              ->getStyle("Q".$row,$data_2016)
+              ->getFill()
+              ->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
+              ->getStartColor()
+              ->setRGB('d7851f');
+		   }
+		   if($data_2016<=34.9){
+		       $objPHPExcel->getActiveSheet()
+              ->getStyle("Q".$row,$data_2016)
+              ->getFill()
+              ->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
+              ->getStartColor()
+              ->setRGB('fc3300');
+		   }
+		   if(strcmp($data_2016,"NA")==0 || $data_2016==""){
+		      $objPHPExcel->getActiveSheet()
+              ->getStyle("Q".$row,$data_2016)
+              ->getFill()
+              ->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
+              ->getStartColor()
+              ->setRGB('ffffff');
+		   }
+		      /**********************************************************/
+		   /*Column Color Code On Yearwise 2015-2018*/
+		   if($data_2017>=70){
+		     $objPHPExcel->getActiveSheet()
+              ->getStyle("P".$row,$data_2017)
+              ->getFill()
+              ->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
+              ->getStartColor()
+              ->setRGB('7fa656');
+		   }
+		   if($data_2017>=50 && $data_2017<=69.9){
+		      $objPHPExcel->getActiveSheet()
+              ->getStyle("P".$row,$data_2017)
+              ->getFill()
+              ->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
+              ->getStartColor()
+              ->setRGB('fcfc00');
+		   }
+		   if($data_2017>=35 && $data_2017<=49.9){
+		       $objPHPExcel->getActiveSheet()
+              ->getStyle("P".$row,$data_2017)
+              ->getFill()
+              ->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
+              ->getStartColor()
+              ->setRGB('d7851f');
+		   }
+		   if($data_2017<=34.9){
+		       $objPHPExcel->getActiveSheet()
+              ->getStyle("P".$row,$data_2017)
+              ->getFill()
+              ->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
+              ->getStartColor()
+              ->setRGB('fc3300');
+		   }
+		   if(strcmp($data_2017,"NA")==0 || $data_2017==""){
+		      $objPHPExcel->getActiveSheet()
+              ->getStyle("P".$row,$data_2017)
+              ->getFill()
+              ->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
+              ->getStartColor()
+              ->setRGB('ffffff');
+		   }
+		      /**********************************************************/
+		   /*Column Color Code On Yearwise 2015-2018*/
+		   if($data_2018>=70){
+		     $objPHPExcel->getActiveSheet()
+              ->getStyle("O".$row,$data_2018)
+              ->getFill()
+              ->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
+              ->getStartColor()
+              ->setRGB('7fa656');
+		   }
+		   if($data_2018>=50 && $data_2018<=69.9){
+		      $objPHPExcel->getActiveSheet()
+              ->getStyle("O".$row,$data_2018)
+              ->getFill()
+              ->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
+              ->getStartColor()
+              ->setRGB('fcfc00');
+		   }
+		   if($data_2018>=35 && $data_2018<=49.9){
+		       $objPHPExcel->getActiveSheet()
+              ->getStyle("O".$row,$data_2018)
+              ->getFill()
+              ->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
+              ->getStartColor()
+              ->setRGB('d7851f');
+		   }
+		   if($data_2018<=34.9){
+		       $objPHPExcel->getActiveSheet()
+              ->getStyle("O".$row,$data_2018)
+              ->getFill()
+              ->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
+              ->getStartColor()
+              ->setRGB('fc3300');
+		   }
+		   if(strcmp($data_2018,"NA")==0 || $data_2018==""){
+		      $objPHPExcel->getActiveSheet()
+              ->getStyle("O".$row,$data_2018)
+              ->getFill()
+              ->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
+              ->getStartColor()
+              ->setRGB('ffffff');
+		   }
+		   
+		   $objPHPExcel->setActiveSheetIndex()
+			->setCellValue("A".$row,++$sr_no)
+			->setCellValue("B".$row,$r->id)
+			->setCellValue("C".$row,$r->name)
+			->setCellValue("D".$row,$r->state_name)
+			->setCellValue("E".$row,$r->district_name)
+			->setCellValue("F".$row,$r->city)
+			->setCellValue("G".$row,$r->pincode)
+			->setCellValue("H".$row,$r->schoolemail)
+			->setCellValue("I".$row,$r->principle_name)
+			->setCellValue("J".$row,$r->mobile)
+			->setCellValue("K".$row,$r->coname)
+			->setCellValue("L".$row,$r->coemail)
+			->setCellValue("M".$row,$r->comobile)
+			->setCellValue("N".$row,$r->progress)
+			->setCellValue("O".$row,$data_2018)
+			->setCellValue("P".$row,$data_2017)
+			->setCellValue("Q".$row,$data_2016)
+			->setCellValue("R".$row,$data_2015);
+		}	
+			
+	 $objPHPExcel->getActiveSheet()
+     ->getStyle('C3:C4')
+     ->getFill()
+     ->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
+     ->getStartColor()
+     ->setRGB('7fa656');	
+	 $objPHPExcel->getActiveSheet()
+     ->getStyle('C5:C6')
+     ->getFill()
+     ->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
+     ->getStartColor()
+     ->setRGB('7fa656');
+	  $objPHPExcel->getActiveSheet()
+     ->getStyle('D3:D4')
+     ->getFill()
+     ->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
+     ->getStartColor()
+     ->setRGB('7fa656');	
+	 $objPHPExcel->getActiveSheet()
+     ->getStyle('D5:D6')
+     ->getFill()
+     ->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
+     ->getStartColor()
+     ->setRGB('7fa656');
+	 $objPHPExcel->getActiveSheet()
+     ->getStyle('E3:E4')
+     ->getFill()
+     ->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
+     ->getStartColor()
+     ->setRGB('7fa656');	
+	 $objPHPExcel->getActiveSheet()
+     ->getStyle('E5:E6')
+     ->getFill()
+     ->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
+     ->getStartColor()
+     ->setRGB('7fa656');
+	 $objPHPExcel->getActiveSheet()
+     ->getStyle('F3:F4')
+     ->getFill()
+     ->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
+     ->getStartColor()
+     ->setRGB('7fa656');	
+	 $objPHPExcel->getActiveSheet()
+     ->getStyle('F5:F6')
+     ->getFill()
+     ->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
+     ->getStartColor()
+     ->setRGB('7fa656');
+	 $objPHPExcel->getActiveSheet()
+     ->getStyle('G3:G4')
+     ->getFill()
+     ->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
+     ->getStartColor()
+     ->setRGB('7fa656');	
+	 $objPHPExcel->getActiveSheet()
+     ->getStyle('G5:G6')
+     ->getFill()
+     ->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
+     ->getStartColor()
+     ->setRGB('7fa656');
+	 $objPHPExcel->getActiveSheet()
+     ->getStyle('I3')
+     ->getFill()
+     ->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
+     ->getStartColor()
+     ->setRGB('10c136');	
+	 $objPHPExcel->getActiveSheet()
+     ->getStyle('I4')
+     ->getFill()
+     ->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
+     ->getStartColor()
+     ->setRGB('fcfc00');
+	 $objPHPExcel->getActiveSheet()
+     ->getStyle('I5')
+     ->getFill()
+     ->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
+     ->getStartColor()
+     ->setRGB('d7851f');	
+	 $objPHPExcel->getActiveSheet()
+     ->getStyle('I6')
+     ->getFill()
+     ->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
+     ->getStartColor()
+     ->setRGB('fc3300');	
+     $filename='PartnersData.xls';
+     $objPHPExcel->setActiveSheetIndex(0);
+     header('Content-Type: application/vnd.ms-excel; charset=UTF-8');
+     header('Content-Disposition: attachment;filename="'.$filename.'"');
+     header('Cache-Control: max-age=0');
+     header('Cache-Control: max-age=1');
+     header ('Expires: Mon, 26 Jul 1997 05:00:00 GMT'); // Date in the past
+     header ('Last-Modified: '.gmdate('D, d M Y H:i:s').' GMT'); // always modified
+     header ('Cache-Control: cache, must-revalidate'); // HTTP/1.1
+     header ('Pragma: public'); // HTTP/1.0
+     $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel5');
+     $objWriter->save('php://output');
+	}
 }
