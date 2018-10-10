@@ -451,17 +451,14 @@ class Audit_started extends CI_Controller {
 	}
 	
 	public function foundationPartnerrexcel($partnerId){
-	 $this->load->library('Excel');
-	 error_reporting(E_ALL);
-ini_set('display_errors', TRUE);
-ini_set('display_startup_errors', TRUE);	
+	 $this->load->library('Excel');	
 	 $objPHPExcel = new PHPExcel();
 	   $styleArray1 = array(
-        'font'  => array(
-        'bold'  => true,
+         'font'  => array(
+         'bold'  => true,
 		'name' => 'Calibri',
 		'size'  => 13,
-       ));
+          ));
 	   
 	   
 	  $partner_countgreen_2018=getPartnerWithAllCOUNT($partnerId,"data_2018","green");
