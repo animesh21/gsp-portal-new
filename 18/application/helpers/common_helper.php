@@ -221,6 +221,52 @@ if (!function_exists('get_partner')) {
     }
 }
 
+if (!function_exists('getPartnerWithAllYears')) {
+    function getPartnerWithAllYears($partnerId) {
+        $CI = & get_instance();
+        $temp = $CI->db->select('a.*, b.name AS state_name,c.name As district_name, d.data_2018 as data_2018, d.data_2017 as data_2017, d.data_2016 as data_2016, d.data_2015 as data_2015')
+		->from('gsp_school AS a')
+		->join('states AS b', 'a.state=b.id', 'left')
+		->join('cities AS c', 'a.district=c.id', 'left')
+		->join('tbl_yoy AS d', 'd.school_id=a.id', 'left')
+		->where('a.id',$partnerId)
+		->get()->result();
+		 return $temp;
+    }
+}
+
+if (!function_exists('getPartnerWithAllCOUNT')) {
+    function getPartnerWithAllCOUNT($partnerId,$columnName,$condition) {
+	 $arrState = array();
+        $CI = & get_instance();
+		if(!empty($columnName) && $columnName!="")
+		$CI->db->where("d.".$columnName." IS NOT NULL");
+		if(!empty($condition) && strcmp($condition,"green")==0)
+		$CI->db->where("d.".$columnName." >=70");
+		if(!empty($condition) && strcmp($condition,"yellow")==0)
+		$CI->db->where("d.".$columnName." >=50 AND d.".$columnName.' <=69.9');
+		if(!empty($condition) && strcmp($condition,"orange")==0)
+		$CI->db->where("d.".$columnName." >=35 AND d.".$columnName.' <=49.9');
+		if(!empty($condition) && strcmp($condition,"red")==0){
+		$CI->db->where("d.".$columnName."<=34.9");
+		$CI->db->where("d.".$columnName." NOT LIKE 'NA'");
+		}
+		$data=0;
+		$temp = $CI->db->select("COUNT('d.school_id') as label")
+                        ->from('gsp_school AS a')
+                        ->join('states AS b', 'a.state=b.id', 'left')
+                        ->join('cities AS c', 'a.district=c.id', 'left')
+						->join('tbl_yoy AS d', 'd.school_id=a.id', 'left')
+						->where('a.partner_status',$partnerId)
+                        ->order_by('a.id', 'desc')
+                        ->get()->row();
+						$data=$temp->label;
+		                return $data;
+    }
+}
+
+
+
 
 
 /******
