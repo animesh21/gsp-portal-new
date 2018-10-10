@@ -178,7 +178,10 @@
   </ul>
   <div class="tab-content">
     <div class="tab-pane active" id="1">
-      <table id="example1" class="display dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
+	   <a href="<?php echo base_url("admin/audit_started/foundationPartnerrexcel/1"); ?>" class="btn btn-default">
+    <button class="exportBtn">Export to Excel</button>
+    </a>
+       <table id="example1" class="display dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
         <thead>
           <tr role="row">
             <th>S.No</th>
@@ -215,6 +218,9 @@
     </div>
     <div class="tab-pane" id="2">
       <div style="overflow-x:auto;">
+	    <a href="<?php echo base_url("admin/audit_started/foundationPartnerrexcel/2"); ?>" class="btn btn-default">
+    <button class="exportBtn">Export to Excel</button>
+    </a>
         <table id="example2" class="display dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
           <thead>
             <tr role="row">
@@ -255,6 +261,9 @@
     </div>
     <div class="tab-pane" id="3">
       <div style="overflow-x:auto;">
+	    <a href="<?php echo base_url("admin/audit_started/foundationPartnerrexcel/3"); ?>" class="btn btn-default">
+    <button class="exportBtn">Export to Excel</button>
+    </a> 
         <table id="example3" class="display dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
           <thead>
             <tr role="row">
@@ -293,6 +302,9 @@
     </div>
     <div class="tab-pane" id="4">
       <div style="overflow-x:auto;">
+	    <a href="<?php echo base_url("admin/audit_started/foundationPartnerrexcel/4"); ?>" class="btn btn-default">
+    <button class="exportBtn">Export to Excel</button>
+    </a>
         <table id="example4" class="display dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
           <thead>
             <tr role="row">
@@ -331,6 +343,9 @@
     </div>
     <div class="tab-pane" id="5">
       <div style="overflow-x:auto;">
+	    <a href="<?php echo base_url("admin/audit_started/satyaBhartiFoundationPartnerrexcel"); ?>" class="btn btn-default">
+    <button class="exportBtn">Export to Excel</button>
+    </a> 
         <table id="example5" class="display dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
           <thead>
             <tr role="row">
@@ -369,6 +384,9 @@
     </div>
     <div class="tab-pane" id="6">
       <div style="overflow-x:auto;">
+	    <a href="<?php echo base_url("admin/audit_started/foundationPartnerrexcel/5"); ?>" class="btn btn-default">
+    <button class="exportBtn">Export to Excel</button>
+    </a>
         <table id="example6" class="display dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
           <thead>
             <tr role="row">
