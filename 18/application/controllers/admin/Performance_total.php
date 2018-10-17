@@ -1770,7 +1770,7 @@ load->helper('common_helper');
 	return array_sum($food_points);
     }
 	
-	 Public function getTotalArea($argUserID) {
+	 public function getTotalArea($argUserID) {
        $a=getFiled('Q4L2', $argUserID); 
        $b=getFiled('Q4L5', $argUserID); 
        $c=getFiled('Q4L6', $argUserID); 
@@ -1782,7 +1782,7 @@ load->helper('common_helper');
 
 
 
-   Public function getPercentageArea($argUserID) {
+   public function getPercentageArea($argUserID) {
        $total=getTotalArea($argUserID);
        $b=getFiled('Q4L5', $argUserID);
       if($total>0){ 
