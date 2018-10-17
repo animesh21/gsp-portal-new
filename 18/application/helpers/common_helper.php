@@ -1112,7 +1112,7 @@ if (!function_exists('getLandPoints')) {
         } else if ($animals > 50) {
             $land_points['Q2_animals'] = 2;
         } else if ($animals < 50) {
-            $land_points['Q2_plants'] = ($plants / 50) * 2;
+            $land_points['Q2_animals'] = ($plants / 50) * 2;
         }
 
         //Find out if your school uses chemical-based pesticides 
