@@ -1031,7 +1031,7 @@ load->helper('common_helper');
 	echo '
 <pre>
 '; print_r($points);
-	$this->db->insert_batch('tbl_total',$points,'userid');
+	$this->db->update_batch('tbl_total',$points,'userid');
     }
  
         function getWastePoints($argUserID) {
