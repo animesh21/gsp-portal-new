@@ -20,7 +20,7 @@ load->helper('common_helper');
     }
     
 	public function air() {
-	$query = $this->db->query("SELECT gsp_school.*,gsp_school.id As school_id FROM `gsp_school` INNER JOIN gsp_aduit_submitted ON gsp_school.userid=gsp_aduit_submitted.userid WHERE gsp_school.progress ='100' && gsp_aduit_submitted.status='1' && gsp_school.userid='1640'");
+	$query = $this->db->query("SELECT gsp_school.*,gsp_school.id As school_id FROM `gsp_school` INNER JOIN gsp_aduit_submitted ON gsp_school.userid=gsp_aduit_submitted.userid WHERE gsp_school.progress ='100' && gsp_aduit_submitted.status='1'");
 	$uArray=$query->result_array();
 	$points=array();
 	
@@ -1031,7 +1031,7 @@ load->helper('common_helper');
 	echo '
 <pre>
 '; print_r($points);
-	$this->db->insert_batch('tbl_total',$points,'userid');
+	$this->db->insert_batch('allexceldump',$points,'userid');
     }
  
         function getWastePoints($argUserID) {
