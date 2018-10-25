@@ -91,6 +91,44 @@ ga('send', 'pageview');
 
 	});
 </script>
+<style type="text/css">
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #6f6d69!important;
+  border-right: 16px solid #e86549 !important;
+  border-bottom: 16px solid #6f6d69!important;
+  border-left: 16px solid #e86549 !important;
+  width: 100px;
+  height: 100px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.hide_one{ 
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+	width:100%;
+	height:100%;
+	background:#0000009e;
+	}
+</style>	
 <script type="text/javascript">
 $(document).ready(function(){
 $(".hide_one").append('<h1 class="text-center" style="color:#fff; margin:250px auto; position:relative; text-shadow:1px 1px 1px #000;  background:#transparent!important;">Green School Program Audit 2018<p style="font-size:13px;">GSP Audit 2018 Processing Next Section</p><div class="loader" style="margin:0px auto; z-index: 1000000;background:#transparent!important; position:relative;"></div></h1>');
