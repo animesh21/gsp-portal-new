@@ -2659,5 +2659,6 @@ nyanBtn.addEventListener('click', function(){
                 height: 20px;
                 position: relative;
                 padding-top: 0px;
+		     display:none; 
 		 }	
 </style>
