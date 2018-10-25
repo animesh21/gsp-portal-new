@@ -80,7 +80,7 @@ header('Location: http://www.greenschoolsprogramme.org/audit/18/login/browser_ch
     color: #e86549;
     text-shadow: 1px 1px 1px #000;
     text-align: center;
-    border: none;">Extended Submission Deadline <span style="display:block;"> November 16, 2018</span> </h1>
+    border: none;">Extended Submission Deadline November 16, 2018 </h1>
       <div class="mform" style="display: block;">
         <h1>Please Log In</h1>
         <p>The <a href="http://www.greenschoolsprogramme.org/" target="_blank">Green Schools Programme</a> audit is only open to registered schools. If you have already registered, please log in using your
