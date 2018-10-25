@@ -36,8 +36,7 @@
       <h1>AIR <small class="pull-right" style="position: relative;
     top: -28px;
     font-weight: bolder;"><i class="h6"><strong>If the new changes are not saved, please press Ctrl+F5</strong></i></small></h1>
-      <div class="video"><a class="lptext" href="#" data-toggle="modal" data-target="#myModal">
-	  <img
+      <div class="video"><a class="lptext" href="#" data-toggle="modal" data-target="#myModal"> <img
                             src="http://greenschoolsprogramme.org/audit2015/upload/templates/tfr_responsive/images/video-icon.png"
                             style="width: 45px; height: 40px; margin-top:47px;"></a></div>
       <p> The Air section involves finding out your school's contribution in polluting the air. The information
@@ -795,12 +794,12 @@
       <label>
       <h6> Task 3: How eco-friendly are the vehicles in your school?</h6>
       </label>
-      <p> <!--In this section, you will maintain a record of vehicles used by your school. Two critical parameters
+      <p>
+        <!--In this section, you will maintain a record of vehicles used by your school. Two critical parameters
         indicate if your vehicles are eco-friendly. One—type of fuel—is given in the table below.
 		-->
-		In this section, you will maintain a record of vehicles used by your school. The type of fuel used
-by the vehicles is a critical parameter that indicates if your vehicles are eco-friendly.
-		</p>
+        In this section, you will maintain a record of vehicles used by your school. The type of fuel used
+        by the vehicles is a critical parameter that indicates if your vehicles are eco-friendly. </p>
     </div>
     <div class="form-group">
       <label class="control-label"><span class="cube">3</span>What is the ownership of the vehicles used by your
@@ -1028,28 +1027,28 @@ by the vehicles is a critical parameter that indicates if your vehicles are eco-
         </div>
         <div class="col-xs-2">
           <select class="form-control space-textbox" onChange="details()" id="b6" type="text" min="0" name="Q6A2S1B6">
-		    <option value="">Select</option> 
+            <option value="">Select</option>
             <option value="Yes" <?php if(isset($data['Q6A2S1B6'])){ if(strcmp($data['Q6A2S1B6'],"Yes")==0) { echo "selected"; } }  ?>>Yes</option>
             <option value="No" <?php if(isset($data['Q6A2S1B6'])){ if(strcmp($data['Q6A2S1B6'],"No")==0) { echo "selected"; } }  ?>>No</option>
           </select>
         </div>
         <div class="col-xs-2">
           <select class="form-control space-textbox" onChange="details()" id="c6" type="text" min="0" name="Q6A2S1C6">
-		    <option value="">Select</option> 
+            <option value="">Select</option>
             <option value="Yes" <?php if(isset($data['Q6A2S1C6'])){ if(strcmp($data['Q6A2S1C6'],"Yes")==0) { echo "selected"; } }  ?>>Yes</option>
             <option value="No" <?php if(isset($data['Q6A2S1C6'])){ if(strcmp($data['Q6A2S1C6'],"No")==0) { echo "selected"; } }  ?>>No</option>
           </select>
         </div>
         <div class="col-xs-2">
           <select class="form-control space-textbox" onChange="details()" id="v6" type="text" min="0" name="Q6A2S1V6">
-		    <option value="">Select</option> 
+            <option value="">Select</option>
             <option value="Yes" <?php if(isset($data['Q6A2S1V6'])){ if(strcmp($data['Q6A2S1V6'],"Yes")==0) { echo "selected"; } }  ?>>Yes</option>
             <option value="No" <?php if(isset($data['Q6A2S1V6'])){ if(strcmp($data['Q6A2S1V6'],"No")==0) { echo "selected"; } }  ?>>No</option>
           </select>
         </div>
         <div class="col-xs-2">
           <select class="form-control space-textbox" onChange="details()" id="o6" type="text" min="0" name="Q6A2S1O6">
-		    <option value="">Select</option> 
+            <option value="">Select</option>
             <option value="Yes" <?php if(isset($data['Q6A2S1O6'])){ if(strcmp($data['Q6A2S1O6'],"Yes")==0) { echo "selected"; } }  ?>>Yes</option>
             <option value="No" <?php if(isset($data['Q6A2S1O6'])){ if(strcmp($data['Q6A2S1O6'],"No")==0) { echo "selected"; } }  ?>>No</option>
           </select>
@@ -1085,7 +1084,7 @@ by the vehicles is a critical parameter that indicates if your vehicles are eco-
   <table width="100%" class="question uploadedfiles">
     <thead>
       <tr>
-        <th>Image</th>
+        <!--<th>Image</th>-->
         <th>File name</th>
         <th>Delete</th>
         <th>Download</th>
@@ -1095,15 +1094,15 @@ by the vehicles is a critical parameter that indicates if your vehicles are eco-
       <?php foreach ($pucCertificate as $a) { ?>
       <tr id="index<?php echo $a->id; ?>">
         <?php 
-	    $array = explode('.',$a->file_name); 
-            $count = count($array);
-	    $extension = $array[$count-1];
+	    //$array = explode('.',$a->file_name); 
+         //   $count = count($array);
+	   // $extension = $array[$count-1];
             ?>
-        <?php if($extension == "jpg" || $extension == "jpeg"){ ?>
-        <td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" /></td>
-        <?php }else{ ?>
-        <td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
-        <?php }?>
+        <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
+       <!-- <td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $a->file_name ?>" class="img-responsive" /></td>-->
+        <?php //}else{ ?>
+        <!--<td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>-->
+        <?php //}?>
         <?php $Text = str_replace(" ", "_", $a->name . "_PUC_Certificate_"); ?>
         <td class="upload edit"><?php echo str_replace($Text, " ", $a->file_name); ?></td>
         <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $a->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
@@ -1306,7 +1305,7 @@ by the vehicles is a critical parameter that indicates if your vehicles are eco-
 <table width="100%" class="question uploadedfiles">
   <thead>
     <tr>
-      <th>Image</th>
+      <!--<th>Image</th>-->
       <th>File name</th>
       <th>Delete</th>
       <th>Download</th>
@@ -1316,15 +1315,15 @@ by the vehicles is a critical parameter that indicates if your vehicles are eco-
     <?php foreach ($filesfules as $a) { ?>
     <tr id="index<?php echo $a->id; ?>">
       <?php 
-	    $array = explode('.',$a->file_name); 
-            $count = count($array);
-	    $extension = $array[$count-1];
+	   // $array = explode('.',$a->file_name); 
+       //     $count = count($array);
+	   // $extension = $array[$count-1];
             ?>
-      <?php if($extension == "jpg" || $extension == "jpeg"){ ?>
-      <td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" /></td>
-      <?php }else{ ?>
-      <td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
-      <?php }?>
+      <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
+     <!-- <td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $a->file_name ?>" class="img-responsive" /></td>-->
+      <?php //}else{ ?>
+      <!--<td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>-->
+      <?php //}?>
       <?php $Text = str_replace(" ", "_", $a->name . "_Fuels_"); ?>
       <td class="upload edit"><?php echo str_replace($Text, " ", $a->file_name); ?></td>
       <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $a->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
@@ -1883,7 +1882,7 @@ if (isset($data['Q9A1']))
 <table width="100%" class="question uploadedfiles">
   <thead>
     <tr>
-      <th>Image</th>
+     <!-- <th>Image</th>-->
       <th>File name</th>
       <th>Delete</th>
       <th>Download</th>
@@ -1893,15 +1892,15 @@ if (isset($data['Q9A1']))
     <?php foreach ($airQualityMonitering as $f) { ?>
     <tr id="index<?php echo $f->id; ?>">
       <?php 
-            $array = explode('.',$f->file_name); 
-            $count = count($array);
-            $extension = $array[$count-1];
+           // $array = explode('.',$f->file_name); 
+           // $count = count($array);
+           // $extension = $array[$count-1];
             ?>
-      <?php if($extension == "jpg" || $extension == "jpeg"){ ?>
-      <td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" /></td>
-      <?php }else{ ?>
-      <td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
-      <?php }?>
+      <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
+     <!-- <td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $f->file_name ?>" class="img-responsive" /></td>-->
+      <?php //}else{ ?>
+     <!-- <td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>-->
+      <?php //}?>
       <?php $name = str_replace(" ", "_", $f->name . "_Air_Quality_Monitoring_"); ?>
       <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
       <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
@@ -1963,7 +1962,7 @@ if (isset($data['Q9A1']))
 <table width="100%" class="question uploadedfiles">
   <thead>
     <tr>
-      <th>Image</th>
+    <!--  <th>Image</th>-->
       <th>File name</th>
       <th>Delete</th>
       <th>Download</th>
@@ -1974,15 +1973,15 @@ if (isset($data['Q9A1']))
     <tr id="index<?php echo $f->id; ?>">
       <?php 
 	    		  
-            $array = explode('.',$f->file_name); 
-            $count = count($array);
-	  $extension = $array[$count-1];
+            //$array = explode('.',$f->file_name); 
+           // $count = count($array);
+	 // $extension = $array[$count-1];
             ?>
-      <?php if($extension == "jpg" || $extension == "jpeg"){ ?>
-      <td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" /></td>
-      <?php }else{ ?>
-      <td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
-      <?php }?>
+      <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
+     <!-- <td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $f->file_name ?>" class="img-responsive" /></td>-->
+      <?php //}else{ ?>
+      <!--<td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>-->
+      <?php //}?>
       <?php $name = str_replace(" ", "_", $f->name . "_Supporting_Document_Air_"); ?>
       <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
       <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
@@ -2219,4 +2218,3 @@ $(document).ready(function(){
   });	
 });	
 </script>
-
