@@ -454,13 +454,13 @@
   <ul class="list-inline">
     <li>
       <label class="radio-inline">
-      <input type="radio" id="Q4E1_1" name="Q4E1" onclick="ElectricityBill(1)"
+      <input type="radio" id="Q4E1_1" name="Q4E1" onClick="ElectricityBill(1)"
                                    value="<?php echo set_value('Q4E1', 'Y') ?>" <?php if (isset($data['Q4E1'])) echo $data['Q4E1'] == 'Y' ? "checked" : "" ?>>
       Yes </label>
     </li>
     <li>
       <label class="radio-inline">
-      <input type="radio" name="Q4E1" onclick="ElectricityBill(2)"
+      <input type="radio" name="Q4E1" onClick="ElectricityBill(2)"
                                    value="<?php echo set_value('Q4E1', 'N') ?>" <?php if (isset($data['Q4E1'])) echo $data['Q4E1'] == 'N' ? "checked" : "" ?>>
       No </label>
     </li>
@@ -477,35 +477,38 @@
                                 data-target="#airModal" type="button">UPLOAD FILES </button>
   <br>
   <table width="100%" class="question uploadedfiles">
-  <thead>
-    <tr>
-      <th>Image</th>
-      <th>File name</th>
-      <th>Delete</th>
-      <th>Download</th>
-    </tr>
-  </thead>
-  <tbody>
-    <?php foreach ($electricityBills as $f) { ?>
-    <tr id="index<?php echo $f->id; ?>">
-      <?php 
-	      $array = explode('.',$f->file_name); 
-		  $count = count($array);
-		  $extension = $array[$count-1];
+    <thead>
+      <tr>
+        <!-- <th>Image</th>-->
+        <th>File name</th>
+        <th>Delete</th>
+        <th>Download</th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php foreach ($electricityBills as $f) { ?>
+      <tr id="index<?php echo $f->id; ?>">
+        <?php 
+	      //$array = explode('.',$f->file_name); 
+		 // $count = count($array);
+		 // $extension = $array[$count-1];
                 ?>
-      <?php if($extension == "jpg" || $extension == "jpeg"){ ?>
-      <td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" /></td>
-      <?php }else{ ?>
-      <td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
-      <?php }?>
-      <?php $name = str_replace(" ", "_", $f->name . "_Electricity_Bill_"); ?>
-      <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
-      <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
-      <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
-    </tr>
-    <?php } ?>
-  </tbody>
-</table>
+        <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
+        <!-- <td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $f->
+        file_name ?>" class="img-responsive" />
+        </td>
+        -->
+        <?php //}else{ ?>
+        <!--  <td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>-->
+        <?php //}?>
+        <?php $name = str_replace(" ", "_", $f->name . "_Electricity_Bill_"); ?>
+        <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+        <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+        <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+      </tr>
+      <?php } ?>
+    </tbody>
+  </table>
 </div>
 <?php
                 }
@@ -522,14 +525,14 @@
   <ul class="list-inline">
     <li>
       <label class="radio-inline">
-      <input type="radio" id="Q5E1" onclick="AirCrossLink1(1)" name="Q5E1"
+      <input type="radio" id="Q5E1" onClick="AirCrossLink1(1)" name="Q5E1"
                                    value="<?php echo set_value('Q5E1', 'Y') ?>" <?php if (isset($data['Q5E1'])) echo $data['Q5E1'] == 'Y' ? "checked" : "" ?>
                                    required>
       Yes </label>
     </li>
     <li>
       <label class="radio-inline">
-      <input type="radio" id="Q5E2" name="Q5E1" onclick="AirCrossLink1(2)"
+      <input type="radio" id="Q5E2" name="Q5E1" onClick="AirCrossLink1(2)"
                                    value="<?php echo set_value('Q5E1', 'N') ?>" <?php if (isset($data['Q5E1'])) echo $data['Q5E1'] == 'N' ? "checked" : "" ?>
                                    required>
       No </label>
@@ -996,7 +999,7 @@ echo form_input($attribs);
 ?>
     </div>
     <div class="col-xs-3">
-      <input class="form-control space-textbox" id="Q6E14S2" onchange="computeJoules()" type="number"
+      <input class="form-control space-textbox" id="Q6E14S2" onChange="computeJoules()" type="number"
                                min="0" name="Q6E14S2"
                                placeholder="<?php if (isset($data['Q6E14S2'])) echo $data['Q6E14S2'];
                         else echo "0"; ?>"
@@ -1041,7 +1044,7 @@ else echo "0"; ?>"
 <table width="100%" class="question uploadedfiles">
   <thead>
     <tr>
-      <th>Image</th>
+      <!-- <th>Image</th>-->
       <th>File name</th>
       <th>Delete</th>
       <th>Download</th>
@@ -1051,15 +1054,18 @@ else echo "0"; ?>"
     <?php foreach ($fulesBills as $f) { ?>
     <tr id="index<?php echo $f->id; ?>">
       <?php 
-	    	    $array = explode('.',$f->file_name); 
-		    $count = count($array);
-		   $extension = $array[$count-1];
+	    	   // $array = explode('.',$f->file_name); 
+		    //$count = count($array);
+		  // $extension = $array[$count-1];
                 ?>
-      <?php if($extension == "jpg" || $extension == "jpeg"){ ?>
-      <td><img style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" /></td>
-      <?php }else{ ?>
-      <td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
-      <?php }?>
+      <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
+      <!-- <td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $f->
+      file_name ?>" class="img-responsive" />
+      </td>
+      -->
+      <?php //}else{ ?>
+      <!--<td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>-->
+      <?php //}?>
       <?php $name = str_replace(" ", "_", $f->name . "_Fuels_Bills_"); ?>
       <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
       <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
@@ -1069,13 +1075,11 @@ else echo "0"; ?>"
   </tbody>
 </table>
 <div class="form-group">
-  <label><span class="cube">4</span> What appliances does your school have? 
-    <audio controls id="BEEstarrating" class="audio hide">
-      <source src="<?php echo base_url(); ?>assets/audio-files/BEE star rating.MP3" type="audio/mpeg">
-       Your browser does not support the audio element.
-      </audio>
-    <a class="btn" id="btn" style="background:#e86549; color:#000000;">Play / Pause</a>
-  </label>
+  <label><span class="cube">4</span> What appliances does your school have?
+  <audio controls id="BEEstarrating" class="audio hide">
+    <source src="<?php echo base_url(); ?>assets/audio-files/BEE star rating.MP3" type="audio/mpeg">
+    Your browser does not support the audio element. </audio>
+  <a class="btn" id="btn" style="background:#e86549; color:#000000;">Play / Pause</a> </label>
   <div class="form-group-1 row">
     <div class="col-xs-3">
       <label>Appliances/Equipments</label>
@@ -1226,7 +1230,7 @@ else echo "0"; ?>"
 <table width="100%" class="question uploadedfiles">
   <thead>
     <tr>
-      <th>Image</th>
+      <!--<th>Image</th>-->
       <th>File name</th>
       <th>Delete</th>
       <th>Download</th>
@@ -1237,15 +1241,18 @@ else echo "0"; ?>"
     <tr id="index<?php echo $f->id; ?>">
       <?php 
 	    		  
-			    $array = explode('.',$f->file_name); 
-			    $count = count($array);
-			  $extension = $array[$count-1];
+			   // $array = explode('.',$f->file_name); 
+			 //   $count = count($array);
+			 // $extension = $array[$count-1];
 			    ?>
-      <?php if($extension == "jpg" || $extension == "jpeg"){ ?>
-      <td><img style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" /></td>
-      <?php }else{ ?>
-      <td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
-      <?php }?>
+      <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
+      <!-- <td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $f->
+      file_name ?>" class="img-responsive" />
+      </td>
+      -->
+      <?php //}else{ ?>
+      <!--<td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>-->
+      <?php //}?>
       <?php $name = str_replace(" ", "_", $f->name . "_Five_Star_Appliances_"); ?>
       <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
       <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
@@ -1277,13 +1284,13 @@ else echo "0"; ?>"
   <ul class="list-inline">
     <li>
       <label class="">
-      <input type="radio" id="Q9E1" name="Q9E1" onclick="AlternativeSource(1)"
+      <input type="radio" id="Q9E1" name="Q9E1" onClick="AlternativeSource(1)"
                                    value="<?php echo set_value('Q9E1', 'Y') ?>" <?php if (isset($data['Q9E1'])) echo $data['Q9E1'] == 'Y' ? "checked" : "" ?>>
       Yes </label>
     </li>
     <li>
       <label class="">
-      <input type="radio" id="Q9E2" name="Q9E1" onclick="AlternativeSource(2)"
+      <input type="radio" id="Q9E2" name="Q9E1" onClick="AlternativeSource(2)"
                                    value="<?php echo set_value('Q9E1', 'N') ?>" <?php if (isset($data['Q9E1'])) echo $data['Q9E1'] == 'N' ? "checked" : "" ?>>
       No </label>
     </li>
@@ -1307,7 +1314,7 @@ if (isset($data['Q9E1']))
     <table width="100%" class="question uploadedfiles">
       <thead>
         <tr>
-          <th>Image</th>
+          <!--  <th>Image</th>-->
           <th>File name</th>
           <th>Delete</th>
           <th>Download</th>
@@ -1318,15 +1325,18 @@ if (isset($data['Q9E1']))
         <tr id="index<?php echo $f->id; ?>">
           <?php 
 	    		  
-		    $array = explode('.',$f->file_name); 
-		    $count = count($array);
-		  $extension = $array[$count-1];
+		   // $array = explode('.',$f->file_name); 
+		   // $count = count($array);
+		 // $extension = $array[$count-1];
 		    ?>
-          <?php if($extension == "jpg" || $extension == "jpeg"){ ?>
-          <td><img style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" /></td>
-          <?php }else{ ?>
-          <td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
-          <?php }?>
+          <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
+          <!-- <td><img style="width:62px; height:46px;"  src="<?php //echo base_url() ?>uploads/files/<?php //echo $f->
+          file_name ?>" class="img-responsive" />
+          </td>
+          -->
+          <?php //}else{ ?>
+          <!--   <td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>-->
+          <?php //}?>
           <?php $name = str_replace(" ", "_", $f->name . "_Alternative_Source_of_Energy_"); ?>
           <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
           <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
@@ -1411,7 +1421,7 @@ if (isset($data['Q9E1']))
       <table width="100%" class="question uploadedfiles">
         <thead>
           <tr>
-            <th>Image</th>
+            <!-- <th>Image</th>-->
             <th>File name</th>
             <th>Delete</th>
             <th>Download</th>
@@ -1422,15 +1432,18 @@ if (isset($data['Q9E1']))
           <tr id="index<?php echo $f->id; ?>">
             <?php 
 	    		  
-			    $array = explode('.',$f->file_name); 
-			    $count = count($array);
-			  $extension = $array[$count-1];
+			    //$array = explode('.',$f->file_name); 
+			   // $count = count($array);
+			 // $extension = $array[$count-1];
 			    ?>
-            <?php if($extension == "jpg" || $extension == "jpeg"){ ?>
-            <td><img style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" /></td>
-            <?php }else{ ?>
-            <td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
-            <?php }?>
+            <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
+            <!--<td><img style="width:62px; height:46px;"  src="<?php //echo base_url() ?>uploads/files/<?php //echo $f->
+            file_name ?>" class="img-responsive" />
+            </td>
+            -->
+            <?php //}else{ ?>
+            <!-- <td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>-->
+            <?php //}?>
             <?php $name = str_replace(" ", "_", $f->name . "_Supporting_Document_Energy_"); ?>
             <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
             <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
@@ -1690,7 +1703,7 @@ nyanBtn.addEventListener('click', function(){
 });
 
 </script>
-	 <style>
+<style>
              #btn{ 
 		background: rgb(232, 101, 73);
                 color: rgb(0, 0, 0);
@@ -1698,4 +1711,5 @@ nyanBtn.addEventListener('click', function(){
                 height: 20px;
                 position: relative;
                 padding-top: 0px;
-		 }	</style>
+		 }	
+</style>
