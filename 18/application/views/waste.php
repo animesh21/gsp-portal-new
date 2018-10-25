@@ -59,19 +59,20 @@
 <input type="hidden" id="Q6A2S1T5" value="<?php if (isset($other['Q6A2S1T5'])) echo $other['Q6A2S1T5']; ?>">
 <input type="hidden" id="Q6A2S1T6" value="<?php if (isset($other['Q6A2S1T6'])) echo $other['Q6A2S1T6']; ?>">
 <div class="form-group">
-<label class="control-label">Teachers (maximum of three teachers can be part of the team):</label>
-<div class="form-group row">
-  <div class="col-xs-1"></div>
-  <div class="col-xs-3">
-    <label>First Name</label>
+  <label class="control-label">Teachers (maximum of three teachers can be part of the team):</label>
+  <div class="form-group row">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-3">
+      <label>First Name</label>
+    </div>
+    <div class="col-xs-3">
+      <label>Last Name</label>
+    </div>
+    <div class="col-xs-3">
+      <label>Email ID</label>
+    </div>
   </div>
-  <div class="col-xs-3">
-    <label>Last Name</label>
-  </div>
-  <div class="col-xs-3">
-    <label>Email ID</label>
-  </div>
-</div></div>
+</div>
 <div class="form-group row">
   <div class="col-xs-1"> 1</div>
   <div class="col-xs-3"> <?php echo form_error('name'); ?>
@@ -553,7 +554,7 @@
 </div>
 <div class="form-group">
   <label class="control-label"><span class="cube">2(a)</span> How many categories does your school
-  segregate waste into?  <a class="tt" data-tooltip="Collection points are the areas (classroom, playground, sick room, etc) where dustbins have been placed. "><span class="badge">?</span></a></label>
+  segregate waste into? <a class="tt" data-tooltip="Collection points are the areas (classroom, playground, sick room, etc) where dustbins have been placed. "><span class="badge">?</span></a></label>
   <div class="form-group row">
     <div class="col-xs-2">
       <label>Area </label>
@@ -972,33 +973,34 @@
 </div>
 <table width="100%" class="question uploadedfiles">
   <thead>
-		<tr>
-	      <th>Image</th>	    
-		<th>File name</th>
-		<th>Delete</th>
-		<th>Download</th>
+    <tr>
+      <!-- <th>Image</th>	    -->
+      <th>File name</th>
+      <th>Delete</th>
+      <th>Download</th>
     </tr>
   </thead>
   <tbody>
     <?php foreach ($segregationClassroom as $f) { ?>
     <tr id="index<?php echo $f->id; ?>">
-        <?php 
-		$array = explode('.',$f->file_name); 
-		$count = count($array);
-		$extension = $array[$count-1];
+      <?php 
+		//$array = explode('.',$f->file_name); 
+		//$count = count($array);
+		//$extension = $array[$count-1];
 		?>
-	    <?php if($extension == "jpg" || $extension == "jpeg"){ ?>
-            <td><img style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" /></td>
-            <?php }else{ ?>
-            <td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
-       <?php }?>
+      <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
+      <!-- <td><img style="width:62px; height:46px;" ;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $f->
+      file_name ?>" class="img-responsive" />
+      </td>
+      -->
+      <?php //}else{ ?>
+      <!-- <td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>-->
+      <?php //}?>
       <?php $name = str_replace(" ", "_", $f->name . "_Segregation_Source_Classrooms_"); ?>
-			
       <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
       <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
       <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
-          
-</tr>
+    </tr>
     <?php } ?>
   </tbody>
 </table>
@@ -1102,8 +1104,7 @@
   <audio controls id="TetraPak" class="audio hide">
     <source src="<?php echo base_url(); ?>assets/audio-files/Tetra Pak.MP3" type="audio/mpeg">
     Your browser does not support the audio element. </audio>
-  <a class="btn" id="btn" style="background:#e86549; color:#000000;">Play / Pause</a>
-  </label>
+  <a class="btn" id="btn" style="background:#e86549; color:#000000;">Play / Pause</a> </label>
   <div class="form-group row">
     <div class="col-xs-6">
       <label>HOW MUCH WASTE DOES YOUR SCHOOL GENERATE? </label>
@@ -1396,32 +1397,34 @@
 </div>
 <table width="100%" class="question uploadedfiles">
   <thead>
-		<tr>
-	     <th>Image</th>	    
-		<th>File name</th>
-		<th>Delete</th>
-		<th>Download</th>
-
+    <tr>
+      <!-- <th>Image</th>	    -->
+      <th>File name</th>
+      <th>Delete</th>
+      <th>Download</th>
     </tr>
   </thead>
   <tbody>
     <?php foreach ($solidWaste as $f) { ?>
     <tr id="index<?php echo $f->id; ?>">
-        <?php 
-		$array = explode('.',$f->file_name); 
-		$count = count($array);
-		$extension = $array[$count-1];
+      <?php 
+		//$array = explode('.',$f->file_name); 
+		//$count = count($array);
+		//$extension = $array[$count-1];
 		?>
-	   <?php if($extension == "jpg" || $extension == "jpeg"){ ?>
-            <td><img style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" /></td>
-            <?php }else{ ?>
-            <td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
-            <?php }?>
-      <?php $name = str_replace(" ", "_", $f->name . "_Audit_Team_Weighing_Solid_Waste_"); ?>		
+      <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
+      <!-- <td><img style="width:62px; height:46px;" ;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $f->
+      file_name ?>" class="img-responsive" />
+      </td>
+      -->
+      <?php //}else{ ?>
+      <!--<td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>-->
+      <?php //}?>
+      <?php $name = str_replace(" ", "_", $f->name . "_Audit_Team_Weighing_Solid_Waste_"); ?>
       <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
       <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
       <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
-     </tr>
+    </tr>
     <?php } ?>
   </tbody>
 </table>
@@ -1603,7 +1606,6 @@
     <div class="form-group row">
       <div class="col-xs-6">
         <label>Metal </label>
-
       </div>
       <div class="col-xs-6">
         <input class="form-control space-textbox" onKeyUp="solidRecyclable1()" id="Q8Wa2S5"
@@ -1869,43 +1871,41 @@
   <br>
   <button class="btn uploadbtn upload" data-id="Composting Pit" data-toggle="modal"
                         data-target="#airModal" type="button">UPLOAD FILES </button>
-   <table width="100%" class="question uploadedfiles">
-        <thead>
-        <tr>
-           <th>Image</th>	    
-	   <th>File name</th>
-	   <th>Delete</th>
-	   <th>Download</th>
-
-        </tr>
-        </thead>
-        <tbody>
-<?php foreach ($composingPit as $u) { ?>
-    <tr id="index<?php echo $u->id; ?>">
-       <?php 
-		$array = explode('.',$u->file_name); 
-		$count = count($array);
-		$extension = $array[$count-1];
+  <table width="100%" class="question uploadedfiles">
+    <thead>
+      <tr>
+        <!-- <th>Image</th>	    -->
+        <th>File name</th>
+        <th>Delete</th>
+        <th>Download</th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php foreach ($composingPit as $u) { ?>
+      <tr id="index<?php echo $u->id; ?>">
+        <?php 
+		//$array = explode('.',$u->file_name); 
+		//$count = count($array);
+		//$extension = $array[$count-1];
 		?>
-	  <?php if($extension == "jpg" || $extension == "jpeg"){ ?>
-            <td><img style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $u->file_name ?>" class="img-responsive" /></td>
-            <?php }else{ ?>
-            <td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
-            <?php }?>
-    <?php $name = str_replace(" ", "_", $u->name . "_Composting_Pit_"); ?>
-																																																											
-    <td class="upload edit"><?php echo str_replace($name, "", $u->file_name); ?></td>
-    <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $u->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
-    <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $u->file_name; ?>" download="<?php echo $u->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
-   
-   </tr>
-<?php } ?>
-        </tbody>
-    </table>
-  
+        <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
+        <!-- <td><img style="width:62px; height:46px;" ;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $u->
+        file_name ?>" class="img-responsive" />
+        </td>
+        -->
+        <?php //}else{ ?>
+        <!-- <td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>-->
+        <?php //}?>
+        <?php $name = str_replace(" ", "_", $u->name . "_Composting_Pit_"); ?>
+        <td class="upload edit"><?php echo str_replace($name, "", $u->file_name); ?></td>
+        <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $u->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+        <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $u->file_name; ?>" download="<?php echo $u->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+      </tr>
+      <?php } ?>
+    </tbody>
+  </table>
 </div>
 <br>
-
 <div class="clearfix">&nbsp;</div>
 <?php
                   if(isset($data['Q9Wa1']))
@@ -1974,41 +1974,41 @@
                   {
                   ?>
 <div class="form-group" id="Q9Wa4">
-<?php } else { ?>
-<div class="form-group" id="Q9Wa4" style="display: none;">
-<?php }
+  <?php } else { ?>
+  <div class="form-group" id="Q9Wa4" style="display: none;">
+    <?php }
                           } else {?>
-<div class="form-group" id="Q9Wa4" style="display: none;">
-<?php } ?>
-<div class="form-group row" id="Q9Wa4">
-  <label><span class="cube">5(c)</span> What is the purpose of the compost that is generated per month? </label>
-  <div class="form-group row">
-    <label class="text-gray">
-    <input type="checkbox" name="Q9Wa4S1"
+    <div class="form-group" id="Q9Wa4" style="display: none;">
+      <?php } ?>
+      <div class="form-group row" id="Q9Wa4">
+        <label><span class="cube">5(c)</span> What is the purpose of the compost that is generated per month? </label>
+        <div class="form-group row">
+          <label class="text-gray">
+          <input type="checkbox" name="Q9Wa4S1"
                            value="<?php echo set_value('Q9Wa4S1', 1); ?>" <?php if (isset($data['Q9Wa4S1'])) echo "checked" ?>>
-    For horticultural purposes </label>
-  </div>
-  <div class="form-group row">
-    <label class="text-gray">
-    <input type="checkbox" name="Q9Wa4S2"
+          For horticultural purposes </label>
+        </div>
+        <div class="form-group row">
+          <label class="text-gray">
+          <input type="checkbox" name="Q9Wa4S2"
                            value="<?php echo set_value('Q9Wa4S2', 1); ?>" <?php if (isset($data['Q9Wa4S2'])) echo "checked" ?>>
-    For school garden</label>
-  </div>
-  <div class="form-group row">
-    <label class="text-gray">
-    <input type="checkbox" name="Q9Wa4S3"
+          For school garden</label>
+        </div>
+        <div class="form-group row">
+          <label class="text-gray">
+          <input type="checkbox" name="Q9Wa4S3"
                            value="<?php echo set_value('Q9Wa4S3', 1); ?>" <?php if (isset($data['Q9Wa4S3'])) echo "checked" ?>>
-    For sale</label>
-  </div>
-  <div class="form-group row">
-    <label class="text-gray">
-    <input type="checkbox" name="Q9Wa4S4"
+          For sale</label>
+        </div>
+        <div class="form-group row">
+          <label class="text-gray">
+          <input type="checkbox" name="Q9Wa4S4"
                            value="<?php echo set_value('Q9Wa4S4', 1); ?>" <?php if (isset($data['Q9Wa4S4'])) echo "checked" ?>>
-    For charity</label>
+          For charity</label>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-</div>
-</div>
 </div>
 <div class="form-group">
   <label class="control-label"><span class="cube">6</span>Does your school encourage students & teachers to
@@ -2031,13 +2031,10 @@
   recycling procedures are applied to waste. <a class="kplink"
                                                               href="http://www.greenschoolsprogramme.org/knowledge-bank/waste/#whatWeDo"
                                                               target="_blank"> </a>
-															  
-															  <audio controls id="DESIGNATEDCOMMUNITYDUMPSITE" class="audio hide">
+  <audio controls id="DESIGNATEDCOMMUNITYDUMPSITE" class="audio hide">
     <source src="<?php echo base_url(); ?>assets/audio-files/Designated dump site.MP3" type="audio/mpeg">
     Your browser does not support the audio element. </audio>
-  <a class="btn" id="btn1" style="background:#e86549; color:#000000;">Play / Pause</a> 
-															  
-															  </label>
+  <a class="btn" id="btn1" style="background:#e86549; color:#000000;">Play / Pause</a> </label>
   <div class="form-group row">
     <div class="col-xs-2">
       <label>Category of waste </label>
@@ -2258,32 +2255,34 @@
 <br>
 <table width="100%" class="question uploadedfiles">
   <thead>
-	<tr>
-	        <th>Image</th>	    
-		<th>File name</th>
-		<th>Delete</th>
-		<th>Download</th>
+    <tr>
+      <!-- <th>Image</th>	 -->
+      <th>File name</th>
+      <th>Delete</th>
+      <th>Download</th>
     </tr>
   </thead>
   <tbody>
     <?php foreach ($recycleMachine as $f) { ?>
     <tr id="index<?php echo $f->id; ?>">
-	    <?php 
-		$array = explode('.',$f->file_name); 
-		$count = count($array);
-		$extension = $array[$count-1];
+      <?php 
+		//$array = explode('.',$f->file_name); 
+		//$count = count($array);
+		//$extension = $array[$count-1];
 		?>
-	   <?php if($extension == "jpg" || $extension == "jpeg"){ ?>
-            <td><img style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" /></td>
-            <?php }else{ ?>
-            <td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
-            <?php }?>
+      <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
+      <!--  <td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $f->
+      file_name ?>" class="img-responsive" />
+      </td>
+      -->
+      <?php //}else{ ?>
+      <!--  <td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>-->
+      <?php //}?>
       <?php $name = str_replace(" ", "_", $f->name . "_Recycling_Machine_"); ?>
       <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
       <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
       <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
-          
-</tr>
+    </tr>
     <?php } ?>
   </tbody>
 </table>
@@ -2314,22 +2313,22 @@
     <label>TVs </label>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa1S1" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa1S1" type="number"
                        name="Q12Wa1S1" placeholder="<?php if (isset($data['Q12Wa1S1'])) echo $data['Q12Wa1S1'] ?>"
                        value="<?php echo set_value('Q12Wa1S1'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa1S2" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa1S2" type="number"
                        name="Q12Wa1S2" placeholder="<?php if (isset($data['Q12Wa1S2'])) echo $data['Q12Wa1S2'] ?>"
                        value="<?php echo set_value('Q12Wa1S2'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa1S3" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa1S3" type="number"
                        name="Q12Wa1S3" placeholder="<?php if (isset($data['Q12Wa1S3'])) echo $data['Q12Wa1S3'] ?>"
                        value="<?php echo set_value('Q12Wa1S3'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa1S4" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa1S4" type="number"
                        name="Q12Wa1S4" placeholder="<?php if (isset($data['Q12Wa1S4'])) echo $data['Q12Wa1S4'] ?>"
                        value="<?php echo set_value('Q12Wa1S4'); ?>" readonly/>
   </div>
@@ -2339,22 +2338,22 @@
     <label>VCR or DVD players </label>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa2S1" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa2S1" type="number"
                        name="Q12Wa2S1" placeholder="<?php if (isset($data['Q12Wa2S1'])) echo $data['Q12Wa2S1'] ?>"
                        value="<?php echo set_value('Q12Wa2S1'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa2S2" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa2S2" type="number"
                        name="Q12Wa2S2" placeholder="<?php if (isset($data['Q12Wa2S2'])) echo $data['Q12Wa2S2'] ?>"
                        value="<?php echo set_value('Q12Wa2S2'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa2S3" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa2S3" type="number"
                        name="Q12Wa2S3" placeholder="<?php if (isset($data['Q12Wa2S3'])) echo $data['Q12Wa2S3'] ?>"
                        value="<?php echo set_value('Q12Wa2S3'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa2S4" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa2S4" type="number"
                        name="Q12Wa2S4" placeholder="<?php if (isset($data['Q12Wa2S4'])) echo $data['Q12Wa2S4'] ?>"
                        value="<?php echo set_value('Q12Wa2S4'); ?>" readonly/>
   </div>
@@ -2364,22 +2363,22 @@
     <label>Refrigerators and freezers </label>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa3S1" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa3S1" type="number"
                        name="Q12Wa3S1" placeholder="<?php if (isset($data['Q12Wa3S1'])) echo $data['Q12Wa3S1'] ?>"
                        value="<?php echo set_value('Q12Wa3S1'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa3S2" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa3S2" type="number"
                        name="Q12Wa3S2" placeholder="<?php if (isset($data['Q12Wa3S2'])) echo $data['Q12Wa3S2'] ?>"
                        value="<?php echo set_value('Q12Wa3S2'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa3S3" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa3S3" type="number"
                        name="Q12Wa3S3" placeholder="<?php if (isset($data['Q12Wa3S3'])) echo $data['Q12Wa3S3'] ?>"
                        value="<?php echo set_value('Q12Wa3S3'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa3S4" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa3S4" type="number"
                        name="Q12Wa3S4" placeholder="<?php if (isset($data['Q12Wa3S4'])) echo $data['Q12Wa3S4'] ?>"
                        value="<?php echo set_value('Q12Wa3S4'); ?>" readonly/>
   </div>
@@ -2389,22 +2388,22 @@
     <label>Washing machines </label>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa4S1" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa4S1" type="number"
                        name="Q12Wa4S1" placeholder="<?php if (isset($data['Q12Wa4S1'])) echo $data['Q12Wa4S1'] ?>"
                        value="<?php echo set_value('Q12Wa4S1'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa4S2" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa4S2" type="number"
                        name="Q12Wa4S2" placeholder="<?php if (isset($data['Q12Wa4S2'])) echo $data['Q12Wa4S2'] ?>"
                        value="<?php echo set_value('Q12Wa4S2'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa4S3" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa4S3" type="number"
                        name="Q12Wa4S3" placeholder="<?php if (isset($data['Q12Wa4S3'])) echo $data['Q12Wa4S3'] ?>"
                        value="<?php echo set_value('Q12Wa4S3'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa4S4" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa4S4" type="number"
                        name="Q12Wa4S4" placeholder="<?php if (isset($data['Q12Wa4S4'])) echo $data['Q12Wa4S4'] ?>"
                        value="<?php echo set_value('Q12Wa4S4'); ?>" readonly/>
   </div>
@@ -2414,22 +2413,22 @@
     <label>Air conditioners </label>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa5S1" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa5S1" type="number"
                        name="Q12Wa5S1" placeholder="<?php if (isset($data['Q12Wa5S1'])) echo $data['Q12Wa5S1'] ?>"
                        value="<?php echo set_value('Q12Wa5S1'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa5S2" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa5S2" type="number"
                        name="Q12Wa5S2" placeholder="<?php if (isset($data['Q12Wa5S2'])) echo $data['Q12Wa5S2'] ?>"
                        value="<?php echo set_value('Q12Wa5S2'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa5S3" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa5S3" type="number"
                        name="Q12Wa5S3" placeholder="<?php if (isset($data['Q12Wa5S3'])) echo $data['Q12Wa5S3'] ?>"
                        value="<?php echo set_value('Q12Wa5S3'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa5S4" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa5S4" type="number"
                        name="Q12Wa5S4" placeholder="<?php if (isset($data['Q12Wa5S4'])) echo $data['Q12Wa5S4'] ?>"
                        value="<?php echo set_value('Q12Wa5S4'); ?>" readonly/>
   </div>
@@ -2439,22 +2438,22 @@
     <label>Heaters </label>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa6S1" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa6S1" type="number"
                        name="Q12Wa6S1" placeholder="<?php if (isset($data['Q12Wa6S1'])) echo $data['Q12Wa6S1'] ?>"
                        value="<?php echo set_value('Q12Wa6S1'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa6S2" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa6S2" type="number"
                        name="Q12Wa6S2" placeholder="<?php if (isset($data['Q12Wa6S2'])) echo $data['Q12Wa6S2'] ?>"
                        value="<?php echo set_value('Q12Wa6S2'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa6S3" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa6S3" type="number"
                        name="Q12Wa6S3" placeholder="<?php if (isset($data['Q12Wa6S3'])) echo $data['Q12Wa6S3'] ?>"
                        value="<?php echo set_value('Q12Wa6S3'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa6S4" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa6S4" type="number"
                        name="Q12Wa6S4" placeholder="<?php if (isset($data['Q12Wa6S4'])) echo $data['Q12Wa6S4'] ?>"
                        value="<?php echo set_value('Q12Wa6S4'); ?>" readonly/>
   </div>
@@ -2464,22 +2463,22 @@
     <label>Microwaves </label>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa7S1" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa7S1" type="number"
                        name="Q12Wa7S1" placeholder="<?php if (isset($data['Q12Wa7S1'])) echo $data['Q12Wa7S1'] ?>"
                        value="<?php echo set_value('Q12Wa7S1'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa7S2" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa7S2" type="number"
                        name="Q12Wa7S2" placeholder="<?php if (isset($data['Q12Wa7S2'])) echo $data['Q12Wa7S2'] ?>"
                        value="<?php echo set_value('Q12Wa7S2'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa7S3" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa7S3" type="number"
                        name="Q12Wa7S3" placeholder="<?php if (isset($data['Q12Wa7S3'])) echo $data['Q12Wa7S3'] ?>"
                        value="<?php echo set_value('Q12Wa7S3'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa7S4" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa7S4" type="number"
                        name="Q12Wa7S4" placeholder="<?php if (isset($data['Q12Wa7S4'])) echo $data['Q12Wa7S4'] ?>"
                        value="<?php echo set_value('Q12Wa7S4'); ?>" readonly/>
   </div>
@@ -2489,22 +2488,22 @@
     <label>Ovens </label>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa8S1" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa8S1" type="number"
                        name="Q12Wa8S1" placeholder="<?php if (isset($data['Q12Wa8S1'])) echo $data['Q12Wa8S1'] ?>"
                        value="<?php echo set_value('Q12Wa8S1'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa8S2" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa8S2" type="number"
                        name="Q12Wa8S2" placeholder="<?php if (isset($data['Q12Wa8S2'])) echo $data['Q12Wa8S2'] ?>"
                        value="<?php echo set_value('Q12Wa8S2'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa8S3" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa8S3" type="number"
                        name="Q12Wa8S3" placeholder="<?php if (isset($data['Q12Wa8S3'])) echo $data['Q12Wa8S3'] ?>"
                        value="<?php echo set_value('Q12Wa8S3'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa8S4" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa8S4" type="number"
                        name="Q12Wa8S4" placeholder="<?php if (isset($data['Q12Wa8S4'])) echo $data['Q12Wa8S4'] ?>"
                        value="<?php echo set_value('Q12Wa8S4'); ?>" readonly/>
   </div>
@@ -2514,22 +2513,22 @@
     <label>Toasters </label>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa9S1" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa9S1" type="number"
                        name="Q12Wa9S1" placeholder="<?php if (isset($data['Q12Wa9S1'])) echo $data['Q12Wa9S1'] ?>"
                        value="<?php echo set_value('Q12Wa9S1'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa9S2" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa9S2" type="number"
                        name="Q12Wa9S2" placeholder="<?php if (isset($data['Q12Wa9S2'])) echo $data['Q12Wa9S2'] ?>"
                        value="<?php echo set_value('Q12Wa9S2'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa9S3" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa9S3" type="number"
                        name="Q12Wa9S3" placeholder="<?php if (isset($data['Q12Wa9S3'])) echo $data['Q12Wa9S3'] ?>"
                        value="<?php echo set_value('Q12Wa9S3'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa9S4" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa9S4" type="number"
                        name="Q12Wa9S4" placeholder="<?php if (isset($data['Q12Wa9S4'])) echo $data['Q12Wa9S4'] ?>"
                        value="<?php echo set_value('Q12Wa9S4'); ?>" readonly/>
   </div>
@@ -2539,22 +2538,22 @@
     <label>Electric kettles </label>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa10S1" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa10S1" type="number"
                        name="Q12Wa10S1" placeholder="<?php if (isset($data['Q12Wa10S1'])) echo $data['Q12Wa10S1'] ?>"
                        value="<?php echo set_value('Q12Wa10S1'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa10S2" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa10S2" type="number"
                        name="Q12Wa10S2" placeholder="<?php if (isset($data['Q12Wa10S2'])) echo $data['Q12Wa10S2'] ?>"
                        value="<?php echo set_value('Q12Wa10S2'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa10S3" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa10S3" type="number"
                        name="Q12Wa10S3" placeholder="<?php if (isset($data['Q12Wa10S3'])) echo $data['Q12Wa10S3'] ?>"
                        value="<?php echo set_value('Q12Wa10S3'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa10S4" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa10S4" type="number"
                        name="Q12Wa10S4" placeholder="<?php if (isset($data['Q12Wa10S4'])) echo $data['Q12Wa10S4'] ?>"
                        value="<?php echo set_value('Q12Wa10S4'); ?>" readonly/>
   </div>
@@ -2574,12 +2573,12 @@
                        value="<?php echo set_value('Q12Wa11S2'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa11S3" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa11S3" type="number"
                        name="Q12Wa11S3" placeholder="<?php if (isset($data['Q12Wa11S3'])) echo $data['Q12Wa11S3'] ?>"
                        value="<?php echo set_value('Q12Wa11S3'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa11S4" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa11S4" type="number"
                        name="Q12Wa11S4" placeholder="<?php if (isset($data['Q12Wa11S4'])) echo $data['Q12Wa11S4'] ?>"
                        value="<?php echo set_value('Q12Wa11S4'); ?>" readonly/>
   </div>
@@ -2599,12 +2598,12 @@
                        value="<?php echo set_value('Q12Wa12S2'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa12S3" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa12S3" type="number"
                        name="Q12Wa12S3" placeholder="<?php if (isset($data['Q12Wa12S3'])) echo $data['Q12Wa12S3'] ?>"
                        value="<?php echo set_value('Q12Wa12S3'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa12S4" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa12S4" type="number"
                        name="Q12Wa12S4" placeholder="<?php if (isset($data['Q12Wa12S4'])) echo $data['Q12Wa12S4'] ?>"
                        value="<?php echo set_value('Q12Wa12S4'); ?>" readonly/>
   </div>
@@ -2624,12 +2623,12 @@
                        value="<?php echo set_value('Q12Wa13S2'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa13S3" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa13S3" type="number"
                        name="Q12Wa13S3" placeholder="<?php if (isset($data['Q12Wa13S3'])) echo $data['Q12Wa13S3'] ?>"
                        value="<?php echo set_value('Q12Wa13S3'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa13S4" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa13S4" type="number"
                        name="Q12Wa13S4" placeholder="<?php if (isset($data['Q12Wa13S4'])) echo $data['Q12Wa13S4'] ?>"
                        value="<?php echo set_value('Q12Wa13S4'); ?>" readonly/>
   </div>
@@ -2649,12 +2648,12 @@
                        value="<?php echo set_value('Q12Wa14S2'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa14S3" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa14S3" type="number"
                        name="Q12Wa14S3" placeholder="<?php if (isset($data['Q12Wa14S3'])) echo $data['Q12Wa14S3'] ?>"
                        value="<?php echo set_value('Q12Wa14S3'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa14S4" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa14S4" type="number"
                        name="Q12Wa14S4" placeholder="<?php if (isset($data['Q12Wa14S4'])) echo $data['Q12Wa14S4'] ?>"
                        value="<?php echo set_value('Q12Wa14S4'); ?>" readonly/>
   </div>
@@ -2674,12 +2673,12 @@
                        value="<?php echo set_value('Q12Wa15S2'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa15S3" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa15S3" type="number"
                        name="Q12Wa15S3" placeholder="<?php if (isset($data['Q12Wa15S3'])) echo $data['Q12Wa15S3'] ?>"
                        value="<?php echo set_value('Q12Wa15S3'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa15S4" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa15S4" type="number"
                        name="Q12Wa15S4" placeholder="<?php if (isset($data['Q12Wa15S4'])) echo $data['Q12Wa15S4'] ?>"
                        value="<?php echo set_value('Q12Wa15S4'); ?>" readonly/>
   </div>
@@ -2699,12 +2698,12 @@
                        value="<?php echo set_value('Q12Wa16S2'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa16S3" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa16S3" type="number"
                        name="Q12Wa16S3" placeholder="<?php if (isset($data['Q12Wa16S3'])) echo $data['Q12Wa16S3'] ?>"
                        value="<?php echo set_value('Q12Wa16S3'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa16S4" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa16S4" type="number"
                        name="Q12Wa16S4" placeholder="<?php if (isset($data['Q12Wa16S4'])) echo $data['Q12Wa16S4'] ?>"
                        value="<?php echo set_value('Q12Wa16S4'); ?>" readonly/>
   </div>
@@ -2724,12 +2723,12 @@
                        value="<?php echo set_value('Q12Wa17S2'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa17S3" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa17S3" type="number"
                        name="Q12Wa17S3" placeholder="<?php if (isset($data['Q12Wa17S3'])) echo $data['Q12Wa17S3'] ?>"
                        value="<?php echo set_value('Q12Wa17S3'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa17S4" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa17S4" type="number"
                        name="Q12Wa17S4" placeholder="<?php if (isset($data['Q12Wa17S4'])) echo $data['Q12Wa17S4'] ?>"
                        value="<?php echo set_value('Q12Wa17S4'); ?>" readonly/>
   </div>
@@ -2749,12 +2748,12 @@
                        value="<?php echo set_value('Q12Wa18S2'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa18S3" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa18S3" type="number"
                        name="Q12Wa18S3" placeholder="<?php if (isset($data['Q12Wa18S3'])) echo $data['Q12Wa18S3'] ?>"
                        value="<?php echo set_value('Q12Wa18S3'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa18S4" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa18S4" type="number"
                        name="Q12Wa18S4" placeholder="<?php if (isset($data['Q12Wa18S4'])) echo $data['Q12Wa18S4'] ?>"
                        value="<?php echo set_value('Q12Wa18S4'); ?>" readonly/>
   </div>
@@ -2774,12 +2773,12 @@
                        value="<?php echo set_value('Q12Wa19S2'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa19S3" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa19S3" type="number"
                        name="Q12Wa19S3" placeholder="<?php if (isset($data['Q12Wa19S3'])) echo $data['Q12Wa19S3'] ?>"
                        value="<?php echo set_value('Q12Wa19S3'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa19S4" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa19S4" type="number"
                        name="Q12Wa19S4" placeholder="<?php if (isset($data['Q12Wa19S4'])) echo $data['Q12Wa19S4'] ?>"
                        value="<?php echo set_value('Q12Wa19S4'); ?>" readonly/>
   </div>
@@ -2799,12 +2798,12 @@
                        value="<?php echo set_value('Q12Wa20S2'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa20S3" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa20S3" type="number"
                        name="Q12Wa20S3" placeholder="<?php if (isset($data['Q12Wa20S3'])) echo $data['Q12Wa20S3'] ?>"
                        value="<?php echo set_value('Q12Wa20S3'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa20S4" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa20S4" type="number"
                        name="Q12Wa20S4" placeholder="<?php if (isset($data['Q12Wa20S4'])) echo $data['Q12Wa20S4'] ?>"
                        value="<?php echo set_value('Q12Wa20S4'); ?>" readonly/>
   </div>
@@ -2824,12 +2823,12 @@
                        value="<?php echo set_value('Q12Wa21S2'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa21S3" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa21S3" type="number"
                        name="Q12Wa21S3" placeholder="<?php if (isset($data['Q12Wa21S3'])) echo $data['Q12Wa21S3'] ?>"
                        value="<?php echo set_value('Q12Wa21S3'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa21S4" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa21S4" type="number"
                        name="Q12Wa21S4" placeholder="<?php if (isset($data['Q12Wa21S4'])) echo $data['Q12Wa21S4'] ?>"
                        value="<?php echo set_value('Q12Wa21S4'); ?>" readonly/>
   </div>
@@ -2849,12 +2848,12 @@
                        value="<?php echo set_value('Q12Wa22S2'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa22S3" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa22S3" type="number"
                        name="Q12Wa22S3" placeholder="<?php if (isset($data['Q12Wa22S3'])) echo $data['Q12Wa22S3'] ?>"
                        value="<?php echo set_value('Q12Wa22S3'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa22S4" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa22S4" type="number"
                        name="Q12Wa22S4" placeholder="<?php if (isset($data['Q12Wa22S4'])) echo $data['Q12Wa22S4'] ?>"
                        value="<?php echo set_value('Q12Wa22S4'); ?>" readonly/>
   </div>
@@ -2874,12 +2873,12 @@
                        value="<?php echo set_value('Q12Wa23S2'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa23S3" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa23S3" type="number"
                        name="Q12Wa23S3" placeholder="<?php if (isset($data['Q12Wa23S3'])) echo $data['Q12Wa23S3'] ?>"
                        value="<?php echo set_value('Q12Wa23S3'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa23S4" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa23S4" type="number"
                        name="Q12Wa23S4" placeholder="<?php if (isset($data['Q12Wa23S4'])) echo $data['Q12Wa23S4'] ?>"
                        value="<?php echo set_value('Q12Wa23S4'); ?>" readonly/>
   </div>
@@ -2899,12 +2898,12 @@
                        value="<?php echo set_value('Q12Wa24S2'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa24S3" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa24S3" type="number"
                        name="Q12Wa24S3" placeholder="<?php if (isset($data['Q12Wa24S3'])) echo $data['Q12Wa24S3'] ?>"
                        value="<?php echo set_value('Q12Wa24S3'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa24S4" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa24S4" type="number"
                        name="Q12Wa24S4" placeholder="<?php if (isset($data['Q12Wa24S4'])) echo $data['Q12Wa24S4'] ?>"
                        value="<?php echo set_value('Q12Wa24S4'); ?>" readonly/>
   </div>
@@ -2924,12 +2923,12 @@
                        value="<?php echo set_value('Q12Wa25S2'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa25S3" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa25S3" type="number"
                        name="Q12Wa25S3" placeholder="<?php if (isset($data['Q12Wa25S3'])) echo $data['Q12Wa25S3'] ?>"
                        value="<?php echo set_value('Q12Wa25S3'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa25S4" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa25S4" type="number"
                        name="Q12Wa25S4" placeholder="<?php if (isset($data['Q12Wa25S4'])) echo $data['Q12Wa25S4'] ?>"
                        value="<?php echo set_value('Q12Wa25S4'); ?>" readonly/>
   </div>
@@ -2949,12 +2948,12 @@
                        value="<?php echo set_value('Q12Wa26S2'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa26S3" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa26S3" type="number"
                        name="Q12Wa26S3" placeholder="<?php if (isset($data['Q12Wa26S3'])) echo $data['Q12Wa26S3'] ?>"
                        value="<?php echo set_value('Q12Wa26S3'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa26S4" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa26S4" type="number"
                        name="Q12Wa26S4" placeholder="<?php if (isset($data['Q12Wa26S4'])) echo $data['Q12Wa26S4'] ?>"
                        value="<?php echo set_value('Q12Wa26S4'); ?>" readonly/>
   </div>
@@ -2974,12 +2973,12 @@
                        value="<?php echo set_value('Q12Wa27S2'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa27S3" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa27S3" type="number"
                        name="Q12Wa27S3" placeholder="<?php if (isset($data['Q12Wa27S3'])) echo $data['Q12Wa27S3'] ?>"
                        value="<?php echo set_value('Q12Wa27S3'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa27S4" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa27S4" type="number"
                        name="Q12Wa27S4" placeholder="<?php if (isset($data['Q12Wa27S4'])) echo $data['Q12Wa27S4'] ?>"
                        value="<?php echo set_value('Q12Wa27S4'); ?>" readonly/>
   </div>
@@ -2999,12 +2998,12 @@
                        value="<?php echo set_value('Q12Wa28S2'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa28S3" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa28S3" type="number"
                        name="Q12Wa28S3" placeholder="<?php if (isset($data['Q12Wa28S3'])) echo $data['Q12Wa28S3'] ?>"
                        value="<?php echo set_value('Q12Wa28S3'); ?>"/>
   </div>
   <div class="col-xs-2">
-    <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa28S4" type="number"
+    <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa28S4" type="number"
                        name="Q12Wa28S4" placeholder="<?php if (isset($data['Q12Wa28S4'])) echo $data['Q12Wa28S4'] ?>"
                        value="<?php echo set_value('Q12Wa28S4'); ?>" readonly/>
   </div>
@@ -3024,33 +3023,34 @@
 <div class="clearfix">&nbsp;</div>
 <table width="100%" class="question uploadedfiles">
   <thead>
-     <tr>
-        <th>Image</th>	    
-        <th>File name</th>
-        <th>Delete</th>
-	<th>Download</th>
+    <tr>
+      <!--<th>Image</th>	  -->
+      <th>File name</th>
+      <th>Delete</th>
+      <th>Download</th>
     </tr>
   </thead>
   <tbody>
     <?php foreach ($eWaste as $f) { ?>
     <tr id="index<?php echo $f->id; ?>">
-	   <?php 
-		$array = explode('.',$f->file_name); 
-		$count = count($array);
-		$extension = $array[$count-1];
+      <?php 
+		//$array = explode('.',$f->file_name); 
+		//$count = count($array);
+		//$extension = $array[$count-1];
 		?>
-	     <?php if($extension == "jpg" || $extension == "jpeg"){ ?>
-            <td><img style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" /></td>
-            <?php }else{ ?>
-            <td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
-            <?php }?>  
+      <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
+      <!-- <td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $f->
+      file_name ?>" class="img-responsive" />
+      </td>
+      -->
+      <?php //}else{ ?>
+      <!--<td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>-->
+      <?php //}?>
       <?php $name = str_replace(" ", "_", $f->name . "_E-Waste_"); ?>
-			
       <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
       <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
-       <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
-         
-</tr>
+      <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+    </tr>
     <?php } ?>
   </tbody>
 </table>
@@ -3116,37 +3116,38 @@
   <button class="btn uploadbtn upload" data-id="E-waste authorised dealer" data-toggle="modal"
                             data-target="#airModal" type="button">UPLOAD FILES </button>
   <table width="100%" class="question uploadedfiles">
-        <thead>
-        <tr>
-            <th>Image</th>	    
-		<th>File name</th>
-		<th>Delete</th>
-		<th>Download</th>
-        </tr>
-        </thead>
-        <tbody>
-<?php foreach ($authorised_dealer as $u) { ?>
-    <tr id="index<?php echo $u->id; ?>">
-	   <?php 
-		$array = explode('.',$u->file_name); 
-		$count = count($array);
-		$extension = $array[$count-1];
+    <thead>
+      <tr>
+        <!-- <th>Image</th>	    -->
+        <th>File name</th>
+        <th>Delete</th>
+        <th>Download</th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php foreach ($authorised_dealer as $u) { ?>
+      <tr id="index<?php echo $u->id; ?>">
+        <?php 
+		//$array = explode('.',$u->file_name); 
+		//$count = count($array);
+		//$extension = $array[$count-1];
 		?>
-	    <?php if($extension == "jpg" || $extension == "jpeg"){ ?>
-            <td><img style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $u->file_name ?>" class="img-responsive" /></td>
-            <?php }else{ ?>
-            <td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
-            <?php }?>
-    <?php $name = str_replace(" ", "_", $u->name . "_E-waste_authorised_dealer_"); ?>
-																																																											
-    <td class="upload edit"><?php echo str_replace($name, "", $u->file_name); ?></td>
-    <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $u->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
-    <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $u->file_name; ?>" download="<?php echo $u->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
-  
-  </tr>
-<?php } ?>
-        </tbody>
-    </table>
+        <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
+        <!-- <td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $u->
+        file_name ?>" class="img-responsive" />
+        </td>
+        -->
+        <?php //}else{ ?>
+        <!--<td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>-->
+        <?php //}?>
+        <?php $name = str_replace(" ", "_", $u->name . "_E-waste_authorised_dealer_"); ?>
+        <td class="upload edit"><?php echo str_replace($name, "", $u->file_name); ?></td>
+        <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $u->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+        <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $u->file_name; ?>" download="<?php echo $u->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+      </tr>
+      <?php } ?>
+    </tbody>
+  </table>
 </div>
 <br>
 <br>
@@ -3162,12 +3163,10 @@
   school that is disposed of externally? <a class="kplink"
                                                           href="http://www.greenschoolsprogramme.org/knowledge-bank/waste/#landfillingPractices"
                                                           target="_blank"> </a>
-													 <audio controls id="DESIGNATEDCOMMUNITYDUMPSITE" class="audio hide">
+  <audio controls id="DESIGNATEDCOMMUNITYDUMPSITE" class="audio hide">
     <source src="<?php echo base_url(); ?>assets/audio-files/Designated dump site.MP3" type="audio/mpeg">
     Your browser does not support the audio element. </audio>
-  <a class="btn" id="btn2" style="background:#e86549; color:#000000;">Play / Pause</a> 	  
-														  
-														  </label>
+  <a class="btn" id="btn2" style="background:#e86549; color:#000000;">Play / Pause</a> </label>
   <div class="radio">
     <label>
     <input type="radio" name="Q14Wa1"
@@ -3210,31 +3209,33 @@
 <table width="100%" class="question uploadedfiles">
   <thead>
     <tr>
-      <th>Image</th>	    
-        <th>File name</th>
-        <th>Delete</th>
-	<th>Download</th>
+      <!-- <th>Image</th>	    -->
+      <th>File name</th>
+      <th>Delete</th>
+      <th>Download</th>
     </tr>
   </thead>
   <tbody>
     <?php foreach ($houseKeeping as $f) { ?>
     <tr id="index<?php echo $f->id; ?>">
-             <?php 
-			    $array = explode('.',$f->file_name); 
-			    $count = count($array);
-			    $extension = $array[$count-1];
+      <?php 
+			    //$array = explode('.',$f->file_name); 
+			   // $count = count($array);
+			    //$extension = $array[$count-1];
 			    ?>
-	 <?php if($extension == "jpg" || $extension == "jpeg"){ ?>
-            <td><img style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" /></td>
-            <?php }else{ ?>
-            <td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" />
-		    <?php }?>
+      <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
+      <!--<td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $f->
+      file_name ?>" class="img-responsive" />
+      </td>
+      -->
+      <?php //}else{ ?>
+      <!-- <td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>assets/img/download.jpg" class="img-responsive" />-->
+      <?php //}?>
       <?php $name = str_replace(" ", "_", $f->name . "_Housekeeping_"); ?>
-			
       <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
       <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
-      <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>    
-</tr>
+      <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+    </tr>
     <?php } ?>
   </tbody>
 </table>
@@ -3265,33 +3266,34 @@
 </div>
 <table width="100%" class="question uploadedfiles">
   <thead>
-     <tr>
-        <th>Image</th>	    
-        <th>File name</th>
-        <th>Delete</th>
-	<th>Download</th>
+    <tr>
+      <!--<th>Image</th>	    -->
+      <th>File name</th>
+      <th>Delete</th>
+      <th>Download</th>
     </tr>
   </thead>
   <tbody>
     <?php foreach ($burningWaste as $f) { ?>
     <tr id="index<?php echo $f->id; ?>">
-	   <?php 
-		$array = explode('.',$f->file_name); 
-		$count = count($array);
-		$extension = $array[$count-1];
+      <?php 
+		//$array = explode('.',$f->file_name); 
+		//$count = count($array);
+		//$extension = $array[$count-1];
 		?>
-     <?php if($extension == "jpg" || $extension == "jpeg"){ ?>
-            <td><img style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" /></td>
-            <?php }else{ ?>
-            <td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
-            <?php }?>
+      <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
+      <!--   <td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $f->
+      file_name ?>" class="img-responsive" />
+      </td>
+      -->
+      <?php //}else{ ?>
+      <!-- <td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>-->
+      <?php //}?>
       <?php $name = str_replace(" ", "_", $f->name . "_Buring_Waste_"); ?>
-			
       <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
       <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
-       <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
-         
-</tr>
+      <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+    </tr>
     <?php } ?>
   </tbody>
 </table>
@@ -3304,76 +3306,76 @@
 <div class="form-group" id="Q15Wa2">
 <?php } else { ?>
 <div class="form-group" id="Q15Wa2" style="display: none;">
-<?php }
-              } else {?>
-<div class="form-group" id="Q15Wa2" style="display: none;">
-  <?php } ?>
-  <label class="control-label"><span class="cube">11(a)</span>Where does your school burn
-  waste?</label>
-  <div class="form-group">
-    <ul>
-      <li>
-        <label class="radio-inline text-gray">
-        <input type="radio" name="Q15Wa2" class="radio" id="Q15Wa2"
-                                           value="<?php echo set_value('Q15Wa2', 1) ?>" <?php if (isset($data['Q15Wa2'])) echo $data['Q15Wa2'] == 1 ? "checked" : "" ?>>
-        Inside the school </label>
-      </li>
-      <li>
-        <label class="radio-inline text-gray">
-        <input type="radio" name="Q15Wa2" class="radio" id="Q15Wa2"
-                                           value="<?php echo set_value('Q15Wa2', 2) ?>" <?php if (isset($data['Q15Wa2'])) echo $data['Q15Wa2'] == 2 ? "checked" : "" ?>>
-        Outside the school </label>
-      </li>
-    </ul>
-  </div>
-</div>
-<div class="clearfix">&nbsp;</div>
-<?php
-              if(isset($data['Q15Wa1']))
-              {  
-                if($data['Q15Wa1'] == 'Y')
-                {
-              ?>
-<div class="form-group" id="Q15Wa3">
-<?php } else { ?>
-<div class="form-group" id="Q15Wa3" style="display: none;">
   <?php }
               } else {?>
-  <div class="form-group" id="Q15Wa3" style="display: none;">
+  <div class="form-group" id="Q15Wa2" style="display: none;">
     <?php } ?>
-    <label class="control-label"><span class="cube">11(b)</span>What kind of waste is burnt/
-    incinerated?</label>
+    <label class="control-label"><span class="cube">11(a)</span>Where does your school burn
+    waste?</label>
     <div class="form-group">
       <ul>
         <li>
           <label class="radio-inline text-gray">
-          <input type="checkbox" name="Q15Wa2S1"
-                                           value="<?php echo set_value('Q15Wa2S1', 1); ?>" <?php if (isset($data['Q15Wa2S1'])) echo "checked" ?>>
-          Horticultural </label>
+          <input type="radio" name="Q15Wa2" class="radio" id="Q15Wa2"
+                                           value="<?php echo set_value('Q15Wa2', 1) ?>" <?php if (isset($data['Q15Wa2'])) echo $data['Q15Wa2'] == 1 ? "checked" : "" ?>>
+          Inside the school </label>
         </li>
         <li>
           <label class="radio-inline text-gray">
-          <input type="checkbox" name="Q15Wa2S2"
-                                           value="<?php echo set_value('Q15Wa2S2', 1); ?>" <?php if (isset($data['Q15Wa2S2'])) echo "checked" ?>>
-          Plastic </label>
-        </li>
-        <li>
-          <label class="radio-inline text-gray">
-          <input type="checkbox" name="Q15Wa2S3"
-                                           value="<?php echo set_value('Q15Wa2S3', 1); ?>" <?php if (isset($data['Q15Wa2S3'])) echo "checked" ?>>
-          Tyres </label>
-        </li>
-        <li>
-          <label class="radio-inline text-gray">
-          <input type="checkbox" name="Q15Wa2S4"
-                                           value="<?php echo set_value('Q15Wa2S4', 1); ?>" <?php if (isset($data['Q15Wa2S4'])) echo "checked" ?>>
-          Paper </label>
+          <input type="radio" name="Q15Wa2" class="radio" id="Q15Wa2"
+                                           value="<?php echo set_value('Q15Wa2', 2) ?>" <?php if (isset($data['Q15Wa2'])) echo $data['Q15Wa2'] == 2 ? "checked" : "" ?>>
+          Outside the school </label>
         </li>
       </ul>
     </div>
   </div>
   <div class="clearfix">&nbsp;</div>
-  <!--<div class="form-group">
+  <?php
+              if(isset($data['Q15Wa1']))
+              {  
+                if($data['Q15Wa1'] == 'Y')
+                {
+              ?>
+  <div class="form-group" id="Q15Wa3">
+    <?php } else { ?>
+    <div class="form-group" id="Q15Wa3" style="display: none;">
+      <?php }
+              } else {?>
+      <div class="form-group" id="Q15Wa3" style="display: none;">
+        <?php } ?>
+        <label class="control-label"><span class="cube">11(b)</span>What kind of waste is burnt/
+        incinerated?</label>
+        <div class="form-group">
+          <ul>
+            <li>
+              <label class="radio-inline text-gray">
+              <input type="checkbox" name="Q15Wa2S1"
+                                           value="<?php echo set_value('Q15Wa2S1', 1); ?>" <?php if (isset($data['Q15Wa2S1'])) echo "checked" ?>>
+              Horticultural </label>
+            </li>
+            <li>
+              <label class="radio-inline text-gray">
+              <input type="checkbox" name="Q15Wa2S2"
+                                           value="<?php echo set_value('Q15Wa2S2', 1); ?>" <?php if (isset($data['Q15Wa2S2'])) echo "checked" ?>>
+              Plastic </label>
+            </li>
+            <li>
+              <label class="radio-inline text-gray">
+              <input type="checkbox" name="Q15Wa2S3"
+                                           value="<?php echo set_value('Q15Wa2S3', 1); ?>" <?php if (isset($data['Q15Wa2S3'])) echo "checked" ?>>
+              Tyres </label>
+            </li>
+            <li>
+              <label class="radio-inline text-gray">
+              <input type="checkbox" name="Q15Wa2S4"
+                                           value="<?php echo set_value('Q15Wa2S4', 1); ?>" <?php if (isset($data['Q15Wa2S4'])) echo "checked" ?>>
+              Paper </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="clearfix">&nbsp;</div>
+      <!--<div class="form-group">
     <label class="control-label"><span class="cube">12</span>Do you know that your E-waste can be collected by an authorised dealer or dismantler? </label>
     <div class="form-group">
       <label class="radio-inline text-gray">
@@ -3385,327 +3387,332 @@
     </div>
   </div>
   <br>-->
-  <div class="form-group">
-    <label>
-    <h6>Task 6: School's initiatives.</h6>
-    </label>
-    <br>
-    It is important to appreciate the initiatives taken by the management on issues related to waste. The
-    management's approach to these issues can be assessed in the following way:
-    Seek an appointment with the Chairperson, Manager and Principal of your school and ask them the following
-    questions: </div>
-  <br>
-  <div class="form-group">
-    <label class="control-label"><span class="cube">13</span>Does the school have a policy on waste?</label>
-    <div class="form-group">
-      <label class="radio-inline text-gray">
-      <input type="radio" name="Q17Wa1" class="radio" onClick="WastePolicy(1)" id="Q17Wa1"
+      <div class="form-group">
+        <label>
+        <h6>Task 6: School's initiatives.</h6>
+        </label>
+        <br>
+        It is important to appreciate the initiatives taken by the management on issues related to waste. The
+        management's approach to these issues can be assessed in the following way:
+        Seek an appointment with the Chairperson, Manager and Principal of your school and ask them the following
+        questions: </div>
+      <br>
+      <div class="form-group">
+        <label class="control-label"><span class="cube">13</span>Does the school have a policy on waste?</label>
+        <div class="form-group">
+          <label class="radio-inline text-gray">
+          <input type="radio" name="Q17Wa1" class="radio" onClick="WastePolicy(1)" id="Q17Wa1"
                            value="<?php echo set_value('Q17Wa1', 'Y') ?>" <?php if (isset($data['Q17Wa1'])) echo $data['Q17Wa1'] == 'Y' ? "checked" : "" ?>>
-      Yes </label>
-      <label class="radio-inline text-gray">
-      <input type="radio" name="Q17Wa1" class="radio" onClick="WastePolicy(2)" id="Q17Wa1"
+          Yes </label>
+          <label class="radio-inline text-gray">
+          <input type="radio" name="Q17Wa1" class="radio" onClick="WastePolicy(2)" id="Q17Wa1"
                            value="<?php echo set_value('Q17Wa1', 'N') ?>" <?php if (isset($data['Q17Wa1'])) echo $data['Q17Wa1'] == 'N' ? "checked" : "" ?>>
-      No </label>
-    </div>
-  </div>
-  <br>
-  <?php if (isset($data['Q17Wa1']))
+          No </label>
+        </div>
+      </div>
+      <br>
+      <?php if (isset($data['Q17Wa1']))
             if ($data['Q17Wa1'] == 'Y') {
                 ?>
-  <br>
-  <div class="form-group" id="WastePolicy">
-    <label class="control-label">Please upload supporting documents:</label>
-    <br>
-    • Waste Policy<br>
-    <br>
-    <button class="btn uploadbtn upload" data-id="Waste Policy" data-toggle="modal"
-                            data-target="#airModal" type="button">UPLOAD FILES </button>
-    <br>
-    <br>
-   <table width="100%" class="question uploadedfiles">
-         <thead>
-         <tr>
-             <th>Image</th>	    
-		<th>File name</th>
-		<th>Delete</th>
-		<th>Download</th>
-         </tr>
-         </thead>
-         <tbody>
-            
- <?php
-   
- foreach ($chikoo as $u) { ?>
-     <tr id="index<?php echo $u->id; ?>">
-	   <?php 
-		$array = explode('.',$u->file_name); 
-		$count = count($array);
-		$extension = $array[$count-1];
-		?>
-	 <?php if($extension == "jpg" || $extension == "jpeg"){ ?>
-            <td><img style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $u->file_name ?>" class="img-responsive" /></td>
-            <?php }else{ ?>
-            <td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
-            <?php }?>		 	 
-     <?php $name = str_replace(" ", "_", $u->name . "_Waste_Policy_"); ?>
-     <td class="upload edit"><?php echo str_replace($name, "", $u->file_name); ?></td>
-     <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $u->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
-    <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $u->file_name; ?>" download="<?php echo $u->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
-           
-</tr>
- <?php } ?>
-         </tbody>
-     </table>
-	  
-</div>
-  <?php
-            } ?>
-  <br>
-  <div class="form-group" id="WastePolicy" style="display: none;">
-    <label class="control-label">Please upload supporting documents:</label>
-    <br>
-    • Waste Policy<br>
-    <br>
-    <button class="btn uploadbtn upload" data-id="Water Policy" data-toggle="modal" data-target="#airModal"
-                    type="button">UPLOAD FILES </button>
-    <br>
-   <table width="100%" class="question uploadedfiles">
-         <thead>
-         <tr>
-            <th>Image</th>
-            <th>File name</th>
-            <th>Delete</th>
-            <th>Download</th>
-         </tr>
-         </thead>
-         <tbody>
-    <?php foreach ($chikoo as $u) { ?>
-     <tr id="index<?php echo $u->id; ?>">
-	 <?php 
-	 $array = explode('.',$u->file_name); 
-	 $count = count($array);
-	 $extension = $array[$count-1];
-	 ?>
- 	 <?php if($extension == "jpg" || $extension == "jpeg"){ ?>
-            <td><img style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $u->file_name ?>" class="img-responsive" /></td>
-            <?php }else{ ?>
-            <td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
-            <?php }?>
-            <?php $name = str_replace(" ", "_", $u->name . "_Waste_Policy_"); ?>
-            <td class="upload edit"><?php echo str_replace($name, "", $u->file_name); ?></td>
-            <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $u->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
-            <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $u->file_name; ?>" download="<?php echo $u->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
-     </tr>
- <?php } ?>
-         </tbody>
-     </table>            	  
-  </div>
-  <div class="form-group">
-    <label class="control-label"><span class="cube">14</span>Are there awareness drives with regard to Reduce,
-    Recycle and Reuse? <a class="kplink"
-                                      href="http://www.greenschoolsprogramme.org/knowledge-bank/waste/#partnerInOperation"
-                                      target="_blank"></a></label>
-    <div class="form-group">
-      <label class="radio-inline text-gray">
-      <input type="radio" name="Q18Wa1" class="radio" onClick="WasteAwareness(1)" id="Q18Wa1"
-                           value="<?php echo set_value('Q18Wa1', 'Y') ?>" <?php if (isset($data['Q18Wa1'])) echo $data['Q18Wa1'] == 'Y' ? "checked" : "" ?>>
-      Yes </label>
-      <label class="radio-inline text-gray">
-      <input type="radio" name="Q18Wa1" class="radio" onClick="WasteAwareness(2)" id="Q18Wa1"
-                           value="<?php echo set_value('Q18Wa1', 'N') ?>" <?php if (isset($data['Q18Wa1'])) echo $data['Q18Wa1'] == 'N' ? "checked" : "" ?>>
-      No </label>
-    </div>
-  </div>
-  <br>
-  <?php
-            if(isset($data['Q18Wa1']))
-            {  if($data['Q18Wa1'] == 'Y')
-            {
-            ?>
-  <div class="form-group" id="awareness">
-    <?php } else { ?>
-    <div class="form-group" id="awareness" style="display: none;">
-      <?php }
-                    } else {?>
-      <div class="form-group" id="awareness" style="display: none;">
-        <?php } ?>
-        <br>
+      <br>
+      <div class="form-group" id="WastePolicy">
         <label class="control-label">Please upload supporting documents:</label>
         <br>
-        • Pictures of various school initiatives e.g. rally, debate, street play, art competition, etc<br>
+        • Waste Policy<br>
         <br>
-        <button class="btn uploadbtn upload" data-id="School Initiatives" data-toggle="modal"
+        <button class="btn uploadbtn upload" data-id="Waste Policy" data-toggle="modal"
                             data-target="#airModal" type="button">UPLOAD FILES </button>
         <br>
         <br>
-	<table width="100%" class="question uploadedfiles">
-         <thead>
-         <tr>
-             <th>Image</th>	    
-		<th>File name</th>
-		<th>Delete</th>
-		<th>Download</th>
-         </tr>
-         </thead>
-         <tbody>
-            
- <?php
+        <table width="100%" class="question uploadedfiles">
+          <thead>
+            <tr>
+              <!--   <th>Image</th>	    -->
+              <th>File name</th>
+              <th>Delete</th>
+              <th>Download</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php
    
- foreach ($Initiatives as $u) { ?>
-     <tr id="index<?php echo $u->id; ?>">
-	         <?php 
-			    $array = explode('.',$u->file_name); 
-			    $count = count($array);
-			    $extension = $array[$count-1];
-			    ?>
-          <?php if($extension == "jpg" || $extension == "jpeg"){ ?>
-            <td><img style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $u->file_name ?>" class="img-responsive" /></td>
-            <?php }else{ ?>
-            <td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
-            <?php }?> 
-     <?php $name = str_replace(" ", "_", $u->name . "_School_Initiatives_"); ?>																																																			
-     <td class="upload edit"><?php echo str_replace($name, "", $u->file_name); ?></td>
-     <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $u->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
-     <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $u->file_name; ?>" download="<?php echo $u->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
-      
-   </tr>
- <?php } ?>
-         </tbody>
-     </table>  
+ foreach ($chikoo as $u) { ?>
+            <tr id="index<?php echo $u->id; ?>">
+              <?php 
+		//$array = explode('.',$u->file_name); 
+		//$count = count($array);
+		//$extension = $array[$count-1];
+		?>
+              <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
+              <!-- <td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $u->
+              file_name ?>" class="img-responsive" />
+              </td>
+              -->
+              <?php //}else{ ?>
+              <!--<td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>-->
+              <?php //}?>
+              <?php $name = str_replace(" ", "_", $u->name . "_Waste_Policy_"); ?>
+              <td class="upload edit"><?php echo str_replace($name, "", $u->file_name); ?></td>
+              <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $u->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+              <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $u->file_name; ?>" download="<?php echo $u->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+            </tr>
+            <?php } ?>
+          </tbody>
+        </table>
       </div>
+      <?php
+            } ?>
+      <br>
+      <div class="form-group" id="WastePolicy" style="display: none;">
+        <label class="control-label">Please upload supporting documents:</label>
+        <br>
+        • Waste Policy<br>
+        <br>
+        <button class="btn uploadbtn upload" data-id="Water Policy" data-toggle="modal" data-target="#airModal"
+                    type="button">UPLOAD FILES </button>
+        <br>
+        <table width="100%" class="question uploadedfiles">
+          <thead>
+            <tr>
+              <!--  <th>Image</th>-->
+              <th>File name</th>
+              <th>Delete</th>
+              <th>Download</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php foreach ($chikoo as $u) { ?>
+            <tr id="index<?php echo $u->id; ?>">
+              <?php 
+	 //$array = explode('.',$u->file_name); 
+	 //$count = count($array);
+	 //$extension = $array[$count-1];
+	 ?>
+              <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
+              <!-- <td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $u->
+              file_name ?>" class="img-responsive" />
+              </td>
+              -->
+              <?php //}else{ ?>
+              <!--  <td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>-->
+              <?php // }?>
+              <?php $name = str_replace(" ", "_", $u->name . "_Waste_Policy_"); ?>
+              <td class="upload edit"><?php echo str_replace($name, "", $u->file_name); ?></td>
+              <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $u->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+              <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $u->file_name; ?>" download="<?php echo $u->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+            </tr>
+            <?php } ?>
+          </tbody>
+        </table>
+      </div>
+      <div class="form-group">
+        <label class="control-label"><span class="cube">14</span>Are there awareness drives with regard to Reduce,
+        Recycle and Reuse? <a class="kplink"
+                                      href="http://www.greenschoolsprogramme.org/knowledge-bank/waste/#partnerInOperation"
+                                      target="_blank"></a></label>
+        <div class="form-group">
+          <label class="radio-inline text-gray">
+          <input type="radio" name="Q18Wa1" class="radio" onClick="WasteAwareness(1)" id="Q18Wa1"
+                           value="<?php echo set_value('Q18Wa1', 'Y') ?>" <?php if (isset($data['Q18Wa1'])) echo $data['Q18Wa1'] == 'Y' ? "checked" : "" ?>>
+          Yes </label>
+          <label class="radio-inline text-gray">
+          <input type="radio" name="Q18Wa1" class="radio" onClick="WasteAwareness(2)" id="Q18Wa1"
+                           value="<?php echo set_value('Q18Wa1', 'N') ?>" <?php if (isset($data['Q18Wa1'])) echo $data['Q18Wa1'] == 'N' ? "checked" : "" ?>>
+          No </label>
+        </div>
+      </div>
+      <br>
       <?php
             if(isset($data['Q18Wa1']))
             {  if($data['Q18Wa1'] == 'Y')
             {
             ?>
-      <div class="form-group" id="Q18Wa3">
+      <div class="form-group" id="awareness">
         <?php } else { ?>
-        <div class="form-group" id="Q18Wa3" style="display: none;">
+        <div class="form-group" id="awareness" style="display: none;">
           <?php }
                     } else {?>
-          <div class="form-group" id="Q18Wa3" style="display: none;">
+          <div class="form-group" id="awareness" style="display: none;">
             <?php } ?>
-            <label class="control-label"><span class="cube">14(a)</span>What form do these awareness drives
-            take? </label>
-            <ul>
-              <li>
-                <div class="form-group">
-                  <label class="radio text-gray">
-                  <input type="checkbox" name="Q18Wa2S1"
-                                           value="<?php echo set_value('Q18Wa2S1', 1); ?>" <?php if (isset($data['Q18Wa2S1'])) echo "checked" ?>>
-                  As part of the curriculum </label>
-                </div>
-              </li>
-              <li>
-                <div class="form-group">
-                  <label class="radio text-gray">
-                  <input type="checkbox" name="Q18Wa2S2"
-                                           value="<?php echo set_value('Q18Wa2S2', 2); ?>" <?php if (isset($data['Q18Wa2S2'])) echo "checked" ?>>
-                  As part of extracurricular activities such as guest lectures </label>
-                </div>
-              </li>
-              <li>
-                <div class="form-group">
-                  <label class="radio text-gray">
-                  <input type="checkbox" name="Q18Wa2S3"
-                                           value="<?php echo set_value('Q18Wa2S3', 3); ?>" <?php if (isset($data['Q18Wa2S3'])) echo "checked" ?>>
-                  By the showcasing of posters and stickers </label>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="form-group">
-            <label class="control-label"><span class="cube">15</span>Is the study of the environment integrated into the
-            curriculum?</label>
-            <div class="form-group">
-              <label class="radio-inline text-gray">
-              <input type="radio" name="Q19Wa1" class="radio" onClick="WasteWwareness(1)" id="Q19Wa1"
-                           value="<?php echo set_value('Q19Wa1', 'Y') ?>" <?php if (isset($data['Q19Wa1'])) echo $data['Q19Wa1'] == 'Y' ? "checked" : "" ?>>
-              Yes </label>
-              <label class="radio-inline text-gray">
-              <input type="radio" name="Q19Wa1" class="radio" onClick="WasteWwareness(2)" id="Q19Wa1"
-                           value="<?php echo set_value('Q19Wa1', 'N') ?>" <?php if (isset($data['Q19Wa1'])) echo $data['Q19Wa1'] == 'N' ? "checked" : "" ?>>
-              No </label>
-            </div>
-          </div>
-          <br>
-          <div class="form-group" id="WastePolicy">
+            <br>
             <label class="control-label">Please upload supporting documents:</label>
             <br>
-            • Pictures of audit team doing survey
-            Please upload all supporting documents related to this section here. Note, files must be one of the
-            following formats: PDF Document (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg) <br>
-            File size per document should not exceed 500 KB.<br>
+            • Pictures of various school initiatives e.g. rally, debate, street play, art competition, etc<br>
             <br>
-            <button class="btn uploadbtn upload" data-id="Audit Team Doing Survey Waste" data-toggle="modal"
-                    data-target="#airModal" type="button">UPLOAD FILES </button>
+            <button class="btn uploadbtn upload" data-id="School Initiatives" data-toggle="modal"
+                            data-target="#airModal" type="button">UPLOAD FILES </button>
             <br>
-          </div>
-          <table width="100%" class="question uploadedfiles">
-            <thead>
-	   <tr>
-                <th>Image</th>	    
-		<th>File name</th>
-		<th>Delete</th>
-		<th>Download</th>
-              </tr>
-            </thead>
-            <tbody>
-              <?php foreach ($teamDoingWaste as $f) { ?>
-              <tr id="index<?php echo $f->id; ?>">
-			   <?php 
-			    $array = explode('.',$f->file_name); 
-			    $count = count($array);
-			    $extension = $array[$count-1];
+            <br>
+            <table width="100%" class="question uploadedfiles">
+              <thead>
+                <tr>
+                  <!--  <th>Image</th>	    -->
+                  <th>File name</th>
+                  <th>Delete</th>
+                  <th>Download</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+   
+ foreach ($Initiatives as $u) { ?>
+                <tr id="index<?php echo $u->id; ?>">
+                  <?php 
+			   //$array = explode('.',$u->file_name); 
+			   // $count = count($array);
+			   // $extension = $array[$count-1];
 			    ?>
-		      <?php if($extension == "jpg" || $extension == "jpeg"){ ?>
-              <td><img style="width:62px; height:46px;" ;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" /></td>
-             <?php }else{ ?>
-             <td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
-            <?php }?>
-     	    
-                <?php $name = str_replace(" ", "_", $f->name . "_Audit_Team_Doing_Survey_"); ?>				
-                <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
-                <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
-                <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
-      
-	 </tr>
-              <?php } ?>
-            </tbody>
-          </table>
-          <div class="text-center">
-            <button type="button" class="org-btn" id="btnWastePrevious">Previous</button>
-            <button type="submit" class="org-btn" id="wastenext" value="movenext">Next</button>
-            <button type="button" class="org-btn submit button" id="wastesave">Save and Resume Later</button>
+                  <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
+                  <!-- <td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $u->
+                  file_name ?>" class="img-responsive" />
+                  </td>
+                  -->
+                  <?php //}else{ ?>
+                  <!--   <td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>-->
+                  <?php //}?>
+                  <?php $name = str_replace(" ", "_", $u->name . "_School_Initiatives_"); ?>
+                  <td class="upload edit"><?php echo str_replace($name, "", $u->file_name); ?></td>
+                  <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $u->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+                  <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $u->file_name; ?>" download="<?php echo $u->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+                </tr>
+                <?php } ?>
+              </tbody>
+            </table>
+          </div>
+          <?php
+            if(isset($data['Q18Wa1']))
+            {  if($data['Q18Wa1'] == 'Y')
+            {
+            ?>
+          <div class="form-group" id="Q18Wa3">
+            <?php } else { ?>
+            <div class="form-group" id="Q18Wa3" style="display: none;">
+              <?php }
+                    } else {?>
+              <div class="form-group" id="Q18Wa3" style="display: none;">
+                <?php } ?>
+                <label class="control-label"><span class="cube">14(a)</span>What form do these awareness drives
+                take? </label>
+                <ul>
+                  <li>
+                    <div class="form-group">
+                      <label class="radio text-gray">
+                      <input type="checkbox" name="Q18Wa2S1"
+                                           value="<?php echo set_value('Q18Wa2S1', 1); ?>" <?php if (isset($data['Q18Wa2S1'])) echo "checked" ?>>
+                      As part of the curriculum </label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="form-group">
+                      <label class="radio text-gray">
+                      <input type="checkbox" name="Q18Wa2S2"
+                                           value="<?php echo set_value('Q18Wa2S2', 2); ?>" <?php if (isset($data['Q18Wa2S2'])) echo "checked" ?>>
+                      As part of extracurricular activities such as guest lectures </label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="form-group">
+                      <label class="radio text-gray">
+                      <input type="checkbox" name="Q18Wa2S3"
+                                           value="<?php echo set_value('Q18Wa2S3', 3); ?>" <?php if (isset($data['Q18Wa2S3'])) echo "checked" ?>>
+                      By the showcasing of posters and stickers </label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="form-group">
+                <label class="control-label"><span class="cube">15</span>Is the study of the environment integrated into the
+                curriculum?</label>
+                <div class="form-group">
+                  <label class="radio-inline text-gray">
+                  <input type="radio" name="Q19Wa1" class="radio" onClick="WasteWwareness(1)" id="Q19Wa1"
+                           value="<?php echo set_value('Q19Wa1', 'Y') ?>" <?php if (isset($data['Q19Wa1'])) echo $data['Q19Wa1'] == 'Y' ? "checked" : "" ?>>
+                  Yes </label>
+                  <label class="radio-inline text-gray">
+                  <input type="radio" name="Q19Wa1" class="radio" onClick="WasteWwareness(2)" id="Q19Wa1"
+                           value="<?php echo set_value('Q19Wa1', 'N') ?>" <?php if (isset($data['Q19Wa1'])) echo $data['Q19Wa1'] == 'N' ? "checked" : "" ?>>
+                  No </label>
+                </div>
+              </div>
+              <br>
+              <div class="form-group" id="WastePolicy">
+                <label class="control-label">Please upload supporting documents:</label>
+                <br>
+                • Pictures of audit team doing survey
+                Please upload all supporting documents related to this section here. Note, files must be one of the
+                following formats: PDF Document (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg) <br>
+                File size per document should not exceed 500 KB.<br>
+                <br>
+                <button class="btn uploadbtn upload" data-id="Audit Team Doing Survey Waste" data-toggle="modal"
+                    data-target="#airModal" type="button">UPLOAD FILES </button>
+                <br>
+              </div>
+              <table width="100%" class="question uploadedfiles">
+                <thead>
+                  <tr>
+                    <!-- <th>Image</th>	    -->
+                    <th>File name</th>
+                    <th>Delete</th>
+                    <th>Download</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php foreach ($teamDoingWaste as $f) { ?>
+                  <tr id="index<?php echo $f->id; ?>">
+                    <?php 
+			   // $array = explode('.',$f->file_name); 
+			   // $count = count($array);
+			   // $extension = $array[$count-1];
+			    ?>
+                    <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
+                    <!-- <td><img style="width:62px; height:46px;" ;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $f->
+                    file_name ?>" class="img-responsive" />
+                    </td>
+                    -->
+                    <?php //}else{ ?>
+                    <!-- <td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>-->
+                    <?php //}?>
+                    <?php $name = str_replace(" ", "_", $f->name . "_Audit_Team_Doing_Survey_"); ?>
+                    <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                    <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+                    <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+                  </tr>
+                  <?php } ?>
+                </tbody>
+              </table>
+              <div class="text-center">
+                <button type="button" class="org-btn" id="btnWastePrevious">Previous</button>
+                <button type="submit" class="org-btn" id="wastenext" value="movenext">Next</button>
+                <button type="button" class="org-btn submit button" id="wastesave">Save and Resume Later</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
-<?php echo form_close(); ?>
-<style type="text/css">
+    <?php echo form_close(); ?>
+    <style type="text/css">
     .text-gray {
         color: #666666 !important;
         /*font-weight:100!important;*/
     }
 </style>
-<!-- /.container -->
-<?php $this->load->view('footer'); ?>
-<div id="videoModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <!-- Modal content-->
-    <div class="modal-content" style="background:transparent; border-radius:0px;">
-      <div class="modal-header" style="background: rgb(232, 101, 73); color:#fff;">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">View video tutorial</h4>
-      </div>
-      <iframe width="100%" height="330px" src="https://www.youtube.com/embed/CI-iGmii5Yk" frameborder="0"
+    <!-- /.container -->
+    <?php $this->load->view('footer'); ?>
+    <div id="videoModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content" style="background:transparent; border-radius:0px;">
+          <div class="modal-header" style="background: rgb(232, 101, 73); color:#fff;">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">View video tutorial</h4>
+          </div>
+          <iframe width="100%" height="330px" src="https://www.youtube.com/embed/CI-iGmii5Yk" frameborder="0"
                     allowfullscreen></iframe>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-</div>
 </div>
 <script type="text/javascript">
     $('.close').click(function () {
@@ -3982,8 +3989,7 @@ $("input[name='Q12Wa28S1']").change(function(){
   }
 });	
 </script>
-	
-	<script>
+<script>
 	$("#wastenext").click(function(e){
 
 if($("input[name='Q11Wa1S1']").prop('checked') == false && $("input[name='Q11Wa1S2']").prop('checked') == false && $("input[name='Q11Wa1S3']").prop('checked') == false && $("input[name='Q11Wa1S4']").prop('checked') == false){
@@ -3992,8 +3998,7 @@ if($("input[name='Q11Wa1S1']").prop('checked') == false && $("input[name='Q11Wa1
 }
 });	
 	</script>
-	
-	<script>
+<script>
 	$("#wastenext").click(function(e){
 	if($("input[name='Q11Wa2S1']").is(':disabled') == false && $("input[name='Q11Wa2S2']").is(':disabled') == false && $("input[name='Q11Wa2S3']").is(':disabled') == false && $("input[name='Q11Wa2S4']").is(':disabled') == false){
 if($("input[name='Q11Wa2S1']").prop('checked') == false && $("input[name='Q11Wa2S2']").prop('checked') == false && $("input[name='Q11Wa2S3']").prop('checked') == false && $("input[name='Q11Wa2S4']").prop('checked') == false){
@@ -4003,9 +4008,7 @@ if($("input[name='Q11Wa2S1']").prop('checked') == false && $("input[name='Q11Wa2
 }
 });	
 	</script>
-	
-	
-	<script>
+<script>
 	$("#wastenext").click(function(e){
 if($("input[name='Q11Wa3S1']").prop('checked') == false && $("input[name='Q11Wa3S2']").prop('checked') == false && $("input[name='Q11Wa3S3']").prop('checked') == false && $("input[name='Q11Wa3S4']").prop('checked') == false){
   alert("Q7 fill the Horticultural waste section.");
@@ -4013,8 +4016,7 @@ if($("input[name='Q11Wa3S1']").prop('checked') == false && $("input[name='Q11Wa3
 }
 });	
 	</script>
-	
-	<script>
+<script>
 	$("#wastenext").click(function(e){
 if($("input[name='Q11Wa4S1']").prop('checked') == false && $("input[name='Q11Wa4S2']").prop('checked') == false && $("input[name='Q11Wa4S3']").prop('checked') == false && $("input[name='Q11Wa4S4']").prop('checked') == false){
 if($("input[name='Q11Wa4S1']").hasAttribute('checked') == false && $("input[name='Q11Wa4S2']").hasAttribute('checked') == false && $("input[name='Q11Wa4S3']").hasAttribute('checked') == false && $("input[name='Q11Wa4S4']").hasAttribute('checked') == false){
@@ -4024,8 +4026,7 @@ if($("input[name='Q11Wa4S1']").hasAttribute('checked') == false && $("input[name
 }
 });	
 	</script>
-	
-	<script>
+<script>
 	$("#wastenext").click(function(e){
 if($("input[name='Q11Wa4S1']").prop('checked') == false && $("input[name='Q11Wa4S2']").prop('checked') == false && $("input[name='Q11Wa4S3']").prop('checked') == false && $("input[name='Q11Wa4S4']").prop('checked') == false){
 if($("input[name='Q11Wa4S1']").hasAttribute('checked') == false && $("input[name='Q11Wa4S2']").hasAttribute('checked') == false && $("input[name='Q11Wa4S3']").hasAttribute('checked') == false && $("input[name='Q11Wa4S4']").hasAttribute('checked') == false){  
@@ -4035,8 +4036,7 @@ if($("input[name='Q11Wa4S1']").hasAttribute('checked') == false && $("input[name
 }
 });	
 	</script>
-	
-	<script>
+<script>
 	$("#wastenext").click(function(e){
 	if($("input[name='Q11Wa5S1']").is(':disabled') == false && $("input[name='Q11Wa5S2']").is(':disabled') == false && $("input[name='Q11Wa5S3']").is(':disabled') == false && $("input[name='Q11Wa5S4']").is(':disabled') == false){
 if($("input[name='Q11Wa5S1']").prop('checked') == false && $("input[name='Q11Wa5S2']").prop('checked') == false && $("input[name='Q11Wa5S3']").prop('checked') == false && $("input[name='Q11Wa5S4']").prop('checked') == false){
@@ -4046,8 +4046,7 @@ if($("input[name='Q11Wa5S1']").prop('checked') == false && $("input[name='Q11Wa5
  }
 });	
 	</script>
-	
-	<script>
+<script>
 	$("#wastenext").click(function(e){
 if($("input[name='Q11Wa6S1']").prop('checked') == false && $("input[name='Q11Wa6S2']").prop('checked') == false && $("input[name='Q11Wa6S3']").prop('checked') == false && $("input[name='Q11Wa6S4']").prop('checked') == false){
 if($("input[name='Q11Wa6S1']").hasAttribute('checked') == false && $("input[name='Q11Wa6S2']").hasAttribute('checked') == false && $("input[name='Q11Wa6S3']").hasAttribute('checked') == false && $("input[name='Q11Wa6S4']").hasAttribute('checked') == false){	
@@ -4057,8 +4056,7 @@ if($("input[name='Q11Wa6S1']").hasAttribute('checked') == false && $("input[name
 }
 });	
 	</script>
-	
-	<script>
+<script>
 	$("#wastenext").click(function(e){
 if($("input[name='Q11Wa7S1']").prop('checked') == false && $("input[name='Q11Wa7S2']").prop('checked') == false && $("input[name='Q11Wa7S3']").prop('checked') == false && $("input[name='Q11Wa7S4']").prop('checked') == false){
 if($("input[name='Q11Wa7S1']").hasAttribute('checked') == false && $("input[name='Q11Wa7S2']").hasAttribute('checked') == false && $("input[name='Q11Wa7S3']").hasAttribute('checked') == false && $("input[name='Q11Wa7S4']").hasAttribute('checked') == false){
@@ -4068,8 +4066,7 @@ if($("input[name='Q11Wa7S1']").hasAttribute('checked') == false && $("input[name
 }
 });	
 	</script>
-	
-	<script>
+<script>
 	$("#wastenext").click(function(e){
 if($("input[name='Q11Wa8S1']").prop('checked') == false && $("input[name='Q11Wa8S2']").prop('checked') == false && $("input[name='Q11Wa8S3']").prop('checked') == false && $("input[name='Q11Wa8S4']").prop('checked') == false){
   alert("Q7 fill the Biomedical waste section.");
@@ -4077,8 +4074,7 @@ if($("input[name='Q11Wa8S1']").prop('checked') == false && $("input[name='Q11Wa8
 }
 });	
 	</script>
-	
-	<script>
+<script>
 	$("#wastenext").click(function(e){
      if($("input[name='Q4Wa1']:checked").val()==='Y'){
      if($("input[name='Q4Wa2S1']").prop('checked') == false && $("input[name='Q4Wa2S2']").prop('checked') == false && $("input[name='Q4Wa2S3']").prop('checked') == false && $("input[name='Q4Wa2S4']").prop('checked') == false){
@@ -4090,8 +4086,7 @@ if($("input[name='Q11Wa8S1']").prop('checked') == false && $("input[name='Q11Wa8
    }
 });	
 	</script>
-	
-	<script>
+<script>
 	$("#wastenext").click(function(e){
   if($("input[name='Q15Wa1']:checked").val()==='Y'){    
    if($("input[name='Q15Wa2S1']").prop('checked') == false && $("input[name='Q15Wa2S2']").prop('checked') == false && $("input[name='Q15Wa2S3']").prop('checked') == false && $("input[name='Q15Wa2S4']").prop('checked') == false){
@@ -4322,8 +4317,8 @@ nyanBtn2.addEventListener('click', function(){
    playPause(nyan2);
    progress(nyanBtn2, nyan2);
 });
-</script>	
-	<style>
+</script>
+<style>
 	     #btn,#btn1{ 
 		background: rgb(232, 101, 73);
                 color: rgb(0, 0, 0);
@@ -4333,4 +4328,3 @@ nyanBtn2.addEventListener('click', function(){
                 padding-top: 0px;
 		}	
 	</style>
-	
