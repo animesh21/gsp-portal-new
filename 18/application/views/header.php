@@ -91,6 +91,12 @@ ga('send', 'pageview');
 
 	});
 </script>
+<script type="text/javascript">
+$(document).ready(function(){
+$(".hide_one").append('<h1 class="text-center" style="color:#fff; margin:250px auto; position:relative; text-shadow:1px 1px 1px #000;  background:#transparent!important;">Green School Program Audit 2018<p style="font-size:13px;">GSP Audit 2018 Processing Next Section</p><div class="loader" style="margin:0px auto; z-index: 1000000;background:#transparent!important; position:relative;"></div></h1>');
+  setTimeout(function(){ $(".hide_one").css("display","none"); }, 1000);
+});
+</script>	
 </head>
 <body>
 <div class="main-wrapper">
@@ -101,7 +107,11 @@ ga('send', 'pageview');
       <figure class="logo2"><a href="http://www.greenschoolsprogramme.org/" target="_blank"> <img
 								src="<?php echo base_url(); ?>assets/img/logo.png" title="CSE GSP" alt=""
 								class="img-responsive"></a></figure>
-      <img src="<?php echo base_url(); ?>assets/img/top-bnr.png" alt="" class="top-bnr1 "></div>
+      <h1 style="
+font-size: 20px; font-family: fantasy; margin-left: 42px; position: relative;
+left: -208px; color: #e86549; text-shadow: 1px 1px 1px #000; text-align: center; top: 28px">Extended Submission Deadline <span style="display:block;">
+      November 16, 2018</span> </h1>
+      <img src="<?php echo base_url(); ?>assets/img/top-bnr.png" alt="" class="top-bnr1" style="margin-top:-42px; left:20px; position:relative;"></div>
   </header>
 </div>
 <div id="index" class="index">
@@ -147,3 +157,5 @@ ga('send', 'pageview');
 <script type="text/javascript">
 generalNav
 </script>
+<div class="hide_one text-center">
+</div>
