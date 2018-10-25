@@ -1009,7 +1009,7 @@ Any other step taken for water conservation? (if Yes, please specify):
 <table width="100%" class="question uploadedfiles">
   <thead>
     <tr>
-        <th>Image</th>	    
+       <!-- <th>Image</th>	    -->
         <th>File name</th>
         <th>Delete</th>
 	    <th>Download</th>
@@ -1019,15 +1019,15 @@ Any other step taken for water conservation? (if Yes, please specify):
     <?php foreach ($task4supporting as $f) { ?>
     <tr id="index<?php echo $f->id; ?>">
       <?php 
-            $array = explode('.',$f->file_name); 
-            $count = count($array);
-            $extension = $array[$count-1];
+           // $array = explode('.',$f->file_name); 
+           // $count = count($array);
+           // $extension = $array[$count-1];
             ?>
-       <?php if($extension == "jpg" || $extension == "jpeg"){ ?>	    
-      <td> <img style="width:62px; height:46px;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" /></td>	
-       <?php }else{ ?>
-	<td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
-      <?php }?>   
+       <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>	    
+    <!--  <td> <img style="width:62px; height:46px;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $f->file_name ?>" class="img-responsive" /></td>	-->
+       <?php //}else{ ?>
+	<!--<td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>-->
+      <?php //}?>   
    <?php $name = str_replace(" ", "_", $f->name . "_Task_4_Supporting_docs_"); ?>
       <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
       <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
@@ -1945,7 +1945,7 @@ Any other step taken for water conservation? (if Yes, please specify):
   <table width="100%" class="question uploadedfiles">
     <thead>
       <tr>
-        <th>Image</th>	    
+        <!--<th>Image</th>	    -->
         <th>File name</th>
         <th>Delete</th>
 	   <th>Download</th>
@@ -1955,15 +1955,15 @@ Any other step taken for water conservation? (if Yes, please specify):
       <?php foreach ($waterTreatment as $f) { ?>
       <tr id="index<?php echo $f->id; ?>">
 	  <?php 
-            $array = explode('.',$f->file_name); 
-            $count = count($array);
-            $extension = $array[$count-1];
+            //$array = explode('.',$f->file_name); 
+            //$count = count($array);
+            //$extension = $array[$count-1];
             ?>
-       <?php if($extension == "jpg" || $extension == "jpeg"){ ?>    
-	<td> <img style="width:62px; height:46px;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" /></td>
-       <?php }else{ ?>
-	<td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
-      <?php }?>
+       <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>    
+	<!--<td> <img style="width:62px; height:46px;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $f->file_name ?>" class="img-responsive" /></td>-->
+       <?php //}else{ ?>
+	<!--<td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>-->
+      <?php //}?>
         <?php $name = str_replace(" ", "_", $f->name . "_Water_Treatment_Process_"); ?>
         <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
         <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
@@ -2793,7 +2793,7 @@ Used for  cleaning purposes (mopping, washing vehicles, etc)</label>
     <table width="100%" class="question uploadedfiles">
       <thead>
         <tr>
-         <th>Image</th>	    
+         <!--<th>Image</th>	  -->  
          <th>File name</th>
          <th>Delete</th>
 	     <th>Download</th>
@@ -2803,15 +2803,15 @@ Used for  cleaning purposes (mopping, washing vehicles, etc)</label>
         <?php foreach ($flowChartHandDrawn as $f) { ?>
         <tr id="index<?php echo $f->id; ?>">
 	<?php 
-            $array = explode('.',$f->file_name); 
-            $count = count($array);
-            $extension = $array[$count-1];
+            //$array = explode('.',$f->file_name); 
+            //$count = count($array);
+            //$extension = $array[$count-1];
             ?>
-       <?php if($extension == "jpg" || $extension == "jpeg"){ ?>	
-	<td> <img style="width:62px; height:46px;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" /></td>
-     	<?php }else{ ?>
-	<td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
-      <?php }?>
+       <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>	
+	<!--<td> <img style="width:62px; height:46px;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $f->file_name ?>" class="img-responsive" /></td>-->
+     	<?php //}else{ ?>
+	<!--<td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>-->
+      <?php //}?>
           <?php $name = str_replace(" ", "_", $f->name . "_Flow_Chart_Hand_Drwan_"); ?>
           <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
           <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
@@ -2840,7 +2840,7 @@ Used for  cleaning purposes (mopping, washing vehicles, etc)</label>
     <table width="100%" class="question uploadedfiles">
       <thead>
         <tr>
-          <th>Image</th>	    
+          <!--<th>Image</th>	 -->   
           <th>File name</th>
           <th>Delete</th>
 	      <th>Download</th>
@@ -2850,15 +2850,15 @@ Used for  cleaning purposes (mopping, washing vehicles, etc)</label>
         <?php foreach ($supportDocWater as $f) { ?>
         <tr id="index<?php echo $f->id; ?>">
 	 <?php 
-            $array = explode('.',$f->file_name); 
-            $count = count($array);
-            $extension = $array[$count-1];
+            //$array = explode('.',$f->file_name); 
+           // $count = count($array);
+           // $extension = $array[$count-1];
             ?>
-       <?php if($extension == "jpg" || $extension == "jpeg"){ ?>	
-	  <td> <img style="width:62px; height:46px;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" /></td>	
-        <?php }else{ ?>
-	<td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
-      <?php }?> 
+       <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>	
+	  <!--<td> <img style="width:62px; height:46px;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $f->file_name ?>" class="img-responsive" /></td>-->	
+        <?php //}else{ ?>
+	<!--<td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>-->
+      <?php //}?> 
 	<?php $name = str_replace(" ", "_", $f->name . "_Supporting_Document_Water_"); ?>
           <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
           <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
