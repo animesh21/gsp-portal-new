@@ -3298,7 +3298,7 @@ $("#movenextbtn").click(function(e){
   }
   
     if($("input[name='Q8W2S2S2']:checked").val()==='Y'){
-      if($("input[name='Q8W2S2S4']").attr("placeholder")===''){
+      if($("input[name='Q8W2S2S3']").attr("placeholder")==='')==='' && $("input[name='Q8W2S2S4']").attr("placeholder")===''){
        alert("Please Fill The Answer Of This Question:6(b)(2) A If yes, please provide:");
 	    alert("Please Fill The Answer Of This Question:6(b)(2) B If yes, please provide:");
 	   e.preventDefault();
