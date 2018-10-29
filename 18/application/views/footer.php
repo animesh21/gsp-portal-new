@@ -84,13 +84,13 @@ $("#schoolnext,#movenextbtn,#airnext,#energynext,#foodnext,#movenextbtn,#wastene
 $("#btnGeneralPrevious,#btnAirPrevious,#btnlandPrevious,#btnEnergyPrevious,#btnFoodPrevious,#btnWaterPrevious,#btnWastePrevious").click(function(){
    $(".hide_one").removeAttr("style");   
    $(".hide_one").css('display',"block!important");
-   $(".hide_one").append('<h1 class="text-center" style="color:#fff; margin:250px auto; position:relative; text-shadow:1px 1px 1px #000;  background:#transparent!important;">Green School Program Audit 2018<p style="font-size:13px;">GSP Audit 2018 Processing Next Section</p><div class="loader" style="margin:0px auto; z-index: 1000000;background:#transparent!important; position:relative;"></div></h1>');
+   $(".hide_one").append('<h1 class="text-center" style="color:#fff; margin:250px auto; position:relative; text-shadow:1px 1px 1px #000;  background:#transparent!important;">Green Schools Programme Audit 2018<p style="font-size:13px;">GSP Audit 2018 Processing Next Section</p><div class="loader" style="margin:0px auto; z-index: 1000000;background:#transparent!important; position:relative;"></div></h1>');
 });
 
 $("ol li").click(function(){
  $(".hide_one").removeAttr("style");
    $(".hide_one").css('display',"block!important");
-   $(".hide_one").append('<h1 class="text-center" style="color:#fff; margin:250px auto; position:relative; text-shadow:1px 1px 1px #000;  background:#transparent!important;">Green School Program Audit 2018<p style="font-size:13px;">GSP Audit 2018 Processing Next Section</p><div class="loader" style="margin:0px auto; z-index: 1000000;background:#transparent!important; position:relative;"></div></h1>');
+   $(".hide_one").append('<h1 class="text-center" style="color:#fff; margin:250px auto; position:relative; text-shadow:1px 1px 1px #000;  background:#transparent!important;">Green Schools Programme Audit 2018<p style="font-size:13px;">GSP Audit 2018 Processing Next Section</p><div class="loader" style="margin:0px auto; z-index: 1000000;background:#transparent!important; position:relative;"></div></h1>');
     setTimeout(function(){ $(".hide_one").css("display","none"); },200000);
 });	
 </script>	
