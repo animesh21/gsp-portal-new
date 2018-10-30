@@ -27,53 +27,64 @@
 }
 #copyright{ color:#FFFFFF; font-size:10px; padding:6px 0px 6px 0px;}
 </style>
-<a class="" onclick="topFunction()" id="myBtn" ><strong><img src="<?php echo base_url(); ?>assets/img/top.png"></strong></a>
+<a class="" onClick="topFunction()" id="myBtn" ><strong><img src="<?php echo base_url(); ?>assets/img/top.png"></strong></a>
 <?php $this->load->view('modals/air_modal'); ?>
 <!--Ends Here-->
 <div id="ChangePass" class="modal fade" role="dialog">
-                  <div class="modal-dialog">
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                      <div class="modal-header" style="background: rgb(232, 101, 73); color:#fff;">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Change Password </h4>
-                      </div>
-
-                      <div class="modal-body">
-                        <div class="col-lg-12">
-                          <div class="col-lg-12">
-                            <p><?php echo $this->session->flashdata('statusMsg'); ?></p>
-                          </div>
-                         <?php echo form_open('Login/ChangePass',array("method"=>"post")); ?>
-                            <div class="col-lg-6">
-                              <div class="form-group">
-							      <label>Old Password</label>
-                                <input type="Password" name="oldPassword" class="form-control" />
-                              </div>
-                              <div class="form-group">
-                                <label>New Password</label>
-                                <input type="Password" name="pass" pattern=".{8,12}" required title="8 to 12 characters" class="form-control" required/>
-                              </div>
-                            </div>
-                          
-                        </div>
-                        
-
-                        
-                      </div>
-                      <div class="modal-footer">
-                          <button class="btn btn-default" type="submit">Submit</button> 
-                          <button type="button" class="btn btn-default" data-dismiss="modal" id="movenextbtn" style="margin:0px;">Return to survey</button>
-                      </div>
-                      <?php echo form_close(); ?>
-                    </div>
-                  </div>
-                </div>
-
-
-
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header" style="background: rgb(232, 101, 73); color:#fff;">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Change Password </h4>
+      </div>
+      <div class="modal-body">
+        <div class="col-lg-12">
+          <div class="col-lg-12">
+            <p><?php echo $this->session->flashdata('statusMsg'); ?></p>
+          </div>
+          <?php echo form_open('Login/ChangePass',array("method"=>"post")); ?>
+          <div class="col-lg-6">
+            <div class="form-group">
+              <label>Old Password</label>
+              <input type="Password" name="oldPassword" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label>New Password</label>
+              <input type="Password" name="pass" pattern=".{8,12}" required title="8 to 12 characters" class="form-control" required/>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-default" type="submit">Submit</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal" id="movenextbtn" style="margin:0px;">Return to survey</button>
+      </div>
+      <?php echo form_close(); ?> </div>
+  </div>
+</div>
 <footer>
-	
+  <script type="text/javascript">
+$("#schoolnext,#movenextbtn,#airnext,#energynext,#foodnext,#movenextbtn,#wastenext").click(function(){
+   $(".hide_one").removeAttr("style");
+   $(".hide_one").css('display',"block!important");
+   $(".hide_one").append('<h1 class="text-center" style="color:#fff; margin:250px auto; position:relative; text-shadow:1px 1px 1px #000;  background:#transparent!important;">Green Schools Programme Audit 2018<p style="font-size:13px;">GSP Audit 2018 Processing Next Section</p><div class="loader" style="margin:0px auto; z-index: 1000000;background:#transparent!important; position:relative;"></div></h1>');
+    setTimeout(function(){ $(".hide_one").css("display","none"); },200000);
+});
+
+$("#btnGeneralPrevious,#btnAirPrevious,#btnlandPrevious,#btnEnergyPrevious,#btnFoodPrevious,#btnWaterPrevious,#btnWastePrevious").click(function(){
+   $(".hide_one").removeAttr("style");   
+   $(".hide_one").css('display',"block!important");
+   $(".hide_one").append('<h1 class="text-center" style="color:#fff; margin:250px auto; position:relative; text-shadow:1px 1px 1px #000;  background:#transparent!important;">Green Schools Programme Audit 2018<p style="font-size:13px;">GSP Audit 2018 Processing Next Section</p><div class="loader" style="margin:0px auto; z-index: 1000000;background:#transparent!important; position:relative;"></div></h1>');
+});
+
+$("ol li").click(function(){
+ $(".hide_one").removeAttr("style");
+   $(".hide_one").css('display',"block!important");
+   $(".hide_one").append('<h1 class="text-center" style="color:#fff; margin:250px auto; position:relative; text-shadow:1px 1px 1px #000;  background:#transparent!important;">Green Schools Programme Audit 2018<p style="font-size:13px;">GSP Audit 2018 Processing Next Section</p><div class="loader" style="margin:0px auto; z-index: 1000000;background:#transparent!important; position:relative;"></div></h1>');
+    setTimeout(function(){ $(".hide_one").css("display","none"); },200000);
+});	
+</script>
   <!--div class="container">
   <ul class="links list-inline">
    <li class="store"><a href="http://csestore.cse.org.in/" target="_blank"><img src="<?php echo base_url(); ?>assets/img/store.jpg" class="img-responsive"></a></li>
