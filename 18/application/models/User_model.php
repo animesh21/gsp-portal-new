@@ -192,13 +192,12 @@ class User_model extends CI_Model
     public function forgetPassword()
     {
         //echo $argEmail; exit;
-        $this->load->helper('string');
-	$oneTimeCounter = $this->db->get_where('gsp_school', array("forgetpassword_email_date"=>date("Y-m-d h:i:s")))->num_rows();
-		if($oneTimeCounter==false){
-		  return 24;
-		}
-		else{
-		
+         $this->load->helper('string');
+		$oneTimeCounter =$this->db->get_where('gsp_school',array("forgetpassword_email_date"=>date("Y-m-d"),"coemail"=>$this->input->post('val')))->num_rows();
+	  if($oneTimeCounter>0){
+		  return "24";
+	   }
+	else{	
         $email_count = $this->db->get_where('gsp_user', array('email' => $this->input->post('val')))->num_rows();
         //echo $this->db->last_query(); exit;
         if ($email_count > 0) {
