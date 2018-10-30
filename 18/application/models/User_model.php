@@ -211,6 +211,9 @@ class User_model extends CI_Model
                     ->from('gsp_user')
                     ->where('email', $this->input->post('val'))
                     ->get()->row();
+		 $this->db->where('coemail',$this->input->post('val'));
+		 $this->db->update('gsp_school',array("forgetpassword_email_date"=>date("Y-m-d")));   
+		    
 //                echo '<pre>';                print_r($query); exit;
 
                 $this->load->library('email');
