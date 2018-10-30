@@ -209,6 +209,11 @@ header('Location: http://www.greenschoolsprogramme.org/audit/18/login/browser_ch
                                         '<strong>&#x2716; Error!</strong> The email you have entered is not registered.' +
                                         '</div>');
                             }
+			    if (data == 24) {
+                                $('#msgForget').html('<div class="alert alert-danger">' +
+                                        '<strong>&#x2716; Error!</strong> You Can Send Request For Forgetpassword Only Once In 24 Hours. <br/> Please Send Next Query After Half An Hour & Do You Have Any Doubt Mail  support@greenschoolsprogramme.org OR CALL 011-4061600' +
+                                        '</div>');
+                            }
                             setTimeout(function () {
                                 location.reload();
                             }, 2000);
