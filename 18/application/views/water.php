@@ -3306,7 +3306,7 @@ $("#movenextbtn").click(function(e){
   }
   
     if($("input[name='Q8W2S2S7']:checked").val()==='Y'){
-      if($("input[name='Q8W2S2S8']").val()===''){
+      if($("input[name='Q8W2S2S8']").val()==='' && $("input[name='Q8W2S2S8']").attr('placeholder')===''){
        alert("Please share the total number of groundwater recharge structures..");
 	   e.preventDefault();
 	}  
