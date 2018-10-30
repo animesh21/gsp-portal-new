@@ -3245,17 +3245,19 @@ $(document).ready(function(){
 /*Click Event On Radio Button*/
 /*************************************************************************/
 $("input[name='Q19W11']").click(function(){
-  if($(this).val()==='N'){$("#new_question17_a_ii").addClass("hide");}
+  if($(this).val()==2){$("#new_question17_a_ii").addClass("hide");}
   else{$("#new_question17_a_ii").removeClass("hide");}
 });
 /*Validation For Question 17(a)(ii)*/
 /*Where does the water get treated?*/
 /*Load Event On Body*/
 /*************************************************************************/
- $(document).ready(function(){
-     if($("input[name='Q19W1']:checked").val()==='N'){$("#new_question17_a_ii").addClass("hide");}
+/* $(document).ready(function(){
+     if($("input[name='Q19W1']:checked").val()==='N' && ){
+	 $("#new_question17_a_ii").addClass("hide");
+	 }
      else{$("#new_question17_a_ii").removeClass("hide");}
- });
+ });*/
 /*************************************************************************/
 /*This Code Perform Radio Button Click Event*/
 /*This Validation Used For New Question 18*/
