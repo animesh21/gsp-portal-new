@@ -193,6 +193,12 @@ class User_model extends CI_Model
     {
         //echo $argEmail; exit;
         $this->load->helper('string');
+	$oneTimeCounter = $this->db->get_where('gsp_school', array("forgetpassword_email_date"=>date("Y-m-d h:i:s")))->num_rows();
+		if($oneTimeCounter==false){
+		  return 24;
+		}
+		else{
+		
         $email_count = $this->db->get_where('gsp_user', array('email' => $this->input->post('val')))->num_rows();
         //echo $this->db->last_query(); exit;
         if ($email_count > 0) {
@@ -212,7 +218,7 @@ class User_model extends CI_Model
                 $config['mailtype'] = 'html';
                 $this->email->initialize($config);
                 $from = "support@greenschoolsprogramme.org";
-                $to =array($query->email,"ranjita@cseindia.org","siddhartha2488@gmail.com");
+                $to =array($query->email);
                 $subject = "GSP Forget Password";
                 $msg = "Dear &nbsp;";
                 $msg .= $query->username . "," . "<br><br>";
@@ -234,6 +240,7 @@ class User_model extends CI_Model
         } else {
             return false;
         }
+       }
     }
 }
 
