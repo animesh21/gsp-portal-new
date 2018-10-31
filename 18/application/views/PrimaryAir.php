@@ -33,7 +33,7 @@
     top: -28px;
     font-weight: bolder;"><i class="h6"><strong>If the new changes are not saved, please press Ctrl+F5</strong></i></small></h1>
     <div class="video"><a class="lptext" href="#" data-toggle="modal" data-target="#myModal"><img
-                            src="http://greenschoolsprogramme.org/audit2015/upload/templates/tfr_responsive/images/video-icon.png"
+                            src="<?php echo base_url(); ?>assets/img/video-icon.png"
                             style="width: 45px; height: 40px; margin-top:47px;"></a></div>
     <p> The Air section involves finding out your school's contribution in polluting the air. The information
       will help in devising strategies for clean air in the coming years.</p>
