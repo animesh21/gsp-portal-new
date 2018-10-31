@@ -109,9 +109,9 @@
     min-height: 850px!important;
 }
 </style>
-<script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
-<script type="text/javascript" language="javascript" src="https://nightly.datatables.net/buttons/js/buttons.html5.min.js"></script>
+<script type="text/javascript" language="javascript" src="<?php echo base_url(); ?>assets/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" language="javascript" src="<?php echo base_url(); ?>assets/js/jszip.min.js"></script>
+<script type="text/javascript" language="javascript" src="<?php echo base_url(); ?>assets/js/buttons.html5.min.js"></script>
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
