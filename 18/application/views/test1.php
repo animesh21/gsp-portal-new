@@ -6,7 +6,7 @@
 <div class="row">
     <div class="col-md-6 col-md-offset-3" id="test">
         <form enctype="multipart/form-data">
-            <input type="file" name="file[]" id="file" multiple>
+            <input type="file" name="file[]" data-fileuploader-fileMaxSize="0.1" id="file" multiple>
             <input type="hidden" name="Fules" value="" id="Fules_bill" />
         </form>
     </div>
