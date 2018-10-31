@@ -482,7 +482,7 @@
         <br>
         PUC certificates of not more than five buses.<br>
         Uploaded files must be in one of the following formats: PDF Document (.pdf), Word Document (.doc, .docx), Image
-        File (.jpg, .jpeg). File size per document should not exceed 500 KB. </div>
+        File (.jpg, .jpeg). File size per document should not exceed <strong>100 KB</strong>. </div>
     <div class="clearfix">&nbsp;</div>
     <?php
     $arrImages = getUploadData(str_replace(' ', '_', $school->name) . '_PUC_Certificate', $schoolUserID);
@@ -654,7 +654,7 @@
         Fuel bills<br>
         Picture of school owned vehicles<br>
         Uploaded files must be in one of the following formats: PDF Document (.pdf), Word Document (.doc, .docx), Image
-        File (.jpg, .jpeg). File size per document should not exceed 500 KB.
+        File (.jpg, .jpeg). File size per document should not exceed <strong>100 KB</strong>.
         <div class="clearfix">&nbsp;</div>
         <?php
         $arrImages = getUploadData(str_replace(' ', '_', $school->name) . '_Fuels_', $schoolUserID);
@@ -877,7 +877,7 @@
         <br>
         Please upload all supporting documents related to this section here. Note: files must be in one of the
         following formats: PDF Document (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg). File size per
-        document should not exceed 500 KB.<br>
+        document should not exceed <strong>100 KB</strong>.<br>
         <br>
         <?php
         $arrImages = getUploadData(str_replace(' ', '_', $school->name) . '_Air_Quality_Monitoring', $schoolUserID);
@@ -925,7 +925,7 @@
         Please upload all supporting documents related to this section here. Note, files must be one of the
         following
         formats: PDF Document (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg) <br>
-        File size per document should not exceed 500 KB. <br>
+        File size per document should not exceed <strong>100 KB</strong>. <br>
         <br>
         <?php
         $arrImages = getUploadData(str_replace(' ', '_', $school->name) . '_Supporting_Document_Air', $schoolUserID);

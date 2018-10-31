@@ -344,7 +344,7 @@
         Uploaded files must be in one of the following formats: PDF Document
         (.pdf), Word Document
         (.doc, .docx), Image File (.jpg, .jpeg). File size per document
-        should not exceed 500 KB.
+        should not exceed <strong>100 KB</strong>.
         <br>
         <?php
         $arrImages = getUploadData(str_replace(' ', '_', $school->name) . '_Green_Cover_', $schoolUserID);
