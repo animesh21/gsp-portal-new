@@ -18,9 +18,9 @@
 	<div id="containerStateWisePartner1_<?php echo $i; ?>"> </div><br/>
     <?php } ?>
 </div>
-<script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://code.highcharts.com/modules/data.js"></script>
-<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/highcharts.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/data.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/exporting.js"></script>
 <script type="text/javascript">
          Highcharts.chart('container',{
             chart: {
