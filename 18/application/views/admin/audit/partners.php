@@ -471,9 +471,9 @@ $(document).ready(function () {
         });
 		   });
 </script>
-<script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://code.highcharts.com/modules/data.js"></script>
-<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/highcharts.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/data.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/exporting.js"></script>
 <?php 
  $statewisegraph1=getPartnerGraphByState(1);
  $countArr1=count(array_chunk($statewisegraph1[0],7,true));
