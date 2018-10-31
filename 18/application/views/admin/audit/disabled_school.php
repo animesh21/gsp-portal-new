@@ -1,4 +1,4 @@
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="<?php echo base_url(); ?>assets/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
 <div class="top-area">
   <h2>DISABLED SCHOOL 2018 <a href="<?php echo base_url('admin/audit_started_2017/disabled_school_excel') ?>">
     <button class="exportBtn">Export to Excel</button>
