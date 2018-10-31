@@ -1,4 +1,4 @@
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="<?php echo base_url(); ?>assets/css/font-awesome.css" rel="stylesheet" type="text/css"/>
 <div class="top-area">
   <h2>REGISTRATION 2018 <a href="<?php echo base_url('admin/audit_started_2017/excel_phase1') ?>">
     <button class="exportBtn">Export to Excel</button>
