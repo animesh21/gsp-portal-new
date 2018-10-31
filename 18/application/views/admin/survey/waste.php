@@ -2634,7 +2634,7 @@
                         • Pictures of audit team doing survey
                         Please upload all supporting documents related to this section here. Note, files must be one of the
                         following formats: PDF Document (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg) <br>
-                        File size per document should not exceed <strong>100 KB</strong>.<br>
+                        File size per document should not exceed <strong>100 KB.</strong><br>
                     </div>
                     <?php
                     $arrImages = getUploadData(str_replace(' ', '_', $school->name) . '_Audit_Team_Doing_Survey_Waste_', $schoolUserID);

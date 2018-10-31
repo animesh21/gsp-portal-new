@@ -771,7 +771,7 @@
     <br>
     Please upload all supporting documents related to this section here. Note: files must be in one of the
     following formats: PDF Document (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg). File size per
-    document should not exceed <strong>100 KB</strong>.</p>
+    document should not exceed <strong>100 KB.</strong></p>
   <?php
             $arrImages = getUploadData(str_replace(' ', '_', $school[0]->name) . '_Supporting_Document_Air', $schoolUserID);
             
@@ -1143,7 +1143,7 @@
     <p> •Pictures of audit team doing survey<br>
       Please upload all supporting documents related to this section here. Note, files must be one of the
       following formats: PDF Document (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg) <br>
-      File size per document should not exceed <strong>100 KB</strong>. </p>
+      File size per document should not exceed <strong>100 KB.</strong> </p>
     <?php
             $arrImages = getUploadData(str_replace(' ', '_', $school[0]->name) .'_Supporting_Document_Energy_', $schoolUserID);
             
@@ -1559,7 +1559,7 @@
       <li>
         <p style="color: #e86549;">Please upload pictures of events sponsored by UPPF (ultra-processed packaged food) companies</p>
         <p>Please upload all supporting documents related to this section here. Note: files must be in one of the
-          following formats: PDF Document (.pdf), Word Document .doc, .docx), Image File (.jpg, .jpeg). File size per document should not exceed <strong>100 KB</strong>.</p>
+          following formats: PDF Document (.pdf), Word Document .doc, .docx), Image File (.jpg, .jpeg). File size per document should not exceed <strong>100 KB.</strong></p>
       </li>
     </ul>
    <?php
@@ -1625,7 +1625,7 @@
     <label style="color: #e86549;">Please upload pictures your Audit Team doing the survey</label>
     <p> Please upload all supporting documents related to this section Note: files must be in one of the
       following formats: PDF Document .pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg). File
-      size per document should not  exceed <strong>100 KB</strong>.</p>
+      size per document should not  exceed <strong>100 KB.</strong></p>
   </div>
  <?php
             $arrImages = getUploadData(str_replace(' ', '_', $school[0]->name) . '_UPPF_', $schoolUserID);
@@ -1904,7 +1904,7 @@
       Uploaded files must be in one of the following formats: PDF Document
       (.pdf), Word Document
       (.doc, .docx), Image File (.jpg, .jpeg). File size per document
-      should not exceed <strong>100 KB</strong>.</p>
+      should not exceed <strong>100 KB.</strong></p>
   </div>
   <?php
             $arrImages = getUploadData(str_replace(' ', '_', $school[0]->name) . '_Green_Cover_', $schoolUserID);
@@ -2664,7 +2664,7 @@
     Please upload all supporting documents related to this section here.
     Note, files must be one of the following formats: PDF Document
     (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg) <br>
-    File size per document should not exceed <strong>100 KB</strong>. </p>
+    File size per document should not exceed <strong>100 KB.</strong> </p>
   <?php
             $arrImages = getUploadData(str_replace(' ', '_', $school[0]->name) . '_Supporting_Document_Water_', $schoolUserID);
             if (!empty($arrImages)) {
@@ -3622,7 +3622,7 @@
         <p> • Pictures of audit team doing survey
           Please upload all supporting documents related to this section here. Note, files must be one of the
           following formats: PDF Document (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg) <br>
-          File size per document should not exceed <strong>100 KB</strong>.</p>
+          File size per document should not exceed <strong>100 KB.</strong></p>
         <?php
                 $arrImages = getUploadData(str_replace(' ', '_', $school[0]->name) . '_Audit_Team_Doing_Survey_Waste_', $schoolUserID);
                 if (!empty($arrImages)) {

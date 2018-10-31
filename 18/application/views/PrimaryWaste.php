@@ -1940,7 +1940,7 @@ foreach ($chikoo as $u) { ?>
                                                 <br>
                                                 &bull;Pictures of audit team doing survey<br/>
                                                 Please upload all supporting documents related to this section here. Note, files must be one of the following formats: PDF Document (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg) <br>
-                                                File size per document should not exceed <strong>100 KB</strong>. <br/>
+                                                File size per document should not exceed <strong>100 KB.</strong> <br/>
                                                 <br/>
                                                 <button class="btn uploadbtn upload" data-id="Pictures of Audit Team Waste" data-toggle="modal" data-target="#airModal" type="button">UPLOAD FILES</button>
                                             </div>

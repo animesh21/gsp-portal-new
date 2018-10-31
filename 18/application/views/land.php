@@ -863,7 +863,7 @@
       Uploaded files must be in one of the following formats: PDF Document
       (.pdf), Word Document
       (.doc, .docx), Image File (.jpg, .jpeg). File size per document
-      should not exceed <strong>100 KB</strong>. </div>
+      should not exceed <strong>100 KB.</strong> </div>
     <button class="btn uploadbtn upload" data-id="Green Cover"
                 data-toggle="modal" data-target="#airModal" type="button">UPLOAD
     FILES </button>

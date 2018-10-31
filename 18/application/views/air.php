@@ -1076,7 +1076,7 @@
     <br/>
     • PUC certificates of not more than five buses.<br/>
     Uploaded files must be in one of the following formats: PDF Document (.pdf), Word Document (.doc, .docx), Image
-	  File (.jpg, .jpeg). File size per document should not exceed <strong>100 KB</strong>.
+	  File (.jpg, .jpeg). File size per document should not exceed <strong>100 KB.</strong>
     <div class="clearfix">&nbsp;</div>
     <button class="btn uploadbtn upload" data-id="PUC Certificate" data-toggle="modal" data-target="#airModal" type="button"> UPLOAD FILES </button>
   </div>
@@ -1297,7 +1297,7 @@
   • Fuel bills<br>
   • Picture of school owned vehicles<br>
   Uploaded files must be in one of the following formats: PDF Document (.pdf), Word Document (.doc, .docx), Image
-  File (.jpg, .jpeg). File size per document should not exceed <strong>100 KB</strong>.
+  File (.jpg, .jpeg). File size per document should not exceed <strong>100 KB.</strong>
   <div class="clearfix">&nbsp;</div>
   <button class="btn uploadbtn upload" data-id="Fuels" data-toggle="modal" data-target="#airModal" type="button"> UPLOAD FILES </button>
   <br/>
@@ -1873,7 +1873,7 @@ if (isset($data['Q9A1']))
   <br>
   Please upload all supporting documents related to this section here. Note: files must be in one of the
   following formats: PDF Document (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg). File size per
-  document should not exceed <strong>100 KB</strong>.<br/>
+  document should not exceed <strong>100 KB.</strong><br/>
   <br/>
   <button class="btn uploadbtn upload" data-id="Air Quality Monitoring" data-toggle="modal"
             data-target="#airModal" type="button">UPLOAD FILES </button>
@@ -1951,7 +1951,7 @@ if (isset($data['Q9A1']))
   Please upload all supporting documents related to this section here. Note, files must be one of the
   following
   formats: PDF Document (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg) <br>
-  File size per document should not exceed <strong>100 KB</strong>. <br/>
+  File size per document should not exceed <strong>100 KB.</strong> <br/>
   <br/>
   <button class="btn uploadbtn upload" data-id="Supporting Document Air" data-toggle="modal"
             data-target="#airModal"

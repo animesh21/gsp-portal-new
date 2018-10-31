@@ -740,7 +740,7 @@
         <label>Please upload pictures of events sponsored by UPPF (ultra-processed packaged food) companies</label>
         <br>
         Please upload all supporting documents related to this section here. Note: files must be in one of the
-        following formats: PDF Document (.pdf), Word Document .doc, .docx), Image File (.jpg, .jpeg). File size per document should not exceed <strong>100 KB</strong>.<br>
+        following formats: PDF Document (.pdf), Word Document .doc, .docx), Image File (.jpg, .jpeg). File size per document should not exceed <strong>100 KB.</strong><br>
         <br>
 
         <br>
@@ -827,7 +827,7 @@
         <br>
         Please upload all supporting documents related to this section Note: files must be in one of the
         following formats: PDF Document .pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg). File
-        size per document should not  exceed <strong>100 KB</strong>.<br>
+        size per document should not  exceed <strong>100 KB.</strong><br>
         <div class="clearfix"> &nbsp; </div>
         <br>
         <br>
