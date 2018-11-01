@@ -2421,6 +2421,9 @@ $(document).ready(function(){
     if (evt.which != 8 && evt.which != 0 && evt.which < 48 || evt.which > 57)
     {
         evt.preventDefault();
+	    if(evt.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
     }
   });
    $('input[type=number]').on('wheel', function(e){
@@ -2436,6 +2439,9 @@ if($("#Q1F1S1").attr('placeholder')==""  || $("#Q1F1S3").attr('placeholder')==""
 if($("#Q1F1S1").val()==""  || $("#Q1F1S3").val()==""  || $("#Q1F1S2").val()==""){ 
 alert("School Must Add Teacher First Name, Last Name & Email ID.");
 e.preventDefault();
+	if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 }
 }
 });
@@ -2446,6 +2452,9 @@ if($("#Q2F1S1").attr('placeholder')==""  || $("#Q2F1S3").attr('placeholder')==""
 if($("#Q2F1S1").val()=="" || $("#Q2F1S3").val()==""  || $("#Q2F1S2").val()==""){  
 alert("School Must Add Administrative Staff  First Name, Last Name & Email ID.");
 e.preventDefault();
+	if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 }
 }
 });
@@ -2456,6 +2465,9 @@ if($("#Q3F1S1").attr('placeholder')==""  || $("#Q3F1S2").attr('placeholder')==""
 if($("#Q3F1S1").val()==""  || $("#Q3F1S2").val()==""  || $("#Q3F1S3").val()==""){ 
 alert("School Must Add Student  First Name, Last Name & Grade.");
 e.preventDefault();
+	if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 }
 }
 });
@@ -2469,6 +2481,9 @@ $("#foodnext").click(function(e){
    if($("input[name='Q9F2']").val()=="" || $("input[name='Q9F2']").attr("placeholder")==""){
       alert("Q6(a) Please Provide Details.."); 
       e.preventDefault();
+	   if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
    }
   }
  /**Q10 Validation**/
@@ -2481,6 +2496,9 @@ $("#foodnext").click(function(e){
   if($("input[name='Q13F2']").val()==""){
 	 alert("Q10(a) Please Provide Details.."); 
 	 e.preventDefault();
+	  if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
    }
  }
  /**Q2 Validation**/
@@ -2488,27 +2506,42 @@ $("#foodnext").click(function(e){
 	   if($('input[name="Q5F1S1"]:checked').length == 0){
 	      alert("Q2(a) If yes, then midday meal is served under:.."); 
 	      e.preventDefault();
+		   if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	   }
 	   if($('input[name="Q5F2S1"]:checked').length == 0 || $('input[name="Q5F2S2"]:checked').length == 0 || $('input[name="Q5F2S3"]:checked').length == 0 || $('input[name="Q5F2S4"]:checked').length == 0 || $('input[name="Q5F2S5"]:checked').length == 0 || $('input[name="Q5F2S6"]:checked').length == 0 || $('input[name="Q5F2S7"]:checked').length == 0 || $('input[name="Q5F2S8"]:checked').length == 0 || $('input[name="Q5F2S9"]:checked').length == 0 || $('input[name="Q5F2S10"]:checked').length == 0 || $('input[name="Q5F2S11"]:checked').length == 0 || $('input[name="Q5F2S12"]:checked').length == 0 || $('input[name="Q5F2S13"]:checked').length == 0 || $('input[name="Q5F2S14"]:checked').length == 0){
 	     alert("Q2(b) What kind of food items are served in midday meal?.."); 
 	    e.preventDefault();
+		   if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
          }	 
 	}
  /**Q1 Validation**/
   if($('input[name="Q4F1"]:checked').length == 0){
 	      alert("Q1 Does your school have a provision/space to sell packaged food items within the campus.."); 
 	      e.preventDefault();
+	  if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
  }
  /**Q4 Validation**/
 if($('input[name="Q4F1"]:checked').val()==='Y'){	
   if($('input[name="Q7F1"]:checked').length == 0){
 	      alert("Q4 Does your school serve traditional Indian snacks?.."); 
 	      e.preventDefault();
+	  if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
  }
  /**Q5 Validation**/
   if($('input[name="Q8F1"]:checked').length == 0){
 	      alert("Q5 Does your school serve traditional Indian beverages?.."); 
 	      e.preventDefault();
+	  if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
  }
 }	
 
@@ -2516,31 +2549,49 @@ if($('input[name="Q4F1"]:checked').val()==='Y'){
   if($('input[name="Q10F1"]:checked').length == 0){
 	      alert("Q7 Does the school distribute chocolates/similar products as refreshments during schools events?.."); 
 	      e.preventDefault();
+	  if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
  }
  /**Q8 Validation**/
   if($('input[name="Q11F1"]:checked').length == 0){
 	      alert("Q8 Are your school events such as quiz shows, talent shows, debates sponsored by food companies/brands?.."); 
 	      e.preventDefault();
+	  if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
  }
  /**Q9 Validation**/
   if($('input[name="Q12F1"]:checked').length == 0){
 	      alert("Q9 Does your school measure height and weight of all the students?.."); 
 	      e.preventDefault();
+	  if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
  }
  /**Q10 Validation**/
   if($('input[name="Q13F1"]:checked').length == 0){
 	      alert("Q10 Is cooking part of any regular subjects or extracurricular activities?.."); 
 	      e.preventDefault();
+	  if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
  }
 /*Q7a Validation*/
   if($("input[name='Q10F1']:checked").val()==='Y'){
 	   if($('input[name="Q10F2"]').attr("placeholder")==""){
 	      alert("Q7(a) Please provide the names: .."); 
 	      e.preventDefault();
+		   if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	   }
      if(escape($("input[name='Q10F2']").val())===undefined && escape($('input[name="Q10F2"]').attr("placeholder"))===undefined){	 
             alert("Q7(a) Please provide the names: .."); 
              e.preventDefault();
+	     if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
        }
   }
 /*Q8a Validation*/
@@ -2548,10 +2599,16 @@ if($('input[name="Q4F1"]:checked').val()==='Y'){
 	   if($('input[name="Q11F2"]').val()==""){
 	      alert("Q8(a) Please provide the names of sponsors: .."); 
 	      e.preventDefault();
+		   if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	   }
        if(escape($("input[name='Q11F2']").val())===undefined){	 
             alert("Q8(a) Please provide the names of sponsors: .."); 
              e.preventDefault();
+	       if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
        }
   }
  /*Q10a Validation*/
@@ -2559,10 +2616,16 @@ if($('input[name="Q4F1"]:checked').val()==='Y'){
 	   if($("input[name='Q13F2']").attr('placeholder')==""){
 	      alert("Q10(a) If yes, please share the details .."); 
 	      e.preventDefault();
+		   if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	   }
        if($("input[name='Q13F2']").attr('placeholder')==""){	 
             alert("Q10(a) If yes, please share the details: .."); 
              e.preventDefault();
+	       if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
        }
   }
 /*Q3 Validation*/
@@ -2570,10 +2633,16 @@ if($('input[name="Q4F1"]:checked').val()==='Y'){
 	if($('input[name="Q6F2S1"]').val()=="" || $('input[name="Q6F2S2"]').val()=="" || $('input[name="Q6F2S3"]').val()==""){
 	    alert("Q3 What kind of food is being served / sold in your school? ..(Savoury snacks and similar packaged food like chips, Kurkure, Cheetos, potato crisps, corn snacks, nuts and seeds, etc)"); 
             e.preventDefault(); 
+		if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	}
 	if($('input[name="Q6F3S1"]').val()=="" || $('input[name="Q6F3S2"]').val()=="" || $('input[name="Q6F3S3"]').val()==""){
 	    alert("Q3 What kind of food is being served / sold in your school? ..(Instant Noodles like Knorr, Cup-a-noodles, Top Ramen, Wai-wai, Yippee, Foodles, Maggi, etc)"); 
             e.preventDefault(); 
+		if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	}
 	if($('input[name="Q6F4S1"]').val()=="" || $('input[name="Q6F4S2"]').val()=="" || $('input[name="Q6F4S3"]').val()==""){
 	    alert("Q3 What kind of food is being served / sold in your school? ..(Potato fries and burgers)"); 
@@ -2582,26 +2651,44 @@ if($('input[name="Q4F1"]:checked').val()==='Y'){
 	if($('input[name="Q6F5S1"]').val()=="" || $('input[name="Q6F5S2"]').val()=="" || $('input[name="Q6F5S3"]').val()==""){
 	    alert("Q3 What kind of food is being served / sold in your school? ..(Confectionery items (chocolate, candies, gums))"); 
             e.preventDefault(); 
+		if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	}
 	if($('input[name="Q6F6S1"]').val()=="" || $('input[name="Q6F6S2"]').val()=="" || $('input[name="Q6F6S3"]').val()==""){
 	    alert("Q3 What kind of food is being served / sold in your school? ..(Ice cream))"); 
             e.preventDefault(); 
+		if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	}
 	if($('input[name="Q6F7S1"]').val()=="" || $('input[name="Q6F7S2"]').val()=="" || $('input[name="Q6F7S3"]').val()==""){
 	    alert("Q3 What kind of food is being served / sold in your school? ..(Carbonated beverages))"); 
             e.preventDefault(); 
+		if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	}
 	if($('input[name="Q6F8S1"]').val()=="" || $('input[name="Q6F8S2"]').val()=="" || $('input[name="Q6F8S3"]').val()==""){
 	    alert("Q3 What kind of food is being served / sold in your school? ..(Sugar sweetened non-carbonated beverages))"); 
-            e.preventDefault(); 
+            e.preventDefault();
+		if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	}
 	if($('input[name="Q6F9S1"]').val()=="" || $('input[name="Q6F9S2"]').val()=="" || $('input[name="Q6F9S3"]').val()==""){
 	    alert("Q3 What kind of food is being served / sold in your school? ..(Packaged/bottled nimboo paani/lassi/flavoured milk))"); 
             e.preventDefault(); 
+		if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	}
 	if($('input[name="Q6F10S1"]').val()=="" || $('input[name="Q6F10S2"]').val()=="" || $('input[name="Q6F10S3"]').val()==""){
 	    alert("Q3 What kind of food is being served / sold in your school? ..(Packaged/bottled energy drinks))"); 
             e.preventDefault(); 
+		if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	}
   }	  
 });
