@@ -3787,6 +3787,9 @@ $(document).ready(function(){
     if (evt.which != 8 && evt.which != 0 && evt.which < 48 || evt.which > 57)
     {
         evt.preventDefault();
+	    if(evt.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
     }
   });
 });
@@ -3995,6 +3998,9 @@ $("input[name='Q12Wa28S1']").change(function(){
 if($("input[name='Q11Wa1S1']").prop('checked') == false && $("input[name='Q11Wa1S2']").prop('checked') == false && $("input[name='Q11Wa1S3']").prop('checked') == false && $("input[name='Q11Wa1S4']").prop('checked') == false){
   alert("Q7 fill the Paper section.");
   e.preventDefault();
+	if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 }
 });	
 	</script>
@@ -4004,6 +4010,9 @@ if($("input[name='Q11Wa1S1']").prop('checked') == false && $("input[name='Q11Wa1
 if($("input[name='Q11Wa2S1']").prop('checked') == false && $("input[name='Q11Wa2S2']").prop('checked') == false && $("input[name='Q11Wa2S3']").prop('checked') == false && $("input[name='Q11Wa2S4']").prop('checked') == false){
   alert("Q7 fill the Plastic section.");
   e.preventDefault();
+	if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 }
 }
 });	
@@ -4022,6 +4031,9 @@ if($("input[name='Q11Wa4S1']").prop('checked') == false && $("input[name='Q11Wa4
 if($("input[name='Q11Wa4S1']").hasAttribute('checked') == false && $("input[name='Q11Wa4S2']").hasAttribute('checked') == false && $("input[name='Q11Wa4S3']").hasAttribute('checked') == false && $("input[name='Q11Wa4S4']").hasAttribute('checked') == false){
   alert("Q7 fill the Horticultural waste section.");
   e.preventDefault();
+	if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
  }
 }
 });	
@@ -4032,6 +4044,9 @@ if($("input[name='Q11Wa4S1']").prop('checked') == false && $("input[name='Q11Wa4
 if($("input[name='Q11Wa4S1']").hasAttribute('checked') == false && $("input[name='Q11Wa4S2']").hasAttribute('checked') == false && $("input[name='Q11Wa4S3']").hasAttribute('checked') == false && $("input[name='Q11Wa4S4']").hasAttribute('checked') == false){  
  alert("Q7 fill the E-waste section.");
   e.preventDefault();
+	if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
   }
 }
 });	
@@ -4042,6 +4057,9 @@ if($("input[name='Q11Wa4S1']").hasAttribute('checked') == false && $("input[name
 if($("input[name='Q11Wa5S1']").prop('checked') == false && $("input[name='Q11Wa5S2']").prop('checked') == false && $("input[name='Q11Wa5S3']").prop('checked') == false && $("input[name='Q11Wa5S4']").prop('checked') == false){
   alert("Q7 fill the Hazardous waste section.");
   e.preventDefault();
+	if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
  }
  }
 });	
@@ -4052,6 +4070,9 @@ if($("input[name='Q11Wa6S1']").prop('checked') == false && $("input[name='Q11Wa6
 if($("input[name='Q11Wa6S1']").hasAttribute('checked') == false && $("input[name='Q11Wa6S2']").hasAttribute('checked') == false && $("input[name='Q11Wa6S3']").hasAttribute('checked') == false && $("input[name='Q11Wa6S4']").hasAttribute('checked') == false){	
   alert("Q7 fill the Wood, glass, metal section.");
   e.preventDefault();
+	if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
   }
 }
 });	
@@ -4062,6 +4083,9 @@ if($("input[name='Q11Wa7S1']").prop('checked') == false && $("input[name='Q11Wa7
 if($("input[name='Q11Wa7S1']").hasAttribute('checked') == false && $("input[name='Q11Wa7S2']").hasAttribute('checked') == false && $("input[name='Q11Wa7S3']").hasAttribute('checked') == false && $("input[name='Q11Wa7S4']").hasAttribute('checked') == false){
   alert("Q7 fill the Biomedical waste section.");
   e.preventDefault();
+	if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
  }
 }
 });	
@@ -4071,6 +4095,9 @@ if($("input[name='Q11Wa7S1']").hasAttribute('checked') == false && $("input[name
 if($("input[name='Q11Wa8S1']").prop('checked') == false && $("input[name='Q11Wa8S2']").prop('checked') == false && $("input[name='Q11Wa8S3']").prop('checked') == false && $("input[name='Q11Wa8S4']").prop('checked') == false){
   alert("Q7 fill the Biomedical waste section.");
   e.preventDefault();
+	if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 }
 });	
 	</script>
@@ -4081,6 +4108,9 @@ if($("input[name='Q11Wa8S1']").prop('checked') == false && $("input[name='Q11Wa8
 	if($("input[name='Q4Wa2S5']").val()==''){
          alert("Q1(a) Who segregates the waste at source?");
 	 e.preventDefault();
+		if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
         }
      }
    }
@@ -4092,6 +4122,9 @@ if($("input[name='Q11Wa8S1']").prop('checked') == false && $("input[name='Q11Wa8
    if($("input[name='Q15Wa2S1']").prop('checked') == false && $("input[name='Q15Wa2S2']").prop('checked') == false && $("input[name='Q15Wa2S3']").prop('checked') == false && $("input[name='Q15Wa2S4']").prop('checked') == false){
 	 alert("11(b) What kind of waste is being burnt/ incinerated?");
 	 e.preventDefault();
+	   if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
    }
   }
 
@@ -4099,166 +4132,286 @@ if($("input[name='Q11Wa8S1']").prop('checked') == false && $("input[name='Q11Wa8
 	 if($("input[name='Q4Wa1']:checked").length == 0){
 	   alert("Q1: Does your school segregate solid waste?");
 	   e.preventDefault();
+		 if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	 }
 	 if($("input[name='Q4Wa2']:checked").length == 0){
 	   alert("Q2: How many categories does your school segregate waste into? ");
 	   e.preventDefault();
+		 if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	 }
 	 if($("input[name='Q8Wa1']:checked").length == 0){
 	   alert("Q4: Does your school recycle any generated waste?");
 	   e.preventDefault();
+		 if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	 }
 	 if($("input[name='Q9Wa1']:checked").length == 0){
 	   alert("Q5: Does your school have a composting facility?");
 	   e.preventDefault();
+		 if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	 } 
 	 if($("input[name='Q10Wa1']:checked").length == 0){
 	   alert("Q6: Does your school encourage students & teachers to reuse textbooks?");
 	   e.preventDefault();
+		 if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	 } 
 	 if($("input[name='Q13Wa1']:checked").length == 0){
 	   alert("Q9: Do you know that your e-waste can be collected by an authorized dealer or dismantler?");
 	   e.preventDefault();
+		 if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	 } 
 	 if($("input[name='Q14Wa1']:checked").length == 0){
 	   alert("Q10: What is the final destination for waste from your school that is disposed of externally? ");
 	   e.preventDefault();
+		 if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	 } 
      if($("input[name='Q15Wa1']:checked").length == 0){
 	   alert("Q11: Does your school burn waste?");
 	   e.preventDefault();
+	     if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	 }
      if($("input[name='Q17Wa1']:checked").length == 0){
 	   alert("Q13: Does the school have a policy on waste?");
 	   e.preventDefault();
+	     if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	 }
 	 if($("input[name='Q18Wa1']:checked").length == 0){
 	   alert("Q14: Are there awareness drives with regard to Reduce, Recycle and Reuse?");
 	   e.preventDefault();
+		 if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	 }   
 	 if($("input[name='Q19Wa1']:checked").length == 0){
 	   alert("Q15: Is the study of the environment integrated into the curriculum?");
 	   e.preventDefault();
+		 if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	 }  
 	/*Q8 Does your school have the following? If yes, please give the numbers of items in working condition and those that are not.
 	(Validation)*/	
 	if($("input[name='Q12Wa1S1']").attr("placeholder")=="" || $("input[name='Q12Wa1S2']").attr("placeholder")=="" || $("input[name='Q12Wa1S3']").attr("placeholder")==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (TVs)");
 	   e.preventDefault();
+		if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	}
 	if($("input[name='Q12Wa2S1']").attr("placeholder")=="" || $("input[name='Q12Wa2S2']").attr("placeholder")=="" || $("input[name='Q12Wa2S3']").attr("placeholder")==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (VCR or DVD players)");
 	   e.preventDefault();
+		if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	}
 	if($("input[name='Q12Wa3S1']").attr("placeholder")=="" || $("input[name='Q12Wa3S2']").attr("placeholder")=="" || $("input[name='Q12Wa3S3']").attr("placeholder")==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Refrigerators and freezers)");
 	   e.preventDefault();
+		if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	}
 	if($("input[name='Q12Wa4S1']").attr("placeholder")=="" || $("input[name='Q12Wa4S2']").attr("placeholder")=="" || $("input[name='Q12Wa4S3']").attr("placeholder")==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Washing machines)");
 	   e.preventDefault();
+		if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	}
 	if($("input[name='Q12Wa5S1']").attr("placeholder")=="" || $("input[name='Q12Wa5S2']").attr("placeholder")=="" || $("input[name='Q12Wa5S3']").attr("placeholder")==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Air conditioners)");
 	   e.preventDefault();
+		if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	}
 	if($("input[name='Q12Wa6S1']").attr("placeholder")=="" || $("input[name='Q12Wa6S2']").attr("placeholder")=="" || $("input[name='Q12Wa6S3']").attr("placeholder")==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Heaters)");
 	   e.preventDefault();
+		if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	}
 	if($("input[name='Q12Wa7S1']").attr("placeholder")=="" || $("input[name='Q12Wa7S2']").attr("placeholder")=="" || $("input[name='Q12Wa7S3']").attr("placeholder")==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Microwaves)");
 	   e.preventDefault();
+		if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	}
 	if($("input[name='Q12Wa8S1']").attr("placeholder")=="" || $("input[name='Q12Wa8S2']").attr("placeholder")=="" || $("input[name='Q12Wa8S3']").attr("placeholder")==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Ovens)");
 	   e.preventDefault();
+		if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	}
 	if($("input[name='Q12Wa9S1']").attr("placeholder")=="" || $("input[name='Q12Wa9S2']").attr("placeholder")=="" || $("input[name='Q12Wa9S3']").attr("placeholder")==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Toasters)");
 	   e.preventDefault();
+		if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	}
 	if($("input[name='Q12Wa10S1']").attr("placeholder")=="" || $("input[name='Q12Wa10S2']").attr("placeholder")=="" || $("input[name='Q12Wa10S3']").attr("placeholder")==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Electric kettles)");
 	   e.preventDefault();
+		if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	}
 	if($("input[name='Q12Wa11S1']").attr("placeholder")=="" || $("input[name='Q12Wa11S2']").attr("placeholder")=="" || $("input[name='Q12Wa11S3']").attr("placeholder")==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Personal computers (CPU, mouse, screen and keyboard included))");
 	   e.preventDefault();
+		if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	}
 	if($("input[name='Q12Wa12S1']").attr("placeholder")=="" || $("input[name='Q12Wa12S2']").attr("placeholder")=="" || $("input[name='Q12Wa12S3']").attr("placeholder")==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Laptop computer (CPU, mouse, screen and keyboard included)))");
 	   e.preventDefault();
+		if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	}
 	if($("input[name='Q12Wa13S1']").attr("placeholder")=="" || $("input[name='Q12Wa13S2']").attr("placeholder")=="" || $("input[name='Q12Wa13S3']").attr("placeholder")==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Notebook computers)))");
 	   e.preventDefault();
+		if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	}
 	if($("input[name='Q12Wa14S1']").attr("placeholder")=="" || $("input[name='Q12Wa14S2']").attr("placeholder")=="" || $("input[name='Q12Wa14S3']").attr("placeholder")==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Notebook computers)))");
 	   e.preventDefault();
+		if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	}
 	if($("input[name='Q12Wa15S1']").attr("placeholder")=="" || $("input[name='Q12Wa15S2']").attr("placeholder")=="" || $("input[name='Q12Wa15S3']").attr("placeholder")==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Printers)))");
 	   e.preventDefault();
+		if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	}
 	if($("input[name='Q12Wa16S1']").attr("placeholder")=="" || $("input[name='Q12Wa16S2']").attr("placeholder")=="" || $("input[name='Q12Wa16S3']").attr("placeholder")==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Copying equipment (photocopiers))))");
 	   e.preventDefault();
+		if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	}
 	if($("input[name='Q12Wa17S1']").attr("placeholder")=="" || $("input[name='Q12Wa17S2']").attr("placeholder")=="" || $("input[name='Q12Wa17S3']").attr("placeholder")==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Copying equipment (Whiteboards))))");
 	   e.preventDefault();
+		if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	}
 	if($("input[name='Q12Wa18S1']").attr("placeholder")=="" || $("input[name='Q12Wa18S2']").attr("placeholder")=="" || $("input[name='Q12Wa18S3']").attr("placeholder")==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Copying equipment (Electrical and electronic typewriters))))");
 	   e.preventDefault();
+		if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	}
 	if($("input[name='Q12Wa19S1']").attr("placeholder")=="" || $("input[name='Q12Wa19S2']").attr("placeholder")=="" || $("input[name='Q12Wa19S3']").attr("placeholder")==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Electrical and electronic typewriters)");
 	   e.preventDefault();
+		if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	}	
 	if($("input[name='Q12Wa20S1']").attr("placeholder")=="" || $("input[name='Q12Wa20S2']").attr("placeholder")=="" || $("input[name='Q12Wa20S3']").attr("placeholder")==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Pocket and desk calculators)");
 	   e.preventDefault();
+		if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	}
 	if($("input[name='Q12Wa21S1']").attr("placeholder")=="" || $("input[name='Q12Wa21S2']").attr("placeholder")=="" || $("input[name='Q12Wa21S3']").attr("placeholder")==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Fax machines)");
 	   e.preventDefault();
+		if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	}
 	if($("input[name='Q12Wa22S1']").attr("placeholder")=="" || $("input[name='Q12Wa22S2']").attr("placeholder")=="" || $("input[name='Q12Wa22S3']").attr("placeholder")==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Telex)");
 	   e.preventDefault();
+		if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	}
 	if($("input[name='Q12Wa23S1']").attr("placeholder")=="" || $("input[name='Q12Wa23S2']").attr("placeholder")=="" || $("input[name='Q12Wa23S3']").attr("placeholder")==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Telephones)");
 	   e.preventDefault();
+		if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	}	
 	if($("input[name='Q12Wa24S1']").attr("placeholder")=="" || $("input[name='Q12Wa24S2']").attr("placeholder")=="" || $("input[name='Q12Wa24S3']").attr("placeholder")==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Pay telephones)");
 	   e.preventDefault();
+		if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	}
 	if($("input[name='Q12Wa25S1']").attr("placeholder")=="" || $("input[name='Q12Wa25S2']").attr("placeholder")=="" || $("input[name='Q12Wa25S3']").attr("placeholder")==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Mobiles)");
 	   e.preventDefault();
+		if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	}
 	if($("input[name='Q12Wa26S1']").attr("placeholder")=="" || $("input[name='Q12Wa26S2']").attr("placeholder")=="" || $("input[name='Q12Wa26S3']").attr("placeholder")==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Answering systems)");
 	   e.preventDefault();
+		if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	}
 	if($("input[name='Q12Wa27S1']").attr("placeholder")=="" || $("input[name='Q12Wa27S2']").attr("placeholder")=="" || $("input[name='Q12Wa27S3']").attr("placeholder")==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Induction cookers)");
 	   e.preventDefault();
+		if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	}
 	if($("input[name='Q12Wa28S1']").attr("placeholder")=="" || $("input[name='Q12Wa28S2']").attr("placeholder")=="" || $("input[name='Q12Wa28S3']").attr("placeholder")==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Geysers/water heaters)");
 	   e.preventDefault();
+		if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	}
 	if($("input[name='Q4Wa1']:checked").val()==="Y"){
 	   if($("input[name='Q4Wa2S1']").prop('checked') == false && $("input[name='Q4Wa2S2']").prop('checked') == false && $("input[name='Q4Wa2S3']").prop('checked') == false
 	     && $("input[name='Q4Wa2S4']").prop('checked') == false && $("input[name='Q4Wa2S5']:checked").val()==""){
 	       alert("1(a) Who segregates the waste at source?");
-		e.preventDefault();   
+		e.preventDefault();  
+		if(e.isDefaultPrevented()){
+	         setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	     }
 	   }
 	}	
      });	
