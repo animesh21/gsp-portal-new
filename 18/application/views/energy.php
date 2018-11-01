@@ -1563,6 +1563,9 @@ $("#energynext").click(function(e){
      if($("#Q1E1S1").val()==""  || $("#Q1E1S3").val()==""  || $("#Q1E1S2").val()==""){ 
       alert("School Must Add Teacher First Name, Last Name & Email ID.");
 	  e.preventDefault();
+	  if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }   
 	}
    }
 });
@@ -1573,6 +1576,9 @@ $("#energynext").click(function(e){
       if($("#Q2E1S1").val()=="" || $("#Q2E1S3").val()==""  || $("#Q2E1S2").val()==""){  
     alert("School Must Add Administrative Staff  First Name, Last Name & Email ID.");
 	e.preventDefault();
+	 if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }     
 	}
    }
 });
@@ -1583,6 +1589,9 @@ $("#energynext").click(function(e){
     if($("#Q3E1S1").val()==""  || $("#Q3E1S2").val()==""  || $("#Q3E1S3").val()==""){ 
     alert("School Must Add Student First Name, Last Name & Grade.");
 	e.preventDefault();
+	 if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }   
 	}
    }
 });
@@ -1593,6 +1602,9 @@ $(document).ready(function(){
     if (evt.which != 8 && evt.which != 0 && evt.which < 48 || evt.which > 57)
     {
         evt.preventDefault();
+	if(evt.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }    
     }
   });
   $('input[type=number]').on('wheel', function(e){
