@@ -189,5 +189,5 @@ left: -208px; color: #e86549; text-shadow: 1px 1px 1px #000; text-align: center;
 <script type="text/javascript">
 generalNav
 </script>
-<div class="hide_one text-center">
+<div class="hide_one text-center hide">
 </div>
