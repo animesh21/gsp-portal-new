@@ -128,12 +128,7 @@ ga('send', 'pageview');
 	height:100%;
 	background:#0000009e;
 	}
-</style>	
-<script type="text/javascript">
-$(document).ready(function(){
-$(".hide_one").append('<h1 class="text-center" style="color:#fff; margin:250px auto; position:relative; background:#transparent!important;">Green Schools Programme Audit 2018<p style="font-size:13px;">GSP Audit 2018 Processing Next Section</p><div class="loader" style="margin:0px auto; z-index: 1000000; background:#transparent!important; position:relative;"></div></h1>'); setTimeout(function(){ $(".hide_one").css("display","none"); }, 10000);
-});
-</script>	
+</style>		
 </head>
 <body>
 <div class="main-wrapper">
