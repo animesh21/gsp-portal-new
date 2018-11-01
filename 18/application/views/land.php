@@ -1047,6 +1047,9 @@ $(document).ready(function(){
     if (evt.which != 8 && evt.which != 0 && evt.which < 48 || evt.which > 57)
     {
         evt.preventDefault();
+	    if(evt.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
     }
   });
   $('input[type=number]').on('wheel', function(e){
@@ -1078,6 +1081,9 @@ if($("#Q1L1S1").attr('placeholder')==""  || $("#Q1L1S3").attr('placeholder')==""
 if($("#Q1L1S1").val()==""  || $("#Q1L1S3").val()==""  || $("#Q1L1S2").val()==""){ 
 alert("School Must Add Teacher First Name, Last Name & Email ID.");
 e.preventDefault();
+	if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 }
 }
 });
@@ -1088,6 +1094,9 @@ if($("#Q2L1S1").attr('placeholder')==""  || $("#Q2L1S3").attr('placeholder')==""
 if($("#Q2L1S1").val()=="" || $("#Q2L1S3").val()==""  || $("#Q2L1S2").val()==""){  
 alert("School Must Add Administrative Staff  First Name, Last Name & Email ID.");
 e.preventDefault();
+	if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 }
 }
 });
@@ -1098,6 +1107,9 @@ if($("#Q3L1S1").attr('placeholder')==""  || $("#Q3L1S2").attr('placeholder')==""
 if($("#Q3L1S1").val()==""  || $("#Q3L1S2").val()==""  || $("#Q3L1S3").val()==""){ 
 alert("School Must Add Student  First Name, Last Name & Grade.");
 e.preventDefault();
+	if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 }
 }
 });
@@ -1107,46 +1119,79 @@ $("#movenextbtn").click(function(e){
   if($("input[name='Q4L1']").val()==""){
     alert("Site area in square meter (m2)");
 	   e.preventDefault();
+	  if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
   }
   if($("input[name='Q4L2']").val()==""){
     alert("Ground coverage area");
 	   e.preventDefault();
+	  if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
   }
   if($("input[name='Q4L3']").val()==""){
     alert("Green Landscaped area on ground");
 	   e.preventDefault();
+	  if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
   }
   if($("input[name='Q4L4']").val()==""){
     alert("Play area that has grass on ground");
 	   e.preventDefault();
+	  if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
   }
   if($("input[name='Q4L6']").val()==""){
     alert("Play area that is paved/concrete on ground");
 	   e.preventDefault();
+	  if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
   }
   if($("input[name='Q4L7']").val()==""){
     alert("Surface parking area");
 	   e.preventDefault();
+	  if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
   }
   if($("input[name='Q4L8']").val()==""){
     alert("Surface parking area");
 	   e.preventDefault();
+	  if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
   }
   if($("input[name='Q4L9']").val()=="" || $("input[name='Q4L9']").val()==='m²'){
     alert("Roof and terrace area");
 	   e.preventDefault();
+	  if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
   }
   if($("input[name='Q4L10']").val()=="" || $("input[name='Q4L9']").val()==='m²'){
     alert("Green cover on exposed roof and terrace");
 	   e.preventDefault();
+	  if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
   }
   if($("input[name='Q4L11']").val()=="" || $("input[name='Q4L9']").val()==='m²'){
     alert("Total built-up/constructed area");
 	   e.preventDefault();
+	  if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
   }
   if($("input[name='Q4L12']").val()=="" || $("input[name='Q4L9']").val()==='m²'){
     alert("Total number of floors (excluding ground floor)");
 	   e.preventDefault();
+	  if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
   }	
 });
 /*Validation Code Used For Q2*/
@@ -1155,6 +1200,9 @@ $("#movenextbtn").click(function(e){
   if($("input[name='Q5L1S1']").val()=="" || $("input[name='Q5L1S2']").val()=="" || $("input[name='Q5L2S1']").val()=="" || $("input[name='Q5L2S2']").val()==""){
     alert("Q2: How many species of plants and animals exist in your school?");
 	   e.preventDefault();
+	  if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
   }	
 });	
 </script>
