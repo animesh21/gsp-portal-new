@@ -3145,6 +3145,9 @@ $(document).ready(function(){
     if (evt.which != 8 && evt.which != 0 && evt.which < 48 || evt.which > 57)
     {
         evt.preventDefault();
+	    if(evt.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
     }
   });
   $('input[type=number]').on('wheel', function(e){
@@ -3289,6 +3292,9 @@ $("#movenextbtn").click(function(e){
       if($("input[name='Q8W2S6']").val()==''){
        alert("Please Fill The Answer Of This Question:Calculate your school’s rainwater harvesting potential (in litres).");
 	   e.preventDefault();
+	      if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
       }
 	}  
   }
@@ -3296,6 +3302,9 @@ $("#movenextbtn").click(function(e){
       if($("input[name='Q8W1S123443']").val()===''){
        alert("Please Fill The Answer Of This Question:Provision for storage of leftover water in bottles at water coolers Any other step taken for water conservation? (if Yes, please specify):).");
 	   e.preventDefault();
+	      if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	}  
   }
   
@@ -3304,6 +3313,9 @@ $("#movenextbtn").click(function(e){
         alert("Please Fill The Answer Of This Question:6(b)(2) A If yes, please provide:");
 	    alert("Please Fill The Answer Of This Question:6(b)(2) B If yes, please provide:");
 	   e.preventDefault();
+	      if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	}  
   }
   
@@ -3311,6 +3323,9 @@ $("#movenextbtn").click(function(e){
       if($("input[name='Q8W2S2S8']").val()==='' && $("input[name='Q8W2S2S8']").attr('placeholder')===''){
        alert("Please share the total number of groundwater recharge structures..");
 	   e.preventDefault();
+	      if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	}  
   }	
 /*  if($("input[name='Q8W2S2S31']").val()==""){
@@ -3340,6 +3355,9 @@ if($("input[name='Q19W1']:checked").val()==='N'){
  if($("input[name='Q19W13']").prop('checked') == false && $("input[name='Q19W131']").prop('checked') == false && $("input[name='Q19W132']").prop('checked') == false){
    alert("17(b) Please specify the fate of wastewater");
    e.preventDefault();
+	 if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
   }
  }
 });
@@ -3350,6 +3368,9 @@ if($("input[name='Q19W1']:checked").val()==='N'){
 if($("input[name='Q5W1']").prop('checked') == false && $("input[name='Q5W2']").prop('checked') == false && $("input[name='Q5W3']").prop('checked') == false && $("input[name='Q5W4']").prop('checked') == false){
   alert("2 Where does the water your school uses, come from");
   e.preventDefault();
+	if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 }
 });	
 	</script>
@@ -3359,6 +3380,9 @@ if($("input[name='Q5W1']").prop('checked') == false && $("input[name='Q5W2']").p
 if($("input[name='Q6W1']").prop('checked') == false && $("input[name='Q6W2']").prop('checked') == false && $("input[name='Q6W3']").prop('checked') == false && $("input[name='Q6W4']").prop('checked') == false && $("input[name='Q6W5']").prop('checked') == false){
   alert("3 Who supplies the water in your school");
   e.preventDefault();
+	if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 }
 });	
 </script>
@@ -3369,11 +3393,17 @@ if($("input[name='Q6W1']").prop('checked') == false && $("input[name='Q6W2']").p
       if($("input[name='Q19W16']").prop('checked') == false && $("input[name='Q19W161']").prop('checked') == false && $("input[name='Q19W162']").prop('checked') == false){
         alert("18(i) If yes, How does your school reuse wastewater from RO plant or AC");
         e.preventDefault();
+	      if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
        }
      }else if($('input[name="Q19W15"]:checked').val()==='N'){
          if($("input[name='Q19W17']").prop('checked') == false){
 	   alert("18(i) If no, How does your school reuse wastewater from RO plant or AC?");
             e.preventDefault();
+		 if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	 }
      }		
 });	
@@ -3385,11 +3415,17 @@ if($("input[name='Q6W1']").prop('checked') == false && $("input[name='Q6W2']").p
    if($("input[name='Q20W2']").prop('checked') == false && $("input[name='Q20W21']").prop('checked') == false && $("input[name='Q20W22']").prop('checked') == false  && $("input[name='Q20W23']").prop('checked') == false){
       alert("19(a) How does your school reuse wastewater?");
      e.preventDefault();
+	   if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
    }
   }else if($('input[name="Q20W1"]:checked').val()==='N'){
          if($("input[name='Q20W3']").prop('checked') == false && $("input[name='Q20W31']").prop('checked') == false && $("input[name='Q20W32']").prop('checked') == false){
 	   alert("18(i) If no, How does your school reuse wastewater from RO plant or AC?");
             e.preventDefault();
+		 if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	 }
      }	
 			  
@@ -3429,97 +3465,160 @@ $(document).ready(function(){
 $("#movenextbtn").click(function(e){
    if($('input[name="Q8W1S1"]:checked').length == 0){
 	alert("Q5 What are the water conservation practices your school follows..(Does your school have any water and sanitation policy?)"); 
-	e.preventDefault();   
+	e.preventDefault(); 
+	   if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
    }
   if($('input[name="Q8W1S2"]:checked').length == 0){
 	alert("Q5 What are the water conservation practices your school follows..(If your school has an eco-club, do they have water component?)"); 
 	e.preventDefault();   
+	  if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
    }
   if($('input[name="Q8W1S3"]:checked').length == 0){
 	alert("Q5 What are the water conservation practices your school follows..(Do all tanks in the school have float valves installed to stop overflow?)"); 
-	e.preventDefault();   
+	e.preventDefault();  
+	  if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
    }
  if($('input[name="Q8W1S4"]:checked').length == 0){
 	alert("Q5 What are the water conservation practices your school follows..(Do the drinking water points have spill proof taps to check overflow?)"); 
-	e.preventDefault();   
+	e.preventDefault();  
+	 if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
    }
  if($('input[name="Q8W1S5"]:checked').length == 0){
 	alert("Q5 What are the water conservation practices your school follows..(Does your school use appliances with a quick-wash setting?)"); 
-	e.preventDefault();   
+	e.preventDefault(); 
+	 if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
    }
  if($('input[name="Q8W1S6"]:checked').length == 0){
 	alert("Q5 What are the water conservation practices your school follows..(Are dual flush systems installed in the toilets?)"); 
-	e.preventDefault();   
+	e.preventDefault();  
+	 if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
    }
 if($('input[name="Q8W1S7"]:checked').length == 0){
 	alert("Q5 What are the water conservation practices your school follows..(Does your school encourage bottled water for drinking water?)"); 
-	e.preventDefault();   
+	e.preventDefault();
+	if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
    }
 if($('input[name="Q8W1S8"]:checked').length == 0){
 	alert("Q5 What are the water conservation practices your school follows..(Does your school grow local plant species which require limited amount of water to grow?)"); 
-	e.preventDefault();   
+	e.preventDefault();
+	if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
    }
 if($('input[name="Q8W1S9"]:checked').length == 0){
 	alert("Q5 What are the water conservation practices your school follows..(Has your school initiated any water conservation steps in the school or outside, in the past one year?)"); 
-	e.preventDefault();   
+	e.preventDefault();
+	if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
    }	
 if($('input[name="Q8W1S10"]:checked').length == 0){
 	alert("Q5 What are the water conservation practices your school follows..(Does your school use a drip or irrigation system?)"); 
 	e.preventDefault();   
+	if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
    }	
 if($('input[name="Q8W1S11"]:checked').length == 0){
 	alert("Q5 What are the water conservation practices your school follows..(Any other step taken for water conservation? (if Yes, please specify))"); 
 	e.preventDefault();   
+	if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
    }
 if($('input[name="Q8W1S11"]:checked').length == 0){
 	alert("Q5 What are the water conservation practices your school follows..(Provision for storage of leftover water in bottles at water coolers Any other step taken for water conservation? (if Yes, please specify):))"); 
 	e.preventDefault();   
+	if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
    }
         /**Q8 How many drinking water taps do you have? (Validation)**/
 	 if($('input[name="Q9W1"]').val() =="" && $('input[name="Q9W1"]').attr("placeholder")==""){
 	   alert("Q8 How many drinking water taps do you have?");
 	   e.preventDefault(); 	 
+		 if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	 }
 	  /**Q9 How many drinking water taps do you have? (Validation)**/
 	 if($('input[name="Q10W1"]').val() =="" && $('input[name="Q10W1"]').attr("placeholder")==""){
 	   alert("Q9 How many hand pumps do you have?");
 	   e.preventDefault(); 	 
+		 if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	 }
 	/**Q10 How many ablution taps (taps used for washing hands only) do you have? (Validation)**/
 	 if($('input[name="Q11W1"]').val() =="" && $('input[name="Q11W1"]').attr("placeholder")==""){
 	   alert("Q10 How many ablution taps (taps used for washing hands only) do you have?");
 	   e.preventDefault(); 	 
+		 if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	 }
 	/**Q12 How many urinals (strictly used for urination only) do you have?  (Validation)**/
 	 if($('input[name="Q14W1"]').val() =="" && $('input[name="Q14W1"]').attr("placeholder")==""){
 	   alert("Q12 How many urinals (strictly used for urination only) do you have?");
 	   e.preventDefault(); 	 
+		 if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	 }
 	/**Q13 How many other water outlets (example: taps in play fields, sprinklers, swimming pool) do you have?  (Validation)**/
 	 if($('input[name="Q15W1"]').val() =="" && $('input[name="Q15W1"]').attr("placeholder")==""){
 	   alert("Q13 How many other water outlets (example: taps in play fields, sprinklers, swimming pool) do you have?");
-	   e.preventDefault(); 	 
+	   e.preventDefault();
+		 if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	 }
 	/**Q6 Do you have Rainwater harvesting (RWH) system in your school?**/	
   if($('input[name="Q8W2"]:checked').length==0){
    alert("Q6 Do you have Rainwater harvesting (RWH) system in your school?");
 	   e.preventDefault(); 
+	  if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
   } 
 /**Q5(Last Option) Provision for storage of leftover water in bottles at water coolers Any other step taken for water conservation? (if Yes, please specify):**/
 	if($('input[name="Q8W1S12"]:checked').length==0){
    alert("Q5 Provision for storage of leftover water in bottles at water coolers Any other step taken for water conservation? (if Yes, please specify):");
 	   e.preventDefault(); 
+		if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
    }
 /**/   
    if($('input[name="Q8W1S12"]:checked').length==0){
      alert("Q5 Provision for storage of leftover water in bottles at water coolers Any other step taken for water conservation? (if Yes, please specify):(Please Fill The Textarea Value.)");
 	 e.preventDefault();
+	   if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
    }
    /*6(a) Calculate your school’s rainwater harvesting potential (in litres).*/ 
    if($('input[name="Q8W2"]:checked').val()==='N'){
      if($('input[name="Q8W2S6"]').val()=="" || $('input[name="Q8W2S6"]').val()==null){
       alert("Q6(a) Calculate your school’s rainwater harvesting potential (in litres). (The value in RWH potential must be more than zero)");
 	  e.preventDefault();
+	     if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	 }
    }	
   if($('input[name="Q8W2"]:checked').val()==='Y'){
@@ -3527,47 +3626,74 @@ if($('input[name="Q8W1S11"]:checked').length == 0){
 	  if($('input[name="Q8W2S1"]:checked').length==0){
 	     alert("Q6a Does your school harvest different catchments?");
 		  e.preventDefault();
+		  if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	  }
 	  /*6(b) How does your school harvest rainwater?*/
 	  if($('input[name="Q8W2S2"]:checked').length==0){
 	     alert("6(b) How does your school harvest rainwater?");
 		  e.preventDefault();
+		  if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	  }
 	  /*6(c)How much area in your school is harvested?*/
 	  if($('input[name="Q8W2S4"]:checked').length==0){
 	     alert("6(c)How much area in your school is harvested?");
 		  e.preventDefault();
+		  if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	  }
 	  /*6(e)Rate your catchment on cleanliness:*/
 	  if($('input[name="Q8W2S5"]:checked').length==0){
 	     alert("6(e)Rate your catchment on cleanliness:");
 		  e.preventDefault();
+		  if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	  }
 	  /*6(f)Does your school clean your catchment and system*/
 	  if($('input[name="Q8W2S61"]:checked').length==0){
 	     alert("6(f)Does your school clean your catchment and system");
 		  e.preventDefault();
+		  if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	  }
 	  /*6(g)Does your school monitor the rainwater harvesting structure for its efficiency?*/
 	  if($('input[name="Q8W2S8"]:checked').length==0){
 	     alert("6(g)Does your school monitor the rainwater harvesting structure for its efficiency?");
 		  e.preventDefault();
+		  if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	  }
 	  /*6(h)What is the trend of groundwater level in your school across the year?*/
 	  if($('input[name="Q8W2S10"]:checked').length==0){
 	     alert("6(h)What is the trend of groundwater level in your school across the year?");
 		  e.preventDefault();
+		  if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	  }
 	  /*6(i)If your school's RWH structure is more than a year old, is there any improvement in the groundwater quality after the implementation of the RWH structure?*/
 	  if($('input[name="Q8W2S13"]:checked').length==0){
 	     alert("6(i)If your school's RWH structure is more than a year old, is there any improvement in the groundwater quality after the implementation of the RWH structure?");
 	     e.preventDefault();
+		  if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	  }
 	  /*6(h)(1)Please specify how much was the decrease?*/
 	  if($('input[name="Q8W2S10"]:checked').val()==1){
 	    if($('input[name="Q8W2S11"]:checked').length==0){
 	     alert("6(h)(1)Please specify how much was the decrease?");
 	     e.preventDefault();
+		    if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	    }
 	  }
 	   /*6(h)(1)Please specify how much was the increase?*/
@@ -3575,6 +3701,9 @@ if($('input[name="Q8W1S11"]:checked').length == 0){
 	    if($('input[name="Q8W2S12"]:checked').length==0){
 	     alert("6(h)(1)Please specify how much was the increase?");
 	     e.preventDefault();
+		    if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	    }
 	  }
 	  if($('input[name="Q8W2S33"]:checked').val()==1){
@@ -3582,11 +3711,17 @@ if($('input[name="Q8W1S11"]:checked').length == 0){
 		if($('input[name="Q8W2S4S1"]:checked').length==0){
 	     alert("6(d)(1) Where is your filter unit?");
 		 e.preventDefault();
+			if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	    }
 		/*6(d)(2)Types of filter used in your school?*/
 		if($('input[name="Q8W2S4S21"]:checked').length==0 && $('input[name="Q8W2S4S22"]:checked').length==0 && $('input[name="Q8W2S4S23"]:checked').length==0 && $('input[name="Q8W2S4S24"]:checked').length==0){
 	     alert("6(d)(2)Types of filter used in your school:?");
 		 e.preventDefault();
+			if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }
 	    }
 	  } 
 	}	
