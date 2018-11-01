@@ -2151,6 +2151,9 @@ $("#airnext").click(function(e){
      if($("#Q1A1S1").val()==""  || $("#Q1A1S3").val()==""  || $("#Q1A1S2").val()==""){ 
       alert("School Must Add Teacher First Name, Last Name & Email ID.");
 	  e.preventDefault();
+	  if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }   
 	}
    }
 });
@@ -2161,6 +2164,9 @@ $("#airnext").click(function(e){
       if($("#Q2A1S1").val()=="" || $("#Q2A1S3").val()==""  || $("#Q2A1S2").val()==""){  
     alert("School Must Add Administrative Staff  First Name, Last Name & Email ID.");
 	e.preventDefault();
+	if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }      
       }
    }
 });
@@ -2171,6 +2177,9 @@ $("#airnext").click(function(e){
     if($("#Q3A1S1").val()==""  || $("#Q3A1S2").val()==""  || $("#Q3A1S3").val()==""){ 
     alert("School Must Add Students First Name, Last Name & Grade.");
 	e.preventDefault();
+	 if(e.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	  }    
 	}
    }
  /**Q2 To calculate the Window-floor ratio of classrooms in your school, please fill the table below:**/ 
@@ -2183,7 +2192,10 @@ $("#airnext").click(function(e){
 	  if($("input[name='"+firstColumn+"']").attr('placeholder')=="" || $("input[name='"+firstColumn+"']").attr('placeholder')==="undefined" || $("input[name='"+secondColumn+"']").attr('placeholder')=="" || $("input[name='"+secondColumn+"']").attr('placeholder')==="undefined" || $("input[name='"+thirdColumn+"']").attr('placeholder')=="" || $("input[name='"+thirdColumn+"']").attr('placeholder')==="undefined"){
 	     alert("Q2:To calculate the Window-floor ratio of classrooms in your school, please fill the table below:");
 		 evt.preventDefault();
-	  }
+		if(evt.isDefaultPrevented()){
+	         setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	       }  
+	    }
 	}
   }
   else{ 
@@ -2201,6 +2213,9 @@ $("#airnext").click(function(e){
 	if($status==1){
 	     alert("Q2:To calculate the Window-floor ratio of classrooms in your school, please fill the table below:");
 		 evt.preventDefault();
+		 if(evt.isDefaultPrevented()){
+	           setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	       }
 	}
   }		
 });
@@ -2211,6 +2226,9 @@ $(document).ready(function(){
     if (evt.which != 8 && evt.which != 0 && evt.which < 45 || evt.which > 57)
     {
         evt.preventDefault();
+	    if(evt.isDefaultPrevented()){
+	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	    }
     }
   });
   $('input[type=number]').on('wheel', function(e){
