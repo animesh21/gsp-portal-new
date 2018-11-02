@@ -3994,13 +3994,14 @@ $("input[name='Q12Wa28S1']").change(function(){
 </script>
 <script>
 	$("#wastenext").click(function(e){
-
+if($("input[name='Q11Wa1S1']").is(':disabled') == false && $("input[name='Q11Wa1S2']").is(':disabled') == false && $("input[name='Q11Wa1S3']").is(':disabled') == false && $("input[name='Q11Wa1S4']").is(':disabled') == false){
 if($("input[name='Q11Wa1S1']").prop('checked') == false && $("input[name='Q11Wa1S2']").prop('checked') == false && $("input[name='Q11Wa1S3']").prop('checked') == false && $("input[name='Q11Wa1S4']").prop('checked') == false){
   alert("Q7 fill the Paper section.");
   e.preventDefault();
 	if(e.isDefaultPrevented()){
 	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
 	  }
+   }
 }
 });	
 	</script>
