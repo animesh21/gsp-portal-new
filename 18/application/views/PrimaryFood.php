@@ -2060,7 +2060,7 @@ You would require at least 5 to 10 of your schoolmates in the Food audit team. T
                             <input type="radio"
                                                                                                                                    name="Q9F2"
                                                                                                                                    onclick="ComputePackaged(1)"
-                                                                                                                                   value="<?php echo set_value('Q9F2', 'Y') ?>" <?php if (isset($data['Q9F2'])) echo $data['Q9F2'] == 'Y' ? "checked" : "" ?>>
+                                                                                                                                   value="<?php echo set_value('Q9F2', 'Y') ?>" <?php if (isset($data['Q9F2'])){ echo $data['Q9F2'] == 'Y' ? "checked" : "";} ?>>
                             Yes </label>
                           </li>
                           <li>
@@ -2068,7 +2068,7 @@ You would require at least 5 to 10 of your schoolmates in the Food audit team. T
                             <input type="radio"
                                                                                                                                    name="Q9F2"
                                                                                                                                    onclick="ComputePackaged(2)"
-                                                                                                                                   value="<?php echo set_value('Q9F2', 'N') ?>" <?php if (isset($data['Q9F2'])) echo $data['Q9F2'] == 'N' ? "checked" : "" ?>/>
+                                                                                                                                   value="<?php echo set_value('Q9F2', 'N') ?>" <?php if (isset($data['Q9F2'])){ echo $data['Q9F2'] == 'N' ? "checked" : "";} ?>/>
                             No </label>
                           </li>
                         </ul>
