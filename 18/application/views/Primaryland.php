@@ -448,7 +448,7 @@
             </div>
             <div class="form-group1 row">
                 <div class="col-xs-5">
-                    <label for="ex3">No. of <i>Kachcha</i> (unpaved) playgrounds with grass</label>
+                    <label for="ex3">No. of <i>Kachcha</i> (unpaved) playgrounds without grass</label>
                 </div>
                 <div class="col-xs-5">
                     <input class="form-control space-textbox space-textbox" id="Q4L3" type="number" name="Q4L3" placeholder="<?php if (isset($data['Q4L3'])) echo $data['Q4L3'] ?>" value="<?php echo set_value('Q4L3'); ?>"/>
