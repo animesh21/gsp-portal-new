@@ -647,7 +647,29 @@ if (isset($data['Q1Fe11'])) {
                         <h4 class="modal-title">Generate Your Digital Certificate </h4>
                       </div>
 					  
-            <?php echo form_open('Feedback/insert_digitalcertificate/'.$school_name[0]->userid);?>
+           <?php echo form_open('Feedback/insert_digitalcertificate/'.$school_name[0]->userid,array("id"=>"frmDigitalCertificate"));?>
+           <script>
+           $("#frmDigitalCertificate").on("submit",function(e){
+   var formData = $('#frmDigitalCertificate')[0]; // You need to use standard javascript object here
+  var formDatas = new FormData(formData);
+   e.preventDefault();
+$.ajax({
+  url: '<?php echo base_url("Feedback/insert_digitalcertificate/".$school_name[0]->userid); ?>',
+  data: formDatas,
+  type: 'POST',
+  contentType: false,
+  processData: false,
+  success: function (reponse) {
+              alert("success");
+              $("#Certificate").css("display","none");
+              $("#Certificate").removeClass("in");
+             $(".modal-backdrop").css("position","inherit");
+             $(".modal-open").css("overflow","inherit");
+           }
+ });
+})
+
+           </script>
                       <div class="modal-body">
                         <div class="col-lg-12">
                           <h4>Please ensure that you select unique names to avoid duplication in digital certificates</h4>
