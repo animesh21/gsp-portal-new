@@ -3895,3 +3895,14 @@ nyanBtn15.addEventListener('click', function(){
 			display:none; 
 		}	
 	</style>
+<script>
+$('#Q8W2S6A').change(function(){
+if($('#Q8W2_2').val()=='N'){
+   if($('#Q8W2S6A').val()=='0')
+   {
+     alert('This Question can not accept zero');
+     $('#Q8W2S6A').val('');
+   }
+ }
+});
+</script>
