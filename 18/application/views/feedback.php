@@ -660,7 +660,7 @@ $.ajax({
   contentType: false,
   processData: false,
   success: function (reponse) {
-              alert("success");
+              alert("Digital Certificate Has Been Generated Successfully.");
               $("#Certificate").css("display","none");
               $("#Certificate").removeClass("in");
              $(".modal-backdrop").css("position","inherit");
