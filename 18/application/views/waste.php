@@ -4020,16 +4020,18 @@ if($("input[name='Q11Wa2S1']").prop('checked') == false && $("input[name='Q11Wa2
 	</script>
 <script>
 	$("#wastenext").click(function(e){
+if($("input[name='Q11Wa3S1']").is(':disabled') == false && $("input[name='Q11Wa3S2']").is(':disabled') == false && $("input[name='Q11Wa3S3']").is(':disabled') == false && $("input[name='Q11Wa3S4']").is(':disabled') == false){	
 if($("input[name='Q11Wa3S1']").prop('checked') == false && $("input[name='Q11Wa3S2']").prop('checked') == false && $("input[name='Q11Wa3S3']").prop('checked') == false && $("input[name='Q11Wa3S4']").prop('checked') == false){
   alert("Q7 fill the Horticultural waste section.");
   e.preventDefault();
+}
 }
 });	
 	</script>
 <script>
 	$("#wastenext").click(function(e){
+if($("input[name='Q11Wa4S1']").is(':disabled') == false && $("input[name='Q11Wa4S2']").is(':disabled') == false && $("input[name='Q11Wa4S3']").is(':disabled') == false && $("input[name='Q11Wa4S4']").is(':disabled') == false){
 if($("input[name='Q11Wa4S1']").prop('checked') == false && $("input[name='Q11Wa4S2']").prop('checked') == false && $("input[name='Q11Wa4S3']").prop('checked') == false && $("input[name='Q11Wa4S4']").prop('checked') == false){
-if($("input[name='Q11Wa4S1']").hasAttribute('checked') == false && $("input[name='Q11Wa4S2']").hasAttribute('checked') == false && $("input[name='Q11Wa4S3']").hasAttribute('checked') == false && $("input[name='Q11Wa4S4']").hasAttribute('checked') == false){
   alert("Q7 fill the Horticultural waste section.");
   e.preventDefault();
 	if(e.isDefaultPrevented()){
@@ -4041,8 +4043,8 @@ if($("input[name='Q11Wa4S1']").hasAttribute('checked') == false && $("input[name
 	</script>
 <script>
 	$("#wastenext").click(function(e){
-if($("input[name='Q11Wa4S1']").prop('checked') == false && $("input[name='Q11Wa4S2']").prop('checked') == false && $("input[name='Q11Wa4S3']").prop('checked') == false && $("input[name='Q11Wa4S4']").prop('checked') == false){
-if($("input[name='Q11Wa4S1']").hasAttribute('checked') == false && $("input[name='Q11Wa4S2']").hasAttribute('checked') == false && $("input[name='Q11Wa4S3']").hasAttribute('checked') == false && $("input[name='Q11Wa4S4']").hasAttribute('checked') == false){  
+if($("input[name='Q11Wa4S1']").is(':disabled') == false && $("input[name='Q11Wa4S2']").is(':disabled') == false && $("input[name='Q11Wa4S3']").is(':disabled') == false && $("input[name='Q11Wa4S4']").is(':disabled') == false){ 	
+if($("input[name='Q11Wa4S1']").prop('checked') == false && $("input[name='Q11Wa4S2']").prop('checked') == false && $("input[name='Q11Wa4S3']").prop('checked') == false && $("input[name='Q11Wa4S4']").prop('checked') == false){ 
  alert("Q7 fill the E-waste section.");
   e.preventDefault();
 	if(e.isDefaultPrevented()){
@@ -4067,8 +4069,8 @@ if($("input[name='Q11Wa5S1']").prop('checked') == false && $("input[name='Q11Wa5
 	</script>
 <script>
 	$("#wastenext").click(function(e){
+if($("input[name='Q11Wa6S1']").is(':disabled') == false && $("input[name='Q11Wa6S2']").is(':disabled') == false && $("input[name='Q11Wa6S3']").is(':disabled') == false && $("input[name='Q11Wa6S4']").is(':disabled') == false){	
 if($("input[name='Q11Wa6S1']").prop('checked') == false && $("input[name='Q11Wa6S2']").prop('checked') == false && $("input[name='Q11Wa6S3']").prop('checked') == false && $("input[name='Q11Wa6S4']").prop('checked') == false){
-if($("input[name='Q11Wa6S1']").hasAttribute('checked') == false && $("input[name='Q11Wa6S2']").hasAttribute('checked') == false && $("input[name='Q11Wa6S3']").hasAttribute('checked') == false && $("input[name='Q11Wa6S4']").hasAttribute('checked') == false){	
   alert("Q7 fill the Wood, glass, metal section.");
   e.preventDefault();
 	if(e.isDefaultPrevented()){
@@ -4080,8 +4082,8 @@ if($("input[name='Q11Wa6S1']").hasAttribute('checked') == false && $("input[name
 	</script>
 <script>
 	$("#wastenext").click(function(e){
+if($("input[name='Q11Wa7S1']").is(':disabled') == false && $("input[name='Q11Wa7S2']").is(':disabled') == false && $("input[name='Q11Wa7S3']").is(':disabled') == false && $("input[name='Q11Wa7S4']").is(':disabled') == false){	
 if($("input[name='Q11Wa7S1']").prop('checked') == false && $("input[name='Q11Wa7S2']").prop('checked') == false && $("input[name='Q11Wa7S3']").prop('checked') == false && $("input[name='Q11Wa7S4']").prop('checked') == false){
-if($("input[name='Q11Wa7S1']").hasAttribute('checked') == false && $("input[name='Q11Wa7S2']").hasAttribute('checked') == false && $("input[name='Q11Wa7S3']").hasAttribute('checked') == false && $("input[name='Q11Wa7S4']").hasAttribute('checked') == false){
   alert("Q7 fill the Biomedical waste section.");
   e.preventDefault();
 	if(e.isDefaultPrevented()){
@@ -4093,12 +4095,14 @@ if($("input[name='Q11Wa7S1']").hasAttribute('checked') == false && $("input[name
 	</script>
 <script>
 	$("#wastenext").click(function(e){
+if($("input[name='Q11Wa8S1']").is(':disabled') == false && $("input[name='Q11Wa8S2']").is(':disabled') == false && $("input[name='Q11Wa8S3']").is(':disabled') == false && $("input[name='Q11Wa8S4']").is(':disabled') == false){	
 if($("input[name='Q11Wa8S1']").prop('checked') == false && $("input[name='Q11Wa8S2']").prop('checked') == false && $("input[name='Q11Wa8S3']").prop('checked') == false && $("input[name='Q11Wa8S4']").prop('checked') == false){
   alert("Q7 fill the Biomedical waste section.");
   e.preventDefault();
 	if(e.isDefaultPrevented()){
 	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
 	  }
+  }
 }
 });	
 	</script>
