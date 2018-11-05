@@ -2026,8 +2026,8 @@ echo 'style="display:none;"';
                 size per
                 document
                 should not
-                exceed 500
-                KB.<br/>
+                exceed <strong>100
+                KB.</strong><br/>
                 <br/>
                 <button class="btn uploadbtn upload"
 																		data-id="Audit Team doing Survey"
@@ -2255,8 +2255,8 @@ echo 'style="display:none;"';
                 size per
                 document
                 should not
-                exceed 500
-                KB.<br>
+                exceed <strong>100
+                KB.</strong><br>
                 <div class="clearfix"> &nbsp; </div>
                 <button class="btn uploadbtn upload" data-id="UPPF" data-toggle="modal"
 																		data-target="#airModal" type="button"> UPLOAD FILES </button>
