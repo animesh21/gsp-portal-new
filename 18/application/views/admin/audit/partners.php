@@ -47,7 +47,8 @@
     $countArr1=count(array_chunk($statewisegraph1[0],7,true));
     for($i=0;$i<$countArr1; $i++){
     ?>
-	<div id="containerStateWisePartner1_<?php echo $i; ?>"> </div><br/>
+    <div id="containerStateWisePartner1_<?php echo $i; ?>"> </div>
+    <br/>
     <?php } ?>
     <p><strong>Export Graph:</strong></p>
     <select id="ExportOption" style="border-radius:0px;">
@@ -68,9 +69,10 @@
     $countArr2=count(array_chunk($statewisegraph2[0],7,true));
     for($i=0;$i<$countArr2; $i++){
     ?>
-	<div id="containerStateWisePartner2_<?php echo $i; ?>"> </div><br/>
+    <div id="containerStateWisePartner2_<?php echo $i; ?>"> </div>
+    <br/>
     <?php } ?>
-	<p><strong>Export Graph:</strong></p>
+    <p><strong>Export Graph:</strong></p>
     <select id="ExportOption" style="border-radius:0px;">
       <option value="PNG">PNG Image</option>
       <option value="JPEG">JPEG Image</option>
@@ -84,12 +86,13 @@
   </div>
   <div id="wrapper3" style="display:none;">
     <div id="container3"> </div>
-	<?php 
+    <?php 
     $statewisegraph3=getPartnerGraphByState(3);
     $countArr3=count(array_chunk($statewisegraph3[0],7,true));
     for($i=0;$i<$countArr3; $i++){
     ?>
-	<div id="containerStateWisePartner3_<?php echo $i; ?>"> </div><br/>
+    <div id="containerStateWisePartner3_<?php echo $i; ?>"> </div>
+    <br/>
     <?php } ?>
     <p><strong>Export Graph:</strong></p>
     <select id="ExportOption" style="border-radius:0px;">
@@ -110,7 +113,8 @@
     $countArr4=count(array_chunk($statewisegraph4[0],7,true));
     for($i=0;$i<$countArr4; $i++){
     ?>
-	<div id="containerStateWisePartner4_<?php echo $i; ?>"> </div><br/>
+    <div id="containerStateWisePartner4_<?php echo $i; ?>"> </div>
+    <br/>
     <?php } ?>
     <p><strong>Export Graph:</strong></p>
     <select id="ExportOption" style="border-radius:0px;">
@@ -131,7 +135,8 @@
     $countArr5=count(array_chunk($statewisegraph5[0],7,true));
     for($i=0;$i<$countArr5; $i++){
     ?>
-	<div id="containerStateWisePartner5_<?php echo $i; ?>"> </div><br/>
+    <div id="containerStateWisePartner5_<?php echo $i; ?>"> </div>
+    <br/>
     <?php } ?>
     <p><strong>Export Graph:</strong></p>
     <select id="ExportOption" style="border-radius:0px;">
@@ -152,7 +157,8 @@
     $countArr6=count(array_chunk($statewisegraph6[0],7,true));
     for($i=0;$i<$countArr6; $i++){
     ?>
-	<div id="containerStateWisePartner6_<?php echo $i; ?>"> </div><br/>
+    <div id="containerStateWisePartner6_<?php echo $i; ?>"> </div>
+    <br/>
     <?php } ?>
     <p><strong>Export Graph:</strong></p>
     <select id="ExportOption" style="border-radius:0px;">
@@ -177,11 +183,10 @@
     <li><a href="#6" id="six" data-toggle="tab">Satya Bharti Foundation</a> </li>
   </ul>
   <div class="tab-content">
-    <div class="tab-pane active" id="1">
-	   <a href="<?php echo base_url("admin/audit_started/foundationPartnerrexcel/1"); ?>" class="btn btn-default">
-    <button class="exportBtn">Export to Excel</button>
-    </a>
-       <table id="example1" class="display dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
+    <div class="tab-pane active" id="1"> <a href="<?php echo base_url("admin/audit_started/foundationPartnerrexcel/1"); ?>" class="btn btn-default">
+      <button class="exportBtn">Export to Excel</button>
+      </a>
+      <table id="example1" class="display dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
         <thead>
           <tr role="row">
             <th>S.No</th>
@@ -217,10 +222,9 @@
       </table>
     </div>
     <div class="tab-pane" id="2">
-      <div style="overflow-x:auto;">
-	    <a href="<?php echo base_url("admin/audit_started/foundationPartnerrexcel/2"); ?>" class="btn btn-default">
-    <button class="exportBtn">Export to Excel</button>
-    </a>
+      <div style="overflow-x:auto;"> <a href="<?php echo base_url("admin/audit_started/foundationPartnerrexcel/2"); ?>" class="btn btn-default">
+        <button class="exportBtn">Export to Excel</button>
+        </a>
         <table id="example2" class="display dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
           <thead>
             <tr role="row">
@@ -260,10 +264,9 @@
       </div>
     </div>
     <div class="tab-pane" id="3">
-      <div style="overflow-x:auto;">
-	    <a href="<?php echo base_url("admin/audit_started/foundationPartnerrexcel/3"); ?>" class="btn btn-default">
-    <button class="exportBtn">Export to Excel</button>
-    </a> 
+      <div style="overflow-x:auto;"> <a href="<?php echo base_url("admin/audit_started/foundationPartnerrexcel/3"); ?>" class="btn btn-default">
+        <button class="exportBtn">Export to Excel</button>
+        </a>
         <table id="example3" class="display dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
           <thead>
             <tr role="row">
@@ -301,10 +304,9 @@
       </div>
     </div>
     <div class="tab-pane" id="4">
-      <div style="overflow-x:auto;">
-	    <a href="<?php echo base_url("admin/audit_started/foundationPartnerrexcel/4"); ?>" class="btn btn-default">
-    <button class="exportBtn">Export to Excel</button>
-    </a>
+      <div style="overflow-x:auto;"> <a href="<?php echo base_url("admin/audit_started/foundationPartnerrexcel/4"); ?>" class="btn btn-default">
+        <button class="exportBtn">Export to Excel</button>
+        </a>
         <table id="example4" class="display dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
           <thead>
             <tr role="row">
@@ -342,10 +344,9 @@
       </div>
     </div>
     <div class="tab-pane" id="5">
-      <div style="overflow-x:auto;">
-	    <a href="<?php echo base_url("admin/audit_started/satyaBhartiFoundationPartnerrexcel"); ?>" class="btn btn-default">
-    <button class="exportBtn">Export to Excel</button>
-    </a> 
+      <div style="overflow-x:auto;"> <a href="<?php echo base_url("admin/audit_started/satyaBhartiFoundationPartnerrexcel"); ?>" class="btn btn-default">
+        <button class="exportBtn">Export to Excel</button>
+        </a>
         <table id="example5" class="display dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
           <thead>
             <tr role="row">
@@ -383,10 +384,9 @@
       </div>
     </div>
     <div class="tab-pane" id="6">
-      <div style="overflow-x:auto;">
-	    <a href="<?php echo base_url("admin/audit_started/foundationPartnerrexcel/5"); ?>" class="btn btn-default">
-    <button class="exportBtn">Export to Excel</button>
-    </a>
+      <div style="overflow-x:auto;"> <a href="<?php echo base_url("admin/audit_started/foundationPartnerrexcel/5"); ?>" class="btn btn-default">
+        <button class="exportBtn">Export to Excel</button>
+        </a>
         <table id="example6" class="display dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
           <thead>
             <tr role="row">
@@ -565,7 +565,8 @@ $(document).ready(function () {
         }		
 		],
 }); 
-</script><?php
+</script>
+<?php
   $t++;
 } ?>
 <?php 
@@ -659,7 +660,8 @@ $(document).ready(function () {
         }		
 		],
 }); 
-</script><?php
+</script>
+<?php
   $t++;
 } ?>
 <?php 
@@ -753,10 +755,10 @@ $(document).ready(function () {
         }		
 		],
 }); 
-</script><?php
+</script>
+<?php
   $t++;
 } ?>
-
 <?php 
  $statewisegraph4=getPartnerGraphByState(4);
  $countArr4=count(array_chunk($statewisegraph4[0],7,true));
@@ -848,10 +850,10 @@ $(document).ready(function () {
         }		
 		],
 }); 
-</script><?php
+</script>
+<?php
   $t++;
 } ?>
-
 <?php 
  $statewisegraph5=getPartnerGraphByState(5);
  $countArr5=count(array_chunk($statewisegraph5[0],7,true));
@@ -943,18 +945,19 @@ $(document).ready(function () {
         }		
 		],
 }); 
-</script><?php
+</script>
+<?php
   $t++;
 } ?>
 <?php 
  $statewisegraph6=getPartnerGraphByState(6);
  $countArr6=count(array_chunk($statewisegraph5[0],7,true));
- $countTotalArr6=count($statewisegraph5[0]);
- $arrData6=array_chunk($statewisegraph5[0],7,true);
- $arrData6_1=array_chunk($statewisegraph5[1],7,true);
- $arrData6_2=array_chunk($statewisegraph5[2],7,true);
- $arrData6_3=array_chunk($statewisegraph5[3],7,true);
- $arrData6_4=array_chunk($statewisegraph5[4],7,true);
+ $countTotalArr6=count($statewisegraph6[0]);
+ $arrData6=array_chunk($statewisegraph6[0],7,true);
+ $arrData6_1=array_chunk($statewisegraph6[1],7,true);
+ $arrData6_2=array_chunk($statewisegraph6[2],7,true);
+ $arrData6_3=array_chunk($statewisegraph6[3],7,true);
+ $arrData6_4=array_chunk($statewisegraph6[4],7,true);
  $dataCount6=array();
  $countInteration6=0;
  $y=0;
@@ -1037,7 +1040,8 @@ $(document).ready(function () {
         }		
 		],
 }); 
-</script><?php
+</script>
+<?php
   $t++;
 } ?>
 <script type="text/javascript">
