@@ -4097,7 +4097,7 @@ if($("input[name='Q11Wa7S1']").prop('checked') == false && $("input[name='Q11Wa7
 	$("#wastenext").click(function(e){
 if($("input[name='Q11Wa8S1']").is(':disabled') == false && $("input[name='Q11Wa8S2']").is(':disabled') == false && $("input[name='Q11Wa8S3']").is(':disabled') == false && $("input[name='Q11Wa8S4']").is(':disabled') == false){	
 if($("input[name='Q11Wa8S1']").prop('checked') == false && $("input[name='Q11Wa8S2']").prop('checked') == false && $("input[name='Q11Wa8S3']").prop('checked') == false && $("input[name='Q11Wa8S4']").prop('checked') == false){
-  alert("Q7 fill the Biomedical waste section.");
+  alert("Q7 fill the Others waste section.");
   e.preventDefault();
 	if(e.isDefaultPrevented()){
 	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
