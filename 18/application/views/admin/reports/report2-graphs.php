@@ -18,9 +18,9 @@
 	<div id="containerStateWisePartner1_<?php echo $i; ?>"> </div><br/>
     <?php } ?>
 </div>
-<script src="<?php echo base_url(); ?>assets/js/highcharts.js"></script>
-<script src="<?php echo base_url(); ?>assets/js/data.js"></script>
-<script src="<?php echo base_url(); ?>assets/js/exporting.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/data.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
 <script type="text/javascript">
          Highcharts.chart('container',{
             chart: {
@@ -56,13 +56,16 @@
 		</script>
 <?php 
  $districtwisegraph1=getDataGraphByDistrict($state_id1);
- $countArr1=count(array_chunk($districtwisegraph1[0],7,true));
+ $graphCount=count($districtwisegraph1[0]);
+ $loopCount;
+ if($districtwisegraph1%7==0){ $loopCount=7;}else{ $loopCount=8;}
+ $countArr1=count(array_chunk($districtwisegraph1[0],8,true));
  $countTotalArr1=count($districtwisegraph1[0]);
- $arrData1=array_chunk($districtwisegraph1[0],7,true);
- $arrData1_1=array_chunk($districtwisegraph1[1],7,true);
- $arrData1_2=array_chunk($districtwisegraph1[2],7,true);
- $arrData1_3=array_chunk($districtwisegraph1[3],7,true);
- $arrData1_4=array_chunk($districtwisegraph1[4],7,true);
+ $arrData1=array_chunk($districtwisegraph1[0],$loopCount,true);
+ $arrData1_1=array_chunk($districtwisegraph1[1],$loopCount,true);
+ $arrData1_2=array_chunk($districtwisegraph1[2],$loopCount,true);
+ $arrData1_3=array_chunk($districtwisegraph1[3],$loopCount,true);
+ $arrData1_4=array_chunk($districtwisegraph1[4],$loopCount,true);
  $dataCount1=array();
  $countInteration1=0;
  $y=0;
@@ -86,7 +89,7 @@
         xAxis: {
             categories: [
 			<?php 
-             for($r=0;$r<7;++$r){
+             for($r=0;$r<$loopCount;++$r){
 			   if(!empty($arrData1[$i][$y]['districtame'])){
 				  echo "'".$arrData1[$i][$y]['districtame']."'"; }?>,
              <?php $y++; 
