@@ -2057,11 +2057,11 @@ You would require at least 5 to 10 of your schoolmates in the Food audit team. T
                         <ul class="list-inline">
                           <li>
                             <label class="radio-inline text-gray">
-                            <input type="radio" name="Q9F2" onclick="ComputePackaged(1)" value="Y" <?php if (isset($data['Q9F2'])){ echo $data['Q9F2'] == 'Y' ? "checked" : "";} ?>> Yes </label>
+                            <input type="radio" name="Q9F2S" onclick="ComputePackaged(1)" value="Y" <?php if (isset($data['Q9F2S'])){ echo $data['Q9F2S'] == 'Y' ? "checked" : "";} ?>> Yes </label>
                           </li>
                           <li>
                             <label class="radio-inline text-gray">
-                            <input type="radio" name="Q9F2" onclick="ComputePackaged(2)" value="N" <?php if (isset($data['Q9F2'])){ echo $data['Q9F2'] == 'N' ? "checked" : "";} ?>/>
+                            <input type="radio" name="Q9F2S" onclick="ComputePackaged(2)" value="N" <?php if (isset($data['Q9F2S'])){ echo $data['Q9F2S'] == 'N' ? "checked" : "";} ?>/>
                             No </label>
                           </li>
                         </ul>
@@ -2107,10 +2107,10 @@ You would require at least 5 to 10 of your schoolmates in the Food audit team. T
                       <textarea
                                                                                                                     type="text"
                                                                                                                     rows="5"
-                                                                                                                    id="Q9F21"
-                                                                                                                    name="Q9F21"
-                                                                                                                    placeholder="<?php if (isset($data['Q9F21'])) echo $data['Q9F21'] ?>"
-                                                                                                                    value="<?php echo set_value('Q9F21'); ?>"></textarea>
+                                                                                                                    id="Q9F2"
+                                                                                                                    name="Q9F2"
+                                                                                                                    placeholder="<?php if (isset($data['Q9F2'])) echo $data['Q9F2'] ?>"
+                                                                                                                    value="<?php echo set_value('Q9F2'); ?>"></textarea>
                       <br>
                     </div>
                     <div class="form-group">
@@ -2800,7 +2800,7 @@ if($("input[name='Q9F1']:checked").length==0){
  e.preventDefault();
 }
 /*Q4 Does the school distribute packaged food items as rewards during schools events?*/
-if($("input[name='Q9F2']:checked").length==0){
+if($("input[name='Q9F2S']:checked").length==0){
  alert("Q4 Does the school distribute packaged food items as rewards during schools events?");
  e.preventDefault();
 }
@@ -2853,10 +2853,10 @@ if($("input[name='Q13F1']:checked").val()==="Y"){
  }
 }
 });
-
 $(document).ready(function(){
-  if($("input[name='Q9F2']:checked").val()==="Y"){
-    $("#Q9F2").css("display","block");
+  if($("input[name='Q9F2S']:checked").val()==="Y"){
+    $("#Q9F2").removeAttr("style");
+    $("#Q9F2").css("display","block!important");
   }
 });	
  </script>
