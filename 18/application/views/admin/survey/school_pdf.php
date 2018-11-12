@@ -114,6 +114,22 @@
                             ?>
           <?php echo (getFiled('Q2S1', $schoolUserID)) ? $arr1[getFiled('Q2S1', $schoolUserID)] : ""; ?> </p>
       </li>
+	  
+	  <li>
+        <p class="orange"><span>16</span><span> School Level:</span></p>
+        <p>
+          <?php
+                            $arr1 = array(
+                                '1' => 'Is your school a primary school (upto Class 5)',
+                                '2' => 'Is your school an elementary school (upto Class 8)',
+                                '3' => 'Is your school a secondary school (upto Class 10)',
+                                '4' => 'Is your school a higher secondary school (upto Class 12)',
+                            );
+                            ?>
+          <?php echo (getFiled('Q10G1', $schoolUserID)) ? $arr1[getFiled('Q10G1', $schoolUserID)] : ""; ?> </p>
+      </li>
+	  
+	  
     </ul>
   </div>
 </div>
@@ -3410,7 +3426,61 @@
         wastewater?</p>
       <p> <?php echo (getFiled('Q19W1', $schoolUserID) != "") ? (getFiled('Q19W1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
     </li>
+	 <?php if(strcmp(getFiled('Q19W1', $schoolUserID),'Y')==0){ ?>
+	<li>
+      <p class="orange"><span class="cube">17(a)(i)</span>Where does the water get treated?</p>
+      <p><?php if (getFiled('Q19W11', $schoolUserID) == 1):
+                        echo "Inside your school";
+                    elseif (getFiled('Q19W11', $schoolUserID) == 2):
+                        echo "Outside your school";
+                     endif;?></p>
+    </li>
+	 <?php } ?>
+	 
+	 <?php if(strcmp(getFiled('Q19W11', $schoolUserID),'1')==0){ ?>
+	<li>
+      <p class="orange"><span class="cube">17(a)(ii)</span>Who treats the wastewater outside your school?</p>
+      <p><?php if (getFiled('Q19W12', $schoolUserID) == 1):
+                        echo "Municipality";
+                    elseif (getFiled('Q19W12', $schoolUserID) == 2):
+                        echo "Physical Health Engineering Department (PHED) ";
+					elseif (getFiled('Q19W12', $schoolUserID) == 3):
+                        echo "Panchayat ";
+					elseif (getFiled('Q19W12', $schoolUserID) == 4):
+                        echo "Community driven initiative ";
+                     endif;?></p>
+    </li>
+	 <?php } ?>
+	 
+	<?php if(strcmp(getFiled('Q19W1', $schoolUserID),'N')==0){ ?>
+	
+	<li>
+      <p class="orange"><span class="cube">17(b)</span>Please specify the fate of wastewater?</p>
+      <p><?php
+                    if (getFiled('Q19W13', $schoolUserID) == 1):
+                        echo "Wastewater flows directly to the drains";
+                        echo "<br/>";
+                    endif;
+                    if (getFiled('Q19W131', $schoolUserID) == 1):
+                        echo "Used for groundwater recharge ";
+                        echo "<br/>";
+                    endif;
+                    if (getFiled('Q19W132', $schoolUserID) == 1):
+                        echo "Used for gardening and horticulture";
+                        echo "<br/>";
+                    endif;
+                    
+                    ?></p>
+    </li>
+	
+	<li>
+      <p class="orange"><span class="cube">17(b)(i)</span>Does your school buy treated waste water?</p>
+      <p> <?php echo (getFiled('Q19W14', $schoolUserID) != "") ? (getFiled('Q19W14', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
+    </li>
+	
+	<?php } ?>
     <li>
+   
       <p class="orange">
         <label><span class="cube">18</span>Does your school reuse the
         treated wastewater?</label>
