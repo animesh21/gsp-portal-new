@@ -198,6 +198,9 @@ header('Location: http://www.greenschoolsprogramme.org/audit/18/login/browser_ch
                                 $('#msgForget').html('<div class="alert alert-success">' +
                                         '<strong>&#10004; Success!</strong> New password successfully send to your email !.  <br/> Please Send Next Query After 15 Minutes & Do You Have Any Doubt Mail  support@greenschoolsprogramme.org OR CALL 011-4061600,' +
                                         '</div>');
+										 setTimeout(function () {
+                                location.reload();
+                            }, 2000);
 			      $.ajax({
                               url:'<?php echo base_url(); ?>setpassword-2017.php',
                               type: 'GET',
@@ -208,11 +211,17 @@ header('Location: http://www.greenschoolsprogramme.org/audit/18/login/browser_ch
                                 $('#msgForget').html('<div class="alert alert-danger">' +
                                         '<strong>&#x2716; Error!</strong> The email you have entered is not registered.' +
                                         '</div>');
+										 setTimeout(function () {
+                                location.reload();
+                            }, 2000);
                             }
 			    if (data == 24) {
                                 $('#msgForget').html('<div class="alert alert-danger">' +
                                         '<strong>&#x2716; Error!</strong> You Can Send Request For Forgetpassword Only Once In 24 Hours. <br/> Please Send Next Query After Half An Hour & Do You Have Any Doubt Mail  support@greenschoolsprogramme.org OR CALL 011-4061600' +
                                         '</div>');
+										 setTimeout(function () {
+                                location.reload();
+                            }, 2000);
                             }
                             setTimeout(function () {
                                 location.reload();
