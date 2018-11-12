@@ -2616,45 +2616,65 @@ $("#movenextbtn").click(function(e){
 });
 $("#movenextbtn").click(function(e){
 /*Q1 Total water consumption of your school:*/
-if($("input[name='Q4W1']").attr('placeholder')==""){
-  alert("Q1 Total water consumption of your school: Drinking");
-  e.preventDefault();
+if($("input[name='Q4W1']").attr('placeholder')=="" && $("input[name='Q4W1']").val()==""){
+  if($("input[name='Q4W1']").val()==""){
+   alert("Q1 Total water consumption of your school: Drinking");
+   e.preventDefault();
+  }
 }
-if($("input[name='Q4W2']").attr('placeholder')==""){
-  alert("Q1 Total water consumption of your school: Toilet flushing");
-  e.preventDefault();
+if($("input[name='Q4W2']").attr('placeholder')=="" && $("input[name='Q4W2']").val()==""){
+  if($("input[name='Q4W2']").val()==""){
+   alert("Q1 Total water consumption of your school: Toilet flushing");
+   e.preventDefault();
+  }
 }
-if($("input[name='Q4W3']").attr('placeholder')==""){
+if($("input[name='Q4W3']").attr('placeholder')=="" && $("input[name='Q4W3']").val()==""){
+ if($("input[name='Q4W3']").val()==""){
   alert("Q1 Total water consumption of your school: Personal cleaning");
   e.preventDefault();
+ }
 }
-if($("input[name='Q4W4']").attr('placeholder')==""){
+if($("input[name='Q4W4']").attr('placeholder')=="" && $("input[name='Q4W4']").val()==""){
+ if($("input[name='Q4W4']").val()==""){
   alert("Q1 Total water consumption of your school: Washing clothes");
   e.preventDefault();
+ }
 }
-if($("input[name='Q4W5']").attr('placeholder')==""){
+if($("input[name='Q4W5']").attr('placeholder')=="" && $("input[name='Q4W5']").val()==""){
+ if($("input[name='Q4W5']").val()==""){
   alert("Q1 Total water consumption of your school: Cooking");
   e.preventDefault();
+ }
 }
-if($("input[name='Q4W6']").attr('placeholder')==""){
+if($("input[name='Q4W6']").attr('placeholder')=="" && $("input[name='Q4W6']").val()==""){
+ if($("input[name='Q4W6']").val()==""){
   alert("Q1 Total water consumption of your school: Cleaning Utensils");
   e.preventDefault();
+ }
 }
-if($("input[name='Q4W7']").attr('placeholder')==""){
+if($("input[name='Q4W7']").attr('placeholder')=="" && $("input[name='Q4W7']").val()==""){
+ if($("input[name='Q4W7']").val()==""){ 
   alert("Q1 Total water consumption of your school: Washing Vegetables");
   e.preventDefault();
+ }
 }
-if($("input[name='Q4W8']").attr('placeholder')==""){
+if($("input[name='Q4W8']").attr('placeholder')=="" && $("input[name='Q4W8']").val()==""){
+ if($("input[name='Q4W8']").val()==""){  
   alert("Q1 Total water consumption of your school: Mopping floors");
   e.preventDefault();
+ }
 }
-if($("input[name='Q4W9']").attr('placeholder')==""){
+if($("input[name='Q4W9']").attr('placeholder')=="" && $("input[name='Q4W9']").val()==""){
+ if($("input[name='Q4W9']").val()==""){  
   alert("Q1 Total water consumption of your school: Gardening");
   e.preventDefault();
+ }
 }
-if($("input[name='Q4W10']").attr('placeholder')==""){
+if($("input[name='Q4W10']").attr('placeholder')=="" && $("input[name='Q4W10']").val()==""){
+ if($("input[name='Q4W10']").val()==""){  
   alert("Q1 Total water consumption of your school: Others");
   e.preventDefault();
+ }
 }
 /*Q2 Where does the water your school uses, come from? (please tick the correct options):*/
 if($("input[name='Q5W1']:checked").length==0 && $("input[name='Q5W2']:checked").length==0 && $("input[name='Q5W3']:checked").length==0 && $("input[name='Q5W4']:checked").length==0){
@@ -2672,39 +2692,53 @@ if($("input[name='Q8W2']:checked").length==0){
   e.preventDefault();
 }
 /*Q6 How many drinking water taps do you have?:*/
-if($("input[name='Q9W1']").attr('placeholder')==""){
-  alert("Q6 How many drinking water taps do you have?:");
-  e.preventDefault();
+if($("input[name='Q9W1']").attr('placeholder')=="" && $("input[name='Q9W1']").val()==""){
+  if($("input[name='Q9W1']").val()==""){
+   alert("Q6 How many drinking water taps do you have?:");
+   e.preventDefault();
+  }
 }
 /*Q7 How many hand pumps do you have?:*/
-if($("input[name='Q10W1']").attr('placeholder')==""){
-  alert("Q7 How many hand pumps do you have?:");
-  e.preventDefault();
+if($("input[name='Q10W1']").attr('placeholder')=="" && $("input[name='Q10W1']").val()==""){
+  if($("input[name='Q10W1']").val()==""){
+    alert("Q7 How many hand pumps do you have?:");
+    e.preventDefault();
+  }
 }
 /*Q8 How many ablution taps (taps used for washing hands only) do you have?:*/
-if($("input[name='Q11W1']").attr('placeholder')==""){
+if($("input[name='Q11W1']").attr('placeholder')=="" && $("input[name='Q11W1']").val()==""){
+ if($("input[name='Q11W1']").val()==""){ 
   alert("Q8 How many ablution taps (taps used for washing hands only) do you have?:");
   e.preventDefault();
+ }
 }
 /*Q8 How many ablution taps (taps used for washing hands only) do you have?:*/
-if($("input[name='Q11W1']").attr('placeholder')==""){
-  alert("Q8 How many ablution taps (taps used for washing hands only) do you have?:");
-  e.preventDefault();
+if($("input[name='Q11W1']").attr('placeholder')=="" && $("input[name='Q11W1']").val()==""){
+  if($("input[name='Q11W1']").val()==""){ 
+   alert("Q8 How many ablution taps (taps used for washing hands only) do you have?:");
+   e.preventDefault();
+  }
 }
 /*Q9 How many water closets (used for defecation and urination) do you have?:*/
 if($("input[name='Q13W1S1']").attr('placeholder')=="" ||  $("input[name='Q13W1S2']").attr('placeholder')=="" || $("input[name='Q13W1S3']").attr('placeholder')==""){
+if($("input[name='Q13W1S1']").val()=="" ||  $("input[name='Q13W1S2']").val()=="" || $("input[name='Q13W1S3']").val()==""){
   alert("Q9 How many water closets (used for defecation and urination) do you have?:");
   e.preventDefault();
+  }
 }
 /*Q10 How many urinals (strictly used for urination only) do you have?*/
-if($("input[name='Q14W1']").attr('placeholder')==""){
+if($("input[name='Q14W1']").attr('placeholder')=="" && $("input[name='Q14W1']").val()==""){
+  if($("input[name='Q14W1']").val()==""){
   alert("Q10 How many urinals (strictly used for urination only) do you have?");
   e.preventDefault();
+  }
 }
 /*Q11 How many other water outlets (example: taps in play fields, sprinklers, swimming pool) do you have?*/
-if($("input[name='Q15W1']").attr('placeholder')==""){
-  alert("Q11 How many other water outlets (example: taps in play fields, sprinklers, swimming pool) do you have?");
-  e.preventDefault();
+if($("input[name='Q15W1']").attr('placeholder')=="" && $("input[name='Q15W1']").val()==""){
+ if($("input[name='Q15W1']").val()==""){
+   alert("Q11 How many other water outlets (example: taps in play fields, sprinklers, swimming pool) do you have?");
+   e.preventDefault();
+  }
 }
 /*Q12 Is there a water storage system in place to supply water in the toilets?:*/
 if($("input[name='Q16W1']:checked").length==0){
@@ -2823,14 +2857,18 @@ if($("input[name='Q8W2S2']:checked").val()==="3"){
 /*********************************************************/
 if($("input[name='Q8W2S2S2']:checked").val()==="Y"){
 /*4(b)(2) A If yes, please provide: (Total number of storage tank (litres):) */
-  if($("input[name='Q8W2S2S3']").attr('placeholder')==""){
-   alert("4(b)(2) A If yes, please provide: (Total number of storage tank (litres):)?");
-   e.preventDefault();
+  if($("input[name='Q8W2S2S3']").attr('placeholder')=="" && $("input[name='Q8W2S2S3']").val()==""){
+   if($("input[name='Q8W2S2S3']").val()==""){
+    alert("4(b)(2) A If yes, please provide: (Total number of storage tank (litres):)?");
+    e.preventDefault();
+   }
   }
 /*4(b)(2) B If yes, please provide: (Total number of storage tank (litres):) */
-  if($("input[name='Q8W2S2S4']").attr('placeholder')==""){
+  if($("input[name='Q8W2S2S4']").attr('placeholder')=="" && $("input[name='Q8W2S2S4']").val()==""){
+  if($("input[name='Q8W2S2S4']").val()==""){
    alert("4(b)(2) B If yes, please provide: (Total capacity of each storage tank (litres):)?");
    e.preventDefault();
+   }
   }  
 }
 /*Q4(b)(3)Does your school have groundwater recharge structure?*/
