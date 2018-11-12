@@ -767,55 +767,79 @@ $("#movenextbtn").click(function(e){
 /************************************************************/
 $("#movenextbtn").click(function(e){
 /*Q1 Types of Area:*/
-if($("input[name='Q4L1']").attr('placeholder')==""){
-  alert("Q1 Types of Area: No. of Playgrounds");
-  e.preventDefault();
+if($("input[name='Q4L1']").attr('placeholder')=="" && $("input[name='Q4L1']").val()==""){
+ if($("input[name='Q4L1']").val()==""){ 
+   alert("Q1 Types of Area: No. of Playgrounds");
+   e.preventDefault();
+ }
 }
-if($("input[name='Q4L2']").attr('placeholder')==""){
-  alert("Q1 Types of Area: No. of Kachcha (unpaved) playgrounds with grass");
-  e.preventDefault();
+if($("input[name='Q4L2']").attr('placeholder')=="" && $("input[name='Q4L2']").val()==""){
+  if($("input[name='Q4L2']").val()==""){ 
+   alert("Q1 Types of Area: No. of Kachcha (unpaved) playgrounds with grass");
+   e.preventDefault();
+  }
 }
-if($("input[name='Q4L3']").attr('placeholder')==""){
-  alert("Q1 Types of Area: No. of Kachcha (unpaved) playgrounds with grass");
-  e.preventDefault();
+if($("input[name='Q4L3']").attr('placeholder')=="" && $("input[name='Q4L3']").val()==""){
+  if($("input[name='Q4L3']").val()==""){ 
+   alert("Q1 Types of Area: No. of Kachcha (unpaved) playgrounds with grass");
+   e.preventDefault();
+  }
 }
-if($("input[name='Q4L4']").attr('placeholder')==""){
+if($("input[name='Q4L4']").attr('placeholder')=="" && $("input[name='Q4L4']").val()==""){
+  if($("input[name='Q4L4']").val()==""){ 
+   alert("Q1 Types of Area: No. of Pucca (paved) playgrounds");
+   e.preventDefault();
+  }
+}
+if($("input[name='Q4L5']").attr('placeholder')=="" && $("input[name='Q4L5']").val()==""){
+ if($("input[name='Q4L1']").val()==""){  
   alert("Q1 Types of Area: No. of Pucca (paved) playgrounds");
   e.preventDefault();
+ }
 }
-if($("input[name='Q4L5']").attr('placeholder')==""){
-  alert("Q1 Types of Area: No. of Pucca (paved) playgrounds");
-  e.preventDefault();
-}
-if($("input[name='Q4L6']").attr('placeholder')==""){
+if($("input[name='Q4L6']").attr('placeholder')=="" && $("input[name='Q4L6']").val()==""){
+ if($("input[name='Q4L6']").val()==""){ 
   alert("Q1 Types of Area: No. of constructed buildings – Official");
   e.preventDefault();
+ }
 }
-if($("input[name='Q4L7']").attr('placeholder')==""){
+if($("input[name='Q4L7']").attr('placeholder')=="" && $("input[name='Q4L7']").val()==""){
+ if($("input[name='Q4L7']").val()==""){ 
   alert("Q1 Types of Area: No. of floors (does not include ground floor)");
   e.preventDefault();
+ }
 }
-if($("input[name='Q4L8']").attr('placeholder')==""){
+if($("input[name='Q4L8']").attr('placeholder')=="" && $("input[name='Q4L8']").val()==""){
+ if($("input[name='Q4L8']").val()==""){  
   alert("Q1 Types of Area: Rooftop/Terrace Gardens");
   e.preventDefault();
+ }
 }
 /**Q2 How many types of plants are there in your school?**/
-if($("input[name='Q5L1S1']").attr('placeholder')==""){
+if($("input[name='Q5L1S1']").attr('placeholder')=="" && $("input[name='Q5L1S1']").val()==""){
+ if($("input[name='Q5L1S1']").val()==""){
   alert("Q2 How many types of plants are there in your school?");
   e.preventDefault();
+  }
 }
 if($("input[name='Q5L1S2']").attr('placeholder')==""){
+  if($("input[name='Q5L1S2']").val()==""){
   alert("Q2 How many types of plants are there in your school?");
   e.preventDefault();
+  }
 }
 /**Q3 How many types of animals and birds are there in your school?**/
-if($("input[name='Q5L2S1']").attr('placeholder')==""){
-  alert("Q3 How many types of animals and birds are there in your school?");
-  e.preventDefault();
+if($("input[name='Q5L2S1']").attr('placeholder')=="" && $("input[name='Q5L2S1']").val()){
+   if($("input[name='Q5L2S1']").val()==""){
+      alert("Q3 How many types of animals and birds are there in your school?");
+      e.preventDefault();
+   }
 }
-if($("input[name='Q5L2S2']").attr('placeholder')==""){
+if($("input[name='Q5L2S2']").attr('placeholder')=="" && $("input[name='Q5L2S2']").val()==""){
+  if($("input[name='Q5L2S2']").val()==""){
   alert("Q3 How many types of animals and birds are there in your school?");
   e.preventDefault();
+  }
 }
 /**Q4 Do you use chemical-based pesticides in your school green cover?**/
 if($("input[name='Q6L1']:checked").length==0){
