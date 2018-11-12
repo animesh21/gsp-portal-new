@@ -2854,7 +2854,7 @@ if($("input[name='Q13F1']:checked").val()==="Y"){
 }
 });
 
-$(dcoument).ready(function(){
+$(document).ready(function(){
   if($("input[name='Q9F2']:checked").val()==="Y"){
     $("#Q9F2").css("display","block");
   }
