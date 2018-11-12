@@ -442,13 +442,13 @@ You would require at least 5 to 10 of your schoolmates in the Food audit team. T
     <ul class="list-inline">
       <li>
         <label class="radio-inline text-gray">
-        <input type="radio" id="Q4F1_1" onclick="FoodQ4F1(1)" name="Q4F1"
+        <input type="radio" id="Q4F1_1" onClick="FoodQ4F1(1)" name="Q4F1"
                                        value="<?php echo set_value('Q4F1', 'Y') ?>" <?php if (isset($data['Q4F1'])) echo $data['Q4F1'] == 'Y' ? "checked" : "" ?>>
         Yes </label>
       </li>
       <li>
         <label class="radio-inline text-gray">
-        <input type="radio" id="Q4F1_2" onclick="FoodQ4F1(2)" name="Q4F1"
+        <input type="radio" id="Q4F1_2" onClick="FoodQ4F1(2)" name="Q4F1"
                                        value="<?php echo set_value('Q4F1', 'N') ?>" <?php if (isset($data['Q4F1'])) echo $data['Q4F1'] == 'N' ? "checked" : "" ?> >
         No </label>
       </li>
@@ -460,13 +460,13 @@ You would require at least 5 to 10 of your schoolmates in the Food audit team. T
   <ul class="list-inline">
     <li>
       <label class="radio-inline text-gray">
-      <input type="radio" name="Q5F1" onclick="MealsToggle(1)"
+      <input type="radio" name="Q5F1" onClick="MealsToggle(1)"
                                    value="<?php echo set_value('Q5F1', 'Y') ?>" <?php if (isset($data['Q5F1'])) echo $data['Q5F1'] == 'Y' ? "checked" : "" ?>>
       Yes </label>
     </li>
     <li>
       <label class="radio-inline text-gray">
-      <input type="radio" name="Q5F1" onclick="MealsToggle(2)"
+      <input type="radio" name="Q5F1" onClick="MealsToggle(2)"
                                    value="<?php echo set_value('Q5F1', 'N') ?>" <?php if (isset($data['Q5F1'])) echo $data['Q5F1'] == 'N' ? "checked" : "" ?>>
       No </label>
     </li>
@@ -596,13 +596,13 @@ You would require at least 5 to 10 of your schoolmates in the Food audit team. T
   <ul class="list-inline">
     <li>
       <label class="radio-inline text-gray">
-      <input type="radio" name="Q5F1S1" onclick="MealsToggletwo(1)"
+      <input type="radio" name="Q5F1S1" onClick="MealsToggletwo(1)"
                                                            value="<?php echo set_value('Q5F1S1', 'Y') ?>" <?php if (isset($data['Q5F1S1'])) echo $data['Q5F1S1'] == 'Y' ? "checked" : "" ?>>
       Yes </label>
     </li>
     <li>
       <label class="radio-inline text-gray">
-      <input type="radio" name="Q5F1S1" onclick="MealsToggletwo(2)"
+      <input type="radio" name="Q5F1S1" onClick="MealsToggletwo(2)"
                                                            value="<?php echo set_value('Q5F1S1', 'N') ?>" <?php if (isset($data['Q5F1S1'])) echo $data['Q5F1S1'] == 'N' ? "checked" : "" ?>>
       No </label>
     </li>
@@ -2114,10 +2114,10 @@ You would require at least 5 to 10 of your schoolmates in the Food audit team. T
                       <textarea
                                                                                                                     type="text"
                                                                                                                     rows="5"
-                                                                                                                    id="Q9F2"
-                                                                                                                    name="Q9F2"
-                                                                                                                    placeholder="<?php if (isset($data['Q9F2'])) echo $data['Q9F2'] ?>"
-                                                                                                                    value="<?php echo set_value('Q9F2'); ?>"></textarea>
+                                                                                                                    id="Q9F21"
+                                                                                                                    name="Q9F21"
+                                                                                                                    placeholder="<?php if (isset($data['Q9F21'])) echo $data['Q9F21'] ?>"
+                                                                                                                    value="<?php echo set_value('Q9F21'); ?>"></textarea>
                       <br>
                     </div>
                     <div class="form-group">
