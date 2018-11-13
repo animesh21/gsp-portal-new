@@ -2833,9 +2833,11 @@ if($("input[name='Q13F1']:checked").length==0){
 }
 /*Q5(a)Please provide details:*/
 if($("input[name='Q10F1']:checked").val()==="Y"){
-  if($("input[name='Q10F2']:checked").length==0){
- alert("Q5(a) Please provide the names: ");
- e.preventDefault();
+  if($("input[name='Q10F2']").val()=="" && $("input[name='Q10F2']").attr("placeholder")==""){
+    if($("input[name='Q10F2']").val()==""){  
+    alert("Q5(a) Please provide the names: ");
+    e.preventDefault();
+   }
  }
 }
 /*Q6(a)Please provide details:*/
