@@ -37,7 +37,7 @@
   <h1>WATER <span style="text-transform:capitalize">(Primary)</span> <small class="pull-right" style="position: relative;
     top: -28px;
     font-weight: bolder;"><i class="h6"><strong>If the new changes are not saved, please press Ctrl+F5</strong></i></small></h1>
-  <div class="video"> <a class="lptext" href="#" data-toggle="modal" data-target="#videoModal"><img src="http://greenschoolsprogramme.org/audit2015/upload/templates/tfr_responsive/images/video-icon.png" style="width: 45px; height: 40px; margin-top:47px;"></a></div>
+  <div class="video"> <a class="lptext" href="#" data-toggle="modal" data-target="#videoModal"><img src="<?php echo base_url(); ?>assets/img/video-icon.png" style="width: 45px; height: 40px; margin-top:47px;"></a></div>
 </div>
 <br>
 To understand water, it is important to know the source of water in your school premise. As you know, most cities in India have to deal with depleting water supply, marked by falling ground water levels, vanishing water bodies, severe pollution and urban floods. With their own supplies drying up, cities are forced to source water from further and further away. This is expensive. The questions below will help students to understand where their water is coming from – at a cost. <br>
