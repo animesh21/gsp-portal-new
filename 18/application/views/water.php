@@ -838,13 +838,11 @@ To understand water, it is important to know the source of water in your school 
     </div>
     <div class="form-group">
       <label class="radio-inline text-gray col-xs-10"> Do all tanks in the school have
-      float valves installed to stop overflow? 
-	   <audio controls id="FLOATVALVES" class="audio hide">
-     <source src="<?php echo base_url(); ?>assets/audio-files/Float Valve.MP3" type="audio/mpeg">
-   Your browser does not support the audio element.
-  </audio>
-        <a class="btn" id="btn" style="background:#e86549; color:#000000;">Play / Pause</a>
-	  </label>
+      float valves installed to stop overflow?
+      <audio controls id="FLOATVALVES" class="audio hide">
+        <source src="<?php echo base_url(); ?>assets/audio-files/Float Valve.MP3" type="audio/mpeg">
+        Your browser does not support the audio element. </audio>
+      <a class="btn" id="btn" style="background:#e86549; color:#000000;">Play / Pause</a> </label>
       <label class="radio-inline text-gray">
       <input type="radio" name="Q8W1S3"
                                                value="<?php echo set_value('Q8W1S3', 'Y') ?>" <?php if (isset($data['Q8W1S3'])) echo $data['Q8W1S3'] == 'Y' ? "checked" : "" ?>>
@@ -856,13 +854,11 @@ To understand water, it is important to know the source of water in your school 
     </div>
     <div class="form-group">
       <label class="radio-inline text-gray col-xs-10"> Do the drinking water points have
-      spill proof taps to check overflow? 
-	   <audio controls id="SPILLPROOFTAPS" class="audio hide">
-   <source src="<?php echo base_url(); ?>assets/audio-files/Spill proof taps.MP3" type="audio/mpeg">
-   Your browser does not support the audio element.
-  </audio>
-        <a class="btn" id="btn1" style="background:#e86549; color:#000000;">Play / Pause</a>
-	  </label>
+      spill proof taps to check overflow?
+      <audio controls id="SPILLPROOFTAPS" class="audio hide">
+        <source src="<?php echo base_url(); ?>assets/audio-files/Spill proof taps.MP3" type="audio/mpeg">
+        Your browser does not support the audio element. </audio>
+      <a class="btn" id="btn1" style="background:#e86549; color:#000000;">Play / Pause</a> </label>
       <label class="radio-inline text-gray">
       <input type="radio" name="Q8W1S4"
                                                value="<?php echo set_value('Q8W1S4', 'Y') ?>" <?php if (isset($data['Q8W1S4'])) echo $data['Q8W1S4'] == 'Y' ? "checked" : "" ?>>
@@ -886,13 +882,11 @@ To understand water, it is important to know the source of water in your school 
     </div>
     <div class="form-group">
       <label class="radio-inline text-gray col-xs-10"> Are dual flush systems installed in
-      the toilets? 
-	   <audio controls id="DUALFLUSHTOILET" class="audio hide">
-   <source src="<?php echo base_url(); ?>assets/audio-files/Dual flush Toilet.MP3" type="audio/mpeg">
-   Your browser does not support the audio element.
-  </audio>
-        <a class="btn" id="btn2" style="background:#e86549; color:#000000;">Play / Pause</a>
-	  </label>
+      the toilets?
+      <audio controls id="DUALFLUSHTOILET" class="audio hide">
+        <source src="<?php echo base_url(); ?>assets/audio-files/Dual flush Toilet.MP3" type="audio/mpeg">
+        Your browser does not support the audio element. </audio>
+      <a class="btn" id="btn2" style="background:#e86549; color:#000000;">Play / Pause</a> </label>
       <label class="radio-inline text-gray">
       <input type="radio" name="Q8W1S6"
                                                value="<?php echo set_value('Q8W1S6', 'Y') ?>" <?php if (isset($data['Q8W1S6'])) echo $data['Q8W1S6'] == 'Y' ? "checked" : "" ?>>
@@ -971,10 +965,9 @@ To understand water, it is important to know the source of water in your school 
                                                value="<?php echo set_value('Q8W1S11', 'N') ?>" <?php if (isset($data['Q8W1S11'])) echo $data['Q8W1S11'] == 'N' ? "checked" : "" ?>/>
       No </label>
     </div>
-	<div class="form-group">
+    <div class="form-group">
       <label class="radio-inline text-gray col-xs-10"> Provision for storage of leftover water in bottles at water coolers
-Any other step taken for water conservation? (if Yes, please specify): 
- </label>
+      Any other step taken for water conservation? (if Yes, please specify): </label>
       <label class="radio-inline text-gray">
       <input type="radio" name="Q8W1S12"
                                                value="<?php echo set_value('Q8W1S12', 'Y') ?>" <?php if (isset($data['Q8W1S12'])) echo $data['Q8W1S12'] == 'Y' ? "checked" : "" ?>>
@@ -985,9 +978,10 @@ Any other step taken for water conservation? (if Yes, please specify):
       No </label>
     </div>
     <br/>
-	<div class="form-group question_Q8W1S12 hide">
+    <div class="form-group question_Q8W1S12 hide">
       <label class="radio-inline text-gray col-xs-12" style="padding-bottom:12px; z-index: 10;">
-	   <textarea class="form-control" id="Q8W1S123443" name="Q8W1S123443"><?php if(isset($data['Q8W1S123443'])){ echo $data['Q8W1S123443'];} ?></textarea>
+      <textarea class="form-control" id="Q8W1S123443" name="Q8W1S123443"><?php if(isset($data['Q8W1S123443'])){ echo $data['Q8W1S123443'];} ?>
+</textarea>
       </label>
     </div>
   </div>
@@ -1009,10 +1003,10 @@ Any other step taken for water conservation? (if Yes, please specify):
 <table width="100%" class="question uploadedfiles">
   <thead>
     <tr>
-       <!-- <th>Image</th>	    -->
-        <th>File name</th>
-        <th>Delete</th>
-	    <th>Download</th>
+      <!-- <th>Image</th>	    -->
+      <th>File name</th>
+      <th>Delete</th>
+      <th>Download</th>
     </tr>
   </thead>
   <tbody>
@@ -1023,16 +1017,19 @@ Any other step taken for water conservation? (if Yes, please specify):
            // $count = count($array);
            // $extension = $array[$count-1];
             ?>
-       <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>	    
-    <!--  <td> <img style="width:62px; height:46px;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $f->file_name ?>" class="img-responsive" /></td>	-->
-       <?php //}else{ ?>
-	<!--<td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>-->
-      <?php //}?>   
-   <?php $name = str_replace(" ", "_", $f->name . "_Task_4_Supporting_docs_"); ?>
+      <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
+      <!--  <td> <img style="width:62px; height:46px;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $f->
+      file_name ?>" class="img-responsive" />
+      </td>
+      -->
+      <?php //}else{ ?>
+      <!--<td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>-->
+      <?php //}?>
+      <?php $name = str_replace(" ", "_", $f->name . "_Task_4_Supporting_docs_"); ?>
       <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
       <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
       <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
-   </tr>
+    </tr>
     <?php } ?>
   </tbody>
 </table>
@@ -1306,8 +1303,7 @@ Any other step taken for water conservation? (if Yes, please specify):
   <div class="form-group">
     <label class="text-gray"> Total number of storage tank (litres): </label>
     <input class="form-control space-textbox" id="Q8W2S2S3A" type="number" name="Q8W2S2S3"
-                                       value="<?php echo set_value('Q8W2S2S3') ?>"
-                                       placeholder="<?php if (isset($data['Q8W2S2S3'])) echo $data['Q8W2S2S3'] ?>">
+                                       value="<?php if (isset($data['Q8W2S2S3'])) echo $data['Q8W2S2S3']; ?>" placeholder="<?php if (isset($data['Q8W2S2S3'])) echo $data['Q8W2S2S3']; ?>">
   </div>
 </div>
 <div class="form-group" id="Q8W2S2S4"
@@ -1329,8 +1325,7 @@ Any other step taken for water conservation? (if Yes, please specify):
     <label class="radio-inline text-gray"> Total capacity of each storage tank
     (litres): </label>
     <input class="form-control space-textbox" id="Q8W2S2S4A" type="number" name="Q8W2S2S4"
-                                       value="<?php echo set_value('Q8W2S2S4') ?>"
-                                       placeholder="<?php if (isset($data['Q8W2S2S4'])) echo $data['Q8W2S2S4'] ?>">
+ value="<?php if (isset($data['Q8W2S2S4'])) echo $data['Q8W2S2S4']; ?>" placeholder="<?php if (isset($data['Q8W2S2S4'])) echo $data['Q8W2S2S4']; ?>">
   </div>
 </div>
 <div class="form-group" id="Q8W2S2S5"
@@ -1446,7 +1441,7 @@ Any other step taken for water conservation? (if Yes, please specify):
                             }
                             ?>
 
-                        >						
+                        >
   <label><span class="cube">6(b)(3)</span>Does your school have groundwater recharge
   structure? </label>
   <div class="form-group">
@@ -1479,8 +1474,7 @@ Any other step taken for water conservation? (if Yes, please specify):
     <label class="radio-inline text-gray"> Please share the total number of groundwater
     recharge structures </label>
     <input class="form-control space-textbox" id="Q8W2S2S8A" type="number" name="Q8W2S2S8"
-                                       value="<?php echo set_value('Q8W2S2S8') ?>"
-                                       placeholder="<?php if (isset($data['Q8W2S2S8'])) echo $data['Q8W2S2S8'] ?>">
+value="<?php if (isset($data['Q8W2S2S8'])) echo $data['Q8W2S2S8']; ?>" placeholder="<?php if (isset($data['Q8W2S2S8'])) echo $data['Q8W2S2S8']; ?>">
   </div>
 </div>
 <div class="form-group" id="Q8W2S2S9"
@@ -1505,56 +1499,46 @@ Any other step taken for water conservation? (if Yes, please specify):
         <input type="checkbox" name="Q8W2S2S91"
                                                value="<?php echo set_value('Q8W2S2S91', 1); ?>" <?php if (isset($data['Q8W2S2S91'])) echo set_checkbox('Q8W2S2S91', '1', true); ?> />
         <label col-xs-4>Percolation pit/tank
-		 <audio controls id="PERCOLATIONPIT" class="audio hide">
-		<source src="<?php echo base_url(); ?>assets/audio-files/Percolation pit.MP3" type="audio/mpeg">
-   Your browser does not support the audio element.
-  </audio>
-   <a class="btn" id="btn4" style="background:#e86549; color:#000000;">Play / Pause</a>
-		</label>
+        <audio controls id="PERCOLATIONPIT" class="audio hide">
+          <source src="<?php echo base_url(); ?>assets/audio-files/Percolation pit.MP3" type="audio/mpeg">
+          Your browser does not support the audio element. </audio>
+        <a class="btn" id="btn4" style="background:#e86549; color:#000000;">Play / Pause</a> </label>
       </li>
       <li>
         <input type="checkbox" id="Q8W2S2S92" name="Q8W2S2S92"
                                                value="<?php echo set_value('Q8W2S2S92', 1); ?>" <?php if (isset($data['Q8W2S2S92']))  echo set_checkbox('Q8W2S2S92', '1', true); ?> />
         <label class="text-gray">Recharge through abandoned dug well
-		 <audio controls id="DUGWELL" class="audio hide">
-		 <source src="<?php echo base_url(); ?>assets/audio-files/dug well.MP3" type="audio/mpeg">
-   Your browser does not support the audio element.
-  </audio>
-   <a class="btn" id="btn5" style="background:#e86549; color:#000000;">Play / Pause</a>
-		</label>
+        <audio controls id="DUGWELL" class="audio hide">
+          <source src="<?php echo base_url(); ?>assets/audio-files/dug well.MP3" type="audio/mpeg">
+          Your browser does not support the audio element. </audio>
+        <a class="btn" id="btn5" style="background:#e86549; color:#000000;">Play / Pause</a> </label>
       </li>
       <li>
         <input type="checkbox" id="Q8W2S2S93" name="Q8W2S2S93"
                                                value="<?php echo set_value('Q8W2S2S93', 1); ?>" <?php if (isset($data['Q8W2S2S93'])) echo set_checkbox('Q8W2S2S93', 1, true); ?>/>
         <label class="text-gray">Recharge through abandoned tube well/bore well
-		<audio controls id="TUBEWELL" class="audio hide">
-		 <source src="<?php echo base_url(); ?>assets/audio-files/tube well.MP3" type="audio/mpeg">
-   Your browser does not support the audio element.
-  </audio>
-   <a class="btn" id="btn6" style="background:#e86549; color:#000000;">Play / Pause</a>
-		</label>
+        <audio controls id="TUBEWELL" class="audio hide">
+          <source src="<?php echo base_url(); ?>assets/audio-files/tube well.MP3" type="audio/mpeg">
+          Your browser does not support the audio element. </audio>
+        <a class="btn" id="btn6" style="background:#e86549; color:#000000;">Play / Pause</a> </label>
       </li>
       <li>
         <input type="checkbox" name="Q8W2S2S94"
                                                value="<?php echo set_value('Q8W2S2S94', 1); ?>" <?php if (isset($data['Q8W2S2S94'])) echo set_checkbox('Q8W2S2S94', '1', true); ?>/>
         <label class="text-gray">Recharge pits
-		  <audio controls id="RECHARGEPIT" class="audio hide">
-		 <source src="<?php echo base_url(); ?>assets/audio-files/Recharge Pit.MP3" type="audio/mpeg">
-   Your browser does not support the audio element.
-  </audio>
-   <a class="btn" id="btn7" style="background:#e86549; color:#000000;">Play / Pause</a>
-		</label>
+        <audio controls id="RECHARGEPIT" class="audio hide">
+          <source src="<?php echo base_url(); ?>assets/audio-files/Recharge Pit.MP3" type="audio/mpeg">
+          Your browser does not support the audio element. </audio>
+        <a class="btn" id="btn7" style="background:#e86549; color:#000000;">Play / Pause</a> </label>
       </li>
       <li>
         <input type="checkbox" name="Q8W2S2S95"
                                                value="<?php echo set_value('Q8W2S2S95', 1); ?>" <?php if (isset($data['Q8W2S2S95'])) echo set_checkbox('Q8W2S2S95', '1', true); ?>/>
         <label class="text-gray">Recharge trenches
-			 <audio controls id="RECHARGETRENCHES" class="audio hide">
-		 <source src="<?php echo base_url(); ?>assets/audio-files/Recharge Trench.MP3" type="audio/mpeg">
-   Your browser does not support the audio element.
-  </audio>
-   <a class="btn" id="btn8" style="background:#e86549; color:#000000;">Play / Pause</a>
-		</label>
+        <audio controls id="RECHARGETRENCHES" class="audio hide">
+          <source src="<?php echo base_url(); ?>assets/audio-files/Recharge Trench.MP3" type="audio/mpeg">
+          Your browser does not support the audio element. </audio>
+        <a class="btn" id="btn8" style="background:#e86549; color:#000000;">Play / Pause</a> </label>
       </li>
       <li>
         <input type="checkbox" name="Q8W2S2S96"
@@ -1565,12 +1549,10 @@ Any other step taken for water conservation? (if Yes, please specify):
         <input type="checkbox" name="Q8W2S2S97"
                                                value="<?php echo set_value('Q8W2S2S97', 1); ?>" <?php if (isset($data['Q8W2S2S97'])) echo set_checkbox('Q8W2S2S97', '1', true); ?>/>
         <label class="text-gray">Soak pit
-		  <audio controls id="SOAKPIT" class="audio hide">
-		 <source src="<?php echo base_url(); ?>assets/audio-files/Soak Pit.MP3" type="audio/mpeg">
-   Your browser does not support the audio element.
-  </audio>
-          <a class="btn" id="btn9" style="background:#e86549; color:#000000;">Play / Pause</a>
-		</label>
+        <audio controls id="SOAKPIT" class="audio hide">
+          <source src="<?php echo base_url(); ?>assets/audio-files/Soak Pit.MP3" type="audio/mpeg">
+          Your browser does not support the audio element. </audio>
+        <a class="btn" id="btn9" style="background:#e86549; color:#000000;">Play / Pause</a> </label>
       </li>
     </ul>
   </div>
@@ -1722,46 +1704,38 @@ Any other step taken for water conservation? (if Yes, please specify):
         <input type="checkbox" name="Q8W2S31"
                                                value="<?php echo set_value('Q8W2S31', 1); ?>" <?php if (isset($data['Q8W2S31'])) if ($data['Q8W2S31'] == 1) echo set_checkbox('Q8W2S31', '1', true); ?> />
         <label class="text-gray">Conduits
-		 <audio controls id="CONDUITS" class="audio hide">
-		 <source src="<?php echo base_url(); ?>assets/audio-files/Conduits.MP3" type="audio/mpeg">
-   Your browser does not support the audio element.
-  </audio>
-          <a class="btn" id="btn10" style="background:#e86549; color:#000000;">Play / Pause</a>
-		</label>
+        <audio controls id="CONDUITS" class="audio hide">
+          <source src="<?php echo base_url(); ?>assets/audio-files/Conduits.MP3" type="audio/mpeg">
+          Your browser does not support the audio element. </audio>
+        <a class="btn" id="btn10" style="background:#e86549; color:#000000;">Play / Pause</a> </label>
       </li>
       <li>
         <input type="checkbox" id="Q8W2S32" name="Q8W2S32"
                                                value="<?php echo set_value('Q8W2S32', 1); ?>" <?php if (isset($data['Q8W2S32'])) if ($data['Q8W2S32'] == 1) echo set_checkbox('Q8W2S32', '1', true); ?> />
         <label class="text-gray">Gutters
-		 <audio controls id="GUTTERS" class="audio hide">
-		 <source src="<?php echo base_url(); ?>assets/audio-files/Gutters.MP3" type="audio/mpeg">
-   Your browser does not support the audio element.
-  </audio>
-          <a class="btn" id="btn11" style="background:#e86549; color:#000000;">Play / Pause</a>
-		</label>
+        <audio controls id="GUTTERS" class="audio hide">
+          <source src="<?php echo base_url(); ?>assets/audio-files/Gutters.MP3" type="audio/mpeg">
+          Your browser does not support the audio element. </audio>
+        <a class="btn" id="btn11" style="background:#e86549; color:#000000;">Play / Pause</a> </label>
       </li>
       <li>
         <input type="checkbox" id="Q8W2S33" onClick="HarvestingStructure()"
                                                name="Q8W2S33"
                                                value="<?php echo set_value('Q8W2S33', 1); ?>" <?php if (isset($data['Q8W2S33'])) if ($data['Q8W2S33'] == 1) echo set_checkbox('Q8W2S33', 1, true); ?>/>
         <label class="text-gray">Filter unit
-		 <audio controls id="FILTERUNIT" class="audio hide">
-		 <source src="<?php echo base_url(); ?>assets/audio-files/Filter Unit.MP3" type="audio/mpeg">
-   Your browser does not support the audio element.
-  </audio>
-          <a class="btn" id="btn12" style="background:#e86549; color:#000000;">Play / Pause</a>
-		</label>
+        <audio controls id="FILTERUNIT" class="audio hide">
+          <source src="<?php echo base_url(); ?>assets/audio-files/Filter Unit.MP3" type="audio/mpeg">
+          Your browser does not support the audio element. </audio>
+        <a class="btn" id="btn12" style="background:#e86549; color:#000000;">Play / Pause</a> </label>
       </li>
       <li>
         <input type="checkbox" name="Q8W2S34"
                                                value="<?php echo set_value('Q8W2S34', 1); ?>" <?php if (isset($data['Q8W2S34'])) if ($data['Q8W2S34'] == 1) echo set_checkbox('Q8W2S34', '1', true); ?>/>
         <label class="text-gray">First flush
-		 <audio controls id="FIRSTFLUSH" class="audio hide">
-		 <source src="<?php echo base_url(); ?>assets/audio-files/first Flush.MP3" type="audio/mpeg">
-   Your browser does not support the audio element.
-  </audio>
-          <a class="btn" id="btn13" style="background:#e86549; color:#000000;">Play / Pause</a>
-		</label>
+        <audio controls id="FIRSTFLUSH" class="audio hide">
+          <source src="<?php echo base_url(); ?>assets/audio-files/first Flush.MP3" type="audio/mpeg">
+          Your browser does not support the audio element. </audio>
+        <a class="btn" id="btn13" style="background:#e86549; color:#000000;">Play / Pause</a> </label>
       </li>
       <li>
         <input type="checkbox" name="Q8W2S35"
@@ -1772,12 +1746,10 @@ Any other step taken for water conservation? (if Yes, please specify):
         <input type="checkbox" name="Q8W2S36"
                                                value="<?php echo set_value('Q8W2S36', 1); ?>" <?php if (isset($data['Q8W2S36'])) if ($data['Q8W2S36'] == 1) echo set_checkbox('Q8W2S36', '1', true); ?>/>
         <label class="text-gray">Collection sump
-		 <audio controls id="SUMP" class="audio hide">
-		 <source src="<?php echo base_url(); ?>assets/audio-files/Sump.MP3" type="audio/mpeg">
-   Your browser does not support the audio element.
-  </audio>
-          <a class="btn" id="btn14" style="background:#e86549; color:#000000;">Play / Pause</a>
-		</label>
+        <audio controls id="SUMP" class="audio hide">
+          <source src="<?php echo base_url(); ?>assets/audio-files/Sump.MP3" type="audio/mpeg">
+          Your browser does not support the audio element. </audio>
+        <a class="btn" id="btn14" style="background:#e86549; color:#000000;">Play / Pause</a> </label>
       </li>
       <li>
         <input type="checkbox" name="Q8W2S37"
@@ -1788,12 +1760,10 @@ Any other step taken for water conservation? (if Yes, please specify):
         <input type="checkbox" name="Q8W2S38"
                                                value="<?php echo set_value('Q8W2S38', 1); ?>" <?php if (isset($data['Q8W2S38'])) if ($data['Q8W2S38'] == 1) echo set_checkbox('Q8W2S38', '1', true); ?>/>
         <label class="text-gray">Recharge structure
-		 <audio controls id="RECHARGESTRUCTURES" class="audio hide">
-		 <source src="<?php echo base_url(); ?>assets/audio-files/Recharge structures.MP3" type="audio/mpeg">
-   Your browser does not support the audio element.
-  </audio>
-          <a class="btn" id="btn15" style="background:#e86549; color:#000000;">Play / Pause</a>
-		</label>
+        <audio controls id="RECHARGESTRUCTURES" class="audio hide">
+          <source src="<?php echo base_url(); ?>assets/audio-files/Recharge structures.MP3" type="audio/mpeg">
+          Your browser does not support the audio element. </audio>
+        <a class="btn" id="btn15" style="background:#e86549; color:#000000;">Play / Pause</a> </label>
       </li>
     </ul>
   </div>
@@ -1948,27 +1918,30 @@ Any other step taken for water conservation? (if Yes, please specify):
         <!--<th>Image</th>	    -->
         <th>File name</th>
         <th>Delete</th>
-	   <th>Download</th>
+        <th>Download</th>
       </tr>
     </thead>
     <tbody>
       <?php foreach ($waterTreatment as $f) { ?>
       <tr id="index<?php echo $f->id; ?>">
-	  <?php 
+        <?php 
             //$array = explode('.',$f->file_name); 
             //$count = count($array);
             //$extension = $array[$count-1];
             ?>
-       <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>    
-	<!--<td> <img style="width:62px; height:46px;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $f->file_name ?>" class="img-responsive" /></td>-->
-       <?php //}else{ ?>
-	<!--<td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>-->
-      <?php //}?>
+        <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
+        <!--<td> <img style="width:62px; height:46px;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $f->
+        file_name ?>" class="img-responsive" />
+        </td>
+        -->
+        <?php //}else{ ?>
+        <!--<td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>-->
+        <?php //}?>
         <?php $name = str_replace(" ", "_", $f->name . "_Water_Treatment_Process_"); ?>
         <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
         <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
         <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
-		</tr>
+      </tr>
       <?php } ?>
     </tbody>
   </table>
@@ -2597,12 +2570,10 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
   <div class="form-group">
     <label class="radio-inline text-gray">
     <input type="radio" name="Q19W11" value="<?php echo set_value('Q19W11', '1') ?>" <?php if (isset($data['Q19W11'])) echo $data['Q19W11'] == '1' ? "checked" : "" ?>>
-   Inside your school  </label>
+    Inside your school </label>
     <label class="radio-inline text-gray">
     <input type="radio" name="Q19W11" value="<?php echo set_value('Q19W11', '2') ?>" <?php if (isset($data['Q19W11'])) echo $data['Q19W11'] == '2' ? "checked" : "" ?>>
-    Outside your school
-
- </label>
+    Outside your school </label>
   </div>
 </div>
 <div class="form-group hide" id="new_question17_a_ii">
@@ -2610,13 +2581,13 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
   <div class="form-group">
     <label class="radio-inline text-gray">
     <input type="radio" name="Q19W12" value="<?php echo set_value('Q19W12', '1') ?>" <?php if (isset($data['Q19W12'])) echo $data['Q19W12'] == '1' ? "checked" : "" ?>>
-  Municipality </label>
+    Municipality </label>
     <label class="radio-inline text-gray">
     <input type="radio" name="Q19W12" value="<?php echo set_value('Q19W12', '2') ?>" <?php if (isset($data['Q19W12'])) echo $data['Q19W12'] == '2' ? "checked" : "" ?>>
-  Physical Health Engineering Department (PHED)</label>
-	<label class="radio-inline text-gray">
+    Physical Health Engineering Department (PHED)</label>
+    <label class="radio-inline text-gray">
     <input type="radio" name="Q19W12" value="<?php echo set_value('Q19W12', '1') ?>" <?php if (isset($data['Q19W12'])) echo $data['Q19W12'] == '1' ? "checked" : "" ?>>
-  Panchayat  </label>
+    Panchayat </label>
     <label class="radio-inline text-gray">
     <input type="radio" name="Q19W12" value="<?php echo set_value('Q19W12', '2') ?>" <?php if (isset($data['Q19W12'])) echo $data['Q19W12'] == '2' ? "checked" : "" ?>>
     Community driven initiative</label>
@@ -2627,54 +2598,54 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
   <div class="form-group">
     <label class="radio-inline text-gray">
     <input type="checkbox" name="Q19W13" value="<?php echo set_value('Q19W13', '1') ?>" <?php if (isset($data['Q19W13'])) echo $data['Q19W13'] == '1' ? "checked" : "" ?>>
- Wastewater flows directly to the drains </label>
+    Wastewater flows directly to the drains </label>
     <label class="radio-inline text-gray">
     <input type="checkbox" name="Q19W131" value="<?php echo set_value('Q19W131', '2') ?>" <?php if (isset($data['Q19W131'])) echo $data['Q19W131'] == '2' ? "checked" : "" ?>>
- Used for groundwater recharge</label>
-	<label class="radio-inline text-gray">
+    Used for groundwater recharge</label>
+    <label class="radio-inline text-gray">
     <input type="checkbox" name="Q19W132" value="<?php echo set_value('Q19W132', '3') ?>" <?php if (isset($data['Q19W132'])) echo $data['Q19W132'] == '3' ? "checked" : "" ?>>
-  Used for gardening and horticulture  </label>
+    Used for gardening and horticulture </label>
   </div>
 </div>
 <div class="form-group hide" id="new_question17_b_i">
-  <label class="control-label"><span class="cube">17(b)(i)</span>Does your school buy treated waste water?  </label>
+  <label class="control-label"><span class="cube">17(b)(i)</span>Does your school buy treated waste water? </label>
   <div class="form-group">
     <label class="radio-inline text-gray">
     <input type="radio" name="Q19W14" value="<?php echo set_value('Q19W14', 'Y') ?>" <?php if (isset($data['Q19W14'])) echo $data['Q19W14'] == 'Y' ? "checked" : "" ?>>
- Yes</label>
+    Yes</label>
     <label class="radio-inline text-gray">
     <input type="radio" name="Q19W14" value="<?php echo set_value('Q19W14', 'N') ?>" <?php if (isset($data['Q19W14'])) echo $data['Q19W14'] == 'N' ? "checked" : "" ?>>
- No</label>
+    No</label>
   </div>
 </div>
-
 <div class="form-group">
   <label>
-  <h6>TASK 8 Does your school reuse the treated Wastewater? </h6></label></div>
+  <h6>TASK 8 Does your school reuse the treated Wastewater? </h6>
+  </label>
+</div>
 <div class="form-group">
   <label class="control-label"><span class="cube">18</span>Does your school reuse the wastewater from RO plant or Air conditioner drain pipes?</label>
   <div class="form-group">
     <label class="radio-inline text-gray">
     <input type="radio" name="Q19W15" value="<?php echo set_value('Q19W15', 'Y') ?>" <?php if (isset($data['Q19W15'])) echo $data['Q19W15'] == 'Y' ? "checked" : "" ?>>
- Yes</label>
+    Yes</label>
     <label class="radio-inline text-gray">
     <input type="radio" name="Q19W15" value="<?php echo set_value('Q19W15', 'N') ?>" <?php if (isset($data['Q19W15'])) echo $data['Q19W15'] == 'N' ? "checked" : "" ?>>
- No</label>
+    No</label>
   </div>
 </div>
-
 <div class="form-group hide" id="new_question18_i">
   <label class="control-label"><span class="cube">18 (i)</span>If yes, How does your school reuse wastewater from RO plant or AC?</label>
   <div class="form-group">
     <label class="radio-inline text-gray">
-<input type="checkbox" name="Q19W16" value="<?php echo set_value('Q19W16', '1') ?>" <?php if (isset($data['Q19W16'])) echo $data['Q19W16'] == '1' ? "checked" : "" ?> /> 
-Used for  cleaning purposes (mopping, washing vehicles, etc)</label>
+    <input type="checkbox" name="Q19W16" value="<?php echo set_value('Q19W16', '1') ?>" <?php if (isset($data['Q19W16'])) echo $data['Q19W16'] == '1' ? "checked" : "" ?> />
+    Used for  cleaning purposes (mopping, washing vehicles, etc)</label>
     <label class="radio-inline text-gray">
     <input type="checkbox" name="Q19W161" value="<?php echo set_value('Q19W161', '2') ?>" <?php if (isset($data['Q19W161'])) echo $data['Q19W161'] == '2' ? "checked" : "" ?>>
- Used for gardening and horticulture</label>
-  <label class="radio-inline text-gray">
+    Used for gardening and horticulture</label>
+    <label class="radio-inline text-gray">
     <input type="checkbox" name="Q19W162" value="<?php echo set_value('Q19W162', '3') ?>" <?php if (isset($data['Q19W162'])) echo $data['Q19W162'] == '3' ? "checked" : "" ?>>
- Flushing</label>
+    Flushing</label>
   </div>
 </div>
 <div class="form-group hide" id="new_question18_ii">
@@ -2682,13 +2653,9 @@ Used for  cleaning purposes (mopping, washing vehicles, etc)</label>
   <div class="form-group">
     <label class="radio-inline text-gray">
     <input type="checkbox" name="Q19W17" value="<?php echo set_value('Q19W17', '1') ?>" <?php if (isset($data['Q19W17'])) echo $data['Q19W17'] == '1' ? "checked" : "" ?>>
- Wastewater flows directly to the drains</label>
+    Wastewater flows directly to the drains</label>
   </div>
 </div>
-
-
-
-
 <div class="form-group">
   <label class="control-label"><span class="cube">19</span>Does your school reuse the
   treated wastewater?</label>
@@ -2735,7 +2702,7 @@ Used for  cleaning purposes (mopping, washing vehicles, etc)</label>
         <input type="checkbox" name="Q20W22" value="<?php echo set_value('Q20W22', 3) ?>" <?php if (isset($data['Q20W22'])) echo $data['Q20W22'] == 3 ? "checked" : "" ?>>
         Recharge Ground Water</label>
       </li>
-	  <li>
+      <li>
         <label class="radio-inline text-gray">
         <input type="checkbox" name="Q20W23" value="<?php echo set_value('Q20W23', 4) ?>" <?php if (isset($data['Q20W23'])) echo $data['Q20W23'] == 4 ? "checked" : "" ?>>
         Cleaning (mopping, washing vehicles, etc)</label>
@@ -2793,31 +2760,33 @@ Used for  cleaning purposes (mopping, washing vehicles, etc)</label>
     <table width="100%" class="question uploadedfiles">
       <thead>
         <tr>
-         <!--<th>Image</th>	  -->  
-         <th>File name</th>
-         <th>Delete</th>
-	     <th>Download</th>
+          <!--<th>Image</th>	  -->
+          <th>File name</th>
+          <th>Delete</th>
+          <th>Download</th>
         </tr>
       </thead>
       <tbody>
         <?php foreach ($flowChartHandDrawn as $f) { ?>
         <tr id="index<?php echo $f->id; ?>">
-	<?php 
+          <?php 
             //$array = explode('.',$f->file_name); 
             //$count = count($array);
             //$extension = $array[$count-1];
             ?>
-       <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>	
-	<!--<td> <img style="width:62px; height:46px;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $f->file_name ?>" class="img-responsive" /></td>-->
-     	<?php //}else{ ?>
-	<!--<td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>-->
-      <?php //}?>
+          <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
+          <!--<td> <img style="width:62px; height:46px;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $f->
+          file_name ?>" class="img-responsive" />
+          </td>
+          -->
+          <?php //}else{ ?>
+          <!--<td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>-->
+          <?php //}?>
           <?php $name = str_replace(" ", "_", $f->name . "_Flow_Chart_Hand_Drwan_"); ?>
           <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
           <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
           <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
-     
-		  </tr>
+        </tr>
         <?php } ?>
       </tbody>
     </table>
@@ -2840,31 +2809,33 @@ Used for  cleaning purposes (mopping, washing vehicles, etc)</label>
     <table width="100%" class="question uploadedfiles">
       <thead>
         <tr>
-          <!--<th>Image</th>	 -->   
+          <!--<th>Image</th>	 -->
           <th>File name</th>
           <th>Delete</th>
-	      <th>Download</th>
+          <th>Download</th>
         </tr>
       </thead>
       <tbody>
         <?php foreach ($supportDocWater as $f) { ?>
         <tr id="index<?php echo $f->id; ?>">
-	 <?php 
+          <?php 
             //$array = explode('.',$f->file_name); 
            // $count = count($array);
            // $extension = $array[$count-1];
             ?>
-       <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>	
-	  <!--<td> <img style="width:62px; height:46px;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $f->file_name ?>" class="img-responsive" /></td>-->	
-        <?php //}else{ ?>
-	<!--<td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>-->
-      <?php //}?> 
-	<?php $name = str_replace(" ", "_", $f->name . "_Supporting_Document_Water_"); ?>
+          <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
+          <!--<td> <img style="width:62px; height:46px;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $f->
+          file_name ?>" class="img-responsive" />
+          </td>
+          -->
+          <?php //}else{ ?>
+          <!--<td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>-->
+          <?php //}?>
+          <?php $name = str_replace(" ", "_", $f->name . "_Supporting_Document_Water_"); ?>
           <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
           <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
           <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
-      
-		</tr>
+        </tr>
         <?php } ?>
       </tbody>
     </table>
@@ -3137,7 +3108,6 @@ Used for  cleaning purposes (mopping, washing vehicles, etc)</label>
                                                 });
                                             });
                                         </script>
-
 <script type="text/javascript">
 /*This Code Used For Stopping Enter 'E' Alphabet In Textbox Type 'Number'*/
 $(document).ready(function(){
@@ -3362,8 +3332,7 @@ if($("input[name='Q19W1']:checked").val()==='N'){
  }
 });
 </script>
-	
-	<script>
+<script>
 	$("#movenextbtn").click(function(e){
 if($("input[name='Q5W1']").prop('checked') == false && $("input[name='Q5W2']").prop('checked') == false && $("input[name='Q5W3']").prop('checked') == false && $("input[name='Q5W4']").prop('checked') == false){
   alert("2 Where does the water your school uses, come from");
@@ -3374,8 +3343,7 @@ if($("input[name='Q5W1']").prop('checked') == false && $("input[name='Q5W2']").p
 }
 });	
 	</script>
-	
-	<script>
+<script>
 	$("#movenextbtn").click(function(e){
 if($("input[name='Q6W1']").prop('checked') == false && $("input[name='Q6W2']").prop('checked') == false && $("input[name='Q6W3']").prop('checked') == false && $("input[name='Q6W4']").prop('checked') == false && $("input[name='Q6W5']").prop('checked') == false){
   alert("3 Who supplies the water in your school");
@@ -3386,8 +3354,7 @@ if($("input[name='Q6W1']").prop('checked') == false && $("input[name='Q6W2']").p
 }
 });	
 </script>
-	
-	<script>
+<script>
 	$("#movenextbtn").click(function(e){
       if($('input[name="Q19W15"]:checked').val()==='Y'){
       if($("input[name='Q19W16']").prop('checked') == false && $("input[name='Q19W161']").prop('checked') == false && $("input[name='Q19W162']").prop('checked') == false){
@@ -3408,7 +3375,6 @@ if($("input[name='Q6W1']").prop('checked') == false && $("input[name='Q6W2']").p
      }		
 });	
 </script>
-	
 <script>
   $("#movenextbtn").click(function(e){
   if($('input[name="Q20W1"]:checked').val()==='Y'){
@@ -3873,9 +3839,8 @@ nyanBtn15.addEventListener('click', function(){
    playPause(nyan15);
    progress(nyanBtn15, nyan15);
 });
-</script>	
-	
-	<style type="text/css">
+</script>
+<style type="text/css">
 	   .form-group > label {
               font-family: 'Lato Bold', sans-serif;
               font-weight: normal;
