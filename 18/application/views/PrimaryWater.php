@@ -2774,14 +2774,14 @@ if($("input[name='Q18W1']:checked").val()==="Y"){
 }
 /*Q16(a)How does your school reuse wastewater?*/
 if($("input[name='Q20W1']:checked").val()==="Y"){
-  if($("input[name='Q20W2']:checked").length==0 || $("input[name='Q20W21']:checked").length==0 || $("input[name='Q20W22']:checked").length==0){
+  if($("input[name='Q20W2']:checked").length==0 && $("input[name='Q20W21']:checked").length==0 && $("input[name='Q20W22']:checked").length==0){
   alert("Q16(a)How does your school reuse wastewater?");
   e.preventDefault();
   }
 }
 /*Q16(a)How does your school reuse wastewater?*/
 if($("input[name='Q20W1']:checked").val()==="N"){
-  if($("input[name='Q20W3']:checked").length==0 || $("input[name='Q20W31']:checked").length==0 || $("input[name='Q20W32']:checked").length==0){
+  if($("input[name='Q20W3']:checked").length==0 && $("input[name='Q20W31']:checked").length==0 && $("input[name='Q20W32']:checked").length==0){
   alert("Q16(a)How does your school reuse wastewater?");
   e.preventDefault();
   }
