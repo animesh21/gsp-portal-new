@@ -61,7 +61,7 @@
     </div>
     <div class="container" style="height:600px;">
       <div class="col-md-12">
-        <h1><strong>GSP Audit 2017-18 Reports & Certificate</strong></h1>
+        <h1><strong>GSP Audit 2018-19 Reports & Certificate</strong></h1>
         <a href="<?php echo base_url('Downloadlogout'); ?>" class="pull-right">Logout</a> 
 		<hr/></div>
       <div class="col-md-4">
@@ -91,7 +91,7 @@
 </div>
 <footer>
   <div class="container">
-    <p>Copyright © 2017 Centre for Science and Environment. For help, email <a href="mailto:ranjita@cseindia.org">support@greenschoolsprogramme.org</a> or call 011-4061600, ext – 219, 300. </p>
+    <p>Copyright © 2018 Centre for Science and Environment. For help, email <a href="mailto:ranjita@cseindia.org">support@greenschoolsprogramme.org</a> or call 011-4061600, ext – 219, 300. </p>
     <p></p>
   </div>
   <style type="text/css">
