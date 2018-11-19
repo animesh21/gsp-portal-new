@@ -148,15 +148,15 @@
     <div class="modal-content">
       <div class="modal-header"  style="background:#e86549; color:#FFFFFF;">
       <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">GSP Audit 2018</h4>
+        <h4 class="modal-title">GSP Audit 2017</h4>
       </div>
       <div class="modal-body">
         <p>If you want to download the reports of previous year CSE's Green Schools Programme Audit 2017. Please click the below button </p>
         <p class="text-center"><a href="http://www.greenschoolsprogramme.org/audit/downloadLogin" target="_blank" class="btn btn-danger btn-block btn-lg">Download Reports For GSP Audit 2017</a></p>
       </div>
-      <div class="modal-footer">
+      <!--<div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
+      </div>-->
     </div>
   </div>
 </div>
