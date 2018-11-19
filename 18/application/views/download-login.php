@@ -142,7 +142,7 @@
     </div>
   </div>
 </div>
-<!--<div id="myModal" class="modal fade in" role="dialog" style="display: block; padding-right: 17px; background:rgba(0, 0, 0, 0.57);">
+<div id="myModal" class="modal fade in" role="dialog" style="display: block; padding-right: 17px; background:rgba(0, 0, 0, 0.57);">
   <div class="modal-dialog">
      Modal content
     <div class="modal-content">
@@ -159,7 +159,7 @@
       </div>
     </div>
   </div>
-</div>-->
+</div>
 <!-- Modal -->
 <div class="modal fade" id="myModal" role="dialog">
 <div class="modal-dialog">
