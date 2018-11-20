@@ -721,7 +721,25 @@
           <td><?php echo $record1[$i]->Q6A2S1T3; ?></td>
           <td><?php echo $record1[$i]->Q6A2S1T4; ?></td>
           <td><?php echo $record1[$i]->Q6A2S1T5; ?></td>
-          <td><?php echo $record1[$i]->Q6A2S1T6; ?></td>
+          <td><?php 
+		  $yes=0;
+		  $no=0;
+		  $Q6A2S1B6=getFiled('Q6A2S1B6',$record1[$i]->userid);
+		  $Q6A2S1C6=getFiled('Q6A2S1C6',$record1[$i]->userid);
+		  $Q6A2S1V6=getFiled('Q6A2S1V6',$record1[$i]->userid);
+		  $Q6A2S1O6=getFiled('Q6A2S1O6',$record1[$i]->userid);
+		  if(strcmp($Q6A2S1B6,"Yes")==0){++$yes;}
+		  if(strcmp($Q6A2S1C6,"Yes")==0){++$yes;}
+		  if(strcmp($Q6A2S1V6,"Yes")==0){++$yes;}
+		  if(strcmp($Q6A2S1O6,"Yes")==0){++$yes;}
+		  /****************************************/
+		  /****************************************/
+		  if(strcmp($Q6A2S1B6,"No")==0){++$no;}
+		  if(strcmp($Q6A2S1C6,"No")==0){++$no;}
+		  if(strcmp($Q6A2S1V6,"No")==0){++$no;}
+		  if(strcmp($Q6A2S1O6,"No")==0){++$no;}
+		  if(!empty($Q6A2S1B6) && !empty($Q6A2S1C6) && !empty($Q6A2S1V6) && !empty($Q6A2S1O6)){
+		  echo $yes."/".$no;}else{ echo "000.000"; } ?></td>
           <td><?php echo $record1[$i]->Q6A2S3D1+$record1[$i]->Q6A2S3P1+$record1[$i]->Q6A2S3L1+$record1[$i]->Q6A2S3C1+$record1[$i]->Q6A2S3E1+$record1[$i]->Q6A2S3H1+$record1[$i]->Q6A2S3B1; ?></td>
           <td><?php echo $record1[$i]->Q6A2S3D1; ?></td>
           <td><?php echo $record1[$i]->Q6A2S3P1; ?></td>
@@ -1054,10 +1072,7 @@
           <td><?php echo $record1[$i]->Q4L10; ?></td>
           <td><?php echo $record1[$i]->Q4L11; ?></td>
           <td><?php echo $record1[$i]->Q4L12; ?></td>
-          <!--<td><?php //echo $record1[$i]->
-          Q4L1; ?>
-          </td>
-          -->
+          <!--<td><?php //echo $record1[$i]->Q4L1; ?></td> -->
           <td><?php echo $record1[$i]->TotalArea; ?></td>
           <td><?php echo number_format(($record1[$i]->Q4L5/$record1[$i]->TotalArea)*100,2); ?></td>
           <td><?php echo $record1[$i]->Q5L1S3; ?></td>
@@ -1080,7 +1095,15 @@
           <td><?php echo  $record1[$i]->Q4W9; ?></td>
           <td><?php echo  $record1[$i]->Q4W10; ?></td>
           <td><?php echo  $record1[$i]->Q4W1+$record1[$i]->Q4W2+$record1[$i]->Q4W3+$record1[$i]->Q4W4+$record1[$i]->Q4W5+$record1[$i]->Q4W6+$record1[$i]->Q4W7+$record1[$i]->Q4W8+$record1[$i]->Q4W9+$record1[$i]->Q4W10; ?></td>
-          <td><?php if($record1[$i]->population!="" && $record1[$i]->population!=0): echo  $record1[$i]->Q4W11/$record1[$i]->population; endif; ?></td>
+          <td><?php 
+			  $totalWater=$record1[$i]->Q4W1+$record1[$i]->Q4W2+$record1[$i]->Q4W3+$record1[$i]->Q4W4+$record1[$i]->Q4W5+$record1[$i]->Q4W6+$record1[$i]->Q4W7+$record1[$i]->Q4W8+$record1[$i]->Q4W9+$record1[$i]->Q4W10;
+			  $totalpopulation=$record1[$i]->students+$record1[$i]->teachers+$record1[$i]->nonteachers; 
+		    if($record1[$i]->population!="" && $totalpopulation!=0)
+			{
+			$calperCapita=$record1[$i]->Q4W11/$totalpopulation; 
+			 echo $calperCapita;
+		  }   
+		  ?></td>
           <td><?php if($record1[$i]->Q5W1==1){ echo "Ground water";}else{ echo "000.000";} ?></td>
           <td><?php if($record1[$i]->Q5W2==1){ echo "Surface water";}else{ echo "000.000";} ?></td>
           <td><?php if($record1[$i]->Q5W3==1){ echo "Rainwater";}else{ echo "000.000";} ?></td>
