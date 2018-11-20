@@ -1513,9 +1513,12 @@
 		   ?></td>
           <td><?php if(strcmp($record1[$i]->Q9Wa1,"Y")==0){echo "Yes";}else if(strcmp($record1[$i]->Q9Wa1,"N")==0){echo "No";}else{echo $record1[$i]->Q9Wa1;} ?></td>
           <td><?php 
-		  if(!empty($record1[$i]->Q9Wa2S1)){ echo  $record1[$i]->Q9Wa2S1.",";}else{ echo "000.000"; } 
-		  if(!empty($record1[$i]->Q9Wa2S2)){ echo  $record1[$i]->Q9Wa2S2.",";}else{ echo "000.000"; }  
-		  if(!empty($record1[$i]->Q9Wa2S3)){ echo  $record1[$i]->Q9Wa2S3.",";}else{ echo "000.000"; } ?></td>
+		  if(!empty($record1[$i]->Q9Wa2S1)){ echo  $record1[$i]->Q9Wa2S1.",";}
+		  if(!empty($record1[$i]->Q9Wa2S2)){ echo  $record1[$i]->Q9Wa2S2.",";}
+		  if(!empty($record1[$i]->Q9Wa2S3)){ echo  $record1[$i]->Q9Wa2S3.",";}
+		  if(empty($record1[$i]->Q9Wa2S1) && empty($record1[$i]->Q9Wa2S2) && empty($record1[$i]->Q9Wa2S3)){ echo "000.000"; }  
+		  
+		   ?></td>
           <td><?php if(!empty($record1[$i]->Q9Wa3)){echo  $record1[$i]->Q9Wa3;}else{echo 
 		  "000.000";} ?></td>
           <td><?php if(!empty($record1[$i]->Q9Wa4S1)){echo  $record1[$i]->Q9Wa4S1;}else{echo 
