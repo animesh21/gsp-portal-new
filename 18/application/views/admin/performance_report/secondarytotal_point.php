@@ -836,7 +836,8 @@
 			if($record1[$i]->Q9A1=="Y")
 			{
 			    echo "Yes";
-			}else if($record1[$i]->Q9A1=="N")
+			}
+			if($record1[$i]->Q9A1=="N")
 			{
 			     echo "No";
 			}
@@ -846,9 +847,14 @@
 			if($record1[$i]->Q9A2=="Y")
 			{
 			    echo "Yes";
-			}else if($record1[$i]->Q9A2=="N")
+			}
+			if($record1[$i]->Q9A2=="N")
 			{
 			     echo "No";
+			}
+			if($record1[$i]->Q9A2=="000.000")
+			{
+			     echo "000.000";
 			}
 		    ?>
           </td>
@@ -1073,7 +1079,7 @@
           <td><?php echo  $record1[$i]->Q4W8; ?></td>
           <td><?php echo  $record1[$i]->Q4W9; ?></td>
           <td><?php echo  $record1[$i]->Q4W10; ?></td>
-          <td><?php echo  $record1[$i]->Q4W11; ?></td>
+          <td><?php echo  $record1[$i]->Q4W1+$record1[$i]->Q4W2+$record1[$i]->Q4W3+$record1[$i]->Q4W4+$record1[$i]->Q4W5+$record1[$i]->Q4W6+$record1[$i]->Q4W7+$record1[$i]->Q4W8+$record1[$i]->Q4W9+$record1[$i]->Q4W10; ?></td>
           <td><?php if($record1[$i]->population!="" && $record1[$i]->population!=0): echo  $record1[$i]->Q4W11/$record1[$i]->population; endif; ?></td>
           <td><?php if($record1[$i]->Q5W1==1){ echo "Ground water";}else{ echo "000.000";} ?></td>
           <td><?php if($record1[$i]->Q5W2==1){ echo "Surface water";}else{ echo "000.000";} ?></td>
@@ -1310,7 +1316,7 @@
 			   if($record1[$i]->Q4Wa2S2==1){$segregates_source.="Housekeeping (Sweeper)".",";}
 			   if($record1[$i]->Q4Wa2S3==1){$segregates_source.="Gardener".",";}
 			   if($record1[$i]->Q4Wa2S4==1){$segregates_source.="Ragpickers".",";}
-			   if($record1[$i]->Q4Wa2S1!=1 && $record1[$i]->Q4Wa2S2!=1 && $record1[$i]->Q4Wa2S2!=1 && $record1[$i]->Q4Wa2S4!=1){ echo "000.000";}else{ echo $segregates_source;}
+			   if($record1[$i]->Q4Wa2S1!=1 && $record1[$i]->Q4Wa2S2!=1 && $record1[$i]->Q4Wa2S3!=1 && $record1[$i]->Q4Wa2S4!=1){ echo "000.000";}else{ echo $segregates_source;}
 			 ?>
           </td>
           <td><?php
@@ -1319,63 +1325,68 @@
           <td><?php echo  $record1[$i]->Q5Wa1S2; ?></td>
           <td><?php echo  $record1[$i]->Q5Wa1S3; ?></td>
           <td><?php echo  $record1[$i]->Q5Wa1S4; ?></td>
-          <td><?php echo  $record1[$i]->Q5Wa1S5; ?></td>
+          <td><?php echo  $record1[$i]->Q5Wa1S1 +$record1[$i]->Q5Wa1S2 + $record1[$i]->Q5Wa1S3 +$record1[$i]->Q5Wa1S4; ?></td>
           <td><?php echo  $record1[$i]->Q5Wa2S1; ?></td>
           <td><?php echo  $record1[$i]->Q5Wa2S2; ?></td>
           <td><?php echo  $record1[$i]->Q5Wa2S3; ?></td>
           <td><?php echo  $record1[$i]->Q5Wa2S4; ?></td>
-          <td><?php echo  $record1[$i]->Q5Wa2S5; ?></td>
+          <td><?php echo  $record1[$i]->Q5Wa2S1+$record1[$i]->Q5Wa2S2+$record1[$i]->Q5Wa2S3+$record1[$i]->Q5Wa2S4; ?></td>
           <td><?php echo  $record1[$i]->Q5Wa3S1; ?></td>
           <td><?php echo  $record1[$i]->Q5Wa3S2; ?></td>
           <td><?php echo  $record1[$i]->Q5Wa3S3; ?></td>
           <td><?php echo  $record1[$i]->Q5Wa3S4; ?></td>
-          <td><?php echo  $record1[$i]->Q5Wa3S5; ?></td>
+          <td><?php echo  $record1[$i]->Q5Wa3S1+$record1[$i]->Q5Wa3S2+$record1[$i]->Q5Wa3S3+$record1[$i]->Q5Wa3S4; ?></td>
           <td><?php echo  $record1[$i]->Q5Wa4S1; ?></td>
           <td><?php echo  $record1[$i]->Q5Wa4S2; ?></td>
           <td><?php echo  $record1[$i]->Q5Wa4S3; ?></td>
           <td><?php echo  $record1[$i]->Q5Wa4S4; ?></td>
-          <td><?php echo  $record1[$i]->Q5Wa4S5; ?></td>
+          <td><?php echo  $record1[$i]->Q5Wa4S1+$record1[$i]->Q5Wa4S2+$record1[$i]->Q5Wa4S3+$record1[$i]->Q5Wa4S4; ?></td>
           <td><?php echo  $record1[$i]->Q5Wa5S1; ?></td>
           <td><?php echo  $record1[$i]->Q5Wa5S2; ?></td>
           <td><?php echo  $record1[$i]->Q5Wa5S3; ?></td>
           <td><?php echo  $record1[$i]->Q5Wa5S4; ?></td>
-          <td><?php echo  $record1[$i]->Q5Wa5S5; ?></td>
+          <td><?php echo  $record1[$i]->Q5Wa5S1+$record1[$i]->Q5Wa5S2+$record1[$i]->Q5Wa5S3+$record1[$i]->Q5Wa5S4; ?></td>
           <td><?php echo  $record1[$i]->Q5Wa6S1; ?></td>
           <td><?php echo  $record1[$i]->Q5Wa6S2; ?></td>
           <td><?php echo  $record1[$i]->Q5Wa6S3; ?></td>
           <td><?php echo  $record1[$i]->Q5Wa6S4; ?></td>
-          <td><?php echo  $record1[$i]->Q5Wa6S5; ?></td>
+          <td><?php echo  $record1[$i]->Q5Wa6S1+$record1[$i]->Q5Wa6S2+$record1[$i]->Q5Wa6S3+$record1[$i]->Q5Wa6S4; ?></td>
           <td><?php echo  $record1[$i]->Q5Wa7S1; ?></td>
           <td><?php echo  $record1[$i]->Q5Wa7S2; ?></td>
           <td><?php echo  $record1[$i]->Q5Wa7S3; ?></td>
           <td><?php echo  $record1[$i]->Q5Wa7S4; ?></td>
-          <td><?php echo  $record1[$i]->Q5Wa7S5; ?></td>
+          <td><?php echo  $record1[$i]->Q5Wa7S1+$record1[$i]->Q5Wa7S2+$record1[$i]->Q5Wa7S3+$record1[$i]->Q5Wa7S4; ?></td>
           <td><?php echo  $record1[$i]->Q5Wa8S1; ?></td>
           <td><?php echo  $record1[$i]->Q5Wa8S2; ?></td>
           <td><?php echo  $record1[$i]->Q5Wa8S3; ?></td>
           <td><?php echo  $record1[$i]->Q5Wa8S4; ?></td>
-          <td><?php echo  $record1[$i]->Q5Wa8S5; ?></td>
+          <td><?php echo  $record1[$i]->Q5Wa8S1+$record1[$i]->Q5Wa8S2+$record1[$i]->Q5Wa8S3+$record1[$i]->Q5Wa8S4; ?></td>
           <td><?php echo  $record1[$i]->Q5Wa9S1; ?></td>
           <td><?php echo  $record1[$i]->Q5Wa9S2; ?></td>
           <td><?php echo  $record1[$i]->Q5Wa9S3; ?></td>
           <td><?php echo  $record1[$i]->Q5Wa9S4; ?></td>
-          <td><?php echo  $record1[$i]->Q5Wa9S5; ?></td>
+          <td><?php echo  $record1[$i]->Q5Wa9S1+$record1[$i]->Q5Wa9S2+$record1[$i]->Q5Wa9S3+$record1[$i]->Q5Wa9S4; ?></td>
           <td><?php echo  $record1[$i]->Q5Wa10S1; ?></td>
           <td><?php echo  $record1[$i]->Q5Wa10S2; ?></td>
           <td><?php echo  $record1[$i]->Q5Wa10S3; ?></td>
           <td><?php echo  $record1[$i]->Q5Wa10S4; ?></td>
-          <td><?php echo  $record1[$i]->Q5Wa10S5; ?></td>
-          <td><?php echo  $record1[$i]->Q5Wa11S1; ?></td>
-          <td><?php echo  $record1[$i]->Q5Wa11S2; ?></td>
-          <td><?php echo  $record1[$i]->Q5Wa11S3; ?></td>
-          <td><?php echo  $record1[$i]->Q5Wa11S4; ?></td>
-          <td><?php echo  $record1[$i]->Q5Wa11S5; ?></td>
+          <td><?php echo  $record1[$i]->Q5Wa10S1+$record1[$i]->Q5Wa10S2+$record1[$i]->Q5Wa10S3+$record1[$i]->Q5Wa10S4; ?></td>
+          <td><?php echo $record1[$i]->Q5Wa1S1 +$record1[$i]->Q5Wa2S1 + $record1[$i]->Q5Wa3S1+$record1[$i]->Q5Wa4S1+$record1[$i]->Q5Wa5S1+$record1[$i]->Q5Wa6S1+$record1[$i]->Q5Wa7S1+$record1[$i]->Q5Wa8S1+$record1[$i]->Q5Wa9S1+$record1[$i]->Q5Wa10S1; ?></td>
+          <td><?php echo $record1[$i]->Q5Wa1S2 +$record1[$i]->Q5Wa2S2 + $record1[$i]->Q5Wa3S2+$record1[$i]->Q5Wa4S2+$record1[$i]->Q5Wa5S2+$record1[$i]->Q5Wa6S2+$record1[$i]->Q5Wa7S2+$record1[$i]->Q5Wa8S2+$record1[$i]->Q5Wa9S2+$record1[$i]->Q5Wa10S2; ?></td>
+          <td><?php echo $record1[$i]->Q5Wa1S3 +$record1[$i]->Q5Wa2S3 + $record1[$i]->Q5Wa3S3+$record1[$i]->Q5Wa4S3+$record1[$i]->Q5Wa5S3+$record1[$i]->Q5Wa6S3+$record1[$i]->Q5Wa7S3+$record1[$i]->Q5Wa8S3+$record1[$i]->Q5Wa9S3+$record1[$i]->Q5Wa10S3; ?></td>
+          <td><?php echo $record1[$i]->Q5Wa1S4 +$record1[$i]->Q5Wa2S4 + $record1[$i]->Q5Wa3S4+$record1[$i]->Q5Wa4S4+$record1[$i]->Q5Wa5S4+$record1[$i]->Q5Wa6S4+$record1[$i]->Q5Wa7S4+$record1[$i]->Q5Wa8S4+$record1[$i]->Q5Wa9S4+$record1[$i]->Q5Wa10S4; ?></td>
+          <td><?php echo  $record1[$i]->Q5Wa1S5 +$record1[$i]->Q5Wa2S5 + $record1[$i]->Q5Wa3S5+$record1[$i]->Q5Wa4S5+$record1[$i]->Q5Wa5S5+$record1[$i]->Q5Wa6S5+$record1[$i]->Q5Wa7S5+$record1[$i]->Q5Wa8S5+$record1[$i]->Q5Wa9S5+$record1[$i]->Q5Wa10S5; ?></td>
           <td><?php echo  $record1[$i]->Q6Wa1S1; ?></td>
           <td><?php echo  $record1[$i]->Q6Wa1S2; ?></td>
           <td><?php echo  $record1[$i]->Q6Wa1S3; ?></td>
           <td><?php echo  $record1[$i]->Q6Wa1S4; ?></td>
           <td><?php echo  $record1[$i]->Q6Wa1S5; ?></td>
-          <td><?php echo  $record1[$i]->Q6Wa1S6; ?></td>
+          <td><?php 
+		   $Biodegradable=$record1[$i]->Q6Wa1S1+$record1[$i]->Q6Wa1S2+$record1[$i]->Q6Wa1S3
+		   +$record1[$i]->Q6Wa1S4;
+		    $perCapitaBiodegradable=(($Biodegradable/30)/$record1[$i]->population)*1000;
+			echo $perCapitaBiodegradable;
+		    ?></td>
           <td><?php echo  $record1[$i]->Q6Wa2S1; ?></td>
           <td><?php echo  $record1[$i]->Q6Wa2S2; ?></td>
           <td><?php echo  $record1[$i]->Q6Wa2S3; ?></td>
@@ -1384,26 +1395,53 @@
           <td><?php echo  $record1[$i]->Q6Wa2S6; ?></td>
           <td><?php echo  $record1[$i]->Q6Wa2S7; ?></td>
           <td><?php echo  $record1[$i]->Q6Wa2S8; ?></td>
-          <td><?php echo  $record1[$i]->Q6Wa2S9; ?></td>
+          <td><?php 
+		   $Dryrecyclable=$record1[$i]->Q6Wa2S1+$record1[$i]->Q6Wa2S2+$record1[$i]->Q6Wa2S3
+		   +$record1[$i]->Q6Wa2S4+$record1[$i]->Q6Wa2S5+$record1[$i]->Q6Wa2S6+$record1[$i]->Q6Wa2S7;
+		    $perCapitaDryrecyclable=(($Dryrecyclable/30)/$record1[$i]->population)*1000;
+		    echo $perCapitaDryrecyclable; ?></td>
           <td><?php echo  $record1[$i]->Q6Wa3S1; ?></td>
           <td><?php echo  $record1[$i]->Q6Wa3S2; ?></td>
           <td><?php echo  $record1[$i]->Q6Wa3S3; ?></td>
-          <td><?php echo  $record1[$i]->Q6Wa3S4; ?></td>
+          <td><?php $Domestichazardous=$record1[$i]->Q6Wa3S1+$record1[$i]->Q6Wa3S2; 
+		  $perCapitaDomestichazardous=(($Domestichazardous/30)/$record1[$i]->population)*1000;
+		  echo $perCapitaDomestichazardous;
+		  ?></td>
           <td><?php echo  $record1[$i]->Q6Wa4S1; ?></td>
-          <td><?php echo  $record1[$i]->Q6Wa4S2; ?></td>
-          <td><?php echo  $record1[$i]->Q6Wa5S1; ?></td>
-          <td><?php echo  $record1[$i]->Q6Wa5S2; ?></td>
+          <td><?php  
+		    $EWaste=$record1[$i]->Q6Wa4S1;
+		    $perCapitaEWaste=(($EWaste/30)/$record1[$i]->population)*1000;
+		    echo $perCapitaEWaste;
+		   ?></td>
+          <td><?php echo $record1[$i]->Q6Wa5S1; ?></td>
+          <td><?php 
+		    $Biomedicalwaste=$record1[$i]->Q6Wa5S1;
+		    $perCapitaBiomedicalwaste=(($Biomedicalwaste/30)/$record1[$i]->population)*1000;
+		    echo $perCapitaBiomedicalwaste;
+		   ?></td>
           <td><?php echo  $record1[$i]->Q6Wa6S1; ?></td>
-          <td><?php echo  $record1[$i]->Q6Wa6S2; ?></td>
+          <td><?php 
+		    $Sanitarywaste=$record1[$i]->Q6Wa6S1;
+		    $perCapitaSanitarywaste=(($Sanitarywaste/30)/$record1[$i]->population)*1000;
+		    echo $perCapitaSanitarywaste; ?></td>
           <td><?php echo  $record1[$i]->Q6Wa7S1; ?></td>
-          <td><?php echo  $record1[$i]->Q6Wa7S2; ?></td>
+          <td><?php 
+		    $CDWaste=$record1[$i]->Q6Wa7S1;
+		    $perCapitaCDWaste=(($CDWaste/30)/$record1[$i]->population)*1000;
+		    echo $perCapitaCDWaste; ?></td>
           <td><?php if(strcmp($record1[$i]->Q8Wa1,"Y")==0){echo "Yes";}else if(strcmp($record1[$i]->Q8Wa1,"N")==0){echo "No";}else{echo $record1[$i]->Q8Wa1;} ?></td>
           <td><?php echo  $record1[$i]->Q8Wa1S1; ?></td>
           <td><?php echo  $record1[$i]->Q8Wa1S2; ?></td>
           <td><?php echo  $record1[$i]->Q8Wa1S3; ?></td>
           <td><?php echo  $record1[$i]->Q8Wa1S4; ?></td>
           <td><?php echo  $record1[$i]->Q8Wa1S5; ?></td>
-          <td><?php echo  $record1[$i]->Q8Wa1S6; ?></td>
+          <td><?php 
+		  $recycleBiodegradableWetWaste=$record1[$i]->Q8Wa1S1+$record1[$i]->Q8Wa1S2+$record1[$i]->Q8Wa1S3+$record1[$i]->Q8Wa1S4;
+		  $percapitarecycleBiodegradableWetWaste=(($recycleBiodegradableWetWaste/30)/$record1[$i]->population)*1000;
+		  if($recycleBiodegradableWetWaste!="000.000"){
+		    echo  $recycleBiodegradableWetWaste; }else{
+		    echo "000.000";
+		  } ?></td>
           <td><?php echo  $record1[$i]->Q8Wa2S1; ?></td>
           <td><?php echo  $record1[$i]->Q8Wa2S2; ?></td>
           <td><?php echo  $record1[$i]->Q8Wa2S3; ?></td>
@@ -1412,22 +1450,73 @@
           <td><?php echo  $record1[$i]->Q8Wa2S6; ?></td>
           <td><?php echo  $record1[$i]->Q8Wa2S7; ?></td>
           <td><?php echo  $record1[$i]->Q8Wa2S8; ?></td>
-          <td><?php echo  $record1[$i]->Q8Wa2S9; ?></td>
+          <td><?php
+		   $recycleDryrecyclablewaste=$record1[$i]->Q8Wa2S1+$record1[$i]->Q8Wa2S2+$record1[$i]->Q8Wa2S3+$record1[$i]->Q8Wa2S4+$record1[$i]->Q8Wa2S5+$record1[$i]->Q8Wa2S6+$record1[$i]->Q8Wa2S7;
+		  $percapitarerecycleDryrecyclablewaste=(($recycleDryrecyclablewaste/30)/$record1[$i]->population)*1000;
+		  if($recycleDryrecyclablewaste!="000.000"){
+		  echo  $percapitarerecycleDryrecyclablewaste;}else{
+		     echo "000.000";
+		  }
+		   ?></td>
           <td><?php echo  $record1[$i]->Q8Wa3S1; ?></td>
           <td><?php echo  $record1[$i]->Q8Wa3S2; ?></td>
           <td><?php echo  $record1[$i]->Q8Wa3S3; ?></td>
-          <td><?php echo  $record1[$i]->Q8Wa3S4; ?></td>
+          <td><?php 
+		  $recycleDomestichazardouswaste=$record1[$i]->Q8Wa3S1+$record1[$i]->Q8Wa3S2;
+		  $percapitarererecycleDomestichazardouswaste=(($recycleDomestichazardouswaste/30)/$record1[$i]->population)*1000;
+		   if($recycleDomestichazardouswaste!="000.000"){
+		  echo  $percapitarererecycleDomestichazardouswaste;}else{ echo "000.000"; } ?></td>
           <td><?php echo  $record1[$i]->Q8Wa4S1; ?></td>
-          <td><?php echo  $record1[$i]->Q8Wa4S2; ?></td>
+          <td><?php 
+		  $recycleEWaste=$record1[$i]->Q8Wa4S1;
+		  $percapitarerecycleEWaste=(($recycleEWaste/30)/$record1[$i]->population)*1000;
+		 
+		  if($recycleEWaste!="000.000"){
+		  echo  $percapitarerecycleEWaste; 
+		  }else{
+		    echo "000.000";
+		  }
+		  
+		  ?></td>
           <td><?php echo  $record1[$i]->Q8Wa5S1; ?></td>
-          <td><?php echo  $record1[$i]->Q8Wa5S2; ?></td>
+          <td><?php 
+		  $recycleBiomedicalwaste=$record1[$i]->Q8Wa5S1;
+		  $percapitarecycleBiomedicalwaste=(($recycleBiomedicalwaste/30)/$record1[$i]->population)*1000;
+		   if($recycleBiomedicalwaste!="000.000"){
+		     echo $percapitarecycleBiomedicalwaste;
+		   }else{
+		     echo "000.000";
+		   }
+		  ?></td>
           <td><?php echo  $record1[$i]->Q8Wa6S1; ?></td>
-          <td><?php echo  $record1[$i]->Q8Wa6S2; ?></td>
+          <td><?php 
+		   $recycleCDWaste=$record1[$i]->Q8Wa6S1;
+		   $percapitarecycleCDWaste=(($recycleCDWaste/30)/$record1[$i]->population)*1000;
+		  
+		   if($recycleCDWaste!="000.000"){
+		    echo  $percapitarecycleCDWaste;}
+		   else{
+		    echo "000.000";
+		   }
+		  
+		  
+		   ?></td>
           <td><?php echo  $record1[$i]->Q8Wa7S1; ?></td>
-          <td><?php echo  $record1[$i]->Q8Wa7S2; ?></td>
+          <td><?php 
+		   $recycleSanitarywaste=$record1[$i]->Q8Wa6S1;
+		  $percapitarerecycleSanitarywaste=(($recycleSanitarywaste/30)/$record1[$i]->population)*1000;
+		   if($recycleSanitarywaste!="000.000"){
+		    echo  $percapitarerecycleSanitarywaste;
+		   }else{
+		    echo "000.000";
+		   }
+		   ?></td>
           <td><?php if(strcmp($record1[$i]->Q9Wa1,"Y")==0){echo "Yes";}else if(strcmp($record1[$i]->Q9Wa1,"N")==0){echo "No";}else{echo $record1[$i]->Q9Wa1;} ?></td>
-          <td><?php if(!empty($record1[$i]->Q9Wa2S1)){ echo  $record1[$i]->Q9Wa2S1;}else{ echo "000.000"; } ?></td>
-          <td><?php if(!empty($record1[$i]->Q9Wa31)){echo  $record1[$i]->Q9Wa31;}else{echo 
+          <td><?php 
+		  if(!empty($record1[$i]->Q9Wa2S1)){ echo  $record1[$i]->Q9Wa2S1.",";}else{ echo "000.000"; } 
+		  if(!empty($record1[$i]->Q9Wa2S2)){ echo  $record1[$i]->Q9Wa2S2.",";}else{ echo "000.000"; }  
+		  if(!empty($record1[$i]->Q9Wa2S3)){ echo  $record1[$i]->Q9Wa2S3.",";}else{ echo "000.000"; } ?></td>
+          <td><?php if(!empty($record1[$i]->Q9Wa3)){echo  $record1[$i]->Q9Wa3;}else{echo 
 		  "000.000";} ?></td>
           <td><?php if(!empty($record1[$i]->Q9Wa4S1)){echo  $record1[$i]->Q9Wa4S1;}else{echo 
 		  "000.000";} ?></td>
