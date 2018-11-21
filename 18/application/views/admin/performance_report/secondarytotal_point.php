@@ -941,12 +941,12 @@
           <td><?php echo $record1[$i]->Q7E8S3; ?></td>
           <td><?php echo $record1[$i]->Q8E1; ?></td>
           <td><?php if(strcmp($record1[$i]->Q9E1,"Y")==0){echo "Yes";}else if(strcmp($record1[$i]->Q9E1,"N")==0){echo "No";}else{echo $record1[$i]->Q9E1;} ?></td>
-          <td><?php if(($record1[$i]->Q9E1S1)==1) 
+          <td><?php if(($record1[$i]->Q9E1S1)==1 || $record1[$i]->Q6E9S1!=0) 
 				{
 					echo 'Solar';
-				}else{ echo "000.000";}
-					
-				
+				}elseif(($record1[$i]->Q9E1S1)==1 && $record1[$i]->Q6E9S1==0){ 
+				    echo "000.000";                
+				}
 				?></td>
           <td><?php if(($record1[$i]->Q9E1S2)==1)
 				{
@@ -1075,10 +1075,10 @@
           <!--<td><?php //echo $record1[$i]->Q4L1; ?></td> -->
           <td><?php echo $record1[$i]->TotalArea; ?></td>
           <td><?php echo number_format(($record1[$i]->Q4L5/$record1[$i]->TotalArea)*100,2); ?></td>
-          <td><?php echo $record1[$i]->Q5L1S3; ?></td>
+          <td><?php echo $record1[$i]->Q5L1S1+$record1[$i]->Q5L1S2; ?></td>
           <td><?php echo $record1[$i]->Q5L1S1; ?></td>
           <td><?php echo $record1[$i]->Q5L1S2; ?></td>
-          <td><?php echo $record1[$i]->Q5L2S3; ?></td>
+          <td><?php echo $record1[$i]->Q5L2S1+$record1[$i]->Q5L2S2; ?></td>
           <td><?php echo $record1[$i]->Q5L2S1; ?></td>
           <td><?php echo $record1[$i]->Q5L2S2; ?></td>
           <td><?php if(strcmp($record1[$i]->Q6L1,"Y")==0){echo "Yes";}else if(strcmp($record1[$i]->Q6L1,"N")==0){echo "No";}else{echo $record1[$i]->Q6L1;} ?></td>
@@ -1314,8 +1314,9 @@
 			?>
           </td>
           <td><?php 
-			  $reuse_wastewaterRO="";
-			 if($record1[$i]->Q19W17==1){
+			 $reuse_wastewaterRO="";
+			 $Q19W17=getFiled('Q19W17',$record1[$i]->userid);
+			 if($Q19W17==1){
 				 $reuse_wastewaterRO.="Wastewater flows directly to the drains".",";
 				 echo $reuse_wastewaterRO;
 			 }else{echo "000.000";}
