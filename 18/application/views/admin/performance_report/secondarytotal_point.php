@@ -739,7 +739,17 @@
 		  if(strcmp($Q6A2S1V6,"No")==0){++$no;}
 		  if(strcmp($Q6A2S1O6,"No")==0){++$no;}
 		  if(!empty($Q6A2S1B6) && !empty($Q6A2S1C6) && !empty($Q6A2S1V6) && !empty($Q6A2S1O6)){
-		  echo $yes."/".$no;}else{ echo "000.000"; } ?></td>
+		  echo $yes."/".$no;}
+		  
+		  elseif(empty($Q6A2S1B6) || empty($Q6A2S1C6) || empty($Q6A2S1V6) || empty($Q6A2S1O6)){
+		    if(!empty($record1[$i]->Q6A2S1T6)){
+		      echo $record1[$i]->Q6A2S1T6;
+			}
+		  }else{
+		    echo "000.000";
+		  }
+		  
+		  //elseif(!empty($record1[$i]->Q6A2S1C6)){ echo $record1[$i]->Q6A2S1C6;}else{ echo "000.000"; } ?></td>
           <td><?php echo $record1[$i]->Q6A2S3D1+$record1[$i]->Q6A2S3P1+$record1[$i]->Q6A2S3L1+$record1[$i]->Q6A2S3C1+$record1[$i]->Q6A2S3E1+$record1[$i]->Q6A2S3H1+$record1[$i]->Q6A2S3B1; ?></td>
           <td><?php echo $record1[$i]->Q6A2S3D1; ?></td>
           <td><?php echo $record1[$i]->Q6A2S3P1; ?></td>
@@ -1064,7 +1074,9 @@
           <td><?php echo $record1[$i]->Q4L2; ?></td>
           <td><?php echo $record1[$i]->Q4L3; ?></td>
           <td><?php echo $record1[$i]->Q4L4; ?></td>
-          <td><?php echo $record1[$i]->Q4L5; ?></td>
+          <td><?php
+		   if(!empty($record1[$i]->Q4L5) && $record1[$i]->Q4L5!="000.000"){
+		   echo $record1[$i]->Q4L5;}else{echo $record1[$i]->Q4L3+$record1[$i]->Q4L4; } ?></td>
           <td><?php echo $record1[$i]->Q4L6; ?></td>
           <td><?php echo $record1[$i]->Q4L7; ?></td>
           <td><?php echo $record1[$i]->Q4L8; ?></td>
