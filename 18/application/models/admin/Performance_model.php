@@ -368,16 +368,15 @@ return $this->db->select('a.*,b.name AS state_name, c.name AS district_name')->f
 	 
 		{
 			
-			return $this->db->select('a.*,b.userid,b.questionid,b.answer,c.name,c.id,a.category AS category,d.population ,e.name AS state_name, f.name AS district_name, c.schoolemail AS schoolemail')
-							->from('tbl_total AS a')	
+			return $this->db->select('a.*,b.userid,b.questionid,b.answer,c.name,c.id,a.category AS category,a.population ,e.name AS state_name, f.name AS district_name, c.schoolemail AS schoolemail')
+					->from('tbl_total AS a')	
 			                ->join('gsp_answers As b','a.userid=b.userid','left')
-							->join('gsp_school AS c','b.userid=c.userid', 'left')
-                 			->join('tbl_general AS d', 'c.userid=d.userid', 'left')
-							->join('states AS e', 'a.state=e.id', 'left')
-							->join('cities AS f', 'a.district=f.id', 'left')
-							->where('b.questionid','Q1G2')
-							->where('b.answer >', 5)
-							->get()->result();
+					->join('gsp_school AS c','b.userid=c.userid', 'left')
+					->join('states AS e', 'a.state=e.id', 'left')
+					->join('cities AS f', 'a.district=f.id', 'left')
+					->where('b.questionid','Q1G2')
+					->where('b.answer >', 5)
+					->get()->result();
 		
 		}
 		
