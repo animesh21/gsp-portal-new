@@ -510,6 +510,7 @@ class Report extends CI_Model {
 	
 	       public function get_registeredpartner($status)
 		{
+		       $this->db->where('make_school_disabled',"1");
 			$this->db->where('partner_status',$status);
 		    return $this->db->count_all_results('gsp_school');
 			
@@ -518,6 +519,7 @@ class Report extends CI_Model {
 		public function get_startedpartner($status)
 		{
 			$this->db->where('partner_status',$status);
+			$this->db->where('make_school_disabled',"1");
 		   $this->db->where("progress >",'5');
 		   $this->db->where("progress <",'100');
 		   return $this->db->count_all_results('gsp_school');
@@ -526,6 +528,7 @@ class Report extends CI_Model {
 		public function get_completedpartner($status)
 		{
 			$this->db->where('partner_status',$status);
+			$this->db->where('make_school_disabled',"1");
 		   $this->db->where("progress =",'100');
 		   return $this->db->count_all_results('gsp_school');
 			
@@ -534,6 +537,7 @@ class Report extends CI_Model {
 		public function get_notstartedpartner($status)
 		{
 			$this->db->where('partner_status',$status);
+			$this->db->where('make_school_disabled',"1");
 		   $this->db->where("progress=",'5');
 		   return $this->db->count_all_results('gsp_school');
 			
