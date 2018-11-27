@@ -57,7 +57,8 @@ if (!function_exists('getStateById')) {
 
 if(!function_exists('getPartnersCountByState')){
   function getPartnersCountByState($stateId,$partnertype){
-    $CI = & get_instance();
+        $CI = & get_instance();
+	$CI->db->where('make_school_disabled',"1");  
 	$temp = $CI->db->select('COUNT("id") As CountLabel')->from("gsp_school")->where(array('state'=>$stateId,"partner_status"=>$partnertype))->get()->row();
     return $temp->CountLabel;
   }
@@ -65,8 +66,9 @@ if(!function_exists('getPartnersCountByState')){
 
 if(!function_exists('getPartnersAuditNotStartedCountByState')){
   function getPartnersAuditNotStartedCountByState($stateId,$partnertype,$progress){
-    $CI = & get_instance();
-	$temp = $CI->db->select('COUNT("id") As CountLabel')->from("gsp_school")->where(array('state'=>$stateId,"partner_status"=>$partnertype,"progress"=>$progress))->get()->row();
+        $CI = & get_instance();
+	$CI->db->where('make_school_disabled',"1");
+	  $temp = $CI->db->select('COUNT("id") As CountLabel')->from("gsp_school")->where(array('state'=>$stateId,"partner_status"=>$partnertype,"progress"=>$progress))->get()->row();
     return $temp->CountLabel;
   }
 }
@@ -74,6 +76,7 @@ if(!function_exists('getPartnersAuditNotStartedCountByState')){
 if(!function_exists('getPartnersAuditStartedCountByState')){
   function getPartnersAuditStartedCountByState($stateId,$partnertype,$progress1,$progress2){
     $CI = & get_instance();
+	  $CI->db->where('make_school_disabled',"1");
 	$CI->db->where("progress>",$progress1);
 	$CI->db->where("progress<",$progress2);
 	$temp = $CI->db->select('COUNT("id") As CountLabel')->from("gsp_school")->where(array('state'=>$stateId,"partner_status"=>$partnertype))->get()->row();
@@ -83,6 +86,7 @@ if(!function_exists('getPartnersAuditStartedCountByState')){
 if(!function_exists('getPartnersAuditCompletedCountByState')){
   function getPartnersAuditCompletedCountByState($stateId,$partnertype,$progress1){
     $CI = & get_instance();
+	  $CI->db->where('make_school_disabled',"1");
 	$CI->db->where("progress",$progress1);
 	$temp = $CI->db->select('COUNT("id") As CountLabel')->from("gsp_school")->where(array('state'=>$stateId,"partner_status"=>$partnertype))->get()->row();
     return $temp->CountLabel;
@@ -92,6 +96,7 @@ if(!function_exists('getPartnersAuditCompletedCountByState')){
 if(!function_exists('getPartnersAuditNotStartedCountByDistrict')){
   function getPartnersAuditNotStartedCountByDistrict($districtId,$progress){
     $CI = & get_instance();
+	  $CI->db->where('make_school_disabled',"1");
 	$temp = $CI->db->select('COUNT("id") As CountLabel')->from("gsp_school")->where(array('district'=>$districtId,"progress"=>$progress))->get()->row();
     return $temp->CountLabel;
   }
@@ -100,6 +105,7 @@ if(!function_exists('getPartnersAuditNotStartedCountByDistrict')){
 if(!function_exists('getPartnersAuditStartedCountByDistrict')){
   function getPartnersAuditStartedCountByDistrict($districtId,$progress1,$progress2){
     $CI = & get_instance();
+	  $CI->db->where('make_school_disabled',"1");
 	$CI->db->where("progress>",$progress1);
 	$CI->db->where("progress<",$progress2);
 	$temp = $CI->db->select('COUNT("id") As CountLabel')->from("gsp_school")->where(array('district'=>$districtId))->get()->row();
@@ -147,6 +153,7 @@ if(!function_exists('getPartnerGraphByState')){
 function getPartnerGraphByState($partnerId){
  $CI = & get_instance();
 	  $CI->db->distinct("state");
+	  $CI->db->where('make_school_disabled',"1");
 	  $stateResult=$CI->db->select("state")
 	           ->from("gsp_school")->where("partner_status",$partnerId)->get()->result();
 		$arrState=array();
@@ -176,6 +183,7 @@ function getDataGraphByDistrict($stateId){
 		$arrAuditCompleted=array();
       if($stateId==0){
 	  $CI->db->distinct("district");
+	  $CI->db->where('make_school_disabled',"1");    
 	  $districtResult=$CI->db->select("district")
 	           ->from("gsp_school")->get()->result();
 			   foreach($districtResult as $district){
