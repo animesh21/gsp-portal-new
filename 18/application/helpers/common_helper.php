@@ -208,6 +208,7 @@ if (!function_exists('get_partner')) {
     function get_partner($partnerId) {
 	 $arrState = array();
         $CI = & get_instance();
+	$CI->db->where('a.make_school_disabled',"1");
         $temp = $CI->db->select('a.*, b.name AS state_name,c.name As district_name')
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
