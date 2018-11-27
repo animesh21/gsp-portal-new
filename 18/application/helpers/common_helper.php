@@ -154,7 +154,7 @@ function getPartnerGraphByState($partnerId){
  $CI = & get_instance();
 	  $CI->db->distinct("state");
 	  $CI->db->where('make_school_disabled',"1");
-	  $stateResult=$CI->db->select("state")
+	  $stateResult=$CI->db->select("state,make_school_disabled")
 	           ->from("gsp_school")->where("partner_status",$partnerId)->get()->result();
 		$arrState=array();
 		$arrRegister=array();
@@ -184,7 +184,7 @@ function getDataGraphByDistrict($stateId){
       if($stateId==0){
 	  $CI->db->distinct("district");
 	  $CI->db->where('make_school_disabled',"1");    
-	  $districtResult=$CI->db->select("district")
+	  $districtResult=$CI->db->select("district,make_school_disabled")
 	           ->from("gsp_school")->get()->result();
 			   foreach($districtResult as $district){
                $arrDistrict[]=array("districtame"=>getdistrictById($district->district));
