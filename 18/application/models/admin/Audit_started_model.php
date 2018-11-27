@@ -37,6 +37,7 @@ class Audit_started_model extends CI_Model {
 	
     public function getPartnerData($partner_status) {
 	  $this->db->where('a.partner_status',$partner_status);
+	  $this->db->where('a.make_school_disabled',"1");  
 	  $data=$this->db->select('a.*, b.name AS state_name,c.name As district_name')
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
