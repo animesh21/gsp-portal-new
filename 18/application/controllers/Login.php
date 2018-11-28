@@ -32,7 +32,7 @@ class Login extends CI_Controller {
 
 GSP Audit 2018 is closed and GSP Audit 2019 will be open for participation by mid-2019. Please log in to the website for updates. In case you would like to update information such as GSP co-ordinator's name, principal's name, mobile number, email address, etc, please send a mail with changes required to  support@greenschoolsprogramme.org
 
-If your school has not registered earlier for the GSP Audit, please register here.
+If your school has not registered earlier for the GSP Audit, please <a href='http://greenschoolsprogramme.org/audit/18/register'>register here</a>.
 
 ");
 				}
