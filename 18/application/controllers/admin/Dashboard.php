@@ -295,6 +295,7 @@ class Dashboard extends CI_Controller {
         $data['StartedAuditButDidNotComplete']=$this->Dashboard_model->getStartedAuditButDidNotComplete_18data();
         $data['NotStartTheAudit']=$this->Dashboard_model->getNotStartTheAudit_18data();
         $data['disable_count']=$this->Dashboard_model->getDisabledScoolCounts();
+	$data['certificate_count']=$this->Dashboard_model->schoolCertificateCount();
         $this->load->view('admin/includes/template', $data);
     }	
 	 
