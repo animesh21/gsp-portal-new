@@ -55,3 +55,11 @@
   </a>
   <div class="title">Disabled School (2018)</div>
 </div>
+<div class="schools-statics"> <a href="../<?php base_url()?>audit_started/getDigitalCertificateRecord">
+  <div class="statics-circle"> <span><?php echo $certificate_count;?></span>
+    <label>view</label>
+  </div>
+  </a>
+  <div class="title">Digital Certificates Of Schools</div>
+</div>
+
