@@ -941,4 +941,31 @@ class Audit_started extends CI_Controller {
      $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel5');
      $objWriter->save('php://output');
 	}
+	
+	/**This Function Used For Digital Certificate JSON**/
+	public function getDigitalCertificateRecordJson(){
+	   ini_set('memory_limit', '-1');
+       $records=$this->Dashboard_model->getSchoolCertificateRecords();
+	   $arr_school=array();
+	   $i=0;
+	   foreach($records as $record):
+		   $arr_school[]=array('sr_no'=>++$i,
+		    'school_id'=>$record->school_id,
+		    'certificate_username'=>$record->certificate_username,
+		    'certificate_schoolname'=>$record->certificate_schoolname,
+		    'certificate_srno'=>$record->certificate_srno);
+	   endforeach;
+		$data['record']=array(
+            "sEcho" => 1,
+            "iTotalRecords" => count($arr_school),
+            "iTotalDisplayRecords" => count($arr_school),
+            "aaData"=>$arr_school);
+		    echo json_encode($data['record']);
+	}
+	/**This Function Used For Digital Certificate Records**/
+	public function getDigitalCertificateRecord(){
+	    $data['main'] = 'admin/audit/all-digital-certificates';
+        $data['title'] = 'Home | Digital Certificate Records';
+        $this->load->view('admin/includes/template', $data);
+	}
 }
