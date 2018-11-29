@@ -20,6 +20,18 @@ class Dashboard_model extends CI_Model {
 		$this->db->where('date_added <', '2017-11-29 00:00:00');
         return $this->db->count_all_results('gsp_school');
     }
+   
+    /*This Function Used For Certifciate Count*/
+	public function schoolCertificateCount() {
+        return $this->db->count_all_results('tblcertificate');
+    }
+	/*This Function Used For Getting All Records Of Certifciate*/
+	public function getSchoolCertificateRecords() {
+        return $this->db->select("a.certificate_username,a.certificate_schoolname,a.certificate_srno,b.id as school_id")
+		->from('tblcertificate as a')
+		->join('gsp_school as b','a.userid=b.userid','left')
+		->get()->result();
+    }	
 
     public function getData() {
         return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
