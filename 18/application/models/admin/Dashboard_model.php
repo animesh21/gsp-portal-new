@@ -287,7 +287,7 @@ class Dashboard_model extends CI_Model {
 	
 	public function getschool_that_submit_audit_phase_2() {
 		$this->db->where("status='1'");
-		$this->db->where('date_on >', '2017-11-29 00:00:00');
+		$this->db->where('date_on >', '2018-11-19 00:00:00');
 		return $this->db->count_all_results('gsp_aduit_submitted');
 	}
 	
