@@ -1203,6 +1203,11 @@ $("#movenextbtn").click(function(e){
 	  if(e.isDefaultPrevented()){
 	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
 	  }
+    /**Q3 Do you use chemical-based pesticides in your school green cover?**/
+  if($("input[name='Q6L1']:checked").length==0){
+    alert("Q3: Do you use chemical-based pesticides in your school green cover?");
+	e.preventDefault();
+  }	  
   }	
 });	
 </script>
