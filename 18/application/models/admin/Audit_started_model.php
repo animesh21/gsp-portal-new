@@ -569,7 +569,7 @@ class Audit_started_model extends CI_Model {
                         ->join('states AS b', 'a.state=b.id', 'left')
                         ->join('cities AS c', 'a.district=c.id', 'left')
                         ->join('gsp_user AS d', 'a.userid=d.id', 'left')
-						->where('a.date_added>=', '2017-11-30 00:00:00')
+						->where('a.date_added>=', '2018-11-19 00:00:00')
                         ->order_by('a.id', 'desc')
                         ->get()->result();
         //echo '<pre>'; print_r($arrRecord); exit;
