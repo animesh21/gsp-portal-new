@@ -1112,7 +1112,6 @@ class Audit_started_model extends CI_Model {
 					->join('states AS b', 'a.state=b.id', 'left')
 					->join('cities AS c', 'a.district=c.id', 'left')
 					->where($progress)
-					->where('date_added >', '2017-11-29 00:00:00')
 					->order_by('a.id', 'desc')
 					->get()->result();    
         //echo '<pre>'; print_r($arrRecord); exit;
