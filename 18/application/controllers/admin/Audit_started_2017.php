@@ -307,10 +307,10 @@ class Audit_started_2017 extends CI_Controller {
 	
 	/* Schools Did Not Start The Audit phase2 */
 	public function excelByProgress6_phase2() {
-	    $varProgress="a.progress = '5'";
+	$varProgress="a.progress = '5'";
         $this->load->dbutil();
         $row = $this->Audit_started_model->getExcelDataByProgress_phase6($varProgress);
-        $name = 'SCHOOL_THAT_STARTED_THE_AUDIT'.date('d-m-Y').'.csv';
+        $name = 'SCHOOL_DID_NOT_STARTED_THE_AUDIT'.date('d-m-Y').'.csv';
 		force_download($name, $row);
     }
 	
