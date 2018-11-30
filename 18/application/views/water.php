@@ -3644,6 +3644,64 @@ if($('input[name="Q8W1S11"]:checked').length == 0){
 	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
 	  }
 	  }
+	  
+	  /**Q14 Is there a water storage system in place to supply water in the toilets??**/
+      if($("input[name='Q16W1']:checked").length==0){
+       alert("Q14: Is there a water storage system in place to supply water in the toilets??");
+	   e.preventDefault();
+      }
+	  /**Q15 Is the water supply sufficient??**/
+      if($("input[name='Q21W1']:checked").length==0){
+       alert("Q15: Is the water supply sufficient?");
+	   e.preventDefault();
+      }
+	  /**Q16 Are the toilets cleaned?**/
+      if($("input[name='Q18W1']:checked").length==0){
+       alert("Q16: Are the toilets cleaned?");
+	   e.preventDefault();
+      }
+	  /**16(a)If yes, please specify**/
+      if($("input[name='Q18W1']:checked").val()==="Y"){
+       if($("input[name='Q18W2']:checked").length==0){
+	     alert("Q16(a): If yes, please specify");
+	     e.preventDefault();
+		}
+      }
+	  
+	  /**Q4 Does your school get daily water supply?**/
+      if($("input[name='Q7W1']:checked").length==0){
+       alert("Q4: Does your school get daily water supply?");
+	   e.preventDefault();
+      }
+	  /**Q4(a): Does your school get daily water supply?**/
+      if($("input[name='Q7W1']:checked").val()==="Y"){
+       if($("input[name='Q7W22']:checked").length==0){
+	     alert("Q4(a): Does your school get daily water supply?");
+	     e.preventDefault();
+		}
+      }
+	  
+	  /**Q4(a): Does your school get daily water supply?**/
+      if($("input[name='Q7W1']:checked").val()==="N"){
+       if($("input[name='Q7W3']:checked").length==0){
+	     alert("Q4(b): Does your school get daily water supply?");
+	     e.preventDefault();
+		}
+      }
+	  
+	  /**Q6(a)(1): Which is the catchment area being harvested by your school?**/
+      if($("input[name='Q8W2S1']:checked").val()==="Y"){
+       if($("input[name='Q8W2S1S1']:checked").length==0){
+	     alert("Q6(a)(1): Which is the catchment area being harvested by your school?");
+	     e.preventDefault();
+		}
+      }
+	  
+	  
+	  
+	  
+	  
+	  
 	  /*6(i)If your school's RWH structure is more than a year old, is there any improvement in the groundwater quality after the implementation of the RWH structure?*/
 	  if($('input[name="Q8W2S13"]:checked').length==0){
 	     alert("6(i)If your school's RWH structure is more than a year old, is there any improvement in the groundwater quality after the implementation of the RWH structure?");
