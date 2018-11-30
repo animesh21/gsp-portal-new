@@ -199,7 +199,8 @@ class Dashboard_model extends CI_Model {
 	/*******************************************************************/
 	public function schoolCount_phase_2() {
 	    $this->db->where('date_added >', '2018-11-19 00:00:00');
-        return $this->db->count_all_results('gsp_school') ;
+	    $this->db->where("make_school_disabled","1");
+            return $this->db->count_all_results('gsp_school') ;
 	
     }
 
@@ -214,6 +215,7 @@ class Dashboard_model extends CI_Model {
     }
     
      public function getData_phase_2_1() {
+	$this->db->where("a.make_school_disabled","1");     
         return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
@@ -226,6 +228,7 @@ class Dashboard_model extends CI_Model {
 	
 	public function totalschool_phase_2()
 	{
+		$this->db->where("a.make_school_disabled","1");
 		return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
 					->from('gsp_school AS a')
 					->join('states AS b', 'a.state=b.id', 'left')
@@ -237,6 +240,7 @@ class Dashboard_model extends CI_Model {
 	
 	public function school_started_audit_phase_2()
 	{
+		$this->db->where("a.make_school_disabled","1");
 		return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
@@ -252,6 +256,7 @@ class Dashboard_model extends CI_Model {
 		$this->db->where('progress >=', 10);
 		$this->db->where('progress <=', 100);
 		$this->db->where('complete_status =', '0');
+		$this->db->where("make_school_disabled","1");
 		return $this->db->count_all_results('gsp_school');
 	}
 	
@@ -265,6 +270,7 @@ class Dashboard_model extends CI_Model {
 					->where('date_added >', '2017-11-29 00:00:00')
 					->order_by('a.id', 'desc')
 					->get()->result(); */
+		$this->db->where("a.make_school_disabled","1");
 		return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
 					->from('gsp_school AS a')
 					->join('states AS b', 'a.state=b.id', 'left')
@@ -281,6 +287,7 @@ class Dashboard_model extends CI_Model {
 	public function getschool_that_complete_audit_phase_2() {
 		$this->db->where('progress = 100');
 		$this->db->where('date_added >', '2017-11-29 00:00:00');
+		$this->db->where("make_school_disabled","1");
 		return $this->db->count_all_results('gsp_school');
         
 	}
@@ -292,6 +299,7 @@ class Dashboard_model extends CI_Model {
 	}
 	
 	public function getschool_that_submit_audit_data_phase_2() {
+	$this->db->where("a.make_school_disabled","1");	
 	return $this->db->select('a.*,b.name AS state_name,c.name As district_name')
         ->from('gsp_school AS a')
         ->join('states AS b', 'a.state=b.id', 'left')
@@ -306,6 +314,7 @@ class Dashboard_model extends CI_Model {
 	
 	public function school_start_but_not_complete_phase_2()
 	{
+		$this->db->where("a.make_school_disabled","1");
 		return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
 					->from('gsp_school AS a')
 					->join('states AS b', 'a.state=b.id', 'left')
@@ -321,12 +330,14 @@ class Dashboard_model extends CI_Model {
 		$this->db->where('progress >', 5);
 		$this->db->where('progress <=', 75);
 		$this->db->where('complete_status =', '0');
+		$this->db->where("make_school_disabled","1");
 		return $this->db->count_all_results('gsp_school');
         
 	}
 	
 	public function schools_not_start_the_audit_phase_2()
 	{
+		$this->db->where("a.make_school_disabled","1");
 		return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
 						->from('gsp_school AS a')
 						->join('states AS b', 'a.state=b.id', 'left')
@@ -340,6 +351,7 @@ class Dashboard_model extends CI_Model {
 	public function getschools_not_start_the_audit_phase_2() {
 		$this->db->where('progress =','5');
 		$this->db->where('complete_status =', '0');
+		$this->db->where("make_school_disabled","1");
 		return $this->db->count_all_results('gsp_school');
     }
 	
@@ -348,12 +360,14 @@ class Dashboard_model extends CI_Model {
 		$this->db->where('progress = 100');
 		$this->db->where('complete_status','0');
 		$this->db->where('date_added <=', '2017-11-29 00:00:00');
+		$this->db->where("make_school_disabled","1");
 		return $this->db->count_all_results('gsp_school');
         
 	}
 	
 	public function school_that_complete_audit_phase_2_1()
 	{
+		$this->db->where("a.make_school_disabled","1"); 
 		return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
 					->from('gsp_school AS a')
 					->join('states AS b', 'a.state=b.id', 'left')
