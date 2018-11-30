@@ -495,6 +495,7 @@ class Audit_started_model extends CI_Model {
 	
 	public function getExcelData_phase2() {
         $output = "";
+	$this->db->where("a.make_school_disabled","1");
         $arrRecord = $this->db->select('a.*, b.name AS state_name, c.name AS district_name, d.password')
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
@@ -564,6 +565,7 @@ class Audit_started_model extends CI_Model {
 	
     public function getExcelData_phase2_1() {
         $output = "";
+	$this->db->where("a.make_school_disabled","1");    
         $arrRecord = $this->db->select('a.*, b.name AS state_name, c.name AS district_name, d.password')
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
@@ -1107,6 +1109,7 @@ class Audit_started_model extends CI_Model {
 						->where('a.complete_status =', '0')
 						->order_by('a.id', 'desc')
                         ->get()->result(); */
+	    $this->db->where("a.make_school_disabled","1");
 	  $arrRecord = $this->db->select('a.*, b.name AS state_name,c.name As district_name')
 					->from('gsp_school AS a')
 					->join('states AS b', 'a.state=b.id', 'left')
@@ -1267,6 +1270,7 @@ class Audit_started_model extends CI_Model {
 
     public function getExcelDataByProgress1_phase2($progress) {
         $output = "";
+	    $this->db->where("a.make_school_disabled","1");
       $this->db->where("e.date_on>=","2018-11-19 00:00:00");
       $arrRecord = $this->db->select('a.*,b.name AS state_name,c.name As district_name , d.password')
                                 ->from('gsp_school AS a')
