@@ -213,7 +213,7 @@ class Audit_started_2017 extends CI_Controller {
     }
 	
 	public function excelByProgress1_phase2() {
-	    $varProgress="a.progress > '5'";
+	  $varProgress="a.progress >= '10' && a.progress <= '100' && a.complete_status ='0'";
         $this->load->dbutil();
         $row = $this->Audit_started_model->getExcelDataByProgress_phase2( $varProgress);
         $name = 'SCHOOL_THAT_STARTED_THE_AUDIT'.date('d-m-Y').'.csv';
