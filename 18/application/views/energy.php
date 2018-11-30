@@ -1594,6 +1594,11 @@ $("#energynext").click(function(e){
 	  }   
 	}
    }
+  /**Q7 Does your school use solar water heater?**/
+  if($("input[name='Q10E1']:checked").length==0){
+    alert("Q7: Does your school use solar water heater?");
+	e.preventDefault();
+  }	
 });
 
 /*This Code Used For Stopping Enter 'E' Alphabet In Textbox Type 'Number'*/
