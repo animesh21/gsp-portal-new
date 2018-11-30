@@ -230,12 +230,12 @@ class Audit_started_2017 extends CI_Controller {
     }
 	
 	 public function excelByProgress2_phase2() {
-	    $varProgress="a.progress = '100'";
-        $this->load->dbutil();
-        $row = $this->Audit_started_model->getExcelDataByProgress_phase2();
-	//$row = $this->Dashboard_model->school_that_complete_audit_phase_2()		 
-        $name = 'SCHOOL_THAT_STARTED_THE_AUDIT'.date('d-m-Y').'.csv';
-		force_download($name, $row);
+	 $varProgress="a.progress ='100' && a.complete_status='0'";
+         $this->load->dbutil();
+         $row = $this->Audit_started_model->getExcelDataByProgress_phase2($varProgress);
+	 //$row = $this->Dashboard_model->school_that_complete_audit_phase_2()		 
+         $name = 'SCHOOL_THAT_STARTED_THE_AUDIT'.date('d-m-Y').'.csv';
+	 force_download($name, $row);
     }
 
 /*
