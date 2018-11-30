@@ -192,10 +192,10 @@ class Audit_started_2017 extends CI_Controller {
     }
 	
 	 public function excelByProgress_phase2() {
-	    $varProgress="a.progress > '5' && a.progress < '100'";
-        $this->load->dbutil();
-        $row = $this->Audit_started_model->getExcelDataByProgress_phase2( $varProgress);
-        $name = 'registration_2017.csv';
+	    $varProgress="a.progress > '5' && a.progress <= '75' && a.complete_status='0'";
+            $this->load->dbutil();
+            $row = $this->Audit_started_model->getExcelDataByProgress_phase2( $varProgress);
+            $name = 'SCHOOLS STARTED THE AUDIT BUT DID NOT COMPLETE'.date('d-m-Y').'.csv';
 		force_download($name, $row);
     }
 	
