@@ -9,7 +9,7 @@
 </div>
 <div class="schools-statics"> <a href="<?php base_url()?>audit_pahse_2" target="_blank">
         <div class="statics-circle"> <span>
-		  0
+		 1
 		</span>
             <label>view</label>
         </div>
