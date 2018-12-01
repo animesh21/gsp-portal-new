@@ -3745,10 +3745,54 @@ if($('input[name="Q8W1S11"]:checked').length == 0){
 		 e.preventDefault();
 			if(e.isDefaultPrevented()){
 	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+	     }
 	    }
 	  } 
-	}	
+	}
+    
+	/*Date: 1 Dec 2018*/
+	 /**Q6(f)(1)Please specify when does your school clean the catchment and RWH system?**/
+       if($("input[name='Q8W2S61']:checked").val()==="Y"){
+       if($("input[name='Q8W2S7']:checked").length==0){
+	     alert("Q6(f)(1)Please specify when does your school clean the catchment and RWH system?");
+	     e.preventDefault();
+		}
+	  }
+      /**Q6(g)(1)Please specify when does your school monitor the groundwater level?**/
+       if($("input[name='Q8W2S8']:checked").val()==="Y"){
+       if($("input[name='Q8W2S9']:checked").length==0){
+	     alert("Q6(g)(1) Please specify when does your school monitor the groundwater level?");
+	     e.preventDefault();
+		}	
+	  }
+	/**Q6(b)(1)If your school only stores rainwater, please select the use of stored rainwater:**/
+	 if($("input[name='Q8W2S2']:checked").val()==="1"){
+       if($("input[name='Q8W2S2S14']:checked").length==0 && $("input[name='Q8W2S2S25']:checked").length==0 && $("input[name='Q8W2S2S36']:checked").length==0 && $("input[name='Q8W2S2S47']:checked").length==0 && $("input[name='Q8W2S2S58']:checked").length==0 && $("input[name='Q8W2S2S69']:checked").length==0 && $("input[name='Q8W2S2S723']:checked").length==0 && $("input[name='Q8W2S2S811']:checked").length==0 && $("input[name='Q8W2S2S912']:checked").length==0 && $("input[name='Q8W2S2S1013']:checked").length==0 ){
+	     alert("Q6(b)(1) If your school only stores rainwater, please select the use of stored rainwater?");
+	     e.preventDefault();
+		}	
+	  }
+  /**Q6(b)(3) iiPlease tick the type of groundwater recharge structure used in your school:***/
+     if($("input[name='Q8W2S2']:checked").val()==="1"){
+       if($("input[name='Q8W2S2S91']:checked").length==0 && $("input[name='Q8W2S2S92']:checked").length==0 && $("input[name='Q8W2S2S93']:checked").length==0 && $("input[name='Q8W2S2S94']:checked").length==0 && $("input[name='Q8W2S2S95']:checked").length==0 && $("input[name='Q8W2S2S96']:checked").length==0 && $("input[name='Q8W2S2S97']:checked").length==0){
+	     alert("Q6(b)(3) ii Please tick the type of groundwater recharge structure used in your school?");
+	     e.preventDefault();
+		}	
+	  }
+    /**Q6(b)(4)If your school practices rainwater harvesting, then what is the ratio between storage and recharge***/
+   if($("input[name='Q8W2S2']:checked").val()==="1"){
+      if($("input[name='Q8W2S2S10']:checked").length==0){
+	    alert("Q6(b)(4) If your school practices rainwater harvesting, then what is the ratio between storage and recharge?");
+	    e.preventDefault();
+	  }
+   }
+   /*Q6(d) Please select (from the list given below) the rainwater harvesting structures present in your school? */
+   	 if($("input[name='Q8W2S2']:checked").val()==="1"){
+	   if($("input[name='Q8W2S31']:checked").length==0 && $("input[name='Q8W2S32']:checked").length==0 && $("input[name='Q8W2S33']:checked").length==0 && $("input[name='Q8W2S34']:checked").length==0 && $("input[name='Q8W2S35']:checked").length==0 && $("input[name='Q8W2S36']:checked").length==0 && $("input[name='Q8W2S37']:checked").length==0 && $("input[name='Q8W2S38']:checked").length==0){
+	     alert("Q6(d) Please select (from the list given below) the rainwater harvesting structures present in your school: ?");
+	     e.preventDefault();
+		}
+	 } 
 });
 </script>
 <script>
