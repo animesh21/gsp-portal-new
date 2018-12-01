@@ -4213,200 +4213,172 @@ if($("input[name='Q11Wa8S1']").prop('checked') == false && $("input[name='Q11Wa8
 	 }  
 	/*Q8 Does your school have the following? If yes, please give the numbers of items in working condition and those that are not.
 	(Validation)*/	
-	if($("input[name='Q12Wa1S1']").attr("placeholder")=="" || $("input[name='Q12Wa1S2']").attr("placeholder")=="" || $("input[name='Q12Wa1S3']").attr("placeholder")==""){
+	if($("input[name='Q12Wa1S1']").attr("placeholder")=="" && $("input[name='Q12Wa1S1']").val()=="" || $("input[name='Q12Wa1S2']").attr("placeholder")=="" && $("input[name='Q12Wa1S2']").val()=="" || $("input[name='Q12Wa1S3']").attr("placeholder")=="" && $("input[name='Q12Wa1S3']").val()==""){
+	  if($("input[name='Q12Wa1S1']").val()=="" || $("input[name='Q12Wa1S2']").val()=="" || $("input[name='Q12Wa1S3']").val()=="" ){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (TVs)");
 	   e.preventDefault();
-		if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
 	  }
 	}
-	if($("input[name='Q12Wa2S1']").attr("placeholder")=="" || $("input[name='Q12Wa2S2']").attr("placeholder")=="" || $("input[name='Q12Wa2S3']").attr("placeholder")==""){
+	if($("input[name='Q12Wa2S1']").attr("placeholder")=="" && $("input[name='Q12Wa2S1']").val()=="" || $("input[name='Q12Wa2S2']").attr("placeholder")=="" && $("input[name='Q12Wa2S2']").val()=="" || $("input[name='Q12Wa2S3']").attr("placeholder")=="" && $("input[name='Q12Wa2S3']").val()==""){
+	 if($("input[name='Q12Wa2S1']").val()=="" || $("input[name='Q12Wa2S2']").val()=="" || $("input[name='Q12Wa2S3']").val()=="" ){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (VCR or DVD players)");
 	   e.preventDefault();
-		if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
 	  }
 	}
-	if($("input[name='Q12Wa3S1']").attr("placeholder")=="" || $("input[name='Q12Wa3S2']").attr("placeholder")=="" || $("input[name='Q12Wa3S3']").attr("placeholder")==""){
+	if($("input[name='Q12Wa3S1']").attr("placeholder")=="" && $("input[name='Q12Wa3S1']").val()=="" || $("input[name='Q12Wa3S2']").attr("placeholder")=="" && $("input[name='Q12Wa3S2']").val()=="" || $("input[name='Q12Wa3S3']").attr("placeholder")=="" && $("input[name='Q12Wa3S3']").val()==""){
+	if($("input[name='Q12Wa3S1']").val()=="" ||  $("input[name='Q12Wa3S2']").val()=="" || $("input[name='Q12Wa3S3']").val()==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Refrigerators and freezers)");
 	   e.preventDefault();
-		if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
 	  }
 	}
-	if($("input[name='Q12Wa4S1']").attr("placeholder")=="" || $("input[name='Q12Wa4S2']").attr("placeholder")=="" || $("input[name='Q12Wa4S3']").attr("placeholder")==""){
+	if($("input[name='Q12Wa4S1']").attr("placeholder")=="" && $("input[name='Q12Wa4S1']").val()=="" || $("input[name='Q12Wa4S2']").attr("placeholder")=="" && $("input[name='Q12Wa4S2']").val()=="" || $("input[name='Q12Wa4S3']").attr("placeholder")=="" && $("input[name='Q12Wa4S3']").val()==""){
+	if($("input[name='Q12Wa4S1']").val()=="" || $("input[name='Q12Wa4S2']").val()=="" ||  $("input[name='Q12Wa4S3']").val()==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Washing machines)");
 	   e.preventDefault();
-		if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
 	  }
 	}
-	if($("input[name='Q12Wa5S1']").attr("placeholder")=="" || $("input[name='Q12Wa5S2']").attr("placeholder")=="" || $("input[name='Q12Wa5S3']").attr("placeholder")==""){
+	if($("input[name='Q12Wa5S1']").attr("placeholder")=="" && $("input[name='Q12Wa5S1']").val()=="" || $("input[name='Q12Wa5S2']").attr("placeholder")=="" && $("input[name='Q12Wa5S2']").val()=="" || $("input[name='Q12Wa5S3']").attr("placeholder")=="" && $("input[name='Q12Wa5S3']").val()==""){
+		if($("input[name='Q12Wa5S1']").val()=="" || $("input[name='Q12Wa5S2']").val()=="" || $("input[name='Q12Wa5S3']").val()==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Air conditioners)");
 	   e.preventDefault();
-		if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
 	  }
 	}
 	if($("input[name='Q12Wa6S1']").attr("placeholder")=="" || $("input[name='Q12Wa6S2']").attr("placeholder")=="" || $("input[name='Q12Wa6S3']").attr("placeholder")==""){
+	if($("input[name='Q12Wa6S1']").val()=="" || $("input[name='Q12Wa6S2']").val()=="" || $("input[name='Q12Wa6S3']").val()==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Heaters)");
-	   e.preventDefault();
-		if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+	   e.preventDefault();;
 	  }
 	}
 	if($("input[name='Q12Wa7S1']").attr("placeholder")=="" || $("input[name='Q12Wa7S2']").attr("placeholder")=="" || $("input[name='Q12Wa7S3']").attr("placeholder")==""){
+	if($("input[name='Q12Wa7S1']").val()=="" || $("input[name='Q12Wa7S2']").val()=="" || $("input[name='Q12Wa7S3']").val()==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Microwaves)");
 	   e.preventDefault();
-		if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
 	  }
 	}
 	if($("input[name='Q12Wa8S1']").attr("placeholder")=="" || $("input[name='Q12Wa8S2']").attr("placeholder")=="" || $("input[name='Q12Wa8S3']").attr("placeholder")==""){
+	if($("input[name='Q12Wa8S1']").val()=="" || $("input[name='Q12Wa8S2']").val()=="" || $("input[name='Q12Wa8S3']").val()==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Ovens)");
-	   e.preventDefault();
-		if(e.isDefaultPrevented()){
 	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
 	  }
 	}
 	if($("input[name='Q12Wa9S1']").attr("placeholder")=="" || $("input[name='Q12Wa9S2']").attr("placeholder")=="" || $("input[name='Q12Wa9S3']").attr("placeholder")==""){
+	if($("input[name='Q12Wa9S1']").val()=="" || $("input[name='Q12Wa9S2']").val()=="" || $("input[name='Q12Wa9S3']").val()==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Toasters)");
 	   e.preventDefault();
-		if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
 	  }
 	}
 	if($("input[name='Q12Wa10S1']").attr("placeholder")=="" || $("input[name='Q12Wa10S2']").attr("placeholder")=="" || $("input[name='Q12Wa10S3']").attr("placeholder")==""){
+	if($("input[name='Q12Wa10S1']").val()=="" || $("input[name='Q12Wa10S2']").val()=="" || $("input[name='Q12Wa10S3']").val()==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Electric kettles)");
 	   e.preventDefault();
-		if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
 	  }
 	}
 	if($("input[name='Q12Wa11S1']").attr("placeholder")=="" || $("input[name='Q12Wa11S2']").attr("placeholder")=="" || $("input[name='Q12Wa11S3']").attr("placeholder")==""){
+	if($("input[name='Q12Wa11S1']").val()=="" || $("input[name='Q12Wa11S2']").val()=="" || $("input[name='Q12Wa11S3']").val()==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Personal computers (CPU, mouse, screen and keyboard included))");
 	   e.preventDefault();
-		if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
 	  }
 	}
 	if($("input[name='Q12Wa12S1']").attr("placeholder")=="" || $("input[name='Q12Wa12S2']").attr("placeholder")=="" || $("input[name='Q12Wa12S3']").attr("placeholder")==""){
+		if($("input[name='Q12Wa12S1']").val()=="" || $("input[name='Q12Wa12S2']").val()=="" || $("input[name='Q12Wa12S3']").val()==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Laptop computer (CPU, mouse, screen and keyboard included)))");
 	   e.preventDefault();
-		if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
 	  }
 	}
 	if($("input[name='Q12Wa13S1']").attr("placeholder")=="" || $("input[name='Q12Wa13S2']").attr("placeholder")=="" || $("input[name='Q12Wa13S3']").attr("placeholder")==""){
+	if($("input[name='Q12Wa13S1']").val()=="" || $("input[name='Q12Wa13S2']").val()=="" || $("input[name='Q12Wa13S3']").val()==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Notebook computers)))");
 	   e.preventDefault();
-		if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
 	  }
 	}
 	if($("input[name='Q12Wa14S1']").attr("placeholder")=="" || $("input[name='Q12Wa14S2']").attr("placeholder")=="" || $("input[name='Q12Wa14S3']").attr("placeholder")==""){
+	if($("input[name='Q12Wa14S1']").val()=="" || $("input[name='Q12Wa14S2']").val()=="" || $("input[name='Q12Wa14S3']").val()==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Notebook computers)))");
 	   e.preventDefault();
-		if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
 	  }
 	}
 	if($("input[name='Q12Wa15S1']").attr("placeholder")=="" || $("input[name='Q12Wa15S2']").attr("placeholder")=="" || $("input[name='Q12Wa15S3']").attr("placeholder")==""){
+	if($("input[name='Q12Wa15S1']").val()=="" || $("input[name='Q12Wa15S2']").val()=="" || $("input[name='Q12Wa15S3']").val()==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Printers)))");
 	   e.preventDefault();
-		if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
 	  }
 	}
 	if($("input[name='Q12Wa16S1']").attr("placeholder")=="" || $("input[name='Q12Wa16S2']").attr("placeholder")=="" || $("input[name='Q12Wa16S3']").attr("placeholder")==""){
+	if($("input[name='Q12Wa16S1']").val()=="" || $("input[name='Q12Wa16S2']").val()=="" || $("input[name='Q12Wa16S3']").val()==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Copying equipment (photocopiers))))");
 	   e.preventDefault();
-		if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
 	  }
 	}
 	if($("input[name='Q12Wa17S1']").attr("placeholder")=="" || $("input[name='Q12Wa17S2']").attr("placeholder")=="" || $("input[name='Q12Wa17S3']").attr("placeholder")==""){
+	if($("input[name='Q12Wa17S1']").val()=="" || $("input[name='Q12Wa17S2']").val()=="" || $("input[name='Q12Wa17S3']").val()==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Copying equipment (Whiteboards))))");
 	   e.preventDefault();
-		if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
 	  }
 	}
 	if($("input[name='Q12Wa18S1']").attr("placeholder")=="" || $("input[name='Q12Wa18S2']").attr("placeholder")=="" || $("input[name='Q12Wa18S3']").attr("placeholder")==""){
+	if($("input[name='Q12Wa18S1']").val()=="" || $("input[name='Q12Wa18S2']").val()=="" || $("input[name='Q12Wa18S3']").val()==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Copying equipment (Electrical and electronic typewriters))))");
 	   e.preventDefault();
-		if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
 	  }
 	}
 	if($("input[name='Q12Wa19S1']").attr("placeholder")=="" || $("input[name='Q12Wa19S2']").attr("placeholder")=="" || $("input[name='Q12Wa19S3']").attr("placeholder")==""){
+	if($("input[name='Q12Wa19S1']").val()=="" || $("input[name='Q12Wa19S2']").val()=="" || $("input[name='Q12Wa19S3']").val()==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Electrical and electronic typewriters)");
 	   e.preventDefault();
-		if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
 	  }
 	}	
 	if($("input[name='Q12Wa20S1']").attr("placeholder")=="" || $("input[name='Q12Wa20S2']").attr("placeholder")=="" || $("input[name='Q12Wa20S3']").attr("placeholder")==""){
+	if($("input[name='Q12Wa20S1']").val()=="" || $("input[name='Q12Wa20S2']").val()=="" || $("input[name='Q12Wa20S3']").val()==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Pocket and desk calculators)");
 	   e.preventDefault();
-		if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
 	  }
 	}
 	if($("input[name='Q12Wa21S1']").attr("placeholder")=="" || $("input[name='Q12Wa21S2']").attr("placeholder")=="" || $("input[name='Q12Wa21S3']").attr("placeholder")==""){
+	if($("input[name='Q12Wa21S1']").val()=="" || $("input[name='Q12Wa21S2']").val()=="" || $("input[name='Q12Wa21S3']").val()==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Fax machines)");
 	   e.preventDefault();
-		if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
 	  }
 	}
 	if($("input[name='Q12Wa22S1']").attr("placeholder")=="" || $("input[name='Q12Wa22S2']").attr("placeholder")=="" || $("input[name='Q12Wa22S3']").attr("placeholder")==""){
+	if($("input[name='Q12Wa22S1']").val()=="" || $("input[name='Q12Wa22S2']").val()=="" || $("input[name='Q12Wa22S3']").val()==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Telex)");
 	   e.preventDefault();
-		if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
 	  }
 	}
 	if($("input[name='Q12Wa23S1']").attr("placeholder")=="" || $("input[name='Q12Wa23S2']").attr("placeholder")=="" || $("input[name='Q12Wa23S3']").attr("placeholder")==""){
+		if($("input[name='Q12Wa23S1']").val()=="" || $("input[name='Q12Wa23S2']").val()=="" || $("input[name='Q12Wa23S3']").val()==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Telephones)");
 	   e.preventDefault();
-		if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
 	  }
 	}	
 	if($("input[name='Q12Wa24S1']").attr("placeholder")=="" || $("input[name='Q12Wa24S2']").attr("placeholder")=="" || $("input[name='Q12Wa24S3']").attr("placeholder")==""){
+	if($("input[name='Q12Wa24S1']").val()=="" || $("input[name='Q12Wa24S2']").val()=="" || $("input[name='Q12Wa24S3']").val()==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Pay telephones)");
 	   e.preventDefault();
-		if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
 	  }
 	}
 	if($("input[name='Q12Wa25S1']").attr("placeholder")=="" || $("input[name='Q12Wa25S2']").attr("placeholder")=="" || $("input[name='Q12Wa25S3']").attr("placeholder")==""){
+	if($("input[name='Q12Wa25S1']").val()=="" || $("input[name='Q12Wa25S2']").val("placeholder")=="" || $("input[name='Q12Wa25S3']").val()==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Mobiles)");
 	   e.preventDefault();
-		if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
 	  }
 	}
 	if($("input[name='Q12Wa26S1']").attr("placeholder")=="" || $("input[name='Q12Wa26S2']").attr("placeholder")=="" || $("input[name='Q12Wa26S3']").attr("placeholder")==""){
+	if($("input[name='Q12Wa26S1']").val()=="" || $("input[name='Q12Wa26S2']").val()=="" || $("input[name='Q12Wa26S3']").val()==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Answering systems)");
 	   e.preventDefault();
-		if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
 	  }
 	}
 	if($("input[name='Q12Wa27S1']").attr("placeholder")=="" || $("input[name='Q12Wa27S2']").attr("placeholder")=="" || $("input[name='Q12Wa27S3']").attr("placeholder")==""){
+	if($("input[name='Q12Wa27S1']").val()=="" || $("input[name='Q12Wa27S2']").val()=="" || $("input[name='Q12Wa27S3']").val()==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Induction cookers)");
 	   e.preventDefault();
-		if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
 	  }
 	}
 	if($("input[name='Q12Wa28S1']").attr("placeholder")=="" || $("input[name='Q12Wa28S2']").attr("placeholder")=="" || $("input[name='Q12Wa28S3']").attr("placeholder")==""){
+	if($("input[name='Q12Wa28S1']").val()=="" || $("input[name='Q12Wa28S2']").val()=="" || $("input[name='Q12Wa28S3']").val()==""){
 	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Geysers/water heaters)");
 	   e.preventDefault();
-		if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
 	  }
 	}
 	if($("input[name='Q4Wa1']:checked").val()==="Y"){
