@@ -351,7 +351,7 @@ class Dashboard_model extends CI_Model {
 	public function getschools_not_start_the_audit_phase_2() {
 		$this->db->where('progress =','5');
 		$this->db->where('complete_status =', '0');
-		$this->db->where("make_school_disabled","1");
+		
 		return $this->db->count_all_results('gsp_school');
     }
 	
