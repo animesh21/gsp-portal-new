@@ -86,7 +86,7 @@
         </div>
       </div>
 	  <div class="col-md-6 col-md-offset-3">
-	    <a href="http://www.greenschoolsprogramme.org/audit/downloadFiles" target="_blank" class="btn btn-danger btn-block btn-lg" style="background:#e86549; border:1ps solid #e86549;">Download Reports For GSP Audit 2017</a>
+	    <a href="http://www.greenschoolsprogramme.org/audit/download/downloadFiles" target="_blank" class="btn btn-danger btn-block btn-lg" style="background:#e86549; border:1ps solid #e86549;">Download Reports For GSP Audit 2017</a>
 	  </div>
     </div>
   </div>
