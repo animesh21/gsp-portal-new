@@ -85,6 +85,9 @@
           <div class="title"><strong>Digital Certificate</strong></div>
         </div>
       </div>
+	  <div class="col-md-12">
+	    <a href="http://www.greenschoolsprogramme.org/audit/downloadFiles" target="_blank" class="btn btn-danger btn-block btn-lg">Download Reports For GSP Audit 2017</a>
+	  </div>
     </div>
   </div>
 </div>
