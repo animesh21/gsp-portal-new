@@ -929,6 +929,7 @@ class Audit_started extends CI_Controller {
      ->getStartColor()
      ->setRGB('fc3300');	
      $filename='PartnersData.xls';
+		ob_end_clean();
      $objPHPExcel->setActiveSheetIndex(0);
      header('Content-Type: application/vnd.ms-excel; charset=UTF-8');
      header('Content-Disposition: attachment;filename="'.$filename.'"');
