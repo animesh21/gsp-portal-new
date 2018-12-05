@@ -3526,26 +3526,56 @@
       <p class="formanswertext"> <?php echo (getFiled('Q19W14', $schoolUserID) != "") ? (getFiled('Q19W14', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
     </li>
     <?php } ?>
+	<li> <p class="orange"><span class="cube">18</span>Does your school reuse the wastewater from RO plant or Air conditioner drain pipes?</p>
+	<p class="formanswertext"> <?php echo (getFiled('Q19W15', $schoolUserID) != "") ? (getFiled('Q19W15', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
+	</li>
+	<?php if(getFiled('Q19W15', $schoolUserID) === "Y"){ ?>
+	<li> 
+  	 <p class="orange"><span class="cube">18 (i)</span>If yes, How does your school reuse wastewater from RO plant or AC?</p>
+	 <p class="formanswertext"> <?php 
+	       $Q19W16=(getFiled('Q19W16', $schoolUserID) != "") ? getFiled('Q19W16', $schoolUserID): " " ;
+		  $Q19W161=(getFiled('Q19W161', $schoolUserID) != "") ? getFiled('Q19W161', $schoolUserID): " " ;
+		  $Q19W162=(getFiled('Q19W162', $schoolUserID) != "") ? getFiled('Q19W162', $schoolUserID): " " ;
+		  if($Q19W16==1){echo "Used for cleaning purposes (mopping, washing vehicles, etc)".",";}
+		  if($Q19W161==2){echo "Used for gardening and horticulture".",";}
+		  if($Q19W162==3){echo "Flushing".",";}
+	?></p>
+	</li>
+	<?php } ?>
+	<?php if(getFiled('Q19W15', $schoolUserID) === "N"){ ?>
+	<li> 
+  	 <p class="orange"><span class="cube">18 (i)</span>If no, How does your school reuse wastewater from RO plant or AC?</p>
+	 <p class="formanswertext"> <?php 
+	       $Q19W17=(getFiled('Q19W17', $schoolUserID) != "") ? getFiled('Q19W17', $schoolUserID): " ";
+		  if($Q19W17==1){echo "Wastewater flows directly to the drains".",";}
+	?></p>
+	</li>
+	<?php } ?>
+	
     <li>
       <p class="orange">
-        <label><span class="cube">18</span>Does your school reuse the
+        <label><span class="cube">19</span>Does your school reuse the
         treated wastewater?</label>
       </p>
-      <p> <?php echo (getFiled('Q20W1', $schoolUserID) != "") ? (getFiled('Q20W1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
+      <p class="formanswertext"> <?php echo (getFiled('Q20W1', $schoolUserID) != "") ? (getFiled('Q20W1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
     </li>
     <?php if(strcmp(getFiled('Q20W1', $schoolUserID),'Y')==0): ?>
     <li>
-      <p class="orange"><span class="cube">18(a)</span>How does your
+      <p class="orange"><span class="cube">19(a)</span>How does your
         school reuse wastewater?</p>
       <p class="formanswertext">
         <?php
                     if (getFiled('Q20W2', $schoolUserID) == 1):
-                        echo "Grdening";
-                    elseif (getFiled('Q20W2', $schoolUserID) == 2):
-                        echo "Flushing";
-                    elseif (getFiled('Q20W2', $schoolUserID) == 3):
-                        echo " Recharge Ground Water";
-
+                        echo "Grdening".",";
+					endif;	
+                    if (getFiled('Q20W21', $schoolUserID) == 2):
+                        echo "Flushing".",";
+					endif;	
+                    if (getFiled('Q20W22', $schoolUserID) == 3):
+                        echo " Recharge Ground Water".",";
+					endif;	
+					if (getFiled('Q20W23', $schoolUserID) == 4):
+                        echo " Recharge Ground Water".",";	
                     endif;
                     ?>
       </p>
@@ -3553,17 +3583,18 @@
     <?php else: ?>
     <li>
       <p class="orange">
-        <label><span class="cube">18(a)</span>Please specify the fate of wastewater:</label>
+        <label><span class="cube">19(a)</span>Please specify the fate of wastewater:</label>
       </p>
       <p class="formanswertext">
         <?php
         if (getFiled('Q20W3', $schoolUserID) == 1):
             echo "Wastewater flows directly to the drains";
-        elseif (getFiled('Q20W3', $schoolUserID) == 2):
+		endif;	
+        if (getFiled('Q20W31', $schoolUserID) == 2):
             echo "Used for groundwater recharge";
-        elseif (getFiled('Q20W3', $schoolUserID) == 3):
+		endif;	
+        if (getFiled('Q20W32', $schoolUserID) == 3):
             echo " Used for gardening and horticulture";
-
         endif;
         ?>
       </p>
