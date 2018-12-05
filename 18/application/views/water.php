@@ -7,7 +7,7 @@
     }
 
     #Q8W2S4-error{
-                    color: #b2b7b4 !important;
+                    color: #818583 !important;
 					font-size: 14px !important;
 					margin-top: -36px !important;
 					position: absolute;
@@ -17,7 +17,7 @@
 
     #Q8W2S2S10-error{
 
-            color: #b2b7b4 !important;
+            color: #818583 !important;
     font-size: 14px !important;
     margin-top: -36px !important;
     position: absolute;
@@ -27,7 +27,7 @@
 
 #Q8W2S2S6-error
 {
-         color: #b2b7b4 !important;
+          color: #818583 !important;
     font-size: 14px !important;
     margin-top: -36px !important;
     position: absolute;
@@ -38,7 +38,7 @@
 #Q8W2S2S5-error
 {
 
-            color: #b2b7b4 !important;
+            color: #818583 !important;
     font-size: 14px !important;
     margin-top: -36px !important;
     position: absolute;
@@ -48,7 +48,7 @@
 
 #Q8W2S5-error
 {
-     color: #b2b7b4 !important;
+     color: #818583 !important;
     font-size: 14px !important;
     margin-top: -36px !important;
     position: absolute;
@@ -59,7 +59,7 @@
 #Q8W2S7-error
 {
 
-      color: #b2b7b4 !important;
+      color: #818583 !important;
     font-size: 14px !important;
     margin-top: -36px !important;
     position: absolute;
@@ -69,7 +69,7 @@
 
 #Q8W2S9-error
 {
-    color: #b2b7b4 !important;
+     color: #818583 !important;
     font-size: 14px !important;
     margin-top: -36px !important;
     position: absolute;
@@ -79,7 +79,7 @@
 
 #Q8W2S10-error
 {
-      color: #b2b7b4 !important;
+      color: #818583 !important;
     font-size: 14px !important;
     margin-top: -36px !important;
     position: absolute;
@@ -89,7 +89,7 @@
 
 #Q8W2S13-error
 {
-      color: #b2b7b4 !important;
+      color: #818583 !important;
     font-size: 14px !important;
     margin-top: -43px !important;
     position: absolute;
@@ -99,7 +99,7 @@
 
 #Q8W2S8-error
 {
-  color: #b2b7b4 !important;
+   color: #818583 !important;
     font-size: 14px !important;
     margin-top: -43px !important;
     position: absolute;
@@ -109,7 +109,7 @@
 
 #Q8W2S61-error
 {
-     color: #b2b7b4 !important;
+    color: #818583 !important;
     font-size: 14px !important;
     margin-top: -43px !important;
     position: absolute;
@@ -118,7 +118,7 @@
 
 #Q8W2S2-error
 {
-    color: #b2b7b4 !important;
+    color: #818583 !important;
     font-size: 14px !important;
     margin-top: -43px !important;
     position: absolute;
@@ -128,7 +128,7 @@
 
 #Q8W2-error
 {
-        color: #b2b7b4 !important;
+       color: #818583 !important;
     font-size: 14px !important;
     margin-top: -43px !important;
     position: absolute;
@@ -137,7 +137,7 @@
 
 #Q8W2S2S2-error
 {
-      color: #b2b7b4 !important;
+       color: #818583 !important;
     font-size: 14px !important;
     margin-top: -43px !important;
     position: absolute;
@@ -146,7 +146,7 @@
 
 #Q8W2S2S7-error
 {
-    color: #b2b7b4 !important;
+    color: #818583 !important;
     font-size: 14px !important;
     margin-top: -43px !important;
     position: absolute;
@@ -155,7 +155,7 @@
 
 #Q8W2S11-error
 {
-          color: #b2b7b4 !important;
+          color: #818583 !important;
     font-size: 14px !important;
     margin-top: -37px !important;
     position: absolute;
@@ -164,7 +164,7 @@
 
 #Q8W2S12-error
 {
-      color: #b2b7b4 !important;
+      color: #818583 !important;
     font-size: 14px !important;
     margin-top: -44px !important;
     position: absolute;
@@ -172,7 +172,7 @@
 }
 
 .error{
-color: #b2b7b4 !important;
+ color: #818583 !important;
                 font-size: 14px !important;
 
 }
