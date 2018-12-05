@@ -15,7 +15,7 @@
 </script>
 
 <div class="cover"> <img src="assets/img/images/logo.png" width="436" height="118" class="logo">
-  <h1>Responses For Green Schools Programme Audit 2015</h1>
+  <h1>Responses For Green Schools Programme Audit 2018</h1>
  <div class="school-detail">
     <p><span>School Name:</span> <span><?php echo $school[0]->name; ?></span></p>
     <p><span>Address:</span> <span><?php echo $school[0]->address1; ?></span></p>
