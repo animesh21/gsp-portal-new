@@ -34,7 +34,7 @@ ul {list-style-type: none;}
 .list {padding: 0;}
 .list li {margin-bottom: 20px;}
 .list li p {padding:0 0 0 45px; font-size: 14px; margin: 0px;}
-.list li p span:first-child {display: inline-block; text-align: center; font-size: 13px; width: 30px; height: 23px; padding-top: 7px; background: #e86549; color: #fff; vertical-align: baseline; margin: 0 15px 0 0;}
+.list li p span:first-child {display: inline-block; text-align: center; font-size: 13px; width:60px; height: 25px; padding-top: 7px; background: #e86549; color: #fff; vertical-align: baseline; margin: 0 15px 0 0;}
 .list li p.orange {color: #e86549; padding: 0;}
 .list li ol { margin-left: 25px; font-size: 14px; }
 
