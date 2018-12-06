@@ -2,6 +2,7 @@
 <head>
 <meta charset="utf-8">
 <title>Green School Programms Audit Portal</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <link href="assets/css/pdf.css" rel="stylesheet">
 </head>
 <body>
@@ -320,7 +321,7 @@
       co-ordinator may be a science or social science teacher, with an interest in air pollution
       issues. Do include the school transport in-charge and the drivers of the school vehicles in your
       audit team.</p>
-    <p class="orange"><span>Teachers:</span></p>
+    <p class="orange" style="margin-top:12px;"><span>Teachers:</span></p>
     <table class="table">
       <tr>
         <th></th>
@@ -485,7 +486,7 @@
         <tr>
           <th>Details of the classroom (e.g. Class II section b)</th>
           <th>X = Area of floor (LxB) (square meters)</th>
-          <th>Y = Sum of area of openings ? (LxH)</th>
+          <th>Y = Sum of area of openings &Sigma; (LxH)</th>
           <th>Percentage of the floor area being ventilated (Y/X x 100)</th>
         </tr>
         <tr>
@@ -948,7 +949,7 @@
   <div class="task-area">
     <h3 class="task">Task 1: Energy Audit Team</h3>
     <p> The school administrative staff must be members of your team as you would require electricity bills, fuel consumption bills, etc. Other support staff such as generator attendant and electricians are also important contacts. It would be a good idea to rope in a Physics or Science teacher as well and, most importantly, a team of five to 10 of your schoolmates.</p>
-    <p class="orange"><span>Teachers:</span></p>
+    <p class="orange" style="margin-top:12px;"><span>Teachers:</span></p>
     <table class="table">
       <tr>
         <th></th>
@@ -1318,7 +1319,7 @@
     <h3 class="task">Task 3: Is your school using any renewable sources of energy? </h3>
     <ul class="list">
       <li>
-        <p class="orange"><span>5</span><span> What is the average number of sunny days in your area?</span></p>
+        <p class="orange"><span>5</span><span> What is the average number of sunny days (in one year) in your area? </span></p>
         <p class="formanswertext"><?php echo (getFiled('Q8E1', $schoolUserID) != "") ? getFiled('Q8E1', $schoolUserID) : "N/A"; ?></p>
       </li>
       <li>
@@ -1385,7 +1386,7 @@
   <div class="task-area">
     <h3 class="task">Task 1: Food Audit Team</h3>
     <p>You would require at least 5 to 10 of your schoolmates in the Food audit team. The teacher co-ordinator may be a science or home science teacher or midday meal in-charge with an interest in food and nutrition. Do include the canteen in-charge in your audit team. </p>
-    <p class="orange"><span>Teachers:</span></p>
+    <p class="orange" style="margin-top:12px;"><span>Teachers:</span></p>
     <table class="table">
       <tr>
         <th></th>
@@ -1536,7 +1537,8 @@
         <p class="orange">
           <label class="control-label">Please upload picture of Mid-day meal being served</label>
         <p>
-        <table class="table">
+	    <?php if(!empty($midDayMeal)){ ?>
+          <table class="table">
           <tr>
             <th>image</th>
             <th>File name</th>
@@ -1549,6 +1551,9 @@
           </tr>
           <?php } ?>
         </table>
+		<?php }else{ ?>
+		<div class="support_files"> No documents uploaded by the school. </div>
+		<?php } ?>
       </li>
       <?php if(strcmp(getFiled('Q5F1', $schoolUserID),'Y')==0): ?>
       <li>
@@ -1993,7 +1998,7 @@
       and interested schoolmates would make a strong team. Try and involve
       some students of the photography or
       painting clubs of your school.</p>
-    <p class="orange"><span>Teachers:</span></p>
+    <p class="orange" style="margin-top:12px;"><span>Teachers:</span></p>
     <table class="table">
       <tr>
         <th></th>
@@ -2334,7 +2339,7 @@
       Social Science) to guide you during the audit. You would also require the help of the administrative staff
       of your school and other staff, such as the plumber, electrician and other maintenance staff. And, most
       importantly, five to 10 of your schoolmates</p>
-    <p class="orange"><span>Teachers:</span></p>
+    <p class="orange" style="margin-top:12px;"><span>Teachers:</span></p>
     <table class="table">
       <tr>
         <th></th>
@@ -2576,7 +2581,7 @@
       most cities in India have to deal with depleting water supply, marked by falling ground water levels,
       vanishing water bodies, severe pollution and urban floods. With their own supplies drying up, cities are
       forced to source water from further and further away. This is expensive. </p>
-    <p> The questions below will help students to understand where their water is coming from – at a cost. </p>
+    <p style="margin-top:12px;"> The questions below will help students to understand where their water is coming from – at a cost. </p>
     <ul class="list">
       <li>
         <p class="orange"><span>2</span> Where does the water your school uses, come from? (please tick the correct options):</p>
@@ -3655,7 +3660,7 @@
       to enlist their help at every task. A teacher with interest in waste and five to 10 students will be ideal
       for your team. Administrative staff is important as they will provide the permissions required for the
       housekeeping staff to work with you</p>
-    <p class="orange"><span>Teachers:</span></p>
+    <p class="orange" style="margin-top:12px;"><span>Teachers:</span></p>
     <table class="table">
       <tr>
         <th></th>
@@ -3795,7 +3800,7 @@
     <h3 class="task">Task 2: What is the waste segregation system in your school?</h3>
     <p>Segregation means sorting. Let’s understand the waste segregation system because the amount of waste
       recycled or reused will depend on the method of collection. To understand the waste segregation system
-      of your school, fill the table below.<br>
+      of your school, fill the table below.<br><br>
       <b>To collect data:</b> Students will have to survey the waste collection area and talk to the
       house-keeping staff to know whether waste is segregated in the school and in what quantity. </p>
     <ul class="list">
