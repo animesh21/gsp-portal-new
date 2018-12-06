@@ -486,7 +486,7 @@
         <tr>
           <th>Details of the classroom (e.g. Class II section b)</th>
           <th>X = Area of floor (LxB) (square meters)</th>
-          <th>Y = Sum of area of openings &Sigma; (LxH)</th>
+          <th>Y = Sum of area of openings E (LxH)</th>
           <th>Percentage of the floor area being ventilated (Y/X x 100)</th>
         </tr>
         <tr>
