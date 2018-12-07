@@ -3,7 +3,7 @@
 <meta charset="utf-8">
 <title>Green School Programms Audit Portal</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<link href="assets/css/pdf.css" rel="stylesheet">
+<link href="<?php echo base_url(); ?>assets/css/pdf.css" rel="stylesheet">
 </head>
 <body>
 <script type="text/php">
@@ -17,9 +17,9 @@
 <div class="cover"> <img src="assets/img/images/logo.png" width="436" height="118" class="logo">
   <h1>Responses For Green Schools Programme Audit 2018</h1>
   <div class="school-detail">
-    <p><span>School Name:</span><span><?php echo $school[0]->name; ?></span></p>
-    <p><span>Address:</span><span><?php echo $school[0]->address1; ?></span></p>
-    <p><span>Coordinator Name:</span><span><?php echo $school[0]->coname; ?></span></p>
+    <p><span>School Name:</span><span style="font-size:18px;"><?php echo $school[0]->name; ?></span></p>
+    <p><span>Address:</span><span style="font-size:18px;"><?php echo $school[0]->address1; ?></span></p>
+    <p><span>Coordinator Name:</span><span style="font-size:18px;"><?php echo $school[0]->coname; ?></span></p>
   </div>
   <div class="address-wrap"> <img src="assets/img/images/cover.png" width="100%">
     <div class="address">
@@ -110,7 +110,7 @@
           <?php echo (getFiled('Q1S1', $schoolUserID) != '') ? $arr[getFiled('Q1S1', $schoolUserID)] : ""; ?> </p>
       </li>
       <li>
-        <p class="orange"><span>16</span><span>Category For Your School (Not Applicable in Case of Residential Category)</span></p>
+        <p class="orange"><span>16</span><span>School Shift</span></p>
         <p>
           <?php
                             $arr1 = array(
@@ -493,67 +493,121 @@
           <td><?php echo (getFiled('Q5A1S1', $schoolUserID) != "") ? getFiled('Q5A1S1', $schoolUserID) : "N/A"; ?> </td>
           <td><?php echo (getFiled('Q5A1S2', $schoolUserID) != "") ? getFiled('Q5A1S2', $schoolUserID) : "N/A"; ?> </td>
           <td><?php echo (getFiled('Q5A1S3', $schoolUserID) != "") ? getFiled('Q5A1S3', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q5A1S4', $schoolUserID) != "") ? getFiled('Q5A1S4', $schoolUserID) : "N/A"; ?> </td>
+          <td><?php
+		   $Q5A1S2=(getFiled('Q5A1S2', $schoolUserID) != "") ? getFiled('Q5A1S2', $schoolUserID) : "N/A";
+		   $Q5A1S3=(getFiled('Q5A1S3', $schoolUserID) != "") ? getFiled('Q5A1S3', $schoolUserID) : "N/A";
+		   $Q5A1S4=($Q5A1S3/$Q5A1S2)*100;
+		    if($Q5A1S2!=='N/A' && $Q5A1S3!=='N/A'){ echo number_format($Q5A1S4,2);}else{ echo "N/A";}
+		   ?>
+          </td>
         </tr>
         <tr>
           <td><?php echo (getFiled('Q5A2S1', $schoolUserID) != "") ? getFiled('Q5A2S1', $schoolUserID) : "N/A"; ?> </td>
           <td><?php echo (getFiled('Q5A2S2', $schoolUserID) != "") ? getFiled('Q5A2S2', $schoolUserID) : "N/A"; ?> </td>
           <td><?php echo (getFiled('Q5A2S3', $schoolUserID) != "") ? getFiled('Q5A2S3', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q5A2S4', $schoolUserID) != "") ? getFiled('Q5A2S4', $schoolUserID) : "N/A"; ?> </td>
+          <td><?php
+		   $Q5A2S2=(getFiled('Q5A2S2', $schoolUserID) != "") ? getFiled('Q5A2S2', $schoolUserID) : "N/A";
+		   $Q5A2S3=(getFiled('Q5A2S3', $schoolUserID) != "") ? getFiled('Q5A2S3', $schoolUserID) : "N/A";
+		   $Q5A2S4=($Q5A2S3/$Q5A2S2)*100;
+		    if($Q5A2S2!=='N/A' && $Q5A2S3!=='N/A'){ echo number_format($Q5A2S4,2);}else{ echo "N/A";}
+		   ?>
+          </td>
         </tr>
         <tr>
           <td><?php echo (getFiled('Q5A3S1', $schoolUserID) != "") ? getFiled('Q5A3S1', $schoolUserID) : "N/A"; ?> </td>
           <td><?php echo (getFiled('Q5A3S2', $schoolUserID) != "") ? getFiled('Q5A3S2', $schoolUserID) : "N/A"; ?> </td>
           <td><?php echo (getFiled('Q5A3S3', $schoolUserID) != "") ? getFiled('Q5A3S3', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q5A3S4', $schoolUserID) != "") ? getFiled('Q5A3S4', $schoolUserID) : "N/A"; ?> </td>
+          <td><?php
+		   $Q5A3S2=(getFiled('Q5A3S2', $schoolUserID) != "") ? getFiled('Q5A3S2', $schoolUserID) : "N/A";
+		   $Q5A3S3=(getFiled('Q5A3S3', $schoolUserID) != "") ? getFiled('Q5A3S3', $schoolUserID) : "N/A";
+		   $Q5A3S4=($Q5A3S3/$Q5A3S2)*100;
+		    if($Q5A3S2!=='N/A' && $Q5A3S3!=='N/A'){ echo number_format($Q5A3S4,2);}else{ echo "N/A";}
+		   ?>
+          </td>
         </tr>
         <tr>
           <td><?php echo (getFiled('Q5A4S1', $schoolUserID) != "") ? getFiled('Q5A4S1', $schoolUserID) : "N/A"; ?> </td>
           <td><?php echo (getFiled('Q5A4S2', $schoolUserID) != "") ? getFiled('Q5A4S2', $schoolUserID) : "N/A"; ?> </td>
           <td><?php echo (getFiled('Q5A4S3', $schoolUserID) != "") ? getFiled('Q5A4S3', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q5A4S4', $schoolUserID) != "") ? getFiled('Q5A4S4', $schoolUserID) : "N/A"; ?> </td>
+          <td><?php
+		   $Q5A4S2=(getFiled('Q5A4S2', $schoolUserID) != "") ? getFiled('Q5A4S2', $schoolUserID) : "N/A";
+		   $Q5A4S3=(getFiled('Q5A4S3', $schoolUserID) != "") ? getFiled('Q5A4S3', $schoolUserID) : "N/A";
+		   $Q5A4S4=($Q5A4S3/$Q5A4S2)*100;
+		    if($Q5A4S2!=='N/A' && $Q5A4S3!=='N/A'){ echo number_format($Q5A4S4,2);}else{ echo "N/A";}
+		   ?></td>
         </tr>
         <tr>
           <td><?php echo (getFiled('Q5A5S1', $schoolUserID) != "") ? getFiled('Q5A5S1', $schoolUserID) : "N/A"; ?> </td>
           <td><?php echo (getFiled('Q5A5S2', $schoolUserID) != "") ? getFiled('Q5A5S2', $schoolUserID) : "N/A"; ?> </td>
           <td><?php echo (getFiled('Q5A5S3', $schoolUserID) != "") ? getFiled('Q5A5S3', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q5A5S4', $schoolUserID) != "") ? getFiled('Q5A5S4', $schoolUserID) : "N/A"; ?> </td>
+          <td><?php
+		   $Q5A5S2=(getFiled('Q5A5S2', $schoolUserID) != "") ? getFiled('Q5A5S2', $schoolUserID) : "N/A";
+		   $Q5A5S3=(getFiled('Q5A5S3', $schoolUserID) != "") ? getFiled('Q5A5S3', $schoolUserID) : "N/A";
+		   $Q5A5S4=($Q5A5S3/$Q5A5S2)*100;
+		    if($Q5A5S2!=='N/A' && $Q5A5S3!=='N/A'){ echo number_format($Q5A5S4,2);}else{ echo "N/A";}
+		   ?></td>
         </tr>
         <tr>
           <td><?php echo (getFiled('Q5A6S1', $schoolUserID) != "") ? getFiled('Q5A6S1', $schoolUserID) : "N/A"; ?> </td>
           <td><?php echo (getFiled('Q5A6S2', $schoolUserID) != "") ? getFiled('Q5A6S2', $schoolUserID) : "N/A"; ?> </td>
           <td><?php echo (getFiled('Q5A6S3', $schoolUserID) != "") ? getFiled('Q5A6S3', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q5A6S4', $schoolUserID) != "") ? getFiled('Q5A6S4', $schoolUserID) : "N/A"; ?> </td>
+          <td><?php
+		   $Q5A6S2=(getFiled('Q5A6S2', $schoolUserID) != "") ? getFiled('Q5A6S2', $schoolUserID) : "N/A";
+		   $Q5A6S3=(getFiled('Q5A6S3', $schoolUserID) != "") ? getFiled('Q5A6S3', $schoolUserID) : "N/A";
+		   $Q5A6S4=($Q5A6S3/$Q5A6S2)*100;
+		    if($Q5A6S2!=='N/A' && $Q5A6S3!=='N/A'){ echo number_format($Q5A6S4,2);}else{ echo "N/A";}
+		   ?></td>
         </tr>
         <tr>
           <td><?php echo (getFiled('Q5A7S1', $schoolUserID) != "") ? getFiled('Q5A7S1', $schoolUserID) : "N/A"; ?> </td>
           <td><?php echo (getFiled('Q5A7S2', $schoolUserID) != "") ? getFiled('Q5A7S2', $schoolUserID) : "N/A"; ?> </td>
           <td><?php echo (getFiled('Q5A7S3', $schoolUserID) != "") ? getFiled('Q5A7S3', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q5A7S4', $schoolUserID) != "") ? getFiled('Q5A7S4', $schoolUserID) : "N/A"; ?> </td>
+          <td><?php
+		   $Q5A7S2=(getFiled('Q5A7S2', $schoolUserID) != "") ? getFiled('Q5A7S2', $schoolUserID) : "N/A";
+		   $Q5A7S3=(getFiled('Q5A7S3', $schoolUserID) != "") ? getFiled('Q5A7S3', $schoolUserID) : "N/A";
+		   $Q5A7S4=($Q5A7S3/$Q5A7S2)*100;
+		    if($Q5A7S2!=='N/A' && $Q5A7S3!=='N/A'){ echo number_format($Q5A7S4,2);}else{ echo "N/A";}
+		   ?>
+          </td>
         </tr>
         <tr>
           <td><?php echo (getFiled('Q5A8S1', $schoolUserID) != "") ? getFiled('Q5A8S1', $schoolUserID) : "N/A"; ?> </td>
           <td><?php echo (getFiled('Q5A8S2', $schoolUserID) != "") ? getFiled('Q5A8S2', $schoolUserID) : "N/A"; ?> </td>
           <td><?php echo (getFiled('Q5A8S3', $schoolUserID) != "") ? getFiled('Q5A8S3', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q5A8S4', $schoolUserID) != "") ? getFiled('Q5A8S4', $schoolUserID) : "N/A"; ?> </td>
+          <td><?php
+		   $Q5A8S2=(getFiled('Q5A8S2', $schoolUserID) != "") ? getFiled('Q5A8S2', $schoolUserID) : "N/A";
+		   $Q5A8S3=(getFiled('Q5A8S3', $schoolUserID) != "") ? getFiled('Q5A8S3', $schoolUserID) : "N/A";
+		   $Q5A8S4=($Q5A8S3/$Q5A8S2)*100;
+		    if($Q5A8S2!=='N/A' && $Q5A8S3!=='N/A'){ echo number_format($Q5A8S4,2);}else{ echo "N/A";}
+		   ?></td>
         </tr>
         <tr>
           <td><?php echo (getFiled('Q5A9S1', $schoolUserID) != "") ? getFiled('Q5A9S1', $schoolUserID) : "N/A"; ?> </td>
           <td><?php echo (getFiled('Q5A9S2', $schoolUserID) != "") ? getFiled('Q5A9S2', $schoolUserID) : "N/A"; ?> </td>
           <td><?php echo (getFiled('Q5A9S3', $schoolUserID) != "") ? getFiled('Q5A9S3', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q5A9S4', $schoolUserID) != "") ? getFiled('Q5A9S4', $schoolUserID) : "N/A"; ?> </td>
+          <td><?php
+		   $Q5A9S2=(getFiled('Q5A9S2', $schoolUserID) != "") ? getFiled('Q5A9S2', $schoolUserID) : "N/A";
+		   $Q5A9S3=(getFiled('Q5A9S3', $schoolUserID) != "") ? getFiled('Q5A9S3', $schoolUserID) : "N/A";
+		   $Q5A9S4=($Q5A9S3/$Q5A9S2)*100;
+		    if($Q5A9S2!=='N/A' && $Q5A9S3!=='N/A'){ echo number_format($Q5A9S4,2);}else{ echo "N/A";}
+		   ?></td>
         </tr>
         <tr>
           <td><?php echo (getFiled('Q5A10S1', $schoolUserID) != "") ? getFiled('Q5A10S1', $schoolUserID) : "N/A"; ?> </td>
           <td><?php echo (getFiled('Q5A10S2', $schoolUserID) != "") ? getFiled('Q5A10S2', $schoolUserID) : "N/A"; ?> </td>
           <td><?php echo (getFiled('Q5A10S3', $schoolUserID) != "") ? getFiled('Q5A10S3', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q5A10S4', $schoolUserID) != "") ? getFiled('Q5A10S4', $schoolUserID) : "N/A"; ?> </td>
+          <td><?php
+		   $Q5A10S2=(getFiled('Q5A10S2', $schoolUserID) != "") ? getFiled('Q5A10S2', $schoolUserID) : "N/A";
+		   $Q5A10S3=(getFiled('Q5A10S3', $schoolUserID) != "") ? getFiled('Q5A10S3', $schoolUserID) : "N/A";
+		   $Q5A10S4=($Q5A10S3/$Q5A10S2)*100;
+		    if($Q5A10S2!=='N/A' && $Q5A10S3!=='N/A'){ echo number_format($Q5A10S4,2);}else{ echo "N/A";}
+		   ?></td>
         </tr>
         <tr>
           <td>Total</td>
-          <td><?php echo getFiled('Q5A110S2', $schoolUserID); ?></td>
-          <td><?php echo getFiled('Q5A110S3', $schoolUserID); ?></td>
-          <td><?php echo getFiled('Q5A110S4', $schoolUserID); ?></td>
+          <td><?php $total1=$Q5A1S2+$Q5A2S2+$Q5A3S2+$Q5A4S2+$Q5A5S2+$Q5A6S2+$Q5A7S2+$Q5A8S2+$Q5A9S2+$Q5A10S2; echo $total1; ?></td>
+          <td><?php $total2=$Q5A1S3+$Q5A2S3+$Q5A3S3+$Q5A4S3+$Q5A5S3+$Q5A6S3+$Q5A7S3+$Q5A8S3+$Q5A9S3+$Q5A10S3; echo $total2; ?></td>
+          <td><?php echo number_format(($total2/$total1)*100,2); ?></td>
         </tr>
       </table>
       <?php /*?><table class="table">
@@ -1537,8 +1591,8 @@
         <p class="orange">
           <label class="control-label">Please upload picture of Mid-day meal being served</label>
         <p>
-	    <?php if(!empty($midDayMeal)){ ?>
-          <table class="table">
+          <?php if(!empty($midDayMeal)){ ?>
+        <table class="table">
           <tr>
             <th>image</th>
             <th>File name</th>
@@ -1551,9 +1605,9 @@
           </tr>
           <?php } ?>
         </table>
-		<?php }else{ ?>
-		<div class="support_files"> No documents uploaded by the school. </div>
-		<?php } ?>
+        <?php }else{ ?>
+        <div class="support_files"> No documents uploaded by the school. </div>
+        <?php } ?>
       </li>
       <?php if(strcmp(getFiled('Q5F1', $schoolUserID),'Y')==0): ?>
       <li>
@@ -3425,7 +3479,7 @@
       <p class="formanswertext"> <?php echo (getFiled('Q15W1', $schoolUserID) != "") ? getFiled('Q15W1', $schoolUserID) : "N/A"; ?> </p>
     </li>
     <li>
-      <label><strong> Water supply and cleaning of toilets in your school: </strong></label>
+      <h3 class="task">Water supply and cleaning of toilets in your school:</h3>
       <p class="orange">
         <label ><span class="cube">14</span>Is there a water storage system in
         place to supply water in the toilets?</label>
@@ -3468,7 +3522,7 @@
   </ul>
 </div>
 <div class="task-area">
-  <h3>Task 7: Does your school reuse/recycle waste water? </h3>
+  <h3 class="task">Task 7: Does your school reuse/recycle waste water? </h3>
   <p>Water recycling is the process of treating waste or used water, in order to upgrade its quality, so that it can be used again. When water, once used for a particular
     purpose, is put to use again, it is then being reused.</p>
   <ul class="list">
@@ -3531,32 +3585,36 @@
       <p class="formanswertext"> <?php echo (getFiled('Q19W14', $schoolUserID) != "") ? (getFiled('Q19W14', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
     </li>
     <?php } ?>
-	<li> <p class="orange"><span class="cube">18</span>Does your school reuse the wastewater from RO plant or Air conditioner drain pipes?</p>
-	<p class="formanswertext"> <?php echo (getFiled('Q19W15', $schoolUserID) != "") ? (getFiled('Q19W15', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
-	</li>
-	<?php if(getFiled('Q19W15', $schoolUserID) === "Y"){ ?>
-	<li> 
-  	 <p class="orange"><span class="cube">18 (i)</span>If yes, How does your school reuse wastewater from RO plant or AC?</p>
-	 <p class="formanswertext"> <?php 
+    <li>
+      <p class="orange"><span class="cube">18</span>Does your school reuse the wastewater from RO plant or Air conditioner drain pipes?</p>
+      <p class="formanswertext"> <?php echo (getFiled('Q19W15', $schoolUserID) != "") ? (getFiled('Q19W15', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
+    </li>
+    <?php if(getFiled('Q19W15', $schoolUserID) === "Y"){ ?>
+    <li>
+      <p class="orange"><span class="cube">18 (i)</span>If yes, How does your school reuse wastewater from RO plant or AC?</p>
+      <p class="formanswertext">
+        <?php 
 	       $Q19W16=(getFiled('Q19W16', $schoolUserID) != "") ? getFiled('Q19W16', $schoolUserID): " " ;
 		  $Q19W161=(getFiled('Q19W161', $schoolUserID) != "") ? getFiled('Q19W161', $schoolUserID): " " ;
 		  $Q19W162=(getFiled('Q19W162', $schoolUserID) != "") ? getFiled('Q19W162', $schoolUserID): " " ;
 		  if($Q19W16==1){echo "Used for cleaning purposes (mopping, washing vehicles, etc)".",";}
 		  if($Q19W161==2){echo "Used for gardening and horticulture".",";}
 		  if($Q19W162==3){echo "Flushing".",";}
-	?></p>
-	</li>
-	<?php } ?>
-	<?php if(getFiled('Q19W15', $schoolUserID) === "N"){ ?>
-	<li> 
-  	 <p class="orange"><span class="cube">18 (i)</span>If no, How does your school reuse wastewater from RO plant or AC?</p>
-	 <p class="formanswertext"> <?php 
+	?>
+      </p>
+    </li>
+    <?php } ?>
+    <?php if(getFiled('Q19W15', $schoolUserID) === "N"){ ?>
+    <li>
+      <p class="orange"><span class="cube">18 (i)</span>If no, How does your school reuse wastewater from RO plant or AC?</p>
+      <p class="formanswertext">
+        <?php 
 	       $Q19W17=(getFiled('Q19W17', $schoolUserID) != "") ? getFiled('Q19W17', $schoolUserID): " ";
 		  if($Q19W17==1){echo "Wastewater flows directly to the drains".",";}
-	?></p>
-	</li>
-	<?php } ?>
-	
+	?>
+      </p>
+    </li>
+    <?php } ?>
     <li>
       <p class="orange">
         <label><span class="cube">19</span>Does your school reuse the
@@ -3800,7 +3858,8 @@
     <h3 class="task">Task 2: What is the waste segregation system in your school?</h3>
     <p>Segregation means sorting. Let’s understand the waste segregation system because the amount of waste
       recycled or reused will depend on the method of collection. To understand the waste segregation system
-      of your school, fill the table below.<br><br>
+      of your school, fill the table below.<br>
+      <br>
       <b>To collect data:</b> Students will have to survey the waste collection area and talk to the
       house-keeping staff to know whether waste is segregated in the school and in what quantity. </p>
     <ul class="list">
@@ -5262,6 +5321,29 @@
         <label class="control-label">Please upload supporting documents:</label>
       </p>
       <p> Pictures of various school initiatives e.g. rally, debate, street play, art competition, etc</p>
+      <br/>
+      <?php
+    $arrImages = getUploadData(str_replace(' ', '_', $school[0]->name) . '_Audit_Team_Doing_Survey_Waste_', $schoolUserID);
+    if (!empty($arrImages)) {
+        ?>
+      <div>
+        <table class="table">
+          <tr>
+            <th>image</th>
+            <th>File name</th>
+          </tr>
+          <?php foreach ($arrImages as $a) { ?>
+          <tr>
+            <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+            <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Buring_Waste_"), " ", $a->file_name); ?></td>
+          </tr>
+          <?php } ?>
+        </table>
+      </div>
+      <?php } else { ?>
+      <div class="support_files"> No documents uploaded by the school. </div>
+      <?php } ?>
+      <br/>
       <p class="orange"><span>13(a)</span> What form do these awareness drives
         take? </p>
       <p>
