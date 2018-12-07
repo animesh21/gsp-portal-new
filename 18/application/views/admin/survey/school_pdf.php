@@ -2828,7 +2828,7 @@
   <?php } ?>
 </div>
 <div class="task-area">
-  <h3>Task 5: Does your school harvest rainwater? <a class="kplink" href="http://www.greenschoolsprogramme.org/knowledge-bank/water/#rainFalls" target="_blank"> </a></h3>
+  <h3 class="task">Task 5: Does your school harvest rainwater? <a class="kplink" href="http://www.greenschoolsprogramme.org/knowledge-bank/water/#rainFalls" target="_blank"> </a></h3>
   <p>Rainfall (precipitation) is the primary source of freshwater on land. In this section, you
     will find out how much rainwater your school can catch, and how much your school can
     harvest. Rainwater harvesting is a traditional, time-tested method of collecting rainwater
