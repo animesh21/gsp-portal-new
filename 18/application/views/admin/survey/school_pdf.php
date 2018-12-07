@@ -662,6 +662,27 @@
 		
 		?>
       </p>
+      <?php
+     $arrImages = getUploadData(str_replace(' ', '_', $school[0]->name) . '_PUC_Certificate_', $schoolUserID);
+   if (!empty($arrImages)) {
+   ?>
+      <div>
+        <table class="table support-docs">
+          <tr>
+            <th>image</th>
+            <th>File name</th>
+          </tr>
+          <?php foreach ($arrImages as $a) { ?>
+          <tr>
+            <td><img src="uploads/files/<?php echo $a->file_name; ?>" class="img-responsive" width="100" height="100" /></td>
+            <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_PUC_Certificate_"), " ", $a->file_name); ?></td>
+          </tr>
+          <?php } ?>
+        </table>
+      </div>
+      <?php } else { ?>
+      <div class="support_files"> No documents uploaded by the school. </div>
+      <?php } ?>
     </li>
     <?php $dat=getFiled('Q6A1', $schoolUserID); if(($dat)==3 || ($dat)==4 || ($dat)==5){ ?>
     <li>
@@ -5335,7 +5356,7 @@
           <?php foreach ($arrImages as $a) { ?>
           <tr>
             <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
-            <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Buring_Waste_"), " ", $a->file_name); ?></td>
+            <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Audit_Team_Doing_Survey_Waste_"), " ", $a->file_name); ?></td>
           </tr>
           <?php } ?>
         </table>
