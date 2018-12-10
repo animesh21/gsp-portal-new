@@ -1185,7 +1185,6 @@
         <p class="formanswertext"><?php echo (getFiled('Q4E1', $schoolUserID) != "") ? (getFiled('Q4E1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
       </li>
       <li>
-        <h6>Please upload the most recent electricity bill here</h6>
         <?php if(!empty($electricityBills)){ ?>
         <table class="table">
           <tr>
