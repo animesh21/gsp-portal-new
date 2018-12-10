@@ -2131,7 +2131,7 @@
     </ul>
   </div>
   <div class="task-area">
-    <h3>Task 3: What Are The Sources, Supply and Storage of Water in your School? <a class="kplink" href="http://www.greenschoolsprogramme.org/knowledge-bank/water/#sourceOfWater" target="_blank"> </a> </h3>
+    <h3 class="task">Task 3: What Are The Sources, Supply and Storage of Water in your School? <a class="kplink" href="http://www.greenschoolsprogramme.org/knowledge-bank/water/#sourceOfWater" target="_blank"> </a> </h3>
     <p> To understand water, it is important to know the source of water in your school premises. As you know,
       most cities in India have to deal with depleting water supply, marked by falling ground water levels,
       vanishing water bodies, severe pollution and urban floods. With their own supplies drying up, cities are
