@@ -813,6 +813,29 @@
         </tbody>
       </table>
     </li>
+	<li>
+	   <?php
+     $arrImages = getUploadData(str_replace(' ', '_', $school[0]->name) . '_Fuels_', $schoolUserID);
+   if (!empty($arrImages)) {
+   ?>
+      <div>
+        <table class="table support-docs">
+          <tr>
+            <th>image</th>
+            <th>File name</th>
+          </tr>
+          <?php foreach ($arrImages as $a) { ?>
+          <tr>
+            <td><img src="uploads/files/<?php echo $a->file_name; ?>" class="img-responsive" width="100" height="100" /></td>
+            <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Fuels_"), " ", $a->file_name); ?></td>
+          </tr>
+          <?php } ?>
+        </table>
+      </div>
+      <?php } else { ?>
+      <div class="support_files"> No documents uploaded by the school. </div>
+      <?php } ?>
+	</li>
     <li>
       <p class="orange"><span>3(c)</span> IS CNG AVAILABLE IN YOUR STATE? </p>
       <p><?php echo (getFiled('Q6A3', $schoolUserID) != "") ? (getFiled('Q6A3', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?> </p>
