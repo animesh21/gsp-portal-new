@@ -6,7 +6,7 @@ if($_SESSION['username'] == "")
 }
 
 include('functions.php');
-
+include('config.php');
 if(isset($_GET['sort']))
 {
 	$_SESSION['sortby'] = $_GET['sort'];
