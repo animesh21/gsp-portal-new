@@ -58,7 +58,7 @@ $(document).ready(function() {
 
          $start=1;
          //$sql = "select * from `lime_tokens_266617` ORDER BY `datetime` DESC";
-	$sql="SELECT * FROM `lime_tokens_266617` AS t1 JOIN `states_india` AS t2 ON t1.attribute_5=t2.state_id ORDER BY `datetime` DESC"; 
+	$sql="SELECT * FROM `lime_tokens_new16` AS t1 JOIN `states_india` AS t2 ON t1.attribute_5=t2.state_id ORDER BY `datetime` DESC"; 
 
      $sql_data = mysqli_query($conn, $sql);
      
