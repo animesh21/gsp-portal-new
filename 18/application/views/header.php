@@ -140,10 +140,10 @@ ga('send', 'pageview');
       <figure class="logo2"><a href="http://www.greenschoolsprogramme.org/" target="_blank"> <img
 								src="<?php echo base_url(); ?>assets/img/logo.png" title="CSE GSP" alt=""
 								class="img-responsive"></a></figure>
-      <h1 style="
+   <!--   <h1 style="
 font-size: 20px; font-family: fantasy; margin-left: 42px; position: relative;
 left: -208px; color: #e86549;  text-align: center; top: 28px; display:none;">Extended Submission Deadline <span style="display:none;">
-      November 18, 2018</span> </h1>
+      November 18, 2018</span> </h1>-->
       <img src="<?php echo base_url(); ?>assets/img/top-bnr.png" alt="" class="top-bnr1" style="margin-top:-42px; left:20px; position:relative;"></div>
   </header>
 </div>
