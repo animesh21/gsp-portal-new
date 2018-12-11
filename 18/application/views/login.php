@@ -213,7 +213,7 @@ header('Location: http://www.greenschoolsprogramme.org/audit/18/login/browser_ch
                                         '</div>');
 										 setTimeout(function () {
                                 location.reload();
-                            }, 2000);
+                            }, 10000);
                             }
 			    if (data == 24) {
                                 $('#msgForget').html('<div class="alert alert-danger">' +
@@ -221,11 +221,11 @@ header('Location: http://www.greenschoolsprogramme.org/audit/18/login/browser_ch
                                         '</div>');
 										 setTimeout(function () {
                                 location.reload();
-                            }, 2000);
+                            }, 10000);
                             }
                             setTimeout(function () {
                                 location.reload();
-                            }, 2000);
+                            }, 10000);
                         }, 'json');
                     }
                 });
