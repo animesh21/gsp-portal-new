@@ -72,7 +72,9 @@ $(document).ready(function() {
      }
          while($data = mysqli_fetch_array($sql_data))
      {
-        
+        print_r($data);
+		 die();
+		 
          $sq = "SELECT `completeness` FROM `lime_answers_for_progress` where `token`='".$data['token']."'";
          $sql_1 = mysqli_query($conn,$sq);
          $sql_comp = mysqli_fetch_array($sql_1);
