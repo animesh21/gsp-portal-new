@@ -144,7 +144,7 @@ ga('send', 'pageview');
 font-size: 20px; font-family: fantasy; margin-left: 42px; position: relative;
 left: -208px; color: #e86549;  text-align: center; top: 28px; display:none;">Extended Submission Deadline <span style="display:none;">
       November 18, 2018</span> </h1>-->
-      <img src="<?php echo base_url(); ?>assets/img/top-bnr.png" alt="" class="top-bnr1" style="margin-top:-42px; left:20px; position:relative;"></div>
+      <img src="<?php echo base_url(); ?>assets/img/top-bnr.png" alt="" class="top-bnr1" style="left:20px; position:relative;"></div>
   </header>
 </div>
 <div id="index" class="index">
