@@ -71,14 +71,14 @@
           <div class="title"><strong>Response Report</strong></div>
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 hide">
         <div class="schools-statics" style="width:100%;"> <!--<a href="<?php echo base_url('/download/PdfById/').getSchoolId($this->session->userdata('USER_ID')); ?>" target="_blank">-->
           <div class="statics-circle"> <span><i class="fa fa-file-text-o fa-2x"></i></span> </div>
           <!--</a>-->
           <div class="title"><strong>Performance Report</strong></div>
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 hide">
         <div class="schools-statics" style="width:100%;"> <!--<a href="<?php echo base_url('/download/getdigitalCertificate/').$this->session->userdata('USER_ID') ?>" target="_blank">-->
           <div class="statics-circle"> <span><i class="fa fa-file-text-o fa-2x"></i></span> </div>
           <!--</a>-->
