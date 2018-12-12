@@ -119,6 +119,9 @@ class Download extends CI_Controller {
         $data['waterTreatment'] = uploadHelper($this->session->userdata('USER_ID'), 'Water_Treatment_Process');
         $data['flowChartHandDrawn'] = uploadHelper($this->session->userdata('USER_ID'), 'Flow_Chart_Hand_Drwan');
         $data['supportDocWater'] = uploadHelper($this->session->userdata('USER_ID'), 'Supporting_Document_Water');
+	$data['chikoo']=uploadHelper($this->session->userdata('USER_ID'), 'Waste_Policy');
+	$data['Initiatives']=uploadHelper($this->session->userdata('USER_ID'), 'School_Initiatives');
+	$data['teamDoingWaste']=uploadHelper($this->session->userdata('USER_ID'), 'Audit_Team_Doing_Survey');    
         $rank=getFiled('Q1G2',$data['schoolUserID']);
         if ($rank >= 6 ) { 
             $html1 = $this->load->view('school_pdf', $data, true);
