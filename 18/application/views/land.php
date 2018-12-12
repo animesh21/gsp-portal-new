@@ -1,5 +1,21 @@
 <?php $this->load->view('header'); ?>
 <style type="text/css">
+
+.error{
+  color: #fb4f2a !important;
+              font-size: 18px !important;
+ text-shadow: 1px 1px 1px #000;
+}
+
+#Q6L1-error
+{
+   color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -35px !important;
+    position: absolute;
+    margin-left: 500px;
+    text-shadow: 1px 1px 1px #000;
+}
     .bold {
         color: #e86549;
     }
@@ -86,19 +102,19 @@
         <input class="form-control space-textbox" id="Q1L1S1"
                        type="text" name="Q1L1S1"
                        placeholder="<?php if (isset($data['Q1L1S1'])) echo $data['Q1L1S1']; ?>"
-                       value="<?php echo set_value('Q1L1S1'); ?>"/>
+                       value="<?php if (isset($data['Q1L1S1'])) echo $data['Q1L1S1']; ?>"/>
       </div>
       <div class="col-xs-3"> <?php echo form_error('name'); ?>
         <input class="form-control space-textbox" id="Q1L1S3"
                        type="text" name="Q1L1S3"
                        placeholder="<?php if (isset($data['Q1L1S3'])) echo $data['Q1L1S3']; ?>"
-                       value="<?php echo set_value('Q1L1S3'); ?>"/>
+                       value="<?php if (isset($data['Q1L1S3'])) echo $data['Q1L1S3']; ?>"/>
       </div>
       <div class="col-xs-3"> <?php echo form_error('email'); ?>
         <input class="form-control space-textbox" id="Q1L1S2"
                        type="email" name="Q1L1S2"
                        placeholder="<?php if (isset($data['Q1L1S2'])) echo $data['Q1L1S2']; ?>"
-                       value="<?php echo set_value('Q1L1S2'); ?>"/>
+                       value="<?php if (isset($data['Q1L1S2'])) echo $data['Q1L1S2']; ?>"/>
       </div>
     </div>
     <div class="form-group1 row">
@@ -107,19 +123,19 @@
         <input class="form-control space-textbox" id="Q1L2S1"
                        type="text" name="Q1L2S1"
                        placeholder="<?php if (isset($data['Q1L2S1'])) echo $data['Q1L2S1'] ?>"
-                       value="<?php echo set_value('Q1L2S1'); ?>"/>
+                       value="<?php if (isset($data['Q1L2S1'])) echo $data['Q1L2S1'] ?>"/>
       </div>
       <div class="col-xs-3"> <?php echo form_error('name'); ?>
         <input class="form-control space-textbox" id="Q1L2S3"
                        type="text" name="Q1L2S3"
                        placeholder="<?php if (isset($data['Q1L2S3'])) echo $data['Q1L2S3']; ?>"
-                       value="<?php echo set_value('Q1L2S3'); ?>"/>
+                       value="<?php if (isset($data['Q1L2S3'])) echo $data['Q1L2S3']; ?>"/>
       </div>
       <div class="col-xs-3">
         <input class="form-control space-textbox" id="Q1L2S2"
                        type="email" name="Q1L2S2"
                        placeholder="<?php if (isset($data['Q1L2S2'])) echo $data['Q1L2S2'] ?>"
-                       value="<?php echo set_value('Q1L2S2'); ?>"/>
+                       value="<?php if (isset($data['Q1L2S2'])) echo $data['Q1L2S2'] ?>"/>
       </div>
     </div>
     <div class="form-group1 row">
@@ -166,19 +182,19 @@
         <input class="form-control space-textbox" id="Q2L1S1"
                        type="text" name="Q2L1S1"
                        placeholder="<?php if (isset($data['Q2L1S1'])) echo $data['Q2L1S1'] ?>"
-                       value="<?php echo set_value('Q2L1S1'); ?>"/>
+                       value="<?php if (isset($data['Q2L1S1'])) echo $data['Q2L1S1'] ?>"/>
       </div>
       <div class="col-xs-3">
         <input class="form-control space-textbox" id="Q2L1S3"
                        type="text" name="Q2L1S3"
                        placeholder="<?php if (isset($data['Q2L1S3'])) echo $data['Q2L1S3'] ?>"
-                       value="<?php echo set_value('Q2L1S3'); ?>"/>
+                       value="<?php if (isset($data['Q2L1S3'])) echo $data['Q2L1S3'] ?>"/>
       </div>
       <div class="col-xs-3"> <?php echo form_error('email1'); ?>
         <input class="form-control space-textbox" id="Q2L1S2"
                        type="email" name="Q2L1S2"
                        placeholder="<?php if (isset($data['Q2L1S2'])) echo $data['Q2L1S2'] ?>"
-                       value="<?php echo set_value('Q2L1S2'); ?>"/>
+                       value="<?php if (isset($data['Q2L1S2'])) echo $data['Q2L1S2'] ?>"/>
       </div>
     </div>
     <div class="form-group1 row">
@@ -287,19 +303,19 @@
         <input class="form-control space-textbox" id="Q3L1S1"
                        type="text" name="Q3L1S1"
                        placeholder="<?php if (isset($data['Q3L1S1'])) echo $data['Q3L1S1'] ?>"
-                       value="<?php echo set_value('Q3L1S1'); ?>"/>
+                       value="<?php if (isset($data['Q3L1S1'])) echo $data['Q3L1S1'] ?>"/>
       </div>
       <div class="col-xs-3"> <?php echo form_error('email2'); ?>
         <input class="form-control space-textbox" id="Q3L1S2"
                        type="text" name="Q3L1S2"
                        placeholder="<?php if (isset($data['Q3L1S2'])) echo $data['Q3L1S2'] ?>"
-                       value="<?php echo set_value('Q3L1S2'); ?>"/>
+                       value="<?php if (isset($data['Q3L1S2'])) echo $data['Q3L1S2'] ?>"/>
       </div>
       <div class="col-xs-3">
         <input class="form-control space-textbox" id="Q3L1S3"
                        type="number" name="Q3L1S3"
                        placeholder="<?php if (isset($data['Q3L1S3'])) echo $data['Q3L1S3'] ?>"
-                       value="<?php echo set_value('Q3L1S3'); ?>"/>
+                       value="<?php if (isset($data['Q3L1S3'])) echo $data['Q3L1S3'] ?>"/>
       </div>
     </div>
     <div class="form-group1 row">
@@ -938,6 +954,111 @@
     </div>
   </div>
 </div>
+
+
+
+<script>
+	jQuery(document).ready(function(){
+	
+	jQuery('#land').validate({
+		rules:{
+		      Q1L1S1:{
+				  required:true,
+			  },
+               Q1L1S3:{
+				  required:true,
+			  },
+					Q1L1S2:{
+								 required:true,
+							},
+					Q2L1S1:{
+									  required:true,
+						   },
+					Q2L1S3:{
+									  required:true,
+						   },
+					Q2L1S2:{
+									  required:true,
+							},
+					Q3L1S1:{
+									  required:true,
+							},
+					Q3L1S2:{
+									  required:true,
+						},
+					Q3L1S3:{
+									  required:true,
+						},
+					Q4L1:{
+									  required:true,
+							},
+					Q4L2:{
+									  required:true,
+						},
+					Q4L3:{
+									  required:true,
+						},
+					Q4L4:{
+									  required:true,
+						},
+					Q4L6:{
+									  required:true,
+							},
+					Q4L7:{
+									  required:true,
+						},
+					Q4L8:{
+									  required:true,
+						 },
+					Q4L9:{
+									  required:true,
+						  },
+					Q4L10:{
+									  required:true,
+						  },
+					Q4L12:{
+									  required:true,
+						  },
+					Q5L1S1:{
+									  required:true,
+						 },
+							Q5L1S2:{
+																  required:true,
+													 },
+							Q5L2S1:{
+																  required:true,
+													 },
+							Q5L2S2:{
+																  required:true,
+													 },
+							Q6L1:{
+																  required:true,
+													 },
+Q4L11:{
+																  required:true,
+													 }
+			  
+		}
+       
+	});
+	});
+	
+	jQuery('#movenextbtn').click(function(e){
+		
+		
+		$r=jQuery('#land').valid();
+		if($r == false)
+		{
+			   e.preventDefault();
+			   jQuery('#land').valid();
+		}
+		
+		
+	});
+	
+	</script>
+
+
 <script type="text/javascript">
     $('.close').click(function () {
         $('#video').attr("src", "https://www.youtube.com/embed/9r3Lwrd9BUs");
