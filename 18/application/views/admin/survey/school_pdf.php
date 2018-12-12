@@ -663,7 +663,7 @@
 		?>
       </p>
       <?php
-     $arrImages = getUploadData(str_replace(' ', '_', $school[0]->name) . '_PUC_Certificate_', $schoolUserID);
+     $arrImages = getUploadData(str_replace("'","",str_replace(array(' ','.'), '_', $school[0]->name), $school[0]->name). '_PUC_Certificate_', $schoolUserID);
    if (!empty($arrImages)) {
    ?>
       <div>
@@ -813,10 +813,9 @@
         </tbody>
       </table>
     </li>
-	<li>
-	   <?php
-     $arrImages = getUploadData(str_replace(' ', '_', $school[0]->name) . '_Fuels_', $schoolUserID);
-   if (!empty($arrImages)) {
+    <li>
+      <?php
+   if (!empty($filesfules)) {
    ?>
       <div>
         <table class="table support-docs">
@@ -824,7 +823,7 @@
             <th>image</th>
             <th>File name</th>
           </tr>
-          <?php foreach ($arrImages as $a) { ?>
+          <?php foreach ($filesfules as $a) { ?>
           <tr>
             <td><img src="uploads/files/<?php echo $a->file_name; ?>" class="img-responsive" width="100" height="100" /></td>
             <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Fuels_"), " ", $a->file_name); ?></td>
@@ -835,7 +834,7 @@
       <?php } else { ?>
       <div class="support_files"> No documents uploaded by the school. </div>
       <?php } ?>
-	</li>
+    </li>
     <li>
       <p class="orange"><span>3(c)</span> IS CNG AVAILABLE IN YOUR STATE? </p>
       <p><?php echo (getFiled('Q6A3', $schoolUserID) != "") ? (getFiled('Q6A3', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?> </p>
@@ -1010,18 +1009,34 @@
       <p class="formanswertext"><?php echo (getFiled('Q9A1', $schoolUserID) != "") ? (getFiled('Q9A1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
     </li>
   </ul>
-  <?php
-     $arrImages = getUploadData(str_replace(' ', '_', $school[0]->name) . '_Supporting_Document_Air', $schoolUserID);
-            
-            if (!empty($arrImages)) {
-                ?>
+  <?php if (!empty($airQualityMonitering)) {?>
   <div>
     <table class="table support-docs">
       <tr>
         <th>image</th>
         <th>File name</th>
       </tr>
-      <?php foreach ($arrImages as $a) { ?>
+      <?php 
+	  foreach ($airQualityMonitering as $a) { ?>
+      <tr>
+        <td><img src="uploads/files/<?php echo $a->file_name; ?>" class="img-responsive" width="100" height="100" /></td>
+        <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Air_Quality_Monitoring_"), " ", $a->file_name); ?></td>
+      </tr>
+      <?php } ?>
+    </table>
+  </div>
+  <?php } else { ?>
+  <div class="support_files"> No documents uploaded by the school. </div>
+  <?php } ?>
+  <?php if (!empty($files)) {?>
+  <div>
+    <table class="table support-docs">
+      <tr>
+        <th>image</th>
+        <th>File name</th>
+      </tr>
+      <?php 
+	  foreach ($files as $a) { ?>
       <tr>
         <td><img src="uploads/files/<?php echo $a->file_name; ?>" class="img-responsive" width="100" height="100" /></td>
         <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Supporting_Document_Air"), " ", $a->file_name); ?></td>
@@ -1208,7 +1223,8 @@
         <p class="formanswertext"><?php echo (getFiled('Q4E1', $schoolUserID) != "") ? (getFiled('Q4E1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
       </li>
       <li>
-        <?php if(!empty($electricityBills)){ ?>
+        <?php 
+		if(!empty($electricityBills)){ ?>
         <table class="table">
           <tr>
             <th>image</th>
@@ -1345,9 +1361,31 @@
             <th>image</th>
             <th>File name</th>
           </tr>
-          <?php foreach ($fulesBills as $f) { ?>
+          <?php 
+		  foreach ($fulesBills as $f) { ?>
           <tr id="index<?php echo $f->id; ?>">
             <?php $name = str_replace(" ", "_", $f->name . "_Fuels_Bills_"); ?>
+            <td><img src="uploads/files/<?php echo $f->file_name; ?>" class="img-thumbnail" style="height:80px;width:80px;"></img></td>
+            <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+          </tr>
+          <?php } ?>
+        </table>
+        <?php } else { ?>
+        <div class="support_files"> No documents uploaded by the school. </div>
+        <?php } ?>
+      </li>
+      <li>
+        <p>Please upload fuel bills</p>
+        <?php if(!empty($appliancesBills)){ ?>
+        <table class="table">
+          <tr>
+            <th>image</th>
+            <th>File name</th>
+          </tr>
+          <?php 
+		  foreach ($appliancesBills as $f) { ?>
+          <tr id="index<?php echo $f->id; ?>">
+            <?php $name = str_replace(" ", "_", $f->name . "_Five_Star_Appliances_"); ?>
             <td><img src="uploads/files/<?php echo $f->file_name; ?>" class="img-thumbnail" style="height:80px;width:80px;"></img></td>
             <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
           </tr>
@@ -1454,17 +1492,15 @@
       </li>
     </ul>
     <?php
-            $arrImages = getUploadData(str_replace(' ', '_', $school[0]->name) .'_Supporting_Document_Energy_', $schoolUserID);
-            
-            if (!empty($arrImages)) {
-                ?>
+     if (!empty($energySupport)) { ?>
     <div>
       <table class="table support-docs">
         <tr>
           <th>image</th>
           <th>File name</th>
         </tr>
-        <?php foreach ($arrImages as $a) { ?>
+        <?php 
+		foreach ($energySupport as $a) { ?>
         <tr>
           <td><img src="uploads/files/<?php echo $a->file_name; ?>" class="img-responsive" width="100" height="100" /></td>
           <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name .'_Supporting_Document_Energy_'), " ", $a->file_name); ?></td>
@@ -1634,7 +1670,8 @@
         <p class="orange">
           <label class="control-label">Please upload picture of Mid-day meal being served</label>
         <p>
-          <?php if(!empty($midDayMeal)){ ?>
+          <?php 
+		  if(!empty($midDayMeal)){ ?>
         <table class="table">
           <tr>
             <th>image</th>
@@ -1909,7 +1946,9 @@
             <th>image</th>
             <th>File name</th>
           </tr>
-          <?php foreach ($midDayMeal as $f) { ?>
+          <?php 
+		   $midDayMeal = getUploadData(str_replace("'","",str_replace(array(' ','.'), '_', $school[0]->name), $school[0]->name). '_Mid_Day_Meal_', $schoolUserID);
+		  foreach ($midDayMeal as $f) { ?>
           <tr id="index<?php echo $f->id; ?>">
             <?php $name = str_replace(" ", "_", $f->name . "_Mid_Day_Meal_"); ?>
             <td><img src="<?php echo 'uploads/files/' . $f->file_name ?>" style="height:100px;width:100px"></img></td>
@@ -2000,8 +2039,7 @@
       <?php endif; ?>
     </ul>
     <?php
-        $arrImages = getUploadData(str_replace(' ', '_', $school[0]->name) . '_Audit_Team_doing_Survey_', $schoolUserID);
-        if (!empty($arrImages)) {
+        if (!empty($files)) {
             ?>
     <table class="table">
       <thead>
@@ -2011,7 +2049,9 @@
         </tr>
       </thead>
       <tbody>
-        <?php foreach ($arrImages as $a) { ?>
+        <?php 
+		
+		foreach ($files as $a) { ?>
         <tr>
           <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
           <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Audit_Team_doing_Survey_"), " ", $a->file_name); ?></td>
@@ -2062,8 +2102,7 @@
   </div>
   <div class="support_files_head"> </div>
   <?php
-    $arrImages = getUploadData(str_replace(' ', '_', $school[0]->name) . '_UPPF_', $schoolUserID);
-    if (!empty($arrImages)) {
+    if (!empty($uppc)) {
         ?>
   <div>
     <table class="table support-docs">
@@ -2071,7 +2110,7 @@
         <th>image</th>
         <th>File name</th>
       </tr>
-      <?php foreach ($arrImages as $a) { ?>
+      <?php foreach ($uppc as $a) { ?>
       <tr>
         <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
         <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_UPPF_"), " ", $a->file_name); ?></td>
@@ -2405,9 +2444,7 @@
     </ul>
   </div>
   <?php
-    $arrImages = getUploadData(str_replace(' ', '_', $school[0]->name) . '_Green_Cover_', $schoolUserID);
-
-    if (!empty($arrImages)) {
+    if (!empty($greenCover)) {
         ?>
   <div>
     <table class="table support-docs">
@@ -2415,7 +2452,7 @@
         <th>image</th>
         <th>File name</th>
       </tr>
-      <?php foreach ($arrImages as $a) { ?>
+      <?php foreach ($greenCover as $a) { ?>
       <tr>
         <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
         <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Green_Cover_"), " ", $a->file_name); ?></td>
@@ -2848,15 +2885,14 @@
         <p>Please upload all supporting documents related to this section here. Note: files must be in one of the following formats: PDF Document
           .pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg)</p>
         <?php
-        $arrImages = getUploadData(str_replace(' ', '_', $school[0]->name) . '_Task_4_Supporting_docs_', $schoolUserID);
-        if (!empty($arrImages)) {
+        if (!empty($task4supporting)) {
             ?>
         <table class="table">
           <tr>
             <th>image</th>
             <th>File name</th>
           </tr>
-          <?php foreach ($arrImages as $a) { ?>
+          <?php foreach ($task4supporting as $a) { ?>
           <tr>
             <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
             <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Task_4_Supporting_docs_"), " ", $a->file_name); ?></td>
@@ -3243,16 +3279,15 @@
       </label>
     </p>
     <?php
-        $arrImages = getUploadData(str_replace(' ', '_', $school[0]->name) . '_Water_Treatment_Process_', $schoolUserID);
-        if (!empty($arrImages)) {
-            ?>
+     if (!empty($waterTreatment)) {
+       ?>
     <div>
       <table class="table">
         <tr>
           <th>image</th>
           <th>File name</th>
         </tr>
-        <?php foreach ($arrImages as $a) { ?>
+        <?php foreach ($waterTreatment as $a) { ?>
         <tr>
           <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
           <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Water_Treatment_Process_"), " ", $a->file_name); ?></td>
@@ -3708,15 +3743,14 @@
     <?php endif; ?>
     <li>
       <?php
-        $arrImages = getUploadData(str_replace(' ', '_', $school[0]->name) . '_Flow_Chart_Hand_Drwan_', $schoolUserID);
-        if (!empty($arrImages)) {
+        if (!empty($flowChartHandDrawn)) {
             ?>
       <table class="table">
         <tr>
           <th>image</th>
           <th>File name</th>
         </tr>
-        <?php foreach ($arrImages as $a) { ?>
+        <?php foreach ($flowChartHandDrawn as $a) { ?>
         <tr>
           <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
           <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Flow_Chart_Hand_Drwan_"), " ", $a->file_name); ?></td>
@@ -3731,8 +3765,7 @@
 <?php } ?>
 </div>
 <?php
-    $arrImages = getUploadData(str_replace(' ', '_', $school[0]->name) . '_Supporting_Document_Water_', $schoolUserID);
-    if (!empty($arrImages)) {
+    if(!empty($supportDocWater)) {
 ?>
 <div>
   <table  class="table">
@@ -3740,7 +3773,7 @@
       <th>image</th>
       <th>File name</th>
     </tr>
-    <?php foreach ($arrImages as $a) { ?>
+    <?php foreach ($supportDocWater as $a) { ?>
     <tr>
       <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
       <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Supporting_Document_Water_"), " ", $a->file_name); ?></td>
@@ -4058,8 +4091,8 @@
       <?php endif; ?>
     </ul>
     <?php
-        $arrImages = getUploadData(str_replace(' ', '_', $school[0]->name) . '_Segregation_Source_Classrooms_', $schoolUserID);
-        if (!empty($arrImages)) {
+       
+        if (!empty($segregationClassroom)) {
             ?>
     <div>
       <table  class="table">
@@ -4067,7 +4100,7 @@
           <th>image</th>
           <th>File name</th>
         </tr>
-        <?php foreach ($arrImages as $a) { ?>
+        <?php foreach ($segregationClassroom as $a) { ?>
         <tr>
           <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
           <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Segregation_Source_Classrooms_"), " ", $a->file_name); ?></td>
@@ -4270,8 +4303,7 @@
           </tr>
         </table>
         <?php
-        $arrImages = getUploadData(str_replace(' ', '_', $school[0]->name) . '_Audit_Team_Weighing_Solid_Waste_', $schoolUserID);
-        if (!empty($arrImages)) {
+        if (!empty($solidWaste)) {
             ?>
         <div>
           <table class="table">
@@ -4279,7 +4311,7 @@
               <th>image</th>
               <th>File name</th>
             </tr>
-            <?php foreach ($arrImages as $a) { ?>
+            <?php foreach ($solidWaste as $a) { ?>
             <tr>
               <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
               <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Audit_Team_Weighing_Solid_Waste_"), " ", $a->file_name); ?></td>
@@ -4291,8 +4323,7 @@
         <div class="support_files">No documents uploaded by the school.</div>
         <?php } ?>
         <?php
-        $arrImages = getUploadData(str_replace(' ', '_', $school[0]->name) . '_Composting_Pit_', $schoolUserID);
-        if (!empty($arrImages)) {
+        if (!empty($composingPit)) {
             ?>
         <div>
           <table class="table">
@@ -4300,7 +4331,7 @@
               <th>image</th>
               <th>File name</th>
             </tr>
-            <?php foreach ($arrImages as $a) { ?>
+            <?php foreach ($composingPit as $a) { ?>
             <tr>
               <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
               <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Composting_Pit_"), " ", $a->file_name); ?></td>
@@ -4513,7 +4544,7 @@
       </p>
       <p> <?php echo (getFiled('Q9Wa1', $schoolUserID) != "") ? (getFiled('Q9Wa1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
       <?php
-        $arrImages = getUploadData(str_replace(' ', '_', $school[0]->name) . '_Composting_Pit_', $schoolUserID);
+        $arrImages = getUploadData(str_replace("'","",str_replace(array(' ','.'), '_', $school[0]->name), $school[0]->name). '_Composting_Pit_', $schoolUserID);
         if (!empty($arrImages)) {
             ?>
       <div>
@@ -4921,8 +4952,7 @@
     </li>
   </ul>
   <?php
-    $arrImages = getUploadData(str_replace(' ', '_', $school[0]->name) . '_Recycling_Machine_', $schoolUserID);
-    if (!empty($arrImages)) {
+    if (!empty($recycleMachine)) {
         ?>
   <div>
     <table class="table">
@@ -4930,7 +4960,7 @@
         <th>image</th>
         <th>File name</th>
       </tr>
-      <?php foreach ($arrImages as $a) { ?>
+      <?php foreach ($recycleMachine as $a) { ?>
       <tr>
         <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
         <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Recycling_Machine_"), " ", $a->file_name); ?></td>
@@ -5156,8 +5186,7 @@
     </li>
   </ul>
   <?php
-    $arrImages = getUploadData(str_replace(' ', '_', $school[0]->name) . '_E-Waste_', $schoolUserID);
-    if (!empty($arrImages)) {
+    if (!empty($eWaste)) {
         ?>
   <div>
     <table class="table">
@@ -5165,7 +5194,7 @@
         <th>image</th>
         <th>File name</th>
       </tr>
-      <?php foreach ($arrImages as $a) { ?>
+      <?php foreach ($eWaste as $a) { ?>
       <tr>
         <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
         <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_E-Waste_"), " ", $a->file_name); ?></td>
@@ -5203,8 +5232,7 @@
     <?php endif; ?>
   </ul>
   <?php
-    $arrImages = getUploadData(str_replace(' ', '_', $school[0]->name) . '_E-waste_authorised_dealer_', $schoolUserID);
-    if (!empty($arrImages)) {
+    if (!empty($authorised_dealer)) {
         ?>
   <div>
     <table class="table">
@@ -5212,7 +5240,7 @@
         <th>image</th>
         <th>File name</th>
       </tr>
-      <?php foreach ($arrImages as $a) { ?>
+      <?php foreach ($authorised_dealer as $a) { ?>
       <tr>
         <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
         <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_E-waste_authorised_dealer_"), " ", $a->file_name); ?></td>
@@ -5247,8 +5275,7 @@
     </li>
     <li>
       <?php
-    $arrImages = getUploadData(str_replace(' ', '_', $school[0]->name) . '_Housekeeping_', $schoolUserID);
-    if (!empty($arrImages)) {
+    if (!empty($houseKeeping)) {
         ?>
       <div>
         <table class="table">
@@ -5256,7 +5283,7 @@
             <th>image</th>
             <th>File name</th>
           </tr>
-          <?php foreach ($arrImages as $a) { ?>
+          <?php foreach ($houseKeeping as $a) { ?>
           <tr>
             <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
             <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Housekeeping_"), " ", $a->file_name); ?></td>
@@ -5276,8 +5303,7 @@
     </li>
     <li>
       <?php
-    $arrImages = getUploadData(str_replace(' ', '_', $school[0]->name) . '_Buring_Waste_', $schoolUserID);
-    if (!empty($arrImages)) {
+    if (!empty($burningWaste)) {
         ?>
       <div>
         <table class="table">
@@ -5285,7 +5311,7 @@
             <th>image</th>
             <th>File name</th>
           </tr>
-          <?php foreach ($arrImages as $a) { ?>
+          <?php foreach ($burningWaste as $a) { ?>
           <tr>
             <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
             <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Buring_Waste_"), " ", $a->file_name); ?></td>
@@ -5358,6 +5384,28 @@
         Recycle and Reuse? <a class="kplink" href="http://www.greenschoolsprogramme.org/knowledge-bank/waste/#partnerInOperation" target="_blank"></a></p>
       <p> <?php echo (getFiled('Q18Wa1', $schoolUserID) != "") ? (getFiled('Q18Wa1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
     </li>
+	<li>
+	  <?php
+    if (!empty($chikoo)) {
+        ?>
+      <div>
+        <table class="table">
+          <tr>
+            <th>image</th>
+            <th>File name</th>
+          </tr>
+          <?php foreach ($chikoo as $a) { ?>
+          <tr>
+            <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+            <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Waste_Policy_"), " ", $a->file_name); ?></td>
+          </tr>
+          <?php } ?>
+        </table>
+      </div>
+      <?php } else { ?>
+      <div class="support_files"> No documents uploaded by the school. </div>
+      <?php } ?>
+	</li>
     <?php if(getFiled('Q18Wa1', $schoolUserID) == "Y"){ ?>
     <li>
       <p class="orange">
@@ -5366,8 +5414,7 @@
       <p> Pictures of various school initiatives e.g. rally, debate, street play, art competition, etc</p>
       <br/>
       <?php
-    $arrImages = getUploadData(str_replace(' ', '_', $school[0]->name) . '_Audit_Team_Doing_Survey_Waste_', $schoolUserID);
-    if (!empty($arrImages)) {
+    if (!empty($Initiatives)) {
         ?>
       <div>
         <table class="table">
@@ -5375,10 +5422,10 @@
             <th>image</th>
             <th>File name</th>
           </tr>
-          <?php foreach ($arrImages as $a) { ?>
+          <?php foreach ($Initiatives as $a) { ?>
           <tr>
             <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
-            <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Audit_Team_Doing_Survey_Waste_"), " ", $a->file_name); ?></td>
+            <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_School_Initiatives_"), " ", $a->file_name); ?></td>
           </tr>
           <?php } ?>
         </table>
@@ -5408,8 +5455,7 @@
     </li>
   </ul>
   <?php
-    $arrImages = getUploadData(str_replace(' ', '_', $school[0]->name) . '_Audit_Team_Doing_Survey_Waste_', $schoolUserID);
-    if (!empty($arrImages)) {
+    if (!empty($teamDoingWaste)) {
         ?>
   <div>
     <table  class="table">
@@ -5417,10 +5463,10 @@
         <th>image</th>
         <th>File name</th>
       </tr>
-      <?php foreach ($arrImages as $a) { ?>
+      <?php foreach ($teamDoingWaste as $a) { ?>
       <tr>
         <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
-        <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Audit_Team_Doing_Survey_Waste_"), " ", $a->file_name); ?></td>
+        <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Audit_Team_Doing_Survey_"), " ", $a->file_name); ?></td>
       </tr>
       <?php } ?>
     </table>
