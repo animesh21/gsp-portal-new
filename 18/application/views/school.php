@@ -1,4 +1,46 @@
 <?php $this->load->view('header'); ?>
+
+<style>
+
+.error{
+  color: #fb4f2a !important;
+              font-size: 18px !important;
+ text-shadow: 1px 1px 1px #000;
+}
+
+#Q10G1-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -36px !important;
+    position: absolute;
+    margin-left: 133px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q2S1-error
+{
+	    color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -36px !important;
+    position: absolute;
+    margin-left: 356px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q1S1-error
+{
+	    color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -36px !important;
+    position: absolute;
+    margin-left: 457px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+</style>
+
+
 <script type="text/javascript">
     window.onload = function () {
         Shadowbox.init();
@@ -284,6 +326,46 @@ function checkUpdate(){
     <?php echo form_close(); ?> </div>
 </div>
 <?php $this->load->view('footer'); ?>
+
+<script>
+	jQuery(document).ready(function(){
+	
+	jQuery('#school-form').validate({
+		rules:{
+		      udise:{
+				  required:true,
+			  },
+			  Q1S1:{
+				  required:true,
+			  },
+			  Q2S1:{
+				  required:true,
+			  },
+			  Q10G1:{
+				  required:true,
+			  }
+			 
+		}
+       
+	});
+	});
+	
+	jQuery('#school-form').submit(function(e){
+		
+		
+		$r=jQuery('#school-form').valid();
+		if($r == false)
+		{
+			   e.preventDefault();
+			   jQuery('#school-form').valid();
+		}
+		
+		
+	});
+	
+	</script>
+
+
 <script type="text/javascript">
     $("#school-form").submit(function (event) {
         var value = $('#principal').val();
