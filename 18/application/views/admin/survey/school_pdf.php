@@ -663,8 +663,7 @@
 		?>
       </p>
       <?php
-     $arrImages = getUploadData(str_replace("'","",str_replace(array(' ','.'), '_', $school[0]->name), $school[0]->name). '_PUC_Certificate_', $schoolUserID);
-   if (!empty($arrImages)) {
+   if (!empty($pucCertificate)) {
    ?>
       <div>
         <table class="table support-docs">
@@ -672,7 +671,7 @@
             <th>image</th>
             <th>File name</th>
           </tr>
-          <?php foreach ($arrImages as $a) { ?>
+          <?php foreach ($pucCertificate as $a) { ?>
           <tr>
             <td><img src="uploads/files/<?php echo $a->file_name; ?>" class="img-responsive" width="100" height="100" /></td>
             <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_PUC_Certificate_"), " ", $a->file_name); ?></td>
@@ -5384,8 +5383,8 @@
         Recycle and Reuse? <a class="kplink" href="http://www.greenschoolsprogramme.org/knowledge-bank/waste/#partnerInOperation" target="_blank"></a></p>
       <p> <?php echo (getFiled('Q18Wa1', $schoolUserID) != "") ? (getFiled('Q18Wa1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
     </li>
-	<li>
-	  <?php
+    <li>
+      <?php
     if (!empty($chikoo)) {
         ?>
       <div>
@@ -5405,7 +5404,7 @@
       <?php } else { ?>
       <div class="support_files"> No documents uploaded by the school. </div>
       <?php } ?>
-	</li>
+    </li>
     <?php if(getFiled('Q18Wa1', $schoolUserID) == "Y"){ ?>
     <li>
       <p class="orange">
@@ -5477,4 +5476,3 @@
 </div>
 </body>
 </html>
- 
