@@ -2909,7 +2909,7 @@ $(document).ready(function(){
         var val2 = parseFloat($('#Q6E1S1').val());
         var val2Place = parseFloat(document.getElementById('Q6E1S1').placeholder);
         var x = $("#Q4E1_1").is(":checked")
-        if(x == true && (val2 < 1 || val2Place < 1))
+        if(x == true && (val2 < 0 || val2Place < 0))
         {
             if (confirm("Please Enter Value in Electricity Column.") == true)
             {
