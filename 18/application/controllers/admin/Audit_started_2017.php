@@ -354,43 +354,43 @@ public function excel2017() {
         $data['school'] = $this->Audit_started_model->getSchoolByIdRecoad($argID);
 	//echo '<pre>'; print_r($data['school']);  die();  
         $data['schoolUserID'] = $data['school'][0]->userid;
-        $data['files'] = $this->file->getFilesData($this->session->userdata('USER_ID'));
-        $data['filesfules'] = $this->file->getFilesDatafules($this->session->userdata('USER_ID'));
-        $data['airQualityMonitering'] = $this->file->AirQuality($this->session->userdata('USER_ID'));
-        $data['SupportiveAir'] = $this->file->SupportiveAir($this->session->userdata('USER_ID'));
+        $data['files'] = $this->file->getFilesData($data['school'][0]->userid);
+        $data['filesfules'] = $this->file->getFilesDatafules($data['school'][0]->userid);
+        $data['airQualityMonitering'] = $this->file->AirQuality($data['school'][0]->userid);
+        $data['SupportiveAir'] = $this->file->SupportiveAir($data['school'][0]->userid);
        
-	$data['pucCertificate'] = $this->file->pucCertificate($this->session->userdata('USER_ID'));
-        $data['electricityBills'] = $this->file->getElectricityFulesBillsData($this->session->userdata('USER_ID'));
-        $data['fulesBills'] = $this->file->getEnergyFulesBillsData($this->session->userdata('USER_ID'));
-        $data['appliancesBills'] = $this->file->getEnergyApplianceBillsData($this->session->userdata('USER_ID'));
-        $data['alternativeResource'] = $this->file->alternativeResource($this->session->userdata('USER_ID'));
-        $data['energySupport'] = $this->file->getEnergySupportData($this->session->userdata('USER_ID'));
+	$data['pucCertificate'] = $this->file->pucCertificate($data['school'][0]->userid);
+        $data['electricityBills'] = $this->file->getElectricityFulesBillsData($data['school'][0]->userid);
+        $data['fulesBills'] = $this->file->getEnergyFulesBillsData($data['school'][0]->userid);
+        $data['appliancesBills'] = $this->file->getEnergyApplianceBillsData($data['school'][0]->userid);
+        $data['alternativeResource'] = $this->file->alternativeResource($data['school'][0]->userid);
+        $data['energySupport'] = $this->file->getEnergySupportData($data['school'][0]->userid);
         //food
-        $data['midDayMeal'] = $this->file->getMidDayMeal($this->session->userdata('USER_ID'));
-        $data['canteen'] = $this->file->getCanteen($this->session->userdata('USER_ID'));
-        $data['files'] = $this->file->getFoodFilesData($this->session->userdata('USER_ID'));
-        $data['uppc'] = $this->file->getFoodUPPCData($this->session->userdata('USER_ID'));
-        $data['AuditTeamD'] = $this->file->AuditTeamD($this->session->userdata('USER_ID'));	    
+        $data['midDayMeal'] = $this->file->getMidDayMeal($data['school'][0]->userid);
+        $data['canteen'] = $this->file->getCanteen($data['school'][0]->userid);
+        $data['files'] = $this->file->getFoodFilesData($data['school'][0]->userid);
+        $data['uppc'] = $this->file->getFoodUPPCData($data['school'][0]->userid);
+        $data['AuditTeamD'] = $this->file->AuditTeamD($data['school'][0]->userid);	    
         //land
-        $data['greenCover'] = $this->file->Green_Cover($this->session->userdata('USER_ID'));
+        $data['greenCover'] = $this->file->Green_Cover($data['school'][0]->userid);
         //waste
-        $data['segregationClassroom'] = uploadHelper($this->session->userdata('USER_ID'), 'Segregation_Source_Classrooms');
-        $data['solidWaste'] = uploadHelper($this->session->userdata('USER_ID'), 'Audit_Team_Weighing_Solid_Waste');
-        $data['composingPit'] = uploadHelper($this->session->userdata('USER_ID'), 'Composting_Pit');
-        $data['recycleMachine'] = uploadHelper($this->session->userdata('USER_ID'), 'Recycling_Machine');
-        $data['eWaste'] = uploadHelper($this->session->userdata('USER_ID'), 'E-Waste');
-        $data['houseKeeping'] = uploadHelper($this->session->userdata('USER_ID'), 'Housekeeping');
-        $data['burningWaste'] = uploadHelper($this->session->userdata('USER_ID'), 'Buring_Waste');
-        $data['teamDoingWaste'] = $this->file->AuditTeamWaste($this->session->userdata('USER_ID'));
-        $data['ewasteStorage'] = uploadHelper($this->session->userdata('USER_ID'), 'E-Waste_Storage');
-        $data['disposing'] = uploadHelper($this->session->userdata('USER_ID'), 'Disposing');
-        $data['eWasteDisposing'] = uploadHelper($this->session->userdata('USER_ID'), 'E-Waste_Disposing_Certificate');
-        $data['pictures'] = uploadHelper($this->session->userdata('USER_ID'), 'Pictures_of_Audit_Team');
+        $data['segregationClassroom'] = uploadHelper($data['school'][0]->userid, 'Segregation_Source_Classrooms');
+        $data['solidWaste'] = uploadHelper($data['school'][0]->userid, 'Audit_Team_Weighing_Solid_Waste');
+        $data['composingPit'] = uploadHelper($data['school'][0]->userid, 'Composting_Pit');
+        $data['recycleMachine'] = uploadHelper($data['school'][0]->userid, 'Recycling_Machine');
+        $data['eWaste'] = uploadHelper($data['school'][0]->userid, 'E-Waste');
+        $data['houseKeeping'] = uploadHelper($data['school'][0]->userid, 'Housekeeping');
+        $data['burningWaste'] = uploadHelper($data['school'][0]->userid, 'Buring_Waste');
+        $data['teamDoingWaste'] = $this->file->AuditTeamWaste($data['school'][0]->userid);
+        $data['ewasteStorage'] = uploadHelper($data['school'][0]->userid, 'E-Waste_Storage');
+        $data['disposing'] = uploadHelper($data['school'][0]->userid, 'Disposing');
+        $data['eWasteDisposing'] = uploadHelper($data['school'][0]->userid, 'E-Waste_Disposing_Certificate');
+        $data['pictures'] = uploadHelper($data['school'][0]->userid, 'Pictures_of_Audit_Team');
         //water  
-        $data['task4supporting'] = uploadHelper($this->session->userdata('USER_ID'), 'Task_4_Supporting_docs');
-        $data['waterTreatment'] = uploadHelper($this->session->userdata('USER_ID'), 'Water_Treatment_Process');
-        $data['flowChartHandDrawn'] = uploadHelper($this->session->userdata('USER_ID'), 'Flow_Chart_Hand_Drwan');
-        $data['supportDocWater'] = $this->file->SupportingWater($this->session->userdata('USER_ID'));
+        $data['task4supporting'] = uploadHelper($data['school'][0]->userid, 'Task_4_Supporting_docs');
+        $data['waterTreatment'] = uploadHelper($data['school'][0]->userid, 'Water_Treatment_Process');
+        $data['flowChartHandDrawn'] = uploadHelper($data['school'][0]->userid, 'Flow_Chart_Hand_Drwan');
+        $data['supportDocWater'] = $this->file->SupportingWater($data['school'][0]->userid);
         //echo '<pre>'; print_r($data);die;
         $rank=getFiled('Q1G2',$data['schoolUserID']);
         
