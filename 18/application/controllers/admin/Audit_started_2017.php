@@ -391,6 +391,9 @@ public function excel2017() {
         $data['waterTreatment'] = uploadHelper($data['school'][0]->userid, 'Water_Treatment_Process');
         $data['flowChartHandDrawn'] = uploadHelper($data['school'][0]->userid, 'Flow_Chart_Hand_Drwan');
         $data['supportDocWater'] = $this->file->SupportingWater($data['school'][0]->userid);
+	$data['chikoo']=uploadHelper($data['school'][0]->userid, 'Waste_Policy');
+	$data['Initiatives']=uploadHelper($data['school'][0]->userid, 'School_Initiatives');
+	$data['teamDoingWaste']=uploadHelper($data['school'][0]->userid, 'Audit_Team_Doing_Survey');    
         //echo '<pre>'; print_r($data);die;
         $rank=getFiled('Q1G2',$data['schoolUserID']);
         
