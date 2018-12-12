@@ -24,6 +24,227 @@ margin-bottom:20px;
 style="font-weight:bold"><?php echo $this->session->userdata('USERNAME'); ?></span></div>
   <ul>
     <!--<li><a href="http://www.greenschoolsprogramme.org/GSP-Audit2016-Questions.pdf" target="_blank" onclick="_gaq.push([\" _trackevent\",\"download\",\"pdf\",this.href])"=""><img src="http://www.greenschoolsprogramme.org/audit2016/images/pdf-icon16.png"> Audit Questionnaire</a> |</li>-->
+
+
+<style>
+	.error{
+  color: #fb4f2a !important;
+              font-size: 18px !important;
+ text-shadow: 1px 1px 1px #000;
+}
+
+#Q11F3-error
+{
+  color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -34px !important;
+    position: absolute;
+    margin-left: 600px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q5F2S1-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -1px !important;
+    position: absolute;
+    margin-left: -214px;
+    text-shadow: 1px 1px 1px #000;
+}
+#Q5F2S2-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -1px !important;
+    position: absolute;
+    margin-left: -214px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q5F2S3-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -1px !important;
+    position: absolute;
+    margin-left: -214px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q5F2S4-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -1px !important;
+    position: absolute;
+    margin-left: -214px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q5F2S5-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -1px !important;
+    position: absolute;
+    margin-left: -214px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q5F2S6-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -1px !important;
+    position: absolute;
+    margin-left: -214px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q5F2S7-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -1px !important;
+    position: absolute;
+    margin-left: -214px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q5F2S8-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -1px !important;
+    position: absolute;
+    margin-left: -214px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q5F2S9-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -1px !important;
+    position: absolute;
+    margin-left: -214px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q5F2S10-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -1px !important;
+    position: absolute;
+    margin-left: -214px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q5F2S11-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -1px !important;
+    position: absolute;
+    margin-left: -214px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q5F2S12-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -1px !important;
+    position: absolute;
+    margin-left: -214px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q5F2S13-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -1px !important;
+    position: absolute;
+    margin-left: -214px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q5F2S14-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -1px !important;
+    position: absolute;
+    margin-left: -214px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q5F1S1-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -34px !important;
+    position: absolute;
+    margin-left: 335px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q9F1-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -36px !important;
+    position: absolute;
+    margin-left: 617px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q10F1-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -36px !important;
+    position: absolute;
+    margin-left: 703px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q11F1-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -36px !important;
+    position: absolute;
+    margin-left: 766px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q5F1-error
+{
+   color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -36px !important;
+    position: absolute;
+    margin-left: 309px;
+    text-shadow: 1px 1px 1px #000;
+
+}
+
+#Q4F1-error
+{
+   color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -56px !important;
+    position: absolute;
+    margin-left: 683px;
+    text-shadow: 1px 1px 1px #000;
+}
+	</style>
+
+
     <li><a href="<?php echo base_url('logout'); ?>">Logout</a></li>
     <li>|</li>
     <li><a class="lptext" title="Change Password Form" data-toggle="modal" data-target="#ChangePass"
@@ -71,17 +292,17 @@ include the canteen in-charge in your audit team. <br>
   <div class="col-xs-3"> <?php echo form_error('name'); ?>
     <input class="form-control space-textbox" id="Q1F1S1" type="text" name="Q1F1S1"
 placeholder="<?php if (isset($data['Q1F1S1'])) echo $data['Q1F1S1']; ?>"
-value="<?php echo set_value('Q1F1S1'); ?>"/>
+value="<?php if (isset($data['Q1F1S1'])) echo $data['Q1F1S1']; ?>"/>
   </div>
   <div class="col-xs-3"> <?php echo form_error('name'); ?>
     <input class="form-control space-textbox" id="Q1F1S3" type="text" name="Q1F1S3"
 placeholder="<?php if (isset($data['Q1F1S3'])) echo $data['Q1F1S3']; ?>"
-value="<?php echo set_value('Q1F1S3'); ?>"/>
+value="<?php if (isset($data['Q1F1S3'])) echo $data['Q1F1S3']; ?>"/>
   </div>
   <div class="col-xs-3"> <?php echo form_error('email'); ?>
     <input class="form-control space-textbox" id="Q1F1S2" type="email" name="Q1F1S2"
 placeholder="<?php if (isset($data['Q1F1S2'])) echo $data['Q1F1S2']; ?>"
-value="<?php echo set_value('Q1F1S2'); ?>"/>
+value="<?php if (isset($data['Q1F1S2'])) echo $data['Q1F1S2']; ?>"/>
   </div>
 </div>
 <div class="form-group1 row">
@@ -140,17 +361,17 @@ value="<?php echo set_value('Q1F3S2'); ?>"/>
     <div class="col-xs-3"> <?php echo form_error('name1'); ?>
       <input class="form-control space-textbox" id="Q2F1S1" type="text" name="Q2F1S1"
 placeholder="<?php if (isset($data['Q2F1S1'])) echo $data['Q2F1S1'] ?>"
-value="<?php echo set_value('Q2F1S1'); ?>"/>
+value="<?php if (isset($data['Q2F1S1'])) echo $data['Q2F1S1'] ?>"/>
     </div>
     <div class="col-xs-3">
       <input class="form-control space-textbox" id="Q2F1S3" type="text" name="Q2F1S3"
 placeholder="<?php if (isset($data['Q2F1S3'])) echo $data['Q2F1S3'] ?>"
-value="<?php echo set_value('Q2F1S3'); ?>"/>
+value="<?php if (isset($data['Q2F1S3'])) echo $data['Q2F1S3'] ?>"/>
     </div>
     <div class="col-xs-3"> <?php echo form_error('email1'); ?>
       <input class="form-control space-textbox" id="Q2F1S2" type="email" name="Q2F1S2"
 placeholder="<?php if (isset($data['Q2F1S2'])) echo $data['Q2F1S2'] ?>"
-value="<?php echo set_value('Q2F1S2'); ?>"/>
+value="<?php if (isset($data['Q2F1S2'])) echo $data['Q2F1S2'] ?>"/>
     </div>
   </div>
   <div class="form-group1 row">
@@ -245,17 +466,17 @@ value="<?php echo set_value('Q2F5S2'); ?>"/>
     <div class="col-xs-3"> <?php echo form_error('name2'); ?>
       <input class="form-control space-textbox" id="Q3F1S1" type="text" name="Q3F1S1"
 placeholder="<?php if (isset($data['Q3F1S1'])) echo $data['Q3F1S1'] ?>"
-value="<?php echo set_value('Q3F1S1'); ?>"/>
+value="<?php if (isset($data['Q3F1S1'])) echo $data['Q3F1S1'] ?>"/>
     </div>
     <div class="col-xs-3"> <?php echo form_error('email2'); ?>
       <input class="form-control space-textbox" id="Q3F1S2" type="text" name="Q3F1S2"
 placeholder="<?php if (isset($data['Q3F1S2'])) echo $data['Q3F1S2'] ?>"
-value="<?php echo set_value('Q3F1S2'); ?>"/>
+value="<?php if (isset($data['Q3F1S2'])) echo $data['Q3F1S2'] ?>"/>
     </div>
     <div class="col-xs-3">
       <input class="form-control space-textbox" id="Q3F1S3" type="number" name="Q3F1S3"
 placeholder="<?php if (isset($data['Q3F1S3'])) echo $data['Q3F1S3'] ?>"
-value="<?php echo set_value('Q3F1S3'); ?>"/>
+value="<?php if (isset($data['Q3F1S3'])) echo $data['Q3F1S3'] ?>"/>
     </div>
   </div>
   <div class="form-group1 row">
@@ -1050,7 +1271,7 @@ if ($data['Q5F1'] == 'Y') {
           <input type="number"
 														   class="form-control space-textbox"
 														   id="Q5F3S1" name="Q5F3S1"
-														   value="<?php echo set_value('Q5F3S1') ?>"
+														   value="<?php if (isset($data['Q5F3S1'])) echo $data['Q5F3S1']; ?>"
 														   placeholder="<?php if (isset($data['Q5F3S1'])) echo $data['Q5F3S1']; ?>">
         </div>
       </div>
@@ -1093,8 +1314,7 @@ if ($data['Q4F1'] == 'Y') {
 ?>
       <div class="form-group" id="Q6F1">
         <?php } else { ?>
-        <div class="form-group" id="Q6F1"
-															 style="display: none;">
+        <div class="form-group" id="Q6F1"  style="display: none;">
           <?php } else {
 ?>
           <div class="form-group" id="Q6F1" style="display: none;">
@@ -1369,16 +1589,11 @@ if ($data['Q4F1'] == 'Y') {
 if (isset($data['Q4F1']))
 if ($data['Q4F1'] == 'Y') {
 ?>
-          <div class="form-group"
-																 id="Q7F1">
+          <div class="form-group"  id="Q7F1">
             <?php } else { ?>
-            <div class="form-group"
-																	 id="Q7F1"
-																	 style="display: none;">
+            <div class="form-group"  id="Q7F1" style="display: none;">
               <?php } else { ?>
-              <div class="form-group"
-																	 id="Q7F1"
-																	 style="display: none;">
+              <div class="form-group"  id="Q7F1"  style="display: none;">
                 <?php } ?>
                 <label class="control-label"><span
 																		class="cube">4</span>Does
@@ -1410,10 +1625,10 @@ if ($data['Q4F1'] == 'Y') {
                 </ul>
               </div>
               <?php
-if (isset($data['Q4F1']))
-if ($data['Q4F1'] == 'Y')
-if (isset($data['Q7F1']))
-if ($data['Q7F1'] == 'Y') {
+//if (isset($data['Q4F1']))
+//if ($data['Q4F1'] == 'Y')
+//if (isset($data['Q7F1']))
+//if ($data['Q7F1'] == 'Y') {
 ?>
               <div class="form-group" id="traditional">
                 <label class="control-label"><span class="cube">4(a)</span>Please
@@ -1505,8 +1720,9 @@ if ($data['Q7F1'] == 'Y') {
 																							   value="<?php if (isset($data['Q7F1S5'])) echo $data['Q7F1S5'] ?>"/>
                   </div>
                 </div>
-              </div>
-              <div class="form-group"
+
+    
+            <div class="form-group"
 																				 id="Q7F2S1">
                 <label class="control-label">Please
                 upload
@@ -1579,11 +1795,15 @@ if ($data['Q7F1'] == 'Y') {
 																					rows="5"
 																					name="Q7F3S1"
 																					placeholder="<?php if (isset($data['Q7F3S1'])) echo $data['Q7F3S1'] ?>"
-																					value="<?php if (isset($data['Q7F3S1'])) echo $data['Q7F3S1'] ?>"></textarea>
+																					><?php if (isset($data['Q7F3S1'])) echo $data['Q7F3S1'] ?></textarea>
                 <br>
               </div>
+
+
+              </div>
+             
               <?php
-}
+//}
 ?>
               <?php
 if (isset($data['Q4F1']))
@@ -1632,13 +1852,12 @@ if ($data['Q4F1'] == 'Y') {
                     </ul>
                   </div>
                   <?php
-if (isset($data['Q4F1']))
+/* if (isset($data['Q4F1']))
 if ($data['Q4F1'] == 'Y')
 if (isset($data['Q8F1']))
-if ($data['Q8F1'] == 'Y') {
+if ($data['Q8F1'] == 'Y') { */
 ?>
-                  <div class="form-group"
-																						 id="beverages">
+                  <div class="form-group"  id="beverages">
                     <label class="control-label"><span
 																								class="cube">5(a)</span>Please
                     provide
@@ -1736,7 +1955,7 @@ if ($data['Q8F1'] == 'Y') {
                     </div>
                   </div>
                   <?php
-}
+/* } */
 ?>
                   <div class="form-group">
                     <label>
@@ -1785,11 +2004,10 @@ if ($data['Q8F1'] == 'Y') {
                   </div>
                 </div>
                 <?php
-if (isset($data['Q9F1']))
-if ($data['Q9F1'] == 'Y') {
+/* if (isset($data['Q9F1']))
+if ($data['Q9F1'] == 'Y') { */
 ?>
-                <div class="form-group"
-																			 id="Q9F2">
+                <div class="form-group"  id="Q9F2">
                   <label class="control-label"><span
 																					class="cube">6(a)</span>Please
                   provide
@@ -1804,11 +2022,11 @@ if ($data['Q9F1'] == 'Y') {
 																				id="Q9F2"
 																				name="Q9F2"
 																				placeholder="<?php if (isset($data['Q9F2'])) echo $data['Q9F2'] ?>"
-																				value="<?php if (isset($data['Q9F2'])) echo $data['Q9F2'] ?>"></textarea>
+																				><?php if (isset($data['Q9F2'])) echo $data['Q9F2'] ?></textarea>
                   <br>
                 </div>
                 <?php
-}
+/* } */
 ?>
                 <div class="form-group">
                   <label class="control-label"><span
@@ -1861,7 +2079,7 @@ if ($data['Q10F1'] == 'Y') {
 																				rows="5"
 																				name="Q10F2"
 																				placeholder="<?php if (isset($data['Q10F2'])) echo $data['Q10F2'] ?>"
-																				value="<?php if (isset($data['Q10F2'])) echo $data['Q10F2'] ?>"></textarea>
+																				><?php if (isset($data['Q10F2'])) echo $data['Q10F2'] ?></textarea>
                   <br>
                 </div>
                 <?php
@@ -1950,7 +2168,7 @@ echo 'style="display:none;"';
 																		rows="5"
 																		name="Q11F2"
 																		placeholder="<?php if (isset($data['Q11F2'])) echo $data['Q11F2'] ?>"
-																		value="<?php if (isset($data['Q11F2'])) echo $data['Q11F2'] ?>"></textarea>
+																		><?php if (isset($data['Q11F2'])) echo $data['Q11F2'] ?></textarea>
                   <br>
                 </div>
                 <div class="form-group"
@@ -2219,7 +2437,7 @@ echo 'style="display:none;"';
                 share
                 the
                 details</label>
-                <textarea type="text" rows="5" id="Q13F2" name="Q13F2" placeholder="<?php if (isset($data['Q13F2'])) echo $data['Q13F2'] ?>"><?php echo set_value('Q13F2'); ?></textarea>
+                <textarea type="text" rows="5" id="Q13F2" name="Q13F2" placeholder="<?php if (isset($data['Q13F2'])) echo $data['Q13F2'] ?>"><?php if (isset($data['Q13F2'])) echo $data['Q13F2'] ?></textarea>
               </div>
               <div class="form-group">
                 <label class="control-label">Please
@@ -2336,6 +2554,364 @@ echo 'style="display:none;"';
     </div>
   </div>
 </div>
+
+
+
+<script>
+	jQuery(document).ready(function(){
+	
+	jQuery('#food').validate({
+		rules:{
+		      Q1F1S1:{
+				  required:true,
+			  },
+			  Q1F1S3:{
+				  required:true,
+			  },
+			  Q1F1S2:{
+				  required:true,
+			  },
+			  Q2F1S1:{
+				  required:true,
+			  },
+			   Q2F1S3:{
+				  required:true,
+			  },
+			   Q2F1S2:{
+				  required:true,
+			  },
+			  Q3F1S1:{
+				  required:true,
+			  },
+			  Q3F1S2:{
+				  required:true,
+			  },
+			  Q3F1S3:{
+				  required:true,
+			  },
+			  Q4F1:{
+				  required:true,
+			  },
+			  Q5F1:{
+				  required:true,
+			  },
+			  Q5F1S1:{
+				  required:true,
+			  },
+			  Q5F2S1:{
+				  required:true,
+			  },
+			  Q5F2S2:{
+				  required:true,
+			  },
+			  Q5F2S3:{
+				  required:true,
+			  },
+			  Q5F2S4:{
+				  required:true,
+			  },
+			  Q5F2S5:{
+				  required:true,
+			  },
+			  Q5F2S6:{
+				  required:true,
+			  },
+			  Q5F2S7:{
+				  required:true,
+			  },
+			  Q5F2S8:{
+				  required:true,
+			  },
+			  Q5F2S9:{
+				  required:true,
+			  },
+			  Q5F2S10:{
+				  required:true,
+			  },
+			  Q5F2S11:{
+				  required:true,
+			  },
+			  Q5F2S12:{
+				  required:true,
+			  },
+			  Q5F2S13:{
+				  required:true,
+			  },
+			  Q5F2S14:{
+				  required:true,
+			  },
+			  Q5F3S1:{
+				  required:true,
+			  },
+			  Q6F2S1:{
+				  required:true,
+			  },
+			  Q6F2S2:{
+				  required:true,
+			  },
+			  Q6F2S3:{
+				  required:true,
+			  },
+			  Q6F3S1:{
+				  required:true,
+			  },
+			  Q6F3S2:{
+				  required:true,
+			  },
+			  Q6F3S3:{
+				  required:true,
+			  },
+			  Q6F4S1:{
+				  required:true,
+			  },
+			  Q6F4S2:{
+				  required:true,
+			  },
+			  Q6F4S3:{
+				  required:true,
+			  },
+			  Q6F5S1:{
+				  required:true,
+			  },
+			  Q6F5S2:{
+				  required:true,
+			  },
+			  Q6F5S3:{
+				  required:true,
+			  },
+			  Q6F6S1:{
+				  required:true,
+			  },
+			  Q6F6S2:{
+				  required:true,
+			  },
+			  Q6F6S3:{
+				  required:true,
+			  },
+			  Q6F7S1:{
+				  required:true,
+			  },
+			  Q6F7S2:{
+				  required:true,
+			  },
+			  Q6F7S3:{
+				  required:true,
+			  },
+			  Q6F8S1:{
+				  required:true,
+			  },
+			  Q6F8S2:{
+				  required:true,
+			  },
+			  Q6F8S3:{
+				  required:true,
+			  },
+			  Q6F9S1:{
+				  required:true,
+			  },
+			  Q6F9S2:{
+				  required:true,
+			  },
+			  Q6F9S3:{
+				  required:true,
+			  },
+			  Q6F10S1:{
+				  required:true,
+			  },
+			  Q6F10S2:{
+				  required:true,
+			  },
+			  Q6F10S3:{
+				  required:true,
+			  },
+			  Q7F1:{
+				  required:true,
+			  },
+			  Q8F1:{
+				  required:true,
+			  },
+			  Q9F1:{
+				  required:true,
+			  },
+			  Q10F1:{
+				  required:true,
+			  },
+			  Q10F2:{
+				  required:true,
+			  },
+			  Q11F1:{
+				  required:true,
+			  },
+			  Q11F2:{
+				  required:true,
+			  },
+			  Q11F3:{
+				  required:true,
+			  },
+			  Q12F1:{
+				  required:true,
+			  },
+			  Q12F2:{
+				  required:true,
+			  },
+			  Q13F1:{
+				  required:true,
+			  },
+			  Q13F2:{
+				  required:true,
+			  },
+			  Q7F1S1:{
+				  required:true,
+			  },
+			  Q7F1S2:{
+				  required:true,
+			  },
+			  Q7F1S3:{
+				  required:true,
+			  },
+			  Q7F1S4:{
+				  required:true,
+			  },
+			  Q7F1S5:{
+				  required:true,
+			  },
+			  Q7F3S1:{
+				  required:true,
+			  },
+			  Q8F1S1:{
+				  required:true,
+			  },
+			  Q8F1S2:{
+				  required:true,
+			  },
+			  Q8F1S3:{
+				  required:true,
+			  },
+			  Q8F1S4:{
+				  required:true,
+			  },
+			  Q8F1S5:{
+				  required:true,
+			  },
+			  Q9F2:{
+				  required:true,
+			  },
+			  Q13F2:{
+				  required:true,
+			  } 
+		}
+       
+	});
+	});
+	
+	jQuery('#foodnext').click(function(e){
+		
+		
+		$r=jQuery('#food').valid();
+		if($r == false)
+		{
+			   e.preventDefault();
+			   jQuery('#food').valid();
+		}
+		
+		
+	});
+	
+	</script>
+
+
+<script>
+ $(document).ready(function(){
+   /*Event Base*/
+   $("input[name='Q9F1']").click(function(){
+      if($(this).val()==='Y'){
+       $("#Q9F2").show();
+      }else{
+        $("#Q9F2").hide();
+      }
+   })
+   /*Intially Load Base*/
+   $("#Q9F2").hide();
+   /*Checked Condition*/
+   if($("input[name='Q9F1']").is(':checked')==true){
+     if($("input[name='Q9F1']").val()==='Y'){
+       $("#Q9F2").show();
+     }else{
+       $("#Q9F2").hide();
+     }
+   } 
+ });
+</script>
+
+<script>
+ $(document).ready(function(){
+   /*Event Base*/
+   $("input[name='Q7F1']").click(function(){
+      if($(this).val()==='Y'){
+       $("#traditional").show();
+      }else{
+        $("#traditional").hide();
+      }
+   })
+   /*Intially Load Base*/
+   $("#traditional").hide();
+   /*Checked Condition*/
+   if($("input[name='Q7F1']").is(':checked')==true){
+     if($("input[name='Q7F1']").val()==='Y'){
+       $("#traditional").show();
+     }else{
+       $("#traditional").hide();
+     }
+   } 
+ });
+</script>
+
+<script>
+ $(document).ready(function(){
+   /*Event Base*/
+   $("input[name='Q8F1']").click(function(){
+      if($(this).val()==='Y'){
+       $("#beverages").show();
+      }else{
+        $("#beverages").hide();
+      }
+   })
+   /*Intially Load Base*/
+   $("#beverages").hide();
+   /*Checked Condition*/
+   if($("input[name='Q8F1']").is(':checked')==true){
+     if($("input[name='Q8F1']").val()==='Y'){
+       $("#beverages").show();
+     }else{
+       $("#beverages").hide();
+     }
+   } 
+ });
+</script>
+
+
+<script>
+jQuery('#foodnext').click(function(e){
+if($("input[name='Q12F1']:checked").val()==='Y'){
+    if($('input[name=Q12F2]:checked').length == 0){
+ 
+       alert("9(a) How regularly is height and weight of the students measured?");
+         e.preventDefault();
+     }
+}
+
+if($("input[name='Q13F1']:checked").val()==='Y'){
+ if($("textarea[name='Q13F2']").val()==''){
+         alert("10(a)If yes, please share the details");
+         e.preventDefault();
+ }
+}
+});
+</script>
+
+
+
+
 <script type="text/javascript">
 	$('.close').click(function () {
 		$('#video').attr("src", "https://www.youtube.com/embed/9r3Lwrd9BUs");
@@ -2749,3 +3325,4 @@ nyanBtn.addEventListener('click', function(){
 		     display:none; 
 		 }	
 </style>
+
