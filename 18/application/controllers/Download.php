@@ -85,7 +85,9 @@ class Download extends CI_Controller {
         $data['states'] = getStates();
         $data['school'] = $this->Audit_started_model->getSchoolById($argID);
         $data['schoolUserID'] = $data['school']->userid;
-        $data['files'] = $this->file->getFilesData($this->session->userdata('USER_ID'));
+       // $data['files'] = $this->file->getFilesData($this->session->userdata('USER_ID'));
+	$data['Supporting_Document_Air'] = uploadHelper($this->session->userdata('USER_ID'), 'Supporting_Document_Air');    
+	    
         $data['filesfules'] = $this->file->getFilesDatafules($this->session->userdata('USER_ID'));
         $data['airQualityMonitering'] = $this->file->AirQuality($this->session->userdata('USER_ID'));
         $data['pucCertificate'] = $this->file->pucCertificate($this->session->userdata('USER_ID'));
@@ -97,7 +99,10 @@ class Download extends CI_Controller {
         //food
         $data['midDayMeal'] = $this->file->getMidDayMeal($this->session->userdata('USER_ID'));
         $data['canteen'] = $this->file->getCanteen($this->session->userdata('USER_ID'));
-        $data['files'] = $this->file->getFoodFilesData($this->session->userdata('USER_ID'));
+        //$data['files'] = $this->file->getFoodFilesData($this->session->userdata('USER_ID'));
+	
+	$data['food_gsp_audit'] = uploadHelper($this->session->userdata('USER_ID'), 'Audit_Team_doing_Survey_Food');    
+	    
         $data['uppc'] = $this->file->getFoodUPPCData($this->session->userdata('USER_ID'));
         //land
         $data['greenCover'] = uploadHelper($this->session->userdata('USER_ID'), 'Green_Cover');
@@ -121,7 +126,7 @@ class Download extends CI_Controller {
         $data['supportDocWater'] = uploadHelper($this->session->userdata('USER_ID'), 'Supporting_Document_Water');
 	$data['chikoo']=uploadHelper($this->session->userdata('USER_ID'), 'Waste_Policy');
 	$data['Initiatives']=uploadHelper($this->session->userdata('USER_ID'), 'School_Initiatives');
-	$data['teamDoingWaste']=uploadHelper($this->session->userdata('USER_ID'), 'Audit_Team_Doing_Survey');    
+	$data['teamDoingWaste']=uploadHelper($this->session->userdata('USER_ID'), 'Audit_Team_Doing_Survey_Waste');    
         $rank=getFiled('Q1G2',$data['schoolUserID']);
         if ($rank >= 6 ) { 
             $html1 = $this->load->view('school_pdf', $data, true);
