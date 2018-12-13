@@ -196,7 +196,7 @@ header('Location: http://www.greenschoolsprogramme.org/audit/18/login/browser_ch
                            // if (data == "success") {
 			   if(data != "error"){	
                                 $('#msgForget').html('<div class="alert alert-success">' +
-                                        "<strong>&#10004; Success!</strong> Your password request has been accepted and the new password will be sent to the registered email address of the GSP co-ordinator in the next five - ten minutes. If the password is not received in the next 10 minutes, then please check the spam folder. If not in the spam folder, then please send an email saying that you haven't received the new password to: <a href='mail'> support@greenschoolsprogramme.org</a>,<strong>Please note that passwords can be changed only thrice in a day.   </strong> <br/> " +
+                                        "<strong>&#10004; Success!</strong> Your password request has been accepted and the new password will be sent to the registered email address of the GSP co-ordinator in the next five - ten minutes. If the password is not received in the next 10 minutes, then please check the spam folder. If not in the spam folder, then please send an email saying that you haven't received the new password to: <a href='mail'> support@greenschoolsprogramme.org</a>,<strong>Please note that passwords can be changed only thrice in a day.<br/><br/>   </strong> <br/> " +
                                         '</div>');
 										 setTimeout(function () {
                                 location.reload();
