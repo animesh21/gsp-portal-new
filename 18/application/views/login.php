@@ -196,7 +196,7 @@ header('Location: http://www.greenschoolsprogramme.org/audit/18/login/browser_ch
                            // if (data == "success") {
 			   if(data != "error"){	
                                 $('#msgForget').html('<div class="alert alert-success">' +
-                                        "<strong>&#10004; Success!</strong> Your password request has been accepted and the new password will be sent to the registered email address of the GSP co-ordinator in the next five or ten minutes. If the password is not received in the next 10 minutes, then please check the spam folder. If not in the spam folder, then please send an email saying that you haven't received the new password to:  <a href='mail'> support@greenschoolsprogramme.org</a>, " +
+                                        "<strong>&#10004; Success!</strong> Your password request has been accepted and the new password will be sent to the registered email address of the GSP co-ordinator in the next five - ten minutes. If the password is not received in the next 10 minutes, then please check the spam folder. If not in the spam folder, then please send an email saying that you haven't received the new password to: <a href='mail'> support@greenschoolsprogramme.org</a>,<strong>Please note that passwords can be changed only thrice in a day.   </strong> " +
                                         '</div>');
 										 setTimeout(function () {
                                 location.reload();
@@ -215,9 +215,9 @@ header('Location: http://www.greenschoolsprogramme.org/audit/18/login/browser_ch
                                 location.reload();
                             }, 10000);
                             }
-			    if (data == 24) {
+			    if (data>3) {
                                 $('#msgForget').html('<div class="alert alert-danger">' +
-                                        '<strong>&#x2716; Error!</strong> You Can Send Request For Forgetpassword Only Once In 24 Hours. <br/> Please Send Next Query After Half An Hour & Do You Have Any Doubt Mail  support@greenschoolsprogramme.org OR CALL 011-4061600' +
+                                        '<strong>&#x2716; Error!</strong> You Can Send Request For Forgetpassword Only User Thrice In Once A Day. <br/> Please Send Next Query After Half An Hour & Do You Have Any Doubt Mail  support@greenschoolsprogramme.org OR CALL 011-4061600' +
                                         '</div>');
 										 setTimeout(function () {
                                 location.reload();
