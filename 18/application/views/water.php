@@ -216,6 +216,16 @@
     text-shadow: 1px 1px 1px #000;
 	}
 	
+	#Q19W12-error
+	{
+		color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -46px !important;
+    position: absolute;
+    margin-left: 421px;
+    text-shadow: 1px 1px 1px #000;
+	}
+	
 	#Q21W1-error
 	{
 		color: #fb4f2a !important;
