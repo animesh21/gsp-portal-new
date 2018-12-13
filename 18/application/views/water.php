@@ -6,6 +6,274 @@
         list-style-type: none !important;
     }
 
+	#Q8W1S1-error
+	{
+		color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -4px !important;
+    position: absolute;
+    margin-left: -210px;
+    text-shadow: 1px 1px 1px #000;
+	}
+	
+	#Q8W1S2-error
+	{
+		color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -4px !important;
+    position: absolute;
+    margin-left: -210px;
+    text-shadow: 1px 1px 1px #000;
+	}
+	
+	#Q8W1S3-error
+	{
+		color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -4px !important;
+    position: absolute;
+    margin-left: -210px;
+    text-shadow: 1px 1px 1px #000;
+	}
+	
+	#Q8W1S4-error
+	{
+		color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -4px !important;
+    position: absolute;
+    margin-left: -210px;
+    text-shadow: 1px 1px 1px #000;
+	}
+	
+	#Q8W1S5-error
+	{
+		color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -4px !important;
+    position: absolute;
+    margin-left: -210px;
+    text-shadow: 1px 1px 1px #000;
+	}
+	
+	#Q8W1S6-error
+	{
+		color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -4px !important;
+    position: absolute;
+    margin-left: -210px;
+    text-shadow: 1px 1px 1px #000;
+	}
+	
+	#Q8W1S7-error
+	{
+		color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -4px !important;
+    position: absolute;
+    margin-left: -210px;
+    text-shadow: 1px 1px 1px #000;
+	}
+	
+	#Q8W1S9-error
+	{
+		color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -16px !important;
+    position: absolute;
+    margin-left: -210px;
+    text-shadow: 1px 1px 1px #000;
+	}
+	
+	#Q8W1S10-error
+	{
+		color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -4px !important;
+    position: absolute;
+    margin-left: -210px;
+    text-shadow: 1px 1px 1px #000;
+	}
+	
+	#Q8W1S11-error
+	{
+		color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -4px !important;
+    position: absolute;
+    margin-left: -210px;
+    text-shadow: 1px 1px 1px #000;
+	}
+	
+	#Q8W1S12-error
+	{
+		color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: 13px !important;
+    position: absolute;
+    margin-left: -210px;
+    text-shadow: 1px 1px 1px #000;
+	}
+	
+	#Q8W3S1-error
+	{
+		color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -4px !important;
+    position: absolute;
+    margin-left: -210px;
+    text-shadow: 1px 1px 1px #000;
+	}
+	
+	#Q8W3S2-error
+	{
+		color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -4px !important;
+    position: absolute;
+    margin-left: -210px;
+    text-shadow: 1px 1px 1px #000;
+	}
+	
+	#Q8W3S3-error
+	{
+		color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -4px !important;
+    position: absolute;
+    margin-left: -210px;
+    text-shadow: 1px 1px 1px #000;
+	}
+	
+	#Q8W3S4-error
+	{
+		color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -4px !important;
+    position: absolute;
+    margin-left: -210px;
+    text-shadow: 1px 1px 1px #000;
+	}
+	
+	#Q8W3S5-error
+	{
+		color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -4px !important;
+    position: absolute;
+    margin-left: -210px;
+    text-shadow: 1px 1px 1px #000;
+	}
+	
+	#Q8W3S6-error
+	{
+		color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -17px !important;
+    position: absolute;
+    margin-left: -210px;
+    text-shadow: 1px 1px 1px #000;
+	}
+	
+	#Q8W3S7-error
+	{
+		color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -4px !important;
+    position: absolute;
+    margin-left: -210px;
+    text-shadow: 1px 1px 1px #000;
+	}
+	
+	#Q8W3S8-error
+	{
+		color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -4px !important;
+    position: absolute;
+    margin-left: -210px;
+    text-shadow: 1px 1px 1px #000;
+	}
+	
+	#Q7W1-error
+	{
+		color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -44px !important;
+    position: absolute;
+    margin-left: 329px;
+    text-shadow: 1px 1px 1px #000;
+	}
+	
+	#Q16W1-error
+	{
+		color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -46px !important;
+    position: absolute;
+    margin-left: 530px;
+    text-shadow: 1px 1px 1px #000;
+	}
+	
+	#Q21W1-error
+	{
+		color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -44px !important;
+    position: absolute;
+    margin-left: 254px;
+    text-shadow: 1px 1px 1px #000;
+	}
+	#Q18W1-error
+	{
+		color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -44px !important;
+    position: absolute;
+    margin-left: 213px;
+    text-shadow: 1px 1px 1px #000;
+	}
+	#Q18W2-error
+	{
+		color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -38px !important;
+    position: absolute;
+    margin-left: 213px;
+    text-shadow: 1px 1px 1px #000;
+	}
+	
+	#Q19W1-error
+	{
+		color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -45px !important;
+    position: absolute;
+    margin-left: 292px;
+    text-shadow: 1px 1px 1px #000;
+	}
+	
+	#Q19W15-error
+	{
+		color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -45px !important;
+    position: absolute;
+    margin-left: 646px;
+    text-shadow: 1px 1px 1px #000;
+	}
+	
+	#Q20W1-error
+	{
+		color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -45px !important;
+    position: absolute;
+    margin-left: 392px;
+    text-shadow: 1px 1px 1px #000;
+	}
+	
     #Q8W2S4-error{
                         color: #fb4f2a !important;
 					font-size: 18px !important;
@@ -38,6 +306,25 @@
 
 }
 
+#Q7W2-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -39px !important;
+    position: absolute;
+    margin-left: 334px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q8W2S1S1-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -39px !important;
+    position: absolute;
+    margin-left: 505px;
+    text-shadow: 1px 1px 1px #000;
+}
 #Q8W2S2S5-error
 {
 
@@ -269,17 +556,17 @@ To understand water, it is important to know the source of water in your school 
   <div class="col-xs-3"> <?php echo form_error('name'); ?>
     <input class="form-control space-textbox" id="Q1W1S1" type="text" name="Q1W1S1"
                        placeholder="<?php if (isset($data['Q1W1S1'])) echo $data['Q1W1S1']; ?>"
-                       value="<?php echo set_value('Q1W1S1'); ?>"/>
+                       value="<?php if (isset($data['Q1W1S1'])) echo $data['Q1W1S1']; ?>"/>
   </div>
   <div class="col-xs-3"> <?php echo form_error('name'); ?>
     <input class="form-control space-textbox" id="Q1W1S3" type="text" name="Q1W1S3"
                        placeholder="<?php if (isset($data['Q1W1S3'])) echo $data['Q1W1S3']; ?>"
-                       value="<?php echo set_value('Q1W1S3'); ?>"/>
+                       value="<?php if (isset($data['Q1W1S3'])) echo $data['Q1W1S3']; ?>"/>
   </div>
   <div class="col-xs-3"> <?php echo form_error('email'); ?>
     <input class="form-control space-textbox" id="Q1W1S2" type="email" name="Q1W1S2"
                        placeholder="<?php if (isset($data['Q1W1S2'])) echo $data['Q1W1S2']; ?>"
-                       value="<?php echo set_value('Q1W1S2'); ?>"/>
+                       value="<?php if (isset($data['Q1W1S2'])) echo $data['Q1W1S2']; ?>"/>
   </div>
 </div>
 <div class="form-group row">
@@ -337,17 +624,17 @@ To understand water, it is important to know the source of water in your school 
     <div class="col-xs-3"> <?php echo form_error('name1'); ?>
       <input class="form-control space-textbox" id="Q2W1S1" type="text" name="Q2W1S1"
                            placeholder="<?php if (isset($data['Q2W1S1'])) echo $data['Q2W1S1'] ?>"
-                           value="<?php echo set_value('Q2W1S1'); ?>"/>
+                           value="<?php if (isset($data['Q2W1S1'])) echo $data['Q2W1S1'] ?>"/>
     </div>
     <div class="col-xs-3">
       <input class="form-control space-textbox" id="Q2W1S3" type="text" name="Q2W1S3"
                            placeholder="<?php if (isset($data['Q2W1S3'])) echo $data['Q2W1S3'] ?>"
-                           value="<?php echo set_value('Q2W1S3'); ?>"/>
+                           value="<?php if (isset($data['Q2W1S3'])) echo $data['Q2W1S3'] ?>"/>
     </div>
     <div class="col-xs-3"> <?php echo form_error('email1'); ?>
       <input class="form-control space-textbox" id="Q2W1S2" type="email" name="Q2W1S2"
                            placeholder="<?php if (isset($data['Q2W1S2'])) echo $data['Q2W1S2'] ?>"
-                           value="<?php echo set_value('Q2W1S2'); ?>"/>
+                           value="<?php if (isset($data['Q2W1S2'])) echo $data['Q2W1S2'] ?>"/>
     </div>
   </div>
   <div class="form-group row">
@@ -442,17 +729,17 @@ To understand water, it is important to know the source of water in your school 
     <div class="col-xs-3"> <?php echo form_error('name2'); ?>
       <input class="form-control space-textbox" id="Q3W1S1" type="text" name="Q3W1S1"
                            placeholder="<?php if (isset($data['Q3W1S1'])) echo $data['Q3W1S1'] ?>"
-                           value="<?php echo set_value('Q3W1S1'); ?>"/>
+                           value="<?php if (isset($data['Q3W1S1'])) echo $data['Q3W1S1'] ?>"/>
     </div>
     <div class="col-xs-3"> <?php echo form_error('email2'); ?>
       <input class="form-control space-textbox" id="Q3W1S2" type="text" name="Q3W1S2"
                            placeholder="<?php if (isset($data['Q3W1S2'])) echo $data['Q3W1S2'] ?>"
-                           value="<?php echo set_value('Q3W1S2'); ?>"/>
+                           value="<?php if (isset($data['Q3W1S2'])) echo $data['Q3W1S2'] ?>"/>
     </div>
     <div class="col-xs-3">
       <input class="form-control space-textbox" id="Q3W1S3" type="text" name="Q3W1S3"
                            placeholder="<?php if (isset($data['Q3W1S3'])) echo $data['Q3W1S3'] ?>"
-                           value="<?php echo set_value('Q3W1S3'); ?>"/>
+                           value="<?php if (isset($data['Q3W1S3'])) echo $data['Q3W1S3'] ?>"/>
     </div>
   </div>
   <div class="form-group row">
@@ -689,7 +976,7 @@ To understand water, it is important to know the source of water in your school 
       <input class="form-control space-textbox" onKeyUp="WaterConsumption()" 
                            id="Q4W1" type="number" min="0" name="Q4W1"
                            placeholder="<?php if (isset($data['Q4W1'])) echo $data['Q4W1'] ?>"
-                           value="<?php echo set_value('Q4W1'); ?>"/>
+                           value="<?php if (isset($data['Q4W1'])) echo $data['Q4W1'] ?>"/>
     </div>
   </div>
   <div class="form-group row">
@@ -700,7 +987,7 @@ To understand water, it is important to know the source of water in your school 
       <input class="form-control space-textbox" onKeyUp="WaterConsumption()" 
                            id="Q4W2" type="number" min="0" name="Q4W2"
                            placeholder="<?php if (isset($data['Q4W2'])) echo $data['Q4W2'] ?>"
-                           value="<?php echo set_value('Q4W2'); ?>"/>
+                           value="<?php if (isset($data['Q4W2'])) echo $data['Q4W2'] ?>"/>
     </div>
   </div>
   <div class="form-group row">
@@ -711,7 +998,7 @@ To understand water, it is important to know the source of water in your school 
       <input class="form-control space-textbox" onKeyUp="WaterConsumption()" 
                            id="Q4W3" type="number" min="0" name="Q4W3"
                            placeholder="<?php if (isset($data['Q4W3'])) echo $data['Q4W3'] ?>"
-                           value="<?php echo set_value('Q4W3'); ?>"/>
+                           value="<?php if (isset($data['Q4W3'])) echo $data['Q4W3'] ?>"/>
     </div>
   </div>
   <div class="form-group row">
@@ -722,7 +1009,7 @@ To understand water, it is important to know the source of water in your school 
       <input class="form-control space-textbox" onKeyUp="WaterConsumption()" 
                            id="Q4W4" type="number" min="0" name="Q4W4"
                            placeholder="<?php if (isset($data['Q4W4'])) echo $data['Q4W4'] ?>"
-                           value="<?php echo set_value('Q4W4'); ?>"/>
+                           value="<?php if (isset($data['Q4W4'])) echo $data['Q4W4'] ?>"/>
     </div>
   </div>
   <div class="form-group row">
@@ -733,7 +1020,7 @@ To understand water, it is important to know the source of water in your school 
       <input class="form-control space-textbox" onKeyUp="WaterConsumption()" 
                            id="Q4W5" type="number" min="0" name="Q4W5"
                            placeholder="<?php if (isset($data['Q4W5'])) echo $data['Q4W5'] ?>"
-                           value="<?php echo set_value('Q4W5'); ?>"/>
+                           value="<?php if (isset($data['Q4W5'])) echo $data['Q4W5'] ?>"/>
     </div>
   </div>
   <!--
@@ -768,7 +1055,7 @@ To understand water, it is important to know the source of water in your school 
       <input class="form-control space-textbox" onKeyUp="WaterConsumption()" 
                            id="Q4W6" type="number" min="0" name="Q4W6"
                            placeholder="<?php if (isset($data['Q4W6'])) echo $data['Q4W6'] ?>"
-                           value="<?php echo set_value('Q4W6'); ?>"/>
+                           value="<?php if (isset($data['Q4W6'])) echo $data['Q4W6'] ?>"/>
     </div>
   </div>
   <div class="form-group row">
@@ -779,7 +1066,7 @@ To understand water, it is important to know the source of water in your school 
       <input class="form-control space-textbox" onKeyUp="WaterConsumption()" 
                            id="Q4W7" type="number" min="0" name="Q4W7"
                            placeholder="<?php if (isset($data['Q4W7'])) echo $data['Q4W7'] ?>"
-                           value="<?php echo set_value('Q4W7'); ?>"/>
+                           value="<?php if (isset($data['Q4W7'])) echo $data['Q4W7'] ?>"/>
     </div>
   </div>
   <div class="form-group row">
@@ -790,7 +1077,7 @@ To understand water, it is important to know the source of water in your school 
       <input class="form-control space-textbox" onKeyUp="WaterConsumption()" 
                            id="Q4W8" type="number" min="0" name="Q4W8"
                            placeholder="<?php if (isset($data['Q4W8'])) echo $data['Q4W8'] ?>"
-                           value="<?php echo set_value('Q4W8'); ?>"/>
+                           value="<?php if (isset($data['Q4W8'])) echo $data['Q4W8'] ?>"/>
     </div>
   </div>
   <div class="form-group row">
@@ -801,7 +1088,7 @@ To understand water, it is important to know the source of water in your school 
       <input class="form-control space-textbox" onKeyUp="WaterConsumption()" 
                            id="Q4W9" type="number" min="0" name="Q4W9"
                            placeholder="<?php if (isset($data['Q4W9'])) echo $data['Q4W9'] ?>"
-                           value="<?php echo set_value('Q4W9'); ?>"/>
+                           value="<?php if (isset($data['Q4W9'])) echo $data['Q4W9'] ?>"/>
     </div>
   </div>
   <div class="form-group row">
@@ -812,7 +1099,7 @@ To understand water, it is important to know the source of water in your school 
       <input class="form-control space-textbox" onKeyUp="WaterConsumption()" 
                            id="Q4W10" type="number" min="0" name="Q4W10"
                            placeholder="<?php if (isset($data['Q4W10'])) echo $data['Q4W10'] ?>"
-                           value="<?php echo set_value('Q4W10'); ?>"/>
+                           value="<?php if (isset($data['Q4W10'])) echo $data['Q4W10'] ?>"/>
     </div>
   </div>
   <div class="form-group row">
@@ -822,7 +1109,7 @@ To understand water, it is important to know the source of water in your school 
     <div class="col-xs-5">
       <input class="form-control space-textbox" id="Q4W11" type="number" min="0" name="Q4W11"
                            placeholder="<?php if (isset($data['Q4W11'])) echo $data['Q4W11'] ?>"
-                           value="<?php echo set_value('Q4W11'); ?>" readonly/>
+                           value="<?php if (isset($data['Q4W11'])) echo $data['Q4W11'] ?>" readonly/>
     </div>
   </div>
 </div>
@@ -2587,14 +2874,14 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
   <label><span class="cube">8</span>How many drinking water taps do you have?</label>
   <input class="form-control space-textbox" id="Q9W1" type="number" min="0" name="Q9W1"
                                    placeholder="<?php if (isset($data['Q9W1'])) echo $data['Q9W1']; ?>"
-                                   value="<?php echo set_value('Q9W1'); ?>"/>
+                                   value="<?php if (isset($data['Q9W1'])) echo $data['Q9W1']; ?>"/>
 </div>
 <br>
 <div class="form-group">
   <label><span class="cube">9</span>How many hand pumps do you have?</label>
   <input class="form-control space-textbox" id="Q10W1" type="number" min="0" name="Q10W1"
                                    placeholder="<?php if (isset($data['Q10W1'])) echo $data['Q10W1']; ?>"
-                                   value="<?php echo set_value('Q10W1'); ?>"/>
+                                   value="<?php if (isset($data['Q10W1'])) echo $data['Q10W1']; ?>"/>
 </div>
 <br>
 <div class="form-group">
@@ -2602,7 +2889,7 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
   do you have?</label>
   <input class="form-control space-textbox" id="Q11W1" type="number" min="0" name="Q11W1"
                                    placeholder="<?php if (isset($data['Q11W1'])) echo $data['Q11W1']; ?>"
-                                   value="<?php echo set_value('Q11W1'); ?>"/>
+                                   value="<?php if (isset($data['Q11W1'])) echo $data['Q11W1']; ?>"/>
 </div>
 <br>
 <!--div class="form-group">
@@ -2622,28 +2909,28 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
       <input class="form-control space-textbox" onKeyUp="Toilets()" id="Q13W1S1"
                                            type="number" min="0" name="Q13W1S1"
                                            placeholder="<?php if (isset($data['Q13W1S1'])) echo $data['Q13W1S1'] ?>"
-                                           value="<?php echo set_value('Q13W1S1'); ?>"/>
+                                           value="<?php if (isset($data['Q13W1S1'])) echo $data['Q13W1S1'] ?>"/>
     </div>
     <div class="col-xs-2">
       <label class="text-gray">Boys</label>
       <input class="form-control space-textbox" onKeyUp="Toilets()" id="Q13W1S2"
                                            type="number" min="0" name="Q13W1S2"
                                            placeholder="<?php if (isset($data['Q13W1S2'])) echo $data['Q13W1S2'] ?>"
-                                           value="<?php echo set_value('Q13W1S2'); ?>"/>
+                                           value="<?php if (isset($data['Q13W1S2'])) echo $data['Q13W1S2'] ?>"/>
     </div>
     <div class="col-xs-2">
       <label class="text-gray">Common</label>
       <input class="form-control space-textbox" onKeyUp="Toilets()" id="Q13W1S3"
                                            type="number" min="0" name="Q13W1S3"
                                            placeholder="<?php if (isset($data['Q13W1S3'])) echo $data['Q13W1S3'] ?>"
-                                           value="<?php echo set_value('Q13W1S3'); ?>"/>
+                                           value="<?php if (isset($data['Q13W1S3'])) echo $data['Q13W1S3'] ?>"/>
     </div>
     <div class="col-xs-2">
       <label class="text-gray">Total</label>
       <input class="form-control space-textbox" onKeyUp="Toilets()" id="Q13W1S4"
                                            type="number" min="0" name="Q13W1S4"
                                            placeholder="<?php if (isset($data['Q13W1S4'])) echo $data['Q13W1S4'] ?>"
-                                           value="<?php echo set_value('Q13W1S4'); ?>" readonly/>
+                                           value="<?php if (isset($data['Q13W1S4'])) echo $data['Q13W1S4'] ?>" readonly/>
     </div>
   </div>
   <div class="form-group">
@@ -2651,14 +2938,14 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
     do you have?</label>
     <input class="form-control space-textbox" id="Q14W1" type="number" min="0" name="Q14W1"
                                        placeholder="<?php if (isset($data['Q14W1'])) echo $data['Q14W1']; ?>"
-                                       value="<?php echo set_value('Q14W1'); ?>"/>
+                                       value="<?php if (isset($data['Q14W1'])) echo $data['Q14W1']; ?>"/>
   </div>
   <div class="form-group">
     <label><span class="cube">13</span>How many other water outlets (example: taps in play
     fields, sprinklers, swimming pool) do you have?</label>
     <input class="form-control space-textbox" id="Q15W1" type="number" min="0" name="Q15W1"
                                        placeholder="<?php if (isset($data['Q15W1'])) echo $data['Q15W1']; ?>"
-                                       value="<?php echo set_value('Q15W1'); ?>"/>
+                                       value="<?php if (isset($data['Q15W1'])) echo $data['Q15W1']; ?>"/>
   </div>
 </div>
 <div class="form-group">
@@ -3190,7 +3477,179 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
 			  },
 			  Q8W2S11:{
 				  required:true,
-			  },Q8W2S12:{
+			  },
+			  Q8W2S12:{
+				  required:true,
+			  },
+			  Q1W1S1:{
+				  required:true,
+			  },
+			  Q1W1S3:{
+				  required:true,
+			  },
+			  Q1W1S2:{
+				  required:true,
+			  },
+			  Q2W1S1:{
+				  required:true,
+			  },
+			  Q2W1S3:{
+				  required:true,
+			  },
+			  Q2W1S2:{
+				  required:true,
+			  },
+			  Q3W1S1:{
+				  required:true,
+			  },
+			  Q3W1S2:{
+				  required:true,
+			  },
+			  Q3W1S3:{
+				  required:true,
+			  },
+			  Q4W1:{
+				  required:true,
+			  },
+			  Q4W2:{
+				  required:true,
+			  },
+			  Q4W3:{
+				  required:true,
+			  },
+			  Q4W4:{
+				  required:true,
+			  },
+			  Q4W5:{
+				  required:true,
+			  },
+			  Q4W6:{
+				  required:true,
+			  },
+			  Q4W7:{
+				  required:true,
+			  },
+			  Q4W8:{
+				  required:true,
+			  },
+			  Q4W9:{
+				  required:true,
+			  },
+			  Q4W10:{
+				  required:true,
+			  },
+			  Q7W1:{
+				  required:true,
+			  },
+			  Q8W1S1:{
+				  required:true,
+			  },
+			  Q8W1S2:{
+				  required:true,
+			  },
+			  Q8W1S3:{
+				  required:true,
+			  },
+			  Q8W1S4:{
+				  required:true,
+			  },
+			  Q8W1S5:{
+				  required:true,
+			  },
+			  Q8W1S6:{
+				  required:true,
+			  },
+			  Q8W1S7:{
+				  required:true,
+			  },
+			  Q8W1S9:{
+				  required:true,
+			  },
+			  Q8W1S10:{
+				  required:true,
+			  },
+			  Q8W1S11:{
+				  required:true,
+			  },
+			  Q8W1S12:{
+				  required:true,
+			  },
+			  Q8W3S1:{
+				  required:true,
+			  },
+			  Q8W3S2:{
+				  required:true,
+			  },
+			  Q8W3S3:{
+				  required:true,
+			  },
+			  Q8W3S4:{
+				  required:true,
+			  },
+			  Q8W3S5:{
+				  required:true,
+			  },
+			  Q8W3S6:{
+				  required:true,
+			  },
+			  Q8W3S7:{
+				  required:true,
+			  },
+			  Q8W3S8:{
+				  required:true,
+			  },
+			  Q9W1:{
+				  required:true,
+			  },
+			  Q10W1:{
+				  required:true,
+			  },
+			  Q11W1:{
+				  required:true,
+			  },
+			   Q13W1S1:{
+				  required:true,
+			  },
+			   Q13W1S2:{
+				  required:true,
+			  },
+			   Q13W1S3:{
+				  required:true,
+			  },
+			   Q14W1:{
+				  required:true,
+			  },
+			   Q15W1:{
+				  required:true,
+			  },
+			   Q16W1:{
+				  required:true,
+			  },
+			   Q21W1 :{
+				  required:true,
+			  },
+			   Q18W1:{
+				  required:true,
+			  },
+			   Q18W2:{
+				  required:true,
+			  },
+			   Q19W1:{
+				  required:true,
+			  },
+			   Q19W11:{
+				  required:true,
+			  },
+			   Q19W12:{
+				  required:true,
+			  },
+			   Q19W15:{
+				  required:true,
+			  },
+			  Q20W1:{
+				  required:true,
+			  },
+			  Q7W2:{
 				  required:true,
 			  }
 			 
