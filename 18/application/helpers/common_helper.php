@@ -318,6 +318,19 @@ if (!function_exists('getUserId')) {
 }
 
 
+/**
+School Attend The Previouc Year Audit
+**/
+if (!function_exists('getSchoolPreviousYearAudit')) {
+       function getSchoolPreviousYearAudit($argUserID,$yearTitle)
+	   {
+	     $CI = & get_instance();
+		 $CI->db->where(array('school_id' => $argUserID));
+		 $temp = $CI->db->select($yearTitle)->from("tbl_yoy")->get()->row();
+		 return $temp;
+	   }
+}
+
 
 
 
