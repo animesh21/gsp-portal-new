@@ -2135,20 +2135,23 @@ if (isset($data['Q9A1']))
 <script>
 	jQuery('#airnext').click(function(e){
 
-    if($('input[name=Q6A3]:checked').length == 0){
- 
-       alert("3(c)IS CNG AVAILABLE IN YOUR STATE?");
-         
-     }
+	
+	if($("input[name='Q6A1']:checked").val()==='3'){
+			if($('input[name=Q6A3]:checked').length == 0){
+		 
+			   alert("3(c)IS CNG AVAILABLE IN YOUR STATE?");
+				 
+			 }
+	}
 
-
-if($("input[name='Q6A3']:checked").val()==='Y'){
- if($('input[name=Q6A4S1]:checked').length == 0){
-         alert("3(c)(a) IS CNG AVAILABLE IN YOUR AREA?");
-        
- }
-}
+	if($("input[name='Q6A3']:checked").val()==='Y'){
+			 if($('input[name=Q6A4S1]:checked').length == 0){
+					 alert("3(c)(a) IS CNG AVAILABLE IN YOUR AREA?");
+					
+			 }
+	}
 });
+	
 	
 	
 	
