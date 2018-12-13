@@ -354,7 +354,9 @@ public function excel2017() {
         $data['school'] = $this->Audit_started_model->getSchoolByIdRecoad($argID);
 	//echo '<pre>'; print_r($data['school']);  die();  
         $data['schoolUserID'] = $data['school'][0]->userid;
-        $data['files'] = $this->file->getFilesData($data['school'][0]->userid);
+        //$data['files'] = $this->file->getFilesData($data['school'][0]->userid);
+	$data['Supporting_Document_Air'] = uploadHelper($data['school'][0]->userid, 'Supporting_Document_Air');    
+	    
         $data['filesfules'] = $this->file->getFilesDatafules($data['school'][0]->userid);
         $data['airQualityMonitering'] = $this->file->AirQuality($data['school'][0]->userid);
         $data['SupportiveAir'] = $this->file->SupportiveAir($data['school'][0]->userid);
@@ -367,7 +369,8 @@ public function excel2017() {
         $data['energySupport'] = $this->file->getEnergySupportData($data['school'][0]->userid);
         //food
         $data['midDayMeal'] = $this->file->getMidDayMeal($data['school'][0]->userid);
-        $data['canteen'] = $this->file->getCanteen($data['school'][0]->userid);
+        //$data['canteen'] = $this->file->getCanteen($data['school'][0]->userid);
+	$data['food_gsp_audit'] = uploadHelper($data['school'][0]->userid, 'Audit_Team_doing_Survey_Food');    
         $data['files'] = $this->file->getFoodFilesData($data['school'][0]->userid);
         $data['uppc'] = $this->file->getFoodUPPCData($data['school'][0]->userid);
         $data['AuditTeamD'] = $this->file->AuditTeamD($data['school'][0]->userid);	    
@@ -393,7 +396,7 @@ public function excel2017() {
         $data['supportDocWater'] = $this->file->SupportingWater($data['school'][0]->userid);
 	$data['chikoo']=uploadHelper($data['school'][0]->userid, 'Waste_Policy');
 	$data['Initiatives']=uploadHelper($data['school'][0]->userid, 'School_Initiatives');
-	$data['teamDoingWaste']=uploadHelper($data['school'][0]->userid, 'Audit_Team_Doing_Survey');    
+	$data['teamDoingWaste']=uploadHelper($data['school'][0]->userid, 'Audit_Team_Doing_Survey_Waste');    
         //echo '<pre>'; print_r($data);die;
         $rank=getFiled('Q1G2',$data['schoolUserID']);
         
