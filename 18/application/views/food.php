@@ -1995,7 +1995,7 @@ if ($data['Q8F1'] == 'Y') { */
                       <li>
                         <label class="radio-inline text-gray">
                         <input type="radio"
-																						   name="Q9F1"
+																						   name="Q9F1" id="Q9F1_N"
 																						   onclick="ComputePackaged(2)"
 																						   value="<?php echo set_value('Q9F1', 'N') ?>" <?php if (isset($data['Q9F1'])) echo $data['Q9F1'] == 'N' ? "checked" : "" ?>/>
                         No </label>
@@ -2833,13 +2833,11 @@ echo 'style="display:none;"';
    /*Intially Load Base*/
    $("#Q9F2").hide();
    /*Checked Condition*/
-   if($("input[name='Q9F1']").is(':checked')==true){
-     if($("input[name='Q9F1']").val()==='Y'){
-       $("#Q9F2").show();
-     }else{
-       $("#Q9F2").hide();
-     }
-   } 
+   if ($("#Q7F1_2").is(":checked")) {
+    $("#Q9F2").hide();
+   }else{
+	  $("#Q9F2").show(); 
+   }
  });
 </script>
 
@@ -2856,13 +2854,12 @@ echo 'style="display:none;"';
    /*Intially Load Base*/
    $("#traditional").hide();
    /*Checked Condition*/
-   if($("input[name='Q7F1']").is(':checked')==true){
-     if($("input[name='Q7F1']").val()==='Y'){
-       $("#traditional").show();
-     }else{
-       $("#traditional").hide();
-     }
-   } 
+   if ($("#Q7F1_2").is(":checked")) {
+     $("#traditional").hide();
+   }else{
+	    $("#traditional").show();
+   }
+   
  });
 </script>
 
@@ -2879,13 +2876,13 @@ echo 'style="display:none;"';
    /*Intially Load Base*/
    $("#beverages").hide();
    /*Checked Condition*/
-   if($("input[name='Q8F1']").is(':checked')==true){
-     if($("input[name='Q8F1']").val()==='Y'){
-       $("#beverages").show();
-     }else{
-       $("#beverages").hide();
-     }
-   } 
+   if ($("#Q8F1_2").is(":checked")) {
+     $("#beverages").hide();
+   }else{
+	    $("#beverages").show();
+   }
+   
+   
  });
 </script>
 
