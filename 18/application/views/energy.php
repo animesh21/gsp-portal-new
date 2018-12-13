@@ -1,5 +1,52 @@
 <?php $this->load->view('header'); ?>
 <style type="text/css">
+
+.error{
+  color: #fb4f2a !important;
+              font-size: 18px !important;
+ text-shadow: 1px 1px 1px #000;
+}
+
+#Q5E1-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -36px !important;
+    position: absolute;
+    margin-left: 313px;
+    text-shadow: 1px 1px 1px #000;
+	
+}
+#Q9E1-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -36px !important;
+    position: absolute;
+    margin-left: 655px;
+    text-shadow: 1px 1px 1px #000;
+	
+}
+
+#Q10E1-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -36px !important;
+    position: absolute;
+    margin-left: 295px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q4E1-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -36px !important;
+    position: absolute;
+    margin-left: 388px;
+    text-shadow: 1px 1px 1px #000;
+}
     .form-group{
         margin-bottom:20px;
     }
@@ -73,17 +120,17 @@
   <div class="col-xs-3">
     <input class="form-control space-textbox" id="Q1E1S1" type="text" name="Q1E1S1"
                            placeholder="<?php if (isset($data['Q1E1S1'])) echo $data['Q1E1S1']; ?>"
-                           value="<?php echo set_value('Q1E1S1'); ?>"/>
+                           value="<?php if (isset($data['Q1E1S1'])) echo $data['Q1E1S1']; ?>"/>
   </div>
   <div class="col-xs-3">
     <input class="form-control space-textbox" id="Q1E1S3" type="text" name="Q1E1S3"
                            placeholder="<?php if (isset($data['Q1E1S3'])) echo $data['Q1E1S3']; ?>"
-                           value="<?php echo set_value('Q1E1S3'); ?>"/>
+                           value="<?php if (isset($data['Q1E1S3'])) echo $data['Q1E1S3']; ?>"/>
   </div>
   <div class="col-xs-3">
     <input class="form-control space-textbox" id="Q1E1S2" type="email" name="Q1E1S2"
                            placeholder="<?php if (isset($data['Q1E1S2'])) echo $data['Q1E1S2']; ?>"
-                           value="<?php echo set_value('Q1E1S2'); ?>"/>
+                           value="<?php if (isset($data['Q1E1S2'])) echo $data['Q1E1S2']; ?>"/>
   </div>
 </div>
 <div class="form-group1 row">
@@ -142,17 +189,17 @@
     <div class="col-xs-3"> <?php echo form_error('name1'); ?>
       <input class="form-control space-textbox" id="Q2E1S1" type="text" name="Q2E1S1"
                                placeholder="<?php if (isset($data['Q2E1S1'])) echo $data['Q2E1S1'] ?>"
-                               value="<?php echo set_value('Q2E1S1'); ?>"/>
+                               value="<?php if (isset($data['Q2E1S1'])) echo $data['Q2E1S1'] ?>"/>
     </div>
     <div class="col-xs-3">
       <input class="form-control space-textbox" id="Q2E1S3" type="text" name="Q2E1S3"
                                placeholder="<?php if (isset($data['Q2E1S3'])) echo $data['Q2E1S3'] ?>"
-                               value="<?php echo set_value('Q2E1S3'); ?>"/>
+                               value="<?php if (isset($data['Q2E1S3'])) echo $data['Q2E1S3'] ?>"/>
     </div>
     <div class="col-xs-3"> <?php echo form_error('email1'); ?>
       <input class="form-control space-textbox" id="Q2E1S2" type="email" name="Q2E1S2"
                                placeholder="<?php if (isset($data['Q2E1S2'])) echo $data['Q2E1S2'] ?>"
-                               value="<?php echo set_value('Q2E1S2'); ?>"/>
+                               value="<?php if (isset($data['Q2E1S2'])) echo $data['Q2E1S2'] ?>"/>
     </div>
   </div>
   <div class="form-group1 row">
@@ -247,17 +294,17 @@
     <div class="col-xs-3"> <?php echo form_error('name2'); ?>
       <input class="form-control space-textbox" id="Q3E1S1" type="text" name="Q3E1S1"
                                placeholder="<?php if (isset($data['Q3E1S1'])) echo $data['Q3E1S1'] ?>"
-                               value="<?php echo set_value('Q3E1S1'); ?>"/>
+                               value="<?php if (isset($data['Q3E1S1'])) echo $data['Q3E1S1'] ?>"/>
     </div>
     <div class="col-xs-3"> <?php echo form_error('email2'); ?>
       <input class="form-control space-textbox" id="Q3E1S2" type="text" name="Q3E1S2"
                                placeholder="<?php if (isset($data['Q3E1S2'])) echo $data['Q3E1S2'] ?>"
-                               value="<?php echo set_value('Q3E1S2'); ?>"/>
+                               value="<?php if (isset($data['Q3E1S2'])) echo $data['Q3E1S2'] ?>"/>
     </div>
     <div class="col-xs-3">
       <input class="form-control space-textbox" id="Q3E1S3" type="number" name="Q3E1S3"
                                placeholder="<?php if (isset($data['Q3E1S3'])) echo $data['Q3E1S3'] ?>"
-                               value="<?php echo set_value('Q3E1S3'); ?>"/>
+                               value="<?php if (isset($data['Q3E1S3'])) echo $data['Q3E1S3'] ?>"/>
     </div>
   </div>
   <div class="form-group1 row">
@@ -583,7 +630,7 @@
                         if (empty($data['Q6E1S3']))
                             $data['Q6E1S3'] = 0;
 
-                        $attribs = array("class" => "form-control space-textbox", "id" => "Q6E1S3", "type" => "text", "min" => "0");
+                        $attribs = array("class" => "form-control space-textbox", "id" => "Q6E1S3", "type" => "text");
 
                         echo form_input('Q6E1S3', $data['Q6E1S3'], $attribs);
                         ?>
@@ -614,7 +661,7 @@
                         if (empty($data['Q6E2S3']))
                             $data['Q6E2S3'] = 0;
 
-                        $attribs = array("class" => "form-control space-textbox", "id" => "Q6E2S3", "type" => "text", "min" => "0");
+                        $attribs = array("class" => "form-control space-textbox", "id" => "Q6E2S3", "type" => "text");
 
                         echo form_input('Q6E2S3', $data['Q6E2S3'], $attribs);
                         ?>
@@ -644,7 +691,7 @@
                         if (empty($data['Q6E3S3']))
                             $data['Q6E3S3'] = 0;
 
-                        $attribs = array("class" => "form-control space-textbox", "id" => "Q6E3S3", "type" => "text", "min" => "0");
+                        $attribs = array("class" => "form-control space-textbox", "id" => "Q6E3S3", "type" => "text");
 
                         echo form_input('Q6E3S3', $data['Q6E3S3'], $attribs);
                         ?>
@@ -682,7 +729,7 @@
                         if (empty($data['Q6E4S3']))
                             $data['Q6E4S3'] = 0;
 
-                        $attribs = array("class" => "form-control space-textbox", "id" => "Q6E4S3", "type" => "text", "min" => "0");
+                        $attribs = array("class" => "form-control space-textbox", "id" => "Q6E4S3", "type" => "text");
 
                         echo form_input('Q6E4S3', $data['Q6E4S3'], $attribs);
                         ?>
@@ -712,7 +759,7 @@
                         if (empty($data['Q6E5S3']))
                             $data['Q6E5S3'] = 0;
 
-                        $attribs = array("class" => "form-control space-textbox", "id" => "Q6E5S3", "type" => "text", "min" => "0");
+                        $attribs = array("class" => "form-control space-textbox", "id" => "Q6E5S3", "type" => "text");
 
                         echo form_input('Q6E5S3', $data['Q6E5S3'], $attribs);
                         ?>
@@ -742,7 +789,7 @@
                         if (empty($data['Q6E6S3']))
                             $data['Q6E6S3'] = 0;
 
-                        $attribs = array('name' => 'Q6E6S3', "class" => "form-control space-textbox", "id" => "Q6E6S3", "type" => "text", "min" => "0");
+                        $attribs = array('name' => 'Q6E6S3', "class" => "form-control space-textbox", "id" => "Q6E6S3", "type" => "text");
                         echo form_input('Q6E6S3', $data['Q6E6S3'], $attribs);
                         ?>
     </div>
@@ -771,7 +818,7 @@
                         if (empty($data['Q6E7S3']))
                             $data['Q6E7S3'] = 0;
 
-                        $attribs = array("class" => "form-control space-textbox", "id" => "Q6E7S3", "type" => "text", "min" => "0");
+                        $attribs = array("class" => "form-control space-textbox", "id" => "Q6E7S3", "type" => "text");
 
                         echo form_input('Q6E7S3', $data['Q6E7S3'], $attribs);
                         ?>
@@ -801,7 +848,7 @@
                         if (empty($data['Q6E16S3']))
                             $data['Q6E16S3'] = 0;
 
-                        $attribs = array("class" => "form-control space-textbox", "id" => "Q6E16S3", "type" => "text", "min" => "0");
+                        $attribs = array("class" => "form-control space-textbox", "id" => "Q6E16S3", "type" => "text");
 
                         echo form_input('Q6E16S3', $data['Q6E16S3'], $attribs);
                         ?>
@@ -823,7 +870,7 @@ echo form_input($attribs);
     <div class="col-xs-3">
       <input class="form-control space-textbox" id="Q6E8S2" type="number" min="0" name="Q6E8S2"
                                placeholder="<?php if (isset($data['Q6E8S2'])) echo $data['Q6E8S2'];
-else echo "0"; ?>"
+ else echo "0"; ?>"
                                value="<?php echo set_value('Q6E8S2'); ?>" readonly/>
     </div>
     <div class="col-xs-3">
@@ -831,7 +878,7 @@ else echo "0"; ?>"
 if (empty($data['Q6E8S3']))
     $data['Q6E8S3'] = 0;
 
-$attribs = array("class" => "form-control space-textbox", "id" => "Q6E8S3", "type" => "text", "min" => "0");
+$attribs = array("class" => "form-control space-textbox", "id" => "Q6E8S3", "type" => "text");
 
 echo form_input('Q6E8S3', $data['Q6E8S3'], $attribs);
 ?>
@@ -861,7 +908,7 @@ echo form_input($attribs);
 if (empty($data['Q6E9S3']))
     $data['Q6E9S3'] = 0;
 
-$attribs = array('name' => 'Q6E9S3', 'placeholder' => $data['Q6E9S3'], "class" => "form-control space-textbox", "id" => "Q6E9S3", "type" => "text", "min" => "0");
+$attribs = array('name' => 'Q6E9S3', 'placeholder' => $data['Q6E9S3'], "class" => "form-control space-textbox", "id" => "Q6E9S3", "type" => "text");
 echo form_input('Q6E9S3', $data['Q6E9S3'], $attribs);
 ?>
     </div>
@@ -890,7 +937,7 @@ echo form_input($attribs);
 if (empty($data['Q6E10S3']))
     $data['Q6E10S3'] = 0;
 
-$attribs = array("class" => "form-control space-textbox", "id" => "Q6E10S3", "type" => "text", "min" => "0");
+$attribs = array("class" => "form-control space-textbox", "id" => "Q6E10S3", "type" => "text");
 
 echo form_input('Q6E10S3', $data['Q6E10S3'], $attribs);
 ?>
@@ -920,7 +967,7 @@ echo form_input($attribs);
 if (empty($data['Q6E11S3']))
     $data['Q6E11S3'] = 0;
 
-$attribs = array("class" => "form-control space-textbox", "id" => "Q6E11S3", "type" => "text", "min" => "0");
+$attribs = array("class" => "form-control space-textbox", "id" => "Q6E11S3", "type" => "text");
 echo form_input('Q6E11S3', $data['Q6E11S3'], $attribs);
 ?>
     </div>
@@ -949,7 +996,7 @@ echo form_input($attribs);
 if (empty($data['Q6E12S3']))
     $data['Q6E12S3'] = 0;
 
-$attribs = array("class" => "form-control space-textbox", "id" => "Q6E12S3", "type" => "text", "min" => "0");
+$attribs = array("class" => "form-control space-textbox", "id" => "Q6E12S3", "type" => "text");
 
 echo form_input('Q6E12S3', $data['Q6E12S3'], $attribs);
 ?>
@@ -971,7 +1018,7 @@ echo form_input($attribs);
     <div class="col-xs-3">
       <input class="form-control space-textbox" id="Q6E13S2" type="number" min="0" name="Q6E13S2"
                                placeholder="<?php if (isset($data['Q6E13S2'])) echo $data['Q6E13S2'];
-                        else echo "0"; ?>"
+                         else echo "0"; ?>"
                                value="<?php echo set_value('Q6E13S2'); ?>" readonly/>
     </div>
     <div class="col-xs-3">
@@ -979,7 +1026,7 @@ echo form_input($attribs);
                         if (empty($data['Q6E13S3']))
                             $data['Q6E13S3'] = 0;
 
-                        $attribs = array("class" => "form-control space-textbox", "id" => "Q6E13S3", "type" => "text", "min" => "0");
+                        $attribs = array("class" => "form-control space-textbox", "id" => "Q6E13S3", "type" => "text");
                         echo form_input('Q6E13S3', $data['Q6E13S3'], $attribs);
                         ?>
     </div>
@@ -1010,7 +1057,7 @@ echo form_input($attribs);
 if (empty($data['Q6E14S3']))
     $data['Q6E14S3'] = 0;
 
-$attribs = array("class" => "form-control space-textbox", "id" => "Q6E14S3", "type" => "text", "min" => "0");
+$attribs = array("class" => "form-control space-textbox", "id" => "Q6E14S3", "type" => "text");
 
 echo form_input('Q6E14S3', $data['Q6E14S3'], $attribs);
 ?>
@@ -1099,17 +1146,17 @@ else echo "0"; ?>"
     <div class="col-xs-3">
       <input class="form-control space-textbox" id="Q7E2S1" type="number" min="0" name="Q7E2S1"
                                placeholder="<?php if (isset($data['Q7E2S1'])) echo $data['Q7E2S1'] ?>"
-                               value="<?php echo set_value('Q7E2S1'); ?>"/>
+                               value="<?php if (isset($data['Q7E2S1'])) echo $data['Q7E2S1'] ?>"/>
     </div>
     <div class="col-xs-3">
       <input class="form-control space-textbox" id="Q7E2S2" type="text" name="Q7E2S2"
                                placeholder="<?php echo isset($data['Q7E2S2']) ? $data['Q7E2S2'] : "(tonn)" ?>"
-                               value="<?php echo set_value('Q7E2S2'); ?>"/>
+                               value="<?php if (isset($data['Q7E2S2'])) echo $data['Q7E2S2'] ?>"/>
     </div>
     <div class="col-xs-3">
       <input class="form-control space-textbox" id="Q7E2S3" type="text" name="Q7E2S3"
                                placeholder="<?php if (isset($data['Q7E2S3'])) echo $data['Q7E2S3'] ?>"
-                               value="<?php echo set_value('Q7E2S3'); ?>"/>
+                               value="<?php if (isset($data['Q7E2S3'])) echo $data['Q7E2S3'] ?>"/>
     </div>
   </div>
   <div class="form-group1 row">
@@ -1117,17 +1164,17 @@ else echo "0"; ?>"
     <div class="col-xs-3">
       <input class="form-control space-textbox" id="Q7E3S1" type="number" min="0" name="Q7E3S1"
                                placeholder="<?php if (isset($data['Q7E3S1'])) echo $data['Q7E3S1'] ?>"
-                               value="<?php echo set_value('Q7E3S3'); ?>"/>
+                               value="<?php if (isset($data['Q7E3S1'])) echo $data['Q7E3S1'] ?>"/>
     </div>
     <div class="col-xs-3">
       <input class="form-control space-textbox" id="Q7E3S2" type="text" name="Q7E3S2"
                                placeholder="<?php echo isset($data['Q7E3S2']) ? $data['Q7E3S2'] : "(litres)" ?>"
-                               value="<?php echo set_value('Q7E3S2'); ?>"/>
+                               value="<?php if (isset($data['Q7E3S2'])) echo $data['Q7E3S2'] ?>"/>
     </div>
     <div class="col-xs-3">
       <input class="form-control space-textbox" id="Q7E3S3" type="text" name="Q7E3S3"
                                placeholder="<?php if (isset($data['Q7E3S3'])) echo $data['Q7E3S3'] ?>"
-                               value="<?php echo set_value('Q7E3S3'); ?>"/>
+                               value="<?php if (isset($data['Q7E3S3'])) echo $data['Q7E3S3'] ?>"/>
     </div>
   </div>
   <div class="form-group1 row">
@@ -1135,17 +1182,17 @@ else echo "0"; ?>"
     <div class="col-xs-3">
       <input class="form-control space-textbox" id="Q7E4S1" type="number" min="0" name="Q7E4S1"
                                placeholder="<?php if (isset($data['Q7E4S1'])) echo $data['Q7E4S1'] ?>"
-                               value="<?php echo set_value('Q7E4S1'); ?>"/>
+                               value="<?php if (isset($data['Q7E4S1'])) echo $data['Q7E4S1'] ?>"/>
     </div>
     <div class="col-xs-3">
       <input class="form-control space-textbox" id="Q7E4S2" type="text" name="Q7E4S2"
                                placeholder="<?php echo isset($data['Q7E4S2']) ? $data['Q7E4S2'] : "(Watts)" ?>"
-                               value="<?php echo set_value('Q7E4S2'); ?>"/>
+                               value="<?php if (isset($data['Q7E4S2'])) echo $data['Q7E4S2'] ?>"/>
     </div>
     <div class="col-xs-3">
       <input class="form-control space-textbox" id="Q7E4S3" type="text" name="Q7E4S3"
                                placeholder="<?php if (isset($data['Q7E4S3'])) echo $data['Q7E4S3'] ?>"
-                               value="<?php echo set_value('Q7E4S3'); ?>"/>
+                               value="<?php if (isset($data['Q7E4S3'])) echo $data['Q7E4S3'] ?>"/>
     </div>
   </div>
   <div class="form-group1 row">
@@ -1153,17 +1200,17 @@ else echo "0"; ?>"
     <div class="col-xs-3">
       <input class="form-control space-textbox" id="Q7E5S1" type="number" min="0" name="Q7E5S1"
                                placeholder="<?php if (isset($data['Q7E5S1'])) echo $data['Q7E5S1'] ?>"
-                               value="<?php echo set_value('Q7E5S1'); ?>"/>
+                               value="<?php if (isset($data['Q7E5S1'])) echo $data['Q7E5S1'] ?>"/>
     </div>
     <div class="col-xs-3">
       <input class="form-control space-textbox" id="Q7E5S2" type="text" name="Q7E5S2"
                                placeholder="<?php echo isset($data['Q7E5S2']) ? $data['Q7E5S2'] : "(Watts)" ?>"
-                               value="<?php echo set_value('Q7E5S2'); ?>"/>
+                               value="<?php if (isset($data['Q7E5S2'])) echo $data['Q7E5S2'] ?>"/>
     </div>
     <div class="col-xs-3">
       <input class="form-control space-textbox" id="Q7E5S3" type="text" name="Q7E5S3"
                                placeholder="<?php if (isset($data['Q7E5S3'])) echo $data['Q7E5S3'] ?>"
-                               value="<?php echo set_value('Q7E5S3'); ?>"/>
+                               value="<?php if (isset($data['Q7E5S3'])) echo $data['Q7E5S3'] ?>"/>
     </div>
   </div>
   <div class="form-group1 row">
@@ -1171,17 +1218,17 @@ else echo "0"; ?>"
     <div class="col-xs-3">
       <input class="form-control space-textbox" id="Q7E6S1" type="number" min="0" name="Q7E6S1"
                                placeholder="<?php if (isset($data['Q7E6S1'])) echo $data['Q7E6S1'] ?>"
-                               value="<?php echo set_value('Q7E6S1'); ?>"/>
+                               value="<?php if (isset($data['Q7E6S1'])) echo $data['Q7E6S1'] ?>"/>
     </div>
     <div class="col-xs-3">
       <input class="form-control space-textbox" id="Q7E6S2" type="text" name="Q7E6S2"
                                placeholder="<?php echo isset($data['Q7E6S2']) ? $data['Q7E6S2'] : "(Watts)" ?>"
-                               value="<?php echo set_value('Q7E6S2'); ?>"/>
+                               value="<?php if (isset($data['Q7E6S2'])) echo $data['Q7E6S2'] ?>"/>
     </div>
     <div class="col-xs-3">
       <input class="form-control space-textbox" id="Q7E6S3" type="text" name="Q7E6S3"
                                placeholder="<?php if (isset($data['Q7E6S3'])) echo $data['Q7E6S3'] ?>"
-                               value="<?php echo set_value('Q7E6S3'); ?>"/>
+                               value="<?php if (isset($data['Q7E6S3'])) echo $data['Q7E6S3'] ?>"/>
     </div>
   </div>
   <div class="form-group1 row">
@@ -1189,17 +1236,17 @@ else echo "0"; ?>"
     <div class="col-xs-3">
       <input class="form-control space-textbox" id="Q7E7S1" type="number" min="0" name="Q7E7S1"
                                placeholder="<?php if (isset($data['Q7E7S1'])) echo $data['Q7E7S1'] ?>"
-                               value="<?php echo set_value('Q7E7S1'); ?>"/>
+                               value="<?php if (isset($data['Q7E7S1'])) echo $data['Q7E7S1'] ?>"/>
     </div>
     <div class="col-xs-3">
       <input class="form-control space-textbox" id="Q7E7S2" type="text" name="Q7E7S2"
                                placeholder="<?php echo isset($data['Q7E7S2']) ? $data['Q7E7S2'] : "(Watts)" ?>"
-                               value="<?php echo set_value('Q7E7S2'); ?>"/>
+                               value="<?php if (isset($data['Q7E7S2'])) echo $data['Q7E7S2'] ?>"/>
     </div>
     <div class="col-xs-3">
       <input class="form-control space-textbox" id="Q7E7S3" type="text" name="Q7E7S3"
                                placeholder="<?php if (isset($data['Q7E7S3'])) echo $data['Q7E7S3'] ?>"
-                               value="<?php echo set_value('Q7E7S3'); ?>"/>
+                               value="<?php if (isset($data['Q7E7S3'])) echo $data['Q7E7S3'] ?>"/>
     </div>
   </div>
   <div class="form-group1 row">
@@ -1207,17 +1254,17 @@ else echo "0"; ?>"
     <div class="col-xs-3">
       <input class="form-control space-textbox" id="Q7E8S1" type="number" min="0" name="Q7E8S1"
                                placeholder="<?php if (isset($data['Q7E8S1'])) echo $data['Q7E8S1'] ?>"
-                               value="<?php echo set_value('Q7E8S1'); ?>"/>
+                               value="<?php if (isset($data['Q7E8S1'])) echo $data['Q7E8S1'] ?>"/>
     </div>
     <div class="col-xs-3">
       <input class="form-control space-textbox" id="Q7E8S2" type="text" name="Q7E8S2"
                                placeholder="<?php echo isset($data['Q7E8S2']) ? $data['Q7E8S2'] : "(Watts)" ?>"
-                               value="<?php echo set_value('Q7E8S2'); ?>"/>
+                               value="<?php if (isset($data['Q7E8S2'])) echo $data['Q7E8S2'] ?>"/>
     </div>
     <div class="col-xs-3">
       <input class="form-control space-textbox" id="Q7E8S3" type="text" name="Q7E8S3"
                                placeholder="<?php if (isset($data['Q7E8S3'])) echo $data['Q7E8S3'] ?>"
-                               value="<?php echo set_value('Q7E8S3'); ?>"/>
+                               value="<?php if (isset($data['Q7E8S3'])) echo $data['Q7E8S3'] ?>"/>
     </div>
   </div>
 </div>
@@ -1273,7 +1320,7 @@ else echo "0"; ?>"
                         target="_blank"> </a></label>
   <input class="form-control space-textbox" id="Q8E1" type="number" min="0" max="366" name="Q8E1"
                        placeholder="<?php if (isset($data['Q8E1'])) echo $data['Q8E1'] ?>"
-                       value="<?php echo set_value('Q8E1'); ?>"/>
+                       value="<?php if (isset($data['Q8E1'])) echo $data['Q8E1'] ?>"/>
 </div>
 <div class="form-group">
   <label class="control-label"><span class="cube">6</span>Are there any alternate sources of energy
@@ -1476,6 +1523,148 @@ if (isset($data['Q9E1']))
     </div>
   </div>
 </div>
+
+
+<script>
+	jQuery(document).ready(function(){
+	
+	jQuery('#energy').validate({
+		rules:{
+		      Q1E1S1:{
+				  required:true,
+			  },
+			  Q1E1S3:{
+				  required:true,
+			  },
+			  Q1E1S2:{
+				  required:true,
+			  },
+			  Q2E1S1:{
+				  required:true,
+			  },
+			   Q2E1S3:{
+				  required:true,
+			  },
+			   Q2E1S2:{
+				  required:true,
+			  },
+			   Q3E1S1:{
+				  required:true,
+			  },
+			   Q3E1S2:{
+				  required:true,
+			  },
+			   Q3E1S3:{
+				  required:true,
+			  }, 
+			  Q4E1:{
+				  required:true,
+			  }, 
+			  Q5E1:{
+				  required:true,
+			  }, 
+			  Q7E2S1:{
+				  required:true,
+			  },
+			  Q7E2S2:{
+				  required:true,
+			  },
+			  Q7E2S3:{
+				  required:true,
+			  },
+			  Q7E3S1:{
+				  required:true,
+			  },
+			  Q7E3S2:{
+				  required:true,
+			  },
+			  Q7E3S3:{
+				  required:true,
+			  },
+			  Q7E4S1:{
+				  required:true,
+			  },
+			  Q7E4S2:{
+				  required:true,
+			  },
+			  Q7E4S3:{
+				  required:true,
+			  },
+			  Q7E5S1:{
+				  required:true,
+			  },
+			  Q7E5S2:{
+				  required:true,
+			  },
+			  Q7E5S3:{
+				  required:true,
+			  },
+			  Q7E6S1:{
+				  required:true,
+			  },
+			  Q7E6S2:{
+				  required:true,
+			  },
+			  Q7E6S3:{
+				  required:true,
+			  },
+			  Q7E7S1:{
+				  required:true,
+			  },
+			  Q7E7S2:{
+				  required:true,
+			  },
+			  Q7E8S1:{
+				  required:true,
+			  },
+			  Q7E8S2:{
+				  required:true,
+			  },
+			  Q7E8S3:{
+				  required:true,
+			  },
+			  Q7E7S3:{
+				  required:true,
+			  },
+			  
+			  Q8E1:{
+				  required:true,
+			  },
+			  Q9E1:{
+				  required:true,
+			  },
+			  Q10E1:{
+				  required:true,
+			  },
+			  Q6E4S3:{
+				  required:true,
+			  }
+			  
+			 
+		}
+       
+	});
+	});
+	
+	jQuery('#energynext').click(function(e){
+		
+		
+		$r=jQuery('#energy').valid();
+		if($r == false)
+		{
+			   e.preventDefault();
+			   jQuery('#energy').valid();
+		}
+		
+		
+	});
+	
+	</script>
+
+
+
+
+
 <script type="text/javascript">
                     $('.close').click(function () {
                         $('#video').attr("src", "https://www.youtube.com/embed/i6DM3E5euRE");
