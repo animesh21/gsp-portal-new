@@ -4,6 +4,15 @@
 <title>Green School Programms Audit Portal</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <link href="<?php echo base_url(); ?>assets/css/pdf.css" rel="stylesheet">
+<style type="text/css">
+.table{table-layout:fixed;}
+.table tr td{ font-size:12px!important; word-wrap: break-word; }
+.break-text{  
+	 display:inline;
+	 width:300px;
+	 word-wrap:break-word;
+}
+</style>
 </head>
 <body>
 <script type="text/php">
@@ -1007,45 +1016,45 @@
       <p class="orange"><span>6</span><span> Does the school laboratory have air quality monitoring equipment?</span></p>
       <p class="formanswertext"><?php echo (getFiled('Q9A1', $schoolUserID) != "") ? (getFiled('Q9A1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
     </li>
-  </ul>
-  <?php if (!empty($airQualityMonitering)) {?>
-  <div>
-    <table class="table support-docs">
-      <tr>
-        <th>image</th>
-        <th>File name</th>
-      </tr>
-      <?php 
+    <li>
+      <?php if (!empty($airQualityMonitering)) {?>
+      <table class="table support-docs">
+        <tr>
+          <th>image</th>
+          <th>File name</th>
+        </tr>
+        <?php 
 	  foreach ($airQualityMonitering as $a) { ?>
-      <tr>
-        <td><img src="uploads/files/<?php echo $a->file_name; ?>" class="img-responsive" width="100" height="100" /></td>
-        <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Air_Quality_Monitoring_"), " ", $a->file_name); ?></td>
-      </tr>
+        <tr>
+          <td><img src="uploads/files/<?php echo $a->file_name; ?>" class="img-responsive" width="100" height="100" /></td>
+          <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Air_Quality_Monitoring_"), " ", $a->file_name); ?></td>
+        </tr>
+        <?php } ?>
+      </table>
+      <?php } else { ?>
+      <div class="support_files"> No documents uploaded by the school. </div>
       <?php } ?>
-    </table>
-  </div>
-  <?php } else { ?>
-  <div class="support_files"> No documents uploaded by the school. </div>
-  <?php } ?>
-  <?php if (!empty($files)) {?>
-  <div>
-    <table class="table support-docs">
-      <tr>
-        <th>image</th>
-        <th>File name</th>
-      </tr>
-      <?php 
-	  foreach ($files as $a) { ?>
-      <tr>
-        <td><img src="uploads/files/<?php echo $a->file_name; ?>" class="img-responsive" width="100" height="100" /></td>
-        <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Supporting_Document_Air"), " ", $a->file_name); ?></td>
-      </tr>
+    </li>
+    <li>
+      <?php if (!empty($Supporting_Document_Air)) {?>
+      <table class="table support-docs">
+        <tr>
+          <th>image</th>
+          <th>File name</th>
+        </tr>
+        <?php 
+	  foreach ($Supporting_Document_Air as $a) { ?>
+        <tr>
+          <td><img src="uploads/files/<?php echo $a->file_name; ?>" class="img-responsive" width="100" height="100" /></td>
+          <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Supporting_Document_Air"), " ", $a->file_name); ?></td>
+        </tr>
+        <?php } ?>
+      </table>
+      <?php } else { ?>
+      <div class="support_files"> No documents uploaded by the school. </div>
       <?php } ?>
-    </table>
-  </div>
-  <?php } else { ?>
-  <div class="support_files"> No documents uploaded by the school. </div>
-  <?php } ?>
+    </li>
+  </ul>
   <?php if(getFiled('Q9A1', $schoolUserID) != "Y"){ ?>
   <ul class="list">
     <li>
@@ -1489,27 +1498,26 @@
         <p class="orange"><span>7</span><span> Does your school use solar water heater:</span></p>
         <p class="formanswertext"> <?php echo (getFiled('Q10E1', $schoolUserID) != "") ? (getFiled('Q10E1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?> </p>
       </li>
-    </ul>
-    <?php
-     if (!empty($energySupport)) { ?>
-    <div>
-      <table class="table support-docs">
-        <tr>
-          <th>image</th>
-          <th>File name</th>
-        </tr>
-        <?php 
+      <li>
+        <?php if (!empty($energySupport)) { ?>
+        <table class="table support-docs">
+          <tr>
+            <th>image</th>
+            <th>File name</th>
+          </tr>
+          <?php 
 		foreach ($energySupport as $a) { ?>
-        <tr>
-          <td><img src="uploads/files/<?php echo $a->file_name; ?>" class="img-responsive" width="100" height="100" /></td>
-          <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name .'_Supporting_Document_Energy_'), " ", $a->file_name); ?></td>
-        </tr>
+          <tr>
+            <td><img src="uploads/files/<?php echo $a->file_name; ?>" class="img-responsive" width="100" height="100" /></td>
+            <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name .'_Supporting_Document_Energy_'), " ", $a->file_name); ?></td>
+          </tr>
+          <?php } ?>
+        </table>
+        <?php } else { ?>
+        <div class="support_files"> No documents uploaded by the school. </div>
         <?php } ?>
-      </table>
-    </div>
-    <?php } else { ?>
-    <div class="support_files"> No documents uploaded by the school. </div>
-    <?php } ?>
+      </li>
+    </ul>
   </div>
 </div>
 <div style="text-align: center; padding: 0;">&nbsp;&nbsp;&nbsp;&nbsp;</div>
@@ -2036,31 +2044,30 @@
         <p class="formanswertext"> <?php echo (getFiled('Q11F3', $schoolUserID) != "") ? (getFiled('Q11F3', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
       </li>
       <?php endif; ?>
-    </ul>
-    <?php
-        if (!empty($files)) {
-            ?>
-    <table class="table">
-      <thead>
-        <tr>
-          <th>image</th>
-          <th>File name</th>
-        </tr>
-      </thead>
-      <tbody>
-        <?php 
-		
-		foreach ($files as $a) { ?>
-        <tr>
-          <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
-          <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Audit_Team_doing_Survey_"), " ", $a->file_name); ?></td>
-        </tr>
+      <li>
+        <?php if (!empty($food_gsp_audit)) { ?>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>image</th>
+              <th>File name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php 
+		     foreach ($food_gsp_audit as $a) { ?>
+            <tr>
+              <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+              <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Audit_Team_doing_Survey_Food_"), " ", $a->file_name); ?></td>
+            </tr>
+            <?php } ?>
+          </tbody>
+        </table>
+        <?php } else { ?>
+        <div class="support_files">No documents uploaded by the school.</div>
         <?php } ?>
-      </tbody>
-    </table>
-    <?php } else { ?>
-    <div class="support_files">No documents uploaded by the school.</div>
-    <?php } ?>
+      </li>
+    </ul>
   </div>
   <div class="task-area">
     <h3 class="task">Task 5: School Initiatives</h3>
@@ -2097,29 +2104,26 @@
         <p class="formanswertext"> <?php echo (getFiled('Q13F2', $schoolUserID) != "") ? getFiled('Q13F2', $schoolUserID) : "N/A"; ?></p>
       </li>
       <?php endif; ?>
+      <li>
+        <?php if (!empty($uppc)) { ?>
+        <table class="table support-docs">
+          <tr>
+            <th>image</th>
+            <th>File name</th>
+          </tr>
+          <?php foreach ($uppc as $a) { ?>
+          <tr>
+            <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+            <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_UPPF_"), " ", $a->file_name); ?></td>
+          </tr>
+          <?php } ?>
+        </table>
+        <?php } else { ?>
+        <div class="support_files">No documents uploaded by the school.</div>
+        <?php } ?>
+      </li>
     </ul>
   </div>
-  <div class="support_files_head"> </div>
-  <?php
-    if (!empty($uppc)) {
-        ?>
-  <div>
-    <table class="table support-docs">
-      <tr>
-        <th>image</th>
-        <th>File name</th>
-      </tr>
-      <?php foreach ($uppc as $a) { ?>
-      <tr>
-        <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
-        <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_UPPF_"), " ", $a->file_name); ?></td>
-      </tr>
-      <?php } ?>
-    </table>
-  </div>
-  <?php } else { ?>
-  <div class="support_files">No documents uploaded by the school.</div>
-  <?php } ?>
 </div>
 <div style="text-align: center; padding: 0;">&nbsp;&nbsp;&nbsp;&nbsp;</div>
 <h2 class="heading section land page_break"><img src="assets/img/images/land.png" width="94" height="94">Land</h2>
@@ -5183,27 +5187,25 @@
         </tr>
       </table>
     </li>
-  </ul>
-  <?php
-    if (!empty($eWaste)) {
-        ?>
-  <div>
-    <table class="table">
-      <tr>
-        <th>image</th>
-        <th>File name</th>
-      </tr>
-      <?php foreach ($eWaste as $a) { ?>
-      <tr>
-        <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
-        <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_E-Waste_"), " ", $a->file_name); ?></td>
-      </tr>
+    <li>
+      <?php if (!empty($eWaste)) { ?>
+      <table class="table">
+        <tr>
+          <th>image</th>
+          <th>File name</th>
+        </tr>
+        <?php foreach ($eWaste as $a) { ?>
+        <tr>
+          <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+          <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_E-Waste_"), " ", $a->file_name); ?></td>
+        </tr>
+        <?php } ?>
+      </table>
+      <?php } else { ?>
+      <div class="support_files">No documents uploaded by the school.</div>
       <?php } ?>
-    </table>
-  </div>
-  <?php } else { ?>
-  <div class="support_files">No documents uploaded by the school.</div>
-  <?php } ?>
+    </li>
+  </ul>
   <ul class="list">
     <li>
       <p class="orange"> <span class="cube">9</span>Do you know that your e-waste can be collected by an authorized dealer or dismantler? </p>
@@ -5229,27 +5231,25 @@
       </p>
     </li>
     <?php endif; ?>
-  </ul>
-  <?php
-    if (!empty($authorised_dealer)) {
-        ?>
-  <div>
-    <table class="table">
-      <tr>
-        <th>image</th>
-        <th>File name</th>
-      </tr>
-      <?php foreach ($authorised_dealer as $a) { ?>
-      <tr>
-        <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
-        <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_E-waste_authorised_dealer_"), " ", $a->file_name); ?></td>
-      </tr>
+    <li>
+      <?php if (!empty($authorised_dealer)) { ?>
+      <table class="table">
+        <tr>
+          <th>image</th>
+          <th>File name</th>
+        </tr>
+        <?php foreach ($authorised_dealer as $a) { ?>
+        <tr>
+          <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+          <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_E-waste_authorised_dealer_"), " ", $a->file_name); ?></td>
+        </tr>
+        <?php } ?>
+      </table>
+      <?php } else { ?>
+      <div class="support_files"> No documents uploaded by the school. </div>
       <?php } ?>
-    </table>
-  </div>
-  <?php } else { ?>
-  <div class="support_files"> No documents uploaded by the school. </div>
-  <?php } ?>
+    </li>
+  </ul>
 </div>
 <div class="task-area">
   <h3 class="task">Task 5: How does your school dispose of waste?</h3>
@@ -5452,27 +5452,25 @@
         curriculum?</p>
       <p> <?php echo (getFiled('Q19Wa1', $schoolUserID) != "") ? (getFiled('Q19Wa1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
     </li>
-  </ul>
-  <?php
-    if (!empty($teamDoingWaste)) {
-        ?>
-  <div>
-    <table  class="table">
-      <tr>
-        <th>image</th>
-        <th>File name</th>
-      </tr>
-      <?php foreach ($teamDoingWaste as $a) { ?>
-      <tr>
-        <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
-        <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Audit_Team_Doing_Survey_"), " ", $a->file_name); ?></td>
-      </tr>
+    <li>
+      <?php if (!empty($teamDoingWaste)) { ?>
+      <table  class="table">
+        <tr>
+          <th>image</th>
+          <th>File name</th>
+        </tr>
+        <?php foreach ($teamDoingWaste as $a) { ?>
+        <tr>
+          <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+          <td><div class="break-text"><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Audit_Team_Doing_Survey_"), " ", $a->file_name); ?></div></td>
+        </tr>
+        <?php } ?>
+      </table>
+      <?php } else { ?>
+      <div class="support_files"> No documents uploaded by the school. </div>
       <?php } ?>
-    </table>
-  </div>
-  <?php } else { ?>
-  <div class="support_files"> No documents uploaded by the school. </div>
-  <?php } ?>
+    </li>
+  </ul>
 </div>
 </body>
 </html>
