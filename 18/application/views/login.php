@@ -200,7 +200,7 @@ header('Location: http://www.greenschoolsprogramme.org/audit/18/login/browser_ch
                                         '</div>');
 										 setTimeout(function () {
                                 location.reload();
-                            }, 2000);
+                            }, 10000);
 			      $.ajax({
                               url:'<?php echo base_url(); ?>setpassword-2017.php',
                               type: 'GET',
