@@ -85,9 +85,13 @@
           <div class="title"><strong>Digital Certificate</strong></div>
         </div>
       </div>
-	  <div class="col-md-6 col-md-offset-3">
-	    <a href="http://www.greenschoolsprogramme.org/audit/download/downloadFiles" target="_blank" class="btn btn-danger btn-block btn-lg" style="background:#e86549; border:1ps solid #e86549;">Download Reports For GSP Audit 2017</a>
-	  </div>
+	  <?php 
+	    $school_id=getSchoolId($this->session->userdata('USER_ID'));
+	    $data_2017=getSchoolPreviousYearAudit($school_id,"data_2017");
+	    if(strcmp($data_2017->data_2017,"NA")!=0){
+	   ?>
+            <div class="col-md-6 col-md-offset-3"> <a href="http://www.greenschoolsprogramme.org/audit/download/downloadFiles" target="_blank" class="btn btn-danger btn-block btn-lg" style="background:#e86549; border:1ps solid #e86549;">Download Reports For GSP Audit 2017</a> </div>
+	<?php } ?>
     </div>
   </div>
 </div>
