@@ -189,17 +189,14 @@ class User_model extends CI_Model
             return false;
     }
 
-    public function forgetPassword()
+
+
+  /* public function forgetPassword()
     {
-        //echo $argEmail; exit;
-         $this->load->helper('string');
-		$oneTimeCounter =$this->db->get_where('gsp_school',array("coemail"=>$this->input->post('val')))->num_rows();
-	 /*  if($oneTimeCounter>0){
-		  return "24";
-	   }
-	else{ */	
+       
+        $this->load->helper('string');
+		$oneTimeCounter =$this->db->get_where('gsp_school',array("coemail"=>$this->input->post('val')))->num_rows();	
         $email_count = $this->db->get_where('gsp_user', array('email' => $this->input->post('val')))->num_rows();
-        //echo $this->db->last_query(); exit;
         if ($email_count > 0) {
             $varNewPass = strtolower(random_string('alnum', 5));
             $arr = array(
@@ -211,12 +208,9 @@ class User_model extends CI_Model
                     ->from('gsp_user')
                     ->where('email', $this->input->post('val'))
                     ->get()->row();
-		 $this->db->where('coemail',$this->input->post('val'));
-		 $this->db->update('gsp_school',array("forgetpassword_email_date"=>date("Y-m-d")));   
-		    
-//                echo '<pre>';                print_r($query); exit;
-
-                $this->load->library('email');
+		        $this->db->where('coemail',$this->input->post('val'));
+		        $this->db->update('gsp_school',array("forgetpassword_email_date"=>date("Y-m-d")));   
+		        $this->load->library('email');
                 $config['mailtype'] = 'html';
                 $this->email->initialize($config);
                 $from = "support@greenschoolsprogramme.org";
@@ -232,18 +226,58 @@ class User_model extends CI_Model
                 $this->email->subject($subject);
                 $this->email->message($msg);
                 $this->email->send();
-//                echo $this->email->print_debugger();
-//                die();
-               // return true;
-		    return $varNewPass;
-            } else {
-                return false;
-            }
-        } else {
-            return false;
+		        return $varNewPass;
+                } else {
+                   return false;
+                }
+                } else {
+                 return false;
         }
-       /* } */
-    }
+    }*/
+	public function forgetPassword()
+    {
+		date_default_timezone_set('Asia/Kolkata');
+        $this->load->helper('string');
+		$this->db->like('email',$this->input->post('val'));
+        $email_count =$this->db->select("id")->from('gsp_user')->get()->row();
+			if (count($email_count)>0) {
+			  $this->db->like('coemail',$this->input->post('val'));
+		      $this->db->like('forgetpassword_email_time',date("Y-m-d"));
+              $dataResult = $this->db->select("*")->from('gsp_school')->get()->row();
+		      $update_counter=$dataResult->counter+1;	
+			  $this->db->like('coemail',$this->input->post('val'));
+			 $this->db->update('gsp_school',array("forgetpassword_email_time"=>date("Y-m-d"),"counter"=>$update_counter));	
+			   if($dataResult->counter>3){
+			     return $dataResult->counter;
+			   }
+			   else{
+                 $varNewPass = strtolower(random_string('alnum', 5));
+                 $arr = array('password' => $varNewPass);
+			     $this->db->like('email',$this->input->post('val'));
+				 $this->db->update('gsp_user', $arr);
+				 $this->load->library('email');
+                 $config['mailtype'] = 'html';
+                 $this->email->initialize($config);
+                 $from = "support@greenschoolsprogramme.org";
+                 $to =array($query->email,"siddhartha2488@gmail.com","Studiotesseractst@gmail.com","ranjita@cseindia.org");
+                 $subject = "GSP Forget Password";
+                 $msg = "Dear &nbsp;";
+                 $msg .= $query->username . "," . "<br><br>";
+                 $msg .= "Your new password for GSP Login.<br><br>";
+                 $msg .= $varNewPass . "<br><br>";
+                 $msg .= "Regards,<br/>GSP Team.<br><br>";
+                 $this->email->to($to);
+                 $this->email->from($from, "Green Schools Programme");
+                 $this->email->subject($subject);
+                 $this->email->message($msg);
+                 $this->email->send();
+		         return $varNewPass;		
+			    }
+			}
+			else {
+              return false;
+            }
+         }
 }
 
 ?>
