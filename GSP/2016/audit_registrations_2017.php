@@ -4,7 +4,7 @@ if($_SESSION['username'] == "")
 {
 	header('location:index.php');
 }
-
+include('config.php'); 
 include('functions.php');
 
 if(isset($_GET['sort']))
@@ -31,8 +31,8 @@ $(document).ready(function() {
   <div class="container">
     <div class="wrapper">
       <div class="top-area">
-        <h2>REGISTRATIONS 2017</h2>
-        <a href="export_excel_2017.php"><button class="exportBtn">Export to Excel</button></a>
+        <h2>REGISTRATIONS</h2>
+        <a href="export_excel.php"><button class="exportBtn">Export to Excel</button></a>
       </div>
       <table id="example" class="display" cellspacing="0" width="100%">
         <thead>
@@ -57,10 +57,10 @@ $(document).ready(function() {
           <?php
 
          $start=1;
-         //$sql = "select * from `lime_tokens_266617` ORDER BY `datetime` DESC";
-	$sql="SELECT * FROM `lime_tokens_266617_2017` AS t1 JOIN `states_india` AS t2 ON t1.attribute_5=t2.state_id ORDER BY `datetime` DESC"; 
+         $sql = "select * from `lime_tokens_266617` ORDER BY `datetime` DESC";
+	//$sql="SELECT * FROM `lime_tokens_266617` AS t1 JOIN `states_india` AS t2 ON t1.attribute_5=t2.state_id ORDER BY `datetime` DESC"; 
 
-     $sql_data = mysqli_query($conn, $sql);
+     $sql_data = mysql_query($sql);
      
      if(isset($_GET['id']) && $_GET['id'] > 1)
      {
@@ -70,16 +70,16 @@ $(document).ready(function() {
      {
          $i=0;
      }
-         while($data = mysqli_fetch_array($sql_data))
+         while($data = mysql_fetch_array($sql_data))
      {
         
          $sq = "SELECT `completeness` FROM `lime_answers_for_progress` where `token`='".$data['token']."'";
-         $sql_1 = mysqli_query($conn,$sq);
-         $sql_comp = mysqli_fetch_array($sql_1);
+         $sql_1 = mysql_query($sq);
+         $sql_comp = mysql_fetch_array($sql_1);
          
          $sq_comdate = "SELECT `submitdate` FROM `lime_survey_266617` where `token`='".$data['token']."'";
-         $sql_cmd = mysqli_query($conn,$sq_comdate);
-         $sql_cmd_date = mysqli_fetch_array($sql_cmd);
+         $sql_cmd = mysql_query($sq_comdate);
+         $sql_cmd_date = mysql_fetch_array($sql_cmd);
          $i++;
      ?>
           <tr>
@@ -87,7 +87,7 @@ $(document).ready(function() {
             <td><?php echo $data['tid']; ?></td>
             <td><?php echo $data['attribute_1']; ?></td>
             <!--     <td><?php //echo $data['token']; ?></td>-->
-            <td><?php echo $data['name']; ?></td>
+            <td><?php echo $data['attribute_5']; ?></td>
             <td><?php echo $data['attribute_7']; ?></td>
             <td><?php echo $data['firstname']; ?></td>
             <td><?php echo $data['email']; ?></td>
