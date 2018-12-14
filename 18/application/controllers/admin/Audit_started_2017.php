@@ -544,10 +544,11 @@ public function digital_certificate_for_principal_coordinator($argID)
         $data['id'] = $argID;
         $data['school'] = $this->Audit_started_model->getSchoolById($argID);
         $data['schoolUserID'] = $data['school']->userid;
-        $data['files'] = $this->file->getFilesData($this->session->userdata('USER_ID'));
-        $data['filesfules'] = $this->file->getFilesDatafules($this->session->userdata('USER_ID'));
-        $data['airQualityMonitering'] = $this->file->AirQuality($this->session->userdata('USER_ID'));
-        $data['pucCertificate'] = $this->file->pucCertificate($this->session->userdata('USER_ID'));
+        $data['files'] = $this->file->getFilesData($data['school']->userid);
+        $data['filesfules'] = $this->file->getFilesDatafules($data['school']->userid);
+        $data['airQualityMonitering'] = $this->file->AirQuality($data['school']->userid);
+        $data['pucCertificate'] = $this->file->pucCertificate($data['school']->userid);
+	$data['Supporting_Document_Air'] = uploadHelper($data['school']->userid, 'Supporting_Document_Air');
         //echo '<pre>'; print_r($data['image']);exit();
         $this->load->view('admin/survey/air', $data);
     }
@@ -561,11 +562,12 @@ public function digital_certificate_for_principal_coordinator($argID)
         $data['id'] = $argID;
         $data['school'] = $this->Audit_started_model->getSchoolById($argID);
         $data['schoolUserID'] = $data['school']->userid;
-        $data['electricityBills'] = $this->file->getElectricityFulesBillsData($this->session->userdata('USER_ID'));
-        $data['fulesBills'] = $this->file->getEnergyFulesBillsData($this->session->userdata('USER_ID'));
-        $data['appliancesBills'] = $this->file->getEnergyApplianceBillsData($this->session->userdata('USER_ID'));
-        $data['alternativeResource'] = $this->file->alternativeResource($this->session->userdata('USER_ID'));
-        $data['energySupport'] = $this->file->getEnergySupportData($this->session->userdata('USER_ID'));
+        $data['electricityBills'] = $this->file->getElectricityFulesBillsData($data['school']->userid);
+        $data['fulesBills'] = $this->file->getEnergyFulesBillsData($data['school']->userid);
+        $data['appliancesBills'] = $this->file->getEnergyApplianceBillsData($data['school']->userid);
+        $data['alternativeResource'] = $this->file->alternativeResource($data['school']->userid);
+	$data['Alternative_Source_of_Energy'] = uploadHelper($data['school']->userid, 'Alternative_Source_of_Energy');
+        $data['energySupport'] = $this->file->getEnergySupportData($data['school']->userid);
         $this->load->view('admin/survey/energy', $data);
     }
 
@@ -578,7 +580,7 @@ public function digital_certificate_for_principal_coordinator($argID)
         $data['id'] = $argID;
         $data['school'] = $this->Audit_started_model->getSchoolById($argID);
         $data['schoolUserID'] = $data['school']->userid;
-        $data['greenCover'] = uploadHelper($this->session->userdata('USER_ID'), 'Green_Cover');
+        $data['greenCover'] = uploadHelper($data['school']->userid, 'Green_Cover');
         $this->load->view('admin/survey/land', $data);
     }
 
@@ -591,10 +593,11 @@ public function digital_certificate_for_principal_coordinator($argID)
         $data['id'] = $argID;
         $data['school'] = $this->Audit_started_model->getSchoolById($argID);
         $data['schoolUserID'] = $data['school']->userid;
-        $data['midDayMeal'] = $this->file->getMidDayMeal($this->session->userdata('USER_ID'));
-        $data['canteen'] = $this->file->getCanteen($this->session->userdata('USER_ID'));
-        $data['files'] = $this->file->getFoodFilesData($this->session->userdata('USER_ID'));
-        $data['uppc'] = $this->file->getFoodUPPCData($this->session->userdata('USER_ID'));
+        $data['midDayMeal'] = $this->file->getMidDayMeal($data['school']->userid);
+        $data['canteen'] = $this->file->getCanteen($data['school']->userid);
+        $data['files'] = $this->file->getFoodFilesData($data['school']->userid);
+	$data['food_gsp_audit'] = uploadHelper($data['school']->userid, 'Audit_Team_doing_Survey_Food');
+        $data['uppc'] = $this->file->getFoodUPPCData($data['school']->userid);
 
         $this->load->view('admin/survey/food', $data);
     }
@@ -608,11 +611,10 @@ public function digital_certificate_for_principal_coordinator($argID)
         $data['id'] = $argID;
         $data['school'] = $this->Audit_started_model->getSchoolById($argID);
         $data['schoolUserID'] = $data['school']->userid;
-        $data['task4supporting'] = uploadHelper($this->session->userdata('USER_ID'), 'Task_4_Supporting_docs');
-        $data['waterTreatment'] = uploadHelper($this->session->userdata('USER_ID'), 'Water_Treatment_Process');
-        $data['flowChartHandDrawn'] = uploadHelper($this->session->userdata
-                        ('USER_ID'), 'Flow_Chart_Hand_Drwan');
-        $data['supportDocWater'] = uploadHelper($this->session->userdata('USER_ID'), 'Supporting_Document_Water');
+        $data['task4supporting'] = uploadHelper($data['school']->userid, 'Task_4_Supporting_docs');
+        $data['waterTreatment'] = uploadHelper($data['school']->userid, 'Water_Treatment_Process');
+        $data['flowChartHandDrawn'] = uploadHelper($data['school']->userid, 'Flow_Chart_Hand_Drwan');
+        $data['supportDocWater'] = uploadHelper($data['school']->userid, 'Supporting_Document_Water');
         $this->load->view('admin/survey/water', $data);
     }
 
@@ -625,17 +627,17 @@ public function digital_certificate_for_principal_coordinator($argID)
         $data['id'] = $argID;
         $data['school'] = $this->Audit_started_model->getSchoolById($argID);
         $data['schoolUserID'] = $data['school']->userid;
-        $data['segregationClassroom'] = uploadHelper($this->session->userdata('USER_ID'), 'Segregation_Source_Classrooms');
-        $data['solidWaste'] = uploadHelper($this->session->userdata('USER_ID'), 'Audit_Team_Weighing_Solid_Waste');
-        $data['composingPit'] = uploadHelper($this->session->userdata('USER_ID'), 'Composting_Pit');
-        $data['recycleMachine'] = uploadHelper($this->session->userdata('USER_ID'), 'Recycling_Machine');
-        $data['eWaste'] = uploadHelper($this->session->userdata('USER_ID'), 'E-Waste');
-        $data['houseKeeping'] = uploadHelper($this->session->userdata('USER_ID'), 'Housekeeping');
-        $data['burningWaste'] = uploadHelper($this->session->userdata('USER_ID'), 'Buring_Waste');
-        $data['teamDoingWaste'] = uploadHelper($this->session->userdata('USER_ID'), 'Audit_Team_Doing_Survey');
-        $data['ewasteStorage'] = uploadHelper($this->session->userdata('USER_ID'), 'E-Waste_Storage');
-        $data['disposing'] = uploadHelper($this->session->userdata('USER_ID'), 'Disposing');
-        $data['eWasteDisposing'] = uploadHelper($this->session->userdata('USER_ID'), 'E-Waste_Disposing_Certificate');
+        $data['segregationClassroom'] = uploadHelper($data['school']->userid, 'Segregation_Source_Classrooms');
+        $data['solidWaste'] = uploadHelper($data['school']->userid, 'Audit_Team_Weighing_Solid_Waste');
+        $data['composingPit'] = uploadHelper($data['school']->userid, 'Composting_Pit');
+        $data['recycleMachine'] = uploadHelper($data['school']->userid, 'Recycling_Machine');
+        $data['eWaste'] = uploadHelper($data['school']->userid, 'E-Waste');
+        $data['houseKeeping'] = uploadHelper($data['school']->userid, 'Housekeeping');
+        $data['burningWaste'] = uploadHelper($data['school']->userid, 'Buring_Waste');
+        $data['teamDoingWaste'] = uploadHelper($data['school']->userid, 'Audit_Team_Doing_Survey');
+        $data['ewasteStorage'] = uploadHelper($data['school']->userid, 'E-Waste_Storage');
+        $data['disposing'] = uploadHelper($data['school']->userid, 'Disposing');
+        $data['eWasteDisposing'] = uploadHelper($data['school']->userid, 'E-Waste_Disposing_Certificate');
         $data['pictures'] = uploadHelper($this->session->userdata
                         ('USER_ID'), 'Pictures_of_Audit_Team');
         $this->load->view('admin/survey/waste', $data);
