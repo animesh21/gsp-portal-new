@@ -4,7 +4,7 @@
   <div class="content-form">
     <div class="intro">
       <h1>WATER</h1>
-      <div class="video"><a class="lptext" href="#" data-toggle="modal" data-target="#videoModal"><img src="http://greenschoolsprogramme.org/audit2015/upload/templates/tfr_responsive/images/video-icon.png" style="width: 45px; height: 40px; margin-top:47px;"></a></div>
+      <div class="video"><a class="lptext" href="#" data-toggle="modal" data-target="#videoModal"><!--<img src="http://greenschoolsprogramme.org/audit2015/upload/templates/tfr_responsive/images/video-icon.png" style="width: 45px; height: 40px; margin-top:47px;">--></a></div>
     </div>
     <br>
     To understand water, it is important to know the source of water in your school premise. As you know, most
