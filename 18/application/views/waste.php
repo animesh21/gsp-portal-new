@@ -1,5 +1,148 @@
 <?php $this->load->view('header'); ?>
 
+<style>
+.error{
+  color: #fb4f2a !important;
+              font-size: 18px !important;
+ text-shadow: 1px 1px 1px #000;
+}
+
+#Q4Wa1-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -39px !important;
+    position: absolute;
+    margin-left: 319px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q4Wa2-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -35px !important;
+    position: absolute;
+    margin-left: 519px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q8Wa1-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -38px !important;
+    position: absolute;
+    margin-left: 424px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q9Wa1-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -38px !important;
+    position: absolute;
+    margin-left: 358px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q10Wa1-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -38px !important;
+    position: absolute;
+    margin-left: 558px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q13Wa1-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -40px !important;
+    position: absolute;
+    margin-left: 658px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q14Wa1-error
+{
+	    color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -34px !important;
+    position: absolute;
+    margin-left: 672px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q15Wa1-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -38px !important;
+    position: absolute;
+    margin-left: 255px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q17Wa1-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -38px !important;
+    position: absolute;
+    margin-left: 330px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q18Wa1-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -38px !important;
+    position: absolute;
+    margin-left: 575px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q19Wa1-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -38px !important;
+    position: absolute;
+    margin-left: 492px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q15Wa2-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -35px !important;
+    position: absolute;
+    margin-left: 320px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q13Wa2-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -35px !important;
+    position: absolute;
+    margin-left: 474px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+</style>
+
+
+
+
+
 <div class="container">
 <div class="content-form">
 <div class="log-nav">
@@ -78,17 +221,17 @@
   <div class="col-xs-3"> <?php echo form_error('name'); ?>
     <input class="form-control space-textbox" id="Q1Wa1S1" type="text" name="Q1Wa1S1"
                            placeholder="<?php if (isset($data['Q1Wa1S1'])) echo $data['Q1Wa1S1']; ?>"
-                           value="<?php echo set_value('Q1Wa1S1'); ?>"/>
+                           value="<?php if (isset($data['Q1Wa1S1'])) echo $data['Q1Wa1S1']; ?>"/>
   </div>
   <div class="col-xs-3"> <?php echo form_error('name'); ?>
     <input class="form-control space-textbox" id="Q1Wa1S3" type="text" name="Q1Wa1S3"
                            placeholder="<?php if (isset($data['Q1Wa1S3'])) echo $data['Q1Wa1S3']; ?>"
-                           value="<?php echo set_value('Q1Wa1S3'); ?>"/>
+                           value="<?php if (isset($data['Q1Wa1S3'])) echo $data['Q1Wa1S3']; ?>"/>
   </div>
   <div class="col-xs-3"> <?php echo form_error('email'); ?>
     <input class="form-control space-textbox" id="Q1Wa1S2" type="email" name="Q1Wa1S2"
                            placeholder="<?php if (isset($data['Q1Wa1S2'])) echo $data['Q1Wa1S2']; ?>"
-                           value="<?php echo set_value('Q1Wa1S2'); ?>"/>
+                           value="<?php if (isset($data['Q1Wa1S2'])) echo $data['Q1Wa1S2']; ?>"/>
   </div>
 </div>
 <div class="form-group row">
@@ -147,17 +290,17 @@
     <div class="col-xs-3"> <?php echo form_error('name1'); ?>
       <input class="form-control space-textbox" id="Q2Wa1S1" type="text" name="Q2Wa1S1"
                                placeholder="<?php if (isset($data['Q2Wa1S1'])) echo $data['Q2Wa1S1'] ?>"
-                               value="<?php echo set_value('Q2Wa1S1'); ?>"/>
+                               value="<?php if (isset($data['Q2Wa1S1'])) echo $data['Q2Wa1S1'] ?>"/>
     </div>
     <div class="col-xs-3">
       <input class="form-control space-textbox" id="Q2Wa1S3" type="text" name="Q2Wa1S3"
                                placeholder="<?php if (isset($data['Q2Wa1S3'])) echo $data['Q2Wa1S3'] ?>"
-                               value="<?php echo set_value('Q2Wa1S3'); ?>"/>
+                               value="<?php if (isset($data['Q2Wa1S3'])) echo $data['Q2Wa1S3'] ?>"/>
     </div>
     <div class="col-xs-3"> <?php echo form_error('email1'); ?>
       <input class="form-control space-textbox" id="Q2Wa1S2" type="email" name="Q2Wa1S2"
                                placeholder="<?php if (isset($data['Q2Wa1S2'])) echo $data['Q2Wa1S2'] ?>"
-                               value="<?php echo set_value('Q2Wa1S2'); ?>"/>
+                               value="<?php if (isset($data['Q2Wa1S2'])) echo $data['Q2Wa1S2'] ?>"/>
     </div>
   </div>
   <div class="form-group row">
@@ -252,17 +395,17 @@
     <div class="col-xs-3"> <?php echo form_error('name2'); ?>
       <input class="form-control space-textbox" id="Q3Wa1S1" type="text" name="Q3Wa1S1"
                                placeholder="<?php if (isset($data['Q3Wa1S1'])) echo $data['Q3Wa1S1'] ?>"
-                               value="<?php echo set_value('Q3Wa1S1'); ?>"/>
+                               value="<?php if (isset($data['Q3Wa1S1'])) echo $data['Q3Wa1S1'] ?>"/>
     </div>
     <div class="col-xs-3"> <?php echo form_error('email2'); ?>
       <input class="form-control space-textbox" id="Q3Wa1S2" type="text" name="Q3Wa1S2"
                                placeholder="<?php if (isset($data['Q3Wa1S2'])) echo $data['Q3Wa1S2'] ?>"
-                               value="<?php echo set_value('Q3Wa1S2'); ?>"/>
+                               value="<?php if (isset($data['Q3Wa1S2'])) echo $data['Q3Wa1S2'] ?>"/>
     </div>
     <div class="col-xs-3">
       <input class="form-control space-textbox" id="Q3Wa1S3" type="text" name="Q3Wa1S3"
                                placeholder="<?php if (isset($data['Q3Wa1S3'])) echo $data['Q3Wa1S3'] ?>"
-                               value="<?php echo set_value('Q3Wa1S3'); ?>"/>
+                               value="<?php if (isset($data['Q3Wa1S3'])) echo $data['Q3Wa1S3'] ?>"/>
     </div>
   </div>
   <div class="form-group row">
@@ -448,7 +591,7 @@
                                value="<?php echo set_value('Q4Wa1', 'Y') ?>" <?php if (isset($data['Q4Wa1'])) echo $data['Q4Wa1'] == 'Y' ? "checked" : "" ?>>
     Yes </label>
     <label class="radio-inline text-gray">
-    <input type="radio" name="Q4Wa1" onClick="WasteSegregate(2)" class="Q4Wa1" id="Q4Wa1"
+    <input type="radio" name="Q4Wa1" onClick="WasteSegregate(2)" class="Q4Wa1" id="Q4Wa1_1"
                                value="<?php echo set_value('Q4Wa1', 'N') ?>" <?php if (isset($data['Q4Wa1'])) echo $data['Q4Wa1'] == 'N' ? "checked" : "" ?>>
     No </label>
   </div>
@@ -540,13 +683,13 @@
     </li>
     <li>
       <label class="radio-inline text-gray">
-      <input type="radio" name="Q4Wa2" class="radio" id="Q4Wa2"
+      <input type="radio" name="Q4Wa2" class="radio" id="Q4Wa2_1"
                                    value="<?php echo set_value('Q4Wa2', 2) ?>" <?php if (isset($data['Q4Wa2'])) echo $data['Q4Wa2'] == 2 ? "checked" : "" ?>>
       Three </label>
     </li>
     <li>
       <label class="radio-inline text-gray">
-      <input type="radio" name="Q4Wa2" class="Q4Wa2" id="Q4Wa2"
+      <input type="radio" name="Q4Wa2" class="Q4Wa2" id="Q4Wa2_2"
                                    value="<?php echo set_value('Q4Wa2', 3) ?>" <?php if (isset($data['Q4Wa2'])) echo $data['Q4Wa2'] == 3 ? "checked" : "" ?>>
       More than three </label>
     </li>
@@ -583,25 +726,25 @@
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa1S1"
                                type="number"   step="any"   name="Q5Wa1S1"
                                placeholder="<?php if (isset($data['Q5Wa1S1'])) echo $data['Q5Wa1S1'] ?>"
-                               value="<?php echo set_value('Q5Wa1S1'); ?>"/>
+                               value="<?php if (isset($data['Q5Wa1S1'])) echo $data['Q5Wa1S1'] ?>"/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa1S2"
                                type="number"   step="any"   name="Q5Wa1S2"
                                placeholder="<?php if (isset($data['Q5Wa1S2'])) echo $data['Q5Wa1S2'] ?>"
-                               value="<?php echo set_value('Q5Wa1S2'); ?>"/>
+                               value="<?php if (isset($data['Q5Wa1S2'])) echo $data['Q5Wa1S2'] ?>"/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa1S3"
                                type="number"   step="any"   name="Q5Wa1S3"
                                placeholder="<?php if (isset($data['Q5Wa1S3'])) echo $data['Q5Wa1S3'] ?>"
-                               value="<?php echo set_value('Q5Wa1S3'); ?>"/>
+                               value="<?php if (isset($data['Q5Wa1S3'])) echo $data['Q5Wa1S3'] ?>"/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa1S4"
                                type="number"   step="any"   name="Q5Wa1S4"
                                placeholder="<?php if (isset($data['Q5Wa1S4'])) echo $data['Q5Wa1S4'] ?>"
-                               value="<?php echo set_value('Q5Wa1S4'); ?>"/>
+                               value="<?php if (isset($data['Q5Wa1S4'])) echo $data['Q5Wa1S4'] ?>"/>
     </div>
     <div class="col-xs-2">
       <?php
@@ -622,30 +765,30 @@
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa2S1"
                                type="number"   step="any"   name="Q5Wa2S1"
                                placeholder="<?php if (isset($data['Q5Wa2S1'])) echo $data['Q5Wa2S1'] ?>"
-                               value="<?php echo set_value('Q5Wa2S1'); ?>"/>
+                               value="<?php if (isset($data['Q5Wa2S1'])) echo $data['Q5Wa2S1'] ?>"/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa2S2"
                                type="number"   step="any"   name="Q5Wa2S2"
                                placeholder="<?php if (isset($data['Q5Wa2S2'])) echo $data['Q5Wa2S2'] ?>"
-                               value="<?php echo set_value('Q5Wa2S2'); ?>"/>
+                               value="<?php if (isset($data['Q5Wa2S2'])) echo $data['Q5Wa2S2'] ?>"/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa2S3"
                                type="number"   step="any"   name="Q5Wa2S3"
                                placeholder="<?php if (isset($data['Q5Wa2S3'])) echo $data['Q5Wa2S3'] ?>"
-                               value="<?php echo set_value('Q5Wa2S3'); ?>"/>
+                               value="<?php if (isset($data['Q5Wa2S3'])) echo $data['Q5Wa2S3'] ?>"/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa2S4"
                                type="number"   step="any"   name="Q5Wa2S4"
                                placeholder="<?php if (isset($data['Q5Wa2S4'])) echo $data['Q5Wa2S4'] ?>"
-                               value="<?php echo set_value('Q5Wa2S4'); ?>"/>
+                               value="<?php if (isset($data['Q5Wa2S4'])) echo $data['Q5Wa2S4'] ?>"/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" id="Q5Wa2S5" type="number"   step="any"   name="Q5Wa2S5"
                                placeholder="<?php if (isset($data['Q5Wa2S5'])) echo $data['Q5Wa2S5'] ?>"
-                               value="<?php echo set_value('Q5Wa2S5'); ?>" readonly/>
+                               value="<?php if (isset($data['Q5Wa2S5'])) echo $data['Q5Wa2S5'] ?>" readonly/>
     </div>
   </div>
   <div class="form-group row">
@@ -656,31 +799,31 @@
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa3S1"
                                type="number"   step="any"   name="Q5Wa3S1"
                                placeholder="<?php if (isset($data['Q5Wa3S1'])) echo $data['Q5Wa3S1'] ?>"
-                               value="<?php echo set_value('Q5Wa3S1'); ?>"/>
+                               value="<?php if (isset($data['Q5Wa3S1'])) echo $data['Q5Wa3S1'] ?>"/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa3S2"
                                type="number"   step="any"   name="Q5Wa3S2"
                                placeholder="<?php if (isset($data['Q5Wa3S2'])) echo $data['Q5Wa3S2'] ?>"
-                               value="<?php echo set_value('Q5Wa3S2'); ?>"/>
+                               value="<?php if (isset($data['Q5Wa3S2'])) echo $data['Q5Wa3S2'] ?>"/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa3S3"
                                type="number"   step="any"   name="Q5Wa3S3"
                                placeholder="<?php if (isset($data['Q5Wa3S3'])) echo $data['Q5Wa3S3'] ?>"
-                               value="<?php echo set_value('Q5Wa3S3'); ?>"/>
+                               value="<?php if (isset($data['Q5Wa3S3'])) echo $data['Q5Wa3S3'] ?>"/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa3S4"
                                type="number"   step="any"   name="Q5Wa3S4"
                                placeholder="<?php if (isset($data['Q5Wa3S4'])) echo $data['Q5Wa3S4'] ?>"
-                               value="<?php echo set_value('Q5Wa3S4'); ?>"/>
+                               value="<?php if (isset($data['Q5Wa3S4'])) echo $data['Q5Wa3S4'] ?>"/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa3S5"
                                type="number"   step="any"   name="Q5Wa3S5"
                                placeholder="<?php if (isset($data['Q5Wa3S5'])) echo $data['Q5Wa3S5'] ?>"
-                               value="<?php echo set_value('Q5Wa3S5'); ?>" readonly/>
+                               value="<?php if (isset($data['Q5Wa3S5'])) echo $data['Q5Wa3S5'] ?>" readonly/>
     </div>
   </div>
   <div class="form-group row">
@@ -691,31 +834,31 @@
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa4S1"
                                type="number"   step="any"   name="Q5Wa4S1"
                                placeholder="<?php if (isset($data['Q5Wa4S1'])) echo $data['Q5Wa4S1'] ?>"
-                               value="<?php echo set_value('Q5Wa4S1'); ?>"/>
+                               value="<?php if (isset($data['Q5Wa4S1'])) echo $data['Q5Wa4S1'] ?>"/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa4S2"
                                type="number"   step="any"   name="Q5Wa4S2"
                                placeholder="<?php if (isset($data['Q5Wa4S2'])) echo $data['Q5Wa4S2'] ?>"
-                               value="<?php echo set_value('Q5Wa4S2'); ?>"/>
+                               value="<?php if (isset($data['Q5Wa4S2'])) echo $data['Q5Wa4S2'] ?>"/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa4S3"
                                type="number"   step="any"   name="Q5Wa4S3"
                                placeholder="<?php if (isset($data['Q5Wa4S3'])) echo $data['Q5Wa4S3'] ?>"
-                               value="<?php echo set_value('Q5Wa4S3'); ?>"/>
+                               value="<?php if (isset($data['Q5Wa4S3'])) echo $data['Q5Wa4S3'] ?>"/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa4S4"
                                type="number"   step="any"   name="Q5Wa4S4"
                                placeholder="<?php if (isset($data['Q5Wa4S4'])) echo $data['Q5Wa4S4'] ?>"
-                               value="<?php echo set_value('Q5Wa4S4'); ?>"/>
+                               value="<?php if (isset($data['Q5Wa4S4'])) echo $data['Q5Wa4S4'] ?>"/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa4S5"
                                type="number"   step="any"   name="Q5Wa4S5"
                                placeholder="<?php if (isset($data['Q5Wa4S5'])) echo $data['Q5Wa4S5'] ?>"
-                               value="<?php echo set_value('Q5Wa4S5'); ?>" readonly/>
+                               value="<?php if (isset($data['Q5Wa4S5'])) echo $data['Q5Wa4S5'] ?>" readonly/>
     </div>
   </div>
   <div class="form-group row">
@@ -726,30 +869,30 @@
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa5S1"
                                type="number"   step="any"   name="Q5Wa5S1"
                                placeholder="<?php if (isset($data['Q5Wa5S1'])) echo $data['Q5Wa5S1'] ?>"
-                               value="<?php echo set_value('Q5Wa5S1'); ?>"/>
+                               value="<?php if (isset($data['Q5Wa5S1'])) echo $data['Q5Wa5S1'] ?>"/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa5S2"
                                type="number"   step="any"   name="Q5Wa5S2"
                                placeholder="<?php if (isset($data['Q5Wa5S2'])) echo $data['Q5Wa5S2'] ?>"
-                               value="<?php echo set_value('Q5Wa5S2'); ?>"/>
+                               value="<?php if (isset($data['Q5Wa5S2'])) echo $data['Q5Wa5S2'] ?>"/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa5S3"
                                type="number"   step="any"   name="Q5Wa5S3"
                                placeholder="<?php if (isset($data['Q5Wa5S3'])) echo $data['Q5Wa5S3'] ?>"
-                               value="<?php echo set_value('Q5Wa5S3'); ?>"/>
+                               value="<?php if (isset($data['Q5Wa5S3'])) echo $data['Q5Wa5S3'] ?>"/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa5S4"
                                type="number"   step="any"   name="Q5Wa5S4"
                                placeholder="<?php if (isset($data['Q5Wa5S4'])) echo $data['Q5Wa5S4'] ?>"
-                               value="<?php echo set_value('Q5Wa5S4'); ?>"/>
+                               value="<?php if (isset($data['Q5Wa5S4'])) echo $data['Q5Wa5S4'] ?>"/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" id="Q5Wa5S5" type="number"   step="any"   name="Q5Wa5S5"
                                placeholder="<?php if (isset($data['Q5Wa5S5'])) echo $data['Q5Wa5S5'] ?>"
-                               value="<?php echo set_value('Q5Wa5S5'); ?>" readonly/>
+                               value="<?php if (isset($data['Q5Wa5S5'])) echo $data['Q5Wa5S5'] ?>" readonly/>
     </div>
   </div>
   <div class="form-group row">
@@ -760,30 +903,30 @@
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa6S1"
                                type="number"   step="any"   name="Q5Wa6S1"
                                placeholder="<?php if (isset($data['Q5Wa6S1'])) echo $data['Q5Wa6S1'] ?>"
-                               value="<?php echo set_value('Q5Wa6S1'); ?>"/>
+                               value="<?php if (isset($data['Q5Wa6S1'])) echo $data['Q5Wa6S1'] ?>"/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa6S2"
                                type="number"   step="any"   name="Q5Wa6S2"
                                placeholder="<?php if (isset($data['Q5Wa6S2'])) echo $data['Q5Wa6S2'] ?>"
-                               value="<?php echo set_value('Q5Wa6S2'); ?>"/>
+                               value="<?php if (isset($data['Q5Wa6S2'])) echo $data['Q5Wa6S2'] ?>"/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa6S3"
                                type="number"   step="any"   name="Q5Wa6S3"
                                placeholder="<?php if (isset($data['Q5Wa6S3'])) echo $data['Q5Wa6S3'] ?>"
-                               value="<?php echo set_value('Q5Wa6S3'); ?>"/>
+                               value="<?php if (isset($data['Q5Wa6S3'])) echo $data['Q5Wa6S3'] ?>"/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa6S4"
                                type="number"   step="any"   name="Q5Wa6S4"
                                placeholder="<?php if (isset($data['Q5Wa6S4'])) echo $data['Q5Wa6S4'] ?>"
-                               value="<?php echo set_value('Q5Wa6S4'); ?>"/>
+                               value="<?php if (isset($data['Q5Wa6S4'])) echo $data['Q5Wa6S4'] ?>"/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" id="Q5Wa6S5" type="number"   step="any"   name="Q5Wa6S5"
                                placeholder="<?php if (isset($data['Q5Wa6S5'])) echo $data['Q5Wa6S5'] ?>"
-                               value="<?php echo set_value('Q5Wa6S5'); ?>" readonly/>
+                               value="<?php if (isset($data['Q5Wa6S5'])) echo $data['Q5Wa6S5'] ?>" readonly/>
     </div>
   </div>
   <div class="form-group row">
@@ -794,31 +937,31 @@
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa7S1"
                                type="number"   step="any"   name="Q5Wa7S1"
                                placeholder="<?php if (isset($data['Q5Wa7S1'])) echo $data['Q5Wa7S1'] ?>"
-                               value="<?php echo set_value('Q5Wa7S1'); ?>"/>
+                               value="<?php if (isset($data['Q5Wa7S1'])) echo $data['Q5Wa7S1'] ?>"/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa7S2"
                                type="number"   step="any"   name="Q5Wa7S2"
                                placeholder="<?php if (isset($data['Q5Wa7S2'])) echo $data['Q5Wa7S2'] ?>"
-                               value="<?php echo set_value('Q5Wa7S2'); ?>"/>
+                               value="<?php if (isset($data['Q5Wa7S2'])) echo $data['Q5Wa7S2'] ?>"/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa7S3"
                                type="number"   step="any"   name="Q5Wa7S3"
                                placeholder="<?php if (isset($data['Q5Wa7S3'])) echo $data['Q5Wa7S3'] ?>"
-                               value="<?php echo set_value('Q5Wa7S3'); ?>"/>
+                               value="<?php if (isset($data['Q5Wa7S3'])) echo $data['Q5Wa7S3'] ?>"/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa7S4"
                                type="number"   step="any"   name="Q5Wa7S4"
                                placeholder="<?php if (isset($data['Q5Wa7S4'])) echo $data['Q5Wa7S4'] ?>"
-                               value="<?php echo set_value('Q5Wa7S4'); ?>"/>
+                               value="<?php if (isset($data['Q5Wa7S4'])) echo $data['Q5Wa7S4'] ?>"/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa7S5"
                                type="number"   step="any"   name="Q5Wa7S5"
                                placeholder="<?php if (isset($data['Q5Wa7S5'])) echo $data['Q5Wa7S5'] ?>"
-                               value="<?php echo set_value('Q5Wa7S5'); ?>" readonly/>
+                               value="<?php if (isset($data['Q5Wa7S5'])) echo $data['Q5Wa7S5'] ?>" readonly/>
     </div>
   </div>
   <div class="form-group row">
@@ -830,31 +973,31 @@
 
                                type="number"   step="any"   name="Q5Wa8S1"
                                placeholder="<?php if (isset($data['Q5Wa8S1'])) echo $data['Q5Wa8S1'] ?>"
-                               value="<?php echo set_value('Q5Wa8S1'); ?>"/>
+                               value="<?php if (isset($data['Q5Wa8S1'])) echo $data['Q5Wa8S1'] ?>"/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa8S2"
                                type="number"   step="any"   name="Q5Wa8S2"
                                placeholder="<?php if (isset($data['Q5Wa8S2'])) echo $data['Q5Wa8S2'] ?>"
-                               value="<?php echo set_value('Q5Wa8S2'); ?>"/>
+                               value="<?php if (isset($data['Q5Wa8S2'])) echo $data['Q5Wa8S2'] ?>"/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa8S3"
                                type="number"   step="any"   name="Q5Wa8S3"
                                placeholder="<?php if (isset($data['Q5Wa8S3'])) echo $data['Q5Wa8S3'] ?>"
-                               value="<?php echo set_value('Q5Wa8S3'); ?>"/>
+                               value="<?php if (isset($data['Q5Wa8S3'])) echo $data['Q5Wa8S3'] ?>"/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa8S4"
                                type="number"   step="any"   name="Q5Wa8S4"
                                placeholder="<?php if (isset($data['Q5Wa8S4'])) echo $data['Q5Wa8S4'] ?>"
-                               value="<?php echo set_value('Q5Wa8S4'); ?>"/>
+                               value="<?php if (isset($data['Q5Wa8S4'])) echo $data['Q5Wa8S4'] ?>"/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa8S5"
                                type="number"   step="any"   name="Q5Wa8S5"
                                placeholder="<?php if (isset($data['Q5Wa8S5'])) echo $data['Q5Wa8S5'] ?>"
-                               value="<?php echo set_value('Q5Wa8S5'); ?>" readonly/>
+                               value="<?php if (isset($data['Q5Wa8S5'])) echo $data['Q5Wa8S5'] ?>" readonly/>
     </div>
   </div>
   <div class="form-group row">
@@ -865,31 +1008,31 @@
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa9S1"
                                type="number"   step="any"   name="Q5Wa9S1"
                                placeholder="<?php if (isset($data['Q5Wa9S1'])) echo $data['Q5Wa9S1'] ?>"
-                               value="<?php echo set_value('Q5Wa9S1'); ?>"/>
+                               value="<?php if (isset($data['Q5Wa9S1'])) echo $data['Q5Wa9S1'] ?>"/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa9S2"
                                type="number"   step="any"   name="Q5Wa9S2"
                                placeholder="<?php if (isset($data['Q5Wa9S2'])) echo $data['Q5Wa9S2'] ?>"
-                               value="<?php echo set_value('Q5Wa9S2'); ?>"/>
+                               value="<?php if (isset($data['Q5Wa9S2'])) echo $data['Q5Wa9S2'] ?>"/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa9S3"
                                type="number"   step="any"   name="Q5Wa9S3"
                                placeholder="<?php if (isset($data['Q5Wa9S3'])) echo $data['Q5Wa9S3'] ?>"
-                               value="<?php echo set_value('Q5Wa9S3'); ?>"/>
+                               value="<?php if (isset($data['Q5Wa9S3'])) echo $data['Q5Wa9S3'] ?>"/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa9S4"
                                type="number"   step="any"   name="Q5Wa9S4"
                                placeholder="<?php if (isset($data['Q5Wa9S4'])) echo $data['Q5Wa9S4'] ?>"
-                               value="<?php echo set_value('Q5Wa9S4'); ?>"/>
+                               value="<?php if (isset($data['Q5Wa9S4'])) echo $data['Q5Wa9S4'] ?>"/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa9S5"
                                type="number"   step="any"   name="Q5Wa9S5"
                                placeholder="<?php if (isset($data['Q5Wa9S5'])) echo $data['Q5Wa9S5'] ?>"
-                               value="<?php echo set_value('Q5Wa9S5'); ?>" readonly/>
+                               value="<?php if (isset($data['Q5Wa9S5'])) echo $data['Q5Wa9S5'] ?>" readonly/>
     </div>
   </div>
   <div class="form-group row">
@@ -900,31 +1043,31 @@
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa10S1"
                                type="number"   step="any"   name="Q5Wa10S1"
                                placeholder="<?php if (isset($data['Q5Wa10S1'])) echo $data['Q5Wa10S1'] ?>"
-                               value="<?php echo set_value('Q5Wa10S1'); ?>"/>
+                               value="<?php if (isset($data['Q5Wa10S1'])) echo $data['Q5Wa10S1'] ?>"/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa10S2"
                                type="number"   step="any"   name="Q5Wa10S2"
                                placeholder="<?php if (isset($data['Q5Wa10S2'])) echo $data['Q5Wa10S2'] ?>"
-                               value="<?php echo set_value('Q5Wa10S2'); ?>"/>
+                               value="<?php if (isset($data['Q5Wa10S2'])) echo $data['Q5Wa10S2'] ?>"/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa10S3"
                                type="number"   step="any"   name="Q5Wa10S3"
                                placeholder="<?php if (isset($data['Q5Wa10S3'])) echo $data['Q5Wa10S3'] ?>"
-                               value="<?php echo set_value('Q5Wa10S3'); ?>"/>
+                               value="<?php if (isset($data['Q5Wa10S3'])) echo $data['Q5Wa10S3'] ?>"/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa10S4"
                                type="number"   step="any"   name="Q5Wa10S4"
                                placeholder="<?php if (isset($data['Q5Wa10S4'])) echo $data['Q5Wa10S4'] ?>"
-                               value="<?php echo set_value('Q5Wa10S4'); ?>"/>
+                               value="<?php if (isset($data['Q5Wa10S4'])) echo $data['Q5Wa10S4'] ?>"/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa10S5"
                                type="number"   step="any"   name="Q5Wa10S5"
                                placeholder="<?php if (isset($data['Q5Wa10S5'])) echo $data['Q5Wa10S5'] ?>"
-                               value="<?php echo set_value('Q5Wa10S5'); ?>" readonly/>
+                               value="<?php if (isset($data['Q5Wa10S5'])) echo $data['Q5Wa10S5'] ?>" readonly/>
     </div>
   </div>
   <div class="form-group row">
@@ -934,27 +1077,27 @@
     <div class="col-xs-2">
       <input class="form-control space-textbox" id="Q5Wa11S1" type="number"   step="any"   name="Q5Wa11S1"
                                placeholder="<?php if (isset($data['Q5Wa11S1'])) echo $data['Q5Wa11S1'] ?>"
-                               value="<?php echo set_value('Q5Wa11S1'); ?>" readonly/>
+                               value="<?php if (isset($data['Q5Wa11S1'])) echo $data['Q5Wa11S1'] ?>" readonly/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" id="Q5Wa11S2" type="number"   step="any"   name="Q5Wa11S2"
                                placeholder="<?php if (isset($data['Q5Wa11S2'])) echo $data['Q5Wa11S2'] ?>"
-                               value="<?php echo set_value('Q5Wa11S2'); ?>" readonly/>
+                               value="<?php if (isset($data['Q5Wa11S2'])) echo $data['Q5Wa11S2'] ?>" readonly/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" id="Q5Wa11S3" type="number"   step="any"   name="Q5Wa11S3"
                                placeholder="<?php if (isset($data['Q5Wa11S3'])) echo $data['Q5Wa11S3'] ?>"
-                               value="<?php echo set_value('Q5Wa11S3'); ?>" readonly/>
+                               value="<?php if (isset($data['Q5Wa11S3'])) echo $data['Q5Wa11S3'] ?>" readonly/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" id="Q5Wa11S4" type="number"   step="any"   name="Q5Wa11S4"
                                placeholder="<?php if (isset($data['Q5Wa11S4'])) echo $data['Q5Wa11S4'] ?>"
-                               value="<?php echo set_value('Q5Wa11S4'); ?>" readonly/>
+                               value="<?php if (isset($data['Q5Wa11S4'])) echo $data['Q5Wa11S4'] ?>" readonly/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" id="Q5Wa11S5" type="number"   step="any"   name="Q5Wa11S5"
                                placeholder="<?php if (isset($data['Q5Wa11S5'])) echo $data['Q5Wa11S5'] ?>"
-                               value="<?php echo set_value('Q5Wa11S5'); ?>" readonly/>
+                               value="<?php if (isset($data['Q5Wa11S5'])) echo $data['Q5Wa11S5'] ?>" readonly/>
     </div>
   </div>
 </div>
@@ -1045,7 +1188,7 @@
     <div class="col-xs-6">
       <input class="form-control space-textbox" onKeyUp="solidWaste()" id="Q6Wa1S1" type="number"   step="any"  
                                name="Q6Wa1S1" placeholder="<?php if (isset($data['Q6Wa1S1'])) echo $data['Q6Wa1S1'] ?>"
-                               value="<?php echo set_value('Q6Wa1S1'); ?>"/>
+                               value="<?php if (isset($data['Q6Wa1S1'])) echo $data['Q6Wa1S1'] ?>"/>
     </div>
   </div>
   <div class="form-group row">
@@ -1055,7 +1198,7 @@
     <div class="col-xs-6">
       <input class="form-control space-textbox" onKeyUp="solidWaste()" id="Q6Wa1S2" type="number"   step="any"  
                                name="Q6Wa1S2" placeholder="<?php if (isset($data['Q6Wa1S2'])) echo $data['Q6Wa1S2'] ?>"
-                               value="<?php echo set_value('Q6Wa1S2'); ?>"/>
+                               value="<?php if (isset($data['Q6Wa1S2'])) echo $data['Q6Wa1S2'] ?>"/>
     </div>
   </div>
   <div class="form-group row">
@@ -1065,7 +1208,7 @@
     <div class="col-xs-6">
       <input class="form-control space-textbox" onKeyUp="solidWaste()" id="Q6Wa1S3" type="number"   step="any"  
                                name="Q6Wa1S3" placeholder="<?php if (isset($data['Q6Wa1S3'])) echo $data['Q6Wa1S3'] ?>"
-                               value="<?php echo set_value('Q6Wa1S3'); ?>"/>
+                               value="<?php if (isset($data['Q6Wa1S3'])) echo $data['Q6Wa1S3'] ?>"/>
     </div>
   </div>
   <div class="form-group row">
@@ -1075,7 +1218,7 @@
     <div class="col-xs-6">
       <input class="form-control space-textbox" onKeyUp="solidWaste()" id="Q6Wa1S4" type="number"   step="any"  
                                name="Q6Wa1S4" placeholder="<?php if (isset($data['Q6Wa1S4'])) echo $data['Q6Wa1S4'] ?>"
-                               value="<?php echo set_value('Q6Wa1S4'); ?>"/>
+                               value="<?php if (isset($data['Q6Wa1S4'])) echo $data['Q6Wa1S4'] ?>"/>
     </div>
   </div>
   <div class="form-group row">
@@ -1085,7 +1228,7 @@
     <div class="col-xs-6">
       <input class="form-control space-textbox" onKeyUp="solidWaste()" id="Q6Wa1S5" type="number"   step="any"  
                                name="Q6Wa1S5" placeholder="<?php if (isset($data['Q6Wa1S5'])) echo $data['Q6Wa1S5'] ?>"
-                               value="<?php echo set_value('Q6Wa1S5'); ?>" readonly/>
+                               value="<?php if (isset($data['Q6Wa1S5'])) echo $data['Q6Wa1S5'] ?>" readonly/>
     </div>
   </div>
   <div class="form-group row">
@@ -1121,7 +1264,7 @@
     <div class="col-xs-6">
       <input class="form-control space-textbox" onKeyUp="solidRecyclable()" id="Q6Wa2S1" type="number"   step="any"  
                                name="Q6Wa2S1" placeholder="<?php if (isset($data['Q6Wa2S1'])) echo $data['Q6Wa2S1'] ?>"
-                               value="<?php echo set_value('Q6Wa2S1'); ?>"/>
+                               value="<?php if (isset($data['Q6Wa2S1'])) echo $data['Q6Wa2S1'] ?>"/>
     </div>
   </div>
   <div class="form-group row">
@@ -1131,7 +1274,7 @@
     <div class="col-xs-6">
       <input class="form-control space-textbox" onKeyUp="solidRecyclable()" id="Q6Wa2S2" type="number"   step="any"  
                                name="Q6Wa2S2" placeholder="<?php if (isset($data['Q6Wa2S2'])) echo $data['Q6Wa2S2'] ?>"
-                               value="<?php echo set_value('Q6Wa2S2'); ?>"/>
+                               value="<?php if (isset($data['Q6Wa2S2'])) echo $data['Q6Wa2S2'] ?>"/>
     </div>
   </div>
   <div class="form-group row">
@@ -1141,7 +1284,7 @@
     <div class="col-xs-6">
       <input class="form-control space-textbox" onKeyUp="solidRecyclable()" id="Q6Wa2S3" type="number"   step="any"  
                                name="Q6Wa2S3" placeholder="<?php if (isset($data['Q6Wa2S3'])) echo $data['Q6Wa2S3'] ?>"
-                               value="<?php echo set_value('Q6Wa2S3'); ?>"/>
+                               value="<?php if (isset($data['Q6Wa2S3'])) echo $data['Q6Wa2S3'] ?>"/>
     </div>
   </div>
   <div class="form-group row">
@@ -1151,7 +1294,7 @@
     <div class="col-xs-6">
       <input class="form-control space-textbox" onKeyUp="solidRecyclable()" id="Q6Wa2S4" type="number"   step="any"  
                                name="Q6Wa2S4" placeholder="<?php if (isset($data['Q6Wa2S4'])) echo $data['Q6Wa2S4'] ?>"
-                               value="<?php echo set_value('Q6Wa2S4'); ?>"/>
+                               value="<?php if (isset($data['Q6Wa2S4'])) echo $data['Q6Wa2S4'] ?>"/>
     </div>
   </div>
   <div class="form-group row">
@@ -1161,7 +1304,7 @@
     <div class="col-xs-6">
       <input class="form-control space-textbox" onKeyUp="solidRecyclable()" id="Q6Wa2S5" type="number"   step="any"  
                                name="Q6Wa2S5" placeholder="<?php if (isset($data['Q6Wa2S5'])) echo $data['Q6Wa2S5'] ?>"
-                               value="<?php echo set_value('Q6Wa2S5'); ?>"/>
+                               value="<?php if (isset($data['Q6Wa2S5'])) echo $data['Q6Wa2S5'] ?>"/>
     </div>
   </div>
   <div class="form-group row">
@@ -1171,7 +1314,7 @@
     <div class="col-xs-6">
       <input class="form-control space-textbox" onKeyUp="solidRecyclable()" id="Q6Wa2S6" type="number"   step="any"  
                                name="Q6Wa2S6" placeholder="<?php if (isset($data['Q6Wa2S6'])) echo $data['Q6Wa2S6'] ?>"
-                               value="<?php echo set_value('Q6Wa2S6'); ?>"/>
+                               value="<?php if (isset($data['Q6Wa2S6'])) echo $data['Q6Wa2S6'] ?>"/>
     </div>
   </div>
   <div class="form-group row">
@@ -1181,7 +1324,7 @@
     <div class="col-xs-6">
       <input class="form-control space-textbox" onKeyUp="solidRecyclable()" id="Q6Wa2S7" type="number"   step="any"  
                                name="Q6Wa2S7" placeholder="<?php if (isset($data['Q6Wa2S7'])) echo $data['Q6Wa2S7'] ?>"
-                               value="<?php echo set_value('Q6Wa2S7'); ?>"/>
+                               value="<?php if (isset($data['Q6Wa2S7'])) echo $data['Q6Wa2S7'] ?>"/>
     </div>
   </div>
   <div class="form-group row">
@@ -1191,7 +1334,7 @@
     <div class="col-xs-6">
       <input class="form-control space-textbox" onKeyUp="solidRecyclable()" id="Q6Wa2S8" type="number"   step="any"  
                                name="Q6Wa2S8" placeholder="<?php if (isset($data['Q6Wa2S8'])) echo $data['Q6Wa2S8'] ?>"
-                               value="<?php echo set_value('Q6Wa2S8'); ?>" readonly/>
+                               value="<?php if (isset($data['Q6Wa2S8'])) echo $data['Q6Wa2S8'] ?>" readonly/>
     </div>
   </div>
   <div class="form-group row">
@@ -1201,7 +1344,7 @@
     <div class="col-xs-6">
       <input class="form-control space-textbox" onKeyUp="solidRecyclable()" id="Q6Wa2S9" type="number"   step="any"  
                                name="Q6Wa2S9" placeholder="<?php if (isset($data['Q6Wa2S9'])) echo $data['Q6Wa2S9'] ?>"
-                               value="<?php echo set_value('Q6Wa2S9'); ?>" readonly/>
+                               value="<?php if (isset($data['Q6Wa2S9'])) echo $data['Q6Wa2S9'] ?>" readonly/>
     </div>
   </div>
 </div>
@@ -1222,7 +1365,7 @@
     <div class="col-xs-6">
       <input class="form-control space-textbox" onKeyUp="WasteDomestic()" id="Q6Wa3S1" type="number"   step="any"  
                                name="Q6Wa3S1" placeholder="<?php if (isset($data['Q6Wa3S1'])) echo $data['Q6Wa3S1'] ?>"
-                               value="<?php echo set_value('Q6Wa3S1'); ?>"/>
+                               value="<?php if (isset($data['Q6Wa3S1'])) echo $data['Q6Wa3S1'] ?>"/>
     </div>
   </div>
   <div class="form-group row">
@@ -1232,7 +1375,7 @@
     <div class="col-xs-6">
       <input class="form-control space-textbox" onKeyUp="WasteDomestic()" id="Q6Wa3S2" type="number"   step="any"  
                                name="Q6Wa3S2" placeholder="<?php if (isset($data['Q6Wa3S2'])) echo $data['Q6Wa3S2'] ?>"
-                               value="<?php echo set_value('Q6Wa3S2'); ?>"/>
+                               value="<?php if (isset($data['Q6Wa3S2'])) echo $data['Q6Wa3S2'] ?>"/>
     </div>
   </div>
   <div class="form-group row">
@@ -1242,7 +1385,7 @@
     <div class="col-xs-6">
       <input class="form-control space-textbox" onKeyUp="WasteDomestic()" id="Q6Wa3S3" type="number"   step="any"  
                                name="Q6Wa3S3" placeholder="<?php if (isset($data['Q6Wa3S3'])) echo $data['Q6Wa3S3'] ?>"
-                               value="<?php echo set_value('Q6Wa3S3'); ?>" readonly/>
+                               value="<?php if (isset($data['Q6Wa3S3'])) echo $data['Q6Wa3S3'] ?>" readonly/>
     </div>
   </div>
   <div class="form-group row">
@@ -1252,7 +1395,7 @@
     <div class="col-xs-6">
       <input class="form-control space-textbox" onKeyUp="WasteDomestic()" id="Q6Wa3S4" type="number"   step="any"  
                                name="Q6Wa3S4" placeholder="<?php if (isset($data['Q6Wa3S4'])) echo $data['Q6Wa3S4'] ?>"
-                               value="<?php echo set_value('Q6Wa3S4'); ?>" readonly/>
+                               value="<?php if (isset($data['Q6Wa3S4'])) echo $data['Q6Wa3S4'] ?>" readonly/>
     </div>
   </div>
 </div>
@@ -1273,7 +1416,7 @@
     <div class="col-xs-6">
       <input class="form-control space-textbox" onKeyUp="EWaste()" id="Q6Wa4S1" type="number"   step="any"  
                                name="Q6Wa4S1" placeholder="<?php if (isset($data['Q6Wa4S1'])) echo $data['Q6Wa4S1'] ?>"
-                               value="<?php echo set_value('Q6Wa4S1'); ?>"/>
+                               value="<?php if (isset($data['Q6Wa4S1'])) echo $data['Q6Wa4S1'] ?>"/>
     </div>
   </div>
   <div class="form-group row">
@@ -1283,7 +1426,7 @@
     <div class="col-xs-6">
       <input class="form-control space-textbox" onKeyUp="EWaste()" id="Q6Wa4S2" type="number"   step="any"  
                                name="Q6Wa4S2" placeholder="<?php if (isset($data['Q6Wa4S2'])) echo $data['Q6Wa4S2'] ?>"
-                               value="<?php echo set_value('Q6Wa4S2'); ?>" readonly/>
+                               value="<?php if (isset($data['Q6Wa4S2'])) echo $data['Q6Wa4S2'] ?>" readonly/>
     </div>
   </div>
 </div>
@@ -1304,7 +1447,7 @@
     <div class="col-xs-6">
       <input class="form-control space-textbox" onKeyUp="WasteBiomedical()" id="Q6Wa5S1" type="number"   step="any"  
                                name="Q6Wa5S1" placeholder="<?php if (isset($data['Q6Wa5S1'])) echo $data['Q6Wa5S1'] ?>"
-                               value="<?php echo set_value('Q6Wa5S1'); ?>"/>
+                               value="<?php if (isset($data['Q6Wa5S1'])) echo $data['Q6Wa5S1'] ?>"/>
     </div>
   </div>
   <div class="form-group row">
@@ -1314,7 +1457,7 @@
     <div class="col-xs-6">
       <input class="form-control space-textbox" onKeyUp="WasteBiomedical()" id="Q6Wa5S2" type="number"   step="any"  
                                name="Q6Wa5S2" placeholder="<?php if (isset($data['Q6Wa5S2'])) echo $data['Q6Wa5S2'] ?>"
-                               value="<?php echo set_value('Q6Wa5S2'); ?>" readonly/>
+                               value="<?php if (isset($data['Q6Wa5S2'])) echo $data['Q6Wa5S2'] ?>" readonly/>
     </div>
   </div>
 </div>
@@ -1335,7 +1478,7 @@
     <div class="col-xs-6">
       <input class="form-control space-textbox" onKeyUp="WasteSanitary()" id="Q6Wa6S1" type="number"   step="any"  
                                name="Q6Wa6S1" placeholder="<?php if (isset($data['Q6Wa6S1'])) echo $data['Q6Wa6S1'] ?>"
-                               value="<?php echo set_value('Q6Wa6S1'); ?>"/>
+                               value="<?php if (isset($data['Q6Wa6S1'])) echo $data['Q6Wa6S1'] ?>"/>
     </div>
   </div>
   <div class="form-group row">
@@ -1345,7 +1488,7 @@
     <div class="col-xs-6">
       <input class="form-control space-textbox" onKeyUp="WasteSanitary()" id="Q6Wa6S2" type="number"   step="any"  
                                name="Q6Wa6S2" placeholder="<?php if (isset($data['Q6Wa6S2'])) echo $data['Q6Wa6S2'] ?>"
-                               value="<?php echo set_value('Q6Wa6S2'); ?>" readonly/>
+                               value="<?php if (isset($data['Q6Wa6S2'])) echo $data['Q6Wa6S2'] ?>" readonly/>
     </div>
   </div>
 </div>
@@ -1367,7 +1510,7 @@
       <input class="form-control space-textbox" onKeyUp="WasteConstruction()" id="Q6Wa7S1"
                                type="number"   step="any"   name="Q6Wa7S1"
                                placeholder="<?php if (isset($data['Q6Wa7S1'])) echo $data['Q6Wa7S1'] ?>"
-                               value="<?php echo set_value('Q6Wa7S1'); ?>"/>
+                               value="<?php if (isset($data['Q6Wa7S1'])) echo $data['Q6Wa7S1'] ?>"/>
     </div>
   </div>
   <div class="form-group row">
@@ -1378,7 +1521,7 @@
       <input class="form-control space-textbox" onKeyUp="WasteConstruction()" id="Q6Wa7S2"
                                type="number"   step="any"   name="Q6Wa7S2"
                                placeholder="<?php if (isset($data['Q6Wa7S2'])) echo $data['Q6Wa7S2'] ?>"
-                               value="<?php echo set_value('Q6Wa7S2'); ?>" readonly/>
+                               value="<?php if (isset($data['Q6Wa7S2'])) echo $data['Q6Wa7S2'] ?>" readonly/>
     </div>
   </div>
 </div>
@@ -1452,7 +1595,7 @@
                                value="<?php echo set_value('Q8Wa1', 'Y') ?>" <?php if (isset($data['Q8Wa1'])) echo $data['Q8Wa1'] == 'Y' ? "checked" : "" ?>>
     Yes </label>
     <label class="radio-inline text-gray">
-    <input type="radio" name="Q8Wa1" onClick="WasteGenerated(2)" class="radio" id="Q8Wa1"
+    <input type="radio" name="Q8Wa1" onClick="WasteGenerated(2)" class="radio" id="Q8Wa1_1"
                                value="<?php echo set_value('Q8Wa1', 'N') ?>" <?php if (isset($data['Q8Wa1'])) echo $data['Q8Wa1'] == 'N' ? "checked" : "" ?>>
     No </label>
   </div>
@@ -1489,7 +1632,7 @@
         <input class="form-control space-textbox" onKeyUp="solidWaste1()" id="Q8Wa1S1"
                                            type="number"   step="any"   name="Q8Wa1S1"
                                            placeholder="<?php if (isset($data['Q8Wa1S1'])) echo $data['Q8Wa1S1'] ?>"
-                                           value="<?php echo set_value('Q8Wa1S1'); ?>"/>
+                                           value="<?php if (isset($data['Q8Wa1S1'])) echo $data['Q8Wa1S1'] ?>"/>
       </div>
     </div>
     <div class="form-group row">
@@ -1500,7 +1643,7 @@
         <input class="form-control space-textbox" onKeyUp="solidWaste1()" id="Q8Wa1S2"
                                            type="number"   step="any"   name="Q8Wa1S2"
                                            placeholder="<?php if (isset($data['Q8Wa1S2'])) echo $data['Q8Wa1S2'] ?>"
-                                           value="<?php echo set_value('Q8Wa1S2'); ?>"/>
+                                           value="<?php if (isset($data['Q8Wa1S2'])) echo $data['Q8Wa1S2'] ?>"/>
       </div>
     </div>
     <div class="form-group row">
@@ -1511,7 +1654,7 @@
         <input class="form-control space-textbox" onKeyUp="solidWaste1()" id="Q8Wa1S3"
                                            type="number"   step="any"   name="Q8Wa1S3"
                                            placeholder="<?php if (isset($data['Q8Wa1S3'])) echo $data['Q8Wa1S3'] ?>"
-                                           value="<?php echo set_value('Q8Wa1S3'); ?>"/>
+                                           value="<?php if (isset($data['Q8Wa1S3'])) echo $data['Q8Wa1S3'] ?>"/>
       </div>
     </div>
     <div class="form-group row">
@@ -1522,7 +1665,7 @@
         <input class="form-control space-textbox" onKeyUp="solidWaste1()" id="Q8Wa1S4"
                                            type="number"   step="any"   name="Q8Wa1S4"
                                            placeholder="<?php if (isset($data['Q8Wa1S4'])) echo $data['Q8Wa1S4'] ?>"
-                                           value="<?php echo set_value('Q8Wa1S4'); ?>"/>
+                                           value="<?php if (isset($data['Q8Wa1S4'])) echo $data['Q8Wa1S4'] ?>"/>
       </div>
     </div>
     <div class="form-group row">
@@ -1533,7 +1676,7 @@
         <input class="form-control space-textbox" onKeyUp="solidWaste()" id="Q8Wa1S5"
                                            type="number"   step="any"   name="Q8Wa1S5"
                                            placeholder="<?php if (isset($data['Q8Wa1S5'])) echo $data['Q8Wa1S5'] ?>"
-                                           value="<?php echo set_value('Q8Wa1S5'); ?>" readonly/>
+                                           value="<?php if (isset($data['Q8Wa1S5'])) echo $data['Q8Wa1S5'] ?>" readonly/>
       </div>
     </div>
     <div class="form-group row">
@@ -1544,7 +1687,7 @@
         <input class="form-control space-textbox" onKeyUp="solidWaste()" id="Q8Wa1S6"
                                            type="number"   step="any"   name="Q8Wa1S6"
                                            placeholder="<?php if (isset($data['Q8Wa1S6'])) echo $data['Q8Wa1S6'] ?>"
-                                           value="<?php echo set_value('Q8Wa1S6'); ?>" readonly/>
+                                           value="<?php if (isset($data['Q8Wa1S6'])) echo $data['Q8Wa1S6'] ?>" readonly/>
       </div>
     </div>
   </div>
@@ -1567,7 +1710,7 @@
         <input class="form-control space-textbox" onKeyUp="solidRecyclable1()" id="Q8Wa2S1"
                                            type="number"   step="any"   name="Q8Wa2S1"
                                            placeholder="<?php if (isset($data['Q8Wa2S1'])) echo $data['Q8Wa2S1'] ?>"
-                                           value="<?php echo set_value('Q8Wa2S1'); ?>"/>
+                                           value="<?php if (isset($data['Q8Wa2S1'])) echo $data['Q8Wa2S1'] ?>"/>
       </div>
     </div>
     <div class="form-group row">
@@ -1578,7 +1721,7 @@
         <input class="form-control space-textbox" onKeyUp="solidRecyclable1()" id="Q8Wa2S2"
                                            type="number"   step="any"   name="Q8Wa2S2"
                                            placeholder="<?php if (isset($data['Q8Wa2S2'])) echo $data['Q8Wa2S2'] ?>"
-                                           value="<?php echo set_value('Q8Wa2S2'); ?>"/>
+                                           value="<?php if (isset($data['Q8Wa2S2'])) echo $data['Q8Wa2S2'] ?>"/>
       </div>
     </div>
     <div class="form-group row">
@@ -1589,7 +1732,7 @@
         <input class="form-control space-textbox" onKeyUp="solidRecyclable1()" id="Q8Wa2S3"
                                            type="number"   step="any"   name="Q8Wa2S3"
                                            placeholder="<?php if (isset($data['Q8Wa2S3'])) echo $data['Q8Wa2S3'] ?>"
-                                           value="<?php echo set_value('Q8Wa2S3'); ?>"/>
+                                           value="<?php if (isset($data['Q8Wa2S3'])) echo $data['Q8Wa2S3'] ?>"/>
       </div>
     </div>
     <div class="form-group row">
@@ -1600,7 +1743,7 @@
         <input class="form-control space-textbox" onKeyUp="solidRecyclable1()" id="Q8Wa2S4"
                                            type="number"   step="any"   name="Q8Wa2S4"
                                            placeholder="<?php if (isset($data['Q8Wa2S4'])) echo $data['Q8Wa2S4'] ?>"
-                                           value="<?php echo set_value('Q8Wa2S4'); ?>"/>
+                                           value="<?php if (isset($data['Q8Wa2S4'])) echo $data['Q8Wa2S4'] ?>"/>
       </div>
     </div>
     <div class="form-group row">
@@ -1611,7 +1754,7 @@
         <input class="form-control space-textbox" onKeyUp="solidRecyclable1()" id="Q8Wa2S5"
                                            type="number"   step="any"   name="Q8Wa2S5"
                                            placeholder="<?php if (isset($data['Q8Wa2S5'])) echo $data['Q8Wa2S5'] ?>"
-                                           value="<?php echo set_value('Q8Wa2S5'); ?>"/>
+                                           value="<?php if (isset($data['Q8Wa2S5'])) echo $data['Q8Wa2S5'] ?>"/>
       </div>
     </div>
     <div class="form-group row">
@@ -1622,7 +1765,7 @@
         <input class="form-control space-textbox" onKeyUp="solidRecyclable1()" id="Q8Wa2S6"
                                            type="number"   step="any"   name="Q8Wa2S6"
                                            placeholder="<?php if (isset($data['Q8Wa2S6'])) echo $data['Q8Wa2S6'] ?>"
-                                           value="<?php echo set_value('Q8Wa2S6'); ?>"/>
+                                           value="<?php if (isset($data['Q8Wa2S6'])) echo $data['Q8Wa2S6'] ?>"/>
       </div>
     </div>
     <div class="form-group row">
@@ -1633,7 +1776,7 @@
         <input class="form-control space-textbox" onKeyUp="solidRecyclable1()" id="Q8Wa2S7"
                                            type="number"   step="any"   name="Q8Wa2S7"
                                            placeholder="<?php if (isset($data['Q8Wa2S7'])) echo $data['Q8Wa2S7'] ?>"
-                                           value="<?php echo set_value('Q8Wa2S7'); ?>"/>
+                                           value="<?php if (isset($data['Q8Wa2S7'])) echo $data['Q8Wa2S7'] ?>"/>
       </div>
     </div>
     <div class="form-group row">
@@ -1644,7 +1787,7 @@
         <input class="form-control space-textbox" onKeyUp="solidRecyclable1()" id="Q8Wa2S8"
                                            type="number"   step="any"   name="Q8Wa2S8"
                                            placeholder="<?php if (isset($data['Q8Wa2S8'])) echo $data['Q8Wa2S8'] ?>"
-                                           value="<?php echo set_value('Q8Wa2S8'); ?>" readonly/>
+                                           value="<?php if (isset($data['Q8Wa2S8'])) echo $data['Q8Wa2S8'] ?>" readonly/>
       </div>
     </div>
     <div class="form-group row">
@@ -1655,7 +1798,7 @@
         <input class="form-control space-textbox" onKeyUp="solidRecyclable1()" id="Q8Wa2S9"
                                            type="number"   step="any"   name="Q8Wa2S9"
                                            placeholder="<?php if (isset($data['Q8Wa2S9'])) echo $data['Q8Wa2S9'] ?>"
-                                           value="<?php echo set_value('Q8Wa2S9'); ?>" readonly/>
+                                           value="<?php if (isset($data['Q8Wa2S9'])) echo $data['Q8Wa2S9'] ?>" readonly/>
       </div>
     </div>
   </div>
@@ -1677,7 +1820,7 @@
         <input class="form-control space-textbox" onKeyUp="WasteDomestic1()" id="Q8Wa3S1"
                                            type="number"   step="any"   name="Q8Wa3S1"
                                            placeholder="<?php if (isset($data['Q8Wa3S1'])) echo $data['Q8Wa3S1'] ?>"
-                                           value="<?php echo set_value('Q8Wa3S1'); ?>"/>
+                                           value="<?php if (isset($data['Q8Wa3S1'])) echo $data['Q8Wa3S1'] ?>"/>
       </div>
     </div>
     <div class="form-group row">
@@ -1688,7 +1831,7 @@
         <input class="form-control space-textbox" onKeyUp="WasteDomestic1()" id="Q8Wa3S2"
                                            type="number"   step="any"   name="Q8Wa3S2"
                                            placeholder="<?php if (isset($data['Q8Wa3S2'])) echo $data['Q8Wa3S2'] ?>"
-                                           value="<?php echo set_value('Q8Wa3S2'); ?>"/>
+                                           value="<?php if (isset($data['Q8Wa3S2'])) echo $data['Q8Wa3S2'] ?>"/>
       </div>
     </div>
     <div class="form-group row">
@@ -1699,7 +1842,7 @@
         <input class="form-control space-textbox" onKeyUp="WasteDomestic1()" id="Q8Wa3S3"
                                            type="number"   step="any"   name="Q8Wa3S3"
                                            placeholder="<?php if (isset($data['Q8Wa3S3'])) echo $data['Q8Wa3S3'] ?>"
-                                           value="<?php echo set_value('Q8Wa3S3'); ?>" readonly/>
+                                           value="<?php if (isset($data['Q8Wa3S3'])) echo $data['Q8Wa3S3'] ?>" readonly/>
       </div>
     </div>
     <div class="form-group row">
@@ -1710,7 +1853,7 @@
         <input class="form-control space-textbox" onKeyUp="WasteDomestic1()" id="Q8Wa3S4"
                                            type="number"   step="any"   name="Q8Wa3S4"
                                            placeholder="<?php if (isset($data['Q8Wa3S4'])) echo $data['Q8Wa3S4'] ?>"
-                                           value="<?php echo set_value('Q8Wa3S4'); ?>" readonly/>
+                                           value="<?php if (isset($data['Q8Wa3S4'])) echo $data['Q8Wa3S4'] ?>" readonly/>
       </div>
     </div>
   </div>
@@ -1732,7 +1875,7 @@
         <input class="form-control space-textbox" onKeyUp="EWaste1()" id="Q8Wa4S1"
                                            type="number"   step="any"   name="Q8Wa4S1"
                                            placeholder="<?php if (isset($data['Q8Wa4S1'])) echo $data['Q8Wa4S1'] ?>"
-                                           value="<?php echo set_value('Q8Wa4S1'); ?>"/>
+                                           value="<?php if (isset($data['Q8Wa4S1'])) echo $data['Q8Wa4S1'] ?>"/>
       </div>
     </div>
     <div class="form-group row">
@@ -1743,7 +1886,7 @@
         <input class="form-control space-textbox" onKeyUp="EWaste1()" id="Q8Wa4S2"
                                            type="number"   step="any"   name="Q8Wa4S2"
                                            placeholder="<?php if (isset($data['Q8Wa4S2'])) echo $data['Q8Wa4S2'] ?>"
-                                           value="<?php echo set_value('Q8Wa4S2'); ?>" readonly/>
+                                           value="<?php if (isset($data['Q8Wa4S2'])) echo $data['Q8Wa4S2'] ?>" readonly/>
       </div>
     </div>
   </div>
@@ -1765,7 +1908,7 @@
         <input class="form-control space-textbox" onKeyUp="WasteBiomedical1()" id="Q8Wa5S1"
                                            type="number"   step="any"   name="Q8Wa5S1"
                                            placeholder="<?php if (isset($data['Q8Wa5S1'])) echo $data['Q8Wa5S1'] ?>"
-                                           value="<?php echo set_value('Q8Wa5S1'); ?>"/>
+                                           value="<?php if (isset($data['Q8Wa5S1'])) echo $data['Q8Wa5S1'] ?>"/>
       </div>
     </div>
     <div class="form-group row">
@@ -1776,7 +1919,7 @@
         <input class="form-control space-textbox" onKeyUp="WasteBiomedical1()" id="Q8Wa5S2"
                                            type="number"   step="any"   name="Q8Wa5S2"
                                            placeholder="<?php if (isset($data['Q8Wa5S2'])) echo $data['Q8Wa5S2'] ?>"
-                                           value="<?php echo set_value('Q8Wa5S2'); ?>" readonly/>
+                                           value="<?php if (isset($data['Q8Wa5S2'])) echo $data['Q8Wa5S2'] ?>" readonly/>
       </div>
     </div>
   </div>
@@ -1798,7 +1941,7 @@
         <input class="form-control space-textbox" onKeyUp="WasteSanitary1()" id="Q8Wa6S1"
                                            type="number"   step="any"   name="Q8Wa6S1"
                                            placeholder="<?php if (isset($data['Q8Wa6S1'])) echo $data['Q8Wa6S1'] ?>"
-                                           value="<?php echo set_value('Q8Wa6S1'); ?>"/>
+                                           value="<?php if (isset($data['Q8Wa6S1'])) echo $data['Q8Wa6S1'] ?>"/>
       </div>
     </div>
     <div class="form-group row">
@@ -1809,7 +1952,7 @@
         <input class="form-control space-textbox" onKeyUp="WasteSanitary1()" id="Q8Wa6S2"
                                            type="number"   step="any"   name="Q8Wa6S2"
                                            placeholder="<?php if (isset($data['Q8Wa6S2'])) echo $data['Q8Wa6S2'] ?>"
-                                           value="<?php echo set_value('Q8Wa6S2'); ?>" readonly/>
+                                           value="<?php if (isset($data['Q8Wa6S2'])) echo $data['Q8Wa6S2'] ?>" readonly/>
       </div>
     </div>
   </div>
@@ -1831,7 +1974,7 @@
         <input class="form-control space-textbox" onKeyUp="WasteConstruction1()"
                                            id="Q8Wa7S1" type="number"   step="any"   name="Q8Wa7S1"
                                            placeholder="<?php if (isset($data['Q8Wa7S1'])) echo $data['Q8Wa7S1'] ?>"
-                                           value="<?php echo set_value('Q8Wa7S1'); ?>"/>
+                                           value="<?php if (isset($data['Q8Wa7S1'])) echo $data['Q8Wa7S1'] ?>"/>
       </div>
     </div>
     <div class="form-group row">
@@ -1842,7 +1985,7 @@
         <input class="form-control space-textbox" onKeyUp="WasteConstruction1()"
                                            id="Q8Wa7S2" type="number"   step="any"   name="Q8Wa7S2"
                                            placeholder="<?php if (isset($data['Q8Wa7S2'])) echo $data['Q8Wa7S2'] ?>"
-                                           value="<?php echo set_value('Q8Wa7S2'); ?>" readonly/>
+                                           value="<?php if (isset($data['Q8Wa7S2'])) echo $data['Q8Wa7S2'] ?>" readonly/>
       </div>
     </div>
   </div>
@@ -1907,109 +2050,79 @@
 </div>
 <br>
 <div class="clearfix">&nbsp;</div>
-<?php
-                  if(isset($data['Q9Wa1']))
-                  {  if($data['Q9Wa1'] == 'Y')
-                  {
-                  ?>
-<div class="form-group" id="Q9Wa2">
-<?php } else { ?>
-<div class="form-group" id="Q9Wa2" style="display: none;">
-<?php }
-                          } else {?>
-<div class="form-group" id="Q9Wa2" style="display: none;">
-<?php } ?>
-<div class="form-group row" id="Q9Wa2">
-  <label><span class="cube">5(a)</span>What is the methodology used?</label>
-  <div class="text-gray">
-    <label>
-    <input type="checkbox" name="Q9Wa2S1"
-                               value="<?php echo set_value('Q9Wa2S1', 1); ?>" <?php if (isset($data['Q9Wa2S1'])) echo "checked" ?>>
-    Natural composting without added microbes</label>
-  </div>
-  <div class="text-gray">
-    <label>
-    <input type="checkbox" name="Q9Wa2S2"
-                               value="<?php echo set_value('Q9Wa2S2', 1); ?>" <?php if (isset($data['Q9Wa2S2'])) echo "checked" ?>>
-    Vermi composting</label>
-  </div>
-  <div class="text-gray">
-    <label>
-    <input type="checkbox" name="Q9Wa2S3"
-                               value="<?php echo set_value('Q9Wa2S3', 1); ?>" <?php if (isset($data['Q9Wa2S3'])) echo "checked" ?>>
-    Mechanical composting</label>
-  </div>
-  <div class="text-gray">
-    <label>Other: &nbsp
-    <input type="text" name="Q9Wa2S4" value="<?php echo set_value('Q9Wa2S4'); ?>"
-                               placeholder="<?php if (isset($data['Q9Wa2S4'])) echo $data['Q9Wa2S4'] ?>">
-    </label>
-  </div>
-</div>
-<?php
-                  if(isset($data['Q9Wa1']))
-                  {  if($data['Q9Wa1'] == 'Y')
-                  {
-                  ?>
-<div class="form-group" id="Q9Wa3">
-<?php } else { ?>
-<div class="form-group" id="Q9Wa3" style="display: none;">
-<?php }
-                          } else {?>
-<div class="form-group" id="Q9Wa3" style="display: none;">
-  <?php } ?>
-  <div class="form-group" id="Q9Wa3">
-    <label for="username" class="control-label"><span class="cube">5(b)</span>What is the quantity of
-    compost that is generated per month (in kilogram)?</label>
-    <br>
-    <input type="text" name="Q9Wa3" id="Q9Wa31" class="form-control space-textbox"
-                       placeholder="<?php if (isset($data['Q9Wa3'])) echo $data['Q9Wa3'] ?>"
-                       value="<?php echo set_value('Q9Wa3'); ?>">
-  </div>
-</div>
-<br>
-<?php
-                  if(isset($data['Q9Wa1']))
-                  {  if($data['Q9Wa1'] == 'Y')
-                  {
-                  ?>
-<div class="form-group" id="Q9Wa4">
-  <?php } else { ?>
-  <div class="form-group" id="Q9Wa4" style="display: none;">
-    <?php }
-                          } else {?>
-    <div class="form-group" id="Q9Wa4" style="display: none;">
-      <?php } ?>
-      <div class="form-group row" id="Q9Wa4">
-        <label><span class="cube">5(c)</span> What is the purpose of the compost that is generated per month? </label>
-        <div class="form-group row">
-          <label class="text-gray">
-          <input type="checkbox" name="Q9Wa4S1"
-                           value="<?php echo set_value('Q9Wa4S1', 1); ?>" <?php if (isset($data['Q9Wa4S1'])) echo "checked" ?>>
-          For horticultural purposes </label>
-        </div>
-        <div class="form-group row">
-          <label class="text-gray">
-          <input type="checkbox" name="Q9Wa4S2"
-                           value="<?php echo set_value('Q9Wa4S2', 1); ?>" <?php if (isset($data['Q9Wa4S2'])) echo "checked" ?>>
-          For school garden</label>
-        </div>
-        <div class="form-group row">
-          <label class="text-gray">
-          <input type="checkbox" name="Q9Wa4S3"
-                           value="<?php echo set_value('Q9Wa4S3', 1); ?>" <?php if (isset($data['Q9Wa4S3'])) echo "checked" ?>>
-          For sale</label>
-        </div>
-        <div class="form-group row">
-          <label class="text-gray">
-          <input type="checkbox" name="Q9Wa4S4"
-                           value="<?php echo set_value('Q9Wa4S4', 1); ?>" <?php if (isset($data['Q9Wa4S4'])) echo "checked" ?>>
-          For charity</label>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+
+<div id="compositive" style="display:none;"> <!-- Q5 div hide -->
+
+			<div class="form-group row" id="Q9Wa2">
+			  <label><span class="cube">5(a)</span>What is the methodology used?</label>
+			  <div class="text-gray">
+				<label>
+				<input type="checkbox" name="Q9Wa2S1"
+										   value="<?php echo set_value('Q9Wa2S1', 1); ?>" <?php if (isset($data['Q9Wa2S1'])) echo "checked" ?>>
+				Natural composting without added microbes</label>
+			  </div>
+			  <div class="text-gray">
+				<label>
+				<input type="checkbox" name="Q9Wa2S2"
+										   value="<?php echo set_value('Q9Wa2S2', 1); ?>" <?php if (isset($data['Q9Wa2S2'])) echo "checked" ?>>
+				Vermi composting</label>
+			  </div>
+			  <div class="text-gray">
+				<label>
+				<input type="checkbox" name="Q9Wa2S3"
+										   value="<?php echo set_value('Q9Wa2S3', 1); ?>" <?php if (isset($data['Q9Wa2S3'])) echo "checked" ?>>
+				Mechanical composting</label>
+			  </div>
+			  <div class="text-gray">
+				<label>Other: &nbsp
+				<input type="text" name="Q9Wa2S4" value="<?php echo set_value('Q9Wa2S4'); ?>"
+										   placeholder="<?php if (isset($data['Q9Wa2S4'])) echo $data['Q9Wa2S4'] ?>">
+				</label>
+			  </div>
+			</div>
+
+			<div class="form-group" id="Q9Wa3">
+			  
+			  <div class="form-group" id="Q9Wa3">
+				<label for="username" class="control-label"><span class="cube">5(b)</span>What is the quantity of
+				compost that is generated per month (in kilogram)?</label>
+				<br>
+				<input type="text" name="Q9Wa3" id="Q9Wa31" class="form-control space-textbox"
+								   placeholder="<?php if (isset($data['Q9Wa3'])) echo $data['Q9Wa3'] ?>"
+								   value="<?php if (isset($data['Q9Wa3'])) echo $data['Q9Wa3'] ?>">
+			  </div>
+			</div>
+			<br>
+
+				  <div class="form-group row" id="Q9Wa4">
+					<label><span class="cube">5(c)</span> What is the purpose of the compost that is generated per month? </label>
+					<div class="form-group row">
+					  <label class="text-gray">
+					  <input type="checkbox" name="Q9Wa4S1"
+									   value="<?php echo set_value('Q9Wa4S1', 1); ?>" <?php if (isset($data['Q9Wa4S1'])) echo "checked" ?>>
+					  For horticultural purposes </label>
+					</div>
+					<div class="form-group row">
+					  <label class="text-gray">
+					  <input type="checkbox" name="Q9Wa4S2"
+									   value="<?php echo set_value('Q9Wa4S2', 1); ?>" <?php if (isset($data['Q9Wa4S2'])) echo "checked" ?>>
+					  For school garden</label>
+					</div>
+					<div class="form-group row">
+					  <label class="text-gray">
+					  <input type="checkbox" name="Q9Wa4S3"
+									   value="<?php echo set_value('Q9Wa4S3', 1); ?>" <?php if (isset($data['Q9Wa4S3'])) echo "checked" ?>>
+					  For sale</label>
+					</div>
+					<div class="form-group row">
+					  <label class="text-gray">
+					  <input type="checkbox" name="Q9Wa4S4"
+									   value="<?php echo set_value('Q9Wa4S4', 1); ?>" <?php if (isset($data['Q9Wa4S4'])) echo "checked" ?>>
+					  For charity</label>
+					</div>
+				  </div>
+</div><!-- Q5 div hide -->
+    
 <div class="form-group">
   <label class="control-label"><span class="cube">6</span>Does your school encourage students & teachers to
   reuse textbooks? <a class="kplink"
@@ -2315,22 +2428,22 @@
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa1S1" type="number"   step="any"  
                        name="Q12Wa1S1" placeholder="<?php if (isset($data['Q12Wa1S1'])) echo $data['Q12Wa1S1'] ?>"
-                       value="<?php echo set_value('Q12Wa1S1'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa1S1'])) echo $data['Q12Wa1S1'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa1S2" type="number"   step="any"  
                        name="Q12Wa1S2" placeholder="<?php if (isset($data['Q12Wa1S2'])) echo $data['Q12Wa1S2'] ?>"
-                       value="<?php echo set_value('Q12Wa1S2'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa1S2'])) echo $data['Q12Wa1S2'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa1S3" type="number"   step="any"  
                        name="Q12Wa1S3" placeholder="<?php if (isset($data['Q12Wa1S3'])) echo $data['Q12Wa1S3'] ?>"
-                       value="<?php echo set_value('Q12Wa1S3'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa1S3'])) echo $data['Q12Wa1S3'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa1S4" type="number"   step="any"  
                        name="Q12Wa1S4" placeholder="<?php if (isset($data['Q12Wa1S4'])) echo $data['Q12Wa1S4'] ?>"
-                       value="<?php echo set_value('Q12Wa1S4'); ?>" readonly/>
+                       value="<?php if (isset($data['Q12Wa1S4'])) echo $data['Q12Wa1S4'] ?>" readonly/>
   </div>
 </div>
 <div class="form-group row">
@@ -2340,22 +2453,22 @@
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa2S1" type="number"   step="any"  
                        name="Q12Wa2S1" placeholder="<?php if (isset($data['Q12Wa2S1'])) echo $data['Q12Wa2S1'] ?>"
-                       value="<?php echo set_value('Q12Wa2S1'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa2S1'])) echo $data['Q12Wa2S1'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa2S2" type="number"   step="any"  
                        name="Q12Wa2S2" placeholder="<?php if (isset($data['Q12Wa2S2'])) echo $data['Q12Wa2S2'] ?>"
-                       value="<?php echo set_value('Q12Wa2S2'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa2S2'])) echo $data['Q12Wa2S2'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa2S3" type="number"   step="any"  
                        name="Q12Wa2S3" placeholder="<?php if (isset($data['Q12Wa2S3'])) echo $data['Q12Wa2S3'] ?>"
-                       value="<?php echo set_value('Q12Wa2S3'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa2S3'])) echo $data['Q12Wa2S3'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa2S4" type="number"   step="any"  
                        name="Q12Wa2S4" placeholder="<?php if (isset($data['Q12Wa2S4'])) echo $data['Q12Wa2S4'] ?>"
-                       value="<?php echo set_value('Q12Wa2S4'); ?>" readonly/>
+                       value="<?php if (isset($data['Q12Wa2S4'])) echo $data['Q12Wa2S4'] ?>" readonly/>
   </div>
 </div>
 <div class="form-group row">
@@ -2365,22 +2478,22 @@
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa3S1" type="number"   step="any"  
                        name="Q12Wa3S1" placeholder="<?php if (isset($data['Q12Wa3S1'])) echo $data['Q12Wa3S1'] ?>"
-                       value="<?php echo set_value('Q12Wa3S1'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa3S1'])) echo $data['Q12Wa3S1'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa3S2" type="number"   step="any"  
                        name="Q12Wa3S2" placeholder="<?php if (isset($data['Q12Wa3S2'])) echo $data['Q12Wa3S2'] ?>"
-                       value="<?php echo set_value('Q12Wa3S2'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa3S2'])) echo $data['Q12Wa3S2'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa3S3" type="number"   step="any"  
                        name="Q12Wa3S3" placeholder="<?php if (isset($data['Q12Wa3S3'])) echo $data['Q12Wa3S3'] ?>"
-                       value="<?php echo set_value('Q12Wa3S3'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa3S3'])) echo $data['Q12Wa3S3'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa3S4" type="number"   step="any"  
                        name="Q12Wa3S4" placeholder="<?php if (isset($data['Q12Wa3S4'])) echo $data['Q12Wa3S4'] ?>"
-                       value="<?php echo set_value('Q12Wa3S4'); ?>" readonly/>
+                       value="<?php if (isset($data['Q12Wa3S4'])) echo $data['Q12Wa3S4'] ?>" readonly/>
   </div>
 </div>
 <div class="form-group row">
@@ -2390,22 +2503,22 @@
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa4S1" type="number"   step="any"  
                        name="Q12Wa4S1" placeholder="<?php if (isset($data['Q12Wa4S1'])) echo $data['Q12Wa4S1'] ?>"
-                       value="<?php echo set_value('Q12Wa4S1'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa4S1'])) echo $data['Q12Wa4S1'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa4S2" type="number"   step="any"  
                        name="Q12Wa4S2" placeholder="<?php if (isset($data['Q12Wa4S2'])) echo $data['Q12Wa4S2'] ?>"
-                       value="<?php echo set_value('Q12Wa4S2'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa4S2'])) echo $data['Q12Wa4S2'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa4S3" type="number"   step="any"  
                        name="Q12Wa4S3" placeholder="<?php if (isset($data['Q12Wa4S3'])) echo $data['Q12Wa4S3'] ?>"
-                       value="<?php echo set_value('Q12Wa4S3'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa4S3'])) echo $data['Q12Wa4S3'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa4S4" type="number"   step="any"  
                        name="Q12Wa4S4" placeholder="<?php if (isset($data['Q12Wa4S4'])) echo $data['Q12Wa4S4'] ?>"
-                       value="<?php echo set_value('Q12Wa4S4'); ?>" readonly/>
+                       value="<?php if (isset($data['Q12Wa4S4'])) echo $data['Q12Wa4S4'] ?>" readonly/>
   </div>
 </div>
 <div class="form-group row">
@@ -2415,22 +2528,22 @@
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa5S1" type="number"   step="any"  
                        name="Q12Wa5S1" placeholder="<?php if (isset($data['Q12Wa5S1'])) echo $data['Q12Wa5S1'] ?>"
-                       value="<?php echo set_value('Q12Wa5S1'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa5S1'])) echo $data['Q12Wa5S1'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa5S2" type="number"   step="any"  
                        name="Q12Wa5S2" placeholder="<?php if (isset($data['Q12Wa5S2'])) echo $data['Q12Wa5S2'] ?>"
-                       value="<?php echo set_value('Q12Wa5S2'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa5S2'])) echo $data['Q12Wa5S2'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa5S3" type="number"   step="any"  
                        name="Q12Wa5S3" placeholder="<?php if (isset($data['Q12Wa5S3'])) echo $data['Q12Wa5S3'] ?>"
-                       value="<?php echo set_value('Q12Wa5S3'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa5S3'])) echo $data['Q12Wa5S3'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa5S4" type="number"   step="any"  
                        name="Q12Wa5S4" placeholder="<?php if (isset($data['Q12Wa5S4'])) echo $data['Q12Wa5S4'] ?>"
-                       value="<?php echo set_value('Q12Wa5S4'); ?>" readonly/>
+                       value="<?php if (isset($data['Q12Wa5S4'])) echo $data['Q12Wa5S4'] ?>" readonly/>
   </div>
 </div>
 <div class="form-group row">
@@ -2440,22 +2553,22 @@
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa6S1" type="number"   step="any"  
                        name="Q12Wa6S1" placeholder="<?php if (isset($data['Q12Wa6S1'])) echo $data['Q12Wa6S1'] ?>"
-                       value="<?php echo set_value('Q12Wa6S1'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa6S1'])) echo $data['Q12Wa6S1'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa6S2" type="number"   step="any"  
                        name="Q12Wa6S2" placeholder="<?php if (isset($data['Q12Wa6S2'])) echo $data['Q12Wa6S2'] ?>"
-                       value="<?php echo set_value('Q12Wa6S2'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa6S2'])) echo $data['Q12Wa6S2'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa6S3" type="number"   step="any"  
                        name="Q12Wa6S3" placeholder="<?php if (isset($data['Q12Wa6S3'])) echo $data['Q12Wa6S3'] ?>"
-                       value="<?php echo set_value('Q12Wa6S3'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa6S3'])) echo $data['Q12Wa6S3'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa6S4" type="number"   step="any"  
                        name="Q12Wa6S4" placeholder="<?php if (isset($data['Q12Wa6S4'])) echo $data['Q12Wa6S4'] ?>"
-                       value="<?php echo set_value('Q12Wa6S4'); ?>" readonly/>
+                       value="<?php if (isset($data['Q12Wa6S4'])) echo $data['Q12Wa6S4'] ?>" readonly/>
   </div>
 </div>
 <div class="form-group row">
@@ -2465,22 +2578,22 @@
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa7S1" type="number"   step="any"  
                        name="Q12Wa7S1" placeholder="<?php if (isset($data['Q12Wa7S1'])) echo $data['Q12Wa7S1'] ?>"
-                       value="<?php echo set_value('Q12Wa7S1'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa7S1'])) echo $data['Q12Wa7S1'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa7S2" type="number"   step="any"  
                        name="Q12Wa7S2" placeholder="<?php if (isset($data['Q12Wa7S2'])) echo $data['Q12Wa7S2'] ?>"
-                       value="<?php echo set_value('Q12Wa7S2'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa7S2'])) echo $data['Q12Wa7S2'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa7S3" type="number"   step="any"  
                        name="Q12Wa7S3" placeholder="<?php if (isset($data['Q12Wa7S3'])) echo $data['Q12Wa7S3'] ?>"
-                       value="<?php echo set_value('Q12Wa7S3'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa7S3'])) echo $data['Q12Wa7S3'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa7S4" type="number"   step="any"  
                        name="Q12Wa7S4" placeholder="<?php if (isset($data['Q12Wa7S4'])) echo $data['Q12Wa7S4'] ?>"
-                       value="<?php echo set_value('Q12Wa7S4'); ?>" readonly/>
+                       value="<?php if (isset($data['Q12Wa7S4'])) echo $data['Q12Wa7S4'] ?>" readonly/>
   </div>
 </div>
 <div class="form-group row">
@@ -2490,22 +2603,22 @@
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa8S1" type="number"   step="any"  
                        name="Q12Wa8S1" placeholder="<?php if (isset($data['Q12Wa8S1'])) echo $data['Q12Wa8S1'] ?>"
-                       value="<?php echo set_value('Q12Wa8S1'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa8S1'])) echo $data['Q12Wa8S1'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa8S2" type="number"   step="any"  
                        name="Q12Wa8S2" placeholder="<?php if (isset($data['Q12Wa8S2'])) echo $data['Q12Wa8S2'] ?>"
-                       value="<?php echo set_value('Q12Wa8S2'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa8S2'])) echo $data['Q12Wa8S2'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa8S3" type="number"   step="any"  
                        name="Q12Wa8S3" placeholder="<?php if (isset($data['Q12Wa8S3'])) echo $data['Q12Wa8S3'] ?>"
-                       value="<?php echo set_value('Q12Wa8S3'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa8S3'])) echo $data['Q12Wa8S3'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa8S4" type="number"   step="any"  
                        name="Q12Wa8S4" placeholder="<?php if (isset($data['Q12Wa8S4'])) echo $data['Q12Wa8S4'] ?>"
-                       value="<?php echo set_value('Q12Wa8S4'); ?>" readonly/>
+                       value="<?php if (isset($data['Q12Wa8S4'])) echo $data['Q12Wa8S4'] ?>" readonly/>
   </div>
 </div>
 <div class="form-group row">
@@ -2515,22 +2628,22 @@
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa9S1" type="number"   step="any"  
                        name="Q12Wa9S1" placeholder="<?php if (isset($data['Q12Wa9S1'])) echo $data['Q12Wa9S1'] ?>"
-                       value="<?php echo set_value('Q12Wa9S1'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa9S1'])) echo $data['Q12Wa9S1'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa9S2" type="number"   step="any"  
                        name="Q12Wa9S2" placeholder="<?php if (isset($data['Q12Wa9S2'])) echo $data['Q12Wa9S2'] ?>"
-                       value="<?php echo set_value('Q12Wa9S2'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa9S2'])) echo $data['Q12Wa9S2'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa9S3" type="number"   step="any"  
                        name="Q12Wa9S3" placeholder="<?php if (isset($data['Q12Wa9S3'])) echo $data['Q12Wa9S3'] ?>"
-                       value="<?php echo set_value('Q12Wa9S3'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa9S3'])) echo $data['Q12Wa9S3'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa9S4" type="number"   step="any"  
                        name="Q12Wa9S4" placeholder="<?php if (isset($data['Q12Wa9S4'])) echo $data['Q12Wa9S4'] ?>"
-                       value="<?php echo set_value('Q12Wa9S4'); ?>" readonly/>
+                       value="<?php if (isset($data['Q12Wa9S4'])) echo $data['Q12Wa9S4'] ?>" readonly/>
   </div>
 </div>
 <div class="form-group row">
@@ -2540,22 +2653,22 @@
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa10S1" type="number"   step="any"  
                        name="Q12Wa10S1" placeholder="<?php if (isset($data['Q12Wa10S1'])) echo $data['Q12Wa10S1'] ?>"
-                       value="<?php echo set_value('Q12Wa10S1'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa10S1'])) echo $data['Q12Wa10S1'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa10S2" type="number"   step="any"  
                        name="Q12Wa10S2" placeholder="<?php if (isset($data['Q12Wa10S2'])) echo $data['Q12Wa10S2'] ?>"
-                       value="<?php echo set_value('Q12Wa10S2'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa10S2'])) echo $data['Q12Wa10S2'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa10S3" type="number"   step="any"  
                        name="Q12Wa10S3" placeholder="<?php if (isset($data['Q12Wa10S3'])) echo $data['Q12Wa10S3'] ?>"
-                       value="<?php echo set_value('Q12Wa10S3'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa10S3'])) echo $data['Q12Wa10S3'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa10S4" type="number"   step="any"  
                        name="Q12Wa10S4" placeholder="<?php if (isset($data['Q12Wa10S4'])) echo $data['Q12Wa10S4'] ?>"
-                       value="<?php echo set_value('Q12Wa10S4'); ?>" readonly/>
+                       value="<?php if (isset($data['Q12Wa10S4'])) echo $data['Q12Wa10S4'] ?>" readonly/>
   </div>
 </div>
 <div class="form-group row">
@@ -2565,22 +2678,22 @@
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa11S1" type="number"   step="any"  
                        name="Q12Wa11S1" placeholder="<?php if (isset($data['Q12Wa11S1'])) echo $data['Q12Wa11S1'] ?>"
-                       value="<?php echo set_value('Q12Wa11S1'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa11S1'])) echo $data['Q12Wa11S1'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa11S2" type="number"   step="any"  
                        name="Q12Wa11S2" placeholder="<?php if (isset($data['Q12Wa11S2'])) echo $data['Q12Wa11S2'] ?>"
-                       value="<?php echo set_value('Q12Wa11S2'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa11S2'])) echo $data['Q12Wa11S2'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa11S3" type="number"   step="any"  
                        name="Q12Wa11S3" placeholder="<?php if (isset($data['Q12Wa11S3'])) echo $data['Q12Wa11S3'] ?>"
-                       value="<?php echo set_value('Q12Wa11S3'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa11S3'])) echo $data['Q12Wa11S3'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa11S4" type="number"   step="any"  
                        name="Q12Wa11S4" placeholder="<?php if (isset($data['Q12Wa11S4'])) echo $data['Q12Wa11S4'] ?>"
-                       value="<?php echo set_value('Q12Wa11S4'); ?>" readonly/>
+                       value="<?php if (isset($data['Q12Wa11S4'])) echo $data['Q12Wa11S4'] ?>" readonly/>
   </div>
 </div>
 <div class="form-group row">
@@ -2590,22 +2703,22 @@
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa12S1" type="number"   step="any"  
                        name="Q12Wa12S1" placeholder="<?php if (isset($data['Q12Wa12S1'])) echo $data['Q12Wa12S1'] ?>"
-                       value="<?php echo set_value('Q12Wa12S1'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa12S1'])) echo $data['Q12Wa12S1'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa12S2" type="number"   step="any"  
                        name="Q12Wa12S2" placeholder="<?php if (isset($data['Q12Wa12S2'])) echo $data['Q12Wa12S2'] ?>"
-                       value="<?php echo set_value('Q12Wa12S2'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa12S2'])) echo $data['Q12Wa12S2'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa12S3" type="number"   step="any"  
                        name="Q12Wa12S3" placeholder="<?php if (isset($data['Q12Wa12S3'])) echo $data['Q12Wa12S3'] ?>"
-                       value="<?php echo set_value('Q12Wa12S3'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa12S3'])) echo $data['Q12Wa12S3'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa12S4" type="number"   step="any"  
                        name="Q12Wa12S4" placeholder="<?php if (isset($data['Q12Wa12S4'])) echo $data['Q12Wa12S4'] ?>"
-                       value="<?php echo set_value('Q12Wa12S4'); ?>" readonly/>
+                       value="<?php if (isset($data['Q12Wa12S4'])) echo $data['Q12Wa12S4'] ?>" readonly/>
   </div>
 </div>
 <div class="form-group row">
@@ -2615,22 +2728,22 @@
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa13S1" type="number"   step="any"  
                        name="Q12Wa13S1" placeholder="<?php if (isset($data['Q12Wa13S1'])) echo $data['Q12Wa13S1'] ?>"
-                       value="<?php echo set_value('Q12Wa13S1'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa13S1'])) echo $data['Q12Wa13S1'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa13S2" type="number"   step="any"  
                        name="Q12Wa13S2" placeholder="<?php if (isset($data['Q12Wa13S2'])) echo $data['Q12Wa13S2'] ?>"
-                       value="<?php echo set_value('Q12Wa13S2'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa13S2'])) echo $data['Q12Wa13S2'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa13S3" type="number"   step="any"  
                        name="Q12Wa13S3" placeholder="<?php if (isset($data['Q12Wa13S3'])) echo $data['Q12Wa13S3'] ?>"
-                       value="<?php echo set_value('Q12Wa13S3'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa13S3'])) echo $data['Q12Wa13S3'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa13S4" type="number"   step="any"  
                        name="Q12Wa13S4" placeholder="<?php if (isset($data['Q12Wa13S4'])) echo $data['Q12Wa13S4'] ?>"
-                       value="<?php echo set_value('Q12Wa13S4'); ?>" readonly/>
+                       value="<?php if (isset($data['Q12Wa13S4'])) echo $data['Q12Wa13S4'] ?>" readonly/>
   </div>
 </div>
 <div class="form-group row">
@@ -2640,22 +2753,22 @@
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa14S1" type="number"   step="any"  
                        name="Q12Wa14S1" placeholder="<?php if (isset($data['Q12Wa14S1'])) echo $data['Q12Wa14S1'] ?>"
-                       value="<?php echo set_value('Q12Wa14S1'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa14S1'])) echo $data['Q12Wa14S1'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa14S2" type="number"   step="any"  
                        name="Q12Wa14S2" placeholder="<?php if (isset($data['Q12Wa14S2'])) echo $data['Q12Wa14S2'] ?>"
-                       value="<?php echo set_value('Q12Wa14S2'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa14S2'])) echo $data['Q12Wa14S2'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa14S3" type="number"   step="any"  
                        name="Q12Wa14S3" placeholder="<?php if (isset($data['Q12Wa14S3'])) echo $data['Q12Wa14S3'] ?>"
-                       value="<?php echo set_value('Q12Wa14S3'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa14S3'])) echo $data['Q12Wa14S3'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa14S4" type="number"   step="any"  
                        name="Q12Wa14S4" placeholder="<?php if (isset($data['Q12Wa14S4'])) echo $data['Q12Wa14S4'] ?>"
-                       value="<?php echo set_value('Q12Wa14S4'); ?>" readonly/>
+                       value="<?php if (isset($data['Q12Wa14S4'])) echo $data['Q12Wa14S4'] ?>" readonly/>
   </div>
 </div>
 <div class="form-group row">
@@ -2665,22 +2778,22 @@
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa15S1" type="number"   step="any"  
                        name="Q12Wa15S1" placeholder="<?php if (isset($data['Q12Wa15S1'])) echo $data['Q12Wa15S1'] ?>"
-                       value="<?php echo set_value('Q12Wa15S1'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa15S1'])) echo $data['Q12Wa15S1'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa15S2" type="number"   step="any"  
                        name="Q12Wa15S2" placeholder="<?php if (isset($data['Q12Wa15S2'])) echo $data['Q12Wa15S2'] ?>"
-                       value="<?php echo set_value('Q12Wa15S2'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa15S2'])) echo $data['Q12Wa15S2'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa15S3" type="number"   step="any"  
                        name="Q12Wa15S3" placeholder="<?php if (isset($data['Q12Wa15S3'])) echo $data['Q12Wa15S3'] ?>"
-                       value="<?php echo set_value('Q12Wa15S3'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa15S3'])) echo $data['Q12Wa15S3'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa15S4" type="number"   step="any"  
                        name="Q12Wa15S4" placeholder="<?php if (isset($data['Q12Wa15S4'])) echo $data['Q12Wa15S4'] ?>"
-                       value="<?php echo set_value('Q12Wa15S4'); ?>" readonly/>
+                       value="<?php if (isset($data['Q12Wa15S4'])) echo $data['Q12Wa15S4'] ?>" readonly/>
   </div>
 </div>
 <div class="form-group row">
@@ -2690,22 +2803,22 @@
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa16S1" type="number"   step="any"  
                        name="Q12Wa16S1" placeholder="<?php if (isset($data['Q12Wa16S1'])) echo $data['Q12Wa16S1'] ?>"
-                       value="<?php echo set_value('Q12Wa16S1'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa16S1'])) echo $data['Q12Wa16S1'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa16S2" type="number"   step="any"  
                        name="Q12Wa16S2" placeholder="<?php if (isset($data['Q12Wa16S2'])) echo $data['Q12Wa16S2'] ?>"
-                       value="<?php echo set_value('Q12Wa16S2'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa16S2'])) echo $data['Q12Wa16S2'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa16S3" type="number"   step="any"  
                        name="Q12Wa16S3" placeholder="<?php if (isset($data['Q12Wa16S3'])) echo $data['Q12Wa16S3'] ?>"
-                       value="<?php echo set_value('Q12Wa16S3'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa16S3'])) echo $data['Q12Wa16S3'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa16S4" type="number"   step="any"  
                        name="Q12Wa16S4" placeholder="<?php if (isset($data['Q12Wa16S4'])) echo $data['Q12Wa16S4'] ?>"
-                       value="<?php echo set_value('Q12Wa16S4'); ?>" readonly/>
+                       value="<?php if (isset($data['Q12Wa16S4'])) echo $data['Q12Wa16S4'] ?>" readonly/>
   </div>
 </div>
 <div class="form-group row">
@@ -2715,22 +2828,22 @@
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa17S1" type="number"   step="any"  
                        name="Q12Wa17S1" placeholder="<?php if (isset($data['Q12Wa17S1'])) echo $data['Q12Wa17S1'] ?>"
-                       value="<?php echo set_value('Q12Wa17S1'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa17S1'])) echo $data['Q12Wa17S1'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa17S2" type="number"   step="any"  
                        name="Q12Wa17S2" placeholder="<?php if (isset($data['Q12Wa17S2'])) echo $data['Q12Wa17S2'] ?>"
-                       value="<?php echo set_value('Q12Wa17S2'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa17S2'])) echo $data['Q12Wa17S2'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa17S3" type="number"   step="any"  
                        name="Q12Wa17S3" placeholder="<?php if (isset($data['Q12Wa17S3'])) echo $data['Q12Wa17S3'] ?>"
-                       value="<?php echo set_value('Q12Wa17S3'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa17S3'])) echo $data['Q12Wa17S3'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa17S4" type="number"   step="any"  
                        name="Q12Wa17S4" placeholder="<?php if (isset($data['Q12Wa17S4'])) echo $data['Q12Wa17S4'] ?>"
-                       value="<?php echo set_value('Q12Wa17S4'); ?>" readonly/>
+                       value="<?php if (isset($data['Q12Wa17S4'])) echo $data['Q12Wa17S4'] ?>" readonly/>
   </div>
 </div>
 <div class="form-group row">
@@ -2740,22 +2853,22 @@
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa18S1" type="number"   step="any"  
                        name="Q12Wa18S1" placeholder="<?php if (isset($data['Q12Wa18S1'])) echo $data['Q12Wa18S1'] ?>"
-                       value="<?php echo set_value('Q12Wa18S1'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa18S1'])) echo $data['Q12Wa18S1'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa18S2" type="number"   step="any"  
                        name="Q12Wa18S2" placeholder="<?php if (isset($data['Q12Wa18S2'])) echo $data['Q12Wa18S2'] ?>"
-                       value="<?php echo set_value('Q12Wa18S2'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa18S2'])) echo $data['Q12Wa18S2'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa18S3" type="number"   step="any"  
                        name="Q12Wa18S3" placeholder="<?php if (isset($data['Q12Wa18S3'])) echo $data['Q12Wa18S3'] ?>"
-                       value="<?php echo set_value('Q12Wa18S3'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa18S3'])) echo $data['Q12Wa18S3'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa18S4" type="number"   step="any"  
                        name="Q12Wa18S4" placeholder="<?php if (isset($data['Q12Wa18S4'])) echo $data['Q12Wa18S4'] ?>"
-                       value="<?php echo set_value('Q12Wa18S4'); ?>" readonly/>
+                       value="<?php if (isset($data['Q12Wa18S4'])) echo $data['Q12Wa18S4'] ?>" readonly/>
   </div>
 </div>
 <div class="form-group row">
@@ -2765,22 +2878,22 @@
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa19S1" type="number"   step="any"  
                        name="Q12Wa19S1" placeholder="<?php if (isset($data['Q12Wa19S1'])) echo $data['Q12Wa19S1'] ?>"
-                       value="<?php echo set_value('Q12Wa19S1'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa19S1'])) echo $data['Q12Wa19S1'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa19S2" type="number"   step="any"  
                        name="Q12Wa19S2" placeholder="<?php if (isset($data['Q12Wa19S2'])) echo $data['Q12Wa19S2'] ?>"
-                       value="<?php echo set_value('Q12Wa19S2'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa19S2'])) echo $data['Q12Wa19S2'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa19S3" type="number"   step="any"  
                        name="Q12Wa19S3" placeholder="<?php if (isset($data['Q12Wa19S3'])) echo $data['Q12Wa19S3'] ?>"
-                       value="<?php echo set_value('Q12Wa19S3'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa19S3'])) echo $data['Q12Wa19S3'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa19S4" type="number"   step="any"  
                        name="Q12Wa19S4" placeholder="<?php if (isset($data['Q12Wa19S4'])) echo $data['Q12Wa19S4'] ?>"
-                       value="<?php echo set_value('Q12Wa19S4'); ?>" readonly/>
+                       value="<?php if (isset($data['Q12Wa19S4'])) echo $data['Q12Wa19S4'] ?>" readonly/>
   </div>
 </div>
 <div class="form-group row">
@@ -2790,22 +2903,22 @@
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa20S1" type="number"   step="any"  
                        name="Q12Wa20S1" placeholder="<?php if (isset($data['Q12Wa20S1'])) echo $data['Q12Wa20S1'] ?>"
-                       value="<?php echo set_value('Q12Wa20S1'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa20S1'])) echo $data['Q12Wa20S1'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa20S2" type="number"   step="any"  
                        name="Q12Wa20S2" placeholder="<?php if (isset($data['Q12Wa20S2'])) echo $data['Q12Wa20S2'] ?>"
-                       value="<?php echo set_value('Q12Wa20S2'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa20S2'])) echo $data['Q12Wa20S2'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa20S3" type="number"   step="any"  
                        name="Q12Wa20S3" placeholder="<?php if (isset($data['Q12Wa20S3'])) echo $data['Q12Wa20S3'] ?>"
-                       value="<?php echo set_value('Q12Wa20S3'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa20S3'])) echo $data['Q12Wa20S3'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa20S4" type="number"   step="any"  
                        name="Q12Wa20S4" placeholder="<?php if (isset($data['Q12Wa20S4'])) echo $data['Q12Wa20S4'] ?>"
-                       value="<?php echo set_value('Q12Wa20S4'); ?>" readonly/>
+                       value="<?php if (isset($data['Q12Wa20S4'])) echo $data['Q12Wa20S4'] ?>" readonly/>
   </div>
 </div>
 <div class="form-group row">
@@ -2815,22 +2928,22 @@
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa21S1" type="number"   step="any"  
                        name="Q12Wa21S1" placeholder="<?php if (isset($data['Q12Wa21S1'])) echo $data['Q12Wa21S1'] ?>"
-                       value="<?php echo set_value('Q12Wa21S1'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa21S1'])) echo $data['Q12Wa21S1'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa21S2" type="number"   step="any"  
                        name="Q12Wa21S2" placeholder="<?php if (isset($data['Q12Wa21S2'])) echo $data['Q12Wa21S2'] ?>"
-                       value="<?php echo set_value('Q12Wa21S2'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa21S2'])) echo $data['Q12Wa21S2'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa21S3" type="number"   step="any"  
                        name="Q12Wa21S3" placeholder="<?php if (isset($data['Q12Wa21S3'])) echo $data['Q12Wa21S3'] ?>"
-                       value="<?php echo set_value('Q12Wa21S3'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa21S3'])) echo $data['Q12Wa21S3'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa21S4" type="number"   step="any"  
                        name="Q12Wa21S4" placeholder="<?php if (isset($data['Q12Wa21S4'])) echo $data['Q12Wa21S4'] ?>"
-                       value="<?php echo set_value('Q12Wa21S4'); ?>" readonly/>
+                       value="<?php if (isset($data['Q12Wa21S4'])) echo $data['Q12Wa21S4'] ?>" readonly/>
   </div>
 </div>
 <div class="form-group row">
@@ -2840,22 +2953,22 @@
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa22S1" type="number"   step="any"  
                        name="Q12Wa22S1" placeholder="<?php if (isset($data['Q12Wa22S1'])) echo $data['Q12Wa22S1'] ?>"
-                       value="<?php echo set_value('Q12Wa22S1'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa22S1'])) echo $data['Q12Wa22S1'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa22S2" type="number"   step="any"  
                        name="Q12Wa22S2" placeholder="<?php if (isset($data['Q12Wa22S2'])) echo $data['Q12Wa22S2'] ?>"
-                       value="<?php echo set_value('Q12Wa22S2'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa22S2'])) echo $data['Q12Wa22S2'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa22S3" type="number"   step="any"  
                        name="Q12Wa22S3" placeholder="<?php if (isset($data['Q12Wa22S3'])) echo $data['Q12Wa22S3'] ?>"
-                       value="<?php echo set_value('Q12Wa22S3'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa22S3'])) echo $data['Q12Wa22S3'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa22S4" type="number"   step="any"  
                        name="Q12Wa22S4" placeholder="<?php if (isset($data['Q12Wa22S4'])) echo $data['Q12Wa22S4'] ?>"
-                       value="<?php echo set_value('Q12Wa22S4'); ?>" readonly/>
+                       value="<?php if (isset($data['Q12Wa22S4'])) echo $data['Q12Wa22S4'] ?>" readonly/>
   </div>
 </div>
 <div class="form-group row">
@@ -2865,22 +2978,22 @@
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa23S1" type="number"   step="any"  
                        name="Q12Wa23S1" placeholder="<?php if (isset($data['Q12Wa23S1'])) echo $data['Q12Wa23S1'] ?>"
-                       value="<?php echo set_value('Q12Wa23S1'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa23S1'])) echo $data['Q12Wa23S1'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa23S2" type="number"   step="any"  
                        name="Q12Wa23S2" placeholder="<?php if (isset($data['Q12Wa23S2'])) echo $data['Q12Wa23S2'] ?>"
-                       value="<?php echo set_value('Q12Wa23S2'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa23S2'])) echo $data['Q12Wa23S2'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa23S3" type="number"   step="any"  
                        name="Q12Wa23S3" placeholder="<?php if (isset($data['Q12Wa23S3'])) echo $data['Q12Wa23S3'] ?>"
-                       value="<?php echo set_value('Q12Wa23S3'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa23S3'])) echo $data['Q12Wa23S3'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa23S4" type="number"   step="any"  
                        name="Q12Wa23S4" placeholder="<?php if (isset($data['Q12Wa23S4'])) echo $data['Q12Wa23S4'] ?>"
-                       value="<?php echo set_value('Q12Wa23S4'); ?>" readonly/>
+                       value="<?php if (isset($data['Q12Wa23S4'])) echo $data['Q12Wa23S4'] ?>" readonly/>
   </div>
 </div>
 <div class="form-group row">
@@ -2890,22 +3003,22 @@
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa24S1" type="number"   step="any"  
                        name="Q12Wa24S1" placeholder="<?php if (isset($data['Q12Wa24S1'])) echo $data['Q12Wa24S1'] ?>"
-                       value="<?php echo set_value('Q12Wa24S1'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa24S1'])) echo $data['Q12Wa24S1'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa24S2" type="number"   step="any"  
                        name="Q12Wa24S2" placeholder="<?php if (isset($data['Q12Wa24S2'])) echo $data['Q12Wa24S2'] ?>"
-                       value="<?php echo set_value('Q12Wa24S2'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa24S2'])) echo $data['Q12Wa24S2'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa24S3" type="number"   step="any"  
                        name="Q12Wa24S3" placeholder="<?php if (isset($data['Q12Wa24S3'])) echo $data['Q12Wa24S3'] ?>"
-                       value="<?php echo set_value('Q12Wa24S3'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa24S3'])) echo $data['Q12Wa24S3'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa24S4" type="number"   step="any"  
                        name="Q12Wa24S4" placeholder="<?php if (isset($data['Q12Wa24S4'])) echo $data['Q12Wa24S4'] ?>"
-                       value="<?php echo set_value('Q12Wa24S4'); ?>" readonly/>
+                       value="<?php if (isset($data['Q12Wa24S4'])) echo $data['Q12Wa24S4'] ?>" readonly/>
   </div>
 </div>
 <div class="form-group row">
@@ -2915,22 +3028,22 @@
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa25S1" type="number"   step="any"  
                        name="Q12Wa25S1" placeholder="<?php if (isset($data['Q12Wa25S1'])) echo $data['Q12Wa25S1'] ?>"
-                       value="<?php echo set_value('Q12Wa25S1'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa25S1'])) echo $data['Q12Wa25S1'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa25S2" type="number"   step="any"  
-                       name="Q12Wa25S2" placeholder="<?php if (isset($data['Q12Wa25S2'])) echo $data['Q12Wa25S2'] ?>"
-                       value="<?php echo set_value('Q12Wa25S2'); ?>"/>
+                       name="Q12Wa25S2" placeholder="<?php if (isset($data['Q12Wa25S2'])) echo $data['Q12Wa25S2']; ?>"
+                       value="<?php if (isset($data['Q12Wa25S2'])) echo $data['Q12Wa25S2']; ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa25S3" type="number"   step="any"  
                        name="Q12Wa25S3" placeholder="<?php if (isset($data['Q12Wa25S3'])) echo $data['Q12Wa25S3'] ?>"
-                       value="<?php echo set_value('Q12Wa25S3'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa25S3'])) echo $data['Q12Wa25S3'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa25S4" type="number"   step="any"  
                        name="Q12Wa25S4" placeholder="<?php if (isset($data['Q12Wa25S4'])) echo $data['Q12Wa25S4'] ?>"
-                       value="<?php echo set_value('Q12Wa25S4'); ?>" readonly/>
+                       value="<?php if (isset($data['Q12Wa25S4'])) echo $data['Q12Wa25S4'] ?>" readonly/>
   </div>
 </div>
 <div class="form-group row">
@@ -2940,22 +3053,22 @@
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa26S1" type="number"   step="any"  
                        name="Q12Wa26S1" placeholder="<?php if (isset($data['Q12Wa26S1'])) echo $data['Q12Wa26S1'] ?>"
-                       value="<?php echo set_value('Q12Wa26S1'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa26S1'])) echo $data['Q12Wa26S1'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa26S2" type="number"   step="any"  
                        name="Q12Wa26S2" placeholder="<?php if (isset($data['Q12Wa26S2'])) echo $data['Q12Wa26S2'] ?>"
-                       value="<?php echo set_value('Q12Wa26S2'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa26S2'])) echo $data['Q12Wa26S2'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa26S3" type="number"   step="any"  
                        name="Q12Wa26S3" placeholder="<?php if (isset($data['Q12Wa26S3'])) echo $data['Q12Wa26S3'] ?>"
-                       value="<?php echo set_value('Q12Wa26S3'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa26S3'])) echo $data['Q12Wa26S3'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa26S4" type="number"   step="any"  
                        name="Q12Wa26S4" placeholder="<?php if (isset($data['Q12Wa26S4'])) echo $data['Q12Wa26S4'] ?>"
-                       value="<?php echo set_value('Q12Wa26S4'); ?>" readonly/>
+                       value="<?php if (isset($data['Q12Wa26S4'])) echo $data['Q12Wa26S4'] ?>" readonly/>
   </div>
 </div>
 <div class="form-group row">
@@ -2965,22 +3078,22 @@
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa27S1" type="number"   step="any"  
                        name="Q12Wa27S1" placeholder="<?php if (isset($data['Q12Wa27S1'])) echo $data['Q12Wa27S1'] ?>"
-                       value="<?php echo set_value('Q12Wa27S1'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa27S1'])) echo $data['Q12Wa27S1'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa27S2" type="number"   step="any"  
                        name="Q12Wa27S2" placeholder="<?php if (isset($data['Q12Wa27S2'])) echo $data['Q12Wa27S2'] ?>"
-                       value="<?php echo set_value('Q12Wa27S2'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa27S2'])) echo $data['Q12Wa27S2'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa27S3" type="number"   step="any"  
                        name="Q12Wa27S3" placeholder="<?php if (isset($data['Q12Wa27S3'])) echo $data['Q12Wa27S3'] ?>"
-                       value="<?php echo set_value('Q12Wa27S3'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa27S3'])) echo $data['Q12Wa27S3'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa27S4" type="number"   step="any"  
                        name="Q12Wa27S4" placeholder="<?php if (isset($data['Q12Wa27S4'])) echo $data['Q12Wa27S4'] ?>"
-                       value="<?php echo set_value('Q12Wa27S4'); ?>" readonly/>
+                       value="<?php if (isset($data['Q12Wa27S4'])) echo $data['Q12Wa27S4'] ?>" readonly/>
   </div>
 </div>
 <div class="form-group row">
@@ -2990,22 +3103,22 @@
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa28S1" type="number"   step="any"  
                        name="Q12Wa28S1" placeholder="<?php if (isset($data['Q12Wa28S1'])) echo $data['Q12Wa28S1'] ?>"
-                       value="<?php echo set_value('Q12Wa28S1'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa28S1'])) echo $data['Q12Wa28S1'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa28S2" type="number"   step="any"  
                        name="Q12Wa28S2" placeholder="<?php if (isset($data['Q12Wa28S2'])) echo $data['Q12Wa28S2'] ?>"
-                       value="<?php echo set_value('Q12Wa28S2'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa28S2'])) echo $data['Q12Wa28S2'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa28S3" type="number"   step="any"  
                        name="Q12Wa28S3" placeholder="<?php if (isset($data['Q12Wa28S3'])) echo $data['Q12Wa28S3'] ?>"
-                       value="<?php echo set_value('Q12Wa28S3'); ?>"/>
+                       value="<?php if (isset($data['Q12Wa28S3'])) echo $data['Q12Wa28S3'] ?>"/>
   </div>
   <div class="col-xs-2">
     <input class="form-control space-textbox" onKeyUp="computeItems()" id="Q12Wa28S4" type="number"   step="any"  
                        name="Q12Wa28S4" placeholder="<?php if (isset($data['Q12Wa28S4'])) echo $data['Q12Wa28S4'] ?>"
-                       value="<?php echo set_value('Q12Wa28S4'); ?>" readonly/>
+                       value="<?php if (isset($data['Q12Wa28S4'])) echo $data['Q12Wa28S4'] ?>" readonly/>
   </div>
 </div>
 <br>
@@ -3064,7 +3177,7 @@
                            value="<?php echo set_value('Q13Wa1', 'Y') ?>" <?php if (isset($data['Q13Wa1'])) echo $data['Q13Wa1'] == 'Y' ? "checked" : "" ?>>
     Yes </label>
     <label class="radio-inline text-gray">
-    <input type="radio" name="Q13Wa1" onClick="WasteDealer(2)" class="radio" id="Q13Wa1"
+    <input type="radio" name="Q13Wa1" onClick="WasteDealer(2)" class="radio" id="Q13Wa1_1"
                            value="<?php echo set_value('Q13Wa1', 'N') ?>" <?php if (isset($data['Q13Wa1'])) echo $data['Q13Wa1'] == 'N' ? "checked" : "" ?>>
     No </label>
   </div>
@@ -3248,7 +3361,7 @@
                            value="<?php echo set_value('Q15Wa1', 'Y') ?>" <?php if (isset($data['Q15Wa1'])) echo $data['Q15Wa1'] == 'Y' ? "checked" : "" ?>>
     Yes </label>
     <label class="radio-inline text-gray">
-    <input type="radio" name="Q15Wa1" onClick="WasteBurn(2)" class="radio" id="Q15Wa1"
+    <input type="radio" name="Q15Wa1" onClick="WasteBurn(2)" class="radio" id="Q15Wa1_1"
                            value="<?php echo set_value('Q15Wa1', 'N') ?>" <?php if (isset($data['Q15Wa1'])) echo $data['Q15Wa1'] == 'N' ? "checked" : "" ?>>
     No </label>
   </div>
@@ -3322,7 +3435,7 @@
         </li>
         <li>
           <label class="radio-inline text-gray">
-          <input type="radio" name="Q15Wa2" class="radio" id="Q15Wa2"
+          <input type="radio" name="Q15Wa2" class="radio" id="Q15Wa2_1"
                                            value="<?php echo set_value('Q15Wa2', 2) ?>" <?php if (isset($data['Q15Wa2'])) echo $data['Q15Wa2'] == 2 ? "checked" : "" ?>>
           Outside the school </label>
         </li>
@@ -3405,7 +3518,7 @@
                            value="<?php echo set_value('Q17Wa1', 'Y') ?>" <?php if (isset($data['Q17Wa1'])) echo $data['Q17Wa1'] == 'Y' ? "checked" : "" ?>>
           Yes </label>
           <label class="radio-inline text-gray">
-          <input type="radio" name="Q17Wa1" class="radio" onClick="WastePolicy(2)" id="Q17Wa1"
+          <input type="radio" name="Q17Wa1" class="radio" onClick="WastePolicy(2)" id="Q17Wa1_1"
                            value="<?php echo set_value('Q17Wa1', 'N') ?>" <?php if (isset($data['Q17Wa1'])) echo $data['Q17Wa1'] == 'N' ? "checked" : "" ?>>
           No </label>
         </div>
@@ -3516,7 +3629,7 @@
                            value="<?php echo set_value('Q18Wa1', 'Y') ?>" <?php if (isset($data['Q18Wa1'])) echo $data['Q18Wa1'] == 'Y' ? "checked" : "" ?>>
           Yes </label>
           <label class="radio-inline text-gray">
-          <input type="radio" name="Q18Wa1" class="radio" onClick="WasteAwareness(2)" id="Q18Wa1"
+          <input type="radio" name="Q18Wa1" class="radio" onClick="WasteAwareness(2)" id="Q18Wa1_1"
                            value="<?php echo set_value('Q18Wa1', 'N') ?>" <?php if (isset($data['Q18Wa1'])) echo $data['Q18Wa1'] == 'N' ? "checked" : "" ?>>
           No </label>
         </div>
@@ -3629,7 +3742,7 @@
                            value="<?php echo set_value('Q19Wa1', 'Y') ?>" <?php if (isset($data['Q19Wa1'])) echo $data['Q19Wa1'] == 'Y' ? "checked" : "" ?>>
                   Yes </label>
                   <label class="radio-inline text-gray">
-                  <input type="radio" name="Q19Wa1" class="radio" onClick="WasteWwareness(2)" id="Q19Wa1"
+                  <input type="radio" name="Q19Wa1" class="radio" onClick="WasteWwareness(2)" id="Q19Wa1_1"
                            value="<?php echo set_value('Q19Wa1', 'N') ?>" <?php if (isset($data['Q19Wa1'])) echo $data['Q19Wa1'] == 'N' ? "checked" : "" ?>>
                   No </label>
                 </div>
@@ -3714,6 +3827,605 @@
     </div>
   </div>
 </div>
+
+<script>
+	$(document).ready(function(){
+	
+	$('#waste').validate({
+		rules:{
+		      Q1Wa1S1:{
+				  required:true,
+			  },
+			  Q1Wa1S3:{
+				  required:true,
+			  },
+			  Q1Wa1S2:{
+				  required:true,
+			  },
+			  Q2Wa1S1:{
+				  required:true,
+			  },
+			  Q2Wa1S3:{
+				  required:true,
+			  },
+			  Q2Wa1S2:{
+				  required:true,
+			  },
+			  Q3Wa1S1:{
+				  required:true,
+			  },
+			  Q3Wa1S2:{
+				  required:true,
+			  },
+			  Q3Wa1S3:{
+				  required:true,
+			  },
+			  Q4Wa1:{
+				  required:true,
+			  },
+			  Q4Wa2:{
+				  required:true,
+			  },
+			  Q5Wa1S1:{
+				  required:true,
+			  },
+			  Q5Wa1S2:{
+				  required:true,
+			  },
+			  Q5Wa1S3:{
+				  required:true,
+			  },
+			  Q5Wa1S4:{
+				  required:true,
+			  },
+			  Q5Wa2S1:{
+				  required:true,
+			  },
+			  Q5Wa2S2:{
+				  required:true,
+			  },
+			  Q5Wa2S3:{
+				  required:true,
+			  },
+			  Q5Wa2S4:{
+				  required:true,
+			  },
+			  Q5Wa3S1:{
+				  required:true,
+			  },
+			  Q5Wa3S2:{
+				  required:true,
+			  },
+			  Q5Wa3S3:{
+				  required:true,
+			  },
+			  Q5Wa3S4:{
+				  required:true,
+			  },
+			  Q5Wa4S1:{
+				  required:true,
+			  },
+			  Q5Wa4S2:{
+				  required:true,
+			  },
+			  Q5Wa4S3:{
+				  required:true,
+			  },
+			  Q5Wa4S4:{
+				  required:true,
+			  },
+			  Q5Wa5S1:{
+				  required:true,
+			  },
+			  Q5Wa5S2:{
+				  required:true,
+			  },
+			  Q5Wa5S3:{
+				  required:true,
+			  },
+			  Q5Wa5S4:{
+				  required:true,
+			  },
+			  Q5Wa6S1:{
+				  required:true,
+			  },
+			  Q5Wa6S2:{
+				  required:true,
+			  },
+			  Q5Wa6S3:{
+				  required:true,
+			  },
+			  Q5Wa6S4:{
+				  required:true,
+			  },
+			  Q5Wa7S1:{
+				  required:true,
+			  },
+			  Q5Wa7S2:{
+				  required:true,
+			  },
+			  Q5Wa7S3:{
+				  required:true,
+			  },
+			  Q5Wa7S4:{
+				  required:true,
+			  },
+			  Q5Wa8S1:{
+				  required:true,
+			  },
+			  Q5Wa8S2:{
+				  required:true,
+			  },
+			  Q5Wa8S3:{
+				  required:true,
+			  },
+			  Q5Wa8S4:{
+				  required:true,
+			  },
+			  Q5Wa9S1:{
+				  required:true,
+			  },
+			  Q5Wa9S2:{
+				  required:true,
+			  },
+			  Q5Wa9S3:{
+				  required:true,
+			  },
+			  Q5Wa9S4:{
+				  required:true,
+			  },
+			  Q5Wa10S1:{
+				  required:true,
+			  },
+			  Q5Wa10S2:{
+				  required:true,
+			  },
+			  Q5Wa10S3:{
+				  required:true,
+			  },
+			  Q5Wa10S4:{
+				  required:true,
+			  },
+			  Q6Wa1S1:{
+				  required:true,
+			  },
+			  Q6Wa1S2:{
+				  required:true,
+			  },
+			  Q6Wa1S3:{
+				  required:true,
+			  },
+			  Q6Wa1S4:{
+				  required:true,
+			  },
+			  Q6Wa2S1:{
+				  required:true,
+			  },
+			  Q6Wa2S2:{
+				  required:true,
+			  },
+			  Q6Wa2S3:{
+				  required:true,
+			  },
+			  Q6Wa2S3:{
+				  required:true,
+			  },
+			  Q6Wa2S4:{
+				  required:true,
+			  },
+			  Q6Wa2S5:{
+				  required:true,
+			  },
+			  Q6Wa2S6:{
+				  required:true,
+			  },
+			  Q6Wa2S7:{
+				  required:true,
+			  },
+			  Q6Wa3S1:{
+				  required:true,
+			  },
+			  Q6Wa3S2:{
+				  required:true,
+			  },
+			  Q6Wa4S1:{
+				  required:true,
+			  },
+			  Q6Wa5S1:{
+				  required:true,
+			  },
+			  Q6Wa6S1:{
+				  required:true,
+			  },
+			  Q6Wa7S1:{
+				  required:true,
+			  },
+			  Q8Wa1:{
+				  required:true,
+			  },
+			  Q8Wa1S1:{
+				  required:true,
+			  },
+			  Q8Wa1S2:{
+				  required:true,
+			  },
+			  Q8Wa1S3:{
+				  required:true,
+			  },
+			  Q8Wa1S4:{
+				  required:true,
+			  },
+			  Q8Wa2S1:{
+				  required:true,
+			  },
+			  Q8Wa2S2:{
+				  required:true,
+			  },
+			  Q8Wa2S3:{
+				  required:true,
+			  },
+			  Q8Wa2S4:{
+				  required:true,
+			  },
+			  Q8Wa2S5:{
+				  required:true,
+			  },
+			  Q8Wa2S6:{
+				  required:true,
+			  },
+			  Q8Wa2S7:{
+				  required:true,
+			  },
+			  Q8Wa3S1:{
+				  required:true,
+			  },
+			  Q8Wa3S2:{
+				  required:true,
+			  },
+			  Q8Wa4S1:{
+				  required:true,
+			  },
+			  Q8Wa5S1:{
+				  required:true,
+			  },
+			  Q8Wa6S1:{
+				  required:true,
+			  },
+			  Q8Wa7S1:{
+				  required:true,
+			  },
+			  Q9Wa1:{
+				  required:true,
+			  },
+			  Q9Wa3:{
+				  required:true,
+			  },
+			  Q10Wa1:{
+				  required:true,
+			  },
+			  Q12Wa1S1:{
+				  required:true,  
+			  },
+			  Q12Wa1S2:{
+				  required:true,
+			  },
+			  Q12Wa1S3:{
+				  required:true,
+			  },
+			  Q12Wa2S1:{
+				  required:true,
+			  },
+			  Q12Wa2S2:{
+				  required:true,
+			  },
+			  Q12Wa2S3:{
+				  required:true,
+			  },
+			  Q12Wa3S1:{
+				  required:true,
+			  },
+			  Q12Wa3S2:{
+				  required:true,
+			  },
+			  Q12Wa3S3:{
+				  required:true,
+			  },
+			  Q12Wa4S1:{
+				  required:true,
+			  },
+			  Q12Wa4S2:{
+				  required:true,
+			  },
+			  Q12Wa4S3:{
+				  required:true,
+			  },
+			  Q12Wa5S1:{
+				  required:true,
+			  },
+			  Q12Wa5S2:{
+				  required:true,
+			  },
+			  Q12Wa5S3:{
+				  required:true,
+			  },
+			  Q12Wa6S1:{
+				  required:true,
+			  },
+			  Q12Wa6S2:{
+				  required:true,
+			  },
+			  Q12Wa6S3:{
+				  required:true,
+			  },
+			  Q12Wa7S1:{
+				  required:true,
+			  },
+			  Q12Wa7S2:{
+				  required:true,
+			  },
+			  Q12Wa7S3:{
+				  required:true,
+			  },
+			  Q12Wa8S1:{
+				  required:true,
+			  },
+			  Q12Wa8S2:{
+				  required:true,
+			  },
+			  Q12Wa8S3:{
+				  required:true,
+			  },
+			  Q12Wa9S1:{
+				  required:true,
+			  },
+			  Q12Wa9S2:{
+				  required:true,
+			  },
+			  Q12Wa9S3:{
+				  required:true,
+			  },
+			  Q12Wa10S1:{
+				  required:true,
+			  },
+			  Q12Wa10S2:{
+				  required:true,
+			  },
+			  Q12Wa10S3:{
+				  required:true,
+			  },
+			  Q12Wa11S1:{
+				  required:true,
+			  },
+			  Q12Wa11S2:{
+				  required:true,
+			  },
+			  Q12Wa11S3:{
+				  required:true,
+			  },
+			  Q12Wa12S1:{
+				  required:true,
+			  },
+			  Q12Wa12S2:{
+				  required:true,
+			  },
+			  Q12Wa12S3:{
+				  required:true,
+			  },
+			  Q12Wa13S1:{
+				  required:true,
+			  },
+			  Q12Wa13S2:{
+				  required:true,
+			  },
+			  Q12Wa13S3:{
+				  required:true,
+			  },
+			  Q12Wa14S1:{
+				  required:true,
+			  },
+			  Q12Wa14S2:{
+				  required:true,
+			  },
+			  Q12Wa14S3:{
+				  required:true,
+			  },
+			  Q12Wa15S1:{
+				  required:true,
+			  },
+			  Q12Wa15S2:{
+				  required:true,
+			  },
+			  Q12Wa15S3:{
+				  required:true,
+			  },
+			  Q12Wa16S1:{
+				  required:true,
+			  },
+			  Q12Wa16S2:{
+				  required:true,
+			  },
+			  Q12Wa16S3:{
+				  required:true,
+			  },
+			  Q12Wa17S1:{
+				  required:true,
+			  },
+			  Q12Wa17S2:{
+				  required:true,
+			  },
+			  Q12Wa17S3:{
+				  required:true,
+			  },
+			  Q12Wa18S1:{
+				  required:true,
+			  },
+			  Q12Wa18S2:{
+				  required:true,
+			  },
+			  Q12Wa18S3:{
+				  required:true,
+			  },
+			  Q12Wa19S1:{
+				  required:true,
+			  },
+			  Q12Wa19S2:{
+				  required:true,
+			  },
+			  Q12Wa19S3:{
+				  required:true,
+			  },
+			  Q12Wa20S1:{
+				  required:true,
+			  },
+			  Q12Wa20S2:{
+				  required:true,
+			  },
+			  Q12Wa20S3:{
+				  required:true,
+			  },
+			  Q12Wa21S1:{
+				  required:true,
+			  },
+			  Q12Wa21S2:{
+				  required:true,
+			  },
+			  Q12Wa21S3:{
+				  required:true,
+			  },
+			  Q12Wa22S1:{
+				  required:true,
+			  },
+			  Q12Wa22S2:{
+				  required:true,
+			  },
+			  Q12Wa22S3:{
+				  required:true,
+			  },
+			  Q12Wa23S1:{
+				  required:true,
+			  },
+			  Q12Wa23S2:{
+				  required:true,
+			  },
+			  Q12Wa23S3:{
+				  required:true,
+			  },
+			  Q12Wa24S1:{
+				  required:true,
+			  },
+			  Q12Wa24S2:{
+				  required:true,
+			  },
+			  Q12Wa24S3:{
+				  required:true,
+			  },
+			  Q12Wa25S1:{
+				  required:true,
+			  },
+			  Q12Wa25S3:{
+				  required:true,
+			  },
+			  Q12Wa26S1:{
+				  required:true,
+			  },
+			  Q12Wa26S2:{
+				  required:true,
+			  },
+			  Q12Wa26S3:{
+				  required:true,
+			  },
+			  Q12Wa27S1:{
+				  required:true,
+			  },
+			  Q12Wa27S2:{
+				  required:true,
+			  },
+			  Q12Wa27S3:{
+				  required:true,
+			  },
+			  Q12Wa28S1:{
+				  required:true,
+			  },
+			  Q12Wa28S2:{
+				  required:true,
+			  },
+			  Q12Wa28S3:{
+				  required:true,  
+			  },
+			  Q13Wa1:{
+				  required:true,
+			  },
+			  Q13Wa2:{
+				  required:true,
+			  },
+			  Q14Wa1:{
+				  required:true,
+			  },
+			  Q15Wa1:{
+				  required:true,
+			  },
+			  Q15Wa2:{
+				  required:true,
+			  },
+			  Q17Wa1:{
+				  required:true,
+			  },
+			  Q18Wa1:{
+				  required:true,
+			  },
+			  Q19Wa1:{
+				  required:true,
+			  }
+		}
+       
+	});
+	});
+	
+	$('#wastenext').click(function(e){
+		
+		
+		$r=$('#waste').valid();
+		if($r == false)
+		{
+			 
+			   e.preventDefault();
+			   $('#waste').valid();
+		}
+		
+		
+	});
+	
+	</script>
+	
+
+	<script>
+ $(document).ready(function(){
+	
+   $("input[name='Q9Wa1']").click(function(){
+      if($(this).val()==='Y'){
+       $("#compositive").show();
+      }else{
+        $("#compositive").hide();
+      }
+   });
+  });
+  
+  
+   $(window).load(function() {
+    if ($("input[name='Q9Wa1']").is(":checked")) {
+		 
+    if($("input[name='Q9Wa1']:checked").val()==='Y'){
+
+     $("#compositive").show();
+   }else{
+	    $("#compositive").hide();
+   }
+   
+	}
+ });
+</script>
+	
+
 <script type="text/javascript">
     $('.close').click(function () {
         $('#video').attr("src", "https://www.youtube.com/embed/CI-iGmii5Yk");
