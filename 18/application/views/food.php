@@ -2836,7 +2836,7 @@ echo 'style="display:none;"';
   
    $(window).load(function() {
   if ($("input[name='Q9F1']").is(":checked")) {
-    if($("input[name='Q9F1']").val()==='Y'){
+     if($("input[name='Q9F1']:checked").val()==='Y'){
     $("#Q9F2").show();
    }else{
 	  $("#Q9F2").hide(); 
@@ -2860,8 +2860,8 @@ echo 'style="display:none;"';
    $(window).load(function() {
    if ($("input[name='Q7F1']").is(":checked")) {
 	 
-      if($("input[name='Q7F1']").val()==='Y'){
-		 $("#traditional").removeAttr("style");
+	 if($("input[name='Q7F1']:checked").val()==='Y'){
+		 $("#traditional").show();
      }else {
 	   $("#traditional").hide();
 	 }
@@ -2885,7 +2885,7 @@ echo 'style="display:none;"';
    $(window).load(function() {
     if ($("input[name='Q8F1']").is(":checked")) {
 		 
-     if($("input[name='Q8F1']").val()==='Y'){
+     if($("input[name='Q8F1']:checked").val()==='Y'){
 
      $("#beverages").show();
    }else{
