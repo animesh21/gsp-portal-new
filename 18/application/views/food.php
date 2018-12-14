@@ -1630,7 +1630,7 @@ if ($data['Q4F1'] == 'Y') {
 //if (isset($data['Q7F1']))
 //if ($data['Q7F1'] == 'Y') {
 ?>
-              <div class="form-group" id="traditional">
+              <div class="form-group" id="traditional" style="display:none;">
                 <label class="control-label"><span class="cube">4(a)</span>Please
                 provide
                 the
@@ -1857,7 +1857,7 @@ if ($data['Q4F1'] == 'Y')
 if (isset($data['Q8F1']))
 if ($data['Q8F1'] == 'Y') { */
 ?>
-                  <div class="form-group"  id="beverages">
+                  <div class="form-group"  id="beverages" style="display:none;">
                     <label class="control-label"><span
 																								class="cube">5(a)</span>Please
                     provide
@@ -2007,7 +2007,7 @@ if ($data['Q8F1'] == 'Y') { */
 /* if (isset($data['Q9F1']))
 if ($data['Q9F1'] == 'Y') { */
 ?>
-                <div class="form-group"  id="Q9F2">
+                <div class="form-group"  id="Q9F2" style="display:none;">
                   <label class="control-label"><span
 																					class="cube">6(a)</span>Please
                   provide
@@ -2822,67 +2822,77 @@ echo 'style="display:none;"';
 
 <script>
  $(document).ready(function(){
-   /*Event Base*/
+	 
+ 
    $("input[name='Q9F1']").click(function(){
       if($(this).val()==='Y'){
        $("#Q9F2").show();
       }else{
         $("#Q9F2").hide();
       }
-   })
-   /*Intially Load Base*/
-   $("#Q9F2").hide();
-   /*Checked Condition*/
-   if ($("#Q7F1_2").is(":checked")) {
-    $("#Q9F2").hide();
+   });
+   });
+  
+  
+   $(window).load(function() {
+  if ($("input[name='Q9F1']").is(":checked")) {
+    if($("input[name='Q9F1']").val()==='Y'){
+    $("#Q9F2").show();
    }else{
-	  $("#Q9F2").show(); 
+	  $("#Q9F2").hide(); 
    }
+  }
  });
 </script>
 
 <script>
  $(document).ready(function(){
-   /*Event Base*/
+	
    $("input[name='Q7F1']").click(function(){
       if($(this).val()==='Y'){
        $("#traditional").show();
       }else{
         $("#traditional").hide();
       }
-   })
-   /*Intially Load Base*/
-   $("#traditional").hide();
-   /*Checked Condition*/
-   if ($("#Q7F1_2").is(":checked")) {
-     $("#traditional").hide();
-   }else{
-	    $("#traditional").show();
+   });
+   });
+  
+   $(window).load(function() {
+   if ($("input[name='Q7F1']").is(":checked")) {
+	 
+      if($("input[name='Q7F1']").val()==='Y'){
+		 $("#traditional").removeAttr("style");
+     }else {
+	   $("#traditional").hide();
+	 }
    }
-   
  });
 </script>
 
 <script>
  $(document).ready(function(){
-   /*Event Base*/
+	
    $("input[name='Q8F1']").click(function(){
       if($(this).val()==='Y'){
        $("#beverages").show();
       }else{
         $("#beverages").hide();
       }
-   })
-   /*Intially Load Base*/
-   $("#beverages").hide();
-   /*Checked Condition*/
-   if ($("#Q8F1_2").is(":checked")) {
-     $("#beverages").hide();
+   });
+  });
+  
+  
+   $(window).load(function() {
+    if ($("input[name='Q8F1']").is(":checked")) {
+		 
+     if($("input[name='Q8F1']").val()==='Y'){
+
+     $("#beverages").show();
    }else{
-	    $("#beverages").show();
+	    $("#beverages").hide();
    }
    
-   
+	}
  });
 </script>
 
