@@ -874,8 +874,8 @@
     </div>
     <br>
     <?php
-            $arrImages = getUploadData(str_replace(' ', '_', $school->name) . '_Composting_Pit_', $schoolUserID);
-            if (!empty($arrImages)) {
+           
+            if (!empty($composingPit)) {
                 ?>
     <table width="100%" class="table">
       <thead>
@@ -886,7 +886,7 @@
         </tr>
       </thead>
       <tbody>
-        <?php foreach ($arrImages as $a) { ?>
+        <?php foreach ($composingPit as $a) { ?>
         <tr>
           <td><img src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
           <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Composting_Pit_"), " ", $a->file_name); ?></td>
