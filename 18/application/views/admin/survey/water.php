@@ -490,10 +490,7 @@
         <br>
       </div>
       <div class="clearfix">&nbsp;</div>
-      <?php
-            $arrImages = getUploadData(str_replace(' ', '_', $school->name) . '_Task_4_Supporting_docs_', $schoolUserID);
-            if (!empty($arrImages)) {
-                ?>
+      <?php if (!empty($task4supporting)) { ?>
       <table width="100%" class="table">
         <thead>
           <tr>
@@ -503,7 +500,7 @@
           </tr>
         </thead>
         <tbody>
-          <?php foreach ($arrImages as $a) { ?>
+          <?php foreach ($task4supporting as $a) { ?>
           <tr>
             <td><img src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
             <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Task_4_Supporting_docs_"), " ", $a->file_name); ?></td>
@@ -898,10 +895,7 @@
         <!--                    <button class="btn uploadbtn upload" data-id="Water Treatment Process" data-toggle="modal" data-target="#uploadModal" type="button">UPLOAD FILES
                                         </button>-->
         </label>
-        <?php
-                $arrImages = getUploadData(str_replace(' ', '_', $school->name) . '_Water_Treatment_Process_', $schoolUserID);
-                if (!empty($arrImages)) {
-                    ?>
+        <?php if (!empty($waterTreatment)) { ?>
         <table width="100%" class="table">
           <thead>
             <tr>
@@ -911,7 +905,7 @@
             </tr>
           </thead>
           <tbody>
-            <?php foreach ($arrImages as $a) { ?>
+            <?php foreach ($waterTreatment as $a) { ?>
             <tr>
               <td><img src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
               <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Water_Treatment_Process_"), " ", $a->file_name); ?></td>
@@ -1236,19 +1230,18 @@
         Water recycling is the process of treating waste or used water, in order to upgrade
         its quality, so that it can be used again. When water, once used for a particular
         purpose, is put to use again, it is then being reused. </div>
+      <div class="form-group">
+        <label class="control-label"><span class="cube">17</span>Does your school treat
+        wastewater?</label>
         <div class="form-group">
-                <label class="control-label"><span class="cube">17</span>Does your school treat
-                    wastewater?</label>
-                <div class="form-group">
-                    <p> <?php echo (getFiled('Q19W1', $schoolUserID) != "") ? (getFiled('Q19W1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
-
-                </div>
-            </div>
-			<?php if(getFiled('Q19W1', $schoolUserID) == "Y"){ ?>
-		  	 <div class="form-group" id="Q20W1Q">
-                <label class="control-label"><span class="cube">17(a)(i)</span>Where does the water get treated?</label>
-                <div class="form-group">
-                    <?php
+          <p> <?php echo (getFiled('Q19W1', $schoolUserID) != "") ? (getFiled('Q19W1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
+        </div>
+      </div>
+      <?php if(getFiled('Q19W1', $schoolUserID) == "Y"){ ?>
+      <div class="form-group" id="Q20W1Q">
+        <label class="control-label"><span class="cube">17(a)(i)</span>Where does the water get treated?</label>
+        <div class="form-group">
+          <?php
                     if (getFiled('Q19W11', $schoolUserID) == 1):
                         echo "Inside your school  )".", ";
 					endif;	
@@ -1256,13 +1249,13 @@
                         echo "Outside your school ".", ";
 					endif;
                     ?>
-                </div>
-            </div>
-			  <?php if (getFiled('Q19W11', $schoolUserID) == 1): ?>
-			    <div class="form-group" id="Q20W1Q">
-                <label class="control-label"><span class="cube">17(a)(ii)</span>Who treats the wastewater outside your school?</label>
-                <div class="form-group">
-                    <?php
+        </div>
+      </div>
+      <?php if (getFiled('Q19W11', $schoolUserID) == 1): ?>
+      <div class="form-group" id="Q20W1Q">
+        <label class="control-label"><span class="cube">17(a)(ii)</span>Who treats the wastewater outside your school?</label>
+        <div class="form-group">
+          <?php
                     if (getFiled('Q19W12', $schoolUserID) == 1):
                         echo "Municipality".", ";
 					endif;	
@@ -1276,14 +1269,14 @@
                         echo "Community driven initiative ".", ";
 					endif;
                     ?>
-                </div>
-            </div>
-			  <?php endif;	?>
-			<?php }else{ ?>
-			  <div class="form-group" id="Q20W1Q">
-                <label class="control-label"><span class="cube">17(b)</span>Please specify the fate of wastewater?</label>
-                <div class="form-group">
-                    <?php
+        </div>
+      </div>
+      <?php endif;	?>
+      <?php }else{ ?>
+      <div class="form-group" id="Q20W1Q">
+        <label class="control-label"><span class="cube">17(b)</span>Please specify the fate of wastewater?</label>
+        <div class="form-group">
+          <?php
                     if (getFiled('Q19W13', $schoolUserID) == 1):
                         echo "Wastewater flows directly to the drains)".", ";
 					endif;	
@@ -1294,28 +1287,28 @@
                         echo "Used for gardening and horticulture".", ";
                     endif;
                     ?>
-                </div>
-            </div><br/>
-			  <div class="form-group">
-                <label class="control-label"><span class="cube">17(b)(i)</span> Does your school buy treated waste water?</label>
-                <div class="form-group">
-                    <p> <?php echo (getFiled('Q19W14', $schoolUserID) != "") ? (getFiled('Q19W14', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
-                </div>
-            </div>
-			<?php } ?>
-			
-		    <div class="form-group">
-                <label class="control-label"><span class="cube">18</span> Does your school reuse the wastewater from RO plant or Air conditioner drain pipes?</label>
-                <div class="form-group">
-                    <p> <?php echo (getFiled('Q19W15', $schoolUserID) != "") ? (getFiled('Q19W15', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
-                </div>
-            </div>
-			<?php if(getFiled('Q19W15', $schoolUserID) == "Y"){ ?>
-            <div class="form-group" id="Q20W1Q">
-                <label class="control-label"><span class="cube">18(i)</span>How does your
-                    school reuse waste water?</label>
-                <div class="form-group">
-                    <?php
+        </div>
+      </div>
+      <br/>
+      <div class="form-group">
+        <label class="control-label"><span class="cube">17(b)(i)</span> Does your school buy treated waste water?</label>
+        <div class="form-group">
+          <p> <?php echo (getFiled('Q19W14', $schoolUserID) != "") ? (getFiled('Q19W14', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
+        </div>
+      </div>
+      <?php } ?>
+      <div class="form-group">
+        <label class="control-label"><span class="cube">18</span> Does your school reuse the wastewater from RO plant or Air conditioner drain pipes?</label>
+        <div class="form-group">
+          <p> <?php echo (getFiled('Q19W15', $schoolUserID) != "") ? (getFiled('Q19W15', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
+        </div>
+      </div>
+      <?php if(getFiled('Q19W15', $schoolUserID) == "Y"){ ?>
+      <div class="form-group" id="Q20W1Q">
+        <label class="control-label"><span class="cube">18(i)</span>How does your
+        school reuse waste water?</label>
+        <div class="form-group">
+          <?php
                     if (getFiled('Q19W16', $schoolUserID) == 1):
                         echo "Used for cleaning purposes (mopping, washing vehicles, etc)".",";
 					endif;	
@@ -1326,21 +1319,22 @@
                         echo "Flushing".",";
                     endif;
                     ?>
-                </div>
-            </div><br/>
-           <?php }else{ ?>
-            <div class="form-group" id="Q19W2">
-                <label class="control-label"><span class="cube">18(i)</span>If no, How does your school reuse wastewater from RO plant or AC?</label>
-                <div class="form-group">
-                    <?php
+        </div>
+      </div>
+      <br/>
+      <?php }else{ ?>
+      <div class="form-group" id="Q19W2">
+        <label class="control-label"><span class="cube">18(i)</span>If no, How does your school reuse wastewater from RO plant or AC?</label>
+        <div class="form-group">
+          <?php
                     if (getFiled('Q19W17', $schoolUserID) == 1):
                         echo " Wastewater flows directly to the drains";
                     endif;
                     ?>
-                </div>
-            </div><br/>
-		   <?php } ?>
-	  
+        </div>
+      </div>
+      <br/>
+      <?php } ?>
       <div class="form-group">
         <label class="control-label"><span class="cube">19</span>Does your school reuse the
         treated wastewater?</label>
@@ -1386,10 +1380,7 @@
         <label>Please upload a flow chart (hand drawn) of the wastewatertreatment process.</label>
         <br>
       </div>
-      <?php
-            $arrImages = getUploadData(str_replace(' ', '_', $school->name) . '_Flow_Chart_Hand_Drwan_', $schoolUserID);
-            if (!empty($arrImages)) {
-                ?>
+      <?php if (!empty($flowChartHandDrawn)) { ?>
       <table width="100%" class="table">
         <thead>
           <tr>
@@ -1399,7 +1390,7 @@
           </tr>
         </thead>
         <tbody>
-          <?php foreach ($arrImages as $a) { ?>
+          <?php foreach ($flowChartHandDrawn as $a) { ?>
           <tr>
             <td><img src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
             <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Flow_Chart_Hand_Drwan_"), " ", $a->file_name); ?></td>
@@ -1422,8 +1413,7 @@
         <br>
       </div>
       <?php
-            $arrImages = getUploadData(str_replace(' ', '_', $school->name) . '_Supporting_Document_Water_', $schoolUserID);
-            if (!empty($arrImages)) {
+            if (!empty($supportDocWater)) {
                 ?>
       <table width="100%" class="table">
         <thead>
@@ -1434,7 +1424,7 @@
           </tr>
         </thead>
         <tbody>
-          <?php foreach ($arrImages as $a) { ?>
+          <?php foreach ($supportDocWater as $a) { ?>
           <tr>
             <td><img src="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
             <td><?php echo str_replace(str_replace(' ', '_', $school->name . "_Supporting_Document_Water_"), " ", $a->file_name); ?></td>
