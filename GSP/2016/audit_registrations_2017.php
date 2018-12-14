@@ -31,7 +31,7 @@ $(document).ready(function() {
   <div class="container">
     <div class="wrapper">
       <div class="top-area">
-        <h2>REGISTRATIONS</h2>
+        <h2>REGISTRATIONS 2016</h2>
         <a href="export_excel.php"><button class="exportBtn">Export to Excel</button></a>
       </div>
       <table id="example" class="display" cellspacing="0" width="100%">
