@@ -3,7 +3,8 @@
 <div class="container">
   <div class="content-form">
     <div class="intro">
-      <h1>WATER</h1>
+      <h1>WATER <span class="h5">(<?php echo $school->name;
+?>)</span></h1>
       <div class="video"><a class="lptext" href="#" data-toggle="modal" data-target="#videoModal"><!--<img src="http://greenschoolsprogramme.org/audit2015/upload/templates/tfr_responsive/images/video-icon.png" style="width: 45px; height: 40px; margin-top:47px;">--></a></div>
     </div>
     <br>
