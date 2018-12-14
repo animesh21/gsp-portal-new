@@ -578,7 +578,8 @@ for ($i = 0; $i < count($record1); $i++) {
 <td><?php echo $record1[$i]->location; ?></td>
 <td><?php echo $record1[$i]->aid; ?></td>
 <td><?php echo $record1[$i]->Q4A1; ?></td>
-<td><?php echo getFiled('Q5A2',$record1[$i]->userid); ?></td>	
+<td><?php if(!empty(getFiled('Q5A2',$record1[$i]->userid))){ echo getFiled('Q5A2',$record1[$i]->userid); }else{ echo $record1[$i]->Q4A1; } 
+	?></td>	
 <td><?php
 $var = 0;
 if ((isset($record1[$i]->Q5A110S3) && $record1[$i]->Q5A110S3 != 0) && (isset($record1[$i]->Q5A110S2) && $record1[$i]->Q5A110S2 != 0)) {
