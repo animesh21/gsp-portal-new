@@ -43,6 +43,7 @@
 <th>Location</th>
 <th>Type of Aid</th>
 <th>No.of Classrooms</th>
+<th>Total number of well-ventilated classrooms in your school</th>	
 <th>Window-floor Ratio(%)</th>
 <th>Ownership of Vehicles</th>
 <th>No.of Vehicles</th>
@@ -269,6 +270,8 @@
 <td>Are the toilets accessible and safe to use for differently abled staff (teaching and non-teaching)</td>
 <td>Are the toilets situated in the right location in terms of privacy and safety</td>
 <td>Is there sufficient light during day time</td>
+<td>Do you use soap to wash hands before and after lunch?</td>
+<td>Do you use soap to wash hands before and after using the toilet ?</td>	
 <td>No. of drinking water taps</td>
 <td>Load on DWT</td>
 <td>No.of hand pumps</td>
@@ -575,6 +578,7 @@ for ($i = 0; $i < count($record1); $i++) {
 <td><?php echo $record1[$i]->location; ?></td>
 <td><?php echo $record1[$i]->aid; ?></td>
 <td><?php echo $record1[$i]->Q4A1; ?></td>
+<td><?php echo getFiled('Q5A2',$record1[$i]->userid); ?></td>	
 <td><?php
 $var = 0;
 if ((isset($record1[$i]->Q5A110S3) && $record1[$i]->Q5A110S3 != 0) && (isset($record1[$i]->Q5A110S2) && $record1[$i]->Q5A110S2 != 0)) {
@@ -946,6 +950,17 @@ else{echo $record1[$i]->Q8W2S2;}
       <td><?php if(strcmp($record1[$i]->Q8W3S6,"Y")==0){echo "Yes";}else if(strcmp($record1[$i]->Q8W3S6,"N")==0){echo "No";}else{echo $record1[$i]->Q8W3S6;} ?></td>
   <td><?php if(strcmp($record1[$i]->Q8W3S7,"Y")==0){echo "Yes";}else if(strcmp($record1[$i]->Q8W3S7,"N")==0){echo "No";}else{echo $record1[$i]->Q8W3S7;} ?></td>
  <td><?php if(strcmp($record1[$i]->Q8W3S8,"Y")==0){echo "Yes";}else if(strcmp($record1[$i]->Q8W3S8,"N")==0){echo "No";}else{echo $record1[$i]->Q8W3S8;} ?></td>
+<td><?php 
+  if(!empty(getFiled('Q8W3S9',$record1[$i]->userid))){
+    if(strcmp(getFiled('Q8W3S9',$record1[$i]->userid),"Y")==0){echo "Yes";}else if(strcmp(getFiled('Q8W3S9',$record1[$i]->userid),"N")==0){echo "No";}else{echo $record1[$i]->Q8W3S9;}
+  }
+ ?></td> 
+<td><?php 
+  if(!empty(getFiled('Q8W3S10',$record1[$i]->userid))){
+    if(strcmp(getFiled('Q8W3S10',$record1[$i]->userid),"Y")==0){echo "Yes";}else if(strcmp(getFiled('Q8W3S10',$record1[$i]->userid),"N")==0){echo "No";}else{echo $record1[$i]->Q8W3S9;}
+  }
+ ?></td>  
+	
 <td><?php echo  $record1[$i]->Q9W1; ?></td>
 <td><?php if($record1[$i]->population=="" && $record1[$i]->population==0): echo "000.000"; else:  echo $record1[$i]->population/$record1[$i]->Q9W1; endif; ?></td>
 <td><?php echo  $record1[$i]->Q10W1; ?></td>
