@@ -1,5 +1,130 @@
 <?php $this->load->view('header'); ?>
+<style>
+.error{
+  color: #fb4f2a !important;
+              font-size: 18px !important;
+ text-shadow: 1px 1px 1px #000;
+}
 
+#Q1Fe1-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -35px !important;
+    position: absolute;
+    margin-left: 619px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q1Fe2-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -35px !important;
+    position: absolute;
+    margin-left: 672px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q1Fe3-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -35px !important;
+    position: absolute;
+    margin-left: 445px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q1Fe4-error
+{
+		color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -35px !important;
+    position: absolute;
+    margin-left: 585px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q8Fe1-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -3px !important;
+    position: absolute;
+    margin-left: 475px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q8Fe2-error{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -3px !important;
+    position: absolute;
+    margin-left: 475px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q8Fe3-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -3px !important;
+    position: absolute;
+    margin-left: 475px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q1Fe7-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -35px !important;
+    position: absolute;
+    margin-left: 824px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q1Fe8-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -35px !important;
+    position: absolute;
+    margin-left: 524px;
+    text-shadow: 1px 1px 1px #000; 	
+}
+
+#Q1Fe9-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -35px !important;
+    position: absolute;
+    margin-left: 738px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q1Fe10-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -35px !important;
+    position: absolute;
+    margin-left: 170px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q1Fe11-error
+{
+	color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -35px !important;
+    position: absolute;
+    margin-left: 375px;
+    text-shadow: 1px 1px 1px #000;
+}
+</style>
 <div class="container">
     <div class="content-form">
         <div class="log-nav">
@@ -779,6 +904,75 @@ $.ajax({
         border: none !important;
     }
 </style>
+
+
+
+
+<script>
+	$(document).ready(function(){
+	
+	$('#feedback').validate({
+		rules:{
+		      Q1Fe1:{
+				  required:true,
+			  },
+			  Q1Fe2:{
+				  required:true,
+			  },
+			  Q1Fe3:{
+				  required:true,
+			  },
+			  Q1Fe4:{
+				  required:true,
+			  },
+			  Q1Fe511:{
+				  required:true,
+			  },
+			  Q8Fe1:{
+				  required:true,
+			  },
+			  Q8Fe2:{
+				  required:true,
+			  },
+			  Q8Fe3:{
+				  required:true,
+			  },
+			  Q1Fe7:{
+				  required:true,
+			  },
+			  Q1Fe8:{
+				  required:true,
+			  },
+			  Q1Fe9:{
+				  required:true,
+			  },
+			  Q1Fe10:{
+				  required:true,
+			  },
+			  Q1Fe11:{
+				  required:true,
+			  }
+		}
+       
+	});
+	});
+	
+	$('#movesubmitbtn').click(function(e){
+		
+		
+		$r=$('#feedback').valid();
+		if($r == false)
+		{
+			 
+			   e.preventDefault();
+			   $('#feedback').valid();
+		}
+		
+		
+	});
+	
+	</script>
+
 <script type="text/javascript">
     /**Validation Question 1 Feedback show 1a & 1b***/
     $('input[name="Q1Fe1"]').click(function () {
