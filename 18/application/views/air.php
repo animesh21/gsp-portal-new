@@ -530,7 +530,7 @@
             >
         <div class="col-xs-3">
           <input class="form-control space-textbox" onChange="computePercent()" id="Q5A1S1" type="text"
-                           min="0" name="Q5A1S1" placeholder="<?php if (isset($data['Q5A1S1'])) echo $data['Q5A1S1'] ?>"
+                           name="Q5A1S1" placeholder="<?php if (isset($data['Q5A1S1'])) echo $data['Q5A1S1'] ?>"
                            value="<?php if (isset($data['Q5A1S1'])) echo $data['Q5A1S1'] ?>"/>
         </div>
         <div class="col-xs-3">
@@ -560,7 +560,7 @@
             >
         <div class="col-xs-3">
           <input class="form-control space-textbox" onChange="computePercent()" id="Q5A2S1" type="text"
-                           min="0" name="Q5A2S1" placeholder="<?php if (isset($data['Q5A2S1'])) echo $data['Q5A2S1'] ?>"
+                            name="Q5A2S1" placeholder="<?php if (isset($data['Q5A2S1'])) echo $data['Q5A2S1'] ?>"
                            value="<?php if (isset($data['Q5A2S1'])) echo $data['Q5A2S1'] ?>"/>
         </div>
         <div class="col-xs-3">
@@ -590,7 +590,7 @@
             >
         <div class="col-xs-3">
           <input class="form-control space-textbox" onChange="computePercent()" id="Q5A3S1" type="text"
-                           min="0" name="Q5A3S1" placeholder="<?php if (isset($data['Q5A3S1'])) echo $data['Q5A3S1'] ?>"
+                           name="Q5A3S1" placeholder="<?php if (isset($data['Q5A3S1'])) echo $data['Q5A3S1'] ?>"
                            value="<?php if (isset($data['Q5A3S1'])) echo $data['Q5A3S1'] ?>"/>
         </div>
         <div class="col-xs-3">
@@ -619,7 +619,7 @@
                 ?>>
         <div class="col-xs-3">
           <input class="form-control space-textbox" onChange="computePercent()" id="Q5A4S1" type="text"
-                           min="0" name="Q5A4S1" placeholder="<?php if (isset($data['Q5A4S1'])) echo $data['Q5A4S1'] ?>"
+                            name="Q5A4S1" placeholder="<?php if (isset($data['Q5A4S1'])) echo $data['Q5A4S1'] ?>"
                            value="<?php if (isset($data['Q5A4S1'])) echo $data['Q5A4S1'] ?>"/>
         </div>
         <div class="col-xs-3">
@@ -648,7 +648,7 @@
                 ?>>
         <div class="col-xs-3">
           <input class="form-control space-textbox" onChange="computePercent()" id="Q5A5S1" type="text"
-                           min="0" name="Q5A5S1" placeholder="<?php if (isset($data['Q5A5S1'])) echo $data['Q5A5S1'] ?>"
+                           name="Q5A5S1" placeholder="<?php if (isset($data['Q5A5S1'])) echo $data['Q5A5S1'] ?>"
                            value="<?php if (isset($data['Q5A5S1'])) echo $data['Q5A5S1'] ?>"/>
         </div>
         <div class="col-xs-3">
@@ -677,7 +677,7 @@
                 ?>>
         <div class="col-xs-3">
           <input class="form-control space-textbox" onChange="computePercent()" id="Q5A6S1" type="text"
-                           min="0" name="Q5A6S1" placeholder="<?php if (isset($data['Q5A6S1'])) echo $data['Q5A6S1'] ?>"
+                            name="Q5A6S1" placeholder="<?php if (isset($data['Q5A6S1'])) echo $data['Q5A6S1'] ?>"
                            value="<?php if (isset($data['Q5A6S1'])) echo $data['Q5A6S1'] ?>"/>
         </div>
         <div class="col-xs-3">
@@ -706,7 +706,7 @@
                 ?>>
         <div class="col-xs-3">
           <input class="form-control space-textbox" onChange="computePercent()" id="Q5A7S1" type="text"
-                           min="0" name="Q5A7S1" placeholder="<?php if (isset($data['Q5A7S1'])) echo $data['Q5A7S1'] ?>"
+                            name="Q5A7S1" placeholder="<?php if (isset($data['Q5A7S1'])) echo $data['Q5A7S1'] ?>"
                            value="<?php if (isset($data['Q5A7S1'])) echo $data['Q5A7S1'] ?>"/>
         </div>
         <div class="col-xs-3">
@@ -735,7 +735,7 @@
                 ?>>
         <div class="col-xs-3">
           <input class="form-control space-textbox" onChange="computePercent()" id="Q5A8S1" type="text"
-                           min="0" name="Q5A8S1" placeholder="<?php if (isset($data['Q5A8S1'])) echo $data['Q5A8S1'] ?>"
+                           name="Q5A8S1" placeholder="<?php if (isset($data['Q5A8S1'])) echo $data['Q5A8S1'] ?>"
                            value="<?php if (isset($data['Q5A8S1'])) echo $data['Q5A8S1'] ?>"/>
         </div>
         <div class="col-xs-3">
@@ -764,7 +764,7 @@
                 ?>>
         <div class="col-xs-3">
           <input class="form-control space-textbox" onChange="computePercent()" id="Q5A9S1" type="text"
-                           min="0" name="Q5A9S1" placeholder="<?php if (isset($data['Q5A9S1'])) echo $data['Q5A9S1'] ?>"
+                           name="Q5A9S1" placeholder="<?php if (isset($data['Q5A9S1'])) echo $data['Q5A9S1'] ?>"
                            value="<?php if (isset($data['Q5A9S1'])) echo $data['Q5A9S1'] ?>"/>
         </div>
         <div class="col-xs-3">
@@ -793,7 +793,7 @@
                 ?>>
         <div class="col-xs-3">
           <input class="form-control space-textbox" onChange="computePercent()" id="Q5A10S1" type="text"
-                           min="0" name="Q5A10S1"
+                           name="Q5A10S1"
                            placeholder="<?php if (isset($data['Q5A10S1'])) echo $data['Q5A10S1'] ?>"
                            value="<?php if (isset($data['Q5A10S1'])) echo $data['Q5A10S1'] ?>"/>
         </div>
