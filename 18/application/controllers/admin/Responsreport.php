@@ -35,7 +35,8 @@ class Responsreport extends CI_Controller {
         $data['school'] = $this->Audit_started_model->getSchoolByIdRecoad($argID);
 	//echo '<pre>'; print_r($data['school']);  die();  
         $data['schoolUserID'] = $data['school'][0]->userid;
-        $data['files'] = $this->file->getFilesData($this->session->userdata('USER_ID'));
+       // $data['files'] = $this->file->getFilesData($this->session->userdata('USER_ID'));
+	$data['Supporting_Document_Air'] = uploadHelper($this->session->userdata('USER_ID'), 'Supporting_Document_Air');
         $data['filesfules'] = $this->file->getFilesDatafules($this->session->userdata('USER_ID'));
         $data['airQualityMonitering'] = $this->file->AirQuality($this->session->userdata('USER_ID'));
         $data['SupportiveAir'] = $this->file->SupportiveAir($this->session->userdata('USER_ID'));
