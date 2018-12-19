@@ -1035,7 +1035,14 @@
       <div class="support_files"> No documents uploaded by the school. </div>
       <?php } ?>
     </li>
+  </ul>
+  <?php if(getFiled('Q9A1', $schoolUserID) != "Y"){ ?>
+  <ul class="list">
     <li>
+      <p class="orange"><span>6(a)</span> If No, is there an air quality monitoring station(private or government) close to your school? </p>
+      <p class="formanswertext"> <?php echo (getFiled('Q9A2', $schoolUserID) != "") ? (getFiled('Q9A2', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?> </p>
+    </li>
+	<li>
       <?php if (!empty($Supporting_Document_Air)) {?>
       <table class="table support-docs">
         <tr>
@@ -1053,13 +1060,6 @@
       <?php } else { ?>
       <div class="support_files"> No documents uploaded by the school. </div>
       <?php } ?>
-    </li>
-  </ul>
-  <?php if(getFiled('Q9A1', $schoolUserID) != "Y"){ ?>
-  <ul class="list">
-    <li>
-      <p class="orange"><span>6(a)</span> If No, is there an air quality monitoring station(private or government) close to your school? </p>
-      <p class="formanswertext"> <?php echo (getFiled('Q9A2', $schoolUserID) != "") ? (getFiled('Q9A2', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?> </p>
     </li>
   </ul>
   <?php } ?>
