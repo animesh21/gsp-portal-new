@@ -55,6 +55,46 @@ if (!function_exists('getStateById')) {
 }
 
 
+if(!function_exists('getYOYComparison')){
+  function getYOYComparison($schoolId) {
+        $CI = & get_instance();
+		$CI->db->where('school_id',$schoolId);
+        $temp = $CI->db->select("*")->from('tbl_yoy')->get()->row();
+		$comparisonArr=array("data_2018"=>$temp->data_2018,"data_2017"=>$temp->data_2017,"data_2016"=>$temp->data_2016,"data_2015"=>$temp->data_2015);
+        return $comparisonArr;
+    }
+}
+
+if(!function_exists('getYOYComparisonAllData')){
+  function getYOYComparisonAllData($schoolId) {
+        $CI = & get_instance();
+		$CI->db->where('school_id',$schoolId);
+        $temp = $CI->db->select("*")->from('all_yoy_presentation')->get()->result();
+        return $temp;
+    }
+}
+
+if(!function_exists('getYOYComparisonYesNo')){
+  function getYOYComparisonYesNo($args) {
+        if(!empty($args)){
+		   if(strcmp($args,"Y")==0){
+		     echo "Yes"; 
+		   }else if(strcmp($args,"N")==0){
+		     echo "No"; 
+		   }else{
+		     echo $args;
+		   }
+		}
+    }
+}
+
+
+
+
+
+
+
+
 if(!function_exists('getPartnersCountByState')){
   function getPartnersCountByState($stateId,$partnertype){
         $CI = & get_instance();
