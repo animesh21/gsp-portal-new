@@ -43,7 +43,7 @@
 <th>Location</th>
 <th>Type of Aid</th>
 <th>No.of Classrooms</th>
-<th>Total number of well-ventilated classrooms in your school</th>	
+<th>Total number of well-ventilated classrooms in your school</th>
 <th>Window-floor Ratio(%)</th>
 <th>Ownership of Vehicles</th>
 <th>No.of Vehicles</th>
@@ -271,7 +271,7 @@
 <td>Are the toilets situated in the right location in terms of privacy and safety</td>
 <td>Is there sufficient light during day time</td>
 <td>Do you use soap to wash hands before and after lunch?</td>
-<td>Do you use soap to wash hands before and after using the toilet ?</td>	
+<td>Do you use soap to wash hands before and after using the toilet ?</td>
 <td>No. of drinking water taps</td>
 <td>Load on DWT</td>
 <td>No.of hand pumps</td>
@@ -578,8 +578,7 @@ for ($i = 0; $i < count($record1); $i++) {
 <td><?php echo $record1[$i]->location; ?></td>
 <td><?php echo $record1[$i]->aid; ?></td>
 <td><?php echo $record1[$i]->Q4A1; ?></td>
-<td><?php if(!empty(getFiled('Q5A2',$record1[$i]->userid))){ echo getFiled('Q5A2',$record1[$i]->userid); }else{ echo $record1[$i]->Q4A1; } 
-	?></td>	
+<td><?php echo getFiled('Q5A2',$record1[$i]->userid); ?></td>
 <td><?php
 $var = 0;
 if ((isset($record1[$i]->Q5A110S3) && $record1[$i]->Q5A110S3 != 0) && (isset($record1[$i]->Q5A110S2) && $record1[$i]->Q5A110S2 != 0)) {
@@ -961,7 +960,9 @@ else{echo $record1[$i]->Q8W2S2;}
     if(strcmp(getFiled('Q8W3S10',$record1[$i]->userid),"Y")==0){echo "Yes";}else if(strcmp(getFiled('Q8W3S10',$record1[$i]->userid),"N")==0){echo "No";}else{echo $record1[$i]->Q8W3S9;}
   }
  ?></td>  
-	
+ 
+ 
+ 
 <td><?php echo  $record1[$i]->Q9W1; ?></td>
 <td><?php if($record1[$i]->population=="" && $record1[$i]->population==0): echo "000.000"; else:  echo $record1[$i]->population/$record1[$i]->Q9W1; endif; ?></td>
 <td><?php echo  $record1[$i]->Q10W1; ?></td>
@@ -1073,7 +1074,8 @@ else{echo $record1[$i]->Q8W2S2;}
 <td><?php echo  $record1[$i]->Q6Wa6S2; ?></td>
 <td><?php echo  $record1[$i]->Q6Wa7S1; ?></td>
 <td><?php echo  $record1[$i]->Q6Wa7S2; ?></td>
-<td><?php echo  $record1[$i]->Q8Wa1; ?></td>
+<td><?php if(strcmp($record1[$i]->Q8Wa1,"Y")==0){echo "Yes";}else if(strcmp($record1[$i]->Q8Wa1,"N")==0){echo "No";}else{echo "000.000";} ?></td>
+
 <td><?php echo  $record1[$i]->Q8Wa1S1; ?></td>
 <td><?php echo  $record1[$i]->Q8Wa1S2; ?></td>
 <td><?php echo  $record1[$i]->Q8Wa1S3; ?></td>
@@ -1277,7 +1279,7 @@ else{echo $record1[$i]->Q8W2S2;}
 			 echo $waste_is_burnt_incinerated;}
 			 else{echo "000.000";}
 			?></td>
-<td><?php echo  $record1[$i]->Q16Wa1; ?></td>
+<td><?php if(strcmp($record1[$i]->Q16Wa1,"Y")==0){echo "Yes";}else if(strcmp($record1[$i]->Q16Wa1,"N")==0){echo "No";}else{echo "000.000";} ?></td>
 <td><?php if(strcmp($record1[$i]->Q17Wa1,"Y")==0){echo "Yes";}else if(strcmp($record1[$i]->Q17Wa1,"N")==0){echo "No";}else{echo "000.000";} ?></td>
 <td><?php if(strcmp($record1[$i]->Q18Wa1,"Y")==0){echo "Yes";}else if(strcmp($record1[$i]->Q18Wa1,"N")==0){echo "No";}else{echo "000.000";} ?></td>
 <td><?php 
@@ -1298,11 +1300,11 @@ else{echo $record1[$i]->Q8W2S2;}
 			?></td>
 <td><?php if(strcmp($record1[$i]->Q19Wa1,"Y")==0){echo "Yes";}else if(strcmp($record1[$i]->Q19Wa1,"N")==0){echo "No";}else{echo $record1[$i]->Q19Wa1;} ?></td>
 <td><?php echo $record1[$i]->waste_points; ?></td>
-<td><?php echo $record1[$i]->air_points + $record1[$i]->energy_points + $record1[$i]->food_points + $record1[$i]->land_points + $record1[$i]->water_points + $record1[$i]->waste_points; ?></td>
+<td><?php echo number_format($record1[$i]->air_points + $record1[$i]->energy_points + $record1[$i]->food_points + $record1[$i]->land_points + $record1[$i]->water_points + $record1[$i]->waste_points,2); ?></td>
 <td><?php 
 global $percentage;
 $total=$record1[$i]->air_points + $record1[$i]->energy_points + $record1[$i]->food_points + $record1[$i]->land_points + $record1[$i]->water_points + $record1[$i]->waste_points; 
-$percentage= ($total/164)*100;
+$percentage= ($total/95)*100;
 $percentage=number_format($percentage,1);
 echo $percentage;
 ?></td>
