@@ -171,6 +171,16 @@ if (!function_exists('getPasswordBySchoolUserId')) {
     }
 }
 
+if (!function_exists('getPasswordBySchoolUserId1')) {
+    function getPasswordBySchoolUserId1($userid) {
+        $arrState = array();
+        $CI = & get_instance();
+        $temp = $CI->db->get_where('gsp_user',array('id'=>$userid))->row();
+        return $temp->password;
+    }
+}
+
+
 if (!function_exists('getdistrictById')) {
     function getdistrictById($citiesId) {
         $arrState = array();
