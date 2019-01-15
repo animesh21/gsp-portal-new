@@ -88,7 +88,21 @@ class Performance_report extends CI_Controller {
         $this->load->view('admin/includes/template', $data);
     }
 	
+      public function AllExcelPrimary()
+	{
+		$data['main']='admin/performance_report/primarytotal_point';
+        $data['title']='Primary_Excel';
+		$data['record1']=$this->Performance_model->getExcelPrimarySchool();
+		$this->load->view('admin/includes/template', $data);
+	}
 	
+	public function AllExcelSecondary()
+	{
+		$data['main']='admin/performance_report/all-seconday';
+        $data['title']='Secondary_Excel';
+		$data['record1']=$this->Performance_model->getExcelSecondarySchool();
+		$this->load->view('admin/includes/template', $data);	
+	}	
 	
 	
 	
