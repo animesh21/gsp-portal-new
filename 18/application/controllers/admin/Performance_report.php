@@ -90,7 +90,7 @@ class Performance_report extends CI_Controller {
 	
       public function AllExcelPrimary()
 	{
-		$data['main']='admin/performance_report/primarytotal_point';
+		$data['main']='admin/performance_report/all-primary';
         $data['title']='Primary_Excel';
 		$data['record1']=$this->Performance_model->getExcelPrimarySchool();
 		$this->load->view('admin/includes/template', $data);
