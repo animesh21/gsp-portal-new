@@ -61,7 +61,7 @@
           <td><?php echo $record1[$i]->codinator; ?></td>
           <td><?php echo $record1[$i]->codinator_mail; ?></td>
           <td><?php echo $record1[$i]->codinator_mobile; ?></td>
-          <td><?php echo getPasswordBySchoolUserId($record1[$i]->codinator_mail); ?></td>
+          <td><?php echo getPasswordBySchoolUserId1($record1[$i]->userid); ?></td>
           <td><?php echo number_format($record1[$i]->air_points,2); ?></td>
           <td><?php echo number_format($record1[$i]->energy_points,2); ?></td>
           <td><?php echo number_format($record1[$i]->food_points,2); ?></td>
