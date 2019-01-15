@@ -17,7 +17,7 @@ class Dashboard_model extends CI_Model {
 
     public function schoolCount() {
         $this->db->where('YEAR(date_added)', 2018);
-		$this->db->where('date_added <', '2018-11-18 00:00:00');
+	$this->db->where('date_added <', '2018-11-18 00:00:00');
         return $this->db->count_all_results('gsp_school');
     }
    
