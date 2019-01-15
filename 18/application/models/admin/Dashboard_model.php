@@ -37,9 +37,9 @@ class Dashboard_model extends CI_Model {
         return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
-						->join('cities AS c', 'a.district=c.id', 'left')
+			->join('cities AS c', 'a.district=c.id', 'left')
                         ->where('YEAR(a.date_added)', 2018)
-						->where('a.date_added <', '2018-11-18 00:00:00')
+			->where('a.date_added <', '2018-11-18 00:00:00')
                         ->order_by('a.id', 'desc')
                         ->get()->result();
     }
@@ -63,6 +63,7 @@ class Dashboard_model extends CI_Model {
 						->join('cities AS c', 'a.district=c.id', 'left')
 						->where('progress_phase_1 >=', 10)
 						->where('progress_phase_1 <=', 100)
+			                        ->where('YEAR(a.date_added)', 2018)
 						->where('a.date_added <=', '2018-11-18 00:00:00')
 						->order_by('a.id', 'desc')
 						->get()->result();
