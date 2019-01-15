@@ -350,7 +350,7 @@ return $this->db->select('a.*,b.name AS state_name, c.name AS district_name')->f
 	public function getExcelPrimarySchool()
 	 
 		{
-			
+		$this->db->where("c.make_school_disabled","1");	
 		return $this->db->select('a.*,b.userid,b.questionid,b.answer,c.name,c.id,a.category,a.population AS population,e.name AS state_name, f.name AS district_name, c.schoolemail AS schoolemail')
 							->from('tbl_total AS a')	
 			                ->join('gsp_answers As b','a.userid=b.userid','left')
