@@ -433,7 +433,7 @@ class Dashboard_model extends CI_Model {
    
       public function getSubmittedTheAudit_18data(){
 	    $this->db->where("a.make_school_disabled","1");  
-		$this->db->where('d.date_on <', '2018-11-19');   
+		$this->db->where('d.date_on <=', '2018-11-19');   
         return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
         ->from('gsp_school AS a')
         ->join('states AS b', 'a.state=b.id', 'left')
