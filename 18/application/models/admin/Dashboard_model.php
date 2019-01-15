@@ -16,8 +16,8 @@ class Dashboard_model extends CI_Model {
      */
 
     public function schoolCount() {
-        $this->db->where('YEAR(date_added)', 2017);
-		$this->db->where('date_added <', '2017-11-29 00:00:00');
+        $this->db->where('YEAR(date_added)', 2018);
+		$this->db->where('date_added <', '2018-11-18 00:00:00');
         return $this->db->count_all_results('gsp_school');
     }
    
@@ -38,8 +38,8 @@ class Dashboard_model extends CI_Model {
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
 						->join('cities AS c', 'a.district=c.id', 'left')
-                        ->where('YEAR(a.date_added)', 2017)
-						->where('a.date_added <', '2017-11-29 00:00:00')
+                        ->where('YEAR(a.date_added)', 2018)
+						->where('a.date_added <', '2018-11-18 00:00:00')
                         ->order_by('a.id', 'desc')
                         ->get()->result();
     }
