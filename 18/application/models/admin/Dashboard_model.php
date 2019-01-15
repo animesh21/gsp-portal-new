@@ -108,7 +108,7 @@ class Dashboard_model extends CI_Model {
 		 $this->db->join('states AS b', 'a.state=b.id', 'left');
 		 $this->db->join('cities AS c', 'a.district=c.id', 'left');
 		 $this->db->join('gsp_aduit_submitted AS e','e.userid=a.userid', 'left');
-		 $this->db->where('e.date_on <=', '2017-11-29');
+		 $this->db->where('e.date_on <=', '2018-11-18');
 		 $this->db->where('e.status','1');
 		 $this->db->order_by('a.id', 'desc');
 	         return $this->db->count_all_results();
@@ -120,7 +120,7 @@ class Dashboard_model extends CI_Model {
 					->join('states AS b', 'a.state=b.id', 'left')
 					->join('cities AS c', 'a.district=c.id', 'left')
 					->join('gsp_aduit_submitted AS e','e.userid=a.userid', 'left')
-					->where('e.date_on <=', '2017-11-29')
+					->where('e.date_on <=', '2018-11-18')
 					->where('e.status','1')
 					->order_by('a.id', 'desc')
 					->get()->result();
@@ -132,7 +132,7 @@ class Dashboard_model extends CI_Model {
 					->join('states AS b', 'a.state=b.id', 'left')
 					->join('cities AS c', 'a.district=c.id', 'left')
 					->join('gsp_aduit_submitted AS e','e.userid=a.userid', 'left')
-					->where('e.date_on <=', '2017-11-29')
+					->where('e.date_on <=', '2018-11-18')
 					->where('e.status','1')
 					->where('a.userid',$userId)
 					->order_by('a.id', 'desc')
@@ -147,7 +147,7 @@ class Dashboard_model extends CI_Model {
 					->join('cities AS c', 'a.district=c.id', 'left')
 					->where('progress_phase_1 >=', 10)
 					->where('progress_phase_1 <=', 75)
-					->where('a.date_added <=', '2017-11-29 00:00:00')
+					->where('a.date_added <=', '2017-11-29')
 					->order_by('a.id', 'desc')
 					->get()->result();
 	}
@@ -155,7 +155,7 @@ class Dashboard_model extends CI_Model {
 	public function getschool_start_but_not_complete() {
 		$this->db->where('progress_phase_1 >=', 10);
 		$this->db->where('progress_phase_1 <=', 75);
-		$this->db->where('date_added <=', '2018-11-18 00:00:00');
+		$this->db->where('date_added <=', '2018-11-18');
 		return $this->db->count_all_results('gsp_school');
         
 	}
@@ -167,14 +167,14 @@ class Dashboard_model extends CI_Model {
 						->join('states AS b', 'a.state=b.id', 'left')
 						->join('cities AS c', 'a.district=c.id', 'left')
 						->where('progress_phase_1=5')
-						->where('date_added <=', '2018-11-18 00:00:00')
+						->where('date_added <=', '2018-11-18')
 						->order_by('a.id', 'desc')
 						->get()->result();
 	}
 	
 	public function getschools_not_start_the_audit() {
 		$this->db->where('progress_phase_1 = 5');
-		$this->db->where('date_added <=', '2018-11-18 00:00:00');
+		$this->db->where('date_added <=', '2018-11-18');
 		return $this->db->count_all_results('gsp_school');
 
     }
