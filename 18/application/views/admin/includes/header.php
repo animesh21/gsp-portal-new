@@ -225,6 +225,8 @@
                       <li><a href="<?php echo base_url('admin/performance_report/ExcelSecondary_phase2'); ?>">Total Secondary Excel</a> </li>
                     </ul>
                   </li>
+		  <li><a href="<?php echo base_url('admin/performance_report/allExcelPrimary'); ?>">Phase-1 All Primary Excel Dump</a></li>
+		  <li><a href="<?php echo base_url('admin/performance_report/allExcelSecondary'); ?>">Phase-1 All Secondary Excel Dump</a></li>	
                   <li><a href="<?php echo base_url('admin/performance_report/allExcelDump'); ?>">All Excel Dump</a></li>
                   <li class=""><a href="<?php echo base_url('admin/performance_report/totalCalculation'); ?>">Total Points Calculation</a> </li>
                  <!-- <li><a href="analysis_report_all_question.php">All Responses</a></li> -->
