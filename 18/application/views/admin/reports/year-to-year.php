@@ -357,7 +357,6 @@
             <th>Does your school burn waste?</th>
             <th>Where does your school burn waste?</th>
             <th>What kind of waste is burnt/ incinerated?</th>
-            <th>E-waste Disposal</th>
             <th>Who collects E-waste</th>
             <th>Are there awareness drives with regard to Reduce, Recycle and Reuse</th>
             <th>Is the study of the environment integrated into the curriculum?</th>
