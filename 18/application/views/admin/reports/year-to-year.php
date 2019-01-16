@@ -58,7 +58,6 @@
             <th>Pin code</th>
             <th>STD Code</th>
             <th>Landline No.</th>
-            <th>Mobile No.</th>
             <th>Principal's Name</th>
             <th>Principal Mobile</th>
             <th>GSP Coordintor Name</th>
