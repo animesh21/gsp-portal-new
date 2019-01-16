@@ -684,7 +684,6 @@
             <td><?php getYOYComparisonYesNo($yoyDatas->does_your_school_burn_waste); ?></td>
             <td><?php echo $yoyDatas->where_does_your_school_burn_waste; ?></td>
             <td><?php echo $yoyDatas->what_kind_of_waste_is_burnt__incinerated; ?></td>
-            <td><?php if(!empty($yoyDatas->e_waste_disposal)){ echo $yoyDatas->e_waste_disposal;}else{ echo "NA";} ?></td>
             <td><?php if(!empty($yoyDatas->who_collects_e_waste)){ echo $yoyDatas->who_collects_e_waste;}else{ echo "NA";} ?></td>
             <td><?php getYOYComparisonYesNo($yoyDatas->are_there_awareness_drives_with_regard); ?></td>
             <td><?php getYOYComparisonYesNo($yoyDatas->is_the_study_of_the_environment_integrated); ?></td>
