@@ -3138,10 +3138,10 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
     <input type="checkbox" name="Q19W16" value="<?php echo set_value('Q19W16', '1') ?>" <?php if(isset($data['Q19W16'])){ echo $data['Q19W16'] == '1' ? "checked" : "";} if(isset($data['Q19W16'])){ echo $data['Q19W16'] == true ? "checked" : "";} ?> />
     Used for  cleaning purposes (mopping, washing vehicles, etc)</label>
     <label class="radio-inline text-gray">
-    <input type="checkbox" name="Q19W161" value="<?php echo set_value('Q19W161', '2') ?>" <?php if (isset($data['Q19W161'])) echo $data['Q19W161'] == '2' ? "checked" : "" ?>>
+    <input type="checkbox" name="Q19W161" value="<?php echo set_value('Q19W161', '2') ?>" <?php if(isset($data['Q19W161'])){ echo $data['Q19W161'] == '2' ? "checked" : "";} if(isset($data['Q19W161'])){ echo $data['Q19W161'] == true ? "checked" : "";} ?>>
     Used for gardening and horticulture</label>
     <label class="radio-inline text-gray">
-    <input type="checkbox" name="Q19W162" value="<?php echo set_value('Q19W162', '3') ?>" <?php if (isset($data['Q19W162'])) echo $data['Q19W162'] == '3' ? "checked" : "" ?>>
+    <input type="checkbox" name="Q19W162" value="<?php echo set_value('Q19W162', '3') ?>" <?php if(isset($data['Q19W162'])){ echo $data['Q19W162'] == '3' ? "checked" : "";} if(isset($data['Q19W162'])){ echo $data['Q19W162'] == true ? "checked" : "";} ?>>
     Flushing</label>
   </div>
 </div>
@@ -3149,7 +3149,7 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
   <label class="control-label"><span class="cube">18 (i)</span>If no, How does your school reuse wastewater from RO plant or AC?</label>
   <div class="form-group">
     <label class="radio-inline text-gray">
-    <input type="checkbox" name="Q19W17" value="<?php echo set_value('Q19W17', '1') ?>" <?php if (isset($data['Q19W17'])) echo $data['Q19W17'] == '1' ? "checked" : "" ?>>
+    <input type="checkbox" name="Q19W17" value="<?php echo set_value('Q19W17', '1') ?>" <?php if(isset($data['Q19W17'])){ echo $data['Q19W17'] == '1' ? "checked" : "";}  if(isset($data['Q19W17'])){ echo $data['Q19W17'] == true ? "checked" : "";}?>>
     Wastewater flows directly to the drains</label>
   </div>
 </div>
