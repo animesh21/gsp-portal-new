@@ -2199,7 +2199,7 @@ value="<?php if (isset($data['Q8W2S2S8'])) echo $data['Q8W2S2S8']; ?>" placehold
     <ul>
       <li>
         <input type="checkbox" name="Q8W2S31"
-                                               value="<?php echo set_value('Q8W2S31', 1); ?>" <?php if (isset($data['Q8W2S31'])) if ($data['Q8W2S31'] == 1) echo set_checkbox('Q8W2S31', '1', true); ?> />
+                                               value="<?php echo set_value('Q8W2S31', 1); ?>" <?php if (isset($data['Q8W2S31'])) if ($data['Q8W2S31'] == 1 || $data['Q8W2S31'] == true) echo set_checkbox('Q8W2S31', '1', true); ?> />
         <label class="text-gray">Conduits
         <audio controls id="CONDUITS" class="audio hide">
           <source src="<?php echo base_url(); ?>assets/audio-files/Conduits.MP3" type="audio/mpeg">
