@@ -3186,22 +3186,22 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
     <ul>
       <li>
         <label class="radio-inline text-gray">
-        <input type="checkbox" name="Q20W2" value="<?php echo set_value('Q20W2', 1) ?>" <?php if (isset($data['Q20W2'])) echo $data['Q20W2'] == 1 ? "checked" : "" ?>>
+        <input type="checkbox" name="Q20W2" value="<?php echo set_value('Q20W2', 1) ?>" <?php if(isset($data['Q20W2'])){ echo $data['Q20W2'] == 1 ? "checked" : "";} if(isset($data['Q20W2'])){ echo $data['Q20W2'] == true ? "checked" : ""; }  ?>>
         Gardening </label>
       </li>
       <li>
         <label class="radio-inline text-gray">
-        <input type="checkbox" name="Q20W21" value="<?php echo set_value('Q20W21', 2) ?>" <?php if (isset($data['Q20W21'])) echo $data['Q20W21'] == 2 ? "checked" : "" ?>>
+        <input type="checkbox" name="Q20W21" value="<?php echo set_value('Q20W21', 2) ?>" <?php if(isset($data['Q20W21'])){ echo $data['Q20W21'] == 2 ? "checked" : "";} if(isset($data['Q20W21'])){ echo $data['Q20W21'] == true ? "checked" : "";}  ?>>
         Flushing</label>
       </li>
       <li>
         <label class="radio-inline text-gray">
-        <input type="checkbox" name="Q20W22" value="<?php echo set_value('Q20W22', 3) ?>" <?php if (isset($data['Q20W22'])) echo $data['Q20W22'] == 3 ? "checked" : "" ?>>
+        <input type="checkbox" name="Q20W22" value="<?php echo set_value('Q20W22', 3) ?>" <?php if(isset($data['Q20W22'])){ echo $data['Q20W22'] == 3 ? "checked" : "";} if(isset($data['Q20W22'])){ echo $data['Q20W22'] == true ? "checked" : "";} ?>>
         Recharge Ground Water</label>
       </li>
       <li>
         <label class="radio-inline text-gray">
-        <input type="checkbox" name="Q20W23" value="<?php echo set_value('Q20W23', 4) ?>" <?php if (isset($data['Q20W23'])) echo $data['Q20W23'] == 4 ? "checked" : "" ?>>
+        <input type="checkbox" name="Q20W23" value="<?php echo set_value('Q20W23', 4) ?>" <?php if(isset($data['Q20W23'])){ echo $data['Q20W23'] == 4 ? "checked" : "";} if(isset($data['Q20W23'])){ echo $data['Q20W23'] == true ? "checked" : "";} ?>>
         Cleaning (mopping, washing vehicles, etc)</label>
       </li>
     </ul>
@@ -3226,17 +3226,17 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
         <ul>
           <li>
             <label class="radio-inline text-gray">
-            <input type="checkbox" name="Q20W3" value="<?php echo set_value('Q20W3', 1) ?>" <?php if (isset($data['Q20W3'])) echo $data['Q20W3'] == 1 ? "checked" : "" ?>>
+            <input type="checkbox" name="Q20W3" value="<?php echo set_value('Q20W3', 1) ?>" <?php if(isset($data['Q20W3'])){ echo $data['Q20W3'] == 1 ? "checked" : "";} if(isset($data['Q20W3'])){ echo $data['Q20W3'] == true ? "checked" : "";}  ?>>
             Wastewater flows directly to the drains </label>
           </li>
           <li>
             <label class="radio-inline text-gray">
-            <input type="checkbox" name="Q20W31" value="<?php echo set_value('Q20W31', 2) ?>" <?php if (isset($data['Q20W31'])) echo $data['Q20W31'] == 2 ? "checked" : "" ?>>
+            <input type="checkbox" name="Q20W31" value="<?php echo set_value('Q20W31', 2) ?>" <?php if(isset($data['Q20W31'])){ echo $data['Q20W31'] == 2 ? "checked" : "";} if(isset($data['Q20W31'])){ echo $data['Q20W31'] == true ? "checked" : "";} ?>>
             Used for groundwater recharge </label>
           </li>
           <li>
             <label class="radio-inline text-gray">
-            <input type="checkbox" name="Q20W32" value="<?php echo set_value('Q20W32', 3) ?>" <?php if (isset($data['Q20W32'])) echo $data['Q20W32'] == 3 ? "checked" : "" ?>>
+            <input type="checkbox" name="Q20W32" value="<?php echo set_value('Q20W32', 3) ?>" <?php if(isset($data['Q20W32'])){ echo $data['Q20W32'] == 3 ? "checked" : "";} if(isset($data['Q20W31'])){ echo $data['Q20W32'] == true ? "checked" : "";} ?>>
             Used for gardening and horticulture </label>
           </li>
         </ul>
