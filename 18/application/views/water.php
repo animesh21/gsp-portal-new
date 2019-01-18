@@ -2208,7 +2208,7 @@ value="<?php if (isset($data['Q8W2S2S8'])) echo $data['Q8W2S2S8']; ?>" placehold
       </li>
       <li>
         <input type="checkbox" id="Q8W2S32" name="Q8W2S32"
-                                               value="<?php echo set_value('Q8W2S32', 1); ?>" <?php if (isset($data['Q8W2S32'])) if ($data['Q8W2S32'] == 1) echo set_checkbox('Q8W2S32', '1', true); ?> />
+                                               value="<?php echo set_value('Q8W2S32', 1); ?>" <?php if (isset($data['Q8W2S32'])) if ($data['Q8W2S32'] == 1 || $data['Q8W2S32'] == true) echo set_checkbox('Q8W2S32', '1', true); ?> />
         <label class="text-gray">Gutters
         <audio controls id="GUTTERS" class="audio hide">
           <source src="<?php echo base_url(); ?>assets/audio-files/Gutters.MP3" type="audio/mpeg">
@@ -2218,7 +2218,7 @@ value="<?php if (isset($data['Q8W2S2S8'])) echo $data['Q8W2S2S8']; ?>" placehold
       <li>
         <input type="checkbox" id="Q8W2S33" onClick="HarvestingStructure()"
                                                name="Q8W2S33"
-                                               value="<?php echo set_value('Q8W2S33', 1); ?>" <?php if (isset($data['Q8W2S33'])) if ($data['Q8W2S33'] == 1) echo set_checkbox('Q8W2S33', 1, true); ?>/>
+                                               value="<?php echo set_value('Q8W2S33', 1); ?>" <?php if (isset($data['Q8W2S33'])) if ($data['Q8W2S33'] == 1 || $data['Q8W2S33'] == true) echo set_checkbox('Q8W2S33', 1, true); ?>/>
         <label class="text-gray">Filter unit
         <audio controls id="FILTERUNIT" class="audio hide">
           <source src="<?php echo base_url(); ?>assets/audio-files/Filter Unit.MP3" type="audio/mpeg">
@@ -2227,7 +2227,7 @@ value="<?php if (isset($data['Q8W2S2S8'])) echo $data['Q8W2S2S8']; ?>" placehold
       </li>
       <li>
         <input type="checkbox" name="Q8W2S34"
-                                               value="<?php echo set_value('Q8W2S34', 1); ?>" <?php if (isset($data['Q8W2S34'])) if ($data['Q8W2S34'] == 1) echo set_checkbox('Q8W2S34', '1', true); ?>/>
+                                               value="<?php echo set_value('Q8W2S34', 1); ?>" <?php if (isset($data['Q8W2S34'])) if ($data['Q8W2S34'] == 1 || $data['Q8W2S34'] == true) echo set_checkbox('Q8W2S34', '1', true); ?>/>
         <label class="text-gray">First flush
         <audio controls id="FIRSTFLUSH" class="audio hide">
           <source src="<?php echo base_url(); ?>assets/audio-files/first Flush.MP3" type="audio/mpeg">
@@ -2236,12 +2236,12 @@ value="<?php if (isset($data['Q8W2S2S8'])) echo $data['Q8W2S2S8']; ?>" placehold
       </li>
       <li>
         <input type="checkbox" name="Q8W2S35"
-                                               value="<?php echo set_value('Q8W2S35', 1); ?>" <?php if (isset($data['Q8W2S35'])) if ($data['Q8W2S35'] == 1) echo set_checkbox('Q8W2S35', '1', true); ?>/>
+                                               value="<?php echo set_value('Q8W2S35', 1); ?>" <?php if (isset($data['Q8W2S35'])) if ($data['Q8W2S35'] == 1 || $data['Q8W2S35'] == true) echo set_checkbox('Q8W2S35', '1', true); ?>/>
         <label class="text-gray">Storage tank</label>
       </li>
       <li>
         <input type="checkbox" name="Q8W2S36"
-                                               value="<?php echo set_value('Q8W2S36', 1); ?>" <?php if (isset($data['Q8W2S36'])) if ($data['Q8W2S36'] == 1) echo set_checkbox('Q8W2S36', '1', true); ?>/>
+                                               value="<?php echo set_value('Q8W2S36', 1); ?>" <?php if (isset($data['Q8W2S36'])) if ($data['Q8W2S36'] == 1 || $data['Q8W2S36'] == true) echo set_checkbox('Q8W2S36', '1', true); ?>/>
         <label class="text-gray">Collection sump
         <audio controls id="SUMP" class="audio hide">
           <source src="<?php echo base_url(); ?>assets/audio-files/Sump.MP3" type="audio/mpeg">
@@ -2250,12 +2250,12 @@ value="<?php if (isset($data['Q8W2S2S8'])) echo $data['Q8W2S2S8']; ?>" placehold
       </li>
       <li>
         <input type="checkbox" name="Q8W2S37"
-                                               value="<?php echo set_value('Q8W2S37', 1); ?>" <?php if (isset($data['Q8W2S37'])) if ($data['Q8W2S37'] == 1) echo set_checkbox('Q8W2S37', '1', true); ?>/>
+                                               value="<?php echo set_value('Q8W2S37', 1); ?>" <?php if (isset($data['Q8W2S37'])) if ($data['Q8W2S37'] == 1 || $data['Q8W2S37'] == true) echo set_checkbox('Q8W2S37', '1', true); ?>/>
         <label class="text-gray">Pump unit</label>
       </li>
       <li>
         <input type="checkbox" name="Q8W2S38"
-                                               value="<?php echo set_value('Q8W2S38', 1); ?>" <?php if (isset($data['Q8W2S38'])) if ($data['Q8W2S38'] == 1) echo set_checkbox('Q8W2S38', '1', true); ?>/>
+                                               value="<?php echo set_value('Q8W2S38', 1); ?>" <?php if (isset($data['Q8W2S38'])) if ($data['Q8W2S38'] == 1 || $data['Q8W2S38'] == true) echo set_checkbox('Q8W2S38', '1', true); ?>/>
         <label class="text-gray">Recharge structure
         <audio controls id="RECHARGESTRUCTURES" class="audio hide">
           <source src="<?php echo base_url(); ?>assets/audio-files/Recharge structures.MP3" type="audio/mpeg">
@@ -3135,7 +3135,7 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
   <label class="control-label"><span class="cube">18 (i)</span>If yes, How does your school reuse wastewater from RO plant or AC?</label>
   <div class="form-group">
     <label class="radio-inline text-gray">
-    <input type="checkbox" name="Q19W16" value="<?php echo set_value('Q19W16', '1') ?>" <?php if (isset($data['Q19W16'])) echo $data['Q19W16'] == '1' ? "checked" : "" ?> />
+    <input type="checkbox" name="Q19W16" value="<?php echo set_value('Q19W16', '1') ?>" <?php if(isset($data['Q19W16'])){ echo $data['Q19W16'] == '1' ? "checked" : "";} if(isset($data['Q19W16'])){ echo $data['Q19W16'] == true ? "checked" : "";} ?> />
     Used for  cleaning purposes (mopping, washing vehicles, etc)</label>
     <label class="radio-inline text-gray">
     <input type="checkbox" name="Q19W161" value="<?php echo set_value('Q19W161', '2') ?>" <?php if (isset($data['Q19W161'])) echo $data['Q19W161'] == '2' ? "checked" : "" ?>>
