@@ -1,5 +1,4 @@
 <?php $this->load->view('header'); ?>
-
 <style>
 .error{
   color: #fb4f2a !important;
@@ -138,11 +137,6 @@
 }
 
 </style>
-
-
-
-
-
 <div class="container">
 <div class="content-form">
 <div class="log-nav">
@@ -2050,79 +2044,75 @@
 </div>
 <br>
 <div class="clearfix">&nbsp;</div>
-
-<div id="compositive" style="display:none;"> <!-- Q5 div hide -->
-
-			<div class="form-group row" id="Q9Wa2">
-			  <label><span class="cube">5(a)</span>What is the methodology used?</label>
-			  <div class="text-gray">
-				<label>
-				<input type="checkbox" name="Q9Wa2S1"
+<div id="compositive" style="display:none;">
+  <!-- Q5 div hide -->
+  <div class="form-group row" id="Q9Wa2">
+    <label><span class="cube">5(a)</span>What is the methodology used?</label>
+    <div class="text-gray">
+      <label>
+      <input type="checkbox" name="Q9Wa2S1"
 										   value="<?php echo set_value('Q9Wa2S1', 1); ?>" <?php if (isset($data['Q9Wa2S1'])) echo "checked" ?>>
-				Natural composting without added microbes</label>
-			  </div>
-			  <div class="text-gray">
-				<label>
-				<input type="checkbox" name="Q9Wa2S2"
+      Natural composting without added microbes</label>
+    </div>
+    <div class="text-gray">
+      <label>
+      <input type="checkbox" name="Q9Wa2S2"
 										   value="<?php echo set_value('Q9Wa2S2', 1); ?>" <?php if (isset($data['Q9Wa2S2'])) echo "checked" ?>>
-				Vermi composting</label>
-			  </div>
-			  <div class="text-gray">
-				<label>
-				<input type="checkbox" name="Q9Wa2S3"
+      Vermi composting</label>
+    </div>
+    <div class="text-gray">
+      <label>
+      <input type="checkbox" name="Q9Wa2S3"
 										   value="<?php echo set_value('Q9Wa2S3', 1); ?>" <?php if (isset($data['Q9Wa2S3'])) echo "checked" ?>>
-				Mechanical composting</label>
-			  </div>
-			  <div class="text-gray">
-				<label>Other: &nbsp
-				<input type="text" name="Q9Wa2S4" value="<?php echo set_value('Q9Wa2S4'); ?>"
+      Mechanical composting</label>
+    </div>
+    <div class="text-gray">
+      <label>Other: &nbsp
+      <input type="text" name="Q9Wa2S4" value="<?php echo set_value('Q9Wa2S4'); ?>"
 										   placeholder="<?php if (isset($data['Q9Wa2S4'])) echo $data['Q9Wa2S4'] ?>">
-				</label>
-			  </div>
-			</div>
-
-			<div class="form-group" id="Q9Wa3">
-			  
-			  <div class="form-group" id="Q9Wa3">
-				<label for="username" class="control-label"><span class="cube">5(b)</span>What is the quantity of
-				compost that is generated per month (in kilogram)?</label>
-				<br>
-				<input type="text" name="Q9Wa3" id="Q9Wa31" class="form-control space-textbox"
+      </label>
+    </div>
+  </div>
+  <div class="form-group" id="Q9Wa3">
+    <div class="form-group" id="Q9Wa3">
+      <label for="username" class="control-label"><span class="cube">5(b)</span>What is the quantity of
+      compost that is generated per month (in kilogram)?</label>
+      <br>
+      <input type="text" name="Q9Wa3" id="Q9Wa31" class="form-control space-textbox"
 								   placeholder="<?php if (isset($data['Q9Wa3'])) echo $data['Q9Wa3'] ?>"
 								   value="<?php if (isset($data['Q9Wa3'])) echo $data['Q9Wa3'] ?>">
-			  </div>
-			</div>
-			<br>
-
-				  <div class="form-group row" id="Q9Wa4">
-					<label><span class="cube">5(c)</span> What is the purpose of the compost that is generated per month? </label>
-					<div class="form-group row">
-					  <label class="text-gray">
-					  <input type="checkbox" name="Q9Wa4S1"
+    </div>
+  </div>
+  <br>
+  <div class="form-group row" id="Q9Wa4">
+    <label><span class="cube">5(c)</span> What is the purpose of the compost that is generated per month? </label>
+    <div class="form-group row">
+      <label class="text-gray">
+      <input type="checkbox" name="Q9Wa4S1"
 									   value="<?php echo set_value('Q9Wa4S1', 1); ?>" <?php if (isset($data['Q9Wa4S1'])) echo "checked" ?>>
-					  For horticultural purposes </label>
-					</div>
-					<div class="form-group row">
-					  <label class="text-gray">
-					  <input type="checkbox" name="Q9Wa4S2"
+      For horticultural purposes </label>
+    </div>
+    <div class="form-group row">
+      <label class="text-gray">
+      <input type="checkbox" name="Q9Wa4S2"
 									   value="<?php echo set_value('Q9Wa4S2', 1); ?>" <?php if (isset($data['Q9Wa4S2'])) echo "checked" ?>>
-					  For school garden</label>
-					</div>
-					<div class="form-group row">
-					  <label class="text-gray">
-					  <input type="checkbox" name="Q9Wa4S3"
+      For school garden</label>
+    </div>
+    <div class="form-group row">
+      <label class="text-gray">
+      <input type="checkbox" name="Q9Wa4S3"
 									   value="<?php echo set_value('Q9Wa4S3', 1); ?>" <?php if (isset($data['Q9Wa4S3'])) echo "checked" ?>>
-					  For sale</label>
-					</div>
-					<div class="form-group row">
-					  <label class="text-gray">
-					  <input type="checkbox" name="Q9Wa4S4"
+      For sale</label>
+    </div>
+    <div class="form-group row">
+      <label class="text-gray">
+      <input type="checkbox" name="Q9Wa4S4"
 									   value="<?php echo set_value('Q9Wa4S4', 1); ?>" <?php if (isset($data['Q9Wa4S4'])) echo "checked" ?>>
-					  For charity</label>
-					</div>
-				  </div>
-</div><!-- Q5 div hide -->
-    
+      For charity</label>
+    </div>
+  </div>
+</div>
+<!-- Q5 div hide -->
 <div class="form-group">
   <label class="control-label"><span class="cube">6</span>Does your school encourage students & teachers to
   reuse textbooks? <a class="kplink"
@@ -2171,7 +2161,7 @@
     </div>
     <div class="col-xs-2">
       <input type="checkbox" id="Q11Wa1S1" name="Q11Wa1S1"
-                           value="<?php echo set_value('Q11Wa1S1', 1); ?>" <?php if (isset($data['Q11Wa1S1'])) if ($data['Q11Wa1S1'] == 1) echo set_checkbox('Q11Wa1S1', '1', true); ?> <?php if (isset($data['Q6Wa2S2'])) if ($data['Q6Wa2S2'] < 1) echo "disabled"; ?>>
+                           value="<?php echo set_value('Q11Wa1S1', 1); ?>" <?php if (isset($data['Q11Wa1S1'])) if($data['Q11Wa1S1'] == 1){echo set_checkbox('Q11Wa1S1', '1', true);} if($data['Q11Wa1S1'] == true){echo set_checkbox('Q11Wa1S1', '1', true);} ?> <?php if (isset($data['Q6Wa2S2'])) if ($data['Q6Wa2S2'] < 1) echo "disabled"; ?>>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" id="Q11Wa1S2" type="checkbox" name="Q11Wa1S2"
@@ -3827,7 +3817,6 @@
     </div>
   </div>
 </div>
-
 <script>
 	$(document).ready(function(){
 	
@@ -4396,9 +4385,7 @@
 	});
 	
 	</script>
-	
-
-	<script>
+<script>
  $(document).ready(function(){
 	
    $("input[name='Q9Wa1']").click(function(){
@@ -4424,8 +4411,6 @@
 	}
  });
 </script>
-	
-
 <script type="text/javascript">
     $('.close').click(function () {
         $('#video').attr("src", "https://www.youtube.com/embed/CI-iGmii5Yk");
