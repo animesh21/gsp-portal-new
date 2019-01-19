@@ -2165,15 +2165,15 @@
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" id="Q11Wa1S2" type="checkbox" name="Q11Wa1S2"
-                           value="<?php echo set_value('Q11Wa1S2', 1); ?>" <?php if (isset($data['Q11Wa1S2'])) if ($data['Q11Wa1S2'] == 1) echo set_checkbox('Q11Wa1S2', '1', true); ?> <?php if (isset($data['Q6Wa2S2'])) if ($data['Q6Wa2S2'] < 1) echo "disabled"; ?>/>
+                           value="<?php echo set_value('Q11Wa1S2', 1); ?>" <?php if (isset($data['Q11Wa1S2'])) if($data['Q11Wa1S2'] == 1){ echo set_checkbox('Q11Wa1S2', '1', true);} if($data['Q11Wa1S2'] == true){ echo set_checkbox('Q11Wa1S2', '1', true);}  ?> <?php if (isset($data['Q6Wa2S2'])) if ($data['Q6Wa2S2'] < 1) echo "disabled"; ?>/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" id="Q11Wa1S3" type="checkbox" name="Q11Wa1S3"
-                           value="<?php echo set_value('Q11Wa1S3', 1); ?>" <?php if (isset($data['Q11Wa1S3'])) if ($data['Q11Wa1S3'] == 1) echo set_checkbox('Q11Wa1S3', '1', true); ?> <?php if (isset($data['Q6Wa2S2'])) if ($data['Q6Wa2S2'] < 1) echo "disabled"; ?>/>
+                           value="<?php echo set_value('Q11Wa1S3', 1); ?>" <?php if (isset($data['Q11Wa1S3'])) if($data['Q11Wa1S3'] == 1){echo set_checkbox('Q11Wa1S3', '1', true);} if($data['Q11Wa1S3'] == true){echo set_checkbox('Q11Wa1S3', '1', true);} ?> <?php if (isset($data['Q6Wa2S2'])) if ($data['Q6Wa2S2'] < 1) echo "disabled"; ?>/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" id="Q11Wa1S4" type="checkbox" name="Q11Wa1S4"
-                           value="<?php echo set_value('Q11Wa1S4', 1); ?>" <?php if (isset($data['Q11Wa1S4'])) if ($data['Q11Wa1S4'] == 1) echo set_checkbox('Q11Wa1S4', '1', true); ?> <?php if (isset($data['Q6Wa2S2'])) if ($data['Q6Wa2S2'] < 1) echo "disabled"; ?>/>
+                           value="<?php echo set_value('Q11Wa1S4', 1); ?>" <?php if (isset($data['Q11Wa1S4'])) if($data['Q11Wa1S4'] == 1){echo set_checkbox('Q11Wa1S4', '1', true);} if($data['Q11Wa1S4'] == true){echo set_checkbox('Q11Wa1S4', '1', true);} ?> <?php if (isset($data['Q6Wa2S2'])) if ($data['Q6Wa2S2'] < 1) echo "disabled"; ?>/>
     </div>
   </div>
   <div class="form-group row">
