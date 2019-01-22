@@ -77,13 +77,13 @@
 		  echo $percentage;
 		 ?></td>
           <td><?php
-		  if($percentage>=70):
+		  if(floor($percentage)>=70):
 		   echo "<label class='label label-success'>Green</label>";
-		  elseif($percentage>=50 && $percentage<=69.9):
+		  elseif(floor($percentage)>=50 && floor($percentage)<=69.9):
 		  		   echo "<label class='label label-warning' style='background:yellow; color:black;'>Yellow</label>";
-		  elseif($percentage>=35 && $percentage<=49.9):
+		  elseif(floor($percentage)>=35 && floor($percentage)<=49.9):
 		  		   echo "<label class='label label-success' style='background:orange; color:black;'>Orange</label>";
-		  elseif($percentage<=34.9):
+		  elseif(floor($percentage)<=34.9):
 		  		   echo "<label class='label label-danger'>Red</label>";
 		  else:
 		    echo "Not Rated";
