@@ -244,5 +244,11 @@ function getdigitalCertificate($argID) {
 		    $this->dompdf->render();
 		    $this->dompdf->stream("performance-report.pdf", array("Attachment" => false));
     }	
+
+
+public function downloadReportsSection(){
+    $this->load->view('download-report');
+  } 
+    
 }
 
