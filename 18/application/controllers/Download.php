@@ -155,7 +155,7 @@ function getdigitalCertificate($argID) {
    $data['principal'] = $principal;	
    $html1 = $this->load->view('admin/survey/digital-certificate', $data, true);
    $this->dompdf->load_html($html1);
-   $this->dompdf->set_paper(array(0, 0, 505, 691), 'portrait');
+   $this->dompdf->set_paper(array(0, 0, 500, 571), 'landscape');
    $this->dompdf->render();
    $this->dompdf->stream("Digital Certificate.pdf", array("Attachment" => false));
   }
@@ -269,6 +269,6 @@ public function downloadAirSection(){
     $this->load->view('download_waste');
   } 
 
-    
+
 }
 

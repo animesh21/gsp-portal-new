@@ -10,7 +10,7 @@
 			//echo '<pre>'; print_r($students);exit;
 		if ($students[$i]['name'] !="") {
 		    echo "<div class='container' 
-style='background:url(assets/img/images/certificate-2018.jpg) 0% 17%  no-repeat; width:1124px; height:791px; margin:0px auto;'><div class='first_name'>" . $students[$i]['name'] . "&nbsp;&nbsp;" . numberToRomanRepresentation($students[$i]['grade']) . "</div>&nbsp;<div class='school_name'>".$students[$i]['school_name']."</div></div>";
+style='background:url(assets/img/images/certificate-2018.jpg) 0% 10%  no-repeat; width:724px; height:490px; margin:0px auto;'><div class='first_name'>" . $students[$i]['name'] . "&nbsp;&nbsp;" . numberToRomanRepresentation($students[$i]['grade']) . "</div>&nbsp;<div class='school_name'>".$students[$i]['school_name']."</div></div>";
 		}
 	    }
 	}
@@ -18,7 +18,7 @@ style='background:url(assets/img/images/certificate-2018.jpg) 0% 17%  no-repeat;
 	    for ($i = 0; $i < count($staffadmin); $i++) {
 		if ($staffadmin != '') {
 		    echo "<div class='container' 
-style='background:url(assets/img/images/certificate-2018.jpg) 0% 17%  no-repeat; width:1124px; height:791px; margin:0px auto;'><div class='first_name'>" . $staffadmin[$i]['teacher'] . "</div>&nbsp;<div class='school_name'>" .  $staffadmin[$i]['school'] . "</div></div>";
+style='background:url(assets/img/images/certificate-2018.jpg) 0% 10%  no-repeat; width:724px; height:490px; margin:0px auto;'><div class='first_name'>" . $staffadmin[$i]['teacher'] . "</div>&nbsp;<div class='school_name'>" .  $staffadmin[$i]['school'] . "</div></div>";
 		}
 	    }
 	}
@@ -27,7 +27,7 @@ style='background:url(assets/img/images/certificate-2018.jpg) 0% 17%  no-repeat;
 	    for ($i = 0; $i < count($principal); $i++) {
 		if ($principal != '') {
 		    echo "<div class='container' 
-style='background:url(assets/img/images/certificate-2018.jpg) 0% -17%  no-repeat; width:1124px; height:791px; margin:0px auto;'><div class='first_name1'>" . $principal[$i]['name'] . "</div>&nbsp;<div class='school_name1'>" .  $principal[$i]['schoolname'] . "</div></div>";
+style='background:url(assets/img/images/certificate-2018.jpg) 0% -10%  no-repeat; width:724px; height:490px; margin:0px auto;'><div class='first_name1'>" . $principal[$i]['name'] . "</div>&nbsp;<div class='school_name1'>" .  $principal[$i]['schoolname'] . "</div></div>";
 		}
 	    }
 	}
@@ -36,9 +36,26 @@ style='background:url(assets/img/images/certificate-2018.jpg) 0% -17%  no-repeat
     </body>
 </html>
 <style type="text/css">
-        .first_name{ position:absolute; top:405px; left:240px}
-	    .school_name{ position:absolute; top:452px; left:100px}
-		.first_name1{ position:absolute; top:400px; left:240px}
-	    .school_name1{ position:absolute; top:447px; left:100px}
-        .grade{position:absolute; top:265px; left:650px}
+          @font-face {
+  font-family: myFirstFont;
+  src: url(assets/scriptina/SCRIPALT.ttf);
+}
+
+.first_name{
+	font-family: myFirstFont;
+}
+
+.school_name{
+	font-family: myFirstFont;
+}
+
+.first_name1{
+	font-family: myFirstFont;
+}
+
+        .first_name{ position:absolute; top:256px; left:240px}
+	    .school_name{ position:absolute; top:293px; left:100px}
+		.first_name1{ position:absolute; top:256px; left:240px}
+	    .school_name1{ position:absolute; top:293px; left:100px}
+        .grade{position:absolute; top:205px; left:650px}
 </style>
