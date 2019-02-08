@@ -86,7 +86,7 @@
       </nav>
       <div class="container" style="height:1200px;">
         <div class="col-md-12">
-          <h1><strong>Air Section</strong></h1>
+          <h1><strong>Air Section  </strong>   <?php echo $this->session->userdata('USERNAME');?> </h1>
           <hr/>
         </div>
         <div class="col-md-12">
