@@ -250,5 +250,25 @@ public function downloadReportsSection(){
     $this->load->view('download-report');
   } 
     
+public function downloadAirSection(){
+    $this->load->view('download_air');
+  } 
+  public function downloadEnergySection(){
+    $this->load->view('download_energy');
+  } 
+  public function downloadFoodSection(){
+    $this->load->view('download_food');
+  } 
+  public function downloadLandSection(){
+    $this->load->view('download_land');
+  }
+  public function downloadWaterSection(){
+    $this->load->view('download_water');
+  } 
+  public function downloadWasteSection(){
+    $this->load->view('download_waste');
+  } 
+
+    
 }
 
