@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths">
+<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Green Schools Programme</title>
@@ -15,26 +15,21 @@
 <link rel="stylesheet" href="<?php echo base_url(''); ?>assets/css/custom.css">
 <link rel="stylesheet" href="<?php echo base_url(''); ?>assets/css/responsive.css">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
-<!--[if lte IE 8]>
-        <link rel="stylesheet" href="/audit2016/upload/templates/tfr_responsive/css/template_ie8.css"/>
-        <![endif]-->
 <link rel="shortcut icon" href="http://studiotesseract.co/audit2016/upload/templates/tfr_responsive/favicon.ico">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<style>
+<style type="text/css">
 .alert {
-	height: 50px !important;
-	padding: 15px !important;
-	font-weight: bold;
-	border-radius: 0px;
+  height: 50px !important;
+  padding: 15px !important;
+  font-weight: bold;
+  border-radius: 0px;
 }
-
 .alert-success {
-	border: 2px solid green;
+  border: 2px solid green;
 }
-
 .alert-danger {
-	border: 2px solid red;
+  border: 2px solid red;
 }
 .schools-statics {padding: 35px 15px 15px; border-radius: 6px; font-size: 16px; width: 48%; min-height: 200px; margin: 10px 10px; display: inline-block; vertical-align: top; border: 1px solid #ccc; background: rgba(232, 101, 73, 0.1); position: relative;}
 .schools-statics:nth-child(even) {margin-right: 0;}
@@ -44,80 +39,156 @@
 .schools-statics .statics-circle span {font-weight: bold; font-size: 18px; display: block; margin: 0;}
 .schools-statics label {color: #000; font-size: 12px; font-weight: normal; cursor: pointer;}
 .schools-statics a {text-decoration: none;}
+.navbar-default .navbar-nav>li>a {
+    color: #fff !important;
+    font-size: 15px!important;
+    text-transform: uppercase!important;
+    padding: 11px 20px!important;
+    font-weight: 400!important;
+}
+.dropdown-menu li a  {
+    color: #fff !important;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 11px 20px;
+    font-weight: 400;
+}
         </style>
 </head>
 <body class="lang-en groupbygroup showqnumcode-X">
 <div id="loader"><img src="<?php echo base_url(''); ?>assets/img/loader.gif" width="64" height="64"></div>
 <div class="main-wrapper">
-  <div class="main" role="main">
-    <div id="jhead">
-      <header class="hdr-hdr">
-        <div class="container">
-          <figure class="logo"><img src="<?php echo base_url(''); ?>assets/img/logo.png"
+<div class="main" role="main">
+  <div id="jhead">
+    <header class="hdr-hdr">
+      <div class="container">
+        <figure class="logo"><img src="<?php echo base_url(''); ?>assets/img/logo.png"
                                                       class="img-responsive" id="logo" alt="CSE GSP"></figure>
-          <img src="<?php echo base_url(''); ?>assets/img/top-bnr2.png" alt="" class="top-bnr img-responsive"
-                                 id="image"></div>
-      </header>
-    </div>
-    <div class="container" style="height:600px;">
+        <img src="<?php echo base_url(''); ?>assets/img/top-bnr2.png" alt="" class="top-bnr img-responsive"
+                                 id="image"> </div>
+    </header>
+  </div>
+<?php 
+ $schoolId=getSchoolId($this->session->userdata('USER_ID')); 
+ $dataYoy=download_YOY($schoolId);
+ ?>
+
+
+
+  <div class="container">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class=""><a href="<?php echo base_url('download/downloadFiles'); ?>">Home</a></li>
+            <!-- <li class=""><a href="#">Year Of Year <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li class=""><a href="#">2015</a></li>
+                <li><a href="">2016</a></li>
+                <li><a href="">2017</a></li>
+                <li><a href="">2018</a></li>
+              </ul>
+            </li>-->
+            <li class=""><a href="">YEAR OF YEAR</a></li>
+            <li class=""><a href="<?php echo base_url('download/downloadReportsSection'); ?>">Downloads</a></li>
+            <li class=""> <a href="<?php echo base_url('Downloadlogout'); ?>" class="pull-right">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container" style="height:1200px;">
       <div class="col-md-12">
-        <h1><strong>GSP Audit 2018-19 Reports & Certificate</strong></h1>
-        <a href="<?php echo base_url('Downloadlogout'); ?>" class="pull-right">Logout</a> 
-		<hr/></div>
+
+        <h1><strong><?php echo $this->session->userdata('USERNAME');?></strong><span style=" font-weight:bold;font-size: 16px; color:#e86549"> (<?php echo $this->session->userdata('email');?>)</span></h1> 
+        <hr/>
+      </div>
+
+      <div class="col-md-12">
+        <?php for($i=0; $i<sizeof($dataYoy); $i++) {?>
+        <div class="col-md-3"><div class="well text-center" style="background:<?php echo $dataYoy[$i]['color']; ?>; color: white; font-weight: 900;"><?php echo $dataYoy[$i]['range']; ?>
+          <p class="h5"><?php echo $dataYoy[$i]['year']; ?></p>
+
+        </div></div>
+      <?php } ?>
+      
+
+      <div class="col-md-12">
+        <div id="grapSchoolStatus"> </div>
+      </div>
+      <div class="col-md-12">
       <div class="col-md-4">
-        <div class="schools-statics" style="width:100%;"> <a href="<?php echo base_url("/admin/responsreport/pdf/").getSchoolId($this->session->userdata('USER_ID')); ?>" target="_blank">
-          <div class="statics-circle"> <span><i class="fa fa-file-text-o fa-2x"></i></span> </div>
+        <div class="schools-statics" style="width:100%;"> <a href="<?php echo base_url("/download/downloadAirSection/"); ?>" target="_blank">
+          <div class="statics-circle"> <span style="position: relative; width: 87px; top: -20px; left: -19px;"><img src="<?php echo base_url(''); ?>assets/img/images/air.png"  alt="" class="top-bnr img-responsive"
+                                 id="image"></span> </div>
           </a>
-          <div class="title"><strong>Response Report</strong></div>
+          <div class="title"><strong>Air</strong></div>
         </div>
       </div>
-      <div class="col-md-4 hide">
-        <div class="schools-statics" style="width:100%;"> <!--<a href="<?php echo base_url('/download/PdfById/').getSchoolId($this->session->userdata('USER_ID')); ?>" target="_blank">-->
-          <div class="statics-circle"> <span><i class="fa fa-file-text-o fa-2x"></i></span> </div>
-          <!--</a>-->
-          <div class="title"><strong>Performance Report</strong></div>
+      <div class="col-md-4">
+        <div class="schools-statics" style="width:100%;"> <a href="<?php echo base_url("/download/downloadEnergySection/"); ?>" target="_blank">
+          <div class="statics-circle"> <span style="position: relative; width: 87px; top: -20px; left: -19px;"><img src="<?php echo base_url(''); ?>assets/img/images/energy.png"  alt="" class="top-bnr img-responsive"
+                                 id="image"></span> </div>
+          </a>
+          <div class="title"><strong>Energy</strong></div>
         </div>
       </div>
-      <div class="col-md-4 hide">
-        <div class="schools-statics" style="width:100%;"> <!--<a href="<?php echo base_url('/download/getdigitalCertificate/').$this->session->userdata('USER_ID') ?>" target="_blank">-->
-          <div class="statics-circle"> <span><i class="fa fa-file-text-o fa-2x"></i></span> </div>
-          <!--</a>-->
-          <div class="title"><strong>Digital Certificate</strong></div>
+      <div class="col-md-4">
+        <div class="schools-statics" style="width:100%;"> <a href="<?php echo base_url("/download/downloadFoodSection/"); ?>" target="_blank">
+          <div class="statics-circle"> <span style="position: relative; width: 87px; top: -20px; left: -19px;"><img src="<?php echo base_url(''); ?>assets/img/images/food.png"  alt="" class="top-bnr img-responsive"
+                                 id="image"></span> </div>
+          </a>
+          <div class="title"><strong>Food</strong></div>
         </div>
       </div>
-	  <?php 
-	    $school_id=getSchoolId($this->session->userdata('USER_ID'));
-	    $data_2017=getSchoolPreviousYearAudit($school_id,"data_2017");
-	    if(strcmp($data_2017->data_2017,"NA")!=0){
-	   ?>
-            <div class="col-md-6 col-md-offset-3"> <a href="http://www.greenschoolsprogramme.org/audit/download/downloadFiles" target="_blank" class="btn btn-danger btn-block btn-lg" style="background:#e86549; border:1ps solid #e86549;">Download Reports For GSP Audit 2017</a> </div>
-	<?php } ?>
+      <div class="col-md-4">
+        <div class="schools-statics" style="width:100%;"> <a href="<?php echo base_url("/download/downloadLandSection/"); ?>" target="_blank">
+          <div class="statics-circle"> <span style="position: relative; width: 87px; top: -20px; left: -19px;"><img src="<?php echo base_url(''); ?>assets/img/images/land.png"  alt="" class="top-bnr img-responsive"
+                                 id="image"></span> </div>
+          </a>
+          <div class="title"><strong>Land</strong></div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="schools-statics" style="width:100%;"> <a href="<?php echo base_url("/download/downloadWaterSection/"); ?>" target="_blank">
+          <div class="statics-circle"> <span style="position: relative; width: 87px; top: -20px; left: -19px;"><img src="<?php echo base_url(''); ?>assets/img/images/water.png"  alt="" class="top-bnr img-responsive"
+                                 id="image"></span> </div>
+          </a>
+          <div class="title"><strong>Water</strong></div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="schools-statics" style="width:100%;"> <a href="<?php echo base_url("/download/downloadWasteSection/"); ?>" target="_blank">
+          <div class="statics-circle"> <span style="position: relative; width: 87px; top: -20px; left: -19px;"><img src="<?php echo base_url(''); ?>assets/img/images/waste.png"  alt="" class="top-bnr img-responsive"
+                                 id="image"></span> </div>
+          </a>
+          <div class="title"><strong>Waste</strong></div>
+        </div>
+      </div>
+      </div>
     </div>
   </div>
-</div>
 </div>
 <footer>
   <div class="container">
     <p>Copyright © 2018 Centre for Science and Environment. For help, email <a href="mailto:ranjita@cseindia.org">support@greenschoolsprogramme.org</a> or call 011-4061600, ext – 219, 300. </p>
     <p></p>
   </div>
-  <style type="text/css">
-    .main > .container {
-    background: #fff;
-    padding: 75px 20px 45px;
-    box-shadow: 0 0 6px #ccc;
-    box-sizing: border-box;
-   }
-   .list-inline {
-    padding-left: 0;
-    margin-left: -5px;
-    list-style: none;
-    width: 154px;
-   }
-  </style>
 </footer>
 </body>
 </html>
+<style type="text/css">
+.navbar-default {margin-bottom: 0;border-radius: 0;background: #505050!important; border: 0; padding: 0; z-index:0;}
+.main > .container {background: #fff;padding: 0px 0px 45px!important;box-shadow: 0 0 6px #ccc;box-sizing: border-box;z-index:1;}
+.table tr:nth-child(1) td{background:#e86549!important; color:#FFFFFF;}
+.table tr:nth-child(1){background:#e86549!important; color:#FFFFFF;}
+.table tr td:nth-child(1){background:#505050; color:#FFFFFF;}
+.navbar-default li a { color:#FFFFFF!important;}
+ul.nav li:hover > ul.dropdown-menu { display: block; z-index:10000;}
+.hdr-hdr {border-bottom: solid 14px #e86549;z-index: 1;}
+</style>
 <!--close footer-->
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -129,3 +200,4 @@
 <script src="<?php echo base_url(); ?>assets/front/js/buttons.html5.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/front/js/buttons.print.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/front/js/chosen.jquery.js"></script>
+ 

@@ -1744,4 +1744,36 @@ if (!function_exists('getWaterPoints')) {
         }
 
     }
+
+
+if (!function_exists('download_YOY')){
+    function download_YOY($school_id){
+       $dataYoy=array();
+         $CI = & get_instance();
+         $CI->db->where("school_id",$school_id);
+         $dataYoy=$CI->db->select("data_2018,data_2017,data_2016,data_2015")->from("tbl_yoy")->get()->row();
+         $array = json_decode(json_encode($dataYoy), true);
+         $numerical = array(); 
+     foreach($array as $k=>$v)
+     {
+
+      //echo $k;
+      $r=str_replace('data_', '', $k);
+      //echo $r;
+      //echo $v; 
+      if($v!='NA'){
+       if($v>=70){
+         $numerical[] = array("percentage"=>$v,"color"=>"#3c763d","range"=>"GREEN <br/> 70%  & Above","year"=>'Year of '.$r);}
+         elseif($v>=50 && $v<=69.9){
+          $numerical[] = array("percentage"=>$v,"color"=>"#e2dc15","range"=>"YELLOW <br/> BETWEEN (50-69.9%)","year"=>'Year of '.$r);}
+         elseif($v>=35 && $v<=49.9){
+          $numerical[] = array("percentage"=>$v,"color"=>"#e29e15","range"=>"ORANGE <br/> BETWEEN (35-49.9%)","year"=>'Year of '.$r);}
+         elseif($v<=34.9){
+          $numerical[] = array("percentage"=>$v,"color"=>"#b73418","range"=>"RED <br/> (BELOW 34.9%)","year"=>'Year of '.$r);}    
+         }
+     }
+         return $numerical;
+    }
+   }
+    
 }   
