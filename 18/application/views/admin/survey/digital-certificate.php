@@ -11,7 +11,7 @@
 			//echo '<pre>'; print_r($students);exit;
 		if ($students[$i]['name'] !="") {
 		    echo "<div class='container' 
-style='background:url(assets/img/images/certificate-2018.jpg) 0% 10%  no-repeat; width:724px; height:490px; margin:0px auto;'><div class='upper_serial'>" . $j .  "</div><div class='first_name'>" . $students[$i]['name'] . "&nbsp;&nbsp;" . numberToRomanRepresentation($students[$i]['grade']) . "</div>&nbsp;<div class='school_name'>".$students[$i]['school_name']."</div></div>";
+style='background:url(assets/img/images/certificate1-2018.jpg) 0% 10%  no-repeat; width:724px; height:490px; margin:0px auto;'><div class='upper_serial'>" . $j .  "</div><div class='first_name'>" . $students[$i]['name'] . "&nbsp;&nbsp;" . numberToRomanRepresentation($students[$i]['grade']) . "</div>&nbsp;<div class='school_name'>".$students[$i]['school_name']."</div></div>";
 		}
 	  $j++;  }
 	}
@@ -19,7 +19,7 @@ style='background:url(assets/img/images/certificate-2018.jpg) 0% 10%  no-repeat;
 	    for ($i = 0; $i < count($staffadmin); $i++) {
 		if ($staffadmin != '') {
 		    echo "<div class='container' 
-style='background:url(assets/img/images/certificate-2018.jpg) 0% 10%  no-repeat; width:724px; height:490px; margin:0px auto;'><div class='upper_serial'>" . $j .  "</div><div class='first_name'>" . $staffadmin[$i]['teacher'] . "</div>&nbsp;<div class='school_name'>" .  $staffadmin[$i]['school'] . "</div></div>";
+style='background:url(assets/img/images/certificate1-2018.jpg) 0% 10%  no-repeat; width:724px; height:490px; margin:0px auto;'><div class='upper_serial'>" . $j .  "</div><div class='first_name'>" . $staffadmin[$i]['teacher'] . "</div>&nbsp;<div class='school_name'>" .  $staffadmin[$i]['school'] . "</div></div>";
 		}
 	  $j++;   }
 	}
@@ -28,7 +28,7 @@ style='background:url(assets/img/images/certificate-2018.jpg) 0% 10%  no-repeat;
 	    for ($i = 0; $i < count($principal); $i++) {
 		if ($principal != '') {
 		    echo "<div class='container' 
-style='background:url(assets/img/images/certificate-2018.jpg) 0% -10%  no-repeat; width:724px; height:490px; margin:0px auto;'><div class='upper_serial'>" . $j .  "</div><div class='first_name1'>" . $principal[$i]['name'] . "</div>&nbsp;<div class='school_name1'>" .  $principal[$i]['schoolname'] . "</div></div>";
+style='background:url(assets/img/images/certificate1-2018.jpg) 0% -10%  no-repeat; width:724px; height:490px; margin:0px auto;'><div class='upper_serial'>" . $j .  "</div><div class='first_name1'>" . $principal[$i]['name'] . "</div>&nbsp;<div class='school_name1'>" .  $principal[$i]['schoolname'] . "</div></div>";
 		}
 	  $j++;   }
 	}
