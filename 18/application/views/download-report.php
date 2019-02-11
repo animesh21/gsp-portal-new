@@ -76,7 +76,7 @@
           </div>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-              <li class=""><a href="<?php echo base_url('download/downloadFiles'); ?>">Home</a></li>
+              <li class=""><a href="#"><!--<?php //echo base_url('download/downloadFiles'); ?> --> Home</a></li>
               <!-- <li class=""><a href="#">Year Of Year <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li class=""><a href="#">2015</a></li>
@@ -106,11 +106,11 @@
             </div>
           </div>
           <div class="col-md-4">
-            <div class="schools-statics" style="width:100%;">
-              <a href="<?php echo base_url('/download/PdfById/').getSchoolId($this->
-              session->userdata('USER_ID')); ?>" target="_blank">
+            <div class="schools-statics" id="flat" style="width:100%;">
+             <!--  <a href="<?php //echo base_url('/download/PdfById/').getSchoolId($this->
+             // session->userdata('USER_ID')); ?>" target="_blank"> -->
               <div class="statics-circle"> <span><i class="fa fa-file-text-o fa-2x"></i></span> </div>
-              </a>
+              
               <div class="title"><strong>Performance Report</strong></div>
             </div>
           </div>
@@ -160,3 +160,11 @@ ul.nav li:hover > ul.dropdown-menu { display: block; z-index:10000;}
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/modules/data.js"></script>
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script type="text/javascript">
+  $(document).ready (function(){
+    $('#flat').click(function(){
+      alert('Comming Soon');
+    });
+  });
+
+</script>
