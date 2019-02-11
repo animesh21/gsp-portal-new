@@ -10,34 +10,35 @@
 
 	if (!empty($students)) {
 	    for ($i = 0; $i < count($students); $i++) {
-	    	
-	    	 $six_digit_random_number = mt_rand(100000, 999999);
+	    	$status=getserialno_student($user_id,$students[$i]['name'],$students[$i]['grade']);
+	    	 //$six_digit_random_number = mt_rand(100000, 999999);
 			//echo '<pre>'; print_r($students);exit;
 		if ($students[$i]['name'] !="") {
             echo "<div class='container' 
-style='background:url(assets/img/images/certificate1-2018.jpg) 0% 10%  no-repeat; width:724px; height:490px; margin:0px auto;'><div class='first_name'>" . $students[$i]['name'] . "&nbsp;&nbsp;" . numberToRomanRepresentation($students[$i]['grade']) . "</div>&nbsp;<div class='school_name'>".$students[$i]['school_name']."</div></div>
+   style='background:url(assets/img/images/certificate1-2018.jpg) 0% 10%  no-repeat; width:724px; height:490px; margin:0px auto;'><div class='first_name'>" . $students[$i]['name'] . "&nbsp;&nbsp;" . numberToRomanRepresentation($students[$i]['grade']) . "</div>&nbsp;<div class='school_name'>".$students[$i]['school_name']."</div></div>
 
 
-<div class='certificateno'>Certificate No: "."GSPAudit/2018/".$six_digit_random_number." </div>";
+<div class='certificateno'>Certificate No: "."GSPAudit/2018/".$status[0]->certificate_srno." </div>";
 		}
 	  $j++;  }
 	}
 	if (!empty($staffadmin)) {
 	    for ($i = 0; $i < count($staffadmin); $i++) {
-	    	 $six_digit_random_number = mt_rand(100000, 999999);
+	    	$status1=getserialno_teacher($user_id,$staffadmin[$i]['teacher']);
+	    	
 		if ($staffadmin != '') {
 		    echo "<div class='container' 
-style='background:url(assets/img/images/certificate1-2018.jpg) 0% 10%  no-repeat; width:724px; height:490px; margin:0px auto;'><div class='first_name'>" . $staffadmin[$i]['teacher'] . "</div>&nbsp;<div class='school_name'>" .  $staffadmin[$i]['school'] . "</div></div><div class='certificateno'>Certificate No: "."GSPAudit/2018/".$six_digit_random_number." </div>";
+style='background:url(assets/img/images/certificate1-2018.jpg) 0% 10%  no-repeat; width:724px; height:490px; margin:0px auto;'><div class='first_name'>" . $staffadmin[$i]['teacher'] . "</div>&nbsp;<div class='school_name'>" .  $staffadmin[$i]['school'] . "</div></div><div class='certificateno'>Certificate No: "."GSPAudit/2018/".$status1[0]->certificate_srno." </div>";
 		}
 	  $j++;   }
 	}
 	    
 	if (!empty($principal)) {
 	    for ($i = 0; $i < count($principal); $i++) {
-	    	 $six_digit_random_number = mt_rand(100000, 999999);
+	    	$status2=getserialno_teacher($user_id,$principal[$i]['name']);
 		if ($principal != '') {
 		    echo "<div class='container' 
-style='background:url(assets/img/images/certificate1-2018.jpg) 0% -10%  no-repeat; width:724px; height:490px; margin:0px auto;'><div class='first_name1'>" . $principal[$i]['name'] . "</div>&nbsp;<div class='school_name1'>" .  $principal[$i]['schoolname'] . "</div></div><div class='certificateno'>Certificate No: "."GSPAudit/2018/".$six_digit_random_number." </div>";
+style='background:url(assets/img/images/certificate1-2018.jpg) 0% -10%  no-repeat; width:724px; height:490px; margin:0px auto;'><div class='first_name1'>" . $principal[$i]['name'] . "</div>&nbsp;<div class='school_name1'>" .  $principal[$i]['schoolname'] . "</div></div><div class='certificateno'>Certificate No: "."GSPAudit/2018/".$status2[0]->certificate_srno." </div>";
 		}
 	  $j++;   }
 	}
@@ -48,7 +49,7 @@ style='background:url(assets/img/images/certificate1-2018.jpg) 0% -10%  no-repea
 <style type="text/css">
           @font-face {
   font-family: myFirstFont;
-  src: url(18/assets/scriptina/monotype corsiva.ttf);
+  src: url(18/assets/scriptina/mtcorsva.ttf);
 }
 
 body{
