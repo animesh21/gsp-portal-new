@@ -5,47 +5,43 @@
     </head>
     <body>
 	<?php
-	$j=1;
-    
+	if (!empty($school_certificates)) {
+	    $i=0;
+	    foreach($school_certificates as $certificate) {
+		if ($certificate->certificate_username !="") {
+		    echo "<div class='container' 
+style='background:url(assets/img/images/certificate1-2018.jpg) 0% -10%  no-repeat; width:724px; height:490px; margin:0px auto;'>
 
-	if (!empty($students)) {
-	    for ($i = 0; $i < count($students); $i++) {
-	    	$status=getserialno_student($user_id,$students[$i]['name'],$students[$i]['grade']);
-	    	 //$six_digit_random_number = mt_rand(100000, 999999);
-			//echo '<pre>'; print_r($students);exit;
-		if ($students[$i]['name'] !="") {
-            echo "<div class='container' 
-   style='background:url(assets/img/images/certificate1-2018.jpg) 0% 10%  no-repeat; width:724px; height:490px; margin:0px auto;'><div class='first_name'>" . $students[$i]['name'] . "&nbsp;&nbsp;" . numberToRomanRepresentation($students[$i]['grade']) . "</div>&nbsp;<div class='school_name'>".$students[$i]['school_name']."</div></div>
-
-
-<div class='certificateno'>Certificate No: "."GSPAudit/2018/".$status[0]->certificate_srno." </div>";
+  <div class='first_name'>" . $certificate->certificate_username ."</div>&nbsp;
+  <div class='school_name'>". $certificate->certificate_schoolname."</div>
+  <div class='certificateno'>Certificate No: "."GSPAudit/2018/".$certificate->id." </div>
+    </div><div class='page'><strong>Page No.: ".++$i."</strong></div>";
 		}
-	  $j++;  }
+	  }
 	}
-	if (!empty($staffadmin)) {
+	/*if (!empty($staffadmin)) {
 	    for ($i = 0; $i < count($staffadmin); $i++) {
-	    	$status1=getserialno_teacher($user_id,$staffadmin[$i]['teacher']);
-	    	
 		if ($staffadmin != '') {
 		    echo "<div class='container' 
-style='background:url(assets/img/images/certificate1-2018.jpg) 0% 10%  no-repeat; width:724px; height:490px; margin:0px auto;'><div class='first_name'>" . $staffadmin[$i]['teacher'] . "</div>&nbsp;<div class='school_name'>" .  $staffadmin[$i]['school'] . "</div></div><div class='certificateno'>Certificate No: "."GSPAudit/2018/".$status1[0]->certificate_srno." </div>";
+style='background:url(assets/img/images/Certificate-2017.jpg) 0% 17%  no-repeat; width:1124px; height:791px; margin:0px auto;'><div class='first_name'>" . $staffadmin[$i]['teacher'] . "</div>&nbsp;<div class='school_name'>" .  $staffadmin[$i]['school'] . "</div></div>";
 		}
-	  $j++;   }
-	}
+	    }
+	}*/
 	    
-	if (!empty($principal)) {
+/*	if (!empty($principal)) {
 	    for ($i = 0; $i < count($principal); $i++) {
-	    	$status2=getserialno_teacher($user_id,$principal[$i]['name']);
 		if ($principal != '') {
 		    echo "<div class='container' 
-style='background:url(assets/img/images/certificate1-2018.jpg) 0% -10%  no-repeat; width:724px; height:490px; margin:0px auto;'><div class='first_name1'>" . $principal[$i]['name'] . "</div>&nbsp;<div class='school_name1'>" .  $principal[$i]['schoolname'] . "</div></div><div class='certificateno'>Certificate No: "."GSPAudit/2018/".$status2[0]->certificate_srno." </div>";
+style='background:url(assets/img/images/Certificate-2017.jpg) 0% -17%  no-repeat; width:1124px; height:791px; margin:0px auto;'><div class='first_name1'>" . $principal[$i]['name'] . "</div>&nbsp;<div class='school_name1'>" .  $principal[$i]['schoolname'] . "</div></div>";
 		}
-	  $j++;   }
-	}
+	    }
+	}*/
 	
 	?>
     </body>
 </html>
+
+
 <style type="text/css">
           @font-face {
   font-family: myFirstFont;
@@ -55,12 +51,23 @@ style='background:url(assets/img/images/certificate1-2018.jpg) 0% -10%  no-repea
 body{
 	font-family: myFirstFont;
 }
+ 
 
-
-
-        .first_name{ position:absolute; top:256px; left:240px}
+         .certificateno{ position:absolute; top:500px font-weight:bold; font-family:Verdana, Arial, Helvetica, sans-serif }
+         .first_name{ position:absolute; top:256px; left:240px}
 	    .school_name{ position:absolute; top:293px; left:100px}
 		.first_name1{ position:absolute; top:256px; left:240px}
 	    .school_name1{ position:absolute; top:293px; left:100px}
         .grade{position:absolute; top:205px; left:650px}
+</style>
+
+
+<style type="text/css">
+        /*.first_name{ position:absolute; top:405px; left:240px}
+	    .school_name{ position:absolute; top:452px; left:100px}
+		.first_name1{ position:absolute; top:400px; left:240px}
+	    .school_name1{ position:absolute; top:447px; left:100px}
+        .grade{position:absolute; top:265px; left:650px}*/
+		
+		.page{ text-align:right; page-break-after:always;}
 </style>
