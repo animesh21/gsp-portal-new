@@ -1832,6 +1832,37 @@ if(!function_exists('downloadWasteSectionQuestions')){
    }
 }
 
+if (!function_exists('getserialno_student')) {
+    function getserialno_student($user_id,$name,$grade) {
+        
+        $CI = & get_instance();
+        $temp =$CI->db->select('*')->from('tblcertificate')
+                               ->where('userid',$user_id)
+                               ->where('certificate_username',$name .' '. '('.$grade.')' )
+                               
+                   ->get()
+                   ->result();
+            // echo $CI->db->last_query();  exit; 
+                 return $temp;
+                   
+    }
+}
+
+if (!function_exists('getserialno_teacher')) {
+    function getserialno_teacher($user_id,$name) {
+        
+        $CI = & get_instance();
+        $temp =$CI->db->select('*')->from('tblcertificate')
+                               ->where('userid',$user_id)
+                               ->where('certificate_username',$name)
+                               
+                   ->get()
+                   ->result();
+            // echo $CI->db->last_query();  exit; 
+                 return $temp;
+                   
+    }
+}
    
     
 }   
