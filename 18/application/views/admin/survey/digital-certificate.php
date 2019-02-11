@@ -39,20 +39,14 @@ style='background:url(assets/img/images/certificate-2018.jpg) 0% -10%  no-repeat
 <style type="text/css">
           @font-face {
   font-family: myFirstFont;
-  src: url(assets/scriptina/SCRIPALT.ttf);
+  src: url(18/assets/scriptina/HelveticaNeue.dfont);
 }
 
-.first_name{
+body{
 	font-family: myFirstFont;
 }
 
-.school_name{
-	font-family: myFirstFont;
-}
 
-.first_name1{
-	font-family: myFirstFont;
-}
 
         .first_name{ position:absolute; top:256px; left:240px}
 	    .school_name{ position:absolute; top:293px; left:100px}
