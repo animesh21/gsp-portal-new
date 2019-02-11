@@ -144,21 +144,46 @@ class Download extends CI_Controller {
 function getdigitalCertificate($argID) {
    $data['title']="GSP Digital Certificates";
    $this->load->library('dompdf_lib');
-   $students = $this->count_certificates_stuents($argID);
-   $staffadmin = $this->count_certificates_staffamin($argID);
-  // $data['students'] = $students;
+   //Students Records
+  // $students = $this->count_certificates_stuents($argID);
+  // $staffadmin = $this->count_certificates_staffamin($argID);
+   //$principal=$this->digital_certificate_for_principal_coordinator($argID);
+  
+   //$data['students'] = $students;
    //$data['staffadmin'] = $staffadmin;
-    $principal=$this->digital_certificate_for_principal_coordinator($argID);
-	
-   $data['students'] = $students;
-   $data['staffadmin'] = $staffadmin;
-   $data['principal'] = $principal;	
+  // $data['principal'] = $principal;
+   $this->db->where("userid",$argID);
+   $dataCertificate=$this->db->select("certificate_username,certificate_schoolname,id")
+   ->from("tblcertificate")->group_by("certificate_username")->get()->result();
+   $data['school_certificates']=$dataCertificate;
    $html1 = $this->load->view('admin/survey/digital-certificate', $data, true);
    $this->dompdf->load_html($html1);
    $this->dompdf->set_paper(array(0, 0, 500, 571), 'landscape');
    $this->dompdf->render();
    $this->dompdf->stream("Digital Certificate.pdf", array("Attachment" => false));
   }
+	
+// function getdigitalCertificate($argID) {
+
+//   //echo $argID; exit;
+//    $data['title']="GSP Digital Certificates";
+//    $this->load->library('dompdf_lib');
+//    $students = $this->count_certificates_stuents($argID);
+//    $staffadmin = $this->count_certificates_staffamin($argID);
+//   // $data['students'] = $students;
+//    //$data['staffadmin'] = $staffadmin;
+//   $principal=$this->digital_certificate_for_principal_coordinator($argID);
+	 
+//    $data['user_id'] = $argID;
+//    $data['students'] = $students;
+//    $data['staffadmin'] = $staffadmin;
+//    $data['principal'] = $principal;	
+//    $html1 = $this->load->view('admin/survey/digital-certificate', $data, true);
+//    $this->dompdf->load_html($html1);
+//    $this->dompdf->set_paper(array(0, 0, 500, 571), 'landscape');
+//    $this->dompdf->render();
+//    $this->dompdf->stream("Digital Certificate.pdf", array("Attachment" => false));
+//   }
 	
  public function count_certificates_stuents($argID) {
    //Stuents
