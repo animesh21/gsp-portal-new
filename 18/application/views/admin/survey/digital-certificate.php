@@ -48,7 +48,7 @@ style='background:url(assets/img/images/certificate1-2018.jpg) 0% -10%  no-repea
 <style type="text/css">
           @font-face {
   font-family: myFirstFont;
-  src: url(18/assets/scriptina/HelveticaNeue.dfont);
+  src: url(18/assets/scriptina/monotype corsiva.ttf);
 }
 
 body{
