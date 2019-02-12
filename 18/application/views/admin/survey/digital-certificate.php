@@ -54,10 +54,10 @@ body{
  
 
          .certificateno{ position:absolute; top:500px font-weight:bold; font-family:Verdana, Arial, Helvetica, sans-serif }
-         .first_name{ position:absolute; top:256px; left:240px}
-	    .school_name{ position:absolute; top:293px; left:100px}
-		.first_name1{ position:absolute; top:256px; left:240px}
-	    .school_name1{ position:absolute; top:293px; left:100px}
+         .first_name{ position:absolute; top:230px; left:240px}
+	    .school_name{ position:absolute; top:270px; left:100px}
+		.first_name1{ position:absolute; top:230px; left:240px}
+	    .school_name1{ position:absolute; top:270px; left:100px}
         .grade{position:absolute; top:205px; left:650px}
 </style>
 
