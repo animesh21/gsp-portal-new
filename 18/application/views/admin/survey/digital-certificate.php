@@ -10,7 +10,7 @@
 	    foreach($school_certificates as $certificate) {
 		if ($certificate->certificate_username !="") {
 		    echo "<div class='container' 
-style='background:url(assets/img/images/certificate2-2018.jpg) 0% -10%  no-repeat; width:724px; height:490px; margin:0px auto;'>
+style='background:url(assets/img/images/certificate3-2018.jpg) 0% -10%  no-repeat; width:724px; height:490px; margin:0px auto;'>
 
   <div class='first_name'>" . $certificate->certificate_username ."</div>&nbsp;
   <div class='school_name'>". $certificate->certificate_schoolname."</div>
