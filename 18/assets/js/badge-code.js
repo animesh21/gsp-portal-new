@@ -25,6 +25,6 @@ var d2 = new Date(get_current_date());
 var timeDiff = d1.getTime() - d2.getTime();
 var DaysDiff = timeDiff / (1000 * 3600 * 24);
    if(DaysDiff > 0){
-	  $('.badges').append('<a href="http://www.greenschoolsprogramme.org/"><img src=http://www.greenschoolsprogramme.org/audit2017/assets/img/images/GSPLogocolour.jpg width=120px /></a>');
+	  $('.badges').append('<a href="http://www.greenschoolsprogramme.org/"><img src=http://www.greenschoolsprogramme.org/audit2017/18/assets/img/images/year2018-21.jpg width=120px /></a>');
    }
 }
