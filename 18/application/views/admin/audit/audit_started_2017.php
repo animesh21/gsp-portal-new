@@ -28,7 +28,7 @@
 	
 </div>
 <!----- Badge Model Code  ------>
-<div class="modal fade" id="myModal1" role="dialog">
+<div class="modal" id="myModal1" role="dialog">
   <div class="modal-dialog modal-md">
     <div class="modal-content">
       <div class="modal-header" style="background:#e86549 !important; color:#FFFFFF;">
