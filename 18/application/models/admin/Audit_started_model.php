@@ -1855,7 +1855,7 @@ public function getExcel2017Data() {
 	   $date_start=date('Y-m-d');
 	   $end_date=date('Y-m-d', strtotime($date_start .'+3 year'));
 	    		   $badge_code="
-				   <script src='http://www.greenschoolsprogramme.org/audit2017/assets/js/badge-code.js'></script>
+				   <script src='http://www.greenschoolsprogramme.org/audit2017/18/assets/js/badge-code.js'></script>
 				<script>
 			/*School Badge Code*/
 			window.onload = function(){
