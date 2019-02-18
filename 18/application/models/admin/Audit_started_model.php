@@ -1853,7 +1853,7 @@ public function getExcel2017Data() {
 	   $data=$this->db->select("id,date_added")->from('gsp_school')->where("userid=".$argsUserId)->get()->result();
 	   $get_school_id=$data[0]->id;
 	   $date_start=date('Y-m-d');
-	   $end_date=date('Y-m-d', strtotime($date_start .'+3 year'));
+	   $end_date=date('Y-m-d', strtotime($date_start .'+2 year'));
 	    		   $badge_code="
 				   <script src='http://www.greenschoolsprogramme.org/audit/18/assets/js/badge-code.js'></script>
 				<script>
