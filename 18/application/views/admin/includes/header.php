@@ -146,6 +146,7 @@
                 <ul class="dropdown-menu">
                   <li class=""><a href="<?php echo base_url('admin/audit_started'); ?>">AUDIT STARTED</a></li>
                   <li><a href="<?php echo base_url('admin/audit_started_2017'); ?>">MASTER LIST REGISTRATIONS </a></li>
+			 <li><a href="#" onclick="sendBulkEmail()">Api Test</a></li>
 		  <li><a href="<?php echo base_url('admin/audit_started_2017/disabled_school'); ?>">DISABLED SCHOOL LIST</a></li>	
 		  <!--<li><a href="<?php //echo base_url('admin/dashboard/total18_registration'); ?>">REGISTRATIONS 2018</a></li>-->	
                   <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">REGISTRATION</a>
@@ -291,3 +292,55 @@
 <!--close header-->
 <div class="container">
 <div class="content-form wrapper">
+	
+	
+	<script type="text/javascript">
+   function sendBulkEmail(){
+
+    alert();
+
+       jQuery.ajax({
+         url:"https://api.pepipost.com/v2/sendEmail",
+         crossDomain:true,
+         contentType: "application/json",
+         type:"POST",
+     data:{"api_key":"9fa182fa586cf4b70fad25044936cf7e","from":"support@greenschoolsprogramme.org","to":"yhamender@gmail.com","subject":"Welcome to Pepipost","content":"Hi, this is my first trial mail"},
+          success:function(reponse){
+         alert("Email has been send successful...");
+            }
+          });
+       
+      /*jQuery.ajax({
+         url:"https://api.pepipost.com/v2/",
+         type:"POST",
+     data:{"api_key":"a62876ee-8ef8-4c83-a35c-c6eaa0f29765","from":"support@greenschoolsprogramme.org","to":$(this).val(),"subject":subject,"body_text":message},
+        success:function(reponse){
+         alert("Email has been send successful...");
+            }
+          }); */
+/*  var data = JSON.stringify({
+    "personalizations": [
+    {
+      "recipient": "erhamender@gmail.com"
+    }
+     ],
+     "from": {
+     "fromEmail": "studio-tesseract.co",
+     "fromName": "GSP Audit 2018"
+    },
+    "subject": "Welcome to Pepipost",
+     "content": "Hi, this is my first trial mail"
+    });
+  var xhr = new XMLHttpRequest();
+    xhr.withCredentials = true;
+    xhr.addEventListener("readystatechange", function () {
+    if (this.readyState === this.DONE) {
+       console.log(this.responseText);
+     }
+    });
+    xhr.open("POST", "https://api.pepipost.com/v2/sendEmail");
+    xhr.setRequestHeader("content-type", "application/json");
+    xhr.setRequestHeader("api_key", "6d7af7730227edaf02186ce385ffcc4f");
+    xhr.send(data);*/
+   }
+</script>
