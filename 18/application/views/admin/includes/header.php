@@ -299,16 +299,7 @@
 
     alert();
 
-     //   jQuery.ajax({
-     //     url:"https://api.pepipost.com/v2/sendEmail",
-     //     crossDomain:true,
-     //     contentType: "application/json",
-     //     type:"POST",
-     // data:{"api_key":"9fa182fa586cf4b70fad25044936cf7e","from":"support@greenschoolsprogramme.org","to":"yhamender@gmail.com","subject":"Welcome to Pepipost","content":"Hi, this is my first trial mail"},
-     //      success:function(reponse){
-     //     alert("Email has been send successful...");
-     //        }
-     //      });
+    
        
 
      var data = JSON.stringify({
