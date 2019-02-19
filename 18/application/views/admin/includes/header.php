@@ -325,7 +325,7 @@ xhr.addEventListener("readystatechange", function () {
   }
 });
 
-xhr.open("POST", "http://api.pepipost.com/v2/sendEmail");
+xhr.open("POST", "https://api.pepipost.com/v2/sendEmail");
 xhr.setRequestHeader("content-type", "application/json");
 xhr.setRequestHeader("api_key", "9fa182fa586cf4b70fad25044936cf7e");
 
