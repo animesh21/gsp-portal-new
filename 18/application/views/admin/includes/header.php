@@ -299,17 +299,49 @@
 
     alert();
 
-       jQuery.ajax({
-         url:"https://api.pepipost.com/v2/sendEmail",
-         crossDomain:true,
-         contentType: "application/json",
-         type:"POST",
-     data:{"api_key":"9fa182fa586cf4b70fad25044936cf7e","from":"support@greenschoolsprogramme.org","to":"yhamender@gmail.com","subject":"Welcome to Pepipost","content":"Hi, this is my first trial mail"},
-          success:function(reponse){
-         alert("Email has been send successful...");
-            }
-          });
+     //   jQuery.ajax({
+     //     url:"https://api.pepipost.com/v2/sendEmail",
+     //     crossDomain:true,
+     //     contentType: "application/json",
+     //     type:"POST",
+     // data:{"api_key":"9fa182fa586cf4b70fad25044936cf7e","from":"support@greenschoolsprogramme.org","to":"yhamender@gmail.com","subject":"Welcome to Pepipost","content":"Hi, this is my first trial mail"},
+     //      success:function(reponse){
+     //     alert("Email has been send successful...");
+     //        }
+     //      });
        
+
+     var data = JSON.stringify({
+  "personalizations": [
+    {
+      "recipient": "yhamender@gmail.com"
+    }
+  ],
+  "from": {
+    "fromEmail": "support@greenschoolsprogramme.org",
+    "fromName": "test"
+  },
+  "subject": "Welcome to Pepipost",
+  "content": "Hi, this is my first trial mail"
+});
+
+var xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
+
+xhr.addEventListener("readystatechange", function () {
+  if (this.readyState === this.DONE) {
+    console.log(this.responseText);
+  }
+});
+
+xhr.open("POST", "https://api.pepipost.com/v2/sendEmail");
+xhr.setRequestHeader("content-type", "application/json");
+xhr.setRequestHeader("api_key", "9fa182fa586cf4b70fad25044936cf7e");
+
+xhr.send(data);
+      
+
+
       /*jQuery.ajax({
          url:"https://api.pepipost.com/v2/",
          type:"POST",
