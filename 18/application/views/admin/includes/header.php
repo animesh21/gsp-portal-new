@@ -305,7 +305,7 @@
      var data = JSON.stringify({
   "personalizations": [
     {
-      "recipient": "yhamender@gmail.com"
+      "recipient": "roar12371@gmail.com"
     }
   ],
   "from": {
