@@ -504,6 +504,27 @@ class Audit_started_model extends CI_Model {
 			->where('a.complete_status =', '0')
                         ->order_by('a.id', 'desc')
                         ->get()->result();
+		
+		 $r=$this->db->select('school_id')
+                        ->from('gsp_aduit_submitted')
+                        ->where('date_on >', '2018-11-19 00:00:00')
+                        ->get()->result();
+             //print_r($r); exit;
+
+                   $er=array();
+                        foreach($r as $t)
+                        {
+                         $er[]= $this->db->select('a.*, b.name AS state_name,c.name As district_name')
+                            ->from('gsp_school AS a')
+                            ->join('states AS b', 'a.state=b.id', 'left')
+                            ->join('cities AS c', 'a.district=c.id', 'left')
+                            ->where('a.id', $t->school_id)
+                            ->order_by('a.id', 'desc')
+                            ->get()->result();
+
+                            //echo $this->db->last_query(); exit;
+
+                        }
         //echo '<pre>'; print_r($arrRecord); exit;
         $k = 1;
         $isdCode = '+91';
@@ -559,6 +580,38 @@ class Audit_started_model extends CI_Model {
             $output .= "\n";
             $k++;
         }
+		
+		
+        foreach ($er as $e) {
+            $output .= '"' . $k . '",';
+            $output .= '"' . $e[0]->id . '",';
+            $output .= '"' . $e[0]->udise . '",';
+            $output .= '"' . $e[0]->name . '",';
+            $output .= '"' . $e[0]->address1 . '",';
+            $output .= '"' . $e[0]->address2 . '",';
+            $output .= '"' . $e[0]->country . '",';
+            $output .= '"' . $e[0]->state_name . '",';
+            $output .= '"' . $e[0]->district_name . '",';
+            $output .= '"' . $e[0]->city . '",';
+            $output .= '"' . $e[0]->pincode . '",';
+            $output .= '"' . $isdCode . '",';
+            $output .= '"' . $e[0]->std . '",';
+            $output .= '"' . $e[0]->telephone . '",';
+            $output .= '"' . $e[0]->schoolemail . '",';
+            $output .= '"' . $e[0]->principle_name . '",';
+            $output .= '"' . $e[0]->mobile . '",';
+            $output .= '"' . $e[0]->coname . '",';
+            $output .= '"' . $e[0]->coemail . '",';
+            $output .= '"' . $e[0]->comobile . '",';
+            $output .= '"' . $e[0]->password . '",';
+            //$output .='"'.date('d-m-Y H:i:s', strtotime($row['datetime'])).'",';
+            $output .= '"' . date('Y-m-d H:i:s', strtotime($e[0]->date_added)) . '",';
+            $output .= '"' . $e[0]->progress . '%",';
+            $output .= "\n";
+            $k++;
+        }
+		
+		
 
         return $output;
     }
