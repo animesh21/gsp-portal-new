@@ -106,10 +106,10 @@
         <hr/>
       </div>
 
-      <div class="col-md-12">
+				 <div class="col-md-12">
         <?php for($i=0; $i<sizeof($dataYoy); $i++) {?>
-        <div class="col-md-3"><div class="well text-center" style="background:<?php echo $dataYoy[$i]['color']; ?>; color: white; font-weight: 900;"><?php echo $dataYoy[$i]['range']; ?>
-          <p class="h5"><?php echo $dataYoy[$i]['year']; ?></p>
+        <div class="col-md-3"><div class="well text-center" style="background:<?php echo $dataYoy[$i]['color']; ?>; color: white; font-weight: 900;height: 85px; margin:auto; width: 160px; padding: 0px;padding-top: 9px"><?php echo $dataYoy[$i]['range']; ?>
+          <p class="h5" style="margin-top: 5px"><?php echo $dataYoy[$i]['year']; ?></p>
 
         </div></div>
       <?php } ?>
