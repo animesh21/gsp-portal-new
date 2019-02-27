@@ -40,6 +40,32 @@ class DownloadLogin extends CI_Controller {
         }
 	     $this->load->view('download-login');
     }
+	
+	
+	
+	 public function download_report() {
+       
+        $data['title'] = 'Green School';
+        $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
+        $this->form_validation->set_rules('password', 'Password', 'trim|required');
+       if ($this->form_validation->run() == FALSE) {
+            $this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');
+        } else {
+            $post = $this->security->xss_clean($this->input->post());
+            $varCheckLogin = $this->User_model->UserLoginDownload1($post);
+            if ($varCheckLogin) {
+
+                 redirect(base_url('download/downloadFiles'));
+                     }else{
+
+                         $this->session->set_flashdata('error', 'Invalid Email/Password!');
+                     }
+         $this->load->view('download-login_home');
+      }
+    	
+   }
+	
+	
     	
 }
 
