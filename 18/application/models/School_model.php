@@ -149,8 +149,16 @@ class School_model extends CI_Model
 	
      public function getSchools_phase_2()
     {
+	    $this->db->where('date_on >', '2018-11-19 00:00:00');
+           $d1= $this->db->count_all_results('gsp_aduit_submitted');
+        
+
 	   $this->db->where('complete_status=', '0');
-	  return $this->db->count_all_results('gsp_school');
+       $d2= $this->db->count_all_results('gsp_school');
+
+       $d3=$d1+$d2; 
+
+       return $d3;
     }
 	
         	
