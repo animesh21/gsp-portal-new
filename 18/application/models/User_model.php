@@ -80,7 +80,19 @@ class User_model extends CI_Model
         return $msg;
     }
 	
+   
 	
+   public function UserLoginDownload1($argPost)
+    {
+       $query = $this->db->select('*')
+                ->from('tbl_admin')
+                ->where(array('email' => $argPost['email'], 'password' => $argPost['password'], 'status' => '0'))
+                ->get();
+        if ($query->num_rows() > 0) {
+            return true;
+        }
+        return false;
+    }
 	
 	
 	
