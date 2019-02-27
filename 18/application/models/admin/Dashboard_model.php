@@ -214,6 +214,35 @@ class Dashboard_model extends CI_Model {
                         ->order_by('a.id', 'desc')
                         ->get()->result();
     }
+	
+	public function getData_phase_2_submitted(){
+
+              $r=$this->db->select('school_id')
+                        ->from('gsp_aduit_submitted')
+                        ->where('date_on >', '2018-11-19 00:00:00')
+			            ->get()->result();
+             //print_r($r); exit;
+
+                   $er=array();
+			            foreach($r as $t)
+			            {
+			             $er[]= $this->db->select('a.*, b.name AS state_name,c.name As district_name')
+	                        ->from('gsp_school AS a')
+	                        ->join('states AS b', 'a.state=b.id', 'left')
+				            ->join('cities AS c', 'a.district=c.id', 'left')
+				            ->where('a.id', $t->school_id)
+	                        ->order_by('a.id', 'desc')
+	                        ->get()->result();
+
+	                        //echo $this->db->last_query(); exit;
+
+			            }
+
+			            return $er;
+
+
+       }
+	
     
      public function getData_phase_2_1() {
 	$this->db->where("a.make_school_disabled","1");     
