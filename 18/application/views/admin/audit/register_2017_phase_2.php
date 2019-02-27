@@ -41,6 +41,28 @@
                 <td class="action"><a target="_blank" href="<?php echo base_url('admin/audit_started_2017/response/').$r->id; ?>" title="View Responses"><img src="<?php echo base_url() ?>assets/front/images/1446146277_view6.png"></a></td>
             </tr>
           <?php $i++; } ?>
+		
+		
+		<?php  foreach($record1 as $r1){ ?>
+            <tr role="row" class="<?php echo ($i%2==0) ? "even" : "odd"; ?>">
+                <td><?php echo $i; ?></td>
+                <td><?php echo $r1[0]->id; ?></td>
+        <td><?php echo $r1[0]->udise; ?></td>
+                <td><?php echo $r1[0]->name; ?></td>
+                <td><?php echo $r1[0]->pincode; ?></td>
+                <td><?php echo $r1[0]->city; ?></td>
+                <td><?php echo $r1[0]->state_name; ?></td>
+                <td><?php echo $r1[0]->district_name; ?></td>
+                <td><?php echo $r1[0]->coname; ?></td>
+                <td><?php echo $r1[0]->coemail; ?></td>
+                <td><?php echo $r1[0]->comobile; ?></td>
+                <td><?php echo $r1[0]->progress; ?></td>
+                <td class="action"><a target="_blank" href="<?php echo base_url('admin/audit_started_2017/response/').$r1[0]->id; ?>" title="View Responses"><img src="<?php echo base_url() ?>assets/front/images/1446146277_view6.png"></a></td>
+            </tr>
+          <?php $i++; } ?>
+		
+		
+		
         </tbody>
       </table>
 	
