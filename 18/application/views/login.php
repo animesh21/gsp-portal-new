@@ -104,7 +104,10 @@ header('Location: http://www.greenschoolsprogramme.org/audit/18/login/browser_ch
                                   width="580" height="360" data-toggle="modal" data-target="#myModal">Forgot password?</a></p>
         </div>
         <div class="btn-group">
-          <input class="org-btn" type="submit" value="Continue">
+          <!-- <input class="org-btn" type="submit" value="Continue"> -->
+           
+           <input class="org-btn" type="button" id="survey_close" value="Continue">
+
         </div>
         <?php echo form_close(); ?>
         <p class="help">Need help? Email: <a href="mailto:support@greenschoolsprogramme.org">support@greenschoolsprogramme.org</a> or call 011-4061600, ext – 219, 300. <br>
@@ -253,3 +256,13 @@ if (/Edge/.test(navigator.userAgent)) {
 	</script>
 </body>
 </html>
+
+<script type="text/javascript">
+  
+  $('#survey_close').click(function(){
+
+   alert('this survey is close now');
+
+  });
+
+</script>
