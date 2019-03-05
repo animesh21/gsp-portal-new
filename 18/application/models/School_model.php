@@ -92,8 +92,8 @@ class School_model extends CI_Model
             $subject = "GSP Audit Registration".$date;
             $msg = "Dear &nbsp;";
             $msg .= $query->coname . "," . "<br/><br/>";
-            $msg .= "Thank you for registering your school '" . $query->name . "', for GSP (Green Schools Programme) Audit 2018. Your account has been successfully created.<br><br>";
-            $msg .= "To participate in GSP Audit 2018, please remember to save your username and password given below.<br><br>";
+            $msg .= "Thank you for registering your school '" . $query->name . "', for GSP (Green Schools Programme) Audit 2019. Your account has been successfully created.<br><br>";
+            $msg .= "To participate in GSP Audit 2019, please remember to save your username and password given below.<br><br>";
 //            $msg .= "The launch date of GSP Audit 2017 will be announced at www.greenschoolsprogramme.org, in July 2017.<br><br>";
             $msg .= "URL: http://www.greenschoolsprogramme.org/audit/18 <br/><br/>";
             $msg .= "Username: " . $query->coemail . "<br><br>";
