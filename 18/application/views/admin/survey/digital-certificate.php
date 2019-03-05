@@ -15,7 +15,7 @@ style='background:url(assets/img/images/certificate3-2018.jpg) 0% -10%  no-repea
   <div class='first_name'>" . $certificate->certificate_username ."</div>&nbsp;
   <div class='school_name'>". $certificate->certificate_schoolname."</div>
   <div class='certificateno'>Certificate No: "."GSPAudit/2018/".$certificate->id." </div>
-    </div><div class='page'><strong>Page No.: ".++$i."</strong></div>";
+    </div><div class='page'><strong></strong></div>";
 		}
 	  }
 	}
