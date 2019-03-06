@@ -7,7 +7,46 @@
     .list-inline li{ list-style:none; padding:3px 3px 3px 3px;}
     .list-inline li input[type="checkbox"]{ opacity:0.7;  padding:3px 3px 3px 3px;}
     .list-inline li input[type="radio"]{ opacity:0.7;  padding:3px 3px 3px 3px;}
+    .error{color: #e86549;
+   text-shadow: 1px 1px 1px #000;}
 </style>
+
+<script defer src="<?php echo base_url(); ?>assets/js/jquery.validate.js"></script>
+
+<script>
+ $(document).ready(function(){
+  $("#frmSendblukemail").validate({
+         rules: {
+             subject: {
+                 required: true,
+             },
+              message: {
+                 required: true,
+               },
+               
+          }
+});
+});
+
+$('#frmSendblukemail').submit(function(e){
+
+	// alert('hiii');
+	// e.preventDefault();
+        
+        
+        var r=jQuery('#frmSendblukemail').valid();
+        if(r == false)
+        {
+                e.preventDefault();
+                jQuery('#frmSendblukemail').valid();
+        }
+        
+        
+    });
+    
+</script>
+
+
 <div class="top-area">
     <h2>Send FeedBack</h2>
 </div>
@@ -16,6 +55,20 @@
 	<div class="panel panel-default">
 	    <div class="panel-heading">Select Filters</div>
 	    <?php echo form_open('admin/audit_started/filter_email/', array('id' => 'frmSendblukemail')); ?>
+         
+          <?php
+
+                if($this->session->flashdata('success'))
+                {
+                    echo '<div class="alert alert-success alert-dismissable" style="width: 100%; font-size: 15px; text-align: center;">';
+                    echo '<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>';
+                    echo $this->session->flashdata('success');
+                    echo '</div>';
+                }
+
+          ?>
+
+
 	    <div class="panel-body">
                 <div class="form-group col-md-4">
 		    <label for="pwd">Select Phase:</label>
@@ -204,10 +257,11 @@
 		    
 		<div class="form-group col-md-12">
 		    <div class="col-md-6">
-			<button type="button" class="btn btn-default btn-block btn-lg" style="background: #e86549 !important; color: #fff">Filter Email</button>
+			<button type="submit" name="filter" class="btn btn-default btn-block btn-lg" style="background: #e86549 !important; color: #fff">Filter Email</button>
 		    </div>
 		</div>
 	    </div>
 	    <?php echo form_close(); ?> </div>
     </div>
 </div>
+
