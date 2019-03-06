@@ -9,39 +9,39 @@
     .list-inline li input[type="radio"]{ opacity:0.7;  padding:3px 3px 3px 3px;}
 </style>
 <div class="top-area">
-    <h2>Send FeedBack</h2>
+    <h2>Send Message</h2>
 </div>
 <div class="row">
     <div class="col-md-12">
         <div class="panel panel-default">
             <div class="panel-heading">Select Filters</div>
-            <?php echo form_open('admin/audit_started/filter_email/', array('id' => 'frmSendblukemail')); ?>
+            <?php echo form_open('admin/audit_started/send_email/', array('id' => 'frmSendblukemail')); ?>
             <div class="panel-body">
-                <div class="form-group col-md-4">
+                <!-- <div class="form-group col-md-4">
                     <label for="pwd">Select Phase:</label>
                     <select  class="form-control" name="phase">
                         <option value="0"> Both</option>
                         <option value="1"> First Phase</option>
                         <option value="2"> Second Phase</option>
                     </select>
-                </div>
+                </div> -->
                 <div class="form-group col-md-12">
                     <label>Subject:</label>
-                    <input type="text" class="form-control" name="subject" id="subject">
+                    <input type="text" class="form-control" name="subject" id="subject" value="<?php echo $subject; ?>">
                 </div>
                 <div class="form-group col-md-12">
                     <label for="pwd">Message:</label>
-                    <textarea class="form-control" id="message" name="message"></textarea>
+                    <textarea class="form-control" id="message" name="message"><?php echo $message; ?></textarea>
                 </div>
-                <div class="form-group col-md-4">
+                <!-- <div class="form-group col-md-4">
                     <label for="pwd">Select User Email-Id:</label>
                     <select  class="form-control" name="email">
                         <option value="allemail" selected="selected"> All Email</option>
                         <option value="coemail"> Coordinator Email</option>
                         <option value="schoolemail"> School Email</option>
                     </select>
-                </div>
-                <div class="form-group col-md-8">
+                </div> -->
+                <!-- <div class="form-group col-md-8">
                     <label for="pwd">Select Progress Based User:</label>
                     <ul class="list-unstyled list-inline" style="margin:0; padding:0;">
                         <li>
@@ -75,8 +75,8 @@
                                 5 percent</label>
                         </li>
                     </ul>
-                </div>
-                <div class="form-group col-md-12">
+                </div> -->
+                <!-- <div class="form-group col-md-12">
                     <label for="pwd">Select School Category :</label>
                     <ul class="list-unstyled list-inline" style="margin:0; padding:0;">
                         <li>
@@ -115,8 +115,8 @@
                                 Day Scholar + Day Boarding + Residential </label>
                         </li>
                     </ul>
-                </div>
-                <div class="form-group col-md-4">
+                </div> -->
+                <!-- <div class="form-group col-md-4">
                     <label for="pwd">Select School Type :</label>
                     <ul class="list-unstyled list-inline" style="margin:0; padding:0;">
                         <li>
@@ -135,8 +135,8 @@
                                 Mixed/Co-education </label>
                         </li>
                     </ul>
-                </div>
-                <div class="form-group col-md-8">
+                </div> -->
+               <!--  <div class="form-group col-md-8">
                     <label for="pwd">Select Type of Aid:</label>
                     <ul class="list-unstyled list-inline" style="margin:0; padding:0;">
                         <li>
@@ -155,13 +155,13 @@
                                 Private School </label>
                         </li>
                     </ul>
-                </div>
-                <div class="form-group col-md-4">
+                </div> -->
+               <!--  <div class="form-group col-md-4">
                     <label for="pwd">Select State :</label>
-                    <?php echo form_dropdown('state', $states, 0, array('class' => 'form-control', 'id' => 'country-select')); ?></div>
+                    <?php //echo form_dropdown('state', $states, 0, array('class' => 'form-control', 'id' => 'country-select')); ?></div>
                 <div class="form-group  col-lg-4">
                     <label for="pwd">School-Category :</label>
-                    <?php echo form_dropdown('school', array('0' => 'Primary', '1' => 'Secondary', '2' => 'All'), $this->input->post('school'), array('class' => 'form-control', 'id' => 'school-select')); ?> </div>
+                    <?php //echo form_dropdown('school', array('0' => 'Primary', '1' => 'Secondary', '2' => 'All'), $this->input->post('school'), array('class' => 'form-control', 'id' => 'school-select')); ?> </div>
                 <div class="form-group  col-lg-4">
                     <label for="pwd">Ratings :</label>
                     <select class="form-control" name="rating">
@@ -171,8 +171,8 @@
                         <option value="Orange">Orange</option>
                         <option value="Red">Red</option>
                     </select>
-                </div>
-                <div class="form-group  col-md-4">
+                </div> -->
+                <!-- <div class="form-group  col-md-4">
 		    <label for="pwd">Board of Education:</label>
 		    <select class="form-control" name="board">
 			<option value="">All</option>
@@ -182,8 +182,8 @@
 			<option value="4">IB/IGCSE</option>
                         <option value="5">Others</option>
 		    </select>
-		</div>
-		<div class="form-group col-md-4">
+		</div> -->
+		<!-- <div class="form-group col-md-4">
 		    <label for="pwd">Select Name :</label>
 		    <select class="form-control" name="schoolname">
 			<option value="">Select School</option>
@@ -192,15 +192,15 @@
 			<option value="Kendriya Vidyalaya">KVS</option>
 			<option value="Jawahar Navodya">JNV</option>
 		    </select>
-		</div>    
-		 <div class="form-group col-md-4">
+		</div>   -->  
+		<!--  <div class="form-group col-md-4">
 		    <label for="pwd">Select District :</label>
-		    <?php echo form_dropdown('district', $district, 0, array('class' => 'form-control', 'id' => 'district-select')); ?>
-		 </div>
-		 <div class="form-group col-md-4">
+		    <?php //echo form_dropdown('district', $district, 0, array('class' => 'form-control', 'id' => 'district-select')); ?>
+		 </div> -->
+		<!--  <div class="form-group col-md-4">
 		    <label for="pwd">BY School Alphabet :</label>
 		    <input type="text" name = "alphabate" />
-		</div>    
+		</div>   -->  
                 <div class="form-group col-md-12">
                     <table id="tablePerformance" class="display dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
                         <thead>
@@ -323,7 +323,7 @@
     <?php } else if ($mail_status == "schoolemail") { ?>
                                             <input type="checkbox" name="email_list[]" class="checkbox" value="<?php echo ($record[$i]['schoolemail'] != "") ? $record[$i]['schoolemail'] : ""; ?>" style="opacity: 0.8; margin-top:-1px;" />
     <?php } else if ($mail_status == "both") { ?>
-                                            <input type="checkbox" name="email_list[]" class="checkbox" value="<?php echo $record[$i]['coemail'] . '/' . $record[$i]['schoolemail']; ?>" style="opacity: 0.8; margin-top:-1px;" />
+                                            <input type="checkbox" name="email_list[]" class="checkbox" value="<?php echo $record[$i]['coemail'] . "," . $record[$i]['schoolemail']; ?>" style="opacity: 0.8; margin-top:-1px;" />
     <?php } ?>
                                     </td>
                                 </tr>
@@ -331,11 +331,11 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="col-md-6">
+                <!-- <div class="col-md-6">
                     <button type="button" class="btn btn-default btn-block btn-lg" style="background: #e86549 !important; color: #fff">Filter Email</button>
-                </div>
+                </div> -->
                 <div class="col-md-6">
-                    <button type="button" id="send_email" class="btn btn-default btn-block btn-lg" style="background: #e86549 !important; color: #fff">Send Email</button>
+                    <button type="submit" name="send_mail" id="send_email" class="btn btn-default btn-block btn-lg" style="background: #e86549 !important; color: #fff">Send Email</button>
                 </div>
             </div>
 <?php echo form_close(); ?> </div>
@@ -458,7 +458,7 @@
                 type: "POST",
                 data: {"api_key": "a62876ee-8ef8-4c83-a35c-c6eaa0f29765", "from": "support@greenschoolsprogramme.org", "to": value, "subject": subject, "body_text": message},
                 success: function (reponse) {
-                    alert("Email has been send successful...");
+                    //alert("Email has been send successful...");
                 }
             });
         });
