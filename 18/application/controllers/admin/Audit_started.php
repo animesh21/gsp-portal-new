@@ -274,6 +274,10 @@ class Audit_started extends CI_Controller {
      * Send Filter Feedback
      */ 
    public function filter_email() {
+       
+       $data['subject'] = $this->input->post('subject');
+        $data['message'] = $this->input->post('message');
+
         ini_set('memory_limit', '-1');
         $mail = '';
         $filed = '';
@@ -416,6 +420,59 @@ class Audit_started extends CI_Controller {
         $this->load->view('admin/includes/template', $data);
     }
 	
+	
+	public function send_email() {
+
+           //echo $this->input->post('send_mail'); exit;
+        if(!empty(extract($this->input->post())))
+        {
+
+        	    $Totalemail = implode(",",$email_list); 
+                
+        	    require_once APPPATH . "/third_party/pepipost/vendor/autoload.php";
+				$client = new PepipostAPILib\PepipostAPIClient();
+				$emailController = $client->getEmail();
+
+				// Your Pepipost API Key
+				$apiKey = '9fa182fa586cf4b70fad25044936cf7e'; #add apikey from panel here
+
+				$body = new PepipostAPILib\Models\EmailBody();
+
+				// List of Email Recipients
+				$body->personalizations = array();
+				$body->personalizations[0] = new PepipostAPILib\Models\Personalizations;
+				$body->personalizations[0]->recipient = '7417rohitarora@gmail.com';
+				//$body->personalizations[0]->recipientCc = array($Totalemail);
+				             #To/Recipient email address
+
+				// Email Header
+				$body->from = new PepipostAPILib\Models\From;
+				$body->from->fromEmail = 'support@greenschoolsprogramme.org';   #Sender Domain. Note: The sender domain should be verified and active under your Pepipost account.
+				$body->from->fromName = 'Green School Programme';       #Sender/From name
+
+				//Email Body Content
+				$body->subject = "'".$subject."'";               #Subject of email
+				$body->content = '<html><body>"'.$message.'"</html>'; #HTML content which need to be send in the mail body
+
+				// Email Settings
+				$body->settings = new PepipostAPILib\Models\Settings;
+				$body->settings->clicktrack = 1;    #clicktrack for emails enable=1 | disable=0
+				$body->settings->opentrack = 1;     #opentrack for emails enable=1 | disable=0
+				$body->settings->unsubscribe = 1;   #unsubscribe for emails enable=1 | disable=0
+
+				$response = $emailController->createSendEmail($apiKey,$body);   #function sends email
+				print_r(json_encode($response)); 
+
+		$this->session->set_flashdata('success', 'Your Email is Successfully Send');
+
+				redirect(base_url('admin/audit_started/feedback'));
+
+        }
+
+
+ }
+
+
     /**Get Smmary Data**/
 	/*24-04-2018*/
 	public function getSummary(){
