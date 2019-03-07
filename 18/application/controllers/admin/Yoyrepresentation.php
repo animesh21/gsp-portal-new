@@ -21,4 +21,12 @@ class Yoyrepresentation extends CI_Controller {
        $data['title'] = 'Year To Year Presentation';
 	   $this->load->view('admin/includes/template', $data);			
     }
+	
+	 public function excel_yoyrepresentation() {
+        $this->load->dbutil();
+        $userid=$_GET['userid'];       
+        $row = $this->Audit_started_model->school_excel_yoyrepresentation($userid);
+        $name = 'yoyrepresentation.csv';
+        force_download($name, $row);
+    }
 } 
