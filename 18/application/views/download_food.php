@@ -92,9 +92,9 @@
         </div>
       </div>
     </nav>
-    <div class="container" style="height:1200px;">
+    <div class="container">
       <div class="col-md-12">
-        <h1><strong>Food Section</strong></h1>
+        <h1><strong>Food Section, </strong>  <?php echo $this->session->userdata('USERNAME');?></h1>
         <hr/>
       </div>
       <div class="col-md-12">
