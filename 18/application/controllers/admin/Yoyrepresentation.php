@@ -8,6 +8,8 @@ class Yoyrepresentation extends CI_Controller {
     public function __construct() {
         parent::__construct();
 		$this->load->helper('common_helper');
+	        $this->load->model('admin/Audit_started_model');
+                $this->load->helper(array('download','form'));
     }
     /**This Code Used For Year To Year Representation**/
     public function index(){
