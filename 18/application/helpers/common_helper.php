@@ -1863,6 +1863,35 @@ if (!function_exists('getserialno_teacher')) {
                    
     }
 }
+	
+	if(!function_exists('get_state')){
+   function get_state($school_id){
+    $CI = & get_instance();
+     $CI->db->where('id',$school_id);
+     $temp = $CI->db->select('state,district')->from("gsp_school")->where(array('id'=>$school_id))->get()->result();
+     return $temp;
+
+   }
+}
+
+if(!function_exists('get_stateById')){
+   function get_stateById($state){    
+    $CI = & get_instance();
+     $CI->db->where('id',$state);
+     $temp = $CI->db->select('name')->from("states")->get()->result();
+     return $temp;
+   }
+}
+
+if(!function_exists('get_districtById')){
+   function get_districtById($district){    
+    $CI = & get_instance();
+     $CI->db->where('id',$district);
+     $temp = $CI->db->select('name')->from("cities")->get()->result();
+     return $temp;
+   }
+}
+	
    
     
 }   
