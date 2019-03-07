@@ -2539,15 +2539,10 @@ public function getExcel2017Data() {
                         ->order_by('id', 'asc')
                         ->get()->result();                        
                       
-     $k = 1;
-        $output .= '"S.No",';        
-        foreach ($arrRecord as $a) {
-            $output .= '"' . $k . '",';
-            $k++;                        
-        }
+     
 
         $output .= "\n";
-        $output .= '"Question",';        
+        $output .= '"Year",';        
         foreach ($arrRecord as $a) {
             $output .= '"' . $a->audit_year . '",';                         
         }      
