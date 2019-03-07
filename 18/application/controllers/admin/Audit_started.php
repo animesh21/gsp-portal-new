@@ -442,7 +442,7 @@ class Audit_started extends CI_Controller {
 				$body->personalizations = array();
 				$body->personalizations[0] = new PepipostAPILib\Models\Personalizations;
 				$body->personalizations[0]->recipient = '7417rohitarora@gmail.com';
-				//$body->personalizations[0]->recipientCc = array($Totalemail);
+				$body->personalizations[0]->recipientCc = array($Totalemail);
 				             #To/Recipient email address
 
 				// Email Header
