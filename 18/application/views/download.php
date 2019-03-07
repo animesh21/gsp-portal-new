@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Green Schools Programme</title>
+<title>Green Schools Programme</title> 
 <meta name="generator" content="Green Schools Programme">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <link href="<?php echo base_url(); ?>assets/front/css/bootstrap.min.css" rel="stylesheet">
@@ -71,6 +71,18 @@
 <?php 
  $schoolId=getSchoolId($this->session->userdata('USER_ID')); 
  $dataYoy=download_YOY($schoolId);
+ $dataYoy1=get_state($schoolId);
+ 
+  $state=  $dataYoy1[0]->state;
+
+  $district= $dataYoy1[0]->district;
+
+  $dataYoy2=get_stateById($state);
+  
+  $dataYoy3 = get_districtById($district);
+  
+
+
  ?>
 
 
@@ -99,27 +111,28 @@
         </div>
       </div>
     </nav>
-    <div class="container" style="height:1200px;">
-      <div class="col-md-12">
-
-        <h1><strong><?php echo $this->session->userdata('USERNAME');?></strong><span style=" font-weight:bold;font-size: 16px; color:#e86549"> (<?php echo $this->session->userdata('email');?>)</span></h1> 
+    <div class="container">
+      <div class="col-md-12" >
+        <h3><strong><?php echo 'Name: '. $this->session->userdata('USERNAME');?></strong> <?php  echo ', (State: '.$dataYoy2[0]->name.'), ';  echo '(District: '.$dataYoy3[0]->name.')'; ?> </h3> 
         <hr/>
       </div>
 
-				 <div class="col-md-12">
+				 <div class="col-md-12" ">
         <?php for($i=0; $i<sizeof($dataYoy); $i++) {?>
-        <div class="col-md-3"><div class="well text-center" style="background:<?php echo $dataYoy[$i]['color']; ?>; color: white; font-weight: 900;height: 85px; margin:auto; width: 160px; padding: 0px;padding-top: 9px"><?php echo $dataYoy[$i]['range']; ?>
-          <p class="h5" style="margin-top: 5px"><?php echo $dataYoy[$i]['year']; ?></p>
+        <div class="col-md-3"><div class="well text-center" style="background:<?php echo $dataYoy[$i]['color']; ?>; color: #000; font-weight: 900; width:252px; height: 60px; padding:6px; border: 1px solid #ccc;"><?php echo $dataYoy[$i]['range']; ?>
+           
 
         </div></div>
       <?php } ?>
       
+      </div>
 
       <div class="col-md-12">
         <div id="grapSchoolStatus"> </div>
       </div>
       <div class="col-md-12">
-      <div class="col-md-4">
+      <div class="col-md-12">
+      <div class="col-md-6">
         <div class="schools-statics" style="width:100%;"> <a href="<?php echo base_url("/download/downloadAirSection/"); ?>" target="_blank">
           <div class="statics-circle"> <span style="position: relative; width: 87px; top: -20px; left: -19px;"><img src="<?php echo base_url(''); ?>assets/img/images/air.png"  alt="" class="top-bnr img-responsive"
                                  id="image"></span> </div>
@@ -127,7 +140,7 @@
           <div class="title"><strong>Air</strong></div>
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-6">
         <div class="schools-statics" style="width:100%;"> <a href="<?php echo base_url("/download/downloadEnergySection/"); ?>" target="_blank">
           <div class="statics-circle"> <span style="position: relative; width: 87px; top: -20px; left: -19px;"><img src="<?php echo base_url(''); ?>assets/img/images/energy.png"  alt="" class="top-bnr img-responsive"
                                  id="image"></span> </div>
@@ -135,7 +148,7 @@
           <div class="title"><strong>Energy</strong></div>
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-6">
         <div class="schools-statics" style="width:100%;"> <a href="<?php echo base_url("/download/downloadFoodSection/"); ?>" target="_blank">
           <div class="statics-circle"> <span style="position: relative; width: 87px; top: -20px; left: -19px;"><img src="<?php echo base_url(''); ?>assets/img/images/food.png"  alt="" class="top-bnr img-responsive"
                                  id="image"></span> </div>
@@ -143,7 +156,7 @@
           <div class="title"><strong>Food</strong></div>
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-6">
         <div class="schools-statics" style="width:100%;"> <a href="<?php echo base_url("/download/downloadLandSection/"); ?>" target="_blank">
           <div class="statics-circle"> <span style="position: relative; width: 87px; top: -20px; left: -19px;"><img src="<?php echo base_url(''); ?>assets/img/images/land.png"  alt="" class="top-bnr img-responsive"
                                  id="image"></span> </div>
@@ -151,7 +164,7 @@
           <div class="title"><strong>Land</strong></div>
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-6">
         <div class="schools-statics" style="width:100%;"> <a href="<?php echo base_url("/download/downloadWaterSection/"); ?>" target="_blank">
           <div class="statics-circle"> <span style="position: relative; width: 87px; top: -20px; left: -19px;"><img src="<?php echo base_url(''); ?>assets/img/images/water.png"  alt="" class="top-bnr img-responsive"
                                  id="image"></span> </div>
@@ -159,7 +172,7 @@
           <div class="title"><strong>Water</strong></div>
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-6">
         <div class="schools-statics" style="width:100%;"> <a href="<?php echo base_url("/download/downloadWasteSection/"); ?>" target="_blank">
           <div class="statics-circle"> <span style="position: relative; width: 87px; top: -20px; left: -19px;"><img src="<?php echo base_url(''); ?>assets/img/images/waste.png"  alt="" class="top-bnr img-responsive"
                                  id="image"></span> </div>
