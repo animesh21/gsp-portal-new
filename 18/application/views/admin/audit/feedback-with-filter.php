@@ -31,7 +31,7 @@
                 </div>
                 <div class="form-group col-md-12">
                     <label for="pwd">Message:</label>
-                    <textarea class="form-control" id="message" name="message"><?php echo $message; ?></textarea>
+                    <textarea name="message" id="editor1" rows="10" cols="80"><?php echo $message; ?></textarea>
                 </div>
                 <!-- <div class="form-group col-md-4">
                     <label for="pwd">Select User Email-Id:</label>
@@ -507,3 +507,19 @@ $(document).ready(function () {
         background-color: #5cb85c; color:black;
     }
 </style>
+
+
+<script type="text/javascript" src="https://cdn.ckeditor.com/4.5.1/standard/ckeditor.js"></script>
+
+<script type="text/javascript">
+    
+CKEDITOR.editorConfig = function (config) {
+    config.language = 'es';
+    config.uiColor = '#F7B42C';
+    config.height = 300;
+    config.toolbarCanCollapse = true;
+
+};
+CKEDITOR.replace('editor1');
+
+</script>
