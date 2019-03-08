@@ -92,7 +92,7 @@
           </div>
         </div>
       </nav>
-      <div class="container" style="height:1200px;>
+      <div class="container">
         <div class="col-md-12">
           <h1><strong>GSP Audit 2018-19 Reports & Certificate</strong></h1>
           <hr/>
