@@ -94,7 +94,7 @@
     </nav>
     <div class="container">
       <div class="col-md-12">
-        <h2 style="margin-top: 20px"><strong>Water Section,<?php echo $this->session->userdata('USERNAME');?></strong></h2>
+        <h2 style="margin-top: 20px"><strong>Water Section,<?php echo ' '. $this->session->userdata('USERNAME');?></strong></h2>
         <hr/>
       </div>
       <div class="col-md-12">
