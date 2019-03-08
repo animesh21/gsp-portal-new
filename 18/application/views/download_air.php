@@ -77,7 +77,7 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
               <li class=""><a href="<?php echo base_url('download/downloadFiles'); ?>">Home</a></li>
-              <li class=""><a href="">YEAR OF YEAR</a></li>
+		<!--<li class=""><a href="">YEAR OF YEAR</a></li> -->
               <li class=""><a href="<?php echo base_url('download/downloadReportsSection'); ?>">Downloads</a></li>
               <li class=""> <a href="<?php echo base_url('Downloadlogout'); ?>" class="pull-right">Logout</a></li>
             </ul>
@@ -86,7 +86,7 @@
       </nav>
       <div class="container">
         <div class="col-md-12">
-          <h1><strong>Air Section,  </strong>   <?php echo $this->session->userdata('USERNAME');?> </h1>
+          <h2 style="margin-top: 20px"><strong>Air Section, <?php echo $this->session->userdata('USERNAME');?> </strong></h2>
           <hr/>
         </div>
         <div class="col-md-12">
