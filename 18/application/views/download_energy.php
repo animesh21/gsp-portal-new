@@ -77,7 +77,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li class=""><a href="<?php echo base_url('download/downloadFiles'); ?>">Home</a></li>
-            <li class=""><a href="">YEAR OF YEAR</a></li>
+	    <!-- <li class=""><a href="">YEAR OF YEAR</a></li> -->
             <!--  <li class=""><a href="#">Year Of Year <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li class=""><a href="#">2015</a></li>
@@ -94,7 +94,7 @@
     </nav>
     <div class="container">
       <div class="col-md-12">
-        <h1><strong>Energy Section, </strong>  <?php echo $this->session->userdata('USERNAME');?></h1>
+        <h2 style="margin-top: 20px"><strong>Energy Section, <?php echo $this->session->userdata('USERNAME');?></strong></h2>
         <hr/>
       </div>
       <div class="col-md-12">
