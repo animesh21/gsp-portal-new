@@ -427,7 +427,12 @@ class Audit_started extends CI_Controller {
         if(!empty(extract($this->input->post())))
         {
 
-        	    $Totalemail = implode(",",$email_list); 
+        	     $Totalemail = implode(",", $email_list); 
+
+        	   $Totalemailpp= explode(',', $Totalemail);
+        	  
+               $i=1;
+        	   foreach ($Totalemailpp as $gg) {  
                 
         	    require_once APPPATH . "/third_party/pepipost/vendor/autoload.php";
 				$client = new PepipostAPILib\PepipostAPIClient();
@@ -441,8 +446,13 @@ class Audit_started extends CI_Controller {
 				// List of Email Recipients
 				$body->personalizations = array();
 				$body->personalizations[0] = new PepipostAPILib\Models\Personalizations;
-				$body->personalizations[0]->recipient = 'ranjita@cseindia.org';
-				$body->personalizations[0]->recipientCc = array($Totalemail);
+				$body->personalizations[0]->recipient = $gg;
+
+				if($i==1){
+                $body->personalizations[0]->recipientCc =  array('ranjita@cseindia.org');
+                }
+
+				//$body->personalizations[0]->recipientCc = array($Totalemail);
 				             #To/Recipient email address
 
 				// Email Header
@@ -451,8 +461,8 @@ class Audit_started extends CI_Controller {
 				$body->from->fromName = 'Green School Programme';       #Sender/From name
 
 				//Email Body Content
-				$body->subject = "'".$subject."'";               #Subject of email
-				$body->content = '<html><body>"'.$message.'"</html>'; #HTML content which need to be send in the mail body
+				$body->subject = "".$subject."";               #Subject of email
+				$body->content = '<html><body>'.$message.'</html>'; #HTML content which need to be send in the mail body
 
 				// Email Settings
 				$body->settings = new PepipostAPILib\Models\Settings;
@@ -460,7 +470,11 @@ class Audit_started extends CI_Controller {
 				$body->settings->opentrack = 1;     #opentrack for emails enable=1 | disable=0
 				$body->settings->unsubscribe = 1;   #unsubscribe for emails enable=1 | disable=0
 
-				$response = $emailController->createSendEmail($apiKey,$body);   #function sends email
+				$response = $emailController->createSendEmail($apiKey,$body);  
+
+              $i++; } 
+
+				 #function sends email
 				print_r(json_encode($response)); 
 
 		$this->session->set_flashdata('success', 'Your Email is Successfully Send');
