@@ -113,7 +113,7 @@
             <?php } ?>
           </tr>
           <tr>
-            <td>Per capita Energy Consumption</td>
+            <td>Per capita Energy Consumption (MJ/day/person)</td>
             <?php for($i=0;$i<sizeof($energySection);++$i){ ?>
             <td><?php echo !empty($energySection[$i]->per_capita_energy_consumption)?$energySection[$i]->per_capita_energy_consumption:"NA"; ?></td>
             <?php } ?>
@@ -212,6 +212,12 @@
             <td>Others (MJ)</td>
             <?php for($i=0;$i<sizeof($energySection);++$i){ ?>
             <td><?php echo !empty($energySection[$i]->others_mj)?$energySection[$i]->others_mj:"NA"; ?></td>
+            <?php } ?>
+          </tr>
+	<tr>
+            <td>Total (MJ)</td>
+            <?php for($i=0;$i<sizeof($energySection);++$i){ ?>
+            <td><?php echo !empty($energySection[$i]->total_mj)?$energySection[$i]->total_mj:"NA"; ?></td>
             <?php } ?>
           </tr>
         </table>
