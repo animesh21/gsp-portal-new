@@ -115,7 +115,7 @@
           <tr>
             <td>Percentage of Green Area</td>
             <?php for($i=0;$i<sizeof($LandSection);++$i){ ?>
-            <td><?php echo !empty($LandSection[$i]->percentage_of_green_area)?$LandSection[$i]->percentage_of_green_area:"NA"; ?></td>
+            <td><?php echo !empty($LandSection[$i]->percentage_of_green_area)?round($LandSection[$i]->percentage_of_green_area,2):"NA"; ?></td>
             <?php } ?>
           </tr>
           <tr>
