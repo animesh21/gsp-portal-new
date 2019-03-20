@@ -137,7 +137,7 @@
             <tr>
               <td>Commute: Sustainable Motorised Vehicles: Percentage </td>
               <?php for($i=0;$i<sizeof($airSection);++$i){ ?>
-               <td><?php echo !empty($airSection[$i]->sustainble_motorised_vehicles_percentgae)?round($airSection[$i]->sustainble_motorised_vehicles_percentgae,2):"NA"; ?></td
+               <td><?php echo !empty($airSection[$i]->sustainble_motorised_vehicles_percentgae)?round($airSection[$i]->sustainble_motorised_vehicles_percentgae,2):"NA"; ?></td>
               <?php } ?>
             </tr>
             <tr>
