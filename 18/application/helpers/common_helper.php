@@ -1791,7 +1791,7 @@ if(!function_exists('downloadEnergySectionQuestions')){
    function downloadEnergySectionQuestions($userId){
        $CI = & get_instance();
      $CI->db->where('school_id',$userId);
-     $temp = $CI->db->select('audit_year,per_capita_energy_consumption,alternate_source_of_energy,electricity_from_the_board_mj,  electricity_from_generator_mj,petrol_mj,diesel_mj,cng_mj,kerosene_mj,coal_mj,wood_mj,animal_waste_mj,solar_mj,wind_mj,lpg_mj,piped_natural_gas_mj,biogas_mj,others_mj')->from("all_yoy_presentation")->where(array('school_id'=>$userId))->get()->result();
+     $temp = $CI->db->select('audit_year,per_capita_energy_consumption,alternate_source_of_energy,electricity_from_the_board_mj,  electricity_from_generator_mj,petrol_mj,diesel_mj,cng_mj,kerosene_mj,coal_mj,wood_mj,animal_waste_mj,solar_mj,wind_mj,lpg_mj,piped_natural_gas_mj,biogas_mj,others_mj,total_mj')->from("all_yoy_presentation")->where(array('school_id'=>$userId))->get()->result();
      return $temp;
    }
 }
