@@ -113,7 +113,7 @@
             <?php } ?>
           </tr>
           <tr>
-            <td>Provision of packaged food</td>
+            <td>Provision of selling packaged food</td>
             <?php for($i=0;$i<sizeof($foodSection);++$i){ ?>
             <td><?php echo !empty($foodSection[$i]->provision_of_packaged_food)?$foodSection[$i]->provision_of_packaged_food:"NA"; ?></td>
             <?php } ?>
@@ -125,13 +125,13 @@
             <?php } ?>
           </tr>
           <tr>
-            <td>school distribute chocolates/similar products as refreshments during schools events</td>
+            <td>School distribute chocolates/similar products as refreshments during schools events</td>
             <?php for($i=0;$i<sizeof($foodSection);++$i){ ?>
             <td><?php echo !empty($foodSection[$i]->school_distribute_chocolates_similar_products_as_refreshments)?$foodSection[$i]->school_distribute_chocolates_similar_products_as_refreshments:"NA"; ?></td>
             <?php } ?>
           </tr>
           <tr>
-            <td>school events sponsored by food companies/brandse</td>
+            <td>School events sponsored by food companies/brands</td>
             <?php for($i=0;$i<sizeof($foodSection);++$i){ ?>
             <td><?php echo !empty($foodSection[$i]->school_events_sponsored_by_food_companies_brands)?$foodSection[$i]->school_events_sponsored_by_food_companies_brands:"NA"; ?></td>
             <?php } ?>
