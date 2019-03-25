@@ -106,7 +106,7 @@ h2 span {
       <label>Introduction</label>
       <span>Green Schools Programme Audit 2018-2019</span></h2>
     <p>Dear Principal,</p>
-    <p>We thank you for taking part in GSP Audit 2018-2019. We hope the exercise helped to make your school resource efficient and to inculcate green practices in your students. As Anil Agarwal, founder-director, CSE, rightly said, ‘It is very important to expose young children to the beauties and wonders of nature. But as they grow older, it is important they begin to understand how human beings and human societies interact with their environment for their survival and their growth, how these human–nature interactions become a part of a society’s culture, and why it is important to rationalize our relationship with our environment.’
+    <p>We thank you for taking part in GSP Audit 2018-2019. We hope the exercise helped to make your school resource efficient and to inculcate green practices in your students. As Anil Agarwal, founder-director, CSE, rightly said, 'It is very important to expose young children to the beauties and wonders of nature. But as they grow older, it is important they begin to understand how human beings and human societies interact with their environment for their survival and their growth, how these human-nature interactions become a part of a society's culture, and why it is important to rationalize our relationship with our environment.'
  </p>
     <p> The Green Schools Programme (GSP) takes the students outside the classroom and helps them learn with joy. GSP has been built on the twin objectives of &quot;Learning by doing&quot; and &quot;making change work&quot; to help schools audit the consumption of natural resources within their premises, and assess themselves as environment managers.
 </p>
@@ -114,7 +114,7 @@ h2 span {
  </p>
     <p> The performance report of the school is based on the data submitted by the schools. Therefore, the school needs to make sure that the data entered is correct to the best of their knowledge. We hope that as the school continues to audit their consumption every year, they will refine the data collection process and complete the report with full honesty. We hope that your students immersed themselves in the activities and learnt about energy efficiency, rainwater harvesting, waste segregation at source, non-polluting modes of transport, eating healthy, different plant and animal species etc. The performance report will give schools the baseline of the Green status of the school. It is an indicator of the progress that the schools make on the environment front year-on-year, we hope that your school continues to participate each year, and build a generation of environmentally responsible citizens.
 </p>
-    <p> The report will help in assessing the initiatives undertaken by your school and move towards filling the gaps before next GSP Audit. Our focus will be on measuring the change over the previous years’ performance. The school’s actions for bettering the environment and sensitivity towards environment will be looked at from the baseline year (the year the school did the Audit for the first time). And the degree of change will be appreciated as well as recognized. To find out how some of our schools have brought about change, please take a look at our new publication ‘Paving the Path’ available at CSE store <a href="https://bit.ly/2Sh1pBs">https://bit.ly/2Sh1pBs</a>.
+    <p> The report will help in assessing the initiatives undertaken by your school and move towards filling the gaps before next GSP Audit. Our focus will be on measuring the change over the previous years' performance. The school's actions for bettering the environment and sensitivity towards environment will be looked at from the baseline year (the year the school did the Audit for the first time). And the degree of change will be appreciated as well as recognized. To find out how some of our schools have brought about change, please take a look at our new publication 'Paving the Path' available at CSE store <a href="https://bit.ly/2Sh1pBs">https://bit.ly/2Sh1pBs</a>.
 </p>
     <p> We have dispatched the school certificate, and if you do not receive it by April 15, 2019, please email or call (details given below). Hope you have downloaded the digital certificates of all those whose names were provided online. </p>
     <p> Hope, that in coming years, your school continues to participate and manage resources efficiently within your school. The GSP Audit 2019 will open by mid-year, and we look forward to receiving your Audit report by the deadline!</p>
@@ -624,7 +624,7 @@ if ($data == 3 || $data == 4) { ?>
       <label>Energy</label>
       <span>Green Schools Programme Audit 2018-2019</span></h2>
     <p>The impact of &#39;global warming&#39; has already reached scorching levels, and is rising rapidly. Saving energy is the first step to energy conservation. Switching off electrical gadgets when they are not in use and switching the usage of bulbs to CFLs/ LEDs are great ways to start.</p>
-<p>Opting for rooftop or building-integrated small-scale solar systems are easy ways to conserve electricity sustainably and cut down on your school’s future total electricity costs! They help minimise transmission and distribution losses, as the generated power is consumed locally. You can check out the latest schemes for solar roof top installations in institutions through this link -<a href="https://mnre.gov.in/solar-rooftop-grid-connected">https://mnre.gov.in/solar-rooftop-grid-connected</a>
+<p>Opting for rooftop or building-integrated small-scale solar systems are easy ways to conserve electricity sustainably and cut down on your school's future total electricity costs! They help minimise transmission and distribution losses, as the generated power is consumed locally. You can check out the latest schemes for solar roof top installations in institutions through this link -<a href="https://mnre.gov.in/solar-rooftop-grid-connected">https://mnre.gov.in/solar-rooftop-grid-connected</a>
 </p>
     <section class="remember">
       <h3>Remember</h3>
@@ -969,7 +969,7 @@ if ($data == 3 || $data == 4) { ?>
                                     $sponsored_event_msg = "Students are easily influenced by the fancy brand advertisement and promotions. We would like to request you to discourage promotions of UPPF.";
                                 } elseif(getFiled('Q11F1', $schoolUserID) == "N") {
                                     $sponsored_event = "No";
-                                    $sponsored_event_msg = "Students are easily influenced by the fancy brand advertisement and promotions. It is great that your school doesn’t promote such brand promotions and advertisements.";
+                                    $sponsored_event_msg = "Students are easily influenced by the fancy brand advertisement and promotions. It is great that your school doesn't promote such brand promotions and advertisements.";
                                 }
                                 ?>
             <h4><?php echo $sponsored_event; ?></h4>
