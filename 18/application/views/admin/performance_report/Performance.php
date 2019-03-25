@@ -106,16 +106,22 @@ h2 span {
       <label>Introduction</label>
       <span>Green Schools Programme Audit 2018-2019</span></h2>
     <p>Dear Principal,</p>
-    <p>Thank you for taking part in GSP Audit 2018-2019, an initiative to make your school resource efficient and to inculcate green practices in your students. As Anil Agarwal, founder-director, CSE, rightly said, '...as they (children) grow older, it is important they begin to understand how human beings and human societies interact with their environment for their survival and their growth, how these human-nature interactions become a part of a society's culture, and why it is important to rationalize our relationship with our environment.' </p>
-    <p> The Green Schools Programme (GSP) takes the students outside the classroom and helps them learn with joy. GSP has been built on the twin objectives of "Learning by doing" and "making change work" to help schools audit the consumption of natural resources within their premises, and assess themselves as environment managers. </p>
-    <p> Like last year, we were overwhelmed with the response we received from across India. More than 2800 schools registered for the Audit, and around 1200 schools submitted the Audit - a jump of 70 per cent, when compared to last year. </p>
-    <p> The performance report of the school is based on the data submitted by the schools. Therefore, the school needs &nbsp; to make sure that the data entered is correct to the best of their knowledge. We hope that as the school continues to audit their consumption each year, they will refine the data collection and complete the report with honesty. We hope that your students immersed themselves in the activities and learnt about rainwater harvesting, waste segregation at source, non-polluting modes of transport, eating healthy, etc. While the performance report will give schools the baselines and is an indicator of the progress that the schools make on the environment front year-on-year, we hope that your school continues to participate each year, and build a generation of environmentally responsible citizens. </p>
-    <p> The report will help your school in assessing the initiatives undertaken and move towards filling in the gaps by the next GSP Audit. Our focus will be on measuring the change over the previous year's performance. The school's actions for bettering the environment and sensitivity towards environment will be looked at from the baseline year (the year the school did the Audit for the first time). And the degree of change will be appreciated and recognised. To find out how schools have brought about change, please take a look at the videos available at www.greenschoolsprogramme.org</p>
-    <p> We have dispatched the certificates, and if you don't receive by April 20, 2018, please email (details given below). Hope you have downloaded the digital certificates of all those whose names were provided online. </p>
-    <p> Hope, that in coming years, your school continues to participate and manage resources efficiently within your school. The GSP Audit 2018 will open by mid-year, and we look forward to receiving your Audit report by the deadline!</p>
+    <p>We thank you for taking part in GSP Audit 2018-2019. We hope the exercise helped to make your school resource efficient and to inculcate green practices in your students. As Anil Agarwal, founder-director, CSE, rightly said, ‘It is very important to expose young children to the beauties and wonders of nature. But as they grow older, it is important they begin to understand how human beings and human societies interact with their environment for their survival and their growth, how these human–nature interactions become a part of a society’s culture, and why it is important to rationalize our relationship with our environment.’
+ </p>
+    <p> The Green Schools Programme (GSP) takes the students outside the classroom and helps them learn with joy. GSP has been built on the twin objectives of &quot;Learning by doing&quot; and &quot;making change work&quot; to help schools audit the consumption of natural resources within their premises, and assess themselves as environment managers.
+</p>
+    <p> The participation of schools from across the country has gone up this year. We were overwhelmed with the response we received from across India. 5000+ schools participated in the audit this year, and around 1700 schools submitted the Audit - a jump of 42 per cent, when compared to last year.
+ </p>
+    <p> The performance report of the school is based on the data submitted by the schools. Therefore, the school needs to make sure that the data entered is correct to the best of their knowledge. We hope that as the school continues to audit their consumption every year, they will refine the data collection process and complete the report with full honesty. We hope that your students immersed themselves in the activities and learnt about energy efficiency, rainwater harvesting, waste segregation at source, non-polluting modes of transport, eating healthy, different plant and animal species etc. The performance report will give schools the baseline of the Green status of the school. It is an indicator of the progress that the schools make on the environment front year-on-year, we hope that your school continues to participate each year, and build a generation of environmentally responsible citizens.
+</p>
+    <p> The report will help in assessing the initiatives undertaken by your school and move towards filling the gaps before next GSP Audit. Our focus will be on measuring the change over the previous years’ performance. The school’s actions for bettering the environment and sensitivity towards environment will be looked at from the baseline year (the year the school did the Audit for the first time). And the degree of change will be appreciated as well as recognized. To find out how some of our schools have brought about change, please take a look at our new publication ‘Paving the Path’ available at CSE store <a href="https://bit.ly/2Sh1pBs">https://bit.ly/2Sh1pBs</a>.
+</p>
+    <p> We have dispatched the school certificate, and if you do not receive it by April 15, 2019, please email or call (details given below). Hope you have downloaded the digital certificates of all those whose names were provided online. </p>
+    <p> Hope, that in coming years, your school continues to participate and manage resources efficiently within your school. The GSP Audit 2019 will open by mid-year, and we look forward to receiving your Audit report by the deadline!</p>
     <p> Warmly, </p>
     <p> The GSP team</p>
 	<p><strong>support@greenschoolsprogramme.org</strong></p>
+  <p>Ph: 011 40616000, 29955124  Ext 300;</p>
     <div class="footer">
       <p>Performance Report | <?php echo $performance[0]->name; ?></p>
     </div>
@@ -160,13 +166,16 @@ h2 span {
       <figure><img src="assets/img/performance/Air_logo.jpg"></figure>
       <label>Air</label>
       <span>Green Schools Programme Audit 2018-2019</span></h2>
-    <p>Sources of air pollution are many and diverse. But none are as lethal as vehicles as they are responsible for very high exposure. Vehicular emissions take place in the breathing zone of people. Experts say that those who live or work in close proximity to heavily travelled roadways are subject to high levels of exposure.  No wonder that during the past few years, we have been desperately looking out for tools to assess the problem and find ways to combat the menace.</p>
+    <p>As per the latest study by Indian Council on Clean Transportation (ICCT), vehicular tailpipe emissions from on-road diesel vehicles are responsible for approximately 181,000 premature deaths in India. It has adverse effects on children, specifically. It has been found that children in polluted environment grow up with smaller lungs</p>
+<p>Sources of air pollution are many and diverse. But none are as lethal as vehicles as they are responsible for very high exposure. Vehicular emissions take place in the breathing zone of people. Experts say that those who live or work in close proximity to heavily travelled roadways are subject to high levels of exposure. No wonder that during the past few years, we have been desperately looking out for tools to assess the problem and find ways to combat the menace.
+</p>
     <section class="remember">
       <h3>Remember:</h3>
       <ul>
-        <li>Circulation of fresh air keeps the mind and body healthy, therefore the total window-floor ratio of a class-room should be more than five per cent.</li>
-        <li>The fuel type should be switched from diesel to petrol to CNG to prevent ambient air quality from deteriorating further.</li>
-        <li>Your school should motivate most of the permanent population to use non-polluting mode of transport such as walking or cycling, or at least use a sustainably motorized vehicles such as buses, public transport.</li>
+        <li>Your school can make an impact and meanwhile, ensure your surroundings to have cleaner air through opting for carpooling and shifting to CNG run vehicles (CNG is a cleaner fuel).</li>
+<li>Try and motivate most of the permanent population to use non-polluting mode of transport such as walking or cycling, or at least use a sustainably motorized vehicles such as buses, public transport. Students in several schools have come up with new and innovative ways to demotivate the school population to use private vehicles and incentivize them to use public transport or car pool.</li>
+<li>Secondly, practices to achieve cleaner air would bore little result without attempts to ensure that there is circulation of fresh air. Fresh air keeps the mind and body healthy which helps students to concentrate better and be alert. The total window-floor ratio of a class-room should therefore, be more than at least five per cent.
+</li>        
       </ul>
     </section>
     <div class="description">
@@ -614,13 +623,14 @@ if ($data == 3 || $data == 4) { ?>
       <figure><img src="assets/img/performance/energy.jpg"></figure>
       <label>Energy</label>
       <span>Green Schools Programme Audit 2018-2019</span></h2>
-    <p>The impact of 'global warming' has already reached scorching levels, and is rising rapidly. Saving energy is the first step to energy conservation. Switching off electrical gadgets when they are not in use and switching the usage of bulbs to CFLs/ LEDs are great ways to start.</p>
+    <p>The impact of &#39;global warming&#39; has already reached scorching levels, and is rising rapidly. Saving energy is the first step to energy conservation. Switching off electrical gadgets when they are not in use and switching the usage of bulbs to CFLs/ LEDs are great ways to start.</p>
+<p>Opting for rooftop or building-integrated small-scale solar systems are easy ways to conserve electricity sustainably and cut down on your school’s future total electricity costs! They help minimise transmission and distribution losses, as the generated power is consumed locally. You can check out the latest schemes for solar roof top installations in institutions through this link -<a href="https://mnre.gov.in/solar-rooftop-grid-connected">https://mnre.gov.in/solar-rooftop-grid-connected</a>
+</p>
     <section class="remember">
       <h3>Remember</h3>
       <ul>
-        <li>Per capita per day electricity consumption should be well within the norms (46.5 MJ) and we all know that our 
-          non-renewable resources are depleting faster than they can re-generate.</li>
-        <li>Switching over to renewable resources and expanding its usage is the only available option.</li>
+        <li>Per capita per day electricity consumption should be well within the norms (46.5 MJ) and we all know that our non-renewable resources are depleting faster than they can re-generate. Switching over to renewable resources and expanding its usage is the only available option.
+</li>        
       </ul>
     </section>
     <h3>Your School's Performance</h3>
@@ -820,13 +830,18 @@ if ($data == 3 || $data == 4) { ?>
       <figure><img src="assets/img/performance/food.jpg"></figure>
       <label>Food</label>
       <span>Green Schools Programme Audit 2018-2019</span></h2>
-    <p>Food has been at the centre of policy debate in India for many years, as more than 20 per cent of the country's population suffers from undernourishment. Meanwhile, childhood obesity is also alarmingly on the rise globally as well as in India.Given India's dubious distinction of carrying the twin burden of under nutrition and overfeeding, we need to be extra cautious.</p>
-    <p>We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) that has high fat, sugar and salt content in it. This UPPF category is one of the most popular categories in today's market. </p>
+    <p>A recent report published states that the food diversity on plate worldwide has reduced by 75 percent since the 1990s. This has cost everyone in terms of deteriorating human health and environment. In India, over 100 kinds of foods wild, cultivated and uncultivated form the part of a regular diet. Nutritional analyses of these diets shows that these foods can counter malnutrition including micro-nutrient malnutrition such as Vitamin A Deficiency (VAD).</p>
+<p>Food has been at the centre of policy debate in India for many years, as more than 35 percent of the country&#39;s children under five suffer from pacts of malnutrition including stunted growth and under-weight. Meanwhile, childhood obesity is also alarmingly on the rise globally as well as in India. Given India&#39;s dubious distinction of carrying the twin burden of under nutrition and overfeeding, we need to be extra cautious.</p>
+<p>We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) that has high fat, sugar and salt (HFSS) content in it. This UPPF category is one of the most popular categories in today&#39;s market.
+</p>
+    
     <section class="remember">
       <h3>Remember:</h3>
       <ul>
-        <li>Avoid UPPF in school canteens, and encourage children to eat healthy and traditional foods/ beverages.</li>
-        <li>Sponsorship by UPPF brands should be avoided.</li>
+        <li>Avoid UPPF in school canteens, and encourage children to eat healthy and traditional foods/ local foods of the place/beverages. Sponsorship by UPPF brands should be avoided. On special occasions, provide laddoos or other cooked foods as rewards instead of chocolates or other packaged food. </li>
+<li>You can try keeping the brownies, biscuits available in your canteen in paper wrappings instead of packaged ones!
+</li>
+        
       </ul>
     </section>
     <h3>Your School's Performance</h3>
@@ -987,15 +1002,17 @@ if ($data == 3 || $data == 4) { ?>
       <figure><img src="assets/img/performance/land.jpg"></figure>
       <label>Land</label>
       <span>Green Schools Programme Audit 2018-2019</span></h2>
-    <p>Your school grounds can provide excellent educational opportunities for creating awareness about land resources and the natural world around you, as well as the land-use pattern. The biological diversity 
-      supported by an area is a good indicator of its ecological well-being. A proper management of land resources can transform the grounds into biologically diverse outdoor classrooms and healthy open spaces.</p>
+    <p>As per Model Building Bye-Laws, 2016, maximum ground coverage in a school building should not exceed 35 per cent.</p>
+<p>Your school grounds can provide excellent educational opportunities for creating awareness about land resources and the natural world around you, as well as the land-use pattern. The biological diversity supported by an area is a good indicator of its ecological well-being. A proper management of land resources can transform the grounds into biologically diverse outdoor classrooms and healthy open spaces.</p>
+<p>As per the Right of Children to Free and Compulsory Education Act (RTE), 2009, a school should have an all-weathered school building with a playground, a kitchen (for cooking mid-meal), separate toilets for boys and girls, library, barrier-free access, etc.</p>
     <section class="remember">
       <h3>Remember:</h3>
       <ul>
-        <li>Congestion on land (more buildings and inadequate green cover) leads to pressure on resources and hence on our 
-          environment.</li>
-        <li>We all know that a mind with plenty of oxygen has a greater power to grasp things. And for more oxygen we need more trees - our only oxygen factory.</li>
-        <li>To keep these oxygen factories healthy, we should not use chemical pesticides to raise them.</li>
+        <li>Congestion on land (more buildings and inadequate green cover) leads to pressure on resources and hence on our environment.
+<li>We all know that a mind with plenty of oxygen has a greater power to grasp things. And for more oxygen we need more trees - our only oxygen factory.</li>
+<li>To keep these oxygen factories healthy, we should not use chemical pesticides to raise them. Chemical pesticides are poisonous to health and environment.
+</li>
+        
       </ul>
     </section>
     <h3>Your School's Performance</h3>
@@ -1099,13 +1116,14 @@ if ($data == 3 || $data == 4) { ?>
       <figure><img src="assets/img/performance/tap.jpg"></figure>
       <label>Water</label>
       <span>Green Schools Programme Audit 2018-2019</span></h2>
-    <p>The right to water is really the right to life and livelihood. Just as we cannot live without water, a country cannot survive if it is water-stressed. This resource determines our future, and acts as a driving force for our economic growth. Even today, the government admits to not being able to provide' safe drinking water to more than half the country's population. Poor sanitation and unsafe drinking water account for a substantial part of the disease burden in India, contributing to diarrhea, cholera, typhoid and jaundice.</p>
+    <p>The right to water is really the right to life and livelihood. Just as we cannot live without water, a country cannot survive if it is water-stressed. This resource determines our future, and acts as a driving force for our economic growth. Even today, the government admits to not being able to provide&#39; safe drinking water to more than half the country&#39;s population. Poor sanitation and unsafe drinking water account for a substantial part of the disease burden in India, contributing to diarrhoea, cholera, typhoid and jaundice.</p>
     <section class="remember">
       <h3>Remember:</h3>
       <ul>
         <li>Children should get adequate amount of water required per day starting from drinking to flushing to mopping floors to everything.</li>
-        <li>Catch rain where it falls. Today, rainwater harvesting has evolved as an appropriate measure to overcome the water scarcity plus water logging due to excessive rains.</li>
-        <li>Recharge groundwater. This should be done irrespective of whether the area has high ground water level or low because it's high time to take preventive measure to stop further depletion of water table.</li>
+<li>Catch rain where it falls. Today, rainwater harvesting has evolved as an appropriate measure to overcome the water scarcity plus water logging due to excessive rains.</li>
+<li>Recharge groundwater. As per Central Ground Water Board (CGWB), around 39% of the analysed wells showed decline in ground water level in various parts of the country. We must try to reduce the dependence on ground water to stop further depletion of water table. Other measures can be harvest more rainwater and treat and reuse waste water and recharge ground water.</li>
+        
       </ul>
     </section>
     <h3>Your School's Performance</h3>
@@ -2012,18 +2030,21 @@ if ($data == 3 || $data == 4) { ?>
       <figure><img src="assets/img/performance/waste.jpg"></figure>
       <label>Waste</label>
       <span>Green Schools Programme Audit 2018-2019</span></h2>
-    <p>Waste is another headache arising at an alarming level. Where to dispose waste? How to dispose waste? What to do with the waste? We feel one of the easiest solution could be waste segregation. We should feed it into our system that no matter what, we will segregate our waste, even if it gets mixed after it goes out from our homes/schools.</p>
+    <p>Do you know how much solid waste (paper, plastics, food waste etc) Delhi produces? 10,000 tonnes a day. We dump it all into landfills, which are overflowing and which pollute the environment. Moreover, there is no land available to create more landfills. Schools, by following efficient waste management practices, can play a leading role in setting examples, creating a public opinion, and ridding India of this menace.</p>
+<p>We face day-to-day problems regarding waste management. Where to dispose of waste? How to dispose of waste? What to do with the waste?
+</p>
     <section class="remember">
       <h3>Remember:</h3>
       <ul>
-        <li>Segregation at source is very important.</li>
-        <li>Every class should have minimum of two dustbins to collect wet and dry waste.</li>
-        <li>Schools should have a composting facility to manage the wet waste in the school premises itself.</li>
-        <li>Send e-waste to Authorised dealers.</li>
-        <li>Do not burn waste in school premises, especially horticultural waste. Alternatively, composting should be done by horticultural waste.</li>
-        <li>Waste should be sent to designated dumping or landfill sites.</li>
-        <li>Schools should have a waste policy that is to be practiced in schools.</li>
-      </ul>
+<li>Segregation at source is very important.</li>
+<li>Every class should have minimum of two dustbins to collect wet and dry waste.</li>
+<li>Schools should have a composting facility to manage the wet waste in the school premises itself.</li>
+<li>Send e-waste to Authorised dealers.</li>
+<li>Do not burn waste in school premises.</li>
+<li>Composting the wet waste.</li>
+<li>Waste should be sent to designated dumping or landfill sites.</li>
+<li>Schools should have a waste policy that is to be practiced in schools</li>
+    </ul>
     </section>
     <h3>Your School's Performance</h3>
     <?php
