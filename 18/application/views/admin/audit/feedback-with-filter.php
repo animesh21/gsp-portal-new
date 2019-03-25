@@ -206,7 +206,7 @@
                         <thead>
                             <tr>
                                 <th>Sr. No.</th>
-                                <th>School Id</th>
+                                <th>User Id</th>
                                 <th>UDISE Code</th>
                                 <th>Name</th>
                                 <th class="hide">Address 1</th>
@@ -268,7 +268,7 @@
                                 ?>
                                 <tr>
                                     <td><?php echo $i + 1; ?></td>
-                                    <td><?php if ($record[$i]['id'] != ''): echo $record[$i]['id'];
+                                    <td><?php if ($record[$i]['userid'] != ''): echo $record[$i]['userid'];
                                 endif ?></td>
                                     <td><?php if ($record[$i]['udise'] != ''): echo $record[$i]['udise'];
                                 endif ?></td>
