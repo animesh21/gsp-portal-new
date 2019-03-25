@@ -268,8 +268,11 @@
                                 ?>
                                 <tr>
                                     <td><?php echo $i + 1; ?></td>
-                                    <td><?php if ($record[$i]['userid'] != ''): echo $record[$i]['userid'];
-                                endif ?></td>
+                                    <td><?php  $rr = $record[$i]['userid']; 
+                                            ?>
+                                           <?php  $t = getSchoolId($rr) ?>
+                                          
+                                          <?php echo $t; ?></td>
                                     <td><?php if ($record[$i]['udise'] != ''): echo $record[$i]['udise'];
                                 endif ?></td>
                                     <td><?php if ($record[$i]['name'] != ''): echo $record[$i]['name'];
