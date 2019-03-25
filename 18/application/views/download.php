@@ -113,7 +113,7 @@
     </nav>
     <div class="container">
       <div class="col-md-12" >
-        <h3><strong><?php echo $this->session->userdata('USERNAME').', &nbsp';?> <?php  echo $dataYoy2[0]->name.', ';  echo ' &nbsp &nbsp'. $dataYoy3[0]->name; ?> </strong> </h3> 
+        <h3><strong><?php echo $this->session->userdata('USERNAME').', &nbsp';?> <?php echo ' &nbsp'. $dataYoy3[0]->name.',';  echo ' &nbsp &nbsp' .$dataYoy2[0]->name;?> </strong> </h3> 
         <hr/>
       </div>
 
