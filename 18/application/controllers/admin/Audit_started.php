@@ -354,7 +354,7 @@ class Audit_started extends CI_Controller {
            
             foreach ($byProgress as $p) {
                
-                if($p='100')
+                if($p=='100')
             	{
             		$test[] = " a.progress='$p' AND complete_status = '0'";
             	}else{
