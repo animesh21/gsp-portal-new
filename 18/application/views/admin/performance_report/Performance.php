@@ -119,7 +119,7 @@ h2 span {
     <p> We have dispatched the school certificate, and if you do not receive it by April 15, 2019, please email or call (details given below). Hope you have downloaded the digital certificates of all those whose names were provided online. </p>
     <p> Hope, that in coming years, your school continues to participate and manage resources efficiently within your school. The GSP Audit 2019 will open by mid-year, and we look forward to receiving your Audit report by the deadline!</p>
     <p> Warmly, </p>
-    <p> The GSP team</p>
+    <p> The GSP team</p>  
   <p><strong>support@greenschoolsprogramme.org</strong></p>
   <p>Ph: 011 40616000, 29955124 Ext 300;</p>
     <div class="footer">
@@ -1132,13 +1132,13 @@ if ($data == 3 || $data == 4) { ?>
                     // Water Points
                     $total_water_points = number_format(getWaterPoints($schoolUserID),2);
                     if($total_water_points = 40)
-                        $point_performance_msg_water = "It is good that your school has managed to provide water as per the prescribed level as well as all the sanitation facilities have load under the prescribed norms. Well done! Your school's score in water section is very good.";
+                        $point_performance_msg_water = "It is good that your school has managed to provide water as per the prescribed level as well as all the sanitation facilities have load under the prescribed norms. Well done! Your school’s score in water section is very good.";
                     elseif($total_water_points >=30 && $total_water_points < 39.9  )
-                        $point_performance_msg_water= "It is good that your school tries to provide water as per the prescribed level as well as all the sanitation facilities have load under the prescribed norms. Your school's score in water section is good. Hope you take suggestions and become a water efficient school at the earliest.";                    
+                        $point_performance_msg_water= "It is good that your school tries to provide water as per the prescribed level as well as all the sanitation facilities have load under the prescribed norms. Your school’s score in water section is good. Hope you take suggestions and become a water efficient school at the earliest.";                    
                      elseif($total_water_points >=20 && $total_water_points < 29.9 )
-                        $point_performance_msg_water= "Your school does not provide water as per the prescribed level as well as all the sanitation facilities does not have load under the prescribed norms. Your school's score in water section is average. Hope you take suggestions and become a water efficient school at the earliest.";
+                        $point_performance_msg_water= "Your school does not provide water as per the prescribed level as well as all the sanitation facilities does not have load under the prescribed norms. Your school’s score in water section is average. Hope you take suggestions and become a water efficient school at the earliest.";
                      elseif($total_water_points < 19 )
-                        $point_performance_msg_water= "Your school does not provide water as per the prescribed level as well as all the sanitation facilities does not have load under the prescribed norms. Your school's score in water section is poor. Hope you take suggestions and become a water efficient school at the earliest.";
+                        $point_performance_msg_water= "Your school does not provide water as per the prescribed level as well as all the sanitation facilities does not have load under the prescribed norms. Your school’s score in water section is poor. Hope you take suggestions and become a water efficient school at the earliest.";
                                      
                 ?>
     <p><?php echo $point_performance_msg_water ?></p>
@@ -1698,10 +1698,10 @@ if ($data == 3 || $data == 4) { ?>
                                 $drinking_water_taps_8 = getFiled('Q9W1', $schoolUserID);
                                 $Load_for_drinking_water_tap = $total_population / $drinking_water_taps_8;
                                 if ($Load_for_drinking_water_tap <= 50 && $drinking_water_taps_8 != "" && $drinking_water_taps_8 != 0) {
-                                    $DrinkingWaterTabs = "If equal to the load";
-                                    $DrinkingWaterTabs_Msg = "You have the required number of drinking water taps in your school. Please refer to the table for prescribed norm.";
+                                    $DrinkingWaterTabs = "If equal to or less than the load";
+                                    $DrinkingWaterTabs_Msg = "Great! You have the required number of drinking water taps in your school.";
                                 } else {
-                                    $DrinkingWaterTabs = "If not equal to the load";
+                                    $DrinkingWaterTabs = "If more than the load";
                                     $DrinkingWaterTabs_Msg = "You do not have the required number of drinking water taps in your school. Please refer to the table for prescribed norm.";
                                 }
                                 ?>
@@ -1769,11 +1769,11 @@ if ($data == 3 || $data == 4) { ?>
                 $hand_pumps = getFiled('Q10W1', $schoolUserID);
                                 //$Load_for_hand_pumps=$total_population/$hand_pumps;
                 if ($hand_pumps <= 1) { //Ref not provided in table
-                    $handpumps = "1 or 0";
-                    $handpumps_msg = "You do not have the hand pumps in your school. Good that your school is not extracting a lot of ground water.";
+                    $handpumps = "Equal to 1 or 0";
+                    $handpumps_msg = "You do not have the hand pumps in your school. Good that your school is not extracting a lot of ground water which is a valuable but diminishing resource. Using of Rain Water Harvesting system/ Waste Water treatment processes/ Surface water are a few of the other sopurces of water your school can always look into.";
                 } else {
                         $handpumps = "More than 1";
-                        $handpumps_msg = "You have many hand pumps in your school. Please ensure that you are not extracting too much of ground water.";
+                        $handpumps_msg = "Handpumps put a lot of pressure on groundwater which is an extremely valuable but diminishing resource. Please ensure that you are not extracting too much of ground water. Using of Rain Water Harvesting system/ Waste Water treatment processes/ Surface water are a few of the other sopurces of water your school can always look into.";
                         }
                                 ?>
             <!--            <h4><?php echo $handpumps; ?></h4>-->
@@ -1794,10 +1794,10 @@ if ($data == 3 || $data == 4) { ?>
         }
           $Load_for_ablution_taps = $total_population / $ablution_taps_q10;
                                 if ($Load_for_ablution_taps <= 50 && $ablution_taps_q10 != "" && $ablution_taps_q10 != 0) {
-                                    $abulation_tabs = "Equal to or less than the load";
+                                    $abulation_tabs = "equal to or less than the load";
                                     $abulation_tabs_msg = "You have the required number of ablution taps in your school.";
                                 } else {
-                                    $abulation_tabs = "More than the load";
+                                  $abulation_tabs = "more than the load";
                                     $abulation_tabs_msg = "You do not have the required number of ablution taps in your school. Please refer to the table for prescribed norm.";
                                 }
                                 ?>
@@ -1816,8 +1816,8 @@ if ($data == 3 || $data == 4) { ?>
     $Load_for_water_closets = $total_population / $water_closets_q11;
     $school_type = $school_category;
     if ($school_type == 1 && $Load_for_water_closets <= 45 && $water_closets_q11 != "" && $water_closets_q11 != 0) { //school type Day Scholar
-        $waterclosets = "Equal to or less than the load";
-        $waterclosets_msg = "You have the required number of water closets (used for defecation and urination)  in your school.";
+        $waterclosets = "Equal to or less than the load ";
+        $waterclosets_msg = "You have the required number of urinals (strictly used for urination only) in your school.";
     } else if ($school_type == 2 && $Load_for_water_closets <= 35 && $water_closets_q11 != "" && $water_closets_q11 != 0) { //Day Boarding 
         $waterclosets = "Equal to or less than the load";
         $waterclosets_msg = "You have the required number of water closets (used for defecation and urination)  in your school.";
@@ -1838,7 +1838,7 @@ if ($data == 3 || $data == 4) { ?>
         $waterclosets_msg = "You have the required number of water closets (used for defecation and urination)  in your school.";
     } else {
         $waterclosets = "More than the load";
-        $waterclosets_msg = "You do not have the required number of water closets (used for defecation and urination) in your school. Please refer to the table for prescribed norm.";
+        $waterclosets_msg = "You do not have the required number of urinals (strictly used for urination only) in your school. Please refer to the table for prescribed norm.";
     }
     ?>
             <!--    <h4><?php echo $waterclosets; ?></h4>-->
@@ -2050,13 +2050,13 @@ if ($data == 3 || $data == 4) { ?>
     <h3>Your School's Performance</h3>
     <?php
                     $total_waste_points = number_format(getWastePoints($schoolUserID),2);
-                    if($total_waste_points >= 56 && $total_waste_points <=  60 )
+                    if($total_waste_points =30)
                $point_performance_msg_w = "You have done very well in this section. You school manages all of its waste very efficiently. We are glad that your school has created a waste-wise society.";
-                    elseif($total_waste_points >= 40 && $total_waste_points < 56 )
-                        $point_performance_msg_w = "You have done good in this section. Your school manages most of the waste. We hope that through the assessment below you will take what is required to make your school a waste management efficient school.";
-                    elseif($total_waste_points >= 15 && $total_waste_points <40)
+                    elseif($total_waste_points >= 25 && $total_waste_points < 29.9 )
+                        $point_performance_msg_w = "You have done good in this section. Your school manages most of the waste. We hope that through the assessment below, you will take what is required to make your school a waste management efficient school.";
+                    elseif($total_waste_points >= 16 && $total_waste_points <24.9)
                         $point_performance_msg_w = "You have done average in this section. Your school manages most of the waste. We hope that through the assessment below you will take what is required to make your school a waste management efficient school.";
-                    elseif($total_waste_points < 15)
+                    elseif($total_waste_points <= 15)
                         $point_performance_msg_w = "You have done poorly  in this section. Your school needs to manage its waste. We hope that through the assessment below you will take what is required to make your school a waste management efficient school.";                   
                 ?>
     <p><?php echo $point_performance_msg_w; ?></p>
@@ -2071,7 +2071,7 @@ if ($data == 3 || $data == 4) { ?>
                                 $segregate_solid_waste =getFiled('Q4Wa1', $schoolUserID);
                                 if ($segregate_solid_waste == 'Y') {
                                     $st_msg = "Yes";
-                                    $watse1_msg = "Your school segregates Waste at source. Inculcating this habit of waste segregation at source among students can help reform the waste related problem at a bigger level.";
+                                    $watse1_msg = "Your school segregates Waste at source. Inculcating this habit of waste segregation at source among students can help reform the waste related problem at a larger level. ";
                                 } else {
                                     $st_msg = "No";
                                     $watse1_msg = "Your School does not segregate waste at source. We strongly recommend that waste is segregated at source and students should be made aware and practice segregation within the school premises.";
@@ -2301,7 +2301,7 @@ if ($waste_recycle == "Y") {
                     $msg_waste5 = "Your school has a composting facility and we hope that you are using it to its potential.";
                 } elseif ($waste_composting == "N") {
                     $st_waste5 = "No";
-                    $msg_waste5 = "Your school does not have a composting facility. We encourage you to start composting in your school.";
+                    $msg_waste5 = "Your school does not have a composting facility. Composting is easy and environmentally sustainable practices. We encourage you to start composting in your school. ";
                 }
         ?>
             <h3>Waste Composting</h3>
@@ -2321,7 +2321,7 @@ if ($reuse_textbook == "Y") {
     $msg_waste6 = "It is great that you encourage the school community to reuse textbooks.";
 } elseif ($reuse_textbook == "N") {
     $st_waste6 = "No";
-    $msg_waste6 = "Your school is not encouraging the students and teachers to reuse textbooks. Please encourage your school community to reuse the textbooks.";
+    $msg_waste6 = "Your school is not encouraging the students and teachers to reuse textbooks. Please encourage your school community to reuse the textbooks. ";
 }
 ?>
             <h3>Textbook Reuse</h3>
@@ -2337,16 +2337,16 @@ if ($reuse_textbook == "Y") {
         $waste_destination = getFiled('Q14Wa1', $schoolUserID);
         if ($waste_destination == 1) {
             $st_waste8 = "Open dumping";
-            $msg_waste8 = "Your school does not know where its waste goes for waste disposal. Try to  recycle more of your waste within the school! And try to get your students to map the disposal of waste outside the school premises - as an exercise! ";
+            $msg_waste8 = "Your school does not know where its waste goes for waste disposal. Try to  recycle more of your waste within the school! And try to get your students to map the disposal of waste outside the school premises - as an exercise!  ";
         } elseif ($waste_destination == 2) {
             $st_waste8 = "Designated dumping site (Dhalao)";
-            $msg_waste8 = "Your school makes sure that the waste reaches the designated site for waste disposal. Try to  recycle more of your waste within the school!";
+            $msg_waste8 = "Your school makes sure that the waste reaches the designated site for waste disposal. Try to recycle more of your waste within the school!";
         } elseif ($waste_destination == 3) {
             $st_waste8 = "Landfill Site";
-            $msg_waste8 = "Your school makes sure that the waste reaches the designated site for waste disposal. Try to  recycle more of your waste within the school!";
+            $msg_waste8 = "Your school makes sure that the waste reaches the designated site for waste disposal. Try to recycle more of your waste within the school!";
         } elseif ($waste_destination == 4) {
             $st_waste8 = "Don't know";
-            $msg_waste8 = "Your school does not know where its waste goes for waste disposal. Try to  recycle more of your waste within the school! And try to get your students to map the disposal of waste outside the school premises - as an exercise! ";
+            $msg_waste8 = "Your school does not know where its waste goes for waste disposal. Try to  recycle more of your waste within the school! And try to get your students to map the disposal of waste outside the school premises - as an exercise!  ";
         }
         ?>
           <div class="description">
@@ -2368,10 +2368,10 @@ if ($reuse_textbook == "Y") {
 $burn_waste = getFiled('Q15Wa1', $schoolUserID);
 if ($burn_waste == "Y") {
     $st_waste9 = "Yes";
-    $msg_waste9 = "Burning waste is one of the biggest environmental hazards. It releases toxic gases which is not only bad for the human body but also has adverse effects on the environment. We request you to kindly not burn the waste";
+    $msg_waste9 = "Burning waste is one of the biggest environmental hazards. It releases toxic gases which is not only bad for the human body but also has adverse effects on the environment. We request you to kindly not burn the waste. ";
 } elseif ($burn_waste == "N") {
     $st_waste9 = "No";
-    $msg_waste9 = "It's great that you do not burn waste. This practice of should be instilled in kids so that they discourage burning waste even outside the school.";
+    $msg_waste9 = "It's great that you do not burn waste. This practice should be instilled in kids so that they discourage burning waste even outside the school.";
 }
 ?>
             <h3>Burning of Waste</h3>
@@ -2393,7 +2393,7 @@ if ($authorised_dealer == "Y") {
                             $e_waste_disposal = getFiled('Q13Wa2', $schoolUserID);
                             if ($e_waste_disposal == 1) {
                                 $st_waste11 = "Kabadiwalla/ Scrapdealer";
-                                $msg_waste11 = "You sell your e-waste to a Kabadiwala/ Scrapdealer,  which is an efficient disposal method. Sell your E- waste to an authorised reseller so that they can reuse or recycle the waste effectively. ";
+                                $msg_waste11 = "You sell your e-waste to a Kabadiwala/ Scrapdealer, which is an inefficient disposal method. Sell your E- waste to an authorised reseller so that they can reuse or recycle the waste effectively. To know about the contact for an E-waste disposal authority contact us via mail or call.  ";
                             } elseif ($e_waste_disposal == 2) {
                                 $st_waste11 = "Taken back by manufacturer/vendor";
                                 $msg_waste11 = "You sell your e-waste to an authorised seller which helps it get reused or recycled more effectively. ";
