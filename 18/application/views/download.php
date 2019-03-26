@@ -23,18 +23,12 @@
 	table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 100%;
-  margin-top: 30px;
-  margin-bottom: 50px;
-}
-	
-	 .go {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
   width: 90%;
   margin-top: 30px;
   margin-bottom: 50px;
 }
+	
+	 
 
 td, th {
   border: 1px solid #dddddd;
