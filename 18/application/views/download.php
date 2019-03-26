@@ -80,6 +80,7 @@
   $dataYoy2=get_stateById($state);
   
   $dataYoy3 = get_districtById($district);
+$allyoydata = getYOYComparisonAllData($schoolId);
   
 
 
@@ -117,13 +118,81 @@
         <hr/>
       </div>
 
-				 <div class="col-md-12" ">
+				 <div class="col-md-12">
         <?php for($i=0; $i<sizeof($dataYoy); $i++) {?>
         <div class="col-md-3"><div class="well text-center" style="background:<?php echo $dataYoy[$i]['color']; ?>; color: #000; font-weight: 900; width:252px; height: 60px; padding:8px; border: 1px solid #ccc;"><?php echo substr($dataYoy[$i]['year'].'-', 8); ?><?php echo $dataYoy[$i]['range']; ?>
            
 
         </div></div>
       <?php } ?>
+      
+      <div class="col-md-12">
+        
+  <table>
+  <tr style="background-color: #b3f7b4; color: #000">
+    <th>Name of the School/Institution:</th>
+    <th>Address Line 1</th>
+    <th>Address Line 2</th>
+    <th>STD Code</th>
+    <th>City</th>
+    <th>District</th>
+    <th>Landline No.</th>
+    <th>State</th>
+    <th>Pin code</th>
+    <th>Principal's Name</th>
+    <th>Principal Mobile</th>        
+  </tr>
+  
+  <tr>
+    <td><?php echo $allyoydata[0]->name_of_the_school_institution;?></td>
+    <td><?php echo $allyoydata[0]->address_line_1;?></td>
+    <td><?php echo $allyoydata[0]->address_line_2;?></td>
+    <td><?php echo $allyoydata[0]->std_code;?></td>
+    <td><?php echo $allyoydata[0]->city;?></td>
+    <td><?php echo $allyoydata[0]->district;?></td>
+    <td><?php echo $allyoydata[0]->landline_no;?></td>
+    <td><?php echo $allyoydata[0]->state;?></td>
+    <td><?php echo $allyoydata[0]->pin_code;?></td>
+    <td><?php echo $allyoydata[0]->principals_name;?></td>
+    <td><?php echo $allyoydata[0]->principal_mobile;?></td>    
+    
+  </tr>
+  
+</table>
+ 
+<table>
+  
+  <tr style="background-color: #b3f7b4; color: #000">
+    
+    <th>GSP Coordinator Name</th>
+    <th>GSP Coordinator Email</th>
+    <th>GSP Coordinator Mobile</th>
+    <th>School Category</th>
+    <th>No. of Shifts</th>
+    <th>Lowest Level</th>
+    <th>Highest Level</th>
+    <th>School type - Gender</th>
+    <th>Board of Education</th>
+    <th>Total Population</th>    
+  </tr>
+  <tr>
+    <td><?php echo $allyoydata[0]->gsp_coordintor_name;?></td>
+    <td><?php echo $allyoydata[0]->gsp_coordintor_email;?></td>
+    <td><?php echo $allyoydata[0]->gsp_coordintor_mobile;?></td>
+    <td><?php echo $allyoydata[0]->school_category;?></td>
+    <td><?php echo $allyoydata[0]->no_of_shifts;?></td>
+    <td><?php echo $allyoydata[0]->lowest_level;?></td>
+    <td><?php echo $allyoydata[0]->highest_level;?></td>
+    <td><?php echo $allyoydata[0]->school_type___gender;?></td>
+    <td><?php echo $allyoydata[0]->board_of_education;?></td>
+    <td><?php echo $allyoydata[0]->total_population;?></td>
+    
+  </tr>
+  
+</table>
+
+
+      </div>
       
       </div>
 
