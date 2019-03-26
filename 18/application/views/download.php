@@ -23,7 +23,7 @@
 	table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 90%;
+  width: 100%;
   margin-top: 30px;
   margin-bottom: 50px;
 }
@@ -148,7 +148,7 @@ $allyoydata = getYOYComparisonAllData($schoolId);
       
       <div class="col-md-12">
         
-  <table class="go">
+  <table style="width:90%;">
   <tr style="background-color: #b3f7b4; color: #000">
     <th>Name of the School/Institution:</th>
     <th>Address Line 1</th>
