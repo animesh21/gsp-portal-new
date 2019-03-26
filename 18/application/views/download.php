@@ -28,7 +28,7 @@
   margin-bottom: 50px;
 }
 	
-	table .go {
+	 .go {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 90%;
