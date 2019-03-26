@@ -121,7 +121,7 @@ h2 span {
     <p> Warmly, </p>
     <p> The GSP team</p>
 	<p><strong>support@greenschoolsprogramme.org</strong></p>
-  <p>Ph: 011 40616000, 29955124  Ext 300;</p>
+  <p>Ph: 011 40616000, 29955124 Ext 300;</p>
     <div class="footer">
       <p>Performance Report | <?php echo $performance[0]->name; ?></p>
     </div>
