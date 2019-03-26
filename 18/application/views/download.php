@@ -33,7 +33,7 @@
 td, th {
   border: 1px solid #dddddd;
   text-align: left;
-  padding: 8px;
+  padding: 6px;
 }
 
 tr:nth-child(even) {
@@ -148,7 +148,7 @@ $allyoydata = getYOYComparisonAllData($schoolId);
       
       <div class="col-md-12">
         
-  <table style="width:90%;">
+  <table>
   <tr style="background-color: #b3f7b4; color: #000">
     <th>Name of the School/Institution:</th>
     <th>Address Line 1</th>
