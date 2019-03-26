@@ -1132,13 +1132,13 @@ if ($data == 3 || $data == 4) { ?>
                     // Water Points
                     $total_water_points = number_format(getWaterPoints($schoolUserID),2);
                     if($total_water_points = 40)
-                        $point_performance_msg_water = "It is good that your school has managed to provide water as per the prescribed level as well as all the sanitation facilities have load under the prescribed norms. Well done! Your school’s score in water section is very good.";
+                        $point_performance_msg_water = "It is good that your school has managed to provide water as per the prescribed level as well as all the sanitation facilities have load under the prescribed norms. Well done! Your school's score in water section is very good.";
                     elseif($total_water_points >=30 && $total_water_points < 39.9  )
-                        $point_performance_msg_water= "It is good that your school tries to provide water as per the prescribed level as well as all the sanitation facilities have load under the prescribed norms. Your school’s score in water section is good. Hope you take suggestions and become a water efficient school at the earliest.";                    
+                        $point_performance_msg_water= "It is good that your school tries to provide water as per the prescribed level as well as all the sanitation facilities have load under the prescribed norms. Your school's score in water section is good. Hope you take suggestions and become a water efficient school at the earliest.";                    
                      elseif($total_water_points >=20 && $total_water_points < 29.9 )
-                        $point_performance_msg_water= "Your school does not provide water as per the prescribed level as well as all the sanitation facilities does not have load under the prescribed norms. Your school’s score in water section is average. Hope you take suggestions and become a water efficient school at the earliest.";
+                        $point_performance_msg_water= "Your school does not provide water as per the prescribed level as well as all the sanitation facilities does not have load under the prescribed norms. Your school's score in water section is average. Hope you take suggestions and become a water efficient school at the earliest.";
                      elseif($total_water_points < 19 )
-                        $point_performance_msg_water= "Your school does not provide water as per the prescribed level as well as all the sanitation facilities does not have load under the prescribed norms. Your school’s score in water section is poor. Hope you take suggestions and become a water efficient school at the earliest.";
+                        $point_performance_msg_water= "Your school does not provide water as per the prescribed level as well as all the sanitation facilities does not have load under the prescribed norms. Your school's score in water section is poor. Hope you take suggestions and become a water efficient school at the earliest.";
                                      
                 ?>
     <p><?php echo $point_performance_msg_water ?></p>
