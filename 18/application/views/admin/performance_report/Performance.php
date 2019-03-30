@@ -106,18 +106,24 @@ h2 span {
       <label>Introduction</label>
       <span>Green Schools Programme Audit 2018-2019</span></h2>
     <p>Dear Principal,</p>
-    <p>We thank you for taking part in GSP Audit 2018-2019. We hope the exercise helped to make your school resource efficient and to inculcate green practices in your students. As Anil Agarwal, founder-director, CSE, rightly said, 'It is very important to expose young children to the beauties and wonders of nature. But as they grow older, it is important they begin to understand how human beings and human societies interact with their environment for their survival and their growth, how these human-nature interactions become a part of a society's culture, and why it is important to rationalize our relationship with our environment.'
- </p>
-    <p> The Green Schools Programme (GSP) takes the students outside the classroom and helps them learn with joy. GSP has been built on the twin objectives of &quot;Learning by doing&quot; and &quot;making change work&quot; to help schools audit the consumption of natural resources within their premises, and assess themselves as environment managers.
+    <p>We thank you for taking part in GSP Audit 2018-2019. We hope the exercise helped to make your school resource efficient and to inculcate green practices in your students. 
+    </p>
+    <p> As you are aware, the Green Schools Programme (GSP) takes the students outside the classroom and helps them learn with joy. GSP has been built on the twin objectives of "Learning by doing" and "making change work" to help schools audit the consumption of natural resources within their premises, and assess themselves as environment managers. 
 </p>
-    <p> The participation of schools from across the country has gone up this year. We were overwhelmed with the response we received from across India. 5000+ schools participated in the audit this year, and around 1700 schools submitted the Audit - a jump of 42 per cent, when compared to last year.
+    <p> The participation of schools from across the country has gone up this year. We were overwhelmed with the response we received from across India. 5000+ schools participated in the audit this year, and around 1700 schools submitted the Audit - a jump of 42 per cent, when compared to last year. 
  </p>
-    <p> The performance report of the school is based on the data submitted by the schools. Therefore, the school needs to make sure that the data entered is correct to the best of their knowledge. We hope that as the school continues to audit their consumption every year, they will refine the data collection process and complete the report with full honesty. We hope that your students immersed themselves in the activities and learnt about energy efficiency, rainwater harvesting, waste segregation at source, non-polluting modes of transport, eating healthy, different plant and animal species etc. The performance report will give schools the baseline of the Green status of the school. It is an indicator of the progress that the schools make on the environment front year-on-year, we hope that your school continues to participate each year, and build a generation of environmentally responsible citizens.
+    <p> This year's audit results also revealed that of the 1700 schools that submitted their audit reports, 1356 schools segregate waste at source, 825 schools practice composting, both natural and mechanical and 648 schools send their e-waste to authorised dealer/ dismantler/ manufacturer. We know that 717 schools have RWH, 202 store water, 371 schools recharge groundwater. BUT 135 schools use chemical pesticides, 405 schools burn waste while 690 schools distribute processed, packaged foods during school events! Clearly more needs to be done. 
 </p>
-    <p> The report will help in assessing the initiatives undertaken by your school and move towards filling the gaps before next GSP Audit. Our focus will be on measuring the change over the previous years' performance. The school's actions for bettering the environment and sensitivity towards environment will be looked at from the baseline year (the year the school did the Audit for the first time). And the degree of change will be appreciated as well as recognized. To find out how some of our schools have brought about change, please take a look at our new publication 'Paving the Path' available at CSE store <a href="https://bit.ly/2Sh1pBs">https://bit.ly/2Sh1pBs</a>.
+
+<p>
+  The performance report of the school is based on the data submitted by the schools. Therefore, the school needs to make sure that the data entered is correct to the best of their knowledge. We hope that as the school continues to audit their consumption every year, they will refine the data collection process and complete the report with full honesty. We hope that your students immersed themselves in the activities and learnt about energy efficiency, rainwater harvesting, waste segregation at source, non-polluting modes of transport, eating healthy, different plant and animal species etc. The performance report will give schools the baseline of the Green status of the school. It is an indicator of the progress that the schools make on the environment front year-on-year, we hope that your school continues to participate each year, and build a generation of environmentally responsible citizens.
+</p>
+    <p> The report will help in assessing the initiatives undertaken by your school and move towards filling the gaps before next GSP Audit. Our focus will be on measuring the change over the previous years' performance. The school's actions for bettering the environment and sensitivity towards environment will be looked at from the baseline year (the year the school did the Audit for the first time). Like last year, GSP concentrates more on the measurable change made over the years in a single school's green practices rather than creating a competitive environment. And the degree of change will be appreciated as well as recognized. To find out how some of our schools have brought about change, please take a look at our new publication ‘Paving the Path' available at CSE store -  <a href="https://bit.ly/2Sh1pBs">https://bit.ly/2Sh1pBs</a>.
 </p>
     <p> We have dispatched the school certificate, and if you do not receive it by April 15, 2019, please email or call (details given below). Hope you have downloaded the digital certificates of all those whose names were provided online. </p>
-    <p> Hope, that in coming years, your school continues to participate and manage resources efficiently within your school. The GSP Audit 2019 will open by mid-year, and we look forward to receiving your Audit report by the deadline!</p>
+    <p> Hope, that in coming years, your school continues to participate and push the envelope for change. As Sunita Narain, Director-General, CSE, said: The first task of being the change is to become aware of what we do – benchmark how much water, energy we use; waste we generate. It is only then that we can transform our ways so that we can use as little and waste as little as possible. </p>
+
+    <p>The GSP Audit 2019 will open by mid-year, and we look forward to receiving your Audit report by the deadline!</p>
     <p> Warmly, </p>
     <p> The GSP team</p>  
   <p><strong>support@greenschoolsprogramme.org</strong></p>
@@ -166,15 +172,15 @@ h2 span {
       <figure><img src="assets/img/performance/Air_logo.jpg"></figure>
       <label>Air</label>
       <span>Green Schools Programme Audit 2018-2019</span></h2>
-    <p>As per the latest study by Indian Council on Clean Transportation (ICCT), vehicular tailpipe emissions from on-road diesel vehicles are responsible for approximately 181,000 premature deaths in India. It has adverse effects on children, specifically. It has been found that children in polluted environment grow up with smaller lungs</p>
-<p>Sources of air pollution are many and diverse. But none are as lethal as vehicles as they are responsible for very high exposure. Vehicular emissions take place in the breathing zone of people. Experts say that those who live or work in close proximity to heavily travelled roadways are subject to high levels of exposure. No wonder that during the past few years, we have been desperately looking out for tools to assess the problem and find ways to combat the menace.
-</p>
+    <p>As per the latest study by Indian Council on Clean Transportation (ICCT), vehicular tailpipe emissions from on-road diesel vehicles are responsible for approximately 181,000 premature deaths in India. It has adverse effects on children, specifically. It has been found that children in polluted environment grow up with smaller lungs.</p>
+    <p>Sources of air pollution are many and diverse. But none are as lethal as vehicles as they are responsible for very high exposure. Vehicular emissions take place in the breathing zone of people. Experts say that those who live or work in close proximity to heavily travelled roadways are subject to high levels of exposure. No wonder that during the past few years, we have been desperately looking out for tools to assess the problem and find ways to combat the menace.
+   </p>
     <section class="remember">
       <h3>Remember:</h3>
       <ul>
-        <li>Your school can make an impact and meanwhile, ensure your surroundings to have cleaner air through opting for carpooling and shifting to CNG run vehicles (CNG is a cleaner fuel).</li>
-<li>Try and motivate most of the permanent population to use non-polluting mode of transport such as walking or cycling, or at least use a sustainably motorized vehicles such as buses, public transport. Students in several schools have come up with new and innovative ways to demotivate the school population to use private vehicles and incentivize them to use public transport or car pool.</li>
-<li>Secondly, practices to achieve cleaner air would bore little result without attempts to ensure that there is circulation of fresh air. Fresh air keeps the mind and body healthy which helps students to concentrate better and be alert. The total window-floor ratio of a class-room should therefore, be more than at least five per cent.
+        <li> • Your school can make an impact and meanwhile, ensure your surroundings to have cleaner air through opting for carpooling and shifting to CNG run vehicles, if CNG is available in your area (CNG is a cleaner fuel). </li>
+<li>• Try and motivate most of the permanent population to use non-polluting mode of transport such as walking or cycling, or use a sustainably motorized vehicles such as buses, public transport. Students in several schools have come up with new and innovative ways to demotivate the school population to use private vehicles and incentivize them to use public transport or car pool. </li>
+<li>• Practices to achieve cleaner air would bear little result without attempts to ensure that there is circulation of fresh air. Fresh air keeps the mind and body healthy which helps students to concentrate better and be alert. The total window-floor ratio of a class-room should therefore, be more than at least five per cent. 
 </li>        
       </ul>
     </section>
@@ -505,7 +511,7 @@ if ($data == 3 || $data == 4) { ?>
                                 
                                 elseif ($lpg_percentage == 0) {
                                     $typeofFuel[] = "Consuming LPG for Vehicles";
-                                    $typeoffuel_msg[] = "Good that your school doesn’t use LPG as a fuel.";
+                                    $typeoffuel_msg[] = "Good that your school doesn't use LPG as a fuel.";
                                 }
                                 
                                 ?>
@@ -953,7 +959,7 @@ if ($data == 3 || $data == 4) { ?>
                                     $chocolatespackaged_food_msg = "Students are easily influenced by the fancy brand advertisement and promotions. We would like to request you to discourage promotions of UPPF. ";
                                 } elseif(getFiled('Q10F1', $schoolUserID) == "N") {
                                     $chocolatespackaged_food = "No";
-                                    $chocolatespackaged_food_msg = "Students are easily influenced by the fancy brand advertisement and promotions. It is great that your school doesn’t promote such brand promotions and advertisements.";
+                                    $chocolatespackaged_food_msg = "Students are easily influenced by the fancy brand advertisement and promotions. It is great that your school doesn't promote such brand promotions and advertisements.";
                                 }
                                 ?>
             <h4><?php echo $chocolatespackaged_food; ?></h4>
@@ -970,7 +976,7 @@ if ($data == 3 || $data == 4) { ?>
                                     $sponsored_event_msg = "Students are easily influenced by the fancy brand advertisement and promotions. We would like to request you to discourage promotions of UPPF.";
                                 } elseif(getFiled('Q11F1', $schoolUserID) == "N") {
                                     $sponsored_event = "No";
-                                    $sponsored_event_msg = "Students are easily influenced by the fancy brand advertisement and promotions. It is great that your school doesn’t promote such brand promotions and advertisements.";
+                                    $sponsored_event_msg = "Students are easily influenced by the fancy brand advertisement and promotions. It is great that your school doesn't promote such brand promotions and advertisements.";
                                 }
                                 ?>
             <h4><?php echo $sponsored_event; ?></h4>
@@ -1132,13 +1138,13 @@ if ($data == 3 || $data == 4) { ?>
                     // Water Points
                     $total_water_points = number_format(getWaterPoints($schoolUserID),2);
                     if($total_water_points = 40)
-                        $point_performance_msg_water = "It is good that your school has managed to provide water as per the prescribed level as well as all the sanitation facilities have load under the prescribed norms. Well done! Your school’s score in water section is very good.";
+                        $point_performance_msg_water = "It is good that your school has managed to provide water as per the prescribed level as well as all the sanitation facilities have load under the prescribed norms. Well done! Your school's score in water section is very good.";
                     elseif($total_water_points >=30 && $total_water_points < 39.9  )
-                        $point_performance_msg_water= "It is good that your school tries to provide water as per the prescribed level as well as all the sanitation facilities have load under the prescribed norms. Your school’s score in water section is good. Hope you take suggestions and become a water efficient school at the earliest.";                    
+                        $point_performance_msg_water= "It is good that your school tries to provide water as per the prescribed level as well as all the sanitation facilities have load under the prescribed norms. Your school's score in water section is good. Hope you take suggestions and become a water efficient school at the earliest.";                    
                      elseif($total_water_points >=20 && $total_water_points < 29.9 )
-                        $point_performance_msg_water= "Your school does not provide water as per the prescribed level as well as all the sanitation facilities does not have load under the prescribed norms. Your school’s score in water section is average. Hope you take suggestions and become a water efficient school at the earliest.";
+                        $point_performance_msg_water= "Your school does not provide water as per the prescribed level as well as all the sanitation facilities does not have load under the prescribed norms. Your school's score in water section is average. Hope you take suggestions and become a water efficient school at the earliest.";
                      elseif($total_water_points < 19 )
-                        $point_performance_msg_water= "Your school does not provide water as per the prescribed level as well as all the sanitation facilities does not have load under the prescribed norms. Your school’s score in water section is poor. Hope you take suggestions and become a water efficient school at the earliest.";
+                        $point_performance_msg_water= "Your school does not provide water as per the prescribed level as well as all the sanitation facilities does not have load under the prescribed norms. Your school's score in water section is poor. Hope you take suggestions and become a water efficient school at the earliest.";
                                      
                 ?>
     <p><?php echo $point_performance_msg_water ?></p>
