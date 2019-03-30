@@ -635,7 +635,7 @@ if ($data == 3 || $data == 4) { ?>
     <section class="remember">
       <h3>Remember</h3>
       <ul>
-        <li>Per capita per day electricity consumption should be well within the norms (46.5 MJ) and we all know that our non-renewable resources are depleting faster than they can re-generate. Switching over to renewable resources and expanding its usage is the only available option.
+        <li> &bull; Per capita per day electricity consumption should be well within the norms (46.5 MJ) and we all know that our non-renewable resources are depleting faster than they can re-generate. Switching over to renewable resources and expanding its usage is the only available option.
 </li>        
       </ul>
     </section>
@@ -844,8 +844,8 @@ if ($data == 3 || $data == 4) { ?>
     <section class="remember">
       <h3>Remember:</h3>
       <ul>
-        <li>Avoid UPPF in school canteens, and encourage children to eat healthy and traditional foods/ local foods of the place/beverages. Sponsorship by UPPF brands should be avoided. On special occasions, provide laddoos or other cooked foods as rewards instead of chocolates or other packaged food. </li>
-<li>You can try keeping the brownies, biscuits available in your canteen in paper wrappings instead of packaged ones!
+        <li> &bull; Avoid UPPF in school canteens, and encourage children to eat healthy and traditional foods/ local foods of the place/beverages. Sponsorship by UPPF brands should be avoided. On special occasions, provide laddoos or other cooked foods as rewards instead of chocolates or other packaged food. </li>
+<li> &bull; You can try keeping the brownies, biscuits available in your canteen in paper wrappings instead of packaged ones!
 </li>
         
       </ul>
@@ -1015,9 +1015,9 @@ if ($data == 3 || $data == 4) { ?>
     <section class="remember">
       <h3>Remember:</h3>
       <ul>
-        <li>Congestion on land (more buildings and inadequate green cover) leads to pressure on resources and hence on our environment.
-<li>We all know that a mind with plenty of oxygen has a greater power to grasp things. And for more oxygen we need more trees - our only oxygen factory.</li>
-<li>To keep these oxygen factories healthy, we should not use chemical pesticides to raise them. Chemical pesticides are poisonous to health and environment.
+        <li> &bull; Congestion on land (more buildings and inadequate green cover) leads to pressure on resources and hence on our environment.
+<li> &bull; We all know that a mind with plenty of oxygen has a greater power to grasp things. And for more oxygen we need more trees - our only oxygen factory.</li>
+<li> &bull; To keep these oxygen factories healthy, we should not use chemical pesticides to raise them. Chemical pesticides are poisonous to health and environment.
 </li>
         
       </ul>
@@ -1127,9 +1127,9 @@ if ($data == 3 || $data == 4) { ?>
     <section class="remember">
       <h3>Remember:</h3>
       <ul>
-        <li>Children should get adequate amount of water required per day starting from drinking to flushing to mopping floors to everything.</li>
-<li>Catch rain where it falls. Today, rainwater harvesting has evolved as an appropriate measure to overcome the water scarcity plus water logging due to excessive rains.</li>
-<li>Recharge groundwater. As per Central Ground Water Board (CGWB), around 39% of the analysed wells showed decline in ground water level in various parts of the country. We must try to reduce the dependence on ground water to stop further depletion of water table. Other measures can be harvest more rainwater and treat and reuse waste water and recharge ground water.</li>
+        <li> &bull; Children should get adequate amount of water required per day starting from drinking to flushing to mopping floors to everything.</li>
+<li> &bull; Catch rain where it falls. Today, rainwater harvesting has evolved as an appropriate measure to overcome the water scarcity plus water logging due to excessive rains.</li>
+<li> &bull; Recharge groundwater. As per Central Ground Water Board (CGWB), around 39% of the analysed wells showed decline in ground water level in various parts of the country. We must try to reduce the dependence on ground water to stop further depletion of water table. Other measures can be harvest more rainwater and treat and reuse waste water and recharge ground water.</li>
         
       </ul>
     </section>
@@ -2043,14 +2043,14 @@ if ($data == 3 || $data == 4) { ?>
     <section class="remember">
       <h3>Remember:</h3>
       <ul>
-<li>Segregation at source is very important.</li>
-<li>Every class should have minimum of two dustbins to collect wet and dry waste.</li>
-<li>Schools should have a composting facility to manage the wet waste in the school premises itself.</li>
-<li>Send e-waste to Authorised dealers.</li>
-<li>Do not burn waste in school premises.</li>
-<li>Composting the wet waste.</li>
-<li>Waste should be sent to designated dumping or landfill sites.</li>
-<li>Schools should have a waste policy that is to be practiced in schools</li>
+<li> &bull; Segregation at source is very important.</li>
+<li> &bull; Every class should have minimum of two dustbins to collect wet and dry waste.</li>
+<li> &bull; Schools should have a composting facility to manage the wet waste in the school premises itself.</li>
+<li> &bull; Send e-waste to Authorised dealers.</li>
+<li> &bull; Do not burn waste in school premises.</li>
+<li> &bull; Composting the wet waste.</li>
+<li> &bull; Waste should be sent to designated dumping or landfill sites.</li>
+<li> &bull; Schools should have a waste policy that is to be practiced in schools</li>
     </ul>
     </section>
     <h3>Your School's Performance</h3>
