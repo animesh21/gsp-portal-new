@@ -101,7 +101,7 @@ h2 span {
         </strong></p>
     </div>
   </div>
-  <div class="introduction page-break-before">
+  <div class="introduction page-break-before" style="line-height: 16px;">
     <h2 class="intro-heading">
       <label>Introduction</label>
       <span>Green Schools Programme Audit 2018-2019</span></h2>
