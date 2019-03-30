@@ -178,9 +178,9 @@ h2 span {
     <section class="remember">
       <h3>Remember:</h3>
       <ul>
-        <li> • Your school can make an impact and meanwhile, ensure your surroundings to have cleaner air through opting for carpooling and shifting to CNG run vehicles, if CNG is available in your area (CNG is a cleaner fuel). </li>
-<li>• Try and motivate most of the permanent population to use non-polluting mode of transport such as walking or cycling, or use a sustainably motorized vehicles such as buses, public transport. Students in several schools have come up with new and innovative ways to demotivate the school population to use private vehicles and incentivize them to use public transport or car pool. </li>
-<li>• Practices to achieve cleaner air would bear little result without attempts to ensure that there is circulation of fresh air. Fresh air keeps the mind and body healthy which helps students to concentrate better and be alert. The total window-floor ratio of a class-room should therefore, be more than at least five per cent. 
+        <li> &bull; Your school can make an impact and meanwhile, ensure your surroundings to have cleaner air through opting for carpooling and shifting to CNG run vehicles, if CNG is available in your area (CNG is a cleaner fuel). </li>
+<li>&bull;  Try and motivate most of the permanent population to use non-polluting mode of transport such as walking or cycling, or use a sustainably motorized vehicles such as buses, public transport. Students in several schools have come up with new and innovative ways to demotivate the school population to use private vehicles and incentivize them to use public transport or car pool. </li>
+<li>&bull;  Practices to achieve cleaner air would bear little result without attempts to ensure that there is circulation of fresh air. Fresh air keeps the mind and body healthy which helps students to concentrate better and be alert. The total window-floor ratio of a class-room should therefore, be more than at least five per cent. 
 </li>        
       </ul>
     </section>
