@@ -294,7 +294,7 @@ if ($data == 3 || $data == 4) { ?>
     }
    
     if ($oldvehicles > 0 && $oldvehicles < $totalvehicle) {
-        $vehicletype = "Combination of old and new vehicles (Less than total Vehicles + more than 0 vehicles)";
+        $vehicletype = "Combination of old and new vehicles";
         $vehicle_msg = "As you know that vehicles that are older than eight years emit very high Levels of pollutants. We suggest that that you keep a check on your vehicle's age.";
     } elseif ($oldvehicles == 0 || $oldvehicles == " ") {
         $vehicletype = "All new vehicles or around eight years";
@@ -322,7 +322,7 @@ if ($data == 3 || $data == 4) { ?>
                                 }
                                 
                                 if ($acvehicles < $totalvehicle && $acvehicles > 0) {
-                                    $vehicleactype = "Combination of vehicles with ACs and without ACs (Less than total Vehicles + more than zero vehicles)";
+                                    $vehicleactype = "Combination of vehicles with ACs and without ACs";
                                     $acvehicle_msg = "Air conditioners in vehicles use a lot of fuel. We suggest that you keep a check on your fuel consumption. It should not increase because of the Air conditioners. Also, ACs release harmful toxins which further pollutes the air.";
                                 } elseif ($acvehicles == 0 || $acvehicles == " ") {
                                     $vehicleactype = "No air conditioners in the  vehicles";
@@ -350,7 +350,7 @@ if ($data == 3 || $data == 4) { ?>
                                      $almost_puc_vicleper = (($puc_done / $totalvehicle) * 100);
                                 }
                                 if ( $puc_done > 0 && $puc_done < $totalvehicle  ) {
-                                    $vehicleapuctype = "Combination of vehicles with PUC done and not done (Less than total Vehicles + more than zero vehicles)";
+                                    $vehicleapuctype = "Combination of vehicles with PUC done and not done";
                                     $puc_done_msg = "Pollution under control (PUC) certification should be up to date for all your vehicles, good that some of your vehicles have that. Please ensure that you update PUCs for ALL  at the earliest.";
                                 } elseif ($puc_done == $totalvehicle ) {
                                     $vehicleapuctype = "All vehicles with PUCs";
@@ -378,7 +378,7 @@ if ($data == 3 || $data == 4) { ?>
                                 }
                                 
                                 if ($Parking_Area > 0 && $Parking_Area < $totalvehicle) {
-                                    $vehicle_parking = "Parking space for few vehicles (Less than total Vehicles + more than zero vehicles)";
+                                    $vehicle_parking = "Parking space for few vehicles";
                                     $vehicle_parking_msg = "There should be authorised and adequate parking area for all the school-owned vehicles.More the vehicles, more the area required. Thus, encouraging students to use public transport or share their vehicles will ensure more space for school.";
                                 } elseif ($Parking_Area >= $totalvehicle) {
                                     $vehicle_parking = "Parking space for all vehicles or more than total number of vehicles";
@@ -1203,7 +1203,7 @@ if ($data == 3 || $data == 4) { ?>
                                 }                                                                     
                                 elseif($lpcd < $llimit)
                                 {
-                                    $pcw_condition ="Per capita consumption is less (Please check the table pasted towards right in L column to understand the norms)";
+                                    $pcw_condition ="Per capita consumption is less ";
                                     $pcw_message ="Your school's per person per day consumption is less than what it should be. Refer to the table to see the recommended consumption.";
                                 }
                                  elseif($lpcd >$ulimit)
