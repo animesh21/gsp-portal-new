@@ -1134,7 +1134,7 @@ if ($data == 3 || $data == 4) { ?>
       <p>Performance Report | <?php echo $performance[0]->name; ?></p>
     </div>
   </div>
-  <div class="water" style="line-height: 14px;">
+  <div class="water">
     <h2>
       <figure><img src="assets/img/performance/tap.jpg"></figure>
       <label>Water</label>
