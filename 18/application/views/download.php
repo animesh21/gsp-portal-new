@@ -31,13 +31,13 @@
 	 
 
 td, th {
-  border: 1px solid #dddddd;
+  border: 1px solid #e86549;
   text-align: left;
   padding: 6px;
 }
 
 tr:nth-child(even) {
-  background-color: #dddddd;
+  background-color: #fff;
 }
 .alert {
   height: 50px !important;
