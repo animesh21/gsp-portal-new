@@ -814,7 +814,14 @@ if ($data == 3 || $data == 4) { ?>
                                    
         <?php 
         if (getFiled('Q9E1', $schoolUserID) == "Y") { 
-         $renew =implode(",",$energy);  
+         $renew1 =implode(",",$energy);
+         if($renew1!=''){
+            $renew =implode(",",$energy); 
+         }else {
+           
+           $renew ='solar'; 
+
+         }  
         
          $renewuse ="Yes";
                                  $renewenergy_msg = "'Your school uses '".$renew."' as a renewable source of energy. We hope that you continue to expand your renewable energy consumption.' " ;
