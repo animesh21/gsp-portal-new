@@ -167,7 +167,7 @@ h2 span {
       <p>Performance Report | <?php echo $performance[0]->name; ?></p>
     </div>
   </div>
-  <div class="air">
+  <div class="air" style="line-height: 14px;">
     <h2>
       <figure><img src="assets/img/performance/Air_logo.jpg"></figure>
       <label>Air</label>
@@ -780,15 +780,14 @@ if ($data == 3 || $data == 4) { ?>
             <p><?php echo $sourceofenergy_msg; ?></p>
           </div>
         </li>
-     <?php 
-        if (getFiled('Q9E1', $schoolUserID) == "Y") { ?>
+     
                                     
          <li>
           <figure><img src="assets/img/performance/source.jpg"></figure>
           <div class="description">
             <h3>Is your school using any renewable sources of energy ?</h3>
             <?php
-      $energy = array();
+            $energy = array();
                                 if (getFiled('Q9E1S1', $schoolUserID) == '1') {
                                         $energy[0] = "Solar";
                                     }
@@ -803,18 +802,24 @@ if ($data == 3 || $data == 4) { ?>
                                     
                                     if (getFiled('Q9E1S4', $schoolUserID) == '1') {
                                          $energy[3] = "Combination of solar and wind";
-                                    }
+                                    } 
+
+                                  // $energyuse = implode($energy, ',');
+                                    //echo $energyuse;
+
+                                    ?>
                                 
                
                                    
-                                    //$energyuse = implode($energy, ',');
-        if(isset($energy) && !empty($energy)){
+                                   
+        <?php 
+        if (getFiled('Q9E1', $schoolUserID) == "Y") { 
          $renew =implode(",",$energy);  
         
          $renewuse ="Yes";
                                  $renewenergy_msg = "'Your school uses '".$renew."' as a renewable source of energy. We hope that you continue to expand your renewable energy consumption.' " ;
                                   
-        }elseif(isset($energy) && empty($energy)){
+        }else {
          $renewuse ="No";
                                  $renewenergy_msg =  "Your school does not use any renewable source of energy. We hope that in the near future you switch to 100% renewable sources of Energy!" ;
                                   
@@ -826,7 +831,7 @@ if ($data == 3 || $data == 4) { ?>
             <p><?php echo $renewenergy_msg; ?></p>
           </div>
         </li>
-<?php } ?>        
+       
       </ul>
     </section>
     
@@ -1118,7 +1123,7 @@ if ($data == 3 || $data == 4) { ?>
       <p>Performance Report | <?php echo $performance[0]->name; ?></p>
     </div>
   </div>
-  <div class="water">
+  <div class="water" style="line-height: 14px;">
     <h2>
       <figure><img src="assets/img/performance/tap.jpg"></figure>
       <label>Water</label>
@@ -1198,7 +1203,7 @@ if ($data == 3 || $data == 4) { ?>
                                   
                                 if($lpcd >=$llimit && $lpcd <=$ulimit)
                                 {
-                                    $pcw_condition ="Per capita consumption within the range according to their category (Please check the table pasted towards right in L column to understand the norms)  Display  Per capita per day";
+                                    $pcw_condition ="Per capita consumption within the range according to their category ";
                                     $pcw_message ="Your school's per person per day consumption is within the norms. Good that you manage your water efficiently.";
                                 }                                                                     
                                 elseif($lpcd < $llimit)
@@ -1208,7 +1213,7 @@ if ($data == 3 || $data == 4) { ?>
                                 }
                                  elseif($lpcd >$ulimit)
                                 {
-                                    $pcw_condition ="Per capita consumption is more (Please check the table pasted towards right in L column to understand the norms)";
+                                    $pcw_condition ="Per capita consumption is more";
                                     $pcw_message ="Your school's per person per day consumption is more than what it should be. Refer to the table to see the recommended consumption, and review where wastage of water can be minimized.";
                                 }
                                                                
@@ -1273,7 +1278,7 @@ if ($data == 3 || $data == 4) { ?>
                     $SourceofWater = "All 4 or Surface+ rainwater+ recycle water  Options to be linked";
                     $SourceofWater_msg = "Your source of water is surface, recycled water and rainwater which are viable sources for Water usage. Good you know where your water comes from!";
                         } else if (($Surfacewater == "Y" && $Rainwater == "Y") || ($Surfacewater == "Y" && $Recycledwastewater == "Y") || ($Rainwater == "Y" && $Recycledwastewater == "Y")) {
-                                    $SourceofWater = "'surface + rainwater or surface + recycled water or rainwater + recycled water  Options to be linked";
+                                    $SourceofWater = "";
                                     $SourceofWater_msg = "You use a combination of either surface + rainwater or surface + recycled water or rainwater + recycled water.  All of these combinations demonstrate that your school is not extracting ground water, but is making an effort to either catch rainwater or treat waste water for further use.";
                        }else if ($Groundwater == "Y" && $Rainwater == "Y") {
                                     if($Surfacewater == "Y")
@@ -1773,6 +1778,8 @@ if ($data == 3 || $data == 4) { ?>
             <?php
                                 //Q.9 How many hand pumps do you have?
                 $hand_pumps = getFiled('Q10W1', $schoolUserID);
+
+                echo $hand_pumps; 
                                 //$Load_for_hand_pumps=$total_population/$hand_pumps;
                 if ($hand_pumps <= 1) { //Ref not provided in table
                     $handpumps = "Equal to 1 or 0";
