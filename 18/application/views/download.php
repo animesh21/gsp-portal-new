@@ -149,7 +149,7 @@ $allyoydata = getYOYComparisonAllData($schoolId);
       <div class="col-md-12">
         
   <table>
-  <tr style="background-color: #b3f7b4; color: #000">
+  <tr style="background-color: #e86549; color: #000">
     <th>Name of the School/Institution:</th>
     <th>Address Line 1</th>
     <th>Address Line 2</th>
@@ -182,7 +182,7 @@ $allyoydata = getYOYComparisonAllData($schoolId);
  
 <table>
   
-  <tr style="background-color: #b3f7b4; color: #000">
+  <tr style="background-color: #e86549; color: #000">
     
     <th>GSP Coordinator Name</th>
     <th>GSP Coordinator Email</th>
