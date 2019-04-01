@@ -630,7 +630,7 @@ if ($data == 3 || $data == 4) { ?>
       <label>Energy</label>
       <span>Green Schools Programme Audit 2018-2019</span></h2>
     <p>The impact of &#39;global warming&#39; has already reached scorching levels, and is rising rapidly. Saving energy is the first step to energy conservation. Switching off electrical gadgets when they are not in use and switching the usage of bulbs to CFLs/ LEDs are great ways to start.</p>
-<p>Opting for rooftop or building-integrated small-scale solar systems are easy ways to conserve electricity sustainably and cut down on your school's future total electricity costs! They help minimise transmission and distribution losses, as the generated power is consumed locally. You can check out the latest schemes for solar roof top installations in institutions through this link -<a href="https://mnre.gov.in/solar-rooftop-grid-connected">https://mnre.gov.in/solar-rooftop-grid-connected</a>
+<p>Opting for rooftop or building-integrated small-scale solar systems are easy ways to conserve electricity sustainably and cut down on your school's future total electricity costs! They help minimise transmission and distribution losses, as the generated power is consumed locally. You can check out the latest schemes for solar roof top installations in institutions through this link -<a href="https://mnre.gov.in/solar-rooftop-grid-connected" style="color: blue;">https://mnre.gov.in/solar-rooftop-grid-connected</a>
 </p>
     <section class="remember">
       <h3>Remember</h3>
@@ -857,7 +857,7 @@ if ($data == 3 || $data == 4) { ?>
       <h3>Remember:</h3>
       <ul>
         <li> &bull; Avoid UPPF in school canteens, and encourage children to eat healthy and traditional foods/ local foods of the place/beverages. Sponsorship by UPPF brands should be avoided. On special occasions, provide laddoos or other cooked foods as rewards instead of chocolates or other packaged food. </li>
-<li> &bull; You can try keeping the brownies, biscuits available in your canteen in paper wrappings instead of packaged ones!
+<li> &bull; Try and promote the use of paper wrappings instead of the plastic ones to wrap the food, wherever possible
 </li>
         
       </ul>
@@ -2090,14 +2090,14 @@ if ($data == 3 || $data == 4) { ?>
     <section class="remember">
       <h3>Remember:</h3>
       <ul>
-<li> &bull; Segregation at source is very important.</li>
-<li> &bull; Every class should have minimum of two dustbins to collect wet and dry waste.</li>
-<li> &bull; Schools should have a composting facility to manage the wet waste in the school premises itself.</li>
-<li> &bull; Send e-waste to Authorised dealers.</li>
-<li> &bull; Do not burn waste in school premises.</li>
-<li> &bull; Composting the wet waste.</li>
-<li> &bull; Waste should be sent to designated dumping or landfill sites.</li>
-<li> &bull; Schools should have a waste policy that is to be practiced in schools</li>
+<li> &bull;  Segregation at source is the first and most important part of efficient waste management.</li>
+<li> &bull; Every class should have minimum of two dustbins to collect wet and dry waste. </li>
+<li> &bull;  Set up a composting facility to manage the wet waste within school premises</li>
+<li> &bull;  Dispose of e-waste by sending it to authorised dealers.</li>
+<li> &bull;  DO NOT burn waste in school premises.</li>
+<li> &bull; Send waste to designated dumping or landfill sites only.</li>
+<li> &bull; Have an efficient waste policy for your school.</li>
+
     </ul>
     </section>
     <h3>Your School's Performance</h3>
