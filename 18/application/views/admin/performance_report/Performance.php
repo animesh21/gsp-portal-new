@@ -112,7 +112,7 @@ h2 span {
 </p>
     <p> The participation of schools from across the country has gone up this year. We were overwhelmed with the response we received from across India. 5000+ schools participated in the audit this year, and around 1700 schools submitted the Audit - a jump of 42 per cent, when compared to last year. 
  </p>
-    <p> This year's audit results also revealed that of the 1700 schools that submitted their audit reports, 1356 schools segregate waste at source, 825 schools practice composting, both natural and mechanical and 648 schools send their e-waste to authorised dealer/ dismantler/ manufacturer. We know that 717 schools have RWH, 202 store water, 371 schools recharge groundwater. BUT 135 schools use chemical pesticides, 405 schools burn waste while 690 schools distribute processed, packaged foods during school events! Clearly more needs to be done. 
+    <p> This year's audit results also revealed that of the 1700 schools that submitted their audit reports, 1356 schools segregate waste at source, 825 schools practice composting, both natural and mechanical and 648 schools send their e-waste to authorised dealer/ dismantler/ manufacturer. We know that 717 schools have RWH, 202 store water, 371 schools recharge groundwater. <b>BUT 135 schools use chemical pesticides, 405 schools burn waste while 690 schools distribute processed, packaged foods during school events! Clearly more needs to be done.</b> 
 </p>
 
 <p>
@@ -906,7 +906,11 @@ if ($data == 3 || $data == 4) { ?>
             <p><?php echo $packageitem_served_msg; ?></p>
           </div>
         </li>
-   <li  <?php if(getFiled('Q7F1', $schoolUserID) == ""){ echo "style='display:none;'"; } ?>  >
+   <li  <?php 
+
+  //echo getFiled('Q7F1', $schoolUserID);
+
+   if(getFiled('Q7F1', $schoolUserID) == ""){ echo "style='display:none;'"; } ?>  >
           <figure><img src="assets/img/performance/sale.jpg"></figure>
           <div class="description">
             <h3>Does your school serve traditional Indian snacks?</h3>
@@ -1504,21 +1508,21 @@ if ($data == 3 || $data == 4) { ?>
             <?php
                                 if (getFiled('Q8W2S2', $schoolUserID) == 1) {
                                     $rainwater_harvested = "By storing";
-                                    $rainwater_harvested_msg = "A good Practice.";
+                                    $rainwater_harvested_msg = "A good Practice. The water stored can be used later thus reducing the need to depend on other sources of water.";
                 ?>
             <h4><?php echo $rainwater_harvested; ?></h4>
             <p><?php echo $rainwater_harvested_msg; ?></p>
             <?php 
                                 } elseif (getFiled('Q8W2S2', $schoolUserID) == 2) {
                                     $rainwater_harvested = "By recharge ground";
-                                    $rainwater_harvested_msg = "Recharging the ground water is a very good practice.";
+                                    $rainwater_harvested_msg = "Recharging the ground water is a very good practice. It helps in increaseing the ground water table.";
                   ?>
             <h4><?php echo $rainwater_harvested; ?></h4>
             <p><?php echo $rainwater_harvested_msg; ?></p>
             <?php 
                                 } elseif (getFiled('Q8W2S2', $schoolUserID) == 3) {
                                     $rainwater_harvested = "Combination of both";
-                                    $rainwater_harvested_msg = "An excellent practice. Hope that you use the RWH systems to its full potential."; ?>
+                                    $rainwater_harvested_msg = "You harvest the rain water by both storing and recharging. An excellent practice. Hope that you use the RWH systems to its full potential."; ?>
             <h4><?php echo $rainwater_harvested; ?></h4>
             <p><?php echo $rainwater_harvested_msg; ?></p>
             <?php }  ?>
@@ -1680,10 +1684,10 @@ if ($data == 3 || $data == 4) { ?>
             <p><?php echo $RWH_structure_msg; ?></p>
           </div>
         </li>
-        <!--        <li>
-          <figure><img src="performance/images/hygene.jpg"></figure>
+                <li>
+          <figure><img src="assets/img/performance/monitor.jpg"></figure>
           <div class="description">
-            <h3>Sanitation and Hygiene Practices</h3>-->
+            <h3>Sanitation and Hygiene Practices</h3>
         <?php
 //Q.7: Please share details about sanitation and hygiene practices in your school. //6 points
                                 $separate_toilets = getFiled('Q8W3S1', $schoolUserID); //Does the school have separate toilets for males and females?
@@ -1700,10 +1704,10 @@ if ($data == 3 || $data == 4) { ?>
                                     $Hygiene_Practices_Msg = "To make your school more hygiene friendly, please consider the following practices: Separate toilets for males and females, making toilets accessible and safe to use for children, making toilets accessible and safe to use for differently abled children, making  toilets accessible and safe to use for differently abled staff,  considering the right location for toilets in terms of privacy and safety,  ensure sufficient light during day time.";
                                 }
                                 ?>
-        <!--            <h4><?php echo $Hygiene_Practices; ?></h4>
+                    <h4><?php echo $Hygiene_Practices; ?></h4>
             <p><?php echo $Hygiene_Practices_Msg; ?></p>
           </div>
-        </li>-->
+        </li>
       </ul>
     </section>
     <section class="performance-category">
@@ -1788,12 +1792,41 @@ if ($data == 3 || $data == 4) { ?>
 
                 echo $hand_pumps; 
                                 //$Load_for_hand_pumps=$total_population/$hand_pumps;
+                
+                 $Q1G2 = (getFiled('Q1G2', $schoolUserID) != '') ? getFiled('Q1G2',  $schoolUserID) : "";
+
+                 
+
+
                 if ($hand_pumps <= 1) { //Ref not provided in table
                     $handpumps = "Equal to 1 or 0";
-                    $handpumps_msg = "You do not have the hand pumps in your school. Good that your school is not extracting a lot of ground water which is a valuable but diminishing resource. Using of Rain Water Harvesting system/ Waste Water treatment processes/ Surface water are a few of the other sopurces of water your school can always look into.";
+
+                 if($Q1G2 < 6)
+                  {
+                      $handpumps_msg = "You do not have hand pumps in your school. Good that your school is not extracting a lot of ground water which is a valuable but diminishing resource. Using of Rain Water Harvesting system/ Waste Water treatment processes/ Surface water are a few of the other sources of water your school can always look into";
+                  }else {
+
+                      $handpumps_msg = "You do not have  hand pumps in your school. Good that your school is not extracting a lot of ground water.  Good that your school is not extracting a lot of ground water which is a valuable but diminishing resource. Using rainwater harvesting system/ waste water treatment processes/ surface water are a few of the other sources of water your school can always look into.";
+                  }
+
+
+
+
+                    
                 } else {
                         $handpumps = "More than 1";
-                        $handpumps_msg = "Handpumps put a lot of pressure on groundwater which is an extremely valuable but diminishing resource. Please ensure that you are not extracting too much of ground water. Using of Rain Water Harvesting system/ Waste Water treatment processes/ Surface water are a few of the other sopurces of water your school can always look into.";
+
+
+                   if($Q1G2 < 6)
+                  {
+                      $handpumps_msg = "Handpumps put a lot of pressure on groundwater which is an extremely valuable but diminishing resource. Please ensure that you are not extracting too much of ground water. Using of Rain Water Harvesting system/ Waste Water treatment processes/ Surface water are a few of the other sopurces of water your school can always look into.";
+                  }else {
+
+                      $handpumps_msg = "You have many hand pumps in your school. Please ensure that you are not extracting too much of ground water which is a valuable but diminishing resource. Using rainwater harvesting system/ waste water treatment processes/ surface water are a few of the other sources of water your school can always look into.";
+                  }
+
+
+                        
                         }
                                 ?>
             <!--            <h4><?php echo $handpumps; ?></h4>-->
@@ -2402,7 +2435,7 @@ if ($burn_waste == "Y") {
         <!-- Burning of Waste End --->
         <?php
 //Qn 11 Do you know that your E-waste can be collected by an authorised dealer or dismantler?
-$authorised_dealer = getFiled('Q16Wa1', $schoolUserID);
+$authorised_dealer = getFiled('Q13Wa1', $schoolUserID);
 if ($authorised_dealer == "Y") {
     ?>
         <li>
