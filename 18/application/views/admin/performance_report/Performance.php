@@ -104,7 +104,7 @@ h2 span {
     </div>
   </div>
 
-<div class="introduction page_break" style="line-height: 15px;">
+<div class="introduction page_break" style="line-height: 15px; font-weight: 400;">
 
 <p><strong>School Rating:&nbsp;
         <?php $percentage=getSchoolRating($schoolUserID); ?>
@@ -118,17 +118,20 @@ h2 span {
 
        <br><br><br><br>
 
-      <p>Congratulations!  Based on the analysis of the sustainable practices adopted by your school, your school has been rated Green.  Do continue your efforts and sustain the momentum - being continuously Green is not easy and we have noticed that when a school (or the students and teachers) drops its guard or fail to provide accurate data, they slide to a yellow or orange or red category. </p>
-         <p> Do ensure your school continues to adhere (but not limited to) to the following, and push the envelope for change: </p>
-         <p> &bull; Window Floor Ratio (WFR) more than 15 per cent </p>
-          <p> &bull; Majority of the population use sustainable mode of transport (public transport, e-rickshaws, etc) or non-pollution mode of transport (cycling, walking, etc)</p>
-          <p> &bull; Maximum use of energy efficient lighting to conserve energy and use of alternative sources of energy. GSP Audit encourages schools to minimize use of conventional lights without compromising sufficient lighting for students</p>
-          <p> &bull; Maintain a high green cover inside and around school campus along with greater biodiversity by planting native species of plants </p>
-           <p> &bull; Serve only cooked meals (or avoid packaged foods that are high in Fats, Sugar and Salt) to ensure healthy food consumption </p>
-          <p> &bull; Harvest rainwater through Rainwater Harvesting (RWH) systems and reuse treated waste water. Waste water can be treated at school level (decentralized waste water treatment system) or at centralized Sewage Treatment Plants (STPs)</p>
-          <p> &bull; Segregate waste at source efficiently and dispose responsibly. Recycling at least 90 per cent of the waste is recommended</p>
-          <p> &bull; Wet waste to be composted </p>
-          <p> &bull; Waste not to be burned </p>
+      <p style="font-weight: 400;">Congratulations!  Based on the analysis of the sustainable practices adopted by your school, your school has been rated Green.  Do continue your efforts and sustain the momentum - being continuously Green is not easy and we have noticed that when a school (or the students and teachers) drops its guard or fail to provide accurate data, they slide to a yellow or orange or red category. </p>
+         <p style="font-weight: 400;"> Do ensure your school continues to adhere (but not limited to) to the following, and push the envelope for change: </p>
+         <ol style="list-style-type: japanese-formal !important;">
+
+         <li style="font-weight: 400;"> Window Floor Ratio (WFR) more than 15 per cent </li>
+          <li style="font-weight: 400;"> Majority of the population use sustainable mode of transport (public transport, e-rickshaws, etc) or non-pollution mode of transport (cycling, walking, etc) </li>
+          <li style="font-weight: 400;"> Maximum use of energy efficient lighting to conserve energy and use of alternative sources of energy. GSP Audit encourages schools to minimize use of conventional lights without compromising sufficient lighting for students </li>
+          <li style="font-weight: 400;"> Maintain a high green cover inside and around school campus along with greater biodiversity by planting native species of plants </li>
+           <li style="font-weight: 400;"> Serve only cooked meals (or avoid packaged foods that are high in Fats, Sugar and Salt) to ensure healthy food consumption </li>
+          <li style="font-weight: 400;"> Harvest rainwater through Rainwater Harvesting (RWH) systems and reuse treated waste water. Waste water can be treated at school level (decentralized waste water treatment system) or at centralized Sewage Treatment Plants (STPs)</li>
+          <li style="font-weight: 400;"> Segregate waste at source efficiently and dispose responsibly. Recycling at least 90 per cent of the waste is recommended</p>
+          <li style="font-weight: 400;"> Wet waste to be composted </li>
+          <li style="font-weight: 400;"> Waste not to be burned </li>
+        </ol>
 
 
 
@@ -141,20 +144,22 @@ h2 span {
        <p class='label label-warning' style='background:yellow; color:black;'>Yellow</p> 
       <br><br><br><br>
 
-        <p>Congratulations! Your school has been rated Yellow and our analysis of the practices and data provided, reveal that your school is managing the resources within the school's premises judiciously, BUT there is scope for improvement. We have also noticed that a few schools that were rated Green in the previous year may have been rated Yellow due to submission of inaccurate data, change in green practices, etc. Some of the practices recommended for a Green rating (but not limited to) are:  </p>
+        <p style="font-weight: 400;">Congratulations! Your school has been rated Yellow and our analysis of the practices and data provided, reveal that your school is managing the resources within the school's premises judiciously, BUT there is scope for improvement. We have also noticed that a few schools that were rated Green in the previous year may have been rated Yellow due to submission of inaccurate data, change in green practices, etc. Some of the practices recommended for a Green rating (but not limited to) are:  </p>
+
+        <ol style="list-style-type: japanese-formal !important;">
          
-         <p> &bull;  Window Floor Ratio (WFR) more than 15 per cent </p>
-          <p> &bull;   Majority of the population to use sustainable mode of transport (public transport, e-rickshaws, etc) or non-pollution mode of transport (cycling, walking, etc)</p>
-          <p> &bull; Maximum use of energy efficient lighting to conserve energy and use of alternative sources of energy. GSP Audit encourages schools to minimize use of conventional lights without compromising sufficient lighting for students</p>
-          <p> &bull;   Maintain a high green cover inside and around school campus along with greater biodiversity by planting native species of plants  </p>
-           <p> &bull;  Serve only cooked meals (or avoid packaged foods that are high in Fats, Sugar and Salt) to ensure healthy food consumption </p>
-          <p> &bull;   Harvest rainwater through Rainwater Harvesting (RWH) systems and reuse treated waste water. Waste water can be treated at school level (decentralized waste water treatment system) or at centralized Sewage Treatment Plants (STPs)</p>
-          <p> &bull;   Pre and Post monsoon cleaning of RWH systems is important</p>
-          <p> &bull;   Segregate waste at source efficiently and dispose responsibly. Recycling at least 90 per cent of the waste is recommended</p>
-          <p> &bull;  Wet waste to be composted </p>
+         <li style="font-weight: 400;"> Window Floor Ratio (WFR) more than 15 per cent </li>      
+          <li style="font-weight: 400;"> Majority of the population to use sustainable mode of transport (public transport, e-rickshaws, etc) or non-pollution mode of transport (cycling, walking, etc)</li>
+          <li style="font-weight: 400;"> Maximum use of energy efficient lighting to conserve energy and use of alternative sources of energy. GSP Audit encourages schools to minimize use of conventional lights without compromising sufficient lighting for students</li>
+          <li style="font-weight: 400;"> Maintain a high green cover inside and around school campus along with greater biodiversity by planting native species of plants  </li>
+          <li style="font-weight: 400;"> Serve only cooked meals (or avoid packaged foods that are high in Fats, Sugar and Salt) to ensure healthy food consumption </li>
+          <li style="font-weight: 400;"> Harvest rainwater through Rainwater Harvesting (RWH) systems and reuse treated waste water. Waste water can be treated at school level (decentralized waste water treatment system) or at centralized Sewage Treatment Plants (STPs)</li>
+          <li style="font-weight: 400;"> Pre and Post monsoon cleaning of RWH systems is important</li>
+          <li style="font-weight: 400;"> Segregate waste at source efficiently and dispose responsibly. Recycling at least 90 per cent of the waste is recommended</li>
+          <li style="font-weight: 400;"> Wet waste to be composted </li>
 
-          <p> &bull;  Waste not to be burned</p>
-
+          <li style="font-weight: 400;"> Waste not to be burned </li>
+ </ol>
 
 
 
@@ -170,16 +175,20 @@ h2 span {
         <p>It's good that your school measured the consumption of resources. Our analysis of the practices and data provided reveal that you are missing some critical action points. It could be that your school do undertake these practices, but have not provided the data when submitting the audit.    </p>
          
          <p> Some of the practices recommended for a Green rating (but not limited to) are: </p>
-          <p> &bull;   Window Floor Ratio (WFR) more than 15 per cent</p>
-          <p> &bull;  Majority of the population to use sustainable mode of transport (public transport, e-rickshaws, etc) or non-pollution mode of transport (cycling, walking, etc)</p>
-          <p> &bull;   Maximum use of energy efficient lighting to conserve energy and use of alternative sources of energy. GSP Audit encourages schools to minimize use of conventional lights without compromising sufficient lighting for students </p>
-           <p> &bull;   Maintain a high green cover inside and around school campus along with greater biodiversity by planting native species of plants </p>
-          <p> &bull;    Serve only cooked meals (or avoid packaged foods that are high in Fats, Sugar and Salt) to ensure healthy food consumption</p>
-          <p> &bull;    Harvest rainwater through Rainwater Harvesting (RWH) systems and reuse treated waste water. Waste water can be treated at school level (decentralized waste water treatment system) or at centralized Sewage Treatment Plants (STPs) </p>
-          <p> &bull;   Pre and Post monsoon cleaning of RWH systems</p>
-          <p> &bull;  Segregates waste at source efficiently and dispose responsibly. Recycling at least 90 per cent of the waste is recommended </p>
-          <p> &bull;  Wet waste to be composted</p>
-          <p> &bull;  Waste not to be burned</p>
+
+         <ol style="list-style-type: japanese-formal !important;">
+
+         <li style="font-weight: 400;"> Window Floor Ratio (WFR) more than 15 per cent </li>
+          <li style="font-weight: 400;"> Majority of the population to use sustainable mode of transport (public transport, e-rickshaws, etc) or non-pollution mode of transport (cycling, walking, etc) </li>
+         <li style="font-weight: 400;"> Maximum use of energy efficient lighting to conserve energy and use of alternative sources of energy. GSP Audit encourages schools to minimize use of conventional lights without compromising sufficient lighting for students </li>
+          <li style="font-weight: 400;"> Maintain a high green cover inside and around school campus along with greater biodiversity by planting native species of plants </li>
+          <li style="font-weight: 400;"> Serve only cooked meals (or avoid packaged foods that are high in Fats, Sugar and Salt) to ensure healthy food consumption </li>
+         <li style="font-weight: 400;"> Harvest rainwater through Rainwater Harvesting (RWH) systems and reuse treated waste water. Waste water can be treated at school level (decentralized waste water treatment system) or at centralized Sewage Treatment Plants (STPs) </li>
+         <li style="font-weight: 400;"> Pre and Post monsoon cleaning of RWH systems </li>
+         <li style="font-weight: 400;"> Segregates waste at source efficiently and dispose responsibly. Recycling at least 90 per cent of the waste is recommended </li>
+         <li style="font-weight: 400;"> Wet waste to be composted </li>
+         <li style="font-weight: 400;"> Waste not to be burned </li>
+        </ol>
 
  <p>Look forward to your participation and improved performance, this year! </p>
 
@@ -193,17 +202,21 @@ h2 span {
         <p>It's good that your school measured the consumption of resources. Our analysis of the practices and data provided reveal that you are missing some critical action points. It could be that your school do undertake these practices, but have not provided the data when submitting the audit.   </p>
          
          <p> Some of the practices recommended for a Green rating (but not limited to) are:  </p>
-          <p> &bull;    Window Floor Ratio (WFR) more than 15 per cent</p>
-          <p> &bull;  Majority of the population to use sustainable mode of transport (public transport, e-rickshaws, etc) or non-pollution mode of transport (cycling, walking, etc)</p>
-          <p> &bull;  Maximum use of energy efficient lighting to conserve energy and use of alternative sources of energy. GSP Audit encourages schools to minimize use of conventional lights without compromising sufficient lighting for students </p>
-           <p> &bull;   Maintain a high green cover inside and around school campus along with greater biodiversity by planting native species of plants </p>
-          <p> &bull;    Serve only cooked meals (or avoid packaged foods that are high in Fats, Sugar and Salt) to ensure healthy food consumption </p>
-          <p> &bull;    Harvest rainwater through Rain Water Harvesting (RWH) systems and treatment of waste water using Sewage Treatment Plants (STP) </p>
-          <p> &bull;  Pre and Post monsoon cleaning of RWH systems</p>
-          <p> &bull;  Pre and Post monsoon cleaning of RWH systems </p>
-          <p> &bull;  Segregate waste at source efficiently and dispose responsibly. Recycling at least 90 per cent of the waste is recommended</p>
-          <p> &bull;   Wet waste to be composted</p>
-           <p> &bull;  Waste not to be burned</p>
+
+         <ol style="list-style-type: japanese-formal !important;">
+
+          <li style="font-weight: 400;"> Window Floor Ratio (WFR) more than 15 per cent </li>
+          <li style="font-weight: 400;"> Majority of the population to use sustainable mode of transport (public transport, e-rickshaws, etc) or non-pollution mode of transport (cycling, walking, etc) </li>
+          <li style="font-weight: 400;"> Maximum use of energy efficient lighting to conserve energy and use of alternative sources of energy. GSP Audit encourages schools to minimize use of conventional lights without compromising sufficient lighting for students </li>
+          <li style="font-weight: 400;"> Maintain a high green cover inside and around school campus along with greater biodiversity by planting native species of plants </li>
+          <li style="font-weight: 400;"> Serve only cooked meals (or avoid packaged foods that are high in Fats, Sugar and Salt) to ensure healthy food consumption </li>
+          <li style="font-weight: 400;"> Harvest rainwater through Rain Water Harvesting (RWH) systems and treatment of waste water using Sewage Treatment Plants (STP) </li>
+          <li style="font-weight: 400;"> Pre and Post monsoon cleaning of RWH systems </li>
+          <li style="font-weight: 400;"> Pre and Post monsoon cleaning of RWH systems </li>
+          <li style="font-weight: 400;"> Segregate waste at source efficiently and dispose responsibly. Recycling at least 90 per cent of the waste is recommended</li>
+          <li style="font-weight: 400;"> Wet waste to be composted </li>
+          <li style="font-weight: 400;"> Waste not to be burned </li>
+         </ol>
 
            <p> Look forward to your participation and improved performance, this year! </p>
 
