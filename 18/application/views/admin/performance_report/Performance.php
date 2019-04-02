@@ -104,6 +104,44 @@ h2 span {
     </div>
   </div>
 
+
+<div class="introduction page-break-before" style="line-height: 15px;">
+    <h2 class="intro-heading">
+      <label>Introduction</label>
+      <span>Green Schools Programme Audit 2018-2019</span></h2>
+    <p>Dear Principal,</p>
+    <p>We thank you for taking part in GSP Audit 2018-2019. We hope the exercise helped to make your school resource efficient and to inculcate green practices in your students. 
+    </p>
+    <p> As you are aware, the Green Schools Programme (GSP) takes the students outside the classroom and helps them learn with joy. GSP has been built on the twin objectives of "Learning by doing" and "making change work" to help schools audit the consumption of natural resources within their premises, and assess themselves as environment managers. 
+</p>
+    <p> The participation of schools from across the country has gone up this year. We were overwhelmed with the response we received from across India. 5000+ schools participated in the audit this year, and around 1700 schools submitted the Audit - a jump of 42 per cent, when compared to last year. 
+ </p>
+    <p> This year's audit results also revealed that of the 1700 schools that submitted their audit reports, 1356 schools segregate waste at source, 825 schools practice composting, both natural and mechanical and 648 schools send their e-waste to authorised dealer/ dismantler/ manufacturer. We know that 717 schools have RWH, 202 store water, 371 schools recharge groundwater. <b>BUT 135 schools use chemical pesticides, 405 schools burn waste while 690 schools distribute processed, packaged foods during school events! Clearly more needs to be done.</b> 
+</p>
+
+<p>
+  The performance report of the school is based on the data submitted by the schools. Therefore, the school needs to make sure that the data entered is correct to the best of their knowledge. We hope that as the school continues to audit their consumption every year, they will refine the data collection process and complete the report with full honesty. We hope that your students immersed themselves in the activities and learnt about energy efficiency, rainwater harvesting, waste segregation at source, non-polluting modes of transport, eating healthy, different plant and animal species etc. The performance report will give schools the baseline of the Green status of the school. It is an indicator of the progress that the schools make on the environment front year-on-year, we hope that your school continues to participate each year, and build a generation of environmentally responsible citizens.
+</p>
+    <p> The report will help in assessing the initiatives undertaken by your school and move towards filling the gaps before next GSP Audit. Our focus will be on <b>measuring the change over the previous years' performance.</b> The school's actions for bettering the environment and sensitivity towards environment will be looked at from the baseline year (the year the school did the Audit for the first time). Like last year, <b>GSP concentrates more on the measurable change made over the years in a single school's green practices rather than creating a competitive environment.</b> And the degree of change will be appreciated as well as recognized. To find out how some of our schools have brought about change, please take a look at our new publication <a href="https://csestore.cse.org.in/index.php/books/schools-and-environment/paving-the-path-a-selection-of-best-environmental-practices-in-schools-across-india.html" style="color:blue;">'Paving the Path'</a> available at CSE store -  <a href="https://bit.ly/2Sh1pBs" style="color:blue;">https://bit.ly/2Sh1pBs</a>.
+</p>
+    <p> We have dispatched the school certificate, and if you do not receive it by April 15, 2019, please email or call (details given below). Hope you have downloaded the digital certificates of all those whose names were provided online. </p>
+    <p> Hope, that in coming years, your school continues to participate and push the envelope for change. As Sunita Narain, Director-General, CSE, said: <m style="font-style: italic;"> The first task of being the change is to become aware of what we do - benchmark how much water, energy we use; waste we generate. It is only then that we can transform our ways so that we can use as little and waste as little as possible.</m> </p>
+
+    <p>The GSP Audit 2019 will open by mid-year, and we look forward to receiving your Audit report by the deadline!</p>
+    <p> Warmly, </p>
+    <p> The GSP team</p>  
+  <p><a href="http://www.greenschoolsprogramme.org/" style="color: blue;">support@greenschoolsprogramme.org</strong></p>
+  <p>Ph: 011 40616000, 29955124 Ext 300;</p>
+    <div class="footer">
+      <p>Performance Report | <?php echo $performance[0]->name; ?></p>
+    </div>
+
+
+
+
+
+  
+
 <div class="introduction page_break" style="line-height: 15px; font-weight: 400;">
 
 <p><strong>School Rating:&nbsp;
@@ -230,36 +268,7 @@ h2 span {
 
 </div>
 
-  <div class="introduction page-break-before" style="line-height: 15px;">
-    <h2 class="intro-heading">
-      <label>Introduction</label>
-      <span>Green Schools Programme Audit 2018-2019</span></h2>
-    <p>Dear Principal,</p>
-    <p>We thank you for taking part in GSP Audit 2018-2019. We hope the exercise helped to make your school resource efficient and to inculcate green practices in your students. 
-    </p>
-    <p> As you are aware, the Green Schools Programme (GSP) takes the students outside the classroom and helps them learn with joy. GSP has been built on the twin objectives of "Learning by doing" and "making change work" to help schools audit the consumption of natural resources within their premises, and assess themselves as environment managers. 
-</p>
-    <p> The participation of schools from across the country has gone up this year. We were overwhelmed with the response we received from across India. 5000+ schools participated in the audit this year, and around 1700 schools submitted the Audit - a jump of 42 per cent, when compared to last year. 
- </p>
-    <p> This year's audit results also revealed that of the 1700 schools that submitted their audit reports, 1356 schools segregate waste at source, 825 schools practice composting, both natural and mechanical and 648 schools send their e-waste to authorised dealer/ dismantler/ manufacturer. We know that 717 schools have RWH, 202 store water, 371 schools recharge groundwater. <b>BUT 135 schools use chemical pesticides, 405 schools burn waste while 690 schools distribute processed, packaged foods during school events! Clearly more needs to be done.</b> 
-</p>
-
-<p>
-  The performance report of the school is based on the data submitted by the schools. Therefore, the school needs to make sure that the data entered is correct to the best of their knowledge. We hope that as the school continues to audit their consumption every year, they will refine the data collection process and complete the report with full honesty. We hope that your students immersed themselves in the activities and learnt about energy efficiency, rainwater harvesting, waste segregation at source, non-polluting modes of transport, eating healthy, different plant and animal species etc. The performance report will give schools the baseline of the Green status of the school. It is an indicator of the progress that the schools make on the environment front year-on-year, we hope that your school continues to participate each year, and build a generation of environmentally responsible citizens.
-</p>
-    <p> The report will help in assessing the initiatives undertaken by your school and move towards filling the gaps before next GSP Audit. Our focus will be on <b>measuring the change over the previous years' performance.</b> The school's actions for bettering the environment and sensitivity towards environment will be looked at from the baseline year (the year the school did the Audit for the first time). Like last year, <b>GSP concentrates more on the measurable change made over the years in a single school's green practices rather than creating a competitive environment.</b> And the degree of change will be appreciated as well as recognized. To find out how some of our schools have brought about change, please take a look at our new publication <a href="https://csestore.cse.org.in/index.php/books/schools-and-environment/paving-the-path-a-selection-of-best-environmental-practices-in-schools-across-india.html" style="color:blue;">'Paving the Path'</a> available at CSE store -  <a href="https://bit.ly/2Sh1pBs" style="color:blue;">https://bit.ly/2Sh1pBs</a>.
-</p>
-    <p> We have dispatched the school certificate, and if you do not receive it by April 15, 2019, please email or call (details given below). Hope you have downloaded the digital certificates of all those whose names were provided online. </p>
-    <p> Hope, that in coming years, your school continues to participate and push the envelope for change. As Sunita Narain, Director-General, CSE, said: <m style="font-style: italic;"> The first task of being the change is to become aware of what we do - benchmark how much water, energy we use; waste we generate. It is only then that we can transform our ways so that we can use as little and waste as little as possible.</m> </p>
-
-    <p>The GSP Audit 2019 will open by mid-year, and we look forward to receiving your Audit report by the deadline!</p>
-    <p> Warmly, </p>
-    <p> The GSP team</p>  
-  <p><a href="http://www.greenschoolsprogramme.org/" style="color: blue;">support@greenschoolsprogramme.org</strong></p>
-  <p>Ph: 011 40616000, 29955124 Ext 300;</p>
-    <div class="footer">
-      <p>Performance Report | <?php echo $performance[0]->name; ?></p>
-    </div>
+  
     <h2 class="intro-heading">
       <label>Introduction</label>
       <span>Green Schools Programme Audit 2018-2019</span></h2>
