@@ -172,9 +172,9 @@ h2 span {
       
       <br><br><br><br>
 
-        <p>It's good that your school measured the consumption of resources. Our analysis of the practices and data provided reveal that you are missing some critical action points. It could be that your school do undertake these practices, but have not provided the data when submitting the audit.    </p>
+        <p style="font-weight: 400;"> It's good that your school measured the consumption of resources. Our analysis of the practices and data provided reveal that you are missing some critical action points. It could be that your school do undertake these practices, but have not provided the data when submitting the audit.    </p>
          
-         <p> Some of the practices recommended for a Green rating (but not limited to) are: </p>
+         <p style="font-weight: 400;"> Some of the practices recommended for a Green rating (but not limited to) are: </p>
 
          <ol style="list-style-type: japanese-formal !important;">
 
@@ -190,7 +190,7 @@ h2 span {
          <li style="font-weight: 400;"> Waste not to be burned </li>
         </ol>
 
- <p>Look forward to your participation and improved performance, this year! </p>
+ <p style="font-weight: 400;">Look forward to your participation and improved performance, this year! </p>
 
 
      <?php }   
@@ -199,9 +199,9 @@ h2 span {
 
      <br><br><br><br>
 
-        <p>It's good that your school measured the consumption of resources. Our analysis of the practices and data provided reveal that you are missing some critical action points. It could be that your school do undertake these practices, but have not provided the data when submitting the audit.   </p>
+        <p style="font-weight: 400;">It's good that your school measured the consumption of resources. Our analysis of the practices and data provided reveal that you are missing some critical action points. It could be that your school do undertake these practices, but have not provided the data when submitting the audit.   </p>
          
-         <p> Some of the practices recommended for a Green rating (but not limited to) are:  </p>
+         <p style="font-weight: 400;"> Some of the practices recommended for a Green rating (but not limited to) are:  </p>
 
          <ol style="list-style-type: japanese-formal !important;">
 
@@ -218,7 +218,7 @@ h2 span {
           <li style="font-weight: 400;"> Waste not to be burned </li>
          </ol>
 
-           <p> Look forward to your participation and improved performance, this year! </p>
+           <p style="font-weight: 400;"> Look forward to your participation and improved performance, this year! </p>
 
     <?php  }   
             else{
