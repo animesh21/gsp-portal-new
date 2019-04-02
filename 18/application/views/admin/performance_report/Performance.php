@@ -2605,7 +2605,7 @@ if ($authorised_dealer == "Y") {
 
       <p style="text-align: center; font-size: 18px; color: blue;">What's New?</p>
       <p>
-        2018 was definitely one for the books for our GSP network! We started the year off by the publication of the GSP eBook – ‘A teacher’s handbook for GSP Audit’, followed by our latest publication ‘Paving the Path’. We hope GSP was helpful in encouraging students and teachers to continue coming up with new, creative, innovative and greener ways to be more resource efficient. As good as 2018 was to us and to our GSP family, we look forward to 2019 with renewed enthusiasm and all of the better Green practices that are yet to be applied or improved upon. Thank YOU for your participation in GSP Audit and being active environmental change makers!  
+        2018 was definitely one for the books for our GSP network! We started the year off by the publication of the GSP eBook – 'A teacher's handbook for GSP Audit', followed by our latest publication 'Paving the Path'. We hope GSP was helpful in encouraging students and teachers to continue coming up with new, creative, innovative and greener ways to be more resource efficient. As good as 2018 was to us and to our GSP family, we look forward to 2019 with renewed enthusiasm and all of the better Green practices that are yet to be applied or improved upon. Thank YOU for your participation in GSP Audit and being active environmental change makers!  
 
 
       </p>
@@ -2616,7 +2616,7 @@ if ($authorised_dealer == "Y") {
 
        <p>
          
-        1. A teacher’s handbook for GSP Audit: The Lesson Plans given in this handbook has been built around the GSP Audit Activities, keeping in mind the NCERT syllabus. Teachers teaching different subjects can use the GSP activities in the classroom teaching-learning.</p>
+        1. A teacher's handbook for GSP Audit: The Lesson Plans given in this handbook has been built around the GSP Audit Activities, keeping in mind the NCERT syllabus. Teachers teaching different subjects can use the GSP activities in the classroom teaching-learning.</p>
        <p> 2.  Paving the Path: It is a compilation of the best green practices by students and school community, in the GSP network. The book will be immensely useful to school administrators and teachers, supplying them a compact toolkit to initiate similar activities in their schools. </p>
        <p> 3.  How Green is your school? (Revised edition):  is a set of guidelines and tasks for students to assess the environmental performance of your school under GSP. </p>
 
