@@ -1782,7 +1782,7 @@ if(!function_exists('downloadAirSectionQuestions')){
    function downloadAirSectionQuestions($userId){
        $CI = & get_instance();
      $CI->db->where('school_id',$userId);
-     $temp = $CI->db->select('audit_year,window_floor_ratio,ownership_of_vehicles,  no_of_vehicles_more_than_eight_years_old,no_of_vehicles_with_puc_certificate,annual_road_worthiness_certificate,sustainble_motorised_vehicles_percentgae,non_polluting_transport_percentage,no_of_students_suffer_from_respiratory_problems')->from("all_yoy_presentation")->where(array('school_id'=>$userId))->get()->result();
+     $temp = $CI->db->select('audit_year,window_floor_ratio,ownership_of_vehicles,  no_of_vehicles_more_than_eight_years_old,no_of_vehicles_with_puc_certificate,annual_road_worthiness_certificate,sustainble_motorised_vehicles_percentgae,non_polluting_transport_percentage,no_of_students_suffer_from_respiratory_problems')->from("all_yoy_presentation")->where(array('school_id'=>$userId))->order_by("audit_year", "desc")->get()->result();
      return $temp;
    }
 }
@@ -1791,7 +1791,7 @@ if(!function_exists('downloadEnergySectionQuestions')){
    function downloadEnergySectionQuestions($userId){
        $CI = & get_instance();
      $CI->db->where('school_id',$userId);
-     $temp = $CI->db->select('audit_year,per_capita_energy_consumption,alternate_source_of_energy,electricity_from_the_board_mj,  electricity_from_generator_mj,petrol_mj,diesel_mj,cng_mj,kerosene_mj,coal_mj,wood_mj,animal_waste_mj,solar_mj,wind_mj,lpg_mj,piped_natural_gas_mj,biogas_mj,others_mj,total_mj')->from("all_yoy_presentation")->where(array('school_id'=>$userId))->get()->result();
+     $temp = $CI->db->select('audit_year,per_capita_energy_consumption,alternate_source_of_energy,electricity_from_the_board_mj, electricity_from_generator_mj,petrol_mj,diesel_mj,cng_mj,kerosene_mj,coal_mj,wood_mj,animal_waste_mj,solar_mj,wind_mj,lpg_mj,piped_natural_gas_mj,biogas_mj,others_mj,total_mj')->from("all_yoy_presentation")->where(array('school_id'=>$userId))->order_by("audit_year", "desc")->get()->result();
      return $temp;
    }
 }
@@ -1800,7 +1800,7 @@ if(!function_exists('downloadFoodSectionQuestions')){
    function downloadFoodSectionQuestions($userId){
        $CI = & get_instance();
      $CI->db->where('school_id',$userId);
-     $temp = $CI->db->select('audit_year,provision_of_packaged_food,schools_distributes_packaged_food_items_as_rewards,school_distribute_chocolates_similar_products_as_refreshments,school_events_sponsored_by_food_companies_brands')->from("all_yoy_presentation")->where(array('school_id'=>$userId))->get()->result();
+     $temp = $CI->db->select('audit_year,provision_of_packaged_food,schools_distributes_packaged_food_items_as_rewards,school_distribute_chocolates_similar_products_as_refreshments,school_events_sponsored_by_food_companies_brands')->from("all_yoy_presentation")->where(array('school_id'=>$userId))->order_by("audit_year", "desc")->get()->result();
      return $temp;
    }
 }
@@ -1809,7 +1809,7 @@ if(!function_exists('downloadLandSectionQuestions')){
    function downloadLandSectionQuestions($userId){
        $CI = & get_instance();
      $CI->db->where('school_id',$userId);
-     $temp = $CI->db->select('audit_year,percentage_of_green_area,total_plants,total_animals,use_of_chemical_pesticides')->from("all_yoy_presentation")->where(array('school_id'=>$userId))->get()->result();
+     $temp = $CI->db->select('audit_year,percentage_of_green_area,total_plants,total_animals,use_of_chemical_pesticides')->from("all_yoy_presentation")->where(array('school_id'=>$userId))->order_by("audit_year", "desc")->get()->result();
      return $temp;
    }
 }
@@ -1818,7 +1818,7 @@ if(!function_exists('downloadWaterSectionQuestions')){
    function downloadWaterSectionQuestions($userId){
        $CI = & get_instance();
      $CI->db->where('school_id',$userId);
-     $temp = $CI->db->select('audit_year,per_capita_day_water_consumption,load_on_dwt,load_on_water_closet,does_school_treat_waste_water,do_you_have_rainwater_harvesting_rwh_system_in_your_school,how_does_your_school_harvest_rainwater,total_number_of_storage_tanks, does_your_school_have_groundwater_recharge_structure,total_number_of_recharge_structure,rwh_structures_present_in_your_school,does_your_school_clean_your_catchment_and_system,when_does_your_school_clean_the_catchment_and_rwh_system,when_does_your_school_monitor_the_groundwater_level')->from("all_yoy_presentation")->where(array('school_id'=>$userId))->get()->result();
+     $temp = $CI->db->select('audit_year,per_capita_day_water_consumption,load_on_dwt,load_on_water_closet,does_school_treat_waste_water,do_you_have_rainwater_harvesting_rwh_system_in_your_school,how_does_your_school_harvest_rainwater,total_number_of_storage_tanks, does_your_school_have_groundwater_recharge_structure,total_number_of_recharge_structure,rwh_structures_present_in_your_school,does_your_school_clean_your_catchment_and_system,when_does_your_school_clean_the_catchment_and_rwh_system,when_does_your_school_monitor_the_groundwater_level')->from("all_yoy_presentation")->where(array('school_id'=>$userId))->order_by("audit_year", "desc")->get()->result();
      return $temp;
    }
 }
@@ -1827,7 +1827,7 @@ if(!function_exists('downloadWasteSectionQuestions')){
    function downloadWasteSectionQuestions($userId){
        $CI = & get_instance();
      $CI->db->where('school_id',$userId);
-     $temp = $CI->db->select('audit_year,school_segregated_solid_waste,composting_facility,load_on_water_closet,  does_school_treat_waste_water,total_biodegradable_waste_generated,total_dry_recyclable_waste_generated,total_domestic_waste_generated,  e_waste_generated,biomedical_waste_generated,sanitary_waste_generated,cd_waste_generated,total_biodegradable_waste_recycled,total_dry_recyclable_waste_recycled,total_domestic_waste_recycled,e_waste_recycled,biomedical_waste_recycled,sanitary_waste_recycled,cd_waste_recycled,reuse_textbooks')->from("all_yoy_presentation")->where(array('school_id'=>$userId))->get()->result();
+     $temp = $CI->db->select('audit_year,school_segregated_solid_waste,composting_facility,load_on_water_closet,  does_school_treat_waste_water,total_biodegradable_waste_generated,total_dry_recyclable_waste_generated,total_domestic_waste_generated,  e_waste_generated,biomedical_waste_generated,sanitary_waste_generated,cd_waste_generated,total_biodegradable_waste_recycled,total_dry_recyclable_waste_recycled,total_domestic_waste_recycled,e_waste_recycled,biomedical_waste_recycled,sanitary_waste_recycled,cd_waste_recycled,reuse_textbooks')->from("all_yoy_presentation")->where(array('school_id'=>$userId))->order_by("audit_year", "desc")->get()->result();
      return $temp;
    }
 }
