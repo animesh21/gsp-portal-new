@@ -118,7 +118,7 @@ h2 span {
 
        <br><br><br><br>
 
-      <p>Congratulations!  Based on the analysis of the sustainable practices adopted by your school, your school has been rated Green.  Do continue your efforts and sustain the momentum – being continuously Green is not easy and we have noticed that when a school (or the students and teachers) drops its guard or fail to provide accurate data, they slide to a yellow or orange or red category. </p>
+      <p>Congratulations!  Based on the analysis of the sustainable practices adopted by your school, your school has been rated Green.  Do continue your efforts and sustain the momentum - being continuously Green is not easy and we have noticed that when a school (or the students and teachers) drops its guard or fail to provide accurate data, they slide to a yellow or orange or red category. </p>
          <p> Do ensure your school continues to adhere (but not limited to) to the following, and push the envelope for change: </p>
          <p> &bull; Window Floor Ratio (WFR) more than 15 per cent </p>
           <p> &bull; Majority of the population use sustainable mode of transport (public transport, e-rickshaws, etc) or non-pollution mode of transport (cycling, walking, etc)</p>
@@ -237,7 +237,7 @@ h2 span {
     <p> The report will help in assessing the initiatives undertaken by your school and move towards filling the gaps before next GSP Audit. Our focus will be on <b>measuring the change over the previous years' performance.</b> The school's actions for bettering the environment and sensitivity towards environment will be looked at from the baseline year (the year the school did the Audit for the first time). Like last year, <b>GSP concentrates more on the measurable change made over the years in a single school's green practices rather than creating a competitive environment.</b> And the degree of change will be appreciated as well as recognized. To find out how some of our schools have brought about change, please take a look at our new publication <a href="https://csestore.cse.org.in/index.php/books/schools-and-environment/paving-the-path-a-selection-of-best-environmental-practices-in-schools-across-india.html" style="color:blue;">'Paving the Path'</a> available at CSE store -  <a href="https://bit.ly/2Sh1pBs" style="color:blue;">https://bit.ly/2Sh1pBs</a>.
 </p>
     <p> We have dispatched the school certificate, and if you do not receive it by April 15, 2019, please email or call (details given below). Hope you have downloaded the digital certificates of all those whose names were provided online. </p>
-    <p> Hope, that in coming years, your school continues to participate and push the envelope for change. As Sunita Narain, Director-General, CSE, said: <m style="font-style: italic;"> The first task of being the change is to become aware of what we do – benchmark how much water, energy we use; waste we generate. It is only then that we can transform our ways so that we can use as little and waste as little as possible.</m> </p>
+    <p> Hope, that in coming years, your school continues to participate and push the envelope for change. As Sunita Narain, Director-General, CSE, said: <m style="font-style: italic;"> The first task of being the change is to become aware of what we do - benchmark how much water, energy we use; waste we generate. It is only then that we can transform our ways so that we can use as little and waste as little as possible.</m> </p>
 
     <p>The GSP Audit 2019 will open by mid-year, and we look forward to receiving your Audit report by the deadline!</p>
     <p> Warmly, </p>
@@ -2605,7 +2605,7 @@ if ($authorised_dealer == "Y") {
 
       <p style="text-align: center; font-size: 18px; color: blue;">What's New?</p>
       <p>
-        2018 was definitely one for the books for our GSP network! We started the year off by the publication of the GSP eBook – 'A teacher's handbook for GSP Audit', followed by our latest publication 'Paving the Path'. We hope GSP was helpful in encouraging students and teachers to continue coming up with new, creative, innovative and greener ways to be more resource efficient. As good as 2018 was to us and to our GSP family, we look forward to 2019 with renewed enthusiasm and all of the better Green practices that are yet to be applied or improved upon. Thank YOU for your participation in GSP Audit and being active environmental change makers!  
+        2018 was definitely one for the books for our GSP network! We started the year off by the publication of the GSP eBook - 'A teacher's handbook for GSP Audit', followed by our latest publication 'Paving the Path'. We hope GSP was helpful in encouraging students and teachers to continue coming up with new, creative, innovative and greener ways to be more resource efficient. As good as 2018 was to us and to our GSP family, we look forward to 2019 with renewed enthusiasm and all of the better Green practices that are yet to be applied or improved upon. Thank YOU for your participation in GSP Audit and being active environmental change makers!  
 
 
       </p>
