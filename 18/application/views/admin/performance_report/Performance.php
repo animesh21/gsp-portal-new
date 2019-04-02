@@ -141,7 +141,7 @@ h2 span {
        <p class='label label-warning' style='background:yellow; color:black;'>Yellow</p> 
       <br><br><br><br>
 
-        <p>Congratulations! Your school has been rated Yellow and our analysis of the practices and data provided, reveal that your school is managing the resources within the school’s premises judiciously, BUT there is scope for improvement. We have also noticed that a few schools that were rated Green in the previous year may have been rated Yellow due to submission of inaccurate data, change in green practices, etc. Some of the practices recommended for a Green rating (but not limited to) are:  </p>
+        <p>Congratulations! Your school has been rated Yellow and our analysis of the practices and data provided, reveal that your school is managing the resources within the school's premises judiciously, BUT there is scope for improvement. We have also noticed that a few schools that were rated Green in the previous year may have been rated Yellow due to submission of inaccurate data, change in green practices, etc. Some of the practices recommended for a Green rating (but not limited to) are:  </p>
          
          <p> &bull;  Window Floor Ratio (WFR) more than 15 per cent </p>
           <p> &bull;   Majority of the population to use sustainable mode of transport (public transport, e-rickshaws, etc) or non-pollution mode of transport (cycling, walking, etc)</p>
@@ -167,7 +167,7 @@ h2 span {
       
       <br><br><br><br>
 
-        <p>It’s good that your school measured the consumption of resources. Our analysis of the practices and data provided reveal that you are missing some critical action points. It could be that your school do undertake these practices, but have not provided the data when submitting the audit.    </p>
+        <p>It's good that your school measured the consumption of resources. Our analysis of the practices and data provided reveal that you are missing some critical action points. It could be that your school do undertake these practices, but have not provided the data when submitting the audit.    </p>
          
          <p> Some of the practices recommended for a Green rating (but not limited to) are: </p>
           <p> &bull;   Window Floor Ratio (WFR) more than 15 per cent</p>
@@ -190,7 +190,7 @@ h2 span {
 
      <br><br><br><br>
 
-        <p>It’s good that your school measured the consumption of resources. Our analysis of the practices and data provided reveal that you are missing some critical action points. It could be that your school do undertake these practices, but have not provided the data when submitting the audit.   </p>
+        <p>It's good that your school measured the consumption of resources. Our analysis of the practices and data provided reveal that you are missing some critical action points. It could be that your school do undertake these practices, but have not provided the data when submitting the audit.   </p>
          
          <p> Some of the practices recommended for a Green rating (but not limited to) are:  </p>
           <p> &bull;    Window Floor Ratio (WFR) more than 15 per cent</p>
