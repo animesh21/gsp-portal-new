@@ -166,7 +166,7 @@ h2 span {
           <li style="font-weight: 400;"> Maintain a high green cover inside and around school campus along with greater biodiversity by planting native species of plants </li>
            <li style="font-weight: 400;"> Serve only cooked meals (or avoid packaged foods that are high in Fats, Sugar and Salt) to ensure healthy food consumption </li>
           <li style="font-weight: 400;"> Harvest rainwater through Rainwater Harvesting (RWH) systems and reuse treated waste water. Waste water can be treated at school level (decentralized waste water treatment system) or at centralized Sewage Treatment Plants (STPs)</li>
-          <li style="font-weight: 400;"> Segregate waste at source efficiently and dispose responsibly. Recycling at least 90 per cent of the waste is recommended</p>
+          <li style="font-weight: 400;"> Segregate waste at source efficiently and dispose responsibly. Recycling at least 90 per cent of the waste is recommended</li>
           <li style="font-weight: 400;"> Wet waste to be composted </li>
           <li style="font-weight: 400;"> Waste not to be burned </li>
         </ol>
