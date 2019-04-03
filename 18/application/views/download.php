@@ -140,7 +140,7 @@ $allyoydata = getYOYComparisonAllData($schoolId);
 
 				 <div class="col-md-12">
         <?php for($i=0; $i<sizeof($dataYoy); $i++) {?>
-        <div class="col-md-3"><div class="well text-center" style="background:<?php echo $dataYoy[$i]['color']; ?>; color: #000; font-weight: 900; width:252px; height: 60px; padding:8px; border: 1px solid #ccc;"><?php echo substr($dataYoy[$i]['year'].'-', 8); ?><?php echo $dataYoy[$i]['range']; ?>
+        <div class="col-md-3" style="width:24%"><div class="well text-center" style="background:<?php echo $dataYoy[$i]['color']; ?>; color: #000; font-weight: 900; width:245px; height: 60px; padding:8px; border: 1px solid #ccc;"><?php echo substr($dataYoy[$i]['year'].'-', 8); ?><?php echo $dataYoy[$i]['range']; ?>
            
 
         </div></div>
