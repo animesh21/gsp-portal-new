@@ -170,6 +170,9 @@ h2 span {
           <li style="font-weight: 400;"> Wet waste to be composted </li>
           <li style="font-weight: 400;"> Waste not to be burned </li>
         </ol>
+	
+	<br/><br/>
+ <p style="font-weight: 400;">Look forward to your participation and improved performance, this year! </p>
 
 
 
@@ -197,9 +200,12 @@ h2 span {
           <li style="font-weight: 400;"> Wet waste to be composted </li>
 
           <li style="font-weight: 400;"> Waste not to be burned </li>
+			
+			
  </ol>
 
-
+<br/><br/>
+ <p style="font-weight: 400;">Look forward to your participation and improved performance, this year! </p>
 
 
      <?php  }   
@@ -227,7 +233,7 @@ h2 span {
          <li style="font-weight: 400;"> Wet waste to be composted </li>
          <li style="font-weight: 400;"> Waste not to be burned </li>
         </ol>
-
+<br/><br/>
  <p style="font-weight: 400;">Look forward to your participation and improved performance, this year! </p>
 
 
@@ -255,8 +261,8 @@ h2 span {
           <li style="font-weight: 400;"> Wet waste to be composted </li>
           <li style="font-weight: 400;"> Waste not to be burned </li>
          </ol>
-
-           <p style="font-weight: 400;"> Look forward to your participation and improved performance, this year! </p>
+       <br/><br/>
+       <p style="font-weight: 400;">Look forward to your participation and improved performance, this year! </p>
 
     <?php  }   
             else{
