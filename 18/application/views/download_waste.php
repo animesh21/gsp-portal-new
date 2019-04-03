@@ -214,6 +214,19 @@
             <td><?php echo !empty($wasteSection[$i]->reuse_textbooks)?$wasteSection[$i]->reuse_textbooks:"NA"; ?></td>
             <?php } ?>
           </tr>
+	<tr>
+            <td>Ewaste disposal?</td>
+            <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
+            <td><?php echo !empty($wasteSection[$i]->what_is_the_final_destination_for_waste_from_your)?$wasteSection[$i]->what_is_the_final_destination_for_waste_from_your:"NA"; ?></td>
+            <?php } ?>
+          </tr>
+
+    <tr>
+            <td>Does your school burn waste?</td>
+            <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
+            <td><?php echo !empty($wasteSection[$i]->does_your_school_burn_waste)?$wasteSection[$i]->does_your_school_burn_waste:"NA"; ?></td>
+            <?php } ?>
+          </tr>
         </table>
       </div>
     </div>
