@@ -1228,7 +1228,7 @@ if ($data == 3 || $data == 4) { ?>
           </div>
         </li>
   <li>
-          <figure><img src="assets/img/performance/plant_animal.png"></figure>
+          <figure><img src="assets/img/performance/plant_animal1.png"></figure>
           <div class="description">
             <h3>How many species of plants and animals exist in your school ?</h3>
             <?php
