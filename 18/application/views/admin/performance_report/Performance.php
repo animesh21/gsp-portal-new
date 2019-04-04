@@ -170,8 +170,8 @@ h2 span {
           <li style="font-weight: 400;"> Wet waste to be composted </li>
           <li style="font-weight: 400;"> Waste not to be burned </li>
         </ol>
-	
-	<br/><br/>
+  
+  <br/><br/>
  <p style="font-weight: 400;">Look forward to your participation and improved performance, this year! </p>
 
 
@@ -200,8 +200,8 @@ h2 span {
           <li style="font-weight: 400;"> Wet waste to be composted </li>
 
           <li style="font-weight: 400;"> Waste not to be burned </li>
-			
-			
+      
+      
  </ol>
 
 <br/><br/>
@@ -1089,9 +1089,9 @@ if ($data == 3 || $data == 4) { ?>
           </div>
         </li>     
         <li>
-          <figure><img src="assets/img/performance/sale.jpg"></figure>
-          <div class="description">
-            <h3>Does the school distribute packaged food items as rewards during schools events.</h3>
+          <figure><img src="assets/img/performance/sale.jpg" style="width: 125px !important"></figure>
+          <div class="description" style="margin-left: -12px !important">
+            <h3 >Does the school distribute packaged food items as rewards during schools events.</h3>
             <?php
                                 if (getFiled('Q9F1', $schoolUserID) == "Y" && getFiled('Q9F2', $schoolUserID) != " ") {
                                     $distributepackaged_food = "Yes";
@@ -1110,7 +1110,7 @@ if ($data == 3 || $data == 4) { ?>
     <section class="performance-category">
       <ul>
         <li>
-          <figure><img src="assets/img/performance/sale.jpg"></figure>
+          <figure><img src="assets/img/performance/sale.jpg" ></figure>
           <div class="description">
             <h3>Does the school distribute chocolates/similar products as refreshments during schools events? </h3>
             <?php
@@ -1760,7 +1760,7 @@ if ($data == 3 || $data == 4) { ?>
         </li>
   <?php } ?>        
         <li  <?php if(getFiled('Q8W2S61', $schoolUserID) == ""){ echo "style='display:none;'";} ?>>
-          <figure><img src="assets/img/performance/monitor.jpg" style="width:127px!important;"></figure>
+          <figure><img src="assets/img/performance/monitor.jpg" ></figure>
           <div class="description">
             <h3>Does your school clean your catchment and system</h3>
             <?php
@@ -1927,8 +1927,8 @@ if ($data == 3 || $data == 4) { ?>
           </table>
         </li>
         <li style="height:130px!important;" <?php if(getFiled('Q10W1', $schoolUserID) == ""){ echo "style='display:none;'";} ?>>
-          <figure><img src="assets/img/performance/pump.jpg" style="width:127px!important;"></figure>
-          <div class="description" style="margin-left:-12px;">
+          <figure><img src="assets/img/performance/pump.jpg" ></figure>
+          <div class="description" >
             <h3>Hand Pumps</h3>
             <?php
                                 //Q.9 How many hand pumps do you have?
@@ -2114,8 +2114,8 @@ if ($data == 3 || $data == 4) { ?>
           </div>
         </li>
         <li <?php if(getFiled('Q16W1', $schoolUserID) == ""){ echo "style='display:none;'";} ?>>
-          <figure><img src="assets/img/performance/water_storage.jpg"></figure>
-          <div class="description">
+          <figure><img src="assets/img/performance/water_storage.jpg" style="width: 125px !important"></figure>
+          <div class="description" style="margin-left: -12px !important">
             <h3>Is there a water storage system in place to supply water in the toilets?</h3>
             <?php
                                 //Q.14 Is there a water storage system in place to supply water in the toilets?
@@ -2153,7 +2153,7 @@ if ($data == 3 || $data == 4) { ?>
           </div>
         </li>
         <li <?php if(getFiled('Q18W1', $schoolUserID) == ""){ echo "style='display:none; height:130px;'";}else{echo "style='height:130px;'";} ?>>
-          <figure><img src="assets/img/performance/cleaned_toilets.jpg" style="width:127px!important;"></figure>
+          <figure><img src="assets/img/performance/cleaned_toilets.jpg"></figure>
           <div class="description">
             <h3>Are the toilets cleaned?</h3>
             <?php
@@ -2488,7 +2488,7 @@ if ($waste_recycle == "Y") {
           </div>
         </li>
         <li style="height:130px;">
-          <figure><img src="assets/img/performance/compose.jpg" style="width:127px!important;"></figure>
+          <figure><img src="assets/img/performance/compose.jpg"></figure>
           <div class="description">
             <?php
 //Qn 5 : Does your school have a composting facility?
@@ -2508,7 +2508,7 @@ if ($waste_recycle == "Y") {
         </li>
         <!-- Textbook Reuse Start -->
         <li>
-          <figure><img src="assets/img/performance/book.jpg"></figure>
+          <figure><img src="assets/img/performance/book.jpg"  ></figure>
           <div class="description">
             <?php
 //Qn 6 : Does your school encourage students & teachers to reuse textbooks?
