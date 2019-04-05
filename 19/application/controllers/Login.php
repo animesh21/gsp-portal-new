@@ -71,7 +71,7 @@
 		    $cap = create_captcha($vals);
 		    $data['captcha_image'] = $cap['image'];
 			
-			print_r($data['captcha_image']); exit;
+			print_r($data['captcha_image']);
 			
 			
 		    $this->session->set_userdata('captcha_word', $cap['word']);
