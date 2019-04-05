@@ -359,10 +359,16 @@
     </div>
     <div class="form-2"> </div>
     <div class="form-group marginN">
-      <div class="cEmail">
-        <input type="text" class="form-control" name="captcha" placeholder="Enter Captcha"/>
-      </div>
-       <?php echo $captcha_image; ?> </div>
+      <body onload="createCaptcha()">
+      
+  <div id="captcha" style="margin: 0px 0px 0px 274px; position: absolute;">
+          
+        </div> 
+       <input type="text" class="form-control" placeholder="Captcha" id="cpatchaTextBox" style="width:250px;"/>
+         
+         
+    </body>
+ </div>
     <div class="form-group text-center">
       <input type="submit" name="submit" value="Submit" class="btn btn-default">
     </div>
@@ -452,4 +458,64 @@ opacity: 1;}
 
 /* ===== Base styles for the tooltip's content area ====== */
 .tooltip:after, [data-tooltip]:after {font-family: 'Lato', sans-serif; font-weight: normal; color: #666666; font-size: 13px; line-height: 1.3; border-radius: 4px; border: 1px solid #999999; background-color: rgba(240, 240, 240, .95); z-index: 1000; padding: 8px; min-width: 400px; content: attr(data-tooltip);  }
-</style>	
+</style>
+	
+	
+	<script type="text/javascript">
+  
+  $( "#registration-form" ).submit(function(){
+
+  validateCaptcha();
+
+  });
+
+
+
+</script>
+
+<script type="text/javascript">
+  
+var code;
+function createCaptcha() {
+  //clear the contents of captcha div first 
+  document.getElementById('captcha').innerHTML = "";
+  var charsArray =
+  "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@!#$%^&*";
+  var lengthOtp = 6;
+  var captcha = [];
+  for (var i = 0; i < lengthOtp; i++) {
+    //below code will not allow Repetition of Characters
+    var index = Math.floor(Math.random() * charsArray.length + 1); //get the next character from the array
+    if (captcha.indexOf(charsArray[index]) == -1)
+      captcha.push(charsArray[index]);
+    else i--;
+  }
+  var canv = document.createElement("canvas");
+  canv.id = "captcha";
+  canv.width = 100;
+  canv.height = 50;
+  var ctx = canv.getContext("2d");
+  ctx.font = "25px Georgia";
+  ctx.strokeText(captcha.join(""), 0, 30);
+  //storing captcha so that can validate you can save it somewhere else according to your specific requirements
+  code = captcha.join("");
+  document.getElementById("captcha").appendChild(canv); // adds the canvas to the body element
+}
+function validateCaptcha() {
+  event.preventDefault();
+  debugger
+  if (document.getElementById("cpatchaTextBox").value == code) {
+    alert("Valid Captcha")
+  }else{
+    alert("Invalid Captcha. try Again");
+    createCaptcha();
+  }
+}
+
+
+
+</script>
+	
+	
+	
+	
