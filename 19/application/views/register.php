@@ -361,10 +361,10 @@
     <div class="form-group marginN">
       <body onload="createCaptcha()">
       
-  <div id="captcha" style="margin: 0px 0px 0px 274px; position: absolute;">
+  <div id="captcha" style="margin: 0px 0px 0px 281px;  background-image: url('<?php echo base_url(); ?>assets/img/capt.png');background-repeat: no-repeat; ">
           
         </div> 
-       <input type="text" class="form-control" placeholder="Captcha" id="cpatchaTextBox" style="width:250px;"/>
+       <input type="text" class="form-control" placeholder="Captcha" id="cpatchaTextBox" style="width:250px;  margin-top: -50px;"/>
          
          
     </body>
@@ -421,6 +421,13 @@ $.typeahead({
 </script>
 <style type="text/css">
 /* ============= TOOL TIP ============= */
+
+#captcha{
+
+  margin-left: 56px;
+}
+	
+	
 .tt {display: inline-block; color: #fff; height: 27px;}
 .tt:hover {color: #fff;}
 [data-tooltip], .tooltip {position: relative; cursor: pointer;}
