@@ -362,7 +362,7 @@
       <div class="cEmail">
         <input type="text" class="form-control" name="captcha" placeholder="Enter Captcha"/>
       </div>
-      <img src="http://www.greenschoolsprogramme.org/audit/18/uploads/1554451305.2781.jpg" style="width: 230; height: 50; border: 0;" alt=" "> </div>
+       <?php echo $captcha_image; ?> </div>
     <div class="form-group text-center">
       <input type="submit" name="submit" value="Submit" class="btn btn-default">
     </div>
