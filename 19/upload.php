@@ -30,7 +30,7 @@ if (!empty($varParams['profile_image'])) {
     $destination = './uploads/files/'.$imagename;
     file_put_contents($destination, base64_decode($varParams['profile_image']));
     mysql_connect('localhost', 'gsp2018_usr', 'studio@123');
-    mysql_select_db('GSP_2018');
+    mysql_select_db('GSP_2019');
     $date = date('Y-m-d H:i:s');
     $sql = "INSERT INTO files(file_name, created, modified, status, userid) VALUES('".$imagename."',
      '".$date."', '".$date."', 1, '".$user_id."')";
