@@ -58,8 +58,8 @@
 		    $vals = array(
 	//                'img_path' => './uploads/',
 	//                'img_url' => 'http://studio-tesseract.co/GSP/uploads/',
-			'img_path' => './uploads18/',
-			'img_url' =>'http://www.greenschoolsprogramme.org/audit/19/uploads18/',
+			'img_path' => './uploads/',
+			'img_url' =>'http://www.greenschoolsprogramme.org/audit/19/uploads/',
 			'img_width' => '230',
 			'img_height' => 50,
 			'expiration' => 3600,
@@ -70,6 +70,10 @@
 
 		    $cap = create_captcha($vals);
 		    $data['captcha_image'] = $cap['image'];
+			
+			print_r($data['captcha_image']); exit;
+			
+			
 		    $this->session->set_userdata('captcha_word', $cap['word']);
 		} else {
 
