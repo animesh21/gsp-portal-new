@@ -502,11 +502,12 @@ function createCaptcha() {
   document.getElementById("captcha").appendChild(canv); // adds the canvas to the body element
 }
 function validateCaptcha() {
-  event.preventDefault();
+  
   debugger
   if (document.getElementById("cpatchaTextBox").value == code) {
     alert("Valid Captcha")
   }else{
+    event.preventDefault();
     alert("Invalid Captcha. try Again");
     createCaptcha();
   }
