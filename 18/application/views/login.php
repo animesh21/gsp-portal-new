@@ -104,9 +104,9 @@ header('Location: http://www.greenschoolsprogramme.org/audit/18/login/browser_ch
                                   width="580" height="360" data-toggle="modal" data-target="#myModal">Forgot password?</a></p>
         </div>
         <div class="btn-group">
-           <input class="org-btn" type="submit" value="Continue"> 
+           <!-- <input class="org-btn" type="submit" value="Continue"> -->
            
-          <!-- <input class="org-btn" type="button" id="survey_close" value="Continue"> -->
+          <input class="org-btn" type="button" id="survey_close" value="Continue"> 
 
         </div>
         <?php echo form_close(); ?>
