@@ -7,6 +7,8 @@
 <link href="<?php echo base_url(); ?>assets/css/performance.css" rel="stylesheet" media="print">
 <style type="text/css" media="all">
 
+ 
+
 .page_break{ page-break-before: always;  }
 .label {
     display: inline;
@@ -321,12 +323,12 @@ h2 span {
    </p>
     <section class="remember">
       <h3>Remember:</h3>
-      <ul>
-        <li> &bull; Your school can make an impact and meanwhile, ensure your surroundings to have cleaner air through opting for carpooling and shifting to CNG run vehicles, if CNG is available in your area (CNG is a cleaner fuel). </li>
-<li>&bull;  Try and motivate most of the permanent population to use non-polluting mode of transport such as walking or cycling, or use a sustainably motorized vehicles such as buses, public transport. Students in several schools have come up with new and innovative ways to demotivate the school population to use private vehicles and incentivize them to use public transport or car pool. </li>
-<li>&bull;  Practices to achieve cleaner air would bear little result without attempts to ensure that there is circulation of fresh air. Fresh air keeps the mind and body healthy which helps students to concentrate better and be alert. The total window-floor ratio of a class-room should therefore, be more than at least five per cent. 
+      <ol style="list-style-type: japanese-formal !important;">
+        <li>Your school can make an impact and meanwhile, ensure your surroundings to have cleaner air through opting for carpooling and shifting to CNG run vehicles, if CNG is available in your area (CNG is a cleaner fuel). </li>
+<li>Try and motivate most of the permanent population to use non-polluting mode of transport such as walking or cycling, or use a sustainably motorized vehicles such as buses, public transport. Students in several schools have come up with new and innovative ways to demotivate the school population to use private vehicles and incentivize them to use public transport or car pool. </li>
+<li>Practices to achieve cleaner air would bear little result without attempts to ensure that there is circulation of fresh air. Fresh air keeps the mind and body healthy which helps students to concentrate better and be alert. The total window-floor ratio of a class-room should therefore, be more than at least five per cent. 
 </li>        
-      </ul>
+      </ol>
     </section>
     <div class="description">
       <h3>Your School's Performance</h3>
@@ -778,10 +780,10 @@ if ($data == 3 || $data == 4) { ?>
 </p>
     <section class="remember">
       <h3>Remember</h3>
-      <ul>
-        <li> &bull; Per capita per day electricity consumption should be well within the norms (46.5 MJ) and we all know that our non-renewable resources are depleting faster than they can re-generate. Switching over to renewable resources and expanding its usage is the only available option.
+      <ol style="list-style-type: japanese-formal !important;">
+        <li>Per capita per day electricity consumption should be well within the norms (46.5 MJ) and we all know that our non-renewable resources are depleting faster than they can re-generate. Switching over to renewable resources and expanding its usage is the only available option.
 </li>        
-      </ul>
+      </ol>
     </section>
     <h3>Your School's Performance</h3>
     <?php               
@@ -999,12 +1001,12 @@ if ($data == 3 || $data == 4) { ?>
     
     <section class="remember">
       <h3>Remember:</h3>
-      <ul>
-        <li> &bull; Avoid UPPF in school canteens, and encourage children to eat healthy and traditional foods/ local foods of the place/beverages. Sponsorship by UPPF brands should be avoided. On special occasions, provide laddoos or other cooked foods as rewards instead of chocolates or other packaged food. </li>
-<li> &bull; Try and promote the use of paper wrappings instead of the plastic ones to wrap the food, wherever possible
+      <ol style="list-style-type: japanese-formal !important;">
+        <li>Avoid UPPF in school canteens, and encourage children to eat healthy and traditional foods/ local foods of the place/beverages. Sponsorship by UPPF brands should be avoided. On special occasions, provide laddoos or other cooked foods as rewards instead of chocolates or other packaged food. </li>
+<li>Try and promote the use of paper wrappings instead of the plastic ones to wrap the food, wherever possible
 </li>
         
-      </ul>
+      </ol>
     </section>
     <h3>Your School's Performance</h3>
     <?php               
@@ -1089,8 +1091,8 @@ if ($data == 3 || $data == 4) { ?>
           </div>
         </li>     
         <li>
-          <figure><img src="assets/img/performance/sale.jpg" style="width: 125px !important"></figure>
-          <div class="description" style="margin-left: -12px !important">
+          <figure><img src="assets/img/performance/sale.jpg"></figure>
+          <div class="description">
             <h3 >Does the school distribute packaged food items as rewards during schools events.</h3>
             <?php
                                 if (getFiled('Q9F1', $schoolUserID) == "Y" && getFiled('Q9F2', $schoolUserID) != " ") {
@@ -1174,13 +1176,13 @@ if ($data == 3 || $data == 4) { ?>
 <p>As per the Right of Children to Free and Compulsory Education Act (RTE), 2009, a school should have an all-weathered school building with a playground, a kitchen (for cooking mid-meal), separate toilets for boys and girls, library, barrier-free access, etc.</p>
     <section class="remember">
       <h3>Remember:</h3>
-      <ul>
-        <li> &bull; Congestion on land (more buildings and inadequate green cover) leads to pressure on resources and hence on our environment.
-<li> &bull; We all know that a mind with plenty of oxygen has a greater power to grasp things. And for more oxygen we need more trees - our only oxygen factory.</li>
-<li> &bull; To keep these oxygen factories healthy, we should not use chemical pesticides to raise them. Chemical pesticides are poisonous to health and environment.
+      <ol style="list-style-type: japanese-formal !important;">
+        <li>Congestion on land (more buildings and inadequate green cover) leads to pressure on resources and hence on our environment.
+<li>We all know that a mind with plenty of oxygen has a greater power to grasp things. And for more oxygen we need more trees - our only oxygen factory.</li>
+<li>To keep these oxygen factories healthy, we should not use chemical pesticides to raise them. Chemical pesticides are poisonous to health and environment.
 </li>
         
-      </ul>
+      </ol>
     </section>
     <h3>Your School's Performance</h3>
     <?php               
@@ -1286,12 +1288,12 @@ if ($data == 3 || $data == 4) { ?>
     <p>The right to water is really the right to life and livelihood. Just as we cannot live without water, a country cannot survive if it is water-stressed. This resource determines our future, and acts as a driving force for our economic growth. Even today, the government admits to not being able to provide&#39; safe drinking water to more than half the country&#39;s population. Poor sanitation and unsafe drinking water account for a substantial part of the disease burden in India, contributing to diarrhoea, cholera, typhoid and jaundice.</p>
     <section class="remember">
       <h3>Remember:</h3>
-      <ul>
-        <li> &bull; Children should get adequate amount of water required per day starting from drinking to flushing to mopping floors to everything.</li>
-<li> &bull; Catch rain where it falls. Today, rainwater harvesting has evolved as an appropriate measure to overcome the water scarcity plus water logging due to excessive rains.</li>
-<li> &bull; Recharge groundwater. As per Central Ground Water Board (CGWB), around 39% of the analysed wells showed decline in ground water level in various parts of the country. We must try to reduce the dependence on ground water to stop further depletion of water table. Other measures can be harvest more rainwater and treat and reuse waste water and recharge ground water.</li>
+      <ol style="list-style-type: japanese-formal !important;">
+        <li>Children should get adequate amount of water required per day starting from drinking to flushing to mopping floors to everything.</li>
+<li>Catch rain where it falls. Today, rainwater harvesting has evolved as an appropriate measure to overcome the water scarcity plus water logging due to excessive rains.</li>
+<li>Recharge groundwater. As per Central Ground Water Board (CGWB), around 39% of the analysed wells showed decline in ground water level in various parts of the country. We must try to reduce the dependence on ground water to stop further depletion of water table. Other measures can be harvest more rainwater and treat and reuse waste water and recharge ground water.</li>
         
-      </ul>
+      </ol>
     </section>
     <h3>Your School's Performance</h3>
     <?php               
@@ -1489,7 +1491,7 @@ if ($data == 3 || $data == 4) { ?>
           </div>
         </li>
         <li <?php if(getFiled('Q7W1', $schoolUserID) == ""){ echo "style='display:none; height:130px!important;'";} ?>>
-          <figure><img src="assets/img/performance/water-source.jpg" style="width:127px!important;"></figure>
+          <figure><img src="assets/img/performance/water-source.jpg" style="width:137px!important;"></figure>
           <div class="description">
             <h3>Does your school get daily water supply?</h3>
             <?php
@@ -1927,8 +1929,8 @@ if ($data == 3 || $data == 4) { ?>
           </table>
         </li>
         <li style="height:130px!important;" <?php if(getFiled('Q10W1', $schoolUserID) == ""){ echo "style='display:none;'";} ?>>
-          <figure><img src="assets/img/performance/pump.jpg" ></figure>
-          <div class="description" >
+          <figure><img src="assets/img/performance/pump.jpg"></figure>
+          <div class="description">
             <h3>Hand Pumps</h3>
             <?php
                                 //Q.9 How many hand pumps do you have?
@@ -2114,8 +2116,8 @@ if ($data == 3 || $data == 4) { ?>
           </div>
         </li>
         <li <?php if(getFiled('Q16W1', $schoolUserID) == ""){ echo "style='display:none;'";} ?>>
-          <figure><img src="assets/img/performance/water_storage.jpg" style="width: 125px !important"></figure>
-          <div class="description" style="margin-left: -12px !important">
+          <figure><img src="assets/img/performance/water_storage.jpg"></figure>
+          <div class="description">
             <h3>Is there a water storage system in place to supply water in the toilets?</h3>
             <?php
                                 //Q.14 Is there a water storage system in place to supply water in the toilets?
@@ -2153,7 +2155,7 @@ if ($data == 3 || $data == 4) { ?>
           </div>
         </li>
         <li <?php if(getFiled('Q18W1', $schoolUserID) == ""){ echo "style='display:none; height:130px;'";}else{echo "style='height:130px;'";} ?>>
-          <figure><img src="assets/img/performance/cleaned_toilets.jpg"></figure>
+          <figure><img src="assets/img/performance/cleaned_toilets.jpg" ></figure>
           <div class="description">
             <h3>Are the toilets cleaned?</h3>
             <?php
@@ -2233,16 +2235,16 @@ if ($data == 3 || $data == 4) { ?>
 </p>
     <section class="remember">
       <h3>Remember:</h3>
-      <ul>
-<li> &bull;  Segregation at source is the first and most important part of efficient waste management.</li>
-<li> &bull; Every class should have minimum of two dustbins to collect wet and dry waste. </li>
-<li> &bull;  Set up a composting facility to manage the wet waste within school premises</li>
-<li> &bull;  Dispose of e-waste by sending it to authorised dealers.</li>
-<li> &bull;  DO NOT burn waste in school premises.</li>
-<li> &bull; Send waste to designated dumping or landfill sites only.</li>
-<li> &bull; Have an efficient waste policy for your school.</li>
+      <ol style="list-style-type: japanese-formal !important;">
+<li>Segregation at source is the first and most important part of efficient waste management.</li>
+<li>Every class should have minimum of two dustbins to collect wet and dry waste. </li>
+<li>Set up a composting facility to manage the wet waste within school premises</li>
+<li>Dispose of e-waste by sending it to authorised dealers.</li>
+<li>DO NOT burn waste in school premises.</li>
+<li>Send waste to designated dumping or landfill sites only.</li>
+<li>Have an efficient waste policy for your school.</li>
 
-    </ul>
+    </ol>
     </section>
     <h3>Your School's Performance</h3>
     <?php
