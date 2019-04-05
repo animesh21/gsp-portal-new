@@ -362,7 +362,7 @@
       <div class="cEmail">
         <input type="text" class="form-control" name="captcha" placeholder="Enter Captcha"/>
       </div>
-      <?php echo $captcha_image; ?> </div>
+      <img src="http://www.greenschoolsprogramme.org/audit/18/uploads/1554451305.2781.jpg" style="width: 230; height: 50; border: 0;" alt=" "> </div>
     <div class="form-group text-center">
       <input type="submit" name="submit" value="Submit" class="btn btn-default">
     </div>
@@ -383,7 +383,7 @@
       <li class="earth"><a href="http://www.downtoearth.org.in/" target="_blank"><img
                                 src="<?php echo base_url(); ?>assets/img/earth.jpg" class="img-responsive"></a></li>
       <li class="rain"><a href="http://www.rainwaterharvesting.org/" target="_blank"><img
-                                src="<?php echo base_url(); ?><?php echo base_url(); ?>assets/img/rain.jpg"
+                                src="<?php echo base_url(); ?>assets/img/rain.jpg"
                                 class="img-responsive"></a></li>
       <li class="times"><a href="http://www.gobartimes.org/" target="_blank"><img
                                 src="<?php echo base_url(); ?>assets/img/times.jpg" class="img-responsive"></a></li>
