@@ -505,7 +505,7 @@ function validateCaptcha() {
   
   debugger
   if (document.getElementById("cpatchaTextBox").value == code) {
-    alert("Valid Captcha")
+   
   }else{
     event.preventDefault();
     alert("Invalid Captcha. try Again");
