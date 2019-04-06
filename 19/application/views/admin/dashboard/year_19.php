@@ -1,6 +1,6 @@
 <h1>Dashboard</h1>
 
-<div class="schools-statics "> <a href="#" target="_blank">
+<div class="schools-statics "> <a href="#">
         <div class="statics-circle"> <span>1</span>
             <label>view</label>
         </div>
