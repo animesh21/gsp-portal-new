@@ -41,6 +41,14 @@ class Dashboard extends CI_Controller {
         $this->load->view('admin/includes/template', $data);
     }	
 	
+	
+	public function year19() {
+	         $data['main']='admin/dashboard/year_19';
+	        $data['title']='Home | Dashboard';
+		
+	        $this->load->view('admin/includes/template', $data);
+	    }
+	
 	public function audit_pahse_1(){
 	        $data['main']='admin/dashboard/audit-pahse-1';
                 $data['title']='Home | Audit Phase 1';
