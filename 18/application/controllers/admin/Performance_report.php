@@ -91,7 +91,7 @@ class Performance_report extends CI_Controller {
       public function AllExcelPrimary()
 	{
 		$data['main']='admin/performance_report/all-primary';
-        $data['title']='Primary_Excel';
+                $data['title']='Primary_Excel';
 		$data['record1']=$this->Performance_model->getExcelPrimarySchool();
 		$this->load->view('admin/includes/template', $data);
 	}
@@ -99,12 +99,26 @@ class Performance_report extends CI_Controller {
 	public function AllExcelSecondary()
 	{
 		$data['main']='admin/performance_report/all-seconday';
-        $data['title']='Secondary_Excel';
+                $data['title']='Secondary_Excel';
 		$data['record1']=$this->Performance_model->getExcelSecondarySchool();
 		$this->load->view('admin/includes/template', $data);	
 	}	
 	
+	public function AllExcelPrimaryPhase_2()
+	{
+		$data['main']='admin/performance_report/all_primary_phase_2';
+                $data['title']='Primary_Excel';
+		$data['record1']=$this->Performance_model->getExcelPrimaryPhase_2();
+		$this->load->view('admin/includes/template', $data);
+	}
 	
+	public function AllExcelSecondaryPhase_2()
+	{
+		$data['main']='admin/performance_report/all_seconday_phase_2';
+                $data['title']='Secondary_Excel';
+		$data['record1']=$this->Performance_model->getExcelSecondaryPhase_2();
+		$this->load->view('admin/includes/template', $data);	
+	}	
 	
 	
 	
