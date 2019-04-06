@@ -9,10 +9,4 @@
 </div>
 
 
-<div class="schools-statics "> <a href="<?php base_url()?>dashboard/year19" target="_blank">
-        <div class="statics-circle"> <span>2</span>
-            <label>Phase</label>
-        </div>
-    </a>
-    <div class="title">2019</div>
-</div>
+
