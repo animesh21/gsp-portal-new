@@ -2041,7 +2041,7 @@ public function getExcel2017Data() {
                         ->join('states AS b', 'a.state=b.id', 'left')
                         ->join('cities AS c', 'a.district=c.id', 'left')
 		        ->join('gsp_user AS d', 'a.userid=d.id', 'left')
-                        ->where('a.date_added >=', '2018-02-21 00:00:00')
+                        ->where('a.date_added >=', '2019-03-01 00:00:00')
                         ->order_by('a.id', 'desc')
                         ->get()->result();
         
