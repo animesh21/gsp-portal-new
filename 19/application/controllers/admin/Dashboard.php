@@ -296,6 +296,8 @@ class Dashboard extends CI_Controller {
 	
 	
 	public function year18_phase1() {
+		
+		echo 'hiii'; exit;
         $data['main']='admin/dashboard/year18_phase1';
         $data['title']='Home | Dashboard';
 	    $data['total_school']=$this->Dashboard_model->getSchool_alldata();
