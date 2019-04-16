@@ -145,31 +145,32 @@ class Dashboard extends CI_Controller {
 	 
 	
 	public function audit_pahse_2(){
-	    $data['main']='admin/dashboard/audit-pahse-2';
-        $data['title']='Home | Audit Phase 2';
+		
+	        $data['main']='admin/dashboard/audit-pahse-2';
+                $data['title']='Home | Audit Phase 2';
 		$data['audit1']=$this->Dashboard_model->getschool_started_audit_phase_2();
-        $data['Schools_pahse2'] = $this->School_model->getSchools_phase_2();
-        $data['schoolcount']=$this->Dashboard_model->schoolCount_phase_2();
-	$data['complete_audit_phase_2_count']= $this->Dashboard_model->school_that_complete_audit_phase_2();
+                $data['Schools_pahse2'] = $this->School_model->getSchools_phase_2();
+                $data['schoolcount']=$this->Dashboard_model->schoolCount_phase_2();
+	        $data['complete_audit_phase_2_count']= $this->Dashboard_model->school_that_complete_audit_phase_2();
 		$data['completecount']=$this->Dashboard_model->getschool_that_complete_audit_phase_2();
 		$data['completecount1']=$this->Dashboard_model->getschool_that_complete_audit_phase_2_1();
 		$data['submitcount']=$this->Dashboard_model->getschool_that_submit_audit_phase_2();
 		$data['uncompletecount']=$this->Dashboard_model->getschool_start_but_not_complete_phase_2();
 		$data['notstartcount']=$this->Dashboard_model->getschools_not_start_the_audit_phase_2();
-	    $this->load->view('admin/includes/template', $data);
+	        $this->load->view('admin/includes/template', $data);
 	}
 	 
 	 
 	public function  registration_2017_phase_2()
-    {
+        {
         $data['main']='admin/audit/register_2017_phase_2';
         $data['title']='Registration 2017';
         $data['record']=$this->Dashboard_model->getData_phase_2();
-      $data['record1']=$this->Dashboard_model->getData_phase_2_submitted();
+        $data['record1']=$this->Dashboard_model->getData_phase_2_submitted();
         $data['Schools'] = $this->School_model->getSchools_phase_2();
         $data['schoolcount']=$this->Dashboard_model->schoolCount_phase_2();
         $this->load->view('admin/includes/template', $data);
-    }
+        }
 	
 	public function  registration_2017_phase_new_2()
         {
@@ -296,9 +297,7 @@ class Dashboard extends CI_Controller {
 	
 	
 	public function year18_phase1() {
-		
-		echo 'hiii'; exit;
-        $data['main']='admin/dashboard/year18_phase1';
+	 $data['main']='admin/dashboard/year18_phase1';
         $data['title']='Home | Dashboard';
 	    $data['total_school']=$this->Dashboard_model->getSchool_alldata();
         $data['school']=$this->Dashboard_model->getSchool_18data();
