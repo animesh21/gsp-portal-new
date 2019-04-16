@@ -77,6 +77,7 @@ class Performance_report extends CI_Controller {
         $data['main'] = 'admin/performance_report/total-point-calculation';
         $data['title'] = 'Home | Total Calculation';
         $data['record'] = $this->Performance_model->getTotalCalculation();
+        $data['record1'] = $this->Performance_model->getTotalCalculation_Phase_2();
         $this->load->view('admin/includes/template', $data);
     }	
  
