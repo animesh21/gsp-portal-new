@@ -14,6 +14,33 @@
 </div>
 <div class="row">
   <div class="col-md-12">
+     <h2>2019 Audit</h2> 
+    <table class="display dataTable no-footer table1">
+      <thead>
+        <tr role="row">
+          <th>Phase</th>
+          <th>Total School Registrations</th>
+          <th>Schools That Started The Audit</th>
+          <th>School submitted the Audit in Phase 1</th>
+          <th>Schools Started The Audit But Did Not Complete</th>
+          <th>Schools Did Not Start The Audit</th>
+          <th>Schools Completed The Audit But Not Submitted</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr role="row" class="odd">
+          <td class="sorting_1">Phase-1</td>
+          
+        </tr>
+ 
+
+         
+       
+      </tbody>
+    </table><br/>
+
+
+
 	  <h2>2018 Audit</h2> 
     <table class="display dataTable no-footer table1">
       <thead>
@@ -30,12 +57,32 @@
       <tbody>
         <tr role="row" class="odd">
           <td class="sorting_1">Phase-1</td>
-          <td><?php echo count($School_18data);?></td>
-          <td><?php echo count($startedtheaudit_18data);?></td>
-          <td><?php echo count($SubmittedTheAudit_18data);?></td>
-          <td><?php echo count($StartedAuditButDidNotComplete);?></td>
-          <td><?php echo count($NotStartTheAudit_18data);?></td>
-          <td><?php echo count($CompletedAuditButNotSubmitted_18data);?></td>
+          <td><?php echo $t1= count($School_18data);?></td>         
+          <td><?php echo $t2= count($startedtheaudit_18data);?></td>
+          <td><?php echo $t3= count($SubmittedTheAudit_18data);?></td>
+          <td><?php echo $t4= count($StartedAuditButDidNotComplete);?></td>
+          <td><?php echo $t5= count($NotStartTheAudit_18data);?></td>
+          <td><?php echo $t6= count($CompletedAuditButNotSubmitted_18data);?></td>
+        </tr>
+
+        <tr role="row" class="odd">
+          <td class="sorting_1">Phase-2</td>
+          <td><?php echo $schoolcount_phase_2;?></td>
+          <td><?php echo $audit1_phase_2;?></td>
+          <td><?php echo $submitcount_phase_2;?></td>
+          <td><?php echo $uncompletecount_phase_2;?></td>
+          <td><?php echo $notstartcount_phase_2;?></td>
+          <td><?php echo $t7 = count($complete_audit_phase_2_count_phase_2);?></td>
+        </tr>
+
+        <tr role="row" class="odd">
+          <td class="sorting_1">Total</td>
+          <td><?php echo $t1 + $schoolcount_phase_2;?></td>
+          <td><?php echo $t2 + $audit1_phase_2;?></td>
+          <td><?php echo $t3 + $submitcount_phase_2;?></td>
+          <td><?php echo $t4 + $uncompletecount_phase_2;?></td>
+          <td><?php echo $t5 + $notstartcount_phase_2;?></td>
+          <td><?php echo $t6 + $t7;?></td>
         </tr>
        
       </tbody>
