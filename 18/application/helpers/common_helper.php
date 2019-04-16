@@ -423,7 +423,7 @@ if (!function_exists('getSchoolRating')) {
             $test = $temp1->air_points+$temp1->energy_points+$temp1->food_points+$temp1->land_points+$temp1->water_points+$temp1->waste_points;
         }
 	     
-	  $rate = ($test*0.61) ; 
+	       $rate = $test ; 
 		return $rate;
     }
 }
@@ -1889,6 +1889,39 @@ if(!function_exists('get_districtById')){
      $CI->db->where('id',$district);
      $temp = $CI->db->select('name')->from("cities")->get()->result();
      return $temp;
+   }
+}
+
+
+	if(!function_exists('get_level_of_school')){
+   function get_level_of_school($school_id){    
+    $CI = & get_instance();
+
+
+   $temp =$CI->db->select('*')->from('tbl_total')
+                               ->where('userid',$school_id)
+                               ->get()
+                                ->result();
+
+                                if(!empty($temp)){
+
+                                  return $temp;
+                                }else{
+
+  $temp1 =$CI->db->select('*')->from('tbl_total_phase2')
+                               ->where('userid',$school_id)
+                               ->get()
+                                ->result();
+
+                                return $temp1;
+
+                                }
+            
+          //echo    $CI->db->last_query();    
+
+
+
+     
    }
 }
 	
