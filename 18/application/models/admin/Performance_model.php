@@ -210,21 +210,40 @@ class Performance_model extends CI_Model {
 		}
 	
 	
- public function getTotalCalculation() {
-return $this->db->select('y.name AS state_name, z.name AS district_name,a.coemail,a.comobile,a.name,a.id,a.userid,c.population,c.category,d.points AS air_point,e.Point AS energy_point ,f.Point As food_point,g.Point AS land_point,h.points AS water_point,b.points AS waste_point')
-	    ->from('gsp_school AS a')
-	    ->where('a.progress=100')
-	    ->join('states AS y', 'a.state=y.id', 'left')
-            ->join('cities AS z', 'a.district=z.id', 'left')
-            ->join('tbl_waste AS b', 'a.userid=b.userid', 'left')
-	    ->join('tbl_general AS c', 'a.userid=c.userid', 'left')
-	    ->join('tbl_air AS d', 'a.userid=d.userid', 'left')
-	    ->join('tbl_energy AS e', 'a.userid=e.userid', 'left')
-	    ->join('tbl_food AS f', 'a.userid=f.userid', 'left')
-	    ->join('tbl_land AS g', 'a.userid=g.userid', 'left')
-	    ->join('tbl_water AS h', 'a.userid=h.userid', 'left')
-	    ->get()->result();
+ //  public function getTotalCalculation() {
+// return $this->db->select('y.name AS state_name, z.name AS district_name,a.coemail,a.comobile,a.name,a.id,a.userid,c.population,c.category,d.points AS air_point,e.Point AS energy_point ,f.Point As food_point,g.Point AS land_point,h.points AS water_point,b.points AS waste_point')
+// 	    ->from('gsp_school AS a')
+// 	    ->where('a.progress=100')
+// 	    ->join('states AS y', 'a.state=y.id', 'left')
+//             ->join('cities AS z', 'a.district=z.id', 'left')
+//             ->join('tbl_waste AS b', 'a.userid=b.userid', 'left')
+// 	    ->join('tbl_general AS c', 'a.userid=c.userid', 'left')
+// 	    ->join('tbl_air AS d', 'a.userid=d.userid', 'left')
+// 	    ->join('tbl_energy AS e', 'a.userid=e.userid', 'left')
+// 	    ->join('tbl_food AS f', 'a.userid=f.userid', 'left')
+// 	    ->join('tbl_land AS g', 'a.userid=g.userid', 'left')
+// 	    ->join('tbl_water AS h', 'a.userid=h.userid', 'left')
+// 	    ->get()->result();
+//       }
+
+
+		 public function getTotalCalculation() {
+			return $this->db->select('*')
+								->from('tbl_total')
+								->get()
+								->result();
       }
+
+      public function getTotalCalculation_Phase_2() {
+			return $this->db->select('*')
+								->from('tbl_total_phase2')
+								->get()
+								->result();
+      }
+
+	
+	
+	
   public function combinedPerformancePoint() {
 return $this->db->select('a.*,b.name AS state_name, c.name AS district_name')->from('tbl_total AS a')
        ->join('states AS b', 'a.state=b.id', 'left')
