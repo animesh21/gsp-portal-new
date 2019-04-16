@@ -82,9 +82,28 @@ h2 span {
      ?>
         School</p>
       <p><strong>School Rating:&nbsp;
-        <?php $percentage=getSchoolRating($schoolUserID); ?>
+        <?php $percentage2=getSchoolRating($schoolUserID); ?>
         <?php
-            $percentage= ceil($percentage) ;
+            $percentage1= ceil($percentage2) ;
+
+          
+
+
+             $level_school = get_level_of_school($schoolUserID);
+
+            
+
+      
+         if($level_school[0]->higest_level < 6){
+
+               $percentage= number_format(($percentage1*100)/95,2); 
+
+         }else{
+
+             $percentage= number_format(($percentage1*100)/164,2);
+           
+
+         }
         
       if($percentage>=70){
        echo "<label class='label label-success' style='background:green; color:black;'>Green</label>";
