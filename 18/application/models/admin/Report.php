@@ -595,6 +595,7 @@ class Report extends CI_Model {
 		
 		public function registerparticipationBystatesecondary($state)
 		{
+			 $this->db->where('a.make_school_disabled',"1");
 			return $this->db->select('a.*')
 			         ->from('gsp_school As a')
 					 ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
@@ -608,6 +609,7 @@ class Report extends CI_Model {
 		
 		public function startparticipationBystatesecondary($state)
 		{
+			$this->db->where('a.make_school_disabled',"1");
 			 return $this->db->select('a.*')
 			           ->from('gsp_school As a')
 					   ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
@@ -622,6 +624,7 @@ class Report extends CI_Model {
 		
 		public function completeparticipationBystatesecondary($state)
 		{
+			$this->db->where('a.make_school_disabled',"1");
 			return $this->db->select('a.*')
 			        ->from('gsp_school As a')
 				    ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
@@ -636,6 +639,7 @@ class Report extends CI_Model {
 		
 		public function notstartparticipationBystatesecondary($state)
 		{
+			 $this->db->where('a.make_school_disabled',"1");	
 			return $this->db->select('a.*')
 			         ->from('gsp_school As a')
 					 ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
@@ -650,6 +654,7 @@ class Report extends CI_Model {
 		
 		public function registerparticipationBystateprimary($state)
 		{
+			$this->db->where('a.make_school_disabled',"1");
 			return $this->db->select('a.*')
 			         ->from('gsp_school As a')
 					 ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
@@ -663,6 +668,7 @@ class Report extends CI_Model {
 		
 		public function startparticipationBystateprimary($state)
 		{
+			$this->db->where('a.make_school_disabled',"1");
 			 return $this->db->select('a.*')
 			           ->from('gsp_school As a')
 					   ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
@@ -677,6 +683,7 @@ class Report extends CI_Model {
 		
 		public function completeparticipationBystateprimary($state)
 		{
+			 $this->db->where('a.make_school_disabled',"1");
 			return $this->db->select('a.*')
 			        ->from('gsp_school As a')
 				    ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
@@ -691,6 +698,7 @@ class Report extends CI_Model {
 		
 		public function notstartparticipationBystateprimary($state)
 		{
+			 $this->db->where('a.make_school_disabled',"1");
 			return $this->db->select('a.*')
 			         ->from('gsp_school As a')
 					 ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
