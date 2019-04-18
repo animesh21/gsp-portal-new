@@ -4,7 +4,7 @@
 <!--close container-->
 <footer>
     <div class="container">
-        <p>Copyright &COPY; 2017 Centre for Science and Environment</p>
+        <p>Copyright &COPY; 2018 Centre for Science and Environment</p>
     </div>
     <!--close container-->
 </footer>
