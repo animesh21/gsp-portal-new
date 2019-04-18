@@ -180,7 +180,7 @@ $allyoydata = getYOYComparisonAllData($schoolId);
   
 </table>
 	      </div>
- 
+ <div style="overflow-x: scroll;">  
 <table>
   
   <tr style="background-color: #e86549; color: #000">
@@ -211,7 +211,7 @@ $allyoydata = getYOYComparisonAllData($schoolId);
   </tr>
   
 </table>
-
+</div>
 
       </div>
       
