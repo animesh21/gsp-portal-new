@@ -147,7 +147,7 @@ $allyoydata = getYOYComparisonAllData($schoolId);
       <?php } ?>
       
       <div class="col-md-12">
-     <div style=overflow-x: scroll;>   
+     <div style="overflow-x: scroll;">   
   <table>
   <tr style="background-color: #e86549; color: #000">
     <th>Name of the School/Institution:</th>
