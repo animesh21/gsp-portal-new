@@ -146,7 +146,7 @@
                 <ul class="dropdown-menu">
                   <li class=""><a href="<?php echo base_url('admin/audit_started'); ?>">AUDIT STARTED</a></li>
                   <li><a href="<?php echo base_url('admin/audit_started_2017'); ?>">MASTER LIST REGISTRATIONS </a></li>
-			 <li><a href="#" onclick="sendBulkEmail()">Api Test</a></li>
+			<!-- <li><a href="#" onclick="sendBulkEmail()">Api Test</a></li> -->
 		  <li><a href="<?php echo base_url('admin/audit_started_2017/disabled_school'); ?>">DISABLED SCHOOL LIST</a></li>	
 		  <!--<li><a href="<?php //echo base_url('admin/dashboard/total18_registration'); ?>">REGISTRATIONS 2018</a></li>-->	
                   <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">REGISTRATION</a>
@@ -237,18 +237,23 @@
               <li class=""><a href="#">ANALYTICS<span class="caret"></span></a>
                 <ul class="dropdown-menu">
                  <li><a href="<?php echo base_url('admin/reports/'); ?>">Participation By Zone</a></li>
-                  <li><a href="<?php echo base_url('admin/reports/getParticipationByState'); ?>">Participation By State</a></li>
+                  <!--  <li><a href="<?php //echo base_url('admin/reports/getParticipationByState'); ?>">Participation By State</a></li> -->
                   <li><a href="<?php echo base_url('admin/reports/getPerformanceByState'); ?>">Performance By State</a></li>
-				  <li><a href="<?php echo base_url('admin/reports/getParticipationByStateComparison'); ?>">Participation Comparison Report</a></li>
-                  <li><a href="<?php echo base_url('admin/reports/getPerformanceByStateComparison'); ?>">Performance Comparison Report</a></li>
-                  <li><a href="<?php echo base_url('admin/reports/getWasteGenerationReport'); ?>">Waste Generation Report</a></li>
-                  <li><a href="<?php echo base_url('admin/reports/geteWasteDisposalReport'); ?>">e-Waste Disposal Report</a></li>
+				  <!-- <li><a href="<?php //echo base_url('admin/reports/getParticipationByStateComparison'); ?>">Participation Comparison Report</a></li>
+                  <li><a href="<?php //echo base_url('admin/reports/getPerformanceByStateComparison'); ?>">Performance Comparison Report</a></li>
+                  <li><a href="<?php //echo base_url('admin/reports/getWasteGenerationReport'); ?>">Waste Generation Report</a></li>
+                  <li><a href="<?php //echo base_url('admin/reports/geteWasteDisposalReport'); ?>">e-Waste Disposal Report</a></li> -->
 		  <li><a href="<?php echo base_url('admin/reports/getair'); ?>">Air Report</a></li>
 	          <li><a href="<?php echo base_url('admin/reports/getenergy'); ?>">Energy Report</a></li>
 		  <li><a href="<?php echo base_url('admin/reports/getFood'); ?>">Food Report</a></li>		
 		  <li><a href="<?php echo base_url('admin/reports/getland'); ?>">Land Report</a></li>
 		  <li><a href="<?php echo base_url('admin/reports/getWater'); ?>">Water Report</a></li>
-		  <li><a href="<?php echo base_url('admin/reports/getWaste'); ?>">Waste Report</a></li>	
+		  <li><a href="<?php echo base_url('admin/reports/getWaste'); ?>">Waste Report</a></li>
+			<li><a href="feedback_audit_before.php">How many Times schools participated Report </a></li>
+                  <li><a href="feedback_self_explanatory.php"> Audit easy to understand and self explanatory Report </a></li>
+                  <li><a href="feedback_resource_efficient_2019.php">Green School (resource efficient) by 2019 Report </a></li>
+                  <li><a href="feedback_rate_overall_design.php">rate the overall design of the audit Report </a></li>
+                  <li><a href="feedback_how_many_times_contact.php">How many times did you contact GSP Team</a></li>
                 </ul>
               </li>
               <li class=""> <a href="#">ANALYTICAL TABLES<span class="caret"></span></a>
@@ -271,7 +276,7 @@
                   <li><a href="<?php echo base_url('admin/analytics/getWaterConsumptionPatternReport'); ?>">Water Consumption Pattern Report</a></li>
                 </ul>
               </li>
-              <li class=""><a href="#">Feedback Analytics<span class="caret"></span></a>
+              <!-- <li class=""><a href="#">Feedback Analytics<span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><a href="feedback_audit_before.php">How many Times schools participated Report </a></li>
                   <li><a href="feedback_self_explanatory.php"> Audit easy to understand and self explanatory Report </a></li>
@@ -279,7 +284,7 @@
                   <li><a href="feedback_rate_overall_design.php">rate the overall design of the audit Report </a></li>
                   <li><a href="feedback_how_many_times_contact.php">How many times did you contact GSP Team</a></li>
                 </ul>
-              </li>
+              </li> -->
               <li class=""><a class="lptext" title="Change Password Form" href="<?php echo base_url('admin/logout'); ?>">Logout</a></li>
             </ul>
           </div>
