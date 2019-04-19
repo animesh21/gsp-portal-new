@@ -1579,6 +1579,7 @@ class Audit_started_model extends CI_Model {
 						->like('d.questionid','Q1G2')
                         ->where('d.answer <',6)
 						->where_in('state',$region1)
+			->where("a.make_school_disabled","1")
                         ->order_by('a.id', 'desc')
 						->get()->result();
 						//echo $this->db->last_query(); exit;
@@ -1595,6 +1596,7 @@ class Audit_started_model extends CI_Model {
 		   	                ->join('cities AS c', 'a.district=c.id', 'left')
 						    ->join('gsp_answers as d', 'a.userid=d.userid', 'left')
 						->like('d.questionid','Q1G2')
+					  ->where("a.make_school_disabled","1")
                         ->order_by('a.id', 'desc')
 						->group_by('a.id')
                         ->get()->result();
@@ -1617,6 +1619,7 @@ class Audit_started_model extends CI_Model {
                         ->join('states AS b', 'a.state=b.id', 'left')
 		   	            ->join('cities AS c', 'a.district=c.id', 'left')
 						->where_in('state',$region1)
+			->where("a.make_school_disabled","1")
                         ->order_by('a.id', 'desc')
 						->group_by('a.id')
                         ->get()->result();
