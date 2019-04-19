@@ -368,6 +368,88 @@ function getPartnerGraphByState($partnerId){
 	}
 }
 
+
+
+
+if(!function_exists('getDataGraphByDistrict_all')){
+function getDataGraphByDistrict_all($stateId,$school){
+ $CI = & get_instance();
+ ini_set('max_execution_time', -1); 
+    $arrDistrict=array();
+    $arrRegister=array();
+    $arrAuditNotStarted=array();
+    $arrAuditStarted=array();
+    $arrAuditCompleted=array();
+      if($stateId==1 && $school==2){
+
+    $CI->db->distinct("district");
+    $CI->db->where('make_school_disabled',"1");    
+    $districtResult=$CI->db->select("district")
+             ->from("gsp_school")->get()->result();
+
+    //echo $CI->db->last_query(); exit;
+    
+
+         foreach($districtResult as $district){
+               $arrDistrict[]=array("districtame"=>getdistrictById($district->district));
+         $arrRegister[].=getSchoolCountBydistrict($district->district);
+         $arrAuditNotStarted[].=getPartnersAuditNotStartedCountByDistrict($district->district,'5');
+         $arrAuditStarted[].=getPartnersAuditStartedCountByDistrict($district->district,'5','100');
+         $arrAuditCompleted[].=getPartnersAuditCompletedCountByDistrict($district->district,'100');   
+    } 
+    $completeArr=array("0"=>$arrDistrict,"1"=>$arrRegister,"2"=>$arrAuditNotStarted,"3"=>$arrAuditStarted,"4"=>$arrAuditCompleted);
+
+    return $completeArr;  
+  } elseif($stateId==1 && $school==1){
+   
+      $CI->db->distinct("district");
+    $CI->db->where('make_school_disabled',"1");    
+    $districtResult=$CI->db->select("district")
+             ->from("gsp_school")->get()->result();
+
+    
+    
+
+       foreach($districtResult as $district){
+               $arrDistrict[]=array("districtame"=>getdistrictById($district->district));
+         $arrRegister[].=getSchoolCountBydistrict_secondary($district->district);
+         $arrAuditNotStarted[].=getPartnersAuditNotStartedCountByDistrict_secondary($district->district,'5');
+         $arrAuditStarted[].=getPartnersAuditStartedCountByDistrict_secondary($district->district,'5','100');
+         $arrAuditCompleted[].=getPartnersAuditCompletedCountByDistrict_secondary($district->district,'100');   
+      } 
+        $completeArr=array("0"=>$arrDistrict,"1"=>$arrRegister,"2"=>$arrAuditNotStarted,"3"=>$arrAuditStarted,"4"=>$arrAuditCompleted);
+
+      return $completeArr;
+
+  }
+
+  elseif($stateId==1 && $school==0){
+   
+      $CI->db->distinct("district");
+      $CI->db->where('make_school_disabled',"1");    
+      $districtResult=$CI->db->select("district")
+             ->from("gsp_school")->get()->result();
+
+      foreach($districtResult as $district){
+               $arrDistrict[]=array("districtame"=>getdistrictById($district->district));
+         $arrRegister[].=getSchoolCountBydistrict_primary($district->district);
+         $arrAuditNotStarted[].=getPartnersAuditNotStartedCountByDistrict_primary($district->district,'5');
+         $arrAuditStarted[].=getPartnersAuditStartedCountByDistrict_primary($district->district,'5','100');
+         $arrAuditCompleted[].=getPartnersAuditCompletedCountByDistrict_primary($district->district,'100');   
+    } 
+        $completeArr=array("0"=>$arrDistrict,"1"=>$arrRegister,"2"=>$arrAuditNotStarted,"3"=>$arrAuditStarted,"4"=>$arrAuditCompleted);
+
+      return $completeArr;
+
+  }
+    
+    
+  }
+}
+
+
+
+
 if(!function_exists('getDataGraphByDistrict')){
 function getDataGraphByDistrict($stateId){
  $CI = & get_instance();
