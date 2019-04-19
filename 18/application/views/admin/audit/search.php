@@ -31,6 +31,43 @@
     ?>
   <div id="containerStateWisePartner1_<?php echo $i; ?>"> </div><br/>
     <?php } ?>
+
+
+    
+    <?php 
+     
+     if($state_id1==1 && $school==2){
+
+    $statewisegraph1=getDataGraphByDistrict_all($state_id1,$school);
+    $countArr1=count(array_chunk($statewisegraph1[0],7,true));
+    for($i=0;$i<$countArr1; $i++){
+    ?>
+  <div id="containerStateWisePartner1_<?php echo $i; ?>"> </div><br/>
+    <?php } ?>
+
+  <?php } elseif ($state_id1==1 && $school==1) { 
+
+     $statewisegraph1=getDataGraphByDistrict_all($state_id1,$school);
+    $countArr1=count(array_chunk($statewisegraph1[0],7,true));
+    for($i=0;$i<$countArr1; $i++){
+    ?>
+  <div id="containerStateWisePartner1_<?php echo $i; ?>"> </div><br/>
+    <?php } ?>
+    
+  <?php } elseif ($state_id1==1 && $school==0) { 
+
+     $statewisegraph1=getDataGraphByDistrict_all($state_id1,$school);
+    $countArr1=count(array_chunk($statewisegraph1[0],7,true));
+    for($i=0;$i<$countArr1; $i++){
+    ?>
+  <div id="containerStateWisePartner1_<?php echo $i; ?>"> </div><br/>
+    <?php } ?>
+   
+  <?php } ?>
+</div>
+
+
+
 </div>
 
 
@@ -122,19 +159,317 @@
 <?php if($school==2 && $state==1) { ?>
 
 
- <?php } else if($school==1 && $state==1) { ?>
 
+ <?php 
+ $districtwisegraph1=getDataGraphByDistrict_all($state_id1,$school);
+ $graphCount=count($districtwisegraph1[0]);
+ $loopCount;
+ if($districtwisegraph1%7==0){ $loopCount=10;}else{ $loopCount=11;}
+ $countArr1=count(array_chunk($districtwisegraph1[0],8,true));
+ $countTotalArr1=count($districtwisegraph1[0]);
+ $arrData1=array_chunk($districtwisegraph1[0],$loopCount,true);
+ $arrData1_1=array_chunk($districtwisegraph1[1],$loopCount,true);
+ $arrData1_2=array_chunk($districtwisegraph1[2],$loopCount,true);
+ $arrData1_3=array_chunk($districtwisegraph1[3],$loopCount,true);
+ $arrData1_4=array_chunk($districtwisegraph1[4],$loopCount,true);
+ $dataCount1=array();
+ $countInteration1=0;
+ $y=0;
+ $s=0;
+ for($i=0,$t=0;$i<$countArr1; $i++){$dataCount1[]=$i;}
+ for($i=0,$t=0;$i<$countArr1; $i++){
+?>
+<script type="text/javascript">
+       Highcharts.chart('containerStateWisePartner1_<?php echo $i; ?>',{
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Participation Chart Of All  District'
+        },
+    yAxis: {
+      title: {
+            text: 'No. of Schools'
+          }
+    },
+        xAxis: {
+            categories: [
+      <?php 
+             for($r=0;$r<$loopCount;++$r){
+         if(!empty($arrData1[$i][$y]['districtame'])){
+          echo "'".$arrData1[$i][$y]['districtame']."'"; }?>,
+             <?php $y++; 
+       }?>  
+            ],
+            crosshair: true
+        },
+    
+    legend: {
+        enabled: true
+    },
+        exporting: { enabled: true },
+        credits: {enabled: false},
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0;font-size:12px;">{series.name}: </td>' +
+                '<td style="padding:0;font-size:12px;">{point.y:.1f}</td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        plotOptions: {
+     series: {
+            borderWidth: 0,
+            dataLabels: {
+                enabled: true,
+                format: '{point.y}'
+            }
+        },
+    
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [{
+            name: 'Registered for Audit',
+      color:'rgb(124, 181, 236)',
+            data: <?php echo json_encode(array_map('intval',array_values($arrData1_1[$t]))); ?> //NORTH
+            //Registration, Audit Started, Audit Completed, Feedback Recieved
+        }, {
+            name: 'Audit Not Started',
+      color:'#fc3300',
+            data: <?php echo json_encode(array_map('intval',array_values($arrData1_2[$t]))); ?> //South
+
+        }, {
+            name: 'Audit Started',
+      color:'#fcfc00',
+            data: <?php echo json_encode(array_map('intval',array_values($arrData1_3[$t]))); ?> //South
+
+        }, {
+            name: 'Audit Completed',
+      color:'#00ae4f',
+            data: <?php echo json_encode(array_map('intval',array_values($arrData1_4[$t]))); ?> //East
+
+        }   
+    ],
+}); 
+</script><?php
+  $t++;
+} ?>
+
+ 
+ <?php } else if($school==1 && $state==1) { ?>
+  
+
+ <?php 
+ $districtwisegraph1=getDataGraphByDistrict_all($state,$school);
+ $graphCount=count($districtwisegraph1[0]);
+ $loopCount;
+ if($districtwisegraph1%7==0){ $loopCount=10;}else{ $loopCount=11;}
+ $countArr1=count(array_chunk($districtwisegraph1[0],8,true));
+ $countTotalArr1=count($districtwisegraph1[0]);
+ $arrData1=array_chunk($districtwisegraph1[0],$loopCount,true);
+ $arrData1_1=array_chunk($districtwisegraph1[1],$loopCount,true);
+ $arrData1_2=array_chunk($districtwisegraph1[2],$loopCount,true);
+ $arrData1_3=array_chunk($districtwisegraph1[3],$loopCount,true);
+ $arrData1_4=array_chunk($districtwisegraph1[4],$loopCount,true);
+ $dataCount1=array();
+ $countInteration1=0;
+ $y=0;
+ $s=0;
+ for($i=0,$t=0;$i<$countArr1; $i++){$dataCount1[]=$i;}
+ for($i=0,$t=0;$i<$countArr1; $i++){
+?>
+<script type="text/javascript">
+       Highcharts.chart('containerStateWisePartner1_<?php echo $i; ?>',{
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Participation Chart Of All Secondary District'
+        },
+    yAxis: {
+      title: {
+            text: 'No. of Schools'
+          }
+    },
+        xAxis: {
+            categories: [
+      <?php 
+             for($r=0;$r<$loopCount;++$r){
+         if(!empty($arrData1[$i][$y]['districtame'])){
+          echo "'".$arrData1[$i][$y]['districtame']."'"; }?>,
+             <?php $y++; 
+       }?>  
+            ],
+            crosshair: true
+        },
+    
+    legend: {
+        enabled: true
+    },
+        exporting: { enabled: true },
+        credits: {enabled: false},
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0;font-size:12px;">{series.name}: </td>' +
+                '<td style="padding:0;font-size:12px;">{point.y:.1f}</td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        plotOptions: {
+     series: {
+            borderWidth: 0,
+            dataLabels: {
+                enabled: true,
+                format: '{point.y}'
+            }
+        },
+    
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [{
+            name: 'Registered for Audit',
+      color:'rgb(124, 181, 236)',
+            data: <?php echo json_encode(array_map('intval',array_values($arrData1_1[$t]))); ?> //NORTH
+            //Registration, Audit Started, Audit Completed, Feedback Recieved
+        }, {
+            name: 'Audit Not Started',
+      color:'#fc3300',
+            data: <?php echo json_encode(array_map('intval',array_values($arrData1_2[$t]))); ?> //South
+
+        }, {
+            name: 'Audit Started',
+      color:'#fcfc00',
+            data: <?php echo json_encode(array_map('intval',array_values($arrData1_3[$t]))); ?> //South
+
+        }, {
+            name: 'Audit Completed',
+      color:'#00ae4f',
+            data: <?php echo json_encode(array_map('intval',array_values($arrData1_4[$t]))); ?> //East
+
+        }   
+    ],
+}); 
+</script><?php
+  $t++;
+} ?>
 
  <?php } else if($school==0 && $state==1){ ?>
 
+
+ <?php 
+ $districtwisegraph1=getDataGraphByDistrict_all($state,$school);
+ $graphCount=count($districtwisegraph1[0]);
+ $loopCount;
+ if($districtwisegraph1%7==0){ $loopCount=10;}else{ $loopCount=11;}
+ $countArr1=count(array_chunk($districtwisegraph1[0],8,true));
+ $countTotalArr1=count($districtwisegraph1[0]);
+ $arrData1=array_chunk($districtwisegraph1[0],$loopCount,true);
+ $arrData1_1=array_chunk($districtwisegraph1[1],$loopCount,true);
+ $arrData1_2=array_chunk($districtwisegraph1[2],$loopCount,true);
+ $arrData1_3=array_chunk($districtwisegraph1[3],$loopCount,true);
+ $arrData1_4=array_chunk($districtwisegraph1[4],$loopCount,true);
+ $dataCount1=array();
+ $countInteration1=0;
+ $y=0;
+ $s=0;
+ for($i=0,$t=0;$i<$countArr1; $i++){$dataCount1[]=$i;}
+ for($i=0,$t=0;$i<$countArr1; $i++){
+?>
+<script type="text/javascript">
+       Highcharts.chart('containerStateWisePartner1_<?php echo $i; ?>',{
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Participation Chart Of All Primary District'
+        },
+    yAxis: {
+      title: {
+            text: 'No. of Schools'
+          }
+    },
+        xAxis: {
+            categories: [
+      <?php 
+             for($r=0;$r<$loopCount;++$r){
+         if(!empty($arrData1[$i][$y]['districtame'])){
+          echo "'".$arrData1[$i][$y]['districtame']."'"; }?>,
+             <?php $y++; 
+       }?>  
+            ],
+            crosshair: true
+        },
+    
+    legend: {
+        enabled: true
+    },
+        exporting: { enabled: true },
+        credits: {enabled: false},
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0;font-size:12px;">{series.name}: </td>' +
+                '<td style="padding:0;font-size:12px;">{point.y:.1f}</td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        plotOptions: {
+     series: {
+            borderWidth: 0,
+            dataLabels: {
+                enabled: true,
+                format: '{point.y}'
+            }
+        },
+    
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [{
+            name: 'Registered for Audit',
+      color:'rgb(124, 181, 236)',
+            data: <?php echo json_encode(array_map('intval',array_values($arrData1_1[$t]))); ?> //NORTH
+            //Registration, Audit Started, Audit Completed, Feedback Recieved
+        }, {
+            name: 'Audit Not Started',
+      color:'#fc3300',
+            data: <?php echo json_encode(array_map('intval',array_values($arrData1_2[$t]))); ?> //South
+
+        }, {
+            name: 'Audit Started',
+      color:'#fcfc00',
+            data: <?php echo json_encode(array_map('intval',array_values($arrData1_3[$t]))); ?> //South
+
+        }, {
+            name: 'Audit Completed',
+      color:'#00ae4f',
+            data: <?php echo json_encode(array_map('intval',array_values($arrData1_4[$t]))); ?> //East
+
+        }   
+    ],
+}); 
+</script><?php
+  $t++;
+} ?>
+  
+
+
+
+
+
+
+
+
  <?php } else { ?>
-
-
-<?php } ?>
-
-
-
-
 
 <?php if($school==2) { ?>
     <?php 
@@ -446,3 +781,13 @@
 } ?>
 
 <?php } ?>
+
+
+
+
+<?php } ?>
+
+
+
+
+
