@@ -239,7 +239,7 @@
                 <ul class="dropdown-menu">
                  <!-- <li><a href="<?php //echo base_url('admin/reports/'); ?>">Participation By Zone</a></li> -->
                <!--  <li><a href="<?php //echo base_url('admin/reports/getParticipationByState'); ?>">Participation By State</a></li> -->
-                  <li><a href="<?php echo base_url('admin/reports/getPerformanceByState'); ?>">Performance By State</a></li>
+                 <!-- <li><a href="<?php // echo base_url('admin/reports/getPerformanceByState'); ?>">Performance By State</a></li>-->
 		<!-- <li><a href="<?php //echo base_url('admin/reports/getParticipationByStateComparison'); ?>">Participation Comparison Report</a></li>
                   <li><a href="<?php //echo base_url('admin/reports/getPerformanceByStateComparison'); ?>">Performance Comparison Report</a></li>
                   <li><a href="<?php //echo base_url('admin/reports/getWasteGenerationReport'); ?>">Waste Generation Report</a></li>
