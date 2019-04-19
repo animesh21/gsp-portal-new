@@ -164,7 +164,7 @@
  $districtwisegraph1=getDataGraphByDistrict_all($state_id1,$school);
  $graphCount=count($districtwisegraph1[0]);
  $loopCount;
- if($districtwisegraph1%7==0){ $loopCount=10;}else{ $loopCount=11;}
+ if($districtwisegraph1%7==0){ $loopCount=7;}else{ $loopCount=8;}
  $countArr1=count(array_chunk($districtwisegraph1[0],8,true));
  $countTotalArr1=count($districtwisegraph1[0]);
  $arrData1=array_chunk($districtwisegraph1[0],$loopCount,true);
@@ -266,7 +266,7 @@
  $districtwisegraph1=getDataGraphByDistrict_all($state,$school);
  $graphCount=count($districtwisegraph1[0]);
  $loopCount;
- if($districtwisegraph1%7==0){ $loopCount=10;}else{ $loopCount=11;}
+ if($districtwisegraph1%7==0){ $loopCount=7;}else{ $loopCount=8;}
  $countArr1=count(array_chunk($districtwisegraph1[0],8,true));
  $countTotalArr1=count($districtwisegraph1[0]);
  $arrData1=array_chunk($districtwisegraph1[0],$loopCount,true);
@@ -367,7 +367,7 @@
  $districtwisegraph1=getDataGraphByDistrict_all($state,$school);
  $graphCount=count($districtwisegraph1[0]);
  $loopCount;
- if($districtwisegraph1%7==0){ $loopCount=10;}else{ $loopCount=11;}
+ if($districtwisegraph1%7==0){ $loopCount=7;}else{ $loopCount=8;}
  $countArr1=count(array_chunk($districtwisegraph1[0],8,true));
  $countTotalArr1=count($districtwisegraph1[0]);
  $arrData1=array_chunk($districtwisegraph1[0],$loopCount,true);
