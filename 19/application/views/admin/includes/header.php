@@ -174,7 +174,7 @@
               </li>
               <li class=""><a href="#">AUDIT COMPLETED<span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li class=""><a href="#">PERFORMANCE REPORT</a></li>
+                  <!--  <li class=""><a href="#">PERFORMANCE REPORT</a></li> -->
                   <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">PRIMARY AUDIT PHASE I</a>
                     <ul class="dropdown-menu">
                       <li><a href="<?php echo base_url('admin/performance_report/schoolgeneralPrimary'); ?>">School Profile & General </a></li>
@@ -236,10 +236,10 @@
               </li>
               <li class=""><a href="#">ANALYTICS<span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                 <li><a href="<?php echo base_url('admin/reports/'); ?>">Participation By Zone</a></li>
+                 <!-- <li><a href="<?php //echo base_url('admin/reports/'); ?>">Participation By Zone</a></li> -->
                   <!--  <li><a href="<?php //echo base_url('admin/reports/getParticipationByState'); ?>">Participation By State</a></li> -->
-                  <li><a href="<?php echo base_url('admin/reports/getPerformanceByState'); ?>">Performance By State</a></li>
-				  <!-- <li><a href="<?php //echo base_url('admin/reports/getParticipationByStateComparison'); ?>">Participation Comparison Report</a></li>
+                   <!-- <li><a href="<?php // echo base_url('admin/reports/getPerformanceByState'); ?>">Performance By State</a></li>-->
+	          <!-- <li><a href="<?php //echo base_url('admin/reports/getParticipationByStateComparison'); ?>">Participation Comparison Report</a></li>
                   <li><a href="<?php //echo base_url('admin/reports/getPerformanceByStateComparison'); ?>">Performance Comparison Report</a></li>
                   <li><a href="<?php //echo base_url('admin/reports/getWasteGenerationReport'); ?>">Waste Generation Report</a></li>
                   <li><a href="<?php //echo base_url('admin/reports/geteWasteDisposalReport'); ?>">e-Waste Disposal Report</a></li> -->
@@ -249,33 +249,34 @@
 		  <li><a href="<?php echo base_url('admin/reports/getland'); ?>">Land Report</a></li>
 		  <li><a href="<?php echo base_url('admin/reports/getWater'); ?>">Water Report</a></li>
 		  <li><a href="<?php echo base_url('admin/reports/getWaste'); ?>">Waste Report</a></li>
-			<li><a href="feedback_audit_before.php">How many Times schools participated Report </a></li>
+			<li><a href="#">Feedback Report</a></li> 
+			<!-- <li><a href="feedback_audit_before.php">How many Times schools participated Report </a></li>
                   <li><a href="feedback_self_explanatory.php"> Audit easy to understand and self explanatory Report </a></li>
                   <li><a href="feedback_resource_efficient_2019.php">Green School (resource efficient) by 2019 Report </a></li>
                   <li><a href="feedback_rate_overall_design.php">rate the overall design of the audit Report </a></li>
-                  <li><a href="feedback_how_many_times_contact.php">How many times did you contact GSP Team</a></li>
+                  <li><a href="feedback_how_many_times_contact.php">How many times did you contact GSP Team</a></li> -->
                 </ul>
               </li>
-              <li class=""> <a href="#">ANALYTICAL TABLES<span class="caret"></span></a>
+             <!--   <li class=""> <a href="#">ANALYTICAL TABLES<span class="caret"></span></a>
                <ul class="dropdown-menu">
-                  <li><a href="participation_report.php">Participation Report</a></li>
+                  <li>i><a href="participation_report.php">Participation Report</a></li>
                   <li><a href="school_profiling_report.php">Schools Profiling Report</a></li>
-                  <li><a href="<?php echo base_url('admin/analytics/meritList'); ?>">Merit List</a></li>
-                  <li><a href="<?php echo base_url('admin/analytics/eWasteReport'); ?>">e-Waste Report</a></li>
+                  <li><a href="<?php //echo base_url('admin/analytics/meritList'); ?>">Merit List</a></li>
+                  <li><a href="<?php //echo base_url('admin/analytics/eWasteReport'); ?>">e-Waste Report</a></li>
                   <li><a href="yes_no_report.php">Yes/No Report</a></li>
-                  <li><a href="<?php echo base_url('admin/analytics/vehicleprofile'); ?>">Vehicle Profiling Report</a></li>
+                  <li><a href="<?php //echo base_url('admin/analytics/vehicleprofile'); ?>">Vehicle Profiling Report</a></li>
                   <li><a href="commuting_practices_profiling_report.php">Commuting Practices Profiling Report</a></li>
                   <li><a href="energy_consumption_profiling_report.php">Energy Consumption Profiling Report</a></li>
-                  <li><a href="<?php echo base_url('admin/analytics/foodbrandsponser'); ?>">Brands Sponsoring Events</a></li>
-                  <li><a href="<?php echo base_url('admin/analytics/foodprofiletraditional'); ?>">Food Profiling Traditional</a></li>
-                  <li><a href="<?php echo base_url('admin/analytics/foodflavour'); ?>">Food Ultra Processed flavour</a></li>
-                  <li><a href="<?php echo base_url('admin/analytics/fooditemsell'); ?>">Food Ultra Processed Sales</a></li>
-                  <li><a href="<?php echo base_url('admin/analytics/getGreenCoverReport'); ?>">Green Cover Report</a></li>
-                  <li><a href="<?php echo base_url('admin/analytics/getbuiltupAreaProfilingReport'); ?>">Built-up Area Profiling Report</a></li>
-                  <li><a href="<?php echo base_url('admin/analytics/getToiletProfilingReport'); ?>">Toilet Profiling Report</a></li>
-                  <li><a href="<?php echo base_url('admin/analytics/getWaterConsumptionPatternReport'); ?>">Water Consumption Pattern Report</a></li>
+                  <li><a href="<?php //echo base_url('admin/analytics/foodbrandsponser'); ?>">Brands Sponsoring Events</a></li>
+                  <li><a href="<?php //echo base_url('admin/analytics/foodprofiletraditional'); ?>">Food Profiling Traditional</a></li>
+                  <li><a href="<?php //echo base_url('admin/analytics/foodflavour'); ?>">Food Ultra Processed flavour</a></li>
+                  <li><a href="<?php //echo base_url('admin/analytics/fooditemsell'); ?>">Food Ultra Processed Sales</a></li>
+                  <li><a href="<?php //echo base_url('admin/analytics/getGreenCoverReport'); ?>">Green Cover Report</a></li>
+                  <li><a href="<?php //echo base_url('admin/analytics/getbuiltupAreaProfilingReport'); ?>">Built-up Area Profiling Report</a></li>
+                  <li><a href="<?php //echo base_url('admin/analytics/getToiletProfilingReport'); ?>">Toilet Profiling Report</a></li>
+                  <li><a href="<?php //echo base_url('admin/analytics/getWaterConsumptionPatternReport'); ?>">Water Consumption Pattern Report</a></li>
                 </ul>
-              </li>
+              </li> -->
               <!-- <li class=""><a href="#">Feedback Analytics<span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><a href="feedback_audit_before.php">How many Times schools participated Report </a></li>
