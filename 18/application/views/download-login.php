@@ -105,12 +105,12 @@
     </div>
     <script src="http://www.greenschoolsprogramme.org/audit2017/assets/js/jquery.min.js"></script>
     <script src='http://www.greenschoolsprogramme.org/audit2017/assets/js/badge-code.js'></script>
-    <script>
+   <!-- <script>
 			/*School Badge Code*/
 			window.onload = function(){
 			  get_date_difference('12-24-2017');
 			}
-			</script>
+			</script>-->
   </div>
 </div>
 <p class="m-browser">Please use a modern browser such as <a href="https://www.mozilla.org/en-US/firefox/new/"
