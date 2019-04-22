@@ -4,9 +4,9 @@
 /*****************************************************************************/
 function db_connection() {
     $host_name = "localhost";
-    $database = "gsp_audit17"; 
-    $username = "gspaudit17_usr"; 
-    $password = "Gl!k6x7zQ"; 
+    $database = "GSP_2018"; 
+    $username = "gsp2018_usr"; 
+    $password = "studio@123"; 
     try {
         $db = new PDO('mysql:host=' . $host_name . ';dbname=' . $database, $username, $password);
     } catch (PDOException $e) {
