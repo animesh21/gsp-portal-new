@@ -83,21 +83,21 @@
       <tbody>
         <tr role="row" class="odd">
           <td class="sorting_1">Phase-1</td>
-          <td>2863</td>
-          <td>1794</td>
+          <td>2862</td>
+          <td>1793</td>
           <td>1194</td>
           <td>570</td>
           <td>1069</td>
-          <td>1758</td>
+          <td>1757</td>
         </tr>
         <tr role="row" class="even">
           <td class="sorting_1">Phase-2</td>
-          <td>1784</td>
-          <td>603</td>
-          <td>71</td>
-          <td>596</td>
-          <td>1181</td>
-          <td>187</td>
+          <td>1839</td>
+          <td>608</td>
+          <td>77</td>
+          <td>598</td>
+          <td>1230</td>
+          <td>243</td>
         </tr>
 		<tr role="row" class="even">
           <td class="sorting_1">Total</td>
