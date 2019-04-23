@@ -14,8 +14,8 @@
 </div>
 <div class="row">
   <div class="col-md-12">
-	  <h2>2018 Audit</h2> 
-    <table class="display dataTable no-footer table1">
+     <h2>2019 Audit</h2> 
+    <table class="display dataTable no-footer table4">
       <thead>
         <tr role="row">
           <th>Phase</th>
@@ -25,24 +25,73 @@
           <th>Schools Started The Audit But Did Not Complete</th>
           <th>Schools Did Not Start The Audit</th>
           <th>Schools Completed The Audit But Not Submitted</th>
+          <th>Total School Registrations 2019</th>
         </tr>
       </thead>
       <tbody>
         <tr role="row" class="odd">
           <td class="sorting_1">Phase-1</td>
-          <td><?php echo count($School_18data);?></td>
-          <td><?php echo count($startedtheaudit_18data);?></td>
-          <td><?php echo count($SubmittedTheAudit_18data);?></td>
-          <td><?php echo count($StartedAuditButDidNotComplete);?></td>
-          <td><?php echo count($NotStartTheAudit_18data);?></td>
-          <td><?php echo count($CompletedAuditButNotSubmitted_18data);?></td>
+          
+        </tr>
+ 
+      </tbody>
+    </table><br/>
+
+
+
+	  <h2>2018 Audit</h2> 
+    <table class="display dataTable no-footer table5">
+      <thead>
+        <tr role="row">
+          <th>Phase</th>
+          <th>Total School Registrations</th>
+          <th>Schools That Started The Audit</th>
+          <th>School submitted the Audit in Phase 1</th>
+          <th>Schools Started The Audit But Did Not Complete</th>
+          <th>Schools Did Not Start The Audit</th>
+          <th>Schools Completed The Audit But Not Submitted</th>
+          <th>Total School Registrations 2018</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr role="row" class="odd">
+          <td class="sorting_1">Phase-1</td>
+          <td><?php echo $t1= 5514;?></td>         
+          <td><?php echo $t2= 898;?></td>
+          <td><?php echo $t3= 1689;?></td>
+          <td><?php echo $t4= 848;?></td>
+          <td><?php echo $t5= 2878;?></td>
+          <td><?php echo $t6= 50;?></td>
+          <td><?php echo $t8= 2541;?></td>  
+        </tr>
+
+        <tr role="row" class="odd">
+          <td class="sorting_1">Phase-2</td>
+          <td><?php echo $schoolcount_phase_2=3917;?></td>
+          <td><?php echo $audit1_phase_2=898;?></td>
+          <td><?php echo $submitcount_phase_2=50;?></td>
+          <td><?php echo $uncompletecount_phase_2=848;?></td>
+          <td><?php echo $notstartcount_phase_2=2956;?></td>
+          <td><?php echo $t7 = 50;?></td>
+          <td><?php echo $t9= 188;?></td>  
+        </tr>
+
+        <tr role="row" class="odd">
+          <td class="sorting_1">Total</td>
+          <td><?php echo $t1 + $schoolcount_phase_2;?></td>
+          <td><?php echo $t2 + $audit1_phase_2;?></td>
+          <td><?php echo $t3 + $submitcount_phase_2;?></td>
+          <td><?php echo $t4 + $uncompletecount_phase_2;?></td>
+          <td><?php echo $t5 + $notstartcount_phase_2;?></td>
+          <td><?php echo $t6 + $t7;?></td>
+          <td><?php echo $t8 + $t9;?></td>  
         </tr>
        
       </tbody>
     </table><br/>
 	  
 	  
-    <h2>2017 Audit</h2> 
+   <h2>2017 Audit</h2> 
     <table class="display dataTable no-footer table1">
       <thead>
         <tr role="row">
@@ -58,23 +107,23 @@
       <tbody>
         <tr role="row" class="odd">
           <td class="sorting_1">Phase-1</td>
-          <td>2863</td>
-          <td>1794</td>
+          <td>2862</td>
+          <td>1793</td>
           <td>1194</td>
           <td>570</td>
           <td>1069</td>
-          <td>1758</td>
+          <td>1757</td>
         </tr>
         <tr role="row" class="even">
           <td class="sorting_1">Phase-2</td>
-          <td>1784</td>
-          <td>603</td>
-          <td>71</td>
-          <td>596</td>
-          <td>1181</td>
-          <td>187</td>
+          <td>1839</td>
+          <td>608</td>
+          <td>77</td>
+          <td>598</td>
+          <td>1230</td>
+          <td>243</td>
         </tr>
-		<tr role="row" class="even">
+    <tr role="row" class="even">
           <td class="sorting_1">Total</td>
           <td id="totalSchoolRegistration"></td>
           <td id="totalStartedSchoolAudit"></td>
