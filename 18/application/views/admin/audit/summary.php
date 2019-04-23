@@ -14,35 +14,8 @@
 </div>
 <div class="row">
   <div class="col-md-12">
-     <h2>2019 Audit</h2> 
-    <table class="display dataTable no-footer table4">
-      <thead>
-        <tr role="row">
-          <th>Phase</th>
-          <th>Total School Registrations</th>
-          <th>Schools That Started The Audit</th>
-          <th>School submitted the Audit in Phase 1</th>
-          <th>Schools Started The Audit But Did Not Complete</th>
-          <th>Schools Did Not Start The Audit</th>
-          <th>Schools Completed The Audit But Not Submitted</th>
-          <th>Total School Registrations 2019</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr role="row" class="odd">
-          <td class="sorting_1">Phase-1</td>
-          
-        </tr>
- 
-
-         
-       
-      </tbody>
-    </table><br/>
-
-
-
-	  <h2>2018 Audit</h2> 
+   
+ <h2>2018 Audit</h2> 
     <table class="display dataTable no-footer table5">
       <thead>
         <tr role="row">
