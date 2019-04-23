@@ -504,7 +504,15 @@ class Audit_started extends CI_Controller {
 	 $data['SubmittedTheAudit_18data']=$this->Audit_started_model->getSubmittedTheAudit_18data();
 	 $data['StartedAuditButDidNotComplete']=$this->Audit_started_model->getStartedAuditButDidNotComplete_18data();
 	 $data['NotStartTheAudit_18data']=$this->Audit_started_model->getNotStartTheAudit_18data();
-	 $data['CompletedAuditButNotSubmitted_18data']=$this->Audit_started_model->getCompletedAuditButNotSubmitted_18data();
+	 
+	 $data['schoolcount_phase_2']=$this->Dashboard_model->schoolCount_phase_2();
+	 $data['audit1_phase_2']=$this->Dashboard_model->getschool_started_audit_phase_2();
+	 $data['submitcount_phase_2']=$this->Dashboard_model->getschool_that_submit_audit_phase_2();
+	 $data['uncompletecount_phase_2']=$this->Dashboard_model->getschool_start_but_not_complete_phase_2();
+	 $data['notstartcount_phase_2']=$this->Dashboard_model->getschools_not_start_the_audit_phase_2();
+	 $data['complete_audit_phase_2_count_phase_2']= $this->Dashboard_model->school_that_complete_audit_phase_2();
+	 
+
          $this->load->view('admin/includes/template', $data);
 	}
    /**Get School Delete**/
