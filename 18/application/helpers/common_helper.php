@@ -2086,13 +2086,13 @@ if (!function_exists('download_YOY')){
       //echo $v; 
       if($v!='NA'){
        if($v>=70){
-         $numerical[] = array("percentage"=>$v,"color"=>"#3c763d","range"=>"GREEN <br/> 70%  & Above","year"=>'Year of '.$r);}
+         $numerical[] = array("percentage"=>$v,"color"=>"#92d050","range"=>"GREEN <br/> 70%  & Above","year"=>'Year of '.$r);}
          elseif($v>=50 && $v<=69.9){
-          $numerical[] = array("percentage"=>$v,"color"=>"#e2dc15","range"=>"YELLOW <br/> BETWEEN (50-69.9%)","year"=>'Year of '.$r);}
+          $numerical[] = array("percentage"=>$v,"color"=>"#ffff00","range"=>"YELLOW <br/> BETWEEN (50-69.9%)","year"=>'Year of '.$r);}
          elseif($v>=35 && $v<=49.9){
-          $numerical[] = array("percentage"=>$v,"color"=>"#e29e15","range"=>"ORANGE <br/> BETWEEN (35-49.9%)","year"=>'Year of '.$r);}
+          $numerical[] = array("percentage"=>$v,"color"=>"#ff6600","range"=>"ORANGE <br/> BETWEEN (35-49.9%)","year"=>'Year of '.$r);}
          elseif($v<=34.9){
-          $numerical[] = array("percentage"=>$v,"color"=>"#b73418","range"=>"RED <br/> (BELOW 34.9%)","year"=>'Year of '.$r);}    
+          $numerical[] = array("percentage"=>$v,"color"=>"#ff0000","range"=>"RED <br/> (BELOW 34.9%)","year"=>'Year of '.$r);}    
          }
      }
          return $numerical;
