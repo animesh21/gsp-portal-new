@@ -128,7 +128,7 @@
                 type: 'pie'
             },
             title: {
-                text: 'Registration Chart for <?php if($state_id1!=0){ echo getStateById($state_id1);}else{ echo "All"; } ?> Total Registrations <?php echo count($registerd_audit_1); ?> Schools'
+                text: 'Registration Chart for <?php if($state_id1!=1){ echo getStateById($state_id1);}else{ echo "All"; } ?> Total Registrations <?php echo count($registerd_audit_1); ?> Schools'
             },
             tooltip: {
                 pointFormat: '<b>{point.y} Schools ({point.percentage:.1f}%)</b>'
