@@ -2614,7 +2614,7 @@
             
               foreach($yoyData as $yoyDatas){
              ?>
-            <td><?php  if(!empty($yoyDatas->stored_rainwater_use_drinking)){echo $yoyDatas->stored_rainwater_use_drinking;}else{ echo "NA"; }; ?></td>
+            <td><?php  if(!empty($yoyDatas->stored_rainwater_use_drinking)){echo $yoyDatas->stored_rainwater_use_drinking;}else{ echo ""; }; ?></td>
 
       <?php } } ?>
             </tr>
@@ -2627,7 +2627,7 @@
             
               foreach($yoyData as $yoyDatas){
              ?>
-            <td><?php  if(!empty($yoyDatas->stored_rainwater_use_gardening)){echo $yoyDatas->stored_rainwater_use_gardening;}else{ echo "NA"; }; ?></td>
+            <td><?php  if(!empty($yoyDatas->stored_rainwater_use_gardening)){echo $yoyDatas->stored_rainwater_use_gardening;}else{ echo ""; }; ?></td>
 
       <?php } } ?>
             </tr>
@@ -2640,7 +2640,7 @@
             
               foreach($yoyData as $yoyDatas){
              ?>
-            <td><?php  if(!empty($yoyDatas->stored_rainwater_use_mopping)){echo $yoyDatas->stored_rainwater_use_mopping;}else{ echo "NA"; }; ?></td>
+            <td><?php  if(!empty($yoyDatas->stored_rainwater_use_mopping)){echo $yoyDatas->stored_rainwater_use_mopping;}else{ echo ""; }; ?></td>
 
       <?php } } ?>
             </tr>
@@ -2653,7 +2653,7 @@
             
               foreach($yoyData as $yoyDatas){
              ?>
-            <td><?php  if(!empty($yoyDatas->stored_rainwater_use_toilets)){echo $yoyDatas->stored_rainwater_use_toilets;}else{ echo "NA"; }; ?></td>
+            <td><?php  if(!empty($yoyDatas->stored_rainwater_use_toilets)){echo $yoyDatas->stored_rainwater_use_toilets;}else{ echo ""; }; ?></td>
 
       <?php } } ?>
             </tr>
@@ -2666,7 +2666,7 @@
             
               foreach($yoyData as $yoyDatas){
              ?>
-            <td><?php  if(!empty($yoyDatas->stored_rainwater_use_washing_vehicles)){echo $yoyDatas->stored_rainwater_use_washing_vehicles;}else{ echo "NA"; }; ?></td>
+            <td><?php  if(!empty($yoyDatas->stored_rainwater_use_washing_vehicles)){echo $yoyDatas->stored_rainwater_use_washing_vehicles;}else{ echo ""; }; ?></td>
 
       <?php } } ?>
             </tr>
@@ -2679,7 +2679,7 @@
             
               foreach($yoyData as $yoyDatas){
              ?>
-            <td><?php  if(!empty($yoyDatas->stored_rainwater_use_kitchen)){echo $yoyDatas->stored_rainwater_use_kitchen;}else{ echo "NA"; }; ?></td>
+            <td><?php  if(!empty($yoyDatas->stored_rainwater_use_kitchen)){echo $yoyDatas->stored_rainwater_use_kitchen;}else{ echo ""; }; ?></td>
 
       <?php } } ?>
             </tr>
@@ -2692,7 +2692,7 @@
             
               foreach($yoyData as $yoyDatas){
              ?>
-            <td><?php  if(!empty($yoyDatas->stored_rainwater_use_shower_brushing_teeth_bathing_hand_washing)){echo $yoyDatas->stored_rainwater_use_shower_brushing_teeth_bathing_hand_washing;}else{ echo "NA"; }; ?></td>
+            <td><?php  if(!empty($yoyDatas->stored_rainwater_use_shower_brushing_teeth_bathing_hand_washing)){echo $yoyDatas->stored_rainwater_use_shower_brushing_teeth_bathing_hand_washing;}else{ echo ""; }; ?></td>
 
       <?php } } ?>
             </tr>
@@ -2705,7 +2705,7 @@
             
               foreach($yoyData as $yoyDatas){
              ?>
-            <td><?php  if(!empty($yoyDatas->stored_rainwater_use_swimming_pool)){echo $yoyDatas->stored_rainwater_use_swimming_pool;}else{ echo "NA"; }; ?></td>
+            <td><?php  if(!empty($yoyDatas->stored_rainwater_use_swimming_pool)){echo $yoyDatas->stored_rainwater_use_swimming_pool;}else{ echo ""; }; ?></td>
 
       <?php } } ?>
             </tr>
@@ -2822,7 +2822,7 @@
             
               foreach($yoyData as $yoyDatas){
              ?>
-           <td><?php if(!empty($yoyDatas->rainwater_harvesting_structures_conduits)){echo $yoyDatas->rainwater_harvesting_structures_conduits;}else{ echo "NA"; } ?></td>
+           <td><?php if(!empty($yoyDatas->rainwater_harvesting_structures_conduits)){echo $yoyDatas->rainwater_harvesting_structures_conduits;}else{ echo ""; } ?></td>
 
       <?php } } ?>
             </tr>
@@ -2835,7 +2835,7 @@
             
               foreach($yoyData as $yoyDatas){
              ?>
-            <td><?php if(!empty($yoyDatas->rainwater_harvesting_structures_gutters)){echo $yoyDatas->rainwater_harvesting_structures_gutters;}else{ echo "NA"; }  ?></td>
+            <td><?php if(!empty($yoyDatas->rainwater_harvesting_structures_gutters)){echo $yoyDatas->rainwater_harvesting_structures_gutters;}else{ echo ""; }  ?></td>
 
       <?php } } ?>
             </tr>
@@ -2848,7 +2848,7 @@
             
               foreach($yoyData as $yoyDatas){
              ?>
-             <td><?php if(!empty($yoyDatas->rainwater_harvesting_structures_filter_unit)){echo $yoyDatas->rainwater_harvesting_structures_filter_unit;}else{ echo "NA"; } ?></td>
+             <td><?php if(!empty($yoyDatas->rainwater_harvesting_structures_filter_unit)){echo $yoyDatas->rainwater_harvesting_structures_filter_unit;}else{ echo ""; } ?></td>
 
       <?php } } ?>
             </tr>
@@ -2861,7 +2861,7 @@
             
               foreach($yoyData as $yoyDatas){
              ?>
-            <td><?php if(!empty($yoyDatas->rainwater_harvesting_structures_first_flush)){echo $yoyDatas->rainwater_harvesting_structures_first_flush;}else{ echo "NA"; } ?></td>
+            <td><?php if(!empty($yoyDatas->rainwater_harvesting_structures_first_flush)){echo $yoyDatas->rainwater_harvesting_structures_first_flush;}else{ echo ""; } ?></td>
 
       <?php } } ?>
             </tr>
@@ -2874,7 +2874,7 @@
             
               foreach($yoyData as $yoyDatas){
              ?>
-            <td><?php if(!empty($yoyDatas->rainwater_harvesting_structures_storage_tank)){echo $yoyDatas->rainwater_harvesting_structures_storage_tank;}else{ echo "NA"; } ?></td>
+            <td><?php if(!empty($yoyDatas->rainwater_harvesting_structures_storage_tank)){echo $yoyDatas->rainwater_harvesting_structures_storage_tank;}else{ echo ""; } ?></td>
 
       <?php } } ?>
             </tr>
@@ -2887,7 +2887,7 @@
             
               foreach($yoyData as $yoyDatas){
              ?>
-           <td><?php if(!empty($yoyDatas->rainwater_harvesting_structures_collection_sump)){echo $yoyDatas->rainwater_harvesting_structures_collection_sump;}else{ echo "NA"; } ?></td>
+           <td><?php if(!empty($yoyDatas->rainwater_harvesting_structures_collection_sump)){echo $yoyDatas->rainwater_harvesting_structures_collection_sump;}else{ echo ""; } ?></td>
 
       <?php } } ?>
             </tr>
@@ -2900,7 +2900,7 @@
             
               foreach($yoyData as $yoyDatas){
              ?>
-           <td><?php if(!empty($yoyDatas->rainwater_harvesting_structures_collection_sump)){echo $yoyDatas->rainwater_harvesting_structures_pump_unit;}else{ echo "NA"; } ?></td>
+           <td><?php if(!empty($yoyDatas->rainwater_harvesting_structures_collection_sump)){echo $yoyDatas->rainwater_harvesting_structures_pump_unit;}else{ echo ""; } ?></td>
 
       <?php } } ?>
             </tr>
@@ -3368,7 +3368,7 @@
             
               foreach($yoyData as $yoyDatas){
              ?>
-            <td><?php if(!empty($yoyDatas->school_reuse_wastewater_in_flushing)){echo $yoyDatas->school_reuse_wastewater_in_flushing;}else{ echo "NA"; }  ?></td>
+            <td><?php if(!empty($yoyDatas->school_reuse_wastewater_in_flushing)){echo $yoyDatas->school_reuse_wastewater_in_flushing;}else{ echo ""; }  ?></td>
 
       <?php } } ?>
             </tr>
@@ -3381,7 +3381,7 @@
             
               foreach($yoyData as $yoyDatas){
              ?>
-           <td><?php if(!empty($yoyDatas->school_reuse_wastewater_in_recharge_ground_water)){echo $yoyDatas->school_reuse_wastewater_in_recharge_ground_water;}else{ echo "NA"; } ?></td>
+           <td><?php if(!empty($yoyDatas->school_reuse_wastewater_in_recharge_ground_water)){echo $yoyDatas->school_reuse_wastewater_in_recharge_ground_water;}else{ echo ""; } ?></td>
 
       <?php } } ?>
             </tr>
@@ -3395,7 +3395,7 @@
               foreach($yoyData as $yoyDatas){
              ?>
             <td><?php if(!empty($yoyDatas->please_specify_the_fate_of_wastewater)){
-                  echo $yoyDatas->please_specify_the_fate_of_wastewater; }else{ echo "NA"; } ?></td>
+                  echo $yoyDatas->please_specify_the_fate_of_wastewater; }else{ echo ""; } ?></td>
 
       <?php } } ?>
             </tr>
@@ -3421,7 +3421,7 @@
             
               foreach($yoyData as $yoyDatas){
              ?>
-            <td><?php if(!empty($yoyDatas->segregator_at_source)){ echo $yoyDatas->segregator_at_source;}else{ echo "NA"; } ?></td>
+            <td><?php if(!empty($yoyDatas->segregator_at_source)){ echo $yoyDatas->segregator_at_source;}else{ echo ""; } ?></td>
 
       <?php } } ?>
             </tr>
@@ -3434,7 +3434,7 @@
             
               foreach($yoyData as $yoyDatas){
              ?>
-            <td><?php if(!empty($yoyDatas->segregates_the_waste_by_students_and_teachers)){echo $yoyDatas->segregates_the_waste_by_students_and_teachers;}else{ echo "NA"; } ?></td>
+            <td><?php if(!empty($yoyDatas->segregates_the_waste_by_students_and_teachers)){echo $yoyDatas->segregates_the_waste_by_students_and_teachers;}else{ echo ""; } ?></td>
 
       <?php } } ?>
             </tr>
@@ -3447,7 +3447,7 @@
             
               foreach($yoyData as $yoyDatas){
              ?>
-             <td><?php if(!empty($yoyDatas->segregates_the_waste_by_housekeeping)){ echo $yoyDatas->segregates_the_waste_by_housekeeping;}else{ echo "NA"; } ?></td>
+             <td><?php if(!empty($yoyDatas->segregates_the_waste_by_housekeeping)){ echo $yoyDatas->segregates_the_waste_by_housekeeping;}else{ echo ""; } ?></td>
 
       <?php } } ?>
             </tr>
@@ -3460,7 +3460,7 @@
             
               foreach($yoyData as $yoyDatas){
              ?>
-            <td><?php if(!empty($yoyDatas->segregates_the_waste_by_gardener)){echo $yoyDatas->segregates_the_waste_by_gardener;}else{ echo "NA"; } ?></td>
+            <td><?php if(!empty($yoyDatas->segregates_the_waste_by_gardener)){echo $yoyDatas->segregates_the_waste_by_gardener;}else{ echo ""; } ?></td>
 
       <?php } } ?>
             </tr>
@@ -3473,7 +3473,7 @@
             
               foreach($yoyData as $yoyDatas){
              ?>
-            <td><?php if(!empty($yoyDatas->segregates_the_waste_by_ragpickers)){echo $yoyDatas->segregates_the_waste_by_ragpickers;}else{ echo "NA"; } ?></td>
+            <td><?php if(!empty($yoyDatas->segregates_the_waste_by_ragpickers)){echo $yoyDatas->segregates_the_waste_by_ragpickers;}else{ echo ""; } ?></td>
 
       <?php } } ?>
             </tr>
@@ -3486,7 +3486,7 @@
             
               foreach($yoyData as $yoyDatas){
              ?>
-            <td><?php if(!empty($yoyDatas->segregates_the_waste_by_other)){echo $yoyDatas->segregates_the_waste_by_other;}else{ echo "NA"; } ?></td>
+            <td><?php if(!empty($yoyDatas->segregates_the_waste_by_other)){echo $yoyDatas->segregates_the_waste_by_other;}else{ echo ""; } ?></td>
 
       <?php } } ?>
             </tr>
@@ -4110,7 +4110,7 @@
             
               foreach($yoyData as $yoyDatas){
              ?>
-            <td><?php if(!empty($yoyDatas->who_collects_e_waste)){ echo $yoyDatas->who_collects_e_waste;}else{ echo "NA";} ?></td>
+            <td><?php if(!empty($yoyDatas->who_collects_e_waste)){ echo $yoyDatas->who_collects_e_waste;}else{ echo "";} ?></td>
 
       <?php } } ?>      
             </tr>
