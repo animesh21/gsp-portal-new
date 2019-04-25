@@ -69,7 +69,7 @@ if(!function_exists('getYOYComparisonAllData')){
   function getYOYComparisonAllData($schoolId) {
         $CI = & get_instance();
 		$CI->db->where('school_id',$schoolId);
-        $temp = $CI->db->select("*")->from('all_yoy_presentation')->get()->result();
+        $temp = $CI->db->select("*")->from('all_yoy_presentation')->order_by("audit_year", "asc")->get()->result();
         return $temp;
     }
 }
