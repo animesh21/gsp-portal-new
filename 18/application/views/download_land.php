@@ -109,31 +109,31 @@
           <tr>
             <td>Audit Year</td>
             <?php for($i=0;$i<sizeof($LandSection);++$i){ ?>
-            <td><?php echo !empty($LandSection[$i]->audit_year)?$LandSection[$i]->audit_year:"NA"; ?></td>
+            <td><?php echo !empty($LandSection[$i]->audit_year)?$LandSection[$i]->audit_year:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>Percentage of Green Area</td>
             <?php for($i=0;$i<sizeof($LandSection);++$i){ ?>
-            <td><?php echo !empty($LandSection[$i]->percentage_of_green_area)?round($LandSection[$i]->percentage_of_green_area,2):"NA"; ?></td>
+            <td><?php echo !empty($LandSection[$i]->percentage_of_green_area)?round($LandSection[$i]->percentage_of_green_area,2):""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>Total Plants</td>
             <?php for($i=0;$i<sizeof($LandSection);++$i){ ?>
-            <td><?php echo !empty($LandSection[$i]->total_plants)?$LandSection[$i]->total_plants:"NA"; ?></td>
+            <td><?php echo !empty($LandSection[$i]->total_plants)?$LandSection[$i]->total_plants:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>Total Animals</td>
             <?php for($i=0;$i<sizeof($LandSection);++$i){ ?>
-            <td><?php echo !empty($LandSection[$i]->total_animals)?$LandSection[$i]->total_animals:"NA"; ?></td>
+            <td><?php echo !empty($LandSection[$i]->total_animals)?$LandSection[$i]->total_animals:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>Use of Chemical Pesticides</td>
             <?php for($i=0;$i<sizeof($LandSection);++$i){ ?>
-            <td><?php echo !empty($LandSection[$i]->use_of_chemical_pesticides)?$LandSection[$i]->use_of_chemical_pesticides:"NA"; ?></td>
+            <td><?php echo !empty($LandSection[$i]->use_of_chemical_pesticides)?$LandSection[$i]->use_of_chemical_pesticides:""; ?></td>
             <?php } ?>
           </tr>
         </table>
