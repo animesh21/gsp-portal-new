@@ -109,122 +109,122 @@
           <tr>
             <td>Audit Year</td>
             <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
-            <td><?php echo !empty($wasteSection[$i]->audit_year)?$wasteSection[$i]->audit_year:"NA"; ?></td>
+            <td><?php echo !empty($wasteSection[$i]->audit_year)?$wasteSection[$i]->audit_year:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>School segregates solid waste</td>
             <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
-            <td><?php echo !empty($wasteSection[$i]->school_segregated_solid_waste)?$wasteSection[$i]->school_segregated_solid_waste:"NA"; ?></td>
+            <td><?php echo !empty($wasteSection[$i]->school_segregated_solid_waste)?$wasteSection[$i]->school_segregated_solid_waste:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>Composting facility</td>
             <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
-            <td><?php echo !empty($wasteSection[$i]->composting_facility)?$wasteSection[$i]->composting_facility:"NA"; ?></td>
+            <td><?php echo !empty($wasteSection[$i]->composting_facility)?$wasteSection[$i]->composting_facility:""; ?></td>
             <?php } ?>
           </tr>          
           <tr>
             <td>Total biodegradable waste generated (kg/month)</td>
             <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
-            <td><?php echo !empty($wasteSection[$i]->total_biodegradable_waste_generated)?$wasteSection[$i]->total_biodegradable_waste_generated:"NA"; ?></td>
+            <td><?php echo !empty($wasteSection[$i]->total_biodegradable_waste_generated)?$wasteSection[$i]->total_biodegradable_waste_generated:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>Total Dry/recyclable waste generated (kg/month)</td>
             <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
-            <td><?php echo !empty($wasteSection[$i]->total_dry_recyclable_waste_generated)?$wasteSection[$i]->total_dry_recyclable_waste_generated:"NA"; ?></td>
+            <td><?php echo !empty($wasteSection[$i]->total_dry_recyclable_waste_generated)?$wasteSection[$i]->total_dry_recyclable_waste_generated:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>Total Domestic waste generated (kg/month)</td>
             <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
-            <td><?php echo !empty($wasteSection[$i]->total_domestic_waste_generated)?$wasteSection[$i]->total_domestic_waste_generated:"NA"; ?></td>
+            <td><?php echo !empty($wasteSection[$i]->total_domestic_waste_generated)?$wasteSection[$i]->total_domestic_waste_generated:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>E-waste generated (kg/month)</td>
             <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
-            <td><?php echo !empty($wasteSection[$i]->e_waste_generated)?$wasteSection[$i]->e_waste_generated:"NA"; ?></td>
+            <td><?php echo !empty($wasteSection[$i]->e_waste_generated)?$wasteSection[$i]->e_waste_generated:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>Biomedical waste generated (kg/month)</td>
             <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
-            <td><?php echo !empty($wasteSection[$i]->biomedical_waste_generated)?$wasteSection[$i]->biomedical_waste_generated:"NA"; ?></td>
+            <td><?php echo !empty($wasteSection[$i]->biomedical_waste_generated)?$wasteSection[$i]->biomedical_waste_generated:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>Sanitary Waste generated (kg/month)</td>
             <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
-            <td><?php echo !empty($wasteSection[$i]->sanitary_waste_generated)?$wasteSection[$i]->sanitary_waste_generated:"NA"; ?></td>
+            <td><?php echo !empty($wasteSection[$i]->sanitary_waste_generated)?$wasteSection[$i]->sanitary_waste_generated:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>C&D waste generated (kg/month)</td>
             <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
-            <td><?php echo !empty($wasteSection[$i]->cd_waste_generated)?$wasteSection[$i]->cd_waste_generated:"NA"; ?></td>
+            <td><?php echo !empty($wasteSection[$i]->cd_waste_generated)?$wasteSection[$i]->cd_waste_generated:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>Total biodegradable waste recycled (kg/month)</td>
             <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
-            <td><?php echo !empty($wasteSection[$i]->total_biodegradable_waste_recycled)?$wasteSection[$i]->total_biodegradable_waste_recycled:"NA"; ?></td>
+            <td><?php echo !empty($wasteSection[$i]->total_biodegradable_waste_recycled)?$wasteSection[$i]->total_biodegradable_waste_recycled:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>Total Dry/recyclable waste recycled (kg/month)</td>
             <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
-            <td><?php echo !empty($wasteSection[$i]->total_dry_recyclable_waste_recycled)?$wasteSection[$i]->total_dry_recyclable_waste_recycled:"NA"; ?></td>
+            <td><?php echo !empty($wasteSection[$i]->total_dry_recyclable_waste_recycled)?$wasteSection[$i]->total_dry_recyclable_waste_recycled:""; ?></td>
             <?php } ?>
           </tr>
 		  <tr>
             <td>Total Domestic waste recycled (kg/month)</td>
             <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
-            <td><?php echo !empty($wasteSection[$i]->total_domestic_waste_recycled)?$wasteSection[$i]->total_domestic_waste_recycled:"NA"; ?></td>
+            <td><?php echo !empty($wasteSection[$i]->total_domestic_waste_recycled)?$wasteSection[$i]->total_domestic_waste_recycled:""; ?></td>
             <?php } ?>
           </tr>
 		  <tr>
             <td>E-waste recycled (kg/month)</td>
             <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
-            <td><?php echo !empty($wasteSection[$i]->e_waste_recycled)?$wasteSection[$i]->e_waste_recycled:"NA"; ?></td>
+            <td><?php echo !empty($wasteSection[$i]->e_waste_recycled)?$wasteSection[$i]->e_waste_recycled:""; ?></td>
             <?php } ?>
           </tr>
 		  <tr>
             <td>Biomedical waste recycled (kg/month)</td>
             <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
-            <td><?php echo !empty($wasteSection[$i]->biomedical_waste_recycled)?$wasteSection[$i]->biomedical_waste_recycled:"NA"; ?></td>
+            <td><?php echo !empty($wasteSection[$i]->biomedical_waste_recycled)?$wasteSection[$i]->biomedical_waste_recycled:""; ?></td>
             <?php } ?>
           </tr>
 		  <tr>
             <td>Sanitary Waste recycled (kg/month)</td>
             <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
-            <td><?php echo !empty($wasteSection[$i]->sanitary_waste_recycled)?$wasteSection[$i]->sanitary_waste_recycled:"NA"; ?></td>
+            <td><?php echo !empty($wasteSection[$i]->sanitary_waste_recycled)?$wasteSection[$i]->sanitary_waste_recycled:""; ?></td>
             <?php } ?>
           </tr>
 	   <tr>
             <td>C&D waste recycled (kg/month)</td>
             <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
-            <td><?php echo !empty($wasteSection[$i]->cd_waste_recycled)?$wasteSection[$i]->cd_waste_recycled:"NA"; ?></td>
+            <td><?php echo !empty($wasteSection[$i]->cd_waste_recycled)?$wasteSection[$i]->cd_waste_recycled:""; ?></td>
             <?php } ?>
           </tr>
 	  <tr>
             <td>Does your school reuse textbooks?</td>
             <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
-            <td><?php echo !empty($wasteSection[$i]->reuse_textbooks)?$wasteSection[$i]->reuse_textbooks:"NA"; ?></td>
+            <td><?php echo !empty($wasteSection[$i]->reuse_textbooks)?$wasteSection[$i]->reuse_textbooks:""; ?></td>
             <?php } ?>
           </tr>
 	<tr>
             <td>Ewaste disposal?</td>
             <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
-            <td><?php echo !empty($wasteSection[$i]->what_is_the_final_destination_for_waste_from_your)?$wasteSection[$i]->what_is_the_final_destination_for_waste_from_your:"NA"; ?></td>
+            <td><?php echo !empty($wasteSection[$i]->what_is_the_final_destination_for_waste_from_your)?$wasteSection[$i]->what_is_the_final_destination_for_waste_from_your:""; ?></td>
             <?php } ?>
           </tr>
 
     <tr>
             <td>Does your school burn waste?</td>
             <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
-            <td><?php echo !empty($wasteSection[$i]->does_your_school_burn_waste)?$wasteSection[$i]->does_your_school_burn_waste:"NA"; ?></td>
+            <td><?php echo !empty($wasteSection[$i]->does_your_school_burn_waste)?$wasteSection[$i]->does_your_school_burn_waste:""; ?></td>
             <?php } ?>
           </tr>
         </table>
