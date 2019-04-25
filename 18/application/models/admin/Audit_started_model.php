@@ -2539,7 +2539,7 @@ public function getExcel2017Data() {
         $arrRecord = $this->db->select('*')
                         ->from('all_yoy_presentation')
                         ->where('school_id',$userid)
-                        ->order_by('id', 'asc')
+                        ->order_by("audit_year", "asc")
                         ->get()->result();                        
                       
      
@@ -4011,7 +4011,7 @@ public function getExcel2017Data() {
 
         foreach ($arrRecord as $a) {
          
-           if(!empty($a->stored_rainwater_use_drinking)){$data_final= $a->stored_rainwater_use_drinking;}else{ $data_final= "NA"; };    
+           if(!empty($a->stored_rainwater_use_drinking)){$data_final= $a->stored_rainwater_use_drinking;}else{ $data_final= ""; };    
 
             $output .= '"' . $data_final . '",';
                        
@@ -4020,7 +4020,7 @@ public function getExcel2017Data() {
       $output .= "\n";
       $output .= '"Stored rainwater use (Gardening)",';       
         foreach ($arrRecord as $a) {
-            if(!empty($a->stored_rainwater_use_gardening)){$data_final= $a->stored_rainwater_use_gardening;}else{ $data_final= "NA"; };
+            if(!empty($a->stored_rainwater_use_gardening)){$data_final= $a->stored_rainwater_use_gardening;}else{ $data_final= ""; };
             $output .= '"' . $data_final . '",';
                         
         }
@@ -4028,7 +4028,7 @@ public function getExcel2017Data() {
       $output .= "\n";
       $output .= '"Stored rainwater use (Mopping)",';       
         foreach ($arrRecord as $a) {
-            if(!empty($a->stored_rainwater_use_mopping)){$data_final= $a->stored_rainwater_use_mopping;}else{ $data_final= "NA"; };
+            if(!empty($a->stored_rainwater_use_mopping)){$data_final= $a->stored_rainwater_use_mopping;}else{ $data_final= ""; };
             $output .= '"' . $data_final . '",';
                         
         }
@@ -4036,7 +4036,7 @@ public function getExcel2017Data() {
       $output .= "\n";
       $output .= '"Stored rainwater use (Toilets)",';       
         foreach ($arrRecord as $a) {
-            if(!empty($a->stored_rainwater_use_toilets)){$data_final= $a->stored_rainwater_use_toilets;}else{ $data_final= "NA"; };
+            if(!empty($a->stored_rainwater_use_toilets)){$data_final= $a->stored_rainwater_use_toilets;}else{ $data_final= ""; };
             $output .= '"' . $data_final . '",';
                         
         }
@@ -4044,7 +4044,7 @@ public function getExcel2017Data() {
       $output .= "\n";
       $output .= '"Stored rainwater use (Washing vehicles)",';       
         foreach ($arrRecord as $a) {
-            if(!empty($a->stored_rainwater_use_washing_vehicles)){$data_final= $a->stored_rainwater_use_washing_vehicles;}else{ $data_final= "NA"; };
+            if(!empty($a->stored_rainwater_use_washing_vehicles)){$data_final= $a->stored_rainwater_use_washing_vehicles;}else{ $data_final= ""; };
             $output .= '"' . $data_final . '",';
                         
         }
@@ -4052,7 +4052,7 @@ public function getExcel2017Data() {
       $output .= "\n";
       $output .= '"Stored rainwater use (Kitchen)",';       
         foreach ($arrRecord as $a) {
-            if(!empty($a->stored_rainwater_use_kitchen)){$data_final=$a->stored_rainwater_use_kitchen;}else{ $data_final= "NA"; };
+            if(!empty($a->stored_rainwater_use_kitchen)){$data_final=$a->stored_rainwater_use_kitchen;}else{ $data_final= ""; };
             $output .= '"' . $data_final . '",';
                         
         }
@@ -4060,7 +4060,7 @@ public function getExcel2017Data() {
       $output .= "\n";
       $output .= '"Stored rainwater use (Shower, Brushing teeth, Bathing, Hand washing)",';       
         foreach ($arrRecord as $a) {
-            if(!empty($a->stored_rainwater_use_shower_brushing_teeth_bathing_hand_washing)){$data_final= $a->stored_rainwater_use_shower_brushing_teeth_bathing_hand_washing;}else{ $data_final= "NA"; };
+            if(!empty($a->stored_rainwater_use_shower_brushing_teeth_bathing_hand_washing)){$data_final= $a->stored_rainwater_use_shower_brushing_teeth_bathing_hand_washing;}else{ $data_final= ""; };
             $output .= '"' . $data_final . '",';
                         
         }
@@ -4068,7 +4068,7 @@ public function getExcel2017Data() {
       $output .= "\n";
       $output .= '"Stored rainwater use (Swimming Pool)",';       
         foreach ($arrRecord as $a) {
-            if(!empty($a->stored_rainwater_use_swimming_pool)){$data_final= $a->stored_rainwater_use_swimming_pool;}else{ $data_final= "NA"; };
+            if(!empty($a->stored_rainwater_use_swimming_pool)){$data_final= $a->stored_rainwater_use_swimming_pool;}else{ $data_final= ""; };
             $output .= '"' . $data_final . '",';
                         
         }
@@ -4131,7 +4131,7 @@ public function getExcel2017Data() {
       $output .= "\n";
       $output .= '"Q6(d) rainwater harvesting structures (Conduits)",';       
         foreach ($arrRecord as $a) {
-            if(!empty($a->rainwater_harvesting_structures_conduits)){$data_final= $a->rainwater_harvesting_structures_conduits;}else{ $data_final= "NA"; }
+            if(!empty($a->rainwater_harvesting_structures_conduits)){$data_final= $a->rainwater_harvesting_structures_conduits;}else{ $data_final= ""; }
             $output .= '"' . $data_final . '",';
                         
         }
@@ -4139,7 +4139,7 @@ public function getExcel2017Data() {
       $output .= "\n";
       $output .= '"Q6(d) rainwater harvesting structures (Gutters)",';       
         foreach ($arrRecord as $a) {
-            if(!empty($a->rainwater_harvesting_structures_gutters)){$data_final= $a->rainwater_harvesting_structures_gutters;}else{ $data_final= "NA"; }
+            if(!empty($a->rainwater_harvesting_structures_gutters)){$data_final= $a->rainwater_harvesting_structures_gutters;}else{ $data_final= ""; }
             $output .= '"' . $data_final . '",';
                         
         }
@@ -4147,7 +4147,7 @@ public function getExcel2017Data() {
       $output .= "\n";
       $output .= '"Q6(d) rainwater harvesting structures (Filter unit)",';       
         foreach ($arrRecord as $a) {
-            if(!empty($a->rainwater_harvesting_structures_filter_unit)){$data_final= $a->rainwater_harvesting_structures_filter_unit;}else{ $data_final= "NA"; }
+            if(!empty($a->rainwater_harvesting_structures_filter_unit)){$data_final= $a->rainwater_harvesting_structures_filter_unit;}else{ $data_final= ""; }
             $output .= '"' . $data_final . '",';
                        
         }
@@ -4155,7 +4155,7 @@ public function getExcel2017Data() {
       $output .= "\n";
       $output .= '"Q6(d) rainwater harvesting structures (First flush)",';       
         foreach ($arrRecord as $a) {
-            if(!empty($a->rainwater_harvesting_structures_first_flush)){$data_final= $a->rainwater_harvesting_structures_first_flush;}else{ $data_final= "NA"; }
+            if(!empty($a->rainwater_harvesting_structures_first_flush)){$data_final= $a->rainwater_harvesting_structures_first_flush;}else{ $data_final= ""; }
             $output .= '"' . $data_final . '",';
                        
         }
@@ -4163,7 +4163,7 @@ public function getExcel2017Data() {
       $output .= "\n";
       $output .= '"Q6(d) rainwater harvesting structures (Storage tank)",';       
         foreach ($arrRecord as $a) {
-            if(!empty($a->rainwater_harvesting_structures_storage_tank)){$data_final= $a->rainwater_harvesting_structures_storage_tank;}else{ $data_final= "NA"; }
+            if(!empty($a->rainwater_harvesting_structures_storage_tank)){$data_final= $a->rainwater_harvesting_structures_storage_tank;}else{ $data_final= ""; }
             $output .= '"' . $data_final . '",';
                        
         }
@@ -4171,7 +4171,7 @@ public function getExcel2017Data() {
       $output .= "\n";
       $output .= '"Q6(d) rainwater harvesting structures (Collection sump)",';       
         foreach ($arrRecord as $a) {
-            if(!empty($a->rainwater_harvesting_structures_collection_sump)){$data_final= $a->rainwater_harvesting_structures_collection_sump;}else{ $data_final= "NA"; }
+            if(!empty($a->rainwater_harvesting_structures_collection_sump)){$data_final= $a->rainwater_harvesting_structures_collection_sump;}else{ $data_final= ""; }
             $output .= '"' . $data_final . '",';
                        
         }
@@ -4179,7 +4179,7 @@ public function getExcel2017Data() {
       $output .= "\n";
       $output .= '"Q6(d) rainwater harvesting structures (Pump unit)",';       
         foreach ($arrRecord as $a) {
-            if(!empty($a->rainwater_harvesting_structures_collection_sump)){$data_final= $a->rainwater_harvesting_structures_pump_unit;}else{ $data_final= "NA"; }
+            if(!empty($a->rainwater_harvesting_structures_collection_sump)){$data_final= $a->rainwater_harvesting_structures_pump_unit;}else{ $data_final= ""; }
             $output .= '"' . $data_final . '",';
                        
         }
@@ -4504,7 +4504,7 @@ public function getExcel2017Data() {
       $output .= "\n";
       $output .= '"School reuse wastewater in (Flushing)",';       
         foreach ($arrRecord as $a) {
-            if(!empty($a->school_reuse_wastewater_in_flushing)){$data_final= $a->school_reuse_wastewater_in_flushing;}else{ $data_final= "NA"; }
+            if(!empty($a->school_reuse_wastewater_in_flushing)){$data_final= $a->school_reuse_wastewater_in_flushing;}else{ $data_final= ""; }
             $output .= '"' . $data_final . '",';
                       
         }
@@ -4512,7 +4512,7 @@ public function getExcel2017Data() {
       $output .= "\n";
       $output .= '"School reuse wastewater in (Recharge Ground Water)",';       
         foreach ($arrRecord as $a) {
-            if(!empty($a->school_reuse_wastewater_in_recharge_ground_water)){$data_final= $a->school_reuse_wastewater_in_recharge_ground_water;}else{ $data_final= "NA"; }
+            if(!empty($a->school_reuse_wastewater_in_recharge_ground_water)){$data_final= $a->school_reuse_wastewater_in_recharge_ground_water;}else{ $data_final= ""; }
             $output .= '"' . $data_final . '",';
                       
         }
@@ -4521,7 +4521,7 @@ public function getExcel2017Data() {
       $output .= '"Please specify the fate of wastewater",';       
         foreach ($arrRecord as $a) {
             if(!empty($a->please_specify_the_fate_of_wastewater)){
-                  $data_final= $a->please_specify_the_fate_of_wastewater; }else{ $data_final= "NA"; }
+                  $data_final= $a->please_specify_the_fate_of_wastewater; }else{ $data_final= ""; }
             $output .= '"' . $data_final . '",';
                       
         }
@@ -4536,7 +4536,7 @@ public function getExcel2017Data() {
       $output .= "\n";
       $output .= '"Segregator at Source",';       
         foreach ($arrRecord as $a) {
-            if(!empty($a->segregator_at_source)){ $data_final= $a->segregator_at_source;}else{ $data_final= "NA"; }
+            if(!empty($a->segregator_at_source)){ $data_final= $a->segregator_at_source;}else{ $data_final= ""; }
             $output .= '"' . $data_final . '",';
                      
         }
@@ -4544,7 +4544,7 @@ public function getExcel2017Data() {
       $output .= "\n";
       $output .= '"segregates the waste by (Students and teachers)",';       
         foreach ($arrRecord as $a) {
-            if(!empty($a->segregates_the_waste_by_students_and_teachers)){$data_final= $a->segregates_the_waste_by_students_and_teachers;}else{ $data_final= "NA"; }
+            if(!empty($a->segregates_the_waste_by_students_and_teachers)){$data_final= $a->segregates_the_waste_by_students_and_teachers;}else{ $data_final= ""; }
             $output .= '"' . $data_final . '",';
                      
         }
@@ -4552,7 +4552,7 @@ public function getExcel2017Data() {
       $output .= "\n";
       $output .= '"segregates the waste by (Housekeeping)",';       
         foreach ($arrRecord as $a) {
-            if(!empty($a->segregates_the_waste_by_housekeeping)){ $data_final= $a->segregates_the_waste_by_housekeeping;}else{ $data_final= "NA"; }
+            if(!empty($a->segregates_the_waste_by_housekeeping)){ $data_final= $a->segregates_the_waste_by_housekeeping;}else{ $data_final= ""; }
             $output .= '"' . $data_final . '",';
                      
         }
@@ -4560,7 +4560,7 @@ public function getExcel2017Data() {
       $output .= "\n";
       $output .= '"segregates the waste by (Gardener)",';       
         foreach ($arrRecord as $a) {
-            if(!empty($a->segregates_the_waste_by_gardener)){$data_final= $a->segregates_the_waste_by_gardener;}else{ $data_final= "NA"; }
+            if(!empty($a->segregates_the_waste_by_gardener)){$data_final= $a->segregates_the_waste_by_gardener;}else{ $data_final= ""; }
            $output .= '"' . $data_final . '",';
                       
         }
@@ -4568,7 +4568,7 @@ public function getExcel2017Data() {
       $output .= "\n";
       $output .= '"segregates the waste by (Ragpickers)",';       
         foreach ($arrRecord as $a) {
-            if(!empty($a->segregates_the_waste_by_ragpickers)){$data_final= $a->segregates_the_waste_by_ragpickers;}else{ $data_final= "NA"; }
+            if(!empty($a->segregates_the_waste_by_ragpickers)){$data_final= $a->segregates_the_waste_by_ragpickers;}else{ $data_final= ""; }
             $output .= '"' . $data_final . '",';
                       
         }
@@ -4576,7 +4576,7 @@ public function getExcel2017Data() {
       $output .= "\n";
       $output .= '"segregates the waste by (other)",';       
         foreach ($arrRecord as $a) {
-            if(!empty($a->segregates_the_waste_by_other)){$data_final= $a->segregates_the_waste_by_other;}else{ $data_final= "NA"; }
+            if(!empty($a->segregates_the_waste_by_other)){$data_final= $a->segregates_the_waste_by_other;}else{ $data_final= ""; }
             $output .= '"' . $data_final . '",';
                       
         }
@@ -4967,7 +4967,7 @@ public function getExcel2017Data() {
       $output .= "\n";
       $output .= '"Who collects E-waste",';       
         foreach ($arrRecord as $a) {
-            if(!empty($a->who_collects_e_waste)){ $data_final= $a->who_collects_e_waste;}else{ $data_final= "NA";}
+            if(!empty($a->who_collects_e_waste)){ $data_final= $a->who_collects_e_waste;}else{ $data_final= "";}
             $output .= '"' . $data_final . '",';
                       
         }
