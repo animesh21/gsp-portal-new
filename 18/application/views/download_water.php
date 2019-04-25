@@ -109,85 +109,85 @@
           <tr>
             <td>Audit Year</td>
             <?php for($i=0;$i<sizeof($waterSection);++$i){ ?>
-            <td><?php echo !empty($waterSection[$i]->audit_year)?$waterSection[$i]->audit_year:"NA"; ?></td>
+            <td><?php echo !empty($waterSection[$i]->audit_year)?$waterSection[$i]->audit_year:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>Per capita/day water consumption (L/person/day)</td>
             <?php for($i=0;$i<sizeof($waterSection);++$i){ ?>
-            <td><?php echo !empty($waterSection[$i]->per_capita_day_water_consumption)?round($waterSection[$i]->per_capita_day_water_consumption,2):"NA"; ?></td>
+            <td><?php echo !empty($waterSection[$i]->per_capita_day_water_consumption)?round($waterSection[$i]->per_capita_day_water_consumption,2):""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>Load on Drinking Water Taps (DWT) (No. of people/ No. of taps)</td>
             <?php for($i=0;$i<sizeof($waterSection);++$i){ ?>
-            <td><?php echo !empty($waterSection[$i]->load_on_dwt)?round($waterSection[$i]->load_on_dwt,2):"NA"; ?></td>
+            <td><?php echo !empty($waterSection[$i]->load_on_dwt)?round($waterSection[$i]->load_on_dwt,2):""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>Load on Water Closets (No. of people/ No. of water closets)</td>
             <?php for($i=0;$i<sizeof($waterSection);++$i){ ?>
-            <td><?php echo !empty($waterSection[$i]->load_on_water_closet)?round($waterSection[$i]->load_on_water_closet,2):"NA"; ?></td>
+            <td><?php echo !empty($waterSection[$i]->load_on_water_closet)?round($waterSection[$i]->load_on_water_closet,2):""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>Does school treat waste water?</td>
             <?php for($i=0;$i<sizeof($waterSection);++$i){ ?>
-            <td><?php echo !empty($waterSection[$i]->does_school_treat_waste_water)?$waterSection[$i]->does_school_treat_waste_water:"NA"; ?></td>
+            <td><?php echo !empty($waterSection[$i]->does_school_treat_waste_water)?$waterSection[$i]->does_school_treat_waste_water:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>Do you have Rainwater harvesting (RWH) system in your school?</td>
             <?php for($i=0;$i<sizeof($waterSection);++$i){ ?>
-            <td><?php echo !empty($waterSection[$i]->do_you_have_rainwater_harvesting_rwh_system_in_your_school)?$waterSection[$i]->do_you_have_rainwater_harvesting_rwh_system_in_your_school:"NA"; ?></td>
+            <td><?php echo !empty($waterSection[$i]->do_you_have_rainwater_harvesting_rwh_system_in_your_school)?$waterSection[$i]->do_you_have_rainwater_harvesting_rwh_system_in_your_school:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>How does your school harvest rainwater?</td>
             <?php for($i=0;$i<sizeof($waterSection);++$i){ ?>
-            <td><?php echo !empty($waterSection[$i]->how_does_your_school_harvest_rainwater)?$waterSection[$i]->how_does_your_school_harvest_rainwater:"NA"; ?></td>
+            <td><?php echo !empty($waterSection[$i]->how_does_your_school_harvest_rainwater)?$waterSection[$i]->how_does_your_school_harvest_rainwater:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>Total number of storage tank(s)</td>
             <?php for($i=0;$i<sizeof($waterSection);++$i){ ?>
-            <td><?php echo !empty($waterSection[$i]->total_number_of_storage_tanks)?$waterSection[$i]->total_number_of_storage_tanks:"NA"; ?></td>
+            <td><?php echo !empty($waterSection[$i]->total_number_of_storage_tanks)?$waterSection[$i]->total_number_of_storage_tanks:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>Does your school have a groundwater recharge structure?</td>
             <?php for($i=0;$i<sizeof($waterSection);++$i){ ?>
-            <td><?php echo !empty($waterSection[$i]->does_your_school_have_groundwater_recharge_structure)?$waterSection[$i]->does_your_school_have_groundwater_recharge_structure:"NA"; ?></td>
+            <td><?php echo !empty($waterSection[$i]->does_your_school_have_groundwater_recharge_structure)?$waterSection[$i]->does_your_school_have_groundwater_recharge_structure:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>Total number of recharge structure(s)</td>
             <?php for($i=0;$i<sizeof($waterSection);++$i){ ?>
-            <td><?php echo !empty($waterSection[$i]->total_number_of_recharge_structure)?$waterSection[$i]->total_number_of_recharge_structure:"NA"; ?></td>
+            <td><?php echo !empty($waterSection[$i]->total_number_of_recharge_structure)?$waterSection[$i]->total_number_of_recharge_structure:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>RWH structures present in your school:</td>
             <?php for($i=0;$i<sizeof($waterSection);++$i){ ?>
-            <td><?php echo !empty($waterSection[$i]->rwh_structures_present_in_your_school)?$waterSection[$i]->rwh_structures_present_in_your_school:"NA"; ?></td>
+            <td><?php echo !empty($waterSection[$i]->rwh_structures_present_in_your_school)?$waterSection[$i]->rwh_structures_present_in_your_school:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>Does your school clean the RWH system and catchment?</td>
             <?php for($i=0;$i<sizeof($waterSection);++$i){ ?>
-            <td><?php echo !empty($waterSection[$i]->does_your_school_clean_your_catchment_and_system)?$waterSection[$i]->does_your_school_clean_your_catchment_and_system:"NA"; ?></td>
+            <td><?php echo !empty($waterSection[$i]->does_your_school_clean_your_catchment_and_system)?$waterSection[$i]->does_your_school_clean_your_catchment_and_system:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>When does your school clean the catchment and RWH system?</td>
             <?php for($i=0;$i<sizeof($waterSection);++$i){ ?>
-            <td><?php echo !empty($waterSection[$i]->when_does_your_school_clean_the_catchment_and_rwh_system)?$waterSection[$i]->when_does_your_school_clean_the_catchment_and_rwh_system:"NA"; ?></td>
+            <td><?php echo !empty($waterSection[$i]->when_does_your_school_clean_the_catchment_and_rwh_system)?$waterSection[$i]->when_does_your_school_clean_the_catchment_and_rwh_system:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>When does your school monitor the groundwater level?</td>
             <?php for($i=0;$i<sizeof($waterSection);++$i){ ?>
-            <td><?php echo !empty($waterSection[$i]->when_does_your_school_monitor_the_groundwater_level)?$waterSection[$i]->when_does_your_school_monitor_the_groundwater_level:"NA"; ?></td>
+            <td><?php echo !empty($waterSection[$i]->when_does_your_school_monitor_the_groundwater_level)?$waterSection[$i]->when_does_your_school_monitor_the_groundwater_level:""; ?></td>
             <?php } ?>
           </tr>
         </table>
