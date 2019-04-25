@@ -101,55 +101,55 @@
             <tr>
               <td>Audit Year</td>
               <?php for($i=0;$i<sizeof($airSection);++$i){ ?>
-              <td><?php echo !empty($airSection[$i]->audit_year)?$airSection[$i]->audit_year:"NA"; ?></td>
+              <td><?php echo !empty($airSection[$i]->audit_year)?$airSection[$i]->audit_year:""; ?></td>
               <?php } ?>
             </tr>
             <tr>
               <td>Window-floor Ratio (%)</td>
               <?php for($i=0;$i<sizeof($airSection);++$i){ ?>
-              <td><?php echo !empty($airSection[$i]->window_floor_ratio)?$airSection[$i]->window_floor_ratio:"NA"; ?></td>
+              <td><?php echo !empty($airSection[$i]->window_floor_ratio)?$airSection[$i]->window_floor_ratio:""; ?></td>
               <?php } ?>
             </tr>
             <tr>
               <td>Ownership of Vehicles</td>
               <?php for($i=0;$i<sizeof($airSection);++$i){ ?>
-              <td><?php echo !empty($airSection[$i]->ownership_of_vehicles)?$airSection[$i]->ownership_of_vehicles:"NA"; ?></td>
+              <td><?php echo !empty($airSection[$i]->ownership_of_vehicles)?$airSection[$i]->ownership_of_vehicles:""; ?></td>
               <?php } ?>
             </tr>
             <tr>
               <td>No. of Vehicles more than eight years old</td>
               <?php for($i=0;$i<sizeof($airSection);++$i){ ?>
-              <td><?php echo !empty($airSection[$i]->no_of_vehicles_more_than_eight_years_old)?$airSection[$i]->no_of_vehicles_more_than_eight_years_old:"NA"; ?></td>
+              <td><?php echo !empty($airSection[$i]->no_of_vehicles_more_than_eight_years_old)?$airSection[$i]->no_of_vehicles_more_than_eight_years_old:""; ?></td>
               <?php } ?>
             </tr>
             <tr>
               <td>No. of Vehicles with PUC certificate</td>
               <?php for($i=0;$i<sizeof($airSection);++$i){ ?>
-              <td><?php echo !empty($airSection[$i]->no_of_vehicles_with_puc_certificate)?$airSection[$i]->no_of_vehicles_with_puc_certificate:"NA"; ?></td>
+              <td><?php echo !empty($airSection[$i]->no_of_vehicles_with_puc_certificate)?$airSection[$i]->no_of_vehicles_with_puc_certificate:""; ?></td>
               <?php } ?>
             </tr>
             <tr>
               <td>Annual Road worthiness certificate</td>
               <?php for($i=0;$i<sizeof($airSection);++$i){ ?>
-              <td><?php echo !empty($airSection[$i]->annual_road_worthiness_certificate)?$airSection[$i]->annual_road_worthiness_certificate:"NA"; ?></td>
+              <td><?php echo !empty($airSection[$i]->annual_road_worthiness_certificate)?$airSection[$i]->annual_road_worthiness_certificate:""; ?></td>
               <?php } ?>
             </tr>
             <tr>
               <td>Commute: Sustainable Motorised Vehicles: Percentage </td>
               <?php for($i=0;$i<sizeof($airSection);++$i){ ?>
-               <td><?php echo !empty($airSection[$i]->sustainble_motorised_vehicles_percentgae)?round($airSection[$i]->sustainble_motorised_vehicles_percentgae,2):"NA"; ?></td>
+               <td><?php echo !empty($airSection[$i]->sustainble_motorised_vehicles_percentgae)?round($airSection[$i]->sustainble_motorised_vehicles_percentgae,2):""; ?></td>
               <?php } ?>
             </tr>
             <tr>
               <td>Commute: Non Polluting Transport: Percentage</td>
               <?php for($i=0;$i<sizeof($airSection);++$i){ ?>
-              <td><?php echo !empty($airSection[$i]->non_polluting_transport_percentage)?round($airSection[$i]->non_polluting_transport_percentage,2):"NA"; ?></td>
+              <td><?php echo !empty($airSection[$i]->non_polluting_transport_percentage)?round($airSection[$i]->non_polluting_transport_percentage,2):""; ?></td>
               <?php } ?>
             </tr>
             <tr>
               <td>No. of students suffer from respiratory problems</td>
               <?php for($i=0;$i<sizeof($airSection);++$i){ ?>
-              <td><?php echo !empty($airSection[$i]->no_of_students_suffer_from_respiratory_problems)?$airSection[$i]->no_of_students_suffer_from_respiratory_problems:"NA"; ?></td>
+              <td><?php echo !empty($airSection[$i]->no_of_students_suffer_from_respiratory_problems)?$airSection[$i]->no_of_students_suffer_from_respiratory_problems:""; ?></td>
               <?php } ?>
             </tr>
           </table>
