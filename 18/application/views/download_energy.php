@@ -109,115 +109,115 @@
           <tr>
             <td>Audit Year</td>
             <?php for($i=0;$i<sizeof($energySection);++$i){ ?>
-            <td><?php echo !empty($energySection[$i]->audit_year)?$energySection[$i]->audit_year:"NA"; ?></td>
+            <td><?php echo !empty($energySection[$i]->audit_year)?$energySection[$i]->audit_year:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>Per capita Energy Consumption (MJ/day/person)</td>
             <?php for($i=0;$i<sizeof($energySection);++$i){ ?>
-            <td><?php echo !empty($energySection[$i]->per_capita_energy_consumption)?$energySection[$i]->per_capita_energy_consumption:"NA"; ?></td>
+            <td><?php echo !empty($energySection[$i]->per_capita_energy_consumption)?$energySection[$i]->per_capita_energy_consumption:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>Alternate source of energy</td>
             <?php for($i=0;$i<sizeof($energySection);++$i){ ?>
-            <td><?php echo !empty($energySection[$i]->alternate_source_of_energy)?$energySection[$i]->alternate_source_of_energy:"NA"; ?></td>
+            <td><?php echo !empty($energySection[$i]->alternate_source_of_energy)?$energySection[$i]->alternate_source_of_energy:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>Electricity from the board (MJ)</td>
             <?php for($i=0;$i<sizeof($energySection);++$i){ ?>
-            <td><?php echo !empty($energySection[$i]->electricity_from_the_board_mj)?$energySection[$i]->electricity_from_the_board_mj:"NA"; ?></td>
+            <td><?php echo !empty($energySection[$i]->electricity_from_the_board_mj)?$energySection[$i]->electricity_from_the_board_mj:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>Electricity from generator (MJ)</td>
             <?php for($i=0;$i<sizeof($energySection);++$i){ ?>
-            <td><?php echo !empty($energySection[$i]->electricity_from_generator_mj)?$energySection[$i]->electricity_from_generator_mj:"NA"; ?></td>
+            <td><?php echo !empty($energySection[$i]->electricity_from_generator_mj)?$energySection[$i]->electricity_from_generator_mj:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>Petrol (MJ)</td>
             <?php for($i=0;$i<sizeof($energySection);++$i){ ?>
-            <td><?php echo !empty($energySection[$i]->petrol_mj)?$energySection[$i]->petrol_mj:"NA"; ?></td>
+            <td><?php echo !empty($energySection[$i]->petrol_mj)?$energySection[$i]->petrol_mj:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>Diesel (MJ)</td>
             <?php for($i=0;$i<sizeof($energySection);++$i){ ?>
-            <td><?php echo !empty($energySection[$i]->diesel_mj)?$energySection[$i]->diesel_mj:"NA"; ?></td>
+            <td><?php echo !empty($energySection[$i]->diesel_mj)?$energySection[$i]->diesel_mj:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>CNG (MJ)</td>
             <?php for($i=0;$i<sizeof($energySection);++$i){ ?>
-            <td><?php echo !empty($energySection[$i]->cng_mj)?$energySection[$i]->cng_mj:"NA"; ?></td>
+            <td><?php echo !empty($energySection[$i]->cng_mj)?$energySection[$i]->cng_mj:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>Kerosene (MJ)</td>
             <?php for($i=0;$i<sizeof($energySection);++$i){ ?>
-            <td><?php echo !empty($energySection[$i]->kerosene_mj)?$energySection[$i]->kerosene_mj:"NA"; ?></td>
+            <td><?php echo !empty($energySection[$i]->kerosene_mj)?$energySection[$i]->kerosene_mj:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>Coal (MJ)</td>
             <?php for($i=0;$i<sizeof($energySection);++$i){ ?>
-            <td><?php echo !empty($energySection[$i]->coal_mj)?$energySection[$i]->coal_mj:"NA"; ?></td>
+            <td><?php echo !empty($energySection[$i]->coal_mj)?$energySection[$i]->coal_mj:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>Wood (MJ)</td>
             <?php for($i=0;$i<sizeof($energySection);++$i){ ?>
-            <td><?php echo !empty($energySection[$i]->wood_mj)?$energySection[$i]->wood_mj:"NA"; ?></td>
+            <td><?php echo !empty($energySection[$i]->wood_mj)?$energySection[$i]->wood_mj:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>Animal waste (MJ)</td>
             <?php for($i=0;$i<sizeof($energySection);++$i){ ?>
-            <td><?php echo !empty($energySection[$i]->animal_waste_mj)?$energySection[$i]->animal_waste_mj:"NA"; ?></td>
+            <td><?php echo !empty($energySection[$i]->animal_waste_mj)?$energySection[$i]->animal_waste_mj:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>Solar (MJ)</td>
             <?php for($i=0;$i<sizeof($energySection);++$i){ ?>
-            <td><?php echo !empty($energySection[$i]->solar_mj)?$energySection[$i]->solar_mj:"NA"; ?></td>
+            <td><?php echo !empty($energySection[$i]->solar_mj)?$energySection[$i]->solar_mj:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>Wind (MJ)</td>
             <?php for($i=0;$i<sizeof($energySection);++$i){ ?>
-            <td><?php echo !empty($energySection[$i]->wind_mj)?$energySection[$i]->wind_mj:"NA"; ?></td>
+            <td><?php echo !empty($energySection[$i]->wind_mj)?$energySection[$i]->wind_mj:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>LPG (MJ)</td>
             <?php for($i=0;$i<sizeof($energySection);++$i){ ?>
-            <td><?php echo !empty($energySection[$i]->lpg_mj)?$energySection[$i]->lpg_mj:"NA"; ?></td>
+            <td><?php echo !empty($energySection[$i]->lpg_mj)?$energySection[$i]->lpg_mj:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>Piped Natural Gas (MJ)</td>
             <?php for($i=0;$i<sizeof($energySection);++$i){ ?>
-            <td><?php echo !empty($energySection[$i]->piped_natural_gas_mj)?$energySection[$i]->piped_natural_gas_mj:"NA"; ?></td>
+            <td><?php echo !empty($energySection[$i]->piped_natural_gas_mj)?$energySection[$i]->piped_natural_gas_mj:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>Biogas (MJ)</td>
             <?php for($i=0;$i<sizeof($energySection);++$i){ ?>
-            <td><?php echo !empty($energySection[$i]->biogas_mj)?$energySection[$i]->biogas_mj:"NA"; ?></td>
+            <td><?php echo !empty($energySection[$i]->biogas_mj)?$energySection[$i]->biogas_mj:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>Others (MJ)</td>
             <?php for($i=0;$i<sizeof($energySection);++$i){ ?>
-            <td><?php echo !empty($energySection[$i]->others_mj)?$energySection[$i]->others_mj:"NA"; ?></td>
+            <td><?php echo !empty($energySection[$i]->others_mj)?$energySection[$i]->others_mj:""; ?></td>
             <?php } ?>
           </tr>
 	<tr>
             <td>Total (MJ)</td>
             <?php for($i=0;$i<sizeof($energySection);++$i){ ?>
-            <td><?php echo !empty($energySection[$i]->total_mj)?$energySection[$i]->total_mj:"NA"; ?></td>
+            <td><?php echo !empty($energySection[$i]->total_mj)?$energySection[$i]->total_mj:""; ?></td>
             <?php } ?>
           </tr>
         </table>
