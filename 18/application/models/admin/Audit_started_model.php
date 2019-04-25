@@ -2795,7 +2795,7 @@ public function getExcel2017Data() {
         $output .= "\n";
         $output .= '"No.of Vehicles more than eight years old",';        
         foreach ($arrRecord as $a) {
-            $output .= '"' . $a->no_of_vehicles_more_than_eight_years_old . '",';            
+            $output .= '"' . preg_replace('/[\s]+/mu', ' ', $a->no_of_vehicles_more_than_eight_years_old) . '",';            
             
         }
       
@@ -2811,7 +2811,7 @@ public function getExcel2017Data() {
         $output .= "\n";
         $output .= '"No.of Vehicles with PUC certificate",';        
         foreach ($arrRecord as $a) {
-            $output .= '"' . $a->no_of_vehicles_with_puc_certificate . '",';            
+            $output .= '"' . preg_replace('/[\s]+/mu', ' ', $a->no_of_vehicles_with_puc_certificate) . '",';            
             
         }
       
