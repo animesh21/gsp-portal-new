@@ -109,31 +109,31 @@
           <tr>
             <td>Audit Year</td>
             <?php for($i=0;$i<sizeof($foodSection);++$i){ ?>
-            <td><?php echo !empty($foodSection[$i]->audit_year)?$foodSection[$i]->audit_year:"NA"; ?></td>
+            <td><?php echo !empty($foodSection[$i]->audit_year)?$foodSection[$i]->audit_year:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>Provision of selling packaged food</td>
             <?php for($i=0;$i<sizeof($foodSection);++$i){ ?>
-            <td><?php echo !empty($foodSection[$i]->provision_of_packaged_food)?$foodSection[$i]->provision_of_packaged_food:"NA"; ?></td>
+            <td><?php echo !empty($foodSection[$i]->provision_of_packaged_food)?$foodSection[$i]->provision_of_packaged_food:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>Schools distributes packaged food items as rewards</td>
             <?php for($i=0;$i<sizeof($foodSection);++$i){ ?>
-            <td><?php echo !empty($foodSection[$i]->schools_distributes_packaged_food_items_as_rewards)?$foodSection[$i]->schools_distributes_packaged_food_items_as_rewards:"NA"; ?></td>
+            <td><?php echo !empty($foodSection[$i]->schools_distributes_packaged_food_items_as_rewards)?$foodSection[$i]->schools_distributes_packaged_food_items_as_rewards:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>School distribute chocolates/similar products as refreshments during schools events</td>
             <?php for($i=0;$i<sizeof($foodSection);++$i){ ?>
-            <td><?php echo !empty($foodSection[$i]->school_distribute_chocolates_similar_products_as_refreshments)?$foodSection[$i]->school_distribute_chocolates_similar_products_as_refreshments:"NA"; ?></td>
+            <td><?php echo !empty($foodSection[$i]->school_distribute_chocolates_similar_products_as_refreshments)?$foodSection[$i]->school_distribute_chocolates_similar_products_as_refreshments:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>School events sponsored by food companies/brands</td>
             <?php for($i=0;$i<sizeof($foodSection);++$i){ ?>
-            <td><?php echo !empty($foodSection[$i]->school_events_sponsored_by_food_companies_brands)?$foodSection[$i]->school_events_sponsored_by_food_companies_brands:"NA"; ?></td>
+            <td><?php echo !empty($foodSection[$i]->school_events_sponsored_by_food_companies_brands)?$foodSection[$i]->school_events_sponsored_by_food_companies_brands:""; ?></td>
             <?php } ?>
           </tr>
         </table>
