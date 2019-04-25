@@ -183,9 +183,9 @@
     <li><a href="#6" id="six" data-toggle="tab">Satya Bharti Foundation</a> </li>
   </ul>
   <div class="tab-content">
-    <div class="tab-pane active" id="1"> <a href="<?php echo base_url("admin/audit_started/foundationPartnerrexcel/1"); ?>" class="btn btn-default">
+<!--     <div class="tab-pane active" id="1"> <a href="<//?php echo base_url("admin/audit_started/foundationPartnerrexcel/1"); ?>" class="btn btn-default">
       <button class="exportBtn">Export to Excel</button>
-      </a>
+      </a> -->
       <table id="example1" class="display dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
         <thead>
           <tr role="row">
