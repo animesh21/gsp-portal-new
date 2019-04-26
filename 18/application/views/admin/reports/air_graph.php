@@ -1,9 +1,26 @@
 <?php
 //echo '<pre>'; print_r($Bus);die();
-$petrol = $Bus['petrol'][0]->total;
-$diesel = $Bus['diesel'][0]->total;
-$cng = $Bus['cng'][0]->total;
-$electric = $Bus['electric'][0]->total;
+$petrol1 = $Bus['petrol'][0]->total;
+$petrol2 = $Bus['petrol1'][0]->total;
+
+  $petrol= $petrol1+$petrol2;
+
+$diesel1 = $Bus['diesel'][0]->total;
+$diesel2 = $Bus['diesel1'][0]->total;
+
+   $diesel= $diesel1+$diesel2;
+
+
+$cng1 = $Bus['cng'][0]->total;
+$cng2 = $Bus['cng1'][0]->total;
+
+   $cng= $cng1+$cng2;
+
+
+$electric1 = $Bus['electric'][0]->total;
+$electric2 = $Bus['electric1'][0]->total;
+
+  $electric= $electric1+$electric2;
 
 $final_array_poss = array($NotOwnVehicles_count,'');
 $final_NotOwnVehicles_count = json_encode($final_array_poss);
@@ -44,19 +61,112 @@ $final_BusesonPetrol = json_encode($final_array_poss7);
 
 ?>
 <?php
-$school_bus = round($sustain['Q7A1S4'][0]->avg);
-$public_bus = (round($sustain['Q7A2S4'][0]->avg));
-$school_transport = (round($sustain['Q7A3S4'][0]->avg));
-$school_public_transport = (round($sustain['Q7A4S4'][0]->avg));
-$four_wheeler = (round($sustain['Q7A5S4'][0]->avg));
-$three_wheeler = (round($sustain['Q7A6S4'][0]->avg));
-$personal_four = round($private['Q7A7S4'][0]->avg);
-$personal_three = (round($private['Q7A8S4'][0]->avg));
-$bicycle= (round($np['Q7A9S4'][0]->avg));
-$on_foot = (round($np['Q7A10S4'][0]->avg));
-$others = (round($np['Q7A11S4'][0]->avg));
-$air_no = $quality['Q9A1'][0]->total;
-$air_yes = $quality['Q9A1'][1]->total;
+
+$total_population1 = round($sustain['total_population'][0]->avg);
+$total_population2 = round($sustain['total_population_phase2'][0]->avg);
+$total_population = $total_population1 + $total_population2;
+
+
+$total_school_bus1 = round($sustain['Q7A1S4'][0]->avg);
+$total_school_bus2 = round($sustain['Q7A1S4_phase2'][0]->avg);
+$total_school_bus = $total_school_bus1 + $total_school_bus2;
+$school_bus = round($total_school_bus/$total_population*100);
+
+
+$total_public_bus1 = (round($sustain['Q7A2S4'][0]->avg));
+$total_public_bus2 = (round($sustain['Q7A2S4_phase2'][0]->avg));
+$total_public_bus = $total_public_bus1 + $total_public_bus2;
+$public_bus = round($total_public_bus/$total_population*100);
+
+
+$total_school_transport1 = (round($sustain['Q7A3S4'][0]->avg));
+$total_school_transport2 = (round($sustain['Q7A3S4_phase2'][0]->avg));
+$total_school_transport = $total_school_transport1 +$total_school_transport2;
+$school_transport = round($total_school_transport/$total_population*100);
+
+
+$total_school_public_transport1 = (round($sustain['Q7A4S4'][0]->avg));
+$total_school_public_transport2 = (round($sustain['Q7A4S4_phase2'][0]->avg));
+$total_school_public_transport = $total_school_public_transport1 +$total_school_public_transport2;
+$school_public_transport = round($total_school_public_transport/$total_population*100);
+
+
+$total_four_wheeler1 = (round($sustain['Q7A5S4'][0]->avg));
+$total_four_wheeler2 = (round($sustain['Q7A5S4_phase2'][0]->avg));
+$total_four_wheeler = $total_four_wheeler1 + $total_four_wheeler2;
+$four_wheeler = round($total_four_wheeler/$total_population*100);
+
+
+$total_three_wheeler1 = (round($sustain['Q7A6S4'][0]->avg));
+$total_three_wheeler2 = (round($sustain['Q7A6S4_phase2'][0]->avg));
+$total_three_wheeler = $total_three_wheeler1 + $total_three_wheeler2;
+$three_wheeler = round($total_three_wheeler/$total_population*100);
+
+
+$total_personal_four1 = round($private['Q7A7S4'][0]->avg);
+$total_personal_four2 = round($private['Q7A7S4_phase2'][0]->avg);
+$total_personal_four = $total_personal_four1 + $total_personal_four2;
+$personal_four = round($total_personal_four/$total_population*100);
+
+
+$total_personal_three1 = (round($private['Q7A8S4'][0]->avg));
+$total_personal_three2 = (round($private['Q7A8S4_phase2'][0]->avg));
+$total_personal_three = $total_personal_three1 + $total_personal_three2;
+$personal_three = round($total_personal_three/$total_population*100);
+
+
+$total_bicycle1= (round($np['Q7A9S4'][0]->avg));
+$total_bicycle2= (round($np['Q7A9S4_phase2'][0]->avg));
+$total_bicycle= $total_bicycle1 + $total_bicycle2;
+$bicycle= round($total_bicycle/$total_population*100);
+
+
+
+
+$total_on_foot1 = (round($np['Q7A10S4'][0]->avg));
+$total_on_foot2 = (round($np['Q7A10S4_phase2'][0]->avg));
+$total_on_foot = $total_on_foot1 + $total_on_foot2;
+
+$on_foot = round($total_on_foot/$total_population*100);
+
+$total_others1 = (round($np['Q7A11S4'][0]->avg));
+$total_others2 = (round($np['Q7A11S4_phase2'][0]->avg));
+$total_others = $total_others1 + $total_others2;
+$others = round($total_others/$total_population*100);
+
+
+$air_remaining1 = $quality['Q9A1'][0]->total;
+$air_remaining2 = $quality['Q9A1_phase2'][0]->total;
+$air_remaining = $air_remaining1 + $air_remaining2;
+
+
+$total_air_no1 = $quality['Q9A1'][1]->total;
+$total_air_no2 = $quality['Q9A1_phase2'][1]->total;
+
+$total_air_no = $total_air_no1 + $total_air_no2;
+
+
+$total_school_phase1= 1689;
+$total_school_phase2= 49;
+
+$total_school_phase = $total_school_phase1 + $total_school_phase2;
+
+
+$final_air_no = $total_air_no + $air_remaining;
+
+
+$air_no = round($final_air_no/$total_school_phase*100);
+
+
+
+$final_air_yes1 = $quality['Q9A1'][2]->total;
+$final_air_yes2 = $quality['Q9A1_phase2'][2]->total;
+$final_air_yes = $final_air_yes1 + $final_air_yes2;
+$air_yes = round($final_air_yes/$total_school_phase*100);
+
+
+
+
 // Final Arrays
 $final_array_poss6 = array('',$personal_four,'','');
 $final_four = json_encode($final_array_poss6);
@@ -92,10 +202,10 @@ $final_array_poss10 = array('','',$others,'');
 $final_other = json_encode($final_array_poss10);
 
 
-$final_array_poss11 = array('','','',(int)$air_no);
+$final_array_poss11 = array('','','',(int)$air_yes);
 $final_yes = json_encode($final_array_poss11);
 
-$final_array_poss12 = array('','','',(int)$air_yes);
+$final_array_poss12 = array('','','',(int)$air_no);
 $final_no = json_encode($final_array_poss12);
 ?>
 
@@ -209,7 +319,7 @@ $final_no = json_encode($final_array_poss12);
         },
         xAxis: {
             categories: [
-        'Sustainable Motorised',
+                'Sustainable Motorised',
                 'Private Vehicles',
                 'Non-Polluting Mode',
                 'Air Quality Monitor'
@@ -220,7 +330,7 @@ $final_no = json_encode($final_array_poss12);
         yAxis: { 
             min: 0,
             title: {
-                text: 'Avg Vehicles'
+                text: 'People Percentage'
             }
         },
         tooltip: {
