@@ -481,47 +481,93 @@ public function CombinationSchoolandOperatorvehicles($question_id,$answer)
 	
 	public function Airconditioner($question_id)
 	{
-		    $this->db->select_sum('$question_id');
-			$this->db->from('tbl_total');
-            return $this->db->get()->row();
+		     $this->db->select_sum($question_id);
+			 $this->db->from('tbl_total');
+             return $this->db->get()->row();
+
+          
+	}
+
+	public function Airconditioner_phase2($question_id)
+	{
+		     $this->db->select_sum($question_id);
+			 $this->db->from('tbl_total_phase2');
+             return $this->db->get()->row();
+
+          
 	}
 	
 	public function Tubelight($question_id)
 	{
-		    $this->db->select_sum('$question_id');
+		    $this->db->select_sum($question_id);
 			$this->db->from('tbl_total');
             return $this->db->get()->row();
 	}
+
+    public function Tubelight_phase2($question_id)
+	{
+		    $this->db->select_sum($question_id);
+			$this->db->from('tbl_total_phase2');
+            return $this->db->get()->row();
+	}
+
+
 	public function CFLbulb($question_id)
 	{
-		    $this->db->select_sum('$question_id');
+		    $this->db->select_sum($question_id);
 			$this->db->from('tbl_total');
             return $this->db->get()->row();
 	}
-	public function LEDbulb($question_id)
+
+    public function CFLbulb_phase2($question_id)
 	{
-		    $this->db->select_sum('$question_id');
+		    $this->db->select_sum($question_id);
+			$this->db->from('tbl_total_phase2');
+            return $this->db->get()->row();
+	}
+
+
+	public function LEDbulb($question_id)	
+	{
+		    $this->db->select_sum($question_id);
 			$this->db->from('tbl_total');
             return $this->db->get()->row();
 	}
+
+	public function LEDbulb_phase2($question_id)	
+	{
+		    $this->db->select_sum($question_id);
+			$this->db->from('tbl_total_phase2');
+            return $this->db->get()->row();
+	}
+
 	public function SchoolHavingAlternateSourceOfEnergy($question_id)
 	{
-		    $this->db->where('$question_id','Y');
+		    $this->db->where($question_id,'Y');
 	        return $this->db->count_all_results('tbl_total');
+			 
+	}
+
+
+	public function SchoolHavingAlternateSourceOfEnergy_phase2($question_id)
+	{
+		    $this->db->where($question_id,'Y');
+	        return $this->db->count_all_results('tbl_total_phase2');
 			 
 	}
 	
 	public function getEnergyReport(){
-            return $this->db->select('Avg(a.Q6E1S2) as board, Avg(a.percatitaaa) as capita')
-            ->from('tbl_total as a')
-            ->get()->result();
+             return $this->db->select('Avg(a.Q6E1S2) as board, Avg(a.percatitaaa) as capita')
+					       ->from('tbl_total as a')
+					       ->get()->result();
+
+					     //  echo $this->db->last_query();
         }
 	
 	public function getEnergyReport_2(){
             return $this->db->select('Avg(a.Q6E1S2) as board, Avg(a.percatitaaa) as capita')
-                     ->from('tbl_energy_phase_2 as a')
-		     
-                     ->get()->result();
+                     ->from('tbl_total_phase2 as a')
+		             ->get()->result();
             
         }
         
@@ -529,14 +575,14 @@ public function CombinationSchoolandOperatorvehicles($question_id,$answer)
             return $this->db->select('count(a.Q6E2S1) as generator')
                      ->from('tbl_total as a')
                      ->where('a.Q6E2S1 != ',0,FALSE)
-		     ->get()->result();
+		             ->get()->result();
             
         }
 	 public function getEnergyGeneratorSchool_2(){
             return $this->db->select('count(a.Q6E2S1) as generator')
-                     ->from('tbl_energy_phase_2 as a')
+                     ->from('tbl_total_phase2 as a')
                      ->where('a.Q6E2S1 != ',0,FALSE)
-		     ->get()->result();
+		             ->get()->result();
             
         }
         
@@ -544,29 +590,29 @@ public function CombinationSchoolandOperatorvehicles($question_id,$answer)
             return $this->db->select('count(a.Q6E13S1) as biogas')
                      ->from('tbl_total as a')
                      ->where('a.Q6E13S1 != ',0,FALSE)
-		     ->get()->result();
+		             ->get()->result();
             
         }
 	public function getEnergyBiogasSchool_2(){
             return $this->db->select('count(a.Q6E13S1) as biogas')
-                     ->from('tbl_energy_phase_2 as a')
+                     ->from('tbl_total_phase2 as a')
                      ->where('a.Q6E13S1 != ',0,FALSE)
-		     ->get()->result();
+		             ->get()->result();
             
         }
          public function getEnergySolarSchool(){
             return $this->db->select('count(a.Q6E9S1) as solar')
                      ->from('tbl_total as a')
                      ->where('a.Q6E9S1 != ',0,FALSE)
-		     ->get()->result();
+		             ->get()->result();
             
         }
 	
 	public function getEnergySolarSchool_2(){
-            return $this->db->select('count(a.Q6E9S1) as solar')
-                     ->from('tbl_energy_phase_2 as a')
+                return $this->db->select('count(a.Q6E9S1) as solar')
+                     ->from('tbl_total_phase2 as a')
                      ->where('a.Q6E9S1 != ',0,FALSE)
-		     ->get()->result();
+		             ->get()->result();
             
         }
 	
