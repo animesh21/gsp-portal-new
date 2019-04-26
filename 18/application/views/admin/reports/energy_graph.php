@@ -1,10 +1,30 @@
 <?php
 //echo '<pre>'; print_r($energy);die();
-$Airconditioner_count = $energy['Airconditioner_count'][0]->total;
-$Tubelight_count = $energy['Tubelight_count'][0]->total;
-$CFLbulb_count = $energy['CFLbulb_count'][0]->total;
-$LEDbulb_count = $energy['LEDbulb_count'][0]->total;
-$SchoolHavingAlternateSourceOfEnergy = $energy['SchoolHavingAlternateSourceOfEnergy'][0]->total;
+$Airconditioner_count1 = $energy['Q7E2S1']->Q7E2S1;
+$Airconditioner_count2 = $energy['Q7E2S1_phase2']->Q7E2S1;
+
+$Airconditioner_count = $Airconditioner_count1 + $Airconditioner_count2;
+
+$Tubelight_count1 = $energy['Q7E5S1']->Q7E5S1;
+$Tubelight_count2 = $energy['Q7E5S1_phase2']->Q7E5S1;
+
+$Tubelight_count = $Tubelight_count1 + $Tubelight_count2;
+
+$CFLbulb_count1 = $energy['Q7E6S1']->Q7E6S1;
+$CFLbulb_count2 = $energy['Q7E6S1_phase2']->Q7E6S1;
+
+$CFLbulb_count = $CFLbulb_count1 + $CFLbulb_count2;
+
+$LEDbulb_count1 = $energy['Q7E7S1']->Q7E7S1;
+$LEDbulb_count2 = $energy['Q7E7S1']->Q7E7S1;
+
+$LEDbulb_count = $LEDbulb_count1 + $LEDbulb_count2;
+
+$SchoolHavingAlternateSourceOfEnergy1 = $energy['Q9E1'];
+$SchoolHavingAlternateSourceOfEnergy2 = $energy['Q9E1'];
+
+$SchoolHavingAlternateSourceOfEnergy = $SchoolHavingAlternateSourceOfEnergy1 + $SchoolHavingAlternateSourceOfEnergy2;
+
 
 $final_array_poss = array((int)$Airconditioner_count,'');
 $final_Airconditioner_count = json_encode($final_array_poss);
@@ -29,8 +49,11 @@ $board1 = round($energy1[0]->board);
 $capita1 = (round($energy1[0]->capita));
 $board2 = round($energy2[0]->board);
 $capita2 = (round($energy2[0]->capita));
-  $board = $board1+$board2;
- $capita=$capita1+$capita2;
+$board = $board1+$board2;
+$capita=$capita1+$capita2;
+
+
+
 $generator1 = (round($generator1[0]->generator));
 $biogas1 = (round($biogas1[0]->biogas));
 $solar1 = (round($solar1[0]->solar));
@@ -95,7 +118,7 @@ $final_school_transport = json_encode($final_array_poss2);
         xAxis: {
             categories: [
 				'Energy'
-                
+
             ],
             crosshair: true
         },
