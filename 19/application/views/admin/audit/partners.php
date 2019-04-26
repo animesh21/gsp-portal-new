@@ -35,7 +35,7 @@
 .nav li{ font-size:12px!important;}
 </style>
 <div class="top-area">
-  <h2>Partner REGISTRATION 2017 <a href="<?php echo base_url('admin/audit_started/partnerexcel') ?>">
+  <h2>Partner REGISTRATION 2019 <a href="<?php echo base_url('admin/audit_started/partnerexcel') ?>">
     <button class="exportBtn">Export to Excel</button>
     </a></h2>
 </div>
@@ -183,9 +183,7 @@
     <li><a href="#6" id="six" data-toggle="tab">Satya Bharti Foundation</a> </li>
   </ul>
   <div class="tab-content">
-    <div class="tab-pane active" id="1"> <a href="<?php echo base_url("admin/audit_started/foundationPartnerrexcel/1"); ?>" class="btn btn-default">
-      <button class="exportBtn">Export to Excel</button>
-      </a>
+    <div class="tab-pane active" id="1"> 
       <table id="example1" class="display dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
         <thead>
           <tr role="row">
