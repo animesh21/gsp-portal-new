@@ -106,7 +106,7 @@ class Audit_started extends CI_Controller {
     public function excel($argID) {
         $this->load->dbutil();
         $row = $this->Audit_started_model->getExcelDataByState($argID);
-        $name = 'registration2017_by_state.csv';
+        $name = 'registration2019_by_state.csv';
         force_download($name, $row);
     }
 	
@@ -147,7 +147,7 @@ class Audit_started extends CI_Controller {
 		  $argID1=array("3","36", "26", "16", "1", "5","12", "21", "11", "9", "8","28", "15", "13", "29", "14", "34", "35", "10", "6","2", "17", "18", "31", "32", "19", "27","7", "20","4", "22", "23", "24", "25", "30", "33"); //$all
 		}
 	    $row = $this->Audit_started_model->getExcelDataByRegion($argID1);
-        $name = 'registration2018_by_region.csv';
+        $name = 'registration2019_by_region.csv';
         force_download($name, $row);
     }
 	
