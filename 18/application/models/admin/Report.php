@@ -203,7 +203,19 @@ class Report extends CI_Model {
 			 $this->db->where('a.'.$question_id,$answer);
 		     $this->db->join('gsp_school as b','a.userid=b.userid','left'); 
              $this->db->where('b.complete_status','1');
-			 return $this->db->count_all_results('tbl_total as a');		
+			 $phase1 = $this->db->count_all_results('tbl_total as a');
+             
+            // return $phase1;
+
+			 $this->db->where('a.'.$question_id,$answer);
+		     $this->db->join('gsp_school as b','a.userid=b.userid','left'); 
+             $this->db->where('b.complete_status','1');
+		    $phase2 = $this->db->count_all_results('tbl_total_phase2 as a');
+              
+             $Final=$phase1+$phase2;
+
+             return $Final;
+
 		}
 		
 		public function Operatorownedvehicles($question_id,$answer)
@@ -211,7 +223,18 @@ class Report extends CI_Model {
 		     $this->db->where('a.'.$question_id,$answer);
 			 $this->db->join('gsp_school as b','a.userid=b.userid','left'); 
              $this->db->where('b.complete_status','1');
-			 return $this->db->count_all_results('tbl_total as a');			
+			 $phase1 = $this->db->count_all_results('tbl_total as a');
+              
+               // return $phase1;
+
+			 $this->db->where('a.'.$question_id,$answer);
+			 $this->db->join('gsp_school as b','a.userid=b.userid','left'); 
+             $this->db->where('b.complete_status','1');
+			$phase2 = $this->db->count_all_results('tbl_total_phase2 as a');
+
+			 $Final=$phase1+$phase2;
+
+             return $Final;			
 		}
 		
 		public function Schoolownedvehicles($question_id,$answer)
@@ -219,16 +242,40 @@ class Report extends CI_Model {
 			$this->db->where('a.'.$question_id,$answer);
 			$this->db->join('gsp_school as b','a.userid=b.userid','left'); 
             $this->db->where('b.complete_status','1');
-			return $this->db->count_all_results('tbl_total as a');
+			$phase1 = $this->db->count_all_results('tbl_total as a');
+
+             //echo $phase1; 
+             
+			$this->db->where('a.'.$question_id,$answer);
+			$this->db->join('gsp_school as b','a.userid=b.userid','left'); 
+            $this->db->where('b.complete_status','1');
+			$phase2 = $this->db->count_all_results('tbl_total_phase2 as a');
+               
+              // echo $phase2;
+
+			$Final=$phase1+$phase2;
+
+             return $Final;	
 					
 		}
 		
-		public function CombinationSchoolandOperatorvehicles($question_id,$answer)
+public function CombinationSchoolandOperatorvehicles($question_id,$answer)
 		{
 			 $this->db->where('a.'.$question_id,$answer);
 			 $this->db->join('gsp_school as b','a.userid=b.userid','left'); 
              $this->db->where('b.complete_status','1');
-			 return $this->db->count_all_results('tbl_total as a');
+		 $phase1 = $this->db->count_all_results('tbl_total as a');
+
+            $this->db->where('a.'.$question_id,$answer);
+			 $this->db->join('gsp_school as b','a.userid=b.userid','left'); 
+             $this->db->where('b.complete_status','1');
+		 $phase2 = $this->db->count_all_results('tbl_total_phase2 as a');
+
+            
+
+			 $Final=$phase1+$phase2;
+
+             return $Final;	
 					
 		}
 		
@@ -237,7 +284,20 @@ class Report extends CI_Model {
 			 $this->db->where('a.'.$question_id,$answer);
 			 $this->db->join('gsp_school as b','a.userid=b.userid','left'); 
              $this->db->where('b.complete_status','1');
-			 return $this->db->count_all_results('tbl_total as a');		
+		 $phase1 = $this->db->count_all_results('tbl_total as a');	
+           
+			 $this->db->where('a.'.$question_id,$answer);
+			 $this->db->join('gsp_school as b','a.userid=b.userid','left'); 
+             $this->db->where('b.complete_status','1');
+		 $phase2 = $this->db->count_all_results('tbl_total_phase2 as a');
+
+
+               
+               $Final=$phase1+$phase2;
+
+                return $Final;	
+
+
 		}
 		
 		
@@ -253,7 +313,23 @@ class Report extends CI_Model {
 		{
 			$this->db->select_sum("'".$question_id."'");
             $this->db->from('tbl_total');
-            return $this->db->get()->row(); 
+            $phase1 = $this->db->get()->row(); 
+
+
+
+            $this->db->select_sum("'".$question_id."'");
+            $this->db->from('tbl_total_phase2');
+            $phase2 = $this->db->get()->row(); 
+
+           
+
+            $Final=$phase1+$phase2;
+
+            
+
+                return $Final;	
+            
+
 		}
 		
 		public function BusesonPetrol($question_id)
@@ -269,16 +345,91 @@ class Report extends CI_Model {
 		  ->from('tbl_total as a')
 		  ->join('gsp_school as b','a.userid=b.userid','left') 
           ->where('b.complete_status','1')
-		  ->get()->result(); 		
-		}
-		
-		public function getAirVehicle($question_id){
-            return $this->db->select('sum(a.'.$question_id.') as avg')
-            ->from('tbl_total as a')
-		    ->join('gsp_school as b','a.userid=b.userid','left') 
-            ->where('b.complete_status','1')
-            ->get()->result();
+		  ->get()->result(); 
+
         }
+
+
+        public function AirReportData_phase2($question_id)
+		{
+		  return $this->db->select('sum(a.'.$question_id.') as total')
+		  ->from('tbl_total_phase2 as a')
+		  ->join('gsp_school as b','a.userid=b.userid','left') 
+          ->where('b.complete_status','1')
+		  ->get()->result(); 
+
+        }
+
+		
+		public function getAirVehicle_totalpopulation(){
+
+	        	$question_id1='Q7A1S4';	
+	        	$question_id2='Q7A2S4';
+	        	$question_id3='Q7A3S4';
+	        	$question_id4='Q7A4S4';
+	        	$question_id5='Q7A5S4';
+	        	$question_id6='Q7A6S4';
+	        	$question_id7='Q7A7S4';
+	        	$question_id8='Q7A8S4';
+	        	$question_id9='Q7A9S4';
+	        	$question_id10='Q7A10S4';
+	        	$question_id11='Q7A11S4';
+	        	
+
+	 return $this->db->select('sum(a.'.$question_id1.'+a.'.$question_id2.'+a.'.$question_id3.'+a.'.$question_id4.'+a.'.$question_id5.'+a.'.$question_id6.'+a.'.$question_id7.'+a.'.$question_id8.'+a.'.$question_id9.'+a.'.$question_id10.'+a.'.$question_id11.') as avg')
+	            ->from('tbl_total as a')
+			    ->join('gsp_school as b','a.userid=b.userid','left') 
+	            ->where('b.complete_status','1')
+	            ->get()->result();
+
+	            //echo $this->db->last_query(); exit;
+	        }
+
+
+
+
+	           public function getAirVehicle_totalpopulation_phase2(){
+
+	        	$question_id1='Q7A1S4';	
+	        	$question_id2='Q7A2S4';
+	        	$question_id3='Q7A3S4';
+	        	$question_id4='Q7A4S4';
+	        	$question_id5='Q7A5S4';
+	        	$question_id6='Q7A6S4';
+	        	$question_id7='Q7A7S4';
+	        	$question_id8='Q7A8S4';
+	        	$question_id9='Q7A9S4';
+	        	$question_id10='Q7A10S4';
+	        	$question_id11='Q7A11S4';
+	        	
+
+	 return $this->db->select('sum(a.'.$question_id1.'+a.'.$question_id2.'+a.'.$question_id3.'+a.'.$question_id4.'+a.'.$question_id5.'+a.'.$question_id6.'+a.'.$question_id7.'+a.'.$question_id8.'+a.'.$question_id9.'+a.'.$question_id10.'+a.'.$question_id11.') as avg')
+	            ->from('tbl_total_phase2 as a')
+			    ->join('gsp_school as b','a.userid=b.userid','left') 
+	            ->where('b.complete_status','1')
+	            ->get()->result();
+
+	            //echo $this->db->last_query(); exit;
+	        }
+			
+			public function getAirVehicle($question_id){
+	            return $this->db->select('sum(a.'.$question_id.') as avg')
+	            ->from('tbl_total as a')
+			    ->join('gsp_school as b','a.userid=b.userid','left') 
+	            ->where('b.complete_status','1')
+	            ->get()->result();
+	        }
+
+
+	         public function getAirVehicle_phase2($question_id){
+	            return $this->db->select('sum(a.'.$question_id.') as avg')
+	            ->from('tbl_total_phase2 as a')
+			    ->join('gsp_school as b','a.userid=b.userid','left') 
+	            ->where('b.complete_status','1')
+	            ->get()->result();
+	        }
+	         
+
 	
 	public function getAirphase_1($question_id){
             return $this->db->select('Avg(a.'.$question_id.') as avg')
@@ -307,13 +458,23 @@ class Report extends CI_Model {
         }
 	
 	public function getAirQuality_recheck($question_id){
-            return $this->db->select('a.'.$question_id.',count(a.'.$question_id.') as total')
-                     ->from('tbl_total as a')
-                     ->group_by('(a.'.$question_id.')')
-                     ->get()->result();
+     return $this->db->select('a.'.$question_id.',count(a.'.$question_id.') as total')
+               ->from('tbl_total as a')
+               ->group_by('(a.'.$question_id.')')
+               ->get()->result();
+
+             
   
         }
-	
+
+
+        public function getAirQuality_recheck_phase2($question_id){
+     return $this->db->select('a.'.$question_id.',count(a.'.$question_id.') as total')
+               ->from('tbl_total_phase2 as a')
+               ->group_by('(a.'.$question_id.')')
+               ->get()->result();
+
+          }
 	
 	/*************************Energy Question*******************************/
 	/********************************************************************/
