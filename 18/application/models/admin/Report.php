@@ -647,6 +647,17 @@ public function CombinationSchoolandOperatorvehicles($question_id,$answer)
                      ->get()->result();
             
         }
+	
+	public function getLand_1_phase2(){
+           return  $this->db->select('Avg(a.Q4L5) as avg')
+                     ->from('tbl_total_phase2 as a')
+		            ->join('gsp_school as b','a.userid=b.userid','left')
+		            ->where('b.complete_status','1')
+                     ->get()->result();
+
+                    // echo $this->db->last_query();
+            
+        }
         
         public function getLand_2(){
             return $this->db->select('a.answer,count(a.answer) as total')
