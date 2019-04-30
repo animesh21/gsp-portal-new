@@ -356,10 +356,10 @@ session->userdata('ADMIN_ID') == '') {
 	   $data['main'] = 'admin/reports/land_graph';
            
             $data['Q4L5'] = $this->Report->getLand_1();
+            $data['Q4L5_phase2'] = $this->Report->getLand_1_phase2();
             $data['Q6L1'] = $this->Report->getLand_2();
            
-           
-	   $this->load->view('admin/includes/template', $data);
+           $this->load->view('admin/includes/template', $data);
 	}
 	
 	public function getWater()
