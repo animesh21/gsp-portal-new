@@ -2,9 +2,14 @@
 
 
 
-$no = round($Q6L1[0]->total);
+$no = round($Q6L1[0]->total + 1);
 $yes = (round($Q6L1[1]->total));
-$Q4L5 = (round($Q4L5[0]->avg));
+
+
+$Q4L5_phase1 = (round($Q4L5[0]->avg));
+$Q4L5_phase2 = (round($Q4L5_phase2[0]->avg));
+
+$Q4L5 = $Q4L5_phase1 + $Q4L5_phase2;
 
 
 
