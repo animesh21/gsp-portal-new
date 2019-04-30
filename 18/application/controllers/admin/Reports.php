@@ -436,25 +436,33 @@ session->userdata('ADMIN_ID') == '') {
 	public function getFood()
 	{ 
            $data['main'] = 'admin/reports/food-report';
-	   $data['food']['Q4F1'] = $this->Report->getAirQuality('Q4F1');
-           $data['food']['Q5F1'] = $this->Report->getAirQuality('Q5F1');
-           
-           $data['food']['Q5F1S2'] = $this->Report->getAirVehicle('Q5F1S2');
-           
-           $data['food']['snacks'] = $this->Report->getAirQuality('Q7F1');
-           $data['food']['beverages'] = $this->Report->getAirQuality('Q8F1');
-           
-           $data['food']['rewards'] = $this->Report->getAirQuality('Q9F1');
-           $data['food']['event'] = $this->Report->getAirQuality('Q10F1');
-           $data['food']['quiz'] = $this->Report->getAirQuality('Q11F1');
-           $data['food']['height'] = $this->Report->getAirQuality('Q12F1');
-           
-           $data['height']['monthly'] = $this->Report->getWaterByAnswer('Q12F2',1);
-           $data['height']['quarterly'] = $this->Report->getWaterByAnswer('Q12F2',2);
-           $data['height']['bi_annually'] = $this->Report->getWaterByAnswer('Q12F2',3);
-           $data['height']['annually'] = $this->Report->getWaterByAnswer('Q12F2',4);	
+	       $data['food']['Q4F1'] = $this->Report->getAirQuality('Q4F1');
+	       $data['food']['Q5F1'] = $this->Report->getAirQuality_recheck('Q5F1');
+	       $data['food']['Q5F1_phase2'] = $this->Report->getAirQuality_recheck_phase2('Q5F1');
+	       $data['food']['Q5F1S2'] = $this->Report->getAirVehicle('Q5F1S2');
+	       $data['food']['snacks'] = $this->Report->getAirQuality('Q7F1');
+	       $data['food']['beverages'] = $this->Report->getAirQuality('Q8F1');
+	       $data['food']['rewards'] = $this->Report->getAirQuality_recheck('Q9F1');
+	       $data['food']['rewards_phase2'] = $this->Report->getAirQuality_recheck_phase2('Q9F1');
+	       $data['food']['event'] = $this->Report->getAirQuality('Q10F1');
+	       $data['food']['quiz'] = $this->Report->getAirQuality('Q11F1');
+	       $data['food']['height'] = $this->Report->getAirQuality('Q12F1');
+
+
+	       $data['height']['monthly'] = $this->Report->getfoodByAnswer_phase1('Q12F2',1);
+		$data['height']['monthly_phase2'] = $this->Report->getfoodByAnswer_phase2('Q12F2',1);
+
+	       $data['height']['quarterly'] = $this->Report->getfoodByAnswer_phase1('Q12F2',2);
+	       $data['height']['quarterly_phase2'] = $this->Report->getfoodByAnswer_phase2('Q12F2',2);
+
+
+	       $data['height']['bi_annually'] = $this->Report->getfoodByAnswer_phase1('Q12F2',3);
+	       $data['height']['bi_annually_phase2'] = $this->Report->getfoodByAnswer_phase2('Q12F2',3);
+
+	       $data['height']['annually'] = $this->Report->getfoodByAnswer_phase1('Q12F2',4);
+	       $data['height']['annually_phase2'] = $this->Report->getfoodByAnswer_phase2('Q12F2',4);		
 		
-	  $this->load->view('admin/includes/template', $data);	
+	  $this->load->view('admin/includes/template', $data);		
 	}	
 	
 	
