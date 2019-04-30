@@ -164,7 +164,16 @@ $final_air_yes2 = $quality['Q9A1_phase2'][2]->total;
 $final_air_yes = $final_air_yes1 + $final_air_yes2;
 $air_yes = round($final_air_yes/$total_school_phase*100);
 
+//final array for school percentage
 
+$final_array_poss6 = array(51,'','');
+$final_four1 = json_encode($final_array_poss6);
+
+$final_array_poss7 = array('',8,'');
+$final_three1 = json_encode($final_array_poss7);
+
+$final_array_poss = array('','',41);
+$final_school_bus1 = json_encode($final_array_poss);
 
 
 // Final Arrays
@@ -214,6 +223,7 @@ $final_no = json_encode($final_array_poss12);
   <div class="wrapper">
     <div id="container"> </div>
 	<div id="container1"> </div>
+	   <div id="container2"> </div>
   </div>
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/modules/data.js"></script>
@@ -395,4 +405,58 @@ $final_no = json_encode($final_array_poss12);
 </script>
 
 
-
+<script type="text/javascript">
+ Highcharts.chart('container2',{
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'School Percentage'
+        },
+        subtitle: {
+            text: ''
+        },
+        xAxis: {
+            categories: [
+                'Sustainable Motorised',
+                'Private Vehicles',
+                'Non-Polluting Mode',
+                
+            ],
+            crosshair: true
+        },
+        
+        yAxis: { 
+            min: 0,
+            title: {
+                text: 'People Percentage'
+            }
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                         '<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        exporting: { enabled: false },
+        credits: {enabled: false},
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [{
+            name: 'Sustainable Motorised',
+            data: <?php echo $final_four1; ?>
+        },{
+            name: 'Private Vehicles',
+            data: <?php echo $final_three1; ?>
+        },{
+            name: 'Non-Polluting Mode',
+            data: <?php echo $final_school_bus1; ?>
+        }]
+    });
+</script>
