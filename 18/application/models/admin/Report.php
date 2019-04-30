@@ -476,6 +476,27 @@ public function CombinationSchoolandOperatorvehicles($question_id,$answer)
 
           }
 	
+	public function getfoodByAnswer_phase1($question_id,$answer){
+            return $this->db->select('count(a.Q12F2) as total')
+                    ->from('tbl_total as a')
+                    ->where('a.Q12F2',$answer)
+		            ->get()->result();
+
+		           
+            
+        }
+
+
+        public function getfoodByAnswer_phase2($question_id,$answer){
+            return $this->db->select('count(a.Q12F2) as total')
+                    ->from('tbl_total_phase2 as a')
+                    ->where('a.Q12F2',$answer)
+		            ->get()->result();
+
+		           
+            
+        }
+	
 	/*************************Energy Question*******************************/
 	/********************************************************************/
 	
