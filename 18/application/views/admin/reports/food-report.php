@@ -4,8 +4,20 @@
 $packaged_food_no = round($food['Q4F1'][0]->total);
 $packaged_food_yes = round($food['Q4F1'][1]->total);
 
-$mid_day_meal_no = round($food['Q5F1'][0]->total);
-$mid_day_meal_yes = round($food['Q5F1'][1]->total);
+$mid_day_meal_no_bal = round($food['Q5F1'][0]->total);
+$mid_day_meal_no_rel = round($food['Q5F1'][1]->total);
+
+$mid_day_meal_no_rel_phase2 = round($food['Q5F1_phase2'][0]->total);
+
+$mid_day_meal_yes_phase1 = round($food['Q5F1'][2]->total);
+$mid_day_meal_yes_phase2 = round($food['Q5F1_phase2'][1]->total);
+
+$mid_day_meal_yes = $mid_day_meal_yes_phase1 + $mid_day_meal_yes_phase2;
+
+$mid_day_meal_no = $mid_day_meal_no_bal + $mid_day_meal_no_rel + $mid_day_meal_no_rel_phase2;
+
+
+
 
 $snacks_no =  round($food['snacks'][0]->total);
 $snacks_yes = round($food['snacks'][1]->total);
@@ -13,8 +25,15 @@ $snacks_yes = round($food['snacks'][1]->total);
 $beverages_no =  round($food['beverages'][0]->total);
 $beverages_yes = round($food['beverages'][1]->total);
 
-$rewards_no =  round($food['rewards'][0]->total);
-$rewards_yes = round($food['rewards'][1]->total);
+
+$rewards_no_bal =  round($food['rewards'][0]->total);
+$rewards_no_rel =  round($food['rewards'][1]->total);
+$rewards_no_rel_phase2 =  round($food['rewards_phase2'][0]->total);
+$rewards_no =  $rewards_no_bal+$rewards_no_rel+$rewards_no_rel_phase2;
+
+$rewards_yes_phase1 = round($food['rewards'][2]->total);
+$rewards_yes_phase2 = round($food['rewards_phase2'][1]->total);
+$rewards_yes = $rewards_yes_phase1 + $rewards_yes_phase2;
 
 $event_no =  round($food['event'][0]->total);
 $event_yes = round($food['event'][1]->total);
@@ -25,10 +44,23 @@ $quiz_yes = round($food['quiz'][1]->total);
 $height_no =  round($food['height'][0]->total);
 $height_yes = round($food['height'][1]->total);
 
-$height_monthly =  round($height['monthly'][0]->total);
-$height_quarterly = round($height['quarterly'][0]->total);
-$height_bi_annually =  round($height['bi_annually'][0]->total);
-$height_annually = round($height['annually'][0]->total);
+$height_monthly_phase1 =  round($height['monthly'][0]->total);
+$height_monthly_phase2 =  round($height['monthly_phase2'][0]->total);
+$height_monthly = $height_monthly_phase1 + $height_monthly_phase2;
+
+$height_quarterly_phase1 = round($height['quarterly'][0]->total);
+$height_quarterly_phase2 = round($height['quarterly_phase2'][0]->total);
+
+$height_quarterly = $height_quarterly_phase1 + $height_quarterly_phase2;
+
+$height_bi_annually_phase1 =  round($height['bi_annually'][0]->total);
+$height_bi_annually_phase2 =  round($height['bi_annually_phase2'][0]->total);
+$height_bi_annually= $height_bi_annually_phase1 + $height_bi_annually_phase2;
+
+$height_annually_phase1 = round($height['annually'][0]->total);
+$height_annually_phase2 = round($height['annually_phase2'][0]->total);
+
+$height_annually= $height_annually_phase1 + $height_annually_phase2;
 
 $Avg = round($food['Q5F1S2'][0]->avg);
 
