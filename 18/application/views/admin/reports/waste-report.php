@@ -6,10 +6,26 @@
 //print_r($ewaste);
 //die();
 
-$no_bins = round($waste['Q5Wa11S1'][0]->avg);
-$one_bins = round($waste['Q5Wa11S2'][0]->avg);
-$two_bins = round($waste['Q5Wa11S3'][0]->avg);
-$three_bins = round($waste['Q5Wa11S4'][0]->avg);
+$no_bins1 = round($waste['Q5Wa11S1'][0]->avg);
+$no_bins2 = round($waste['Q5Wa11S1_phase2'][0]->avg);
+
+$no_bins = $no_bins1 + $no_bins2;
+
+$one_bins1 = round($waste['Q5Wa11S2'][0]->avg);
+$one_bins2 = round($waste['Q5Wa11S2_phase2'][0]->avg);
+
+$one_bins = $one_bins1 + $one_bins2;
+
+
+$two_bins1 = round($waste['Q5Wa11S3'][0]->avg);
+$two_bins2 = round($waste['Q5Wa11S3_phase2'][0]->avg);
+
+$two_bins = $two_bins1 + $two_bins2;
+
+$three_bins1 = round($waste['Q5Wa11S4'][0]->avg);
+$three_bins2 = round($waste['Q5Wa11S4_phase2'][0]->avg);
+
+$three_bins = $three_bins1 + $three_bins2;
 
 $composting_facility_no = round($waste['Q9Wa1'][0]->total);
 $composting_facility_yes = round($waste['Q9Wa1'][1]->total);
