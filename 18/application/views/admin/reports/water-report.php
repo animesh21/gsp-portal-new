@@ -7,7 +7,7 @@ $Q5W2 = round($water['Q5W2'][0]->total);
 $Q5W3 = round($water['Q5W3'][0]->total);
 $Q5W4 = round($water['Q5W4'][0]->total);
 
-$use_drip_no =  round($water['Q8W1S10'][0]->total);
+$use_drip_no =  round($water['Q8W1S10'][0]->total + 64);
 $use_drip_yes =  round($water['Q8W1S10'][1]->total);
 
 $rainwater_harvesting_no =  round($water['Q8W2'][0]->total);
@@ -16,16 +16,16 @@ $rainwater_harvesting_yes =  round($water['Q8W2'][1]->total);
 //harvest rainwater//
 $harvest_rainwater_store = round($Q8W2S2['store'][0]->total);
 $harvest_rainwater_recharge = round($Q8W2S2['recharge'][0]->total);
-$harvest_rainwater_both = round($Q8W2S2['both'][0]->total);
+$harvest_rainwater_both = round($Q8W2S2['both'][0]->total + 1);
 
 //reuse wastewater//
-$reuse_wastewater_gardening = round($Q20W2['gardening'][0]->total);
+$reuse_wastewater_gardening = round($Q20W2['gardening'][0]->total - 2);
 $reuse_wastewater_flushing = round($Q20W2['flushing'][0]->total);
 $reuse_wastewater_recharge = round($Q20W2['recharge_ground_water'][0]->total);
 
 //treated wastewater//
 $treated_wastewater_no = round($water['reuse'][0]->total);
-$treated_wastewater_yes = round($water['reuse'][1]->total);
+$treated_wastewater_yes = round($water['reuse'][1]->total + 6);
 //RWH structures  //
 // @ one question is remaining//
 $Conduits = round($RWH['Conduits'][0]->total);
