@@ -402,34 +402,61 @@ session->userdata('ADMIN_ID') == '') {
 	{ 
            $data['main'] = 'admin/reports/waste-report';
            
-           $data['waste']['Q5Wa11S1'] = $this->Report->getAirVehicle('Q5Wa11S1');
+             $data['waste']['Q5Wa11S1'] = $this->Report->getAirVehicle('Q5Wa11S1');
+             $data['waste']['Q5Wa11S1_phase2'] = $this->Report->getAirVehicle_phase2('Q5Wa11S1');
+
+
+
            $data['waste']['Q5Wa11S2'] = $this->Report->getAirVehicle('Q5Wa11S2');
+           $data['waste']['Q5Wa11S2_phase2'] = $this->Report->getAirVehicle_phase2('Q5Wa11S2');
+
            $data['waste']['Q5Wa11S3'] = $this->Report->getAirVehicle('Q5Wa11S3');
+           $data['waste']['Q5Wa11S3_phase2'] = $this->Report->getAirVehicle_phase2('Q5Wa11S3');
+
+
            $data['waste']['Q5Wa11S4'] = $this->Report->getAirVehicle('Q5Wa11S4');
+           $data['waste']['Q5Wa11S4_phase2'] = $this->Report->getAirVehicle_phase2('Q5Wa11S4');
+
+
            
            $data['waste']['Q9Wa1'] = $this->Report->getAirQuality('Q9Wa1');
+
            $data['waste']['natural_composting'] = $this->Report->getWaterSchool('Q9Wa2S1');
+
            $data['waste']['vermi_composting'] = $this->Report->getWaterSchool('Q9Wa2S2');
+
            $data['waste']['mechanical_composting'] = $this->Report->getWaterSchool('Q9Wa2S3');
+
            $data['waste']['other'] = $this->Report->getWaterSchool('Q9Wa2S4');
            
            $data['waste']['reuse_book'] = $this->Report->getAirQuality('Q10Wa1');
            
            $data['paper']['kabadiwala'] = $this->Report->getWaterSchool('Q11Wa1S1');
+
            $data['paper']['authorized_dealer'] = $this->Report->getWaterSchool('Q11Wa1S2');
+
            $data['paper']['dumped'] = $this->Report->getWaterSchool('Q11Wa1S3');
+
            $data['paper']['internal_procedure'] = $this->Report->getWaterSchool('Q11Wa1S4');
            
-           $data['plastic']['kabadiwala'] = $this->Report->getWaterSchool('Q11Wa2S1');
-           $data['plastic']['authorized_dealer'] = $this->Report->getWaterSchool('Q11Wa2S2');
-           $data['plastic']['dumped'] = $this->Report->getWaterSchool('Q11Wa2S3');
-           $data['plastic']['internal_procedure'] = $this->Report->getWaterSchool('Q11Wa2S4');
-           
-           $data['ewaste']['kabadiwala'] = $this->Report->getWaterSchool('Q11Wa4S1');
-           $data['ewaste']['authorized_dealer'] = $this->Report->getWaterSchool('Q11Wa4S2');
-           $data['ewaste']['dumped'] = $this->Report->getWaterSchool('Q11Wa4S3');
-           $data['ewaste']['internal_procedure'] = $this->Report->getWaterSchool('Q11Wa4S4');
-           $data['burn']['Q15Wa1'] = $this->Report->getAirQuality('Q15Wa1');
+		$data['plastic']['kabadiwala'] = $this->Report->getWaterSchool('Q11Wa2S1');
+
+	     $data['plastic']['authorized_dealer'] = $this->Report->getWaterSchool('Q11Wa2S2');
+
+	     $data['plastic']['dumped'] = $this->Report->getWaterSchool('Q11Wa2S3');
+
+	     $data['plastic']['internal_procedure'] = $this->Report->getWaterSchool('Q11Wa2S4');
+
+	     $data['ewaste']['kabadiwala'] = $this->Report->getWaterSchool('Q11Wa4S1');
+
+	     $data['ewaste']['authorized_dealer'] = $this->Report->getWaterSchool('Q11Wa4S2');
+
+	     $data['ewaste']['dumped'] = $this->Report->getWaterSchool('Q11Wa4S3');
+
+	     $data['ewaste']['internal_procedure'] = $this->Report->getWaterSchool('Q11Wa4S4');
+
+	     $data['burn']['Q15Wa1'] = $this->Report->getAirQuality('Q15Wa1');
+
            $this->load->view('admin/includes/template', $data);
              
          } 	
