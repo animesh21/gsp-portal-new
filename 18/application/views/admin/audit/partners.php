@@ -35,7 +35,7 @@
 .nav li{ font-size:12px!important;}
 </style>
 <div class="top-area">
-  <h2>Partner REGISTRATION 2017 <a href="<?php echo base_url('admin/audit_started/partnerexcel') ?>">
+  <h2>Partner REGISTRATION <a href="<?php echo base_url('admin/audit_started/partnerexcel') ?>">
     <button class="exportBtn">Export to Excel</button>
     </a></h2>
 </div>
