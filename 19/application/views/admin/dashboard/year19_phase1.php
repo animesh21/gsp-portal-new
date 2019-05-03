@@ -46,7 +46,7 @@
     <label>view</label>
   </div>
   </a>
-  <div class="title">Total School Registration (2019)</div>
+  <div class="title">New Registrations (2019)</div>
 </div>
 <div class="schools-statics "> <a href="#">  <a href="<?php echo base_url("admin/audit_started_2019/disabled_school")?>" target="_blank"> 
   <div class="statics-circle"> <span> <?php echo $disable_count; ?> </span>
