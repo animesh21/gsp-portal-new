@@ -209,7 +209,7 @@ function redirect_page()
  window.location="<?php echo base_url('login'); ?>"; 
 } 
 function redirect_phase(){ 
-  setTimeout('redirect_page()', 7000);   
+  setTimeout('redirect_page()', 14000);   
 }
 </script>
 </head>
@@ -224,10 +224,10 @@ function redirect_phase(){
   <div class="top-area">
     <h2 class="text-center">Welcome To Green Schools Programme </h2>
     <div class="well col-md-8 col-md-offset-2">
-      <p class="text-center">You have successfully registered your school for GSP Audit 2017. Kindly add <a href="" style="">support@greenschoolsprogramme.org</a> to your Contact list so that emails from GSP do not go into your spam box. Good luck! GSP Team. <br/><br/>
+      <p class="text-center">You have successfully registered your school for GSP Audit 2019. Kindly add <a href="" style="">support@greenschoolsprogramme.org</a> to your Contact list so that emails from GSP do not go into your spam box. Good luck! GSP Team. <br/><br/>
         <a class="btn-group" href="<?php echo base_url('login'); ?>"> Login </a></p>
 	  <br/>	
-      <p class="help text-center">Need help? Email: <a href="mailto:support@greenschoolsprogramme.org">support@greenschoolsprogramme.org</a> or call 011-4061600, <br/>ext – 219, 300. <br>
+      <p class="help text-center">Need help? Email: <a href="mailto:support@greenschoolsprogramme.org">support@greenschoolsprogramme.org</a> or call 011-4061600, <br/>ext – 321, 300. <br>
         Call between 10am to 5:30pm - Monday to Friday. </p>
     </div>
   </div>
