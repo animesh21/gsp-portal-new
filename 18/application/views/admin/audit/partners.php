@@ -42,14 +42,6 @@
 <div class="hello">
   <div id="wrapper">
     <div id="container"> </div>
-    <?php 
-    $statewisegraph1=getPartnerGraphByState(1);
-    $countArr1=count(array_chunk($statewisegraph1[0],7,true));
-    for($i=0;$i<$countArr1; $i++){
-    ?>
-    <div id="containerStateWisePartner1_<?php echo $i; ?>"> </div>
-    <br/>
-    <?php } ?>
     <p><strong>Export Graph:</strong></p>
     <select id="ExportOption" style="border-radius:0px;">
       <option value="PNG">PNG Image</option>
@@ -59,19 +51,20 @@
     </select>
     <button id="buttonExport" class="btn btn-danger" style="background: #e86549 !important; border:1px solid #e86549; border-radius:0px;">Export chart</button>
     <button id="buttonPrint" class="btn btn-danger" style="background: #e86549 !important; border:1px solid #e86549; border-radius:0px;">Print chart</button>
+    <?php 
+    $statewisegraph1=getPartnerGraphByState(1);
+    $countArr1=count(array_chunk($statewisegraph1[0],7,true));
+    for($i=0;$i<$countArr1; $i++){
+    ?>
+    <div id="containerStateWisePartner1_<?php echo $i; ?>"> </div>
+    <br/>
+    <?php } ?>
+    
     <br/>
     <br/>
   </div>
   <div id="wrapper2" style="display:none;">
     <div id="container2"> </div>
-    <?php 
-    $statewisegraph2=getPartnerGraphByState(2);
-    $countArr2=count(array_chunk($statewisegraph2[0],7,true));
-    for($i=0;$i<$countArr2; $i++){
-    ?>
-    <div id="containerStateWisePartner2_<?php echo $i; ?>"> </div>
-    <br/>
-    <?php } ?>
     <p><strong>Export Graph:</strong></p>
     <select id="ExportOption" style="border-radius:0px;">
       <option value="PNG">PNG Image</option>
@@ -81,19 +74,20 @@
     </select>
     <button id="buttonExport1" class="btn btn-danger" style="background: #e86549 !important; border:1px solid #e86549; border-radius:0px;">Export chart</button>
     <button id="buttonPrint1" class="btn btn-danger" style="background: #e86549 !important; border:1px solid #e86549; border-radius:0px;">Print chart</button>
+    <?php 
+    $statewisegraph2=getPartnerGraphByState(2);
+    $countArr2=count(array_chunk($statewisegraph2[0],7,true));
+    for($i=0;$i<$countArr2; $i++){
+    ?>
+    <div id="containerStateWisePartner2_<?php echo $i; ?>"> </div>
+    <br/>
+    <?php } ?>
+    
     <br/>
     <br/>
   </div>
   <div id="wrapper3" style="display:none;">
     <div id="container3"> </div>
-    <?php 
-    $statewisegraph3=getPartnerGraphByState(3);
-    $countArr3=count(array_chunk($statewisegraph3[0],7,true));
-    for($i=0;$i<$countArr3; $i++){
-    ?>
-    <div id="containerStateWisePartner3_<?php echo $i; ?>"> </div>
-    <br/>
-    <?php } ?>
     <p><strong>Export Graph:</strong></p>
     <select id="ExportOption" style="border-radius:0px;">
       <option value="PNG">PNG Image</option>
@@ -103,19 +97,20 @@
     </select>
     <button id="buttonExport2" class="btn btn-danger" style="background: #e86549 !important; border:1px solid #e86549; border-radius:0px;">Export chart</button>
     <button id="buttonPrint2" class="btn btn-danger" style="background: #e86549 !important; border:1px solid #e86549; border-radius:0px;">Print chart</button>
+    <?php 
+    $statewisegraph3=getPartnerGraphByState(3);
+    $countArr3=count(array_chunk($statewisegraph3[0],7,true));
+    for($i=0;$i<$countArr3; $i++){
+    ?>
+    <div id="containerStateWisePartner3_<?php echo $i; ?>"> </div>
+    <br/>
+    <?php } ?>
+    
     <br/>
     <br/>
   </div>
   <div id="wrapper4" style="display:none;">
     <div id="container4"> </div>
-    <?php 
-    $statewisegraph4=getPartnerGraphByState(4);
-    $countArr4=count(array_chunk($statewisegraph4[0],7,true));
-    for($i=0;$i<$countArr4; $i++){
-    ?>
-    <div id="containerStateWisePartner4_<?php echo $i; ?>"> </div>
-    <br/>
-    <?php } ?>
     <p><strong>Export Graph:</strong></p>
     <select id="ExportOption" style="border-radius:0px;">
       <option value="PNG">PNG Image</option>
@@ -125,19 +120,20 @@
     </select>
     <button id="buttonExport3" class="btn btn-danger" style="background: #e86549 !important; border:1px solid #e86549; border-radius:0px;">Export chart</button>
     <button id="buttonPrint3" class="btn btn-danger" style="background: #e86549 !important; border:1px solid #e86549; border-radius:0px;">Print chart</button>
+    <?php 
+    $statewisegraph4=getPartnerGraphByState(4);
+    $countArr4=count(array_chunk($statewisegraph4[0],7,true));
+    for($i=0;$i<$countArr4; $i++){
+    ?>
+    <div id="containerStateWisePartner4_<?php echo $i; ?>"> </div>
+    <br/>
+    <?php } ?>
+    
     <br/>
     <br/>
   </div>
   <div id="wrapper5" style="display:none;">
     <div id="container5"> </div>
-    <?php 
-    $statewisegraph5=getPartnerGraphByState(5);
-    $countArr5=count(array_chunk($statewisegraph5[0],7,true));
-    for($i=0;$i<$countArr5; $i++){
-    ?>
-    <div id="containerStateWisePartner5_<?php echo $i; ?>"> </div>
-    <br/>
-    <?php } ?>
     <p><strong>Export Graph:</strong></p>
     <select id="ExportOption" style="border-radius:0px;">
       <option value="PNG">PNG Image</option>
@@ -147,19 +143,20 @@
     </select>
     <button id="buttonExport4" class="btn btn-danger" style="background: #e86549 !important; border:1px solid #e86549; border-radius:0px;">Export chart</button>
     <button id="buttonPrint4" class="btn btn-danger" style="background: #e86549 !important; border:1px solid #e86549; border-radius:0px;">Print chart</button>
+    <?php 
+    $statewisegraph5=getPartnerGraphByState(5);
+    $countArr5=count(array_chunk($statewisegraph5[0],7,true));
+    for($i=0;$i<$countArr5; $i++){
+    ?>
+    <div id="containerStateWisePartner5_<?php echo $i; ?>"> </div>
+    <br/>
+    <?php } ?>
+    
     <br/>
     <br/>
   </div>
   <div id="wrapper6" style="display:none;">
     <div id="container6"> </div>
-    <?php 
-    $statewisegraph6=getPartnerGraphByState(6);
-    $countArr6=count(array_chunk($statewisegraph6[0],7,true));
-    for($i=0;$i<$countArr6; $i++){
-    ?>
-    <div id="containerStateWisePartner6_<?php echo $i; ?>"> </div>
-    <br/>
-    <?php } ?>
     <p><strong>Export Graph:</strong></p>
     <select id="ExportOption" style="border-radius:0px;">
       <option value="PNG">PNG Image</option>
@@ -169,6 +166,15 @@
     </select>
     <button id="buttonExport5" class="btn btn-danger" style="background: #e86549 !important; border:1px solid #e86549; border-radius:0px;">Export chart</button>
     <button id="buttonPrint5" class="btn btn-danger" style="background: #e86549 !important; border:1px solid #e86549; border-radius:0px;">Print chart</button>
+    <?php 
+    $statewisegraph6=getPartnerGraphByState(6);
+    $countArr6=count(array_chunk($statewisegraph6[0],7,true));
+    for($i=0;$i<$countArr6; $i++){
+    ?>
+    <div id="containerStateWisePartner6_<?php echo $i; ?>"> </div>
+    <br/>
+    <?php } ?>
+    
     <br/>
     <br/>
   </div>
@@ -438,7 +444,7 @@
 }
 .tab-content{
     border: solid 1px #cad6e2;
-	padding:22px 22px 22px 22px;
+  padding:22px 22px 22px 22px;
 }
 .content-form li {
      margin: 0 0 0px 0!important; 
@@ -455,12 +461,12 @@
     cursor: default;
     background-color:#ccc!important;
     border-top: 1px solid #ddd;
-	border-left: 1px solid #ddd;
-	border-right:none;
+  border-left: 1px solid #ddd;
+  border-right:none;
     border-bottom-color: transparent;
 }
 .content-form li a{ 
-	color: #000; }
+  color: #000; }
 </style>
 <script type="text/javascript">
 $(document).ready(function () {
@@ -469,7 +475,7 @@ $(document).ready(function () {
             "aLengthMenu": [[10, 25, 50, 75, -1], [10, 25, 50, 75, "All"]],
             "iDisplayLength": 25
         });
-		   });
+       });
 </script>
 <script src="<?php echo base_url(); ?>assets/js/highcharts.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/data.js"></script>
@@ -498,24 +504,24 @@ $(document).ready(function () {
         title: {
             text: 'Participation By State Church of South India'
         },
-		yAxis: {
-		  title: {
+    yAxis: {
+      title: {
             text: 'No. of Schools'
           }
-		},
+    },
         xAxis: {
             categories: [
-			<?php 
+      <?php 
              for($r=0;$r<7;++$r){
-			     if(!empty($arrData1[$i][$y]['statename'])){
-				  echo "'".$arrData1[$i][$y]['statename']."'"; } ?>,
+           if(!empty($arrData1[$i][$y]['statename'])){
+          echo "'".$arrData1[$i][$y]['statename']."'"; } ?>,
              <?php $y++; 
-			 }?>  
+       }?>  
             ],
             crosshair: true
         },
-		
-		legend: {
+    
+    legend: {
         enabled: true
     },
         exporting: { enabled: true },
@@ -529,14 +535,14 @@ $(document).ready(function () {
             useHTML: true
         },
         plotOptions: {
-		 series: {
+     series: {
             borderWidth: 0,
             dataLabels: {
                 enabled: true,
                 format: '{point.y}'
             }
         },
-		
+    
             column: {
                 pointPadding: 0.2,
                 borderWidth: 0
@@ -544,26 +550,26 @@ $(document).ready(function () {
         },
         series: [{
             name: 'Registered for Audit',
-			color:'rgb(124, 181, 236)',
+      color:'rgb(124, 181, 236)',
             data: <?php echo json_encode(array_map('intval',array_values($arrData1_1[$t]))); ?> //NORTH
             //Registration, Audit Started, Audit Completed, Feedback Recieved
         }, {
             name: 'Audit Not Started',
-			color:'#fc3300',
+      color:'#fc3300',
             data: <?php echo json_encode(array_map('intval',array_values($arrData1_2[$t]))); ?> //South
 
         }, {
             name: 'Audit Started',
-			color:'#fcfc00',
+      color:'#fcfc00',
             data: <?php echo json_encode(array_map('intval',array_values($arrData1_3[$t]))); ?> //South
 
         }, {
             name: 'Audit Completed',
-			color:'#00ae4f',
+      color:'#00ae4f',
             data: <?php echo json_encode(array_map('intval',array_values($arrData1_4[$t]))); ?> //East
 
-        }		
-		],
+        }   
+    ],
 }); 
 </script>
 <?php
@@ -593,24 +599,24 @@ $(document).ready(function () {
         title: {
             text: 'Participation By State Jawahar Navodaya Vidyalaya'
         },
-		yAxis: {
-		  title: {
+    yAxis: {
+      title: {
             text: 'No. of Schools'
           }
-		},
+    },
         xAxis: {
             categories: [
-			<?php 
+      <?php 
              for($r=0;$r<7;++$r){
-				 if(!empty($arrData2[$i][$y]['statename'])){
-				  echo "'".$arrData2[$i][$y]['statename']."'"; } ?>,
+         if(!empty($arrData2[$i][$y]['statename'])){
+          echo "'".$arrData2[$i][$y]['statename']."'"; } ?>,
              <?php $y++; 
-			 }?>  
+       }?>  
             ],
             crosshair: true
         },
-		
-		legend: {
+    
+    legend: {
         enabled: true
     },
         exporting: { enabled: true },
@@ -624,14 +630,14 @@ $(document).ready(function () {
             useHTML: true
         },
         plotOptions: {
-		 series: {
+     series: {
             borderWidth: 0,
             dataLabels: {
                 enabled: true,
                 format: '{point.y}'
             }
         },
-		
+    
             column: {
                 pointPadding: 0.2,
                 borderWidth: 0
@@ -639,26 +645,26 @@ $(document).ready(function () {
         },
         series: [{
             name: 'Registered for Audit',
-			color:'rgb(124, 181, 236)',
+      color:'rgb(124, 181, 236)',
             data: <?php echo json_encode(array_map('intval',array_values($arrData2_1[$t]))); ?> //NORTH
             //Registration, Audit Started, Audit Completed, Feedback Recieved
         }, {
             name: 'Audit Not Started',
-			color:'#fc3300',
+      color:'#fc3300',
             data: <?php echo json_encode(array_map('intval',array_values($arrData2_2[$t]))); ?> //South
 
         }, {
             name: 'Audit Started',
-			color:'#fcfc00',
+      color:'#fcfc00',
             data: <?php echo json_encode(array_map('intval',array_values($arrData2_3[$t]))); ?> //South
 
         }, {
             name: 'Audit Completed',
-			color:'#00ae4f',
+      color:'#00ae4f',
             data: <?php echo json_encode(array_map('intval',array_values($arrData2_4[$t]))); ?> //East
 
-        }		
-		],
+        }   
+    ],
 }); 
 </script>
 <?php
@@ -688,24 +694,24 @@ $(document).ready(function () {
         title: {
             text: 'Participation By State Kendriya Vidyalaya Sangathan (KVS)'
         },
-		yAxis: {
-		  title: {
+    yAxis: {
+      title: {
             text: 'No. of Schools'
           }
-		},
+    },
         xAxis: {
             categories: [
-			<?php 
+      <?php 
              for($r=0;$r<7;++$r){
-				  if(!empty($arrData3[$i][$y]['statename'])){
-				  echo "'".$arrData3[$i][$y]['statename']."'"; } ?>,
+          if(!empty($arrData3[$i][$y]['statename'])){
+          echo "'".$arrData3[$i][$y]['statename']."'"; } ?>,
              <?php $y++; 
-			 }?>  
+       }?>  
             ],
             crosshair: true
         },
-		
-		legend: {
+    
+    legend: {
         enabled: true
     },
         exporting: { enabled: true },
@@ -719,14 +725,14 @@ $(document).ready(function () {
             useHTML: true
         },
         plotOptions: {
-		 series: {
+     series: {
             borderWidth: 0,
             dataLabels: {
                 enabled: true,
                 format: '{point.y}'
             }
         },
-		
+    
             column: {
                 pointPadding: 0.2,
                 borderWidth: 0
@@ -734,26 +740,26 @@ $(document).ready(function () {
         },
         series: [{
             name: 'Registered for Audit',
-			color:'rgb(124, 181, 236)',
+      color:'rgb(124, 181, 236)',
             data: <?php echo json_encode(array_map('intval',array_values($arrData3_1[$t]))); ?> //NORTH
             //Registration, Audit Started, Audit Completed, Feedback Recieved
         }, {
             name: 'Audit Not Started',
-			color:'#fc3300',
+      color:'#fc3300',
             data: <?php echo json_encode(array_map('intval',array_values($arrData3_2[$t]))); ?> //South
 
         }, {
             name: 'Audit Started',
-			color:'#fcfc00',
+      color:'#fcfc00',
             data: <?php echo json_encode(array_map('intval',array_values($arrData3_3[$t]))); ?> //South
 
         }, {
             name: 'Audit Completed',
-			color:'#00ae4f',
+      color:'#00ae4f',
             data: <?php echo json_encode(array_map('intval',array_values($arrData3_4[$t]))); ?> //East
 
-        }		
-		],
+        }   
+    ],
 }); 
 </script>
 <?php
@@ -783,24 +789,24 @@ $(document).ready(function () {
         title: {
             text: 'Participation By State Montfortian Education Foundation'
         },
-		yAxis: {
-		  title: {
+    yAxis: {
+      title: {
             text: 'No. of Schools'
           }
-		},
+    },
         xAxis: {
             categories: [
-			<?php 
+      <?php 
              for($r=0;$r<7;++$r){
-				 if(!empty($arrData4[$i][$y]['statename'])){
-				  echo "'".$arrData4[$i][$y]['statename']."'"; } ?>,
+         if(!empty($arrData4[$i][$y]['statename'])){
+          echo "'".$arrData4[$i][$y]['statename']."'"; } ?>,
              <?php $y++; 
-			 }?>  
+       }?>  
             ],
             crosshair: true
         },
-		
-		legend: {
+    
+    legend: {
         enabled: true
     },
         exporting: { enabled: true },
@@ -814,14 +820,14 @@ $(document).ready(function () {
             useHTML: true
         },
         plotOptions: {
-		 series: {
+     series: {
             borderWidth: 0,
             dataLabels: {
                 enabled: true,
                 format: '{point.y}'
             }
         },
-		
+    
             column: {
                 pointPadding: 0.2,
                 borderWidth: 0
@@ -829,26 +835,26 @@ $(document).ready(function () {
         },
         series: [{
             name: 'Registered for Audit',
-			color:'rgb(124, 181, 236)',
+      color:'rgb(124, 181, 236)',
             data: <?php echo json_encode(array_map('intval',array_values($arrData4_1[$t]))); ?> //NORTH
             //Registration, Audit Started, Audit Completed, Feedback Recieved
         }, {
             name: 'Audit Not Started',
-			color:'#fc3300',
+      color:'#fc3300',
             data: <?php echo json_encode(array_map('intval',array_values($arrData4_2[$t]))); ?> //South
 
         }, {
             name: 'Audit Started',
-			color:'#fcfc00',
+      color:'#fcfc00',
             data: <?php echo json_encode(array_map('intval',array_values($arrData4_3[$t]))); ?> //South
 
         }, {
             name: 'Audit Completed',
-			color:'#00ae4f',
+      color:'#00ae4f',
             data: <?php echo json_encode(array_map('intval',array_values($arrData4_4[$t]))); ?> //East
 
-        }		
-		],
+        }   
+    ],
 }); 
 </script>
 <?php
@@ -878,24 +884,24 @@ $(document).ready(function () {
         title: {
             text: 'Participation By State Mount Litera Zee Schools'
         },
-		yAxis: {
-		  title: {
+    yAxis: {
+      title: {
             text: 'No. of Schools'
           }
-		},
+    },
         xAxis: {
             categories: [
-			<?php 
+      <?php 
              for($r=0;$r<7;++$r){
-				   if(!empty($arrData5[$i][$y]['statename'])){
-				  echo "'".$arrData5[$i][$y]['statename']."'"; } ?>,
+           if(!empty($arrData5[$i][$y]['statename'])){
+          echo "'".$arrData5[$i][$y]['statename']."'"; } ?>,
              <?php $y++; 
-			 }?>  
+       }?>  
             ],
             crosshair: true
         },
-		
-		legend: {
+    
+    legend: {
         enabled: true
     },
         exporting: { enabled: true },
@@ -909,14 +915,14 @@ $(document).ready(function () {
             useHTML: true
         },
         plotOptions: {
-		 series: {
+     series: {
             borderWidth: 0,
             dataLabels: {
                 enabled: true,
                 format: '{point.y}'
             }
         },
-		
+    
             column: {
                 pointPadding: 0.2,
                 borderWidth: 0
@@ -924,26 +930,26 @@ $(document).ready(function () {
         },
         series: [{
             name: 'Registered for Audit',
-			color:'rgb(124, 181, 236)',
+      color:'rgb(124, 181, 236)',
             data: <?php echo json_encode(array_map('intval',array_values($arrData5_1[$t]))); ?> //NORTH
             //Registration, Audit Started, Audit Completed, Feedback Recieved
         }, {
             name: 'Audit Not Started',
-			color:'#fc3300',
+      color:'#fc3300',
             data: <?php echo json_encode(array_map('intval',array_values($arrData5_2[$t]))); ?> //South
 
         }, {
             name: 'Audit Started',
-			color:'#fcfc00',
+      color:'#fcfc00',
             data: <?php echo json_encode(array_map('intval',array_values($arrData5_3[$t]))); ?> //South
 
         }, {
             name: 'Audit Completed',
-			color:'#00ae4f',
+      color:'#00ae4f',
             data: <?php echo json_encode(array_map('intval',array_values($arrData5_4[$t]))); ?> //East
 
-        }		
-		],
+        }   
+    ],
 }); 
 </script>
 <?php
@@ -973,24 +979,24 @@ $(document).ready(function () {
         title: {
             text: 'Participation By State Satya Bharti Foundation'
         },
-		yAxis: {
-		  title: {
+    yAxis: {
+      title: {
             text: 'No. of Schools'
           }
-		},
+    },
         xAxis: {
             categories: [
-			<?php 
+      <?php 
              for($r=0;$r<7;++$r){
-				  if(!empty($arrData6[$i][$y]['statename'])){
-				  echo "'".$arrData6[$i][$y]['statename']."'"; } ?>,
+          if(!empty($arrData6[$i][$y]['statename'])){
+          echo "'".$arrData6[$i][$y]['statename']."'"; } ?>,
              <?php $y++; 
-			 }?>  
+       }?>  
             ],
             crosshair: true
         },
-		
-		legend: {
+    
+    legend: {
         enabled: true
     },
         exporting: { enabled: true },
@@ -1004,14 +1010,14 @@ $(document).ready(function () {
             useHTML: true
         },
         plotOptions: {
-		 series: {
+     series: {
             borderWidth: 0,
             dataLabels: {
                 enabled: true,
                 format: '{point.y}'
             }
         },
-		
+    
             column: {
                 pointPadding: 0.2,
                 borderWidth: 0
@@ -1019,26 +1025,26 @@ $(document).ready(function () {
         },
         series: [{
             name: 'Registered for Audit',
-			color:'rgb(124, 181, 236)',
+      color:'rgb(124, 181, 236)',
             data: <?php echo json_encode(array_map('intval',array_values($arrData6_1[$t]))); ?> //NORTH
             //Registration, Audit Started, Audit Completed, Feedback Recieved
         }, {
             name: 'Audit Not Started',
-			color:'#fc3300',
+      color:'#fc3300',
             data: <?php echo json_encode(array_map('intval',array_values($arrData6_2[$t]))); ?> //South
 
         }, {
             name: 'Audit Started',
-			color:'#fcfc00',
+      color:'#fcfc00',
             data: <?php echo json_encode(array_map('intval',array_values($arrData6_3[$t]))); ?> //South
 
         }, {
             name: 'Audit Completed',
-			color:'#00ae4f',
+      color:'#00ae4f',
             data: <?php echo json_encode(array_map('intval',array_values($arrData6_4[$t]))); ?> //East
 
-        }		
-		],
+        }   
+    ],
 }); 
 </script>
 <?php
@@ -1066,7 +1072,7 @@ $(document).ready(function () {
                     cursor: 'pointer',
                     dataLabels: {
                         enabled: true,
-						 format: '{point.percentage:.1f}% {point.name}<br/><b> ({point.y} Schools)</b>',			
+             format: '{point.percentage:.1f}% {point.name}<br/><b> ({point.y} Schools)</b>',      
                     },
                     showInLegend: true
                 }
@@ -1076,8 +1082,8 @@ $(document).ready(function () {
                 data: [{name: 'Audit Not Started', color:'#fc3300', y: <?php echo $csi_total_notstarted_audit; ?>},{name: 'Audit Started', color:'#fcfc00', y: <?php echo $csi_total_started_audit; ?>}, {name: 'Audit Completed', color:'#00ae4f', y: <?php echo $csi_completed; ?>}]
             }]
         });
-		
-		// the button handler    
+    
+    // the button handler    
     $('#buttonExport').click(function() {
         var e = document.getElementById("ExportOption");
         var ExportAs = e.options[e.selectedIndex].value;   
@@ -1104,9 +1110,9 @@ $(document).ready(function () {
         chart.print();
         chart.setTitle(null, { text: 'Click and drag in the plot area to zoom in' });
     });
-		
-		
-		</script>
+    
+    
+    </script>
 <script type="text/javascript">
        var chart1 =  Highcharts.chart('container2',{
             chart: {
@@ -1129,7 +1135,7 @@ $(document).ready(function () {
                     cursor: 'pointer',
                     dataLabels: {
                         enabled: true,
-						 format: '{point.percentage:.1f}% {point.name}<br/><b> ({point.y} Schools)</b>',			
+             format: '{point.percentage:.1f}% {point.name}<br/><b> ({point.y} Schools)</b>',      
                     },
                     showInLegend: true
                 }
@@ -1139,8 +1145,8 @@ $(document).ready(function () {
                 data: [{name: 'Audit Not Started', color:'#fc3300', y: <?php echo $csi_total_notstarted_audit2; ?>},{name: 'Audit Started', color:'#fcfc00', y: <?php echo $csi_total_started_audit2; ?>}, {name: 'Audit Completed', color:'#00ae4f', y: <?php echo $csi_completed2; ?>}]
             }]
         });
-		
-		// the button handler    
+    
+    // the button handler    
     $('#buttonExport1').click(function() {
         var e = document.getElementById("ExportOption");
         var ExportAs = e.options[e.selectedIndex].value;   
@@ -1167,8 +1173,8 @@ $(document).ready(function () {
         chart1.print();
         chart1.setTitle(null, { text: 'Click and drag in the plot area to zoom in' });
     });
-		
-		</script>
+    
+    </script>
 <script type="text/javascript">
        var chart2=  Highcharts.chart('container3',{
             chart: {
@@ -1191,7 +1197,7 @@ $(document).ready(function () {
                     cursor: 'pointer',
                     dataLabels: {
                         enabled: true,
-						format: '{point.percentage:.1f}% {point.name}<br/><b> ({point.y} Schools)</b>',			
+            format: '{point.percentage:.1f}% {point.name}<br/><b> ({point.y} Schools)</b>',     
                     },
                     showInLegend: true
                 }
@@ -1201,7 +1207,7 @@ $(document).ready(function () {
                 data: [{name: 'Audit Not Started', color:'#fc3300', y: <?php echo $csi_total_notstarted_audit3; ?>},{name: 'Audit Started', color:'#fcfc00', y: <?php echo $csi_total_started_audit3; ?>}, {name: 'Audit Completed',color:'#00ae4f', y: <?php echo $csi_completed3; ?>}]
             }]
         });
-		// the button handler    
+    // the button handler    
     $('#buttonExport2').click(function() {
         var e = document.getElementById("ExportOption");
         var ExportAs = e.options[e.selectedIndex].value;   
@@ -1228,7 +1234,7 @@ $(document).ready(function () {
         chart2.print();
         chart2.setTitle(null, { text: 'Click and drag in the plot area to zoom in' });
     });
-		</script>
+    </script>
 <script type="text/javascript">
       var chart3=    Highcharts.chart('container4',{
             chart: {
@@ -1251,7 +1257,7 @@ $(document).ready(function () {
                     cursor: 'pointer',
                     dataLabels: {
                         enabled: true,
-						format: '{point.percentage:.1f}% {point.name}<br/><b> ({point.y} Schools)</b>',			
+            format: '{point.percentage:.1f}% {point.name}<br/><b> ({point.y} Schools)</b>',     
                     },
                     showInLegend: true
                 }
@@ -1261,7 +1267,7 @@ $(document).ready(function () {
                 data: [{name: 'Audit Not Started',color:'#fc3300', y: <?php echo $csi_total_notstarted_audit4; ?>},{name: 'Audit Started',color:'#fcfc00', y: <?php echo $csi_total_started_audit4; ?>}, {name: 'Audit Completed',color:'#00ae4f', y: <?php echo $csi_completed4; ?>}]
             }]
         });
-		// the button handler    
+    // the button handler    
     $('#buttonExport3').click(function() {
         var e = document.getElementById("ExportOption");
         var ExportAs = e.options[e.selectedIndex].value;   
@@ -1288,7 +1294,7 @@ $(document).ready(function () {
         chart3.print();
         chart3.setTitle(null, { text: 'Click and drag in the plot area to zoom in' });
     });
-		</script>
+    </script>
 <script type="text/javascript">
        var chart4 =  Highcharts.chart('container5',{
             chart: {
@@ -1311,7 +1317,7 @@ $(document).ready(function () {
                     cursor: 'pointer',
                     dataLabels: {
                         enabled: true,
-						format: '{point.percentage:.1f}% {point.name}<br/><b> ({point.y} Schools)</b>',			
+            format: '{point.percentage:.1f}% {point.name}<br/><b> ({point.y} Schools)</b>',     
                     },
                     showInLegend: true
                 }
@@ -1321,7 +1327,7 @@ $(document).ready(function () {
                 data: [{name: 'Audit Not Started',color:'#fc3300', y: <?php echo $csi_total_notstarted_audit5; ?>},{name: 'Audit Started',color:'#fcfc00', y: <?php echo $csi_total_started_audit5; ?>}, {name: 'Audit Completed',color:'#00ae4f', y: <?php echo $csi_completed5; ?>}]
             }]
         });
-		// the button handler    
+    // the button handler    
     $('#buttonExport4').click(function() {
         var e = document.getElementById("ExportOption");
         var ExportAs = e.options[e.selectedIndex].value;   
@@ -1348,7 +1354,7 @@ $(document).ready(function () {
         chart4.print();
         chart4.setTitle(null, { text: 'Click and drag in the plot area to zoom in' });
     });
-		</script>
+    </script>
 <script type="text/javascript">
      var chart5 =    Highcharts.chart('container6',{
             chart: {
@@ -1371,7 +1377,7 @@ $(document).ready(function () {
                     cursor: 'pointer',
                     dataLabels: {
                         enabled: true,
-						format: '{point.percentage:.1f}% {point.name}<br/><b> ({point.y} Schools)</b>',			
+            format: '{point.percentage:.1f}% {point.name}<br/><b> ({point.y} Schools)</b>',     
                     },
                     showInLegend: true
                 }
@@ -1381,7 +1387,7 @@ $(document).ready(function () {
                 data: [{name: 'Audit Not Started',color:'#fc3300', y: <?php echo $csi_total_notstarted_audit6; ?>},{name: 'Audit Started',color:'#fcfc00', y: <?php echo $csi_total_started_audit6; ?>}, {name: 'Audit Completed',color:'#00ae4f', y: <?php echo $csi_completed6; ?>}]
             }]
         });
-		// the button handler    
+    // the button handler    
     $('#buttonExport5').click(function() {
         var e = document.getElementById("ExportOption");
         var ExportAs = e.options[e.selectedIndex].value;   
@@ -1408,7 +1414,7 @@ $(document).ready(function () {
         chart5.print();
         chart5.setTitle(null, { text: 'Click and drag in the plot area to zoom in' });
     });
-		</script>
+    </script>
 <div id="container"> </div>
 <div id="container2" style="display:none;"> </div>
 <div id="container3" style="display:none;"> </div>
@@ -1416,68 +1422,68 @@ $(document).ready(function () {
 <div id="container5" style="display:none;"> </div>
 <div id="container6" style="display:none;"> </div>
 <script>
-		$("#second").click(function(){
+    $("#second").click(function(){
          $("#wrapper").hide();
          $("#wrapper3").hide();
          $("#wrapper4").hide();
          $("#wrapper5").hide();
          $("#wrapper6").hide();
-		  $("#wrapper2").show();
+      $("#wrapper2").show();
        });
-		
-		</script>
+    
+    </script>
 <script>
-		$("#third").click(function(){
+    $("#third").click(function(){
          $("#wrapper").hide();
          $("#wrapper3").show();
          $("#wrapper4").hide();
          $("#wrapper5").hide();
          $("#wrapper6").hide();
-		  $("#wrapper2").hide();
+      $("#wrapper2").hide();
        });
-		
-		</script>
+    
+    </script>
 <script>
-		$("#four").click(function(){
+    $("#four").click(function(){
          $("#wrapper").hide();
          $("#wrapper3").hide();
          $("#wrapper4").show();
          $("#wrapper5").hide();
          $("#wrapper6").hide();
-		  $("#wrapper2").hide();
+      $("#wrapper2").hide();
        });
-		
-		</script>
+    
+    </script>
 <script>
-		$("#five").click(function(){
+    $("#five").click(function(){
          $("#wrapper").hide();
          $("#wrapper3").hide();
          $("#wrapper4").hide();
          $("#wrapper5").show();
          $("#wrapper6").hide();
-		  $("#wrapper2").hide();
+      $("#wrapper2").hide();
        });
-		
-		</script>
+    
+    </script>
 <script>
-		$("#six").click(function(){
+    $("#six").click(function(){
          $("#wrapper").hide();
          $("#wrapper3").hide();
          $("#wrapper4").hide();
          $("#wrapper5").hide();
          $("#wrapper6").show();
-		  $("#wrapper2").hide();
+      $("#wrapper2").hide();
        });
-		
-		</script>
+    
+    </script>
 <script>
-		$("#first").click(function(){
+    $("#first").click(function(){
          $("#wrapper").show();
          $("#wrapper3").hide();
          $("#wrapper4").hide();
          $("#wrapper5").hide();
          $("#wrapper6").hide();
-		  $("#wrapper2").hide();
+      $("#wrapper2").hide();
        });
-		
-		</script>
+    
+    </script>
