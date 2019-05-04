@@ -250,7 +250,7 @@
 		  <li><a href="<?php echo base_url('admin/reports/getland'); ?>">Land Report</a></li>
 		  <li><a href="<?php echo base_url('admin/reports/getWater'); ?>">Water Report</a></li>
 		  <li><a href="<?php echo base_url('admin/reports/getWaste'); ?>">Waste Report</a></li>	
-	          <li><a href="#">Feedback Report</a></li> 
+	          <li><a href="<?php echo base_url('admin/reports/getFeedback'); ?>">Feedback Report</a></li> 
 
                   <!-- <li><a href="feedback_audit_before.php">How many Times schools participated Report </a></li>
                   <li><a href="feedback_self_explanatory.php"> Audit easy to understand and self explanatory Report </a></li>
