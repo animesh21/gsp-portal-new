@@ -490,6 +490,26 @@ session->userdata('ADMIN_ID') == '') {
 	       $data['height']['annually_phase2'] = $this->Report->getfoodByAnswer_phase2('Q12F2',4);		
 		
 	  $this->load->view('admin/includes/template', $data);		
+	}
+	
+	
+	public function getFeedback()
+	{ 
+	       $data['main'] = 'admin/reports/feedback-report';
+             
+    $data['feedback']['Q1Fe1'] = $this->Report->getAirQuality('Q1Fe1');
+    $data['feedback']['Q1Fe3'] = $this->Report->getAirQuality('Q1Fe3');
+    $data['feedback']['Q1Fe4'] = $this->Report->getAirQuality('Q1Fe4');
+    $data['feedback']['Q1Fe9'] = $this->Report->getAirQuality('Q1Fe9');
+
+
+    $data['feedback']['Q8Fe1'] = $this->Report->getAirQuality('Q8Fe1');
+    $data['feedback']['Q8Fe2'] = $this->Report->getAirQuality('Q8Fe2');
+    $data['feedback']['Q8Fe3'] = $this->Report->getAirQuality('Q8Fe3');
+
+
+
+		   $this->load->view('admin/includes/template', $data);	
 	}	
 	
 	
