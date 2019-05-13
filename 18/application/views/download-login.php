@@ -95,7 +95,7 @@
           <input class="org-btn" type="submit" value="Continue">
         </div>
         <?php echo form_close(); ?>
-        <p class="help">Need help? Email: <a href="mailto:support@greenschoolsprogramme.org">support@greenschoolsprogramme.org</a> or call 011-4061600, ext – 219, 300. <br>
+        <p class="help">Need help? Email: <a href="mailto:support@greenschoolsprogramme.org">support@greenschoolsprogramme.org</a> or call 011-4061600, ext – 321, 300. <br>
           Call between 10am to 5:30pm - Monday to Friday. </p>
       </div>
       <noscript>
