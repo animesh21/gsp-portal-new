@@ -1415,6 +1415,805 @@
     <?php
 }
 ?>
+
+<?php
+
+for ($j = 0; $j < count($record2); $j++) {
+		    ?>
+    	    <tr>
+    		<td><?php echo $i; ?></td>
+    		<td><?php echo $record2[$j]->school_id; ?></td>
+    		<td><?php echo $record2[$j]->name; ?></td>
+    		<td><?php echo $record2[$j]->address1; ?></td>
+    		<td><?php echo $record2[$j]->address2; ?></td>
+    		<td><?php echo $record2[$j]->country; ?></td>
+    		<td><?php echo $record2[$j]->state_name; ?></td>
+    		<td><?php echo $record2[$j]->district_name; ?></td>
+    		<td><?php echo $record2[$j]->city; ?></td>
+    		<td><?php echo $record2[$j]->pincode; ?></td>
+    		<td><?php echo $record2[$j]->isd; ?></td>
+    		<td><?php echo $record2[$j]->std; ?></td>
+    		<td><?php echo $record2[$j]->landline; ?></td>
+    		<td><?php echo $record2[$j]->mobile; ?></td>
+    		<td><?php echo $record2[$j]->principal; ?></td>
+    		<td><?php echo $record2[$j]->codinator; ?></td>
+    		<td><?php echo $record2[$j]->codinator_mail; ?></td>
+    		<td><?php echo $record2[$j]->codinator_mobile; ?></td>
+    		<td><?php echo $record2[$j]->category; ?></td>
+    		<td><?php echo $record2[$j]->shifts; ?></td>
+    		<td><?php echo $record2[$j]->lowest_level; ?></td>
+    		<td><?php echo $record2[$j]->higest_level; ?></td>
+    		<td><?php echo $record2[$j]->gender; ?></td>
+    		<td><?php echo $record2[$j]->educatio_board; ?></td>
+    		<td><?php echo $record2[$j]->population; ?></td>
+    		<td><?php echo $record2[$j]->students; ?></td>
+    		<td><?php echo $record2[$j]->teachers; ?></td>
+    		<td><?php echo $record2[$j]->nonteachers; ?></td>
+    		<td><?php echo $record2[$j]->male; ?></td>
+    		<td><?php echo $record2[$j]->female; ?></td>
+    		<td><?php echo $record2[$j]->visitor; ?></td>
+    		<td><?php echo $record2[$j]->working_days; ?></td>
+    		<td><?php echo $record2[$j]->audit_period; ?></td>
+    		<td><?php echo $record2[$j]->location; ?></td>
+    		<td><?php echo $record2[$j]->aid; ?></td>
+			<td><?php echo $record2[$j]->Q4A1; ?></td>
+    		<td>
+    <?php
+    $var = 0;
+    if ((isset($record2[$j]->Q5A110S3) && $record2[$j]->Q5A110S3 != 0) && (isset($record2[$j]->Q5A110S2) && $record2[$j]->Q5A110S2 != 0)) {
+	$var = ($record2[$j]->Q5A110S3 / $record2[$j]->Q5A110S2) * 100;
+    }
+    echo number_format($var, 2);
+    ?>
+    		</td>
+    		<td>
+		    <?php 
+//			$arr = array(
+//                            '1' => 'School does not use or own vehicles',
+//                            '2' => 'Operator-owned vehicles',
+//                            '3' => 'School-owned vehicles',
+//                            '4' => 'A combination of school-owned and operator-owned vehicles',
+//                            '5' => 'Hired vehicles (JNV schools)',
+//                        );
+			if($record2[$j]->Q6A1==1)
+			{
+			    echo 'School does not use or own vehicles';
+			}else if($record2[$j]->Q6A1==2)
+			{
+			    echo 'Operator-owned vehicles';
+			}else if($record2[$j]->Q6A1==3)
+			{
+			    echo 'School-owned vehicles';
+			}else if($record2[$j]->Q6A1==4)
+			{
+			    echo 'A combination of school-owned and operator-owned vehicles';
+			}else if($record2[$j]->Q6A1==5)
+			{
+			    echo 'Hired vehicles (JNV schools)';
+			}
+			
+		    ?>
+		</td>
+    		<td><?php echo $record2[$j]->Q6A2S1T1; ?></td>
+    		<td><?php echo $record2[$j]->Q6A2S1T2; ?></td>
+    		<td><?php echo $record2[$j]->Q6A2S1T3; ?></td>
+    		<td><?php echo $record2[$j]->Q6A2S1T4; ?></td>
+    		<td><?php echo $record2[$j]->Q6A2S1T5; ?></td>
+    		<td><?php echo $record2[$j]->Q6A2S1T6; ?></td>
+    		<td><?php echo $record2[$j]->Q6A2S3D1+$record2[$j]->Q6A2S3P1+$record2[$j]->Q6A2S3L1+$record2[$j]->Q6A2S3C1+$record2[$j]->Q6A2S3E1+$record2[$j]->Q6A2S3H1+$record2[$j]->Q6A2S3B1; ?></td>
+    		<td><?php echo $record2[$j]->Q6A2S3D1; ?></td>
+    		<td><?php echo $record2[$j]->Q6A2S3P1; ?></td>
+    		<td><?php echo $record2[$j]->Q6A2S3L1; ?></td>
+    		<td><?php echo $record2[$j]->Q6A2S3C1; ?></td>
+    		<td><?php echo $record2[$j]->Q6A2S3E1; ?></td>
+    		<td><?php echo $record2[$j]->Q6A2S3H1; ?></td>
+    		<td><?php echo $record2[$j]->Q6A2S3B1; ?></td>
+    		<td><?php echo $record2[$j]->total_cars; ?></td>
+		<td><?php echo $record2[$j]->Q6A2S3B1; ?></td>    
+    		<td><?php echo $record2[$j]->Q6A2S3D2; ?></td>
+    		<td><?php echo $record2[$j]->Q6A2S3P2; ?></td>
+    		<td><?php echo $record2[$j]->Q6A2S3L2; ?></td>
+    		<td><?php echo $record2[$j]->Q6A2S3C2; ?></td>
+    		<td><?php echo $record2[$j]->Q6A2S3E2; ?></td>
+    		<td><?php echo $record2[$j]->Q6A2S3H2; ?></td>
+    		<td><?php echo $record2[$j]->total_vans; ?></td>
+    		<td><?php echo $record2[$j]->Q6A2S3D3; ?></td>
+    		<td><?php echo $record2[$j]->Q6A2S3P3; ?></td>
+    		<td><?php echo $record2[$j]->Q6A2S3L3; ?></td>
+    		<td><?php echo $record2[$j]->Q6A2S3C3; ?></td>
+    		<td><?php echo $record2[$j]->Q6A2S3E3; ?></td>
+    		<td><?php echo $record2[$j]->Q6A2S3H3; ?></td>
+    		<td><?php echo $record2[$j]->Q6A2S3B3; ?></td>
+    		<td><?php echo $record2[$j]->total_other; ?></td>
+    		<td><?php echo $record2[$j]->Q6A2S3D4; ?></td>
+    		<td><?php echo $record2[$j]->Q6A2S3P4; ?></td>
+    		<td><?php echo $record2[$j]->Q6A2S3L4; ?></td>
+    		<td><?php echo $record2[$j]->Q6A2S3C4; ?></td>
+    		<td><?php echo $record2[$j]->Q6A2S3E4; ?></td>
+    		<td><?php echo $record2[$j]->Q6A2S3H4; ?></td>
+    		<td><?php echo $record2[$j]->Q6A2S3B4; ?></td>
+    		<td><?php echo $record2[$j]->total_disel; ?></td>
+    		<td><?php echo $record2[$j]->total_petrol; ?></td>
+    		<td><?php echo $record2[$j]->total_lpg; ?></td>
+    		<td><?php echo $record2[$j]->total_cng; ?></td>
+    		<td><?php echo $record2[$j]->total_hybrid; ?></td>
+    		<td><?php echo $record2[$j]->total_electric; ?></td>
+    		<td><?php echo $record2[$j]->total_biofuel; ?></td>
+    		<td>
+		    <?php 
+			if($record2[$j]->Q6A3=="Y")
+			{
+			    echo 'Yes';
+			}else if($record2[$j]->Q6A3=="N")
+			{
+			    echo 'No';
+			}
+		    ?>
+		</td>
+    		<td>
+		    <?php 
+			if($record2[$j]->Q6A4S1=="Y")
+			{
+			    echo 'Yes';
+			}else if($record2[$j]->Q6A4S1=="N")
+			{
+			     echo 'No';
+			}
+		?>
+		</td>
+    		<td><?php echo $record2[$j]->Q7A1S1; ?></td>
+    		<td><?php echo $record2[$j]->Q7A1S2; ?></td>
+    		<td><?php echo $record2[$j]->Q7A1S3; ?></td>
+    		<td><?php echo $record2[$j]->Q7A1S4; ?></td>
+    		<td><?php echo $record2[$j]->Q7A2S1; ?></td>
+    		<td><?php echo $record2[$j]->Q7A2S2; ?></td>
+    		<td><?php echo $record2[$j]->Q7A2S3; ?></td>
+    		<td><?php echo $record2[$j]->Q7A2S4; ?></td>
+    		<td><?php echo $record2[$j]->Q7A3S1; ?></td>
+    		<td><?php echo $record2[$j]->Q7A3S2; ?></td>
+    		<td><?php echo $record2[$j]->Q7A3S3; ?></td>
+    		<td><?php echo $record2[$j]->Q7A3S4; ?></td>
+    		<td><?php echo $record2[$j]->Q7A4S1; ?></td>
+    		<td><?php echo $record2[$j]->Q7A4S2; ?></td>
+    		<td><?php echo $record2[$j]->Q7A4S3; ?></td>
+    		<td><?php echo $record2[$j]->Q7A4S4; ?></td>
+    		<td><?php echo $record2[$j]->Q7A5S1; ?></td>
+    		<td><?php echo $record2[$j]->Q7A5S2; ?></td>
+    		<td><?php echo $record2[$j]->Q7A5S3; ?></td>
+    		<td><?php echo $record2[$j]->Q7A5S4; ?></td>
+    		<td><?php echo $record2[$j]->Q7A6S1; ?></td>
+    		<td><?php echo $record2[$j]->Q7A6S2; ?></td>
+    		<td><?php echo $record2[$j]->Q7A6S3; ?></td>
+    		<td><?php echo $record2[$j]->Q7A6S4; ?></td>
+    		<td><?php echo $record2[$j]->Q7A7S1; ?></td>
+    		<td><?php echo $record2[$j]->Q7A7S2; ?></td>
+    		<td><?php echo $record2[$j]->Q7A7S3; ?></td>
+    		<td><?php echo $record2[$j]->Q7A7S4; ?></td>
+    		<td><?php echo $record2[$j]->Q7A8S1; ?></td>
+    		<td><?php echo $record2[$j]->Q7A8S2; ?></td>
+    		<td><?php echo $record2[$j]->Q7A8S3; ?></td>
+			<td><?php echo $record2[$j]->Q7A8S4; ?></td>
+    		<td><?php echo $record2[$j]->Q7A9S1; ?></td>
+    		<td><?php echo $record2[$j]->Q7A9S2; ?></td>
+    		<td><?php echo $record2[$j]->Q7A9S3; ?></td>
+    		<td><?php echo $record2[$j]->Q7A9S4; ?></td>
+    		<td><?php echo $record2[$j]->Q7A10S1; ?></td>
+    		<td><?php echo $record2[$j]->Q7A10S2; ?></td>
+    		<td><?php echo $record2[$j]->Q7A10S3; ?></td>
+    		<td><?php echo $record2[$j]->Q7A10S4; ?></td>
+    		<td><?php echo $record2[$j]->Q7A11S1; ?></td>
+    		<td><?php echo $record2[$j]->Q7A11S2; ?></td>
+    		<td><?php echo $record2[$j]->Q7A11S3; ?></td>
+    		<td><?php echo $record2[$j]->Q7A11S4; ?></td>
+    		<td><?php echo $record2[$j]->Q8A1; ?></td>
+    		<td>
+		    <?php 
+			if($record2[$j]->Q9A1=="Y")
+			{
+			    echo "Yes";
+			}else if($record2[$j]->Q9A1=="N")
+			{
+			     echo "No";
+			}
+		    ?>
+		</td>
+    		<td>
+		    <?php 
+			if($record2[$j]->Q9A2=="Y")
+			{
+			    echo "Yes";
+			}else if($record2[$j]->Q9A2=="N")
+			{
+			     echo "No";
+			}
+		    ?>
+		</td>
+    		<td><?php echo $record2[$j]->air_points; ?></td>
+			
+			
+			  <td><?php echo $record2[$j]->Q4E1; ?></td>
+				<td><?php echo $record2[$j]->Q5E1; ?></td>
+				<td><?php echo $record2[$j]->Q6E1S1; ?></td>
+                <td><?php echo $record2[$j]->Q6E2S1; ?></td>
+                <td><?php echo $record2[$j]->Q6E3S1; ?></td>
+                <td><?php echo $record2[$j]->Q6E4S1 ; ?></td>
+                <td><?php echo $record2[$j]->Q6E5S1; ?></td>
+                <td><?php echo $record2[$j]->Q6E6S1; ?></td>
+				<td><?php echo $record2[$j]->Q6E7S1; ?></td>
+				<td><?php echo $record2[$j]->Q6E16S1; ?></td>
+				<td><?php echo $record2[$j]->Q6E8S1; ?></td>
+				<td><?php echo $record2[$j]->Q6E9S1; ?></td>
+				<td><?php echo $record2[$j]->Q6E10S1; ?></td>
+				<td><?php echo $record2[$j]->Q6E11S1; ?></td>
+				<td><?php echo $record2[$j]->Q6E12S1; ?></td>
+				<td><?php echo $record2[$j]->Q6E13S1; ?></td>
+				<td><?php echo $record2[$j]->Q6E14S1; ?></td>
+				<td><?php echo $record2[$j]->Q6E1S2; ?></td>
+				<td><?php echo $record2[$j]->Q6E2S2; ?></td>
+				<td><?php echo $record2[$j]->Q6E3S2; ?></td>
+				<td><?php echo $record2[$j]->Q6E4S2; ?></td>
+				<td><?php echo $record2[$j]->Q6E5S2; ?></td>
+				<td><?php echo $record2[$j]->Q6E6S2; ?></td>
+				<td><?php echo $record2[$j]->Q6E7S2; ?></td>
+				<td><?php echo $record2[$j]->Q6E16S2; ?></td>
+				<td><?php echo $record2[$j]->Q6E8S2; ?></td>
+				<td><?php echo $record2[$j]->Q6E9S2; ?></td>
+				<td><?php echo $record2[$j]->Q6E10S2; ?></td>
+				<td><?php echo $record2[$j]->Q6E11S2; ?></td>
+				<td><?php echo $record2[$j]->Q6E12S2; ?></td>
+				<td><?php echo $record2[$j]->Q6E13S2; ?></td>
+				<td><?php echo $record2[$j]->Q6E14S2; ?></td>
+				<td><?php echo $record2[$j]->Q6E15S2 ; ?></td>
+				<td><?php echo $record2[$j]->percatitaaa ; ?></td>
+				<td><?php echo $record2[$j]->Q7E2S1; ?></td>
+				<td><?php echo $record2[$j]->Q7E2S2; ?></td>
+				<td><?php echo $record2[$j]->Q7E2S3; ?></td>
+				<td><?php echo $record2[$j]->Q7E3S1; ?></td>
+				<td><?php echo $record2[$j]->Q7E3S2; ?></td>
+				<td><?php echo $record2[$j]->Q7E3S3; ?></td>
+				<td><?php echo $record2[$j]->Q7E4S1; ?></td>
+				<td><?php echo $record2[$j]->Q7E4S2; ?></td>
+				<td><?php echo $record2[$j]->Q7E4S3; ?></td>
+				<td><?php echo $record2[$j]->Q7E5S1; ?></td>
+				<td><?php echo $record2[$j]->Q7E5S2; ?></td>
+				<td><?php echo $record2[$j]->Q7E5S3; ?></td>
+				<td><?php echo $record2[$j]->Q7E6S1; ?></td>
+				<td><?php echo $record2[$j]->Q7E6S2; ?></td>
+				<td><?php echo $record2[$j]->Q7E6S3; ?></td>
+				<td><?php echo $record2[$j]->Q7E7S1; ?></td>
+				<td><?php echo $record2[$j]->Q7E7S2; ?></td>
+				<td><?php echo $record2[$j]->Q7E7S3; ?></td>
+				<td><?php echo $record2[$j]->Q7E8S1; ?></td>
+				<td><?php echo $record2[$j]->Q7E8S2; ?></td>
+				<td><?php echo $record2[$j]->Q7E8S3; ?></td>
+				<td><?php echo $record2[$j]->Q8E1; ?></td>
+				<td><?php echo $record2[$j]->Q9E1; ?></td>
+				
+				
+				
+				<td><?php if(($record2[$j]->Q9E1S1)==1) 
+				{
+					echo 'Solar';
+				}
+				
+				if(($record2[$j]->Q9E1S1)!='1') 
+				{
+					echo 'N/A';
+				}	
+				
+				?></td>
+				<td><?php if(($record2[$j]->Q9E1S2)==1)
+				{
+					echo 'Wind';
+				}
+				
+				if(($record2[$j]->Q9E1S2)!='1')
+				{
+					echo 'N/A';
+				}	
+					?></td>
+				<td><?php if(( $record2[$j]->Q9E1S3)==1)
+				{
+					echo 'Hydro';
+				}
+				
+				if(( $record2[$j]->Q9E1S3)!='1')
+				{
+					echo 'N/A';
+				}
+					?></td>
+				<td><?php if(( $record2[$j]->Q9E1S5)==1)
+				{
+					echo 'Biogas Plant';
+				}
+				if(( $record2[$j]->Q9E1S5)!='1')
+				{
+					echo 'N/A';
+				}
+					?></td>
+				<td><?php if(( $record2[$j]->Q9E1S4)==1) 
+				{
+					echo 'Combination of solar and wind';
+				}	
+				if(( $record2[$j]->Q9E1S4)!='1') 
+				{
+					echo 'N/A';
+				}	
+				
+				?></td>
+				
+				
+				
+				
+                <td><?php echo $record2[$j]->Q10E1; ?></td>
+               <td><?php echo $record2[$j]->energy_points; ?></td>
+			   
+			   
+			   <td><?php echo $record2[$j]->Q4F1; ?></td>
+				<td><?php echo $record2[$j]->Q5F1; ?></td>
+				<td><?php echo $record2[$j]->Q5F1S1; ?></td>
+				<td><?php echo $record2[$j]->Q5F1S2; ?></td>
+                <td><?php echo $record2[$j]->Q5F1S3; ?></td>
+                <td><?php echo $record2[$j]->Q5F1S4; ?></td>
+				<td><?php echo $record2[$j]->Q6F2S1; ?></td>
+                <td><?php echo $record2[$j]->Q6F2S2; ?></td>
+				<td><?php echo $record2[$j]->Q6F2S3; ?></td>
+				<td><?php echo $record2[$j]->Q6F3S1; ?></td>
+				<td><?php echo $record2[$j]->Q6F3S2; ?></td>
+				<td><?php echo $record2[$j]->Q6F3S3; ?></td>
+				<td><?php echo $record2[$j]->Q6F4S1; ?></td>
+				<td><?php echo $record2[$j]->Q6F4S2; ?></td>
+				<td><?php echo $record2[$j]->Q6F4S3; ?></td>
+				<td><?php echo $record2[$j]->Q6F5S1; ?></td>
+				<td><?php echo $record2[$j]->Q6F5S2; ?></td>
+				<td><?php echo $record2[$j]->Q6F5S3; ?></td>
+				<td><?php echo $record2[$j]->Q6F6S1; ?></td>
+				<td><?php echo $record2[$j]->Q6F6S2; ?></td>
+				<td><?php echo $record2[$j]->Q6F6S3; ?></td>
+				<td><?php echo $record2[$j]->Q6F7S1; ?></td>
+				<td><?php echo $record2[$j]->Q6F7S2; ?></td>
+				<td><?php echo $record2[$j]->Q6F7S3; ?></td>
+				<td><?php echo $record2[$j]->Q6F8S1; ?></td>
+				<td><?php echo $record2[$j]->Q6F8S2; ?></td>
+				<td><?php echo $record2[$j]->Q6F8S3; ?></td>
+				<td><?php echo $record2[$j]->Q6F9S1; ?></td>
+				<td><?php echo $record2[$j]->Q6F9S2; ?></td>
+				<td><?php echo $record2[$j]->Q6F9S3; ?></td>
+				<td><?php echo $record2[$j]->Q6F10S1; ?></td>
+				<td><?php echo $record2[$j]->Q6F10S2; ?></td>
+				<td><?php echo $record2[$j]->Q6F10S3 ; ?></td>
+				<td><?php echo $record2[$j]->Q7F1; ?></td>
+				<td><?php echo $record2[$j]->Q7F1S1; ?></td>
+				<td><?php echo $record2[$j]->Q7F1S2; ?></td>
+				<td><?php echo $record2[$j]->Q7F1S3; ?></td>
+				<td><?php echo $record2[$j]->Q7F1S4; ?></td>
+				<td><?php echo $record2[$j]->Q7F1S5; ?></td>
+				<td><?php echo $record2[$j]->Q7F3S1; ?></td>
+				<td><?php echo $record2[$j]->Q8F1; ?></td>
+				<td><?php echo $record2[$j]->Q8F1S1; ?></td>
+				<td><?php echo $record2[$j]->Q8F1S2; ?></td>
+				<td><?php echo $record2[$j]->Q8F1S3; ?></td>
+				<td><?php echo $record2[$j]->Q8F1S4; ?></td>
+				<td><?php echo $record2[$j]->Q8F1S5; ?></td>
+				<td><?php echo $record2[$j]->Q9F1; ?></td>
+				<td><?php echo $record2[$j]->Q9F2; ?></td>
+				<td><?php echo $record2[$j]->Q10F1; ?></td>
+				<td><?php echo $record2[$j]->Q10F2; ?></td>
+				<td><?php echo $record2[$j]->Q11F1; ?></td>
+				<td><?php echo $record2[$j]->Q11F2; ?></td>
+				<td><?php echo $record2[$j]->Q11F3; ?></td>
+				<td><?php echo $record2[$j]->Q12F1; ?></td>
+				
+				<td><?php if(( $record2[$j]->Q12F2)==1) 
+				{
+					echo 'Monthly';
+				}	
+				
+				if(($record2[$j]->Q12F2)==2) 
+				{
+					echo 'Quarterly';
+				}	
+				
+				if(( $record2[$j]->Q12F2)==3) 
+				{
+					echo 'Bi-annually';
+				}	
+				
+				if(( $record2[$j]->Q12F2)==4) 
+				{
+					echo 'Annually ';
+				}	
+				if(( $record2[$j]->Q12F2)!=1&&2&&3&&4) 
+				{
+					echo 'N/A ';
+				}	
+				
+				?></td>
+				
+				<td><?php echo $record2[$j]->Q13F1; ?></td>
+				<td><?php echo $record2[$j]->Q13F2; ?></td>
+				<td><?php echo $record2[$j]->food_points; ?></td>
+<td><?php echo $record2[$j]->Q4L1; ?></td>
+<td><?php echo $record2[$j]->Q4L2; ?></td>
+<td><?php echo $record2[$j]->Q4L3; ?></td>
+<td><?php echo $record2[$j]->Q4L4; ?></td>
+<td><?php echo $record2[$j]->Q4L5; ?></td>
+<td><?php echo $record2[$j]->Q4L6; ?></td>
+<td><?php echo $record2[$j]->Q4L7; ?></td>
+<td><?php echo $record2[$j]->Q4L8; ?></td>
+<td><?php echo $record2[$j]->Q4L9; ?></td>
+<td><?php echo $record2[$j]->Q4L10; ?></td>
+<td><?php echo $record2[$j]->Q4L11; ?></td>
+<td><?php echo $record2[$j]->Q4L12; ?></td>
+<td><?php echo $record2[$j]->Q4L1; ?></td>
+<td><?php echo $record2[$j]->Q4L5; ?></td>
+<td><?php echo $record2[$j]->PercentageArea; ?></td>
+<td><?php echo $record2[$j]->Q5L1S3; ?></td>
+<td><?php echo $record2[$j]->Q5L1S1; ?></td>
+<td><?php echo $record2[$j]->Q5L1S2; ?></td>
+<td><?php echo $record2[$j]->Q5L2S3; ?></td>
+<td><?php echo $record2[$j]->Q5L2S1; ?></td>
+<td><?php echo $record2[$j]->Q5L2S2; ?></td>
+<td><?php echo $record2[$j]->Q6L1; ?></td>
+<td><?php echo $record2[$j]->land_points; ?></td>
+<td><?php echo  $record2[$j]->Q4W1; ?></td>
+<td><?php echo  $record2[$j]->Q4W2; ?></td>
+<td><?php echo  $record2[$j]->Q4W3; ?></td>
+<td><?php echo  $record2[$j]->Q4W4; ?></td>
+<td><?php echo  $record2[$j]->Q4W5; ?></td>
+<td><?php echo  $record2[$j]->Q4W6; ?></td>
+<td><?php echo  $record2[$j]->Q4W7; ?></td>
+<td><?php echo  $record2[$j]->Q4W8; ?></td>
+<td><?php echo  $record2[$j]->Q4W9; ?></td>
+<td><?php echo  $record2[$j]->Q4W10; ?></td>
+<td><?php echo  $record2[$j]->Q4W11; ?></td>
+<td><?php if($record2[$j]->population!="" && $record2[$j]->population!=0): echo  $record2[$j]->Q4W11/$record2[$j]->population; else: echo "N/A"; endif; ?></td>
+<td><?php echo  $record2[$j]->Q5W1; ?></td>
+<td><?php echo  $record2[$j]->Q5W2; ?></td>
+<td><?php echo  $record2[$j]->Q5W3; ?></td>
+<td><?php echo  $record2[$j]->Q5W4; ?></td>
+<td><?php echo  $record2[$j]->Q6W1; ?></td>
+<td><?php echo  $record2[$j]->Q6W2; ?></td>
+<td><?php echo  $record2[$j]->Q6W3; ?></td>
+<td><?php echo  $record2[$j]->Q6W4; ?></td>
+<td><?php echo  $record2[$j]->Q6W5; ?></td>
+<td><?php echo  $record2[$j]->Q7W1; ?></td>
+<td><?php echo  $record2[$j]->Q7W2; ?></td>
+<td><?php echo  $record2[$j]->Q8W1S1; ?></td>
+<td><?php echo  $record2[$j]->Q8W1S2; ?></td>
+<td><?php echo  $record2[$j]->Q8W1S3; ?></td>
+<td><?php echo  $record2[$j]->Q8W1S4; ?></td>
+<td><?php echo  $record2[$j]->Q8W1S5; ?></td>
+<td><?php echo  $record2[$j]->Q8W1S6; ?></td>
+<td><?php echo  $record2[$j]->Q8W1S7; ?></td>
+<td><?php echo  $record2[$j]->Q8W1S8; ?></td>
+<td><?php echo  $record2[$j]->Q8W1S9; ?></td>
+<td><?php echo  $record2[$j]->Q8W1S10; ?></td>
+<td><?php echo  $record2[$j]->Q8W1S11; ?></td>
+<td><?php echo  $record2[$j]->Q8W2; ?></td>
+<td><?php echo  $record2[$j]->Q8W2S1; ?></td>
+<td><?php echo  $record2[$j]->Q8W2S1S1; ?></td>
+<td><?php echo  $record2[$j]->Q8W2S2; ?></td>
+<td><?php echo  $record2[$j]->Q8W2S2S1; ?></td>
+<td><?php echo  $record2[$j]->Q8W2S2S2; ?></td>
+<td><?php echo  $record2[$j]->Q8W2S2S7; ?></td>
+<td><?php echo  $record2[$j]->Q8W2S2S10; ?></td>
+<td><?php echo  $record2[$j]->Q8W2S4; ?></td>
+<td><?php echo  $record2[$j]->Q8W2S31; ?></td>
+<td><?php echo  $record2[$j]->Q8W2S4S1; ?></td>
+<td><?php echo  $record2[$j]->Q8W2S4S22; ?></td>
+<td><?php echo  $record2[$j]->Q8W2S5; ?></td>
+<td><?php echo  $record2[$j]->Q8W2S61; ?></td>
+<td><?php echo  $record2[$j]->Q8W2S7; ?></td>
+<td><?php echo  $record2[$j]->Q8W2S8; ?></td>
+<td><?php echo  $record2[$j]->Q8W2S9; ?></td>
+<td><?php echo  $record2[$j]->Q8W2S10;  ?></td>
+<td><?php echo  $record2[$j]->Q8W2S12; ?></td>
+<td><?php echo  $record2[$j]->Q8W2S13; ?></td>
+<td><?php echo  $record2[$j]->Q8W2S6; ?></td>
+<td><?php echo  $record2[$j]->Q8W3S1; ?></td>
+<td><?php echo  $record2[$j]->Q8W3S2; ?></td>
+<td><?php echo  $record2[$j]->Q8W3S3; ?></td>
+<td><?php echo  $record2[$j]->Q8W3S4; ?></td>
+<td><?php echo  $record2[$j]->Q8W3S5; ?></td>
+<td><?php echo  $record2[$j]->Q8W3S6; ?></td>
+<td><?php echo  $record2[$j]->Q8W3S7; ?></td>
+<td><?php echo  $record2[$j]->Q8W3S8; ?></td>
+<td><?php echo  $record2[$j]->Q9W1; ?></td>
+<td><?php if($record2[$j]->population=="" && $record2[$j]->population==0): echo "N/A"; else:  echo $record2[$j]->population/$record2[$j]->Q9W1; endif; ?></td>
+<td><?php echo  $record2[$j]->Q10W1; ?></td>
+<td><?php echo  $record2[$j]->Q11W1; ?></td>
+<td><?php if($record2[$j]->population=="" && $record2[$j]->population==0): echo "N/A";  else: echo $record2[$j]->population/$record2[$j]->Q11W1; endif; ?></td>
+<td><?php echo  $record2[$j]->Q13W1S1; ?></td>
+<td><?php echo  $record2[$j]->Q13W1S2; ?></td>
+<td><?php echo  $record2[$j]->Q13W1S3; ?></td>
+<td><?php echo  $record2[$j]->Q13W1S4; ?></td>
+<td><?php if($record2[$j]->population=="" && $record2[$j]->population==0): echo "N/A";  else: echo $record2[$j]->population/$record2[$j]->Q13W1S4; endif; ?></td>
+<td><?php echo  $record2[$j]->Q14W1; ?></td>
+<td><?php echo  $record2[$j]->Q15W1; ?></td>
+<td><?php echo  $record2[$j]->Q15W1; ?></td>
+<td><?php echo  $record2[$j]->Q16W1; ?></td>
+<td><?php echo  $record2[$j]->Q21W1; ?></td>
+<td><?php echo  $record2[$j]->Q18W1; ?></td>
+<td><?php echo  $record2[$j]->Q19W1; ?></td>
+<td><?php echo  $record2[$j]->Q20W1; ?></td>
+<td><?php echo  $record2[$j]->Q20W2; ?></td>
+<td><?php echo  $record2[$j]->water_points; ?></td>
+ <td><?php echo  $record2[$j]->Q4Wa1; ?></td>
+        <td><?php echo  $record2[$j]->Q4Wa2; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa1S1; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa1S2; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa1S3; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa1S4; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa1S5; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa2S1; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa2S2; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa2S3; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa2S4; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa2S5; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa3S1; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa3S2; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa3S3; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa3S4; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa3S5; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa4S1; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa4S2; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa4S3; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa4S4; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa4S5; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa5S1; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa5S2; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa5S3; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa5S4; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa5S5; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa6S1; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa6S2; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa6S3; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa6S4; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa6S5; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa7S1; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa7S2; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa7S3; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa7S4; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa7S5; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa8S1; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa8S2; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa8S3; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa8S4; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa8S5; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa9S1; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa9S2; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa9S3; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa9S4; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa9S5; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa10S1; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa10S2; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa10S3; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa10S4; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa10S5; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa11S1; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa11S2; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa11S3; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa11S4; ?></td>
+        <td><?php echo  $record2[$j]->Q5Wa11S5; ?></td>
+        <td><?php echo  $record2[$j]->Q6Wa1S1; ?></td>
+        <td><?php echo  $record2[$j]->Q6Wa1S2; ?></td>
+        <td><?php echo  $record2[$j]->Q6Wa1S3; ?></td>
+        <td><?php echo  $record2[$j]->Q6Wa1S4; ?></td>
+        <td><?php echo  $record2[$j]->Q6Wa1S5; ?></td>
+        <td><?php echo  $record2[$j]->Q6Wa1S6; ?></td>
+        <td><?php echo  $record2[$j]->Q6Wa2S1; ?></td>
+        <td><?php echo  $record2[$j]->Q6Wa2S2; ?></td>
+        <td><?php echo  $record2[$j]->Q6Wa2S3; ?></td>
+        <td><?php echo  $record2[$j]->Q6Wa2S4; ?></td>
+        <td><?php echo  $record2[$j]->Q6Wa2S5; ?></td>
+        <td><?php echo  $record2[$j]->Q6Wa2S6; ?></td>
+        <td><?php echo  $record2[$j]->Q6Wa2S7; ?></td>
+        <td><?php echo  $record2[$j]->Q6Wa2S8; ?></td>
+        <td><?php echo  $record2[$j]->Q6Wa2S9; ?></td>
+        <td><?php echo  $record2[$j]->Q6Wa3S1; ?></td>
+        <td><?php echo  $record2[$j]->Q6Wa3S2; ?></td>
+        <td><?php echo  $record2[$j]->Q6Wa3S3; ?></td>
+        <td><?php echo  $record2[$j]->Q6Wa3S4; ?></td>
+        <td><?php echo  $record2[$j]->Q6Wa4S1; ?></td>
+        <td><?php echo  $record2[$j]->Q6Wa4S2; ?></td>
+        <td><?php echo  $record2[$j]->Q6Wa5S1; ?></td>
+        <td><?php echo  $record2[$j]->Q6Wa5S2; ?></td>
+        <td><?php echo  $record2[$j]->Q6Wa6S1; ?></td>
+        <td><?php echo  $record2[$j]->Q6Wa6S2; ?></td>
+        <td><?php echo  $record2[$j]->Q6Wa7S1; ?></td>
+        <td><?php echo  $record2[$j]->Q6Wa7S2; ?></td>
+        <td><?php echo  $record2[$j]->Q8Wa1; ?></td>
+        <td><?php echo  $record2[$j]->Q8Wa1S1; ?></td>
+        <td><?php echo  $record2[$j]->Q8Wa1S2; ?></td>
+        <td><?php echo  $record2[$j]->Q8Wa1S3; ?></td>
+        <td><?php echo  $record2[$j]->Q8Wa1S4; ?></td>
+        <td><?php echo  $record2[$j]->Q8Wa1S5; ?></td>
+        <td><?php echo  $record2[$j]->Q8Wa1S6; ?></td>
+        <td><?php echo  $record2[$j]->Q8Wa2S1; ?></td>
+        <td><?php echo  $record2[$j]->Q8Wa2S2; ?></td>
+        <td><?php echo  $record2[$j]->Q8Wa2S3; ?></td>
+        <td><?php echo  $record2[$j]->Q8Wa2S4; ?></td>
+        <td><?php echo  $record2[$j]->Q8Wa2S5; ?></td>
+        <td><?php echo  $record2[$j]->Q8Wa2S6; ?></td>
+        <td><?php echo  $record2[$j]->Q8Wa2S7; ?></td>
+        <td><?php echo  $record2[$j]->Q8Wa2S8; ?></td>
+        <td><?php echo  $record2[$j]->Q8Wa2S9; ?></td>
+        <td><?php echo  $record2[$j]->Q8Wa3S1; ?></td>
+        <td><?php echo  $record2[$j]->Q8Wa3S2; ?></td>
+        <td><?php echo  $record2[$j]->Q8Wa3S3; ?></td>
+        <td><?php echo  $record2[$j]->Q8Wa3S4; ?></td>
+        <td><?php echo  $record2[$j]->Q8Wa4S1; ?></td>
+        <td><?php echo  $record2[$j]->Q8Wa4S2; ?></td>
+        <td><?php echo  $record2[$j]->Q8Wa5S1; ?></td>
+        <td><?php echo  $record2[$j]->Q8Wa5S2; ?></td>
+        <td><?php echo  $record2[$j]->Q8Wa6S1; ?></td>
+        <td><?php echo  $record2[$j]->Q8Wa6S2; ?></td>
+        <td><?php echo  $record2[$j]->Q8Wa7S1; ?></td>
+        <td><?php echo  $record2[$j]->Q8Wa7S2; ?></td>
+        <td><?php echo  $record2[$j]->Q9Wa1; ?></td>
+        <td><?php echo  $record2[$j]->Q9Wa2S1; ?></td>
+        <td><?php echo  $record2[$j]->Q9Wa31; ?></td>
+        <td><?php echo  $record2[$j]->Q9Wa4S1; ?></td>
+        <td><?php echo  $record2[$j]->Q10Wa1; ?></td>
+        <td><?php echo $record2[$j]->paper_recycling_procedures;    ?></td>
+        <td><?php  echo $record2[$j]->plastic_recycling_procedures;  ?></td>
+        <td><?php  echo $record2[$j]->horticultural_waste_recycling_procedures; ?></td>
+        <td><?php  echo $record2[$j]->e_waste_recycling_procedures; ?></td>
+        <td><?php  echo $record2[$j]->hazardous_waste_recycling_procedures; ?></td>
+        <td><?php  echo $record2[$j]->wood_glass_metal_recycling_procedures; ?></td>
+        <td><?php  echo $record2[$j]->biomedical_waste_recycling_procedures; ?></td>
+        <td><?php echo $record2[$j]->others_recycling_procedures; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa1S1; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa1S2; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa1S3; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa1S4; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa2S1; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa2S2; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa2S3; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa2S4; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa3S1; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa3S2; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa3S3; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa3S4; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa4S1; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa4S2; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa4S3; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa4S4; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa5S1; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa5S2; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa5S3; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa5S4; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa6S1; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa6S2; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa6S3; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa6S4; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa7S1; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa7S2; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa7S3; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa7S4; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa8S1; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa8S2; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa8S3; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa8S4; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa9S1; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa9S2; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa9S3; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa9S4; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa10S1; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa10S2; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa10S3; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa10S4; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa11S1; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa11S2; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa11S3; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa11S4; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa12S1; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa12S2; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa12S3; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa12S4; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa13S1; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa13S2; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa13S3; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa13S4; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa15S1; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa15S2; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa15S3; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa15S4; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa16S1; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa16S2; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa16S3; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa16S4; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa17S1; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa17S2; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa17S3; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa17S4; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa18S1; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa18S2; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa18S3; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa18S4; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa19S1; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa19S2; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa19S3; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa19S4; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa20S1; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa20S2; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa20S3; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa20S4; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa21S1; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa21S2; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa21S3; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa21S4; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa22S1; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa22S2; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa22S3; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa22S4; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa23S1; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa23S2; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa23S3; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa23S4; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa24S1; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa24S2; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa24S3; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa24S4; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa25S1; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa25S2; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa25S3; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa25S4; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa26S1; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa26S2; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa26S3; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa26S4; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa27S1; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa27S2; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa27S3; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa27S4; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa28S1; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa28S2; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa28S3; ?></td>
+        <td><?php echo  $record2[$j]->Q12Wa28S4; ?></td>
+        <td><?php echo  $record2[$j]->Q13Wa1; ?></td>
+        <td><?php echo  $record2[$j]->Q13Wa2; ?></td>
+        <td><?php echo  $record2[$j]->Q14Wa1; ?></td>
+        <td><?php echo  $record2[$j]->Q15Wa1; ?></td>
+        <td><?php echo  $record2[$j]->Q15Wa2; ?></td>
+        <td><?php echo  $record2[$j]->Q15Wa2S1; ?></td>
+        <td><?php echo  $record2[$j]->Q16Wa1; ?></td>
+        <td><?php echo  $record2[$j]->Q17Wa1; ?></td>
+        <td><?php echo  $record2[$j]->Q18Wa1; ?></td>
+        <td><?php echo  $record2[$j]->Q18Wa2S1; ?></td>
+        <td><?php echo  $record2[$j]->Q19Wa1; ?></td>
+        <td><?php echo $record2[$j]->waste_points; ?></td>
+		
+		<td><?php echo $record2[$j]->air_points + $record2[$j]->energy_points + $record2[$j]->food_points + $record2[$j]->land_points + $record2[$j]->water_points + $record2[$j]->waste_points; ?></td>
+		<td><?php 
+		  global $percentage;
+		  $total=$record2[$j]->air_points + $record2[$j]->energy_points + $record2[$j]->food_points + $record2[$j]->land_points + $record2[$j]->water_points + $record2[$j]->waste_points; 
+		  $percentage= ($total/164)*100;
+	          $percentage=number_format($percentage,1);
+		  echo $percentage;
+		 ?></td>
+		 <td> 
+		 <?php
+		  if($percentage>=70):
+		   echo "<label class='label label-success'>Green</label>";
+		  elseif($percentage>=50 && $percentage<=69.9):
+		  		   echo "<label class='label label-warning' style='background:yellow; color:black;'>Yellow</label>";
+		  elseif($percentage>=35 && $percentage<=49.9):
+		  		   echo "<label class='label label-success' style='background:orange; color:black;'>Orange</label>";
+		  elseif($percentage<=34.9):
+		  		   echo "<label class='label label-danger'>Red</label>";
+		  else:
+		    echo "Not Rated";
+		  endif;
+		  
+		?></td>
+		</tr>
+    <?php
+   $i++; }
+?>
+
+
 		 
       </tbody>
     </table>
