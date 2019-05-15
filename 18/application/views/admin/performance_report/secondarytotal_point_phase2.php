@@ -869,7 +869,12 @@
 				<td><?php echo $record1[$i]->Q6E13S2; ?></td>
 				<td><?php echo $record1[$i]->Q6E14S2; ?></td>
 				<td><?php echo $record1[$i]->Q6E15S2 ; ?></td>
-				<td><?php echo $record1[$i]->percatitaaa ; ?></td>
+				<td><?php 
+		  $total_Energy=$record1[$i]->Q6E1S2+$record1[$i]->Q6E2S2+$record1[$i]->Q6E3S2+$record1[$i]->Q6E4S2+$record1[$i]->Q6E5S2+$record1[$i]->Q6E6S2+$record1[$i]->Q6E7S2+$record1[$i]->Q6E8S2+
+		  $record1[$i]->Q6E9S2+$record1[$i]->Q6E10S2;
+		  echo number_format(($total_Energy/30)/$record1[$i]->population,2);
+		  
+		  ?></td>
 				<td><?php echo $record1[$i]->Q7E2S1; ?></td>
 				<td><?php echo $record1[$i]->Q7E2S2; ?></td>
 				<td><?php echo $record1[$i]->Q7E2S3; ?></td>
