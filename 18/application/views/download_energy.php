@@ -121,7 +121,10 @@
           <tr>
             <td>Alternate source of energy</td>
             <?php for($i=0;$i<sizeof($energySection);++$i){ ?>
-            <td><?php echo !empty($energySection[$i]->alternate_source_of_energy)?$energySection[$i]->alternate_source_of_energy:""; ?></td>
+            <td>
+              <?php $r1= getYOYComparisonYesNo($energySection[$i]->alternate_source_of_energy); ?>
+
+              <?php echo !empty($energySection[$i]->alternate_source_of_energy)?$r1:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
