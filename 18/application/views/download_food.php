@@ -95,7 +95,6 @@
     <div class="container">
       <div class="col-md-12">
         <h2 style="margin-top: 20px"><strong>Food Section, <?php echo $this->session->userdata('USERNAME');?></strong></h2>
-        <hr/>
       </div>
       <div class="col-md-12">
         <div id="grapSchoolStatus"> </div>
@@ -115,25 +114,46 @@
           <tr>
             <td>Provision of selling packaged food</td>
             <?php for($i=0;$i<sizeof($foodSection);++$i){ ?>
-            <td><?php echo !empty($foodSection[$i]->provision_of_packaged_food)?$foodSection[$i]->provision_of_packaged_food:""; ?></td>
+            <td>
+              <?php $r1=getYOYComparisonYesNo($foodSection[$i]->provision_of_packaged_food);
+            ?>
+
+              <?php echo !empty($foodSection[$i]->provision_of_packaged_food)?$r1:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>Schools distributes packaged food items as rewards</td>
             <?php for($i=0;$i<sizeof($foodSection);++$i){ ?>
-            <td><?php echo !empty($foodSection[$i]->schools_distributes_packaged_food_items_as_rewards)?$foodSection[$i]->schools_distributes_packaged_food_items_as_rewards:""; ?></td>
+            <td>
+            <?php $r2=getYOYComparisonYesNo($foodSection[$i]->schools_distributes_packaged_food_items_as_rewards);
+            ?>
+              <?php echo !empty($foodSection[$i]->schools_distributes_packaged_food_items_as_rewards)?$r2:""; ?>
+                
+              </td>
             <?php } ?>
           </tr>
           <tr>
             <td>School distribute chocolates/similar products as refreshments during schools events</td>
             <?php for($i=0;$i<sizeof($foodSection);++$i){ ?>
-            <td><?php echo !empty($foodSection[$i]->school_distribute_chocolates_similar_products_as_refreshments)?$foodSection[$i]->school_distribute_chocolates_similar_products_as_refreshments:""; ?></td>
+            <td>
+               
+               <?php $r3=getYOYComparisonYesNo($foodSection[$i]->school_distribute_chocolates_similar_products_as_refreshments);
+                ?>
+
+              <?php echo !empty($foodSection[$i]->school_distribute_chocolates_similar_products_as_refreshments)?$r3:""; ?>
+                
+
+
+              </td>
             <?php } ?>
           </tr>
           <tr>
             <td>School events sponsored by food companies/brands</td>
             <?php for($i=0;$i<sizeof($foodSection);++$i){ ?>
-            <td><?php echo !empty($foodSection[$i]->school_events_sponsored_by_food_companies_brands)?$foodSection[$i]->school_events_sponsored_by_food_companies_brands:""; ?></td>
+            <td>
+                <?php $r4=getYOYComparisonYesNo($foodSection[$i]->school_events_sponsored_by_food_companies_brands);
+                ?>
+              <?php echo !empty($foodSection[$i]->school_events_sponsored_by_food_companies_brands)?$r4:""; ?></td>
             <?php } ?>
           </tr>
         </table>
