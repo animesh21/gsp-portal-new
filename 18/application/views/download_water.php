@@ -133,13 +133,18 @@
           <tr>
             <td>Does school treat waste water?</td>
             <?php for($i=0;$i<sizeof($waterSection);++$i){ ?>
-            <td><?php echo !empty($waterSection[$i]->does_school_treat_waste_water)?$waterSection[$i]->does_school_treat_waste_water:""; ?></td>
+            <td>
+              <?php $r1=getYOYComparisonYesNo($waterSection[$i]->does_school_treat_waste_water);?>
+
+              <?php echo !empty($waterSection[$i]->does_school_treat_waste_water)?$r1:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>Do you have Rainwater harvesting (RWH) system in your school?</td>
             <?php for($i=0;$i<sizeof($waterSection);++$i){ ?>
-            <td><?php echo !empty($waterSection[$i]->do_you_have_rainwater_harvesting_rwh_system_in_your_school)?$waterSection[$i]->do_you_have_rainwater_harvesting_rwh_system_in_your_school:""; ?></td>
+            <td>
+              <?php $r2=getYOYComparisonYesNo($waterSection[$i]->do_you_have_rainwater_harvesting_rwh_system_in_your_school);?>
+              <?php echo !empty($waterSection[$i]->do_you_have_rainwater_harvesting_rwh_system_in_your_school)?$r2:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
