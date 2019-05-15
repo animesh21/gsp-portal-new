@@ -122,7 +122,7 @@
                             <label for="schoolemail" class="control-label"><span class="cube">12</span>Enter GSP School_Email:</label>
                             <div class="clearfix">&nbsp;</div>
                             <input type="text" name="schoolemail" class="text empty" id="schoolemail" tabindex="1"
-                                   placeholder="GSP Coordinator's Name" value="<?php echo ($school->schoolemail != '') ? $school->schoolemail : ""; ?>">
+                                   placeholder="GSP School's Email" value="<?php echo ($school->schoolemail != '') ? $school->schoolemail : ""; ?>">
                         </div>
                         <div class="form-group">
                             <label for="coname" class="control-label"><span class="cube">12</span>Enter GSP Coordinator's Name:</label>
@@ -149,7 +149,7 @@
                         <div class="form-group">
                             <label for="password" class="control-label"><span class="cube">15</span>Password:</label>
                             <div class="clearfix">&nbsp;</div>
-                            <input type="text" class="form-control input-lg" name="password" id="password" tabindex="1" placeholder="Pin Code"
+                            <input type="text" class="form-control input-lg" name="password" id="password" tabindex="1" placeholder="Password"
                                    value="<?php echo (!empty($user->password)) ? $user->password : ""; ?>" title="digits are allowed">
                         </div>
 			<div class="form-group">
