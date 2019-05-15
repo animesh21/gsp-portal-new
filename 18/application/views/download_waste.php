@@ -115,13 +115,19 @@
           <tr>
             <td>School segregates solid waste</td>
             <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
-            <td><?php echo !empty($wasteSection[$i]->school_segregated_solid_waste)?$wasteSection[$i]->school_segregated_solid_waste:""; ?></td>
+            <td>
+              <?php $r1=getYOYComparisonYesNo($wasteSection[$i]->school_segregated_solid_waste);?>
+
+              <?php echo !empty($wasteSection[$i]->school_segregated_solid_waste)?$r1:""; ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td>Composting facility</td>
             <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
-            <td><?php echo !empty($wasteSection[$i]->composting_facility)?$wasteSection[$i]->composting_facility:""; ?></td>
+            <td>
+              <?php $r2=getYOYComparisonYesNo($wasteSection[$i]->composting_facility);?>
+
+              <?php echo !empty($wasteSection[$i]->composting_facility)?$r2:""; ?></td>
             <?php } ?>
           </tr>          
           <tr>
@@ -211,7 +217,11 @@
 	  <tr>
             <td>Does your school reuse textbooks?</td>
             <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
-            <td><?php echo !empty($wasteSection[$i]->reuse_textbooks)?$wasteSection[$i]->reuse_textbooks:""; ?></td>
+            <td>
+
+              <?php $r3=getYOYComparisonYesNo($wasteSection[$i]->reuse_textbooks);?>
+
+              <?php echo !empty($wasteSection[$i]->reuse_textbooks)?$r3:""; ?></td>
             <?php } ?>
           </tr>
 	<tr>
@@ -224,7 +234,10 @@
     <tr>
             <td>Does your school burn waste?</td>
             <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
-            <td><?php echo !empty($wasteSection[$i]->does_your_school_burn_waste)?$wasteSection[$i]->does_your_school_burn_waste:""; ?></td>
+            <td>
+              <?php $r4=getYOYComparisonYesNo($wasteSection[$i]->does_your_school_burn_waste);?>
+
+              <?php echo !empty($wasteSection[$i]->does_your_school_burn_waste)?$r4:""; ?></td>
             <?php } ?>
           </tr>
         </table>
