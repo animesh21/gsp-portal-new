@@ -133,7 +133,12 @@
           <tr>
             <td>Use of Chemical Pesticides</td>
             <?php for($i=0;$i<sizeof($LandSection);++$i){ ?>
-            <td><?php echo !empty($LandSection[$i]->use_of_chemical_pesticides)?$LandSection[$i]->use_of_chemical_pesticides:""; ?></td>
+            <td>
+              <?php $r1=getYOYComparisonYesNo($LandSection[$i]->use_of_chemical_pesticides);?>
+
+
+
+              <?php echo !empty($LandSection[$i]->use_of_chemical_pesticides)?$r1:""; ?></td>
             <?php } ?>
           </tr>
         </table>
