@@ -77,8 +77,7 @@ header('Location: http://www.greenschoolsprogramme.org/audit/18/login/browser_ch
         <h1>Please Log In</h1>
 	<!--<h1 style="font-size: 20px; font-family: fantasy; margin-left: 42px; position: relative; color: #e86549; 
  text-align: center; border: none; padding: 0px;">Extended Submission Deadline November 18, 2018 </h1>-->
-        <p>The <a href="http://www.greenschoolsprogramme.org/" target="_blank">Green Schools Programme</a> audit is only open to registered schools. If you have already registered, please log in using your
-          registered email id and password you would have received via email. </p>
+        <p>The <a href="http://www.greenschoolsprogramme.org/" target="_blank">Green Schools Programme</a> audit is only open to registered schools. If you have already registered, please log in using your registered email id and password you would have received via email. Note: GSP Audit will reopen in July 2019. </p>
         <p>If you would like to register, please visit our <a href="<?php echo base_url('register') ?>"
                                                                               target="_blank">registration page.</a></p>
         <!--<p>GSP Audit 2016 Questions <a href='http://www.greenschoolsprogramme.org/GSP-Audit2016-Questions.pdf' target='_blank'>click here</a></p>
