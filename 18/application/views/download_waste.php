@@ -196,24 +196,31 @@
             <td><?php echo !empty($wasteSection[$i]->e_waste_recycled)?$wasteSection[$i]->e_waste_recycled:""; ?></td>
             <?php } ?>
           </tr>
-		  <tr>
+		
+	  <tr>
             <td>Biomedical waste recycled (kg/month)</td>
-            <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
-            <td><?php echo !empty($wasteSection[$i]->biomedical_waste_recycled)?$wasteSection[$i]->biomedical_waste_recycled:""; ?></td>
+            <?php for($i=0;$i<sizeof($wasteSection);$i++){ ?>
+            <td>              
+              <?php echo $wasteSection[$i]->biomedical_waste_recycled!='' ?$wasteSection[$i]->biomedical_waste_recycled:""; ?></td>
             <?php } ?>
           </tr>
-		  <tr>
+	 <tr>
             <td>Sanitary Waste recycled (kg/month)</td>
-            <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
-            <td><?php echo !empty($wasteSection[$i]->sanitary_waste_recycled)?$wasteSection[$i]->sanitary_waste_recycled:""; ?></td>
+            <?php for($i=0;$i<sizeof($wasteSection);$i++){ ?>
+            <td>              
+              <?php echo $wasteSection[$i]->sanitary_waste_recycled!='' ?$wasteSection[$i]->sanitary_waste_recycled:""; ?></td>
             <?php } ?>
           </tr>
-	   <tr>
+		
+	 <tr>
             <td>C&D waste recycled (kg/month)</td>
-            <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
-            <td><?php echo !empty($wasteSection[$i]->cd_waste_recycled)?$wasteSection[$i]->cd_waste_recycled:""; ?></td>
+            <?php for($i=0;$i<sizeof($wasteSection);$i++){ ?>
+            <td>              
+              <?php echo $wasteSection[$i]->cd_waste_recycled!='' ?$wasteSection[$i]->cd_waste_recycled:""; ?></td>
             <?php } ?>
           </tr>
+	  
+		
 	  <tr>
             <td>Does your school reuse textbooks?</td>
             <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
