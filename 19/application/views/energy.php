@@ -591,7 +591,7 @@
 <div class="form-group">
   <label class="control-label"><span class="cube">3</span>Provide the details of total energy consumed by
   the school: <a class="tt" data-tooltip="Type of use/purpose (mention the type of use in the above table):
-                                   1. Lighting 2. Housekeeping 3. Cooking 4. Transport 5. Teaching/ learning aid. If your school does not use a particular source of energy, enter 0."><span
+                                   1. Lighting 2. Housekeeping 3. Cooking 4. Transport 5. Teaching/ learning aid  6. Burning/Incineration of Waste. If your school does not use a particular source of energy, enter 0."><span
                             class="badge">?</span></a></label>
   <div class="form-group-1 row">
     <div class="col-xs-3">
