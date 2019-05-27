@@ -49,7 +49,7 @@
 </div>
 <div class="clear-fix">&nbsp;</div>
 <div class="form-group"> Highest level of Grade/ Class:
-  <select name="Q1G2" id="Q1G2" onChange="ComputePrimary()" class="form-control"
+  <select name="Q1G2" id="Q1G2" onChange="ComputePrimary(),hello()" class="form-control"
                     style="display:inline; width:10%; margin-left:7px;">
     <option value="<?php echo set_value('Q1G2', 1); ?>" <?php if (isset($data['Q1G2'])) echo $data['Q1G2'] == 1 ? "selected" : ""; ?>> 1 </option>
     <option value="<?php echo set_value('Q1G2', 2); ?>" <?php if (isset($data['Q1G2'])) echo $data['Q1G2'] == 2 ? "selected" : ""; ?>> 2 </option>
