@@ -3207,7 +3207,7 @@ $(document).ready(function(){
             }
 
         var radioCheck = $("input[name=Q2S1]:checked").val();
-        if(radioCheck != 1 && radioCheck != 2 && radioCheck != 3)
+        if(radioCheck != 1 && radioCheck != 2 && radioCheck != 3 && radioCheck != 4)
         {
             alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 16");
             $('input[name=Q2S1]').focus();
