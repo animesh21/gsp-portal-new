@@ -295,6 +295,14 @@ function checkUpdate(){
                            value="<?php echo set_value('Q2S1', 3) ?>" <?php if (isset($data['Q2S1'])) echo $data['Q2S1'] == 3 ? "checked" : "" ?>>
         Both </label>
       </div>
+	    
+     <div class="radio">
+        <label>
+        <input type="radio" name="Q2S1"
+                           value="<?php echo set_value('Q2S1', 4) ?>" <?php if (isset($data['Q2S1'])) echo $data['Q2S1'] == 4 ? "checked" : "" ?>>
+        Not Applicable </label>
+     </div>    
+	    
     </div>
     <div class="form-group">
       <label for="username" class="control-label"><span class="cube">17</span> School Level:</label>
