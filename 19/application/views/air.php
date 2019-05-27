@@ -474,7 +474,7 @@
       <div class="clearfix">&nbsp;</div>
       <div class="form-group">
         <label>
-        <h6>Task 2: Are the rooms in your school well-ventilated.?</h6>
+        <h6>Task 2: Are the rooms in your school well-ventilated ?</h6>
         </label>
         <br>
         1. For this exercise, classrooms that are occupied by students regularly should be considered. Do not
@@ -503,7 +503,7 @@
       </div>
     </div>
     <div class="form-group" id="Ratio">
-      <label class="control-label"><span class="cube">2</span>To calculate the Window-floor ratio of classrooms in
+      <label class="control-label"><span class="cube">2</span>To calculate the <b style="color: #000; font-weight: 900;">Window-floor ratio (WFRop) </b> of classrooms in
       your school, please fill the table below:</label>
       <div class="form-group1 row">
         <div class="col-xs-3">
@@ -513,7 +513,7 @@
           <label>X = Area of floor (LxB) (square meters)</label>
         </div>
         <div class="col-xs-3">
-          <label>Y = Sum of area of openings ∑ (LxH)</label>
+          <label>Y = <b style="color: #000; font-weight: 900;">Area of openable windows/ventilators </b> ∑ (LxH)</label>
         </div>
         <div class="col-xs-3">
           <label>Percentage of the floor area being ventilated (Y/X x 100)</label>
@@ -1439,6 +1439,8 @@ else
     team should ask individual class monitors to record the commuting practices of his/her classmates and the
     teachers, and forward the data to the audit team. After completing the survey, provide the compiled information
     below.</p>
+	
+	<p>If the students, teachers and other staff are using more than one mode of transport, the mode of transport used to cover the maximum of the total distance should be considered. Also consider the transport mode used the most times in a month.</p>
 </div>
 <div class="form-group">
   <label class="control-label"><span class="cube">4</span>Please specify how many members of the
@@ -1956,7 +1958,7 @@ if (isset($data['Q9A1']))
     <?php } ?>
   </tbody>
 </table>
-<div class="form-group" id="lab"
+<!-- <div class="form-group" id="lab"
 
     <?php
     if (isset($data['Q9A1']))
@@ -1988,7 +1990,7 @@ if (isset($data['Q9A1']))
       No</label>
     </li>
   </ul>
-</div>
+</div> -->
 <div class="form-group" id="WastePolicy">
   <label class="control-label">
   <h6>Please upload supporting documents:</h6>
