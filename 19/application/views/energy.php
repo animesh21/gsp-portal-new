@@ -491,6 +491,8 @@
       fuel used.</p>
     <p><strong>LPG: </strong>Ask the mess/canteen staff, how many cylinders are used in one month on
       an average. Remember each gas cylinder generally weighs 14.2 kg.</p>
+	  
+	  <p><strong>PNG: </strong>If the school has a PNG connection, ask the mess/canteen staff for a copy of the PNG bill, which is usually raise once or twice in a quarter.</p>
   </div>
   </label>
   <div class="answer clearfix"></div>
@@ -607,7 +609,7 @@
   </div>
   <div class="form-group1 row">
     <div class="col-xs-3">
-      <label> Electricity from the board (kwh) </label>
+      <label> Electricity from Discom (kwh) </label>
     </div>
     <div class="col-xs-3">
       <?php
