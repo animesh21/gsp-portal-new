@@ -342,6 +342,7 @@ function checkUpdate(){
 		rules:{
 		      udise:{
 				  required:true,
+			          number:true,
 			  },
 			  Q1S1:{
 				  required:true,
