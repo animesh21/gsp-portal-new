@@ -94,7 +94,7 @@
     <label class="radio">
     <input type="radio" class="radio" onClick="StateValidation(1)" name="Q3G1"
                            value="<?php echo set_value('Q3G1', 1) ?>" <?php if (isset($data['Q3G1'])) echo $data['Q3G1'] == 1 ? "checked" : "" ?>>
-    State board of education (please specify your state) </label>
+    State board of education </label>
   </div>
   <div class="radio">
     <label>
@@ -297,7 +297,9 @@
       <div class="clearfix">&nbsp;</div>
       <div class="form-group">
         <label><span class="cube">6</span>Please select the month(s) in which the GSP audit was carried
-        out?</label>
+        out? <a class="tt"
+                                 data-tooltip="For example, if you conduct the audit from 15 June to 15 September, select, June, July August and September"><span
+                            class="badge">?</span></a></label>
         <ul class="list-inline">
           <li style="width:200px;">Months</li>
           <li>
