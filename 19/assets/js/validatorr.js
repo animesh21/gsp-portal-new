@@ -2811,7 +2811,7 @@ function details2()
 
     if(total_bus > current_bus)
     {
-        alert("No. is greater than entered in question.")
+        alert("The number is greater than the number entered in question 3(a)")
         $('#S3D1').val(0);
         $('#S3P1').val(0);
         $('#S3L1').val(0);
@@ -2823,7 +2823,7 @@ function details2()
     }
     if(total_cars > current_car)
     {
-        alert("No. is greater than entered in question.")
+        alert("The number is greater than the number entered in question 3(a)")
         $('#S3D2').val(0);
         $('#S3P2').val(0);
         $('#S3L2').val(0);
@@ -2836,7 +2836,7 @@ function details2()
     }
     if(total_vans > current_vans)
     {
-        alert("No. is greater than entered in question.")
+        alert("The number is greater than the number entered in question 3(a)")
         $('#S3D3').val(0);
         $('#S3P3').val(0);
         $('#S3L3').val(0);
@@ -2848,7 +2848,7 @@ function details2()
     }
     if(total_other > current_others)
     {
-        alert("No. is greater than entered in question.")
+        alert("The number is greater than the number entered in question 3(a)")
         $('#S3D4').val(0);
         $('#S3P4').val(0);
         $('#S3L4').val(0);
