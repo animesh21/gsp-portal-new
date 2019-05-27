@@ -531,3 +531,85 @@
           });
 	</script>
 <!---<script src="http://jwpsrv.com/library/A7o4ns39EeS3agp+lcGdIw.js"></script>-->
+	
+	
+	<script type="text/javascript">
+  
+ function hello(){
+  var selectedValue="<?php echo getFiled("Q10G1",$this->session->userdata('USER_ID')); ?>";
+
+  var matchvalue = $('#Q1G2').val();
+  
+      if(selectedValue == '1')
+      {
+             
+            if(matchvalue=='1' || matchvalue=='2' || matchvalue=='3' || matchvalue=='4' || matchvalue=='5') 
+            {
+                
+
+            }else {
+               alert('You select your school a primary school');
+                  location.reload();
+
+            }
+
+      }
+
+
+      if(selectedValue == '2')
+      {
+             
+            if(matchvalue=='6' || matchvalue=='7' || matchvalue=='8') 
+            {
+                
+
+            }else {
+               alert('You select your school an elementary school');
+                  location.reload();
+
+            }
+
+      }
+
+
+      if(selectedValue == '3')
+      {
+             
+            if(matchvalue=='9' || matchvalue=='10') 
+            {
+                
+
+            }else {
+             alert('You select your school a secondary school');
+                  location.reload();
+
+            }
+
+      }
+
+
+      if(selectedValue == '4')
+      {
+             
+            if(matchvalue=='11' || matchvalue=='12') 
+            {
+                
+
+            }else {
+             alert('You select your school a higher secondary school');
+                  location.reload();
+
+            }
+
+      }
+         
+
+        
+ }
+      
+
+
+</script>
+	
+	
+	
