@@ -1069,17 +1069,17 @@ echo form_input('Q6E14S3', $data['Q6E14S3'], $attribs);
     <div class="col-xs-3">
       <label>Total</label>
     </div>
-    <div class="col-xs-3">
+    <!-- <div class="col-xs-3">
       <input class="form-control space-textbox" id="Q6E15S1" type="number" min="0" name="Q6E15S1"
                                placeholder="<?php if (isset($data['Q6E15S1'])) echo $data['Q6E15S1'];
 else echo "0"; ?>"
                                value="<?php echo set_value('Q6E15S1'); ?>" readonly/>
-    </div>
+    </div> -->
     <div class="col-xs-3">
       <input class="form-control space-textbox" id="Q6E15S2" type="number" min="0" name="Q6E15S2"
                                placeholder="<?php if (isset($data['Q6E15S2'])) echo $data['Q6E15S2'];
 else echo "0"; ?>"
-                               value="<?php echo set_value('Q6E15S2'); ?>" readonly/>
+                               value="<?php echo set_value('Q6E15S2'); ?>" style="margin-left: 247px;" readonly/>
     </div>
     <div class="col-xs-3"></div>
   </div>
