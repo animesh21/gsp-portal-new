@@ -1911,6 +1911,30 @@ nyanBtn.addEventListener('click', function(){
 });
 
 </script>
+	
+	
+	
+	<script type="text/javascript">
+  
+ $("input[name='Q9E1S5']").click(function(){
+
+ if($("input[name='Q6E13S1']").val() <= 0){
+
+  alert('You Select Biogas as 0 in Q3');
+
+  $("input[name='Q9E1S5']").prop("checked", false);
+
+
+
+ }
+ 
+ });
+
+
+</script>
+	
+	
+	
 <style>
              #btn{ 
 		background: rgb(232, 101, 73);
