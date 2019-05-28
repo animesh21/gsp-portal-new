@@ -202,6 +202,36 @@ style="font-weight:bold"><?php echo $this->session->userdata('USERNAME'); ?></sp
     text-shadow: 1px 1px 1px #000;
 }
 
+#Q5F2-error
+{
+      color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -50px !important;
+    position: absolute;
+    margin-left: 380px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q7F1-error
+{
+    color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -56px !important;
+    position: absolute;
+    margin-left: 416px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q8F1-error
+{
+    color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -56px !important;
+    position: absolute;
+    margin-left: 435px;
+    text-shadow: 1px 1px 1px #000;
+}
+
 #Q10F1-error
 {
 	color: #fb4f2a !important;
@@ -242,6 +272,16 @@ style="font-weight:bold"><?php echo $this->session->userdata('USERNAME'); ?></sp
     margin-left: 683px;
     text-shadow: 1px 1px 1px #000;
 }
+
+
+#food2019_1-error{
+  color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -36px !important;
+    position: absolute;
+    margin-left: 664px;
+    text-shadow: 1px 1px 1px #000;
+  }
 	</style>
 
 
@@ -1971,6 +2011,28 @@ if ($data['Q8F1'] == 'Y') { */
                       promote?</h6>
                     </label>
                   </div>
+			
+			
+	        <div class="form-group">
+                    <label class="control-label"><span
+																				class="cube">6</span> Does your school allow the students to bring packaged food items (from home) for lunch? </label>
+                    <ul class="list-inline">
+                      <li>
+                        <label class="radio-inline text-gray">
+                        <input type="radio" name="food2019_1" value="<?php echo set_value('food2019_1', 'Y') ?>" <?php if (isset($data['Q9F1'])) echo $data['food2019_1'] == 'Y' ? "checked" : "" ?>>
+                        Yes </label>
+                      </li>
+                      <li>
+                        <label class="radio-inline text-gray">
+                        <input type="radio" name="food2019_1" id="food2019_1" value="<?php echo set_value('food2019_1', 'N') ?>" <?php if (isset($data['food2019_1'])) echo $data['food2019_1'] == 'N' ? "checked" : "" ?>/>
+                        No </label>
+                      </li>
+                    </ul>
+                  </div>		
+			
+			
+			
+			
                   <div class="form-group">
                     <label class="control-label"><span
 																				class="cube">6</span> Does the
@@ -2595,6 +2657,9 @@ echo 'style="display:none;"';
 			  Q5F1:{
 				  required:true,
 			  },
+                            Q5F2:{
+                                required:true,
+                              },
 			  Q5F1S1:{
 				  required:true,
 			  },
@@ -2747,7 +2812,7 @@ echo 'style="display:none;"';
 			  },
 			  Q11F3:{
 				  required:true,
-			  },
+			  },   
 			  Q12F1:{
 				  required:true,
 			  },
@@ -2798,7 +2863,10 @@ echo 'style="display:none;"';
 			  },
 			  Q13F2:{
 				  required:true,
-			  } 
+			  },
+                         food2019_1:{
+                                 required:true,
+                           } 
 		}
        
 	});
