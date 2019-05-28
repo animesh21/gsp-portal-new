@@ -1429,11 +1429,11 @@ if (isset($data['Q9E1']))
               <input type="checkbox" name="Q9E1S5"
                                                    value="<?php echo set_value('Q9E1S5', 1); ?>" <?php if (isset($data['Q9E1S5'])) echo set_checkbox('Q9E1S5', '1', true); ?>/>
             </li>
-            <li>
+           <!--  <li>
               <label>Combination of solar and wind</label>
               <input type="checkbox" name="Q9E1S4" id="Combination"
-                                                   value="<?php echo set_value('Q9E1S4', 1); ?>" <?php if (isset($data['Q9E1S4'])) echo set_checkbox('Q9E1S4', '1', true); ?>/>
-            </li>
+                                                   value="<?php// echo set_value('Q9E1S4', 1); ?>" <?php// if (isset($data['Q9E1S4'])) echo set_checkbox('Q9E1S4', '1', true); ?>/>
+            </li> -->
           </ul>
         </div>
       </div>
