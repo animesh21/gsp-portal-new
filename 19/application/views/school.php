@@ -274,7 +274,7 @@ function checkUpdate(){
     <br>
     <div class="form-group">
       <label for="username" class="control-label"><span class="cube">16</span>How many shifts does your school
-      have <a class="tt" data-tooltip="Not applicable in the case of residential school"><span
+      have <a class="tt" data-tooltip="Select Not applicable in the case of residential school"><span
                             class="badge">?</span></a></label>
       <div class="radio">
         <label>
