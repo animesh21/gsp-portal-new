@@ -6,291 +6,303 @@
         list-style-type: none !important;
     }
 
-	#Q8W1S1-error
-	{
-		color: #fb4f2a !important;
+
+    #Q19W11-error{
+
+      color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -45px !important;
+    position: absolute;
+    margin-left: 322px;
+    text-shadow: 1px 1px 1px #000;
+
+    }
+
+  #Q8W1S1-error
+  {
+    color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -4px !important;
     position: absolute;
     margin-left: -210px;
     text-shadow: 1px 1px 1px #000;
-	}
-	
-	#Q8W1S2-error
-	{
-		color: #fb4f2a !important;
+  }
+  
+  #Q8W1S2-error
+  {
+    color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -4px !important;
     position: absolute;
     margin-left: -210px;
     text-shadow: 1px 1px 1px #000;
-	}
-	
-	#Q8W1S3-error
-	{
-		color: #fb4f2a !important;
+  }
+  
+  #Q8W1S3-error
+  {
+    color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -4px !important;
     position: absolute;
     margin-left: -210px;
     text-shadow: 1px 1px 1px #000;
-	}
-	
-	#Q8W1S4-error
-	{
-		color: #fb4f2a !important;
+  }
+  
+  #Q8W1S4-error
+  {
+    color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -4px !important;
     position: absolute;
     margin-left: -210px;
     text-shadow: 1px 1px 1px #000;
-	}
-	
-	#Q8W1S5-error
-	{
-		color: #fb4f2a !important;
+  }
+  
+  #Q8W1S5-error
+  {
+    color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -4px !important;
     position: absolute;
     margin-left: -210px;
     text-shadow: 1px 1px 1px #000;
-	}
-	
-	#Q8W1S6-error
-	{
-		color: #fb4f2a !important;
+  }
+  
+  #Q8W1S6-error
+  {
+    color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -4px !important;
     position: absolute;
     margin-left: -210px;
     text-shadow: 1px 1px 1px #000;
-	}
-	
-	#Q8W1S7-error
-	{
-		color: #fb4f2a !important;
+  }
+  
+  #Q8W1S7-error
+  {
+    color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -4px !important;
     position: absolute;
     margin-left: -210px;
     text-shadow: 1px 1px 1px #000;
-	}
-	
-	#Q8W1S9-error
-	{
-		color: #fb4f2a !important;
+  }
+  
+  #Q8W1S9-error
+  {
+    color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -16px !important;
     position: absolute;
     margin-left: -210px;
     text-shadow: 1px 1px 1px #000;
-	}
-	
-	#Q8W1S10-error
-	{
-		color: #fb4f2a !important;
+  }
+  
+  #Q8W1S10-error
+  {
+    color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -4px !important;
     position: absolute;
     margin-left: -210px;
     text-shadow: 1px 1px 1px #000;
-	}
-	
-	#Q8W1S11-error
-	{
-		color: #fb4f2a !important;
+  }
+  
+  #Q8W1S11-error
+  {
+    color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -4px !important;
     position: absolute;
     margin-left: -210px;
     text-shadow: 1px 1px 1px #000;
-	}
-	
-	#Q8W1S12-error
-	{
-		color: #fb4f2a !important;
+  }
+  
+  #Q8W1S12-error
+  {
+    color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: 13px !important;
     position: absolute;
     margin-left: -210px;
     text-shadow: 1px 1px 1px #000;
-	}
-	
-	#Q8W3S1-error
-	{
-		color: #fb4f2a !important;
+  }
+  
+  #Q8W3S1-error
+  {
+    color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -4px !important;
     position: absolute;
     margin-left: -210px;
     text-shadow: 1px 1px 1px #000;
-	}
-	
-	#Q8W3S2-error
-	{
-		color: #fb4f2a !important;
+  }
+  
+  #Q8W3S2-error
+  {
+    color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -4px !important;
     position: absolute;
     margin-left: -210px;
     text-shadow: 1px 1px 1px #000;
-	}
-	
-	#Q8W3S3-error
-	{
-		color: #fb4f2a !important;
+  }
+  
+  #Q8W3S3-error
+  {
+    color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -4px !important;
     position: absolute;
     margin-left: -210px;
     text-shadow: 1px 1px 1px #000;
-	}
-	
-	#Q8W3S4-error
-	{
-		color: #fb4f2a !important;
+  }
+  
+  #Q8W3S4-error
+  {
+    color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -4px !important;
     position: absolute;
     margin-left: -210px;
     text-shadow: 1px 1px 1px #000;
-	}
-	
-	#Q8W3S5-error
-	{
-		color: #fb4f2a !important;
+  }
+  
+  #Q8W3S5-error
+  {
+    color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -4px !important;
     position: absolute;
     margin-left: -210px;
     text-shadow: 1px 1px 1px #000;
-	}
-	
-	#Q8W3S6-error
-	{
-		color: #fb4f2a !important;
+  }
+  
+  #Q8W3S6-error
+  {
+    color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -17px !important;
     position: absolute;
     margin-left: -210px;
     text-shadow: 1px 1px 1px #000;
-	}
-	
-	#Q8W3S7-error
-	{
-		color: #fb4f2a !important;
+  }
+  
+  #Q8W3S7-error
+  {
+    color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -4px !important;
     position: absolute;
     margin-left: -210px;
     text-shadow: 1px 1px 1px #000;
-	}
-	
-	#Q8W3S8-error
-	{
-		color: #fb4f2a !important;
+  }
+  
+  #Q8W3S8-error
+  {
+    color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -4px !important;
     position: absolute;
     margin-left: -210px;
     text-shadow: 1px 1px 1px #000;
-	}
-	
-	#Q7W1-error
-	{
-		color: #fb4f2a !important;
+  }
+  
+  #Q7W1-error
+  {
+    color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -44px !important;
     position: absolute;
     margin-left: 329px;
     text-shadow: 1px 1px 1px #000;
-	}
-	
-	#Q16W1-error
-	{
-		color: #fb4f2a !important;
+  }
+  
+  #Q16W1-error
+  {
+    color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -46px !important;
     position: absolute;
     margin-left: 530px;
     text-shadow: 1px 1px 1px #000;
-	}
-	
-	#Q19W12-error
-	{
-		color: #fb4f2a !important;
+  }
+  
+  #Q19W12-error
+  {
+    color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -46px !important;
     position: absolute;
     margin-left: 421px;
     text-shadow: 1px 1px 1px #000;
-	}
-	
-	#Q21W1-error
-	{
-		color: #fb4f2a !important;
+  }
+  
+  #Q21W1-error
+  {
+    color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -44px !important;
     position: absolute;
     margin-left: 254px;
     text-shadow: 1px 1px 1px #000;
-	}
-	#Q18W1-error
-	{
-		color: #fb4f2a !important;
+  }
+  #Q18W1-error
+  {
+    color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -44px !important;
     position: absolute;
     margin-left: 213px;
     text-shadow: 1px 1px 1px #000;
-	}
-	#Q18W2-error
-	{
-		color: #fb4f2a !important;
+  }
+  #Q18W2-error
+  {
+    color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -38px !important;
     position: absolute;
     margin-left: 213px;
     text-shadow: 1px 1px 1px #000;
-	}
-	
-	#Q19W1-error
-	{
-		color: #fb4f2a !important;
+  }
+  
+  #Q19W1-error
+  {
+    color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -45px !important;
     position: absolute;
     margin-left: 292px;
     text-shadow: 1px 1px 1px #000;
-	}
-	
-	#Q19W15-error
-	{
-		color: #fb4f2a !important;
+  }
+  
+  #Q19W15-error
+  {
+    color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -45px !important;
     position: absolute;
     margin-left: 646px;
     text-shadow: 1px 1px 1px #000;
-	}
-	
-	#Q20W1-error
-	{
-		color: #fb4f2a !important;
+  }
+  
+  #Q20W1-error
+  {
+    color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -45px !important;
     position: absolute;
     margin-left: 392px;
     text-shadow: 1px 1px 1px #000;
-	}
-	
+  }
+  
     #Q8W2S4-error{
                         color: #fb4f2a !important;
-					font-size: 18px !important;
-					margin-top: -36px !important;
-					position: absolute;
-					margin-left: 380px;
-					    text-shadow: 1px 1px 1px #000;
+          font-size: 18px !important;
+          margin-top: -36px !important;
+          position: absolute;
+          margin-left: 380px;
+              text-shadow: 1px 1px 1px #000;
                 
         }
 
@@ -301,7 +313,7 @@
     margin-top: -36px !important;
     position: absolute;
     margin-left: 762px;
-	 text-shadow: 1px 1px 1px #000;
+   text-shadow: 1px 1px 1px #000;
 
 }
 
@@ -312,13 +324,13 @@
     margin-top: -36px !important;
     position: absolute;
     margin-left: 278px;
-	 text-shadow: 1px 1px 1px #000;
+   text-shadow: 1px 1px 1px #000;
 
 }
 
 #Q7W2-error
 {
-	color: #fb4f2a !important;
+  color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -39px !important;
     position: absolute;
@@ -328,7 +340,7 @@
 
 #Q8W2S1S1-error
 {
-	color: #fb4f2a !important;
+  color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -39px !important;
     position: absolute;
@@ -343,19 +355,19 @@
     margin-top: -36px !important;
     position: absolute;
     margin-left: 208px;
-	 text-shadow: 1px 1px 1px #000;
+   text-shadow: 1px 1px 1px #000;
 
 }
 
 #Q8W2S5-error
 {
-	
+  
       color: #fb4f2a !important;
   font-size: 18px !important;
     margin-top: -36px !important;
     position: absolute;
     margin-left: 302px;
-	 text-shadow: 1px 1px 1px #000;
+   text-shadow: 1px 1px 1px #000;
 
 }
 
@@ -367,7 +379,7 @@
     margin-top: -36px !important;
     position: absolute;
     margin-left: 611px;
-	 text-shadow: 1px 1px 1px #000;
+   text-shadow: 1px 1px 1px #000;
 
 }
 
@@ -378,7 +390,7 @@
     margin-top: -36px !important;
     position: absolute;
     margin-left: 563px;
-	 text-shadow: 1px 1px 1px #000;
+   text-shadow: 1px 1px 1px #000;
 
 }
 
@@ -389,7 +401,7 @@
     margin-top: -36px !important;
     position: absolute;
     margin-left: 546px;
-	 text-shadow: 1px 1px 1px #000;
+   text-shadow: 1px 1px 1px #000;
 
 }
 
@@ -400,7 +412,7 @@
     margin-top: -43px !important;
     position: absolute;
     margin-left: 272px;
-	 text-shadow: 1px 1px 1px #000;
+   text-shadow: 1px 1px 1px #000;
 
 }
 
@@ -411,7 +423,7 @@
     margin-top: -43px !important;
     position: absolute;
     margin-left: 605px;
-		 text-shadow: 1px 1px 1px #000;
+     text-shadow: 1px 1px 1px #000;
 
 
 }
@@ -423,7 +435,7 @@
     margin-top: -43px !important;
     position: absolute;
     margin-left: 405px;
-	 text-shadow: 1px 1px 1px #000;
+   text-shadow: 1px 1px 1px #000;
 }
 
 #Q8W2S2-error
@@ -433,7 +445,7 @@
     margin-top: -43px !important;
     position: absolute;
     margin-left: 344px;
-	 text-shadow: 1px 1px 1px #000;
+   text-shadow: 1px 1px 1px #000;
 }
 
 
@@ -444,7 +456,7 @@
     margin-top: -43px !important;
     position: absolute;
     margin-left: 494px;
-	 text-shadow: 1px 1px 1px #000;
+   text-shadow: 1px 1px 1px #000;
 }
 
 #Q8W2S2S2-error
@@ -454,7 +466,7 @@
     margin-top: -43px !important;
     position: absolute;
     margin-left: 404px;
-	 text-shadow: 1px 1px 1px #000;
+   text-shadow: 1px 1px 1px #000;
 }
 
 #Q8W2S2S7-error
@@ -464,7 +476,7 @@
     margin-top: -43px !important;
     position: absolute;
     margin-left: 468px;
-	 text-shadow: 1px 1px 1px #000;
+   text-shadow: 1px 1px 1px #000;
 }
 
 #Q8W2S11-error
@@ -474,7 +486,7 @@
     margin-top: -37px !important;
     position: absolute;
     margin-left: 378px;
-	 text-shadow: 1px 1px 1px #000;
+   text-shadow: 1px 1px 1px #000;
 }
 
 #Q8W2S12-error
@@ -484,12 +496,12 @@
     margin-top: -44px !important;
     position: absolute;
     margin-left: 378px;
-	 text-shadow: 1px 1px 1px #000;
+   text-shadow: 1px 1px 1px #000;
 }
 
 #Q8W2S4S1-error
 {
-	color: #fb4f2a !important;
+  color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -38px !important;
     position: absolute;
@@ -1500,7 +1512,7 @@ To understand water, it is important to know the source of water in your school 
 <table width="100%" class="question uploadedfiles">
   <thead>
     <tr>
-      <!-- <th>Image</th>	    -->
+      <!-- <th>Image</th>     -->
       <th>File name</th>
       <th>Delete</th>
       <th>Download</th>
@@ -2412,7 +2424,7 @@ value="<?php if (isset($data['Q8W2S2S8'])) echo $data['Q8W2S2S8']; ?>" placehold
   <table width="100%" class="question uploadedfiles">
     <thead>
       <tr>
-        <!--<th>Image</th>	    -->
+        <!--<th>Image</th>      -->
         <th>File name</th>
         <th>Delete</th>
         <th>Download</th>
@@ -3257,7 +3269,7 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
     <table width="100%" class="question uploadedfiles">
       <thead>
         <tr>
-          <!--<th>Image</th>	  -->
+          <!--<th>Image</th>    -->
           <th>File name</th>
           <th>Delete</th>
           <th>Download</th>
@@ -3306,7 +3318,7 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
     <table width="100%" class="question uploadedfiles">
       <thead>
         <tr>
-          <!--<th>Image</th>	 -->
+          <!--<th>Image</th>   -->
           <th>File name</th>
           <th>Delete</th>
           <th>Download</th>
@@ -3411,275 +3423,278 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
 .fileuploader.min.js"></script>
 <!--                                        Ends Here...-->
 <script>
-	jQuery(document).ready(function(){
-	
-	jQuery('#water').validate({
-		rules:{
-		      Q8W2:{
-				  required:true,
-			  },
-			  Q8W2S1:{
-				  required:true,
-			  },
-			  Q8W2S1S1:{
-				  required:true,
-			  },
-			  Q8W2S6:{
-				  required:true,
-			  },
-			  Q8W2S2:{
-				  required:true,
-			  },
-			  Q8W2S4:{
-				  required:true,
-			  },
-			  Q8W2S5:{
-				  required:true,
-				  
-			  },
-			  Q8W2S61:{
-				  required:true,
-				 
-			  },
-			  Q8W2S8:{
-				  required:true,
-			  },
-			   Q8W2S10:{
-				  required:true,
-			  },
-			   Q8W2S13:{
-				  required:true,
-			  },
-			   Q8W2S2S2:{
-				  required:true,
-			  },
-			  Q8W2S2S7:{
-				  required:true,
-			  },
-			   Q8W2S2S10:{
-				  required:true,
-			  },
-			   Q8W2S2S3:{
-				  required:true,
-			  },
-			   Q8W2S2S4:{
-				  required:true,
-			  },
-			   Q8W2S2S5:{
-				  required:true,
-			  },
-			   Q8W2S2S6:{
-				  required:true,
-			  },
-			   Q8W2S2S8:{
-				  required:true,
-			  },
-			   Q8W2S4S1:{
-				  required:true,
-			  },
-			  Q8W2S7:{
-				  required:true,
-			  },
-			  Q8W2S9:{
-				  required:true,
-			  },
-			  Q8W2S11:{
-				  required:true,
-			  },
-			  Q8W2S12:{
-				  required:true,
-			  },
-			  Q1W1S1:{
-				  required:true,
-			  },
-			  Q1W1S3:{
-				  required:true,
-			  },
-			  Q1W1S2:{
-				  required:true,
-			  },
-			  Q2W1S1:{
-				  required:true,
-			  },
-			  Q2W1S3:{
-				  required:true,
-			  },
-			  Q2W1S2:{
-				  required:true,
-			  },
-			  Q3W1S1:{
-				  required:true,
-			  },
-			  Q3W1S2:{
-				  required:true,
-			  },
-			  Q3W1S3:{
-				  required:true,
-			  },
-			  Q4W1:{
-				  required:true,
-			  },
-			  Q4W2:{
-				  required:true,
-			  },
-			  Q4W3:{
-				  required:true,
-			  },
-			  Q4W4:{
-				  required:true,
-			  },
-			  Q4W5:{
-				  required:true,
-			  },
-			  Q4W6:{
-				  required:true,
-			  },
-			  Q4W7:{
-				  required:true,
-			  },
-			  Q4W8:{
-				  required:true,
-			  },
-			  Q4W9:{
-				  required:true,
-			  },
-			  Q4W10:{
-				  required:true,
-			  },
-			  Q7W1:{
-				  required:true,
-			  },
-			  Q8W1S1:{
-				  required:true,
-			  },
-			  Q8W1S2:{
-				  required:true,
-			  },
-			  Q8W1S3:{
-				  required:true,
-			  },
-			  Q8W1S4:{
-				  required:true,
-			  },
-			  Q8W1S5:{
-				  required:true,
-			  },
-			  Q8W1S6:{
-				  required:true,
-			  },
-			  Q8W1S7:{
-				  required:true,
-			  },
-			  Q8W1S9:{
-				  required:true,
-			  },
-			  Q8W1S10:{
-				  required:true,
-			  },
-			  Q8W1S11:{
-				  required:true,
-			  },
-			  Q8W1S12:{
-				  required:true,
-			  },
-			  Q8W3S1:{
-				  required:true,
-			  },
-			  Q8W3S2:{
-				  required:true,
-			  },
-			  Q8W3S3:{
-				  required:true,
-			  },
-			  Q8W3S4:{
-				  required:true,
-			  },
-			  Q8W3S5:{
-				  required:true,
-			  },
-			  Q8W3S6:{
-				  required:true,
-			  },
-			  Q8W3S7:{
-				  required:true,
-			  },
-			  Q8W3S8:{
-				  required:true,
-			  },
-			  Q9W1:{
-				  required:true,
-			  },
-			  Q10W1:{
-				  required:true,
-			  },
-			  Q11W1:{
-				  required:true,
-			  },
-			   Q13W1S1:{
-				  required:true,
-			  },
-			   Q13W1S2:{
-				  required:true,
-			  },
-			   Q13W1S3:{
-				  required:true,
-			  },
-			   Q14W1:{
-				  required:true,
-			  },
-			   Q15W1:{
-				  required:true,
-			  },
-			   Q16W1:{
-				  required:true,
-			  },
-			   Q21W1 :{
-				  required:true,
-			  },
-			   Q18W1:{
-				  required:true,
-			  },
-			   Q18W2:{
-				  required:true,
-			  },
-			   Q19W1:{
-				  required:true,
-			  },
-			   Q19W11:{
-				  required:true,
-			  },
-			   Q19W12:{
-				  required:true,
-			  },
-			   Q19W15:{
-				  required:true,
-			  },
-			  Q20W1:{
-				  required:true,
-			  },
-			  Q7W2:{
-				  required:true,
-			  }
-			 
-		}
+  jQuery(document).ready(function(){
+  
+  jQuery('#water').validate({
+    rules:{
+          Q8W2:{
+          required:true,
+        },
+        Q8W2S1:{
+          required:true,
+        },
+        Q8W2S1S1:{
+          required:true,
+        },
+        Q8W2S6:{
+          required:true,
+        },
+        Q8W2S2:{
+          required:true,
+        },
+        Q8W2S4:{
+          required:true,
+        },
+        Q8W2S5:{
+          required:true,
+          
+        },
+        Q8W2S61:{
+          required:true,
+         
+        },
+        Q8W2S8:{
+          required:true,
+        },
+         Q8W2S10:{
+          required:true,
+        },
+         Q8W2S13:{
+          required:true,
+        },
+         Q8W2S2S2:{
+          required:true,
+        },
+        Q8W2S2S7:{
+          required:true,
+        },
+         Q8W2S2S10:{
+          required:true,
+        },
+         Q8W2S2S3:{
+          required:true,
+        },
+         Q8W2S2S4:{
+          required:true,
+        },
+         Q8W2S2S5:{
+          required:true,
+        },
+         Q8W2S2S6:{
+          required:true,
+        },
+         Q8W2S2S8:{
+          required:true,
+        },
+         Q8W2S4S1:{
+          required:true,
+        },
+        Q8W2S7:{
+          required:true,
+        },
+        Q8W2S9:{
+          required:true,
+        },
+        Q8W2S11:{
+          required:true,
+        },
+        Q8W2S12:{
+          required:true,
+        },
+        Q1W1S1:{
+          required:true,
+        },
+        Q1W1S3:{
+          required:true,
+        },
+        Q1W1S2:{
+          required:true,
+        },
+        Q2W1S1:{
+          required:true,
+        },
+        Q2W1S3:{
+          required:true,
+        },
+        Q2W1S2:{
+          required:true,
+        },
+        Q3W1S1:{
+          required:true,
+        },
+        Q3W1S2:{
+          required:true,
+        },
+        Q3W1S3:{
+          required:true,
+        },
+        Q4W1:{
+          required:true,
+        },
+        Q4W2:{
+          required:true,
+        },
+        Q4W3:{
+          required:true,
+        },
+        Q4W4:{
+          required:true,
+        },
+        Q4W5:{
+          required:true,
+        },
+        Q4W6:{
+          required:true,
+        },
+        Q4W7:{
+          required:true,
+        },
+        Q4W8:{
+          required:true,
+        },
+        Q4W9:{
+          required:true,
+        },
+        Q4W10:{
+          required:true,
+        },
+        Q7W1:{
+          required:true,
+        },
+        Q8W1S1:{
+          required:true,
+        },
+        Q8W1S2:{
+          required:true,
+        },
+        Q8W1S3:{
+          required:true,
+        },
+        Q8W1S4:{
+          required:true,
+        },
+        Q8W1S5:{
+          required:true,
+        },
+        Q8W1S6:{
+          required:true,
+        },
+        Q8W1S7:{
+          required:true,
+        },
+        Q8W1S9:{
+          required:true,
+        },
+        Q8W1S10:{
+          required:true,
+        },
+        Q8W1S11:{
+          required:true,
+        },
+        Q8W1S12:{
+          required:true,
+        },
+        Q8W3S1:{
+          required:true,
+        },
+        Q8W3S2:{
+          required:true,
+        },
+        Q8W3S3:{
+          required:true,
+        },
+        Q8W3S4:{
+          required:true,
+        },
+        Q8W3S5:{
+          required:true,
+        },
+        Q8W3S6:{
+          required:true,
+        },
+        Q8W3S7:{
+          required:true,
+        },
+        Q8W3S8:{
+          required:true,
+        },
+        Q9W1:{
+          required:true,
+        },
+        Q10W1:{
+          required:true,
+        },
+        Q11W1:{
+          required:true,
+        },
+         Q13W1S1:{
+          required:true,
+        },
+         Q13W1S2:{
+          required:true,
+        },
+         Q13W1S3:{
+          required:true,
+        },
+         Q14W1:{
+          required:true,
+        },
+         Q15W1:{
+          required:true,
+        },
+         Q16W1:{
+          required:true,
+        },
+         Q21W1 :{
+          required:true,
+        },
+         Q18W1:{
+          required:true,
+        },
+         Q18W2:{
+          required:true,
+        },
+         Q19W1:{
+          required:true,
+        },
+         Q19W11:{
+          required:true,
+        },
+         Q19W12:{
+          required:true,
+        },
+         Q19W15:{
+          required:true,
+        },
+        Q20W1:{
+          required:true,
+        },
+        Q7W2:{
+          required:true,
+        },
+        Q8W2S1S1:{
+          required:true,
+        }
        
-	});
-	});
-	
-	jQuery('#movenextbtn').click(function(e){
-		
-		
-		$r=jQuery('#water').valid();
-		if($r == false)
-		{
-			   e.preventDefault();
-			   jQuery('#water').valid();
-		}
-		
-		
-	});
-	
-	</script>
+    }
+       
+  });
+  });
+  
+  jQuery('#movenextbtn').click(function(e){
+    
+    
+    $r=jQuery('#water').valid();
+    if($r == false)
+    {
+         e.preventDefault();
+         jQuery('#water').valid();
+    }
+    
+    
+  });
+  
+  </script>
 <script type="text/javascript">
                                             $('.close').click(function () {
                                                 $('#video').attr("src", "https://www.youtube.com/embed/TcyZ1vtXsMw");
@@ -3882,9 +3897,9 @@ $(document).ready(function(){
     if (evt.which != 8 && evt.which != 0 && evt.which < 48 || evt.which > 57)
     {
         evt.preventDefault();
-	    if(evt.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+      if(evt.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
     }
   });
   $('input[type=number]').on('wheel', function(e){
@@ -3897,34 +3912,34 @@ $(document).ready(function(){
   else{$(".question_Q8W1S12").addClass("hide");}
   /**/
   if($("input[name='Q8W2S2']:checked").val()==3){
-	 $("input[name='Q8W2S2S2']").attr("checked",true);
+   $("input[name='Q8W2S2S2']").attr("checked",true);
   }
   /**/
   if($("input[name='Q8W2S2']:checked").val()==3){
-	 $("input[name='Q8W2S2S7']").attr("checked",true);
+   $("input[name='Q8W2S2S7']").attr("checked",true);
   }
   if($("input[name='Q8W2S2S2']:checked").val()==='Y'){
-	   $("#Q8W2S2S3,#Q8W2S2S4,#Q8W2S2S5,#Q8W2S2S6").css("display","block");
+     $("#Q8W2S2S3,#Q8W2S2S4,#Q8W2S2S5,#Q8W2S2S6").css("display","block");
   }
   if($("input[name='Q8W2S2S7']:checked").val()==='Y'){
-	   $("#Q8W2S2S8,#Q8W2S2S9").css("display","block");
+     $("#Q8W2S2S8,#Q8W2S2S9").css("display","block");
   }
 });
 $("input[name='Q8W2S2S2']").click(function(){
     if($("input[name='Q8W2S2']:checked").val()==3 && $(this).val()==='N'){
-	  alert("Since you have selected ‘Combination of both’, please provide information on storage tank (s)");
-	  $("input[name='Q8W2S2S2'][value='N']").attr("checked",false);
-	  $("input[name='Q8W2S2S2'][value='Y']").prop("checked",true);
-	  $("#Q8W2S2S3,#Q8W2S2S4,#Q8W2S2S5,#Q8W2S2S6").css("display","block");
-	}
+    alert("Since you have selected ‘Combination of both’, please provide information on storage tank (s)");
+    $("input[name='Q8W2S2S2'][value='N']").attr("checked",false);
+    $("input[name='Q8W2S2S2'][value='Y']").prop("checked",true);
+    $("#Q8W2S2S3,#Q8W2S2S4,#Q8W2S2S5,#Q8W2S2S6").css("display","block");
+  }
 });
 $("input[name='Q8W2S2S7']").click(function(){
     if($("input[name='Q8W2S2']:checked").val()==3 && $(this).val()==='N'){
-	alert("Since you have selected ‘Combination of both’, please provide information on storage tank (s)");
-	  $("input[name='Q8W2S2S7'][value='N']").attr("checked",false);
-	  $("input[name='Q8W2S2S7'][value='Y']").prop("checked",true);
-	  $("#Q8W2S2S8,#Q8W2S2S9").css("display","block");
-	}
+  alert("Since you have selected ‘Combination of both’, please provide information on storage tank (s)");
+    $("input[name='Q8W2S2S7'][value='N']").attr("checked",false);
+    $("input[name='Q8W2S2S7'][value='Y']").prop("checked",true);
+    $("#Q8W2S2S8,#Q8W2S2S9").css("display","block");
+  }
 });
 
 /*This Code Used For Question 5 last Sub Question Yes/No*/
@@ -3951,17 +3966,17 @@ $("input[name='Q8W2S2S7']").click(function(){
 $("input[name='Q19W1']").click(function(){
   if($(this).val()==='Y'){
     $("#new_question17_a_i").removeClass("hide");
-	//$("#new_question17_a_ii").removeClass("hide");
+  //$("#new_question17_a_ii").removeClass("hide");
   }else{
     $("#new_question17_a_i").addClass("hide");
     $("#new_question17_a_ii").addClass("hide");    
   }
   if($(this).val()==='N'){
     $("#new_question17_b").removeClass("hide");
-	$("#new_question17_b_i").removeClass("hide");
+  $("#new_question17_b_i").removeClass("hide");
   }else{
     $("#new_question17_b").addClass("hide");
-	$("#new_question17_b_i").addClass("hide");
+  $("#new_question17_b_i").addClass("hide");
   } 
 });
 /*************************************************************************/
@@ -3974,10 +3989,10 @@ $(document).ready(function(){
     $("#new_question17_a_i").addClass("hide"); $("#new_question17_a_ii").addClass("hide");  }
   if($("input[name='Q19W1']:checked").val()==='N'){
     $("#new_question17_b").removeClass("hide");
-	$("#new_question17_b_i").removeClass("hide");
+  $("#new_question17_b_i").removeClass("hide");
   }else{
     $("#new_question17_b").addClass("hide");
-	$("#new_question17_b_i").addClass("hide");
+  $("#new_question17_b_i").addClass("hide");
   } 
 });
 /*Validation For Question 17(a)(ii)*/
@@ -3985,17 +4000,18 @@ $(document).ready(function(){
 /*Click Event On Radio Button*/
 /*************************************************************************/
 $("input[name='Q19W11']").click(function(){
-  if($(this).val()==2){$("#new_question17_a_ii").addClass("hide");}
+ if($(this).val()==1){$("#new_question17_a_ii").addClass("hide");}
   else{$("#new_question17_a_ii").removeClass("hide");}
 });
+
 /*Validation For Question 17(a)(ii)*/
 /*Where does the water get treated?*/
 /*Load Event On Body*/
 /*************************************************************************/
 /* $(document).ready(function(){
      if($("input[name='Q19W1']:checked").val()==='N' && ){
-	 $("#new_question17_a_ii").addClass("hide");
-	 }
+   $("#new_question17_a_ii").addClass("hide");
+   }
      else{$("#new_question17_a_ii").removeClass("hide");}
  });*/
 /*************************************************************************/
@@ -4028,54 +4044,54 @@ $("#movenextbtn").click(function(e){
     if($("input[name='Q8W2S6']").attr('placeholder')==''){
       if($("input[name='Q8W2S6']").val()==''){
        alert("Please Fill The Answer Of This Question:Calculate your school’s rainwater harvesting potential (in litres).");
-	   e.preventDefault();
-	      if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+     e.preventDefault();
+        if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
       }
-	}  
+  }  
   }
    if($("input[name='Q8W1S12']:checked").val()==='Y'){
       if($("input[name='Q8W1S123443']").val()===''){
        alert("Please Fill The Answer Of This Question:Provision for storage of leftover water in bottles at water coolers Any other step taken for water conservation? (if Yes, please specify):).");
-	   e.preventDefault();
-	      if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
-	}  
+     e.preventDefault();
+        if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
+  }  
   }
   
    /*  if($("input[name='Q8W2S2S2']:checked").val()==='Y'){
       if($("input[name='Q8W2S2S3']").attr("placeholder")==='' && $("input[name='Q8W2S2S3']").val()=='' || $("input[name='Q8W2S2S4']").attr("placeholder")==='' && $("input[name='Q8W2S2S4']").val()==''){
         alert("Please Fill The Answer Of This Question:6(b)(2) A If yes, please provide:");
-	    alert("Please Fill The Answer Of This Question:6(b)(2) B If yes, please provide:");
-	   e.preventDefault();
-	      if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
-	}  
+      alert("Please Fill The Answer Of This Question:6(b)(2) B If yes, please provide:");
+     e.preventDefault();
+        if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
+  }  
   } */
   
    /*  if($("input[name='Q8W2S2S7']:checked").val()==='Y'){
       if($("input[name='Q8W2S2S8']").val()==='' && $("input[name='Q8W2S2S8']").attr('placeholder')===''){
        alert("Please share the total number of groundwater recharge structures..");
-	   e.preventDefault();
-	      if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
-	}  
-  }	 */
+     e.preventDefault();
+        if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
+  }  
+  }  */
 /*  if($("input[name='Q8W2S2S31']").val()==""){
     alert("Please Fill The Data Of Given Question: Since you have selected ‘Combination of both’, please provide information on storage tank (s)");
-	e.preventDefault();
+  e.preventDefault();
   }
   if($("input[name='Q8W2S2S71']").val()==""){
     alert("Please Fill The Data Of Given Question: Since you have selected ‘Combination of both’, please provide information on recharge structure (s)");
-	e.preventDefault();
+  e.preventDefault();
   }*/
 /*  if($("input[name='Q8W2S2S8']").val()==""){
     alert("Please Fill The Data Of Given Question: Please share the total number of groundwater recharge structures");
-	e.preventDefault();
+  e.preventDefault();
   }*/
 });
 $("input[name='Q8W2']").click(function(){
@@ -4092,55 +4108,55 @@ if($("input[name='Q19W1']:checked").val()==='N'){
  if($("input[name='Q19W13']").prop('checked') == false && $("input[name='Q19W131']").prop('checked') == false && $("input[name='Q19W132']").prop('checked') == false){
    alert("17(b) Please specify the fate of wastewater");
    e.preventDefault();
-	 if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+   if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
   }
  }
 });
 </script>
 <script>
-	$("#movenextbtn").click(function(e){
+  $("#movenextbtn").click(function(e){
 if($("input[name='Q5W1']").prop('checked') == false && $("input[name='Q5W2']").prop('checked') == false && $("input[name='Q5W3']").prop('checked') == false && $("input[name='Q5W4']").prop('checked') == false){
   alert("2 Where does the water your school uses, come from");
   e.preventDefault();
-	if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+  if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
 }
-});	
-	</script>
+}); 
+  </script>
 <script>
-	$("#movenextbtn").click(function(e){
+  $("#movenextbtn").click(function(e){
 if($("input[name='Q6W1']").prop('checked') == false && $("input[name='Q6W2']").prop('checked') == false && $("input[name='Q6W3']").prop('checked') == false && $("input[name='Q6W4']").prop('checked') == false && $("input[name='Q6W5']").prop('checked') == false){
   alert("3 Who supplies the water in your school");
   e.preventDefault();
-	if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+  if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
 }
-});	
+}); 
 </script>
 <script>
-	$("#movenextbtn").click(function(e){
+  $("#movenextbtn").click(function(e){
       if($('input[name="Q19W15"]:checked').val()==='Y'){
       if($("input[name='Q19W16']").prop('checked') == false && $("input[name='Q19W161']").prop('checked') == false && $("input[name='Q19W162']").prop('checked') == false){
         alert("18(i) If yes, How does your school reuse wastewater from RO plant or AC");
         e.preventDefault();
-	      if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+        if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
        }
      }else if($('input[name="Q19W15"]:checked').val()==='N'){
          if($("input[name='Q19W17']").prop('checked') == false){
-	   alert("18(i) If no, How does your school reuse wastewater from RO plant or AC?");
+     alert("18(i) If no, How does your school reuse wastewater from RO plant or AC?");
             e.preventDefault();
-		 if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
-	 }
-     }		
-});	
+     if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
+   }
+     }    
+}); 
 </script>
 <script>
   $("#movenextbtn").click(function(e){
@@ -4148,21 +4164,21 @@ if($("input[name='Q6W1']").prop('checked') == false && $("input[name='Q6W2']").p
    if($("input[name='Q20W2']").prop('checked') == false && $("input[name='Q20W21']").prop('checked') == false && $("input[name='Q20W22']").prop('checked') == false  && $("input[name='Q20W23']").prop('checked') == false){
       alert("19(a) How does your school reuse wastewater?");
      e.preventDefault();
-	   if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+     if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
    }
   }else if($('input[name="Q20W1"]:checked').val()==='N'){
          if($("input[name='Q20W3']").prop('checked') == false && $("input[name='Q20W31']").prop('checked') == false && $("input[name='Q20W32']").prop('checked') == false){
-	   alert("18(i) If no, How does your school reuse wastewater from RO plant or AC?");
+     alert("18(i) If no, How does your school reuse wastewater from RO plant or AC?");
             e.preventDefault();
-		 if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
-	 }
-     }	
-			  
-});	
+     if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
+   }
+     }  
+        
+}); 
 
 /**********************************************************************************/
 /*This Validation Used For Q6 & Q6(a) Radio Button Click*/
@@ -4170,187 +4186,187 @@ $("input[name='Q8W2']").click(function(){
   if($(this).val()==="Y"){
      if($("input[name='Q8W2S1']").val()==='N'){ 
        $("input[name='Q8W2S1'][value='N']").prop("checked",false);
-	 }
+   }
      $("input[name='Q8W2S1'][value='Y']").prop("checked",true);
   }
 });
 $("input[name='Q8W2S1']").click(function(){
    if($("input[name='Q8W2']:checked").val()==="Y"){
       if($("input[name='Q8W2S1']:checked").val()==="N"){
-	   alert("Q6:Do you have Rainwater harvesting (RWH) system in your school? Selected Yes As Answer");
+     alert("Since your school has RWH system, please select ‘Yes’.");
        $("input[name='Q8W2S1'][value='Y']").prop("checked",true);
       }
    }
 });
-	
+  
 /*This Validation Used For Q6 & Q6(a) Load Event*/
 $(document).ready(function(){
   $("input[name='Q8W2']").click(function(){
   if($(this).val()==="Y"){
      if($("input[name='Q8W2S1']").val()==='N'){ 
        $("input[name='Q8W2S1'][value='N']").prop("checked",false);
-	 }
+   }
      $("input[name='Q8W2S1'][value='Y']").prop("checked",true);
   }
 });
 });
-/*This Validation Used For Q5 Submit Button Click Event*/	
+/*This Validation Used For Q5 Submit Button Click Event*/ 
 $("#movenextbtn").click(function(e){
    if($('input[name="Q8W1S1"]:checked').length == 0){
-	alert("Q5 What are the water conservation practices your school follows..(Does your school have any water and sanitation policy?)"); 
-	e.preventDefault(); 
-	   if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+  alert("Q5 What are the water conservation practices your school follows..(Does your school have any water and sanitation policy?)"); 
+  e.preventDefault(); 
+     if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
    }
   if($('input[name="Q8W1S2"]:checked').length == 0){
-	alert("Q5 What are the water conservation practices your school follows..(If your school has an eco-club, do they have water component?)"); 
-	e.preventDefault();   
-	  if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+  alert("Q5 What are the water conservation practices your school follows..(If your school has an eco-club, do they have water component?)"); 
+  e.preventDefault();   
+    if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
    }
   if($('input[name="Q8W1S3"]:checked').length == 0){
-	alert("Q5 What are the water conservation practices your school follows..(Do all tanks in the school have float valves installed to stop overflow?)"); 
-	e.preventDefault();  
-	  if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+  alert("Q5 What are the water conservation practices your school follows..(Do all tanks in the school have float valves installed to stop overflow?)"); 
+  e.preventDefault();  
+    if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
    }
  if($('input[name="Q8W1S4"]:checked').length == 0){
-	alert("Q5 What are the water conservation practices your school follows..(Do the drinking water points have spill proof taps to check overflow?)"); 
-	e.preventDefault();  
-	 if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+  alert("Q5 What are the water conservation practices your school follows..(Do the drinking water points have spill proof taps to check overflow?)"); 
+  e.preventDefault();  
+   if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
    }
  if($('input[name="Q8W1S5"]:checked').length == 0){
-	alert("Q5 What are the water conservation practices your school follows..(Does your school use appliances with a quick-wash setting?)"); 
-	e.preventDefault(); 
-	 if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+  alert("Q5 What are the water conservation practices your school follows..(Does your school use appliances with a quick-wash setting?)"); 
+  e.preventDefault(); 
+   if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
    }
  if($('input[name="Q8W1S6"]:checked').length == 0){
-	alert("Q5 What are the water conservation practices your school follows..(Are dual flush systems installed in the toilets?)"); 
-	e.preventDefault();  
-	 if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+  alert("Q5 What are the water conservation practices your school follows..(Are dual flush systems installed in the toilets?)"); 
+  e.preventDefault();  
+   if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
    }
 if($('input[name="Q8W1S7"]:checked').length == 0){
-	alert("Q5 What are the water conservation practices your school follows..(Does your school encourage bottled water for drinking water?)"); 
-	e.preventDefault();
-	if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+  alert("Q5 What are the water conservation practices your school follows..(Does your school encourage bottled water for drinking water?)"); 
+  e.preventDefault();
+  if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
    }
 if($('input[name="Q8W1S8"]:checked').length == 0){
-	alert("Q5 What are the water conservation practices your school follows..(Does your school grow local plant species which require limited amount of water to grow?)"); 
-	e.preventDefault();
-	if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+  alert("Q5 What are the water conservation practices your school follows..(Does your school grow local plant species which require limited amount of water to grow?)"); 
+  e.preventDefault();
+  if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
    }
 if($('input[name="Q8W1S9"]:checked').length == 0){
-	alert("Q5 What are the water conservation practices your school follows..(Has your school initiated any water conservation steps in the school or outside, in the past one year?)"); 
-	e.preventDefault();
-	if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
-   }	
+  alert("Q5 What are the water conservation practices your school follows..(Has your school initiated any water conservation steps in the school or outside, in the past one year?)"); 
+  e.preventDefault();
+  if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
+   }  
 if($('input[name="Q8W1S10"]:checked').length == 0){
-	alert("Q5 What are the water conservation practices your school follows..(Does your school use a drip or irrigation system?)"); 
-	e.preventDefault();   
-	if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
-   }	
+  alert("Q5 What are the water conservation practices your school follows..(Does your school use a drip or irrigation system?)"); 
+  e.preventDefault();   
+  if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
+   }  
 if($('input[name="Q8W1S11"]:checked').length == 0){
-	alert("Q5 What are the water conservation practices your school follows..(Any other step taken for water conservation? (if Yes, please specify))"); 
-	e.preventDefault();   
-	if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+  alert("Q5 What are the water conservation practices your school follows..(Any other step taken for water conservation? (if Yes, please specify))"); 
+  e.preventDefault();   
+  if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
    }
 if($('input[name="Q8W1S11"]:checked').length == 0){
-	alert("Q5 What are the water conservation practices your school follows..(Provision for storage of leftover water in bottles at water coolers Any other step taken for water conservation? (if Yes, please specify):))"); 
-	e.preventDefault();   
-	if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+  alert("Q5 What are the water conservation practices your school follows..(Provision for storage of leftover water in bottles at water coolers Any other step taken for water conservation? (if Yes, please specify):))"); 
+  e.preventDefault();   
+  if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
    }
         /**Q8 How many drinking water taps do you have? (Validation)**/
-	 if($('input[name="Q9W1"]').val() =="" && $('input[name="Q9W1"]').attr("placeholder")==""){
-	   alert("Q8 How many drinking water taps do you have?");
-	   e.preventDefault(); 	 
-		 if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
-	 }
-	  /**Q9 How many drinking water taps do you have? (Validation)**/
-	 if($('input[name="Q10W1"]').val() =="" && $('input[name="Q10W1"]').attr("placeholder")==""){
-	   alert("Q9 How many hand pumps do you have?");
-	   e.preventDefault(); 	 
-		 if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
-	 }
-	/**Q10 How many ablution taps (taps used for washing hands only) do you have? (Validation)**/
-	 if($('input[name="Q11W1"]').val() =="" && $('input[name="Q11W1"]').attr("placeholder")==""){
-	   alert("Q10 How many ablution taps (taps used for washing hands only) do you have?");
-	   e.preventDefault(); 	 
-		 if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
-	 }
-	/**Q12 How many urinals (strictly used for urination only) do you have?  (Validation)**/
-	 if($('input[name="Q14W1"]').val() =="" && $('input[name="Q14W1"]').attr("placeholder")==""){
-	   alert("Q12 How many urinals (strictly used for urination only) do you have?");
-	   e.preventDefault(); 	 
-		 if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
-	 }
-	/**Q13 How many other water outlets (example: taps in play fields, sprinklers, swimming pool) do you have?  (Validation)**/
-	 if($('input[name="Q15W1"]').val() =="" && $('input[name="Q15W1"]').attr("placeholder")==""){
-	   alert("Q13 How many other water outlets (example: taps in play fields, sprinklers, swimming pool) do you have?");
-	   e.preventDefault();
-		 if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
-	 }
-	/**Q6 Do you have Rainwater harvesting (RWH) system in your school?**/	
+   if($('input[name="Q9W1"]').val() =="" && $('input[name="Q9W1"]').attr("placeholder")==""){
+     alert("Q8 How many drinking water taps do you have?");
+     e.preventDefault();   
+     if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
+   }
+    /**Q9 How many drinking water taps do you have? (Validation)**/
+   if($('input[name="Q10W1"]').val() =="" && $('input[name="Q10W1"]').attr("placeholder")==""){
+     alert("Q9 How many hand pumps do you have?");
+     e.preventDefault();   
+     if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
+   }
+  /**Q10 How many ablution taps (taps used for washing hands only) do you have? (Validation)**/
+   if($('input[name="Q11W1"]').val() =="" && $('input[name="Q11W1"]').attr("placeholder")==""){
+     alert("Q10 How many ablution taps (taps used for washing hands only) do you have?");
+     e.preventDefault();   
+     if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
+   }
+  /**Q12 How many urinals (strictly used for urination only) do you have?  (Validation)**/
+   if($('input[name="Q14W1"]').val() =="" && $('input[name="Q14W1"]').attr("placeholder")==""){
+     alert("Q12 How many urinals (strictly used for urination only) do you have?");
+     e.preventDefault();   
+     if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
+   }
+  /**Q13 How many other water outlets (example: taps in play fields, sprinklers, swimming pool) do you have?  (Validation)**/
+   if($('input[name="Q15W1"]').val() =="" && $('input[name="Q15W1"]').attr("placeholder")==""){
+     alert("Q13 How many other water outlets (example: taps in play fields, sprinklers, swimming pool) do you have?");
+     e.preventDefault();
+     if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
+   }
+  /**Q6 Do you have Rainwater harvesting (RWH) system in your school?**/  
   if($('input[name="Q8W2"]:checked').length==0){
    alert("Q6 Do you have Rainwater harvesting (RWH) system in your school?");
-	   e.preventDefault(); 
-	  if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+     e.preventDefault(); 
+    if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
   } 
 /**Q5(Last Option) Provision for storage of leftover water in bottles at water coolers Any other step taken for water conservation? (if Yes, please specify):**/
-	if($('input[name="Q8W1S12"]:checked').length==0){
+  if($('input[name="Q8W1S12"]:checked').length==0){
    alert("Q5 Provision for storage of leftover water in bottles at water coolers Any other step taken for water conservation? (if Yes, please specify):");
-	   e.preventDefault(); 
-		if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+     e.preventDefault(); 
+    if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
    }
 /**/   
    if($('input[name="Q8W1S12"]:checked').length==0){
      alert("Q5 Provision for storage of leftover water in bottles at water coolers Any other step taken for water conservation? (if Yes, please specify):(Please Fill The Textarea Value.)");
-	 e.preventDefault();
-	   if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+   e.preventDefault();
+     if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
    }
    /*6(a) Calculate your school’s rainwater harvesting potential (in litres).*/ 
     if($('input[name="Q8W2"]:checked').val()==='N'){
      if($('input[name="Q8W2S6"]').val()=="" || $('input[name="Q8W2S6"]').val()==null){
       alert("Q6(a) Calculate your school’s rainwater harvesting potential (in litres). (The value in RWH potential must be more than zero)");
-	 
-	     
-	 }
+   
+       
+   }
    } 
   if($('input[name="Q8W2"]:checked').val()==='Y'){
 
@@ -4358,218 +4374,218 @@ if($('input[name="Q8W1S11"]:checked').length == 0){
 
         /* 6(d)(2)Types of filter used in your school:? */
         if($("input[name='Q8W2S33']:checked").val()===1){
-		 if($('input[name="Q8W2S4S21"]:checked').length==0 && $('input[name="Q8W2S4S22"]:checked').length==0 && $('input[name="Q8W2S4S23"]:checked').length==0 && $('input[name="Q8W2S4S24"]:checked').length==0){
-	     alert("6(d)(2)Types of filter used in your school:?");
-		 e.preventDefault();
-	     }
+     if($('input[name="Q8W2S4S21"]:checked').length==0 && $('input[name="Q8W2S4S22"]:checked').length==0 && $('input[name="Q8W2S4S23"]:checked').length==0 && $('input[name="Q8W2S4S24"]:checked').length==0){
+       alert("6(d)(2)Types of filter used in your school:?");
+     e.preventDefault();
+       }
         }
 
            /*6(b)(1)If your school only stores rainwater, please select the use of stored rainwater: */
       if($("input[name='Q8W2S2']:checked").val()==1 || $("input[name='Q8W2S2']:checked").val()==3){
         if($('input[name="Q8W2S2S14"]:checked').length==0 && $('input[name="Q8W2S2S25"]:checked').length==0 && $('input[name="Q8W2S2S36"]:checked').length==0 && $('input[name="Q8W2S2S47"]:checked').length==0 && $('input[name="Q8W2S2S58"]:checked').length==0 && $('input[name="Q8W2S2S69"]:checked').length==0 && $('input[name="Q8W2S2S723"]:checked').length==0 && $('input[name="Q8W2S2S811"]:checked').length==0 && $('input[name="Q8W2S2S912"]:checked').length==0 && $('input[name="Q8W2S2S1013"]:checked').length==0){
-	     alert("6(b)(1)If your school only stores rainwater, please select the use of stored rainwater:?");
-		 e.preventDefault();
-	    }}
+       alert("6(b)(1)If your school only stores rainwater, please select the use of stored rainwater:?");
+     e.preventDefault();
+      }}
 
             /* 6(d) Please select (from the list given below) the rainwater harvesting structures present in your school:  */
 
          if($('input[name="Q8W2S31"]:checked').length==0 && $('input[name="Q8W2S32"]:checked').length==0 && $('input[name="Q8W2S33"]:checked').length==0 && $('input[name="Q8W2S34"]:checked').length==0 && $('input[name="Q8W2S35"]:checked').length==0 && $('input[name="Q8W2S36"]:checked').length==0 && $('input[name="Q8W2S37"]:checked').length==0 && $('input[name="Q8W2S38"]:checked').length==0){
-	     alert("6(d)Please select (from the list given below) the rainwater harvesting structures present in your school: ?");
-		 e.preventDefault();
-	    }
+       alert("6(d)Please select (from the list given below) the rainwater harvesting structures present in your school: ?");
+     e.preventDefault();
+      }
 
           /* 6(b)(3)ii Please tick the type of groundwater recharge structure used in your school: */
        if($("input[name='Q8W2S2S7']:checked").val()==="Y"){
          if($('input[name="Q8W2S2S91"]:checked').length==0 && $('input[name="Q8W2S2S92"]:checked').length==0 && $('input[name="Q8W2S2S93"]:checked').length==0 && $('input[name="Q8W2S2S94"]:checked').length==0 && $('input[name="Q8W2S2S95"]:checked').length==0 && $('input[name="Q8W2S2S96"]:checked').length==0 && $('input[name="Q8W2S2S97"]:checked').length==0){
-	     alert("6(b)(3)ii Please tick the type of groundwater recharge structure used in your school:");
-		 e.preventDefault();
-	    }}
+       alert("6(b)(3)ii Please tick the type of groundwater recharge structure used in your school:");
+     e.preventDefault();
+      }}
 
 
 
 
-	  /*Q6a Does your school harvest different catchments?*/
-	  if($('input[name="Q8W2S1"]:checked').length==0){
-	     alert("Q6a Does your school harvest different catchments?");
-		 
-	  } 
-	  /*6(b) How does your school harvest rainwater?*/
-	  if($('input[name="Q8W2S2"]:checked').length==0){
-	     alert("6(b) How does your school harvest rainwater?");
-		 
-		
-	  }
-	  /*6(c)How much area in your school is harvested?*/
-	  if($('input[name="Q8W2S4"]:checked').length==0){
-	     alert("6(c)How much area in your school is harvested?");
-		 
-		  
-	  } 
-	  /*6(e)Rate your catchment on cleanliness:*/
-	  if($('input[name="Q8W2S5"]:checked').length==0){
-	     alert("6(e)Rate your catchment on cleanliness:");
-		 
-		 
-	  } 
-	  /*6(f)Does your school clean your catchment and system*/
-	   if($('input[name="Q8W2S61"]:checked').length==0){
-	     alert("6(f)Does your school clean your catchment and system");
-		 
-		 
-	  }
-	  /*6(g)Does your school monitor the rainwater harvesting structure for its efficiency?*/
-	 if($('input[name="Q8W2S8"]:checked').length==0){
-	     alert("6(g)Does your school monitor the rainwater harvesting structure for its efficiency?");
-		 
-		 
-	  } 
-	  /*6(h)What is the trend of groundwater level in your school across the year?*/
-	   if($('input[name="Q8W2S10"]:checked').length==0){
-	     alert("6(h)What is the trend of groundwater level in your school across the year?");
-		 
-		 
-	  }
-	  
-	 
-	  /*Q6(a)(1): Which is the catchment area being harvested by your school?*/
+    /*Q6a Does your school harvest different catchments?*/
+    if($('input[name="Q8W2S1"]:checked').length==0){
+       alert("Q6a Does your school harvest different catchments?");
+     
+    } 
+    /*6(b) How does your school harvest rainwater?*/
+    if($('input[name="Q8W2S2"]:checked').length==0){
+       alert("6(b) How does your school harvest rainwater?");
+     
+    
+    }
+    /*6(c)How much area in your school is harvested?*/
+    if($('input[name="Q8W2S4"]:checked').length==0){
+       alert("6(c)How much area in your school is harvested?");
+     
+      
+    } 
+    /*6(e)Rate your catchment on cleanliness:*/
+    if($('input[name="Q8W2S5"]:checked').length==0){
+       alert("6(e)Rate your catchment on cleanliness:");
+     
+     
+    } 
+    /*6(f)Does your school clean your catchment and system*/
+     if($('input[name="Q8W2S61"]:checked').length==0){
+       alert("6(f)Does your school clean your catchment and system");
+     
+     
+    }
+    /*6(g)Does your school monitor the rainwater harvesting structure for its efficiency?*/
+   if($('input[name="Q8W2S8"]:checked').length==0){
+       alert("6(g)Does your school monitor the rainwater harvesting structure for its efficiency?");
+     
+     
+    } 
+    /*6(h)What is the trend of groundwater level in your school across the year?*/
+     if($('input[name="Q8W2S10"]:checked').length==0){
+       alert("6(h)What is the trend of groundwater level in your school across the year?");
+     
+     
+    }
+    
+   
+    /*Q6(a)(1): Which is the catchment area being harvested by your school?*/
      if($("input[name='Q8W2S1']:checked").val()==="Y"){
        if($("input[name='Q8W2S1S1']:checked").length==0){
-	     alert("Q6(a)(1): Which is the catchment area being harvested by your school?");
-	    
-		}
+       alert("Q6(a)(1): Which is the catchment area being harvested by your school?");
+      
+    }
       } 
-	  
-	  
-	  
-	  
-	  
-	  
-	  /*6(i)If your school's RWH structure is more than a year old, is there any improvement in the groundwater quality after the implementation of the RWH structure?*/
-	   if($('input[name="Q8W2S13"]:checked').length==0){
-	     alert("6(i)If your school's RWH structure is more than a year old, is there any improvement in the groundwater quality after the implementation of the RWH structure?");
-	    
-		  
-	  } 
-	  /*6(h)(1)Please specify how much was the decrease?*/
-	 if($('input[name="Q8W2S10"]:checked').val()==1){
-	    if($('input[name="Q8W2S11"]:checked').length==0){
-	     alert("6(h)(1)Please specify how much was the decrease?");
-	    
-		   
-	    }
-	  } 
-	   /*6(h)(1)Please specify how much was the increase?*/
-	   if($('input[name="Q8W2S10"]:checked').val()==2){
-	    if($('input[name="Q8W2S12"]:checked').length==0){
-	     alert("6(h)(1)Please specify how much was the increase?");
-	   
-		   
-	    }
-	  }
-	   if($('input[name="Q8W2S33"]:checked').val()==1){
-	  /*  6(d)(1) Where is your filter unit?*/
-		if($('input[name="Q8W2S4S1"]:checked').length==0){
-	     alert("6(d)(1) Where is your filter unit?");
-		
-			
-	    }
-		/*6(d)(2)Types of filter used in your school?*/
-		if($('input[name="Q8W2S4S21"]:checked').length==0 && $('input[name="Q8W2S4S22"]:checked').length==0 && $('input[name="Q8W2S4S23"]:checked').length==0 && $('input[name="Q8W2S4S24"]:checked').length==0){
-	     alert("6(d)(2)Types of filter used in your school:?");
-		
-			
-	    }
-	  }  
-	}
+    
+    
+    
+    
+    
+    
+    /*6(i)If your school's RWH structure is more than a year old, is there any improvement in the groundwater quality after the implementation of the RWH structure?*/
+     if($('input[name="Q8W2S13"]:checked').length==0){
+       alert("6(i)If your school's RWH structure is more than a year old, is there any improvement in the groundwater quality after the implementation of the RWH structure?");
+      
+      
+    } 
+    /*6(h)(1)Please specify how much was the decrease?*/
+   if($('input[name="Q8W2S10"]:checked').val()==1){
+      if($('input[name="Q8W2S11"]:checked').length==0){
+       alert("6(h)(1)Please specify how much was the decrease?");
+      
+       
+      }
+    } 
+     /*6(h)(1)Please specify how much was the increase?*/
+     if($('input[name="Q8W2S10"]:checked').val()==2){
+      if($('input[name="Q8W2S12"]:checked').length==0){
+       alert("6(h)(1)Please specify how much was the increase?");
+     
+       
+      }
+    }
+     if($('input[name="Q8W2S33"]:checked').val()==1){
+    /*  6(d)(1) Where is your filter unit?*/
+    if($('input[name="Q8W2S4S1"]:checked').length==0){
+       alert("6(d)(1) Where is your filter unit?");
+    
+      
+      }
+    /*6(d)(2)Types of filter used in your school?*/
+    if($('input[name="Q8W2S4S21"]:checked').length==0 && $('input[name="Q8W2S4S22"]:checked').length==0 && $('input[name="Q8W2S4S23"]:checked').length==0 && $('input[name="Q8W2S4S24"]:checked').length==0){
+       alert("6(d)(2)Types of filter used in your school:?");
+    
+      
+      }
+    }  
+  }
 
  /**Q14 Is there a water storage system in place to supply water in the toilets??**/
       if($("input[name='Q16W1']:checked").length==0){
        alert("Q14: Is there a water storage system in place to supply water in the toilets??");
-	   e.preventDefault();
+     e.preventDefault();
       }
-	  /**Q15 Is the water supply sufficient??**/
+    /**Q15 Is the water supply sufficient??**/
       if($("input[name='Q21W1']:checked").length==0){
        alert("Q15: Is the water supply sufficient?");
-	   e.preventDefault();
+     e.preventDefault();
       }
-	  /**Q16 Are the toilets cleaned?**/
+    /**Q16 Are the toilets cleaned?**/
       if($("input[name='Q18W1']:checked").length==0){
        alert("Q16: Are the toilets cleaned?");
-	   e.preventDefault();
+     e.preventDefault();
       }
-	  /**16(a)If yes, please specify**/
+    /**16(a)If yes, please specify**/
       if($("input[name='Q18W1']:checked").val()==="Y"){
        if($("input[name='Q18W2']:checked").length==0){
-	     alert("Q16(a): If yes, please specify");
-	     e.preventDefault();
-		}
+       alert("Q16(a): If yes, please specify");
+       e.preventDefault();
+    }
       }
-	  
-	  /**Q4 Does your school get daily water supply?**/
+    
+    /**Q4 Does your school get daily water supply?**/
       if($("input[name='Q7W1']:checked").length==0){
        alert("Q4: Does your school get daily water supply?");
-	   e.preventDefault();
+     e.preventDefault();
       }
-	  /**Q4(a): Does your school get daily water supply?**/
+    /**Q4(a): Does your school get daily water supply?**/
       if($("input[name='Q7W1']:checked").val()==="Y"){
        if($("input[name='Q7W2']:checked").length==0){
-	     alert("Q4(a): Does your school get daily water supply?");
-	     e.preventDefault();
-		}
+       alert("Q4(a): Does your school get daily water supply?");
+       e.preventDefault();
+    }
       }
-	  
-	  /**Q4(a): Does your school get daily water supply?**/
+    
+    /**Q4(a): Does your school get daily water supply?**/
       if($("input[name='Q7W1']:checked").val()==="N"){
        if($("input[name='Q7W3']:checked").length==0){
-	     alert("Q4(b): Does your school get daily water supply?");
-	     e.preventDefault();
-		}
+       alert("Q4(b): Does your school get daily water supply?");
+       e.preventDefault();
+    }
       }
-	  
     
-	/*Date: 1 Dec 2018*/
-	 /**Q6(f)(1)Please specify when does your school clean the catchment and RWH system?**/
+    
+  /*Date: 1 Dec 2018*/
+   /**Q6(f)(1)Please specify when does your school clean the catchment and RWH system?**/
        if($("input[name='Q8W2S61']:checked").val()==="Y"){
        if($("input[name='Q8W2S7']:checked").length==0){
-	     alert("Q6(f)(1)Please specify when does your school clean the catchment and RWH system?");
-	     
-		}
-	  } 
+       alert("Q6(f)(1)Please specify when does your school clean the catchment and RWH system?");
+       
+    }
+    } 
       /**Q6(g)(1)Please specify when does your school monitor the groundwater level?**/
        if($("input[name='Q8W2S8']:checked").val()==="Y"){
        if($("input[name='Q8W2S9']:checked").length==0){
-	     alert("Q6(g)(1) Please specify when does your school monitor the groundwater level?");
-	    
-		}	
-	  } 
-	/**Q6(b)(1)If your school only stores rainwater, please select the use of stored rainwater:**/
-	 if($("input[name='Q8W2S2']:checked").val()==="1"){
+       alert("Q6(g)(1) Please specify when does your school monitor the groundwater level?");
+      
+    } 
+    } 
+  /**Q6(b)(1)If your school only stores rainwater, please select the use of stored rainwater:**/
+   if($("input[name='Q8W2S2']:checked").val()==="1"){
        if($("input[name='Q8W2S2S14']:checked").length==0 && $("input[name='Q8W2S2S25']:checked").length==0 && $("input[name='Q8W2S2S36']:checked").length==0 && $("input[name='Q8W2S2S47']:checked").length==0 && $("input[name='Q8W2S2S58']:checked").length==0 && $("input[name='Q8W2S2S69']:checked").length==0 && $("input[name='Q8W2S2S723']:checked").length==0 && $("input[name='Q8W2S2S811']:checked").length==0 && $("input[name='Q8W2S2S912']:checked").length==0 && $("input[name='Q8W2S2S1013']:checked").length==0 ){
-	     alert("Q6(b)(1) If your school only stores rainwater, please select the use of stored rainwater?");
-	    
-		}	
-	  }
+       alert("Q6(b)(1) If your school only stores rainwater, please select the use of stored rainwater?");
+      
+    } 
+    }
   /**Q6(b)(3) iiPlease tick the type of groundwater recharge structure used in your school:***/
      if($("input[name='Q8W2S2']:checked").val()==="1"){
        if($("input[name='Q8W2S2S91']:checked").length==0 && $("input[name='Q8W2S2S92']:checked").length==0 && $("input[name='Q8W2S2S93']:checked").length==0 && $("input[name='Q8W2S2S94']:checked").length==0 && $("input[name='Q8W2S2S95']:checked").length==0 && $("input[name='Q8W2S2S96']:checked").length==0 && $("input[name='Q8W2S2S97']:checked").length==0){
-	     alert("Q6(b)(3) ii Please tick the type of groundwater recharge structure used in your school?");
-	    
-		}	
-	  } 
+       alert("Q6(b)(3) ii Please tick the type of groundwater recharge structure used in your school?");
+      
+    } 
+    } 
     /*Q6(b)(4)If your school practices rainwater harvesting, then what is the ratio between storage and recharge*/
    if($("input[name='Q8W2S2']:checked").val()==="1"){
       if($("input[name='Q8W2S2S10']:checked").length==0){
-	    alert("Q6(b)(4) If your school practices rainwater harvesting, then what is the ratio between storage and recharge?");
-	   
-	  }
+      alert("Q6(b)(4) If your school practices rainwater harvesting, then what is the ratio between storage and recharge?");
+     
+    }
    } 
    /*Q6(d) Please select (from the list given below) the rainwater harvesting structures present in your school? */
-   	 if($("input[name='Q8W2S2']:checked").val()==="1"){
-	   if($("input[name='Q8W2S31']:checked").length==0 && $("input[name='Q8W2S32']:checked").length==0 && $("input[name='Q8W2S33']:checked").length==0 && $("input[name='Q8W2S34']:checked").length==0 && $("input[name='Q8W2S35']:checked").length==0 && $("input[name='Q8W2S36']:checked").length==0 && $("input[name='Q8W2S37']:checked").length==0 && $("input[name='Q8W2S38']:checked").length==0){
-	     alert("Q6(d) Please select (from the list given below) the rainwater harvesting structures present in your school: ?");
-	    
-		}
-	 }  
+     if($("input[name='Q8W2S2']:checked").val()==="1"){
+     if($("input[name='Q8W2S31']:checked").length==0 && $("input[name='Q8W2S32']:checked").length==0 && $("input[name='Q8W2S33']:checked").length==0 && $("input[name='Q8W2S34']:checked").length==0 && $("input[name='Q8W2S35']:checked").length==0 && $("input[name='Q8W2S36']:checked").length==0 && $("input[name='Q8W2S37']:checked").length==0 && $("input[name='Q8W2S38']:checked").length==0){
+       alert("Q6(d) Please select (from the list given below) the rainwater harvesting structures present in your school: ?");
+      
+    }
+   }  
 });
 </script>
 <script>
@@ -4720,7 +4736,7 @@ nyanBtn15.addEventListener('click', function(){
 });
 </script>
 <style type="text/css">
-	   .form-group > label {
+     .form-group > label {
               font-family: 'Lato Bold', sans-serif;
               font-weight: normal;
               font-size: 16px;
@@ -4728,17 +4744,17 @@ nyanBtn15.addEventListener('click', function(){
               margin-bottom: 12px;
               color: #e86549;
            }
-		#btn,#btn1,#btn2,#btn3,#btn4,#btn5,#btn6,#btn7,#btn8,#btn9,#btn10,#btn11,#btn12,#btn13,#btn14,#btn15{ 
-		background: rgb(232, 101, 73);
+    #btn,#btn1,#btn2,#btn3,#btn4,#btn5,#btn6,#btn7,#btn8,#btn9,#btn10,#btn11,#btn12,#btn13,#btn14,#btn15{ 
+    background: rgb(232, 101, 73);
                 color: rgb(0, 0, 0);
                 box-shadow: rgba(0, 0, 0, 0.125) 0px 0px 0px 0px inset;
                 height: 20px;
                 position: relative;
                 padding-top: 0px;
-			font-weight:900;
-			display:none; 
-		}	
-	</style>
+      font-weight:900;
+      display:none; 
+    } 
+  </style>
 <script>
 $('#Q8W2S6A').change(function(){
 if($('#Q8W2_2').val()=='N'){
