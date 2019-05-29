@@ -32,6 +32,7 @@ class Land extends CI_Controller {
             $data['data'] = $this->Answer_model->getAnswers($argPost);
             $data['other'] = $this->Answer_model->getAllAnswers($argPost);
             $data['greenCover']=uploadHelper($this->session->userdata('USER_ID'), 'Green_Cover');
+	    $data['Vertical_Gardens']=uploadHelper($this->session->userdata('USER_ID'), 'Vertical_Gardens');	
             if(isset($data['other']['Q1G1']) && isset($data['other']['Q1G2']))
 	            if($data['other']['Q1G1'] < 6 && $data['other']['Q1G2'] < 6)
 	            {  //  print("Primaryland");
