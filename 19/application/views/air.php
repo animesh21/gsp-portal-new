@@ -513,7 +513,7 @@
       </div>
     </div>
     <div class="form-group" id="Ratio">
-      <label class="control-label"><span class="cube">2</span>To calculate the <b style="color: #000; font-weight: 900;">Window-floor ratio (WFRop) </b> of classrooms in
+      <label class="control-label"><span class="cube">2</span>To calculate the Window-floor ratio (WFRop)  of classrooms in
       your school, please fill the table below:</label>
       <div class="form-group1 row">
         <div class="col-xs-3">
@@ -523,7 +523,7 @@
           <label>X = Area of floor (LxB) (square meters)</label>
         </div>
         <div class="col-xs-3">
-          <label>Y = <b style="color: #000; font-weight: 900;">Area of openable windows/ventilators </b> ∑ (LxH)</label>
+          <label>Y = Area of openable windows/ventilators ∑ (LxH)</label>
         </div>
         <div class="col-xs-3">
           <label>Percentage of the floor area being ventilated (Y/X x 100)</label>
