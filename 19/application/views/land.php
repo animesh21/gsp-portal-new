@@ -16,6 +16,28 @@
     margin-left: 500px;
     text-shadow: 1px 1px 1px #000;
 }
+
+#land2019_1-error{
+    color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -35px !important;
+    position: absolute;
+    margin-left: 340px;
+    text-shadow: 1px 1px 1px #000;
+
+}
+
+#land2019_2-error{
+       
+        color: #fb4f2a !important;
+        font-size: 18px !important;
+        margin-top: -35px !important;
+        position: absolute;
+        margin-left: 570px;
+        text-shadow: 1px 1px 1px #000;
+
+}
+
     .bold {
         color: #e86549;
     }
@@ -590,8 +612,7 @@
       </div>
     </div>
     <div class="form-group">
-      <label><span class="cube">1A</span>Total green cover <a class="tt"
-                                                                    data-tooltip="Ideally, total green landscaped area on-ground available in school should be 35 per cent of total site area (in square meters), out of which 15 per cent should be from green landscaped area on ground."><span
+      <label><span class="cube">1A</span>Total green cover <a class="tt" data-tooltip="Ideally, total green landscaped area on-ground available in school should be 35 per cent of total site area (in square meters), out of which 15 per cent should be from green landscaped area on ground."><span
                             class="badge">?</span></a> </label>
     </div>
     <div class="form-group1 row">
@@ -747,6 +768,83 @@
                        placeholder="<?php if (isset($data['Q4L12'])) echo $data['Q4L12']; ?>"/>
       </div>
     </div>
+
+
+
+     <div class="form-group">
+      <label class="control-label"><span class="cube">2</span>Do you have vertical gardens in your school?</label>
+      <ul class="list-inline">
+        <li>
+          <label class="radio-inline text-gray">
+          <input type="radio" name="land2019_1" value="<?php echo set_value('land2019_1', 'Y') ?>" <?php if (isset($data['land2019_1'])) echo $data['land2019_1'] == 'Y' ? "checked" : "" ?>>
+          Yes </label>
+        </li>
+        <li>
+          <label class="radio-inline text-gray">
+          <input type="radio" name="land2019_1" value="<?php echo set_value('land2019_1', 'N') ?>" <?php if (isset($data['land2019_1'])) echo $data['land2019_1'] == 'N' ? "checked" : "" ?>>
+          No </label>
+        </li>
+      </ul>
+    </div> 
+
+
+            <div class="form-group" id="land2019_1_sec1"
+<?php
+if (isset($data['land2019_1'])) {
+if ($data['land2019_1'] == 'N') {
+echo 'style="display:none;"';
+} else {
+echo 'style="display:block;"';
+}
+} else {
+echo 'style="display:none;"';
+}
+?> >
+
+<br>
+                <button class="btn uploadbtn upload" data-id="Vertical Gardens"
+                data-toggle="modal" data-target="#airModal" type="button">UPLOAD
+    FILES </button>
+    <br>
+    <table width="100%" class="question uploadedfiles">
+      <thead>
+        <tr>
+          <!--   <th>Image</th>     -->
+          <th>File name</th>
+          <th>Delete</th>
+          <th>Download</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php //echo '<pre>'; print_r($greenCover);  ?>
+        <?php foreach ($Vertical_Gardens as $f) { ?>
+        <tr id="index<?php echo $f->id; ?>">
+          <?php 
+           // $array = explode('.',$f->file_name); 
+       // $count = count($array);
+      // $extension = $array[$count-1];
+                ?>
+          <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
+          <!--<td> <img style="width:62px; height:46px;" ;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $f->
+          file_name ?>" class="img-responsive" />
+          </td>
+          -->
+          <?php //}else{ ?>
+          <!--<td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>-->
+          <?php //}?>
+          <?php $name = str_replace(" ", "_", $f->name . "_Green_Cover_"); //echo $name; ?>
+          <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+          <td><a href="javascript:void(0)" class="air-delete-files"
+                           data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png"
+                                    style="position:relative; top:5px"/></a></td>
+          <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+        </tr>
+        <?php } ?>
+      </tbody>
+    </table>
+              </div>
+
+
     <div class="form-group">
       <label for="exampleInputEmail1">
       <div class="question-text">
@@ -781,7 +879,7 @@
       </label>
     </div>
     <div class="form-group">
-      <label class="control-label"><span class="cube">2</span>How many
+      <label class="control-label"><span class="cube">3</span>How many
       species of plants and animals exist
       in your school?</label>
       <table class="table" style="width:700px;">
@@ -845,24 +943,20 @@
     </div>
     <div class="form-group">
       <label>
-      <h6> Task 4: Find out if your school uses pesticides </h6>
+<h6> Task 4: Find out if your school uses pesticides </h6>
       </label>
     </div>
     <div class="form-group">
-      <label class="control-label"><span class="cube">3</span>Do you use
-      chemical-based pesticides in
-      your school green cover?</label>
+      <label class="control-label"><span class="cube">4</span>Do you use chemical-based pesticides in your school green cover?</label>
       <ul class="list-inline">
         <li>
           <label class="radio-inline text-gray">
-          <input type="radio" name="Q6L1"
-                               value="<?php echo set_value('Q6L1', 'Y') ?>" <?php if (isset($data['Q6L1'])) echo $data['Q6L1'] == 'Y' ? "checked" : "" ?>>
+          <input type="radio" name="Q6L1" value="<?php echo set_value('Q6L1', 'Y') ?>" <?php if (isset($data['Q6L1'])) echo $data['Q6L1'] == 'Y' ? "checked" : "" ?>>
           Yes </label>
         </li>
         <li>
           <label class="radio-inline text-gray">
-          <input type="radio" name="Q6L1"
-                               value="<?php echo set_value('Q6L1', 'N') ?>" <?php if (isset($data['Q6L1'])) echo $data['Q6L1'] == 'N' ? "checked" : "" ?>>
+          <input type="radio" name="Q6L1" value="<?php echo set_value('Q6L1', 'N') ?>" <?php if (isset($data['Q6L1'])) echo $data['Q6L1'] == 'N' ? "checked" : "" ?>>
           No </label>
         </li>
       </ul>
@@ -887,7 +981,7 @@
     <table width="100%" class="question uploadedfiles">
       <thead>
         <tr>
-          <!--   <th>Image</th>	    -->
+          <!--   <th>Image</th>     -->
           <th>File name</th>
           <th>Delete</th>
           <th>Download</th>
@@ -898,9 +992,9 @@
         <?php foreach ($greenCover as $f) { ?>
         <tr id="index<?php echo $f->id; ?>">
           <?php 
-	    	   // $array = explode('.',$f->file_name); 
-		   // $count = count($array);
-		  // $extension = $array[$count-1];
+           // $array = explode('.',$f->file_name); 
+       // $count = count($array);
+      // $extension = $array[$count-1];
                 ?>
           <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
           <!--<td> <img style="width:62px; height:46px;" ;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $f->
@@ -958,105 +1052,113 @@
 
 
 <script>
-	jQuery(document).ready(function(){
-	
-	jQuery('#land').validate({
-		rules:{
-		      Q1L1S1:{
-				  required:true,
-			  },
+  jQuery(document).ready(function(){
+  
+  jQuery('#land').validate({
+    rules:{
+          Q1L1S1:{
+          required:true,
+        },
                Q1L1S3:{
-				  required:true,
-			  },
-					Q1L1S2:{
-								 required:true,
-							},
-					Q2L1S1:{
-									  required:true,
-						   },
-					Q2L1S3:{
-									  required:true,
-						   },
-					Q2L1S2:{
-									  required:true,
-							},
-					Q3L1S1:{
-									  required:true,
-							},
-					Q3L1S2:{
-									  required:true,
-						},
-					Q3L1S3:{
-									  required:true,
-						},
-					Q4L1:{
-									  required:true,
-							},
-					Q4L2:{
-									  required:true,
-						},
-					Q4L3:{
-									  required:true,
-						},
-					Q4L4:{
-									  required:true,
-						},
-					Q4L6:{
-									  required:true,
-							},
-					Q4L7:{
-									  required:true,
-						},
-					Q4L8:{
-									  required:true,
-						 },
-					Q4L9:{
-									  required:true,
-						  },
-					Q4L10:{
-									  required:true,
-						  },
-					Q4L12:{
-									  required:true,
-						  },
-					Q5L1S1:{
-									  required:true,
-						 },
-							Q5L1S2:{
-																  required:true,
-													 },
-							Q5L2S1:{
-																  required:true,
-													 },
-							Q5L2S2:{
-																  required:true,
-													 },
-							Q6L1:{
-																  required:true,
-													 },
-Q4L11:{
-																  required:true,
-													 }
-			  
-		}
+          required:true,
+        },
+          Q1L1S2:{
+                 required:true,
+              },
+          Q2L1S1:{
+                    required:true,
+               },
+          Q2L1S3:{
+                    required:true,
+               },
+          Q2L1S2:{
+                    required:true,
+              },
+          Q3L1S1:{
+                    required:true,
+              },
+          Q3L1S2:{
+                    required:true,
+            },
+          Q3L1S3:{
+                    required:true,
+            },
+          Q4L1:{
+                    required:true,
+              },
+          Q4L2:{
+                    required:true,
+            },
+          Q4L3:{
+                    required:true,
+            },
+          Q4L4:{
+                    required:true,
+            },
+          Q4L6:{
+                    required:true,
+              },
+          Q4L7:{
+                    required:true,
+            },
+          Q4L8:{
+                    required:true,
+             },
+          Q4L9:{
+                    required:true,
+              },
+          Q4L10:{
+                    required:true,
+              },
+          Q4L12:{
+                    required:true,
+              },
+          Q5L1S1:{
+                    required:true,
+             },
+              Q5L1S2:{
+                                  required:true,
+                           },
+              Q5L2S1:{
+                                  required:true,
+                           },
+              Q5L2S2:{
+                                  required:true,
+                           },
+              Q6L1:{
+                                  required:true,
+                           },
+                       Q4L11:{
+                                  required:true,
+                            },
+                            land2019_1:{
+
+                              required:true,
+                            },
+                            land2019_2:{
+
+                              required:true,
+                            }
+        
+    }
        
-	});
-	});
-	
-	jQuery('#movenextbtn').click(function(e){
-		
-		
-		$r=jQuery('#land').valid();
-		if($r == false)
-		{
-			   e.preventDefault();
-			   jQuery('#land').valid();
-		}
-		
-		
-	});
-	
-	</script>
+  });
+  });
+  
+  jQuery('#movenextbtn').click(function(e){
+    
+    
+    $r=jQuery('#land').valid();
+    if($r == false)
+    {
+         e.preventDefault();
+         jQuery('#land').valid();
+    }
+    
+    
+  });
+  
+  </script>
 
 
 <script type="text/javascript">
@@ -1168,31 +1270,31 @@ $(document).ready(function(){
     if (evt.which != 8 && evt.which != 0 && evt.which < 45 || evt.which > 57)
     {
         evt.preventDefault();
-	    if(evt.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+      if(evt.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
     }
   });
   $('input[type=number]').on('wheel', function(e){
     return false;
-  });	
+  }); 
 });
 /*Validation For Ground Coverage Area*/
 $("input[name='Q4L2']").change(function(){
   if($(this).val()==0){
     alert("Zero as an entry should not be allowed.");
-	$("input[name='Q4L2']").attr('placeholder','Please enter correct data');
-	$("input[name='Q4L2']").val(' ');
+  $("input[name='Q4L2']").attr('placeholder','Please enter correct data');
+  $("input[name='Q4L2']").val(' ');
   }
 });
 /*Validation For Total built-up/constructed area*/
 $("input[name='Q4L11']").change(function(){
   if($(this).val()==0){
     alert("Zero as an entry should not be allowed.");
-	$("input[name='Q4L11']").attr('placeholder','Please enter correct data');
-	$("input[name='Q4L11']").val(' ');
+  $("input[name='Q4L11']").attr('placeholder','Please enter correct data');
+  $("input[name='Q4L11']").val(' ');
   }
-});		
+});   
 </script>
 <script>
 /*Teacher Record Validation*/
@@ -1202,9 +1304,9 @@ if($("#Q1L1S1").attr('placeholder')==""  || $("#Q1L1S3").attr('placeholder')==""
 if($("#Q1L1S1").val()==""  || $("#Q1L1S3").val()==""  || $("#Q1L1S2").val()==""){ 
 alert("School Must Add Teacher First Name, Last Name & Email ID.");
 e.preventDefault();
-	if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+  if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
 }
 }
 });
@@ -1215,9 +1317,9 @@ if($("#Q2L1S1").attr('placeholder')==""  || $("#Q2L1S3").attr('placeholder')==""
 if($("#Q2L1S1").val()=="" || $("#Q2L1S3").val()==""  || $("#Q2L1S2").val()==""){  
 alert("School Must Add Administrative Staff  First Name, Last Name & Email ID.");
 e.preventDefault();
-	if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+  if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
 }
 }
 });
@@ -1228,9 +1330,9 @@ if($("#Q3L1S1").attr('placeholder')==""  || $("#Q3L1S2").attr('placeholder')==""
 if($("#Q3L1S1").val()==""  || $("#Q3L1S2").val()==""  || $("#Q3L1S3").val()==""){ 
 alert("School Must Add Student  First Name, Last Name & Grade.");
 e.preventDefault();
-	if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+  if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
 }
 }
 });
@@ -1239,96 +1341,116 @@ e.preventDefault();
 $("#movenextbtn").click(function(e){ 
   if($("input[name='Q4L1']").val()==""){
     alert("Site area in square meter (m2)");
-	   e.preventDefault();
-	  if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+     e.preventDefault();
+    if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
   }
   if($("input[name='Q4L2']").val()==""){
     alert("Ground coverage area");
-	   e.preventDefault();
-	  if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+     e.preventDefault();
+    if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
   }
   if($("input[name='Q4L3']").val()==""){
     alert("Green Landscaped area on ground");
-	   e.preventDefault();
-	  if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+     e.preventDefault();
+    if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
   }
   if($("input[name='Q4L4']").val()==""){
     alert("Play area that has grass on ground");
-	   e.preventDefault();
-	  if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+     e.preventDefault();
+    if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
   }
   if($("input[name='Q4L6']").val()==""){
     alert("Play area that is paved/concrete on ground");
-	   e.preventDefault();
-	  if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+     e.preventDefault();
+    if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
   }
   if($("input[name='Q4L7']").val()==""){
     alert("Surface parking area");
-	   e.preventDefault();
-	  if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+     e.preventDefault();
+    if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
   }
   if($("input[name='Q4L8']").val()==""){
     alert("Surface parking area");
-	   e.preventDefault();
-	  if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+     e.preventDefault();
+    if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
   }
   if($("input[name='Q4L9']").val()=="" || $("input[name='Q4L9']").val()==='m²'){
     alert("Roof and terrace area");
-	   e.preventDefault();
-	  if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+     e.preventDefault();
+    if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
   }
   if($("input[name='Q4L10']").val()=="" || $("input[name='Q4L9']").val()==='m²'){
     alert("Green cover on exposed roof and terrace");
-	   e.preventDefault();
-	  if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+     e.preventDefault();
+    if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
   }
   if($("input[name='Q4L11']").val()=="" || $("input[name='Q4L9']").val()==='m²'){
     alert("Total built-up/constructed area");
-	   e.preventDefault();
-	  if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+     e.preventDefault();
+    if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
   }
   if($("input[name='Q4L12']").val()=="" || $("input[name='Q4L9']").val()==='m²'){
     alert("Total number of floors (excluding ground floor)");
-	   e.preventDefault();
-	  if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
-  }	
+     e.preventDefault();
+    if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
+  } 
 });
 /*Validation Code Used For Q2*/
 /*How many species of plants and animals exist in your school? */
 $("#movenextbtn").click(function(e){ 
   if($("input[name='Q5L1S1']").val()=="" || $("input[name='Q5L1S2']").val()=="" || $("input[name='Q5L2S1']").val()=="" || $("input[name='Q5L2S2']").val()==""){
     alert("Q2: How many species of plants and animals exist in your school?");
-	   e.preventDefault();
-	  if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+     e.preventDefault();
+    if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
     /**Q3 Do you use chemical-based pesticides in your school green cover?**/
   if($("input[name='Q6L1']:checked").length==0){
     alert("Q3: Do you use chemical-based pesticides in your school green cover?");
-	e.preventDefault();
-  }	  
-  }	
-});	
+  e.preventDefault();
+  }   
+  } 
+}); 
+</script>
+
+<script type="text/javascript">
+  
+ $("input[name='land2019_1']").click(function(){
+
+    var t = $(this).val();
+    if(t == 'Y')
+    {
+          $('#land2019_1_sec1').show();
+
+    }else{
+
+      $('#land2019_1_sec1').hide();
+    }
+
+
+ });
+
+
 </script>
