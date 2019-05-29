@@ -2082,7 +2082,10 @@ if (isset($data['Q9A1']))
 			  },
 			  Q8A1:{
 				   required:true,
-			  }
+			  },
+			 Q9A2:{
+                            required:true,
+                          }
 			 
 		}
        
