@@ -6,6 +6,16 @@
   font-size: 18px !important;
   text-shadow: 1px 1px 1px #000;
 }
+	
+	#Q9A2-error{
+
+  color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -35px !important;
+    position: absolute;
+    margin-left: 689px;
+    text-shadow: 1px 1px 1px #000;
+}
 
 #Q6A1-error
 {
