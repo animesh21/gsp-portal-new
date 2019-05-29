@@ -484,7 +484,7 @@
       <div class="clearfix">&nbsp;</div>
       <div class="form-group">
         <label>
-        <h6>Task 2: Are the rooms in your school well-ventilated ?</h6>
+        <h6>Task 2: Are the rooms in your school well-ventilated?</h6>
         </label>
         <br>
         1. For this exercise, classrooms that are occupied by students regularly should be considered. Do not
