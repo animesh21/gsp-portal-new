@@ -5282,6 +5282,8 @@ function RainwaterHarvest(type)
     {
         document.getElementById("Q8W2S2S1").style.display = 'block';
         document.getElementById("Q8W2S2S2").style.display = 'block';
+	    $('#Q8W2S2S2_2').prop("checked",false);
+            $('#Q8W2S2S2_1').prop("checked",true);
         document.getElementById("Q8W2S27").style.display = 'block';
         document.getElementById("Q8W2S2S10").style.display = 'block';
     }
@@ -5290,7 +5292,8 @@ function RainwaterHarvest(type)
         document.getElementById("Q8W2S2S1").style.display = 'none';
         document.getElementById("Q8W2S2S2").style.display = 'none';
         Storage(2);
-        $('#Q8W2S2S2_2').prop("checked",true);
+         $('#Q8W2S2S2_2').prop("checked",true);
+         $('#Q8W2S2S2_1').prop("checked",false);
         document.getElementById("Q8W2S27").style.display = 'none';
         Recharge(2);
         document.getElementById("Q8W2S2S10").style.display = 'none';
