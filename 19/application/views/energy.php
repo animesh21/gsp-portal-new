@@ -1645,53 +1645,8 @@ if (isset($data['Q9E1']))
 			  },
 			  Q6E4S3:{
 				  required:true,
-			  },
-			Q6E3S1:{
-			  required:true,
-			},
-			Q6E1S1:{
-			  required:true,
-			},
-			Q6E2S1:{
-			  required:true,
-			},
-			Q6E4S1:{
-			  required:true,
-			},
-			Q6E5S1:{
-			  required:true,
-			},
-			Q6E6S1:{
-			  required:true,
-			},
-			Q6E7S1:{
-			  required:true,
-			},
-			Q6E16S1:{
-			  required:true,
-			},
-			Q6E8S1:{
-			  required:true,
-			},
-			Q6E9S1:{
-			  required:true,
-			},
-			Q6E10S1:{
-			  required:true,
-			},
-			Q6E11S1:{
-			  required:true,
-			},
-			Q6E12S1:{
-			  required:true,
-			},
-			Q6E13S1:{
-			  required:true,
-			},
-			Q6E14S1:{
-			  required:true,
-			}
-
+			  }
+			  
 			 
 		}
        
