@@ -1418,24 +1418,19 @@ To understand water, it is important to know the source of water in your school 
       No </label>
     </div>
     <div class="form-group">
-      <label class="radio-inline text-gray col-xs-10"> Does your school grow local plant
-      species which require limited amount of water to grow? </label>
+      <label class="radio-inline text-gray col-xs-10"> Does your school grow local plant species which require limited amount of water to grow? </label>
       <label class="radio-inline text-gray">
       <?php
-                                        if (empty($data['Q8W1S8']))
-                                            if (isset($other['Q5L1S3']))
-                                                if (isset($other['Q5L1S3'])) {
-                                                    $data['Q8W1S8'] = 'Y';
-                                                }
-                                        ?>
-      <input type="hidden" id="Q5L1S3"
-                                               value="<?php if (isset($other['Q5L1S3'])) echo $other['Q5L1S3']; ?>">
-      <input type="radio" id="Q8W1S8_1" name="Q8W1S8"
-                                               value="<?php echo set_value('Q8W1S8', 'Y') ?>" <?php if (isset($data['Q8W1S8'])) echo $data['Q8W1S8'] == 'Y' ? "checked" : "" ?>>
+             if (empty($data['Q8W1S8']))
+                 if (isset($other['Q5L1S3']))
+                    if (isset($other['Q5L1S3'])) {
+                              $data['Q8W1S8'] = 'Y';
+                                                } ?>
+      <input type="hidden" id="Q5L1S3"  value="<?php if (isset($other['Q5L1S3'])) echo $other['Q5L1S3']; ?>">
+      <input type="radio" id="Q8W1S8_1" name="Q8W1S8" value="<?php echo set_value('Q8W1S8', 'Y') ?>" <?php if (isset($data['Q8W1S8'])) echo $data['Q8W1S8'] == 'Y' ? "checked" : "" ?>>
       Yes </label>
       <label class="radio-inline text-gray">
-      <input type="radio" id="Q8W1S8_2" name="Q8W1S8"
-                                               value="<?php echo set_value('Q8W1S8', 'N') ?>" <?php if (isset($data['Q8W1S8'])) echo $data['Q8W1S8'] == 'N' ? "checked" : "" ?>>
+      <input type="radio" id="Q8W1S8_2" name="Q8W1S8" value="<?php echo set_value('Q8W1S8', 'N') ?>" <?php if (isset($data['Q8W1S8'])) echo $data['Q8W1S8'] == 'N' ? "checked" : "" ?>>
       No </label>
     </div>
     <div class="form-group">
@@ -1786,11 +1781,10 @@ To understand water, it is important to know the source of water in your school 
   <div class="form-group">
     <label class="radio-inline text-gray">
     <input type="radio" name="Q8W2S2S2" onClick="Storage(1)"
-                                           value="<?php echo set_value('Q8W2S2S2', 'Y') ?>" <?php if (isset($data['Q8W2S2S2'])) echo $data['Q8W2S2S2'] == 'Y' ? "checked" : "" ?>>
+        value="<?php echo set_value('Q8W2S2S2', 'Y') ?>" <?php if (isset($data['Q8W2S2S2'])) echo $data['Q8W2S2S2'] == 'Y' ? "checked" : "" ?>>
     Yes </label>
     <label class="radio-inline text-gray">
-    <input type="radio" id="Q8W2S2S2_2" name="Q8W2S2S2" onClick="Storage(2)"
-                                           value="<?php echo set_value('Q8W2S2S2', 'N') ?>" <?php if (isset($data['Q8W2S2S2'])) echo $data['Q8W2S2S2'] == 'N' ? "checked" : "" ?>/>
+    <input type="radio" id="Q8W2S2S2_2" name="Q8W2S2S2" onClick="Storage(2)" value="<?php echo set_value('Q8W2S2S2', 'N') ?>" <?php if (isset($data['Q8W2S2S2'])) echo $data['Q8W2S2S2'] == 'N' ? "checked" : "" ?>/>
     No </label>
   </div>
 </div>
@@ -4004,6 +3998,18 @@ $("input[name='Q19W11']").click(function(){
   else{$("#new_question17_a_ii").removeClass("hide");}
 });
 
+$(document).ready(function(){
+
+if($("input[name='Q19W11']:checked").val()=='1'){
+
+  $("#new_question17_a_ii").addClass("hide");
+}else{
+  $("#new_question17_a_ii").removeClass("hide");
+}
+
+
+  });
+
 /*Validation For Question 17(a)(ii)*/
 /*Where does the water get treated?*/
 /*Load Event On Body*/
@@ -4188,6 +4194,9 @@ $("input[name='Q8W2']").click(function(){
        $("input[name='Q8W2S1'][value='N']").prop("checked",false);
    }
      $("input[name='Q8W2S1'][value='Y']").prop("checked",true);
+     $("#Q8W2S1S1").css("display","");
+     $("#Q8W2S1S1").css("display","block");
+
   }
 });
 $("input[name='Q8W2S1']").click(function(){
@@ -4195,6 +4204,8 @@ $("input[name='Q8W2S1']").click(function(){
       if($("input[name='Q8W2S1']:checked").val()==="N"){
      alert("Since your school has RWH system, please select ‘Yes’.");
        $("input[name='Q8W2S1'][value='Y']").prop("checked",true);
+       $("#Q8W2S1S1").css("display","");
+       $("#Q8W2S1S1").css("display","block");
       }
    }
 });
@@ -4207,6 +4218,8 @@ $(document).ready(function(){
        $("input[name='Q8W2S1'][value='N']").prop("checked",false);
    }
      $("input[name='Q8W2S1'][value='Y']").prop("checked",true);
+     $("#Q8W2S1S1").css("display","");
+       $("#Q8W2S1S1").css("display","block");
   }
 });
 });
