@@ -601,7 +601,7 @@ $(document).ready(function(){
             var x = $('#Q8W1S8_2').is(":checked");
             if(x == true)
             {
-                if (confirm("You have Entered value for Exotic plants, Please select 'Yes'") == true)
+                if (confirm("You have Entered value for native plants, Please select 'Yes'") == true)
                 {
 
                     $('#Q8W1S8_1').prop('checked',true);
