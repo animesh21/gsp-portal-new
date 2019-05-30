@@ -1780,7 +1780,7 @@ To understand water, it is important to know the source of water in your school 
   <label><span class="cube">6(b)(2)</span> Does your school have rainwater storage tank? </label>
   <div class="form-group">
     <label class="radio-inline text-gray">
-    <input type="radio" name="Q8W2S2S2" onClick="Storage(1)"
+    <input type="radio" id="Q8W2S2S2_1" name="Q8W2S2S2" onClick="Storage(1)"
         value="<?php echo set_value('Q8W2S2S2', 'Y') ?>" <?php if (isset($data['Q8W2S2S2'])) echo $data['Q8W2S2S2'] == 'Y' ? "checked" : "" ?>>
     Yes </label>
     <label class="radio-inline text-gray">
@@ -3906,7 +3906,11 @@ $(document).ready(function(){
   else{$(".question_Q8W1S12").addClass("hide");}
   /**/
   if($("input[name='Q8W2S2']:checked").val()==3){
-   $("input[name='Q8W2S2S2']").attr("checked",true);
+   $("#Q8W2S2S2_1").attr("checked",true);
+   $("#Q8W2S2S2_2").attr("checked",false);
+  }else{
+    $("#Q8W2S2S2_1").attr("checked",false);
+    $("#Q8W2S2S2_2").attr("checked",true);
   }
   /**/
   if($("input[name='Q8W2S2']:checked").val()==3){
