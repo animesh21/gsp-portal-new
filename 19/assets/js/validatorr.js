@@ -3471,20 +3471,20 @@ function ElectricityBill(type)
     {
 
         document.getElementById("ebill").style.display = 'block';
-        $("#Q6E1S1").prop('required',true);
-        $("#Q6E1S3").prop('required',true);
-        $("#Q6E1S1").prop('min',1);
-        $("#Q6E1S3").prop('min',1);
+        // $("#Q6E1S1").prop('required',true);
+        // $("#Q6E1S3").prop('required',true);
+        // $("#Q6E1S1").prop('min',1);
+        //$("#Q6E1S3").prop('min',1);
 
 
     }
     if(type == 2)
     {
         document.getElementById("ebill").style.display = 'none';
-        $("#Q6E1S1").prop('required',true);
-        $("#Q6E1S3").prop('required',true);
-        $("#Q6E1S1").prop('min',0);
-        $("#Q6E1S3").prop('min',0);
+        // $("#Q6E1S1").prop('required',true);
+        // $("#Q6E1S3").prop('required',true);
+        // $("#Q6E1S1").prop('min',0);
+        //$("#Q6E1S3").prop('min',0);
 
     }
 }
