@@ -3918,6 +3918,8 @@ $(document).ready(function(){
   }
   if($("input[name='Q8W2S2S2']:checked").val()==='Y'){
      $("#Q8W2S2S3,#Q8W2S2S4,#Q8W2S2S5,#Q8W2S2S6").css("display","block");
+  }else{
+     $("#Q8W2S2S3,#Q8W2S2S4,#Q8W2S2S5,#Q8W2S2S6").css("display","none");
   }
   if($("input[name='Q8W2S2S7']:checked").val()==='Y'){
      $("#Q8W2S2S8,#Q8W2S2S9").css("display","block");
