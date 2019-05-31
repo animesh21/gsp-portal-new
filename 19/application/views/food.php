@@ -686,14 +686,14 @@ value="<?php echo set_value('Q3F10S3'); ?>"/>
 <input type="hidden" id="Q4G1S3" value="<?php if (isset($other['Q4G1S3'])) echo $other['Q4G1S3'] ?>"/>
 <div class="form-group">
   <label>
-  <h6>Task 2: Find out about the food service in your school.<a class="tt" data-tooltip="Any place, permanent or temporary, run by school, outsourced to vendors, self help groups, shopkeepers to sell products during/after/before school timings/duration should be considered."><span
+  <h6>Task 2: Find out about the food service in your school.<a class="tt" data-tooltip="Any place, permanent or temporary (like canteen, tuck shop, etc), run by school, outsourced to vendors or self help groups or shopkeepers, to sell products during/after/before schools hours should be considered. If the space is limited please create the table in a word document and upload as attachment. Option to upload has been provided at the end of the section."><span
 class="badge">?</span></a></h6>
   </label>
   <div class="form-group">
     <input type="hidden" id="Q1S1" value="<?php if (isset($other['Q1S1'])) echo $other['Q1S1']; ?>">
     <?php if (empty($data['Q4F1'])) if (isset($other['Q1S1'])) if ($other['Q1S1'] >= 3) $data['Q4F1'] = 'Y' ?>
     <label class="control-label"><span class="cube">1</span> Does your school have a provision/space
-    to sell packaged food items within the campus<a class="tt" data-tooltip="Packaged food is any food item which is commercially prepared, processed for a longer shelf life and is ready to eat and drink"><span
+    to sell packaged food items within the campus<a class="tt" data-tooltip="Packaged food is any food item which is commercially prepared, processed for a longer shelf life and is ready to eat and drink. Packaged food items are of various flavours such as chips, instant noodles, soft drinks and chocolates are ultra-processed, aggressively marketed, cheaper and more easily available than fresh-food options. They have chemical additives as these are not freshly prepared."><span
 class="badge">?</span></a>
     <audio controls id="BEEstarrating" style="float:left;" class="hide">
       <source src="<?php echo base_url(); ?>assets/audio-files/Whole day meals.MP3" type="audio/mpeg">
