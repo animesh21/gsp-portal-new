@@ -8,7 +8,7 @@
 
 #Q1Fe1-error
 {
-	color: #fb4f2a !important;
+    color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -35px !important;
     position: absolute;
@@ -16,9 +16,19 @@
     text-shadow: 1px 1px 1px #000;
 }
 
+
+#feedback2019_2-error{
+    color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -35px !important;
+    position: absolute;
+    margin-left: 455px;
+    text-shadow: 1px 1px 1px #000;
+}
+
 #Q1Fe2-error
 {
-	color: #fb4f2a !important;
+    color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -35px !important;
     position: absolute;
@@ -28,7 +38,7 @@
 
 #Q1Fe3-error
 {
-	color: #fb4f2a !important;
+    color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -35px !important;
     position: absolute;
@@ -38,7 +48,7 @@
 
 #Q1Fe4-error
 {
-		color: #fb4f2a !important;
+        color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -35px !important;
     position: absolute;
@@ -48,7 +58,7 @@
 
 #Q8Fe1-error
 {
-	color: #fb4f2a !important;
+    color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -3px !important;
     position: absolute;
@@ -57,7 +67,7 @@
 }
 
 #Q8Fe2-error{
-	color: #fb4f2a !important;
+    color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -3px !important;
     position: absolute;
@@ -67,7 +77,7 @@
 
 #Q8Fe3-error
 {
-	color: #fb4f2a !important;
+    color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -3px !important;
     position: absolute;
@@ -77,7 +87,7 @@
 
 #Q1Fe7-error
 {
-	color: #fb4f2a !important;
+    color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -35px !important;
     position: absolute;
@@ -87,17 +97,17 @@
 
 #Q1Fe8-error
 {
-	color: #fb4f2a !important;
+    color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -35px !important;
     position: absolute;
     margin-left: 524px;
-    text-shadow: 1px 1px 1px #000; 	
+    text-shadow: 1px 1px 1px #000;  
 }
 
 #Q1Fe9-error
 {
-	color: #fb4f2a !important;
+    color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -35px !important;
     position: absolute;
@@ -107,7 +117,7 @@
 
 #Q1Fe10-error
 {
-	color: #fb4f2a !important;
+    color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -35px !important;
     position: absolute;
@@ -117,7 +127,7 @@
 
 #Q1Fe11-error
 {
-	color: #fb4f2a !important;
+    color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -35px !important;
     position: absolute;
@@ -169,7 +179,7 @@
             </ul>
         </div>
         <div class="form-group hide" id="Question1a"
-	     <?php
+         <?php
 if (isset($data['Q1Fe1'])) {
     if ($data['Q1Fe1'] == 'Y') {
         echo 'style="display:block;"';
@@ -183,7 +193,7 @@ if (isset($data['Q1Fe1'])) {
             <label><span class="cube">1(a)</span> If your answer is yes, in which year did your school first participate
                 in the audit? </label>
             <input type="text" name="Q1Fe211" id="Q1Fe211" class="form-control"
-				   placeholder="<?php if (isset($data['Q1Fe211'])) echo $data['Q1Fe211']; ?>"
+                   placeholder="<?php if (isset($data['Q1Fe211'])) echo $data['Q1Fe211']; ?>"
                            value="<?php echo set_value('Q1Fe211'); ?>"/>
         </div>
         <div class="form-group hide" id="Question1b"
@@ -197,12 +207,12 @@ if (isset($data['Q1Fe1'])) {
 } else {
     echo 'style="display:none;"';
 }
-?> >	     
-	
+?> >         
+    
             <label><span class="cube">1(b)</span> If your answer is yes, how many times have you done the audit?
             </label>
             <input type="text" name="Q1Fe212" id="Q1Fe212" class="form-control"
-				   placeholder="<?php if (isset($data['Q1Fe212'])) echo $data['Q1Fe212']; ?>"
+                   placeholder="<?php if (isset($data['Q1Fe212'])) echo $data['Q1Fe212']; ?>"
                            value="<?php echo set_value('Q1Fe212'); ?>"/>
         </div>
         <div class="form-group">
@@ -224,7 +234,7 @@ if (isset($data['Q1Fe1'])) {
             </ul>
         </div>
         <div class="form-group hide" id="Question2a"
-	     <?php
+         <?php
 if (isset($data['Q1Fe2'])) {
     if ($data['Q1Fe2'] == 'Y') {
         echo 'style="display:block;"';
@@ -237,7 +247,7 @@ if (isset($data['Q1Fe2'])) {
 ?> >
             <label><span class="cube">2(a)</span> If your answer is no, please share your suggestions: </label>
             <input type="text" name="Q1Fe221" id="Q1Fe221" class="form-control"
-				   placeholder="<?php if (isset($data['Q1Fe221'])) echo $data['Q1Fe221']; ?>"
+                   placeholder="<?php if (isset($data['Q1Fe221'])) echo $data['Q1Fe221']; ?>"
                            value="<?php echo set_value('Q1Fe221'); ?>"/>
         </div>
         <div class="form-group">
@@ -276,7 +286,7 @@ if (isset($data['Q1Fe2'])) {
             </ul>
         </div>
         <div class="form-group hide" id="Question4a"
-	      <?php
+          <?php
 if (isset($data['Q1Fe4'])) {
     if ($data['Q1Fe4'] == 'Y') {
         echo 'style="display:block;"';
@@ -289,14 +299,14 @@ if (isset($data['Q1Fe4'])) {
 ?> >
             <label><span class="cube">4(a)</span> If your answer is no, why? </label>
             <input type="text" name="Q1Fe411" id="Q1Fe411" class="form-control"
-				    placeholder="<?php if (isset($data['Q1Fe411'])) echo $data['Q1Fe411']; ?>"
+                    placeholder="<?php if (isset($data['Q1Fe411'])) echo $data['Q1Fe411']; ?>"
                            value="<?php echo set_value('Q1Fe411'); ?>"/>
         </div>
         <div class="form-group">
             <label><span class="cube">5</span> What would be the help required to make your school a Green School?
             </label>
             <input type="text" name="Q1Fe511" id="Q1Fe511" class="form-control"
-				   placeholder="<?php if (isset($data['Q1Fe511'])) echo $data['Q1Fe511']; ?>"
+                   placeholder="<?php if (isset($data['Q1Fe511'])) echo $data['Q1Fe511']; ?>"
                            value="<?php echo set_value('Q1Fe511'); ?>"/>
         </div>
         <div class="form-group">
@@ -389,7 +399,7 @@ if (isset($data['Q1Fe4'])) {
             </ul>
         </div>
         <div class="form-group hide" id="Question7a"
-	        <?php
+            <?php
 if (isset($data['Q1Fe7'])) {
     if ($data['Q1Fe7'] == 'Y') {
         echo 'style="display:block;"';
@@ -402,7 +412,7 @@ if (isset($data['Q1Fe7'])) {
 ?>>
             <label><span class="cube">7(a)</span> If your answer is yes, please share your suggestions: </label>
             <input type="text" name="Q1Fe711" id="Q1Fe711" class="form-control"
-				   placeholder="<?php if (isset($data['Q1Fe711'])) echo $data['Q1Fe711']; ?>"
+                   placeholder="<?php if (isset($data['Q1Fe711'])) echo $data['Q1Fe711']; ?>"
                            value="<?php echo set_value('Q1Fe711'); ?>"/>
         </div>
         <div class="form-group">
@@ -454,9 +464,15 @@ if (isset($data['Q1Fe7'])) {
             </ul>
         </div>
         <div class="form-group">
-            <label><span class="cube">10</span> Water being the focus of this year, did you find the questionnaire in
-                Water section helpful to make schools understand how to become water efficient? </label>
-            <ul class="list-inline">
+            <label><span class="cube">10</span> Does your school have an alumni network? If yes, please give the frequency alumni meeting in the box below. <a
+                            class="tt"
+                            data-tooltip="Alumni network is a meeting/reunion of all the passed out students from your school in past years"
+                    ><span class="badge">?</span></a> </label>
+        <input class="form-control space-textbox" id="feedback2019_1" type="text" name="feedback2019_1"
+                               placeholder="<?php if (isset($data['feedback2019_1'])) echo $data['feedback2019_1'] ?>"
+                               value="<?php echo set_value('feedback2019_1'); ?>"/>
+        
+            <!-- <ul class="list-inline">
                 <li>
                     <label class="radio-inline">
                         <input type="radio" name="Q1Fe10"
@@ -469,10 +485,10 @@ if (isset($data['Q1Fe7'])) {
                                value="<?php echo set_value('Q1Fe10', 'N') ?>" <?php if (isset($data['Q1Fe10'])) echo $data['Q1Fe10'] == 'N' ? "checked" : "" ?>>
                         No</label>
                 </li>
-            </ul>
+            </ul> -->
         </div>
         <div class="form-group hide" id="Question10a"
-	     <?php
+         <?php
 if (isset($data['Q1Fe10'])) {
     if ($data['Q1Fe10'] == 'Y') {
         echo 'style="display:block;"';
@@ -485,7 +501,7 @@ if (isset($data['Q1Fe10'])) {
 ?>>
             <label><span class="cube">10(a)</span> If your answer is no, please share your suggestions </label>
             <input type="text" name="Q1Fe1011" id="Q1Fe1011" class="form-control"
-				    placeholder="<?php if (isset($data['Q1Fe1011'])) echo $data['Q1Fe1011']; ?>"
+                    placeholder="<?php if (isset($data['Q1Fe1011'])) echo $data['Q1Fe1011']; ?>"
                            value="<?php echo set_value('Q1Fe1011'); ?>"/>
         </div>
         <div class="form-group">
@@ -506,7 +522,7 @@ if (isset($data['Q1Fe10'])) {
             </ul>
         </div>
         <div class="form-group hide" id="Question11a"
-	       <?php
+           <?php
 if (isset($data['Q1Fe11'])) {
     if ($data['Q1Fe11'] == 'Y') {
         echo 'style="display:block;"';
@@ -520,11 +536,11 @@ if (isset($data['Q1Fe11'])) {
             <label><span class="cube">11(a)</span> If your answer is yes, why did they enjoy doing outdoor activities?
             </label>
             <input type="text" name="Q1Fe1111" id="Q1Fe1111" class="form-control"
-				   placeholder="<?php if (isset($data['Q1Fe1111'])) echo $data['Q1Fe1111']; ?>"
+                   placeholder="<?php if (isset($data['Q1Fe1111'])) echo $data['Q1Fe1111']; ?>"
                            value="<?php echo set_value('Q1Fe1111'); ?>"/>
         </div>
         <div class="form-group hide" id="Question11b"
-	       <?php
+           <?php
 if (isset($data['Q1Fe11'])) {
     if ($data['Q1Fe11'] == 'N') {
         echo 'style="display:block;"';
@@ -537,23 +553,47 @@ if (isset($data['Q1Fe11'])) {
 ?>>
             <label><span class="cube">11(a)</span>If your answer is no, please state why? </label>
             <input type="text" name="Q1Fe1112" id="Q1Fe1112" class="form-control"
-				   placeholder="<?php if (isset($data['Q1Fe1112'])) echo $data['Q1Fe1112']; ?>"
+                   placeholder="<?php if (isset($data['Q1Fe1112'])) echo $data['Q1Fe1112']; ?>"
                            value="<?php echo set_value('Q1Fe1112'); ?>"/>
         </div>
-	    
-	     <div class="form-group">
+
+
+
+
+      <div class="form-group">
+            <label><span class="cube">12</span> Did you use GSP Audit activities in the classroom teaching? </label>
+       
+        
+             <ul class="list-inline">
+                <li>
+                    <label class="radio-inline">
+                   <input type="radio" name="feedback2019_2"
+                               value="<?php echo set_value('feedback2019_2', 'Y') ?>" <?php if (isset($data['feedback2019_2'])) echo $data['feedback2019_2'] == 'Y' ? "checked" : "" ?>>
+                        Yes</label>
+                </li>
+                <li>
+                    <label class="radio-inline">
+                        <input type="radio" name="feedback2019_2"
+                               value="<?php echo set_value('feedback2019_2', 'N') ?>" <?php if (isset($data['feedback2019_2'])) echo $data['feedback2019_2'] == 'N' ? "checked" : "" ?>>
+                        No</label>
+                </li>
+            </ul> 
+        </div>
+
+
+         <div class="form-group">
       <label>
       <h6>Generate Digital Certificates</h6>
-	  <h5><strong>Please ensure that you select unique names to avoid duplication in digital certificates</strong></h5>
+      <h5><strong>Please ensure that you select unique names to avoid duplication in digital certificates</strong></h5>
       </label>
       <br/>
-	  <button class="lptext" type="button" title="Change Password Form" data-toggle="modal" data-target="#Certificate"
+      <button class="lptext" type="button" title="Change Password Form" data-toggle="modal" data-target="#Certificate"
                        href="#ChangePass" rel="shadowbox;width=580;height=500;">Digital Certificate</button>
     </div>
-	    
-	    
-	    
-	    
+        
+        
+        
+        
         <div class="form-group">
             <label>
                 <h6>Checklist of uploaded documents</h6>
@@ -733,7 +773,7 @@ if (isset($data['Q1Fe11'])) {
             </ul>
         </div>
         <div class="form-group">
-            <label>The GSP Awards 2017</label>
+            <label>The GSP Awards 2019</label>
             <p> The GSP Awards acknowledge and reward schools that have adopted the most innovative and effective
                 practices to manage the natural resources within their own premises. The Awards are given away at the
                 GSP Awards ceremony, an annual event, where top performers from across the country are rewarded for
@@ -771,7 +811,7 @@ if (isset($data['Q1Fe11'])) {
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                         <h4 class="modal-title">Generate Your Digital Certificate </h4>
                       </div>
-					  
+                      
            <?php echo form_open('Feedback/insert_digitalcertificate/'.$school_name[0]->userid,array("id"=>"frmDigitalCertificate"));?>
            <script>
            $("#frmDigitalCertificate").on("submit",function(e){
@@ -785,7 +825,7 @@ $.ajax({
   contentType: false,
   processData: false,
   success: function (reponse) {
-              alert("Digital Certificate Has Been Generated Successfully.");
+              // alert("Digital Certificate Has Been Generated Successfully.");
               $("#Certificate").css("display","none");
               $("#Certificate").removeClass("in");
              $(".modal-backdrop").css("position","inherit");
@@ -797,27 +837,28 @@ $.ajax({
            </script>
                       <div class="modal-body">
                         <div class="col-lg-12">
-                          <h4>Please ensure that you select unique names to avoid duplication in digital certificates</h4>
+                          <h4>Please ensure that you select unique names to avoid duplication in digital certificates.<br>
+                          (The digital certificates will be generated in February end.)</h4>
                          <table class="table table-bordered table-striped">
         <tr>
           <th colspan="4">Digital Certificates Of Teachers & Staff Members</th>
         </tr>
         <tr>
           <th>Sr No.</th>
-          <th>First-Name</th>
+          <th>Name</th>
           <th>School Name</th>
           <th>Checked</th>
         </tr>
         <?php 
-		 for($i=0,$r=0;$i<sizeof($staff_certificate);++$i){ 
-		 ?>
+         for($i=0,$r=0;$i<sizeof($staff_certificate);++$i){ 
+         ?>
         <tr>
           <th><?php echo ++$r; ?></th>
           <th><?php echo $staff_certificate[$i]['teacher']; ?></th>
           <th><?php echo $staff_certificate[$i]['school']; ?></th>
           <th><input type="checkbox" class="digitalCertificate" name="digitalCertificateName[]" value="<?php echo $staff_certificate[$i]['teacher']; ?>" <?php $condition=checkDigitalCertificate($staff_certificate[$i]['teacher'],$staff_certificate[$i]['school']); if($condition==1){ echo "checked    disbaled";} ?>   />
-		  <input type="hidden" id="certificate_schoolname" value="<?php echo $staff_certificate[$i]['school']; ?>" />
-		  </th>
+          <input type="hidden" id="certificate_schoolname" value="<?php echo $staff_certificate[$i]['school']; ?>" />
+          </th>
         </tr>
         <?php }?>
         <tr>
@@ -830,14 +871,14 @@ $.ajax({
           <th>Checked</th>
         </tr>
         <?php 
-		 for($i=0,$r=0;$i<sizeof($student_certificate);++$i){ 
-		 ?>
+         for($i=0,$r=0;$i<sizeof($student_certificate);++$i){ 
+         ?>
         <tr>
           <th><?php echo ++$r; ?></th>
           <th><?php echo $student_certificate[$i]['name']." "."(".$student_certificate[$i]['grade'].")"; ?></th>
           <th><?php echo $student_certificate[$i]['school_name']; ?></th>
           <th><input type="checkbox" class="digitalCertificate" name="digitalCertificateName[]" value="<?php echo $student_certificate[$i]['name']." "."(".$student_certificate[$i]['grade'].")"; ?>" <?php $condition=checkDigitalCertificate($student_certificate[$i]['name'],$student_certificate[$i]['school_name']); if($condition==1){ echo "checked";} ?> />
-		  </th>
+          </th>
         </tr>
         <?php } ?>
       </table>
@@ -909,69 +950,75 @@ $.ajax({
 
 
 <script>
-	$(document).ready(function(){
-	
-	$('#feedback').validate({
-		rules:{
-		      Q1Fe1:{
-				  required:true,
-			  },
-			  Q1Fe2:{
-				  required:true,
-			  },
-			  Q1Fe3:{
-				  required:true,
-			  },
-			  Q1Fe4:{
-				  required:true,
-			  },
-			  Q1Fe511:{
-				  required:true,
-			  },
-			  Q8Fe1:{
-				  required:true,
-			  },
-			  Q8Fe2:{
-				  required:true,
-			  },
-			  Q8Fe3:{
-				  required:true,
-			  },
-			  Q1Fe7:{
-				  required:true,
-			  },
-			  Q1Fe8:{
-				  required:true,
-			  },
-			  Q1Fe9:{
-				  required:true,
-			  },
-			  Q1Fe10:{
-				  required:true,
-			  },
-			  Q1Fe11:{
-				  required:true,
-			  }
-		}
+    $(document).ready(function(){
+    
+    $('#feedback').validate({
+        rules:{
+              Q1Fe1:{
+                  required:true,
+              },
+              Q1Fe2:{
+                  required:true,
+              },
+              Q1Fe3:{
+                  required:true,
+              },
+              Q1Fe4:{
+                  required:true,
+              },
+              Q1Fe511:{
+                  required:true,
+              },
+              Q8Fe1:{
+                  required:true,
+              },
+              Q8Fe2:{
+                  required:true,
+              },
+              Q8Fe3:{
+                  required:true,
+              },
+              Q1Fe7:{
+                  required:true,
+              },
+              Q1Fe8:{
+                  required:true,
+              },
+              Q1Fe9:{
+                  required:true,
+              },
+              Q1Fe10:{
+                  required:true,
+              },
+              Q1Fe11:{
+                  required:true,
+              },
+              feedback2019_1:{
+                required:true,
+              },
+              feedback2019_2:{
+                required:true,
+              }
+        }
        
-	});
-	});
-	
-	$('#movesubmitbtn').click(function(e){
-		
-		
-		$r=$('#feedback').valid();
-		if($r == false)
-		{
-			 
-			   e.preventDefault();
-			   $('#feedback').valid();
-		}
-		
-		
-	});
-	
-	</script>
+    });
+    });
+    
+    $('#movesubmitbtn').click(function(e){
+        
+        
+        $r=$('#feedback').valid();
+        if($r == false)
+        {
+             
+               e.preventDefault();
+               $('#feedback').valid();
+        }
+        
+        
+    });
+    
+    </script>
 
 <script type="text/javascript">
     /**Validation Question 1 Feedback show 1a & 1b***/
@@ -1053,38 +1100,38 @@ $.ajax({
             });
         });
     });
-	$(".submit").click(function(e){
-		
-	 $.ajax({
+    $(".submit").click(function(e){
+        
+     $.ajax({
            url:'<?php echo base_url("feedback/getDigitalValue"); ?>',
            type: 'POST',
            data: {"userid":<?php echo $this->session->userdata('USER_ID'); ?>},
            success: function (reponse) {
-			   if(reponse==='false')
-			   {
-				 alert('Please Sumbit Your Digital Certificate After Select');
-			      window.location.href = "<?php echo base_url('feedback'); ?>";
-				
-			   }
-			}
-        });	
-		
-		
-	});
-	
-	$(".submit").click(function(e){
-		var ckbox=$('.digitalCertificate:checkbox:checked')
-		if (ckbox.is(':checked')) {
-			
-		}else{
-			 
-			 alert('Please Generate Your Digital Certificate');
-			e.preventDefault();
-			
-		}
-		
-	});
-	
-	
-	
+               if(reponse==='false')
+               {
+                 alert('Please Sumbit Your Digital Certificate After Select');
+                  window.location.href = "<?php echo base_url('feedback'); ?>";
+                
+               }
+            }
+        }); 
+        
+        
+    });
+    
+    $(".submit").click(function(e){
+        var ckbox=$('.digitalCertificate:checkbox:checked')
+        if (ckbox.is(':checked')) {
+            
+        }else{
+             
+             alert('Please Generate Your Digital Certificate');
+            e.preventDefault();
+            
+        }
+        
+    });
+    
+    
+    
 </script>
