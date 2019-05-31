@@ -772,7 +772,8 @@
 
 
      <div class="form-group">
-      <label class="control-label"><span class="cube">2</span>Do you have vertical gardens in your school?</label>
+      <label class="control-label"><span class="cube">2</span>Do you have vertical gardens in your school? <a class="tt" data-tooltip="The interior or exterior walls covered with the various plant species in two different ways; prefabricated modular panel or in-situ applied panels, i.e. the plants need to be rooted on a structure on the wall or any vertical support structure."><span
+                            class="badge">?</span></a></label>
       <ul class="list-inline">
         <li>
           <label class="radio-inline text-gray">
