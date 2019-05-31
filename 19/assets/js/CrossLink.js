@@ -2046,24 +2046,25 @@ $(document).ready(function(){
     });
     $('#Q9Wa1_1').click(function(){
 
-        if(0 < $('#Q8Wa1S1').val() ||
-            0 < $('#Q8Wa1S2').val() ||
-            0 < $('#Q8Wa1S3').val() ||
-            0 <  $('#Q8Wa1S4').val() ||
-            0 < $('#Q8Wa2S1').val() ||
-            0 <  $('#Q8Wa2S2').val() ||
-            0 < $('#Q8Wa2S3').val() ||
-            0 <  $('#Q8Wa2S4').val() ||
-            0 < $('#Q8Wa2S5').val() ||
-            0 <  $('#Q8Wa1S6').val() ||
-            0 < $('#Q8Wa1S7').val() ||
-            0 < $('#Q8Wa3S1').val() ||
-            0 < $('#Q8Wa3S2').val() ||
-            0 < $('#Q8Wa4S1').val() ||
-            0 < $('#Q8Wa5S1').val() ||
-            0 < $('#Q8Wa6S1').val())
+        
+        if( 0 > $('#Q8Wa1S1').val() ||
+            0 > $('#Q8Wa1S2').val() ||
+            0 > $('#Q8Wa1S3').val() ||
+            0 > $('#Q8Wa1S4').val() ||
+            0 > $('#Q8Wa2S1').val() ||
+            0 > $('#Q8Wa2S2').val() ||
+            0 > $('#Q8Wa2S3').val() ||
+            0 > $('#Q8Wa2S4').val() ||
+            0 > $('#Q8Wa2S5').val() ||
+            0 > $('#Q8Wa1S6').val() ||
+            0 > $('#Q8Wa1S7').val() ||
+            0 > $('#Q8Wa3S1').val() ||
+            0 > $('#Q8Wa3S2').val() ||
+            0 > $('#Q8Wa4S1').val() ||
+            0 > $('#Q8Wa5S1').val() ||
+            0 > $('#Q8Wa6S1').val())
         {
-            alert("Composting Selected, but waste and recycled values does not match.")
+            alert("Composting Selected, Q4(a) values does not match.")
         }
         else
         {
@@ -2247,7 +2248,7 @@ $(document).ready(function(){
             event.preventDefault();
         }
         var radioCheck = $("input[name=Q4Wa2]:checked").val();
-        if(radioCheck != 1 && radioCheck != 2 && radioCheck != 3)
+        if(radioCheck != 1 && radioCheck != 2 && radioCheck != 3 && radioCheck != 4)
         {
             alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 2");
             $('#Q4Wa2').focus(); $('#Q4Wa2').css('border-color', 'red');
