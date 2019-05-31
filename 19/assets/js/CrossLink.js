@@ -595,15 +595,18 @@ $(document).ready(function(){
     $('#Q8W1S8_2').click(function(){
 
         var val1 = $('#Q5L1S3').val();
+
         val1 = parseInt(val1);
         if(val1 > 0)
         {
             var x = $('#Q8W1S8_2').is(":checked");
+             
             if(x == true)
             {
+                 alert(x);
                 if (confirm("You have Entered value for native plants, Please select 'Yes'") == true)
                 {
-
+                     
                     $('#Q8W1S8_1').prop('checked',true);
 
                 }
@@ -2046,7 +2049,6 @@ $(document).ready(function(){
     });
     $('#Q9Wa1_1').click(function(){
 
-        
         if( 0 > $('#Q8Wa1S1').val() ||
             0 > $('#Q8Wa1S2').val() ||
             0 > $('#Q8Wa1S3').val() ||
@@ -2064,7 +2066,7 @@ $(document).ready(function(){
             0 > $('#Q8Wa5S1').val() ||
             0 > $('#Q8Wa6S1').val())
         {
-            alert("Composting Selected, Q4(a) values does not match.")
+            alert("Composting Selected, but waste and recycled values does not match.")
         }
         else
         {
@@ -2582,30 +2584,30 @@ $(document).ready(function(){
             }
         }
         var radioCheck = $("input[name=Q14Wa1]:checked").val();
-//         if(radioCheck != 1 && radioCheck != 2 && radioCheck != 3 && radioCheck != 4)
-//         {
-//             alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 10");
-//             $('#Q14Wa1').focus(); $('#Q14Wa1').css('border-color', 'red');
-//             event.preventDefault();
-//         }
+        // if(radioCheck != 1 && radioCheck != 2 && radioCheck != 3 && radioCheck != 4)
+        // {
+        //     alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 10");
+        //     $('#Q14Wa1').focus(); $('#Q14Wa1').css('border-color', 'red');
+        //     event.preventDefault();
+        // }
 
         var radioCheck = $("input[name=Q15Wa1]:checked").val();
-//         if(radioCheck != 'Y' && radioCheck != 'N')
-//         {
-//             alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 10");
-//             $('#Q15Wa1').focus(); $('#Q15Wa1').css('border-color', 'red');
-//             event.preventDefault();
-//         }
-        else if(radioCheck == 'Y')
-        {
-            var radioCheck = $("input[name=Q15Wa2]:checked").val();
-            if(radioCheck != 1 && radioCheck != 2)
-            {
-                alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 11(a)");
-                $('#Q15Wa2').focus(); $('#Q15Wa2').css('border-color', 'red');
-                event.preventDefault();
-            }
-        }
+        // if(radioCheck != 'Y' && radioCheck != 'N')
+        // {
+        //     alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 10");
+        //     $('#Q15Wa1').focus(); $('#Q15Wa1').css('border-color', 'red');
+        //     event.preventDefault();
+        // }
+        // else if(radioCheck == 'Y')
+        // {
+        //     var radioCheck = $("input[name=Q15Wa2]:checked").val();
+        //     if(radioCheck != 1 && radioCheck != 2)
+        //     {
+        //         alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 11(a)");
+        //         $('#Q15Wa2').focus(); $('#Q15Wa2').css('border-color', 'red');
+        //         event.preventDefault();
+        //     }
+        // }
 
 
         var radioCheck = $("input[name=Q17Wa1]:checked").val();
@@ -3310,13 +3312,13 @@ $(document).ready(function(){
         }
 
         var radioCheck = $("input[name=Q1Fe10]:checked").val();
-//         if(radioCheck != 'Y' && radioCheck != 'N')
-//         {
-//             alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 10");
-//             $('input[name=Q1Fe10]').focus();
-//             $('input[name=Q1Fe10]').css('border-color', 'red');
-//             event.preventDefault();
-//         }
+        // if(radioCheck != 'Y' && radioCheck != 'N')
+        // {
+        //     alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 10");
+        //     $('input[name=Q1Fe10]').focus();
+        //     $('input[name=Q1Fe10]').css('border-color', 'red');
+        //     event.preventDefault();
+        // }
         var radioCheck = $("input[name=Q1Fe11]:checked").val();
         if(radioCheck != 'Y' && radioCheck != 'N')
         {
