@@ -8,7 +8,7 @@
 
 #Q4Wa1-error
 {
-	color: #fb4f2a !important;
+  color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -39px !important;
     position: absolute;
@@ -18,7 +18,7 @@
 
 #Q4Wa2-error
 {
-	color: #fb4f2a !important;
+  color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -35px !important;
     position: absolute;
@@ -28,7 +28,7 @@
 
 #Q8Wa1-error
 {
-	color: #fb4f2a !important;
+  color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -38px !important;
     position: absolute;
@@ -38,7 +38,7 @@
 
 #Q9Wa1-error
 {
-	color: #fb4f2a !important;
+  color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -38px !important;
     position: absolute;
@@ -48,7 +48,7 @@
 
 #Q10Wa1-error
 {
-	color: #fb4f2a !important;
+  color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -38px !important;
     position: absolute;
@@ -58,7 +58,7 @@
 
 #Q13Wa1-error
 {
-	color: #fb4f2a !important;
+  color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -40px !important;
     position: absolute;
@@ -68,7 +68,7 @@
 
 #Q14Wa1-error
 {
-	    color: #fb4f2a !important;
+      color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -34px !important;
     position: absolute;
@@ -78,7 +78,7 @@
 
 #Q15Wa1-error
 {
-	color: #fb4f2a !important;
+  color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -38px !important;
     position: absolute;
@@ -88,7 +88,7 @@
 
 #Q17Wa1-error
 {
-	color: #fb4f2a !important;
+  color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -38px !important;
     position: absolute;
@@ -98,7 +98,7 @@
 
 #Q18Wa1-error
 {
-	color: #fb4f2a !important;
+  color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -38px !important;
     position: absolute;
@@ -108,7 +108,7 @@
 
 #Q19Wa1-error
 {
-	color: #fb4f2a !important;
+  color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -38px !important;
     position: absolute;
@@ -118,7 +118,7 @@
 
 #Q15Wa2-error
 {
-	color: #fb4f2a !important;
+  color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -35px !important;
     position: absolute;
@@ -128,7 +128,7 @@
 
 #Q13Wa2-error
 {
-	color: #fb4f2a !important;
+  color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -35px !important;
     position: absolute;
@@ -687,6 +687,13 @@
                                    value="<?php echo set_value('Q4Wa2', 3) ?>" <?php if (isset($data['Q4Wa2'])) echo $data['Q4Wa2'] == 3 ? "checked" : "" ?>>
       More than three </label>
     </li>
+
+    <li>
+      <label class="radio-inline text-gray">
+      <input type="radio" name="Q4Wa2" class="Q4Wa2" id="Q4Wa2_3"
+                                   value="<?php echo set_value('Q4Wa2', 4) ?>" <?php if (isset($data['Q4Wa2'])) echo $data['Q4Wa2'] == 4 ? "checked" : "" ?>>
+      Not Applicable </label>
+    </li>
   </ul>
 </div>
 <div class="form-group">
@@ -1111,7 +1118,7 @@
 <table width="100%" class="question uploadedfiles">
   <thead>
     <tr>
-      <!-- <th>Image</th>	    -->
+      <!-- <th>Image</th>     -->
       <th>File name</th>
       <th>Delete</th>
       <th>Download</th>
@@ -1121,10 +1128,10 @@
     <?php foreach ($segregationClassroom as $f) { ?>
     <tr id="index<?php echo $f->id; ?>">
       <?php 
-		//$array = explode('.',$f->file_name); 
-		//$count = count($array);
-		//$extension = $array[$count-1];
-		?>
+    //$array = explode('.',$f->file_name); 
+    //$count = count($array);
+    //$extension = $array[$count-1];
+    ?>
       <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
       <!-- <td><img style="width:62px; height:46px;" ;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $f->
       file_name ?>" class="img-responsive" />
@@ -1535,7 +1542,7 @@
 <table width="100%" class="question uploadedfiles">
   <thead>
     <tr>
-      <!-- <th>Image</th>	    -->
+      <!-- <th>Image</th>     -->
       <th>File name</th>
       <th>Delete</th>
       <th>Download</th>
@@ -1545,10 +1552,10 @@
     <?php foreach ($solidWaste as $f) { ?>
     <tr id="index<?php echo $f->id; ?>">
       <?php 
-		//$array = explode('.',$f->file_name); 
-		//$count = count($array);
-		//$extension = $array[$count-1];
-		?>
+    //$array = explode('.',$f->file_name); 
+    //$count = count($array);
+    //$extension = $array[$count-1];
+    ?>
       <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
       <!-- <td><img style="width:62px; height:46px;" ;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $f->
       file_name ?>" class="img-responsive" />
@@ -2011,7 +2018,7 @@
   <table width="100%" class="question uploadedfiles">
     <thead>
       <tr>
-        <!-- <th>Image</th>	    -->
+        <!-- <th>Image</th>     -->
         <th>File name</th>
         <th>Delete</th>
         <th>Download</th>
@@ -2021,10 +2028,10 @@
       <?php foreach ($composingPit as $u) { ?>
       <tr id="index<?php echo $u->id; ?>">
         <?php 
-		//$array = explode('.',$u->file_name); 
-		//$count = count($array);
-		//$extension = $array[$count-1];
-		?>
+    //$array = explode('.',$u->file_name); 
+    //$count = count($array);
+    //$extension = $array[$count-1];
+    ?>
         <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
         <!-- <td><img style="width:62px; height:46px;" ;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $u->
         file_name ?>" class="img-responsive" />
@@ -2051,25 +2058,25 @@
     <div class="text-gray">
       <label>
       <input type="checkbox" name="Q9Wa2S1"
-										   value="<?php echo set_value('Q9Wa2S1', 1); ?>" <?php if (isset($data['Q9Wa2S1'])) echo "checked" ?>>
+                       value="<?php echo set_value('Q9Wa2S1', 1); ?>" <?php if (isset($data['Q9Wa2S1'])) echo "checked" ?>>
       Natural composting without added microbes</label>
     </div>
     <div class="text-gray">
       <label>
       <input type="checkbox" name="Q9Wa2S2"
-										   value="<?php echo set_value('Q9Wa2S2', 1); ?>" <?php if (isset($data['Q9Wa2S2'])) echo "checked" ?>>
+                       value="<?php echo set_value('Q9Wa2S2', 1); ?>" <?php if (isset($data['Q9Wa2S2'])) echo "checked" ?>>
       Vermi composting</label>
     </div>
     <div class="text-gray">
       <label>
       <input type="checkbox" name="Q9Wa2S3"
-										   value="<?php echo set_value('Q9Wa2S3', 1); ?>" <?php if (isset($data['Q9Wa2S3'])) echo "checked" ?>>
+                       value="<?php echo set_value('Q9Wa2S3', 1); ?>" <?php if (isset($data['Q9Wa2S3'])) echo "checked" ?>>
       Mechanical composting</label>
     </div>
     <div class="text-gray">
       <label>Other: &nbsp
       <input type="text" name="Q9Wa2S4" value="<?php echo set_value('Q9Wa2S4'); ?>"
-										   placeholder="<?php if (isset($data['Q9Wa2S4'])) echo $data['Q9Wa2S4'] ?>">
+                       placeholder="<?php if (isset($data['Q9Wa2S4'])) echo $data['Q9Wa2S4'] ?>">
       </label>
     </div>
   </div>
@@ -2079,8 +2086,8 @@
       compost that is generated per month (in kilogram)?</label>
       <br>
       <input type="text" name="Q9Wa3" id="Q9Wa31" class="form-control space-textbox"
-								   placeholder="<?php if (isset($data['Q9Wa3'])) echo $data['Q9Wa3'] ?>"
-								   value="<?php if (isset($data['Q9Wa3'])) echo $data['Q9Wa3'] ?>">
+                   placeholder="<?php if (isset($data['Q9Wa3'])) echo $data['Q9Wa3'] ?>"
+                   value="<?php if (isset($data['Q9Wa3'])) echo $data['Q9Wa3'] ?>">
     </div>
   </div>
   <br>
@@ -2089,25 +2096,25 @@
     <div class="form-group row">
       <label class="text-gray">
       <input type="checkbox" name="Q9Wa4S1"
-									   value="<?php echo set_value('Q9Wa4S1', 1); ?>" <?php if (isset($data['Q9Wa4S1'])) echo "checked" ?>>
+                     value="<?php echo set_value('Q9Wa4S1', 1); ?>" <?php if (isset($data['Q9Wa4S1'])) echo "checked" ?>>
       For horticultural purposes </label>
     </div>
     <div class="form-group row">
       <label class="text-gray">
       <input type="checkbox" name="Q9Wa4S2"
-									   value="<?php echo set_value('Q9Wa4S2', 1); ?>" <?php if (isset($data['Q9Wa4S2'])) echo "checked" ?>>
+                     value="<?php echo set_value('Q9Wa4S2', 1); ?>" <?php if (isset($data['Q9Wa4S2'])) echo "checked" ?>>
       For school garden</label>
     </div>
     <div class="form-group row">
       <label class="text-gray">
       <input type="checkbox" name="Q9Wa4S3"
-									   value="<?php echo set_value('Q9Wa4S3', 1); ?>" <?php if (isset($data['Q9Wa4S3'])) echo "checked" ?>>
+                     value="<?php echo set_value('Q9Wa4S3', 1); ?>" <?php if (isset($data['Q9Wa4S3'])) echo "checked" ?>>
       For sale</label>
     </div>
     <div class="form-group row">
       <label class="text-gray">
       <input type="checkbox" name="Q9Wa4S4"
-									   value="<?php echo set_value('Q9Wa4S4', 1); ?>" <?php if (isset($data['Q9Wa4S4'])) echo "checked" ?>>
+                     value="<?php echo set_value('Q9Wa4S4', 1); ?>" <?php if (isset($data['Q9Wa4S4'])) echo "checked" ?>>
       For charity</label>
     </div>
   </div>
@@ -2359,7 +2366,7 @@
 <table width="100%" class="question uploadedfiles">
   <thead>
     <tr>
-      <!-- <th>Image</th>	 -->
+      <!-- <th>Image</th>  -->
       <th>File name</th>
       <th>Delete</th>
       <th>Download</th>
@@ -2369,10 +2376,10 @@
     <?php foreach ($recycleMachine as $f) { ?>
     <tr id="index<?php echo $f->id; ?>">
       <?php 
-		//$array = explode('.',$f->file_name); 
-		//$count = count($array);
-		//$extension = $array[$count-1];
-		?>
+    //$array = explode('.',$f->file_name); 
+    //$count = count($array);
+    //$extension = $array[$count-1];
+    ?>
       <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
       <!--  <td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $f->
       file_name ?>" class="img-responsive" />
@@ -3127,7 +3134,7 @@
 <table width="100%" class="question uploadedfiles">
   <thead>
     <tr>
-      <!--<th>Image</th>	  -->
+      <!--<th>Image</th>    -->
       <th>File name</th>
       <th>Delete</th>
       <th>Download</th>
@@ -3137,10 +3144,10 @@
     <?php foreach ($eWaste as $f) { ?>
     <tr id="index<?php echo $f->id; ?>">
       <?php 
-		//$array = explode('.',$f->file_name); 
-		//$count = count($array);
-		//$extension = $array[$count-1];
-		?>
+    //$array = explode('.',$f->file_name); 
+    //$count = count($array);
+    //$extension = $array[$count-1];
+    ?>
       <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
       <!-- <td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $f->
       file_name ?>" class="img-responsive" />
@@ -3221,7 +3228,7 @@
   <table width="100%" class="question uploadedfiles">
     <thead>
       <tr>
-        <!-- <th>Image</th>	    -->
+        <!-- <th>Image</th>     -->
         <th>File name</th>
         <th>Delete</th>
         <th>Download</th>
@@ -3231,10 +3238,10 @@
       <?php foreach ($authorised_dealer as $u) { ?>
       <tr id="index<?php echo $u->id; ?>">
         <?php 
-		//$array = explode('.',$u->file_name); 
-		//$count = count($array);
-		//$extension = $array[$count-1];
-		?>
+    //$array = explode('.',$u->file_name); 
+    //$count = count($array);
+    //$extension = $array[$count-1];
+    ?>
         <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
         <!-- <td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $u->
         file_name ?>" class="img-responsive" />
@@ -3312,7 +3319,7 @@
 <table width="100%" class="question uploadedfiles">
   <thead>
     <tr>
-      <!-- <th>Image</th>	    -->
+      <!-- <th>Image</th>     -->
       <th>File name</th>
       <th>Delete</th>
       <th>Download</th>
@@ -3322,10 +3329,10 @@
     <?php foreach ($houseKeeping as $f) { ?>
     <tr id="index<?php echo $f->id; ?>">
       <?php 
-			    //$array = explode('.',$f->file_name); 
-			   // $count = count($array);
-			    //$extension = $array[$count-1];
-			    ?>
+          //$array = explode('.',$f->file_name); 
+         // $count = count($array);
+          //$extension = $array[$count-1];
+          ?>
       <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
       <!--<td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $f->
       file_name ?>" class="img-responsive" />
@@ -3370,7 +3377,7 @@
 <table width="100%" class="question uploadedfiles">
   <thead>
     <tr>
-      <!--<th>Image</th>	    -->
+      <!--<th>Image</th>      -->
       <th>File name</th>
       <th>Delete</th>
       <th>Download</th>
@@ -3380,10 +3387,10 @@
     <?php foreach ($burningWaste as $f) { ?>
     <tr id="index<?php echo $f->id; ?>">
       <?php 
-		//$array = explode('.',$f->file_name); 
-		//$count = count($array);
-		//$extension = $array[$count-1];
-		?>
+    //$array = explode('.',$f->file_name); 
+    //$count = count($array);
+    //$extension = $array[$count-1];
+    ?>
       <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
       <!--   <td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $f->
       file_name ?>" class="img-responsive" />
@@ -3474,6 +3481,15 @@
                                            value="<?php echo set_value('Q15Wa2S4', 1); ?>" <?php if (isset($data['Q15Wa2S4'])) echo "checked" ?>>
               Paper </label>
             </li>
+
+           <li>
+              <label class="radio-inline text-gray">
+              <input type="checkbox" name="Q15Wa2S5"
+                                           value="<?php echo set_value('Q15Wa2S5', 1); ?>" <?php if (isset($data['Q15Wa2S5'])) echo "checked" ?>>
+              Sanitary waste </label>
+            </li>
+
+
           </ul>
         </div>
       </div>
@@ -3530,7 +3546,7 @@
         <table width="100%" class="question uploadedfiles">
           <thead>
             <tr>
-              <!--   <th>Image</th>	    -->
+              <!--   <th>Image</th>     -->
               <th>File name</th>
               <th>Delete</th>
               <th>Download</th>
@@ -3542,10 +3558,10 @@
  foreach ($chikoo as $u) { ?>
             <tr id="index<?php echo $u->id; ?>">
               <?php 
-		//$array = explode('.',$u->file_name); 
-		//$count = count($array);
-		//$extension = $array[$count-1];
-		?>
+    //$array = explode('.',$u->file_name); 
+    //$count = count($array);
+    //$extension = $array[$count-1];
+    ?>
               <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
               <!-- <td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $u->
               file_name ?>" class="img-responsive" />
@@ -3587,10 +3603,10 @@
             <?php foreach ($chikoo as $u) { ?>
             <tr id="index<?php echo $u->id; ?>">
               <?php 
-	 //$array = explode('.',$u->file_name); 
-	 //$count = count($array);
-	 //$extension = $array[$count-1];
-	 ?>
+   //$array = explode('.',$u->file_name); 
+   //$count = count($array);
+   //$extension = $array[$count-1];
+   ?>
               <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
               <!-- <td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $u->
               file_name ?>" class="img-responsive" />
@@ -3649,7 +3665,7 @@
             <table width="100%" class="question uploadedfiles">
               <thead>
                 <tr>
-                  <!--  <th>Image</th>	    -->
+                  <!--  <th>Image</th>      -->
                   <th>File name</th>
                   <th>Delete</th>
                   <th>Download</th>
@@ -3661,10 +3677,10 @@
  foreach ($Initiatives as $u) { ?>
                 <tr id="index<?php echo $u->id; ?>">
                   <?php 
-			   //$array = explode('.',$u->file_name); 
-			   // $count = count($array);
-			   // $extension = $array[$count-1];
-			    ?>
+         //$array = explode('.',$u->file_name); 
+         // $count = count($array);
+         // $extension = $array[$count-1];
+          ?>
                   <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
                   <!-- <td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $u->
                   file_name ?>" class="img-responsive" />
@@ -3753,7 +3769,7 @@
               <table width="100%" class="question uploadedfiles">
                 <thead>
                   <tr>
-                    <!-- <th>Image</th>	    -->
+                    <!-- <th>Image</th>     -->
                     <th>File name</th>
                     <th>Delete</th>
                     <th>Download</th>
@@ -3763,10 +3779,10 @@
                   <?php foreach ($teamDoingWaste as $f) { ?>
                   <tr id="index<?php echo $f->id; ?>">
                     <?php 
-			   // $array = explode('.',$f->file_name); 
-			   // $count = count($array);
-			   // $extension = $array[$count-1];
-			    ?>
+         // $array = explode('.',$f->file_name); 
+         // $count = count($array);
+         // $extension = $array[$count-1];
+          ?>
                     <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
                     <!-- <td><img style="width:62px; height:46px;" ;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $f->
                     file_name ?>" class="img-responsive" />
@@ -3818,576 +3834,576 @@
   </div>
 </div>
 <script>
-	$(document).ready(function(){
-	
-	$('#waste').validate({
-		rules:{
-		      Q1Wa1S1:{
-				  required:true,
-			  },
-			  Q1Wa1S3:{
-				  required:true,
-			  },
-			  Q1Wa1S2:{
-				  required:true,
-			  },
-			  Q2Wa1S1:{
-				  required:true,
-			  },
-			  Q2Wa1S3:{
-				  required:true,
-			  },
-			  Q2Wa1S2:{
-				  required:true,
-			  },
-			  Q3Wa1S1:{
-				  required:true,
-			  },
-			  Q3Wa1S2:{
-				  required:true,
-			  },
-			  Q3Wa1S3:{
-				  required:true,
-			  },
-			  Q4Wa1:{
-				  required:true,
-			  },
-			  Q4Wa2:{
-				  required:true,
-			  },
-			  Q5Wa1S1:{
-				  required:true,
-			  },
-			  Q5Wa1S2:{
-				  required:true,
-			  },
-			  Q5Wa1S3:{
-				  required:true,
-			  },
-			  Q5Wa1S4:{
-				  required:true,
-			  },
-			  Q5Wa2S1:{
-				  required:true,
-			  },
-			  Q5Wa2S2:{
-				  required:true,
-			  },
-			  Q5Wa2S3:{
-				  required:true,
-			  },
-			  Q5Wa2S4:{
-				  required:true,
-			  },
-			  Q5Wa3S1:{
-				  required:true,
-			  },
-			  Q5Wa3S2:{
-				  required:true,
-			  },
-			  Q5Wa3S3:{
-				  required:true,
-			  },
-			  Q5Wa3S4:{
-				  required:true,
-			  },
-			  Q5Wa4S1:{
-				  required:true,
-			  },
-			  Q5Wa4S2:{
-				  required:true,
-			  },
-			  Q5Wa4S3:{
-				  required:true,
-			  },
-			  Q5Wa4S4:{
-				  required:true,
-			  },
-			  Q5Wa5S1:{
-				  required:true,
-			  },
-			  Q5Wa5S2:{
-				  required:true,
-			  },
-			  Q5Wa5S3:{
-				  required:true,
-			  },
-			  Q5Wa5S4:{
-				  required:true,
-			  },
-			  Q5Wa6S1:{
-				  required:true,
-			  },
-			  Q5Wa6S2:{
-				  required:true,
-			  },
-			  Q5Wa6S3:{
-				  required:true,
-			  },
-			  Q5Wa6S4:{
-				  required:true,
-			  },
-			  Q5Wa7S1:{
-				  required:true,
-			  },
-			  Q5Wa7S2:{
-				  required:true,
-			  },
-			  Q5Wa7S3:{
-				  required:true,
-			  },
-			  Q5Wa7S4:{
-				  required:true,
-			  },
-			  Q5Wa8S1:{
-				  required:true,
-			  },
-			  Q5Wa8S2:{
-				  required:true,
-			  },
-			  Q5Wa8S3:{
-				  required:true,
-			  },
-			  Q5Wa8S4:{
-				  required:true,
-			  },
-			  Q5Wa9S1:{
-				  required:true,
-			  },
-			  Q5Wa9S2:{
-				  required:true,
-			  },
-			  Q5Wa9S3:{
-				  required:true,
-			  },
-			  Q5Wa9S4:{
-				  required:true,
-			  },
-			  Q5Wa10S1:{
-				  required:true,
-			  },
-			  Q5Wa10S2:{
-				  required:true,
-			  },
-			  Q5Wa10S3:{
-				  required:true,
-			  },
-			  Q5Wa10S4:{
-				  required:true,
-			  },
-			  Q6Wa1S1:{
-				  required:true,
-			  },
-			  Q6Wa1S2:{
-				  required:true,
-			  },
-			  Q6Wa1S3:{
-				  required:true,
-			  },
-			  Q6Wa1S4:{
-				  required:true,
-			  },
-			  Q6Wa2S1:{
-				  required:true,
-			  },
-			  Q6Wa2S2:{
-				  required:true,
-			  },
-			  Q6Wa2S3:{
-				  required:true,
-			  },
-			  Q6Wa2S3:{
-				  required:true,
-			  },
-			  Q6Wa2S4:{
-				  required:true,
-			  },
-			  Q6Wa2S5:{
-				  required:true,
-			  },
-			  Q6Wa2S6:{
-				  required:true,
-			  },
-			  Q6Wa2S7:{
-				  required:true,
-			  },
-			  Q6Wa3S1:{
-				  required:true,
-			  },
-			  Q6Wa3S2:{
-				  required:true,
-			  },
-			  Q6Wa4S1:{
-				  required:true,
-			  },
-			  Q6Wa5S1:{
-				  required:true,
-			  },
-			  Q6Wa6S1:{
-				  required:true,
-			  },
-			  Q6Wa7S1:{
-				  required:true,
-			  },
-			  Q8Wa1:{
-				  required:true,
-			  },
-			  Q8Wa1S1:{
-				  required:true,
-			  },
-			  Q8Wa1S2:{
-				  required:true,
-			  },
-			  Q8Wa1S3:{
-				  required:true,
-			  },
-			  Q8Wa1S4:{
-				  required:true,
-			  },
-			  Q8Wa2S1:{
-				  required:true,
-			  },
-			  Q8Wa2S2:{
-				  required:true,
-			  },
-			  Q8Wa2S3:{
-				  required:true,
-			  },
-			  Q8Wa2S4:{
-				  required:true,
-			  },
-			  Q8Wa2S5:{
-				  required:true,
-			  },
-			  Q8Wa2S6:{
-				  required:true,
-			  },
-			  Q8Wa2S7:{
-				  required:true,
-			  },
-			  Q8Wa3S1:{
-				  required:true,
-			  },
-			  Q8Wa3S2:{
-				  required:true,
-			  },
-			  Q8Wa4S1:{
-				  required:true,
-			  },
-			  Q8Wa5S1:{
-				  required:true,
-			  },
-			  Q8Wa6S1:{
-				  required:true,
-			  },
-			  Q8Wa7S1:{
-				  required:true,
-			  },
-			  Q9Wa1:{
-				  required:true,
-			  },
-			  Q9Wa3:{
-				  required:true,
-			  },
-			  Q10Wa1:{
-				  required:true,
-			  },
-			  Q12Wa1S1:{
-				  required:true,  
-			  },
-			  Q12Wa1S2:{
-				  required:true,
-			  },
-			  Q12Wa1S3:{
-				  required:true,
-			  },
-			  Q12Wa2S1:{
-				  required:true,
-			  },
-			  Q12Wa2S2:{
-				  required:true,
-			  },
-			  Q12Wa2S3:{
-				  required:true,
-			  },
-			  Q12Wa3S1:{
-				  required:true,
-			  },
-			  Q12Wa3S2:{
-				  required:true,
-			  },
-			  Q12Wa3S3:{
-				  required:true,
-			  },
-			  Q12Wa4S1:{
-				  required:true,
-			  },
-			  Q12Wa4S2:{
-				  required:true,
-			  },
-			  Q12Wa4S3:{
-				  required:true,
-			  },
-			  Q12Wa5S1:{
-				  required:true,
-			  },
-			  Q12Wa5S2:{
-				  required:true,
-			  },
-			  Q12Wa5S3:{
-				  required:true,
-			  },
-			  Q12Wa6S1:{
-				  required:true,
-			  },
-			  Q12Wa6S2:{
-				  required:true,
-			  },
-			  Q12Wa6S3:{
-				  required:true,
-			  },
-			  Q12Wa7S1:{
-				  required:true,
-			  },
-			  Q12Wa7S2:{
-				  required:true,
-			  },
-			  Q12Wa7S3:{
-				  required:true,
-			  },
-			  Q12Wa8S1:{
-				  required:true,
-			  },
-			  Q12Wa8S2:{
-				  required:true,
-			  },
-			  Q12Wa8S3:{
-				  required:true,
-			  },
-			  Q12Wa9S1:{
-				  required:true,
-			  },
-			  Q12Wa9S2:{
-				  required:true,
-			  },
-			  Q12Wa9S3:{
-				  required:true,
-			  },
-			  Q12Wa10S1:{
-				  required:true,
-			  },
-			  Q12Wa10S2:{
-				  required:true,
-			  },
-			  Q12Wa10S3:{
-				  required:true,
-			  },
-			  Q12Wa11S1:{
-				  required:true,
-			  },
-			  Q12Wa11S2:{
-				  required:true,
-			  },
-			  Q12Wa11S3:{
-				  required:true,
-			  },
-			  Q12Wa12S1:{
-				  required:true,
-			  },
-			  Q12Wa12S2:{
-				  required:true,
-			  },
-			  Q12Wa12S3:{
-				  required:true,
-			  },
-			  Q12Wa13S1:{
-				  required:true,
-			  },
-			  Q12Wa13S2:{
-				  required:true,
-			  },
-			  Q12Wa13S3:{
-				  required:true,
-			  },
-			  Q12Wa14S1:{
-				  required:true,
-			  },
-			  Q12Wa14S2:{
-				  required:true,
-			  },
-			  Q12Wa14S3:{
-				  required:true,
-			  },
-			  Q12Wa15S1:{
-				  required:true,
-			  },
-			  Q12Wa15S2:{
-				  required:true,
-			  },
-			  Q12Wa15S3:{
-				  required:true,
-			  },
-			  Q12Wa16S1:{
-				  required:true,
-			  },
-			  Q12Wa16S2:{
-				  required:true,
-			  },
-			  Q12Wa16S3:{
-				  required:true,
-			  },
-			  Q12Wa17S1:{
-				  required:true,
-			  },
-			  Q12Wa17S2:{
-				  required:true,
-			  },
-			  Q12Wa17S3:{
-				  required:true,
-			  },
-			  Q12Wa18S1:{
-				  required:true,
-			  },
-			  Q12Wa18S2:{
-				  required:true,
-			  },
-			  Q12Wa18S3:{
-				  required:true,
-			  },
-			  Q12Wa19S1:{
-				  required:true,
-			  },
-			  Q12Wa19S2:{
-				  required:true,
-			  },
-			  Q12Wa19S3:{
-				  required:true,
-			  },
-			  Q12Wa20S1:{
-				  required:true,
-			  },
-			  Q12Wa20S2:{
-				  required:true,
-			  },
-			  Q12Wa20S3:{
-				  required:true,
-			  },
-			  Q12Wa21S1:{
-				  required:true,
-			  },
-			  Q12Wa21S2:{
-				  required:true,
-			  },
-			  Q12Wa21S3:{
-				  required:true,
-			  },
-			  Q12Wa22S1:{
-				  required:true,
-			  },
-			  Q12Wa22S2:{
-				  required:true,
-			  },
-			  Q12Wa22S3:{
-				  required:true,
-			  },
-			  Q12Wa23S1:{
-				  required:true,
-			  },
-			  Q12Wa23S2:{
-				  required:true,
-			  },
-			  Q12Wa23S3:{
-				  required:true,
-			  },
-			  Q12Wa24S1:{
-				  required:true,
-			  },
-			  Q12Wa24S2:{
-				  required:true,
-			  },
-			  Q12Wa24S3:{
-				  required:true,
-			  },
-			  Q12Wa25S1:{
-				  required:true,
-			  },
-			  Q12Wa25S3:{
-				  required:true,
-			  },
-			  Q12Wa26S1:{
-				  required:true,
-			  },
-			  Q12Wa26S2:{
-				  required:true,
-			  },
-			  Q12Wa26S3:{
-				  required:true,
-			  },
-			  Q12Wa27S1:{
-				  required:true,
-			  },
-			  Q12Wa27S2:{
-				  required:true,
-			  },
-			  Q12Wa27S3:{
-				  required:true,
-			  },
-			  Q12Wa28S1:{
-				  required:true,
-			  },
-			  Q12Wa28S2:{
-				  required:true,
-			  },
-			  Q12Wa28S3:{
-				  required:true,  
-			  },
-			  Q13Wa1:{
-				  required:true,
-			  },
-			  Q13Wa2:{
-				  required:true,
-			  },
-			  Q14Wa1:{
-				  required:true,
-			  },
-			  Q15Wa1:{
-				  required:true,
-			  },
-			  Q15Wa2:{
-				  required:true,
-			  },
-			  Q17Wa1:{
-				  required:true,
-			  },
-			  Q18Wa1:{
-				  required:true,
-			  },
-			  Q19Wa1:{
-				  required:true,
-			  }
-		}
+  $(document).ready(function(){
+  
+  $('#waste').validate({
+    rules:{
+          Q1Wa1S1:{
+          required:true,
+        },
+        Q1Wa1S3:{
+          required:true,
+        },
+        Q1Wa1S2:{
+          required:true,
+        },
+        Q2Wa1S1:{
+          required:true,
+        },
+        Q2Wa1S3:{
+          required:true,
+        },
+        Q2Wa1S2:{
+          required:true,
+        },
+        Q3Wa1S1:{
+          required:true,
+        },
+        Q3Wa1S2:{
+          required:true,
+        },
+        Q3Wa1S3:{
+          required:true,
+        },
+        Q4Wa1:{
+          required:true,
+        },
+        Q4Wa2:{
+          required:true,
+        },
+        Q5Wa1S1:{
+          required:true,
+        },
+        Q5Wa1S2:{
+          required:true,
+        },
+        Q5Wa1S3:{
+          required:true,
+        },
+        Q5Wa1S4:{
+          required:true,
+        },
+        Q5Wa2S1:{
+          required:true,
+        },
+        Q5Wa2S2:{
+          required:true,
+        },
+        Q5Wa2S3:{
+          required:true,
+        },
+        Q5Wa2S4:{
+          required:true,
+        },
+        Q5Wa3S1:{
+          required:true,
+        },
+        Q5Wa3S2:{
+          required:true,
+        },
+        Q5Wa3S3:{
+          required:true,
+        },
+        Q5Wa3S4:{
+          required:true,
+        },
+        Q5Wa4S1:{
+          required:true,
+        },
+        Q5Wa4S2:{
+          required:true,
+        },
+        Q5Wa4S3:{
+          required:true,
+        },
+        Q5Wa4S4:{
+          required:true,
+        },
+        Q5Wa5S1:{
+          required:true,
+        },
+        Q5Wa5S2:{
+          required:true,
+        },
+        Q5Wa5S3:{
+          required:true,
+        },
+        Q5Wa5S4:{
+          required:true,
+        },
+        Q5Wa6S1:{
+          required:true,
+        },
+        Q5Wa6S2:{
+          required:true,
+        },
+        Q5Wa6S3:{
+          required:true,
+        },
+        Q5Wa6S4:{
+          required:true,
+        },
+        Q5Wa7S1:{
+          required:true,
+        },
+        Q5Wa7S2:{
+          required:true,
+        },
+        Q5Wa7S3:{
+          required:true,
+        },
+        Q5Wa7S4:{
+          required:true,
+        },
+        Q5Wa8S1:{
+          required:true,
+        },
+        Q5Wa8S2:{
+          required:true,
+        },
+        Q5Wa8S3:{
+          required:true,
+        },
+        Q5Wa8S4:{
+          required:true,
+        },
+        Q5Wa9S1:{
+          required:true,
+        },
+        Q5Wa9S2:{
+          required:true,
+        },
+        Q5Wa9S3:{
+          required:true,
+        },
+        Q5Wa9S4:{
+          required:true,
+        },
+        Q5Wa10S1:{
+          required:true,
+        },
+        Q5Wa10S2:{
+          required:true,
+        },
+        Q5Wa10S3:{
+          required:true,
+        },
+        Q5Wa10S4:{
+          required:true,
+        },
+        Q6Wa1S1:{
+          required:true,
+        },
+        Q6Wa1S2:{
+          required:true,
+        },
+        Q6Wa1S3:{
+          required:true,
+        },
+        Q6Wa1S4:{
+          required:true,
+        },
+        Q6Wa2S1:{
+          required:true,
+        },
+        Q6Wa2S2:{
+          required:true,
+        },
+        Q6Wa2S3:{
+          required:true,
+        },
+        Q6Wa2S3:{
+          required:true,
+        },
+        Q6Wa2S4:{
+          required:true,
+        },
+        Q6Wa2S5:{
+          required:true,
+        },
+        Q6Wa2S6:{
+          required:true,
+        },
+        Q6Wa2S7:{
+          required:true,
+        },
+        Q6Wa3S1:{
+          required:true,
+        },
+        Q6Wa3S2:{
+          required:true,
+        },
+        Q6Wa4S1:{
+          required:true,
+        },
+        Q6Wa5S1:{
+          required:true,
+        },
+        Q6Wa6S1:{
+          required:true,
+        },
+        Q6Wa7S1:{
+          required:true,
+        },
+        Q8Wa1:{
+          required:true,
+        },
+        Q8Wa1S1:{
+          required:true,
+        },
+        Q8Wa1S2:{
+          required:true,
+        },
+        Q8Wa1S3:{
+          required:true,
+        },
+        Q8Wa1S4:{
+          required:true,
+        },
+        Q8Wa2S1:{
+          required:true,
+        },
+        Q8Wa2S2:{
+          required:true,
+        },
+        Q8Wa2S3:{
+          required:true,
+        },
+        Q8Wa2S4:{
+          required:true,
+        },
+        Q8Wa2S5:{
+          required:true,
+        },
+        Q8Wa2S6:{
+          required:true,
+        },
+        Q8Wa2S7:{
+          required:true,
+        },
+        Q8Wa3S1:{
+          required:true,
+        },
+        Q8Wa3S2:{
+          required:true,
+        },
+        Q8Wa4S1:{
+          required:true,
+        },
+        Q8Wa5S1:{
+          required:true,
+        },
+        Q8Wa6S1:{
+          required:true,
+        },
+        Q8Wa7S1:{
+          required:true,
+        },
+        Q9Wa1:{
+          required:true,
+        },
+        Q9Wa3:{
+          required:true,
+        },
+        Q10Wa1:{
+          required:true,
+        },
+        Q12Wa1S1:{
+          required:true,  
+        },
+        Q12Wa1S2:{
+          required:true,
+        },
+        Q12Wa1S3:{
+          required:true,
+        },
+        Q12Wa2S1:{
+          required:true,
+        },
+        Q12Wa2S2:{
+          required:true,
+        },
+        Q12Wa2S3:{
+          required:true,
+        },
+        Q12Wa3S1:{
+          required:true,
+        },
+        Q12Wa3S2:{
+          required:true,
+        },
+        Q12Wa3S3:{
+          required:true,
+        },
+        Q12Wa4S1:{
+          required:true,
+        },
+        Q12Wa4S2:{
+          required:true,
+        },
+        Q12Wa4S3:{
+          required:true,
+        },
+        Q12Wa5S1:{
+          required:true,
+        },
+        Q12Wa5S2:{
+          required:true,
+        },
+        Q12Wa5S3:{
+          required:true,
+        },
+        Q12Wa6S1:{
+          required:true,
+        },
+        Q12Wa6S2:{
+          required:true,
+        },
+        Q12Wa6S3:{
+          required:true,
+        },
+        Q12Wa7S1:{
+          required:true,
+        },
+        Q12Wa7S2:{
+          required:true,
+        },
+        Q12Wa7S3:{
+          required:true,
+        },
+        Q12Wa8S1:{
+          required:true,
+        },
+        Q12Wa8S2:{
+          required:true,
+        },
+        Q12Wa8S3:{
+          required:true,
+        },
+        Q12Wa9S1:{
+          required:true,
+        },
+        Q12Wa9S2:{
+          required:true,
+        },
+        Q12Wa9S3:{
+          required:true,
+        },
+        Q12Wa10S1:{
+          required:true,
+        },
+        Q12Wa10S2:{
+          required:true,
+        },
+        Q12Wa10S3:{
+          required:true,
+        },
+        Q12Wa11S1:{
+          required:true,
+        },
+        Q12Wa11S2:{
+          required:true,
+        },
+        Q12Wa11S3:{
+          required:true,
+        },
+        Q12Wa12S1:{
+          required:true,
+        },
+        Q12Wa12S2:{
+          required:true,
+        },
+        Q12Wa12S3:{
+          required:true,
+        },
+        Q12Wa13S1:{
+          required:true,
+        },
+        Q12Wa13S2:{
+          required:true,
+        },
+        Q12Wa13S3:{
+          required:true,
+        },
+        Q12Wa14S1:{
+          required:true,
+        },
+        Q12Wa14S2:{
+          required:true,
+        },
+        Q12Wa14S3:{
+          required:true,
+        },
+        Q12Wa15S1:{
+          required:true,
+        },
+        Q12Wa15S2:{
+          required:true,
+        },
+        Q12Wa15S3:{
+          required:true,
+        },
+        Q12Wa16S1:{
+          required:true,
+        },
+        Q12Wa16S2:{
+          required:true,
+        },
+        Q12Wa16S3:{
+          required:true,
+        },
+        Q12Wa17S1:{
+          required:true,
+        },
+        Q12Wa17S2:{
+          required:true,
+        },
+        Q12Wa17S3:{
+          required:true,
+        },
+        Q12Wa18S1:{
+          required:true,
+        },
+        Q12Wa18S2:{
+          required:true,
+        },
+        Q12Wa18S3:{
+          required:true,
+        },
+        Q12Wa19S1:{
+          required:true,
+        },
+        Q12Wa19S2:{
+          required:true,
+        },
+        Q12Wa19S3:{
+          required:true,
+        },
+        Q12Wa20S1:{
+          required:true,
+        },
+        Q12Wa20S2:{
+          required:true,
+        },
+        Q12Wa20S3:{
+          required:true,
+        },
+        Q12Wa21S1:{
+          required:true,
+        },
+        Q12Wa21S2:{
+          required:true,
+        },
+        Q12Wa21S3:{
+          required:true,
+        },
+        Q12Wa22S1:{
+          required:true,
+        },
+        Q12Wa22S2:{
+          required:true,
+        },
+        Q12Wa22S3:{
+          required:true,
+        },
+        Q12Wa23S1:{
+          required:true,
+        },
+        Q12Wa23S2:{
+          required:true,
+        },
+        Q12Wa23S3:{
+          required:true,
+        },
+        Q12Wa24S1:{
+          required:true,
+        },
+        Q12Wa24S2:{
+          required:true,
+        },
+        Q12Wa24S3:{
+          required:true,
+        },
+        Q12Wa25S1:{
+          required:true,
+        },
+        Q12Wa25S3:{
+          required:true,
+        },
+        Q12Wa26S1:{
+          required:true,
+        },
+        Q12Wa26S2:{
+          required:true,
+        },
+        Q12Wa26S3:{
+          required:true,
+        },
+        Q12Wa27S1:{
+          required:true,
+        },
+        Q12Wa27S2:{
+          required:true,
+        },
+        Q12Wa27S3:{
+          required:true,
+        },
+        Q12Wa28S1:{
+          required:true,
+        },
+        Q12Wa28S2:{
+          required:true,
+        },
+        Q12Wa28S3:{
+          required:true,  
+        },
+        Q13Wa1:{
+          required:true,
+        },
+        Q13Wa2:{
+          required:true,
+        },
+        Q14Wa1:{
+          required:true,
+        },
+        Q15Wa1:{
+          required:true,
+        },
+        Q15Wa2:{
+          required:true,
+        },
+        Q17Wa1:{
+          required:true,
+        },
+        Q18Wa1:{
+          required:true,
+        },
+        Q19Wa1:{
+          required:true,
+        }
+    }
        
-	});
-	});
-	
-	$('#wastenext').click(function(e){
-		
-		
-		$r=$('#waste').valid();
-		if($r == false)
-		{
-			 
-			   e.preventDefault();
-			   $('#waste').valid();
-		}
-		
-		
-	});
-	
-	</script>
+  });
+  });
+  
+  $('#wastenext').click(function(e){
+    
+    
+    $r=$('#waste').valid();
+    if($r == false)
+    {
+       
+         e.preventDefault();
+         $('#waste').valid();
+    }
+    
+    
+  });
+  
+  </script>
 <script>
  $(document).ready(function(){
-	
+  
    $("input[name='Q9Wa1']").click(function(){
       if($(this).val()==='Y'){
        $("#compositive").show();
@@ -4400,15 +4416,15 @@
   
    $(window).load(function() {
     if ($("input[name='Q9Wa1']").is(":checked")) {
-		 
+     
     if($("input[name='Q9Wa1']:checked").val()==='Y'){
 
      $("#compositive").show();
    }else{
-	    $("#compositive").hide();
+      $("#compositive").hide();
    }
    
-	}
+  }
  });
 </script>
 <script type="text/javascript">
@@ -4484,9 +4500,9 @@ $(document).ready(function(){
     if (evt.which != 8 && evt.which != 0 && evt.which < 45 || evt.which > 57)
     {
         evt.preventDefault();
-	    if(evt.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+      if(evt.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
     }
   });
 });
@@ -4495,600 +4511,600 @@ $(document).ready(function(){
 $("input[name='Q12Wa1S1']").change(function(){
   if($(this).val()>5){
     alert("BEE star rating cannot be more than 5");
-	$(this).val("");
-	$(this).attr("placeholder","BEE Star rating (1 to 5)")
+  $(this).val("");
+  $(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa2S1']").change(function(){
   if($(this).val()>5){
     alert("BEE star rating cannot be more than 5");
-	$(this).val("");
-	$(this).attr("placeholder","BEE Star rating (1 to 5)")
+  $(this).val("");
+  $(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa3S1']").change(function(){
   if($(this).val()>5){
     alert("BEE star rating cannot be more than 5");
-	$(this).val("");
-	$(this).attr("placeholder","BEE Star rating (1 to 5)")
+  $(this).val("");
+  $(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa4S1']").change(function(){
   if($(this).val()>5){
     alert("BEE star rating cannot be more than 5");
-	$(this).val("");
-	$(this).attr("placeholder","BEE Star rating (1 to 5)")
+  $(this).val("");
+  $(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa5S1']").change(function(){
   if($(this).val()>5){
     alert("BEE star rating cannot be more than 5");
-	$(this).val("");
-	$(this).attr("placeholder","BEE Star rating (1 to 5)")
+  $(this).val("");
+  $(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa6S1']").change(function(){
   if($(this).val()>5){
     alert("BEE star rating cannot be more than 5");
-	$(this).val("");
-	$(this).attr("placeholder","BEE Star rating (1 to 5)")
+  $(this).val("");
+  $(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa7S1']").change(function(){
   if($(this).val()>5){
     alert("BEE star rating cannot be more than 5");
-	$(this).val("");
-	$(this).attr("placeholder","BEE Star rating (1 to 5)")
+  $(this).val("");
+  $(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa8S1']").change(function(){
   if($(this).val()>5){
     alert("BEE star rating cannot be more than 5");
-	$(this).val("");
-	$(this).attr("placeholder","BEE Star rating (1 to 5)")
+  $(this).val("");
+  $(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa9S1']").change(function(){
   if($(this).val()>5){
     alert("BEE star rating cannot be more than 5");
-	$(this).val("");
-	$(this).attr("placeholder","BEE Star rating (1 to 5)")
+  $(this).val("");
+  $(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa10S1']").change(function(){
   if($(this).val()>5){
     alert("BEE star rating cannot be more than 5");
-	$(this).val("");
-	$(this).attr("placeholder","BEE Star rating (1 to 5)")
+  $(this).val("");
+  $(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa11S1']").change(function(){
   if($(this).val()>5){
     alert("BEE star rating cannot be more than 5");
-	$(this).val("");
-	$(this).attr("placeholder","BEE Star rating (1 to 5)")
+  $(this).val("");
+  $(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa12S1']").change(function(){
   if($(this).val()>5){
     alert("BEE star rating cannot be more than 5");
-	$(this).val("");
-	$(this).attr("placeholder","BEE Star rating (1 to 5)")
+  $(this).val("");
+  $(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa13S1']").change(function(){
   if($(this).val()>5){
     alert("BEE star rating cannot be more than 5");
-	$(this).val("");
-	$(this).attr("placeholder","BEE Star rating (1 to 5)")
+  $(this).val("");
+  $(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa14S1']").change(function(){
   if($(this).val()>5){
     alert("BEE star rating cannot be more than 5");
-	$(this).val("");
-	$(this).attr("placeholder","BEE Star rating (1 to 5)")
+  $(this).val("");
+  $(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa15S1']").change(function(){
   if($(this).val()>5){
     alert("BEE star rating cannot be more than 5");
-	$(this).val("");
-	$(this).attr("placeholder","BEE Star rating (1 to 5)")
+  $(this).val("");
+  $(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa16S1']").change(function(){
   if($(this).val()>5){
     alert("BEE star rating cannot be more than 5");
-	$(this).val("");
-	$(this).attr("placeholder","BEE Star rating (1 to 5)")
+  $(this).val("");
+  $(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa17S1']").change(function(){
   if($(this).val()>5){
     alert("BEE star rating cannot be more than 5");
-	$(this).val("");
-	$(this).attr("placeholder","BEE Star rating (1 to 5)")
+  $(this).val("");
+  $(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa18S1']").change(function(){
   if($(this).val()>5){
     alert("BEE star rating cannot be more than 5");
-	$(this).val("");
-	$(this).attr("placeholder","BEE Star rating (1 to 5)")
+  $(this).val("");
+  $(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa19S1']").change(function(){
   if($(this).val()>5){
     alert("BEE star rating cannot be more than 5");
-	$(this).val("");
-	$(this).attr("placeholder","BEE Star rating (1 to 5)")
+  $(this).val("");
+  $(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa20S1']").change(function(){
   if($(this).val()>5){
     alert("BEE star rating cannot be more than 5");
-	$(this).val("");
-	$(this).attr("placeholder","BEE Star rating (1 to 5)")
+  $(this).val("");
+  $(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa21S1']").change(function(){
   if($(this).val()>5){
     alert("BEE star rating cannot be more than 5");
-	$(this).val("");
-	$(this).attr("placeholder","BEE Star rating (1 to 5)")
+  $(this).val("");
+  $(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa22S1']").change(function(){
   if($(this).val()>5){
     alert("BEE star rating cannot be more than 5");
-	$(this).val("");
-	$(this).attr("placeholder","BEE Star rating (1 to 5)")
+  $(this).val("");
+  $(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa23S1']").change(function(){
   if($(this).val()>5){
     alert("BEE star rating cannot be more than 5");
-	$(this).val("");
-	$(this).attr("placeholder","BEE Star rating (1 to 5)")
+  $(this).val("");
+  $(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa24S1']").change(function(){
   if($(this).val()>5){
     alert("BEE star rating cannot be more than 5");
-	$(this).val("");
-	$(this).attr("placeholder","BEE Star rating (1 to 5)")
+  $(this).val("");
+  $(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa25S1']").change(function(){
   if($(this).val()>5){
     alert("BEE star rating cannot be more than 5");
-	$(this).val("");
-	$(this).attr("placeholder","BEE Star rating (1 to 5)")
+  $(this).val("");
+  $(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa26S1']").change(function(){
   if($(this).val()>5){
     alert("BEE star rating cannot be more than 5");
-	$(this).val("");
-	$(this).attr("placeholder","BEE Star rating (1 to 5)")
+  $(this).val("");
+  $(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa27S1']").change(function(){
   if($(this).val()>5){
     alert("BEE star rating cannot be more than 5");
-	$(this).val("");
-	$(this).attr("placeholder","BEE Star rating (1 to 5)")
+  $(this).val("");
+  $(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
 });
 $("input[name='Q12Wa28S1']").change(function(){
   if($(this).val()>5){
     alert("BEE star rating cannot be more than 5");
-	$(this).val("");
-	$(this).attr("placeholder","BEE Star rating (1 to 5)")
+  $(this).val("");
+  $(this).attr("placeholder","BEE Star rating (1 to 5)")
   }
-});	
+}); 
 </script>
 <script>
-	$("#wastenext").click(function(e){
+  $("#wastenext").click(function(e){
 if($("input[name='Q11Wa1S1']").is(':disabled') == false && $("input[name='Q11Wa1S2']").is(':disabled') == false && $("input[name='Q11Wa1S3']").is(':disabled') == false && $("input[name='Q11Wa1S4']").is(':disabled') == false){
 if($("input[name='Q11Wa1S1']").prop('checked') == false && $("input[name='Q11Wa1S2']").prop('checked') == false && $("input[name='Q11Wa1S3']").prop('checked') == false && $("input[name='Q11Wa1S4']").prop('checked') == false){
   alert("Q7 fill the Paper section.");
   e.preventDefault();
-	if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+  if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
    }
 }
-});	
-	</script>
+}); 
+  </script>
 <script>
-	$("#wastenext").click(function(e){
-	if($("input[name='Q11Wa2S1']").is(':disabled') == false && $("input[name='Q11Wa2S2']").is(':disabled') == false && $("input[name='Q11Wa2S3']").is(':disabled') == false && $("input[name='Q11Wa2S4']").is(':disabled') == false){
+  $("#wastenext").click(function(e){
+  if($("input[name='Q11Wa2S1']").is(':disabled') == false && $("input[name='Q11Wa2S2']").is(':disabled') == false && $("input[name='Q11Wa2S3']").is(':disabled') == false && $("input[name='Q11Wa2S4']").is(':disabled') == false){
 if($("input[name='Q11Wa2S1']").prop('checked') == false && $("input[name='Q11Wa2S2']").prop('checked') == false && $("input[name='Q11Wa2S3']").prop('checked') == false && $("input[name='Q11Wa2S4']").prop('checked') == false){
   alert("Q7 fill the Plastic section.");
   e.preventDefault();
-	if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+  if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
 }
 }
-});	
-	</script>
+}); 
+  </script>
 <script>
-	$("#wastenext").click(function(e){
-if($("input[name='Q11Wa3S1']").is(':disabled') == false && $("input[name='Q11Wa3S2']").is(':disabled') == false && $("input[name='Q11Wa3S3']").is(':disabled') == false && $("input[name='Q11Wa3S4']").is(':disabled') == false){	
+  $("#wastenext").click(function(e){
+if($("input[name='Q11Wa3S1']").is(':disabled') == false && $("input[name='Q11Wa3S2']").is(':disabled') == false && $("input[name='Q11Wa3S3']").is(':disabled') == false && $("input[name='Q11Wa3S4']").is(':disabled') == false){ 
 if($("input[name='Q11Wa3S1']").prop('checked') == false && $("input[name='Q11Wa3S2']").prop('checked') == false && $("input[name='Q11Wa3S3']").prop('checked') == false && $("input[name='Q11Wa3S4']").prop('checked') == false){
   alert("Q7 fill the Horticultural waste section.");
   e.preventDefault();
 }
 }
-});	
-	</script>
+}); 
+  </script>
 <script>
-	$("#wastenext").click(function(e){
+  $("#wastenext").click(function(e){
 if($("input[name='Q11Wa4S1']").is(':disabled') == false && $("input[name='Q11Wa4S2']").is(':disabled') == false && $("input[name='Q11Wa4S3']").is(':disabled') == false && $("input[name='Q11Wa4S4']").is(':disabled') == false){
 if($("input[name='Q11Wa4S1']").prop('checked') == false && $("input[name='Q11Wa4S2']").prop('checked') == false && $("input[name='Q11Wa4S3']").prop('checked') == false && $("input[name='Q11Wa4S4']").prop('checked') == false){
   alert("Q7 fill the Horticultural waste section.");
   e.preventDefault();
-	if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+  if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
  }
 }
-});	
-	</script>
+}); 
+  </script>
 <script>
-	$("#wastenext").click(function(e){
-if($("input[name='Q11Wa4S1']").is(':disabled') == false && $("input[name='Q11Wa4S2']").is(':disabled') == false && $("input[name='Q11Wa4S3']").is(':disabled') == false && $("input[name='Q11Wa4S4']").is(':disabled') == false){ 	
+  $("#wastenext").click(function(e){
+if($("input[name='Q11Wa4S1']").is(':disabled') == false && $("input[name='Q11Wa4S2']").is(':disabled') == false && $("input[name='Q11Wa4S3']").is(':disabled') == false && $("input[name='Q11Wa4S4']").is(':disabled') == false){   
 if($("input[name='Q11Wa4S1']").prop('checked') == false && $("input[name='Q11Wa4S2']").prop('checked') == false && $("input[name='Q11Wa4S3']").prop('checked') == false && $("input[name='Q11Wa4S4']").prop('checked') == false){ 
  alert("Q7 fill the E-waste section.");
   e.preventDefault();
-	if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+  if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
   }
 }
-});	
-	</script>
+}); 
+  </script>
 <script>
-	$("#wastenext").click(function(e){
-	if($("input[name='Q11Wa5S1']").is(':disabled') == false && $("input[name='Q11Wa5S2']").is(':disabled') == false && $("input[name='Q11Wa5S3']").is(':disabled') == false && $("input[name='Q11Wa5S4']").is(':disabled') == false){
+  $("#wastenext").click(function(e){
+  if($("input[name='Q11Wa5S1']").is(':disabled') == false && $("input[name='Q11Wa5S2']").is(':disabled') == false && $("input[name='Q11Wa5S3']").is(':disabled') == false && $("input[name='Q11Wa5S4']").is(':disabled') == false){
 if($("input[name='Q11Wa5S1']").prop('checked') == false && $("input[name='Q11Wa5S2']").prop('checked') == false && $("input[name='Q11Wa5S3']").prop('checked') == false && $("input[name='Q11Wa5S4']").prop('checked') == false){
   alert("Q7 fill the Hazardous waste section.");
   e.preventDefault();
-	if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+  if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
  }
  }
-});	
-	</script>
+}); 
+  </script>
 <script>
-	$("#wastenext").click(function(e){
-if($("input[name='Q11Wa6S1']").is(':disabled') == false && $("input[name='Q11Wa6S2']").is(':disabled') == false && $("input[name='Q11Wa6S3']").is(':disabled') == false && $("input[name='Q11Wa6S4']").is(':disabled') == false){	
+  $("#wastenext").click(function(e){
+if($("input[name='Q11Wa6S1']").is(':disabled') == false && $("input[name='Q11Wa6S2']").is(':disabled') == false && $("input[name='Q11Wa6S3']").is(':disabled') == false && $("input[name='Q11Wa6S4']").is(':disabled') == false){ 
 if($("input[name='Q11Wa6S1']").prop('checked') == false && $("input[name='Q11Wa6S2']").prop('checked') == false && $("input[name='Q11Wa6S3']").prop('checked') == false && $("input[name='Q11Wa6S4']").prop('checked') == false){
   alert("Q7 fill the Wood, glass, metal section.");
   e.preventDefault();
-	if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+  if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
   }
 }
-});	
-	</script>
+}); 
+  </script>
 <script>
-	$("#wastenext").click(function(e){
-if($("input[name='Q11Wa7S1']").is(':disabled') == false && $("input[name='Q11Wa7S2']").is(':disabled') == false && $("input[name='Q11Wa7S3']").is(':disabled') == false && $("input[name='Q11Wa7S4']").is(':disabled') == false){	
+  $("#wastenext").click(function(e){
+if($("input[name='Q11Wa7S1']").is(':disabled') == false && $("input[name='Q11Wa7S2']").is(':disabled') == false && $("input[name='Q11Wa7S3']").is(':disabled') == false && $("input[name='Q11Wa7S4']").is(':disabled') == false){ 
 if($("input[name='Q11Wa7S1']").prop('checked') == false && $("input[name='Q11Wa7S2']").prop('checked') == false && $("input[name='Q11Wa7S3']").prop('checked') == false && $("input[name='Q11Wa7S4']").prop('checked') == false){
   alert("Q7 fill the Biomedical waste section.");
   e.preventDefault();
-	if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+  if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
  }
 }
-});	
-	</script>
+}); 
+  </script>
 <script>
-	$("#wastenext").click(function(e){
-if($("input[name='Q11Wa8S1']").is(':disabled') == false && $("input[name='Q11Wa8S2']").is(':disabled') == false && $("input[name='Q11Wa8S3']").is(':disabled') == false && $("input[name='Q11Wa8S4']").is(':disabled') == false){	
+  $("#wastenext").click(function(e){
+if($("input[name='Q11Wa8S1']").is(':disabled') == false && $("input[name='Q11Wa8S2']").is(':disabled') == false && $("input[name='Q11Wa8S3']").is(':disabled') == false && $("input[name='Q11Wa8S4']").is(':disabled') == false){ 
 if($("input[name='Q11Wa8S1']").prop('checked') == false && $("input[name='Q11Wa8S2']").prop('checked') == false && $("input[name='Q11Wa8S3']").prop('checked') == false && $("input[name='Q11Wa8S4']").prop('checked') == false){
   alert("Q7 fill the Others waste section.");
   e.preventDefault();
-	if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+  if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
   }
 }
-});	
-	</script>
+}); 
+  </script>
 <script>
-	$("#wastenext").click(function(e){
+  $("#wastenext").click(function(e){
      if($("input[name='Q4Wa1']:checked").val()==='Y'){
      if($("input[name='Q4Wa2S1']").prop('checked') == false && $("input[name='Q4Wa2S2']").prop('checked') == false && $("input[name='Q4Wa2S3']").prop('checked') == false && $("input[name='Q4Wa2S4']").prop('checked') == false){
-	if($("input[name='Q4Wa2S5']").val()==''){
+  if($("input[name='Q4Wa2S5']").val()==''){
          alert("Q1(a) Who segregates the waste at source?");
-	 e.preventDefault();
-		if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+   e.preventDefault();
+    if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
         }
      }
    }
-});	
-	</script>
+}); 
+  </script>
 <script>
-	$("#wastenext").click(function(e){
+  $("#wastenext").click(function(e){
   if($("input[name='Q15Wa1']:checked").val()==='Y'){    
    if($("input[name='Q15Wa2S1']").prop('checked') == false && $("input[name='Q15Wa2S2']").prop('checked') == false && $("input[name='Q15Wa2S3']").prop('checked') == false && $("input[name='Q15Wa2S4']").prop('checked') == false){
-	 alert("11(b) What kind of waste is being burnt/ incinerated?");
-	 e.preventDefault();
-	   if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
+   alert("11(b) What kind of waste is being burnt/ incinerated?");
+   e.preventDefault();
+     if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
    }
   }
 
-	/*Validation Code On Question Q1,Q2,Q4,Q5,Q6,Q9,Q10,Q11,Q12,Q13,Q14,Q15*/
-	 if($("input[name='Q4Wa1']:checked").length == 0){
-	   alert("Q1: Does your school segregate solid waste?");
-	   e.preventDefault();
-		 if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
-	 }
-	 if($("input[name='Q4Wa2']:checked").length == 0){
-	   alert("Q2: How many categories does your school segregate waste into? ");
-	   e.preventDefault();
-		 if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
-	 }
-	 if($("input[name='Q8Wa1']:checked").length == 0){
-	   alert("Q4: Does your school recycle any generated waste?");
-	   e.preventDefault();
-		 if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
-	 }
-	 if($("input[name='Q9Wa1']:checked").length == 0){
-	   alert("Q5: Does your school have a composting facility?");
-	   e.preventDefault();
-		 if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
-	 } 
-	 if($("input[name='Q10Wa1']:checked").length == 0){
-	   alert("Q6: Does your school encourage students & teachers to reuse textbooks?");
-	   e.preventDefault();
-		 if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
-	 } 
-	 if($("input[name='Q13Wa1']:checked").length == 0){
-	   alert("Q9: Do you know that your e-waste can be collected by an authorized dealer or dismantler?");
-	   e.preventDefault();
-		 if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
-	 } 
-	 if($("input[name='Q14Wa1']:checked").length == 0){
-	   alert("Q10: What is the final destination for waste from your school that is disposed of externally? ");
-	   e.preventDefault();
-		 if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
-	 } 
+  /*Validation Code On Question Q1,Q2,Q4,Q5,Q6,Q9,Q10,Q11,Q12,Q13,Q14,Q15*/
+   if($("input[name='Q4Wa1']:checked").length == 0){
+     alert("Q1: Does your school segregate solid waste?");
+     e.preventDefault();
+     if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
+   }
+   if($("input[name='Q4Wa2']:checked").length == 0){
+     alert("Q2: How many categories does your school segregate waste into? ");
+     e.preventDefault();
+     if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
+   }
+   if($("input[name='Q8Wa1']:checked").length == 0){
+     alert("Q4: Does your school recycle any generated waste?");
+     e.preventDefault();
+     if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
+   }
+   if($("input[name='Q9Wa1']:checked").length == 0){
+     alert("Q5: Does your school have a composting facility?");
+     e.preventDefault();
+     if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
+   } 
+   if($("input[name='Q10Wa1']:checked").length == 0){
+     alert("Q6: Does your school encourage students & teachers to reuse textbooks?");
+     e.preventDefault();
+     if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
+   } 
+   if($("input[name='Q13Wa1']:checked").length == 0){
+     alert("Q9: Do you know that your e-waste can be collected by an authorized dealer or dismantler?");
+     e.preventDefault();
+     if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
+   } 
+   if($("input[name='Q14Wa1']:checked").length == 0){
+     alert("Q10: What is the final destination for waste from your school that is disposed of externally? ");
+     e.preventDefault();
+     if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
+   } 
      if($("input[name='Q15Wa1']:checked").length == 0){
-	   alert("Q11: Does your school burn waste?");
-	   e.preventDefault();
-	     if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
-	 }
+     alert("Q11: Does your school burn waste?");
+     e.preventDefault();
+       if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
+   }
      if($("input[name='Q17Wa1']:checked").length == 0){
-	   alert("Q13: Does the school have a policy on waste?");
-	   e.preventDefault();
-	     if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
-	 }
-	 if($("input[name='Q18Wa1']:checked").length == 0){
-	   alert("Q14: Are there awareness drives with regard to Reduce, Recycle and Reuse?");
-	   e.preventDefault();
-		 if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
-	 }   
-	 if($("input[name='Q19Wa1']:checked").length == 0){
-	   alert("Q15: Is the study of the environment integrated into the curriculum?");
-	   e.preventDefault();
-		 if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
-	 }  
-	/*Q8 Does your school have the following? If yes, please give the numbers of items in working condition and those that are not.
-	(Validation)*/	
-	if($("input[name='Q12Wa1S1']").attr("placeholder")=="" && $("input[name='Q12Wa1S1']").val()=="" || $("input[name='Q12Wa1S2']").attr("placeholder")=="" && $("input[name='Q12Wa1S2']").val()=="" || $("input[name='Q12Wa1S3']").attr("placeholder")=="" && $("input[name='Q12Wa1S3']").val()==""){
-	  if($("input[name='Q12Wa1S1']").val()=="" || $("input[name='Q12Wa1S2']").val()=="" || $("input[name='Q12Wa1S3']").val()=="" ){
-	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (TVs)");
-	   e.preventDefault();
-	  }
-	}
-	if($("input[name='Q12Wa2S1']").attr("placeholder")=="" && $("input[name='Q12Wa2S1']").val()=="" || $("input[name='Q12Wa2S2']").attr("placeholder")=="" && $("input[name='Q12Wa2S2']").val()=="" || $("input[name='Q12Wa2S3']").attr("placeholder")=="" && $("input[name='Q12Wa2S3']").val()==""){
-	 if($("input[name='Q12Wa2S1']").val()=="" || $("input[name='Q12Wa2S2']").val()=="" || $("input[name='Q12Wa2S3']").val()=="" ){
-	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (VCR or DVD players)");
-	   e.preventDefault();
-	  }
-	}
-	if($("input[name='Q12Wa3S1']").attr("placeholder")=="" && $("input[name='Q12Wa3S1']").val()=="" || $("input[name='Q12Wa3S2']").attr("placeholder")=="" && $("input[name='Q12Wa3S2']").val()=="" || $("input[name='Q12Wa3S3']").attr("placeholder")=="" && $("input[name='Q12Wa3S3']").val()==""){
-	if($("input[name='Q12Wa3S1']").val()=="" ||  $("input[name='Q12Wa3S2']").val()=="" || $("input[name='Q12Wa3S3']").val()==""){
-	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Refrigerators and freezers)");
-	   e.preventDefault();
-	  }
-	}
-	if($("input[name='Q12Wa4S1']").attr("placeholder")=="" && $("input[name='Q12Wa4S1']").val()=="" || $("input[name='Q12Wa4S2']").attr("placeholder")=="" && $("input[name='Q12Wa4S2']").val()=="" || $("input[name='Q12Wa4S3']").attr("placeholder")=="" && $("input[name='Q12Wa4S3']").val()==""){
-	if($("input[name='Q12Wa4S1']").val()=="" || $("input[name='Q12Wa4S2']").val()=="" ||  $("input[name='Q12Wa4S3']").val()==""){
-	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Washing machines)");
-	   e.preventDefault();
-	  }
-	}
-	if($("input[name='Q12Wa5S1']").attr("placeholder")=="" && $("input[name='Q12Wa5S1']").val()=="" || $("input[name='Q12Wa5S2']").attr("placeholder")=="" && $("input[name='Q12Wa5S2']").val()=="" || $("input[name='Q12Wa5S3']").attr("placeholder")=="" && $("input[name='Q12Wa5S3']").val()==""){
-		if($("input[name='Q12Wa5S1']").val()=="" || $("input[name='Q12Wa5S2']").val()=="" || $("input[name='Q12Wa5S3']").val()==""){
-	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Air conditioners)");
-	   e.preventDefault();
-	  }
-	}
-	if($("input[name='Q12Wa6S1']").attr("placeholder")=="" || $("input[name='Q12Wa6S2']").attr("placeholder")=="" || $("input[name='Q12Wa6S3']").attr("placeholder")==""){
-	if($("input[name='Q12Wa6S1']").val()=="" || $("input[name='Q12Wa6S2']").val()=="" || $("input[name='Q12Wa6S3']").val()==""){
-	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Heaters)");
-	   e.preventDefault();;
-	  }
-	}
-	if($("input[name='Q12Wa7S1']").attr("placeholder")=="" || $("input[name='Q12Wa7S2']").attr("placeholder")=="" || $("input[name='Q12Wa7S3']").attr("placeholder")==""){
-	if($("input[name='Q12Wa7S1']").val()=="" || $("input[name='Q12Wa7S2']").val()=="" || $("input[name='Q12Wa7S3']").val()==""){
-	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Microwaves)");
-	   e.preventDefault();
-	  }
-	}
-	if($("input[name='Q12Wa8S1']").attr("placeholder")=="" || $("input[name='Q12Wa8S2']").attr("placeholder")=="" || $("input[name='Q12Wa8S3']").attr("placeholder")==""){
-	if($("input[name='Q12Wa8S1']").val()=="" || $("input[name='Q12Wa8S2']").val()=="" || $("input[name='Q12Wa8S3']").val()==""){
-	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Ovens)");
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }
-	}
-	if($("input[name='Q12Wa9S1']").attr("placeholder")=="" || $("input[name='Q12Wa9S2']").attr("placeholder")=="" || $("input[name='Q12Wa9S3']").attr("placeholder")==""){
-	if($("input[name='Q12Wa9S1']").val()=="" || $("input[name='Q12Wa9S2']").val()=="" || $("input[name='Q12Wa9S3']").val()==""){
-	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Toasters)");
-	   e.preventDefault();
-	  }
-	}
-	if($("input[name='Q12Wa10S1']").attr("placeholder")=="" || $("input[name='Q12Wa10S2']").attr("placeholder")=="" || $("input[name='Q12Wa10S3']").attr("placeholder")==""){
-	if($("input[name='Q12Wa10S1']").val()=="" || $("input[name='Q12Wa10S2']").val()=="" || $("input[name='Q12Wa10S3']").val()==""){
-	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Electric kettles)");
-	   e.preventDefault();
-	  }
-	}
-	if($("input[name='Q12Wa11S1']").attr("placeholder")=="" || $("input[name='Q12Wa11S2']").attr("placeholder")=="" || $("input[name='Q12Wa11S3']").attr("placeholder")==""){
-	if($("input[name='Q12Wa11S1']").val()=="" || $("input[name='Q12Wa11S2']").val()=="" || $("input[name='Q12Wa11S3']").val()==""){
-	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Personal computers (CPU, mouse, screen and keyboard included))");
-	   e.preventDefault();
-	  }
-	}
-	if($("input[name='Q12Wa12S1']").attr("placeholder")=="" || $("input[name='Q12Wa12S2']").attr("placeholder")=="" || $("input[name='Q12Wa12S3']").attr("placeholder")==""){
-		if($("input[name='Q12Wa12S1']").val()=="" || $("input[name='Q12Wa12S2']").val()=="" || $("input[name='Q12Wa12S3']").val()==""){
-	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Laptop computer (CPU, mouse, screen and keyboard included)))");
-	   e.preventDefault();
-	  }
-	}
-	if($("input[name='Q12Wa13S1']").attr("placeholder")=="" || $("input[name='Q12Wa13S2']").attr("placeholder")=="" || $("input[name='Q12Wa13S3']").attr("placeholder")==""){
-	if($("input[name='Q12Wa13S1']").val()=="" || $("input[name='Q12Wa13S2']").val()=="" || $("input[name='Q12Wa13S3']").val()==""){
-	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Notebook computers)))");
-	   e.preventDefault();
-	  }
-	}
-	if($("input[name='Q12Wa14S1']").attr("placeholder")=="" || $("input[name='Q12Wa14S2']").attr("placeholder")=="" || $("input[name='Q12Wa14S3']").attr("placeholder")==""){
-	if($("input[name='Q12Wa14S1']").val()=="" || $("input[name='Q12Wa14S2']").val()=="" || $("input[name='Q12Wa14S3']").val()==""){
-	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Notebook computers)))");
-	   e.preventDefault();
-	  }
-	}
-	if($("input[name='Q12Wa15S1']").attr("placeholder")=="" || $("input[name='Q12Wa15S2']").attr("placeholder")=="" || $("input[name='Q12Wa15S3']").attr("placeholder")==""){
-	if($("input[name='Q12Wa15S1']").val()=="" || $("input[name='Q12Wa15S2']").val()=="" || $("input[name='Q12Wa15S3']").val()==""){
-	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Printers)))");
-	   e.preventDefault();
-	  }
-	}
-	if($("input[name='Q12Wa16S1']").attr("placeholder")=="" || $("input[name='Q12Wa16S2']").attr("placeholder")=="" || $("input[name='Q12Wa16S3']").attr("placeholder")==""){
-	if($("input[name='Q12Wa16S1']").val()=="" || $("input[name='Q12Wa16S2']").val()=="" || $("input[name='Q12Wa16S3']").val()==""){
-	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Copying equipment (photocopiers))))");
-	   e.preventDefault();
-	  }
-	}
-	if($("input[name='Q12Wa17S1']").attr("placeholder")=="" || $("input[name='Q12Wa17S2']").attr("placeholder")=="" || $("input[name='Q12Wa17S3']").attr("placeholder")==""){
-	if($("input[name='Q12Wa17S1']").val()=="" || $("input[name='Q12Wa17S2']").val()=="" || $("input[name='Q12Wa17S3']").val()==""){
-	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Copying equipment (Whiteboards))))");
-	   e.preventDefault();
-	  }
-	}
-	if($("input[name='Q12Wa18S1']").attr("placeholder")=="" || $("input[name='Q12Wa18S2']").attr("placeholder")=="" || $("input[name='Q12Wa18S3']").attr("placeholder")==""){
-	if($("input[name='Q12Wa18S1']").val()=="" || $("input[name='Q12Wa18S2']").val()=="" || $("input[name='Q12Wa18S3']").val()==""){
-	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Copying equipment (Electrical and electronic typewriters))))");
-	   e.preventDefault();
-	  }
-	}
-	if($("input[name='Q12Wa19S1']").attr("placeholder")=="" || $("input[name='Q12Wa19S2']").attr("placeholder")=="" || $("input[name='Q12Wa19S3']").attr("placeholder")==""){
-	if($("input[name='Q12Wa19S1']").val()=="" || $("input[name='Q12Wa19S2']").val()=="" || $("input[name='Q12Wa19S3']").val()==""){
-	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Electrical and electronic typewriters)");
-	   e.preventDefault();
-	  }
-	}	
-	if($("input[name='Q12Wa20S1']").attr("placeholder")=="" || $("input[name='Q12Wa20S2']").attr("placeholder")=="" || $("input[name='Q12Wa20S3']").attr("placeholder")==""){
-	if($("input[name='Q12Wa20S1']").val()=="" || $("input[name='Q12Wa20S2']").val()=="" || $("input[name='Q12Wa20S3']").val()==""){
-	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Pocket and desk calculators)");
-	   e.preventDefault();
-	  }
-	}
-	if($("input[name='Q12Wa21S1']").attr("placeholder")=="" || $("input[name='Q12Wa21S2']").attr("placeholder")=="" || $("input[name='Q12Wa21S3']").attr("placeholder")==""){
-	if($("input[name='Q12Wa21S1']").val()=="" || $("input[name='Q12Wa21S2']").val()=="" || $("input[name='Q12Wa21S3']").val()==""){
-	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Fax machines)");
-	   e.preventDefault();
-	  }
-	}
-	if($("input[name='Q12Wa22S1']").attr("placeholder")=="" || $("input[name='Q12Wa22S2']").attr("placeholder")=="" || $("input[name='Q12Wa22S3']").attr("placeholder")==""){
-	if($("input[name='Q12Wa22S1']").val()=="" || $("input[name='Q12Wa22S2']").val()=="" || $("input[name='Q12Wa22S3']").val()==""){
-	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Telex)");
-	   e.preventDefault();
-	  }
-	}
-	if($("input[name='Q12Wa23S1']").attr("placeholder")=="" || $("input[name='Q12Wa23S2']").attr("placeholder")=="" || $("input[name='Q12Wa23S3']").attr("placeholder")==""){
-		if($("input[name='Q12Wa23S1']").val()=="" || $("input[name='Q12Wa23S2']").val()=="" || $("input[name='Q12Wa23S3']").val()==""){
-	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Telephones)");
-	   e.preventDefault();
-	  }
-	}	
-	if($("input[name='Q12Wa24S1']").attr("placeholder")=="" || $("input[name='Q12Wa24S2']").attr("placeholder")=="" || $("input[name='Q12Wa24S3']").attr("placeholder")==""){
-	if($("input[name='Q12Wa24S1']").val()=="" || $("input[name='Q12Wa24S2']").val()=="" || $("input[name='Q12Wa24S3']").val()==""){
-	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Pay telephones)");
-	   e.preventDefault();
-	  }
-	}
-	if($("input[name='Q12Wa25S1']").attr("placeholder")=="" || $("input[name='Q12Wa25S2']").attr("placeholder")=="" || $("input[name='Q12Wa25S3']").attr("placeholder")==""){
-	if($("input[name='Q12Wa25S1']").val()=="" || $("input[name='Q12Wa25S2']").val("placeholder")=="" || $("input[name='Q12Wa25S3']").val()==""){
-	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Mobiles)");
-	   e.preventDefault();
-	  }
-	}
-	if($("input[name='Q12Wa26S1']").attr("placeholder")=="" || $("input[name='Q12Wa26S2']").attr("placeholder")=="" || $("input[name='Q12Wa26S3']").attr("placeholder")==""){
-	if($("input[name='Q12Wa26S1']").val()=="" || $("input[name='Q12Wa26S2']").val()=="" || $("input[name='Q12Wa26S3']").val()==""){
-	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Answering systems)");
-	   e.preventDefault();
-	  }
-	}
-	if($("input[name='Q12Wa27S1']").attr("placeholder")=="" || $("input[name='Q12Wa27S2']").attr("placeholder")=="" || $("input[name='Q12Wa27S3']").attr("placeholder")==""){
-	if($("input[name='Q12Wa27S1']").val()=="" || $("input[name='Q12Wa27S2']").val()=="" || $("input[name='Q12Wa27S3']").val()==""){
-	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Induction cookers)");
-	   e.preventDefault();
-	  }
-	}
-	if($("input[name='Q12Wa28S1']").attr("placeholder")=="" || $("input[name='Q12Wa28S2']").attr("placeholder")=="" || $("input[name='Q12Wa28S3']").attr("placeholder")==""){
-	if($("input[name='Q12Wa28S1']").val()=="" || $("input[name='Q12Wa28S2']").val()=="" || $("input[name='Q12Wa28S3']").val()==""){
-	   alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Geysers/water heaters)");
-	   e.preventDefault();
-	  }
-	}
-	if($("input[name='Q4Wa1']:checked").val()==="Y"){
-	   if($("input[name='Q4Wa2S1']").prop('checked') == false && $("input[name='Q4Wa2S2']").prop('checked') == false && $("input[name='Q4Wa2S3']").prop('checked') == false
-	     && $("input[name='Q4Wa2S4']").prop('checked') == false && $("input[name='Q4Wa2S5']:checked").val()==""){
-	       alert("1(a) Who segregates the waste at source?");
-		e.preventDefault();  
-		if(e.isDefaultPrevented()){
-	         setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	     }
-	   }
-	}	
-     });	
+     alert("Q13: Does the school have a policy on waste?");
+     e.preventDefault();
+       if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
+   }
+   if($("input[name='Q18Wa1']:checked").length == 0){
+     alert("Q14: Are there awareness drives with regard to Reduce, Recycle and Reuse?");
+     e.preventDefault();
+     if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
+   }   
+   if($("input[name='Q19Wa1']:checked").length == 0){
+     alert("Q15: Is the study of the environment integrated into the curriculum?");
+     e.preventDefault();
+     if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
+   }  
+  /*Q8 Does your school have the following? If yes, please give the numbers of items in working condition and those that are not.
+  (Validation)*/  
+  if($("input[name='Q12Wa1S1']").attr("placeholder")=="" && $("input[name='Q12Wa1S1']").val()=="" || $("input[name='Q12Wa1S2']").attr("placeholder")=="" && $("input[name='Q12Wa1S2']").val()=="" || $("input[name='Q12Wa1S3']").attr("placeholder")=="" && $("input[name='Q12Wa1S3']").val()==""){
+    if($("input[name='Q12Wa1S1']").val()=="" || $("input[name='Q12Wa1S2']").val()=="" || $("input[name='Q12Wa1S3']").val()=="" ){
+     alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (TVs)");
+     e.preventDefault();
+    }
+  }
+  if($("input[name='Q12Wa2S1']").attr("placeholder")=="" && $("input[name='Q12Wa2S1']").val()=="" || $("input[name='Q12Wa2S2']").attr("placeholder")=="" && $("input[name='Q12Wa2S2']").val()=="" || $("input[name='Q12Wa2S3']").attr("placeholder")=="" && $("input[name='Q12Wa2S3']").val()==""){
+   if($("input[name='Q12Wa2S1']").val()=="" || $("input[name='Q12Wa2S2']").val()=="" || $("input[name='Q12Wa2S3']").val()=="" ){
+     alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (VCR or DVD players)");
+     e.preventDefault();
+    }
+  }
+  if($("input[name='Q12Wa3S1']").attr("placeholder")=="" && $("input[name='Q12Wa3S1']").val()=="" || $("input[name='Q12Wa3S2']").attr("placeholder")=="" && $("input[name='Q12Wa3S2']").val()=="" || $("input[name='Q12Wa3S3']").attr("placeholder")=="" && $("input[name='Q12Wa3S3']").val()==""){
+  if($("input[name='Q12Wa3S1']").val()=="" ||  $("input[name='Q12Wa3S2']").val()=="" || $("input[name='Q12Wa3S3']").val()==""){
+     alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Refrigerators and freezers)");
+     e.preventDefault();
+    }
+  }
+  if($("input[name='Q12Wa4S1']").attr("placeholder")=="" && $("input[name='Q12Wa4S1']").val()=="" || $("input[name='Q12Wa4S2']").attr("placeholder")=="" && $("input[name='Q12Wa4S2']").val()=="" || $("input[name='Q12Wa4S3']").attr("placeholder")=="" && $("input[name='Q12Wa4S3']").val()==""){
+  if($("input[name='Q12Wa4S1']").val()=="" || $("input[name='Q12Wa4S2']").val()=="" ||  $("input[name='Q12Wa4S3']").val()==""){
+     alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Washing machines)");
+     e.preventDefault();
+    }
+  }
+  if($("input[name='Q12Wa5S1']").attr("placeholder")=="" && $("input[name='Q12Wa5S1']").val()=="" || $("input[name='Q12Wa5S2']").attr("placeholder")=="" && $("input[name='Q12Wa5S2']").val()=="" || $("input[name='Q12Wa5S3']").attr("placeholder")=="" && $("input[name='Q12Wa5S3']").val()==""){
+    if($("input[name='Q12Wa5S1']").val()=="" || $("input[name='Q12Wa5S2']").val()=="" || $("input[name='Q12Wa5S3']").val()==""){
+     alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Air conditioners)");
+     e.preventDefault();
+    }
+  }
+  if($("input[name='Q12Wa6S1']").attr("placeholder")=="" || $("input[name='Q12Wa6S2']").attr("placeholder")=="" || $("input[name='Q12Wa6S3']").attr("placeholder")==""){
+  if($("input[name='Q12Wa6S1']").val()=="" || $("input[name='Q12Wa6S2']").val()=="" || $("input[name='Q12Wa6S3']").val()==""){
+     alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Heaters)");
+     e.preventDefault();;
+    }
+  }
+  if($("input[name='Q12Wa7S1']").attr("placeholder")=="" || $("input[name='Q12Wa7S2']").attr("placeholder")=="" || $("input[name='Q12Wa7S3']").attr("placeholder")==""){
+  if($("input[name='Q12Wa7S1']").val()=="" || $("input[name='Q12Wa7S2']").val()=="" || $("input[name='Q12Wa7S3']").val()==""){
+     alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Microwaves)");
+     e.preventDefault();
+    }
+  }
+  if($("input[name='Q12Wa8S1']").attr("placeholder")=="" || $("input[name='Q12Wa8S2']").attr("placeholder")=="" || $("input[name='Q12Wa8S3']").attr("placeholder")==""){
+  if($("input[name='Q12Wa8S1']").val()=="" || $("input[name='Q12Wa8S2']").val()=="" || $("input[name='Q12Wa8S3']").val()==""){
+     alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Ovens)");
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
+  }
+  if($("input[name='Q12Wa9S1']").attr("placeholder")=="" || $("input[name='Q12Wa9S2']").attr("placeholder")=="" || $("input[name='Q12Wa9S3']").attr("placeholder")==""){
+  if($("input[name='Q12Wa9S1']").val()=="" || $("input[name='Q12Wa9S2']").val()=="" || $("input[name='Q12Wa9S3']").val()==""){
+     alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Toasters)");
+     e.preventDefault();
+    }
+  }
+  if($("input[name='Q12Wa10S1']").attr("placeholder")=="" || $("input[name='Q12Wa10S2']").attr("placeholder")=="" || $("input[name='Q12Wa10S3']").attr("placeholder")==""){
+  if($("input[name='Q12Wa10S1']").val()=="" || $("input[name='Q12Wa10S2']").val()=="" || $("input[name='Q12Wa10S3']").val()==""){
+     alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Electric kettles)");
+     e.preventDefault();
+    }
+  }
+  if($("input[name='Q12Wa11S1']").attr("placeholder")=="" || $("input[name='Q12Wa11S2']").attr("placeholder")=="" || $("input[name='Q12Wa11S3']").attr("placeholder")==""){
+  if($("input[name='Q12Wa11S1']").val()=="" || $("input[name='Q12Wa11S2']").val()=="" || $("input[name='Q12Wa11S3']").val()==""){
+     alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Personal computers (CPU, mouse, screen and keyboard included))");
+     e.preventDefault();
+    }
+  }
+  if($("input[name='Q12Wa12S1']").attr("placeholder")=="" || $("input[name='Q12Wa12S2']").attr("placeholder")=="" || $("input[name='Q12Wa12S3']").attr("placeholder")==""){
+    if($("input[name='Q12Wa12S1']").val()=="" || $("input[name='Q12Wa12S2']").val()=="" || $("input[name='Q12Wa12S3']").val()==""){
+     alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Laptop computer (CPU, mouse, screen and keyboard included)))");
+     e.preventDefault();
+    }
+  }
+  if($("input[name='Q12Wa13S1']").attr("placeholder")=="" || $("input[name='Q12Wa13S2']").attr("placeholder")=="" || $("input[name='Q12Wa13S3']").attr("placeholder")==""){
+  if($("input[name='Q12Wa13S1']").val()=="" || $("input[name='Q12Wa13S2']").val()=="" || $("input[name='Q12Wa13S3']").val()==""){
+     alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Notebook computers)))");
+     e.preventDefault();
+    }
+  }
+  if($("input[name='Q12Wa14S1']").attr("placeholder")=="" || $("input[name='Q12Wa14S2']").attr("placeholder")=="" || $("input[name='Q12Wa14S3']").attr("placeholder")==""){
+  if($("input[name='Q12Wa14S1']").val()=="" || $("input[name='Q12Wa14S2']").val()=="" || $("input[name='Q12Wa14S3']").val()==""){
+     alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Notebook computers)))");
+     e.preventDefault();
+    }
+  }
+  if($("input[name='Q12Wa15S1']").attr("placeholder")=="" || $("input[name='Q12Wa15S2']").attr("placeholder")=="" || $("input[name='Q12Wa15S3']").attr("placeholder")==""){
+  if($("input[name='Q12Wa15S1']").val()=="" || $("input[name='Q12Wa15S2']").val()=="" || $("input[name='Q12Wa15S3']").val()==""){
+     alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Printers)))");
+     e.preventDefault();
+    }
+  }
+  if($("input[name='Q12Wa16S1']").attr("placeholder")=="" || $("input[name='Q12Wa16S2']").attr("placeholder")=="" || $("input[name='Q12Wa16S3']").attr("placeholder")==""){
+  if($("input[name='Q12Wa16S1']").val()=="" || $("input[name='Q12Wa16S2']").val()=="" || $("input[name='Q12Wa16S3']").val()==""){
+     alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Copying equipment (photocopiers))))");
+     e.preventDefault();
+    }
+  }
+  if($("input[name='Q12Wa17S1']").attr("placeholder")=="" || $("input[name='Q12Wa17S2']").attr("placeholder")=="" || $("input[name='Q12Wa17S3']").attr("placeholder")==""){
+  if($("input[name='Q12Wa17S1']").val()=="" || $("input[name='Q12Wa17S2']").val()=="" || $("input[name='Q12Wa17S3']").val()==""){
+     alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Copying equipment (Whiteboards))))");
+     e.preventDefault();
+    }
+  }
+  if($("input[name='Q12Wa18S1']").attr("placeholder")=="" || $("input[name='Q12Wa18S2']").attr("placeholder")=="" || $("input[name='Q12Wa18S3']").attr("placeholder")==""){
+  if($("input[name='Q12Wa18S1']").val()=="" || $("input[name='Q12Wa18S2']").val()=="" || $("input[name='Q12Wa18S3']").val()==""){
+     alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Copying equipment (Electrical and electronic typewriters))))");
+     e.preventDefault();
+    }
+  }
+  if($("input[name='Q12Wa19S1']").attr("placeholder")=="" || $("input[name='Q12Wa19S2']").attr("placeholder")=="" || $("input[name='Q12Wa19S3']").attr("placeholder")==""){
+  if($("input[name='Q12Wa19S1']").val()=="" || $("input[name='Q12Wa19S2']").val()=="" || $("input[name='Q12Wa19S3']").val()==""){
+     alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Electrical and electronic typewriters)");
+     e.preventDefault();
+    }
+  } 
+  if($("input[name='Q12Wa20S1']").attr("placeholder")=="" || $("input[name='Q12Wa20S2']").attr("placeholder")=="" || $("input[name='Q12Wa20S3']").attr("placeholder")==""){
+  if($("input[name='Q12Wa20S1']").val()=="" || $("input[name='Q12Wa20S2']").val()=="" || $("input[name='Q12Wa20S3']").val()==""){
+     alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Pocket and desk calculators)");
+     e.preventDefault();
+    }
+  }
+  if($("input[name='Q12Wa21S1']").attr("placeholder")=="" || $("input[name='Q12Wa21S2']").attr("placeholder")=="" || $("input[name='Q12Wa21S3']").attr("placeholder")==""){
+  if($("input[name='Q12Wa21S1']").val()=="" || $("input[name='Q12Wa21S2']").val()=="" || $("input[name='Q12Wa21S3']").val()==""){
+     alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Fax machines)");
+     e.preventDefault();
+    }
+  }
+  if($("input[name='Q12Wa22S1']").attr("placeholder")=="" || $("input[name='Q12Wa22S2']").attr("placeholder")=="" || $("input[name='Q12Wa22S3']").attr("placeholder")==""){
+  if($("input[name='Q12Wa22S1']").val()=="" || $("input[name='Q12Wa22S2']").val()=="" || $("input[name='Q12Wa22S3']").val()==""){
+     alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Telex)");
+     e.preventDefault();
+    }
+  }
+  if($("input[name='Q12Wa23S1']").attr("placeholder")=="" || $("input[name='Q12Wa23S2']").attr("placeholder")=="" || $("input[name='Q12Wa23S3']").attr("placeholder")==""){
+    if($("input[name='Q12Wa23S1']").val()=="" || $("input[name='Q12Wa23S2']").val()=="" || $("input[name='Q12Wa23S3']").val()==""){
+     alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Telephones)");
+     e.preventDefault();
+    }
+  } 
+  if($("input[name='Q12Wa24S1']").attr("placeholder")=="" || $("input[name='Q12Wa24S2']").attr("placeholder")=="" || $("input[name='Q12Wa24S3']").attr("placeholder")==""){
+  if($("input[name='Q12Wa24S1']").val()=="" || $("input[name='Q12Wa24S2']").val()=="" || $("input[name='Q12Wa24S3']").val()==""){
+     alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Pay telephones)");
+     e.preventDefault();
+    }
+  }
+  if($("input[name='Q12Wa25S1']").attr("placeholder")=="" || $("input[name='Q12Wa25S2']").attr("placeholder")=="" || $("input[name='Q12Wa25S3']").attr("placeholder")==""){
+  if($("input[name='Q12Wa25S1']").val()=="" || $("input[name='Q12Wa25S2']").val("placeholder")=="" || $("input[name='Q12Wa25S3']").val()==""){
+     alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Mobiles)");
+     e.preventDefault();
+    }
+  }
+  if($("input[name='Q12Wa26S1']").attr("placeholder")=="" || $("input[name='Q12Wa26S2']").attr("placeholder")=="" || $("input[name='Q12Wa26S3']").attr("placeholder")==""){
+  if($("input[name='Q12Wa26S1']").val()=="" || $("input[name='Q12Wa26S2']").val()=="" || $("input[name='Q12Wa26S3']").val()==""){
+     alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Answering systems)");
+     e.preventDefault();
+    }
+  }
+  if($("input[name='Q12Wa27S1']").attr("placeholder")=="" || $("input[name='Q12Wa27S2']").attr("placeholder")=="" || $("input[name='Q12Wa27S3']").attr("placeholder")==""){
+  if($("input[name='Q12Wa27S1']").val()=="" || $("input[name='Q12Wa27S2']").val()=="" || $("input[name='Q12Wa27S3']").val()==""){
+     alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Induction cookers)");
+     e.preventDefault();
+    }
+  }
+  if($("input[name='Q12Wa28S1']").attr("placeholder")=="" || $("input[name='Q12Wa28S2']").attr("placeholder")=="" || $("input[name='Q12Wa28S3']").attr("placeholder")==""){
+  if($("input[name='Q12Wa28S1']").val()=="" || $("input[name='Q12Wa28S2']").val()=="" || $("input[name='Q12Wa28S3']").val()==""){
+     alert("Q8: Does your school have the following? If yes, please give the numbers of items in working condition and those that are not?: (Geysers/water heaters)");
+     e.preventDefault();
+    }
+  }
+  if($("input[name='Q4Wa1']:checked").val()==="Y"){
+     if($("input[name='Q4Wa2S1']").prop('checked') == false && $("input[name='Q4Wa2S2']").prop('checked') == false && $("input[name='Q4Wa2S3']").prop('checked') == false
+       && $("input[name='Q4Wa2S4']").prop('checked') == false && $("input[name='Q4Wa2S5']:checked").val()==""){
+         alert("1(a) Who segregates the waste at source?");
+    e.preventDefault();  
+    if(e.isDefaultPrevented()){
+           setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+       }
+     }
+  } 
+     });  
 </script>
 <script>
 var nyan = document.getElementById('TetraPak');
@@ -5145,14 +5161,37 @@ nyanBtn2.addEventListener('click', function(){
    progress(nyanBtn2, nyan2);
 });
 </script>
+
+
+<script type="text/javascript">
+$(function(){  
+$("input[name='Q9Wa3']").keyup(function(){
+
+  var smaller=$(this).val();
+  var larger=$("input[name='Q8Wa1S5']").val();
+  
+ var smaller_val =  parseFloat(smaller);
+ var larger_val = parseFloat(larger);
+
+ if(smaller_val > larger_val){
+  alert('Quantity of compost is not greater than total Biodegradable/Wet Waste');
+    $(this).val('');
+ }
+
+});
+});
+
+</script>
+
+
 <style>
-	     #btn,#btn1,#btn2{ 
-		background: rgb(232, 101, 73);
+       #btn,#btn1,#btn2{ 
+    background: rgb(232, 101, 73);
                 color: rgb(0, 0, 0);
                 box-shadow: rgba(0, 0, 0, 0.125) 0px 0px 0px 0px inset;
                 height: 20px;
                 position: relative;
                 padding-top: 0px;
-		display:none;     
-		}	
-	</style>
+    display:none;     
+    } 
+  </style>
