@@ -226,8 +226,8 @@ function redirect_phase(){
     <div class="well col-md-8 col-md-offset-2">
       <p class="text-center">Thank You For Submitting GSP Audit <br/><br/></p>
 	  <br/>	
-      <p class="help text-center">Need help? Email: <a href="mailto:support@greenschoolsprogramme.org">support@greenschoolsprogramme.org</a> or call 011-4061600, <br/>ext – 219, 300. <br>
-        Call between 10am to 5:30pm - Monday to Friday. </p>
+      <p class="help text-center">Need help? Email: <a href="mailto:support@greenschoolsprogramme.org">support@greenschoolsprogramme.org</a> or call 011-4061600, <br/>ext – 320, 300. <br>
+         between 10am to 5:30pm - Monday to Friday. </p>
     </div>
   </div>
 </div>
