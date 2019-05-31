@@ -40,6 +40,7 @@ class Audit_started extends CI_Controller {
         $data['states'][1]="All";
         $data['val'] = $this->input->post('state');
         $data['school'] = $this->input->post('school');
+	    $data['state'] = $this->input->post('state');
 		$state=$this->input->post('state');
 		$school=$this->input->post('school');
 		
