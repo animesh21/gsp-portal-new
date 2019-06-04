@@ -4479,7 +4479,38 @@
         },
         Q19Wa1:{
           required:true,
+        },
+        Q5Wa1S6:{
+          required:true,
+        },
+        Q5Wa2S6:{
+          required:true,
+        },
+        Q5Wa3S6:{
+          required:true,
+        },
+        Q5Wa4S6:{
+          required:true,
+        },
+        Q5Wa5S6:{
+          required:true,
+        },
+        Q5Wa6S6:{
+          required:true,
+        },
+        Q5Wa7S6:{
+          required:true,
+        },
+        Q5Wa8S6:{
+          required:true,
+        },
+        Q5Wa9S6:{
+          required:true,
+        },
+        Q5Wa10S6:{
+          required:true,
         }
+
     }
        
   });
