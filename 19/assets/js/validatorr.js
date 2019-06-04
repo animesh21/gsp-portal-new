@@ -3947,6 +3947,7 @@ function computeeSegregate()
     var sumVert3 = 0;
     var sumVert4 = 0;
     var sumVert5 = 0;
+    var sumVert6 = 0;
 
     for(i=1 ;i<=10; i++)
     {
@@ -3955,11 +3956,13 @@ function computeeSegregate()
         var id3 = "Q5WazS3".replace("z",i);
         var id4 = "Q5WazS4".replace("z",i);
         var id5 = "Q5WazS5".replace("z",i);
+        var id6 = "Q5WazS6".replace("z",i);
 
         var element101 = document.getElementById(id1);
         var element201 = document.getElementById(id2);
         var element301 = document.getElementById(id3);
         var element401 = document.getElementById(id4);
+        var element501 = document.getElementById(id6);
 
         var element1 = parseFloat(element101.value);
         var element11 = parseFloat(element101.placeholder);
@@ -3972,6 +3975,9 @@ function computeeSegregate()
 
         var element4 = parseFloat(element401.value);
         var element41 = parseFloat(element401.placeholder);
+
+        var element5 = parseFloat(element501.value);
+        var element51 = parseFloat(element501.placeholder);
 
         if(isNaN(element1))
             if(isNaN(element11))
@@ -3997,19 +4003,28 @@ function computeeSegregate()
             else
                 element4 = element41;
 
-        sumHor = element1 + element2 + element3 + element4;
+            if(isNaN(element5))
+            if(isNaN(element51))
+                element5 = 0;
+            else
+                element5 = element51;
+
+        sumHor = element1 + element2 + element3 + element4 + element5;
         console.log();
         $('#'+id5).val(sumHor);
         sumVert1 += element1;
         sumVert2 += element2;
         sumVert3 += element3;
         sumVert4 += element4;
+        sumVert6 += element5;
         sumVert5 += sumHor;
+        
         sumHor = 0;
         element1 = 0;
         element2 = 0;
         element3 = 0;
         element4 = 0;
+        element5 = 0;
     }
 
     $("#Q5Wa11S1").val(sumVert1);
@@ -4017,18 +4032,22 @@ function computeeSegregate()
     $("#Q5Wa11S3").val(sumVert3);
     $("#Q5Wa11S4").val(sumVert4);
     $("#Q5Wa11S5").val(sumVert5);
+    $("#Q5Wa11S6").val(sumVert6);
+    
 
     sumVert1 = 0;
     sumVert2 = 0;
     sumVert3 = 0;
     sumVert4 = 0;
     sumVert5 = 0;
-
-
-
+    sumVert6 = 0;
 
 
 }
+
+
+
+
 function solidWaste()
 {
     var sumHor = 0;
