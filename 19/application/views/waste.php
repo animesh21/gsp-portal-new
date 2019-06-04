@@ -700,15 +700,20 @@
   <label class="control-label"><span class="cube">2(a)</span> How many categories does your school
   segregate waste into? <a class="tt" data-tooltip="Collection points are the areas (classroom, playground, sick room, etc) where dustbins have been placed. "><span class="badge">?</span></a></label>
   <div class="form-group row">
-    <div class="col-xs-2">
+    <div class="col-xs-1">
       <label>Area </label>
     </div>
-    <div class="col-xs-2">
+    <div class="col-xs-1">
       <label>No. of waste collection points with no bin </label>
     </div>
     <div class="col-xs-2">
       <label>No. of waste collection points with one bin (mixed waste) </label>
     </div>
+
+    <div class="col-xs-2">
+      <label>No. of waste collection points with one bin (for only dry waste) </label>
+    </div>
+
     <div class="col-xs-2">
       <label>No. of waste collection points with two bins (wet & dry) </label>
     </div>
@@ -720,10 +725,10 @@
     </div>
   </div>
   <div class="form-group row">
-    <div class="col-xs-2">
+    <div class="col-xs-1">
       <label>Classrooms </label>
     </div>
-    <div class="col-xs-2">
+    <div class="col-xs-1">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa1S1"
                                type="number"   step="any"   name="Q5Wa1S1"
                                placeholder="<?php if (isset($data['Q5Wa1S1'])) echo $data['Q5Wa1S1'] ?>"
@@ -735,6 +740,17 @@
                                placeholder="<?php if (isset($data['Q5Wa1S2'])) echo $data['Q5Wa1S2'] ?>"
                                value="<?php if (isset($data['Q5Wa1S2'])) echo $data['Q5Wa1S2'] ?>"/>
     </div>
+
+
+    <div class="col-xs-2">
+      <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa1S6"
+                               type="number"   step="any"   name="Q5Wa1S6"
+                               placeholder="<?php if (isset($data['Q5Wa1S6'])) echo $data['Q5Wa1S6'] ?>"
+                               value="<?php if (isset($data['Q5Wa1S6'])) echo $data['Q5Wa1S6'] ?>"/>
+    </div>
+
+
+
     <div class="col-xs-2">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa1S3"
                                type="number"   step="any"   name="Q5Wa1S3"
@@ -759,10 +775,10 @@
     </div>
   </div>
   <div class="form-group row">
-    <div class="col-xs-2">
+    <div class="col-xs-1">
       <label>Playgrounds </label>
     </div>
-    <div class="col-xs-2">
+    <div class="col-xs-1">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa2S1"
                                type="number"   step="any"   name="Q5Wa2S1"
                                placeholder="<?php if (isset($data['Q5Wa2S1'])) echo $data['Q5Wa2S1'] ?>"
@@ -774,6 +790,15 @@
                                placeholder="<?php if (isset($data['Q5Wa2S2'])) echo $data['Q5Wa2S2'] ?>"
                                value="<?php if (isset($data['Q5Wa2S2'])) echo $data['Q5Wa2S2'] ?>"/>
     </div>
+
+    <div class="col-xs-2">
+      <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa2S6"
+                               type="number"   step="any"   name="Q5Wa2S6"
+                               placeholder="<?php if (isset($data['Q5Wa2S6'])) echo $data['Q5Wa2S6'] ?>"
+                               value="<?php if (isset($data['Q5Wa2S6'])) echo $data['Q5Wa2S6'] ?>"/>
+    </div>
+    
+
     <div class="col-xs-2">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa2S3"
                                type="number"   step="any"   name="Q5Wa2S3"
@@ -793,10 +818,10 @@
     </div>
   </div>
   <div class="form-group row">
-    <div class="col-xs-2">
+    <div class="col-xs-1">
       <label>Common area </label>
     </div>
-    <div class="col-xs-2">
+    <div class="col-xs-1">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa3S1"
                                type="number"   step="any"   name="Q5Wa3S1"
                                placeholder="<?php if (isset($data['Q5Wa3S1'])) echo $data['Q5Wa3S1'] ?>"
@@ -808,6 +833,16 @@
                                placeholder="<?php if (isset($data['Q5Wa3S2'])) echo $data['Q5Wa3S2'] ?>"
                                value="<?php if (isset($data['Q5Wa3S2'])) echo $data['Q5Wa3S2'] ?>"/>
     </div>
+
+    <div class="col-xs-2">
+      <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa3S6"
+                               type="number"   step="any"   name="Q5Wa3S6"
+                               placeholder="<?php if (isset($data['Q5Wa3S6'])) echo $data['Q5Wa3S6'] ?>"
+                               value="<?php if (isset($data['Q5Wa3S6'])) echo $data['Q5Wa3S6'] ?>"/>
+    </div>
+
+
+
     <div class="col-xs-2">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa3S3"
                                type="number"   step="any"   name="Q5Wa3S3"
@@ -828,10 +863,10 @@
     </div>
   </div>
   <div class="form-group row">
-    <div class="col-xs-2">
+    <div class="col-xs-1">
       <label>Staffroom </label>
     </div>
-    <div class="col-xs-2">
+    <div class="col-xs-1">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa4S1"
                                type="number"   step="any"   name="Q5Wa4S1"
                                placeholder="<?php if (isset($data['Q5Wa4S1'])) echo $data['Q5Wa4S1'] ?>"
@@ -843,6 +878,15 @@
                                placeholder="<?php if (isset($data['Q5Wa4S2'])) echo $data['Q5Wa4S2'] ?>"
                                value="<?php if (isset($data['Q5Wa4S2'])) echo $data['Q5Wa4S2'] ?>"/>
     </div>
+
+    <div class="col-xs-2">
+      <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa4S6"
+                               type="number"   step="any"   name="Q5Wa4S6"
+                               placeholder="<?php if (isset($data['Q5Wa4S6'])) echo $data['Q5Wa4S6'] ?>"
+                               value="<?php if (isset($data['Q5Wa4S6'])) echo $data['Q5Wa4S6'] ?>"/>
+    </div>
+
+
     <div class="col-xs-2">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa4S3"
                                type="number"   step="any"   name="Q5Wa4S3"
@@ -863,10 +907,10 @@
     </div>
   </div>
   <div class="form-group row">
-    <div class="col-xs-2">
+    <div class="col-xs-1">
       <label>Laboratory </label>
     </div>
-    <div class="col-xs-2">
+    <div class="col-xs-1">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa5S1"
                                type="number"   step="any"   name="Q5Wa5S1"
                                placeholder="<?php if (isset($data['Q5Wa5S1'])) echo $data['Q5Wa5S1'] ?>"
@@ -878,6 +922,14 @@
                                placeholder="<?php if (isset($data['Q5Wa5S2'])) echo $data['Q5Wa5S2'] ?>"
                                value="<?php if (isset($data['Q5Wa5S2'])) echo $data['Q5Wa5S2'] ?>"/>
     </div>
+
+    <div class="col-xs-2">
+      <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa5S6"
+                               type="number"   step="any"   name="Q5Wa5S6"
+                               placeholder="<?php if (isset($data['Q5Wa5S6'])) echo $data['Q5Wa5S6'] ?>"
+                               value="<?php if (isset($data['Q5Wa5S6'])) echo $data['Q5Wa5S6'] ?>"/>
+    </div>
+
     <div class="col-xs-2">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa5S3"
                                type="number"   step="any"   name="Q5Wa5S3"
@@ -897,10 +949,10 @@
     </div>
   </div>
   <div class="form-group row">
-    <div class="col-xs-2">
+    <div class="col-xs-1">
       <label>Canteen </label>
     </div>
-    <div class="col-xs-2">
+    <div class="col-xs-1">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa6S1"
                                type="number"   step="any"   name="Q5Wa6S1"
                                placeholder="<?php if (isset($data['Q5Wa6S1'])) echo $data['Q5Wa6S1'] ?>"
@@ -912,6 +964,16 @@
                                placeholder="<?php if (isset($data['Q5Wa6S2'])) echo $data['Q5Wa6S2'] ?>"
                                value="<?php if (isset($data['Q5Wa6S2'])) echo $data['Q5Wa6S2'] ?>"/>
     </div>
+
+
+    <div class="col-xs-2">
+      <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa6S6"
+                               type="number"   step="any"   name="Q5Wa6S6"
+                               placeholder="<?php if (isset($data['Q5Wa6S6'])) echo $data['Q5Wa6S6'] ?>"
+                               value="<?php if (isset($data['Q5Wa6S6'])) echo $data['Q5Wa6S6'] ?>"/>
+    </div>
+
+
     <div class="col-xs-2">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa6S3"
                                type="number"   step="any"   name="Q5Wa6S3"
@@ -931,10 +993,10 @@
     </div>
   </div>
   <div class="form-group row">
-    <div class="col-xs-2">
+    <div class="col-xs-1">
       <label>Clinic/sick room </label>
     </div>
-    <div class="col-xs-2">
+    <div class="col-xs-1">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa7S1"
                                type="number"   step="any"   name="Q5Wa7S1"
                                placeholder="<?php if (isset($data['Q5Wa7S1'])) echo $data['Q5Wa7S1'] ?>"
@@ -945,6 +1007,13 @@
                                type="number"   step="any"   name="Q5Wa7S2"
                                placeholder="<?php if (isset($data['Q5Wa7S2'])) echo $data['Q5Wa7S2'] ?>"
                                value="<?php if (isset($data['Q5Wa7S2'])) echo $data['Q5Wa7S2'] ?>"/>
+    </div>
+
+    <div class="col-xs-2">
+      <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa7S6"
+                               type="number"   step="any"   name="Q5Wa7S6"
+                               placeholder="<?php if (isset($data['Q5Wa7S6'])) echo $data['Q5Wa7S6'] ?>"
+                               value="<?php if (isset($data['Q5Wa7S6'])) echo $data['Q5Wa7S6'] ?>"/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa7S3"
@@ -966,10 +1035,10 @@
     </div>
   </div>
   <div class="form-group row">
-    <div class="col-xs-2">
+    <div class="col-xs-1">
       <label>Library </label>
     </div>
-    <div class="col-xs-2">
+    <div class="col-xs-1">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa8S1"
 
                                type="number"   step="any"   name="Q5Wa8S1"
@@ -982,6 +1051,15 @@
                                placeholder="<?php if (isset($data['Q5Wa8S2'])) echo $data['Q5Wa8S2'] ?>"
                                value="<?php if (isset($data['Q5Wa8S2'])) echo $data['Q5Wa8S2'] ?>"/>
     </div>
+
+    <div class="col-xs-2">
+      <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa8S6"
+                               type="number"   step="any"   name="Q5Wa8S6"
+                               placeholder="<?php if (isset($data['Q5Wa8S6'])) echo $data['Q5Wa8S6'] ?>"
+                               value="<?php if (isset($data['Q5Wa8S6'])) echo $data['Q5Wa8S6'] ?>"/>
+    </div>
+
+
     <div class="col-xs-2">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa8S3"
                                type="number"   step="any"   name="Q5Wa8S3"
@@ -1002,10 +1080,10 @@
     </div>
   </div>
   <div class="form-group row">
-    <div class="col-xs-2">
+    <div class="col-xs-1">
       <label>Toilets </label>
     </div>
-    <div class="col-xs-2">
+    <div class="col-xs-1">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa9S1"
                                type="number"   step="any"   name="Q5Wa9S1"
                                placeholder="<?php if (isset($data['Q5Wa9S1'])) echo $data['Q5Wa9S1'] ?>"
@@ -1017,6 +1095,14 @@
                                placeholder="<?php if (isset($data['Q5Wa9S2'])) echo $data['Q5Wa9S2'] ?>"
                                value="<?php if (isset($data['Q5Wa9S2'])) echo $data['Q5Wa9S2'] ?>"/>
     </div>
+     
+     <div class="col-xs-2">
+      <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa9S6"
+                               type="number"   step="any"   name="Q5Wa9S6"
+                               placeholder="<?php if (isset($data['Q5Wa9S6'])) echo $data['Q5Wa9S6'] ?>"
+                               value="<?php if (isset($data['Q5Wa9S6'])) echo $data['Q5Wa9S6'] ?>"/>
+    </div>
+
     <div class="col-xs-2">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa9S3"
                                type="number"   step="any"   name="Q5Wa9S3"
@@ -1037,10 +1123,10 @@
     </div>
   </div>
   <div class="form-group row">
-    <div class="col-xs-2">
+    <div class="col-xs-1">
       <label>Others </label>
     </div>
-    <div class="col-xs-2">
+    <div class="col-xs-1">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa10S1"
                                type="number"   step="any"   name="Q5Wa10S1"
                                placeholder="<?php if (isset($data['Q5Wa10S1'])) echo $data['Q5Wa10S1'] ?>"
@@ -1052,6 +1138,14 @@
                                placeholder="<?php if (isset($data['Q5Wa10S2'])) echo $data['Q5Wa10S2'] ?>"
                                value="<?php if (isset($data['Q5Wa10S2'])) echo $data['Q5Wa10S2'] ?>"/>
     </div>
+
+    <div class="col-xs-2">
+      <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa10S6"
+                               type="number"   step="any"   name="Q5Wa10S6"
+                               placeholder="<?php if (isset($data['Q5Wa10S6'])) echo $data['Q5Wa10S6'] ?>"
+                               value="<?php if (isset($data['Q5Wa10S6'])) echo $data['Q5Wa10S6'] ?>"/>
+    </div>
+
     <div class="col-xs-2">
       <input class="form-control space-textbox" onKeyUp="computeeSegregate()" id="Q5Wa10S3"
                                type="number"   step="any"   name="Q5Wa10S3"
@@ -1072,10 +1166,10 @@
     </div>
   </div>
   <div class="form-group row">
-    <div class="col-xs-2">
+    <div class="col-xs-1">
       <label>Total </label>
     </div>
-    <div class="col-xs-2">
+    <div class="col-xs-1">
       <input class="form-control space-textbox" id="Q5Wa11S1" type="number"   step="any"   name="Q5Wa11S1"
                                placeholder="<?php if (isset($data['Q5Wa11S1'])) echo $data['Q5Wa11S1'] ?>"
                                value="<?php if (isset($data['Q5Wa11S1'])) echo $data['Q5Wa11S1'] ?>" readonly/>
@@ -1084,6 +1178,11 @@
       <input class="form-control space-textbox" id="Q5Wa11S2" type="number"   step="any"   name="Q5Wa11S2"
                                placeholder="<?php if (isset($data['Q5Wa11S2'])) echo $data['Q5Wa11S2'] ?>"
                                value="<?php if (isset($data['Q5Wa11S2'])) echo $data['Q5Wa11S2'] ?>" readonly/>
+    </div>
+    <div class="col-xs-2">
+      <input class="form-control space-textbox" id="Q5Wa11S6" type="number"   step="any"   name="Q5Wa11S6"
+                               placeholder="<?php if (isset($data['Q5Wa11S6'])) echo $data['Q5Wa11S6'] ?>"
+                               value="<?php if (isset($data['Q5Wa11S6'])) echo $data['Q5Wa11S6'] ?>" readonly/>
     </div>
     <div class="col-xs-2">
       <input class="form-control space-textbox" id="Q5Wa11S3" type="number"   step="any"   name="Q5Wa11S3"
