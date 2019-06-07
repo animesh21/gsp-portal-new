@@ -684,7 +684,8 @@ public function digital_certificate_for_principal_coordinator($argID)
             'coname'=>$this->input->post('coname'),
             'coemail'=>$this->input->post('coemail'),
             'comobile'=>$this->input->post('comobile'),
-	        'partner_status'=>$this->input->post('partner_list')
+	        'partner_status'=>$this->input->post('partner_list'),
+            'satya_foundation_status'=>$this->input->post('satya_list')
         );
         ///echo '<pre>'; print_r($this->input->post()); exit;
 		$arrSchool0=array('answer'=>$this->input->post('name'));
