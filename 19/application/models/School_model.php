@@ -69,7 +69,8 @@ class School_model extends CI_Model
             'coemail' => $argPost['coemail'],
             'comobile' => $argPost['comobile'],
             'date_added' => date('Y-m-d H:i:s'),
-	    'partner_status'=>$argPost['partner_list']
+	    'partner_status'=>$argPost['partner_list'],
+            'satya_foundation_status'=>$argPost['bharti']
         );
         if ($this->db->insert('gsp_school', $update)) {
             //Sending Mail To The School
