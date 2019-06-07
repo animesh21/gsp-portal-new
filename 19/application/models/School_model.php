@@ -48,6 +48,15 @@ class School_model extends CI_Model
 
     public function RegisterUser($argPost)
     {
+	    if(!isset($argPost['bharti']))
+        {
+            $bharti = 0;
+        }else{
+
+            $bharti = $argPost['bharti'];
+        }
+	    
+	    
         $update = array(
             'userid' => $argPost['userid'],
 	    'udise' =>	$argPost['udise'],
@@ -70,7 +79,7 @@ class School_model extends CI_Model
             'comobile' => $argPost['comobile'],
             'date_added' => date('Y-m-d H:i:s'),
 	    'partner_status'=>$argPost['partner_list'],
-            'satya_foundation_status'=>$argPost['bharti']
+            'satya_foundation_status'=>$bharti
         );
         if ($this->db->insert('gsp_school', $update)) {
             //Sending Mail To The School
