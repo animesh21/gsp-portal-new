@@ -72,6 +72,9 @@
                         std: {
                             required: true
                         },
+                        bharti:{
+                            required: true
+                        },
                         telephone: {
                             required: true
                         },
@@ -105,7 +108,7 @@
                         captcha: {
                             required: true
                         },
-						partner_list: {
+            partner_list: {
                             required: true
                         }
                     },
@@ -160,7 +163,7 @@
                             }
                         },
                         captcha: 'Please Enter Captcha',
-						partner_list:'Please Select Partner List'
+            partner_list:'Please Select Partner List'
                     }
                 });
             });
@@ -218,10 +221,10 @@
   <div class="top-area">
     <h2>REGISTRATION Form</h2>
     <p>The CSE's Green Schools Programme Audit 2019 opens in the mid of the year 2019.
-	    Please complete and submit this form to register for the GSP Audit 2019.
-	    On submission of registration form, you will receive an email with login credentials (username and password).
-	    Please save your login credentials to be used when you want to access the GSP Audit 2019. 
-	    There is no fees for participation.  </p>
+      Please complete and submit this form to register for the GSP Audit 2019.
+      On submission of registration form, you will receive an email with login credentials (username and password).
+      Please save your login credentials to be used when you want to access the GSP Audit 2019. 
+      There is no fees for participation.  </p>
     <strong>Please spell the name of your school correctly – the name provided by you will appear in the digital certificates and other documents. </strong>
     <p class="required">All fields marked * are required.</p>
   </div>
@@ -254,27 +257,41 @@
     </div>
   </div>
   <div class="form-group">
-	   <strong>Select Franchise / Institution: <a class="tt" data-tooltip="If your school is a member of any of the following, please select the option or else, select 'Not Applicable (NA)'"><span class="badge" style="color:#FFFFFF;">?</span></a></strong>
+     <strong>Select Franchise / Institution: <a class="tt" data-tooltip="If your school is a member of any of the following, please select the option or else, select 'Not Applicable (NA)'"><span class="badge" style="color:#FFFFFF;">?</span></a></strong>
    <ul class="list-inline">
      <li><input type="radio" name="partner_list" value="1" /> Church of South India</li>
-	 <li><input type="radio" name="partner_list" value="2" /> Jawahar Navodaya Vidyalaya</li>
-	 <li><input type="radio" name="partner_list" value="3" /> Kendriya Vidyalaya Sangathan (KVS)</li>
-	 <li><input type="radio" name="partner_list" value="4" /> Montfortian Education Foundation</li>
-	 <li><input type="radio" name="partner_list" value="5" /> Mount Litera Zee Schools</li>
-	 <li><input type="radio" name="partner_list" value="6" /> Satya Bharti Foundation</li>
-	 <li><input type="radio" name="partner_list" value="0" /> Not Applicable (NA)</li>
+   <li><input type="radio" name="partner_list" value="2" /> Jawahar Navodaya Vidyalaya</li>
+   <li><input type="radio" name="partner_list" value="3" /> Kendriya Vidyalaya Sangathan (KVS)</li>
+   <li><input type="radio" name="partner_list" value="4" /> Montfortian Education Foundation</li>
+   <li><input type="radio" name="partner_list" value="5" /> Mount Litera Zee Schools</li>
+   <li><input type="radio" name="partner_list" value="6" /> Satya Bharti Foundation</li>
+   <li><input type="radio" name="partner_list" value="0" /> Not Applicable (NA)</li>
    </ul>
    <!-- <select class="schoolname name form-control  placeholder" name="partner_list" id="partner_list">
-	  <option value>Select Partner</option>
-	  <option value="0">If Your Are Not Partner Then Select This Option</option>
-	  <option value="1">Church of South India</option>
-	  <option value="2">Jawahar Navodaya Vidyalaya</option>
-	  <option value="3">Kendriya Vidyalaya Sangathan (KVS)</option>
-	  <option value="4">Montfortian Education Foundation</option>
-	  <option value="5">Mount Litera Zee Schools</option>
-	  <option value="6">Satya Bharti Foundation</option>
-	</select>-->
+    <option value>Select Partner</option>
+    <option value="0">If Your Are Not Partner Then Select This Option</option>
+    <option value="1">Church of South India</option>
+    <option value="2">Jawahar Navodaya Vidyalaya</option>
+    <option value="3">Kendriya Vidyalaya Sangathan (KVS)</option>
+    <option value="4">Montfortian Education Foundation</option>
+    <option value="5">Mount Litera Zee Schools</option>
+    <option value="6">Satya Bharti Foundation</option>
+  </select>-->
   </div>
+
+
+  <div class="form-group satya" style="display: none;">
+     <strong>Please Select</strong>
+   <ul class="list-inline">
+     <li><input type="radio" name="bharti" value="1"/> Satya Bharti School</li>
+   <li><input type="radio" name="bharti" value="2"/> BF Quality Support Programme </li>
+   
+   </ul>
+   
+  </div>
+
+
+
   <div class="form-group">
     <input type="text" name="address1" id="address1" class="form-control address placeholder"
                                value="<?php echo set_value('address1'); ?>" placeholder="Address Line 1*">
@@ -426,8 +443,8 @@ $.typeahead({
 
   margin-left: 56px;
 }
-	
-	
+  
+  
 .tt {display: inline-block; color: #fff; height: 27px;}
 .tt:hover {color: #fff;}
 [data-tooltip], .tooltip {position: relative; cursor: pointer;}
@@ -466,9 +483,9 @@ opacity: 1;}
 /* ===== Base styles for the tooltip's content area ====== */
 .tooltip:after, [data-tooltip]:after {font-family: 'Lato', sans-serif; font-weight: normal; color: #666666; font-size: 13px; line-height: 1.3; border-radius: 4px; border: 1px solid #999999; background-color: rgba(240, 240, 240, .95); z-index: 1000; padding: 8px; min-width: 400px; content: attr(data-tooltip);  }
 </style>
-	
-	
-	<script type="text/javascript">
+  
+  
+  <script type="text/javascript">
   
   $( "#registration-form" ).submit(function(){
 
@@ -523,7 +540,30 @@ function validateCaptcha() {
 
 
 </script>
-	
-	
-	
-	
+
+
+<script type="text/javascript">
+  
+ $("input[name='partner_list']").click(function(){
+
+  var partner_id=$(this).val();
+
+   if(partner_id=='6'){
+    
+    $('.satya').css("display","block");
+
+      
+   }else{
+
+    $('.satya').css("display","none");
+   }
+
+
+ });
+
+
+</script>
+  
+  
+  
+  
