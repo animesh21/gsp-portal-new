@@ -49,7 +49,7 @@
 	    public function Register() {
 
 		$data['states'] = $this->User_model->getStates();
-		$this->form_validation->set_rules('captcha', 'Captcha', 'callback_validate_captcha');
+		//$this->form_validation->set_rules('captcha', 'Captcha', 'callback_validate_captcha');
 		$this->form_validation->set_rules('state', 'State', 'required');
 			$this->form_validation->set_rules('coemail', 'Cordinator Email', 'required|valid_email|is_unique[gsp_school.coemail]');
 		if ($this->form_validation->run() == FALSE) {
@@ -58,8 +58,8 @@
 		    $vals = array(
 	//                'img_path' => './uploads/',
 	//                'img_url' => 'http://studio-tesseract.co/GSP/uploads/',
-			'img_path' => './uploads/',
-			'img_url' =>'http://www.greenschoolsprogramme.org/audit/18/uploads',
+			'img_path' => './uploads/img',
+			'img_url' =>'http://www.greenschoolsprogramme.org/audit/18/uploads/img',
 			'img_width' => '230',
 			'img_height' => 50,
 			'expiration' => 3600,
