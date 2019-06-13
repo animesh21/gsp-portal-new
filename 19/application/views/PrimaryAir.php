@@ -1493,9 +1493,9 @@ else
     });
 
     $("#input-2").change(function(){
-        var total_classroom=$("#input-1").val();
-        var total_existing_classroom=$("#input-2").val();
-        if(total_classroom<total_existing_classroom){
+        var total_classroom = parseFloat($("#input-1").val());
+        var total_existing_classroom = parseFloat($("#input-2").val());
+        if(total_existing_classroom > total_classroom){
             alert("The total no. of well-ventilated classroom can not exceed the no in Q(1).");
             $("#input-2").val('0');
         }
