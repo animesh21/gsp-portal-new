@@ -2842,14 +2842,14 @@ if($("input[name='Q10F1']:checked").val()==="Y"){
 }
 /*Q6(a)Please provide details:*/
 if($("input[name='Q11F1']:checked").val()==="Y"){
-  if($("input[name='Q11F2']:checked").length==0){
+  if($("input[name='Q11F2']").val()==''){
  alert("Q6(a) Please provide the names of sponsors:  ");
  e.preventDefault();
  }
 }
 /*Q8(a) If yes, please share the details:*/
 if($("input[name='Q13F1']:checked").val()==="Y"){
-  if($("input[name='Q13F2']:checked").length==0){
+  if($("input[name='Q13F2']").val()==''){
  alert("Q8(a) If yes, please share the details");
  e.preventDefault();
  }
