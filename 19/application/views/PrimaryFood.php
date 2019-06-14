@@ -2255,7 +2255,7 @@ You would require at least 5 to 10 of your schoolmates in the Food audit team. T
                     <div class="form-group"
                                                                                                              id="Q11F3">
                       <label class="control-label"><span
-                                                                                                                        class="cube">8(b)</span>Are
+                                                                                                                        class="cube">6(b)</span>Are
                       their
                       banners,
                       brochures,
