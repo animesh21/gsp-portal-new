@@ -3411,28 +3411,28 @@ function computeTransport()
             alert("Total student population("+student+") doesn't match with student population mentioned in GQ("+current_student+")");
             resetAir();
             student = 0;
-            break;
+            die();
         }
         if(teaching > current_teacher)
         {
             alert("Total Teacher population("+teaching+") doesn't match with Teaching Staff population mentioned in GQ("+current_teacher+")");
             resetAir();
             teaching = 0;
-            break;
+           die();
         }
         if(NTeaching > current_nonTeacher)
         {
             alert("Total non teaching population("+NTeaching+") doesn't match with Non Teaching Staff population mentioned in GQ("+current_nonTeacher+")");
             resetAir();
             NTeaching = 0;
-            break;
+           die();
         }
         if(Total > current_pop || student > current_pop || teaching > current_pop || NTeaching > current_pop )
         {
             alert("Total members of the school community in Q4 ("+Total+") should be equal to total permanent population of the school in General Questions Q4a ("+current_pop+")");
             resetAir();
             Total = 0;
-            break;
+           die();
         }
         $('#'+id4).val(element1+element2+element3);
 
