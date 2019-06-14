@@ -3339,6 +3339,39 @@ function computePercent()
 
 function computeTransport()
 {
+	
+	var ownership = $("input[name='Q6A1']:checked").val(); 
+
+  if(ownership == '1'){
+   
+   var Students_school_bus = parseFloat($("input[name='Q7A1S1']").val());
+   var Teaching_Staff_school_bus = parseFloat($("input[name='Q7A1S2']").val());
+   var Non_Teaching_Staff_school_bus = parseFloat($("input[name='Q7A1S3']").val());   
+
+           if(Students_school_bus > 0){
+            alert('You select School does not use or own vehicles in Q3 Fill Only Zero');
+            $("input[name='Q7A1S1']").val(0);
+            
+
+            }
+
+           if(Teaching_Staff_school_bus > 0){
+            alert('You select School does not use or own vehicles in Q3 Fill Only Zero');
+            $("input[name='Q7A1S2']").val(0);
+            
+
+           }
+
+           if(Non_Teaching_Staff_school_bus > 0){
+            alert('You select School does not use or own vehicles in Q3 Fill Only Zero');
+            $("input[name='Q7A1S3']").val(0);
+            
+           }
+  }
+
+	
+	
+	
     var student = 0;
     var teaching = 0;
     var NTeaching = 0;
