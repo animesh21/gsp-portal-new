@@ -325,7 +325,7 @@ To understand water, it is important to know the source of water in your school 
   </div>
   </label>
 </div>
-<div class="question-text form-group"> <span class="cube">1</span> Calculate your school’s water consumption, per activity:
+<div class="question-text form-group"> <span class="cube"></span> Calculate your school’s water consumption, per activity:
   <p>&nbsp; </p>
   <p> <strong>&nbsp;To collect data:</strong></p>
   <p> The school will use a glass (250 ml) for drinking during the audit period; they should know the volume of flush tank (if they have a flush) or volume of bucket they are using for washing clothes, etc.</p>
@@ -746,6 +746,8 @@ To understand water, it is important to know the source of water in your school 
       </li>
     </ul>
   </div>
+	
+	<div class="Q8W2_2_error" style="display: none;"><label> To calculate your school’s RWH potential visit this link  : </label><a href="http://www.greenschoolsprogramme.org/knowledge-bank/water/formulae-to-remember/" ><span style="color:blue;">Here</span></a> </div>
   <div class="form-group" id="Q8W2S1"
                             <?php
                             if(isset($data['Q8W2']))
@@ -2893,3 +2895,33 @@ if($("input[name='Q8W2S2S2']:checked").val()==="Y"){
 	
 	
                                     </script>
+	
+	
+	<script type="text/javascript">
+ 
+  
+  $("input[name='Q8W2']").click(function(){
+
+    var p = $(this).val();
+
+    
+    if(p == 'N'){
+
+      $(".Q8W2_2_error").css('display', 'block');
+      
+    }
+
+    else{
+
+      $(".Q8W2_2_error").css('display', 'none');
+
+
+    }
+
+
+  });
+ 
+</script>
+	
+	
+	
