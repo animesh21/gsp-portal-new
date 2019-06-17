@@ -1492,7 +1492,7 @@ else
         $("#input-1").val(total_classroom);
     });
 
-    $("#input-2").change(function(){
+   $("#input-2").change(function(){
         var total_classroom = parseFloat($("#input-1").val());
         var total_existing_classroom = parseFloat($("#input-2").val());
         if(total_existing_classroom > total_classroom){
