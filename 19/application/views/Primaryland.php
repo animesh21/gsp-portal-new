@@ -933,22 +933,20 @@ if($("input[name='Q6L1']:checked").length==0){
 
 <script type="text/javascript">
   
-  $(".form-group1").keyup(function(){
-    var p = $("input[name='Q4L1']").val();
-    var r = $("input[name='Q4L4']").val();
-    if(p<r){
-      var t ='This field value not grater than playgrounds with grass';
-      $('.error_Q4L4').html(t);
-      $('.error_Q4L4').css('color', 'red');
-      $("input[name='Q4L4']").val('');
-      $("input[name='Q4L4']").delay( 800000 );
-    }
-    else{
-       $('.error_Q4L4').empty();
+ $("input[name='Q4L4']").keyup(function(){
 
-    }
-  });
+  var kucha = parseFloat($(this).val());
+  var playground = parseFloat($("input[name='Q4L1']").val());
 
+  if(kucha > playground){
+
+    alert('No. of Pucca (paved) playgrounds cannot be greater than No. of Playgrounds');
+
+     $(this).val('');
+  }
+
+
+ });
 </script>
 
 
