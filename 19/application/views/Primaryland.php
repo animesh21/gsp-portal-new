@@ -523,68 +523,7 @@
       </ul>
     </div>
 	    
-	 <div class="form-group" id="land2019_1_sec1"
-<?php
-if (isset($data['land2019_1'])) {
-if ($data['land2019_1'] == 'N') {
-echo 'style="display:none;"';
-} else {
-echo 'style="display:block;"';
-}
-} else {
-echo 'style="display:none;"';
-}
-?> >
-
-<br>
-                <button class="btn uploadbtn upload" data-id="Vertical Gardens"
-                data-toggle="modal" data-target="#airModal" type="button">UPLOAD
-    FILES </button>
-    <br>
-    <table width="100%" class="question uploadedfiles">
-      <thead>
-        <tr>
-          <!--   <th>Image</th>     -->
-          <th>File name</th>
-          <th>Delete</th>
-          <th>Download</th>
-        </tr>
-      </thead>
-      <tbody>
-        <?php //echo '<pre>'; print_r($greenCover);  ?>
-        <?php foreach ($Vertical_Gardens as $f) { ?>
-        <tr id="index<?php echo $f->id; ?>">
-          <?php 
-           // $array = explode('.',$f->file_name); 
-       // $count = count($array);
-      // $extension = $array[$count-1];
-                ?>
-          <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
-          <!--<td> <img style="width:62px; height:46px;" ;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $f->
-          file_name ?>" class="img-responsive" />
-          </td>
-          -->
-          <?php //}else{ ?>
-          <!--<td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>-->
-          <?php //}?>
-          <?php $name = str_replace(" ", "_", $f->name . "_Green_Cover_"); //echo $name; ?>
-          <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
-          <td><a href="javascript:void(0)" class="air-delete-files"
-                           data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png"
-                                    style="position:relative; top:5px"/></a></td>
-          <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
-        </tr>
-        <?php } ?>
-      </tbody>
-    </table>
-              </div>   
-	    
-	    
-	    
-	    
-	    
-	    
-	    
+	  
 	    
 	    
 	    
