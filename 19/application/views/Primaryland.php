@@ -933,3 +933,24 @@ if($("input[name='Q6L1']:checked").length==0){
 }
 });	
 </script>
+
+
+<script type="text/javascript">
+  
+ $("input[name='land2019_1']").click(function(){
+
+    var t = $(this).val();
+    if(t == 'Y')
+    {
+          $('#land2019_1_sec1').show();
+
+    }else{
+
+      $('#land2019_1_sec1').hide();
+    }
+
+
+ });
+
+
+</script>
