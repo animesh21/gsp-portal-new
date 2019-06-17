@@ -5112,6 +5112,7 @@ function ComputeCrossLinkEnergy(type,value)
         else if(type == 'Solar')
         {
             $('#Solar').prop('checked',true);
+		$('.section_A').css('display', 'block')
             var val1 = (value * 3.6).toFixed(2);
             $('#Q6E9S2').val(val1);
         }
@@ -5134,6 +5135,7 @@ function ComputeCrossLinkEnergy(type,value)
         }
         $('#Q9E1').prop('checked',false);
         $('#alternativeEnergy').css('display','none');
+	    $('.section_A').css('display', 'none');
         AlternativeSource(2);
 
     }
