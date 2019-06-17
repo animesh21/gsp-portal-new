@@ -134,7 +134,53 @@ class School_model extends CI_Model
             $this->email->send();
             //echo $this->email->print_debugger();
             //die();
-            return true;
+		
+            //insert into filter table
+
+            $this->db->select_max('id');
+            $this->db->from('gsp_filter');
+            $query = $this->db->get();
+            $r=$query->result();
+
+            $max_id =  $r[0]->id; 
+
+             $rec = array(
+            'id'=>$max_id + 1,
+            'userid' => $argPost['userid'],
+            'udise' =>  $argPost['udise'],
+            'name' => $argPost['name'],
+            'address1' => $argPost['address1'],
+            'address2' => $argPost['address2'],
+            'country' => $argPost['country'],
+            'state' => $argPost['state'],
+            'district' => $argPost['district'],
+            'city' => $argPost['city'],
+            'pincode' => $argPost['pincode'],
+            'std' => $argPost['std'],
+            'telephone' => $argPost['telephone'],
+            'country_code' => $argPost['country_code'],
+            'schoolemail' => $argPost['schoolemail'],
+            'principle_name' => $argPost['principle_name'],
+            'mobile' => $argPost['mobile'],
+            'coname' => $argPost['coname'],
+            'coemail' => $argPost['coemail'],
+            'comobile' => $argPost['comobile'],
+            'progress' => '5',
+            'progress_phase_1' => '5',
+            'date_added' => date('Y-m-d H:i:s'),
+            'complete_status'=> '0',
+            'phase'=>'1',
+            'percentage'=>NULL,
+            'remark'=>NULL,
+            'Q1S1'=>NULL,
+            'Q2G1'=>NULL,
+            'Q9G1'=>NULL,
+            'Q3G1'=>NULL
+        );
+
+            $this->db->insert('gsp_filter',$rec);
+		
+	 return true;
         }
     }
 
