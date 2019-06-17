@@ -1261,7 +1261,7 @@
 								r[1] = f._assets.textParse(n.captions.errors.filesType, item);
 								return r;
 							}
-							if (n.fileMaxSize != null && item.size > n.fileMaxSize * 1e+7) {
+							if (n.fileMaxSize != null && item.size > n.fileMaxSize * 1e+6) {
 								r[1] = f._assets.textParse(n.captions.errors.fileSize, item);
 								return r;
 							}
