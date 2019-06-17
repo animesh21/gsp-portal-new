@@ -930,6 +930,28 @@ if($("input[name='Q6L1']:checked").length==0){
 </script>
 
 
+
+<script type="text/javascript">
+  
+  $(".form-group1").keyup(function(){
+    var p = $("input[name='Q4L1']").val();
+    var r = $("input[name='Q4L4']").val();
+    if(p<r){
+      var t ='This field value not grater than playgrounds with grass';
+      $('.error_Q4L4').html(t);
+      $('.error_Q4L4').css('color', 'red');
+      $("input[name='Q4L4']").val('');
+      $("input[name='Q4L4']").delay( 800000 );
+    }
+    else{
+       $('.error_Q4L4').empty();
+
+    }
+  });
+
+</script>
+
+
 <script type="text/javascript">
   
  $("input[name='land2019_1']").click(function(){
