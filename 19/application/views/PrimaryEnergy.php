@@ -1691,3 +1691,32 @@ if($("input[name='Q9E1']:checked").val()==="Y"){
 }		
 });
                 </script>
+	
+	
+	
+	<script type="text/javascript">
+  
+  $("input[name='Q9E1']").click(function(){
+
+var solar = $("input[name='Q6E10']:checked").val(); 
+
+
+    if(solar == 'Y'){
+
+var alternate_source =  $("input[name='Q9E1']:checked").val();
+
+              if(alternate_source == 'N'){
+                   
+                   alert('You Cannot select because you select the solar Q3')
+
+                   $(this).prop('checked', false); 
+}
+ }
+
+  });
+
+
+</script>
+	
+	
+	
