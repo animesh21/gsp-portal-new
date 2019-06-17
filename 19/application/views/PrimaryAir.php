@@ -429,9 +429,9 @@
       <br>
       1. For this exercise, classrooms that are occupied by students regularly should be considered. Do not
       add laboratories or the auditorium.<br>
-      2. Openings: are there any windows and ventilators which can be opened on regular basis and can be
+      2. Openable area: Are there any windows and ventilators which can be opened on regular basis and can be
       opened anytime? Please do not consider / add doors.<br>
-      3. This exercise should be done by schools with centrally air conditioning system also. <br>
+      3. This exercise should be done by schools with centrally air conditioned system also. <br>
       4. The exercise should be carried out for all classrooms in the school and determine how many classrooms are well ventilated by following the tooltip. Only classrooms have to be considered. <br>
       5. This activity is for all schools (non-air-conditioned buildings as well as air-conditioned
       buildings). </div>
