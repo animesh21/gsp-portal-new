@@ -236,6 +236,7 @@ $(document).ready(function(){
         var Solar = $("#Q6E9S1").val();
         if(Solar > 0)
         {
+		 $('.section_A').css('display', 'block');
             var x = $('#Solar').is(":checked");
             if(x == false)
             {
@@ -254,6 +255,7 @@ $(document).ready(function(){
         }
         else
         {
+		 $('.section_A').css('display', 'none');
             var x = $('#Solar').is(":checked");
             if(x == true)
             {
