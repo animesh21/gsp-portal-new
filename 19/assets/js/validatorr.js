@@ -236,11 +236,11 @@ $(document).ready(function(e){
 
     });
     $("#Q6E1S3").keypress(function(e){
-        var patt = /^[0-5]$/g;
+        var patt = /^[0-6]$/g;
 
         var val = (this.value + e.key).length;
         console.log(patt.test(val),!patt.test(val))
-        if(val > 11)
+        if(val > 12)
         {
             e.preventDefault();
         }
@@ -261,11 +261,11 @@ $(document).ready(function(e){
     });
 
     $("#Q6E2S3").keypress(function(e){
-        var patt = /^[0-5]$/g;
+        var patt = /^[0-6]$/g;
 
         var val = (this.value + e.key).length;
         console.log(patt.test(val),!patt.test(val))
-        if(val > 11)
+        if(val > 12)
         {
             e.preventDefault();
         }
@@ -286,11 +286,11 @@ $(document).ready(function(e){
     });
 
     $("#Q6E3S3").keypress(function(e){
-        var patt = /^[0-5]$/g;
+        var patt = /^[0-6]$/g;
 
         var val = (this.value + e.key).length;
         console.log(patt.test(val),!patt.test(val))
-        if(val > 11)
+        if(val > 12)
         {
             e.preventDefault();
         }
@@ -308,11 +308,11 @@ $(document).ready(function(e){
     });
 
     $("#Q6E4S3").keypress(function(e){
-        var patt = /^[0-5]$/g;
+        var patt = /^[0-6]$/g;
 
         var val = (this.value + e.key).length;
         console.log(patt.test(val),!patt.test(val))
-        if(val > 11)
+        if(val > 12)
         {
             e.preventDefault();
         }
@@ -331,11 +331,11 @@ $(document).ready(function(e){
     });
 
     $("#Q6E5S3").keypress(function(e){
-        var patt = /^[0-5]$/g;
+        var patt = /^[0-6]$/g;
 
         var val = (this.value + e.key).length;
         console.log(patt.test(val),!patt.test(val))
-        if(val > 11)
+        if(val > 12)
         {
             e.preventDefault();
         }
@@ -356,11 +356,11 @@ $(document).ready(function(e){
     });
 
     $("#Q6E6S3").keypress(function(e){
-        var patt = /^[0-5]$/g;
+        var patt = /^[0-6]$/g;
 
         var val = (this.value + e.key).length;
         console.log(patt.test(val),!patt.test(val))
-        if(val > 11)
+        if(val > 12)
         {
             e.preventDefault();
         }
@@ -381,11 +381,11 @@ $(document).ready(function(e){
     });
 
     $("#Q6E7S3").keypress(function(e){
-        var patt = /^[0-5]$/g;
+        var patt = /^[0-6]$/g;
 
         var val = (this.value + e.key).length;
         console.log(patt.test(val),!patt.test(val))
-        if(val > 11)
+        if(val > 12)
         {
             e.preventDefault();
         }
@@ -406,11 +406,11 @@ $(document).ready(function(e){
     });
 
     $("#Q6E8S3").keypress(function(e){
-        var patt = /^[0-5]$/g;
+        var patt = /^[0-6]$/g;
 
         var val = (this.value + e.key).length;
         console.log(patt.test(val),!patt.test(val))
-        if(val > 11)
+        if(val > 12)
         {
             e.preventDefault();
         }
@@ -430,35 +430,35 @@ $(document).ready(function(e){
 
     });
 
-    $("#Q6E8S3").keypress(function(e){
-        var patt = /^[0-5]$/g;
+    // $("#Q6E8S3").keypress(function(e){
+    //     var patt = /^[0-5]$/g;
 
-        var val = (this.value + e.key).length;
-        console.log(patt.test(val),!patt.test(val))
-        if(val > 11)
-        {
-            e.preventDefault();
-        }
-        else if (patt.test(e.key) && !this.value.includes(""+e.key))
-        {
-            if (this.value != "")
-            {
-                $('#Q6E8S3').val(this.value + ",");
-            }
-        }
-        else
-        {
-            e.preventDefault();
-        }
+    //     var val = (this.value + e.key).length;
+    //     console.log(patt.test(val),!patt.test(val))
+    //     if(val > 11)
+    //     {
+    //         e.preventDefault();
+    //     }
+    //     else if (patt.test(e.key) && !this.value.includes(""+e.key))
+    //     {
+    //         if (this.value != "")
+    //         {
+    //             $('#Q6E8S3').val(this.value + ",");
+    //         }
+    //     }
+    //     else
+    //     {
+    //         e.preventDefault();
+    //     }
 
-    });
+    // });
 
     $("#Q6E9S3").keypress(function(e){
-        var patt = /^[0-5]$/g;
+        var patt = /^[0-6]$/g;
 
         var val = (this.value + e.key).length;
         console.log(patt.test(val),!patt.test(val))
-        if(val > 11)
+        if(val > 12)
         {
             e.preventDefault();
         }
@@ -479,11 +479,11 @@ $(document).ready(function(e){
     });
 
     $("#Q6E10S3").keypress(function(e){
-        var patt = /^[0-5]$/g;
+        var patt = /^[0-6]$/g;
 
         var val = (this.value + e.key).length;
         console.log(patt.test(val),!patt.test(val))
-        if(val > 11)
+        if(val > 12)
         {
             e.preventDefault();
         }
@@ -502,11 +502,11 @@ $(document).ready(function(e){
     });
 
     $("#Q6E11S3").keypress(function(e){
-        var patt = /^[0-5]$/g;
+        var patt = /^[0-6]$/g;
 
         var val = (this.value + e.key).length;
         console.log(patt.test(val),!patt.test(val))
-        if(val > 11)
+        if(val > 12)
         {
             e.preventDefault();
         }
@@ -525,9 +525,104 @@ $(document).ready(function(e){
 
 
 
+/*  new code by jeetu  */ 
+
+    $("#Q6E16S3").keypress(function(e){
+        var patt = /^[0-6]$/g;
+
+        var val = (this.value + e.key).length;
+        console.log(patt.test(val),!patt.test(val))
+        if(val > 12)
+        {
+            e.preventDefault();
+        }
+        else if (patt.test(e.key) && !this.value.includes(""+e.key))
+        {
+            if (this.value != "")
+            {
+                $('#Q6E16S3').val(this.value + ",");
+            }
+        }
+        else
+        {
+            e.preventDefault();
+        }
+    });
+
+
+    $("#Q6E12S3").keypress(function(e){
+        var patt = /^[0-6]$/g;
+
+        var val = (this.value + e.key).length;
+        console.log(patt.test(val),!patt.test(val))
+        if(val > 12)
+        {
+            e.preventDefault();
+        }
+        else if (patt.test(e.key) && !this.value.includes(""+e.key))
+        {
+            if (this.value != "")
+            {
+                $('#Q6E12S3').val(this.value + ",");
+            }
+        }
+        else
+        {
+            e.preventDefault();
+        }
+    });
 
 
 
+    $("#Q6E13S3").keypress(function(e){
+        var patt = /^[0-6]$/g;
+
+        var val = (this.value + e.key).length;
+        console.log(patt.test(val),!patt.test(val))
+        if(val > 12)
+        {
+            e.preventDefault();
+        }
+        else if (patt.test(e.key) && !this.value.includes(""+e.key))
+        {
+            if (this.value != "")
+            {
+                $('#Q6E13S3').val(this.value + ",");
+            }
+        }
+        else
+        {
+            e.preventDefault();
+        }
+    });
+
+
+    $("#Q6E14S3").keypress(function(e){
+        var patt = /^[0-6]$/g;
+
+        var val = (this.value + e.key).length;
+        console.log(patt.test(val),!patt.test(val))
+        if(val > 12)
+        {
+            e.preventDefault();
+        }
+        else if (patt.test(e.key) && !this.value.includes(""+e.key))
+        {
+            if (this.value != "")
+            {
+                $('#Q6E14S3').val(this.value + ",");
+            }
+        }
+        else
+        {
+            e.preventDefault();
+        }
+    });
+
+
+
+
+/*  new code by  jeetu  */ 
 
 
 
