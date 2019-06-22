@@ -6,10 +6,7 @@
               font-size: 18px !important;
  text-shadow: 1px 1px 1px #000;
 }
-
-#readmore1{
-  display: none;
-}
+ 
 
 #Q5E1-error
 {
@@ -1331,8 +1328,8 @@ else echo "0"; ?>"
 <div class="form-group">
   <label class="control-label"><span class="cube">6</span>Are there any alternate sources of energy
   employed/ installed in your school? <a class="kplink"
-                                                           href="http://www.greenschoolsprogramme.org/knowledge-&#10;&#10;bank/energy/#averageConsumption"
-                                                           target="_blank"> </a> <a class="tt" data-tooltip="Do not add solar water heater(s) here. Consider only solar panels which provide electricity."><span
+          href="http://www.greenschoolsprogramme.org/knowledge-&#10;&#10;bank/energy/#averageConsumption"
+                  target="_blank"> </a> <a class="tt" data-tooltip="Do not add solar water heater(s) here. Consider only solar panels which provide electricity."><span
                             class="badge">?</span></a></label>
   <ul class="list-inline">
     <li>
@@ -1446,23 +1443,23 @@ if (isset($data['Q9E1']))
 		
         </div>
       </div>
-      <div class="form-group">
+       
         <div class="form-group">
           <label><span class="cube">7</span>Does your school use solar water heater:</label>
           <ul class="list-inline">
             <li>
               <label>Yes</label>
               <input type="radio" name="Q10E1"
-                                                   value="<?php echo set_value('Q10E1', 'Y') ?>" <?php if (isset($data['Q10E1'])) echo $data['Q10E1'] == 'Y' ? "checked" : "" ?>/>
+              value="<?php echo set_value('Q10E1', 'Y') ?>" <?php if (isset($data['Q10E1'])) echo $data['Q10E1'] == 'Y' ? "checked" : "" ?>/>
             </li>
             <li>
               <label>No</label>
               <input type="radio" name="Q10E1"
-                                                   value="<?php echo set_value('Q10E1', 'N') ?>" <?php if (isset($data['Q10E1'])) echo $data['Q10E1'] == 'N' ? "checked" : "" ?>/>
+              value="<?php echo set_value('Q10E1', 'N') ?>" <?php if (isset($data['Q10E1'])) echo $data['Q10E1'] == 'N' ? "checked" : "" ?>/>
             </li>
           </ul>
-        </div>
-      </div>
+        </div>      
+      
       <div class="form-group" id="WastePolicy">
         <label class="control-label">Please upload supporting documents:</label>
         <br>
@@ -1512,41 +1509,56 @@ if (isset($data['Q9E1']))
       </table>
 
 <br/>
+
+ <div class="form-group">
+          <label><span class="cube">8</span>Did you avail any state subsidy for installation?</label>
+          <ul class="list-inline">
+            <li>
+              <label>Yes</label>
+              <input type="radio" name="Q11E1"
+              value="<?php echo set_value('Q11E1', 'Y') ?>" <?php if (isset($data['Q11E1'])) echo $data['Q11E1'] == 'Y' ? "checked" : "" ?>/>
+            </li>
+            <li>
+              <label>No</label>
+              <input type="radio" name="Q11E1"
+              value="<?php echo set_value('Q11E1', 'N') ?>" <?php if (isset($data['Q11E1'])) echo $data['Q11E1'] == 'N' ? "checked" : "" ?>/>
+            </li>
+          </ul>
+        </div>
+
   <div class="section_A" style="display: none;">
       <div class="form-group">
         <label class="control-label">(A) Solar rooftop systems</label>
       </div>
         <div class="form-group">           
-          <label class="control-label"><span class="cube">8</span>What is the installed capacity of solar photovoltaic (PV) panels on the school rooftop (in kW)?  <a class="tt" data-tooltip="Installed capacity is rated (full-load) generation capacity of a power plant. A solar rooftop plant’s capacity, being small, will be expressed in terms of kilowatt (kW). The information on installed capacity will be available on the solar rooftop plant’s online performance monitoring system. Alternatively, it would also be mentioned in the order for installation placed with the solar rooftop installer/vendor."><span class="badge">?</span></a></label>
+          <label class="control-label"><span class="cube">9</span>What is the installed capacity of solar photovoltaic (PV) panels on the school rooftop (in kW)?  <a class="tt" data-tooltip="Installed capacity is rated (full-load) generation capacity of a power plant. A solar rooftop plant’s capacity, being small, will be expressed in terms of kilowatt (kW). The information on installed capacity will be available on the solar rooftop plant’s online performance monitoring system. Alternatively, it would also be mentioned in the order for installation placed with the solar rooftop installer/vendor."><span class="badge">?</span></a></label>
 
-<input class="form-control space-textbox" id="Q13E1" type="number" min="0" max="366" name="Q13E1" placeholder="<?php if (isset($data['Q13E1'])) echo $data['Q13E1']; ?>" value="<?php if (isset($data['Q13E1'])) echo $data['Q13E1']; ?>">
-        </div>
+<input class="form-control space-textbox" id="Q13E1" type="text" onkeypress="return isNumberKey(event)" name="Q13E1"  placeholder="<?php if (isset($data['Q13E1'])) echo $data['Q13E1']; ?>" value="<?php if (isset($data['Q13E1'])) echo $data['Q13E1']; ?>">
+        </div>   
          
         <div class="form-group">           
-          <label class="control-label"><span class="cube">9</span>What is the connected load of the school (kW)?<a class="tt" data-tooltip="The connected load of a consumer is the load in kilowatt (kW) which the power distribution company has agreed to supply to the consumer.  <br/>
+          <label class="control-label"><span class="cube">10</span>What is the connected load of the school (kW)?<a class="tt" data-tooltip="The connected load of a consumer is the load in kilowatt (kW) which the power distribution company has agreed to supply to the consumer. The electricity bill of the consumer (i.e. school) will contain this information, mentioned as connected load or just load. "><span class="badge">?</span></a></label>
 
-The electricity bill of the consumer (i.e. school) will contain this information, mentioned as connected load or just load. "><span class="badge">?</span></a></label>
-
-<input class="form-control space-textbox" id="Q14E1" type="number" min="0" max="366" name="Q14E1" placeholder="<?php if (isset($data['Q14E1'])) echo $data['Q14E1']; ?>" value="<?php if (isset($data['Q14E1'])) echo $data['Q14E1']; ?>">
+<input class="form-control space-textbox" id="Q14E1" type="text" onkeypress="return isNumberKey(event)" name="Q14E1" placeholder="<?php if (isset($data['Q14E1'])) echo $data['Q14E1']; ?>" value="<?php if (isset($data['Q14E1'])) echo $data['Q14E1']; ?>">
         </div>
 
         <div class="form-group">           
-          <label class="control-label"><span class="cube">10</span>What is the size of invertors associated with the solar photovoltaic panel (W)? </label> <br/>
-          <span style="font-style: italic;" >Inverters are required to convert the direct current (DC) output generated by solar rooftop systems or batteries to alternating current (AC) for further use. In general inverter wattage (expressed in kilo-volt-amperes or kVA) is 20-25 per cent more than that installed capacity. So, for a 1 kW solar rooftop system, inverters of about 1.2 kVA will be required. </span>  <br/> <br/>
+          <label class="control-label"><span class="cube">11</span>What is the size of invertors associated with the solar photovoltaic panel (W)? </label> <br/>
+          <span style="font-style: italic;" >Inverters are required to convert the direct current (DC) output generated by solar rooftop systems or batteries to alternating current (AC) for further use. In general inverter wattage (expressed in kilo-volt-amperes or kVA) is 20-25 per cent more than that installed capacity.</span>  <br/> <br/>
 
-<input class="form-control space-textbox" id="Q15E1" type="number" min="0" max="366" name="Q15E1" placeholder="<?php if (isset($data['Q15E1'])) echo $data['Q15E1']; ?>" value="<?php if (isset($data['Q15E1'])) echo $data['Q15E1']; ?>">
+<input class="form-control space-textbox" id="Q15E1" type="text" onkeypress="return isNumberKey(event)" name="Q15E1" placeholder="<?php if (isset($data['Q15E1'])) echo $data['Q15E1']; ?>" value="<?php if (isset($data['Q15E1'])) echo $data['Q15E1']; ?>">
         </div>
 
         <div class="form-group">           
-          <label class="control-label"><span class="cube">11</span>What operational model has been adopted for the solar rooftop system?</label> <br/>
+          <label class="control-label"><span class="cube">12</span>What operational model has been adopted for the solar rooftop system?</label> <br/>
           <span style="font-style: italic;" >Solar rooftop systems can either be standalone (off-grid) or grid-connected. 
 A standalone system is wired only to the house and requires a battery back up to store any excess power generated, or meet power deficits. Example: standalone solar street lights, solar lamps, rooftop panels <button class="btn-btn-primary" id="readmore" style="margin: 2px 5px; min-width: 95px; padding: 3px 3px; text-transform:none;" >Read more+</button> </span>
-<span class="read_1" style="display: none; font-style: italic;">Grid-interactive systems, on the other hand, utilise the grid for storing and extracting electricity, as per the requirement. Example: Solar rooftop panels, on ground solar panels etc. Interactions with the grid can be facilitated either via gross or net metering.</span> 
-<span class="read_2" style="display: none; font-style: italic">Under gross metering, all generated electricity is sold to the grid at average cost of supply (ACoS), as determined by the regional distribution company. And the consumer continues to procure all needed power from the DISCOM, as per their tariff bracket. The bills are either settled individually or as net billing.</span> <button class="btn-btn-primary" id="readmore1" style="margin: 2px 5px; min-width: 95px; padding: 3px 3px; text-transform:none;" >Read more+</button>
-<span class="read_3" style="display: none; font-style: italic">Whereas under net metering, the consumer consumes all the energy produced by the solar rooftop (SRT) system. And relies on the grid for any excess energy required. The consumer is only charged for the excess energy they consume, as per their tariff bracket. Any surplus generation can be fed back to the grid. </span>
-<span class="read_4" style="display: none; font-style: italic">This information will also be reflected in the electricity bill of the school as under a net-metering billing would only be for net consumption. <br/>
+<span class="read_1" style="display: none; font-style: italic;">Grid-interactive systems, on the other hand, utilise the grid for storing and extracting electricity, as per the requirement. Example: Solar rooftop panels, on ground solar panels etc. Interactions with the grid can be facilitated either via gross or net metering. <br/>
+ Under gross metering, all generated electricity is sold to the grid at average cost of supply (ACoS), as determined by the regional distribution company. And the consumer continues to procure all needed power from the DISCOM, as per their tariff bracket. The bills are either settled individually or as net billing. <br/> 
+ Whereas under net metering, the consumer consumes all the energy produced by the solar rooftop (SRT) system. And relies on the grid for any excess energy required. The consumer is only charged for the excess energy they consume, as per their tariff bracket. Any surplus generation can be fed back to the grid.  
+  This information will also be reflected in the electricity bill of the school as under a net-metering billing would only be for net consumption. <br/>
 
-Generally on-grid systems have benefit of transferring surplus power to grid, while in case of off-grid systems, surplus power may get wasted if there is not enough battery storage available.</span>
+Generally on-grid systems have benefit of transferring surplus power to grid, while in case of off-grid systems, surplus power may get wasted if there is not enough battery storage available. <button class="btn-btn-primary" id="readless" style="margin: 2px 5px; min-width: 95px; padding: 3px 3px; text-transform:none; margin-bottom: 20px" >Read less</button> </span>
 
 <ul class="list-inline">
             <li>              
@@ -1569,29 +1581,32 @@ Generally on-grid systems have benefit of transferring surplus power to grid, wh
         </div>
 
       <div class="form-group">           
-          <label class="control-label"><span class="cube">12</span>What is the power generated by the solar rooftop panel in a year (kWh)?<a class="tt" data-tooltip="Information on power generation by the solar rooftop system can be sourced either from the solar rooftop plant’s online performance monitoring system or from the electricity bill."><span class="badge">?</span></a></label>
+          <label class="control-label"><span class="cube">13</span>What is the power generated by the solar rooftop panel in a year (kWh)?<a class="tt" data-tooltip="Information on power generation by the solar rooftop system can be sourced either from the solar rooftop plant’s online performance monitoring system or from the electricity bill."><span class="badge">?</span></a></label>
 
-<input class="form-control space-textbox" id="Q19E1" type="number" min="0" max="366" name="Q19E1" placeholder="<?php if (isset($data['Q19E1'])) echo $data['Q19E1']; ?>" value="<?php if (isset($data['Q19E1'])) echo $data['Q19E1']; ?>">
+<input class="form-control space-textbox" id="Q19E1" type="text" onkeypress="return isNumberKey(event)" name="Q19E1" placeholder="<?php if (isset($data['Q19E1'])) echo $data['Q19E1']; ?>" value="<?php if (isset($data['Q19E1'])) echo $data['Q19E1']; ?>">
         </div>
 
         <div class="form-group">           
-          <label class="control-label"><span class="cube">13</span>What are the O&M practices adopted?<a class="tt" data-tooltip="Solar rooftop systems require periodic cleaning as accumulation of dust can lead to significant decline in performance. Wet cleaning at least once a week. "><span class="badge">?</span></a></label>
+          <label class="control-label"><span class="cube">14</span>What are the operation and maintenance (O&M)  practices adopted?<a class="tt" data-tooltip="Solar rooftop systems require periodic cleaning as accumulation of dust can lead to significant decline in performance."><span class="badge">?</span></a></label>
 
-<ul class="list-inline">
-            <div class="radio">              
-              <input type="radio" name="Q20E1" value="<?php echo set_value('Q20E1', '1') ?>" <?php if (isset($data['Q20E1'])) echo $data['Q20E1'] == '1' ? "checked" : "" ?>/>
+
+          <ul class="list-unstyled">             
+            <li>              
+              <input type="checkbox" name="Q9E1S1020" id="Q9E1S1020" value="<?php echo set_value('Q9E1S1020', 1); ?>" <?php if (isset($data['Q9E1S1020'])) echo "checked" ?>/>              
+              <label>Wet cleaning at least once a week.</label>
+            </li>
+            <li>              
+              <input type="checkbox" name="Q9E1S1021" id="Q9E1S1021" value="<?php echo set_value('Q9E1S1021', 2); ?>" <?php if (isset($data['Q9E1S1021'])) echo "checked" ?>/>
               <label>Dry cleaning daily</label>
-            </div>
-
-            <div class="radio">              
-              <input type="radio" name="Q20E1" value="<?php echo set_value('Q20E1', '2') ?>" <?php if (isset($data['Q20E1'])) echo $data['Q20E1'] == '2' ? "checked" : "" ?>/>
+            </li>
+             <li>              
+              <input type="checkbox" name="Q9E1S1022" id="Q9E1S1022" value="<?php echo set_value('Q9E1S1022', 3); ?>" <?php if (isset($data['Q9E1S1022'])) echo "checked" ?>/>
               <label>Annual maintenance contract with the vendor for maintenance of electrical and other technical components.</label>
-            </div>
-
-            <div class="radio">              
-              <input type="radio" name="Q20E1" value="<?php echo set_value('Q20E1', '3') ?>" <?php if (isset($data['Q20E1'])) echo $data['Q20E1'] == '3' ? "checked" : "" ?>/>
+            </li>
+             <li>              
+              <input type="checkbox" name="Q9E1S1023" id="Q9E1S1023" value="<?php echo set_value('Q9E1S1023', 4); ?>" <?php if (isset($data['Q9E1S1023'])) echo "checked" ?>/>
               <label>Regular monitoring of the integrated software real-time tracking of performance (usually through a smart phone or computer).</label>
-            </div>
+            </li>             
           </ul>
         </div>
      </div>
@@ -1600,7 +1615,7 @@ Generally on-grid systems have benefit of transferring surplus power to grid, wh
         <label class="control-label">(B) Advanced questions on other renewable energy systems</label>
       </div>
         <div class="form-group">           
-          <label class="control-label"><span class="cube">14</span>What is the non-solar source of renewable energy (RE) for the school?
+          <label class="control-label"><span class="cube">15</span>What is the non-solar source of renewable energy (RE) for the school?
            </span></a></label>
 
 <ul class="list-unstyled">
@@ -1618,12 +1633,12 @@ Generally on-grid systems have benefit of transferring surplus power to grid, wh
               <div class="Q23R1_radio" style="display: none">
               <div class="biogas_2" style="margin-left: 90px">
               <span style="font-weight: bold; font-size: 18px">a. </span>
-              <input type="radio" name="Q23R1_f" value="<?php echo set_value('Q23R1_f', '1') ?>" <?php if (isset($data['Q23R1_f'])) echo $data['Q23R1_f'] == '1' ? "checked" : "" ?>/>
+              <input type="checkbox" name="Q9E1S1024" id="Q9E1S1024" value="<?php echo set_value('Q9E1S1024', 1); ?>" <?php if (isset($data['Q9E1S1024'])) echo $data['Q9E1S1024'] == '1' ? "checked" : "" ?>/>
               <label>For electricity</label>
               </div>
               <div class="biogas_3" style="margin-left: 90px">
               <span style="font-weight: bold; font-size: 18px">b. </span>
-              <input type="radio" name="Q23R1_f" value="<?php echo set_value('Q23R1_f', '2') ?>" <?php if (isset($data['Q23R1_f'])) echo $data['Q23R1_f'] == '2' ? "checked" : "" ?>/>
+              <input type="checkbox" name="Q9E1S1025" id="Q9E1S1025" value="<?php echo set_value('Q9E1S1025', 2); ?>" <?php if (isset($data['Q9E1S1025'])) echo $data['Q9E1S1025'] == '2' ? "checked" : "" ?>/>
               <label>For cooking</label>
               </div>
             </div>
@@ -1650,7 +1665,8 @@ Generally on-grid systems have benefit of transferring surplus power to grid, wh
               </li>
               <div class="details" style="margin-left:25px" >
                 <label>Give details:</label>
-              <input class="form-control space-textbox" id="Q27E1" type="text" min="0" max="366" name="Q27E1" placeholder="<?php if (isset($data['Q27E1'])) echo $data['Q27E1']; ?>" value="<?php if (isset($data['Q27E1'])) echo $data['Q27E1']; ?>">
+              <input class="form-control space-textbox" id="Q27E1" onkeypress="return (event.charCode > 64 && 
+  event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" type="text" name="Q27E1" placeholder="<?php if (isset($data['Q27E1'])) echo $data['Q27E1']; ?>" value="<?php if (isset($data['Q27E1'])) echo $data['Q27E1']; ?>">
               </div>
 
             
@@ -1662,27 +1678,33 @@ Generally on-grid systems have benefit of transferring surplus power to grid, wh
           </ul>
         </div>
 
+        <div class="form-group">           
+          <label class="control-label"><span class="cube">16</span>What is the size of invertors associated with the non-solar RE system(W)?</label>
+
+<input class="form-control space-textbox" id="Q33E1" type="text" onkeypress="return isNumberKey(event)" name="Q33E1" placeholder="<?php if (isset($data['Q33E1'])) echo $data['Q33E1']; ?>" value="<?php if (isset($data['Q33E1'])) echo $data['Q33E1']; ?>">
+        </div>
+
         
         <div class="form-group">           
-          <label class="control-label"><span class="cube">15</span>What is the installed capacity of non-solar RE system in your school (kW)?<a class="tt" data-tooltip="Installed capacity is rated (full-load) generation capacity of a power plant."><span class="badge">?</span></a></label>
+          <label class="control-label"><span class="cube">17</span>What is the installed capacity of non-solar RE system in your school (kW)?<a class="tt" data-tooltip="Installed capacity is rated (full-load) generation capacity of a power plant."><span class="badge">?</span></a></label>
 
-<input class="form-control space-textbox" id="Q29E1" type="number" min="0" max="366" name="Q29E1" placeholder="<?php if (isset($data['Q29E1'])) echo $data['Q29E1']; ?>" value="<?php if (isset($data['Q29E1'])) echo $data['Q29E1']; ?>">
+<input class="form-control space-textbox" id="Q29E1" type="text" onkeypress="return isNumberKey(event)" name="Q29E1" placeholder="<?php if (isset($data['Q29E1'])) echo $data['Q29E1']; ?>" value="<?php if (isset($data['Q29E1'])) echo $data['Q29E1']; ?>">
         </div>
 
         <div class="form-group">           
-          <label class="control-label"><span class="cube">16</span>What is the connected load of the school (kW)?<a class="tt" data-tooltip="The connected load of a consumer is the load in kilowatt (kW) which the power distribution company has agreed to supply to the consumer"><span class="badge">?</span></a></label>
+          <label class="control-label"><span class="cube">18</span>What is the connected load of the school (kW)?<a class="tt" data-tooltip="The connected load of a consumer is the load in kilowatt (kW) which the power distribution company has agreed to supply to the consumer"><span class="badge">?</span></a></label>
 
-<input class="form-control space-textbox" id="Q30E1" type="number" min="0" max="366" name="Q30E1" placeholder="<?php if (isset($data['Q30E1'])) echo $data['Q30E1']; ?>" value="<?php if (isset($data['Q30E1'])) echo $data['Q30E1']; ?>">
+<input class="form-control space-textbox" id="Q30E1" type="text" onkeypress="return isNumberKey(event)" name="Q30E1" placeholder="<?php if (isset($data['Q30E1'])) echo $data['Q30E1']; ?>" value="<?php if (isset($data['Q30E1'])) echo $data['Q30E1']; ?>">
         </div>
 
         <div class="form-group">           
-          <label class="control-label"><span class="cube">17</span>What is the power generated by the non-solar RE system in a year (kWh)?<a class="tt" data-tooltip="Information on power generation by the solar rooftop system can be sourced either from the solar rooftop plant’s online performance monitoring system or from the electricity bill"><span class="badge">?</span></a></label>
+          <label class="control-label"><span class="cube">19</span>What is the power generated by the non-solar RE system in a year (kWh)?<a class="tt" data-tooltip="Information on power generation by the non- solar RE system can be sourced from the performance monitoring system or from the bill."><span class="badge">?</span></a></label>
 
-<input class="form-control space-textbox" id="Q31E1" type="number" min="0" max="366" name="Q31E1" placeholder="<?php if (isset($data['Q31E1'])) echo $data['Q31E1']; ?>" value="<?php if (isset($data['Q31E1'])) echo $data['Q31E1']; ?>">
+<input class="form-control space-textbox" id="Q31E1" type="text" onkeypress="return isNumberKey(event)" name="Q31E1" placeholder="<?php if (isset($data['Q31E1'])) echo $data['Q31E1']; ?>" value="<?php if (isset($data['Q31E1'])) echo $data['Q31E1']; ?>">
         </div>
 
         <div class="form-group">           
-          <label class="control-label"><span class="cube">18</span>What are the O&M practices adopted for installed RE plant?</label>
+          <label class="control-label"><span class="cube">20</span>What are the operation and maintenance (O&M)  practices adopted for installed RE plant?</label>
 
 <ul class="list-inline">
             <div class="radio">              
@@ -1704,7 +1726,7 @@ Generally on-grid systems have benefit of transferring surplus power to grid, wh
         <label class="control-label">(C) Advanced questions on Biofuels</label>
       </div>
         <div class="form-group">           
-          <label class="control-label"><span class="cube">19</span>What are types of biomass being used by the school?
+          <label class="control-label"><span class="cube">21</span>What are types of biomass being used by the school?
            </span></a></label>
 
 <ul class="list-unstyled">             
@@ -1725,21 +1747,26 @@ Generally on-grid systems have benefit of transferring surplus power to grid, wh
               <label>Grass/straw based/dry leaves</label>
             </li>
             <li>              
-              <input type="checkbox" name="Q9E1S1010" id="Q37E1" value="<?php echo set_value('Q37E1', 5); ?>" <?php if (isset($data['Q37E1'])) echo "checked" ?>/>
-              <label>Others</label>
-            </li> 
+              <input type="checkbox" name="Q9E1S1010" id="Q9E1S1010" value="<?php echo set_value('Q9E1S1010', 5); ?>" <?php if (isset($data['Q9E1S1010'])) echo "checked" ?>/>
+              <label>Others</label>              
+            </li>             
           </ul>
+          <div class="other_option" style="margin-left: 25px" >
+              <label>Give details:</label>
+              <input class="form-control space-textbox" id="Q27E1" onkeypress="return (event.charCode > 64 && 
+  event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" type="text" name="Q34E1" placeholder="<?php if (isset($data['Q34E1'])) echo $data['Q34E1']; ?>" value="<?php if (isset($data['Q34E1'])) echo $data['Q34E1']; ?>">
+             </div>
         </div>
 
         
         <div class="form-group">           
-          <label class="control-label"><span class="cube">20</span>What is the amount of waste being put in the biomass plant per day (in kg)?</label>
+          <label class="control-label"><span class="cube">22</span>What is the amount of waste being put in the biomass plant per day (in kg)?</label>
 
-<input class="form-control space-textbox" id="Q38E1" type="number" min="0" max="366" name="Q38E1" placeholder="<?php if (isset($data['Q38E1'])) echo $data['Q38E1']; ?>" value="<?php if (isset($data['Q38E1'])) echo $data['Q38E1']; ?>">
+<input class="form-control space-textbox" id="Q38E1" type="text" onkeypress="return isNumberKey(event)" name="Q38E1" placeholder="<?php if (isset($data['Q38E1'])) echo $data['Q38E1']; ?>" value="<?php if (isset($data['Q38E1'])) echo $data['Q38E1']; ?>">
         </div>
 
         <div class="form-group">           
-          <label class="control-label"><span class="cube">21</span>For what purpose is the energy from biofuel generated in school, used?
+          <label class="control-label"><span class="cube">23</span>For what purpose is the energy from biofuel generated in school, used?
            </span></a></label>
 
 <ul class="list-unstyled">             
@@ -1761,13 +1788,13 @@ Generally on-grid systems have benefit of transferring surplus power to grid, wh
         </div>
         <div class="que_21a" style="display: none" >
         <div class="form-group">           
-          <label class="control-label"><span class="cube">21(a)</span>If biogas is being used for cooking:</label>
+          <label class="control-label"><span class="cube">23(a)</span>If biogas is being used for cooking:</label>
         </div>
 
         <div class="form-group">           
-          <label class="control-label"><span class="cube">a.</span>What is the approximate capacity of the biogas unit (in terms of m3/day)?<a class="tt" data-tooltip="Likely to be mentioned on the gasifier itself /or the order placed with vendor, "><span class="badge">?</span></a></label>
+          <label class="control-label"><span class="cube">a.</span>What is the approximate capacity of the biogas unit (in terms of m3/day)?<a class="tt" data-tooltip="Likely to be mentioned on the gasifier itself /or the order placed with vendor."><span class="badge">?</span></a></label>
 
-<input class="form-control space-textbox" id="Q42E1" type="number" min="0" max="366" name="Q42E1" placeholder="<?php if (isset($data['Q42E1'])) echo $data['Q42E1']; ?>" value="<?php if (isset($data['Q42E1'])) echo $data['Q42E1']; ?>">
+<input class="form-control space-textbox" id="Q42E1" type="text" onkeypress="return isNumberKey(event)" name="Q42E1" placeholder="<?php if (isset($data['Q42E1'])) echo $data['Q42E1']; ?>" value="<?php if (isset($data['Q42E1'])) echo $data['Q42E1']; ?>">
         </div>
 
         <div class="form-group">           
@@ -1775,20 +1802,18 @@ Generally on-grid systems have benefit of transferring surplus power to grid, wh
           <ul class="list-inline">
           <li>
             <label class="radio-inline">
-            <input type="radio" id="Q43E1" name="Q43E1" class="Q43E1_yes" value="<?php echo set_value('Q43E1', '1') ?>" <?php if (isset($data['Q43E1'])) echo $data['Q43E1'] == '1' ? "checked" : "" ?>/>
+            <input type="radio" name="Q43E1" id="Q43E1" class="Q43E1_yes" value="<?php echo set_value('Q43E1', '1') ?>" <?php if (isset($data['Q43E1'])) echo $data['Q43E1'] == '1' ? "checked" : "" ?>/>
             Yes </label>
           </li>
           <li>
             <label class="radio-inline">
-            <input type="radio" id="Q43E1" name="Q43E1" value="<?php echo set_value('Q43E1', '2') ?>" <?php if (isset($data['Q43E1'])) echo $data['Q43E1'] == '2' ? "checked" : "" ?>/>
+            <input type="radio" name="Q43E1" value="<?php echo set_value('Q43E1', '2') ?>" <?php if (isset($data['Q43E1'])) echo $data['Q43E1'] == '2' ? "checked" : "" ?>/>
             No </label>
           </li>
         </ul> <br/>
         <div class="form-group" style="display:none" id="Q43E1_b">
-        <label class="control-label"><span class="cube">21(b)(i)</span>If yes, what is the quantity of water (in litres) added per kg of waste?</label>
-
-
-<input class="form-control space-textbox" id="Q44E1" type="number" min="0" max="366" name="Q44E1" placeholder="<?php if (isset($data['Q44E1'])) echo $data['Q44E1']; ?>" value="<?php if (isset($data['Q44E1'])) echo $data['Q44E1']; ?>">
+        <label class="control-label"><span class="cube">23(b)(i)</span>If yes, what is the quantity of water (in litres) added per kg of waste (in a day)?</label>
+<input class="form-control space-textbox" id="Q44E1" type="text" onkeypress="return isNumberKey(event)" name="Q44E1" placeholder="<?php if (isset($data['Q44E1'])) echo $data['Q44E1']; ?>" value="<?php if (isset($data['Q44E1'])) echo $data['Q44E1']; ?>">
         </div>
       </div>
 
@@ -1818,24 +1843,24 @@ Generally on-grid systems have benefit of transferring surplus power to grid, wh
             </li>
             <li>
               <span style="font-weight: bold; font-size: 18px">f. </span><label style="margin-left:5px">Gas pump</label>
-              <input type="checkbox" name="Q9E1S1019" id="Q9E1S1019" value="<?php echo set_value('Q9E1S1019', 6); ?>"<?php if (isset($data['Q9E1S1018'])) echo "checked" ?>>
+              <input type="checkbox" name="Q9E1S1019" id="Q9E1S1019" value="<?php echo set_value('Q9E1S1019', 6); ?>"<?php if (isset($data['Q9E1S1019'])) echo "checked" ?>>
             </li>  
           </ul>
         </div>
 
         <div class="form-group">
-          <label class="control-label"><span class="cube">d.</span>How many hours of cooking using biogas? </label>
-          <input class="form-control space-textbox" id="Q51E1" type="number" min="0" max="366" name="Q51E1" placeholder="<?php if (isset($data['Q51E1'])) echo $data['Q51E1']; ?>" value="<?php if (isset($data['Q51E1'])) echo $data['Q51E1']; ?>">
+          <label class="control-label"><span class="cube">d.</span>How many hours of cooking in school using biogas (in a day)? </label>
+          <input class="form-control space-textbox" id="Q51E1" type="text" onkeypress="return isNumberKey(event)" name="Q51E1" placeholder="<?php if (isset($data['Q51E1'])) echo $data['Q51E1']; ?>" value="<?php if (isset($data['Q51E1'])) echo $data['Q51E1']; ?>">
         </div>
 
         <div class="form-group">
           <label class="control-label"><span class="cube">e.</span>What other fuel sources are used for cooking (LPG or PNG etc.)?</label>
-          <input class="form-control space-textbox" id="Q52E1" type="number" min="0" max="366" name="Q52E1" placeholder="<?php if (isset($data['Q52E1'])) echo $data['Q52E1']; ?>" value="<?php if (isset($data['Q52E1'])) echo $data['Q52E1']; ?>">
+          <input class="form-control space-textbox" id="Q52E1" type="text" onkeypress="return isNumberKey(event)" name="Q52E1" placeholder="<?php if (isset($data['Q52E1'])) echo $data['Q52E1']; ?>" value="<?php if (isset($data['Q52E1'])) echo $data['Q52E1']; ?>">
         </div>
 
         <div class="form-group">
-          <label class="control-label"><span class="cube">f.</span>How many hours of cooking by other sources?</label>
-          <input class="form-control space-textbox" id="Q53E1" type="number" min="0" max="366" name="Q53E1" placeholder="<?php if (isset($data['Q53E1'])) echo $data['Q53E1']; ?>" value="<?php if (isset($data['Q53E1'])) echo $data['Q53E1']; ?>">
+          <label class="control-label"><span class="cube">f.</span> How many hours of cooking by other sources (in a day)?</label>
+          <input class="form-control space-textbox" id="Q53E1" type="text" onkeypress="return isNumberKey(event)" name="Q53E1" placeholder="<?php if (isset($data['Q53E1'])) echo $data['Q53E1']; ?>" value="<?php if (isset($data['Q53E1'])) echo $data['Q53E1']; ?>">
         </div>
        </div>
      </div>
@@ -2343,25 +2368,18 @@ nyanBtn.addEventListener('click', function(){
 
   
   $('#readmore').click(function(e){
-
-    $('#readmore1').css('display', 'block');
-    $('.read_1').css('display', 'block');
-     $('.read_2').css('display', 'block');
-
+     
+    $('.read_1').css('display', 'block');    
     e.preventDefault();
-   
-
 
   });
 
-  $('#readmore1').click(function(e){
+  $('#readless').click(function(e){
+    $('.read_1').css('display', 'none');     
+     e.preventDefault();
 
-    $('.read_3').css('display', 'block');
-     $('.read_4').css('display', 'block');
-     $('#readmore1').css('display', 'none');
-
-    e.preventDefault();
   });
+ 
 });
 
 </script>
@@ -2404,7 +2422,6 @@ if ($('#Q9E1S101').is(":checked"))
 
 
 });
-
 
 
  
@@ -2480,11 +2497,12 @@ else{
 
 });
 
+ 
 
 $("input[name='Q43E1']").click(function(){
 
 
-  var f = $(this).val();
+  var f = $(this).val();  
 
    if (f=='1')
 {
@@ -2500,6 +2518,9 @@ else{
 });
 
 
+
+
+
 $(document).ready(function(){
 
 if ($('#Q43E1').is(":checked"))
@@ -2508,7 +2529,7 @@ if ($('#Q43E1').is(":checked"))
 }
 else{
 
-  $('.#Q43E1_b').css('display', 'none');
+  $('#Q43E1_b').css('display', 'none');
 }
 
 });
@@ -2597,3 +2618,47 @@ if($("input[name='Q9E1S101']").prop('checked') == true && $("input[name='Q9E1S10
 }
 }); 
   </script>
+
+ 
+    <script type="text/javascript">
+          function isNumberKey(evt)
+       {
+          var charCode = (evt.which) ? evt.which : evt.keyCode;
+          if (charCode != 46 && charCode > 31 
+            && (charCode < 48 || charCode > 57))
+             return false;
+
+          return true;
+       }
+        </script>
+
+
+        <script type="text/javascript">
+          $(document).ready(function(){
+          
+          $('#Q14E1').keyup(function(e){
+            
+             var val1 =  $('#Q13E1').val();
+             //alert(val1);
+             var val2 =  $('#Q14E1').val();
+             //alert(val2);
+             var val3=val1*1.5;
+            // alert(val3);
+             if(val3>=val2){
+              
+             }
+              
+             else{
+              $('#Q14E1').val('');
+              alert('invertor size cannot be more: '+val3);
+              return false;
+               
+             }
+
+             });
+
+          });
+        
+
+
+        </script>
