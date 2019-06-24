@@ -593,7 +593,7 @@ return $this->db->select('a.*,b.name AS state_name, c.name AS district_name')->f
 							->join('states AS e', 'a.state=e.id', 'left')
 							->join('cities AS f', 'a.district=f.id', 'left')
 							->where('b.questionid','Q1G2')
-							->where('b.answer >', 5)
+							->where('b.answer >=', 5)
 				                        ->group_by('a.school_id')
 							->get()->result();
 		
