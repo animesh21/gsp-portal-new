@@ -1705,17 +1705,15 @@ Generally on-grid systems have benefit of transferring surplus power to grid, wh
 
         <div class="form-group">           
           <label class="control-label"><span class="cube">20</span>What are the operation and maintenance (O&M)  practices adopted for installed RE plant?</label>
-
-<ul class="list-inline">
-            <div class="radio">              
-              <input type="radio" name="Q32E1" value="<?php echo set_value('Q32E1', '1') ?>" <?php if (isset($data['Q32E1'])) echo $data['Q32E1'] == '1' ? "checked" : "" ?>/>
+          <ul class="list-unstyled">             
+            <li>              
+              <input type="checkbox" name="Q9E1S1026" id="Q9E1S1026" value="<?php echo set_value('Q9E1S1026', 1); ?>" <?php if (isset($data['Q9E1S1026'])) echo "checked" ?>/>              
               <label>Annual maintenance contract with the vendor for maintenance of electrical and other technical components.</label>
-            </div>
-
-            <div class="radio">              
-              <input type="radio" name="Q32E1" value="<?php echo set_value('Q32E1', '2') ?>" <?php if (isset($data['Q32E1'])) echo $data['Q32E1'] == '2' ? "checked" : "" ?>/>
+            </li>
+            <li>              
+              <input type="checkbox" name="Q9E1S1027" id="Q9E1S1027" value="<?php echo set_value('Q9E1S1027', 2); ?>" <?php if (isset($data['Q9E1S1027'])) echo "checked" ?>/>
               <label>Regular monitoring of the integrated software real-time tracking of performance (usually through a smart phone or computer).</label>
-            </div>             
+            </li>                       
           </ul>
         </div>
 
@@ -1855,7 +1853,7 @@ Generally on-grid systems have benefit of transferring surplus power to grid, wh
 
         <div class="form-group">
           <label class="control-label"><span class="cube">e.</span>What other fuel sources are used for cooking (LPG or PNG etc.)?</label>
-          <input class="form-control space-textbox" id="Q52E1" type="text" onkeypress="return isNumberKey(event)" name="Q52E1" placeholder="<?php if (isset($data['Q52E1'])) echo $data['Q52E1']; ?>" value="<?php if (isset($data['Q52E1'])) echo $data['Q52E1']; ?>">
+          <input class="form-control space-textbox" id="Q52E1" type="text" name="Q52E1" placeholder="<?php if (isset($data['Q52E1'])) echo $data['Q52E1']; ?>" value="<?php if (isset($data['Q52E1'])) echo $data['Q52E1']; ?>">
         </div>
 
         <div class="form-group">
@@ -2660,5 +2658,19 @@ if($("input[name='Q9E1S101']").prop('checked') == true && $("input[name='Q9E1S10
           });
         
 
+
+        </script>
+
+
+ <script type="text/javascript">
+          
+        $(document).ready(function(){
+        $("#Q52E1").keypress(function(event){
+            var inputValue = event.charCode;
+            if(!(inputValue >= 65 && inputValue <= 120) && (inputValue != 32 && inputValue != 0)){
+                event.preventDefault();
+            }
+        });
+    });
 
         </script>
