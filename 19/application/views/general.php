@@ -613,5 +613,26 @@
 
 </script>
 	
+	<script type="text/javascript">
+    
+    $(document).ready(function(){
+      $("#movenextbtn").click(function(e){
+       var p = $('#Q5G2').val();
+
+       if(p){
+
+       }
+       else{
+        alert('Must enter value in 4(c)How many family members stay in the school campus?');
+        e.preventDefault();
+       }
+
+      });
+
+
+    });
+
+  </script>
+	
 	
 	
