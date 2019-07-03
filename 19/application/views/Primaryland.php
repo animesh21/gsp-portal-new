@@ -26,7 +26,13 @@
 <div class="container">
     <div class="content-form">
         <div class="log-nav">
-            <div class="welcome">Welcome, <span style="font-weight:bold"><?php echo $this->session->userdata('USERNAME'); ?></span></div>
+           <div class="welcome">Welcome <span
+                        style="font-weight:bold">
+                        <?php $user_id = $this->session->userdata('USER_ID'); 
+
+                       $School_name = getSchoolNameBYUniqueId($user_id);
+                       echo $School_name;
+                        ?></span></div>
             <ul>
                 <li><a href="/audit2016/upload/templates/tfr_responsive/regist.php">Logout</a></li>
                 <li>|</li>
