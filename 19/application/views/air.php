@@ -77,8 +77,13 @@
 <div class="container">
   <div class="content-form">
     <div class="log-nav">
-      <div class="welcome">Welcome, <span
-                        style="font-weight:bold"><?php echo $this->session->userdata('USERNAME'); ?></span></div>
+      <div class="welcome">Welcome <span
+                        style="font-weight:bold">
+                        <?php $user_id = $this->session->userdata('USER_ID'); 
+
+                       $School_name = getSchoolNameBYUniqueId($user_id);
+                       echo $School_name;
+                        ?></span></div>
       <ul>
         <li><a href="<?php echo base_url('logout'); ?>">Logout</a></li>
         <li>|</li>
