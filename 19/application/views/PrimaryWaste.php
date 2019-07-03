@@ -2619,7 +2619,7 @@ if($("input[name='Q12Wa28S1']").val()=="" || $("input[name='Q12Wa28S2']").val()=
         var p = $(this).val();
         
         if(p>5){
-            alert('Not Grater than 5')
+            alert('BEE star rating should not be greater than 5')
             $(this).val('');
         }
 
