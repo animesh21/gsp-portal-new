@@ -1712,7 +1712,7 @@ var alternate_source =  $("input[name='Q9E1']:checked").val();
 
               if(alternate_source == 'N'){
                    
-                   alert('You Cannot select because you select the solar Q3')
+                   alert('You cannot select NO since you have selected Solar in Ques 3')
 
                    $(this).prop('checked', false); 
 }
