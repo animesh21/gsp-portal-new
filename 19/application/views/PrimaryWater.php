@@ -753,7 +753,7 @@ To understand water, it is important to know the source of water in your school 
     </ul>
   </div>
 	
-	<div class="Q8W2_2_error" style="display: none;"><label> To calculate your school’s RWH potential visit this link  : </label><a href="http://www.greenschoolsprogramme.org/knowledge-bank/water/formulae-to-remember/" ><span style="color:blue;">Here</span></a> </div>
+	<div class="Q8W2_2_error" style="display: none;"><label> To calculate your school’s RWH potential visit this link  : </label><a href="http://www.greenschoolsprogramme.org/knowledge-bank/water/formulae-to-remember/" target="_blank" ><span style="color:blue;">Here</span></a> </div>
   <div class="form-group" id="Q8W2S1"
                             <?php
                             if(isset($data['Q8W2']))
