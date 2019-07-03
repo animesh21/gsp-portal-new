@@ -21,6 +21,7 @@
 <script src="<?php echo base_url(); ?>assets/js/admin.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/AC_RunActiveContent.js" type="text/javascript"></script>
 <script src="<?php echo base_url(); ?>assets/js/jquery.validate.js"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
 <style type="text/css">
             .error {
                 font-size: 12px !important;
@@ -382,7 +383,14 @@
           
         </div> 
        <input type="text" class="form-control" placeholder="Captcha" id="cpatchaTextBox" style="width:250px;  margin-top: -50px;"/>
+          <br/>
+ 
+   
+
+       <div class="g-recaptcha" data-sitekey="6Lex3asUAAAAANqfuLlYwNAqcKJ_WAtQJh7KofHV
+"></div>
          
+          <br/>
          
     </body>
  </div>
@@ -412,7 +420,7 @@
                                 src="<?php echo base_url(); ?>assets/img/times.jpg" class="img-responsive"></a></li>
     </ul>
   </div>
-  <div class="text-center">Copyright Â© 2017 Centre for Science and Environment</div>
+  <div class="text-center">Copyright © 2017 Centre for Science and Environment</div>
 </footer>
 </body>
 </html>
