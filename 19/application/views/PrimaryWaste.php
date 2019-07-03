@@ -1018,10 +1018,10 @@
                                     <label >Garden waste/ Horticultural waste </label>
                                 </div>
                                 <div class="col-xs-3">
-                                    <input class="form-control space-textbox"  id="Q8Wa2S1" type="radio" name="Q8Wa2S1" value="<?php echo set_value('Q8Wa2S1','Y'); ?>" <?php if(isset($data['Q8Wa1S1'])) echo $data['Q8Wa1S1'] == 'Y'?"checked":"" ?>/>
+                                    <input class="form-control space-textbox"  id="Q8Wa2S1" type="radio" name="Q8Wa2S1" value="<?php echo set_value('Q8Wa2S1','Y'); ?>" <?php if(isset($data['Q8Wa2S1'])) echo $data['Q8Wa2S1'] == 'Y'?"checked":"" ?>/>
                                 </div>
                                 <div class="col-xs-3">
-                                    <input class="form-control space-textbox"  id="Q8Wa2S1" type="radio" name="Q8Wa2S1" value="<?php echo set_value('Q8Wa2S1','N'); ?>" <?php if(isset($data['Q8Wa1S1'])) echo $data['Q8Wa1S1'] == 'N'?"checked":"" ?>/>
+                                    <input class="form-control space-textbox"  id="Q8Wa2S1" type="radio" name="Q8Wa2S1" value="<?php echo set_value('Q8Wa2S1','N'); ?>" <?php if(isset($data['Q8Wa2S1'])) echo $data['Q8Wa2S1'] == 'N'?"checked":"" ?>/>
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -1029,10 +1029,10 @@
                                     <label >Kitchen Waste </label>
                                 </div>
                                 <div class="col-xs-3">
-                                    <input class="form-control space-textbox"  id="Q8Wa2S2" type="radio" name="Q8Wa2S2" value="<?php echo set_value('Q8Wa2S2','Y'); ?>" <?php if(isset($data['Q8Wa1S1'])) echo $data['Q8Wa1S1'] == 'Y'?"checked":"" ?>/>
+                                    <input class="form-control space-textbox"  id="Q8Wa2S2" type="radio" name="Q8Wa2S2" value="<?php echo set_value('Q8Wa2S2','Y'); ?>" <?php if(isset($data['Q8Wa2S2'])) echo $data['Q8Wa2S2'] == 'Y'?"checked":"" ?>/>
                                 </div>
                                 <div class="col-xs-3">
-                                    <input class="form-control space-textbox"  id="Q8Wa2S2" type="radio" name="Q8Wa2S2" value="<?php echo set_value('Q8Wa2S2','N'); ?>" <?php if(isset($data['Q8Wa1S1'])) echo $data['Q8Wa1S1'] == 'N'?"checked":"" ?>/>
+                                    <input class="form-control space-textbox"  id="Q8Wa2S2" type="radio" name="Q8Wa2S2" value="<?php echo set_value('Q8Wa2S2','N'); ?>" <?php if(isset($data['Q8Wa2S2'])) echo $data['Q8Wa2S2'] == 'N'?"checked":"" ?>/>
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -1040,10 +1040,10 @@
                                     <label >Paper </label>
                                 </div>
                                 <div class="col-xs-3">
-                                    <input class="form-control space-textbox"  id="Q8Wa2S3" type="radio" name="Q8Wa2S3" value="<?php echo set_value('Q8Wa2S3','Y'); ?>" <?php if(isset($data['Q8Wa1S1'])) echo $data['Q8Wa1S1'] == 'Y'?"checked":"" ?>/>
+                                    <input class="form-control space-textbox"  id="Q8Wa2S3" type="radio" name="Q8Wa2S3" value="<?php echo set_value('Q8Wa2S3','Y'); ?>" <?php if(isset($data['Q8Wa2S3'])) echo $data['Q8Wa2S3'] == 'Y'?"checked":"" ?>/>
                                 </div>
                                 <div class="col-xs-3">
-                                    <input class="form-control space-textbox"  id="Q8Wa2S3" type="radio" name="Q8Wa2S3" value="<?php echo set_value('Q8Wa2S3','N'); ?>" <?php if(isset($data['Q8Wa1S1'])) echo $data['Q8Wa1S1'] == 'N'?"checked":"" ?>/>
+                                    <input class="form-control space-textbox"  id="Q8Wa2S3" type="radio" name="Q8Wa2S3" value="<?php echo set_value('Q8Wa2S3','N'); ?>" <?php if(isset($data['Q8Wa2S3'])) echo $data['Q8Wa2S3'] == 'N'?"checked":"" ?>/>
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -1051,10 +1051,10 @@
                                     <label >Plastic </label>
                                 </div>
                                 <div class="col-xs-3">
-                                    <input class="form-control space-textbox"  id="Q8Wa2S4" type="radio" name="Q8Wa2S4" value="<?php echo set_value('Q8Wa2S4','Y'); ?>" <?php if(isset($data['Q8Wa1S1'])) echo $data['Q8Wa1S1'] == 'Y'?"checked":"" ?>/>
+                                    <input class="form-control space-textbox"  id="Q8Wa2S4" type="radio" name="Q8Wa2S4" value="<?php echo set_value('Q8Wa2S4','Y'); ?>" <?php if(isset($data['Q8Wa2S4'])) echo $data['Q8Wa2S4'] == 'Y'?"checked":"" ?>/>
                                 </div>
                                 <div class="col-xs-3">
-                                    <input class="form-control space-textbox"  id="Q8Wa2S4" type="radio" name="Q8Wa2S4" value="<?php echo set_value('Q8Wa2S4','N'); ?>" <?php if(isset($data['Q8Wa1S1'])) echo $data['Q8Wa1S1'] == 'N'?"checked":"" ?>/>
+                                    <input class="form-control space-textbox"  id="Q8Wa2S4" type="radio" name="Q8Wa2S4" value="<?php echo set_value('Q8Wa2S4','N'); ?>" <?php if(isset($data['Q8Wa2S4'])) echo $data['Q8Wa2S4'] == 'N'?"checked":"" ?>/>
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -1062,10 +1062,10 @@
                                     <label >Wood, glass, metal, classroom furniture </label>
                                 </div>
                                 <div class="col-xs-3">
-                                    <input class="form-control space-textbox"  id="Q8Wa2S5" type="radio" name="Q8Wa2S5" value="<?php echo set_value('Q8Wa2S5','Y'); ?>" <?php if(isset($data['Q8Wa1S1'])) echo $data['Q8Wa1S1'] == 'Y'?"checked":"" ?>/>
+                                    <input class="form-control space-textbox"  id="Q8Wa2S5" type="radio" name="Q8Wa2S5" value="<?php echo set_value('Q8Wa2S5','Y'); ?>" <?php if(isset($data['Q8Wa2S5'])) echo $data['Q8Wa2S5'] == 'Y'?"checked":"" ?>/>
                                 </div>
                                 <div class="col-xs-3">
-                                    <input class="form-control space-textbox"  id="Q8Wa2S5" type="radio" name="Q8Wa2S5" value="<?php echo set_value('Q8Wa2S5','N'); ?>" <?php if(isset($data['Q8Wa1S1'])) echo $data['Q8Wa1S1'] == 'N'?"checked":"" ?>/>
+                                    <input class="form-control space-textbox"  id="Q8Wa2S5" type="radio" name="Q8Wa2S5" value="<?php echo set_value('Q8Wa2S5','N'); ?>" <?php if(isset($data['Q8Wa2S5'])) echo $data['Q8Wa2S5'] == 'N'?"checked":"" ?>/>
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -1073,10 +1073,10 @@
                                     <label >E-waste </label>
                                 </div>
                                 <div class="col-xs-3">
-                                    <input class="form-control space-textbox"  id="Q8Wa2S6" type="radio" name="Q8Wa2S6" value="<?php echo set_value('Q8Wa2S6','Y'); ?>" <?php if(isset($data['Q8Wa1S1'])) echo $data['Q8Wa1S1'] == 'Y'?"checked":"" ?>/>
+                                    <input class="form-control space-textbox"  id="Q8Wa2S6" type="radio" name="Q8Wa2S6" value="<?php echo set_value('Q8Wa2S6','Y'); ?>" <?php if(isset($data['Q8Wa2S6'])) echo $data['Q8Wa2S6'] == 'Y'?"checked":"" ?>/>
                                 </div>
                                 <div class="col-xs-3">
-                                    <input class="form-control space-textbox"  id="Q8Wa2S6" type="radio" name="Q8Wa2S6" value="<?php echo set_value('Q8Wa2S6','N'); ?>" <?php if(isset($data['Q8Wa1S1'])) echo $data['Q8Wa1S1'] == 'N'?"checked":"" ?>/>
+                                    <input class="form-control space-textbox"  id="Q8Wa2S6" type="radio" name="Q8Wa2S6" value="<?php echo set_value('Q8Wa2S6','N'); ?>" <?php if(isset($data['Q8Wa2S6'])) echo $data['Q8Wa2S6'] == 'N'?"checked":"" ?>/>
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -1084,10 +1084,10 @@
                                     <label >Biomedical waste </label>
                                 </div>
                                 <div class="col-xs-3">
-                                    <input class="form-control space-textbox"  id="Q8Wa2S7" type="radio" name="Q8Wa2S7" value="<?php echo set_value('Q8Wa2S7','Y'); ?>" <?php if(isset($data['Q8Wa1S1'])) echo $data['Q8Wa1S1'] == 'Y'?"checked":"" ?>/>
+                                    <input class="form-control space-textbox"  id="Q8Wa2S7" type="radio" name="Q8Wa2S7" value="<?php echo set_value('Q8Wa2S7','Y'); ?>" <?php if(isset($data['Q8Wa2S7'])) echo $data['Q8Wa2S7'] == 'Y'?"checked":"" ?>/>
                                 </div>
                                 <div class="col-xs-3">
-                                    <input class="form-control space-textbox"  id="Q8Wa2S7" type="radio" name="Q8Wa2S7" value="<?php echo set_value('Q8Wa2S7','N'); ?>" <?php if(isset($data['Q8Wa1S1'])) echo $data['Q8Wa1S1'] == 'N'?"checked":"" ?>/>
+                                    <input class="form-control space-textbox"  id="Q8Wa2S7" type="radio" name="Q8Wa2S7" value="<?php echo set_value('Q8Wa2S7','N'); ?>" <?php if(isset($data['Q8Wa2S7'])) echo $data['Q8Wa2S7'] == 'N'?"checked":"" ?>/>
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -1095,10 +1095,10 @@
                                     <label >Sanitary waste </label>
                                 </div>
                                 <div class="col-xs-3">
-                                    <input class="form-control space-textbox"  id="Q8Wa2S8" type="radio" name="Q8Wa2S8" value="<?php echo set_value('Q8Wa2S8','Y'); ?>" <?php if(isset($data['Q8Wa1S1'])) echo $data['Q8Wa1S1'] == 'Y'?"checked":"" ?>/>
+                                    <input class="form-control space-textbox"  id="Q8Wa2S8" type="radio" name="Q8Wa2S8" value="<?php echo set_value('Q8Wa2S8','Y'); ?>" <?php if(isset($data['Q8Wa2S8'])) echo $data['Q8Wa2S8'] == 'Y'?"checked":"" ?>/>
                                 </div>
                                 <div class="col-xs-3">
-                                    <input class="form-control space-textbox"  id="Q8Wa2S8" type="radio" name="Q8Wa2S8" value="<?php echo set_value('Q8Wa2S8','N'); ?>" <?php if(isset($data['Q8Wa1S1'])) echo $data['Q8Wa1S1'] == 'N'?"checked":"" ?>/>
+                                    <input class="form-control space-textbox"  id="Q8Wa2S8" type="radio" name="Q8Wa2S8" value="<?php echo set_value('Q8Wa2S8','N'); ?>" <?php if(isset($data['Q8Wa2S8'])) echo $data['Q8Wa2S8'] == 'N'?"checked":"" ?>/>
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -1106,10 +1106,10 @@
                                     <label >Construction and Demolition (C & D) waste </label>
                                 </div>
                                 <div class="col-xs-3">
-                                    <input class="form-control space-textbox"  id="Q8Wa2S9" type="radio" name="Q8Wa2S9" value="<?php echo set_value('Q8Wa2S9','Y'); ?>" <?php if(isset($data['Q8Wa1S1'])) echo $data['Q8Wa1S1'] == 'Y'?"checked":"" ?>/>
+                                    <input class="form-control space-textbox"  id="Q8Wa2S9" type="radio" name="Q8Wa2S9" value="<?php echo set_value('Q8Wa2S9','Y'); ?>" <?php if(isset($data['Q8Wa2S9'])) echo $data['Q8Wa2S9'] == 'Y'?"checked":"" ?>/>
                                 </div>
                                 <div class="col-xs-3">
-                                    <input class="form-control space-textbox"  id="Q8Wa2S9" type="radio" name="Q8Wa2S9" value="<?php echo set_value('Q8Wa2S9','N'); ?>" <?php if(isset($data['Q8Wa1S1'])) echo $data['Q8Wa1S1'] == 'N'?"checked":"" ?>/>
+                                    <input class="form-control space-textbox"  id="Q8Wa2S9" type="radio" name="Q8Wa2S9" value="<?php echo set_value('Q8Wa2S9','N'); ?>" <?php if(isset($data['Q8Wa2S9'])) echo $data['Q8Wa2S9'] == 'N'?"checked":"" ?>/>
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -1117,10 +1117,10 @@
                                     <label >Hazardous waste </label>
                                 </div>
                                 <div class="col-xs-3">
-                                    <input class="form-control space-textbox"  id="Q8Wa2S10" type="radio" name="Q8Wa2S10" value="<?php echo set_value('Q8Wa2S10','Y'); ?>" <?php if(isset($data['Q8Wa1S1'])) echo $data['Q8Wa1S1'] == 'Y'?"checked":"" ?>/>
+                                    <input class="form-control space-textbox"  id="Q8Wa2S10" type="radio" name="Q8Wa2S10" value="<?php echo set_value('Q8Wa2S10','Y'); ?>" <?php if(isset($data['Q8Wa2S10'])) echo $data['Q8Wa2S10'] == 'Y'?"checked":"" ?>/>
                                 </div>
                                 <div class="col-xs-3">
-                                    <input class="form-control space-textbox"  id="Q8Wa2S10" type="radio" name="Q8Wa2S10" value="<?php echo set_value('Q8Wa2S10','N'); ?>" <?php if(isset($data['Q8Wa1S1'])) echo $data['Q8Wa1S1'] == 'N'?"checked":"" ?>/>
+                                    <input class="form-control space-textbox"  id="Q8Wa2S10" type="radio" name="Q8Wa2S10" value="<?php echo set_value('Q8Wa2S10','N'); ?>" <?php if(isset($data['Q8Wa2S10'])) echo $data['Q8Wa2S10'] == 'N'?"checked":"" ?>/>
                                 </div>
                             </div>
                         </div>
