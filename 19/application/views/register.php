@@ -1,7 +1,46 @@
+
+<?php if(isset($_POST['submit'])){
+  //print_r($_POST);
+  $url = "https://www.google.com/recaptcha/api/siteverify";
+  $data = [
+
+        'secret' => "6LfT3KsUAAAAACzaOmOz2Et8q3BXDx5S7snFSZv2",
+        'response'  => $_POST['token'],
+        'remoteip' => $_SERVER['REMOTE_ADDR']
+        ];
+
+        $options = array(
+            'http' => array(
+              'header' => "Content-Type:application/x-www-form-urlencoded\r\n",
+              'method' => 'POST',
+              'content' => http_build_query($data)
+            )
+        );
+      
+      $context = stream_context_create($options);
+      $response = file_get_contents($url, false, $context);
+
+      $res = json_decode($response, true);
+      
+      if($res['success']==true){
+        echo '<div class="alert alert-success"> <strong>Registration Successfully !</strong> </div>';
+      }
+      else{
+
+        echo '<div class="alert alert-danger"> <strong>Some Error in Registration please provide exact Detials!</strong> </div>';
+      }
+
+} ?>
+
+
 <!DOCTYPE html>
 <!-- saved from url=(0050)http://www.greenschoolsprogramme.org/registration/ -->
 <html>
 <head>
+
+ <script src="https://www.google.com/recaptcha/api.js?render=6LfT3KsUAAAAACC0CEIegKNkN1-GdBMRPnwmXaCw"></script>
+  
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Registration Form - Green Schools Programme Audit 2016</title>
 <link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet">
@@ -21,7 +60,6 @@
 <script src="<?php echo base_url(); ?>assets/js/admin.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/AC_RunActiveContent.js" type="text/javascript"></script>
 <script src="<?php echo base_url(); ?>assets/js/jquery.validate.js"></script>
-<script src='https://www.google.com/recaptcha/api.js'></script>
 <style type="text/css">
             .error {
                 font-size: 12px !important;
@@ -383,14 +421,8 @@
           
         </div> 
        <input type="text" class="form-control" placeholder="Captcha" id="cpatchaTextBox" style="width:250px;  margin-top: -50px;"/>
-          <br/>
- 
-   
-
-       <div class="g-recaptcha" data-sitekey="6Lex3asUAAAAANqfuLlYwNAqcKJ_WAtQJh7KofHV
-"></div>
          
-          <br/>
+         <input type="hidden" name="token" id="token">
          
     </body>
  </div>
@@ -420,7 +452,7 @@
                                 src="<?php echo base_url(); ?>assets/img/times.jpg" class="img-responsive"></a></li>
     </ul>
   </div>
-  <div class="text-center">Copyright © 2017 Centre for Science and Environment</div>
+  <div class="text-center">Copyright Â© 2017 Centre for Science and Environment</div>
 </footer>
 </body>
 </html>
@@ -573,5 +605,12 @@ function validateCaptcha() {
 </script>
   
   
-  
+  <script>
+  grecaptcha.ready(function() {
+      grecaptcha.execute('6LfT3KsUAAAAACC0CEIegKNkN1-GdBMRPnwmXaCw', {action: 'register'}).then(function(token) {
+         console.log(token);
+         document.getElementById("token").value=token;
+      });
+  });
+  </script>
   
