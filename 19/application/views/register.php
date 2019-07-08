@@ -608,7 +608,7 @@ function validateCaptcha() {
   <script>
   grecaptcha.ready(function() {
       grecaptcha.execute('6LfT3KsUAAAAACC0CEIegKNkN1-GdBMRPnwmXaCw', {action: 'register'}).then(function(token) {
-         console.log(token);
+         //console.log(token);
          document.getElementById("token").value=token;
       });
   });
