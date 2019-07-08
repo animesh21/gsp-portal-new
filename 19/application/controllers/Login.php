@@ -7,8 +7,7 @@
 	    public function __construct() {
 		parent::__construct();
 		$this->load->helper(array('form', 'security'));
-		$this->load->library('form_validation');
-		$this->load->library('curl');
+		$this->load->library('form_validation');		
 		$this->load->model('User_model');
 		$this->load->model('School_model');
 	    }
@@ -77,25 +76,6 @@
 			
 		    $this->session->set_userdata('captcha_word', $cap['word']);
 		} else {
-			
-			
-			$recaptchaResponse = trim($this->input->post('g-recaptcha-response'));
-  
-  			$userIp=$this->input->ip_address();
-    
- 			$secret='6Lex3asUAAAAAJB4eY7uX8X1cVUJi9GcKvO_eq-f';
-  
-  			$url="https://www.google.com/recaptcha/api/siteverify?secret=".$secret."&response;=".$recaptchaResponse."&remoteip;=".$userIp;
-  
-  			$response = $this->curl->simple_get($url);
-  			$status= json_decode($response, true);
-
-  			if($status['success']){     
-   $this->session->set_flashdata('flashSuccess', 'Google Recaptcha Successful');
-  }else{
-   $this->session->set_flashdata('flashSuccess', 'Sorry Google Recaptcha Unsuccessful!!');
-  }
-
 		    $details = $this->input->post();
 		    $pass = $this->generateRandomString();
 		    $userDetails = array(
