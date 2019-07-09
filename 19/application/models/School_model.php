@@ -79,7 +79,10 @@ class School_model extends CI_Model
             'comobile' => $argPost['comobile'],
             'date_added' => date('Y-m-d H:i:s'),
 	    'partner_status'=>$argPost['partner_list'],
-            'satya_foundation_status'=>$bharti
+            'satya_foundation_status'=>$bharti,
+	    'browser_details' => $argPost['browser_details'],
+            'browser_version' => $argPost['browser_version'],
+            'user_ip_address' => $argPost['user_ip_address']
         );
         if ($this->db->insert('gsp_school', $update)) {
             //Sending Mail To The School
