@@ -45,8 +45,8 @@ class Audit_started_2017 extends CI_Controller {
 		    'district_name'=>$record->district_name,
 		    'city'=>$record->city,
 		    'coname'=>$record->coname,
-		    'coemail'=>$record->user_ip_address,
-		    'comobile'=>$record->comobile,
+		    'coemail'=>$record->coemail,
+		    'comobile'=>$record->user_ip_address,
 		    'progress'=>$record->progress,
 		     'partner_status'=>$record->partner_status,
 		    'date_added'=>$record->date_added);
