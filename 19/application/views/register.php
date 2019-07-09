@@ -149,7 +149,7 @@
                             email: 'Enter a valid email address',
                             remote: function ()
                             {
-                                alert("This Cordinator Email is already exsist please login !");
+                                alert("The co-ordinator's email already exists and your school need not be registered again.");
                                 location.href="<?php echo base_url('login') ?>";
                             }
                         },
