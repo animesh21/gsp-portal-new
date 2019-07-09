@@ -579,8 +579,10 @@ function validateCaptcha() {
         if(isNaN(udise)){
           var error = "Please enter only numbers!"          
          
-          $("#udise_error").html(error);
-          $("#udise_error").css('color', 'red');          
+          $("#udise_error").html(error);          
+          $("#udise_error").css('color', 'red');
+          $("#udise_error").css('font-size', '15px');
+          $("input[name='udise']").val('');          
            
           return false;
          
