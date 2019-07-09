@@ -1,13 +1,7 @@
-
- 
-
 <!DOCTYPE html>
 <!-- saved from url=(0050)http://www.greenschoolsprogramme.org/registration/ -->
 <html>
-<head>
-
- 
-  
+<head>  
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Registration Form - Green Schools Programme Audit 2016</title>
@@ -252,6 +246,7 @@
       <div class="typeahead__query">
         <input type="text" name="udise" class="schoolname name form-control  placeholder"
                                value="" placeholder="School U-Dise Code*" id="udise">
+						                                                	<div id="udise_error"></div>
       </div>
     </div>
   </div>
@@ -389,15 +384,14 @@
           
         </div> 
        <input type="text" class="form-control" placeholder="Captcha" id="cpatchaTextBox" style="width:250px;  margin-top: -50px;"/>
-        <input type="hidden" name="browser_details" id="browser_details" value="<?php echo $browser_details; ?>" >
-          <input type="hidden" name="browser_version" id="browser_version" value="<?php echo $browser_version; ?>">
-           <input type="hidden" name="user_ip_address" id="user_ip_address" value="<?php echo $user_ip_address; ?>">
-         
+        <input type="hidden" name="browser_details" id="browser_details" value="<?php echo $user['browser_details']; ?>" >
+        <input type="hidden" name="browser_version" id="browser_version" value="<?php echo $user['browser_version']; ?>">
+        <input type="hidden" name="user_ip_address" id="user_ip_address" value="<?php echo $user['user_ip_address']; ?>">        
          
     </body>
  </div>
     <div class="form-group text-center">
-      <input type="submit" name="submit" value="Submit" class="btn btn-default">
+      <input type="submit" name="submit" <?php if($user['user_ip_address'] === $user2[0]->user_ip_address) {?>disabled <?php } ?> id="submit" value="Submit" class="btn btn-default">
     </div>
     <?php echo form_close(); ?> </div>
   <noscript>
@@ -573,6 +567,35 @@ function validateCaptcha() {
 
 
 </script>
+	
+	<script type="text/javascript">
+    
+    $(document).ready(function(){
+
+      $("input[name='udise']").keyup(function(){
+
+        var udise = $("input[name='udise']").val();
+
+        if(isNaN(udise)){
+          var error = "Please enter only numbers!"          
+         
+          $("#udise_error").html(error);
+          $("#udise_error").css('color', 'red');          
+           
+          return false;
+         
+        }
+        else{
+          $("#udise_error").remove(error);
+        }
+
+
+      });
+        
+
+    });
+
+  </script>
   
   
   
