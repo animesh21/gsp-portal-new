@@ -49,6 +49,20 @@
 	    public function Register() {
 
 		$data['states'] = $this->User_model->getStates();
+		    $this->load->library('user_agent');
+		  $browser = $this->agent->browser();
+		  $browser_version = $this->agent->version();
+		 $os = $this->agent->platform();
+		$ip_address = $this->input->ip_address();
+
+		$data1 = array(
+
+			'browser_details' => $browser,
+			'browser_version' => $browser_version,
+			'user_ip_address' => $ip_address
+
+
+		);
 		//$this->form_validation->set_rules('captcha', 'Captcha', 'callback_validate_captcha');
 		$this->form_validation->set_rules('state', 'State', 'required');
 			$this->form_validation->set_rules('coemail', 'Cordinator Email', 'required|valid_email|is_unique[gsp_school.coemail]');
@@ -96,6 +110,7 @@
 		    }
 		    redirect(base_url('login/register'), 'refresh');
 		}
+		    $data = array_merge($data, $data1);
 		$this->load->view('register', $data);
 	    }
 
