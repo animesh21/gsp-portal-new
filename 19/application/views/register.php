@@ -68,6 +68,10 @@ p{
                 $('.wrapper').show();
                 $('#registration-form').validate({
                     rules: {
+												udise: {
+                            required: true,
+                            number:true
+                        },
                         name: {
                             required: true
                         },
