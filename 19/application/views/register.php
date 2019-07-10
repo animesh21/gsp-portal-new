@@ -686,7 +686,7 @@ $(document).ready(function(){
   $("input[name='city']").keyup(function(){
      var fake = $("input[name='city']").val();
       if(fake==='New York' || fake==='new york' || fake==='New york' || fake==='new York' ){
-        alert('dddd');
+        alert('*You Are Fake!!');
          $("input[name='city']").val('');
         return false;
 
