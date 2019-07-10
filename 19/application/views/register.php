@@ -22,7 +22,25 @@
 <script src="<?php echo base_url(); ?>assets/js/admin.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/AC_RunActiveContent.js" type="text/javascript"></script>
 <script src="<?php echo base_url(); ?>assets/js/jquery.validate.js"></script>
+<script type="text/javascript" src="captcha.js"></script>
 <style type="text/css">
+	
+#success, #fail{
+  display: none;
+
+}
+
+#message, #success, #fail{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+p{
+  display: inline;
+  margin-right: 5px;
+}
+	
+	
             .error {
                 font-size: 12px !important;
             }
@@ -245,7 +263,7 @@
     <div class="typeahead__field">
       <div class="typeahead__query">
         <input type="text" name="udise" class="schoolname name form-control  placeholder"
-                               value="" placeholder="School U-Dise Code*" id="udise">
+                               value="<?php echo set_value('udise'); ?>" placeholder="School U-Dise Code*" id="udise">
 						                                                	<div id="udise_error"></div>
       </div>
     </div>
@@ -382,7 +400,15 @@
       
   <div id="captcha" style="margin: 0px 0px 0px 281px;  background-image: url('<?php echo base_url(); ?>assets/img/capt.png');background-repeat: no-repeat; ">
           
-        </div> 
+        </div>
+	 
+	     <div class="captcha" style="text-align: center;" > 
+      <p id="question"></p><input id="ans" type="text">
+      <div id="message">Please verify.</div>
+      <div id="success">Validation complete :</div>
+      <div id="fail">Validation failed :</div>
+    </div>
+	      
        <input type="text" class="form-control" placeholder="Captcha" id="cpatchaTextBox" style="width:250px;  margin-top: -50px;"/>
         <input type="hidden" name="browser_details" id="browser_details" value="<?php echo $user['browser_details']; ?>" >
         <input type="hidden" name="browser_version" id="browser_version" value="<?php echo $user['browser_version']; ?>">
@@ -599,6 +625,57 @@ function validateCaptcha() {
 
   </script>
   
+  <script type="text/javascript">
   
+$(document).ready(function(){
+
+  $('button[type=submit]').attr('disabled','disabled');
+
+  var randomNum1;
+  var randomNum2;
+
+  //set the largeest number to display
+
+  var maxNum = 20;
+  var total;
+
+  randomNum1 = Math.ceil(Math.random()*maxNum);
+  randomNum2 = Math.ceil(Math.random()*maxNum);
+  total =randomNum1 + randomNum2;
+
+  $( "#question" ).prepend( randomNum1 + " + " + randomNum2 + "=" );
+
+  // When users input the value
+
+  $( "#ans" ).keyup(function() {
+
+    var input = $(this).val();
+    var slideSpeed = 200;
+
+    $('#message').hide();
+
+    if (input == total) {
+
+      $('button[type=submit]').removeAttr('disabled');
+      $('#success').slideDown(slideSpeed);
+      $('#fail').slideUp(slideSpeed);
+
+    }
+
+    else {
+
+      $('button[type=submit]').attr('disabled','disabled');
+      $('#fail').slideDown(slideSpeed);
+      $('#success').slideUp(slideSpeed);
+
+    }
+
+  });
+
+  // Wheen "reset button" click, generating new randomNum1 & randomNum2
+
+});
+
+</script>
   
   
