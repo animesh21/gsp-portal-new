@@ -69,8 +69,11 @@
 	    	        ->result();
 		    
 		//$this->form_validation->set_rules('captcha', 'Captcha', 'callback_validate_captcha');
-		$this->form_validation->set_rules('state', 'State', 'required');
-		    $this->form_validation->set_rules('udise', 'Udise', 'required|numeric');
+		$this->form_validation->set_rules('state', 'State', 'required');		   
+		$this->form_validation->set_rules('udise', 'Udise', 'required|numeric');
+		$this->form_validation->set_rules('name', 'School Name', 'required');
+		$this->form_validation->set_rules('address1', 'Address Line 1*', 'required');
+		$this->form_validation->set_rules('address2', 'Address Line 2*', 'required');
 			$this->form_validation->set_rules('coemail', 'Cordinator Email', 'required|valid_email|is_unique[gsp_school.coemail]');
 		if ($this->form_validation->run() == FALSE) {
 		    $this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');
