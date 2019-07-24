@@ -17,7 +17,7 @@
       <th>City</th>
       <th>Co-ord. Name</th>
       <th>Co-ord. Email</th>
-      <th>User ip address</th>
+      <th>Co-ord. Mobile</th>
       <th>Completeness</th>
       <th>Reg. Date</th>
       <th>Make School Partner</th>
