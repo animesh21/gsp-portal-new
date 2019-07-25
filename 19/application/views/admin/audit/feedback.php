@@ -244,6 +244,10 @@ $('#frmSendblukemail').submit(function(e){
 			<option value="Mount Litera">Mount Litera</option>
 			<option value="Kendriya Vidyalaya">KVS</option>
 			<option value="Jawahar Navodya">JNV</option>
+			    <option value="Church of South India">Church of South India</option>
+			<option value="Satya Bharti School">Satya Bharti School</option>
+			<option value="BF Quality Support Programme">BF Quality Support Programme</option>
+			<option value="Montfortian Education Foundation">Montfortian Education Foundation</option>
 		    </select>
 		</div>
 		<div class="form-group col-md-4">
