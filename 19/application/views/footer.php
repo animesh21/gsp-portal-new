@@ -51,7 +51,7 @@
             </div>
             <div class="form-group">
               <label>New Password</label>
-              <input type="Password" name="pass" pattern=".{8,12}" required title="8 to 12 characters" class="form-control" required/>
+              <input type="Password" name="pass" pattern=".{8,15}" required title="8 to 15 characters" class="form-control" required/>
             </div>
           </div>
         </div>
