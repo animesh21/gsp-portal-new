@@ -159,11 +159,13 @@
 	  <option value="">Select Partner</option>
 	  <option value="0" <?php if($school->partner_status==0){ echo "selected"; } ?>>If Your Are Not Partner Then Select This Option</option>
 	  <option value="1" <?php if($school->partner_status==1){ echo "selected"; } ?>>Church of South India</option>
-	  <option value="2" <?php if($school->partner_status==2){ echo "selected"; } ?>>Jawahar Navodaya Vidyalaya</option>
+	  <option value="2" <?php if($school->partner_status==2){ echo "selected"; } ?>>Jawahar Navodaya Vidyalaya (JNV) </option>
 	  <option value="3" <?php if($school->partner_status==3){ echo "selected"; } ?>>Kendriya Vidyalaya Sangathan (KVS)</option>
 	  <option value="4" <?php if($school->partner_status==4){ echo "selected"; } ?>>Montfortian Education Foundation</option>
 	  <option value="5" <?php if($school->partner_status==5){ echo "selected"; } ?>>Mount Litera Zee Schools</option>
-	  <option value="6" <?php if($school->partner_status==6){ echo "selected"; } ?>>Bharti Foundation</option>
+	  <option value="6" <?php if($school->partner_status==6){ echo "selected"; } ?>>Satya Bharti Foundation</option>
+      <option value="6" <?php if($school->partner_status==6 && $school->satya_foundation_status==1){ echo "selected"; } ?>>Satya Bharti School</option>
+      <option value="6" <?php if($school->partner_status==6 && $school->satya_foundation_status==2){ echo "selected"; } ?>>BF Quality Support Programme</option>
 	</select>
                         </div>  
 			    
