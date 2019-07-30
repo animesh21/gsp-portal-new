@@ -14,28 +14,28 @@
   <div class="title">Schools That Started The Audit</div>
 </div>
 <div class="schools-statics"> <a href="#"> <!-- <a href="<?php //base_url()?>total19_CompletedAuditButNotSubmitted" > -->
-  <div class="statics-circle"> <span> <?php //echo count($CompletedAuditButNotSubmitted);?> </span>
+  <div class="statics-circle"> <span> <?php echo count($CompletedAuditButNotSubmitted);?> </span>
     <label>view</label>
   </div>
   </a>
   <div class="title">Schools Completed The Audit But Not Submitted</div>
 </div>
 <div class="schools-statics"> <a href="#"> <!-- <a href="<?php //base_url()?>total19_SubmittedTheAudit"> -->
-  <div class="statics-circle"> <span> <?php //echo count($SubmittedTheAudit);?> </span>
+  <div class="statics-circle"> <span> <?php echo count($SubmittedTheAudit);?> </span>
     <label>view</label>
   </div>
   </a>
   <div class="title">Schools Submitted The Audit</div>
 </div>
 <div class="schools-statics"><a href="#"><!-- <a href="<?php //base_url()?>total18_StartedAuditButDidNotComplete"> -->
-  <div class="statics-circle"> <span><?php //echo count($StartedAuditButDidNotComplete);?> </span>
+  <div class="statics-circle"> <span><?php echo count($StartedAuditButDidNotComplete);?> </span>
     <label>view</label>
   </div>
   </a>
   <div class="title">Schools Started The Audit But Did Not Complete</div>
 </div>
 <div class="schools-statics"> <a href="#"> <!-- <a href="<?php //base_url()?>total18_NotStartTheAudit"> -->
-  <div class="statics-circle"> <span> <?php //echo count($NotStartTheAudit);?> </span>
+  <div class="statics-circle"> <span> <?php echo count($NotStartTheAudit);?> </span>
     <label>view</label>
   </div>
   </a>
@@ -56,7 +56,7 @@
   <div class="title">Disabled School (2019)</div>
 </div>
 <div class="schools-statics"> <a href="#"> <!-- <a href="../<?php //base_url()?>audit_started/getDigitalCertificateRecord"> -->
-  <div class="statics-circle"> <span><?php //echo $certificate_count;?></span>
+  <div class="statics-circle"> <span><?php echo $certificate_count;?></span>
     <label>view</label>
   </div>
   </a>
