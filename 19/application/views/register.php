@@ -398,17 +398,10 @@ p{
                                        value="<?php echo set_value('comobile'); ?>" placeholder="Mobile Number*" maxlength="10">
       </div>
     </div>
-    <div class="form-2"> </div>
+     
     <div class="form-group marginN">
-      <body onload="createCaptcha()">
-      
-  <div id="captcha" style="margin: 0px 0px 0px 281px;  background-image: url('<?php echo base_url(); ?>assets/img/capt.png');background-repeat: no-repeat; ">
-          
-        </div>
-   
-   
-        
-       <input type="text" class="form-control" placeholder="Captcha" id="cpatchaTextBox" style="width:250px;  margin-top: -50px;"/>
+    
+       
         <input type="hidden" name="browser_details" id="browser_details" value="<?php echo $user['browser_details']; ?>" >
         <input type="hidden" name="browser_version" id="browser_version" value="<?php echo $user['browser_version']; ?>">
         <input type="hidden" name="user_ip_address" id="user_ip_address" value="<?php echo $user['user_ip_address']; ?>">  
@@ -420,7 +413,7 @@ p{
       <div id="fail">Validation failed :</div>
     </div>      
          
-    </body>
+    
  </div>
     <div class="form-group text-center">
       <input type="submit" name="submit" <?php if($user['user_ip_address'] === $user2[0]->user_ip_address) {?>disabled <?php } ?> id="submit" value="Submit" class="btn btn-default">
@@ -533,49 +526,6 @@ opacity: 1;}
 
 </script>
 
-<script type="text/javascript">
-  
-var code;
-function createCaptcha() {
-  //clear the contents of captcha div first 
-  document.getElementById('captcha').innerHTML = "";
-  var charsArray =
-  "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@!#$%^&*";
-  var lengthOtp = 6;
-  var captcha = [];
-  for (var i = 0; i < lengthOtp; i++) {
-    //below code will not allow Repetition of Characters
-    var index = Math.floor(Math.random() * charsArray.length + 1); //get the next character from the array
-    if (captcha.indexOf(charsArray[index]) == -1)
-      captcha.push(charsArray[index]);
-    else i--;
-  }
-  var canv = document.createElement("canvas");
-  canv.id = "captcha";
-  canv.width = 100;
-  canv.height = 50;
-  var ctx = canv.getContext("2d");
-  ctx.font = "25px Georgia";
-  ctx.strokeText(captcha.join(""), 0, 30);
-  //storing captcha so that can validate you can save it somewhere else according to your specific requirements
-  code = captcha.join("");
-  document.getElementById("captcha").appendChild(canv); // adds the canvas to the body element
-}
-// function validateCaptcha() {
-  
-//   debugger
-//   if (document.getElementById("cpatchaTextBox").value == code) {
-   
-//   }else{
-//     event.preventDefault();
-//     alert("Invalid Captcha. try Again");
-//     createCaptcha();
-//   }
-// }
-
-
-
-</script>
 
 
 <script type="text/javascript">
