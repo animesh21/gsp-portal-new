@@ -1626,17 +1626,17 @@ Generally on-grid systems have benefit of transferring surplus power to grid, wh
 <ul class="list-unstyled">
    <li>
      <span style="font-weight: bold; font-size: 18px">a. </span><label style="margin-left:5px">Biofuel</label>
-  <input type="checkbox" name="Q9E1S101" id="Q9E1S101" value="<?php echo set_value('Q9E1S101', 1); ?>" <?php if (isset($data['Q9E1S101'])) echo $data['Q9E1S101'] == '1' ? "checked" : "" ?>/>
+  <input type="checkbox" name="Q9E1S101" id="Q9E1S101" value="<?php echo set_value('Q9E1S101', 1); ?>" <?php if (isset($data['Q9E1S101'])) echo  "checked"; ?>/>
 
               <div class="biogas" style="display: none" >
               <div class="biogas_1" style="margin-left: 45px">
               <span style="font-weight: bold; font-size: 18px">i. </span>
-              <input type="checkbox" name="Q9E1S1024" id="Q9E1S1024" value="<?php echo set_value('Q9E1S1024', 1); ?>" <?php if (isset($data['Q9E1S1024'])) echo $data['Q9E1S1024'] == '1' ? "checked" : "" ?>/>
+              <input type="checkbox" name="Q9E1S1024" id="Q9E1S1024" value="<?php echo set_value('Q9E1S1024', 1); ?>" <?php if (isset($data['Q9E1S1024'])) echo  "checked";?>/>
               <label>Biogas</label>
               </div> 
               <div class="biogas_4" style="margin-left: 45px">
               <span style="font-weight: bold; font-size: 18px">ii. </span>
-               <input type="checkbox" name="Q9E1S1025" id="Q9E1S1025" value="<?php echo set_value('Q9E1S1025', 2); ?>" <?php if (isset($data['Q9E1S1025'])) echo $data['Q9E1S1025'] == '2' ? "checked" : "" ?>/>
+               <input type="checkbox" name="Q9E1S1025" id="Q9E1S1025" value="<?php echo set_value('Q9E1S1025', 2); ?>" <?php if (isset($data['Q9E1S1025'])) echo  "checked"; ?>/>
               <label>Biomass</label>
               </div>
             </div>
@@ -1645,15 +1645,15 @@ Generally on-grid systems have benefit of transferring surplus power to grid, wh
             </li>
             <li>
               <span style="font-weight: bold; font-size: 18px">b. </span><label style="margin-left:5px">Wind</label>
-              <input type="checkbox" name="Q9E1S102" id="Q9E1S102" value="<?php echo set_value('Q9E1S102', 2); ?>" <?php if (isset($data['Q9E1S102'])) echo $data['Q9E1S102'] == '2' ? "checked" : ""?>/>               
+              <input type="checkbox" name="Q9E1S102" id="Q9E1S102" value="<?php echo set_value('Q9E1S102', 2); ?>" <?php if (isset($data['Q9E1S102'])) echo  "checked";?>/>               
             </li>
             <li>
               <span style="font-weight: bold; font-size: 18px">c. </span><label style="margin-left:5px">Small hydro</label>
-              <input type="checkbox" name="Q9E1S103" id="Q9E1S103" value="<?php echo set_value('Q9E1S103', 3); ?>" <?php if (isset($data['Q9E1S103'])) echo $data['Q9E1S103'] == '3' ? "checked" : "" ?>/>
+              <input type="checkbox" name="Q9E1S103" id="Q9E1S103" value="<?php echo set_value('Q9E1S103', 3); ?>" <?php if (isset($data['Q9E1S103'])) echo  "checked"; ?>/>
             </li>
             <li>
               <span style="font-weight: bold; font-size: 18px">d. </span><label style="margin-left:5px">Other</label>
-              <input type="checkbox" name="Q9E1S104" id="Q9E1S104" value="<?php echo set_value('Q9E1S104', 4); ?>" <?php if (isset($data['Q9E1S104'])) echo $data['Q9E1S104'] == '4' ? "checked" : ""  ?>/>
+              <input type="checkbox" name="Q9E1S104" id="Q9E1S104" value="<?php echo set_value('Q9E1S104', 4); ?>" <?php if (isset($data['Q9E1S104'])) echo  "checked"; ?>/>
               </li>
               <div class="details" style="margin-left:25px" >
                 <label>Give details:</label>
@@ -1745,7 +1745,7 @@ Generally on-grid systems have benefit of transferring surplus power to grid, wh
           </ul>
           <div class="other_option" style="margin-left: 25px" >
               <label>Give details:</label>
-              <input class="form-control space-textbox" id="Q27E1" onkeypress="return (event.charCode > 64 && 
+              <input class="form-control space-textbox" id="Q34E1" onkeypress="return (event.charCode > 64 && 
   event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" type="text" name="Q34E1" placeholder="<?php if (isset($data['Q34E1'])) echo $data['Q34E1']; ?>" value="<?php if (isset($data['Q34E1'])) echo $data['Q34E1']; ?>">
              </div>
         </div>
@@ -2531,23 +2531,23 @@ else{
 });
 
 
-  
-
- 
-
 
 
 </script>
 
 <script>
   $("#energynext").click(function(e){
-if($("input[name='Q9E1S101']").prop('checked') == false && $("input[name='Q9E1S102']").prop('checked') == false && $("input[name='Q9E1S103']").prop('checked') == false && $("input[name='Q9E1S104']").prop('checked') == false && $("input[name='Q9E1S105']").prop('checked') == false){
-  alert("What is the non-solar source of renewable energy (RE) for the school?");
-  e.preventDefault();
-  if(e.isDefaultPrevented()){
-       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    if($("input[name='Q9E1S101']").prop('checked') == false && $("input[name='Q9E1S102']").prop('checked') == false && $("input[name='Q9E1S103']").prop('checked') == false && $("input[name='Q9E1S104']").prop('checked') == false && $("input[name='Q9E1S105']").prop('checked') == false){
+      alert("What is the non-solar source of renewable energy (RE) for the school?");
+      e.preventDefault();
+      if(e.isDefaultPrevented()){
+           setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+        }
     }
-}
+      else if($("input[name='Q9E1S102']").prop('checked') == true || $("input[name='Q9E1S103']").prop('checked') == true || $("input[name='Q9E1S104']").prop('checked') == true || $("input[name='Q9E1S105']").prop('checked') == true || $("input[name='Q37E1']").prop('checked') == true)
+      {
+        $(this).unbind("click");
+      }
 }); 
   </script>
 
@@ -2560,6 +2560,11 @@ if($("input[name='Q9E1S101']").prop('checked') == true && $("input[name='Q9E1S10
        setTimeout(function(){ $(".hide_one").css("display","none"); },600);
     }
 }
+
+
+
+
+
 }); 
   </script>
 
