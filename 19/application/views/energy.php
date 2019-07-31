@@ -1653,7 +1653,7 @@ Generally on-grid systems have benefit of transferring surplus power to grid, wh
             </li>
             <li>
               <span style="font-weight: bold; font-size: 18px">d. </span><label style="margin-left:5px">Other</label>
-              <input type="checkbox" name="Q9E1S104" id="Q9E1S104" value="<?php echo set_value('Q9E1S104', 4); ?>" <?php if (isset($data['Q9E1S104'])) echo $data['Q9E1S104'] == '3' ? "checked" : ""  ?>/>
+              <input type="checkbox" name="Q9E1S104" id="Q9E1S104" value="<?php echo set_value('Q9E1S104', 4); ?>" <?php if (isset($data['Q9E1S104'])) echo $data['Q9E1S104'] == '4' ? "checked" : ""  ?>/>
               </li>
               <div class="details" style="margin-left:25px" >
                 <label>Give details:</label>
