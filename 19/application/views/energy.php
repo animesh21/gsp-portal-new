@@ -1657,8 +1657,7 @@ Generally on-grid systems have benefit of transferring surplus power to grid, wh
               </li>
               <div class="details" style="margin-left:25px" >
                 <label>Give details:</label>
-              <input class="form-control space-textbox" id="Q27E1" onkeypress="return (event.charCode > 64 && 
-  event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" type="text" name="Q27E1" placeholder="<?php if (isset($data['Q27E1'])) echo $data['Q27E1']; ?>" value="<?php if (isset($data['Q27E1'])) echo $data['Q27E1']; ?>">
+              <input class="form-control space-textbox" id="Q27E1" type="text" name="Q27E1" placeholder="<?php if (isset($data['Q27E1'])) echo $data['Q27E1']; ?>" value="<?php if (isset($data['Q27E1'])) echo $data['Q27E1']; ?>">
               </div>
 
             
