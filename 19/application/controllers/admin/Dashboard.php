@@ -247,7 +247,7 @@ class Dashboard extends CI_Controller {
 	
 	public function total19_startedtheaudit()
    {
-		$data['main']='admin/audit/startedtheaudit_school18';
+		$data['main']='admin/audit/startedtheaudit_school19';
 		$data['title']='Total no. of school'; 
 		$data['records']=$this->Dashboard_model->getstartedtheaudit_19data();
 		$this->load->view('admin/includes/template', $data);
