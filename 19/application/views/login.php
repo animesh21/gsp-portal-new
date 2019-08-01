@@ -171,7 +171,7 @@ header('Location: http://www.greenschoolsprogramme.org/audit/18/login/browser_ch
   </div>
   <div class="modal-body"> <span id="msgForget"></span>
     <div class="form-group">
-      <label class="text-gray">Email-Id&nbsp; &nbsp;(If you don't remember the email id, mail your school's full name, state, district to support@greenschoolsprogramme.org)</label>
+      <label class="text-gray">Email-Id of GSP Coordinator&nbsp; &nbsp;(If you don't remember the email id, mail your school's full name, state, district to support@greenschoolsprogramme.org)</label>
       <input type="text" name="email_id" id="email_id" class="form-control"
                                    style="border-radius:0px; height:40px;"/>
     </div>
