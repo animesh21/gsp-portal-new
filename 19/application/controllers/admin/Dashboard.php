@@ -311,6 +311,19 @@ class Dashboard extends CI_Controller {
         $this->load->view('admin/includes/template', $data);
     }	
 	
+   
+	/************** 2019 ******************/
+
+
+    public function total19_startedtheaudit()
+   {
+		$data['main']='admin/audit/startedtheaudit_school19';
+		$data['title']='Total no. of school'; 
+		$data['records']=$this->Dashboard_model->getstartedtheaudit_19data();
+		$this->load->view('admin/includes/template', $data);
+		 //echo $this->db->last_query();
+	}
+	
 	
    public function year19_phase1() {
 	   
