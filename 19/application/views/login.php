@@ -205,7 +205,7 @@ header('Location: http://www.greenschoolsprogramme.org/audit/18/login/browser_ch
                                         '</div>');
 										 setTimeout(function () {
                                 location.reload();
-                            }, 10000);
+                            }, 300000);
 			      $.ajax({
                               url:'<?php echo base_url(); ?>setpassword-2017.php',
                               type: 'GET',
@@ -218,7 +218,7 @@ header('Location: http://www.greenschoolsprogramme.org/audit/18/login/browser_ch
                                         '</div>');
 										 setTimeout(function () {
                                 location.reload();
-                            }, 10000);
+                            }, 300000);
                             }
 			    if (data>=1) {
                                 $('#msgForget').html('<div class="alert alert-danger">' +
@@ -226,11 +226,11 @@ header('Location: http://www.greenschoolsprogramme.org/audit/18/login/browser_ch
                                         '</div>');
 										 setTimeout(function () {
                                 location.reload();
-                            }, 10000);
+                            }, 300000);
                             }
                             setTimeout(function () {
                                 location.reload();
-                            }, 10000);
+                            }, 300000);
                         }, 'json');
                     }
                 });
