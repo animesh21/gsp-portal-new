@@ -312,7 +312,7 @@ if (isset($data['Q1Fe4'])) {
             </label>
             <input type="text" name="Q1Fe511" id="Q1Fe511" class="form-control"
                    placeholder="<?php if (isset($data['Q1Fe511'])) echo $data['Q1Fe511']; ?>"
-                           value="<?php echo set_value('Q1Fe511'); ?>"/>
+                           value="<?php if (isset($data['Q1Fe511'])) echo $data['Q1Fe511']; ?>"/>
         </div>
         <div class="form-group">
             <label><span class="cube">6</span> How would you rate the overall design of the audit? </label>
@@ -475,7 +475,7 @@ if (isset($data['Q1Fe7'])) {
                     ><span class="badge">?</span></a> </label>
         <input class="form-control space-textbox" id="feedback2019_1" type="text" name="feedback2019_1"
                                placeholder="<?php if (isset($data['feedback2019_1'])) echo $data['feedback2019_1']; ?>"
-                               value="<?php echo set_value('feedback2019_1'); ?>"/>
+                               value="<?php if (isset($data['feedback2019_1'])) echo $data['feedback2019_1']; ?>"/>
         
             <!-- <ul class="list-inline">
                 <li>
