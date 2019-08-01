@@ -278,11 +278,11 @@ class Dashboard extends CI_Controller {
 		$this->load->view('admin/includes/template', $data);
 	}
 	
-	public function total18_NotStartTheAudit()
+	public function total19_NotStartTheAudit()
    {
-		$data['main']='admin/audit/NotStartTheAudit_school18';
+		$data['main']='admin/audit/NotStartTheAudit_school19';
 		$data['title']='Total no. of school'; 
-		$data['records']=$this->Dashboard_model->getNotStartTheAudit_18data();
+		$data['records']=$this->Dashboard_model->getNotStartTheAudit_19data();
 		$this->load->view('admin/includes/template', $data);
 	}
 	
@@ -305,7 +305,7 @@ class Dashboard extends CI_Controller {
         $data['CompletedAuditButNotSubmitted']=$this->Dashboard_model->getCompletedAuditButNotSubmitted_19data();
         $data['SubmittedTheAudit']=$this->Dashboard_model->getSubmittedTheAudit_19data();
         $data['StartedAuditButDidNotComplete']=$this->Dashboard_model->getStartedAuditButDidNotComplete_19data();
-        $data['NotStartTheAudit']=$this->Dashboard_model->getNotStartTheAudit_18data();
+        $data['NotStartTheAudit']=$this->Dashboard_model->getNotStartTheAudit_19data();
         $data['disable_count']=$this->Dashboard_model->getDisabledScoolCounts();
 	   $data['certificate_count']=$this->Dashboard_model->schoolCertificateCount_2018();
         $this->load->view('admin/includes/template', $data);
