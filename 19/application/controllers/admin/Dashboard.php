@@ -270,11 +270,11 @@ class Dashboard extends CI_Controller {
 		$this->load->view('admin/includes/template', $data);
 	}
 	
-	public function total18_StartedAuditButDidNotComplete()
+	public function total19_StartedAuditButDidNotComplete()
    {
-		$data['main']='admin/audit/StartedAuditButDidNotComplete_school18';
+		$data['main']='admin/audit/StartedAuditButDidNotComplete_school19';
 		$data['title']='Total no. of school'; 
-		$data['records']=$this->Dashboard_model->getStartedAuditButDidNotComplete_18data();
+		$data['records']=$this->Dashboard_model->getStartedAuditButDidNotComplete_19data();
 		$this->load->view('admin/includes/template', $data);
 	}
 	
@@ -304,7 +304,7 @@ class Dashboard extends CI_Controller {
         $data['startedtheaudit']=$this->Dashboard_model->getstartedtheaudit_19data();
         $data['CompletedAuditButNotSubmitted']=$this->Dashboard_model->getCompletedAuditButNotSubmitted_19data();
         $data['SubmittedTheAudit']=$this->Dashboard_model->getSubmittedTheAudit_19data();
-        $data['StartedAuditButDidNotComplete']=$this->Dashboard_model->getStartedAuditButDidNotComplete_18data();
+        $data['StartedAuditButDidNotComplete']=$this->Dashboard_model->getStartedAuditButDidNotComplete_19data();
         $data['NotStartTheAudit']=$this->Dashboard_model->getNotStartTheAudit_18data();
         $data['disable_count']=$this->Dashboard_model->getDisabledScoolCounts();
 	   $data['certificate_count']=$this->Dashboard_model->schoolCertificateCount_2018();
