@@ -220,9 +220,9 @@ header('Location: http://www.greenschoolsprogramme.org/audit/18/login/browser_ch
                                 location.reload();
                             }, 10000);
                             }
-			    if (data>3) {
+			    if (data>=1) {
                                 $('#msgForget').html('<div class="alert alert-danger">' +
-                                        '<strong>&#x2716; Error!</strong> You Can Send Request For Forgetpassword Only User Thrice In Once A Day. <br/> Please Send Next Query After Half An Hour & Do You Have Any Doubt Mail  support@greenschoolsprogramme.org OR CALL 011-4061600' +
+                                        '<strong>&#x2716; Error!</strong> You Can Send Request For Forgetpassword Only User One In Once A Day. <br/> Please Send Next Query After Half An Hour & Do You Have Any Doubt Mail  support@greenschoolsprogramme.org OR CALL 011-4061600' +
                                         '</div>');
 										 setTimeout(function () {
                                 location.reload();
