@@ -504,7 +504,7 @@ class Dashboard_model extends CI_Model {
 		
       }
 	  
-	   public function getStartedAuditButDidNotComplete_18data(){
+	   public function getStartedAuditButDidNotComplete_19data(){
 	$this->db->where("a.make_school_disabled","1");	   
         return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
         ->from('gsp_school AS a')
