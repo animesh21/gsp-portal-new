@@ -245,11 +245,11 @@ class Dashboard extends CI_Controller {
 		$this->load->view('admin/includes/template', $data);
 	}
 	
-	public function total18_startedtheaudit()
+	public function total19_startedtheaudit()
    {
 		$data['main']='admin/audit/startedtheaudit_school18';
 		$data['title']='Total no. of school'; 
-		$data['records']=$this->Dashboard_model->getstartedtheaudit_18data();
+		$data['records']=$this->Dashboard_model->getstartedtheaudit_19data();
 		$this->load->view('admin/includes/template', $data);
 	}
 	
@@ -296,12 +296,12 @@ class Dashboard extends CI_Controller {
     }
 	
 	
-	public function year18_phase1() {
-	 $data['main']='admin/dashboard/year18_phase1';
+	public function year19_phase1() {
+	 $data['main']='admin/dashboard/year19_phase1';
         $data['title']='Home | Dashboard';
 	    $data['total_school']=$this->Dashboard_model->getSchool_alldata();
         $data['school']=$this->Dashboard_model->getSchool_18data();
-        $data['startedtheaudit']=$this->Dashboard_model->getstartedtheaudit_18data();
+        $data['startedtheaudit']=$this->Dashboard_model->getstartedtheaudit_19data();
         $data['CompletedAuditButNotSubmitted']=$this->Dashboard_model->getCompletedAuditButNotSubmitted_18data();
         $data['SubmittedTheAudit']=$this->Dashboard_model->getSubmittedTheAudit_18data();
         $data['StartedAuditButDidNotComplete']=$this->Dashboard_model->getStartedAuditButDidNotComplete_18data();
@@ -311,36 +311,10 @@ class Dashboard extends CI_Controller {
         $this->load->view('admin/includes/template', $data);
     }	
 	
-   
-	/************** 2019 ******************/
-
-
-    public function total19_startedtheaudit()
-   {
-		$data['main']='admin/audit/startedtheaudit_school19';
-		$data['title']='Total no. of school'; 
-		$data['records']=$this->Dashboard_model->getstartedtheaudit_19data();
-		$this->load->view('admin/includes/template', $data);
-		 //echo $this->db->last_query();
-	}
+    
 	
 	
-   public function year19_phase1() {
-	   
-	  
-        $data['main']='admin/dashboard/year19_phase1';
-        $data['title']='Home | Dashboard';
-	$data['total_school']=$this->Dashboard_model->getSchool_alldata();
-        $data['school']=$this->Dashboard_model->getSchool_19data();
-        $data['startedtheaudit']=$this->Dashboard_model->getstartedtheaudit_18data();
-        $data['CompletedAuditButNotSubmitted']=$this->Dashboard_model->getCompletedAuditButNotSubmitted_18data();
-        $data['SubmittedTheAudit']=$this->Dashboard_model->getSubmittedTheAudit_18data();
-        $data['StartedAuditButDidNotComplete']=$this->Dashboard_model->getStartedAuditButDidNotComplete_18data();
-        $data['NotStartTheAudit']=$this->Dashboard_model->getNotStartTheAudit_18data();
-        $data['disable_count']=$this->Dashboard_model->getDisabledScoolCounts();
-	$data['certificate_count']=$this->Dashboard_model->schoolCertificateCount();
-        $this->load->view('admin/includes/template', $data);
-    }	
+    
 	 
 }
 	
