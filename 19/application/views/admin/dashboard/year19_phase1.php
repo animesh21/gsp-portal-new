@@ -27,14 +27,14 @@
   </a>
   <div class="title">Schools Submitted The Audit</div>
 </div>
-<div class="schools-statics"><a href="<?php base_url()?>total18_StartedAuditButDidNotComplete">
+<div class="schools-statics"><a href="<?php base_url()?>total19_StartedAuditButDidNotComplete">
   <div class="statics-circle"> <span><?php echo count($StartedAuditButDidNotComplete);?> </span>
     <label>view</label>
   </div>
   </a>
   <div class="title">Schools Started The Audit But Did Not Complete</div>
 </div>
-<div class="schools-statics"> <a href="<?php base_url()?>total18_NotStartTheAudit"> 
+<div class="schools-statics"> <a href="<?php base_url()?>total19_NotStartTheAudit"> 
   <div class="statics-circle"> <span> <?php echo count($NotStartTheAudit);?> </span>
     <label>view</label>
   </div>
