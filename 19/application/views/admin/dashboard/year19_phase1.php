@@ -13,28 +13,28 @@
   </a>
   <div class="title">Schools That Started The Audit</div>
 </div>
-<div class="schools-statics"> <a href="<?php base_url()?>total19_CompletedAuditButNotSubmitted" > 
+<div class="schools-statics"> <a href="<?php base_url()?>total19_CompletedAuditButNotSubmitted" target="_blank" > 
   <div class="statics-circle"> <span> <?php echo count($CompletedAuditButNotSubmitted);?> </span>
     <label>view</label>
   </div>
   </a>
   <div class="title">Schools Completed The Audit But Not Submitted</div>
 </div>
-<div class="schools-statics"> <a href="<?php base_url()?>total19_SubmittedTheAudit"> 
+<div class="schools-statics"> <a href="<?php base_url()?>total19_SubmittedTheAudit" target="_blank"> 
   <div class="statics-circle"> <span> <?php echo count($SubmittedTheAudit);?> </span>
     <label>view</label>
   </div>
   </a>
   <div class="title">Schools Submitted The Audit</div>
 </div>
-<div class="schools-statics"><a href="<?php base_url()?>total19_StartedAuditButDidNotComplete">
+<div class="schools-statics"><a href="<?php base_url()?>total19_StartedAuditButDidNotComplete" target="_blank">
   <div class="statics-circle"> <span><?php echo count($StartedAuditButDidNotComplete);?> </span>
     <label>view</label>
   </div>
   </a>
   <div class="title">Schools Started The Audit But Did Not Complete</div>
 </div>
-<div class="schools-statics"> <a href="<?php base_url()?>total19_NotStartTheAudit"> 
+<div class="schools-statics"> <a href="<?php base_url()?>total19_NotStartTheAudit" target="_blank"> 
   <div class="statics-circle"> <span> <?php echo count($NotStartTheAudit);?> </span>
     <label>view</label>
   </div>
@@ -55,7 +55,7 @@
   </a>
   <div class="title">Disabled School (2019)</div>
 </div>
-<div class="schools-statics"> <a href="./<?php base_url()?>audit_started/getDigitalCertificateRecord">
+<div class="schools-statics"> <a href="./<?php base_url()?>audit_started/getDigitalCertificateRecord" target="_blank">
   <div class="statics-circle"> <span><?php echo $certificate_count;?></span>
     <label>view</label>
   </div>
