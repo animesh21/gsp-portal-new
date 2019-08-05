@@ -23,7 +23,7 @@ header('Location: http://www.greenschoolsprogramme.org/audit/18/login/browser_ch
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
             .alert {
-               height: 135px !important;
+               height: 150px !important;
                 padding: 15px !important;
                 font-weight: bold;
                 border-radius: 0px;
