@@ -864,8 +864,9 @@ public function digital_certificate_for_principal_coordinator($argID)
 	
 	public function update_school_partner()
 	{
-	  $partner=$this->input->post('partner');
-	  $school_id=$this->input->post('school_id');
+	    $partner=$this->input->post('partner');
+            $satya_foundation_status=$this->input->post('satya_foundation_status');
+	    $school_id=$this->input->post('school_id');
 	  
 	  
 	  if($partner=='No partner'){
@@ -873,37 +874,52 @@ public function digital_certificate_for_principal_coordinator($argID)
 	  }
 	  
 	  
-	  if($partner=='Church of South India'){
+	  if($partner=='Church of South India' && $satya_foundation_status==0){
 	     $partner_status='1';
 	  }
 	  
-	  if($partner=='Jawahar Navodaya Vidyalaya'){
+	  if($partner=='Jawahar Navodaya Vidyalaya (JNV)' && $satya_foundation_status==0){
 	     $partner_status='2';
 	  }
 	  
-	  if($partner=='Kendriya Vidyalaya Sangathan (KVS)'){
+	  if($partner=='Kendriya Vidyalaya Sangathan (KVS)' && $satya_foundation_status==0){
 	     $partner_status='3';
 	  }
 	  
-	  if($partner=='Montfortian Education Foundation'){
+	  if($partner=='Montfortian Education Foundation' && $satya_foundation_status==0){
 	     $partner_status='4';
 	  }
 	  
-	  if($partner=='Mount Litera Zee Schools'){
+	  if($partner=='Mount Litera Zee Schools' && $satya_foundation_status==0){
 	     $partner_status='5';
 	  }
 	  
-	  if($partner=='Satya Bharti Foundation'){
+	  if($partner=='Satya Bharti Foundation' && $satya_foundation_status==0 ){
 	     $partner_status='6';
 	  }
+
+         if($partner=='Satya Bharti School' || $satya_foundation_status==1 ){
+            $partner_status='6';
+            $satya_foundation_status='1';
+         }
+
+         if($partner=='BF Quality Support Programme' || $satya_foundation_status==2 ){
+            $partner_status='6';
+            $satya_foundation_status='2';
+      }
+
+      
 	  
 	  $data=array(
-	  'partner_status'=>$partner_status
+	  'partner_status'=>$partner_status,
+          'satya_foundation_status'=>$satya_foundation_status
 	  );
-	  $this->db->where('id',$school_id);
-	  $this->db->update('gsp_school',$data);
+         
+            $this->db->where('id',$school_id);
+	    $this->db->update('gsp_school',$data);
 	
 	}
+	
 	
 }
 
