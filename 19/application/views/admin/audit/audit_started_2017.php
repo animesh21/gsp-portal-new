@@ -207,7 +207,7 @@ function get_value(school_id,partner,satya_foundation_status)
     type: 'POST',
     data: {'partner':partner,'school_id':school_id, 'satya_foundation_status':satya_foundation_status },
     success: function (data){
-      console.log(data);
+     // console.log(data);
     alert('School Partner Successfully Updated');
     location.reload();
    }
