@@ -260,7 +260,7 @@ class User_model extends CI_Model
           $update_counter=$dataResult->counter+1; 
         $this->db->like('coemail',$this->input->post('val'));
        $this->db->update('gsp_school',array("forgetpassword_email_time"=>date("Y-m-d"),"counter"=>$update_counter));  
-         if($dataResult->counter>=3){
+         if($dataResult->counter>=1){
            return $dataResult->counter;
          }
          else{
