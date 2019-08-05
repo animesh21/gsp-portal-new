@@ -200,13 +200,14 @@ jQuery.ajax({
 
 <script>
 /****/	
-function get_value(school_id,partner)
+function get_value(school_id,partner,satya_foundation_status)
 {
   $.ajax({
     url:'<?php echo base_url("admin/Audit_started_2017/update_school_partner");?>',
     type: 'POST',
-    data: {'partner':partner,'school_id':school_id },
+    data: {'partner':partner,'school_id':school_id, 'satya_foundation_status':satya_foundation_status },
     success: function (data){
+      console.log(data);
     alert('School Partner Successfully Updated');
     location.reload();
    }
