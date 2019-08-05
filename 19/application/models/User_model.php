@@ -249,35 +249,47 @@ class User_model extends CI_Model
     }*/
 	public function forgetPassword()
     {
-		date_default_timezone_set('Asia/Kolkata');
+    date_default_timezone_set('Asia/Kolkata');
         $this->load->helper('string');
-		$this->db->like('email',$this->input->post('val'));
+    $this->db->like('email',$this->input->post('val'));
         $email_count =$this->db->select("id")->from('gsp_user')->get()->row();
-			if (count($email_count)>0) {
-			  $this->db->like('coemail',$this->input->post('val'));
-		      $this->db->like('forgetpassword_email_time',date("Y-m-d"));
+      if (count($email_count)>0) {
+        $this->db->like('coemail',$this->input->post('val'));
+          $this->db->like('forgetpassword_email_time',date("Y-m-d"));
               $dataResult = $this->db->select("*")->from('gsp_school')->get()->row();
-		      $update_counter=$dataResult->counter+1;	
-			  $this->db->like('coemail',$this->input->post('val'));
-			 $this->db->update('gsp_school',array("forgetpassword_email_time"=>date("Y-m-d"),"counter"=>$update_counter));	
-			   if($dataResult->counter>=1){
-			     return $dataResult->counter;
-			   }
-			   else{
-		$query = $this->db->select('*')
+          $update_counter=$dataResult->counter+1; 
+        $this->db->like('coemail',$this->input->post('val'));
+       $this->db->update('gsp_school',array("forgetpassword_email_time"=>date("Y-m-d"),"counter"=>$update_counter));  
+         if($dataResult->counter>=3){
+           return $dataResult->counter;
+         }
+         else{
+    $query = $this->db->select('*')
                     ->from('gsp_user')
                     ->like('email', $this->input->post('val'))
-                    ->get()->row();		   
+                    ->get()->row();      
                  $varNewPass = strtolower(random_string('alnum', 5));
                  $arr = array('password' => $varNewPass);
-			     $this->db->like('email',$this->input->post('val'));
-				 $this->db->update('gsp_user', $arr);
-				 $this->load->library('email');
-                 $config['mailtype'] = 'html';
+                 $this->db->like('email',$this->input->post('val'));
+               $this->db->update('gsp_user', $arr);
+               $this->load->library('email');
+
+              $config['protocol']    = 'smtp';
+              $config['smtp_host']    = 'ssl://smtp.gmail.com';
+              $config['smtp_port']    = '465';
+              $config['smtp_timeout'] = '60';
+
+              $config['smtp_user']    = 'support@greenschoolsprogramme.org';    //Important
+              $config['smtp_pass']    = 'GSP@2000';  //Important
+
+              $config['charset']    = 'utf-8';
+              $config['newline']    = "\r\n";
+              $config['mailtype'] = 'html'; // or html
+              $config['validation'] = TRUE; // bool whether to validate email or not
+                 
                  $this->email->initialize($config);
                  $from = "support@greenschoolsprogramme.org";
                  $to =array($query->email,"support@greenschoolsprogramme.org","Studiotesseractst@gmail.com","ranjita@cseindia.org");
-                 $subject = "GSP Forget Password";
                  $msg = "Dear &nbsp;";
                  $msg .= $query->username . "," . "<br><br>";
                  $msg .= "Your new password for GSP Login.<br><br>";
@@ -288,10 +300,10 @@ class User_model extends CI_Model
                  $this->email->subject($subject);
                  $this->email->message($msg);
                  $this->email->send();
-		         return $varNewPass;		
-			    }
-			}
-			else {
+             return $varNewPass;    
+          }
+      }
+      else {
               return false;
             }
          }
