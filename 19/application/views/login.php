@@ -23,7 +23,7 @@ header('Location: http://www.greenschoolsprogramme.org/audit/18/login/browser_ch
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
             .alert {
-               height: 132px !important;
+               height: 135px !important;
                 padding: 15px !important;
                 font-weight: bold;
                 border-radius: 0px;
@@ -266,5 +266,18 @@ if (/Edge/.test(navigator.userAgent)) {
    alert('this survey is close now');
 
   });
+
+</script>
+
+<script type="text/javascript">
+  
+  $(document).ready(function(){
+
+    $("#btnForgetPassword").click(function(){
+
+      $("#btnForgetPassword").css('display', 'none');
+    })
+
+  })
 
 </script>
