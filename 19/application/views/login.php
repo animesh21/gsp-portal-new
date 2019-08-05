@@ -275,9 +275,18 @@ if (/Edge/.test(navigator.userAgent)) {
 
     $("#btnForgetPassword").click(function(){
 
+     var p =  $("#email_id").val();
+     //alert(p);
+     if(p){
       $("#btnForgetPassword").css('display', 'none');
-    })
+     }
+     else{
+      $("#btnForgetPassword").css('display', 'inline-block');
+     }
 
-  })
+      
+    });
+
+  });
 
 </script>
