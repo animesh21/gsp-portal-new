@@ -457,6 +457,7 @@ class Audit_started extends CI_Controller {
 				$body->personalizations[0]->recipient = $gg;
 
 				if($i==1){
+                $body->personalizations[0]->recipientCc =  $gg;
                 $body->personalizations[0]->recipientCc =  array('ranjita@cseindia.org');
                 }
 
