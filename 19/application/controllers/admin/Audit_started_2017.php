@@ -104,6 +104,8 @@ class Audit_started_2017 extends CI_Controller {
 	    $data['list_school4']=$this->Audit_started_model->getPartnerData('4');
 	    $data['list_school5']=$this->Audit_started_model->getPartnerData('5');
 	    $data['list_school6']=$this->Audit_started_model->getPartnerData('6');
+	   $data['list_school7']=$this->Audit_started_model->getParterSubpartnerData('6','1');
+           $data['list_school8']=$this->Audit_started_model->getParterSubpartnerData('6','2');
 	   
 	   
 	        $data['csi_registerd_audit']=$this->Report->get_registeredpartner("1");
