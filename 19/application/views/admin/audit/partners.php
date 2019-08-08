@@ -20,6 +20,16 @@
     border: 1px solid rgba(0,0,0,.15);
     border-radius: .25rem;
 }
+
+.nav-tabs>li>a{
+  margin-right: 0px!important;
+}
+
+.nav>li>a {    
+    padding: 10px 3px !important;
+}
+
+	
 .dropdown-item {
     display: block;
     width: 100%;
@@ -181,6 +191,8 @@
     <li><a href="#4" id="four" data-toggle="tab">Montfortian Education Foundation</a> </li>
     <li><a href="#5" id="five" data-toggle="tab">Mount Litera Zee Schools</a> </li>
     <li><a href="#6" id="six" data-toggle="tab">Satya Bharti Foundation</a> </li>
+    <li><a href="#7" id="seven" data-toggle="tab">Satya Bharti School</a> </li>
+   <li><a href="#8" id="eight" data-toggle="tab">BF Quality Support Programme</a> </li>
   </ul>
   <div class="tab-content">
     <div class="tab-pane active" id="1"> 
@@ -421,6 +433,86 @@
         </table>
       </div>
     </div>
+    <div class="tab-pane" id="7">
+      <div style="overflow-x:auto;"> <a href="<?php echo base_url("admin/audit_started/foundationPartnerrexcel/5"); ?>" class="btn btn-default other">
+        <button class="exportBtn">Export to Excel</button>
+        </a>
+        <table id="example7" class="display dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
+          <thead>
+            <tr role="row">
+              <th>S.No</th>
+              <th>Sch.Id</th>
+              <th>UDISE Code</th>
+              <th>School Name</th>
+              <th>State</th>
+              <th>District</th>
+              <th>City</th>
+              <th>Co-ord. Name</th>
+              <th>Co-ord. Email</th>
+              <th>Co-ord. Mobile</th>
+              <th>Completeness</th>
+              <th>Reg. Date</th>
+            </tr>
+          </thead>
+          <?php $i=1; foreach($list_school7 as $r){ ?>
+          <tr role="row" class="<?php echo ($i%2==0) ? "even" : "odd"; ?>">
+            <td><?php echo $i; ?></td>
+            <td><?php echo $r->id; ?></td>
+            <td><?php echo $r->udise; ?></td>
+            <td><?php echo $r->name; ?></td>
+            <td><?php echo $r->state_name; ?></td>
+            <td><?php echo $r->city; ?></td>
+            <td><?php echo $r->district_name; ?></td>
+            <td><?php echo $r->coname; ?></td>
+            <td><?php echo $r->coemail; ?></td>
+            <td><?php echo $r->comobile; ?></td>
+            <td><?php echo $r->progress; ?></td>
+            <td><?php echo $r->date_added; ?></td>
+          </tr>
+          <?php $i++; } ?>
+        </table>
+      </div>
+    </div>
+      <div class="tab-pane" id="8">
+      <div style="overflow-x:auto;"> <a href="<?php echo base_url("admin/audit_started/foundationPartnerrexcel/5"); ?>" class="btn btn-default other">
+        <button class="exportBtn">Export to Excel</button>
+        </a>
+        <table id="example8" class="display dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
+          <thead>
+            <tr role="row">
+              <th>S.No</th>
+              <th>Sch.Id</th>
+              <th>UDISE Code</th>
+              <th>School Name</th>
+              <th>State</th>
+              <th>District</th>
+              <th>City</th>
+              <th>Co-ord. Name</th>
+              <th>Co-ord. Email</th>
+              <th>Co-ord. Mobile</th>
+              <th>Completeness</th>
+              <th>Reg. Date</th>
+            </tr>
+          </thead>
+          <?php $i=1; foreach($list_school8 as $r){ ?>
+          <tr role="row" class="<?php echo ($i%2==0) ? "even" : "odd"; ?>">
+            <td><?php echo $i; ?></td>
+            <td><?php echo $r->id; ?></td>
+            <td><?php echo $r->udise; ?></td>
+            <td><?php echo $r->name; ?></td>
+            <td><?php echo $r->state_name; ?></td>
+            <td><?php echo $r->city; ?></td>
+            <td><?php echo $r->district_name; ?></td>
+            <td><?php echo $r->coname; ?></td>
+            <td><?php echo $r->coemail; ?></td>
+            <td><?php echo $r->comobile; ?></td>
+            <td><?php echo $r->progress; ?></td>
+            <td><?php echo $r->date_added; ?></td>
+          </tr>
+          <?php $i++; } ?>
+        </table>
+      </div>
+    </div>
   </div>
 </div>
 <link type="text/css" rel="stylesheet" type="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
@@ -462,7 +554,7 @@
 </style>
 <script type="text/javascript">
 $(document).ready(function () {
-        $('#example2,#example3,#example4,#example5,#example6').DataTable({
+        $('#example2,#example3,#example4,#example5,#example6,#example7,#example8').DataTable({
             dom: 'lfrtip',
             "aLengthMenu": [[10, 25, 50, 75, -1], [10, 25, 50, 75, "All"]],
             "iDisplayLength": 25
@@ -1479,3 +1571,14 @@ $(document).ready(function () {
        });
 		
 		</script>
+
+       </script>
+
+     <script type="text/javascript">
+      
+      $("#second").click(function(){
+        $(".other").hide();
+      })
+
+    </script>
+
