@@ -48,6 +48,22 @@ class Audit_started_model extends CI_Model {
 	}	
 	
 	
+  public function getParterSubpartnerData($partner_status, $satya_foundation_status){         
+        $this->db->where('a.partner_status', $partner_status);
+        $this->db->where('a.satya_foundation_status', $satya_foundation_status);
+        $this->db->where('a.make_school_disabled','1');
+        $data=$this->db->select('a.*, b.name AS state_name,c.name AS district_name')
+                        ->from('gsp_school AS a')
+                        ->join('states AS b', 'a.state=b.id', 'left')
+                        ->join('cities AS c', 'a.district=c.id', 'left')
+                        ->order_by('a.id', 'desc')
+                        ->get()->result();
+                       // echo $this->db->last_query();
+                        return $data;
+
+    }
+	
+	
 	public function getallPartnerData() {
 	   
         $isdCode = '+91';
@@ -317,7 +333,88 @@ class Audit_started_model extends CI_Model {
             $output .= "\n";
             $k++;
         }
-		
+	
+	 $output .= "\n"; 
+         $output .= "\n";
+         $output .= '"","","","","","","","","Satya Bharti School","","","","","","","",';
+         $output .= "\n"; 
+         $output .= "\n";
+        
+        $data=get_partner_subpartner(6,1);
+         
+        
+        $k = 1;
+        foreach ($data as $a) {
+            
+            $output .= '"' . $k . '",';
+            $output .= '"' . $a->id . '",';
+            $output .= '"' . $a->udise . '",';
+            $output .= '"' . $a->name . '",';
+            $output .= '"' . $a->address1 . '",';
+            $output .= '"' . $a->address2 . '",';
+            $output .= '"' . $a->country . '",';
+            $output .= '"' . $a->state_name . '",';
+            $output .= '"' . $a->district_name . '",';
+            $output .= '"' . $a->city . '",';
+            $output .= '"' . $a->pincode . '",';
+            $output .= '"' . $isdCode . '",';
+            $output .= '"' . $a->std . '",';
+            $output .= '"' . $a->telephone . '",';
+            $output .= '"' . $a->schoolemail . '",';
+            $output .= '"' . $a->principle_name . '",';
+            $output .= '"' . $a->mobile . '",';
+            $output .= '"' . $a->coname . '",';
+            $output .= '"' . $a->coemail . '",';
+            $output .= '"' . $a->comobile . '",';
+            $output .= '"' . getPasswordBySchoolUserId($a->coemail) . '",';
+            //$output .='"'.date('d-m-Y H:i:s', strtotime($row['datetime'])).'",';
+            $output .= '"' . date('Y-m-d H:i:s', strtotime($a->date_added)) . '",';
+            $output .= '"' . $a->progress . '%",';
+            $output .= "\n";
+            $k++;
+        }
+
+
+        $output .= "\n"; 
+         $output .= "\n";
+         $output .= '"","","","","","","","","BF Quality Support Programme","","","","","","","",';
+         $output .= "\n"; 
+         $output .= "\n";
+        
+        $data=get_partner_subpartner(6,2);
+         
+        
+        $k = 1;
+        foreach ($data as $a) {
+            
+            $output .= '"' . $k . '",';
+            $output .= '"' . $a->id . '",';
+            $output .= '"' . $a->udise . '",';
+            $output .= '"' . $a->name . '",';
+            $output .= '"' . $a->address1 . '",';
+            $output .= '"' . $a->address2 . '",';
+            $output .= '"' . $a->country . '",';
+            $output .= '"' . $a->state_name . '",';
+            $output .= '"' . $a->district_name . '",';
+            $output .= '"' . $a->city . '",';
+            $output .= '"' . $a->pincode . '",';
+            $output .= '"' . $isdCode . '",';
+            $output .= '"' . $a->std . '",';
+            $output .= '"' . $a->telephone . '",';
+            $output .= '"' . $a->schoolemail . '",';
+            $output .= '"' . $a->principle_name . '",';
+            $output .= '"' . $a->mobile . '",';
+            $output .= '"' . $a->coname . '",';
+            $output .= '"' . $a->coemail . '",';
+            $output .= '"' . $a->comobile . '",';
+            $output .= '"' . getPasswordBySchoolUserId($a->coemail) . '",';
+            //$output .='"'.date('d-m-Y H:i:s', strtotime($row['datetime'])).'",';
+            $output .= '"' . date('Y-m-d H:i:s', strtotime($a->date_added)) . '",';
+            $output .= '"' . $a->progress . '%",';
+            $output .= "\n";
+            $k++;
+        }
+        
 		
 
         return $output;
