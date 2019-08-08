@@ -274,11 +274,32 @@ if (!function_exists('get_partner')) {
 						->where('a.partner_status',$partnerId)
                         ->order_by('a.id', 'desc')
                         ->get()->result();
-					//echo $CI->db->last_query(); exit;	
+			//echo $CI->db->last_query(); exit;	
 						
 		            return $temp;
     }
 }
+
+
+if(!function_exists('get_partner_subpartner')){
+      function get_partner_subpartner($partnerId, $subpartnerId){
+      $arrState = array();
+      $CI = & get_instance();
+      $CI->db->where('a.make_school_disabled',"1");
+      $temp = $CI->db->select('a.*, b.name AS state_name, c.name AS district_name')
+                     ->from('gsp_school AS a')
+                     ->join('states AS b', 'a.state=b.id', 'left')
+                     ->join('cities AS c', 'a.district=c.id', 'left')
+                     ->where('a.partner_status', $partnerId)
+                     ->where('a.satya_foundation_status', $subpartnerId)
+                     ->order_by('a.id', 'desc')
+                     ->get()
+                     ->result();
+                   //  echo $this->db->last_query(); exit;
+                     return $temp;
+    }
+
+    }
 
 if (!function_exists('getPartnerWithAllYears')) {
     function getPartnerWithAllYears($partnerId) {
