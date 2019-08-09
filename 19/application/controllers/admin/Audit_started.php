@@ -459,7 +459,7 @@ class Audit_started extends CI_Controller {
 
 				if($i==1){
                $body->personalizations[0]->recipientCc = array($Totalemailpp);
-                $body->personalizations[0]->recipientBcc =  array('radhajeetu1986@gmail.com');
+                $body->personalizations[0]->recipientBcc =  array('ranjita@cseindia.org');
                 }
 
 				//$body->personalizations[0]->recipientCc = array($Totalemail);
@@ -467,7 +467,7 @@ class Audit_started extends CI_Controller {
 
 				// Email Header
 				$body->from = new PepipostAPILib\Models\From;
-				$body->from->fromEmail = 'radhajeetu1986@gmail.com';   #Sender Domain. Note: The sender domain should be verified and active under your Pepipost account.
+				$body->from->fromEmail = 'support@greenschoolsprogramme.org';   #Sender Domain. Note: The sender domain should be verified and active under your Pepipost account.
 				$body->from->fromName = 'Green School Programme';       #Sender/From name
 
 				//Email Body Content
