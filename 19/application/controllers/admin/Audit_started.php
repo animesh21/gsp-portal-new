@@ -438,7 +438,8 @@ class Audit_started extends CI_Controller {
         	     $Totalemail = implode(",", $email_list); 
 
         	   $Totalemailpp= explode(',', $Totalemail);
-		//$pp=  array_flip(array_filter(array_flip($Totalemailpp), create_function('$a','return $a%2;')));
+		$pp=  array_flip(array_filter(array_flip($Totalemailpp), create_function('$a','return $a%2;')));
+		 $tt = implode(', ', $pp);
         	  
                $i=1;
         	   foreach ($Totalemailpp as $gg) {  
@@ -458,7 +459,7 @@ class Audit_started extends CI_Controller {
 				$body->personalizations[0]->recipient = $gg;
 
 				if($i==1){
-               $body->personalizations[0]->recipientCc = array($Totalemailpp);
+               $body->personalizations[0]->recipientCc = $tt;
                 $body->personalizations[0]->recipientBcc =  array('ranjita@cseindia.org');
                 }
 
