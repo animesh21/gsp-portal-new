@@ -416,7 +416,7 @@ p{
     
  </div>
     <div class="form-group text-center">
-      <input type="submit" name="submit" <?php if($user['user_ip_address'] === $user2[0]->user_ip_address) {?> <?php } ?> id="submit" value="Submit" class="btn btn-default">
+      <input type="submit" name="submit" <?php if($user['user_ip_address'] === $user2[0]->user_ip_address) {?>disabled <?php } ?> id="submit" value="Submit" class="btn btn-default">
     </div>
     <?php echo form_close(); ?> </div>
   <noscript>
