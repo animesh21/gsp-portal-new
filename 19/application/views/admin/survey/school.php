@@ -70,6 +70,7 @@
                                 '1'=>'Morning',
                                 '2'=>'Evening',
                                 '3'=>'Both',
+	                            '4'=>'Not Applicable'
                             ); ?>
                             <?php echo (getFiled('Q2S1', $schoolUserID)) ? $arr1[getFiled('Q2S1', $schoolUserID)] : ""; ?>
                         </p>  
