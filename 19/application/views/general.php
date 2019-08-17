@@ -377,7 +377,7 @@
             <label for="ex3">Dec</label>
             <br/>
             <input type="checkbox" class="Question7G1" name="Q7G12"
-                                       value="<?php echo set_value('Q7G12', 'true'); ?>" <?php if (isset($data['Q7G12'])) echo "checked" ?>/>
+                                       value="<?php echo set_value('Q7G12', '1'); ?>" <?php if (isset($data['Q7G12'])) echo "checked" ?>/>
           </li>
         </ul>
       </div>
