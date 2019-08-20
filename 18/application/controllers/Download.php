@@ -262,7 +262,6 @@ function getdigitalCertificate($argID) {
    public function PdfById($argsID) {
     header("Content-Type: application/pdf;");
     header("Content-Transfer-Encoding: binary");
-	   header('Content-Description: File Transfer');
         $this->config->load('array_config');
         $data['performance'] = $this->Performance_model->getDataById($argsID);
         $html=$this->load->view('admin/performance_report/Performance', $data,true);
@@ -270,7 +269,7 @@ function getdigitalCertificate($argID) {
 		    $this->dompdf->set_paper("A4");
 			$this->dompdf->load_html($html);
 		    $this->dompdf->render();
-		    $this->dompdf->stream("performance-report.pdf", array("Attachment" => 0));
+		    $this->dompdf->stream("performance-report.pdf", array("Attachment" => 1));
 
     }	
 
