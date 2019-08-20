@@ -260,15 +260,16 @@ function getdigitalCertificate($argID) {
   }	
   
   public function PdfById($argsID) {
-        $this->config->load('array_config');
-        $data['performance'] = $this->Performance_model->getDataById($argsID);
-        $html=$this->load->view('admin/performance_report/Performance', $data,true);
-		    $this->load->library('dompdf_lib');
-		    $this->dompdf->set_paper("A4");
-			$this->dompdf->load_html($html);
-		    $this->dompdf->render();
-		    $this->dompdf->stream("performance-report.pdf", array("Attachment" => false, 'Content-Type' => 'application/pdf'));
-    }	
+      $this->config->load('array_config');
+      ob_start();
+      $data['performance'] = $this->Performance_model->getDataById($argsID);
+      $html = ob_get_clean();
+      $html=$this->load->view('admin/performance_report/Performance', $data,true);
+  $this->load->library('dompdf_lib');
+  $this->dompdf->set_paper("A4");
+$this->dompdf->load_html($html);
+  $this->dompdf->render();
+  $this->dompdf->stream("performance-report.pdf", array("Attachment" => false,'Content-Type' => 'application/pdf'));
 
 
 public function downloadReportsSection(){
