@@ -270,6 +270,7 @@ function getdigitalCertificate($argID) {
 $this->dompdf->load_html($html);
   $this->dompdf->render();
   $this->dompdf->stream("performance-report.pdf", array("Attachment" => false,'Content-Type' => 'application/pdf'));
+  }
 
 
 public function downloadReportsSection(){
