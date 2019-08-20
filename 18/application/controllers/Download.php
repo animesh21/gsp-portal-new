@@ -259,17 +259,15 @@ function getdigitalCertificate($argID) {
    return $arrForcoordinator_principal;
   }	
   
-   public function PdfById($argsID) {    
-	   ini_set('memory_limit', '-1');	    
-	 ini_set('max_execution_time', 300);
+   public function PdfById($argsID) {	
         $this->config->load('array_config');
         $data['performance'] = $this->Performance_model->getDataById($argsID);
         $html=$this->load->view('admin/performance_report/Performance', $data,true);
-		    $this->load->library('dompdf_lib');
-		    $this->dompdf->set_paper("A4");
-			$this->dompdf->load_html($html);
-		    $this->dompdf->render();
-		    $this->dompdf->stream("performance-report.pdf", array("Attachment" => false));
+	$this->load->library('dompdf_lib');
+	$this->dompdf->set_paper("A4");
+	$this->dompdf->load_html($html);
+	$this->dompdf->render();
+	$this->dompdf->stream("performance-report.pdf", array("Attachment" => false));
 
     }	
 
