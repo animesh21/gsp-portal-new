@@ -269,7 +269,7 @@ function getdigitalCertificate($argID) {
 		    $this->dompdf->set_paper("A4");
 			$this->dompdf->load_html($html);
 		    $this->dompdf->render();
-		    $this->dompdf->stream("performance-report.pdf", array("Attachment" => 1));
+		    $this->dompdf->stream("performance-report.pdf");
 
     }	
 
