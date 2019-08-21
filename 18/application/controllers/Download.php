@@ -263,7 +263,6 @@ function getdigitalCertificate($argID) {
         $this->config->load('array_config');
         $data['performance'] = $this->Performance_model->getDataById($argsID);
         $html=$this->load->view('admin/performance_report/Performance', $data, true);
-	   $pdfFilePath = "school_pdf_name.pdf";
 	$this->load->library('dompdf_lib');
 	$this->dompdf->set_paper("A4");
 	$this->dompdf->load_html($html);
