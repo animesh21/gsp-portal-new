@@ -260,6 +260,10 @@ function getdigitalCertificate($argID) {
   }	
   
    public function PdfById($argsID) {	
+	      ob_clean();
+        flush();
+        header("Content-type:application/pdf");
+        header("Content-Disposition:attachment;filename='downloaded.pdf'"); 
         $this->config->load('array_config');
         $data['performance'] = $this->Performance_model->getDataById($argsID);
         $html=$this->load->view('admin/performance_report/Performance', $data, true);
@@ -268,12 +272,8 @@ function getdigitalCertificate($argID) {
 	$this->dompdf->load_html($html);
 	$this->dompdf->render();
 	$this->dompdf->stream("performance-report.pdf", array("Attachment" => false));
-	   ob_clean();
-        flush();
-        header("Content-type:application/pdf");
-        header("Content-Disposition:attachment;filename='downloaded.pdf'"); 
-        echo $result; 
-        exit;
+	
+         
 
     }	
 
