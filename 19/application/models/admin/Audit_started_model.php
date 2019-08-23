@@ -341,7 +341,7 @@ class Audit_started_model extends CI_Model {
          $output .= "\n"; 
          $output .= "\n";
         
-        $data=get_partner_subpartner(6,1);
+        $data=get_partner_subpartner(7);
          
         
         $k = 1;
@@ -382,7 +382,7 @@ class Audit_started_model extends CI_Model {
          $output .= "\n"; 
          $output .= "\n";
         
-        $data=get_partner_subpartner(6,2);
+        $data=get_partner_subpartner(8);
          
         
         $k = 1;
