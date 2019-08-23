@@ -543,6 +543,46 @@ class Report extends CI_Model {
 			
 		}
 	
+	
+		 public function get_subregisteredpartner($substatus)
+		{
+		    $this->db->where('make_school_disabled',"1");
+		    $this->db->where('satya_foundation_status',$substatus);			
+		    return $this->db->count_all_results('gsp_school');
+			
+		}
+		
+		public function get_substartedpartner($substatus)
+		{
+			
+			$this->db->where('satya_foundation_status',$substatus);
+			$this->db->where('make_school_disabled',"1");
+			$this->db->where("progress >",'5');
+			$this->db->where("progress <",'100');
+			return $this->db->count_all_results('gsp_school');
+		}
+		
+		public function get_subcompletedpartner($substatus)
+		{
+			
+			$this->db->where('satya_foundation_status',$substatus);
+			$this->db->where('make_school_disabled',"1");
+			$this->db->where("progress =",'100');
+			return $this->db->count_all_results('gsp_school');
+			
+		}
+		
+		public function get_subnotstartedpartner($substatus)
+		{
+			
+			$this->db->where('satya_foundation_status',$substatus);
+			$this->db->where('make_school_disabled',"1");
+			$this->db->where("progress=",'5');
+			return $this->db->count_all_results('gsp_school');
+			
+		}
+	
+	
 	       public function registerparticipationBystate($state)
 		{
 		 $this->db->where("make_school_disabled","1");       
