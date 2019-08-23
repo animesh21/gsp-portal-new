@@ -48,8 +48,8 @@ class Audit_started_model extends CI_Model {
 	}	
 	
 	
-  public function getParterSubpartnerData($partner_status, $satya_foundation_status){         
-        $this->db->where('a.partner_status', $partner_status);
+     public function getParterSubpartnerData($satya_foundation_status){        
+         
         $this->db->where('a.satya_foundation_status', $satya_foundation_status);
         $this->db->where('a.make_school_disabled','1');
         $data=$this->db->select('a.*, b.name AS state_name,c.name AS district_name')
@@ -62,6 +62,7 @@ class Audit_started_model extends CI_Model {
                         return $data;
 
     }
+	
 	
 	
 	public function getallPartnerData() {
