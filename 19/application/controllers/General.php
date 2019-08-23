@@ -46,9 +46,26 @@ class General extends CI_Controller {
             }
     }
     
-    public function set()
+     public function set()
     {
     	$post = $this->input->post();
+     // print_r($post);
+
+      if(!empty(extract($this->input->post()))){
+          $id = $this->session->userdata('USER_ID');
+          
+           $Q1S1_new=  array(
+                'Q2G1'=>$Q2G1,
+                'Q3G1'=>$Q3G1,
+                'Q9G1'=>$Q9G1
+
+            );          
+          
+            $this->db->where('userid', $id);
+            $this->db->update('gsp_school', $Q1S1_new);           
+
+        }
+
 		//print_r($post);exit;
         $this->Answer_model->submitAnswers($post,1);
 	    updateProgress($this->session->userdata('USER_ID'), 10);
