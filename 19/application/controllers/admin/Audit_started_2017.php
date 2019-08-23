@@ -104,8 +104,8 @@ class Audit_started_2017 extends CI_Controller {
 	    $data['list_school4']=$this->Audit_started_model->getPartnerData('4');
 	    $data['list_school5']=$this->Audit_started_model->getPartnerData('5');
 	    $data['list_school6']=$this->Audit_started_model->getPartnerData('6');
-	   $data['list_school7']=$this->Audit_started_model->getParterSubpartnerData('6','1');
-           $data['list_school8']=$this->Audit_started_model->getParterSubpartnerData('6','2');
+	   $data['list_school7']=$this->Audit_started_model->getParterSubpartnerData('7');
+           $data['list_school8']=$this->Audit_started_model->getParterSubpartnerData('8');
 	   
 	   
 	        $data['csi_registerd_audit']=$this->Report->get_registeredpartner("1");
@@ -137,6 +137,17 @@ class Audit_started_2017 extends CI_Controller {
 		$data['csi_total_started_audit6']=$this->Report->get_startedpartner("6");
 		$data['csi_completed6']=$this->Report->get_completedpartner("6");
 		$data['csi_total_notstarted_audit6']=$this->Report->get_notstartedpartner("6");
+	   
+		$data['csi_registerd_audit7']=$this->Report->get_subregisteredpartner("7");
+		$data['csi_total_started_audit7']=$this->Report->get_substartedpartner("7");
+		$data['csi_completed7']=$this->Report->get_subcompletedpartner("7");
+		$data['csi_total_notstarted_audit7']=$this->Report->get_subnotstartedpartner("7");
+
+		$data['csi_registerd_audit8']=$this->Report->get_subregisteredpartner("8");
+		$data['csi_total_started_audit8']=$this->Report->get_substartedpartner("8");
+		$data['csi_completed8']=$this->Report->get_subcompletedpartner("8");
+		$data['csi_total_notstarted_audit8']=$this->Report->get_subnotstartedpartner("8");
+	   
 		$this->load->view('admin/includes/template', $data);
    }
 	
