@@ -25,7 +25,7 @@
   margin-right: 0px!important;
 }
 
-.tt>li>a {    
+.tab_list>li>a {    
     padding: 10px 3px;
 }
 
@@ -233,7 +233,7 @@
 	
 </div>
 <div id="exTab2" class="container">
-  <ul class="nav nav-tabs">
+  <ul class="nav nav-tabs tab_list">
     <li class="active"> <a href="#1" id="first" data-toggle="tab" >Church of South India</a> </li>
     <li><a href="#2" id="second" data-toggle="tab">Jawahar Navodaya Vidyalaya</a> </li>
     <li><a href="#3" id="third" data-toggle="tab">Kendriya Vidyalaya Sangathan (KVS)</a> </li>
