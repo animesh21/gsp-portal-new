@@ -50,11 +50,23 @@ class School extends CI_Controller {
         //print_r($post);
     }
 	
-     public function schoolAnswer()
+      public function schoolAnswer()
     {
         
         $post = $this->input->post();
+        if(!empty(extract($this->input->post()))){
+          $id = $this->session->userdata('USER_ID');
+          
+           $Q1S1_new=  array(
+                'Q1S1'=>$Q1S1
+            );          
+          
+            $this->db->where('userid', $id);
+            $this->db->update('gsp_school', $Q1S1_new);           
+
+        }
 		//print_r($post);exit;
+
         $this->Answer_model->submitSchoolAnswers($post);
         redirect(base_url("general"));
        
