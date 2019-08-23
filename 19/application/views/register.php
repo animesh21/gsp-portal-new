@@ -307,8 +307,8 @@ p{
   <div class="form-group satya" style="display: none;">
      <strong>Please Select</strong>
    <ul class="list-inline">
-     <li><input type="radio" name="bharti" value="1"/> Satya Bharti School</li>
-   <li><input type="radio" name="bharti" value="2"/> BF Quality Support Programme </li>
+     <li><input type="radio" name="bharti" value="7"/> Satya Bharti School</li>
+   <li><input type="radio" name="bharti" value="8"/> BF Quality Support Programme </li>
    
    </ul>
    
