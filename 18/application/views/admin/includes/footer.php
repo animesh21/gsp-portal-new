@@ -33,10 +33,10 @@
         });
         $('#tablePerformance').DataTable({
             dom: 'lBfrtip',
-			paging: false,
+	    paging: false,
             searching: false,
             buttons: [
-                'excel'
+                'csv'
             ],
             "aLengthMenu": [[10, 25, 50, 75, -1], [10, 25, 50, 75, "All"]],
             "iDisplayLength": 25
