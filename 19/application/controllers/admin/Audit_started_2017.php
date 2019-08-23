@@ -900,14 +900,14 @@ public function digital_certificate_for_principal_coordinator($argID)
 	     $partner_status='6';
 	  }
 
-         if($partner=='Satya Bharti School' || $satya_foundation_status==1 ){
+         if($partner=='Satya Bharti School' || $satya_foundation_status==7 ){
             $partner_status='6';
-            $satya_foundation_status='1';
+            $satya_foundation_status='7';
          }
 
-         if($partner=='BF Quality Support Programme' || $satya_foundation_status==2 ){
+         if($partner=='BF Quality Support Programme' || $satya_foundation_status==8 ){
             $partner_status='6';
-            $satya_foundation_status='2';
+            $satya_foundation_status='8';
       }
 
       
