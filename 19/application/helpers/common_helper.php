@@ -89,7 +89,93 @@ if(!function_exists('getYOYComparisonYesNo')){
 }
 
 
+// jeetu......
 
+
+
+if(!function_exists('getPartnersCountByState1')){
+  function getPartnersCountByState1($stateId,$partnertype){
+        $CI = & get_instance();
+  $CI->db->where('make_school_disabled',"1");  
+  $temp = $CI->db->select('COUNT("id") As CountLabel')->from("gsp_school")->where(array('state'=>$stateId,"satya_foundation_status"=>7))->get()->row();
+    return $temp->CountLabel;
+  }
+}
+
+if(!function_exists('getPartnersAuditNotStartedCountByState1')){
+  function getPartnersAuditNotStartedCountByState1($stateId,$partnertype,$progress){
+        $CI = & get_instance();
+  $CI->db->where('make_school_disabled',"1");
+    $temp = $CI->db->select('COUNT("id") As CountLabel')->from("gsp_school")->where(array('state'=>$stateId,"satya_foundation_status"=>7,"progress"=>$progress))->get()->row();
+    return $temp->CountLabel;
+  }
+}
+
+if(!function_exists('getPartnersAuditStartedCountByState1')){
+  function getPartnersAuditStartedCountByState1($stateId,$partnertype,$progress1,$progress2){
+    $CI = & get_instance();
+    $CI->db->where('make_school_disabled',"1");
+  $CI->db->where("progress>",$progress1);
+  $CI->db->where("progress<",$progress2);
+  $temp = $CI->db->select('COUNT("id") As CountLabel')->from("gsp_school")->where(array('state'=>$stateId,"satya_foundation_status"=>7))->get()->row();
+    return $temp->CountLabel;
+  }
+}
+
+if(!function_exists('getPartnersAuditCompletedCountByState1')){
+  function getPartnersAuditCompletedCountByState1($stateId,$partnertype,$progress1){
+    $CI = & get_instance();
+    $CI->db->where('make_school_disabled',"1");
+  $CI->db->where("progress",$progress1);
+  $temp = $CI->db->select('COUNT("id") As CountLabel')->from("gsp_school")->where(array('state'=>$stateId,"satya_foundation_status"=>7))->get()->row();
+    return $temp->CountLabel;
+  }
+}
+
+
+
+if(!function_exists('getPartnersCountByState2')){
+  function getPartnersCountByState2($stateId,$partnertype){
+        $CI = & get_instance();
+  $CI->db->where('make_school_disabled',"1");  
+  $temp = $CI->db->select('COUNT("id") As CountLabel')->from("gsp_school")->where(array('state'=>$stateId,"satya_foundation_status"=>8))->get()->row();
+    return $temp->CountLabel;
+  }
+}
+
+if(!function_exists('getPartnersAuditNotStartedCountByState2')){
+  function getPartnersAuditNotStartedCountByState2($stateId,$partnertype,$progress){
+        $CI = & get_instance();
+  $CI->db->where('make_school_disabled',"1");
+    $temp = $CI->db->select('COUNT("id") As CountLabel')->from("gsp_school")->where(array('state'=>$stateId,"satya_foundation_status"=>8,"progress"=>$progress))->get()->row();
+    return $temp->CountLabel;
+  }
+}
+
+if(!function_exists('getPartnersAuditStartedCountByState2')){
+  function getPartnersAuditStartedCountByState2($stateId,$partnertype,$progress1,$progress2){
+    $CI = & get_instance();
+    $CI->db->where('make_school_disabled',"1");
+  $CI->db->where("progress>",$progress1);
+  $CI->db->where("progress<",$progress2);
+  $temp = $CI->db->select('COUNT("id") As CountLabel')->from("gsp_school")->where(array('state'=>$stateId,"satya_foundation_status"=>8))->get()->row();
+    return $temp->CountLabel;
+  }
+}
+
+if(!function_exists('getPartnersAuditCompletedCountByState2')){
+  function getPartnersAuditCompletedCountByState2($stateId,$partnertype,$progress1){
+    $CI = & get_instance();
+    $CI->db->where('make_school_disabled',"1");
+  $CI->db->where("progress",$progress1);
+  $temp = $CI->db->select('COUNT("id") As CountLabel')->from("gsp_school")->where(array('state'=>$stateId,"satya_foundation_status"=>8))->get()->row();
+    return $temp->CountLabel;
+  }
+}
+
+
+
+// jeetu......
 
 
 
@@ -223,6 +309,68 @@ function getPartnerGraphByState($partnerId){
 	}
 }
 
+
+// jeetu>>>>>>>>>>>>>>
+
+
+if(!function_exists('getPartnerGraphByStateSatya')){
+function getPartnerGraphByStateSatya($satyastatus){
+ $CI = & get_instance();
+    $CI->db->distinct("state");
+    $CI->db->where('make_school_disabled',"1");
+    $stateResult=$CI->db->select("state,make_school_disabled")
+             ->from("gsp_school")             
+             ->where("satya_foundation_status", $satyastatus)
+             ->get()->result();             
+    $arrState=array();
+    $arrRegister=array();
+    $arrAuditNotStarted=array();
+    $arrAuditStarted=array();
+    $arrAuditCompleted=array();
+    foreach($stateResult as $state){
+               $arrState[]=array("statename"=>getStateById($state->state));
+         $arrRegister[].=getPartnersCountByState1($state->state,$partnerId);
+         $arrAuditNotStarted[].=getPartnersAuditNotStartedCountByState1($state->state,$partnerId,'5');
+         $arrAuditStarted[].=getPartnersAuditStartedCountByState1($state->state,$partnerId,'5','100');
+         $arrAuditCompleted[].=getPartnersAuditCompletedCountByState1($state->state,$partnerId,'100');   
+    } 
+    $completeArr=array("0"=>$arrState,"1"=>$arrRegister,"2"=>$arrAuditNotStarted,"3"=>$arrAuditStarted,"4"=>$arrAuditCompleted);
+    return $completeArr;   
+  }
+}
+
+
+if(!function_exists('getPartnerGraphByStateSatya_8')){
+function getPartnerGraphByStateSatya_8($satyastatus){
+ $CI = & get_instance();
+    $CI->db->distinct("state");
+    $CI->db->where('make_school_disabled',"1");
+    $stateResult=$CI->db->select("state,make_school_disabled")
+             ->from("gsp_school")             
+             ->where("satya_foundation_status", $satyastatus)
+             ->get()->result();             
+    $arrState=array();
+    $arrRegister=array();
+    $arrAuditNotStarted=array();
+    $arrAuditStarted=array();
+    $arrAuditCompleted=array();
+    foreach($stateResult as $state){
+               $arrState[]=array("statename"=>getStateById($state->state));
+         $arrRegister[].=getPartnersCountByState2($state->state,$partnerId);
+         $arrAuditNotStarted[].=getPartnersAuditNotStartedCountByState2($state->state,$partnerId,'5');
+         $arrAuditStarted[].=getPartnersAuditStartedCountByState2($state->state,$partnerId,'5','100');
+         $arrAuditCompleted[].=getPartnersAuditCompletedCountByState2($state->state,$partnerId,'100');   
+    } 
+    $completeArr=array("0"=>$arrState,"1"=>$arrRegister,"2"=>$arrAuditNotStarted,"3"=>$arrAuditStarted,"4"=>$arrAuditCompleted);
+    return $completeArr;   
+  }
+}
+
+
+// jeetu>>>>>>>>>>>>>>
+
+
+
 if(!function_exists('getDataGraphByDistrict')){
 function getDataGraphByDistrict($stateId){
  $CI = & get_instance();
@@ -282,7 +430,7 @@ if (!function_exists('get_partner')) {
 
 
 if(!function_exists('get_partner_subpartner')){
-      function get_partner_subpartner($partnerId, $subpartnerId){
+      function get_partner_subpartner($subpartnerId){
       $arrState = array();
       $CI = & get_instance();
       $CI->db->where('a.make_school_disabled',"1");
@@ -290,7 +438,7 @@ if(!function_exists('get_partner_subpartner')){
                      ->from('gsp_school AS a')
                      ->join('states AS b', 'a.state=b.id', 'left')
                      ->join('cities AS c', 'a.district=c.id', 'left')
-                     ->where('a.partner_status', $partnerId)
+                    
                      ->where('a.satya_foundation_status', $subpartnerId)
                      ->order_by('a.id', 'desc')
                      ->get()
