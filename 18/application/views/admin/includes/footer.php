@@ -33,6 +33,8 @@
         });
         $('#tablePerformance').DataTable({
             dom: 'lBfrtip',
+			paging: false,
+            searching: false,
             buttons: [
                 'excel'
             ],
