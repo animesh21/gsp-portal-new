@@ -488,19 +488,18 @@ class Dashboard_model extends CI_Model {
       }
    
       public function getSubmittedTheAudit_19data(){
-	    $this->db->where("a.make_school_disabled","1");  
-		//$this->db->where('d.date_on <=', '2018-11-19');   
-        return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
+	    return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
         ->from('gsp_school AS a')
         ->join('states AS b', 'a.state=b.id', 'left')
 	    ->join('cities AS c', 'a.district=c.id', 'left')
-        ->join('gsp_aduit_submitted as d',"a.userid=d.userid")
+        
 	    ->where('a.progress', '100')
-		 ->where('a.complete_status','1')
-	    ->where('d.status','1')
-	     
+	    ->where('a.complete_status','1')
+	    ->where('a.make_school_disabled',1)
         ->order_by('a.id', 'desc')
-        ->get()->result();
+        ->get()->result();		
+		
+      }
 		
 		
       }
