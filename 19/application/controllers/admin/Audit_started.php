@@ -443,8 +443,11 @@ class Audit_started extends CI_Controller {
         	     $Totalemail = implode(",", $email_list); 
 
         	   $Totalemailpp= explode(',', $Totalemail);
-		$pp=  array_flip(array_filter(array_flip($Totalemailpp), create_function('$a','return $a%2;')));
-		 $school_mail = explode(',', $pp);
+		 $pp=  array_flip(array_filter(array_flip($Totalemailpp), create_function('$a','return $a%2;')));
+		 $yy = implode(',', $pp);
+		 $school_mail = explode(',', $yy);
+		 echo "<pre>";
+				print_r($Totalemailpp);
         	  
                $i=1;
         	   foreach ($Totalemailpp as $gg) {  
@@ -462,12 +465,14 @@ class Audit_started extends CI_Controller {
 				$body->personalizations = array();
 				$body->personalizations[0] = new PepipostAPILib\Models\Personalizations;
 				$body->personalizations[0]->recipient = $gg;
-
+				
 				if($i==1){
+					print_r($school_mail);
                                 foreach ($school_mail as $tt) {
-				$body->personalizations[0]->recipientCc = $tt;
+                                	 
+				$body->personalizations[0]->recipient_cc = $tt;
 					}
-                $body->personalizations[0]->recipientBcc =  array('ranjita@cseindia.org');
+               $body->personalizations[0]->recipient_bcc =  array('ranjita@cseindia.org') ;
                 }
 
 				//$body->personalizations[0]->recipientCc = array($Totalemail);
@@ -497,7 +502,7 @@ class Audit_started extends CI_Controller {
 
 		$this->session->set_flashdata('success', 'Your Email is Successfully Send');
 
-				redirect(base_url('admin/audit_started/feedback'));
+				//redirect(base_url('admin/audit_started/feedback'));
 
         }
 
