@@ -72,6 +72,8 @@ class Waste extends CI_Controller {
     {
 
         $post = $this->input->post();
+		echo "<pre>";
+		print_r($post); exit;
         $this->Answer_model->submitAnswers($post,7);
         updateProgress($this->session->userdata('USER_ID'), 100);
         //print_r($post);
