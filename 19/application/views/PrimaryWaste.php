@@ -1837,10 +1837,9 @@
                                                     <input type="radio"  name="Q13Wa2" value="<?php echo set_value('Q13Wa2',4)?>" <?php if(isset($data['Q13Wa2'])) echo $data['Q13Wa2'] == 4 ?"checked":"" ?>>
                                                     Authorised dismantler </label>
                                             </li>
-                                            <li>
-                                                <label>Other: &nbsp
-                                                    <input type="text" name="Q13Wa2" value="<?php echo set_value('Q13Wa2'); ?>" placeholder="<?php if(isset($data['Q13Wa2'])) echo $data['Q13Wa2'] ?>">
-                                                </label>
+                                             <li style="font-weight: 700">
+                                              <input type="radio" <?php if(isset($data['Q13Wa2']) && $data['Q13Wa2']!=is_numeric($data['Q13Wa2'])) echo "checked"?>  name="Q13Wa2" id="other" > Other <br/> <input id="inputother" placeholder="<?php if($data['Q13Wa2']!='' && $data['Q13Wa2']!=is_numeric($data['Q13Wa2'])) echo $data['Q13Wa2']; ?>" type="text" onchange="changeradioother()" / style="width: 20%;">
+                                                 
                                             </li>
                                         </ul>
                                     </div>
