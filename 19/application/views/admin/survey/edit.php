@@ -164,8 +164,8 @@
 	  <option value="4" <?php if($school->partner_status==4){ echo "selected"; } ?>>Montfortian Education Foundation</option>
 	  <option value="5" <?php if($school->partner_status==5){ echo "selected"; } ?>>Mount Litera Zee Schools</option>
 	  <option value="6" <?php if($school->partner_status==6){ echo "selected"; } ?>>Satya Bharti Foundation</option>
-      <option value="6" <?php if($school->partner_status==6 && $school->satya_foundation_status==1){ echo "selected"; } ?>>Satya Bharti School</option>
-      <option value="6" <?php if($school->partner_status==6 && $school->satya_foundation_status==2){ echo "selected"; } ?>>BF Quality Support Programme</option>
+      <option value="7" <?php if($school->partner_status==6 && $school->satya_foundation_status==7){ echo "selected"; } ?>>Satya Bharti School</option>
+      <option value="8" <?php if($school->partner_status==6 && $school->satya_foundation_status==8){ echo "selected"; } ?>>BF Quality Support Programme</option>
 	</select>
                         </div>  
 			    
@@ -176,9 +176,9 @@
                             <select class="schoolname name form-control  placeholder" name="satya_list" id="satya_list">
       
       <option value="0" <?php if($school->satya_foundation_status=='0'){ echo "selected"; } ?>>Select Partner</option>
-      <option value="1" <?php if($school->satya_foundation_status=='1'){ echo "selected"; } ?>>Satya Bharti School</option>
+      <option value="7" <?php if($school->satya_foundation_status=='7'){ echo "selected"; } ?>>Satya Bharti School</option>
      
-      <option value="2" <?php if($school->satya_foundation_status=='2'){ echo "selected"; } ?>>BF Quality Support Programme</option>
+      <option value="8" <?php if($school->satya_foundation_status=='8'){ echo "selected"; } ?>>BF Quality Support Programme</option>
     </select>
     </div>	    
 			    
