@@ -434,6 +434,7 @@ class Audit_started extends CI_Controller {
     }
 	
 	
+	
 	public function send_email() {
 
            //echo $this->input->post('send_mail'); exit;
@@ -443,14 +444,22 @@ class Audit_started extends CI_Controller {
         	     $Totalemail = implode(",", $email_list); 
 
         	   $Totalemailpp= explode(',', $Totalemail);
-		 $pp=  array_flip(array_filter(array_flip($Totalemailpp), create_function('$a','return $a%2;')));
-		 $yy = implode(',', $pp);
-		 $school_mail = explode(',', $yy);
-		 echo "<pre>";
-				print_r($Totalemailpp);
+        	   //print_r($Totalemailpp);
+
+        	   $school = array();
+		       $codinator = array();
+
+		       foreach ($Totalemailpp as $key => $value) {
+		       	if ($key % 2==0){
+        	   		$school[$key] = $value;
+        	   	}
+        	   	else{
+        	   		$codinator[$key] = $value;
+        	   	}
+		       }
         	  
                $i=1;
-        	   foreach ($Totalemailpp as $gg) {  
+        	   foreach ($school as $gg) {  
                 
         	    require_once APPPATH . "/third_party/pepipost/vendor/autoload.php";
 				$client = new PepipostAPILib\PepipostAPIClient();
@@ -464,20 +473,20 @@ class Audit_started extends CI_Controller {
 				// List of Email Recipients
 				$body->personalizations = array();
 				$body->personalizations[0] = new PepipostAPILib\Models\Personalizations;
-				$body->personalizations[0]->recipient = $gg;
-				
-				if($i==1){
-					print_r($school_mail);
-                                foreach ($school_mail as $tt) {
-                                	 
-				$body->personalizations[0]->recipient_cc = $tt;
-					}
-               $body->personalizations[0]->recipient_bcc =  array('ranjita@cseindia.org') ;
-                }
+				 $body->personalizations[0]->recipient = $gg;
 
+				  $mm = implode(',', $codinator);
+				   $mm;
+
+				 if($i==1){                 
+                                	 
+				 $body->personalizations[0]->recipientCc =  array($mm);	
+				  		 
+				}
+              
 				//$body->personalizations[0]->recipientCc = array($Totalemail);
 				             #To/Recipient email address
-
+				
 				// Email Header
 				$body->from = new PepipostAPILib\Models\From;
 				$body->from->fromEmail = 'support@greenschoolsprogramme.org';   #Sender Domain. Note: The sender domain should be verified and active under your Pepipost account.
@@ -492,23 +501,23 @@ class Audit_started extends CI_Controller {
 				$body->settings->clicktrack = 1;    #clicktrack for emails enable=1 | disable=0
 				$body->settings->opentrack = 1;     #opentrack for emails enable=1 | disable=0
 				$body->settings->unsubscribe = 1;   #unsubscribe for emails enable=1 | disable=0
+				 $body->settings->bcc = 'ranjita@cseindia.org';
 
 				$response = $emailController->createSendEmail($apiKey,$body);  
 
               $i++; } 
-
+ 
 				 #function sends email
 				print_r(json_encode($response)); 
 
 		$this->session->set_flashdata('success', 'Your Email is Successfully Send');
 
-				//redirect(base_url('admin/audit_started/feedback'));
+				redirect(base_url('admin/audit_started/feedback'));
 
         }
 
 
  }
-
 
     /**Get Smmary Data**/
 	/*24-04-2018*/
