@@ -70,7 +70,7 @@
 		    
 		//$this->form_validation->set_rules('captcha', 'Captcha', 'callback_validate_captcha');
 		$this->form_validation->set_rules('state', 'State', 'required');		   
-		$this->form_validation->set_rules('udise', 'Udise', 'required|numeric');
+		$this->form_validation->set_rules('udise', 'Udise', 'required');
 		$this->form_validation->set_rules('name', 'School Name', 'required');
 		$this->form_validation->set_rules('address1', 'Address Line 1*', 'required');
 		//$this->form_validation->set_rules('address2', 'Address Line 2*', 'required');
