@@ -68,7 +68,7 @@ p{
                 $('.wrapper').show();
                 $('#registration-form').validate({
                     rules: {
-												udise: {
+			udise: {
                             required: true,
                             number:true
                         },
@@ -550,7 +550,7 @@ opacity: 1;}
 
 </script>
   
-  <script type="text/javascript">
+<!--   <script type="text/javascript">
     
     $(document).ready(function(){
 
@@ -579,7 +579,7 @@ opacity: 1;}
 
     });
 
-  </script>
+  </script> -->
   
   <script type="text/javascript">
   
