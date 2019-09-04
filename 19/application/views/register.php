@@ -70,7 +70,7 @@ p{
                     rules: {
 			udise: {
                             required: true,
-                            number:true
+                            //number:true
                         },
                         name: {
                             required: true
