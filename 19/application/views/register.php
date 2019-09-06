@@ -415,7 +415,7 @@ p{
          
     
  </div>
-    <?php if($user2==Null){ ?>
+    <?php if($user2==null){ ?>
 <div class="form-group text-center">   
       <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-default">
     </div>
