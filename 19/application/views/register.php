@@ -585,7 +585,7 @@ opacity: 1;}
   
 $(document).ready(function(){
 
-  $('button[type=submit]').attr('disabled','disabled');
+ // $('button[type=submit]').attr('disabled','disabled');
 
   var randomNum1;
   var randomNum2;
