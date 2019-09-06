@@ -415,14 +415,9 @@ p{
          
     
  </div>
-    <?php if($user2==null){ ?>
-<div class="form-group text-center">   
-      <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-default">
+    <div class="form-group text-center">
+      <input type="submit" name="submit"  id="submit" value="Submit" class="btn btn-default">
     </div>
-<?php } else { ?> <div class="form-group text-center">   
-      <input type="submit" disabled="disabled" name="submit" id="submit" value="Submit" class="btn btn-default">
-    </div>
-  <?php } ?>
     <?php echo form_close(); ?> </div>
   <noscript>
   &lt;p class="disabled"&gt;This form requires JavaScript for proper functioning. Please enable JavaScript
