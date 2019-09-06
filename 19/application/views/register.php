@@ -630,7 +630,7 @@ $(document).ready(function(){
 
 //   // Wheen "reset button" click, generating new randomNum1 & randomNum2
 
-// });
+ });
 
 </script>
   
