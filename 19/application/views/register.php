@@ -583,54 +583,54 @@ opacity: 1;}
   
   <script type="text/javascript">
   
-$(document).ready(function(){
+// $(document).ready(function(){
 
- // $('button[type=submit]').attr('disabled','disabled');
+//   $('button[type=submit]').attr('disabled','disabled');
 
-  var randomNum1;
-  var randomNum2;
+//   var randomNum1;
+//   var randomNum2;
 
-  //set the largeest number to display
+//   //set the largeest number to display
 
-  var maxNum = 20;
-  var total;
+//   var maxNum = 20;
+//   var total;
 
-  randomNum1 = Math.ceil(Math.random()*maxNum);
-  randomNum2 = Math.ceil(Math.random()*maxNum);
-  total =randomNum1 + randomNum2;
+//   randomNum1 = Math.ceil(Math.random()*maxNum);
+//   randomNum2 = Math.ceil(Math.random()*maxNum);
+//   total =randomNum1 + randomNum2;
 
-  $( "#question" ).prepend( randomNum1 + " + " + randomNum2 + "=" );
+//   $( "#question" ).prepend( randomNum1 + " + " + randomNum2 + "=" );
 
-  // When users input the value
+//   // When users input the value
 
-  $( "#ans" ).keyup(function() {
+//   $( "#ans" ).keyup(function() {
 
-    var input = $(this).val();
-    var slideSpeed = 200;
+//     var input = $(this).val();
+//     var slideSpeed = 200;
 
-    $('#message').hide();
+//     $('#message').hide();
 
-    if (input == total) {
+//     if (input == total) {
 
-      $('button[type=submit]').removeAttr('disabled');
-      $('#success').slideDown(slideSpeed);
-      $('#fail').slideUp(slideSpeed);
+//       $('button[type=submit]').removeAttr('disabled');
+//       $('#success').slideDown(slideSpeed);
+//       $('#fail').slideUp(slideSpeed);
 
-    }
+//     }
 
-    else {
+//     else {
 
-      $('button[type=submit]').attr('disabled','disabled');
-      $('#fail').slideDown(slideSpeed);
-      $('#success').slideUp(slideSpeed);
+//       $('button[type=submit]').attr('disabled','disabled');
+//       $('#fail').slideDown(slideSpeed);
+//       $('#success').slideUp(slideSpeed);
 
-    }
+//     }
 
-  });
+//   });
 
-  // Wheen "reset button" click, generating new randomNum1 & randomNum2
+//   // Wheen "reset button" click, generating new randomNum1 & randomNum2
 
-});
+// });
 
 </script>
   
