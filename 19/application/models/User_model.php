@@ -266,11 +266,11 @@ class User_model extends CI_Model
          else{
     $query = $this->db->select('*')
                     ->from('gsp_user')
-                    ->like('email', $this->input->post('val'))
+                    ->where('email', $this->input->post('val'))
                     ->get()->row();      
                  $varNewPass = strtolower(random_string('alnum', 5));
                  $arr = array('password' => $varNewPass);
-                 $this->db->like('email',$this->input->post('val'));
+                 $this->db->where('email',$this->input->post('val'));
                $this->db->update('gsp_user', $arr);
                $this->load->library('email');
 
