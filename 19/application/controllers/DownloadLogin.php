@@ -32,7 +32,7 @@ class DownloadLogin extends CI_Controller {
 				}
 		                elseif($varCheckLogin=="incomplete")
 				{
-				  $this->session->set_flashdata('error', "The School Have To Completed Full GSP Audit.");
+				  $this->session->set_flashdata('error', "The school has to first complete and SUBMIT the GSP Audit.");
 				}
             } else if($varCheckLogin=="error") {
                 $this->session->set_flashdata('error', 'Invalid Email/Password!');
