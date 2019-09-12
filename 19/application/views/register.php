@@ -416,7 +416,11 @@ p{
     
  </div>
     <div class="form-group text-center">
-      <input type="submit" name="submit"  id="submit" value="Submit" class="btn btn-default">
+      <?php if( !empty($user2) && $user['user_ip_address']==$user2[0]->user_ip_address) { ?>
+      <input type="submit" name="submit" disabled="disabled" id="submit" value="Submit" class="btn btn-default">
+    <?php } else { ?>
+      <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-default">
+    <?php } ?>
     </div>
     <?php echo form_close(); ?> </div>
   <noscript>
