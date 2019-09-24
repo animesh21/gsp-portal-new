@@ -135,6 +135,10 @@ class Download extends CI_Controller {
     }
 	
 function getdigitalCertificate($argID) {
+	 ob_clean();
+        flush();
+        header("Content-type:application/pdf");
+        header("Content-Disposition:attachment;filename='downloaded.pdf'");
    $data['title']="GSP Digital Certificates";
    $this->load->library('dompdf_lib');
    $students = $this->count_certificates_stuents($argID);
