@@ -80,6 +80,11 @@ class Download extends CI_Controller {
      */
 
     public function pdf($argID) {
+	    ob_clean();
+        flush();
+        header("Content-type:application/pdf");
+        header("Content-Disposition:attachment;filename='downloaded.pdf'"); 
+	    
         $data['title'] = 'Home';
         $data['id'] = $argID;
         $data['states'] = getStates();
