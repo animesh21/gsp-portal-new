@@ -2024,12 +2024,12 @@ if ($data['Q8F1'] == 'Y') { */
                     <ul class="list-inline">
                       <li>
                         <label class="radio-inline text-gray">
-                        <input type="radio" name="food2019_1" value="<?php echo set_value('food2019_1', 'Y') ?>" <?php if (isset($data['Q9F1'])) echo $data['food2019_1'] == 'Y' ? "checked" : "" ?>>
+                        <input type="radio" name="Q9F1C1" value="<?php echo set_value('Q9F1C1', 'Y') ?>" <?php if (isset($data['Q9F1C1'])) echo $data['Q9F1C1'] == 'Y' ? "checked" : "" ?>>
                         Yes </label>
                       </li>
                       <li>
                         <label class="radio-inline text-gray">
-                        <input type="radio" name="food2019_1" id="food2019_1" value="<?php echo set_value('food2019_1', 'N') ?>" <?php if (isset($data['food2019_1'])) echo $data['food2019_1'] == 'N' ? "checked" : "" ?>/>
+                        <input type="radio" name="Q9F1C1" id="Q9F1C1" value="<?php echo set_value('Q9F1C1', 'N') ?>" <?php if (isset($data['Q9F1C1'])) echo $data['Q9F1C1'] == 'N' ? "checked" : "" ?>/>
                         No </label>
                       </li>
                     </ul>
