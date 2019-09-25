@@ -4406,7 +4406,7 @@ if($('input[name="Q8W1S11"]:checked').length == 0){
 
            /*6(b)(1)If your school only stores rainwater, please select the use of stored rainwater: */
       if($("input[name='Q8W2S2']:checked").val()==1 || $("input[name='Q8W2S2']:checked").val()==3){
-        if($('input[name="Q8W2S2S14"]:checked').length==0 && $('input[name="Q8W2S2S25"]:checked').length==0 && $('input[name="Q8W2S2S36"]:checked').length==0 && $('input[name="Q8W2S2S47"]:checked').length==0 && $('input[name="Q8W2S2S58"]:checked').length==0 && $('input[name="Q8W2S2S69"]:checked').length==0 && $('input[name="Q8W2S2S723"]:checked').length==0 && $('input[name="Q8W2S2S811"]:checked').length==0 && $('input[name="Q8W2S2S912"]:checked').length==0 && $('input[name="Q8W2S2S1013"]:checked').length==0){
+        if($('input[name="QSW2S2W1"]:checked').length==0 && $('input[name="QSW2S2W2"]:checked').length==0 && $('input[name="QSW2S2W3"]:checked').length==0 && $('input[name="QSW2S2W4"]:checked').length==0 && $('input[name="QSW2S2W5"]:checked').length==0 && $('input[name="QSW2S2W6"]:checked').length==0 && $('input[name="QSW2S2W7"]:checked').length==0 && $('input[name="QSW2S2W8"]:checked').length==0 && $('input[name="QSW2S2W9"]:checked').length==0 && $('input[name="QSW2S2W10"]:checked').length==0){
        alert("6(b)(1)If your school only stores rainwater, please select the use of stored rainwater:?");
      e.preventDefault();
       }}
@@ -4584,7 +4584,7 @@ if($('input[name="Q8W1S11"]:checked').length == 0){
     } 
   /**Q6(b)(1)If your school only stores rainwater, please select the use of stored rainwater:**/
    if($("input[name='Q8W2S2']:checked").val()==="1"){
-       if($("input[name='Q8W2S2S14']:checked").length==0 && $("input[name='Q8W2S2S25']:checked").length==0 && $("input[name='Q8W2S2S36']:checked").length==0 && $("input[name='Q8W2S2S47']:checked").length==0 && $("input[name='Q8W2S2S58']:checked").length==0 && $("input[name='Q8W2S2S69']:checked").length==0 && $("input[name='Q8W2S2S723']:checked").length==0 && $("input[name='Q8W2S2S811']:checked").length==0 && $("input[name='Q8W2S2S912']:checked").length==0 && $("input[name='Q8W2S2S1013']:checked").length==0 ){
+       if($("input[name='QSW2S2W1']:checked").length==0 && $("input[name='QSW2S2W2']:checked").length==0 && $("input[name='QSW2S2W3']:checked").length==0 && $("input[name='QSW2S2W4']:checked").length==0 && $("input[name='QSW2S2W5']:checked").length==0 && $("input[name='QSW2S2W6']:checked").length==0 && $("input[name='QSW2S2W7']:checked").length==0 && $("input[name='QSW2S2W8']:checked").length==0 && $("input[name='QSW2S2W9']:checked").length==0 && $("input[name='QSW2S2W10']:checked").length==0 ){
        alert("Q6(b)(1) If your school only stores rainwater, please select the use of stored rainwater?");
       
     } 
