@@ -1710,59 +1710,59 @@ To understand water, it is important to know the source of water in your school 
     <ul>
       <li>
         <label class="radio-inline text-gray">
-        <input type="checkbox" name="Q8W2S2S14"
-                                                   value="<?php echo set_value('Q8W2S2S14', 1) ?>" <?php if (isset($data['Q8W2S2S14'])) echo set_checkbox('Q8W2S2S14', '1', true); ?>>
+        <input type="checkbox" name="QSW2S2W1"
+                                                   value="<?php echo set_value('QSW2S2W1', 1) ?>" <?php if (isset($data['QSW2S2W1'])) echo set_checkbox('QSW2S2W1', '1', true); ?>>
         Drinking </label>
       </li>
       <li>
         <label class="radio-inline text-gray">
-        <input type="checkbox" name="Q8W2S2S25"
-                                                   value="<?php echo set_value('Q8W2S2S25', 1) ?>" <?php if (isset($data['Q8W2S2S25'])) echo set_checkbox('Q8W2S2S25', '1', true); ?>/>
+        <input type="checkbox" name="QSW2S2W2"
+                                                   value="<?php echo set_value('QSW2S2W2', 1) ?>" <?php if (isset($data['QSW2S2W2'])) echo set_checkbox('QSW2S2W2', '1', true); ?>/>
         Gardening </label>
       </li>
       <li>
         <label class="radio-inline text-gray">
-        <input type="checkbox" name="Q8W2S2S36"
-                                                   value="<?php echo set_value('Q8W2S2S36', 1) ?>" <?php if (isset($data['Q8W2S2S36'])) echo set_checkbox('Q8W2S2S36', '1', true); ?>/>
+        <input type="checkbox" name="QSW2S2W3"
+                                                   value="<?php echo set_value('QSW2S2W3', 1) ?>" <?php if (isset($data['QSW2S2W3'])) echo set_checkbox('QSW2S2W3', '1', true); ?>/>
         Mopping </label>
       </li>
       <li>
         <label class="radio-inline text-gray">
-        <input type="checkbox" name="Q8W2S2S47"
-                                                   value="<?php echo set_value('Q8W2S2S47', 1) ?>" <?php if (isset($data['Q8W2S2S47'])) echo set_checkbox('Q8W2S2S47', '1', true); ?>/>
+        <input type="checkbox" name="QSW2S2W4"
+                                                   value="<?php echo set_value('QSW2S2W4', 1) ?>" <?php if (isset($data['QSW2S2W4'])) echo set_checkbox('QSW2S2W4', '1', true); ?>/>
         Toilets </label>
       </li>
       <li>
         <label class="radio-inline text-gray">
-        <input type="checkbox" name="Q8W2S2S58"
-                                                   value="<?php echo set_value('Q8W2S2S58', 1) ?>" <?php if (isset($data['Q8W2S2S58'])) echo set_checkbox('Q8W2S2S58', '1', true); ?>/>
+        <input type="checkbox" name="QSW2S2W5"
+                                                   value="<?php echo set_value('QSW2S2W5', 1) ?>" <?php if (isset($data['QSW2S2W5'])) echo set_checkbox('QSW2S2W5', '1', true); ?>/>
         Washing vehicles </label>
       </li>
       <li>
         <label class="radio-inline text-gray">
-        <input type="checkbox" name="Q8W2S2S69" value="<?php echo set_value('Q8W2S2S69', 1) ?>" <?php if (isset($data['Q8W2S2S69'])) echo set_checkbox('Q8W2S2S69', '1', true); ?>/>
+        <input type="checkbox" name="QSW2S2W6" value="<?php echo set_value('QSW2S2W6', 1) ?>" <?php if (isset($data['QSW2S2W6'])) echo set_checkbox('QSW2S2W6', '1', true); ?>/>
         Kitchen (Cooking/Washing vegetables and utensils) </label>
       </li>
       <li>
         <label class="radio-inline text-gray">
-        <input type="checkbox" name="Q8W2S2S723" value="<?php echo set_value('Q8W2S2S723', 1) ?>" <?php if (isset($data['Q8W2S2S723'])) echo set_checkbox('Q8W2S2S723', '1', true); ?>/>
+        <input type="checkbox" name="QSW2S2W7" value="<?php echo set_value('QSW2S2W7', 1) ?>" <?php if (isset($data['QSW2S2W7'])) echo set_checkbox('QSW2S2W7', '1', true); ?>/>
         Shower, Brushing teeth, Bathing, Hand washing </label>
       </li>
       <li>
         <label class="radio-inline text-gray">
-        <input type="checkbox" name="Q8W2S2S811" value="<?php echo set_value('Q8W2S2S811', 1) ?>" <?php if (isset($data['Q8W2S2S811'])) echo set_checkbox('Q8W2S2S811', '1', true); ?>/>
+        <input type="checkbox" name="QSW2S2W8" value="<?php echo set_value('QSW2S2W8', 1) ?>" <?php if (isset($data['QSW2S2W8'])) echo set_checkbox('QSW2S2W8', '1', true); ?>/>
         Swimming Pool </label>
       </li>
       <li>
         <label class="radio-inline text-gray">
-        <input type="checkbox" name="Q8W2S2S912"
-                                                   value="<?php echo set_value('Q8W2S2S912', 1) ?>" <?php if (isset($data['Q8W2S2S912'])) echo set_checkbox('Q8W2S2S912', '1', true); ?>/>
+        <input type="checkbox" name="QSW2S2W9"
+                                                   value="<?php echo set_value('QSW2S2W9', 1) ?>" <?php if (isset($data['QSW2S2W9'])) echo set_checkbox('QSW2S2W9', '1', true); ?>/>
         Fire fighting </label>
       </li>
       <li>
         <label class="radio-inline text-gray">
-        <input type="checkbox" name="Q8W2S2S1013"
-                                                   value="<?php echo set_value('Q8W2S2S1013', 1) ?>" <?php if (isset($data['Q8W2S2S1013'])) echo set_checkbox('Q8W2S2S1013', '1', true); ?>/>
+        <input type="checkbox" name="QSW2S2W10"
+                                                   value="<?php echo set_value('QSW2S2W10', 1) ?>" <?php if (isset($data['QSW2S2W10'])) echo set_checkbox('QSW2S2W10', '1', true); ?>/>
         Desert coolers </label>
       </li>
     </ul>
