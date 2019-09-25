@@ -1958,7 +1958,7 @@ To understand water, it is important to know the source of water in your school 
                                            value="<?php echo set_value('Q8W2S2S7', 'Y') ?>" <?php if (isset($data['Q8W2S2S7'])) echo $data['Q8W2S2S7'] == 'Y' ? "checked" : "" ?>>
     Yes </label>
     <label class="radio-inline text-gray">
-    <input type="radio" id="Q8W2S2S7_2" name="Q8W2S2S7" onClick="Recharge(2)"
+    <input type="radio"  name="Q8W2S2S7" onClick="Recharge(2)"
                                            value="<?php echo set_value('Q8W2S2S7', 'N') ?>" <?php if (isset($data['Q8W2S2S7'])) echo $data['Q8W2S2S7'] == 'N' ? "checked" : "" ?>/>
     No </label>
   </div>
@@ -2091,25 +2091,25 @@ value="<?php if (isset($data['Q8W2S2S8'])) echo $data['Q8W2S2S8']; ?>" placehold
       </li>
       <li>
         <label class="radio-inline text-gray">
-        <input type="radio" id="Q8W2S2S10_2" name="Q8W2S2S10"
+        <input type="radio"  name="Q8W2S2S10"
                                                    value="<?php echo set_value('Q8W2S2S10', 2) ?>" <?php if (isset($data['Q8W2S2S10'])) echo $data['Q8W2S2S10'] == 2 ? "checked" : "" ?>/>
         Storage > Recharge </label>
       </li>
       <li>
         <label class="radio-inline text-gray">
-        <input type="radio" id="Q8W2S2S10_2" name="Q8W2S2S10"
+        <input type="radio"  name="Q8W2S2S10"
                                                    value="<?php echo set_value('Q8W2S2S10', 3) ?>" <?php if (isset($data['Q8W2S2S10'])) echo $data['Q8W2S2S10'] == 3 ? "checked" : "" ?>/>
         Recharge > Storage </label>
       </li>
       <li>
         <label class="radio-inline text-gray">
-        <input type="radio" id="Q8W2S2S10_2" name="Q8W2S2S10"
+        <input type="radio"  name="Q8W2S2S10"
                                                    value="<?php echo set_value('Q8W2S2S10', 4) ?>" <?php if (isset($data['Q8W2S2S10'])) echo $data['Q8W2S2S10'] == 4 ? "checked" : "" ?>/>
         Only recharge </label>
       </li>
       <li>
         <label class="radio-inline text-gray">
-        <input type="radio" id="Q8W2S2S10_2" name="Q8W2S2S10"
+        <input type="radio"  name="Q8W2S2S10"
                                                    value="<?php echo set_value('Q8W2S2S10', 5) ?>" <?php if (isset($data['Q8W2S2S10'])) echo $data['Q8W2S2S10'] == 5 ? "checked" : "" ?>/>
         Only storage </label>
       </li>
