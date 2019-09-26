@@ -358,9 +358,9 @@ class Audit_started extends CI_Controller {
                
                 if($p=='100')
             	{
-            		$test[] = " a.progress='$p' AND complete_status = '0'";
+            		$test[] = " a.progress='$p' AND make_school_disabled = '1'";
             	}
-		if($p=='5')
+		elseif($p=='5')
             	{
             		$test[] = " a.progress='$p' AND make_school_disabled = '1'";
             	}
@@ -373,7 +373,7 @@ class Audit_started extends CI_Controller {
         }
 	
 	if (!empty($progress_range)) {
-            $conditions[] = " a.progress BETWEEN 10 AND 40";
+            $conditions[] = " a.progress BETWEEN 10 AND 40 AND make_school_disabled = '1'";
         }   
 
         //Category
