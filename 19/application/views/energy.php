@@ -2543,6 +2543,14 @@ else{
            setTimeout(function(){ $(".hide_one").css("display","none"); },600);
         }
     }
+    else if($('#Q9E2').click(function(){
+      var t = $('#Q9E2').val();
+      if(t==='N')
+      {
+        return true;
+      }
+    });
+      )
       else if($("input[name='Q9E1S102']").prop('checked') == true || $("input[name='Q9E1S103']").prop('checked') == true || $("input[name='Q9E1S104']").prop('checked') == true || $("input[name='Q9E1S105']").prop('checked') == true || $("input[name='Q37E1']").prop('checked') == true)
       {
         $(this).unbind("click");
