@@ -80,7 +80,9 @@ class User_model extends CI_Model
         return $msg;
     }
 	
-    public function UserLoginDownload2($argPost)
+
+
+  public function UserLoginDownload2($argPost)
     {
     $msg=''; 
         $query = $this->db->select('a.*, a.username AS username, a.id AS id, a.status AS status, b.status AS status' )
@@ -88,8 +90,8 @@ class User_model extends CI_Model
             ->join('gsp_aduit_submitted_17 AS b', 'b.userid=a.id', 'left')     
             ->where(array('a.email' => $argPost['email'], 'a.password' => $argPost['password'], 'b.status'=>'1'))
             ->get();
-        if ($query1->num_rows() > 0) {
-            $row = $query1->row();
+        if ($query->num_rows() > 0) {
+            $row = $query->row();
       if($row->login_status==0)
       {
         $userData = array(
@@ -289,7 +291,7 @@ class User_model extends CI_Model
     {
     date_default_timezone_set('Asia/Kolkata');
         $this->load->helper('string');
-    $this->db->like('email',$this->input->post('val'));
+    
         $email_count =$this->db->select("id")->from('gsp_user')->get()->row();
       if (count($email_count)>0) {
         $this->db->like('coemail',$this->input->post('val'));
@@ -304,13 +306,14 @@ class User_model extends CI_Model
          else{
     $query = $this->db->select('*')
                     ->from('gsp_user')
-                    ->where('email', $this->input->post('val'))
+                    ->like('email', $this->input->post('val'))
                     ->get()->row();      
                  $varNewPass = strtolower(random_string('alnum', 5));
                  $arr = array('password' => $varNewPass);
-                 $this->db->where('email',$this->input->post('val'));
+                 $this->db->like('email',$this->input->post('val'));
                $this->db->update('gsp_user', $arr);
                $this->load->library('email');
+             
 
               $config['protocol']    = 'smtp';
               $config['smtp_host']    = 'ssl://smtp.gmail.com';
