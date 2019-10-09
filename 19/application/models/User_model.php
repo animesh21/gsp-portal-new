@@ -43,10 +43,10 @@ class User_model extends CI_Model
    public function UserLoginDownload($argPost)
     {
 		$msg=''; 
-        $query = $this->db->select('a.*, a.username AS username, a.id AS id, a.status AS status, b.complete_status AS complete_status, b.progress AS progress')
+        $query = $this->db->select('a.*, a.username AS username, a.id AS id, a.status AS status, b.status AS status' )
             ->from('gsp_user As a')
-            ->join('gsp_school_submited AS b', 'b.userid=a.id', 'left') 		
-            ->where(array('a.email' => $argPost['email'], 'a.password' => $argPost['password'], 'b.progress'=>'100', 'b.complete_status'=>'1'))
+            ->join('gsp_aduit_submitted AS b', 'b.userid=a.id', 'left') 		
+            ->where(array('a.email' => $argPost['email'], 'a.password' => $argPost['password'], 'b.status'=>'1'))
             ->get();
         if ($query->num_rows() > 0) {
             $row = $query->row();
@@ -83,10 +83,10 @@ class User_model extends CI_Model
     public function UserLoginDownload2($argPost)
     {
     $msg=''; 
-        $query1 = $this->db->select('a.*, a.username AS username, a.id AS id, a.status AS status, b.complete_status AS complete_status, b.progress AS progress')
-            ->from('gsp_user_17 As a')
-            ->join('gsp_school_submited AS b', 'b.userid=a.id', 'left')     
-            ->where(array('a.email' => $argPost['email'], 'a.password' => $argPost['password'], 'b.progress'=>'100', 'b.complete_status'=>'1'))
+        $query = $this->db->select('a.*, a.username AS username, a.id AS id, a.status AS status, b.status AS status' )
+            ->from('gsp_user As a')
+            ->join('gsp_aduit_submitted_17 AS b', 'b.userid=a.id', 'left')     
+            ->where(array('a.email' => $argPost['email'], 'a.password' => $argPost['password'], 'b.status'=>'1'))
             ->get();
         if ($query1->num_rows() > 0) {
             $row = $query1->row();
