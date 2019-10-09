@@ -80,7 +80,45 @@ class User_model extends CI_Model
         return $msg;
     }
 	
-   
+    public function UserLoginDownload2($argPost)
+    {
+    $msg=''; 
+        $query1 = $this->db->select('a.*, a.username AS username, a.id AS id, a.status AS status, b.complete_status AS complete_status, b.progress AS progress')
+            ->from('gsp_user_17 As a')
+            ->join('gsp_school_submited AS b', 'b.userid=a.id', 'left')     
+            ->where(array('a.email' => $argPost['email'], 'a.password' => $argPost['password'], 'b.progress'=>'100', 'b.complete_status'=>'1'))
+            ->get();
+        if ($query1->num_rows() > 0) {
+            $row = $query1->row();
+      if($row->login_status==0)
+      {
+        $userData = array(
+          'USERNAME' => $row->username,
+          'USER_ID' => $row->id,
+          'status' => $row->status,
+          'lastid' => $row->lastQuestionId,
+                    'email' => $row->email
+        );
+              $this->session->set_userdata($userData);
+              $msg='success';
+      }
+      else
+      {
+        $msg='warning';
+      }
+        }
+     elseif($row->complete_status==0 || $row->progress<100)
+      {
+        $msg='incomplete';
+      }
+         else
+    {
+       $msg='error';
+    }
+     
+           
+        return $msg;
+    }
 	
    public function UserLoginDownload1($argPost)
     {
