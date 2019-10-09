@@ -22,9 +22,10 @@ class DownloadLogin extends CI_Controller {
         } else {
             $post = $this->security->xss_clean($this->input->post());
             $varCheckLogin = $this->User_model->UserLoginDownload($post);
+            $varCheckLogin1 = $this->User_model->UserLoginDownload2($post);
             if ($varCheckLogin) {
 			    if($varCheckLogin=="success"){
-                redirect('https://www.greenschoolsprogramme.org/audit/18/download/downloadFiles');
+                redirect('https://localhost/gsp_19/18/download/downloadFiles');
 				}
 				elseif($varCheckLogin=="warning")
 				{
@@ -32,11 +33,28 @@ class DownloadLogin extends CI_Controller {
 				}
 		                elseif($varCheckLogin=="incomplete")
 				{
-				  $this->session->set_flashdata('error', "The school has to first complete and SUBMIT the GSP Audit.");
+				  $this->session->set_flashdata('error', "The School Have To Completed Full GSP Audit.");
 				}
             } else if($varCheckLogin=="error") {
                 $this->session->set_flashdata('error', 'Invalid Email/Password!');
             }
+
+            if ($varCheckLogin1) {
+          if($varCheckLogin1=="success"){
+                redirect('https://greenschoolsprogramme.org/audit/download/downloadFiles');
+        }
+        elseif($varCheckLogin1=="warning")
+        {
+          $this->session->set_flashdata('error', "The School Have Completed The GSP Audit So The School Can't Submit Audit Again");
+        }
+                    elseif($varCheckLogin1=="incomplete")
+        {
+          $this->session->set_flashdata('error', "The School Have To Completed Full GSP Audit.");
+        }
+            } else if($varCheckLogin1=="error") {
+                $this->session->set_flashdata('error', 'Invalid Email/Password!');
+            }
+
         }
 	     $this->load->view('download-login');
     }
@@ -53,10 +71,16 @@ class DownloadLogin extends CI_Controller {
         } else {
             $post = $this->security->xss_clean($this->input->post());
             $varCheckLogin = $this->User_model->UserLoginDownload1($post);
+            $varCheckLogin1 = $this->User_model->UserLoginDownload2($post);
             if ($varCheckLogin) {
 
                  redirect(base_url('download/downloadFiles'));
-                     }else{
+                     }
+                      if ($varCheckLogin1) {
+
+                 redirect(base_url('download/downloadFiles'));
+                     }
+                     else{
 
                          $this->session->set_flashdata('error', 'Invalid Email/Password!');
                      }
