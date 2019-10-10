@@ -24,7 +24,7 @@ class DownloadLogin extends CI_Controller {
             $varCheckLogin = $this->User_model->UserLoginDownload($post);
             if ($varCheckLogin) {
 			    if($varCheckLogin=="success"){
-              //  redirect(base_url('download/downloadFiles'));
+                redirect(base_url('https://greenschoolsprogramme.org/audit/download/downloadFiles'));
 				}
 				elseif($varCheckLogin=="warning")
 				{
