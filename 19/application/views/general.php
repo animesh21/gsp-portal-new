@@ -626,7 +626,7 @@
           $(document).ready(function(){
             $("#movenextbtn").click(function(e){
             
-            var p = $('#Q5G2').val();
+            var p = $("input[name='Q5G2']").attr("placeholder");
 
               if(p){
 
