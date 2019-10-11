@@ -4590,7 +4590,7 @@ if($('input[name="Q8W1S11"]:checked').length == 0){
     } 
     }
   /**Q6(b)(3) iiPlease tick the type of groundwater recharge structure used in your school:***/
-     if($("input[name='Q8W2S2']:checked").val()==="1" && $("input[name='Q8W2S2S7']:checked").val()==="Y"){
+     if($("input[name='Q8W2S2']:checked").val()==="1" && $("input[name='Q8W2S2S7']:checked").val()==="Y" ){
        if($("input[name='Q8W2S2S91']:checked").length==0 && $("input[name='Q8W2S2S92']:checked").length==0 && $("input[name='Q8W2S2S93']:checked").length==0 && $("input[name='Q8W2S2S94']:checked").length==0 && $("input[name='Q8W2S2S95']:checked").length==0 && $("input[name='Q8W2S2S96']:checked").length==0 && $("input[name='Q8W2S2S97']:checked").length==0){
        alert("Q6(b)(3) ii Please tick the type of groundwater recharge structure used in your school?");
       
