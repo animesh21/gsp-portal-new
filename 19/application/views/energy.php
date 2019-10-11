@@ -2657,3 +2657,15 @@ if($("input[name='Q9E1S101']").prop('checked') == true && $("input[name='Q9E1S10
     });
 
         </script>
+
+ <script>
+  $("#energynext").click(function(e){
+if($("input[name='Q9E1']").prop('checked') == true && $("input[name='Q9E1S1026']").prop('checked') == false && $("input[name='Q9E1S1027']").prop('checked') == false ){
+  alert("You can not left blank Q.No:20 What are the operation and maintenance (O&M) practices adopted for installed non-solar RE plant?");
+  e.preventDefault();
+  if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
+}
+}); 
+  </script>
