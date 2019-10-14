@@ -1483,8 +1483,9 @@ else echo "0"; ?>"
                             <table width="100%" class="question uploadedfiles">
                                 <thead>
                                     <tr>
-                                        <th>File name</th>
-                                        <th>Action</th>
+                                    <th>File name</th>
+                                    <th>Delete</th>
+                                    <th>Download</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -1493,7 +1494,8 @@ else echo "0"; ?>"
                     <?php $name = str_replace(" ", "_", $f->name . "_Supporting_Document_Energy_"); ?>
                                             <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
                                             <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
-                                        </tr>
+                                        <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+					</tr>
 <?php } ?>
                                 </tbody>
                             </table>
