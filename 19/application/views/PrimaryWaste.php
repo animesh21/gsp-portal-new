@@ -36,7 +36,7 @@
             <h1>WASTE<span style="text-transform:capitalize">(Primary)</span> <small class="pull-right" style="position: relative;
     top: -28px;
     font-weight: bolder;"><i class="h6"><strong>If the new changes are not saved, please press Ctrl+F5</strong></i></small></h1>
-            <div class="video"> <a class="lptext" href="#" data-toggle="modal" data-target="#videoModal"><img src="https://greenschoolsprogramme.org/audit2015/upload/templates/tfr_responsive/images/video-icon.png" style="width: 45px; height: 40px; margin-top:47px;"></a></div>
+            <div class="video"> <a class="lptext" href="#" data-toggle="modal" data-target="#videoModal"><img src="<?php echo base_url(); ?>assets/img/video-icon.png" style="width: 45px; height: 40px; margin-top:47px;"></a></div>
         </div>
         <p> Schools can provide excellent educational opportunities for creating awareness about waste and its management.<br>
             &bull; Waste reduction initiatives save natural resources, energy and landfill space.<br>
@@ -953,7 +953,8 @@
                 <thead>
                 <tr>
                     <th>File name</th>
-                    <th>Action</th>
+                    <th>Delete</th>
+                    <th>Download</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -962,7 +963,8 @@
                         <?php $name = str_replace(" ", "_", $f->name . "_Segregation_Source_Classrooms_"); ?>
                         <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
                         <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
-                    </tr>
+                       <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+			</tr>
                 <?php } ?>
                 </tbody>
             </table>
@@ -1252,7 +1254,8 @@
                             <thead>
                             <tr>
                                 <th>File name</th>
-                                <th>Action</th>
+                                <th>Delete</th>
+                                <th>Download</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -1261,7 +1264,8 @@
                                     <?php $name = str_replace(" ", "_", $f->name . "_Composting_Pit_"); ?>
                                     <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
                                     <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
-                                </tr>
+                                <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+				    </tr>
                             <?php } ?>
                             </tbody>
                         </table>
@@ -1774,7 +1778,8 @@
                                 <thead>
                                 <tr>
                                     <th>File name</th>
-                                    <th>Action</th>
+                                    <th>Delete</th>
+                                    <th>Download</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -1783,7 +1788,8 @@
                                         <?php $name = str_replace(" ", "_", $f->name . "_E-Waste_Storage_"); ?>
                                         <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
                                         <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
-                                    </tr>
+                                    <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+					</tr>
                                 <?php } ?>
                                 </tbody>
                             </table>
@@ -1888,7 +1894,8 @@
                                         <thead>
                                         <tr>
                                             <th>File name</th>
-                                            <th>Action</th>
+                                           <th>Delete</th>
+                                           <th>Download</th>
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -1897,7 +1904,8 @@
                                                 <?php $name = str_replace(" ", "_", $f->name . "_Disposing_"); ?>
                                                 <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
                                                 <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
-                                            </tr>
+                                            <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+						</tr>
                                         <?php } ?>
                                         </tbody>
                                     </table>
@@ -1930,8 +1938,9 @@
                                     <table width="100%" class="question uploadedfiles">
                                         <thead>
                                         <tr>
-                                            <th>File name</th>
-                                            <th>Action</th>
+                                           <th>File name</th>
+                                           <th>Delete</th>
+                                           <th>Download</th>
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -1940,7 +1949,8 @@
                                                 <?php $name = str_replace(" ", "_", $f->name . "_Buring_Waste_"); ?>
                                                 <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
                                                 <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
-                                            </tr>
+                                            <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+						</tr>
                                         <?php } ?>
                                         </tbody>
                                     </table>
@@ -2074,7 +2084,8 @@
         <thead>
         <tr>
             <th>File name</th>
-            <th>Action</th>
+            <th>Delete</th>
+            <th>Download</th>
         </tr>
         </thead>
         <tbody>
@@ -2087,7 +2098,8 @@ foreach ($chikoo as $u) { ?>
 																																																											
     <td class="upload edit"><?php echo str_replace($name, "", $u->file_name); ?></td>
     <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $u->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
-    </tr>
+    <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $u->file_name; ?>" download="<?php echo $u->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+		</tr>
 <?php } ?>
         </tbody>
     </table>                                                
@@ -2133,7 +2145,8 @@ foreach ($chikoo as $u) { ?>
         <thead>
         <tr>
             <th>File name</th>
-            <th>Action</th>
+            <th>Delete</th>
+            <th>Download</th>
         </tr>
         </thead>
         <tbody>
@@ -2143,7 +2156,8 @@ foreach ($chikoo as $u) { ?>
 																																																											
     <td class="upload edit"><?php echo str_replace($name, "", $u->file_name); ?></td>
     <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $u->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
-    </tr>
+    <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $u->file_name; ?>" download="<?php echo $u->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+	</tr>
 <?php } ?>
         </tbody>
     </table>
@@ -2207,7 +2221,8 @@ foreach ($chikoo as $u) { ?>
                                                 <thead>
                                                 <tr>
                                                     <th>File name</th>
-                                                    <th>Action</th>
+                                                    <th>Delete</th>
+                                                    <th>Download</th>
                                                 </tr>
                                                 </thead>
                                                 <tbody>
@@ -2216,7 +2231,8 @@ foreach ($chikoo as $u) { ?>
                                                         <?php $name = str_replace(" ", "_", $f->name . "_Pictures_of_Audit_Team_Waste_"); ?>
                                                         <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
                                                         <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
-                                                    </tr>
+                                                    <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+							</tr>
                                                 <?php } ?>
                                                 </tbody>
                                             </table>
