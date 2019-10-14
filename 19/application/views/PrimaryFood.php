@@ -19,6 +19,14 @@
     .form-group-1 {
         margin-bottom: 20px;
     }
+       .error{
+      color: #fb4f2a !important;
+      font-size: 15px !important;
+      text-shadow: 1px 1px 1px #000;
+      position: absolute;
+      padding-top: 20px;
+}
+	
 </style>
 <div class="container">
 <div class="content-form">
@@ -814,7 +822,7 @@ You would require at least 5 to 10 of your schoolmates in the Food audit team. T
               <label class="radio-inline text-gray">
               <input type="radio"
                                                                                                        name="Q5F2S2"
-                                                                                                       value="<?php echo set_value('Q5F2S2', 'Y') ?>" <?php if (isset($data['Q5F2S2'])) echo $data['Q5F2S1'] == 'Y' ? "checked" : "" ?>>
+                                                                                                       value="<?php echo set_value('Q5F2S2', 'Y') ?>" <?php if (isset($data['Q5F2S2'])) echo $data['Q5F2S2'] == 'Y' ? "checked" : "" ?>>
               Yes </label>
             </li>
             <li>
@@ -2867,3 +2875,72 @@ $(document).ready(function(){
   }
 });	
  </script>
+	
+	<script>
+  jQuery(document).ready(function(){
+  
+  jQuery('#PrimaryFood').validate({
+    rules:{
+          
+        Q5F2S1:{
+          required:true,
+        },
+        Q5F2S2:{
+          required:true,
+        },
+        Q5F2S3:{
+          required:true,
+        },
+        Q5F2S4:{
+          required:true,
+        },
+        Q5F2S5:{
+          required:true,
+        },
+        Q5F2S6:{
+          required:true,
+        },
+        Q5F2S7:{
+          required:true,
+        },
+        Q5F2S8:{
+          required:true,
+        },
+        Q5F2S9:{
+          required:true,
+        },
+        Q5F2S10:{
+          required:true,
+        },
+        Q5F2S11:{
+          required:true,
+        },
+        Q5F2S12:{
+          required:true,
+        },
+        Q5F2S13:{
+          required:true,
+        },
+        Q5F2S14:{
+          required:true,
+        } 
+    }
+       
+  });
+  });
+  
+  jQuery('#foodnext').click(function(e){
+    
+    
+    $r=jQuery('#PrimaryFood').valid();
+    if($r == false)
+    {
+         //e.preventDefault();
+         jQuery('#PrimaryFood').valid();
+    }
+    
+    
+  });
+  
+  </script>
+
