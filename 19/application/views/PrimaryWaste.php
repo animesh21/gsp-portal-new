@@ -36,7 +36,7 @@
             <h1>WASTE<span style="text-transform:capitalize">(Primary)</span> <small class="pull-right" style="position: relative;
     top: -28px;
     font-weight: bolder;"><i class="h6"><strong>If the new changes are not saved, please press Ctrl+F5</strong></i></small></h1>
-            <div class="video"> <a class="lptext" href="#" data-toggle="modal" data-target="#videoModal"><img src="http://greenschoolsprogramme.org/audit2015/upload/templates/tfr_responsive/images/video-icon.png" style="width: 45px; height: 40px; margin-top:47px;"></a></div>
+            <div class="video"> <a class="lptext" href="#" data-toggle="modal" data-target="#videoModal"><img src="https://greenschoolsprogramme.org/audit2015/upload/templates/tfr_responsive/images/video-icon.png" style="width: 45px; height: 40px; margin-top:47px;"></a></div>
         </div>
         <p> Schools can provide excellent educational opportunities for creating awareness about waste and its management.<br>
             &bull; Waste reduction initiatives save natural resources, energy and landfill space.<br>
