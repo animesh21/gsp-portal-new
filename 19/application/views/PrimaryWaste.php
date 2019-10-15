@@ -2644,6 +2644,10 @@ if($("input[name='Q12Wa28S1']").val()=="" || $("input[name='Q12Wa28S2']").val()=
 }
 });
 
+if($("input[name='Q15Wa1']:checked").val()==="N"){
+    $("#Q15Wa2").css('display','none');
+    $("#Q15Wa3").css('display','none');
 
+}
 
 </script>
