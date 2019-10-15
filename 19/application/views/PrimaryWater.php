@@ -2900,6 +2900,23 @@ if($("input[name='Q8W2S2S2']:checked").val()==="Y"){
    alert("Q4(c)Does your school clean your catchment and system?");
    e.preventDefault();
  }  
+
+/*3(a)Does your school get daily water supply?*/
+if($("input[name='Q7W1']:checked").val()==="Y"){
+  if($("input[name='Q7W2']:checked").length==0){
+    alert("3(a)Does your school get daily water supply?");
+    e.preventDefault();
+  }
+}
+  
+  /*3(b)Does your school get daily water supply?*/
+  if($("input[name='Q7W1']:checked").val()==="N"){
+    if($("input[name='Q7W3']:checked").length==0){
+      alert("3(b)Does your school get daily water supply?");
+      e.preventDefault();
+    }
+  }
+
 }
 });	
 	
