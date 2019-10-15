@@ -2358,7 +2358,7 @@ $("#wastenext").click(function(e){
  } 
 /**Q1(a)Who segregates the waste at source?**/
   if($("input[name='Q4Wa1']:checked").length==0){
-    if($("input[name='Q4Wa2S1']:checked").length==0 && $("input[name='Q4Wa2S2']:checked").length==0 && $("input[name='Q4Wa2S3']:checked").length==0 && $("input[name='Q4Wa2S4']:checked").length==0 && $("#Q4Wa2S5").attr('placeholder')==""){
+    if($("input[name='Q4Wa2S1']:checked").length==0 && $("input[name='Q4Wa2S2']:checked").length==0 && $("input[name='Q4Wa2S3']:checked").length==0 && $("input[name='Q4Wa2S4']:checked").length==0){
      alert("Q1(a)Who segregates the waste at source?");
      e.preventDefault();
    }
