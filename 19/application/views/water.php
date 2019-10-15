@@ -4183,9 +4183,9 @@ if($("input[name='Q6W1']").prop('checked') == false && $("input[name='Q6W2']").p
        setTimeout(function(){ $(".hide_one").css("display","none"); },600);
     }
    }
-  }else if($('input[name="Q20W1"]:checked').val()==='N'){
+  }if($('input[name="Q20W1"]:checked').val()==='N'){
          if($("input[name='Q20W3']").prop('checked') == false && $("input[name='Q20W31']").prop('checked') == false && $("input[name='Q20W32']").prop('checked') == false){
-     alert("18(i) If no, How does your school reuse wastewater from RO plant or AC?");
+     alert("19(a) Please specify the fate of wastewater");
             e.preventDefault();
      if(e.isDefaultPrevented()){
        setTimeout(function(){ $(".hide_one").css("display","none"); },600);
