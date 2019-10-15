@@ -22,6 +22,14 @@
      color: #fff;
      padding: 0 8px;
 	 }
+	 .error{
+     color: #fb4f2a !important;
+     font-size: 15px !important;
+     text-shadow: 1px 1px 1px #000;
+     position: absolute;
+     padding-top: 20px;
+}
+	
 </style>
 <div class="container">
     <div class="content-form">
@@ -977,3 +985,33 @@ if($("input[name='Q6L1']:checked").length==0){
 
 
 </script>
+
+<script>
+
+$(document).ready(function(){
+  
+  $('#PrimaryLand').validate({
+    rules:{
+          land2019_1:{
+          required:true,
+        }
+        
+    }
+       
+  });
+  });
+  
+  $('#movenextbtn').click(function(e){
+    
+    
+    $r=$('#PrimaryLand').valid();
+    if($r == false)
+    {
+         e.preventDefault();
+         $('#PrimaryLand').valid();
+    }
+    
+    
+  });
+  
+  </script>
