@@ -2486,6 +2486,11 @@ if($("input[name='Q13Wa2']:checked").length==0){
     e.preventDefault();
   }
 	
+if($("input[name='Q9Wa4S1']:checked").length==0 && $("input[name='Q9Wa4S2']:checked").length==0 && $("input[name='Q9Wa4S3']:checked").length==0 && $("input[name='Q9Wa4S4']:checked").length==0 ){
+    alert("4(a) What is the purpose of the compost that is generated per month?");
+    e.preventDefault();
+  }
+	
 if($("input[name='Q12Wa4S1']").attr('placeholder')=="" || $("input[name='Q12Wa4S2']").attr('placeholder')=="" || $("input[name='Q12Wa4S3']").attr('placeholder')==""){
 if($("input[name='Q12Wa4S1']").val()=="" || $("input[name='Q12Wa4S2']").val()=="" || $("input[name='Q12Wa4S3']").val()==""){
  alert("Q6 Does your school have the following? If yes, please give the numbers of items in working condition and those that are not: Washing machines");
