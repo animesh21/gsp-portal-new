@@ -4184,7 +4184,7 @@ if($("input[name='Q6W1']").prop('checked') == false && $("input[name='Q6W2']").p
     }
    }
   }if($('input[name="Q20W1"]:checked').val()==='N'){
-         if($("input[name='Q20W3']").prop('checked') == false && $("input[name='Q20W31']").prop('checked') == false && $("input[name='Q20W32']").prop('checked') == false){
+         if($("input[name='Q20W31']").prop('checked') == false && $("input[name='Q20W32']").prop('checked') == false && $("input[name='Q20W33']").prop('checked') == false){
      alert("19(a) Please specify the fate of wastewater");
             e.preventDefault();
      if(e.isDefaultPrevented()){
