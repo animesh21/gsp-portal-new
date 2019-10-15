@@ -4014,9 +4014,7 @@ $(document).ready(function(){
 if($("input[name='Q19W11']:checked").val()=='1'){
 
   $("#new_question17_a_ii").addClass("hide");
-}else{
-  $("#new_question17_a_ii").removeClass("hide");
-}
+} 
 
 
   });
