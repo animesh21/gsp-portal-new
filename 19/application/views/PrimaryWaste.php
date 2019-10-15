@@ -2481,6 +2481,11 @@ if($("input[name='Q18Wa2S1']:checked").length==0 && $("input[name='Q18Wa2S2']:ch
     e.preventDefault();
   }
 	
+if($("input[name='Q13Wa2']:checked").length==0){
+    alert("7(a) Who collects your e-waste, when not in working condition?");
+    e.preventDefault();
+  }
+	
 if($("input[name='Q12Wa4S1']").attr('placeholder')=="" || $("input[name='Q12Wa4S2']").attr('placeholder')=="" || $("input[name='Q12Wa4S3']").attr('placeholder')==""){
 if($("input[name='Q12Wa4S1']").val()=="" || $("input[name='Q12Wa4S2']").val()=="" || $("input[name='Q12Wa4S3']").val()==""){
  alert("Q6 Does your school have the following? If yes, please give the numbers of items in working condition and those that are not: Washing machines");
