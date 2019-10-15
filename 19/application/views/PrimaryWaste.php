@@ -2456,7 +2456,7 @@ if($("input[name='Q8Wa1']:checked").val()==="Y"){
 	e.preventDefault();
   }
 
-if($("input[name='Q18Wa2S1']:checked").length==0 && $("input[name='Q18Wa2S2']:checked").length==0 && $("input[name='Q18Wa2S2']:checked").length==0 ){
+if($("input[name='Q18Wa2S1']:checked").length==0){
     alert("12(a) What form do these awareness drives take?");
     e.preventDefault();
   }
