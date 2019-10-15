@@ -2454,13 +2454,7 @@ if($("input[name='Q8Wa1']:checked").val()==="Y"){
   if($("input[name='Q8Wa2S10']:checked").length==0){
     alert("3(a) Type of waste: Hazardous waste");
 	e.preventDefault();
-  }
-
-if($("input[name='Q18Wa2S1']:checked").length==0){
-    alert("12(a) What form do these awareness drives take?");
-    e.preventDefault();
-  }
-	
+  }	
 }
 /*Q6 Does your school have the following? If yes, please give the numbers of items in working condition and those that are not.*/
 if($("input[name='Q12Wa1S1']").attr('placeholder')=="" || $("input[name='Q12Wa1S2']").attr('placeholder')=="" || $("input[name='Q12Wa1S3']").attr('placeholder')==""){
@@ -2481,6 +2475,12 @@ if($("input[name='Q12Wa3S1']").val()=="" || $("input[name='Q12Wa3S2']").val()=="
 	e.preventDefault();
   }
 }
+	
+if($("input[name='Q18Wa2S1']:checked").length==0 && $("input[name='Q18Wa2S2']:checked").length==0 && $("input[name='Q18Wa2S2']:checked").length==0 ){
+    alert("12(a) What form do these awareness drives take?");
+    e.preventDefault();
+  }
+	
 if($("input[name='Q12Wa4S1']").attr('placeholder')=="" || $("input[name='Q12Wa4S2']").attr('placeholder')=="" || $("input[name='Q12Wa4S3']").attr('placeholder')==""){
 if($("input[name='Q12Wa4S1']").val()=="" || $("input[name='Q12Wa4S2']").val()=="" || $("input[name='Q12Wa4S3']").val()==""){
  alert("Q6 Does your school have the following? If yes, please give the numbers of items in working condition and those that are not: Washing machines");
