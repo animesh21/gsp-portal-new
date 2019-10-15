@@ -2332,7 +2332,7 @@ echo 'style="display:none;"';
                   </tr>
                 </thead>
                 <tbody>
-                  <?php foreach ($uppc as $f) { ?>
+                  <?php foreach ($files as $f) { ?>
                   <tr id="index<?php echo $f->id; ?>">
                     <?php 
          // $array = explode('.',$f->file_name); 
