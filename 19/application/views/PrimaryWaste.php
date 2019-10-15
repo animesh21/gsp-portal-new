@@ -2455,6 +2455,12 @@ if($("input[name='Q8Wa1']:checked").val()==="Y"){
     alert("3(a) Type of waste: Hazardous waste");
 	e.preventDefault();
   }
+
+if($("input[name='Q18Wa2S1']:checked").length==0 && $("input[name='Q18Wa2S2']:checked").length==0 && $("input[name='Q18Wa2S2']:checked").length==0 ){
+    alert("12(a) What form do these awareness drives take?");
+    e.preventDefault();
+  }
+	
 }
 /*Q6 Does your school have the following? If yes, please give the numbers of items in working condition and those that are not.*/
 if($("input[name='Q12Wa1S1']").attr('placeholder')=="" || $("input[name='Q12Wa1S2']").attr('placeholder')=="" || $("input[name='Q12Wa1S3']").attr('placeholder')==""){
