@@ -297,6 +297,7 @@ class Dashboard extends CI_Controller {
 	
 	
 	public function year19_phase1() {
+		ini_set('memory_limit', '256M');
 	 $data['main']='admin/dashboard/year19_phase1';
         $data['title']='Home | Dashboard';
 	    $data['total_school']=$this->Dashboard_model->getSchool_alldata();
