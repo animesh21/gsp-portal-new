@@ -2048,6 +2048,7 @@ if (isset($data['Q9A1']))
   </div>
 </div>
 
+ 
 <script>
 	jQuery(document).ready(function(){
 	
@@ -2099,9 +2100,128 @@ if (isset($data['Q9A1']))
 				   required:true,
 			  },
 			 Q9A2:{
-                            required:true,
-                          }
-			 
+            required:true,
+            },
+      Q5A1S1:{
+          required:true,
+          },
+      Q5A1S2:{
+          required:true,
+          },
+      Q5A1S3:{
+      required:true,
+          },
+      Q5A1S4:{
+      required:true,
+          },
+      Q5A2S1:{
+      required:true,
+          },
+      Q5A2S2:{
+      required:true,
+          },
+      Q5A2S3:{
+      required:true,
+          },
+      Q5A2S4:{
+      required:true,
+          },
+      Q5A3S1:{
+      required:true,
+          },
+      Q5A3S2:{
+      required:true,
+          },
+      Q5A3S3:{
+      required:true,
+          },
+      Q5A3S4:{
+      required:true,
+          },
+      Q5A4S1:{
+      required:true,
+          },
+      Q5A4S2:{
+      required:true,
+          },
+      Q5A4S3:{
+      required:true,
+          },
+      Q5A4S4:{
+      required:true,
+          },
+      Q5A5S1:{
+      required:true,
+          },
+      Q5A5S2:{
+      required:true,
+          },
+      Q5A5S3:{
+      required:true,
+          },
+      Q5A5S4:{
+      required:true,
+          },
+      Q5A6S1:{
+      required:true,
+          },
+      Q5A6S2:{
+      required:true,
+          },
+      Q5A6S3:{
+      required:true,
+          },
+      Q5A6S4:{
+      required:true,
+          },
+      Q5A7S1:{
+      required:true,
+          },
+      Q5A7S2:{
+      required:true,
+          },
+      Q5A7S3:{
+      required:true,
+          },
+      Q5A7S4:{
+      required:true,
+          },
+      Q5A8S1:{
+      required:true,
+          },
+      Q5A8S2:{
+      required:true,
+          },
+      Q5A8S3:{
+      required:true,
+          },
+      Q5A8S4:{
+      required:true,
+          },
+      Q5A9S1:{
+      required:true,
+          },
+      Q5A9S2:{
+      required:true,
+          },
+      Q5A9S3:{
+      required:true,
+          },
+      Q5A9S4:{
+      required:true,
+          },
+      Q5A10S1:{
+      required:true,
+          },
+      Q5A10S2:{
+      required:true,
+          },
+      Q5A10S3:{
+      required:true,
+          },
+      Q5A10S4:{
+      required:true,
+          }
 		}
        
 	});
@@ -2121,6 +2241,7 @@ if (isset($data['Q9A1']))
 	});
 	
 	</script>
+		 
 	
 	
 <script>
