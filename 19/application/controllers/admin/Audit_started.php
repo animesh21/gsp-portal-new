@@ -501,7 +501,7 @@ class Audit_started extends CI_Controller {
 				$body->settings->clicktrack = 1;    #clicktrack for emails enable=1 | disable=0
 				$body->settings->opentrack = 1;     #opentrack for emails enable=1 | disable=0
 				$body->settings->unsubscribe = 1;   #unsubscribe for emails enable=1 | disable=0
-				 $body->settings->bcc = 'ranjita@cseindia.org';
+				 //$body->settings->bcc = 'ranjita@cseindia.org';
 
 				$response = $emailController->createSendEmail($apiKey,$body);  
 
