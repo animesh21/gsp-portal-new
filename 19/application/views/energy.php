@@ -2537,7 +2537,7 @@ else{
 
 <script>
   $("#energynext").click(function(e){
-    if($("input[name='Q9E1S101']").prop('checked') == false && $("input[name='Q9E1S102']").prop('checked') == false && $("input[name='Q9E1S103']").prop('checked') == false && $("input[name='Q9E1S104']").prop('checked') == false && $("input[name='Q9E1S105']").prop('checked') == false){
+    if($("input[name='Q9E1S101']").prop('checked') == false && $("input[name='Q9E1S102']").prop('checked') == false && $("input[name='Q9E1S103']").prop('checked') == false && $("input[name='Q9E1S104']").prop('checked') == false && $("input[name='Q27E2']").prop('checked') == false){
       alert("What is the non-solar source of renewable energy (RE) for the school?");
       e.preventDefault();
       if(e.isDefaultPrevented()){
@@ -2552,7 +2552,7 @@ else{
       }
     });
       )
-      else if($("input[name='Q9E1S102']").prop('checked') == true || $("input[name='Q9E1S103']").prop('checked') == true || $("input[name='Q9E1S104']").prop('checked') == true || $("input[name='Q9E1S105']").prop('checked') == true || $("input[name='Q37E1']").prop('checked') == true)
+      else if($("input[name='Q9E1S102']").prop('checked') == true || $("input[name='Q9E1S103']").prop('checked') == true || $("input[name='Q9E1S104']").prop('checked') == true || $("input[name='Q27E2']").prop('checked') == true || $("input[name='Q37E1']").prop('checked') == true)
       {
         $(this).unbind("click");
       }
