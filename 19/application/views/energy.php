@@ -1663,12 +1663,12 @@ Generally on-grid systems have benefit of transferring surplus power to grid, wh
             
             <li>
               <span style="font-weight: bold; font-size: 18px">e. </span><label style="margin-left:5px">Not applicable</label>
-              <input type="checkbox" name="Q9E1S105" id="Q9E1S105" value="<?php echo set_value('Q9E1S105', 5); ?>" <?php if (isset($data['Q9E1S105'])) echo "checked" ?>/>
+              <input type="checkbox" name="Q27E2" id="Q27E2" value="<?php echo set_value('Q27E2', 5); ?>" <?php if (isset($data['Q27E2'])) echo "checked" ?>/>
             </li>
            
           </ul>
         </div>
-
+	<div class="displayNone">
         <div class="form-group">           
           <label class="control-label"><span class="cube">16</span>What is the size of invertors associated with the non-solar RE system (kVA)?</label>
 
@@ -1709,6 +1709,7 @@ Generally on-grid systems have benefit of transferring surplus power to grid, wh
             </li>                       
           </ul>
         </div>
+	</div>
 
 
 <div class="section_C" style="display: none">
@@ -2668,4 +2669,30 @@ if($("input[name='Q9E1']").prop('checked') == true && $("input[name='Q9E1S1026']
     }
 }
 }); 
+  </script>
+
+
+  <script type="text/javascript">
+    
+    $(document).ready(function(){
+
+      $("input[name='Q27E2']").click(function(){
+          
+         $(".displayNone").css('display', 'none');
+
+
+       
+        
+
+      });
+
+    });
+
+  </script>
+
+  <script type="text/javascript">
+     if($("input[name='Q27E2']:checked").val()==="5")
+        {
+           $(".displayNone").css('display', 'none');
+        }
   </script>
