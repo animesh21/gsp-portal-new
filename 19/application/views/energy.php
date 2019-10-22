@@ -2659,9 +2659,9 @@ if($("input[name='Q9E1S101']").prop('checked') == true && $("input[name='Q9E1S10
 
         </script>
 
- <script>
+<script>
   $("#energynext").click(function(e){
-if($("input[name='Q9E1']").prop('checked') == true && $("input[name='Q9E1S1026']").prop('checked') == false && $("input[name='Q9E1S1027']").prop('checked') == false ){
+if($("input[name='Q9E1S101']").prop('checked') == true || $("input[name='Q9E1S102']").prop('checked') == true || $("input[name='Q9E1S103']").prop('checked') == true){
   alert("You can not left blank Q.No:20 What are the operation and maintenance (O&M) practices adopted for installed non-solar RE plant?");
   e.preventDefault();
   if(e.isDefaultPrevented()){
@@ -2671,23 +2671,25 @@ if($("input[name='Q9E1']").prop('checked') == true && $("input[name='Q9E1S1026']
 }); 
   </script>
 
-
-  <script type="text/javascript">
+ 
+   <script type="text/javascript">
     
-    $(document).ready(function(){
+    $(document).ready(function () {
+   var ckbox = $("input[name='Q27E2']");
 
-      $("input[name='Q27E2']").click(function(){
-          
-         $(".displayNone").css('display', 'none');
-
-
-       
-        
-
-      });
-
+    $("input[name='Q27E2']").on('click',function () {
+        if (ckbox.is(':checked')) {
+           // alert('You have Checked it');
+            $(".displayNone").css('display', 'none');            
+            $('.displayNone').find('input:text').val('');
+            $("input[name='Q9E1S1026']").attr('checked',false);
+            $("input[name='Q9E1S1027']").attr('checked',false);
+        } else {
+           // alert('You Un-Checked it');
+            $(".displayNone").css('display', 'block');
+        }
     });
-
+});
   </script>
 
   <script type="text/javascript">
