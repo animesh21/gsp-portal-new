@@ -103,7 +103,7 @@ class School_model extends CI_Model
 			$date = date('d M Y');
             $to = $arrMails;
             $subject = "GSP Audit Registration".$date;
-            $msg = "Dear &nbsp;";neeraj.kumar@cseindia.org
+            $msg = "Dear &nbsp;";
             $msg .= $query->coname . "," . "<br/><br/>";
             $msg .= "Thank you for registering your school '" . $query->name . "', for GSP (Green Schools Programme) Audit 2019. Your account has been successfully created.<br><br>";
             $msg .= "To participate in GSP Audit 2019, please remember to save your username and password given below.<br><br>";
