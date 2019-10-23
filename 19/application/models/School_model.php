@@ -99,11 +99,11 @@ class School_model extends CI_Model
             $config['mailtype'] = 'html';
             $this->email->initialize($config);
             $from = "support@greenschoolsprogramme.org";
-            $arrMails = array($query->schoolemail, $query->coemail, 'ranjita@cseindia.org', 'aditi.sharma@cseindia.org', 'studiotesseractst@gmail.com', 'srishti.jha@cseindia.org', 'tushita.rawat@cseindia.org', 'neeraj.kumar@cseinidia.org');
+            $arrMails = array($query->schoolemail, $query->coemail, 'ranjita@cseindia.org', 'aditi.sharma@cseindia.org', 'studiotesseractst@gmail.com', 'srishti.jha@cseindia.org', 'tushita.rawat@cseindia.org', 'neeraj.kumar@cseindia.org');
 			$date = date('d M Y');
             $to = $arrMails;
             $subject = "GSP Audit Registration".$date;
-            $msg = "Dear &nbsp;";
+            $msg = "Dear &nbsp;";neeraj.kumar@cseindia.org
             $msg .= $query->coname . "," . "<br/><br/>";
             $msg .= "Thank you for registering your school '" . $query->name . "', for GSP (Green Schools Programme) Audit 2019. Your account has been successfully created.<br><br>";
             $msg .= "To participate in GSP Audit 2019, please remember to save your username and password given below.<br><br>";
