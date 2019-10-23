@@ -2141,6 +2141,7 @@ public function getExcel2017Data() {
 		        ->join('gsp_user AS d', 'a.userid=d.id', 'left')
                         ->where('a.date_added >=', '2019-03-01 00:00:00')
                         ->order_by('a.id', 'desc')
+		        ->where("a.make_school_disabled","1")
                         ->get()->result();
         
         $k = 1;
