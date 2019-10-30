@@ -358,7 +358,7 @@ class Audit_started extends CI_Controller {
                
                 if($p=='100')
             	{
-            		$test[] = " a.progress='$p' AND make_school_disabled = '1'";
+            		$test[] = " a.progress='$p' AND make_school_disabled = '1' AND complete_status = '0' ";
             	}
 		elseif($p=='5')
             	{
