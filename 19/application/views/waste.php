@@ -4972,7 +4972,7 @@ if($("input[name='Q11Wa8S1']").prop('checked') == false && $("input[name='Q11Wa8
 <script>
   $("#wastenext").click(function(e){
   if($("input[name='Q15Wa1']:checked").val()==='Y'){    
-   if($("input[name='Q15Wa2S1']").prop('checked') == false && $("input[name='Q15Wa2S2']").prop('checked') == false && $("input[name='Q15Wa2S3']").prop('checked') == false && $("input[name='Q15Wa2S4']").prop('checked') == false){
+   if($("input[name='Q15Wa2S1']").prop('checked') == false && $("input[name='Q15Wa2S2']").prop('checked') == false && $("input[name='Q15Wa2S3']").prop('checked') == false && $("input[name='Q15Wa2S4']").prop('checked') == false && $("input[name='Q15Wa2S5']").prop('checked') == false){
    alert("11(b) What kind of waste is being burnt/ incinerated?");
    e.preventDefault();
      if(e.isDefaultPrevented()){
