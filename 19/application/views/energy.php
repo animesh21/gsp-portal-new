@@ -10,28 +10,28 @@
 
 #Q5E1-error
 {
-	color: #fb4f2a !important;
+  color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -36px !important;
     position: absolute;
     margin-left: 313px;
     text-shadow: 1px 1px 1px #000;
-	
+  
 }
 #Q9E1-error
 {
-	color: #fb4f2a !important;
+  color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -36px !important;
     position: absolute;
     margin-left: 655px;
     text-shadow: 1px 1px 1px #000;
-	
+  
 }
 
 #Q10E1-error
 {
-	color: #fb4f2a !important;
+  color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -36px !important;
     position: absolute;
@@ -41,7 +41,7 @@
 
 #Q4E1-error
 {
-	color: #fb4f2a !important;
+  color: #fb4f2a !important;
     font-size: 18px !important;
     margin-top: -36px !important;
     position: absolute;
@@ -497,8 +497,8 @@
       fuel used.</p>
     <p><strong>LPG: </strong>Ask the mess/canteen staff, how many cylinders are used in one month on
       an average. Remember each gas cylinder generally weighs 14.2 kg.</p>
-	  
-	  <p><strong>PNG: </strong>If the school has a PNG connection, ask the mess/canteen staff for a copy of the PNG bill, which is usually raise once or twice in a quarter.</p>
+    
+    <p><strong>PNG: </strong>If the school has a PNG connection, ask the mess/canteen staff for a copy of the PNG bill, which is usually raise once or twice in a quarter.</p>
   </div>
   </label>
   <div class="answer clearfix"></div>
@@ -544,9 +544,9 @@
       <?php foreach ($electricityBills as $f) { ?>
       <tr id="index<?php echo $f->id; ?>">
         <?php 
-	      //$array = explode('.',$f->file_name); 
-		 // $count = count($array);
-		 // $extension = $array[$count-1];
+        //$array = explode('.',$f->file_name); 
+     // $count = count($array);
+     // $extension = $array[$count-1];
                 ?>
         <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
         <!-- <td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $f->
@@ -1109,9 +1109,9 @@ else echo "0"; ?>"
     <?php foreach ($fulesBills as $f) { ?>
     <tr id="index<?php echo $f->id; ?>">
       <?php 
-	    	   // $array = explode('.',$f->file_name); 
-		    //$count = count($array);
-		  // $extension = $array[$count-1];
+           // $array = explode('.',$f->file_name); 
+        //$count = count($array);
+      // $extension = $array[$count-1];
                 ?>
       <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
       <!-- <td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $f->
@@ -1295,11 +1295,11 @@ else echo "0"; ?>"
     <?php foreach ($appliancesBills as $f) { ?>
     <tr id="index<?php echo $f->id; ?>">
       <?php 
-	    		  
-			   // $array = explode('.',$f->file_name); 
-			 //   $count = count($array);
-			 // $extension = $array[$count-1];
-			    ?>
+            
+         // $array = explode('.',$f->file_name); 
+       //   $count = count($array);
+       // $extension = $array[$count-1];
+          ?>
       <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
       <!-- <td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $f->
       file_name ?>" class="img-responsive" />
@@ -1405,9 +1405,9 @@ if (isset($data['Q9E1']))
                                                    value="<?php// echo set_value('Q9E1S4', 1); ?>" <?php// if (isset($data['Q9E1S4'])) echo set_checkbox('Q9E1S4', '1', true); ?>/>
             </li> -->
           </ul>
-		
-		
-		<br>
+    
+    
+    <br>
     <button class="btn uploadbtn upload" data-id="Alternative Source of Energy" data-toggle="modal"
                                 data-target="#airModal" type="button">UPLOAD FILES </button>
     <table width="100%" class="question uploadedfiles">
@@ -1423,11 +1423,11 @@ if (isset($data['Q9E1']))
         <?php foreach ($alternativeResource as $f) { ?>
         <tr id="index<?php echo $f->id; ?>">
           <?php 
-	    		  
-		   // $array = explode('.',$f->file_name); 
-		   // $count = count($array);
-		 // $extension = $array[$count-1];
-		    ?>
+            
+       // $array = explode('.',$f->file_name); 
+       // $count = count($array);
+     // $extension = $array[$count-1];
+        ?>
           <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
           <!-- <td><img style="width:62px; height:46px;"  src="<?php //echo base_url() ?>uploads/files/<?php //echo $f->
           file_name ?>" class="img-responsive" />
@@ -1444,8 +1444,8 @@ if (isset($data['Q9E1']))
         <?php } ?>
       </tbody>
     </table>
-		
-		
+    
+    
         </div>
       </div>
        
@@ -1491,11 +1491,11 @@ if (isset($data['Q9E1']))
           <?php foreach ($energySupport as $f) { ?>
           <tr id="index<?php echo $f->id; ?>">
             <?php 
-	    		  
-			    //$array = explode('.',$f->file_name); 
-			   // $count = count($array);
-			 // $extension = $array[$count-1];
-			    ?>
+            
+          //$array = explode('.',$f->file_name); 
+         // $count = count($array);
+       // $extension = $array[$count-1];
+          ?>
             <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
             <!--<td><img style="width:62px; height:46px;"  src="<?php //echo base_url() ?>uploads/files/<?php //echo $f->
             file_name ?>" class="img-responsive" />
@@ -1653,7 +1653,7 @@ Generally on-grid systems have benefit of transferring surplus power to grid, wh
             </li>
             <li>
               <span style="font-weight: bold; font-size: 18px">d. </span><label style="margin-left:5px">Other</label>
-              <input type="checkbox" name="Q9E1S104" id="Q9E1S104" value="<?php echo set_value('Q9E1S104', 4); ?>" <?php if (isset($data['Q9E1S104'])) echo  "checked"; ?>/>
+              <input type="checkbox" name="Q27E3" id="Q27E3" value="<?php echo set_value('Q27E3', 4); ?>" <?php if (isset($data['Q27E3'])) echo  "checked"; ?>/>
               </li>
               <div class="details" style="margin-left:25px" >
                 <label>Give details:</label>
@@ -1668,7 +1668,7 @@ Generally on-grid systems have benefit of transferring surplus power to grid, wh
            
           </ul>
         </div>
-	<div class="displayNone">
+  <div class="displayNone">
         <div class="form-group">           
           <label class="control-label"><span class="cube">16</span>What is the size of invertors associated with the non-solar RE system (kVA)?</label>
 
@@ -1709,7 +1709,7 @@ Generally on-grid systems have benefit of transferring surplus power to grid, wh
             </li>                       
           </ul>
         </div>
-	</div>
+  </div>
 
 
 <div class="section_C" style="display: none">
@@ -1885,119 +1885,119 @@ Generally on-grid systems have benefit of transferring surplus power to grid, wh
 
 
 <script>
-	jQuery(document).ready(function(){
-	
-	jQuery('#energy').validate({
-		rules:{
-		      Q1E1S1:{
-				  required:true,
-			  },
-			  Q1E1S3:{
-				  required:true,
-			  },
-			  Q1E1S2:{
-				  required:true,
-			  },
-			  Q2E1S1:{
-				  required:true,
-			  },
-			   Q2E1S3:{
-				  required:true,
-			  },
-			   Q2E1S2:{
-				  required:true,
-			  },
-			   Q3E1S1:{
-				  required:true,
-			  },
-			   Q3E1S2:{
-				  required:true,
-			  },
-			   Q3E1S3:{
-				  required:true,
-			  }, 
-			  Q4E1:{
-				  required:true,
-			  }, 
-			  Q5E1:{
-				  required:true,
-			  }, 
-			  Q7E2S1:{
-				  required:true,
-			  },
-			  Q7E2S2:{
-				  required:true,
-			  },
-			  Q7E2S3:{
-				  required:true,
-			  },
-			  Q7E3S1:{
-				  required:true,
-			  },
-			  Q7E3S2:{
-				  required:true,
-			  },
-			  Q7E3S3:{
-				  required:true,
-			  },
-			  Q7E4S1:{
-				  required:true,
-			  },
-			  Q7E4S2:{
-				  required:true,
-			  },
-			  Q7E4S3:{
-				  required:true,
-			  },
-			  Q7E5S1:{
-				  required:true,
-			  },
-			  Q7E5S2:{
-				  required:true,
-			  },
-			  Q7E5S3:{
-				  required:true,
-			  },
-			  Q7E6S1:{
-				  required:true,
-			  },
-			  Q7E6S2:{
-				  required:true,
-			  },
-			  Q7E6S3:{
-				  required:true,
-			  },
-			  Q7E7S1:{
-				  required:true,
-			  },
-			  Q7E7S2:{
-				  required:true,
-			  },
-			  Q7E8S1:{
-				  required:true,
-			  },
-			  Q7E8S2:{
-				  required:true,
-			  },
-			  Q7E8S3:{
-				  required:true,
-			  },
-			  Q7E7S3:{
-				  required:true,
-			  },
-			  
-			  Q8E1:{
-				  required:true,
-			  },
-			  Q9E1:{
-				  required:true,
-			  },
-			  Q10E1:{
-				  required:true,
-			  },
-			  Q6E4S3:{
-				  required:true,
-			  },
+  jQuery(document).ready(function(){
+  
+  jQuery('#energy').validate({
+    rules:{
+          Q1E1S1:{
+          required:true,
+        },
+        Q1E1S3:{
+          required:true,
+        },
+        Q1E1S2:{
+          required:true,
+        },
+        Q2E1S1:{
+          required:true,
+        },
+         Q2E1S3:{
+          required:true,
+        },
+         Q2E1S2:{
+          required:true,
+        },
+         Q3E1S1:{
+          required:true,
+        },
+         Q3E1S2:{
+          required:true,
+        },
+         Q3E1S3:{
+          required:true,
+        }, 
+        Q4E1:{
+          required:true,
+        }, 
+        Q5E1:{
+          required:true,
+        }, 
+        Q7E2S1:{
+          required:true,
+        },
+        Q7E2S2:{
+          required:true,
+        },
+        Q7E2S3:{
+          required:true,
+        },
+        Q7E3S1:{
+          required:true,
+        },
+        Q7E3S2:{
+          required:true,
+        },
+        Q7E3S3:{
+          required:true,
+        },
+        Q7E4S1:{
+          required:true,
+        },
+        Q7E4S2:{
+          required:true,
+        },
+        Q7E4S3:{
+          required:true,
+        },
+        Q7E5S1:{
+          required:true,
+        },
+        Q7E5S2:{
+          required:true,
+        },
+        Q7E5S3:{
+          required:true,
+        },
+        Q7E6S1:{
+          required:true,
+        },
+        Q7E6S2:{
+          required:true,
+        },
+        Q7E6S3:{
+          required:true,
+        },
+        Q7E7S1:{
+          required:true,
+        },
+        Q7E7S2:{
+          required:true,
+        },
+        Q7E8S1:{
+          required:true,
+        },
+        Q7E8S2:{
+          required:true,
+        },
+        Q7E8S3:{
+          required:true,
+        },
+        Q7E7S3:{
+          required:true,
+        },
+        
+        Q8E1:{
+          required:true,
+        },
+        Q9E1:{
+          required:true,
+        },
+        Q10E1:{
+          required:true,
+        },
+        Q6E4S3:{
+          required:true,
+        },
         Q13E1:{
           required:true,
         },
@@ -2049,27 +2049,27 @@ Generally on-grid systems have benefit of transferring surplus power to grid, wh
         Q53E1:{
           required:true,
         }
-			  
-			 
-		}
+        
        
-	});
-	});
-	
-	jQuery('#energynext').click(function(e){
-		
-		
-		$r=jQuery('#energy').valid();
-		if($r == false)
-		{
-			   e.preventDefault();
-			   jQuery('#energy').valid();
-		}
-		
-		
-	});
-	
-	</script>
+    }
+       
+  });
+  });
+  
+  jQuery('#energynext').click(function(e){
+    
+    
+    $r=jQuery('#energy').valid();
+    if($r == false)
+    {
+         e.preventDefault();
+         jQuery('#energy').valid();
+    }
+    
+    
+  });
+  
+  </script>
 
 
 
@@ -2083,20 +2083,20 @@ Generally on-grid systems have benefit of transferring surplus power to grid, wh
                         $('#video').attr("src", "https://www.youtube.com/embed/i6DM3E5euRE");
                     });
                     
-					/**This Code Used For Submit Form Through Menu**/
-					$('ol li').click(function(){
-					  var fd = $('#energy').serialize();
-							$.ajax({
-								type: 'POST',
-								url: '<?php echo base_url('previous/energyajax') ?>',
-								data: fd,
-								success: function (data) {
-									<!--window.location.href = "<?php echo base_url('general'); ?>";-->
-								}
-							});
-					});
-					
-					   
+          /**This Code Used For Submit Form Through Menu**/
+          $('ol li').click(function(){
+            var fd = $('#energy').serialize();
+              $.ajax({
+                type: 'POST',
+                url: '<?php echo base_url('previous/energyajax') ?>',
+                data: fd,
+                success: function (data) {
+                  <!--window.location.href = "<?php echo base_url('general'); ?>";-->
+                }
+              });
+          });
+          
+             
                     $(document).ready(function () {
                         $('#btnEnergyPrevious').on('click', function (data) {
                             var fd = $('#energy').serialize();
@@ -2123,7 +2123,7 @@ Generally on-grid systems have benefit of transferring surplus power to grid, wh
                                 }
                             });
                         });
-	//delete  files
+  //delete  files
         $('body').on('click', '.air-delete-files', function (data) {
             var test = confirm("Are you sure you want to delete this file");
             if (test == true)
@@ -2152,7 +2152,7 @@ Generally on-grid systems have benefit of transferring surplus power to grid, wh
                 });
             }
         });
-			    
+          
      });
 
 /*Teacher Record Validation*/
@@ -2161,11 +2161,11 @@ $("#energynext").click(function(e){
    if($("#Q1E1S1").attr('placeholder')==""  || $("#Q1E1S3").attr('placeholder')==""  || $("#Q1E1S2").attr('placeholder')==""){ 
      if($("#Q1E1S1").val()==""  || $("#Q1E1S3").val()==""  || $("#Q1E1S2").val()==""){ 
       alert("School Must Add Teacher First Name, Last Name & Email ID.");
-	  e.preventDefault();
-	  if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }   
-	}
+    e.preventDefault();
+    if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }   
+  }
    }
 });
 /*Administrative Record Validation*/
@@ -2174,11 +2174,11 @@ $("#energynext").click(function(e){
    if($("#Q2E1S1").attr('placeholder')==""  || $("#Q2E1S3").attr('placeholder')==""  || $("#Q2E1S2").attr('placeholder')==""){
       if($("#Q2E1S1").val()=="" || $("#Q2E1S3").val()==""  || $("#Q2E1S2").val()==""){  
     alert("School Must Add Administrative Staff  First Name, Last Name & Email ID.");
-	e.preventDefault();
-	 if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }     
-	}
+  e.preventDefault();
+   if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }     
+  }
    }
 });
 /*Student Record Validation*/
@@ -2187,17 +2187,17 @@ $("#energynext").click(function(e){
    if($("#Q3E1S1").attr('placeholder')==""  || $("#Q3E1S2").attr('placeholder')==""  || $("#Q3E1S3").attr('placeholder')==""){ 
     if($("#Q3E1S1").val()==""  || $("#Q3E1S2").val()==""  || $("#Q3E1S3").val()==""){ 
     alert("School Must Add Student First Name, Last Name & Grade.");
-	e.preventDefault();
-	 if(e.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }   
-	}
+  e.preventDefault();
+   if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }   
+  }
    }
   /**Q7 Does your school use solar water heater?**/
   if($("input[name='Q10E1']:checked").length==0){
     alert("Q7: Does your school use solar water heater?");
-	e.preventDefault();
-  }	
+  e.preventDefault();
+  } 
 });
 
 /*This Code Used For Stopping Enter 'E' Alphabet In Textbox Type 'Number'*/
@@ -2206,76 +2206,76 @@ $(document).ready(function(){
     if (evt.which != 8 && evt.which != 0 && evt.which < 48 || evt.which > 57)
     {
         evt.preventDefault();
-	if(evt.isDefaultPrevented()){
-	     setTimeout(function(){ $(".hide_one").css("display","none"); },600);
-	  }    
+  if(evt.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }    
     }
   });
   $('input[type=number]').on('wheel', function(e){
     return false;
-  });	
+  }); 
 });
 /**Validation For Question 4 BEE Star Rating**/
 /*Event Perform On Keypress*/
 $("input[name='Q7E2S3']").change(function(){
   if($(this).val()>5){
     alert("BEE star rating cannot be more than 5");
-	$(this).val("");
-	$(this).attr("placeholder","BEE Star rating (0 to 5)")
+  $(this).val("");
+  $(this).attr("placeholder","BEE Star rating (0 to 5)")
   }
 });
 $("input[name='Q7E3S3']").change(function(){
   if($(this).val()>5){
     alert("BEE star rating cannot be more than 5");
-	$(this).val("");
-	$(this).attr("placeholder","BEE Star rating (0 to 5)")
+  $(this).val("");
+  $(this).attr("placeholder","BEE Star rating (0 to 5)")
   }
 });
 $("input[name='Q7E4S3']").change(function(){
   if($(this).val()>5){
     alert("BEE star rating cannot be more than 5");
-	$(this).val("");
-	$(this).attr("placeholder","BEE Star rating (0 to 5)")
+  $(this).val("");
+  $(this).attr("placeholder","BEE Star rating (0 to 5)")
   }
 });
 $("input[name='Q7E5S3']").change(function(){
   if($(this).val()>5){
     alert("BEE star rating cannot be more than 5");
-	$(this).val("");
-	$(this).attr("placeholder","BEE Star rating (0 to 5)")
+  $(this).val("");
+  $(this).attr("placeholder","BEE Star rating (0 to 5)")
   }
 });
 $("input[name='Q7E6S3']").change(function(){
   if($(this).val()>5){
     alert("BEE star rating cannot be more than 5");
-	$(this).val("");
-	$(this).attr("placeholder","BEE Star rating (0 to 5)")
+  $(this).val("");
+  $(this).attr("placeholder","BEE Star rating (0 to 5)")
   }
 });
 $("input[name='Q7E7S3']").change(function(){
   if($(this).val()>5){
     alert("BEE star rating cannot be more than 5");
-	$(this).val("");
-	$(this).attr("placeholder","BEE Star rating (0 to 5)")
+  $(this).val("");
+  $(this).attr("placeholder","BEE Star rating (0 to 5)")
   }
 });
 $("input[name='Q7E8S3']").change(function(){
   if($(this).val()>5){
     alert("BEE star rating cannot be more than 5");
-	$(this).val("");
-	$(this).attr("placeholder","BEE Star rating (0 to 5)")
+  $(this).val("");
+  $(this).attr("placeholder","BEE Star rating (0 to 5)")
   }
 });
 /**Validation For CNG (kilogrammes)**/
 $("input[name='Q6E5S1']").change(function(){
   if($("#CNGValidation").val()==0){
     if($("#CNGValidation").val()<$("input[name='Q6E5S1']").val()){
-	  alert("CNG (kilogrammes) "+$("#CNGValidation").val()+" in Air Section");
-	  $("input[name='Q6E5S1']").val(0);
-	  $("input[name='Q6E5S2']").val(0);
-	}
+    alert("CNG (kilogrammes) "+$("#CNGValidation").val()+" in Air Section");
+    $("input[name='Q6E5S1']").val(0);
+    $("input[name='Q6E5S2']").val(0);
   }
-});						
+  }
+});           
 </script>
 <script>
 var nyan = document.getElementById('BEEstarrating');
@@ -2319,10 +2319,10 @@ nyanBtn.addEventListener('click', function(){
 });
 
 </script>
-	
-	
-	
-	<script type="text/javascript">
+  
+  
+  
+  <script type="text/javascript">
   
  $("input[name='Q9E1S5']").click(function(){
 
@@ -2340,19 +2340,19 @@ nyanBtn.addEventListener('click', function(){
 
 
 </script>
-	
-	
-	
+  
+  
+  
 <style>
              #btn{ 
-		background: rgb(232, 101, 73);
+    background: rgb(232, 101, 73);
                 color: rgb(0, 0, 0);
                 box-shadow: rgba(0, 0, 0, 0.125) 0px 0px 0px 0px inset;
                 height: 20px;
                 position: relative;
                 padding-top: 0px;
-		     display:none; 
-		 }	
+         display:none; 
+     }  
 </style>
 
 <script type="text/javascript">
@@ -2537,22 +2537,15 @@ else{
 
 <script>
   $("#energynext").click(function(e){
-    if($("input[name='Q9E1S101']").prop('checked') == false && $("input[name='Q9E1S102']").prop('checked') == false && $("input[name='Q9E1S103']").prop('checked') == false && $("input[name='Q9E1S104']").prop('checked') == false && $("input[name='Q27E2']").prop('checked') == false){
-      alert("What is the non-solar source of renewable energy (RE) for the school?");
+    if($("input[name='Q9E1S101']").prop('checked') == false && $("input[name='Q9E1S102']").prop('checked') == false && $("input[name='Q9E1S103']").prop('checked') == false && $("input[name='Q27E3']").prop('checked') == false && $("input[name='Q27E2']").prop('checked') == false){
+      alert("What is the non-solar source of renewable energy (RE) for the school? You Choose checkbox option : Other or not applicable than countinue next step");
       e.preventDefault();
       if(e.isDefaultPrevented()){
            setTimeout(function(){ $(".hide_one").css("display","none"); },600);
         }
     }
-    else if($('#Q9E2').click(function(){
-      var t = $('#Q9E2').val();
-      if(t==='N')
-      {
-        return true;
-      }
-    });
-      )
-      else if($("input[name='Q9E1S102']").prop('checked') == true || $("input[name='Q9E1S103']").prop('checked') == true || $("input[name='Q9E1S104']").prop('checked') == true || $("input[name='Q27E2']").prop('checked') == true || $("input[name='Q37E1']").prop('checked') == true)
+    
+      else if($("input[name='Q9E1S102']").prop('checked') == true || $("input[name='Q9E1S103']").prop('checked') == true || $("input[name='Q27E3']").prop('checked') == true || $("input[name='Q27E2']").prop('checked') == true || $("input[name='Q37E1']").prop('checked') == true)
       {
         $(this).unbind("click");
       }
@@ -2697,4 +2690,27 @@ if($("input[name='Q9E1S101']").prop('checked') == true || $("input[name='Q9E1S10
         {
            $(".displayNone").css('display', 'none');
         }
+  </script>
+
+
+
+<script type="text/javascript">
+    
+
+      $('#energynext').click(function(){
+
+        var t = $('#Q9E2').val();
+        if(t==="N"){
+          if($("input[name='Q27E3']").prop('checked') == false && $("input[name='Q27E2']").prop('checked') == false)
+          {
+            return false;
+          }
+          else{
+            return true;
+          }
+        }
+
+
+      });
+
   </script>
