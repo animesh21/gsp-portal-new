@@ -42,7 +42,7 @@
                        echo $School_name;
                         ?></span></div>
             <ul>
-                <li><a href="/audit2016/upload/templates/tfr_responsive/regist.php">Logout</a></li>
+                <li><a href="<?php echo base_url('logout'); ?>">Logout</a></li>
                 <li>|</li>
                 <li><a class="lptext" title="Change Password Form" data-toggle="modal" data-target="#ChangePass" href="#ChangePass" rel="shadowbox;width=580;height=500;">Change Password</a></li>
             </ul>
