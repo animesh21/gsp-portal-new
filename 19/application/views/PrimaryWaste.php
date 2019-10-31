@@ -2480,16 +2480,20 @@ if($("input[name='Q18Wa2S1']:checked").length==0 && $("input[name='Q18Wa2S2']:ch
     alert("12(a) What form do these awareness drives take?");
     e.preventDefault();
   }
-	
-if($("input[name='Q13Wa2']:checked").length==0){
-    alert("7(a) Who collects your e-waste, when not in working condition?");
-    e.preventDefault();
-  }
-	
-if($("input[name='Q9Wa4S1']:checked").length==0 && $("input[name='Q9Wa4S2']:checked").length==0 && $("input[name='Q9Wa4S3']:checked").length==0 && $("input[name='Q9Wa4S4']:checked").length==0 ){
+
+if($("input[name='Q9Wa1']:checked").val()==='Y'){
+  if($("input[name='Q9Wa4S1']:checked").length==0 && $("input[name='Q9Wa4S2']:checked").length==0 && $("input[name='Q9Wa4S3']:checked").length==0 && $("input[name='Q9Wa4S4']:checked").length==0 ){
     alert("4(a) What is the purpose of the compost that is generated per month?");
     e.preventDefault();
   }
+}
+	
+if($("input[name='Q13Wa1']:checked").val()==='Y'){
+  if($("input[name='Q13Wa2']:checked").length==0){
+    alert("7(a) Who collects your e-waste, when not in working condition?");
+    e.preventDefault();
+  }
+}
 	
 if($("input[name='Q12Wa4S1']").attr('placeholder')=="" || $("input[name='Q12Wa4S2']").attr('placeholder')=="" || $("input[name='Q12Wa4S3']").attr('placeholder')==""){
 if($("input[name='Q12Wa4S1']").val()=="" || $("input[name='Q12Wa4S2']").val()=="" || $("input[name='Q12Wa4S3']").val()==""){
