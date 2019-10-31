@@ -2411,9 +2411,9 @@ You would require at least 5 to 10 of your schoolmates in the Food audit team. T
                                                                                                            class="question uploadedfiles">
                     <thead>
                       <tr>
-                        <th>File
-                          name </th>
-                        <th>Action </th>
+                        <th>File name</th>
+                        <th>Delete</th>
+                        <th>Download</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -2426,6 +2426,7 @@ You would require at least 5 to 10 of your schoolmates in the Food audit team. T
                                                                                                                        data-id="<?php echo $f->id; ?>"><img
                                                                                                                                 src="<?php echo base_url(); ?>assets/front/images/delete.png"
                                                                                                                                 style="position:relative; top:5px"/></a> </td>
+			      <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
                       </tr>
                       <?php } ?>
                     </tbody>
