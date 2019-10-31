@@ -2475,11 +2475,6 @@ if($("input[name='Q12Wa3S1']").val()=="" || $("input[name='Q12Wa3S2']").val()=="
 	e.preventDefault();
   }
 }
-	
-if($("input[name='Q18Wa2S1']:checked").length==0 && $("input[name='Q18Wa2S2']:checked").length==0 && $("input[name='Q18Wa2S2']:checked").length==0 ){
-    alert("12(a) What form do these awareness drives take?");
-    e.preventDefault();
-  }
 
 if($("input[name='Q9Wa1']:checked").val()==='Y'){
   if($("input[name='Q9Wa4S1']:checked").length==0 && $("input[name='Q9Wa4S2']:checked").length==0 && $("input[name='Q9Wa4S3']:checked").length==0 && $("input[name='Q9Wa4S4']:checked").length==0 ){
@@ -2491,6 +2486,13 @@ if($("input[name='Q9Wa1']:checked").val()==='Y'){
 if($("input[name='Q13Wa1']:checked").val()==='Y'){
   if($("input[name='Q13Wa2']:checked").length==0){
     alert("7(a) Who collects your e-waste, when not in working condition?");
+    e.preventDefault();
+  }
+}
+
+if($("input[name='Q18Wa1']:checked").val()==='Y'){
+ if($("input[name='Q18Wa2S1']:checked").length==0 && $("input[name='Q18Wa2S2']:checked").length==0 && $("input[name='Q18Wa2S2']:checked").length==0 ){
+    alert("12(a) What form do these awareness drives take?");
     e.preventDefault();
   }
 }
