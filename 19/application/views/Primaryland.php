@@ -526,22 +526,22 @@
       <ul class="list-inline">
         <li>
           <label class="radio-inline text-gray">
-          <input type="radio" name="land2019_1" value="<?php echo set_value('land2019_1', 'Y') ?>" <?php if (isset($data['land2019_1'])) echo $data['land2019_1'] == 'Y' ? "checked" : "" ?>>
+          <input type="radio" name="Q2V1" value="<?php echo set_value('Q2V1', 'Y') ?>" <?php if (isset($data['Q2V1'])) echo $data['Q2V1'] == 'Y' ? "checked" : "" ?>>
           Yes </label>
         </li>
         <li>
           <label class="radio-inline text-gray">
-          <input type="radio" name="land2019_1" value="<?php echo set_value('land2019_1', 'N') ?>" <?php if (isset($data['land2019_1'])) echo $data['land2019_1'] == 'N' ? "checked" : "" ?>>
+          <input type="radio" name="Q2V1" value="<?php echo set_value('Q2V1', 'N') ?>" <?php if (isset($data['Q2V1'])) echo $data['Q2V1'] == 'N' ? "checked" : "" ?>>
           No </label>
         </li>
       </ul>
     </div>
 	    
 	    
-	    <div class="form-group" id="land2019_1_sec1"
+	    <div class="form-group" id="Q2V1_sec1"
 <?php
-if (isset($data['land2019_1'])) {
-if ($data['land2019_1'] == 'N') {
+if (isset($data['Q2V1'])) {
+if ($data['Q2V1'] == 'N') {
 echo 'style="display:none;"';
 } else {
 echo 'style="display:block;"';
@@ -968,16 +968,16 @@ if($("input[name='Q6L1']:checked").length==0){
 
 <script type="text/javascript">
   
- $("input[name='land2019_1']").click(function(){
+ $("input[name='Q2V1']").click(function(){
 
     var t = $(this).val();
     if(t == 'Y')
     {
-          $('#land2019_1_sec1').show();
+          $('#Q2V1_sec1').show();
 
     }else{
 
-      $('#land2019_1_sec1').hide();
+      $('#Q2V1_sec1').hide();
     }
 
 
@@ -992,7 +992,7 @@ $(document).ready(function(){
   
   $('#PrimaryLand').validate({
     rules:{
-          land2019_1:{
+          Q2V1:{
           required:true,
         }
         
