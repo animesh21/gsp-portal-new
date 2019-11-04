@@ -3909,15 +3909,15 @@ $(document).ready(function(){
 $(document).ready(function(){ 
   if($("input[name='Q8W1S12']").val()==='Y'){ $(".question_Q8W1S12").removeClass("hide");}
   else{$(".question_Q8W1S12").addClass("hide");}
-  /**
-  if($("input[name='Q8W2S2']:checked").val()==3){
-   $("#Q8W2S2S2_1").attr("checked",true);
-   $("#Q8W2S2S2_2").attr("checked",false);
-  }else{
-    $("#Q8W2S2S2_1").attr("checked",false);
-    $("#Q8W2S2S2_2").attr("checked",true);
-  }
-  /**/
+  
+//   if($("input[name='Q8W2S2']:checked").val()==3){
+//    $("#Q8W2S2S2_1").attr("checked",true);
+//    $("#Q8W2S2S2_2").attr("checked",false);
+//   }else{
+//     $("#Q8W2S2S2_1").attr("checked",false);
+//     $("#Q8W2S2S2_2").attr("checked",true);
+//   }
+   
   if($("input[name='Q8W2S2']:checked").val()==3){
    $("input[name='Q8W2S2S7']").attr("checked",true);
   }
