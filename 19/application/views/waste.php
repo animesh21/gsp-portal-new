@@ -3318,7 +3318,7 @@
   </div>
   <div class="form-group row">
     <label>Other: &nbsp
-    <input type="text" name="Q13Wa2O" value="<?php echo set_value('Q13Wa2O'); ?>" placeholder="<?php if (isset($data['Q13Wa2O'])) echo $data['Q13Wa2O'] ?>">
+    <input type="text" name="Q13Wa2O" value="<?php if (isset($data['Q13Wa2O'])) echo $data['Q13Wa2O']; ?>" placeholder="<?php if (isset($data['Q13Wa2O'])) echo $data['Q13Wa2O'] ?>">
     </label>
   </div>
 </div>
@@ -4462,9 +4462,6 @@
           required:true,  
         },
         Q13Wa1:{
-          required:true,
-        },
-        Q13Wa2:{
           required:true,
         },
         Q14Wa1:{
