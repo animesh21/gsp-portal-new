@@ -2582,7 +2582,7 @@ $(document).ready(function(){
             var radioCheck = $("input[name=Q13Wa2]:checked").val();
             if(radioCheck != 1 && radioCheck != 2 && radioCheck != 3 && radioCheck != 4 && myLength=='')
             {
-                alert("jeetu 9(a)");
+                alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 9(a)");
                 $('#Q13Wa2').focus(); $('#Q13Wa2').css('border-color', 'red');
                 event.preventDefault();
             }
