@@ -2884,6 +2884,7 @@ echo 'style="display:none;"';
     if($r == false)
     {
          e.preventDefault();
+			alert('You will need to enter data in that first field to move forward. Please look above.');
          jQuery('#food').valid();
     }
     
