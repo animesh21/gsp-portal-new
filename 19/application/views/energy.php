@@ -2054,7 +2054,7 @@ Generally on-grid systems have benefit of transferring surplus power to grid, wh
     if($r == false)
     {
          e.preventDefault();
-			alert('You will need to enter data in that first field to move forward. Please look above.');
+			alert('You will need to enter data in all fields to move forward. Please scroll above to check again.');
          jQuery('#energy').valid();
     }
     

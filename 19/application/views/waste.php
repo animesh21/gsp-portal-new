@@ -4529,7 +4529,7 @@
     {
        
          e.preventDefault();
-			alert('You will need to enter data in that first field to move forward. Please look above.');
+			alert('You will need to enter data in all fields to move forward. Please scroll above to check again.');
          $('#waste').valid();
     }
     
