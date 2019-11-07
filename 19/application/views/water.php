@@ -3503,6 +3503,9 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
         Q1W1S1:{
           required:true,
         },
+	  Q3W1S2:{
+          required:true,
+        },
         Q1W1S3:{
           required:true,
         },
