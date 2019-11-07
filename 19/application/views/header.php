@@ -61,7 +61,7 @@ ga('send', 'pageview');
 <script src="<?php echo base_url(); ?>assets/js/admin.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/AC_RunActiveContent.js" type="text/javascript"></script>
 <script src="<?php echo base_url(); ?>assets/js/validatorr.js" type="text/javascript"></script>
-<script src="<?php echo base_url(); ?>assets/js/CrossLink.js" type="text/javascript"></script>
+<!-- <script src="<//?php echo base_url(); ?>assets/js/CrossLink.js" type="text/javascript"></script> -->
 	<script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery.validate.js"></script>
 <script type="text/javascript">
 	window.onload = function () {
