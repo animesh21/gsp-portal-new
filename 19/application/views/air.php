@@ -2266,6 +2266,7 @@ if (isset($data['Q9A1']))
 		if($r == false)
 		{
 			   e.preventDefault();
+			alert('You will need to enter data in that first field to move forward. Please look above.');
 			   jQuery('#air').valid();
 		}
 		
