@@ -2578,6 +2578,7 @@ $(document).ready(function(){
         else if(radioCheck == 'Y')
         {
 	    var myLength = $("input[name='Q13Wa2O']").val();
+		alert(myLength);
             var radioCheck = $("input[name=Q13Wa2]:checked").val();
             if(radioCheck != 1 && radioCheck != 2 && radioCheck != 3 && radioCheck != 4 && myLength=='')
             {
