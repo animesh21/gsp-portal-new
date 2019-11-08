@@ -5329,6 +5329,28 @@ $("input[name='Q9Wa3']").keyup(function(){
 
 </script>
 
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("#wastenext").click(function(e){
+
+      if($("input[name='Q13Wa1']:checked").val()==="Y")
+      {
+        if($("input[name='Q13Wa2']").prop('checked')==false && $("input[name='Q13Wa2O']").val()=='' ){
+          alert("9(a)Who collects your e-waste, when not in working condition?");
+          e.preventDefault();
+          if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
+        }
+
+      }
+
+    });
+
+  });
+
+</script>
+
 
 <style>
        #btn,#btn1,#btn2{ 
