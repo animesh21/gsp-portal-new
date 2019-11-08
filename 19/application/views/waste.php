@@ -3950,10 +3950,7 @@
         },
         Q1Wa1S2:{
           required:true,
-        },
-	 Q18Wa2S1:{
-          required:true,
-        },
+        },	
         Q2Wa1S1:{
           required:true,
         },
@@ -5240,6 +5237,19 @@ if($("input[name='Q11Wa8S1']").prop('checked') == false && $("input[name='Q11Wa8
        }
      }
   } 
+
+
+if($("input[name='Q18Wa1']:checked").val()==="Y"){
+     if($("input[name='Q18Wa2S1']").prop('checked') == false && $("input[name='Q18Wa2S2']").prop('checked') == false && $("input[name='Q18Wa2S3']").prop('checked') == false){
+         alert("Q14(a) What form do these awareness drives take?");
+    e.preventDefault();  
+    if(e.isDefaultPrevented()){
+           setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+       }
+     }
+  }
+
+
      });  
 </script>
 <script>
