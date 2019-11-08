@@ -17,6 +17,24 @@ class Performance_total extends CI_Controller {
 	}
 	return $test;
     }
+
+
+     function getFiledNum($argWhere, $argUserID) {
+        $test = 0;
+        $CI = & get_instance();
+        $temp = $CI->db->get_where('gsp_answers', array('questionid' => $argWhere, 'userid' => $argUserID))->row();
+        //echo $CI->db->last_query();
+        //print_r($temp);
+        if (!empty($temp)) {
+
+             if(is_numeric($temp->answer)){
+               $test = $temp->answer;
+             }
+           
+            
+        }
+        return $test;
+    }
     
 	public function air() {
 	ini_set('max_execution_time',"-1");
@@ -60,7 +78,7 @@ class Performance_total extends CI_Controller {
 	);
 	$type_aid = array(
 	    '1' => 'Government School',
-	    '2' => 'Government – Aided School',
+	    '2' => 'Government â€“ Aided School',
 	    '3' => 'Private School',
 	);
 	
@@ -259,7 +277,8 @@ class Performance_total extends CI_Controller {
 		'codinator_mobile' => $uArray[$i]['comobile'],
 		'codinator_mobile' => $uArray[$i]['comobile'],
 		'category' => ($vale != '') ? $arr[$vale] : "",
-		'shifts' => ($val_shift != '') ? $shifts[$val_shift] : "",
+		// 'shifts' => ($val_shift != '') ? $shifts[$val_shift] : "",
+		'shifts' => ($val_shift != '') ? $val_shift : "",
 		'school_class_level' =>(getFiled('Q10G1', $uArray[$i]['userid']) != '') ? getFiled('Q10G1', $uArray[$i]['userid']) : "",
 		'lowest_level' => (getFiled('Q1G1', $uArray[$i]['userid']) != '') ? getFiled('Q1G1', $uArray[$i]['userid']) : "",
 		'higest_level' => (getFiled('Q1G2', $uArray[$i]['userid']) != '') ? getFiled('Q1G2', $uArray[$i]['userid']) : "",
@@ -296,7 +315,7 @@ class Performance_total extends CI_Controller {
 		'Q6A2S3H1' => ($this->getFiled('Q6A2S3H1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3H1', $uArray[$i]['userid']) : "000.000",
 		'Q6A2S3B1' => ($this->getFiled('Q6A2S3B1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3B1', $uArray[$i]['userid']) : "000.000",
 		'Q6A2S3D5' => ($this->getFiled('Q6A2S3D5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3D5', $uArray[$i]['userid']) : "000.000",
-		'total_cars' => $this->getFiled('Q6A2S3B1', $uArray[$i]['userid']) + $this->getFiled('Q6A2S3D2', $uArray[$i]['userid']) + $this->getFiled('Q6A2S3P2', $uArray[$i]['userid']) + $this->getFiled('Q6A2S3L2', $uArray[$i]['userid']) + $this->getFiled('Q6A2S3C2', $uArray[$i]['userid']) + $this->getFiled('Q6A2S3E2', $uArray[$i]['userid']) + $this->getFiled('Q6A2S3H2', $uArray[$i]['userid']),
+		'total_cars' => $this->getFiledNum('Q6A2S3B1', $uArray[$i]['userid']) + $this->getFiledNum('Q6A2S3D2', $uArray[$i]['userid']) + $this->getFiledNum('Q6A2S3P2', $uArray[$i]['userid']) + $this->getFiledNum('Q6A2S3L2', $uArray[$i]['userid']) + $this->getFiledNum('Q6A2S3C2', $uArray[$i]['userid']) + $this->getFiledNum('Q6A2S3E2', $uArray[$i]['userid']) + $this->getFiledNum('Q6A2S3H2', $uArray[$i]['userid']),
 		'Q6A2S3B1' => ($this->getFiled('Q6A2S3B1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3B1', $uArray[$i]['userid']) : "000.000",
 		'Q6A2S3D2' => ($this->getFiled('Q6A2S3D2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3D2', $uArray[$i]['userid']) : "000.000",
 		'Q6A2S3P2' => ($this->getFiled('Q6A2S3P2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3P2', $uArray[$i]['userid']) : "000.000",
@@ -304,7 +323,7 @@ class Performance_total extends CI_Controller {
 		'Q6A2S3C2' => ($this->getFiled('Q6A2S3C2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3C2', $uArray[$i]['userid']) : "000.000",
 		'Q6A2S3E2' => ($this->getFiled('Q6A2S3E2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3E2', $uArray[$i]['userid']) : "000.000",
 		'Q6A2S3H2' => ($this->getFiled('Q6A2S3H2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3H2', $uArray[$i]['userid']) : "000.000",
-		'total_vans' => $this->getFiled('Q6A2S3D3', $uArray[$i]['userid']) + $this->getFiled('Q6A2S3P3', $uArray[$i]['userid']) + $this->getFiled('Q6A2S3L3', $uArray[$i]['userid']) + $this->getFiled('Q6A2S3C3', $uArray[$i]['userid']) + $this->getFiled('Q6A2S3E3', $uArray[$i]['userid']) + $this->getFiled('Q6A2S3H3', $uArray[$i]['userid']) + $this->getFiled('Q6A2S3B3', $uArray[$i]['userid']),
+		'total_vans' => $this->getFiledNum('Q6A2S3D3', $uArray[$i]['userid']) + $this->getFiledNum('Q6A2S3P3', $uArray[$i]['userid']) + $this->getFiledNum('Q6A2S3L3', $uArray[$i]['userid']) + $this->getFiledNum('Q6A2S3C3', $uArray[$i]['userid']) + $this->getFiledNum('Q6A2S3E3', $uArray[$i]['userid']) + $this->getFiledNum('Q6A2S3H3', $uArray[$i]['userid']) + $this->getFiledNum('Q6A2S3B3', $uArray[$i]['userid']),
 		'Q6A2S3D3' => ($this->getFiled('Q6A2S3D3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3D3', $uArray[$i]['userid']) : "000.000",
 		'Q6A2S3P3' => ($this->getFiled('Q6A2S3P3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3P3', $uArray[$i]['userid']) : "000.000",
 		'Q6A2S3L3' => ($this->getFiled('Q6A2S3L3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3L3', $uArray[$i]['userid']) : "000.000",
@@ -313,7 +332,7 @@ class Performance_total extends CI_Controller {
 
 		'Q6A2S3H3' => ($this->getFiled('Q6A2S3H3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3H3', $uArray[$i]['userid']) : "000.000",
 		'Q6A2S3B3' => ($this->getFiled('Q6A2S3B3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3B3', $uArray[$i]['userid']) : "000.000",
-		'total_other' => $this->getFiled('Q6A2S3D4', $uArray[$i]['userid']) + $this->getFiled('Q6A2S3P4', $uArray[$i]['userid']) + $this->getFiled('Q6A2S3L4', $uArray[$i]['userid']) + $this->getFiled('Q6A2S3C4', $uArray[$i]['userid']) + $this->getFiled('Q6A2S3E4', $uArray[$i]['userid']) + $this->getFiled('Q6A2S3H4', $uArray[$i]['userid']) + $this->getFiled('Q6A2S3B4', $uArray[$i]['userid']),
+		'total_other' => $this->getFiledNum('Q6A2S3D4', $uArray[$i]['userid']) + $this->getFiledNum('Q6A2S3P4', $uArray[$i]['userid']) + $this->getFiledNum('Q6A2S3L4', $uArray[$i]['userid']) + $this->getFiledNum('Q6A2S3C4', $uArray[$i]['userid']) + $this->getFiledNum('Q6A2S3E4', $uArray[$i]['userid']) + $this->getFiledNum('Q6A2S3H4', $uArray[$i]['userid']) + $this->getFiledNum('Q6A2S3B4', $uArray[$i]['userid']),
 		'Q6A2S3D4' => ($this->getFiled('Q6A2S3D4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3D4', $uArray[$i]['userid']) : "000.000",
 		'Q6A2S3P4' => ($this->getFiled('Q6A2S3P4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3P4', $uArray[$i]['userid']) : "000.000",
 		'Q6A2S3L4' => ($this->getFiled('Q6A2S3L4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A2S3L4', $uArray[$i]['userid']) : "000.000",
@@ -1401,9 +1420,118 @@ class Performance_total extends CI_Controller {
             }
         }
 	///echo array_sum($energy_points);
+
+        // New energy_points calculation by jeetu start here
+        // Que 9 and 10 calculation here...
+
+       $installed_capacity = (getFiled('Q13E1', $argUserID) != '') ? getFiled('Q13E1', $argUserID) : 0;
+
+       $connected_load = (getFiled('Q14E1', $argUserID) != '') ? getFiled('Q14E1', $argUserID) : 0;      
+       if($connected_load>0){
+        $total_capacity_load = ($installed_capacity/$connected_load)*100;
+         $total_capacity_load = (int)$total_capacity_load;
+
+         if($total_capacity_load>=75){
+         	$energy_points['total_capacity_load']=2;
+         }
+         elseif($total_capacity_load>=50){
+         	$energy_points['total_capacity_load']=1.5;
+         }
+         elseif($total_capacity_load>=25){
+         	$energy_points['total_capacity_load']=1;
+         }
+         elseif($total_capacity_load>1){
+         	$energy_points['total_capacity_load']=0.5;
+         }
+       
+
+    }
+    else{
+    	$energy_points['total_capacity_load']=0;
+    }
+      
+     // Que 9 and 13 calculation here...
+      
+        $power_generated = (getFiled('Q19E1', $argUserID) != '') ? getFiled('Q19E1', $argUserID) : 0;
+
         
-		//echo '<pre>'; print_r($energy_points);
-        return number_format(array_sum($energy_points), 2);
+
+        if($installed_capacity>0){
+        $capacity_utilization_factor =  $power_generated/($installed_capacity*24*365)*100; 
+        //echo $total_capacity_load = (int)$total_capacity_load;
+
+         if($capacity_utilization_factor>=20){
+          	$energy_points['capacity_utilization_factor']=0;
+         }
+         elseif($capacity_utilization_factor>=15){
+          	$energy_points['capacity_utilization_factor']=2;
+         }
+         elseif($capacity_utilization_factor>=12){
+          	$energy_points['capacity_utilization_factor']=1.5;
+         }
+         elseif($capacity_utilization_factor<12){
+         	$energy_points['capacity_utilization_factor']=0.5;
+         }
+          
+
+    }
+    else{
+    	 $energy_points['capacity_utilization_factor']=0;
+    }
+
+
+     // Que 16 and 17 calculation here...
+
+        $invertors_size = (getFiled('Q33E1', $argUserID) != '') ? getFiled('Q33E1', $argUserID) : 0;
+
+        $invertors_capacity = (getFiled('Q29E1', $argUserID) != '') ? getFiled('Q29E1', $argUserID) : 0;  
+
+        if(is_numeric($invertors_size)&&$invertors_size>0){
+
+        	 $new_inventors_size=$invertors_size*24*365;
+
+        	 $new_inventors_size = (int)$new_inventors_size;
+        	 $invertors_capacity = (int)$invertors_capacity;
+
+        $total_invertors_size = ($invertors_capacity/$new_inventors_size)*100;
+
+         	if($total_invertors_size>=62){
+         		$energy_points['total_invertors_size']=2;
+
+         	}
+         	elseif($total_invertors_size>=50)
+         	{
+         		$energy_points['total_invertors_size']=1.5;
+         	}
+         	elseif($total_invertors_size>=30){
+         		$energy_points['total_invertors_size']=1;
+         	}
+         	elseif($total_invertors_size<30){
+         		$energy_points['total_invertors_size']=.5;
+         	}
+         	
+         }
+         else{
+    	 $energy_points['total_invertors_size']=0;
+    }
+
+         $hours_biogas = (getFiled('Q51E1', $argUserID) != '') ? getFiled('Q51E1', $argUserID) : 0;
+   
+         $hours_other_source = (getFiled('Q53E1', $argUserID) != '') ? getFiled('Q53E1', $argUserID) : 0; 
+
+        if($hours_biogas > $hours_other_source)
+        {
+        	 $energy_points['hours_other_source']=1;
+        }
+        else{
+        	 $energy_points['hours_other_source']=0;
+        }
+
+
+        // New energy_points calculation by jeetu end here
+        
+		 // echo '<pre>'; print_r($energy_points);
+          return number_format(array_sum($energy_points), 2);
 		
     }
 	
@@ -1412,7 +1540,7 @@ class Performance_total extends CI_Controller {
 	 public function getWaterPoints($argUserID) {
 	//WATER POINTS CALCULATIONS STARTS HERE
 	$water_points = array();
-	//Q1.Calculate your school’s water consumption, per activity:	(7 points)
+	//Q1.Calculate your schoolâ€™s water consumption, per activity:	(7 points)
 	//Total Water Consumption
 	$total_water_consumption = ($this->getFiled('Q4W11', $argUserID) != '') ? $this->getFiled('Q4W11', $argUserID) : 0;
 	$total_population = ($this->getFiled('Q4G4S3', $argUserID) != '') ? $this->getFiled('Q4G4S3', $argUserID) : 0;
@@ -1990,11 +2118,11 @@ class Performance_total extends CI_Controller {
     }*/
 	  public function Air_performance($argUserID) {
 	$arrPoints = array();
-	$Q3_b_CNG = "";
-	$Q3_b_ELE_BIO = "";
-	$Q3_b_LPG = "";
-	$Q3_b_PETROL = "";
-	$no_of_vehicle = "";
+	$Q3_b_CNG = 0;
+	$Q3_b_ELE_BIO = 0;
+	$Q3_b_LPG = 0;
+	$Q3_b_PETROL = 0;
+	$no_of_vehicle = 0;
 	//Q2 To calculate the Window-floor ratio of classrooms in your school
 	$total_floor_area = ($this->getFiled('Q5A110S2', $argUserID) != '') ? $this->getFiled('Q5A110S2', $argUserID) : 0; //X = Area of floor (LxB)
 	$total_area_of_openings = ($this->getFiled('Q5A110S3', $argUserID) != '') ? $this->getFiled('Q5A110S3', $argUserID) : 0; //Y = Area of openings (LxH)
@@ -2057,7 +2185,7 @@ class Performance_total extends CI_Controller {
 		$arrPoints['Q3_auth_parking'] = ($authorise_parking * 1) / $no_of_vehicle;
 	    }
 	}
-	//Q3b Specify the type of fuel used by your school’s vehicles
+	//Q3b Specify the type of fuel used by your schoolâ€™s vehicles
 	//echo '';
 	//print_r($arrPoints);
 	$total_cng_vehicle = ($this->getFiled('Q6A2S3C5', $argUserID) != '') ? $this->getFiled('Q6A2S3C5', $argUserID) : "";
