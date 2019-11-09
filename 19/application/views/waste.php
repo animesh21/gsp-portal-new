@@ -5329,7 +5329,7 @@ $("input[name='Q9Wa3']").keyup(function(){
 
 </script>
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
   $(document).ready(function(){
     $("#wastenext").click(function(e){
 
@@ -5349,7 +5349,7 @@ $("input[name='Q9Wa3']").keyup(function(){
 
   });
 
-</script>
+</script> -->
 
 
 <style>
