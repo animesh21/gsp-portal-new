@@ -2584,7 +2584,7 @@ $(document).ready(function(){
             {
                 alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 9(a)");
                 $('#Q13Wa2').focus(); $('#Q13Wa2').css('border-color', 'red');
-                event.preventDefault();
+                //event.preventDefault();
             }
         }
         var radioCheck = $("input[name=Q14Wa1]:checked").val();
