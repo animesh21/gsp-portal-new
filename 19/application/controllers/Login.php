@@ -30,8 +30,7 @@
 					{
 					  $this->session->set_flashdata('error', "
 
-	GSP Audit 2018 is closed and GSP Audit 2019 will be open for participation by mid-2019. Please go to the GSP website for further updates. In case you would like to update information such as GSP co-ordinator's name, principal's name, mobile number, email address, etc, please send a mail with changes required to  support@greenschoolsprogramme.org
-
+GSP Audit 2019 has now been closed. Audit 2020 will open for participation by mid 2020. Please log in to the GSP website for further updates. In case you wish to update the school details, viz. GSP coordinator's name, principal's name, mobile number, and email address, please send a mail with the updated details to support@greenschoolsprogramme.org.
 	If your school has not registered earlier for the GSP Audit, please <a href='http://greenschoolsprogramme.org/audit/19/register' target='blank_'>register here</a>.
 
 	");
