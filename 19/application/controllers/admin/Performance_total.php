@@ -203,41 +203,41 @@ class Performance_total extends CI_Controller {
 	
 	
     $audit_period=null;
-	if(getFiled('Q7G1', $uArray[$i]['userid'])==1):
-	$audit_period=$audit_period."Jan".",";
+	if(getFiled('Q7G1', $uArray[$i]['userid'])=='true'):
+	$audit_period=$audit_period."Jan".", ";
 	endif;
-	if(getFiled('Q7G2', $uArray[$i]['userid'])==2):
-	$audit_period=$audit_period."Feb".",";
+	if(getFiled('Q7G2', $uArray[$i]['userid'])=='true'):
+	$audit_period=$audit_period."Feb".", ";
 	endif;
-	if(getFiled('Q7G3', $uArray[$i]['userid'])==3):
-	$audit_period=$audit_period."Mar".",";
+	if(getFiled('Q7G3', $uArray[$i]['userid'])=='true'):
+	$audit_period=$audit_period."Mar".", ";
 	endif;
-	if(getFiled('Q7G4', $uArray[$i]['userid'])==4):
-	$audit_period=$audit_period."April".",";
+	if(getFiled('Q7G4', $uArray[$i]['userid'])=='true'):
+	$audit_period=$audit_period."April".", ";
 	endif;
-	if(getFiled('Q7G5', $uArray[$i]['userid'])==5):
-	$audit_period=$audit_period."May".",";
+	if(getFiled('Q7G5', $uArray[$i]['userid'])=='true'):
+	$audit_period=$audit_period."May".", ";
 	endif;
-	if(getFiled('Q7G6', $uArray[$i]['userid'])==6):
-	$audit_period=$audit_period."June".",";
+	if(getFiled('Q7G6', $uArray[$i]['userid'])=='true'):
+	$audit_period=$audit_period."June".", ";
 	endif;
-	if(getFiled('Q7G7', $uArray[$i]['userid'])==7):
-	$audit_period=$audit_period."July".",";
+	if(getFiled('Q7G7', $uArray[$i]['userid'])=='true'):
+	$audit_period=$audit_period."July".", ";
 	endif;
-	if(getFiled('Q7G8', $uArray[$i]['userid'])==8):
-	$audit_period=$audit_period."Aug".",";
+	if(getFiled('Q7G8', $uArray[$i]['userid'])=='true'):
+	$audit_period=$audit_period."Aug".", ";
 	endif;
-	if(getFiled('Q7G9', $uArray[$i]['userid'])==9):
-	$audit_period=$audit_period."Sept".",";
+	if(getFiled('Q7G9', $uArray[$i]['userid'])=='true'):
+	$audit_period=$audit_period."Sept".", ";
 	endif;
-	if(getFiled('Q7G10', $uArray[$i]['userid'])==10):
-	$audit_period=$audit_period."Oct".",";
+	if(getFiled('Q7G10', $uArray[$i]['userid'])=='true'):
+	$audit_period=$audit_period."Oct".", ";
 	endif;
-	if(getFiled('Q7G11', $uArray[$i]['userid'])==11):
-	$audit_period=$audit_period."Nov".",";
+	if(getFiled('Q7G11', $uArray[$i]['userid'])=='true'):
+	$audit_period=$audit_period."Nov".", ";
 	endif;
-	if(getFiled('Q7G12', $uArray[$i]['userid'])==12):
-	$audit_period=$audit_period."Dec".",";
+	if(getFiled('Q7G12', $uArray[$i]['userid'])=='true'):
+	$audit_period=$audit_period."Dec".", ";
 	endif;
 	$gender=null;
 	if(getFiled('Q2G1', $uArray[$i]['userid'])==1):
