@@ -997,7 +997,7 @@
                 <td><?php echo $record1[$i]->Q9E1S103; ?></td>
                 <td><?php echo $record1[$i]->Q27E3; if($record1[$i]->Q27E3!='') echo ", ". $record1[$i]->Q27E1; ?></td>
 
-                <td><?php echo $record1[$i]->Q27E2; ?></td>                
+                <td><?php if($record1[$i]->Q27E2=='5'){echo "Not applicable";} else{echo "000.000";} ?></td>                 
                 <td><?php echo $record1[$i]->Q29E1; ?></td>
                 <td><?php echo $record1[$i]->Q30E1; ?></td>
                 <td><?php echo $record1[$i]->Q33E1; ?></td>
