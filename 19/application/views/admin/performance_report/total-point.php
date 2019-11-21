@@ -1223,7 +1223,7 @@
 <td><?php echo  $record1[$i]->Q13W1S4; ?></td>
 <td><?php if($record1[$i]->population=="" && $record1[$i]->population==0): echo "N/A";  else: echo $record1[$i]->population/$record1[$i]->Q13W1S4; endif; ?></td>
 <td><?php echo  $record1[$i]->Q14W1; ?></td>
-<td><?php echo  $record1[$i]->Q15W1; ?></td>
+<td><?php if($record1[$i]->population=="" && $record1[$i]->population==0): echo "N/A";  else: echo $record1[$i]->population/$record1[$i]->Q14W1; endif; ?></td>
 <td><?php echo  $record1[$i]->Q15W1; ?></td>
 <td><?php echo  $record1[$i]->Q16W1; ?></td>
 <td><?php echo  $record1[$i]->Q21W1; ?></td>
