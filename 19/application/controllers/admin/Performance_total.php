@@ -573,6 +573,10 @@ class Performance_total extends CI_Controller {
 
 
 		'energy_points'=>$this->getEnergyPoints($uArray[$i]['userid']),
+		'per_day_energy_point'=>$this->perDayEnergyConsumptionPoint($uArray[$i]['userid']),
+		'per_capta_energy_consumption'=>$this->perCaptaEnergy($uArray[$i]['userid']),
+		'per_day_energy_consumption'=>$this->perDayEnergy($uArray[$i]['userid']),
+
 		
 	    'Q4F1'=>($this->getFiled('Q4F1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4F1', $uArray[$i]['userid']) : "000.000",
 		'Q5F1'=>($this->getFiled('Q5F1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5F1', $uArray[$i]['userid']) : "000.000",
@@ -1309,6 +1313,123 @@ class Performance_total extends CI_Controller {
     }
     
 	
+
+
+
+public function perDayEnergy($argUserID) {
+	///$argUserID=2429;       
+       $per_day_energy='';
+      $total_energy_consumtion_mj = (getFiled('Q6E15S2', $argUserID) != '') ? (getFiled('Q6E15S2', $argUserID)) : 0;
+        
+          $per_day_energy = ($total_energy_consumtion_mj) / 30;
+          return $per_day_energy;
+          
+
+  }
+
+ 
+public function perCaptaEnergy($argUserID) {
+	///$argUserID=2429;       
+         $perCaptaEnergy='';      
+
+        //Total Points
+         $total_population = (getFiled('Q4G4S3', $argUserID) != '') ? getFiled('Q4G4S3', $argUserID) : 0;
+
+//        //Total Energy Consumption
+        $total_energy_consumtion_mj = (getFiled('Q6E15S2', $argUserID) != '') ? (getFiled('Q6E15S2', $argUserID)) : 0;
+
+        if ($total_population == 0) {
+            $perCaptaEnergy = 0;
+        } else {
+            //per day energy
+             $per_day_energy = ($total_energy_consumtion_mj) / 30;
+            //echo 'Total Population' . $total_population . 'Per_day_energy' . $per_day_energy;
+            $megajole_per_cepta_day = $per_day_energy / $total_population;
+	      $megajole_per_cepta_day;
+            //school type
+            $school_type = (getFiled('Q1S1', $argUserID) != '') ? getFiled('Q1S1', $argUserID) : 0;
+
+            //Day Scholar
+            if (($school_type == 1) && ($megajole_per_cepta_day <= 46.2)) { // condition for Day Scholar school.
+                $perCaptaEnergy = $megajole_per_cepta_day;
+            } else if (($school_type == 2) && ($megajole_per_cepta_day <= 49.8)) { // condition for Day Boarding school.
+                $perCaptaEnergy = $megajole_per_cepta_day;
+            } else if (($school_type == 3) && ($megajole_per_cepta_day <= 24.6)) { // condition for Residential school.
+                $perCaptaEnergy = $megajole_per_cepta_day;
+            } else if (($school_type == 4) && ($megajole_per_cepta_day <= 48.0)) { // condition for Day Scholar + Day Boarding school.
+                $perCaptaEnergy = $megajole_per_cepta_day;
+            } else if (($school_type == 5) && ($megajole_per_cepta_day <= 46.2)) { // condition for Day Boarding + Residential school.
+                $perCaptaEnergy = $megajole_per_cepta_day;
+            } else if (($school_type == 6) && ($megajole_per_cepta_day <= 49.8)) { // condition for Day Scholar + Residential school.
+                $perCaptaEnergy = $megajole_per_cepta_day;
+            } else if (($school_type == 7) && ($megajole_per_cepta_day <= 46.2)) { // condition for Day Scholar + Day Boarding + Residential school.
+                $perCaptaEnergy = $megajole_per_cepta_day;
+            }
+            else{
+                $per_day_energy_consumption = '000.000';
+            }
+            
+            // echo "<pre>";
+            // print_r($perCaptaEnergy) ;
+        }
+        // echo "<pre>";
+          
+          return $perCaptaEnergy;
+
+  }
+
+
+
+public function perDayEnergyConsumptionPoint($argUserID) {
+	///$argUserID=2429;       
+         $per_day_energy_consumption_point='';      
+
+        //Total Points
+         $total_population = (getFiled('Q4G4S3', $argUserID) != '') ? getFiled('Q4G4S3', $argUserID) : 0;
+
+//        //Total Energy Consumption
+        $total_energy_consumtion_mj = (getFiled('Q6E15S2', $argUserID) != '') ? (getFiled('Q6E15S2', $argUserID)) : 0;
+
+        if ($total_population == 0) {
+            $per_day_energy_consumption_point = 0;
+        } else {
+            //per day energy
+             $per_day_energy = ($total_energy_consumtion_mj) / 30;
+            //echo 'Total Population' . $total_population . 'Per_day_energy' . $per_day_energy;
+            $megajole_per_cepta_day = $per_day_energy / $total_population;
+	      $megajole_per_cepta_day;
+            //school type
+            $school_type = (getFiled('Q1S1', $argUserID) != '') ? getFiled('Q1S1', $argUserID) : 0;
+
+            //Day Scholar
+            if (($school_type == 1) && ($megajole_per_cepta_day <= 46.2)) { // condition for Day Scholar school.
+                $per_day_energy_consumption_point = 1;
+            } else if (($school_type == 2) && ($megajole_per_cepta_day <= 49.8)) { // condition for Day Boarding school.
+                $per_day_energy_consumption_point = 1;
+            } else if (($school_type == 3) && ($megajole_per_cepta_day <= 24.6)) { // condition for Residential school.
+                $per_day_energy_consumption_point = 1;
+            } else if (($school_type == 4) && ($megajole_per_cepta_day <= 48.0)) { // condition for Day Scholar + Day Boarding school.
+                $per_day_energy_consumption_point = 1;
+            } else if (($school_type == 5) && ($megajole_per_cepta_day <= 46.2)) { // condition for Day Boarding + Residential school.
+                $per_day_energy_consumption_point = 1;
+            } else if (($school_type == 6) && ($megajole_per_cepta_day <= 49.8)) { // condition for Day Scholar + Residential school.
+                $per_day_energy_consumption_point = 1;
+            } else if (($school_type == 7) && ($megajole_per_cepta_day <= 46.2)) { // condition for Day Scholar + Day Boarding + Residential school.
+                $per_day_energy_consumption_point = 1;
+            }
+            else{
+                $per_day_energy_consumption_point = '000.000';
+            }
+            
+            // echo "<pre>";
+            // print_r($megajole_per_cepta_day) ;
+        }
+        // echo "<pre>";
+          
+          return $per_day_energy_consumption_point;
+
+  }
+
 	
 	public function getEnergyPoints($argUserID) {
 	///$argUserID=2429;
@@ -1455,7 +1576,7 @@ class Performance_total extends CI_Controller {
       
      // Que 9 and 13 calculation here...
       
-        $power_generated = (getFiled('Q19E1', $argUserID) != '') ? getFiled('Q19E1', $argUserID) : 0;
+        $power_generated = (getFiledNum('Q19E1', $argUserID) != '') ? getFiledNum('Q19E1', $argUserID) : 0;
 
         
 
