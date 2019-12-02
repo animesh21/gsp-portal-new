@@ -34,7 +34,7 @@
         $('#tablePerformance').DataTable({
             dom: 'lBfrtip',
             buttons: [
-                'csv'
+                'excel'
             ],
             "aLengthMenu": [[10, 25, 50, 75, -1], [10, 25, 50, 75, "All"]],
             "iDisplayLength": 25
