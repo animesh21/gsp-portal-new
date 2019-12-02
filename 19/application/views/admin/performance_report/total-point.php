@@ -934,7 +934,7 @@
 				
 				if(($record1[$i]->Q9E1S1)!='1') 
 				{
-					echo 'N/A';
+					echo '000.000';
 				}	
 				
 				?></td>
@@ -945,7 +945,7 @@
 				
 				if(($record1[$i]->Q9E1S2)!='1')
 				{
-					echo 'N/A';
+					echo '000.000';
 				}	
 					?></td>
 				<td><?php if(( $record1[$i]->Q9E1S3)==1)
@@ -955,7 +955,7 @@
 				
 				if(( $record1[$i]->Q9E1S3)!='1')
 				{
-					echo 'N/A';
+					echo '000.000';
 				}
 					?></td>
 				<td><?php if(( $record1[$i]->Q9E1S5)==1)
@@ -964,7 +964,7 @@
 				}
 				if(( $record1[$i]->Q9E1S5)!='1')
 				{
-					echo 'N/A';
+					echo '000.000';
 				}
 					?></td>
 				<td><?php if(( $record1[$i]->Q9E1S4)==1) 
@@ -973,7 +973,7 @@
 				}	
 				if(( $record1[$i]->Q9E1S4)!='1') 
 				{
-					echo 'N/A';
+					echo '000.000';
 				}	
 				
 				?></td>
@@ -986,13 +986,17 @@
                 <td><?php echo $record1[$i]->Q13E1; ?></td>
                 <td><?php echo $record1[$i]->Q14E1; ?></td>
                 <td><?php echo $record1[$i]->Q15E1; ?></td>
-                <td><?php echo $record1[$i]->Q16E1; ?></td>
+                <td><?php if($record1[$i]->Q16E1=='1'){echo "Off-grid" ;}
+                elseif($record1[$i]->Q16E1=='2'){echo "On-grid net metering" ;}
+                elseif($record1[$i]->Q16E1=='3'){echo "On-grid gross metering" ;} 
+                else{echo '000.000';}
+                ?></td>
                 <td><?php echo $record1[$i]->Q19E1; ?></td>
-                <td><?php  if($record1[$i]->Q9E1S1020=='1'){echo "chekbox 1, ";}
-                elseif($record1[$i]->Q9E1S1021=='2'){echo "chekbox 2, ";}
-                elseif($record1[$i]->Q9E1S1022=='3'){echo "chekbox 3, ";}
-                elseif($record1[$i]->Q9E1S1023=='4'){echo "chekbox 4, ";}
-                else{echo "'000.000'";} ?></td>
+                <td><?php  if($record1[$i]->Q9E1S1020=='1'){echo "Wet cleaning at least once a week., ";}
+                elseif($record1[$i]->Q9E1S1021=='2'){echo "Dry cleaning daily, ";}
+                elseif($record1[$i]->Q9E1S1022=='3'){echo "Annual maintenance contract with the vendor, ";}
+                elseif($record1[$i]->Q9E1S1023=='4'){echo "Regular monitoring of the integrated software";}
+                else{echo '000.000';} ?></td>
                 <td><?php if($record1[$i]->Q9E1S101=='1'){echo "Biofuel, ";}
                 elseif($record1[$i]->Q9E1S1024=='1'){echo "Biogas, ";}
                 elseif($record1[$i]->Q9E1S1025=='2'){echo "Biomass, ";}
@@ -1001,31 +1005,28 @@
                 elseif($record1[$i]->Q27E3=='4'){echo "Other, ";}
                 elseif($record1[$i]->Q27E3!=''){echo ", ". $record1[$i]->Q27E1;}
                 elseif($record1[$i]->Q27E2=='5'){echo "Not applicable";}
-                else{echo "'000.000'";}?></td>                 
+                else{echo '000.000';}?></td>                 
                               
                 <td><?php echo $record1[$i]->Q29E1; ?></td>
                 <td><?php echo $record1[$i]->Q30E1; ?></td>
                 <td><?php echo $record1[$i]->Q33E1; ?></td>
                 <td><?php echo $record1[$i]->Q31E1; ?></td>
-                <td><?php if($record1[$i]->Q9E1S1026=='1'){echo "chekbox 1, ";}
-                elseif($record1[$i]->Q9E1S1027=='2'){echo "chekbox 2";}
-                else { echo "'000.000'" ;} ?></td>
+                <td><?php if($record1[$i]->Q9E1S1026=='1'){echo "Annual maintenance contract with the vendor, ";}
+                elseif($record1[$i]->Q9E1S1027=='2'){echo "Regular monitoring of the integrated software";}
+                else { echo '000.000' ;} ?></td>
                  
-                <td><?php if($record1[$i]->Q9E1S106=='1'){echo "chekbox 1, ";}
-                elseif($record1[$i]->Q9E1S107=='2'){echo "chekbox 2, ";}
-                elseif($record1[$i]->Q9E1S108=='3'){echo "chekbox 3, ";}
-                elseif($record1[$i]->Q9E1S109=='4'){echo "chekbox 4, ";}
-                elseif($record1[$i]->Q9E1S1010=='5'){echo "chekbox 5, ";}
-                elseif($record1[$i]->Q34E1!=''){echo $record1[$i]->Q34E1;}
-                else {echo "'000.000'" ;}
-
-
-                echo $record1[$i]->Q9E1S106; ?></td>              
+                <td><?php if($record1[$i]->Q9E1S106=='1'){echo "Food waste, ";}
+                elseif($record1[$i]->Q9E1S107=='2'){echo "Animal solid waste (cow dung, etc.), ";}
+                elseif($record1[$i]->Q9E1S108=='3'){echo "Wood chips/ pellets, ";}
+                elseif($record1[$i]->Q9E1S109=='4'){echo "Grass/straw based/dry leaves, ";}
+                elseif($record1[$i]->Q9E1S1010=='5'){echo "Others, ";}
+                elseif($record1[$i]->Q34E1!=='000.000'){echo $record1[$i]->Q34E1;}
+                else {echo '000.000' ;} ?></td>              
                 <td><?php echo $record1[$i]->Q38E1; ?></td>
                 <td><?php if($record1[$i]->Q9E1S1011=='1'){echo "Electricity, ";}
                 elseif($record1[$i]->Q9E1S1012=='2'){echo "Heating, ";}
                 elseif($record1[$i]->Q9E1S1013=='3'){echo "Cooking, ";}
-                else {echo "'000.000'" ;} ?></td>                
+                else {echo '000.000' ;} ?></td>                
                 <td><?php echo $record1[$i]->Q42E1; ?></td>
                 <td><?php echo $record1[$i]->Q43E1; ?></td>
                 <td><?php echo $record1[$i]->Q44E1; ?></td>
@@ -1035,7 +1036,7 @@
                 elseif($record1[$i]->Q9E1S1017=='4'){echo "Scrubber, ";}
                 elseif($record1[$i]->Q9E1S1018=='5'){echo "Gas outlet, ";}
                 elseif($record1[$i]->Q9E1S1019=='6'){echo "Gas pump, ";}
-                else {echo "'000.000'" ;}
+                else {echo '000.000' ;}
                 
                 ?></td>                
                  
@@ -1122,7 +1123,7 @@
 				}	
 				if(( $record1[$i]->Q12F2)!=1&&2&&3&&4) 
 				{
-					echo 'N/A ';
+					echo '000.000 ';
 				}	
 				
 				?></td>
@@ -1165,18 +1166,23 @@
 <td><?php echo  $record1[$i]->Q4W9; ?></td>
 <td><?php echo  $record1[$i]->Q4W10; ?></td>
 <td><?php echo  $record1[$i]->Q4W11; ?></td>
-<td><?php if($record1[$i]->population!="" && $record1[$i]->population!=0): echo  $record1[$i]->Q4W11/$record1[$i]->population; else: echo "N/A"; endif; ?></td>
-<td><?php echo  $record1[$i]->Q5W1; ?></td>
-<td><?php echo  $record1[$i]->Q5W2; ?></td>
-<td><?php echo  $record1[$i]->Q5W3; ?></td>
-<td><?php echo  $record1[$i]->Q5W4; ?></td>
-<td><?php echo  $record1[$i]->Q6W1; ?></td>
-<td><?php echo  $record1[$i]->Q6W2; ?></td>
-<td><?php echo  $record1[$i]->Q6W3; ?></td>
-<td><?php echo  $record1[$i]->Q6W4; ?></td>
-<td><?php echo  $record1[$i]->Q6W5; ?></td>
+<td><?php if($record1[$i]->population!="" && $record1[$i]->population!=0): echo  $record1[$i]->Q4W11/$record1[$i]->population; else: echo "000.000"; endif; ?></td>
+<td><?php if($record1[$i]->Q5W1=='1'){echo "Ground water";} else{ echo'000.000';} ?></td>
+<td><?php if($record1[$i]->Q5W2=='1'){echo "Surface water";} else{ echo'000.000';} ?></td>
+<td><?php if($record1[$i]->Q5W3=='1'){echo "Rainwater";} else{ echo'000.000';} ?></td>
+<td><?php if($record1[$i]->Q5W4=='1'){echo "Recycled wastewater";} else{ echo'000.000';} ?></td>
+<td><?php if($record1[$i]->Q6W1=='1'){echo "Municipality";} else{ echo'000.000';} ?></td>
+<td><?php if($record1[$i]->Q6W2=='1'){echo "Panchayat";} else{ echo'000.000';} ?></td>
+<td><?php if($record1[$i]->Q6W3=='1'){echo "Public Health Engineering Department (PHED)";} else{ echo'000.000';} ?></td>
+<td><?php if($record1[$i]->Q6W4=='1'){echo "Private supplier";} else{ echo'000.000';} ?></td>
+<td><?php if($record1[$i]->Q6W5=='1'){echo "School’s own supply (bore well, rainwater harvesting facility, etc)";} else{ echo'000.000';} ?></td>
 <td><?php echo  $record1[$i]->Q7W1; ?></td>
-<td><?php echo  $record1[$i]->Q7W2; ?></td>
+<td><?php if($record1[$i]->Q7W2=='1'){echo "≤1 hours";}
+elseif($record1[$i]->Q7W2=='2'){echo "2-6 hours";}
+elseif($record1[$i]->Q7W2=='3'){echo "7-12 hours";}
+elseif($record1[$i]->Q7W2=='4'){echo "13-18 hours";}
+elseif($record1[$i]->Q7W2=='5'){echo "19-24 hours";}
+else{echo '000.000'; } ?></td>
 <td><?php echo  $record1[$i]->Q8W1S1; ?></td>
 <td><?php echo  $record1[$i]->Q8W1S2; ?></td>
 <td><?php echo  $record1[$i]->Q8W1S3; ?></td>
@@ -1190,23 +1196,77 @@
 <td><?php echo  $record1[$i]->Q8W1S11; ?></td>
 <td><?php echo  $record1[$i]->Q8W2; ?></td>
 <td><?php echo  $record1[$i]->Q8W2S1; ?></td>
-<td><?php echo  $record1[$i]->Q8W2S1S1; ?></td>
+<td><?php if($record1[$i]->Q8W2S1S1=='1'){echo "Rooftop";}
+elseif($record1[$i]->Q8W2S1S1=='2'){echo "Paved";}
+elseif($record1[$i]->Q8W2S1S1=='3'){echo "Unpaved";}
+elseif($record1[$i]->Q8W2S1S1=='4'){echo "Rooftop + paved";}
+elseif($record1[$i]->Q8W2S1S1=='5'){echo "Paved + unpaved";}
+elseif($record1[$i]->Q8W2S1S1=='6'){echo "Rooftop + unpaved";}
+elseif($record1[$i]->Q8W2S1S1=='7'){echo "Rooftop + paved + unpaved";}
+else{echo '000.000';}
+ ?></td>
 <td><?php echo  $record1[$i]->Q8W2S2; ?></td>
-<td><?php echo  $record1[$i]->Q8W2S2S1; ?></td>
+<td><?php if($record1[$i]->QSW2S2W1=='1'){echo "Drinking, ";}
+elseif($record1[$i]->QSW2S2W2=='1'){echo "Gardening, ";}
+elseif($record1[$i]->QSW2S2W3=='1'){echo "Mopping, ";}
+elseif($record1[$i]->QSW2S2W4=='1'){echo "Toilets, ";}
+elseif($record1[$i]->QSW2S2W5=='1'){echo "Washing vehicles, ";}
+elseif($record1[$i]->QSW2S2W6=='1'){echo "Kitchen (Cooking/Washing vegetables and utensils), ";}
+elseif($record1[$i]->QSW2S2W7=='1'){echo "Shower, Brushing teeth, Bathing, Hand washing, ";}
+elseif($record1[$i]->QSW2S2W8=='1'){echo "Swimming Pool, ";}
+elseif($record1[$i]->QSW2S2W9=='1'){echo "Fire fighting, ";}
+elseif($record1[$i]->QSW2S2W10=='1'){echo "Desert coolers";}
+else{echo '000.000' ;}  ?></td>
 <td><?php echo  $record1[$i]->Q8W2S2S2; ?></td>
 <td><?php echo  $record1[$i]->Q8W2S2S7; ?></td>
 <td><?php echo  $record1[$i]->Q8W2S2S10; ?></td>
-<td><?php echo  $record1[$i]->Q8W2S4; ?></td>
-<td><?php echo  $record1[$i]->Q8W2S31; ?></td>
+<td><?php if($record1[$i]->Q8W2S4=='1'){echo "10 to 20 per cent";}
+elseif($record1[$i]->Q8W2S4=='2'){echo "21 to 30 per cent";}
+elseif($record1[$i]->Q8W2S4=='3'){echo "31 to 40 per cent";}
+elseif($record1[$i]->Q8W2S4=='4'){echo "41 to 50 per cent";}
+elseif($record1[$i]->Q8W2S4=='5'){echo "51 to 60 per cent";}
+elseif($record1[$i]->Q8W2S4=='6'){echo "61 to 70 per cent";}
+elseif($record1[$i]->Q8W2S4=='7'){echo "71 to 80 per cent";}
+elseif($record1[$i]->Q8W2S4=='8'){echo "81 to 90 per cent";}
+elseif($record1[$i]->Q8W2S4=='9'){echo "91 to 100 per cent";}
+else{echo '000.000' ;} ?></td>
+<td><?php if($record1[$i]->Q8W2S31=='1'){echo"Conduits, ";}
+elseif($record1[$i]->Q8W2S32=='1'){echo"Gutters, ";}
+elseif($record1[$i]->Q8W2S33=='1'){echo"Filter unit, ";}
+elseif($record1[$i]->Q8W2S34=='1'){echo"First flush, ";}
+elseif($record1[$i]->Q8W2S35=='1'){echo"Storage tank, ";}
+elseif($record1[$i]->Q8W2S36=='1'){echo"Collection sump, ";}
+elseif($record1[$i]->Q8W2S37=='1'){echo"Pump unit, ";}
+elseif($record1[$i]->Q8W2S38=='1'){echo"Recharge structure";}
+else{echo '000.000' ;}
+?></td>
 <td><?php echo  $record1[$i]->Q8W2S4S1; ?></td>
 <td><?php echo  $record1[$i]->Q8W2S4S22; ?></td>
-<td><?php echo  $record1[$i]->Q8W2S5; ?></td>
+<td><?php if($record1[$i]->Q8W2S5=='1'){echo "Good";}
+elseif($record1[$i]->Q8W2S5=='2'){echo "Average";}
+elseif($record1[$i]->Q8W2S5=='3'){echo "Poor";}
+else{echo '000.000' ;}
+?></td>
 <td><?php echo  $record1[$i]->Q8W2S61; ?></td>
-<td><?php echo  $record1[$i]->Q8W2S7; ?></td>
+<td><?php if($record1[$i]->Q8W2S7=='1'){echo "Pre-monsoon";}
+elseif($record1[$i]->Q8W2S7=='2'){echo "Post-monsoon";}
+elseif($record1[$i]->Q8W2S7=='3'){echo "Do not follow any such pattern";}
+else{echo '000.000' ;}?></td>
 <td><?php echo  $record1[$i]->Q8W2S8; ?></td>
-<td><?php echo  $record1[$i]->Q8W2S9; ?></td>
-<td><?php echo  $record1[$i]->Q8W2S10;  ?></td>
-<td><?php echo  $record1[$i]->Q8W2S12; ?></td>
+<td><?php if($record1[$i]->Q8W2S9=='1'){echo "Pre-monsoon";}
+elseif($record1[$i]->Q8W2S9=='2'){echo "Post-monsoon";}
+elseif($record1[$i]->Q8W2S9=='3'){echo "Do not follow any such pattern";}
+else{echo '000.000' ;} ?></td>
+<td><?php if($record1[$i]->Q8W2S10=='1'){echo "If there was a decrease, please specify";}
+elseif($record1[$i]->Q8W2S10=='2'){echo "If there was an increase, please specify";}
+elseif($record1[$i]->Q8W2S10=='3'){echo "No change";} 
+else{echo '000.000' ;}
+?></td>
+<td><?php if($record1[$i]->Q8W2S12=='1'){echo "Less than a metre annually";}
+elseif($record1[$i]->Q8W2S12=='2'){echo "1-5 metre annually";}
+elseif($record1[$i]->Q8W2S12=='3'){echo "More than 5 metres annually";} 
+else{echo '000.000' ;}
+?></td>
 <td><?php echo  $record1[$i]->Q8W2S13; ?></td>
 <td><?php echo  $record1[$i]->Q8W2S6; ?></td>
 <td><?php echo  $record1[$i]->Q8W3S1; ?></td>
@@ -1218,17 +1278,17 @@
 <td><?php echo  $record1[$i]->Q8W3S7; ?></td>
 <td><?php echo  $record1[$i]->Q8W3S8; ?></td>
 <td><?php echo  $record1[$i]->Q9W1; ?></td>
-<td><?php if($record1[$i]->population=="" && $record1[$i]->population==0): echo "N/A"; else:  echo $record1[$i]->population/$record1[$i]->Q9W1; endif; ?></td>
+<td><?php if($record1[$i]->population=="" && $record1[$i]->population==0): echo "000.000"; else:  echo $record1[$i]->population/$record1[$i]->Q9W1; endif; ?></td>
 <td><?php echo  $record1[$i]->Q10W1; ?></td>
 <td><?php echo  $record1[$i]->Q11W1; ?></td>
-<td><?php if($record1[$i]->population=="" && $record1[$i]->population==0): echo "N/A";  else: echo $record1[$i]->population/$record1[$i]->Q11W1; endif; ?></td>
+<td><?php if($record1[$i]->population=="" && $record1[$i]->population==0): echo "000.000";  else: echo $record1[$i]->population/$record1[$i]->Q11W1; endif; ?></td>
 <td><?php echo  $record1[$i]->Q13W1S1; ?></td>
 <td><?php echo  $record1[$i]->Q13W1S2; ?></td>
 <td><?php echo  $record1[$i]->Q13W1S3; ?></td>
 <td><?php echo  $record1[$i]->Q13W1S4; ?></td>
-<td><?php if($record1[$i]->population=="" && $record1[$i]->population==0): echo "N/A";  else: echo $record1[$i]->population/$record1[$i]->Q13W1S4; endif; ?></td>
+<td><?php if($record1[$i]->population=="" && $record1[$i]->population==0): echo "000.000";  else: echo $record1[$i]->population/$record1[$i]->Q13W1S4; endif; ?></td>
 <td><?php echo  $record1[$i]->Q14W1; ?></td>
-<td><?php if($record1[$i]->population=="" && $record1[$i]->population==0): echo "N/A";  else: echo $record1[$i]->population/$record1[$i]->Q14W1; endif; ?></td>
+<td><?php if($record1[$i]->population=="" && $record1[$i]->population==0): echo "000.000";  else: echo $record1[$i]->population/$record1[$i]->Q14W1; endif; ?></td>
 <td><?php echo  $record1[$i]->Q15W1; ?></td>
 <td><?php echo  $record1[$i]->Q16W1; ?></td>
 <td><?php echo  $record1[$i]->Q21W1; ?></td>
@@ -1350,18 +1410,18 @@
         <td><?php echo  $record1[$i]->Q8Wa7S1; ?></td>
         <td><?php echo  $record1[$i]->Q8Wa7S2; ?></td>
         <td><?php echo  $record1[$i]->Q9Wa1; ?></td>
-        <td><?php if($record1[$i]->Q9Wa2S1!='') {echo $record1[$i]->Q9Wa2S1;} else {echo "'000.000'";} ?></td>
+        <td><?php if($record1[$i]->Q9Wa2S1!='') {echo $record1[$i]->Q9Wa2S1;} else {echo '000.000';} ?></td>
         <td><?php echo  $record1[$i]->Q9Wa3; ?></td>
-         <td><?php if($record1[$i]->Q9Wa4S1!='') {echo $record1[$i]->Q9Wa4S1;} else {echo "'000.000'";} ?></td>
+         <td><?php if($record1[$i]->Q9Wa4S1!='') {echo $record1[$i]->Q9Wa4S1;} else {echo '000.000';} ?></td>
         <td><?php echo  $record1[$i]->Q10Wa1; ?></td>
-        <td><?php if($record1[$i]->paper_recycling_procedures!='') {echo $record1[$i]->paper_recycling_procedures;} else {echo "'000.000'";} ?></td>
-        <td><?php if($record1[$i]->plastic_recycling_procedures!='') {echo $record1[$i]->plastic_recycling_procedures;} else {echo "'000.000'";}?></td>
-        <td><?php if($record1[$i]->horticultural_waste_recycling_procedures!='') {echo $record1[$i]->horticultural_waste_recycling_procedures;} else {echo "'000.000'";}?></td>
-        <td><?php if($record1[$i]->e_waste_recycling_procedures!='') {echo $record1[$i]->e_waste_recycling_procedures;} else {echo "'000.000'";} ?></td>
-        <td><?php if($record1[$i]->hazardous_waste_recycling_procedures!='') {echo $record1[$i]->hazardous_waste_recycling_procedures;} else {echo "'000.000'";} ?></td>
-        <td><?php if($record1[$i]->wood_glass_metal_recycling_procedures!='') {echo $record1[$i]->wood_glass_metal_recycling_procedures;} else {echo "'000.000'";} ?></td>
-        <td><?php if($record1[$i]->biomedical_waste_recycling_procedures!='') {echo $record1[$i]->biomedical_waste_recycling_procedures;} else {echo "'000.000'";} ?></td>
-        <td><?php if($record1[$i]->others_recycling_procedures!='') {echo $record1[$i]->others_recycling_procedures;} else {echo "'000.000'";} ?></td>
+        <td><?php if($record1[$i]->paper_recycling_procedures!='') {echo $record1[$i]->paper_recycling_procedures;} else {echo '000.000';} ?></td>
+        <td><?php if($record1[$i]->plastic_recycling_procedures!='') {echo $record1[$i]->plastic_recycling_procedures;} else {echo '000.000';}?></td>
+        <td><?php if($record1[$i]->horticultural_waste_recycling_procedures!='') {echo $record1[$i]->horticultural_waste_recycling_procedures;} else {echo '000.000';}?></td>
+        <td><?php if($record1[$i]->e_waste_recycling_procedures!='') {echo $record1[$i]->e_waste_recycling_procedures;} else {echo '000.000';} ?></td>
+        <td><?php if($record1[$i]->hazardous_waste_recycling_procedures!='') {echo $record1[$i]->hazardous_waste_recycling_procedures;} else {echo '000.000';} ?></td>
+        <td><?php if($record1[$i]->wood_glass_metal_recycling_procedures!='') {echo $record1[$i]->wood_glass_metal_recycling_procedures;} else {echo '000.000';} ?></td>
+        <td><?php if($record1[$i]->biomedical_waste_recycling_procedures!='') {echo $record1[$i]->biomedical_waste_recycling_procedures;} else {echo '000.000';} ?></td>
+        <td><?php if($record1[$i]->others_recycling_procedures!='') {echo $record1[$i]->others_recycling_procedures;} else {echo '000.000';} ?></td>
         <td><?php echo  $record1[$i]->Q12Wa1S1; ?></td>
         <td><?php echo  $record1[$i]->Q12Wa1S2; ?></td>
         <td><?php echo  $record1[$i]->Q12Wa1S3; ?></td>
@@ -1476,13 +1536,13 @@
         <td><?php echo  $record1[$i]->Q15Wa1 ?></td>
         <td><?php if($record1[$i]->Q15Wa2=='1'){ echo "Inside the school" ;}
         elseif($record1[$i]->Q15Wa2=='2'){ echo "Outside the school" ;}
-        else {echo "'000.000'";} ?></td>
+        else {echo '000.000';} ?></td>
         <td><?php if($record1[$i]->Q15Wa2S1=='1'){echo "Horticultural, ";}
                   elseif($record1[$i]->Q15Wa2S2=='1'){echo "Plastic, ";}
                   elseif($record1[$i]->Q15Wa2S3=='1'){echo "Tyres, ";}
                   elseif($record1[$i]->Q15Wa2S4=='1'){echo "Paper, ";}
                   elseif($record1[$i]->Q15Wa2S5=='1'){echo " Sanitary waste";}
-                  else{echo "'000.000'";} 
+                  else{echo '000.000';} 
 
         ?></td>
         <td><?php echo  $record1[$i]->Q16Wa1; ?></td>
@@ -1491,7 +1551,7 @@
         <td><?php if($record1[$i]->Q18Wa2S1=='1') {echo "As part of the curriculum, ";}
         elseif($record1[$i]->Q18Wa2S2=='2') {echo "As part of extracurricular activities such as guest lectures, ";}
         elseif($record1[$i]->Q18Wa2S3=='3') {echo "By the showcasing of posters and stickers";}
-        else{echo "'000.000'";} ?></td>
+        else{echo '000.000';} ?></td>
         <td><?php echo  $record1[$i]->Q19Wa1; ?></td>
         <td><?php echo $record1[$i]->waste_points; ?></td>
 		
@@ -1499,7 +1559,7 @@
 		<td><?php 
 		  global $percentage;
 		  $total=$record1[$i]->air_points + $record1[$i]->energy_points + $record1[$i]->food_points + $record1[$i]->land_points + $record1[$i]->water_points + $record1[$i]->waste_points; 
-		  $percentage= ($total/164)*100;
+		  $percentage= ($total/171)*100;
 	          $percentage=number_format($percentage,1);
 		  echo $percentage;
 		 ?></td>
