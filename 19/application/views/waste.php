@@ -628,13 +628,11 @@
   <div class="">
     <label>Other: &nbsp
     <input type="text" name="Q4Wa2S5" value="<?php echo set_value('Q4Wa2S5'); ?>"
-                                       placeholder="<?php if (isset($data['Q4Wa2S5'])) echo $data['Q4Wa2'] ?>">
+                                       placeholder="<?php if (isset($data['Q4Wa2S5'])) echo $data['Q4Wa2S5'] ?>">
     </label>
   </div>
 </div>
-<?php
-                }
-            ?>
+<?php }  ?>
  
 <div class="form-group">
   <label><span class="cube">2</span>How many categories does your school segregate waste into? <a
@@ -5296,7 +5294,7 @@ $("input[name='Q9Wa3']").keyup(function(){
 });
 
 </script>
-
+  
 <script type="text/javascript">
   $(document).ready(function(){
     $("#wastenext").click(function(e){
