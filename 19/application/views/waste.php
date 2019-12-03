@@ -635,39 +635,7 @@
 <?php
                 }
             ?>
-<div class="form-group row" id="Q1A" style="display: none;">
-  <label><span class="cube">1(a)</span>Who segregates the waste at source? </label>
-  <div class="">
-    <label>
-    <input type="checkbox" name="Q4Wa2S1"
-                               value="<?php echo set_value('Q4Wa2S1', 1); ?>" <?php if (isset($data['Q4Wa2S1'])) echo "checked" ?>>
-    Students and teachers</label>
-  </div>
-  <div class="">
-    <label>
-    <input type="checkbox" name="Q4Wa2S2"
-                               value="<?php echo set_value('Q4Wa2S2', 1); ?>" <?php if (isset($data['Q4Wa2S2'])) echo "checked" ?>>
-    Housekeeping (Sweeper)</label>
-  </div>
-  <div class="">
-    <label>
-    <input type="checkbox" name="Q4Wa2S3"
-                               value="<?php echo set_value('Q4Wa2S3', 1); ?>" <?php if (isset($data['Q4Wa2S3'])) echo "checked" ?>>
-    Gardener</label>
-  </div>
-  <div class="">
-    <label>
-    <input type="checkbox" name="Q4Wa2S4"
-                               value="<?php echo set_value('Q4Wa2S4', 1); ?>" <?php if (isset($data['Q4Wa2S4'])) echo "checked" ?>>
-    Ragpickers</label>
-  </div>
-  <div class="">
-    <label>Other: &nbsp
-    <input type="text" name="Q4Wa2S5" value="<?php echo set_value('Q4Wa2S5'); ?>"
-                               placeholder="<?php if (isset($data['Q4Wa2S5'])) echo $data['Q4Wa2'] ?>">
-    </label>
-  </div>
-</div>
+ 
 <div class="form-group">
   <label><span class="cube">2</span>How many categories does your school segregate waste into? <a
                             class="tt"
