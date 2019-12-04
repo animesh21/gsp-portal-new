@@ -23,7 +23,7 @@ class Download extends CI_Controller {
         $data['title'] = 'Home | Response Report 2017';
 	    $this->load->view('list-school');
     }
-// 	public function downloadFiles() {
+	public function downloadFiles() {
 // 	    if ($this->session->userdata('USER_ID') == '') {
 //             redirect('downloadLogin');
 //     	}
