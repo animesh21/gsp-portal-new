@@ -26,7 +26,7 @@ class Download extends CI_Controller {
 	public function downloadFiles() {
 // 	    if ($this->session->userdata('USER_ID') == '') {
 //             redirect('downloadLogin');
-    	}
+//     	}
         $data['main'] = 'All School List Complete & Submit The Audit';
         $data['title'] = 'Home | Response Report 2017';
 	    $this->load->view('download');
