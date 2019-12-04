@@ -95,6 +95,10 @@
       <div class="container">
         <div class="col-md-12">
           <h1><strong>GSP Audit 2018-19 Reports & Certificate</strong></h1>
+		 <div class="other" style="margin-top: -40px; margin-bottom: 60px">
+          <a href="http://greenschoolsprogramme.org/audit/downloadLogin" target="blank"><button class="btn btn-primary" style="float: right; background-color: #e86549; border-color: #e86549;">Download Report 2017</button></a> 
+
+          <a href="<?php echo base_url('DownloadLogin/index18') ;?>" target="blank"><button class="btn btn-primary" style="float: right; background-color: #e86549; border-color: #e86549; margin-right: 6px;">Download Report 2018</button></a> </div>
           <hr/>
         </div>
         <div class="col-md-12">
