@@ -8,7 +8,7 @@ class DownloadLogin extends CI_Controller {
         parent::__construct();
         $this->load->helper(array('form', 'security'));
         $this->load->library('form_validation');
-		$this->load->model('admin/Audit_started_model');
+    $this->load->model('admin/Audit_started_model');
         $this->load->model('User_model');
         $this->load->model('School_model');
     }
@@ -22,46 +22,58 @@ class DownloadLogin extends CI_Controller {
         } else {
             $post = $this->security->xss_clean($this->input->post());
             $varCheckLogin = $this->User_model->UserLoginDownload($post);
-            $varCheckLogin1 = $this->User_model->UserLoginDownload2($post);
             if ($varCheckLogin) {
-			    if($varCheckLogin=="success"){
-                redirect('https://www.greenschoolsprogramme.org/audit/18/download/downloadFiles');
-				}
-				elseif($varCheckLogin=="warning")
-				{
-				  $this->session->set_flashdata('error', "The School Have Completed The GSP Audit So The School Can't Submit Audit Again");
-				}
-		                elseif($varCheckLogin=="incomplete")
-				{
-				  $this->session->set_flashdata('error', "The school has to first complete and SUBMIT the GSP Audit.");
-				}
-            } else if($varCheckLogin=="error") {
-                $this->session->set_flashdata('error', 'Invalid Email/Password!');
-            }
-
-            if ($varCheckLogin1) {
-          if($varCheckLogin1=="success"){
-                redirect('https://greenschoolsprogramme.org/audit/download/downloadFiles');
+          if($varCheckLogin=="success"){
+                redirect(base_url('download/downloadFiles'));
         }
-        elseif($varCheckLogin1=="warning")
+        elseif($varCheckLogin=="warning")
         {
           $this->session->set_flashdata('error', "The School Have Completed The GSP Audit So The School Can't Submit Audit Again");
         }
-                    elseif($varCheckLogin1=="incomplete")
+                    elseif($varCheckLogin=="incomplete")
         {
-          $this->session->set_flashdata('error', "The school has to first complete and SUBMIT the GSP Audit.");
+          $this->session->set_flashdata('error', "The School Have To Completed Full GSP Audit.");
         }
-            } else if($varCheckLogin1=="error") {
+            } else if($varCheckLogin=="error") {
                 $this->session->set_flashdata('error', 'Invalid Email/Password!');
             }
-
         }
-	     $this->load->view('download-login');
+       $this->load->view('download-login');
     }
-	
-	
-	
-	 public function download_report() {
+
+
+
+    public function index18() {
+        $data['title'] = 'Green School';
+        $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
+        $this->form_validation->set_rules('password', 'Password', 'trim|required');
+       if ($this->form_validation->run() == FALSE) {
+            $this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');
+        } else {
+            $post = $this->security->xss_clean($this->input->post());
+            $varCheckLogin = $this->User_model->UserLoginDownload2($post);
+            if ($varCheckLogin) {
+          if($varCheckLogin=="success"){
+                redirect('https://www.greenschoolsprogramme.org/audit/18/download/downloadFiles');
+        }
+        elseif($varCheckLogin=="warning")
+        {
+          $this->session->set_flashdata('error', "The School Have Completed The GSP Audit So The School Can't Submit Audit Again");
+        }
+                    elseif($varCheckLogin=="incomplete")
+        {
+          $this->session->set_flashdata('error', "The School Have To Completed Full GSP Audit.");
+        }
+            } else if($varCheckLogin=="error") {
+                $this->session->set_flashdata('error', 'Invalid Email/Password!');
+            }
+        }
+       $this->load->view('download-login-18');
+    }
+  
+  
+
+  public function download_report() {
        
         $data['title'] = 'Green School';
         $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
@@ -70,7 +82,7 @@ class DownloadLogin extends CI_Controller {
             $this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');
         } else {
             $post = $this->security->xss_clean($this->input->post());
-            $varCheckLogin = $this->User_model->UserLoginDownload1($post);
+            $varCheckLogin = $this->User_model->UserLoginDownload($post);
             $varCheckLogin1 = $this->User_model->UserLoginDownload2($post);
             if ($varCheckLogin) {
 
@@ -86,11 +98,10 @@ class DownloadLogin extends CI_Controller {
                      }
          $this->load->view('download-login_home');
       }
-    	
+      
    }
-	
-	
-    	
+  
+    
 }
 
 ?>
