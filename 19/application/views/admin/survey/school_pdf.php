@@ -32,7 +32,7 @@ ul {list-style-type: none;}
 .heading {text-transform: uppercase; color: #fff; background: #9397a0; padding: 8px 20px; margin: 0px; font-size: 18px; position: relative;}
 .heading.section {padding-left: 100px; margin: 20px 0 10px;}
 .heading.section > img {margin-left: -10px;}
-.heading.section:before {content: ''; width: 15px; height: 100%; background: #fff; position: absolute; left: 0; top: 0;}
+.heading.section:before {content: ''; width: 15px; height: 100%; position: absolute; left: 0; top: 0;}
 .heading.air {background: #d5bb2b;}
 .heading.energy {background: #e29e15;}
 .heading.food {background: #f153a8;}
@@ -939,8 +939,8 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
     <li>
       <p class="orange"><span>4</span>How many members of the school community use each type of transport:</p>
       <table class="table">
-        <tr>
-          <td> 4(c) Sustainable Motorised Vehicles </td>
+        <tr >
+          <th style="border-bottom: 1px solid white"> 4(c) Sustainable Motorised Vehicles </th>
           <td></td>
           <td></td>
           <td></td>
@@ -1002,7 +1002,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
           <td><?php echo (getFiled('Q7A6S4', $schoolUserID) != "") ? getFiled('Q7A6S4', $schoolUserID) : "N/A"; ?></td>
         </tr>
         <tr>
-          <td>4(b) Private Vehicles</td>
+          <th>4(b) Private Vehicles</th>
           <td></td>
           <td></td>
           <td></td>
@@ -1030,7 +1030,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
           <td><?php echo (getFiled('Q7A8S4', $schoolUserID) != "") ? getFiled('Q7A8S4', $schoolUserID) : "N/A"; ?></td>
         </tr>
         <tr>
-          <td>4(c) Non-Polluting Mode</td>
+          <th>4(c) Non-Polluting Mode</th>
           <td></td>
           <td></td>
           <td></td>
@@ -1926,9 +1926,10 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
         <p class="formanswertext"><?php echo (getFiled('Q5F1', $schoolUserID) != "") ? (getFiled('Q5F1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
       </li>
       <li>
-        <p class="orange" style="font-size: 16px;"> Please upload picture of Mid-day meal being served </p>
-          <?php 
+        <?php 
       if(!empty($midDayMeal)){ ?>
+        <p class="orange" style="font-size: 16px;"> Please upload picture of Mid-day meal being served </p>
+          
         <table class="table">
           <tr>
             <th>image</th>
@@ -2093,9 +2094,10 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
       <?php } } ?>
     </ul>
   </div>
+  <h3 class="task">Task 3: What kind of food is served/sold in your school.</h3>
   <?php if(strcmp(getFiled('Q4F1', $schoolUserID),'Y')==0): ?>
   <div class="task-area">
-    <h3 class="task">Task 3: What kind of food is served/sold in your school.</h3>
+    
     <ul class="list">
       <li>
         <p class="orange"><span>3</span>What  kind of food is being served / sold in your school? </p>
@@ -2603,7 +2605,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
             <td><?php echo (getFiled('Q4L1', $schoolUserID) != "") ? getFiled('Q4L1', $schoolUserID) : "N/A"; ?></td>
           </tr>
           <tr>
-            <td><label><span class="cube">1A</span>Total green cover</label></td>
+            <th style="text-align: left;"><label><span class="cube"> 1A </span>Total green cover</label></th>
             <td></td>
           </tr>
           <tr>
@@ -2635,7 +2637,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
             <td><?php echo (getFiled('Q4L8', $schoolUserID) != "") ? getFiled('Q4L8', $schoolUserID) : "N/A"; ?></td>
           </tr>
           <tr>
-            <td><label><span class="cube">1B</span>Other General Area in Campus</label></td>
+            <th style="text-align: left;"><label><span class="cube"> 1B </span>Other General Area in Campus</label></th>
             <td></td>
           </tr>
           <tr>
@@ -3790,7 +3792,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
       <p class="orange">
         <label><span class="cube">11</span>How many water closets (used for
         defecation and urination) do you have?</label> </p> <br/><br/>
-      <p><strong>Number of toilets</strong></p>
+      <p><strong>Number of Water Closets</strong></p>
       <table class="table">
         <tr>
           <th>Girls</th>
@@ -4398,7 +4400,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
       <li>
         <p class="orange">
           <label><span class="cube">3</span>Determine the quantity of waste generated in your school. (in kilogram) </label></p>
-        <strong style="font-size:15px;">a. Biodegradable/Wet Waste</strong>
+        <strong style="font-size:15px;">A: Biodegradable/Wet Waste</strong>
         <table class="table">
           <thead>
           </thead>
@@ -4431,7 +4433,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
             <td><?php echo (getFiled('Q6Wa1S6', $schoolUserID) != "") ? getFiled('Q6Wa1S6', $schoolUserID) : "N/A"; ?> </td>
           </tr>
         </table>
-        <strong style="font-size:15px;">b. Dry/recyclable waste</strong>
+        <strong style="font-size:15px;">B: Dry/recyclable waste</strong>
         <table class="table ">
           <thead>
           </thead>
@@ -4476,7 +4478,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
             <td><?php echo (getFiled('Q6Wa2S9', $schoolUserID) != "") ? getFiled('Q6Wa2S9', $schoolUserID) : "N/A"; ?> </td>
           </tr>
         </table>
-        <strong style="font-size:15px;">C. Domestic hazardous waste</strong>
+        <strong style="font-size:15px;">C: Domestic hazardous waste</strong>
         <table class="table">
           <thead>
           </thead>
@@ -4489,7 +4491,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
             <td><?php echo (getFiled('Q6Wa3S1', $schoolUserID) != "") ? getFiled('Q6Wa3S1', $schoolUserID) : "N/A"; ?></td>
           </tr>
           <tr>
-            <td> Oil from DG sets </td>
+            <td> Oil from diesel generator sets </td>
             <td><?php echo (getFiled('Q6Wa3S2', $schoolUserID) != "") ? getFiled('Q6Wa3S2', $schoolUserID) : "N/A"; ?> </td>
           </tr>
           <tr>
@@ -4501,7 +4503,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
             <td><?php echo (getFiled('Q6Wa3S4', $schoolUserID) != "") ? getFiled('Q6Wa3S4', $schoolUserID) : "N/A"; ?> </td>
           </tr>
         </table>
-        <strong style="font-size:15px;">d. E-Waste</strong>
+        <strong style="font-size:15px;">D: E-Waste</strong>
         <table class="table">
           <thead>
           </thead>
@@ -4518,7 +4520,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
             <td><?php echo (getFiled('Q6Wa4S2', $schoolUserID) != "") ? getFiled('Q6Wa4S2', $schoolUserID) : "N/A"; ?> </td>
           </tr>
         </table>
-        <strong style="font-size:15px;">d. Biomedical waste</strong>
+        <strong style="font-size:15px;">E: Biomedical waste</strong>
         <table class="table">
           <thead>
           </thead>
@@ -4535,7 +4537,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
             <td><?php echo (getFiled('Q6Wa5S2', $schoolUserID) != "") ? getFiled('Q6Wa5S2', $schoolUserID) : "N/A"; ?> </td>
           </tr>
         </table>
-        <strong style="font-size:15px;">f. Sanitary waste</strong>
+        <strong style="font-size:15px;">F: Sanitary waste</strong>
         <table class="table">
           <thead>
           </thead>
@@ -4552,7 +4554,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
             <td><?php echo (getFiled('Q6Wa6S2', $schoolUserID) != "") ? getFiled('Q6Wa6S2', $schoolUserID) : "N/A"; ?> </td>
           </tr>
         </table>
-        <strong style="font-size:15px;">g. Cc& D Waste</strong>
+        <strong style="font-size:15px;">G: C & D Waste</strong>
         <table class="table">
           <thead>
           </thead>
@@ -4589,26 +4591,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
         <?php } else { ?>
         <div class="support_files">No documents uploaded by the school.</div>
         <?php } ?>
-        <?php
-        if (!empty($composingPit)) {
-            ?>
-        <div>
-          <table class="table">
-            <tr>
-              <th>image</th>
-              <th>File name</th>
-            </tr>
-            <?php foreach ($composingPit as $a) { ?>
-            <tr>
-              <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
-              <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Composting_Pit_"), " ", $a->file_name); ?></td>
-            </tr>
-            <?php } ?>
-          </table>
-        </div>
-        <?php } else { ?>
-        <div class="support_files">No documents uploaded by the school.</div>
-        <?php } ?>
+         
       </li>
     </ul>
   </div>
