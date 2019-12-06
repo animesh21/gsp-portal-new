@@ -12,10 +12,12 @@ class User_model extends CI_Model
    public function UserLogin($argPost)
     {
 		$msg=''; 
-        $query = $this->db->select('*')
-            ->from('gsp_user')
-            ->where(array('email' => $argPost['email'], 'password' => $argPost['password']))
+        $query = $this->db->select('a.*, a.username AS username, a.id AS id, a.status AS status, b.complete_status' )
+            ->from('gsp_user As a')
+            ->join('gsp_school AS b', 'b.userid=a.id', 'left')     
+            ->where(array('a.email' => $argPost['email'], 'a.password' => $argPost['password'], 'b.complete_status'=>'0'))
             ->get();
+            // echo $this->db->last_query();
         if ($query->num_rows() > 0) {
             $row = $query->row();
 			if($row->login_status==1)
