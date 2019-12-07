@@ -15,27 +15,32 @@ class User_model extends CI_Model
         $query = $this->db->select('a.*, a.username AS username, a.id AS id, a.status AS status, b.complete_status' )
             ->from('gsp_user As a')
             ->join('gsp_school AS b', 'b.userid=a.id', 'left')     
-            ->where(array('a.email' => $argPost['email'], 'a.password' => $argPost['password'], 'b.complete_status'=>'0'))
+            ->where(array('a.email' => $argPost['email'], 'a.password' => $argPost['password']))
             ->get();
             // echo $this->db->last_query();
         if ($query->num_rows() > 0) {
             $row = $query->row();
-			if($row->login_status==0)
+			if($row->complete_status==0)
 			{
-				$userData = array(
-					'USERNAME' => $row->username,
-					'USER_ID' => $row->id,
-					'status' => $row->status,
-					'lastid' => $row->lastQuestionId
-				);
+			$userData = array(
+			'USERNAME' => $row->username,
+			'USER_ID' => $row->id,
+			'status' => $row->status,
+			'lastid' => $row->lastQuestionId
+			);
             	$this->session->set_userdata($userData);
             	$msg='success';
-			}
-			else
-			{
-			 	$msg='warning';
-			}
-        }else
+		}
+		
+	 elseif($row->complete_status==1) {
+        $msg = 'complitesurveyschool';
+         }
+	
+	else
+	{
+	$msg='warning';
+	}
+        } else
 		{
 		   $msg='error';
 		}
