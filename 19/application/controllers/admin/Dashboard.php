@@ -161,7 +161,7 @@ class Dashboard extends CI_Controller {
 	}
 	 
 	 
-	public function  registration_2017_phase_2()
+	public function  registration_2019_phase_2()
         {
         $data['main']='admin/audit/register_2017_phase_2';
         $data['title']='Registration 2017';
