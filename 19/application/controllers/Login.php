@@ -39,7 +39,7 @@ GSP Audit 2019 has now been closed. Audit 2020 will open for participation by mi
 			     $this->session->set_flashdata('error', 'Invalid Email/Password!');
 			   }
 			    else if($varCheckLogin=="complitesurveyschool") {
-			     $this->session->set_flashdata('error', 'Your school has already submitted the GSP audit in Phase I which ended on 11 November 2019.');
+			     $this->session->set_flashdata('error', '<p style="font-size:20px; font-family:Lato; font-weight:bold;line-height:30px; margin:0px">Your school has already submitted the GSP audit in Phase I which ended on 11 November 2019.</p>');
 			   }
 		    } else if($varCheckLogin=="error") {
 			$this->session->set_flashdata('error', 'Invalid Email/Password!');
