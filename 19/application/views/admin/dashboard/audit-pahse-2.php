@@ -46,5 +46,5 @@
     <label>view</label>
   </div>
   </a>
-  <div class="title">2018 Registration</div>
+  <div class="title">2019 Registration</div>
 </div>
