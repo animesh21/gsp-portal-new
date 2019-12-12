@@ -2141,6 +2141,7 @@ public function getExcel2017Data() {
                         ->join('cities AS c', 'a.district=c.id', 'left')
 		        ->join('gsp_user AS d', 'a.userid=d.id', 'left')
                         ->where('a.date_added >=', '2019-03-01 00:00:00')
+			->where("a.date_added <=","2019-11-10 00:00:00")
                         ->order_by('a.id', 'desc')
 		        ->where("a.make_school_disabled","1")
                         ->get()->result();
@@ -2282,7 +2283,7 @@ public function getExcel2017Data() {
                         ->join('states AS b', 'a.state=b.id', 'left')
                         ->join('cities AS c', 'a.district=c.id', 'left')
 		                ->join('gsp_user AS d', 'a.userid=d.id', 'left')
-                       
+                       		->where("a.date_added <=","2019-11-10 00:00:00")
 		                ->where('a.progress', '100')
 		                ->where('a.complete_status','0')
                         ->order_by('a.id', 'desc')
@@ -2355,6 +2356,7 @@ public function getExcel2017Data() {
                        ->join('cities AS c', 'a.district=c.id', 'left')
                        ->join('gsp_user AS d', 'a.userid=d.id', 'left')
                        //->join('gsp_aduit_submitted AS e','e.userid=a.userid', 'left')
+			->where("a.date_added <=","2019-11-10 00:00:00")
                        ->where('a.progress', '100')
                        ->where('a.complete_status','1')
                        ->order_by('a.id', 'desc')
@@ -2433,7 +2435,7 @@ public function getExcel2017Data() {
                         ->join('states AS b', 'a.state=b.id', 'left')
                         ->join('cities AS c', 'a.district=c.id', 'left')
 		                ->join('gsp_user AS d', 'a.userid=d.id', 'left')
-                       
+                       		->where("a.date_added <=","2019-11-10 00:00:00")
 		                ->where('progress >','5')
 		                ->where('progress <=','75')
                         ->order_by('a.id', 'desc')
@@ -2503,7 +2505,7 @@ public function getExcel2017Data() {
                         ->join('states AS b', 'a.state=b.id', 'left')
                         ->join('cities AS c', 'a.district=c.id', 'left')
 		                ->join('gsp_user AS d', 'a.userid=d.id', 'left')
-                       
+                       		->where("a.date_added <=","2019-11-10 00:00:00")
 		                ->where('progress =','5')
                         ->order_by('a.id', 'desc')
                         ->get()->result();
