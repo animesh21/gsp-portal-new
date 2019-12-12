@@ -26,6 +26,7 @@ class Audit_started_model extends CI_Model {
     }
     
     public function getDisabledSchool() {
+	    $this->db->where("a.date_added <=","2019-11-10 00:00:00");
         return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
