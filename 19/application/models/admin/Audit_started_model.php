@@ -2436,9 +2436,9 @@ public function getExcel2017Data() {
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
                         ->join('cities AS c', 'a.district=c.id', 'left')
-		                ->join('gsp_user AS d', 'a.userid=d.id', 'left')                       		
-		                ->where('progress >','5')
-		                ->where('progress <=','75')
+		        ->join('gsp_user AS d', 'a.userid=d.id', 'left')                       		
+		        ->where('progress >','5')
+		        ->where('progress <=','75')
                         ->order_by('a.id', 'desc')
                         ->get()->result();
         
