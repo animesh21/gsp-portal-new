@@ -462,7 +462,7 @@ class Dashboard_model extends CI_Model {
         ->join('states AS b', 'a.state=b.id', 'left')
 	->join('cities AS c', 'a.district=c.id', 'left')
         ->where('a.date_added >=', '2019-03-01 00:00:00')
-	->where("a.date_added <=", "2019-11-11 00:00:00")
+	->where("a.date_added <=", "2019-11-10 00:00:00")
         ->order_by('a.id', 'desc')
         ->get()->result();
       }
