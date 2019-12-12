@@ -2430,12 +2430,13 @@ public function getExcel2017Data() {
 	 
     public function getExcelstartedtheauditbutnotcomplete() {
         $output = "";
+	    $this->db->where("a.date_added <=","2019-11-11 00:00:00");
+	    $this->db->where("a.make_school_disabled","1");
         $arrRecord = $this->db->select('a.*, b.name AS state_name, c.name AS district_name , d.password')
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
                         ->join('cities AS c', 'a.district=c.id', 'left')
-		                ->join('gsp_user AS d', 'a.userid=d.id', 'left')
-                       		->where("a.date_added <=","2019-11-10 00:00:00")
+		                ->join('gsp_user AS d', 'a.userid=d.id', 'left')                       		
 		                ->where('progress >','5')
 		                ->where('progress <=','75')
                         ->order_by('a.id', 'desc')
