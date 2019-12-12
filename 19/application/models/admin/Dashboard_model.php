@@ -447,8 +447,9 @@ class Dashboard_model extends CI_Model {
         return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
         ->from('gsp_school AS a')
         ->join('states AS b', 'a.state=b.id', 'left')
-		->join('cities AS c', 'a.district=c.id', 'left')
+	->join('cities AS c', 'a.district=c.id', 'left')
         ->where('a.date_added >=', '2019-03-01 00:00:00')
+	->where("a.date_added <=", "2019-11-11 00:00:00")
         ->order_by('a.id', 'desc')
         ->get()->result();
       }
@@ -466,6 +467,7 @@ class Dashboard_model extends CI_Model {
       }
 	  
 	   public function getstartedtheaudit_19data(){
+	$this->db->where("a.date_added <=","2019-11-11 00:00:00");
 	$this->db->where("a.make_school_disabled","1");
 	$this->db->where("a.complete_status",'0');
         return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
@@ -480,6 +482,7 @@ class Dashboard_model extends CI_Model {
 	  
 	  
   public function getCompletedAuditButNotSubmitted_19data(){
+	$this->db->where("a.date_added <=","2019-11-11 00:00:00");
 	$this->db->where("a.make_school_disabled","1");  
         return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
         ->from('gsp_school AS a')
@@ -493,11 +496,11 @@ class Dashboard_model extends CI_Model {
       }
    
       public function getSubmittedTheAudit_19data(){
-	    return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
-        ->from('gsp_school AS a')
-        ->join('states AS b', 'a.state=b.id', 'left')
-	    ->join('cities AS c', 'a.district=c.id', 'left')
-        
+	   $this->db->where("a.date_added <=","2019-11-11 00:00:00");
+	   return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
+          ->from('gsp_school AS a')
+          ->join('states AS b', 'a.state=b.id', 'left')
+	    ->join('cities AS c', 'a.district=c.id', 'left')        
 	    ->where('a.progress', '100')
 	    ->where('a.complete_status','1')
 // 	    ->where('a.make_school_disabled',1)
@@ -505,17 +508,14 @@ class Dashboard_model extends CI_Model {
         ->get()->result();		
 		
       }
-		
-		
-      
-	  
-	   public function getStartedAuditButDidNotComplete_19data(){
+	 
+	public function getStartedAuditButDidNotComplete_19data(){
+	$this->db->where("a.date_added <=","2019-11-11 00:00:00");
 	$this->db->where("a.make_school_disabled","1");	   
         return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
         ->from('gsp_school AS a')
         ->join('states AS b', 'a.state=b.id', 'left')
-		->join('cities AS c', 'a.district=c.id', 'left')
-       
+		->join('cities AS c', 'a.district=c.id', 'left')       
 		->where('progress >','5')
 		->where('progress <=','75')
         ->order_by('a.id', 'desc')
@@ -526,13 +526,13 @@ class Dashboard_model extends CI_Model {
    
      
 	 public function getNotStartTheAudit_19data(){
+	$this->db->where("a.date_added <=","2019-11-11 00:00:00");
 	$this->db->where("a.make_school_disabled","1");	 
         return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
         ->from('gsp_school AS a')
         ->join('states AS b', 'a.state=b.id', 'left')
-		->join('cities AS c', 'a.district=c.id', 'left')
-        
-		->where('progress =','5')
+	->join('cities AS c', 'a.district=c.id', 'left')        
+	->where('progress =','5')
         ->order_by('a.id', 'desc')
         ->get()->result();
 		
@@ -554,11 +554,12 @@ class Dashboard_model extends CI_Model {
        }
      /**This Function Used For Counting Disbaled School**/
      public function getDisabledScoolCounts(){
-        $countDisbaled=$this->db->select("count('id') AS labelCount")
-           ->from('gsp_school')
-		   ->like("make_school_disabled","0")
-           ->get()->result();
-		   return $countDisbaled[0]->labelCount;
+         $countDisbaled=$this->db->select("count('id') AS labelCount")
+        ->from('gsp_school')
+	->like("make_school_disabled","0")
+	->where("date_added <=","2019-11-11 00:00:00")
+        ->get()->result();
+	return $countDisbaled[0]->labelCount;
        }
 	 
 	
