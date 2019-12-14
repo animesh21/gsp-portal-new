@@ -203,7 +203,7 @@ class Dashboard_model extends CI_Model {
 	/**GSP Audit Pahse -2**/
 	/*******************************************************************/
 	public function schoolCount_phase_2() {
-	    $this->db->where('date_added >=', '2019-11-12 00:00:00');
+// 	    $this->db->where('date_added >=', '2019-11-12 00:00:00');
 	    $this->db->where("make_school_disabled","1");
             return $this->db->count_all_results('gsp_school') ;
 	
@@ -224,7 +224,7 @@ class Dashboard_model extends CI_Model {
 
               $r=$this->db->select('school_id')
                         ->from('gsp_aduit_submitted')
-                        ->where('date_on >=', '2019-11-12 00:00:00')
+//                         ->where('date_on >=', '2019-11-12 00:00:00')
 			            ->get()->result();
              //print_r($r); exit;
 
