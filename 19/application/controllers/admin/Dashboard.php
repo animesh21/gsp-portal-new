@@ -149,7 +149,7 @@ class Dashboard extends CI_Controller {
 	        $data['main']='admin/dashboard/audit-pahse-2';
                 $data['title']='Home | Audit Phase 2';
 		$data['audit1']=$this->Dashboard_model->getschool_started_audit_phase_2();
-               $data['Schools_pahse2'] = $this->Dashboard_model->getSchool_alldata_audit_phase_2();
+                $data['Schools_pahse2'] = $this->School_model->getSchools_phase_2();
                 $data['schoolcount']=$this->Dashboard_model->schoolCount_phase_2();
 	        $data['complete_audit_phase_2_count']= $this->Dashboard_model->school_that_complete_audit_phase_2();
 		$data['completecount']=$this->Dashboard_model->getschool_that_complete_audit_phase_2();
