@@ -1,6 +1,3 @@
-<?php echo count($record); echo "<br>";
-echo count($record1);
-exit; ?>
 <div class="top-area">
         <h2>2018 Registration<a href="<?php echo base_url('admin/audit_started_2017/excel_phase2') ?>"><button class="exportBtn">Export to Excel</button></a></h2>
          </div>
