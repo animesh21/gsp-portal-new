@@ -94,7 +94,7 @@
       </nav>
       <div class="container">
         <div class="col-md-12">
-          <h1><strong>GSP Audit 2019-20 Report and Certificates</strong></h1>
+          <h1 style="font-size:32px"><strong>GSP Audit 2019-20 Report and Certificates</strong></h1>
 		 <div class="other" style="margin-top: -40px; margin-bottom: 60px">
           <a href="http://greenschoolsprogramme.org/audit/downloadLogin" target="blank"><button class="btn btn-primary" style="float: right; background-color: #e86549; border-color: #e86549;">Download Report 2017</button></a> 
 
