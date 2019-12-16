@@ -1604,7 +1604,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
     <ul class="list">
       <li>
         <p class="orange"><span>8</span><span> Did you avail any state subsidy for installation? </span></p>
-        <p class="formanswertext"><?php echo (getFiled('Q11E1', $schoolUserID) != "") ? getFiled('Q11E1', $schoolUserID) : "N/A"; ?></p>
+        <p class="formanswertext"> <?php echo (getFiled('Q11E1', $schoolUserID) != "") ? (getFiled('Q11E1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?> </p>
       </li>
       
       <?php if (getFiled('Q9E1S1', $schoolUserID) == "1") { ?>
