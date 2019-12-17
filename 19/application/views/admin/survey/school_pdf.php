@@ -6,7 +6,7 @@
 <!-- <link href="<?php //echo base_url(); ?>assets/css/pdf.css" rel="stylesheet"> -->
 <style type="text/css">
 
-body {font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 1.3; color: #4f4f4f; margin: 0; padding: 0;} /* set for consistency across browsers */
+body {font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 1.3; color: #4f4f4f; margin: 50; padding: 50;} /* set for consistency across browsers */
 @page { margin: 15mm; }
 h1,h2,h3,h4 {line-height: 1.2;}
 table { border-collapse: collapse; border-spacing: 0; }
@@ -5716,6 +5716,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
       <?php } else { ?>
       <div class="support_files"> No documents uploaded by the school. </div>
       <?php } ?>
+		 <?php exit; ?>
     </li>
   </ul>
 </div>
