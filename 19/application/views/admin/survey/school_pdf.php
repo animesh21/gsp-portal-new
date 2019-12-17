@@ -1100,7 +1100,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
     foreach ($airQualityMonitering as $a) { ?>
         <tr>
           <td><img src="uploads/files/<?php echo $a->file_name; ?>" class="img-responsive" width="100" height="100" /></td>
-          <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Air_Quality_Monitoring_"), " ", $a->file_name); ?></td>
+          <td><?php $airQualityMonitering =  str_replace(str_replace(' ', '_', $school[0]->name . "_Air_Quality_Monitoring_"), " ", $a->file_name); echo wordwrap($airQualityMonitering, 70, '<br />', true);?></td>
         </tr>
         <?php } ?>
       </table>
@@ -1127,7 +1127,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
     foreach ($Supporting_Document_Air as $a) { ?>
         <tr>
           <td><img src="uploads/files/<?php echo $a->file_name; ?>" class="img-responsive" width="100" height="100" /></td>
-          <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Supporting_Document_Air"), " ", $a->file_name); ?></td>
+          <td> <?php $Supporting_Document_Air =  str_replace(str_replace(' ', '_', $school[0]->name . "_Supporting_Document_Air"), " ", $a->file_name); echo wordwrap($Supporting_Document_Air, 70, '<br />', true);?></td>
         </tr>
         <?php } ?>
       </table>
@@ -1584,7 +1584,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
     foreach ($energySupport as $a) { ?>
           <tr>
             <td><img src="uploads/files/<?php echo $a->file_name; ?>" class="img-responsive" width="100" height="100" /></td>
-            <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name .'_Supporting_Document_Energy_'), " ", $a->file_name); ?></td>
+            <td><?php $energySupport =  str_replace(str_replace(' ', '_', $school[0]->name . "_Supporting_Document_Energy_"), " ", $a->file_name); echo wordwrap($energySupport, 70, '<br />', true);?></td>
           </tr>
           <?php } ?>
         </table>
@@ -2334,7 +2334,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
          foreach ($files as $a) { ?>
             <tr>
               <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
-              <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Audit_Team_doing_Survey_Food_"), " ", $a->file_name); ?></td>
+              <td><?php $files =  str_replace(str_replace(' ', '_', $school[0]->name . "_Audit_Team_doing_Survey_Food_"), " ", $a->file_name); echo wordwrap($files, 70, '<br />', true);?></td>
             </tr>
             <?php } ?>
           </tbody>
@@ -3190,7 +3190,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
           <?php foreach ($task4supporting as $a) { ?>
           <tr>
             <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
-            <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Task_4_Supporting_docs_"), " ", $a->file_name); ?></td>
+            <td><?php $task4supporting =  str_replace(str_replace(' ', '_', $school[0]->name . "_Task_4_Supporting_docs_"), " ", $a->file_name); echo wordwrap($task4supporting, 70, '<br />', true);?></td>
           </tr>
           <?php } ?>
         </table>
@@ -3575,7 +3575,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
         <?php foreach ($waterTreatment as $a) { ?>
         <tr>
           <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
-          <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Water_Treatment_Process_"), " ", $a->file_name); ?></td>
+          <td><?php $waterTreatment =  str_replace(str_replace(' ', '_', $school[0]->name . "_Water_Treatment_Process_"), " ", $a->file_name); echo wordwrap($waterTreatment, 70, '<br />', true);?></td>
         </tr>
         <?php } ?>
       </table>
@@ -4009,7 +4009,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
         <?php foreach ($flowChartHandDrawn as $a) { ?>
         <tr>
           <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
-          <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Flow_Chart_Hand_Drwan_"), " ", $a->file_name); ?></td>
+          <td><?php $flowChartHandDrawn =  str_replace(str_replace(' ', '_', $school[0]->name . "_Flow_Chart_Hand_Drwan_"), " ", $a->file_name); echo wordwrap($flowChartHandDrawn, 70, '<br />', true);?></td>
         </tr>
         <?php } ?>
       </table>
@@ -4032,7 +4032,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
     <?php foreach ($supportDocWater as $a) { ?>
     <tr>
       <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
-      <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Supporting_Document_Water_"), " ", $a->file_name); ?></td>
+      <td><?php $supportDocWater =  str_replace(str_replace(' ', '_', $school[0]->name . "_Supporting_Document_Water_"), " ", $a->file_name); echo wordwrap($supportDocWater, 70, '<br />', true);?></td>
     </tr>
     <?php } ?>
   </table>
@@ -4373,7 +4373,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
         <?php foreach ($segregationClassroom as $a) { ?>
         <tr>
           <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
-          <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Segregation_Source_Classrooms_"), " ", $a->file_name); ?></td>
+          <td><?php $segregationClassroom =  str_replace(str_replace(' ', '_', $school[0]->name . "_Segregation_Source_Classrooms_"), " ", $a->file_name); echo wordwrap($segregationClassroom, 70, '<br />', true);?></td>
         </tr>
         <?php } ?>
       </table>
@@ -4583,7 +4583,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
             <?php foreach ($solidWaste as $a) { ?>
             <tr>
               <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
-              <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Audit_Team_Weighing_Solid_Waste_"), " ", $a->file_name); ?></td>
+              <td><?php $solidWaste =  str_replace(str_replace(' ', '_', $school[0]->name . "_Audit_Team_Weighing_Solid_Waste_"), " ", $a->file_name); echo wordwrap($solidWaste, 70, '<br />', true);?></td>
             </tr>
             <?php } ?>
           </table>
@@ -4807,7 +4807,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
         <?php foreach ($composingPit as $a) { ?>
         <tr>
           <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
-          <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Composting_Pit_"), " ", $a->file_name); ?></td>
+          <td><?php $composingPit =  str_replace(str_replace(' ', '_', $school[0]->name . "_Composting_Pit_"), " ", $a->file_name); echo wordwrap($composingPit, 70, '<br />', true);?></td>
         </tr>
         <?php } ?>
       </table>
@@ -5216,7 +5216,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
       <?php foreach ($recycleMachine as $a) { ?>
       <tr>
         <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
-        <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Recycling_Machine_"), " ", $a->file_name); ?></td>
+        <td><?php $recycleMachine =  str_replace(str_replace(' ', '_', $school[0]->name . "_Recycling_Machine_"), " ", $a->file_name); echo wordwrap($recycleMachine, 70, '<br />', true);?></td>
       </tr>
       <?php } ?>
     </table>
@@ -5447,7 +5447,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
         <?php foreach ($eWaste as $a) { ?>
         <tr>
           <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
-          <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_E-Waste_"), " ", $a->file_name); ?></td>
+          <td><?php $eWaste =  str_replace(str_replace(' ', '_', $school[0]->name . "_E-Waste_"), " ", $a->file_name); echo wordwrap($eWaste, 70, '<br />', true);?></td>
         </tr>
         <?php } ?>
       </table>
@@ -5491,7 +5491,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
         <?php foreach ($authorised_dealer as $a) { ?>
         <tr>
           <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
-          <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_E-waste_authorised_dealer_"), " ", $a->file_name); ?></td>
+          <td> <?php $authorised_dealer =  str_replace(str_replace(' ', '_', $school[0]->name . "_E-waste_authorised_dealer_"), " ", $a->file_name); echo wordwrap($authorised_dealer, 70, '<br />', true);?></td>
         </tr>
         <?php } ?>
       </table>
@@ -5534,7 +5534,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
           <?php foreach ($houseKeeping as $a) { ?>
           <tr>
             <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
-            <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Housekeeping_"), " ", $a->file_name); ?></td>
+            <td> <?php $houseKeeping =  str_replace(str_replace(' ', '_', $school[0]->name . "_Housekeeping_"), " ", $a->file_name); echo wordwrap($houseKeeping, 70, '<br />', true);?></td>
           </tr>
           <?php } ?>
         </table>
@@ -5562,7 +5562,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
           <?php foreach ($burningWaste as $a) { ?>
           <tr>
             <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
-            <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Buring_Waste_"), " ", $a->file_name); ?></td>
+            <td><?php $burningWaste =  str_replace(str_replace(' ', '_', $school[0]->name . "_Buring_Waste_"), " ", $a->file_name); echo wordwrap($burningWaste, 70, '<br />', true);?></td>
           </tr>
           <?php } ?>
         </table>
@@ -5641,7 +5641,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
           <?php foreach ($chikoo as $a) { ?>
           <tr>
             <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
-            <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Waste_Policy_"), " ", $a->file_name); ?></td>
+            <td><?php $chikoo =  str_replace(str_replace(' ', '_', $school[0]->name . "_Waste_Policy_"), " ", $a->file_name); echo wordwrap($chikoo, 70, '<br />', true);?></td>
           </tr>
           <?php } ?>
         </table>
@@ -5672,7 +5672,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
           <?php foreach ($Initiatives as $a) { ?>
           <tr>
             <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
-            <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_School_Initiatives_"), " ", $a->file_name); ?></td>
+            <td><?php $Initiatives =  str_replace(str_replace(' ', '_', $school[0]->name . "_School_Initiatives_"), " ", $a->file_name); echo wordwrap($Initiatives, 70, '<br />', true);?></td>
           </tr>
           <?php } ?>
         </table>
@@ -5709,7 +5709,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
         <?php foreach ($teamDoingWaste as $a) { ?>
         <tr>
           <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
-          <td><div class="break-text"><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Audit_Team_Doing_Survey_"), " ", $a->file_name); ?></div></td>
+          <td><div class="break-text"><?php $teamDoingWaste =  str_replace(str_replace(' ', '_', $school[0]->name . "_Audit_Team_Doing_Survey_"), " ", $a->file_name); echo wordwrap($teamDoingWaste, 70, '<br />', true);?></div></td>
         </tr>
         <?php } ?>
       </table>
