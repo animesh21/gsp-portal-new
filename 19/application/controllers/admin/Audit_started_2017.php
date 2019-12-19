@@ -824,12 +824,13 @@ public function digital_certificate_for_principal_coordinator($argID)
 	     $data=$this->Audit_started_model->getZipImagesOfSchool($argID);		
 	      foreach($data as $r):
 		   $filedata=$r->file_name;		
-		   $filename=base_url()."uploads/files/".$r->file_name;		
+		   $filename=base_url()."uploads/files/".$r->file_name;	
+		endforeach;
 		   if(file_exists("uploads/files/".$filedata))
 		   { 
                      $this->zip->add_data($filedata,file_get_contents($filename)); 
 		   }
-	      endforeach; 
+	       
             $this->zip->download(date('d-M-Y'));
 	}
 	/*School Generate Badge Code*/
