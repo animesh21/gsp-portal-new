@@ -823,7 +823,7 @@ public function digital_certificate_for_principal_coordinator($argID)
 		$this->load->helper('file');
 	     $data=$this->Audit_started_model->getZipImagesOfSchool($argID);		
 	      foreach($data as $r):
-		 echo  $filedata=$r->file_name;
+		   $filedata=$r->file_name;
 		echo   $filename=base_url()."uploads/files/".$r->file_name;
 		   if(file_exists("uploads/files/".$filedata))
 		   {
