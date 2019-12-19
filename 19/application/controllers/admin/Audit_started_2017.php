@@ -827,6 +827,7 @@ public function digital_certificate_for_principal_coordinator($argID)
 		echo "jeetu";
 		echo   $filename=base_url()."uploads/files/".$r->file_name;
 		echo "hjdkjsdlfsdf";
+		exit;
 		   if(file_exists("uploads/files/".$filedata))
 		   {
            $this->zip->add_data($filedata,file_get_contents($filename)); 
