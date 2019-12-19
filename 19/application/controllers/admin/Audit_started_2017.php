@@ -818,6 +818,8 @@ public function digital_certificate_for_principal_coordinator($argID)
     }
 	/*Download zip image*/
 	public function downloadzip($argID){
+		ini_set('memory_limit', '-1');
+	 ini_set('max_execution_time', 300);
 		$this->load->helper('file');
 	     $data=$this->Audit_started_model->getZipImagesOfSchool($argID);		
 	      foreach($data as $r):
