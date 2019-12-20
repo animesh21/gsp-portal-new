@@ -825,7 +825,20 @@ public function digital_certificate_for_principal_coordinator($argID)
 		   if(file_exists("uploads/files/".$filedata))
 		   {
                     $this->zip->add_data($filedata,$filename); 
-		$this->zip->read_file($filename,true);;
+		    $this->zip->read_file($filename,true);
+			   $zip = new ZipArchive;
+             $res = $zip->open($filename.$filename);
+             if ($res === TRUE) {
+
+               // Unzip path
+               $extractpath = "files/";
+
+               // Extract file
+               $zip->extractTo($extractpath);
+               $zip->close();
+
+               $this->session->set_flashdata('msg','Upload & Extract successfully.');
+             }
 			   
 			   
 		   }
