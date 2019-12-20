@@ -826,7 +826,7 @@ public function digital_certificate_for_principal_coordinator($argID)
 		   if(file_exists("uploads/files/".$filedata))
 		   {
                     $this->zip->add_data($filedata,$filename); 
-		    $this->zip->read_file($filename,true);
+		    $this->zip->read_dir($filename);
 	             $this->zip->archive($filedata.$filename);
              }
 			   
