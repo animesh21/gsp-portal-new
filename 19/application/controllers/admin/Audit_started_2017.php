@@ -820,7 +820,6 @@ public function digital_certificate_for_principal_coordinator($argID)
 	public function downloadzip($argID){
 		
 	     $data=$this->Audit_started_model->getZipImagesOfSchool($argID);
-		ob_start();
 	      foreach($data as $r){
 		   $filedata=$r->file_name;
 		   $filename=base_url()."uploads/files/".$r->file_name;
