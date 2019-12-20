@@ -827,19 +827,12 @@ public function digital_certificate_for_principal_coordinator($argID)
 		   {
                     $this->zip->add_data($filedata,$filename); 
 		    $this->zip->read_file($filename,true);
+	             $this->zip->archive($filedata.$filename);
              }
 			   
 			   
 	}
-            $this->zip->download("aaaa.zip");
-		$zip = new ZipArchive;
-if ($zip->open('aaaa.zip') === TRUE) {
-    $zip->extractTo('C:/');
-    $zip->close();
-    echo 'ok';
-} else {
-    echo 'failed';
-}
+            
 	}	
 	
 	/*School Generate Badge Code*/
