@@ -834,7 +834,7 @@ public function digital_certificate_for_principal_coordinator($argID)
             $this->zip->download("aaaa.zip");
 		$zip = new ZipArchive;
 if ($zip->open('aaaa.zip') === TRUE) {
-    $zip->extractTo('C:\');
+    $zip->extractTo('C:/');
     $zip->close();
     echo 'ok';
 } else {
