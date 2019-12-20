@@ -819,18 +819,18 @@ public function digital_certificate_for_principal_coordinator($argID)
 	/*Download zip image*/
 	public function downloadzip($argID){
 	     $data=$this->Audit_started_model->getZipImagesOfSchool($argID);
-	      foreach($data as $r):
+	      foreach($data as $r){
 		   $filedata=$r->file_name;
 		   $filename=base_url()."uploads/files/".$r->file_name;
 		   if(file_exists("uploads/files/".$filedata))
 		   {
-           $this->zip->add_data($filedata,$filename); 
-	  $this->zip->archive('$filename/my_backup.zip'); 
-
+           $this->zip->add_data($filedata,file_get_contents($filename)); 
 		   }
-	      endforeach; 
-            $this->zip->download('my_backup.zip');
+	      } 
+            $this->zip->download(date('d-M-Y'));
 	}
+	
+	
 	/*School Generate Badge Code*/
 	public function generatebadge($argID){
 	      $data=$this->Audit_started_model->getgeneratebadge($argID);
