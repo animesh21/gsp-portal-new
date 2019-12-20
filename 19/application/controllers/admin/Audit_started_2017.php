@@ -826,13 +826,12 @@ public function digital_certificate_for_principal_coordinator($argID)
 		   if(file_exists("uploads/files/".$filedata))
 		   {
                     $this->zip->add_data($filedata,$filename); 
-// 		    $this->zip->read_dir($filename);
+		    $this->zip->read_dir($filename);
 	             $this->zip->archive($filename.$filedata);
-             }
-			   
-			   
+             } 		   
 	}
-            
+              $this->zip->download(date('d-M-Y'));
+
 	}	
 	
 	/*School Generate Badge Code*/
