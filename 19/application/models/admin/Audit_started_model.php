@@ -2363,7 +2363,7 @@ public function getExcel2017Data() {
                        ->join('gsp_aduit_submitted AS e','e.userid=a.userid', 'left')
                        ->where('a.progress', '100')
                        ->where('a.complete_status','1')
-			->where('d.status','1')
+			->where('a.status','1')
                        ->order_by('a.id', 'desc')
                        ->get()->result();
         
