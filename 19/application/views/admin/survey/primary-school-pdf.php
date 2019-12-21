@@ -88,12 +88,12 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
 </head>
 <body>
 <script type="text/php">
-	<?php
-	if ( isset($pdf) ) {
-	$font = Font_Metrics::get_font("helvetica", "bold");
-	$pdf->page_text(280, 15, "{PAGE_NUM} of {PAGE_COUNT}", $font, 10, array(0,0,0));
-	} 
-	?>
+  <?php
+  if ( isset($pdf) ) {
+  $font = Font_Metrics::get_font("helvetica", "bold");
+  $pdf->page_text(280, 15, "{PAGE_NUM} of {PAGE_COUNT}", $font, 10, array(0,0,0));
+  } 
+  ?>
 </script>
 <div class="cover"> <img src="assets/img/images/logo.png" width="436" height="118" class="logo">
   <h1>Responses For Green Schools Programme Audit 2018</h1>
@@ -725,7 +725,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
       <p class="orange"><span>4</span> How many members of the school community use each type of transport: </p>
       <table class="table">
         <tr>
-          <td>Sustainable Motorised Vehicles</td>
+          <th style="border-bottom: 1px solid white">Sustainable Motorised Vehicles</td>
           <td></td>
           <td></td>
           <td></td>
@@ -787,7 +787,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
           <td><?php echo (getFiled('Q7A6S4', $schoolUserID) != "") ? getFiled('Q7A6S4', $schoolUserID) : "N/A"; ?></td>
         </tr>
         <tr>
-          <td>4(b)Private Vehicles</td>
+          <th>4(b)Private Vehicles</th>
           <td></td>
           <td></td>
           <td></td>
@@ -815,7 +815,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
           <td><?php echo (getFiled('Q7A8S4', $schoolUserID) != "") ? getFiled('Q7A8S4', $schoolUserID) : "N/A"; ?></td>
         </tr>
         <tr>
-          <td>4(c)Non-Polluting Mode</td>
+          <th>4(c)Non-Polluting Mode</th>
           <td></td>
           <td></td>
           <td></td>
@@ -1245,8 +1245,8 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
     <div>
       <table class="table support-docs">
         <tr>
-          <th>image</th>
-          <th>File name</th>
+          <th>Image</th>
+          <th>File Name</th>
         </tr>
         <?php foreach ($arrImages as $a) { ?>
         <tr>
@@ -1453,18 +1453,19 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
       </li>
       <?php endif; ?>
       <?php if(strcmp(getFiled('Q5F1', $schoolUserID),'Y')==0): ?>
+        <br/>
       <li>
         <p class="orange"><span>2(a)</span><span> If yes, then midday meal is served under: </span></p>
         <p>
           <?php
-		   if(getFiled('Q5F1S1', $schoolUserID)==1):
-		   echo "Government Scheme";
-		   elseif(getFiled('Q5F1S1', $schoolUserID)==2):
-		   echo "School's personal initiative";
-		   elseif(getFiled('Q5F1S1', $schoolUserID)==3):
-		   echo "Others";
-		   endif; 
-		   ?>
+       if(getFiled('Q5F1S1', $schoolUserID)==1):
+       echo "Government Scheme";
+       elseif(getFiled('Q5F1S1', $schoolUserID)==2):
+       echo "School's personal initiative";
+       elseif(getFiled('Q5F1S1', $schoolUserID)==3):
+       echo "Others";
+       endif; 
+       ?>
         </p>
       </li>
       <li>
@@ -1646,8 +1647,8 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
     <div>
       <table class="table">
         <tr>
-          <th>image</th>
-          <th>File name</th>
+          <th>Image</th>
+          <th>File Name</th>
         </tr>
         <?php foreach ($arrImages as $a) { ?>
         <tr>
@@ -2314,7 +2315,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
       </li>
       <?php if(strcmp(getFiled('Q8W2', $schoolUserID),'Y')==0){?>
       <li>
-        <p class="orange"><span>4(a)</span>Which is the catchment area being harvested by your school? </p>
+        <p class="orange"><span>4(a)</span><span>Which is the catchment area being harvested by your school? </span></p>
          <p class="formanswertext">
           <?php
                     if (getFiled('Q8W2S1S1', $schoolUserID) == 1):
@@ -2337,7 +2338,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
          
       </li>
       <li>
-        <p class="orange"><span class="cube">4(b)</span> How does your school harvest rainwater? </p>
+        <p class="orange"><span class="cube">4(b)</span><span> How does your school harvest rainwater? </span> </p>
          <p class="formanswertext">
           <?php
                 if (getFiled('Q8W2S2', $schoolUserID) == 1):
@@ -2351,52 +2352,52 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
         </p>
       </li>
       <?php if(!empty(getFiled('Q8W2S2', $schoolUserID))){
-	  if(getFiled('Q8W2S2', $schoolUserID) == 1 || getFiled('Q8W2S2', $schoolUserID) == 3){ ?>
+    if(getFiled('Q8W2S2', $schoolUserID) == 1 || getFiled('Q8W2S2', $schoolUserID) == 3){ ?>
       <li>
-        <p class="orange"><span class="cube">4b.1</span>If your school only stores rainwater, please select
-          the use of stored rainwater: </p>
+        <p class="orange"><span class="cube">4b.1</span><span>If your school only stores rainwater, please select
+          the use of stored rainwater: </span> </p>
          <p class="formanswertext">
-          <?php
-                    if (getFiled('Q8W2S2S1', $schoolUserID) == 1):
-                        echo "Drinking";
-                        echo "<br/>";
-                    endif;
-                    if (getFiled('Q8W2S2S1', $schoolUserID) == 2):
-                        echo "Gardening";
-                        echo "<br/>";
-                    endif;
-                    if (getFiled('Q8W2S2S1', $schoolUserID) == 3):
-                        echo "Mopping";
-                        echo "<br/>";
-                    endif;
-                    if (getFiled('Q8W2S2S1', $schoolUserID) == 4):
-                        echo " Toilets";
-                        echo "<br/>";
-                    endif;
-                    if (getFiled('Q8W2S2S1', $schoolUserID) == 5):
-                        echo "Washing vehicles";
-                        echo "<br/>";
-                    endif;
-                    if (getFiled('Q8W2S2S1', $schoolUserID) == 6):
-                        echo "Kitchen (Cooking/Washing vegetables and utensils)";
-                        echo "<br/>";
-                    endif;
-                    if (getFiled('Q8W2S2S1', $schoolUserID) == 7):
-                        echo "Shower, Brushing teeth, Bathing, Hand washing";
-                        echo "<br/>";
-                    endif;
-                    if (getFiled('Q8W2S2S1', $schoolUserID) == 8):
-                        echo "Swimming Pool";
-                    endif;
-                    if (getFiled('Q8W2S2S1', $schoolUserID) == 9):
-                        echo "Fire fighting";
-                        echo "<br/>";
-                    endif;
-                    if (getFiled('Q8W2S2S1', $schoolUserID) == 10):
-                        echo "Desert coolers";
-                    endif;
-                    ?>
-        </p>
+        <?php
+            if (getFiled('QSW2S2W1', $schoolUserID) == 1):
+                echo "Drinking";
+                echo "<br/>";
+            endif;
+            if (getFiled('QSW2S2W2', $schoolUserID) == 1):
+                echo "Gardening";
+                echo "<br/>";
+            endif;
+            if (getFiled('QSW2S2W3', $schoolUserID) == 1):
+                echo "Mopping";
+                echo "<br/>";
+            endif;
+            if (getFiled('QSW2S2W4', $schoolUserID) == 1):
+                echo " Toilets";
+                echo "<br/>";
+            endif;
+            if (getFiled('QSW2S2W5', $schoolUserID) == 1):
+                echo "Washing vehicles";
+                echo "<br/>";
+            endif;
+            if (getFiled('QSW2S2W6', $schoolUserID) == 1):
+                echo "Kitchen (Cooking/Washing vegetables and utensils)";
+                echo "<br/>";
+            endif;
+            if (getFiled('QSW2S2W7', $schoolUserID) == 1):
+                echo "Shower, Brushing teeth, Bathing, Hand washing";
+                echo "<br/>";
+            endif;
+            if (getFiled('QSW2S2W8', $schoolUserID) == 1):
+                echo "Swimming Pool";
+            endif;
+            if (getFiled('QSW2S2W9', $schoolUserID) == 1):
+                echo "Fire fighting";
+                echo "<br/>";
+            endif;
+            if (getFiled('QSW2S2W10', $schoolUserID) == 1):
+                echo "Desert coolers";
+            endif;
+            ?>
+      </p>
       </li>
       <li>
         <p class="orange"><span class="cube">4b.2</span><span> Does your school have rainwater storage tank? </span></p>
@@ -2413,7 +2414,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
       </li>
       <?php } ?>
       <li>
-        <p class="orange"><span class="cube">4b2C</span>Location of tanks:</p>
+        <p class="orange"><span class="cube">4b2C</span><span>Location of tanks:</span></p>
         <p class="formanswertext">
           <?php
                     if (getFiled('Q8W2S2S5', $schoolUserID) == 1):
@@ -2649,7 +2650,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
       </li>
       <?php if(strcmp(getFiled('Q20W1', $schoolUserID),'Y')==0) {?>
 
-      <li> <br/> <br/>
+      <li> 
         <p class="orange"><span>16a</span><span>How does your school reuse wastewater?</span></p>
         <p class="formanswertext">
           <?php
@@ -2671,11 +2672,11 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
         </p>
         <p class="formanswertext">
           <?php
-                if (getFiled('Q20W3', $schoolUserID) == 1):
+                if (getFiled('Q20W31', $schoolUserID) == 1):
                     echo "Wastewater flows directly to the drains";
-                elseif (getFiled('Q20W3', $schoolUserID) == 2):
+                elseif (getFiled('Q20W32', $schoolUserID) == 2):
                     echo "Used for groundwater recharge";
-                elseif (getFiled('Q20W3', $schoolUserID) == 3):
+                elseif (getFiled('Q20W33', $schoolUserID) == 3):
                     echo " Used for gardening and horticulture";
 
                 endif;
@@ -2691,8 +2692,8 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
     <div>
       <table class="table">
         <tr>
-          <th>image</th>
-          <th>File name</th>
+          <th>Image</th>
+          <th>File Name</th>
         </tr>
         <?php foreach ($arrImages as $a) { ?>
         <tr>
@@ -3034,8 +3035,8 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
     <div>
       <table  class="table">
         <tr>
-          <th>image</th>
-          <th>File name</th>
+          <th>Image</th>
+          <th>File Name</th>
         </tr>
         <?php foreach ($arrImages as $a) { ?>
         <tr>
@@ -3114,7 +3115,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
       <?php endif; ?>
       <li>
         <p class="orange"><span class="cube">4</span>
-        <span> <label>Does your school have a composting facility?</label></span>
+       <span> <label>Does your school have a composting facility?</label></span>
         </p>
         <p> <?php echo (getFiled('Q9Wa1', $schoolUserID) != "") ? (getFiled('Q9Wa1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
       </li>
@@ -3126,8 +3127,8 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
     <div>
       <table class="table">
         <tr>
-          <th>image</th>
-          <th>File name</th>
+          <th>Image</th>
+          <th>File Name</th>
         </tr>
         <?php foreach ($arrImages as $a) { ?>
         <tr>
@@ -3193,10 +3194,11 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
       <?php } else { ?>
       <div class="support_files"> <strong>No documents uploaded by the school.</strong> </div>
       <?php } ?>
+    </ul>
+    <ul class="list">
+    
       <li>
-        <p class="orange"><span class="cube">6</span>
-          <label>Does your school have the following? If yes, please give the numbers of items in working condition and those that are not.</label>
-        </p>
+        <p class="orange"><label><span class="cube">6</span><span>Does your school have the following? If yes, please give the numbers of items in working condition and those that are not.</span></label></p>
         <table class="table">
           <tr>
             <td> Item </td>
@@ -3413,8 +3415,8 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
     <div>
       <table class="table">
         <tr>
-          <th>image</th>
-          <th>File name</th>
+          <th>Image</th>
+          <th>File Name</th>
         </tr>
         <?php foreach ($arrImages as $a) { ?>
         <tr>
