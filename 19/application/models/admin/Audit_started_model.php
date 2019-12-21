@@ -2353,7 +2353,7 @@ public function getExcel2017Data() {
     $output = "";
 	$this->db->where("a.make_school_disabled","1");
 		$this->db->where('e.date_on >=', '2018-11-19');
-		$this->db->where('e.date_on <=', '2019-11-15'); 
+		$this->db->where('e.date_on <=', '2019-11-11'); 
 	//$this->db->where('e.date_on <=', '2018-11-19');
 	$arrRecord = $this->db->select('a.*, b.name AS state_name, c.name AS district_name, d.password')
                        ->from('gsp_school AS a')
@@ -2365,6 +2365,7 @@ public function getExcel2017Data() {
                        ->where('a.complete_status','1')
                        ->order_by('a.id', 'desc')
                        ->get()->result();
+		echo $this->db->last_query();exit;
         
         $k = 1;
         $isdCode = '+91';
