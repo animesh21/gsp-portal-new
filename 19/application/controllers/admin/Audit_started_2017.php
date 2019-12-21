@@ -822,8 +822,8 @@ public function digital_certificate_for_principal_coordinator($argID)
 	     $data=$this->Audit_started_model->getZipImagesOfSchool($argID);
 	      foreach($data as $r){
 		   $filedata=$r->file_name;
-		   $filename=base_url()."uploads/files/".$r->file_name;
-		   if(file_exists("uploads/files/".$filedata))
+		   $filename=base_url()."uploads/uploads/files/".$r->file_name;
+		   if(file_exists("uploads/uploads/files/".$filedata))
 		   {
                     $this->zip->add_data($filedata,$filename); 
 		    $this->zip->read_dir($filename);
