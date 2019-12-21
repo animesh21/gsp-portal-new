@@ -577,8 +577,8 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
           <td><?php
        $Q5A1S2=(getFiled('Q5A1S2', $schoolUserID) != "") ? getFiled('Q5A1S2', $schoolUserID) : "N/A";
        $Q5A1S3=(getFiled('Q5A1S3', $schoolUserID) != "") ? getFiled('Q5A1S3', $schoolUserID) : "N/A";
-       $Q5A1S4=($Q5A1S3/$Q5A1S2)*100;
-        if($Q5A1S2!=='N/A' && $Q5A1S3!=='N/A'){ echo number_format($Q5A1S4,2);}else{ echo "N/A";}
+       
+        if($Q5A1S2!=='N/A' && $Q5A1S3!=='N/A'){ $Q5A1S4=($Q5A1S3/$Q5A1S2)*100; echo number_format($Q5A1S4,2);}else{ echo "N/A";}
        ?>
           </td>
         </tr>
@@ -589,8 +589,8 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
           <td><?php
        $Q5A2S2=(getFiled('Q5A2S2', $schoolUserID) != "") ? getFiled('Q5A2S2', $schoolUserID) : "N/A";
        $Q5A2S3=(getFiled('Q5A2S3', $schoolUserID) != "") ? getFiled('Q5A2S3', $schoolUserID) : "N/A";
-       $Q5A2S4=($Q5A2S3/$Q5A2S2)*100;
-        if($Q5A2S2!=='N/A' && $Q5A2S3!=='N/A'){ echo number_format($Q5A2S4,2);}else{ echo "N/A";}
+      
+        if($Q5A2S2!=='N/A' && $Q5A2S3!=='N/A'){  $Q5A2S4=($Q5A2S3/$Q5A2S2)*100; echo number_format($Q5A2S4,2);}else{ echo "N/A";}
        ?>
           </td>
         </tr>
@@ -601,8 +601,8 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
           <td><?php
        $Q5A3S2=(getFiled('Q5A3S2', $schoolUserID) != "") ? getFiled('Q5A3S2', $schoolUserID) : "N/A";
        $Q5A3S3=(getFiled('Q5A3S3', $schoolUserID) != "") ? getFiled('Q5A3S3', $schoolUserID) : "N/A";
-       $Q5A3S4=($Q5A3S3/$Q5A3S2)*100;
-        if($Q5A3S2!=='N/A' && $Q5A3S3!=='N/A'){ echo number_format($Q5A3S4,2);}else{ echo "N/A";}
+       
+        if($Q5A3S2!=='N/A' && $Q5A3S3!=='N/A'){$Q5A3S4=($Q5A3S3/$Q5A3S2)*100; echo number_format($Q5A3S4,2);}else{ echo "N/A";}
        ?>
           </td>
         </tr>
@@ -613,8 +613,8 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
           <td><?php
        $Q5A4S2=(getFiled('Q5A4S2', $schoolUserID) != "") ? getFiled('Q5A4S2', $schoolUserID) : "N/A";
        $Q5A4S3=(getFiled('Q5A4S3', $schoolUserID) != "") ? getFiled('Q5A4S3', $schoolUserID) : "N/A";
-       $Q5A4S4=($Q5A4S3/$Q5A4S2)*100;
-        if($Q5A4S2!=='N/A' && $Q5A4S3!=='N/A'){ echo number_format($Q5A4S4,2);}else{ echo "N/A";}
+       
+        if($Q5A4S2!=='N/A' && $Q5A4S3!=='N/A'){ $Q5A4S4=($Q5A4S3/$Q5A4S2)*100; echo number_format($Q5A4S4,2);}else{ echo "N/A";}
        ?></td>
         </tr>
         <tr>
@@ -624,8 +624,8 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
           <td><?php
        $Q5A5S2=(getFiled('Q5A5S2', $schoolUserID) != "") ? getFiled('Q5A5S2', $schoolUserID) : "N/A";
        $Q5A5S3=(getFiled('Q5A5S3', $schoolUserID) != "") ? getFiled('Q5A5S3', $schoolUserID) : "N/A";
-       $Q5A5S4=($Q5A5S3/$Q5A5S2)*100;
-        if($Q5A5S2!=='N/A' && $Q5A5S3!=='N/A'){ echo number_format($Q5A5S4,2);}else{ echo "N/A";}
+      
+        if($Q5A5S2!=='N/A' && $Q5A5S3!=='N/A'){  $Q5A5S4=($Q5A5S3/$Q5A5S2)*100; echo number_format($Q5A5S4,2);}else{ echo "N/A";}
        ?></td>
         </tr>
         <tr>
@@ -635,8 +635,8 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
           <td><?php
        $Q5A6S2=(getFiled('Q5A6S2', $schoolUserID) != "") ? getFiled('Q5A6S2', $schoolUserID) : "N/A";
        $Q5A6S3=(getFiled('Q5A6S3', $schoolUserID) != "") ? getFiled('Q5A6S3', $schoolUserID) : "N/A";
-       $Q5A6S4=($Q5A6S3/$Q5A6S2)*100;
-        if($Q5A6S2!=='N/A' && $Q5A6S3!=='N/A'){ echo number_format($Q5A6S4,2);}else{ echo "N/A";}
+      
+        if($Q5A6S2!=='N/A' && $Q5A6S3!=='N/A'){ $Q5A6S4=($Q5A6S3/$Q5A6S2)*100; echo number_format($Q5A6S4,2);}else{ echo "N/A";}
        ?></td>
         </tr>
         <tr>
@@ -646,8 +646,8 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
           <td><?php
        $Q5A7S2=(getFiled('Q5A7S2', $schoolUserID) != "") ? getFiled('Q5A7S2', $schoolUserID) : "N/A";
        $Q5A7S3=(getFiled('Q5A7S3', $schoolUserID) != "") ? getFiled('Q5A7S3', $schoolUserID) : "N/A";
-       $Q5A7S4=($Q5A7S3/$Q5A7S2)*100;
-        if($Q5A7S2!=='N/A' && $Q5A7S3!=='N/A'){ echo number_format($Q5A7S4,2);}else{ echo "N/A";}
+       
+        if($Q5A7S2!=='N/A' && $Q5A7S3!=='N/A'){$Q5A7S4=($Q5A7S3/$Q5A7S2)*100; echo number_format($Q5A7S4,2);}else{ echo "N/A";}
        ?>
           </td>
         </tr>
@@ -658,8 +658,8 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
           <td><?php
        $Q5A8S2=(getFiled('Q5A8S2', $schoolUserID) != "") ? getFiled('Q5A8S2', $schoolUserID) : "N/A";
        $Q5A8S3=(getFiled('Q5A8S3', $schoolUserID) != "") ? getFiled('Q5A8S3', $schoolUserID) : "N/A";
-       $Q5A8S4=($Q5A8S3/$Q5A8S2)*100;
-        if($Q5A8S2!=='N/A' && $Q5A8S3!=='N/A'){ echo number_format($Q5A8S4,2);}else{ echo "N/A";}
+       
+        if($Q5A8S2!=='N/A' && $Q5A8S3!=='N/A'){$Q5A8S4=($Q5A8S3/$Q5A8S2)*100; echo number_format($Q5A8S4,2);}else{ echo "N/A";}
        ?></td>
         </tr>
         <tr>
@@ -669,8 +669,8 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
           <td><?php
        $Q5A9S2=(getFiled('Q5A9S2', $schoolUserID) != "") ? getFiled('Q5A9S2', $schoolUserID) : "N/A";
        $Q5A9S3=(getFiled('Q5A9S3', $schoolUserID) != "") ? getFiled('Q5A9S3', $schoolUserID) : "N/A";
-       $Q5A9S4=($Q5A9S3/$Q5A9S2)*100;
-        if($Q5A9S2!=='N/A' && $Q5A9S3!=='N/A'){ echo number_format($Q5A9S4,2);}else{ echo "N/A";}
+       
+        if($Q5A9S2!=='N/A' && $Q5A9S3!=='N/A'){$Q5A9S4=($Q5A9S3/$Q5A9S2)*100; echo number_format($Q5A9S4,2);}else{ echo "N/A";}
        ?></td>
         </tr>
         <tr>
@@ -680,10 +680,33 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
           <td><?php
        $Q5A10S2=(getFiled('Q5A10S2', $schoolUserID) != "") ? getFiled('Q5A10S2', $schoolUserID) : "N/A";
        $Q5A10S3=(getFiled('Q5A10S3', $schoolUserID) != "") ? getFiled('Q5A10S3', $schoolUserID) : "N/A";
-       $Q5A10S4=($Q5A10S3/$Q5A10S2)*100;
-        if($Q5A10S2!=='N/A' && $Q5A10S3!=='N/A'){ echo number_format($Q5A10S4,2);}else{ echo "N/A";}
+      
+        if($Q5A10S2!=='N/A' && $Q5A10S3!=='N/A'){  $Q5A10S4=($Q5A10S3/$Q5A10S2)*100; echo number_format($Q5A10S4,2);}else{ echo "N/A";}
        ?></td>
         </tr>
+        <?php
+        if($Q5A1S2=="N/A"){$Q5A1S2=0;}
+        if($Q5A2S2=="N/A"){$Q5A2S2=0;}
+        if($Q5A3S2=="N/A"){$Q5A3S2=0;}
+        if($Q5A4S2=="N/A"){$Q5A4S2=0;}
+        if($Q5A5S2=="N/A"){$Q5A5S2=0;}
+        if($Q5A6S2=="N/A"){$Q5A6S2=0;}
+        if($Q5A7S2=="N/A"){$Q5A7S2=0;}
+        if($Q5A8S2=="N/A"){$Q5A8S2=0;}
+        if($Q5A9S2=="N/A"){$Q5A9S2=0;}
+        if($Q5A10S2=="N/A"){$Q5A10S2=0;}
+        if($Q5A1S3=="N/A"){$Q5A1S3=0;}
+        if($Q5A2S3=="N/A"){$Q5A2S3=0;}
+        if($Q5A3S3=="N/A"){$Q5A3S3=0;}
+        if($Q5A4S3=="N/A"){$Q5A4S3=0;}
+        if($Q5A5S3=="N/A"){$Q5A5S3=0;}
+        if($Q5A6S3=="N/A"){$Q5A6S3=0;}
+        if($Q5A7S3=="N/A"){$Q5A7S3=0;}
+        if($Q5A8S3=="N/A"){$Q5A8S3=0;}
+        if($Q5A9S3=="N/A"){$Q5A9S3=0;}
+        if($Q5A10S3=="N/A"){$Q5A10S3=0;}
+         
+         ?>
         <tr>
           <td>Total</td>
           <td><?php $total1=$Q5A1S2+$Q5A2S2+$Q5A3S2+$Q5A4S2+$Q5A5S2+$Q5A6S2+$Q5A7S2+$Q5A8S2+$Q5A9S2+$Q5A10S2; echo $total1; ?></td>
@@ -744,23 +767,33 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
     ?>
       </p> <br>
       <p class="orange" style="font-size: 16px;">Upload supporting documents</p>
-      <?php
-   if (!empty($pucCertificate)) {
-   ?>
-      <div>
-        <table class="table support-docs">
-          <tr>
-            <th>image</th>
-            <th>File name</th>
-          </tr>
-          <?php foreach ($pucCertificate as $a) { ?>
-          <tr>
-            <td><img src="uploads/files/<?php echo $a->file_name; ?>" class="img-responsive" width="100" height="100" /></td>
-            <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_PUC_Certificate_"), " ", $a->file_name); ?></td>
-          </tr>
+    </li>
+
+     <li>
+      <?php if (!empty($pucCertificate)) { ?>
+      <table  class="table">
+        <tr>
+          <th>Image</th>
+          <th>File Name</th>
+        </tr>
+        <?php foreach ($pucCertificate as $a) { 
+
+        $file_parts = pathinfo($a->file_name);
+        $file_extension = $file_parts['extension']; ?>
+        <tr>
+          <td>
+            <?php if($file_extension=="pdf") { ?>
+            <img src="assets/img/performance/pdficon.png" lass="img-responsive" width="100" height="100">
+          <?php } elseif($file_extension=="docx"){ ?>
+             <img src="assets/img/performance/wordicon.png" lass="img-responsive" width="100" height="100">
+           <?php }  else {?>
+            <img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" />
           <?php } ?>
-        </table>
-      </div>
+          </td>
+          <td><div class="break-text"><?php $pucCertificate =  str_replace(str_replace(' ', '_', $school[0]->name . "_PUC_Certificate_"), " ", $a->file_name); echo wordwrap($pucCertificate, 70, '<br />', true);?></div></td>
+        </tr>
+        <?php } ?>
+      </table>
       <?php } else { ?>
       <div class="support_files"> No documents uploaded by the school. </div>
       <?php } ?>
@@ -895,23 +928,30 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
       </table>
     </li>
     <li>
-      <?php
-   if (!empty($filesfules)) {
-   ?>
-      <div>
-        <table class="table support-docs">
-          <tr>
-            <th>image</th>
-            <th>File name</th>
-          </tr>
-          <?php foreach ($filesfules as $a) { ?>
-          <tr>
-            <td><img src="uploads/files/<?php echo $a->file_name; ?>" class="img-responsive" width="100" height="100" /></td>
-            <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Fuels_"), " ", $a->file_name); ?></td>
-          </tr>
+      <?php if (!empty($filesfules)) { ?>
+      <table  class="table">
+        <tr>
+          <th>Image</th>
+          <th>File Name</th>
+        </tr>
+        <?php foreach ($filesfules as $a) { 
+
+        $file_parts = pathinfo($a->file_name);
+        $file_extension = $file_parts['extension']; ?>
+        <tr>
+          <td>
+            <?php if($file_extension=="pdf") { ?>
+            <img src="assets/img/performance/pdficon.png" lass="img-responsive" width="100" height="100">
+          <?php } elseif($file_extension=="docx"){ ?>
+             <img src="assets/img/performance/wordicon.png" lass="img-responsive" width="100" height="100">
+           <?php }  else {?>
+            <img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" />
           <?php } ?>
-        </table>
-      </div>
+          </td>
+          <td><div class="break-text"><?php $filesfules =  str_replace(str_replace(' ', '_', $school[0]->name . "_Fuels_"), " ", $a->file_name); echo wordwrap($filesfules, 70, '<br />', true);?></div></td>
+        </tr>
+        <?php } ?>
+      </table>
       <?php } else { ?>
       <div class="support_files"> No documents uploaded by the school. </div>
       <?php } ?>
@@ -940,7 +980,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
       <p class="orange"><span>4</span>How many members of the school community use each type of transport:</p>
       <table class="table">
         <tr >
-          <th style="border-bottom: 1px solid white"> 4(c) Sustainable Motorised Vehicles </th>
+          <th style="border-bottom: 1px solid white"> 4(a) Sustainable Motorised Vehicles </th>
           <td></td>
           <td></td>
           <td></td>
@@ -1089,18 +1129,28 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
       <p class="orange"><span>6</span><span> Does the school laboratory have air quality monitoring equipment?</span></p>
       <p class="formanswertext"><?php echo (getFiled('Q9A1', $schoolUserID) != "") ? (getFiled('Q9A1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
     </li>
-    <li>
-      <?php if (!empty($airQualityMonitering)) {?>
-      <table class="table support-docs">
+   <li>
+      <?php if (!empty($airQualityMonitering)) { ?>
+      <table  class="table">
         <tr>
-          <th>image</th>
-          <th>File name</th>
+          <th>Image</th>
+          <th>File Name</th>
         </tr>
-        <?php 
-    foreach ($airQualityMonitering as $a) { ?>
+        <?php foreach ($airQualityMonitering as $a) { 
+
+        $file_parts = pathinfo($a->file_name);
+        $file_extension = $file_parts['extension']; ?>
         <tr>
-          <td><img src="uploads/files/<?php echo $a->file_name; ?>" class="img-responsive" width="100" height="100" /></td>
-          <td><?php $airQualityMonitering =  str_replace(str_replace(' ', '_', $school[0]->name . "_Air_Quality_Monitoring_"), " ", $a->file_name); echo wordwrap($airQualityMonitering, 70, '<br />', true);?></td>
+          <td>
+            <?php if($file_extension=="pdf") { ?>
+            <img src="assets/img/performance/pdficon.png" lass="img-responsive" width="100" height="100">
+          <?php } elseif($file_extension=="docx"){ ?>
+             <img src="assets/img/performance/wordicon.png" lass="img-responsive" width="100" height="100">
+           <?php }  else {?>
+            <img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" />
+          <?php } ?>
+          </td>
+          <td><div class="break-text"><?php $airQualityMonitering =  str_replace(str_replace(' ', '_', $school[0]->name . "_Air_Quality_Monitoring_"), " ", $a->file_name); echo wordwrap($airQualityMonitering, 70, '<br />', true);?></div></td>
         </tr>
         <?php } ?>
       </table>
@@ -1116,17 +1166,29 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
       <p class="formanswertext"> <?php echo (getFiled('Q9A2', $schoolUserID) != "") ? (getFiled('Q9A2', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?> </p>
     </li>
   <li>
-    <br/>
+    
       <?php if (!empty($Supporting_Document_Air)) {?>
       <table class="table support-docs">
         <tr>
-          <th>image</th>
-          <th>File name</th>
+          <th>Image</th>
+          <th>File Name</th>
         </tr>
         <?php 
-    foreach ($Supporting_Document_Air as $a) { ?>
+    foreach ($Supporting_Document_Air as $a) { 
+
+       $file_parts = pathinfo($a->file_name);
+        $file_extension = $file_parts['extension']; ?>
         <tr>
-          <td><img src="uploads/files/<?php echo $a->file_name; ?>" class="img-responsive" width="100" height="100" /></td>
+          <td>
+            <?php if($file_extension=="pdf") { ?>
+            <img src="assets/img/performance/pdficon.png" lass="img-responsive" width="100" height="100">
+          <?php } elseif($file_extension=="docx"){ ?>
+             <img src="assets/img/performance/wordicon.png" lass="img-responsive" width="100" height="100">
+           <?php }  else {?>
+            <img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" />
+          <?php } ?>
+          </td>
+        
           <td> <?php $Supporting_Document_Air =  str_replace(str_replace(' ', '_', $school[0]->name . "_Supporting_Document_Air"), " ", $a->file_name); echo wordwrap($Supporting_Document_Air, 70, '<br />', true);?></td>
         </tr>
         <?php } ?>
@@ -1305,25 +1367,34 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
         <p class="formanswertext"><?php echo (getFiled('Q4E1', $schoolUserID) != "") ? (getFiled('Q4E1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
       </li>
       <li>
-        <?php 
-    if(!empty($electricityBills)){ ?>
-        <table class="table">
-          <tr>
-            <th>image</th>
-            <th>File name</th>
-          </tr>
-          <?php foreach ($electricityBills as $f) { ?>
-          <tr id="index<?php echo $f->id; ?>">
-            <?php $name = str_replace(" ", "_", $f->name . "_Electricity_Bill_"); ?>
-            <td><img src="uploads/files/<?php echo $f->file_name; ?>" class="img-thumbnail" style="height:80px;width:80px;"></img></td>
-            <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
-          </tr>
+      <?php if (!empty($electricityBills)) { ?>
+      <table  class="table">
+        <tr>
+          <th>Image</th>
+          <th>File Name</th>
+        </tr>
+        <?php foreach ($electricityBills as $a) { 
+
+        $file_parts = pathinfo($a->file_name);
+        $file_extension = $file_parts['extension']; ?>
+        <tr>
+          <td>
+            <?php if($file_extension=="pdf") { ?>
+            <img src="assets/img/performance/pdficon.png" lass="img-responsive" width="100" height="100">
+          <?php } elseif($file_extension=="docx"){ ?>
+             <img src="assets/img/performance/wordicon.png" lass="img-responsive" width="100" height="100">
+           <?php }  else {?>
+            <img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" />
           <?php } ?>
-        </table>
-        <?php } else { ?>
-        <div class="support_files"> No documents uploaded by the school. </div>
+          </td>
+          <td><div class="break-text"><?php $electricityBills =  str_replace(str_replace(' ', '_', $school[0]->name . "_Electricity_Bill_"), " ", $a->file_name); echo wordwrap($electricityBills, 70, '<br />', true);?></div></td>
+        </tr>
         <?php } ?>
-      </li>
+      </table>
+      <?php } else { ?>
+      <div class="support_files"> No documents uploaded by the school. </div>
+      <?php } ?>
+    </li>
       <li>
         <p class="orange"><span>2</span><span> Does your school have its own vehicles?</span></p>
         <p class="formanswertext"><?php echo (getFiled('Q5E1', $schoolUserID) != "") ? (getFiled('Q5E1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
@@ -1435,27 +1506,38 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
           </tr>
         </table>
       </li>
+      
       <li>
         <p class="orange" style="font-size: 16px;">Please upload fuel bills</p>
-        <?php if(!empty($fulesBills)){ ?>
-        <table class="table">
-          <tr>
-            <th>image</th>
-            <th>File name</th>
-          </tr>
-          <?php 
-      foreach ($fulesBills as $f) { ?>
-          <tr id="index<?php echo $f->id; ?>">
-            <?php $name = str_replace(" ", "_", $f->name . "_Fuels_Bills_"); ?>
-            <td><img src="uploads/files/<?php echo $f->file_name; ?>" class="img-thumbnail" style="height:80px;width:80px;"></img></td>
-            <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
-          </tr>
+
+      <?php if (!empty($fulesBills)) { ?>
+      <table  class="table">
+        <tr>
+          <th>Image</th>
+          <th>File Name</th>
+        </tr>
+        <?php foreach ($fulesBills as $a) { 
+
+        $file_parts = pathinfo($a->file_name);
+        $file_extension = $file_parts['extension']; ?>
+        <tr>
+          <td>
+            <?php if($file_extension=="pdf") { ?>
+            <img src="assets/img/performance/pdficon.png" lass="img-responsive" width="100" height="100">
+          <?php } elseif($file_extension=="docx"){ ?>
+             <img src="assets/img/performance/wordicon.png" lass="img-responsive" width="100" height="100">
+           <?php }  else {?>
+            <img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" />
           <?php } ?>
-        </table>
-        <?php } else { ?>
-        <div class="support_files"> No documents uploaded by the school. </div>
+          </td>
+          <td><div class="break-text"><?php $fulesBills =  str_replace(str_replace(' ', '_', $school[0]->name . "_Fuels_Bills_"), " ", $a->file_name); echo wordwrap($fulesBills, 70, '<br />', true);?></div></td>
+        </tr>
         <?php } ?>
-      </li>
+      </table>
+      <?php } else { ?>
+      <div class="support_files"> No documents uploaded by the school. </div>
+      <?php } ?>
+    </li>
       
       <li>
         <p class="orange"><span>4</span>What appliances does your school have? </p>
@@ -1512,25 +1594,34 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
       </li>
       <li>
         <p class="orange" style="font-size: 16px;">Please upload picture of five star appliances used by school</p>
-        <?php if(!empty($appliancesBills)){ ?>
-        <table class="table">
-          <tr>
-            <th>image</th>
-            <th>File name</th>
-          </tr>
-          <?php 
-      foreach ($appliancesBills as $f) { ?>
-          <tr id="index<?php echo $f->id; ?>">
-            <?php $name = str_replace(" ", "_", $f->name . "_Five_Star_Appliances_"); ?>
-            <td><img src="uploads/files/<?php echo $f->file_name; ?>" class="img-thumbnail" style="height:80px;width:80px;"></img></td>
-            <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
-          </tr>
+         <?php if (!empty($appliancesBills)) { ?>
+      <table  class="table">
+        <tr>
+          <th>Image</th>
+          <th>File Name</th>
+        </tr>
+        <?php foreach ($appliancesBills as $a) { 
+
+        $file_parts = pathinfo($a->file_name);
+        $file_extension = $file_parts['extension']; ?>
+        <tr>
+          <td>
+            <?php if($file_extension=="pdf") { ?>
+            <img src="assets/img/performance/pdficon.png" lass="img-responsive" width="100" height="100">
+          <?php } elseif($file_extension=="docx"){ ?>
+             <img src="assets/img/performance/wordicon.png" lass="img-responsive" width="100" height="100">
+           <?php }  else {?>
+            <img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" />
           <?php } ?>
-        </table>
-        <?php } else { ?>
-        <div class="support_files"> No documents uploaded by the school. </div>
+          </td>
+          <td><div class="break-text"><?php $appliancesBills =  str_replace(str_replace(' ', '_', $school[0]->name . "_Five_Star_Appliances_"), " ", $a->file_name); echo wordwrap($appliancesBills, 70, '<br />', true);?></div></td>
+        </tr>
         <?php } ?>
-      </li>
+      </table>
+      <?php } else { ?>
+      <div class="support_files"> No documents uploaded by the school. </div>
+      <?php } ?>
+    </li>
     </ul>
   </div>
   <div class="task-area">
@@ -1581,9 +1672,20 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
             <th>File name</th>
           </tr>
           <?php 
-    foreach ($energySupport as $a) { ?>
-          <tr>
-            <td><img src="uploads/files/<?php echo $a->file_name; ?>" class="img-responsive" width="100" height="100" /></td>
+    foreach ($energySupport as $a) { 
+
+         $file_parts = pathinfo($a->file_name);
+        $file_extension = $file_parts['extension']; ?>
+        <tr>
+          <td>
+            <?php if($file_extension=="pdf") { ?>
+            <img src="assets/img/performance/pdficon.png" lass="img-responsive" width="100" height="100">
+          <?php } elseif($file_extension=="docx"){ ?>
+             <img src="assets/img/performance/wordicon.png" lass="img-responsive" width="100" height="100">
+           <?php }  else {?>
+            <img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" />
+          <?php } ?>
+          </td>
             <td><?php $energySupport =  str_replace(str_replace(' ', '_', $school[0]->name . "_Supporting_Document_Energy_"), " ", $a->file_name); echo wordwrap($energySupport, 70, '<br />', true);?></td>
           </tr>
           <?php } ?>
@@ -1926,27 +2028,37 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
         <p class="formanswertext"><?php echo (getFiled('Q5F1', $schoolUserID) != "") ? (getFiled('Q5F1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
       </li>
       <li>
-        <?php 
-      if(!empty($midDayMeal)){ ?>
+        
         <p class="orange" style="font-size: 16px;"> Please upload picture of Mid-day meal being served </p>
           
-        <table class="table">
-          <tr>
-            <th>image</th>
-            <th>File name</th>
-          </tr>
-          <?php foreach ($midDayMeal as $f) { ?>
-          <tr id="index<?php echo $f->id; ?>">
-            <?php $name = str_replace(" ", "_", $f->name . "_Mid_Day_Meal_"); ?>
-            <td><img src="<?php echo 'uploads/files/' . $f->file_name; ?>" class="img-thumbnail" style="height:80px;width:80px;"></img></td>
-            <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
-          </tr>
+         <?php if (!empty($midDayMeal)) { ?>
+      <table  class="table">
+        <tr>
+          <th>Image</th>
+          <th>File Name</th>
+        </tr>
+        <?php foreach ($midDayMeal as $a) { 
+
+        $file_parts = pathinfo($a->file_name);
+        $file_extension = $file_parts['extension']; ?>
+        <tr>
+          <td>
+            <?php if($file_extension=="pdf") { ?>
+            <img src="assets/img/performance/pdficon.png" lass="img-responsive" width="100" height="100">
+          <?php } elseif($file_extension=="docx"){ ?>
+             <img src="assets/img/performance/wordicon.png" lass="img-responsive" width="100" height="100">
+           <?php }  else {?>
+            <img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" />
           <?php } ?>
-        </table>
-        <?php }else{ ?>
-        <div class="support_files"> No documents uploaded by the school. </div>
+          </td>
+          <td><div class="break-text"><?php $midDayMeal =  str_replace(str_replace(' ', '_', $school[0]->name . "_Mid_Day_Meal_"), " ", $a->file_name); echo wordwrap($midDayMeal, 70, '<br />', true);?></div></td>
+        </tr>
         <?php } ?>
-      </li>
+      </table>
+      <?php } else { ?>
+      <div class="support_files"> No documents uploaded by the school. </div>
+      <?php } ?>
+    </li>
       <?php if(strcmp(getFiled('Q5F1', $schoolUserID),'Y')==0): ?>
       <li>
         <p class="orange"><span>2(a)</span><span>If yes, then midday meal is served under:</span></p>
@@ -1969,25 +2081,34 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
       </li>
       <li>
         <p class="orange" style="font-size: 16px;"> Please upload picture of Mid-day meal being served </p>
-          <?php 
-      if(!empty($lunch)){ ?>
-        <table class="table">
-          <tr>
-            <th>image</th>
-            <th>File name</th>
-          </tr>
-          <?php foreach ($lunch as $f) { ?>
-          <tr id="index<?php echo $f->id; ?>">
-            <?php $name = str_replace(" ", "_", $f->name . "_Lunch_Boxes_"); ?>
-            <td><img src="<?php echo 'uploads/files/' . $f->file_name; ?>" class="img-thumbnail" style="height:80px;width:80px;"></img></td>
-            <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
-          </tr>
+          <?php if (!empty($lunch)) { ?>
+      <table  class="table">
+        <tr>
+          <th>Image</th>
+          <th>File Name</th>
+        </tr>
+        <?php foreach ($lunch as $a) { 
+
+        $file_parts = pathinfo($a->file_name);
+        $file_extension = $file_parts['extension']; ?>
+        <tr>
+          <td>
+            <?php if($file_extension=="pdf") { ?>
+            <img src="assets/img/performance/pdficon.png" lass="img-responsive" width="100" height="100">
+          <?php } elseif($file_extension=="docx"){ ?>
+             <img src="assets/img/performance/wordicon.png" lass="img-responsive" width="100" height="100">
+           <?php }  else {?>
+            <img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" />
           <?php } ?>
-        </table>
-        <?php }else{ ?>
-        <div class="support_files"> No documents uploaded by the school. </div>
+          </td>
+          <td><div class="break-text"><?php $lunch =  str_replace(str_replace(' ', '_', $school[0]->name . "_Lunch_Boxes_"), " ", $a->file_name); echo wordwrap($lunch, 70, '<br />', true);?></div></td>
+        </tr>
         <?php } ?>
-      </li>
+      </table>
+      <?php } else { ?>
+      <div class="support_files"> No documents uploaded by the school. </div>
+      <?php } ?>
+    </li>
       <?php endif; ?>
       <?php if(strcmp(getFiled('Q5F1S1', $schoolUserID),'Y')==0): ?>
       <li>
@@ -2331,9 +2452,19 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
           </thead>
           <tbody>
             <?php 
-         foreach ($files as $a) { ?>
-            <tr>
-              <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+         foreach ($files as $a) { 
+           $file_parts = pathinfo($a->file_name);
+        $file_extension = $file_parts['extension']; ?>
+        <tr>
+          <td>
+            <?php if($file_extension=="pdf") { ?>
+            <img src="assets/img/performance/pdficon.png" lass="img-responsive" width="100" height="100">
+          <?php } elseif($file_extension=="docx"){ ?>
+             <img src="assets/img/performance/wordicon.png" lass="img-responsive" width="100" height="100">
+           <?php }  else {?>
+            <img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" />
+          <?php } ?>
+          </td>
               <td><?php $files =  str_replace(str_replace(' ', '_', $school[0]->name . "_Audit_Team_doing_Survey_Food_"), " ", $a->file_name); echo wordwrap($files, 70, '<br />', true);?></td>
             </tr>
             <?php } ?>
@@ -2380,24 +2511,35 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
         <p class="formanswertext"> <?php echo (getFiled('Q13F2', $schoolUserID) != "") ? getFiled('Q13F2', $schoolUserID) : "N/A"; ?></p>
       </li>
       <?php endif; ?>
-      <li>
-        <?php if (!empty($uppc)) { ?>
-        <table class="table support-docs">
-          <tr>
-            <th>image</th>
-            <th>File name</th>
-          </tr>
-          <?php foreach ($uppc as $a) { ?>
-          <tr>
-            <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
-            <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_UPPF_"), " ", $a->file_name); ?></td>
-          </tr>
+     <li>
+      <?php if (!empty($uppc)) { ?>
+      <table  class="table">
+        <tr>
+          <th>Image</th>
+          <th>File Name</th>
+        </tr>
+        <?php foreach ($uppc as $a) { 
+
+        $file_parts = pathinfo($a->file_name);
+        $file_extension = $file_parts['extension']; ?>
+        <tr>
+          <td>
+            <?php if($file_extension=="pdf") { ?>
+            <img src="assets/img/performance/pdficon.png" lass="img-responsive" width="100" height="100">
+          <?php } elseif($file_extension=="docx"){ ?>
+             <img src="assets/img/performance/wordicon.png" lass="img-responsive" width="100" height="100">
+           <?php }  else {?>
+            <img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" />
           <?php } ?>
-        </table>
-        <?php } else { ?>
-        <div class="support_files">No documents uploaded by the school.</div>
+          </td>
+          <td><div class="break-text"><?php $uppc =  str_replace(str_replace(' ', '_', $school[0]->name . "_UPPF_"), " ", $a->file_name); echo wordwrap($uppc, 70, '<br />', true);?></div></td>
+        </tr>
         <?php } ?>
-      </li>
+      </table>
+      <?php } else { ?>
+      <div class="support_files"> No documents uploaded by the school. </div>
+      <?php } ?>
+    </li>
     </ul>
   </div>
 </div>
@@ -2729,25 +2871,35 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
       </li>
     </ul>
   </div>
-  <?php
-    if (!empty($greenCover)) { ?>
   <div>
-    <table class="table support-docs">
-      <tr>
-        <th>image</th>
-        <th>File name</th>
-      </tr>
-      <?php foreach ($greenCover as $a) { ?>
-      <tr>
-        <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
-        <td><?php echo str_replace(str_replace(' ', '_', $school[0]->name . "_Green_Cover_"), " ", $a->file_name); ?></td>
-      </tr>
+      <?php if (!empty($greenCover)) { ?>
+      <table  class="table">
+        <tr>
+          <th>Image</th>
+          <th>File Name</th>
+        </tr>
+        <?php foreach ($greenCover as $a) { 
+
+        $file_parts = pathinfo($a->file_name);
+        $file_extension = $file_parts['extension']; ?>
+        <tr>
+          <td>
+            <?php if($file_extension=="pdf") { ?>
+            <img src="assets/img/performance/pdficon.png" lass="img-responsive" width="100" height="100">
+          <?php } elseif($file_extension=="docx"){ ?>
+             <img src="assets/img/performance/wordicon.png" lass="img-responsive" width="100" height="100">
+           <?php }  else {?>
+            <img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" />
+          <?php } ?>
+          </td>
+          <td><div class="break-text"><?php $greenCover =  str_replace(str_replace(' ', '_', $school[0]->name . "_Green_Cover_"), " ", $a->file_name); echo wordwrap($greenCover, 70, '<br />', true);?></div></td>
+        </tr>
+        <?php } ?>
+      </table>
+      <?php } else { ?>
+      <div class="support_files"> No documents uploaded by the school. </div>
       <?php } ?>
-    </table>
-  </div>
-  <?php } else { ?>
-  <div class="support_files"> No documents uploaded by the school. </div>
-  <?php } ?>
+    </div>
 </div>
 <div style="text-align: center; padding: 0;">&nbsp;&nbsp;&nbsp;&nbsp;</div>
 <h2 class="heading section waterpage_break page_break"><img src="assets/img/images/water.png" width="94" height="94">Water</h2>
@@ -3187,9 +3339,20 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
             <th>image</th>
             <th>File name</th>
           </tr>
-          <?php foreach ($task4supporting as $a) { ?>
-          <tr>
-            <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+          <?php foreach ($task4supporting as $a) { 
+
+             $file_parts = pathinfo($a->file_name);
+        $file_extension = $file_parts['extension']; ?>
+        <tr>
+          <td>
+            <?php if($file_extension=="pdf") { ?>
+            <img src="assets/img/performance/pdficon.png" lass="img-responsive" width="100" height="100">
+          <?php } elseif($file_extension=="docx"){ ?>
+             <img src="assets/img/performance/wordicon.png" lass="img-responsive" width="100" height="100">
+           <?php }  else {?>
+            <img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" />
+          <?php } ?>
+          </td>
             <td><?php $task4supporting =  str_replace(str_replace(' ', '_', $school[0]->name . "_Task_4_Supporting_docs_"), " ", $a->file_name); echo wordwrap($task4supporting, 70, '<br />', true);?></td>
           </tr>
           <?php } ?>
@@ -3268,42 +3431,42 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
       <p class="orange"><span class="cube">6(b)(1)</span><span> If your school only stores rainwater, please select the use of stored rainwater: </span> </p>
       <p class="formanswertext">
         <?php
-            if (getFiled('Q8W2S2S1', $schoolUserID) == 1):
+            if (getFiled('QSW2S2W1', $schoolUserID) == 1):
                 echo "Drinking";
                 echo "<br/>";
             endif;
-            if (getFiled('Q8W2S2S2', $schoolUserID) == 1):
+            if (getFiled('QSW2S2W2', $schoolUserID) == 1):
                 echo "Gardening";
                 echo "<br/>";
             endif;
-            if (getFiled('Q8W2S2S3', $schoolUserID) == 1):
+            if (getFiled('QSW2S2W3', $schoolUserID) == 1):
                 echo "Mopping";
                 echo "<br/>";
             endif;
-            if (getFiled('Q8W2S2S4', $schoolUserID) == 1):
+            if (getFiled('QSW2S2W4', $schoolUserID) == 1):
                 echo " Toilets";
                 echo "<br/>";
             endif;
-            if (getFiled('Q8W2S2S5', $schoolUserID) == 1):
+            if (getFiled('QSW2S2W5', $schoolUserID) == 1):
                 echo "Washing vehicles";
                 echo "<br/>";
             endif;
-            if (getFiled('Q8W2S2S6', $schoolUserID) == 1):
+            if (getFiled('QSW2S2W6', $schoolUserID) == 1):
                 echo "Kitchen (Cooking/Washing vegetables and utensils)";
                 echo "<br/>";
             endif;
-            if (getFiled('Q8W2S2S7', $schoolUserID) == 1):
+            if (getFiled('QSW2S2W7', $schoolUserID) == 1):
                 echo "Shower, Brushing teeth, Bathing, Hand washing";
                 echo "<br/>";
             endif;
-            if (getFiled('Q8W2S2S8', $schoolUserID) == 1):
+            if (getFiled('QSW2S2W8', $schoolUserID) == 1):
                 echo "Swimming Pool";
             endif;
-            if (getFiled('Q8W2S2S9', $schoolUserID) == 1):
+            if (getFiled('QSW2S2W9', $schoolUserID) == 1):
                 echo "Fire fighting";
                 echo "<br/>";
             endif;
-            if (getFiled('Q8W2S2S10', $schoolUserID) == 1):
+            if (getFiled('QSW2S2W10', $schoolUserID) == 1):
                 echo "Desert coolers";
             endif;
             ?>
@@ -3313,6 +3476,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
       <p class="orange"><span class="cube">6(b)(2)</span><span> Does your school have rainwater storage tank? </span></p>
       <p class="formanswertext"> <?php echo (getFiled('Q8W2S2S2', $schoolUserID) != "") ? (getFiled('Q8W2S2S2', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
     </li>
+    <?php if(isset($Q8W2S2S2) && $Q8W2S2S2=="Y") { ?>
     <li>
       <p class="orange"><span class="cube">6(b)(2) A</span><span> If yes, please provide: </span></p>
       <p class="formanswertext"> <strong>Total number of storage tank (litres): </strong><br/>
@@ -3326,8 +3490,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
     </li>
     <li>
       <p class="orange"><span class="cube">6(b)(2) C</span><span> Location of tanks: </span></p>
-      <p class="formanswertext">
-      <ul>
+       <p class="formanswertext">
         <?php
             if (getFiled('Q8W2S2S5', $schoolUserID) == 1):
                 echo "Underground";
@@ -3344,13 +3507,12 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
 
             endif;
             ?>
-      </ul>
-      </p>
+          </p>
     </li>
     <li>
       <p class="orange"><span class="cube">6(b)(2) D</span><span> Material options for tanks: </span></p>
       <p class="formanswertext">
-      <ul>
+
         <?php
             if (getFiled('Q8W2S2S6', $schoolUserID) == 1):
                 echo "PVC";
@@ -3364,13 +3526,14 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
 
             endif;
             ?>
-      </ul>
-      </p>
+          </p>
     </li>
+  <?php } ?>
     <li>
       <p class="orange"><span class="cube">6(b)(3)</span><span> Does your school have groundwater recharge structure? </span></p>
       <p class="formanswertext"> <?php echo (getFiled('Q8W2S2S7', $schoolUserID) != "") ? (getFiled('Q8W2S2S7', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
     </li>
+    <?php if(strcmp(getFiled('Q8W2S2S7', $schoolUserID),'Y')==0) {?>
     <li>
       <p class="orange"><span class="cube">6(b)(3) i</span><span> If yes, please provide: </span> </p>
       <p class="formanswertext"><strong> Please share the total number of groundwater
@@ -3412,6 +3575,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
             ?>
       </p>
     </li>
+  <?php } ?>
     <li>
       <p class="orange">
         <label><span class="cube">6(b)(4)</span><span> If your school practices rainwater harvesting, then what is the ratio between storage and recharge </label><span>
@@ -3569,19 +3733,30 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
     <div>
       <table class="table">
         <tr>
-          <th>image</th>
-          <th>File name</th>
+          <th>Image</th>
+          <th>File Name</th>
         </tr>
-        <?php foreach ($waterTreatment as $a) { ?>
+        <?php foreach ($waterTreatment as $a) { 
+
+           $file_parts = pathinfo($a->file_name);
+        $file_extension = $file_parts['extension']; ?>
         <tr>
-          <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+          <td>
+            <?php if($file_extension=="pdf") { ?>
+            <img src="assets/img/performance/pdficon.png" lass="img-responsive" width="100" height="100">
+          <?php } elseif($file_extension=="docx"){ ?>
+             <img src="assets/img/performance/wordicon.png" lass="img-responsive" width="100" height="100">
+           <?php }  else {?>
+            <img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" />
+          <?php } ?>
+          </td>
           <td><?php $waterTreatment =  str_replace(str_replace(' ', '_', $school[0]->name . "_Water_Treatment_Process_"), " ", $a->file_name); echo wordwrap($waterTreatment, 70, '<br />', true);?></td>
         </tr>
         <?php } ?>
       </table>
     </div>
     <?php } else { ?>
-    <div class="support_files">No documents uploaded by the school.</div>
+    <div class="support_files">No documents uploaded by the school.</div> <br/>
     <?php } ?>
     <li>
       <p class="orange">
@@ -3631,7 +3806,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
     <?php } ?>
     <li>
       <p class="orange">
-        <label><span class="cube">6(h)</span> </span> What is the trend of groundwater level in your school across the year? </label> </span> </p>
+        <label><span class="cube">6(h)</span> <span> What is the trend of groundwater level in your school across the year? </label> </span> </p>
       <p class="formanswertext">
         <?php
         if (getFiled('Q8W2S10', $schoolUserID) == 1):
@@ -3645,7 +3820,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
         ?>
       </p>
     </li>
-    <?php if(getFiled('Q8W2S10', $schoolUserID) != 3){ ?>
+    <?php if(getFiled('Q8W2S10', $schoolUserID) == 1){ ?>
     <li>
       <p class="orange">
         <label><span class="cube">6(h)(1)</span><span> Please specify how much was the decrease? </label> </span> </p>
@@ -3662,6 +3837,8 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
         ?>
       </p>
     </li>
+  <?php } ?>
+  <?php if(getFiled('Q8W2S10', $schoolUserID) == 2){ ?>
     <li>
       <p class="orange">
         <label><span class="cube">6(h)(2)</span><span> Please specify how much was the increase? </label> </span> </p>
@@ -3903,11 +4080,11 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
                         echo "Wastewater flows directly to the drains";
                         echo "<br/>";
                     endif;
-                    if (getFiled('Q19W131', $schoolUserID) == 1):
+                    if (getFiled('Q19W131', $schoolUserID) == 2):
                         echo "Used for groundwater recharge ";
                         echo "<br/>";
                     endif;
-                    if (getFiled('Q19W132', $schoolUserID) == 1):
+                    if (getFiled('Q19W132', $schoolUserID) == 3):
                         echo "Used for gardening and horticulture";
                         echo "<br/>";
                     endif;
@@ -3920,8 +4097,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
       <p class="formanswertext"> <?php echo (getFiled('Q19W14', $schoolUserID) != "") ? (getFiled('Q19W14', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
     </li>
     <?php } ?>
-    <br/>
-    <br/>
+  
     <h3 class="task">TASK 8 Does your school reuse the treated Wastewater? </h3>
     <li>
       <p class="orange"><span class="cube">18</span><span> Does your school reuse the wastewater from RO plant or Air conditioner drain pipes? </span> </p>
@@ -3936,8 +4112,8 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
       $Q19W161=(getFiled('Q19W161', $schoolUserID) != "") ? getFiled('Q19W161', $schoolUserID): " " ;
       $Q19W162=(getFiled('Q19W162', $schoolUserID) != "") ? getFiled('Q19W162', $schoolUserID): " " ;
       if($Q19W16==1){echo "Used for cleaning purposes (mopping, washing vehicles, etc)".",";}
-      if($Q19W161==2){echo "Used for gardening and horticulture".",";}
-      if($Q19W162==3){echo "Flushing".",";}
+      if($Q19W161==1){echo "Used for gardening and horticulture".",";}
+      if($Q19W162==1){echo "Flushing".",";}
   ?>
       </p>
     </li>
@@ -3984,13 +4160,13 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
         <label><span class="cube">19(a)</span><span> Please specify the fate of wastewater:</label> </span> </p>
       <p class="formanswertext">
         <?php
-        if (getFiled('Q20W3', $schoolUserID) == 1):
+        if (getFiled('Q20W31', $schoolUserID) == 1):
             echo "Wastewater flows directly to the drains";
     endif;  
-        if (getFiled('Q20W31', $schoolUserID) == 2):
+        if (getFiled('Q20W32', $schoolUserID) == 2):
             echo "Used for groundwater recharge";
     endif;  
-        if (getFiled('Q20W32', $schoolUserID) == 3):
+        if (getFiled('Q20W33', $schoolUserID) == 3):
             echo " Used for gardening and horticulture";
         endif;
         ?>
@@ -4003,12 +4179,23 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
             ?>
       <table class="table">
         <tr>
-          <th>image</th>
-          <th>File name</th>
+          <th>Image</th>
+          <th>File Name</th>
         </tr>
-        <?php foreach ($flowChartHandDrawn as $a) { ?>
+        <?php foreach ($flowChartHandDrawn as $a) { 
+
+           $file_parts = pathinfo($a->file_name);
+        $file_extension = $file_parts['extension']; ?>
         <tr>
-          <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+          <td>
+            <?php if($file_extension=="pdf") { ?>
+            <img src="assets/img/performance/pdficon.png" lass="img-responsive" width="100" height="100">
+          <?php } elseif($file_extension=="docx"){ ?>
+             <img src="assets/img/performance/wordicon.png" lass="img-responsive" width="100" height="100">
+           <?php }  else {?>
+            <img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" />
+          <?php } ?>
+          </td>
           <td><?php $flowChartHandDrawn =  str_replace(str_replace(' ', '_', $school[0]->name . "_Flow_Chart_Hand_Drwan_"), " ", $a->file_name); echo wordwrap($flowChartHandDrawn, 70, '<br />', true);?></td>
         </tr>
         <?php } ?>
@@ -4029,9 +4216,20 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
       <th>image</th>
       <th>File name</th>
     </tr>
-    <?php foreach ($supportDocWater as $a) { ?>
-    <tr>
-      <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+    <?php foreach ($supportDocWater as $a) { 
+
+       $file_parts = pathinfo($a->file_name);
+        $file_extension = $file_parts['extension']; ?>
+        <tr>
+          <td>
+            <?php if($file_extension=="pdf") { ?>
+            <img src="assets/img/performance/pdficon.png" lass="img-responsive" width="100" height="100">
+          <?php } elseif($file_extension=="docx"){ ?>
+             <img src="assets/img/performance/wordicon.png" lass="img-responsive" width="100" height="100">
+           <?php }  else {?>
+            <img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" />
+          <?php } ?>
+          </td>
       <td><?php $supportDocWater =  str_replace(str_replace(' ', '_', $school[0]->name . "_Supporting_Document_Water_"), " ", $a->file_name); echo wordwrap($supportDocWater, 70, '<br />', true);?></td>
     </tr>
     <?php } ?>
@@ -4367,12 +4565,23 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
     <div>
       <table  class="table">
         <tr>
-          <th>image</th>
-          <th>File name</th>
+          <th>Image</th>
+          <th>File Name</th>
         </tr>
-        <?php foreach ($segregationClassroom as $a) { ?>
+        <?php foreach ($segregationClassroom as $a) { 
+
+           $file_parts = pathinfo($a->file_name);
+        $file_extension = $file_parts['extension']; ?>
         <tr>
-          <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+          <td>
+            <?php if($file_extension=="pdf") { ?>
+            <img src="assets/img/performance/pdficon.png" lass="img-responsive" width="100" height="100">
+          <?php } elseif($file_extension=="docx"){ ?>
+             <img src="assets/img/performance/wordicon.png" lass="img-responsive" width="100" height="100">
+           <?php }  else {?>
+            <img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" />
+          <?php } ?>
+          </td>
           <td><?php $segregationClassroom =  str_replace(str_replace(' ', '_', $school[0]->name . "_Segregation_Source_Classrooms_"), " ", $a->file_name); echo wordwrap($segregationClassroom, 70, '<br />', true);?></td>
         </tr>
         <?php } ?>
@@ -4580,9 +4789,20 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
               <th>image</th>
               <th>File name</th>
             </tr>
-            <?php foreach ($solidWaste as $a) { ?>
-            <tr>
-              <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+            <?php foreach ($solidWaste as $a) { 
+
+               $file_parts = pathinfo($a->file_name);
+        $file_extension = $file_parts['extension']; ?>
+        <tr>
+          <td>
+            <?php if($file_extension=="pdf") { ?>
+            <img src="assets/img/performance/pdficon.png" lass="img-responsive" width="100" height="100">
+          <?php } elseif($file_extension=="docx"){ ?>
+             <img src="assets/img/performance/wordicon.png" lass="img-responsive" width="100" height="100">
+           <?php }  else {?>
+            <img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" />
+          <?php } ?>
+          </td>
               <td><?php $solidWaste =  str_replace(str_replace(' ', '_', $school[0]->name . "_Audit_Team_Weighing_Solid_Waste_"), " ", $a->file_name); echo wordwrap($solidWaste, 70, '<br />', true);?></td>
             </tr>
             <?php } ?>
@@ -4801,12 +5021,23 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
     <div>
       <table  class="table">
         <tr>
-          <th>image</th>
-          <th>File name</th>
+          <th>Image</th>
+          <th>File Name</th>
         </tr>
-        <?php foreach ($composingPit as $a) { ?>
+        <?php foreach ($composingPit as $a) { 
+
+           $file_parts = pathinfo($a->file_name);
+        $file_extension = $file_parts['extension']; ?>
         <tr>
-          <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+          <td>
+            <?php if($file_extension=="pdf") { ?>
+            <img src="assets/img/performance/pdficon.png" lass="img-responsive" width="100" height="100">
+          <?php } elseif($file_extension=="docx"){ ?>
+             <img src="assets/img/performance/wordicon.png" lass="img-responsive" width="100" height="100">
+           <?php }  else {?>
+            <img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" />
+          <?php } ?>
+          </td>
           <td><?php $composingPit =  str_replace(str_replace(' ', '_', $school[0]->name . "_Composting_Pit_"), " ", $a->file_name); echo wordwrap($composingPit, 70, '<br />', true);?></td>
         </tr>
         <?php } ?>
@@ -5213,9 +5444,20 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
         <th>image</th>
         <th>File name</th>
       </tr>
-      <?php foreach ($recycleMachine as $a) { ?>
-      <tr>
-        <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+      <?php foreach ($recycleMachine as $a) { 
+
+         $file_parts = pathinfo($a->file_name);
+        $file_extension = $file_parts['extension']; ?>
+        <tr>
+          <td>
+            <?php if($file_extension=="pdf") { ?>
+            <img src="assets/img/performance/pdficon.png" lass="img-responsive" width="100" height="100">
+          <?php } elseif($file_extension=="docx"){ ?>
+             <img src="assets/img/performance/wordicon.png" lass="img-responsive" width="100" height="100">
+           <?php }  else {?>
+            <img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" />
+          <?php } ?>
+          </td>
         <td><?php $recycleMachine =  str_replace(str_replace(' ', '_', $school[0]->name . "_Recycling_Machine_"), " ", $a->file_name); echo wordwrap($recycleMachine, 70, '<br />', true);?></td>
       </tr>
       <?php } ?>
@@ -5227,7 +5469,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
   <ul class="list">
     <li>
       <p class="orange">
-        <label><span class="cube">8</span>Does your school have the following? If yes, please give the numbers of items in working condition and those that are not.</label>
+        <label><span class="cube">8</span><span>Does your school have the following? If yes, please give the numbers of items in working condition and those that are not.</span></label>
       </p>
       <table class="table">
         <tr>
@@ -5441,12 +5683,23 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
       <?php if (!empty($eWaste)) { ?>
       <table class="table">
         <tr>
-          <th>image</th>
-          <th>File name</th>
+          <th>Image</th>
+          <th>File Name</th>
         </tr>
-        <?php foreach ($eWaste as $a) { ?>
+        <?php foreach ($eWaste as $a) { 
+
+           $file_parts = pathinfo($a->file_name);
+        $file_extension = $file_parts['extension']; ?>
         <tr>
-          <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+          <td>
+            <?php if($file_extension=="pdf") { ?>
+            <img src="assets/img/performance/pdficon.png" lass="img-responsive" width="100" height="100">
+          <?php } elseif($file_extension=="docx"){ ?>
+             <img src="assets/img/performance/wordicon.png" lass="img-responsive" width="100" height="100">
+           <?php }  else {?>
+            <img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" />
+          <?php } ?>
+          </td>
           <td><?php $eWaste =  str_replace(str_replace(' ', '_', $school[0]->name . "_E-Waste_"), " ", $a->file_name); echo wordwrap($eWaste, 70, '<br />', true);?></td>
         </tr>
         <?php } ?>
@@ -5485,12 +5738,23 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
       <?php if (!empty($authorised_dealer)) { ?>
       <table class="table">
         <tr>
-          <th>image</th>
-          <th>File name</th>
+          <th>Image</th>
+          <th>File Name</th>
         </tr>
-        <?php foreach ($authorised_dealer as $a) { ?>
+        <?php foreach ($authorised_dealer as $a) {
+
+         $file_parts = pathinfo($a->file_name);
+        $file_extension = $file_parts['extension']; ?>
         <tr>
-          <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+          <td>
+            <?php if($file_extension=="pdf") { ?>
+            <img src="assets/img/performance/pdficon.png" lass="img-responsive" width="100" height="100">
+          <?php } elseif($file_extension=="docx"){ ?>
+             <img src="assets/img/performance/wordicon.png" lass="img-responsive" width="100" height="100">
+           <?php }  else {?>
+            <img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" />
+          <?php } ?>
+          </td>
           <td> <?php $authorised_dealer =  str_replace(str_replace(' ', '_', $school[0]->name . "_E-waste_authorised_dealer_"), " ", $a->file_name); echo wordwrap($authorised_dealer, 70, '<br />', true);?></td>
         </tr>
         <?php } ?>
@@ -5531,9 +5795,20 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
             <th>image</th>
             <th>File name</th>
           </tr>
-          <?php foreach ($houseKeeping as $a) { ?>
-          <tr>
-            <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+          <?php foreach ($houseKeeping as $a) { 
+
+             $file_parts = pathinfo($a->file_name);
+        $file_extension = $file_parts['extension']; ?>
+        <tr>
+          <td>
+            <?php if($file_extension=="pdf") { ?>
+            <img src="assets/img/performance/pdficon.png" lass="img-responsive" width="100" height="100">
+          <?php } elseif($file_extension=="docx"){ ?>
+             <img src="assets/img/performance/wordicon.png" lass="img-responsive" width="100" height="100">
+           <?php }  else {?>
+            <img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" />
+          <?php } ?>
+          </td>
             <td> <?php $houseKeeping =  str_replace(str_replace(' ', '_', $school[0]->name . "_Housekeeping_"), " ", $a->file_name); echo wordwrap($houseKeeping, 70, '<br />', true);?></td>
           </tr>
           <?php } ?>
@@ -5559,9 +5834,20 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
             <th>image</th>
             <th>File name</th>
           </tr>
-          <?php foreach ($burningWaste as $a) { ?>
-          <tr>
-            <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+          <?php foreach ($burningWaste as $a) { 
+
+             $file_parts = pathinfo($a->file_name);
+        $file_extension = $file_parts['extension']; ?>
+        <tr>
+          <td>
+            <?php if($file_extension=="pdf") { ?>
+            <img src="assets/img/performance/pdficon.png" lass="img-responsive" width="100" height="100">
+          <?php } elseif($file_extension=="docx"){ ?>
+             <img src="assets/img/performance/wordicon.png" lass="img-responsive" width="100" height="100">
+           <?php }  else {?>
+            <img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" />
+          <?php } ?>
+          </td>
             <td><?php $burningWaste =  str_replace(str_replace(' ', '_', $school[0]->name . "_Buring_Waste_"), " ", $a->file_name); echo wordwrap($burningWaste, 70, '<br />', true);?></td>
           </tr>
           <?php } ?>
@@ -5638,9 +5924,20 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
             <th>image</th>
             <th>File name</th>
           </tr>
-          <?php foreach ($chikoo as $a) { ?>
-          <tr>
-            <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+          <?php foreach ($chikoo as $a) { 
+
+             $file_parts = pathinfo($a->file_name);
+        $file_extension = $file_parts['extension']; ?>
+        <tr>
+          <td>
+            <?php if($file_extension=="pdf") { ?>
+            <img src="assets/img/performance/pdficon.png" lass="img-responsive" width="100" height="100">
+          <?php } elseif($file_extension=="docx"){ ?>
+             <img src="assets/img/performance/wordicon.png" lass="img-responsive" width="100" height="100">
+           <?php }  else {?>
+            <img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" />
+          <?php } ?>
+          </td>
             <td><?php $chikoo =  str_replace(str_replace(' ', '_', $school[0]->name . "_Waste_Policy_"), " ", $a->file_name); echo wordwrap($chikoo, 70, '<br />', true);?></td>
           </tr>
           <?php } ?>
@@ -5669,9 +5966,20 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
             <th>image</th>
             <th>File name</th>
           </tr>
-          <?php foreach ($Initiatives as $a) { ?>
-          <tr>
-            <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+          <?php foreach ($Initiatives as $a) { 
+
+             $file_parts = pathinfo($a->file_name);
+        $file_extension = $file_parts['extension']; ?>
+        <tr>
+          <td>
+            <?php if($file_extension=="pdf") { ?>
+            <img src="assets/img/performance/pdficon.png" lass="img-responsive" width="100" height="100">
+          <?php } elseif($file_extension=="docx"){ ?>
+             <img src="assets/img/performance/wordicon.png" lass="img-responsive" width="100" height="100">
+           <?php }  else {?>
+            <img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" />
+          <?php } ?>
+          </td>
             <td><?php $Initiatives =  str_replace(str_replace(' ', '_', $school[0]->name . "_School_Initiatives_"), " ", $a->file_name); echo wordwrap($Initiatives, 70, '<br />', true);?></td>
           </tr>
           <?php } ?>
@@ -5687,9 +5995,9 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
         <?php
      if (getFiled('Q18Wa2S1', $schoolUserID) == 1){
         echo "As part of the curriculum <br/>";}
-     if (getFiled('Q18Wa2S2', $schoolUserID) == 2){
+     if (getFiled('Q18Wa2S2', $schoolUserID) == 1){
         echo " As part of extracurricular activities such as guest lectures <br/>";}
-      if (getFiled('Q18Wa2S3', $schoolUserID) == 3){
+      if (getFiled('Q18Wa2S3', $schoolUserID) == 1){
         echo " By the showcasing of posters and stickers  ";}
   ?>
       </p>
@@ -5703,12 +6011,23 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
       <?php if (!empty($teamDoingWaste)) { ?>
       <table  class="table">
         <tr>
-          <th>image</th>
-          <th>File name</th>
+          <th>Image</th>
+          <th>File Name</th>
         </tr>
-        <?php foreach ($teamDoingWaste as $a) { ?>
+        <?php foreach ($teamDoingWaste as $a) { 
+
+        $file_parts = pathinfo($a->file_name);
+        $file_extension = $file_parts['extension']; ?>
         <tr>
-          <td><img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" /></td>
+          <td>
+            <?php if($file_extension=="pdf") { ?>
+            <img src="assets/img/performance/pdficon.png" lass="img-responsive" width="100" height="100">
+          <?php } elseif($file_extension=="docx"){ ?>
+             <img src="assets/img/performance/wordicon.png" lass="img-responsive" width="100" height="100">
+           <?php }  else {?>
+            <img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" />
+          <?php } ?>
+          </td>
           <td><div class="break-text"><?php $teamDoingWaste =  str_replace(str_replace(' ', '_', $school[0]->name . "_Audit_Team_Doing_Survey_"), " ", $a->file_name); echo wordwrap($teamDoingWaste, 70, '<br />', true);?></div></td>
         </tr>
         <?php } ?>
