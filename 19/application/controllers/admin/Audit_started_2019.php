@@ -819,7 +819,7 @@ foreach($data as $r){
          }
 $this->zip->download('my_backup.zip');
 }
-	/*School Generate Badge Code*/
+	/*School Generate  Badge Code*/
 	public function generatebadge($argID){
 	      $data=$this->Audit_started_model->getgeneratebadge($argID);
 		  redirect(base_url("admin/audit_started_2019"));  
