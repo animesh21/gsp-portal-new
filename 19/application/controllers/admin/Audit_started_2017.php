@@ -819,18 +819,24 @@ public function digital_certificate_for_principal_coordinator($argID)
 	
 	
 	/*Download zip image*/
-	public function downloadzip($argID){
-	     $data=$this->Audit_started_model->getZipImagesOfSchool($argID);
-	      foreach($data as $r):
-		   $filedata=$r->file_name;
-		   $filename=base_url()."uploads/files/".$r->file_name;
-		   if(file_exists("uploads/files/".$filedata))
-		   {
-           $this->zip->add_data($filedata,file_get_contents($filename)); 
-		   }
-	      endforeach; 
-            $this->zip->download(date('d-M-Y'));
-	}
+	/*Download zip image*/
+public function downloadzip($argID)
+{
+$this->load->library('zip');
+$data=$this->Audit_started_model->getZipImagesOfSchool($argID);
+
+foreach($data as $r){
+           $filedata=$r->file_name;
+           $filename=base_url()."uploads/files/".$r->file_name;
+           
+           $this->zip->add_data($filedata,file_get_contents($filename));
+           $this->zip->archive('dfsfd.zip');
+// $path = 'uploads/waltzer1.jpg';
+          $this->zip->read_file($filename); 
+           
+         }
+$this->zip->download('dfsfd.zip');
+}
 	/*Download 
 	image
 	public function downloadzip($argID){
