@@ -830,7 +830,7 @@ public function digital_certificate_for_principal_coordinator($argID)
 		   {
                   $this->zip->add_data($filedata,$filename); 
 	          $this->zip->archive($filedata);
-		    $this->zip->read_dir($filename);
+		    $this->zip->read_dir($filename, TRUE);
 			   
              } 		   
 	}	 
