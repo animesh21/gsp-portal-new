@@ -818,7 +818,12 @@ public function digital_certificate_for_principal_coordinator($argID)
     }
 	
 	
-	/*Download zip image*/
+	/*Download zip image
+	$this->zip->read_dir($path);
+
+        // Save the zip file to archivefiles directory
+        $this->zip->archive(FCPATH.'/archivefiles/'.$filename);
+	*/
 
 	public function downloadzip($argID){
 		
@@ -829,6 +834,7 @@ public function digital_certificate_for_principal_coordinator($argID)
 		   if(file_exists("uploads/files/".$filedata))
 		   {
                    $this->zip->read_file($filename, TRUE);
+			   $this->zip->archive(base_url()."uploads/files/".$r->file_name);
 			   
              } 		   
 	}	 
