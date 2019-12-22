@@ -820,12 +820,13 @@ public function digital_certificate_for_principal_coordinator($argID)
 	
  	/*Download zip image*/
 	public function downloadzip($argID){
-                $options = [
-            "ssl" => [
-                "verify_peer"=>false,
-                "verify_peer_name"=>false,
-            ]
-        ]; 
+             $options = [
+	    "ssl"=> [
+	    "cafile" => "/path/to/bundle/cacert.pem",
+	    "verify_peer"=> true,
+	    "verify_peer_name"=> true,
+	    ],
+	]; 
 	     $data=$this->Audit_started_model->getZipImagesOfSchool($argID);
 	      foreach($data as $r):
 		   $filedata=$r->file_name;
