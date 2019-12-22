@@ -821,25 +821,25 @@ public function digital_certificate_for_principal_coordinator($argID)
 	/*Download zip image
 	$this->zip->read_dir($path);*/
 
-	public function downloadziip($argID){
+// 	public function downloadziip($argID){
 		
-	      $data=$this->Audit_started_model->getZipImagesOfSchool($argID);
-	      foreach($data as $r){
-		   $filedata=$r->file_name;
-		   $filename=base_url()."uploads/files/".$r->file_name;
-		   if(file_exists("uploads/files/".$filedata))
-		   {
-                    $this->zip->add_data($filedata,$filename); 
- 	            $this->zip->archive($filedata,$filename);
-		    $this->zip->read_dir($filedata,$filename);
+// 	      $data=$this->Audit_started_model->getZipImagesOfSchool($argID);
+// 	      foreach($data as $r){
+// 		   $filedata=$r->file_name;
+// 		   $filename=base_url()."uploads/files/".$r->file_name;
+// 		   if(file_exists("uploads/files/".$filedata))
+// 		   {
+//                     $this->zip->add_data($filedata,$filename); 
+//  	            $this->zip->archive($filedata,$filename);
+// 		    $this->zip->read_dir($filedata,$filename);
 			   
-             } 		   
-	}	 
-              $this->zip->download(date('d-M-Y'));
+//              } 		   
+// 	}	 
+//               $this->zip->download(date('d-M-Y'));
 
-	}	
+// 	}	
 	/*Download zip image*/
-	public function downloadziip($argID){
+	public function downloadzip($argID){
 	     $data=$this->Audit_started_model->getZipImagesOfSchool($argID);
 	      foreach($data as $r):
 		   $filedata=$r->file_name;
