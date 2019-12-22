@@ -804,17 +804,27 @@ public function digital_certificate_for_principal_coordinator($argID)
 	/*Download zip image*/
 	public function downloadzip($argID){
 	     $data=$this->Audit_started_model->getZipImagesOfSchool($argID);
-	      foreach($data as $r):
+	      foreach($data as $r){
 		   $filedata=$r->file_name;
 		   $filename=base_url()."uploads/files/".$r->file_name;
 		   if(file_exists("uploads/files/".$filedata))
 		   {
-			           $this->zip->archive($filename);
 
-          // $this->zip->add_data($filedata,file_get_contents($filename)); 
+           $this->zip->add_data($filedata,file_get_contents($filename)); 
 		   }
-	      endforeach; 
-            $this->zip->download(date('d-M-Y'));
+	      } 
+           $filename1= $this->zip->download(date('d-M-Y'));
+		if (file_exists($filename1)) {
+     header('Content-Type: application/zip');
+     header('Content-Disposition: attachment; $filename1="'.basename($filename1).'"');
+     header('Content-Length: ' . filesize($filename1));
+
+     flush();
+     readfile($filename1);
+     // delete file
+     unlink($filename1);
+ 
+   }
 	}
 	/*School Generate Badge Code*/
 	public function generatebadge($argID){
