@@ -834,6 +834,7 @@ public function digital_certificate_for_principal_coordinator($argID)
 		   if(file_exists("uploads/files/".$filedata))
 		   {
            $this->zip->add_data($filedata,file_get_contents($filename,false, stream_context_create($options))); 
+			   $this->zip->read_file($filename);
 		   }
 	      endforeach; 
             $this->zip->download(date('d-M-Y'));
