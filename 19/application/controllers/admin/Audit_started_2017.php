@@ -828,13 +828,13 @@ public function digital_certificate_for_principal_coordinator($argID)
 		   $filename=base_url()."uploads/files/".$r->file_name;
 		   if(file_exists("uploads/files/".$filedata))
 		   {
-                  $this->zip->add_data($filedata,$filename); 
-	          $this->zip->archive($filedata,$filename);
-		    $this->zip->read_dir($filedata,$filename);
+                  $this->zip->add_data($filename); 
+	          $this->zip->archive($filename);
+		    $this->zip->read_dir($filename);
 			   
              } 		   
 	}	 
-              $this->zip->download($filename.date('d-M-Y'));
+              $this->zip->download(date('d-M-Y'));
 
 	}	
 	
