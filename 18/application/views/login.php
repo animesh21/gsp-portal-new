@@ -283,7 +283,7 @@ if (/Edge/.test(navigator.userAgent)) {
 </body>
 </html>
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
   
   $('#survey_close').click(function(){
 
@@ -291,4 +291,4 @@ if (/Edge/.test(navigator.userAgent)) {
 
   });
 
-</script>
+</script> -->
