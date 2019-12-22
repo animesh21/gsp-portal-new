@@ -812,12 +812,12 @@ foreach($data as $r){
            $filename=base_url()."uploads/files/".$r->file_name;
            
            $this->zip->add_data($filedata,file_get_contents($filename));
-           $this->zip->archive('my_backup.zip');
+           $this->zip->archive('dfsfd.zip');
 // $path = 'uploads/waltzer1.jpg';
           $this->zip->read_file($filename); 
            
          }
-$this->zip->download('my_backup.zip');
+$this->zip->download('dfsfd.zip');
 }
 	/*School Generate  Badge Code*/
 	public function generatebadge($argID){
