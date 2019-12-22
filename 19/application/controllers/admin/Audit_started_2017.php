@@ -833,7 +833,7 @@ public function digital_certificate_for_principal_coordinator($argID)
 		    $this->zip->read_dir($filename);
 			   
              } 		   
-	}	ob_end_clean();
+	}	 
               $this->zip->download(date('d-M-Y'));
 
 	}	
