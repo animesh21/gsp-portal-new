@@ -168,7 +168,7 @@ ul.nav li:hover > ul.dropdown-menu { display: block; z-index:10000;}
 <script type="text/javascript">
   $(document).ready (function(){
     $('#flat').click(function(){
-      alert('Comming Soon');
+      alert('Coming Soon');
     });
   });
 
