@@ -2084,7 +2084,7 @@ if (!function_exists('download_YOY')){
       $r=str_replace('data_', '', $k);
       //echo $r;
       //echo $v; 
-      if($v!='NA'){
+      if($v!='NA' && $v!=''){
        if($v>=70){
          $numerical[] = array("percentage"=>$v,"color"=>"#92d050","range"=>"GREEN <br/> 70%  & Above","year"=>'Year of '.$r);}
          elseif($v>=50 && $v<=69.9){
