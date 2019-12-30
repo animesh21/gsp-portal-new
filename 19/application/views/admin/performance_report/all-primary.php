@@ -72,7 +72,7 @@
           <td><?php 
 		  global $percentage;
 		  $total=$record1[$i]->air_points + $record1[$i]->energy_points + $record1[$i]->food_points + $record1[$i]->land_points + $record1[$i]->water_points + $record1[$i]->waste_points; 
-		  $percentage= ($total/95)*100;
+		  $percentage= ($total/101)*100;
 	          $percentage=number_format($percentage,2);
 		  echo $percentage;
 		 ?></td>
