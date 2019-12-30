@@ -422,7 +422,8 @@ class Dashboard_model extends CI_Model {
 	/******************************  2018 **************************/
 	
 	public function getSchool_alldata(){
-	$this->db->where("a.make_school_disabled","1");
+	$this->db->where("a.make_school_disabled","1");	
+	$this->db->where("a.date_added >=","2018-11-19 00:00:00");
 	$this->db->where("a.date_added <=","2019-11-10 00:00:00");
         return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
         ->from('gsp_school AS a')
