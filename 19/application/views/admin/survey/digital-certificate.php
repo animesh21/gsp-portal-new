@@ -4,29 +4,87 @@
 	<title><?php echo $title; ?></title>
     </head>
     <body>
+
 	<?php
+
+	
 	if (!empty($school_certificates)) {
 	    $i=0;
 	    foreach($school_certificates as $certificate) {
-		if ($certificate->certificate_username !="") {
-		    echo "<div class='container' 
-style='background:url(assets/img/images/certificate3-2018.jpg) 0% -10%  no-repeat; width:724px; height:490px; margin:0px auto;'>
+// 		if ($certificate->certificate_username !="") {
+// 		    echo "<div class='container' 
+// style='background:url(assets/img/images/Certificate_new_19_1.jpg); 0% -10%  no-repeat; width:1000px; height:720px; margin:-40px;'>
 
-  <div class='first_name'>" . $certificate->certificate_username ."</div>&nbsp;
+//   <div class='first_name'>" . $certificate->certificate_username ."</div>&nbsp;
+//   <div class='school_name'>". $certificate->certificate_schoolname."</div>
+//   <div class='certificateno'>Certificate No: "."GSPAudit/2019/".$certificate->id." </div>
+//     </div><div class='page'><strong></strong></div>";
+// 		}
+	  }
+	}
+
+
+	if (!empty($principal)) {
+	    $i=0;
+	    foreach($principal as $principal) {
+
+		if ($principal->principle_name !="") {
+		    echo "<div class='container'>
+		    <div class='image'><img src='assets/img/images/certificate_new_19_1.jpg' width='1000' height='700'></div>
+
+  <div class='principal'>" . $principal->principle_name ."</div>&nbsp;
   <div class='school_name'>". $certificate->certificate_schoolname."</div>
-  <div class='certificateno'>Certificate No: "."GSPAudit/2018/".$certificate->id." </div>
+  
+  <div class='certificateno'>Certificate No: "."GSPAudit/2019/".$certificate->id." </div>
     </div><div class='page'><strong></strong></div>";
 		}
 	  }
 	}
-	/*if (!empty($staffadmin)) {
-	    for ($i = 0; $i < count($staffadmin); $i++) {
-		if ($staffadmin != '') {
-		    echo "<div class='container' 
-style='background:url(assets/img/images/Certificate-2017.jpg) 0% 17%  no-repeat; width:1124px; height:791px; margin:0px auto;'><div class='first_name'>" . $staffadmin[$i]['teacher'] . "</div>&nbsp;<div class='school_name'>" .  $staffadmin[$i]['school'] . "</div></div>";
+
+
+	if (!empty($staffadmin)) {
+	    $i=0;
+	    foreach($staffadmin as $staffadmin) {
+
+		if ($staffadmin !="") {
+		   echo "<div class='container'>
+		    <div class='image'><img src='assets/img/images/certificate_new_19_1.jpg' width='1000' height='700'></div>
+
+  <div class='principal'>" . ucwords($staffadmin)  ."</div>&nbsp;
+  <div class='school_name'>". $certificate->certificate_schoolname."</div>
+  
+  <div class='certificateno'>Certificate No: "."GSPAudit/2019/".$certificate->id." </div>
+    </div><div class='page'><strong></strong></div>";
 		}
-	    }
-	}*/
+	  }
+	}	
+   
+
+	if (!empty($students)) {
+	    $i=0;
+	    foreach($students as $students) {
+
+		if ($students !="") {
+		   echo "<div class='container'>
+		    <div class='image'><img src='assets/img/images/certificate_new_19_2.jpg' width='1000' height='700'></div>
+
+  <div class='first_name'>" . $students['name']  ."</div>&nbsp;
+  
+  <div class='certificateno'>Certificate No: "."GSPAudit/2019/".$certificate->id." </div>
+    </div><div class='page'><strong></strong></div>";
+		}
+	  }
+	}
+
+
+// 	if (!empty($staffadmin)) {
+// 	    for ($i = 0; $i < count($staffadmin); $i++) {
+// 		if ($staffadmin != '') {
+// 		    echo "<div class='container' 
+// style='background:url(assets/img/images/Certificate-2017.jpg) 0% 17%  no-repeat; width:1124px; height:791px; margin:0px auto;'><div class='first_name'>" . $staffadmin[$i]['teacher'] . "</div>&nbsp;<div class='school_name'>" .  $staffadmin[$i]['school'] . "</div></div>";
+// 		}
+// 	    }
+// 	}
 	    
 /*	if (!empty($principal)) {
 	    for ($i = 0; $i < count($principal); $i++) {
@@ -49,16 +107,18 @@ style='background:url(assets/img/images/Certificate-2017.jpg) 0% -17%  no-repeat
 }
 
 body{
-	font-family: myFirstFont;
+	font-family: mtcorsva; font-size: 20px;
 }
  
 
-         .certificateno{ position:absolute; top:500px font-weight:bold; font-family:Verdana, Arial, Helvetica, sans-serif }
-         .first_name{ position:absolute; top:225px; left:240px}
-	    .school_name{ position:absolute; top:265px; left:100px}
-		.first_name1{ position:absolute; top:225px; left:240px}
-	    .school_name1{ position:absolute; top:265px; left:100px}
+         .certificateno{ position:absolute; top:660px; left: 10px;}
+         .first_name{ position:relative; text-align: center; top:350px;}
+         .principal{ position:relative; text-align: center; top:270px;}
+	    .school_name{ position:relative; text-align: center; top:360px;}
+		.first_name1{ position:relative; text-align: center; top:265px;}
+	    .school_name1{ position:absolute; top:265px;}
         .grade{position:absolute; top:205px; left:650px}
+        .image{position:absolute; margin-left: -40px; margin-top: -20px;}
 </style>
 
 
