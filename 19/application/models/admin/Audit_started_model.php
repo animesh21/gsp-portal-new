@@ -2667,7 +2667,7 @@ public function getExcel2017Data() {
                       
      
 
-        $output .= "\n";
+        
         $output .= '"Year",';        
         foreach ($arrRecord as $a) {
             $output .= '"' . $a->audit_year . '",';                         
