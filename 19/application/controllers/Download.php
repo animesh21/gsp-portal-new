@@ -144,6 +144,7 @@ class Download extends CI_Controller {
 function getdigitalCertificate($argID) {
    $data['title']="GSP Digital Certificates";
    $this->load->library('dompdf_lib');
+	 ini_set('memory_limit', '-1');
    //Students Records
   $students = $this->count_certificates_stuents($argID);
   $staffadmin = $this->count_certificates_staffamin($argID);
