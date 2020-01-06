@@ -186,7 +186,7 @@ function getdigitalCertificate($argID) {
    $this->dompdf->load_html($html1);
    $this->dompdf->set_paper(array(0, 0, 580, 760), 'landscape');
    $this->dompdf->render();
-   $this->dompdf->stream("Digital Certificate.pdf", array("Attachment" => false));
+   $this->dompdf->stream("Digital Certificate.pdf", array("Attachment" => true));
   }
   
 	
