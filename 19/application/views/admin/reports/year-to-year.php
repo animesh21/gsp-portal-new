@@ -3425,7 +3425,7 @@
 
       <?php } } ?>
             </tr>
-            <tr role="row">
+            <!-- <tr role="row">
             <td>Segregates the waste by (Students and teachers)</td>
              <?php if(!empty($_GET['userid'])){
               $sr_no=0;
@@ -3437,8 +3437,8 @@
             <td><?php if(!empty($yoyDatas->segregates_the_waste_by_students_and_teachers)){echo $yoyDatas->segregates_the_waste_by_students_and_teachers;}else{ echo "NA"; } ?></td>
 
       <?php } } ?>
-            </tr>
-            <tr role="row">
+            </tr> -->
+            <!-- <tr role="row">
             <td>Segregates the waste by (Housekeeping)</td>
              <?php if(!empty($_GET['userid'])){
               $sr_no=0;
@@ -3489,7 +3489,7 @@
             <td><?php if(!empty($yoyDatas->segregates_the_waste_by_other)){echo $yoyDatas->segregates_the_waste_by_other;}else{ echo "NA"; } ?></td>
 
       <?php } } ?>
-            </tr>
+            </tr> -->
             <tr role="row">
             <td>No. of category</td>
              <?php if(!empty($_GET['userid'])){
