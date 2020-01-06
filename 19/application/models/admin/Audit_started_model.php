@@ -4664,45 +4664,45 @@ public function getExcel2017Data() {
                      
         }
              
-      $output .= "\n";
-      $output .= '"segregates the waste by (Students and teachers)",';       
-        foreach ($arrRecord as $a) {
-            if(!empty($a->segregates_the_waste_by_students_and_teachers)){$data_final= $a->segregates_the_waste_by_students_and_teachers;}else{ $data_final= "NA"; }
-            $output .= '"' . $data_final . '",';
+//       $output .= "\n";
+//       $output .= '"segregates the waste by (Students and teachers)",';       
+//         foreach ($arrRecord as $a) {
+//             if(!empty($a->segregates_the_waste_by_students_and_teachers)){$data_final= $a->segregates_the_waste_by_students_and_teachers;}else{ $data_final= "NA"; }
+//             $output .= '"' . $data_final . '",';
                      
-        }
+//         }
              
-      $output .= "\n";
-      $output .= '"segregates the waste by (Housekeeping)",';       
-        foreach ($arrRecord as $a) {
-            if(!empty($a->segregates_the_waste_by_housekeeping)){ $data_final= $a->segregates_the_waste_by_housekeeping;}else{ $data_final= "NA"; }
-            $output .= '"' . $data_final . '",';
+//       $output .= "\n";
+//       $output .= '"segregates the waste by (Housekeeping)",';       
+//         foreach ($arrRecord as $a) {
+//             if(!empty($a->segregates_the_waste_by_housekeeping)){ $data_final= $a->segregates_the_waste_by_housekeeping;}else{ $data_final= "NA"; }
+//             $output .= '"' . $data_final . '",';
                      
-        }
+//         }
              
-      $output .= "\n";
-      $output .= '"segregates the waste by (Gardener)",';       
-        foreach ($arrRecord as $a) {
-            if(!empty($a->segregates_the_waste_by_gardener)){$data_final= $a->segregates_the_waste_by_gardener;}else{ $data_final= "NA"; }
-           $output .= '"' . $data_final . '",';
+//       $output .= "\n";
+//       $output .= '"segregates the waste by (Gardener)",';       
+//         foreach ($arrRecord as $a) {
+//             if(!empty($a->segregates_the_waste_by_gardener)){$data_final= $a->segregates_the_waste_by_gardener;}else{ $data_final= "NA"; }
+//            $output .= '"' . $data_final . '",';
                       
-        }
+//         }
              
-      $output .= "\n";
-      $output .= '"segregates the waste by (Ragpickers)",';       
-        foreach ($arrRecord as $a) {
-            if(!empty($a->segregates_the_waste_by_ragpickers)){$data_final= $a->segregates_the_waste_by_ragpickers;}else{ $data_final= "NA"; }
-            $output .= '"' . $data_final . '",';
+//       $output .= "\n";
+//       $output .= '"segregates the waste by (Ragpickers)",';       
+//         foreach ($arrRecord as $a) {
+//             if(!empty($a->segregates_the_waste_by_ragpickers)){$data_final= $a->segregates_the_waste_by_ragpickers;}else{ $data_final= "NA"; }
+//             $output .= '"' . $data_final . '",';
                       
-        }
+//         }
              
-      $output .= "\n";
-      $output .= '"segregates the waste by (other)",';       
-        foreach ($arrRecord as $a) {
-            if(!empty($a->segregates_the_waste_by_other)){$data_final= $a->segregates_the_waste_by_other;}else{ $data_final= "NA"; }
-            $output .= '"' . $data_final . '",';
+//       $output .= "\n";
+//       $output .= '"segregates the waste by (other)",';       
+//         foreach ($arrRecord as $a) {
+//             if(!empty($a->segregates_the_waste_by_other)){$data_final= $a->segregates_the_waste_by_other;}else{ $data_final= "NA"; }
+//             $output .= '"' . $data_final . '",';
                       
-        }
+//         }
              
       $output .= "\n";
       $output .= '"No.of category",';       
