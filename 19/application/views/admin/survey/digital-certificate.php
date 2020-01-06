@@ -30,7 +30,7 @@
 
 		if ($principal->principle_name !="") {
 		    echo "<div class='container'>
-		    <div class='image'><img src='<?php echo base_url(); ?>assets/img/images/certificate_new_19_1.jpg' width='1000' height='700'></div>
+		    <div class='image'><img src='http://www.greenschoolsprogramme.org/audit/19/assets/img/images/certificate_new_19_1.jpg' width='1000' height='700'></div>
 
   <div class='principal'>" . $principal->principle_name ."</div>&nbsp;
   <div class='school_name'>". $certificate->certificate_schoolname."</div>
