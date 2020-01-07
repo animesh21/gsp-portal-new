@@ -1212,9 +1212,9 @@
              ?>
             <td><?php echo $yoyDatas->students_bring_own_lunch; ?></td>
 
-      <?php } } ?>
+            <?php } } ?>
             </tr>
-						   			<tr role="row">
+	    <tr role="row">
             <td>State subsidy availed (Y/N)</td>
              <?php if(!empty($_GET['userid'])){
               $sr_no=0;
