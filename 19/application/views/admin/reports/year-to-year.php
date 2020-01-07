@@ -1175,6 +1175,72 @@
 
       <?php } } ?>
             </tr>
+									
+									            <tr role="row">
+            <td>State subsidy availed (Y/N)</td>
+             <?php if(!empty($_GET['userid'])){
+              $sr_no=0;
+            $school_id=$_GET['userid'];
+            $yoyData=getYOYComparisonAllData($school_id);
+            
+              foreach($yoyData as $yoyDatas){
+             ?>
+            <td><?php echo $yoyDatas->State_subsidy_availed_(Y/N); ?></td>
+
+      <?php } } ?>
+            </tr>
+            <tr role="row">
+            <td>Installed capacity of solar photovoltaic (PV) panels (kW)</td>
+             <?php if(!empty($_GET['userid'])){
+              $sr_no=0;
+            $school_id=$_GET['userid'];
+            $yoyData=getYOYComparisonAllData($school_id);
+            
+              foreach($yoyData as $yoyDatas){
+             ?> 
+            <td><?php echo $yoyDatas->Installed_capacity_of_solar_photovoltaic_(PV)_panels_(kW); ?></td>
+
+      <?php } } ?>
+            </tr>
+            <tr role="row">
+            <td>Connected load of school</td>
+             <?php if(!empty($_GET['userid'])){
+              $sr_no=0;
+            $school_id=$_GET['userid'];
+            $yoyData=getYOYComparisonAllData($school_id);
+            
+              foreach($yoyData as $yoyDatas){
+             ?>
+            <td><?php echo $yoyDatas->  Connected_load_of_school; ?></td>
+
+      <?php } } ?>
+            </tr>
+            <tr role="row">
+            <td>Size of invertors (kVA)</td>
+             <?php if(!empty($_GET['userid'])){
+              $sr_no=0;
+            $school_id=$_GET['userid'];
+            $yoyData=getYOYComparisonAllData($school_id);
+            
+              foreach($yoyData as $yoyDatas){
+             ?>
+            <td><?php echo $yoyDatas->Size_of_invertors_(kVA); ?></td>
+
+      <?php } } ?>
+            </tr>
+            <tr role="row">
+            <td>Operational model-solar rooftop-Off grid/On grid net metering/on grid gross metering</td>
+             <?php if(!empty($_GET['userid'])){
+              $sr_no=0;
+            $school_id=$_GET['userid'];
+            $yoyData=getYOYComparisonAllData($school_id);
+            
+              foreach($yoyData as $yoyDatas){
+             ?>
+            <td><?php echo $yoyDatas->Operational_model-solar_rooftop__-_Off_grid/On_grid_net_metering; ?></td>
+
+      <?php } } ?>
+            </tr>
             <tr role="row">
             <td>Provision of packaged food</td>
              <?php if(!empty($_GET['userid'])){
