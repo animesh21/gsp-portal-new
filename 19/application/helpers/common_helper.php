@@ -74,6 +74,15 @@ if(!function_exists('getYOYComparisonAllData')){
     }
 }
 
+if(!function_exists('getYOYComparisonAllDataNewFields')){
+  function getYOYComparisonAllDataNewFields($schoolId) {
+        $CI = & get_instance();
+    $CI->db->where('school_id',$schoolId);
+        $temp = $CI->db->select("*")->from('tbl_total')->get()->result();
+        return $temp;
+    }
+}
+
 if(!function_exists('getYOYComparisonYesNo')){
   function getYOYComparisonYesNo($args) {
         if(!empty($args)){
