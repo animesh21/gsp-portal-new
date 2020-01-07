@@ -446,16 +446,45 @@ function getdigitalCertificate($argID) {
    $data['title']="GSP Digital Certificates";
    $this->load->library('dompdf_lib');
    //Students Records
-   $students = $this->count_certificates_stuents($argID);
-   $staffadmin = $this->count_certificates_staffamin($argID);
-   $principal=$this->digital_certificate_for_principal_coordinator($argID);
-	
+  $students = $this->count_certificates_stuents($argID);
+  $staffadmin = $this->count_certificates_staffamin($argID);
+  $staffadmin = array_column($staffadmin, 'teacher');
+  $staffadmin=   implode(',', $staffadmin);
+  $staffadmin = preg_replace('/\s+/', ' ', $staffadmin);
+  $staffadmin = strtolower($staffadmin);
+ // echo $staffadmin = ucfirst($staffadmin);
+ 
+  $staffadmin = explode(',', $staffadmin);
+ 
+  $staffadmin = array_unique($staffadmin);
+ 
+  // $principal=$this->digital_certificate_for_principal_coordinator($argID);
+  // $principal = array_shift($principal);
+  
    $data['students'] = $students;
    $data['staffadmin'] = $staffadmin;
-   $data['principal'] = $principal;	
+
+ //     echo "<pre>";
+ // print_r($students);
+ //  exit;
+ 
+   // $data['principal'] = $principal;
+  
+   $this->db->where("userid",$argID);
+   $dataCertificate=$this->db->select("certificate_username,certificate_schoolname,id")
+   ->from("tblcertificate")->group_by("certificate_username")->get()->result();
+   $data['school_certificates']=$dataCertificate;
+   $principal = $this->db->select("a.userid,a.principle_name")
+                                 ->from("gsp_school AS a")
+                                 ->where("userid", $argID)
+                                 ->get()
+                                 ->result();
+  $data['principal']=$principal;
+                                 // echo "<pre>";
+                                 // print_r($principal);exit;
    $html1 = $this->load->view('admin/survey/digital-certificate', $data, true);
    $this->dompdf->load_html($html1);
-   $this->dompdf->set_paper(array(0, 0, 505, 691), 'portrait');
+   $this->dompdf->set_paper(array(0, 0, 580, 760), 'landscape');
    $this->dompdf->render();
    $this->dompdf->stream("Digital Certificate.pdf", array("Attachment" => false));
   }
