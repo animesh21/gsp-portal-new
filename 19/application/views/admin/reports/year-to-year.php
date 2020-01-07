@@ -1214,19 +1214,7 @@
 
             <?php } } ?>
             </tr>
-	    <tr role="row">
-            <td>State subsidy availed (Y/N)</td>
-             <?php if(!empty($_GET['userid'])){
-              $sr_no=0;
-            $school_id=$_GET['userid'];
-            $yoyData=getYOYComparisonAllData($school_id);
-            
-              foreach($yoyData as $yoyDatas){
-             ?>
-            <td><?php echo $yoyDatas->State_subsidy_availed_(Y/N); ?></td>
-
-             <?php } } ?>
-            </tr>
+	    
             <tr role="row">
             <td>How many students bring home-made lunch</td>
              <?php if(!empty($_GET['userid'])){
