@@ -849,6 +849,8 @@ public function digital_certificate_for_principal_coordinator($argID)
 	
  	/*Download zip image*/
 	public function downloadzip($argID){
+		ini_set('memory_limit', '-1');
+     ini_set('max_execution_time', 300);
              $options = [
 	    "ssl"=> [
 	    "cafile" => "/path/to/bundle/cacert.pem",
