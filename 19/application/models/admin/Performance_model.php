@@ -225,13 +225,15 @@ return $this->db->select('y.name AS state_name, z.name AS district_name,a.coemai
 	    ->join('tbl_water AS h', 'a.userid=h.userid', 'left')
 	    ->get()->result();
       }
-  public function combinedPerformancePoint() {
-return $this->db->select('a.*,b.name AS state_name, c.name AS district_name')->from('tbl_total AS a')
-       ->join('states AS b', 'a.state=b.id', 'left')
-       ->join('cities AS c', 'a.district=c.id', 'left')
-       ->get()->result();
-  }
+
 	
+	  public function combinedPerformancePoint() {
+	    return $this->db->select('a.*,b.name AS state_name, c.name AS district_name, d.schoolemail')->from('tbl_total AS a')
+	       ->join('states AS b', 'a.state=b.id', 'left')
+	       ->join('cities AS c', 'a.district=c.id', 'left')
+	       ->join('gsp_school AS d', 'a.school_id=d.id')        
+	       ->get()->result();
+	  }	
 	
 	
 	public function getLandPrimarySchool()
