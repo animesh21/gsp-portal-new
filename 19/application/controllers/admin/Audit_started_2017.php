@@ -868,8 +868,8 @@ public function digital_certificate_for_principal_coordinator($argID)
 			   $this->zip->read_file($filename);
 		   }
 	      endforeach; 
-		echo "<pre>";
-            print_r($this->zip->download(date('d-M-Y'))); exit;
+		 
+            $this->zip->download(date('d-M-Y'));
 	}
 	
 	
