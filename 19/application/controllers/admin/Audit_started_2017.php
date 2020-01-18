@@ -538,23 +538,23 @@ public function digital_certificate_for_principal_coordinator($argID)
    $arrStaff = array();
    $question_alphabet = array("A", "E", "F", "L", "W", "Wa");
    $username=$this->db->select('name')
-				->from('gsp_school')
-				->where('userid',$argID)
-				->get()->row();
+        ->from('gsp_school')
+        ->where('userid',$argID)
+        ->get()->row();
    foreach ($question_alphabet as $q) {
        //Teachers
        for ($i = 1; $i <= 3; $i++) {
        if((getFiled("Q1" . $q . $i . "S1", $argID) !="0") && (getFiled("Q1" . $q . $i . "S1", $argID) !='') || (getFiled("Q1" . $q . $i . "S3", $argID) !="0") && (getFiled("Q1" . $q . $i . "S3", $argID) !=''))
        {
        $airTeachers[] = array("teacher"=>getFiled("Q1" . $q . $i . "S1", $argID) . " " . getFiled("Q1" . $q . $i . "S3", $argID),"school"=>$username->name);
-	   
+     
        }
        }
        //Staff
        for ($i = 1; $i <= 5; $i++) {
        if((getFiled("Q2" . $q . $i . "S1", $argID) !="0") && (getFiled("Q2" . $q . $i . "S1", $argID) !='') || (getFiled("Q2" . $q . $i . "S3", $argID) !="0") && (getFiled("Q2" . $q . $i . "S3", $argID) !='')){
        $arrStaff[] = array("teacher"=>getFiled("Q2" . $q . $i . "S1", $argID) . " " . getFiled("Q2" . $q . $i . "S3", $argID),"school"=>$username->name);
-	
+  
        }
        }
    }
@@ -563,7 +563,7 @@ public function digital_certificate_for_principal_coordinator($argID)
 //    print_r($temp);
    //echo '<pre>'; print_r($airTeacher['school']); exit;
    //echo '<pre>'; print_r($arrStaff);
-   return array_merge($airTeachers, $arrStaff);
+   return array_merge($airTeachers);
   }
 
     /*
