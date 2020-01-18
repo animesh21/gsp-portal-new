@@ -67,7 +67,7 @@
 
 		if ($principal->principle_name !="") {
 		    echo "<div class='container'>
-		    <div class='image'><img src='assets/img/images/certificate201.jpg' width='1000' height='700'></div>
+		    <div class='image'><img src='assets/img/images/Certificate201.jpg' width='1000' height='700'></div>
 
   <div class='principal'>" . strtoupper($principal->principle_name) ."</div>&nbsp;
   <div class='school_name'>". $certificate->certificate_schoolname."</div>
@@ -85,7 +85,7 @@
 
 		if ($staffadmin !="") {
 		   echo "<div class='container'>
-		    <div class='image'><img src='assets/img/images/certificate201.jpg' width='1000' height='700'></div>
+		    <div class='image'><img src='assets/img/images/Certificate201.jpg' width='1000' height='700'></div>
 
   <div class='principal'>" . strtoupper($staffadmin)  ."</div>&nbsp;
   <div class='school_name'>". $certificate->certificate_schoolname."</div>
@@ -103,7 +103,7 @@
 
 		if ($students !="") {
 		   echo "<div class='container'>
-		    <div class='image'><img src='assets/img/images/certificate202.jpg' width='1000' height='700'></div>
+		    <div class='image'><img src='assets/img/images/Certificate202.jpg' width='1000' height='700'></div>
 
   <div class='first_name'>" . strtoupper($students['name'])  . ', Class : '. integerToRoman($students['grade'])  ."</div>&nbsp;
   <div class='school_name1'>". $certificate->certificate_schoolname."</div>
