@@ -7,6 +7,43 @@
 
 	<?php
 
+
+	function integerToRoman($integer)
+		  {
+		 // Convert the integer into an integer (just to make sure)
+		 $integer = intval($integer);
+		 $result = '';
+		 
+		 // Create a lookup array that contains all of the Roman numerals.
+		 $lookup = array('M' => 1000,
+		 'CM' => 900,
+		 'D' => 500,
+		 'CD' => 400,
+		 'C' => 100,
+		 'XC' => 90,
+		 'L' => 50,
+		 'XL' => 40,
+		 'X' => 10,
+		 'IX' => 9,
+		 'V' => 5,
+		 'IV' => 4,
+		 'I' => 1);
+		 
+		 foreach($lookup as $roman => $value){
+		  // Determine the number of matches
+		  $matches = intval($integer/$value);
+		 
+		  // Add the same number of characters to the string
+		  $result .= str_repeat($roman,$matches);
+		 
+		  // Set the integer to be the remainder of the integer and the value
+		  $integer = $integer % $value;
+		 }
+		 
+		 // The Roman numeral should be built, return it
+		 return $result;
+		}
+
 	
 	if (!empty($school_certificates)) {
 	    $i=0;
@@ -30,12 +67,12 @@
 
 		if ($principal->principle_name !="") {
 		    echo "<div class='container'>
-		    <div class='image'><img src='assets/img/images/Certificate201.jpg' width='1000' height='700'></div>
+		    <div class='image'><img src='assets/img/images/certificate_new_19_1.jpg' width='1000' height='700'></div>
 
-  <div class='principal'>" . $principal->principle_name ."</div>&nbsp;
+  <div class='principal'>" . strtoupper($principal->principle_name) ."</div>&nbsp;
   <div class='school_name'>". $certificate->certificate_schoolname."</div>
   
-  <div class='certificateno'>Certificate No: "."GSPAudit/2019/".$certificate->id." </div>
+  <div class='certificateno'>Certificate No: "."GSPAudit/2020/".$certificate->id." </div>
     </div><div class='page'><strong></strong></div>";
 		}
 	  }
@@ -48,12 +85,12 @@
 
 		if ($staffadmin !="") {
 		   echo "<div class='container'>
-		    <div class='image'><img src='assets/img/images/Certificate201.jpg' width='1000' height='700'></div>
+		    <div class='image'><img src='assets/img/images/certificate_new_19_1.jpg' width='1000' height='700'></div>
 
-  <div class='principal'>" . ucwords($staffadmin)  ."</div>&nbsp;
+  <div class='principal'>" . strtoupper($staffadmin)  ."</div>&nbsp;
   <div class='school_name'>". $certificate->certificate_schoolname."</div>
   
-  <div class='certificateno'>Certificate No: "."GSPAudit/2019/".$certificate->id." </div>
+  <div class='certificateno'>Certificate No: "."GSPAudit/2020/".$certificate->id." </div>
     </div><div class='page'><strong></strong></div>";
 		}
 	  }
@@ -66,11 +103,12 @@
 
 		if ($students !="") {
 		   echo "<div class='container'>
-		    <div class='image'><img src='assets/img/images/Certificate202.jpg' width='1000' height='700'></div>
+		    <div class='image'><img src='assets/img/images/certificate_new_19_2.jpg' width='1000' height='700'></div>
 
-  <div class='first_name'>" . $students['name']  ."</div>&nbsp;
+  <div class='first_name'>" . strtoupper($students['name'])  . ', Class : '. integerToRoman($students['grade'])  ."</div>&nbsp;
+  <div class='school_name1'>". $certificate->certificate_schoolname."</div>
   
-  <div class='certificateno'>Certificate No: "."GSPAudit/2019/".$certificate->id." </div>
+  <div class='certificateno'>Certificate No: "."GSPAudit/2020/".$students['school_name']." </div>
     </div><div class='page'><strong></strong></div>";
 		}
 	  }
@@ -111,12 +149,12 @@ body{
 }
  
 
-         .certificateno{ position:absolute; top:660px; left: 10px;}
-         .first_name{ position:relative; text-align: center; top:350px;}
-         .principal{ position:relative; text-align: center; top:270px;}
+        .certificateno{ position:absolute; top:670px; left: 10px;}
+        .first_name{ position:relative; text-align: center; top:350px;}
+        .principal{ position:relative; text-align: center; top:270px;}
 	    .school_name{ position:relative; text-align: center; top:360px;}
 		.first_name1{ position:relative; text-align: center; top:265px;}
-	    .school_name1{ position:absolute; top:265px;}
+	    .school_name1{ position:relative; text-align: center; top:350px;}
         .grade{position:absolute; top:205px; left:650px}
         .image{position:absolute; margin-left: -40px; margin-top: -20px;}
 </style>
