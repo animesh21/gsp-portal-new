@@ -17,6 +17,7 @@ class User_model extends CI_Model
             ->join('gsp_school AS b', 'b.userid=a.id', 'left')
 	    ->join('gsp_aduit_submitted AS c', 'b.id=c.school_id', 'left')
             ->where(array('a.email' => $argPost['email'], 'a.password' => $argPost['password']))
+		->order_by('c.school_id', 'desc')
             ->get();
             echo $this->db->last_query();
         if ($query->num_rows() > 0) {
