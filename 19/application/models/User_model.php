@@ -15,10 +15,10 @@ class User_model extends CI_Model
         $query = $this->db->select('a.*, a.username AS username, a.id AS id, a.status AS status, b.complete_status, c.date_on' )
             ->from('gsp_user As a')
             ->join('gsp_school AS b', 'b.userid=a.id', 'left')
-	    ->join('gsp_aduit_submitted AS c', 'b.id=c.school_id')
+	    ->join('gsp_aduit_submitted AS c', 'b.id=c.school_id', 'left')
             ->where(array('a.email' => $argPost['email'], 'a.password' => $argPost['password']))
             ->get();
-            echo $this->db->last_query();
+//             echo $this->db->last_query();
         if ($query->num_rows() > 0) {
             $row = $query->row();
 			if($row->complete_status==0 || $row->date_on >='2019-11-12 00:00:00')
