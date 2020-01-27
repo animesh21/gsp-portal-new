@@ -19,7 +19,7 @@ class User_model extends CI_Model
             ->where(array('a.email' => $argPost['email'], 'a.password' => $argPost['password']))
 		->order_by('c.date_on', 'desc')
             ->get();
-            echo $this->db->last_query();
+//             echo $this->db->last_query();
         if ($query->num_rows() > 0) {
             $row = $query->row();
 			if($row->complete_status==0 || $row->date_on >='2019-11-12 00:00:00')
