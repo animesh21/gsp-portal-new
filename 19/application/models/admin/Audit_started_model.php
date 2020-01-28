@@ -1264,10 +1264,11 @@ class Audit_started_model extends CI_Model {
                         ->get()->result(); */
 //         $this->db->where('a.date_added >=', '2019-11-12 00:00:00');
 	    $this->db->where("a.make_school_disabled","1");
-	  $arrRecord = $this->db->select('a.*, b.name AS state_name,c.name As district_name')
+	  $arrRecord = $this->db->select('a.*, b.name AS state_name,c.name As district_name,d.password')
 					->from('gsp_school AS a')
 					->join('states AS b', 'a.state=b.id', 'left')
 					->join('cities AS c', 'a.district=c.id', 'left')
+		  			->join('gsp_user AS d', 'a.userid=d.id')
 					->where($progress)
 					->order_by('a.id', 'desc')
 					->get()->result();    
