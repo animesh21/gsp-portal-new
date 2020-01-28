@@ -14,6 +14,7 @@
             <th>District</th>
             <th>Co-ord. Name</th>
             <th>Co-ord. Email</th>
+	     <th>Password</th>
             <th>Co-ord. Mobile</th>
             <th>Progress</th>
 <!--            <th>Completeness</th>-->
@@ -35,6 +36,7 @@
                 <td><?php echo $r->district_name; ?></td>
                 <td><?php echo $r->coname; ?></td>
                 <td><?php echo $r->coemail; ?></td>
+		<td><?php echo $r->password; ?></td>
                 <td><?php echo $r->comobile; ?></td>
                 <td><?php echo $r->progress; ?></td>
                 <td class="action"><a target="_blank" href="<?php echo base_url('admin/audit_started_2017/response/').$r->id; ?>" title="View Responses"><img src="<?php echo base_url() ?>assets/front/images/1446146277_view6.png"></a></td>
