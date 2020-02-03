@@ -1182,11 +1182,11 @@
              <?php if(!empty($_GET['userid'])){
               $sr_no=0;
             $school_id=$_GET['userid'];
-            $yoyData=getYOYComparisonAllData($school_id);
+            $yoyData=getYOYComparisonAllDataNewFields($school_id);
             
               foreach($yoyData as $yoyDatas){
              ?>
-            <td><?php echo $yoyDatas->state_subsidy_availed_Y_N; ?></td>
+            <td><?php echo $yoyDatas->Q11E1; ?></td>
 
       <?php } } ?>
             </tr>
