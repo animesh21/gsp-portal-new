@@ -830,30 +830,18 @@ public function digital_certificate_for_principal_coordinator($argID)
     }
 	
 	
- 	/*Download zip image*/
-	public function downloadzip($argID){
-		ini_set('memory_limit', '-1');
-     ini_set('max_execution_time', 300);
-             $options = [
-	    "ssl"=> [
-	    "cafile" => "/path/to/bundle/cacert.pem",
-	    "verify_peer"=> true,
-	    "verify_peer_name"=> true,
-	    ],
-	]; 
-	     $data=$this->Audit_started_model->getZipImagesOfSchool($argID);
-	      foreach($data as $r):
-		   $filedata=$r->file_name;
-		   $filename=base_url()."uploads/files/".$r->file_name;
-		   if(file_exists("uploads/files/".$filedata))
-		   {
-           $this->zip->add_data($filedata,file_get_contents($filename,false, stream_context_create($options))); 
-			   $this->zip->read_file($filename);
-		   }
-	      endforeach; 
-		 
-            $this->zip->download(date('d-M-Y'));
-	}
+  public function downloadzip($argID){
+       $data=$this->Audit_started_model->getZipImagesOfSchool($argID);
+        foreach($data as $r):
+       $filedata=$r->file_name;
+       $filename=base_url()."uploads/files/".$r->file_name;
+       if(file_exists("uploads/files/".$filedata))
+       {
+           $this->zip->read_file($filename); 
+       }
+        endforeach; 
+            $this->zip->download($argID . '.zip');;
+  }
 	
 	
 	/*School Generate Badge Code*/
