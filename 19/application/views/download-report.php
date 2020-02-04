@@ -96,10 +96,15 @@
         <div class="col-md-12">
           <h1 style="font-size:32px"><strong>GSP Audit 2019-20 Report and Certificates</strong></h1>
 		 <div class="other" style="margin-top: -40px; margin-bottom: 60px">
+	  <?php
+	    $date1 = "2019-01-01 00:00:00"; 
+            $date2 = $date[0]->date_added;
+	if($date1 > $date2){ ?>
           <a href="http://greenschoolsprogramme.org/audit/downloadLogin" target="blank"><button class="btn btn-primary" style="float: right; background-color: #e86549; border-color: #e86549;">Download Report 2017</button></a> 
 
           <a href="<?php echo base_url('DownloadLogin/index18') ;?>" target="blank"><button class="btn btn-primary" style="float: right; background-color: #e86549; border-color: #e86549; margin-right: 6px;">Download Report 2018</button></a> </div>
           <hr/>
+	<?php } else{ }  ?>
         </div>
         <div class="col-md-12">
           <div class="col-md-4">
