@@ -2352,21 +2352,18 @@ public function getExcel2017Data() {
 	
 	public function getExcelsumbittedtheaudit() {
     $output = "";
-	$this->db->where("a.make_school_disabled","1");
-		$this->db->where('e.date_on >=', '2018-11-19');
-		$this->db->where('e.date_on <=', '2019-11-11'); 
-	//$this->db->where('e.date_on <=', '2018-11-19');
-	$arrRecord = $this->db->select('a.*, b.name AS state_name, c.name AS district_name, d.password')
+	$this->db->where("e.date_on >=","2019-02-27 08:50:40");
+        $this->db->where("e.date_on <=","2019-11-12 00:00:00");
+	$arrRecord = $this->db->select('a.*, b.name AS state_name, c.name AS district_name , d.password, e.date_on')
                        ->from('gsp_school AS a')
                        ->join('states AS b', 'a.state=b.id', 'left')
                        ->join('cities AS c', 'a.district=c.id', 'left')
                        ->join('gsp_user AS d', 'a.userid=d.id', 'left')
                        ->join('gsp_aduit_submitted AS e','e.userid=a.userid', 'left')
-                       ->where('a.progress', '100')
+                       ->where('a.progress', '100')                       
                        ->where('a.complete_status','1')
                        ->order_by('a.id', 'desc')
                        ->get()->result();
-// 		echo $this->db->last_query();exit;
         
         $k = 1;
         $isdCode = '+91';
