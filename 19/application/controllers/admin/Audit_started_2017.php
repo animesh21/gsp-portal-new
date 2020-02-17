@@ -455,7 +455,7 @@ function getdigitalCertificate($argID) {
   
    $this->db->where("userid",$argID);
    $dataCertificate=$this->db->select("certificate_username,certificate_schoolname,id")
-   ->from("tblcertificate")->group_by("certificate_username")->get()->result();
+   ->from("tblcertificate")->group_by("certificate_username")->order_by('id','ASC')->get()->result();
    $data['school_certificates']=$dataCertificate;
    $principal = $this->db->select("a.userid,a.principle_name")
                                  ->from("gsp_school AS a")
@@ -476,7 +476,7 @@ function getdigitalCertificate($argID) {
    //Stuents
    $arrStudents = array();
    $question_alphabet = array("A", "E", "F", "L", "W", "Wa");
-   $username=$this->db->select('name')
+   $username=$this->db->select('name,state,district')
 				->from('gsp_school')
 				->where('userid',$argID)
 				->get()->row();
@@ -486,11 +486,11 @@ function getdigitalCertificate($argID) {
        if(getFiled("Q3".$q. $i . "S1", $argID)!="" && getFiled("Q3" .$q.$i . "S2", $argID) !="")
        {
        $arrStudents[] = array(
-       'name' => getFiled("Q3".$q. $i . "S1", $argID) . " " . getFiled("Q3" .$q.$i . "S2", $argID),
+       'name' => strtoupper( trim(getFiled("Q3".$q. $i . "S1", $argID))) . " " .strtoupper(trim( getFiled("Q3" .$q.$i . "S2", $argID))),
        'grade' => getFiled("Q3" .$q.$i . "S3", $argID),
-	   'school_name'=>$username->name,
-	   );
-	}
+     'school_name'=>$username->name, 'state'=>$username->state, 'district'=>$username->district,
+     );
+  }
        }
    }
    return $arrStudents;
