@@ -230,11 +230,11 @@ function getdigitalCertificate($argID) {
       if(getFiled("Q3".$q. $i . "S1", $argID)!="" && getFiled("Q3" .$q.$i . "S2", $argID) !="")
        {
        $arrStudents[] = array(
-       'name' => getFiled("Q3".$q. $i . "S1", $argID) . " " . getFiled("Q3" .$q.$i . "S2", $argID),
+       'name' => strtoupper( trim(getFiled("Q3".$q. $i . "S1", $argID))) . " " .strtoupper(trim( getFiled("Q3" .$q.$i . "S2", $argID))),
        'grade' => getFiled("Q3" .$q.$i . "S3", $argID),
-	   'school_name'=>$username->name,
-	   );
-	}
+     'school_name'=>$username->name, 'state'=>$username->state, 'district'=>$username->district,
+     );
+  }
        }
    }
    return $arrStudents;
