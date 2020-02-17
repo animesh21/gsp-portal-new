@@ -100,8 +100,8 @@ $certificateNo2 = array();
 // 		}
 	  }
 	}
-echo $string = strtoupper($certificate->certificate_schoolname.', '.getdistrictById($students[0]['district']).', '.getStateById($students[0]['state']));
- $school = '';exit;
+$string = strtoupper($certificate->certificate_schoolname.', '.getdistrictById($students[0]['district']).', '.getStateById($students[0]['state']));
+ $school = '';
  if(strlen($string)<=70){
  	 $school = '<span>'.$string.'</span>';
  }else{
