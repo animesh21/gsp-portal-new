@@ -148,7 +148,6 @@ class Download extends CI_Controller {
 function getdigitalCertificate($argID) {
    $data['title']="GSP Digital Certificates";
    $this->load->library('dompdf_lib');
-	 ini_set('memory_limit', '-1');
    //Students Records
   $students = $this->count_certificates_stuents($argID);
   $staffadmin = $this->count_certificates_staffamin($argID);
@@ -174,9 +173,9 @@ function getdigitalCertificate($argID) {
  
    // $data['principal'] = $principal;
   
-   $this->db->where("userid",$argID);
+  $this->db->where("userid",$argID);
    $dataCertificate=$this->db->select("certificate_username,certificate_schoolname,id")
-   ->from("tblcertificate")->group_by("certificate_username")->get()->result();
+   ->from("tblcertificate")->group_by("certificate_username")->order_by('id','ASC')->get()->result();
    $data['school_certificates']=$dataCertificate;
    $principal = $this->db->select("a.userid,a.principle_name")
                                  ->from("gsp_school AS a")
