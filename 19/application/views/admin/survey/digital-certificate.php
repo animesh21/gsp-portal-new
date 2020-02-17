@@ -100,9 +100,8 @@ $certificateNo2 = array();
 // 		}
 	  }
 	}
-$string = strtoupper($certificate->certificate_schoolname.', '.getdistrictById($students[0]['district']).', '.getStateById($students[0]['state']));
- echo strlen($string);
- $school = '';
+echo $string = strtoupper($certificate->certificate_schoolname.', '.getdistrictById($students[0]['district']).', '.getStateById($students[0]['state']));
+ $school = '';exit;
  if(strlen($string)<=70){
  	 $school = '<span>'.$string.'</span>';
  }else{
@@ -114,8 +113,6 @@ $string = strtoupper($certificate->certificate_schoolname.', '.getdistrictById($
  
 
 	if (!empty($principal)) {
-		$district = getdistrictById($students[0]['district']);
-		$state = getStateById($students[0]['state']);
 	    $i=0;
 	    foreach($principal as $principal) {
 
@@ -134,8 +131,6 @@ $string = strtoupper($certificate->certificate_schoolname.', '.getdistrictById($
 
 
 	if (!empty($staffadmin)) {
-		$district = getdistrictById($students[0]['district']);
-		$state = getStateById($students[0]['state']);
 	    $i=0;
 	    foreach($staffadmin as $staffadmin) {
  
@@ -154,8 +149,6 @@ $string = strtoupper($certificate->certificate_schoolname.', '.getdistrictById($
 
 
 	if (!empty($students)) {
-		$district = getdistrictById($students[0]['district']);
-		$state = getStateById($students[0]['state']);
 	    $i=0;
 	    foreach($students as $students) {
 
