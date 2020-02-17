@@ -121,7 +121,7 @@ $string = strtoupper($certificate->certificate_schoolname.', '.getdistrictById($
 
 		if ($principal->principle_name !="") {
 		    echo "<div class='container'>
-		    <div class='image'><img src='assets/img/images/certificate_new_19_1.jpg' width='1000' height='700'></div>
+		    <div class='image'><img src='assets/img/images/certificate201.jpg' width='1000' height='700'></div>
 
   <div class='principal'>" . strtoupper($principal->principle_name) ."</div>&nbsp;
   <div class='school_name'>".$school."</div>
@@ -141,7 +141,7 @@ $string = strtoupper($certificate->certificate_schoolname.', '.getdistrictById($
  
 		if ($staffadmin !="") {
 		   echo "<div class='container'>
-		    <div class='image'><img src='assets/img/images/certificate_new_19_1.jpg' width='1000' height='700'></div>
+		    <div class='image'><img src='assets/img/images/certificate201.jpg' width='1000' height='700'></div>
 
   <div class='principal'>" . strtoupper($staffadmin)  ."</div>&nbsp;
   <div class='school_name'>".$school."</div>
@@ -161,7 +161,7 @@ $string = strtoupper($certificate->certificate_schoolname.', '.getdistrictById($
 
 		if ($students !="") {
 		   echo "<div class='container'>
-		    <div class='image'><img src='assets/img/images/certificate_new_19_2.jpg' width='1000' height='700'></div>
+		    <div class='image'><img src='assets/img/images/certificate202.jpg' width='1000' height='700'></div>
 
   <div class='first_name'>" . strtoupper($students['name'])  . ' &nbsp&nbsp&nbsp  CLASS '. integerToRoman($students['grade'])  ."</div>&nbsp;
   <div class='school_name1'>".$school."</div>
