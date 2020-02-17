@@ -8,8 +8,8 @@
 	<?php
 
 
-	function integerToRoman($integer)
-		  {
+			function integerToRoman($integer)
+		{
 		 // Convert the integer into an integer (just to make sure)
 		 $integer = intval($integer);
 		 $result = '';
@@ -44,8 +44,49 @@
 		 return $result;
 		}
 
-	
-	if (!empty($school_certificates)) {
+		 
+$students = array_unique($students, SORT_REGULAR);
+ 
+ 
+
+global $userid;
+$userid = $principal[0]->userid;
+
+$certificateNo1 = array();
+  foreach($staffadmin as $staffadmin2) {
+	    	$data = $this->db->select('id')->from('tblcertificate')->like('certificate_username', substr($staffadmin2, 0, strrpos($staffadmin2, ' ')))->where('userid', $userid)->get()->result();
+	    	// echo $this->db->last_query();
+	    	$data = json_decode(json_encode($data), true);
+	    	
+	    	foreach ($data as $value) {
+	    		foreach ($value as $value) {
+	    			 $certificateNo1[] = $value; 
+	    		}
+	    		
+	    	}
+	    }
+ 
+
+$certificateNo2 = array();
+ $students2 = array_column($students, 'name');
+  
+
+  foreach($students2 as $students2) {
+	    	$data2 = $this->db->select('id')->from('tblcertificate')->like('certificate_username', substr($students2, 0, strrpos($students2, ' ')))->where('userid', $userid)->get()->result();
+	    	// echo $this->db->last_query(); echo "<br>";
+	    	$data2 = json_decode(json_encode($data2), true);
+	    	 
+	    	foreach ($data2 as $value) {
+	    		foreach ($value as $value) {
+	    			 $certificateNo2[] = $value; 
+	    		}
+	    		
+	    	}
+	    }
+
+  
+		if (!empty($school_certificates)) {
+		
 	    $i=0;
 	    foreach($school_certificates as $certificate) {
 // 		if ($certificate->certificate_username !="") {
@@ -59,20 +100,33 @@
 // 		}
 	  }
 	}
+$string = strtoupper($certificate->certificate_schoolname.', '.getdistrictById($students[0]['district']).', '.getStateById($students[0]['state']));
+ echo strlen($string);
+ $school = '';
+ if(strlen($string)<=70){
+ 	 $school = '<span>'.$string.'</span>';
+ }else{
+ 	 $school = '<span style="font-size: 12pt">'.$string.'</span>';
+ }
 
+ 
+
+ 
 
 	if (!empty($principal)) {
+		$district = getdistrictById($students[0]['district']);
+		$state = getStateById($students[0]['state']);
 	    $i=0;
 	    foreach($principal as $principal) {
 
 		if ($principal->principle_name !="") {
 		    echo "<div class='container'>
-		    <div class='image'><img src='assets/img/images/Certificate201.jpg' width='1000' height='700'></div>
+		    <div class='image'><img src='assets/img/images/certificate_new_19_1.jpg' width='1000' height='700'></div>
 
   <div class='principal'>" . strtoupper($principal->principle_name) ."</div>&nbsp;
-  <div class='school_name'>". $certificate->certificate_schoolname."</div>
+  <div class='school_name'>".$school."</div>
   
-  <div class='certificateno'>Certificate No: "."GSPAudit/2020/".$certificate->id." </div>
+  <div class='certificateno1'>Certificate No: "."GSPAudit/2020/".($certificate->id-1)." </div>
     </div><div class='page'><strong></strong></div>";
 		}
 	  }
@@ -80,35 +134,39 @@
 
 
 	if (!empty($staffadmin)) {
+		$district = getdistrictById($students[0]['district']);
+		$state = getStateById($students[0]['state']);
 	    $i=0;
 	    foreach($staffadmin as $staffadmin) {
-
+ 
 		if ($staffadmin !="") {
 		   echo "<div class='container'>
-		    <div class='image'><img src='assets/img/images/Certificate201.jpg' width='1000' height='700'></div>
+		    <div class='image'><img src='assets/img/images/certificate_new_19_1.jpg' width='1000' height='700'></div>
 
   <div class='principal'>" . strtoupper($staffadmin)  ."</div>&nbsp;
-  <div class='school_name'>". $certificate->certificate_schoolname."</div>
+  <div class='school_name'>".$school."</div>
   
-  <div class='certificateno'>Certificate No: "."GSPAudit/2020/".$certificate->id." </div>
+  <div class='certificateno'>Certificate No: "."GSPAudit/2020/".$certificateNo1[$i++]." </div>
     </div><div class='page'><strong></strong></div>";
 		}
 	  }
 	}	
-   
+
 
 	if (!empty($students)) {
+		$district = getdistrictById($students[0]['district']);
+		$state = getStateById($students[0]['state']);
 	    $i=0;
 	    foreach($students as $students) {
 
 		if ($students !="") {
 		   echo "<div class='container'>
-		    <div class='image'><img src='assets/img/images/Certificate202.jpg' width='1000' height='700'></div>
+		    <div class='image'><img src='assets/img/images/certificate_new_19_2.jpg' width='1000' height='700'></div>
 
-  <div class='first_name'>" . strtoupper($students['name'])  . ', Class : '. integerToRoman($students['grade'])  ."</div>&nbsp;
-  <div class='school_name1'>". $certificate->certificate_schoolname."</div>
+  <div class='first_name'>" . strtoupper($students['name'])  . ' &nbsp&nbsp&nbsp  CLASS '. integerToRoman($students['grade'])  ."</div>&nbsp;
+  <div class='school_name1'>".$school."</div>
   
-  <div class='certificateno'>Certificate No: "."GSPAudit/2020/".$students['school_name']." </div>
+  <div class='certificateno'>Certificate No: "."GSPAudit/2020/".$certificateNo2[$i++]." </div>
     </div><div class='page'><strong></strong></div>";
 		}
 	  }
@@ -132,7 +190,8 @@ style='background:url(assets/img/images/Certificate-2017.jpg) 0% -17%  no-repeat
 		}
 	    }
 	}*/
-	
+
+
 	?>
     </body>
 </html>
@@ -150,9 +209,10 @@ body{
  
 
         .certificateno{ position:absolute; top:670px; left: 10px;}
+        .certificateno1{ position:absolute; top:690px; left: 10px;}
         .first_name{ position:relative; text-align: center; top:350px;}
         .principal{ position:relative; text-align: center; top:270px;}
-	    .school_name{ position:relative; text-align: center; top:360px;}
+	    .school_name{ position:relative; text-align: center; top:365px;}
 		.first_name1{ position:relative; text-align: center; top:265px;}
 	    .school_name1{ position:relative; text-align: center; top:350px;}
         .grade{position:absolute; top:205px; left:650px}
