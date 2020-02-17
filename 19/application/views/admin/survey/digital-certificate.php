@@ -156,7 +156,7 @@ $string = strtoupper($certificate->certificate_schoolname.', '.getdistrictById($
 		   echo "<div class='container'>
 		    <div class='image'><img src='assets/img/images/Certificate202.jpg' width='1000' height='700'></div>
 
-  <div class='first_name'>" . strtoupper($students['name'])  . ' &nbsp&nbsp&nbsp  CLASS '. integerToRoman($students['grade'])  ."</div>&nbsp;
+  <div class='first_name'>" . strtoupper($students['name'])  . ' &nbsp;&nbsp;&nbsp;  CLASS '. integerToRoman($students['grade'])  ."</div>&nbsp;
   <div class='school_name1'>".$school."</div>
   
   <div class='certificateno'>Certificate No: "."GSPAudit/2020/".$certificateNo2[$i++]." </div>
