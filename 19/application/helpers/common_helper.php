@@ -182,6 +182,15 @@ if(!function_exists('getPartnersAuditCompletedCountByState2')){
   }
 }
 
+if(!function_exists('getUserRegisterDate')) {
+    function getUserRegisterDate($schoolId) {         
+        $CI = & get_instance();
+        $temp = $CI->db->select('date_added')->from('gsp_school')->where('id', $schoolId)->get()->result();
+        // echo $CI->db->last_query();
+        return $temp;
+    }
+}
+
 
 
 // jeetu......
