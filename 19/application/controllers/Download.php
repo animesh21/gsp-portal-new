@@ -31,9 +31,7 @@ class Download extends CI_Controller {
         $data['title'] = 'Home | Response Report 2017';
 	$schoolId=getSchoolId($this->session->userdata('USER_ID'));
       // $this->load->view('download');
-        $data['date'] = $this->db->select('date_added')->from('gsp_school')->where('id', $schoolId)->get()->result();
-
-		$this->load->view('download-report', $data);
+	$this->load->view('download-report', $data);
     }
 	public function getSchoolDataAfterlogin($userId)
     {   
