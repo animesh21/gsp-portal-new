@@ -1426,7 +1426,7 @@ class Audit_started_model extends CI_Model {
 
     public function getExcelDataByProgress1_phase2($progress) {
         $output = "";
-	    $this->db->where("a.make_school_disabled","1");
+// 	    $this->db->where("a.make_school_disabled","1");
       $this->db->where("e.date_on>=","2019-11-12 00:00:00");
       $arrRecord = $this->db->select('a.*,b.name AS state_name,c.name As district_name , d.password')
                                 ->from('gsp_school AS a')
