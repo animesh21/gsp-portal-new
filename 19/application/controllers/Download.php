@@ -181,6 +181,13 @@ function getdigitalCertificate($argID) {
                                  ->get()
                                  ->result();
   $data['principal']=$principal;
+  $data['principal']=$principal;
+  $coname = $this->db->select("a.userid,a.coname")
+                                 ->from("gsp_school AS a")
+                                 ->where("userid", $argID)
+                                 ->get()
+                                 ->result();
+  $data['coname']=$coname;
                                  // echo "<pre>";
                                  // print_r($principal);exit;
    $html1 = $this->load->view('admin/survey/digital-certificate', $data, true);
