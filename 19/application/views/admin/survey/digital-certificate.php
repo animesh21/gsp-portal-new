@@ -128,7 +128,26 @@ $string = strtoupper($certificate->certificate_schoolname.', '.getdistrictById($
 		}
 	  }
 	}
+	
+	
+	if (!empty($coname)) {
+	    $i=0;
+	    foreach($coname as $coname) {
 
+		if ($coname->coname !="") {
+		    echo "<div class='container'>
+		    <div class='image'><img src='assets/img/images/Certificate201.jpg' width='1000' height='700'></div>
+
+  <div class='principal'>" . strtoupper($coname->coname) ."</div>&nbsp;
+  <div class='school_name'>".$school."</div>
+  
+  <div class='certificateno1'>Certificate No: "."GSPAudit/2020/".($certificate->id-2)." </div>
+    </div><div class='page'><strong></strong></div>";
+		}
+	  }
+	}
+
+	    
 
 	if (!empty($staffadmin)) {
 	    $i=0;
