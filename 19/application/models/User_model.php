@@ -319,8 +319,7 @@ class User_model extends CI_Model
                  $varNewPass = strtolower(random_string('alnum', 5));
                  $arr = array('password' => $varNewPass);
                  $this->db->like('email',$this->input->post('val'));
-               $this->db->update('gsp_user', $arr);
-		 echo $this->db->last_query();exit;
+               $this->db->update('gsp_user', $arr);		 
                $this->load->library('email');
              
 
