@@ -190,11 +190,13 @@ function getdigitalCertificate($argID) {
   $data['coname']=$coname;
                                  // echo "<pre>";
                                  // print_r($principal);exit;
+	ob_clean();
    $html1 = $this->load->view('admin/survey/digital-certificate', $data, true);
    $this->dompdf->load_html($html1);
    $this->dompdf->set_paper(array(0, 0, 580, 760), 'landscape');
    $this->dompdf->render();
    $this->dompdf->stream("Digital Certificate.pdf", array("Attachment" => false));
+	flush();
   }
   
 	
