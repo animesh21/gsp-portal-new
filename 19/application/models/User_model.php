@@ -35,9 +35,9 @@ class User_model extends CI_Model
             	$msg='success';
 		}
 		
-	 elseif($row->complete_status==1) {
-        $msg = 'complitesurveyschool';
-         }
+// 	 elseif($row->complete_status==1) {
+//         $msg = 'complitesurveyschool';
+//          }
 	
 	else
 	{
