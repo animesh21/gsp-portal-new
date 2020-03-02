@@ -22,7 +22,7 @@ class User_model extends CI_Model
 //             echo $this->db->last_query();
         if ($query->num_rows() > 0) {
             $row = $query->row();
-			if($row->complete_status==0 || $row->date_on >='2019-11-12 00:00:00')
+			if($row->complete_status==1 || $row->date_on >='2019-11-12 00:00:00')
 			{
 			$userData = array(
 			'USERNAME' => $row->username,
