@@ -12,7 +12,7 @@ class User_model extends CI_Model
    public function UserLogin($argPost)
     {
 		$msg=''; 
-        $query = $this->db->select('a.*, a.username AS username, a.id AS id, a.status AS status, b.complete_status, c.date_on' )
+        $query = $this->db->select('a.*, a.username AS username, a.id AS id, a.status AS status, a.login_status as login_status, b.complete_status, c.date_on' )
             ->from('gsp_user As a')
             ->join('gsp_school AS b', 'b.userid=a.id', 'left')
 	    ->join('gsp_aduit_submitted AS c', 'b.id=c.school_id', 'left')
@@ -23,7 +23,7 @@ class User_model extends CI_Model
         if ($query->num_rows() > 0) {
             $row = $query->row();
 // 		if($row->complete_status==1 || $row->date_on >='2019-11-12 00:00:00')
-			if($row->complete_status==1)
+			if($row->login_status==1)
 			{
 			$userData = array(
 			'USERNAME' => $row->username,
