@@ -496,7 +496,7 @@ class Dashboard_model extends CI_Model {
 	    ->join('gsp_aduit_submitted AS d','d.userid=a.userid')       
 	    ->where('a.progress', '100')
 	    ->where('a.complete_status','1')
-// 	    ->where('a.make_school_disabled',1)
+	    ->where('a.make_school_disabled',1)
         ->order_by('a.id', 'desc')
         ->get()->result();
       }
