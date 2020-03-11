@@ -313,6 +313,7 @@ class Dashboard_model extends CI_Model {
 	 
 		$data=	$this->db->query('SELECT * FROM gsp_aduit_submitted where date_on>="2019-11-12 00:00:00" and status="1" group by school_id ');
 	return	$data->num_rows();
+	}
 	
 	public function getschool_that_submit_audit_data_phase_2() {
 // 	$this->db->where("a.make_school_disabled","1");	
