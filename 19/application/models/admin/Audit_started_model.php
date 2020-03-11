@@ -1262,14 +1262,16 @@ class Audit_started_model extends CI_Model {
 						->where('a.complete_status =', '0')
 						->order_by('a.id', 'desc')
                         ->get()->result(); */
-//         $this->db->where('a.date_added >=', '2019-11-12 00:00:00');
-	    $this->db->where("a.make_school_disabled","1");
-	  $arrRecord = $this->db->select('a.*, b.name AS state_name,c.name As district_name,d.password')
+		$this->db->where("a.make_school_disabled","1");
+       		$this->db->where('date_added >=', '2019-11-12 00:00:00');
+	  	$arrRecord = $this->db->select('a.*, b.name AS state_name,c.name As district_name,d.password')
 					->from('gsp_school AS a')
 					->join('states AS b', 'a.state=b.id', 'left')
 					->join('cities AS c', 'a.district=c.id', 'left')
 		  			->join('gsp_user AS d', 'a.userid=d.id')
-					->where($progress)
+					->where('progress_phase_2 >=', 10)
+                        ->where('progress_phase_2 <=', 100)
+                        ->where('a.complete_status =', '0')
 					->order_by('a.id', 'desc')
 					->get()->result();    
         //echo '<pre>'; print_r($arrRecord); exit;
@@ -1323,7 +1325,7 @@ class Audit_started_model extends CI_Model {
             $output .= '"' . $a->password . '",';
             //$output .='"'.date('d-m-Y H:i:s', strtotime($row['datetime'])).'",';
             $output .= '"' . date('Y-m-d H:i:s', strtotime($a->date_added)) . '",';
-            $output .= '"' . $a->progress . '%",';
+            $output .= '"' . $a->progress_phase_2 . '%",';
             $output .= "\n";
             $k++;
         }
