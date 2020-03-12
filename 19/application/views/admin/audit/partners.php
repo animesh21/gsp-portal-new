@@ -1477,7 +1477,7 @@ $(document).ready(function () {
             },
             series: [{
                 colorByPoint: true,
-                data: [{name: 'Audit Not Started', color:'#fc3300', y: <?php echo $csi_total_notstarted_audit2; ?>},{name: 'Audit Started', color:'#fcfc00', y: <?php echo $csi_total_started_audit2; ?>}, {name: 'Audit Completed', color:'#00ae4f', y: <?php echo $csi_completed2; ?>}]
+                data: [{name: 'Audit Not Started', color:'#fc3300', y: <?php echo $csi_total_notstarted_audit2; ?>},{name: 'Audit Started', color:'#fcfc00', y: <?php echo $csi_total_started_audit2; ?>}, {name: 'Audit Completed', color:'#00ae4f', y: <?php echo $csi_completed2; ?>},{name: 'Audit Submitted', color:'#1826FB', y: <?php echo $csi_audit_submitted2; ?>}]
             }]
         });
 		
@@ -1539,7 +1539,7 @@ $(document).ready(function () {
             },
             series: [{
                 colorByPoint: true,
-                data: [{name: 'Audit Not Started', color:'#fc3300', y: <?php echo $csi_total_notstarted_audit3; ?>},{name: 'Audit Started', color:'#fcfc00', y: <?php echo $csi_total_started_audit3; ?>}, {name: 'Audit Completed',color:'#00ae4f', y: <?php echo $csi_completed3; ?>}]
+                data: [{name: 'Audit Not Started', color:'#fc3300', y: <?php echo $csi_total_notstarted_audit3; ?>},{name: 'Audit Started', color:'#fcfc00', y: <?php echo $csi_total_started_audit3; ?>}, {name: 'Audit Completed',color:'#00ae4f', y: <?php echo $csi_completed3; ?>},{name: 'Audit Submitted', color:'#1826FB', y: <?php echo $csi_audit_submitted3; ?>}]
             }]
         });
 		// the button handler    
@@ -1599,7 +1599,7 @@ $(document).ready(function () {
             },
             series: [{
                 colorByPoint: true,
-                data: [{name: 'Audit Not Started',color:'#fc3300', y: <?php echo $csi_total_notstarted_audit4; ?>},{name: 'Audit Started',color:'#fcfc00', y: <?php echo $csi_total_started_audit4; ?>}, {name: 'Audit Completed',color:'#00ae4f', y: <?php echo $csi_completed4; ?>}]
+                data: [{name: 'Audit Not Started',color:'#fc3300', y: <?php echo $csi_total_notstarted_audit4; ?>},{name: 'Audit Started',color:'#fcfc00', y: <?php echo $csi_total_started_audit4; ?>}, {name: 'Audit Completed',color:'#00ae4f', y: <?php echo $csi_completed4; ?>},{name: 'Audit Submitted', color:'#1826FB', y: <?php echo $csi_audit_submitted4; ?>}]
             }]
         });
 		// the button handler    
@@ -1659,7 +1659,7 @@ $(document).ready(function () {
             },
             series: [{
                 colorByPoint: true,
-                data: [{name: 'Audit Not Started',color:'#fc3300', y: <?php echo $csi_total_notstarted_audit5; ?>},{name: 'Audit Started',color:'#fcfc00', y: <?php echo $csi_total_started_audit5; ?>}, {name: 'Audit Completed',color:'#00ae4f', y: <?php echo $csi_completed5; ?>}]
+                data: [{name: 'Audit Not Started',color:'#fc3300', y: <?php echo $csi_total_notstarted_audit5; ?>},{name: 'Audit Started',color:'#fcfc00', y: <?php echo $csi_total_started_audit5; ?>}, {name: 'Audit Completed',color:'#00ae4f', y: <?php echo $csi_completed5; ?>},{name: 'Audit Submitted', color:'#1826FB', y: <?php echo $csi_audit_submitted5; ?>}]
             }]
         });
 		// the button handler    
@@ -1719,7 +1719,7 @@ $(document).ready(function () {
             },
             series: [{
                 colorByPoint: true,
-                data: [{name: 'Audit Not Started',color:'#fc3300', y: <?php echo $csi_total_notstarted_audit6; ?>},{name: 'Audit Started',color:'#fcfc00', y: <?php echo $csi_total_started_audit6; ?>}, {name: 'Audit Completed',color:'#00ae4f', y: <?php echo $csi_completed6; ?>}]
+                data: [{name: 'Audit Not Started',color:'#fc3300', y: <?php echo $csi_total_notstarted_audit6; ?>},{name: 'Audit Started',color:'#fcfc00', y: <?php echo $csi_total_started_audit6; ?>}, {name: 'Audit Completed',color:'#00ae4f', y: <?php echo $csi_completed6; ?>},{name: 'Audit Submitted', color:'#1826FB', y: <?php echo $csi_audit_submitted6; ?>}]
             }]
         });
 		// the button handler    
@@ -1781,7 +1781,7 @@ $(document).ready(function () {
             },
             series: [{
                 colorByPoint: true,
-                data: [{name: 'Audit Not Started',color:'#fc3300', y: <?php echo $csi_total_notstarted_audit7; ?>},{name: 'Audit Started',color:'#fcfc00', y: <?php echo $csi_total_started_audit7; ?>}, {name: 'Audit Completed',color:'#00ae4f', y: <?php echo $csi_completed7; ?>}]
+                data: [{name: 'Audit Not Started',color:'#fc3300', y: <?php echo $csi_total_notstarted_audit7; ?>},{name: 'Audit Started',color:'#fcfc00', y: <?php echo $csi_total_started_audit7; ?>}, {name: 'Audit Completed',color:'#00ae4f', y: <?php echo $csi_completed7; ?>},{name: 'Audit Submitted', color:'#1826FB', y: <?php echo $csi_audit_submitted7; ?>}]
             }]
         });
     // the button handler    
@@ -1844,7 +1844,7 @@ $(document).ready(function () {
             },
             series: [{
                 colorByPoint: true,
-                data: [{name: 'Audit Not Started',color:'#fc3300', y: <?php echo $csi_total_notstarted_audit8; ?>},{name: 'Audit Started',color:'#fcfc00', y: <?php echo $csi_total_started_audit8; ?>}, {name: 'Audit Completed',color:'#00ae4f', y: <?php echo $csi_completed8; ?>}]
+                data: [{name: 'Audit Not Started',color:'#fc3300', y: <?php echo $csi_total_notstarted_audit8; ?>},{name: 'Audit Started',color:'#fcfc00', y: <?php echo $csi_total_started_audit8; ?>}, {name: 'Audit Completed',color:'#00ae4f', y: <?php echo $csi_completed8; ?>},{name: 'Audit Submitted', color:'#1826FB', y: <?php echo $csi_audit_submitted8; ?>}]
             }]
         });
     // the button handler    
