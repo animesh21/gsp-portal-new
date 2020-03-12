@@ -1414,7 +1414,7 @@ $(document).ready(function () {
             },
             series: [{
                 colorByPoint: true,
-                data: [{name: 'Audit Not Started', color:'#fc3300', y: <?php echo $csi_total_notstarted_audit; ?>},{name: 'Audit Started', color:'#fcfc00', y: <?php echo $csi_total_started_audit; ?>}, {name: 'Audit Completed', color:'#00ae4f', y: <?php echo $csi_completed; ?>}]
+                data: [{name: 'Audit Not Started', color:'#fc3300', y: <?php echo $csi_total_notstarted_audit; ?>},{name: 'Audit Started', color:'#fcfc00', y: <?php echo $csi_total_started_audit; ?>}, {name: 'Audit Completed', color:'#00ae4f', y: <?php echo $csi_completed; ?>},{name: 'Audit Submitted', color:'#1826FB', y: <?php echo $csi_audit_submitted; ?>}]
             }]
         });
 		
