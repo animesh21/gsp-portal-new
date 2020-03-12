@@ -112,6 +112,7 @@ class Audit_started_2017 extends CI_Controller {
 		$data['csi_total_started_audit']=$this->Report->get_startedpartner("1");
 		$data['csi_completed']=$this->Report->get_completedpartner("1");
 		$data['csi_total_notstarted_audit']=$this->Report->get_notstartedpartner("1");
+	        $data['csi_audit_submitted']=$this->Report->get_audit_submitted("1");
 		
 		$data['csi_registerd_audit2']=$this->Report->get_registeredpartner("2");
 		$data['csi_total_started_audit2']=$this->Report->get_startedpartner("2");
