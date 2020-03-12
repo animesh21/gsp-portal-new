@@ -530,7 +530,16 @@ class Report extends CI_Model {
 			$this->db->where('partner_status',$status);
 			$this->db->where('make_school_disabled',"1");
 		   $this->db->where("progress =",'100');
-		   return $this->db->count_all_results('gsp_school');
+		   return $this->db->count_all_results('gsp_school');			
+		}
+	
+		public function get_audit_submitted($status)
+		{
+			$this->db->where('partner_status',$status);
+			$this->db->where('make_school_disabled',"1");
+		    $this->db->where("progress =",'100');
+		    $this->db->where("complete_status =",'1');
+		    return $this->db->count_all_results('gsp_school');
 			
 		}
 		
