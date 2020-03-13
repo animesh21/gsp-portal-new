@@ -252,7 +252,7 @@ class Audit_started_2017 extends CI_Controller {
     }
 	
 	 public function excelByProgress2_phase2() {
-	 $varProgress="a.progress ='100' && a.complete_status='0'";
+	 $varProgress="a.progress_phase_2 ='100' && a.complete_status='0'";
          $this->load->dbutil();
          $row = $this->Audit_started_model->getExcelDataByProgress_phase2($varProgress);
 	 //$row = $this->Dashboard_model->school_that_complete_audit_phase_2()		 
