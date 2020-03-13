@@ -376,12 +376,12 @@ class Dashboard_model extends CI_Model {
 	
 	public function schools_not_start_the_audit_phase_2()
 	{
-		
+		$this->db->where('date_added >=', '2019-11-12 00:00:00');
 		return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
 						->from('gsp_school AS a')
 						->join('states AS b', 'a.state=b.id', 'left')
 						->join('cities AS c', 'a.district=c.id', 'left')
-						->where('progress=5')
+						->where('progress_phase_2=5')
 						->where('complete_status =', '0')
 						->order_by('a.id', 'desc')
 						->get()->result();
