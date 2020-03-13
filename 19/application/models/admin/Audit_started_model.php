@@ -1488,7 +1488,7 @@ class Audit_started_model extends CI_Model {
             $output .= '"' . $a->password . '",';
             //$output .='"'.date('d-m-Y H:i:s', strtotime($row['datetime'])).'",';
             $output .= '"' . date('Y-m-d H:i:s', strtotime($a->date_added)) . '",';
-            $output .= '"' . $a->progress . '%",';
+            $output .= '"' . $a->progress_phase_2 . '%",';
             $output .= "\n";
             $k++;
         }
