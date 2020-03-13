@@ -29,7 +29,7 @@
     padding: 10px 3px;
 }
 
-	
+  
 .dropdown-item {
     display: block;
     width: 100%;
@@ -182,7 +182,7 @@
     <br/>
     <br/>
   </div>
-	
+  
   <div id="wrapper7" style="display:none;">
     <div id="container7"> </div>
     <?php 
@@ -230,7 +230,7 @@
     <br/>
   </div>
 
-	
+  
 </div>
 <div id="exTab2" class="container">
   <ul class="nav nav-tabs tab_list">
@@ -577,7 +577,7 @@
 }
 .tab-content{
     border: solid 1px #cad6e2;
-	padding:22px 22px 22px 22px;
+  padding:22px 22px 22px 22px;
 }
 .content-form li {
      margin: 0 0 0px 0!important; 
@@ -594,12 +594,12 @@
     cursor: default;
     background-color:#ccc!important;
     border-top: 1px solid #ddd;
-	border-left: 1px solid #ddd;
-	border-right:none;
+  border-left: 1px solid #ddd;
+  border-right:none;
     border-bottom-color: transparent;
 }
 .content-form li a{ 
-	color: #000; }
+  color: #000; }
 </style>
 <script type="text/javascript">
 $(document).ready(function () {
@@ -608,7 +608,7 @@ $(document).ready(function () {
             "aLengthMenu": [[10, 25, 50, 75, -1], [10, 25, 50, 75, "All"]],
             "iDisplayLength": 25
         });
-		   });
+       });
 </script>
 <script src="<?php echo base_url(); ?>assets/js/highcharts.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/data.js"></script>
@@ -637,24 +637,24 @@ $(document).ready(function () {
         title: {
             text: 'Participation By State Church of South India'
         },
-		yAxis: {
-		  title: {
+    yAxis: {
+      title: {
             text: 'No. of Schools'
           }
-		},
+    },
         xAxis: {
             categories: [
-			<?php 
+      <?php 
              for($r=0;$r<7;++$r){
-			     if(!empty($arrData1[$i][$y]['statename'])){
-				  echo "'".$arrData1[$i][$y]['statename']."'"; } ?>,
+           if(!empty($arrData1[$i][$y]['statename'])){
+          echo "'".$arrData1[$i][$y]['statename']."'"; } ?>,
              <?php $y++; 
-			 }?>  
+       }?>  
             ],
             crosshair: true
         },
-		
-		legend: {
+    
+    legend: {
         enabled: true
     },
         exporting: { enabled: true },
@@ -668,14 +668,14 @@ $(document).ready(function () {
             useHTML: true
         },
         plotOptions: {
-		 series: {
+     series: {
             borderWidth: 0,
             dataLabels: {
                 enabled: true,
                 format: '{point.y}'
             }
         },
-		
+    
             column: {
                 pointPadding: 0.2,
                 borderWidth: 0
@@ -683,26 +683,26 @@ $(document).ready(function () {
         },
         series: [{
             name: 'Registered for Audit',
-			color:'rgb(124, 181, 236)',
+      color:'rgb(124, 181, 236)',
             data: <?php echo json_encode(array_map('intval',array_values($arrData1_1[$t]))); ?> //NORTH
             //Registration, Audit Started, Audit Completed, Feedback Recieved
         }, {
             name: 'Audit Not Started',
-			color:'#fc3300',
+      color:'#fc3300',
             data: <?php echo json_encode(array_map('intval',array_values($arrData1_2[$t]))); ?> //South
 
         }, {
             name: 'Audit Started',
-			color:'#fcfc00',
+      color:'#fcfc00',
             data: <?php echo json_encode(array_map('intval',array_values($arrData1_3[$t]))); ?> //South
 
         }, {
             name: 'Audit Completed',
-			color:'#00ae4f',
+      color:'#1826FB',
             data: <?php echo json_encode(array_map('intval',array_values($arrData1_4[$t]))); ?> //East
 
-        }		
-		],
+        }   
+    ],
 }); 
 </script>
 <?php
@@ -732,24 +732,24 @@ $(document).ready(function () {
         title: {
             text: 'Participation By State Jawahar Navodaya Vidyalaya'
         },
-		yAxis: {
-		  title: {
+    yAxis: {
+      title: {
             text: 'No. of Schools'
           }
-		},
+    },
         xAxis: {
             categories: [
-			<?php 
+      <?php 
              for($r=0;$r<7;++$r){
-				 if(!empty($arrData2[$i][$y]['statename'])){
-				  echo "'".$arrData2[$i][$y]['statename']."'"; } ?>,
+         if(!empty($arrData2[$i][$y]['statename'])){
+          echo "'".$arrData2[$i][$y]['statename']."'"; } ?>,
              <?php $y++; 
-			 }?>  
+       }?>  
             ],
             crosshair: true
         },
-		
-		legend: {
+    
+    legend: {
         enabled: true
     },
         exporting: { enabled: true },
@@ -763,14 +763,14 @@ $(document).ready(function () {
             useHTML: true
         },
         plotOptions: {
-		 series: {
+     series: {
             borderWidth: 0,
             dataLabels: {
                 enabled: true,
                 format: '{point.y}'
             }
         },
-		
+    
             column: {
                 pointPadding: 0.2,
                 borderWidth: 0
@@ -778,26 +778,26 @@ $(document).ready(function () {
         },
         series: [{
             name: 'Registered for Audit',
-			color:'rgb(124, 181, 236)',
+      color:'rgb(124, 181, 236)',
             data: <?php echo json_encode(array_map('intval',array_values($arrData2_1[$t]))); ?> //NORTH
             //Registration, Audit Started, Audit Completed, Feedback Recieved
         }, {
             name: 'Audit Not Started',
-			color:'#fc3300',
+      color:'#fc3300',
             data: <?php echo json_encode(array_map('intval',array_values($arrData2_2[$t]))); ?> //South
 
         }, {
             name: 'Audit Started',
-			color:'#fcfc00',
+      color:'#fcfc00',
             data: <?php echo json_encode(array_map('intval',array_values($arrData2_3[$t]))); ?> //South
 
         }, {
             name: 'Audit Completed',
-			color:'#00ae4f',
+      color:'#1826FB',
             data: <?php echo json_encode(array_map('intval',array_values($arrData2_4[$t]))); ?> //East
 
-        }		
-		],
+        }   
+    ],
 }); 
 </script>
 <?php
@@ -827,24 +827,24 @@ $(document).ready(function () {
         title: {
             text: 'Participation By State Kendriya Vidyalaya Sangathan (KVS)'
         },
-		yAxis: {
-		  title: {
+    yAxis: {
+      title: {
             text: 'No. of Schools'
           }
-		},
+    },
         xAxis: {
             categories: [
-			<?php 
+      <?php 
              for($r=0;$r<7;++$r){
-				  if(!empty($arrData3[$i][$y]['statename'])){
-				  echo "'".$arrData3[$i][$y]['statename']."'"; } ?>,
+          if(!empty($arrData3[$i][$y]['statename'])){
+          echo "'".$arrData3[$i][$y]['statename']."'"; } ?>,
              <?php $y++; 
-			 }?>  
+       }?>  
             ],
             crosshair: true
         },
-		
-		legend: {
+    
+    legend: {
         enabled: true
     },
         exporting: { enabled: true },
@@ -858,14 +858,14 @@ $(document).ready(function () {
             useHTML: true
         },
         plotOptions: {
-		 series: {
+     series: {
             borderWidth: 0,
             dataLabels: {
                 enabled: true,
                 format: '{point.y}'
             }
         },
-		
+    
             column: {
                 pointPadding: 0.2,
                 borderWidth: 0
@@ -873,26 +873,26 @@ $(document).ready(function () {
         },
         series: [{
             name: 'Registered for Audit',
-			color:'rgb(124, 181, 236)',
+      color:'rgb(124, 181, 236)',
             data: <?php echo json_encode(array_map('intval',array_values($arrData3_1[$t]))); ?> //NORTH
             //Registration, Audit Started, Audit Completed, Feedback Recieved
         }, {
             name: 'Audit Not Started',
-			color:'#fc3300',
+      color:'#fc3300',
             data: <?php echo json_encode(array_map('intval',array_values($arrData3_2[$t]))); ?> //South
 
         }, {
             name: 'Audit Started',
-			color:'#fcfc00',
+      color:'#fcfc00',
             data: <?php echo json_encode(array_map('intval',array_values($arrData3_3[$t]))); ?> //South
 
         }, {
             name: 'Audit Completed',
-			color:'#00ae4f',
+      color:'#1826FB',
             data: <?php echo json_encode(array_map('intval',array_values($arrData3_4[$t]))); ?> //East
 
-        }		
-		],
+        }   
+    ],
 }); 
 </script>
 <?php
@@ -922,24 +922,24 @@ $(document).ready(function () {
         title: {
             text: 'Participation By State Montfortian Education Foundation'
         },
-		yAxis: {
-		  title: {
+    yAxis: {
+      title: {
             text: 'No. of Schools'
           }
-		},
+    },
         xAxis: {
             categories: [
-			<?php 
+      <?php 
              for($r=0;$r<7;++$r){
-				 if(!empty($arrData4[$i][$y]['statename'])){
-				  echo "'".$arrData4[$i][$y]['statename']."'"; } ?>,
+         if(!empty($arrData4[$i][$y]['statename'])){
+          echo "'".$arrData4[$i][$y]['statename']."'"; } ?>,
              <?php $y++; 
-			 }?>  
+       }?>  
             ],
             crosshair: true
         },
-		
-		legend: {
+    
+    legend: {
         enabled: true
     },
         exporting: { enabled: true },
@@ -953,14 +953,14 @@ $(document).ready(function () {
             useHTML: true
         },
         plotOptions: {
-		 series: {
+     series: {
             borderWidth: 0,
             dataLabels: {
                 enabled: true,
                 format: '{point.y}'
             }
         },
-		
+    
             column: {
                 pointPadding: 0.2,
                 borderWidth: 0
@@ -968,26 +968,26 @@ $(document).ready(function () {
         },
         series: [{
             name: 'Registered for Audit',
-			color:'rgb(124, 181, 236)',
+      color:'rgb(124, 181, 236)',
             data: <?php echo json_encode(array_map('intval',array_values($arrData4_1[$t]))); ?> //NORTH
             //Registration, Audit Started, Audit Completed, Feedback Recieved
         }, {
             name: 'Audit Not Started',
-			color:'#fc3300',
+      color:'#fc3300',
             data: <?php echo json_encode(array_map('intval',array_values($arrData4_2[$t]))); ?> //South
 
         }, {
             name: 'Audit Started',
-			color:'#fcfc00',
+      color:'#fcfc00',
             data: <?php echo json_encode(array_map('intval',array_values($arrData4_3[$t]))); ?> //South
 
         }, {
             name: 'Audit Completed',
-			color:'#00ae4f',
+      color:'#1826FB',
             data: <?php echo json_encode(array_map('intval',array_values($arrData4_4[$t]))); ?> //East
 
-        }		
-		],
+        }   
+    ],
 }); 
 </script>
 <?php
@@ -1017,24 +1017,24 @@ $(document).ready(function () {
         title: {
             text: 'Participation By State Mount Litera Zee Schools'
         },
-		yAxis: {
-		  title: {
+    yAxis: {
+      title: {
             text: 'No. of Schools'
           }
-		},
+    },
         xAxis: {
             categories: [
-			<?php 
+      <?php 
              for($r=0;$r<7;++$r){
-				   if(!empty($arrData5[$i][$y]['statename'])){
-				  echo "'".$arrData5[$i][$y]['statename']."'"; } ?>,
+           if(!empty($arrData5[$i][$y]['statename'])){
+          echo "'".$arrData5[$i][$y]['statename']."'"; } ?>,
              <?php $y++; 
-			 }?>  
+       }?>  
             ],
             crosshair: true
         },
-		
-		legend: {
+    
+    legend: {
         enabled: true
     },
         exporting: { enabled: true },
@@ -1048,14 +1048,14 @@ $(document).ready(function () {
             useHTML: true
         },
         plotOptions: {
-		 series: {
+     series: {
             borderWidth: 0,
             dataLabels: {
                 enabled: true,
                 format: '{point.y}'
             }
         },
-		
+    
             column: {
                 pointPadding: 0.2,
                 borderWidth: 0
@@ -1063,26 +1063,26 @@ $(document).ready(function () {
         },
         series: [{
             name: 'Registered for Audit',
-			color:'rgb(124, 181, 236)',
+      color:'rgb(124, 181, 236)',
             data: <?php echo json_encode(array_map('intval',array_values($arrData5_1[$t]))); ?> //NORTH
             //Registration, Audit Started, Audit Completed, Feedback Recieved
         }, {
             name: 'Audit Not Started',
-			color:'#fc3300',
+      color:'#fc3300',
             data: <?php echo json_encode(array_map('intval',array_values($arrData5_2[$t]))); ?> //South
 
         }, {
             name: 'Audit Started',
-			color:'#fcfc00',
+      color:'#fcfc00',
             data: <?php echo json_encode(array_map('intval',array_values($arrData5_3[$t]))); ?> //South
 
         }, {
             name: 'Audit Completed',
-			color:'#00ae4f',
+      color:'#1826FB',
             data: <?php echo json_encode(array_map('intval',array_values($arrData5_4[$t]))); ?> //East
 
-        }		
-		],
+        }   
+    ],
 }); 
 </script>
 <?php
@@ -1112,24 +1112,24 @@ $(document).ready(function () {
         title: {
             text: 'Participation By State Satya Bharti Foundation'
         },
-		yAxis: {
-		  title: {
+    yAxis: {
+      title: {
             text: 'No. of Schools'
           }
-		},
+    },
         xAxis: {
             categories: [
-			<?php 
+      <?php 
              for($r=0;$r<7;++$r){
-				  if(!empty($arrData6[$i][$y]['statename'])){
-				  echo "'".$arrData6[$i][$y]['statename']."'"; } ?>,
+          if(!empty($arrData6[$i][$y]['statename'])){
+          echo "'".$arrData6[$i][$y]['statename']."'"; } ?>,
              <?php $y++; 
-			 }?>  
+       }?>  
             ],
             crosshair: true
         },
-		
-		legend: {
+    
+    legend: {
         enabled: true
     },
         exporting: { enabled: true },
@@ -1143,14 +1143,14 @@ $(document).ready(function () {
             useHTML: true
         },
         plotOptions: {
-		 series: {
+     series: {
             borderWidth: 0,
             dataLabels: {
                 enabled: true,
                 format: '{point.y}'
             }
         },
-		
+    
             column: {
                 pointPadding: 0.2,
                 borderWidth: 0
@@ -1158,26 +1158,26 @@ $(document).ready(function () {
         },
         series: [{
             name: 'Registered for Audit',
-			color:'rgb(124, 181, 236)',
+      color:'rgb(124, 181, 236)',
             data: <?php echo json_encode(array_map('intval',array_values($arrData6_1[$t]))); ?> //NORTH
             //Registration, Audit Started, Audit Completed, Feedback Recieved
         }, {
             name: 'Audit Not Started',
-			color:'#fc3300',
+      color:'#fc3300',
             data: <?php echo json_encode(array_map('intval',array_values($arrData6_2[$t]))); ?> //South
 
         }, {
             name: 'Audit Started',
-			color:'#fcfc00',
+      color:'#fcfc00',
             data: <?php echo json_encode(array_map('intval',array_values($arrData6_3[$t]))); ?> //South
 
         }, {
             name: 'Audit Completed',
-			color:'#00ae4f',
+      color:'#1826FB',
             data: <?php echo json_encode(array_map('intval',array_values($arrData6_4[$t]))); ?> //East
 
-        }		
-		],
+        }   
+    ],
 }); 
 </script>
 <?php
@@ -1272,7 +1272,7 @@ $(document).ready(function () {
 
         }, {
             name: 'Audit Completed',
-      color:'#00ae4f',
+      color:'#1826FB',
             data: <?php echo json_encode(array_map('intval',array_values($arrData7_4[$t]))); ?> //East
 
         }   
@@ -1372,7 +1372,7 @@ $(document).ready(function () {
 
         }, {
             name: 'Audit Completed',
-      color:'#00ae4f',
+      color:'#1826FB',
             data: <?php echo json_encode(array_map('intval',array_values($arrData8_4[$t]))); ?> //East
 
         }   
@@ -1407,18 +1407,18 @@ $(document).ready(function () {
                     cursor: 'pointer',
                     dataLabels: {
                         enabled: true,
-						 format: '{point.percentage:.1f}% {point.name}<br/><b> ({point.y} Schools)</b>',			
+             format: '{point.percentage:.1f}% {point.name}<br/><b> ({point.y} Schools)</b>',      
                     },
                     showInLegend: true
                 }
             },
             series: [{
                 colorByPoint: true,
-                data: [{name: 'Audit Not Started', color:'#fc3300', y: <?php echo $csi_total_notstarted_audit; ?>},{name: 'Audit Started', color:'#fcfc00', y: <?php echo $csi_total_started_audit; ?>}, {name: 'Audit Completed', color:'#00ae4f', y: <?php echo $csi_completed; ?>},{name: 'Audit Submitted', color:'#1826FB', y: <?php echo $csi_audit_submitted; ?>}]
+                data: [{name: 'Audit Not Started', color:'#fc3300', y: <?php echo $csi_total_notstarted_audit; ?>},{name: 'Audit Started', color:'#fcfc00', y: <?php echo $csi_total_started_audit; ?>}, {name: 'Audit Completed', color:'#1826FB', y: <?php echo $csi_completed; ?>},{name: 'Audit Submitted', color:'#00ae4f', y: <?php echo $csi_audit_submitted; ?>}]
             }]
         });
-		
-		// the button handler    
+    
+    // the button handler    
     $('#buttonExport').click(function() {
         var e = document.getElementById("ExportOption");
         var ExportAs = e.options[e.selectedIndex].value;   
@@ -1445,9 +1445,9 @@ $(document).ready(function () {
         chart.print();
         chart.setTitle(null, { text: 'Click and drag in the plot area to zoom in' });
     });
-		
-		
-		</script>
+    
+    
+    </script>
 <script type="text/javascript">
        var chart1 =  Highcharts.chart('container2',{
             chart: {
@@ -1470,18 +1470,18 @@ $(document).ready(function () {
                     cursor: 'pointer',
                     dataLabels: {
                         enabled: true,
-						 format: '{point.percentage:.1f}% {point.name}<br/><b> ({point.y} Schools)</b>',			
+             format: '{point.percentage:.1f}% {point.name}<br/><b> ({point.y} Schools)</b>',      
                     },
                     showInLegend: true
                 }
             },
             series: [{
                 colorByPoint: true,
-                data: [{name: 'Audit Not Started', color:'#fc3300', y: <?php echo $csi_total_notstarted_audit2; ?>},{name: 'Audit Started', color:'#fcfc00', y: <?php echo $csi_total_started_audit2; ?>}, {name: 'Audit Completed', color:'#00ae4f', y: <?php echo $csi_completed2; ?>},{name: 'Audit Submitted', color:'#1826FB', y: <?php echo $csi_audit_submitted2; ?>}]
+                data: [{name: 'Audit Not Started', color:'#fc3300', y: <?php echo $csi_total_notstarted_audit2; ?>},{name: 'Audit Started', color:'#fcfc00', y: <?php echo $csi_total_started_audit2; ?>}, {name: 'Audit Completed', color:'#1826FB', y: <?php echo $csi_completed2; ?>},{name: 'Audit Submitted', color:'#00ae4f', y: <?php echo $csi_audit_submitted2; ?>}]
             }]
         });
-		
-		// the button handler    
+    
+    // the button handler    
     $('#buttonExport1').click(function() {
         var e = document.getElementById("ExportOption");
         var ExportAs = e.options[e.selectedIndex].value;   
@@ -1508,8 +1508,8 @@ $(document).ready(function () {
         chart1.print();
         chart1.setTitle(null, { text: 'Click and drag in the plot area to zoom in' });
     });
-		
-		</script>
+    
+    </script>
 <script type="text/javascript">
        var chart2=  Highcharts.chart('container3',{
             chart: {
@@ -1532,17 +1532,17 @@ $(document).ready(function () {
                     cursor: 'pointer',
                     dataLabels: {
                         enabled: true,
-						format: '{point.percentage:.1f}% {point.name}<br/><b> ({point.y} Schools)</b>',			
+            format: '{point.percentage:.1f}% {point.name}<br/><b> ({point.y} Schools)</b>',     
                     },
                     showInLegend: true
                 }
             },
             series: [{
                 colorByPoint: true,
-                data: [{name: 'Audit Not Started', color:'#fc3300', y: <?php echo $csi_total_notstarted_audit3; ?>},{name: 'Audit Started', color:'#fcfc00', y: <?php echo $csi_total_started_audit3; ?>}, {name: 'Audit Completed',color:'#00ae4f', y: <?php echo $csi_completed3; ?>},{name: 'Audit Submitted', color:'#1826FB', y: <?php echo $csi_audit_submitted3; ?>}]
+                data: [{name: 'Audit Not Started', color:'#fc3300', y: <?php echo $csi_total_notstarted_audit3; ?>},{name: 'Audit Started', color:'#fcfc00', y: <?php echo $csi_total_started_audit3; ?>}, {name: 'Audit Completed',color:'#1826FB', y: <?php echo $csi_completed3; ?>},{name: 'Audit Submitted', color:'#00ae4f', y: <?php echo $csi_audit_submitted3; ?>}]
             }]
         });
-		// the button handler    
+    // the button handler    
     $('#buttonExport2').click(function() {
         var e = document.getElementById("ExportOption");
         var ExportAs = e.options[e.selectedIndex].value;   
@@ -1569,7 +1569,7 @@ $(document).ready(function () {
         chart2.print();
         chart2.setTitle(null, { text: 'Click and drag in the plot area to zoom in' });
     });
-		</script>
+    </script>
 <script type="text/javascript">
       var chart3=    Highcharts.chart('container4',{
             chart: {
@@ -1592,17 +1592,17 @@ $(document).ready(function () {
                     cursor: 'pointer',
                     dataLabels: {
                         enabled: true,
-						format: '{point.percentage:.1f}% {point.name}<br/><b> ({point.y} Schools)</b>',			
+            format: '{point.percentage:.1f}% {point.name}<br/><b> ({point.y} Schools)</b>',     
                     },
                     showInLegend: true
                 }
             },
             series: [{
                 colorByPoint: true,
-                data: [{name: 'Audit Not Started',color:'#fc3300', y: <?php echo $csi_total_notstarted_audit4; ?>},{name: 'Audit Started',color:'#fcfc00', y: <?php echo $csi_total_started_audit4; ?>}, {name: 'Audit Completed',color:'#00ae4f', y: <?php echo $csi_completed4; ?>},{name: 'Audit Submitted', color:'#1826FB', y: <?php echo $csi_audit_submitted4; ?>}]
+                data: [{name: 'Audit Not Started',color:'#fc3300', y: <?php echo $csi_total_notstarted_audit4; ?>},{name: 'Audit Started',color:'#fcfc00', y: <?php echo $csi_total_started_audit4; ?>}, {name: 'Audit Completed',color:'#1826FB', y: <?php echo $csi_completed4; ?>},{name: 'Audit Submitted', color:'#00ae4f', y: <?php echo $csi_audit_submitted4; ?>}]
             }]
         });
-		// the button handler    
+    // the button handler    
     $('#buttonExport3').click(function() {
         var e = document.getElementById("ExportOption");
         var ExportAs = e.options[e.selectedIndex].value;   
@@ -1629,7 +1629,7 @@ $(document).ready(function () {
         chart3.print();
         chart3.setTitle(null, { text: 'Click and drag in the plot area to zoom in' });
     });
-		</script>
+    </script>
 <script type="text/javascript">
        var chart4 =  Highcharts.chart('container5',{
             chart: {
@@ -1652,17 +1652,17 @@ $(document).ready(function () {
                     cursor: 'pointer',
                     dataLabels: {
                         enabled: true,
-						format: '{point.percentage:.1f}% {point.name}<br/><b> ({point.y} Schools)</b>',			
+            format: '{point.percentage:.1f}% {point.name}<br/><b> ({point.y} Schools)</b>',     
                     },
                     showInLegend: true
                 }
             },
             series: [{
                 colorByPoint: true,
-                data: [{name: 'Audit Not Started',color:'#fc3300', y: <?php echo $csi_total_notstarted_audit5; ?>},{name: 'Audit Started',color:'#fcfc00', y: <?php echo $csi_total_started_audit5; ?>}, {name: 'Audit Completed',color:'#00ae4f', y: <?php echo $csi_completed5; ?>},{name: 'Audit Submitted', color:'#1826FB', y: <?php echo $csi_audit_submitted5; ?>}]
+                data: [{name: 'Audit Not Started',color:'#fc3300', y: <?php echo $csi_total_notstarted_audit5; ?>},{name: 'Audit Started',color:'#fcfc00', y: <?php echo $csi_total_started_audit5; ?>}, {name: 'Audit Completed',color:'#1826FB', y: <?php echo $csi_completed5; ?>},{name: 'Audit Submitted', color:'#00ae4f', y: <?php echo $csi_audit_submitted5; ?>}]
             }]
         });
-		// the button handler    
+    // the button handler    
     $('#buttonExport4').click(function() {
         var e = document.getElementById("ExportOption");
         var ExportAs = e.options[e.selectedIndex].value;   
@@ -1689,7 +1689,7 @@ $(document).ready(function () {
         chart4.print();
         chart4.setTitle(null, { text: 'Click and drag in the plot area to zoom in' });
     });
-		</script>
+    </script>
 <script type="text/javascript">
      var chart5 =    Highcharts.chart('container6',{
             chart: {
@@ -1712,17 +1712,17 @@ $(document).ready(function () {
                     cursor: 'pointer',
                     dataLabels: {
                         enabled: true,
-						format: '{point.percentage:.1f}% {point.name}<br/><b> ({point.y} Schools)</b>',			
+            format: '{point.percentage:.1f}% {point.name}<br/><b> ({point.y} Schools)</b>',     
                     },
                     showInLegend: true
                 }
             },
             series: [{
                 colorByPoint: true,
-                data: [{name: 'Audit Not Started',color:'#fc3300', y: <?php echo $csi_total_notstarted_audit6; ?>},{name: 'Audit Started',color:'#fcfc00', y: <?php echo $csi_total_started_audit6; ?>}, {name: 'Audit Completed',color:'#00ae4f', y: <?php echo $csi_completed6; ?>},{name: 'Audit Submitted', color:'#1826FB', y: <?php echo $csi_audit_submitted6; ?>}]
+                data: [{name: 'Audit Not Started',color:'#fc3300', y: <?php echo $csi_total_notstarted_audit6; ?>},{name: 'Audit Started',color:'#fcfc00', y: <?php echo $csi_total_started_audit6; ?>}, {name: 'Audit Completed',color:'#1826FB', y: <?php echo $csi_completed6; ?>},{name: 'Audit Submitted', color:'#00ae4f', y: <?php echo $csi_audit_submitted6; ?>}]
             }]
         });
-		// the button handler    
+    // the button handler    
     $('#buttonExport5').click(function() {
         var e = document.getElementById("ExportOption");
         var ExportAs = e.options[e.selectedIndex].value;   
@@ -1749,7 +1749,7 @@ $(document).ready(function () {
         chart5.print();
         chart5.setTitle(null, { text: 'Click and drag in the plot area to zoom in' });
     });
-		</script>
+    </script>
 
 
 <script type="text/javascript">
@@ -1781,7 +1781,7 @@ $(document).ready(function () {
             },
             series: [{
                 colorByPoint: true,
-                data: [{name: 'Audit Not Started',color:'#fc3300', y: <?php echo $csi_total_notstarted_audit7; ?>},{name: 'Audit Started',color:'#fcfc00', y: <?php echo $csi_total_started_audit7; ?>}, {name: 'Audit Completed',color:'#00ae4f', y: <?php echo $csi_completed7; ?>},{name: 'Audit Submitted', color:'#1826FB', y: <?php echo $csi_audit_submitted7; ?>}]
+                data: [{name: 'Audit Not Started',color:'#fc3300', y: <?php echo $csi_total_notstarted_audit7; ?>},{name: 'Audit Started',color:'#fcfc00', y: <?php echo $csi_total_started_audit7; ?>}, {name: 'Audit Completed',color:'#1826FB', y: <?php echo $csi_completed7; ?>},{name: 'Audit Submitted', color:'#00ae4f', y: <?php echo $csi_audit_submitted7; ?>}]
             }]
         });
     // the button handler    
@@ -1844,7 +1844,7 @@ $(document).ready(function () {
             },
             series: [{
                 colorByPoint: true,
-                data: [{name: 'Audit Not Started',color:'#fc3300', y: <?php echo $csi_total_notstarted_audit8; ?>},{name: 'Audit Started',color:'#fcfc00', y: <?php echo $csi_total_started_audit8; ?>}, {name: 'Audit Completed',color:'#00ae4f', y: <?php echo $csi_completed8; ?>},{name: 'Audit Submitted', color:'#1826FB', y: <?php echo $csi_audit_submitted8; ?>}]
+                data: [{name: 'Audit Not Started',color:'#fc3300', y: <?php echo $csi_total_notstarted_audit8; ?>},{name: 'Audit Started',color:'#fcfc00', y: <?php echo $csi_total_started_audit8; ?>}, {name: 'Audit Completed',color:'#1826FB', y: <?php echo $csi_completed8; ?>},{name: 'Audit Submitted', color:'#00ae4f', y: <?php echo $csi_audit_submitted8; ?>}]
             }]
         });
     // the button handler    
