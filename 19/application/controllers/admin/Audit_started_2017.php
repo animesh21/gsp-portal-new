@@ -30,35 +30,38 @@ class Audit_started_2017 extends CI_Controller {
         $this->load->view('admin/includes/template', $data);
     }
 
-     public function getSchoolData()
+    public function getSchoolData()
     {   
        $records=$this->Audit_started_model->getData();
-	   $arr_school=array();
-	   $i=0;
-	   foreach($records as $record):
-		   $arr_school[]=array('sr_no'=>++$i,
-		    'id'=>$record->id,
-		    'udise'=>$record->udise,
-		    'name'=>$record->name,
-		   'userid'=>$record->userid,
-		    'state_name'=>$record->state_name,
-		    'district_name'=>$record->district_name,
-		    'city'=>$record->city,
-		    'coname'=>$record->coname,
-		    'coemail'=>$record->coemail,
-		    'comobile'=>$record->comobile,
-		    'progress'=>$record->progress,
-		     'partner_status'=>$record->partner_status,
-	              'satya_foundation_status'=>$record->satya_foundation_status,
-		    'date_added'=>$record->date_added);
-	   endforeach;
-		$data['record']=array(
+       $arr_school=array();
+       $i=0;
+       foreach ($records as $record) {                        
+         if($record->complete_status==1 && $record->progress<100){
+                 $record->progress=100;
+                 }
+           $arr_school[]=array('sr_no'=>++$i,
+            'id'=>$record->id,
+            'udise'=>$record->udise,
+            'name'=>$record->name,
+           'userid'=>$record->userid,
+            'state_name'=>$record->state_name,
+            'district_name'=>$record->district_name,
+            'city'=>$record->city,
+            'coname'=>$record->coname,
+            'coemail'=>$record->coemail,
+            'comobile'=>$record->comobile,
+            'progress'=>$record->progress,
+             'partner_status'=>$record->partner_status,
+                  'satya_foundation_status'=>$record->satya_foundation_status,
+            'date_added'=>$record->date_added);
+       }
+        $data['record']=array(
             "sEcho" => 1,
             "iTotalRecords" => count($arr_school),
             "iTotalDisplayRecords" => count($arr_school),
             "aaData"=>$arr_school);
-		    echo json_encode($data['record']);
-   }		
+            echo json_encode($data['record']);
+   } 		
    	   	
    	 public function disabled_school() {
         $data['main'] = 'admin/audit/disabled_school';
