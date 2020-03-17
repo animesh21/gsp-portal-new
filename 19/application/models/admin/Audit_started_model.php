@@ -2220,8 +2220,8 @@ public function getExcel2017Data() {
                         ->join('cities AS c', 'a.district=c.id', 'left')
                         ->join('gsp_user AS d', 'a.userid=d.id', 'left')
                             ->where("a.date_added <=","2019-11-10 00:00:00")
-                        ->where('a.progress>=', 10)
-                        ->where('a.progress<=', 100)
+                        ->where('a.progress_phase_1>=', 10)
+                        ->where('a.progress_phase_1<=', 100)
                         ->order_by('a.id', 'desc')
                         ->get()->result();
         
@@ -2291,7 +2291,7 @@ public function getExcel2017Data() {
                         ->join('cities AS c', 'a.district=c.id', 'left')
                         ->join('gsp_user AS d', 'a.userid=d.id', 'left')
                             ->where("a.date_added <=","2019-11-10 00:00:00")
-                        ->where('a.progress', '100')
+                        ->where('a.progress_phase_1', '100')
                         ->where('a.complete_status','0')
                         ->order_by('a.id', 'desc')
                         ->get()->result();
@@ -2355,7 +2355,7 @@ public function getExcel2017Data() {
     
     public function getExcelsumbittedtheaudit() {
     $output = "";
-    $this->db->where("e.date_on >=","2019-02-27 08:50:40");
+    $this->db->where("e.date_on >=","2019-02-28 08:50:40");
         $this->db->where("e.date_on <=","2019-11-12 00:00:00");
     $arrRecord = $this->db->select('a.*, b.name AS state_name, c.name AS district_name , d.password, e.date_on')
                        ->from('gsp_school AS a')
@@ -2363,8 +2363,9 @@ public function getExcel2017Data() {
                        ->join('cities AS c', 'a.district=c.id', 'left')
                        ->join('gsp_user AS d', 'a.userid=d.id', 'left')
                        ->join('gsp_aduit_submitted AS e','e.userid=a.userid', 'left')
-                       ->where('a.progress', '100')                       
+                       ->where('a.progress_phase_1', '100')                       
                        ->where('a.complete_status','1')
+                       ->where('a.make_school_disabled',1)
                        ->order_by('a.id', 'desc')
                        ->get()->result();
         
@@ -2443,8 +2444,8 @@ public function getExcel2017Data() {
                         ->join('states AS b', 'a.state=b.id', 'left')
                         ->join('cities AS c', 'a.district=c.id', 'left')
                 ->join('gsp_user AS d', 'a.userid=d.id', 'left')                            
-                ->where('progress >','5')
-                ->where('progress <=','75')
+                ->where('progress_phase_1 >','5')
+                ->where('progress_phase_1 <=','75')
                         ->order_by('a.id', 'desc')
                         ->get()->result();
         
@@ -2514,7 +2515,7 @@ public function getExcel2017Data() {
                         ->join('states AS b', 'a.state=b.id', 'left')
                         ->join('cities AS c', 'a.district=c.id', 'left')
                 ->join('gsp_user AS d', 'a.userid=d.id', 'left')                       
-                ->where('progress =','5')
+                ->where('progress_phase_1 =','5')
                         ->order_by('a.id', 'desc')
                         ->get()->result();
         
