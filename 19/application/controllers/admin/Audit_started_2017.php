@@ -36,9 +36,12 @@ class Audit_started_2017 extends CI_Controller {
        $arr_school=array();
        $i=0;
        foreach ($records as $record) {                        
-         if($record->complete_status==1 && $record->progress<100){
-                 $record->progress=100;
+        if($record->progress_phase_2 > $record->progress){
+                 $record->progress=$record->progress_phase_2;
                  }
+         if($record->progress > $record->progress_phase_2){
+         $record->progress= $record->progress;
+         }
            $arr_school[]=array('sr_no'=>++$i,
             'id'=>$record->id,
             'udise'=>$record->udise,
