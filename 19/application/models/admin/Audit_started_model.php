@@ -487,6 +487,12 @@ class Audit_started_model extends CI_Model {
         $output .= '"Completeness",';
         $output .= "\n";
         foreach ($arrRecord as $a) {
+		if($a->progress_phase_2 > $a->progress){
+                 $a->progress=$a->progress_phase_2;
+                 }
+		 if($a->progress > $a->progress_phase_2){
+		 $a->progress= $a->progress;
+		 }
             $output .= '"' . $k . '",';
             $output .= '"' . $a->id . '",';
 			$output .= '"' . $a->udise . '",';
