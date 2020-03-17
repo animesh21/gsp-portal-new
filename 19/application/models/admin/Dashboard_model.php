@@ -324,6 +324,7 @@ class Dashboard_model extends CI_Model {
         ->join('gsp_aduit_submitted AS e','a.userid=e.userid', 'left')
         ->where('e.status=','1')
         ->where('e.date_on >=', '2019-11-12 00:00:00')
+	->group_by('a.id')
         ->get()->result();
    
 	}
