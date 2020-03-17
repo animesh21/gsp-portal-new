@@ -38,7 +38,7 @@
                 <td><?php echo $r->coemail; ?></td>
 		<td><?php echo $r->password; ?></td>
                 <td><?php echo $r->comobile; ?></td>
-                <td><?php echo $r->progress_phase_2; ?></td>
+                <td><?php echo $r->progress; ?></td>
                 <td class="action"><a target="_blank" href="<?php echo base_url('admin/audit_started_2017/response/').$r->id; ?>" title="View Responses"><img src="<?php echo base_url() ?>assets/front/images/1446146277_view6.png"></a></td>
             </tr>
           <?php $i++; } ?>
