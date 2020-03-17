@@ -20,35 +20,35 @@ class Audit_started_model extends CI_Model {
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
                         ->join('cities AS c', 'a.district=c.id', 'left')
-		        ->where("a.make_school_disabled","1")
+                ->where("a.make_school_disabled","1")
                         ->order_by('a.id', 'desc')
                         ->get()->result();
     }
     
     public function getDisabledSchool() {
-	    $this->db->where("a.date_added <=","2019-11-10 00:00:00");
+        $this->db->where("a.date_added <=","2019-11-10 00:00:00");
         return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
                         ->join('cities AS c', 'a.district=c.id', 'left')
-			->where(array("a.make_school_disabled"=>"0"))
+            ->where(array("a.make_school_disabled"=>"0"))
                         ->order_by('a.id', 'desc')
                         ->get()->result();
-    }	
-	
+    }   
+    
     public function getPartnerData($partner_status) {
-	  $this->db->where('a.partner_status',$partner_status);
-	  $this->db->where('a.make_school_disabled',"1");  
-	  $data=$this->db->select('a.*, b.name AS state_name,c.name As district_name')
+      $this->db->where('a.partner_status',$partner_status);
+      $this->db->where('a.make_school_disabled',"1");  
+      $data=$this->db->select('a.*, b.name AS state_name,c.name As district_name')
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
                         ->join('cities AS c', 'a.district=c.id', 'left')
                         ->order_by('a.id', 'desc')
                         ->get()->result();
-	                    return $data;				
-	}	
-	
-	
+                        return $data;               
+    }   
+    
+    
      public function getParterSubpartnerData($satya_foundation_status){        
          
         $this->db->where('a.satya_foundation_status', $satya_foundation_status);
@@ -63,15 +63,15 @@ class Audit_started_model extends CI_Model {
                         return $data;
 
     }
-	
-	
-	
-	public function getallPartnerData() {
-	   
+    
+    
+    
+    public function getallPartnerData() {
+       
         $isdCode = '+91';
         $output .= '"S.No",';
         $output .= '"School ID",';
-		$output .= '"UDISE Code",';
+        $output .= '"UDISE Code",';
         $output .= '"School Name",';
         $output .= '"Address1",';
         $output .= '"Address2",';
@@ -93,21 +93,21 @@ class Audit_started_model extends CI_Model {
         $output .= '"Date & Time",';
         $output .= '"Completeness",';
         
-		$output .= "\n"; 
-		 $output .= "\n";
-		 $output .= '"","","","","","","","","Church of South India","","","","","","","",';
-		$output .= "\n"; 
-		 $output .= "\n";
-		
-		$data=get_partner(1);
-		$k = 1;
+        $output .= "\n"; 
+         $output .= "\n";
+         $output .= '"","","","","","","","","Church of South India","","","","","","","",';
+        $output .= "\n"; 
+         $output .= "\n";
+        
+        $data=get_partner(1);
+        $k = 1;
         foreach ($data as $a) 
-		
-		
-		{
+        
+        
+        {
             $output .= '"' . $k . '",';
             $output .= '"' . $a->id . '",';
-			$output .= '"' . $a->udise . '",';
+            $output .= '"' . $a->udise . '",';
             $output .= '"' . $a->name . '",';
             $output .= '"' . $a->address1 . '",';
             $output .= '"' . $a->address2 . '",';
@@ -132,22 +132,22 @@ class Audit_started_model extends CI_Model {
             $output .= "\n";
             $k++;
         }
-		
-		 $output .= "\n"; 
-		 $output .= "\n";
-		 $output .= '"","","","","","","","","Jawahar Navodaya Vidyalaya","","","","","","","",';
-		 $output .= "\n"; 
-		 $output .= "\n";
-		
-		$data=get_partner(2);
-		 
-		$k = 1;
-		
+        
+         $output .= "\n"; 
+         $output .= "\n";
+         $output .= '"","","","","","","","","Jawahar Navodaya Vidyalaya","","","","","","","",';
+         $output .= "\n"; 
+         $output .= "\n";
+        
+        $data=get_partner(2);
+         
+        $k = 1;
+        
         foreach ($data as $a) {
-		    
+            
             $output .= '"' . $k . '",';
             $output .= '"' . $a->id . '",';
-			$output .= '"' . $a->udise . '",';
+            $output .= '"' . $a->udise . '",';
             $output .= '"' . $a->name . '",';
             $output .= '"' . $a->address1 . '",';
             $output .= '"' . $a->address2 . '",';
@@ -172,24 +172,24 @@ class Audit_started_model extends CI_Model {
             $output .= "\n";
             $k++;
         }
-		
-		
-		
-		 $output .= "\n"; 
-		 $output .= "\n";
-		 $output .= '"","","","","","","","","Kendriya Vidyalaya Sangathan (KVS)","","","","","","","",';
-		 $output .= "\n"; 
-		 $output .= "\n";
-		
-		$data=get_partner(3);
-		 
-		
-		 $k = 1;
+        
+        
+        
+         $output .= "\n"; 
+         $output .= "\n";
+         $output .= '"","","","","","","","","Kendriya Vidyalaya Sangathan (KVS)","","","","","","","",';
+         $output .= "\n"; 
+         $output .= "\n";
+        
+        $data=get_partner(3);
+         
+        
+         $k = 1;
         foreach ($data as $a) {
-		   
+           
             $output .= '"' . $k . '",';
             $output .= '"' . $a->id . '",';
-			$output .= '"' . $a->udise . '",';
+            $output .= '"' . $a->udise . '",';
             $output .= '"' . $a->name . '",';
             $output .= '"' . $a->address1 . '",';
             $output .= '"' . $a->address2 . '",';
@@ -214,22 +214,22 @@ class Audit_started_model extends CI_Model {
             $output .= "\n";
             $k++;
         }
-		
-		$output .= "\n"; 
-		 $output .= "\n";
-		 $output .= '"","","","","","","","","Montfortian Education Foundation","","","","","","","",';
-		 $output .= "\n"; 
-		 $output .= "\n";
-		
-		$data=get_partner(4);
-		 
-		$k = 1;
-		
+        
+        $output .= "\n"; 
+         $output .= "\n";
+         $output .= '"","","","","","","","","Montfortian Education Foundation","","","","","","","",';
+         $output .= "\n"; 
+         $output .= "\n";
+        
+        $data=get_partner(4);
+         
+        $k = 1;
+        
         foreach ($data as $a) {
-		    
+            
             $output .= '"' . $k . '",';
             $output .= '"' . $a->id . '",';
-			$output .= '"' . $a->udise . '",';
+            $output .= '"' . $a->udise . '",';
             $output .= '"' . $a->name . '",';
             $output .= '"' . $a->address1 . '",';
             $output .= '"' . $a->address2 . '",';
@@ -254,23 +254,23 @@ class Audit_started_model extends CI_Model {
             $output .= "\n";
             $k++;
         }
-		
-		
-		$output .= "\n"; 
-		 $output .= "\n";
-		 $output .= '"","","","","","","","","Mount Litera Zee Schools","","","","","","","",';
-		 $output .= "\n"; 
-		 $output .= "\n";
-		
-		$data=get_partner(5);
-		 
-		$k = 1;
-		
+        
+        
+        $output .= "\n"; 
+         $output .= "\n";
+         $output .= '"","","","","","","","","Mount Litera Zee Schools","","","","","","","",';
+         $output .= "\n"; 
+         $output .= "\n";
+        
+        $data=get_partner(5);
+         
+        $k = 1;
+        
         foreach ($data as $a) {
-		    
+            
             $output .= '"' . $k . '",';
             $output .= '"' . $a->id . '",';
-			$output .= '"' . $a->udise . '",';
+            $output .= '"' . $a->udise . '",';
             $output .= '"' . $a->name . '",';
             $output .= '"' . $a->address1 . '",';
             $output .= '"' . $a->address2 . '",';
@@ -295,22 +295,22 @@ class Audit_started_model extends CI_Model {
             $output .= "\n";
             $k++;
         }
-		
-		$output .= "\n"; 
-		 $output .= "\n";
-		 $output .= '"","","","","","","","","Satya Bharti Foundation","","","","","","","",';
-		 $output .= "\n"; 
-		 $output .= "\n";
-		
-		$data=get_partner(6);
-		 
-		
-		$k = 1;
+        
+        $output .= "\n"; 
+         $output .= "\n";
+         $output .= '"","","","","","","","","Satya Bharti Foundation","","","","","","","",';
+         $output .= "\n"; 
+         $output .= "\n";
+        
+        $data=get_partner(6);
+         
+        
+        $k = 1;
         foreach ($data as $a) {
-		    
+            
             $output .= '"' . $k . '",';
             $output .= '"' . $a->id . '",';
-			$output .= '"' . $a->udise . '",';
+            $output .= '"' . $a->udise . '",';
             $output .= '"' . $a->name . '",';
             $output .= '"' . $a->address1 . '",';
             $output .= '"' . $a->address2 . '",';
@@ -335,8 +335,8 @@ class Audit_started_model extends CI_Model {
             $output .= "\n";
             $k++;
         }
-	
-	 $output .= "\n"; 
+    
+     $output .= "\n"; 
          $output .= "\n";
          $output .= '"","","","","","","","","Satya Bharti School","","","","","","","",';
          $output .= "\n"; 
@@ -417,14 +417,14 @@ class Audit_started_model extends CI_Model {
             $k++;
         }
         
-		
+        
 
         return $output;
     }
-		
-	
-	
-	
+        
+    
+    
+    
     public function row_delete($id){
     $user_id=$this->db->select('a.userid')
                        ->from('gsp_school AS a')
@@ -453,18 +453,18 @@ class Audit_started_model extends CI_Model {
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
                         ->join('cities AS c', 'a.district=c.id', 'left')
-		        ->join('gsp_user AS d', 'a.userid=d.id', 'left')
+                ->join('gsp_user AS d', 'a.userid=d.id', 'left')
                         ->where(array('make_school_disabled'=>"1"))
                         ->order_by('a.id', 'desc')
                         ->get()->result();
-	     
-	 // ->where('a.date_added <', '2017-11-29 00:00:00')    
+         
+     // ->where('a.date_added <', '2017-11-29 00:00:00')    
         //echo '<pre>'; print_r($arrRecord); exit;
         $k = 1;
         $isdCode = '+91';
         $output .= '"S.No",';
         $output .= '"School ID",';
-		$output .= '"UDISE Code",';
+        $output .= '"UDISE Code",';
         $output .= '"School Name",';
         $output .= '"Address1",';
         $output .= '"Address2",';
@@ -487,15 +487,10 @@ class Audit_started_model extends CI_Model {
         $output .= '"Completeness",';
         $output .= "\n";
         foreach ($arrRecord as $a) {
-		if($a->progress_phase_2 > $a->progress){
-                 $a->progress=$a->progress_phase_2;
-                 }
-		 if($a->progress > $a->progress_phase_2){
-		 $a->progress= $a->progress;
-		 }
+         
             $output .= '"' . $k . '",';
             $output .= '"' . $a->id . '",';
-			$output .= '"' . $a->udise . '",';
+            $output .= '"' . $a->udise . '",';
             $output .= '"' . $a->name . '",';
             $output .= '"' . $a->address1 . '",';
             $output .= '"' . $a->address2 . '",';
@@ -523,26 +518,26 @@ class Audit_started_model extends CI_Model {
 
         return $output;
     }
-	
-	public function disabled_school() {
+    
+    public function disabled_school() {
         $output = "";
-	$this->db->where("a.date_added <=","2019-11-10 00:00:00");
+    $this->db->where("a.date_added <=","2019-11-10 00:00:00");
         $arrRecord = $this->db->select('a.*, b.name AS state_name, c.name AS district_name , d.password')
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
                         ->join('cities AS c', 'a.district=c.id', 'left')
-		                ->join('gsp_user AS d', 'a.userid=d.id', 'left')
-						->where(array('make_school_disabled'=>"0"))
+                        ->join('gsp_user AS d', 'a.userid=d.id', 'left')
+                        ->where(array('make_school_disabled'=>"0"))
                         ->order_by('a.id', 'desc')
                         ->get()->result();
-	     
-	 // ->where('a.date_added <', '2017-11-29 00:00:00')    
+         
+     // ->where('a.date_added <', '2017-11-29 00:00:00')    
         //echo '<pre>'; print_r($arrRecord); exit;
         $k = 1;
         $isdCode = '+91';
         $output .= '"S.No",';
         $output .= '"School ID",';
-		$output .= '"UDISE Code",';
+        $output .= '"UDISE Code",';
         $output .= '"School Name",';
         $output .= '"Address1",';
         $output .= '"Address2",';
@@ -567,7 +562,7 @@ class Audit_started_model extends CI_Model {
         foreach ($arrRecord as $a) {
             $output .= '"' . $k . '",';
             $output .= '"' . $a->id . '",';
-			$output .= '"' . $a->udise . '",';
+            $output .= '"' . $a->udise . '",';
             $output .= '"' . $a->name . '",';
             $output .= '"' . $a->address1 . '",';
             $output .= '"' . $a->address2 . '",';
@@ -595,23 +590,23 @@ class Audit_started_model extends CI_Model {
 
         return $output;
     }
-	
-	
-	
-	
-	public function getExcelData_phase2() {
+    
+    
+    
+    
+    public function getExcelData_phase2() {
         $output = "";
-	
+    
         $arrRecord = $this->db->select('a.*, b.name AS state_name, c.name AS district_name, d.password')
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
                         ->join('cities AS c', 'a.district=c.id', 'left')
                         ->join('gsp_user AS d', 'a.userid=d.id', 'left')
-			->where('a.complete_status =', '0')
+            ->where('a.complete_status =', '0')
                         ->order_by('a.id', 'desc')
                         ->get()->result();
-		
-		 $r=$this->db->select('school_id')
+        
+         $r=$this->db->select('school_id')
                         ->from('gsp_aduit_submitted')
                         ->where('date_on >', '2019-11-12 00:00:00')
                         ->get()->result();
@@ -636,7 +631,7 @@ class Audit_started_model extends CI_Model {
         $isdCode = '+91';
         $output .= '"S.No",';
         $output .= '"School ID",';
-		$output .= '"UDISE Code",';
+        $output .= '"UDISE Code",';
         $output .= '"School Name",';
         $output .= '"Address1",';
         $output .= '"Address2",';
@@ -661,7 +656,7 @@ class Audit_started_model extends CI_Model {
         foreach ($arrRecord as $a) {
             $output .= '"' . $k . '",';
             $output .= '"' . $a->id . '",';
-			$output .= '"' . $a->udise . '",';
+            $output .= '"' . $a->udise . '",';
             $output .= '"' . $a->name . '",';
             $output .= '"' . $a->address1 . '",';
             $output .= '"' . $a->address2 . '",';
@@ -686,8 +681,8 @@ class Audit_started_model extends CI_Model {
             $output .= "\n";
             $k++;
         }
-		
-		
+        
+        
         foreach ($er as $e) {
             $output .= '"' . $k . '",';
             $output .= '"' . $e[0]->id . '",';
@@ -716,21 +711,21 @@ class Audit_started_model extends CI_Model {
             $output .= "\n";
             $k++;
         }
-		
-		
+        
+        
 
         return $output;
     }
-	
+    
     public function getExcelData_phase2_1() {
         $output = "";
-	$this->db->where("a.make_school_disabled","1");    
+    $this->db->where("a.make_school_disabled","1");    
         $arrRecord = $this->db->select('a.*, b.name AS state_name, c.name AS district_name, d.password')
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
                         ->join('cities AS c', 'a.district=c.id', 'left')
                         ->join('gsp_user AS d', 'a.userid=d.id', 'left')
-						->where('a.date_added>=', '2019-11-12 00:00:00')
+                        ->where('a.date_added>=', '2019-11-12 00:00:00')
                         ->order_by('a.id', 'desc')
                         ->get()->result();
         //echo '<pre>'; print_r($arrRecord); exit;
@@ -738,7 +733,7 @@ class Audit_started_model extends CI_Model {
         $isdCode = '+91';
         $output .= '"S.No",';
         $output .= '"School ID",';
-		$output .= '"UDISE Code",';
+        $output .= '"UDISE Code",';
         $output .= '"School Name",';
         $output .= '"Address1",';
         $output .= '"Address2",';
@@ -763,7 +758,7 @@ class Audit_started_model extends CI_Model {
         foreach ($arrRecord as $a) {
             $output .= '"' . $k . '",';
             $output .= '"' . $a->id . '",';
-			$output .= '"' . $a->udise . '",';
+            $output .= '"' . $a->udise . '",';
             $output .= '"' . $a->name . '",';
             $output .= '"' . $a->address1 . '",';
             $output .= '"' . $a->address2 . '",';
@@ -790,18 +785,18 @@ class Audit_started_model extends CI_Model {
         }
 
         return $output;
-    }	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+    }   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     /*
      * Generate Excel Data
      */
@@ -809,24 +804,24 @@ class Audit_started_model extends CI_Model {
     public function getExcelDataByProgress_phase1($progress) {
         $output = "";
         $arrRecord =$this->db->select('a.*, b.name AS state_name,c.name As district_name , d.password')
-					->from('gsp_school AS a')
-					->join('gsp_aduit_submitted AS e','e.userid=a.userid', 'left')
-					->join('states AS b', 'a.state=b.id', 'left')
-					->join('cities AS c', 'a.district=c.id', 'left')
-					->join('gsp_user AS d', 'a.userid=d.id', 'left')
-					->where('e.status="1"')
-					->where('e.date_on <=', '2017-11-29 00:00:00')
-					->order_by('a.id', 'desc')
-					->get()->result();
-		/* $this->db->select('a.*, b.name AS state_name, c.name AS district_name, d.password')
+                    ->from('gsp_school AS a')
+                    ->join('gsp_aduit_submitted AS e','e.userid=a.userid', 'left')
+                    ->join('states AS b', 'a.state=b.id', 'left')
+                    ->join('cities AS c', 'a.district=c.id', 'left')
+                    ->join('gsp_user AS d', 'a.userid=d.id', 'left')
+                    ->where('e.status="1"')
+                    ->where('e.date_on <=', '2017-11-29 00:00:00')
+                    ->order_by('a.id', 'desc')
+                    ->get()->result();
+        /* $this->db->select('a.*, b.name AS state_name, c.name AS district_name, d.password')
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
                         ->join('cities AS c', 'a.district=c.id', 'left')
                         ->join('gsp_user AS d', 'a.userid=d.id', 'left')
                         ->where($progress)
-						->where($progress)
-						->where('a.date_added <', '2017-11-29 00:00:00')
-						->order_by('a.id', 'desc')
+                        ->where($progress)
+                        ->where('a.date_added <', '2017-11-29 00:00:00')
+                        ->order_by('a.id', 'desc')
                         ->get()->result(); */
         //echo '<pre>'; print_r($arrRecord); exit;
         $k = 1;
@@ -886,10 +881,10 @@ class Audit_started_model extends CI_Model {
 
         return $output;
     }
-	
-	/* Generate Excel That started the audit */
-	
-	public function getExcelDataByProgress2_phase1($progress) {
+    
+    /* Generate Excel That started the audit */
+    
+    public function getExcelDataByProgress2_phase1($progress) {
         $output = "";
         $arrRecord = $this->db->select('a.*, b.name AS state_name, c.name AS district_name, d.password')
                         ->from('gsp_school AS a')
@@ -897,9 +892,9 @@ class Audit_started_model extends CI_Model {
                         ->join('cities AS c', 'a.district=c.id', 'left')
                         ->join('gsp_user AS d', 'a.userid=d.id', 'left')
                         ->where('progress >=', 10)
-						->where('progress <=', 100)
-						->where('a.date_added <=', '2017-11-29 00:00:00')
-						->order_by('a.id', 'desc')
+                        ->where('progress <=', 100)
+                        ->where('a.date_added <=', '2017-11-29 00:00:00')
+                        ->order_by('a.id', 'desc')
                         ->get()->result(); 
         //echo '<pre>'; print_r($arrRecord); exit;
         $k = 1;
@@ -959,9 +954,9 @@ class Audit_started_model extends CI_Model {
 
         return $output;
     }
-	
-	/* Excel Audit strated but school did not start */
-	public function getExcelDataByProgress5_phase1($progress) {
+    
+    /* Excel Audit strated but school did not start */
+    public function getExcelDataByProgress5_phase1($progress) {
         $output = "";
         $arrRecord = $this->db->select('a.*, b.name AS state_name, c.name AS district_name, d.password')
                         ->from('gsp_school AS a')
@@ -969,9 +964,9 @@ class Audit_started_model extends CI_Model {
                         ->join('cities AS c', 'a.district=c.id', 'left')
                         ->join('gsp_user AS d', 'a.userid=d.id', 'left')
                         ->where('progress >=', 10)
-					    ->where('progress <=', 75)
-					    ->where('a.date_added <=', '2017-11-29 00:00:00')
-						->order_by('a.id', 'desc')
+                        ->where('progress <=', 75)
+                        ->where('a.date_added <=', '2017-11-29 00:00:00')
+                        ->order_by('a.id', 'desc')
                         ->get()->result(); 
         //echo '<pre>'; print_r($arrRecord); exit;
         $k = 1;
@@ -1031,89 +1026,18 @@ class Audit_started_model extends CI_Model {
 
         return $output;
     }
-	
-	/* Excel Did not complete */
-	
-	public function getExcelDataByProgress6_phase1($progress) {
-        $output = "";
-        $arrRecord = $this->db->select('a.*, b.name AS state_name,c.name As district_name , d.password')
-						->from('gsp_school AS a')
-						->join('states AS b', 'a.state=b.id', 'left')
-						->join('cities AS c', 'a.district=c.id', 'left')
-						->join('gsp_user AS d', 'a.userid=d.id', 'left')
-						->where('progress=5')
-						->where('date_added <=', '2017-11-29 00:00:00')
-						->order_by('a.id', 'desc')
-						->get()->result();
-        //echo '<pre>'; print_r($arrRecord); exit;
-        $k = 1;
-        $isdCode = '+91';
-        $output .= '"S.No",';
-        $output .= '"Udise",';
-        $output .= '"School ID",';
-        $output .= '"School Name",';
-        $output .= '"Address1",';
-        $output .= '"Address2",';
-        $output .= '"Country",';
-        $output .= '"State",';
-        $output .= '"District",';
-        $output .= '"City",';
-        $output .= '"Pincode",';
-        $output .= '"ISD Code",';
-        $output .= '"STD Code",';
-        $output .= '"Landline Number",';
-        $output .= '"School Email",';
-        $output .= '"Principal Name",';
-        $output .= '"Principal Mobile",';
-        $output .= '"Coordinator Name",';
-        $output .= '"Coordinator Email",';
-        $output .= '"Coordinator Mobile",';
-        $output .= '"Password",';
-        $output .= '"Date & Time",';
-        $output .= '"Completeness",';
-        $output .= "\n";
-        foreach ($arrRecord as $a) {
-            $output .= '"' . $k . '",';
-            $output .= '"' . $a->udise . '",';
-            $output .= '"' . $a->id . '",';
-            $output .= '"' . $a->name . '",';
-            $output .= '"' . $a->address1 . '",';
-            $output .= '"' . $a->address2 . '",';
-            $output .= '"' . $a->country . '",';
-            $output .= '"' . $a->state_name . '",';
-            $output .= '"' . $a->district_name . '",';
-            $output .= '"' . $a->city . '",';
-            $output .= '"' . $a->pincode . '",';
-            $output .= '"' . $isdCode . '",';
-            $output .= '"' . $a->std . '",';
-            $output .= '"' . $a->telephone . '",';
-            $output .= '"' . $a->schoolemail . '",';
-            $output .= '"' . $a->principle_name . '",';
-            $output .= '"' . $a->mobile . '",';
-            $output .= '"' . $a->coname . '",';
-            $output .= '"' . $a->coemail . '",';
-            $output .= '"' . $a->comobile . '",';
-            $output .= '"' . $a->password . '",';
-            //$output .='"'.date('d-m-Y H:i:s', strtotime($row['datetime'])).'",';
-            $output .= '"' . date('Y-m-d H:i:s', strtotime($a->date_added)) . '",';
-            $output .= '"' . $a->progress . '%",';
-            $output .= "\n";
-            $k++;
-        }
-
-        return $output;
-    }
-	
-	/* 2017 Registration */
-	public function getExcelDataByProgress7_phase1($progress) {
+    
+    /* Excel Did not complete */
+    
+    public function getExcelDataByProgress6_phase1($progress) {
         $output = "";
         $arrRecord = $this->db->select('a.*, b.name AS state_name,c.name As district_name , d.password')
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
-						->join('cities AS c', 'a.district=c.id', 'left')
-						->join('gsp_user AS d', 'a.userid=d.id', 'left')
-                        ->where('YEAR(a.date_added)', 2017)
-						->where('a.date_added <', '2017-11-29 00:00:00')
+                        ->join('cities AS c', 'a.district=c.id', 'left')
+                        ->join('gsp_user AS d', 'a.userid=d.id', 'left')
+                        ->where('progress=5')
+                        ->where('date_added <=', '2017-11-29 00:00:00')
                         ->order_by('a.id', 'desc')
                         ->get()->result();
         //echo '<pre>'; print_r($arrRecord); exit;
@@ -1174,28 +1098,19 @@ class Audit_started_model extends CI_Model {
 
         return $output;
     }
-	
-	/*
-     * Generate Excel Data
-     */
-
-	
-	/* Schools Did Not Start The Audit phase2 */
-    	
-	 public function getExcelDataByProgress_phase6($progress) {
+    
+    /* 2017 Registration */
+    public function getExcelDataByProgress7_phase1($progress) {
         $output = "";
-	$this->db->where('a.date_added >=', '2019-11-12 00:00:00');
-        $arrRecord = $this->db->select('a.*,b.name AS state_name,c.name As district_name , d.password')
-		->from('gsp_school AS a')
-		->join('states AS b', 'a.state=b.id', 'left')
-		->join('cities AS c', 'a.district=c.id', 'left')
-		->join('gsp_user AS d', 'a.userid=d.id', 'left')
-		->join('gsp_aduit_submitted AS e','a.userid=e.userid', 'left')
-		->where($progress)
-		->where('a.complete_status =', '0')
-		->order_by('a.id', 'desc')
-		->get()->result();
-	
+        $arrRecord = $this->db->select('a.*, b.name AS state_name,c.name As district_name , d.password')
+                        ->from('gsp_school AS a')
+                        ->join('states AS b', 'a.state=b.id', 'left')
+                        ->join('cities AS c', 'a.district=c.id', 'left')
+                        ->join('gsp_user AS d', 'a.userid=d.id', 'left')
+                        ->where('YEAR(a.date_added)', 2017)
+                        ->where('a.date_added <', '2017-11-29 00:00:00')
+                        ->order_by('a.id', 'desc')
+                        ->get()->result();
         //echo '<pre>'; print_r($arrRecord); exit;
         $k = 1;
         $isdCode = '+91';
@@ -1225,7 +1140,7 @@ class Audit_started_model extends CI_Model {
         $output .= "\n";
         foreach ($arrRecord as $a) {
             $output .= '"' . $k . '",';
-	    $output .= '"' . $a->udise . '",';
+            $output .= '"' . $a->udise . '",';
             $output .= '"' . $a->id . '",';
             $output .= '"' . $a->name . '",';
             $output .= '"' . $a->address1 . '",';
@@ -1247,7 +1162,87 @@ class Audit_started_model extends CI_Model {
             $output .= '"' . $a->password . '",';
             //$output .='"'.date('d-m-Y H:i:s', strtotime($row['datetime'])).'",';
             $output .= '"' . date('Y-m-d H:i:s', strtotime($a->date_added)) . '",';
-            $output .= '"' . $a->progress_phase_2 . '%",';
+            $output .= '"' . $a->progress . '%",';
+            $output .= "\n";
+            $k++;
+        }
+
+        return $output;
+    }
+    
+    /*
+     * Generate Excel Data
+     */
+
+    
+    /* Schools Did Not Start The Audit phase2 */
+        
+     public function getExcelDataByProgress_phase6($progress) {
+        $output = "";
+    $this->db->where('a.date_added >=', '2019-11-12 00:00:00');
+        $arrRecord = $this->db->select('a.*,b.name AS state_name,c.name As district_name , d.password')
+        ->from('gsp_school AS a')
+        ->join('states AS b', 'a.state=b.id', 'left')
+        ->join('cities AS c', 'a.district=c.id', 'left')
+        ->join('gsp_user AS d', 'a.userid=d.id', 'left')
+        ->join('gsp_aduit_submitted AS e','a.userid=e.userid', 'left')
+        ->where($progress)
+        ->where('a.complete_status =', '0')
+        ->order_by('a.id', 'desc')
+        ->get()->result();
+    
+        //echo '<pre>'; print_r($arrRecord); exit;
+        $k = 1;
+        $isdCode = '+91';
+        $output .= '"S.No",';
+        $output .= '"Udise",';
+        $output .= '"School ID",';
+        $output .= '"School Name",';
+        $output .= '"Address1",';
+        $output .= '"Address2",';
+        $output .= '"Country",';
+        $output .= '"State",';
+        $output .= '"District",';
+        $output .= '"City",';
+        $output .= '"Pincode",';
+        $output .= '"ISD Code",';
+        $output .= '"STD Code",';
+        $output .= '"Landline Number",';
+        $output .= '"School Email",';
+        $output .= '"Principal Name",';
+        $output .= '"Principal Mobile",';
+        $output .= '"Coordinator Name",';
+        $output .= '"Coordinator Email",';
+        $output .= '"Coordinator Mobile",';
+        $output .= '"Password",';
+        $output .= '"Date & Time",';
+        $output .= '"Completeness",';
+        $output .= "\n";
+        foreach ($arrRecord as $a) {
+            $output .= '"' . $k . '",';
+        $output .= '"' . $a->udise . '",';
+            $output .= '"' . $a->id . '",';
+            $output .= '"' . $a->name . '",';
+            $output .= '"' . $a->address1 . '",';
+            $output .= '"' . $a->address2 . '",';
+            $output .= '"' . $a->country . '",';
+            $output .= '"' . $a->state_name . '",';
+            $output .= '"' . $a->district_name . '",';
+            $output .= '"' . $a->city . '",';
+            $output .= '"' . $a->pincode . '",';
+            $output .= '"' . $isdCode . '",';
+            $output .= '"' . $a->std . '",';
+            $output .= '"' . $a->telephone . '",';
+            $output .= '"' . $a->schoolemail . '",';
+            $output .= '"' . $a->principle_name . '",';
+            $output .= '"' . $a->mobile . '",';
+            $output .= '"' . $a->coname . '",';
+            $output .= '"' . $a->coemail . '",';
+            $output .= '"' . $a->comobile . '",';
+            $output .= '"' . $a->password . '",';
+            //$output .='"'.date('d-m-Y H:i:s', strtotime($row['datetime'])).'",';
+            $output .= '"' . date('Y-m-d H:i:s', strtotime($a->date_added)) . '",';
+            $output .= '"' . $a->progress . '%",';
             $output .= "\n";
             $k++;
         }
@@ -1255,8 +1250,8 @@ class Audit_started_model extends CI_Model {
         return $output;
     }
 
-	
-	
+    
+    
     public function getExcelDataByProgress_phase2($progress) {
         $output = "";
        /* $arrRecord = $this->db->select('a.*, b.name AS state_name, c.name AS district_name, d.password')
@@ -1265,25 +1260,25 @@ class Audit_started_model extends CI_Model {
                         ->join('cities AS c', 'a.district=c.id', 'left')
                         ->join('gsp_user AS d', 'a.userid=d.id', 'left')
                         ->where($progress)
-						->where($progress)
-						->where('a.complete_status =', '0')
-						->order_by('a.id', 'desc')
+                        ->where($progress)
+                        ->where('a.complete_status =', '0')
+                        ->order_by('a.id', 'desc')
                         ->get()->result(); */
-		$this->db->where('a.date_added >=', '2019-11-12 00:00:00');
-	    $this->db->where("a.make_school_disabled","1");
-	  $arrRecord = $this->db->select('a.*, b.name AS state_name,c.name As district_name,d.password')
-					->from('gsp_school AS a')
-					->join('states AS b', 'a.state=b.id', 'left')
-					->join('cities AS c', 'a.district=c.id', 'left')
-		  			->join('gsp_user AS d', 'a.userid=d.id')
-					->where($progress)
-					->order_by('a.id', 'desc')
-					->get()->result();    
+        $this->db->where('a.date_added >=', '2019-11-12 00:00:00');
+        $this->db->where("a.make_school_disabled","1");
+      $arrRecord = $this->db->select('a.*, b.name AS state_name,c.name As district_name,d.password')
+                    ->from('gsp_school AS a')
+                    ->join('states AS b', 'a.state=b.id', 'left')
+                    ->join('cities AS c', 'a.district=c.id', 'left')
+                    ->join('gsp_user AS d', 'a.userid=d.id')
+                    ->where($progress)
+                    ->order_by('a.id', 'desc')
+                    ->get()->result();    
         //echo '<pre>'; print_r($arrRecord); exit;
         $k = 1;
         $isdCode = '+91';
         $output .= '"S.No",';
-	$output .= '"Udise",';
+    $output .= '"Udise",';
         $output .= '"School ID",';
         $output .= '"School Name",';
         $output .= '"Address1",';
@@ -1308,7 +1303,7 @@ class Audit_started_model extends CI_Model {
         $output .= "\n";
         foreach ($arrRecord as $a) {
             $output .= '"' . $k . '",';
-	    $output .= '"' . $a->udise . '",';
+        $output .= '"' . $a->udise . '",';
             $output .= '"' . $a->id . '",';
             $output .= '"' . $a->name . '",';
             $output .= '"' . $a->address1 . '",';
@@ -1330,7 +1325,7 @@ class Audit_started_model extends CI_Model {
             $output .= '"' . $a->password . '",';
             //$output .='"'.date('d-m-Y H:i:s', strtotime($row['datetime'])).'",';
             $output .= '"' . date('Y-m-d H:i:s', strtotime($a->date_added)) . '",';
-            $output .= '"' . $a->progress_phase_2 . '%",';
+            $output .= '"' . $a->progress . '%",';
             $output .= "\n";
             $k++;
         }
@@ -1338,7 +1333,7 @@ class Audit_started_model extends CI_Model {
         return $output;
     }
 
-	
+    
 
     /*
      * Generate Excel Data
@@ -1347,26 +1342,26 @@ class Audit_started_model extends CI_Model {
     public function getExcelDataByProgress1_phase1($progress) {
         $output = "";
         $arrRecord = $this->db->select('a.*,b.name AS state_name,c.name As district_name , d.password')
-		            ->from('gsp_school AS a')
-					->join('states AS b', 'a.state=b.id', 'left')
-					->join('cities AS c', 'a.district=c.id', 'left')
-		                        ->join('gsp_user AS d', 'a.userid=d.id', 'left')
-					->join('gsp_aduit_submitted AS e','e.userid=a.userid', 'left')
-					->where('e.date_on <=', '2017-11-29')
-					->where('e.status','1')
-					->order_by('a.id', 'desc')
-					->get()->result();
-		
-		/* $this->db->select('a.*, b.name AS state_name, c.name AS district_name, d.password')
+                    ->from('gsp_school AS a')
+                    ->join('states AS b', 'a.state=b.id', 'left')
+                    ->join('cities AS c', 'a.district=c.id', 'left')
+                                ->join('gsp_user AS d', 'a.userid=d.id', 'left')
+                    ->join('gsp_aduit_submitted AS e','e.userid=a.userid', 'left')
+                    ->where('e.date_on <=', '2017-11-29')
+                    ->where('e.status','1')
+                    ->order_by('a.id', 'desc')
+                    ->get()->result();
+        
+        /* $this->db->select('a.*, b.name AS state_name, c.name AS district_name, d.password')
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
                         ->join('cities AS c', 'a.district=c.id', 'left')
                         ->join('gsp_user AS d', 'a.userid=d.id', 'left')
-						->join('gsp_aduit_submitted AS e', 'a.userid=e.userid', 'left')
+                        ->join('gsp_aduit_submitted AS e', 'a.userid=e.userid', 'left')
                         ->where($progress)
-						->where("e.status='1'")
-						->where('a.date_added <', '2017-11-20 00:00:00')
-						->order_by('a.id', 'desc')
+                        ->where("e.status='1'")
+                        ->where('a.date_added <', '2017-11-20 00:00:00')
+                        ->order_by('a.id', 'desc')
                         ->get()->result(); */
         //echo '<pre>'; print_r($arrRecord); exit;
         $k = 1;
@@ -1433,7 +1428,7 @@ class Audit_started_model extends CI_Model {
 
     public function getExcelDataByProgress1_phase2($progress) {
         $output = "";
-// 	    $this->db->where("a.make_school_disabled","1");
+//      $this->db->where("a.make_school_disabled","1");
       $this->db->where("e.date_on>=","2019-11-12 00:00:00");
       $arrRecord = $this->db->select('a.*,b.name AS state_name,c.name As district_name , d.password')
                                 ->from('gsp_school AS a')
@@ -1443,12 +1438,13 @@ class Audit_started_model extends CI_Model {
                                 
                                 ->join('gsp_aduit_submitted AS e','a.userid=e.userid', 'left')
                                 ->where('e.status=','1')
+                                ->group_by('a.id')
                                 ->get()->result();
         //echo '<pre>'; print_r($arrRecord); exit;
         $k = 1;
         $isdCode = '+91';
         $output .= '"S.No",';
-	$output .= '"Udise",';
+    $output .= '"Udise",';
         $output .= '"School ID",';
         $output .= '"School Name",';
         $output .= '"Address1",';
@@ -1473,7 +1469,7 @@ class Audit_started_model extends CI_Model {
         $output .= "\n";
         foreach ($arrRecord as $a) {
             $output .= '"' . $k . '",';
-	    $output .= '"' . $a->udise . '",';
+        $output .= '"' . $a->udise . '",';
             $output .= '"' . $a->id . '",';
             $output .= '"' . $a->name . '",';
             $output .= '"' . $a->address1 . '",';
@@ -1495,7 +1491,7 @@ class Audit_started_model extends CI_Model {
             $output .= '"' . $a->password . '",';
             //$output .='"'.date('d-m-Y H:i:s', strtotime($row['datetime'])).'",';
             $output .= '"' . date('Y-m-d H:i:s', strtotime($a->date_added)) . '",';
-            $output .= '"' . $a->progress_phase_2 . '%",';
+            $output .= '"' . $a->progress . '%",';
             $output .= "\n";
             $k++;
         }
@@ -1503,8 +1499,8 @@ class Audit_started_model extends CI_Model {
         return $output;
     }
 
-    	
-	
+        
+    
 
     /*
      * Get School By Id
@@ -1512,19 +1508,19 @@ class Audit_started_model extends CI_Model {
 
     public function getSchoolByIdRecoad($argID) {
         return $this->db->select('a.*,a.name,b.name AS state_name,c.name AS district')
-			->from('gsp_school as a')
-			->where('a.id', $argID)
-			->join('states AS b', 'a.state=b.id', 'left')
-			->join('cities AS c', 'a.district=c.id', 'left')
-		        ->get()->result();
-		//get_where('gsp_school', array('id' => $argID))->row();
+            ->from('gsp_school as a')
+            ->where('a.id', $argID)
+            ->join('states AS b', 'a.state=b.id', 'left')
+            ->join('cities AS c', 'a.district=c.id', 'left')
+                ->get()->result();
+        //get_where('gsp_school', array('id' => $argID))->row();
     }
    
     public function getSchoolById($argID) {
-	return $this->db->get_where('gsp_school', array('id' => $argID))->row(); 
+    return $this->db->get_where('gsp_school', array('id' => $argID))->row(); 
     }
-	
-	
+    
+    
     /*
      * Get Data By State
      */
@@ -1545,25 +1541,25 @@ class Audit_started_model extends CI_Model {
        // $sql="SELECT * FROM `gsp_school` WHERE `userid` IN ?";
        //SELECT a.userid,a.name,a.principle_name,s.name,a.id FROM states AS s,gsp_school AS a INNER JOIN gsp_answers as b on a.userid=b.userid WHERE b.questionid='Q1G2' AND b.answer>5 AND s.id= a.state;
       
-	if($state==1 && $school==2)
-	{
-		  $this->db->where("a.make_school_disabled=","1");
-		  $sql = $this->db->select('a.*, b.name AS state_name,c.name As district_name')
+    if($state==1 && $school==2)
+    {
+          $this->db->where("a.make_school_disabled=","1");
+          $sql = $this->db->select('a.*, b.name AS state_name,c.name As district_name')
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
-		   	->join('cities AS c', 'a.district=c.id', 'left')
+            ->join('cities AS c', 'a.district=c.id', 'left')
                         ->order_by('a.id', 'desc')
                         ->get()->result();
-		
-           return $sql;	
-	}    
+        
+           return $sql; 
+    }    
       elseif($state != 1 && $school != 2){
         if($school==1){
-	 $this->db->where("a.make_school_disabled=","1");	
+     $this->db->where("a.make_school_disabled=","1");   
         $sql= $this->db->select('a.*,s.name as state_name,c.name As district_name')
                        ->from('gsp_school AS a')
                         ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
-			->join('cities AS c', 'a.district=c.id', 'left')
+            ->join('cities AS c', 'a.district=c.id', 'left')
                         ->join('states AS s','a.state=s.id')
                         ->where('b.questionid','Q1G2')
                         ->where('b.answer >=',6)
@@ -1574,11 +1570,11 @@ class Audit_started_model extends CI_Model {
         return $sql;
             
         }elseif ($school==0) {
-		 $this->db->where("a.make_school_disabled=","1");
+         $this->db->where("a.make_school_disabled=","1");
                 $sql= $this->db->select('a.*,s.name as state_name,c.name As district_name')
                         ->from('gsp_school AS a')
                         ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
-			->join('cities AS c', 'a.district=c.id', 'left')
+            ->join('cities AS c', 'a.district=c.id', 'left')
                         ->join('states AS s','a.state=s.id')
                         ->where('b.questionid','Q1G2')
                         ->where('b.answer <',6)
@@ -1591,13 +1587,13 @@ class Audit_started_model extends CI_Model {
         
       }elseif ($state == 1 && $school != 2) {
           if($school==1){  
-	 $this->db->where("a.make_school_disabled=","1");	  
+     $this->db->where("a.make_school_disabled=","1");     
         $sql= $this->db->select('a.*,s.name as state_name,c.name As district_name')
                         ->from('states AS s')
                         ->from('gsp_school AS a')
                         ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
-			->join('cities AS c', 'a.district=c.id', 'left')
-			->where('b.questionid','Q1G2')
+            ->join('cities AS c', 'a.district=c.id', 'left')
+            ->where('b.questionid','Q1G2')
                         ->where('b.answer >=',6)
                         ->where('s.id= a.state')
                         ->order_by('a.id', 'desc')
@@ -1606,12 +1602,12 @@ class Audit_started_model extends CI_Model {
             return $sql;
             
         }elseif ($school==0) {
-		 $this->db->where("a.make_school_disabled=","1");  
+         $this->db->where("a.make_school_disabled=","1");  
                 $sql= $this->db->select('a.*,s.name as state_name,c.name As district_name')
                         ->from('states AS s')
                         ->from('gsp_school AS a')
                         ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
-			->join('cities AS c', 'a.district=c.id', 'left')
+            ->join('cities AS c', 'a.district=c.id', 'left')
                         ->where('b.questionid','Q1G2')
                         ->where('b.answer <',6)
                         ->where('s.id= a.state')
@@ -1623,11 +1619,11 @@ class Audit_started_model extends CI_Model {
             }
             
         }elseif ($state != 1 && $school == 2) {
-	    $this->db->where("a.make_school_disabled=","1");   
+        $this->db->where("a.make_school_disabled=","1");   
            $sql = $this->db->select('a.*, b.name AS state_name,c.name As district_name')
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
-		   	->join('cities AS c', 'a.district=c.id', 'left')
+            ->join('cities AS c', 'a.district=c.id', 'left')
                         ->where('a.state', $state)
                         ->order_by('a.id', 'desc')
                         ->get()->result();
@@ -1635,127 +1631,127 @@ class Audit_started_model extends CI_Model {
            return $sql;
         }
         
-	
+    
         
     }
-	
-	
-	
-	public function getRegionWiseSchool($region,$school)
-	{
-	   if($region=='East')
-		{
-		  $region1=array("36", "26", "16", "1", "5"); //$east_india
-		}
-		
-		if($region=='West')
-		{
-		  $region1=array("12", "21", "11", "9", "8"); //$west_india
-		}
-		
-		if($region=='North')
-		{
-		  $region1=array("28", "15", "13", "29", "14", "34", "35", "10", "6"); //$north_india
-		}
-		
-		if($region=='South')
-		{
-		  $region1=array("2", "17", "18", "31", "32", "19", "27"); //$south_india
-		}
-		
-		if($region=='North East')
-		{
-		  $region1=array("3", "4", "22", "23", "24", "25", "30", "33"); //$north_east_india
-		}
-		
-		if($region=='Central')
-		{
-		  $region1=array("7", "20"); //$central_india
-		}
-		
-		if($region=='All')
-		{
-		  $region1=array("3","36", "26", "16", "1", "5","12", "21", "11", "9", "8","28", "15", "13", "29", "14", "34", "35", "10", "6","2", "17", "18", "31", "32", "19", "27","7", "20","4", "22", "23", "24", "25", "30", "33"); //$all
-		}
-		
-		if($school==0){
-		
-		$sql = $this->db->select('a.*, b.name AS state_name,c.name As district_name')
+    
+    
+    
+    public function getRegionWiseSchool($region,$school)
+    {
+       if($region=='East')
+        {
+          $region1=array("36", "26", "16", "1", "5"); //$east_india
+        }
+        
+        if($region=='West')
+        {
+          $region1=array("12", "21", "11", "9", "8"); //$west_india
+        }
+        
+        if($region=='North')
+        {
+          $region1=array("28", "15", "13", "29", "14", "34", "35", "10", "6"); //$north_india
+        }
+        
+        if($region=='South')
+        {
+          $region1=array("2", "17", "18", "31", "32", "19", "27"); //$south_india
+        }
+        
+        if($region=='North East')
+        {
+          $region1=array("3", "4", "22", "23", "24", "25", "30", "33"); //$north_east_india
+        }
+        
+        if($region=='Central')
+        {
+          $region1=array("7", "20"); //$central_india
+        }
+        
+        if($region=='All')
+        {
+          $region1=array("3","36", "26", "16", "1", "5","12", "21", "11", "9", "8","28", "15", "13", "29", "14", "34", "35", "10", "6","2", "17", "18", "31", "32", "19", "27","7", "20","4", "22", "23", "24", "25", "30", "33"); //$all
+        }
+        
+        if($school==0){
+        
+        $sql = $this->db->select('a.*, b.name AS state_name,c.name As district_name')
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
-		   	            ->join('cities AS c', 'a.district=c.id', 'left')
-						->join('gsp_answers as d', 'a.userid=d.userid', 'left')
-						->like('d.questionid','Q1G2')
+                        ->join('cities AS c', 'a.district=c.id', 'left')
+                        ->join('gsp_answers as d', 'a.userid=d.userid', 'left')
+                        ->like('d.questionid','Q1G2')
                         ->where('d.answer <',6)
-						->where_in('state',$region1)
+                        ->where_in('state',$region1)
                         ->order_by('a.id', 'desc')
-						->get()->result();
-						//echo $this->db->last_query(); exit;
-						return  $sql;
-				}
-				
-		if($school==1){
-		
+                        ->get()->result();
+                        //echo $this->db->last_query(); exit;
+                        return  $sql;
+                }
+                
+        if($school==1){
+        
                            $this->db->where('d.answer >=',6);
-					      $this->db->where_in('state',$region1);
-		                  $sql = $this->db->select('a.*, b.name AS state_name,c.name As district_name')
+                          $this->db->where_in('state',$region1);
+                          $sql = $this->db->select('a.*, b.name AS state_name,c.name As district_name')
                             ->from('gsp_school AS a')
                             ->join('states AS b', 'a.state=b.id', 'left')
-		   	                ->join('cities AS c', 'a.district=c.id', 'left')
-						    ->join('gsp_answers as d', 'a.userid=d.userid', 'left')
-						->like('d.questionid','Q1G2')
+                            ->join('cities AS c', 'a.district=c.id', 'left')
+                            ->join('gsp_answers as d', 'a.userid=d.userid', 'left')
+                        ->like('d.questionid','Q1G2')
                         ->order_by('a.id', 'desc')
-						->group_by('a.id')
+                        ->group_by('a.id')
                         ->get()->result();
-						
-						 /* $regionss = join("','",$region1);
-	                    $sql2=$this->db->query("SELECT gsp_school.*, states.name AS state_name,cities.name As district_name FROM `gsp_school` INNER JOIN states ON gsp_school.state=states.id INNER JOIN cities ON gsp_school.district=cities.id WHERE `userid` NOT IN(SELECT userid FROM gsp_answers) AND `state`IN ('$regionss')")->result();  */
-						
-					        /* $sql3=array_merge($sql1,$sql2);	 */
-						
-						
-						
-						return $sql;
-						//echo $this->db->last_query(); exit;
-				}
-		
-		if($school==2){
-		
-		$sql = $this->db->select('a.*, b.name AS state_name,c.name As district_name')
+                        
+                         /* $regionss = join("','",$region1);
+                        $sql2=$this->db->query("SELECT gsp_school.*, states.name AS state_name,cities.name As district_name FROM `gsp_school` INNER JOIN states ON gsp_school.state=states.id INNER JOIN cities ON gsp_school.district=cities.id WHERE `userid` NOT IN(SELECT userid FROM gsp_answers) AND `state`IN ('$regionss')")->result();  */
+                        
+                            /* $sql3=array_merge($sql1,$sql2);   */
+                        
+                        
+                        
+                        return $sql;
+                        //echo $this->db->last_query(); exit;
+                }
+        
+        if($school==2){
+        
+        $sql = $this->db->select('a.*, b.name AS state_name,c.name As district_name')
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
-		   	            ->join('cities AS c', 'a.district=c.id', 'left')
-						->where_in('state',$region1)
+                        ->join('cities AS c', 'a.district=c.id', 'left')
+                        ->where_in('state',$region1)
                         ->order_by('a.id', 'desc')
-						->group_by('a.id')
+                        ->group_by('a.id')
                         ->get()->result();
-						return $sql;
-						
-						//echo $this->db->last_query(); exit;
-				}	
-	
-	}
-	
-	
-	
-	
-	
-	
-	
+                        return $sql;
+                        
+                        //echo $this->db->last_query(); exit;
+                }   
+    
+    }
+    
+    
+    
+    
+    
+    
+    
     /*
      * Generate Excel Data
      */
 
     public function getExcelDataByState($argID) {
         $output = "";
-	    $this->db->where("a.make_school_disabled=","1");
+        $this->db->where("a.make_school_disabled=","1");
         $arrRecord = $this->db->select('a.*, b.name AS state_name, c.name AS district_name, d.password')
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
                         ->join('cities AS c', 'a.district=c.id', 'left')
                         ->join('gsp_user AS d', 'a.userid=d.id', 'left')
                         ->where('a.state', $argID)
-			
+            
                         ->order_by('a.id', 'desc')
                         ->get()->result();
         //echo '<pre>'; print_r($arrRecord); exit;
@@ -1763,7 +1759,7 @@ class Audit_started_model extends CI_Model {
         $isdCode = '+91';
         $output .= '"S.No",';
         $output .= '"School ID",';
-	$output .= '"UDISE Code",';
+    $output .= '"UDISE Code",';
         $output .= '"School Name",';
         $output .= '"Address1",';
         $output .= '"Address2",';
@@ -1788,7 +1784,7 @@ class Audit_started_model extends CI_Model {
         foreach ($arrRecord as $a) {
             $output .= '"' . $k . '",';
             $output .= '"' . $a->id . '",';
-	    $output .= '"' . $a->udise . '",'; 
+        $output .= '"' . $a->udise . '",'; 
             $output .= '"' . $a->name . '",';
             $output .= '"' . $a->address1 . '",';
             $output .= '"' . $a->address2 . '",';
@@ -1816,7 +1812,7 @@ class Audit_started_model extends CI_Model {
 
         return $output;
     }
-	
+    
 public function getExcelDataByRegion($argID) {
         $output = "";
         $arrRecord = $this->db->select('a.*, b.name AS state_name, c.name AS district_name, d.password')
@@ -1825,14 +1821,14 @@ public function getExcelDataByRegion($argID) {
                         ->join('cities AS c', 'a.district=c.id', 'left')
                         ->join('gsp_user AS d', 'a.userid=d.id', 'left')
                         ->where_in('a.state', $argID)
-			            ->order_by('a.id', 'desc')
+                        ->order_by('a.id', 'desc')
                         ->get()->result();
         //echo '<pre>'; print_r($arrRecord); exit;
         $k = 1;
         $isdCode = '+91';
         $output .= '"S.No",';
         $output .= '"School ID",';
-	$output .= '"UDISE Code",';
+    $output .= '"UDISE Code",';
         $output .= '"School Name",';
         $output .= '"Address1",';
         $output .= '"Address2",';
@@ -1857,7 +1853,7 @@ public function getExcelDataByRegion($argID) {
         foreach ($arrRecord as $a) {
             $output .= '"' . $k . '",';
             $output .= '"' . $a->id . '",';
-	    $output .= '"' . $a->udise . '",'; 
+        $output .= '"' . $a->udise . '",'; 
             $output .= '"' . $a->name . '",';
             $output .= '"' . $a->address1 . '",';
             $output .= '"' . $a->address2 . '",';
@@ -1885,9 +1881,9 @@ public function getExcelDataByRegion($argID) {
 
         return $output;
     }
-		
-	
-	
+        
+    
+    
 
 public function getExcel2017Data() {
         $output = "";
@@ -1896,7 +1892,7 @@ public function getExcel2017Data() {
                         ->join('states AS b', 'a.state=b.id', 'left')
                         ->join('cities AS c', 'a.district=c.id', 'left')
                         ->join('gsp_user AS d', 'a.userid=d.id', 'left')
-			->where('YEAR(a.date_added)', 2017)
+            ->where('YEAR(a.date_added)', 2017)
                         ->order_by('a.id', 'desc')
                         ->get()->result();
         //echo '<pre>'; print_r($arrRecord); exit;
@@ -1904,7 +1900,7 @@ public function getExcel2017Data() {
         $isdCode = '+91';
         $output .= '"S.No",';
         $output .= '"School ID",';
-	$output .= '"UDISE Code",';
+    $output .= '"UDISE Code",';
         $output .= '"School Name",';
         $output .= '"Address1",';
         $output .= '"Address2",';
@@ -1929,7 +1925,7 @@ public function getExcel2017Data() {
         foreach ($arrRecord as $a) {
             $output .= '"' . $k . '",';
             $output .= '"' . $a->id . '",';
-	    $output .= '"' . $a->udise . '",'; 
+        $output .= '"' . $a->udise . '",'; 
             $output .= '"' . $a->name . '",';
             $output .= '"' . $a->address1 . '",';
             $output .= '"' . $a->address2 . '",';
@@ -1955,10 +1951,10 @@ public function getExcel2017Data() {
             $k++;
         }
         return $output;
-    }	
-	
+    }   
+    
 
-	/*
+    /*
      * Get COrdinator mail
      */
     public function getCordinatorsEmail()
@@ -1970,118 +1966,118 @@ public function getExcel2017Data() {
     {
         return $this->db->get('mail')->result();
     }
-	
+    
     /*School Image Zip Download Now*/
-	public function getZipImagesOfSchool($argsUserId)
-	{
-	   $data=$this->db->select("*")
-	   ->from("files")
-	   ->where("userid=".$argsUserId)
-	   ->get()
-	   ->result();
-	   return $data;
-	}
-	/*School Disabled By Id*/
-	
-	public function unable_school($argID)
-	{
-	  $this->db->where('userid', $argID);
-	  return $this->db->update("gsp_school",array("make_school_disabled"=>"1"));
-	}
-	
-	
-	
-	public function disable_school($argID)
-	{
-	  $this->db->where('userid', $argID);
-	  return $this->db->update("gsp_school",array("make_school_disabled"=>"0"));
-	}
-	/*School Deleted By Id*/
+    public function getZipImagesOfSchool($argsUserId)
+    {
+       $data=$this->db->select("*")
+       ->from("files")
+       ->where("userid=".$argsUserId)
+       ->get()
+       ->result();
+       return $data;
+    }
+    /*School Disabled By Id*/
+    
+    public function unable_school($argID)
+    {
+      $this->db->where('userid', $argID);
+      return $this->db->update("gsp_school",array("make_school_disabled"=>"1"));
+    }
+    
+    
+    
+    public function disable_school($argID)
+    {
+      $this->db->where('userid', $argID);
+      return $this->db->update("gsp_school",array("make_school_disabled"=>"0"));
+    }
+    /*School Deleted By Id*/
       public function school_delete($argID)
       {
-	$this->db->where('userid', $argID);
-	if($this->db->delete('gsp_school'))
-	{
-		$this->db->where('id', $argID);
-		$this->db->delete('gsp_user');
-	}
-	return true;	
+    $this->db->where('userid', $argID);
+    if($this->db->delete('gsp_school'))
+    {
+        $this->db->where('id', $argID);
+        $this->db->delete('gsp_user');
+    }
+    return true;    
      }
-	
-	/*School Generate Badge Now*/
-	public function getgeneratebadge($argsUserId)
-	{
-	   $get_current_year=date('Y');
-	   $data=$this->db->select("id,date_added")->from('gsp_school')->where("userid=".$argsUserId)->get()->result();
-	   $get_school_id=$data[0]->id;
-	   $date_start=date('Y-m-d');
-	   $end_date=date('Y-m-d', strtotime($date_start .'+2 year'));
-	    		   $badge_code="
-				   <script src='http://www.greenschoolsprogramme.org/audit/18/assets/js/badge-code.js'></script>
-				<script>
-			/*School Badge Code*/
-			window.onload = function(){
-			  get_date_difference('".date('m-d-Y',strtotime($end_date))."');
-			}
-			</script>
-			<div class='badges' style='height:200px; width:200px;'></div>";
-			$school_record=array("userid"=>$argsUserId,"school_id"=>$get_school_id,"badge_code"=>$badge_code,"date_start"=>$date_start,"end_date"=>$end_date,"year"=>$get_current_year);
-				   $result=$this->db->select('*')->from("gsp_badge")->where("school_id=",$get_school_id)->get()->result();
-				   if($result):
-				   $this->db->update('gsp_badge',$school_record,array('school_id'=>$get_school_id));
-				   else:
-				   $this->db->insert('gsp_badge',$school_record);
-				   endif;
-				   echo $this->db->last_query();
-}	
+    
+    /*School Generate Badge Now*/
+    public function getgeneratebadge($argsUserId)
+    {
+       $get_current_year=date('Y');
+       $data=$this->db->select("id,date_added")->from('gsp_school')->where("userid=".$argsUserId)->get()->result();
+       $get_school_id=$data[0]->id;
+       $date_start=date('Y-m-d');
+       $end_date=date('Y-m-d', strtotime($date_start .'+2 year'));
+                   $badge_code="
+                   <script src='http://www.greenschoolsprogramme.org/audit/18/assets/js/badge-code.js'></script>
+                <script>
+            /*School Badge Code*/
+            window.onload = function(){
+              get_date_difference('".date('m-d-Y',strtotime($end_date))."');
+            }
+            </script>
+            <div class='badges' style='height:200px; width:200px;'></div>";
+            $school_record=array("userid"=>$argsUserId,"school_id"=>$get_school_id,"badge_code"=>$badge_code,"date_start"=>$date_start,"end_date"=>$end_date,"year"=>$get_current_year);
+                   $result=$this->db->select('*')->from("gsp_badge")->where("school_id=",$get_school_id)->get()->result();
+                   if($result):
+                   $this->db->update('gsp_badge',$school_record,array('school_id'=>$get_school_id));
+                   else:
+                   $this->db->insert('gsp_badge',$school_record);
+                   endif;
+                   echo $this->db->last_query();
+}   
         /*Get School Generate Badge Code Now*/
         public function getprintbadgecode($argsUserId){
-			$data=$this->db->select("*")->from("gsp_badge")
-			     ->where("userid=".$argsUserId)
-			     ->get()
-				 ->result();
-				 return $data;
-		} 
-	     
-		/*Email Filter For Coordinators*/
-		public function emailFilter($args)
-		{
-		  $sql = $this->db->distinct()->select('a.*, b.name AS state_name,c.name As district_name,d.answer AS answer_type')
-		  ->from('gsp_school AS a')
-		  ->join('states AS b', 'a.state=b.id', 'left')
-		  ->join('cities AS c', 'a.district=c.id', 'left')
-		  ->join('gsp_answers AS d', 'a.userid=d.userid', 'left')
-		  ->where($args)
-		  ->order_by('a.id', 'asc')
-		  ->get()->result();
-		  return $sql;
-		} 
-	       /*Email Filter For SchoolEmail*/
-		public function emailFilter1($args)
-		{
-		  $sql = $this->db->distinct()->select('a.*, b.name AS state_name,c.name As district_name,d.answer AS answer_type')
-		  ->from('gsp_school AS a')
-		  ->join('states AS b', 'a.state=b.id', 'left')
-		  ->join('cities AS c', 'a.district=c.id', 'left')
-		  ->join('gsp_answers AS d', 'a.userid=d.userid', 'left')
-		  ->where($args)
-		  ->order_by('a.id', 'asc')
-		  ->get()->result();
-		  return $sql;
-		}
-	
-	/*************************** 2018 **************/
+            $data=$this->db->select("*")->from("gsp_badge")
+                 ->where("userid=".$argsUserId)
+                 ->get()
+                 ->result();
+                 return $data;
+        } 
+         
+        /*Email Filter For Coordinators*/
+        public function emailFilter($args)
+        {
+          $sql = $this->db->distinct()->select('a.*, b.name AS state_name,c.name As district_name,d.answer AS answer_type')
+          ->from('gsp_school AS a')
+          ->join('states AS b', 'a.state=b.id', 'left')
+          ->join('cities AS c', 'a.district=c.id', 'left')
+          ->join('gsp_answers AS d', 'a.userid=d.userid', 'left')
+          ->where($args)
+          ->order_by('a.id', 'asc')
+          ->get()->result();
+          return $sql;
+        } 
+           /*Email Filter For SchoolEmail*/
+        public function emailFilter1($args)
+        {
+          $sql = $this->db->distinct()->select('a.*, b.name AS state_name,c.name As district_name,d.answer AS answer_type')
+          ->from('gsp_school AS a')
+          ->join('states AS b', 'a.state=b.id', 'left')
+          ->join('cities AS c', 'a.district=c.id', 'left')
+          ->join('gsp_answers AS d', 'a.userid=d.userid', 'left')
+          ->where($args)
+          ->order_by('a.id', 'asc')
+          ->get()->result();
+          return $sql;
+        }
+    
     /*************************** 2018 **************/
-	
-	public function getExcelallTotalSchool() {
+    /*************************** 2018 **************/
+    
+    public function getExcelallTotalSchool() {
         $output = "";
-	$this->db->where("a.make_school_disabled","1");
-	$this->db->where("a.date_added <=","2019-11-11 00:00:00");
+    $this->db->where("a.make_school_disabled","1");
+    $this->db->where("a.date_added <=","2019-11-11 00:00:00");
         $arrRecord = $this->db->select('a.*, b.name AS state_name, c.name AS district_name , d.password')
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
                         ->join('cities AS c', 'a.district=c.id', 'left')
-		                ->join('gsp_user AS d', 'a.userid=d.id', 'left')
+                        ->join('gsp_user AS d', 'a.userid=d.id', 'left')
                          ->order_by('a.id', 'desc')
                         ->get()->result();
         
@@ -2089,7 +2085,7 @@ public function getExcel2017Data() {
         $isdCode = '+91';
         $output .= '"S.No",';
         $output .= '"School ID",';
-		$output .= '"UDISE Code",';
+        $output .= '"UDISE Code",';
         $output .= '"School Name",';
         $output .= '"Address1",';
         $output .= '"Address2",';
@@ -2114,7 +2110,7 @@ public function getExcel2017Data() {
         foreach ($arrRecord as $a) {
             $output .= '"' . $k . '",';
             $output .= '"' . $a->id . '",';
-	    $output .= '"' . $a->udise . '",';
+        $output .= '"' . $a->udise . '",';
             $output .= '"' . $a->name . '",';
             $output .= '"' . $a->address1 . '",';
             $output .= '"' . $a->address2 . '",';
@@ -2141,27 +2137,27 @@ public function getExcel2017Data() {
 
         return $output;
     }
-	
-	
-	
+    
+    
+    
      public function getExcelTotalSchool() {
         $output = "";
         $arrRecord = $this->db->select('a.*, b.name AS state_name, c.name AS district_name , d.password')
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
                         ->join('cities AS c', 'a.district=c.id', 'left')
-		        ->join('gsp_user AS d', 'a.userid=d.id', 'left')
+                ->join('gsp_user AS d', 'a.userid=d.id', 'left')
                         ->where('a.date_added >=', '2019-03-01 00:00:00')
-			->where("a.date_added <=","2019-11-10 00:00:00")
+            ->where("a.date_added <=","2019-11-10 00:00:00")
                         ->order_by('a.id', 'desc')
-		        ->where("a.make_school_disabled","1")
+                ->where("a.make_school_disabled","1")
                         ->get()->result();
         
         $k = 1;
         $isdCode = '+91';
         $output .= '"S.No",';
         $output .= '"School ID",';
-		$output .= '"UDISE Code",';
+        $output .= '"UDISE Code",';
         $output .= '"School Name",';
         $output .= '"Address1",';
         $output .= '"Address2",';
@@ -2186,7 +2182,7 @@ public function getExcel2017Data() {
         foreach ($arrRecord as $a) {
             $output .= '"' . $k . '",';
             $output .= '"' . $a->id . '",';
-	    $output .= '"' . $a->udise . '",';
+        $output .= '"' . $a->udise . '",';
             $output .= '"' . $a->name . '",';
             $output .= '"' . $a->address1 . '",';
             $output .= '"' . $a->address2 . '",';
@@ -2213,19 +2209,19 @@ public function getExcel2017Data() {
 
         return $output;
     }
-	
-	public function getExcelStartedTheAudit() {
+    
+    public function getExcelStartedTheAudit() {
         $output = "";
-	$this->db->where("a.make_school_disabled","1");	
-	$this->db->where("a.complete_status","0");	
+    $this->db->where("a.make_school_disabled","1"); 
+    $this->db->where("a.complete_status","0");  
         $arrRecord = $this->db->select('a.*, b.name AS state_name, c.name AS district_name , d.password')
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
                         ->join('cities AS c', 'a.district=c.id', 'left')
-		                ->join('gsp_user AS d', 'a.userid=d.id', 'left')
-                      		->where("a.date_added <=","2019-11-10 00:00:00")
-		                ->where('a.progress>=', 10)
-		                ->where('a.progress<=', 100)
+                        ->join('gsp_user AS d', 'a.userid=d.id', 'left')
+                            ->where("a.date_added <=","2019-11-10 00:00:00")
+                        ->where('a.progress>=', 10)
+                        ->where('a.progress<=', 100)
                         ->order_by('a.id', 'desc')
                         ->get()->result();
         
@@ -2233,7 +2229,7 @@ public function getExcel2017Data() {
         $isdCode = '+91';
         $output .= '"S.No",';
         $output .= '"School ID",';
-		$output .= '"UDISE Code",';
+        $output .= '"UDISE Code",';
         $output .= '"School Name",';
         $output .= '"Address1",';
         $output .= '"Address2",';
@@ -2258,7 +2254,7 @@ public function getExcel2017Data() {
         foreach ($arrRecord as $a) {
             $output .= '"' . $k . '",';
             $output .= '"' . $a->id . '",';
-	    $output .= '"' . $a->udise . '",';
+        $output .= '"' . $a->udise . '",';
             $output .= '"' . $a->name . '",';
             $output .= '"' . $a->address1 . '",';
             $output .= '"' . $a->address2 . '",';
@@ -2285,18 +2281,18 @@ public function getExcel2017Data() {
 
         return $output;
     }
-	
-	public function getExcelcompletednotsumbitted() {
+    
+    public function getExcelcompletednotsumbitted() {
         $output = "";
-	$this->db->where("a.make_school_disabled","1");	
+    $this->db->where("a.make_school_disabled","1"); 
         $arrRecord = $this->db->select('a.*, b.name AS state_name, c.name AS district_name , d.password')
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
                         ->join('cities AS c', 'a.district=c.id', 'left')
-		                ->join('gsp_user AS d', 'a.userid=d.id', 'left')
-                       		->where("a.date_added <=","2019-11-10 00:00:00")
-		                ->where('a.progress', '100')
-		                ->where('a.complete_status','0')
+                        ->join('gsp_user AS d', 'a.userid=d.id', 'left')
+                            ->where("a.date_added <=","2019-11-10 00:00:00")
+                        ->where('a.progress', '100')
+                        ->where('a.complete_status','0')
                         ->order_by('a.id', 'desc')
                         ->get()->result();
         
@@ -2304,7 +2300,7 @@ public function getExcel2017Data() {
         $isdCode = '+91';
         $output .= '"S.No",';
         $output .= '"School ID",';
-		$output .= '"UDISE Code",';
+        $output .= '"UDISE Code",';
         $output .= '"School Name",';
         $output .= '"Address1",';
         $output .= '"Address2",';
@@ -2329,7 +2325,7 @@ public function getExcel2017Data() {
         foreach ($arrRecord as $a) {
             $output .= '"' . $k . '",';
             $output .= '"' . $a->id . '",';
-	    $output .= '"' . $a->udise . '",';
+        $output .= '"' . $a->udise . '",';
             $output .= '"' . $a->name . '",';
             $output .= '"' . $a->address1 . '",';
             $output .= '"' . $a->address2 . '",';
@@ -2356,12 +2352,12 @@ public function getExcel2017Data() {
 
         return $output;
     }
-	
-	public function getExcelsumbittedtheaudit() {
+    
+    public function getExcelsumbittedtheaudit() {
     $output = "";
-	$this->db->where("e.date_on >=","2019-02-27 08:50:40");
+    $this->db->where("e.date_on >=","2019-02-27 08:50:40");
         $this->db->where("e.date_on <=","2019-11-12 00:00:00");
-	$arrRecord = $this->db->select('a.*, b.name AS state_name, c.name AS district_name , d.password, e.date_on')
+    $arrRecord = $this->db->select('a.*, b.name AS state_name, c.name AS district_name , d.password, e.date_on')
                        ->from('gsp_school AS a')
                        ->join('states AS b', 'a.state=b.id', 'left')
                        ->join('cities AS c', 'a.district=c.id', 'left')
@@ -2376,7 +2372,7 @@ public function getExcel2017Data() {
         $isdCode = '+91';
         $output .= '"S.No",';
         $output .= '"School ID",';
-	$output .= '"UDISE Code",';
+    $output .= '"UDISE Code",';
         $output .= '"School Name",';
         $output .= '"Address1",';
         $output .= '"Address2",';
@@ -2402,7 +2398,7 @@ public function getExcel2017Data() {
         foreach ($arrRecord as $a) {
             $output .= '"' . $k . '",';
             $output .= '"' . $a->id . '",';
-	    $output .= '"' . $a->udise . '",';
+        $output .= '"' . $a->udise . '",';
             $output .= '"' . $a->name . '",';
             $output .= '"' . $a->address1 . '",';
             $output .= '"' . $a->address2 . '",';
@@ -2437,18 +2433,18 @@ public function getExcel2017Data() {
 
         return $output;
     }
-	 
+     
     public function getExcelstartedtheauditbutnotcomplete() {
         $output = "";
-	    $this->db->where("a.date_added <=","2019-11-10 00:00:00");
-	    $this->db->where("a.make_school_disabled","1");
+        $this->db->where("a.date_added <=","2019-11-10 00:00:00");
+        $this->db->where("a.make_school_disabled","1");
         $arrRecord = $this->db->select('a.*, b.name AS state_name, c.name AS district_name , d.password')
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
                         ->join('cities AS c', 'a.district=c.id', 'left')
-		        ->join('gsp_user AS d', 'a.userid=d.id', 'left')                       		
-		        ->where('progress >','5')
-		        ->where('progress <=','75')
+                ->join('gsp_user AS d', 'a.userid=d.id', 'left')                            
+                ->where('progress >','5')
+                ->where('progress <=','75')
                         ->order_by('a.id', 'desc')
                         ->get()->result();
         
@@ -2456,7 +2452,7 @@ public function getExcel2017Data() {
         $isdCode = '+91';
         $output .= '"S.No",';
         $output .= '"School ID",';
-		$output .= '"UDISE Code",';
+        $output .= '"UDISE Code",';
         $output .= '"School Name",';
         $output .= '"Address1",';
         $output .= '"Address2",';
@@ -2481,7 +2477,7 @@ public function getExcel2017Data() {
         foreach ($arrRecord as $a) {
             $output .= '"' . $k . '",';
             $output .= '"' . $a->id . '",';
-	    $output .= '"' . $a->udise . '",';
+        $output .= '"' . $a->udise . '",';
             $output .= '"' . $a->name . '",';
             $output .= '"' . $a->address1 . '",';
             $output .= '"' . $a->address2 . '",';
@@ -2509,16 +2505,16 @@ public function getExcel2017Data() {
         return $output;
     }
 
-	 public function getExcelnotstatedtheaudit() {
+     public function getExcelnotstatedtheaudit() {
         $output = "";
-	 $this->db->where("a.date_added <=","2019-11-10 00:00:00");
-	 $this->db->where("a.make_school_disabled","1");
+     $this->db->where("a.date_added <=","2019-11-10 00:00:00");
+     $this->db->where("a.make_school_disabled","1");
         $arrRecord = $this->db->select('a.*, b.name AS state_name, c.name AS district_name , d.password')
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
                         ->join('cities AS c', 'a.district=c.id', 'left')
-		        ->join('gsp_user AS d', 'a.userid=d.id', 'left')                       
-		        ->where('progress =','5')
+                ->join('gsp_user AS d', 'a.userid=d.id', 'left')                       
+                ->where('progress =','5')
                         ->order_by('a.id', 'desc')
                         ->get()->result();
         
@@ -2526,7 +2522,7 @@ public function getExcel2017Data() {
         $isdCode = '+91';
         $output .= '"S.No",';
         $output .= '"School ID",';
-		$output .= '"UDISE Code",';
+        $output .= '"UDISE Code",';
         $output .= '"School Name",';
         $output .= '"Address1",';
         $output .= '"Address2",';
@@ -2551,7 +2547,7 @@ public function getExcel2017Data() {
         foreach ($arrRecord as $a) {
             $output .= '"' . $k . '",';
             $output .= '"' . $a->id . '",';
-	    $output .= '"' . $a->udise . '",';
+        $output .= '"' . $a->udise . '",';
             $output .= '"' . $a->name . '",';
             $output .= '"' . $a->address1 . '",';
             $output .= '"' . $a->address2 . '",';
@@ -2578,91 +2574,91 @@ public function getExcel2017Data() {
 
         return $output;
     } 
-	
-	 public function getSchool_18data(){
+    
+     public function getSchool_18data(){
         return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
         ->from('gsp_school AS a')
         ->join('states AS b', 'a.state=b.id', 'left')
-		->join('cities AS c', 'a.district=c.id', 'left')
+        ->join('cities AS c', 'a.district=c.id', 'left')
         ->where('a.date_added >=', '2018-02-21 00:00:00')
         ->order_by('a.id', 'desc')
         ->get()->result();
       }
-	  
-	    public function getstartedtheaudit_18data(){
-		    $this->db->where("a.make_school_disabled","1");
+      
+        public function getstartedtheaudit_18data(){
+            $this->db->where("a.make_school_disabled","1");
             $this->db->where("a.complete_status",'0');
         return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
         ->from('gsp_school AS a')
         ->join('states AS b', 'a.state=b.id', 'left')
-		->join('cities AS c', 'a.district=c.id', 'left')
+        ->join('cities AS c', 'a.district=c.id', 'left')
         ->where('a.date_added >=', '2018-02-21 00:00:00')
-		->where('a.progress>=', 10)
-		->where('a.progress<=', 100)
+        ->where('a.progress>=', 10)
+        ->where('a.progress<=', 100)
         ->order_by('a.id', 'desc')
         ->get()->result();
       }
-	  
-	  
-	  
+      
+      
+      
        public function getSubmittedTheAudit_18data(){
-	       $this->db->where("a.make_school_disabled","1");  
+           $this->db->where("a.make_school_disabled","1");  
         $this->db->where('d.date_on <=', '2018-11-19');
         $this->db->where('d.date_on >=', '2018-02-21');
         return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
         ->from('gsp_school AS a')
         ->join('states AS b', 'a.state=b.id', 'left')
-	    ->join('cities AS c', 'a.district=c.id', 'left')
+        ->join('cities AS c', 'a.district=c.id', 'left')
         ->join('gsp_aduit_submitted as d',"a.userid=d.userid")
-	    ->where('a.progress', '100')
-	    ->where('d.status','1')
+        ->where('a.progress', '100')
+        ->where('d.status','1')
         ->order_by('a.id', 'desc')
         ->get()->result();
-	 }
-	  
-	    public function getStartedAuditButDidNotComplete_18data(){
-		    $this->db->where("a.make_school_disabled","1");
+     }
+      
+        public function getStartedAuditButDidNotComplete_18data(){
+            $this->db->where("a.make_school_disabled","1");
         return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
         ->from('gsp_school AS a')
         ->join('states AS b', 'a.state=b.id', 'left')
-		->join('cities AS c', 'a.district=c.id', 'left')
+        ->join('cities AS c', 'a.district=c.id', 'left')
         ->where('a.date_added >=', '2018-02-21 00:00:00')
-		->where('progress >','5')
-		->where('progress <=','75')
+        ->where('progress >','5')
+        ->where('progress <=','75')
         ->order_by('a.id', 'desc')
         ->get()->result();
-		 }
+         }
    
      
-	   public function getNotStartTheAudit_18data(){
-		   $this->db->where("a.make_school_disabled","1");
+       public function getNotStartTheAudit_18data(){
+           $this->db->where("a.make_school_disabled","1");
         return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
         ->from('gsp_school AS a')
         ->join('states AS b', 'a.state=b.id', 'left')
-		->join('cities AS c', 'a.district=c.id', 'left')
+        ->join('cities AS c', 'a.district=c.id', 'left')
         ->where('a.date_added >=', '2018-02-21 00:00:00')
-		->where('progress =','5')
+        ->where('progress =','5')
         ->order_by('a.id', 'desc')
         ->get()->result();
-	  }	
-	  
-	    public function getCompletedAuditButNotSubmitted_18data(){
-		    $this->db->where("a.make_school_disabled","1");
+      } 
+      
+        public function getCompletedAuditButNotSubmitted_18data(){
+            $this->db->where("a.make_school_disabled","1");
         return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
         ->from('gsp_school AS a')
         ->join('states AS b', 'a.state=b.id', 'left')
-	->join('cities AS c', 'a.district=c.id', 'left')
-	->join('gsp_aduit_submitted AS d','a.userid=d.userid','left')
-    ->where('a.date_added >=', '2018-02-21 00:00:00')	
-	->where('a.progress', '100')
-	->where('a.complete_status','0')
+    ->join('cities AS c', 'a.district=c.id', 'left')
+    ->join('gsp_aduit_submitted AS d','a.userid=d.userid','left')
+    ->where('a.date_added >=', '2018-02-21 00:00:00')   
+    ->where('a.progress', '100')
+    ->where('a.complete_status','0')
         ->order_by('a.id', 'desc')
         ->get()->result();
-		//echo $this->db->last_query(); exit;
+        //echo $this->db->last_query(); exit;
       }
-	
-	
-	public function school_excel_yoyrepresentation($userid) {
+    
+    
+    public function school_excel_yoyrepresentation($userid) {
         $output = "";
         $arrRecord = $this->db->select('*')
                         ->from('all_yoy_presentation')
@@ -5153,6 +5149,6 @@ public function getExcel2017Data() {
 
         return $output;
     }
-	
-	   
+    
+       
 }
