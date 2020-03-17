@@ -466,8 +466,8 @@ class Dashboard_model extends CI_Model {
         ->from('gsp_school AS a')
         ->join('states AS b', 'a.state=b.id', 'left')
 		->join('cities AS c', 'a.district=c.id', 'left')
-		->where('a.progress>=', 10)
-		->where('a.progress<=', 100)
+		->where('a.progress_phase_1>=', 10)
+		->where('a.progress_phase_1<=', 100)
         ->order_by('a.id', 'desc')
         ->get()->result();
       }
@@ -481,7 +481,7 @@ class Dashboard_model extends CI_Model {
         ->join('states AS b', 'a.state=b.id', 'left')
 	    ->join('cities AS c', 'a.district=c.id', 'left')
 	    ->join('gsp_aduit_submitted AS d','a.userid=d.userid','left')	
-	    ->where('a.progress', '100')
+	    ->where('a.progress_phase_1', '100')
 	    ->where('a.complete_status','0')
         ->order_by('a.id', 'desc')
         ->get()->result();
@@ -495,7 +495,7 @@ class Dashboard_model extends CI_Model {
         ->join('states AS b', 'a.state=b.id', 'left')
 	    ->join('cities AS c', 'a.district=c.id', 'left')
 	    ->join('gsp_aduit_submitted AS d','d.userid=a.userid')       
-	    ->where('a.progress', '100')
+	    ->where('a.progress_phase_1', '100')
 	    ->where('a.complete_status','1')
 	    ->where('a.make_school_disabled',1)
         ->order_by('a.id', 'desc')
@@ -509,8 +509,8 @@ class Dashboard_model extends CI_Model {
         ->from('gsp_school AS a')
         ->join('states AS b', 'a.state=b.id', 'left')
 		->join('cities AS c', 'a.district=c.id', 'left')       
-		->where('progress >','5')
-		->where('progress <=','75')
+		->where('progress_phase_1 >','5')
+		->where('progress_phase_1 <=','75')
         ->order_by('a.id', 'desc')
         ->get()->result();
 		
@@ -525,7 +525,7 @@ class Dashboard_model extends CI_Model {
         ->from('gsp_school AS a')
         ->join('states AS b', 'a.state=b.id', 'left')
 	->join('cities AS c', 'a.district=c.id', 'left')        
-	->where('progress =','5')
+	->where('progress_phase_1 =','5')
         ->order_by('a.id', 'desc')
         ->get()->result();
 		
