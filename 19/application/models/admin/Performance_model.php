@@ -235,6 +235,13 @@ return $this->db->select('y.name AS state_name, z.name AS district_name,a.coemai
 	       ->get()->result();
 	  }	
 	
+		public function combinedPerformancePoint1() {
+	    return $this->db->select('a.*,b.name AS state_name, c.name AS district_name')->from('tbl_total_phase2 AS a')
+	       ->join('states AS b', 'a.state=b.id', 'left')
+	       ->join('cities AS c', 'a.district=c.id', 'left')
+	       ->get()->result();
+	  }	
+	
 	
 	public function getLandPrimarySchool()
 	{
