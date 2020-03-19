@@ -1306,7 +1306,11 @@ else{echo '000.000' ;}
 <td><?php echo  $record1[$i]->Q20W2; ?></td>
 <td><?php echo  $record1[$i]->water_points; ?></td>
  <td><?php echo  $record1[$i]->Q4Wa1; ?></td>
-        <td><?php echo  $record1[$i]->Q4Wa2; ?></td>
+        <td><?php if($record1[$i]->Q4Wa2=='1'){echo "Two";}
+        if($record1[$i]->Q4Wa2=='2'){echo "Three";}
+        if($record1[$i]->Q4Wa2=='3'){echo "More than three";}
+        if($record1[$i]->Q4Wa2=='4'){echo "Not Applicable";}
+         ?></td>
         <td><?php echo  abs($record1[$i]->Q5Wa1S1) ; ?></td>
         <td><?php echo  $record1[$i]->Q5Wa1S2; ?></td>
         <td><?php echo  $record1[$i]->Q5Wa1S3; ?></td>
@@ -1539,8 +1543,17 @@ else{echo '000.000' ;}
         <td><?php echo  $record1[$i]->Q12Wa28S3; ?></td>
         <td><?php echo  $record1[$i]->Q12Wa28S4; ?></td>
         <td><?php echo  $record1[$i]->Q13Wa1; ?></td>
-        <td><?php echo  $record1[$i]->Q13Wa2; ?></td>
-        <td><?php echo  $record1[$i]->Q14Wa1; ?></td>
+        <td><?php if($record1[$i]->Q13Wa2=='1'){ echo "Kabadiwalla/Scrapdealer" ;}
+        if($record1[$i]->Q13Wa2=='2'){ echo "Taken back by manufacturer/vendor" ;}
+        if($record1[$i]->Q13Wa2=='3'){ echo "Authorised dealer" ;}
+        if($record1[$i]->Q13Wa2=='4'){ echo "Authorised dismantler" ;}
+        if($record1[$i]->Q13Wa2 !='1' && $record1[$i]->Q13Wa2 !='2' && $record1[$i]->Q13Wa2 !='3' && $record1[$i]->Q13Wa2 !='4'){ echo $record1[$i]->Q13Wa2 ;}
+         ?></td>
+        <td><?php if($record1[$i]->Q14Wa1=='1'){ echo "Open dumping" ;}
+        if($record1[$i]->Q14Wa1=='2'){ echo "Designated dumping site (Dhalao)" ;}
+        if($record1[$i]->Q14Wa1=='3'){ echo "Landfill Site" ;}
+        if($record1[$i]->Q14Wa1=='4'){ echo "Don’t know" ;}
+         ?></td>
         <td><?php echo  $record1[$i]->Q15Wa1 ?></td>
         <td><?php if($record1[$i]->Q15Wa2=='1'){ echo "Inside the school" ;}
         elseif($record1[$i]->Q15Wa2=='2'){ echo "Outside the school" ;}
