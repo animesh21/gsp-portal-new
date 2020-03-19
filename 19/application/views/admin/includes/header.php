@@ -175,7 +175,7 @@
               <li class=""><a href="#">AUDIT COMPLETED<span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <!--  <li class=""><a href="#">PERFORMANCE REPORT</a></li> -->
-                  <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">PRIMARY AUDIT PHASE I</a>
+                 <!--  <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">PRIMARY AUDIT PHASE I</a>
                     <ul class="dropdown-menu">
                       <li><a href="<?php echo base_url('admin/performance_report/schoolgeneralPrimary'); ?>">School Profile & General </a></li>
                       <li><a href="<?php echo base_url('admin/performance_report/airPrimary'); ?>">AIR</a></li>
@@ -187,8 +187,8 @@
                       <li><a href="<?php echo base_url('admin/performance_report/feedbackPrimary'); ?>">FEEDBACK</a></li>
                       <li><a href="<?php echo base_url('admin/performance_report/ExcelPrimary'); ?>">Total Primary Excel</a></li>
                     </ul>
-                  </li>
-                  <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">SECONDARY AUDIT PHASE I</a>
+                  </li> -->
+                <!--   <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">SECONDARY AUDIT PHASE I</a>
                     <ul class="dropdown-menu">
                       <li><a href="<?php echo base_url('admin/performance_report/schoolgeneral'); ?>">School Profile & General</a> </li>
                       <li><a href="<?php echo base_url('admin/performance_report/air'); ?>">AIR</a></li>
@@ -200,8 +200,8 @@
                       <li><a href="<?php echo base_url('admin/performance_report/feedback'); ?>">Feedback</a> </li>
                       <li><a href="<?php echo base_url('admin/performance_report/ExcelSecondary'); ?>">Total Secondary Excel</a> </li>
                     </ul>
-                  </li>
-                  <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">PRIMARY AUDIT PHASE II</a>
+                  </li> -->
+               <!--    <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">PRIMARY AUDIT PHASE II</a>
                     <ul class="dropdown-menu">
                       <li><a href="<?php echo base_url('admin/performance_report/schoolgeneralPrimary_phase2'); ?>">School Profile & General </a></li>
                       <li><a href="<?php echo base_url('admin/performance_report/airPrimary_phase2'); ?>">AIR</a></li>
@@ -213,8 +213,8 @@
                       <li><a href="<?php echo base_url('admin/performance_report/feedbackPrimary_phase2'); ?>">FEEDBACK</a></li>
                       <li><a href="<?php echo base_url('admin/performance_report/ExcelPrimary_phase2'); ?>">Total Primary Excel</a></li>
                     </ul>
-                  </li>
-                  <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">SECONDARY AUDIT PHASE II</a>
+                  </li> -->
+                  <!-- <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">SECONDARY AUDIT PHASE II</a>
                     <ul class="dropdown-menu">
                       <li><a href="<?php echo base_url('admin/performance_report/schoolgeneral_phase2'); ?>">School Profile & General</a> </li>
                       <li><a href="<?php echo base_url('admin/performance_report/air_phase2'); ?>">AIR</a></li>
@@ -226,10 +226,13 @@
                       <li><a href="<?php echo base_url('admin/performance_report/feedback_phase2'); ?>">Feedback</a> </li>
                       <li><a href="<?php echo base_url('admin/performance_report/ExcelSecondary_phase2'); ?>">Total Secondary Excel</a> </li>
                     </ul>
-                  </li>
+                  </li> -->
       <li><a href="<?php echo base_url('admin/performance_report/allExcelPrimary'); ?>">Phase-1 All Primary Excel Dump</a></li>
-      <li><a href="<?php echo base_url('admin/performance_report/allExcelSecondary'); ?>">Phase-1 All Secondary Excel Dump</a></li> 
-                  <li><a href="<?php echo base_url('admin/performance_report/allExcelDump'); ?>">All Excel Dump</a></li>
+      <li><a href="<?php echo base_url('admin/performance_report/allExcelSecondary'); ?>">Phase-1 All Secondary Excel Dump</a></li>
+      <li><a href="<?php echo base_url('admin/performance_report/allExcelDump'); ?>">Phase-1 All Excel Dump</a></li>
+      <li><a href="<?php echo base_url('admin/performance_report/AllExcelPrimaryPhase_2'); ?>">Phase-2 All Primary Excel Dump</a></li>
+      <li><a href="<?php echo base_url('admin/performance_report/AllExcelSecondaryPhase_2'); ?>">Phase-2 All Secondary Excel Dump</a></li> 
+                  <li><a href="<?php echo base_url('admin/performance_report/allExcelDump_phase_2'); ?>">Phase-2 All Excel Dump</a></li>
                   <li class=""><a href="<?php echo base_url('admin/performance_report/totalCalculation'); ?>">Total Points Calculation</a> </li>
                  <!-- <li><a href="analysis_report_all_question.php">All Responses</a></li> -->
                 </ul>
