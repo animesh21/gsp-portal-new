@@ -956,6 +956,51 @@ public function digital_certificate_for_principal_coordinator($argID)
         $this->db->update('gsp_school',$data);
     
     }
+	
+	
+    // this is written code by jeetu
+
+
+     public function combinded_total_school() {
+        $this->load->dbutil();
+        $row = $this->Audit_started_model->combinded_total_school();
+        $name = 'registration_2018.csv';
+        force_download($name, $row);
+    }
+
+     public function combinded_startedtheaudit() {
+      $varProgress="a.progress >= '10' && a.progress <= '100' && a.complete_status ='0'";
+        $this->load->dbutil();
+        $row = $this->Audit_started_model->combinded_startedtheaudit( $varProgress);
+        $name = 'SCHOOL_THAT_STARTED_THE_AUDIT'.date('d-m-Y').'.csv';
+        force_download($name, $row);
+    }
+
+    public function combinded_completecount() {
+     $varProgress="a.progress ='100' && a.complete_status='0'";
+         $this->load->dbutil();
+         $row = $this->Audit_started_model->combinded_completecount($varProgress);
+         $name = 'SCHOOL_THAT_COMPLETED_THE_AUDIT'.date('d-m-Y').'.csv';
+     force_download($name, $row);
+    }
+
+     public function combinded_submitcount() {
+      $varProgress="a.progress = '100' && a.complete_status='1'";
+            $this->load->dbutil();
+            $row = $this->Audit_started_model->combinded_submitcount($varProgress);
+            $name = 'School_That_Submit_Audit'.date('d-m-Y').'.csv';
+        force_download($name, $row);
+    }
+
+     public function combinded_uncompletecount() {
+        $varProgress="a.progress > '5' && a.progress <= '75' && a.complete_status='0'";
+            $this->load->dbutil();
+            $row = $this->Audit_started_model->combinded_uncompletecount( $varProgress);
+            $name = 'SCHOOLS STARTED THE AUDIT BUT DID NOT COMPLETE'.date('d-m-Y').'.csv';
+        force_download($name, $row);
+    }
+
+
     
     
 }
