@@ -325,7 +325,43 @@ class Dashboard extends CI_Controller {
 	        $this->load->view('admin/includes/template', $data);
 	}
     
-	
+	public function combinded_total_school()
+        {
+        $data['main']='admin/audit/total_school_combined';
+        $data['title']='Registration 2017';
+        $data['record']=$this->Dashboard_model->combinded_total_school();
+        $this->load->view('admin/includes/template', $data);
+        }
+
+
+    public function combinded_startedtheaudit()
+		{
+			$data['main']='admin/audit/combined_started_audit';
+			$data['audit']=$this->Dashboard_model->combinded_startedtheaudit();
+			$this->load->view('admin/includes/template', $data);
+		}
+
+	public function combinded_completecount()
+	{
+		$data['main']='admin/audit/combined_complete_school';
+		$data['complete']=$this->Dashboard_model->combinded_completecount();
+		$this->load->view('admin/includes/template', $data);
+	}
+    
+	public function combinded_submitcount()
+	{
+		$data['main']='admin/audit/combined_complete_audit_submit';
+		$data['complete_submit']=$this->Dashboard_model->combinded_submitcount();
+		$this->load->view('admin/includes/template', $data);
+	}
+
+	public function combinded_uncompletecount()
+	{
+		$data['main']='admin/audit/combined_uncomplete_school';
+		$data['uncomplete']=$this->Dashboard_model->combinded_uncompletecount();
+		$this->load->view('admin/includes/template', $data);
+	}
+
 	
     
 	 
