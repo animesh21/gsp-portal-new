@@ -13,6 +13,7 @@ class Audit_started extends CI_Controller {
             redirect(base_url('admin/login'));
         }
         $this->load->model('admin/Audit_started_model');
+	$this->load->model('School_model');
 	$this->load->model(array('admin/Report','admin/Dashboard_model'));
         $this->load->helper(array('common_helper', 'form', 'download'));
         $this->load->library('form_validation');
@@ -516,12 +517,12 @@ class Audit_started extends CI_Controller {
 
         }
 
-
  }
 
     /**Get Smmary Data**/
 	/*24-04-2018*/
-	public function getSummary(){
+public function getSummary(){
+	 ini_set('memory_limit', '256M');
 	 $data['main'] = 'admin/audit/summary';
 	 $data['title'] = 'Summary';
 	 $data['School_18data']=$this->Audit_started_model->getSchool_18data();
@@ -537,11 +538,33 @@ class Audit_started extends CI_Controller {
 	 $data['uncompletecount_phase_2']=$this->Dashboard_model->getschool_start_but_not_complete_phase_2();
 	 $data['notstartcount_phase_2']=$this->Dashboard_model->getschools_not_start_the_audit_phase_2();
 	 $data['complete_audit_phase_2_count_phase_2']= $this->Dashboard_model->school_that_complete_audit_phase_2();
-	 
+
+	 /**Get Smmary Data of 2019_Phase_1 Detail**/
+
+	$data['total_school']=$this->Dashboard_model->getSchool_alldata();
+	$data['school']=$this->Dashboard_model->getSchool_18data();
+    	$data['startedtheaudit']=$this->Dashboard_model->getstartedtheaudit_19data();
+    	$data['CompletedAuditButNotSubmitted']=$this->Dashboard_model->getCompletedAuditButNotSubmitted_19data();
+    	$data['SubmittedTheAudit']=$this->Dashboard_model->getSubmittedTheAudit_19data();
+    	$data['StartedAuditButDidNotComplete']=$this->Dashboard_model->getStartedAuditButDidNotComplete_19data();
+    	$data['NotStartTheAudit']=$this->Dashboard_model->getNotStartTheAudit_19data();
+
+       /**Get Smmary Data of 2019_Phase_2 Detail**/
+
+    	$data['audit1']=$this->Dashboard_model->getschool_started_audit_phase_2();
+    	$data['Schools_pahse2'] = $this->School_model->getSchools_phase_2();
+    	$data['schoolcount']=$this->Dashboard_model->schoolCount_phase_2();
+	$data['complete_audit_phase_2_count']= $this->Dashboard_model->school_that_complete_audit_phase_2();
+	$data['completecount']=$this->Dashboard_model->getschool_that_complete_audit_phase_2();
+	$data['completecount1']=$this->Dashboard_model->getschool_that_complete_audit_phase_2_1();
+	$data['submitcount']=$this->Dashboard_model->getschool_that_submit_audit_phase_2();
+	$data['uncompletecount']=$this->Dashboard_model->getschool_start_but_not_complete_phase_2();
+	$data['notstartcount']=$this->Dashboard_model->getschools_not_start_the_audit_phase_2(); 
 
          $this->load->view('admin/includes/template', $data);
 	}
-   /**Get School Delete**/
+	
+	/**Get School Delete**/
 	/*24-04-2018*/
 	public function getSchoolDelete(){
 	 $data['main'] = 'admin/audit/delete-school';
