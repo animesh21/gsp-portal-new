@@ -312,6 +312,18 @@ class Dashboard extends CI_Controller {
         $this->load->view('admin/includes/template', $data);
     }	
 	
+	
+	public function audit_combined(){
+		ini_set('memory_limit', '256M');
+	    	$data['main']='admin/dashboard/audit_combined';
+       		$data['title']='Home | Gsp Audit 2019 Combined';
+      		$data['total_school']=$this->Dashboard_model->combinedgetSchool();
+      		$data['startedtheaudit']=$this->Dashboard_model->combinedgetSchool_startedAudit();
+     		$data['completecount']=$this->Dashboard_model->combinedgetSchool_compliteAudit();
+       		$data['submitcount']=$this->Dashboard_model->combinedgetSchool_submited();
+      		$data['uncompletecount']=$this->Dashboard_model->combinedgetSchool_not_complete();
+	        $this->load->view('admin/includes/template', $data);
+	}
     
 	
 	
