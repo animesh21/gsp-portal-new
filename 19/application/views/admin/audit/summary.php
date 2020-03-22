@@ -31,9 +31,37 @@
       <tbody>
         <tr role="row" class="odd">
           <td class="sorting_1">Phase-1</td>
-          
+          <td><?php echo $a1 =  count($total_school); ?></td>         
+          <td><?php echo $a2 =  count($startedtheaudit); ?></td>
+          <td><?php echo $a3 =  count($SubmittedTheAudit); ?></td>
+          <td><?php echo $a4 =  count($StartedAuditButDidNotComplete); ?></td>
+          <td><?php echo $a5 =  count($NotStartTheAudit); ?></td>
+          <td><?php echo $a6 =  count($CompletedAuditButNotSubmitted); ?></td>
+          <td><?php echo $a7 =  count($school); ?></td>  
         </tr>
- 
+
+        <tr role="row" class="odd">
+          <td class="sorting_1">Phase-2</td>
+          <td><?php echo $b1 =  $Schools_pahse2; ?></td>
+          <td><?php echo $b2 =  $audit1; ?></td>
+          <td><?php echo $b3 =  $submitcount; ?></td>
+          <td><?php echo $b4 =  $uncompletecount; ?></td>
+          <td><?php echo $b5 =  $notstartcount; ?></td>
+          <td><?php echo $b6 =  $completecount1; ?></td>
+          <td><?php echo $b7 =  $schoolcount; ?></td>  
+        </tr>
+
+        <tr role="row" class="odd">
+          <td class="sorting_1">Total</td>
+          <td><?php echo $a1 + $b1;?></td>
+          <td><?php echo $a2 + $b2;?></td>
+          <td><?php echo $a3 + $b3;?></td>
+          <td><?php echo $a4 + $b4;?></td>
+          <td><?php echo $a5 + $b5;?></td>
+          <td><?php echo $a6 + $b6;?></td>
+          <td><?php echo $a7 + $b7;?></td>  
+        </tr>
+       
       </tbody>
     </table><br/>
 
