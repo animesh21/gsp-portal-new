@@ -555,6 +555,122 @@ class Dashboard_model extends CI_Model {
         ->get()->result();
 	return $countDisbaled[0]->labelCount;
        }
+	
+	
+	 // compbined result of school by jeetu
+
+        public function combinedgetSchool(){
+		$this->db->where("make_school_disabled","1");
+		// $this->db->where("date_added >=","2019-03-03 00:00:00");
+        return $this->db->count_all_results('gsp_school');
+        }
+
+        public function combinedgetSchool_startedAudit() {
+		$this->db->where("date_added >=","2019-03-03 00:00:00");
+		$this->db->where('progress >=', 10);
+		$this->db->where('progress <=', 100);
+		$this->db->where('complete_status =', '0');
+		$this->db->where("make_school_disabled","1");
+		return $this->db->count_all_results('gsp_school');
+	}
+
+		public function combinedgetSchool_compliteAudit() {
+		$this->db->where("date_added >=","2019-03-03 00:00:00");
+		$this->db->where('progress =', 100);
+		$this->db->where('complete_status =', '0');
+		$this->db->where("make_school_disabled","1");
+		return $this->db->count_all_results('gsp_school');
+	}
+
+	public function combinedgetSchool_submited() {
+		$this->db->where("date_on >=","2019-06-20 00:00:00");
+		$this->db->where('status =', '1');
+		$this->db->group_by('school_id');
+		return $this->db->count_all_results('gsp_aduit_submitted');		  
+	}
+
+	public function combinedgetSchool_not_complete() {
+		$this->db->where("date_added >=","2019-03-03 00:00:00");
+		$this->db->where('progress >', '5');
+		$this->db->where('progress <=', '75');
+		$this->db->where("make_school_disabled","1");	 
+		$this->db->group_by('id');
+		return $this->db->count_all_results('gsp_school');		  
+	}
+
+	public function combinded_total_school() {
+// 	    $this->db->where('date_added >=', '2019-11-12 00:00:00');
+        return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
+                        ->from('gsp_school AS a')
+                        ->join('states AS b', 'a.state=b.id', 'left')
+			            ->join('cities AS c', 'a.district=c.id', 'left')
+			            // ->where('a.complete_status=', '0')
+						->where("a.make_school_disabled","1")
+                        ->order_by('a.id', 'desc')
+                        ->group_by('a.id')
+                        ->get()->result();
+    }
+
+
+    public function combinded_startedtheaudit()
+	{
+		$this->db->where("a.make_school_disabled","1");
+		$this->db->where("a.date_added >=","2019-03-03 00:00:00");
+		return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
+                        ->from('gsp_school AS a')
+                        ->join('states AS b', 'a.state=b.id', 'left')
+						->join('cities AS c', 'a.district=c.id', 'left')
+						->where('progress >=', 10)
+						->where('progress <=', 100)
+						->where('a.complete_status =', '0')
+						->order_by('a.id', 'desc')
+						->get()->result();
+	}
+
+
+	public function combinded_completecount()
+	{		
+		$this->db->where("a.make_school_disabled","1");
+		$this->db->where("a.date_added >=","2019-03-03 00:00:00");
+		return $this->db->select('a.*, b.name AS state_name,c.name As district_name, d.password')
+					->from('gsp_school AS a')
+					->join('states AS b', 'a.state=b.id', 'left')
+					->join('cities AS c', 'a.district=c.id', 'left')
+					->join('gsp_user AS d', 'a.userid=d.id', 'left')
+					->where('a.complete_status','0')
+                    ->where('a.progress',100)
+					->get()->result();		
+	}
+
+
+	public function combinded_submitcount() {
+// 	$this->db->where("a.make_school_disabled","1");	
+	return $this->db->select('a.*,b.name AS state_name,c.name As district_name')
+        ->from('gsp_school AS a')
+        ->join('states AS b', 'a.state=b.id', 'left')
+        ->join('cities AS c', 'a.district=c.id', 'left')
+        ->join('gsp_aduit_submitted AS e','a.userid=e.userid', 'left')
+        ->where('e.status=','1')
+        ->where('e.date_on >=', '2019-06-20 00:00:00')
+        ->group_by('a.id')
+        ->get()->result();
+   
+	}
+
+	public function combinded_uncompletecount()
+	{	$this->db->where('a.date_added >=', '2019-03-03 00:00:00');
+		$this->db->where("a.make_school_disabled","1");
+		return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
+					->from('gsp_school AS a')
+					->join('states AS b', 'a.state=b.id', 'left')
+					->join('cities AS c', 'a.district=c.id', 'left')
+					->where('progress >', 5)
+					->where('progress <=', 75)
+					->where('a.complete_status =', '0')
+					->order_by('a.id', 'desc')
+					->get()->result();
+	}
+	
 	 
 	
 	
