@@ -503,6 +503,7 @@ class Dashboard_model extends CI_Model {
         ->get()->result();
       }
 	 
+	
 	public function getStartedAuditButDidNotComplete_19data(){
 	$this->db->where("a.date_added <=","2019-11-10 00:00:00");
 	$this->db->where("a.make_school_disabled","1");	   
