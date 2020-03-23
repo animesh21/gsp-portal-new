@@ -567,7 +567,7 @@ class Dashboard_model extends CI_Model {
         }
 
         public function combinedgetSchool_startedAudit() {
-		$this->db->where("date_added >=","2019-03-03 00:00:00");
+		//$this->db->where("date_added >=","2019-03-03 00:00:00");
 		$this->db->where('progress >=', 10);
 		$this->db->where('progress <=', 100);
 		$this->db->where('complete_status =', '0');
