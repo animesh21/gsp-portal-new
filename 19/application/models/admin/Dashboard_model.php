@@ -339,7 +339,7 @@ class Dashboard_model extends CI_Model {
 					->order_by('a.id', 'desc')
 					->get()->result(); */
 		$this->db->where("a.make_school_disabled","1");
-		$this->db->where('a.date_added >=', '2019-11-12 00:00:00');
+		//$this->db->where('a.date_added >=', '2019-11-12 00:00:00');
 		return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
 					->from('gsp_school AS a')
 					->join('states AS b', 'a.state=b.id', 'left')
@@ -352,7 +352,7 @@ class Dashboard_model extends CI_Model {
 	}
 	
 	public function school_start_but_not_complete_phase_2()
-	{	//$this->db->where('a.date_added >=', '2019-11-12 00:00:00');
+	{	$this->db->where('a.date_added >=', '2019-11-12 00:00:00');
 		$this->db->where("a.make_school_disabled","1");
 		return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
 					->from('gsp_school AS a')
