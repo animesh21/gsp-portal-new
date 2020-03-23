@@ -591,7 +591,7 @@ class Dashboard_model extends CI_Model {
 	}
 
 	public function combinedgetSchool_not_complete() {
-		$this->db->where("date_added >=","2019-03-03 00:00:00");
+		//$this->db->where("date_added >=","2019-03-03 00:00:00");
 		$this->db->where('progress >', '5');
 		$this->db->where('progress <=', '75');
 		$this->db->where("make_school_disabled","1");	 
