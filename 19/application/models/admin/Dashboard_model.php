@@ -552,7 +552,7 @@ class Dashboard_model extends CI_Model {
          $countDisbaled=$this->db->select("count('id') AS labelCount")
         ->from('gsp_school')
 	->like("make_school_disabled","0")
-	->where("date_added <=","2019-11-10 00:00:00")
+	//->where("date_added <=","2019-11-10 00:00:00")
         ->get()->result();
 	return $countDisbaled[0]->labelCount;
        }
