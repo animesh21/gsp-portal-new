@@ -621,11 +621,21 @@ class Report extends CI_Model {
 		{
 			 $this->db->where("make_school_disabled","1");
 			return $this->db->select('*')
-			         ->from('gsp_school')
+			->from('gsp_school')
 			->where('state',$state)
-		   ->where("progress =",'100')
+		        ->where("progress =",'100')->get()->result();			
+		}
+	
+		public function uncompleteparticipationBystate($state)
+		{
+			$this->db->where("make_school_disabled","1");
+			return $this->db->select('*')
+			->from('gsp_school')
+			->where('state',$state)
+		    ->where("progress =",'100')
+		    ->where("complete_status =",'0')
 		    ->get()
-					 ->result();
+			->result();
 			
 		}
 		
@@ -683,6 +693,21 @@ class Report extends CI_Model {
 					->result();
 			
 		}
+	
+		public function uncompleteparticipationBystatesecondary($state)
+		{
+			return $this->db->select('a.*')
+			        ->from('gsp_school As a')
+				    ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
+			        ->where('a.state',$state)
+				    ->where("a.progress =",'100')
+				    ->where("a.complete_status =",'0')
+				    ->where('b.questionid','Q1G2')
+                    ->where('b.answer >=',6)
+					->get()
+					->result();
+			
+		} 
 		
 		public function notstartparticipationBystatesecondary($state)
 		{
@@ -738,6 +763,22 @@ class Report extends CI_Model {
 					->result();
 			
 		}
+	
+		public function uncompleteparticipationBystateprimary($state)
+		{
+			return $this->db->select('a.*')
+			        ->from('gsp_school As a')
+				    ->join('gsp_answers as b', 'a.userid=b.userid', 'left')
+			        ->where('a.state',$state)
+			        ->where("a.complete_status =",'0')			        
+				    ->where("a.progress =",'100')
+				    ->where('b.questionid','Q1G2')
+                    ->where('b.answer <',6)
+					->get()
+					->result();
+		      // echo $this->db->last_query();exit;
+			
+		}
 		
 		public function notstartparticipationBystateprimary($state)
 		{
@@ -778,6 +819,18 @@ class Report extends CI_Model {
 		public function completeparticipationBystateall()
 		{
 			$this->db->where("complete_status","1");
+			 $this->db->where('a.make_school_disabled','1'); 
+			return $this->db->select('a.*')
+			        ->from('gsp_school As a')
+				   ->where("a.progress=",'100')
+				   ->get()
+				   ->result();
+			
+		}
+	
+		public function uncompleteparticipationBystateall()
+		{
+			$this->db->where("complete_status","0");
 			 $this->db->where('a.make_school_disabled','1'); 
 			return $this->db->select('a.*')
 			        ->from('gsp_school As a')
@@ -841,6 +894,20 @@ class Report extends CI_Model {
 					->result();
 			
 		}
+	public function uncompleteparticipationBystateallsecondary()
+		{
+			return $this->db->select('a.*')
+			        ->from('gsp_school As a')
+					->join('gsp_answers as b', 'a.userid=b.userid', 'left')
+				     ->where("a.progress =",'100')
+				     ->where("a.complete_status =",'0')
+				    ->where('b.questionid','Q1G2')
+                    ->where('b.answer >=',6)
+				    ->where('a.make_school_disabled','1')
+				   ->get()
+					->result();
+			
+		}
 		
 		public function notstartparticipationBystateallsecondary()
 		{
@@ -893,6 +960,22 @@ class Report extends CI_Model {
 				      ->where("a.progress =",'100')
 				     ->where('b.questionid','Q1G2')
                                      ->where('b.answer <',6)
+				     ->where('a.make_school_disabled','1')
+				     ->get()
+					->result();
+			
+		}
+	
+	
+	public function uncompleteparticipationBystateallprimary()
+		{
+			return $this->db->select('a.*')
+			        ->from('gsp_school As a')
+				  	->join('gsp_answers as b', 'a.userid=b.userid', 'left')
+				    ->where("a.progress =",'100')
+				    ->where('a.complete_status','0')
+				    ->where('b.questionid','Q1G2')
+                    ->where('b.answer <',6)
 				     ->where('a.make_school_disabled','1')
 				     ->get()
 					->result();
