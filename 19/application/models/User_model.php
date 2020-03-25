@@ -200,7 +200,7 @@ class User_model extends CI_Model
     public function getStates()
     {
         $states = array('' => 'Select State');
-        $data = $this->db->get_where('states', array('country_id =' => '1'))->result();
+        $data = $this->db->select('id,name')->from('states')->order_by('name')->get()->result();
         foreach ($data as $d) {
             $states[$d->id] = $d->name;
         }
