@@ -7,6 +7,7 @@
   <div class="col-lg-5">
     <div class="input-group">
       <h5>States</h5>
+      <?php sort($states); ?>
       <?php echo form_dropdown('state', $states, $this->input->post('state'), array('class' => 'form-control', 'id' => 'country-select')); ?> </div>
   </div>
   <div class="col-lg-5">
@@ -148,7 +149,7 @@
             },
             series: [{
                 colorByPoint: true,
-                data: [{name: 'Audit Not Started' ,color:'#fc3300', y: <?php echo count($total_notstarted_audit_1); ?>},{name: 'Audit Started' ,color:'#fcfc00', y: <?php echo count($total_started_audit_1); ?>}, {name: 'Audit Completed' ,color:'#00ae4f', y:  <?php echo count($completed_1); ?>}]
+                data: [{name: 'Audit Not Started' ,color:'#fc3300', y: <?php echo count($total_notstarted_audit_1); ?>},{name: 'Audit Started' ,color:'#fcfc00', y: <?php echo count($total_started_audit_1); ?>}, {name: 'Audit Submited' ,color:'#00ae4f', y:  <?php echo count($completed_1); ?>}, {name: 'Audit Completed' ,color:'#1826FB', y:  <?php echo count($unompleted_audit) ; ?>}]
             }]
         });
     </script>
