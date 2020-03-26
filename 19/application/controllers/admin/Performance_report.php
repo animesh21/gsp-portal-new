@@ -151,7 +151,13 @@ class Performance_report extends CI_Controller {
    public function PdfById($argsID) {
         $this->config->load('array_config');
         $data['performance'] = $this->Performance_model->getDataById($argsID);
-        $html=$this->load->view('admin/performance_report/Performance', $data,true);
+        $userId = getUserId($argsID);
+        $rank   = getFiled('Q1G2',$userId);
+           if($rank <= 5){
+             $html=$this->load->view('admin/performance_report/Performance_primary', $data,true);
+           }else{
+             $html=$this->load->view('admin/performance_report/Performance', $data,true);           	
+           }
 		    $this->load->library('dompdf_lib');
 		    $this->dompdf->set_paper("A4");
 			$this->dompdf->load_html($html);
