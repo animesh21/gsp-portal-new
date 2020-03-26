@@ -54,7 +54,7 @@ h2 span {
   <div class="cover">
     <figure class="banner"><img src="assets/img/performance/title-page.jpg"></figure>
     <div class="report-title">
-      <h4>GSP Audit 2018-2019</h4>
+      <h4>GSP Audit 2019-2020</h4>
       <h3>Performance Report</h3>
       <p><strong><?php echo $performance[0]->name ?></strong></p>
       <p><strong><?php echo $performance[0]->city; ?>, <?php echo $performance[0]->state_name; ?></strong></p>
@@ -108,55 +108,67 @@ h2 span {
 <div class="introduction page-break-before" style="line-height: 15px;">
     <h2 class="intro-heading">
       <label>Introduction</label>
-      <span>Green Schools Programme Audit 2018-2019</span></h2>
+      <span>Green Schools Programme Audit 2019-2020</span></h2>
     <p>Dear Principal,</p>
-    <p>We thank you for taking part in GSP Audit 2018-2019. We hope the exercise helped to make your school resource efficient and to inculcate green practices in your students. 
+    <p>We thank you for taking part in the GSP Audit 2019-20. We hope the exercise helped to make your school resource efficient and inculcate green practices in your students.
     </p>
-    <p> As you are aware, the Green Schools Programme (GSP) takes the students outside the classroom and helps them learn with joy. GSP has been built on the twin objectives of "Learning by doing" and "making change work" to help schools audit the consumption of natural resources within their premises, and assess themselves as environment managers. 
+    <p>As you are aware, the Green Schools Programme (GSP) takes the students outside the classroom and helps them learn with joy. GSP has been built on the twin objectives of ‘learning by doing’ and making change work to help schools audit the consumption of natural resources within their premises and assess themselves as environment managers.
 </p>
-    <p> The participation of schools from across the country has gone up this year. We were overwhelmed with the response we received from across India. 5000+ schools participated in the audit this year, and around 1700 schools submitted the Audit - a jump of 42 per cent, when compared to last year. 
+    <p>This year, more than 1700 schools from across the country submitted the audit. The GSP national environmental report for schools looks promising—1389 schools segregate waste at source, 962 schools practice composting and 631 schools give their e-waste to authorized dealers. 818 schools harvest rainwater, half of these recharge the groundwater and 220 school store for use. <strong> BUT </strong> 79 per cent schools are dependent on ground water. The number of schools burning waste has reduced from last year but 18 per cent schools still burn waste. More than 300 schools sell packaged food and more than 550 schools distribute packaged food as refreshments during school events. There is a long way to go!
  </p>
-    <p> This year's audit results also revealed that of the 1700 schools that submitted their audit reports, 1356 schools segregate waste at source, 825 schools practice composting, both natural and mechanical and 648 schools send their e-waste to authorised dealer/ dismantler/ manufacturer. We know that 717 schools have RWH, 202 store water, 371 schools recharge groundwater. <b>BUT 135 schools use chemical pesticides, 405 schools burn waste while 690 schools distribute processed, packaged foods during school events! Clearly more needs to be done.</b> 
+    <p>You may have noticed that there is a focus area in the audit every year, which means there are detailed questions asked for the section. For the last few years, water and waste have been the focus areas. This year, in addition to water and waste, energy section was detailed with emphasis on renewable sources of energy. 218 schools reported the use of solar energy, 21 schools reported using biogas and eight reported using wind energy.</b> 
 </p>
 
 <p>
-  The performance report of the school is based on the data submitted by the schools. Therefore, the school needs to make sure that the data entered is correct to the best of their knowledge. We hope that as the school continues to audit their consumption every year, they will refine the data collection process and complete the report with full honesty. We hope that your students immersed themselves in the activities and learnt about energy efficiency, rainwater harvesting, waste segregation at source, non-polluting modes of transport, eating healthy, different plant and animal species etc. The performance report will give schools the baseline of the Green status of the school. It is an indicator of the progress that the schools make on the environment front year-on-year, we hope that your school continues to participate each year, and build a generation of environmentally responsible citizens.
+  We hope the performance report, based on the data submitted by the school, will be useful to further strengthen existing practices and introduce new sustainable practices. For GSP Audit 2020, we request the school leadership as well as the teachers heading the audit sections to take advantage of the audit in raising awareness on one of the most challenging crises of our time–climate change.  Since the audit already tracks all the critical elements (mobility, energy consumption, food consumption, water and sanitation and solid waste management) that directly or indirectly contribute to global heating, GSP Audit 2020 will reinforce the climate change linkages while retaining its original format. <strong>Stay tuned for further details!</strong>
 </p>
-    <p> The report will help in assessing the initiatives undertaken by your school and move towards filling the gaps before next GSP Audit. Our focus will be on <b>measuring the change over the previous years' performance.</b> The school's actions for bettering the environment and sensitivity towards environment will be looked at from the baseline year (the year the school did the Audit for the first time). Like last year, <b>GSP concentrates more on the measurable change made over the years in a single school's green practices rather than creating a competitive environment.</b> And the degree of change will be appreciated as well as recognized. To find out how some of our schools have brought about change, please take a look at our new publication <a href="https://csestore.cse.org.in/index.php/books/schools-and-environment/paving-the-path-a-selection-of-best-environmental-practices-in-schools-across-india.html" style="color:blue;">'Paving the Path'</a> available at CSE store -  <a href="https://bit.ly/2Sh1pBs" style="color:blue;">https://bit.ly/2Sh1pBs</a>.
+<p>
+  As we wind down GSP Audit 2019, please note the following: 
 </p>
-    <p> We have dispatched the school certificate, and if you do not receive it by April 15, 2019, please email or call (details given below). Hope you have downloaded the digital certificates of all those whose names were provided online. </p>
-    <p> Hope, that in coming years, your school continues to participate and push the envelope for change. As Sunita Narain, Director-General, CSE, said: <m style="font-style: italic;"> The first task of being the change is to become aware of what we do - benchmark how much water, energy we use; waste we generate. It is only then that we can transform our ways so that we can use as little and waste as little as possible.</m> </p>
 
-    <p>The GSP Audit 2019 will open by mid-year, and we look forward to receiving your Audit report by the deadline!</p>
-    <p> Warmly, </p>
-    <p> The GSP team</p>  
-  <p><a href="http://www.greenschoolsprogramme.org/" style="color: blue;">support@greenschoolsprogramme.org</strong></p>
-  <p>Ph: 011 40616000, 29955124 Ext 300;</p>
+ <ol style="list-style-type: japanese-formal !important;"> 
+           
+    <li style="font-weight: 400; font-size: 13px;">The performance report will help in assessing the initiatives undertaken by your school and move towards filling the gaps before the next GSP Audit.</li> 
+    <li style="font-weight: 400; font-size: 13px; margin-top:6px;">Hope you have downloaded the response report and digital certificates of all those whose names were provided online.</li>    
+    <li style="font-weight: 400; font-size: 13px; margin-top:6px;">Make sure that the data entered is correct for GSP Audit 2020. We hope that as the school continues to audit their consumption every year, they will refine the data collection process and complete the report with full honesty. </li>
+    <li style="font-weight: 400; font-size: 13px; margin-top:6px;">Our focus will be on <strong> measuring the change over the previous years’ performances.</strong> And the degree of change will be appreciated as well as recognized.</li>
+    <li style="font-weight: 400; font-size: 13px; margin-top:6px;">School certificates have been dispatched by speed post, and if you do not receive it <strong> by April 15, 2020,</strong> please email or call (details given below). </li>
+    <li style="font-weight: 400; font-size: 13px; margin-top:6px;">To know more about the sections, please refer to the knowledge bank on the GSP website: <a href="https://www.greenschoolsprogramme.org/" style="color:blue;">www.greenschoolsprogramme.org</a>. There is some interesting material on Energy available on the <a href="https://www.greenschoolsprogramme.org/knowledge-bank/energy/gsp-solar-in-schools-initiative-2019-20/" style="color:blue;">GSP website</a></li>
+  </ol>
+
+
+  <p>
+      With time running out in a climate-risked world, schools are urged to bring to the attention of youth the urgency, causes and consequences of climate change in a manner that they can relate to and act upon. Only when students make informed choices to make transformative changes in their lifestyle outside of school hours, too, to reduce their emissions related to mobility, energy, excessive consumption, <i>etc</i>, will collective efforts to raise committed environmental actors succeed.
+</p>
+
+  <p>
+    We hope that in the coming years, your school continues to participate and push the envelope for change. 
+  </p>
+
+  <p>
+    The GSP Audit 2020 will open by July 2020, and we look forward to receiving your audit report by the deadline!
+  </p>
+
+    <p>Warmly,</p>
+    <p>The GSP team</p>  
+  <p><a href="http://www.greenschoolsprogramme.org/" style="color: blue;">support@greenschoolsprogramme.org</strong></a></p>
+  <p>Ph: 011 40616000, 29955124 Ext 300, 321</p>
     <div class="footer">
       <p>Performance Report | <?php echo $performance[0]->name; ?></p>
     </div>
-
-
-
-
-
+ 
   
 
 <div class="introduction page_break" style="line-height: 15px; font-weight: 400;">
 
-<p><strong>School Rating:&nbsp;
+ 
         <?php $percentage=getSchoolRating($schoolUserID); ?>
         <?php
             $percentage= ceil($percentage) ;
         
       if($percentage>=70){?>
        
-
-       <p class='label label-success' style='background:green; color:black;'>Green</p>
-
-       <br><br><br><br>
-
-      <p style="font-weight: 400;">Congratulations!  Based on the analysis of the sustainable practices adopted by your school, your school has been rated Green.  Do continue your efforts and sustain the momentum - being continuously Green is not easy and we have noticed that when a school (or the students and teachers) drops its guard or fail to provide accurate data, they slide to a yellow or orange or red category. </p>
+      <p style="font-weight: 400; padding:10px; color: black; background-color: #92d050;">Congratulations! Based on the analysis of the sustainable practices adopted by your school, your school has been rated Green. Do continue your efforts and sustain the momentum - being continuously Green is not easy and we have noticed that when a school (or the students and teachers) drops its guard or fail to provide accurate data, they slide to a yellow or orange or red category. Do ensure your school continues to adhere (but not limited to) to the following, and push the envelope for change: </p>
          <p style="font-weight: 400;"> Do ensure your school continues to adhere (but not limited to) to the following, and push the envelope for change: </p>
          <ol style="list-style-type: japanese-formal !important;">
 
@@ -174,18 +186,11 @@ h2 span {
   <br/><br/>
  <p style="font-weight: 400;">Look forward to your participation and improved performance, this year! </p>
 
-
-
-
+ 
      <?php  }elseif($percentage>=50 && $percentage<=69.9){?>
       
 
-      
-
-       <p class='label label-warning' style='background:yellow; color:black;'>Yellow</p> 
-      <br><br><br><br>
-
-        <p style="font-weight: 400;">Congratulations! Your school has been rated Yellow and our analysis of the practices and data provided, reveal that your school is managing the resources within the school's premises judiciously, BUT there is scope for improvement. We have also noticed that a few schools that were rated Green in the previous year may have been rated Yellow due to submission of inaccurate data, change in green practices, etc. Some of the practices recommended for a Green rating (but not limited to) are:  </p>
+        <p style="font-weight: 400; padding:10px; color: black; background-color: yellow">Congratulations! Your school has been rated Yellow and our analysis of your school data and practices, reveals that your school is managing the resources within the school premises judiciously, BUT there is scope for improvement. We have also noticed that a few schools that were rated Green in the previous year may have been rated Yellow due to submission of inaccurate data, change in green practices, etc. Some of the practices recommended for a Green rating (but not limited to) are:</p>
 
         <ol style="list-style-type: japanese-formal !important;">
          
@@ -209,16 +214,11 @@ h2 span {
 
 
      <?php  }   
-      elseif($percentage>=35 && $percentage<=49.9){ ?>
+      elseif($percentage>=35 && $percentage<=49.9){ ?>       
 
-       <p class='label label-success' style='background:orange; color:black;'>Orange</p>
-
-      
-      <br><br><br><br>
-
-        <p style="font-weight: 400;"> It's good that your school measured the consumption of resources. Our analysis of the practices and data provided reveal that you are missing some critical action points. It could be that your school do undertake these practices, but have not provided the data when submitting the audit.    </p>
+        <p style="font-weight: 400; padding:10px; color: black; background-color: #ffa500;"> It is good that your school measured the consumption of resources. Our analysis of  your school data and practices reveals that you are missing some critical action points. It could be that your school does undertake these practices, but has not provided the data when submitting the audit. Some of the practices recommended for a Green rating (but not limited to) are:</p>
          
-         <p style="font-weight: 400;"> Some of the practices recommended for a Green rating (but not limited to) are: </p>
+         <p style="font-weight: 400;">Some of the practices recommended for a Green rating (but not limited to) are: </p>
 
          <ol style="list-style-type: japanese-formal !important;">
 
@@ -239,11 +239,8 @@ h2 span {
 
      <?php }   
       elseif($percentage<=34.9){ ?>
-      <p class='label label-danger'>Red</p>
-
-     <br><br><br><br>
-
-        <p style="font-weight: 400;">It's good that your school measured the consumption of resources. Our analysis of the practices and data provided reveal that you are missing some critical action points. It could be that your school do undertake these practices, but have not provided the data when submitting the audit.   </p>
+     
+       <p style="font-weight: 400; padding:10px; color: black; background-color:red;">It is good that your school measured the consumption of resources. Our analysis of  your school data and practices reveals that you are missing some critical action points. It could be that your school does undertake these practices, but has not provided the data when submitting the audit. Some of the practices recommended for a Green rating (but not limited to) are:</p>
          
          <p style="font-weight: 400;"> Some of the practices recommended for a Green rating (but not limited to) are:  </p>
 
@@ -270,15 +267,15 @@ h2 span {
       }
      
     ?>
-        </strong></p>
+       
 
 </div>
 
   
     <h2 class="intro-heading">
       <label>Introduction</label>
-      <span>Green Schools Programme Audit 2018-2019</span></h2>
-    <p>A snapshot GSP Audit 2018-2019 is as follows:</p>
+      <span>Green Schools Programme Audit 2019-2020</span></h2>
+    <p>A snapshot GSP Audit 2019-2020 is as follows:</p>
     <table width="100%" class="intro-table" cellspacing="0">
       <tr>
         <th width="22%">Rating</th>
@@ -288,22 +285,22 @@ h2 span {
       <tr>
         <td>GREEN</td>
         <td>70% & above</td>
-        <td>71</td>
+        <td>172</td>
       </tr>
       <tr>
         <td>YELLOW</td>
         <td>Between 50-69.9%</td>
-        <td>208</td>
+        <td>683</td>
       </tr>
       <tr>
         <td>ORANGE</td>
         <td>Between 35-49.9% </td>
-        <td>352</td>
+        <td>756</td>
       </tr>
       <tr>
         <td>RED</td>
         <td>Below 34.9%</td>
-        <td>69</td>
+        <td>93</td>
       </tr>
     </table>
     <figure> <img  src="assets/img/performance/categories.jpg"> </figure>
@@ -313,33 +310,35 @@ h2 span {
   </div>
   <div class="air" style="line-height: 14px;">
     <h2>
-      <figure><img src="assets/img/performance/Air_logo.jpg"></figure>
-      <label>Air</label>
-      <span>Green Schools Programme Audit 2018-2019</span></h2>
-    <p>As per the latest study by Indian Council on Clean Transportation (ICCT), vehicular tailpipe emissions from on-road diesel vehicles are responsible for approximately 181,000 premature deaths in India. It has adverse effects on children, specifically. It has been found that children in polluted environment grow up with smaller lungs.</p>
-    <p>Sources of air pollution are many and diverse. But none are as lethal as vehicles as they are responsible for very high exposure. Vehicular emissions take place in the breathing zone of people. Experts say that those who live or work in close proximity to heavily travelled roadways are subject to high levels of exposure. No wonder that during the past few years, we have been desperately looking out for tools to assess the problem and find ways to combat the menace.
+      <figure><img src="assets/img/performance/Air.jpg"><li style="font-weight: bold; margin-left:35px">Air</li></figure>
+      <label > </label>
+
+      <span>Green Schools Programme Audit 2019-2020</span></h2>
+    <p>Air pollution is responsible for close to 13 per cent of deaths in India and its burden is highest in northern states of Delhi, Punjab, Uttar Pradesh and Haryana. In fact, an average Indian will live 1.7 years longer if the country is able to clean its air.</p>
+    <p>Air pollution has adverse effects on children, specifically. It has been found that children in polluted environment grow up with smaller lungs. Sources of air pollution are many and diverse. But none are as lethal as vehicles because they are responsible for very high exposure. Vehicular emissions take place in the breathing zone of people. Experts say that those who live or work in close proximity to heavily travelled roadways are subject to high levels of exposure. No wonder that during the past few years, we have been desperately looking out for tools to assess the problem and find ways to combat the menace.
+   </p>
+   <p>To know more about GSP’s initiative on air pollution and explore the resource material, please go to the <a href="https://www.greenschoolsprogramme.org/knowledge-bank/gsp-air-pollution-seminar-2019-20/" style="color:blue;">GSP website.</a>
    </p>
     <section class="remember">
       <h3>Remember:</h3>
-      <ul>
-        <li> &bull; Your school can make an impact and meanwhile, ensure your surroundings to have cleaner air through opting for carpooling and shifting to CNG run vehicles, if CNG is available in your area (CNG is a cleaner fuel). </li>
-<li>&bull;  Try and motivate most of the permanent population to use non-polluting mode of transport such as walking or cycling, or use a sustainably motorized vehicles such as buses, public transport. Students in several schools have come up with new and innovative ways to demotivate the school population to use private vehicles and incentivize them to use public transport or car pool. </li>
-<li>&bull;  Practices to achieve cleaner air would bear little result without attempts to ensure that there is circulation of fresh air. Fresh air keeps the mind and body healthy which helps students to concentrate better and be alert. The total window-floor ratio of a class-room should therefore, be more than at least five per cent. 
-</li>        
-      </ul>
+<ol style="list-style-type: japanese-formal !important;">
+<li>Your school can make an impact and ensure cleaner air in the surroundings by opting for carpooling and shifting to CNG run vehicles, if CNG is available in your area (CNG is a cleaner fuel).</li>
+<li>Encourage most of the permanent population to use non-polluting modes of transport such as walking or cycling, or use sustainable motorized vehicles such as buses and other public transport. Students in several schools have come up with new and innovative ways to discourage the school population to use private vehicles and incentivize them to use public transport or car pool.</li>
+<li>Practices to achieve cleaner air will bear little result without attempts to ensure that there is circulation of fresh air. Fresh air keeps mind and body healthy, which helps students concentrate better and stay alert. The total window-floor ratio of a classroom should therefore be more than at least five per cent.</li>        
+      </ol>
     </section>
     <div class="description">
       <h3>Your School's Performance</h3>
       <?php
-                $total_air_points = number_format(getAirPoints($performance[0]->userid), 2);
+                 $total_air_points = number_format(getAirPoints($performance[0]->userid), 2);
                 if ($total_air_points == 12)
-                    $point_performance_msg_a = "Your school fulfils all the norms of Air Quality check. Overall, school has done very well in air section.  ";
+                    $point_performance_msg_a = "Your school fulfils all the norms of Air Quality check. Overall, the school has done very well in the Air section.";
                 elseif ($total_air_points >= 9 && $total_air_points < 12)
-                    $point_performance_msg_a = "Your school fulfils almost all the norms of Air Quality check. You can improve by considering the recommendations through the assessment below.  Overall, school has done well in air section.";
+                    $point_performance_msg_a = "Your school fulfils almost all the norms of Air Quality check. You can improve further by considering the recommendations provided in the assessment below.  Overall, the school has done well in the Air section.";
                 elseif ($total_air_points < 9 && $total_air_points >= 5)
-                    $point_performance_msg_a = "Your school fulfils few norms of Air Quality check. You can improve by considering the recommendations through the assessment below.  Overall, school has done average in air section.";
+                    $point_performance_msg_a = "Your school fulfils only a few norms of Air Quality check. You can improve by considering the recommendations provided in the assessment below.  Overall, the school has done average in the Air section. ";
                 elseif ($total_air_points < 5)
-                    $point_performance_msg_a = "Your school fulfils very few norms of Air Quality check. You can improve by considering the recommendations through the assessment below.  Overall, your school needs to improve the Air Quality.";
+                    $point_performance_msg_a = "Your school fulfils less than average norms of Air Quality check. You can improve by considering the recommendations provided in the assessment below.  Overall, your school needs to increase efforts to improve its Air Quality. ";
                 ?>
       <p><?php echo $point_performance_msg_a ?></p>
     </div>
@@ -361,13 +360,19 @@ h2 span {
       ?>
             <h4><?php echo $view_avg; ?> % Average WFR</h4>
             <?php
-                                if ($view_avg < 5) {
-                                    $window_floor_msg = "Your window-floor ratio is less than five per cent. It suggests that your school does not fulfil the oxygen requirement of the school community. If possible, consider increasing the window-floor ratio by providing more openings for better air circulation. Please note that this result is from the sample you have provided.";
-                                } else if ($view_avg >= 5 && $view_avg < 10) {
-                                    $window_floor_msg = "Your window-floor ratio is between five-10 per cent. It suggests that your school fulfills the oxygen requirement of the community. Please note that this result is from the sample you have provided.";
-                                } elseif ($view_avg >= 10) {
-                                    $window_floor_msg = "Your window-floor ratio is more than ten per cent. It suggests that your school fulfills the oxygen requirement of the community by providing more openings for better air circulation. Please note that this result is from the sample you have provided.";
+                                if ($view_avg > 50) {
+                                    $window_floor_msg = "The window-floor ratio of the school is more than 50 per cent, which is quite high. It suggests that either the data has been incorrectly noted or there has been some mistake in feeding the data in the Audit. Nonetheless, we understand that your school fulfils the oxygen requirement for the school community by providing more openings for better air circulation. Please note that this result is generated on the basis of the sample provided in the audit.";
                                 }
+                                elseif ($view_avg > 10) {
+                                    $window_floor_msg = "Your school's window-floor ratio is more than ten per cent. It suggests that your school fulfils the oxygen requirement for the school community by providing more openings for better air circulation. Please note that this result is generated on the basis of the sample provided in the audit.";
+                                }
+                                else if ($view_avg >= 5) {
+                                    $window_floor_msg = "The window-floor ratio of the school is between five and ten per cent. It suggests that your school fulfils the oxygen requirement for the school community. Please note that this result is generated on the basis of the sample provided in the audit.";
+                                } 
+                                elseif ($view_avg < 5) {
+                                    $window_floor_msg = "The window-floor ratio of the school is less than five per cent. It suggests that your school does not fulfil the oxygen requirement for the school community. If feasible, consider increasing the window-floor ratio by providing more openings in classrooms for better air circulation. Please note that this result is generated on the basis of the sample provided in the audit.";
+                                } 
+                                
                                 ?>
             <p><?php echo $window_floor_msg;} ?></p>
           </div>
@@ -383,23 +388,23 @@ h2 span {
                                     switch ($data) {
                                         case 1:
                                             $ownership = "School does not use or own vehicles";
-                                            $ownership_msg = "This is a very good practice. Some schools do not have their own buses, but hire from a transport contractor. Your school's data indicates that students, teaching staff and others are using sustainable modes of transport to commute to school and back.";
+                                            $ownership_msg = "This is a very good practice. Some schools do not have their own buses, but hire from a transport contractor. Your school's data indicates that students, teaching staff and others are using sustainable modes of transport to commute between the school and their houses. ";
                                             break;
                                         case 2:
                                             $ownership = "Operator-owned vehicles";
-                                            $ownership_msg = "This is a good practice. Your school does not have their own buses, but have an operator-based network. This indicates that students, teaching staff and others are using sustainable modes of transport to commute to school and back. ";
+                                            $ownership_msg = "This is a good practice. Your school does not own buses but has an operator-based network. This indicates that students, teaching staff and others are using sustainable modes of transport to commute between the school and their houses. ";
                                             break;
                                         case 3:
                                             $ownership = "School-owned vehicles";
-                                            $ownership_msg = "This is not an ideal situation as it is better for schools to hire buses rather then owning them. Sharing buses with an operator is recommended.";
+                                            $ownership_msg = "This is not an ideal situation as it is better for schools to hire buses from a transport contractor rather than to own them. Sharing buses with an operator is recommended.";
                                             break;
                                         case 4:
                                             $ownership = "A combination of school-owned and operator-owned vehicles";
-                                            $ownership_msg = "Good that your school uses 'operator owned' vehicles. It will be ideal if you can reduce the number of school-owned vehicles, and move to operator-owned. Hope your school has enough space within the school premises to park the vehicles owned by  the school.";
+                                            $ownership_msg = "It is good that your school uses operator-owned vehicles in addition to the ones owned by the school. It will be ideal if you can reduce the number of school-owned vehicles and transition to operator-owned completely. It is recommended that you ensure that the school has enough space to park the school-owned vehicles within the premises . ";
                                             break;
                                         case 5:
                                             $ownership = "Hired vehicles (JNV schools)";
-                                            $ownership_msg = "This is not a ideal situation. It will be ideal to move to operator-owned vehicles. Hope your school has enough space within the school premises to park the hired vehicles ";
+                                            $ownership_msg = "This arrangement is not ideally recommended, especially if there is dearth of parking space. It will be ideal for the school to move to operator-owned vehicles. Please ensure that the school has enough space to park the hired vehicles within the school premises.";
                                             break;
                                         default :
                                             $ownership = "No Answer";
@@ -418,9 +423,9 @@ h2 span {
 if ($data == 3 || $data == 4) { ?>
   <div class="air">
     <h2>
-      <figure><img src="assets/img/performance/Air_logo.jpg"></figure>
+      <figure><img src="assets/img/performance/Air.jpg"></figure>
       <label>Air</label>
-      <span>Green Schools Programme Audit 2018-2019</span></h2>
+      <span>Green Schools Programme Audit 2019-2020</span></h2>
     <section class="performance-category">
       <ul>
         <li>
@@ -439,13 +444,13 @@ if ($data == 3 || $data == 4) { ?>
    
     if ($oldvehicles > 0 && $oldvehicles < $totalvehicle) {
         $vehicletype = "Combination of old and new vehicles";
-        $vehicle_msg = "As you know that vehicles that are older than eight years emit very high Levels of pollutants. We suggest that that you keep a check on your vehicle's age.";
+        $vehicle_msg = "As you may know, vehicles that are older than eight years emit very high levels of pollutants. Therefore, it is suggested that you keep a record of the age of your vehicles. ";
     } elseif ($oldvehicles == 0 || $oldvehicles == " ") {
         $vehicletype = "All new vehicles or around eight years";
-        $vehicle_msg = "Great that your school keeps a check on the age of the vehicles. It's very important that the norms are followed for better air quality around us!  Old vehicles emit very high levels of pollutants";
+        $vehicle_msg = "It is commendable that your school keeps a record of the age of the vehicles. It is crucial that the vehicle norms are followed to ensure better air quality around us since old vehicles emit very high levels of pollutants.";
     } elseif ($oldvehicles == $totalvehicle) {
         $vehicletype = "All vehicles are old";
-        $vehicle_msg = "As you know that vehicles that are older then eight years emit very high levels of pollutants. It is strongly suggested that you keep a check on the age of all vehicles.";
+        $vehicle_msg = "As you may know, vehicles that are older than eight years emit very high levels of pollutants. Therefore, it is strongly suggested that you keep a record of the age of your vehicles and phase out the unfit ones. ";
     }
     ?>
             <h4><?php echo $vehicletype; ?></h4>
@@ -467,13 +472,13 @@ if ($data == 3 || $data == 4) { ?>
                                 
                                 if ($acvehicles < $totalvehicle && $acvehicles > 0) {
                                     $vehicleactype = "Combination of vehicles with ACs and without ACs";
-                                    $acvehicle_msg = "Air conditioners in vehicles use a lot of fuel. We suggest that you keep a check on your fuel consumption. It should not increase because of the Air conditioners. Also, ACs release harmful toxins which further pollutes the air.";
+                                    $acvehicle_msg = "Air conditioners in vehicles use a lot of fuel. We suggest that you keep a check on your vehicles' fuel consumption and ensure that it does not increase because of the air conditioners. Additionally, air conditioners release harmful toxins that further pollute the air.";
                                 } elseif ($acvehicles == 0 || $acvehicles == " ") {
                                     $vehicleactype = "No air conditioners in the  vehicles";
-                                    $acvehicle_msg = "Great that none of your vehicles are air-conditioned. Air conditioners in vehicles use a lot of fuel and release harmful toxins further polluting the air. You save a lot of fuel and keep the air clean around the city!";
+                                    $acvehicle_msg = "It is commendable that none of your vehicles are air conditioned. Air conditioners in vehicles use a lot of fuel and release harmful toxins that further pollute the air. You save a lot of fuel and keep the air around the city clean!";
                                 } elseif ($acvehicles == $totalvehicle) {
                                     $vehicleactype = "All vehicles have Air Conditioners";
-                                    $acvehicle_msg = "All vehicles in your school are fitted with ACs! Air conditioned vehicles uses a lot of fuel and release harmful toxins further polluting the air. We strongly suggest that when you need to replace your vehicles or  shift to operator-owned buses choose the ones that are not fitted with ACs. ";
+                                    $acvehicle_msg = "All vehicles in your school are air conditioned. Such vehicles use a lot of fuel and release harmful toxins that further pollute the air. Therefore, it is strongly suggested that while replacing your vehicles or shifting to the operator-owned ones, please choose the ones that are not air conditioned. ";
                                 }
                                 ?>
             <h4><?php echo $vehicleactype; ?></h4>
@@ -495,13 +500,13 @@ if ($data == 3 || $data == 4) { ?>
                                 }
                                 if ( $puc_done > 0 && $puc_done < $totalvehicle  ) {
                                     $vehicleapuctype = "Combination of vehicles with PUC done and not done";
-                                    $puc_done_msg = "Pollution under control (PUC) certification should be up to date for all your vehicles, good that some of your vehicles have that. Please ensure that you update PUCs for ALL  at the earliest.";
+                                    $puc_done_msg = "Pollution Under Control (PUC) certification should be up-to-date for all the school vehicles. It is good that some of your vehicles have the certification. Please ensure that the PUCs for all the school vehicles are updated at the earliest. ";
                                 } elseif ($puc_done == $totalvehicle ) {
                                     $vehicleapuctype = "All vehicles with PUCs";
-                                    $puc_done_msg = "Pollution under control (PUC) certification should be up to date for all your vehicles, and yours is! Great that all the vehicles have up-to-date PUC certification. ";
+                                    $puc_done_msg = "Pollution Under Control (PUC) certification should be up-to-date for all the school vehicles. It is great that all your vehicles have the certification!";
                                 } elseif ($puc_done == 0) {
                                     $vehicleapuctype = "All vehicles without PUCs";
-                                    $puc_done_msg = "Pollution under control (PUC) certification should be up to date for all your vehicles. None of your vehicles have PUCs, please ensure that you update all your vehicles' PUC certificate at the earliest. ";
+                                    $puc_done_msg = "Pollution Under Control (PUC) certification should be up-to-date for all the school vehicles. None of your vehicles have PUCs. Please ensure that the PUCs for all the school vehicles are updated at the earliest. ";
                                 }
                                 ?>
             <h4><?php echo $vehicleapuctype; ?></h4>
@@ -523,13 +528,13 @@ if ($data == 3 || $data == 4) { ?>
                                 
                                 if ($Parking_Area > 0 && $Parking_Area < $totalvehicle) {
                                     $vehicle_parking = "Parking space for few vehicles";
-                                    $vehicle_parking_msg = "There should be authorised and adequate parking area for all the school-owned vehicles.More the vehicles, more the area required. Thus, encouraging students to use public transport or share their vehicles will ensure more space for school.";
+                                    $vehicle_parking_msg = "There should be adequate authorised parking space available for all the school-owned vehicles. The more the vehicles, the more the space required. Thus, encouraging students to use public transport or pool vehicles will ensure more school space.";
                                 } elseif ($Parking_Area >= $totalvehicle) {
                                     $vehicle_parking = "Parking space for all vehicles or more than total number of vehicles";
-                                    $vehicle_parking_msg = "Its good that there is adequate parking area for school-owned vehicles. But more vehicles require more area. Therefore, encouraging students to use public transport or share their vehicles will ensure more space for school or move to operator-owned vehicles, when your school needs to replace vehicles.";
+                                    $vehicle_parking_msg = "It is good that the school has adequate parking space for school-owned vehicles. However, more vehicles require more space. Therefore, encouraging students to use public transport or pool vehicles will ensure more school space. Further, the school can move to operator-owned vehicles whenever replacing vehicles.";
                                 } elseif ($Parking_Area == 0) {
                                     $vehicle_parking = "No Parking space for vehicles";
-                                    $vehicle_parking_msg = "Sad that your school doesnot have parking space for any of the vehicles. There should be adequate parking area for school-owned vehicles. More the vehicles, more the area required. Thus, encouraging students to use public transport or share their vehicles will ensure more space for school.";
+                                    $vehicle_parking_msg = "Your school lacks aqequate parking space for the vehicles. Ideally, there should be an authorised parking area for school-owned vehicles. Therefore, we recommend encouraging students to use public transport or pool vehicles to ensure more school space.";
                                 }
                                 ?>
             <h4><?php echo $vehicle_parking ?></h4>
@@ -570,10 +575,10 @@ if ($data == 3 || $data == 4) { ?>
     if(array_sum($road_count) > 0){
      ?>
             <h4> <?php echo "NO" ; ?> </h4>
-            <p> <?php echo "Road worthiness certificate should be obtained for all the vehicles. If your vehicles have this certificate, it means that they are in good operating condition and meet the acceptable standards for safe driving."; ?></p>
+            <p> <?php echo "The school's vehicles do not have Road Worthiness Certification. We recommend getting the certificate at the earliest. The certification implies that the vehicles are in a good operating condition and meet the acceptable standards of safe driving."; ?></p>
             <?php  } else { ?>
             <h4><?php echo "Yes"; ?></h4>
-            <p><?php echo "It is good that your school has a road worthiness certificate for your vehicles. This means that your vehicles are in good operating condition and meet the acceptable standards for safe driving."; ?></p>
+            <p><?php echo "It is good that your school has Road Worthiness Certification for your vehicles. The certification implies that the vehicles are in a good operating condition and meet the acceptable standards of safe driving."; ?></p>
             <?php   } ?>
           </div>
         </li>      
@@ -593,69 +598,86 @@ if ($data == 3 || $data == 4) { ?>
                                 
                                 $totaldisel = $Diesel + $Petrol;  
                                 if($totalvehicle==0){
-                                    $desiel_petrol_percentage=0;
+                                    $desiel_percentage=0;
+                                    $petrol_percentage=0;
                                     $cng_percentage=0;
                                     $lpg_percentage=0;
                                     
                                 }else{
-                                $desiel_petrol_percentage = round((($totaldisel * 100)/$totalvehicle),2);
-                                $totalcng = $CNG;
-                                $cng_percentage = round((($totalcng * 100)/$totalvehicle),2);
-                                
-                                $totallpg = $LPG;
-                                $lpg_percentage = round((($totallpg * 100)/$totalvehicle),2);
+                                $desiel_percentage = round((($Diesel * 100)/$totalvehicle),2);
+                                $petrol_percentage = round((($Petrol * 100)/$totalvehicle),2);               
+                                $cng_percentage = round((($CNG * 100)/$totalvehicle),2);                    
+                                $lpg_percentage = round((($LPG * 100)/$totalvehicle),2);
                                 }
                                 //$totallpgcng = $LPG + $CNG;  
                                 
                                 
-                                if ($desiel_petrol_percentage >= 71) {
-                                    $typeofFuel[] = "Consumption of Diesel and Petrol";
-                                    $typeoffuel_msg[] = "Your diesel/ petrol consumption is too high. Consider switching to cleaner sources of energy.";
+                                if ($desiel_percentage >= 71) {
+                                    $typeofFuel[] = "Consumption of Diesel";
+                                    $typeoffuel_msg[] = "The diesel consumption of the school is very high. We suggest considering the transition to cleaner sources of energy like CNG, if available in your area. The school authorities can also be encouraged to move to a more sustainable mode of transport.";
                                 } 
-                                elseif ($desiel_petrol_percentage >= 36 && $desiel_petrol_percentage <= 70.9 ) {
-                                    $typeofFuel[] = "Consumption of Diesel and Petrol";
-                                    $typeoffuel_msg[] = "Your diesel/petrol consumption is moderate. Consider switching to cleaner sources of energy.";
+                                elseif ($desiel_percentage >= 36 && $desiel_percentage <= 70.9 ) {
+                                    $typeofFuel[] = "Consumption of Diesel";
+                                    $typeoffuel_msg[] = "The diesel consumption of the school is high. We suggest considering the transition to cleaner sources of energy like CNG, if available in your area. The school authorities can also be encouraged to move to a more sustainable mode of transport.";
                                 }
-                                elseif ($desiel_petrol_percentage > 0 &&  $desiel_petrol_percentage <= 35.9 ) {
-                                    $typeofFuel[] = "Consumption of Diesel and Petrol";
-                                    $typeoffuel_msg[] = "Your diesel/petrol consumption is low. Consider exploring cleaner sources of energy for all your vehicles.";
+                                elseif ($desiel_percentage > 0 &&  $desiel_percentage <= 35.9 ) {
+                                    $typeofFuel[] = "Consumption of Diesel";
+                                    $typeoffuel_msg[] = "The diesel consumption of the school is moderate. We suggest considering complete transition to cleaner sources of energy for all the vehicles. ";
                                 }
-                                elseif ($desiel_petrol_percentage == 0) {
-                                    $typeofFuel[] = "Consumption of Diesel and Petrol";
-                                    $typeoffuel_msg[] = "Good your school doesn't use diesel or petrol as a fuel.";
+                                elseif ($desiel_percentage == 0) {
+                                    $typeofFuel[] = "Consumption of Diesel";
+                                    $typeoffuel_msg[] = "It is commendable that the school does not use diesel to meet its vehicle energy requirement. ";
                                 }
+
+                                if ($petrol_percentage >= 71) {
+                                    $typeofFuel[] = "Consumption of Petrol";
+                                    $typeoffuel_msg[] = "The petrol consumption of the school is very high. We suggest considering the transition to cleaner sources of energy like CNG, if available in your area.";
+                                } 
+                                elseif ($petrol_percentage >= 36 && $petrol_percentage <= 70.9 ) {
+                                    $typeofFuel[] = "Consumption of Petrol";
+                                    $typeoffuel_msg[] = "The petrol consumption of the school is high. We suggest considering the transition to cleaner sources of energy like CNG, if available in your area.";
+                                }
+                                elseif ($petrol_percentage > 0 &&  $petrol_percentage <= 35.9 ) {
+                                    $typeofFuel[] = "Consumption of Petrol";
+                                    $typeoffuel_msg[] = "The petrol consumption of the school is moderate. We suggest considering the transition to cleaner sources of energy like CNG, if available in your area. ";
+                                }
+                                elseif ($petrol_percentage == 0) {
+                                    $typeofFuel[] = "Consumption of Petrol";
+                                    $typeoffuel_msg[] = "It is commendable that the school does not use petrol to meet its vehicle energy requirement. ";
+                                }
+
                                 if ($cng_percentage >= 71) {
                                     $typeofFuel[] = "Consuming CNG for Vehicles";
-                                    $typeoffuel_msg[] = "Good that most of your vehicles run on CNG!";
-        }
+                                    $typeoffuel_msg[] = "GIt is commendable that most vehicles in the school run on CNG!";
+                                 }
                                 elseif ($cng_percentage >= 36 && $cng_percentage <= 70.9 ) {
                                     $typeofFuel[] = "Consuming CNG for Vehicles";
-                                    $typeoffuel_msg[] = "Good that some of your schools' vehicles run on CNG! Try switching over to CNG as a fuel for all your vehicles.";
+                                    $typeoffuel_msg[] = "It is good that some of your school's vehicles run on CNG. Try switching to CNG as a fuel for all your vehicles.";
                                 }
                                 elseif ($cng_percentage > 0 && $cng_percentage <= 35.9 ) {
                                     $typeofFuel[] = "Consuming CNG for Vehicles";
-                                    $typeoffuel_msg[] = "Your CNG consumption is low. Consider switching to CNG for all your vehicles.";
+                                    $typeoffuel_msg[] = "Your CNG consumption is low. We suggest considering complete transition to CNG for all the vehicles.";
                                 }
                                 elseif ($cng_percentage == 0) {
                                     $typeofFuel[] = "Consuming CNG for Vehicles";
-                                    $typeoffuel_msg[] = "Your school doesn't use CNG as a fuel. Consider switching to CNG as a fuel in future.";
+                                    $typeoffuel_msg[] = "Your school doesn't use CNG as a fuel. We recommend transitioning to CNG in the future to become energy efficient. ";
                                 }
                                 if ($lpg_percentage >= 71 ) {
                                     $typeofFuel[] = "Consuming LPG for Vehicles";
-                                    $typeoffuel_msg[] = "Your LPG consumption is too high, which can be dangerous to students. Consider exploring cleaner sources of energy.";
+                                    $typeoffuel_msg[] = "The LPG consumption of the school is very high, which can prove dangerous to the health of the students. Consider exploring cleaner sources of energy like biogas. ";
                                 }
                                 elseif ($lpg_percentage >= 36 && $lpg_percentage <= 70.9 ) {
                                     $typeofFuel[] = "Consuming LPG for Vehicles";
-                                    $typeoffuel_msg[] = "Your LPG consumption is moderate, but can be dangerous to students. Consider exploring cleaner sources of energy.";
+                                    $typeoffuel_msg[] = "The LPG consumption of the school is moderate but can prove dangerous to the health of the students. Consider exploring cleaner sources of energy like biogas.";
                                 }
                                 elseif ($lpg_percentage > 0 && $lpg_percentage <= 35.9 ) {
                                     $typeofFuel[] = "Consuming LPG for Vehicles";
-                                    $typeoffuel_msg[] = "Your LPG consumption is low. Consider exploring cleaner sources of energy.";
+                                    $typeoffuel_msg[] = "The LPG consumption of the school is low. To improve even further, we recommend exploring cleaner sources of energy like biogas.";
                                 }
                                 
                                 elseif ($lpg_percentage == 0) {
                                     $typeofFuel[] = "Consuming LPG for Vehicles";
-                                    $typeoffuel_msg[] = "Good that your school doesn't use LPG as a fuel.";
+                                    $typeoffuel_msg[] = "It is good that your school does not use LPG as a fuel.";
                                 }
                                 
                                 ?>
@@ -680,7 +702,7 @@ if ($data == 3 || $data == 4) { ?>
         <li>
           <figure><img src="assets/img/performance/mode.jpg"></figure>
           <div class="description">
-            <h3>Mode of Commuting</h3>
+            <h3>Mode of Commuting to School</h3>
             <?php
                                 $total_population = (getFiled('Q4G4S3', $schoolUserID) != '') ? getFiled('Q4G4S3', $schoolUserID) : 0;
                                  // Sustainable Motorized Vehicle (SMV) 
@@ -742,20 +764,20 @@ if ($data == 3 || $data == 4) { ?>
                                 $private_veh_population_percentage = round((($private_veh_population * 100)/$total_population),2);
                                 } 
                                 if ($total_population_smv_percentage > 50 && $total_population_npm_percentage < 50 ) {
-                                    $members_use_transport_type = "More than 50% population using sustainable motorized vehicles and less than 50% population using Non- polluting mode of transport";
-                                    $members_use_transport_msg = "Good most of the students and staff use Sustainable Motorized Vehicle (SMV). <br/>   (". $smv_wheel.')'; ?>
+                                    $members_use_transport_type = "More than 50 % population using sustainable motorized transport and less than 50% population using Non- polluting mode of transport. Percentage of Sustainable motorised transport is: $total_population_smv_percentage  % ";
+                                    $members_use_transport_msg = "It is remarkable that most students and staff use sustainable motorized vehicles (SMVs) like school bus, public bus, public transport (other than bus), taxi (four-wheeler and three-wheeler). <br/>   (". $smv_wheel.')'; ?>
             <h4><?php echo $members_use_transport_type; ?></h4>
             <p><?php echo $members_use_transport_msg; ?></p>
             <?php
                                 } elseif ($total_population_smv_percentage < 50 && $total_population_npm_percentage > 50) {
-                                    $members_use_transport_type = "More than 50% population using Non- polluting mode of transport and less than 50% population using sustainable motorized vehicles";
-                                    $members_use_transport_msg = "Good most of the students and staff use Non- polluting mode of transport (NPT). <br/>   (". $npm_wheel.')'; ?>
+                                    $members_use_transport_type = "More than 50 % population using non-polluting mode of transport and less than 50% population using sustainable motorized transport. Percentage of Sustainable motorised transport is: $total_population_npm_percentage  % ";
+                                    $members_use_transport_msg = "It is good that most students and staff use non-polluting modes of transport (NPT) like cycling and walking."; ?>
             <h4><?php echo $members_use_transport_type; ?></h4>
             <p><?php echo $members_use_transport_msg; ?></p>
             <?php   
                                 } elseif ($private_veh_population_percentage > 50) {
-                                    $members_use_transport_type = "More than 50% population using Private vehicles ";
-                                    $members_use_transport_msg = "Your school mostly uses private vehicles for transportation. We recommend that you encourage the staff and students to use public transport and also to car pool.<br/> (". $private_wheel.')'; ?>
+                                    $members_use_transport_type = "More than 50 % population using private vehicles. Percentage of Sustainable motorised transport is: $private_veh_population_percentage  % ";
+                                    $members_use_transport_msg = "Your school mostly uses private vehicles for transportation. We recommend that you encourage the staff and students to use public transport and opt for car pooling. <br/> (". $private_wheel.')'; ?>
             <h4><?php echo $members_use_transport_type; ?></h4>
             <p><?php echo $members_use_transport_msg; ?></p>
             <?php }
@@ -770,28 +792,38 @@ if ($data == 3 || $data == 4) { ?>
   </div>
   <div class="energy">
     <h2>
-      <figure><img src="assets/img/performance/energy.jpg"></figure>
-      <label>Energy</label>
-      <span>Green Schools Programme Audit 2018-2019</span></h2>
-    <p>The impact of &#39;global warming&#39; has already reached scorching levels, and is rising rapidly. Saving energy is the first step to energy conservation. Switching off electrical gadgets when they are not in use and switching the usage of bulbs to CFLs/ LEDs are great ways to start.</p>
-<p>Opting for rooftop or building-integrated small-scale solar systems are easy ways to conserve electricity sustainably and cut down on your school's future total electricity costs! They help minimise transmission and distribution losses, as the generated power is consumed locally. You can check out the latest schemes for solar roof top installations in institutions through this link -<a href="https://mnre.gov.in/solar-rooftop-grid-connected" style="color: blue;">https://mnre.gov.in/solar-rooftop-grid-connected</a>
+      <figure><img src="assets/img/performance/energy.jpg"><li style="font-weight: bold; margin-left:35px">Energy</li></figure>
+      <label> </label>
+      <span>Green Schools Programme Audit 2019-2020</span></h2>
+    <p>The impact of global warming has already reached scorching levels, and is rising rapidly. Saving energy is the first step to energy conservation. Switching off electrical gadgets when they are not in use and transitioning from bulbs to CFLs/LEDs are great ways to start. Opting for rooftop or building-integrated small-scale solar systems is an  easy way to conserve electricity sustainably and cut down on your school's future electricity costs! They help minimise transmission and distribution losses, as the generated power is consumed locally. You can check out the latest schemes for solar roof top installations in institutions on <a href="https://seci.co.in/" style="color: blue;">https://seci.co.in/.</a> </p>
+<p>To know more about GSP’s initiative on renewable energy (RE) and explore the resource material, please go to the <a href="https://www.greenschoolsprogramme.org/knowledge-bank/energy/gsp-solar-in-schools-initiative-2019-20/" style="color: blue;">GSP Website.</a>
 </p>
     <section class="remember">
       <h3>Remember</h3>
-      <ul>
-        <li> &bull; Per capita per day electricity consumption should be well within the norms (46.5 MJ) and we all know that our non-renewable resources are depleting faster than they can re-generate. Switching over to renewable resources and expanding its usage is the only available option.
-</li>        
-      </ul>
+       <ol style="list-style-type: japanese-formal !important;">
+        <li>Per capita per day electricity consumption should be well within the norms (46.5 MJ) and we all know that our non-renewable resources are depleting faster than they can re-generate. Switching over to renewable resources and expanding their usage is the only available option.
+        </li>
+      </ol>
     </section>
     <h3>Your School's Performance</h3>
     <?php               
-        $total_energy_points = number_format(getEnergyPoints($performance[0]->userid),2);
-                    if($total_energy_points = 5)
-                        $point_performance_msg_e = "The energy consumption of your school falls within the norms. Your school has scored well in energy section. We hope you continue  such practices. ";
-                    elseif($total_energy_points >= 2 && $total_energy_points < 4.9 )
-                        $point_performance_msg_e = "The energy consumption of your school partially falls within the norms. Your school has scored average in energy section. It is recommended that your school explore or experiment with renewable energy sources.";
-                    elseif($total_energy_points < 2 )
-                        $point_performance_msg_e = "The energy consumption of your school does not fall within the norms. Your school needs to prudently manage energy consumption. It is recommended that your school explores or experiment with renewable energy sources.";                             
+    $total_energy_points = number_format(getEnergyPoints($performance[0]->userid), 2);
+                    if($total_energy_points >= 14){
+                      $point_performance_msg_e = "Your school has performed very well in the Energy section.The energy consumption of the school falls well within the norms.  We hope the green practices currently followed in the school are sustained and improved even further.";
+                    }
+                        
+                    elseif($total_energy_points >= 10 )
+                    {
+                        $point_performance_msg_e = "Your school has performed well in the Energy section.The energy consumption of your school partially falls within the norms. It is recommended that your school explores renewable energy sources to become more energy-efficient.";
+                    }
+                    elseif($total_energy_points >= 5 )
+                    {
+                        $point_performance_msg_e = "The energy consumption of your school does not fall within the norms. The school needs to manage energy consumption prudently. It is recommended that your school explores renewable energy sources to become more energy-efficient.";                             
+                    }
+                    elseif($total_energy_points < 5 )
+                    {
+                        $point_performance_msg_e = "The energy consumption of your school does not fall within the norms. The school needs to manage energy consumption prudently. It is strongly recommended that your school explores renewable energy sources to become more energy-efficient.";                             
+                    }
                 ?>
     <p><?php echo $point_performance_msg_e ?></p>
     <section class="performance-category">
@@ -809,11 +841,11 @@ if ($data == 3 || $data == 4) { ?>
                     $school_category = getFiled('Q1S1', $schoolUserID);  // School Category
                                            
                     if ($mjprd <= $school_category_array[$school_category]) {
-                        $mjpcpd_per_day = "School's Consumption meets the requirement";
-                        $mjpcpd_per_day_msg = "Your per day per person average consumption of energy meets the norm.";
+                        $mjpcpd_per_day = "Energy consumption within the range";
+                        $mjpcpd_per_day_msg = "Your per person per day average energy consumption meets the norms! We hope that you continue to be as prudent with the energy consumption practices of the school.";
                     } elseif($mjprd > $school_category_array[$school_category]) {
-                        $mjpcpd_per_day = "School's Consumption does not meet the requirement ";
-                        $mjpcpd_per_day_msg = "Your school's per day per person average consumption of energy does not meet the norms. Please check the energy consumption table and make your school Energy efficient at the earliest.";                                   
+                        $mjpcpd_per_day = "Energy consumption above the range";
+                        $mjpcpd_per_day_msg = "Your school's per person per day average energy consumption does not meet the norms. Please refer to the energy consumption table to take essential steps to make your school energy efficient at the earliest. ";                                   
                     }
             ?>
             <h4><?php echo $mjpcpd_per_day; ?></h4>
@@ -872,8 +904,7 @@ if ($data == 3 || $data == 4) { ?>
                                         $wind_energy = "";
                                     }
                                     if (getFiled('Q6E8S1', $schoolUserID) > 0) {
-                                        $animal_energy = "Animal sources
-";
+                                        $animal_energy = "Animal sources";
                                     }
                                     else
                                     {
@@ -905,17 +936,17 @@ if ($data == 3 || $data == 4) { ?>
                                     if($solar_energy == "Solar" ||  $wind_energy =="Wind")
                                     {
                                         $energyuse ="All Renewable sources of Energy ";
-                                        $sourceofenergy_msg = "Good that the source of the energy used by your school is not exhaustive in the near future." ;
+                                        $sourceofenergy_msg = "It is commendable that your school is using renewable sources of energy! It is the need of the hour." ;
                                     }
                                     elseif(($solar_energy == "Solar" ||  $wind_energy =="Wind") && ($lpg_energy != "" || $wood_energy != "" || $cng_energy != "" || $animal_energy != "" ) )
                                     {
                                         $energyuse ="Combination of renewable and non- renewable sources";
-                                        $sourceofenergy_msg ="Good that the source of the energy used by your school is not exhaustive in the near future.  We recommend that you expand/ increase your use of renewable sources of energy." ;
+                                        $sourceofenergy_msg ="It is great that a part of your energy requirement is met by renewable sources of energy. We recommend that you expand/ increase the renewable energy potential of the school as it is environmentally-sustainable and will also help in reducing the energy costs. " ;
                                     }
                                      elseif($solar_energy == "" &&  $wind_energy =="")
                                     {
                                         $energyuse ="Non-renewable sources";
-                                        $sourceofenergy_msg ="Your school uses more sources of energy that could be exhausted in the near future. We recommend that you expand/ increase your use of renewable sources of energy. " ;
+                                        $sourceofenergy_msg ="Your school uses non-renewable sources of energy that could be exhausted in the near future. We recommend that you expand/ increase the renewable energy potential of the school and transition to cleaner, more efficient sources." ;
                                     }
                                                                         
                                 
@@ -924,8 +955,7 @@ if ($data == 3 || $data == 4) { ?>
             <p><?php echo $sourceofenergy_msg; ?></p>
           </div>
         </li>
-     
-                                    
+                                         
          <li>
           <figure><img src="assets/img/performance/source.jpg"></figure>
           <div class="description">
@@ -948,10 +978,14 @@ if ($data == 3 || $data == 4) { ?>
                                          $energy[3] = "Combination of solar and wind";
                                     } 
 
+                                    if (getFiled('Q9E1S5', $schoolUserID) == '1') {
+                                         $energy[3] = "Biogas Plant";
+                                    } 
+
                                   // $energyuse = implode($energy, ',');
                                     //echo $energyuse;
 
-                                    ?>
+                                    ?> 
                                 
                
                                    
@@ -960,63 +994,106 @@ if ($data == 3 || $data == 4) { ?>
         if (getFiled('Q9E1', $schoolUserID) == "Y") { 
          $renew1 =implode(",",$energy);
          if($renew1!=''){
-            $renew =implode(",",$energy); 
+             $renew =implode(", ",$energy); 
          }else {
            
            $renew ='solar'; 
 
          }  
+
         
          $renewuse ="Yes";
-                                 $renewenergy_msg = "'Your school uses '".$renew."' as a renewable source of energy. We hope that you continue to expand your renewable energy consumption.' " ;
+                                 $renewenergy_msg = "' It is great that your school uses '".$renew." ' as a renewable source of energy. We hope that you sustain the green initiative and expand the potential to the fullest.' " ;
                                   
         }else {
          $renewuse ="No";
-                                 $renewenergy_msg =  "Your school does not use any renewable source of energy. We hope that in the near future you switch to 100% renewable sources of Energy!" ;
-                                  
-        }
-      
-                                    
-                                ?>
+                                 $renewenergy_msg =  "Your school does not use any renewable sources of energy. We hope that the school transitions to renewable energy sources completely in the near future." ;
+                               }
+                         ?>
              <h4><?php echo $renewuse; ?></h4>
             <p><?php echo $renewenergy_msg; ?></p>
           </div>
         </li>
        
+
+
+        <?php if (getFiled('Q9E1S1', $schoolUserID) == '1') { 
+
+          $installed_capacity = (getFiled('Q13E1', $schoolUserID) != '') ? getFiled('Q13E1', $schoolUserID) : 0;
+
+       $connected_load = (getFiled('Q14E1', $schoolUserID) != '') ? getFiled('Q14E1', $schoolUserID) : 0;      
+       if($connected_load>0){
+        $total_capacity_load = ($installed_capacity/$connected_load)*100;
+        $total_capacity_load = (int)$total_capacity_load; 
+
+        if($total_capacity_load>=75){ ?>
+          <li>
+          <figure><img src="assets/img/performance/source.jpg"></figure>
+          <div class="description">
+            <h3>The school's more than 75 per cent of the electricity demand is being met by solar</h3>
+            <p>Congratulations, your school is one of the few schools to shift to solar energy.</p>
+          </div>
+        </li>
+          <?php } elseif($total_capacity_load>=50){ ?>
+            <li>
+          <figure><img src="assets/img/performance/source.jpg"></figure>
+          <div class="description">
+            <h3>The school's more than 50 per cent of the electricity demand is being met by solar</h3>
+            <p>Congratulations, your school is one of the few schools to shift to solar energy.</p>
+               </div>
+        </li>
+          <?php } } }?>
+        
+
+
+        <?php if (getFiled('Q9E1S101', $schoolUserID) == '1' && getFiled('Q9E1S1024', $schoolUserID) == '1' && getFiled('Q9E1S1025', $schoolUserID) == '2' ) {  ?>
+          <li>
+          <figure><img src="assets/img/performance/source.jpg"></figure>
+          <div class="description">
+            <h3>The school uses Biofuel - Biogas</h3>
+            <p>It is good that your school has a biogas unit and the biogas generated is used for purposes like cooking. This not only manages the wet waste well but also reduces dependence on the conventional fuels. </p>
+             </div>
+        </li>
+          <?php }?>
+          
+
       </ul>
     </section>
     
   </div>
   <div class="food">
     <h2>
-      <figure><img src="assets/img/performance/food.jpg"></figure>
-      <label>Food</label>
-      <span>Green Schools Programme Audit 2018-2019</span></h2>
-    <p>A recent report published states that the food diversity on plate worldwide has reduced by 75 percent since the 1990s. This has cost everyone in terms of deteriorating human health and environment. In India, over 100 kinds of foods wild, cultivated and uncultivated form the part of a regular diet. Nutritional analyses of these diets shows that these foods can counter malnutrition including micro-nutrient malnutrition such as Vitamin A Deficiency (VAD).</p>
-<p>Food has been at the centre of policy debate in India for many years, as more than 35 percent of the country&#39;s children under five suffer from pacts of malnutrition including stunted growth and under-weight. Meanwhile, childhood obesity is also alarmingly on the rise globally as well as in India. Given India&#39;s dubious distinction of carrying the twin burden of under nutrition and overfeeding, we need to be extra cautious.</p>
-<p>We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) that has high fat, sugar and salt (HFSS) content in it. This UPPF category is one of the most popular categories in today&#39;s market.
+      <figure><img src="assets/img/performance/food.jpg"><li style="font-weight: bold; margin-left:35px">Food</li></figure>
+      <label> </label>
+      <span>Green Schools Programme Audit 2019-2020</span></h2>
+    <p>A recent report published states that the food diversity on plate worldwide has reduced by 75 percent since the 1990s. This has cost everyone in terms of deteriorating human health and environment. In India, over 100 kinds of foods wild, cultivated and uncultivated form a part of the regular diet. Nutritional analyses of these diets show that these foods can counter malnutrition including micro-nutrient malnutrition such as Vitamin A Deficiency (VAD).</p>
+<p>Food has been at the centre of policy debate in India for many years, as more than 35 percent of the country's children under five suffer from pacts of malnutrition including stunted growth and under-weight. Meanwhile, World Obesity Federation warns that by 2030, there will be 27 million obese children in India. Given India's dubious distinction of carrying the twin burden of under nutrition and overfeeding, we need to be extra cautious.
+We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) that has high fat, sugar and salt (HFSS) content. This UPPF category is one of the most popular categories in today's food market.
+</p>
+<p>Read more about food <a href="https://www.greenschoolsprogramme.org/knowledge-bank/food/" style="color:blue;">here.</a>
 </p>
     
     <section class="remember">
       <h3>Remember:</h3>
-      <ul>
-        <li> &bull; Avoid UPPF in school canteens, and encourage children to eat healthy and traditional foods/ local foods of the place/beverages. Sponsorship by UPPF brands should be avoided. On special occasions, provide laddoos or other cooked foods as rewards instead of chocolates or other packaged food. </li>
-<li> &bull; Try and promote the use of paper wrappings instead of the plastic ones to wrap the food, wherever possible
-</li>
-        
-      </ul>
+      <ol style="list-style-type: japanese-formal !important;">
+        <li>Avoid UPPF in school canteens, and encourage children to eat healthy and traditional foods/ local foods and beverages. Sponsorship of school events by UPPF brands should be avoided. On special occasions, provide <i> laddoos </i> or other freshly-prepared foods as rewards instead of chocolates or other packaged food. </li>
+        <li>Promote the use of paper wrappings instead of plastic to pack food, wherever possible</li>        
+      </ol>
     </section>
     <h3>Your School's Performance</h3>
     <?php               
-               $total_food_points = number_format(getAirPoints($performance[0]->userid),2);
+                $total_food_points = number_format(getFoodPoints($performance[0]->userid),2);
                
-                    if($total_food_points = 4){
-               $point_performance_msg_f = "Your school has scored points in the food section as your canteen does not sell ultra processed packaged food and packaged/bottled drinks.  Good that your school ensures quality and nutritious food consumption. You have scored good in Food section.";
-        }elseif($total_food_points >=2  && $total_food_points < 3 ){
-            $point_performance_msg_f = "You have done well but need to further promote the good food in school. Remember, Ultra Processed Packaged Food (UPPF) is bad for health.";
-        }elseif($total_food_points = 0  && $total_food_points < 1 ){
-     $point_performance_msg_f = "The food sold in your school canteen is processed, packaged or fast food, which is not good for the students. We recommend that you push students towards Good Food Practices.";
-   }
+        if($total_food_points >= 10){
+            $point_performance_msg_f = "Your school has performed very well in the Food section owing to the prohibition of ultra processed packaged food (UPPF) and packaged/bottled drinks in the school. It is good that your school ensures quality and nutritious food. Also, including cooking as a part of a subject or extracurricular activities ensures awareness around good eating habits. ";
+        }elseif($total_food_points >=5){
+            $point_performance_msg_f = "Your school has performed well in the Food section but needs to further promote nutritious food. We recommend taking up learning activities to raise awareness about Ultra Processed Packaged Food (UPPF) and their ill effects.";
+        }elseif($total_food_points >= 4 ){
+         $point_performance_msg_f = "Your school has a canteen that may be hampering the healthy eating habits of students. It is important to promote traditional and nutritious food by discouraging ultra processesed packaged food (UPPF) on campus. These items can be substituted with local and seasonal delicacies.";
+        }
+        elseif($total_food_points == 0 ){
+         $point_performance_msg_f = "Your school provides ultra processed packaged food (UPPF) items to students—a practice that needs to be discouraged as UPPF items are high in fats, salt and sugar and cause health problems. We recommend encouraging students to opt for traditional and nutritious food.";
+        }
     //     elseif($total_food_points < 1){
     // $point_performance_msg_f = "Your school sells ultra processed packaged food (UPPF) items daily in the campus - a practice that needs to be discouraged as UPPF items are high in fats, salt and sugar and harm children. We suggest that with the beginning of the new academic session, unhealthy food items be substituted with local and seasonal delicacies. The your school promotes processed, packaged or fast food, which is not good for the students. We recommend that you motivate students to opt for Good Food. ";
     //  }      
@@ -1025,6 +1102,48 @@ if ($data == 3 || $data == 4) { ?>
     <p><?php echo $point_performance_msg_f; ?></p>
     <section class="performance-category">
       <ul>
+        <?php if (getFiled('Q5F1', $schoolUserID) == "Y" ){ ?>
+        <li>
+          <figure><img src="assets/img/performance/sale.jpg"></figure>
+          <div class="description">
+            <h3>Does your school serve midday meals?</h3>
+            <h3>Yes</h3>
+            <p>Good to see that your school provides freshly prepared food to the students. Food services like school mess or midday meal service is an important health resource for schools, especially the student community. When food is consumed daily, the food provided through the school comprises a third of a child’s total daily intake and has a significant influence on health and nutrition.</p>   
+          </div>
+        </li>
+    <?php }elseif(getFiled('Q5F1', $schoolUserID) == "N") { ?>
+        <li>
+          <figure><img src="assets/img/performance/sale.jpg"></figure>
+          <div class="description">
+            <h3>Does your school serve midday meals?</h3>
+            <h3>No</h3>
+            <p>Food services like school mess or midday meal service is an important health resource for schools, especially the student community. When food is consumed daily, the food provided through the school comprises a third of a child’s total daily intake and has a significant influence on health and  It is recommended that school checks the kind of food the students consume.</p>          
+          </div>
+        </li>
+      <?php } ?>
+
+      <?php if (getFiled('Q5F1S1', $schoolUserID) == "Y" ){ ?>
+        <li>
+          <figure><img src="assets/img/performance/sale.jpg"></figure>
+          <div class="description">
+            <h3>Do students bring their own lunch from home?</h3>
+            <h3>Yes</h3>
+            <p>It is good that the students bring cooked food from home. It is important that parents and teachers work together to help the students choose ‘good food’ for a healthy lifestyle.</p>          
+          </div>
+        </li>
+    <?php }elseif(getFiled('Q5F1S1', $schoolUserID) == "N") { ?>
+        <li>
+          <figure><img src="assets/img/performance/sale.jpg"></figure>
+          <div class="description">
+            <h3>Do students bring their own lunch from home?</h3>
+            <h3>No</h3>
+            <p>It is important that parents and teachers work together to help the students choose ‘good food’ for a healthy lifestyle. The students should thus be consuming freshly cooked nutritious food in school or bring lunch from home.</p>
+            
+          </div>
+        </li>
+      <?php } ?>
+
+        
         <li>
           <figure><img src="assets/img/performance/sale.jpg"></figure>
           <div class="description">
@@ -1041,19 +1160,16 @@ if ($data == 3 || $data == 4) { ?>
             $packageditem = array_sum($totalFlavourVariaint) + array_sum($totalItemSold) + array_sum($monthFoodSold);
             if ( $packageditem == 0) {
                 $packageitem_served = "Yes";
-                $packageitem_served_msg = "Good that your school canteen doesn't sells ultra processed packaged food, beverages and packaged/bottled drinks. ";
+                $packageitem_served_msg = "It is good that your school canteen doesn't provide ultra processed packaged food (UPPF), beverages and packaged/bottled drinks to students.";
             } elseif($packageditem > 0) {
             $packageitem_served = "No";
-            $packageitem_served_msg = "Your school sells ultra processed packaged food (UPPF), beverages, packaged/bottled drinks, etc items daily in the campus - a practice that needs to be discouraged as UPPF items are high in fats, salt and sugar and harm children. We suggest that with the beginning of the new academic session, unhealthy food items be substituted with local and seasonal delicacies. ";
+            $packageitem_served_msg = "Your school sells ultra processed packaged food (UPPF), beverages, packaged/bottled drinks, etc. items daily in the campus that can cause health hazards like high blood pressure and obesity in the long run. We suggest that with the beginning of the new academic session, unhealthy food items be substituted with local and seasonal delicacies. ";
             }
         ?>
             <p><?php echo $packageitem_served_msg; ?></p>
           </div>
         </li>
-   <li  <?php 
-
-  //echo getFiled('Q7F1', $schoolUserID);
-
+   <li  <?php
    if(getFiled('Q7F1', $schoolUserID) == ""){ echo "style='display:none;'"; } ?>  >
           <figure><img src="assets/img/performance/sale.jpg"></figure>
           <div class="description">
@@ -1061,10 +1177,10 @@ if ($data == 3 || $data == 4) { ?>
             <?php
                                 if (getFiled('Q7F1', $schoolUserID) == "Y" ) {
                                     $snack_food = "Yes";
-                                    $snack_food_msg = "Good that your school canteen sells traditional Indian or local snacks.";
+                                    $snack_food_msg = "It is good that your school canteen sells traditional or local snacks.";
                                 }elseif(getFiled('Q7F1', $schoolUserID) == "N") {
                                     $snack_food = "No";
-                                    $snack_food_msg = "Your school does not give option of Indian snacks in the school canteen. We suggest that unhealthy food items be substituted with local and seasonal snacks. ";
+                                    $snack_food_msg = "Your school does not provide traditional, freshly-made snacks in the canteen. We recommend substituting unhealthy food items with local and seasonal snacks.";
                                 }
                                 ?>
             <h4><?php echo $snack_food; ?></h4>
@@ -1078,10 +1194,10 @@ if ($data == 3 || $data == 4) { ?>
             <?php
                                 if (getFiled('Q8F1', $schoolUserID) == "Y") {
                                     $bever_food = "Yes";
-                                    $bever_food_msg = "Good that your school canteen sells traditional Indian or local beverages.";
+                                    $bever_food_msg = "It is good that the school promotes traditional and/or fresh local beverages.";
                                 }elseif(getFiled('Q8F1', $schoolUserID) == "N") {
                                     $bever_food = "No";
-                                    $bever_food_msg = "Your school does not give option of Indian or fresh beverages in the school canteen. We suggest that unhealthy drinks and beverages be substituted with local and fresh drinks. ";
+                                    $bever_food_msg = "Your school does not provide traditional or freshly-made beverages in the canteen. We recommend substituting carbonated and sugary drinks with  local and fresh drinks, which are a healthier alternative.";
                                 }
                                 ?>
             <h4><?php echo $bever_food; ?></h4>
@@ -1095,10 +1211,10 @@ if ($data == 3 || $data == 4) { ?>
             <?php
                                 if (getFiled('Q9F1', $schoolUserID) == "Y" && getFiled('Q9F2', $schoolUserID) != " ") {
                                     $distributepackaged_food = "Yes";
-                                    $distributepackaged_food_msg = "Ultra processed packaged food (UPPF) not only has ill effects on the health of the students but also has negative environmental impacts. We hope you replace these with local/ traditional snacks.";
+                                    $distributepackaged_food_msg = "Ultra processed packaged food (UPPF) not only affect the health of the students adversely but also have negative environmental impacts. We recommend replacing these with local/ traditional snacks that can be distributed as rewards.";
                                 }elseif(getFiled('Q9F1', $schoolUserID) == "N") {
                                     $distributepackaged_food = "No";
-                                    $distributepackaged_food_msg = "Ultra processed packaged food (UPPF) not only has ill effects on the health of the students but are also negative environmental impacts. Good that your school doesn't distribute packaged food items as rewards. We hope you that you serve local/ traditional snacks and discourage students to eat UPPF. ";
+                                    $distributepackaged_food_msg = "Ultra processed packaged food (UPPF) not only affect the health of the students adversely but also have negative environmental impacts. It is remarkable that your school does not distribute packaged food items as rewards. We hope that you sustain this practice and discourage students from eating UPPF.";
                                 }
                                 ?>
             <h4><?php echo $distributepackaged_food; ?></h4>
@@ -1116,10 +1232,10 @@ if ($data == 3 || $data == 4) { ?>
             <?php
                                 if (getFiled('Q10F1', $schoolUserID) == "Y" && getFiled('Q10F2', $schoolUserID) != " ") { //Food Q.7
                                     $chocolatespackaged_food = "Yes";
-                                    $chocolatespackaged_food_msg = "Students are easily influenced by the fancy brand advertisement and promotions. We would like to request you to discourage promotions of UPPF. ";
+                                    $chocolatespackaged_food_msg = "Ultra processed packaged food (UPPF) not only affect the health of the students adversely but also have negative environmental impacts. Therefore, consumption of such food items should be discouraged. We recommend not providing UPPF items as refreshments during events and serving local/ traditional instead.";
                                 } elseif(getFiled('Q10F1', $schoolUserID) == "N") {
                                     $chocolatespackaged_food = "No";
-                                    $chocolatespackaged_food_msg = "Students are easily influenced by the fancy brand advertisement and promotions. It is great that your school doesn't promote such brand promotions and advertisements.";
+                                    $chocolatespackaged_food_msg = "Ultra processed packaged food (UPPF) not only affect the health of the students adversely but also have negative environmental impacts. Therefore, consumption of such food items should be discouraged. We appreciate your school's efforts in promoting local/ traditional snacks as refreshments.";
                                 }
                                 ?>
             <h4><?php echo $chocolatespackaged_food; ?></h4>
@@ -1133,10 +1249,10 @@ if ($data == 3 || $data == 4) { ?>
             <?php
                                 if (getFiled('Q11F1', $schoolUserID) == "Y" && getFiled('Q11F2', $schoolUserID) != " ") { //Food Q.7
                                     $sponsored_event = "Yes";
-                                    $sponsored_event_msg = "Students are easily influenced by the fancy brand advertisement and promotions. We would like to request you to discourage promotions of UPPF.";
+                                    $sponsored_event_msg = "Students are easily influenced by the fancy brand advertisements and promotions. Therefore, we recommend banning of events that promote consumption of UPPF items.";
                                 } elseif(getFiled('Q11F1', $schoolUserID) == "N") {
                                     $sponsored_event = "No";
-                                    $sponsored_event_msg = "Students are easily influenced by the fancy brand advertisement and promotions. It is great that your school doesn't promote such brand promotions and advertisements.";
+                                    $sponsored_event_msg = "Students are easily influenced by the fancy brand advertisements and promotions. It is good that your school doesn’t encourage events that promote consumption of UPPF items.";
                                 }
                                 ?>
             <h4><?php echo $sponsored_event; ?></h4>
@@ -1150,10 +1266,10 @@ if ($data == 3 || $data == 4) { ?>
             <?php
                                 if (getFiled('Q12F1', $schoolUserID) == "Y" && getFiled('Q12F2', $schoolUserID) != " ") { //Food Q.7
                                     $sponsored_event = "Yes";
-                                    $sponsored_event_msg = "BMI helps to determine if a person is in a healthy range. We appreciate your efforts to monitoring weight and height of all the students ";
+                                    $sponsored_event_msg = "BMI (Body Mass Index) helps to determine whether or not the growth of an individual is age-appropriate. We appreciate the school's efforts in monitoring weight and height of all students.";
                                 } elseif(getFiled('Q12F1', $schoolUserID) == "N") {
                                     $sponsored_event = "No";
-                                    $sponsored_event_msg = "BMI helps to determine if a person is in a healthy range. We recommend your school should start monitoring weight and height of all the students to monitor their health.";
+                                    $sponsored_event_msg = "BMI (Body Mass Index) helps to determine whether or not the growth of an individual is age-appropriate. We recommend regular health check-ups to monitor weight and height of all students.";
                                 }
                                 ?>
             <h4><?php echo $sponsored_event; ?></h4>
@@ -1166,36 +1282,32 @@ if ($data == 3 || $data == 4) { ?>
   </div>
   <div class="land">
     <h2>
-      <figure><img src="assets/img/performance/land.jpg"></figure>
-      <label>Land</label>
-      <span>Green Schools Programme Audit 2018-2019</span></h2>
-    <p>As per Model Building Bye-Laws, 2016, maximum ground coverage in a school building should not exceed 35 per cent.</p>
-<p>Your school grounds can provide excellent educational opportunities for creating awareness about land resources and the natural world around you, as well as the land-use pattern. The biological diversity supported by an area is a good indicator of its ecological well-being. A proper management of land resources can transform the grounds into biologically diverse outdoor classrooms and healthy open spaces.</p>
-<p>As per the Right of Children to Free and Compulsory Education Act (RTE), 2009, a school should have an all-weathered school building with a playground, a kitchen (for cooking mid-meal), separate toilets for boys and girls, library, barrier-free access, etc.</p>
+      <figure><img src="assets/img/performance/land.jpg"><li style="font-weight: bold; margin-left:35px">Land</li></figure>
+      <label> </label>
+      <span>Green Schools Programme Audit 2019-2020</span></h2>
+    <p>As per Model Building Bye-Laws, 2016, maximum ground coverage in a school building should not exceed 35 per cent. Your school grounds can provide excellent educational opportunities for creating awareness about land resources, natural world around you and the land-use pattern. The biological diversity supported by an area is a good indicator of its ecological well-being. A proper management of land resources can transform the grounds into biologically diverse outdoor classrooms and healthy open spaces.</p>
+    <p>As per the Right of Children to Free and Compulsory Education Act (RTE), 2009, a school should have an all-weathered school building with a playground, a kitchen (for cooking mid-meal), separate toilets for boys and girls, library, barrier-free access, etc.</p>
+    <p>Learn more about land use pattern and biodiversity from the knowledge bank on <a href="https://www.greenschoolsprogramme.org/knowledge-bank/land/" style="color: blue;">GSP website</a> </p>
     <section class="remember">
       <h3>Remember:</h3>
-      <ul>
-        <li> &bull; Congestion on land (more buildings and inadequate green cover) leads to pressure on resources and hence on our environment.
-<li> &bull; We all know that a mind with plenty of oxygen has a greater power to grasp things. And for more oxygen we need more trees - our only oxygen factory.</li>
-<li> &bull; To keep these oxygen factories healthy, we should not use chemical pesticides to raise them. Chemical pesticides are poisonous to health and environment.
-</li>
-        
-      </ul>
+      <ol style="list-style-type: japanese-formal !important;">
+        <li>Congestion on land (more buildings and inadequate green cover) leads to pressure on resources and hence on our environment.</li>
+        <li>We all know that adequate supply of oxygen to the brain ensures greater power to grasp things. And for more oxygen we need more trees—our only oxygen factory!</li>
+        <li>To keep these oxygen factories healthy, we should not use chemical pesticides to raise them. Chemical pesticides are poisonous to health and environment.</li>  
+      </ol>
     </section>
     <h3>Your School's Performance</h3>
     <?php               
                     // Land Points
-                    $total_land_points = number_format(getLandPoints($schoolUserID),2);
+            $total_land_points = number_format(getLandPoints($schoolUserID),2);
                     //echo $total_land_points;
-                    if($total_land_points = 6)
-              $point_performance_msg_l = "Good your school has plenty of green cover and that too, without using any chemical-based pesticides. Though the norms say that minimum 33% of your total land should be green cover, we encourage that you target to increase your green cover by 10 - 15 per cent in next two years!";
-                    elseif($total_land_points >=4 && $total_land_points < 5.9  )
-             $point_performance_msg_l= "Your school has done average in this section.  Though the norms say that minimum 33% of your total land should be green cover, we encourage that you target to increase your green cover by 10 - 15 per cent in next two years!";
-                    
-                    elseif($total_land_points < 4 )
-                $point_performance_msg_l= "Your school does not meet the Green Cover norms. Though the norms say that minimum 33% of your total land should be green cover, we encourage that you target to increase your green cover to 40% in next two years!";
-                                     
-                ?>
+            if($total_land_points >= 10)
+            $point_performance_msg_l = "Your school has performed well in this section. It is good that your school has plenty of green cover without the use of any chemical-based pesticides. The biodiversity in the school is rich as well. To improve even further, the school can introduce and expand vertical gardening.";
+             elseif($total_land_points >=5)
+             $point_performance_msg_l= "Your school has done average in this section. The school can take concrete steps to increase the green cover of the school, like vertical gardening and plantation drives. The biodiversity—number of species of plants and animals —in the school can be made richer.";                    
+             elseif($total_land_points <5)
+             $point_performance_msg_l= "Your school does not meet the green cover requirements. The school can take rigorous steps to increase the green cover of the school, like vertical gardening and plantation drives. The biodiversity— number of species of plants and animals—in the school can be made richer.";
+              ?>
     <p><?php echo $point_performance_msg_l ?></p>
     <section class="performance-category">
       <ul>
@@ -1206,52 +1318,51 @@ if ($data == 3 || $data == 4) { ?>
             <?php
                 $total_site_area = ((getFiled('Q4L2', $schoolUserID) != '') ? getFiled('Q4L2', $schoolUserID) : 0) + ((getFiled('Q4L5', $schoolUserID) != '') ? getFiled('Q4L5', $schoolUserID) : 0) + ((getFiled('Q4L6', $schoolUserID) != '') ? getFiled('Q4L6', $schoolUserID) : 0) + ((getFiled('Q4L7', $schoolUserID) != '') ? getFiled('Q4L7', $schoolUserID) : 0) + ((getFiled('Q4L8', $schoolUserID) != '') ? getFiled('Q4L8', $schoolUserID) : 0);
   
-                //Green landscaped area on-ground + Green cover on exposed roof & terrace + Play area that has grass on ground
-                $total_green_cover_area = getFiled('Q4L5', $schoolUserID) ;
-    //echo $total_site_area.'bjkhgujghg'.$total_green_cover_area;       
+
+              $total_green_cover_area = getFiled('Q4L5', $schoolUserID) ;
         
       if($total_site_area==0){
           $green_cover_perc=0;
         }else{
                 $green_cover_perc = number_format((($total_green_cover_area / $total_site_area) * 100), 2);
         }
-                     if ($green_cover_perc >= 60) {
-                         $greencover_msg = "Your school has the required green cover but aim to increase the cover by 10 - 15 percent in the next two years.";
-                    } else if ($green_cover_perc >= 15 && $green_cover_perc <= 59.99) {
-                        $greencover_msg = "Your school have the  green cover area is "." ".$green_cover_perc. "%. so aim to increase the cover by at least 10-15  percent in the next two years.";
+                     if ($green_cover_perc >= 35) {
+                         $greencover_msg = "Green Cover Area in your school is "." ".$green_cover_perc. "%.  As per the norms, at least 35 per cent of the total school area should classify as green cover. Your school has the required green cover, but we still suggest that you target to increase your school's green cover by additional 10 to 15 per cent in the next two years!";
+                    } else if ($green_cover_perc >= 15) {
+                        $greencover_msg = "Green Cover Area in your school is "." ".$green_cover_perc. "%. As per the norms, at least 35 per cent of the total school area should classify as green cover. Your school does not have the required green cover. Therefore, we suggest increasing it by at least 20  per cent in the next two years.";
                     } else if ($green_cover_perc <= 14.9) {
-                        $greencover_msg = "Your school have the  green cover area is "." ".$green_cover_perc. "%. so aim to increase the cover by at least 10-15  percent in the next two years.";
+                        $greencover_msg = "Green Cover Area in your school is "." ".$green_cover_perc. "%. As per the norms, at least 35 per cent of the total school area should classify as green cover. Your school does not have the required green cover. Therefore, we suggest increasing it by at least 20  per cent in the next two years.";
                     }
                 ?>
 
             <p><?php echo $greencover_msg; ?></p>
           </div>
         </li>
-  <li>
+       <li>
           <figure><img src="assets/img/performance/plant_animal_final.png"></figure>
           <div class="description">
             <h3>How many species of plants and animals exist in your school ?</h3>
             <?php
-     $plant = getFiled('Q5L1S3', $schoolUserID); 
-     $animal = getFiled('Q5L2S3', $schoolUserID);  
+         $plant = getFiled('Q5L1S3', $schoolUserID); 
+         $animal = getFiled('Q5L2S3', $schoolUserID);  
                 if ($plant >= 100 ) {
-                    $plant_c = "If plant species are 100 or more";
-                    $plant_msg = "We appreciate your efforts to conserve biodiversity within your school campus. Your school has maintained good plant biodiversity.";
+                    // $plant_c = "If plant species are 100 or more";
+                    $plant_msg = "We appreciate your efforts in conserving biodiversity within your school campus. The school has maintained its plant biodiversity very well.";
                 } elseif($plant< 100) {
                     $plant_c = "If plant species are less than 100";
-                    $plant_msg = "Biodiversity is very important to conserve nature. We recommend you to increase your flora biodiversity by ensuring minimum 100 species of plants within your school campus.";
+                    $plant_msg = "Biodiversity is crucial in conserving nature. We recommend you to increase your floral biodiversity by ensuring at least 100 plant species within the campus.";
                 }
-    if ($animal >= 50 ) {
+       if ($animal >= 50 ) {
                     $animal_c = "If animal species are 50 or more";
-                    $animal_msg = "We appreciate your efforts to conserve biodiversity within your school campus. Your school has good faunal (animal) diversity. It is greatly dependent on the plant diversity.";
+                    $animal_msg = "We appreciate your efforts in conserving biodiversity within your school campus. The school has maintained its faunal (animal) biodiversity very well.";
                 } elseif($animal< 50) {
                     $animal_c = "If animal species are less than 50";
-                    $animal_msg = "Biodiversity is very important to conserve nature. We recommend you to increase your faunal biodiversity by ensuring minimum 50 species of animals within your school campus. It is greatly dependent on the plant diversity.";
+                    $animal_msg = "Biodiversity is crucial in conserving nature. It is recommended to have at least 50 species of animals, including insects, birds, etc., within the campus. Please note that the animal biodiversity depends greatly on plant diversity.";
                 }  
             ?>
-            <h4><?php echo $plant_c; ?></h4>
+            <h4><?php if(isset($plant_c)){ echo $plant_c;} ?></h4>
             <p><?php echo $plant_msg; ?></p>
-      <h4><?php echo $animal_c; ?></h4>
+            <h4><?php echo $animal_c; ?></h4>
             <p><?php echo $animal_msg; ?></p>   
           </div>
         </li>      
@@ -1262,10 +1373,10 @@ if ($data == 3 || $data == 4) { ?>
             <?php
                 if (getFiled('Q6L1', $schoolUserID) != "Y") {
                     $pesticides = "No";
-                    $pesticides_msg = "Your school does not use any sort of chemical fertilizers. Hope that you compost your waste and make your own organic fertilizer!";
+                    $pesticides_msg = "It is commendable that your school does not use any chemical fertilizers. We hope that you sustain the practice and compost the biodegradable waste in the school to make organic fertilizer.";
                 } else {
                     $pesticides = "Yes";
-                    $pesticides_msg = "Your school uses some sort of chemical fertilizers. Hope that you compost your waste and make your own organic fertilizer and move away from chemical-based fertilizers.";
+                    $pesticides_msg = "Your school uses chemical fertilizers. We recommend composting the biodegradable waste to make organic fertilizer and phasing out chemical fertilizers.";
                 }
             ?>
             <h4><?php echo $pesticides; ?></h4>
@@ -1280,31 +1391,33 @@ if ($data == 3 || $data == 4) { ?>
   </div>
   <div class="water">
     <h2>
-      <figure><img src="assets/img/performance/tap.jpg"></figure>
-      <label>Water</label>
-      <span>Green Schools Programme Audit 2018-2019</span></h2>
-    <p>The right to water is really the right to life and livelihood. Just as we cannot live without water, a country cannot survive if it is water-stressed. This resource determines our future, and acts as a driving force for our economic growth. Even today, the government admits to not being able to provide&#39; safe drinking water to more than half the country&#39;s population. Poor sanitation and unsafe drinking water account for a substantial part of the disease burden in India, contributing to diarrhoea, cholera, typhoid and jaundice.</p>
+      <figure><img src="assets/img/performance/water.jpg"><li style="font-weight: bold; margin-left:35px">Water</li></figure>
+      <label> </label>
+      <span>Green Schools Programme Audit 2019-2020</span></h2>
+    <p>The right to water is really the right to life and livelihood. Just as we cannot live without water, a country cannot survive if it is water-stressed. This resource determines our future and acts as a driving force for our economic growth. Even today, the government admits to not being able to provide safe drinking water to more than half the country's population. Poor sanitation and unsafe drinking water account for a substantial part of the disease burden in India, contributing to diarrhoea, cholera, typhoid and jaundice. </p>
+    <p>Explore water-related activities and information on <a href="https://www.greenschoolsprogramme.org/knowledge-bank/water/" style="color: blue;">GSP website</a> 
+</p>
     <section class="remember">
       <h3>Remember:</h3>
-      <ul>
-        <li> &bull; Children should get adequate amount of water required per day starting from drinking to flushing to mopping floors to everything.</li>
-<li> &bull; Catch rain where it falls. Today, rainwater harvesting has evolved as an appropriate measure to overcome the water scarcity plus water logging due to excessive rains.</li>
-<li> &bull; Recharge groundwater. As per Central Ground Water Board (CGWB), around 39% of the analysed wells showed decline in ground water level in various parts of the country. We must try to reduce the dependence on ground water to stop further depletion of water table. Other measures can be harvest more rainwater and treat and reuse waste water and recharge ground water.</li>
+      <ol style="list-style-type: japanese-formal !important;"> 
+        <li>Children should get adequate amount of water required per day from drinking to flushing to mopping floors to everything.</li>
+        <li>Catch rain where it falls. Today, rainwater harvesting has evolved as an appropriate measure to overcome the water scarcity as well as water logging due to excessive rains.</li>
+        <li>Recharge groundwater. As per Central Ground Water Board (CGWB), around 39% of the analysed wells showed decline in groundwater level in various parts of the country. We must try to reduce the dependence on groundwater to stop further depletion of water table. Other measures can be harvesting more rainwater; treating and reusing waste water; and recharging groundwater.</li>
         
-      </ul>
+      </ol>
     </section>
     <h3>Your School's Performance</h3>
     <?php               
                     // Water Points
                     $total_water_points = number_format(getWaterPoints($schoolUserID),2);
-                    if($total_water_points = 40)
-                        $point_performance_msg_water = "It is good that your school has managed to provide water as per the prescribed level as well as all the sanitation facilities have load under the prescribed norms. Well done! Your school's score in water section is very good.";
-                    elseif($total_water_points >=30 && $total_water_points < 39.9  )
-                        $point_performance_msg_water= "It is good that your school tries to provide water as per the prescribed level as well as all the sanitation facilities have load under the prescribed norms. Your school's score in water section is good. Hope you take suggestions and become a water efficient school at the earliest.";                    
-                     elseif($total_water_points >=20 && $total_water_points < 29.9 )
-                        $point_performance_msg_water= "Your school does not provide water as per the prescribed level as well as all the sanitation facilities does not have load under the prescribed norms. Your school's score in water section is average. Hope you take suggestions and become a water efficient school at the earliest.";
-                     elseif($total_water_points < 19 )
-                        $point_performance_msg_water= "Your school does not provide water as per the prescribed level as well as all the sanitation facilities does not have load under the prescribed norms. Your school's score in water section is poor. Hope you take suggestions and become a water efficient school at the earliest.";
+                    if($total_water_points >= 65)
+                        $point_performance_msg_water = "Well done! Your school has performed very well in this section. It is great that your school has managed to provide water as per the prescribed levels. Also, the load on the sanitation facilities is well within the prescribed norms.";
+                    elseif($total_water_points >=45)
+                        $point_performance_msg_water= "Your school has perfromed well in this section. It is good that your school tries to provide water as per the prescribed standards. Also, the load on the sanitation facilities is well within the prescribed norms. We hope that you take suggestions from the assessment given below and become more water-efficient.";                    
+                     elseif($total_water_points >=15)
+                        $point_performance_msg_water= "Your school has done average in this section. It does not provide water as per the prescribed levels. Also, the load on some of the sanitation facilities is not within the prescribed norms. We hope that you take suggestions and become a water efficient school at the earliest.";
+                     elseif($total_water_points <15)
+                        $point_performance_msg_water= "Your school does not provide water as per the prescribed level as well as all the sanitation facilities do not have load under the prescribed norms. Your school’s score in water section is poor. Hope you take suggestions from the assessment given below and become a water-efficient school soon.";
                                      
                 ?>
     <p><?php echo $point_performance_msg_water ?></p>
@@ -1359,17 +1472,17 @@ if ($data == 3 || $data == 4) { ?>
                                 if($lpcd >=$llimit && $lpcd <=$ulimit)
                                 {
                                     $pcw_condition ="Per capita consumption within the range according to their category ";
-                                    $pcw_message ="Your school's per person per day consumption is within the norms. Good that you manage your water efficiently.";
+                                    $pcw_message ="Your school's per person per day consumption is well within the norms. It is good that you manage water efficiently.";
                                 }                                                                     
                                 elseif($lpcd < $llimit)
                                 {
                                     $pcw_condition ="Per capita consumption is less ";
-                                    $pcw_message ="Your school's per person per day consumption is less than what it should be. Refer to the table to see the recommended consumption.";
+                                    $pcw_message ="Your school's per person per day consumption is less than the recommended quantity. Please refer to the table to see the recommended consumption.";
                                 }
                                  elseif($lpcd >$ulimit)
                                 {
                                     $pcw_condition ="Per capita consumption is more";
-                                    $pcw_message ="Your school's per person per day consumption is more than what it should be. Refer to the table to see the recommended consumption, and review where wastage of water can be minimized.";
+                                    $pcw_message ="Your school's per person per day consumption is more than it should be. Please refer to the table to see the recommended consumption and review where wastage of water can be minimized.";
                                 }
                                                                
                                 
@@ -1425,32 +1538,33 @@ if ($data == 3 || $data == 4) { ?>
             <h3>Source of Water</h3>
             <?php
          $wcombination=array();
-                $Groundwater= (getFiled('Q5W1', $schoolUserID) != "") ? (getFiled('Q5W1', $schoolUserID) == '1' || getFiled('Q5W1', $schoolUserID) == 'true' ) ? "Y" : "N" : "N/A";              
+                $groundwater= (getFiled('Q5W1', $schoolUserID) != "") ? (getFiled('Q5W1', $schoolUserID) == '1' || getFiled('Q5W1', $schoolUserID) == 'true' ) ? "Y" : "N" : "N/A";              
                 $Surfacewater = (getFiled('Q5W2', $schoolUserID) != "") ? (getFiled('Q5W2', $schoolUserID) == '1' || getFiled('Q5W2', $schoolUserID) == 'true') ? "Y" : "N" : "N/A";
                 $Rainwater = (getFiled('Q5W3', $schoolUserID) != "") ? (getFiled('Q5W3', $schoolUserID) == '1' || getFiled('Q5W3', $schoolUserID) == 'true') ? "Y" : "N" : "N/A";
                 $Recycledwastewater = (getFiled('Q5W4', $schoolUserID) != "") ? (getFiled('Q5W4', $schoolUserID) == '1' || getFiled('Q5W4', $schoolUserID) == 'true') ? "Y" : "N" : "N/A";
-               if (($Surfacewater == "Y" && $Rainwater == "Y" && $Recycledwastewater == "Y" && $Groundwater == "Y") || ($Surfacewater == "Y" && $Rainwater == "Y" && $Recycledwastewater == "Y")) {
+               if (($Surfacewater == "Y" && $Rainwater == "Y" && $Recycledwastewater == "Y" && $groundwater == "Y") || ($Surfacewater == "Y" && $Rainwater == "Y" && $Recycledwastewater == "Y")) {
                     $SourceofWater = "All 4 or Surface+ rainwater+ recycle water  Options to be linked";
-                    $SourceofWater_msg = "Your source of water is surface, recycled water and rainwater which are viable sources for Water usage. Good you know where your water comes from!";
+                    $SourceofWater_msg = "The sources of water for your school are surface water, recycled water and rainwater, which are viable for usage. It is good that you know where your water comes from!";
                         } else if (($Surfacewater == "Y" && $Rainwater == "Y") || ($Surfacewater == "Y" && $Recycledwastewater == "Y") || ($Rainwater == "Y" && $Recycledwastewater == "Y")) {
                                     $SourceofWater = "";
-                                    $SourceofWater_msg = "You use a combination of either surface + rainwater or surface + recycled water or rainwater + recycled water.  All of these combinations demonstrate that your school is not extracting ground water, but is making an effort to either catch rainwater or treat waste water for further use.";
-                       }else if ($Groundwater == "Y" && $Rainwater == "Y") {
+                                    $SourceofWater_msg = "You use a combination of either 'surface and rainwater' or 'surface and recycled water' or 'rainwater and recycled water'.  All of these combinations demonstrate that your school is not extracting ground water but is making an effort to either catch rainwater or treat waste water for further use.";
+                       }else if ($groundwater == "Y" && $Rainwater == "Y") {
                                     if($Surfacewater == "Y")
                                         $wcombination[] = "Surface water";
                                      if($Rainwater == "Y")
                                         $wcombination[] = "Rain water";
                                      if($Recycledwastewater == "Y")
                                         $wcombination[] = "Recycled waste water";
-                                     if($Groundwater == "Y")
+                                     if($groundwater == "Y")
                                         $wcombination []= "Ground water";
              
                   
                                     $wcombination_msg =implode(",",$wcombination);                                     
-                                   
+                                    
+
                                     $SourceofWater =$wcombination_msg;
-                                    $SourceofWater_msg = "Your source of water is combination of '".$wcombination_msg."'. Which is not sufficient to fulfill the water requirements of your school. You should expand your source of water to more options such as surface water, rainwater and recycled wastewater.";
-                                }else if ($Surfacewater == "Y" || $Rainwater == "Y" || $Recycledwastewater == "Y" || $Groundwater == "Y") {
+                                    $SourceofWater_msg = "The source of water for your school is a combination of '".$wcombination_msg."'. which is not sufficient to fulfil the water requirements of your school. It is recommended that you expand your sources of water to alternatives like surface water, rainwater and recycled wastewater.";
+                                }else if ($Surfacewater == "Y" || $Rainwater == "Y" || $Recycledwastewater == "Y" || $groundwater == "Y") {
                                     
                                     if($Surfacewater == "Y")
                                         $wcombination[] = "Surface water";
@@ -1458,14 +1572,15 @@ if ($data == 3 || $data == 4) { ?>
                                         $wcombination[] = "Rain water";
                                      elseif($Recycledwastewater == "Y")
                                         $wcombination[] = "Recycled waste water";
-                                     elseif($Groundwater == "Y")
+                                     elseif($groundwater == "Y")
                                         $wcombination[] = "Ground water";
                  
                 
                  $wcombination_msg =implode(",",$wcombination); 
-                  
+                   
+
                                     $SourceofWater = $wcombination_msg;
-                                    $SourceofWater_msg = "Your source of water is '".$wcombination_msg."'. You should expand your source of water to more options and combinations of surface water, rainwater and recycled wastewater. ";
+                                    $SourceofWater_msg = "The source of water for your school is '".$wcombination_msg."'. It is recommended that you expand your source of water to more options and combinations of surface water, rainwater and recycled wastewater.";
                                 } else {
                                     
                                      if($Surfacewater == "Y")
@@ -1474,7 +1589,7 @@ if ($data == 3 || $data == 4) { ?>
                                         $wcombination[] = "Rain water";
                                      if($Recycledwastewater == "Y")
                                         $wcombination[] = "Recycled waste water";
-                                     if($Groundwater == "Y")
+                                     if($groundwater == "Y")
                                         $wcombination []= "Ground water";
                                
             
@@ -1496,10 +1611,10 @@ if ($data == 3 || $data == 4) { ?>
 //Question.4 water
                 if (getFiled('Q7W1', $schoolUserID) == "Y") {
                     $daily_water = "Yes";
-                    $daily_water_msg = "Please ensure that your water supply is adequate, so that you can meet required per capita income.";
+                    $daily_water_msg = "Please ensure that the water supply in your school is adequate so that you can meet required per capita consumption.";
                 } else {
                     $daily_water = "No";
-                    $daily_water_msg = "Please ensure that your water supply is adequate. Explore how can you mange your supply of water better.";
+                    $daily_water_msg = "Please ensure that the water supply in your school is adequate. We suggest exploring how you can manage your supply of water better.";
                 }
                 ?>
             <h4><?php echo $daily_water; ?></h4>
@@ -1519,7 +1634,12 @@ if ($data == 3 || $data == 4) { ?>
                 $growlocalplant = getFiled('Q8W1S8', $schoolUserID); //Does your school grow local plant species which require limited amount of water to grow?
                 $conservation = getFiled('Q8W1S9', $schoolUserID); //Has your school initiated any water conservation steps in the school or outside, in the past one year? 
                 $irrigation = getFiled('Q8W1S10', $schoolUserID); //Does your school use a drip or irrigation system?
-                                if($tanksintheschool == 'Y')
+                $abc = compact('tanksintheschool','drinkingwaterpoints','appliancesquickwash','flushsystems','growlocalplant','conservation','irrigation');
+                 
+               $aa = array_count_values($abc) ;
+                extract($aa);
+                
+                            if($tanksintheschool == 'Y')
                                     $check_c[0] = 1;
                                 if($drinkingwaterpoints == 'Y')
                                     $check_c[1] = 1 ;
@@ -1538,24 +1658,31 @@ if ($data == 3 || $data == 4) { ?>
                                 {
                                   $other_check = 'Yes';  
                                 }
+
+                                if($N>=7)
+                                {
+                                 $Conservation_Practices_msg = "Your school should try to adopt the following water conservation practices to become more water efficient: float valves to stop overflow; spill-proof taps to check overflow; appliances with a quick-wash setting; dual flush systems in the toilets; local plant species which require limited amount of water to grow; drip irrigation.";   
+                                }
+
+                                if($Y>2)
+                                {
+                                 $Conservation_Practices_msg = "Your school should try to adopt the following water conservation practices to become more water efficient: float valves to stop overflow; spill-proof taps to check overflow; appliances with a quick-wash setting; dual flush systems in the toilets; local plant species which require limited amount of water to grow; drip irrigation.";   
+                                }
                                 
-                                $question_count_array =array(1,2,3,4,5);
+                                $question_count_array =array(1,2,3,4,5,6);
                                 if(in_array($check_count,$question_count_array))
                                 {
-                                 $Conservation_Practices_msg = "Your school should look into these water conservation practices to become more water efficient: Float valves installed to stop overflow, Spill proof taps to check overflow, Appliances with a quick-wash setting, Dual flush systems installed in the toilets, Local plant species which require limited amount of water to grow, In initiating any water conservation steps in the schools and outside, Using a drip or irrigation system";   
+                                 $Conservation_Practices_msg = "Your school should try to adopt the following water conservation practices to become more water efficient: float valves to stop overflow; spill-proof taps to check overflow; appliances with a quick-wash setting; dual flush systems in the toilets; local plant species which require limited amount of water to grow; drip irrigation.";   
                                 }
-                               elseif($check_count == 6)
-                                {
-                                 $Conservation_Practices_msg = "Your school should look into this water conservation practices to become more water efficient: Float valves installed to stop overflow, Spill proof taps to check overflow, Appliances with a quick-wash setting, Dual flush systems installed in the toilets, Local plant species which require limited amount of water to grow, In initiating any water conservation steps in the schools and outside, Using a drip or irrigation system";   
-                                }
+                               
                                 elseif($check_count ==7)
                                 {
-                                  $Conservation_Practices_msg = "Your school Follows all the good water conservation practices. Please keep up the good work. Promote students to practice these things even at home.";    
+                                  $Conservation_Practices_msg = "Your school follows all the good water conservation practices. Keep up the good work! We suggest encouraging students to follow these practices at home as well.";    
                                 }
-                                elseif($check_count ==7 && $other_check == 'Yes')
-                                {
-                                  $Conservation_Practices_msg = "Your school should look into these water conservation practices to become more water efficient: Float valves installed to stop overflow, Spill proof taps to check overflow, Appliances with a quick-wash setting, Dual flush systems installed in the toilets, Local plant species which require limited amount of water to grow, In initiating any water conservation steps in the schools and outside, Using a drip or irrigation system.";    
-                                }
+                                // elseif($check_count ==7 && $other_check == 'Yes')
+                                // {
+                                //   $Conservation_Practices_msg = "Your school should look into these water conservation practices to become more water efficient: Float valves installed to stop overflow, Spill proof taps to check overflow, Appliances with a quick-wash setting, Dual flush systems installed in the toilets, Local plant species which require limited amount of water to grow, In initiating any water conservation steps in the schools and outside, Using a drip or irrigation system.";    
+                                // }
 //                                if ($tanksintheschool == "A1" && $drinkingwaterpoints == "A1" && $appliancesquickwash == "A1" && $flushsystems == "A1" && $growlocalplant == "A1" && $conservation == "A1" && $irrigation == "A1") {
 //                                    $Conservation_Practices = "Yes";
 //                                    $Conservation_Practices_msg = "Your school Follows all the good water conservation practices. Please keep up the good work. Promote students to practice these things even at home.";
@@ -1575,16 +1702,33 @@ if ($data == 3 || $data == 4) { ?>
             <?php
                                 if (getFiled('Q8W2', $schoolUserID) == "Y") {
                                     $RainwaterHarvesting = "Yes";
-                                    $RainwaterHarvesting_msg = "It's really good that your school has rainwater harvesting system. We are glad that your school recognises how important rainwater harvesting is!";
+                                    $RainwaterHarvesting_msg = "It is noteworthy that your school has rainwater harvesting system! We are glad that your school recognises the importance of harvesting rainwater.";
                                 } else {
                                     $RainwaterHarvesting = "No";
-                                    $RainwaterHarvesting_msg = "We really hope you consider rainwater harvesting methods for your school. Rainwater Harvesting is a good and easy practice. Catching rainwater from any of the catchments (roof, paved and unpaved areas) is cost-effective and you will be able to recharge ground water. Do consider it!";
+                                    $RainwaterHarvesting_msg = "We urge you to consider rainwater harvesting for your school. It is a useful and feasible practice. Harvesting rainwater from any or all of the catchment areas (rooftop, paved and unpaved areas) is cost-effective and will enable you to recharge ground water or resuse the stored water.";
                                 }
                                 ?>
             <h4><?php echo $RainwaterHarvesting; ?></h4>
             <p><?php echo $RainwaterHarvesting_msg; ?></p>
           </div>
         </li>
+
+        <li <?php if(getFiled('Q8W2', $schoolUserID) == "N"){ echo "style='display:inline-block;'";} ?>>
+          <figure><img src="assets/img/performance/harvesting.jpg"></figure>
+          <div class="description">
+            <h3>Calculate your school’s rainwater harvesting potential (in litres).</h3>
+            <?php
+             $potential = getFiled('Q8W2S6', $schoolUserID);
+                                if (!empty($potential)) {
+                                    $potential_msg = "The RWH potential of your school is $potential. We recommend exploring the possibilities of rainwater harvesting in your school."; } 
+                                ?>
+            <p><?php if(isset($potential_msg)) {echo $potential_msg; } ?></p>
+          </div>
+        </li>
+
+        
+
+
         <li <?php if(getFiled('Q8W2S1', $schoolUserID) == ""){ echo "style='display:none;'";} ?>>
           <figure><img src="assets/img/performance/catchment.jpg"></figure>
           <div class="description">
@@ -1599,14 +1743,14 @@ if ($data == 3 || $data == 4) { ?>
             <?php
                                     } else if (getFiled('Q8W2S1', $schoolUserID) == "N") {
                                         $catchments = "No";
-                                        $catchments_msg = "Your school has rainwater harvesting system, which indirectly means your school must be catching rainwater from atleast one of the catchments: Rooftop, Paved area or Unpaved area. Please fill in the correct details for better analysis of your reports.";
+                                        $catchments_msg = "Your school has a rainwater harvesting system, which implies that the school is catching rainwater from at least one of the catchment areas—rooftop, paved or unpaved. Please provide the correct details for a more accurate analysis of your report.";
                     ?>
             <h4><?php echo $catchments; ?></h4>
             <p><?php echo $catchments_msg; ?></p>
             <?php
                                     }
                                     ?>
-          </div>
+          </div> 
         </li>
         <?php
                         if (getFiled('Q8W2S1', $schoolUserID) == "Y") {
@@ -1618,25 +1762,25 @@ if ($data == 3 || $data == 4) { ?>
             <?php
                                     if (getFiled('Q8W2S1S1', $schoolUserID) == 7) {
                                         $catchments_area = "Rooftop + Paved + Unpaved";
-                                        $catchments_area_msg = "You use all catchments to catch rainwater, namely,  rooftop + Paved + Unpaved, of rainwater harvesting which is really good.";
+                                        $catchments_area_msg = "It is remarkable that your school usea all catchment areas to harvest rainwater—rooftop, paved and unpaved!";
                                     } else if (getFiled('Q8W2S1S1', $schoolUserID) == 1) {
                                         $catchments_area = "Rooftop";
-                                        $catchments_area_msg = "You use 'Rooftop' method of catchment for rainwater harvesting which is good. You can try moving toward combination of rooftop + Paved + Unpaved.";
+                                        $catchments_area_msg = "Your school uses 'Rooftop' method of catchment for rainwater harvesting, which is good. We suggest moving towards a combination of rooftop, paved and unpaved for a better outcome.";
                                     } else if (getFiled('Q8W2S1S1', $schoolUserID) == 2) {
                                         $catchments_area = "Paved";
-                                        $catchments_area_msg = "You use 'Paved' method of catchment for rainwater harvesting which is good. You can try moving toward combination of rooftop + Paved + Unpaved.";
+                                        $catchments_area_msg = "Your school uses 'Paved' method of catchment for rainwater harvesting, which is good. We suggest moving towards a combination of rooftop, paved and unpaved for a better outcome.";
                                     } else if (getFiled('Q8W2S1S1', $schoolUserID) == 3) {
                                         $catchments_area = "Unpaved";
-                                        $catchments_area_msg = "You use 'Unpaved' method of catchment for rainwater harvesting which is good. You can try moving toward combination of rooftop + Paved + Unpaved.";
+                                        $catchments_area_msg = "Your school uses 'Unpaved' method of catchment for rainwater harvesting, which is good. We suggest moving towards a combination of rooftop, paved and unpaved for a better outcome.";
                                     } else if (getFiled('Q8W2S1S1', $schoolUserID) == 4) {
                                         $catchments_area = "Rooftop + Paved";
-                                        $catchments_area_msg = "You use 'Rooftop + Paved' method of catchment for rainwater harvesting which is good. You can try moving toward combination of rooftop + Paved + Unpaved.";
+                                        $catchments_area_msg = "Your school uses 'Rooftop + Paved' method of catchment for rainwater harvesting, which is good. We suggest moving towards a combination of rooftop, paved and unpaved for a better outcome.";
                                     } else if (getFiled('Q8W2S1S1', $schoolUserID) == 5) {
                                         $catchments_area = "Paved + Unpaved";
-                                        $catchments_area_msg = "You use 'Paved + Unpaved' method of catchment for rainwater harvesting which is good. You can try moving toward combination of rooftop + Paved + Unpaved.";
+                                        $catchments_area_msg = "Your school uses 'Paved + Unpaved' method of catchment for rainwater harvesting, which is good. We suggest moving towards a combination of rooftop, paved and unpaved for a better outcome.";
                                     } else if (getFiled('Q8W2S1S1', $schoolUserID) == 6) {
                                         $catchments_area = "Rooftop + Unpaved";
-                                        $catchments_area_msg = "You use 'Rooftop + Unpaved' method of catchment for rainwater harvesting which is good. You can try moving toward combination of rooftop + Paved + Unpaved.";
+                                        $catchments_area_msg = "Your school uses 'Rooftop + Unpaved' method of catchment for rainwater harvesting, which is good. We suggest moving towards a combination of rooftop, paved and unpaved for a better outcome.";
                                     }
                                     ?>
             <h4><?php echo $catchments_area; ?></h4>
@@ -1652,21 +1796,21 @@ if ($data == 3 || $data == 4) { ?>
             <?php
                                 if (getFiled('Q8W2S2', $schoolUserID) == 1) {
                                     $rainwater_harvested = "By storing";
-                                    $rainwater_harvested_msg = "A good Practice. The water stored can be used later thus reducing the need to depend on other sources of water.";
+                                    $rainwater_harvested_msg = "It is a good practice. Stored water can be used later, thus reducing the need to depend on other sources of water.";
                 ?>
             <h4><?php echo $rainwater_harvested; ?></h4>
             <p><?php echo $rainwater_harvested_msg; ?></p>
             <?php 
                                 } elseif (getFiled('Q8W2S2', $schoolUserID) == 2) {
                                     $rainwater_harvested = "By recharge ground";
-                                    $rainwater_harvested_msg = "Recharging the ground water is a very good practice. It helps in increaseing the ground water table.";
+                                    $rainwater_harvested_msg = "Recharging ground water is a great green practice! It helps in increaseing the ground water table.";
                   ?>
             <h4><?php echo $rainwater_harvested; ?></h4>
             <p><?php echo $rainwater_harvested_msg; ?></p>
             <?php 
                                 } elseif (getFiled('Q8W2S2', $schoolUserID) == 3) {
                                     $rainwater_harvested = "Combination of both";
-                                    $rainwater_harvested_msg = "You harvest the rain water by both storing and recharging. An excellent practice. Hope that you use the RWH systems to its full potential."; ?>
+                                    $rainwater_harvested_msg = "Your school harvests rainwater by both storing and recharging, which is an excellent practice! We hope that the RWH systems in the school are being used to their full potential."; ?>
             <h4><?php echo $rainwater_harvested; ?></h4>
             <p><?php echo $rainwater_harvested_msg; ?></p>
             <?php }  ?>
@@ -1691,7 +1835,7 @@ if ($data == 3 || $data == 4) { ?>
                                     elseif($school_harvested_area ==9) 
                                     $school_harvested = "91 to 100 per cent";
                                     //$school_harvested = "91 to 100 per cent";
-                                    $school_harvested_msg = "It's great that your school's rainwater harvesting area is more than 90%! We hope you continue with this green practice.";
+                                    $school_harvested_msg = "It is great that the rainwater harvesting area of your school is more than 90 per cent. We hope that you sustain this green practice.";
                   ?>
             <h4><?php echo $school_harvested; // Need to discuss with ravi sir/ client   ?></h4>
             <p><?php echo $school_harvested_msg; ?></p>
@@ -1703,19 +1847,19 @@ if ($data == 3 || $data == 4) { ?>
                                     elseif($school_harvested_area ==6) 
                                     $school_harvested = "61 to 70 per cent";
                                     //$school_harvested = "61 to 70 per cent";
-                                    $school_harvested_msg = "It's great that your school's rainwater harvesting area is more than 50%! We hope you continue with this green practice and increase the catchment area in the near future.  Your school has the potential!";?>
+                                    $school_harvested_msg = "It is great that the rainwater harvesting area of your school is more than 50 per cent. We hope that you sustain and improve this green practice by increasing the catchment area in the near future. Doing so will help you realise the complete potential of the school!.";?>
             <h4><?php echo $school_harvested; // Need to discuss with ravi sir/ client   ?></h4>
             <p><?php echo $school_harvested_msg; ?></p>
             <?php
                                 } else if ($school_harvested_area == 4) {
                                     $school_harvested = "41 to 50 per cent";
-                                    $school_harvested_msg = "Your school's rainwater harvesting area is between ".$school_harvested."! We hope you continue with this green practice and increase the catchment area in the near future.  Your school has the potential!"; ?>
+                                    $school_harvested_msg = "The rainwater harvesting area of your school is between 40 and 50 per cent. We hope that you sustain and improve this green practice by increasing the catchment area in the near future. Doing so will help you realise the complete potential of the school!"; ?>
             <h4><?php echo $school_harvested; // Need to discuss with ravi sir/ client   ?></h4>
             <p><?php echo $school_harvested_msg; ?></p>
             <?php 
                                 } else if ($school_harvested_area == 3) {
                                     $school_harvested = "31 to 40 per cent";
-                                    $school_harvested_msg = "Your school's rainwater harvesting area is ".$school_harvested."! We hope you continue with this green practice and expand the area in the near future.";
+                                    $school_harvested_msg = "The rainwater harvesting area of your school is $school_harvested per cent. We hope that you sustain and improve this green practice by increasing the catchment area in the near future.";
                   ?>
             <h4><?php echo $school_harvested; // Need to discuss with ravi sir/ client   ?></h4>
             <p><?php echo $school_harvested_msg; ?></p>
@@ -1725,7 +1869,7 @@ if ($data == 3 || $data == 4) { ?>
                                     $school_harvested = "10 to 20 per cent";
                                     else
                                     $school_harvested = "21 to 30 per cent";
-                                    $school_harvested_msg = "Your school's rainwater harvesting area is ".$school_harvested."! We hope you continue with this green practice and expand the area in the near future.";
+                                    $school_harvested_msg = "The rainwater harvesting area of your school is $school_harvested per cent. We hope that you sustain and improve this green practice by increasing the catchment area in the near future.";
                   ?>
             <h4><?php echo $school_harvested; // Need to discuss with ravi sir/ client   ?></h4>
             <p><?php echo $school_harvested_msg; ?></p>
@@ -1745,13 +1889,13 @@ if ($data == 3 || $data == 4) { ?>
                                 $cleanliness = getFiled('Q8W2S5', $schoolUserID);
                                 if ($cleanliness == 1) {
                                     $Rateyourcatchment = "Good"; //good
-                                    $Rateyourcatchment_msg = "Good that the catchments are clean and well maintained!";
+                                    $Rateyourcatchment_msg = "It is good that the catchments are clean and well-maintained!";
                                 } else if ($cleanliness == 2) {
                                     $Rateyourcatchment = "Average"; //Average
-                                    $Rateyourcatchment_msg = "You need to clean the catchments more often.";
+                                    $Rateyourcatchment_msg = "Your school needs to clean the catchments more often.";
                                 } else {
                                     $Rateyourcatchment = "Poor"; //Poor
-                                    $Rateyourcatchment_msg = "The catchments are badly maintained! You need to clean the catchments more often. The best times are: pre-monsoon and post-monsoon.";
+                                    $Rateyourcatchment_msg = "The catchments are maintained poorly. Your school needs to clean the catchments more often. The best times to do so are pre-monsoon and post-monsoon.";
                                 }
                                 ?>
             <h4><?php echo $Rateyourcatchment; ?></h4>
@@ -1766,14 +1910,14 @@ if ($data == 3 || $data == 4) { ?>
             <?php
                                 if (getFiled('Q8W2S61', $schoolUserID) == "Y") {
                                     $catchment_system = "Yes";
-                                    $catchment_system_msg = "Good you are regular with cleaning the catchment.";
+                                    $catchment_system_msg = "It is good that your school regularly cleans the catchment structures.";
                 ?>
             <h4><?php echo $catchment_system; ?></h4>
             <p><?php echo $catchment_system_msg; ?></p>
             <?php 
                                 } elseif (getFiled('Q8W2S61', $schoolUserID) == "N") {
                                     $catchment_system = "No";
-                                    $catchment_system_msg = "Clean your catchments twice a year! Unclean catchments can lead to a lot unwanted problems - could be a breeding place for mosquitoes.";
+                                    $catchment_system_msg = "We recommend cleaning your catchment structures twice a year. Unclean catchments can lead to many unwanted problems and become a breeding place for mosquitoes.";
                                 ?>
             <h4><?php echo $catchment_system; ?></h4>
             <p><?php echo $catchment_system_msg; ?></p>
@@ -1793,14 +1937,14 @@ if ($data == 3 || $data == 4) { ?>
 //Question 6.g Water Section.
                                 if (getFiled('Q8W2S8', $schoolUserID) == "Y") {
                                     $Rainwater_Harvesting = "Yes";
-                                    $Rainwater_Harvesting_msg = "Its good that your school monitors the structure for its efficiency.";
+                                    $Rainwater_Harvesting_msg = "It is good that your school monitors the structure for its efficiency.";
               ?>
             <h4><?php echo $Rainwater_Harvesting; ?></h4>
             <p><?php echo $Rainwater_Harvesting_msg; ?></p>
             <?php
                                 } elseif (getFiled('Q8W2S8', $schoolUserID) == "N") {
                                     $Rainwater_Harvesting = "No";
-                                    $Rainwater_Harvesting_msg = "You should ensure that the rainwater harvesting structure is monitored for its efficiency."; ?>
+                                    $Rainwater_Harvesting_msg = "We suggest ensuring that the rainwater harvesting structure is monitored for its efficiency."; ?>
             <h4><?php echo $Rainwater_Harvesting; ?></h4>
             <p><?php echo $Rainwater_Harvesting_msg; ?></p>
             <?php
@@ -1811,17 +1955,17 @@ if ($data == 3 || $data == 4) { ?>
         <li <?php if(getFiled('Q8W2S13', $schoolUserID) == ""){ echo "style='display:none;'";} ?>>
           <figure><img src="assets/img/performance/monitor.jpg"></figure>
           <div class="description">
-            <h3>If your school's RWH structure is more than a year old, is there any improvement in the groundwater
+            <h3>If your school's RWH structure is more than a year old, is there any improvement in the ground water
               quality after the implementation of the RWH structure?</h3>
             <?php
       global $RWH_structure,$RWH_structure_msg;
                                 //Question 6.i Water Section.
                                 if (getFiled('Q8W2S13', $schoolUserID) == "Y") {
                                     $RWH_structure = "Yes";
-                                    $RWH_structure_msg = "Its good that your school monitors the structure for its efficiency.";
+                                    $RWH_structure_msg = "It is good that your school is contributing in ensuring that the ground water level is maintained and improved further.";
                                 } elseif (getFiled('Q8W2S13', $schoolUserID) == "N") {
                                     $RWH_structure = "No";
-                                    $RWH_structure_msg = "Please ensure that you maintain the groundwater level in your area.";
+                                    $RWH_structure_msg = "Please ensure that your school maintains the ground water level in the area.";
                                 }
                                 ?>
             <h4><?php echo $RWH_structure; ?></h4>
@@ -1842,10 +1986,10 @@ if ($data == 3 || $data == 4) { ?>
                                 
                                 if ($separate_toilets == "Y" && $toilets_accessible == "Y" && $differently_abled_children == "Y" && $teaching_toilets == "Y" && $non_teaching_toilets == "Y") {
                                     $Hygiene_Practices = "Yes";
-                                    $Hygiene_Practices_Msg = "Great that your school practices all the sanitation and hygiene related practices. Keep up the good work!";
+                                    $Hygiene_Practices_Msg = "It is great that your school practices all the sanitation and hygiene related practices. Keep up the good work!";
                                 } else {
                                     $Hygiene_Practices = "No";
-                                    $Hygiene_Practices_Msg = "To make your school more hygiene friendly, please consider the following practices: Separate toilets for males and females, making toilets accessible and safe to use for children, making toilets accessible and safe to use for differently abled children, making  toilets accessible and safe to use for differently abled staff,  considering the right location for toilets in terms of privacy and safety,  ensure sufficient light during day time.";
+                                    $Hygiene_Practices_Msg = "To make your school even more hygiene-friendly,  please consider some of the following practices: separate toilets for males and females; making toilets accessible and safe to use for children; making toilets accessible and safe to use for differently-abled children as well as staff; allocating a suitable location for toilets in terms of privacy and safety;  ensuring sufficient light during daytime.";
                                 }
                                 ?>
                     <h4><?php echo $Hygiene_Practices; ?></h4>
@@ -1865,15 +2009,16 @@ if ($data == 3 || $data == 4) { ?>
                                 $Load_for_drinking_water_tap = $total_population / $drinking_water_taps_8;
                                 if ($Load_for_drinking_water_tap <= 50 && $drinking_water_taps_8 != "" && $drinking_water_taps_8 != 0) {
                                     $DrinkingWaterTabs = "If equal to or less than the load";
-                                    $DrinkingWaterTabs_Msg = "Great! You have the required number of drinking water taps in your school.";
+                                    $DrinkingWaterTabs_Msg = "It is great that you have the required number of drinking water taps in your school.";
                                 } else {
                                     $DrinkingWaterTabs = "If more than the load";
-                                    $DrinkingWaterTabs_Msg = "You do not have the required number of drinking water taps in your school. Please refer to the table for prescribed norm.";
+                                    $DrinkingWaterTabs_Msg = "You do not have the required number of drinking water taps in your school. Please refer to the table for the prescribed number.";
                                 }
                                 ?>
             <!--            <h4><?php echo $DrinkingWaterTabs; ?></h4>-->
             <p><?php echo $DrinkingWaterTabs_Msg; ?></p>
           </div>
+          <br/>
           <table width="100%" class="intro-table" cellspacing="0" style="margin-bottom: 0">
             <tr>
               <th class="performance-blue-bg">Category</th>
@@ -1947,15 +2092,11 @@ if ($data == 3 || $data == 4) { ?>
 
                  if($Q1G2 < 6)
                   {
-                      $handpumps_msg = "You do not have hand pumps in your school. Good that your school is not extracting a lot of ground water which is a valuable but diminishing resource. Using of Rain Water Harvesting system/ Waste Water treatment processes/ Surface water are a few of the other sources of water your school can always look into";
+                      $handpumps_msg = "You do not have hand pumps in your school. It is good that your school is not extracting a lot of ground water, which is a valuable and diminishing resource. Using rainwater harvesting system, wastewater treatment processes and surface water are some alternative sources of water that your school can explore.";
                   }else {
 
-                      $handpumps_msg = "You do not have  hand pumps in your school. Good that your school is not extracting a lot of ground water.  Good that your school is not extracting a lot of ground water which is a valuable but diminishing resource. Using rainwater harvesting system/ waste water treatment processes/ surface water are a few of the other sources of water your school can always look into.";
+                      $handpumps_msg = "You do not have hand pumps in your school. It is good that your school is not extracting a lot of ground water, which is a valuable and diminishing resource. Using rainwater harvesting system, wastewater treatment processes and surface water are some alternative sources of water that your school can explore.";
                   }
-
-
-
-
                     
                 } else {
                         $handpumps = "More than 1";
@@ -1963,7 +2104,7 @@ if ($data == 3 || $data == 4) { ?>
 
                    if($Q1G2 < 6)
                   {
-                      $handpumps_msg = "Handpumps put a lot of pressure on groundwater which is an extremely valuable but diminishing resource. Please ensure that you are not extracting too much of ground water. Using of Rain Water Harvesting system/ Waste Water treatment processes/ Surface water are a few of the other sopurces of water your school can always look into.";
+                      $handpumps_msg ="You have many hand pumps in your school. Please ensure that you are not extracting too much ground water, which is a valuable and diminishing resource. Using rainwater harvesting system, wastewater treatment processes and surface water are some alternative sources of water that your school can explore.";
                   }else {
 
                       $handpumps_msg = "You have many hand pumps in your school. Please ensure that you are not extracting too much of ground water which is a valuable but diminishing resource. Using rainwater harvesting system/ waste water treatment processes/ surface water are a few of the other sources of water your school can always look into.";
@@ -1995,7 +2136,7 @@ if ($data == 3 || $data == 4) { ?>
                                     $abulation_tabs_msg = "You have the required number of ablution taps in your school.";
                                 } else {
                                   $abulation_tabs = "more than the load";
-                                    $abulation_tabs_msg = "You do not have the required number of ablution taps in your school. Please refer to the table for prescribed norm.";
+                                    $abulation_tabs_msg = "You do not have the required number of ablution taps in your school. Please refer to the table for the prescribed number.";
                                 }
                                 ?>
             <!--            <h4><?php echo $abulation_tabs; ?></h4>-->
@@ -2014,7 +2155,7 @@ if ($data == 3 || $data == 4) { ?>
     $school_type = $school_category;
     if ($school_type == 1 && $Load_for_water_closets <= 45 && $water_closets_q11 != "" && $water_closets_q11 != 0) { //school type Day Scholar
         $waterclosets = "Equal to or less than the load ";
-        $waterclosets_msg = "You have the required number of urinals (strictly used for urination only) in your school.";
+        $waterclosets_msg = "You have the required number of water closets (used for defecation and urination)  in your school.";
     } else if ($school_type == 2 && $Load_for_water_closets <= 35 && $water_closets_q11 != "" && $water_closets_q11 != 0) { //Day Boarding 
         $waterclosets = "Equal to or less than the load";
         $waterclosets_msg = "You have the required number of water closets (used for defecation and urination)  in your school.";
@@ -2035,7 +2176,7 @@ if ($data == 3 || $data == 4) { ?>
         $waterclosets_msg = "You have the required number of water closets (used for defecation and urination)  in your school.";
     } else {
         $waterclosets = "More than the load";
-        $waterclosets_msg = "You do not have the required number of urinals (strictly used for urination only) in your school. Please refer to the table for prescribed norm.";
+        $waterclosets_msg = "You do not have the required number of water closets (used for defecation and urination) in your school. Please refer to the table for the prescribed number.";
     }
     ?>
             <!--    <h4><?php echo $waterclosets; ?></h4>-->
@@ -2103,10 +2244,10 @@ if ($data == 3 || $data == 4) { ?>
         }
                     if ($other_water_outlets_q13 > 1) { //not provided by cse
                                     $water_outlets = $Load_for_other_water_outlets;
-                                    $water_outlets_msg = "You have many water outlets in your school. Please ensure that you are not extracting too much of ground water.";
+                                    $water_outlets_msg = "You have many water outlets in your school. Please ensure that you are not extracting too much ground water.";
                                 } elseif($other_water_outlets_q13 ==0 || $other_water_outlets_q13 ==1 ) {
                                     $water_outlets = $Load_for_other_water_outlets;
-                                    $water_outlets_msg = "You do not have many water outlets in your school. Good that your school is not extracting a lot of ground water.";
+                                    $water_outlets_msg = "You have very few water outlets in your school. It is good that your school is not extracting a lot of ground water.";
                                 }
                                 ?>
             <!--            <h4><?php echo $water_outlets; ?> people per outlet</h4>-->
@@ -2123,10 +2264,10 @@ if ($data == 3 || $data == 4) { ?>
                                 //$Load_for_other_water_outlets=$total_population/$other_water_outlets_q13;
                                 if ($storage_system_q14  == 'Y') { //not provided by cse
                                     $storage_heading_q14 = "Yes";
-                                    $water_supply = "You have a water storage system in place to supply water in the toilets";
+                                    $water_supply = "Your school has a water storage system in place to supply water to the toilets.";
                                 } else {
                                     $storage_heading_q14 = "No";
-                                    $water_supply = "You do not have a water storage system in place to supply water in the toilets";
+                                    $water_supply = "Your school does not have a water storage system in place to supply water to the toilets.";
                                 }
                                 ?>
             <h4><?php echo $storage_heading_q14; ?></h4>
@@ -2142,10 +2283,10 @@ if ($data == 3 || $data == 4) { ?>
                 $storage_system_q15 = getFiled('Q21W1', $schoolUserID);
                 if ($storage_system_q15  == 'Y') { //not provided by cse
                     $storage_heading_q15 = "Yes";
-                     $water_supply15 = "You have enough water supply.";
+                     $water_supply15 = "Your school has enough water supply.";
                     } else {
                         $storage_heading_q15 = "No";
-                        $water_supply15 = "You do not have sufficient water supply";
+                        $water_supply15 = "Your school does not have sufficient water supply.";
                         }
                                 ?>
             <h4><?php echo $storage_heading_q15; ?></h4>
@@ -2161,11 +2302,11 @@ if ($data == 3 || $data == 4) { ?>
                                 $storage_system_q16= getFiled('Q18W1', $schoolUserID);
                                if ($storage_system_q16  == 'Y') {         
                                    $storage_heading_q16 = "Yes";
-                                    $water_supply16 = "Good that your toilets are cleaned everyday. Cleaning of toilet more than once a day is necessary.";
+                                    $water_supply16 = "It is good that the toilets in the school are cleaned every day. Cleaning toilets more than once a day is necessary to maintain good hygiene.";
                                 } else 
                                     {
                                     $storage_heading_q16 = "No";
-                                 $water_supply16 = "Your toilets are not cleaned everyday. Cleaning of toilet more than once a day is necessary. ";
+                                 $water_supply16 = "The toilets in the school are not cleaned every day. Cleaning toilets more than once a day is necessary to maintain good hygiene.";
                                 }
                                 ?>
             <h4><?php echo $storage_heading_q16; ?></h4>
@@ -2181,11 +2322,11 @@ if ($data == 3 || $data == 4) { ?>
                                 $storage_system_q17= getFiled('Q19W1', $schoolUserID);
                                if ($storage_system_q17  == 'Y') {           
                                    $storage_heading_q17 = "Yes";
-                                    $water_supply17 = "Good that your school has a wastewater treatment facility. Its really important that we treat our own wastewater.";
+                                    $water_supply17 = "It is noteworthy that your school has a wastewater treatment facility. It is essential that we treat our own wastewater.";
                                 } else 
                                     {
                                     $storage_heading_q17 = "No";
-                                 $water_supply17= "Your school does not have a wastewater treatment facility. It would be nice if your school could consider getting started with the treatment of wastewater within the school premises.";
+                                 $water_supply17= "Your school does not have a wastewater treatment facility. We recommend considering treatment of wastewater within the school premises and reusing the treated water.";
                                 }
                                 ?>
             <h4><?php echo $storage_heading_q17; ?></h4>
@@ -2205,11 +2346,11 @@ if ($data == 3 || $data == 4) { ?>
                                 $storage_system_q18= getFiled('Q20W1', $schoolUserID);
                                if ($storage_system_q18  == 'Y') {
                                    $storage_heading_q18 = "Yes";
-                                    $water_supply18 = "Good that the treated wastewater is used within your school.";
+                                    $water_supply18 = "It is commendable that treated wastewater is used within your school.";
                                 } else 
                                     {
                                     $storage_heading_q18 = "No";
-                                 $water_supply18 = "Your school should consider ways to use the treated wastewater.";
+                                 $water_supply18 = "We recommend exploring ways to use treated wastewater.";
                                 }
                                 ?>
             <!--            <h4><?php echo $storage_heading_q18; ?></h4>-->
@@ -2225,35 +2366,35 @@ if ($data == 3 || $data == 4) { ?>
   </div>
   <div class="waste" style="line-height: 16px;">
     <h2>
-      <figure><img src="assets/img/performance/waste.jpg"></figure>
-      <label>Waste</label>
-      <span>Green Schools Programme Audit 2018-2019</span></h2>
-    <p>Do you know how much solid waste (paper, plastics, food waste etc) Delhi produces? 10,000 tonnes a day. We dump it all into landfills, which are overflowing and which pollute the environment. Moreover, there is no land available to create more landfills. Schools, by following efficient waste management practices, can play a leading role in setting examples, creating a public opinion, and ridding India of this menace.</p>
-<p>We face day-to-day problems regarding waste management. Where to dispose of waste? How to dispose of waste? What to do with the waste?
+      <figure><img src="assets/img/performance/waste.jpg"><li style="font-weight: bold; margin-left:35px">Waste</li></figure>
+      <label> </label>
+      <span>Green Schools Programme Audit 2019-2020</span></h2>
+    <p>Do you know how much solid waste (paper, plastics, food waste etc) Delhi produces? 10,000 tonnes a day. We dump it all into landfills, which are overflowing and which pollute the environment. Moreover, there is no land available to create more landfills. We face day-to-day problems regarding waste management. Where to dispose of waste? How to dispose of waste? What to do with the waste?</p>
+    <p>Schools, by following efficient waste management practices, can play a leading role in setting examples, creating a public opinion, and ridding India of this menace.
 </p>
+<p>Explore the waste related activities and information on <a href="https://www.greenschoolsprogramme.org/knowledge-bank/waste/" style="color:blue;">GSP website</a></p>
     <section class="remember">
       <h3>Remember:</h3>
-      <ul>
-<li> &bull;  Segregation at source is the first and most important part of efficient waste management.</li>
-<li> &bull; Every class should have minimum of two dustbins to collect wet and dry waste. </li>
-<li> &bull;  Set up a composting facility to manage the wet waste within school premises</li>
-<li> &bull;  Dispose of e-waste by sending it to authorised dealers.</li>
-<li> &bull;  DO NOT burn waste in school premises.</li>
-<li> &bull; Send waste to designated dumping or landfill sites only.</li>
-<li> &bull; Have an efficient waste policy for your school.</li>
-
-    </ul>
+       <ol style="list-style-type: japanese-formal !important;">
+        <li>Segregation at source is the first and most important part of efficient waste management.</li>
+        <li>Every class should have minimum of two dustbins to collect wet and dry waste separately.</li>
+        <li>Set up a composting facility to manage the wet waste within school premises.</li>
+        <li>Dispose of e-waste by sending it to authorised dealers.</li>
+        <li>DO NOT burn waste in school premises.</li>
+        <li>Send waste to designated dumping or landfill sites only.</li>
+        <li>Have an efficient waste policy for your school.</li>
+    </ol>
     </section>
     <h3>Your School's Performance</h3>
     <?php
-                    $total_waste_points = number_format(getWastePoints($schoolUserID),2);
-                    if($total_waste_points =30)
+                $total_waste_points = number_format(getWastePoints($schoolUserID),2);
+                    if($total_waste_points >=56)
                $point_performance_msg_w = "You have done very well in this section. You school manages all of its waste very efficiently. We are glad that your school has created a waste-wise society.";
-                    elseif($total_waste_points >= 25 && $total_waste_points < 29.9 )
+                    elseif($total_waste_points >= 40 )
                         $point_performance_msg_w = "You have done good in this section. Your school manages most of the waste. We hope that through the assessment below, you will take what is required to make your school a waste management efficient school.";
-                    elseif($total_waste_points >= 16 && $total_waste_points <24.9)
+                    elseif($total_waste_points >= 15)
                         $point_performance_msg_w = "You have done average in this section. Your school manages most of the waste. We hope that through the assessment below you will take what is required to make your school a waste management efficient school.";
-                    elseif($total_waste_points <= 15)
+                    elseif($total_waste_points < 15)
                         $point_performance_msg_w = "You have done poorly  in this section. Your school needs to manage its waste. We hope that through the assessment below you will take what is required to make your school a waste management efficient school.";                   
                 ?>
     <p><?php echo $point_performance_msg_w; ?></p>
@@ -2268,10 +2409,10 @@ if ($data == 3 || $data == 4) { ?>
                                 $segregate_solid_waste =getFiled('Q4Wa1', $schoolUserID);
                                 if ($segregate_solid_waste == 'Y') {
                                     $st_msg = "Yes";
-                                    $watse1_msg = "Your school segregates Waste at source. Inculcating this habit of waste segregation at source among students can help reform the waste related problem at a larger level. ";
+                                    $watse1_msg = "It is remarkable that your school segregates waste at source! Inculcating this habit of waste segregation at source among students can help reform  waste-related issues significantly.";
                                 } else {
                                     $st_msg = "No";
-                                    $watse1_msg = "Your School does not segregate waste at source. We strongly recommend that waste is segregated at source and students should be made aware and practice segregation within the school premises.";
+                                    $watse1_msg = "Your school does not segregate waste at source. We strongly recommend segregating waste at source and making students aware of the practice in the school.";
                                 }
                                 ?>
             <h4><?php echo $st_msg; ?></h4>
@@ -2293,7 +2434,7 @@ if ($data == 3 || $data == 4) { ?>
                             $two_three_bin_percentage = number_format(($total_collection_2_3_bins/$total_collection_bins)*100,2,".","");
                             // Column 5 (2bins) and Column 6 (3or more bins) is equal to Sum of Total no. of collection points
                             if ($two_three_bin_percentage >= 76 && $two_three_bin_percentage <=100) {
-                                $msg_waste2 = "Most of the collection points have two or more than two dustbins for different categories of waste. A good practice! We encourage that students learn to segregate waste at source.";?>
+                                $msg_waste2 = "Most of the collection points in the school have two or more dustbins for different categories of waste. This is a good practice! We recommend regular learning exercises to enable students to segregate waste at source even more effectively.";?>
           <div class="description">
             <h3>Waste Collection Points</h3>
             <!--                                <h4>2.3 average</h4>-->
@@ -2302,7 +2443,7 @@ if ($data == 3 || $data == 4) { ?>
           <?php    }
                             //   Column 5 (2bins) and Column 6 (3or more bins) is very less than Sum of Total no. of collection 
                             elseif ($two_three_bin_percentage >= 50 && $two_three_bin_percentage <=75) {
-                                $msg_waste2 = "Most of the collection points have two or more than two dustbins for different categories of waste. A good practice! We encourage that students learn to segregate waste at source.";?>
+                                $msg_waste2 = "Most of the collection points in the school have two or more dustbins for different categories of waste. This is a good practice! We recommend regular learning exercises to enable students to segregate waste at source even more effectively.";?>
           <div class="description">
             <h3>Waste Collection Points</h3>
             <!--                                <h4>2.3 average</h4>-->
@@ -2311,7 +2452,7 @@ if ($data == 3 || $data == 4) { ?>
           <?php    }
                               //Column 5 (2bins) and Column 6 (3 or more bins) is less than Sum of Total no. of collection 
                             elseif ($two_three_bin_percentage >= 25 && $two_three_bin_percentage <=49) {
-                                $msg_waste2 = "Waste segregation at source is not efficient in your school. We strongly recommend that your school considers putting more collection points with two or more dustbins! We encourage that students learn to segregate waste at source.";
+                                $msg_waste2 = "Waste segregation at source is not efficient in your school. We strongly recommend installing more collection points with two or more dustbins. It is also suggested that the school holds regular learning exercises to enable students to segregate waste effectively at source.";
                 ?>
           <div class="description">
             <h3>Waste Collection Points</h3>
@@ -2321,7 +2462,7 @@ if ($data == 3 || $data == 4) { ?>
           <?php }
                             
                              elseif ($two_three_bin_percentage < 25) {
-                                $msg_waste2 = "Waste segregation at source is not efficient in your school. We strongly recommend that your school considers putting more collection points with two or more dustbins! We encourage that students learn to segregate waste at source.";
+                                $msg_waste2 = "Waste segregation at source is not efficient in your school. We strongly recommend installing more collection points with two or more dustbins. It is also suggested that the school holds regular learning exercises to enable students to segregate waste effectively at source.";
                 ?>
           <div class="description">
             <h3>Waste Collection Points</h3>
@@ -2332,7 +2473,7 @@ if ($data == 3 || $data == 4) { ?>
                             }
                             //'Column 3 (No bin) and Column 4 (1 bin) is equal to Sum of Total no. of collection points the school 
                             elseif ($total_collection_0_1_bins == $total_collection_bins) {
-                                $msg_waste2 = "Waste segregation at source is not efficient in your school. We strongly recommend that your school considers putting more collection points with two or more dustbins! We encourage that students learn to segregate waste at source. ";
+                                $msg_waste2 = "Waste segregation at source is not being practiced in your school. We strongly recommend installing collection points with two or more dustbins in the school. It is also suggested that the school holds regular learning exercises to enable students to segregate waste effectively at source.";
                 ?>
           <div class="description">
             <h3>Waste Collection Points</h3>
@@ -2406,7 +2547,7 @@ if ($data == 3 || $data == 4) { ?>
             $per_capita_waste_generation = round($per_capita_waste_generation, 2);
             if ($per_capita_waste_generation <= $per_capita) {
                 $waste_msg1 = "Your school's per capita waste consumption (" . $per_capita_waste_generation . " gms per person) is according to the norms (" . $per_capita . " gms per person) for your school type";
-                $waste_msg2 = "Well done! Your school's per person per day waste generation is according to the norms.";
+                $waste_msg2 = "Well done! Your school's per person per day waste generation is well within the norms.";
             } elseif ($per_capita_waste_generation > $per_capita) {
                 $waste_msg1 = "Your school's per capita waste consumption (" . $per_capita_waste_generation . " gms per person) is higher than norms (" . $per_capita . " gms per person) for your school type";
                 $waste_msg2 = "Your school's per person per day waste generation is not according to the norms. You are generating waste more than you should. Refer to the table to see how much waste per person per day is acceptable. ";
@@ -2448,42 +2589,54 @@ if ($waste_recycle == "Y") {
   }else{  
         $waste_recycled_percent = (($total_recycled_waste * 100) / $total_generated_waste);
   }
+
+
     if ($waste_recycled_percent == 100) {    //100%
         $waste_msg41 = "School recycles 100% of the waste";
-        $waste_msg42 = "Your school recycles a lot of its waste. You recycle " . $waste_recycled_percent . " per cent of waste. We hope you are able to become waste efficient school at the earliest.";
+        $waste_msg42 = "Your school recycles almost all of its waste. We hope you continue to recycle the waste efficiently and soon become a waste-efficient school.";
     ?>
             <h4><?php echo $waste_msg41 ?></h4>
             <p><?php echo $waste_msg42 ?></p>
             <?php
     
-    } elseif ($waste_recycled_percent >= 50 && $waste_recycled_percent < 100) {    //50%
+    } elseif ($waste_recycled_percent >= 50) {    //50%
         $waste_msg41 = "School recycles 50% or above of it's waste ";
-        $waste_msg42 = "Your school recycles most of it's waste. You recycle " . $waste_recycled_percent . " per cent of waste. We hope you are able to become waste efficient school at the earliest.";
+        $waste_msg42 = "Your school recycles most of its waste, that is, " . $waste_recycled_percent . " per cent. We hope you are able to become a waste-efficient school soon with the help of effective waste management practices. ";
     ?>
             <h4><?php echo $waste_msg41 ?></h4>
             <p><?php echo $waste_msg42 ?></p>
             <?php
-    } elseif ($waste_recycled_percent >= 0 && $waste_recycled_percent < 50) {   //0%-49.9%
-        $waste_msg41 = "School recycles 0%-49.9% of it's waste";
-        $waste_msg42 = "Your school recycles some of its waste. You recycle " . $waste_recycled_percent . " per cent of waste. We hope you are able to become waste efficient school at the earliest.";
+    } elseif ($waste_recycled_percent >= 0) {   //0%-49.9%
+        $waste_msg41 = "School recycles 1%-49.9% of it's waste";
+        $waste_msg42 = "Your school recycles some of its waste, that is, " . $waste_recycled_percent . " per cent. We hope you are able to become a waste-efficient school soon with the help of effective waste management practices.";
+    ?>
+            <h4><?php echo $waste_msg41 ?></h4>
+            <p><?php echo $waste_msg42 ?></p>
+            <?php
+    }
+
+    elseif ($waste_recycled_percent == 0) { 
+        $waste_msg41 = "School does not recycle the waste 0 %";
+        $waste_msg42 = "Your school does not recycle waste. We strongly recommend recycling of waste through composting (wet waste) etc. to reduce the load on lanfills. We hope that you are able to become a waste efficient school soon.";
     ?>
             <h4><?php echo $waste_msg41 ?></h4>
             <p><?php echo $waste_msg42 ?></p>
             <?php
     }
     elseif ($waste_recycled_percent > 100) { 
-        $waste_msg42 = "Calculation Error : Your school did not submit the correct data therefore there is a calculation error here. Please fill the correct data for better analysis.";
+        $waste_msg42 = "Due to incorrect data, there has been a calculation error in this section.
+We request you to provide correct data, in the next audit, for accurate analysis.";
     ?>
             <h4><?php echo $waste_msg41 ?></h4>
             <p><?php echo $waste_msg42 ?></p>
             <?php
     }else{  ?>
       
-                 <p>School does not recycle the waste</p>
+                 <p>Your school does not recycle waste. We strongly recommend recycling of waste through composting (wet waste) etc. to reduce the load on lanfills. We hope that you are able to become a waste efficient school soon.</p>
     
   <?php  } 
 }elseif ($waste_recycle == "N"){ ?>
-            <p>School does not recycle the waste</p>
+            <p>Your school does not recycle waste. We strongly recommend recycling of waste through composting (wet waste) etc. to reduce the load on lanfills. We hope that you are able to become a waste efficient school soon.</p>
             <?php } ?>
           </div>
         </li>
@@ -2495,10 +2648,10 @@ if ($waste_recycle == "Y") {
         $waste_composting = getFiled('Q9Wa1', $schoolUserID);
                 if ($waste_composting == "Y") {
                     $st_waste5 = "Yes";
-                    $msg_waste5 = "Your school has a composting facility and we hope that you are using it to its potential.";
+                    $msg_waste5 = "It is good that your school has a composting facility. Please ensure that the structure is maintained properly and used to its full potential.";
                 } elseif ($waste_composting == "N") {
                     $st_waste5 = "No";
-                    $msg_waste5 = "Your school does not have a composting facility. Composting is easy and environmentally sustainable practices. We encourage you to start composting in your school. ";
+                    $msg_waste5 = "Your school does not practice composting. It is recommended that you start composting in your school for efficient waste management.";
                 }
         ?>
             <h3>Waste Composting</h3>
@@ -2515,10 +2668,10 @@ if ($waste_recycle == "Y") {
 $reuse_textbook = getFiled('Q10Wa1', $schoolUserID);
 if ($reuse_textbook == "Y") {
     $st_waste6 = "Yes";
-    $msg_waste6 = "It is great that you encourage the school community to reuse textbooks.";
+    $msg_waste6 = "It is great that your school encourages its community to reuse textbooks.";
 } elseif ($reuse_textbook == "N") {
     $st_waste6 = "No";
-    $msg_waste6 = "Your school is not encouraging the students and teachers to reuse textbooks. Please encourage your school community to reuse the textbooks. ";
+    $msg_waste6 = "Reuse of textbooks is not encouraged in the school. We recommend promoting this activity to ensure optimum use of resources.";
 }
 ?>
             <h3>Textbook Reuse</h3>
@@ -2534,16 +2687,16 @@ if ($reuse_textbook == "Y") {
         $waste_destination = getFiled('Q14Wa1', $schoolUserID);
         if ($waste_destination == 1) {
             $st_waste8 = "Open dumping";
-            $msg_waste8 = "Your school does not know where its waste goes for waste disposal. Try to  recycle more of your waste within the school! And try to get your students to map the disposal of waste outside the school premises - as an exercise!  ";
+            $msg_waste8 = "Your school does not know where its waste goes for waste disposal. We recommend getting the students to map the disposal of waste outside the school premises as an outdoor science exercise. Further, please try to recycle more waste within the school.";
         } elseif ($waste_destination == 2) {
             $st_waste8 = "Designated dumping site (Dhalao)";
-            $msg_waste8 = "Your school makes sure that the waste reaches the designated site for waste disposal. Try to recycle more of your waste within the school!";
+            $msg_waste8 = "Your school makes sure that the waste reaches the designated site for disposal. To improve your school's waste management further, please try to recycle more waste within the school.";
         } elseif ($waste_destination == 3) {
             $st_waste8 = "Landfill Site";
-            $msg_waste8 = "Your school makes sure that the waste reaches the designated site for waste disposal. Try to recycle more of your waste within the school!";
+            $msg_waste8 = "Your school makes sure that the waste reaches the designated site for disposal. To improve your school's waste management further, please try to recycle more waste within the school.";
         } elseif ($waste_destination == 4) {
             $st_waste8 = "Don't know";
-            $msg_waste8 = "Your school does not know where its waste goes for waste disposal. Try to  recycle more of your waste within the school! And try to get your students to map the disposal of waste outside the school premises - as an exercise!  ";
+            $msg_waste8 = "Your school does not know where its waste goes for waste disposal. We recommend getting the students to map the disposal of waste outside the school premises as an outdoor science exercise. Further, please try to recycle more waste within the school.";
         }
         ?>
           <div class="description">
@@ -2565,10 +2718,10 @@ if ($reuse_textbook == "Y") {
 $burn_waste = getFiled('Q15Wa1', $schoolUserID);
 if ($burn_waste == "Y") {
     $st_waste9 = "Yes";
-    $msg_waste9 = "Burning waste is one of the biggest environmental hazards. It releases toxic gases which is not only bad for the human body but also has adverse effects on the environment. We request you to kindly not burn the waste. ";
+    $msg_waste9 = "Burning of waste is one of the biggest environmental hazards. It releases toxic gases that are not only harmful for humans and animals but also have adverse effects on the environment. We request you to not burn the waste.";
 } elseif ($burn_waste == "N") {
     $st_waste9 = "No";
-    $msg_waste9 = "It's great that you do not burn waste. This practice should be instilled in kids so that they discourage burning waste even outside the school.";
+    $msg_waste9 = "It is great that the school does not burn waste. This practice should also be instilled in students so that they discourage burning of waste even outside the school.";
 }
 ?>
             <h3>Burning of Waste</h3>
@@ -2590,16 +2743,16 @@ if ($authorised_dealer == "Y") {
                             $e_waste_disposal = getFiled('Q13Wa2', $schoolUserID);
                             if ($e_waste_disposal == 1) {
                                 $st_waste11 = "Kabadiwalla/ Scrapdealer";
-                                $msg_waste11 = "You sell your e-waste to a Kabadiwala/ Scrapdealer, which is an inefficient disposal method. Sell your E- waste to an authorised reseller so that they can reuse or recycle the waste effectively. To know about the contact for an E-waste disposal authority contact us via mail or call.  ";
+                                $msg_waste11 = "The e-waste generated in the school is sold to a kabadiwala/ scrapdealer, which is an inefficient disposal method. It is recommended that you sell it to an authorised seller for its effective reuse and recylcing.";
                             } elseif ($e_waste_disposal == 2) {
                                 $st_waste11 = "Taken back by manufacturer/vendor";
-                                $msg_waste11 = "You sell your e-waste to an authorised seller which helps it get reused or recycled more effectively. ";
+                                $msg_waste11 = "The e-waste generated in the school is sold to an authorised seller that helps in its effective reuse and recycling.";
                             } elseif ($e_waste_disposal == 3) {
                                 $st_waste11 = "Authorised dealer";
-                                $msg_waste11 = "You sell your e-waste to an authorised seller which helps it get reused or recycled more effectively. ";
+                                $msg_waste11 = "The e-waste generated in the school is sold to an authorised seller that helps in its effective reuse and recycling.";
                             } elseif ($e_waste_disposal == 4) {
                                 $st_waste11 = "Authorised dismantler";
-                                $msg_waste11 = "You sell your e-waste to an authorised seller which helps it get reused or recycled more effectively. ";
+                                $msg_waste11 = "The e-waste generated in the school is sold to an authorised seller that helps in its effective reuse and recycling.";
                             } else {
                                 $st_waste11 = getFiled('Q13Wa2O', $schoolUserID);
                                 $msg_waste11 = "Your school does not know where its waste goes for waste disposal. Try to  recycle more of your waste within the school! And try to get your students to map the disposal of waste outside the school premises - as an exercise! ";
@@ -2610,13 +2763,11 @@ if ($authorised_dealer == "Y") {
             <p><?php echo $msg_waste11; ?></p>
           </div>
         </li>
-        <?php
-                                }
-                                ?>
+        <?php } ?>
       </ul>
     </section>
     <h3>Thank You</h3>
-    <p>Hope that each year your school will participate in the GSP audit and build a cadre of environmentally responsible citizens, in addition to moving up the rank to become the # 1 Green School in India!</p>
+    <p>Hope that each year your school will participate in the GSP Audit and contribute towards a better tomorrow by educating children to become environmentally sensitive and responsible citizens. We hope that your school will continue to strive to be a changemaker Green school.</p>
 
 
 
@@ -2631,24 +2782,16 @@ if ($authorised_dealer == "Y") {
    <div class="introduction page_break">
 
 
-      <p style="text-align: center; font-size: 18px; color: blue;">What's New?</p>
+      <p style="text-align: center; font-size: 18px; color: blue;">What’s New</p>
       <p>
-        2018 was definitely one for the books for our GSP network! We started the year off by the publication of the GSP eBook - 'A teacher's handbook for GSP Audit', followed by our latest publication 'Paving the Path'. We hope GSP was helpful in encouraging students and teachers to continue coming up with new, creative, innovative and greener ways to be more resource efficient. As good as 2018 was to us and to our GSP family, we look forward to 2019 with renewed enthusiasm and all of the better Green practices that are yet to be applied or improved upon. Thank YOU for your participation in GSP Audit and being active environmental change makers!  
-
-
+        The year 2019-20 was marked by increased focus on energy. GSP’s Solar on Schools initiative that was piloted in Himachal Pradesh saw a range of activities such as workshops, science fairs, etc. We started the year off with the publication Rethink Energy which helps in gauging energy consumption patterns and improving energy use in schools. Other resource materials include a board game, colouring book, fact sheets and videos. All this material can be found on the GSP Website: <a href="https://www.greenschoolsprogramme.org/knowledge-bank/energy/gsp-solar-in-schools-initiative-2019-20/" style="color:blue;">https://www.greenschoolsprogramme.org/knowledge-bank/energy/gsp-solar-in-schools-initiative-2019-20/</a>
       </p>
 
-      <p>  Find below the snapshot of all books released by CSE. </p>
+      <p>We look forward to continue working together in the coming year with renewed enthusiasm. We hope that you find the performance report and resource material useful. Thank you for your participation in the GSP Audit and being active environmental change makers!</p>
 
-       <p> Three main GSP Books: </p>
+       <p>Please find below a snapshot of the books released by CSE</p>
 
-       <p>
-         
-        1. A teacher's handbook for GSP Audit: The Lesson Plans given in this handbook has been built around the GSP Audit Activities, keeping in mind the NCERT syllabus. Teachers teaching different subjects can use the GSP activities in the classroom teaching-learning.</p>
-       <p> 2.  Paving the Path: It is a compilation of the best green practices by students and school community, in the GSP network. The book will be immensely useful to school administrators and teachers, supplying them a compact toolkit to initiate similar activities in their schools. </p>
-       <p> 3.  How Green is your school? (Revised edition):  is a set of guidelines and tasks for students to assess the environmental performance of your school under GSP. </p>
-
-
+       
        <center><img src="assets/img/what.png"></center>
 
 
