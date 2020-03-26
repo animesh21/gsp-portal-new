@@ -74,10 +74,8 @@
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
           </div>
-          <p>
-
-
-           "https://www.greenschoolsprogramme.org/audit/18/assets/js/badge-code.js"> <br/>
+          <h2>
+      "https://www.greenschoolsprogramme.org/audit/18/assets/js/badge-code.js"> <br/>
       /*School Badge Code*/ <br/>
       window.onload = function(){
       <br/>
@@ -85,7 +83,8 @@
       }
       <br/>
       
-      <div class='badges' style='height:200px; width:200px;'></div></p>
+      </h2>
+      <div class='badges' style='height:200px; width:200px;'></div>
           
           </div>
         </nav>
