@@ -86,18 +86,20 @@
                 </ul>
               </li>-->
 <!--    <li class=""><a href="">YEAR OF YEAR</a></li> -->
+<?php  $userid=$this->session->userdata('USER_ID'); ?>
               <li class=""><a href="<?php echo base_url('download/downloadReportsSection'); ?>">Downloads</a></li>
+              <li class="" data-toggle="modal" data-target="#myModal1" onclick="getBadgeCode('<?php echo $userid; ?>')"><a  href="#">GSP Logo</a></li>
               <li class=""> <a href="<?php echo base_url('Downloadlogout'); ?>" class="pull-right">Logout</a></li>
             </ul>
-          </div>
+          </div> 
         </div>
       </nav>
       <div class="container">
         <div class="col-md-12">
           <h1 style="font-size:32px"><strong>GSP Audit 2019-20 Report and Certificates</strong></h1>
 		 <div class="other" style="margin-top: -40px; margin-bottom: 60px">
-	  <?php
-	    $date1 = "2019-01-01 00:00:00"; 
+	  <?php    
+	          $date1 = "2019-01-01 00:00:00"; 
             $schoolId=getSchoolId($this->session->userdata('USER_ID'));
             $date = getUserRegisterDate($schoolId);
             $date2 = $date[0]->date_added;
@@ -127,9 +129,9 @@
             </div>
           </div>
           <div class="col-md-4">
-            <div class="schools-statics" style="width:100%;">
-		 <a href="<?php echo base_url('/download/getdigitalCertificate/').$this->
-              session->userdata('USER_ID') ?>" target="_blank">
+            <div class="schools-statics" id="flat1" style="width:100%;">
+		<!-- <a href="<?php// echo base_url('/download/getdigitalCertificate/').$this->
+              //session->userdata('USER_ID') ?>" target="_blank"> -->
               <div class="statics-circle"> <span><i class="fa fa-file-text-o fa-2x"></i></span> </div>
              </a>
               <div class="title"><strong>Digital Certificate</strong></div>
@@ -146,6 +148,22 @@
     </div>
   </footer>
 </div>
+
+<div class="modal" id="myModal1" role="dialog">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header" style="background:#e86549 !important; color:#FFFFFF;">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Badge Code</h4>
+      </div>
+      <div class="modal-body">
+        <textarea class="badge_code form-control" style="height:300px;"></textarea>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 </body>
 </html>
 <style type="text/css">
@@ -174,9 +192,24 @@ ul.nav li:hover > ul.dropdown-menu { display: block; z-index:10000;}
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
 <script type="text/javascript">
   $(document).ready (function(){
-    $('#flat').click(function(){
+    $('#flat,#flat1').click(function(){
       alert('Coming Soon');
     });
   });
+
+
+  function getBadgeCode(userid)
+{  
+  $.ajax({
+      url:'<?php echo base_url("admin/audit_started_2017/printBadge");?>',
+      data:{'userid': userid},
+      type:'post',
+      success:function(data){
+
+          $(".badge_code").empty();
+        $('.badge_code').val(data);
+      }
+      });
+}
 
 </script>
