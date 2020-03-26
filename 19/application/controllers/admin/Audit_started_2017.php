@@ -969,7 +969,7 @@ public function digital_certificate_for_principal_coordinator($argID)
     }
 
      public function combinded_startedtheaudit() {
-      $varProgress="a.progress >= '10' && a.progress <= '100' && a.complete_status ='0'";
+      $varProgress="a.progress >= '10' && a.progress < '100' && a.complete_status ='0'";
         $this->load->dbutil();
         $row = $this->Audit_started_model->combinded_startedtheaudit( $varProgress);
         $name = 'SCHOOL_THAT_STARTED_THE_AUDIT'.date('d-m-Y').'.csv';
