@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Green Schools Programme</title>
+<title>Badge code View</title>
 <meta name="generator" content="Green Schools Programme">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <link href="<?php echo base_url(); ?>assets/front/css/bootstrap.min.css" rel="stylesheet">
@@ -88,7 +88,7 @@
 <!--    <li class=""><a href="">YEAR OF YEAR</a></li> -->
 <?php  $userid=$this->session->userdata('USER_ID'); ?>
               <li class=""><a href="<?php echo base_url('download/downloadReportsSection'); ?>">Downloads</a></li>
-              <li class="" data-toggle="modal" data-target="#myModal1" onclick="getBadgeCode('<?php echo $userid; ?>')"><a  href="#">GSP Logo</a></li>
+             <li class=""><a href="<?php echo base_url('download/badgecodeview'); ?>">GSP Logo</a></li>
               <li class=""> <a href="<?php echo base_url('Downloadlogout'); ?>" class="pull-right">Logout</a></li>
             </ul>
           </div> 
@@ -148,22 +148,7 @@
     </div>
   </footer>
 </div>
-
-<div class="modal" id="myModal1" role="dialog">
-  <div class="modal-dialog modal-md">
-    <div class="modal-content">
-      <div class="modal-header" style="background:#e86549 !important; color:#FFFFFF;">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Badge Code</h4>
-      </div>
-      <div class="modal-body">
-        <textarea class="badge_code form-control" style="height:300px;"></textarea>
-      </div>
-    </div>
-  </div>
-</div>
-
-
+ 
 </body>
 </html>
 <style type="text/css">
@@ -198,18 +183,18 @@ ul.nav li:hover > ul.dropdown-menu { display: block; z-index:10000;}
   });
 
 
-  function getBadgeCode(userid)
-{  
-  $.ajax({
-      url:'<?php echo base_url("admin/audit_started_2017/printBadge");?>',
-      data:{'userid': userid},
-      type:'post',
-      success:function(data){
+//   function getBadgeCode(userid)
+// {  
+//   $.ajax({
+//       url:'<?php //echo base_url("admin/audit_started_2017/printBadge");?>',
+//       data:{'userid': userid},
+//       type:'post',
+//       success:function(data){
 
-          $(".badge_code").empty();
-        $('.badge_code').val(data);
-      }
-      });
-}
+//           $(".badge_code").empty();
+//         $('.badge_code').val(data);
+//       }
+//       });
+// }
 
 </script>
