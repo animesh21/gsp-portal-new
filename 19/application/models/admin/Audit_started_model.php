@@ -1264,7 +1264,7 @@ class Audit_started_model extends CI_Model {
                         ->where('a.complete_status =', '0')
                         ->order_by('a.id', 'desc')
                         ->get()->result(); */
-        $this->db->where('a.date_added >=', '2019-11-12 00:00:00');
+//         $this->db->where('a.date_added >=', '2019-11-12 00:00:00');
         $this->db->where("a.make_school_disabled","1");
       $arrRecord = $this->db->select('a.*, b.name AS state_name,c.name As district_name,d.password')
                     ->from('gsp_school AS a')
@@ -5224,7 +5224,7 @@ public function getExcel2017Data() {
     public function combinded_startedtheaudit($progress) {
         $output = "";
        
-        $this->db->where("a.date_added >=","2019-03-03 00:00:00");
+//         $this->db->where("a.date_added >=","2019-03-03 00:00:00");
         $this->db->where("a.make_school_disabled","1");
         $arrRecord = $this->db->select('a.*, b.name AS state_name,c.name As district_name,d.password')
                     ->from('gsp_school AS a')
