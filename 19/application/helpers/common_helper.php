@@ -951,149 +951,332 @@ if (!function_exists('getUploadData')) {
 
 }
 
+
+
+
+
+
+
+
+
+/*
+ * Get Primary Point Calculation by jeetu
+ */
+
+
 /*
  * Get Air Point Calculation
  */
+
+if (!function_exists('getPrimaryAirPoints')) {
+
+  function getPrimaryAirPoints($argUserID) {
+  $arrPoints = array();
+  $Q3_b_CNG = 0;
+  $Q3_b_ELE_BIO = 0;
+  $Q3_b_LPG = 0;
+  $Q3_b_PETROL = 0;
+  $no_of_vehicle = 0;
+  //Q2 To calculate the Window-floor ratio of classrooms in your school
+  $total_floor_area = (getFiled('Q5A110S2', $argUserID) != '') ? getFiled('Q5A110S2', $argUserID) : 0; //X = Area of floor (LxB)
+  $total_area_of_openings = (getFiled('Q5A110S3', $argUserID) != '') ? getFiled('Q5A110S3', $argUserID) : 0; //Y = Area of openings (LxH)
+  if (($total_floor_area != 0) || ($total_floor_area != 0)) {
+      $ventilation_percentage = ($total_area_of_openings / $total_floor_area) * 100; //window area to floor ratio
+      if ($ventilation_percentage >= 5) {
+    $arrPoints['Q2'] = 3;
+      }
+  } else {
+      $arrPoints['Q2'] = 0;
+  }
+
+  //  SECTION 3: How eco-friendly are the vehicles in your school?
+  //Q.3)What is the ownership of the vehicles used by your school?
+  $ownship_vehicle = (getFiled('Q6A1', $argUserID) != '') ? getFiled('Q6A1', $argUserID) : 0;
+  if (($ownship_vehicle == 1) || ($ownship_vehicle == 2)) {
+      $arrPoints['Q3'] = 3;
+  } else if ($ownship_vehicle == 3 || $ownship_vehicle == 4 || $ownship_vehicle == 5) {
+      $no_of_vehicle = (getFiled('Q6A2S1T1', $argUserID) != '') ? getFiled('Q6A2S1T1', $argUserID) : "";
+      $eight_year_old = (getFiled('Q6A2S1T2', $argUserID) != '') ? getFiled('Q6A2S1T2', $argUserID) : "";
+      $air_condtioned_vehicle = (getFiled('Q6A2S1T3', $argUserID) != '') ? getFiled('Q6A2S1T3', $argUserID) : "";
+      $puc_vehicle = (getFiled('Q6A2S1T4', $argUserID) != '') ? getFiled('Q6A2S1T4', $argUserID) : "";
+      $authorise_parking = (getFiled('Q6A2S1T5', $argUserID) != '') ?getFiled('Q6A2S1T5', $argUserID) : "";
+      //Eight years Old Ponits
+      if ($eight_year_old == "") {
+    $arrPoints['Q3_eigth_years'] = 0;
+      } else {
+    if ($eight_year_old == $no_of_vehicle) {
+        $arrPoints['Q3_eigth_years'] = 0;
+    } else if ($eight_year_old == 0) {
+        $arrPoints['Q3_eigth_years'] = 1;
+    } else if ($eight_year_old < $no_of_vehicle) {
+        $arrPoints['Q3_eigth_years'] = ($eight_year_old * 1) / $no_of_vehicle;
+    } else if ($eight_year_old > $no_of_vehicle) {
+        $arrPoints['Q3_eigth_years'] = 0;
+    }
+      }
+      //Air Condition Ponits
+      if ($air_condtioned_vehicle == $no_of_vehicle) {
+    $arrPoints['Q3_air_condition'] = 0;
+      } else if ($air_condtioned_vehicle == 0) {
+    $arrPoints['Q3_air_condition'] = 1;
+      } else if ($air_condtioned_vehicle < $no_of_vehicle) {
+    $arrPoints['Q3_air_condition'] = ($air_condtioned_vehicle * 1) / $no_of_vehicle;
+      }
+      //PUC Points
+      if ($puc_vehicle == $no_of_vehicle) {
+    $arrPoints['Q3_puc_points'] = 1;
+      } else if ($puc_vehicle == 0) {
+    $arrPoints['Q3_puc_points'] = 0;
+      } else if ($puc_vehicle < $no_of_vehicle) {
+    $arrPoints['Q3_puc_points'] = ($puc_vehicle * 1) / $no_of_vehicle;
+      }
+      //Authorized Parking Points
+      if ($authorise_parking == $no_of_vehicle) {
+    $arrPoints['Q3_auth_parking'] = 1;
+      } else if ($authorise_parking == 0) {
+    $arrPoints['Q3_auth_parking'] = 0;
+      } else if ($authorise_parking < $no_of_vehicle) {
+    $arrPoints['Q3_auth_parking'] = ($authorise_parking * 1) / $no_of_vehicle;
+      }
+  }
+  //Q3b Specify the type of fuel used by your school’s vehicles
+  //echo '';
+  //print_r($arrPoints);
+  $total_cng_vehicle = (getFiled('Q6A2S3C5', $argUserID) != '') ? getFiled('Q6A2S3C5', $argUserID) : "";
+  $total_elec_bio_vehicle = (getFiled('Q6A2S3H5', $argUserID) != '') ? getFiled('Q6A2S3H5', $argUserID) : "";
+  $total_lpg_vehicle = (getFiled('Q6A2S3L5', $argUserID) != '') ? getFiled('Q6A2S3L5', $argUserID) : "";
+  $total_petrol_vehicle = (getFiled('Q6A2S3P5', $argUserID) != '') ? getFiled('Q6A2S3P5', $argUserID) : "";
+  $total_disel_vehicle = (getFiled('Q6A2S3D5', $argUserID) != '') ? getFiled('Q6A2S3D5', $argUserID) : "";
+  //Cng Vehicle Points
+  if ($total_cng_vehicle != '' && $total_cng_vehicle !=0) {
+      if ($total_cng_vehicle == $no_of_vehicle) {
+    $Q3_b_CNG = 1;
+      } else if ($total_cng_vehicle < $no_of_vehicle) {
+    $Q3_b_CNG = ($total_cng_vehicle * 1) / $no_of_vehicle;
+      }
+  }
+  //Electric Bio Points
+  if ($total_elec_bio_vehicle != '' && $total_elec_bio_vehicle !=0) {
+      if ($total_elec_bio_vehicle == $no_of_vehicle) {
+    $Q3_b_ELE_BIO = 1;
+      } else if ($total_elec_bio_vehicle < $no_of_vehicle) {
+    $Q3_b_ELE_BIO = ($total_elec_bio_vehicle * 1) / $no_of_vehicle;
+      }
+  }
+  //LPG Points
+  if ($total_lpg_vehicle != '' && $total_lpg_vehicle !=0) {
+      if ($total_lpg_vehicle == $no_of_vehicle) {
+    $Q3_b_LPG = 1;
+      } else if ($total_lpg_vehicle < $no_of_vehicle) {
+    $Q3_b_LPG = ($total_lpg_vehicle * 0.50) / $no_of_vehicle;
+      }
+  }
+  //Petrol Points
+  if ($total_petrol_vehicle != ''  && $total_petrol_vehicle !=0) {
+      if ($total_petrol_vehicle == $no_of_vehicle) {
+    $Q3_b_PETROL = 1;
+      } else if ($total_petrol_vehicle < $no_of_vehicle) {
+    $Q3_b_PETROL = ($total_petrol_vehicle * 0.25) / $no_of_vehicle;
+      }
+  }
+  echo $arrPoints['Fuel'] = $Q3_b_CNG + $Q3_b_ELE_BIO + $Q3_b_LPG + $Q3_b_PETROL;
+  //Q.4 Please specify how many members of the school community use each type of transport:
+  //Total Population
+  $total_population = (getFiled('Q4G4S3', $argUserID) != '') ? getFiled('Q4G4S3', $argUserID) : 0;
+
+  //Total of Sustainable Motorised Vehicles
+  $total_population_smv = (getFiled('Q7A1S4', $argUserID) != '') ? getFiled('Q7A1S4', $argUserID) : 0 + (getFiled('Q7A2S4', $argUserID) != '') ? getFiled('Q7A2S4', $argUserID) : 0 + (getFiled('Q7A3S4', $argUserID) != '') ? getFiled('Q7A3S4', $argUserID) : 0 + (getFiled('Q7A4S4', $argUserID) != '') ? getFiled('Q7A4S4', $argUserID) : 0 + (getFiled('Q7A5S4', $argUserID) != '') ? getFiled('Q7A5S4', $argUserID) : 0 + (getFiled('Q7A6S4', $argUserID) != '') ? getFiled('Q7A6S4', $argUserID) : 0;
+
+  //Private Vehicles Points Calculation
+  $private_veh_population = (getFiled('Q7A7S4', $argUserID) != '') ? getFiled('Q7A7S4', $argUserID) : 0 + (getFiled('Q7A8S4', $argUserID) != '') ? getFiled('Q7A8S4', $argUserID) : 0;
+
+  //Non-Polluting Mode Ponits Calcution
+  $total_population_npm = (getFiled('Q7A9S4', $argUserID) != '') ? getFiled('Q7A9S4', $argUserID) : 0 + (getFiled('Q7A10S4', $argUserID) != '') ? getFiled('Q7A10S4', $argUserID) : 0 + (getFiled('Q7A11S4', $argUserID) != '') ? getFiled('Q7A11S4', $argUserID) : 0;
+
+  $total_smv_npm = $total_population_smv + $total_population_npm;
+  if ($total_population != 0) {
+      if ($total_population == $total_smv_npm) {
+    $arrPoints['q4_total_population'] = 4;
+      } else if ($total_population == $private_veh_population) {
+    $arrPoints['q4_total_population'] = 0;
+      } else {
+    $score1 = ($total_population_smv / $total_population) * 4;
+    $score2 = ($total_population_npm / $total_population) * 4;
+    $arrPoints['q4_total_population'] = $score1 + $score2;
+      }
+  }
+    
+  $total_air_points = array_sum($arrPoints);
+  // echo "<pre>";
+  // print_r($arrPoints);
+  return $total_air_points;
+    }
+  
+
+      
+      }
+
+
+
+/*
+ * Get Air Point Calculation
+ */
+
+
+
 if (!function_exists('getAirPoints')) {
 
-    function getAirPoints($argUserID) {
-        $arrPoints = array();
-        $Q3_b_CNG = "";
-        $Q3_b_ELE_BIO = "";
-        $Q3_b_LPG = "";
-        $Q3_b_PETROL = "";
-        //Q2 To calculate the Window-floor ratio of classrooms in your school
-        $total_floor_area = (getFiled('Q5A110S2', $argUserID) != '') ? getFiled('Q5A110S2', $argUserID) : 0; //X = Area of floor (LxB)
-        $total_area_of_openings = (getFiled('Q5A110S3', $argUserID) != '') ? getFiled('Q5A110S3', $argUserID) : 0; //Y = Area of openings (LxH)
-        if (($total_floor_area != 0) || ($total_floor_area != 0)) {
-            $ventilation_percentage = ($total_area_of_openings / $total_floor_area) * 100; //window area to floor ratio
-            if ($ventilation_percentage >= 5) {
-                $arrPoints['Q2'] = 3;
-            }
-        } else {
-            $arrPoints['Q2'] = 0;
-        }
+       function getAirPoints($argUserID) {
+  $arrPoints = array();
+  $Q3_b_CNG = 0;
+  $Q3_b_ELE_BIO = 0;
+  $Q3_b_LPG = 0;
+  $Q3_b_PETROL = 0;
+  $no_of_vehicle = 0;
+  //Q2 To calculate the Window-floor ratio of classrooms in your school
+  $total_floor_area = (getFiled('Q5A110S2', $argUserID) != '') ? getFiled('Q5A110S2', $argUserID) : 0; //X = Area of floor (LxB)
+  $total_area_of_openings = (getFiled('Q5A110S3', $argUserID) != '') ? getFiled('Q5A110S3', $argUserID) : 0; //Y = Area of openings (LxH)
+  if (($total_floor_area != 0) || ($total_floor_area != 0)) {
+      $ventilation_percentage = ($total_area_of_openings / $total_floor_area) * 100; //window area to floor ratio
+      if ($ventilation_percentage >= 5) {
+    $arrPoints['Q2'] = 3;
+      }
+  } else {
+      $arrPoints['Q2'] = 0;
+  }
 
-        //  SECTION 3: How eco-friendly are the vehicles in your school?
-        //Q.3)What is the ownership of the vehicles used by your school?
-        $ownship_vehicle = (getFiled('Q6A1', $argUserID) != '') ? getFiled('Q6A1', $argUserID) : 0;
-        if (($ownship_vehicle == 1) || ($ownship_vehicle == 2)) {
-            $arrPoints['Q3'] = 5;
-        } else if ($ownship_vehicle == 3 || $ownship_vehicle == 4 || $ownship_vehicle == 5) {
-            $no_of_vehicle = (getFiled('Q6A2S1T1', $argUserID) != '') ? getFiled('Q6A2S1T1', $argUserID) : "";
-            $eight_year_old = (getFiled('Q6A2S1T2', $argUserID) != '') ? getFiled('Q6A2S1T2', $argUserID) : "";
-            $air_condtioned_vehicle = (getFiled('Q6A2S1T3', $argUserID) != '') ? getFiled('Q6A2S1T3', $argUserID) : "";
-            $puc_vehicle = (getFiled('Q6A2S1T4', $argUserID) != '') ? getFiled('Q6A2S1T4', $argUserID) : "";
-            $authorise_parking = (getFiled('Q6A2S1T5', $argUserID) != '') ? getFiled('Q6A2S1T5', $argUserID) : "";
-            //Eight years Old Ponits
-            if ($eight_year_old == "") {
-                $arrPoints['Q3_eigth_years'] = 0;
-            } else {
-                if ($eight_year_old == $no_of_vehicle) {
-                    $arrPoints['Q3_eigth_years'] = 0;
-                } else if ($eight_year_old == 0) {
-                    $arrPoints['Q3_eigth_years'] = 1;
-                } else if ($eight_year_old < $no_of_vehicle) {
-                    $arrPoints['Q3_eigth_years'] = ($eight_year_old * 1) / $no_of_vehicle;
-                } else if ($eight_year_old > $no_of_vehicle) {
-                    $arrPoints['Q3_eigth_years'] = 0;
-                }
-            }
-            //Air Condition Ponits
-            if ($air_condtioned_vehicle == $no_of_vehicle) {
-                $arrPoints['Q3_air_condition'] = 0;
-            } else if ($air_condtioned_vehicle == 0) {
-                $arrPoints['Q3_air_condition'] = 1;
-            } else if ($air_condtioned_vehicle < $no_of_vehicle) {
-                $arrPoints['Q3_air_condition'] = ($air_condtioned_vehicle * 1) / $no_of_vehicle;
-            }
-            //PUC Points
-            if ($puc_vehicle == $no_of_vehicle) {
-                $arrPoints['Q3_puc_points'] = 1;
-            } else if ($puc_vehicle == 0) {
-                $arrPoints['Q3_puc_points'] = 0;
-            } else if ($puc_vehicle < $no_of_vehicle) {
-                $arrPoints['Q3_puc_points'] = ($puc_vehicle * 1) / $no_of_vehicle;
-            }
-            //Authorized Parking Points
-            if ($authorise_parking == $no_of_vehicle) {
-                $arrPoints['Q3_auth_parking'] = 1;
-            } else if ($authorise_parking == 0) {
-                $arrPoints['Q3_auth_parking'] = 0;
-            } else if ($authorise_parking < $no_of_vehicle) {
-                $arrPoints['Q3_auth_parking'] = ($authorise_parking * 1) / $no_of_vehicle;
-            }
-        }
-        //Q3b Specify the type of fuel used by your school’s vehicles
-        //echo '<pre>';
-        //print_r($arrPoints);
-        $total_cng_vehicle = (getFiled('Q6A2S3C5', $argUserID) != '') ? getFiled('Q6A2S3C5', $argUserID) : "";
-        $total_elec_bio_vehicle = (getFiled('Q6A2S3H5', $argUserID) != '') ? getFiled('Q6A2S3H5', $argUserID) : "";
-        $total_lpg_vehicle = (getFiled('Q6A2S3L5', $argUserID) != '') ? getFiled('Q6A2S3L5', $argUserID) : "";
-        $total_petrol_vehicle = (getFiled('Q6A2S3P5', $argUserID) != '') ? getFiled('Q6A2S3P5', $argUserID) : "";
-        $total_disel_vehicle = (getFiled('Q6A2S3D5', $argUserID) != '') ? getFiled('Q6A2S3D5', $argUserID) : "";
-        //Cng Vehicle Points
-        if ($total_cng_vehicle != '') {
-            if ($total_cng_vehicle == $no_of_vehicle) {
-                $Q3_b_CNG = 1;
-            } else if ($total_cng_vehicle < $no_of_vehicle) {
-                $Q3_b_CNG = ($total_cng_vehicle * 1) / $no_of_vehicle;
-            }
-        }
-        //Electric Bio Points
-        if ($total_elec_bio_vehicle != '') {
-            if ($total_elec_bio_vehicle == $no_of_vehicle) {
-                $Q3_b_ELE_BIO = 1;
-            } else if ($total_elec_bio_vehicle < $no_of_vehicle) {
-                $Q3_b_ELE_BIO = ($total_elec_bio_vehicle * 1) / $no_of_vehicle;
-            }
-        }
-        //LPG Points
-        if ($total_lpg_vehicle != '') {
-            if ($total_lpg_vehicle == $no_of_vehicle) {
-                $Q3_b_LPG = 1;
-            } else if ($total_lpg_vehicle < $no_of_vehicle) {
-                $Q3_b_LPG = ($total_lpg_vehicle * 0.50) / $no_of_vehicle;
-            }
-        }
-        //Petrol Points
-        if ($total_petrol_vehicle != '') {
-            if ($total_petrol_vehicle == $no_of_vehicle) {
-                $Q3_b_PETROL = 1;
-            } else if ($total_petrol_vehicle < $no_of_vehicle) {
-                $Q3_b_PETROL = ($total_petrol_vehicle * 0.25) / $no_of_vehicle;
-            }
-        }
-        $arrPoints['Fuel'] = $Q3_b_CNG + $Q3_b_ELE_BIO + $Q3_b_LPG + $Q3_b_PETROL;
-        //Q.4 Please specify how many members of the school community use each type of transport:
-        //Total Population
-      $total_population=1;
-        $total_population = (getFiledNum('Q4G4S3', $argUserID) != '') ? getFiledNum('Q4G4S3', $argUserID) : 0;
+  //  SECTION 3: How eco-friendly are the vehicles in your school?
+  //Q.3)What is the ownership of the vehicles used by your school?
+  $ownship_vehicle = (getFiled('Q6A1', $argUserID) != '') ? getFiled('Q6A1', $argUserID) : 0;
+  if (($ownship_vehicle == 1) || ($ownship_vehicle == 2)) {
+      $arrPoints['Q3'] = 5;
+  } else if ($ownship_vehicle == 3 || $ownship_vehicle == 4 || $ownship_vehicle == 5) {
+      $no_of_vehicle = (getFiled('Q6A2S1T1', $argUserID) != '') ? getFiled('Q6A2S1T1', $argUserID) : "";
+      $eight_year_old = (getFiled('Q6A2S1T2', $argUserID) != '') ? getFiled('Q6A2S1T2', $argUserID) : "";
+      $air_condtioned_vehicle = (getFiled('Q6A2S1T3', $argUserID) != '') ? getFiled('Q6A2S1T3', $argUserID) : "";
+      $puc_vehicle = (getFiled('Q6A2S1T4', $argUserID) != '') ? getFiled('Q6A2S1T4', $argUserID) : "";
+      $authorise_parking = (getFiled('Q6A2S1T5', $argUserID) != '') ? getFiled('Q6A2S1T5', $argUserID) : "";
+      //Eight years Old Ponits
+      if ($eight_year_old == "") {
+    $arrPoints['Q3_eigth_years'] = 0;
+      } else {
+    if ($eight_year_old == $no_of_vehicle) {
+        $arrPoints['Q3_eigth_years'] = 0;
+    } else if ($eight_year_old == 0) {
+        $arrPoints['Q3_eigth_years'] = 1;
+    } else if ($eight_year_old < $no_of_vehicle) {
+        $arrPoints['Q3_eigth_years'] = ($eight_year_old * 1) / $no_of_vehicle;
+    } else if ($eight_year_old > $no_of_vehicle) {
+        $arrPoints['Q3_eigth_years'] = 0;
+    }
+      }
+      //Air Condition Ponits
+      if ($air_condtioned_vehicle == $no_of_vehicle) {
+    $arrPoints['Q3_air_condition'] = 0;
+      } else if ($air_condtioned_vehicle == 0) {
+    $arrPoints['Q3_air_condition'] = 1;
+      } else if ($air_condtioned_vehicle < $no_of_vehicle) {
+    $arrPoints['Q3_air_condition'] = ($air_condtioned_vehicle * 1) / $no_of_vehicle;
+      }
+      //PUC Points
+      if ($puc_vehicle == $no_of_vehicle) {
+    $arrPoints['Q3_puc_points'] = 1;
+      } else if ($puc_vehicle == 0) {
+    $arrPoints['Q3_puc_points'] = 0;
+      } else if ($puc_vehicle < $no_of_vehicle) {
+    $arrPoints['Q3_puc_points'] = ($puc_vehicle * 1) / $no_of_vehicle;
+      }
+      //Authorized Parking Points
+      if ($authorise_parking == $no_of_vehicle) {
+    $arrPoints['Q3_auth_parking'] = 1;
+      } else if ($authorise_parking == 0) {
+    $arrPoints['Q3_auth_parking'] = 0;
+      } else if ($authorise_parking < $no_of_vehicle) {
+    $arrPoints['Q3_auth_parking'] = ($authorise_parking * 1) / $no_of_vehicle;
+      }
+  }
+  //Q3b Specify the type of fuel used by your school’s vehicles
+  //echo '';
+  //print_r($arrPoints);
+  $total_cng_vehicle = (getFiled('Q6A2S3C5', $argUserID) != '') ? getFiled('Q6A2S3C5', $argUserID) : ""; 
+  $total_elec_bio_vehicle = (getFiled('Q6A2S3H5', $argUserID) != '') ? getFiled('Q6A2S3H5', $argUserID) : ""; 
+  $total_lpg_vehicle = (getFiled('Q6A2S3L5', $argUserID) != '') ? getFiled('Q6A2S3L5', $argUserID) : "";
+  $total_petrol_vehicle = (getFiled('Q6A2S3P5', $argUserID) != '') ? getFiled('Q6A2S3P5', $argUserID) : ""; 
+  $total_disel_vehicle = (getFiled('Q6A2S3D5', $argUserID) != '') ? getFiled('Q6A2S3D5', $argUserID) : ""; 
+  //Cng Vehicle Points
+  if ($total_cng_vehicle != '' && $total_cng_vehicle !=0) {
+      if ($total_cng_vehicle == $no_of_vehicle) {
+    $Q3_b_CNG = 1;
+      } else if ($total_cng_vehicle < $no_of_vehicle) {
+    $Q3_b_CNG = ($total_cng_vehicle * 1) / $no_of_vehicle;
+      }
+  }
+  //Electric Bio Points
+  if ($total_elec_bio_vehicle != '' && $total_elec_bio_vehicle !=0) {
+      if ($total_elec_bio_vehicle == $no_of_vehicle) {
+    $Q3_b_ELE_BIO = 1;
+      } else if ($total_elec_bio_vehicle < $no_of_vehicle) {
+    $Q3_b_ELE_BIO = ($total_elec_bio_vehicle * 1) / $no_of_vehicle;
+      }
+  }
+  //LPG Points
+  if ($total_lpg_vehicle != '' && $total_lpg_vehicle !=0) {
+      if ($total_lpg_vehicle == $no_of_vehicle) {
+    $Q3_b_LPG = 1;
+      } else if ($total_lpg_vehicle < $no_of_vehicle) {
+    $Q3_b_LPG = ($total_lpg_vehicle * 0.50) / $no_of_vehicle;
+      }
+  }
+  //Petrol Points
+  if ($total_petrol_vehicle != '' && $total_petrol_vehicle !=0) {
+      if ($total_petrol_vehicle == $no_of_vehicle) {
+    $Q3_b_PETROL = 1;
+      } else if ($total_petrol_vehicle < $no_of_vehicle) {
+    $Q3_b_PETROL = ($total_petrol_vehicle * 0.25) / $no_of_vehicle;
+      }
+  }
+  $arrPoints['Fuel'] = $Q3_b_CNG + $Q3_b_ELE_BIO + $Q3_b_LPG + $Q3_b_PETROL;
+  //Q.4 Please specify how many members of the school community use each type of transport:
+  //Total Population
+  $total_population = (getFiled('Q4G4S3', $argUserID) != '') ? getFiled('Q4G4S3', $argUserID) : 0;
 
-        //Total of Sustainable Motorised Vehicles
-        $total_population_smv = (getFiled('Q7A1S4', $argUserID) != '') ? getFiled('Q7A1S4', $argUserID) : 0 + (getFiled('Q7A2S4', $argUserID) != '') ? getFiled('Q7A2S4', $argUserID) : 0 + (getFiled('Q7A3S4', $argUserID) != '') ? getFiled('Q7A3S4', $argUserID) : 0 + (getFiled('Q7A4S4', $argUserID) != '') ? getFiled('Q7A4S4', $argUserID) : 0 + (getFiled('Q7A5S4', $argUserID) != '') ? getFiled('Q7A5S4', $argUserID) : 0 + (getFiled('Q7A6S4', $argUserID) != '') ? getFiled('Q7A6S4', $argUserID) : 0;
+  //Total of Sustainable Motorised Vehicles
+  $A1 = (getFiled('Q7A1S4', $argUserID) != '') ? getFiled('Q7A1S4', $argUserID) : 0;
+  $A2 = (getFiled('Q7A2S4', $argUserID) != '') ? getFiled('Q7A2S4', $argUserID) : 0;
+  $A3 = (getFiled('Q7A3S4', $argUserID) != '') ? getFiled('Q7A3S4', $argUserID) : 0;
+  $A4 = (getFiled('Q7A4S4', $argUserID) != '') ? getFiled('Q7A4S4', $argUserID) : 0;
+  $A5 = (getFiled('Q7A5S4', $argUserID) != '') ? getFiled('Q7A5S4', $argUserID) : 0;
+  $A6 = (getFiled('Q7A6S4', $argUserID) != '') ? getFiled('Q7A6S4', $argUserID) : 0;
+   $total_population_smv = $A1 + $A2 + $A3 + $A4 + $A5 + $A6 ;  
 
-        //Private Vehicles Points Calculation
-        $private_veh_population = (getFiled('Q7A7S4', $argUserID) != '') ? getFiled('Q7A7S4', $argUserID) : 0 + (getFiled('Q7A8S4', $argUserID) != '') ? getFiled('Q7A8S4', $argUserID) : 0;
+  //Private Vehicles Points Calculation
+  $B1 = (getFiled('Q7A7S4', $argUserID) != '') ? getFiled('Q7A7S4', $argUserID) : 0;
+  $B2 = (getFiled('Q7A8S4', $argUserID) != '') ? getFiled('Q7A8S4', $argUserID) : 0;
+    $private_veh_population = $B1 + $B2;
 
-        //Non-Polluting Mode Ponits Calcution
-        $total_population_npm = (getFiled('Q7A9S4', $argUserID) != '') ? getFiled('Q7A9S4', $argUserID) : 0 + (getFiled('Q7A10S4', $argUserID) != '') ? getFiled('Q7A10S4', $argUserID) : 0 + (getFiled('Q7A11S4', $argUserID) != '') ? getFiled('Q7A11S4', $argUserID) : 0;
+  //Non-Polluting Mode Ponits Calcution
+   $C1 = (getFiled('Q7A9S4', $argUserID) != '') ? getFiled('Q7A9S4', $argUserID) : 0;
+   $C2 = (getFiled('Q7A10S4', $argUserID) != '') ? getFiled('Q7A10S4', $argUserID) : 0;
+   $C3 = (getFiled('Q7A11S4', $argUserID) != '') ? getFiled('Q7A11S4', $argUserID) : 0;
+    $total_population_npm = $C1 + $C2 + $C3 ;
 
-        $total_smv_npm = $total_population_smv + $total_population_npm;
-        if ($total_population != 0) {
-            if ($total_population == $total_smv_npm) {
-                $arrPoints['q4_total_population'] = 4;
-            } else if ($total_population == $private_veh_population) {
-                $arrPoints['q4_total_population'] = 0;
-            } else {
-                $score1 = ($total_population_smv / $total_population) * 4;
-                $score2 = ($total_population_npm / $total_population) * 4;
-                $arrPoints['q4_total_population'] = $score1 + $score2;
-            }
-        }
-
-        $total_air_points = array_sum($arrPoints);
-        return $total_air_points;
+  $total_smv_npm = $total_population_smv + $total_population_npm;
+  if ($total_population != 0) {
+      if ($total_population == $total_smv_npm) {
+     $arrPoints['q4_total_population'] = 4;
+      } else if ($total_population == $private_veh_population) {
+    $arrPoints['q4_total_population'] = 0;
+      } else {
+    $score1 = ($total_population_smv / $total_population) * 4;
+    $score2 = ($total_population_npm / $total_population) * 4;
+    $arrPoints['q4_total_population'] = $score1 + $score2;
+      }
+  }
+    
+  $total_air_points = array_sum($arrPoints);
+  // echo "<pre>";
+  // print_r($arrPoints);
+  return $total_air_points;
     }
 
 }
@@ -1103,7 +1286,7 @@ if (!function_exists('getAirPoints')) {
  */
 if (!function_exists('getEnergyPoints')) {
 
-   function getEnergyPoints($argUserID) {
+     function getEnergyPoints($argUserID) {
   ///$argUserID=2429;
         $energy_points = array();
         //Total Points
@@ -1206,7 +1389,7 @@ if (!function_exists('getEnergyPoints')) {
   {
       $point['Coal']= (getFiled('Q6E7S2', $argUserID) / $totaL_energy) * 0.83;
   }
-  //echo '<pre>'; print_r($point); exit;
+  // echo '<pre>'; print_r($point); exit;
   $energy_points['source_energy']= array_sum($point);
         if (((getFiled('Q9E1', $argUserID) != '') ? (getFiled('Q9E1', $argUserID)) : "") != "") {
             if (((getFiled('Q9E1', $argUserID) != '') ? (getFiled('Q9E1', $argUserID)) : 0) == "Y") {
@@ -1216,9 +1399,118 @@ if (!function_exists('getEnergyPoints')) {
             }
         }
   ///echo array_sum($energy_points);
+
+        // New energy_points calculation by jeetu start here
+        // Que 9 and 10 calculation here...
+
+       $installed_capacity = (getFiled('Q13E1', $argUserID) != '') ? getFiled('Q13E1', $argUserID) : 0;
+
+       $connected_load = (getFiled('Q14E1', $argUserID) != '') ? getFiled('Q14E1', $argUserID) : 0;      
+       if($connected_load>0){
+        $total_capacity_load = ($installed_capacity/$connected_load)*100;
+         $total_capacity_load = (int)$total_capacity_load;
+
+         if($total_capacity_load>=75){
+          $energy_points['total_capacity_load']=2;
+         }
+         elseif($total_capacity_load>=50){
+          $energy_points['total_capacity_load']=1.5;
+         }
+         elseif($total_capacity_load>=25){
+          $energy_points['total_capacity_load']=1;
+         }
+         elseif($total_capacity_load>1){
+          $energy_points['total_capacity_load']=0.5;
+         }
+       
+
+    }
+    else{
+      $energy_points['total_capacity_load']=0;
+    }
+      
+     // Que 9 and 13 calculation here...
+      
+        $power_generated = (getFiledNum('Q19E1', $argUserID) != '') ? getFiledNum('Q19E1', $argUserID) : 0;
+
         
-    //echo '<pre>'; print_r($energy_points);
-        return number_format(array_sum($energy_points), 2);
+
+        if($installed_capacity>0){
+        $capacity_utilization_factor =  $power_generated/($installed_capacity*24*365)*100; 
+        //echo $total_capacity_load = (int)$total_capacity_load;
+
+         if($capacity_utilization_factor>=20){
+            $energy_points['capacity_utilization_factor']=0;
+         }
+         elseif($capacity_utilization_factor>=15){
+            $energy_points['capacity_utilization_factor']=2;
+         }
+         elseif($capacity_utilization_factor>=12){
+            $energy_points['capacity_utilization_factor']=1.5;
+         }
+         elseif($capacity_utilization_factor<12){
+          $energy_points['capacity_utilization_factor']=1;
+         }
+          
+
+    }
+    else{
+       $energy_points['capacity_utilization_factor']=0;
+    }
+
+
+     // Que 16 and 17 calculation here...
+
+        $invertors_size = (getFiled('Q29E1', $argUserID) != '') ? getFiled('Q29E1', $argUserID) : 0;
+
+          $invertors_capacity = (getFiled('Q29E1', $argUserID) != '') ? getFiled('Q29E1', $argUserID) : 0;  
+
+        if(is_numeric($invertors_size)&&$invertors_size>0){
+
+           $new_inventors_size=$invertors_size*24*365;
+
+           $new_inventors_size = (int)$new_inventors_size;
+           $invertors_capacity = (int)$invertors_capacity;
+
+        $total_invertors_size = ($invertors_capacity/$new_inventors_size)*100;
+
+          if($total_invertors_size>=65){
+            $energy_points['total_invertors_size']=2;
+
+          }
+          elseif($total_invertors_size>=50)
+          {
+            $energy_points['total_invertors_size']=1.5;
+          }
+          elseif($total_invertors_size>=30){
+            $energy_points['total_invertors_size']=1;
+          }
+          elseif($total_invertors_size<30){
+            $energy_points['total_invertors_size']=.5;
+          }
+          
+         }
+         else{
+       $energy_points['total_invertors_size']=0;
+    }
+
+         $hours_biogas = (getFiled('Q51E1', $argUserID) != '') ? getFiled('Q51E1', $argUserID) : 0;
+   
+         $hours_other_source = (getFiled('Q53E1', $argUserID) != '') ? getFiled('Q53E1', $argUserID) : 0; 
+
+        if($hours_biogas > $hours_other_source)
+        {
+           $energy_points['hours_other_source']=1;
+        }
+        else{
+           $energy_points['hours_other_source']=0;
+        }
+
+
+        // New energy_points calculation by jeetu end here
+        
+     // echo '<pre>'; print_r($energy_points);
+          return array_sum($energy_points);
     
     }
 }
@@ -1228,7 +1520,7 @@ if (!function_exists('getEnergyPoints')) {
  */
 if (!function_exists('getFoodPoints')) {
 
-   function getFoodPoints($argUserID) {
+    function getFoodPoints($argUserID) {
   $food_points = array();
   //Q.3 What kind of food is being served/sold in your school?
   $totalFlavourVariaint = array();
@@ -1373,11 +1665,11 @@ if (!function_exists('getLandPoints')) {
     function getLandPoints($argUserID) {
         $land_points = array();
         // Explore the number of species of plants and animals in your school
-        $total_site_area = (getFiled('Q4L2', $argUserID) != '') ? getFiled('Q4L2', $argUserID) : 0 + (getFiled('Q4L3', $argUserID) != '') ? getFiled('Q4L3', $argUserID) : 0 + (getFiled('Q4L4', $argUserID) != '') ? getFiled('Q4L4', $argUserID) : 0 + (getFiled('Q4L5', $argUserID) != '') ? getFiled('Q4L5', $argUserID) : 0 + (getFiled('Q4L6', $argUserID) != '') ? getFiled('Q4L6', $argUserID) : 0 + (getFiled('Q4L7', $argUserID) != '') ? getFiled('Q4L7', $argUserID) : 0 + (getFiled('Q4L8', $argUserID) != '') ? getFiled('Q4L8', $argUserID) : 0;
+         $total_site_area = (getFiled('Q4L2', $argUserID) != '') ? getFiled('Q4L2', $argUserID) : 0 + (getFiled('Q4L3', $argUserID) != '') ? getFiled('Q4L3', $argUserID) : 0 + (getFiled('Q4L4', $argUserID) != '') ? getFiled('Q4L4', $argUserID) : 0 + (getFiled('Q4L5', $argUserID) != '') ? getFiled('Q4L5', $argUserID) : 0 + (getFiled('Q4L6', $argUserID) != '') ? getFiled('Q4L6', $argUserID) : 0 + (getFiled('Q4L7', $argUserID) != '') ? getFiled('Q4L7', $argUserID) : 0 + (getFiled('Q4L8', $argUserID) != '') ? getFiled('Q4L8', $argUserID) : 0;
 
         //Q2 How many species of plants and animals exist in your school
-        $plants = (getFiled('Q5L1S1', $argUserID) != '') ? getFiled('Q5L1S1', $argUserID) : 0;
-        $animals = (getFiled('Q5L2S1', $argUserID) != '') ? getFiled('Q5L2S1', $argUserID) : 0;
+        $plants = (getFiled('Q5L1S3', $argUserID) != '') ? getFiled('Q5L1S3', $argUserID) : 0; 
+        $animals = (getFiled('Q5L2S3', $argUserID) != '') ? getFiled('Q5L2S3', $argUserID) : 0;
         if ($plants == 100) {
             $land_points['Q2_plants'] = 2;
         } else if ($plants > 100) {
@@ -1391,9 +1683,8 @@ if (!function_exists('getLandPoints')) {
         } else if ($animals > 50) {
             $land_points['Q2_animals'] = 2;
         } else if ($animals < 50) {
-            $land_points['Q2_animals'] = ($plants / 50) * 2;
+            $land_points['Q2_animals'] = ($animals / 50) * 2;
         }
-
         //Find out if your school uses chemical-based pesticides 
         //Q3 Do you use chemical-based pesticides in your school green cover?
         $pestiside = (getFiled('Q6L1', $argUserID) != '') ? getFiled('Q6L1', $argUserID) : "";
@@ -1405,18 +1696,24 @@ if (!function_exists('getLandPoints')) {
             }
         }
         $site=getTotalArea($argUserID);
-        
-        $total=getPercentageArea($argUserID);
+        $total=getPercentageArea($argUserID); 
+        $avaible_green_area = (getFiled('Q4L5', $argUserID) != '') ? getFiled('Q4L5', $argUserID) : "";
+       $actual_green_area = ($site*35)/100;
         if($site>0){
         if($total>=35){
            $land_points['total']=5; 
         } else {
-            $land_points['total']=($total/(.35*$site))*5; 
+             $land_points['total']=($avaible_green_area/$actual_green_area)*5; 
         }
       } else {
            $land_points['total']=0;
       }
         return array_sum($land_points);
+    // echo "<pre>";
+    // print_r($land_points);
+  //  echo $site."<br/>";
+    //echo $total."<br/>";
+    //echo array_sum($land_points); 
     }
 
 }
@@ -1426,7 +1723,7 @@ if (!function_exists('getLandPoints')) {
  */
 if (!function_exists('getWastePoints')) {
 
-    function getWastePoints($argUserID) {
+     function getWastePoints($argUserID) {
   $waste_points = array();
   //Q1Does your school segregate solid waste
   $Q1=(getFiled('Q4Wa1', $argUserID) != '') ? getFiled('Q4Wa1', $argUserID) : 0;
@@ -1439,13 +1736,15 @@ if (!function_exists('getWastePoints')) {
       $waste_points['Q1_solid_waste']=0;
   }
   //2(a) How many categories does your school segregate waste into? 
-  $total_two_bins = (getFiled('Q5Wa11S3', $argUserID) != '') ? getFiled('Q5Wa11S3', $argUserID) : 0;
+  $total_two_bins = (getFiled('Q5Wa11S3', $argUserID) != '') ? getFiled('Q5Wa11S3', $argUserID) : 0; 
   $total_three_bins = (getFiled('Q5Wa11S4', $argUserID) != '') ? getFiled('Q5Wa11S4', $argUserID) : 0;
   $total_collection_point = (getFiled('Q5Wa11S5', $argUserID) != '') ? getFiled('Q5Wa11S5', $argUserID) : 0;
-
   $total_with_no_bins = (getFiled('Q5Wa11S1', $argUserID) != '') ? getFiled('Q5Wa11S1', $argUserID) : 0;
-  $total_with_one_bin = (getFiled('Q5Wa11S2', $argUserID) != '') ? getFiled('Q5Wa11S2', $argUserID) : 0;
-  $total_with_three_bin = (getFiled('Q5Wa11S4', $argUserID) != '') ? getFiled('Q5Wa11S4', $argUserID) : 0;
+  $total_with_one_bin = (getFiled('Q5Wa11S2', $argUserID) != '') ? getFiled('Q5Wa11S2', $argUserID) : 0; 
+  $total_with_three_bin = (getFiled('Q5Wa11S4', $argUserID) != '') ? getFiled('Q5Wa11S4', $argUserID) : 0; 
+
+  if($total_collection_point>=0){ 
+  
   if ($total_collection_point == ($total_three_bins + $total_two_bins)) {
       $waste_points['Q2_segregate'] = 10;
   } else if ($total_collection_point == ($total_with_no_bins + $total_with_one_bin)) {
@@ -1457,6 +1756,7 @@ if (!function_exists('getWastePoints')) {
   } else if (($total_two_bins + $total_with_three_bin) < $total_collection_point) {
       $waste_points['Q2_segregate'] = ($total_two_bins + $total_with_three_bin) * 10 / $total_collection_point;
   }
+}
   //Q3.How much waste does your school generate?
   $_PER_CAPITA_VAL='';
   //Determine the quantity of waste generated in your school.
@@ -1476,11 +1776,6 @@ if (!function_exists('getWastePoints')) {
   //Cc and DD
   $total_cc_and_dd=(getFiled('Q6Wa7S1', $argUserID) != '') ? getFiled('Q6Wa7S1', $argUserID) : 0; 
   $PER_DAY_WASTE=($biodigrable+$total_dry_waste+$total_hazardous_waste+$total_e_waste+$total_biomedical_waste+$total_sanitary_waste+$total_cc_and_dd)/30;
-
-if($total_population==0){
-    $total_population=1;
-  }
-
   $PER_CAPITA_WASTE=$PER_DAY_WASTE/$total_population;
   $SCHOOL_CATGEORY=(getFiled('Q1S1', $argUserID) != '') ? getFiled('Q1S1', $argUserID) : 0;
   //echo $PER_CAPITA_WASTE;
@@ -1544,21 +1839,14 @@ if($total_population==0){
   $F1 = (getFiled('Q8Wa6S1', $argUserID) != '') ? getFiled('Q8Wa6S1', $argUserID) : 0;
   //Cc&&D
   $G1 = (getFiled('Q8Wa7S1', $argUserID) != '') ? getFiled('Q8Wa7S1', $argUserID) : 0;
-
-
- $A1 = (int) $A1;
- $B1 = (int) $B1;
- $C1 = (int) $C1;
- $D1 = (int) $D1;
- $E1 = (int) $E1;
- $F1 = (int) $F1;
- $G1 = (int) $G1;
-
-  $total_recycled_waste = $A1 + $B1 + $C1 + $D1 + $E1 + $F1 + $G1;
+   $total_recycled_waste = $A1 + $B1 + $C1 + $D1 + $E1 + $F1 + $G1;
   if ($total_generated_waste != 0) {
       $percentage_of_genrated_waste = ($total_recycled_waste / $total_generated_waste) * 100;
       if ($percentage_of_genrated_waste > 50) {
     $waste_points['Q4_recycled_waste'] = 20;
+      }
+      elseif($percentage_of_genrated_waste<50){
+        $waste_points['Q4_recycled_waste'] = ($total_recycled_waste / $total_generated_waste) * 20;
       }
   }
   //Q5 Does your school have a composting facility?
@@ -1588,8 +1876,8 @@ if($total_population==0){
     $waste_points['Q9_Ewaste_scapping']=0;
       }
   }
-  //echo array_sum($waste_points);
-  //echo '<pre>'; print_r($waste_points);
+  // echo array_sum($waste_points);
+  // echo '<pre>'; print_r($waste_points);
   return number_format(array_sum($waste_points), 2);
   //print_r($waste_points);
     }
@@ -1965,6 +2253,10 @@ if($total_population==0){
   return array_sum($water_points);
    
     }
+
+
+
+
 
     if (!function_exists('getTotalPoints')) {
 
