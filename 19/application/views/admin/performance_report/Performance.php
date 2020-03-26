@@ -6,8 +6,9 @@
 <link href="<?php echo base_url(); ?>assets/css/performance.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>assets/css/performance.css" rel="stylesheet" media="print">
 <style type="text/css" media="all">
-/* 	newcss */
-	/* GSP Performance Report CSS */
+
+/*  newcss */
+  /* GSP Performance Report CSS */
 
 * {box-sizing: border-box;}
 body {font-family: arial, sans-serif; font-weight: normal; font-size: 12px; line-height: 1.4; color: #5b5d64; margin: 0; padding: 0;}
@@ -212,13 +213,11 @@ p.intro-text {font-size: 14px;}
 .performance-orange-bg{background: #e29e15 !important}
 }
 
-	
-	
-/* 	newcss */
+  
+  
+/*  newcss */
 
-	
-	
-	
+
 .page_break{ page-break-before: always;  }
 .label {
     display: inline;
@@ -264,16 +263,24 @@ h2 span {
 <body>
 <div class="report-container">
   <div class="cover">
-    <figure class="banner"><img src="assets/img/performance/title-page.jpg"></figure>
+    <figure class="banner"><img src="assets/img/performance/title.jpg"></figure>
     <div class="report-title">
-      <h4>GSP Audit 2019-2020</h4>
-      <h3>Performance Report</h3>
-      <p><strong><?php echo $performance[0]->name ?></strong></p>
-      <p><strong><?php echo $performance[0]->city; ?>, <?php echo $performance[0]->state_name; ?></strong></p>
-      <p>Audit Coordinator: <?php echo $performance[0]->coname; ?></p>
-      <p>Category:
-        <?php 
-    $schoolUserID = $performance[0]->userid;
+       <div class="schoolName" style="margin-top:110px; text-align: center;">
+         <p style="color: black; font-size: 16px;"><?php echo $performance[0]->name ?></p>
+         <p style="color: black; font-size: 13px;"><?php echo $performance[0]->city; ?>, <?php echo $performance[0]->state_name; ?></p>
+
+       </div>
+       
+      <div class="schoolCatagory">
+         <table class="table" style="padding-left: 30%; color: black;font-size: 12px;">  
+      <tbody>
+        <tr>
+          <th style="border-right: 2px solid #00a8b1; padding-right:5px; text-align: right;">Audit Coordinator</th>
+          <td style="padding-left:5px; text-align: left;"><?php echo $performance[0]->coname; ?></td>           
+        </tr>
+        <tr>
+          <th style="border-right: 2px solid #00a8b1; padding-right:5px; text-align: right;">Category</th>
+          <td style="padding-left:5px; text-align: left;"><?php $schoolUserID = $performance[0]->userid;
     if(getFiled('Q1S1', $schoolUserID)==1){
       echo "Day Scholar";
     }else if(getFiled('Q1S1', $schoolUserID)==2){
@@ -289,30 +296,34 @@ h2 span {
     }else if(getFiled('Q1S1', $schoolUserID)==7){
       echo " Day Scholar + Day Boarding + Residential";
     }
-     ?>
-        School</p>
-      <p><strong>School Rating:&nbsp;
-        <?php $percentage=getSchoolRating($schoolUserID); ?>
-        <?php
+     ?> School</td>           
+        </tr>
+        <tr>
+          <th style="border-right: 2px solid #00a8b1; padding-right:5px; text-align: right;">School Rating</th>
+          <td style="padding-left:5px; text-align: left;">  <?php $percentage=getSchoolRating($schoolUserID); 
+        
             $percentage= ceil($percentage) ;
         
       if($percentage>=70){
-       echo "<label class='label label-success' style='background:green; color:black;'>Green</label>";
+       echo "<label>Green</label>";
       }elseif($percentage>=50 && $percentage<=69.9){
-       echo "<label class='label label-warning' style='background:yellow; color:black;'>Yellow</label>";
+       echo "<label>Yellow</label>";
       }   
       elseif($percentage>=35 && $percentage<=49.9){
-       echo "<label class='label label-success' style='background:orange; color:black;'>Orange</label>";
+       echo "<label>Orange</label>";
       }   
       elseif($percentage<=34.9){
-       echo "<label class='label label-danger'>Red</label>";
+       echo "<label>Red</label>";
       }   
       else{
         echo "Not Rated";
       }
      
-    ?>
-        </strong></p>
+    ?></td>           
+        </tr>
+      </tbody>
+    </table>
+       </div>
     </div>
   </div>
 
@@ -324,7 +335,7 @@ h2 span {
     <p>Dear Principal,</p>
     <p>We thank you for taking part in the GSP Audit 2019-20. We hope the exercise helped to make your school resource efficient and inculcate green practices in your students.
     </p>
-    <p>As you are aware, the Green Schools Programme (GSP) takes the students outside the classroom and helps them learn with joy. GSP has been built on the twin objectives of ‘learning by doing’ and making change work to help schools audit the consumption of natural resources within their premises and assess themselves as environment managers.
+    <p>As you are aware, the Green Schools Programme (GSP) takes the students outside the classroom and helps them learn with joy. GSP has been built on the twin objectives of ‘learning by doing&#39; and making change work to help schools audit the consumption of natural resources within their premises and assess themselves as environment managers.
 </p>
     <p>This year, more than 1700 schools from across the country submitted the audit. The GSP national environmental report for schools looks promising—1389 schools segregate waste at source, 962 schools practice composting and 631 schools give their e-waste to authorized dealers. 818 schools harvest rainwater, half of these recharge the groundwater and 220 school store for use. <strong> BUT </strong> 79 per cent schools are dependent on ground water. The number of schools burning waste has reduced from last year but 18 per cent schools still burn waste. More than 300 schools sell packaged food and more than 550 schools distribute packaged food as refreshments during school events. There is a long way to go!
  </p>
@@ -343,7 +354,7 @@ h2 span {
     <li style="font-weight: 400; font-size: 13px;">The performance report will help in assessing the initiatives undertaken by your school and move towards filling the gaps before the next GSP Audit.</li> 
     <li style="font-weight: 400; font-size: 13px; margin-top:6px;">Hope you have downloaded the response report and digital certificates of all those whose names were provided online.</li>    
     <li style="font-weight: 400; font-size: 13px; margin-top:6px;">Make sure that the data entered is correct for GSP Audit 2020. We hope that as the school continues to audit their consumption every year, they will refine the data collection process and complete the report with full honesty. </li>
-    <li style="font-weight: 400; font-size: 13px; margin-top:6px;">Our focus will be on <strong> measuring the change over the previous years’ performances.</strong> And the degree of change will be appreciated as well as recognized.</li>
+    <li style="font-weight: 400; font-size: 13px; margin-top:6px;">Our focus will be on <strong> measuring the change over the previous years&#39; performances.</strong> And the degree of change will be appreciated as well as recognized.</li>
     <li style="font-weight: 400; font-size: 13px; margin-top:6px;">School certificates have been dispatched by speed post, and if you do not receive it <strong> by April 15, 2020,</strong> please email or call (details given below). </li>
     <li style="font-weight: 400; font-size: 13px; margin-top:6px;">To know more about the sections, please refer to the knowledge bank on the GSP website: <a href="https://www.greenschoolsprogramme.org/" style="color:blue;">www.greenschoolsprogramme.org</a>. There is some interesting material on Energy available on the <a href="https://www.greenschoolsprogramme.org/knowledge-bank/energy/gsp-solar-in-schools-initiative-2019-20/" style="color:blue;">GSP website</a></li>
   </ol>
@@ -522,14 +533,14 @@ h2 span {
   </div>
   <div class="air" style="line-height: 14px;">
     <h2>
-      <figure><img src="assets/img/performance/Air.jpg"><li style="font-weight: bold; margin-left:35px">Air</li></figure>
+      <figure><img src="assets/img/performance/air.png" width="100"><li style="font-weight: bold; margin-left:35px">Air</li></figure>
       <label > </label>
 
       <span>Green Schools Programme Audit 2019-2020</span></h2>
     <p>Air pollution is responsible for close to 13 per cent of deaths in India and its burden is highest in northern states of Delhi, Punjab, Uttar Pradesh and Haryana. In fact, an average Indian will live 1.7 years longer if the country is able to clean its air.</p>
     <p>Air pollution has adverse effects on children, specifically. It has been found that children in polluted environment grow up with smaller lungs. Sources of air pollution are many and diverse. But none are as lethal as vehicles because they are responsible for very high exposure. Vehicular emissions take place in the breathing zone of people. Experts say that those who live or work in close proximity to heavily travelled roadways are subject to high levels of exposure. No wonder that during the past few years, we have been desperately looking out for tools to assess the problem and find ways to combat the menace.
    </p>
-   <p>To know more about GSP’s initiative on air pollution and explore the resource material, please go to the <a href="https://www.greenschoolsprogramme.org/knowledge-bank/gsp-air-pollution-seminar-2019-20/" style="color:blue;">GSP website.</a>
+   <p>To know more about GSP&#39;s initiative on air pollution and explore the resource material, please go to the <a href="https://www.greenschoolsprogramme.org/knowledge-bank/gsp-air-pollution-seminar-2019-20/" style="color:blue;">GSP website.</a>
    </p>
     <section class="remember">
       <h3>Remember:</h3>
@@ -635,7 +646,7 @@ h2 span {
 if ($data == 3 || $data == 4) { ?>
   <div class="air">
     <h2>
-      <figure><img src="assets/img/performance/Air.jpg"></figure>
+      <figure><img src="assets/img/performance/air.png" width="100"></figure>
       <label>Air</label>
       <span>Green Schools Programme Audit 2019-2020</span></h2>
     <section class="performance-category">
@@ -1004,11 +1015,11 @@ if ($data == 3 || $data == 4) { ?>
   </div>
   <div class="energy">
     <h2>
-      <figure><img src="assets/img/performance/energy.jpg"><li style="font-weight: bold; margin-left:35px">Energy</li></figure>
+      <figure><img src="assets/img/performance/energy.png" width="100"><li style="font-weight: bold; margin-left:35px">Energy</li></figure>
       <label> </label>
       <span>Green Schools Programme Audit 2019-2020</span></h2>
     <p>The impact of global warming has already reached scorching levels, and is rising rapidly. Saving energy is the first step to energy conservation. Switching off electrical gadgets when they are not in use and transitioning from bulbs to CFLs/LEDs are great ways to start. Opting for rooftop or building-integrated small-scale solar systems is an  easy way to conserve electricity sustainably and cut down on your school's future electricity costs! They help minimise transmission and distribution losses, as the generated power is consumed locally. You can check out the latest schemes for solar roof top installations in institutions on <a href="https://seci.co.in/" style="color: blue;">https://seci.co.in/.</a> </p>
-<p>To know more about GSP’s initiative on renewable energy (RE) and explore the resource material, please go to the <a href="https://www.greenschoolsprogramme.org/knowledge-bank/energy/gsp-solar-in-schools-initiative-2019-20/" style="color: blue;">GSP Website.</a>
+<p>To know more about GSP&#39;s initiative on renewable energy (RE) and explore the resource material, please go to the <a href="https://www.greenschoolsprogramme.org/knowledge-bank/energy/gsp-solar-in-schools-initiative-2019-20/" style="color: blue;">GSP Website.</a>
 </p>
     <section class="remember">
       <h3>Remember</h3>
@@ -1275,7 +1286,7 @@ if ($data == 3 || $data == 4) { ?>
   </div>
   <div class="food">
     <h2>
-      <figure><img src="assets/img/performance/food.jpg"><li style="font-weight: bold; margin-left:35px">Food</li></figure>
+      <figure><img src="assets/img/performance/food.png" width="100"><li style="font-weight: bold; margin-left:35px">Food</li></figure>
       <label> </label>
       <span>Green Schools Programme Audit 2019-2020</span></h2>
     <p>A recent report published states that the food diversity on plate worldwide has reduced by 75 percent since the 1990s. This has cost everyone in terms of deteriorating human health and environment. In India, over 100 kinds of foods wild, cultivated and uncultivated form a part of the regular diet. Nutritional analyses of these diets show that these foods can counter malnutrition including micro-nutrient malnutrition such as Vitamin A Deficiency (VAD).</p>
@@ -1320,7 +1331,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
           <div class="description">
             <h3>Does your school serve midday meals?</h3>
             <h3>Yes</h3>
-            <p>Good to see that your school provides freshly prepared food to the students. Food services like school mess or midday meal service is an important health resource for schools, especially the student community. When food is consumed daily, the food provided through the school comprises a third of a child’s total daily intake and has a significant influence on health and nutrition.</p>   
+            <p>Good to see that your school provides freshly prepared food to the students. Food services like school mess or midday meal service is an important health resource for schools, especially the student community. When food is consumed daily, the food provided through the school comprises a third of a child&#39;s total daily intake and has a significant influence on health and nutrition.</p>   
           </div>
         </li>
     <?php }elseif(getFiled('Q5F1', $schoolUserID) == "N") { ?>
@@ -1329,7 +1340,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
           <div class="description">
             <h3>Does your school serve midday meals?</h3>
             <h3>No</h3>
-            <p>Food services like school mess or midday meal service is an important health resource for schools, especially the student community. When food is consumed daily, the food provided through the school comprises a third of a child’s total daily intake and has a significant influence on health and  It is recommended that school checks the kind of food the students consume.</p>          
+            <p>Food services like school mess or midday meal service is an important health resource for schools, especially the student community. When food is consumed daily, the food provided through the school comprises a third of a child&#39;s total daily intake and has a significant influence on health and  It is recommended that school checks the kind of food the students consume.</p>          
           </div>
         </li>
       <?php } ?>
@@ -1340,7 +1351,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
           <div class="description">
             <h3>Do students bring their own lunch from home?</h3>
             <h3>Yes</h3>
-            <p>It is good that the students bring cooked food from home. It is important that parents and teachers work together to help the students choose ‘good food’ for a healthy lifestyle.</p>          
+            <p>It is good that the students bring cooked food from home. It is important that parents and teachers work together to help the students choose ‘good food&#39; for a healthy lifestyle.</p>          
           </div>
         </li>
     <?php }elseif(getFiled('Q5F1S1', $schoolUserID) == "N") { ?>
@@ -1349,7 +1360,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
           <div class="description">
             <h3>Do students bring their own lunch from home?</h3>
             <h3>No</h3>
-            <p>It is important that parents and teachers work together to help the students choose ‘good food’ for a healthy lifestyle. The students should thus be consuming freshly cooked nutritious food in school or bring lunch from home.</p>
+            <p>It is important that parents and teachers work together to help the students choose ‘good food&#39; for a healthy lifestyle. The students should thus be consuming freshly cooked nutritious food in school or bring lunch from home.</p>
             
           </div>
         </li>
@@ -1464,7 +1475,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
                                     $sponsored_event_msg = "Students are easily influenced by the fancy brand advertisements and promotions. Therefore, we recommend banning of events that promote consumption of UPPF items.";
                                 } elseif(getFiled('Q11F1', $schoolUserID) == "N") {
                                     $sponsored_event = "No";
-                                    $sponsored_event_msg = "Students are easily influenced by the fancy brand advertisements and promotions. It is good that your school doesn’t encourage events that promote consumption of UPPF items.";
+                                    $sponsored_event_msg = "Students are easily influenced by the fancy brand advertisements and promotions. It is good that your school doesn&#39;t encourage events that promote consumption of UPPF items.";
                                 }
                                 ?>
             <h4><?php echo $sponsored_event; ?></h4>
@@ -1494,7 +1505,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
   </div>
   <div class="land">
     <h2>
-      <figure><img src="assets/img/performance/land.jpg"><li style="font-weight: bold; margin-left:35px">Land</li></figure>
+      <figure><img src="assets/img/performance/land.png" width="100"><li style="font-weight: bold; margin-left:35px">Land</li></figure>
       <label> </label>
       <span>Green Schools Programme Audit 2019-2020</span></h2>
     <p>As per Model Building Bye-Laws, 2016, maximum ground coverage in a school building should not exceed 35 per cent. Your school grounds can provide excellent educational opportunities for creating awareness about land resources, natural world around you and the land-use pattern. The biological diversity supported by an area is a good indicator of its ecological well-being. A proper management of land resources can transform the grounds into biologically diverse outdoor classrooms and healthy open spaces.</p>
@@ -1603,7 +1614,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
   </div>
   <div class="water">
     <h2>
-      <figure><img src="assets/img/performance/water.jpg"><li style="font-weight: bold; margin-left:35px">Water</li></figure>
+      <figure><img src="assets/img/performance/water.png" width="100"><li style="font-weight: bold; margin-left:35px">Water</li></figure>
       <label> </label>
       <span>Green Schools Programme Audit 2019-2020</span></h2>
     <p>The right to water is really the right to life and livelihood. Just as we cannot live without water, a country cannot survive if it is water-stressed. This resource determines our future and acts as a driving force for our economic growth. Even today, the government admits to not being able to provide safe drinking water to more than half the country's population. Poor sanitation and unsafe drinking water account for a substantial part of the disease burden in India, contributing to diarrhoea, cholera, typhoid and jaundice. </p>
@@ -1629,7 +1640,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
                      elseif($total_water_points >=15)
                         $point_performance_msg_water= "Your school has done average in this section. It does not provide water as per the prescribed levels. Also, the load on some of the sanitation facilities is not within the prescribed norms. We hope that you take suggestions and become a water efficient school at the earliest.";
                      elseif($total_water_points <15)
-                        $point_performance_msg_water= "Your school does not provide water as per the prescribed level as well as all the sanitation facilities do not have load under the prescribed norms. Your school’s score in water section is poor. Hope you take suggestions from the assessment given below and become a water-efficient school soon.";
+                        $point_performance_msg_water= "Your school does not provide water as per the prescribed level as well as all the sanitation facilities do not have load under the prescribed norms. Your school&#39;s score in water section is poor. Hope you take suggestions from the assessment given below and become a water-efficient school soon.";
                                      
                 ?>
     <p><?php echo $point_performance_msg_water ?></p>
@@ -1928,7 +1939,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
         <li <?php if(getFiled('Q8W2', $schoolUserID) == "N"){ echo "style='display:inline-block;'";} ?>>
           <figure><img src="assets/img/performance/harvesting.jpg"></figure>
           <div class="description">
-            <h3>Calculate your school’s rainwater harvesting potential (in litres).</h3>
+            <h3>Calculate your school&#39;s rainwater harvesting potential (in litres).</h3>
             <?php
              $potential = getFiled('Q8W2S6', $schoolUserID);
                                 if (!empty($potential)) {
@@ -2578,7 +2589,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
   </div>
   <div class="waste" style="line-height: 16px;">
     <h2>
-      <figure><img src="assets/img/performance/waste.jpg"><li style="font-weight: bold; margin-left:35px">Waste</li></figure>
+      <figure><img src="assets/img/performance/waste.png" width="100"><li style="font-weight: bold; margin-left:35px">Waste</li></figure>
       <label> </label>
       <span>Green Schools Programme Audit 2019-2020</span></h2>
     <p>Do you know how much solid waste (paper, plastics, food waste etc) Delhi produces? 10,000 tonnes a day. We dump it all into landfills, which are overflowing and which pollute the environment. Moreover, there is no land available to create more landfills. We face day-to-day problems regarding waste management. Where to dispose of waste? How to dispose of waste? What to do with the waste?</p>
@@ -2994,9 +3005,9 @@ if ($authorised_dealer == "Y") {
    <div class="introduction page_break">
 
 
-      <p style="text-align: center; font-size: 18px; color: blue;">What’s New</p>
+      <p style="text-align: center; font-size: 18px; color: blue;">What&#39;s New</p>
       <p>
-        The year 2019-20 was marked by increased focus on energy. GSP’s Solar on Schools initiative that was piloted in Himachal Pradesh saw a range of activities such as workshops, science fairs, etc. We started the year off with the publication Rethink Energy which helps in gauging energy consumption patterns and improving energy use in schools. Other resource materials include a board game, colouring book, fact sheets and videos. All this material can be found on the GSP Website: <a href="https://www.greenschoolsprogramme.org/knowledge-bank/energy/gsp-solar-in-schools-initiative-2019-20/" style="color:blue;">https://www.greenschoolsprogramme.org/knowledge-bank/energy/gsp-solar-in-schools-initiative-2019-20/</a>
+        The year 2019-20 was marked by increased focus on energy. GSP&#39;s Solar on Schools initiative that was piloted in Himachal Pradesh saw a range of activities such as workshops, science fairs, etc. We started the year off with the publication Rethink Energy which helps in gauging energy consumption patterns and improving energy use in schools. Other resource materials include a board game, colouring book, fact sheets and videos. All this material can be found on the GSP Website: <a href="https://www.greenschoolsprogramme.org/knowledge-bank/energy/gsp-solar-in-schools-initiative-2019-20/" style="color:blue;">https://www.greenschoolsprogramme.org/knowledge-bank/energy/gsp-solar-in-schools-initiative-2019-20/</a>
       </p>
 
       <p>We look forward to continue working together in the coming year with renewed enthusiasm. We hope that you find the performance report and resource material useful. Thank you for your participation in the GSP Audit and being active environmental change makers!</p>
@@ -3004,7 +3015,7 @@ if ($authorised_dealer == "Y") {
        <p>Please find below a snapshot of the books released by CSE</p>
 
        
-       <center><img src="assets/img/what.png"></center>
+       <center><img src="assets/img/what.jpg" width="500px"></center>
 
 
 </div>
