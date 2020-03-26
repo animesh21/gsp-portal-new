@@ -310,11 +310,15 @@ public function count_certificates_stuents($argID) {
 public function downloadReportsSection(){
     $this->load->view('download-report');
   }
+
+public function badgecodeview(){
+    $this->load->view('badgeview');
+  }
 	
-	  public function ask_password()
-          {
-               $this->load->view('download-login_home');
-          }
+public function ask_password()
+       {
+            $this->load->view('download-login_home');
+       }
     
 public function downloadAirSection(){
     $this->load->view('download_air');
