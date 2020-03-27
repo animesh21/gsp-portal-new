@@ -343,7 +343,7 @@ h2 span {
 </p>
 
 <p>
-  We hope the performance report, based on the data submitted by the school, will be useful to further strengthen existing practices and introduce new sustainable practices. For GSP Audit 2020, we request the school leadership as well as the teachers heading the audit sections to take advantage of the audit in raising awareness on one of the most challenging crises of our time–&#8211;climate change.  Since the audit already tracks all the critical elements (mobility, energy consumption, food consumption, water and sanitation and solid waste management) that directly or indirectly contribute to global heating, GSP Audit 2020 will reinforce the climate change linkages while retaining its original format. <strong>Stay tuned for further details!</strong>
+  We hope the performance report, based on the data submitted by the school, will be useful to further strengthen existing practices and introduce new sustainable practices. For GSP Audit 2020, we request the school leadership as well as the teachers heading the audit sections to take advantage of the audit in raising awareness on one of the most challenging crises of our time&#8211;climate change.  Since the audit already tracks all the critical elements (mobility, energy consumption, food consumption, water and sanitation and solid waste management) that directly or indirectly contribute to global heating, GSP Audit 2020 will reinforce the climate change linkages while retaining its original format. <strong>Stay tuned for further details!</strong>
 </p>
 <p>
   As we wind down GSP Audit 2019, please note the following: 
@@ -387,7 +387,7 @@ h2 span {
  
         <?php $percentage=getSchoolRating($schoolUserID); ?>
         <?php
-            $percentage= ceil($percentage) ;
+           $percentage= ceil($percentage) ;
         
       if($percentage>=70){?>
        
@@ -533,7 +533,7 @@ h2 span {
   </div>
   <div class="air" style="line-height: 14px;">
     <h2>
-      <figure><img src="assets/img/performance/air.png" width="100"><li style="font-weight: bold; margin-left:35px">Air</li></figure>
+      <figure><img src="assets/img/performance/air.png" width="120"></figure>
       <label > </label>
 
       <span>Green Schools Programme Audit 2019-2020</span></h2>
@@ -646,7 +646,7 @@ h2 span {
 if ($data == 3 || $data == 4) { ?>
   <div class="air">
     <h2>
-      <figure><img src="assets/img/performance/air.png" width="100"></figure>
+      <figure><img src="assets/img/performance/air.png" width="120"></figure>
       <label>Air</label>
       <span>Green Schools Programme Audit 2019-2020</span></h2>
     <section class="performance-category">
@@ -1015,7 +1015,7 @@ if ($data == 3 || $data == 4) { ?>
   </div>
   <div class="energy">
     <h2>
-      <figure><img src="assets/img/performance/energy.png" width="100"><li style="font-weight: bold; margin-left:35px">Energy</li></figure>
+      <figure><img src="assets/img/performance/energy.png" width="120"></figure>
       <label> </label>
       <span>Green Schools Programme Audit 2019-2020</span></h2>
     <p>The impact of global warming has already reached scorching levels, and is rising rapidly. Saving energy is the first step to energy conservation. Switching off electrical gadgets when they are not in use and transitioning from bulbs to CFLs/LEDs are great ways to start. Opting for rooftop or building-integrated small-scale solar systems is an  easy way to conserve electricity sustainably and cut down on your school's future electricity costs! They help minimise transmission and distribution losses, as the generated power is consumed locally. You can check out the latest schemes for solar roof top installations in institutions on <a href="https://seci.co.in/" style="color: blue;">https://seci.co.in/.</a> </p>
@@ -1286,7 +1286,7 @@ if ($data == 3 || $data == 4) { ?>
   </div>
   <div class="food">
     <h2>
-      <figure><img src="assets/img/performance/food.png" width="100"><li style="font-weight: bold; margin-left:35px">Food</li></figure>
+      <figure><img src="assets/img/performance/food.png" width="120"></figure>
       <label> </label>
       <span>Green Schools Programme Audit 2019-2020</span></h2>
     <p>A recent report published states that the food diversity on plate worldwide has reduced by 75 percent since the 1990s. This has cost everyone in terms of deteriorating human health and environment. In India, over 100 kinds of foods wild, cultivated and uncultivated form a part of the regular diet. Nutritional analyses of these diets show that these foods can counter malnutrition including micro-nutrient malnutrition such as Vitamin A Deficiency (VAD).</p>
@@ -1351,7 +1351,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
           <div class="description">
             <h3>Do students bring their own lunch from home?</h3>
             <h3>Yes</h3>
-            <p>It is good that the students bring cooked food from home. It is important that parents and teachers work together to help the students choose ‘good food&#39; for a healthy lifestyle.</p>          
+            <p>It is good that the students bring cooked food from home. It is important that parents and teachers work together to help the students choose &#39;good food&#39; for a healthy lifestyle.</p>          
           </div>
         </li>
     <?php }elseif(getFiled('Q5F1S1', $schoolUserID) == "N") { ?>
@@ -1505,7 +1505,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
   </div>
   <div class="land">
     <h2>
-      <figure><img src="assets/img/performance/land.png" width="100"><li style="font-weight: bold; margin-left:35px">Land</li></figure>
+      <figure><img src="assets/img/performance/land.png" width="120"></figure>
       <label> </label>
       <span>Green Schools Programme Audit 2019-2020</span></h2>
     <p>As per Model Building Bye-Laws, 2016, maximum ground coverage in a school building should not exceed 35 per cent. Your school grounds can provide excellent educational opportunities for creating awareness about land resources, natural world around you and the land-use pattern. The biological diversity supported by an area is a good indicator of its ecological well-being. A proper management of land resources can transform the grounds into biologically diverse outdoor classrooms and healthy open spaces.</p>
@@ -1614,7 +1614,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
   </div>
   <div class="water">
     <h2>
-      <figure><img src="assets/img/performance/water.png" width="100"><li style="font-weight: bold; margin-left:35px">Water</li></figure>
+      <figure><img src="assets/img/performance/water.png" width="120"></figure>
       <label> </label>
       <span>Green Schools Programme Audit 2019-2020</span></h2>
     <p>The right to water is really the right to life and livelihood. Just as we cannot live without water, a country cannot survive if it is water-stressed. This resource determines our future and acts as a driving force for our economic growth. Even today, the government admits to not being able to provide safe drinking water to more than half the country's population. Poor sanitation and unsafe drinking water account for a substantial part of the disease burden in India, contributing to diarrhoea, cholera, typhoid and jaundice. </p>
@@ -2589,7 +2589,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
   </div>
   <div class="waste" style="line-height: 16px;">
     <h2>
-      <figure><img src="assets/img/performance/waste.png" width="100"><li style="font-weight: bold; margin-left:35px">Waste</li></figure>
+      <figure><img src="assets/img/performance/waste.png" width="120"></figure>
       <label> </label>
       <span>Green Schools Programme Audit 2019-2020</span></h2>
     <p>Do you know how much solid waste (paper, plastics, food waste etc) Delhi produces? 10,000 tonnes a day. We dump it all into landfills, which are overflowing and which pollute the environment. Moreover, there is no land available to create more landfills. We face day-to-day problems regarding waste management. Where to dispose of waste? How to dispose of waste? What to do with the waste?</p>
@@ -2989,17 +2989,16 @@ if ($authorised_dealer == "Y") {
         <?php } ?>
       </ul>
     </section>
-    <h3>Thank You</h3>
-    <p>Hope that each year your school will participate in the GSP Audit and contribute towards a better tomorrow by educating children to become environmentally sensitive and responsible citizens. We hope that your school will continue to strive to be a changemaker Green school.</p>
-
-
-
-
-
     <div class="footer">
       <p>Performance Report | <?php echo $performance[0]->name; ?></p>
       <!--      <span class="p-number">17</span>-->
     </div>
+  </div>
+
+  <div class="introduction page_break">
+    <p style="text-align: center; font-size: 18px; color: blue;">Thank You</p>
+     <p>Hope that each year your school will participate in the GSP Audit and contribute towards a better tomorrow by educating children to become environmentally sensitive and responsible citizens. We hope that your school will continue to strive to be a changemaker Green school.</p>
+
   </div>
 
    <div class="introduction page_break">
