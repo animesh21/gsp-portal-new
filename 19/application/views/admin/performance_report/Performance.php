@@ -337,13 +337,13 @@ h2 span {
     </p>
     <p>As you are aware, the Green Schools Programme (GSP) takes the students outside the classroom and helps them learn with joy. GSP has been built on the twin objectives of &#39;learning by doing&#39; and making change work to help schools audit the consumption of natural resources within their premises and assess themselves as environment managers.
 </p>
-    <p>This year, more than 1700 schools from across the country submitted the audit. The GSP national environmental report for schools looks promising&#x2010;1389 schools segregate waste at source, 962 schools practice composting and 631 schools give their e-waste to authorized dealers. 818 schools harvest rainwater, half of these recharge the groundwater and 220 school store for use. <strong> BUT </strong> 79 per cent schools are dependent on ground water. The number of schools burning waste has reduced from last year but 18 per cent schools still burn waste. More than 300 schools sell packaged food and more than 550 schools distribute packaged food as refreshments during school events. There is a long way to go!
+    <p>This year, more than 1700 schools from across the country submitted the audit. The GSP national environmental report for schools looks promising&#8211;1389 schools segregate waste at source, 962 schools practice composting and 631 schools give their e-waste to authorized dealers. 818 schools harvest rainwater, half of these recharge the groundwater and 220 school store for use. <strong> BUT </strong> 79 per cent schools are dependent on ground water. The number of schools burning waste has reduced from last year but 18 per cent schools still burn waste. More than 300 schools sell packaged food and more than 550 schools distribute packaged food as refreshments during school events. There is a long way to go!
  </p>
     <p>You may have noticed that there is a focus area in the audit every year, which means there are detailed questions asked for the section. For the last few years, water and waste have been the focus areas. This year, in addition to water and waste, energy section was detailed with emphasis on renewable sources of energy. 218 schools reported the use of solar energy, 21 schools reported using biogas and eight reported using wind energy.</b> 
 </p>
 
 <p>
-  We hope the performance report, based on the data submitted by the school, will be useful to further strengthen existing practices and introduce new sustainable practices. For GSP Audit 2020, we request the school leadership as well as the teachers heading the audit sections to take advantage of the audit in raising awareness on one of the most challenging crises of our time–&#x2010;climate change.  Since the audit already tracks all the critical elements (mobility, energy consumption, food consumption, water and sanitation and solid waste management) that directly or indirectly contribute to global heating, GSP Audit 2020 will reinforce the climate change linkages while retaining its original format. <strong>Stay tuned for further details!</strong>
+  We hope the performance report, based on the data submitted by the school, will be useful to further strengthen existing practices and introduce new sustainable practices. For GSP Audit 2020, we request the school leadership as well as the teachers heading the audit sections to take advantage of the audit in raising awareness on one of the most challenging crises of our time–&#8211;climate change.  Since the audit already tracks all the critical elements (mobility, energy consumption, food consumption, water and sanitation and solid waste management) that directly or indirectly contribute to global heating, GSP Audit 2020 will reinforce the climate change linkages while retaining its original format. <strong>Stay tuned for further details!</strong>
 </p>
 <p>
   As we wind down GSP Audit 2019, please note the following: 
@@ -1315,7 +1315,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
          $point_performance_msg_f = "Your school has a canteen that may be hampering the healthy eating habits of students. It is important to promote traditional and nutritious food by discouraging ultra processesed packaged food (UPPF) on campus. These items can be substituted with local and seasonal delicacies.";
         }
         elseif($total_food_points == 0 ){
-         $point_performance_msg_f = "Your school provides ultra processed packaged food (UPPF) items to students&#x2010;a practice that needs to be discouraged as UPPF items are high in fats, salt and sugar and cause health problems. We recommend encouraging students to opt for traditional and nutritious food.";
+         $point_performance_msg_f = "Your school provides ultra processed packaged food (UPPF) items to students&#8211;a practice that needs to be discouraged as UPPF items are high in fats, salt and sugar and cause health problems. We recommend encouraging students to opt for traditional and nutritious food.";
         }
     //     elseif($total_food_points < 1){
     // $point_performance_msg_f = "Your school sells ultra processed packaged food (UPPF) items daily in the campus - a practice that needs to be discouraged as UPPF items are high in fats, salt and sugar and harm children. We suggest that with the beginning of the new academic session, unhealthy food items be substituted with local and seasonal delicacies. The your school promotes processed, packaged or fast food, which is not good for the students. We recommend that you motivate students to opt for Good Food. ";
@@ -1515,7 +1515,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
       <h3>Remember:</h3>
       <ol style="list-style-type: japanese-formal !important;">
         <li>Congestion on land (more buildings and inadequate green cover) leads to pressure on resources and hence on our environment.</li>
-        <li>We all know that adequate supply of oxygen to the brain ensures greater power to grasp things. And for more oxygen we need more trees&#x2010;our only oxygen factory!</li>
+        <li>We all know that adequate supply of oxygen to the brain ensures greater power to grasp things. And for more oxygen we need more trees&#8211;our only oxygen factory!</li>
         <li>To keep these oxygen factories healthy, we should not use chemical pesticides to raise them. Chemical pesticides are poisonous to health and environment.</li>  
       </ol>
     </section>
@@ -1527,9 +1527,9 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
             if($total_land_points >= 10)
             $point_performance_msg_l = "Your school has performed well in this section. It is good that your school has plenty of green cover without the use of any chemical-based pesticides. The biodiversity in the school is rich as well. To improve even further, the school can introduce and expand vertical gardening.";
              elseif($total_land_points >=5)
-             $point_performance_msg_l= "Your school has done average in this section. The school can take concrete steps to increase the green cover of the school, like vertical gardening and plantation drives. The biodiversity&#x2010;number of species of plants and animals &#x2010;in the school can be made richer.";                    
+             $point_performance_msg_l= "Your school has done average in this section. The school can take concrete steps to increase the green cover of the school, like vertical gardening and plantation drives. The biodiversity&#8211;number of species of plants and animals &#8211;in the school can be made richer.";                    
              elseif($total_land_points <5)
-             $point_performance_msg_l= "Your school does not meet the green cover requirements. The school can take rigorous steps to increase the green cover of the school, like vertical gardening and plantation drives. The biodiversity&#x2010; number of species of plants and animals&#x2010;in the school can be made richer.";
+             $point_performance_msg_l= "Your school does not meet the green cover requirements. The school can take rigorous steps to increase the green cover of the school, like vertical gardening and plantation drives. The biodiversity&#8211; number of species of plants and animals&#8211;in the school can be made richer.";
               ?>
     <p><?php echo $point_performance_msg_l ?></p>
     <section class="performance-category">
@@ -1966,7 +1966,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
             <?php
                                     } else if (getFiled('Q8W2S1', $schoolUserID) == "N") {
                                         $catchments = "No";
-                                        $catchments_msg = "Your school has a rainwater harvesting system, which implies that the school is catching rainwater from at least one of the catchment areas&#x2010;rooftop, paved or unpaved. Please provide the correct details for a more accurate analysis of your report.";
+                                        $catchments_msg = "Your school has a rainwater harvesting system, which implies that the school is catching rainwater from at least one of the catchment areas&#8211;rooftop, paved or unpaved. Please provide the correct details for a more accurate analysis of your report.";
                     ?>
             <h4><?php echo $catchments; ?></h4>
             <p><?php echo $catchments_msg; ?></p>
@@ -1985,7 +1985,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
             <?php
                                     if (getFiled('Q8W2S1S1', $schoolUserID) == 7) {
                                         $catchments_area = "Rooftop + Paved + Unpaved";
-                                        $catchments_area_msg = "It is remarkable that your school usea all catchment areas to harvest rainwater&#x2010;rooftop, paved and unpaved!";
+                                        $catchments_area_msg = "It is remarkable that your school usea all catchment areas to harvest rainwater&#8211;rooftop, paved and unpaved!";
                                     } else if (getFiled('Q8W2S1S1', $schoolUserID) == 1) {
                                         $catchments_area = "Rooftop";
                                         $catchments_area_msg = "Your school uses 'Rooftop' method of catchment for rainwater harvesting, which is good. We suggest moving towards a combination of rooftop, paved and unpaved for a better outcome.";
