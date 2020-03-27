@@ -271,7 +271,7 @@ h2 span {
 
        </div>
        
-      <div class="schoolCatagory">
+      <div class="schoolCatagory" style="margin-top: 15px;">
          <table class="table" style="padding-left: 30%; color: black;font-size: 12px;">  
       <tbody>
         <tr>
