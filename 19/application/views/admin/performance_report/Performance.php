@@ -14,8 +14,8 @@
 body {font-family: arial, sans-serif; font-weight: normal; font-size: 12px; line-height: 1.4; color: #5b5d64; margin: 0; padding: 0;}
 h1, h2, h3, h4, h5, h6 {font-weight: normal; line-height: 1.2; margin: 0; padding: 0;}
 h2 {font-size: 19px; margin-bottom: 20px; color: #e86549; border-bottom: 0px dashed #fff;}
-h3 {font-size: 18px; color: #d5bb2b; margin-bottom: 10px;}
-h4 {font-size: 15px; color: #d5bb2b; margin-bottom: 10px;}
+h3 {font-size: 18px; color: #c63141; margin-bottom: 10px;}
+h4 {font-size: 15px; color: #c63141; margin-bottom: 10px;}
 p {margin: 0 0 15px 0;}
 a {color: #5b5d64;}
 a:focus,a:hover {text-decoration: none;}
@@ -75,48 +75,48 @@ h2 span {display: inline-block; width: 20%; font-size: 11px; color: #898585; bac
 
 /* ========== Section Introduction ========== */
 p.intro-text {font-size: 14px;}
-.remember {background: #f6f0d0; padding: 15px 12px 20px 12px; margin: 20px 0;}
+.remember {background: #f2b3ba; padding: 15px 12px 20px 12px; margin: 20px 0;}
 .remember ul {padding-left: 14px;}
 .remember li {background: url("../images/remember-list.png") 0 2px no-repeat; padding-left:15px;}
 
 /* ============== Air ============== */
-.air h2 label {color: #d5bb2b;}
+.air h2 label {color: #c63141;}
 .air p, .energy p {font-size: 12px;}
 
 /* ============== Energy ============== */
-.energy h2 label, .energy h3, .energy h4 {color: #e29e15}
-.energy .remember {background: #f9eacc}
+.energy h2 label, .energy h3, .energy h4 {color: #c05090}
+.energy .remember {background: #fac2e2}
 .energy .remember li {background: url("../images/energy-list.png") 0 2px no-repeat; padding-left:15px;}
 
 /* ============== Food ============== */
-.food h2 label, .food h3, .food h4 {color: #ef3997}
-.food .remember {background: #fbd4e8}
+.food h2 label, .food h3, .food h4 {color: #f4b818}
+.food .remember {background: #f3e3b9}
 .food .remember li {background: url("../images/food-list.png") 0 2px no-repeat; padding-left:15px;}
 
 /* ============== Land ============== */
-.land h2 label, .land h3, .land h4 {color: #a5b642}
-.land .remember {background: #ebefd5}
+.land h2 label, .land h3, .land h4 {color: #009bb5}
+.land .remember {background: #98e2ef}
 .land .remember li {background: url("../images/land-list.png") 0 2px no-repeat; padding-left:15px;}
 
 /* ============== Water ============== */
-.water h2 label, .water h3, .water h4 {color: #0071bc}
-.water .remember {background: #c7e0f0}
+.water h2 label, .water h3, .water h4 {color: #8295cc}
+.water .remember {background: #b9c7ef}
 .water .remember li {background: url("../images/water-list.png") 0 2px no-repeat; padding-left:15px;}
 
 /* ============== Waste ============== */
-.waste h2 label, .waste h3, .waste h4 {color: #7265ad}
-.waste .remember {background: #d3cafa}
+.waste h2 label, .waste h3, .waste h4 {color: #00aa7e}
+.waste .remember {background: #b0f0df}
 .waste .remember li {background: url("../images/waste-list.png") 0 2px no-repeat; padding-left:15px;}
 .page-break-before-new{page-break-before: always;}
-.performance-blue-bg{background: #0071bc !important}
-.performance-orange-bg{background: #e29e15 !important}
+.performance-blue-bg{background: #8295cc !important}
+.performance-orange-bg{background: #c05090 !important}
 @media print{
     * {box-sizing: border-box;}
 body {font-family: arial, sans-serif; font-weight: normal; font-size: 12px; line-height: 1.4; color: #5b5d64; margin: 0; padding: 0;}
 h1, h2, h3, h4, h5, h6 {font-weight: normal; line-height: 1.2; margin: 0; padding: 0;}
 h2 {font-size: 19px; margin-bottom: 20px; color: #e86549; border-bottom: 2px dashed #e1e1e1;}
-h3 {font-size: 18px; color: #d5bb2b; margin-bottom: 10px;}
-h4 {font-size: 15px; color: #d5bb2b; margin-bottom: 10px;}
+h3 {font-size: 18px; color: #c63141; margin-bottom: 10px;}
+h4 {font-size: 15px; color: #c63141; margin-bottom: 10px;}
 p {margin: 0 0 15px 0;}
 a {color: #5b5d64;}
 a:focus,a:hover {text-decoration: none;}
@@ -181,36 +181,36 @@ p.intro-text {font-size: 14px;}
 .remember li {background: url("../images/remember-list.png") 0 2px no-repeat; padding-left:15px;}
 
 /* ============== Air ============== */
-.air h2 label {color: #d5bb2b;}
+.air h2 label {color: #c63141;}
 .air p, .energy p {font-size: 12px;}
 
 /* ============== Energy ============== */
-.energy h2 label, .energy h3, .energy h4 {color: #e29e15}
+.energy h2 label, .energy h3, .energy h4 {color: #c05090}
 .energy .remember {background: #f9eacc}
 .energy .remember li {background: url("../images/energy-list.png") 0 2px no-repeat; padding-left:15px;}
 
 /* ============== Food ============== */
-.food h2 label, .food h3, .food h4 {color: #ef3997}
+.food h2 label, .food h3, .food h4 {color: #f4b818}
 .food .remember {background: #fbd4e8}
 .food .remember li {background: url("../images/food-list.png") 0 2px no-repeat; padding-left:15px;}
 
 /* ============== Land ============== */
-.land h2 label, .land h3, .land h4 {color: #a5b642}
+.land h2 label, .land h3, .land h4 {color: #009bb5}
 .land .remember {background: #ebefd5}
 .land .remember li {background: url("../images/land-list.png") 0 2px no-repeat; padding-left:15px;}
 
 /* ============== Water ============== */
-.water h2 label, .water h3, .water h4 {color: #0071bc}
+.water h2 label, .water h3, .water h4 {color: #8295cc}
 .water .remember {background: #c7e0f0}
 .water .remember li {background: url("../images/water-list.png") 0 2px no-repeat; padding-left:15px;}
 
 /* ============== Waste ============== */
-.waste h2 label, .waste h3, .waste h4 {color: #7265ad}
+.waste h2 label, .waste h3, .waste h4 {color: #00aa7e}
 .waste .remember {background: #d3cafa}
 .waste .remember li {background: url("../images/waste-list.png") 0 2px no-repeat; padding-left:15px;}
 .page-break-before-new{page-break-before: always;}
-.performance-blue-bg{background: #0071bc !important}
-.performance-orange-bg{background: #e29e15 !important}
+.performance-blue-bg{background: #8295cc !important}
+.performance-orange-bg{background: #c05090 !important}
 }
 
   
@@ -525,7 +525,7 @@ The GSP Audit 2020 will open by July 2020, and we look forward to receiving your
   <div class="air" style="line-height: 14px;">
     <h2>
       <figure><img src="assets/img/performance/air.png" width="120"></figure>
-      <label > </label>
+      <label> </label>
 
       <span>Green Schools Programme Audit 2019-2020</span></h2>
     <p>Air pollution is responsible for close to 13 per cent of deaths in India and its burden is highest in northern states of Delhi, Punjab, Uttar Pradesh and Haryana. In fact, an average Indian will live 1.7 years longer if the country is able to clean its air.</p>
@@ -638,7 +638,7 @@ if ($data == 3 || $data == 4) { ?>
   <div class="air">
     <h2>
       <figure><img src="assets/img/performance/air.png" width="120"></figure>
-      <label>Air</label>
+      <label></label>
       <span>Green Schools Programme Audit 2019-2020</span></h2>
     <section class="performance-category">
       <ul>
@@ -1170,7 +1170,7 @@ if ($data == 3 || $data == 4) { ?>
           </div>
         </li>
                                          
-         <li>
+         <li style="height: 125px">
           <figure><img src="assets/img/performance/source.jpg"></figure>
           <div class="description">
             <h3>Is your school using any renewable sources of energy ?</h3>
