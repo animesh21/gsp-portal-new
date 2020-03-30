@@ -13,7 +13,7 @@
 * {box-sizing: border-box;}
 body {font-family: arial, sans-serif; font-weight: normal; font-size: 12px; line-height: 1.4; color: #5b5d64; margin: 0; padding: 0;}
 h1, h2, h3, h4, h5, h6 {font-weight: normal; line-height: 1.2; margin: 0; padding: 0;}
-h2 {font-size: 19px; margin-bottom: 20px; color: #e86549; border-bottom: 2px dashed #e1e1e1;}
+h2 {font-size: 19px; margin-bottom: 20px; color: #e86549; border-bottom: 0px dashed #fff;}
 h3 {font-size: 18px; color: #d5bb2b; margin-bottom: 10px;}
 h4 {font-size: 15px; color: #d5bb2b; margin-bottom: 10px;}
 p {margin: 0 0 15px 0;}
@@ -328,22 +328,21 @@ h2 span {
   </div>
 
 
-<div class="introduction page-break-before" style="line-height: 15px;">
+<div class="introduction page-break-before" style="line-height: 13px;">
     <h2 class="intro-heading">
       <label>Introduction</label>
       <span>Green Schools Programme Audit 2019-2020</span></h2>
     <p>Dear Principal,</p>
     <p>We thank you for taking part in the GSP Audit 2019-20. We hope the exercise helped to make your school resource efficient and inculcate green practices in your students.
-    </p>
-    <p>As you are aware, the Green Schools Programme (GSP) takes the students outside the classroom and helps them learn with joy. GSP has been built on the twin objectives of &#39;learning by doing&#39; and making change work to help schools audit the consumption of natural resources within their premises and assess themselves as environment managers.
+    </p> 
+    <p>As you are aware, the Green Schools Programme (GSP) takes the students outside the classroom and helps them learn with joy. GSP has been built on the twin objectives of &#39;learning by doing&#39; and helping schools audit the consumption of natural resources within their premises and assess themselves as environment managers.
 </p>
-    <p>This year, more than 1700 schools from across the country submitted the audit. The GSP national environmental report for schools looks promising&#8211;1389 schools segregate waste at source, 962 schools practice composting and 631 schools give their e-waste to authorized dealers. 818 schools harvest rainwater, half of these recharge the groundwater and 220 school store for use. <strong> BUT </strong> 79 per cent schools are dependent on ground water. The number of schools burning waste has reduced from last year but 18 per cent schools still burn waste. More than 300 schools sell packaged food and more than 550 schools distribute packaged food as refreshments during school events. There is a long way to go!
+    <p>This year, more than 1700 schools from across the country submitted the audit. The GSP national environmental report for schools looks promising&#8211;1389 schools segregate waste at source, 962 schools practice composting and 631 schools give their e-waste to authorized dealers. 818 schools harvest rainwater, half of these recharge the groundwater and 220 schools store for use. <strong> BUT </strong> 79 per cent schools are dependent on ground water. The number of schools burning waste has reduced from last year but 18 per cent schools still burn waste. More than 300 schools sell packaged food and more than 550 schools distribute packaged food as refreshments during school events. There is a long way to go! 
  </p>
-    <p>You may have noticed that there is a focus area in the audit every year, which means there are detailed questions asked for the section. For the last few years, water and waste have been the focus areas. This year, in addition to water and waste, energy section was detailed with emphasis on renewable sources of energy. 218 schools reported the use of solar energy, 21 schools reported using biogas and eight reported using wind energy.</b> 
+    <p>For the last few years, water and waste have been the focus areas, i.e. have detailed questions. This year, in addition to water and waste, energy section was detailed with emphasis on renewable sources of energy. 218 schools reported the use of solar energy, 21 schools reported using biogas and eight reported using wind energy.</b> 
 </p>
 
-<p>
-  We hope the performance report, based on the data submitted by the school, will be useful to further strengthen existing practices and introduce new sustainable practices. For GSP Audit 2020, we request the school leadership as well as the teachers heading the audit sections to take advantage of the audit in raising awareness on one of the most challenging crises of our time&#8211;climate change.  Since the audit already tracks all the critical elements (mobility, energy consumption, food consumption, water and sanitation and solid waste management) that directly or indirectly contribute to global heating, GSP Audit 2020 will reinforce the climate change linkages while retaining its original format. <strong>Stay tuned for further details!</strong>
+<p>We hope the performance report, based on the data submitted by the school, will be useful to further strengthen existing practices and introduce new sustainable practices. For GSP Audit 2020, we request the school leadership as well as the teachers heading the audit sections to take advantage of the audit in raising awareness on one of the most challenging crises of our time&#8211;climate change.  Since the audit already tracks all the critical elements (mobility, energy consumption, food consumption, water and sanitation and solid waste management) that directly or indirectly contribute to global heating, GSP Audit 2020 will reinforce the climate change linkages while retaining its original format. <strong> Stay tuned for further details! </strong>
 </p>
 <p>
   As we wind down GSP Audit 2019, please note the following: 
@@ -353,25 +352,17 @@ h2 span {
            
     <li style="font-weight: 400; font-size: 13px;">The performance report will help in assessing the initiatives undertaken by your school and move towards filling the gaps before the next GSP Audit.</li> 
     <li style="font-weight: 400; font-size: 13px; margin-top:6px;">Hope you have downloaded the response report and digital certificates of all those whose names were provided online.</li>    
-    <li style="font-weight: 400; font-size: 13px; margin-top:6px;">Make sure that the data entered is correct for GSP Audit 2020. We hope that as the school continues to audit their consumption every year, they will refine the data collection process and complete the report with full honesty. </li>
-    <li style="font-weight: 400; font-size: 13px; margin-top:6px;">Our focus will be on <strong> measuring the change over the previous years&#39; performances.</strong> And the degree of change will be appreciated as well as recognized.</li>
-    <li style="font-weight: 400; font-size: 13px; margin-top:6px;">School certificates have been dispatched by speed post, and if you do not receive it <strong> by April 15, 2020,</strong> please email or call (details given below). </li>
+    <li style="font-weight: 400; font-size: 13px; margin-top:6px;">Make sure that the data entered is correct for GSP Audit 2020. We hope that as the school continues to audit their consumption every year, they will refine the data collection process and complete the report with full honesty.</li>
+    <li style="font-weight: 400; font-size: 13px; margin-top:6px;">Our focus will be on <strong> measuring the change over the previous years&#39; performances. </strong> And the degree of change will be appreciated as well as recognized.</li>
+    <li style="font-weight: 400; font-size: 13px; margin-top:6px;">School certificates have been dispatched by speed post, and if you do not receive it <strong> by April 15, 2020, </strong> please email or call (details given below). </li>
     <li style="font-weight: 400; font-size: 13px; margin-top:6px;">To know more about the sections, please refer to the knowledge bank on the GSP website: <a href="https://www.greenschoolsprogramme.org/" style="color:blue;">www.greenschoolsprogramme.org</a>. There is some interesting material on Energy available on the <a href="https://www.greenschoolsprogramme.org/knowledge-bank/energy/gsp-solar-in-schools-initiative-2019-20/" style="color:blue;">GSP website</a></li>
   </ol>
-
-
   <p>
-      With time running out in a climate-risked world, schools are urged to bring to the attention of youth the urgency, causes and consequences of climate change in a manner that they can relate to and act upon. Only when students make informed choices to make transformative changes in their lifestyle outside of school hours, too, to reduce their emissions related to mobility, energy, excessive consumption, <i>etc</i>, will collective efforts to raise committed environmental actors succeed.
+      With time running out in a climate-risked world, schools are urged to bring to the attention of youth the urgency, causes and consequences of climate change in a manner that they can relate to and act upon. Only when students make informed choices to make transformative changes in their lifestyle outside of school hours, too, to reduce their emissions related to mobility, energy, excessive consumption, etc., will collective efforts to raise committed environmental actors succeed. </p>
+
+  <p> We hope that in the coming years, your school continues to participate and push the envelope for change. 
+The GSP Audit 2020 will open by July 2020, and we look forward to receiving your audit report by the deadline.
 </p>
-
-  <p>
-    We hope that in the coming years, your school continues to participate and push the envelope for change. 
-  </p>
-
-  <p>
-    The GSP Audit 2020 will open by July 2020, and we look forward to receiving your audit report by the deadline!
-  </p>
-
     <p>Warmly,</p>
     <p>The GSP team</p>  
   <p><a href="http://www.greenschoolsprogramme.org/" style="color: blue;">support@greenschoolsprogramme.org</strong></a></p>
@@ -385,8 +376,8 @@ h2 span {
 <div class="introduction page_break" style="line-height: 15px; font-weight: 400;">
 
  
-        <?php $percentage=getSchoolRating($schoolUserID); ?>
-        <?php
+        <?php $percentage=getSchoolRating($schoolUserID); 
+        
            $percentage= ceil($percentage) ;
         
       if($percentage>=70){?>
@@ -526,7 +517,7 @@ h2 span {
         <td>93</td>
       </tr>
     </table>
-    <figure> <img  src="assets/img/performance/categories.jpg"> </figure>
+    <figure> <img  src="assets/img/performance/categories.png" width="650"> </figure>
     <div class="footer">
       <p>Performance Report | <?php echo $performance[0]->name; ?></p>
     </div>
@@ -871,7 +862,7 @@ if ($data == 3 || $data == 4) { ?>
 
                                 if ($cng_percentage >= 71) {
                                     $typeofFuel[] = "Consuming CNG for Vehicles";
-                                    $typeoffuel_msg[] = "GIt is commendable that most vehicles in the school run on CNG!";
+                                    $typeoffuel_msg[] = "It is commendable that most vehicles in the school run on CNG!";
                                  }
                                 elseif ($cng_percentage >= 36 && $cng_percentage <= 70.9 ) {
                                     $typeofFuel[] = "Consuming CNG for Vehicles";
@@ -909,7 +900,7 @@ if ($data == 3 || $data == 4) { ?>
             foreach ($typeoffuel_msg as $value)
             {
                 ?>
-            <p><?php echo $value; ?></p>
+            <p style="margin:0px;" ><?php echo $value; ?></p>
             <?php
              }
             ?>
@@ -1226,7 +1217,7 @@ if ($data == 3 || $data == 4) { ?>
 
         
          $renewuse ="Yes";
-                                 $renewenergy_msg = "' It is great that your school uses '".$renew." ' as a renewable source of energy. We hope that you sustain the green initiative and expand the potential to the fullest.' " ;
+                                 $renewenergy_msg = "It is great that your school uses '".$renew." ' as a renewable source of energy. We hope that you sustain the green initiative and expand the potential to the fullest." ;
                                   
         }else {
          $renewuse ="No";
@@ -1277,7 +1268,7 @@ if ($data == 3 || $data == 4) { ?>
             <p>It is good that your school has a biogas unit and the biogas generated is used for purposes like cooking. This not only manages the wet waste well but also reduces dependence on the conventional fuels. </p>
              </div>
         </li>
-          <?php }?>
+          <?php } ?>
           
 
       </ul>
@@ -1334,13 +1325,13 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
             <p>Good to see that your school provides freshly prepared food to the students. Food services like school mess or midday meal service is an important health resource for schools, especially the student community. When food is consumed daily, the food provided through the school comprises a third of a child&#39;s total daily intake and has a significant influence on health and nutrition.</p>   
           </div>
         </li>
-    <?php }elseif(getFiled('Q5F1', $schoolUserID) == "N") { ?>
+    <?php } elseif(getFiled('Q5F1', $schoolUserID) == "N") { ?>
         <li>
           <figure><img src="assets/img/performance/sale.jpg"></figure>
           <div class="description">
             <h3>Does your school serve midday meals?</h3>
             <h3>No</h3>
-            <p>Food services like school mess or midday meal service is an important health resource for schools, especially the student community. When food is consumed daily, the food provided through the school comprises a third of a child&#39;s total daily intake and has a significant influence on health and  It is recommended that school checks the kind of food the students consume.</p>          
+            <p>Food services like school mess or midday meal service is an important health resource for schools, especially the student community. When food is consumed daily, the food provided through the school comprises a third of a child &#39;s total daily intake and has a significant influence on health and  It is recommended that school checks the kind of food the students consume.</p>          
           </div>
         </li>
       <?php } ?>
@@ -1354,20 +1345,18 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
             <p>It is good that the students bring cooked food from home. It is important that parents and teachers work together to help the students choose &#39;good food&#39; for a healthy lifestyle.</p>          
           </div>
         </li>
-    <?php }elseif(getFiled('Q5F1S1', $schoolUserID) == "N") { ?>
+    <?php } elseif(getFiled('Q5F1S1', $schoolUserID) == "N") { ?>
         <li>
           <figure><img src="assets/img/performance/sale.jpg"></figure>
           <div class="description">
             <h3>Do students bring their own lunch from home?</h3>
             <h3>No</h3>
-            <p>It is important that parents and teachers work together to help the students choose ‘good food&#39; for a healthy lifestyle. The students should thus be consuming freshly cooked nutritious food in school or bring lunch from home.</p>
-            
+            <p>It is important that parents and teachers work together to help the students choose ‘good food&#39; for a healthy lifestyle. The students should thus be consuming freshly cooked nutritious food in school or bring lunch from home.</p>            
           </div>
         </li>
       <?php } ?>
-
-        
-        <li>
+         
+       <li style="height:125px;">
           <figure><img src="assets/img/performance/sale.jpg"></figure>
           <div class="description">
             <h3>What kind of food is being served / sold in your school</h3>
@@ -1428,8 +1417,8 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
           </div>
         </li>     
         <li>
-          <figure><img src="assets/img/performance/sale.jpg" style="width: 125px !important"></figure>
-          <div class="description" style="margin-left: -12px !important">
+          <figure><img src="assets/img/performance/sale.jpg" ></figure>
+          <div class="description">
             <h3 >Does the school distribute packaged food items as rewards during schools events.</h3>
             <?php
                                 if (getFiled('Q9F1', $schoolUserID) == "Y" && getFiled('Q9F2', $schoolUserID) != " ") {
@@ -1564,7 +1553,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
        <li>
           <figure><img src="assets/img/performance/plant_animal_final.png"></figure>
           <div class="description">
-            <h3>How many species of plants and animals exist in your school ?</h3>
+            <h3>How many species of plants and animals exist in your school?</h3>
             <?php
          $plant = getFiled('Q5L1S3', $schoolUserID); 
          $animal = getFiled('Q5L2S3', $schoolUserID);  
@@ -1583,9 +1572,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
                     $animal_msg = "Biodiversity is crucial in conserving nature. It is recommended to have at least 50 species of animals, including insects, birds, etc., within the campus. Please note that the animal biodiversity depends greatly on plant diversity.";
                 }  
             ?>
-            <h4><?php if(isset($plant_c)){ echo $plant_c;} ?></h4>
             <p><?php echo $plant_msg; ?></p>
-            <h4><?php echo $animal_c; ?></h4>
             <p><?php echo $animal_msg; ?></p>   
           </div>
         </li>      
@@ -1755,7 +1742,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
     </section>
     <section class="performance-category">
       <ul>
-        <li <?php if(getFiled('Q5W1', $schoolUserID) == "" && getFiled('Q5W2', $schoolUserID) == "" && getFiled('Q5W3', $schoolUserID) == "" && getFiled('Q5W4', $schoolUserID) == ""){ echo "style='display:none;'"; } ?>>
+        <li style="height:125px;" <?php if(getFiled('Q5W1', $schoolUserID) == "" && getFiled('Q5W2', $schoolUserID) == "" && getFiled('Q5W3', $schoolUserID) == "" && getFiled('Q5W4', $schoolUserID) == ""){ echo "style='display:none;'"; } ?>>
           <figure><img src="assets/img/performance/water-source.jpg"></figure>
           <div class="description">
             <h3>Source of Water</h3>
@@ -1827,7 +1814,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
           </div>
         </li>
         <li <?php if(getFiled('Q7W1', $schoolUserID) == ""){ echo "style='display:none; height:130px!important;'";} ?>>
-          <figure><img src="assets/img/performance/water-source.jpg" style="width:127px!important;"></figure>
+          <figure><img src="assets/img/performance/water-source.jpg" ></figure>
           <div class="description">
             <h3>Does your school get daily water supply?</h3>
             <?php
@@ -1936,7 +1923,8 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
           </div>
         </li>
 
-        <li <?php if(getFiled('Q8W2', $schoolUserID) == "N"){ echo "style='display:inline-block;'";} ?>>
+        <?php if(getFiled('Q8W2', $schoolUserID) == "N") { ?>
+        <li >
           <figure><img src="assets/img/performance/harvesting.jpg"></figure>
           <div class="description">
             <h3>Calculate your school&#39;s rainwater harvesting potential (in litres).</h3>
@@ -1948,6 +1936,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
             <p><?php if(isset($potential_msg)) {echo $potential_msg; } ?></p>
           </div>
         </li>
+      <?php } ?>
 
         
 
@@ -2041,7 +2030,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
         </li>
   <?php } ?>      
         
-        <li <?php if(getFiled('Q8W2S4', $schoolUserID) == ""){ echo "style='display:none;'";} ?>>
+        <li style="height:125px;" <?php if(getFiled('Q8W2S4', $schoolUserID) == ""){ echo "style='display:none;'";} ?>>
           <figure><img src="assets/img/performance/clean.jpg"></figure>
           <div class="description">
             <h3>How much area in your school is harvested</h3>
@@ -2195,7 +2184,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
             <p><?php echo $RWH_structure_msg; ?></p>
           </div>
         </li>
-                <li>
+      <li>
           <figure><img src="assets/img/performance/monitor.jpg"></figure>
           <div class="description">
             <h3>Sanitation and Hygiene Practices</h3>
@@ -2781,7 +2770,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
             <p><?php echo $waste_msg2; ?></p>
           </div>
         </li>
-        <li>
+        <li style="height: 125px;">
           <figure><img src="assets/img/performance/recycle.jpg"></figure>
           <div class="description">
             <h3>Recycling of Waste</h3>
@@ -2829,7 +2818,7 @@ if ($waste_recycle == "Y") {
             <h4><?php echo $waste_msg41 ?></h4>
             <p><?php echo $waste_msg42 ?></p>
             <?php
-    } elseif ($waste_recycled_percent >= 0) {   //0%-49.9%
+    } elseif ($waste_recycled_percent < 0) {   //0%-49.9%
         $waste_msg41 = "School recycles 1%-49.9% of it's waste";
         $waste_msg42 = "Your school recycles some of its waste, that is, " . $waste_recycled_percent . " per cent. We hope you are able to become a waste-efficient school soon with the help of effective waste management practices.";
     ?>
@@ -2838,7 +2827,7 @@ if ($waste_recycle == "Y") {
             <?php
     }
 
-    elseif ($waste_recycled_percent == 0) { 
+    elseif ($waste_recycled_percent >= 0) { 
         $waste_msg41 = "School does not recycle the waste 0 %";
         $waste_msg42 = "Your school does not recycle waste. We strongly recommend recycling of waste through composting (wet waste) etc. to reduce the load on lanfills. We hope that you are able to become a waste efficient school soon.";
     ?>
@@ -2855,7 +2844,7 @@ We request you to provide correct data, in the next audit, for accurate analysis
             <?php
     }else{  ?>
       
-                 <p>Your school does not recycle waste. We strongly recommend recycling of waste through composting (wet waste) etc. to reduce the load on lanfills. We hope that you are able to become a waste efficient school soon.</p>
+    <p>Your school does not recycle waste. We strongly recommend recycling of waste through composting (wet waste) etc. to reduce the load on lanfills. We hope that you are able to become a waste efficient school soon.</p>
     
   <?php  } 
 }elseif ($waste_recycle == "N"){ ?>
