@@ -367,14 +367,16 @@ The GSP Audit 2020 will open by July 2020, and we look forward to receiving your
     <p>The GSP team</p>  
   <p><a href="http://www.greenschoolsprogramme.org/" style="color: blue;">support@greenschoolsprogramme.org</strong></a></p>
   <p>Ph: 011 40616000, 29955124 Ext 300, 321</p>
-    <div class="footer">
+    <div class="footer" style="position: absolute; top: 95%;">
       <p>Performance Report | <?php echo $performance[0]->name; ?></p>
     </div>
  
   
 
 <div class="introduction page_break" style="line-height: 15px; font-weight: 400;">
-
+<div class="footer" style="position: absolute; top: 95%;">
+      <p>Performance Report | <?php echo $performance[0]->name; ?></p>
+    </div>
  
         <?php $percentage=getSchoolRating($schoolUserID); 
         
@@ -518,7 +520,7 @@ The GSP Audit 2020 will open by July 2020, and we look forward to receiving your
       </tr>
     </table>
     <figure> <img  src="assets/img/performance/categories.png" width="650"> </figure>
-    <div class="footer">
+    <div class="footer" style="position: absolute; top: 95%;">
       <p>Performance Report | <?php echo $performance[0]->name; ?></p>
     </div>
   </div>
@@ -637,7 +639,6 @@ The GSP Audit 2020 will open by July 2020, and we look forward to receiving your
 if ($data == 3 || $data == 4) { ?>
   <div class="air">
     <h2>
-      <figure><img src="assets/img/performance/air.png" width="120"></figure>
       <label></label>
       <span>Green Schools Programme Audit 2019-2020</span></h2>
     <section class="performance-category">
@@ -1000,9 +1001,10 @@ if ($data == 3 || $data == 4) { ?>
         </li>
       </ul>
     </section>
-    <div class="footer">
+    <div class="footer" style="position: absolute; top: 95%;">
       <p>Performance Report | <?php echo $performance[0]->name; ?></p>
     </div>
+     
   </div>
   <div class="energy">
     <h2>
@@ -1171,7 +1173,7 @@ if ($data == 3 || $data == 4) { ?>
         </li>
                                          
          <li style="height: 125px">
-          <figure><img src="assets/img/performance/source.jpg"></figure>
+          <figure><img src="assets/img/performance/sale2.jpg"></figure>
           <div class="description">
             <h3>Is your school using any renewable sources of energy ?</h3>
             <?php
@@ -1242,7 +1244,7 @@ if ($data == 3 || $data == 4) { ?>
 
         if($total_capacity_load>=75){ ?>
           <li>
-          <figure><img src="assets/img/performance/source.jpg"></figure>
+          <figure><img src="assets/img/performance/sale2.jpg"></figure>
           <div class="description">
             <h3>The school's more than 75 per cent of the electricity demand is being met by solar</h3>
             <p>Congratulations, your school is one of the few schools to shift to solar energy.</p>
@@ -1274,6 +1276,10 @@ if ($data == 3 || $data == 4) { ?>
       </ul>
     </section>
     
+    <div class="footer" style="position: absolute; top: 95%;">
+      <p>Performance Report | <?php echo $performance[0]->name; ?></p>
+    </div>
+
   </div>
   <div class="food">
     <h2>
@@ -1318,7 +1324,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
       <ul>
         <?php if (getFiled('Q5F1', $schoolUserID) == "Y" ){ ?>
         <li>
-          <figure><img src="assets/img/performance/sale.jpg"></figure>
+          <figure><img src="assets/img/performance/sale3.jpg"></figure>
           <div class="description">
             <h3>Does your school serve midday meals?</h3>
             <h3>Yes</h3>
@@ -1338,7 +1344,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
 
       <?php if (getFiled('Q5F1S1', $schoolUserID) == "Y" ){ ?>
         <li>
-          <figure><img src="assets/img/performance/sale.jpg"></figure>
+          <figure><img src="assets/img/performance/sale4.jpg"></figure>
           <div class="description">
             <h3>Do students bring their own lunch from home?</h3>
             <h3>Yes</h3>
@@ -1347,7 +1353,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
         </li>
     <?php } elseif(getFiled('Q5F1S1', $schoolUserID) == "N") { ?>
         <li>
-          <figure><img src="assets/img/performance/sale.jpg"></figure>
+          <figure><img src="assets/img/performance/sale4.jpg"></figure>
           <div class="description">
             <h3>Do students bring their own lunch from home?</h3>
             <h3>No</h3>
@@ -1357,7 +1363,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
       <?php } ?>
          
        <li style="height:125px;">
-          <figure><img src="assets/img/performance/sale.jpg"></figure>
+          <figure><img src="assets/img/performance/sale4.jpg"></figure>
           <div class="description">
             <h3>What kind of food is being served / sold in your school</h3>
             <?php
@@ -1417,7 +1423,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
           </div>
         </li>     
         <li>
-          <figure><img src="assets/img/performance/sale.jpg" ></figure>
+          <figure><img src="assets/img/performance/sale1.jpg" ></figure>
           <div class="description">
             <h3 >Does the school distribute packaged food items as rewards during schools events.</h3>
             <?php
@@ -1438,7 +1444,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
     <section class="performance-category">
       <ul>
         <li>
-          <figure><img src="assets/img/performance/sale.jpg" ></figure>
+          <figure><img src="assets/img/performance/sale6.jpg" ></figure>
           <div class="description">
             <h3>Does the school distribute chocolates/similar products as refreshments during schools events? </h3>
             <?php
@@ -1472,7 +1478,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
           </div>
         </li>
   <li>
-          <figure><img src="assets/img/performance/sale.jpg"></figure>
+          <figure><img src="assets/img/performance/sale5.jpg"></figure>
           <div class="description">
             <h3>Does your school measure height and weight of all the student?</h3>
             <?php
@@ -1490,6 +1496,10 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
         </li>      
       </ul>
     </section>
+
+    <div class="footer" style="position: absolute; top: 95%;">
+      <p>Performance Report | <?php echo $performance[0]->name; ?></p>
+    </div>
     
   </div>
   <div class="land">
@@ -1595,9 +1605,11 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
         </li>
       </ul>
     </section>
-    <div class="footer">
+
+    <div class="footer" style="position: absolute; top: 95%;">
       <p>Performance Report | <?php echo $performance[0]->name; ?></p>
     </div>
+    
   </div>
   <div class="water">
     <h2>
@@ -2230,8 +2242,11 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
             <!--            <h4><?php echo $DrinkingWaterTabs; ?></h4>-->
             <p><?php echo $DrinkingWaterTabs_Msg; ?></p>
           </div>
-          <br/>
-          <table width="100%" class="intro-table" cellspacing="0" style="margin-bottom: 0">
+         <div class="introduction page_break"></div>
+    <div class="footer" style="position: absolute; top: 95%;">
+      <p>Performance Report | <?php echo $performance[0]->name; ?></p>
+    </div>
+          <table width="100%" class="intro-table" cellspacing="0" style="margin-bottom:0;">
             <tr>
               <th class="performance-blue-bg">Category</th>
               <th class="performance-blue-bg">Load per drinking water tap</th>
@@ -2571,10 +2586,11 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
         </li>
       </ul>
     </section>
-    <div class="footer">
+
+    <div class="footer" style="position: absolute; top: 95%;">
       <p>Performance Report | <?php echo $performance[0]->name; ?></p>
-      <!--      <span class="p-number">14</span>-->
     </div>
+     
   </div>
   <div class="waste" style="line-height: 16px;">
     <h2>
@@ -2685,7 +2701,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
                             }
                             //'Column 3 (No bin) and Column 4 (1 bin) is equal to Sum of Total no. of collection points the school 
                             elseif ($total_collection_0_1_bins == $total_collection_bins) {
-                                $msg_waste2 = "Waste segregation at source is not being practiced in your school. We strongly recommend installing collection points with two or more dustbins in the school. It is also suggested that the school holds regular learning exercises to enable students to segregate waste effectively at source.";
+                                $msg_waste2 = "Waste segregation at source is not being practised in your school. We strongly recommend installing collection points with two or more dustbins in the school. It is also suggested that the school holds regular learning exercises to enable students to segregate waste effectively at source.";
                 ?>
           <div class="description">
             <h3>Waste Collection Points</h3>
@@ -2978,19 +2994,23 @@ if ($authorised_dealer == "Y") {
         <?php } ?>
       </ul>
     </section>
-    <div class="footer">
-      <p>Performance Report | <?php echo $performance[0]->name; ?></p>
-      <!--      <span class="p-number">17</span>-->
-    </div>
+     
   </div>
 
   <div class="introduction page_break">
+    <div class="footer" style="position: absolute; top: 95%;">
+      <p>Performance Report | <?php echo $performance[0]->name; ?></p>
+    </div>
+
     <p style="text-align: center; font-size: 18px; color: blue;">Thank You</p>
      <p>Hope that each year your school will participate in the GSP Audit and contribute towards a better tomorrow by educating children to become environmentally sensitive and responsible citizens. We hope that your school will continue to strive to be a changemaker Green school.</p>
 
   </div>
 
    <div class="introduction page_break">
+    <div class="footer" style="position: absolute; top: 95%;">
+      <p>Performance Report | <?php echo $performance[0]->name; ?></p>
+    </div>
 
 
       <p style="text-align: center; font-size: 18px; color: blue;">What&#39;s New</p>
