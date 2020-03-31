@@ -127,6 +127,7 @@ $allyoydata = getYOYComparisonAllData($schoolId);
             </li>-->
 	<!-- <li class=""><a href="">YEAR OF YEAR</a></li> -->
             <li class=""><a href="<?php echo base_url('download/downloadReportsSection'); ?>">Downloads</a></li>
+	    <li class=""><a href="<?php echo base_url('download/badgecodeview'); ?>">GSP Logo</a></li>
             <li class=""> <a href="<?php echo base_url('Downloadlogout'); ?>" class="pull-right">Logout</a></li>
           </ul>
         </div>
