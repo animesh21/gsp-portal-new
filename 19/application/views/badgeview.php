@@ -1,8 +1,9 @@
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Green Schools Programme</title>
+<title>Badge code View</title>
 <meta name="generator" content="Green Schools Programme">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <link href="<?php echo base_url(); ?>assets/front/css/bootstrap.min.css" rel="stylesheet">
@@ -20,16 +21,16 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style type="text/css">
 .alert {
-	height: 50px !important;
-	padding: 15px !important;
-	font-weight: bold;
-	border-radius: 0px;
+  height: 50px !important;
+  padding: 15px !important;
+  font-weight: bold;
+  border-radius: 0px;
 }
 .alert-success {
-	border: 2px solid green;
+  border: 2px solid green;
 }
 .alert-danger {
-	border: 2px solid red;
+  border: 2px solid red;
 }
 .schools-statics {padding: 35px 15px 15px; border-radius: 6px; font-size: 16px; width: 48%; min-height: 200px; margin: 10px 10px; display: inline-block; vertical-align: top; border: 1px solid #ccc; background: rgba(232, 101, 73, 0.1); position: relative;}
 .schools-statics:nth-child(even) {margin-right: 0;}
@@ -74,22 +75,48 @@
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
           </div>
-          <h2>
-      "https://www.greenschoolsprogramme.org/audit/19/assets/js/badge-code.js" <br/>
-        <br/>  <br/>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+               <li class=""><a href="<?php echo base_url('download/downloadFiles'); ?>">   Home</a></li>
+             
+            <?php  $userid=$this->session->userdata('USER_ID'); ?>
+              <li class=""><a href="<?php echo base_url('download/downloadReportsSection'); ?>">Downloads</a></li>
+             <li class=""><a href="<?php echo base_url('download/badgecodeview'); ?>">GSP Logo</a></li>
+              <li class=""> <a href="<?php echo base_url('Downloadlogout'); ?>" class="pull-right">Logout</a></li>
+            </ul>
+          </div> 
+        </div>
+      </nav>
+      <div class="container" style="text-align: center; margin-top:35px; padding: 15px;">
+
+         <h2>
+      "https://www.greenschoolsprogramme.org/audit/19/assets/js/badge-code.js"<br/>
+      /*School Badge Code*/ <br/>
       window.onload = function(){
-      <br/>  <br/>
+      <br/>
         get_date_difference('02-17-2022'); 
       }
       <br/>
       
       </h2>
-      <div class='badges' style='height:200px; width:200px;'></div>
-          
-          </div>
-        </nav>
-      </div>
+         
+        
     </div>
   </div>
+   
+</div>
+</div>
+ 
 </body>
 </html>
+<style type="text/css">
+.navbar-default {margin-bottom: 0;border-radius: 0;background: #505050!important; border: 0; padding: 0; z-index:0;}
+.main > .container {background: #fff;padding: 0px 0px 45px!important;box-shadow: 0 0 6px #ccc;box-sizing: border-box;z-index:1;}
+.table tr:nth-child(1) td{background:#e86549!important; color:#FFFFFF;}
+.table tr:nth-child(1){background:#e86549!important; color:#FFFFFF;}
+.table tr td:nth-child(1){background:#505050; color:#FFFFFF;}
+.navbar-default li a { color:#FFFFFF!important;}
+ul.nav li:hover > ul.dropdown-menu { display: block; z-index:10000;}
+.hdr-hdr {border-bottom: solid 14px #e86549;z-index: 1;}
+</style>
+ 
