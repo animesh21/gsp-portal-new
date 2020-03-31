@@ -604,11 +604,11 @@ The GSP Audit 2020 will open by July 2020, and we look forward to receiving your
                                     switch ($data) {
                                         case 1:
                                             $ownership = "School does not use or own vehicles";
-                                            $ownership_msg = "This is a very good practice. Some schools do not have their own buses, but hire from a transport contractor. Your school's data indicates that students, teaching staff and others are using sustainable modes of transport to commute between the school and their houses. ";
+                                            $ownership_msg = "This is a very good practice. Some schools do not have their own buses, but hire from a transport contractor. Your school's data indicates that students, teaching staff and others are using sustainable modes of transport to commute between the school and their houses.";
                                             break;
                                         case 2:
                                             $ownership = "Operator-owned vehicles";
-                                            $ownership_msg = "This is a good practice. Your school does not own buses but has an operator-based network. This indicates that students, teaching staff and others are using sustainable modes of transport to commute between the school and their houses. ";
+                                            $ownership_msg = "This is a good practice. Your school does not own buses but has an operator-based network. This indicates that students, teaching staff and others are using sustainable modes of transport to commute between the school and their houses.";
                                             break;
                                         case 3:
                                             $ownership = "School-owned vehicles";
@@ -616,7 +616,7 @@ The GSP Audit 2020 will open by July 2020, and we look forward to receiving your
                                             break;
                                         case 4:
                                             $ownership = "A combination of school-owned and operator-owned vehicles";
-                                            $ownership_msg = "It is good that your school uses operator-owned vehicles in addition to the ones owned by the school. It will be ideal if you can reduce the number of school-owned vehicles and transition to operator-owned completely. It is recommended that you ensure that the school has enough space to park the school-owned vehicles within the premises . ";
+                                            $ownership_msg = "It is good that your school uses operator-owned vehicles in addition to the ones owned by the school. It will be ideal if you can reduce the number of school-owned vehicles and transition to operator-owned completely. It is recommended that you ensure that the school has enough space to park the school-owned vehicles within the premises.";
                                             break;
                                         case 5:
                                             $ownership = "Hired vehicles (JNV schools)";
@@ -659,13 +659,13 @@ if ($data == 3 || $data == 4) { ?>
    
     if ($oldvehicles > 0 && $oldvehicles < $totalvehicle) {
         $vehicletype = "Combination of old and new vehicles";
-        $vehicle_msg = "As you may know, vehicles that are older than eight years emit very high levels of pollutants. Therefore, it is suggested that you keep a record of the age of your vehicles. ";
+        $vehicle_msg = "As you may know, vehicles that are older than eight years emit very high levels of pollutants. Therefore, it is suggested that you keep a record of the age of your vehicles.";
     } elseif ($oldvehicles == 0 || $oldvehicles == " ") {
         $vehicletype = "All new vehicles or around eight years";
         $vehicle_msg = "It is commendable that your school keeps a record of the age of the vehicles. It is crucial that the vehicle norms are followed to ensure better air quality around us since old vehicles emit very high levels of pollutants.";
     } elseif ($oldvehicles == $totalvehicle) {
         $vehicletype = "All vehicles are old";
-        $vehicle_msg = "As you may know, vehicles that are older than eight years emit very high levels of pollutants. Therefore, it is strongly suggested that you keep a record of the age of your vehicles and phase out the unfit ones. ";
+        $vehicle_msg = "As you may know, vehicles that are older than eight years emit very high levels of pollutants. Therefore, it is strongly suggested that you keep a record of the age of your vehicles and phase out the unfit ones.";
     }
     ?>
             <h4><?php echo $vehicletype; ?></h4>
@@ -693,7 +693,7 @@ if ($data == 3 || $data == 4) { ?>
                                     $acvehicle_msg = "It is commendable that none of your vehicles are air conditioned. Air conditioners in vehicles use a lot of fuel and release harmful toxins that further pollute the air. You save a lot of fuel and keep the air around the city clean!";
                                 } elseif ($acvehicles == $totalvehicle) {
                                     $vehicleactype = "All vehicles have Air Conditioners";
-                                    $acvehicle_msg = "All vehicles in your school are air conditioned. Such vehicles use a lot of fuel and release harmful toxins that further pollute the air. Therefore, it is strongly suggested that while replacing your vehicles or shifting to the operator-owned ones, please choose the ones that are not air conditioned. ";
+                                    $acvehicle_msg = "All vehicles in your school are air conditioned. Such vehicles use a lot of fuel and release harmful toxins that further pollute the air. Therefore, it is strongly suggested that while replacing your vehicles or shifting to the operator-owned ones, please choose the ones that are not air conditioned.";
                                 }
                                 ?>
             <h4><?php echo $vehicleactype; ?></h4>
@@ -715,13 +715,13 @@ if ($data == 3 || $data == 4) { ?>
                                 }
                                 if ( $puc_done > 0 && $puc_done < $totalvehicle  ) {
                                     $vehicleapuctype = "Combination of vehicles with PUC done and not done";
-                                    $puc_done_msg = "Pollution Under Control (PUC) certification should be up-to-date for all the school vehicles. It is good that some of your vehicles have the certification. Please ensure that the PUCs for all the school vehicles are updated at the earliest. ";
+                                    $puc_done_msg = "Pollution Under Control (PUC) certification should be up-to-date for all the school vehicles. It is good that some of your vehicles have the certification. Please ensure that the PUCs for all the school vehicles are updated at the earliest.";
                                 } elseif ($puc_done == $totalvehicle ) {
                                     $vehicleapuctype = "All vehicles with PUCs";
                                     $puc_done_msg = "Pollution Under Control (PUC) certification should be up-to-date for all the school vehicles. It is great that all your vehicles have the certification!";
                                 } elseif ($puc_done == 0) {
                                     $vehicleapuctype = "All vehicles without PUCs";
-                                    $puc_done_msg = "Pollution Under Control (PUC) certification should be up-to-date for all the school vehicles. None of your vehicles have PUCs. Please ensure that the PUCs for all the school vehicles are updated at the earliest. ";
+                                    $puc_done_msg = "Pollution Under Control (PUC) certification should be up-to-date for all the school vehicles. None of your vehicles have PUCs. Please ensure that the PUCs for all the school vehicles are updated at the earliest.";
                                 }
                                 ?>
             <h4><?php echo $vehicleapuctype; ?></h4>
@@ -837,11 +837,11 @@ if ($data == 3 || $data == 4) { ?>
                                 }
                                 elseif ($desiel_percentage > 0 &&  $desiel_percentage <= 35.9 ) {
                                     $typeofFuel[] = "Consumption of Diesel";
-                                    $typeoffuel_msg[] = "The diesel consumption of the school is moderate. We suggest considering complete transition to cleaner sources of energy for all the vehicles. ";
+                                    $typeoffuel_msg[] = "The diesel consumption of the school is moderate. We suggest considering complete transition to cleaner sources of energy for all the vehicles.";
                                 }
                                 elseif ($desiel_percentage == 0) {
                                     $typeofFuel[] = "Consumption of Diesel";
-                                    $typeoffuel_msg[] = "It is commendable that the school does not use diesel to meet its vehicle energy requirement. ";
+                                    $typeoffuel_msg[] = "It is commendable that the school does not use diesel to meet its vehicle energy requirement.";
                                 }
 
                                 if ($petrol_percentage >= 71) {
@@ -854,11 +854,11 @@ if ($data == 3 || $data == 4) { ?>
                                 }
                                 elseif ($petrol_percentage > 0 &&  $petrol_percentage <= 35.9 ) {
                                     $typeofFuel[] = "Consumption of Petrol";
-                                    $typeoffuel_msg[] = "The petrol consumption of the school is moderate. We suggest considering the transition to cleaner sources of energy like CNG, if available in your area. ";
+                                    $typeoffuel_msg[] = "The petrol consumption of the school is moderate. We suggest considering the transition to cleaner sources of energy like CNG, if available in your area.";
                                 }
                                 elseif ($petrol_percentage == 0) {
                                     $typeofFuel[] = "Consumption of Petrol";
-                                    $typeoffuel_msg[] = "It is commendable that the school does not use petrol to meet its vehicle energy requirement. ";
+                                    $typeoffuel_msg[] = "It is commendable that the school does not use petrol to meet its vehicle energy requirement.";
                                 }
 
                                 if ($cng_percentage >= 71) {
@@ -875,11 +875,11 @@ if ($data == 3 || $data == 4) { ?>
                                 }
                                 elseif ($cng_percentage == 0) {
                                     $typeofFuel[] = "Consuming CNG for Vehicles";
-                                    $typeoffuel_msg[] = "Your school doesn't use CNG as a fuel. We recommend transitioning to CNG in the future to become energy efficient. ";
+                                    $typeoffuel_msg[] = "Your school doesn't use CNG as a fuel. We recommend transitioning to CNG in the future to become energy efficient.";
                                 }
                                 if ($lpg_percentage >= 71 ) {
                                     $typeofFuel[] = "Consuming LPG for Vehicles";
-                                    $typeoffuel_msg[] = "The LPG consumption of the school is very high, which can prove dangerous to the health of the students. Consider exploring cleaner sources of energy like biogas. ";
+                                    $typeoffuel_msg[] = "The LPG consumption of the school is very high, which can prove dangerous to the health of the students. Consider exploring cleaner sources of energy like biogas.";
                                 }
                                 elseif ($lpg_percentage >= 36 && $lpg_percentage <= 70.9 ) {
                                     $typeofFuel[] = "Consuming LPG for Vehicles";
@@ -980,7 +980,7 @@ if ($data == 3 || $data == 4) { ?>
                                 } 
                                 if ($total_population_smv_percentage > 50 && $total_population_npm_percentage < 50 ) {
                                     $members_use_transport_type = "More than 50 % population using sustainable motorized transport and less than 50% population using Non- polluting mode of transport. Percentage of Sustainable motorised transport is: $total_population_smv_percentage  % ";
-                                    $members_use_transport_msg = "It is remarkable that most students and staff use sustainable motorized vehicles (SMVs) like school bus, public bus, public transport (other than bus), taxi (four-wheeler and three-wheeler). <br/>   (". $smv_wheel.')'; ?>
+                                    $members_use_transport_msg = "It is remarkable that most students and staff use sustainable motorized vehicles (SMVs) like school bus, public bus, public transport (other than bus), taxi (four-wheeler and three-wheeler)."; ?>
             <h4><?php echo $members_use_transport_type; ?></h4>
             <p><?php echo $members_use_transport_msg; ?></p>
             <?php
@@ -1061,7 +1061,7 @@ if ($data == 3 || $data == 4) { ?>
                         $mjpcpd_per_day_msg = "Your per person per day average energy consumption meets the norms! We hope that you continue to be as prudent with the energy consumption practices of the school.";
                     } elseif($mjprd > $school_category_array[$school_category]) {
                         $mjpcpd_per_day = "Energy consumption above the range";
-                        $mjpcpd_per_day_msg = "Your school's per person per day average energy consumption does not meet the norms. Please refer to the energy consumption table to take essential steps to make your school energy efficient at the earliest. ";                                   
+                        $mjpcpd_per_day_msg = "Your school's per person per day average energy consumption does not meet the norms. Please refer to the energy consumption table to take essential steps to make your school energy efficient at the earliest.";                                   
                     }
             ?>
             <h4><?php echo $mjpcpd_per_day; ?></h4>
@@ -1157,7 +1157,7 @@ if ($data == 3 || $data == 4) { ?>
                                     elseif(($solar_energy == "Solar" ||  $wind_energy =="Wind") && ($lpg_energy != "" || $wood_energy != "" || $cng_energy != "" || $animal_energy != "" ) )
                                     {
                                         $energyuse ="Combination of renewable and non- renewable sources";
-                                        $sourceofenergy_msg ="It is great that a part of your energy requirement is met by renewable sources of energy. We recommend that you expand/ increase the renewable energy potential of the school as it is environmentally-sustainable and will also help in reducing the energy costs. " ;
+                                        $sourceofenergy_msg ="It is great that a part of your energy requirement is met by renewable sources of energy. We recommend that you expand/ increase the renewable energy potential of the school as it is environmentally-sustainable and will also help in reducing the energy costs." ;
                                     }
                                      elseif($solar_energy == "" &&  $wind_energy =="")
                                     {
@@ -1175,7 +1175,7 @@ if ($data == 3 || $data == 4) { ?>
          <li style="height: 125px">
           <figure><img src="assets/img/performance/sale2.jpg"></figure>
           <div class="description">
-            <h3>Is your school using any renewable sources of energy ?</h3>
+            <h3>Is your school using any renewable sources of energy?</h3>
             <?php
             $energy = array();
                                 if (getFiled('Q9E1S1', $schoolUserID) == '1') {
@@ -1305,7 +1305,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
                 $total_food_points = number_format(getFoodPoints($performance[0]->userid),2);
                
         if($total_food_points >= 10){
-            $point_performance_msg_f = "Your school has performed very well in the Food section owing to the prohibition of ultra processed packaged food (UPPF) and packaged/bottled drinks in the school. It is good that your school ensures quality and nutritious food. Also, including cooking as a part of a subject or extracurricular activities ensures awareness around good eating habits. ";
+            $point_performance_msg_f = "Your school has performed very well in the Food section owing to the prohibition of ultra processed packaged food (UPPF) and packaged/bottled drinks in the school. It is good that your school ensures quality and nutritious food. Also, including cooking as a part of a subject or extracurricular activities ensures awareness around good eating habits.";
         }elseif($total_food_points >=5){
             $point_performance_msg_f = "Your school has performed well in the Food section but needs to further promote nutritious food. We recommend taking up learning activities to raise awareness about Ultra Processed Packaged Food (UPPF) and their ill effects.";
         }elseif($total_food_points >= 4 ){
@@ -1357,7 +1357,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
           <div class="description">
             <h3>Do students bring their own lunch from home?</h3>
             <h3>No</h3>
-            <p>It is important that parents and teachers work together to help the students choose ‘good food&#39; for a healthy lifestyle. The students should thus be consuming freshly cooked nutritious food in school or bring lunch from home.</p>            
+            <p>It is important that parents and teachers work together to help the students choose &#39;good food&#39; for a healthy lifestyle. The students should thus be consuming freshly cooked nutritious food in school or bring lunch from home.</p>            
           </div>
         </li>
       <?php } ?>
@@ -1365,7 +1365,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
        <li style="height:125px;">
           <figure><img src="assets/img/performance/sale4.jpg"></figure>
           <div class="description">
-            <h3>What kind of food is being served / sold in your school</h3>
+            <h3>What kind of food is being served / sold in your school?</h3>
             <?php
             $totalFlavourVariaint = array();
             $totalItemSold = array();
@@ -1381,7 +1381,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
                 $packageitem_served_msg = "It is good that your school canteen doesn't provide ultra processed packaged food (UPPF), beverages and packaged/bottled drinks to students.";
             } elseif($packageditem > 0) {
             $packageitem_served = "No";
-            $packageitem_served_msg = "Your school sells ultra processed packaged food (UPPF), beverages, packaged/bottled drinks, etc. items daily in the campus that can cause health hazards like high blood pressure and obesity in the long run. We suggest that with the beginning of the new academic session, unhealthy food items be substituted with local and seasonal delicacies. ";
+            $packageitem_served_msg = "Your school sells ultra processed packaged food (UPPF), beverages, packaged/bottled drinks, etc. items daily in the campus that can cause health hazards like high blood pressure and obesity in the long run. We suggest that with the beginning of the new academic session, unhealthy food items be substituted with local and seasonal delicacies.";
             }
         ?>
             <p><?php echo $packageitem_served_msg; ?></p>
@@ -1425,7 +1425,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
         <li>
           <figure><img src="assets/img/performance/sale1.jpg" ></figure>
           <div class="description">
-            <h3 >Does the school distribute packaged food items as rewards during schools events.</h3>
+            <h3 >Does the school distribute packaged food items as rewards during schools events?</h3>
             <?php
                                 if (getFiled('Q9F1', $schoolUserID) == "Y" && getFiled('Q9F2', $schoolUserID) != " ") {
                                     $distributepackaged_food = "Yes";
@@ -1956,7 +1956,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
         <li <?php if(getFiled('Q8W2S1', $schoolUserID) == ""){ echo "style='display:none;'";} ?>>
           <figure><img src="assets/img/performance/catchment.jpg"></figure>
           <div class="description">
-            <h3>Does your school harvest different catchments</h3>
+            <h3>Does your school harvest different catchments?</h3>
             <?php
                                     if (getFiled('Q8W2S1', $schoolUserID) == "Y") {
                                         $catchments = "Yes";
@@ -1982,7 +1982,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
         <li <?php if(getFiled('Q8W2S1', $schoolUserID) == ""){ echo "style='display:none;'";} ?> >
           <figure><img src="assets/img/performance/catchment.jpg"></figure>
           <div class="description">
-            <h3>Which is the catchment area being harvested by your school</h3>
+            <h3>Which is the catchment area being harvested by your school?</h3>
             <?php
                                     if (getFiled('Q8W2S1S1', $schoolUserID) == 7) {
                                         $catchments_area = "Rooftop + Paved + Unpaved";
@@ -2045,7 +2045,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
         <li style="height:125px;" <?php if(getFiled('Q8W2S4', $schoolUserID) == ""){ echo "style='display:none;'";} ?>>
           <figure><img src="assets/img/performance/clean.jpg"></figure>
           <div class="description">
-            <h3>How much area in your school is harvested</h3>
+            <h3>How much area in your school is harvested?</h3>
             <?php
                                 //need to discuss for $school_harvested info
                                 $school_harvested_area = getFiled('Q8W2S4', $schoolUserID);
@@ -2130,7 +2130,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
         <li  <?php if(getFiled('Q8W2S61', $schoolUserID) == ""){ echo "style='display:none;'";} ?>>
           <figure><img src="assets/img/performance/monitor.jpg" ></figure>
           <div class="description">
-            <h3>Does your school clean your catchment and system</h3>
+            <h3>Does your school clean your catchment and system?</h3>
             <?php
                                 if (getFiled('Q8W2S61', $schoolUserID) == "Y") {
                                     $catchment_system = "Yes";
@@ -2382,25 +2382,25 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
     $school_type = $school_category;
     if ($school_type == 1 && $Load_for_water_closets <= 45 && $water_closets_q11 != "" && $water_closets_q11 != 0) { //school type Day Scholar
         $waterclosets = "Equal to or less than the load ";
-        $waterclosets_msg = "You have the required number of water closets (used for defecation and urination)  in your school.";
+        $waterclosets_msg = "You have the required number of water closets (used for defecation and urination) in your school.";
     } else if ($school_type == 2 && $Load_for_water_closets <= 35 && $water_closets_q11 != "" && $water_closets_q11 != 0) { //Day Boarding 
         $waterclosets = "Equal to or less than the load";
-        $waterclosets_msg = "You have the required number of water closets (used for defecation and urination)  in your school.";
+        $waterclosets_msg = "You have the required number of water closets (used for defecation and urination) in your school.";
     } else if ($school_type == 3 && $Load_for_water_closets <= 25 && $water_closets_q11 != "" && $water_closets_q11 != 0) { //Residential 
         $waterclosets = "Equal to or less than the load";
-        $waterclosets_msg = "You have the required number of water closets (used for defecation and urination)  in your school.";
+        $waterclosets_msg = "You have the required number of water closets (used for defecation and urination) in your school.";
   } else if ($school_type == 4 && $Load_for_water_closets <= 40 && $water_closets_q11 != "" && $water_closets_q11 != 0) { //Day Scholar + Day Boarding
         $waterclosets = "Equal to or less than the load";
-        $waterclosets_msg = "You have the required number of water closets (used for defecation and urination)  in your school.";
+        $waterclosets_msg = "You have the required number of water closets (used for defecation and urination) in your school.";
     } else if ($school_type == 5 && $Load_for_water_closets <= 30 && $water_closets_q11 != "" && $water_closets_q11 != 0) { //Day Boarding + Residential
         $waterclosets = "Equal to or less than the load";
-        $waterclosets_msg = "You have the required number of water closets (used for defecation and urination)  in your school.";
+        $waterclosets_msg = "You have the required number of water closets (used for defecation and urination) in your school.";
     } else if ($school_type == 6 && $Load_for_water_closets <= 35 && $water_closets_q11 != "" && $water_closets_q11 != 0) { //Day Scholar + Residential
         $waterclosets = "Equal to or less than the load";
-        $waterclosets_msg = "You have the required number of water closets (used for defecation and urination)  in your school.";
+        $waterclosets_msg = "You have the required number of water closets (used for defecation and urination) in your school.";
     } else if ($school_type == 7 && $Load_for_water_closets <= 25 && $water_closets_q11 != "" && $water_closets_q11 != 0) { //Day Scholar + Day Boarding + Residential (ref value not provided)
         $waterclosets = "Equal to or less than the load";
-        $waterclosets_msg = "You have the required number of water closets (used for defecation and urination)  in your school.";
+        $waterclosets_msg = "You have the required number of water closets (used for defecation and urination) in your school.";
     } else {
         $waterclosets = "More than the load";
         $waterclosets_msg = "You do not have the required number of water closets (used for defecation and urination) in your school. Please refer to the table for the prescribed number.";
@@ -2543,7 +2543,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
         <li <?php if(getFiled('Q19W1', $schoolUserID) == ""){ echo "style='display:none;'";} ?>>
           <figure><img src="assets/img/performance/wastewater_treatment.jpg"></figure>
           <div class="description">
-            <h3>Does your school have a wastewater treatment facility</h3>
+            <h3>Does your school have a wastewater treatment facility?</h3>
             <?php
                                 //Q.17 Does your school have a wastewater treatment facility
                                 $storage_system_q17= getFiled('Q19W1', $schoolUserID);
@@ -2778,7 +2778,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
                 $waste_msg2 = "Well done! Your school's per person per day waste generation is well within the norms.";
             } elseif ($per_capita_waste_generation > $per_capita) {
                 $waste_msg1 = "Your school's per capita waste consumption (" . $per_capita_waste_generation . " gms per person) is higher than norms (" . $per_capita . " gms per person) for your school type";
-                $waste_msg2 = "Your school's per person per day waste generation is not according to the norms. You are generating waste more than you should. Refer to the table to see how much waste per person per day is acceptable. ";
+                $waste_msg2 = "Your school's per person per day waste generation is not according to the norms. You are generating waste more than you should. Refer to the table to see how much waste per person per day is acceptable";
             }
         ?>
             <h3>Quantity of Waste Generated</h3>
