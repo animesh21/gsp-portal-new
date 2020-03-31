@@ -89,17 +89,35 @@
       </nav>
       <div class="container" style="text-align: center; margin-top:35px; padding: 15px;">
 
-         <h2>
-      "https://www.greenschoolsprogramme.org/audit/19/assets/js/badge-code.js"<br/>
-      /*School Badge Code*/ <br/>
-      window.onload = function(){
-      <br/>
-        get_date_difference('02-17-2022'); 
-      }
-      <br/>
-      
-      </h2>
-         
+        <h3>
+        <textarea style="height:200px";>
+        <script src="https://www.greenschoolsprogramme.org/audit/19/assets/js/badge-code.js"></script>
+				<script>
+			/*School Badge Code*/
+			window.onload = function(){
+			  get_date_difference('03-31-2022');
+			}
+			</script>
+			<div class='badges' style='height:200px; width:200px;'></div>
+      </textarea></h3>
+
+       
+      <br/><br/><br/><br/>
+         <h3>Being a Green School for GSP Audit 2019, you may place the GSP logo on the home page of your website. </br> 
+
+
+
+The purpose of this logo would be to help people understand that you are a green school certified by Centre for Science and Environment (CSE). The code is given in the window below. Once the logo is placed on your school website and when it is clicked on, it would take the viewer to the GSP results page, where your school is shown as a Green School.</br>
+
+Please share the code with your IT team and request the person concerned to paste the code (as is) on the school's website homepage (back end). The Green logo will be valid for a period of three years from the date on which it has been uploaded on the website and will disappear in 2023. </br>
+
+We hope that you will upload the logo on the school's website. Please feel free to share your feedback at support@greenschoolsprogramme.org in case of any confusion. </br>
+
+
+
+Look forward to see you do well in the GSP Audit 2020, as and when it starts.
+
+</h3>
         
     </div>
   </div>
