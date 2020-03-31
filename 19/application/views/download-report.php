@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Badge code View</title>
+<title>Download Report</title>
 <meta name="generator" content="Green Schools Programme">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <link href="<?php echo base_url(); ?>assets/front/css/bootstrap.min.css" rel="stylesheet">
@@ -129,7 +129,7 @@
             </div>
           </div>
           <div class="col-md-4">
-            <div class="schools-statics" id="flat1" style="width:100%;">
+            <div class="schools-statics" style="width:100%;">
 		<!-- <a href="<?php// echo base_url('/download/getdigitalCertificate/').$this->
               //session->userdata('USER_ID') ?>" target="_blank"> -->
               <div class="statics-circle"> <span><i class="fa fa-file-text-o fa-2x"></i></span> </div>
@@ -177,7 +177,7 @@ ul.nav li:hover > ul.dropdown-menu { display: block; z-index:10000;}
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
 <script type="text/javascript">
   $(document).ready (function(){
-    $('#flat,#flat1').click(function(){
+    $('#flat').click(function(){
       alert('Coming Soon');
     });
   });
