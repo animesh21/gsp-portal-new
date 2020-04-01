@@ -556,7 +556,7 @@ The GSP Audit 2020 will open by July 2020, and we look forward to receiving your
                 elseif ($total_air_points < 3)
                     $point_performance_msg_a = "Your school fulfils less than average norms of Air Quality check. You can improve by considering the recommendations provided in the assessment below.  Overall, your school needs to increase efforts to improve its Air Quality.";
                 ?>
-      <p style="margin-bottom: 5px;"><?php echo $point_performance_msg_e ?></p>
+      <p><?php echo $point_performance_msg_a ?></p>
     </div>
     <section class="performance-category">
       <ul>
@@ -1047,11 +1047,11 @@ if ($data == 3 || $data == 4) { ?>
                         $point_performance_msg_e = "The energy consumption of your school does not fall within the norms. The school needs to manage energy consumption prudently. It is recommended that your school explores renewable energy sources to become more energy-efficient.";                             
                     }
                 ?>
-    <p><?php echo $point_performance_msg_e ?></p>
+    <p style="margin-bottom: 5px; margin-top: 5px;"><?php echo $point_performance_msg_e ?></p>
     <section class="performance-category">
       <ul>
         <li>
-          <table width="100%" class="intro-table" cellspacing="0" style="margin-bottom: 0">
+          <table width="100%" class="intro-table" cellspacing="0" style="margin-bottom: 0; margin-top: 5px;">
             <tr>
               <th width="50%" class="performance-orange-bg">Category</th>
               <th width="50%" class="performance-orange-bg">Per capita/day energy consumption</th>
@@ -1141,7 +1141,7 @@ if ($data == 3 || $data == 4) { ?>
                                 
                                 ?>
              <h4><?php if(isset($energyuse)) { echo $energyuse; } ?></h4>
-            <p><?php echo $sourceofenergy_msg; ?></p>
+            <p style="margin-bottom: 5px; margin-top: 5px;"><?php echo $sourceofenergy_msg; ?></p>
           </div>
         </li>
                                          
