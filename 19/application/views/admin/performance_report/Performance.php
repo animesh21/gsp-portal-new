@@ -2041,7 +2041,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
           </div>
         </li>
   <?php } ?>      
-        
+         <?php if(getFiled('Q8W2', $schoolUserID) == "Y") { ?>
         <li style="height:125px;" <?php if(getFiled('Q8W2S4', $schoolUserID) == ""){ echo "style='display:none;'";} ?>>
           <figure><img src="assets/img/performance/clean.jpg"></figure>
           <div class="description">
@@ -2102,6 +2102,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
                                 ?>
           </div>
         </li>
+				 <?php } ?>
    <?php
              if (getFiled('Q8W2', $schoolUserID) == "Y") { ?>       
         <li style="height:130px!important;" <?php if(getFiled('Q8W2S5', $schoolUserID) == ""){ echo "style='display:none;'";} ?>>
