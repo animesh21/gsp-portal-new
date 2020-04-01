@@ -995,13 +995,13 @@ if ($data == 3 || $data == 4) { ?>
             <p><?php echo $members_use_transport_msg; ?></p>
             <?php
                                 } elseif ($total_population_smv_percentage < 50 && $total_population_npm_percentage > 50) {
-                                    $members_use_transport_type = "More than 50 % population using non-polluting mode of transport and less than 50% population using sustainable motorized transport. Percentage of Sustainable motorised transport is: $total_population_npm_percentage  % ";
+                                    $members_use_transport_type = "More than 50 % population using non-polluting mode of transport and less than 50% population using sustainable motorized transport. Percentage of  non-polluting mode transport is: $total_population_npm_percentage  % ";
                                     $members_use_transport_msg = "It is good that most students and staff use non-polluting modes of transport (NPT) like cycling and walking."; ?>
             <h4><?php echo $members_use_transport_type; ?></h4>
             <p><?php echo $members_use_transport_msg; ?></p>
             <?php   
                                 } elseif ($private_veh_population_percentage > 50) {
-                                    $members_use_transport_type = "More than 50 % population using private vehicles. Percentage of Sustainable motorised transport is: $private_veh_population_percentage  % ";
+                                    $members_use_transport_type = "More than 50 % population using private vehicles. Percentage of private vehicles for transportation is: $private_veh_population_percentage  % ";
                                     $members_use_transport_msg = "Your school mostly uses private vehicles for transportation. We recommend that you encourage the staff and students to use public transport and opt for car pooling. <br/> (". $private_wheel.')'; ?>
             <h4><?php echo $members_use_transport_type; ?></h4>
             <p><?php echo $members_use_transport_msg; ?></p>
@@ -1240,7 +1240,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
         }elseif($total_food_points >=2){
             $point_performance_msg_f = "Your school has performed well in the Food section but needs to further promote nutritious food. We recommend taking up learning activities to raise awareness about Ultra Processed Packaged Food (UPPF) and their ill effects.";
         }elseif($total_food_points >= 0 ){
-         $point_performance_msg_f = "Your school provides ultra processed packaged food (UPPF) items to students—a practice that needs to be discouraged as UPPF items are high in fats, salt and sugar and cause health problems. We recommend encouraging students to opt for traditional and nutritious food.";
+         $point_performance_msg_f = "Your school provides ultra processed packaged food (UPPF) items to students&#8211;a practice that needs to be discouraged as UPPF items are high in fats, salt and sugar and cause health problems. We recommend encouraging students to opt for traditional and nutritious food.";
         }
         
     //     elseif($total_food_points < 1){
@@ -1339,9 +1339,9 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
             if($total_land_points >= 6)
             $point_performance_msg_l = "Your school has performed well in this section. It is good that your school has plenty of green cover without the use of any chemical-based pesticides. The biodiversity in the school is rich as well. To improve even further, the school can introduce and expand vertical gardening. As per the norms, at least 35 per cent of the total school area should classify as green cover. Your school has the required green cover, but we still suggest that you target to increase your school's green cover by additional 10 to 15 per cent in the next two years!";
              elseif($total_land_points >=4)
-             $point_performance_msg_l= "Your school has done average in this section. The school can take concrete steps to increase the green cover of the school, like vertical gardening and plantation drives. The biodiversity—plants and animals—in the school can be made richer. As per the norms, at least 35 per cent of the total school area should classify as green cover. Your school does not have the required green cover. Therefore, we suggest increasing it by at least 20  per cent in the next two years.";                    
+             $point_performance_msg_l= "Your school has done average in this section. The school can take concrete steps to increase the green cover of the school, like vertical gardening and plantation drives. The biodiversity&#8211;plants and animals&#8211;in the school can be made richer. As per the norms, at least 35 per cent of the total school area should classify as green cover. Your school does not have the required green cover. Therefore, we suggest increasing it by at least 20  per cent in the next two years.";                    
              elseif($total_land_points < 4)
-             $point_performance_msg_l= "Your school does not meet the green cover requirements. The school can take rigorous steps to increase the green cover of the school, like vertical gardening and plantation drives. The biodiversity—plants and animals—in the school can be made richer. As per the norms, at least 35 per cent of the total school area should classify as green cover. Your school does not have the required green cover. Therefore, we suggest increasing it by at least 20  per cent in the next two years.";
+             $point_performance_msg_l= "Your school does not meet the green cover requirements. The school can take rigorous steps to increase the green cover of the school, like vertical gardening and plantation drives. The biodiversity&#8211;plants and animals&#8211;in the school can be made richer. As per the norms, at least 35 per cent of the total school area should classify as green cover. Your school does not have the required green cover. Therefore, we suggest increasing it by at least 20  per cent in the next two years.";
               ?>
     <p><?php echo $point_performance_msg_l ?></p>
     <section class="performance-category">
