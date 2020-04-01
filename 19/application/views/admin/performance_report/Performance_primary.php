@@ -556,7 +556,7 @@ The GSP Audit 2020 will open by July 2020, and we look forward to receiving your
                 elseif ($total_air_points < 3)
                     $point_performance_msg_a = "Your school fulfils less than average norms of Air Quality check. You can improve by considering the recommendations provided in the assessment below.  Overall, your school needs to increase efforts to improve its Air Quality.";
                 ?>
-      <p><?php echo $point_performance_msg_a ?></p>
+      <p style="margin-bottom: 5px;"><?php echo $point_performance_msg_e ?></p>
     </div>
     <section class="performance-category">
       <ul>
