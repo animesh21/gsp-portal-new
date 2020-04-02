@@ -19,16 +19,16 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style type="text/css">
-	
-	table {
+  
+  table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
   margin-top: 30px;
   margin-bottom: 50px;
 }
-	
-	 
+  
+   
 
 td, th {
   border: 1px solid #e86549;
@@ -125,11 +125,11 @@ $allyoydata = getYOYComparisonAllData($schoolId);
                 <li><a href="">2018</a></li>
               </ul>
             </li>-->
-	<!-- <li class=""><a href="">YEAR OF YEAR</a></li> -->
+  <!-- <li class=""><a href="">YEAR OF YEAR</a></li> -->
             <li class=""><a href="<?php echo base_url('download/downloadReportsSection'); ?>">Downloads</a></li>
-		  <?php  if($dataYoy[0]['year']=='Year of 2019' && $dataYoy[0]['percentage']>=70) { ?>
-	    <li class=""><a href="<?php echo base_url('download/badgecodeview'); ?>">GSP Logo</a></li>
-		  <?php } ?>
+      <?php  if($dataYoy[0]['year']=='Year of 2019' && $dataYoy[0]['percentage']>=70) { ?>
+      <li class=""><a href="<?php echo base_url('download/badgecodeview'); ?>">GSP Logo</a></li>
+      <?php } ?>
             <li class=""> <a href="<?php echo base_url('Downloadlogout'); ?>" class="pull-right">Logout</a></li>
           </ul>
         </div>
@@ -141,9 +141,9 @@ $allyoydata = getYOYComparisonAllData($schoolId);
         <hr/>
       </div>
 
-				 <div class="col-md-12">
+         <div class="col-md-12">
         <?php for($i=0; $i<sizeof($dataYoy); $i++) {?>
-        <div class="col-md-3" style="width:24%"><div class="well text-center" style="background:<?php echo $dataYoy[$i]['color']; ?>; color: #000; font-weight: 900; width:245px; height: 60px; padding:8px; border: 1px solid #ccc;"><?php echo substr($dataYoy[$i]['year'].'-', 8); ?><?php echo $dataYoy[$i]['range']; ?>
+        <div class="col-md-3" style="width:20%"><div class="well text-center" style="background:<?php echo $dataYoy[$i]['color']; ?>; color: #000; font-weight: 900; width:200px; height: 60px; padding:8px; border: 1px solid #ccc;"><?php echo substr($dataYoy[$i]['year'].'-', 8); ?><?php echo $dataYoy[$i]['range']; ?>
            
 
         </div></div>
