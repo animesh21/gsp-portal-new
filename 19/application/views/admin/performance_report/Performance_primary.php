@@ -328,6 +328,7 @@ h2 span {
   </div>
 
 
+
 <div class="introduction page-break-before" style="line-height: 13px;">
     <h2 class="intro-heading">
       <label>Introduction</label>
@@ -337,7 +338,7 @@ h2 span {
     </p> 
     <p>As you are aware, the Green Schools Programme (GSP) takes the students outside the classroom and helps them learn with joy. GSP has been built on the twin objectives of &#39;learning by doing&#39; and helping schools audit the consumption of natural resources within their premises and assess themselves as environment managers.
 </p>
-    <p>This year, more than 1700 schools from across the country submitted the audit. The GSP national environmental report for schools looks promising&#8211;1389 schools segregate waste at source, 962 schools practice composting and 631 schools give their e-waste to authorized dealers. 818 schools harvest rainwater, half of these recharge the groundwater and 220 schools store for use. <strong> BUT </strong> 79 per cent schools are dependent on ground water. The number of schools burning waste has reduced from last year but 18 per cent schools still burn waste. More than 300 schools sell packaged food and more than 550 schools distribute packaged food as refreshments during school events. There is a long way to go! 
+    <p>This year, more than 1700 schools from across the country submitted the audit. The GSP national environmental report for schools looks promising&#8211;1389 schools segregate waste at source, 962 schools practice composting and 631 schools give their e-waste to authorized dealers. 818 schools harvest rainwater, half of these recharge the groundwater and 220 schools store for use.<strong> BUT</strong> 79 per cent schools are dependent on ground water. The number of schools burning waste has reduced from last year but 18 per cent schools still burn waste. More than 300 schools sell packaged food and more than 550 schools distribute packaged food as refreshments during school events. There is a long way to go! 
  </p>
     <p>For the last few years, water and waste have been the focus areas, i.e. have detailed questions. This year, in addition to water and waste, energy section was detailed with emphasis on renewable sources of energy. 218 schools reported the use of solar energy, 21 schools reported using biogas and eight reported using wind energy.</b> 
 </p>
@@ -354,14 +355,14 @@ h2 span {
     <li style="font-weight: 400; font-size: 13px; margin-top:6px;">Hope you have downloaded the response report and digital certificates of all those whose names were provided online.</li>    
     <li style="font-weight: 400; font-size: 13px; margin-top:6px;">Make sure that the data entered is correct for GSP Audit 2020. We hope that as the school continues to audit their consumption every year, they will refine the data collection process and complete the report with full honesty.</li>
     <li style="font-weight: 400; font-size: 13px; margin-top:6px;">Our focus will be on <strong> measuring the change over the previous years&#39; performances. </strong> And the degree of change will be appreciated as well as recognized.</li>
-    <li style="font-weight: 400; font-size: 13px; margin-top:6px;">School certificates have been dispatched by speed post, and if you do not receive it <strong> by April 15, 2020, </strong> please email or call (details given below). </li>
+    <li style="font-weight: 400; font-size: 13px; margin-top:6px;">School hard copy certificates were dispatched in end&#8211;February and hope you have received the certificates </li>
     <li style="font-weight: 400; font-size: 13px; margin-top:6px;">To know more about the sections, please refer to the knowledge bank on the GSP website: <a href="https://www.greenschoolsprogramme.org/" style="color:blue;">www.greenschoolsprogramme.org</a>. There is some interesting material on Energy available on the <a href="https://www.greenschoolsprogramme.org/knowledge-bank/energy/gsp-solar-in-schools-initiative-2019-20/" style="color:blue;">GSP website</a></li>
   </ol>
+  <br/>
   <p>
-      With time running out in a climate-risked world, schools are urged to bring to the attention of youth the urgency, causes and consequences of climate change in a manner that they can relate to and act upon. Only when students make informed choices to make transformative changes in their lifestyle outside of school hours, too, to reduce their emissions related to mobility, energy, excessive consumption, etc., will collective efforts to raise committed environmental actors succeed. </p>
-
-  <p> We hope that in the coming years, your school continues to participate and push the envelope for change. 
-The GSP Audit 2020 will open by July 2020, and we look forward to receiving your audit report by the deadline.
+      With time running out in a climate-risked world, schools are urged to bring to the attention of youth the urgency, causes and consequences of climate change in a manner that they can relate to and act upon. Only when students make informed choices to make transformative changes in their lifestyle outside of school hours, too, to reduce their emissions related to mobility, energy, excessive consumption, etc., will collective efforts to raise committed environmental actors succeed. We hope that in the coming years, your school continues to participate and push the envelope for change.</p>
+      <br/>
+      <p>The GSP Audit 2020 will open by July 2020, and we look forward to receiving your audit report by the deadline.
 </p>
     <p>Warmly,</p>
     <p>The GSP team</p>  
@@ -371,6 +372,7 @@ The GSP Audit 2020 will open by July 2020, and we look forward to receiving your
       <p>Performance Report | <?php echo $performance[0]->name; ?></p>
     </div>
  
+   
   
 
 <div class="introduction page_break" style="line-height: 15px; font-weight: 400;">
