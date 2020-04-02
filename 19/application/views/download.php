@@ -101,6 +101,7 @@ tr:nth-child(even) {
   
   $dataYoy3 = get_districtById($district);
 $allyoydata = getYOYComparisonAllData($schoolId);
+	$schoolName = getSchoolDaTaByScHooLId($schoolId);
   
 
 
@@ -137,7 +138,7 @@ $allyoydata = getYOYComparisonAllData($schoolId);
     </nav>
     <div class="container">
       <div class="col-md-12" >
-        <h3><strong><?php echo $this->session->userdata('USERNAME').', &nbsp';?> <?php echo ' &nbsp'. $dataYoy3[0]->name.',';  echo ' &nbsp &nbsp' .$dataYoy2[0]->name;?> </strong> </h3> 
+        <h3><strong><?php echo $schoolName[0]->name.', &nbsp';?> <?php echo ' &nbsp'. $dataYoy3[0]->name.',';  echo ' &nbsp &nbsp' .$dataYoy2[0]->name;?> </strong> </h3> 
         <hr/>
       </div>
 
@@ -167,7 +168,7 @@ $allyoydata = getYOYComparisonAllData($schoolId);
   </tr>
   
   <tr>
-    <td><?php echo $allyoydata[0]->name_of_the_school_institution;?></td>
+    <td><?php echo $schoolName[0]->name;?></td>
     <td><?php echo $allyoydata[0]->address_line_1;?></td>
     <td><?php echo $allyoydata[0]->address_line_2;?></td>
     <td><?php echo $allyoydata[0]->std_code;?></td>
