@@ -86,9 +86,14 @@
                 </ul>
               </li>-->
 <!--    <li class=""><a href="">YEAR OF YEAR</a></li> -->
-<?php  $userid=$this->session->userdata('USER_ID'); ?>
+<?php  $userid=$this->session->userdata('USER_ID'); 
+	$schoolId=getSchoolId($this->session->userdata('USER_ID')); 
+ 	$dataYoy=download_YOY($schoolId);
+		    ?>
               <li class=""><a href="<?php echo base_url('download/downloadReportsSection'); ?>">Downloads</a></li>
+		    <?php  if($dataYoy[0]['year']=='Year of 2019' && $dataYoy[0]['percentage']>=70) { ?>
              <li class=""><a href="<?php echo base_url('download/badgecodeview'); ?>">GSP Logo</a></li>
+		    <?php } ?>
               <li class=""> <a href="<?php echo base_url('Downloadlogout'); ?>" class="pull-right">Logout</a></li>
             </ul>
           </div> 
