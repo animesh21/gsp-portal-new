@@ -486,37 +486,37 @@
         }
     });*/
 	
-// $(document).ready(function () { 
-//     var oTable = $('#tablePerformance').dataTable({
-//         stateSave: true
-//     });
-//     $("#email_list_all").on('change',function(){
-// 	     if ($(this).is(':checked')){
-//           oTable.$("input[type='checkbox']").prop('checked', $(this.checked));
-// 		 }else{
-// 		  oTable.$("input[type='checkbox']").prop('checked', false);
-// 		  window.reload();
-// 		 }  
-//     });
-// });
+$(document).ready(function () { 
+    var oTable = $('#tablePerformance').dataTable({
+        stateSave: true
+    });
+    $("#email_list_all").on('change',function(){
+	     if ($(this).is(':checked')){
+          oTable.$("input[type='checkbox']").prop('checked', $(this.checked));
+		 }else{
+		  oTable.$("input[type='checkbox']").prop('checked', false);
+		  window.reload();
+		 }  
+    });
+});
 	
-	$(document).ready(function() {  
+// 	$(document).ready(function() {  
 
 
-    $('thead input[name="email_list_all"]').on('click', function(e){
-        //alert('ddd');
-      if(this.checked){
-         $('#tablePerformance tbody input[type="checkbox"]:not(:checked)').trigger('click');
-      } else {
-         $('#tablePerformance tbody input[type="checkbox"]:checked').trigger('click');
-      }
+//     $('thead input[name="email_list_all"]').on('click', function(e){
+//         //alert('ddd');
+//       if(this.checked){
+//          $('#tablePerformance tbody input[type="checkbox"]:not(:checked)').trigger('click');
+//       } else {
+//          $('#tablePerformance tbody input[type="checkbox"]:checked').trigger('click');
+//       }
 
-      // Prevent click event from propagating to parent
-      e.stopPropagation();
-   });
+//       // Prevent click event from propagating to parent
+//       e.stopPropagation();
+//    });
 
         
-        } );
+//         } );
  
 	
 </script>
