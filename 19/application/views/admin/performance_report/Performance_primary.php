@@ -300,7 +300,7 @@ h2 span {
         </tr>
         <tr>
           <th style="border-right: 2px solid #00a8b1; padding-right:5px; text-align: right;">School Rating</th>
-          <td style="padding-left:5px; text-align: left;">  <?php $percentage=getSchoolRating($schoolUserID); 
+          <td style="padding-left:5px; text-align: left;">  <?php $percentage=getSchoolRatingPrimary($schoolUserID); 
         
             $percentage= ceil($percentage) ;
         
