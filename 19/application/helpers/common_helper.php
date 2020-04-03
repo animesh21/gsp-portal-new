@@ -1511,7 +1511,7 @@ if (!function_exists('getPrimaryWaterPoints')) {
 
   //4(a) Which is the catchment area being harvested by your school? 
 
-  echo $catchment_harested = (getFiled('Q8W2S1S1', $argUserID) != '') ? getFiled('Q8W2S1S1', $argUserID) : 0;
+    $catchment_harested = (getFiled('Q8W2S1S1', $argUserID) != '') ? getFiled('Q8W2S1S1', $argUserID) : 0;
   //echo '<pre>';
   if (($catchment_harested == 1) || ($catchment_harested == 2) || ($catchment_harested == 3) || ($catchment_harested == 4) || ($catchment_harested == 5) || ($catchment_harested == 6)) {
       $water_points['q6_a_water_catchments'] = 2;
