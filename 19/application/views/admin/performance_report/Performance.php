@@ -379,7 +379,7 @@ h2 span {
     </div>
  
         <?php $percentage=getSchoolRating($schoolUserID); 
-        
+        $school_category = getFiled('Q1S1', $schoolUserID);
            $percentage= ceil($percentage) ;
         
       if($percentage>=70){?>
