@@ -979,19 +979,19 @@ if ($data == 3 || $data == 4) { ?>
                                 $private_veh_population_percentage = round((($private_veh_population * 100)/$total_population),2);
                                 } 
                                 if ($total_population_smv_percentage > 50 && $total_population_npm_percentage < 50 ) {
-                                    $members_use_transport_type = "More than 50 % population using sustainable motorized transport and less than 50% population using Non- polluting mode of transport. Percentage of Sustainable motorised transport is: $total_population_smv_percentage  % ";
+                                    $members_use_transport_type = " Percentage of Sustainable motorised transport is: $total_population_smv_percentage  % ";
                                     $members_use_transport_msg = "It is remarkable that most students and staff use sustainable motorized vehicles (SMVs) like school bus, public bus, public transport (other than bus), taxi (four-wheeler and three-wheeler)."; ?>
             <h4><?php echo $members_use_transport_type; ?></h4>
             <p><?php echo $members_use_transport_msg; ?></p>
             <?php
                                 } elseif ($total_population_smv_percentage < 50 && $total_population_npm_percentage > 50) {
-                                    $members_use_transport_type = "More than 50 % population using non-polluting mode of transport and less than 50% population using sustainable motorized transport. Percentage of Non-polluting modes of transport is: $total_population_npm_percentage  % ";
+                                    $members_use_transport_type = " Percentage of Non-polluting modes of transport is: $total_population_npm_percentage  % ";
                                     $members_use_transport_msg = "It is good that most students and staff use non-polluting modes of transport (NPT) like cycling and walking."; ?>
             <h4><?php echo $members_use_transport_type; ?></h4>
             <p><?php echo $members_use_transport_msg; ?></p>
             <?php   
                                 } elseif ($private_veh_population_percentage > 50) {
-                                    $members_use_transport_type = "More than 50 % population using private vehicles. Percentage of private vehicles for transportation is: $private_veh_population_percentage  % ";
+                                    $members_use_transport_type = " Percentage of private vehicles for transportation is: $private_veh_population_percentage  % ";
                                     $members_use_transport_msg = "Your school mostly uses private vehicles for transportation. We recommend that you encourage the staff and students to use public transport and opt for car pooling. <br/> (". $private_wheel.')'; ?>
             <h4><?php echo $members_use_transport_type; ?></h4>
             <p><?php echo $members_use_transport_msg; ?></p>
