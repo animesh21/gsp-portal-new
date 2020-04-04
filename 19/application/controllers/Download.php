@@ -301,15 +301,21 @@ public function count_certificates_stuents($argID) {
    return $arrForcoordinator_principal;
   }	
   
-  public function PdfById($argsID) {
+   public function PdfById($argsID) {
         $this->config->load('array_config');
         $data['performance'] = $this->Performance_model->getDataById($argsID);
-        $html=$this->load->view('admin/performance_report/Performance', $data,true);
-		    $this->load->library('dompdf_lib');
-		    $this->dompdf->set_paper("A4");
-			$this->dompdf->load_html($html);
-		    $this->dompdf->render();
-		    $this->dompdf->stream("performance-report.pdf", array("Attachment" => false));
+        $userId = getUserId($argsID);
+        $rank   = getFiled('Q1G2',$userId);
+           if($rank <= 5){
+             $html=$this->load->view('admin/performance_report/Performance_primary', $data,true);
+           }else{
+             $html=$this->load->view('admin/performance_report/Performance', $data,true);             
+           }
+        $this->load->library('dompdf_lib');
+        $this->dompdf->set_paper("A4");
+      $this->dompdf->load_html($html);
+        $this->dompdf->render();
+        $this->dompdf->stream("performance-report.pdf", array("Attachment" => false));
     }	
 
 
