@@ -101,7 +101,7 @@ tr:nth-child(even) {
   
   $dataYoy3 = get_districtById($district);
 $allyoydata = getYOYComparisonAllData($schoolId);
-	$schoolName = getSchoolDaTaByScHooLId($schoolId);
+  $schoolName = getSchoolDaTaByScHooLId($schoolId);
   
 
 
@@ -223,8 +223,10 @@ $allyoydata = getYOYComparisonAllData($schoolId);
       <div class="col-md-12">
         <div id="grapSchoolStatus"> </div>
       </div>
-      <div class="col-md-12">
-      <div class="col-md-12">
+      <?php 
+        $userId = $this->session->userdata('USER_ID');
+         $rank   = getFiled('Q1G2',$userId); ?>
+      <div class="col-md-12" <?php if($rank<=5){ echo "style='display:none;'"; }else{ echo "style='display:inline-block;'"; } ?>>
       <div class="col-md-6">
         <div class="schools-statics" style="width:100%;"> <a href="<?php echo base_url("/download/downloadAirSection/"); ?>" target="_blank">
           <div class="statics-circle"> <span style="position: relative; width: 87px; top: -20px; left: -19px;"><img src="<?php echo base_url(''); ?>assets/img/images/air.png"  alt="" class="top-bnr img-responsive"
@@ -274,7 +276,6 @@ $allyoydata = getYOYComparisonAllData($schoolId);
         </div>
       </div>
       </div>
-    </div>
   </div>
 </div>
 <footer>
