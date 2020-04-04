@@ -318,8 +318,20 @@
                                     <td><?php if(isset($record[$i]['Q3G1'])){ echo $board[$record[$i]['Q3G1']]; }else{echo "N/A";}  ?></td>  
                                       
                                     <!-- <td><?php //if($record[$i]['progress']!=''): echo $record[$i]['progress']; endif  ?></td>-->
-                                    <td><?php if ($record[$i]['remark'] != ''): echo "<label class='label label-" . $record[$i]['remark'] . "'>" . $record[$i]['remark'] . "</label>";
-    endif ?></td>
+                                     <td><?php
+      if($record[$i]['remark']>=70):
+       echo "<label class='label label-success'>Green</label>";
+      elseif($record[$i]['remark']>=50 && $record[$i]['remark']<=69.9):
+             echo "<label class='label label-warning' style='background:yellow; color:black;'>Yellow</label>";
+      elseif($record[$i]['remark']>=35 && $record[$i]['remark']<=49.9):
+             echo "<label class='label label-success' style='background:orange; color:black;'>Orange</label>";
+      elseif($record[$i]['remark']<=34.9):
+             echo "<label class='label label-danger'>Red</label>";
+      else:
+        echo "Not Rated";
+      endif;
+      
+    ?></td>
                                     <td><?php //echo $mail_status;  ?>
     <?php if ($mail_status == "coemail") { ?>
                                             <input type="checkbox" name="email_list[]" class="checkbox" value="<?php echo ($record[$i]['coemail'] != '') ? $record[$i]['coemail'] : ""; ?>" style="opacity: 0.8; margin-top:-1px;" />
