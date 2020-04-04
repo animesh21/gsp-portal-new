@@ -1767,6 +1767,9 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
             <h3>Load on Drinking Water Taps</h3>
             <?php        //Q.8 discuss regarding msg. for $DrinkingWaterTabs variable. 
                                 $drinking_water_taps_8 = getFiled('Q9W1', $schoolUserID);
+																if($drinking_water_taps_8==0){
+                                  $drinking_water_taps_8=1;
+                                }
                                 $Load_for_drinking_water_tap = $total_population / $drinking_water_taps_8;
                                 if ($Load_for_drinking_water_tap <= 50 && $drinking_water_taps_8 != "" && $drinking_water_taps_8 != 0) {
                                     $DrinkingWaterTabs = "If equal to or less than the load";
