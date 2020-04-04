@@ -1587,6 +1587,9 @@ if (!function_exists('getPrimaryWaterPoints')) {
 
       //Q6How many drinking water taps do you have? 
   $q6_drinkin_water_taps = (getFiled('Q9W1', $argUserID) != '') ? getFiled('Q9W1', $argUserID) : "";
+  if($q6_drinkin_water_taps==0){
+    $q6_drinkin_water_taps=1;
+  }
   $drinking_load = $total_population / $q6_drinkin_water_taps;
   if($q6_drinkin_water_taps !=0)
   {
@@ -1665,7 +1668,8 @@ if (!function_exists('getPrimaryWaterPoints')) {
   if (!isset($water_points['q10_urinals']))
       $water_points['q10_urinals'] = 0;
 
- 
+ if (!isset($water_points['q8_abosultion_tap']))
+      $water_points['q8_abosultion_tap'] = 0;
 
     //Q.11 How many other water outlets (example: taps in play fields, sprinklers, swimming pool) do you have? ( 1 Points )
   $other_water_outlets_q11 = (getFiled('Q15W1', $argUserID) != '') ? getFiled('Q15W1', $argUserID) : "";
@@ -1887,6 +1891,7 @@ if (!function_exists('getPrimaryWaterPoints')) {
   
 
   }
+
 
 
 
