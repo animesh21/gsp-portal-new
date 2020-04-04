@@ -2995,6 +2995,9 @@ if ($authorised_dealer == "Y") {
         <?php } ?>
       </ul>
     </section>
+		<div class="footer" style="position: absolute; top: 95%;">
+      <p>Performance Report | <?php echo $performance[0]->name; ?></p>
+    </div>
      
   </div>
 
