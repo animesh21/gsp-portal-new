@@ -435,13 +435,13 @@ pre code { padding: 0; font-size: inherit; color: inherit; white-space: pre-wrap
 .pre-scrollable { max-height: 340px; overflow-y: scroll }
 .container { padding-right: 15px; padding-left: 15px; margin-right: auto; margin-left: auto }
 @media (min-width:768px) {
-.container { width: 750px }
+.container { width: 850px }
 }
 @media (min-width:992px) {
-.container { width: 970px }
+.container { width: 1070px }
 }
 @media (min-width:1200px) {
-.container { width: 1058px }
+.container { width: 1180px }
 }
 .container-fluid { padding-right: 15px; padding-left: 15px; margin-right: auto; margin-left: auto }
 .row { margin-right: -15px; margin-left: -15px }
