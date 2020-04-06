@@ -1624,7 +1624,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
       <ol style="list-style-type: japanese-formal !important;"> 
         <li>Children should get adequate amount of water required per day from drinking to flushing to mopping floors to everything.</li>
         <li>Catch rain where it falls. Today, rainwater harvesting has evolved as an appropriate measure to overcome the water scarcity as well as water logging due to excessive rains.</li>
-        <li>Recharge groundwater. As per Central Ground Water Board (CGWB), around 39% of the analysed wells showed decline in groundwater level in various parts of the country. We must try to reduce the dependence on groundwater to stop further depletion of water table. Other measures can be harvesting more rainwater; treating and reusing waste water; and recharging groundwater.</li>
+        <li>Recharge groundwater. As per Central Groundwater Board (CGWB), around 39% of the analysed wells showed decline in groundwater level in various parts of the country. We must try to reduce the dependence on groundwater to stop further depletion of water table. Other measures can be harvesting more rainwater; treating and reusing waste water; and recharging groundwater.</li>
         
       </ol>
     </section>
@@ -1769,7 +1769,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
                     $SourceofWater_msg = "The sources of water for your school are surface water, recycled water and rainwater, which are viable for usage. It is good that you know where your water comes from!";
                         } else if (($Surfacewater == "Y" && $Rainwater == "Y") || ($Surfacewater == "Y" && $Recycledwastewater == "Y") || ($Rainwater == "Y" && $Recycledwastewater == "Y")) {
                                     $SourceofWater = "";
-                                    $SourceofWater_msg = "You use a combination of either 'surface and rainwater' or 'surface and recycled water' or 'rainwater and recycled water'.  All of these combinations demonstrate that your school is not extracting ground water but is making an effort to either catch rainwater or treat waste water for further use.";
+                                    $SourceofWater_msg = "You use a combination of either 'surface and rainwater' or 'surface and recycled water' or 'rainwater and recycled water'.  All of these combinations demonstrate that your school is not extracting groundwater but is making an effort to either catch rainwater or treat waste water for further use.";
                        }else if ($groundwater == "Y" && $Rainwater == "Y") {
                                     if($Surfacewater == "Y")
                                         $wcombination[] = "Surface water";
@@ -1778,7 +1778,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
                                      if($Recycledwastewater == "Y")
                                         $wcombination[] = "Recycled waste water";
                                      if($groundwater == "Y")
-                                        $wcombination []= "Ground water";
+                                        $wcombination []= "Groundwater";
              
                   
                                     $wcombination_msg =implode(",",$wcombination);                                     
@@ -1795,7 +1795,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
                                      elseif($Recycledwastewater == "Y")
                                         $wcombination[] = "Recycled waste water";
                                      elseif($groundwater == "Y")
-                                        $wcombination[] = "Ground water";
+                                        $wcombination[] = "Groundwater";
                  
                 
                  $wcombination_msg =implode(",",$wcombination); 
@@ -1812,7 +1812,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
                                      if($Recycledwastewater == "Y")
                                         $wcombination[] = "Recycled waste water";
                                      if($groundwater == "Y")
-                                        $wcombination []= "Ground water";
+                                        $wcombination []= "Groundwater";
                                
             
              $wcombination_msg =implode(",",$wcombination);                                     
@@ -1927,7 +1927,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
                                     $RainwaterHarvesting_msg = "It is noteworthy that your school has rainwater harvesting system! We are glad that your school recognises the importance of harvesting rainwater.";
                                 } else {
                                     $RainwaterHarvesting = "No";
-                                    $RainwaterHarvesting_msg = "We urge you to consider rainwater harvesting for your school. It is a useful and feasible practice. Harvesting rainwater from any or all of the catchment areas (rooftop, paved and unpaved areas) is cost-effective and will enable you to recharge ground water or resuse the stored water.";
+                                    $RainwaterHarvesting_msg = "We urge you to consider rainwater harvesting for your school. It is a useful and feasible practice. Harvesting rainwater from any or all of the catchment areas (rooftop, paved and unpaved areas) is cost-effective and will enable you to recharge groundwater or resuse the stored water.";
                                 }
                                 ?>
             <h4><?php echo $RainwaterHarvesting; ?></h4>
@@ -2027,7 +2027,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
             <?php 
                                 } elseif (getFiled('Q8W2S2', $schoolUserID) == 2) {
                                     $rainwater_harvested = "By recharge ground";
-                                    $rainwater_harvested_msg = "Recharging ground water is a great green practice! It helps in increaseing the ground water table.";
+                                    $rainwater_harvested_msg = "Recharging groundwater is a great green practice! It helps in increaseing the groundwater table.";
                   ?>
             <h4><?php echo $rainwater_harvested; ?></h4>
             <p><?php echo $rainwater_harvested_msg; ?></p>
@@ -2180,17 +2180,17 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
         <li <?php if(getFiled('Q8W2S13', $schoolUserID) == ""){ echo "style='display:none;'";} ?>>
           <figure><img src="assets/img/performance/monitor.jpg"></figure>
           <div class="description">
-            <h3>If your school's RWH structure is more than a year old, is there any improvement in the ground water
+            <h3>If your school's RWH structure is more than a year old, is there any improvement in the groundwater
               quality after the implementation of the RWH structure?</h3>
             <?php
       global $RWH_structure,$RWH_structure_msg;
                                 //Question 6.i Water Section.
                                 if (getFiled('Q8W2S13', $schoolUserID) == "Y") {
                                     $RWH_structure = "Yes";
-                                    $RWH_structure_msg = "It is good that your school is contributing in ensuring that the ground water level is maintained and improved further.";
+                                    $RWH_structure_msg = "It is good that your school is contributing in ensuring that the groundwater level is maintained and improved further.";
                                 } elseif (getFiled('Q8W2S13', $schoolUserID) == "N") {
                                     $RWH_structure = "No";
-                                    $RWH_structure_msg = "Please ensure that your school maintains the ground water level in the area.";
+                                    $RWH_structure_msg = "Please ensure that your school maintains the groundwater level in the area.";
                                 }
                                 ?>
             <h4><?php echo $RWH_structure; ?></h4>
@@ -2320,10 +2320,10 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
 
                  if($Q1G2 < 6)
                   {
-                      $handpumps_msg = "You do not have hand pumps in your school. It is good that your school is not extracting a lot of ground water, which is a valuable and diminishing resource. Using rainwater harvesting system, wastewater treatment processes and surface water are some alternative sources of water that your school can explore.";
+                      $handpumps_msg = "You do not have hand pumps in your school. It is good that your school is not extracting a lot of groundwater, which is a valuable and diminishing resource. Using rainwater harvesting system, wastewater treatment processes and surface water are some alternative sources of water that your school can explore.";
                   }else {
 
-                      $handpumps_msg = "You do not have hand pumps in your school. It is good that your school is not extracting a lot of ground water, which is a valuable and diminishing resource. Using rainwater harvesting system, wastewater treatment processes and surface water are some alternative sources of water that your school can explore.";
+                      $handpumps_msg = "You do not have hand pumps in your school. It is good that your school is not extracting a lot of groundwater, which is a valuable and diminishing resource. Using rainwater harvesting system, wastewater treatment processes and surface water are some alternative sources of water that your school can explore.";
                   }
                     
                 } else {
@@ -2332,10 +2332,10 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
 
                    if($Q1G2 < 6)
                   {
-                      $handpumps_msg ="You have many hand pumps in your school. Please ensure that you are not extracting too much ground water, which is a valuable and diminishing resource. Using rainwater harvesting system, wastewater treatment processes and surface water are some alternative sources of water that your school can explore.";
+                      $handpumps_msg ="You have many hand pumps in your school. Please ensure that you are not extracting too much groundwater, which is a valuable and diminishing resource. Using rainwater harvesting system, wastewater treatment processes and surface water are some alternative sources of water that your school can explore.";
                   }else {
 
-                      $handpumps_msg = "You have many hand pumps in your school. Please ensure that you are not extracting too much of ground water which is a valuable but diminishing resource. Using rainwater harvesting system/ waste water treatment processes/ surface water are a few of the other sources of water your school can always look into.";
+                      $handpumps_msg = "You have many hand pumps in your school. Please ensure that you are not extracting too much of groundwater which is a valuable but diminishing resource. Using rainwater harvesting system/ waste water treatment processes/ surface water are a few of the other sources of water your school can always look into.";
                   }
 
 
@@ -2472,10 +2472,10 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
         }
                     if ($other_water_outlets_q13 > 1) { //not provided by cse
                                     $water_outlets = $Load_for_other_water_outlets;
-                                    $water_outlets_msg = "You have many water outlets in your school. Please ensure that you are not extracting too much ground water.";
+                                    $water_outlets_msg = "You have many water outlets in your school. Please ensure that you are not extracting too much groundwater.";
                                 } elseif($other_water_outlets_q13 ==0 || $other_water_outlets_q13 ==1 ) {
                                     $water_outlets = $Load_for_other_water_outlets;
-                                    $water_outlets_msg = "You have very few water outlets in your school. It is good that your school is not extracting a lot of ground water.";
+                                    $water_outlets_msg = "You have very few water outlets in your school. It is good that your school is not extracting a lot of groundwater.";
                                 }
                                 ?>
             <!--            <h4><?php echo $water_outlets; ?> people per outlet</h4>-->
