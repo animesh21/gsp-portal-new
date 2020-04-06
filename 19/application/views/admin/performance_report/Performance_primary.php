@@ -1440,7 +1440,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
       <ol style="list-style-type: japanese-formal !important;"> 
         <li>Children should get adequate amount of water required per day from drinking to flushing to mopping floors to everything.</li>
         <li>Catch rain where it falls. Today, rainwater harvesting has evolved as an appropriate measure to overcome the water scarcity as well as water logging due to excessive rains.</li>
-        <li>Recharge groundwater. As per Central Ground Water Board (CGWB), around 39% of the analysed wells showed decline in groundwater level in various parts of the country. We must try to reduce the dependence on groundwater to stop further depletion of water table. Other measures can be harvesting more rainwater; treating and reusing waste water; and recharging groundwater.</li>
+        <li>Recharge groundwater. As per Central GroundWater Board (CGWB), around 39% of the analysed wells showed decline in groundwater level in various parts of the country. We must try to reduce the dependence on groundwater to stop further depletion of water table. Other measures can be harvesting more rainwater; treating and reusing waste water; and recharging groundwater.</li>
         
       </ol>
     </section>
@@ -1596,7 +1596,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
                                      if($Recycledwastewater == "Y")
                                         $wcombination[] = "Recycled waste water";
                                      if($groundwater == "Y")
-                                        $wcombination []= "Ground water";
+                                        $wcombination []= "Groundwater";
              
                   
                                     $wcombination_msg =implode(",",$wcombination);                                     
@@ -1613,7 +1613,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
                                      elseif($Recycledwastewater == "Y")
                                         $wcombination[] = "Recycled waste water";
                                      elseif($groundwater == "Y")
-                                        $wcombination[] = "Ground water";
+                                        $wcombination[] = "Groundwater";
                  
                 
                  $wcombination_msg =implode(",",$wcombination); 
@@ -1630,7 +1630,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
                                      if($Recycledwastewater == "Y")
                                         $wcombination[] = "Recycled waste water";
                                      if($groundwater == "Y")
-                                        $wcombination []= "Ground water";
+                                        $wcombination []= "Groundwater";
                                
             
              $wcombination_msg =implode(",",$wcombination);                                     
@@ -1804,10 +1804,10 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
 
                  if($Q1G2 < 6)
                   {
-                      $handpumps_msg = "You do not have hand pumps in your school. It is good that your school is not extracting a lot of ground water, which is a valuable and diminishing resource. Using rainwater harvesting system, wastewater treatment processes and surface water are some alternative sources of water that your school can explore.";
+                      $handpumps_msg = "You do not have hand pumps in your school. It is good that your school is not extracting a lot of groundwater, which is a valuable and diminishing resource. Using rainwater harvesting system, wastewater treatment processes and surface water are some alternative sources of water that your school can explore.";
                   }else {
 
-                      $handpumps_msg = "You do not have hand pumps in your school. It is good that your school is not extracting a lot of ground water, which is a valuable and diminishing resource. Using rainwater harvesting system, wastewater treatment processes and surface water are some alternative sources of water that your school can explore.";
+                      $handpumps_msg = "You do not have hand pumps in your school. It is good that your school is not extracting a lot of groundwater, which is a valuable and diminishing resource. Using rainwater harvesting system, wastewater treatment processes and surface water are some alternative sources of water that your school can explore.";
                   }
                     
                 } else {
@@ -1816,10 +1816,10 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
 
                    if($Q1G2 < 6)
                   {
-                      $handpumps_msg ="You have many hand pumps in your school. Please ensure that you are not extracting too much ground water, which is a valuable and diminishing resource. Using rainwater harvesting system, wastewater treatment processes and surface water are some alternative sources of water that your school can explore.";
+                      $handpumps_msg ="You have many hand pumps in your school. Please ensure that you are not extracting too much groundwater, which is a valuable and diminishing resource. Using rainwater harvesting system, wastewater treatment processes and surface water are some alternative sources of water that your school can explore.";
                   }else {
 
-                      $handpumps_msg = "You have many hand pumps in your school. Please ensure that you are not extracting too much of ground water which is a valuable but diminishing resource. Using rainwater harvesting system/ waste water treatment processes/ surface water are a few of the other sources of water your school can always look into.";
+                      $handpumps_msg = "You have many hand pumps in your school. Please ensure that you are not extracting too much of groundwater which is a valuable but diminishing resource. Using rainwater harvesting system/ waste water treatment processes/ surface water are a few of the other sources of water your school can always look into.";
                   }
 
 
@@ -1956,10 +1956,10 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
         }
                     if ($other_water_outlets_q13 > 1) { //not provided by cse
                                     $water_outlets = $Load_for_other_water_outlets;
-                                    $water_outlets_msg = "You have many water outlets in your school. Please ensure that you are not extracting too much ground water.";
+                                    $water_outlets_msg = "You have many water outlets in your school. Please ensure that you are not extracting too much groundwater.";
                                 } elseif($other_water_outlets_q13 ==0 || $other_water_outlets_q13 ==1 ) {
                                     $water_outlets = $Load_for_other_water_outlets;
-                                    $water_outlets_msg = "You have very few water outlets in your school. It is good that your school is not extracting a lot of ground water.";
+                                    $water_outlets_msg = "You have very few water outlets in your school. It is good that your school is not extracting a lot of groundwater.";
                                 }
                                 ?>
             <!--            <h4><?php echo $water_outlets; ?> people per outlet</h4>-->
