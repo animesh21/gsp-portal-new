@@ -302,7 +302,7 @@ h2 span {
           <th style="border-right: 2px solid #00a8b1; padding-right:5px; text-align: right;">School Rating</th>
           <td style="padding-left:5px; text-align: left;">  <?php $percentage=getSchoolRatingPrimary($schoolUserID); 
         
-            $percentage= ceil($percentage) ;
+            $percentage= number_format($percentage,2) ;
         
       if($percentage>=70){
        echo "<label>Green</label>";
