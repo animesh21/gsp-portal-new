@@ -650,7 +650,7 @@ if (!function_exists('getSchoolRatingPrimary')) {
                
             $test = $temp1->air_points+$temp1->energy_points+$temp1->food_points+$temp1->land_points+$temp1->water_points+$temp1->waste_points;
         }
-       $rate= ($test/101)*100;
+       $rate= ($test/95)*100;
     // $rate = ($test*0.61) ; 
     return $rate;
     }
