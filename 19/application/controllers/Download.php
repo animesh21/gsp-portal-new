@@ -307,7 +307,7 @@ public function count_certificates_stuents($argID) {
         $userId = getUserId($argsID);
         $rank   = getFiled('Q1G2',$userId);
            if($rank <= 5){
-             $html=$this->load->view('admin/performance_report/Performance_primary', $data,true);
+             echo "<center><h2>Comming Soon</h2></center>"
            }else{
              $html=$this->load->view('admin/performance_report/Performance', $data,true);             
            }
