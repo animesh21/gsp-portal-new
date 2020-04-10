@@ -622,6 +622,7 @@ $(document).ready(function () {
  $arrData1_2=array_chunk($statewisegraph1[2],7,true);
  $arrData1_3=array_chunk($statewisegraph1[3],7,true);
  $arrData1_4=array_chunk($statewisegraph1[4],7,true);
+ $arrData1_5=array_chunk($statewisegraph1[5],7,true);
  $dataCount1=array();
  $countInteration1=0;
  $y=0;
@@ -701,7 +702,12 @@ $(document).ready(function () {
       color:'#1826FB',
             data: <?php echo json_encode(array_map('intval',array_values($arrData1_4[$t]))); ?> //East
 
-        }   
+        } , {
+            name: 'Audit Submitted',
+      color:'#00ae4f',
+            data: <?php echo json_encode(array_map('intval',array_values($arrData1_5[$t]))); ?> //East
+
+        }     
     ],
 }); 
 </script>
@@ -717,6 +723,7 @@ $(document).ready(function () {
  $arrData2_2=array_chunk($statewisegraph2[2],7,true);
  $arrData2_3=array_chunk($statewisegraph2[3],7,true);
  $arrData2_4=array_chunk($statewisegraph2[4],7,true);
+ $arrData2_5=array_chunk($statewisegraph2[5],7,true);
  $dataCount2=array();
  $countInteration2=0;
  $y=0;
@@ -796,6 +803,11 @@ $(document).ready(function () {
       color:'#1826FB',
             data: <?php echo json_encode(array_map('intval',array_values($arrData2_4[$t]))); ?> //East
 
+        } , {
+            name: 'Audit Submitted',
+      color:'#00ae4f',
+            data: <?php echo json_encode(array_map('intval',array_values($arrData2_5[$t]))); ?> //East
+
         }   
     ],
 }); 
@@ -812,6 +824,7 @@ $(document).ready(function () {
  $arrData3_2=array_chunk($statewisegraph3[2],7,true);
  $arrData3_3=array_chunk($statewisegraph3[3],7,true);
  $arrData3_4=array_chunk($statewisegraph3[4],7,true);
+ $arrData3_5=array_chunk($statewisegraph3[5],7,true);
  $dataCount3=array();
  $countInteration=0;
  $y=0;
@@ -891,6 +904,11 @@ $(document).ready(function () {
       color:'#1826FB',
             data: <?php echo json_encode(array_map('intval',array_values($arrData3_4[$t]))); ?> //East
 
+        } , {
+            name: 'Audit Submitted',
+      color:'#00ae4f',
+            data: <?php echo json_encode(array_map('intval',array_values($arrData3_5[$t]))); ?> //East
+
         }   
     ],
 }); 
@@ -907,6 +925,7 @@ $(document).ready(function () {
  $arrData4_2=array_chunk($statewisegraph4[2],7,true);
  $arrData4_3=array_chunk($statewisegraph4[3],7,true);
  $arrData4_4=array_chunk($statewisegraph4[4],7,true);
+ $arrData4_5=array_chunk($statewisegraph4[5],7,true);
  $dataCount4=array();
  $countInteration4=0;
  $y=0;
@@ -986,6 +1005,11 @@ $(document).ready(function () {
       color:'#1826FB',
             data: <?php echo json_encode(array_map('intval',array_values($arrData4_4[$t]))); ?> //East
 
+        } , {
+            name: 'Audit Submitted',
+      color:'#00ae4f',
+            data: <?php echo json_encode(array_map('intval',array_values($arrData4_5[$t]))); ?> //East
+
         }   
     ],
 }); 
@@ -1002,6 +1026,7 @@ $(document).ready(function () {
  $arrData5_2=array_chunk($statewisegraph5[2],7,true);
  $arrData5_3=array_chunk($statewisegraph5[3],7,true);
  $arrData5_4=array_chunk($statewisegraph5[4],7,true);
+ $arrData5_5=array_chunk($statewisegraph5[5],7,true);
  $dataCount5=array();
  $countInteration5=0;
  $y=0;
@@ -1081,6 +1106,11 @@ $(document).ready(function () {
       color:'#1826FB',
             data: <?php echo json_encode(array_map('intval',array_values($arrData5_4[$t]))); ?> //East
 
+        } , {
+            name: 'Audit Submitted',
+      color:'#00ae4f',
+            data: <?php echo json_encode(array_map('intval',array_values($arrData5_5[$t]))); ?> //East
+
         }   
     ],
 }); 
@@ -1097,6 +1127,7 @@ $(document).ready(function () {
  $arrData6_2=array_chunk($statewisegraph6[2],7,true);
  $arrData6_3=array_chunk($statewisegraph6[3],7,true);
  $arrData6_4=array_chunk($statewisegraph6[4],7,true);
+ $arrData6_5=array_chunk($statewisegraph6[5],7,true);
  $dataCount6=array();
  $countInteration6=0;
  $y=0;
@@ -1176,6 +1207,11 @@ $(document).ready(function () {
       color:'#1826FB',
             data: <?php echo json_encode(array_map('intval',array_values($arrData6_4[$t]))); ?> //East
 
+        } , {
+            name: 'Audit Submitted',
+      color:'#00ae4f',
+            data: <?php echo json_encode(array_map('intval',array_values($arrData6_5[$t]))); ?> //East
+
         }   
     ],
 }); 
@@ -1194,6 +1230,7 @@ $(document).ready(function () {
  $arrData7_2=array_chunk($statewisegraph7[2],7,true);
  $arrData7_3=array_chunk($statewisegraph7[3],7,true);
  $arrData7_4=array_chunk($statewisegraph7[4],7,true);
+ $arrData7_5=array_chunk($statewisegraph7[5],7,true);
  $dataCount7=array();
  $countInteration7=0;
   
@@ -1275,6 +1312,11 @@ $(document).ready(function () {
       color:'#1826FB',
             data: <?php echo json_encode(array_map('intval',array_values($arrData7_4[$t]))); ?> //East
 
+        } , {
+            name: 'Audit Submitted',
+      color:'#00ae4f',
+            data: <?php echo json_encode(array_map('intval',array_values($arrData7_5[$t]))); ?> //East
+
         }   
     ],
 }); 
@@ -1294,6 +1336,7 @@ $(document).ready(function () {
  $arrData8_2=array_chunk($statewisegraph8[2],7,true);
  $arrData8_3=array_chunk($statewisegraph8[3],7,true);
  $arrData8_4=array_chunk($statewisegraph8[4],7,true);
+ $arrData8_5=array_chunk($statewisegraph8[5],7,true);
  $dataCount8=array();
  $countInteration8=0;
   
@@ -1374,6 +1417,11 @@ $(document).ready(function () {
             name: 'Audit Completed',
       color:'#1826FB',
             data: <?php echo json_encode(array_map('intval',array_values($arrData8_4[$t]))); ?> //East
+
+        } , {
+            name: 'Audit Submitted',
+      color:'#00ae4f',
+            data: <?php echo json_encode(array_map('intval',array_values($arrData8_5[$t]))); ?> //East
 
         }   
     ],
