@@ -22,11 +22,11 @@
 }
 
 .nav-tabs>li>a{
-  margin-right: 0px!important;
+  margin-right: 1px!important;
 }
 
 .tab_list>li>a {    
-    padding: 10px 3px;
+    padding: 10px 12px;
 }
 
   
