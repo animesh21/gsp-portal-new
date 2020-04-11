@@ -577,6 +577,17 @@ class Report extends CI_Model {
       
       $this->db->where('satya_foundation_status',$substatus);
       $this->db->where('make_school_disabled',"1");
+      $this->db->where('complete_status','0');
+      $this->db->where("progress =",'100');
+      return $this->db->count_all_results('gsp_school');
+      
+    }
+    public function get_subaudit_submitted($substatus)
+    {
+      
+      $this->db->where('satya_foundation_status',$substatus);
+      $this->db->where('make_school_disabled',"1");
+      $this->db->where('complete_status','1');
       $this->db->where("progress =",'100');
       return $this->db->count_all_results('gsp_school');
       
