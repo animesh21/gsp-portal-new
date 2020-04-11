@@ -104,11 +104,10 @@ class Audit_started_2017 extends CI_Controller {
         $data['list_school4']=$this->Audit_started_model->getPartnerData('4');
         $data['list_school5']=$this->Audit_started_model->getPartnerData('5');
         $data['list_school6']=$this->Audit_started_model->getPartnerData('6');
-       $data['list_school7']=$this->Audit_started_model->getParterSubpartnerData('7');
-           $data['list_school8']=$this->Audit_started_model->getParterSubpartnerData('8');
+        $data['list_school7']=$this->Audit_started_model->getParterSubpartnerData('7');
+        $data['list_school8']=$this->Audit_started_model->getParterSubpartnerData('8');       
        
-       
-       $data['csi_registerd_audit']=$this->Report->get_registeredpartner("1");
+        $data['csi_registerd_audit']=$this->Report->get_registeredpartner("1");
         $data['csi_total_started_audit']=$this->Report->get_startedpartner("1");
         $data['csi_completed']=$this->Report->get_completedpartner("1");
         $data['csi_total_notstarted_audit']=$this->Report->get_notstartedpartner("1");
@@ -118,7 +117,7 @@ class Audit_started_2017 extends CI_Controller {
         $data['csi_total_started_audit2']=$this->Report->get_startedpartner("2");
         $data['csi_completed2']=$this->Report->get_completedpartner("2");
         $data['csi_total_notstarted_audit2']=$this->Report->get_notstartedpartner("2");
-         $data['csi_audit_submitted2']=$this->Report->get_audit_submitted("2");
+        $data['csi_audit_submitted2']=$this->Report->get_audit_submitted("2");
         
         $data['csi_registerd_audit3']=$this->Report->get_registeredpartner("3");
         $data['csi_total_started_audit3']=$this->Report->get_startedpartner("3");
@@ -130,31 +129,31 @@ class Audit_started_2017 extends CI_Controller {
         $data['csi_total_started_audit4']=$this->Report->get_startedpartner("4");
         $data['csi_completed4']=$this->Report->get_completedpartner("4");
         $data['csi_total_notstarted_audit4']=$this->Report->get_notstartedpartner("4");
-         $data['csi_audit_submitted4']=$this->Report->get_audit_submitted("4");
+        $data['csi_audit_submitted4']=$this->Report->get_audit_submitted("4");
         
         $data['csi_registerd_audit5']=$this->Report->get_registeredpartner("5");
         $data['csi_total_started_audit5']=$this->Report->get_startedpartner("5");
         $data['csi_completed5']=$this->Report->get_completedpartner("5");
         $data['csi_total_notstarted_audit5']=$this->Report->get_notstartedpartner("5");
-         $data['csi_audit_submitted5']=$this->Report->get_audit_submitted("5");
+        $data['csi_audit_submitted5']=$this->Report->get_audit_submitted("5");
         
         $data['csi_registerd_audit6']=$this->Report->get_registeredpartner("6");
         $data['csi_total_started_audit6']=$this->Report->get_startedpartner("6");
         $data['csi_completed6']=$this->Report->get_completedpartner("6");
         $data['csi_total_notstarted_audit6']=$this->Report->get_notstartedpartner("6");
-         $data['csi_audit_submitted6']=$this->Report->get_audit_submitted("6");
+        $data['csi_audit_submitted6']=$this->Report->get_audit_submitted("6");
        
         $data['csi_registerd_audit7']=$this->Report->get_subregisteredpartner("7");
         $data['csi_total_started_audit7']=$this->Report->get_substartedpartner("7");
         $data['csi_completed7']=$this->Report->get_subcompletedpartner("7");
         $data['csi_total_notstarted_audit7']=$this->Report->get_subnotstartedpartner("7");
-         $data['csi_audit_submitted7']=$this->Report->get_audit_submitted("7");
+        $data['csi_audit_submitted7']=$this->Report->get_subaudit_submitted("7");
 
         $data['csi_registerd_audit8']=$this->Report->get_subregisteredpartner("8");
         $data['csi_total_started_audit8']=$this->Report->get_substartedpartner("8");
         $data['csi_completed8']=$this->Report->get_subcompletedpartner("8");
         $data['csi_total_notstarted_audit8']=$this->Report->get_subnotstartedpartner("8");
-         $data['csi_audit_submitted8']=$this->Report->get_audit_submitted("8");
+        $data['csi_audit_submitted8']=$this->Report->get_subaudit_submitted("8");
        
         $this->load->view('admin/includes/template', $data);
    }
