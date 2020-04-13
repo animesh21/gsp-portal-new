@@ -2803,13 +2803,13 @@ if ($waste_recycle == "Y") {
   $rw5=(getFiled('Q8Wa6S1', $schoolUserID) != '') ? getFiled('Q8Wa6S1', $schoolUserID) : 0;
   $rw6=(getFiled('Q8Wa7S1', $schoolUserID) != '') ? getFiled('Q8Wa7S1', $schoolUserID) : 0;
   
-    $rcw=(getFiled('Q8Wa1S6', $schoolUserID) != '') ? getFiled('Q8Wa1S6', $schoolUserID) : 0;
-  $rcw1=(getFiled('Q8Wa2S9', $schoolUserID) != '') ? getFiled('Q8Wa2S9', $schoolUserID) : 0;
-  $rcw2=(getFiled('Q8Wa3S4', $schoolUserID) != '') ? getFiled('Q8Wa3S4', $schoolUserID) : 0;
-  $rcw3=(getFiled('Q8Wa4S2', $schoolUserID) != '') ? getFiled('Q8Wa4S2', $schoolUserID) : 0;
-  $rcw4=(getFiled('Q8Wa5S2', $schoolUserID) != '') ? getFiled('Q8Wa5S2', $schoolUserID) : 0;
-  $rcw5=(getFiled('Q8Wa6S2', $schoolUserID) != '') ? getFiled('Q8Wa6S2', $schoolUserID) : 0;
-  $rcw6=(getFiled('Q8Wa7S2', $schoolUserID) != '') ? getFiled('Q8Wa7S2', $schoolUserID) : 0;
+    $rcw=(getFiled('Q8Wa1S5', $schoolUserID) != '') ? getFiled('Q8Wa1S5', $schoolUserID) : 0;
+  $rcw1=(getFiled('Q8Wa2S8', $schoolUserID) != '') ? getFiled('Q8Wa2S8', $schoolUserID) : 0;
+  $rcw2=(getFiled('Q8Wa3S3', $schoolUserID) != '') ? getFiled('Q8Wa3S3', $schoolUserID) : 0;
+  $rcw3=(getFiled('Q8Wa4S1', $schoolUserID) != '') ? getFiled('Q8Wa4S1', $schoolUserID) : 0;
+  $rcw4=(getFiled('Q8Wa5S1', $schoolUserID) != '') ? getFiled('Q8Wa5S1', $schoolUserID) : 0;
+  $rcw5=(getFiled('Q8Wa6S1', $schoolUserID) != '') ? getFiled('Q8Wa6S1', $schoolUserID) : 0;
+  $rcw6=(getFiled('Q8Wa7S1', $schoolUserID) != '') ? getFiled('Q8Wa7S1', $schoolUserID) : 0;
   
     $total_generated_waste = $rw + $rw1 + $rw2 +$rw3 + $rw4 + $rw5 +$rw6;
     $total_recycled_waste = $rcw + $rcw1 + $rcw2 + $rcw3 + $rcw4 + $rcw5 + $rcw6;
