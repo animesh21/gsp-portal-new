@@ -2795,13 +2795,13 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
 //4) Does your school recycle any generated waste?
 $waste_recycle = getFiled('Q8Wa1', $schoolUserID);
 if ($waste_recycle == "Y") {
-    $rw=(getFiled('Q8Wa1S5', $schoolUserID) != '') ? getFiled('Q8Wa1S5', $schoolUserID) : 0;
-  $rw1=(getFiled('Q8Wa2S8', $schoolUserID) != '') ? getFiled('Q8Wa2S8', $schoolUserID) : 0;
-  $rw2=(getFiled('Q8Wa3S3', $schoolUserID) != '') ? getFiled('Q8Wa3S3', $schoolUserID) : 0;
-  $rw3=(getFiled('Q8Wa4S1', $schoolUserID) != '') ? getFiled('Q8Wa4S1', $schoolUserID) : 0;
-  $rw4=(getFiled('Q8Wa5S1', $schoolUserID) != '') ? getFiled('Q8Wa5S1', $schoolUserID) : 0;
-  $rw5=(getFiled('Q8Wa6S1', $schoolUserID) != '') ? getFiled('Q8Wa6S1', $schoolUserID) : 0;
-  $rw6=(getFiled('Q8Wa7S1', $schoolUserID) != '') ? getFiled('Q8Wa7S1', $schoolUserID) : 0;
+    $rw=(getFiled('Q6Wa1S5', $schoolUserID) != '') ? getFiled('Q8Wa1S5', $schoolUserID) : 0;
+  $rw1=(getFiled('Q6Wa2S8', $schoolUserID) != '') ? getFiled('Q8Wa2S8', $schoolUserID) : 0;
+  $rw2=(getFiled('Q6Wa3S3', $schoolUserID) != '') ? getFiled('Q8Wa3S3', $schoolUserID) : 0;
+  $rw3=(getFiled('Q6Wa4S1', $schoolUserID) != '') ? getFiled('Q8Wa4S1', $schoolUserID) : 0;
+  $rw4=(getFiled('Q6Wa5S1', $schoolUserID) != '') ? getFiled('Q8Wa5S1', $schoolUserID) : 0;
+  $rw5=(getFiled('Q6Wa6S1', $schoolUserID) != '') ? getFiled('Q8Wa6S1', $schoolUserID) : 0;
+  $rw6=(getFiled('Q6Wa7S1', $schoolUserID) != '') ? getFiled('Q8Wa7S1', $schoolUserID) : 0;
   
     $rcw=(getFiled('Q8Wa1S5', $schoolUserID) != '') ? getFiled('Q8Wa1S5', $schoolUserID) : 0;
   $rcw1=(getFiled('Q8Wa2S8', $schoolUserID) != '') ? getFiled('Q8Wa2S8', $schoolUserID) : 0;
