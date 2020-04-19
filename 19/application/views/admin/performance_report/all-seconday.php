@@ -1,7 +1,7 @@
 <div>
   <div class="top-area">
     <h2>ALL EXCEL DUMP Of SECONDARY PHASE-1</h2>
-    <p><a href="<?php echo base_url();?>secondaryexceldumpphase1.xlsx" download="secondaryexceldumpphase1.xlsx"> Download </a>
+    <p><a href="<?php echo base_url();?>/assets/file/secondaryexceldumpphase1.xlsx" download="secondaryexceldumpphase1.xlsx"> Download </a>
 </p>
   </div>
   <div style="overflow: scroll">
