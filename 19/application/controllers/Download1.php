@@ -7,12 +7,12 @@
   }
  
   public function index() {
-   $this->load->view ( 'welcome', $data );
+   $this->load->view ( 'all-seconday', $data );
   }
  
-  public function download($fileName = NULL) {   
+  public function download1($fileName = NULL) {   
    if ($fileName) {
-    $file = realpath ( "download" ) . "\\" . $fileName;
+    $file = realpath ( "download/file" ) . "\\" . $fileName;
     // check file exists    
     if (file_exists ( $file )) {
      // get file content
