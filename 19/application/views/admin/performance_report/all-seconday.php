@@ -1,7 +1,7 @@
 <div>
   <div class="top-area">
     <h2>ALL EXCEL DUMP Of SECONDARY PHASE-1</h2>
-    <p><a href="<?php echo base_url();?>assets/csv/Sample-CSV-Format.txt" download="Sample-CSV-Format.txt"> HERE </a>
+    <p><a href="<?php echo base_url();?>secondaryexceldumpphase1.xlsx" download="secondaryexceldumpphase1.xlsx"> Download </a>
 </p>
   </div>
   <div style="overflow: scroll">
@@ -11,7 +11,7 @@
           <th>S.No</th>
           <th>School Id</th>
           <th>Name of the School/Institution</th>
-	  <th>School email</th>
+	        <th>School email</th>
           <th>Address Line 1</th>
           <th>Address Line 2</th>
           <th>Country</th>
