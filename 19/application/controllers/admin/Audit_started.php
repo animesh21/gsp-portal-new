@@ -66,7 +66,7 @@ class Audit_started extends CI_Controller {
 		}
 		
 		if($school==2)
-		{echo "string";
+		{
 		   $data['registerd_audit_1']=$this->Report->registerparticipationBystate($state);
 		   $data['total_started_audit_1']=$this->Report->startparticipationBystate($state);
 		   $data['completed_1']=$this->Report->completeparticipationBystate($state);
