@@ -161,9 +161,15 @@ GSP Audit 2019 has now been closed. Audit 2020 will open for participation by mi
 	     */
 
 	    public function forgetpassword() {
-		//echo $this->input->post('val'); exit;
+		//echo $this->input->post('val'); exit;z
+	    	$tt= $this->input->post('emailval');
+	    	$email = $this->db->where('coemail', $tt)->select('make_school_disabled')->from('gsp_school')->get()->result();
+	    	if($email[0]->make_school_disabled==0) {
+	    		echo "Invalid e-mail ID. Please get in touch with us at support@greenschoolsprogramme.org for further details";
+	    		exit;
+	    	}
 		$status = '';
-		$temp = $this->User_model->forgetPassword();
+		$temp = $this->User_model->forgetPassword($tt);
 		if ($temp) {
 		    //$status = 'success';
 		    $status = $temp;
@@ -172,6 +178,7 @@ GSP Audit 2019 has now been closed. Audit 2020 will open for participation by mi
 		}
 		echo json_encode($status);
 	    }
+
 
 	    public function welcome() {
 		$data['title'] = 'Green School';
