@@ -1545,12 +1545,12 @@ class Audit_started_model extends CI_Model {
     {
           $this->db->where("a.make_school_disabled=","1");
           $sql = $this->db->select('a.*, b.name AS state_name,c.name As district_name')
-                        ->from('gsp_school AS a')
-                        ->join('states AS b', 'a.state=b.id', 'left')
-            ->join('cities AS c', 'a.district=c.id', 'left')
-                        ->order_by('a.id', 'desc')
-                        ->get()->result();
-        
+                  ->from('gsp_school AS a')
+                  ->join('states AS b', 'a.state=b.id', 'left')
+		  ->where('a.state',$state)
+                  ->join('cities AS c', 'a.district=c.id', 'left')
+                  ->order_by('a.id', 'desc')
+                  ->get()->result();        
            return $sql; 
     }    
       elseif($state != 1 && $school != 2){
