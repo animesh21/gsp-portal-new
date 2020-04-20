@@ -196,7 +196,6 @@ header('Location: http://www.greenschoolsprogramme.org/audit/18/login/browser_ch
                       }
 
                     });
-                    var emailval = $('input[name="email_id"]').val();
                     var pattern = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i;
                     if (emailval == '') {
                         $('#msgForget').html('<p style="color:red; font-weight:bold">Please enter email address !</p>');
