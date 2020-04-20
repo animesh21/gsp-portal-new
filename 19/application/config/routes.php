@@ -55,4 +55,3 @@ $route['admin']='admin/login';
 $route['translate_uri_dashes'] = FALSE;
 $route['admin/Registrations/(:num)'] = "admin/Registrations/setUser/$1";
 $route['register']='login/register';
-$route['download/(:any)'] = "/download1/download/$1";
