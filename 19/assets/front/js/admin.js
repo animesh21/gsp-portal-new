@@ -42,3 +42,5 @@ function getXMLHTTP() { //fuction to return the xml http object
 		}		
 	}
 	
+
+	
