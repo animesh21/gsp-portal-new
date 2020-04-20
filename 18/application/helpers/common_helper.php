@@ -7,7 +7,7 @@ if (!function_exists('getStates')) {
     function getStates() {
         $arrState = array();
         $CI = & get_instance();
-        $temp = $CI->db->get('states')->result();
+        $temp = $CI->db->order_by('name', 'asc')->get('states')->result();
         foreach ($temp as $t) {
             $arrState[$t->id] = $t->name;
         }
