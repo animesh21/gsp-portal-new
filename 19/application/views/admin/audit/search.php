@@ -33,38 +33,6 @@
   <div id="containerStateWisePartner1_<?php echo $i; ?>"> </div><br/>
     <?php } ?>
 
-
-    
-    <?php 
-     
-     if($state_id1==1 && $school==2){
-
-    $statewisegraph1=getDataGraphByDistrict_all($state_id1,$school);
-    $countArr1=count(array_chunk($statewisegraph1[0],7,true));
-    for($i=0;$i<$countArr1; $i++){
-    ?>
-  <div id="containerStateWisePartner1_<?php echo $i; ?>"> </div><br/>
-    <?php } ?>
-
-  <?php } elseif ($state_id1==1 && $school==1) { 
-
-     $statewisegraph1=getDataGraphByDistrict_all($state_id1,$school);
-    $countArr1=count(array_chunk($statewisegraph1[0],7,true));
-    for($i=0;$i<$countArr1; $i++){
-    ?>
-  <div id="containerStateWisePartner1_<?php echo $i; ?>"> </div><br/>
-    <?php } ?>
-    
-  <?php } elseif ($state_id1==1 && $school==0) { 
-
-     $statewisegraph1=getDataGraphByDistrict_all($state_id1,$school);
-    $countArr1=count(array_chunk($statewisegraph1[0],7,true));
-    for($i=0;$i<$countArr1; $i++){
-    ?>
-  <div id="containerStateWisePartner1_<?php echo $i; ?>"> </div><br/>
-    <?php } ?>
-   
-  <?php } ?>
 </div>
 
 
