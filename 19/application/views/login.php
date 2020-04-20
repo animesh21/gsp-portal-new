@@ -185,6 +185,17 @@ header('Location: http://www.greenschoolsprogramme.org/audit/18/login/browser_ch
 <script type="text/javascript">
             $(document).ready(function () {
                 $('#btnForgetPassword').click(function () {
+			    var emailval = $('input[name="email_id"]').val();
+                    
+                    $.ajax({
+                      url: "<?php echo base_url('login/forgetpassword');  ?>",
+                      type:"POST",
+                      data: {"emailval":emailval},
+                      success: function(resp){
+                        alert(resp);
+                      }
+
+                    });
                     var emailval = $('input[name="email_id"]').val();
                     var pattern = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i;
                     if (emailval == '') {
