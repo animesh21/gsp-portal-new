@@ -254,7 +254,7 @@ class Audit_started extends CI_Controller {
 	/*
      * Send Filter Feedback
      */ 
-   public function filter_email() {
+      public function filter_email() {
        
        $data['subject'] = $this->input->post('subject');
         $data['message'] = $this->input->post('message');
@@ -276,8 +276,8 @@ class Audit_started extends CI_Controller {
         $category = array();
         $aid = array();
         $byPhase=$this->input->post('phase');
-	$progress_range= $this->input->post('progress_range');   		
-	$byComplete = $this->input->post('complete');   
+        $progress_range= $this->input->post('progress_range');          
+        $byComplete = $this->input->post('complete');   
         $byProgress = $this->input->post('progress');
         $byCategory = $this->input->post('school_category');
         $bySchoolType = $this->input->post('school_type');
@@ -286,17 +286,21 @@ class Audit_started extends CI_Controller {
         $byDistrict = $this->input->post('district');   
         $bySchoolName = $this->input->post('schoolname');
         $rating = $this->input->post('rating');
-	$byAlphabate = $this->input->post('alphabate');
-	 $byBoard=$this->input->post('board');   
+        $byAlphabate = $this->input->post('alphabate');
+        $byBoard=$this->input->post('board');   
        // $query = "SELECT a.id, a.udise, a.userid, a.name, a.country, a.state, a.district, a.city, a.progress, $filed, b.name AS state_name, c.name AS district_name, d.remark, d.phase FROM gsp_school AS a LEFT JOIN states AS b ON a.state=b.id LEFT JOIN cities AS c ON a.district=c.id LEFT JOIN tbl_sendmail AS d ON a.id=d.school_id  WHERE";
       // $query = "SELECT a.id,a.school_id,a.Q1S1,a.Q2G1,a.Q9G1, a.udise, a.userid,a.country, a.name, a.city, a.progress, $filed, b.name AS state_name, c.name AS district_name, a.remark, a.phase FROM tbl_sendmail AS a LEFT JOIN states AS b ON a.state=b.id LEFT JOIN cities AS c ON a.district=c.id  WHERE";
 //      $query = "SELECT a.date_added,a.address1,a.coname,a.address2,a.pincode,a.std,a.telephone,a.schoolemail,a.principle_name,a.coemail,a.comobile,a.password,a.mobile,a.principle_name,a.id,a.Q3G1,a.Q1S1,a.Q2G1,a.Q9G1, a.udise, a.userid,a.country, a.name, a.city, a.progress, $filed, b.name AS state_name, c.name AS district_name, a.remark, a.phase FROM gsp_filter AS a LEFT JOIN states AS b ON a.state=b.id LEFT JOIN cities AS c ON a.district=c.id  WHERE"; 
-	$query = "SELECT a.id,a.userid,a.udise,a.name,a.address1,a.address2,a.country,a.city,a.pincode,a.std,a.telephone,a.schoolemail,a.principle_name,a.mobile,a.coname,a.coemail,a.comobile,a.date_added,a.password,a.id,a.Q3G1,a.Q1S1,a.Q2G1,a.Q9G1,a.progress,a.remark, $filed, b.name AS state_name, c.name AS district_name FROM gsp_school AS a LEFT JOIN states AS b ON a.state=b.id LEFT JOIN cities AS c ON a.district=c.id WHERE"; 
-	   $conditions = array();
+     if($byPhase != '0'){
 
-        
-	
-	   
+        $query = "SELECT a.id,a.userid,a.udise,a.name,a.address1,a.address2,a.country,a.city,a.pincode,a.std,a.telephone,a.schoolemail,a.principle_name,a.mobile,a.coname,a.coemail,a.comobile,a.date_added,a.password,a.id,a.Q3G1,a.Q1S1,a.Q2G1,a.Q9G1,a.progress,a.remark, a.coemail, a.schoolemail, b.name AS state_name, c.name AS district_name FROM gsp_school AS a LEFT JOIN states AS b ON a.state=b.id LEFT JOIN cities AS c ON a.district=c.id LEFT JOIN gsp_aduit_submitted AS d ON a.id = d.school_id WHERE" ;
+            $conditions = array();
+     }else{
+
+         $query = "SELECT a.id,a.userid,a.udise,a.name,a.address1,a.address2,a.country,a.city,a.pincode,a.std,a.telephone,a.schoolemail,a.principle_name,a.mobile,a.coname,a.coemail,a.comobile,a.date_added,a.password,a.id,a.Q3G1,a.Q1S1,a.Q2G1,a.Q9G1,a.progress,a.remark, $filed, b.name AS state_name, c.name AS district_name FROM gsp_school AS a LEFT JOIN states AS b ON a.state=b.id LEFT JOIN cities AS c ON a.district=c.id WHERE";
+            $conditions = array();
+     }    
+       
        
         if ($byState != '') {
             if ($byState == "0") {
@@ -305,8 +309,8 @@ class Audit_started extends CI_Controller {
                 $conditions[] = " a.state='$byState'";
             }
         }
-	
-	if ($byDistrict != '') {
+    
+    if ($byDistrict != '') {
             if ($byDistrict == "0") {
                 $conditions[] = " a.district!='$byDistrict'";
             } else {
@@ -318,8 +322,8 @@ class Audit_started extends CI_Controller {
         if (!empty($bySchoolName)) {
             $conditions[] = " a.name LIKE '%$bySchoolName%'";
         }
-	
-	if (!empty($byAlphabate)) {
+    
+    if (!empty($byAlphabate)) {
             $conditions[] = " a.name LIKE '$byAlphabate%'";
         }   
 
@@ -337,22 +341,21 @@ class Audit_started extends CI_Controller {
             foreach ($byProgress as $p) {
                
                 if($p=='100')
-            	{
-            		$test[] = " a.progress='$p' AND make_school_disabled = '1' AND complete_status = '0' ";
-            	}
-		elseif($p=='5')
-            	{
-            		$test[] = " a.progress='$p' AND make_school_disabled = '1'";
-            	}
-		 else{
-
-            		$test[] = " a.progress='$p'";
-            	}
+                {
+                    $test[] = " a.progress='$p' AND make_school_disabled = '1' AND complete_status = '0' ";
+                }
+        elseif($p=='5')
+                {
+                    $test[] = " a.progress='$p' AND make_school_disabled = '1'";
+                }
+         else{
+                    $test[] = " a.progress='$p'";
+                }
             }
             $conditions[] = "(" . implode(' OR ', $test) . ")";
         }
-	
-	if (!empty($progress_range)) {
+    
+    if (!empty($progress_range)) {
             $conditions[] = " a.progress BETWEEN 10 AND 40 AND make_school_disabled = '1'";
         }   
 
@@ -368,8 +371,7 @@ class Audit_started extends CI_Controller {
         //School type aid
         if (!empty($byAidType)) {
             foreach ($byAidType as $u) {
-                $Aid[] = "a.Q9G1='$u'";
-            }
+                $Aid[] = "a.Q9G1='$u'"; }
             $conditions[] = "(" . implode(' OR ', $Aid) . ")";
         }
 
@@ -377,19 +379,24 @@ class Audit_started extends CI_Controller {
         if (!empty($rating)) {
             $conditions[] = " a.remark LIKE '%$rating%'";
         }
-	
-	if($byBoard !=0)
+    
+    if($byBoard !=0)
         {
             $conditions[] = "a.Q3G1='$byBoard'";
         }   
         
         //By Phase
-        if($byPhase !=0)
+        if($byPhase != '0')
         {
-            $conditions[] = "a.phase='$byPhase'";
+            if($byPhase == 1){
+            $conditions[] = "a.progress='100' AND a.complete_status='1' AND d.date_on >='2019-02-28 08:50:40' AND d.date_on <='2019-11-12 00:00:00' ";                
+            }
+            if($byPhase == 2){
+            $conditions[] = "a.progress='100' AND a.complete_status='1' AND d.date_on >='2019-11-12 00:00:00' ";                
+            }
         }
-	   
-	if($byComplete !='')
+       
+    if($byComplete !='')
         {
             $conditions[] = "a.complete_status= '1'";
         }      
@@ -399,21 +406,20 @@ class Audit_started extends CI_Controller {
         if (count($conditions) > 0) {
             $sql .= implode(' AND ', $conditions);
         }
-        //echo $sql; exit;
+        // echo $sql; exit;
         $query = $this->db->query($sql);
-        ///$data=$query->result_array();
+        // $data=$query->result_array();
 
         $data['states'] = getStates();
         $data['states'][0] = "All";
-	$data['district'] = getDistricts();
+        $data['district'] = getDistricts();
         $data['district'][0]="All";   
         $data['main'] = 'admin/audit/feedback-with-filter';
         $data['record'] = $query->result_array();
         $data['mail_status'] = $mail;
         $this->load->view('admin/includes/template', $data);
     }
-	
-	
+    	
 	
 	public function send_email() {
 
