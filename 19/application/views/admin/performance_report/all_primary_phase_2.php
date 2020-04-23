@@ -1,7 +1,49 @@
+
+<style type="text/css">
+  
+.statics-circle {width: 50px; height: 50px; background: #e86549; color: #fff; text-align: center; border-radius: 50%; padding: 20px; transition: all 0.5s ease-in-out; border: 5px solid #e86549; margin: 0 auto;}
+
+.fa-circle{
+font-size: 15px;
+color: #1caf0b;
+}
+.fa-file-excel-o{
+      margin-left: -10px;
+    margin-top: -12px;
+    font-size: 25px !important;
+}
+
+.wrapper .top-area a {
+    position: absolute;
+    /*top:20;*/
+    right: 350px;}
+
+    .content-form center {
+    padding: 10px 0;
+    margin-left: 115px;
+}
+hr{
+  color: none;
+}
+
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <div>
   <div class="top-area">
-    <h2>ALL EXCEL DUMP Of PRIMARY PHASE-1</h2>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="col-md-6"> <p style="font-size: 30px; color: #474747;">ALL EXCEL DUMP Of PRIMARY PHASE-2</p> </div>
+        <div class="col-md-6" style="font-size: 20px; color: #0037d2"> <center> <a href="<?php echo base_url(); ?>assets/se1.xlsx" class="statics-circle" target="_blank"><i class="fa fa-file-excel-o"></i></a>Download All Excel</center>
+     </div> 
+      </div>
+    </div>
+      <hr/>
+
   </div>
+<div>
+
+
   <div style="overflow: scroll">
     <table class="display dataTable no-footer" id="tablePerformance">
       <thead>
