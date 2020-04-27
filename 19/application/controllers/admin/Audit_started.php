@@ -389,7 +389,7 @@ class Audit_started extends CI_Controller {
         if($byPhase != '0')
         {
             if($byPhase == 1){
-            $conditions[] = "a.progress='100' AND a.complete_status='1' AND d.date_on >='2019-02-28 08:50:40' AND d.date_on <='2019-11-12 00:00:00' ";                
+            $conditions[] = "a.progress='100' AND a.complete_status='1' AND d.date_on >='2019-04-28 08:50:40' AND d.date_on <='2019-11-12 00:00:00' ";                
             }
             if($byPhase == 2){
             $conditions[] = "a.progress='100' AND a.complete_status='1' AND d.date_on >='2019-11-12 00:00:00' ";                
