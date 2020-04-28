@@ -73,7 +73,7 @@ hr{
     <div class="row">
       <div class="col-md-12">
         <div class="col-md-6"> <p style="font-size: 30px; color: #474747;">ALL EXCEL DUMP Of PRIMARY PHASE-1</p> </div>
-        <div class="col-md-6" style="font-size: 20px; color: #474747"> <center> <a href="https://github.com/animesh21/gsp-portal-new/tree/master/19/assets/files/pe1.xls" class="statics-circle" target="_blank"><i class="fa fa-file-excel-o"></i></a>Download All Excel</center>
+        <div class="col-md-6" style="font-size: 20px; color: #474747"> <center> <a href="https://github.com/animesh21/gsp-portal-new/tree/master/19/assets/files/pe1.xlsx" class="statics-circle" target="_blank"><i class="fa fa-file-excel-o"></i></a>Download All Excel</center>
      </div> 
       </div>
     </div>
