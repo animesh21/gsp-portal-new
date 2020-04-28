@@ -304,7 +304,7 @@ public function count_certificates_stuents($argID) {
    public function PdfById($argsID) {
         $this->config->load('array_config');
 	   ini_set('memory_limit', '256M');
-	   
+	   ob_clean();
         $data['performance'] = $this->Performance_model->getDataById($argsID);
         $userId = getUserId($argsID);
         $rank   = getFiled('Q1G2',$userId);
@@ -319,6 +319,7 @@ public function count_certificates_stuents($argID) {
         $this->dompdf->render();
 	   ob_end_clean();
         $this->dompdf->stream("performance-report.pdf", array("Attachment" => false));
+	   flush();
     }	
 
 
