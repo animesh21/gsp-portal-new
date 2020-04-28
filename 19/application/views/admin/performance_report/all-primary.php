@@ -35,7 +35,6 @@
     
 //   }
  // exit;
-echo base_url();
      ?>      
 
 
