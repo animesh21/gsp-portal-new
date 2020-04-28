@@ -303,6 +303,7 @@ public function count_certificates_stuents($argID) {
   
    public function PdfById($argsID) {
         $this->config->load('array_config');
+	   ini_set('memory_limit', '256M');
         $data['performance'] = $this->Performance_model->getDataById($argsID);
         $userId = getUserId($argsID);
         $rank   = getFiled('Q1G2',$userId);
