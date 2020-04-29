@@ -28,13 +28,13 @@ hr{
 
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<!-- https://github.com/animesh21/gsp-portal-new/tree/master/19/assets/files/se1.xlsx -->
 <div>
   <div class="top-area">
     <div class="row">
       <div class="col-md-12">
         <div class="col-md-6"> <p style="font-size: 30px; color: #474747;">ALL EXCEL DUMP Of PRIMARY PHASE-2</p> </div>
-        <div class="col-md-6" style="font-size: 20px; color: #0037d2"> <center> <a href="https://github.com/animesh21/gsp-portal-new/tree/master/19/assets/files/se1.xlsx" class="statics-circle" target="_blank"><i class="fa fa-file-excel-o"></i></a>Download All Excel</center>
+        <div class="col-md-6" style="font-size: 20px; color: #0037d2"> <center> <a href="" class="statics-circle" target="_blank"><i class="fa fa-file-excel-o"></i></a>Download All Excel</center>
      </div> 
       </div>
     </div>
