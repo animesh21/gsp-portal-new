@@ -993,7 +993,7 @@ if ($data == 3 || $data == 4) { ?>
                                 } elseif ($total_population_smv_percentage < 50 && $total_population_npm_percentage < 50) {
                                     $members_use_transport_type = " Percentage of Non-polluting modes of transport is: $total_population_npm_percentage  % your Percentage of Non-polluting modes less than 50% and Percentage of Sustainable motorised transport is: $total_population_smv_percentage % your Sustainable motorised vehicles percentage less than 50%. ";
                                     ; ?>
-            <h4><?php echo $members_use_transport_type; ?></h4>
+            <p><?php echo $members_use_transport_type; ?></p>
             <?php   
 			} elseif ($private_veh_population_percentage > 50) {
                                     $members_use_transport_type = " Percentage of private vehicles for transportation is: $private_veh_population_percentage  % ";
