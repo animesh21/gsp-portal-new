@@ -48,11 +48,11 @@
          
   </div>  
 
-  <p class="log-p text-center">Access to the dashboard is restricted to authorized personnel only.</p>
+<!--   <p class="log-p text-center">Access to the dashboard is restricted to authorized personnel only.</p> -->
 </div>
 
 
-<div class='badges' style='height:200px; height:200px;'></div>
+<div class='badges' style="height:110px;"></div>
 <footer class="mrg30">
   <div class="container">
     <p>Copyright © 2015 Centre for Science and Environment</p>
