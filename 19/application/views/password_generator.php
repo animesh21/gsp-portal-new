@@ -26,7 +26,7 @@
 
 <div class="container" style="padding: 20px">
   <div class="home_container">
-    <h1>Generate Digital Certificate</h1>
+    <h1>Digital certificate for GSP Online Seminar 2020</h1>
     <?php if(!empty($this->session->flashdata('data_name'))) { ?>
      <div class="alert alert-dismissible alert-danger">
       <button type="button" class="close" data-dismiss="alert">&times;</button>
