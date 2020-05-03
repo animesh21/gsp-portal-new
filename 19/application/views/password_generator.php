@@ -39,7 +39,7 @@
     <?php echo form_open('GetCertificate/getCertificate', array('class'=>'form-inline')); ?>
         <div class="form-group">
             <label for="number">Mobile Number</label> &nbsp; &nbsp;
-            <input type="text" class="form-control" id="number" name="mobile" placeholder="14845551324">
+            <input type="text" class="form-control" id="number" name="mobile" required="" placeholder="14845551324">
         </div> <br/>  <br/> 
         <button type="submit" class="btn org-btn width100" style="padding: 12px">Login</button>
     <?php echo form_close(); ?>
