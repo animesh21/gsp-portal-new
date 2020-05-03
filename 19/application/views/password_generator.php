@@ -25,7 +25,7 @@
 </header>
 
 <div class="container" style="padding: 20px">
-  <div class="home_container">
+  <div class="home_container" style="padding: 30px 15px 30px 15px">
     <h1>Digital certificate for GSP Online Seminar 2020</h1>
     <?php if(!empty($this->session->flashdata('data_name'))) { ?>
      <div class="alert alert-dismissible alert-danger">
@@ -52,7 +52,6 @@
 </div>
 
 
-<div class='badges' style="height:110px;"></div>
 <footer class="mrg30">
   <div class="container">
     <p>Copyright © 2015 Centre for Science and Environment</p>
@@ -60,6 +59,15 @@
 
 </footer>
 
+<style>
+.mrg30 {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+</style>
 
 
 </body>
