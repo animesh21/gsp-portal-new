@@ -24,6 +24,8 @@ class GetCertificate extends CI_Controller{
         $mobile = $this->input->post('mobile');
         $this->db->where("mobile",$mobile);
         $dataCertificate=$this->db->select("*")->from("gsp_new_certificate")->get()->result();
+        if(!empty($dataCertificate)){
+
         $data['teachers'] = $dataCertificate;
 
         $data['title']="GSP Digital Certificates";
@@ -35,7 +37,12 @@ class GetCertificate extends CI_Controller{
         $this->dompdf->set_paper(array(0, 0, 580, 760), 'landscape');
         $this->dompdf->render();
         $this->dompdf->stream("Digital Certificate.pdf", array("Attachment" => false));
-         
+        }
+        else{
+            $this->session->set_flashdata('data_name', 'Your Password Have Some Error! Plz Tri Again...');
+            return redirect('GetCertificate');
+        }
+
     }
 
 
