@@ -20,14 +20,14 @@
 
   echo "<div class='principal'>" . strtoupper($teacher->name_of_participant) ."</div>&nbsp;";
     $length = strlen($teacher->school_name.$teacher->district.$teacher->state);
-  if($length > 60) {
+  if($length > 61) {
   echo	"<div class='school_name1'>". strtoupper($teacher->school_name).', '.strtoupper($teacher->district).', '.strtoupper($teacher->state). "</div>";
   }else{
   	echo "<div class='school_name'>". strtoupper($teacher->school_name).', '.strtoupper($teacher->district).', '.strtoupper($teacher->state). "</div>";
   }
   
- echo "<div class='certificateno'>Certificate No: "."GSPAudit/2020/".$teacher->id." </div>
-    </div> ";
+ echo "<div class='certificateno'>Certificate No: "."GSPOnlineSeminar/2020/".$teacher->id." </div>
+   </div> ";
 		}
 	  }
 	}
@@ -51,8 +51,8 @@ body{
 
 .certificateno{ position:absolute; top:670px; left: 10px;}
 .principal{ position:relative; text-align: center; top:330px;}
-.school_name1{ position:relative; text-align: center; top:325px; font-size: 16px;}
-.school_name{ position:relative; text-align: center; top:325px;}
+.school_name1{ position:relative; text-align: center; top:328px; font-size: 17px; margin-left: 25px;}
+.school_name{ position:relative; text-align: center; top:325px; margin-left: 25px;}
 .image{position:absolute; margin-left: -40px; margin-top: -20px;}
 </style>
 
