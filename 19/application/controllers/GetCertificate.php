@@ -32,14 +32,16 @@ class GetCertificate extends CI_Controller{
         $this->load->library('dompdf_lib');
         ini_set('memory_limit', '-1');
        
-        $html1 = $this->load->view('digital-certificate-new', $data, true);
-        $this->dompdf->load_html($html1);
+        $html = $this->load->view('digital-certificate-new', $data, true);
+         $html = preg_replace('/>\s+</', "><", $html);
+
+        $this->dompdf->load_html($html);
         $this->dompdf->set_paper(array(0, 0, 580, 760), 'landscape');
         $this->dompdf->render();
         $this->dompdf->stream("Digital Certificate.pdf", array("Attachment" => false));
         }
         else{
-            $this->session->set_flashdata('data_name', 'Your Password Have Some Error! Plz Tri Again...');
+            $this->session->set_flashdata('data_name', 'Your password is incorrect. Please try again.');
             return redirect('GetCertificate');
         }
 
