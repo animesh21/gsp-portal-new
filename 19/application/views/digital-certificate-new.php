@@ -24,6 +24,7 @@
   echo	"<div class='school_name1'>". strtoupper($teacher->school_name).', '.strtoupper($teacher->district).', '.strtoupper($teacher->state). "</div>";
   }else{
   	echo "<div class='school_name'>". strtoupper($teacher->school_name).', '.strtoupper($teacher->district).', '.strtoupper($teacher->state). "</div>";
+  	echo "<div class='airquality'> To find out the air quality in your city in real-time, <br/> you can visit CPCB (Central Pollution Control Board) <br/> <a href='https://app.cpcbccr.com/AQI_India/'>website: https://app.cpcbccr.com/AQI_India/</a> </div>";
   }
   
  echo "<div class='certificateno'>Certificate No: "."GSPOnlineSeminar/2020/".$teacher->id." </div>
@@ -53,6 +54,7 @@ body{
 .principal{ position:relative; text-align: center; top:330px;}
 .school_name1{ position:relative; text-align: center; top:328px; font-size: 17px; margin-left: 25px;}
 .school_name{ position:relative; text-align: center; top:325px; margin-left: 25px;}
+.airquality{ position:relative; text-align: left; top:510px; margin-left: 22px; font-size: 13px;}
 .image{position:absolute; margin-left: -40px; margin-top: -20px;}
 </style>
 
