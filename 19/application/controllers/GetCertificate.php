@@ -41,7 +41,7 @@ class GetCertificate extends CI_Controller{
         $this->dompdf->stream("Digital Certificate.pdf", array("Attachment" => false));
         }
         else{
-            $this->session->set_flashdata('data_name', 'Your password is incorrect. Please try again.');
+            $this->session->set_flashdata('data_name', 'Your password is incorrect. Please try again. For any assistance, write to us at: support@greenschoolprogramme.org');
             return redirect('GetCertificate');
         }
 
