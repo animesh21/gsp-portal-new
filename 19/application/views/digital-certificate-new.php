@@ -55,7 +55,7 @@ body{
 .principal{ position:relative; text-align: center; top:330px;}
 .school_name1{ position:relative; text-align: center; top:328px; font-size: 17px; margin-left: 25px;}
 .school_name{ position:relative; text-align: center; top:325px; margin-left: 25px;}
-.airquality{ position:relative; text-align: left; top:515px; margin-left: 22px; font-size: 13px;}
+.airquality{ position:relative; text-align: left; top:520px; margin-left: 22px; font-size: 13px;}
 .image{position:absolute; margin-left: -40px; margin-top: -20px;}
 </style>
 
