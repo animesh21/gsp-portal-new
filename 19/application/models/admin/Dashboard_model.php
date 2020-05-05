@@ -489,18 +489,31 @@ class Dashboard_model extends CI_Model {
       }
    
       public function getSubmittedTheAudit_19data(){
-      	$this->db->where("d.date_on >=","2019-04-27 08:50:40");
-      	$this->db->where("d.date_on <","2019-11-12 00:00:00");
-	    return $this->db->select('a.*, b.name AS state_name,c.name As district_name,d.date_on')
-        ->from('gsp_school AS a')
-        ->join('states AS b', 'a.state=b.id', 'left')
-	    ->join('cities AS c', 'a.district=c.id', 'left')
-	    ->join('gsp_aduit_submitted AS d','d.userid=a.userid')       
-	    ->where('a.progress_phase_1', '100')
-	    ->where('a.complete_status','1')
-	    ->where('a.make_school_disabled',1)
-        ->order_by('a.id', 'desc')
-        ->get()->result();
+	      $this->db->where("e.date_on >=","2019-02-27 08:50:40");
+        $this->db->where("e.date_on <=","2019-11-12 00:00:00");
+    return  $this->db->select('a.*, b.name AS state_name, c.name AS district_name , d.password, e.date_on')
+                       ->from('gsp_school AS a')
+                       ->join('states AS b', 'a.state=b.id', 'left')
+                       ->join('cities AS c', 'a.district=c.id', 'left')
+                       ->join('gsp_user AS d', 'a.userid=d.id', 'left')
+                       ->join('gsp_aduit_submitted AS e','e.userid=a.userid', 'left')
+                       ->where('a.progress_phase_1', '100')                       
+                       ->where('a.complete_status','1')
+                       ->where('a.make_school_disabled',1)
+                       ->order_by('a.id', 'desc')
+                       ->get()->result();
+//       	$this->db->where("d.date_on >=","2019-04-27 08:50:40");
+//       	$this->db->where("d.date_on <","2019-11-12 00:00:00");
+// 	    return $this->db->select('a.*, b.name AS state_name,c.name As district_name,d.date_on')
+//         ->from('gsp_school AS a')
+//         ->join('states AS b', 'a.state=b.id', 'left')
+// 	    ->join('cities AS c', 'a.district=c.id', 'left')
+// 	    ->join('gsp_aduit_submitted AS d','d.userid=a.userid')       
+// 	    ->where('a.progress_phase_1', '100')
+// 	    ->where('a.complete_status','1')
+// 	    ->where('a.make_school_disabled',1)
+//         ->order_by('a.id', 'desc')
+//         ->get()->result();
       }
 	 
 	
