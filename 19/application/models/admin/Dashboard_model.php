@@ -489,7 +489,7 @@ class Dashboard_model extends CI_Model {
       }
    
       public function getSubmittedTheAudit_19data(){
-	      $this->db->where("e.date_on >=","2019-02-27 08:50:40");
+	      $this->db->where("e.date_on >=","2019-04-27 08:50:40");
         $this->db->where("e.date_on <=","2019-11-12 00:00:00");
     return  $this->db->select('a.*, b.name AS state_name, c.name AS district_name , d.password, e.date_on')
                        ->from('gsp_school AS a')
