@@ -22,6 +22,7 @@
     $length = strlen($teacher->school_name.$teacher->district.$teacher->state);
   if($length > 61) {
   echo	"<div class='school_name1'>". strtoupper($teacher->school_name).', '.strtoupper($teacher->district).', '.strtoupper($teacher->state). "</div>";
+  echo "<div class='airquality'> To find out the air quality in your city in real-time, <br/> you can visit CPCB (Central Pollution Control Board) <br/> website: <a href='https://app.cpcbccr.com/AQI_India/'>https://app.cpcbccr.com/AQI_India/</a> </div>";
   }else{
   	echo "<div class='school_name'>". strtoupper($teacher->school_name).', '.strtoupper($teacher->district).', '.strtoupper($teacher->state). "</div>";
   	echo "<div class='airquality'> To find out the air quality in your city in real-time, <br/> you can visit CPCB (Central Pollution Control Board) <br/> website: <a href='https://app.cpcbccr.com/AQI_India/'>https://app.cpcbccr.com/AQI_India/</a> </div>";
