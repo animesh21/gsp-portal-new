@@ -31,7 +31,7 @@ class Audit_started extends CI_Controller {
         $data['title'] = 'Home | Audit State Wise';
         $data['states'] = getStates();
 	    $data['states']['0']="All"; 
-	    sort($data['states']); 
+	    asort($data['states']); 
         $this->load->view('admin/includes/template', $data);
     }
 
@@ -40,7 +40,7 @@ class Audit_started extends CI_Controller {
         $data['title'] = 'Home | Audit State Wise';
         $data['states'] = getStates();
         $data['states']['0']="All";
-	sort($data['states']); 
+	asort($data['states']); 
         $data['val'] = $this->input->post('state');
         $data['school'] = $this->input->post('school');
 	$data['state'] = $this->input->post('state');
