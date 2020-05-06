@@ -190,17 +190,19 @@ function checkUpdate(){
     <br>
     <br>
     <div class="form-group">
-      <label for="username" class="control-label"><span class="cube">10</span>Enter Mobile number:</label>
-      <div class="clearfix">&nbsp;</div>
-      <input type="text" name="mobile" class="text empty form-control" id="mobile" placeholder="Mobile Number" readonly="" value="<?php echo $data["mobile"]; ?>">
-    </div>
-    <br>
-    <div class="form-group">
-      <label for="username" class="control-label"><span class="cube">11</span>Principal's Name:</label>
+      <label for="username" class="control-label"><span class="cube">10</span>Principal's Name:</label>
       <div class="clearfix">&nbsp;</div>
       <input type="text" name="principle_name" class="text empty form-control" id="principle_name" tabindex="1"
                    placeholder="Principal's Name:" value="<?php echo $data["principle_name"]; ?>" onchange = 'checkUpdate();' readonly="">
     </div>
+	<br>  
+    <div class="form-group">
+      <label for="username" class="control-label"><span class="cube">11</span>Enter Mobile number:</label>
+      <div class="clearfix">&nbsp;</div>
+      <input type="text" name="mobile" class="text empty form-control" id="mobile" placeholder="Mobile Number" readonly="" value="<?php echo $data["mobile"]; ?>">
+    </div>
+    
+    
     <br>
     <div class="form-group">
       <label for="username" class="control-label"><span class="cube">12</span>Enter GSP Coordinator's Name: <a
@@ -229,8 +231,7 @@ function checkUpdate(){
     </div>
     <br>
     <div class="form-group">
-      <label for="username" class="control-label"><span class="cube">15</span>Please select the appropriate
-      category for your school <a class="tt"
+      <label for="username" class="control-label"><span class="cube">15</span>Please select the appropriate category for your school: <a class="tt"
                                             data-tooltip="Please choose what is applicable. If 60—or 75—per cent of your school’s population belongs to one category and the balance to another, select the category the majority of students belong to. For example: If 75 per cent of the students are day boarders and 25 per cent are residential, select ‘Day Boarding’. But if 50 per cent of the students are day boarders and 50 per cent are residential, select ‘Day Boarding + Residential’."><span
                             class="badge">?</span></a></label>
       <div class="radio">
@@ -278,8 +279,7 @@ function checkUpdate(){
     </div>
     <br>
     <div class="form-group">
-      <label for="username" class="control-label"><span class="cube">16</span>How many shifts does your school
-      have <a class="tt" data-tooltip="Select Not applicable in the case of residential school"><span
+      <label for="username" class="control-label"><span class="cube">16</span>How many shifts does your school have: <a class="tt" data-tooltip="Select Not applicable in the case of residential school"><span
                             class="badge">?</span></a></label>
       <div class="radio">
         <label>
