@@ -950,9 +950,7 @@ if ($data['Q5F1S1'] == 'Y') {
   <?php
 }
 ?>
-  <label class="control-label"><span class="cube">2(a)(1)</span> How
-  many students out of total student population bring home-made
-  lunch? </label>
+  <label class="control-label"><span class="cube">2(a)(1)</span> How many students out of the total student population bring lunch from home? </label>
   <br>
   <input type="number" min="0" name="Q5F1S2" id="Q5F1S2A"
              class="form-control space-textbox"
