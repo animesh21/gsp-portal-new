@@ -7,7 +7,7 @@
   <div class="col-lg-5">
     <div class="input-group">
       <h5>States</h5>
-      <?php sort($states); ?>
+      
       <?php echo form_dropdown('state', $states, $this->input->post('state'), array('class' => 'form-control', 'id' => 'country-select')); ?> </div>
   </div>
   <div class="col-lg-5">
