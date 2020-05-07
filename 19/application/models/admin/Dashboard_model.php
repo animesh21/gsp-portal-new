@@ -282,7 +282,7 @@ class Dashboard_model extends CI_Model {
                         ->join('states AS b', 'a.state=b.id', 'left')
 						->join('cities AS c', 'a.district=c.id', 'left')
 						->where('progress >=', 10)
-						->where('progress <', 100)
+						->where('progress <=', 100)
 						->where('a.complete_status =', '0')
 						->order_by('a.id', 'desc')
 						->get()->result();
