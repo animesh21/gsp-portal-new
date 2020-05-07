@@ -282,7 +282,7 @@ class Dashboard_model extends CI_Model {
                         ->join('states AS b', 'a.state=b.id', 'left')
 						->join('cities AS c', 'a.district=c.id', 'left')
 						->where('progress >=', 10)
-						->where('progress <', 100)
+						->where('progress <=', 100)
 						->where('a.complete_status =', '0')
 						->order_by('a.id', 'desc')
 						->get()->result();
@@ -352,7 +352,7 @@ class Dashboard_model extends CI_Model {
 	}
 	
 	public function school_start_but_not_complete_phase_2()
-	{	$this->db->where('a.date_added >=', '2019-11-12 00:00:00');
+	{	//$this->db->where('a.date_added >=', '2019-11-12 00:00:00');
 		$this->db->where("a.make_school_disabled","1");
 		return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
 					->from('gsp_school AS a')
@@ -460,7 +460,7 @@ class Dashboard_model extends CI_Model {
       }
 	  
 	   public function getstartedtheaudit_19data(){
-	$this->db->where("a.date_added <=","2019-11-10 00:00:00");
+	//$this->db->where("a.date_added <=","2019-11-10 00:00:00");
 	$this->db->where("a.make_school_disabled","1");
 	$this->db->where("a.complete_status",'0');
         return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
@@ -489,23 +489,36 @@ class Dashboard_model extends CI_Model {
       }
    
       public function getSubmittedTheAudit_19data(){
-      	$this->db->where("d.date_on >=","2019-04-27 00:00:00");
-      	$this->db->where("d.date_on <","2019-11-12 00:00:00");
-	    return $this->db->select('a.*, b.name AS state_name,c.name As district_name,d.date_on')
-        ->from('gsp_school AS a')
-        ->join('states AS b', 'a.state=b.id', 'left')
-	    ->join('cities AS c', 'a.district=c.id', 'left')
-	    ->join('gsp_aduit_submitted AS d','d.userid=a.userid')       
-	    ->where('a.progress_phase_1', '100')
-	    ->where('a.complete_status','1')
-	    ->where('a.make_school_disabled',1)
-        ->order_by('a.id', 'desc')
-        ->get()->result();
+	      $this->db->where("e.date_on >=","2019-04-27 08:50:40");
+        $this->db->where("e.date_on <=","2019-11-12 00:00:00");
+    return  $this->db->select('a.*, b.name AS state_name, c.name AS district_name , d.password, e.date_on')
+                       ->from('gsp_school AS a')
+                       ->join('states AS b', 'a.state=b.id', 'left')
+                       ->join('cities AS c', 'a.district=c.id', 'left')
+                       ->join('gsp_user AS d', 'a.userid=d.id', 'left')
+                       ->join('gsp_aduit_submitted AS e','e.userid=a.userid', 'left')
+                       ->where('a.progress_phase_1', '100')                       
+                       ->where('a.complete_status','1')
+                       ->where('a.make_school_disabled',1)
+                       ->order_by('a.id', 'desc')
+                       ->get()->result();
+//       	$this->db->where("d.date_on >=","2019-04-27 08:50:40");
+//       	$this->db->where("d.date_on <","2019-11-12 00:00:00");
+// 	    return $this->db->select('a.*, b.name AS state_name,c.name As district_name,d.date_on')
+//         ->from('gsp_school AS a')
+//         ->join('states AS b', 'a.state=b.id', 'left')
+// 	    ->join('cities AS c', 'a.district=c.id', 'left')
+// 	    ->join('gsp_aduit_submitted AS d','d.userid=a.userid')       
+// 	    ->where('a.progress_phase_1', '100')
+// 	    ->where('a.complete_status','1')
+// 	    ->where('a.make_school_disabled',1)
+//         ->order_by('a.id', 'desc')
+//         ->get()->result();
       }
 	 
 	
 	public function getStartedAuditButDidNotComplete_19data(){
-	$this->db->where("a.date_added <=","2019-11-10 00:00:00");
+	//$this->db->where("a.date_added <=","2019-11-10 00:00:00");
 	$this->db->where("a.make_school_disabled","1");	   
         return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
         ->from('gsp_school AS a')

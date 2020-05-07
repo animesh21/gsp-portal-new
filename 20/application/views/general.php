@@ -27,7 +27,7 @@
 <div class="form-group">
   <label class="control-label" data-toggle="tooltip" data-placement="top"
                    title="If your school has classes from Grade 6 to 11, you response will be lowest level of grade: Grade 6 and Highest level of grade: Grade 11. If your school has only one Grade (Grade 7) then your response for both will be Grade 7."><span
-                        class="cube">1</span>How many levels does your school have <a class="tt"
+                        class="cube">1</span>How many levels does your school have? <a class="tt"
                                                                                       data-tooltip="If your school has classes from Grade 6 to 11, your response will be lowest level of grade: Grade 6 and Highest level of grade: Grade 11. If your school has only one Grade (Grade 7) then your response for both will be Grade 7"><span
                             class="badge">?</span></a></label>
   <!--<audio controls>
@@ -91,8 +91,7 @@
 </div>
 <div class="clearfix">&nbsp;</div>
 <div class="form-group">
-  <label for="username" class="control-label"><span class="cube">3</span>Which board of education does the
-  school follow <a class="tt"
+  <label for="username" class="control-label"><span class="cube">3</span>Which board of education does the school follow? <a class="tt"
                                  data-tooltip="For Other: For example: school-specific curriculum board of education, open learning, etc"><span
                             class="badge">?</span></a></label>
   <div class="answer-item radio-item">
@@ -154,8 +153,7 @@
     <input type="hidden" id="state" value="<?php if (isset($school['state'])) echo $school['state']; ?>">
     <div class="clearfix">&nbsp;</div>
     <div class="form-group">
-      <label class="control-label"><span class="cube">4(a)</span> What is the total permanent population
-      of the school <a class="tt"
+      <label class="control-label"><span class="cube">4(a)</span> What is the total permanent population of the school? <a class="tt"
                                          data-tooltip="Permanent members are students, teachers, non-teaching staff such as technical and administrative staff, guards, etc."><span
                                     class="badge">?</span></a></label>
       <div class="form-group row">
@@ -266,7 +264,7 @@
       </div>
       <div class="clearfix">&nbsp;</div>
       <div class=" form-group">
-        <label for="ex1"><span class="cube">4(b)</span>How many visitors visit your school <a class="tt"
+        <label for="ex1"><span class="cube">4(b)</span>How many visitors visit your school? <a class="tt"
                                                                                                               data-tooltip="Visitors are students from other schools, teachers from other schools, technicians, NGOs, contractors and laborers, vendors, chief guests, etc . Please provide the average number of visitors for any month, between August - October."><span
                                         class="badge">?</span></a></label>
         <input class="form-control" id="Q5G1" type="number" min="0" name="Q5G1"
@@ -292,8 +290,7 @@
                     ?>
       <div class="form-group">
         <label><span class="cube">5</span>What is the total number of working days of your school in a
-        year? <a class="tt" data-tooltip="
-                  On an average, a school runs for 220-230 days in a year"><span class="badge">?</span></a> </label>
+        year? <a class="tt" data-tooltip="On an average, a day scholar school runs for 220-230 days in a year."><span class="badge">?</span></a> </label>
         <input class="form-control" id="Q6G1" type="number" min="0" max="366" name="Q6G1"
                                placeholder="<?php if (isset($data['Q6G1'])) echo $data['Q6G1'] ?>"
                                value="<?php echo set_value('Q6G1'); ?>"/>
@@ -402,7 +399,7 @@
       </div>
       <br>
       <div class="form-group">
-        <label class="control-label"><span class="cube">8</span>What type is your school:
+        <label class="control-label"><span class="cube">8</span>What type is your school?
         <!-- <a class="tt" data-tooltip=""><span class="badge">?</span></a> -->
         </label>
         <div class="radio">

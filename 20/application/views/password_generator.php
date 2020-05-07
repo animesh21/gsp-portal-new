@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -25,14 +25,22 @@
 </header>
 
 <div class="container" style="padding: 20px">
-  <div class="home_container">
-    <h1>Generate Digital Certificate</h1>
+  <div class="home_container" style="padding: 30px 15px 30px 15px; width: 55%;">
+    <h1>DIGITAL CERTIFICATE FOR GSP ONLINE SEMINAR APRIL 2020</h1>
+    <?php if(!empty($this->session->flashdata('data_name'))) { ?>
+     <div class="alert alert-dismissible alert-danger">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      
+      <strong><?php echo $this->session->flashdata('data_name'); ?></strong>
+    </div>
+  <?php } ?>
     <p style="color: red"></p>
      <div class="row" style="padding: 30px; margin: 0px; text-align: center;">
     <?php echo form_open('GetCertificate/getCertificate', array('class'=>'form-inline')); ?>
-        <div class="form-group">
-            <label for="number">Mobile Number</label> &nbsp; &nbsp;
-            <input type="text" class="form-control" id="number" name="mobile" placeholder="14845551324">
+        <div class="form-group" style="width: 100%">
+            <label for="number">Registered Mobile Number<a class="tt" data-tooltip="Please enter the mobile number used at the time of online registration."><span
+                            class="badge">?</span></a></label> &nbsp; &nbsp;
+            <input type="text" class="form-control" id="number" name="mobile" required="" placeholder="14845551324">
         </div> <br/>  <br/> 
         <button type="submit" class="btn org-btn width100" style="padding: 12px">Login</button>
     <?php echo form_close(); ?>
@@ -41,11 +49,10 @@
          
   </div>  
 
-  <p class="log-p text-center">Access to the dashboard is restricted to authorized personnel only.</p>
+<!--   <p class="log-p text-center">Access to the dashboard is restricted to authorized personnel only.</p> -->
 </div>
 
 
-<div class='badges' style='height:200px; height:200px;'></div>
 <footer class="mrg30">
   <div class="container">
     <p>Copyright © 2015 Centre for Science and Environment</p>
@@ -53,6 +60,42 @@
 
 </footer>
 
+<style>
+.mrg30 {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.tt {
+    display: inline-block;
+    color: #fff;
+    height: 27px;
+    width: auto;
+    text-align: left;
+    }
+
+    a{
+    text-decoration: none;
+}
+
+
+
+.badge {
+    background-color: #9b9796;
+    font-size: 19px;
+    display: inline-block;
+    margin-left: 5px;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: top;
+    line-height: 27px;
+    font-family: 'Lato Bold', sans-serif;
+    font-weight: normal;
+}
+</style>
 
 
 </body>

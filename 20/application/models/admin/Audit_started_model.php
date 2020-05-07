@@ -2355,7 +2355,7 @@ public function getExcel2017Data() {
     
     public function getExcelsumbittedtheaudit() {
     $output = "";
-    $this->db->where("e.date_on >=","2019-04-28 08:50:40");
+    $this->db->where("e.date_on >=","2019-04-27 08:50:40");
         $this->db->where("e.date_on <=","2019-11-12 00:00:00");
     $arrRecord = $this->db->select('a.*, b.name AS state_name, c.name AS district_name , d.password, e.date_on')
                        ->from('gsp_school AS a')

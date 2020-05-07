@@ -209,7 +209,7 @@ You would require at least 5 to 10 of your schoolmates in the Food audit team. T
     <div class="col-xs-1"> 4</div>
     <div class="col-xs-3">
       <input class="form-control space-textbox" id="Q2F4S1" type="text" name="Q2F4S1"
-                               placeholder="<?php if (isset($data['Q2F4S1'])) echo $data['Q2F4S1']; ?>"
+                               placeholder="<?php if (isset($data['Q2F4S1'])) echo $data['Q2F4S1'] ?>"
                                value="<?php echo set_value('Q2F4S1'); ?>"/>
     </div>
     <div class="col-xs-3">
@@ -441,17 +441,13 @@ You would require at least 5 to 10 of your schoolmates in the Food audit team. T
 <input type="hidden" id="Q4G1S3" value="<?php if (isset($other['Q4G1S3'])) echo $other['Q4G1S3'] ?>"/>
 <div class="form-group">
   <label>
-  <h6>Task 2: Find out about the food service in your school<a class="tt"
-                                                                                 data-tooltip="Packaged food is any food item which is commercially prepared, processed for a longer shelf life and is ready to eat and drink"><span
-                                    class="badge">?</span></a></h6>
+  <h6>Task 2: Find out about the food service in your school<a class="tt" data-tooltip="Any place, permanent or temporary, run by school, outsourced to vendors, self help groups, shopkeepers to sell products during/after/before school timings/duration should be considered."><span class="badge">?</span></a></h6>
   </label>
   <div class="form-group">
     <input type="hidden" id="Q1S1" value="<?php if (isset($other['Q1S1'])) echo $other['Q1S1']; ?>">
     <?php if (empty($data['Q4F1'])) if (isset($other['Q1S1'])) if ($other['Q1S1'] >= 3) $data['Q4F1'] = 'Y' ?>
     <label class="control-label"><span class="cube">1</span> Does your school have a provision/space
-    to sell packaged food items within the campus<a class="tt"
-                                                                        data-tooltip="Any place, permanent or temporary, run by school, outsourced to vendors, self help groups, shopkeepers to sell products during/after/before school timings/duration should be considered."><span
-                                    class="badge">?</span></a></label>
+    to sell packaged food items within the campus<a class="tt" data-tooltip="Packaged food is any food item which is commercially prepared, processed for a longer shelf life and is ready to eat and drink."><span class="badge">?</span></a></label>
     <ul class="list-inline">
       <li>
         <label class="radio-inline text-gray">
@@ -2395,7 +2391,7 @@ You would require at least 5 to 10 of your schoolmates in the Food audit team. T
                     size per
                     document
                     should not
-                    exceed 500
+                    exceed 100
                     KB.<br/>
                     <br/>
                     <button class="btn uploadbtn upload"
