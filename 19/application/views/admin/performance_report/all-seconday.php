@@ -1,6 +1,6 @@
 <div>
   <div class="top-area">
-    <h2>ALL EXCEL DUMP Of SECONDARY PHASE-1</h2>
+    <h2>ALL EXCEL DUMP of SECONDARY PHASE-1</h2>
   </div>
   <div style="overflow: scroll">
     <table class="display dataTable no-footer" id="tablePerformance">
