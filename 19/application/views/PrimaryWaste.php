@@ -21,7 +21,7 @@
 
                        $School_name = getSchoolNameBYUniqueId($user_id);
                        echo $School_name;
-                        ?></span></div>
+                        ?></span></div> 
             <ul>
                 <!--- <li><a href="http://www.greenschoolsprogramme.org/GSP-Audit2016-Questions.pdf" target="_blank" onclick="_gaq.push([\" _trackevent\",\"download\",\"pdf\",this.href])"=""><img src="http://www.greenschoolsprogramme.org/audit2016/images/pdf-icon16.png"> Audit Questionnaire</a> |</li>-->
                 <li><a href="<?php echo base_url('logout'); ?>">Logout</a></li>
