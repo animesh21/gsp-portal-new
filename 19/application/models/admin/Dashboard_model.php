@@ -481,9 +481,9 @@ class Dashboard_model extends CI_Model {
         ->from('gsp_school AS a')
         ->join('states AS b', 'a.state=b.id', 'left')
 	    ->join('cities AS c', 'a.district=c.id', 'left')
-	    ->join('gsp_aduit_submitted AS d','a.userid=d.userid','left')	
-	    ->where('a.progress_phase_1', '100')
-	    ->where('a.complete_status','0')
+	    //->join('gsp_aduit_submitted AS d','a.userid=d.userid','left')	
+	    //->where('a.progress_phase_1', '100')
+	    ->where('a.phase1','1')
         ->order_by('a.id', 'desc')
         ->get()->result();
       }
