@@ -649,6 +649,28 @@ function getFiledNum($argWhere, $argUserID) {
     }
     }
 
+
+/*
+ * Get Filed Value
+ */ 
+
+    if (!function_exists('getFiledValue')) {
+
+    function getFiledValue($argWhere, $argUserID) {
+        $CI = get_instance();
+        $temp = $CI->db->select('answer')
+                        ->from('gsp_answers')
+                        ->where('userid', $argUserID)
+                        ->where('questionid', $argWhere)
+                        ->get()->result();
+                        // echo $CI->db->last_query();
+        return $temp;
+    }
+
+}
+
+
+
 /*
  * Get Filed
  */
