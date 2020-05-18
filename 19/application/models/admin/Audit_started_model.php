@@ -2286,15 +2286,32 @@ public function getExcel2017Data() {
         $output = "";
     $this->db->where("a.make_school_disabled","1"); 
         $arrRecord = $this->db->select('a.*, b.name AS state_name, c.name AS district_name , d.password')
-                        ->from('gsp_school AS a')
+                        
+		
+			->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
                         ->join('cities AS c', 'a.district=c.id', 'left')
                         ->join('gsp_user AS d', 'a.userid=d.id', 'left')
-                            ->where("a.date_added <=","2019-11-10 00:00:00")
-                        ->where('a.progress_phase_1', '100')
-                        ->where('a.complete_status','0')
+                        //->join('gsp_aduit_submitted AS d','a.userid=d.userid','left') 
+                        //->where('a.progress_phase_1', '100')
+                        ->where('a.phase1','1')
                         ->order_by('a.id', 'desc')
                         ->get()->result();
+		
+		
+		
+		
+		
+		
+		
+//                         ->join('states AS b', 'a.state=b.id', 'left')
+//                         ->join('cities AS c', 'a.district=c.id', 'left')
+//                         ->join('gsp_user AS d', 'a.userid=d.id', 'left')
+//                             ->where("a.date_added <=","2019-11-10 00:00:00")
+//                         ->where('a.progress_phase_1', '100')
+//                         ->where('a.complete_status','0')
+//                         ->order_by('a.id', 'desc')
+//                         ->get()->result();
         
         $k = 1;
         $isdCode = '+91';
