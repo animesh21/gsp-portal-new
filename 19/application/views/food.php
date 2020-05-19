@@ -472,7 +472,7 @@ value="<?php echo set_value('Q2F4S3'); ?>"/>
 placeholder="<?php if (isset($data['Q2F4S2'])) echo $data['Q2F4S2']; ?>"
 value="<?php echo set_value('Q2F4S2'); ?>"/>
     </div>
-    ; </div>
+    </div>
   <div class="form-group1 row">
     <div class="col-xs-1"> 5</div>
     <div class="col-xs-3">
@@ -756,7 +756,7 @@ if ($data['Q5F1'] == 'Y') {
   <?php
 }
 ?>
-  <label class="control-label">Please upload picture of Mid-day meal being
+  <label class="control-label">Please upload pictures of Mid-day meal being
   served</label>
   <br/>
   <button class="btn uploadbtn upload" data-id="Mid Day Meal" data-toggle="modal"
