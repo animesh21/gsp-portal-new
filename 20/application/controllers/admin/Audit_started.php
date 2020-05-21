@@ -293,11 +293,11 @@ class Audit_started extends CI_Controller {
 //      $query = "SELECT a.date_added,a.address1,a.coname,a.address2,a.pincode,a.std,a.telephone,a.schoolemail,a.principle_name,a.coemail,a.comobile,a.password,a.mobile,a.principle_name,a.id,a.Q3G1,a.Q1S1,a.Q2G1,a.Q9G1, a.udise, a.userid,a.country, a.name, a.city, a.progress, $filed, b.name AS state_name, c.name AS district_name, a.remark, a.phase FROM gsp_filter AS a LEFT JOIN states AS b ON a.state=b.id LEFT JOIN cities AS c ON a.district=c.id  WHERE"; 
      if($byPhase != '0'){
 
-        $query = "SELECT a.id,a.userid,a.udise,a.name,a.address1,a.address2,a.country,a.city,a.pincode,a.std,a.telephone,a.schoolemail,a.principle_name,a.mobile,a.coname,a.coemail,a.comobile,a.date_added,a.password,a.id,a.Q3G1,a.Q1S1,a.Q2G1,a.Q9G1,a.progress,a.remark, a.coemail, a.schoolemail, b.name AS state_name, c.name AS district_name FROM gsp_school AS a LEFT JOIN states AS b ON a.state=b.id LEFT JOIN cities AS c ON a.district=c.id LEFT JOIN gsp_aduit_submitted AS d ON a.id = d.school_id WHERE" ;
+        $query = "SELECT a.id,a.userid,a.udise,a.name,a.address1,a.address2,a.country,a.city,a.pincode,a.std,a.telephone,a.schoolemail,a.principle_name,a.mobile,a.coname,a.coemail,a.comobile,a.date_added,a.password,a.id,a.Q3G1,a.Q1S1,a.Q2G1,a.Q9G1,a.progress,a.remark, a.coemail, a.schoolemail,a.partner_status, b.name AS state_name, c.name AS district_name FROM gsp_school AS a LEFT JOIN states AS b ON a.state=b.id LEFT JOIN cities AS c ON a.district=c.id LEFT JOIN gsp_aduit_submitted AS d ON a.id = d.school_id WHERE" ;
             $conditions = array();
      }else{
 
-         $query = "SELECT a.id,a.userid,a.udise,a.name,a.address1,a.address2,a.country,a.city,a.pincode,a.std,a.telephone,a.schoolemail,a.principle_name,a.mobile,a.coname,a.coemail,a.comobile,a.date_added,a.password,a.id,a.Q3G1,a.Q1S1,a.Q2G1,a.Q9G1,a.progress,a.remark, $filed, b.name AS state_name, c.name AS district_name FROM gsp_school AS a LEFT JOIN states AS b ON a.state=b.id LEFT JOIN cities AS c ON a.district=c.id WHERE";
+         $query = "SELECT a.id,a.userid,a.udise,a.name,a.address1,a.address2,a.country,a.city,a.pincode,a.std,a.telephone,a.schoolemail,a.principle_name,a.mobile,a.coname,a.coemail,a.comobile,a.date_added,a.password,a.id,a.Q3G1,a.Q1S1,a.Q2G1,a.Q9G1,a.progress,a.remark, a.partner_status, $filed, b.name AS state_name, c.name AS district_name FROM gsp_school AS a LEFT JOIN states AS b ON a.state=b.id LEFT JOIN cities AS c ON a.district=c.id WHERE";
             $conditions = array();
      }    
        
@@ -317,7 +317,11 @@ class Audit_started extends CI_Controller {
                 $conditions[] = " a.district='$byDistrict'";
             }
         }   
-
+	//school $byPartner
+	  if (!empty($byPartner)) {
+            $conditions[] = " a.partner_status = '$byPartner'";
+        }
+	      
         //school Name
         if (!empty($bySchoolName)) {
             $conditions[] = " a.name LIKE '%$bySchoolName%'";
