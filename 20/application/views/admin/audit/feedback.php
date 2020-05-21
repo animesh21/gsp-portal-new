@@ -238,16 +238,16 @@ $('#frmSendblukemail').submit(function(e){
 		</div>
 		<div class="form-group col-md-4">
 		    <label for="pwd">Select Name :</label>
-		    <select class="form-control" name="schoolname">
+		    <select class="form-control" name="partner_status">
 			<option value="">Select School</option>
-			<option value="Satya Bharti">Satya Bharti</option>
-			<option value="Mount Litera">Mount Litera</option>
-			<option value="Kendriya Vidyalaya">KVS</option>
-			<option value="Jawahar Navodya">JNV</option>
-			    <option value="Church of South India">Church of South India</option>
-			<option value="Satya Bharti School">Satya Bharti School</option>
-			<option value="BF Quality Support Programme">BF Quality Support Programme</option>
-			<option value="Montfortian Education Foundation">Montfortian Education Foundation</option>
+			<option value="6">Satya Bharti</option>
+			<option value="4">Mount Litera</option>
+			<option value="3">KVS</option>
+			<option value="2">JNV</option>
+			    <option value="1">Church of South India</option>
+			<option value="7">Satya Bharti School</option>
+			<option value="8">BF Quality Support Programme</option>
+			<option value="4">Montfortian Education Foundation</option>
 		    </select>
 		</div>
 		<div class="form-group col-md-4">
