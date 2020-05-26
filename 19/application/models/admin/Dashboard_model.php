@@ -477,15 +477,15 @@ class Dashboard_model extends CI_Model {
 	  
 	  
   public function getCompletedAuditButNotSubmitted_19data(){
-	//$this->db->where("a.date_added <=","2019-11-10 00:00:00");
+	$this->db->where("a.date_added <=","2019-11-10 00:00:00");
 	$this->db->where("a.make_school_disabled","1");  
         return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
         ->from('gsp_school AS a')
         ->join('states AS b', 'a.state=b.id', 'left')
 	    ->join('cities AS c', 'a.district=c.id', 'left')
-	    //->join('gsp_aduit_submitted AS d','a.userid=d.userid','left')	
-	    //->where('a.progress_phase_1', '100')
-	    ->where('a.phase1','1')
+	    ->join('gsp_aduit_submitted AS d','a.userid=d.userid','left')	
+	    ->where('a.progress_phase_1', '100')
+	    //->where('a.phase1','1')
         ->order_by('a.id', 'desc')
         ->get()->result();
       }
