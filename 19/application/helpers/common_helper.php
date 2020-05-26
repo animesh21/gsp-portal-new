@@ -60,7 +60,7 @@ if(!function_exists('getYOYComparison')){
         $CI = & get_instance();
     $CI->db->where('school_id',$schoolId);
         $temp = $CI->db->select("*")->from('tbl_yoy')->get()->row();
-    $comparisonArr=array("data_2018"=>$temp->data_2018,"data_2017"=>$temp->data_2017,"data_2016"=>$temp->data_2016,"data_2015"=>$temp->data_2015);
+    $comparisonArr=array("data_2019"=>$temp->data_2019,"data_2018"=>$temp->data_2018,"data_2017"=>$temp->data_2017,"data_2016"=>$temp->data_2016,"data_2015"=>$temp->data_2015);
         return $comparisonArr;
     }
 }
