@@ -187,7 +187,7 @@ class Audit_started_2017 extends CI_Controller {
 
     public function excel_phase2() {
         $this->load->dbutil();
-        $row = $this->Audit_started_model->getExcelData_phase2();
+        $row = $this->Audit_started_model->getExcelData_phase1();
         $name = 'registration_2018.csv';
         force_download($name, $row);
     }
