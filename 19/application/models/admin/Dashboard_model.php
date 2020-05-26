@@ -366,7 +366,7 @@ class Dashboard_model extends CI_Model {
 	}
 	
 	public function getschool_start_but_not_complete_phase_2() {
-		$this->db->where('date_added >=', '2019-11-12 00:00:00');
+		//$this->db->where('date_added >=', '2019-11-12 00:00:00');
 		$this->db->where('progress >', 5);
 		$this->db->where('progress <=', 75);
 		$this->db->where('complete_status =', '0');
