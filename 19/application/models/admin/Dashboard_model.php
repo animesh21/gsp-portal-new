@@ -203,14 +203,14 @@ class Dashboard_model extends CI_Model {
 	/**GSP Audit Pahse -2**/
 	/*******************************************************************/
 	public function schoolCount_phase_2() {
-	    $this->db->where('date_added >=', '2019-11-12 00:00:00');
+	    //$this->db->where('date_added >=', '2019-11-12 00:00:00');
 	    $this->db->where("make_school_disabled","1");
             return $this->db->count_all_results('gsp_school') ;
 	
     }
 
     public function getData_phase_2() {
-// 	    $this->db->where('date_added >=', '2019-11-12 00:00:00');
+// 	    //$this->db->where('date_added >=', '2019-11-12 00:00:00');
         return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
@@ -276,7 +276,7 @@ class Dashboard_model extends CI_Model {
 	public function school_started_audit_phase_2()
 	{
 		$this->db->where("a.make_school_disabled","1");
-// 		$this->db->where('date_added >=', '2019-11-12 00:00:00');
+// 		//$this->db->where('date_added >=', '2019-11-12 00:00:00');
 		return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
@@ -289,7 +289,7 @@ class Dashboard_model extends CI_Model {
 	}
 	
 	public function getschool_started_audit_phase_2() {
-// 		$this->db->where('date_added >=', '2019-11-12 00:00:00');
+// 		//$this->db->where('date_added >=', '2019-11-12 00:00:00');
 		$this->db->where('progress >=', 10);
 		$this->db->where('progress <', 100);
 		$this->db->where('complete_status =', '0');
@@ -303,7 +303,7 @@ class Dashboard_model extends CI_Model {
 	
 	public function getschool_that_complete_audit_phase_2() {
 		$this->db->where('progress = 100');
-		$this->db->where('date_added >=', '2019-11-12 00:00:00');
+		//$this->db->where('date_added >=', '2019-11-12 00:00:00');
 		$this->db->where("make_school_disabled","1");
 		return $this->db->count_all_results('gsp_school');
         
@@ -366,7 +366,7 @@ class Dashboard_model extends CI_Model {
 	}
 	
 	public function getschool_start_but_not_complete_phase_2() {
-		//$this->db->where('date_added >=', '2019-11-12 00:00:00');
+		////$this->db->where('date_added >=', '2019-11-12 00:00:00');
 		$this->db->where('progress >', 5);
 		$this->db->where('progress <=', 75);
 		$this->db->where('complete_status =', '0');
@@ -377,7 +377,7 @@ class Dashboard_model extends CI_Model {
 	
 	public function schools_not_start_the_audit_phase_2()
 	{
-		$this->db->where('date_added >=', '2019-11-12 00:00:00');
+		//$this->db->where('date_added >=', '2019-11-12 00:00:00');
 		return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
 						->from('gsp_school AS a')
 						->join('states AS b', 'a.state=b.id', 'left')
@@ -391,7 +391,7 @@ class Dashboard_model extends CI_Model {
 	public function getschools_not_start_the_audit_phase_2() {
 		$this->db->where('progress =','5');
 		$this->db->where('complete_status =', '0');
-		$this->db->where('date_added >=', '2019-11-12 00:00:00');
+		//$this->db->where('date_added >=', '2019-11-12 00:00:00');
 		return $this->db->count_all_results('gsp_school');
     }
 	
@@ -399,7 +399,7 @@ class Dashboard_model extends CI_Model {
 		$this->db->where('progress = 100');
 		$this->db->where('progress = 100');
 		$this->db->where('complete_status','0');
-		$this->db->where('date_added >=', '2019-11-12 00:00:00');
+		//$this->db->where('date_added >=', '2019-11-12 00:00:00');
 		$this->db->where("make_school_disabled","1");
 		return $this->db->count_all_results('gsp_school');
         
@@ -616,7 +616,7 @@ class Dashboard_model extends CI_Model {
 	}
 
 	public function combinded_total_school() {
-// 	    $this->db->where('date_added >=', '2019-11-12 00:00:00');
+// 	    //$this->db->where('date_added >=', '2019-11-12 00:00:00');
         return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
