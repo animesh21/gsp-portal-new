@@ -1,6 +1,6 @@
 <h1>Dashboard <small class="h5" style="color:#e86549 !important; font-weight:600;">( Audit Phase 2 )</small></h1>
 <div class="schools-statics "> <a href="../<?php base_url()?>dashboard/registration_2019_phase_2">
-  <div class="statics-circle"> <span><?php echo $Schools_pahse2;?></span>
+  <div class="statics-circle"> <span><?php echo count($Schools_pahse2);?></span>
     <label>view</label>
   </div>
   </a>
