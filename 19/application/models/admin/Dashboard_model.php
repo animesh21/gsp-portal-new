@@ -282,7 +282,7 @@ class Dashboard_model extends CI_Model {
                         ->join('states AS b', 'a.state=b.id', 'left')
 						->join('cities AS c', 'a.district=c.id', 'left')
 						->where('progress >=', 10)
-						->where('progress <', 100)
+						->where('progress <=', 100)
 						->where('a.complete_status =', '0')
 						->order_by('a.id', 'desc')
 						->get()->result();
@@ -291,7 +291,7 @@ class Dashboard_model extends CI_Model {
 	public function getschool_started_audit_phase_2() {
 // 		//$this->db->where('date_added >=', '2019-11-12 00:00:00');
 		$this->db->where('progress >=', 10);
-		$this->db->where('progress <', 100);
+		$this->db->where('progress <=', 100);
 		$this->db->where('complete_status =', '0');
 		$this->db->where("make_school_disabled","1");
 		return $this->db->count_all_results('gsp_school');
