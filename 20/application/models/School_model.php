@@ -108,7 +108,7 @@ class School_model extends CI_Model
             $msg .= "Thank you for registering your school '" . $query->name . "', for GSP (Green Schools Programme) Audit 2020. Your account has been successfully created.<br><br>";
             $msg .= "GSP Audit 2020 will now open in July 2020. To participate, please remember to save your username and password given below.<br><br>";
 //            $msg .= "The launch date of GSP Audit 2017 will be announced at www.greenschoolsprogramme.org, in July 2017.<br><br>";
-            $msg .= "URL: http://www.greenschoolsprogramme.org/audit/19 <br/><br/>";
+            $msg .= "URL: http://www.greenschoolsprogramme.org/audit/20 <br/><br/>";
             $msg .= "Username: " . $query->coemail . "<br><br>";
             $msg .= "Password: " . $query->password . "<br><br>";
             $msg .= "In case of any further queries please feel free to write back to us.<br><br>";
