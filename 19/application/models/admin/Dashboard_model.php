@@ -366,7 +366,7 @@ class Dashboard_model extends CI_Model {
 	}
 	
 	public function getschool_start_but_not_complete_phase_2() {
-		////$this->db->where('date_added >=', '2019-11-12 00:00:00');
+		$this->db->where('date_added >=', '2019-11-12 00:00:00');
 		$this->db->where('progress >', 5);
 		$this->db->where('progress <=', 75);
 		$this->db->where('complete_status =', '0');
@@ -377,7 +377,7 @@ class Dashboard_model extends CI_Model {
 	
 	public function schools_not_start_the_audit_phase_2()
 	{
-		//$this->db->where('date_added >=', '2019-11-12 00:00:00');
+		$this->db->where('date_added >=', '2019-11-12 00:00:00');
 		return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
 						->from('gsp_school AS a')
 						->join('states AS b', 'a.state=b.id', 'left')
