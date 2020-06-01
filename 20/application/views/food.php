@@ -291,9 +291,9 @@ margin-bottom:20px;
 
 
     <li><a href="<?php echo base_url('logout'); ?>">Logout</a></li>
-    <li>|</li>
+<!--     <li>|</li>
     <li><a class="lptext" title="Change Password Form" data-toggle="modal" data-target="#ChangePass"
-href="#ChangePass" rel="shadowbox;width=580;height=500;">Change Password</a></li>
+href="#ChangePass" rel="shadowbox;width=580;height=500;">Change Password</a></li> -->
   </ul>
 </div>
 <div id="pprg" class="newprog progress" style="text-align:center">
@@ -303,9 +303,9 @@ href="#ChangePass" rel="shadowbox;width=580;height=500;">Change Password</a></li
   <h1>FOOD <small class="pull-right" style="position: relative;
     top: -28px;
     font-weight: bolder;"><i class="h6"><strong>If the new changes are not saved, please press Ctrl+F5</strong></i></small></h1>
-  <div class="video"><a class="lptext" href="#" data-toggle="modal" data-target="#videoModal"><img
+<!--   <div class="video"><a class="lptext" href="#" data-toggle="modal" data-target="#videoModal"><img
 src="<?php echo base_url(); ?>assets/img/video-icon.png"
-style="width: 45px; height: 40px; margin-top:47px;"></a></div>
+style="width: 45px; height: 40px; margin-top:47px;"></a></div> -->
 </div>
 <?php echo form_open('food/set', array('id' => 'food')); ?>
 <div class="form-group">
@@ -472,7 +472,7 @@ value="<?php echo set_value('Q2F4S3'); ?>"/>
 placeholder="<?php if (isset($data['Q2F4S2'])) echo $data['Q2F4S2']; ?>"
 value="<?php echo set_value('Q2F4S2'); ?>"/>
     </div>
-    ; </div>
+    </div>
   <div class="form-group1 row">
     <div class="col-xs-1"> 5</div>
     <div class="col-xs-3">
@@ -756,7 +756,7 @@ if ($data['Q5F1'] == 'Y') {
   <?php
 }
 ?>
-  <label class="control-label">Please upload picture of Mid-day meal being
+  <label class="control-label">Please upload pictures of Mid-day meal being
   served</label>
   <br/>
   <button class="btn uploadbtn upload" data-id="Mid Day Meal" data-toggle="modal"

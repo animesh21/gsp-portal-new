@@ -1,6 +1,6 @@
 <h1>Dashboard <small class="h5" style="color:#e86549 !important; font-weight:600;">( Gsp Audit 2019 Combined )</small></h1>
 <div class="schools-statics "> <a href="../<?php base_url()?>dashboard/combinded_total_school">
-  <div class="statics-circle"> <span><?php echo $total_school;?></span>
+  <div class="statics-circle"> <span><?php echo count($total_school);?></span>
     <label>view</label>
   </div>
   </a>

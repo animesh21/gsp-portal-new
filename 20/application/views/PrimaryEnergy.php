@@ -25,9 +25,9 @@
   <ul>
     <!-- <li><a href="http://www.greenschoolsprogramme.org/GSP-Audit2016-Questions.pdf" target="_blank" onclick="_gaq.push([\" _trackevent\",\"download\",\"pdf\",this.href])"=""><img src="http://www.greenschoolsprogramme.org/audit2016/images/pdf-icon16.png"> Audit Questionnaire</a> |</li>-->
     <li><a href="<?php echo base_url('logout'); ?>">Logout</a></li>
-    <li>|</li>
+<!--     <li>|</li>
     <li><a class="lptext" title="Change Password Form" data-toggle="modal" data-target="#ChangePass"
-                       href="#ChangePass" rel="shadowbox;width=580;height=500;">Change Password</a></li>
+                       href="#ChangePass" rel="shadowbox;width=580;height=500;">Change Password</a></li> -->
   </ul>
 </div>
 <div id="pprg" class="newprog progress" style="text-align:center">
@@ -37,9 +37,9 @@
   <h1>ENERGY <span style="text-transform:capitalize">(Primary)</span> <small class="pull-right" style="position: relative;
     top: -28px;
     font-weight: bolder;"><i class="h6"><strong>If the new changes are not saved, please press Ctrl+F5</strong></i></small></h1>
-  <div class="video"><a class="lptext" href="#" data-toggle="modal" data-target="#videoModal"><img
+<!--   <div class="video"><a class="lptext" href="#" data-toggle="modal" data-target="#videoModal"><img
                             src="<?php echo base_url(); ?>assets/img/video-icon.png"
-                            style="width: 45px; height: 40px; margin-top:47px;"></a></div>
+                            style="width: 45px; height: 40px; margin-top:47px;"></a></div> -->
 <!--  <p> Prior to answering these questions, please consider using a meter to measure the monthly average amount
     of energy used from the respective energy sources.</p>-->
   <p class="unit"><strong>The unit of measurement to be used in the Energy section is megajoule (mj).</strong> </p>

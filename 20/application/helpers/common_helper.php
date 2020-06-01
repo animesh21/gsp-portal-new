@@ -60,7 +60,7 @@ if(!function_exists('getYOYComparison')){
         $CI = & get_instance();
     $CI->db->where('school_id',$schoolId);
         $temp = $CI->db->select("*")->from('tbl_yoy')->get()->row();
-    $comparisonArr=array("data_2018"=>$temp->data_2018,"data_2017"=>$temp->data_2017,"data_2016"=>$temp->data_2016,"data_2015"=>$temp->data_2015);
+    $comparisonArr=array("data_2019"=>$temp->data_2019,"data_2018"=>$temp->data_2018,"data_2017"=>$temp->data_2017,"data_2016"=>$temp->data_2016,"data_2015"=>$temp->data_2015);
         return $comparisonArr;
     }
 }
@@ -648,6 +648,28 @@ function getFiledNum($argWhere, $argUserID) {
         return $test;
     }
     }
+
+
+/*
+ * Get Filed Value
+ */ 
+
+    if (!function_exists('getFiledValue')) {
+
+    function getFiledValue($argWhere, $argUserID) {
+        $CI = get_instance();
+        $temp = $CI->db->select('answer')
+                        ->from('gsp_answers')
+                        ->where('userid', $argUserID)
+                        ->where('questionid', $argWhere)
+                        ->get()->result();
+                        // echo $CI->db->last_query();
+        return $temp;
+    }
+
+}
+
+
 
 /*
  * Get Filed

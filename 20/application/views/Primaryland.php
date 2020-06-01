@@ -43,8 +43,8 @@
                         ?></span></div>
             <ul>
                 <li><a href="<?php echo base_url('logout'); ?>">Logout</a></li>
-                <li>|</li>
-                <li><a class="lptext" title="Change Password Form" data-toggle="modal" data-target="#ChangePass" href="#ChangePass" rel="shadowbox;width=580;height=500;">Change Password</a></li>
+<!--                 <li>|</li>
+                <li><a class="lptext" title="Change Password Form" data-toggle="modal" data-target="#ChangePass" href="#ChangePass" rel="shadowbox;width=580;height=500;">Change Password</a></li> -->
             </ul>
         </div>
         <div id="pprg" class="newprog progress" style="text-align:center">
@@ -54,7 +54,7 @@
             <h1>LAND <span style="text-transform:capitalize">(Primary)</span> <small class="pull-right" style="position: relative;
     top: -28px;
     font-weight: bolder;"><i class="h6"><strong>If the new changes are not saved, please press Ctrl+F5</strong></i></small></h1>
-            <div class="video"> <a class="lptext" href="#" data-toggle="modal" data-target="#videoModal"><img src="<?php echo base_url(); ?>assets/img/video-icon.png" style="width: 45px; height: 40px; margin-top:47px;"></a></div>
+<!--             <div class="video"> <a class="lptext" href="#" data-toggle="modal" data-target="#videoModal"><img src="<?php echo base_url(); ?>assets/img/video-icon.png" style="width: 45px; height: 40px; margin-top:47px;"></a></div> -->
         </div>
         <p> The GSP audit helps the school community draw up a roadmap for sustainable use of its land.<br>
             <strong class="unit"> The unit of measurement to be used in the Land section is Square Meter (m2).</strong> </p>

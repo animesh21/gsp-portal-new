@@ -76,9 +76,18 @@ class Performance_report extends CI_Controller {
         $this->config->load('array_config');
         $data['main'] = 'admin/performance_report/total-point-calculation';
         $data['title'] = 'Home | Total Calculation';
-        $data['record'] = $this->Performance_model->getTotalCalculation();
-        $this->load->view('admin/includes/template', $data);
-    }	
+	    $data['record1'] = $this->db->select('a.school_id, a.userid, a.name, a.category, a.population, a.codinator_mail, a.codinator_mobile, a.state, a.district, a.higest_level, a.air_points, a.energy_points, a.food_points, a.land_points, a.water_points, a.waste_points, b.name AS state_name, c.name AS district_name')->from('tbl_total AS a')
+	       ->join('states AS b', 'a.state=b.id', 'left')
+	       ->join('cities AS c', 'a.district=c.id', 'left')
+	       ->get()->result();
+		
+	    $data['record2'] = $this->db->select('a.school_id, a.userid, a.name, a.category, a.population, a.codinator_mail, a.codinator_mobile, a.state, a.district, a.higest_level, a.air_points, a.energy_points, a.food_points, a.land_points, a.water_points, a.waste_points, b.name AS state_name, c.name AS district_name')->from('tbl_total_phase2 AS a')
+	       ->join('states AS b', 'a.state=b.id', 'left')
+	       ->join('cities AS c', 'a.district=c.id', 'left')
+	       ->get()->result();
+	       $data['record'] = array_merge($data['record1'],$data['record2']);
+	      $this->load->view('admin/includes/template', $data);
+    }
  
   public function allExcelDump() {
         $this->config->load('array_config');

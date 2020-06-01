@@ -2,6 +2,8 @@
 <?php 
  if(!empty($_GET['userid'])){
    $result=getYOYComparison($_GET['userid']);
+   // echo "<pre>";
+   // print_r($result);exit;
  }
 ?>
 <div class="wrapper" style="padding:0px;">
@@ -34,6 +36,15 @@
       <strong>
       <?php if($result['data_2018']!=='NA' && !empty($result['data_2018'])){echo "Participated In Audit";}else{ echo "Not Participated In Audit"; } ?>
       </strong> </div>
+
+      <div class="col-md-3 text-center">
+      <div class="gauge">
+        <div id="gauge05" style="margin: 0 auto;width:100%"></div>
+      </div>
+      <strong>
+      <?php if($result['data_2019']!=='NA' && !empty($result['data_2019'])){echo "Participated In Audit";}else{ echo "Not Participated In Audit"; } ?>
+      </strong> </div>
+
     <div class="clearfix">&nbsp;</div>
     <div class="clearfix">&nbsp;</div>
     <div class="clearfix">&nbsp;</div>
@@ -1182,11 +1193,11 @@
              <?php if(!empty($_GET['userid'])){
               $sr_no=0;
             $school_id=$_GET['userid'];
-            $yoyData=getYOYComparisonAllDataNewFields($school_id);
+            $yoyData=getYOYComparisonAllData($school_id);
             
               foreach($yoyData as $yoyDatas){
              ?>
-            <td><?php echo $yoyDatas->Q11E1; ?></td>
+            <td><?php echo $yoyDatas->state_subsidy_availed_Y_N; ?></td>
 
       <?php } } ?>
             </tr>
@@ -1195,11 +1206,11 @@
              <?php if(!empty($_GET['userid'])){
               $sr_no=0;
             $school_id=$_GET['userid'];
-            $yoyData=getYOYComparisonAllDataNewFields($school_id);
+            $yoyData=getYOYComparisonAllData($school_id);
             
               foreach($yoyData as $yoyDatas){
              ?>
-            <td><?php echo $yoyDatas->Q13E1; ?></td>
+            <td><?php echo $yoyDatas->installed_capacity_of_solar_photovoltaic_PV_panels_KW; ?></td>
 
       <?php } } ?>
             </tr>
@@ -1208,11 +1219,11 @@
              <?php if(!empty($_GET['userid'])){
               $sr_no=0;
             $school_id=$_GET['userid'];
-            $yoyData=getYOYComparisonAllDataNewFields($school_id);
+            $yoyData=getYOYComparisonAllData($school_id);
             
               foreach($yoyData as $yoyDatas){
              ?>
-            <td><?php echo $yoyDatas->Q14E1; ?></td>
+            <td><?php echo $yoyDatas->connected_load_of_school; ?></td>
 
       <?php } } ?>
             </tr>
@@ -1221,11 +1232,11 @@
              <?php if(!empty($_GET['userid'])){
               $sr_no=0;
             $school_id=$_GET['userid'];
-            $yoyData=getYOYComparisonAllDataNewFields($school_id);
+            $yoyData=getYOYComparisonAllData($school_id);
             
               foreach($yoyData as $yoyDatas){
              ?>
-            <td><?php echo $yoyDatas->Q15E1; ?></td>
+            <td><?php echo $yoyDatas->size_of_invertors_kva; ?></td>
 
       <?php } } ?>
             </tr>
@@ -1234,15 +1245,11 @@
              <?php if(!empty($_GET['userid'])){
               $sr_no=0;
             $school_id=$_GET['userid'];
-            $yoyData=getYOYComparisonAllDataNewFields($school_id);
+            $yoyData=getYOYComparisonAllData($school_id);
             
               foreach($yoyData as $yoyDatas){
              ?>
-            <td><?php if($yoyDatas->Q16E1=='1'){echo "Off-grid" ;}
-                elseif($yoyDatas->Q16E1=='2'){echo "On-grid net metering" ;}
-                elseif($yoyDatas->Q16E1=='3'){echo "On-grid gross metering" ;} 
-                else{echo '000.000';}
-                ?></td>
+            <td><?php echo $yoyDatas->operational_model_solar_rooftop_off_grid_on_grid_net_metering; ?></td>
 
       <?php } } ?>
             </tr>
@@ -1251,11 +1258,11 @@
              <?php if(!empty($_GET['userid'])){
               $sr_no=0;
             $school_id=$_GET['userid'];
-            $yoyData=getYOYComparisonAllDataNewFields($school_id);
+            $yoyData=getYOYComparisonAllData($school_id);
             
               foreach($yoyData as $yoyDatas){
              ?>
-            <td><?php echo $yoyDatas->Q19E1; ?></td>
+            <td><?php echo $yoyDatas->power_generated_by_solar_rooftop_panel_in_a_year_KWH; ?></td>
 
       <?php } } ?>
             </tr>
@@ -1264,15 +1271,11 @@
              <?php if(!empty($_GET['userid'])){
               $sr_no=0;
             $school_id=$_GET['userid'];
-            $yoyData=getYOYComparisonAllDataNewFields($school_id);
+            $yoyData=getYOYComparisonAllData($school_id);
 
               foreach($yoyData as $yoyDatas){
              ?>
-            <td><?php if($yoyDatas->Q9E1S1020=='1'){echo "Wet cleaning at least once a week., ";}
-                if($yoyDatas->Q9E1S1021=='2'){echo "Dry cleaning daily, ";}
-                if($yoyDatas->Q9E1S1022=='3'){echo "Annual maintenance contract with the vendor, ";}
-                if($yoyDatas->Q9E1S1023=='4'){echo "Regular monitoring of the integrated software";}
-                if($yoyDatas->Q9E1S1020!='1' && $yoyDatas->Q9E1S1021!='2' && $yoyDatas->Q9E1S1022!='3' && $yoyDatas->Q9E1S1023!='4'){echo '000.000';} ?></td>
+            <td><?php echo $yoyDatas->operation_and_maintenance_om_practices; ?></td>
 
       <?php } } ?>
             </tr>
@@ -1281,17 +1284,11 @@
              <?php if(!empty($_GET['userid'])){
               $sr_no=0;
             $school_id=$_GET['userid'];
-            $yoyData=getYOYComparisonAllDataNewFields($school_id);
+            $yoyData=getYOYComparisonAllData($school_id);
 
               foreach($yoyData as $yoyDatas){
              ?>
-            <td><?php if($yoyDatas->Q9E1S101=='1'){echo "Biofuel, ";}
-                elseif($yoyDatas->Q9E1S102=='2'){echo "Wind, ";}
-                elseif($yoyDatas->Q9E1S103=='3'){echo "Small hydro, ";}
-                elseif($yoyDatas->Q27E3=='4'){echo "Other, ";}
-                elseif($yoyDatas->Q27E3!=''){echo ", ". $yoyDatas->Q27E1;}
-                elseif($yoyDatas->Q27E2=='5'){echo "Not applicable";}
-                else{echo '000.000';}?></td>
+            <td><?php echo $yoyDatas->non_solar_biofuel_biogas_biomass; ?></td>
 
       <?php } } ?>
             </tr>
@@ -1300,11 +1297,11 @@
              <?php if(!empty($_GET['userid'])){
               $sr_no=0;
             $school_id=$_GET['userid'];
-            $yoyData=getYOYComparisonAllDataNewFields($school_id);
+            $yoyData=getYOYComparisonAllData($school_id);
             
               foreach($yoyData as $yoyDatas){
              ?>
-            <td><?php echo $yoyDatas->Q29E1; ?></td>
+            <td><?php echo $yoyDatas->installed_capacity_of_non_solar_re_system; ?></td>
 
       <?php } } ?>
             </tr>
@@ -1313,11 +1310,11 @@
              <?php if(!empty($_GET['userid'])){
               $sr_no=0;
             $school_id=$_GET['userid'];
-            $yoyData=getYOYComparisonAllDataNewFields($school_id);
+            $yoyData=getYOYComparisonAllData($school_id);
             
               foreach($yoyData as $yoyDatas){
              ?>
-            <td><?php echo $yoyDatas->Q30E1; ?></td>
+            <td><?php echo $yoyDatas->connected_load_of_nonsolar_re_system; ?></td>
 
       <?php } } ?>
             </tr>
@@ -1326,11 +1323,11 @@
              <?php if(!empty($_GET['userid'])){
               $sr_no=0;
             $school_id=$_GET['userid'];
-            $yoyData=getYOYComparisonAllDataNewFields($school_id);
+            $yoyData=getYOYComparisonAllData($school_id);
             
               foreach($yoyData as $yoyDatas){
              ?>
-            <td><?php echo $yoyDatas->Q33E1; ?></td>
+            <td><?php echo $yoyDatas->size_of_invertors_KVA_of_nonsolar_re_system; ?></td>
 
       <?php } } ?>
             </tr>
@@ -1339,11 +1336,11 @@
              <?php if(!empty($_GET['userid'])){
               $sr_no=0;
             $school_id=$_GET['userid'];
-            $yoyData=getYOYComparisonAllDataNewFields($school_id);
+            $yoyData=getYOYComparisonAllData($school_id);
             
               foreach($yoyData as $yoyDatas){
              ?>
-            <td><?php echo $yoyDatas->Q31E1; ?></td>
+            <td><?php echo $yoyDatas->power_generated_by_nonsolar_re_system_in_a_year_KWH; ?></td>
 
       <?php } } ?>
             </tr>
@@ -1352,13 +1349,11 @@
              <?php if(!empty($_GET['userid'])){
               $sr_no=0;
             $school_id=$_GET['userid'];
-            $yoyData=getYOYComparisonAllDataNewFields($school_id);
+            $yoyData=getYOYComparisonAllData($school_id);
             
               foreach($yoyData as $yoyDatas){
              ?>
-            <td><?php if($yoyDatas->Q9E1S1026=='1'){echo "Annual maintenance contract with the vendor, ";}
-                if($yoyDatas->Q9E1S1027=='2'){echo "Regular monitoring of the integrated software";}
-                if($yoyDatas->Q9E1S1026!='1' && $yoyDatas->Q9E1S1027!='2' ) { echo '000.000' ;} ?></td>
+            <td><?php echo $yoyDatas->operation_and_maintenance_OM_practices_of_nonsolar_re_system; ?></td>
 
       <?php } } ?>
             </tr>
@@ -1367,30 +1362,24 @@
              <?php if(!empty($_GET['userid'])){
               $sr_no=0;
             $school_id=$_GET['userid'];
-            $yoyData=getYOYComparisonAllDataNewFields($school_id);
+            $yoyData=getYOYComparisonAllData($school_id);
             
               foreach($yoyData as $yoyDatas){
              ?>
-            <td><?php if($yoyDatas->Q9E1S106=='1'){echo "Food waste, ";}
-                if($yoyDatas->Q9E1S107=='2'){echo "Animal solid waste (cow dung, etc.), ";}
-                if($yoyDatas->Q9E1S108=='3'){echo "Wood chips/ pellets, ";}
-                if($yoyDatas->Q9E1S109=='4'){echo "Grass/straw based/dry leaves, ";}
-                if($yoyDatas->Q9E1S1010=='5'){echo "Others, ";}
-                if($yoyDatas->Q34E1!=='000.000'){echo $yoyDatas->Q34E1;}
-                if($yoyDatas->Q9E1S106!='1' && $yoyDatas->Q9E1S107!='2' && $yoyDatas->Q9E1S108!='3' && $yoyDatas->Q9E1S109!='4' && $yoyDatas->Q9E1S1010!='5') {echo '000.000' ;} ?></td>
+            <td><?php echo $yoyDatas->biomass_type_used_in_biofuel; ?></td>
 
       <?php } } ?>
             </tr>
             <tr role="row">
-            <td>Waste used by  biomass plant per day (kg)</td>
+            <td>Waste used by biomass plant per day (kg)</td>
              <?php if(!empty($_GET['userid'])){
               $sr_no=0;
             $school_id=$_GET['userid'];
-            $yoyData=getYOYComparisonAllDataNewFields($school_id);
+            $yoyData=getYOYComparisonAllData($school_id);
             
               foreach($yoyData as $yoyDatas){
              ?>
-            <td><?php echo $yoyDatas->Q38E1; ?></td>
+            <td><?php echo $yoyDatas->waste_used_by_biomass_plant_per_day_KG; ?></td>
 
       <?php } } ?>
             </tr>
@@ -1399,14 +1388,11 @@
              <?php if(!empty($_GET['userid'])){
               $sr_no=0;
             $school_id=$_GET['userid'];
-            $yoyData=getYOYComparisonAllDataNewFields($school_id);
+            $yoyData=getYOYComparisonAllData($school_id);
             
               foreach($yoyData as $yoyDatas){
              ?>
-            <td><?php if($yoyDatas->Q9E1S1011=='1'){echo "Electricity, ";}
-                if($yoyDatas->Q9E1S1012=='2'){echo "Heating, ";}
-                if($yoyDatas->Q9E1S1013=='3'){echo "Cooking, ";}
-                if($yoyDatas->Q9E1S1011!='1' && $yoyDatas->Q9E1S1012!='2' && $yoyDatas->Q9E1S1013!='2') {echo '000.000' ;} ?></td>
+            <td><?php echo $yoyDatas->purpose_energy_from_biofuel_electricity_cooking_heating; ?></td>
 
       <?php } } ?>
             </tr>
@@ -1415,11 +1401,11 @@
              <?php if(!empty($_GET['userid'])){
               $sr_no=0;
             $school_id=$_GET['userid'];
-            $yoyData=getYOYComparisonAllDataNewFields($school_id);
+            $yoyData=getYOYComparisonAllData($school_id);
             
               foreach($yoyData as $yoyDatas){
              ?>
-            <td><?php echo $yoyDatas->Q42E1; ?></td>
+            <td><?php echo $yoyDatas->capacity_of_the_biogas_unit_in_terms_of_mole_day; ?></td>
 
       <?php } } ?>
             </tr>
@@ -1428,13 +1414,10 @@
              <?php if(!empty($_GET['userid'])){
               $sr_no=0;
             $school_id=$_GET['userid'];
-            $yoyData=getYOYComparisonAllDataNewFields($school_id);
-            
+            $yoyData=getYOYComparisonAllData($school_id);
               foreach($yoyData as $yoyDatas){
              ?>
-            <td><?php if($yoyDatas->Q43E1=='1'){echo "Yes";}
-                elseif($yoyDatas->Q43E1=='2'){echo "No";}
-                 ?></td>
+            <td><?php echo $yoyDatas->do_you_add_water_in_biogas_unit; ?></td>
 
       <?php } } ?>
             </tr>
@@ -1443,11 +1426,11 @@
              <?php if(!empty($_GET['userid'])){
               $sr_no=0;
             $school_id=$_GET['userid'];
-            $yoyData=getYOYComparisonAllDataNewFields($school_id);
+            $yoyData=getYOYComparisonAllData($school_id);
             
               foreach($yoyData as $yoyDatas){
              ?>
-            <td><?php echo $yoyDatas->Q44E1; ?></td>
+            <td><?php echo $yoyDatas->if_yes_quanity_of_water_L_added_per_kg_of_waste; ?></td>
 
       <?php } } ?>
             </tr>
@@ -1456,17 +1439,11 @@
              <?php if(!empty($_GET['userid'])){
               $sr_no=0;
             $school_id=$_GET['userid'];
-            $yoyData=getYOYComparisonAllDataNewFields($school_id);
+            $yoyData=getYOYComparisonAllData($school_id);
             
               foreach($yoyData as $yoyDatas){
              ?>
-            <td><?php if($yoyDatas->Q9E1S1014=='1'){echo "Inlet pipe, ";}
-                if($yoyDatas->Q9E1S1015=='2'){echo "Drum/chamber, ";}
-                if($yoyDatas->Q9E1S1016=='3'){echo "Outlet pipe, ";}
-                if($yoyDatas->Q9E1S1017=='4'){echo "Scrubber, ";}
-                if($yoyDatas->Q9E1S1018=='5'){echo "Gas outlet, ";}
-                if($yoyDatas->Q9E1S1019=='6'){echo "Gas pump, ";}
-                if($yoyDatas->Q9E1S1014!='1' && $yoyDatas->Q9E1S1015!='2' && $yoyDatas->Q9E1S1016!='3' && $yoyDatas->Q9E1S1017!='4' && $yoyDatas->Q9E1S1018!='5' && $yoyDatas->Q9E1S1019!='6') {echo '000.000' ;} ?></td>
+            <td><?php echo $yoyDatas->components_of_biogas_unit; ?></td>
 
       <?php } } ?>
             </tr>
@@ -1475,11 +1452,11 @@
              <?php if(!empty($_GET['userid'])){
               $sr_no=0;
             $school_id=$_GET['userid'];
-            $yoyData=getYOYComparisonAllDataNewFields($school_id);
+            $yoyData=getYOYComparisonAllData($school_id);
             
               foreach($yoyData as $yoyDatas){
              ?>
-            <td><?php echo $yoyDatas->Q51E1; ?></td>
+            <td><?php echo $yoyDatas->hours_of_cooking_done_per_day_using_biogas; ?></td>
 
       <?php } } ?>
             </tr>
@@ -1488,11 +1465,11 @@
              <?php if(!empty($_GET['userid'])){
               $sr_no=0;
             $school_id=$_GET['userid'];
-            $yoyData=getYOYComparisonAllDataNewFields($school_id);
+            $yoyData=getYOYComparisonAllData($school_id);
             
               foreach($yoyData as $yoyDatas){
              ?>
-            <td><?php echo $yoyDatas->Q52E1; ?></td>
+            <td><?php echo $yoyDatas->other_sources_for_cooking; ?></td>
 
       <?php } } ?>
             </tr>
@@ -1501,11 +1478,11 @@
              <?php if(!empty($_GET['userid'])){
               $sr_no=0;
             $school_id=$_GET['userid'];
-            $yoyData=getYOYComparisonAllDataNewFields($school_id);
+            $yoyData=getYOYComparisonAllData($school_id);
             
               foreach($yoyData as $yoyDatas){
              ?>
-            <td><?php echo $yoyDatas->Q53E1; ?></td>
+            <td><?php echo $yoyDatas->hours_of_cooking_done_per_day_using_other_sources; ?></td>
 
       <?php } } ?>
             </tr>
@@ -5202,6 +5179,186 @@
         });
     
 </script>
+
+<script>
+        $(function () {
+            // Issue #602 workaround
+            Highcharts.seriesTypes.gauge.prototype.drawLegendSymbol = 
+            Highcharts.seriesTypes.column.prototype.drawLegendSymbol;
+            var chartColors = ['#828282','#424242'];
+            var gaugePBColors = ['#ff0000','#ffa500','#ffff00','#008000'];
+            
+            var chart = new Highcharts.Chart({
+                chart: {
+                    renderTo: 'gauge05',
+                    type: 'gauge',
+                    backgroundColor: 'none'
+                },
+                
+                colors: [
+                    chartColors[0],
+                    chartColors[1]
+                ],
+                
+                credits: {
+                    enabled: false
+                },
+            
+                title: {
+                    text: 'GSP Audit 2019',
+                    style: {
+                        fontFamily: 'arial,helvetica,sans-serif',
+                        color: chartColors[1],
+                        fontWeight: 'bold',
+                        fontSize: '24px'
+                    }
+                },
+                
+                legend: {
+                    align: 'left',
+                    verticalAlign: 'bottom',
+                    layout: 'vertical',
+                    x: 0,
+                    y: -112,
+                    floating: true,
+                    borderWidth:0
+                },
+                
+                navigation: {
+                    buttonOptions: {
+                        floating: true,
+                        align: 'right',
+                        verticalAlign: 'bottom',
+                        y: -134,
+                        backgroundColor: 'white',
+                        borderWidth: 0,
+                        symbolSize: 20
+                    },
+                    menuStyle: {
+                        borderWidth: 0,
+                        backgroundColor: '#424242',
+                        borderRadius: '7px',
+                        padding: '5px 0',
+                        overflow: 'hidden',
+                        BoxShadow: '2px 2px 4px rgba(255,0,0,1) !important'
+                    },
+                    menuItemStyle: {
+                        fontSize: '12px',
+                        color: '#ffffff',
+                        padding: '3px 12px 5px'
+                    },
+                    menuItemHoverStyle: {
+                        backgroundColor: '#828282'
+                    }
+                },
+                
+                exporting: {
+                    buttons: {
+                        exportButton: {
+                            symbolFill: '#424242',
+                            symbolStroke: '#424242',
+                            hoverSymbolFill: '#828282',
+                            hoverSymbolStroke: '#828282'
+                        },
+                        printButton: {
+                            enabled: false
+                        }
+                    }
+                },
+                
+                pane: [{
+                    startAngle: -90,
+                    endAngle: 90,
+                    background: null
+                }],                        
+            
+                yAxis: [{
+                    min: 1,
+                    max: 100,
+                    lineColor: 'transparent',
+                    tickWidth: 2,
+                    tickLength: 12,
+                    tickColor: 'transparent', /*'#ffffff',*/
+                    minorTickColor: 'transparent',
+                    labels: {
+                        rotation: null,
+                        distance: 15,
+                        zIndex: 1
+                    },
+                    plotBands: [{
+                        from: 0,
+                        to: 34.9,
+                        color: gaugePBColors[0],
+                        innerRadius: '50%',
+                        outerRadius: '100%'
+                    },{
+                        from: 35,
+                        to: 49.9,
+                        color: gaugePBColors[1],
+                        innerRadius: '50%',
+                        outerRadius: '100%'
+                    },{
+                        from: 50,
+                        to: 69.9,
+                        color: gaugePBColors[2],
+                        innerRadius: '50%',
+                        outerRadius: '100%'
+                    },{
+                        from: 70,
+                        to: 100,
+                        color: gaugePBColors[3],
+                        innerRadius: '50%',
+                        outerRadius: '100%'
+                    }],
+                    pane: 0
+                }],
+                
+                plotOptions: {
+                    gauge: {
+                        dial: {
+                            radius: '100%',
+                            baseWidth: 7,
+                            baseLength: 14,
+                            rearLength: 0
+                        },
+                        pivot: {
+                            radius: 3,
+                            backgroundColor: chartColors[1]
+                        },
+                        showInLegend: true
+                    }
+                },
+                    
+            
+                series: [{
+                    name: 'School Performace GSP Audit 2019',
+                    data: [<?php if(!empty($result['data_2019'])){ if($result['data_2019']!=='NA'){echo $result['data_2019'];}else{ echo "0"; }}else{ echo "0";} ?>],
+                    dial: {
+                        backgroundColor: chartColors[0]
+                    },
+                    yAxis: 0,
+                    dataLabels: {
+                        enabled: true,
+                        x: 44,
+                        y: -157,
+                        color: chartColors[0],
+                        borderWidth: 0,
+                        borderRadius: 7,
+                        backgroundColor: '#ffffff',
+                        padding: 1,
+                        style: {
+                            fontSize: '20px',
+                            fontWeight: 'bold',
+                            lineHeight: '40px'
+                        }
+                    }
+                }]
+              }
+            );
+        });
+    
+</script>
+
 <style type="text/css">
 .gauge {
     max-width: 370px;

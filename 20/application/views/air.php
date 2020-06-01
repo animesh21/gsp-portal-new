@@ -86,9 +86,9 @@
                         ?></span></div>
       <ul>
         <li><a href="<?php echo base_url('logout'); ?>">Logout</a></li>
-        <li>|</li>
+<!--         <li>|</li>
         <li><a class="lptext" title="Change Password Form" data-toggle="modal" data-target="#ChangePass"
-                       href="#ChangePass" rel="shadowbox;width=580;height=500;">Change Password</a></li>
+                       href="#ChangePass" rel="shadowbox;width=580;height=500;">Change Password</a></li> -->
       </ul>
     </div>
     <div id="pprg" class="newprog progress" style="text-align:center">
@@ -98,9 +98,9 @@
       <h1>AIR <small class="pull-right" style="position: relative;
     top: -28px;
     font-weight: bolder;"><i class="h6"><strong>If the new changes are not saved, please press Ctrl+F5</strong></i></small></h1>
-      <div class="video"><a class="lptext" href="#" data-toggle="modal" data-target="#myModal"> <img
+<!--       <div class="video"><a class="lptext" href="#" data-toggle="modal" data-target="#myModal"> <img
                             src="<?php echo base_url(); ?>assets/img/video-icon.png"
-                            style="width: 45px; height: 40px; margin-top:47px;"></a></div>
+                            style="width: 45px; height: 40px; margin-top:47px;"></a></div> -->
       <p> The Air section involves finding out your school's contribution in polluting the air. The information
         will help in devising strategies for clean air in the coming years.</p>
       <p><strong>The unit of measurement to be used in the Air section is square meter (m<sup>2</sup>).</strong> </p>
