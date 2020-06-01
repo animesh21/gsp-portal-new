@@ -19,7 +19,7 @@ class School_model extends CI_Model
             $row = $query->row();
             $school = array(
                 'userid' => $row->userid,
-		'udise' => $row->udise,
+        'udise' => $row->udise,
                 'name' => $row->name,
                 'address1' => $row->address1,
                 'address2' => $row->address2,
@@ -48,18 +48,18 @@ class School_model extends CI_Model
 
     public function RegisterUser($argPost)
     {
-	    if(!isset($argPost['bharti']))
+        if(!isset($argPost['bharti']))
         {
             $bharti = 0;
         }else{
 
             $bharti = $argPost['bharti'];
         }
-	    
-	    
+        
+        
         $update = array(
             'userid' => $argPost['userid'],
-	    'udise' =>	$argPost['udise'],
+        'udise' =>  $argPost['udise'],
             'name' => $argPost['name'],
             'address1' => $argPost['address1'],
             'address2' => $argPost['address2'],
@@ -78,9 +78,9 @@ class School_model extends CI_Model
             'coemail' => $argPost['coemail'],
             'comobile' => $argPost['comobile'],
             'date_added' => date('Y-m-d H:i:s'),
-	    'partner_status'=>$argPost['partner_list'],
+        'partner_status'=>$argPost['partner_list'],
             'satya_foundation_status'=>$bharti,
-	    'browser_details' => $argPost['browser_details'],
+        'browser_details' => $argPost['browser_details'],
             'browser_version' => $argPost['browser_version'],
             'user_ip_address' => $argPost['user_ip_address']
         );
@@ -100,22 +100,22 @@ class School_model extends CI_Model
             $this->email->initialize($config);
             $from = "support@greenschoolsprogramme.org";
             $arrMails = array($query->schoolemail, $query->coemail, 'ranjita@cseindia.org', 'aditi.sharma@cseindia.org', 'studiotesseractst@gmail.com', 'srishti.jha@cseindia.org', 'tushita.rawat@cseindia.org', 'neeraj.kumar@cseindia.org');
-			$date = date('d M Y');
+            $date = date('d M Y');
             $to = $arrMails;
             $subject = "GSP Audit Registration".$date;
             $msg = "Dear &nbsp;";
             $msg .= $query->coname . "," . "<br/><br/>";
             $msg .= "Thank you for registering your school '" . $query->name . "', for GSP (Green Schools Programme) Audit 2020. Your account has been successfully created.<br><br>";
-            $msg .= "GSP Audit 2020 will now open in July 2020. To participate, please remember to save your username and password given below.<br><br>";
-//            $msg .= "The launch date of GSP Audit 2017 will be announced at www.greenschoolsprogramme.org, in July 2017.<br><br>";
-            $msg .= "URL: http://www.greenschoolsprogramme.org/audit/19 <br/><br/>";
+            $msg .= "Given the current health crisis, GSP Audit 2020 will now open after July 2020. We will inform you as and when it opens. Please stay tuned to our email updates.<br><br>";
+           $msg .= "To participate, please remember to save your username and password given below.<br><br>";
+            $msg .= "URL: http://www.greenschoolsprogramme.org/audit/20 <br/><br/>";
             $msg .= "Username: " . $query->coemail . "<br><br>";
             $msg .= "Password: " . $query->password . "<br><br>";
             $msg .= "In case of any further queries please feel free to write back to us.<br><br>";
             $msg .= "Thanks,<br><br>";
             $msg .= "The Green Schools Programme Team <br><br>";
             $msg .= "<strong>Your registration details are as follows: </strong><br><br>";
-			$msg .= "UDISE Code: " . $query->udise . "<br><br>";
+            $msg .= "UDISE Code: " . $query->udise . "<br><br>";
             $msg .= "Name of School: " . $query->name . "<br><br>";
             $msg .= "Address Line 1: " . $query->address1 . "<br><br>";
             $msg .= "Address Line 2: " . $query->address2 . "<br><br>";
@@ -137,7 +137,7 @@ class School_model extends CI_Model
             $this->email->send();
             //echo $this->email->print_debugger();
             //die();
-		
+        
             //insert into filter table
 
             $this->db->select_max('id');
@@ -182,8 +182,8 @@ class School_model extends CI_Model
         );
 
             $this->db->insert('gsp_filter',$rec);
-		
-	 return true;
+        
+     return true;
         }
     }
 
@@ -200,27 +200,27 @@ class School_model extends CI_Model
 
     public function getSchools()
     {
-	    $this->db->where('date_added <=', '2017-11-29 00:00:00');
+        $this->db->where('date_added <=', '2017-11-29 00:00:00');
         $query = $this->db->select('COUNT(*) count')->from('gsp_school')->get();
         $row = $query->row();
         return $row->count;
     }
-	
+    
      public function getSchools_phase_2()
     {
-	    $this->db->where('date_on >', '2019-11-12 00:00:00');
+        $this->db->where('date_on >', '2019-11-12 00:00:00');
            $d1= $this->db->count_all_results('gsp_aduit_submitted');
         
 
-	   $this->db->where('complete_status=', '0');
+       $this->db->where('complete_status=', '0');
        $d2= $this->db->count_all_results('gsp_school');
 
        $d3=$d1+$d2; 
 
        return $d3;
     }
-	
-        	
+    
+            
 
     public function getState($stateID)
     {
@@ -241,32 +241,32 @@ class School_model extends CI_Model
     {
       if (isset($data)) {
           try {
-		 $currentProgress='';    
-		 if(strcmp($data['questionid'],"progress")==0){
-		  $currentProgress=$data['answer'];
-		} 
-	        echo $currentProgress; 
-		$getProgress=$this->db->select("*")->from("gsp_school")->where(array('userid' => $data['userid']))->get()->row();
-		$fetchProgress= $getProgress->progress;
-		if(strcmp($data['questionid'],"dieselValidation")!=0 && strcmp($data['questionid'],"PetrolValidation")!=0 && strcmp($data['questionid'],"CNGValidation")!=0){  
-		 if($currentProgress<$fetchProgress){
-		    $this->db->set($data['questionid'], $data['answer'])
+         $currentProgress='';    
+         if(strcmp($data['questionid'],"progress")==0){
+          $currentProgress=$data['answer'];
+        } 
+            echo $currentProgress; 
+        $getProgress=$this->db->select("*")->from("gsp_school")->where(array('userid' => $data['userid']))->get()->row();
+        $fetchProgress= $getProgress->progress;
+        if(strcmp($data['questionid'],"dieselValidation")!=0 && strcmp($data['questionid'],"PetrolValidation")!=0 && strcmp($data['questionid'],"CNGValidation")!=0){  
+         if($currentProgress<$fetchProgress){
+            $this->db->set($data['questionid'], $data['answer'])
                     ->where(array('userid' => $data['userid']))//which row want to upgrade
                     ->update('gsp_school'); 
-		   /***********************************/
-		    $this->db->set(array("progress"=>$fetchProgress))
+           /***********************************/
+            $this->db->set(array("progress"=>$fetchProgress))
                     ->where(array('userid' => $data['userid']))//which row want to upgrade
                     ->update('gsp_school');
-		 }else{
-		    $this->db->set($data['questionid'], $data['answer'])
+         }else{
+            $this->db->set($data['questionid'], $data['answer'])
                     ->where(array('userid' => $data['userid']))//which row want to upgrade
-                    ->update('gsp_school'); 	
-		    $this->db->set(array("progress"=>$currentProgress))
+                    ->update('gsp_school');     
+            $this->db->set(array("progress"=>$currentProgress))
                     ->where(array('userid' => $data['userid']))//which row want to upgrade
                     ->update('gsp_school');
-		 } 
-		}
-		//print_r($data);    
+         } 
+        }
+        //print_r($data);    
               //  $this->db->set($data['questionid'], $data['answer'])
                   //  ->where(array('userid' => $data['userid']))//which row want to upgrade
                    // ->update('gsp_school');
