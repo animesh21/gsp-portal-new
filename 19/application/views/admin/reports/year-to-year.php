@@ -10,6 +10,7 @@
   .col-md-2{
     width: 20% !important;
   }
+	</style>
 <div class="wrapper" style="padding:0px;">
   <div class="container">
     <div class="col-md-2 text-center">
