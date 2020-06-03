@@ -88,8 +88,8 @@
         <div class="form-group"> <?php echo form_error('password'); ?>
           <input type="password" class="form-control" name="password" placeholder="Password"
                                    value="<?php echo set_value('password'); ?>"/>
-          <p><a class="lptext" title="Forgot Password Form" href="javascript:void(0)" rel="shadowbox;"
-                                  width="580" height="360" data-toggle="modal" data-target="#myModal">Forgot password?</a></p>
+<!--           <p><a class="lptext" title="Forgot Password Form" href="javascript:void(0)" rel="shadowbox;"
+                                  width="580" height="360" data-toggle="modal" data-target="#myModal">Forgot password?</a></p> -->
         </div>
         <div class="btn-group">
           <input class="org-btn" type="submit" value="Continue">
