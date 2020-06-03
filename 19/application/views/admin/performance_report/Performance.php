@@ -2064,7 +2064,7 @@ We all are aware about the ill-effects of Ultra Processed Packaged Food (UPPF) t
                                     elseif($school_harvested_area ==9) 
                                     $school_harvested = "91 to 100 per cent";
                                     //$school_harvested = "91 to 100 per cent";
-                                    $school_harvested_msg = "It is great that the rainwater harvesting area of your school is more than 90 per cent. We hope that you sustain this green practice.";
+                                    $school_harvested_msg = "It is great that the rainwater harvesting area of your school is more than 70 per cent. We hope that you sustain this green practice";
                   ?>
             <h4><?php echo $school_harvested; // Need to discuss with ravi sir/ client   ?></h4>
             <p><?php echo $school_harvested_msg; ?></p>
