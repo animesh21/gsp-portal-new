@@ -1,5 +1,5 @@
 <div class="top-area">
-    <h2>REGISTRATION BY STATE (2019)</h2>
+    <h2>REGISTRATION BY STATE (2020)</h2>
 </div>
 <div class="row" style="margin: 20px 0; min-height: 300px">
     <?php echo form_open(base_url('admin/audit_started/search')); ?>
