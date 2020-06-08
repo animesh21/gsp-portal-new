@@ -28,7 +28,7 @@ class Dashboard_model extends CI_Model {
 	
 	
 	public function schoolCertificateCount_2018() {
-        return $this->db->count_all_results('tblcertificate_2018');
+        return $this->db->count_all_results('tblcertificate');
     }
 	
 	/*This Function Used For Getting All Records Of Certifciate*/
@@ -42,7 +42,7 @@ class Dashboard_model extends CI_Model {
 	
 	public function getSchoolCertificateRecords_2018() {
         return $this->db->select("a.certificate_username,a.certificate_schoolname,a.certificate_srno,b.id as school_id")
-		->from('tblcertificate_2018 as a')
+		->from('tblcertificate as a')
 		->join('gsp_school as b','a.userid=b.userid','left')
 		->get()->result();
     }	
