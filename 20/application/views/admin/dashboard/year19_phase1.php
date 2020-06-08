@@ -46,14 +46,14 @@
     <label>view</label>
   </div>
   <!-- </a> -->
-  <div class="title">New Registrations (2019)</div>
+  <div class="title">New Registrations (2020)</div>
 </div>
 <div class="schools-statics "> <!-- <a href="<?php //echo base_url("admin/audit_started_2019/disabled_school")?>" target="_blank"> --> 
   <div class="statics-circle"> <span>0 <!-- <?php echo $disable_count; ?> --> </span>
     <label>view</label>
   </div>
   <!-- </a> -->
-  <div class="title">Disabled School (2019)</div>
+  <div class="title">Disabled School (2020)</div>
 </div>
 <div class="schools-statics"> <!-- <a href="./<?php base_url()?>audit_started/getDigitalCertificateRecord" target="_blank"> -->
   <div class="statics-circle"> <span>0 <!-- <?php echo $certificate_count;?> --></span>
