@@ -6,60 +6,60 @@
   </a>
   <div class="title">Total School Registration</div>
 </div>
-<div class="schools-statics"> <a href="<?php base_url()?>total19_startedtheaudit" target="_blank">
-  <div class="statics-circle"> <span> <?php echo count($startedtheaudit); ?> </span>
+<div class="schools-statics"> <!-- <a href="<?php base_url()?>total19_startedtheaudit" target="_blank"> -->
+  <div class="statics-circle"> <span>0 <!-- <?php echo count($startedtheaudit); ?>  --></span>
     <label>view</label>
   </div>
-  </a>
+  <!-- </a> -->
   <div class="title">Schools That Started The Audit</div>
 </div>
-<div class="schools-statics"> <a href="<?php base_url()?>total19_CompletedAuditButNotSubmitted" target="_blank" > 
-  <div class="statics-circle"> <span> <?php echo count($CompletedAuditButNotSubmitted);?> </span>
+<div class="schools-statics"> <!-- <a href="<?php base_url()?>total19_CompletedAuditButNotSubmitted" target="_blank" >  -->
+  <div class="statics-circle"> <span>0 <!-- <?php echo count($CompletedAuditButNotSubmitted);?> --> </span>
     <label>view</label>
   </div>
-  </a>
+  <!-- </a> -->
   <div class="title">Schools Completed The Audit But Not Submitted</div>
 </div>
-<div class="schools-statics"> <a href="<?php base_url()?>total19_SubmittedTheAudit" target="_blank"> 
-  <div class="statics-circle"> <span> <?php echo count($SubmittedTheAudit);?> </span>
+<div class="schools-statics"> <!-- <a href="<?php base_url()?>total19_SubmittedTheAudit" target="_blank">  -->
+  <div class="statics-circle"> <span>0 <!-- <?php echo count($SubmittedTheAudit);?> --> </span>
     <label>view</label>
   </div>
-  </a>
+  <!-- </a> -->
   <div class="title">Schools Submitted The Audit</div>
 </div>
-<div class="schools-statics"><a href="<?php base_url()?>total19_StartedAuditButDidNotComplete" target="_blank">
-  <div class="statics-circle"> <span><?php echo count($StartedAuditButDidNotComplete);?> </span>
+<div class="schools-statics"> <!-- <a href="<?php base_url()?>total19_StartedAuditButDidNotComplete" target="_blank"> -->
+  <div class="statics-circle"> <span>0 <!-- <?php echo count($StartedAuditButDidNotComplete);?> --> </span>
     <label>view</label>
   </div>
-  </a>
+  <!-- </a> -->
   <div class="title">Schools Started The Audit But Did Not Complete</div>
 </div>
-<div class="schools-statics"> <a href="<?php base_url()?>total19_NotStartTheAudit" target="_blank"> 
-  <div class="statics-circle"> <span> <?php echo count($NotStartTheAudit);?> </span>
+<div class="schools-statics"> <!-- <a href="<?php base_url()?>total19_NotStartTheAudit" target="_blank"> --> 
+  <div class="statics-circle"> <span>0 <!-- <?php echo count($NotStartTheAudit);?> --> </span>
     <label>view</label>
   </div>
-  </a>
+  <!-- </a> -->
   <div class="title">Schools Did Not Start The Audit</div>
 </div>
-<div class="schools-statics "> <a href="<?php base_url()?>total19_registration" target="_blank">
-  <div class="statics-circle"> <span><?php echo count($school); ?></span>
+<div class="schools-statics "> <!-- <a href="<?php base_url()?>total19_registration" target="_blank"> -->
+  <div class="statics-circle"> <span>0 <!-- <?php echo count($school); ?> --></span>
     <label>view</label>
   </div>
-  </a>
+  <!-- </a> -->
   <div class="title">New Registrations (2019)</div>
 </div>
-<div class="schools-statics "><a href="<?php echo base_url("admin/audit_started_2019/disabled_school")?>" target="_blank"> 
-  <div class="statics-circle"> <span> <?php echo $disable_count; ?> </span>
+<div class="schools-statics "> <!-- <a href="<?php //echo base_url("admin/audit_started_2019/disabled_school")?>" target="_blank"> --> 
+  <div class="statics-circle"> <span>0 <!-- <?php echo $disable_count; ?> --> </span>
     <label>view</label>
   </div>
-  </a>
+  <!-- </a> -->
   <div class="title">Disabled School (2019)</div>
 </div>
-<div class="schools-statics"> <a href="./<?php base_url()?>audit_started/getDigitalCertificateRecord" target="_blank">
-  <div class="statics-circle"> <span><?php echo $certificate_count;?></span>
+<div class="schools-statics"> <!-- <a href="./<?php base_url()?>audit_started/getDigitalCertificateRecord" target="_blank"> -->
+  <div class="statics-circle"> <span>0 <!-- <?php echo $certificate_count;?> --></span>
     <label>view</label>
   </div>
-  </a>
+  <!-- </a> -->
   <div class="title">Digital Certificates Of Schools</div>
 </div>
 
