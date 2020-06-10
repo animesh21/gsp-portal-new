@@ -136,6 +136,26 @@ header('Location: http://www.greenschoolsprogramme.org/audit/18/login/browser_ch
                                                                             href="https://www.google.com/chrome/" target="_blank">Chrome</a> to take the audit. This audit
   requires Javascript to be enabled in your browser and will not function properly without it.</p>
 </div>
+	<div id="myModal" class="modal fade in" role="dialog" style="display: block; padding-right: 17px; background:rgba(0, 0, 0, 0.57);">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header"  style="background:#e86549; color:#FFFFFF;">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">GSP Audit 2019</h4>
+      </div>
+      <div class="modal-body">
+        <p>The CSE's Green Schools Programme Audit 2019 is now open.  If your school has registered earlier, then please do not submit the registration form. 
+If your school has not registered, please click <a href="http://www.greenschoolsprogramme.org/audit/19/register">here</a> to register for GSP Audit 2019. On submission of the registration form, you will receive an email with login credentials (username and password) for completing the Audit. Please save your login credentials to be used  in GSP Audit 2019 when it reopens in July. There is no fee for participation.  </p>
+<!--      <p class="text-center"><a href="http://www.greenschoolsprogramme.org/audit/19/login" target="_blank" class="btn btn-danger btn-block btn-lg">Login For GSP Audit 2019</a></p> -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
 </div>
 <!--</div>-->
 <footer>
