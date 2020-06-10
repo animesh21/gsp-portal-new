@@ -436,7 +436,7 @@ p{
       <li class="rain"><a href="http://www.rainwaterharvesting.org/" target="_blank"><img
                                 src="<?php echo base_url(); ?>assets/img/rain.jpg"
                                 class="img-responsive"></a></li>
-      <li class="times"><a href="http://www.gobartimes.org/" target="_blank"><img
+      <li class="times"><a href="https://www.downtoearth.org.in/category/young" target="_blank"><img
                                 src="<?php echo base_url(); ?>assets/img/times.jpg" class="img-responsive"></a></li>
     </ul>
   </div>
