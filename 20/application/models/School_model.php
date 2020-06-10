@@ -46,8 +46,154 @@ class School_model extends CI_Model
         return $school = array("name" => "Sunil");
     }
 
-    public function RegisterUser($argPost)
+     public function RegisterUser($argPost)
     {
+
+        if($argPost['partner_list']==3){
+
+            if(!isset($argPost['bharti']))
+        {
+            $bharti = 0;
+        }else{
+
+            $bharti = $argPost['bharti'];
+        }
+        
+        
+        $update = array(
+            'userid' => $argPost['userid'],
+        'udise' =>  $argPost['udise'],
+            'name' => $argPost['name'],
+            'address1' => $argPost['address1'],
+            'address2' => $argPost['address2'],
+            'country' => $argPost['country'],
+            'state' => $argPost['state'],
+            'district' => $argPost['district'],
+            'city' => $argPost['city'],
+            'pincode' => $argPost['pincode'],
+            'std' => $argPost['std'],
+            'telephone' => $argPost['telephone'],
+            'country_code' => $argPost['country_code'],
+            'schoolemail' => $argPost['schoolemail'],
+            'principle_name' => $argPost['principle_name'],
+            'mobile' => $argPost['mobile'],
+            'coname' => $argPost['coname'],
+            'coemail' => $argPost['coemail'],
+            'comobile' => $argPost['comobile'],
+            'date_added' => date('Y-m-d H:i:s'),
+        'partner_status'=>$argPost['partner_list'],
+            'satya_foundation_status'=>$bharti,
+        'browser_details' => $argPost['browser_details'],
+            'browser_version' => $argPost['browser_version'],
+            'user_ip_address' => $argPost['user_ip_address'],
+            'kvs_school_status'=>'2'
+        );
+        if ($this->db->insert('gsp_school', $update)) {
+            //Sending Mail To The School
+            $insert_id = $this->db->insert_id();
+            $query = $this->db->select('a.*, b.email AS emailfiled, b.password, b.username, c.name AS state_name, d.name AS district_name')
+                ->from('gsp_school AS a')
+                ->join('gsp_user AS b', 'a.userid=b.id', 'left')
+                ->join('states AS c', 'a.state=c.id', 'left')
+                ->join('cities AS d', 'a.district=d.id', 'left')
+                ->where('a.id', $insert_id)
+                ->get()->row();
+            //echo '<pre>'; print_r($query); exit;
+            $this->load->library('email');
+            $config['mailtype'] = 'html';
+            $this->email->initialize($config);
+            $from = "support@greenschoolsprogramme.org";
+            $arrMails = array('ranjita@cseindia.org', 'aditi.sharma@cseindia.org', 'studiotesseractst@gmail.com', 'srishti.jha@cseindia.org', 'tushita.rawat@cseindia.org', 'neeraj.kumar@cseindia.org, hamender.yadav@studiotesseract.in, Jitendra@studiotesseract.in');
+            $date = date('d M Y');
+            $to = $arrMails;
+            $subject = "GSP Audit Registration".$date;
+            $msg = "Dear &nbsp;";
+            $msg .= $query->coname . "," . "<br/><br/>";
+            $msg .= "Thank you for registering your school '" . $query->name . "', for GSP (Green Schools Programme) Audit 2020. Your account has been successfully created.<br><br>";
+            $msg .= "Given the current health crisis, GSP Audit 2020 will now open after July 2020. We will inform you as and when it opens. Please stay tuned to our email updates.<br><br>";
+           $msg .= "To participate, please remember to save your username and password given below.<br><br>";
+            $msg .= "URL: http://www.greenschoolsprogramme.org/audit/20 <br/><br/>";
+            $msg .= "Username: " . $query->coemail . "<br><br>";
+            $msg .= "Password: " . $query->password . "<br><br>";
+            $msg .= "In case of any further queries please feel free to write back to us.<br><br>";
+            $msg .= "Thanks,<br><br>";
+            $msg .= "The Green Schools Programme Team <br><br>";
+            $msg .= "<strong>Your registration details are as follows: </strong><br><br>";
+            $msg .= "UDISE Code: " . $query->udise . "<br><br>";
+            $msg .= "Name of School: " . $query->name . "<br><br>";
+            $msg .= "Address Line 1: " . $query->address1 . "<br><br>";
+            $msg .= "Address Line 2: " . $query->address2 . "<br><br>";
+            $msg .= "State: " . $query->state_name . "<br><br>";
+            $msg .= "District: " . $query->district_name . "<br><br>";
+            $msg .= "City: " . $query->city . "<br><br>";
+            $msg .= "Pincode: " . $query->pincode . "<br><br>";
+            $msg .= "Land Line No: " . "91 - " . $query->std . " - " . $query->telephone . "<br><br>";
+            $msg .= "Principal's Name: " . $query->principle_name . "<br><br>";
+            $msg .= "Mobile Number: " . $query->mobile . "<br><br>";
+            $msg .= "GSP Coordinator's Name: " . $query->coname . "<br><br>";
+            $msg .= "GSP Coordinator's Email: " . $query->coemail . "<br><br>";
+            $msg .= "Mobile Number: " . $query->comobile . "<br><br>";
+            $this->email->to($to);
+            // $this->email->cc('nirma.bora@cseindia.org', 'ranjita@cseindia.org', 'aditi.sharma@cseindia.org', 'contact@studiotesseract.biz');
+            $this->email->from($from, "Green Schools Programme");
+            $this->email->subject($subject);
+            $this->email->message($msg);
+            $this->email->send();
+            // echo $this->email->print_debugger();
+            // die();
+        
+            //insert into filter table
+
+            $this->db->select_max('id');
+            $this->db->from('gsp_filter');
+            $query = $this->db->get();
+            $r=$query->result();
+
+            $max_id =  $r[0]->id; 
+
+             $rec = array(
+            'id'=>$max_id + 1,
+            'userid' => $argPost['userid'],
+            'udise' =>  $argPost['udise'],
+            'name' => $argPost['name'],
+            'address1' => $argPost['address1'],
+            'address2' => $argPost['address2'],
+            'country' => $argPost['country'],
+            'state' => $argPost['state'],
+            'district' => $argPost['district'],
+            'city' => $argPost['city'],
+            'pincode' => $argPost['pincode'],
+            'std' => $argPost['std'],
+            'telephone' => $argPost['telephone'],
+            'country_code' => $argPost['country_code'],
+            'schoolemail' => $argPost['schoolemail'],
+            'principle_name' => $argPost['principle_name'],
+            'mobile' => $argPost['mobile'],
+            'coname' => $argPost['coname'],
+            'coemail' => $argPost['coemail'],
+            'comobile' => $argPost['comobile'],
+            'progress' => '5',
+            'progress_phase_1' => '5',
+            'date_added' => date('Y-m-d H:i:s'),
+            'complete_status'=> '0',
+            'phase'=>'1',
+            'percentage'=>NULL,
+            'remark'=>NULL,
+            'Q1S1'=>NULL,
+            'Q2G1'=>NULL,
+            'Q9G1'=>NULL,
+            'Q3G1'=>NULL
+        );
+
+            $this->db->insert('gsp_filter',$rec);
+        
+     return true;
+        }
+                
+        }
+        else{
+            
+        
         if(!isset($argPost['bharti']))
         {
             $bharti = 0;
@@ -186,7 +332,7 @@ class School_model extends CI_Model
      return true;
         }
     }
-
+    }
     public function GetRegistered()
     {
         $query = $this->db->select('*')
