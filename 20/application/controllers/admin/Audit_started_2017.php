@@ -30,6 +30,72 @@ class Audit_started_2017 extends CI_Controller {
         $this->load->view('admin/includes/template', $data);
     }
 
+ public function kvs_school_list() {
+        $data['main'] = 'admin/audit/kvs_school_list';
+        $data['title'] = 'Home | Registration 2020';
+        $data['record'] = $this->Audit_started_model->kvs_school_list();
+        $this->load->view('admin/includes/template', $data);
+    }
+
+    public function kvs_school_mail() {
+        $id = $this->input->post('school_id');
+        // $query = $this->db->select('kvs_school_status')->from('gsp_school')->where('id', $id)->get()->result();        
+        // echo $query[0]->kvs_school_status;
+        $this->db->where('id', $id);
+        $this->db->update("gsp_school",array("kvs_school_status"=>NULL));
+        // echo $this->db->last_query();
+        $query = $this->db->select('a.*, b.email AS emailfiled, b.password, b.username, c.name AS state_name, d.name AS district_name')
+                ->from('gsp_school AS a')
+                ->join('gsp_user AS b', 'a.userid=b.id', 'left')
+                ->join('states AS c', 'a.state=c.id', 'left')
+                ->join('cities AS d', 'a.district=d.id', 'left')
+                ->where('a.id', $id)
+                ->get()->row();
+            // echo '<pre>'; print_r($query); exit;
+            $this->load->library('email');
+            $config['mailtype'] = 'html';
+            $this->email->initialize($config);
+            $from = "support@greenschoolsprogramme.org";
+            $arrMails = array($query->schoolemail, $query->coemail, 'ranjita@cseindia.org', 'aditi.sharma@cseindia.org', 'studiotesseractst@gmail.com', 'srishti.jha@cseindia.org', 'tushita.rawat@cseindia.org', 'neeraj.kumar@cseindia.org');
+            $date = date('d M Y');
+            $to = $arrMails;
+            $subject = "GSP Audit Registration".$date;
+            $msg = "Dear &nbsp;";
+            $msg .= $query->coname . "," . "<br/><br/>";
+            $msg .= "Thank you for registering your school '" . $query->name . "', for GSP (Green Schools Programme) Audit 2020. Your account has been successfully created.<br><br>";
+            $msg .= "Given the current health crisis, GSP Audit 2020 will now open after July 2020. We will inform you as and when it opens. Please stay tuned to our email updates.<br><br>";
+           $msg .= "To participate, please remember to save your username and password given below.<br><br>";
+            $msg .= "URL: http://www.greenschoolsprogramme.org/audit/20 <br/><br/>";
+            $msg .= "Username: " . $query->coemail . "<br><br>";
+            $msg .= "Password: " . $query->password . "<br><br>";
+            $msg .= "In case of any further queries please feel free to write back to us.<br><br>";
+            $msg .= "Thanks,<br><br>";
+            $msg .= "The Green Schools Programme Team <br><br>";
+            $msg .= "<strong>Your registration details are as follows: </strong><br><br>";
+            $msg .= "UDISE Code: " . $query->udise . "<br><br>";
+            $msg .= "Name of School: " . $query->name . "<br><br>";
+            $msg .= "Address Line 1: " . $query->address1 . "<br><br>";
+            $msg .= "Address Line 2: " . $query->address2 . "<br><br>";
+            $msg .= "State: " . $query->state_name . "<br><br>";
+            $msg .= "District: " . $query->district_name . "<br><br>";
+            $msg .= "City: " . $query->city . "<br><br>";
+            $msg .= "Pincode: " . $query->pincode . "<br><br>";
+            $msg .= "Land Line No: " . "91 - " . $query->std . " - " . $query->telephone . "<br><br>";
+            $msg .= "Principal's Name: " . $query->principle_name . "<br><br>";
+            $msg .= "Mobile Number: " . $query->mobile . "<br><br>";
+            $msg .= "GSP Coordinator's Name: " . $query->coname . "<br><br>";
+            $msg .= "GSP Coordinator's Email: " . $query->coemail . "<br><br>";
+            $msg .= "Mobile Number: " . $query->comobile . "<br><br>";
+            $this->email->to($to);
+            //$this->email->cc('nirma.bora@cseindia.org', 'ranjita@cseindia.org', 'aditi.sharma@cseindia.org', 'contact@studiotesseract.biz');
+            $this->email->from($from, "Green Schools Programme");
+            $this->email->subject($subject);
+            $this->email->message($msg);
+            $this->email->send();
+    }
+
+	
+	
     public function getSchoolData()
     {   
        $records=$this->Audit_started_model->getData();
