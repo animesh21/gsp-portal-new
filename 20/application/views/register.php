@@ -68,7 +68,7 @@ p{
                 $('.wrapper').show();
                 $('#registration-form').validate({
                     rules: {
-			udise: {
+      udise: {
                             required: true,
                             //number:true
                         },
@@ -259,23 +259,7 @@ p{
                     }
                     ?>
   <?php echo validation_errors(); ?> <?php echo form_open('login/register', array('id' => 'registration-form')); ?>
-  <div class="form-group typeahead__container">
-    <div class="typeahead__field">
-      <div class="typeahead__query">
-        <input type="text" name="udise" class="schoolname name form-control  placeholder"
-                               value="<?php echo set_value('udise'); ?>" placeholder="School U-Dise Code*" id="udise">
-                                                              <div id="udise_error"></div>
-      </div>
-    </div>
-  </div>
-  <div class="form-group typeahead__container">
-    <div class="typeahead__field">
-      <div class="typeahead__query">
-        <input type="text" name="name" class="schoolname name form-control  placeholder"
-                               value="<?php echo set_value('name'); ?>" placeholder="Name of the School*" id="name">
-      </div>
-    </div>
-  </div>
+
   <div class="form-group">
      <strong>Select Franchise / Institution: <a class="tt" data-tooltip="If your school is a member of any of the following, please select the option or else, select 'Not Applicable (NA)'"><span class="badge" style="color:#FFFFFF;">?</span></a></strong>
    <ul class="list-inline">
@@ -311,6 +295,25 @@ p{
   </div>
 
 
+
+  <div class="form-group typeahead__container">
+    <div class="typeahead__field">
+      <div class="typeahead__query">
+        <input type="text" name="udise" class="schoolname name form-control  placeholder"
+                               value="<?php echo set_value('udise'); ?>" placeholder="School U-Dise Code*" id="udise">
+                                                              <div id="udise_error"></div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group typeahead__container">
+    <div class="typeahead__field">
+      <div class="typeahead__query">
+        <input type="text" name="name" class="schoolname name form-control  placeholder"
+                               value="<?php echo set_value('name'); ?>" placeholder="Name of the School*" id="name">
+      </div>
+    </div>
+  </div>
+  
 
   <div class="form-group">
     <input type="text" name="address1" id="address1" class="form-control address placeholder"
