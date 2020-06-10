@@ -4,7 +4,7 @@
 <head>  
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Registration Form - Green Schools Programme Audit 2016</title>
+<title>Registration Form - Green Schools Programme Audit 2020</title>
 <link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>assets/css/style.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>assets/css/jquery.typeahead.css" rel="stylesheet">
@@ -440,7 +440,7 @@ p{
                                 src="<?php echo base_url(); ?>assets/img/times.jpg" class="img-responsive"></a></li>
     </ul>
   </div>
-  <div class="text-center">Copyright Â© 2020 Centre for Science and Environment</div>
+  <div class="text-center">Copyright &COPY; 2020 Centre for Science and Environment</div>
 </footer>
 </body>
 </html>
