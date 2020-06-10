@@ -289,6 +289,7 @@
                   <li><a href="feedback_how_many_times_contact.php">How many times did you contact GSP Team</a></li>
                 </ul>
               </li> -->
+													<li class=""><a class="lptext" title="Change Password Form" href="<?php echo base_url('admin/audit_started_2017/kvs_school_list'); ?>">WAITING APPROVAL</a></li>
               <li class=""><a class="lptext" title="Change Password Form" href="<?php echo base_url('admin/logout'); ?>">Logout</a></li>
             </ul>
           </div>
