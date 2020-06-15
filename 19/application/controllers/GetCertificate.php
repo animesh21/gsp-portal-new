@@ -24,26 +24,29 @@ class GetCertificate extends CI_Controller{
         $mobile = $this->input->post('mobile');
         $this->db->where("mobile",$mobile);
         $dataCertificate=$this->db->select("*")->from("gsp_new_certificate")->get()->result();
-        if(!empty($dataCertificate)){
-
-        $data['teachers'] = $dataCertificate;
-
-        $data['title']="GSP Digital Certificates";
-        $this->load->library('dompdf_lib');
-        ini_set('memory_limit', '-1');
-       
-        $html = $this->load->view('digital-certificate-new', $data, true);
-         $html = preg_replace('/>\s+</', "><", $html);
-
-        $this->dompdf->load_html($html);
-        $this->dompdf->set_paper(array(0, 0, 580, 760), 'landscape');
-        $this->dompdf->render();
-        $this->dompdf->stream("Digital Certificate.pdf", array("Attachment" => false));
-        }
-        else{
-            $this->session->set_flashdata('data_name', 'Your password is incorrect. Please try again. <br/> For any assistance, write to us at support@greenschoolprogramme.org');
+		 $this->session->set_flashdata('data_name', 'The link to download the GSP Online Air Seminar April 2020 certificate is now closed.');
             return redirect('GetCertificate');
-        }
+		
+//         if(!empty($dataCertificate)){
+
+//         $data['teachers'] = $dataCertificate;
+
+//         $data['title']="GSP Digital Certificates";
+//         $this->load->library('dompdf_lib');
+//         ini_set('memory_limit', '-1');
+       
+//         $html = $this->load->view('digital-certificate-new', $data, true);
+//          $html = preg_replace('/>\s+</', "><", $html);
+
+//         $this->dompdf->load_html($html);
+//         $this->dompdf->set_paper(array(0, 0, 580, 760), 'landscape');
+//         $this->dompdf->render();
+//         $this->dompdf->stream("Digital Certificate.pdf", array("Attachment" => false));
+//         }
+//         else{
+//             $this->session->set_flashdata('data_name', 'Your password is incorrect. Please try again. <br/> For any assistance, write to us at support@greenschoolprogramme.org');
+//             return redirect('GetCertificate');
+//         }
 
     }
 
