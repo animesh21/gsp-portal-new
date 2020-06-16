@@ -55,7 +55,7 @@ header('Location: http://www.greenschoolsprogramme.org/audit/18/login/browser_ch
                     $(document).ready(function () {
                         $("li").removeAttr("title");
                     });
-		
+    
                 </script>
     <script src="<?php echo base_url(''); ?>assets/js/main.js"></script>
     <!-- Gem jQuery -->
@@ -75,7 +75,7 @@ header('Location: http://www.greenschoolsprogramme.org/audit/18/login/browser_ch
     <div class="home_container">
       <div class="mform" style="display: block;">
         <h1>Please Log In</h1>
-<!-- 	<h1 style="font-size: 20px; font-family: fantasy; text-align: center; position: relative; color: #e86549; 
+<!--  <h1 style="font-size: 20px; font-family: fantasy; text-align: center; position: relative; color: #e86549; 
  text-align: center; border: none; padding: 0px;">EXTENDED AUDIT SUBMISSION DEADLINE: 10 NOVEMBER 2019 </h1> -->
         <p>The <a href="http://www.greenschoolsprogramme.org/" target="_blank">Green Schools Programme</a> audit is only open to registered schools. If you have already registered, please log in using your registered email id and password you would have received via email.</p>
         <p>If you would like to register, please visit our <a href="<?php echo base_url('register') ?>"
@@ -101,8 +101,8 @@ header('Location: http://www.greenschoolsprogramme.org/audit/18/login/browser_ch
                                    value="<?php echo set_value('password'); ?>"/>
 <!--           <p><a class="lptext" title="Forgot Password Form" href="javascript:void(0)" rel="shadowbox;"
                                   width="580" height="360" data-toggle="modal" data-target="#myModal">Forgot password?</a></p> -->
-		
-<!-- 		<p><a class="lptext later" title="Forgot Password Form"  rel="shadowbox;"
+    
+<!--    <p><a class="lptext later" title="Forgot Password Form"  rel="shadowbox;"
                                   width="580" height="360" >Forgot password?</a></p> -->
         </div>
         <div class="btn-group">
@@ -123,11 +123,11 @@ header('Location: http://www.greenschoolsprogramme.org/audit/18/login/browser_ch
     <script src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/badge-code.js"></script>
     <script>
-			/*School Badge Code*/
-			window.onload = function(){
-			  get_date_difference('12-24-2017');
-			}
-			</script>
+      /*School Badge Code*/
+      window.onload = function(){
+        get_date_difference('12-24-2017');
+      }
+      </script>
     <div class='badges' style='height:200px; height:200px;'></div>
   </div>
 </div>
@@ -136,26 +136,26 @@ header('Location: http://www.greenschoolsprogramme.org/audit/18/login/browser_ch
                                                                             href="https://www.google.com/chrome/" target="_blank">Chrome</a> to take the audit. This audit
   requires Javascript to be enabled in your browser and will not function properly without it.</p>
 </div>
-	<div id="myModal1" class="modal fade in" role="dialog" style="display: block; padding-right: 17px; background:rgba(0, 0, 0, 0.57);">
-  <div class="modal-dialog">
+  <!-- <div id="myModal" class="modal fade in" role="dialog" style="display: block; padding-right: 17px; background:rgba(0, 0, 0, 0.57);">
+  <div class="modal-dialog"> -->
     <!-- Modal content-->
-    <div class="modal-content">
+    <!-- <div class="modal-content">
       <div class="modal-header"  style="background:#e86549; color:#FFFFFF;">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
         <h4 class="modal-title">GSP Audit 2019</h4>
       </div>
       <div class="modal-body">
         <p>The CSE's Green Schools Programme Audit 2019 is now open.  If your school has registered earlier, then please do not submit the registration form. 
-If your school has not registered, please click <a href="http://www.greenschoolsprogramme.org/audit/19/register">here</a> to register for GSP Audit 2019. On submission of the registration form, you will receive an email with login credentials (username and password) for completing the Audit. Please save your login credentials to be used  in GSP Audit 2019 when it reopens in July. There is no fee for participation.  </p>
+If your school has not registered, please click <a href="http://www.greenschoolsprogramme.org/audit/19/register">here</a> to register for GSP Audit 2019. On submission of the registration form, you will receive an email with login credentials (username and password) for completing the Audit. Please save your login credentials to be used  in GSP Audit 2019 when it reopens in July. There is no fee for participation.  </p> -->
 <!--      <p class="text-center"><a href="http://www.greenschoolsprogramme.org/audit/19/login" target="_blank" class="btn btn-danger btn-block btn-lg">Login For GSP Audit 2019</a></p> -->
-      </div>
+      <!-- </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
     </div>
 
   </div>
-</div>
+</div> -->
 </div>
 <!--</div>-->
 <footer>
@@ -181,7 +181,7 @@ If your school has not registered, please click <a href="http://www.greenschools
   </div>
 </div>
 <!-- Modal -->
-<div class="modal fade" id="myModal1" role="dialog">
+<div class="modal fade" id="myModal" role="dialog">
 <div class="modal-dialog">
 <!-- Modal content-->
 <div class="modal-content">
@@ -205,7 +205,7 @@ If your school has not registered, please click <a href="http://www.greenschools
 <script type="text/javascript">
             $(document).ready(function () {
                 $('#btnForgetPassword').click(function () {
-			    var emailval = $('input[name="email_id"]').val();
+          var emailval = $('input[name="email_id"]').val();
                     
                     $.ajax({
                       url: "<?php echo base_url('login/forgetpassword');  ?>",
@@ -229,32 +229,32 @@ If your school has not registered, please click <a href="http://www.greenschools
 
                             console.log(data);
                            // if (data == "success") {
-			   if(data != "error"){	
+         if(data != "error"){ 
                                 $('#msgForget').html('<div class="alert alert-success">' +
                                         "<strong>&#10004; Success!</strong> Your password request has been accepted and the new password will be sent to the registered email address of the GSP co-ordinator in the next five - ten minutes. If the password is not received in the next 10 minutes, then please check the spam folder. If not in the spam folder, then please send an email saying that you haven't received the new password to: <a href='mail'> support@greenschoolsprogramme.org</a>,<p><strong>Please note that passwords can be changed only once in a day.  </strong></p>" +
                                         '</div>');
-				setTimeout(function () {
+        setTimeout(function () {
                                 location.reload();
                             }, 300000);
-			      $.ajax({
+            $.ajax({
                               url:'<?php echo base_url(); ?>setpassword-2017.php',
                               type: 'GET',
                               data: {"email":emailval,"setPassword":data,"function_name":"setPasswordGSPAudit2017ByEmail"},
                               success: function (reponse) {
-                             }	   });
+                             }     });
                             } else if (data == "error") {
                                 $('#msgForget').html('<div class="alert alert-danger">' +
                                         '<strong>&#x2716; Error!</strong> The email you have entered is not registered.' +
                                         '</div>');
-										 setTimeout(function () {
+                     setTimeout(function () {
                                 location.reload();
                             }, 300000);
                             }
-			    if (data>=1) {
+          if (data>=1) {
                                 $('#msgForget').html('<div class="alert alert-danger">' +
                                         '<strong>&#x2716; Error!</strong> You Can Send Request For Forgetpassword Only Once in A Day. <br/> Please Send Next Query After Half An Hour & If You Have Any Doubts, Mail support@greenschoolsprogramme.org OR CALL 011-4061600 ' +
                                         '</div>');
-										 setTimeout(function () {
+                     setTimeout(function () {
                                 location.reload();
                             }, 300000);
                             }
@@ -265,8 +265,8 @@ If your school has not registered, please click <a href="http://www.greenschools
                     }
                 });
             });
-	
-		//All Standards and Compatibility Mode
+  
+    //All Standards and Compatibility Mode
 
 
 var isIE = /MSIE/.test(navigator.userAgent) && /Microsoft Internet Explorer/.test(navigator.vendor);
@@ -285,7 +285,7 @@ if (navigator.appName == 'Microsoft Internet Explorer' ||  !!(navigator.userAgen
 if (/Edge/.test(navigator.userAgent)) {
      window.location.href="<?php echo base_url("login/browser_check"); ?>";
 }
-	</script>
+  </script>
 </body>
 </html>
 
