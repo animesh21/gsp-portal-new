@@ -136,7 +136,7 @@ header('Location: http://www.greenschoolsprogramme.org/audit/18/login/browser_ch
                                                                             href="https://www.google.com/chrome/" target="_blank">Chrome</a> to take the audit. This audit
   requires Javascript to be enabled in your browser and will not function properly without it.</p>
 </div>
-	<div id="myModal" class="modal fade in" role="dialog" style="display: block; padding-right: 17px; background:rgba(0, 0, 0, 0.57);">
+	<div id="myModal1" class="modal fade in" role="dialog" style="display: block; padding-right: 17px; background:rgba(0, 0, 0, 0.57);">
   <div class="modal-dialog">
     <!-- Modal content-->
     <div class="modal-content">
