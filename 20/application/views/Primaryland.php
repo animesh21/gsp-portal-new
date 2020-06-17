@@ -12,8 +12,8 @@
     .form-group-1{
         margin-bottom:20px;
     }
-	.cube-1{
-	 display: inline-block;
+  .cube-1{
+   display: inline-block;
      min-width: 30px;
      line-height: 27px;
      background: #e86549;
@@ -21,15 +21,15 @@
      margin: 0 10px 0 0;
      color: #fff;
      padding: 0 8px;
-	 }
-	 .error{
+   }
+   .error{
      color: #fb4f2a !important;
      font-size: 15px !important;
      text-shadow: 1px 1px 1px #000;
      position: absolute;
      padding-top: 20px;
 }
-	
+  
 </style>
 <div class="container">
     <div class="content-form">
@@ -60,7 +60,7 @@
             <strong class="unit"> The unit of measurement to be used in the Land section is Square Meter (m2).</strong> </p>
         <?php echo form_open('land/set',array('id'=>'PrimaryLand')); ?>
         <div class="form-group">
-            <label><h6>Task 1: Choose your Land Audit Team</h6></label>
+            <label><h6>Task 1: Choose your Land Audit Team <a class="tt" data-tooltip="The first name of need to have both first and last name. In the rest of the rows, if a team member does not have a last name, then they can press the space bar once and move to the next field."><span class="badge">?</span></a> </h6></label>
             <br>
             Your school gardener is certainly the best person to be a part of your audit team. Just like all other teams, five to 10 of your committed and interested schoolmates would make a strong team. </div>
         <div class="form-group">
@@ -436,7 +436,7 @@
         <div class="form-group">
             <label for="username" class="control-label"><h6> Task 2: Identify the types of areas in your school. <a class="kplink" href="http://www.greenschoolsprogramme.org/knowledge-bank/land" target="_blank"> </a></h6></label>
             
-			<div class="form-group-1 row">
+      <div class="form-group-1 row">
                 <div class="col-xs-5">
                     <label for="ex1"><span class="cube-1">1</span> Types of Area</label>
                 </div>
@@ -517,10 +517,10 @@
                                       </div>
                                     </div>-->
         </div>
-	    
-	    
-	    
-	    <div class="form-group">
+      
+      
+      
+      <div class="form-group">
       <label class="control-label"><span class="cube">2</span>Do you have vertical gardens in your school? <a class="tt" data-tooltip="The interior or exterior walls covered with the various plant species in two different ways; prefabricated modular panel or in-situ applied panels, i.e. the plants need to be rooted on a structure on the wall or any vertical support structure."><span
                             class="badge">?</span></a></label>
       <ul class="list-inline">
@@ -536,9 +536,9 @@
         </li>
       </ul>
     </div>
-	    
-	    
-	    <div class="form-group" id="Q2V1_sec1"
+      
+      
+      <div class="form-group" id="Q2V1_sec1"
 <?php
 if (isset($data['Q2V1'])) {
 if ($data['Q2V1'] == 'N') {
@@ -593,10 +593,10 @@ echo 'style="display:none;"';
       </tbody>
     </table>
               </div>
-	  
-	    
-	    
-	    
+    
+      
+      
+      
         <div class="form-group">
             <label>
                 <h6>Task 3: Explore the types of plants and animals in your school</h6>
@@ -713,10 +713,14 @@ echo 'style="display:none;"';
         <div class="form-group">
             <label><h6>Upload supporting documents</h6></label>
             <br>
-            Please upload the following supporting documents:<br>
-            <br>
-            &bull; Pictures of  <i>Kachcha</i> playground with grass<br>
-            &bull; Pictures of <i>Pucca</i> (paved) playground<br>
+            Please upload the following supporting documents:<br/>
+            <br/>
+            &bull; Pictures of  <i>Kachcha</i> playground with grass<br/>
+            &bull; Pictures of <i>Pucca</i> (paved) playground<br/>
+            &bull; Pictures of green cover<br/>
+            &bull; Pictures of landscaped area<br/>
+            &bull; Building construction plan<br/> <br/>
+
             Uploaded files must be in one of the following formats: PDF Document (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg). File size per document should not exceed <strong>100 KB.</strong> </div>
         <button class="btn uploadbtn upload" data-id="Green Cover" data-toggle="modal" data-target="#airModal" type="button">UPLOAD FILES</button>
         <br>
@@ -738,7 +742,7 @@ echo 'style="display:none;"';
                            data-id="<?php echo $f->id; ?>"><img
                                     src="<?php echo base_url(); ?>assets/front/images/delete.png"
                                     style="position:relative; top:5px"/></a></td>
-			<td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+      <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
                 </tr>
             <?php } ?>
             </tbody>
@@ -836,8 +840,8 @@ $("#movenextbtn").click(function(e){
    if($("#Q1L1S1").attr('placeholder')==""  || $("#Q1L1S3").attr('placeholder')==""  || $("#Q1L1S2").attr('placeholder')==""){ 
      if($("#Q1L1S1").val()==""  || $("#Q1L1S3").val()==""  || $("#Q1L1S2").val()==""){ 
       alert("School Must Add Teacher First Name, Last Name & Email ID.");
-	  e.preventDefault();
-	}
+    e.preventDefault();
+  }
    }
 });
 /*Administrative Record Validation*/
@@ -846,8 +850,8 @@ $("#movenextbtn").click(function(e){
    if($("#Q2L1S1").attr('placeholder')==""  || $("#Q2L1S3").attr('placeholder')==""  || $("#Q2L1S2").attr('placeholder')==""){
       if($("#Q2L1S1").val()=="" || $("#Q2L1S3").val()==""  || $("#Q2L1S2").val()==""){  
     alert("School Must Add Administrative Staff  First Name, Last Name & Email ID.");
-	e.preventDefault();
-	}
+  e.preventDefault();
+  }
    }
 });
 /*Student Record Validation*/
@@ -856,8 +860,8 @@ $("#movenextbtn").click(function(e){
    if($("#Q3L1S1").attr('placeholder')==""  || $("#Q3L1S2").attr('placeholder')==""  || $("#Q3L1S3").attr('placeholder')==""){ 
     if($("#Q3L1S1").val()==""  || $("#Q3L1S2").val()==""  || $("#Q3L1S3").val()==""){ 
     alert("School Must Add Student First Name, Last Name & Grade.");
-	e.preventDefault();
-	}
+  e.preventDefault();
+  }
    }
 });
 /************************************************************/
@@ -942,7 +946,7 @@ if($("input[name='Q6L1']:checked").length==0){
   alert("Q4 Do you use chemical-based pesticides in your school green cover?");
   e.preventDefault();
 }
-});	
+}); 
 </script>
 
 
