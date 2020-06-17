@@ -53,7 +53,7 @@ To understand water, it is important to know the source of water in your school 
 <?php echo form_open('water/set',array('id'=>'PrimaryWater')); ?>
 <div class="form-group">
   <label>
-  <h6> Task 1: Choose your Water Audit Team</h6>
+  <h6> Task 1: Choose your Water Audit Team <a class="tt" data-tooltip="The first name of need to have both first and last name. In the rest of the rows, if a team member does not have a last name, then they can press the space bar once and move to the next field."><span class="badge">?</span></a> </h6>
   </label>
   <br>
   Before you start, you must put together a team. An ideal team would consist of one teacher  to guide you during the audit. You would also require the help of the administrative staff of your school and other staff, such as the plumber, electrician and other maintenance staff. And, most importantly, five to 10 of your schoolmates </div>
