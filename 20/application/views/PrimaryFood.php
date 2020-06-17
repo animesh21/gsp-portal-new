@@ -60,7 +60,7 @@
 <?php echo form_open('food/set', array('id' => 'PrimaryFood')); ?>
 <div class="form-group">
 <label>
-<h6> Task 1: Choose your Food Audit Team </h6>
+<h6> Task 1: Choose your Food Audit Team <a class="tt" data-tooltip="The first name of need to have both first and last name. In the rest of the rows, if a team member does not have a last name, then they can press the space bar once and move to the next field."><span class="badge">?</span></a> </h6>
 </label>
 <br>
 You would require at least 5 to 10 of your schoolmates in the Food audit team. The teacher co-ordinator may
