@@ -556,7 +556,7 @@ To understand water, it is important to know the source of water in your school 
 <?php echo form_open('water/set', array('id' => 'water')); ?>
 <div class="form-group">
   <label>
-  <h6> Task 1: Choose your Water Audit Team</h6>
+  <h6> Task 1: Choose your Water Audit Team <a class="tt" data-tooltip="The first name of need to have both first and last name. In the rest of the rows, if a team member does not have a last name, then they can press the space bar once and move to the next field."><span class="badge">?</span></a> </h6>
   </label>
   <br>
   Before you start, you must put together a team. An ideal team would consist of one teacher (Science or
@@ -1142,7 +1142,7 @@ To understand water, it is important to know the source of water in your school 
 </div>
 <div class="form-group">
   <label>
-  <h6>Task 3: What Are The Sources, Supply and Storage of Water in your School? <a class="kplink"
+  <h6>Task 3: What are the sources, supply and means of storage of water in your school? <a class="kplink"
                                                                                                  href="http://www.greenschoolsprogramme.org/knowledge-bank/water/#sourceOfWater"
                                                                                                  target="_blank"> </a> </h6>
   </label>
@@ -1239,7 +1239,7 @@ To understand water, it is important to know the source of water in your school 
                 } else { ?>
 <div class="form-group" id="Q7W2" style="display: none;">
   <?php } ?>
-  <label class="control-label"> <span class="cube">4(a)</span>Does your school get daily water supply?</label>
+  <label class="control-label"> <span class="cube">4(a)</span>If supply of water is daily, please tick the correct option:</label>
   <div class="form-group">
     <ul class="list-unstyled">
       <li>
@@ -1288,8 +1288,7 @@ To understand water, it is important to know the source of water in your school 
                         } else { ?>
 <div class="form-group" id="Q7W3" style="display: none;">
   <?php } ?>
-  <label class="control-label"> <span class="cube">4(b)</span>Does your school get daily water
-  supply?</label>
+  <label class="control-label"> <span class="cube">4(b)</span>If supply of water is not daily, please tick the correct option:</label>
   <div class="form-group">
     <ul>
       <li>
@@ -1327,8 +1326,7 @@ To understand water, it is important to know the source of water in your school 
     <label class="control-label"><span class="cube">5</span> What are the water conservation
     practices your school follows <a class="tt" data-tooltip="Please tick “Yes” if your school follows the below mentioned practices. Do upload images/ jpegs, where relevant."><span class="badge">?</span></a></label>
     <div class="form-group">
-      <label class="radio-inline text-gray col-xs-10"> Does your school have any water and
-      sanitation policy? </label>
+      <label class="radio-inline text-gray col-xs-10"> Does your school have a water and sanitation policy?</label>
       <label class="radio-inline text-gray">
       <input type="radio" name="Q8W1S1"
                                                value="<?php echo set_value('Q8W1S1', 'Y') ?>" <?php if (isset($data['Q8W1S1'])) echo $data['Q8W1S1'] == 'Y' ? "checked" : "" ?>/>
@@ -1423,7 +1421,8 @@ To understand water, it is important to know the source of water in your school 
       No </label>
     </div>
     <div class="form-group">
-      <label class="radio-inline text-gray col-xs-10"> Does your school grow local plant species which require limited amount of water to grow? </label>
+      <label class="radio-inline text-gray col-xs-10"> Does your school grow local plant species that require a limited amount of water to grow? </label>
+
       <label class="radio-inline text-gray">
       <?php
              if (empty($data['Q8W1S8']))
@@ -1451,8 +1450,7 @@ To understand water, it is important to know the source of water in your school 
       No </label>
     </div>
     <div class="form-group">
-      <label class="radio-inline text-gray col-xs-10"> Does your school use a drip or
-      irrigation system? </label>
+      <label class="radio-inline text-gray col-xs-10"> Does your school use a drip irrigation or sprinkler system? </label> 
       <label class="radio-inline text-gray">
       <input type="radio" name="Q8W1S10"
                                                value="<?php echo set_value('Q8W1S10', 'Y') ?>" <?php if (isset($data['Q8W1S10'])) echo $data['Q8W1S10'] == 'Y' ? "checked" : "" ?>>
@@ -1463,8 +1461,7 @@ To understand water, it is important to know the source of water in your school 
       No </label>
     </div>
     <div class="form-group">
-      <label class="radio-inline text-gray col-xs-10"> Any other step taken for water
-      conservation? (if Yes, please specify) </label>
+      <label class="radio-inline text-gray col-xs-10"> Does your school use any water purification technology? (For example: RO machine/plant)? </label>
       <label class="radio-inline text-gray">
       <input type="radio" name="Q8W1S11"
                                                value="<?php echo set_value('Q8W1S11', 'Y') ?>" <?php if (isset($data['Q8W1S11'])) echo $data['Q8W1S11'] == 'Y' ? "checked" : "" ?>>
@@ -1475,7 +1472,7 @@ To understand water, it is important to know the source of water in your school 
       No </label>
     </div>
     <div class="form-group">
-      <label class="radio-inline text-gray col-xs-10"> Provision for storage of leftover water in bottles at water coolers
+      <label class="radio-inline text-gray col-xs-10">Any provision for storage of leftover water in bottles at water coolers? <br/>
       Any other step taken for water conservation? (if Yes, please specify): </label>
       <label class="radio-inline text-gray">
       <input type="radio" name="Q8W1S12"
@@ -1496,18 +1493,24 @@ To understand water, it is important to know the source of water in your school 
   </div>
 </div>
 <br/>
-<div class="form-group">
-  <label>Upload supporting documents</label>
-  <br>
-  <label style="font-color: white !important; ">Please upload all supporting documents related
-  to this section here. Note: files must be in one of the following formats: PDF Document
-  (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg)</label>
-  <button class="btn uploadbtn upload" data-id="Task 4 Supporting docs" data-toggle="modal"
-                                    data-target="#uploadModal"
-                                    type="button">UPLOAD FILES </button>
-  <br>
-  <br>
-</div>
+
+<div class="form-group" id="WastePolicy">
+      <label class="control-label">Please upload supporting
+      documents:</label>
+      <br/>
+      <!-- &bull;Pictures of audit team doing survey<br/> -->
+      Please upload all supporting documents related to this section here.
+      Note: Files must be one of the following formats: PDF Document
+      (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg) <br>
+      File size per document should not exceed <strong>100 KB.</strong> <br/>
+      <br/>
+      <button class="btn uploadbtn upload"
+                                                            data-id="Supporting Document Water" data-toggle="modal"
+                                                            data-target="#uploadModal" type="button">UPLOAD FILES </button>
+      <br>
+      <br>
+    </div>
+
 <div class="clearfix">&nbsp;</div>
 <table width="100%" class="question uploadedfiles">
   <thead>
@@ -1863,7 +1866,7 @@ To understand water, it is important to know the source of water in your school 
         <label class="radio-inline text-gray">
         <input type="radio" name="Q8W2S2S5"
                                                    value="<?php echo set_value('Q8W2S2S5', 2) ?>" <?php if (isset($data['Q8W2S2S5'])) echo $data['Q8W2S2S5'] == 2 ? "checked" : "" ?>/>
-        Over ground </label>
+        Above ground </label>
       </li>
       <li>
         <label class="radio-inline text-gray">
@@ -1875,7 +1878,7 @@ To understand water, it is important to know the source of water in your school 
         <label class="radio-inline text-gray">
         <input type="radio" name="Q8W2S2S5"
                                                    value="<?php echo set_value('Q8W2S2S5', 4) ?>" <?php if (isset($data['Q8W2S2S5'])) echo $data['Q8W2S2S5'] == 4 ? "checked" : "" ?>/>
-        Over- ground + semi underground </label>
+        Above - ground + semi underground </label>
       </li>
       <li>
         <label class="radio-inline text-gray">
@@ -1887,7 +1890,7 @@ To understand water, it is important to know the source of water in your school 
         <label class="radio-inline text-gray">
         <input type="radio" name="Q8W2S2S5"
                                                    value="<?php echo set_value('Q8W2S2S5', 6) ?>" <?php if (isset($data['Q8W2S2S5'])) echo $data['Q8W2S2S5'] == 6 ? "checked" : "" ?>/>
-        Underground + Over- ground + semi underground </label>
+        Underground + Above - ground + semi underground </label>
       </li>
     </ul>
   </div>
@@ -2795,7 +2798,7 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
   sanitation and hygiene practices in your school: </label>
   <div class="form-group">
     <label class="radio-inline text-gray col-xs-10"> Does the school have separate toilets
-    for males and females? </label>
+    for males and females? <a class="tt" data-tooltip="Toilets for women include wash basin and water closet. Toilets for men include wash basin and water closet and may or may not include urinals."><span class="badge">?</span></a> </label>
     <label class="radio-inline text-gray">
     <input type="radio" name="Q8W3S1"
                                            value="<?php echo set_value('Q8W3S1', 'Y') ?>" <?php if (isset($data['Q8W3S1'])) echo $data['Q8W3S1'] == 'Y' ? "checked" : "" ?>/>
@@ -3304,7 +3307,7 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
       <br>
       &bull;Pictures of audit team doing survey<br/>
       Please upload all supporting documents related to this section here.
-      Note, files must be one of the following formats: PDF Document
+      Note: Files must be one of the following formats: PDF Document
       (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg) <br>
       File size per document should not exceed <strong>100 KB.</strong> <br/>
       <br/>
@@ -3503,7 +3506,7 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
         Q1W1S1:{
           required:true,
         },
-	  Q3W1S2:{
+    Q3W1S2:{
           required:true,
         },
         Q1W1S3:{
@@ -3687,7 +3690,7 @@ http://www.greenschoolsprogramme.org/knowledge-bank/water/annexure-i/" target="_
     if($r == false)
     {
          e.preventDefault();
-	alert('You will need to enter data in all fields to move forward. Please scroll above to check again.');
+  alert('You will need to enter data in all fields to move forward. Please scroll above to check again.');
          jQuery('#water').valid();
     }
     
