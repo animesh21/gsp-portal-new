@@ -40,7 +40,9 @@
       <td><?php echo $record->date_added; ?></td>
       <td>
       <button class="btn btn-success" onclick="get_aprove(<?php echo $record->id; ?>)" >APPROVE</button>
-      <button class="btn btn-primary" onclick="get_merge(<?php echo $record->id;?>)" style="width: 90px; margin-top: 10px;">MERGE</button>
+      <!-- <button class="btn btn-primary" onclick="get_merge(<?php echo $record->id;?>)" style="width: 90px; margin-top: 10px;">MERGE</button> -->
+      <a onclick="get_merge(<?php echo $record->id; ?>)" id="mymodal122" data-toggle="modal" data-target="#myModal12e" class="btn btn-primary" style="width: 90px; margin-top: 10px;" >MERGE</a>
+
     </td>      
     </tr>
   <?php } ?>
@@ -63,4 +65,52 @@
  });
 }
 </script>
+
+
+
+
+
+
+
+<div class="modal fade" id="myModal12e" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Old School Id</h4>
+      </div>
+     <?php echo form_open_multipart('admin/Audit_started_2017/kvs_school_merge'); ?>
+      <div class="modal-body">
+       <label style="font-weight:600;">
+        Old School Id
+      </label>
+      <input type="text" class="form-control" name="old_school_id" id="old_school_id" required="">
+      <input type="text" class="form-control" name="mergeid" id="mergeid">
+
+    
+   
+      </div>
+      <div class="modal-footer">
+      
+        <button type="submit" class="btn btn-primary" id="submit" style="margin: 0px 0px 0px 240px;">Submit</button>
+      </div>
+    <?php echo form_close();?>
+    </div>
+  </div>
+</div>
+
+
+
+<script type="text/javascript">
+  
+ function get_merge($id)
+ {
+   var id = $id; 
+   $('#mergeid').val(id); 
+
+ }
+
+
+</script>
+
 
