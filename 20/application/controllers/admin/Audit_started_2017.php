@@ -352,6 +352,15 @@ public function kvs_school_merge() {
         $name = 'registration_2019.csv';
         force_download($name, $row);
     }
+	
+ 
+    public function excel_kvs_school_list() {
+        $this->load->dbutil();
+        $row = $this->Audit_started_model->excel_kvs_school_list();
+        $name = 'registration_2019.csv';
+        force_download($name, $row);
+    }
+  
   
  /*
      * Disabled School Excel
