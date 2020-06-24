@@ -1,20 +1,25 @@
 <link href="<?php echo base_url(); ?>assets/css/font-awesome.css" rel="stylesheet" type="text/css"/>
 <div class="top-area">
-  <h2>KVS REGISTRATION 2020 <a href="<?php echo base_url('admin/audit_started_2017/excel_phase1') ?>">
+  <h2>KVS REGISTRATION 2020 
+    <a href="<?php echo base_url('admin/audit_started_2017/excel_kvs_school_list') ?>">
     <button class="exportBtn">Export to Excel</button>
     </a></h2>
 </div>
+
 <div style="overflow-x:auto;">
-<table id="example3" class="display dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
+  <span style="font-size: 18px; margin-left: 18; float: right;" > Search: <input id="myInput" type="text" class="placeholder aria-controls"> </span> 
+<table  class="display dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
   <thead>
     <tr role="row">
       <th>S.No</th>
       <th>Sch.Id</th>
       <th>Udise</th>
       <th>School Name</th>
+      <th>School Email Id</th>
       <th style="width:150px">State</th>
       <th>District</th>
       <th>City</th>
+      <th>Pincode</th>
       <th>Co-ord. Name</th>
       <th>Co-ord. Email</th>
       <th>Co-ord. Mobile</th>
@@ -23,16 +28,18 @@
       <th>Action</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody id="myTable">
     <?php $i=1; foreach($record as $record){ ?>
     <tr>
       <td><?php echo $i++; ?></td>
       <td><?php echo $record->id; ?></td>
       <td><?php echo $record->udise; ?></td>
       <td><?php echo $record->name; ?></td>
+      <td><?php echo $record->schoolemail; ?></td>
       <td><?php echo getStateById($record->state); ?></td>
       <td><?php echo getdistrictById($record->district); ?></td>
       <td><?php echo $record->city; ?></td>
+      <td><?php echo $record->pincode; ?></td>
       <td><?php echo $record->coname; ?></td>
       <td><?php echo $record->coemail; ?></td>
       <td><?php echo $record->comobile; ?></td>
@@ -48,7 +55,7 @@
   <?php } ?>
   </tbody>
 </table>
-	
+  
 </div>
 
 <script type="text/javascript">
@@ -109,8 +116,19 @@
    $('#mergeid').val(id); 
 
  }
-
-
 </script>
 
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    // alert(value);
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
 
