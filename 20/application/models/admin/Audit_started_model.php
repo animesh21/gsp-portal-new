@@ -531,6 +531,80 @@ class Audit_started_model extends CI_Model {
         return $output;
     }
     
+   
+      public function excel_kvs_school_list() {
+        $output = "";
+        $arrRecord = $this->db->select('a.*, b.name AS state_name, c.name AS district_name , d.password')
+                        ->from('gsp_school AS a')
+                        ->join('states AS b', 'a.state=b.id', 'left')
+                        ->join('cities AS c', 'a.district=c.id', 'left')
+                        ->join('gsp_user AS d', 'a.userid=d.id', 'left')
+                        ->where("a.kvs_school_status","2")
+                        ->order_by('a.id', 'desc')
+                        ->get()->result();
+         
+     // ->where('a.date_added <', '2017-11-29 00:00:00')    
+        //echo '<pre>'; print_r($arrRecord); exit;
+        $k = 1;
+        $isdCode = '+91';
+        $output .= '"S.No",';
+        $output .= '"School ID",';
+        $output .= '"UDISE Code",';
+        $output .= '"School Name",';
+        $output .= '"Address1",';
+        $output .= '"Address2",';
+        $output .= '"Country",';
+        $output .= '"State",';
+        $output .= '"District",';
+        $output .= '"City",';
+        $output .= '"Pincode",';
+        $output .= '"ISD Code",';
+        $output .= '"STD Code",';
+        $output .= '"Landline Number",';
+        $output .= '"School Email",';
+        $output .= '"Principal Name",';
+        $output .= '"Principal Mobile",';
+        $output .= '"Coordinator Name",';
+        $output .= '"Coordinator Email",';
+        $output .= '"Coordinator Mobile",';
+        $output .= '"Password",';
+        $output .= '"Date & Time",';
+        $output .= '"Completeness",';
+        $output .= "\n";
+        foreach ($arrRecord as $a) {
+         
+            $output .= '"' . $k . '",';
+            $output .= '"' . $a->id . '",';
+            $output .= '"' . $a->udise . '",';
+            $output .= '"' . $a->name . '",';
+            $output .= '"' . $a->address1 . '",';
+            $output .= '"' . $a->address2 . '",';
+            $output .= '"' . $a->country . '",';
+            $output .= '"' . $a->state_name . '",';
+            $output .= '"' . $a->district_name . '",';
+            $output .= '"' . $a->city . '",';
+            $output .= '"' . $a->pincode . '",';
+            $output .= '"' . $isdCode . '",';
+            $output .= '"' . $a->std . '",';
+            $output .= '"' . $a->telephone . '",';
+            $output .= '"' . $a->schoolemail . '",';
+            $output .= '"' . $a->principle_name . '",';
+            $output .= '"' . $a->mobile . '",';
+            $output .= '"' . $a->coname . '",';
+            $output .= '"' . $a->coemail . '",';
+            $output .= '"' . $a->comobile . '",';
+            $output .= '"' . $a->password . '",';
+            //$output .='"'.date('d-m-Y H:i:s', strtotime($row['datetime'])).'",';
+            $output .= '"' . date('Y-m-d H:i:s', strtotime($a->date_added)) . '",';
+            $output .= '"' . $a->progress . '%",';
+            $output .= "\n";
+            $k++;
+        }
+
+        return $output;
+    }
+	
+
     public function disabled_school() {
         $output = "";
         $this->db->where("a.date_added <=","2019-11-10 00:00:00");
