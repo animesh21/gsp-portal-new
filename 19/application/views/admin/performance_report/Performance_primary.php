@@ -382,9 +382,6 @@ h2 span {
  
         <?php $percentage=getSchoolRatingPrimary($schoolUserID); 
         $school_category = getFiled('Q1S1', $schoolUserID);
-        
-            $percentage= ceil($percentage) ;
-        
       if($percentage>=70){?>
        
       <p style="font-weight: 400; padding:10px; color: black; background-color: #92d050;">Congratulations! Based on the analysis of the sustainable practices adopted by your school, your school has been rated Green. Do continue your efforts and sustain the momentum - being continuously Green is not easy and we have noticed that when a school (or the students and teachers) drops its guard or fail to provide accurate data, they slide to a yellow or orange or red category. Do ensure your school continues to adhere (but not limited to) to the following, and push the envelope for change: </p>
