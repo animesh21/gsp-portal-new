@@ -51,7 +51,7 @@
   <h6>Task 1: Choose your Energy Audit Team <a class="tt" data-tooltip="The first name of need to have both first and last name. In the rest of the rows, if a team member does not have a last name, then they can press the space bar once and move to the next field."><span class="badge">?</span></a> </h6>
   </label>
   <p>The school administrative staff must be members of your team as you would require electricity bills, fuel
-    consumption bills, etc. Other support staff such as generator attendant and electricians are also
+    consumption bills, etc. Other support staff such as generator attendants and electricians are also
     important contacts. It would be a good idea to rope in a Physics or Science teacher as well and, most
     importantly, a team of five to 10 of your schoolmates.</p>
 </div>
@@ -478,8 +478,8 @@
                                         <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
                                         <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
                                      <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
-				    </tr>
-				    
+            </tr>
+            
                                 <?php } ?>
                             </tbody>
                         </table>
@@ -1374,7 +1374,7 @@ else echo "0"; ?>"
   <?php } else {?>
   <div class="form-group" id="alternativeEnergy" style="display:none">
     <?php }?>
-    <label class="control-label">If yes, please upload a picture of alternative source of energy
+    <label class="control-label">If yes, please upload a picture of the alternative source of energy
     installed that is currently in use.</label>
     <br>
     <button class="btn uploadbtn upload" data-id="Alternative Source of Energy" data-toggle="modal"
@@ -1391,11 +1391,11 @@ else echo "0"; ?>"
 <?php foreach ($alternativeResource as $u) { ?>
     <tr id="index<?php echo $u->id; ?>">
     <?php $name = str_replace(" ", "_", $u->name . "_Alternative_Source_of_Energy_"); ?>
-																																																											
+                                                                                                                      
     <td class="upload edit"><?php echo str_replace($name, "", $u->file_name); ?></td>
     <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $u->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
     <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $u->file_name; ?>" download="<?php echo $u->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
-		</tr>
+    </tr>
 <?php } ?>
         </tbody>
     </table>  
@@ -1449,7 +1449,7 @@ else echo "0"; ?>"
       </div>
       <div class="form-group">
         <div class="form-group">
-          <label><span class="cube">6</span>Does your school use solar water heater:</label>
+          <label><span class="cube">6</span>Does your school use a solar water heater(s)?</label>
           <ul class="list-inline">
             <li>
               <label>
@@ -1495,7 +1495,7 @@ else echo "0"; ?>"
                                             <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
                                             <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
                                         <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
-					</tr>
+          </tr>
 <?php } ?>
                                 </tbody>
                             </table>
@@ -1593,8 +1593,8 @@ $("#energynext").click(function(e){
    if($("#Q1E1S1").attr('placeholder')==""  || $("#Q1E1S3").attr('placeholder')==""  || $("#Q1E1S2").attr('placeholder')==""){ 
      if($("#Q1E1S1").val()==""  || $("#Q1E1S3").val()==""  || $("#Q1E1S2").val()==""){ 
       alert("School Must Add Teacher First Name, Last Name & Email ID.");
-	  e.preventDefault();
-	}
+    e.preventDefault();
+  }
    }
 });
 /*Administrative Record Validation*/
@@ -1603,8 +1603,8 @@ $("#energynext").click(function(e){
    if($("#Q2E1S1").attr('placeholder')==""  || $("#Q2E1S3").attr('placeholder')==""  || $("#Q2E1S2").attr('placeholder')==""){
       if($("#Q2E1S1").val()=="" || $("#Q2E1S3").val()==""  || $("#Q2E1S2").val()==""){  
     alert("School Must Add Administrative Staff  First Name, Last Name & Email ID.");
-	e.preventDefault();
-	}
+  e.preventDefault();
+  }
    }
 });
 /*Student Record Validation*/
@@ -1613,100 +1613,100 @@ $("#energynext").click(function(e){
    if($("#Q3E1S1").attr('placeholder')==""  || $("#Q3E1S2").attr('placeholder')==""  || $("#Q3E1S3").attr('placeholder')==""){ 
     if($("#Q3E1S1").val()==""  || $("#Q3E1S2").val()==""  || $("#Q3E1S3").val()==""){ 
     alert("School Must Add Student First Name, Last Name & Grade.");
-	e.preventDefault();
-	}
+  e.preventDefault();
+  }
    }
 });
-	$("#energynext").click(function(e){
+  $("#energynext").click(function(e){
 /*Q1: Does your school have access to an electricity bill?*/
 if($("input[name='Q4E1']:checked").length==0){
 alert("Q1: Does your school have access to an electricity bill?");
-	e.preventDefault();
+  e.preventDefault();
 }
 /*Q2: Does your school have its own vehicles??*/
 if($("input[name='Q5E1']:checked").length==0){
  alert("Q2: Does your school have its own vehicles?");
-	e.preventDefault();
+  e.preventDefault();
 }
 /*Q5: Are there any alternate sources of energy employed/ installed in your school?*/
 if($("input[name='Q9E1']:checked").length==0){
  alert("Q5: Are there any alternate sources of energy employed/ installed in your school? ");
-	e.preventDefault();
+  e.preventDefault();
 }
 /*Q4:  What appliances does your school have?*/
 if($("input[name='Q7E2S1']").val()=="" && $("input[name='Q7E2S1']").attr("placeholder")=="" || $("input[name='Q7E3S1']").val()=="" && $("input[name='Q7E3S1']").attr("placeholder")=="" || $("input[name='Q7E4S1']").val()=="" && $("input[name='Q7E4S1']").attr("placeholder")==""|| $("input[name='Q7E5S1']").val()=="" && $("input[name='Q7E5S1']").attr("placeholder")==""|| $("input[name='Q7E6S1']").val()=="" && $("input[name='Q7E6S1']").attr("placeholder")==""|| $("input[name='Q7E7S1']").val()=="" && $("input[name='Q7E7S1']").attr("placeholder")==""|| $("input[name='Q7E8S1']").val()=="" && $("input[name='Q7E8S1']").attr("placeholder")==""|| $("input[name='Q7E9S1']").val()=="" && $("input[name='Q7E9S1']").attr("placeholder")=="" || $("input[name='Q7E10S1']").val()=="" && $("input[name='Q7E10S1']").attr("placeholder")=="" ){
  alert("Q4:  What appliances does your school have?");
-	e.preventDefault();
+  e.preventDefault();
 }
 /**Q3 Please share if your school uses the following types of energy:**/
 if($("input[name='Q6E1']:checked").length==0){
  alert("Q3 Please share if your school uses the following types of energy:(Electricity from the board (kwh))?");
-	e.preventDefault();
+  e.preventDefault();
 }
 if($("input[name='Q6E2']:checked").length==0){
  alert("Q3 Please share if your school uses the following types of energy:(Electricity from generator (diesel) (litres))?");
-	e.preventDefault();
+  e.preventDefault();
 }
 if($("input[name='Q6E3']:checked").length==0){
  alert("Q3 Please share if your school uses the following types of energy:(Petrol (litres))?");
-	e.preventDefault();
+  e.preventDefault();
 }
 if($("input[name='Q6E4']:checked").length==0){
  alert("Q3 Please share if your school uses the following types of energy:(Diesel (litres))?");
-	e.preventDefault();
+  e.preventDefault();
 }
 if($("input[name='Q6E5']:checked").length==0){
  alert("Q3 Please share if your school uses the following types of energy:(CNG (kilogrammes))?");
-	e.preventDefault();
+  e.preventDefault();
 }
 if($("input[name='Q6E6']:checked").length==0){
  alert("Q3 Please share if your school uses the following types of energy:(Kerosene (litres))?");
-	e.preventDefault();
+  e.preventDefault();
 }
 if($("input[name='Q6E7']:checked").length==0){
  alert("Q3 Please share if your school uses the following types of energy:(Coal (kilogrammes))?");
-	e.preventDefault();
+  e.preventDefault();
 }
 if($("input[name='Q6E8']:checked").length==0){
  alert("Q3 Please share if your school uses the following types of energy:(Wood (kilogrammes))?");
-	e.preventDefault();
+  e.preventDefault();
 }
 if($("input[name='Q6E9']:checked").length==0){
  alert("Q3 Please share if your school uses the following types of energy:(Animal waste (kilogrammes))?");
-	e.preventDefault();
+  e.preventDefault();
 }
 if($("input[name='Q6E10']:checked").length==0){
  alert("Q3 Please share if your school uses the following types of energy:(Solar (kwh))?");
-	e.preventDefault();
+  e.preventDefault();
 }
 if($("input[name='Q6E11']:checked").length==0){
  alert("Q3 Please share if your school uses the following types of energy:(Wind (kwh))?");
-	e.preventDefault();
+  e.preventDefault();
 }
 if($("input[name='Q6E12']:checked").length==0){
  alert("Q3 Please share if your school uses the following types of energy:(LPG (kilogrammes))?");
-	e.preventDefault();
+  e.preventDefault();
 }
 if($("input[name='Q6E13']:checked").length==0){
  alert("Q3 Please share if your school uses the following types of energy:(Piped Natural Gas (kilogrammes))?");
-	e.preventDefault();
+  e.preventDefault();
 }
 if($("input[name='Q6E14']:checked").length==0){
  alert("Q3 Please share if your school uses the following types of energy:(Biogas (kilogrammes))?");
-	e.preventDefault();
+  e.preventDefault();
 }
 if($("input[name='Q9E1']:checked").val()==="Y"){
   if($("input[name='Q9E1S1']:checked").length==0 && $("input[name='Q9E1S2']:checked").length==0 && $("input[name='Q9E1S3']:checked").length==0 && $("input[name='Q9E1S4']:checked").length==0 && $("input[name='Q9E1S5']:checked").length==0){
     alert("Q5(a)If yes, do you use:?");
-	e.preventDefault();
+  e.preventDefault();
   }
-}		
+}   
 });
                 </script>
-	
-	
-	
-	<script type="text/javascript">
+  
+  
+  
+  <script type="text/javascript">
   
   $("input[name='Q9E1']").click(function(){
 
@@ -1729,6 +1729,6 @@ var alternate_source =  $("input[name='Q9E1']:checked").val();
 
 
 </script>
-	
-	
-	
+  
+  
+  
