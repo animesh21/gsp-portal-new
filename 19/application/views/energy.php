@@ -100,10 +100,10 @@
 <!---Store Value For Vidation----->
 <div class="form-group">
   <label>
-  <h6>Task 1: Choose your Energy Audit Team</h6>
+  <h6>Task 1: Choose your Energy Audit Team <a class="tt" data-tooltip="The first name of need to have both first and last name. In the rest of the rows, if a team member does not have a last name, then they can press the space bar once and move to the next field."><span class="badge">?</span></a> </h6>
   </label>
   <p>The school administrative staff must be members of your team as you would require electricity bills, fuel
-    consumption bills, etc. Other support staff such as generator attendant and electricians are also
+    consumption bills, etc. Other support staff such as generator attendants and electricians are also
     important contacts. It would be a good idea to rope in a Physics or Science teacher as well and, most
     importantly, a team of five to 10 of your schoolmates.</p>
 </div>
@@ -498,7 +498,7 @@
     <p><strong>LPG: </strong>Ask the mess/canteen staff, how many cylinders are used in one month on
       an average. Remember each gas cylinder generally weighs 14.2 kg.</p>
     
-    <p><strong>PNG: </strong>If the school has a PNG connection, ask the mess/canteen staff for a copy of the PNG bill, which is usually raise once or twice in a quarter.</p>
+    <p><strong>PNG: </strong>If the school has a PNG connection, ask the mess/canteen staff for a copy of the PNG bill, which is usually raised once or twice in a quarter.</p>
   </div>
   </label>
   <div class="answer clearfix"></div>
@@ -982,7 +982,7 @@ echo form_input('Q6E11S3', $data['Q6E11S3'], $attribs);
   </div>
   <div class="form-group1 row">
     <div class="col-xs-3">
-      <label> Piped Natural Gas (kilogrammes)</label>
+      <label> Piped Natural Gas (Litres or standard cubic metre)</label>
     </div>
     <div class="col-xs-3">
       <?php
@@ -1012,7 +1012,7 @@ echo form_input('Q6E12S3', $data['Q6E12S3'], $attribs);
   </div>
   <div class="form-group1 row">
     <div class="col-xs-3">
-      <label> Biogas</label>
+      <label> Biogas (Litres or standard cubic metre)</label>
     </div>
     <div class="col-xs-3">
       <?php
@@ -1143,7 +1143,7 @@ else echo "0"; ?>"
       <label>Number</label>
     </div>
     <div class="col-xs-3">
-      <label>Size</label>
+      <label>Size/Wattage</label>
     </div>
     <div class="col-xs-3">
       <label>BEE Star Rating</label>
@@ -1277,7 +1277,7 @@ else echo "0"; ?>"
   </div>
 </div>
 <div class="form-group">
-  <label class="control-label">Please upload picture of five star appliances used by school</label>
+  <label class="control-label">Please upload pictures of the five star appliances used by the school.</label>
   <br>
   <button class="btn uploadbtn upload" data-id="Five Star Appliances" data-toggle="modal" data-target="#airModal"
                         type="button">UPLOAD FILES </button>
@@ -1361,7 +1361,7 @@ if (isset($data['Q9E1']))
   <?php } else { ?>
   <div class="form-group" id="alternativeEnergy" style="display:none">
     <?php } ?>
-    <label class="control-label">If yes, please upload a picture of alternative source of energy
+    <label class="control-label">If yes, please upload a picture of the alternative source of energy
     installed that is currently in use.</label>
     
   </div>
@@ -1450,7 +1450,7 @@ if (isset($data['Q9E1']))
       </div>
        
         <div class="form-group">
-          <label><span class="cube">7</span>Does your school use solar water heater:</label>
+          <label><span class="cube">7</span>Does your school use a solar water heater(s)?</label>
           <ul class="list-inline">
             <li>
               <label>Yes</label>
@@ -1536,34 +1536,33 @@ if (isset($data['Q9E1']))
         <label class="control-label">(A) Solar rooftop systems</label>
       </div>
         <div class="form-group">           
-          <label class="control-label"><span class="cube">9</span>What is the installed capacity of solar photovoltaic (PV) panels on the school rooftop (in kW)?  <a class="tt" data-tooltip="Installed capacity is rated (full-load) generation capacity of a power plant. A solar rooftop plant’s capacity, being small, will be expressed in terms of kilowatt (kW). The information on installed capacity will be available on the solar rooftop plant’s online performance monitoring system. Alternatively, it would also be mentioned in the order for installation placed with the solar rooftop installer/vendor."><span class="badge">?</span></a></label>
+          <label class="control-label"><span class="cube">9</span>What is the installed capacity of solar photovoltaic (PV) panels on the school rooftop (in kW)?  <a class="tt" data-tooltip="Installed capacity is the maximum electric output that can be produced by a power plant under specific conditions. A solar rooftop plant's capacity, being small, will be expressed in terms of kilowatt (kW). The information on installed capacity will be available on the solar rooftop plant's online performance monitoring system as well as the back side of each solar panel. The values of all the panels can be summed to estimate the installed capacity. Alternatively, it would also be mentioned in the order for installation placed with the solar rooftop installer or vendor."><span class="badge">?</span></a></label>
 
 <input class="form-control space-textbox" id="Q13E1" type="text" onkeypress="return isNumberKey(event)" name="Q13E1"  placeholder="<?php if (isset($data['Q13E1'])) echo $data['Q13E1']; ?>" value="<?php if (isset($data['Q13E1'])) echo $data['Q13E1']; ?>">
         </div>   
          
         <div class="form-group">           
-          <label class="control-label"><span class="cube">10</span>What is the connected load of the school (kW)?<a class="tt" data-tooltip="The connected load of a consumer is the load in kilowatt (kW) which the power distribution company has agreed to supply to the consumer. The electricity bill of the consumer (i.e. school) will contain this information, mentioned as connected load or just load. "><span class="badge">?</span></a></label>
+          <label class="control-label"><span class="cube">10</span>What is the connected load of the school (kW)?<a class="tt" data-tooltip="The connected load of a consumer is the load in kilowatt (kW) which the power distribution company has agreed to supply to the consumer. The electricity bill of the consumer (i.e. school) will contain this information, mentioned as connected load, sanctioned load or just load. "><span class="badge">?</span></a></label>
 
 <input class="form-control space-textbox" id="Q14E1" type="text" onkeypress="return isNumberKey(event)" name="Q14E1" placeholder="<?php if (isset($data['Q14E1'])) echo $data['Q14E1']; ?>" value="<?php if (isset($data['Q14E1'])) echo $data['Q14E1']; ?>">
         </div>
 
         <div class="form-group">           
-          <label class="control-label"><span class="cube">11</span>What is the size of invertors associated with the solar photovoltaic panel (PV)? </label> <br/>
-          <span style="font-style: italic;" >Inverters are required to convert the direct current (DC) output generated by solar rooftop systems or batteries to alternating current (AC) for further use. In general inverter wattage (expressed in kilo-volt-amperes or kVA) is 20-25 per cent more than that installed capacity.</span>  <br/> <br/>
+          <label class="control-label"><span class="cube">11</span>What is the size of inverters associated with the solar photovoltaic panel (PV)? </label> <br/>
+          <span style="font-style: italic;" >Inverters are required to convert the direct current (DC) output generated by solar rooftop systems or batteries to alternating current (AC) for further use. In general, inverter wattage (expressed in kilo-volt-amperes or kVA) is 20-25 per cent more than the installed capacity to avoid the loss of excess DC.</span>  <br/> <br/>
 
 <input class="form-control space-textbox" id="Q15E1" type="text" onkeypress="return isNumberKey(event)" name="Q15E1" placeholder="<?php if (isset($data['Q15E1'])) echo $data['Q15E1']; ?>" value="<?php if (isset($data['Q15E1'])) echo $data['Q15E1']; ?>">
         </div>
 
         <div class="form-group">           
           <label class="control-label"><span class="cube">12</span>What operational model has been adopted for the solar rooftop system?</label> <br/>
-          <span style="font-style: italic;" >Solar rooftop systems can either be standalone (off-grid) or grid-connected. 
-A standalone system is wired only to the house and requires a battery back up to store any excess power generated, or meet power deficits. Example: standalone solar street lights, solar lamps, rooftop panels <button class="btn-btn-primary" id="readmore" style="margin: 2px 5px; min-width: 95px; padding: 3px 3px; text-transform:none;" >Read more+</button> </span>
+          <span style="font-style: italic;" >Solar rooftop systems can either be standalone (off-grid) or grid-connected. A standalone system is wired only to the house and requires a battery back up to store any excess power generated or to meet power deficits. Example: standalone solar street lights, solar lamps, rooftop panels <button class="btn-btn-primary" id="readmore" style="margin: 2px 5px; min-width: 95px; padding: 3px 3px; text-transform:none;" >Read more+</button> </span>
 <span class="read_1" style="display: none; font-style: italic;">Grid-interactive systems, on the other hand, utilise the grid for storing and extracting electricity, as per the requirement. Example: Solar rooftop panels, on ground solar panels etc. Interactions with the grid can be facilitated either via gross or net metering. <br/>
- Under gross metering, all generated electricity is sold to the grid at average cost of supply (ACoS), as determined by the regional distribution company. And the consumer continues to procure all needed power from the DISCOM, as per their tariff bracket. The bills are either settled individually or as net billing. <br/> 
- Whereas under net metering, the consumer consumes all the energy produced by the solar rooftop (SRT) system. And relies on the grid for any excess energy required. The consumer is only charged for the excess energy they consume, as per their tariff bracket. Any surplus generation can be fed back to the grid.  
-  This information will also be reflected in the electricity bill of the school as under a net-metering billing would only be for net consumption. <br/>
-
-Generally on-grid systems have benefit of transferring surplus power to grid, while in case of off-grid systems, surplus power may get wasted if there is not enough battery storage available. <button class="btn-btn-primary" id="readless" style="margin: 2px 5px; min-width: 95px; padding: 3px 3px; text-transform:none; margin-bottom: 20px" >Read less</button> </span>
+ Under gross metering, all generated electricity is sold to the grid at a feed-in-tariff determined by the state electricity regulatory commission. The consumer continues to procure the required power from the distribution company, as per their tariff bracket. The bills are either settled individually or as net billing.<br/> 
+ Under net metering, the consumer uses all the energy produced by the solar rooftop (SRT) system and relies on the grid for any excess energy required. The consumer is only charged for the excess energy they consume, as per their tariff bracket. Any surplus generation can be fed back to the grid. <br/>
+  This information will also be reflected in the electricity bill of the school as a net-metering billing would only be for net consumption.<br/>
+Generally, on-grid systems have the benefit of transferring surplus power to the grid, while in off-grid systems surplus power may get wasted if there is not enough battery storage available.
+ <button class="btn-btn-primary" id="readless" style="margin: 2px 5px; min-width: 95px; padding: 3px 3px; text-transform:none; margin-bottom: 20px" >Read less</button> </span>
 
 <ul class="list-inline">
             <li>              
@@ -1598,7 +1597,7 @@ Generally on-grid systems have benefit of transferring surplus power to grid, wh
           <ul class="list-unstyled">             
             <li>              
               <input type="checkbox" name="Q9E1S1020" id="Q9E1S1020" value="<?php echo set_value('Q9E1S1020', 1); ?>" <?php if (isset($data['Q9E1S1020'])) echo "checked" ?>/>              
-              <label>Wet cleaning at least once a week.</label>
+              <label>Wet cleaning at least once a week</label>
             </li>
             <li>              
               <input type="checkbox" name="Q9E1S1021" id="Q9E1S1021" value="<?php echo set_value('Q9E1S1021', 2); ?>" <?php if (isset($data['Q9E1S1021'])) echo "checked" ?>/>
@@ -1606,11 +1605,11 @@ Generally on-grid systems have benefit of transferring surplus power to grid, wh
             </li>
              <li>              
               <input type="checkbox" name="Q9E1S1022" id="Q9E1S1022" value="<?php echo set_value('Q9E1S1022', 3); ?>" <?php if (isset($data['Q9E1S1022'])) echo "checked" ?>/>
-              <label>Annual maintenance contract with the vendor for maintenance of electrical and other technical components.</label>
+              <label>Annual maintenance contract with the vendor for maintenance of electrical and other technical components</label>
             </li>
              <li>              
               <input type="checkbox" name="Q9E1S1023" id="Q9E1S1023" value="<?php echo set_value('Q9E1S1023', 4); ?>" <?php if (isset($data['Q9E1S1023'])) echo "checked" ?>/>
-              <label>Regular monitoring of the integrated software real-time tracking of performance (usually through a smart phone or computer).</label>
+              <label>Regular monitoring of the integrated software and real-time tracking of performance (usually through a smart phone or computer)</label>
             </li>             
           </ul>
         </div>
@@ -1670,7 +1669,7 @@ Generally on-grid systems have benefit of transferring surplus power to grid, wh
         </div>
   <div class="displayNone">
         <div class="form-group">           
-          <label class="control-label"><span class="cube">16</span>What is the size of invertors associated with the non-solar RE system (kVA)?</label>
+          <label class="control-label"><span class="cube">16</span>What is the size of the invertors associated with the non-solar RE system (kVA)?</label>
 
 <input class="form-control space-textbox" id="Q33E1" type="text" onkeypress="return isNumberKey(event)" name="Q33E1" placeholder="<?php if (isset($data['Q33E1'])) echo $data['Q33E1']; ?>" value="<?php if (isset($data['Q33E1'])) echo $data['Q33E1']; ?>">
         </div>
@@ -1695,17 +1694,17 @@ Generally on-grid systems have benefit of transferring surplus power to grid, wh
         </div>
 
         <div class="form-group">           
-          <label class="control-label"><span class="cube">20</span>What are the operation and maintenance (O&M)  practices adopted for installed non-solar RE plant?</label>
+          <label class="control-label"><span class="cube">20</span>What are the operation and maintenance (O&M)  practices adopted for the installed non-solar RE plant?</label>
 
 
             <ul class="list-unstyled">             
             <li>              
               <input type="checkbox" name="Q9E1S1026" id="Q9E1S1026" value="<?php echo set_value('Q9E1S1026', 1); ?>" <?php if (isset($data['Q9E1S1026'])) echo "checked" ?>/>              
-              <label>Annual maintenance contract with the vendor for maintenance of electrical and other technical components.</label>
+              <label>Annual maintenance contract with the vendor for maintenance of electrical and other technical components</label>
             </li>
             <li>              
               <input type="checkbox" name="Q9E1S1027" id="Q9E1S1027" value="<?php echo set_value('Q9E1S1027', 2); ?>" <?php if (isset($data['Q9E1S1027'])) echo "checked" ?>/>
-              <label>Regular monitoring of the integrated software real-time tracking of performance (usually through a smart phone or computer).</label>
+              <label>Regular monitoring of the integrated software and real-time tracking of performance (usually through a smart phone or computer)</label>
             </li>                       
           </ul>
         </div>
@@ -1718,7 +1717,7 @@ Generally on-grid systems have benefit of transferring surplus power to grid, wh
         <label class="control-label">(C) Advanced questions on Biofuels</label>
       </div>
         <div class="form-group">           
-          <label class="control-label"><span class="cube">21</span>What are types of biomass being used by the school?
+          <label class="control-label"><span class="cube">21</span>What are the different types of biomass used by the school?
            </span></a></label>
 
 <ul class="list-unstyled">             
@@ -1752,7 +1751,7 @@ Generally on-grid systems have benefit of transferring surplus power to grid, wh
 
         
         <div class="form-group">           
-          <label class="control-label"><span class="cube">22</span>What is the amount of waste being put in the biomass plant per day (in kg)?</label>
+          <label class="control-label"><span class="cube">22</span>How much waste is utilized by the biomass plant in a day (in kg)?</label>
 
 <input class="form-control space-textbox" id="Q38E1" type="text" onkeypress="return isNumberKey(event)" name="Q38E1" placeholder="<?php if (isset($data['Q38E1'])) echo $data['Q38E1']; ?>" value="<?php if (isset($data['Q38E1'])) echo $data['Q38E1']; ?>">
         </div>
@@ -1810,7 +1809,7 @@ Generally on-grid systems have benefit of transferring surplus power to grid, wh
       </div>
 
  <div class="form-group">           
-          <label class="control-label"><span class="cube">c.</span>What are the components of biogas unit? </span></a></label>
+          <label class="control-label"><span class="cube">c.</span>What are the components of the biogas unit?</span></a></label>
 
 <ul class="list-unstyled">             
             <li>
@@ -1841,7 +1840,7 @@ Generally on-grid systems have benefit of transferring surplus power to grid, wh
         </div>
 
         <div class="form-group">
-          <label class="control-label"><span class="cube">d.</span>How many hours of cooking in school using biogas (in a day)? </label>
+          <label class="control-label"><span class="cube">d.</span>How many hours of cooking is done per day using biogas? </label>
           <input class="form-control space-textbox" id="Q51E1" type="text" onkeypress="return isNumberKey(event)" name="Q51E1" placeholder="<?php if (isset($data['Q51E1'])) echo $data['Q51E1']; ?>" value="<?php if (isset($data['Q51E1'])) echo $data['Q51E1']; ?>">
         </div>
 
@@ -1851,7 +1850,7 @@ Generally on-grid systems have benefit of transferring surplus power to grid, wh
         </div>
 
         <div class="form-group">
-          <label class="control-label"><span class="cube">f.</span> How many hours of cooking by other sources (in a day)?</label>
+          <label class="control-label"><span class="cube">f.</span>How many hours of cooking is done per day using other sources?</label>
           <input class="form-control space-textbox" id="Q53E1" type="text" onkeypress="return isNumberKey(event)" name="Q53E1" placeholder="<?php if (isset($data['Q53E1'])) echo $data['Q53E1']; ?>" value="<?php if (isset($data['Q53E1'])) echo $data['Q53E1']; ?>">
         </div>
        </div>
@@ -2054,7 +2053,7 @@ Generally on-grid systems have benefit of transferring surplus power to grid, wh
     if($r == false)
     {
          e.preventDefault();
-			alert('You will need to enter data in all fields to move forward. Please scroll above to check again.');
+      alert('You will need to enter data in all fields to move forward. Please scroll above to check again.');
          jQuery('#energy').valid();
     }
     
