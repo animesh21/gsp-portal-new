@@ -180,7 +180,7 @@
 <?php echo form_open('waste/set', array('id' => 'waste')); ?>
 <div class="form-group">
   <label>
-  <h6>Task 1: Choose your Waste Audit Team. <a class="tt" data-tooltip="The first name of need to have both first and last name. In the rest of the rows, if a team member does not have a last name, then they can press the space bar once and move to the next field."><span class="badge">?</span></a> </h6>
+  <h6>Task 1: Choose your Waste Audit Team.</h6>
   </label>
   <br>
   The housekeeping and cleaning staff of your school shall be the core members of your team, as you will have
@@ -635,10 +635,7 @@
 <?php }  ?>
  
 <div class="form-group">
-  <label><span class="cube">2</span>How many categories does your school segregate waste into? <a
-                            class="tt"
-                            data-tooltip="Students will have to count the number of waste disposal points in the school as, for instance, one dustbin, two dustbins or more. If there are no dustbins, please say zero (o)"
-                    ><span class="badge">?</span></a></label>
+  <label><span class="cube">2</span>How many categories does your school segregate waste into? </label>
   <ul>
     <li>
       <label class="radio-inline text-gray">
@@ -668,8 +665,7 @@
   </ul>
 </div>
 <div class="form-group">
-  <label class="control-label"><span class="cube">2(a)</span> How many categories does your school
-  segregate waste into? <a class="tt" data-tooltip="Collection points are the areas (classroom, playground, sick room, etc) where dustbins have been placed. "><span class="badge">?</span></a></label>
+  <label class="control-label"><span class="cube">2(a)</span> If your school segregates waste, please count the areas (collection points) that are with and without dustbins and enter below <a class="tt" data-tooltip="Students will have to count the number of collection points in the school, for instance, one dustbin, two dustbins or more. If there are no dustbins, please say zero (0).  Collection points are the areas (classroom, playground, sick room, etc) where dustbins have been placed. "><span class="badge">?</span></a></label>
   <div class="form-group row">
     <div class="col-xs-1">
       <label>Area </label>
@@ -1418,7 +1414,112 @@
                                value="<?php if (isset($data['Q6Wa2S9'])) echo $data['Q6Wa2S9'] ?>" readonly/>
     </div>
   </div>
-</div>
+
+  <div class="clearfix">&nbsp;</div>
+<div class="form-group">
+    <label class="control-label"><span class="cube">b(1)</span>Is your school a single-use plastic-free zone? <a class="tt" data-tooltip="Single-use plastics are a by-product of petroleum and are thrown away after just one use. The school campus is a single-use plastic-free zone if there are no such plastics  present or are being used in any way, inside the campus. To know how plastic waste adds to climate change."><span class="badge">?</span></a> <a class="kplink" href="https://www.greenschoolsprogramme.org/knowledge-bank/waste/" target="_blank"> </a></label>
+     <div class="form-group">
+     <label class="radio-inline text-gray">
+        <input type="radio" name="Q3bWa1" value="<?php echo set_value('Q3bWa1', 'Y') ?>" <?php if (isset($data['Q3bWa1'])) echo $data['Q3bWa1'] == 'Y' ? "checked" : "" ?>> Yes </label>
+      
+     <label class="radio-inline text-gray">
+        <input type="radio" name="Q3bWa1" value="<?php echo set_value('Q3bWa1', 'N') ?>" <?php if (isset($data['Q3bWa1'])) echo $data['Q3bWa1'] == 'N' ? "checked" : "" ?>> No </label>
+     </div>
+   </div>
+
+<div class="clearfix">&nbsp;</div>
+   <div class="form-group">
+    <label class="control-label"><span class="cube">b(2)</span>Does the school give plastic items during meetings and events or to the visitors? <a class="tt" data-tooltip="For example, new notepads which are inside plastic clear bags, plastic pens, mementos"><span class="badge">?</span></a></label>
+     <div class="form-group">
+     <label class="radio-inline text-gray">
+        <input type="radio" name="Q3b2Wa1" value="<?php echo set_value('Q3b2Wa1', 'Y') ?>" <?php if (isset($data['Q3b2Wa1'])) echo $data['Q3b2Wa1'] == 'Y' ? "checked" : "" ?>> Yes </label>
+      
+     <label class="radio-inline text-gray">
+        <input type="radio" name="Q3b2Wa1" value="<?php echo set_value('Q3b2Wa1', 'N') ?>" <?php if (isset($data['Q3b2Wa1'])) echo $data['Q3b2Wa1'] == 'N' ? "checked" : "" ?>> No </label>
+     </div>
+   </div>
+
+   <div class="clearfix">&nbsp;</div>
+
+    <div class="form-group" id="Q9Wa3">
+      <label for="username" class="control-label"><span class="cube">b(2)(a)</span>If yes, please provide details:</label>
+      <br>
+      <input type="text" name="Q3b2Wa2" id="Q3b2Wa2" class="form-control space-textbox"
+                   placeholder="<?php if (isset($data['Q3b2Wa2'])) echo $data['Q3b2Wa2'] ?>"
+                   value="<?php if (isset($data['Q3b2Wa2'])) echo $data['Q3b2Wa2'] ?>">
+    </div>
+
+<div class="clearfix">&nbsp;</div>
+
+ <div class="form-group row">
+    <label><span class="cube">b(3)</span>What is the material used to wrap prizes/awards at school events?</label>
+    <div class="text-gray">
+      <label>
+      <input type="checkbox" name="Q3b3Wa1" value="<?php echo set_value('Q3b3Wa1', 1); ?>" <?php if (isset($data['Q3b3Wa1'])) echo "checked" ?>> &nbsp; Gift wrapping paper</label>
+    </div>
+
+    <div class="text-gray">
+      <label>
+      <input type="checkbox" name="Q3b4Wa1" value="<?php echo set_value('Q3b4Wa1', 1); ?>" <?php if (isset($data['Q3b4Wa1'])) echo "checked" ?>> &nbsp; Coated gift-wrapping plastic sheet</label>
+    </div>
+
+    <div class="text-gray">
+      <label>
+      <input type="checkbox" name="Q3b5Wa1" value="<?php echo set_value('Q3b5Wa1', 1); ?>" <?php if (isset($data['Q3b5Wa1'])) echo "checked" ?>> &nbsp; Newspaper </label>
+    </div>
+
+    <div class="text-gray">
+      <label>
+      <input type="checkbox" name="Q3b6Wa1" value="<?php echo set_value('Q3b6Wa1', 1); ?>" <?php if (isset($data['Q3b6Wa1'])) echo "checked" ?>> &nbsp; Plastic wrapping used for flower bouquets </label>
+    </div>
+
+    <div class="text-gray">
+      <label>
+      <input type="checkbox" name="Q3b7Wa1" value="<?php echo set_value('Q3b7Wa1', 1); ?>" <?php if (isset($data['Q3b7Wa1'])) echo "checked" ?>> &nbsp; Other </label>
+    </div>     
+     
+  </div>
+
+  <div class="clearfix">&nbsp;</div>
+
+ <div class="form-group row">
+    <label><span class="cube">b(4)</span>Please select the material your school uses to display information for events such as quizzes, talent shows, debates on the noticeboard?</label>
+    <div class="text-gray">
+      <label>
+      <input type="checkbox" name="Q3b4Wa4" value="<?php echo set_value('Q3b4Wa4', 1); ?>" <?php if (isset($data['Q3b4Wa4'])) echo "checked" ?>> &nbsp; Metal </label>
+    </div>
+
+    <div class="text-gray">
+      <label>
+      <input type="checkbox" name="Q3b4Wa5" value="<?php echo set_value('Q3b4Wa5', 1); ?>" <?php if (isset($data['Q3b4Wa5'])) echo "checked" ?>> &nbsp; Poly Vinyl chloride (PVC) Flexible Sheets/Flex plastic sheets</label>
+    </div>
+
+    <div class="text-gray">
+      <label>
+      <input type="checkbox" name="Q3b4Wa6" value="<?php echo set_value('Q3b4Wa6', 1); ?>" <?php if (isset($data['Q3b4Wa6'])) echo "checked" ?>> &nbsp; Glass</label>
+    </div>
+
+    <div class="text-gray">
+      <label>
+      <input type="checkbox" name="Q3b4Wa7" value="<?php echo set_value('Q3b4Wa7', 1); ?>" <?php if (isset($data['Q3b4Wa7'])) echo "checked" ?>> &nbsp; Fabric</label>
+    </div>
+
+    <div class="text-gray">
+      <label>
+      <input type="checkbox" name="Q3b4Wa8" value="<?php echo set_value('Q3b4Wa8', 1); ?>" <?php if (isset($data['Q3b4Wa8'])) echo "checked" ?>> &nbsp; Paper/chart paper</label>
+    </div>
+
+    <div class="text-gray">
+      <label>
+      <input type="checkbox" name="Q3b4Wa9" value="<?php echo set_value('Q3b4Wa9', 1); ?>" <?php if (isset($data['Q3b4Wa9'])) echo "checked" ?>> &nbsp; Others</label>
+    </div>     
+     
+  </div>
+
+
+  <div class="clearfix">&nbsp;</div>
+
+
 <div class="form-group">
   <label><span class="cube">c.</span>Domestic hazardous waste</label>
   <div class="form-group row">
@@ -1502,7 +1603,7 @@
   </div>
 </div>
 <div class="form-group">
-  <label><span class="cube">e.</span>Biomedical waste</label>
+  <label><span class="cube">e.</span>Biomedical waste <a class="kplink" href="https://www.greenschoolsprogramme.org/knowledge-bank/waste/" target="_blank"> </a> </label>
   <div class="form-group row">
     <div class="col-xs-6">
       <label>HOW MUCH WASTE DOES YOUR SCHOOL GENERATE? </label>
@@ -1564,7 +1665,7 @@
   </div>
 </div>
 <div class="form-group">
-  <label><span class="cube">g.</span>Cc& D Waste</label>
+  <label><span class="cube">g.</span>Cc& D Waste <a class="kplink" href="https://www.greenschoolsprogramme.org/knowledge-bank/waste/" target="_blank"> </a> </label>
   <div class="form-group row">
     <div class="col-xs-6">
       <label>HOW MUCH WASTE DOES YOUR SCHOOL GENERATE? </label>
@@ -1692,7 +1793,7 @@
         <label>HOW MUCH WASTE DOES YOUR SCHOOL REUSE/RECYCLE? </label>
       </div>
       <div class="col-xs-6">
-        <label>Quantity of solid waste reuse/recycled (monthly average in kg) </label>
+        <label>Quantity of solid waste reused/recycled (monthly average in kg) </label>
       </div>
     </div>
     <div class="form-group row">
@@ -1769,8 +1870,7 @@
         <label>HOW MUCH WASTE DOES YOUR SCHOOL REUSE/RECYCLE? </label>
       </div>
       <div class="col-xs-6">
-        <label>Quantity of solid waste generated
-        (monthly average in kg) </label>
+        <label>Quantity of solid waste reused/recycled (monthly average in kg) </label>
       </div>
     </div>
     <div class="form-group row">
@@ -1880,7 +1980,7 @@
         <label>HOW MUCH WASTE DOES YOUR SCHOOL REUSE/RECYCLE? </label>
       </div>
       <div class="col-xs-6">
-        <label>Quantity of solid waste generated(monthly average in kg) </label>
+        <label>Quantity of solid waste reused/recycled (monthly average in kg) </label>
       </div>
     </div>
     <div class="form-group row">
@@ -1935,7 +2035,7 @@
         <label>HOW MUCH WASTE DOES YOUR SCHOOL REUSE/RECYCLE? </label>
       </div>
       <div class="col-xs-6">
-        <label>Quantity of solid waste generated(monthly average in kg) </label>
+        <label>Quantity of solid waste reused/recycled (monthly average in kg) </label>
       </div>
     </div>
     <div class="form-group row">
@@ -1968,7 +2068,7 @@
         <label>HOW MUCH WASTE DOES YOUR SCHOOL REUSE/RECYCLE? </label>
       </div>
       <div class="col-xs-6">
-        <label>Quantity of solid waste generated(monthly average in kg) </label>
+        <label>Quantity of solid waste reused/recycled (monthly average in kg) </label>
       </div>
     </div>
     <div class="form-group row">
@@ -1994,14 +2094,14 @@
       </div>
     </div>
   </div>
-  <div class="form-group">
+  <!-- <div class="form-group">
     <label><span class="cube">f.</span>Sanitary waste </label>
     <div class="form-group row">
       <div class="col-xs-6">
         <label>HOW MUCH WASTE DOES YOUR SCHOOL REUSE/RECYCLE? </label>
       </div>
       <div class="col-xs-6">
-        <label>Quantity of solid waste generated(monthly average in kg) </label>
+        <label>Quantity of solid waste reused/recycled (monthly average in kg) </label>
       </div>
     </div>
     <div class="form-group row">
@@ -2026,15 +2126,15 @@
                                            value="<?php if (isset($data['Q8Wa6S2'])) echo $data['Q8Wa6S2'] ?>" readonly/>
       </div>
     </div>
-  </div>
+  </div> -->
   <div class="form-group">
-    <label><span class="cube">g.</span>C & D Waste</label>
+    <label><span class="cube">f.</span>C & D Waste</label>
     <div class="form-group row">
       <div class="col-xs-6">
         <label>HOW MUCH WASTE DOES YOUR SCHOOL REUSE/RECYCLE? </label>
       </div>
       <div class="col-xs-6">
-        <label>Quantity of solid waste generated(monthly average in kg) </label>
+        <label>Quantity of solid waste reused/recycled (monthly average in kg) </label>
       </div>
     </div>
     <div class="form-group row">
@@ -2468,8 +2568,7 @@
 </table>
 <div class="clearfix">&nbsp;</div>
 <div class="form-group">
-  <label class="control-label"><span class="cube">8</span>Does your school have the following? If yes, please
-  give the numbers of items in working condition and those that are not.</label>
+  <label class="control-label"><span class="cube">8</span>Does your school have the following? If yes, please give the numbers of items in working condition and those that are not.<a class="tt" data-tooltip="Please give the numbers of items that are  in working condition and those that are not. This will help to make an inventory of electronic waste."><span class="badge">?</span></a></label>
 </div>
 <div class="form-group row">
   <div class="col-xs-4">
@@ -3558,11 +3657,120 @@
                                            value="<?php echo set_value('Q15Wa2S5', 1); ?>" <?php if (isset($data['Q15Wa2S5'])) echo "checked" ?>>
               Sanitary waste </label>
             </li>
-
-
           </ul>
         </div>
       </div>
+
+  <div class="form-group">
+    <label class="control-label"><span class="cube">12</span>How do you dispose of sanitary waste?</label>
+      <div class="radio">
+        <label>
+        <input type="radio" name="Q12NWa1" value="<?php echo set_value('Q12NWa1', 1) ?>" <?php if (isset($data['Q12NWa1'])) echo $data['Q12NWa1'] == 1 ? "checked" : "" ?>> Incinerator </label>
+     </div>
+
+     <div class="radio">
+        <label>
+        <input type="radio" name="Q12NWa1" value="<?php echo set_value('Q12NWa1', 2) ?>" <?php if (isset($data['Q12NWa1'])) echo $data['Q12NWa1'] == 2 ? "checked" : "" ?>> Sent to nearby medical facility </label>
+     </div>
+
+     <div class="radio">
+        <label>
+        <input type="radio" name="Q12NWa1" value="<?php echo set_value('Q12NWa1', 3) ?>" <?php if (isset($data['Q12NWa1'])) echo $data['Q12NWa1'] == 3 ? "checked" : "" ?>> Burnt inside/outside the school campus </label>
+     </div>
+
+     <div class="radio">
+        <label>
+        <input type="radio" name="Q12NWa1" value="<?php echo set_value('Q12NWa1', 4) ?>" <?php if (isset($data['Q12NWa1'])) echo $data['Q12NWa1'] == 4 ? "checked" : "" ?>> Given to the municipal waste collector </label>
+     </div>
+
+     <div class="radio">
+        <label>
+        <input type="radio" name="Q12NWa1" value="<?php echo set_value('Q12NWa1', 5) ?>" <?php if (isset($data['Q12NWa1'])) echo $data['Q12NWa1'] == 5 ? "checked" : "" ?>> Collected by a biomedical waste processing facilitator  </label>
+     </div>
+
+     <div class="radio">
+        <label>
+        <input type="radio" name="Q12NWa1" value="<?php echo set_value('Q12NWa1', 6) ?>" <?php if (isset($data['Q12NWa1'])) echo $data['Q12NWa1'] == 6 ? "checked" : "" ?>> Not applicable </label>
+     </div>
+
+     <br>
+
+<div class="form-group">
+  <label class="control-label">Please upload supporting documents:</label>
+  <br>
+  ● If sanitary waste is sent to nearby medical facility or collected by a biomedical waste processing facilitator, please upload picture of sanitary waste receipt certificate provided by the facility/facilitator<br>
+  <br>
+  <button class="btn uploadbtn upload" data-id="Disposesanitary"
+                    data-toggle="modal" data-target="#airModal"
+                    type="button">UPLOAD FILES </button>
+  <br>
+  <br>
+</div>
+<div class="clearfix">&nbsp;</div>
+<table width="100%" class="question uploadedfiles">
+  <thead>
+    <tr>
+      <!-- <th>Image</th>     -->
+      <th>File name</th>
+      <th>Delete</th>
+      <th>Download</th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php if(isset($disposesanitary)) { ?>
+    <?php foreach ($disposesanitary as $f) { ?>
+    <tr id="index<?php echo $f->id; ?>">
+      <?php 
+          //$array = explode('.',$f->file_name); 
+         // $count = count($array);
+          //$extension = $array[$count-1];
+          ?>
+      <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
+      <!--<td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $f->
+      file_name ?>" class="img-responsive" />
+      </td>
+      -->
+      <?php //}else{ ?>
+      <!-- <td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>assets/img/download.jpg" class="img-responsive" />-->
+      <?php //}?>
+      <?php $name = str_replace(" ", "_", $f->name . "_Disposesanitary_"); ?>
+      <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+      <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+      <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+    </tr>
+    <?php } } ?>
+  </tbody>
+</table>
+<div class="clearfix">&nbsp;</div>
+
+<div class="form-group">
+  <label class="control-label"><span class="cube">13</span> During school hours, where do students of your school dispose of your single-use masks and/or gloves used to protect themselves from severe acute respiratory syndrome coronavirus 2 
+(SARS-CoV-2)? <a class="tt" data-tooltip="It is assumed that all individuals, including children will need to take precautions and wear masks and/or gloves till such time, advisories are issued to stop using them."><span class="badge">?</span></a> <a class="kplink" href="https://www.greenschoolsprogramme.org/knowledge-bank/waste/" target="_blank"> </a> </label>
+  <div class="radio">
+        <label>
+        <input type="radio" name="Q13NWa1" value="<?php echo set_value('Q13NWa1', 1) ?>" <?php if (isset($data['Q13NWa1'])) echo $data['Q13NWa1'] == 1 ? "checked" : "" ?>> Mixed bin </label>
+     </div>
+
+<div class="radio">
+        <label>
+        <input type="radio" name="Q13NWa1" value="<?php echo set_value('Q13NWa1', 2) ?>" <?php if (isset($data['Q13NWa1'])) echo $data['Q13NWa1'] == 2 ? "checked" : "" ?>> Yellow/separate bin for COVID waste </label>
+     </div>
+
+<div class="radio">
+        <label>
+        <input type="radio" name="Q13NWa1" value="<?php echo set_value('Q13NWa1', 3) ?>" <?php if (isset($data['Q13NWa1'])) echo $data['Q13NWa1'] == 3 ? "checked" : "" ?>> Wet waste bin </label>
+     </div>
+
+<div class="radio">
+        <label>
+        <input type="radio" name="Q13NWa1" value="<?php echo set_value('Q13NWa1', 4) ?>" <?php if (isset($data['Q13NWa1'])) echo $data['Q13NWa1'] == 4 ? "checked" : "" ?>> We use reusable masks and/or gloves </label>
+     </div>
+
+
+</div>
+    
+</div>
+
       <div class="clearfix">&nbsp;</div>
       <!--<div class="form-group">
     <label class="control-label"><span class="cube">12</span>Do you know that your E-waste can be collected by an authorised dealer or dismantler? </label>
@@ -3587,7 +3795,7 @@
         questions: </div>
       <br>
       <div class="form-group">
-        <label class="control-label"><span class="cube">13</span>Does the school have a policy on waste?</label>
+        <label class="control-label"><span class="cube">14</span>Does the school have a policy on waste?</label>
         <div class="form-group">
           <label class="radio-inline text-gray">
           <input type="radio" name="Q17Wa1" class="radio" onClick="WastePolicy(1)" id="Q17Wa1"
@@ -3695,7 +3903,7 @@
         </table>
       </div>
       <div class="form-group">
-        <label class="control-label"><span class="cube">14</span>Are there awareness drives with regard to Reduce,
+        <label class="control-label"><span class="cube">15</span>Are there awareness drives with regard to Reduce,
         Recycle and Reuse? <a class="kplink"
                                       href="http://www.greenschoolsprogramme.org/knowledge-bank/waste/#partnerInOperation"
                                       target="_blank"></a></label>
@@ -3780,7 +3988,7 @@
                     } else {?>
               <div class="form-group" id="Q18Wa3" style="display: none;">
                 <?php } ?>
-                <label class="control-label"><span class="cube">14(a)</span>What form do these awareness drives
+                <label class="control-label"><span class="cube">15(a)</span>What form do these awareness drives
                 take? </label>
                 <ul>
                   <li>
@@ -3810,7 +4018,7 @@
                 </ul>
               </div>
               <div class="form-group">
-                <label class="control-label"><span class="cube">15</span>Is the study of the environment integrated into the
+                <label class="control-label"><span class="cube">16</span>Is the study of the environment integrated into the
                 curriculum?</label>
                 <div class="form-group">
                   <label class="radio-inline text-gray">
@@ -3916,7 +4124,7 @@
         },
         Q1Wa1S2:{
           required:true,
-        },	
+        },  
         Q2Wa1S1:{
           required:true,
         },
@@ -4492,7 +4700,7 @@
     {
        
          e.preventDefault();
-			alert('You will need to enter data in all fields to move forward. Please scroll above to check again.');
+      alert('You will need to enter data in all fields to move forward. Please scroll above to check again.');
          $('#waste').valid();
     }
     
