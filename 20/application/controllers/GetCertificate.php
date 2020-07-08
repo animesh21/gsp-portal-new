@@ -23,7 +23,11 @@ class GetCertificate extends CI_Controller{
     public function getCertificate(){
         $mobile = $this->input->post('mobile');
         $this->db->where("mobile",$mobile);
-        $dataCertificate=$this->db->select("*")->from("gsp_new_certificate")->get()->result();
+        $dataCertificate=$this->db->select("*")->from("gsp_skill_building_camp")->get()->result();
+
+        // $this->session->set_flashdata('data_name', 'The link to download the GSP Online Air Seminar April 2020 certificate is now closed.');
+        //     return redirect('GetCertificate');
+
         if(!empty($dataCertificate)){
 
         $data['teachers'] = $dataCertificate;
@@ -41,7 +45,7 @@ class GetCertificate extends CI_Controller{
         $this->dompdf->stream("Digital Certificate.pdf", array("Attachment" => false));
         }
         else{
-            $this->session->set_flashdata('data_name', 'Your password is incorrect. Please try again. <br/> For any assistance, write to us at support@greenschoolprogramme.org');
+            $this->session->set_flashdata('data_name', 'Your password is incorrect. Please try again. For any assistance, write to us at : support@greenschoolprogramme.org');
             return redirect('GetCertificate');
         }
 
