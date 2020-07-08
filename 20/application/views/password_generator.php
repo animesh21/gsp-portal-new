@@ -31,7 +31,7 @@
      <div class="alert alert-dismissible alert-danger">
       <button type="button" class="close" data-dismiss="alert">&times;</button>
       
-      <strong><?php echo $this->session->flashdata('data_name'); ?></strong>
+      <strong><?php echo $this->session->flashdata('data_name'); ?></strong> 
     </div>
   <?php } ?>
     <p style="color: red"></p>
