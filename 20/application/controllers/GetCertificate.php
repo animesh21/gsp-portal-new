@@ -24,6 +24,8 @@ class GetCertificate extends CI_Controller{
         $mobile = $this->input->post('mobile');
         $this->db->where("mobile",$mobile);
         $dataCertificate=$this->db->select("*")->from("gsp_skill_building_camp")->get()->result();
+		echo "<pre>;
+		print_r($dataCertificate);exit;
 
         // $this->session->set_flashdata('data_name', 'The link to download the GSP Online Air Seminar April 2020 certificate is now closed.');
         //     return redirect('GetCertificate');
