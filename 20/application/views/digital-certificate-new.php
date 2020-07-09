@@ -28,7 +28,7 @@
   	echo "<div class='airquality'> To find out the air quality in your city in real-time, <br/> you can visit CPCB (Central Pollution Control Board) <br/> website: <a href='https://app.cpcbccr.com/AQI_India/'>https://app.cpcbccr.com/AQI_India/</a> </div>";
   }
   
- echo "<div class='certificateno'>Certificate No: "."GSPOnlineSeminar/2020/".$teacher->id." </div>
+ echo "<div class='certificateno'>Certificate No: ".$teacher->id." </div>
    </div> ";
 		}
 	  }
