@@ -6,30 +6,35 @@
    // print_r($result);exit;
  }
 ?>
+<style type="text/css">
+  .col-md-2{
+    width: 20% !important;
+  }
+	</style>
 <div class="wrapper" style="padding:0px;">
   <div class="container">
-    <div class="col-md-3 text-center">
+    <div class="col-md-2 text-center">
       <div class="gauge">
         <div id="gauge01" style="margin: 0 auto;width:100%"></div>
       </div>
       <strong>
       <?php if($result['data_2015']!=='NA' && !empty($result['data_2015'])){echo "Participated In Audit";}else{ echo "Not Participated In Audit"; } ?>
       </strong> </div>
-    <div class="col-md-3 text-center">
+    <div class="col-md-2 text-center">
       <div class="gauge">
         <div id="gauge02" style="margin: 0 auto;width:100%"></div>
       </div>
       <strong>
       <?php if($result['data_2016']!=='NA' && !empty($result['data_2016'])){echo "Participated In Audit";}else{ echo "Not Participated In Audit"; } ?>
       </strong> </div>
-    <div class="col-md-3 text-center">
+    <div class="col-md-2 text-center">
       <div class="gauge">
         <div id="gauge03" style="margin: 0 auto;width:100%"></div>
       </div>
       <strong>
       <?php if($result['data_2017']!=='NA' && !empty($result['data_2017'])){echo "Participated In Audit";}else{ echo "Not Participated In Audit"; } ?>
       </strong> </div>
-    <div class="col-md-3 text-center">
+    <div class="col-md-2 text-center">
       <div class="gauge">
         <div id="gauge04" style="margin: 0 auto;width:100%"></div>
       </div>
@@ -37,7 +42,7 @@
       <?php if($result['data_2018']!=='NA' && !empty($result['data_2018'])){echo "Participated In Audit";}else{ echo "Not Participated In Audit"; } ?>
       </strong> </div>
 
-      <div class="col-md-3 text-center">
+      <div class="col-md-2 text-center">
       <div class="gauge">
         <div id="gauge05" style="margin: 0 auto;width:100%"></div>
       </div>
