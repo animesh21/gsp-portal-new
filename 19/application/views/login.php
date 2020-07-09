@@ -147,7 +147,7 @@ header('Location: http://www.greenschoolsprogramme.org/audit/18/login/browser_ch
       <div class="modal-body">
         <p>The CSE's Green Schools Programme Audit 2020 is now open.  If your school has registered earlier, then please do not submit the registration form. 
 If your school has not registered, please click <a href="http://www.greenschoolsprogramme.org/audit/20/register">here</a> to register for GSP Audit 2020. On submission of the registration form, you will receive an email with login credentials (username and password) for completing the Audit. Please save your login credentials to be used  in GSP Audit 2020 when it reopens in July. There is no fee for participation.  </p>
-     <p class="text-center"><a href="http://www.greenschoolsprogramme.org/audit/19/login" target="_blank" class="btn btn-danger btn-block btn-lg">Login For GSP Audit 2020</a></p>
+     <p class="text-center"><a href="http://www.greenschoolsprogramme.org/audit/20/login" target="_blank" class="btn btn-danger btn-block btn-lg">Login For GSP Audit 2020</a></p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
