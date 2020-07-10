@@ -7,10 +7,8 @@ class Air extends CI_Controller {
         $this->load->helper(array('form', 'security', 'common_helper'));
         $this->load->library('form_validation');
         $this->load->model(array('Answer_model', 'file'));
-        if ($this->session->userdata('USER_ID') == '') {
-        
+        if ($this->session->userdata('USER_ID') == '') {        
             redirect('login');
-
         }
     }
 
@@ -18,17 +16,14 @@ class Air extends CI_Controller {
         if (!$_SERVER['HTTP_REFERER']) redirect('general');
       	$data['title'] = 'Air';
         //Validation
-        if ($this->session->userdata('USER_ID') == '') {
-        
+        if ($this->session->userdata('USER_ID') == '') {        
             redirect('login');
-
         }
         else
         {
         
         $argPost['userid'] = $this->session->userdata('USER_ID');
-        $argPost['type'] = 2;
-        
+        $argPost['type'] = 2;        
         $data['data'] = $this->Answer_model->getAnswers($argPost);
         $data['other'] = $this->Answer_model->getAllAnswers($argPost);
         $data['files']=$this->file->getFilesData($this->session->userdata('USER_ID'));
@@ -43,8 +38,7 @@ class Air extends CI_Controller {
 		 }
 		else
 		{
-			$this->load->view('air',$data);
-    	
+			$this->load->view('air',$data);    	
 		}
 	     }	
             else
@@ -58,26 +52,20 @@ class Air extends CI_Controller {
     public function set()
     {
         $argPost['userid'] = $this->session->userdata('USER_ID');
-        $argPost['type'] = 2;
-        
-        $air = $this->Answer_model->getAnswers($argPost);
-        
+        $argPost['type'] = 2;        
+        $air = $this->Answer_model->getAnswers($argPost);        
         $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
         $this->form_validation->set_rules('email1', 'Email', 'required|valid_email');
-        $this->form_validation->set_rules('email2', 'Email', 'required|valid_email');
-        
+        $this->form_validation->set_rules('email2', 'Email', 'required|valid_email');        
         $this->form_validation->set_rules('name', 'Username', 'required');
         $this->form_validation->set_rules('name1','Username', 'required');
-        $this->form_validation->set_rules('name2','Username', 'required');
-        
+        $this->form_validation->set_rules('name2','Username', 'required');        
         $argPost['userid'] = $this->session->userdata('USER_ID');
         $argPost['type'] = 1 ;
         $general = $this->Answer_model->getAnswers($argPost);
         $argPost['type'] = 7 ;
-        $waste = $this->Answer_model->getAnswers($argPost);
-        
-        $post = $this->input->post();
-        
+        $waste = $this->Answer_model->getAnswers($argPost);        
+        $post = $this->input->post();        
         // Points Calculation
         $score = 0;
         if($post['Q6A2S1T1'] == $post['Q6A2S1T2'])
@@ -92,8 +80,7 @@ class Air extends CI_Controller {
         {
             $points = $post['Q6A2S1T2']/$post['Q6A2S1T1'];
             $score += $points;
-        }
-        
+        }       
 
         if($post['Q6A2S1T1'] == $post['Q6A2S1T3'])
         {
@@ -155,7 +142,7 @@ class Air extends CI_Controller {
         {
     */   
           $this->Answer_model->submitAnswers($post, 2);
-	  updateProgress($this->session->userdata('USER_ID'), 20);
+	  updateProgress($this->session->userdata('USER_ID'), 60);
           redirect(base_url("energy"));
 
         /*}
