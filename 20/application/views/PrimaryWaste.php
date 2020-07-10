@@ -2296,7 +2296,7 @@ foreach ($chikoo as $u) { ?>
                                         data: fd,
                                         success: function (data)
                                         {
-                                            window.location.href = "<?php echo base_url('water'); ?>";
+                                            window.location.href = "<?php echo base_url('energy'); ?>";
                                         }
                                     });
                                 });
