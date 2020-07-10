@@ -46,6 +46,11 @@ ga('send', 'pageview');
 		text-transform: uppercase;
 		border: none;
 	}
+
+	#index li {
+    padding: 0px 30px !important;
+}
+
 </style>
 <script src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
@@ -151,39 +156,27 @@ left: -208px; color: #e86549;  text-align: center; top: 28px; display:none;">Ext
   <div class="index-body">
     <h2>Question index</h2>
     <ol>
-      <li id="Nav" class="row  <?php echo ($this->router->fetch_class() == 'school') ? "current" : "missing"; ?>"       onClick="javascript:window.location.href='<?php echo base_url("school") ?>';">School
+      <li id="Nav" class="row  <?php echo ($this->router->fetch_class() == 'school') ? "current" : "missing"; ?>"onClick="javascript:window.location.href='<?php echo base_url("school") ?>';">School
         Profile </li>
       <li id="generalNav"
-					class="row <?php echo ($this->router->fetch_class() == 'general') ? "current" : "missing"; ?>"
-					onClick="javascript:window.location.href='<?php echo base_url("general") ?>';">General
-        Questions </li>
+		class="row <?php echo ($this->router->fetch_class() == 'general') ? "current" : "missing"; ?>"
+		onClick="javascript:window.location.href='<?php echo base_url("general") ?>';">General Questions </li>
       <li id="airNav"
-					class="row <?php echo ($this->router->fetch_class() == 'air') ? "current" : "missing"; ?>"
-					
-					
-					<?php 
-			$progress=progressBarValue($this->session->userdata('USER_ID'));
-			if($progress >= 10){?> onClick="javascript:window.location.href='<?php echo base_url("air") ?>';" <?php } ?>
-					
-					>Air </li>
+		class="row <?php echo ($this->router->fetch_class() == 'air') ? "current" : "missing"; ?>"
+	  <?php 
+	  $progress=progressBarValue($this->session->userdata('USER_ID'));
+	  if($progress >= 10){?> onClick="javascript:window.location.href='<?php echo base_url("air") ?>';" <?php } ?>>Air </li>
       <li id="Nav"
-					class="row <?php echo ($this->router->fetch_class() == 'energy') ? "current" : "missing"; ?>"
-					
-					>Energy </li>
+      class="row <?php echo ($this->router->fetch_class() == 'energy') ? "current" : "missing"; ?>" >Energy </li>
+  <!--     <li id="Nav"
+	  class="row <?php //echo ($this->router->fetch_class() == 'food') ? "current" : "missing"; ?>" > Food </li>
       <li id="Nav"
-					class="row <?php echo ($this->router->fetch_class() == 'food') ? "current" : "missing"; ?>"
-			> Food </li>
+	  class="row <?php //echo ($this->router->fetch_class() == 'land') ? "current" : "missing"; ?>" >Land </li>
       <li id="Nav"
-					class="row <?php echo ($this->router->fetch_class() == 'land') ? "current" : "missing"; ?>"
-					>Land </li>
+	  class="row <?php //echo ($this->router->fetch_class() == 'water') ? "current" : "missing"; ?>" >Water </li> -->
       <li id="Nav"
-					class="row <?php echo ($this->router->fetch_class() == 'water') ? "current" : "missing"; ?>"
-					>Water </li>
-      <li id="Nav"
-					class="row <?php echo ($this->router->fetch_class() == 'waste') ? "current" : "missing"; ?>"
-						>Waste </li>
-      <li class="row <?php echo ($this->router->fetch_class() == 'feedback') ? "current" : "missing"; ?>"
-					id="link"> Feedback </li>
+	  class="row <?php echo ($this->router->fetch_class() == 'waste') ? "current" : "missing"; ?>" >Waste </li>
+      <li class="row <?php echo ($this->router->fetch_class() == 'feedback') ? "current" : "missing"; ?>" id="link"> Feedback </li>
     </ol>
   </div>
 </div>
