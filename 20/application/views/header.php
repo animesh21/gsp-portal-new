@@ -48,7 +48,7 @@ ga('send', 'pageview');
 	}
 
 	#index li {
-    padding: 0px 30px !important;
+    padding: 0px 45px !important;
 }
 
 </style>
