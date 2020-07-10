@@ -68,6 +68,7 @@ class School extends CI_Controller {
 		//print_r($post);exit;
 
         $this->Answer_model->submitSchoolAnswers($post);
+	updateProgress($this->session->userdata('USER_ID'), 10);
         redirect(base_url("general"));
        
     }	
