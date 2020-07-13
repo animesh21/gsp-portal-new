@@ -14,13 +14,13 @@
         echo "<div class='container'>
         <div class='image'><img src='assets/img/images/certificate_gsp_ecamp.jpg' width='1000' height='700'></div>";
 
-  echo "<div class='principal'>" . strtoupper($teacher->name_of_participant) ."</div>&nbsp;";
+  echo "<div class='principal'>" . strtoupper($teacher->school_name) ."</div>&nbsp;";
     $length = strlen($teacher->school_name);
   if($length > 61) {
-  echo  "<div class='school_name1'>". strtoupper($teacher->school_name)."</div>";
+  echo  "<div class='school_name1'>". strtoupper($teacher->name_of_participant)."</div>";
   
   }else{
-    echo "<div class='school_name'>". strtoupper($teacher->school_name). "</div>";
+    echo "<div class='school_name'>". strtoupper($teacher->name_of_participant). "</div>";
      
   }  
         echo "<div class='certificateno'>Certificate No : "."GSP Skill Building E-Camp/2020/0".$teacher->id." </div>
