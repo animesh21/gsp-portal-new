@@ -43,6 +43,8 @@ class GetCertificate extends CI_Controller{
         $this->dompdf->set_paper(array(0, 0, 580, 760), 'landscape');
         $this->dompdf->render();
         $this->dompdf->stream("Digital Certificate.pdf", array("Attachment" => false));
+		$this->db->where('id', $dataCertificate[0]->id);
+        $this->db->update('gsp_skill_building_camp', array('download_count'=>$dataCertificate[0]->download_count+1));
         }
         else{
             $this->session->set_flashdata('data_name', 'Your password is incorrect. Please try again. For any assistance, write to us at : support@greenschoolprogramme.org');
