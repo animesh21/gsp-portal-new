@@ -2,9 +2,9 @@
 
 /* =============== CORE STYLES ================ */
 body {font-family: 'Lato', sans-serif; font-size: 14px; line-height: 20px; color: #666666; position: relative; background-color: #e4e6e5; word-break: normal;}
-a {color: #e86549; text-decoration: none;}
-a:hover {color: #e86549; text-decoration: underline;}
-a:active, a:hover, a:focus  {color: #e86549; outline: 0}
+a {color: #24a5a0; text-decoration: none;}
+a:hover {color: #24a5a0; text-decoration: underline;}
+a:active, a:hover, a:focus  {color: #24a5a0; outline: 0}
 .clear {clear: both;}
 :focus, :active {outline:none !important;}
 ::-moz-focus-inner {border:0;}
@@ -14,7 +14,7 @@ ul, ol {margin: 0; padding: 0; list-style: none;}
 /* ================ HEADER ================== */
 header {position: relative;}
 .form-hdr {background: #e4e6e5; position: fixed; top: 0; left: 0; width: 100%; z-index: 99; transition: all 0.3s ease-out; -webkit-transition: all 0.3s ease-out; -ms-transition: all 0.3s ease-out; -moz-transition: all 0.3s ease-out; height: 134px;}
-.hdr-bdr {border-bottom: solid 14px #e86549;}
+.hdr-bdr {border-bottom: solid 14px #24a5a0;}
 header .logo {margin: 15px 0;}
 header .logo2 {margin: 28px 0 0 0; float: left;}
 header .container-fluid {padding: 0; height: 42px; display: none;}
@@ -24,19 +24,30 @@ header .top-bnr img {width: 100%;}
 header .top-bnr1 {float: right; margin: 35px 0 0 0; transition: all 0.3s ease-out;}
 header .top-bnr1 img {width: 100%;}
 .form-hdr.shrink1 {top: -134px;}
-.hdr-hdr {border-bottom: solid 14px #e86549;}
+.hdr-hdr {border-bottom: solid 14px #24a5a0;}
 
 /* ================ MENU =============== */
-#index {height: 42px; position: fixed; left: 0; top: 134px; z-index: 99; background: #e86549; width: 100%; text-align: center; transition: all 0.3s ease-out; -webkit-transition: all 0.3s ease-out; -ms-transition: all 0.3s ease-out; -moz-transition: all 0.3s ease-out; font-family: 'Roboto Slab Bold', serif;}
+#index {height: 42px; position: fixed; left: 0; top: 134px; z-index: 99; background: #24a5a0; width: 100%; text-align: center; transition: all 0.3s ease-out; -webkit-transition: all 0.3s ease-out; -ms-transition: all 0.3s ease-out; -moz-transition: all 0.3s ease-out; font-family: 'Roboto Slab Bold', serif;}
 #index h2 {display: none;}
 #index ol {display: inline-block; margin: 0; padding: 0;}
 #index li {list-style: none; display: inline-block; cursor: pointer; color: rgb(255, 255, 255) !important; font-size: 16px; margin: 0; padding: 0px 20px; line-height: 42px; text-transform: uppercase;}
-#index li:hover {background-color: #ce4d31;}
-#index .current {background-color: #ce4d31;}
+#index li:hover {background-color: #2291a4;}
+#index .current {background-color: #2291a4;}
 #index.shrink {top: 0px;}
+button {
+		background-color: #24a5a0 !important;
+		border-radius: 2px;
+		box-shadow: 0 0 6px #cccccc;
+		color: #fff;
+		margin: 30px 5px;
+		min-width: 138px;
+		padding: 16px 15px;
+		text-transform: uppercase;
+		border: none;
+	}
 
 /* =============== FOOTER ================ */
-footer {background: #e86549; margin: 0; padding: 0;}
+footer {background: #24a5a0; margin: 0; padding: 0;}
 footer p {color: #fff; font-size: 12px; text-align: center; line-height: 42px; margin: 0;}
 footer p a {color: #fff;}
 footer p a:hover {color: #fff; text-decoration: underline;}
@@ -57,10 +68,10 @@ footer p a:hover {color: #fff; text-decoration: underline;}
 .content-form .log-nav .welcome {float: left;}
 .content-form .log-nav .username {font-weight:bold;}
 .content-form .log-nav ul {float: right; list-style: none;}
-.content-form .log-nav ul li {float: left; color: #e86549; line-height: 40px; margin: 0 0 0 10px;}
-.content-form .log-nav ul li a {color: #e86549;}
+.content-form .log-nav ul li {float: left; color: #24a5a0; line-height: 40px; margin: 0 0 0 10px;}
+.content-form .log-nav ul li a {color: #24a5a0;}
 .content-form .progress {background-color: #e5e5e5; border-radius: 0px; height: 36px; margin: 10px auto 30px; width: 70%; border: solid 1px #cccccc;}
-.content-form .progress-bar {background-color: #e86549; font-size: 16px; line-height: 36px; font-weight: 400;}
+.content-form .progress-bar {background-color: #24a5a0; font-size: 16px; line-height: 36px; font-weight: 400;}
 
 /* ================ QUESTIONS ================= */
 div.question {margin: 0 0 15px 0;}
@@ -69,9 +80,9 @@ div.question.boilerplate label {}
 .question-text p:last-child{margin-bottom: 0;}
 
 .form-group {margin: 0 0 0px 0; position: relative;}
-.form-group > label {font-family: 'Lato Bold', sans-serif; font-weight: normal; font-size: 16px; line-height: 27px;  margin-bottom: 12px; color:#e86549;}
+.form-group > label {font-family: 'Lato Bold', sans-serif; font-weight: normal; font-size: 16px; line-height: 27px;  margin-bottom: 12px; color:#24a5a0;}
 .form-group > label span {line-height: 27px;}
-.form-group > label .cube {display: inline-block; min-width: 30px; line-height: 27px; background: #e86549; text-align: center; margin: 0 10px 0 0; color: #fff; padding: 0 8px}
+.form-group > label .cube {display: inline-block; min-width: 30px; line-height: 27px; background: #24a5a0; text-align: center; margin: 0 10px 0 0; color: #fff; padding: 0 8px}
 .form-group > label small {color: #000000; font-size: 12px; font-weight: 400; font-style: italic;}
 
 .form-group > label h6 {font-size: 20px; font-family: 'Lato Bold', sans-serif; margin: 0 0 10px 0;}
@@ -142,19 +153,19 @@ input[type="text"],  textarea, .form-control {font-size: 15px; color: #6e8195; b
 /* ================= UPLOAD BUTTON ================== */
 h2 {margin: 0 0 10px 0} /* holds upload button */
 table.question.uploadedfiles tr {border-bottom: 1px solid #cad6e2;}
-.uploadbtn, .uploadbtn:hover {background-color: rgb(232, 101, 73); border-radius: 2px; box-shadow: 0 0 6px rgb(204, 204, 204); color: #fff; padding: 8px 15px; margin: 0; min-width: auto; text-transform: uppercase; border: none;}
-.org-btn {background: #e86549; color: #fff; min-width: 138px; box-sizing: border-box; padding: 16px 15px; text-transform: uppercase; border-radius: 2px; margin: 10px 5px; box-shadow: 0 0 6px #ccc}
+.uploadbtn, .uploadbtn:hover {background-color: #24a5a0; border-radius: 2px; box-shadow: 0 0 6px rgb(204, 204, 204); color: #fff; padding: 8px 15px; margin: 0; min-width: auto; text-transform: uppercase; border: none;}
+.org-btn {background: #24a5a0; color: #fff; min-width: 138px; box-sizing: border-box; padding: 16px 15px; text-transform: uppercase; border-radius: 2px; margin: 10px 5px; box-shadow: 0 0 6px #ccc}
 
 /* ================= SUBMIT BUTTONS ================== */
 .navbar, .navbar-default {text-align: center; background: none; border:none; margin: 0; padding: 0; min-height: auto;}
 
 /* buttons */
-#moveprevbtn, #movenextbtn, #saveallbtn {background-color: #e86549; border-radius: 2px; box-shadow: 0 0 6px #cccccc; color: #fff; margin: 30px 5px; min-width: 138px; padding: 16px 15px; text-transform: uppercase; border: none;}
+#moveprevbtn, #movenextbtn, #saveallbtn {background-color: #24a5a0 ; border-radius: 2px; box-shadow: 0 0 6px #cccccc; color: #fff; margin: 30px 5px; min-width: 138px; padding: 16px 15px; text-transform: uppercase; border: none;}
 
-#moveprevbtn:hover, #movenextbtn:hover, #saveallbtn:hover {background: #ce4d31;}
+#moveprevbtn:hover, #movenextbtn:hover, #saveallbtn:hover {background: #2291a4;}
 
 /* final submit button */
-#movesubmitbtn {background-color: #e86549; border-radius: 2px; box-shadow: 0 0 6px #cccccc; color: #fff; margin: 30px 5px; min-width: 138px; padding: 16px 15px; text-transform: uppercase; border: none;}
+#movesubmitbtn {background-color: #24a5a0; border-radius: 2px; box-shadow: 0 0 6px #cccccc; color: #fff; margin: 30px 5px; min-width: 138px; padding: 16px 15px; text-transform: uppercase; border: none;}
 
 #movesubmitbtn {position: absolute; left: 50%; transform: translateX(-50%); top: 95px; width: 340px; margin: 0;}
 
@@ -170,11 +181,11 @@ table.question.uploadedfiles tr {border-bottom: 1px solid #cad6e2;}
 .home_container .form-control {width: 100%; color: #333; font-size: 15px; height: 42px; border: solid 1px #cad6e2 !important; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075)!important;}
 
 .btn-group {display: block; text-align: center; margin: 10px 0 0 0;}
-.btn-group .org-btn {background: #e86549; border: none; color: #fff; min-width: 138px; box-sizing: border-box; padding: 16px 15px; text-transform: uppercase; border-radius: 2px; margin: 10px 0 0 0; box-shadow: 0 0 6px #ccc}
-.btn-group .org-btn:hover {background: #ce4d31;}
+.btn-group .org-btn {background: #24a5a0; border: none; color: #fff; min-width: 138px; box-sizing: border-box; padding: 16px 15px; text-transform: uppercase; border-radius: 2px; margin: 10px 0 0 0; box-shadow: 0 0 6px #ccc}
+.btn-group .org-btn:hover {background: #2291a4;}
 
 .home_container .help {color: #666; font-style: italic; font-size: 13px; text-align: center; margin: 30px 0 5px 0;}
-.home_container .help a {color: #e86549;}
+.home_container .help a {color: #24a5a0;}
 .m-browser {text-align: center; margin: 10px auto 20px auto; font-size: 13px; line-height: 18px; width: 50%;}
 
 
@@ -277,7 +288,7 @@ table.question.uploadedfiles tr {border-bottom: 1px solid #cad6e2;}
 
 /* ================ WATER ================ */
 #question2476 .survey-question-help {}
-#question2476 .survey-question-help h5 {font-family: 'Lato Bold', sans-serif; font-weight: normal; font-size: 16px; line-height: 27px;  margin-bottom: 12px; color: #e86549;}
+#question2476 .survey-question-help h5 {font-family: 'Lato Bold', sans-serif; font-weight: normal; font-size: 16px; line-height: 27px;  margin-bottom: 12px; color: #24a5a0;}
 #question2476 .survey-question-help p {margin-bottom: 5px;}
 #question2476 .survey-question-help p.wplus {}
 #question2476 .survey-question-help table {margin: 15px 0 0 0; border: 1px solid #cad6e2; border-collapse: collapse}
