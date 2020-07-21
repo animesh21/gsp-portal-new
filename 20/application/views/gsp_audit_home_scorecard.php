@@ -45,11 +45,11 @@
    echo "<div class='container'>
         <div class='image'><img src='assets/img/images/page-3.jpg' width='794' height='1100'></div>";
 			  
-			  echo "<div class='link-1' ><a href='https://cdn.cseindia.org/docs/GSP-AP-seminar-april2020/Quizzes-Activities-on-Air-Pollution.pdf' target='_blank'>https://cdn.cseindia.org/docs/GSP-AP-seminar-april2020/Quizzes-Activities-on-Air-Pollution.pdf</a></div>";
+			  echo "<div class='link-1' ><a href='https://cdn.cseindia.org/docs/GSP-AP-seminar-april2020/Quizzes-Activities-on-Air-Pollution.pdf' style='color:#f7a206;' target='_blank'>https://cdn.cseindia.org/docs/GSP-AP-seminar-april2020/Quizzes-Activities-on-Air-Pollution.pdf</a></div>";
 
         echo "<div class='link-2' ><a href='https://cdn.cseindia.org/docs/GSP-Solar-Schools/GSP-RE-Energy-Board-Game.jpg' style='color:#f7a206;' target='_blank'>https://cdn.cseindia.org/docs/GSP-Solar-Schools/GSP-RE-Energy-Board-Game.jpg</a></div>";
 
-        echo "<div class='link-3' ><a href='https://www.downtoearth.org.in/dte-infographics/waste-to-worth/index.html' target='_blank'>https://www.downtoearth.org.in/dte-infographics/waste-to-worth/index.html</a></div>";
+        echo "<div class='link-3' ><a href='https://www.downtoearth.org.in/dte-infographics/waste-to-worth/index.html' style='color:#f7a206;' target='_blank'>https://www.downtoearth.org.in/dte-infographics/waste-to-worth/index.html</a></div>";
  
         echo "<div class='certificateno' style='text-align:right; page-break-after:always;'>Certificate No : "."GSP Skill Building E-Camp/2020/0".$teacher->id." </div>
    </div> ";
@@ -83,9 +83,9 @@ body{
 } 
 
 .certificateno{ position:absolute; top:1045px; left: 10px;}
-.link-1{ position:absolute; top:196px; left: 60px;color:#f7a206; font-size:12px; font-style:italic; font-weight:bold;}
-.link-2{ position:absolute; top:363px; left: 60px;color:#f7a206; font-size:12px; font-style:italic; font-weight:bold;}
-.link-3{ position:absolute; top:940px; left: 75px;color:#f7a206; font-size:12px; font-style:italic; font-weight:bold;}
+.link-1{ position:absolute; top:196px; left: 60px; font-size:12px; font-style:italic; font-weight:bold;}
+.link-2{ position:absolute; top:363px; left: 60px; font-size:12px; font-style:italic; font-weight:bold;}
+.link-3{ position:absolute; top:940px; left: 75px; font-size:12px; font-style:italic; font-weight:bold;}
 .principal{ position:relative; text-align: center; top:560px;}
 .finalScore{ position:relative;top:300px; left: 245px}
 .school_name1{ position:relative; text-align: center; top:555px; font-size: 20px;}
