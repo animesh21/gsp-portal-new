@@ -120,7 +120,7 @@ $('#frmSendblukemail').submit(function(e){
 			<li>
 			    <label class="checkbox-inline">
 				<input type="checkbox" value= "BETWEEN 10 AND 40" name="progress_range" id="progress_range"  />
-				10-40 percent</label>
+				10-40 percent <a href="#" data-toggle="tooltip" title="This combination ,will not work with other filter of combinations!"><span class="badge">?</span></a></label>
 			</li>
 			<li>
 			    <label class="checkbox-inline">
