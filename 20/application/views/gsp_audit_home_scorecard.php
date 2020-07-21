@@ -47,7 +47,7 @@
 			  
 			  echo "<div class='link-1' ><a href='https://cdn.cseindia.org/docs/GSP-AP-seminar-april2020/Quizzes-Activities-on-Air-Pollution.pdf' target='_blank'>https://cdn.cseindia.org/docs/GSP-AP-seminar-april2020/Quizzes-Activities-on-Air-Pollution.pdf</a></div>";
 
-        echo "<div class='link-2' ><a href='https://cdn.cseindia.org/docs/GSP-Solar-Schools/GSP-RE-Energy-Board-Game.jpg' target='_blank'>https://cdn.cseindia.org/docs/GSP-Solar-Schools/GSP-RE-Energy-Board-Game.jpg</a></div>";
+        echo "<div class='link-2' ><a href='https://cdn.cseindia.org/docs/GSP-Solar-Schools/GSP-RE-Energy-Board-Game.jpg' style='color:#f7a206;' target='_blank'>https://cdn.cseindia.org/docs/GSP-Solar-Schools/GSP-RE-Energy-Board-Game.jpg</a></div>";
 
         echo "<div class='link-3' ><a href='https://www.downtoearth.org.in/dte-infographics/waste-to-worth/index.html' target='_blank'>https://www.downtoearth.org.in/dte-infographics/waste-to-worth/index.html</a></div>";
  
