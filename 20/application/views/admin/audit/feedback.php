@@ -282,3 +282,10 @@ CKEDITOR.editorConfig = function (config) {
 CKEDITOR.replace('editor1');
 
 </script>
+
+
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
