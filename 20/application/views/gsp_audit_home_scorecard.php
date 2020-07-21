@@ -24,7 +24,7 @@
     echo "<div class='school_name'>". strtoupper($teacher->school_name.", ".$teacher->state )."</div>";
      
   }  
-        echo "<div class='certificateno' style='text-align:right; page-break-after:always;'>Certificate No : "."GSP'S Audit Home Scorecard/2020/0".$teacher->id." </div>
+        echo "<div class='certificateno' style='text-align:right; page-break-after:always;'>"."GSP'S Audit Home Scorecard/2020/0".$teacher->id." </div>
    </div> ";
 
 
@@ -38,7 +38,7 @@
   echo "<div class='water'>" . strtoupper($teacher->water_score) ."</div>&nbsp;";
   echo "<div class='waste'>" . strtoupper($teacher->waste_score) ."</div>&nbsp;";
      
-        echo "<div class='certificateno' style='text-align:right; page-break-after:always;'>Certificate No : "."GSP'S Audit@Home Scorecard/2020/0".$teacher->id." </div>
+        echo "<div class='certificateno' style='text-align:right; page-break-after:always;'>"."GSP'S Audit@Home Scorecard/2020/0".$teacher->id." </div>
    </div> ";
 
 
@@ -51,7 +51,7 @@
 
         echo "<div class='link-3' ><a href='https://www.downtoearth.org.in/dte-infographics/waste-to-worth/index.html' style='color:#f7a206;' target='_blank'>https://www.downtoearth.org.in/dte-infographics/waste-to-worth/index.html</a></div>";
  
-        echo "<div class='certificateno' style='text-align:right; page-break-after:always;'>Certificate No : "."GSP'S Audit@Home Scorecard/2020/0".$teacher->id." </div>
+        echo "<div class='certificateno' style='text-align:right; page-break-after:always;'>"."GSP'S Audit@Home Scorecard/2020/0".$teacher->id." </div>
    </div> ";
 
 
@@ -61,7 +61,7 @@
         echo "<div class='link-4'><a href='support@greenschoolsprogramme.org' style='color:#f7a206;'> support@greenschoolsprogramme.org</a></div>";
         echo "<div class='link-5'><a href='support@greenschoolsprogramme.org' style='color:#f7a206;'> support@greenschoolsprogramme.org</a></div>";
   
-        echo "<div class='certificateno'>Certificate No : "."GSP'S Audit@Home Scorecard/2020/0".$teacher->id." </div>
+        echo "<div class='certificateno'>"."GSP'S Audit@Home Scorecard/2020/0".$teacher->id." </div>
    </div> ";
 
 
