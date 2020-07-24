@@ -1,4 +1,4 @@
-﻿﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -25,20 +25,21 @@
 </header>
 
 <div class="container" style="padding: 20px">
-  <div class="home_container" style="width: 80%" >
+  <div class="home_container"  >
     <h1>GSP'S Audit@Home Scorecard 2020</h1>
      
      <div class="row">
-        <div class="form-group" ><label for="number">Click their Link Name and Get your Audit Scorecard 2020:</label></div> 
+        <div class="form-group" style="padding-left: 50px;"><label for="number">Click on your name below to get the Audit@Home scorecard.</label></div> 
 
-        <div class="form-group">
-            <ul style="text-align: left; margin-left: 250px; ">
+        <div class="list">
+            <ul style="text-align: left; padding-left: 50px;  ">
               <?php $i=1; foreach($fullstudent as $fullstudent){ ?>
               <li><a href="<?php echo base_url("Audit_home_scorecard/getAuditScoreByName?id=").$fullstudent->id; ?>" target='_blank'><?php echo $i++; echo ". "; echo $fullstudent->participant_name; ?></a></li>
             <?php } ?>
           </ul> 
+        </div>
                        
-        </div> 
+         
 
 </div>
          
@@ -63,7 +64,8 @@
   text-align: center;
 }
 
-.home_container .form-group {width: 100%; text-align: center; margin: 0 0 10px 0;}
+.home_container .form-group {width: 100%; text-align: left; margin: 0 0 10px 0;}
+.home_container{width: 80%;}
 
 a {
      text-decoration: none ;
