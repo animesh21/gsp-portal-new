@@ -24,7 +24,7 @@
     echo "<div class='school_name'>". strtoupper($teacher->school_name.", ".$teacher->state )."</div>";
      
   }  
-        echo "<div class='certificateno' style='text-align:right; page-break-after:always;'>"."GSP'S Audit Home Scorecard/2020/0".$teacher->id." </div>
+        echo "<div class='certificateno' style='text-align:right; page-break-after:always;'>"."GSP'S Audit@Home Scorecard/2020/0".$teacher->id." </div>
    </div> ";
 
 
