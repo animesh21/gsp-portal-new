@@ -20,7 +20,7 @@
 <body>
 <header class="hdr-bdr">
   <div class="container">
-    <figure class="logo"><a href="<?php echo base_url('admin/dashboard') ?>"><img src="<?php echo base_url('');?>assets/img/logo.png" class="img-responsive" alt=""></a></figure>
+    <figure class="logo"><a href="https://www.greenschoolsprogramme.org"><img src="<?php echo base_url('');?>assets/img/logo.png" class="img-responsive" alt=""></a></figure>
     <img src="<?php echo base_url('');?>assets/img/top-bnr2.png" alt="" class="top-bnr img-responsive"> </div>
 </header>
 
@@ -38,7 +38,7 @@
      <div class="row" style="padding: 5px; margin-top: 40px; text-align: center;">
     <?php echo form_open('Audit_home_scorecard/getAuditScore', array('class'=>'form-inline')); ?>
         <div class="form-group" style="width: 100%">
-            <label for="number">Registered Guardian's Mobile Number:<a class="tt" data-tooltip="Please enter the mobile number used at the time of online registration."><span
+            <label for="number">Registered Guardian's Mobile Number:<a class="tt" data-tooltip="Please enter the 10-digit mobile number used at the time of online registration."><span
                             class="badge">?</span></a></label> &nbsp; &nbsp;
             <input type="text" class="form-control" id="number" name="parent_mob" required="" placeholder="14845551324">
         </div> <br/>  <br/> 
