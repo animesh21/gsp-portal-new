@@ -54,7 +54,7 @@ class Audit_home_scorecard extends CI_Controller{
         }
     }
         else{
-            $this->session->set_flashdata('data_name', 'Your password is incorrect. Please try again. For any assistance, write to us at : support@greenschoolprogramme.org');
+            $this->session->set_flashdata('data_name', 'Your password is incorrect. Please try again. For any assistance, write to us at: support@greenschoolsprogramme.org');
             return redirect('Audit_home_scorecard');
         }
 
