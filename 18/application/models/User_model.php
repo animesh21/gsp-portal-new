@@ -94,14 +94,6 @@ class User_model extends CI_Model
         return false;
     }
 	
-	
-	
-	
-	
-	
-	
-	
-	
     public function CreateUser($argPost)
     {
         $query = $this->db->select('COUNT(*) count')
@@ -249,6 +241,7 @@ class User_model extends CI_Model
     }*/
 	public function forgetPassword()
     {
+		if(!empty($this->input->post('val'))){
 		date_default_timezone_set('Asia/Kolkata');
         $this->load->helper('string');
 		$this->db->like('email',$this->input->post('val'));
@@ -294,7 +287,7 @@ class User_model extends CI_Model
 			else {
               return false;
             }
-         }
+		}  }
 }
 
 ?>
