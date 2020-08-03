@@ -193,9 +193,9 @@ header('Location: http://www.greenschoolsprogramme.org/audit/18/login/browser_ch
                       url: "<?php echo base_url('login/forgetpassword');  ?>",
                       type:"POST",
                       data: {"emailval":emailval},
-			dataType:'Json',
-                      success: function(resp){
-                        alert(resp);
+			                dataType:'Json',
+                      success: function(status){
+                        alert(status);
                       }
 
                     });
@@ -204,48 +204,7 @@ header('Location: http://www.greenschoolsprogramme.org/audit/18/login/browser_ch
                         $('#msgForget').html('<p style="color:red; font-weight:bold">Please enter email address !</p>');
                     } else if (!pattern.test(emailval)) {
                         $('#msgForget').html('<p style="color:red; font-weight:bold">Please enter a valid email address !</p>');
-                    } else {
-                        record = {
-                            val: emailval
-                        };
-                        $.post('<?php echo base_url('login/forgetpassword') ?>', record, function (data) {
-
-                            console.log(data);
-                           // if (data == "success") {
-         if(data != "error"){ 
-                                $('#msgForget').html('<div class="alert alert-success">' +
-                                        "<strong>&#10004; Success!</strong> Your password request has been accepted and the new password will be sent to the registered email address of the GSP co-ordinator in the next five - ten minutes. If the password is not received in the next 10 minutes, then please check the spam folder. If not in the spam folder, then please send an email saying that you haven't received the new password to: <a href='mail'> support@greenschoolsprogramme.org</a>,<p><strong>Please note that passwords can be changed only once in a day.  </strong></p>" +
-                                        '</div>');
-        setTimeout(function () {
-                                location.reload();
-                            }, 300000);
-            $.ajax({
-                              url:'<?php echo base_url(); ?>setpassword-2017.php',
-                              type: 'GET',
-                              data: {"email":emailval,"setPassword":data,"function_name":"setPasswordGSPAudit2017ByEmail"},
-                              success: function (reponse) {
-                             }     });
-                            } else if (data == "error") {
-                                $('#msgForget').html('<div class="alert alert-danger">' +
-                                        '<strong>&#x2716; Error!</strong> The email you have entered is not registered.' +
-                                        '</div>');
-                     setTimeout(function () {
-                                location.reload();
-                            }, 300000);
-                            }
-          if (data>=1) {
-                                $('#msgForget').html('<div class="alert alert-danger">' +
-                                        '<strong>&#x2716; Error!</strong> You Can Send Request For Forgetpassword Only Once in A Day. <br/> Please Send Next Query After Half An Hour & If You Have Any Doubts, Mail support@greenschoolsprogramme.org OR CALL 011-4061600 ' +
-                                        '</div>');
-                     setTimeout(function () {
-                                location.reload();
-                            }, 300000);
-                            }
-                            setTimeout(function () {
-                                location.reload();
-                            }, 300000);
-                        }, 'json');
-                    }
+                    }  
                 });
             });
   
