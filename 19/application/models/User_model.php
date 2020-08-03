@@ -296,52 +296,47 @@ class User_model extends CI_Model
                  return false;
         }
     }*/
-  public function forgetPassword($tt)
+	
+	
+public function forgetPassword($tt)
     {
-      
-    date_default_timezone_set('Asia/Kolkata');
-        $this->load->helper('string');
+      if(!empty($tt)){
+      date_default_timezone_set('Asia/Kolkata');
+      $this->load->helper('string');
     
-        $email_count =$this->db->select("id")->from('gsp_user')->get()->result();
+      $email_count =$this->db->select("id")->from('gsp_user')->get()->result();
       if (count($email_count)>0) {
         $this->db->like('coemail',$tt);
-          $this->db->like('forgetpassword_email_time',date("Y-m-d"));
+//           $this->db->like('forgetpassword_email_time',date("Y-m-d"));
               $dataResult = $this->db->select("counter")->from('gsp_school')->get()->result();
-              
+          if(!empty($dataResult)){
           $update_counter=$dataResult[0]->counter+1; 
-        $this->db->where('coemail',$tt);
-       $this->db->update('gsp_school',array("forgetpassword_email_time"=>date("Y-m-d"),"counter"=>$update_counter));  
-
+          $this->db->where('coemail',$tt);
+          $this->db->update('gsp_school',array("forgetpassword_email_time"=>date("Y-m-d"),"counter"=>$update_counter));  
+        }
          if($dataResult[0]->counter>=1){
-
-           return "You Can Send Request For Forgetpassword Only Once in A Day. Please Send Next Query After Half An Hour & If You Have Any Doubts, Mail support@greenschoolsprogramme.org OR CALL 011-4061600";
+            return  "You Can Send Request For Forgetpassword Only Once in A Day. Please Send Next Query After Half An Hour & If You Have Any Doubts, Mail support@greenschoolsprogramme.org OR CALL 011-4061600";
          }
          else{
-          echo "Your password request has been accepted and the new password will be sent to the registered email address of the GSP co-ordinator in the next five - ten minutes. If the password is not received in the next 10 minutes, then please check the spam folder. If not in the spam folder, then please send an email saying that you haven't received the new password to: support@greenschoolsprogramme.org, Please note that passwords can be changed only once in a day.";
-    $query = $this->db->select('*')
-                    ->from('gsp_user')
-                    ->like('email', $this->input->post('val'))
-                    ->get()->row();      
-                 $varNewPass = strtolower(random_string('alnum', 5));
-                 $arr = array('password' => $varNewPass);
-                 $this->db->like('email',$tt);
-               $this->db->update('gsp_user', $arr); 
-
-               $this->load->library('email');
              
+         $query = $this->db->select('*')->from('gsp_user')->like('email', $this->input->post('val'))->get()->row();       $varNewPass = strtolower(random_string('alnum', 5));
+                  $arr = array('password' => $varNewPass);
+                  $this->db->like('email',$tt);
+                  $this->db->update('gsp_user', $arr);
+                  $this->load->library('email');         
 
-              $config['protocol']    = 'smtp';
-              $config['smtp_host']    = 'ssl://smtp.gmail.com';
-              $config['smtp_port']    = '465';
-              $config['smtp_timeout'] = '60';
+                  $config['protocol']    = 'smtp';
+                  $config['smtp_host']    = 'ssl://smtp.gmail.com';
+                  $config['smtp_port']    = '465';
+                  $config['smtp_timeout'] = '60';
 
-              $config['smtp_user']    = 'support@greenschoolsprogramme.org';    //Important
-              $config['smtp_pass']    = 'GSP@2000';  //Important
+                  $config['smtp_user']    = 'support@greenschoolsprogramme.org';    //Important
+                  $config['smtp_pass']    = 'GSP@2000';  //Important
 
-              $config['charset']    = 'utf-8';
-              $config['newline']    = "\r\n";
-              $config['mailtype'] = 'html'; // or html
-              $config['validation'] = TRUE; // bool whether to validate email or not
+                  $config['charset']    = 'utf-8';
+                  $config['newline']    = "\r\n";
+                  $config['mailtype'] = 'html'; // or html
+                  $config['validation'] = TRUE; // bool whether to validate email or not
                  
                  $this->email->initialize($config);
                  $from = "support@greenschoolsprogramme.org";
@@ -357,13 +352,13 @@ class User_model extends CI_Model
                  $this->email->subject($subject);
                  $this->email->message($msg);
                  $this->email->send();
-             return $varNewPass;    
+                 return "Your password request has been accepted and the new password will be sent to the registered email address of the GSP co-ordinator in the next five - ten minutes. If the password is not received in the next 10 minutes, then please check the spam folder. If not in the spam folder, then please send an email saying that you haven't received the new password to: support@greenschoolsprogramme.org, Please note that passwords can be changed only once in a day.";
+              }
           }
-      }
-      else {
+        else {
               return false;
             }
-         }
+    }    }
 }
 
 ?>
