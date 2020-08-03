@@ -298,20 +298,20 @@ class User_model extends CI_Model
     }*/
   public function forgetPassword($tt)
     {
-      
+      if(!empty($tt)){
     date_default_timezone_set('Asia/Kolkata');
         $this->load->helper('string');
     
         $email_count =$this->db->select("id")->from('gsp_user')->get()->result();
       if (count($email_count)>0) {
         $this->db->like('coemail',$tt);
-          $this->db->like('forgetpassword_email_time',date("Y-m-d"));
+//           $this->db->like('forgetpassword_email_time',date("Y-m-d"));
               $dataResult = $this->db->select("counter")->from('gsp_school')->get()->result();
-              
+          if(!empty($dataResult)){
           $update_counter=$dataResult[0]->counter+1; 
-        $this->db->where('coemail',$tt);
-       $this->db->update('gsp_school',array("forgetpassword_email_time"=>date("Y-m-d"),"counter"=>$update_counter));  
-
+          $this->db->where('coemail',$tt);
+          $this->db->update('gsp_school',array("forgetpassword_email_time"=>date("Y-m-d"),"counter"=>$update_counter));  
+			  }
          if($dataResult[0]->counter>=1){
 
            return "You Can Send Request For Forgetpassword Only Once in A Day. Please Send Next Query After Half An Hour & If You Have Any Doubts, Mail support@greenschoolsprogramme.org OR CALL 011-4061600";
@@ -363,7 +363,7 @@ class User_model extends CI_Model
       else {
               return false;
             }
-         }
+	  }        }
 }
 
 ?>
