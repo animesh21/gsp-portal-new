@@ -47,7 +47,7 @@ header('Location: http://www.greenschoolsprogramme.org/audit/18/login/browser_ch
         <div class="container">
           <figure class="logo"><img src="<?php echo base_url(''); ?>assets/img/logo.png"
                                                       class="img-responsive" id="logo" alt="CSE GSP"></figure>
-          <img src="<?php echo base_url(''); ?>assets/img/top-bnr2.png" alt="" class="top-bnr img-responsive"
+          <img src="<?php echo base_url(''); ?>assets/img/toppbar.png" alt="" class="top-bnr img-responsive"
                                  id="image"></div>
       </header>
     </div>
