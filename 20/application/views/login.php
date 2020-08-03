@@ -193,6 +193,7 @@ header('Location: http://www.greenschoolsprogramme.org/audit/18/login/browser_ch
                       url: "<?php echo base_url('login/forgetpassword');  ?>",
                       type:"POST",
                       data: {"emailval":emailval},
+			dataType:'Json',
                       success: function(resp){
                         alert(resp);
                       }
