@@ -31,7 +31,7 @@ header .top-bnr1 img {width: 100%;}
 #index h2 {display: none;}
 #index ol {display: inline-block; margin: 0; padding: 0;}
 #index li {list-style: none; display: inline-block; cursor: pointer; color: rgb(255, 255, 255) !important; font-size: 16px; margin: 0; padding: 0px 20px; line-height: 42px; text-transform: uppercase;}
-#index li:hover {background-color: #2291a4;}
+#index li:hover {background-color: #2291a4;} 
 #index .current {background-color: #2291a4;}
 #index.shrink {top: 0px;}
 button {
