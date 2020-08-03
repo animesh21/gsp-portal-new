@@ -103,7 +103,7 @@ class School_model extends CI_Model
             $config['mailtype'] = 'html';
             $this->email->initialize($config);
             $from = "support@greenschoolsprogramme.org";
-            $arrMails = array('ranjita@cseindia.org', 'aditi.sharma@cseindia.org', 'studiotesseractst@gmail.com', 'srishti.jha@cseindia.org', 'tushita.rawat@cseindia.org', 'neeraj.kumar@cseindia.org, hamender.yadav@studiotesseract.in, Jitendra@studiotesseract.in');
+            $arrMails = array('ranjita@cseindia.org', 'studiotesseractst@gmail.com', 'srishti.jha@cseindia.org', 'tushita.rawat@cseindia.org', 'neeraj.kumar@cseindia.org, hamender.yadav@studiotesseract.in, Jitendra@studiotesseract.in');
             $date = date('d M Y');
             $to = $arrMails;
             $subject = "GSP Audit Registration".$date;
@@ -245,7 +245,7 @@ class School_model extends CI_Model
             $config['mailtype'] = 'html';
             $this->email->initialize($config);
             $from = "support@greenschoolsprogramme.org";
-            $arrMails = array($query->schoolemail, $query->coemail, 'ranjita@cseindia.org', 'aditi.sharma@cseindia.org', 'studiotesseractst@gmail.com', 'srishti.jha@cseindia.org', 'tushita.rawat@cseindia.org', 'neeraj.kumar@cseindia.org');
+            $arrMails = array($query->schoolemail, $query->coemail, 'ranjita@cseindia.org', 'studiotesseractst@gmail.com', 'srishti.jha@cseindia.org', 'tushita.rawat@cseindia.org', 'neeraj.kumar@cseindia.org');
             $date = date('d M Y');
             $to = $arrMails;
             $subject = "GSP Audit Registration".$date;
