@@ -31,8 +31,8 @@
             .alert-danger {
                 border: 2px solid red;
             }
-			.btn-danger{ background:#e86549; border:1px solid #e86549;}
-			.btn-danger:hover{ background:#e86549; border:1px solid #e86549;}
+      .btn-danger{ background:#e86549; border:1px solid #e86549;}
+      .btn-danger:hover{ background:#e86549; border:1px solid #e86549;}
         </style>
 </head>
 <body class="lang-en groupbygroup showqnumcode-X">
@@ -88,8 +88,8 @@
         <div class="form-group"> <?php echo form_error('password'); ?>
           <input type="password" class="form-control" name="password" placeholder="Password"
                                    value="<?php echo set_value('password'); ?>"/>
-<!--           <p><a class="lptext" title="Forgot Password Form" href="javascript:void(0)" rel="shadowbox;"
-                                  width="580" height="360" data-toggle="modal" data-target="#myModal">Forgot password?</a></p> -->
+          <p><a class="lptext" title="Forgot Password Form" href="javascript:void(0)" rel="shadowbox;"
+                                  width="580" height="360" data-toggle="modal" data-target="#myModal">Forgot password?</a></p>
         </div>
         <div class="btn-group">
           <input class="org-btn" type="submit" value="Continue">
@@ -106,11 +106,11 @@
     <script src="http://www.greenschoolsprogramme.org/audit2017/assets/js/jquery.min.js"></script>
     <script src='http://www.greenschoolsprogramme.org/audit2017/assets/js/badge-code.js'></script>
     <script>
-			/*School Badge Code*/
-			window.onload = function(){
-			  get_date_difference('12-24-2017');
-			}
-			</script>
+      /*School Badge Code*/
+      window.onload = function(){
+        get_date_difference('12-24-2017');
+      }
+      </script>
   </div>
 </div>
 <p class="m-browser">Please use a modern browser such as <a href="https://www.mozilla.org/en-US/firefox/new/"
@@ -122,7 +122,7 @@
 <!--</div>-->
 <footer>
   <div class="container">
-    <p>Copyright © 2017 Centre for Science and Environment. For help, email <a href="mailto:ranjita@cseindia.org">support@greenschoolsprogramme.org</a> or call 011-4061600, ext – 219, 300. </p>
+    <p>Copyright © 2019 Centre for Science and Environment. For help, email <a href="mailto:ranjita@cseindia.org">support@greenschoolsprogramme.org</a> or call 011-4061600, ext – 219, 300. </p>
     <p></p>
   </div>
   <!--close container-->
@@ -178,16 +178,17 @@
   </div>
 </div>
 <script type="text/javascript">
-            $(document).ready(function () {
-                $('#btnForgetPassword').on('click', function () {
-                    var emailval = $('input[name="email_id"]').val();
+           $(document).ready(function () {
+                $('#btnForgetPassword').click(function () {
+               var emailval = $('input[name="email_id"]').val();
                     
                     $.ajax({
                       url: "<?php echo base_url('login/forgetpassword');  ?>",
                       type:"POST",
                       data: {"emailval":emailval},
-                      success: function(resp){
-                        alert(resp);
+                      dataType:'Json',
+                      success: function(status){
+                        alert(status);
                       }
 
                     });
@@ -196,30 +197,10 @@
                         $('#msgForget').html('<p style="color:red; font-weight:bold">Please enter email address !</p>');
                     } else if (!pattern.test(emailval)) {
                         $('#msgForget').html('<p style="color:red; font-weight:bold">Please enter a valid email address !</p>');
-                    } else {
-                        record = {
-                            val: emailval
-                        };
-                        $.post('<?php echo base_url('login/forgetpassword') ?>', record, function (data) {
-
-                            console.log(data);
-                            if (data == "success") {
-                                $('#msgForget').html('<div class="alert alert-success">' +
-                                        '<strong>&#10004; Success!</strong> New password successfully send to your email !.' +
-                                        '</div>');
-                            } else if (data == "error") {
-                                $('#msgForget').html('<div class="alert alert-danger">' +
-                                        '<strong>&#x2716; Error!</strong> The email you have entered is not registered.' +
-                                        '</div>');
-                            }
-                            setTimeout(function () {
-                                location.reload();
-                            }, 2000);
-                        }, 'json');
-                    }
+                    }  
                 });
             });
-	</script>
+  </script>
     </body>
-		
+    
 </html>
