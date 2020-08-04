@@ -8,7 +8,7 @@ a:hover {color: #24a5a0; text-decoration: underline;}
 a:active, a:hover, a:focus  {color: #24a5a0; outline: 0}
 .clear {clear: both;}
 :focus, :active {outline:none !important;}
-::-moz-focus-inner {border:0;}
+::-moz-focus-inner {border:0;} 
 .bottomMargin100 {margin-bottom: 100px!important;}
 ul, ol {margin: 0; padding: 0; list-style: none;}
 
