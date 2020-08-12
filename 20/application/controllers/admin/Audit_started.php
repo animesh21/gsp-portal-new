@@ -58,6 +58,7 @@ public function kvs_school_merge() {
         $data['record_old'] = $this->db->select('*')->from('gsp_school')->where('id', $old_school_id)->get()->result();
         
         $this->load->view('admin/includes/template', $data);
+	redirect(base_url("admin/audit_started"));
     }
 
     public function kvs_school_add() {
@@ -79,8 +80,7 @@ public function kvs_school_merge() {
                 'coname'=>$coname,
                 'coemail'=>$coemail,
                 'comobile'=>$comobile,
-                'partner_status'=>$partner_status,
-                'satya_foundation_status'=>$satya_foundation_status
+                'partner_status'=>$partner_status
             );
 
             $this->db->where('id',$old_school_id);
@@ -154,15 +154,14 @@ public function kvs_school_merge() {
             $this->email->subject($subject);
             $this->email->message($msg);
             $this->email->send();
-
-
-
+	    
         $data['main'] = 'admin/dashboard/register_old_school';
         $data['title'] = 'Home | Registration 2020';
         $data['record_new'] = $this->db->select('*')->from('gsp_school')->where('id', $id)->get()->result();
         $data['record_old'] = $this->db->select('*')->from('gsp_school')->where('id', $old_school_id)->get()->result();
         
         $this->load->view('admin/includes/template', $data);
+	redirect(base_url("admin/audit_started"));
     }
 
     public function kvs_school_mail() {
