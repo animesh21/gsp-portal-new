@@ -124,7 +124,7 @@ public function kvs_school_merge() {
             $msg .= $coname . "," . "<br/><br/>";
             $msg .= "Please note that a duplicate GSP account of your school 'insert school name (the one which is to be retained)' was recently made. <strong> Your school is already a part of GSP and registering again will lead to duplicate data. Therefore, we request you to not register again. </strong> The duplicate account has now been deleted. <br/><br/>";
             $msg .= "If you wish to make any changes to the profile details please write to us at 'support@greenschoolsprogramme.org' <br><br>";
-            $msg .= "Given the current health crisis, GSP Audit 2020 will be launchedas and when the schools reopen and you will then be informed. We will inform you as and when it opens. Please stay tuned to our email updates.<br><br>";
+            $msg .= "Given the current health crisis, GSP Audit 2020 will be launched as and when the schools reopen and you will then be informed. We will inform you as and when it opens. Please stay tuned to our email updates.<br><br>";
 	    $msg.= "We request you to save your username and password given below for future reference. We will keep you posted on the GSP Audit 2020 launch.";
 	    $msg .= "To participate, please remember to save your username and password given below.<br><br>";
             $msg .= "URL: http://www.greenschoolsprogramme.org/audit/20 <br/><br/>";
