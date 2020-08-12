@@ -67,8 +67,8 @@
       <option value="PDF">PDF Document</option>
       <option value="SVG">SVG Vector Image</option>
     </select>
-    <button id="buttonExport" class="btn btn-danger" style="background: #e86549 !important; border:1px solid #e86549; border-radius:0px;">Export chart</button>
-    <button id="buttonPrint" class="btn btn-danger" style="background: #e86549 !important; border:1px solid #e86549; border-radius:0px;">Print chart</button>
+    <button id="buttonExport" class="btn btn-danger" style="border:1px solid #2291a4; border-radius:0px;">Export chart</button>
+    <button id="buttonPrint" class="btn btn-danger" style="border:1px solid #2291a4; border-radius:0px;">Print chart</button>
     <br/>
     <br/>
   </div>
@@ -89,8 +89,8 @@
       <option value="PDF">PDF Document</option>
       <option value="SVG">SVG Vector Image</option>
     </select>
-    <button id="buttonExport1" class="btn btn-danger" style="background: #e86549 !important; border:1px solid #e86549; border-radius:0px;">Export chart</button>
-    <button id="buttonPrint1" class="btn btn-danger" style="background: #e86549 !important; border:1px solid #e86549; border-radius:0px;">Print chart</button>
+    <button id="buttonExport1" class="btn btn-danger" style="border:1px solid #2291a4; border-radius:0px;">Export chart</button>
+    <button id="buttonPrint1" class="btn btn-danger" style="border:1px solid #2291a4; border-radius:0px;">Print chart</button>
     <br/>
     <br/>
   </div>
@@ -111,8 +111,8 @@
       <option value="PDF">PDF Document</option>
       <option value="SVG">SVG Vector Image</option>
     </select>
-    <button id="buttonExport2" class="btn btn-danger" style="background: #e86549 !important; border:1px solid #e86549; border-radius:0px;">Export chart</button>
-    <button id="buttonPrint2" class="btn btn-danger" style="background: #e86549 !important; border:1px solid #e86549; border-radius:0px;">Print chart</button>
+    <button id="buttonExport2" class="btn btn-danger" style="border:1px solid #2291a4; border-radius:0px;">Export chart</button>
+    <button id="buttonPrint2" class="btn btn-danger" style="border:1px solid #2291a4; border-radius:0px;">Print chart</button>
     <br/>
     <br/>
   </div>
@@ -133,8 +133,8 @@
       <option value="PDF">PDF Document</option>
       <option value="SVG">SVG Vector Image</option>
     </select>
-    <button id="buttonExport3" class="btn btn-danger" style="background: #e86549 !important; border:1px solid #e86549; border-radius:0px;">Export chart</button>
-    <button id="buttonPrint3" class="btn btn-danger" style="background: #e86549 !important; border:1px solid #e86549; border-radius:0px;">Print chart</button>
+    <button id="buttonExport3" class="btn btn-danger" style="border:1px solid #2291a4; border-radius:0px;">Export chart</button>
+    <button id="buttonPrint3" class="btn btn-danger" style="border:1px solid #2291a4; border-radius:0px;">Print chart</button>
     <br/>
     <br/>
   </div>
@@ -155,8 +155,8 @@
       <option value="PDF">PDF Document</option>
       <option value="SVG">SVG Vector Image</option>
     </select>
-    <button id="buttonExport4" class="btn btn-danger" style="background: #e86549 !important; border:1px solid #e86549; border-radius:0px;">Export chart</button>
-    <button id="buttonPrint4" class="btn btn-danger" style="background: #e86549 !important; border:1px solid #e86549; border-radius:0px;">Print chart</button>
+    <button id="buttonExport4" class="btn btn-danger" style="border:1px solid #2291a4; border-radius:0px;">Export chart</button>
+    <button id="buttonPrint4" class="btn btn-danger" style="border:1px solid #2291a4; border-radius:0px;">Print chart</button>
     <br/>
     <br/>
   </div>
@@ -177,8 +177,8 @@
       <option value="PDF">PDF Document</option>
       <option value="SVG">SVG Vector Image</option>
     </select>
-    <button id="buttonExport5" class="btn btn-danger" style="background: #e86549 !important; border:1px solid #e86549; border-radius:0px;">Export chart</button>
-    <button id="buttonPrint5" class="btn btn-danger" style="background: #e86549 !important; border:1px solid #e86549; border-radius:0px;">Print chart</button>
+    <button id="buttonExport5" class="btn btn-danger" style="border:1px solid #2291a4; border-radius:0px;">Export chart</button>
+    <button id="buttonPrint5" class="btn btn-danger" style="border:1px solid #2291a4; border-radius:0px;">Print chart</button>
     <br/>
     <br/>
   </div>
@@ -200,8 +200,8 @@
       <option value="PDF">PDF Document</option>
       <option value="SVG">SVG Vector Image</option>
     </select>
-    <button id="buttonExport7" class="btn btn-danger" style="background: #e86549 !important; border:1px solid #e86549; border-radius:0px;">Export chart</button>
-    <button id="buttonPrint5" class="btn btn-danger" style="background: #e86549 !important; border:1px solid #e86549; border-radius:0px;">Print chart</button>
+    <button id="buttonExport7" class="btn btn-danger" style="border:1px solid #2291a4; border-radius:0px;">Export chart</button>
+    <button id="buttonPrint5" class="btn btn-danger" style="border:1px solid #2291a4; border-radius:0px;">Print chart</button>
     <br/>
     <br/>
   </div>
@@ -224,8 +224,8 @@
       <option value="PDF">PDF Document</option>
       <option value="SVG">SVG Vector Image</option>
     </select>
-    <button id="buttonExport8" class="btn btn-danger" style="background: #e86549 !important; border:1px solid #e86549; border-radius:0px;">Export chart</button>
-    <button id="buttonPrint5" class="btn btn-danger" style="background: #e86549 !important; border:1px solid #e86549; border-radius:0px;">Print chart</button>
+    <button id="buttonExport8" class="btn btn-danger" style="border:1px solid #2291a4; border-radius:0px;">Export chart</button>
+    <button id="buttonPrint5" class="btn btn-danger" style="border:1px solid #2291a4; border-radius:0px;">Print chart</button>
     <br/>
     <br/>
   </div>
@@ -571,7 +571,7 @@
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
     color: #fff;
     cursor: default;
-    background-color:#e86549!important;
+    background-color:#24a5a0!important;
     border: 1px solid #ddd;
     border-bottom-color: transparent;
 }

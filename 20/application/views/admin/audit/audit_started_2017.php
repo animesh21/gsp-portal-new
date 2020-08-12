@@ -1,6 +1,6 @@
 <link href="<?php echo base_url(); ?>assets/css/font-awesome.css" rel="stylesheet" type="text/css"/>
 <div class="top-area">
-  <h2>REGISTRATION 2020 <a href="<?php echo base_url('admin/audit_started_2017/excel_phase1') ?>">
+  <h2>REGISTRATION 2020 <a href="<?php echo base_url('admin/audit_started/excel_phase1') ?>">
     <button class="exportBtn">Export to Excel</button>
     </a></h2>
 </div>
@@ -87,7 +87,7 @@ $('#submit').click(function(){
 function getBadgeCode(userid)
 {	
 	$.ajax({
-			url:'<?php echo base_url("admin/audit_started_2017/printBadge");?>',
+			url:'<?php echo base_url("admin/audit_started/printBadge");?>',
 			data:{'userid': userid},
 			type:'post',
 			success:function(data){
@@ -101,7 +101,7 @@ function getBadgeCode(userid)
 				$( document ).ready(function() {
                 $('#example3').dataTable({
                  "bProcessing": true,
-                 "sAjaxSource": "<?php echo base_url("/admin/audit_started_2017/getSchoolData");?>",
+                 "sAjaxSource": "<?php echo base_url("/admin/audit_started/getSchoolData");?>",
                  "aoColumns": [
 				        { mData: 'sr_no'},
 				        { mData: 'id' },
@@ -162,8 +162,8 @@ function getBadgeCode(userid)
 						  
 						  // row object contains the row data
 						/*  
-						  var a='<div class="btn-group"><button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-chevron-down"></i></button><div class="dropdown-menu"><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/audit_started_2017/response/"); ?>'+row.id+'" title="View Responses"> <img src="<?php echo base_url() ?>assets/front/images/1446146277_view6.png"><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/audit_started_2017/pdf/"); ?>'+row.id+'" title="Download PDF"><img src="<?php echo base_url() ?>assets/front/images/1446327681_1-02.png" height="20" width="20"></a><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/audit_started_2017/edit/"); ?>'+row.id+'" title="Edit Record"><img src="<?php echo base_url() ?>assets/front/images/edit.png" height="20" width="20"></a><a class="dropdown-item" target="_self" onclick="Myfun('+row.id+')" title="Delete Record"><img src="<?php echo base_url() ?>assets/front/images/delete1.png" data-toggle="modal" data-target="#myModal" height="20" width="20"></a><a class="dropdown-item" target="_blank" href="<?php echo 'http://www.greenschoolsprogramme.org/audit/19/admin/audit_started_2017/downloadzip/'; ?>'+row.id+'" title="Download">Zip</a><a class="dropdown-item" target="_blank" href="<?php echo base_url('admin/audit_started_2017/generatebadge/'); ?>'+row.id+'" title="Download">Badge</a><a class="dropdown-item" href="#"  onclick="javascript:getBadgeCode('+row.id+')" data-toggle="modal" data-target="#myModal1">Badge Code</a><a class="dropdown-item" href="<?php echo base_url('admin/audit_started_2017/sendElasticEmail/'); ?>">Send mail</a></div></div>';  */
-						   var i='<div class="btn-group"><button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-chevron-down"></i></button><div class="dropdown-menu"><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/audit_started_2017/response/"); ?>'+row.id+'" title="View Responses">View Record</a><a class="dropdown-item" onclick="javascript:Myfun('+row.userid+')" href="<?php echo base_url('admin/yoyrepresentation/')."?userid="; ?>'+row.id+'">All Reports</a><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/audit_started_2017/pdf/"); ?>'+row.id+'" title="Download PDF">Response Report</a><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/performance_report/PdfById/"); ?>'+row.id+'" title="Performance Report">Performance Report</a><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/audit_started_2017/edit/"); ?>'+row.id+'" title="Edit Record">Edit Record</a><a class="dropdown-item" <a class="dropdown-item" onclick="javascript:Myfun('+row.userid+')" href="<?php echo base_url('admin/audit_started/getSchoolDisable1/')."?schoolid="; ?>'+row.userid+'">Make School Disabled</a><a class="dropdown-item" target="_blank" href="<?php echo base_url('admin/audit_started_2017/downloadzip/'); ?>'+row.userid+'" title="Download">Zip</a><a class="dropdown-item" target="_blank" href="<?php echo base_url('admin/audit_started_2017/getdigitalCertificate/'); ?>'+row.userid+'" title="Certificates">Certifcates</a></div></div>'; 
+						  var a='<div class="btn-group"><button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-chevron-down"></i></button><div class="dropdown-menu"><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/audit_started/response/"); ?>'+row.id+'" title="View Responses"> <img src="<?php echo base_url() ?>assets/front/images/1446146277_view6.png"><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/audit_started/pdf/"); ?>'+row.id+'" title="Download PDF"><img src="<?php echo base_url() ?>assets/front/images/1446327681_1-02.png" height="20" width="20"></a><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/audit_started/edit/"); ?>'+row.id+'" title="Edit Record"><img src="<?php echo base_url() ?>assets/front/images/edit.png" height="20" width="20"></a><a class="dropdown-item" target="_self" onclick="Myfun('+row.id+')" title="Delete Record"><img src="<?php echo base_url() ?>assets/front/images/delete1.png" data-toggle="modal" data-target="#myModal" height="20" width="20"></a><a class="dropdown-item" target="_blank" href="<?php echo 'http://www.greenschoolsprogramme.org/audit/19/admin/audit_started/downloadzip/'; ?>'+row.id+'" title="Download">Zip</a><a class="dropdown-item" target="_blank" href="<?php echo base_url('admin/audit_started/generatebadge/'); ?>'+row.id+'" title="Download">Badge</a><a class="dropdown-item" href="#"  onclick="javascript:getBadgeCode('+row.id+')" data-toggle="modal" data-target="#myModal1">Badge Code</a><a class="dropdown-item" href="<?php echo base_url('admin/audit_started/sendElasticEmail/'); ?>">Send mail</a></div></div>';  */
+						   var i='<div class="btn-group"><button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-chevron-down"></i></button><div class="dropdown-menu"><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/audit_started/response/"); ?>'+row.id+'" title="View Responses">View Record</a><a class="dropdown-item" onclick="javascript:Myfun('+row.userid+')" href="<?php echo base_url('admin/yoyrepresentation/')."?userid="; ?>'+row.id+'">All Reports</a><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/audit_started/pdf/"); ?>'+row.id+'" title="Download PDF">Response Report</a><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/performance_report/PdfById/"); ?>'+row.id+'" title="Performance Report">Performance Report</a><a class="dropdown-item" target="_blank" href="<?php echo base_url("admin/audit_started/edit/"); ?>'+row.id+'" title="Edit Record">Edit Record</a><a class="dropdown-item" <a class="dropdown-item" onclick="javascript:Myfun('+row.userid+')" href="<?php echo base_url('admin/audit_started/getSchoolDisable1/')."?schoolid="; ?>'+row.userid+'">Make School Disabled</a><a class="dropdown-item" target="_blank" href="<?php echo base_url('admin/audit_started/downloadzip/'); ?>'+row.userid+'" title="Download">Zip</a><a class="dropdown-item" target="_blank" href="<?php echo base_url('admin/audit_started/getdigitalCertificate/'); ?>'+row.userid+'" title="Certificates">Certifcates</a></div></div>'; 
                             return i;
 							}
 						}
@@ -203,7 +203,7 @@ jQuery.ajax({
 function get_value(school_id,partner,satya_foundation_status)
 {
   $.ajax({
-    url:'<?php echo base_url("admin/Audit_started_2017/update_school_partner");?>',
+    url:'<?php echo base_url("admin/audit_started/update_school_partner");?>',
     type: 'POST',
     data: {'partner':partner,'school_id':school_id, 'satya_foundation_status':satya_foundation_status },
     success: function (data){
@@ -216,7 +216,7 @@ function get_value(school_id,partner,satya_foundation_status)
 /****/
 function makeSchoolDisable(school_id){
 $.ajax({
-       url:'<?php echo base_url("admin/Audit_started_2017/disable_school");?>',
+       url:'<?php echo base_url("admin/audit_started/disable_school");?>',
        type: 'POST',
        data: {'school_id':school_id },
        success: function (data){

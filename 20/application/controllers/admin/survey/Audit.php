@@ -2,7 +2,7 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Audit_started_2019 extends CI_Controller {
+class Audit extends CI_Controller {
     /*
      * Constructor 
      */

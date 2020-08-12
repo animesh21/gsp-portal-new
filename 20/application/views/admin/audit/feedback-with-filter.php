@@ -338,7 +338,7 @@
                     <button type="button" class="btn btn-default btn-block btn-lg" style="background: #e86549 !important; color: #fff">Filter Email</button>
                 </div> -->
                 <div class="col-md-6">
-                    <button type="submit" name="send_mail" id="send_email" class="btn btn-default btn-block btn-lg" style="background: #e86549 !important; color: #fff">Send Email</button>
+                    <button type="submit" name="send_mail" id="send_email" class="btn btn-default btn-block btn-lg">Send Email</button>
                 </div>
             </div>
 <?php echo form_close(); ?> </div>
@@ -529,8 +529,18 @@ $(document).ready(function () {
     .label-green {
         background-color: #5cb85c; color:black;
     }
-</style>
 
+    .btn-lg{
+        background: #24a5a0;
+        color: white;
+    }
+
+ .btn-lg:hover {
+  background-color: #2291a4;
+  border:2px solid gray;
+  color: white;
+}
+</style>
 
 <script type="text/javascript" src="https://cdn.ckeditor.com/4.5.1/standard/ckeditor.js"></script>
 

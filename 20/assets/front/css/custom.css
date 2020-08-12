@@ -33,7 +33,7 @@ table.question th, table.question td {border:none; background: none; font-weight
 header .container {padding: 0 40px;}
 header .logo2 {margin: 15px 0; float: left;}
 header .logo2 img {height: 100px; width: auto;}
-header .top-bnr1 {float: right; margin: 30px 0 0 0; transition: all 0.3s ease-in-out;}
+header .top-bnr1 {float: right; margin: 25px 0 0 0; transition: all 0.3s ease-in-out;}
 header .top-bnr1 img {width: 100%;}
 header .icon { position: absolute; right: 5px; top: 75px; }
 
@@ -192,11 +192,11 @@ label.ajayCls {display: inline-block; width: 540px;}
 .errortextpass {color: rgb(255, 0, 0) !important; font-size: 12px; left: 2px; top: -18px; display: none; margin-bottom: 0px !important;}
 .home_container p.errortext {margin-bottom: 0px !important;}
 .kplink {width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-left: 5px; background: url(../images/link-img.png) center center no-repeat;}
-.schools-statics {padding: 35px 15px 15px; border-radius: 6px; font-size: 16px; width: 48%; min-height: 200px; margin: 10px 10px; display: inline-block; vertical-align: top; border: 1px solid #ccc; background: rgba(232, 101, 73, 0.1); position: relative;}
+.schools-statics {padding: 35px 15px 15px; border-radius: 6px; font-size: 16px; width: 48%; min-height: 200px; margin: 10px 10px; display: inline-block; vertical-align: top; border: 1px solid #ccc; background: rgba(36, 165, 160, 0.1); position: relative;}
 .schools-statics:nth-child(even) {margin-right: 0;}
 .schools-statics .title {display: block; margin: 20px; text-align: center;}
-.schools-statics .statics-circle {width: 80px; height: 80px; background: rgb(232, 101, 73); color: #fff; text-align: center; border-radius: 50%; padding: 12px; transition: all 0.5s ease-in-out; border: 5px solid #fff; margin: 0 auto;}
-.schools-statics .statics-circle:hover {border: 5px solid rgb(232, 101, 73);}
+.schools-statics .statics-circle {width: 80px; height: 80px; background: rgb(36, 165, 160); color: #fff; text-align: center; border-radius: 50%; padding: 12px; transition: all 0.5s ease-in-out; border: 5px solid #fff; margin: 0 auto;}
+.schools-statics .statics-circle:hover {border: 5px solid rgb(36, 165, 160);} 
 .schools-statics .statics-circle span {font-weight: bold; font-size: 18px; display: block; margin: 0;}
 .schools-statics label {color: #000; font-size: 12px; font-weight: normal; cursor: pointer;}
 .schools-statics a {text-decoration: none;}

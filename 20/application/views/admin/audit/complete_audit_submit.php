@@ -2,7 +2,7 @@
 <link type="text/css" rel="stylesheet" type="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <div class="top-area">
-  <h2>Schools Completed & Submitted The Audit<a href="<?php echo base_url('admin/audit_started_2017/excelByProgress4_phase1') ?>">
+  <h2>Schools Completed & Submitted The Audit<a href="<?php echo base_url('admin/audit_started/excelByProgress4_phase1') ?>">
     <button class="exportBtn">Export to Excel</button>
     </a></h2>
 </div>

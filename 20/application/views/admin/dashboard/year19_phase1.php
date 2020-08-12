@@ -48,7 +48,7 @@
   <!-- </a> -->
   <div class="title">New Registrations (2020)</div>
 </div>
-<div class="schools-statics "> <!-- <a href="<?php //echo base_url("admin/audit_started_2019/disabled_school")?>" target="_blank"> --> 
+<div class="schools-statics "> <!-- <a href="<?php //echo base_url("admin/Audit/disabled_school")?>" target="_blank"> --> 
   <div class="statics-circle"> <span>0 <!-- <?php echo $disable_count; ?> --> </span>
     <label>view</label>
   </div>

@@ -555,7 +555,7 @@
     <div class="alert alert-danger alert-dismissable"> <strong>No Uploaded Document!</strong> </div>
     <?php } ?>
     <div class="clearfix">&nbsp;</div>
-    <div class="text-center"> <a class="btn org-btn" href="<?php echo base_url('admin/audit_started_2017/air/' . $id) ?>">PREVIOUS</a> <a class="btn org-btn" href="<?php echo base_url('admin/audit_started_2017/food/' . $id) ?>">NEXT</a> </div>
+    <div class="text-center"> <a class="btn org-btn" href="<?php echo base_url('admin/audit_started/air/' . $id) ?>">PREVIOUS</a> <a class="btn org-btn" href="<?php echo base_url('admin/audit_started/food/' . $id) ?>">NEXT</a> </div>
   </div>
 </div>
 </div>

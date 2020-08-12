@@ -1437,7 +1437,7 @@
       <?php } else { ?>
       <div class="alert alert-danger alert-dismissable"> <strong>No Uploaded Document!</strong> </div>
       <?php } ?>
-      <div class="text-center"> <a class="btn org-btn" href="<?php echo base_url('admin/audit_started_2017/land/' . $id) ?>">PREVIOUS</a> <a class="btn org-btn" href="<?php echo base_url('admin/audit_started_2017/waste/' . $id) ?>">NEXT</a> </div>
+      <div class="text-center"> <a class="btn org-btn" href="<?php echo base_url('admin/audit_started/land/' . $id) ?>">PREVIOUS</a> <a class="btn org-btn" href="<?php echo base_url('admin/audit_started/waste/' . $id) ?>">NEXT</a> </div>
     </form>
   </div>
 </div>

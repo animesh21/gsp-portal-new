@@ -19,7 +19,7 @@
       <?php echo form_dropdown('school', array('2'=>'All','0' => 'Primary', '1' => 'Secondary'), $this->input->post('school'), array('class' => 'form-control', 'id' => 'school-select')); ?> </div>
   </div>
   <span class="input-group-btn col-lg-2">
-  <input type="submit" class="btn" style="background-color: rgb(232, 101, 73); color: #fff;" value="Submit" name="Submit">
+  <input type="submit" class="btn btn-danger" value="Submit" name="Submit">
   </span> 
 <?php echo form_close(); ?> </div>
 <div class="wrapper">
@@ -31,8 +31,8 @@
     <option value="PDF">PDF Document</option>
     <option value="SVG">SVG Vector Image</option>
   </select>
-  <button id="buttonExport" class="btn btn-danger" style="background: #e86549 !important; border:1px solid #e86549; border-radius:0px;">Export chart</button>
-  <button id="buttonPrint" class="btn btn-danger" style="background: #e86549 !important; border:1px solid #e86549; border-radius:0px;">Print chart</button>
+  <button id="buttonExport" class="btn btn-danger">Export chart</button>
+  <button id="buttonPrint" class="btn btn-danger">Print chart</button>
   <br/> <br/>
 
 
@@ -44,8 +44,8 @@
     <option value="PDF">PDF Document</option>
     <option value="SVG">SVG Vector Image</option>
   </select>
-  <button id="buttonExport1" class="btn btn-danger" style="background: #e86549 !important; border:1px solid #e86549; border-radius:0px;">Export chart</button>
-  <button id="buttonPrint1" class="btn btn-danger" style="background: #e86549 !important; border:1px solid #e86549; border-radius:0px;">Print chart</button>
+  <button id="buttonExport1" class="btn btn-danger">Export chart</button>
+  <button id="buttonPrint1" class="btn btn-danger">Print chart</button>
 
 
 </div>
@@ -85,7 +85,7 @@
       <td><?php echo $r->coemail; ?></td>
       <td><?php echo $r->comobile; ?></td>
       <td><?php echo $r->progress; ?></td>
-      <td class="action"><a target="_blank" href="<?php echo base_url('admin/audit_started_2017/response/'.$r->id);?>" title="View Responses"><img src="<?php echo base_url() ?>assets/front/images/1446146277_view6.png"></a></td>
+      <td class="action"><a target="_blank" href="<?php echo base_url('admin/audit_started/response/'.$r->id);?>" title="View Responses"><img src="<?php echo base_url() ?>assets/front/images/1446146277_view6.png"></a></td>
     </tr>
     <?php $i++;
 } ?>

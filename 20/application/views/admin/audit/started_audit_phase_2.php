@@ -1,5 +1,5 @@
 <div class="top-area">
-        <h2>School That Started The Audit<a href="<?php echo base_url('admin/audit_started_2017/excelByProgress1_phase2') ?>"><button class="exportBtn">Export to Excel</button></a></h2>
+        <h2>School That Started The Audit<a href="<?php echo base_url('admin/audit_started/excelByProgress1_phase2') ?>"><button class="exportBtn">Export to Excel</button></a></h2>
 </div>
       <table id="example1" class="display dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
         <thead>
@@ -37,7 +37,7 @@
                 <td><?php echo $r->coemail; ?></td>
                 <td><?php echo $r->comobile; ?></td>
                 <td><?php echo $r->progress; ?></td>
-                <td class="action"><a target="_blank" href="<?php echo base_url('admin/audit_started_2017/response/').$r->id; ?>" title="View Responses"><img src="<?php echo base_url() ?>assets/front/images/1446146277_view6.png"></a></td>
+                <td class="action"><a target="_blank" href="<?php echo base_url('admin/audit_started/response/').$r->id; ?>" title="View Responses"><img src="<?php echo base_url() ?>assets/front/images/1446146277_view6.png"></a></td>
             </tr>
           <?php $i++; } ?>
         </tbody>

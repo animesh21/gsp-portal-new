@@ -396,7 +396,7 @@
       <div class="alert alert-danger alert-dismissable"> <strong>No Uploaded Document!</strong> </div>
       <?php } ?>
     </div>
-    <div class="text-center"> <a class="btn org-btn" href="<?php echo base_url('admin/audit_started_2017/food/' . $id) ?>">PREVIOUS</a> <a class="btn org-btn" href="<?php echo base_url('admin/audit_started_2017/water/' . $id) ?>">NEXT</a> </div>
+    <div class="text-center"> <a class="btn org-btn" href="<?php echo base_url('admin/audit_started/food/' . $id) ?>">PREVIOUS</a> <a class="btn org-btn" href="<?php echo base_url('admin/audit_started/water/' . $id) ?>">NEXT</a> </div>
   </form>
 </div>
 </div>

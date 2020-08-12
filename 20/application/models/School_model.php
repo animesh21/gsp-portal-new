@@ -47,8 +47,7 @@ class School_model extends CI_Model
     }
 
      public function RegisterUser($argPost)
-    {
-
+    { 
         if($argPost['partner_list']==3){
 
             if(!isset($argPost['bharti']))
@@ -62,7 +61,7 @@ class School_model extends CI_Model
         
         $update = array(
             'userid' => $argPost['userid'],
-        'udise' =>  $argPost['udise'],
+            'udise' =>  $argPost['udise'],
             'name' => $argPost['name'],
             'address1' => $argPost['address1'],
             'address2' => $argPost['address2'],
@@ -81,12 +80,13 @@ class School_model extends CI_Model
             'coemail' => $argPost['coemail'],
             'comobile' => $argPost['comobile'],
             'date_added' => date('Y-m-d H:i:s'),
-        'partner_status'=>$argPost['partner_list'],
+            'partner_status'=>$argPost['partner_list'],
             'satya_foundation_status'=>$bharti,
-        'browser_details' => $argPost['browser_details'],
+            'browser_details' => $argPost['browser_details'],
             'browser_version' => $argPost['browser_version'],
             'user_ip_address' => $argPost['user_ip_address'],
-            'kvs_school_status'=>'2'
+            'kvs_school_status'=>'2',
+            'password'=>$argPost['pass']
         );
         if ($this->db->insert('gsp_school', $update)) {
             //Sending Mail To The School
@@ -205,7 +205,7 @@ class School_model extends CI_Model
         
         $update = array(
             'userid' => $argPost['userid'],
-        'udise' =>  $argPost['udise'],
+            'udise' =>  $argPost['udise'],
             'name' => $argPost['name'],
             'address1' => $argPost['address1'],
             'address2' => $argPost['address2'],
@@ -224,11 +224,12 @@ class School_model extends CI_Model
             'coemail' => $argPost['coemail'],
             'comobile' => $argPost['comobile'],
             'date_added' => date('Y-m-d H:i:s'),
-        'partner_status'=>$argPost['partner_list'],
+            'partner_status'=>$argPost['partner_list'],
             'satya_foundation_status'=>$bharti,
-        'browser_details' => $argPost['browser_details'],
+            'browser_details' => $argPost['browser_details'],
             'browser_version' => $argPost['browser_version'],
-            'user_ip_address' => $argPost['user_ip_address']
+            'user_ip_address' => $argPost['user_ip_address'],
+            'password'=> $argPost['pass']
         );
         if ($this->db->insert('gsp_school', $update)) {
             //Sending Mail To The School

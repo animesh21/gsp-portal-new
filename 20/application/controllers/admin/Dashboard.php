@@ -42,7 +42,7 @@ class Dashboard extends CI_Controller {
     }	
 	
 	
-	public function year19() {
+	public function yearBy() {
 	         $data['main']='admin/dashboard/year_19';
 	        $data['title']='Home | Dashboard';
 		
@@ -63,10 +63,10 @@ class Dashboard extends CI_Controller {
 	    $this->load->view('admin/includes/template', $data);
 	}
 	
-    public function  registration_2017()
+    public function registration_2017()
     {
         $data['main']='admin/audit/register_2017';
-        $data['title']='Registration 2017';
+        $data['title']='Registration';
         $data['record']=$this->Dashboard_model->getData();
         $data['Schools'] = $this->School_model->getSchools();
         $data['schoolcount']=$this->Dashboard_model->schoolCount();
@@ -164,7 +164,7 @@ class Dashboard extends CI_Controller {
 	public function  registration_2019_phase_2()
         {
         $data['main']='admin/audit/register_2017_phase_2';
-        $data['title']='Registration 2017';
+        $data['title']='Registration';
         $data['record']=$this->Dashboard_model->getSchool_alldata();
         $this->load->view('admin/includes/template', $data);
         }
@@ -172,7 +172,7 @@ class Dashboard extends CI_Controller {
 	public function  registration_2017_phase_new_2()
         {
         $data['main']='admin/audit/register_2017_phase_new_2';
-        $data['title']='Registration 2017';
+        $data['title']='Registration';
         $data['record']=$this->Dashboard_model->getData_phase_2_1();
         $data['Schools'] = $this->School_model->getSchools_phase_2();
         $data['schoolcount']=$this->Dashboard_model->schoolCount_phase_2();
@@ -293,7 +293,7 @@ class Dashboard extends CI_Controller {
     }
 	
 	
-	public function year19_phase1() {
+	public function yearBy_phase1() {
 		ini_set('memory_limit', '256M');
 	 $data['main']='admin/dashboard/year19_phase1';
         $data['title']='Home | Dashboard';
@@ -313,7 +313,7 @@ class Dashboard extends CI_Controller {
 	public function audit_combined(){
 		ini_set('memory_limit', '256M');
 	    	$data['main']='admin/dashboard/audit_combined';
-       		$data['title']='Home | Gsp Audit 2019 Combined';
+       		$data['title']='Home | Gsp Audit Combined';
       		$data['total_school']=$this->Dashboard_model->getSchool_alldata();
       		$data['startedtheaudit']=$this->Dashboard_model->combinedgetSchool_startedAudit();
      		$data['completecount']=$this->Dashboard_model->combinedgetSchool_compliteAudit();
@@ -325,7 +325,7 @@ class Dashboard extends CI_Controller {
 	public function combinded_total_school()
         {
         $data['main']='admin/audit/total_school_combined';
-        $data['title']='Registration 2017';
+        $data['title']='Registration';
         $data['record']=$this->Dashboard_model->combinded_total_school();
         $this->load->view('admin/includes/template', $data);
         }

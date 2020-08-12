@@ -132,7 +132,7 @@ $("#select_all").click(function(){
     //alert(ratings);
  $.ajax({
           type: "POST",
-          url: "<?php echo base_url('admin/audit_started_2017/feed') ?>",
+          url: "<?php echo base_url('admin/audit_started/feed') ?>",
           data: {"id": ratings},
           success:function(data){
             alert(data);

@@ -142,12 +142,12 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
               <li class="<?php echo ($this->router->fetch_class()=='dashboard') ? "active" : ""; ?>"><a href="<?php echo base_url('admin/dashboard'); ?>">HOME</a></li>
-              <li class=""><a href="<?php base_url('admin/audit_started_2017')?>"><!--REGISTRATIONS--> MASTER LIST <span class="caret"></span></a>
+              <li class=""><a href="<?php base_url('admin/audit_started')?>"><!--REGISTRATIONS--> MASTER LIST <span class="caret"></span></a>
                 <ul class="dropdown-menu">
 <!--                   <li class=""><a href="<?php //echo base_url('admin/audit_started'); ?>">AUDIT STARTED</a></li> -->
-                  <li><a href="<?php echo base_url('admin/audit_started_2017'); ?>">MASTER LIST REGISTRATIONS </a></li>
+                  <li><a href="<?php echo base_url('admin/audit_started'); ?>">MASTER LIST REGISTRATIONS </a></li>
       <!-- <li><a href="#" onclick="sendBulkEmail()">Api Test</a></li> -->
-      <li><a href="<?php echo base_url('admin/audit_started_2017/disabled_school'); ?>">DISABLED SCHOOL LIST</a></li> 
+      <li><a href="<?php echo base_url('admin/audit_started/disabled_school'); ?>">DISABLED SCHOOL LIST</a></li> 
       <!--<li><a href="<?php //echo base_url('admin/dashboard/total18_registration'); ?>">REGISTRATIONS 2018</a></li>-->  
                   <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">REGISTRATION</a>
           <ul class="dropdown-menu">
@@ -168,7 +168,7 @@
                     </ul>
                   </li> 
                   <li><a href="<?php echo base_url('admin/audit_started/feedback'); ?>">E-Mail Blast</a></li>
-                  <li><a href="<?php echo base_url('admin/audit_started_2017/partnersList'); ?>">Master List Partners</a></li>
+                  <li><a href="<?php echo base_url('admin/audit_started/partnersList'); ?>">Master List Partners</a></li>
 <!--       <li><a href="<//?php echo base_url('admin/audit_started/getSummary'); ?>">Summary of Audit</a></li>                              -->
       <li><a href="<?php echo base_url('admin/dashboard/masterList'); ?>">Master list Y-O-Y</a></li>
                 </ul>
@@ -290,7 +290,7 @@
                   <li><a href="feedback_how_many_times_contact.php">How many times did you contact GSP Team</a></li>
                 </ul>
               </li> -->
-													<li class=""><a class="lptext" title="Change Password Form" href="<?php echo base_url('admin/audit_started_2017/kvs_school_list'); ?>">WAITING APPROVAL</a></li>
+													<li class=""><a class="lptext" title="Change Password Form" href="<?php echo base_url('admin/audit_started/kvs_school_list'); ?>">WAITING APPROVAL</a></li>
               <li class=""><a class="lptext" title="Change Password Form" href="<?php echo base_url('admin/logout'); ?>">Logout</a></li>
             </ul>
           </div>

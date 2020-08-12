@@ -18,7 +18,7 @@ input[type="radio"] {position: relative; opacity: 1; width: 15px; height: 15px; 
   }
 
   .form-group .btn, .form-group .btn:hover, .form-group .btn:focus {
-    background: #e86549;
+    background: #24a5a0;
     color: #fff;
     border: none;
     padding: 10px 25px;
@@ -47,7 +47,7 @@ input[type="radio"] {position: relative; opacity: 1; width: 15px; height: 15px; 
   <div class="top-area">
     <h2>Old School Registration Data</h2>   
   </div>
-  <?php echo form_open('admin/audit_started_2017/kvs_school_add', array('id' => 'registration-form')); ?>
+  <?php echo form_open('admin/audit_started/kvs_school_add', array('id' => 'registration-form')); ?>
   <div class="form-group">
      <strong>Select Franchise / Institution:</strong>
    <ul class="list-inline">

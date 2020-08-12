@@ -312,8 +312,8 @@
       </div>
 
             <center>
-                <a class="btn org-btn" href="<?php echo base_url('admin/audit_started_2017/response/'.$id) ?>">PREVIOUS</a>
-                <a class="btn org-btn" href="<?php echo base_url('admin/audit_started_2017/air/'.$id) ?>">NEXT</a>
+                <a class="btn org-btn" href="<?php echo base_url('admin/audit_started/response/'.$id) ?>">PREVIOUS</a>
+                <a class="btn org-btn" href="<?php echo base_url('admin/audit_started/air/'.$id) ?>">NEXT</a>
 
             </center>
 

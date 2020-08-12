@@ -831,7 +831,7 @@
     <div class="alert alert-danger alert-dismissable"> <strong>No Uploaded Document!</strong> </div>
     <?php } ?>
   </div>
-  <div class="text-center"> <a class="btn org-btn" href="<?php echo base_url('admin/audit_started_2017/general/' . $id) ?>">PREVIOUS</a> <a class="btn org-btn" href="<?php echo base_url('admin/audit_started_2017/energy/' . $id) ?>">NEXT</a> </div>
+  <div class="text-center"> <a class="btn org-btn" href="<?php echo base_url('admin/audit_started/general/' . $id) ?>">PREVIOUS</a> <a class="btn org-btn" href="<?php echo base_url('admin/audit_started/energy/' . $id) ?>">NEXT</a> </div>
 </div>
 </div>
 <?php $this->load->view('admin/survey/footer'); ?>

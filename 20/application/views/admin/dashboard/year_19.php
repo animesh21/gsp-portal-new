@@ -1,6 +1,6 @@
 <h1>Dashboard</h1>
 
-<div class="schools-statics "> <a href="<?php base_url()?>year19_phase1">
+<div class="schools-statics "> <a href="<?php base_url()?>yearBy_phase1">
         <div class="statics-circle"> <span>1</span>
             <label>view</label>
         </div>

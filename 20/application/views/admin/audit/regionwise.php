@@ -33,7 +33,7 @@
 
     </div>
     <span class="input-group-btn col-lg-2">
-        <input type="submit" class="btn" style="background-color: rgb(232, 101, 73); color: #fff;" value="Submit" name="Submit">     
+        <input type="submit" class="btn btn-danger" value="Submit" name="Submit">     
 
     </span>
     <?php echo form_close(); ?>

@@ -22,7 +22,7 @@ header .container-fluid {padding: 0; height: 42px; display: none;}
 header .navbar-collapse {padding: 0;}
 header .top-bnr {position: absolute; top: 50px; right: 0; transition: all 0.3s ease-out;}
 header .top-bnr img {width: 100%;}
-header .top-bnr1 {float: right; margin: 35px 0 0 0; transition: all 0.3s ease-out;}
+header .top-bnr1 {float: right; margin: 25px 0 0 0; transition: all 0.3s ease-out;}
 header .top-bnr1 img {width: 100%;}
 .form-hdr.shrink1 {top: -134px;}
 .hdr-hdr {border-bottom: solid 14px #24a5a0;}

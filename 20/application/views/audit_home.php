@@ -21,7 +21,7 @@
 <header class="hdr-bdr">
   <div class="container">
     <figure class="logo"><a href="https://www.greenschoolsprogramme.org"><img src="<?php echo base_url('');?>assets/img/logo.png" class="img-responsive" alt=""></a></figure>
-    <img src="<?php echo base_url('');?>assets/img/top-bnr2.png" alt="" class="top-bnr img-responsive"> </div>
+    <img src="<?php echo base_url('');?>assets/img/toppbar.png" alt="" class="top-bnr img-responsive"> </div>
 </header>
 
 <div class="container" style="padding: 20px">

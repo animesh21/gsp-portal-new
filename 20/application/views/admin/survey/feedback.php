@@ -366,7 +366,7 @@
         </div>
 
         <div class="navbar navbar-default" role="navigation">
-            <a class="btn org-btn" href="<?php echo base_url('admin/audit_started_2017/waste/' . $id) ?>">PREVIOUS</a>
+            <a class="btn org-btn" href="<?php echo base_url('admin/audit_started/waste/' . $id) ?>">PREVIOUS</a>
 
         </div>
         </form> </div>

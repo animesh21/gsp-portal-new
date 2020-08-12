@@ -39,7 +39,7 @@ class Login extends CI_Controller {
         $password = $this->input->post('password');
         $userid = $this->input->post('userid');
         $auth = $this->Login_model->checkAuth($password,$userid);
-        redirect(base_url('admin/audit_started_2017'));
+        redirect(base_url('admin/audit_started'));
     }
 	
 	 public function Auth_unable(){
@@ -78,7 +78,7 @@ class Login extends CI_Controller {
     }
 	
 	public function Auth_unable1(){
-		  $data['main'] = 'admin/audit/audit_started_2017';
+		  $data['main'] = 'admin/audit/audit_started';
         $data['title'] = 'Home | Disabled School';
 		
 	  

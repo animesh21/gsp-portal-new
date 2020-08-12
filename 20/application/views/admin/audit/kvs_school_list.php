@@ -1,7 +1,7 @@
 <link href="<?php echo base_url(); ?>assets/css/font-awesome.css" rel="stylesheet" type="text/css"/>
 <div class="top-area">
   <h2>KVS REGISTRATION 2020 
-    <a href="<?php echo base_url('admin/audit_started_2017/excel_kvs_school_list') ?>">
+    <a href="<?php echo base_url('admin/audit_started/excel_kvs_school_list') ?>">
     <button class="exportBtn">Export to Excel</button>
     </a></h2>
 </div>
@@ -62,7 +62,7 @@
     
    function get_aprove($id){
     $.ajax({
-       url:'<?php echo base_url("admin/Audit_started_2017/kvs_school_mail");?>',
+       url:'<?php echo base_url("admin/audit_started/kvs_school_mail");?>',
        type: 'POST',
        data: {'school_id':$id },
        success: function (data){
@@ -86,7 +86,7 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="myModalLabel">Old School Id</h4>
       </div>
-     <?php echo form_open_multipart('admin/Audit_started_2017/kvs_school_merge'); ?>
+     <?php echo form_open_multipart('admin/audit_started/kvs_school_merge'); ?>
       <div class="modal-body">
        <label style="font-weight:600;">
         Old School Id

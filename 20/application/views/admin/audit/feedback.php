@@ -261,7 +261,7 @@ $('#frmSendblukemail').submit(function(e){
 		    
 		<div class="form-group col-md-12">
 		    <div class="col-md-6">
-			<button type="submit" name="filter" class="btn btn-default btn-block btn-lg" style="background: #e86549 !important; color: #fff">Filter Email</button>
+			<button type="submit" name="filter" class="btn btn-default btn-block btn-lg">Filter Email</button>
 		    </div>
 		</div>
 	    </div>
@@ -289,3 +289,11 @@ $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip();   
 });
 </script>
+
+<style type="text/css">
+	.btn-lg:hover {
+  background-color: #2291a4;
+  border:2px solid gray;
+  color: white;
+}
+</style>

@@ -101,40 +101,40 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <ol>
                     <li id="Nav"
                         class="row  <?php echo ($this->router->fetch_class() == 'school') ? "current" : "missing"; ?>"
-                        id="link" onClick="javascript:window.location.href='<?php echo base_url('admin/audit_started_2017/response/'.$id) ?>';">School
+                        id="link" onClick="javascript:window.location.href='<?php echo base_url('admin/audit_started/response/'.$id) ?>';">School
                         Profile
                     </li>
                     <li id="generalNav"
                         class="row <?php echo ($this->router->fetch_class() == 'general') ? "current" : "missing"; ?>"
-                        id="link" onClick="javascript:window.location.href='<?php echo base_url('admin/audit_started_2017/general/'.$id) ?>';">General
+                        id="link" onClick="javascript:window.location.href='<?php echo base_url('admin/audit_started/general/'.$id) ?>';">General
                         Questions
                     </li>
                     <li id="airNav"
                         class="row <?php echo ($this->router->fetch_class() == 'air') ? "current" : "missing"; ?>"
-                        id="link" onClick="javascript:window.location.href='<?php echo base_url('admin/audit_started_2017/air/'.$id) ?>';">Air
+                        id="link" onClick="javascript:window.location.href='<?php echo base_url('admin/audit_started/air/'.$id) ?>';">Air
                     </li>
                     <li id="Nav"
                         class="row <?php echo ($this->router->fetch_class() == 'energy') ? "current" : "missing"; ?>"
-                        id="link" onClick="javascript:window.location.href='<?php echo base_url('admin/audit_started_2017/energy/'.$id) ?>';">Energy
+                        id="link" onClick="javascript:window.location.href='<?php echo base_url('admin/audit_started/energy/'.$id) ?>';">Energy
                     </li>
                     <li id="Nav"
                         class="row <?php echo ($this->router->fetch_class() == 'food') ? "current" : "missing"; ?>"
-                        id="link" onClick="javascript:window.location.href='<?php echo base_url('admin/audit_started_2017/food/'.$id) ?>';">Food
+                        id="link" onClick="javascript:window.location.href='<?php echo base_url('admin/audit_started/food/'.$id) ?>';">Food
                     </li>
                     <li id="Nav"
                         class="row <?php echo ($this->router->fetch_class() == 'land') ? "current" : "missing"; ?>"
-                        id="link" onClick="javascript:window.location.href='<?php echo base_url('admin/audit_started_2017/land/'.$id) ?>';">Land
+                        id="link" onClick="javascript:window.location.href='<?php echo base_url('admin/audit_started/land/'.$id) ?>';">Land
                     </li>
                     <li id="Nav"
                         class="row <?php echo ($this->router->fetch_class() == 'water') ? "current" : "missing"; ?>"
-                        id="link" onClick="javascript:window.location.href='<?php echo base_url('admin/audit_started_2017/water/'.$id) ?>';">Water
+                        id="link" onClick="javascript:window.location.href='<?php echo base_url('admin/audit_started/water/'.$id) ?>';">Water
                     </li>
                     <li id="Nav"
                         class="row <?php echo ($this->router->fetch_class() == 'waste') ? "current" : "missing"; ?>"
-                        id="link" onClick="javascript:window.location.href='<?php echo base_url('admin/audit_started_2017/waste/'.$id) ?>';">Waste
+                        id="link" onClick="javascript:window.location.href='<?php echo base_url('admin/audit_started/waste/'.$id) ?>';">Waste
                     </li>
                     <li class="row <?php echo ($this->router->fetch_class() == 'feedback') ? "current" : "missing"; ?>"
-                        id="link" onClick="javascript:window.location.href='<?php echo base_url('admin/audit_started_2017/feedback/'.$id) ?>';">
+                        id="link" onClick="javascript:window.location.href='<?php echo base_url('admin/audit_started/feedback/'.$id) ?>';">
                         Feedback
                     </li>
                 </ol>

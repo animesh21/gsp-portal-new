@@ -27,7 +27,7 @@ a, a:hover, button {text-decoration: none !important; outline: none !important;}
 .menu > li ul li {margin-bottom: 15px;}
 .menu > li ul li:last-child {margin: 0;}
 .menu > li ul li a {display: inline-block; font-size: 14px; color: #3b3a3a; text-transform: uppercase;}
-.menu > li ul li a.active, .menu > li ul li a:hover {color: #e86549;}
+.menu > li ul li a.active, .menu > li ul li a:hover {color: #24a5a0;}
 
 .social {position: fixed; left: 0; top: 50%; transform: translateY(-50%); -moz-transform: translateY(-50%); -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%);}
 .social li a {width: 48px; height: 48px; display: block; background-image: url("../images/social-media-icon.jpg"); background-repeat: no-repeat; transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -webkit-transition: all 0.2s ease-in-out;}
@@ -43,7 +43,7 @@ p {margin: 0 0 20px 0;}
 p.required {font-size: 13px; font-style: italic; margin-bottom: 10px;}
 p.deadline {font-weight: bold;}
 header .icon {position: absolute; right: 5px; top: 75px;}
-.bdr {border-top: 14px solid #e86549;  overflow:hidden;background: none !important;}
+.bdr {border-top: 14px solid #24a5a0;  overflow:hidden;background: none !important;}
 p.disabled{ background: #fff; padding: 100px 40px; min-height:550px; margin-bottom: 0; text-align: center;}
 .wrapper {background: #fff; padding: 40px 25px; font-size: 16px; color: #363636;}
 .wrapper .top-area {padding: 0 15px;}
@@ -71,7 +71,7 @@ p.disabled{ background: #fff; padding: 100px 40px; min-height:550px; margin-bott
 :-ms-input-placeholder {  
     color: #8fa5bd !important;
 }
-.form-group .btn, .form-group .btn:hover, .form-group .btn:focus {background: #e86549; color: #fff; border: none; padding: 20px 50px; font-size: 14px; text-transform: uppercase; font-weight: 600; box-shadow: 1px 0 3px #999; margin-top: 20px; outline: none !important;}
+.form-group .btn, .form-group .btn:hover, .form-group .btn:focus {background: #24a5a0; color: #fff; border: none; padding: 20px 50px; font-size: 14px; text-transform: uppercase; font-weight: 600; box-shadow: 1px 0 3px #999; margin-top: 20px; outline: none !important;}
 .wrapper form .name {width: 60%;}
 .wrapper form .address {width: 60%;}
 .wrapper form .district {width: 23%; display: inline-block;}
@@ -94,7 +94,7 @@ select::-ms-expand {
 .links li:last-child {margin: 0;}
 .links li a {display: inline-block; vertical-align: middle;}
 .links {padding: 0px;}
-footer {color: #fff; font-size: 12px; padding: 7px 0; background: #e86549;}
+footer {color: #fff; font-size: 12px; padding: 7px 0; background: #24a5a0;}
 
 .wrapper form .iniCname { width: 10%; }
 .wrapper form .cCode { width: 15%; }

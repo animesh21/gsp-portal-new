@@ -1996,7 +1996,7 @@
         <?php } else { ?>
         <div class="alert alert-danger alert-dismissable"> <strong>No Uploaded Document!</strong> </div>
         <?php } ?>
-        <div class="text-center"> <a class="btn org-btn" href="<?php echo base_url('admin/audit_started_2017/water/' . $id) ?>">PREVIOUS</a> <a class="btn org-btn" href="<?php echo base_url('admin/audit_started_2017/feedback/' . $id) ?>">NEXT</a> </div>
+        <div class="text-center"> <a class="btn org-btn" href="<?php echo base_url('admin/audit_started/water/' . $id) ?>">PREVIOUS</a> <a class="btn org-btn" href="<?php echo base_url('admin/audit_started/feedback/' . $id) ?>">NEXT</a> </div>
       </div>
     </div>
     <style type="text/css">

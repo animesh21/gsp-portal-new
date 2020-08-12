@@ -2526,13 +2526,13 @@ textarea.input-lg, select[multiple].input-lg {
 }
 .btn-danger {
 	color: #fff;
-	background-color: #d9534f;
-	border-color: #d43f3a
+	background-color: #24a5a0;
+	border-color: #2291a4
 }
 .btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active, .open>.dropdown-toggle.btn-danger {
 	color: #fff;
-	background-color: #c9302c;
-	border-color: #ac2925
+	background-color: #2291a4;
+	border-color: #24a5a0
 }
 .btn-danger:active, .btn-danger.active, .open>.dropdown-toggle.btn-danger {
 	background-image: none

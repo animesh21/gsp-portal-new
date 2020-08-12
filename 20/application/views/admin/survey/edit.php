@@ -37,7 +37,7 @@
         <div class="panel panel-default">
             <div class="panel-heading">EDIT SCHOOL DETAILS</div>
             <div class="panel-body">
-                <?php echo form_open(base_url('admin/audit_started_2017/update/') . $school->id.'/'.$school->userid) ?>
+                <?php echo form_open(base_url('admin/audit_started/update/') . $school->id.'/'.$school->userid) ?>
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
@@ -200,7 +200,7 @@
         <div class="panel panel-default">
             <div class="panel-heading">EDIT USER DETAILS</div>
             <div class="panel-body">
-                <?php echo form_open(base_url('admin/audit_started_2017/update_user/')) ?>
+                <?php echo form_open(base_url('admin/audit_started/update_user/')) ?>
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">

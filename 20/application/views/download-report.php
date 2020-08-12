@@ -190,7 +190,7 @@ ul.nav li:hover > ul.dropdown-menu { display: block; z-index:10000;}
 //   function getBadgeCode(userid)
 // {  
 //   $.ajax({
-//       url:'<?php //echo base_url("admin/audit_started_2017/printBadge");?>',
+//       url:'<?php //echo base_url("admin/audit_started/printBadge");?>',
 //       data:{'userid': userid},
 //       type:'post',
 //       success:function(data){
