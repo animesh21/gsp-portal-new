@@ -312,7 +312,7 @@ public function kvs_school_merge() {
         $data['csi_completed2']=$this->Report->get_completedpartner("2");
         $data['csi_total_notstarted_audit2']=$this->Report->get_notstartedpartner("2");
         $data['csi_audit_submitted2']=$this->Report->get_audit_submitted("2");
-        
+         
         $data['csi_registerd_audit3']=$this->Report->get_registeredpartner("3");
         $data['csi_total_started_audit3']=$this->Report->get_startedpartner("3");
         $data['csi_completed3']=$this->Report->get_completedpartner("3");
