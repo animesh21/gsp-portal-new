@@ -108,7 +108,7 @@
     <div class="form-group">
       <label for="exampleInputEmail1">
       <div class="question-text">
-        <h6> Task 1: Choose your Air Audit Team <a class="tt" data-tooltip="The first name of need to have both first and last name. In the rest of the rows, if a team member does not have a last name, then they can press the space bar once and move to the next field."><span class="badge">?</span></a> </h6>
+        <h6> Task 1: Choose your Air Audit Team <a class="tt" data-tooltip="The first row should have both first name and last name. In the rest of the rows, if a team member does not have a last name, then they can press the spacebar once and move to the next field."><span class="badge">?</span></a> </h6>
         <p> You would require at least five to 10 of your schoolmates in the Air audit team. The teacher
           co-ordinator may be a science or social science teacher, with an interest in air pollution
           issues. Do include the school transport in-charge and the drivers of the school vehicles in your
@@ -492,10 +492,8 @@
         <h6>Task 2: Are the rooms in your school well-ventilated?</h6>
         </label>
         <br>
-        1. For this exercise, classrooms that are occupied by students regularly should be considered. Do not
-        add laboratories or the auditorium.<br>
-        2. Openings: are there any windows and ventilators which can be opened on regular basis and can be
-        opened anytime.Please do not consider/add doors.<br>
+        1. For this exercise, classrooms that are occupied by students regularly should be considered. Do not add laboratories and auditoriums.<br>
+        2. Openings: Are there any windows and ventilators which can be opened on a regular basis and can be opened anytime? Please do not consider/add doors.<br>
         3. This exercise should be done by schools with centrally air conditioning system also. <br>
         4. The exercise should be carried out for ten classrooms only. Sample size should have representation
         from all sections of classes: two classrooms each from pre-primary, primary, middle, secondary and
@@ -518,7 +516,7 @@
       </div>
     </div>
     <div class="form-group" id="Ratio">
-      <label class="control-label"><span class="cube">2</span>To calculate the Window-floor ratio (WFRop)  of classrooms in
+      <label class="control-label"><span class="cube">2</span>To calculate the Window-floor ratio (WFR)  of classrooms in
       your school, please fill the table below:</label>
       <div class="form-group1 row">
         <div class="col-xs-3">
@@ -894,7 +892,7 @@
         <label>
         <input type="radio" id="Q6A1" required onClick="Air(2)" name="Q6A1"
                            value="<?php echo set_value('Q6A1', 5) ?>" <?php if (isset($data['Q6A1'])) echo $data['Q6A1'] == 5 ? "checked" : "" ?>>
-        Hired vehicles (JNV schools) </label>
+        Hired vehicles (For instance: JNV schools) </label>
       </div>
     </div>
     <div class="form-group" id="vehicle"
@@ -1404,7 +1402,7 @@ else
     echo '<div class="form-group" id="Q6A3" style="display:none;">';
 
 ?>
-<label class="control-label"><span class="cube">3(c)</span>IS CNG AVAILABLE IN YOUR STATE?</label>
+<label class="control-label"><span class="cube">3(c)</span>Is CNG available in your state?</label>
 <ul class="list-inline">
   <li>
     <label>
@@ -1430,7 +1428,7 @@ else
     echo '<div class="form-group" id="Q6A3S1" style="display:none;">';
 
 ?>
-<label class="control-label"><span class="cube">3(c)a</span>IS CNG AVAILABLE IN YOUR AREA?</label>
+<label class="control-label"><span class="cube">3(c)a</span>Is CNG available in your area?</label>
 <ul class="list-inline">
   <li>
     <label>
@@ -1892,8 +1890,7 @@ else
     are a regulatory measure to set the target for pollution reduction and achieve clean air.</p>
 </div>
 <div class="form-group">
-  <label class="control-label"> <span class="cube">5</span>How many students suffer from respiratory problems? <a
-                class="kplink" href="http://www.greenschoolsprogramme.org/knowledge-bank/air/#pmLevels"
+  <label class="control-label"> <span class="cube">5</span>How many students suffer from respiratory problems? <a class="kplink" href="http://www.greenschoolsprogramme.org/knowledge-bank/air/#pmLevels"
                 target="_blank"> </a></label>
   <input type="number" min="0" name="Q8A1" id="Q8A1" class="form-control"
            placeholder="<?php if (isset($data['Q8A1'])) echo $data['Q8A1'] ?>"
