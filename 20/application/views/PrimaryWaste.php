@@ -211,7 +211,7 @@
                         <input class="form-control space-textbox" id="ex2" type="text"  name="Q3Wa1S2" placeholder="<?php if(isset($data['Q3Wa1S2'])) echo $data['Q3Wa1S2'] ?>" value="<?php echo set_value('Q3Wa1S2'); ?>"/>
                     </div>
                     <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="ex3" type="text"  name="Q3Wa1S3" placeholder="<?php if(isset($data['Q3Wa1S3'])) echo $data['Q3Wa1S3'] ?>" value="<?php echo set_value('Q3Wa1S3'); ?>"/>
+                        <input class="form-control space-textbox" id="ex3" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" name="Q3Wa1S3" placeholder="<?php if(isset($data['Q3Wa1S3'])) echo $data['Q3Wa1S3'] ?>" value="<?php echo set_value('Q3Wa1S3'); ?>"/>
                     </div>
                 </div>
                 <div class="form-group1 row">
@@ -223,7 +223,7 @@
                         <input class="form-control space-textbox" id="ex2" type="text"  name="Q3Wa2S2" placeholder="<?php if(isset($data['Q3Wa2S2'])) echo $data['Q3Wa2S2'] ?>" value="<?php echo set_value('Q3Wa2S2'); ?>"/>
                     </div>
                     <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="ex3" type="text"  name="Q3Wa2S3" placeholder="<?php if(isset($data['Q3Wa2S3'])) echo $data['Q3Wa2S3'] ?>" value="<?php echo set_value('Q3Wa2S3'); ?>"/>
+                        <input class="form-control space-textbox" id="ex3" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" name="Q3Wa2S3" placeholder="<?php if(isset($data['Q3Wa2S3'])) echo $data['Q3Wa2S3'] ?>" value="<?php echo set_value('Q3Wa2S3'); ?>"/>
                     </div>
                 </div>
                 <div class="form-group1 row">
@@ -235,7 +235,7 @@
                         <input class="form-control space-textbox" id="ex2" type="text"  name="Q3Wa3S2" placeholder="<?php if(isset($data['Q3Wa3S2'])) echo $data['Q3Wa3S2'] ?>" value="<?php echo set_value('Q3Wa3S2'); ?>"/>
                     </div>
                     <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="ex3" type="text"  name="Q3Wa3S3" placeholder="<?php if(isset($data['Q3Wa3S3'])) echo $data['Q3Wa3S3'] ?>" value="<?php echo set_value('Q3Wa3S3'); ?>"/>
+                        <input class="form-control space-textbox" id="ex3" type="text"oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"  name="Q3Wa3S3" placeholder="<?php if(isset($data['Q3Wa3S3'])) echo $data['Q3Wa3S3'] ?>" value="<?php echo set_value('Q3Wa3S3'); ?>"/>
                     </div>
                 </div>
                 <div class="form-group1 row">
@@ -247,7 +247,7 @@
                         <input class="form-control space-textbox" id="ex2" type="text"  name="Q3Wa4S2" placeholder="<?php if(isset($data['Q3Wa4S2'])) echo $data['Q3Wa4S2'] ?>" value="<?php echo set_value('Q3Wa4S2'); ?>"/>
                     </div>
                     <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="ex3" type="text"  name="Q3Wa4S3" placeholder="<?php if(isset($data['Q3Wa4S3'])) echo $data['Q3Wa4S3'] ?>" value="<?php echo set_value('Q3Wa4S3'); ?>"/>
+                        <input class="form-control space-textbox" id="ex3" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" name="Q3Wa4S3" placeholder="<?php if(isset($data['Q3Wa4S3'])) echo $data['Q3Wa4S3'] ?>" value="<?php echo set_value('Q3Wa4S3'); ?>"/>
                     </div>
                 </div>
                 <div class="form-group1 row">
@@ -259,7 +259,7 @@
                         <input class="form-control space-textbox" id="ex2" type="text" name="Q3Wa5S2" placeholder="<?php if(isset($data['Q3Wa5S2'])) echo $data['Q3Wa5S2'] ?>" value="<?php echo set_value('Q3Wa5S2'); ?>"/>
                     </div>
                     <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="ex3" type="text" name="Q3Wa5S3" placeholder="<?php if(isset($data['Q3Wa5S3'])) echo $data['Q3Wa5S3'] ?>" value="<?php echo set_value('Q3Wa5S3'); ?>"/>
+                        <input class="form-control space-textbox" id="ex3" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" name="Q3Wa5S3" placeholder="<?php if(isset($data['Q3Wa5S3'])) echo $data['Q3Wa5S3'] ?>" value="<?php echo set_value('Q3Wa5S3'); ?>"/>
                     </div>
                 </div>
                 <div class="form-group1 row">
@@ -271,7 +271,7 @@
                         <input class="form-control space-textbox" id="ex2" type="text" name="Q3Wa6S2" placeholder="<?php if(isset($data['Q3Wa6S2'])) echo $data['Q3Wa6S2'] ?>" value="<?php echo set_value('Q3Wa6S2'); ?>"/>
                     </div>
                     <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="ex3" type="text" name="Q3Wa6S3" placeholder="<?php if(isset($data['Q3Wa6S3'])) echo $data['Q3Wa6S3'] ?>" value="<?php echo set_value('Q3Wa6S3'); ?>"/>
+                        <input class="form-control space-textbox" id="ex3" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" name="Q3Wa6S3" placeholder="<?php if(isset($data['Q3Wa6S3'])) echo $data['Q3Wa6S3'] ?>" value="<?php echo set_value('Q3Wa6S3'); ?>"/>
                     </div>
                 </div>
                 <div class="form-group1 row">
@@ -283,7 +283,7 @@
                         <input class="form-control space-textbox" id="ex2" type="text" name="Q3Wa7S2" placeholder="<?php if(isset($data['Q3Wa7S2'])) echo $data['Q3Wa7S2'] ?>" value="<?php echo set_value('Q3Wa7S2'); ?>"/>
                     </div>
                     <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="ex3" type="text" name="Q3Wa7S3" placeholder="<?php if(isset($data['Q3Wa7S3'])) echo $data['Q3Wa7S3'] ?>" value="<?php echo set_value('Q3Wa7S3'); ?>"/>
+                        <input class="form-control space-textbox" id="ex3" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" name="Q3Wa7S3" placeholder="<?php if(isset($data['Q3Wa7S3'])) echo $data['Q3Wa7S3'] ?>" value="<?php echo set_value('Q3Wa7S3'); ?>"/>
                     </div>
                 </div>
                 <div class="form-group1 row">
@@ -295,7 +295,7 @@
                         <input class="form-control space-textbox" id="ex2" type="text" name="Q3Wa8S2" placeholder="<?php if(isset($data['Q3Wa8S2'])) echo $data['Q3Wa8S2'] ?>" value="<?php echo set_value('Q3Wa8S2'); ?>"/>
                     </div>
                     <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="ex3" type="text" name="Q3Wa8S3" placeholder="<?php if(isset($data['Q3Wa8S3'])) echo $data['Q3Wa8S3'] ?>" value="<?php echo set_value('Q3Wa8S3'); ?>"/>
+                        <input class="form-control space-textbox" id="ex3" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" name="Q3Wa8S3" placeholder="<?php if(isset($data['Q3Wa8S3'])) echo $data['Q3Wa8S3'] ?>" value="<?php echo set_value('Q3Wa8S3'); ?>"/>
                     </div>
                 </div>
                 <div class="form-group1 row">
@@ -307,7 +307,7 @@
                         <input class="form-control space-textbox" id="ex2" type="text" name="Q3Wa9S2" placeholder="<?php if(isset($data['Q3Wa9S2'])) echo $data['Q3Wa9S2'] ?>" value="<?php echo set_value('Q3Wa9S2'); ?>"/>
                     </div>
                     <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="ex3" type="text" name="Q3Wa9S3" placeholder="<?php if(isset($data['Q3Wa9S3'])) echo $data['Q3Wa9S3'] ?>" value="<?php echo set_value('Q3Wa9S3'); ?>"/>
+                        <input class="form-control space-textbox" id="ex3" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" name="Q3Wa9S3" placeholder="<?php if(isset($data['Q3Wa9S3'])) echo $data['Q3Wa9S3'] ?>" value="<?php echo set_value('Q3Wa9S3'); ?>"/>
                     </div>
                 </div>
                 <div class="form-group1 row">
@@ -319,7 +319,7 @@
                         <input class="form-control space-textbox" id="ex2" type="text" name="Q3Wa10S2" placeholder="<?php if(isset($data['Q3Wa10S2'])) echo $data['Q3Wa10S2'] ?>" value="<?php echo set_value('Q3Wa10S2'); ?>"/>
                     </div>
                     <div class="col-xs-3">
-                        <input class="form-control space-textbox" id="ex3" type="text" name="Q3Wa10S3" placeholder="<?php if(isset($data['Q3Wa10S3'])) echo $data['Q3Wa10S3'] ?>" value="<?php echo set_value('Q3Wa10S3'); ?>"/>
+                        <input class="form-control space-textbox" id="ex3" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" name="Q3Wa10S3" placeholder="<?php if(isset($data['Q3Wa10S3'])) echo $data['Q3Wa10S3'] ?>" value="<?php echo set_value('Q3Wa10S3'); ?>"/>
                     </div>
                 </div>
             </div>
@@ -443,21 +443,21 @@
       <label>Area </label>
     </div>
     <div class="col-xs-1">
-      <label>No. of waste collection points with no bin </label>
+      <label>Column 1 <br/> No. of waste collection points with no bin </label>
     </div>
     <div class="col-xs-2">
-      <label>No. of waste collection points with one bin (mixed waste) </label>
-    </div>
-
-    <div class="col-xs-2">
-      <label>No. of waste collection points with one bin (for only dry waste) </label>
+      <label>Column 2 <br/> No. of waste collection points with one bin (mixed waste) </label>
     </div>
 
     <div class="col-xs-2">
-      <label>No. of waste collection points with two bins (wet & dry) </label>
+      <label>Column 3 <br/> No. of waste collection points with one bin (for only dry waste) </label>
+    </div>
+
+    <div class="col-xs-2">
+      <label>Column 4 <br/> No. of waste collection points with two bins (wet & dry) </label>
     </div>
     <div class="col-xs-2">
-      <label>No. of waste collection points with three bins or more </label>
+      <label>Column 5 <br/> No. of waste collection points with three bins or more </label>
     </div>
     <div class="col-xs-2">
       <label>Total no. of waste collection points </label>
@@ -1875,11 +1875,6 @@
                                                     <input type="radio" name="Q14Wa1" value="<?php echo set_value('Q14Wa1',3)?>" <?php if(isset($data['Q14Wa1'])) echo $data['Q14Wa1'] == 3 ?"checked":"" ?>>
                                                     Landfill Site </label>
                                             </li>
-                                            <li>
-                                                <label>
-                                                    <input type="radio"  name="Q14Wa1" value="<?php echo set_value('Q14Wa1',4)?>" <?php if(isset($data['Q14Wa1'])) echo $data['Q14Wa1'] == 4 ?"checked":"" ?>>
-                                                    Don’t know </label>
-                                            </li>
                                         </ul>
                                     </div>
                                     <div class="form-group">
@@ -2059,7 +2054,7 @@
                                                 Seek an appointment with the Chairperson, Manager and Principal of your school and ask them the following questions: </div>
 
                         <div class="form-group">
-                            <label class="control-label"><span class="cube">10</span> During school hours, where do students of your school dispose of your single-use masks and/or gloves used to protect themselves from severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)? <a class="tt" data-tooltip="It is assumed that all individuals, including children will need to take precautions and wear masks and/or gloves till such time, advisories are issued to stop using them."><span class="badge">?</span></a> <a class="kplink" href="https://www.greenschoolsprogramme.org/knowledge-bank/waste/" target="_blank"> </a> </label>
+                            <label class="control-label"><span class="cube">10</span> During Covid 19, where do students dispose of their single-use masks and/or gloves used against severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) at the school? <a class="tt" data-tooltip="It is assumed that all individuals, including children will need to take precautions and wear masks and/or gloves till such time, advisories are issued to stop using them."><span class="badge">?</span></a> <a class="kplink" href="https://www.greenschoolsprogramme.org/knowledge-bank/waste/" target="_blank"> </a> </label>
                               <div class="radio">
                                 <label>
                                 <input type="radio" name="Q12NWa1" value="<?php echo set_value('Q10NWa1', 1) ?>" <?php if (isset($data['Q10NWa1'])) echo $data['Q10NWa1'] == 1 ? "checked" : "" ?>> Mixed bin </label>
@@ -2698,3 +2693,4 @@ if($("input[name='Q15Wa1']:checked").val()==="N"){
 }
 
 </script>
+
