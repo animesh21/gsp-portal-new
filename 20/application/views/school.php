@@ -72,7 +72,7 @@ function checkPincode(){
 
    
 function checkUpdate(){
-  alert("If you want to change the details, then please send a mail to support@greenschoolsprogramme.org, with new details: name, email id and mobile number.");
+  alert("If you want to change the details, then please send a mail to support@greenschoolsprogramme.org, with your school name and new details: name, email id and mobile number.");
 }
 </script>
 
@@ -110,7 +110,7 @@ function checkUpdate(){
             ?>
         > <strong><?php echo $this->session->flashdata('error'); ?></strong> </div>
     <div class="form-group">
-      <label for="username" class="text-red"><span class="cube">0</span>UDISE Code of the School / Institution:</label>
+      <label for="username" class="text-red"><span class="cube">0</span>UDISE Code of the School / Institution: <a class="tt" data-tooltip="If your school does not have a U-DISE code, then please enter 000000."><span class="badge">?</span></a> <a class="kplink" href="https://www.greenschoolsprogramme.org/faqs/" target="_blank"> </a> </label>
       <div class="clearfix">&nbsp;</div>
       <input type="text" class="form-control text empty" name="udise" id="udise"
                    placeholder="UDISE Code of the School / Institution" value="<?php echo $data["udise"]; ?>" >
@@ -205,10 +205,7 @@ function checkUpdate(){
     
     <br>
     <div class="form-group">
-      <label for="username" class="control-label"><span class="cube">12</span>Enter GSP Coordinator's Name: <a
-                        class="tt"
-                        data-tooltip="Coordinating teacher's name/ Name of the teacher responsible for GSP Audit"><span
-                            class="badge">?</span></a></label>
+      <label for="username" class="control-label"><span class="cube">12</span>Enter GSP Coordinator's Name: <a class="tt" data-tooltip="Coordinating teacher's name/ Name of the teacher responsible for GSP Audit"><span class="badge">?</span></a></label>
       <div class="clearfix">&nbsp;</div>
       <input type="text" name="coname" class="text empty form-control" id="coname" tabindex="1"
                    placeholder="GSP Coordinator's Name" value="<?php echo $data["coname"]; ?>" onchange = 'checkUpdate();' readonly>
@@ -346,7 +343,7 @@ function checkUpdate(){
 		rules:{
 		      udise:{
 				  required:true,
-			          //number:true,
+			          number:true,
 			  },
 			  Q1S1:{
 				  required:true,
@@ -394,13 +391,13 @@ function checkUpdate(){
 /**Message For Showing On Click Readonly Textbox***/
 $("input[type='text']").click(function () {
     if ($(this).attr("readonly")) {
-       alert("If you want to change the details, then please send a mail to support@greenschoolsprogramme.org, with new details: name, email id and mobile number.");
+       alert("If you want to change the details, then please send a mail to support@greenschoolsprogramme.org, with your school name and new details: name, email id and mobile number.");
     }
 });
 
 $("#city-select").click(function () {
     if ($(this).attr("disabled")) {
-       alert("If you want to change the details, then please send a mail to support@greenschoolsprogramme.org, with new details: name, email id and mobile number.");
+       alert("If you want to change the details, then please send a mail to support@greenschoolsprogramme.org, with your school name and new details: name, email id and mobile number.");
     }
 });
 
