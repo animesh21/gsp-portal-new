@@ -27,8 +27,8 @@
 <div class="form-group">
   <label class="control-label" data-toggle="tooltip" data-placement="top"
                    title="If your school has classes from Grade 6 to 11, you response will be lowest level of grade: Grade 6 and Highest level of grade: Grade 11. If your school has only one Grade (Grade 7) then your response for both will be Grade 7."><span
-                        class="cube">1</span>How many levels does your school have? <a class="tt"
-                                                                                      data-tooltip="If your school has classes from Grade 6 to 11, your response will be lowest level of grade: Grade 6 and Highest level of grade: Grade 11. If your school has only one Grade (Grade 7) then your response for both will be Grade 7"><span
+                        class="cube">1</span>How many levels does your school have? 
+                        <a class="tt" data-tooltip="If your school has classes from Grade 6 to 11, your response will be lowest level of grade: Grade 6 and Highest level of grade: Grade 11. If your school has only one Grade (Grade 7) then your response for both will be Grade 7"><span
                             class="badge">?</span></a></label>
   <!--<audio controls>
     <source src="<?php echo base_url(); ?>assets/img/jana_gana_mana.ogg" type="audio/ogg">
@@ -82,7 +82,7 @@
     <label class="radio-inline">
     <input type="radio" name="Q2G1" class="radio" onClick="Gender(2)" id="Q2G1Girls"
                            value="<?php echo set_value('Q2G1', 2) ?>" <?php if (isset($data['Q2G1'])) echo $data['Q2G1'] == 2 ? "checked" : "" ?>/>
-    Only Girls </label>
+    Only girls </label>
     <label class="radio-inline">
     <input type="radio" name="Q2G1" class="radio" onClick="Gender(3)" id="Q2G1Mixed"
                            value="<?php echo set_value('Q2G1', 3) ?>" <?php if (isset($data['Q2G1'])) echo $data['Q2G1'] == 3 ? "checked" : "" ?>/>
