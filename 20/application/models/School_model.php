@@ -254,7 +254,8 @@ class School_model extends CI_Model
             $msg = "Dear &nbsp;";
             $msg .= $query->coname . "," . "<br/><br/>";
             $msg .= "Thank you for registering your school '" . $query->name . "', for GSP (Green Schools Programme) Audit 2020. Your account has been successfully created.<br><br>";
-            $msg .= "Given the current health crisis, GSP Audit 2020 will now open after July 2020. We will inform you as and when it opens. Please stay tuned to our email updates.<br><br>";
+            $msg .= "GSP Audit 2020 will be launched as and when the schools reopen and you will then be informed.<br><br>";
+            $msg .= "We request you to save your username and password given below for future reference. We will keep you posted on the GSP Audit 2020 launch.<br><br>";
            $msg .= "To participate, please remember to save your username and password given below.<br><br>";
             $msg .= "URL: http://www.greenschoolsprogramme.org/audit/20 <br/><br/>";
             $msg .= "Username: " . $query->coemail . "<br><br>";
