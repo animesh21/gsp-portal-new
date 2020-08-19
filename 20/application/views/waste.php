@@ -665,7 +665,34 @@
   </ul>
 </div>
 <div class="form-group">
-  <label class="control-label"><span class="cube">2(a)</span> If your school segregates waste, please count the areas (collection points) that are with and without dustbins and enter below <a class="tt" data-tooltip="Students will have to count the number of collection points in the school, for instance, one dustbin, two dustbins or more. If there are no dustbins, please say zero (0).  Collection points are the areas (classroom, playground, sick room, etc) where dustbins have been placed. "><span class="badge">?</span></a></label>
+  <label class="control-label"><span class="cube">2(a)</span> If your school segregates waste, please count the areas (collection points) that are with and without dustbins and enter below </label> <br/>
+  <div class="form-group" style="margin-left: 55px;">
+      <ul>
+        <li>
+            Waste collection points are the areas (classrooms, playgrounds, sick room, etc) where dustbins are placed. Students will have to count the number of waste collection points in the school.
+        </li>
+        <li>
+          For instance, given below is an example of a school that has 10 classrooms (row 1) and waste collection points as follows:
+        </li>
+        <li>
+          ● Two classrooms have no dustbins, then the school will enter 0 in column 1
+        </li>
+        <li>
+          ● One classroom has one bin (mixed waste), enter 1 in column 2 
+        </li>
+        <li>
+          ● Four classrooms with one bin system (for only dry waste) enter 4 in column
+        </li>
+        <li>
+          ● Three classrooms with two bins (wet and dry) enter 3 in column 4  
+        </li>
+        <li>
+          ● Zero classrooms with three bins or more enter 0 in column 5 
+        </li>
+         
+      </ul>
+    </div>
+    <br/>
   <div class="form-group row">
     <div class="col-xs-1">
       <label>Area </label>
@@ -688,7 +715,7 @@
       <label>Column 5 <br/> No. of waste collection points with three bins or more </label>
     </div>
     <div class="col-xs-2">
-      <label>Total no. of waste collection points </label>
+      <label>Total no. of collection points </label>
     </div>
   </div>
   <div class="form-group row">
@@ -5518,14 +5545,16 @@ $("input[name='Q9Wa3']").keyup(function(){
 </script>
 
 <script type="text/javascript">
-  $(document).ready(function(){
      $("input[name='Q3b2Wa1']").click(function(){
-      var Q3b2Wa1 = $("input[name='Q3b2Wa1']").val();
+      var Q3b2Wa1 = $('input[name="Q3b2Wa1"]:checked').val();
+
       if(Q3b2Wa1=='Y'){
-        $("#Q9Wa3_b2a").css('display','inline')
+        $("#Q9Wa3_b2a").css('display','inline');
+      }else{
+        $("#Q9Wa3_b2a").css('display','none');
       }
     });
-  });
+  
 </script>
 
 
