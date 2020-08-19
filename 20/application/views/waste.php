@@ -29,7 +29,7 @@
 #Q8Wa1-error
 {
   color: #fb4f2a !important;
-    font-size: 18px !important;
+    font-size: 18px !important; 
     margin-top: -38px !important;
     position: absolute;
     margin-left: 424px;
