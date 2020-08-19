@@ -29,7 +29,7 @@
 #Q8Wa1-error
 {
   color: #fb4f2a !important;
-    font-size: 18px !important; 
+    font-size: 18px !important;
     margin-top: -38px !important;
     position: absolute;
     margin-left: 424px;
@@ -402,7 +402,7 @@
                                value="<?php if (isset($data['Q3Wa1S2'])) echo $data['Q3Wa1S2'] ?>"/>
     </div>
     <div class="col-xs-3">
-      <input class="form-control space-textbox" id="Q3Wa1S3" type="text" name="Q3Wa1S3"
+      <input class="form-control space-textbox" id="Q3Wa1S3" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" name="Q3Wa1S3"
                                placeholder="<?php if (isset($data['Q3Wa1S3'])) echo $data['Q3Wa1S3'] ?>"
                                value="<?php if (isset($data['Q3Wa1S3'])) echo $data['Q3Wa1S3'] ?>"/>
     </div>
@@ -420,7 +420,7 @@
                                value="<?php echo set_value('Q3Wa2S2'); ?>"/>
     </div>
     <div class="col-xs-3">
-      <input class="form-control space-textbox" id="Q3Wa2S3" type="text" name="Q3Wa2S3"
+      <input class="form-control space-textbox" id="Q3Wa2S3" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" name="Q3Wa2S3"
                                placeholder="<?php if (isset($data['Q3Wa2S3'])) echo $data['Q3Wa2S3'] ?>"
                                value="<?php echo set_value('Q3Wa2S3'); ?>"/>
     </div>
@@ -438,7 +438,7 @@
                                value="<?php echo set_value('Q3Wa3S2'); ?>"/>
     </div>
     <div class="col-xs-3">
-      <input class="form-control space-textbox" id="Q3Wa3S3" type="text" name="Q3Wa3S3"
+      <input class="form-control space-textbox" id="Q3Wa3S3" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" name="Q3Wa3S3"
                                placeholder="<?php if (isset($data['Q3Wa3S3'])) echo $data['Q3Wa3S3'] ?>"
                                value="<?php echo set_value('Q3Wa3S3'); ?>"/>
     </div>
@@ -456,7 +456,7 @@
                                value="<?php echo set_value('Q3Wa4S2'); ?>"/>
     </div>
     <div class="col-xs-3">
-      <input class="form-control space-textbox" id="Q3Wa4S3" type="text" name="Q3Wa4S3"
+      <input class="form-control space-textbox" id="Q3Wa4S3" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" name="Q3Wa4S3"
                                placeholder="<?php if (isset($data['Q3Wa4S3'])) echo $data['Q3Wa4S3'] ?>"
                                value="<?php echo set_value('Q3Wa4S3'); ?>"/>
     </div>
@@ -474,7 +474,7 @@
                                value="<?php echo set_value('Q3Wa5S2'); ?>"/>
     </div>
     <div class="col-xs-3">
-      <input class="form-control space-textbox" id="Q3Wa5S3" type="text" name="Q3Wa5S3"
+      <input class="form-control space-textbox" id="Q3Wa5S3" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" name="Q3Wa5S3"
                                placeholder="<?php if (isset($data['Q3Wa5S3'])) echo $data['Q3Wa5S3'] ?>"
                                value="<?php echo set_value('Q3Wa5S3'); ?>"/>
     </div>
@@ -492,7 +492,7 @@
                                value="<?php echo set_value('Q3Wa6S2'); ?>"/>
     </div>
     <div class="col-xs-3">
-      <input class="form-control space-textbox" id="Q3Wa6S3" type="text" name="Q3Wa6S3"
+      <input class="form-control space-textbox" id="Q3Wa6S3" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" name="Q3Wa6S3"
                                placeholder="<?php if (isset($data['Q3Wa6S3'])) echo $data['Q3Wa6S3'] ?>"
                                value="<?php echo set_value('Q3Wa6S3'); ?>"/>
     </div>
@@ -510,7 +510,7 @@
                                value="<?php echo set_value('Q3Wa7S2'); ?>"/>
     </div>
     <div class="col-xs-3">
-      <input class="form-control space-textbox" id="Q3Wa7S3" type="text" name="Q3Wa7S3"
+      <input class="form-control space-textbox" id="Q3Wa7S3" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" name="Q3Wa7S3"
                                placeholder="<?php if (isset($data['Q3Wa7S3'])) echo $data['Q3Wa7S3'] ?>"
                                value="<?php echo set_value('Q3Wa7S3'); ?>"/>
     </div>
@@ -528,7 +528,7 @@
                                value="<?php echo set_value('Q3Wa8S2'); ?>"/>
     </div>
     <div class="col-xs-3">
-      <input class="form-control space-textbox" id="Q3Wa8S3" type="text" name="Q3Wa8S3"
+      <input class="form-control space-textbox" id="Q3Wa8S3" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" name="Q3Wa8S3"
                                placeholder="<?php if (isset($data['Q3Wa8S3'])) echo $data['Q3Wa8S3'] ?>"
                                value="<?php echo set_value('Q3Wa8S3'); ?>"/>
     </div>
@@ -546,7 +546,7 @@
                                value="<?php echo set_value('Q3Wa9S2'); ?>"/>
     </div>
     <div class="col-xs-3">
-      <input class="form-control space-textbox" id="Q3Wa9S3" type="text" name="Q3Wa9S3"
+      <input class="form-control space-textbox" id="Q3Wa9S3" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" name="Q3Wa9S3"
                                placeholder="<?php if (isset($data['Q3Wa9S3'])) echo $data['Q3Wa9S3'] ?>"
                                value="<?php echo set_value('Q3Wa9S3'); ?>"/>
     </div>
@@ -564,7 +564,7 @@
                                value="<?php echo set_value('Q3Wa10S2'); ?>"/>
     </div>
     <div class="col-xs-3">
-      <input class="form-control space-textbox" id="Q3Wa10S3" type="text" name="Q3Wa10S3"
+      <input class="form-control space-textbox" id="Q3Wa10S3" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" name="Q3Wa10S3"
                                placeholder="<?php if (isset($data['Q3Wa10S3'])) echo $data['Q3Wa10S3'] ?>"
                                value="<?php echo set_value('Q3Wa10S3'); ?>"/>
     </div>
@@ -660,7 +660,7 @@
       <label class="radio-inline text-gray">
       <input type="radio" name="Q4Wa2" class="Q4Wa2" id="Q4Wa2_3"
                                    value="<?php echo set_value('Q4Wa2', 4) ?>" <?php if (isset($data['Q4Wa2'])) echo $data['Q4Wa2'] == 4 ? "checked" : "" ?>>
-      Not Applicable </label>
+      None </label>
     </li>
   </ul>
 </div>
@@ -671,21 +671,21 @@
       <label>Area </label>
     </div>
     <div class="col-xs-1">
-      <label>No. of waste collection points with no bin </label>
+      <label>Column 1 <br/> No. of waste collection points with no bin </label>
     </div>
     <div class="col-xs-2">
-      <label>No. of waste collection points with one bin (mixed waste) </label>
-    </div>
-
-    <div class="col-xs-2">
-      <label>No. of waste collection points with one bin (for only dry waste) </label>
+      <label>Column 2 <br/> No. of waste collection points with one bin (mixed waste) </label>
     </div>
 
     <div class="col-xs-2">
-      <label>No. of waste collection points with two bins (wet & dry) </label>
+      <label>Column 3 <br/> No. of waste collection points with one bin (for only dry waste) </label>
+    </div>
+
+    <div class="col-xs-2">
+      <label>Column 4 <br/> No. of waste collection points with two bins (wet & dry) </label>
     </div>
     <div class="col-xs-2">
-      <label>No. of waste collection points with three bins or more </label>
+      <label>Column 5 <br/> No. of waste collection points with three bins or more </label>
     </div>
     <div class="col-xs-2">
       <label>Total no. of waste collection points </label>
@@ -1417,7 +1417,7 @@
 
   <div class="clearfix">&nbsp;</div>
 <div class="form-group">
-    <label class="control-label"><span class="cube">b(1)</span>Is your school a single-use plastic-free zone? <a class="tt" data-tooltip="Single-use plastics are a by-product of petroleum and are thrown away after just one use. The school campus is a single-use plastic-free zone if there are no such plastics  present or are being used in any way, inside the campus. To know how plastic waste adds to climate change."><span class="badge">?</span></a> <a class="kplink" href="https://www.greenschoolsprogramme.org/knowledge-bank/waste/" target="_blank"> </a></label>
+    <label class="control-label"><span class="cube">b(1)</span>Is your school a single-use plastic-free zone? <a class="tt" data-tooltip="Single-use plastics are a by-product of petroleum and are thrown away after just one use. The school campus is a single-use plastic-free zone if there are no such plastics present or being used in any way, inside the campus."><span class="badge">?</span></a> <a class="kplink" href="https://www.greenschoolsprogramme.org/knowledge-bank/waste/" target="_blank"> </a></label>
      <div class="form-group">
      <label class="radio-inline text-gray">
         <input type="radio" name="Q3bWa1" value="<?php echo set_value('Q3bWa1', 'Y') ?>" <?php if (isset($data['Q3bWa1'])) echo $data['Q3bWa1'] == 'Y' ? "checked" : "" ?>> Yes </label>
@@ -1441,10 +1441,10 @@
 
    <div class="clearfix">&nbsp;</div>
 
-    <div class="form-group" id="Q9Wa3">
+    <div class="form-group" id="Q9Wa3_b2a" style="display: none">
       <label for="username" class="control-label"><span class="cube">b(2)(a)</span>If yes, please provide details:</label>
       <br>
-      <input type="text" name="Q3b2Wa2" id="Q3b2Wa2" class="form-control space-textbox"
+      <input type="text" onkeypress="return /[a-z]/i.test(event.key)" name="Q3b2Wa2" id="Q3b2Wa2" class="form-control space-textbox"
                    placeholder="<?php if (isset($data['Q3b2Wa2'])) echo $data['Q3b2Wa2'] ?>"
                    value="<?php if (isset($data['Q3b2Wa2'])) echo $data['Q3b2Wa2'] ?>">
     </div>
@@ -1665,7 +1665,7 @@
   </div>
 </div>
 <div class="form-group">
-  <label><span class="cube">g.</span>Cc& D Waste <a class="kplink" href="https://www.greenschoolsprogramme.org/knowledge-bank/waste/" target="_blank"> </a> </label>
+  <label><span class="cube">g.</span>C & D Waste <a class="kplink" href="https://www.greenschoolsprogramme.org/knowledge-bank/waste/" target="_blank"> </a> </label>
   <div class="form-group row">
     <div class="col-xs-6">
       <label>HOW MUCH WASTE DOES YOUR SCHOOL GENERATE? </label>
@@ -1745,15 +1745,14 @@
 </table>
 <div class="form-group">
   <label>
-  <h6>Task 4: How much waste does your school treat/recycle?</h6>
+  <h6>Task 4: How much waste does your school treat/recycle? <a class="tt" data-tooltip="Includes all waste recycled, reused or treated." style="position:relative; top:0px;"><span class="badge">?</span></a></h6>
   </label>
   <br>
   <p> <b>To Collect Data:</b> Find out whether your school has any waste recycling facility like compost
     pit, paper recycling machine, etc. If you have a paper recycling unit, the person in charge will
     definitely be recording the input and output from the unit. If the school is selling newspapers or
     bottles or metal scrap to the local waste dealer (kabadiwala), that can also be included in the
-    quantity recycled.<a class="tt" data-tooltip="Includes all waste recycled, reused or treated."
-                                         style="position:relative; top:0px;"><span class="badge">?</span></a></p>
+    quantity recycled.</p>
 </div>
 <br>
 <div class="form-group">
@@ -2235,7 +2234,7 @@
       <label>
       <input type="checkbox" name="Q9Wa2S2"
                        value="<?php echo set_value('Q9Wa2S2', 1); ?>" <?php if (isset($data['Q9Wa2S2'])) echo "checked" ?>>
-      Vermi composting</label>
+      Vermicomposting</label>
     </div>
     <div class="text-gray">
       <label>
@@ -2252,10 +2251,9 @@
   </div>
   <div class="form-group" id="Q9Wa3">
     <div class="form-group" id="Q9Wa3">
-      <label for="username" class="control-label"><span class="cube">5(b)</span>What is the quantity of
-      compost that is generated per month (in kilogram)?</label>
+      <label for="username" class="control-label"><span class="cube">5(b)</span>What is the quantity of compost that is generated per month (in kilogram)?</label>
       <br>
-      <input type="text" name="Q9Wa3" id="Q9Wa31" class="form-control space-textbox"
+      <input type="text" onkeypress="return /[a-z]/i.test(event.key)" name="Q9Wa3" id="Q9Wa31" class="form-control space-textbox"
                    placeholder="<?php if (isset($data['Q9Wa3'])) echo $data['Q9Wa3'] ?>"
                    value="<?php if (isset($data['Q9Wa3'])) echo $data['Q9Wa3'] ?>">
     </div>
@@ -3291,7 +3289,7 @@
 <div class="form-group">
   <label class="control-label">Please upload supporting documents:</label>
   <br>
-  • Pictures of Electronic items used by school and storage of non-working electronic items<br>
+  • Pictures of electronic items used by school and storage of non-working electronic items<br>
   • Certificate of disposing e-waste from authorized dealer/dismantler<br>
   <br>
   <button class="btn uploadbtn upload" data-id="E-Waste" data-toggle="modal" data-target="#airModal"
@@ -3464,12 +3462,7 @@
                            value="<?php echo set_value('Q14Wa1', 3) ?>" <?php if (isset($data['Q14Wa1'])) echo $data['Q14Wa1'] == 3 ? "checked" : "" ?>>
     Landfill Site </label>
   </div>
-  <div class="radio">
-    <label>
-    <input type="radio" name="Q14Wa1"
-                           value="<?php echo set_value('Q14Wa1', 4) ?>" <?php if (isset($data['Q14Wa1'])) echo $data['Q14Wa1'] == 4 ? "checked" : "" ?>>
-    Don’t know </label>
-  </div>
+  
 </div>
 <br>
 <br>
@@ -3744,8 +3737,7 @@
 <div class="clearfix">&nbsp;</div>
 
 <div class="form-group">
-  <label class="control-label"><span class="cube">13</span> During school hours, where do students of your school dispose of your single-use masks and/or gloves used to protect themselves from severe acute respiratory syndrome coronavirus 2 
-(SARS-CoV-2)? <a class="tt" data-tooltip="It is assumed that all individuals, including children will need to take precautions and wear masks and/or gloves till such time, advisories are issued to stop using them."><span class="badge">?</span></a> <a class="kplink" href="https://www.greenschoolsprogramme.org/knowledge-bank/waste/" target="_blank"> </a> </label>
+  <label class="control-label"><span class="cube">13</span> During Covid 19, where do students dispose of their single-use masks and/or gloves used against severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) at the school? <a class="tt" data-tooltip="It is assumed that all individuals, including children will need to take precautions and wear masks and/or gloves till such time, advisories are issued to stop using them."><span class="badge">?</span></a> <a class="kplink" href="https://www.greenschoolsprogramme.org/knowledge-bank/waste/" target="_blank"> </a> </label>
   <div class="radio">
         <label>
         <input type="radio" name="Q13NWa1" value="<?php echo set_value('Q13NWa1', 1) ?>" <?php if (isset($data['Q13NWa1'])) echo $data['Q13NWa1'] == 1 ? "checked" : "" ?>> Mixed bin </label>
@@ -5523,6 +5515,17 @@ $("input[name='Q9Wa3']").keyup(function(){
 
   });
 
+</script>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+     $("input[name='Q3b2Wa1']").click(function(){
+      var Q3b2Wa1 = $("input[name='Q3b2Wa1']").val();
+      if(Q3b2Wa1=='Y'){
+        $("#Q9Wa3_b2a").css('display','inline')
+      }
+    });
+  });
 </script>
 
 
