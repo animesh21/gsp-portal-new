@@ -58,7 +58,6 @@ public function kvs_school_merge() {
         $data['record_old'] = $this->db->select('*')->from('gsp_school')->where('id', $old_school_id)->get()->result();
         
         $this->load->view('admin/includes/template', $data);
-	redirect(base_url("admin/audit_started"));
     }
 
     public function kvs_school_add() {
