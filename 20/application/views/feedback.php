@@ -273,8 +273,7 @@ if (isset($data['Q1Fe2'])) {
             </ul>
         </div>
         <div class="form-group">
-            <label><span class="cube">4</span> Do you think your school will be a Green School (resource efficient) by
-                2019? </label>
+            <label><span class="cube">4</span> Do you think your school will be a Green School (resource efficient) by 2020? </label>
             <ul class="list-inline">
                 <li>
                     <label class="radio-inline">
@@ -415,13 +414,13 @@ if (isset($data['Q1Fe7'])) {
     echo 'style="display:none;"';
 }
 ?>>
-            <label><span class="cube">7(a)</span> If your answer is yes, please share your suggestions: </label>
+            <label><span class="cube">7(a)</span> Topics your school feels should be added or deleted. Please write ‘to be added’ and ‘to be deleted’ in front of the topics.</label>
             <input type="text" name="Q1Fe711" id="Q1Fe711" class="form-control"
                    placeholder="<?php if (isset($data['Q1Fe711'])) echo $data['Q1Fe711']; ?>"
                            value="<?php echo set_value('Q1Fe711'); ?>"/>
         </div>
         <div class="form-group">
-            <label><span class="cube">8</span> Could you finish all the tasks in given period of time (July to October)?
+            <label><span class="cube">8</span> Could you finish all the tasks in given period of time ?
             </label>
             <ul class="list-inline">
                 <li>
@@ -469,7 +468,7 @@ if (isset($data['Q1Fe7'])) {
             </ul>
         </div>
         <div class="form-group">
-            <label><span class="cube">10</span> Does your school have an alumni network? If yes, please give the frequency alumni meeting in the box below. <a
+            <label><span class="cube">10</span> Does your school have an alumni network? If yes, please give the frequency of alumni meetings in the box below. <a
                             class="tt"
                             data-tooltip="Alumni network is a meeting/reunion of all the passed out students from your school in past years"
                     ><span class="badge">?</span></a> </label>
@@ -508,65 +507,13 @@ if (isset($data['Q1Fe10'])) {
             <input type="text" name="Q1Fe1011" id="Q1Fe1011" class="form-control"
                     placeholder="<?php if (isset($data['Q1Fe1011'])) echo $data['Q1Fe1011']; ?>"
                            value="<?php echo set_value('Q1Fe1011'); ?>"/>
-        </div>
-        <div class="form-group">
-            <label><span class="cube">11</span> Did your students enjoy doing Water activities?</label>
-            <ul class="list-inline">
-                <li>
-                    <label class="radio-inline">
-                        <input type="radio" name="Q1Fe11"
-                               value="<?php echo set_value('Q1Fe11', 'Y') ?>" <?php if (isset($data['Q1Fe11'])) echo $data['Q1Fe11'] == 'Y' ? "checked" : "" ?>>
-                        Yes</label>
-                </li>
-                <li>
-                    <label class="radio-inline">
-                        <input type="radio" name="Q1Fe11"
-                               value="<?php echo set_value('Q1Fe11', 'N') ?>" <?php if (isset($data['Q1Fe11'])) echo $data['Q1Fe11'] == 'N' ? "checked" : "" ?>>
-                        No</label>
-                </li>
-            </ul>
-        </div>
-        <div class="form-group hide" id="Question11a"
-           <?php
-if (isset($data['Q1Fe11'])) {
-    if ($data['Q1Fe11'] == 'Y') {
-        echo 'style="display:block;"';
-    } else {
-        echo 'style="display:none;"';
-    }
-} else {
-    echo 'style="display:none;"';
-}
-?>>
-            <label><span class="cube">11(a)</span> If your answer is yes, why did they enjoy doing outdoor activities?
-            </label>
-            <input type="text" name="Q1Fe1111" id="Q1Fe1111" class="form-control"
-                   placeholder="<?php if (isset($data['Q1Fe1111'])) echo $data['Q1Fe1111']; ?>"
-                           value="<?php echo set_value('Q1Fe1111'); ?>"/>
-        </div>
-        <div class="form-group hide" id="Question11b"
-           <?php
-if (isset($data['Q1Fe11'])) {
-    if ($data['Q1Fe11'] == 'N') {
-        echo 'style="display:block;"';
-    } else {
-        echo 'style="display:none;"';
-    }
-} else {
-    echo 'style="display:none;"';
-}
-?>>
-            <label><span class="cube">11(a)</span>If your answer is no, please state why? </label>
-            <input type="text" name="Q1Fe1112" id="Q1Fe1112" class="form-control"
-                   placeholder="<?php if (isset($data['Q1Fe1112'])) echo $data['Q1Fe1112']; ?>"
-                           value="<?php echo set_value('Q1Fe1112'); ?>"/>
-        </div>
+        </div>          
 
 
 
 
       <div class="form-group">
-            <label><span class="cube">12</span> Did you use GSP Audit activities in the classroom teaching? </label>
+            <label><span class="cube">11</span> Did you use GSP Audit activities in the classroom teaching? </label>
        
         
              <ul class="list-inline">
@@ -603,7 +550,6 @@ if (isset($data['Q1Fe11'])) {
             <label>
                 <h6>Checklist of uploaded documents</h6>
             </label>
-            <p>Please confirm that you have uploaded the following documents related to their respective sections:</p>
             <ul class="list-unstyled">
                 <li>
                     <label class="checkbox-inline">
@@ -778,7 +724,7 @@ if (isset($data['Q1Fe11'])) {
             </ul>
         </div>
         <div class="form-group">
-            <label>The GSP Awards 2019</label>
+            <label>The GSP Awards 2020</label>
             <p> The GSP Awards acknowledge and reward schools that have adopted the most innovative and effective
                 practices to manage the natural resources within their own premises. The Awards are given away at the
                 GSP Awards ceremony, an annual event, where top performers from across the country are rewarded for
@@ -812,7 +758,7 @@ if (isset($data['Q1Fe11'])) {
                   <div class="modal-dialog">
                     <!-- Modal content-->
                     <div class="modal-content" style="width: 834px; margin-left: -120px;">
-                      <div class="modal-header" style="background: rgb(232, 101, 73); color:#fff;">
+                      <div class="modal-header" style="background: #24a5a0; color:#fff;">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                         <h4 class="modal-title">Generate Your Digital Certificate </h4>
                       </div>
@@ -894,7 +840,7 @@ $.ajax({
                         
                       </div>
                       <div class="modal-footer">
-                          <button class="btn btn-default" type="submit">Submit</button> 
+                          <!-- <button class="btn btn-default" type="submit">Submit</button>  -->
                           <button type="button" class="btn btn-default" data-dismiss="modal" id="movenextbtn" style="margin:0px;">Return to survey</button>
                       </div>
                       <?php echo form_close(); ?>
