@@ -3323,14 +3323,14 @@ $(document).ready(function(){
         //     $('input[name=Q1Fe10]').css('border-color', 'red');
         //     event.preventDefault();
         // }
-        var radioCheck = $("input[name=Q1Fe11]:checked").val();
-        if(radioCheck != 'Y' && radioCheck != 'N')
-        {
-            alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 11");
-            $('input[name=Q1Fe11]').focus();
-            $('input[name=Q1Fe11]').css('border-color', 'red');
-            event.preventDefault();
-        }
+//         var radioCheck = $("input[name=Q1Fe11]:checked").val();
+//         if(radioCheck != 'Y' && radioCheck != 'N')
+//         {
+//             alert("One or more mandatory questions have not been answered. You cannot proceed until these have been completed. 11");
+//             $('input[name=Q1Fe11]').focus();
+//             $('input[name=Q1Fe11]').css('border-color', 'red');
+//             event.preventDefault();
+//         }
 
 
     });
