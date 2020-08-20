@@ -936,22 +936,22 @@
         <div class="col-xs-2">
           <input class="form-control space-textbox" onKeyUp="details()" id="b1" type="number" min="0"
                            name="Q6A2S1B1" placeholder="<?php if (isset($data['Q6A2S1B1'])) echo $data['Q6A2S1B1'] ?>"
-                           value="<?php echo set_value('Q6A2S1B1'); ?>"/>
+                           value="<?php if (isset($data['Q6A2S1B1'])) echo $data['Q6A2S1B1'] ?>"/>
         </div>
         <div class="col-xs-2">
           <input class="form-control space-textbox" onKeyUp="details()" id="c1" type="number" min="0"
                            name="Q6A2S1C1" placeholder="<?php if (isset($data['Q6A2S1C1'])) echo $data['Q6A2S1C1'] ?>"
-                           value="<?php echo set_value('Q6A2S1C1'); ?>"/>
+                           value="<?php if (isset($data['Q6A2S1C1'])) echo $data['Q6A2S1C1'] ?>"/>
         </div>
         <div class="col-xs-2">
           <input class="form-control space-textbox" onKeyUp="details()" id="v1" type="number" min="0"
                            name="Q6A2S1V1" placeholder="<?php if (isset($data['Q6A2S1V1'])) echo $data['Q6A2S1V1'] ?>"
-                           value="<?php echo set_value('Q6A2S1V1'); ?>"/>
+                           value="<?php if (isset($data['Q6A2S1V1'])) echo $data['Q6A2S1V1'] ?>"/>
         </div>
         <div class="col-xs-2">
           <input class="form-control space-textbox" onKeyUp="details()" id="o1" type="number" min="0"
                            name="Q6A2S1O1" placeholder="<?php if (isset($data['Q6A2S1O1'])) echo $data['Q6A2S1O1'] ?>"
-                           value="<?php echo set_value('Q6A2S1O1'); ?>"/>
+                           value="<?php if (isset($data['Q6A2S1O1'])) echo $data['Q6A2S1O1'] ?>"/>
         </div>
         <div class="col-xs-2">
           <input class="form-control space-textbox" onKeyUp="details()" id="t1" type="number" min="0"
@@ -1135,42 +1135,10 @@
     <label>Upload supporting documents</label>
     <br/>
     • PUC certificates of not more than five buses.<br/>
-    Uploaded files must be in one of the following formats: PDF Document (.pdf), Word Document (.doc, .docx), Image
-	  File (.jpg, .jpeg). File size per document should not exceed <strong>100 KB.</strong>
-    <div class="clearfix">&nbsp;</div>
-    <button class="btn uploadbtn upload" data-id="PUC Certificate" data-toggle="modal" data-target="#airModal" type="button"> UPLOAD FILES </button>
+     
   </div>
   <div class="clearfix">&nbsp;</div>
-  <table width="100%" class="question uploadedfiles">
-    <thead>
-      <tr>
-        <!--<th>Image</th>-->
-        <th>File name</th>
-        <th>Delete</th>
-        <th>Download</th>
-      </tr>
-    </thead>
-    <tbody>
-      <?php foreach ($pucCertificate as $a) { ?>
-      <tr id="index<?php echo $a->id; ?>">
-        <?php 
-	    //$array = explode('.',$a->file_name); 
-         //   $count = count($array);
-	   // $extension = $array[$count-1];
-            ?>
-        <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
-       <!-- <td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $a->file_name ?>" class="img-responsive" /></td>-->
-        <?php //}else{ ?>
-        <!--<td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>-->
-        <?php //}?>
-        <?php $Text = str_replace(" ", "_", $a->name . "_PUC_Certificate_"); ?>
-        <td class="upload edit"><?php echo str_replace($Text, " ", $a->file_name); ?></td>
-        <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $a->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
-        <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name; ?>" download="<?php echo $a->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
-      </tr>
-      <?php } ?>
-    </tbody>
-  </table>
+  
   <?php
     if (isset($data['Q6A1']))
         if ($data['Q6A1'] == 1 || $data['Q6A1'] == 2)
@@ -1199,124 +1167,124 @@
       <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3D1"
                        type="number" min="0" name="Q6A2S3D1"
                        placeholder="<?php if (isset($data['Q6A2S3D1'])) echo $data['Q6A2S3D1'] ?>"
-                       value="<?php echo set_value('Q6A2S3D1'); ?>"/></td>
+                       value="<?php if (isset($data['Q6A2S3D1'])) echo $data['Q6A2S3D1'] ?>"/></td>
       <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3P1"
                        type="number" min="0" name="Q6A2S3P1"
                        placeholder="<?php if (isset($data['Q6A2S3P1'])) echo $data['Q6A2S3P1'] ?>"
-                       value="<?php echo set_value('Q6A2S3P1'); ?>"/></td>
+                       value="<?php if (isset($data['Q6A2S3P1'])) echo $data['Q6A2S3P1'] ?>"/></td>
       <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3L1"
                        type="number" min="0" name="Q6A2S3L1"
                        placeholder="<?php if (isset($data['Q6A2S3L1'])) echo $data['Q6A2S3L1'] ?>"
-                       value="<?php echo set_value('Q6A2S3L1'); ?>"/></td>
+                       value="<?php if (isset($data['Q6A2S3L1'])) echo $data['Q6A2S3L1'] ?>"/></td>
       <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3C1"
                        type="number" min="0" name="Q6A2S3C1"
                        placeholder="<?php if (isset($data['Q6A2S3C1'])) echo $data['Q6A2S3C1'] ?>"
-                       value="<?php echo set_value('Q6A2S3C1'); ?>"/></td>
+                       value="<?php if (isset($data['Q6A2S3C1'])) echo $data['Q6A2S3C1'] ?>"/></td>
       <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3E1"
                        type="number" min="0" name="Q6A2S3E1"
                        placeholder="<?php if (isset($data['Q6A2S3E1'])) echo $data['Q6A2S3E1'] ?>"
-                       value="<?php echo set_value('Q6A2S3E1'); ?>"/></td>
+                       value="<?php if (isset($data['Q6A2S3E1'])) echo $data['Q6A2S3E1'] ?>"/></td>
       <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3H1"
                        type="number" min="0" name="Q6A2S3H1"
                        placeholder="<?php if (isset($data['Q6A2S3H1'])) echo $data['Q6A2S3H1'] ?>"
-                       value="<?php echo set_value('Q6A2S3H1'); ?>"/></td>
+                       value="<?php if (isset($data['Q6A2S3H1'])) echo $data['Q6A2S3H1'] ?>"/></td>
       <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3B1"
                        type="number" min="0" name="Q6A2S3B1R"
                        placeholder="<?php if (isset($data['Q6A2S3B1R'])) echo $data['Q6A2S3B1R'] ?>"
-                       value="<?php echo set_value('Q6A2S3B1R'); ?>"/></td>
+                       value="<?php if (isset($data['Q6A2S3B1R'])) echo $data['Q6A2S3B1R'] ?>"/></td>
     </tr>
     <tr>
       <td>Cars</td>
       <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3D2"
                        type="number" min="0" name="Q6A2S3B1"
                        placeholder="<?php if (isset($data['Q6A2S3B1'])) echo $data['Q6A2S3B1'] ?>"
-                       value="<?php echo set_value('Q6A2S3B1'); ?>"/></td>
+                       value="<?php if (isset($data['Q6A2S3B1'])) echo $data['Q6A2S3B1'] ?>"/></td>
       <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3P2"
                        type="number" min="0" name="Q6A2S3D2"
                        placeholder="<?php if (isset($data['Q6A2S3D2'])) echo $data['Q6A2S3D2'] ?>"
-                       value="<?php echo set_value('Q6A2S3D2'); ?>"/></td>
+                       value="<?php if (isset($data['Q6A2S3D2'])) echo $data['Q6A2S3D2'] ?>"/></td>
       <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3L2"
                        type="number" min="0" name="Q6A2S3P2"
                        placeholder="<?php if (isset($data['Q6A2S3P2'])) echo $data['Q6A2S3P2'] ?>"
-                       value="<?php echo set_value('Q6A2S3P2'); ?>"/></td>
+                       value="<?php if (isset($data['Q6A2S3P2'])) echo $data['Q6A2S3P2'] ?>"/></td>
       <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3C2"
                        type="number" min="0" name="Q6A2S3L2"
                        placeholder="<?php if (isset($data['Q6A2S3L2'])) echo $data['Q6A2S3L2'] ?>"
-                       value="<?php echo set_value('Q6A2S3L2'); ?>"/></td>
+                       value="<?php if (isset($data['Q6A2S3L2'])) echo $data['Q6A2S3L2'] ?>"/></td>
       <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3E2"
                        type="number" min="0" name="Q6A2S3C2"
                        placeholder="<?php if (isset($data['Q6A2S3C2'])) echo $data['Q6A2S3C2'] ?>"
-                       value="<?php echo set_value('Q6A2S3C2'); ?>"/></td>
+                       value="<?php if (isset($data['Q6A2S3C2'])) echo $data['Q6A2S3C2'] ?>"/></td>
       <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3H2"
                        type="number" min="0" name="Q6A2S3E2"
                        placeholder="<?php if (isset($data['Q6A2S3E2'])) echo $data['Q6A2S3E2'] ?>"
-                       value="<?php echo set_value('Q6A2S3E2'); ?>"/></td>
+                       value="<?php if (isset($data['Q6A2S3E2'])) echo $data['Q6A2S3E2'] ?>"/></td>
       <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3B2"
                        type="number" min="0" name="Q6A2S3H2"
                        placeholder="<?php if (isset($data['Q6A2S3H2'])) echo $data['Q6A2S3H2'] ?>"
-                       value="<?php echo set_value('Q6A2S3H2'); ?>"/></td>
+                       value="<?php if (isset($data['Q6A2S3H2'])) echo $data['Q6A2S3H2'] ?>"/></td>
     </tr>
     <tr>
       <td>Vans</td>
       <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3D3"
                        type="number" min="0" name="Q6A2S3D3"
                        placeholder="<?php if (isset($data['Q6A2S3D3'])) echo $data['Q6A2S3D3'] ?>"
-                       value="<?php echo set_value('Q6A2S3D3'); ?>"/></td>
+                       value="<?php if (isset($data['Q6A2S3D3'])) echo $data['Q6A2S3D3'] ?>"/></td>
       <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3P3"
                        type="number" min="0" name="Q6A2S3P3"
                        placeholder="<?php if (isset($data['Q6A2S3P3'])) echo $data['Q6A2S3P3'] ?>"
-                       value="<?php echo set_value('Q6A2S3P3'); ?>"/></td>
+                       value="<?php if (isset($data['Q6A2S3P3'])) echo $data['Q6A2S3P3'] ?>"/></td>
       <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3L3"
                        type="number" min="0" name="Q6A2S3L3"
                        placeholder="<?php if (isset($data['Q6A2S3L3'])) echo $data['Q6A2S3L3'] ?>"
-                       value="<?php echo set_value('Q6A2S3L3'); ?>"/></td>
+                       value="<?php if (isset($data['Q6A2S3L3'])) echo $data['Q6A2S3L3'] ?>"/></td>
       <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3C3"
                        type="number" min="0" name="Q6A2S3C3"
                        placeholder="<?php if (isset($data['Q6A2S3C3'])) echo $data['Q6A2S3C3'] ?>"
-                       value="<?php echo set_value('Q6A2S3C3'); ?>"/></td>
+                       value="<?php if (isset($data['Q6A2S3C3'])) echo $data['Q6A2S3C3'] ?>"/></td>
       <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3E3"
                        type="number" min="0" name="Q6A2S3E3"
                        placeholder="<?php if (isset($data['Q6A2S3E3'])) echo $data['Q6A2S3E3'] ?>"
-                       value="<?php echo set_value('Q6A2S3E3'); ?>"/></td>
+                       value="<?php if (isset($data['Q6A2S3E3'])) echo $data['Q6A2S3E3'] ?>"/></td>
       <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3H3"
                        type="number" min="0" name="Q6A2S3H3"
                        placeholder="<?php if (isset($data['Q6A2S3H3'])) echo $data['Q6A2S3H3'] ?>"
-                       value="<?php echo set_value('Q6A2S3H3'); ?>"/></td>
+                       value="<?php if (isset($data['Q6A2S3H3'])) echo $data['Q6A2S3H3'] ?>"/></td>
       <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3B3"
                        type="number" min="0" name="Q6A2S3B3"
                        placeholder="<?php if (isset($data['Q6A2S3B3'])) echo $data['Q6A2S3B3'] ?>"
-                       value="<?php echo set_value('Q6A2S3B3'); ?>"/></td>
+                       value="<?php if (isset($data['Q6A2S3B3'])) echo $data['Q6A2S3B3'] ?>"/></td>
     </tr>
     <tr>
       <td>Other vehicles</td>
       <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3D4"
                        type="number" min="0" name="Q6A2S3D4"
                        placeholder="<?php if (isset($data['Q6A2S3D4'])) echo $data['Q6A2S3D4'] ?>"
-                       value="<?php echo set_value('Q6A2S3D4'); ?>"/></td>
+                       value="<?php if (isset($data['Q6A2S3D4'])) echo $data['Q6A2S3D4'] ?>"/></td>
       <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3P4"
                        type="number" min="0" name="Q6A2S3P4"
                        placeholder="<?php if (isset($data['Q6A2S3P4'])) echo $data['Q6A2S3P4'] ?>"
-                       value="<?php echo set_value('Q6A2S3P4'); ?>"/></td>
+                       value="<?php if (isset($data['Q6A2S3P4'])) echo $data['Q6A2S3P4'] ?>"/></td>
       <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3L4"
                        type="number" min="0" name="Q6A2S3L4"
                        placeholder="<?php if (isset($data['Q6A2S3L4'])) echo $data['Q6A2S3L4'] ?>"
-                       value="<?php echo set_value('Q6A2S3L4'); ?>"/></td>
+                       value="<?php if (isset($data['Q6A2S3L4'])) echo $data['Q6A2S3L4'] ?>"/></td>
       <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3C4"
                        type="number" min="0" name="Q6A2S3C4"
                        placeholder="<?php if (isset($data['Q6A2S3C4'])) echo $data['Q6A2S3C4'] ?>"
-                       value="<?php echo set_value('Q6A2S3C4'); ?>"/></td>
+                       value="<?php if (isset($data['Q6A2S3C4'])) echo $data['Q6A2S3C4'] ?>"/></td>
       <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3E4"
                        type="number" min="0" name="Q6A2S3E4"
                        placeholder="<?php if (isset($data['Q6A2S3E4'])) echo $data['Q6A2S3E4'] ?>"
-                       value="<?php echo set_value('Q6A2S3E4'); ?>"/></td>
+                       value="<?php if (isset($data['Q6A2S3E4'])) echo $data['Q6A2S3E4'] ?>"/></td>
       <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3H4"
                        type="number" min="0" name="Q6A2S3H4"
                        placeholder="<?php if (isset($data['Q6A2S3H4'])) echo $data['Q6A2S3H4'] ?>"
-                       value="<?php echo set_value('Q6A2S3H4'); ?>"/></td>
+                       value="<?php if (isset($data['Q6A2S3H4'])) echo $data['Q6A2S3H4'] ?>"/></td>
       <td><input class="form-control space-textbox" onKeyUp="details2()" onChange="details2()" id="S3B4"
                        type="number" min="0" name="Q6A2S3B4"
                        placeholder="<?php if (isset($data['Q6A2S3B4'])) echo $data['Q6A2S3B4'] ?>"
-                       value="<?php echo set_value('Q6A2S3B4'); ?>"/></td>
+                       value="<?php if (isset($data['Q6A2S3B4'])) echo $data['Q6A2S3B4'] ?>"/></td>
     </tr>
     <tr>
       <td>Sub-Total</td>
@@ -1356,42 +1324,8 @@
   <br>
   • Fuel bills<br>
   • Picture of school owned vehicles<br>
-  Uploaded files must be in one of the following formats: PDF Document (.pdf), Word Document (.doc, .docx), Image
-  File (.jpg, .jpeg). File size per document should not exceed <strong>100 KB.</strong>
-  <div class="clearfix">&nbsp;</div>
-  <button class="btn uploadbtn upload" data-id="Fuels" data-toggle="modal" data-target="#airModal" type="button"> UPLOAD FILES </button>
-  <br/>
+  
 </div>
-<table width="100%" class="question uploadedfiles">
-  <thead>
-    <tr>
-      <!--<th>Image</th>-->
-      <th>File name</th>
-      <th>Delete</th>
-      <th>Download</th>
-    </tr>
-  </thead>
-  <tbody>
-    <?php foreach ($filesfules as $a) { ?>
-    <tr id="index<?php echo $a->id; ?>">
-      <?php 
-	   // $array = explode('.',$a->file_name); 
-       //     $count = count($array);
-	   // $extension = $array[$count-1];
-            ?>
-      <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
-     <!-- <td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $a->file_name ?>" class="img-responsive" /></td>-->
-      <?php //}else{ ?>
-      <!--<td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>-->
-      <?php //}?>
-      <?php $Text = str_replace(" ", "_", $a->name . "_Fuels_"); ?>
-      <td class="upload edit"><?php echo str_replace($Text, " ", $a->file_name); ?></td>
-      <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $a->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
-      <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $a->file_name; ?>" download="<?php echo $a->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
-    </tr>
-    <?php } ?>
-  </tbody>
-</table>
 <?php
 if (isset($data['Q6A1']))
     if ($data['Q6A1'] == 1 || $data['Q6A1'] == 2)
@@ -1931,47 +1865,7 @@ if (isset($data['Q9A1']))
   <label class="control-label">Upload supporting documents</label>
   <br>
   &bull; Picture of Air Quality Monitoring equipment of school<br>
-  <br>
-  Please upload all supporting documents related to this section here. Note: files must be in one of the
-  following formats: PDF Document (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg). File size per
-  document should not exceed <strong>100 KB.</strong><br/>
-  <br/>
-  <button class="btn uploadbtn upload" data-id="Air Quality Monitoring" data-toggle="modal"
-            data-target="#airModal" type="button">UPLOAD FILES </button>
-  <br>
-</div>
-
-<table width="100%" class="question uploadedfiles">
-  <thead>
-    <tr>
-    <!--  <th>Image</th>-->
-      <th>File name</th>
-      <th>Delete</th>
-      <th>Download</th>
-    </tr>
-  </thead>
-  <tbody>
-    <?php foreach ($airQualityMonitering as $f) { ?>
-    <tr id="index<?php echo $f->id; ?>">
-      <?php 
-            
-            //$array = explode('.',$f->file_name); 
-           // $count = count($array);
-   // $extension = $array[$count-1];
-            ?>
-      <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
-     <!-- <td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $f->file_name ?>" class="img-responsive" /></td>-->
-      <?php //}else{ ?>
-      <!--<td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>-->
-      <?php //}?>
-      <?php $name = str_replace(" ", "_", $f->name . "_Air_Quality_Monitoring_"); ?>
-      <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
-      <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
-      <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
-    </tr>
-    <?php } ?>
-  </tbody>
-</table>
+  </div>
 
  <div class="form-group" id="lab"
 
@@ -2013,9 +1907,7 @@ if (isset($data['Q9A1']))
   <br>
   &bull; Pictures of audit team doing survey<br/>
   Please upload all supporting documents related to this section here. Note, files must be one of the
-  following
-  formats: PDF Document (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg) <br>
-  File size per document should not exceed <strong>100 KB.</strong> <br/>
+   
   <br/>
   <button class="btn uploadbtn upload" data-id="Supporting Document Air" data-toggle="modal"
             data-target="#airModal"
@@ -2518,19 +2410,84 @@ $(document).ready(function(){
   $('input[type=number]').on('wheel', function(e){
     return false;
   });	
-});
-	
-	
-	
-$("#airnext").click(function(e){ 
-  if($('input[name="Q6A2S1B1"]').attr('placeholder')>=1 ){ 
+});	
 
-     if($('input[name="Q6A2S3D1"]').val()==0 && $('input[name="Q6A2S3P1"]').val()==0 && $('input[name="Q6A2S3L1"]').val()==0 && $('input[name="Q6A2S3C1"]').val()==0 && $('input[name="Q6A2S3E1"]').val()==0 ){ 
-      alert('You can not enter 0 3(b) question because you have positive value in question 3(a)');
-      e.preventDefault();
-        
-  }
-   }
+
+ 
+$("#airnext").click(function(e){ 
+
+var Q6A2S1B1 = $('input[name="Q6A2S1B1"]').val();
+var Q6A2S1C1 = $('input[name="Q6A2S1C1"]').val();
+var Q6A2S1V1 = $('input[name="Q6A2S1V1"]').val();
+var Q6A2S1O1 = $('input[name="Q6A2S1O1"]').val();
+// buss
+var Q6A2S3D1 = $('input[name="Q6A2S3D1"]').val();
+var Q6A2S3P1 = $('input[name="Q6A2S3P1"]').val();
+var Q6A2S3L1 = $('input[name="Q6A2S3L1"]').val();
+var Q6A2S3C1 = $('input[name="Q6A2S3C1"]').val();
+var Q6A2S3E1 = $('input[name="Q6A2S3E1"]').val();
+var Q6A2S3H1 = $('input[name="Q6A2S3H1"]').val();
+var Q6A2S3B1R = $('input[name="Q6A2S3B1R"]').val();
+
+var buss = parseInt(Q6A2S3D1) + parseInt(Q6A2S3P1) + parseInt(Q6A2S3L1) + parseInt(Q6A2S3C1) + parseInt(Q6A2S3E1) + parseInt(Q6A2S3H1) + parseInt(Q6A2S3B1R);
+
+// car
+var Q6A2S3B1 = $('input[name="Q6A2S3B1"]').val();
+var Q6A2S3D2 = $('input[name="Q6A2S3D2"]').val();
+var Q6A2S3P2 = $('input[name="Q6A2S3P2"]').val();
+var Q6A2S3L2 = $('input[name="Q6A2S3L2"]').val();
+var Q6A2S3C2 = $('input[name="Q6A2S3C2"]').val();
+var Q6A2S3E2 = $('input[name="Q6A2S3E2"]').val();
+var Q6A2S3H2 = $('input[name="Q6A2S3H2"]').val();
+
+var car = parseInt(Q6A2S3B1) + parseInt(Q6A2S3D2) + parseInt(Q6A2S3P2) + parseInt(Q6A2S3L2) + parseInt(Q6A2S3C2) + parseInt(Q6A2S3E2) + parseInt(Q6A2S3H2);
+
+// Vans
+var Q6A2S3D3 = $('input[name="Q6A2S3D3"]').val();
+var Q6A2S3P3 = $('input[name="Q6A2S3P3"]').val();
+var Q6A2S3L3 = $('input[name="Q6A2S3L3"]').val();
+var Q6A2S3C3 = $('input[name="Q6A2S3C3"]').val();
+var Q6A2S3E3 = $('input[name="Q6A2S3E3"]').val();
+var Q6A2S3H3 = $('input[name="Q6A2S3H3"]').val();
+var Q6A2S3B3 = $('input[name="Q6A2S3B3"]').val();
+
+var vans = parseInt(Q6A2S3D3) + parseInt(Q6A2S3P3) + parseInt(Q6A2S3L3) + parseInt(Q6A2S3C3) + parseInt(Q6A2S3E3) + parseInt(Q6A2S3H3) + parseInt(Q6A2S3B3);
+
+// Other vehicles
+var Q6A2S3D4 = $('input[name="Q6A2S3D4"]').val();
+var Q6A2S3P4 = $('input[name="Q6A2S3P4"]').val();
+var Q6A2S3L4 = $('input[name="Q6A2S3L4"]').val();
+var Q6A2S3C4 = $('input[name="Q6A2S3C4"]').val();
+var Q6A2S3E4 = $('input[name="Q6A2S3E4"]').val();
+var Q6A2S3H4 = $('input[name="Q6A2S3H4"]').val();
+var Q6A2S3B4 = $('input[name="Q6A2S3B4"]').val();
+
+var other = parseInt(Q6A2S3D4) + parseInt(Q6A2S3P4) + parseInt(Q6A2S3L4) + parseInt(Q6A2S3C4) + parseInt(Q6A2S3E4) + parseInt(Q6A2S3H4) + parseInt(Q6A2S3B4);
+
+if(Q6A2S1B1!==buss){
+  alert('You can not enter 0 3(b) question because you have positive value in question 3(a)');
+  e.preventDefault();
+  return false;
+}
+
+if(Q6A2S1C1!==car){
+  alert('You can not enter 0 3(b) question because you have positive value in question 3(a)');
+  e.preventDefault();
+  return false;
+}
+
+if(Q6A2S1V1!==vans){
+  alert('You can not enter 0 3(b) question because you have positive value in question 3(a)');
+  e.preventDefault();
+  return false;
+}
+
+if(Q6A2S1O1!==other){
+  alert('You can not enter 0 3(b) question because you have positive value in question 3(a)');
+  e.preventDefault();
+  return false;
+} 
    
 });
+
 </script>
