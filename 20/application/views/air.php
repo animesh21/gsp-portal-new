@@ -2518,5 +2518,19 @@ $(document).ready(function(){
   $('input[type=number]').on('wheel', function(e){
     return false;
   });	
-});	
+});
+	
+	
+	
+$("#airnext").click(function(e){ 
+  if($('input[name="Q6A2S1B1"]').attr('placeholder')>=1 ){ 
+
+     if($('input[name="Q6A2S3D1"]').val()==0 && $('input[name="Q6A2S3P1"]').val()==0 && $('input[name="Q6A2S3L1"]').val()==0 && $('input[name="Q6A2S3C1"]').val()==0 && $('input[name="Q6A2S3E1"]').val()==0 ){ 
+      alert('You can not enter 0 3(b) question because you have positive value in question 3(a)');
+      e.preventDefault();
+        
+  }
+   }
+   
+});
 </script>
