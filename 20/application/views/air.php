@@ -2464,25 +2464,25 @@ var Q6A2S3B4 = $('input[name="Q6A2S3B4"]').val();
 
 var other = parseInt(Q6A2S3D4) + parseInt(Q6A2S3P4) + parseInt(Q6A2S3L4) + parseInt(Q6A2S3C4) + parseInt(Q6A2S3E4) + parseInt(Q6A2S3H4) + parseInt(Q6A2S3B4);
 
-if(Q6A2S1B1!==buss){
+if(Q6A2S1B1!=buss){
   alert('You can not enter 0 3(b) question because you have positive value in question 3(a)');
   e.preventDefault();
   return false;
 }
 
-if(Q6A2S1C1!==car){
+if(Q6A2S1C1!=car){
   alert('You can not enter 0 3(b) question because you have positive value in question 3(a)');
   e.preventDefault();
   return false;
 }
 
-if(Q6A2S1V1!==vans){
+if(Q6A2S1V1!=vans){
   alert('You can not enter 0 3(b) question because you have positive value in question 3(a)');
   e.preventDefault();
   return false;
 }
 
-if(Q6A2S1O1!==other){
+if(Q6A2S1O1!=other){
   alert('You can not enter 0 3(b) question because you have positive value in question 3(a)');
   e.preventDefault();
   return false;
