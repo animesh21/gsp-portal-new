@@ -1015,27 +1015,27 @@ $.ajax({
         }
     });
 
-    /**Validation Question 10 Feedback show 10a***/
-    $('input[name="Q1Fe10"]').click(function () {
-        if ($(this).closest('input[name="Q1Fe10"]').val() === 'N') {
-            $('#Question10a').removeClass('hide');
-        }
-        else if ($(this).closest('input[name="Q1Fe10"]').val() === 'Y') {
-            $('#Question10a').addClass('hide');
-        }
-    });
+//     /**Validation Question 10 Feedback show 10a***/
+//     $('input[name="Q1Fe10"]').click(function () {
+//         if ($(this).closest('input[name="Q1Fe10"]').val() === 'N') {
+//             $('#Question10a').removeClass('hide');
+//         }
+//         else if ($(this).closest('input[name="Q1Fe10"]').val() === 'Y') {
+//             $('#Question10a').addClass('hide');
+//         }
+//     });
 
-    /**Validation Question 11 Feedback show 11a***/
-    $('input[name="Q1Fe11"]').click(function () {
-        if ($(this).closest('input[name="Q1Fe11"]').val() === 'Y') {
-            $('#Question11a').removeClass('hide');
-            $('#Question11b').addClass('hide');
-        }
-        else if ($(this).closest('input[name="Q1Fe11"]').val() === 'N') {
-            $('#Question11b').removeClass('hide');
-            $('#Question11a').addClass('hide');
-        }
-    });
+//     /**Validation Question 11 Feedback show 11a***/
+//     $('input[name="Q1Fe11"]').click(function () {
+//         if ($(this).closest('input[name="Q1Fe11"]').val() === 'Y') {
+//             $('#Question11a').removeClass('hide');
+//             $('#Question11b').addClass('hide');
+//         }
+//         else if ($(this).closest('input[name="Q1Fe11"]').val() === 'N') {
+//             $('#Question11b').removeClass('hide');
+//             $('#Question11a').addClass('hide');
+//         }
+//     });
 
     $(document).ready(function () {
         $('#btnFeedbackPrevious').on('click', function (data) {
