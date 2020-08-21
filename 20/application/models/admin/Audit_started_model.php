@@ -32,6 +32,7 @@ class Audit_started_model extends CI_Model {
                         ->join('states AS b', 'a.state=b.id', 'left')
                         ->join('cities AS c', 'a.district=c.id', 'left')
                 ->where("a.kvs_school_status","2")
+		->where("a.make_school_disabled","1")
                         ->order_by('a.id', 'desc')
                         ->get()->result();
                         // echo $this->db->last_query();
