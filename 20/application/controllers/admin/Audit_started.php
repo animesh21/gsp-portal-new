@@ -108,7 +108,7 @@ public function kvs_school_merge() {
                 ->join('gsp_user AS b', 'a.userid=b.id', 'left')
                 ->join('states AS c', 'a.state=c.id', 'left')
                 ->join('cities AS d', 'a.district=d.id', 'left')
-                ->where('a.id', $id)
+                ->where('a.id', $old_school_id)
                 ->get()->row();
             // echo '<pre>'; print_r($query); exit;
             $this->load->library('email');
@@ -121,7 +121,7 @@ public function kvs_school_merge() {
             $subject = "GSP Audit Registration".$date;
             $msg = "Dear &nbsp;";
             $msg .= $coname . "," . "<br/><br/>";
-            $msg .= "Please note that a duplicate GSP account of your school" . $name . "(the one which is to be retained)' was recently made. <strong> Your school is already a part of GSP and registering again will lead to duplicate data. Therefore, we request you to not register again. </strong> The duplicate account has now been deleted. <br/><br/>";
+            $msg .= "Please note that a duplicate GSP account of your school " . $name . " (the one which is to be retained)' was recently made. <strong> Your school is already a part of GSP and registering again will lead to duplicate data. Therefore, we request you to not register again. </strong> The duplicate account has now been deleted. <br/><br/>";
             $msg .= "If you wish to make any changes to the profile details please write to us at 'support@greenschoolsprogramme.org' <br><br>";
             $msg .= "Given the current health crisis, GSP Audit 2020 will be launched as and when the schools reopen and you will then be informed. We will inform you as and when it opens. Please stay tuned to our email updates.<br><br>";
         $msg.= "We request you to save your username and password given below for future reference. We will keep you posted on the GSP Audit 2020 launch.";
