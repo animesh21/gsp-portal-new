@@ -215,8 +215,8 @@ function redirect_phase(){
 </head>
 <body onLoad="redirect_phase();">
 <div id="loader"><img src="<?php echo base_url(); ?>assets/img/loader.gif" width="64" height="64"></div>
-<div class="container">
-  <header> <a href="http://www.greenschoolsprogramme.org/registration/"> <img src="<?php echo base_url(); ?>assets/img/header-2.jpg" width="1028" height="117"></a> <img src="<?php echo base_url(); ?>assets/img/icons.png" width="605" height="94" class="icon"> </header>
+<div class="container"> 
+	<header> <a href="http://www.greenschoolsprogramme.org/registration/"> <img src="<?php echo base_url(); ?>assets/img/logo.png" style="padding: 20px;"></a> <img src="<?php echo base_url(); ?>assets/img/icons.png" class="icon" height="140"> </header>
 </div>
 <main class="bdr">
 <div class="container">
