@@ -681,7 +681,7 @@
           ● One classroom has one bin (mixed waste), enter 1 in column 2 
         </li>
         <li>
-          ● Four classrooms with one bin system (for only dry waste) enter 4 in column
+          ● Four classrooms with one bin system (for only dry waste) enter 4 in column 3
         </li>
         <li>
           ● Three classrooms with two bins (wet and dry) enter 3 in column 4  
@@ -1347,8 +1347,7 @@
       <label>HOW MUCH WASTE DOES YOUR SCHOOL GENERATE? </label>
     </div>
     <div class="col-xs-6">
-      <label>Quantity of solid waste generated
-      (monthly average in kg) </label>
+      <label>Quantity of solid waste generated (monthly average in kg) </label>
     </div>
   </div>
   <div class="form-group row">
@@ -1554,7 +1553,7 @@
       <label>HOW MUCH WASTE DOES YOUR SCHOOL GENERATE? </label>
     </div>
     <div class="col-xs-6">
-      <label>Quantity of solid waste generated(monthly average in kg) </label>
+      <label>Quantity of solid waste generated (monthly average in kg) </label>
     </div>
   </div>
   <div class="form-group row">
@@ -1605,7 +1604,7 @@
       <label>HOW MUCH WASTE DOES YOUR SCHOOL GENERATE? </label>
     </div>
     <div class="col-xs-6">
-      <label>Quantity of solid waste generated(monthly average in kg) </label>
+      <label>Quantity of solid waste generated (monthly average in kg) </label>
     </div>
   </div>
   <div class="form-group row">
@@ -1636,7 +1635,7 @@
       <label>HOW MUCH WASTE DOES YOUR SCHOOL GENERATE? </label>
     </div>
     <div class="col-xs-6">
-      <label>Quantity of solid waste generated(monthly average in kg) </label>
+      <label>Quantity of solid waste generated (monthly average in kg) </label>
     </div>
   </div>
   <div class="form-group row">
@@ -1667,7 +1666,7 @@
       <label>HOW MUCH WASTE DOES YOUR SCHOOL GENERATE? </label>
     </div>
     <div class="col-xs-6">
-      <label>Quantity of solid waste generated(monthly average in kg) </label>
+      <label>Quantity of solid waste generated (monthly average in kg) </label>
     </div>
   </div>
   <div class="form-group row">
@@ -1698,7 +1697,7 @@
       <label>HOW MUCH WASTE DOES YOUR SCHOOL GENERATE? </label>
     </div>
     <div class="col-xs-6">
-      <label>Quantity of solid waste generated(monthly average in kg) </label>
+      <label>Quantity of solid waste generated (monthly average in kg) </label>
     </div>
   </div>
   <div class="form-group row">
