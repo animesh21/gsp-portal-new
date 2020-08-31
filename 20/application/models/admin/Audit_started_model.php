@@ -466,8 +466,9 @@ class Audit_started_model extends CI_Model {
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
                         ->join('cities AS c', 'a.district=c.id', 'left')
-                ->join('gsp_user AS d', 'a.userid=d.id', 'left')
+                        ->join('gsp_user AS d', 'a.userid=d.id', 'left')
                         ->where(array('make_school_disabled'=>"1"))
+		        ->where("a.kvs_school_status",NULL)
                         ->order_by('a.id', 'desc')
                         ->get()->result();
          
