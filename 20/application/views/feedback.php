@@ -274,7 +274,7 @@ if (isset($data['Q1Fe2'])) {
             </ul>
         </div>
         <div class="form-group">
-            <label><span class="cube">4</span> Do you think your school will be a Green School (resource efficient) by 2020? </label>
+            <label><span class="cube">4</span> Do you think your school will be a Green School (resource efficient)? </label>
             <ul class="list-inline">
                 <li>
                     <label class="radio-inline">
