@@ -29,7 +29,7 @@ class Audit_home_scorecard extends CI_Controller{
         // $this->session->set_flashdata('data_name', 'The link to download the GSP Online Air Seminar April 2020 certificate is now closed.');
         //     return redirect('GetCertificate');
 
-        if(!empty($dataCertificate)){
+        if(empty($dataCertificate)){
        if(count($dataCertificate)==1){
         $data['teachers'] = $dataCertificate;
 
