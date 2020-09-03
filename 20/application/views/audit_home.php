@@ -34,7 +34,7 @@
       <strong><?php echo $this->session->flashdata('data_name'); ?></strong> 
     </div>
   <?php } ?>
-    <p style="font-weight: bold;">The link to download the Audit@Home Scorecard is now closed. For any questions, please write to <a href = "mailto: support@greenschoolsprogramme.org">support@greenschoolsprogramme.org</a> . </p>
+    <p style="font-weight: bold;">The link to download the Audit@Home Scorecard is now closed. For any questions, please write to: <a href = "mailto: support@greenschoolsprogramme.org">support@greenschoolsprogramme.org</a> . </p>
      <div class="row" style="padding: 5px; margin-top: 40px; text-align: center;">
     <?php echo form_open('Audit_home_scorecard/getAuditScore', array('class'=>'form-inline')); ?> 
 
