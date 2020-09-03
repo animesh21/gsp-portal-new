@@ -37,7 +37,7 @@
     <p style="color: red"></p>
      <div class="row" style="padding: 30px; margin: 0px; text-align: center;">
     <?php echo form_open('GetCertificate/getCertificate', array('class'=>'form-inline')); ?>
-    <p style="font-weight: bold;">The link to download the GSP-Skill Building E-Camp certificate is now closed. For any questions, please write to <a href = "mailto: support@greenschoolsprogramme.org">support@greenschoolsprogramme.org</a>. </p>
+    <p style="font-weight: bold;">The link to download the GSP-Skill Building E-Camp certificate is now closed. For any questions, please write to: <a href = "mailto: support@greenschoolsprogramme.org">support@greenschoolsprogramme.org</a>. </p>
         <!-- <div class="form-group" style="width: 100%">
             <label for="number">Registered Mobile Number<a class="tt" data-tooltip="Please enter the mobile number used at the time of online registration."><span
                             class="badge">?</span></a></label> &nbsp; &nbsp;
