@@ -48,7 +48,7 @@ class GspWorkshopCsiOne extends CI_Controller{
         $this->db->update('gsp_workshop_one', array('download_count'=>$dataCertificate[0]->download_count+1));
         }
         else{
-            $this->session->set_flashdata('data_name', 'Your password is incorrect. Please try again. For any assistance, write to us at : support@greenschoolprogramme.org');
+            $this->session->set_flashdata('data_name', 'Your password is incorrect. Please try again. For any assistance, write to us at : support@greenschoolsprogramme.org');
             return redirect('GspWorkshopCsiOne');
         }
 
