@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -29,7 +29,7 @@
     <h1>GSP Online Capacity Building Workshop 15-17 Sep, 2020</h1>
     <?php if(!empty($this->session->flashdata('data_name'))) { ?>
      <div class="alert alert-dismissible alert-danger">
-      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <a type="button" class="close" data-dismiss="alert">&times;</a>
       
       <strong><?php echo $this->session->flashdata('data_name'); ?></strong> 
     </div>
@@ -81,7 +81,12 @@
     text-decoration: none;
 }
 
-
+.alert-dismissable, .alert-dismissible {
+    padding-right: 0px;
+}
+.alert-dismissable .close, .alert-dismissible .close{
+  right: 2px;
+}
 
 .badge {
     background-color: #9b9796;
