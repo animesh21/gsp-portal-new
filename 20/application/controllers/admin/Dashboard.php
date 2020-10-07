@@ -226,10 +226,18 @@ class Dashboard extends CI_Controller {
 	/************** 2018 ******************/
 	
 	public function total_registration()
-   {
+       {
 		$data['main']='admin/audit/all_total_school';
 		$data['title']='Total no. of school'; 
 		$data['records']=$this->Dashboard_model->getSchool_alldata();
+		$this->load->view('admin/includes/template', $data);
+	}
+	
+	public function communityPortalNewSchool()
+   {	$db2 = $this->load->database('db2', TRUE);
+   		$data['records'] = $db2->select('*')->from('users')->get()->result();   		
+		$data['main']='admin/audit/community_school';
+		$data['title']='Total no. of school'; 
 		$this->load->view('admin/includes/template', $data);
 	}
 	
