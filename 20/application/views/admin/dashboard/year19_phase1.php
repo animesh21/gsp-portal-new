@@ -63,3 +63,11 @@
   <div class="title">Digital Certificates Of Schools</div>
 </div>
 
+
+<div class="schools-statics "> <a href="<?php base_url()?>communityPortalNewSchool" target="_blank">
+  <div class="statics-circle"> <span><?php echo count($records); ?></span>
+    <label>view</label>
+  </div>
+  </a>
+  <div class="title">Community Portal New School</div>
+</div>
