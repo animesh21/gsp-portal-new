@@ -302,10 +302,12 @@ class Dashboard extends CI_Controller {
 	
 	
 	public function yearBy_phase1() {
-		ini_set('memory_limit', '256M');
-	 $data['main']='admin/dashboard/year19_phase1';
+	ini_set('memory_limit', '256M');
+	$data['main']='admin/dashboard/year19_phase1';
         $data['title']='Home | Dashboard';
-	    $data['total_school']=$this->Dashboard_model->getSchool_alldata();
+	$db2 = $this->load->database('db2', TRUE);
+   	$data['records'] = $db2->select('*')->from('users')->get()->result();
+	$data['total_school']=$this->Dashboard_model->getSchool_alldata();
         $data['school']=$this->Dashboard_model->getSchool_18data();
         $data['startedtheaudit']=$this->Dashboard_model->getstartedtheaudit_19data();
         $data['CompletedAuditButNotSubmitted']=$this->Dashboard_model->getCompletedAuditButNotSubmitted_19data();
