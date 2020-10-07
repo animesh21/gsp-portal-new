@@ -28,7 +28,7 @@
           <td><?php echo $record->email; ?></td>          
           <td class="action">
           <a href="<?php echo 'https://greenschoolsprogramme.org/community/admin/editStudent?id='.$record->id;?>" target="blank" class='btn btn-primary'>Edit Record</a>
-          <a href="<?php echo 'https://greenschoolsprogramme.org/community/admin/editStudent?id='.$record->id;?>" class='btn btn-danger'>Make School Disable</a></td>
+          <a href="<?php echo 'https://greenschoolsprogramme.org/community/admin/disabled?id='.$record->id;?>" class='btn btn-danger'>Make School Disable</a></td>
         </tr>
         <?php $i++; } ?>
       </tbody>
