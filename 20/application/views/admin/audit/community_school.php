@@ -22,8 +22,8 @@
           <td><?php echo $record->date_of_birth; ?></td>
           <td><?php echo $record->school_name; ?></td>
           <td><?php echo $record->pincode; ?></td>
-          <td><?php echo $record->user_state_id; ?></td>
-          <td><?php echo $record->city; ?></td>
+          <td><?php echo get_state_gsp($record->user_state_id); ?></td>
+          <td><?php echo get_city_gsp($record->city); ?></td>
           <td><?php echo $record->first_name ." ". $record->last_name; ?></td>
           <td><?php echo $record->email; ?></td>          
           <td class="action">
