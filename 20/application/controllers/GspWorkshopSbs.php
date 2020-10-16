@@ -16,7 +16,7 @@ class GspWorkshopSbs extends CI_Controller{
      * Index function
      */
     public function index(){
-        $this->load->view('gspworkshopsbb');
+        $this->load->view('Certificates/gspworkshopsbb');
     }
 
 
@@ -38,7 +38,7 @@ class GspWorkshopSbs extends CI_Controller{
         $this->load->library('dompdf_lib');
         ini_set('memory_limit', '-1');
        
-        $html = $this->load->view('gsp_workshop_sbb_pdf', $data, true);
+        $html = $this->load->view('Certificates/gsp_workshop_sbb_pdf', $data, true);
          $html = preg_replace('/>\s+</', "><", $html);
 
         $this->dompdf->load_html($html);
