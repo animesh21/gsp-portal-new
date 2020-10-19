@@ -36,7 +36,7 @@ class GspWorkshopSbs extends CI_Controller{
         $this->load->library('dompdf_lib');
         ini_set('memory_limit', '-1');
        
-        $html = $this->load->view('gsp_workshop_one_pdf', $data, true);
+        $html = $this->load->view('gsp_workshop_sbb_pdf', $data, true);
          $html = preg_replace('/>\s+</', "><", $html);
 
         $this->dompdf->load_html($html);
