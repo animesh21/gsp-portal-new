@@ -16,7 +16,7 @@
 
   echo "<div class='principal'>" . strtoupper($teacher->name_of_participant) ."</div>&nbsp;";
     $length = strlen($teacher->school_name);
-  if($length > 40) {
+  if($length > 61) {
   echo  "<div class='school_name1'>". strtoupper($teacher->school_name)."</div>";
   
   }else{
