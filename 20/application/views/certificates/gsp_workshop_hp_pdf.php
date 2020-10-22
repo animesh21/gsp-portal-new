@@ -46,7 +46,7 @@ body{
 } 
 
 .certificateno{ position:absolute; top:633px; left: 10px;}
-.principal{ position:relative; text-align: center; top:235px;}
+.principal{ position:relative; text-align: center; top:238px;}
 .school_name1{ position:relative; text-align: center; top:225px; font-size: 20px; margin-left: 25px;}
 .school_name{ position:relative; text-align: center; top:225px; margin-left: 25px;}
 .image{position:absolute; margin-left: -40px; margin-top: -45px;}
