@@ -23,7 +23,7 @@ class Audit_home_scorecard extends CI_Controller{
     public function getAuditScore(){
         $mobile = $this->input->post('parent_mob');
         $this->db->where("parent_mob",$mobile);
-        $dataCertificate=$this->db->select("*")->from("gsp_audit_home_scorecard")->get()->result();
+        $dataCertificate=$this->db->select("*")->from("gsp_audit_home_scorecard_bihar")->get()->result();
 
 
         // $this->session->set_flashdata('data_name', 'The link to download the GSP Online Air Seminar April 2020 certificate is now closed.');
@@ -45,7 +45,7 @@ class Audit_home_scorecard extends CI_Controller{
         $this->dompdf->render();
         $this->dompdf->stream("Student Audit Home Score.pdf", array("Attachment" => false));
         $this->db->where('id', $dataCertificate[0]->id);
-        $this->db->update('gsp_audit_home_scorecard', array('download_count'=>$dataCertificate[0]->download_count+1));
+        $this->db->update('gsp_audit_home_scorecard_bihar', array('download_count'=>$dataCertificate[0]->download_count+1));
         }else{
             $data['fullstudent'] = $dataCertificate;
             $this->load->view('audit_home_link', $data);
@@ -66,7 +66,7 @@ class Audit_home_scorecard extends CI_Controller{
 
          // $mobile = $this->input->post('parent_mob');
         $this->db->where("id",$id);
-        $dataCertificate=$this->db->select("*")->from("gsp_audit_home_scorecard")->get()->result(); 
+        $dataCertificate=$this->db->select("*")->from("gsp_audit_home_scorecard_bihar")->get()->result(); 
 
         if(!empty($dataCertificate)){
        if(count($dataCertificate)==1){
@@ -84,7 +84,7 @@ class Audit_home_scorecard extends CI_Controller{
         $this->dompdf->render();
         $this->dompdf->stream("Student Audit Home Score.pdf", array("Attachment" => false));
         $this->db->where('id', $dataCertificate[0]->id);
-        $this->db->update('gsp_audit_home_scorecard', array('download_count'=>$dataCertificate[0]->download_count+1));
+        $this->db->update('gsp_audit_home_scorecard_bihar', array('download_count'=>$dataCertificate[0]->download_count+1));
         }
 }
 
