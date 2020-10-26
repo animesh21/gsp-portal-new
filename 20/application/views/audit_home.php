@@ -21,7 +21,7 @@
 <header class="hdr-bdr">
   <div class="container">
     <figure class="logo"><a href="https://www.greenschoolsprogramme.org"><img src="<?php echo base_url('');?>assets/img/logo.png" class="img-responsive" alt=""></a></figure>
-    <img src="<?php echo base_url('');?>assets/img/toppbar.png" alt="" class="top-bnr img-responsive"> </div>
+    <img src="<?php echo base_url('');?>assets/img/top-bnr2.png" alt="" class="top-bnr img-responsive"> </div>
 </header>
 
 <div class="container" style="padding: 20px">
@@ -34,16 +34,15 @@
       <strong><?php echo $this->session->flashdata('data_name'); ?></strong> 
     </div>
   <?php } ?>
-    <p style="font-weight: bold;">The link to download the Audit@Home Scorecard is now closed. For any questions, please write to: <a href = "mailto: support@greenschoolsprogramme.org">support@greenschoolsprogramme.org</a>. </p>
+    <p style="font-weight: bold;">Please note that scorecards will be available only to those students who have submitted the GSP's Audit@Home. Thanks!  </p>
      <div class="row" style="padding: 5px; margin-top: 40px; text-align: center;">
-    <?php echo form_open('Audit_home_scorecard/getAuditScore', array('class'=>'form-inline')); ?> 
-
-        <!-- <div class="form-group" style="width: 100%">
+    <?php echo form_open('Audit_home_scorecard/getAuditScore', array('class'=>'form-inline')); ?>
+        <div class="form-group" style="width: 100%">
             <label for="number">Registered Guardian's Mobile Number:<a class="tt" data-tooltip="Please enter the 10-digit mobile number used at the time of online registration."><span
                             class="badge">?</span></a></label> &nbsp; &nbsp;
             <input type="text" class="form-control" id="number" name="parent_mob" required="" placeholder="14845551324">
         </div> <br/>  <br/> 
-        <button type="submit" class="btn org-btn width100" style="padding: 12px">Login</button> -->
+        <button type="submit" class="btn org-btn width100" style="padding: 12px">Login</button>
     <?php echo form_close(); ?>
 
 </div>

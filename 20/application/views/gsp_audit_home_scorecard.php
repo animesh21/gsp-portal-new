@@ -6,7 +6,6 @@
     </head>
     <body>
   <?php
-
   if (!empty($teachers)) {
       $i=0;
       foreach($teachers as $teacher) {
