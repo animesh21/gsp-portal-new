@@ -1,7 +1,8 @@
 <?php $this->load->view('header'); ?>
 
 <?php $this->load->view('nav'); ?>
-
+<?php $this->session->userdata('USERNAME');
+ ?>
 <div class="container"><div class=" text-center mt-5 ">
   
 <br/>
@@ -18,75 +19,81 @@
       <div class="card mt-2 mx-auto p-4 bg-light">
           <div class="card-body bg-light">
               <div class="container">
-                  <?php echo form_open('general', array('id'=>'general')); ?>
+                  <?php echo form_open('general/set', array('id'=>'general')); ?>
                       <div class="controls">
-                          <div class="row">
+                          <div class="row">  
                             
                               <div class="col-md-12">
-                                  <div class="form-group"> <label>1. Name of the participant *</label> <input id="name" type="text" name="name" class="form-control" placeholder="Name of the participant *" required="required"> </div>
+                                  <div class="form-group"> <label>1. Name of the participant *</label> <input id="name" type="text" name="name" class="form-control" placeholder="Name of the participant" value="<?php if (isset($records['name'])) echo $records['name'];?>"/> </div>
                               </div>
                               <div class="col-md-12">
                                   <div class="form-group"> <label>2. Grade/Class *</label> <select id="form_need" class="form-control" name="grade" required="required">
                                           <option value="" selected disabled>--Select Grade--</option>
-                                          <option name="grade" value="5">Grade 5</option>
-                                          <option name="grade" value="6">Grade 6</option>
-                                          <option name="grade" value="7">Grade 7</option>
-                                          <option name="grade" value="8">Grade 8</option>
-                                          <option name="grade" value="9">Grade 9</option>
-                                          <option name="grade" value="10">Grade 10</option>
-                                          <option name="grade" value="11">Grade 11</option>
-                                          <option name="grade" value="12">Grade 12</option>
+
+
+<option value="5" <?php if (isset($records['grade'])) echo $records['grade'] == '5' ? "selected" : ""; ?>>Grade 5</option>
+<option value="6" <?php if (isset($records['grade'])) echo $records['grade'] == '6' ? "selected" : ""; ?>>Grade 6</option>
+<option value="7" <?php if (isset($records['grade'])) echo $records['grade'] == '7' ? "selected" : ""; ?>>Grade 7</option>
+<option value="8" <?php if (isset($records['grade'])) echo $records['grade'] == '8' ? "selected" : ""; ?>>Grade 8</option>
+<option value="9" <?php if (isset($records['grade'])) echo $records['grade'] == '9' ? "selected" : ""; ?>>Grade 9</option>
+<option value="10" <?php if (isset($records['grade'])) echo $records['grade'] == '10' ? "selected" : ""; ?>>Grade 10</option>
+<option value="11" <?php if (isset($records['grade'])) echo $records['grade'] == '11' ? "selected" : ""; ?>>Grade 11</option>
+<option value="12" <?php if (isset($records['grade'])) echo $records['grade'] == '12' ? "selected" : ""; ?>>Grade 12</option>
+
                                       </select> </div>
                               </div>                         
                            
                               <div class="col-md-12">
                                   <div class="form-group"> <label for="form_email">3. Gender *</label> <br/>
-                                  <input type="radio" id="Female" name="gender" value="female">
+                                  <input type="radio" id="Female" name="gender" value="<?php echo set_value('gender', 'female') ?>" <?php if (isset($records['gender'])) echo $records['gender'] == 'female' ? "checked" : "" ?>/>
                                   <label for="male"> &nbsp; Female</label><br>
-                                  <input type="radio" id="male" name="gender" value="male">
+                                  <input type="radio" id="male" name="gender" value="<?php echo set_value('gender', 'male') ?>" <?php if (isset($records['gender'])) echo $records['gender'] == 'male' ? "checked" : "" ?>/>
                                   <label for="female"> &nbsp; Male</label><br>
-                                  <input type="radio" id="other" name="gender" value="other">
+                                  <input type="radio" id="other" name="gender" value="<?php echo set_value('gender', 'other') ?>" <?php if (isset($records['gender'])) echo $records['gender'] == 'other' ? "checked" : "" ?>/>
                                   <label for="other"> &nbsp; Other</label> 
                                   </div>
                               </div>
-                              <div class="col-md-12">
-                                  <div class="form-group"> <label>4. Guardian's 10-digit mobile number:</label> <input id="mobile" type="text" name="mobile" class="form-control" placeholder="Guardian's 10-digit mobile number" required="required"> </div>
-                              </div>                              
-                              <div class="col-md-12">
-                                  <div class="form-group"> <label>5. Email *</label> <input id="email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required"> </div>
-                              </div>
-                              <div class="col-md-12">
-                                  <div class="form-group"> <label>6. District</label> <input id="district" type="text" name="district" class="form-control" placeholder="District" required="required"> </div>
-                              </div>
-                              <div class="col-md-12">
-                                  <div class="form-group"> <label for="form_need">7. State *</label> <select id="form_need" name="state" class="form-control" required="required" data-error="State">
-                                          <option value="" selected disabled>Select Your State</option>
-                                          <option>Delhi</option>
-                                          <option>Uttar Pradesh</option>
-                                          <option>Maharashtra</option>
-                                          <option>Himachal Pradesh</option>
-                                      </select> </div>
-                              </div>
+                               
 
                               <div class="col-md-12">
-                                  <div class="form-group"> <label>8. School Name</label> <input id="school_name" type="text" name="school_name" class="form-control" placeholder="School Name" required="required"> </div>
+                                  <div class="form-group"> <label>4. Guardian's 10-digit mobile number:</label> <input id="mobile" type="text" name="mobile" class="form-control" placeholder="Guardian's 10-digit mobile number" value="<?php if (isset($records['mobile'])) echo $records['mobile'];?>"> </div>
+                              </div>                              
+                              <div class="col-md-12">
+                                  <div class="form-group"> <label>5. Email *</label> <input id="email" type="email" name="email" class="form-control" placeholder="Please enter your email" value="<?php if (isset($records['email'])) echo $records['email'];?>"> </div>
                               </div>
                               <div class="col-md-12">
-                                  <div class="form-group"> <label>9. School Address</label> <input id="school_address" type="text" name="school_address" class="form-control" placeholder="School Address" required="required"> </div>
+                                  <div class="form-group"> <label>6. District</label> <input id="district" type="text" name="district" class="form-control" placeholder="District" value="<?php if (isset($records['district'])) echo $records['district']; ?>"> </div>
                               </div>
                               <div class="col-md-12">
-                                  <div class="form-group"> <label>10. Pincode of the school</label> <input id="pincode" type="text" name="pincode" class="form-control" placeholder="Pincode of the school" required="required"> </div>
+                                  <div class="form-group"> <label for="form_need">7. State *</label> <select id="state" name="state" class="form-control" required="required" data-error="State">
+                                          <option value="" selected disabled>Select Your State</option>
+                                          <option <?php echo set_value('state', 'Delhi'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Delhi' ? "selected" : ""; ?>>Delhi</option>
+                                          <option <?php echo set_value('state', 'Uttar Pradesh'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Uttar Pradesh' ? "selected" : ""; ?>>Uttar Pradesh</option>
+                                          <option <?php echo set_value('state', 'Maharashtra'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Maharashtra' ? "selected" : ""; ?>>Maharashtra</option>
+                                          <option <?php echo set_value('state', 'Himachal Pradesh'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Himachal Pradesh' ? "selected" : ""; ?>>Himachal Pradesh</option>
+                                      </select> </div>
+                              </div>
+                              <div class="col-md-12">
+                                  <div class="form-group"> <label>8. School Name</label> <input id="school_name" type="text" name="school_name" class="form-control" placeholder="School Name" value="<?php if (isset($records['school_name'])) echo $records['school_name']; ?>"> </div>
+                              </div>
+                              <div class="col-md-12">
+                                  <div class="form-group"> <label>9. School Address</label> <input id="school_address" type="text" name="school_address" class="form-control" placeholder="School Address" value="<?php if (isset($records['school_address'])) echo $records['school_address'];?>"> </div>
+                              </div>
+                              <div class="col-md-12">
+                                  <div class="form-group"> <label>10. Pincode of the school</label> <input id="pincode" type="text" name="pincode" class="form-control" placeholder=Pincode" value="<?php if (isset($records['pincode'])) echo $records['pincode'];?>"> </div>
                               </div>
                               <div class="col-md-12">
                                   <div class="form-group"> <label for="form_email">11. Did your school participate in the GSP Audit 2019?</label> <br/>
-                                  <input type="radio" id="Female" name="participate " value="Y">
+                                  <input type="radio"  name="participate" value="<?php echo set_value('participate', 'Y') ?>" <?php if (isset($records['participate'])) echo $records['participate'] == 'Y' ? "checked" : "" ?>/>
                                   <label for="male"> &nbsp; Yes</label><br>
-                                  <input type="radio" id="male" name="participate " value="N">
+                                  <input type="radio"  name="participate" value="<?php echo set_value('participate', 'N') ?>" <?php if (isset($records['participate'])) echo $records['participate'] == 'N' ? "checked" : "" ?>/>
                                   <label for="female"> &nbsp; No</label><br> 
                                   </div>
                               </div>
                               
-                              
+                               
+
+
                               <div class="col-md-6"> <input type="submit" class="btn btn-success btn-send pt-2 btn-block " value="Previous"> </div>
                               <div class="col-md-6"> <input type="submit" class="btn btn-success btn-send pt-2 btn-block " value="Next"> </div>
                               
