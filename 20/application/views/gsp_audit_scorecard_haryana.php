@@ -85,22 +85,22 @@ body{
 } 
 
 .certificateno{ position:absolute; top:1053px; left: 10px; font-size: 16px;}
-.link-1{ position:absolute; top:196px; left: 60px; font-size:12px; font-style:italic; font-weight:bold;}
-.link-2{ position:absolute; top:363px; left: 60px; font-size:12px; font-style:italic; font-weight:bold;}
-.link-3{ position:absolute; top:940px; left: 75px; font-size:12px; font-style:italic; font-weight:bold;}
+.link-1{ position:absolute; top:186px; left: 60px; font-size:12px; font-style:italic; font-weight:bold;}
+.link-2{ position:absolute; top:315px; left: 60px; font-size:12px; font-style:italic; font-weight:bold;}
+.link-3{ position:absolute; top:914px; left: 55px; font-size:12px; font-style:italic; font-weight:bold;}
 .link-4{ position:absolute; top:368px; left: 125px; font-size:16px; font-weight:bold;}
-.link-5{ position:absolute; top:425px; left: 315px; font-size:16px; font-weight:bold;}
+.link-5{ position:absolute; top:423px; left: 309px; font-size:13.5px; font-weight:bold;}
 .principal{ position:relative; text-align: center; top:545px; font-size: 18px;}
 .finalScore{ position:relative;top:241px; left: 167px; font-weight: bold; font-size: 25px;}
 .school_name1{ position:relative; text-align: center; top:525px; font-size: 18px;}
 .school_name{ position:relative; text-align: center; top:525px; font-size: 18px;}
 .image{position:absolute; margin-left: -45px; margin-top: -45px;}
-.air{position:relative;top:748px; left: 53px; font-weight: bold; color: white}
-.energy{position:relative;top:701px; left: 165px; font-weight: bold; color: white}
-.food{position:relative;top:653px; left: 280px; font-weight: bold; color: white}
-.land{position:relative;top:604px; left: 395px; font-weight: bold; color: white}
-.water{position:relative;top:558px; left: 505px; font-weight: bold; color: white}
-.waste{position:relative;top:509px; left: 625px; font-weight: bold; color: white}
+.air{position:relative;top:734px; left: 43px; font-weight: bold; color: white}
+.energy{position:relative;top:687px; left: 165px; font-weight: bold; color: white}
+.food{position:relative;top:639px; left: 275px; font-weight: bold; color: white}
+.land{position:relative;top:593px; left: 395px; font-weight: bold; color: white}
+.water{position:relative;top:543px; left: 510px; font-weight: bold; color: white}
+.waste{position:relative;top:497px; left: 635px; font-weight: bold; color: white}
 
 </style>
 
