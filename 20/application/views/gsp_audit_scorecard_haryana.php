@@ -12,7 +12,7 @@
 
     if ($teacher->participant_name !="") {
         echo "<div class='container'>
-        <div class='image'><img src='assets/img/images/page-1.jpg' width='794' height='1100'></div>";
+        <div class='image'><img src='assets/img/images/page-h-1.jpg' width='794' height='1100'></div>";
 
   echo "<div class='principal'>" . strtoupper($teacher->participant_name) ."</div>&nbsp;";
     $length = strlen($teacher->school_name);
@@ -28,7 +28,7 @@
 
 
   echo "<div class='container'>
-        <div class='image'><img src='assets/img/images/page-2.jpg' width='794' height='1100'></div>";
+        <div class='image'><img src='assets/img/images/page-h-2.jpg' width='794' height='1100'></div>";
   echo "<div class='finalScore'>" . strtoupper($teacher->final_score) ."</div>&nbsp;";
   echo "<div class='air'>" . strtoupper($teacher->air_score) ."</div>&nbsp;";
   echo "<div class='energy'>" . strtoupper($teacher->energy_score) ."</div>&nbsp;";
@@ -42,7 +42,7 @@
 
 
    echo "<div class='container'>
-        <div class='image'><img src='assets/img/images/page-3.jpg' width='794' height='1100'></div>";
+        <div class='image'><img src='assets/img/images/page-h-3.jpg' width='794' height='1100'></div>";
         
         echo "<div class='link-1' ><a href='https://cdn.cseindia.org/docs/GSP-AP-seminar-april2020/Quizzes-Activities-on-Air-Pollution.pdf' style='color:#f7a206;' target='_blank'>https://cdn.cseindia.org/docs/GSP-AP-seminar-april2020/Quizzes-Activities-on-Air-Pollution.pdf</a></div>";
 
@@ -55,7 +55,7 @@
 
 
    echo "<div class='container'>
-        <div class='image'><img src='assets/img/images/page-4.jpg' width='794' height='1080'></div>";
+        <div class='image'><img src='assets/img/images/page-h-4.jpg' width='794' height='1080'></div>";
 
         echo "<div class='link-4'><a href='support@greenschoolsprogramme.org' style='color:#f7a206;'> support@greenschoolsprogramme.org</a></div>";
         echo "<div class='link-5'><a href='support@greenschoolsprogramme.org' style='color:#f7a206;'> support@greenschoolsprogramme.org</a></div>";
