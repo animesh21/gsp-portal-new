@@ -19,17 +19,17 @@
     <div class="card mt-2 mx-auto p-4 bg-light">
         <div class="card-body bg-light">
             <div class="container">
-                <?php echo form_open('air', array('id'=>'air')); ?>
+                <?php echo form_open('air/set', array('id'=>'air')); ?>
                     <div class="controls">
                         <div class="row">
 
                           <div class="col-md-12">
                                 <div class="form-group"> <label>1. How do you travel for everyday activities?</label> <br/>
-                                <input type="radio" id="Q1A1" name="Q1A" value="1">
+                                <input type="radio" id="Q1A1" name="Q1A1" value="<?php  echo set_value('Q1A1',1)?>"<?php if (isset($data['Q1A1'])) echo $data['Q1A1'] == 1 ? "checked" : "" ?>>
                                 <label> &nbsp; A. Walking / Cycling</label><br>
-                                <input type="radio" id="Q1A2" name="Q1A" value="2">
+                                <input type="radio" id="Q1A2" name="Q1A1" value="2">
                                 <label> &nbsp; B. Public transport (bus, taxi, etc.)</label><br>
-                                <input type="radio" id="Q1A3" name="Q1A" value="3">
+                                <input type="radio" id="Q1A3" name="Q1A1" value="3">
                                 <label> &nbsp; C. Personal vehicle</label>                               
                                 </div>
                             </div>
@@ -130,13 +130,13 @@ margin-bottom: 20px;
 </style>
 
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
     $(document).ready(function(){
       $("#previous").click(function(){
         alert('dd');
          window.location.href = "<?php echo base_url('general'); ?>";
       })  
     })
-</script>
+</script> -->
 
 

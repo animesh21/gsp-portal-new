@@ -29,7 +29,8 @@ class General extends CI_Controller {
     }
     
      public function set()
-    {	$userId = $this->session->userdata('USER_ID');
+    {	
+        $userId = $this->session->userdata('USER_ID');
         $type = 1; 
     	$this->form_validation->set_rules('name', 'Name', 'required|trim');
 		$this->form_validation->set_rules('grade', 'Grade', 'required|trim');
