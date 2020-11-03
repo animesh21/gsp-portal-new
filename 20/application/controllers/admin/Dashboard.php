@@ -235,7 +235,7 @@ class Dashboard extends CI_Controller {
 	
 	public function communityPortalNewSchool()
    {	$db2 = $this->load->database('db2', TRUE);
-   		$data['records'] = $db2->select('*')->from('users')->where(array('user_type'=>'Student', 'is_deleted'=>0, 'school_name'=> regexp[a-zA-Z]))->order_by('created_at', 'DESC')->get()->result();   		
+   		$data['records'] = $db2->select('*')->from('users')->where(array('user_type'=>'Student', 'is_deleted'=>0, 'school_name'=> regexp[0-9]))->order_by('created_at', 'DESC')->get()->result();   		
 		$data['main']='admin/audit/community_school';
 		$data['title']='Total no. of school'; 
 		$this->load->view('admin/includes/template', $data);
