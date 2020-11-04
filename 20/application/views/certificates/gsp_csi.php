@@ -27,7 +27,7 @@
 
 <div class="container" style="padding: 20px">
   <div class="home_container" style="padding: 30px 15px 30px 15px; width: 55%;">
-    <h1>GSP Online Capacity Building Workshop 5-6 Oct 2020</h1>
+    <h1>GSP Online Capacity Building Workshop 14-16 Oct 2020</h1>
     <?php if(!empty($this->session->flashdata('data_name'))) { ?>
      <div class="alert alert-dismissible alert-danger">
       <a type="button" class="close" data-dismiss="alert">&times;</a>
