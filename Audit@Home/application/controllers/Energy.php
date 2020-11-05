@@ -34,12 +34,12 @@
 			$userId = $this->session->userdata('USER_ID');
 			$type = 1;
 			 $this->form_validation->set_rules('Q1E1','Q1E1','required|trim');
-			// $this->form_validation->set_rules('Q2A1','Q2A1','required|trim');
-			// $this->form_validation->set_rules('Q3A1','Q3A1','required|trim');
-			// $this->form_validation->set_rules('Q4A1','Q4A1','required|trim');
-			// $this->form_validation->set_rules('Q5A1','Q5A1','required|trim');
-			// $this->form_validation->set_rules('Q6A1','Q6A1','required|trim');
-			// $this->form_validation->set_rules('Q7A1','Q7A1','required|trim');
+			 $this->form_validation->set_rules('Q2E1','Q2E1','required|trim');
+			 $this->form_validation->set_rules('Q3E1','Q3E1','required|trim');
+			 $this->form_validation->set_rules('Q4E1','Q4E1','required|trim');
+			 $this->form_validation->set_rules('Q5E1','Q5E1','required|trim');
+			 $this->form_validation->set_rules('Q6E1','Q6E1','required|trim');
+			
 
 		if($this->form_validation->run() == false)
 		{
