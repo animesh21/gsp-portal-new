@@ -8,7 +8,7 @@
 		parent::__construct();
 		$this->load->helper(array('form', 'security'));
 		$this->load->library('form_validation');		
-		$this->load->model('User_model');
+		//$this->load->model('User_model');
 	    }
 
 	    public function index() {

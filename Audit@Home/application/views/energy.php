@@ -19,17 +19,17 @@
     <div class="card mt-2 mx-auto p-4 bg-light">
         <div class="card-body bg-light">
             <div class="container">
-                <?php echo form_open('Energy', array('id'=>'energy')); ?>
+                <?php echo form_open('Energy/set', array('id'=>'energy')); ?>
                     <div class="controls">
                         <div class="row">
 
                           <div class="col-md-12">
                                 <div class="form-group"> <label>1. Do you get an electricity bill every month?</label> <br/>
-                                <input type="radio" id="Q1E1" name="Q1E" value="1">
+                                <input type="radio" name="Q1E1" value="<?php  echo set_value('Q1E1',1)?>"<?php if (isset($data['Q1E1'])) echo $data['Q1E1'] == 1 ? "checked" : "" ?>>
                                 <label> &nbsp; A. Yes</label><br>
-                                <input type="radio" id="Q1E2" name="Q1E" value="2">
+                                <input type="radio" name="Q1E1" value="<?php  echo set_value('Q1E1',2)?>"<?php if (isset($data['Q1E1'])) echo $data['Q1E1'] == 2 ? "checked" : "" ?>>
                                 <label> &nbsp; B. No</label><br>
-                                <input type="radio" id="Q1E3" name="Q1E" value="3">
+                                <input type="radio" name="Q1E1" value="<?php  echo set_value('Q1E1',3)?>"<?php if (isset($data['Q1E1'])) echo $data['Q1E1'] == 3 ? "checked" : "" ?>>
                                 <label> &nbsp; C. Not aware</label>                               
                                 </div>
                             </div>

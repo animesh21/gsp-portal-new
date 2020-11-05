@@ -25,7 +25,7 @@ class General extends CI_Controller {
             $type = 1; 
             $records['records'] = $this->Answer_model->getAllAnswers($userId,$type);
             $this->load->view('general',$records);
-      	     }
+      	    }
     }
     
      public function set()
@@ -60,3 +60,4 @@ class General extends CI_Controller {
      }
   
 }
+?>
