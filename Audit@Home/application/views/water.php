@@ -20,18 +20,18 @@
         <div class="card-body bg-light">
             <div class="container">
 
-                <?php echo form_open('Water', array('id'=>'water')); ?>
+                <?php echo form_open('Water/set', array('id'=>'water')); ?>
                     <div class="controls">
                         <div class="row">
 
                           <div class="col-md-12">
                                 <div class="form-group"> <label>1. How much water do you consume per person per day on average? </label>
                                 <p style="font-size: 14px; margin-left:25px;">You can find out per day water consumption by approximating how many buckets (of 20 Litre capacity for instance) of water you generally consume in a day. Take into account everyday activities like bathing, brushing, laundry, drinking, etc.</p>
-                                <input type="radio" id="Q1W1" name="Q1W" value="1">
+                                <input type="radio" id="Q1W1" name="Q1W1" value="<?php  echo set_value('Q1W1',1)?>"<?php if (isset($records['Q1W1'])) echo $records['Q1W1'] == 1 ? "checked" : "" ?>>
                                 <label> &nbsp; A. 100 to 150 Litre</label><br>
-                                <input type="radio" id="Q1W2" name="Q1W" value="2">
+                                <input type="radio" id="Q1W1" name="Q1W1" value="<?php  echo set_value('Q1W1',2)?>"<?php if (isset($records['Q1W1'])) echo $records['Q1W1'] == 2 ? "checked" : "" ?>>
                                 <label> &nbsp; B. 150 to 200 Litre</label><br>
-                                <input type="radio" id="Q1W2" name="Q1W" value="3">
+                                <input type="radio" id="Q1W1" name="Q1W1" value="<?php  echo set_value('Q1W1',3)?>"<?php if (isset($records['Q1W1'])) echo $records['Q1W1'] == 3 ? "checked" : "" ?>>
                                 <label> &nbsp; C. Above 200 Litre</label>                           
                                 </div>
                             </div>
@@ -39,20 +39,20 @@
                             <div class="col-md-12">
                                 <div class="form-group"> <label>2. How do you usually prefer to take a bath?</label>
                                 <br/>
-                                <input type="radio" id="Q2W1" name="Q2W" value="1">
+                                <input type="radio" id="Q2W1" name="Q2W1" value="<?php  echo set_value('Q2W1',1)?>"<?php if (isset($records['Q2W1'])) echo $records['Q2W1'] == 1 ? "checked" : "" ?>>
                                 <label> &nbsp; A. Bucket</label><br>
-                                <input type="radio" id="Q2W2" name="Q2W" value="2">
+                                <input type="radio" id="Q2W1" name="Q2W1" value="<?php  echo set_value('Q2W1',2)?>"<?php if (isset($records['Q2W1'])) echo $records['Q2W1'] == 2 ? "checked" : "" ?>>
                                 <label> &nbsp; B. Shower</label><br>
-                                <input type="radio" id="Q2W3" name="Q2W" value="3">
+                                <input type="radio" id="Q2W1" name="Q2W1" value="<?php  echo set_value('Q2W1',3)?>"<?php if (isset($records['Q2W1'])) echo $records['Q2W1'] == 3 ? "checked" : "" ?>>
                                 <label> &nbsp; C. Bathtub</label>                               
                                 </div>
                             </div>
 
                             <div class="col-md-12">
                                 <div class="form-group"> <label>3. Do you have an RO water purifier at home?</label> <br/> 
-                                <input type="radio" id="Q3W1" name="Q3W" value="1">
+                                <input type="radio" id="Q3W1" name="Q3W1" value="<?php  echo set_value('Q3W1',1)?>"<?php if (isset($records['Q3W1'])) echo $records['Q3W1'] == 1 ? "checked" : "" ?>>
                                 <label> &nbsp; A. No</label><br>
-                                <input type="radio" id="Q3W2" name="Q3W" value="2">
+                                <input type="radio" id="Q3W1" name="Q3W1" value="<?php  echo set_value('Q3W1',2)?>"<?php if (isset($records['Q3W1'])) echo $records['Q3W1'] == 2 ? "checked" : "" ?>>
                                 <label> &nbsp; B. Yes</label>               
                                 </div>
                             </div>
@@ -60,11 +60,11 @@
                             <div class="col-md-12">
                                 <div class="form-group"> <label>4. What do you do with the excess water from the RO water purifier?</label>
                                 <br/>
-                                <input type="radio" id="Q4W1" name="Q4W" value="1">
+                                <input type="radio" id="Q4W1" name="Q4W1" value="<?php  echo set_value('Q4W1',1)?>"<?php if (isset($records['Q4W1'])) echo $records['Q4W1'] == 1 ? "checked" : "" ?>>
                                 <label> &nbsp; A. Not applicable</label><br>
-                                <input type="radio" id="Q4W2" name="Q4W" value="2">
+                                <input type="radio" id="Q4W1" name="Q4W1" value="<?php  echo set_value('Q4W1',2)?>"<?php if (isset($records['Q4W1'])) echo $records['Q4W1'] == 2 ? "checked" : "" ?>>
                                 <label> &nbsp; B. Water is reused for other purposes like cleaning, flushing, etc.</label><br>
-                                <input type="radio" id="Q4W3" name="Q4W" value="3">
+                                <input type="radio" id="Q4W1" name="Q4W1" value="<?php  echo set_value('Q4W1',3)?>"<?php if (isset($records['Q4W1'])) echo $records['Q4W1'] == 3 ? "checked" : "" ?>>
                                 <label> &nbsp; C. Water flows directly to the drain</label>                           
                                 </div>
                             </div>
@@ -72,11 +72,11 @@
                             <div class="col-md-12">
                                 <div class="form-group"> <label>5. Are there any water leakages in the washroom or other areas in your house?</label>
                                 <br/>
-                                <input type="radio" id="Q5W1" name="Q5W" value="1">
+                                <input type="radio" id="Q5W1" name="Q5W1" value="<?php  echo set_value('Q5W1',1)?>"<?php if (isset($records['Q5W1'])) echo $records['Q5W1'] == 1 ? "checked" : "" ?>>
                                 <label> &nbsp; A. There are no leakages.</label><br>
-                                <input type="radio" id="Q5W2" name="Q5W" value="2">
+                                <input type="radio" id="Q5W1" name="Q5W1" value="<?php  echo set_value('Q5W1',2)?>"<?php if (isset($records['Q5W1'])) echo $records['Q5W1'] == 2 ? "checked" : "" ?>>
                                 <label> &nbsp; B. Yes but the leakages are fixed regularly.</label><br>
-                                <input type="radio" id="Q5W3" name="Q5W" value="3">
+                                <input type="radio" id="Q5W1" name="Q5W1" value="<?php  echo set_value('Q5W1',3)?>"<?php if (isset($records['Q5W1'])) echo $records['Q5W1'] == 3 ? "checked" : "" ?>>
                                 <label> &nbsp; C. Yes, there are some permanent leakages.</label>                     
                                 </div>
                             </div>
@@ -84,11 +84,11 @@
                             <div class="col-md-12">
                                 <div class="form-group"> <label>6. How many taps/ handpumps in your house have soap or handwash next to them?</label>
                                 <br/>
-                                <input type="radio" id="Q6W1" name="Q6W" value="1">
+                                <input type="radio" id="Q6W1" name="Q6W1" value="<?php  echo set_value('Q6W1',1)?>"<?php if (isset($records['Q6W1'])) echo $records['Q6W1'] == 1 ? "checked" : "" ?>>
                                 <label> &nbsp; A. All of them</label><br>
-                                <input type="radio" id="Q6W2" name="Q6W" value="2">
+                                <input type="radio" id="Q6W1" name="Q6W1" value="<?php  echo set_value('Q6W1',2)?>"<?php if (isset($records['Q6W1'])) echo $records['Q6W1'] == 2 ? "checked" : "" ?>>
                                 <label> &nbsp; B. Some of them</label><br>
-                                <input type="radio" id="Q6W3" name="Q6W" value="3">
+                                <input type="radio" id="Q6W1" name="Q6W1" value="<?php  echo set_value('Q6W1',3)?>"<?php if (isset($records['Q6W1'])) echo $records['Q6W1'] == 3 ? "checked" : "" ?>>
                                 <label> &nbsp; C. None of them</label>                     
                                 </div>
                             </div>
@@ -96,11 +96,11 @@
                             <div class="col-md-12">
                                 <div class="form-group"> <label>7. Does your house have a dual flush system in the toilet?</label>
                                 <br/>
-                                <input type="radio" id="Q7W1" name="Q7W" value="1">
+                                <input type="radio" id="Q7W1" name="Q7W1" value="<?php  echo set_value('Q7W1',1)?>"<?php if (isset($records['Q7W1'])) echo $records['Q7W1'] == 1 ? "checked" : "" ?>>
                                 <label> &nbsp; A. Yes</label><br>
-                                <input type="radio" id="Q7W2" name="Q7W" value="2">
+                                <input type="radio" id="Q7W1" name="Q7W1" value="<?php  echo set_value('Q7W1',2)?>"<?php if (isset($records['Q7W1'])) echo $records['Q7W1'] == 2 ? "checked" : "" ?>>
                                 <label> &nbsp; B. Some of them</label><br>
-                                <input type="radio" id="Q7W3" name="Q7W" value="3">
+                                <input type="radio" id="Q7W1" name="Q7W1" value="<?php  echo set_value('Q7W1',3)?>"<?php if (isset($records['Q7W1'])) echo $records['Q7W1'] == 3 ? "checked" : "" ?>>
                                 <label> &nbsp; C. No</label>                     
                                 </div>
                             </div>
@@ -108,11 +108,11 @@
                             <div class="col-md-12">
                                 <div class="form-group"> <label>8. Have you noticed any rainwater harvesting (RWH) structures around your house or in the locality? Example: recharge trenches or storage containers.</label>
                                 <br/>
-                                <input type="radio" id="Q8W1" name="Q8W" value="1">
+                                <input type="radio" id="Q8W1" name="Q8W1" value="<?php  echo set_value('Q8W1',1)?>"<?php if (isset($records['Q8W1'])) echo $records['Q8W1'] == 1 ? "checked" : "" ?>>
                                 <label> &nbsp; A. Yes</label><br>
-                                <input type="radio" id="Q8W2" name="Q8W" value="2">
+                                <input type="radio" id="Q8W1" name="Q8W1" value="<?php  echo set_value('Q8W1',2)?>"<?php if (isset($records['Q8W1'])) echo $records['Q8W1'] == 2 ? "checked" : "" ?>>
                                 <label> &nbsp; B. No</label><br>
-                                <input type="radio" id="Q8W3" name="Q8W" value="3">
+                                <input type="radio" id="Q8W1" name="Q8W1" value="<?php  echo set_value('Q8W1',3)?>"<?php if (isset($records['Q8W1'])) echo $records['Q8W1'] == 3 ? "checked" : "" ?>>
                                 <label> &nbsp; C. Not aware</label>                     
                                 </div>
                             </div>
@@ -120,11 +120,11 @@
                             <div class="col-md-12">
                                 <div class="form-group"> <label>9. How would you rate the quality and working conditions of these RWH structures?.</label>
                                 <br/>
-                                <input type="radio" id="Q9W1" name="Q9W" value="1">
+                                <input type="radio" id="Q9W1" name="Q9W1" value="<?php  echo set_value('Q9W1',1)?>"<?php if (isset($records['Q9W1'])) echo $records['Q9W1'] == 1 ? "checked" : "" ?>>
                                 <label> &nbsp; A. Good</label><br>
-                                <input type="radio" id="Q9W2" name="Q9W" value="2">
+                                <input type="radio" id="Q9W1" name="Q9W1" value="<?php  echo set_value('Q9W1',2)?>"<?php if (isset($records['Q9W1'])) echo $records['Q9W1'] == 2 ? "checked" : "" ?>>
                                 <label> &nbsp; B. Average</label><br>
-                                <input type="radio" id="Q9W3" name="Q9W" value="3">
+                                <input type="radio" id="Q9W1" name="Q9W1" value="<?php  echo set_value('Q9W1',3)?>"<?php if (isset($records['Q9W1'])) echo $records['Q9W1'] == 3 ? "checked" : "" ?>>
                                 <label> &nbsp; C. Poor / Don't know</label>                     
                                 </div>
                             </div>
@@ -144,9 +144,9 @@
             </div>
         </div>
     </div> 
-</div> 
+<!-- </div> 
 <iframe src="https://www.jigsawplanet.com/?rc=play&amp;pid=1ca359fc6f3f&amp;view=iframe" style="width:100%;height:600px" frameborder=0 allowfullscreen></iframe>
-</div>
+</div> -->
 
 
 <style type="text/css">

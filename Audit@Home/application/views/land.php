@@ -19,17 +19,17 @@
     <div class="card mt-2 mx-auto p-4 bg-light">
         <div class="card-body bg-light">
             <div class="container">
-                <?php echo form_open('Land', array('id'=>'land')); ?>
+                <?php echo form_open('Land/set', array('id'=>'land')); ?>
                     <div class="controls">
                         <div class="row">
 
                           <div class="col-md-12">
                                 <div class="form-group"> <label>1. Do you have indoor and/or outdoor plants at home? </label> <br/>
-                                <input type="radio" id="Q1L1" name="Q1L" value="1">
+                                <input type="radio" id="Q1L1" name="Q1L1" value="<?php  echo set_value('Q1L1',1)?>"<?php if (isset($records['Q1L1'])) echo $records['Q1L1'] == 1 ? "checked" : "" ?>>
                                 <label> &nbsp; A. Yes, we have indoor and outdoor plants.</label><br>
-                                <input type="radio" id="Q1L2" name="Q1L" value="2">
+                                <input type="radio" id="Q1L1" name="Q1L1" value="<?php  echo set_value('Q1L1',2)?>"<?php if (isset($records['Q1L1'])) echo $records['Q1L1'] == 2 ? "checked" : "" ?>>
                                 <label> &nbsp; B. Yes, we only have indoor/outdoor plants.</label><br>
-                                <input type="radio" id="Q1L2" name="Q1L" value="3">
+                                <input type="radio" id="Q1L1" name="Q1L1" value="<?php  echo set_value('Q1L1',3)?>"<?php if (isset($records['Q1L1'])) echo $records['Q1L1'] == 3 ? "checked" : "" ?>>
                                 <label> &nbsp; C. No, we don't have plants at home.</label>                           
                                 </div>
                             </div>
@@ -37,24 +37,24 @@
                             <div class="col-md-12">
                                 <div class="form-group"> <label>2. How many types of plants are there around you?</label>
                                 <p style="font-size: 14px; margin-left:25px;">Please count the 'type', and not the 'number' of plants. For example, if there are 3 neem trees and 2 rose plants, it will be 2 types of plants. Choose 'not applicable' if there are no plants in and around your house.</p>
-                                <input type="radio" id="Q2L1" name="Q2L" value="1">
+                                <input type="radio" id="Q2L1" name="Q2L1" value="<?php  echo set_value('Q2L1',1)?>"<?php if (isset($records['Q2L1'])) echo $records['Q2L1'] == 1 ? "checked" : "" ?>>
                                 <label> &nbsp; A. More than ten</label><br>
-                                <input type="radio" id="Q2L2" name="Q2L" value="2">
+                                <input type="radio" id="Q2L1" name="Q2L1" value="<?php  echo set_value('Q2L1',2)?>"<?php if (isset($records['Q2L1'])) echo $records['Q2L1'] == 2 ? "checked" : "" ?>>
                                 <label> &nbsp; B. Six to ten</label><br>
-                                <input type="radio" id="Q2L3" name="Q2L" value="3">
+                                <input type="radio" id="Q2L1" name="Q2L1" value="<?php  echo set_value('Q2L1',3)?>"<?php if (isset($records['Q2L1'])) echo $records['Q2L1'] == 3 ? "checked" : "" ?>>
                                 <label> &nbsp; C. One to five</label><br>
-                                <input type="radio" id="Q2L4" name="Q2L" value="4">
+                                <input type="radio" id="Q2L1" name="Q2L1" value="<?php  echo set_value('Q2L1',4)?>"<?php if (isset($records['Q2L1'])) echo $records['Q2L1'] == 4 ? "checked" : "" ?>>
                                 <label> &nbsp; D. Not applicable</label>                               
                                 </div>
                             </div>
 
                             <div class="col-md-12">
                                 <div class="form-group"> <label>3. Do you use chemical pesticides to take care of the plants?</label> <br/> 
-                                <input type="radio" id="Q3L1" name="Q3L" value="1">
+                                <input type="radio" id="Q3L1" name="Q3L1" value="<?php  echo set_value('Q3L1',1)?>"<?php if (isset($records['Q3L1'])) echo $records['Q3L1'] == 1 ? "checked" : "" ?>>
                                 <label> &nbsp; A. No</label><br>
-                                <input type="radio" id="Q3L2" name="Q3L" value="2">
+                                <input type="radio" id="Q3L1" name="Q3L1" value="<?php  echo set_value('Q3L1',2)?>"<?php if (isset($records['Q3L1'])) echo $records['Q3L1'] == 2 ? "checked" : "" ?>>
                                 <label> &nbsp; B. Yes</label><br>
-                                <input type="radio" id="Q3L3" name="Q3L" value="3">
+                                <input type="radio" id="Q3L1" name="Q3L1" value="<?php  echo set_value('Q3L1',3)?>"<?php if (isset($records['Q3L1'])) echo $records['Q3L1'] == 3 ? "checked" : "" ?>>
                                 <label> &nbsp; C. Not applicable</label>                
                                 </div>
                             </div>
