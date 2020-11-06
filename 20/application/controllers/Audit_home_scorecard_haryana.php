@@ -48,7 +48,7 @@ class Audit_home_scorecard_haryana extends CI_Controller{
         $this->db->update('gsp_audit_home_scorecard_haryana', array('download_count'=>$dataCertificate[0]->download_count+1));
         }else{
             $data['fullstudent'] = $dataCertificate;
-            $this->load->view('audit_home_link', $data);
+            $this->load->view('audit_home_haryana', $data);
              
 
         }
