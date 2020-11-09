@@ -51,7 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
       </div>
         <div class="navbar-brand" style="padding-left: 380px; margin-bottom: 25px;">
-        <a class="logo-default" href="#"><img alt="" src="<?php echo base_url(); ?>/assets/img/toppbar.png"></a> | <a  style="color: red; font-size: 13px;" href="<?php echo base_url('Login/logout'); ?>" style="color: white"><?php echo $this->session->userdata('USERNAME'); ?> Logout</a>
+        <a class="logo-default" href="#"><img alt="" src="<?php echo base_url(); ?>/assets/img/toppbar.png"></a> | <a  style="color: red; font-size: 16px;" href="<?php echo base_url('Login/logout'); ?>" style="color: white"><?php echo $this->session->userdata('USERNAME'); ?> Logout</a>
       </div>
           
     </div>
