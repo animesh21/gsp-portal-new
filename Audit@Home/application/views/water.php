@@ -110,7 +110,7 @@
                                 <br/>                           
                                   
                                   <div style="margin-right:19px;">
-                                  <img src="<?php echo base_url(); ?>assets/img/picturewater.PNG" alt="AQI" style="margin-right:10px;">
+                                  <img src="<?php echo base_url(); ?>assets/img/water.PNG" alt="AQI" style="margin-right:10px;">
                                   </div>
 
                               
