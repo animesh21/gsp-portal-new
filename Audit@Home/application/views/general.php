@@ -67,10 +67,41 @@
                               <div class="col-md-12">
                                   <div class="form-group"> <label for="form_need">7. State *</label> <select id="state" name="state" class="form-control" required="required" data-error="State">
                                           <option value="" selected disabled>Select Your State</option>
-                                          <option <?php echo set_value('state', 'Delhi'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Delhi' ? "selected" : ""; ?>>Delhi</option>
-                                          <option <?php echo set_value('state', 'Uttar Pradesh'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Uttar Pradesh' ? "selected" : ""; ?>>Uttar Pradesh</option>
-                                          <option <?php echo set_value('state', 'Maharashtra'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Maharashtra' ? "selected" : ""; ?>>Maharashtra</option>
+                                          <option <?php echo set_value('state', 'Andhra Pradesh'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Andhra Pradesh' ? "selected" : ""; ?>>Andhra Pradesh</option>
+                                          <option <?php echo set_value('state', 'Arunachal Pradesh'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Arunachal Pradesh' ? "selected" : ""; ?>>Arunachal Pradesh</option>
+                                          <option <?php echo set_value('state', 'Andaman and Nicobar Islands'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Andaman and Nicobar Islands' ? "selected" : ""; ?>>Andaman and Nicobar Islands</option>
+                                          <option <?php echo set_value('state', 'Assam'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Assam' ? "selected" : ""; ?>>Assam</option>
+                                          <option <?php echo set_value('state', 'Bihar'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Bihar' ? "selected" : ""; ?>>Bihar</option>
+                                          <option <?php echo set_value('state', 'Chandigarh'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Chandigarh' ? "selected" : ""; ?>>Chandigarh</option>
+                                          <option <?php echo set_value('state', 'Chhattisgarh'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Chhattisgarh' ? "selected" : ""; ?>>Chhattisgarh</option>
+                                          <option <?php echo set_value('state', 'Dadra & Nagar Haveli and Daman & Diu'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Dadra & Nagar Haveli and Daman & Diu' ? "selected" : ""; ?>>Dadra & Nagar Haveli and Daman & Diu</option>
+                                          <option <?php echo set_value('state', 'Goa'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Goa' ? "selected" : ""; ?>>Goa</option>
+                                          <option <?php echo set_value('state', 'Gujarat'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Gujarat' ? "selected" : ""; ?>>Gujarat</option>
+                                          <option <?php echo set_value('state', 'Haryana'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Haryana' ? "selected" : ""; ?>>Haryana</option>
                                           <option <?php echo set_value('state', 'Himachal Pradesh'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Himachal Pradesh' ? "selected" : ""; ?>>Himachal Pradesh</option>
+                                          <option <?php echo set_value('state', 'Jammu and Kashmir'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Jammu and Kashmir' ? "selected" : ""; ?>>Jammu and Kashmir</option>
+                                          <option <?php echo set_value('state', 'Jharkhand'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Jharkhand' ? "selected" : ""; ?>>Jharkhand</option>
+                                          <option <?php echo set_value('state', 'Karnataka'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Karnataka' ? "selected" : ""; ?>>Karnataka</option>
+                                          <option <?php echo set_value('state', 'Kerala'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Kerala' ? "selected" : ""; ?>>Kerala</option>
+                                          <option <?php echo set_value('state', 'Ladakh'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Ladakh' ? "selected" : ""; ?>>Ladakh</option>
+                                          <option <?php echo set_value('state', 'Lakshadweep'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Lakshadweep' ? "selected" : ""; ?>>Lakshadweep</option>
+                                          <option <?php echo set_value('state', 'Madhya Pradesh'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Madhya Pradesh' ? "selected" : ""; ?>>Madhya Pradesh</option>
+                                          <option <?php echo set_value('state', 'Maharashtra'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Maharashtra' ? "selected" : ""; ?>>Maharashtra</option>
+                                          <option <?php echo set_value('state', 'Manipur'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Manipur' ? "selected" : ""; ?>>Manipur</option>
+                                          <option <?php echo set_value('state', 'Meghalaya'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Meghalaya' ? "selected" : ""; ?>>Meghalaya</option>
+                                          <option <?php echo set_value('state', 'Mizoram'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Mizoram' ? "selected" : ""; ?>>Mizoram</option>
+                                          <option <?php echo set_value('state', 'Nagaland'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Nagaland' ? "selected" : ""; ?>>Nagaland</option>
+                                          <option <?php echo set_value('state', 'Odisha'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Odisha' ? "selected" : ""; ?>>Odisha</option>
+                                          <option <?php echo set_value('state', 'Puducherry'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Puducherry' ? "selected" : ""; ?>>Puducherry</option>
+                                          <option <?php echo set_value('state', 'Punjab'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Punjab' ? "selected" : ""; ?>>Punjab</option>
+                                          <option <?php echo set_value('state', 'Rajasthan'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Rajasthan' ? "selected" : ""; ?>>Rajasthan</option>
+                                          <option <?php echo set_value('state', 'Sikkim'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Sikkim' ? "selected" : ""; ?>>Sikkim</option>
+                                          <option <?php echo set_value('state', 'Tamil Nadu'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Tamil Nadu' ? "selected" : ""; ?>>Tamil Nadu</option>
+                                          <option <?php echo set_value('state', 'Telangana'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Telangana' ? "selected" : ""; ?>>Telangana</option>
+                                          <option <?php echo set_value('state', 'Tripura'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Tripura' ? "selected" : ""; ?>>Tripura</option>
+                                          <option <?php echo set_value('state', 'Uttar Pradesh'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Uttar Pradesh' ? "selected" : ""; ?>>Uttar Pradesh</option>
+                                          <option <?php echo set_value('state', 'Uttarakhand'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Uttarakhand' ? "selected" : ""; ?>>Uttarakhand</option>
+                                          <option <?php echo set_value('state', 'West Bengal'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'West Bengal' ? "selected" : ""; ?>>West Bengal</option>
                                       </select> </div>
                               </div>
                               <div class="col-md-12">
