@@ -60,7 +60,7 @@
                             </div>
 
                             <div class="col-md-12">
-                                <div class="form-group"> <label>My score in the Land section is:</label> <input id="mobile" type="text" name="lscore" class="form-control" placeholder="Energy section score"> </div>
+                                <div class="form-group"> <label>My score in the Land section is:</label> <input type="number" id="lscore" name="lscore" class="form-control" placeholder="Land section score" value="<?php if (isset($records['lscore'])) echo $records['lscore'];?>"> </div>
                             </div>
 
                             <div class="col-md-6"> <input type="button" id="btnAirPrevious" class="btn btn-success btn-send pt-2 btn-block " value="Previous"> </div>
@@ -87,7 +87,7 @@ margin-bottom: 20px;
 
 $(document).ready(function () {
         $('#btnAirPrevious').on('click', function (data) {
-            var fd = $('#air').serialize();
+            var fd = $('#land').serialize();
             //console.log(fd);
             $.ajax({
                 type: 'POST',

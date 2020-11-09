@@ -140,9 +140,6 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-12">
-                                <div class="form-group"> <label>My score in the Air section is:</label> <input type="number" id="ascore" name="ascore" class="form-control" placeholder="Air section score" value="<?php if (isset($records['ascore'])) echo $records['ascore'];?>"> </div>
-                            </div>
 
                             <div class="col-md-12">
                                 <div class="form-group">
@@ -154,14 +151,19 @@
                                     </p>
                                     <p style="font-size:12px;">Reading the Air Quality Index (AQI)</p>
 
-                                    <div>
-                                    <img src="assets/img/pictureair.PNG" alt="AQI">
+                                    <div style="margin-right:19px;">
+                                    <img src="assets/img/pictureair.PNG" alt="AQI" style="margin-right:10px;">
                                     </div>
 
                                 </div>
 
 
                             </div>
+
+                            <div class="col-md-12">
+                                <div class="form-group"> <label>My score in the Air section is:</label> <input type="number" id="ascore" name="ascore" class="form-control" placeholder="Air section score" value="<?php if (isset($records['ascore'])) echo $records['ascore'];?>"> </div>
+                            </div>
+
 
                             <div class="col-md-6"> <input type="button" id="btnAirPrevious" class="btn btn-success btn-send pt-2 btn-block " value="Previous"> </div>
                             <div class="col-md-6"> <input type="submit" class="btn btn-success btn-send pt-2 btn-block " value="Next"> </div>

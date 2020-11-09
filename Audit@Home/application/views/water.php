@@ -107,7 +107,13 @@
 
                             <div class="col-md-12">
                                 <div class="form-group"> <label>8. Have you noticed any rainwater harvesting (RWH) structures around your house or in the locality? Example: recharge trenches or storage containers.</label>
-                                <br/>
+                                <br/>                           
+                                  
+                                  <div style="margin-right:19px;">
+                                  <img src="assets/img/picturewater.png" alt="AQI" style="margin-right:10px;">
+                                  </div>
+
+                              
                                 <input type="radio" id="Q8W1" name="Q8W1" value="<?php  echo set_value('Q8W1',1)?>"<?php if (isset($records['Q8W1'])) echo $records['Q8W1'] == 1 ? "checked" : "" ?>>
                                 <label> &nbsp; A. Yes</label><br>
                                 <input type="radio" id="Q8W1" name="Q8W1" value="<?php  echo set_value('Q8W1',2)?>"<?php if (isset($records['Q8W1'])) echo $records['Q8W1'] == 2 ? "checked" : "" ?>>
@@ -130,7 +136,7 @@
                             </div>
 
                             <div class="col-md-12">
-                                <div class="form-group"> <label>My score in the Water section is: </label> <input id="mobile" type="text" name="wscore" class="form-control" placeholder="Water section score"> </div>
+                                <div class="form-group"> <label>My score in the Water section is:</label> <input type="number" id="wscore" name="wscore" class="form-control" placeholder="Water section score" value="<?php if (isset($records['wscore'])) echo $records['wscore'];?>"> </div>
                             </div>
 
                             <div class="col-md-6"> <input type="button" id="btnAirPrevious" class="btn btn-success btn-send pt-2 btn-block " value="Previous"> </div>
@@ -420,7 +426,7 @@ margin-bottom: 20px;
 
 $(document).ready(function () {
         $('#btnAirPrevious').on('click', function (data) {
-            var fd = $('#air').serialize();
+            var fd = $('#water').serialize();
             //console.log(fd);
             $.ajax({
                 type: 'POST',

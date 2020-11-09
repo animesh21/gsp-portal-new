@@ -36,6 +36,10 @@
 
                             <div class="col-md-12">
                                 <div class="form-group"> <label>2. How often do you read the food labels on packaged products, like biscuit, chocolate, etc. before consuming them?</label> <br/>
+                                <div style="margin-right:19px;">
+                                    <img src="assets/img/picturefood.PNG" alt="AQI" style="margin-right:10px;">
+                                </div>
+                                </br>
                                 <input type="radio" id="Q2F1" name="Q2F1" value="<?php  echo set_value('Q2F1',1)?>"<?php if (isset($records['Q2F1'])) echo $records['Q2F1'] == 1 ? "checked" : "" ?>>
                                 <label> &nbsp; A. Most times</label><br>
                                 <input type="radio" id="Q2F1" name="Q2F1" value="<?php  echo set_value('Q2F1',2)?>"<?php if (isset($records['Q2F1'])) echo $records['Q2F1'] == 2 ? "checked" : "" ?>>
@@ -83,13 +87,27 @@
                             </div>
 
                             <div class="col-md-12">
-                                <div class="form-group"> <label>My score in the Food section is:</label> <input id="mobile" type="text" name="fscore" class="form-control" placeholder="Energy section score"> </div>
+                                <div class="form-group"> <label>My score in the Food section is:</label> <input type="number" id="fscore" name="fscore" class="form-control" placeholder="Food section score" value="<?php if (isset($records['fscore'])) echo $records['fscore'];?>"> </div>
+                            </div>
+
+                            
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                  
+                                    <p style="font-size:20px;">Did you know that wasting food also adds to climate change? </p>
+                                    <p style="font-size:14px;">Food wastage and climate change</p>
+                                    <div style="margin-right:19px;">
+                                    <img src="assets/img/picturefood2.png" alt="AQI" style="margin-right:10px;">
+                                    </div>
+
+                                </div>
+
+
                             </div>
 
                             <div class="col-md-6"> <input type="button" id="btnAirPrevious" class="btn btn-success btn-send pt-2 btn-block " value="Previous"> </div>
                             <div class="col-md-6"> <input type="submit" class="btn btn-success btn-send pt-2 btn-block " value="Next"> </div>
                             
-
                         
                        </div>
                     </div>
@@ -111,7 +129,7 @@ margin-bottom: 20px;
 
 $(document).ready(function () {
         $('#btnAirPrevious').on('click', function (data) {
-            var fd = $('#air').serialize();
+            var fd = $('#food').serialize();
             //console.log(fd);
             $.ajax({
                 type: 'POST',

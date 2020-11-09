@@ -53,7 +53,7 @@
 				$argPost = $this->input->post();
 				
 				$this->Answer_model->submitAnswers($argPost,$userId,$type);
-				redirect(base_url('waste'));
+				redirect(base_url('feedback'));
 			}
 
 

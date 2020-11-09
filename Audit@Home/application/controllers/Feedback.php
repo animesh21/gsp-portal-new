@@ -33,7 +33,7 @@ class Feedback extends CI_Controller {
     {
         $userId = $this->session->userdata('USER_ID');
         $type = 1;
-        // $this->form_validation->set_rules('Q1A1','Q1A1','required|trim');
+         $this->form_validation->set_rules('fiscore','fiscore','required|trim');
         // $this->form_validation->set_rules('Q2A1','Q2A1','required|trim');
         // $this->form_validation->set_rules('Q3A1','Q3A1','required|trim');
         // $this->form_validation->set_rules('Q4A1','Q4A1','required|trim');
@@ -51,7 +51,7 @@ class Feedback extends CI_Controller {
         
         $this->Answer_model->submitAnswers($argPost,$userId,$type);
         // updateProgress($this->session->userdata('USER_ID'), 60);
-        redirect(base_url('energy'));
+        redirect(base_url('feedback'));
     }
 
 

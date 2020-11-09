@@ -60,6 +60,10 @@
                             <div class="col-md-12">
                                 <div class="form-group"> <label>4. How do you dispose of electronic waste like old phones, computers, etc? </label>
                                 <br/>
+                                <div style="margin-right:19px;">
+                                  <img src="assets/img/picturewaste.png" alt="AQI" style="margin-right:10px;">
+                                </div>
+                                </br>
                                 <input type="radio" id="Q4WS1" name="Q4WS1" value="<?php  echo set_value('Q4WS1',1)?>"<?php if (isset($records['Q4WS1'])) echo $records['Q4WS1'] == 1 ? "checked" : "" ?>>
                                 <label> &nbsp; A. Give to local scrap collector or authorized dealer</label><br>
                                 <input type="radio" id="Q4WS1" name="Q4WS1" value="<?php  echo set_value('Q4WS1',2)?>"<?php if (isset($records['Q4WS1'])) echo $records['Q4WS1'] == 2 ? "checked" : "" ?>>
@@ -120,7 +124,7 @@
                             </div>
 
                             <div class="col-md-12">
-                                <div class="form-group"> <label>My score in the Waste section is:</label> <input id="mobile" type="text" name="wscore" class="form-control" placeholder="Waste section score"> </div>
+                                <div class="form-group"> <label>My score in the Waste section is:</label> <input type="number" id="wascore" name="wascore" class="form-control" placeholder="Waste section score" value="<?php if (isset($records['wascore'])) echo $records['wascore'];?>"> </div>
                             </div>
 
                             <div class="col-md-6"> <input type="button" id="btnAirPrevious" class="btn btn-success btn-send pt-2 btn-block " value="Previous"> </div>
@@ -148,7 +152,7 @@ margin-bottom: 20px;
 
 $(document).ready(function () {
         $('#btnAirPrevious').on('click', function (data) {
-            var fd = $('#air').serialize();
+            var fd = $('#waste').serialize();
             //console.log(fd);
             $.ajax({
                 type: 'POST',
