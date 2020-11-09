@@ -43,6 +43,8 @@
 				$this->form_validation->set_rules('Q7W1','Q7W1','required|trim');
 				$this->form_validation->set_rules('Q8W1','Q8W1','required|trim');
 				$this->form_validation->set_rules('Q9W1','Q9W1','required|trim');
+				$this->form_validation->set_rules('wscore','wscore','required|trim');
+
 				
 				
 

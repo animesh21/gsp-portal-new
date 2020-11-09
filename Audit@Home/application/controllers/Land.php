@@ -36,6 +36,8 @@
 				$this->form_validation->set_rules('Q1L1','Q1L1','required|trim');
 				$this->form_validation->set_rules('Q2L1','Q2L1','required|trim');
 				$this->form_validation->set_rules('Q3L1','Q3L1','required|trim');
+				$this->form_validation->set_rules('lscore','lscore','required|trim');
+
 				
 
 			if($this->form_validation->run() == false)

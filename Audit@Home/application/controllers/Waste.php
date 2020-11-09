@@ -42,6 +42,8 @@
 				$this->form_validation->set_rules('Q6WS1','Q6WS1','required|trim');
 				$this->form_validation->set_rules('Q7WS1','Q7WS1','required|trim');
 				$this->form_validation->set_rules('Q8WS1','Q8WS1','required|trim');
+				$this->form_validation->set_rules('wascore','wascore','required|trim');
+
 				
 
 			if($this->form_validation->run() == false)

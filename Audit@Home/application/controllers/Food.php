@@ -40,6 +40,8 @@
 			 $this->form_validation->set_rules('Q3F1','Q3F1','required|trim');
 			 $this->form_validation->set_rules('Q4F1','Q4F1','required|trim');
 			 $this->form_validation->set_rules('Q5F1','Q5F1','required|trim');
+			 $this->form_validation->set_rules('fscore','fscore','required|trim');
+
 			
 
 		if($this->form_validation->run() == false)

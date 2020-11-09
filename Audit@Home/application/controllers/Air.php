@@ -40,6 +40,7 @@
 			$this->form_validation->set_rules('Q5A1','Q5A1','required|trim');
 			$this->form_validation->set_rules('Q6A1','Q6A1','required|trim');
 			$this->form_validation->set_rules('Q7A1','Q7A1','required|trim');
+			$this->form_validation->set_rules('ascore','ascore','required|trim');
 
 		if($this->form_validation->run() == false)
 		{

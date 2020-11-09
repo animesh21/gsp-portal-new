@@ -39,6 +39,7 @@
 			 $this->form_validation->set_rules('Q4E1','Q4E1','required|trim');
 			 $this->form_validation->set_rules('Q5E1','Q5E1','required|trim');
 			 $this->form_validation->set_rules('Q6E1','Q6E1','required|trim');
+			 $this->form_validation->set_rules('escore','escore','required|trim');
 			
 
 		if($this->form_validation->run() == false)
