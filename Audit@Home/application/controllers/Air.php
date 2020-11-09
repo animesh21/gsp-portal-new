@@ -50,6 +50,7 @@
 			$argPost = $this->input->post();
 			
 			$this->Answer_model->submitAnswers($argPost,$userId,$type);
+			// updateProgress($this->session->userdata('USER_ID'), 60);
 			redirect(base_url('energy'));
 		}
 

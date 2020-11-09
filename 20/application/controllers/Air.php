@@ -142,7 +142,7 @@ class Air extends CI_Controller {
         {
     */   
           $this->Answer_model->submitAnswers($post, 2);
-	  updateProgress($this->session->userdata('USER_ID'), 60);
+	      updateProgress($this->session->userdata('USER_ID'), 60);
           redirect(base_url("energy"));
 
         /*}

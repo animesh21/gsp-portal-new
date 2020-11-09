@@ -108,7 +108,7 @@
                                 <div class="form-group"> <label>My score in the Air section is:</label> <input id="mobile" type="text" name="ascore" class="form-control" placeholder="Air section score"> </div>
                             </div>
 
-                            <div class="col-md-6" id="previous"> <input type="submit"  class="btn btn-success btn-send pt-2 btn-block " value="Previous"> </div>
+                            <div class="col-md-6"> <input type="button" id="btnAirPrevious" class="btn btn-success btn-send pt-2 btn-block " value="Previous"> </div>
                             <div class="col-md-6"> <input type="submit" class="btn btn-success btn-send pt-2 btn-block " value="Next"> </div>
                             
 
@@ -139,4 +139,21 @@ margin-bottom: 20px;
     })
 </script> -->
 
+<script>
+
+$(document).ready(function () {
+        $('#btnAirPrevious').on('click', function (data) {
+            var fd = $('#air').serialize();
+            //console.log(fd);
+            $.ajax({
+                type: 'POST',
+                url: '<?php echo base_url('previous/airprevious') ?>',
+                data: fd,
+                success: function (data) {
+                    window.location.href = "<?php echo base_url('general'); ?>";
+                }
+            });
+        });
+    });
+        </script>
 
