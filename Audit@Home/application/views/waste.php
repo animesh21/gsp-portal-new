@@ -61,7 +61,7 @@
                                 <div class="form-group"> <label>4. How do you dispose of electronic waste like old phones, computers, etc? </label>
                                 <br/>
                                 <div style="margin-right:19px;">
-                                  <img src="assets/img/picturewaste.png" alt="AQI" style="margin-right:10px;">
+                                  <img src="<?php echo base_url(); ?>assets/img/picturewaste.png" alt="AQI" style="margin-right:10px;">
                                 </div>
                                 </br>
                                 <input type="radio" id="Q4WS1" name="Q4WS1" value="<?php  echo set_value('Q4WS1',1)?>"<?php if (isset($records['Q4WS1'])) echo $records['Q4WS1'] == 1 ? "checked" : "" ?>>

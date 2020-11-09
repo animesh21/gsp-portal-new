@@ -97,7 +97,7 @@
                                     <p style="font-size:20px;">The future is here!</p>
 
                                     <div style="margin-right:19px;">
-                                    <img src="assets/img/pictureenergy.PNG" alt="AQI" style="margin-right:10px;">
+                                    <img src="<?php echo base_url(); ?>assets/img/pictureenergy.PNG" alt="AQI" style="margin-right:10px;">
                                     </div>
 
                                 </div>
