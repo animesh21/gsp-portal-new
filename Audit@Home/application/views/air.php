@@ -7,7 +7,7 @@
 <br/>
 
 <div class="progress" style="height: 35px;">
-<div class="progress-bar bg-success" role="progressbar" style="width: 15%; font-size: 20px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">15%</div>
+<div class="progress-bar bg-success" role="progressbar" style="width: 25%; font-size: 20px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
 </div>
 
 <br/> <br/>
