@@ -22,6 +22,42 @@
                 <?php echo form_open('Air/set', array('id'=>'air')); ?>
                     <div class="controls">
                         <div class="row">
+                            
+                            <div class="col-md-12">
+                            <div class="form-group">
+                            <p><strong>The ideal way to take Audit@Home is to observe practices at your home for a few days</br>
+                               and then begin the survey. Here is a plan that you can follow to answer accurately:</strong></p>
+                               <p>
+                                <strong>STEP 1:</strong> For the first two days, observe the consumption of resources: Quantity of water</br>
+                                being used in activities; management of food leftovers; amount of electricity consumed </br>
+                                in the last months; usage of electrical appliances in the house, and so on.</p>
+
+                                <p>
+                                <strong>STEP 2:</strong> 
+                                For the third and fourth days, record observations for each practice and try to </br>
+                                find a pattern: Are we using more electricity these days as compared to, lets say, </br>
+                                March? What is the average amount of water that gets consumed every day? Where do </br>
+                                different types of waste go?
+                                </p>
+
+                                <p>
+                                <strong>STEP 3:</strong> 
+                                        On the fifth day, take the survey! Every question has 2-4 options: A, B, C and</br>
+                                        D. Starting from the Air section, you will also keep a track of your score:</br>
+                                        For every A: Give yourself 1 point</br>
+                                        For every B: Give yourself 2 points</br>
+                                        For every C: Give yourself 3 points</br>
+                                        For every D (where applicable): Give yourself 4 points</br>
+                                </p>
+                                <p>
+                                The last date to submit the survey is <strong>11 December 2020.</strong> All the best!</br>
+                                For any queries, write to <strong>gsphomeaudit@gmail.com</strong> 
+                                </p>
+
+
+                            </div>
+                            </div>
+
 
                           <div class="col-md-12">
                                 <div class="form-group"> <label>1. How do you travel for everyday activities?</label> <br/>
@@ -105,7 +141,26 @@
                             </div>
 
                             <div class="col-md-12">
-                                <div class="form-group"> <label>My score in the Air section is:</label> <input id="mobile" type="text" name="ascore" class="form-control" placeholder="Air section score"> </div>
+                                <div class="form-group"> <label>My score in the Air section is:</label> <input type="number" id="ascore" name="ascore" class="form-control" placeholder="Air section score" value="<?php if (isset($records['ascore'])) echo $records['ascore'];?>"> </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <p>
+                                    Do you know that you can check the air quality around you online in real-time? To find </br>
+                                    out if there is an air quality monitoring station near you and the air quality, visit the</br>
+                                    CPCB (Central Pollution Control Board) website: https://app.cpcbccr.com/AQI_India/</br>
+
+                                    </p>
+                                    <p style="font-size:12px;">Reading the Air Quality Index (AQI)</p>
+
+                                    <div>
+                                    <img src="assets/img/pictureair.PNG" alt="AQI">
+                                    </div>
+
+                                </div>
+
+
                             </div>
 
                             <div class="col-md-6"> <input type="button" id="btnAirPrevious" class="btn btn-success btn-send pt-2 btn-block " value="Previous"> </div>

@@ -92,7 +92,7 @@
                             </div>
 
                             <div class="col-md-12">
-                                <div class="form-group"> <label>My score in the Energy section is:</label> <input id="mobile" type="text" name="escore" class="form-control" placeholder="Energy section score"> </div>
+                                <div class="form-group"> <label>My score in the Energy section is:</label> <input type="number" id="escore" name="escore" class="form-control" placeholder="Energy section score" value="<?php if (isset($records['escore'])) echo $records['escore'];?>"> </div>
                             </div>
 
                             <div class="col-md-6"> <input type="button" id="btnAirPrevious" class="btn btn-success btn-send pt-2 btn-block " value="Previous"> </div>
