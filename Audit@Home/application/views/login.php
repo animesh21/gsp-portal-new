@@ -42,11 +42,11 @@
                   <span class="ec-checkbox__control"></span>
                   <span class="ec-checkbox__lebel">Remember Me</span>
                 </label>
-                <a href="<?php echo base_url('login/forgot_password'); ?>" class="text-primary my-2 d-block">Forgot password?</a>
+                <a href="https://www.greenschoolsprogramme.org/community/user/forgot-password" class="text-primary my-2 d-block">Forgot password?</a>
               </div>
               <button class="btn btn-block btn-primary">Log In</button>
               <p class="my-5 text-center">
-                Don’t have an account? <a href="#" class="text-primary">Register</a>
+                Don’t have an account? <a href="https://www.greenschoolsprogramme.org/community/user/register" class="text-primary">Register</a>
               </p>
            <?php echo form_close(); ?>
           </div>
