@@ -133,7 +133,7 @@
                                 <div class="form-group"> <label>My score in the Water section is: </label> <input id="mobile" type="text" name="wscore" class="form-control" placeholder="Water section score"> </div>
                             </div>
 
-                            <div class="col-md-6"> <input type="submit" class="btn btn-success btn-send pt-2 btn-block " value="Previous"> </div>
+                            <div class="col-md-6"> <input type="button" id="btnAirPrevious" class="btn btn-success btn-send pt-2 btn-block " value="Previous"> </div>
                             <div class="col-md-6"> <input type="submit" class="btn btn-success btn-send pt-2 btn-block " value="Next"> </div>
                             
 
@@ -154,7 +154,7 @@
 margin-bottom: 20px;
 }
 
-body {
+/* body {
   background: #00b4ff;
   color: #333;
   font: 100% Lato, Arial, Sans Serif;
@@ -162,29 +162,29 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-}
+} */
 
-#background-wrap {
+/* #background-wrap {
     bottom: 0;
   left: 0;
   position: fixed;
   right: 0;
   top: 0;
   z-index: -1;
-}
+} */
 
 /* KEYFRAMES */
 
-@-webkit-keyframes animateBubble {
+/* @-webkit-keyframes animateBubble {
     0% {
         margin-top: 1000px;
     }
     100% {
         margin-top: -100%;
     }
-}
+} */
 
-@-moz-keyframes animateBubble {
+/* @-moz-keyframes animateBubble {
     0% {
         margin-top: 1000px;
     }
@@ -226,12 +226,12 @@ body {
     }
     100% { 
         margin-left:50px;
-    }
-}
+    } */
+/* } */
 
 /* ANIMATIONS */
 
-.x1 {
+/* .x1 {
     -webkit-animation: animateBubble 25s linear infinite, sideWays 2s ease-in-out infinite alternate;
   -moz-animation: animateBubble 25s linear infinite, sideWays 2s ease-in-out infinite alternate;
   animation: animateBubble 25s linear infinite, sideWays 2s ease-in-out infinite alternate;
@@ -359,11 +359,11 @@ body {
   -webkit-transform: scale(0.3);
   -moz-transform: scale(0.3);
   transform: scale(0.3);
-}
+} */
 
 /* OBJECTS */
 
-.bubble {
+/* .bubble {
     -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -375,7 +375,7 @@ body {
     height: 200px;
   position: absolute;
   width: 200px;
-}
+} */
 
 .bubble:after {
     background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 70%); /* FF3.6+ */
@@ -403,7 +403,7 @@ body {
 
 </style>
 
-<div id="background-wrap">
+<!-- <div id="background-wrap">
     <div class="bubble x1"></div>
     <div class="bubble x2"></div>
     <div class="bubble x3"></div>
@@ -414,4 +414,22 @@ body {
     <div class="bubble x8"></div>
     <div class="bubble x9"></div>
     <div class="bubble x10"></div>
-</div>
+</div> -->
+
+<script>
+
+$(document).ready(function () {
+        $('#btnAirPrevious').on('click', function (data) {
+            var fd = $('#air').serialize();
+            //console.log(fd);
+            $.ajax({
+                type: 'POST',
+                url: '<?php echo base_url('previous/airprevious') ?>',
+                data: fd,
+                success: function (data) {
+                    window.location.href = "<?php echo base_url('land'); ?>";
+                }
+            });
+        });
+    });
+</script>

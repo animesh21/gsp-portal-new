@@ -86,7 +86,7 @@
                                 <div class="form-group"> <label>My score in the Food section is:</label> <input id="mobile" type="text" name="fscore" class="form-control" placeholder="Energy section score"> </div>
                             </div>
 
-                            <div class="col-md-6"> <input type="submit" class="btn btn-success btn-send pt-2 btn-block " value="Previous"> </div>
+                            <div class="col-md-6"> <input type="button" id="btnAirPrevious" class="btn btn-success btn-send pt-2 btn-block " value="Previous"> </div>
                             <div class="col-md-6"> <input type="submit" class="btn btn-success btn-send pt-2 btn-block " value="Next"> </div>
                             
 
@@ -106,3 +106,21 @@
 margin-bottom: 20px;
 }
 </style>
+
+<script>
+
+$(document).ready(function () {
+        $('#btnAirPrevious').on('click', function (data) {
+            var fd = $('#air').serialize();
+            //console.log(fd);
+            $.ajax({
+                type: 'POST',
+                url: '<?php echo base_url('previous/airprevious') ?>',
+                data: fd,
+                success: function (data) {
+                    window.location.href = "<?php echo base_url('energy'); ?>";
+                }
+            });
+        });
+    });
+</script>
