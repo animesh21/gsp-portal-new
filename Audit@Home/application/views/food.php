@@ -37,7 +37,7 @@
                             <div class="col-md-12">
                                 <div class="form-group"> <label>2. How often do you read the food labels on packaged products, like biscuit, chocolate, etc. before consuming them?</label> <br/>
                                 <div style="margin-right:19px;">
-                                    <img src="assets/img/picturefood.PNG" alt="AQI" style="margin-right:10px;">
+                                    <img src="assets/img/picturefood.png" alt="AQI" style="margin-right:10px;">
                                 </div>
                                 </br>
                                 <input type="radio" id="Q2F1" name="Q2F1" value="<?php  echo set_value('Q2F1',1)?>"<?php if (isset($records['Q2F1'])) echo $records['Q2F1'] == 1 ? "checked" : "" ?>>
