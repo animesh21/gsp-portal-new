@@ -152,7 +152,7 @@
                                     <p style="font-size:12px;">Reading the Air Quality Index (AQI)</p>
 
                                     <div style="margin-right:19px;">
-                                    <img src="<?php echo base_url(); ?>assets/img/pictureair.png" alt="AQI" style="margin-right:10px;">
+                                    <img src="<?php echo base_url(); ?>assets/img/pictureair.PNG" alt="AQI" style="margin-right:10px;">
                                     </div>
 
                                 </div>
