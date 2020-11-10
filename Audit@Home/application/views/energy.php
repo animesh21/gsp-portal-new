@@ -91,19 +91,6 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                  
-                                    <p style="font-size:20px;">The future is here!</p>
-
-                                    <div style="margin-right:19px;">
-                                    <img src="<?php echo base_url(); ?>assets/img/pictureenergy.png" alt="AQI" style="margin-right:10px;">
-                                    </div>
-
-                                </div>
-
-
-                            </div>
 
                             <div class="col-md-12">
                                 <div class="form-group"> <label>My score in the Energy section is:</label> <input type="number" id="escore" name="escore" class="form-control" placeholder="Energy section score" value="<?php if (isset($records['escore'])) echo $records['escore'];?>"> </div>
