@@ -9,6 +9,7 @@
          <div class="card-header border-bottom">
           <h4 class="mt-4">
             Student Login Here!
+            <p style="font-size:12px">Please use your Community Portal username and password to participate.</p>
             <?php if($this->session->flashdata('error')){ ?>
             <div class="alert alert-danger form-control"> <?php echo $this->session->flashdata('error'); ?> </div>
           <?php } ?>

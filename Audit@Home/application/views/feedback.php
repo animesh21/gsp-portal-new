@@ -25,7 +25,9 @@
 
                              <div class="col-md-12">
                                  <h2>Final Score</h2>
-                                <div class="form-group"> <label>My final score is: *</label> <input type="number" id="fiscore" name="fiscore" class="form-control" placeholder="Final score" value="<?php if (isset($records['fiscore'])) echo $records['fiscore'];?>"> </div>
+                                <div class="form-group"> <label>My final score is: *</label> 
+                                <p style="font-size:12px;">Add your scores from all the sections and enter here. </p>
+                                <input type="number" id="fiscore" name="fiscore" class="form-control" placeholder="Final score" value="<?php if (isset($records['fiscore'])) echo $records['fiscore'];?>"> </div>
                             </div>
 
                             <div class="col-md-12">
