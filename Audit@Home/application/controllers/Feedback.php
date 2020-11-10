@@ -48,7 +48,7 @@ class Feedback extends CI_Controller {
          $get_current_year=date('Y');
         //  $data=$this->db->select("id")->from('users')->where("userid=".$get_current_user)->get()->result();
         //  $get_school_id=$data[0]->id;
-         $result=$this->db->select("*")->from('gsp_aduit_home')->where("userid=".$get_current_user)->where("school_id=".$get_current_user)->where("year=".$get_current_year)->get()->result();
+        //  $result=$this->db->select("*")->from('gsp_aduit_home')->where("userid=".$get_current_user)->where("school_id=".$get_current_user)->where("year=".$get_current_year)->get()->result();
         //  if($result){
         //  redirect(base_url("Feedback/end_aduit")); 
         //  }
