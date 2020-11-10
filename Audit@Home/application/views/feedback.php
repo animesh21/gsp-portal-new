@@ -33,7 +33,8 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                   
-                                    <p style="font-size:20px;">The future is here!</p>
+                                    <p style="font-size:20px;">Now that we know how impactful our environmental practices at home can be, let us
+adopt a few greener ones. So which practices will you choose?</p>
 
                                     <div style="margin-right:19px;">
                                     <img src="<?php echo base_url(); ?>assets/img/feedback.PNG" alt="AQI" style="margin-right:10px;">
