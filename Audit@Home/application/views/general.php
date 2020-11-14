@@ -75,6 +75,7 @@
                                           <option <?php echo set_value('state', 'Chandigarh'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Chandigarh' ? "selected" : ""; ?>>Chandigarh</option>
                                           <option <?php echo set_value('state', 'Chhattisgarh'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Chhattisgarh' ? "selected" : ""; ?>>Chhattisgarh</option>
                                           <option <?php echo set_value('state', 'Dadra & Nagar Haveli and Daman & Diu'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Dadra & Nagar Haveli and Daman & Diu' ? "selected" : ""; ?>>Dadra & Nagar Haveli and Daman & Diu</option>
+                                          <option <?php echo set_value('state', 'Delhi'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Delhi' ? "selected" : ""; ?>>Delhi</option>
                                           <option <?php echo set_value('state', 'Goa'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Goa' ? "selected" : ""; ?>>Goa</option>
                                           <option <?php echo set_value('state', 'Gujarat'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Gujarat' ? "selected" : ""; ?>>Gujarat</option>
                                           <option <?php echo set_value('state', 'Haryana'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Haryana' ? "selected" : ""; ?>>Haryana</option>
