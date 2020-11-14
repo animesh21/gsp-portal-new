@@ -32,7 +32,7 @@ class Feedback extends CI_Controller {
 
     public function end_aduit()
     {
-       $this->load->view('end-message');
+       $this->load->view('hurry');
     }
 
 
