@@ -214,3 +214,14 @@ $(document).ready(function () {
     });
 </script>
 
+<script>
+$("#foodnext").click(function(e){
+  if($('input[name="Q1A1"]:checked').length == 0){
+        alert("Q10 Is cooking part of any regular subjects or extracurricular activities?.."); 
+        e.preventDefault();
+    if(e.isDefaultPrevented()){
+       setTimeout(function(){ $(".hide_one").css("display","none"); },600);
+    }
+ }
+}
+</script>
