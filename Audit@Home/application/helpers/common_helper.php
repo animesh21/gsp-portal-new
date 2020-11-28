@@ -16,6 +16,49 @@ if (!function_exists('getStates')) {
 
 }
 
+
+if (!function_exists('get_city_gsp')){
+  function get_city_gsp($city_id)
+  {
+       $ci=& get_instance();
+       $db2 = $ci->load->database('db2', TRUE);
+       $city = $db2->select('name')->from('cities')->where('id',$city_id)->get()->result();
+       foreach($city as $city){
+          return $city->name;
+       }
+      
+
+  }
+}
+
+if (!function_exists('get_schoolName_gsp')){
+  function get_schoolName_gsp($school_id)
+  {
+       $ci=& get_instance();
+       $db2 = $ci->load->database('db2', TRUE);
+       $school = $db2->select('name')->from('gsp_school')->where('id',$school_id)->get()->result();
+       foreach($school as $school){
+          return $school->name;
+       }
+      
+
+  }
+}
+
+if (!function_exists('get_state_gsp')){
+  function get_state_gsp($state_id)
+  {
+       $ci=& get_instance();
+       $db2 = $ci->load->database('db2', TRUE);
+       $state = $db2->select('name')->from('states')->where('id',$state_id)->get()->result();
+       foreach($state as $state){
+          return $state->name;
+       }
+      
+
+  }
+}
+
 if (!function_exists('getDistricts')) {
 
     function getDistricts() {

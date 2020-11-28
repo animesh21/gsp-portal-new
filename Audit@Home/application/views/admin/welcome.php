@@ -1,6 +1,7 @@
 <?php $this->load->view('header.php'); ?>
 
- 
+<?php $this->load->view('admin/nav_admin'); ?>
+
 <section class="padding-y-100 bg-light">
   <div class="container">
     <div class="row">  
