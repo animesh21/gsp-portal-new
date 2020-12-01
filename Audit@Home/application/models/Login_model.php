@@ -16,7 +16,7 @@ class Login_model extends CI_Model {
     public function checkLogin($argPost) {
        $query = $this->db->select('*')
        ->from('users')
-       ->where(array('email' => $argPost['email'], 'password' => $argPost['password']))->get();
+       ->where(array('email' => $argPost['email'], 'password' => $argPost['password']))->where('is_submitted', 0)->get();
         if ($query->num_rows() > 0) {
             $row = $query->row();
             $userData = array(
