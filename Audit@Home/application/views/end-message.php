@@ -19,20 +19,23 @@
     <div class="card mt-2 mx-auto p-4 bg-light">
         <div class="card-body bg-light">
             <div class="container">
-                <?php echo form_open('Energy/set', array('id'=>'energy')); ?>
+                <?php echo form_open('End_audit/sub', array('id'=>'end-message')); ?>
                     <div class="controls">
                         <div class="row">
 
                           
 
                             <div class="col-md-12">
-                                <p>Thank you for completing the Audit@Home survey! We will share the link to your personlised scorecard with suggestions for improvement in your practices to your registered Email ID by 30 December 2020. Stay tuned!
-</p>
+                                <p>Are you sure you want to submit the survey? You will not be able to change your answers after that.
+                                </p>
                             </div>
 
                             <!-- <div class="col-md-12"> <a href="">Login</a> </div>
                             <div class="col-md-6"> <input type="submit" class="btn btn-success btn-send pt-2 btn-block " value="Next"> </div>
                              -->
+                             <div class="col-md-6"> <input type="button" id="btnAirPrevious" class="btn btn-success btn-send pt-2 btn-block " value="Previous"> </div>
+                            <div class="col-md-6"> <input type="submit" class="btn btn-success btn-send pt-2 btn-block " value="Submit"> </div>
+                            
 
                         
                        </div>
@@ -52,7 +55,7 @@ margin-bottom: 20px;
 
 </style>
 
-<!-- <script>
+<script>
 
 $(document).ready(function () {
         $('#btnAirPrevious').on('click', function (data) {
@@ -63,9 +66,9 @@ $(document).ready(function () {
                 url: '<?php echo base_url('previous/airprevious') ?>',
                 data: fd,
                 success: function (data) {
-                    window.location.href = "<?php echo base_url('air'); ?>";
+                    window.location.href = "<?php echo base_url('feedback'); ?>";
                 }
             });
         });
     });
-</script> -->
+</script>
