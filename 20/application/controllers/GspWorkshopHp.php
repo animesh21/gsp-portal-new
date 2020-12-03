@@ -43,7 +43,7 @@ class GspWorkshopHp extends CI_Controller{
         $this->dompdf->render();
         $this->dompdf->stream("Digital Certificate.pdf", array("Attachment" => false));
         $this->db->where('id', $dataCertificate[0]->id);
-        $this->db->update('gsp_workshop_sbb', array('download_count'=>$dataCertificate[0]->download_count+1));
+        $this->db->update('gsp_workshop_hp', array('download_count'=>$dataCertificate[0]->download_count+1));
         }
         else{
             $this->session->set_flashdata('data_name', 'Your password is incorrect. Please try again. For any assistance, write to us at : support@greenschoolsprogramme.org');
