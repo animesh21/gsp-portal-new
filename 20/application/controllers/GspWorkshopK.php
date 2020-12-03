@@ -20,7 +20,7 @@ class GspWorkshopK extends CI_Controller{
     }
 
 
-    public function getWorkshopHP(){
+    public function getWorkshopk(){
         $mobile = $this->input->post('mobile');
         $this->db->where("mobile",$mobile);
         $dataCertificate=$this->db->select("*")->from("gsp_workshop_k")->get()->result();
