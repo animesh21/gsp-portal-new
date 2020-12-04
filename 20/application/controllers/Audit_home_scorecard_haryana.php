@@ -16,7 +16,7 @@ class Audit_home_scorecard_haryana extends CI_Controller{
      * Index function
      */
     public function index(){
-      $this->load->view('audit_haryana');
+      $this->load->view('certificates/closed');
     }
 
 
