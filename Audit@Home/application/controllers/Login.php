@@ -35,7 +35,8 @@ class Login extends CI_Controller {
             if (!empty($submitted)) { 		  
                 redirect(base_url('general'));
             } else { 
-                $this->session->set_flashdata('error', 'Already submitted');
+                $this->session->set_flashdata('error', 'You have already submitted the survey. Please stay tuned to our emails for further updates on your scorecard! 
+                ');
             }
         }
 		$this->load->view('login',$data);
