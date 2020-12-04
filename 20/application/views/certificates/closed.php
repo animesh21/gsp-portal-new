@@ -26,12 +26,12 @@
 </header>
 
 <div class="container" style="padding: 20px">
-  <div class="home_container" style="padding: 30px 15px 30px 15px; width: 55%;">
+  <!-- <div class="home_container" style="padding: 30px 15px 30px 15px; width: 55%;"> -->
     <h1>The link to download the certificate is now closed. </br>
         Please note that the GSP team does not keep a copy of your certificate. For any other queries, please write to support@greenschoolsprogramme.org </h1>
 
          
-  </div>  
+  <!-- </div>   -->
 
 </div>
 
