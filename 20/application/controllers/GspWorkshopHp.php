@@ -16,7 +16,7 @@ class GspWorkshopHp extends CI_Controller{
      * Index function
      */
     public function index(){
-        $this->load->view('certificates/gspworkshophp');
+        $this->load->view('certificates/closed');
     }
 
 
