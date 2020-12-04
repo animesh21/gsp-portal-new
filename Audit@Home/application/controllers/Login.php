@@ -24,10 +24,18 @@ class Login extends CI_Controller {
         } else {
             $post = $this->security->xss_clean($this->input->post());
             $varCheckLogin = $this->Login_model->checkLogin($post);
+
+            $submitted= $this->Login_model->checksumitted($post);
+             
             if (!empty($varCheckLogin)) { 		  
                 redirect(base_url('general'));
             } else { 
                 $this->session->set_flashdata('error', 'Invalid Email/Password!');
+            }
+            if (!empty($submitted)) { 		  
+                redirect(base_url('general'));
+            } else { 
+                $this->session->set_flashdata('error', 'Already submitted');
             }
         }
 		$this->load->view('login',$data);
