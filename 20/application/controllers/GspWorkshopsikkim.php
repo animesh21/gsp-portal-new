@@ -16,11 +16,11 @@ class GspWorkshopsikkim extends CI_Controller{
      * Index function
      */
     public function index(){
-        $this->load->view('certificates/gspworkshopk');
+        $this->load->view('certificates/gspworkshopsikkim');
     }
 
 
-    public function getWorkshopk(){
+    public function getWorkshopsikkim(){
         $mobile = $this->input->post('mobile');
         $this->db->where("mobile",$mobile);
         $dataCertificate=$this->db->select("*")->from("gsp_workshop_sikkim")->get()->result();
@@ -47,7 +47,7 @@ class GspWorkshopsikkim extends CI_Controller{
         }
         else{
             $this->session->set_flashdata('data_name', 'Your password is incorrect. Please try again. For any assistance, write to us at : support@greenschoolsprogramme.org');
-            return redirect('GspWorkshopK');
+            return redirect('gspworkshopsikkim');
         }
 
     }

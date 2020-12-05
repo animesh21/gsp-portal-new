@@ -37,7 +37,7 @@
   <?php } ?>
     <p style="color: red"></p>
      <div class="row" style="padding: 30px; margin: 0px; text-align: center;">
-    <?php echo form_open('GspWorkshopK/getWorkshopk', array('class'=>'form-inline')); ?>
+    <?php echo form_open('GspWorkshopsikkim/getWorkshopsikkim', array('class'=>'form-inline')); ?>
         <div class="form-group" style="width: 100%">
             <label for="number">Registered Mobile Number<a class="tt" data-tooltip="Please enter the mobile number used at the time of online registration."><span
                             class="badge">?</span></a></label> &nbsp; &nbsp;
