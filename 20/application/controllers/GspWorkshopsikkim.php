@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class GspWorkshopK extends CI_Controller{
+class GspWorkshopsikkim extends CI_Controller{
     
     /*
      * Constructor 
