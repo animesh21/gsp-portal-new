@@ -35,7 +35,7 @@ class GspWorkshopK extends CI_Controller{
         $this->load->library('dompdf_lib');
         ini_set('memory_limit', '-1');
        
-        $html = $this->load->view('certificates/gsp_workshop_k_pdf', $data, true);
+        $html = $this->load->view('certificates/gsp_workshop_sikkim_pdf', $data, true);
          $html = preg_replace('/>\s+</', "><", $html);
 
         $this->dompdf->load_html($html);
