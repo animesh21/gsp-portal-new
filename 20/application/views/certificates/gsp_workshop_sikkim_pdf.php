@@ -48,8 +48,8 @@ body{
 /* .date{position:relative; text-align: center; top:490px; margin-left: 480px;} */
 .certificateno{ position:absolute; top:633px; left: 10px;}
 .principal{ position:relative; text-align: center; top:268px;}
-.school_name1{ position:relative; text-align: center; top:265px; font-size: 16px; margin-left: 25px;}
-.school_name{ position:relative; text-align: center; top:265px; margin-left: 25px;}
+.school_name1{ position:relative; text-align: center; top:258px; font-size: 16px; margin-left: 25px;}
+.school_name{ position:relative; text-align: center; top:258px; margin-left: 25px;}
 .image{position:absolute; margin-left: -40px; margin-top: -45px;}
 </style>
 
