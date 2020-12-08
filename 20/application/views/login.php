@@ -82,9 +82,9 @@ header('Location: http://www.greenschoolsprogramme.org/audit/18/login/browser_ch
                                                                               target="_blank">registration page.</a></p>
         <!--<p>GSP Audit 2016 Questions <a href='http://www.greenschoolsprogramme.org/GSP-Audit2016-Questions.pdf' target='_blank'>click here</a></p>
                         <p class="deadline">Deadline to submit the audit is Friday,November 17,2017.</p>-->
-        <p>GSP Audit 2020 will not take place this year because schools are closed, owing to the current health crisis. 
+        <p><strong>GSP Audit 2020 will not take place this year because schools are closed, owing to the current health crisis. 
 
-We have been launching many online environmental initiatives for schools and students, and your school is duly informed. We request you to stay tuned to our emails and encourage students to participate.</p>
+We have been launching many online environmental initiatives for schools and students, and your school is duly informed. We request you to stay tuned to our emails and encourage students to participate.</strong></p>
         
         <p class="errortext"></p>
         <?php
