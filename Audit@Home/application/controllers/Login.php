@@ -11,6 +11,7 @@ class Login extends CI_Controller {
         $this->load->helper(array('form', 'security'));
         $this->load->library('form_validation');
         $this->load->model('Login_model');
+        $this->load->model('User_model');
     }
 	/****************************************************/
 	/****************************************************/
@@ -24,19 +25,16 @@ class Login extends CI_Controller {
         } else {
             $post = $this->security->xss_clean($this->input->post());
             $varCheckLogin = $this->Login_model->checkLogin($post);
-
-            $submitted= $this->Login_model->checksumitted($post);
+            $checkSubmitted = $this->User_model->UserSubmitted($post);
              
             if (!empty($varCheckLogin)) { 		  
                 redirect(base_url('general'));
-            } else { 
+            } elseif($checkSubmitted) { 
+                $this->session->set_flashdata('error', 'You have already submitted the survey. Please stay tuned to our emails for further updates on your scorecard! ');
+            } 
+            else 
+            { 
                 $this->session->set_flashdata('error', 'Invalid Email/Password!');
-            }
-            if (!empty($submitted)) { 		  
-                redirect(base_url('general'));
-            } else { 
-                $this->session->set_flashdata('error', 'You have already submitted the survey. Please stay tuned to our emails for further updates on your scorecard! 
-                ');
             }
         }
 		$this->load->view('login',$data);
