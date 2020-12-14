@@ -136,11 +136,20 @@ $allyoydata = getYOYComparisonAllData($schoolId);
         </div>
       </div>
     </nav>
+  
+
+
     <div class="container">
       <div class="col-md-12" >
+
+      <a href="<?php echo base_url('WasteTransformers') ;?>" target="blank"><button class="btn btn-primary" style="float: right; background-color: #e86549; border-color: #e86549; margin-right: 6%; height: 50px; width: 25%; margin-top: 8px;
+">Waste Transformers</button></a> 
         <h3><strong><?php echo $schoolName[0]->name.', &nbsp';?> <?php echo ' &nbsp'. $dataYoy3[0]->name.',';  echo ' &nbsp &nbsp' .$dataYoy2[0]->name;?> </strong> </h3> 
-        <hr/>
-      </div>
+        
+
+      <hr/>
+
+</div>
 
          <div class="col-md-12">
         <?php for($i=0; $i<sizeof($dataYoy); $i++) {?>
@@ -280,7 +289,7 @@ $allyoydata = getYOYComparisonAllData($schoolId);
 </div>
 <footer>
   <div class="container">
-    <p>Copyright © 2018 Centre for Science and Environment. For help, email <a href="mailto:ranjita@cseindia.org">support@greenschoolsprogramme.org</a> or call 011-4061600, ext – 219, 300. </p>
+    <p>Copyright © 2020 Centre for Science and Environment. For help, email <a href="mailto:ranjita@cseindia.org">support@greenschoolsprogramme.org</a> or call 011-4061600, ext – 219, 300. </p>
     <p></p>
   </div>
 </footer>
