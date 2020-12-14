@@ -15,7 +15,7 @@
          <div class="card-header border-bottom">
           <h4 class="mt-4">
             
-            <p style="font-size:12px">GSP Audit@Home is now closed.</br>
+            <p style="font-size:20px">GSP Audit@Home is now closed.</br>
 For those who have submitted the survey successfully, a scorecard will be emailed to you by 11 Jan 2020. For any further queries, please visit <a href="https://cdn.cseindia.org/userfiles/gsp-FAQs.pdf">here.</a>
  </p>
             
