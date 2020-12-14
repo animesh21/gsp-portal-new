@@ -1,6 +1,12 @@
 <?php $this->load->view('header.php'); ?>
 
- 
+ <style>
+		a:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+		</style>
 <section class="padding-y-100 bg-light">
   <div class="container">
     <div class="row">  
@@ -26,3 +32,4 @@ For those who have submitted the survey successfully, a scorecard will be emaile
  
 
   <?php $this->load->view('footer'); ?>
+
