@@ -3433,7 +3433,7 @@ if(!function_exists('downloadWasteSectionQuestions')){
    function downloadWasteSectionQuestions($userId){
        $CI = & get_instance();
      $CI->db->where('school_id',$userId);
-     $temp = $CI->db->select('audit_year,school_segregated_solid_waste,composting_facility,load_on_water_closet,  does_school_treat_waste_water,total_biodegradable_waste_generated,total_dry_recyclable_waste_generated,total_domestic_waste_generated,  e_waste_generated,biomedical_waste_generated,sanitary_waste_generated,cd_waste_generated,total_biodegradable_waste_recycled,total_dry_recyclable_waste_recycled,total_domestic_waste_recycled,e_waste_recycled,biomedical_waste_recycled,sanitary_waste_recycled,cd_waste_recycled,reuse_textbooks,what_is_the_final_destination_for_waste_from_your,does_your_school_burn_waste')->from("all_yoy_presentation")->where(array('school_id'=>$userId))->order_by("audit_year", "asc")->get()->result();
+     $temp = $CI->db->select('audit_year,school_segregated_solid_waste,composting_facility,load_on_water_closet,  does_school_treat_waste_water,total_biodegradable_waste_generated,total_dry_recyclable_waste_generated,total_domestic_waste_generated,  e_waste_generated,biomedical_waste_generated,sanitary_waste_generated,cd_waste_generated,total_biodegradable_waste_recycled,total_dry_recyclable_waste_recycled,total_domestic_waste_recycled,e_waste_recycled,biomedical_waste_recycled,sanitary_waste_recycled,cd_waste_recycled,reuse_textbooks,what_is_the_final_destination_for_waste_from_your,does_your_school_burn_waste')->from("all_yoy_presentation")->where(array('school_id'=>$userId))->order_by("audit_year", "DESC")->get()->result();
      return $temp;
    }
 }

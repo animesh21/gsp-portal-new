@@ -268,8 +268,8 @@
                                                                                                               data-tooltip="Visitors are students from other schools, teachers from other schools, technicians, NGOs, contractors and laborers, vendors, chief guests, etc . Please provide the average number of visitors for any month, between August - October."><span
                                         class="badge">?</span></a></label>
         <input class="form-control" id="Q5G1" type="number" min="0" name="Q5G1"
-                               placeholder="<?php if (isset($data['Q5G1'])) echo $data['Q5G1'] ?>"
-                               value="<?php echo set_value('Q5G1'); ?>"/>
+                               placeholder="<?php if (isset($data['Q5G1'])) echo $data['Q5G1'] ?>" readonly
+                               value="00"/>
       </div>
       <div class="clearfix">&nbsp;</div>
       <?php
@@ -281,8 +281,8 @@
         <label for="ex1"><span class="cube">4(c)</span>How many family members stay in the
         school campus? </label>
         <input class="form-control" id="Q5G2" type="number" min="0" name="Q5G2"
-                                       placeholder="<?php if (isset($data['Q5G2'])) echo $data['Q5G2'] ?>"
-                                       value="<?php echo set_value('Q5G2'); ?>"/>
+                                       placeholder="<?php if (isset($data['Q5G2'])) echo $data['Q5G2'] ?>" readonly
+                                       value="00"/>
       </div>
       <div class="clearfix">&nbsp;</div>
       <?php
@@ -292,15 +292,15 @@
         <label><span class="cube">5</span>What is the total number of working days of your school in a
         year? <a class="tt" data-tooltip="On an average, a day scholar school runs for 220-230 days in a year."><span class="badge">?</span></a> </label>
         <input class="form-control" id="Q6G1" type="number" min="0" max="366" name="Q6G1"
-                               placeholder="<?php if (isset($data['Q6G1'])) echo $data['Q6G1'] ?>"
-                               value="<?php echo set_value('Q6G1'); ?>"/>
+                               placeholder="<?php if (isset($data['Q6G1'])) echo $data['Q6G1'] ?>" readonly
+                               value="00"/>
       </div>
       <div id='playerzpumcZwzBZKD'></div>
       <div class="clearfix">&nbsp;</div>
       <div class="form-group">
         <label><span class="cube">6</span>Please select the month(s) in which the GSP audit was carried
-        out? <a class="tt"
-                                 data-tooltip="For example, if you conduct the audit from 15 June to 15 September, select, June, July August and September"><span
+        out? <a class="tt"d
+                                 data-tooltip="GSP Waste Transformers will continue from Dec 2020 to Jan 2021."><span
                             class="badge">?</span></a></label>
         <ul class="list-inline">
           <li style="width:200px;">Months</li>
@@ -308,7 +308,7 @@
             <label for="ex3">Jan</label>
             <br/>
             <input type="checkbox" class="Question7G1" name="Q7G1"
-                                       value="<?php echo set_value('Q7G1', 'true'); ?>" <?php if (isset($data['Q7G1'])) echo "checked" ?> />
+                                       value="<?php echo set_value('Q7G1', 'true'); ?>" checked />
           </li>
           <li>
             <label for="ex3">Feb</label>
@@ -368,13 +368,13 @@
             <label for="ex3">Nov</label>
             <br/>
             <input type="checkbox" class="Question7G1" name="Q7G11"
-                                       value="<?php echo set_value('Q7G11', 'true'); ?>" <?php if (isset($data['Q7G11'])) echo "checked" ?>/>
+                                       value="<?php echo set_value('Q7G11', 'true'); ?>" <?php if (isset($data['Q7G11'])) echo "checked" ?> />
           </li>
           <li>
             <label for="ex3">Dec</label>
             <br/>
             <input type="checkbox" class="Question7G1" name="Q7G12"
-                                       value="<?php echo set_value('Q7G12', 'true'); ?>" <?php if (isset($data['Q7G12'])) echo "checked" ?>/>
+                                       value="<?php echo set_value('Q7G12', 'true'); ?>" checked />
           </li>
         </ul>
       </div>
