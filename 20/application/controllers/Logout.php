@@ -16,7 +16,7 @@ class Logout extends CI_Controller{
     public function index(){
         $this->session->unset_userdata(array('USERNAME', 'USER_ID'));
         $this->session->set_flashdata('success', 'Successfully logged out!');
-	redirect(base_url('login'));
+	redirect(base_url('DownloadLogin'));
     }
 }
 

@@ -1,21 +1,136 @@
 <?php $this->load->view('WasteTrans/headerw'); ?>
 
-    <div class="container">
-      <div class="col-md-12">
-        <h2 style="margin-top: 20px"><strong>Waste Section,<?php echo' '. $this->session->userdata('USERNAME');?> </strong></h2>
-        <hr/>
-      </div>
-      <div class="col-md-12">
-        <div id="grapSchoolStatus"> </div>
-      </div>
+<style>
+
+span.frac {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+span.frac > sup, span.frac > sub {
+  display: block;
+  font: inherit;
+  padding: 0 0.3em;
+}
+span.frac > sup {border-bottom: 0.08em solid;}
+span.frac > span {display: none;}
+
+.error{
+  color: #fb4f2a !important;
+              font-size: 18px !important;
+ text-shadow: 1px 1px 1px #000;
+}
+
+#Q10G1-error
+{
+  color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -36px !important;
+    position: absolute;
+    margin-left: 133px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q2S1-error
+{
+      color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -36px !important;
+    position: absolute;
+    margin-left: 356px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#Q1S1-error
+{
+      color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -36px !important;
+    position: absolute;
+    margin-left: 457px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+</style>
+
+
+<script type="text/javascript">
+    window.onload = function () {
+        Shadowbox.init();
+
+    };
+    var getCities = function () {
+        var value = new Object();
+        value.id = $('#country-select').val();
+        var URL = "<?php echo base_url(); ?>";
+        $.ajax({
+            url: URL + 'ajax/citites',
+            type: 'POST',
+            data: value,
+            success: function (html) {
+                $('#city-select').html(html);
+            }
+        });
+    };
+
+function checkPincode(){
+  var pincode=$("#pincode").val();
+  if(pincode>6){
+   alert("The pincode must contain 6 digits.");
+  }else if(pincode<6){
+   alert("The pincode must contain 6 digits.");  
+ } 
+} 
+
+
+   
+function checkUpdate(){
+  alert("If you want to change the details, then please send a mail to support@greenschoolsprogramme.org, with your school name and new details: name, email id and mobile number.");
+}
+</script>
+
+<div class="container">
+  <div class="content-form">
+    <div class="log-nav">
+      <div class="welcome">Welcome <span
+                        style="font-weight:bold">
+                        <?php $user_id = $this->session->userdata('USER_ID'); 
+
+                       $School_name = getSchoolNameBYUniqueId($user_id);
+                       echo $School_name;
+                        ?></span></div>
+      <ul>
+        <!--<li><a href="http://www.greenschoolsprogramme.org/GSP-Audit2016-Questions.pdf" target="_blank" onClick="_gaq.push([\" _trackevent\",\"download\",\"pdf\",this.href])"=""><img src="http://www.greenschoolsprogramme.org/audit2016/images/pdf-icon16.png"> Audit Questionnaire</a> |</li>-->
+        <li><a href="<?php echo base_url('logout'); ?>">Logout</a></li>
+        <!-- <li>|</li> -->
+        <!-- <li><a class="lptext" title="Change Password Form" data-toggle="modal" data-target="#ChangePass"
+                       href="#ChangePass" rel="shadowbox;width=580;height=500;">Change Password</a></li> -->
+      </ul>
+    </div>
+    <!-- <div id="pprg" class="newprog progress" style="text-align:center">
+      <div id="samplt" class="fin-prog progress-bar" role="progressbar" style="width: <?php echo progressBarValue($this->session->userdata('USER_ID')).'%'; ?>; height: 35px;"><?php echo progressBarValue($this->session->userdata('USER_ID')).'%'; ?></div>
+    </div> -->
+    <h1>Baseline</h1>
+    <div class="intro">
+        <p>The first step to efficient solid waste management (SWM) is to become aware of what we do - benchmarking how much waste we generate and how much is processed. It is only then that we can find more sustainable ways to manage waste.</p>
+         <p>The Baseline section of GSP Waste Transformers motivates schools to find out the types of waste generated in previous years' audits and measure the actual volume. The Baseline will help schools chalk out their solid waste management plan better. The school's waste management programme has the potential to transform the school environment, and therefore, the objective is to create a plan for zero-waste zones in every school that can be implemented once schools reopen.  </p>
+        <h4>For Baseline:</h4>
+        <ul>
+        <li>Choose your SWM Action Plan team. A teacher with interest in waste and five to 10 students from Grades 6 to 12 will be ideal for your team.</li>
+        <li>With schools closed, the Administrative staff is important as they will provide the permissions required for the housekeeping and cleaning staff to help you with the plan. </li>
+        <li>The details of the Action Plan team members will need to be provided in the last section 'The Team'.</li>        
+        <li>As a team, study the latest baseline data in comparison to previous years, where applicable. </li>
+        <li>Based on the study, design an Action Plan for SWM in school as per the questions asked in the next section. </li>
+        <li>The section on Action Plan will open on 23 Dec 2020, and you will only be able to access it once you answer all the questions in the previous sections. </li>
+        <li>As always, the Action Plan will be submitted online by the school.</li>
+        </ul>
+    </div>
       <div class="col-md-12">
         <?php 
           $schoolId=getSchoolId($this->session->userdata('USER_ID')); 
-		  $wasteSection=downloadWasteSectionQuestions($schoolId); 
-		 ?>
-        <table class="table table-bordered display" style="
-    margin-top: 110px;
-">
+      $wasteSection=downloadWasteSectionQuestions($schoolId); 
+     ?>
+        <table class="table table-bordered display" style="margin-top: 40px;">
           <tr>
             <td>Audit Year</td>
             <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
@@ -88,43 +203,43 @@
             <td><?php echo !empty($wasteSection[$i]->total_dry_recyclable_waste_recycled)?$wasteSection[$i]->total_dry_recyclable_waste_recycled:"NA"; ?></td>
             <?php } ?>
           </tr>
-		  <tr>
+      <tr>
             <td>12. Total Domestic waste recycled (kg/month)</td>
             <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
             <td><?php echo !empty($wasteSection[$i]->total_domestic_waste_recycled)?$wasteSection[$i]->total_domestic_waste_recycled:"NA"; ?></td>
             <?php } ?>
           </tr>
-		  <tr>
+      <tr>
             <td>13. E-waste recycled (kg/month)</td>
             <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
             <td><?php echo !empty($wasteSection[$i]->e_waste_recycled)?$wasteSection[$i]->e_waste_recycled:"NA"; ?></td>
             <?php } ?>
           </tr>
-		  <tr>
+      <tr>
             <td>14. Biomedical waste recycled (kg/month)</td>
             <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
             <td><?php echo !empty($wasteSection[$i]->biomedical_waste_recycled)?$wasteSection[$i]->biomedical_waste_recycled:"NA"; ?></td>
             <?php } ?>
           </tr>
-		  <tr>
+      <tr>
             <td>15. Sanitary Waste recycled (kg/month)</td>
             <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
             <td><?php echo !empty($wasteSection[$i]->sanitary_waste_recycled)?$wasteSection[$i]->sanitary_waste_recycled:"NA"; ?></td>
             <?php } ?>
           </tr>
-	   <tr>
+     <tr>
             <td>16. C&D waste recycled (kg/month)</td>
             <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
             <td><?php echo !empty($wasteSection[$i]->cd_waste_recycled)?$wasteSection[$i]->cd_waste_recycled:"NA"; ?></td>
             <?php } ?>
           </tr>
-	  <tr>
+    <tr>
             <td> 17. Does your school reuse textbooks?</td>
             <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
             <td><?php echo !empty($wasteSection[$i]->reuse_textbooks)?$wasteSection[$i]->reuse_textbooks:"NA"; ?></td>
             <?php } ?>
           </tr>
-	<tr>
+  <tr>
             <td>18. Ewaste disposal?</td>
             <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
             <td><?php echo !empty($wasteSection[$i]->what_is_the_final_destination_for_waste_from_your)?$wasteSection[$i]->what_is_the_final_destination_for_waste_from_your:"NA"; ?></td>
@@ -138,190 +253,108 @@
             <?php } ?>
           </tr>
         </table>
-
+        <?php echo form_open('Baseline/set',array('id'=>'baseline-form')); ?>
         <div  class= "col-md-12">
         
         <div class="clearfix">&nbsp;</div>
       <div class=" form-group">
-        <label for="ex1"><span class="cube">1.</span>Per capita waste generation in school (sum of points 3 to 9 / total school population) kg/month<a class="tt"
-                    
-                                        class="badge">?</span></a></label>
-        <input class="form-control" id="Q1B1" type="number" min="0" name="Q1B1"
+        <label for="ex1">Per capita waste generation in school<a class="tt" class="badge">?</span></a></label>
+        <p>Please calculate your per capita waste generation:&nbsp;<span class="frac"><sup>Total amount of waste (add points 3 to 9)</sup><span>&frasl;</span><sub>Total Population</sub></span>.</p>
+        <input class="form-control" id="Q1B1" type="text" min="0" name="Q1B1"
                                placeholder="<?php if (isset($data['Q1B1'])) echo $data['Q1B1'] ?>" 
                                value="<?php echo set_value('Q1B1'); ?>"/>
+         </div>
+         <div class="text-center">
+        <button type="button" class="org-btn" id="btnBaselinePrevious">Previous</button>
+        <button type="submit" id="movenextbtn" value="movenext" accesskey="n"
+                                class="submit button">Next </button>
+        <button type="button" class="submit button" id="baselinesave">Save and Resume Later</button>
       </div>
+      <?php echo form_close(); ?>
         </div>
       </div>
     </div>
   </div>
-</div>
-<footer>
-  <div class="container">
-    <p>Copyright © 2018 Centre for Science and Environment. For help, email <a href="mailto:ranjita@cseindia.org">support@greenschoolsprogramme.org</a> or call 011-4061600, ext – 219, 300. </p>
-    <p></p>
-  </div>
-  <style type="text/css">
-    .main > .container {
-    background: #fff;
-    padding: 0px 20px 45px!important;
-    box-shadow: 0 0 6px #ccc;
-    box-sizing: border-box;
-   }
-   .list-inline {
-    padding-left: 0;
-    margin-left: -5px;
-    list-style: none;
-    width: 154px;
-   }
-   .nav_main {
-    background: #505050!important;
-    text-align: center;
-   }
-  .navbar-default {
-    margin-bottom: 0;
-    border-radius: 0;
-    background: #505050!important;
-    border: 0;
-    padding: 0;
-   }
-   .navbar-default li a { color:#FFFFFF!important;}
-   ul.nav li:hover > ul.dropdown-menu {
-    display: block;
-   }
-   .nav_main li li a {
-    color: #333 !important;
-}
-.dropdown-menu>li>a {
-    display: block;
-    padding: 11px 20px;
-    clear: both;
-    font-weight: 400;
-    line-height: 1.42857143;
-    color: #333!important;
-    white-space: nowrap;
-    font-size: 15px!important;
-}
-   .nav_main li a:hover {
-    background: #e45132;
-    color: #fff;
-   }
-   .main > .container {
-    background: #fff;
-    padding:0px 0px 45px!important;
-    box-shadow: 0 0 6px #ccc;
-    box-sizing: border-box;
-   }
-   header .top-bnr {
+
+  
+    
+<?php $this->load->view('footer'); ?>
+
+
+
+
+<script type="text/javascript">
+    $("#school-form").submit(function (event) {
+        var value = $('#principal').val();
+        if (value == '') {
+            alert('Please enter Principal Name!');
+            event.preventDefault();
+        } else if ($('#cordinatorname').val() == '') {
+            alert('Please enter Cordinator Name!');
+            event.preventDefault();
+        }
+
+    });
+
+
+  /**This Function Used For Save & Logout**/
+$('#schoolresume').on('click', function (data) {
+            var fd = $('#baseline-form').serialize();
+            $.ajax({
+                type: 'POST',
+                url: '<?php echo base_url('school/schoolAnswer') ?>',
+                data: fd,
+                success: function (data) {
+                    window.location.href = "<?php echo base_url('logout'); ?>";
+                }
+            });
+        });
+</script>
+<style type="text/css">
+       header .top-bnr {
     position: absolute;
     top: 11px;
     right: 0;
     transition: all 0.3s ease-out;
    }
-   .table tr:nth-child(1)  td{background:#e86549!important; color:#FFFFFF;}
-   .table tr:nth-child(1){background:#e86549!important; color:#FFFFFF; width:550px;}
+   .table tr:nth-child(1)  td{background:#24a5a0!important; color:#FFFFFF;}
+   .table tr:nth-child(1){background:#24a5a0!important; color:#FFFFFF; width:550px;}
    .table tr td:nth-child(1){background:#505050; color:#FFFFFF; width:550px;}
   </style>
-</footer>
-</body>
-</html>
-<!--close footer-->
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="<?php echo base_url() ?>assets/front/js/bootstrap.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/front/js/jquery.dataTables.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/front/js/dataTables.buttons.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/front/js/buttons.flash.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/front/js/vfs_fonts.js"></script>
-<script src="<?php echo base_url(); ?>assets/front/js/buttons.html5.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/front/js/buttons.print.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/front/js/chosen.jquery.js"></script>
-<script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://code.highcharts.com/modules/data.js"></script>
-<script src="https://code.highcharts.com/modules/exporting.js"></script>
-<script type="text/javascript">
-//    var chart2 =  Highcharts.chart('grapSchoolStatus',{
-//         chart: {
-//             type: 'column'
-//         },
-//         title: {
-//             text: 'Schools Participation Report In All GSP Audit'
-//         },
-//         xAxis: {
-//             categories: [
-//                 '2015',
-// 				'2016',
-// 				'2017',
-// 				'2018',
-				
-//             ],
-//             crosshair: true
-//         },
-		
-// 		legend: {
-//         enabled: true
-//     },
-    
-		
-//         exporting: { enabled: false },
-//         credits: {enabled: false},
-//         tooltip: {
-//             headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-//             pointFormat: '<tr><td style="color:{series.color};padding:0;font-size:12px;">{series.name}: </td>' +
-//                 '<td style="padding:0;font-size:12px;">{point.y:.1f}</td></tr>',
-//             footerFormat: '</table>',
-//             shared: true,
-//             useHTML: true
-//         },
-//         plotOptions: {
-// 		     series: {
-//             borderWidth: 0,
-//             dataLabels: {
-//                 enabled: true,
-//                 format: '{point.y}'
-//             }
-//         },
-		
-//             column: {
-//                 pointPadding: 0.2,
-//                 borderWidth: 0
-//             }
-//         },
-//         series: [{
-//             name: 'School Performace Each Year',
-// 			color:'rgb(124, 181, 236)',
-//             data: [54.43,67.34,78.55,89.90] //NORTH
-//             //Registration, Audit Started, Audit Completed, Feedback Recieved
-//         }		
-// 		],
-// });
-// // the button handler    
-//     $('#buttonExport1').click(function() {
-//         var e = document.getElementById("ExportOption1");
-// 		var ExportAs = e.options[e.selectedIndex].value;   
+<script>
+            $(document).ready(function () {
+                $('#btnBaselinePrevious').on('click', function (data) {
+                    var fd = $('#baseline-form').serialize();
+                    //console.log(fd);
+                    $.ajax({
+                        type: 'POST',
+                        url: '<?php echo base_url('previous/generalajax') ?>',
+                        data: fd,
+                        success: function (data)
+                        {
+              
+                             window.location.href = "<?php echo base_url('Wt'); ?>";
+                            
+                            
+                        }
+                    });
+                });
+        
+        /**This Code Used For Submit from previous button **/
+        
+        
+                $('#baselinesave').on('click', function (data) {
+                    var fd = $('#baseline-form').serialize();
+                    $.ajax({
+                        type: 'POST',
+                        url: '<?php echo base_url('previous/generalajax') ?>',
+                        data: fd,
+                        success: function (data)
+                        {
+                            window.location.href = "<?php echo base_url('logout'); ?>";
+                        }
+                    });
+                });
+            });
        
-//         if(ExportAs == 'PNG')
-//         {
-//             chart2.exportChart({type: 'image/png', filename: 'my-png'}, {subtitle: {text:''}});
-//         }
-//         if(ExportAs == 'JPEG')
-//         {
-//             chart2.exportChart({type: 'image/jpeg', filename: 'my-jpg'}, {subtitle: {text:''}});
-//         }
-//         if(ExportAs == 'PDF')
-//         {
-//             chart2.exportChart({type: 'application/pdf', filename: 'my-pdf'}, {subtitle: {text:''}});
-//         }
-//         if(ExportAs == 'SVG')
-//         {
-//             chart2.exportChart({type: 'image/svg+xml', filename: 'my-svg'}, {subtitle: {text:''}});
-//         }
-//     }); 
-
-//     $('#buttonPrint').click(function() {
-//         chart.setTitle(null, { text: ' ' });
-//         chart.print();
-//         chart.setTitle(null, { text: 'Click and drag in the plot area to zoom in' });
-//     });
-
-
-</script>
+        </script>

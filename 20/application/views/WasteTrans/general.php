@@ -23,7 +23,7 @@
   <div id="samplt" class="fin-prog progress-bar" role="progressbar" style="width: <?php echo progressBarValue($this->session->userdata('USER_ID')).'%'; ?>; height: 35px;"><?php echo progressBarValue($this->session->userdata('USER_ID')).'%'; ?></div>
 </div> -->
 <h1>GENERAL QUESTIONS</h1>
-<?php echo form_open('general/set',array('id'=>'general-form')); ?>
+<?php echo form_open('Wt/set',array('id'=>'general-form')); ?>
 <div class="form-group">
   <label class="control-label" data-toggle="tooltip" data-placement="top"
                    title="If your school has classes from Grade 6 to 11, you response will be lowest level of grade: Grade 6 and Highest level of grade: Grade 11. If your school has only one Grade (Grade 7) then your response for both will be Grade 7."><span

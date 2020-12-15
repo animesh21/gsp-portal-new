@@ -101,7 +101,7 @@ function checkUpdate(){
     <div class="intro">
       <p> All questions in this section are compulsory. The school contact details should match with the details provided by you during the time of registration for Green Schools Programme (GSP) Audit. If you want to change the details, then please send an email to support@greenschoolsprogramme.org, with new details.</p>
     </div>
-    <?php echo form_open('school/schoolAnswer', array('id' => 'school-form')); ?>
+    <?php echo form_open('WasteTransformers/schoolAnswer', array('id' => 'school-form')); ?>
     <div class="alert alert-danger" role="alert"
             <?php if ($this->session->flashdata('error') != null)
                 echo 'style="display:block;"';
