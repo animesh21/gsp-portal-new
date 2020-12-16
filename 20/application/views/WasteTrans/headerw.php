@@ -162,7 +162,9 @@ left: -208px; color: #e86549;  text-align: center; top: 28px; display:none;">Ext
         </li>
 		<li id="Nav" class="row  <?php echo ($this->router->fetch_class() == 'Baseline/downloadWasteSection') ? "current" : "missing"; ?>"onClick="javascript:window.location.href='<?php echo base_url("Baseline/downloadWasteSection") ?>';">Baseline
         </li>
-		<li id="Nav" class="row  <?php echo ($this->router->fetch_class() == 'Wt') ? "current" : "missing"; ?>"onClick="javascript:window.location.href='<?php echo base_url("Baseline") ?>';">Action Plan
+		<li id="Nav" class="row  <?php echo ($this->router->fetch_class() == '#') ? "current" : "missing"; ?>"onClick="javascript:window.location.href='<?php echo base_url("#") ?>';">Action Plan
+        </li>
+		<li id="Nav" class="row  <?php echo ($this->router->fetch_class() == '#') ? "current" : "missing"; ?>"onClick="javascript:window.location.href='<?php echo base_url("#") ?>';">The Team
         </li>
 		
       
