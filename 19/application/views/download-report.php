@@ -76,7 +76,7 @@
           </div>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-               <li class=""><a href="<?php echo base_url('download/downloadFiles'); ?>">   Home</a></li>
+               <li class=""><a href="https://greenschoolsprogramme.org/audit/20/download/downloadFiles"> Home</a></li>
               <!-- <li class=""><a href="#">Year Of Year <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li class=""><a href="#">2015</a></li>
