@@ -69,6 +69,22 @@
       </header>
     </div>
     <div class="container">
+	    <?php
+    $schoolId=getSchoolId($this->session->userdata('USER_ID')); 
+    $dataYoy=download_YOY($schoolId);
+    $dataYoy1=get_state($schoolId);
+    
+     $state=  $dataYoy1[0]->state;
+   
+     $district= $dataYoy1[0]->district;
+   
+     $dataYoy2=get_stateById($state);
+     
+     $dataYoy3 = get_districtById($district);
+   $allyoydata = getYOYComparisonAllData($schoolId);
+     $schoolName = getSchoolDaTaByScHooLId($schoolId);
+    ?>
+	    
       <nav class="navbar navbar-default">
         <div class="container-fluid">
           <div class="navbar-header">
@@ -101,7 +117,8 @@
       </nav>
       <div class="container">
         <div class="col-md-12">
-          <h1 style="font-size:32px"><strong>GSP Audit 2019-20 Report and Certificates</strong></h1>
+		<h3><strong><?php echo $schoolName[0]->name.', &nbsp';?> <?php echo ' &nbsp'. $dataYoy3[0]->name.',';  echo ' &nbsp &nbsp' .$dataYoy2[0]->name;?> </strong> </h3>
+<!--           <h1 style="font-size:32px"><strong>GSP Audit 2019-20 Report and Certificates</strong></h1> -->
 		 <div class="other" style="margin-top: -40px; margin-bottom: 60px">
 	  <?php    
 	          $date1 = "2019-01-01 00:00:00"; 
