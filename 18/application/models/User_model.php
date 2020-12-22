@@ -11,8 +11,9 @@ class User_model extends CI_Model
 
    public function UserLogin($argPost)
     {
-		$msg=''; 
-        $query = $this->db->select('*')
+        $msg=''; 
+        $db2 = $this->load->database('db2', TRUE);
+        $query = $db2->select('*')
             ->from('gsp_user')
             ->where(array('email' => $argPost['email'], 'password' => $argPost['password']))
             ->get();
