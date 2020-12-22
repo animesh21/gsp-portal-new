@@ -77,10 +77,10 @@
           </div>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-               <li class=""><a href="<?php echo base_url('download/downloadFiles'); ?>">   Home</a></li>
+               <li class=""><a href="https://greenschoolsprogramme.org/audit/20/download/downloadFiles">   Home</a></li>
              
             <?php  $userid=$this->session->userdata('USER_ID'); ?>
-              <li class=""><a href="<?php echo base_url('download/downloadReportsSection'); ?>">Downloads</a></li>
+              <li class=""><a href="<?php echo base_url('https://greenschoolsprogramme.org/audit/19/download/downloadReportsSection'); ?>">Downloads</a></li>
              <li class=""><a href="<?php echo base_url('download/badgecodeview'); ?>">GSP Logo</a></li>
               <li class=""> <a href="<?php echo base_url('Downloadlogout'); ?>" class="pull-right">Logout</a></li>
             </ul>
