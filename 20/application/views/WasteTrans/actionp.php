@@ -126,45 +126,257 @@
             <div class="clearfix">&nbsp;</div>
             <div class="form-group">
                 <label class="control-label"><span class="cube">4</span>In the past years, what was the frequency of waste collection from the school? </label>
+</br>
+                <label class="control-label"><span class="cube">4(a)</span>Wet / biodegradable / organic waste </label>
+                <p>Please choose ‘Not Applicable’ if waste is composted within campus.</p>
                 <div class="radio">
-                <label data-tooltip="Please choose ‘Not Applicable’ if waste is composted within campus.
-                                            Not Applicable; Every day; twice a week; Weekly; Fortnightly; Monthly">
+                <label>
                 <input type="radio" name="Q4AP1" 
                                             value="<?php echo set_value('Q4AP1', 1) ?>" <?php if (isset($data['Q4AP1'])) echo $data['Q4AP1'] == 1 ? "checked" : "" ?>>
-                                            Wet / biodegradable / organic waste </label>
+                                            Not Applicable </label>
                 </div>
                 <div class="radio">
-                <label data-tooltip="Not Applicable; Every day; twice a week; Weekly; Fortnightly; Monthly">
+                <label>
                 <input type="radio" name="Q4AP1"
                                             value="<?php echo set_value('Q4AP1', 2) ?>" <?php if (isset($data['Q4AP1'])) echo $data['Q4AP1'] == 2 ? "checked" : "" ?>>
-                                            Dry / recyclable waste </label>
+                                            Every day</label>
                 </div>
                 <div class="radio">
-                <label data-tooltip="Not Applicable; Every day; twice a week; Weekly; Fortnightly; Monthly">
+                <label>
                 <input type="radio" name="Q4AP1"
                                             value="<?php echo set_value('Q4AP1', 3) ?>" <?php if (isset($data['Q4AP1'])) echo $data['Q4AP1'] == 3 ? "checked" : "" ?>>
-                                            Domestic hazardous waste</label>
+                                            twice a week</label>
                 </div>
                 <div class="radio">
-                <label data-tooltip="Not Applicable; Every day; twice a week; Weekly; Fortnightly; Monthly">
+                <label>
                 <input type="radio" name="Q4AP1"
                                             value="<?php echo set_value('Q4AP1', 4) ?>" <?php if (isset($data['Q4AP1'])) echo $data['Q4AP1'] == 4 ? "checked" : "" ?>>
-                                            E-waste </label>
+                                            Weekly</label>
                 </div>
                 <div class="radio">
-                <label data-tooltip="Not Applicable; Every day; twice a week; Weekly; Fortnightly; Monthly">
+                <label>
                 <input type="radio" name="Q4AP1"
                                             value="<?php echo set_value('Q4AP1', 5) ?>" <?php if (isset($data['Q4AP1'])) echo $data['Q4AP1'] == 5 ? "checked" : "" ?>>
-                                            Biomedical waste including sanitary waste </label>
+                                            Fortnightly </label>
                 </div>
                 <div class="radio">
-                <label data-tooltip="Not Applicable; Every day; twice a week; Weekly; Fortnightly; Monthly">
+                <label>
                 <input type="radio" name="Q4AP1"
                                             value="<?php echo set_value('Q4AP1', 6) ?>" <?php if (isset($data['Q4AP1'])) echo $data['Q4AP1'] == 6 ? "checked" : "" ?>>
-                                            Construction & Demolition waste </label>
+                                            Monthly </label>
                 </div>
             </div>
             <br>
+            <div class="form-group">
+
+                <label class="control-label"><span class="cube">4(b)</span>Dry / recyclable waste</label>
+
+                <div class="radio">
+                <label>
+                <input type="radio" name="Q4AP2" 
+                                            value="<?php echo set_value('Q4AP2', 1) ?>" <?php if (isset($data['Q4AP2'])) echo $data['Q4AP2'] == 1 ? "checked" : "" ?>>
+                                            Not Applicable </label>
+                </div>
+                <div class="radio">
+                <label>
+                <input type="radio" name="Q4AP2"
+                                            value="<?php echo set_value('Q4AP2', 2) ?>" <?php if (isset($data['Q4AP2'])) echo $data['Q4AP2'] == 2 ? "checked" : "" ?>>
+                                            Every day</label>
+                </div>
+                <div class="radio">
+                <label>
+                <input type="radio" name="Q4AP2"
+                                            value="<?php echo set_value('Q4AP2', 3) ?>" <?php if (isset($data['Q4AP2'])) echo $data['Q4AP2'] == 3 ? "checked" : "" ?>>
+                                            twice a week</label>
+                </div>
+                <div class="radio">
+                <label>
+                <input type="radio" name="Q4AP2"
+                                            value="<?php echo set_value('Q4AP2', 4) ?>" <?php if (isset($data['Q4AP2'])) echo $data['Q4AP2'] == 4 ? "checked" : "" ?>>
+                                            Weekly</label>
+                </div>
+                <div class="radio">
+                <label>
+                <input type="radio" name="Q4AP2"
+                                            value="<?php echo set_value('Q4AP2', 5) ?>" <?php if (isset($data['Q4AP2'])) echo $data['Q4AP2'] == 5 ? "checked" : "" ?>>
+                                            Fortnightly </label>
+                </div>
+                <div class="radio">
+                <label>
+                <input type="radio" name="Q4AP2"
+                                            value="<?php echo set_value('Q4AP2', 6) ?>" <?php if (isset($data['Q4AP2'])) echo $data['Q4AP2'] == 6 ? "checked" : "" ?>>
+                                            Monthly </label>
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+
+                <label class="control-label"><span class="cube">4(c)</span>Domestic hazardous waste</label>
+
+                <div class="radio">
+                <label>
+                <input type="radio" name="Q4AP3" 
+                                            value="<?php echo set_value('Q4AP3', 1) ?>" <?php if (isset($data['Q4AP3'])) echo $data['Q4AP3'] == 1 ? "checked" : "" ?>>
+                                            Not Applicable </label>
+                </div>
+                <div class="radio">
+                <label>
+                <input type="radio" name="Q4AP3"
+                                            value="<?php echo set_value('Q4AP3', 2) ?>" <?php if (isset($data['Q4AP3'])) echo $data['Q4AP3'] == 2 ? "checked" : "" ?>>
+                                            Every day</label>
+                </div>
+                <div class="radio">
+                <label>
+                <input type="radio" name="Q4AP3"
+                                            value="<?php echo set_value('Q4AP3', 3) ?>" <?php if (isset($data['Q4AP3'])) echo $data['Q4AP3'] == 3 ? "checked" : "" ?>>
+                                            twice a week</label>
+                </div>
+                <div class="radio">
+                <label>
+                <input type="radio" name="Q4AP3"
+                                            value="<?php echo set_value('Q4AP3', 4) ?>" <?php if (isset($data['Q4AP3'])) echo $data['Q4AP3'] == 4 ? "checked" : "" ?>>
+                                            Weekly</label>
+                </div>
+                <div class="radio">
+                <label>
+                <input type="radio" name="Q4AP3"
+                                            value="<?php echo set_value('Q4AP3', 5) ?>" <?php if (isset($data['Q4AP3'])) echo $data['Q4AP3'] == 5 ? "checked" : "" ?>>
+                                            Fortnightly </label>
+                </div>
+                <div class="radio">
+                <label>
+                <input type="radio" name="Q4AP3"
+                                            value="<?php echo set_value('Q4AP3', 6) ?>" <?php if (isset($data['Q4AP3'])) echo $data['Q4AP3'] == 6 ? "checked" : "" ?>>
+                                            Monthly </label>
+                </div>
+            </div>
+            <div class="clearfix">&nbsp;</div>
+            <div class="form-group">
+
+                <label class="control-label"><span class="cube">4(d)</span>E-waste</label>
+
+                <div class="radio">
+                <label>
+                <input type="radio" name="Q4AP4" 
+                                            value="<?php echo set_value('Q4AP4', 1) ?>" <?php if (isset($data['Q4AP4'])) echo $data['Q4AP4'] == 1 ? "checked" : "" ?>>
+                                            Not Applicable </label>
+                </div>
+                <div class="radio">
+                <label>
+                <input type="radio" name="Q4AP4"
+                                            value="<?php echo set_value('Q4AP4', 2) ?>" <?php if (isset($data['Q4AP4'])) echo $data['Q4AP4'] == 2 ? "checked" : "" ?>>
+                                            Every day</label>
+                </div>
+                <div class="radio">
+                <label>
+                <input type="radio" name="Q4AP4"
+                                            value="<?php echo set_value('Q4AP4', 3) ?>" <?php if (isset($data['Q4AP4'])) echo $data['Q4AP4'] == 3 ? "checked" : "" ?>>
+                                            twice a week</label>
+                </div>
+                <div class="radio">
+                <label>
+                <input type="radio" name="Q4AP4"
+                                            value="<?php echo set_value('Q4AP4', 4) ?>" <?php if (isset($data['Q4AP4'])) echo $data['Q4AP4'] == 4 ? "checked" : "" ?>>
+                                            Weekly</label>
+                </div>
+                <div class="radio">
+                <label>
+                <input type="radio" name="Q4AP4"
+                                            value="<?php echo set_value('Q4AP4', 5) ?>" <?php if (isset($data['Q4AP4'])) echo $data['Q4AP4'] == 5 ? "checked" : "" ?>>
+                                            Fortnightly </label>
+                </div>
+                <div class="radio">
+                <label>
+                <input type="radio" name="Q4AP4"
+                                            value="<?php echo set_value('Q4AP4', 6) ?>" <?php if (isset($data['Q4AP4'])) echo $data['Q4AP4'] == 6 ? "checked" : "" ?>>
+                                            Monthly </label>
+                </div>
+            </div>
+            <br>
+
+            <div class="form-group">
+
+                <label class="control-label"><span class="cube">4(e)</span>Biomedical waste including sanitary waste</label>
+
+                <div class="radio">
+                <label>
+                <input type="radio" name="Q4AP5" 
+                                            value="<?php echo set_value('Q4AP5', 1) ?>" <?php if (isset($data['Q4AP5'])) echo $data['Q4AP5'] == 1 ? "checked" : "" ?>>
+                                            Not Applicable </label>
+                </div>
+                <div class="radio">
+                <label>
+                <input type="radio" name="Q4AP5"
+                                            value="<?php echo set_value('Q4AP5', 2) ?>" <?php if (isset($data['Q4AP5'])) echo $data['Q4AP5'] == 2 ? "checked" : "" ?>>
+                                            Every day</label>
+                </div>
+                <div class="radio">
+                <label>
+                <input type="radio" name="Q4AP5"
+                                            value="<?php echo set_value('Q4AP5', 3) ?>" <?php if (isset($data['Q4AP5'])) echo $data['Q4AP5'] == 3 ? "checked" : "" ?>>
+                                            twice a week</label>
+                </div>
+                <div class="radio">
+                <label>
+                <input type="radio" name="Q4AP5"
+                                            value="<?php echo set_value('Q4AP5', 4) ?>" <?php if (isset($data['Q4AP5'])) echo $data['Q4AP5'] == 4 ? "checked" : "" ?>>
+                                            Weekly</label>
+                </div>
+                <div class="radio">
+                <label>
+                <input type="radio" name="Q4AP5"
+                                            value="<?php echo set_value('Q4AP5', 5) ?>" <?php if (isset($data['Q4AP5'])) echo $data['Q4AP5'] == 5 ? "checked" : "" ?>>
+                                            Fortnightly </label>
+                </div>
+                <div class="radio">
+                <label>
+                <input type="radio" name="Q4AP5"
+                                            value="<?php echo set_value('Q4AP5', 6) ?>" <?php if (isset($data['Q4AP5'])) echo $data['Q4AP5'] == 6 ? "checked" : "" ?>>
+                                            Monthly </label>
+                </div>
+            </div>
+            <div class="clearfix">&nbsp;</div>
+            <div class="form-group">
+
+                <label class="control-label"><span class="cube">4(f)</span>Construction & Demolition waste</label>
+
+                <div class="radio">
+                <label>
+                <input type="radio" name="Q4AP6" 
+                                            value="<?php echo set_value('Q4AP6', 1) ?>" <?php if (isset($data['Q4AP6'])) echo $data['Q4AP6'] == 1 ? "checked" : "" ?>>
+                                            Not Applicable </label>
+                </div>
+                <div class="radio">
+                <label>
+                <input type="radio" name="Q4AP6"
+                                            value="<?php echo set_value('Q4AP6', 2) ?>" <?php if (isset($data['Q4AP6'])) echo $data['Q4AP6'] == 2 ? "checked" : "" ?>>
+                                            Every day</label>
+                </div>
+                <div class="radio">
+                <label>
+                <input type="radio" name="Q4AP6"
+                                            value="<?php echo set_value('Q4AP6', 3) ?>" <?php if (isset($data['Q4AP6'])) echo $data['Q4AP6'] == 3 ? "checked" : "" ?>>
+                                            twice a week</label>
+                </div>
+                <div class="radio">
+                <label>
+                <input type="radio" name="Q4AP6"
+                                            value="<?php echo set_value('Q4AP6', 4) ?>" <?php if (isset($data['Q4AP6'])) echo $data['Q4AP6'] == 4 ? "checked" : "" ?>>
+                                            Weekly</label>
+                </div>
+                <div class="radio">
+                <label>
+                <input type="radio" name="Q4AP6"
+                                            value="<?php echo set_value('Q4AP6', 5) ?>" <?php if (isset($data['Q4AP6'])) echo $data['Q4AP6'] == 5 ? "checked" : "" ?>>
+                                            Fortnightly </label>
+                </div>
+                <div class="radio">
+                <label>
+                <input type="radio" name="Q4AP6"
+                                            value="<?php echo set_value('Q4AP6', 6) ?>" <?php if (isset($data['Q4AP6'])) echo $data['Q4AP6'] == 6 ? "checked" : "" ?>>
+                                            Monthly </label>
+                </div>
+            </div>
             <div style= "margin-top:2%;"></div>
             <div class="form-group">
                     <label class="control-label"> <span class="cube">5</span>What strategies do you propose to improve SWM in the school? </label>
@@ -178,27 +390,27 @@
             
             <div class="form-group">
             <label class="control-label"> <span class="cube">6</span>Is your school a single-use plastic-free zone?<a class="tt"
-                                                                       data-tooltip="Single-use plastics are a by-product of petroleum and are thrown away after just one use. The school campus is a single-use plastic-free zone if there are no such plastics present or are being used in any way, inside the campus. To know how plastic waste adds to climate change, Visit here. https://www.greenschoolsprogramme.org/knowledge-bank/waste/ "><span
-                        class="badge">?</span></a></label>
+                                                                       data-tooltip="Single-use plastics are a by-product of petroleum and are thrown away after just one use. The school campus is a single-use plastic-free zone if there are no such plastics present or are being used in any way, inside the campus. To know how plastic waste adds to climate change. "><span
+                        class="badge">?</span></a><a class="kplink" href="https://www.greenschoolsprogramme.org/knowledge-bank/waste/" target="_blank"> </a></label>
             <ul class="list-inline">
                 <li>
                 <label>
-                <input type="radio" onClick="ComputeLab(1)" id="Q9A1" required name="Q9A1"
-                                value="<?php echo set_value('Q9A1', 'Y') ?>" <?php if (isset($data['Q9A1'])) echo $data['Q9A1'] == 'Y' ? "checked" : "" ?>>
+                <input type="radio" onClick="ComputeLab(1)" id="Q6AP1" required name="Q6AP1"
+                                value="<?php echo set_value('Q6AP1', 'Y') ?>" <?php if (isset($data['Q6AP1'])) echo $data['Q6AP1'] == 'Y' ? "checked" : "" ?>>
                 Yes</label>
                 </li>
                 <li>
                 <label>
-                <input type="radio" onClick="ComputeLab(2)" id="Q9A1" required name="Q9A1"
-                                value="<?php echo set_value('Q9A1', 'N') ?>" <?php if (isset($data['Q9A1'])) echo $data['Q9A1'] == 'N' ? "checked" : "" ?>>
+                <input type="radio" onClick="ComputeLab(2)" id="Q6AP1" required name="Q6AP1"
+                                value="<?php echo set_value('Q6AP1', 'N') ?>" <?php if (isset($data['Q6AP1'])) echo $data['Q6AP1'] == 'N' ? "checked" : "" ?>>
                 No</label>
                 </li>
             </ul>
             </div>
             <div class="form-group" id="lab1" <?php
-                if (isset($data['Q9A1']))
+                if (isset($data['Q6AP1']))
                 {
-                    if ($data['Q9A1'] == 'Y') {
+                    if ($data['Q6AP1'] == 'Y') {
                         echo "style='display: block;'";
                     } else {
                         echo "style=\"display: none;\"";
@@ -210,16 +422,16 @@
 
                 >
                 <label class="control-label"><span class="cube">6(a)</span>Please mention some ways in which plastic ban is ensured.</label>
-                <input type="text"  name="Q1AP1" id="Q1AP1" class="form-control" maxlength = "750"
-                            placeholder="<?php if (isset($data['Q1AP1'])) echo $data['Q1AP1'] ?>"
-                            value="<?php if (isset($data['Q1AP1'])) echo $data['Q1AP1'] ?>"/>
+                <input type="text"  name="Q6AP11" id="Q6AP11" class="form-control" maxlength = "750"
+                            placeholder="<?php if (isset($data['Q6AP11'])) echo $data['Q6AP11'] ?>"
+                            value="<?php if (isset($data['Q6AP11'])) echo $data['Q6AP11'] ?>"/>
                             </div>
                 <div class="form-group" id="lab"
 
                     <?php
-                    if (isset($data['Q9A1']))
+                    if (isset($data['Q6AP1']))
                     {
-                        if ($data['Q9A1'] == 'N') {
+                        if ($data['Q6AP1'] == 'N') {
                             echo "style='display: block;'";
                         } else {
                             echo "style=\"display: none;\"";
@@ -230,39 +442,39 @@
                     } ?>
                 >
                 <label class="control-label"><span class="cube">6(a)</span>Please mention 2 specific ways to phase out single-use plastics in school.</label>
-                <input type="text"  name="Q1AP1" id="Q1AP1" class="form-control" maxlength = "750"
-                            placeholder="<?php if (isset($data['Q1AP1'])) echo $data['Q1AP1'] ?>"
-                            value="<?php if (isset($data['Q1AP1'])) echo $data['Q1AP1'] ?>"/>
+                <input type="text"  name="Q6AP12" id="Q6AP12" class="form-control" maxlength = "750"
+                            placeholder="<?php if (isset($data['Q6AP12'])) echo $data['Q6AP12'] ?>"
+                            value="<?php if (isset($data['Q6AP12'])) echo $data['Q6AP12'] ?>"/>
                 </div> 
                 <div style= "margin-top:2%;"></div>
 	            <div class="form-group">
 	                    <label class="control-label"> <span class="cube">7</span>How will you ensure student and community involvement in the action plan? Please include curriculum interventions, if any.</label>
-	                    <input type="text"  name="Q1AP1" id="Q1AP1" class="form-control" maxlength = "250"
-	                            placeholder="<?php if (isset($data['Q1AP1'])) echo $data['Q1AP1'] ?>"
-	                            value="<?php if (isset($data['Q1AP1'])) echo $data['Q1AP1'] ?>"/>
+	                    <input type="text"  name="Q7AP1" id="Q7AP1" class="form-control" maxlength = "250"
+	                            placeholder="<?php if (isset($data['Q7AP1'])) echo $data['Q7AP1'] ?>"
+	                            value="<?php if (isset($data['Q7AP1'])) echo $data['Q7AP1'] ?>"/>
 	            </div>
 	            <div style= "margin-top:2%;"></div>
 	            
 	            <div class="form-group">
-	                    <label class="control-label"> <span class="cube">8</span>8.	Provide 3-5 indicators on which the implementation of the plan will be assessed. Include at least one example of all types of indicators: Environmental (estimated quantity of waste reduction; management), infrastructural (minor to major changes), and behavioural (culture of SWM within the school community).</label>
-	                    <input type="text" name="Q1AP1" id="Q1AP1" class="form-control" maxlength = "350"
-	                            placeholder="<?php if (isset($data['Q1AP1'])) echo $data['Q1AP1'] ?>"
-	                            value="<?php if (isset($data['Q1AP1'])) echo $data['Q1AP1'] ?>"/>
+	                    <label class="control-label"> <span class="cube">8</span>Provide 3-5 indicators on which the implementation of the plan will be assessed. Include at least one example of all types of indicators: Environmental (estimated quantity of waste reduction; management), infrastructural (minor to major changes), and behavioural (culture of SWM within the school community).</label>
+	                    <input type="text" name="Q8AP1" id="Q8AP1" class="form-control" maxlength = "350"
+	                            placeholder="<?php if (isset($data['Q8AP1'])) echo $data['Q8AP1'] ?>"
+	                            value="<?php if (isset($data['Q8AP1'])) echo $data['Q8AP1'] ?>"/>
 	            </div>
                 <div style= "margin-top:2%;"></div>
 	            <div class="form-group">
 	                    <label class="control-label"> <span class="cube">9</span>What are the plan’s estimated costs?</label>
-	                    <input type="text" name="Q1AP1" id="Q1AP1" class="form-control" maxlength = "250"
-	                            placeholder="<?php if (isset($data['Q1AP1'])) echo $data['Q1AP1'] ?>"
-	                            value="<?php if (isset($data['Q1AP1'])) echo $data['Q1AP1'] ?>"/>
+	                    <input type="text" name="Q9AP1" id="Q9AP1" class="form-control" maxlength = "250"
+	                            placeholder="<?php if (isset($data['Q9AP1'])) echo $data['Q9AP1'] ?>"
+	                            value="<?php if (isset($data['Q9AP1'])) echo $data['Q9AP1'] ?>"/>
 	            </div>
 	            <div style= "margin-top:2%;"></div>
 	            
 	            <div class="form-group">
 	                    <label class="control-label"> <span class="cube">10</span>Please mention two short-term and two long-term benefits of your plan with reference to Q5 above.</label>
-	                    <input type="text" name="Q1AP1" id="Q1AP1" class="form-control" maxlength = "350"
-	                            placeholder="<?php if (isset($data['Q1AP1'])) echo $data['Q1AP1'] ?>"
-	                            value="<?php if (isset($data['Q1AP1'])) echo $data['Q1AP1'] ?>"/>
+	                    <input type="text" name="Q10AP1" id="Q10AP1" class="form-control" maxlength = "350"
+	                            placeholder="<?php if (isset($data['Q10AP1'])) echo $data['Q10AP1'] ?>"
+	                            value="<?php if (isset($data['Q10AP1'])) echo $data['Q10AP1'] ?>"/>
 	            </div>
                 <div style= "margin-top:2%;"></div>
                 <div class="form-group" id="WastePolicy">
@@ -343,11 +555,38 @@
 			  },
               Q4AP1:{
 				  required:true,
+              },
+              Q4AP2:{
+				  required:true,
+              },
+              Q4AP3:{
+				  required:true,
+              },
+              Q4AP4:{
+				  required:true,
+              },
+              Q4AP5:{
+				  required:true,
+              },
+              Q4AP6:{
+				  required:true,
 			  },
               Q5AP1:{
 				  required:true,
 			  },
               Q6AP1:{
+				  required:true,
+			  },
+              Q7AP1:{
+				  required:true,
+			  },
+              Q8AP1:{
+				  required:true,
+			  },
+              Q9AP1:{
+				  required:true,
+			  },
+              Q10AP1:{
 				  required:true,
 			  }
 
