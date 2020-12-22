@@ -47,7 +47,7 @@ class User_model extends CI_Model
         $query = $db2->select('a.*, a.username AS username, a.id AS id, a.status AS status, b.complete_status AS complete_status, b.progress AS progress')
             ->from('gsp_user As a')
             ->join('gsp_school AS b', 'b.coemail=a.email', 'left') 		
-            ->where(array('a.email' => $argPost['email'], 'a.password' => $argPost['password'], 'b.progress'=>'100', 'b.complete_status'=>'1'))
+            ->where(array('a.email' => $argPost['email'], 'a.password' => $argPost['password'],'b.complete_status'=>'1'))
             ->get();
         if ($query->num_rows() > 0) {
             $row = $query->row();
