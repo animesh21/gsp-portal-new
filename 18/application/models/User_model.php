@@ -58,7 +58,6 @@ class User_model extends CI_Model
 					'USERNAME' => $row->username,
 					'USER_ID' => $row->id,
 					'status' => $row->status,
-					'lastid' => $row->lastQuestionId,
                     'email' => $row->email
 				);
             	$this->session->set_userdata($userData);
