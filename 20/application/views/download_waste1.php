@@ -260,7 +260,7 @@ function checkUpdate(){
       <div class=" form-group">
       <label>Per capita waste generation in school <a class="tt" data-tooltip="Calculate your per capita using data from the last submitted audit. The answer entered should only contain numerals. For the total population, please refer to Q4(a) under 'General' questions."><span class="badge">?</span></a> </label>
         <p>Please calculate your per capita waste generation:&nbsp;<span class="frac"><sup>Total amount of waste (add points 3 to 9)</sup><span>&frasl;</span><sub>Total Population</sub></span>.</p>
-        <input class="form-control" id="Q1B1" type="number" min="0" name="Q1B1"
+        <input class="form-control" id="Q1B1" type="number" name="Q1B1"
                                placeholder="<?php if (isset($data['Q1B1'])) echo $data['Q1B1'] ?>" 
                                value="<?php echo set_value('Q1B1'); ?>"/>
          </div>
