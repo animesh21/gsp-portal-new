@@ -532,6 +532,8 @@
 
     
     <div class="text-center">
+    <button type="button" class="org-btn" id="actionplanp">Previous</button>
+
       <button type="submit" class="org-btn" id="schoolnext" value="movenext">Next</button>
      <input type="button" class="org-btn submit button" value="Save and Resume Later" id="schoolresume" style="border:none;" />
     </div> 
@@ -540,6 +542,24 @@
 <?php $this->load->view('footer'); ?>
 
 <script>
+
+$(document).ready(function () {
+                $('#actionplanp').on('click', function (data) {
+                    var fd = $('#baseline-form').serialize();
+                    //console.log(fd);
+                    $.ajax({
+                        type: 'POST',
+                        url: '<?php echo base_url('previous/generalajax') ?>',
+                        data: fd,
+                        success: function (data)
+                        {
+              
+                             window.location.href = "<?php echo base_url('Baseline/downloadWasteSection'); ?>";
+                            
+                            
+                        }
+                    });
+                });
 	jQuery(document).ready(function(){
 	
 	jQuery('#action-form').validate({
