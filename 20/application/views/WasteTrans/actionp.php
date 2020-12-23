@@ -103,21 +103,21 @@
     <?php echo form_open('Actionp/set', array('id' => 'action-form')); ?>
             <div style= "margin-top:2%;"></div>
             <div class="form-group">
-                    <label class="control-label"> <span class="cube">1</span>Title of the plan: Make sure your title is short, catchy & conveys the idea behind your story </label>
+                    <label class="control-label"> <span class="cube">1</span>Title of the plan: Make sure your title is short, catchy & conveys the idea behind your story. (Max 150 characters)</label>
                     <input type="text" name="Q1AP2" id="Q1AP2" class="form-control" maxlength = "150"
                             placeholder="<?php if (isset($data['Q1AP2'])) echo $data['Q1AP2'] ?>"
                             value="<?php if (isset($data['Q1AP2'])) echo $data['Q1AP2'] ?>"/>
             </div>
             <div style= "margin-top:2%;"></div>
             <div class="form-group">
-                    <label class="control-label"> <span class="cube">2</span>Area Profile: Where is the nearest dumping site or landfill? What are the prominent waste management issues in the vicinity of the school?</label>
+                    <label class="control-label"> <span class="cube">2</span>Area Profile: Where is the nearest dumping site or landfill? What are the prominent waste management issues in the vicinity of the school? (Max 250 characters)</label>
                     <input type="text"  name="Q2AP1" id="Q2AP1" class="form-control" maxlength = "250"
                             placeholder="<?php if (isset($data['Q2AP1'])) echo $data['Q2AP1'] ?>"
                             value="<?php if (isset($data['Q2AP1'])) echo $data['Q2AP1'] ?>"/>
             </div>
             <div style= "margin-top:2%;"></div>
             <div class="form-group">
-                    <label class="control-label"> <span class="cube">3</span>What are the existing major solid waste management (SWM) issues in school that need an action plan? </label>
+                    <label class="control-label"> <span class="cube">3</span>What are the existing major solid waste management (SWM) issues in school that need an action plan? (Max 250 characters)</label>
                     <input type="text"  name="Q3AP1" id="Q3AP1" class="form-control" maxlength = "250"
                             placeholder="<?php if (isset($data['Q3AP1'])) echo $data['Q3AP1'] ?>"
                             value="<?php if (isset($data['Q3AP1'])) echo $data['Q3AP1'] ?>"/>
@@ -145,7 +145,7 @@
                 <label>
                 <input type="radio" name="Q4AP1"
                                             value="<?php echo set_value('Q4AP1', 3) ?>" <?php if (isset($data['Q4AP1'])) echo $data['Q4AP1'] == 3 ? "checked" : "" ?>>
-                                            twice a week</label>
+                                            Twice a week</label>
                 </div>
                 <div class="radio">
                 <label>
@@ -187,7 +187,7 @@
                 <label>
                 <input type="radio" name="Q4AP2"
                                             value="<?php echo set_value('Q4AP2', 3) ?>" <?php if (isset($data['Q4AP2'])) echo $data['Q4AP2'] == 3 ? "checked" : "" ?>>
-                                            twice a week</label>
+                                            Twice a week</label>
                 </div>
                 <div class="radio">
                 <label>
@@ -229,7 +229,7 @@
                 <label>
                 <input type="radio" name="Q4AP3"
                                             value="<?php echo set_value('Q4AP3', 3) ?>" <?php if (isset($data['Q4AP3'])) echo $data['Q4AP3'] == 3 ? "checked" : "" ?>>
-                                            twice a week</label>
+                                            Twice a week</label>
                 </div>
                 <div class="radio">
                 <label>
@@ -271,7 +271,7 @@
                 <label>
                 <input type="radio" name="Q4AP4"
                                             value="<?php echo set_value('Q4AP4', 3) ?>" <?php if (isset($data['Q4AP4'])) echo $data['Q4AP4'] == 3 ? "checked" : "" ?>>
-                                            twice a week</label>
+                                            Twice a week</label>
                 </div>
                 <div class="radio">
                 <label>
@@ -314,7 +314,7 @@
                 <label>
                 <input type="radio" name="Q4AP5"
                                             value="<?php echo set_value('Q4AP5', 3) ?>" <?php if (isset($data['Q4AP5'])) echo $data['Q4AP5'] == 3 ? "checked" : "" ?>>
-                                            twice a week</label>
+                                            Twice a week</label>
                 </div>
                 <div class="radio">
                 <label>
@@ -356,7 +356,7 @@
                 <label>
                 <input type="radio" name="Q4AP6"
                                             value="<?php echo set_value('Q4AP6', 3) ?>" <?php if (isset($data['Q4AP6'])) echo $data['Q4AP6'] == 3 ? "checked" : "" ?>>
-                                            twice a week</label>
+                                            Twice a week</label>
                 </div>
                 <div class="radio">
                 <label>
@@ -379,8 +379,8 @@
             </div>
             <div style= "margin-top:2%;"></div>
             <div class="form-group">
-                    <label class="control-label"> <span class="cube">5</span>What strategies do you propose to improve SWM in the school? </label>
-                    <p>Explain and elaborate on the <strong> specific steps to be taken to reduce and manage each type of waste stream mentioned in Q4.</strong> How will the changes be introduced and implemented, as and when schools open in 2021? Also include the possibility of continuation of COVID-19 related materials, such as masks and gloves. How long will the process take – from issue identification to implementation? What will be the challenges and their solutions? Include statistics like cost effectiveness, infrastructural requirement if any, ease of replication if desired. Please give numerical data wherever possible.</p>
+                    <label class="control-label"> <span class="cube">5</span>What strategies do you propose to improve SWM in the school? (Max 750 characters)</label>
+                    <p>Explain and elaborate on the <strong> specific steps to be taken to reduce and manage each type of waste stream mentioned in Q4.</strong><i>( How will the changes be introduced and implemented, as and when schools open in 2021? Also include the possibility of continuation of COVID-19 related materials, such as masks and gloves. How long will the process take – from issue identification to implementation? What will be the challenges and their solutions? Include statistics like cost effectiveness, infrastructural requirement if any, ease of replication if desired. Please give numerical data wherever possible.)</i></p>
                     <input type="text"  name="Q5AP1" id="Q5AP1" class="form-control" maxlength = "750"
                             placeholder="<?php if (isset($data['Q5AP1'])) echo $data['Q5AP1'] ?>"
                             value="<?php if (isset($data['Q5AP1'])) echo $data['Q5AP1'] ?>"/>
@@ -390,7 +390,7 @@
             
             <div class="form-group">
             <label class="control-label"> <span class="cube">6</span>Is your school a single-use plastic-free zone?<a class="tt"
-                                                                       data-tooltip="Single-use plastics are a by-product of petroleum and are thrown away after just one use. The school campus is a single-use plastic-free zone if there are no such plastics present or are being used in any way, inside the campus. To know how plastic waste adds to climate change. "><span
+                                                                       data-tooltip="Single-use plastics are a by-product of petroleum and are thrown away after just one use. The school campus is a single-use plastic-free zone if there are no such plastics present or are being used in any way, inside the campus."><span
                         class="badge">?</span></a><a class="kplink" href="https://www.greenschoolsprogramme.org/knowledge-bank/waste/" target="_blank"> </a></label>
             <ul class="list-inline">
                 <li>
@@ -421,8 +421,8 @@
                 } ?>
 
                 >
-                <label class="control-label"><span class="cube">6(a)</span>Please mention some ways in which plastic ban is ensured.</label>
-                <input type="text"  name="Q6AP11" id="Q6AP11" class="form-control" maxlength = "750"
+                <label class="control-label"><span class="cube">6(a)</span>Please mention 2 ways in which plastic ban is ensured. (Max 150 characters)</label>
+                <input type="text"  name="Q6AP11" id="Q6AP11" class="form-control" maxlength = "150"
                             placeholder="<?php if (isset($data['Q6AP11'])) echo $data['Q6AP11'] ?>"
                             value="<?php if (isset($data['Q6AP11'])) echo $data['Q6AP11'] ?>"/>
                             </div>
@@ -441,14 +441,14 @@
 
                     } ?>
                 >
-                <label class="control-label"><span class="cube">6(a)</span>Please mention 2 specific ways to phase out single-use plastics in school.</label>
-                <input type="text"  name="Q6AP12" id="Q6AP12" class="form-control" maxlength = "750"
+                <label class="control-label"><span class="cube">6(a)</span>Please mention 2 specific ways to phase out single-use plastics in school. (Max 150 characters)</label>
+                <input type="text"  name="Q6AP12" id="Q6AP12" class="form-control" maxlength = "150"
                             placeholder="<?php if (isset($data['Q6AP12'])) echo $data['Q6AP12'] ?>"
                             value="<?php if (isset($data['Q6AP12'])) echo $data['Q6AP12'] ?>"/>
                 </div> 
                 <div style= "margin-top:2%;"></div>
 	            <div class="form-group">
-	                    <label class="control-label"> <span class="cube">7</span>How will you ensure student and community involvement in the action plan? Please include curriculum interventions, if any.</label>
+	                    <label class="control-label"> <span class="cube">7</span>How will you ensure student and community involvement in the action plan? Please include curriculum interventions, if any. (Max 250 characters)</label>
 	                    <input type="text"  name="Q7AP1" id="Q7AP1" class="form-control" maxlength = "250"
 	                            placeholder="<?php if (isset($data['Q7AP1'])) echo $data['Q7AP1'] ?>"
 	                            value="<?php if (isset($data['Q7AP1'])) echo $data['Q7AP1'] ?>"/>
@@ -456,14 +456,14 @@
 	            <div style= "margin-top:2%;"></div>
 	            
 	            <div class="form-group">
-	                    <label class="control-label"> <span class="cube">8</span>Provide 3-5 indicators on which the implementation of the plan will be assessed. Include at least one example of all types of indicators: Environmental (estimated quantity of waste reduction; management), infrastructural (minor to major changes), and behavioural (culture of SWM within the school community).</label>
+	                    <label class="control-label"> <span class="cube">8</span>Provide 3-5 indicators on which the implementation of the plan will be assessed. Include at least one example of all types of indicators: environmental (estimated quantity of waste reduction; management), infrastructural (minor to major changes), and behavioural (culture of SWM within the school community). (Max 350 characters)</label>
 	                    <input type="text" name="Q8AP1" id="Q8AP1" class="form-control" maxlength = "350"
 	                            placeholder="<?php if (isset($data['Q8AP1'])) echo $data['Q8AP1'] ?>"
 	                            value="<?php if (isset($data['Q8AP1'])) echo $data['Q8AP1'] ?>"/>
 	            </div>
                 <div style= "margin-top:2%;"></div>
 	            <div class="form-group">
-	                    <label class="control-label"> <span class="cube">9</span>What are the plan’s estimated costs?</label>
+	                    <label class="control-label"> <span class="cube">9</span>What are the plan’s estimated costs? (Max 250 characters)</label>
 	                    <input type="text" name="Q9AP1" id="Q9AP1" class="form-control" maxlength = "250"
 	                            placeholder="<?php if (isset($data['Q9AP1'])) echo $data['Q9AP1'] ?>"
 	                            value="<?php if (isset($data['Q9AP1'])) echo $data['Q9AP1'] ?>"/>
@@ -471,7 +471,7 @@
 	            <div style= "margin-top:2%;"></div>
 	            
 	            <div class="form-group">
-	                    <label class="control-label"> <span class="cube">10</span>Please mention two short-term and two long-term benefits of your plan with reference to Q5 above.</label>
+	                    <label class="control-label"> <span class="cube">10</span>Please mention two short-term and two long-term benefits of your plan with reference to Q5 above. (Max 250 characters)</label>
 	                    <input type="text" name="Q10AP1" id="Q10AP1" class="form-control" maxlength = "350"
 	                            placeholder="<?php if (isset($data['Q10AP1'])) echo $data['Q10AP1'] ?>"
 	                            value="<?php if (isset($data['Q10AP1'])) echo $data['Q10AP1'] ?>"/>
