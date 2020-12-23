@@ -95,7 +95,8 @@ class User_model extends CI_Model
     public function UserLoginDownload2($argPost)
     {
     $msg=''; 
-        $query = $this->db->select('a.*, a.username AS username, a.id AS id, a.status AS status, b.status AS status' )
+    $db2 = $this->load->database('db2', TRUE);
+        $query = $db2->select('a.*, a.username AS username, a.id AS id, a.status AS status, b.status AS status' )
             ->from('gsp_user As a')
             ->join('gsp_aduit_submitted AS b', 'b.userid=a.id', 'left')     
             ->where(array('a.email' => $argPost['email'], 'a.password' => $argPost['password'], 'b.status'=>'1'))
