@@ -534,8 +534,8 @@
     <div class="text-center">
     <button type="button" class="org-btn" id="actionplanp">Previous</button>
 
-      <button type="submit" class="org-btn" id="schoolnext" value="movenext">Next</button>
-     <input type="button" class="org-btn submit button" value="Save and Resume Later" id="schoolresume" style="border:none;" />
+      <button type="submit" class="org-btn" id="actionnext" value="movenext">Next</button>
+     <input type="button" class="org-btn submit button" value="Save and Resume Later" id="actionresume" style="border:none;" />
     </div> 
     <?php echo form_close(); ?> </div>
 </div>
@@ -543,7 +543,7 @@
 
 <script>
 
-$(document).ready(function () {
+                $(document).ready(function () {
                 $('#actionplanp').on('click', function (data) {
                     var fd = $('#action-form').serialize();
                     //console.log(fd);
@@ -628,24 +628,22 @@ $(document).ready(function () {
 		
 		
 	});
-	</script>
 
 
 
-    <script>
 	/**This Function Used For Save & Logout**/
-$('#schoolresume').on('click', function (data) {
+        $('#actionresume').on('click', function (data) {
             var fd = $('#action-form').serialize();
             $.ajax({
                 type: 'POST',
-                url: '<?php echo base_url('school/schoolAnswer') ?>',
+                url: '<?php echo base_url('actionp/set') ?>',
                 data: fd,
                 success: function (data) {
                     window.location.href = "<?php echo base_url('logout'); ?>";
                 }
             });
         });
-//delete air files
+         //delete air files
         $('body').on('click', '.air-delete-files', function (data) {
             var test = confirm("Are you sure you want to delete this file");
             if (test == true)
