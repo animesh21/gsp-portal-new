@@ -127,8 +127,8 @@
             $date2 = $date[0]->date_added;
 	if($date1 > $date2){ ?>
           <a href="http://greenschoolsprogramme.org/audit/downloadLogin" target="blank"><button class="btn btn-primary" style="float: right; background-color: #e86549; border-color: #e86549;">Download Report 2017</button></a> 
-
-          <a href="<?php echo base_url('DownloadLogin/index18') ;?>" target="blank"><button class="btn btn-primary" style="float: right; background-color: #e86549; border-color: #e86549; margin-right: 6px;">Download Report 2018</button></a> </div>
+                    <a href="https://greenschoolsprogramme.org/audit/18/DownloadLogin" target="blank"><button class="btn btn-primary" style="float: right; background-color: #e86549; border-color: #e86549; margin-right: 6px;">Download Report 2018</button></a> </div>
+          <!-- <a href="<?php echo base_url('DownloadLogin/index18') ;?>" target="blank"><button class="btn btn-primary" style="float: right; background-color: #e86549; border-color: #e86549; margin-right: 6px;">Download Report 2018</button></a> </div> -->
           <hr/>
 	<?php } else{ }  ?>
         </div>
