@@ -1935,8 +1935,10 @@
             errors: {
                 filesLimit: 'Only ${limit} files are allowed to be uploaded.',
                 filesType: 'Only ${extensions} files are allowed to be uploaded.',
-                fileSize: '${name} is too large! Please choose a file up to ${fileMaxSize}MB.',
-                filesSizeAll: 'Files that you choosed are too large! Please upload files up to ${maxSize} MB.',
+                // fileSize: '${name} is too large! The file size should not exceed 100 kb ${fileMaxSize}MB.',
+                fileSize: '${name} is too large! The file size should not exceed 100 kb.',
+
+				filesSizeAll: 'Files that you choosed are too large! Please upload files up to ${maxSize} MB.',
                 fileName: 'File with the name ${name} is already selected.',
                 folderUpload: 'You are not allowed to upload folders.'
             }
