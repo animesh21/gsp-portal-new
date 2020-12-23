@@ -64,7 +64,7 @@ public function index() {
           //print_r($post);exit;
           $this->Answer_model->submitAnswers($post,1);
           updateProgress($this->session->userdata('USER_ID'), 35);
-          redirect(base_url("WasteTransformers"));
+          redirect(base_url("actionp"));
        }
 
     

@@ -53,7 +53,7 @@ class Actionp extends CI_Controller {
         
         $post = $this->input->post();
         $this->Answer_model->submitAnswers($post,0);
-        redirect(base_url("general"));
+        redirect(base_url("WasteTransformers"));
         //print_r($post);
     }
 	
