@@ -1976,7 +1976,7 @@ if (isset($data['Q9A1']))
 	
 	jQuery('#air').validate({
 		rules:{
-		      Q1A1S1:{
+		    Q1A1S1:{
 				  required:true,
 			  },
 			  Q1A1S3:{

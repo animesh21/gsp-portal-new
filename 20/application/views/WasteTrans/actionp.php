@@ -562,115 +562,115 @@
                 });
 	jQuery(document).ready(function(){
 	
-	jQuery('#action-form').validate({
-		rules:{
-			  Q1AP2:{
-				  required:true,
-			  },
-			  Q2AP1:{
-				  required:true,
-			  },
-			  Q3AP1:{
-				  required:true,
-			  },
-              Q4AP1:{
-				  required:true,
-              },
-              Q4AP2:{
-				  required:true,
-              },
-              Q4AP3:{
-				  required:true,
-              },
-              Q4AP4:{
-				  required:true,
-              },
-              Q4AP5:{
-				  required:true,
-              },
-              Q4AP6:{
-				  required:true,
-			  },
-              Q5AP1:{
-				  required:true,
-			  },
-              Q6AP1:{
-				  required:true,
-			  },
-              Q7AP1:{
-				  required:true,
-			  },
-              Q8AP1:{
-				  required:true,
-			  },
-              Q9AP1:{
-				  required:true,
-			  },
-              Q10AP1:{
-				  required:true,
-			  }
-
-			 
-		}
-       
-	});
-	});
-	
-	jQuery('#action-form').submit(function(e){
-		
-		
-		$r=jQuery('#action-form').valid();
-		if($r == false)
-		{
-			   e.preventDefault();
-			   jQuery('#action-form').valid();
-		}
-		
-		
-	});
-
-
-
-	/**This Function Used For Save & Logout**/
-        $('#actionresume').on('click', function (data) {
-            var fd = $('#action-form').serialize();
-            $.ajax({
-                type: 'POST',
-                url: '<?php echo base_url('actionp/set') ?>',
-                data: fd,
-                success: function (data) {
-                    window.location.href = "<?php echo base_url('logout'); ?>";
-                }
-            });
-        });
-         //delete air files
-        $('body').on('click', '.air-delete-files', function (data) {
-            var test = confirm("Are you sure you want to delete this file");
-            if (test == true)
-            {
-                var divId = $(this).attr('data-id');
-                $.ajax({
-                    url: '<?php echo base_url('upload_files/deletFiles') ?>',
-                    type: 'POST',
-                    data: {id: $(this).attr('data-id')},
-                    success: function (data)
-                    {
-                        if (data == "success")
-                        {
-                            console.log('index' + divId);
-                            $('#msg').html('<div class="alert alert-success">' +
-                                    '<strong>&#10004; Success!</strong> Files deleted successfully.' +
-                                    '</div>');
-                            $('#index' + divId).html('');
-                        } else if (data == "error")
-                        {
-                            $('#msg').html('<div class="alert alert-danger">' +
-                                    '<strong>&#x2716; Error!</strong> There is an error deleting your files.' +
-                                    '</div>');
+                jQuery('#action-form').validate({
+                    rules:{
+                        Q1AP2:{
+                            required:true,
+                        },
+                        Q2AP1:{
+                            required:true,
+                        },
+                        Q3AP1:{
+                            required:true,
+                        },
+                        Q4AP1:{
+                            required:true,
+                        },
+                        Q4AP2:{
+                            required:true,
+                        },
+                        Q4AP3:{
+                            required:true,
+                        },
+                        Q4AP4:{
+                            required:true,
+                        },
+                        Q4AP5:{
+                            required:true,
+                        },
+                        Q4AP6:{
+                            required:true,
+                        },
+                        Q5AP1:{
+                            required:true,
+                        },
+                        Q6AP1:{
+                            required:true,
+                        },
+                        Q7AP1:{
+                            required:true,
+                        },
+                        Q8AP1:{
+                            required:true,
+                        },
+                        Q9AP1:{
+                            required:true,
+                        },
+                        Q10AP1:{
+                            required:true,
                         }
+
+                        
+                    }
+                
+                });
+                
+	
+                jQuery('#action-form').submit(function(e){
+                    
+                    
+                    $r=jQuery('#action-form').valid();
+                    if($r == false)
+                    {
+                        e.preventDefault();
+                        jQuery('#action-form').valid();
+                    }
+                    
+                    
+                });
+
+
+
+	            /**This Function Used For Save & Logout**/
+                $('#actionresume').on('click', function (data) {
+                    var fd = $('#action-form').serialize();
+                    $.ajax({
+                        type: 'POST',
+                        url: '<?php echo base_url('actionp/set') ?>',
+                        data: fd,
+                        success: function (data) {
+                            window.location.href = "<?php echo base_url('logout'); ?>";
+                        }
+                    });
+                });
+                //delete air files
+                $('body').on('click', '.air-delete-files', function (data) {
+                    var test = confirm("Are you sure you want to delete this file");
+                    if (test == true)
+                    {
+                        var divId = $(this).attr('data-id');
+                        $.ajax({
+                            url: '<?php echo base_url('upload_files/deletFiles') ?>',
+                            type: 'POST',
+                            data: {id: $(this).attr('data-id')},
+                            success: function (data)
+                            {
+                                if (data == "success")
+                                {
+                                    console.log('index' + divId);
+                                    $('#msg').html('<div class="alert alert-success">' +
+                                            '<strong>&#10004; Success!</strong> Files deleted successfully.' +
+                                            '</div>');
+                                    $('#index' + divId).html('');
+                                } else if (data == "error")
+                                {
+                                    $('#msg').html('<div class="alert alert-danger">' +
+                                            '<strong>&#x2716; Error!</strong> There is an error deleting your files.' +
+                                            '</div>');
+                                }
+                            }
+                        });
                     }
                 });
-            }
-        });
     });
 </script>
