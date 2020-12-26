@@ -92,7 +92,7 @@
       <p>Please provide the details of the SWM Action Plan team. A teacher with interest in waste and five to 10 students from Grades 6 to 12 will be ideal for your team. With schools closed, the Administrative staff is important as they will provide the permissions required for the housekeeping and cleaning staff to help you with the plan.</p>
 
     </div>
-    <?php echo form_open('Actionp/set', array('id' => 'team-form')); ?>
+    <?php echo form_open('Theteam/set', array('id' => 'team-form')); ?>
     <div style= "margin-top:2%;"></div>
     <div class="form-group">
       <label class="control-label">Teachers (maximum of three teachers can be part of the team):</label>
@@ -468,8 +468,8 @@
     <div class="text-center">
     <button type="button" class="org-btn" id="teamplanp">Previous</button>
 
-      <button type="submit" class="org-btn" id="teamnext" value="movenext">Submit</button>
-     <!-- <input type="button" class="org-btn submit button" value="Save and Resume Later" id="teamresume" style="border:none;" /> -->
+      <button type="submit" class="org-btn" id="teamnext" value="movenext">Next</button>
+     <input type="button" class="org-btn submit button" value="Save and Resume Later" id="teamresume" style="border:none;" />
     </div> 
     <?php echo form_close(); ?> </div>
 </div>
@@ -488,7 +488,7 @@
                         success: function (data)
                         {
               
-                             window.location.href = "<?php echo base_url('Baseline/downloadWasteSection'); ?>";
+                             window.location.href = "<?php echo base_url('Actionp'); ?>";
                             
                             
                         }

@@ -543,7 +543,7 @@
 
 <script>
 
-                $(document).ready(function () {
+    $(document).ready(function () {
                 $('#actionplanp').on('click', function (data) {
                     var fd = $('#action-form').serialize();
                     //console.log(fd);
@@ -560,60 +560,60 @@
                         }
                     });
                 });
-	jQuery(document).ready(function(){
-	
-                jQuery('#action-form').validate({
-                    rules:{
-                        Q1AP2:{
-                            required:true,
-                        },
-                        Q2AP1:{
-                            required:true,
-                        },
-                        Q3AP1:{
-                            required:true,
-                        },
-                        Q4AP1:{
-                            required:true,
-                        },
-                        Q4AP2:{
-                            required:true,
-                        },
-                        Q4AP3:{
-                            required:true,
-                        },
-                        Q4AP4:{
-                            required:true,
-                        },
-                        Q4AP5:{
-                            required:true,
-                        },
-                        Q4AP6:{
-                            required:true,
-                        },
-                        Q5AP1:{
-                            required:true,
-                        },
-                        Q6AP1:{
-                            required:true,
-                        },
-                        Q7AP1:{
-                            required:true,
-                        },
-                        Q8AP1:{
-                            required:true,
-                        },
-                        Q9AP1:{
-                            required:true,
-                        },
-                        Q10AP1:{
-                            required:true,
-                        }
-
-                        
-                    }
+                jQuery(document).ready(function(){
                 
-                });
+                            jQuery('#action-form').validate({
+                                rules:{
+                                    Q1AP2:{
+                                        required:true,
+                                    },
+                                    Q2AP1:{
+                                        required:true,
+                                    },
+                                    Q3AP1:{
+                                        required:true,
+                                    },
+                                    Q4AP1:{
+                                        required:true,
+                                    },
+                                    Q4AP2:{
+                                        required:true,
+                                    },
+                                    Q4AP3:{
+                                        required:true,
+                                    },
+                                    Q4AP4:{
+                                        required:true,
+                                    },
+                                    Q4AP5:{
+                                        required:true,
+                                    },
+                                    Q4AP6:{
+                                        required:true,
+                                    },
+                                    Q5AP1:{
+                                        required:true,
+                                    },
+                                    Q6AP1:{
+                                        required:true,
+                                    },
+                                    Q7AP1:{
+                                        required:true,
+                                    },
+                                    Q8AP1:{
+                                        required:true,
+                                    },
+                                    Q9AP1:{
+                                        required:true,
+                                    },
+                                    Q10AP1:{
+                                        required:true,
+                                    }
+
+                                    
+                                }
+                            
+                            });
                 
 	
                 jQuery('#action-form').submit(function(e){
@@ -672,5 +672,7 @@
                         });
                     }
                 });
-    });
+    
+            });
+        });
 </script>

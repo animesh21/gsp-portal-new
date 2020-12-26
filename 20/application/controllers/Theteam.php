@@ -23,7 +23,7 @@ class Theteam extends CI_Controller {
     }
 
     public function index() {
-    	$data['title'] = 'School';
+    	$data['title'] = 'The Team';
     	if ($this->session->userdata('USER_ID') == '') {
         
             redirect('downloadLogin');
@@ -53,7 +53,7 @@ class Theteam extends CI_Controller {
         
         $post = $this->input->post();
         $this->Answer_model->submitAnswers($post,0);
-        redirect(base_url("WasteTransformers"));
+        redirect(base_url("Areyou"));
         //print_r($post);
     }
 	
