@@ -504,27 +504,27 @@
             </tr>
         </thead>
         <tbody>
-    <?php foreach ($files as $f) { ?>
-    <tr id="index<?php echo $f->id; ?>">
-      <?php 
-	    		  
-            //$array = explode('.',$f->file_name); 
-           // $count = count($array);
-	 // $extension = $array[$count-1];
-            ?>
-      <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
-     <!-- <td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $f->file_name ?>" class="img-responsive" /></td>-->
-      <?php //}else{ ?>
-      <!--<td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>-->
-      <?php //}?>
-      <?php $name = str_replace(" ", "_", $f->name . "_Supporting_Document_Air_"); ?>
-      <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
-      <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
-      <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
-    </tr>
-    <?php } ?>
-  </tbody>
-              </table>
+            <?php foreach ($files as $f) { ?>
+            <tr id="index<?php echo $f->id; ?>">
+            <?php 
+                        
+                    $array = explode('.',$f->file_name); 
+                $count = count($array);
+            $extension = $array[$count-1];
+                    ?>
+            <?php if($extension == "jpg" || $extension == "jpeg"){ ?>
+            <td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" /></td>
+            <?php }else{ ?>
+            <td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
+            <?php }?>
+            <?php $name = str_replace(" ", "_", $f->name . "_Supporting_Document_Air_"); ?>
+            <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+            <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+            <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+            </tr>
+            <?php } ?>
+        </tbody>
+        </table>
 
 
 
@@ -540,9 +540,6 @@
     <?php echo form_close(); ?> </div>
 </div>
 <?php $this->load->view('footer'); ?>
-
-
-
 
 <script>
 
@@ -619,18 +616,18 @@
                             });
                 
 	
-                            jQuery('#action-form').submit(function(e){
-                                
-                                
-                                $r=jQuery('#action-form').valid();
-                                if($r == false)
-                                {
-                                    e.preventDefault();
-                                    jQuery('#action-form').valid();
-                                }
-                                
-                                
-                            });
+                jQuery('#action-form').submit(function(e){
+                    
+                    
+                    $r=jQuery('#action-form').valid();
+                    if($r == false)
+                    {
+                        e.preventDefault();
+                        jQuery('#action-form').valid();
+                    }
+                    
+                    
+                });
 
 
 
@@ -646,61 +643,6 @@
                         }
                     });
                 });
-                //Upload Files
-                $('#uploadFiles').on('click', function () {
-                                                $('#msg').html('');
-                                                var formdata = new FormData();
-                                                var ins = document
-                                                    .getElementById('file1').files.length;
-                                                if (ins == 0)
-                                                {
-                                                    $('#msg').html('<div class="alert alert-danger">' +
-                                                        '<strong>&#x2716; Error!</strong> Please Select a File to upload' +
-                                                        '</div>');
-                                                } else
-                                                {
-                                                    for (var x = 0; x < ins; x++) {
-                                                        formdata.append
-                                                        ("files[]", document.getElementById('file1').files[x]);
-                                                    }
-                                                    formdata.append('Fuels', $('#Fules_bill').val());
-                                                    $.ajax({
-                                                        url: '<?php echo base_url('upload_files'); ?>', // point to server-side PHP script
-                                                        dataType: 'text', // what to expect back from the PHP script
-                                                        cache: false,
-                                                        contentType: false,
-                                                        processData: false,
-                                                        data: formdata,
-                                                        type: 'post',
-                                                        success: function (response) {
-                                                            if (response == "success")
-                                                            {
-                                                                $('#msg').html('<div class="alert alert-success">' +
-                                                                    '<strong>&#10004; Success!</strong> Files uploaded successfully.' +
-                                                                    '</div>');
-                                                            } else if (response == "error")
-                                                            {
-                                                                $('#msg').html('<div class="alert alert-danger">' +
-                                                                    '<strong>&#x2716; Error!</strong> There is an error uploading your files.' +
-                                                                    '</div>');
-                                                            }
-                                                        }
-
-                                                    });
-                                                }
-                    });
-
-                 // enable fileuploader plugin
-                $('#file').fileuploader({
-                    addMore: true,
-                    theme: 'onebutton',
-                    limit: 3,
-                    extensions: ['jpg', 'jpeg', 'png','pdf','doc','docx'],
-                    captions: {
-                        button: "Select File"
-                    }
-                });
-                                            
                 //delete air files
                 $('body').on('click', '.air-delete-files', function (data) {
                     var test = confirm("Are you sure you want to delete this file");
