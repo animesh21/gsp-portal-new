@@ -489,7 +489,7 @@
         <br/> 
         <br/>
         <button class="btn uploadbtn upload" data-id="Supporting Document Air" data-toggle="modal"
-                    data-target="#uploadModal"
+                    data-target="#airModal"
                     type="button">UPLOAD FILES </button>
         <br>
         <br>
@@ -504,15 +504,28 @@
             </tr>
         </thead>
         <tbody>
-        <?php foreach ($supportDocWater as $f) { ?>
-        <tr id="index<?php echo $f->id; ?>">
-          <?php $name = str_replace(" ", "_", $f->name . "_Supporting_Document_Water_"); ?>
-          <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
-          <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
-         <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
-	  </tr>
-        <?php } ?>
-      </tbody>
+                  <?php foreach ($teamDoingWaste as $f) { ?>
+                  <tr id="index<?php echo $f->id; ?>">
+                    <?php 
+         // $array = explode('.',$f->file_name); 
+         // $count = count($array);
+         // $extension = $array[$count-1];
+          ?>
+                    <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
+                    <!-- <td><img style="width:62px; height:46px;" ;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $f->
+                    file_name ?>" class="img-responsive" />
+                    </td>
+                    -->
+                    <?php //}else{ ?>
+                    <!-- <td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>-->
+                    <?php //}?>
+                    <?php $name = str_replace(" ", "_", $f->name . "_Audit_Team_Doing_Survey_"); ?>
+                    <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                    <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+                    <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+                  </tr>
+                  <?php } ?>
+                </tbody>
         </table>
 
 
@@ -530,47 +543,7 @@
 </div>
 <?php $this->load->view('footer'); ?>
 
-<!-- upload code start here-->
-<div id="uploadModal" class="modal
-                                        fade" role="dialog">
-  <div class="modal-dialog modal-lg">
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header"
-                                                     style="background: rgb(232, 101, 73); color:#fff;">
-        <button type="button" class="close" data-dismiss="modal"> &times; </button>
-        <h4
-                                                            class="modal-title">Upload your files</h4>
-      </div>
-      <div class="modal-body">
-        <div class="row">
-          <div class="col-md-8 col-md-offset-2">
-            <div id="msg"></div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6 col-md-offset-3" id="test">
-            <form enctype="multipart/form-data">
-              <input
-                                                                        type="file" name="file[]" id="file1" multiple />
-              <input
-                                                                        type="hidden" name="Fules" value="" id="Fules_bill" />
-            </form>
-          </div>
-        </div>
-        <div class="row pull-right">
-          <div class="col-md-12">
-            <button class="btn btn-default" id="uploadFiles" type="button">UPLOAD</button>
-            <button type="button" class="btn btn-default" data-dismiss="modal">Return to survey</button>
-          </div>
-        </div>
-        <div class="clerarfix">&nbsp;</div>
-        <div class="clerarfix">&nbsp;</div>
-      </div>
-    </div>
-  </div>
-</div>
-<!--                                    Ends Here-->
+
 
 
 <script>
