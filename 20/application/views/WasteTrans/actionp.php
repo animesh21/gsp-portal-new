@@ -521,7 +521,7 @@
                   <?php //}else{ ?>
                   <!--   <td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>-->
                   <?php //}?>
-                  <?php $name = str_replace(" ", "_", $u->name . "_School_Initiatives_"); ?>
+                  <?php $name = str_replace(" ", "_", $f->name . "_Supporting_Document_Air_"); ?>
                   <td class="upload edit"><?php echo str_replace($name, "", $u->file_name); ?></td>
                   <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $u->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
                   <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $u->file_name; ?>" download="<?php echo $u->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
