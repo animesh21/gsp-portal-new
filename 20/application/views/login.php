@@ -75,6 +75,10 @@ header('Location: http://www.greenschoolsprogramme.org/audit/18/login/browser_ch
     <div class="home_container">
       <div class="mform" style="display: block;">
         <h1>Please Log In</h1>
+        <p><strong>GSP Audit 2020 will not take place this year because schools are closed, owing to the current health crisis. 
+
+We have been launching many online environmental initiatives for schools and students, and your school is duly informed. We request you to stay tuned to our emails and encourage students to participate.</strong></p>
+        
 <!--  <h1 style="font-size: 20px; font-family: fantasy; text-align: center; position: relative; color: #e86549; 
  text-align: center; border: none; padding: 0px;">EXTENDED AUDIT SUBMISSION DEADLINE: 10 NOVEMBER 2019 </h1> -->
         <p>The <a href="http://www.greenschoolsprogramme.org/" target="_blank">Green Schools Programme</a> audit is only open to registered schools. If you have already registered, please log in using your registered email id and password you would have received via email.</p>
@@ -82,9 +86,6 @@ header('Location: http://www.greenschoolsprogramme.org/audit/18/login/browser_ch
                                                                               target="_blank">registration page.</a></p>
         <!--<p>GSP Audit 2016 Questions <a href='http://www.greenschoolsprogramme.org/GSP-Audit2016-Questions.pdf' target='_blank'>click here</a></p>
                         <p class="deadline">Deadline to submit the audit is Friday,November 17,2017.</p>-->
-        <p><strong>GSP Audit 2020 will not take place this year because schools are closed, owing to the current health crisis. 
-
-We have been launching many online environmental initiatives for schools and students, and your school is duly informed. We request you to stay tuned to our emails and encourage students to participate.</strong></p>
         
         <p class="errortext"></p>
         <?php
@@ -116,8 +117,8 @@ We have been launching many online environmental initiatives for schools and stu
 
         </div>
         <?php echo form_close(); ?>
-        <p class="help">Need help? Email: <a href="mailto:support@greenschoolsprogramme.org">support@greenschoolsprogramme.org</a> or call 011-4061600, ext – 321, 300. <br>
-          Call between 10am to 5:30pm - Monday to Friday. </p>
+        <p class="help">Need help? Email: <a href="mailto:support@greenschoolsprogramme.org">support@greenschoolsprogramme.org</a>  <br>
+          </p>
       </div>
       <noscript>
       &lt;p class="disabled"&gt;This Audit requires Javascript to be enabled in your browser. Please enable
