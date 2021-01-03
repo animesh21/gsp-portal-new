@@ -75,6 +75,7 @@ class Theteam extends CI_Controller {
                     
                     
                     $this->Answer_model->submitAnswers($argPost,$userId,$type);
+                    updateProgress($this->session->userdata('USER_ID'), 100);
                     redirect(base_url('Theteam/submit'));
                     //print_r($post);
     }

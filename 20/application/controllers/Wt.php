@@ -54,7 +54,7 @@ class Wt extends CI_Controller {
         }
 		//print_r($post);exit;
         $this->Answer_model->submitAnswers($post,1);
-	    updateProgress($this->session->userdata('USER_ID'), 35);
+	    updateProgress($this->session->userdata('USER_ID'), 50);
       	redirect(base_url("Baseline/downloadWasteSection"));
      }
   

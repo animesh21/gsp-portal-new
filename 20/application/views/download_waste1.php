@@ -355,6 +355,37 @@ $('#schoolresume').on('click', function (data) {
                         }
                     });
                 });
-            });
-       
+
+                
+    
+
+            
+            
+            jQuery(document).ready(function(){
+                
+                jQuery('#baseline-form').validate({
+                    rules:{
+                      Q1B1:{
+                            required:true,
+                            number:true,
+                        }
+
+                        
+                    }
+                
+                });
+              });
+                jQuery('#baseline-form').submit(function(e){
+                    
+                    
+                    $r=jQuery('#baseline-form').valid();
+                    if($r == false)
+                    {
+                        e.preventDefault();
+                        jQuery('#baseline-form').valid();
+                    }
+                    
+                    
+                });
+              });    
         </script>

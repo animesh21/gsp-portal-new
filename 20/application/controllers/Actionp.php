@@ -53,6 +53,7 @@ class Actionp extends CI_Controller {
         
         $post = $this->input->post();
         $this->Answer_model->submitAnswers($post,0);
+        updateProgress($this->session->userdata('USER_ID'), 95);
         redirect(base_url("Theteam"));
         //print_r($post);
     }

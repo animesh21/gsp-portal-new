@@ -63,7 +63,7 @@ public function index() {
        // print_r($post);
           //print_r($post);exit;
           $this->Answer_model->submitAnswers($post,1);
-          updateProgress($this->session->userdata('USER_ID'), 35);
+          updateProgress($this->session->userdata('USER_ID'), 70);
           redirect(base_url("actionp"));
        }
 
