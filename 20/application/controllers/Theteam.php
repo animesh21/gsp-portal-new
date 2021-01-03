@@ -52,9 +52,36 @@ class Theteam extends CI_Controller {
     {
         
         $post = $this->input->post();
-        $this->Answer_model->submitAnswers($post,0);
-        redirect(base_url("Areyou"));
+        // $this->Answer_model->submitAnswers($post,0);
+        // redirect(base_url("Areyou"));
         //print_r($post);
+        // $post = $this->input->post();
+        // $this->Answer_model->submitAnswers($post,0);
+        $get_current_user=$this->session->userdata('USER_ID');
+        $get_current_year=date('Y');
+        $data=$this->db->select("id")->from('gsp_school')->where("userid=".$get_current_user)->get()->result();
+        $get_school_id=$data[0]->id;
+
+                    $shool_record=array("school_id"=>$get_school_id,"userid"=>$get_current_user,"year"=>$get_current_year,"status"=>'1');
+                    $this->db->insert('gsp_waste_submitted',$shool_record);
+                    
+                    // $this->db->where(array("id"=>$get_current_user));
+                    // $this->db->update("gsp_user",array("status"=>'1'));     
+                    
+                    
+                    
+                    // $this->session->unset_userdata(array('USERNAME', 'USER_ID'));
+                    // $this->session->set_flashdata('success', 'Successfully logged out!');
+                    
+                    
+                    $this->Answer_model->submitAnswers($argPost,$userId,$type);
+                    redirect(base_url('Theteam/submit'));
+                    //print_r($post);
+    }
+    public function submit(){
+        $this->session->unset_userdata(array('USERNAME', 'USER_ID'));
+        $this->session->set_flashdata('success', 'Successfully logged out!');
+        $this->load->view('WasteTrans/areyou',$data);
     }
 	
       

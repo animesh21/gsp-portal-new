@@ -43,6 +43,11 @@ class Areyou extends CI_Controller {
 
     public function set()
     {
+        $post = $this->input->post();
+
+        $this->Answer_model->submitAnswers($post,1);
+	    updateProgress($this->session->userdata('USER_ID'), 35);
+      	// redirect(base_url("Baseline/downloadWasteSection"));
         
         $post = $this->input->post();
         $this->Answer_model->submitAnswers($post,0);
@@ -60,12 +65,12 @@ class Areyou extends CI_Controller {
                     
                     
                     
-                    $this->session->unset_userdata(array('USERNAME', 'USER_ID'));
-                    $this->session->set_flashdata('success', 'Successfully logged out!');
+                    // $this->session->unset_userdata(array('USERNAME', 'USER_ID'));
+                    // $this->session->set_flashdata('success', 'Successfully logged out!');
                     
                     
-                    $this->Answer_model->submitAnswers($argPost,$userId,$type);
-                    redirect(base_url('DownloadLogin'));
+                    // $this->Answer_model->submitAnswers($argPost,$userId,$type);
+                    // redirect(base_url('DownloadLogin'));
                     //print_r($post);
 
     }

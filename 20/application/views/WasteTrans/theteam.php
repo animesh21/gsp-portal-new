@@ -95,7 +95,7 @@
     <?php echo form_open('Theteam/set', array('id' => 'team-form')); ?>
     <div style= "margin-top:2%;"></div>
     <div class="form-group">
-      <label class="control-label">Teachers (maximum of three teachers can be part of the team):</label>
+      <label class="control-label">GSP Coordinator:</label>
       <div class="form-group1 row">
         <div class="col-xs-1"></div>
         <div class="col-xs-3">
@@ -126,42 +126,7 @@
                            value="<?php if (isset($data['Q1A1S2'])) echo $data['Q1A1S2']; ?>"/>
         </div>
       </div>
-      <div class="form-group1 row">
-        <div class="col-xs-1"> 2</div>
-        <div class="col-xs-3">
-          <input class="form-control space-textbox" id="Q1A2S1" type="text" name="Q1A2S1"
-                           placeholder="<?php if (isset($data['Q1A2S1'])) echo $data['Q1A2S1'] ?>"
-                           value="<?php echo set_value('Q1A2S1'); ?>"/>
-        </div>
-        <div class="col-xs-3"> <?php echo form_error('name'); ?>
-          <input class="form-control space-textbox" id="Q1A2S3" type="text" name="Q1A2S3"
-                           placeholder="<?php if (isset($data['Q1A2S3'])) echo $data['Q1A2S3']; ?>"
-                           value="<?php echo set_value('Q1A2S3'); ?>"/>
-        </div>
-        <div class="col-xs-3">
-          <input class="form-control space-textbox" id="Q1A2S2" type="email" name="Q1A2S2"
-                           placeholder="<?php if (isset($data['Q1A2S2'])) echo $data['Q1A2S2'] ?>"
-                           value="<?php echo set_value('Q1A2S2'); ?>"/>
-        </div>
-      </div>
-      <div class="form-group1 row">
-        <div class="col-xs-1"> 3</div>
-        <div class="col-xs-3">
-          <input class="form-control space-textbox" id="Q1A3S1" type="text" name="Q1A3S1"
-                           placeholder="<?php if (isset($data['Q1A3S1'])) echo $data['Q1A3S1'] ?>"
-                           value="<?php echo set_value('Q1A3S1'); ?>"/>
-        </div>
-        <div class="col-xs-3"> <?php echo form_error('name'); ?>
-          <input class="form-control space-textbox" id="Q1A3S3" type="text" name="Q1A3S3"
-                           placeholder="<?php if (isset($data['Q1A3S3'])) echo $data['Q1A3S3']; ?>"
-                           value="<?php echo set_value('Q1A3S3'); ?>"/>
-        </div>
-        <div class="col-xs-3">
-          <input class="form-control space-textbox" id="Q1A3S2" type="email" name="Q1A3S2"
-                           placeholder="<?php if (isset($data['Q1A3S2'])) echo $data['Q1A3S2'] ?>"
-                           value="<?php echo set_value('Q1A3S2'); ?>"/>
-        </div>
-      </div>
+      
       <div class="form-group">
         <label class="control-label">Administrative staff (maximum of five staff can be part of the
         team):</label>
@@ -468,7 +433,7 @@
     <div class="text-center">
     <button type="button" class="org-btn" id="teamplanp">Previous</button>
 
-      <button type="submit" class="org-btn" id="teamnext" value="movenext">Next</button>
+      <button type="submit" class="org-btn" id="teamnext" value="movenext">Submit</button>
      <input type="button" class="org-btn submit button" value="Save and Resume Later" id="teamresume" style="border:none;" />
     </div> 
     <?php echo form_close(); ?> </div>

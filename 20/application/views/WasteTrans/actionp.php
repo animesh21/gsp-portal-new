@@ -476,56 +476,54 @@
 	                            placeholder="<?php if (isset($data['Q10AP1'])) echo $data['Q10AP1'] ?>"
 	                            value="<?php if (isset($data['Q10AP1'])) echo $data['Q10AP1'] ?>"/>
 	            </div>
-                <div style= "margin-top:2%;"></div>
-                <div class="form-group" id="WastePolicy">
-        <label class="control-label">
-        <h6>Please upload supporting documents:</h6>
-        </label>
-        <br>
-        &bull;
-        Please upload upto three relevant documents and/or pictures, if any.
-        Files must be one of the following formats: PDF Document (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg). File size per document should not exceed 100 KB.
-
-        <br/> 
-        <br/>
-        <button class="btn uploadbtn upload" data-id="Supporting Document Air" data-toggle="modal"
-                    data-target="#airModal"
-                    type="button">UPLOAD FILES </button>
-        <br>
-        <br>
-        </div>
-        <table width="100%" class="question uploadedfiles">
-        <thead>
-            <tr>
-            <!--  <th>Image</th>-->
-            <th>File name</th>
-            <th>Delete</th>
-            <th>Download</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($files as $f) { ?>
-            <tr id="index<?php echo $f->id; ?>">
-            <?php 
-                        
-                    $array = explode('.',$f->file_name); 
-                $count = count($array);
-            $extension = $array[$count-1];
-                    ?>
-            <?php if($extension == "jpg" || $extension == "jpeg"){ ?>
-            <td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name ?>" class="img-responsive" /></td>
-            <?php }else{ ?>
-            <td><img style="width:62px; height:46px;" src="<?php echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>
-            <?php }?>
-            <?php $name = str_replace(" ", "_", $f->name . "_Supporting_Document_Air_"); ?>
-            <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
-            <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
-            <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
-            </tr>
-            <?php } ?>
-        </tbody>
-        </table>
-
+    <div style= "margin-top:2%;"></div>
+            <div class="form-group" id="WastePolicy">
+            <label class="control-label">
+            <h6>Please upload supporting documents:</h6>
+            </label>
+            <br>
+            &bull; Pictures of audit team doing survey<br/>
+            Please upload all supporting documents related to this section here. Note, files must be one of the following formats: PDF Document (.pdf), Word Document (.doc, .docx), Image File (.jpg, .jpeg)
+            File size per document should not exceed 100 KB
+            <br/> 
+            <br/>
+            <button class="btn uploadbtn upload" data-id="Supporting Document Air" data-toggle="modal"
+                        data-target="#airModal"
+                        type="button">UPLOAD FILES </button>
+            <br>
+            <br>
+            </div>
+            <table width="100%" class="question uploadedfiles">
+            <thead>
+                <tr>
+                <!--  <th>Image</th>-->
+                <th>File name</th>
+                <th>Delete</th>
+                <th>Download</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($files as $f) { ?>
+                <tr id="index<?php echo $f->id; ?>">
+                <?php 
+                            
+                        //$array = explode('.',$f->file_name); 
+                    // $count = count($array);
+                // $extension = $array[$count-1];
+                        ?>
+                <?php //if($extension == "jpg" || $extension == "jpeg"){ ?>
+                <!-- <td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>uploads/files/<?php //echo $f->file_name ?>" class="img-responsive" /></td>-->
+                <?php //}else{ ?>
+                <!--<td><img style="width:62px; height:46px;" src="<?php //echo base_url() ?>assets/img/download.jpg" class="img-responsive" /></td>-->
+                <?php //}?>
+                <?php $name = str_replace(" ", "_", $f->name . "_Supporting_Document_Air_"); ?>
+                <td class="upload edit"><?php echo str_replace($name, "", $f->file_name); ?></td>
+                <td><a href="javascript:void(0)" class="air-delete-files" data-id="<?php echo $f->id; ?>"><img src="<?php echo base_url(); ?>assets/front/images/delete.png" style="position:relative; top:5px" /></a></td>
+                <td><a href="<?php echo base_url() ?>uploads/files/<?php echo $f->file_name; ?>" download="<?php echo $f->file_name; ?>"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+                </tr>
+                <?php } ?>
+            </tbody>
+            </table>
 
 
 
