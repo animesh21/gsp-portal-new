@@ -26,6 +26,18 @@ class Audit_started_model extends CI_Model {
                         ->get()->result();
     }
 
+    public function getDatawt() {
+      return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
+                      ->from('gsp_school AS a')
+                      ->join('states AS b', 'a.state=b.id', 'left')
+                      ->join('cities AS c', 'a.district=c.id', 'left')
+                      ->where("a.make_school_disabled","1")
+                      ->where("a.complete_status","1")
+                      ->where("a.kvs_school_status",NULL)
+                      ->order_by('a.id', 'desc')
+                      ->get()->result();
+  }
+
      public function kvs_school_list() {
         return  $this->db->select('a.*, b.name AS state_name,c.name As district_name')
                         ->from('gsp_school AS a')
