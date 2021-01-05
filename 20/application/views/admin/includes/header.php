@@ -291,7 +291,7 @@
                 </ul>
               </li> -->
 													<li class=""><a class="lptext" title="Change Password Form" href="<?php echo base_url('admin/audit_started/kvs_school_list'); ?>">WAITING APPROVAL</a></li>
-                          <li class=""><a class="lptext" title="Change Password Form" href="<?php echo base_url('admin/Wt/audit_started_school_waste'); ?>">WASTE TRANSFORMER</a></li>
+                          <li class=""><a class="lptext" title="Change Password Form" href="<?php echo base_url('admin/Wt'); ?>">WASTE TRANSFORMER</a></li>
 
               <li class=""><a class="lptext" title="Change Password Form" href="<?php echo base_url('admin/logout'); ?>">Logout</a></li>
             </ul>

@@ -26,8 +26,8 @@ class Wt extends CI_Controller {
         $this->load->library('zip');
     }
 
-    public function audit_started_school_waste() {
-        $data['main'] = 'admin/audit/audit_started';
+    public function index() {
+        $data['main'] = 'admin/audit/audit_started_2017';
         $data['title'] = 'Home | Audit Started';
         $data['record'] = $this->Audit_started_model->getDatawt();
         $this->load->view('admin/includes/template', $data);
