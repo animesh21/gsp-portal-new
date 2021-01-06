@@ -36,7 +36,7 @@ class Home extends CI_Controller {
 		'name' => ($this->getFiled('name', $uArray[$i]['userid']) != '') ? $this->getFiled('name', $uArray[$i]['userid']) : "NA",
 		'grade' => ($this->getFiled('grade', $uArray[$i]['userid']) != '') ? $this->getFiled('grade', $uArray[$i]['userid']) : "NA",
 		'gender' => ($this->getFiled('gender', $uArray[$i]['userid']) != '') ? $this->getFiled('gender', $uArray[$i]['userid']) : "NA",
-		'mobile' => ($this->getFiled('mobile', $uArray[$i]['mobile']) != '') ? $this->getFiled('mobile', $uArray[$i]['userid']) : "NA",
+		'mobile' => ($this->getFiled('mobile', $uArray[$i]['userid']) != '') ? $this->getFiled('mobile', $uArray[$i]['userid']) : "NA",
 		'email' => ($this->getFiled('email', $uArray[$i]['userid']) != '') ? $this->getFiled('email', $uArray[$i]['userid']) : "NA",
 		'district' => ($this->getFiled('district', $uArray[$i]['userid']) != '') ? $this->getFiled('district', $uArray[$i]['userid']) : "NA",
 		'school_name' => ($this->getFiled('school_name', $uArray[$i]['userid']) != '') ? $this->getFiled('school_name', $uArray[$i]['userid']) : "NA",
@@ -98,13 +98,13 @@ class Home extends CI_Controller {
 //	echo '<pre>';
 	print_r($points);
 	//$this->db->insert_batch('tbl_air', $points);
-	$this->db->insert_batch('tbl_air',$points,'userid');
+	$this->db->insert_batch('tbl_home',$points,'userid');
     }
 
     public function table() {
 	$this->load->dbforge();
 	$key = array(
-		'id',
+		'userid',
 	    'name',
 		'grade',
 		'gender',
@@ -186,7 +186,7 @@ class Home extends CI_Controller {
 //	echo '<pre>';
 //	print_r($test->fields);
 //	exit;
-	$this->dbforge->add_key('id', TRUE);
+	$this->dbforge->add_key('userid', TRUE);
 	$this->dbforge->create_table('tbl_home');
     }
 
