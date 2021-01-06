@@ -121,6 +121,13 @@ class Performance_report extends CI_Controller {
 		$this->load->view('admin/includes/template', $data);	
 	}	
 	
+	public function AllExcelHome()
+	{
+		$data['main']='admin/performance_report/all-secondary-home';
+        $data['title']='Secondary_Excel';
+		$data['record1']=$this->Performance_model->getExcelSecondaryHome();
+		$this->load->view('admin/includes/template', $data);	
+	}
 	public function AllExcelPrimaryPhase_2()
 	{
 		$data['main']='admin/performance_report/all_primary_phase_2';

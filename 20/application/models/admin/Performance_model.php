@@ -386,6 +386,22 @@ return $this->db->select('y.name AS state_name, z.name AS district_name,a.coemai
 					->where('b.answer >', 5)
 					->get()->result();	
 		}
+
+		public function getExcelSecondaryHome()
+	 
+		{
+// 			$this->db->where("c.make_school_disabled","1");
+			$this->db->distinct("a.school_id");
+			return $this->db->select('a.*,b.user_id,b.question_id,b.answer,c.name,c.id,a.category AS category,a.population ,e.name AS state_name, f.name AS district_name, c.schoolemail AS schoolemail')
+					->from('tbl_total AS a')	
+			        ->join('gsp_quiz_answer As b','a.userid=b.user_id','left')
+					->join('gsp_school AS c','b.user_id=c.userid', 'left')
+					->join('states AS e', 'a.state=e.id', 'left')
+					->join('cities AS f', 'a.district=f.id', 'left')
+					// ->where('b.question_id','Q1G2')
+					// ->where('b.answer >', 5)
+					->get()->result();	
+		}
 	
 	public function getExcelPrimarySchoolPhase_2()	 
 		{
