@@ -17,50 +17,50 @@
     <th>School Name</th>
     <th>School Address</th>
     <th>Pincode</th>
-    <th>Participate</th>
-    <th>Air1</th>
-    <th>Air2</th>
-    <th>Air3</th>
-    <th>Air4</th>
-    <th>Air5</th>
-    <th>Air6</th>
-    <th>Air7</th>
+    <th>Did your school participate in the GSP Audit 2019</th>
+    <th>How do you travel for everyday activities?</th>
+    <th>How many 2-wheeler and/or 4-wheeler vehicles does your family own?</th>
+    <th>Which fuel does the vehicle(s) use?</th>
+    <th>Does your vehicle(s) have PUC (Pollution Under Control) Certification?</th>
+    <th>How would you rate the ventilation in your house?</th>
+    <th>Do you know about the air quality index (AQI)?</th>
+    <th>Do you think that there is air pollution inside your home (indoor air pollution)?</th>
     <th>Air Score</th>
-    <th>Energy1</th>
-    <th>Energy2</th>
-    <th>Energy3<2/th>
-    <th>Energy4</th>
-    <th>Energy5</th>
-    <th>Energy6</th>
+    <th>Do you get an electricity bill every month?</th>
+    <th>Do you know how to read an electricity bill?</th>
+    <th>If you compare your monthly electricity bill now to what it was before the lockdown, the amount has… <2/th>
+    <th>Do you use renewable energy in any form in the house?</th>
+    <th>How do you operate electronic appliances, such as computer, television, etc.?</th>
+    <th>What type of lighting do you have at home?</th>
     <th>Energy Score</th>
-    <th>Food1</th>
-    <th>Food2</th>
-    <th>Food3</th>
-    <th>Food4</th>
-    <th>Food5</th>
+    <th>For how many days do you buy groceries at a time?</th>
+    <th>How often do you read the food labels on packaged products, like biscuit, chocolate, etc. before consuming them?</th>
+    <th>What do you do with the left over food?</th>
+    <th>Approximately, what percentage of the food in your house is packaged, processed food?</th>
+    <th>Which of the following constitutes the biggest part of your everyday diet?</th>
     <th>Food Score</th>
-    <th>Land1</th>
-    <th>Land2</th>
-    <th>Land3</th>
+    <th>Do you have indoor and/or outdoor plants at home?</th>
+    <th>How many types of plants are there around you?</th>
+    <th>Do you use chemical pesticides to take care of the plants?</th>
     <th>Land Score</th>
-    <th>Water1</th>
-    <th>Water2</th>
-    <th>Water3</th>
-    <th>Water4</th>
-    <th>Water5</th>
-    <th>Water6</th>
-    <th>Water7</th>
-    <th>Water8</th>
-    <th>Water9</th>
+    <th>How much water do you consume per person per day on average?</th>
+    <th>How do you usually prefer to take a bath?</th>
+    <th>Do you have an RO water purifier at home?</th>
+    <th>What do you do with the excess water from the RO water purifier?</th>
+    <th>Are there any water leakages in the washroom or other areas in your house?</th>
+    <th>How many taps/ handpumps in your house have soap or handwash next to them?</th>
+    <th>Does your house have a dual flush system in the toilet?</th>
+    <th>Have you noticed any rainwater harvesting (RWH) structures around your house or in the locality? Example: recharge trenches or storage containers.</th>
+    <th>How would you rate the quality and working conditions of these RWH structures?</th>
     <th>Water Score</th>
-    <th>Waste1</th>
-    <th>Waste2</th>
-    <th>Waste3</th>
-    <th>Waste4</th>
-    <th>Waste5</th>
-    <th>Waste6</th>
-    <th>Waste7</th>
-    <th>Waste8</th>
+    <th>Do you segregate solid waste into wet and dry?</th>
+    <th>How many dustbins are there in your house to collect different types of waste?</th>
+    <th>How frequently do you or your parents get new mobile phones?</th>
+    <th>How do you dispose of electronic waste like old phones, computers, etc? </th>
+    <th>How do you dispose of sanitary waste?</th>
+    <th>Do you practise composting at home?</th>
+    <th>Do you share and reuse books rather than buying every time?</th>
+    <th>Where do you dispose of the single-use masks and gloves used to protect yourself from the coronavirus?</th>
     <th>Waste Score</th>
     </tr>
       </thead>
