@@ -35,19 +35,135 @@ class Home extends CI_Controller {
 		'userid' => $uArray[$i]['userid'],
 		'name' => ($this->getFiled('name', $uArray[$i]['userid']) != '') ? $this->getFiled('name', $uArray[$i]['userid']) : "NA",
 		'grade' => ($this->getFiled('grade', $uArray[$i]['userid']) != '') ? $this->getFiled('grade', $uArray[$i]['userid']) : "NA",
-	    );
+		'gender' => ($this->getFiled('gender', $uArray[$i]['userid']) != '') ? $this->getFiled('gender', $uArray[$i]['userid']) : "NA",
+		'mobile' => ($this->getFiled('mobile', $uArray[$i]['mobile']) != '') ? $this->getFiled('mobile', $uArray[$i]['userid']) : "NA",
+		'email' => ($this->getFiled('email', $uArray[$i]['userid']) != '') ? $this->getFiled('email', $uArray[$i]['userid']) : "NA",
+		'district' => ($this->getFiled('district', $uArray[$i]['userid']) != '') ? $this->getFiled('district', $uArray[$i]['userid']) : "NA",
+		'school_name' => ($this->getFiled('school_name', $uArray[$i]['userid']) != '') ? $this->getFiled('school_name', $uArray[$i]['userid']) : "NA",
+		'school_address' => ($this->getFiled('school_address', $uArray[$i]['userid']) != '') ? $this->getFiled('school_address', $uArray[$i]['userid']) : "NA",
+		'pincode' => ($this->getFiled('pincode', $uArray[$i]['userid']) != '') ? $this->getFiled('pincode', $uArray[$i]['userid']) : "NA",
+		'participate' => ($this->getFiled('participate', $uArray[$i]['userid']) != '') ? $this->getFiled('participate', $uArray[$i]['userid']) : "NA",
+		'Q1A1' => ($this->getFiled('Q1A1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q1A1', $uArray[$i]['userid']) : "NA",
+		'Q2A1' => ($this->getFiled('Q2A1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q2A1', $uArray[$i]['userid']) : "NA",
+		'Q3A1' => ($this->getFiled('Q3A1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q3A1', $uArray[$i]['userid']) : "NA",
+		'Q4A1' => ($this->getFiled('Q4A1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4A1', $uArray[$i]['userid']) : "NA",
+		'Q5A1' => ($this->getFiled('Q5A1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5A1', $uArray[$i]['userid']) : "NA",
+		'Q6A1' => ($this->getFiled('Q6A1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6A1', $uArray[$i]['userid']) : "NA",
+		'Q7A1' => ($this->getFiled('Q7A1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7A1', $uArray[$i]['userid']) : "NA",
+		'ascore' => ($this->getFiled('ascore', $uArray[$i]['userid']) != '') ? $this->getFiled('ascore', $uArray[$i]['userid']) : "NA",
+		'Q1E1' => ($this->getFiled('Q1E1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q1E1', $uArray[$i]['userid']) : "NA",
+		'Q2E1' => ($this->getFiled('Q2E1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q2E1', $uArray[$i]['userid']) : "NA",
+		'Q3E1' => ($this->getFiled('Q3E1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q3E1', $uArray[$i]['userid']) : "NA",
+		'Q4E1' => ($this->getFiled('Q4E1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4E1', $uArray[$i]['userid']) : "NA",
+		'Q5E1' => ($this->getFiled('Q5E1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5E1', $uArray[$i]['userid']) : "NA",
+		'Q6E1' => ($this->getFiled('Q6E1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6E1', $uArray[$i]['userid']) : "NA",
+		'escore' => ($this->getFiled('escore', $uArray[$i]['userid']) != '') ? $this->getFiled('escore', $uArray[$i]['userid']) : "NA",
+		'Q1F1' => ($this->getFiled('Q1F1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q1F1', $uArray[$i]['userid']) : "NA",
+		'Q2F1' => ($this->getFiled('Q2F1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q2F1', $uArray[$i]['userid']) : "NA",
+		'Q3F1' => ($this->getFiled('Q3F1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q3F1', $uArray[$i]['userid']) : "NA",
+		'Q4F1' => ($this->getFiled('Q4F1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4F1', $uArray[$i]['userid']) : "NA",
+		'Q5F1' => ($this->getFiled('Q5F1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5F1', $uArray[$i]['userid']) : "NA",
+		'fscore' => ($this->getFiled('fscore', $uArray[$i]['userid']) != '') ? $this->getFiled('fscore', $uArray[$i]['userid']) : "NA",
+		'Q1L1' => ($this->getFiled('Q1L1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q1L1', $uArray[$i]['userid']) : "NA",
+		'Q2L1' => ($this->getFiled('Q2L1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q2L1', $uArray[$i]['userid']) : "NA",
+		'Q3L1' => ($this->getFiled('Q3L1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q3L1', $uArray[$i]['userid']) : "NA",
+		'lscore' => ($this->getFiled('lscore', $uArray[$i]['userid']) != '') ? $this->getFiled('lscore', $uArray[$i]['userid']) : "NA",
+		'Q1W1' => ($this->getFiled('Q1W1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q1W1', $uArray[$i]['userid']) : "NA",
+		'Q2W1' => ($this->getFiled('Q2W1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q2W1', $uArray[$i]['userid']) : "NA",
+		'Q3W1' => ($this->getFiled('Q3W1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q3W1', $uArray[$i]['userid']) : "NA",
+		'Q4W1' => ($this->getFiled('Q4W1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4W1', $uArray[$i]['userid']) : "NA",
+		'Q5W1' => ($this->getFiled('Q5W1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5W1', $uArray[$i]['userid']) : "NA",
+		'Q6W1' => ($this->getFiled('Q6W1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6W1', $uArray[$i]['userid']) : "NA",
+		'Q7W1' => ($this->getFiled('Q7W1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7W1', $uArray[$i]['userid']) : "NA",
+		'Q8W1' => ($this->getFiled('Q8W1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8W1', $uArray[$i]['userid']) : "NA",
+		'Q9W1' => ($this->getFiled('Q9W1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q9W1', $uArray[$i]['userid']) : "NA",
+		'wscore' => ($this->getFiled('wscore', $uArray[$i]['userid']) != '') ? $this->getFiled('wscore', $uArray[$i]['userid']) : "NA",
+		'Q1WS1' => ($this->getFiled('Q1WS1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q1WS1', $uArray[$i]['userid']) : "NA",
+		'Q2WS1' => ($this->getFiled('Q2WS1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q2WS1', $uArray[$i]['userid']) : "NA",
+		'Q3WS1' => ($this->getFiled('Q3WS1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q3WS1', $uArray[$i]['userid']) : "NA",
+		'Q4WS1' => ($this->getFiled('Q4WS1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q4WS1', $uArray[$i]['userid']) : "NA",
+		'Q5WS1' => ($this->getFiled('Q5WS1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q5WS1', $uArray[$i]['userid']) : "NA",
+		'Q6WS1' => ($this->getFiled('Q6WS1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q6WS1', $uArray[$i]['userid']) : "NA",
+		'Q7WS1' => ($this->getFiled('Q7WS1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7WS1', $uArray[$i]['userid']) : "NA",
+		'Q8WS1' => ($this->getFiled('Q8WS1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8WS1', $uArray[$i]['userid']) : "NA",
+		'wascore' => ($this->getFiled('wascore', $uArray[$i]['userid']) != '') ? $this->getFiled('wascore', $uArray[$i]['userid']) : "NA",
+		
+
+	
+	
+	
+	
+	);
 	}
 //	echo '<pre>';
 	print_r($points);
 	//$this->db->insert_batch('tbl_air', $points);
-	$this->db->insert_batch('tbl_home',$points,'userid');
+	$this->db->insert_batch('tbl_air',$points,'userid');
     }
 
     public function table() {
 	$this->load->dbforge();
 	$key = array(
+		'id',
 	    'name',
-	    'grade',
+		'grade',
+		'gender',
+		'mobile',
+		'email',
+		'district',
+		'school_name',
+		'school_address',
+		'pincode',
+		'participate',
+		'Q1A1',
+		'Q2A1',
+		'Q3A1',
+		'Q4A1',
+		'Q5A1',
+		'Q6A1',
+		'Q7A1',
+		'ascore',
+		'Q1E1',
+		'Q2E1',
+		'Q3E1',
+		'Q4E1',
+		'Q5E1',
+		'Q6E1',
+		'escore',
+		'Q1F1',
+		'Q2F1',
+		'Q3F1',
+		'Q4F1',
+		'Q5F1',
+		'fscore',
+		'Q1L1',
+		'Q2L1',
+		'Q3L1',
+		'lscore',
+		'Q1W1',
+		'Q2W1',
+		'Q3W1',
+		'Q4W1',
+		'Q5W1',
+		'Q6W1',
+		'Q7W1',
+		'Q8W1',
+		'Q9W1',
+		'wscore',
+		'Q1WS1',
+		'Q2WS1',
+		'Q3WS1',
+		'Q4WS1',
+		'Q5WS1',
+		'Q6WS1',
+		'Q7WS1',
+		'Q8WS1',
+		'wascore',
+		
+
+
+
+
 	    
 	);
 	for ($x = 0; $x < count($key); $x++) {
@@ -71,7 +187,7 @@ class Home extends CI_Controller {
 //	print_r($test->fields);
 //	exit;
 	$this->dbforge->add_key('id', TRUE);
-	$this->dbforge->create_table('tbl_air');
+	$this->dbforge->create_table('tbl_home');
     }
 
     public function Air_performance($argUserID) {
