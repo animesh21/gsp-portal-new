@@ -22,13 +22,13 @@ class Home extends CI_Controller {
 
     public function air() {
 	ini_set('memory_limit', '-1');
-	$query = $this->db->query("SELECT gsp_school.*,gsp_school.id AS school_id FROM `gsp_school` INNER JOIN gsp_aduit_home ON gsp_school.userid=gsp_aduit_home.userid WHERE gsp_aduit_home.status='1'");
+	$query = $this->db->query("SELECT users.*,users.id AS userid FROM `users` INNER JOIN gsp_aduit_home ON users.id=gsp_aduit_home.userid WHERE gsp_aduit_home.status='1'");
 	$uArray=$query->result_array();
 //	foreach ($user as $u) {
 //	    $uArray[] = $this->Air_performance($u->userid);
 //	}
-//	echo '<pre>';
-//	print_r($uArray); exit;
+	// echo '<pre>';
+	// print_r($uArray); exit;
 	$points = array();
 	for ($i = 0; $i < count($uArray); $i++) {
 	    $points[$i] = array(

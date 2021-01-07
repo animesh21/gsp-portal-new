@@ -604,16 +604,6 @@ if (!function_exists('getSchoolId')) {
      }
 }
 
-if (!function_exists('getSchoolId')) {
-  function getSchoolId($argSchoolID)
-{
-  $CI = & get_instance();
-    $temp = $CI->db->get_where('gsp_school', array('id' => $argSchoolID))->row();
-return $temp->id;
-}
-}
-
-
 if (!function_exists('getSchoolNameBYUniqueId')) {
            function getSchoolNameBYUniqueId($argUserID)
      {
