@@ -262,7 +262,7 @@ function checkUpdate(){
         <p>Please calculate your per capita waste generation:&nbsp;<span class="frac"><sup>Total amount of waste (add points 3 to 9)</sup><span>&frasl;</span><sub>Total Population</sub></span>.</p>
         <input class="form-control" id="Q1B1" type="text" name="Q1B1"
                                placeholder="<?php if (isset($data['Q1B1'])) echo $data['Q1B1'] ?>" 
-                               value="<?php echo set_value('Q1B1'); ?>"/>
+                               value="<?php if (isset($data['Q1B1'])) echo $data['Q1B1'] ?>"/>
          </div>
          <div class="text-center">
         <button type="button" class="org-btn" id="btnBaselinePrevious">Previous</button>
