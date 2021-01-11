@@ -90,7 +90,7 @@
     <h1>The Team</h1>
     <div class="intro">
       <p>Please provide the details of the SWM Action Plan team. A teacher with interest in waste and five to 10 students from Grades 6 to 12 will be ideal for your team. With schools closed, the Administrative staff is important as they will provide the permissions required for the housekeeping and cleaning staff to help you with the plan.</p>
-      <p>In the description at the top, add this line: Please enter the details below carefully as the same will be printed on the digital certificates. </p>
+      <p>Please enter the details below carefully as the same will be printed on the digital certificates. </p>
     </div>
     <?php echo form_open('Theteam/set', array('id' => 'team-form')); ?>
     <div style= "margin-top:2%;"></div>
