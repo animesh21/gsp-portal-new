@@ -361,20 +361,20 @@ $('#schoolresume').on('click', function (data) {
 
             
             
-            jQuery(document).ready(function(){
+            // jQuery(document).ready(function(){
                 
-                jQuery('#baseline-form').validate({
-                    rules:{
-                      Q1B1:{
-                            required:true,
+            //     jQuery('#baseline-form').validate({
+            //         rules:{
+            //           Q1B1:{
+            //                 required:true,
                             
-                            }
+            //                 }
 
                         
-                    }
+            //         }
                 
-                });
-              });
+            //     });
+            //   });
                 jQuery('#baseline-form').submit(function(e){
                     
                     
