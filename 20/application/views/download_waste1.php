@@ -367,8 +367,8 @@ $('#schoolresume').on('click', function (data) {
                     rules:{
                       Q1B1:{
                             required:true,
-                            number:true,
-                        }
+                            
+                            }
 
                         
                     }
