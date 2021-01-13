@@ -271,6 +271,8 @@
                                placeholder="<?php if (isset($data['Q5G1'])) echo $data['Q5G1'] ?>" readonly
                                value="00"/>
       </div>
+      <div class="clearfix">&nbsp;</div>
+
       <div class="form-group">
         <label><span class="cube">5</span>What is the total number of working days of your school in a
         year? <a class="tt" data-tooltip="On an average, a day scholar school runs for 220-230 days in a year."><span class="badge">?</span></a> </label>
