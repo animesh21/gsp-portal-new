@@ -271,10 +271,22 @@
                                placeholder="<?php if (isset($data['Q5G1'])) echo $data['Q5G1'] ?>" readonly
                                value="00"/>
       </div>
-     ]
       <div class="clearfix">&nbsp;</div>
       <?php
-                        
+                    if (isset($other['Q1S1']))
+
+                        if ($other['Q1S1'] >= 3) {
+                            ?>
+      <div class="form-group">
+        <label for="ex1"><span class="cube">4(c)</span>How many family members stay in the
+        school campus? </label>
+        <input class="form-control" id="Q5G2" type="number" min="0" name="Q5G2"
+                                       placeholder="<?php if (isset($data['Q5G2'])) echo $data['Q5G2'] ?>" readonly
+                                       value="00"/>
+      </div>
+      <div class="clearfix">&nbsp;</div>
+      <?php
+                        }
                     ?>
       <div class="form-group">
         <label><span class="cube">5</span>What is the total number of working days of your school in a
@@ -602,11 +614,11 @@
 
 
 </script>
-<!-- 	
-//<?php
-    // if (isset($other['Q1S1']))
+	
+<?php
+    if (isset($other['Q1S1']))
 
-      // if ($other['Q1S1'] == 3 || $other['Q1S1']==5 || $other['Q1S1'] ==6 || $other['Q1S1'] == 7) { ?>
+      if ($other['Q1S1'] == 3 || $other['Q1S1']==5 || $other['Q1S1'] ==6 || $other['Q1S1'] == 7) { ?>
         <script type="text/javascript">
           $(document).ready(function(){
             $("#movenextbtn").click(function(e){
@@ -627,5 +639,5 @@
             });
         </script>
                            
-       <?php }?> -->
+       <?php }?>
 	
