@@ -89,6 +89,7 @@ function checkUpdate(){
 }
 </script>
 
+
 <div class="container">
   <div class="content-form">
     <div class="log-nav">
@@ -129,6 +130,7 @@ function checkUpdate(){
         <?php 
           $schoolId=getSchoolId($this->session->userdata('USER_ID')); 
       $wasteSection=downloadWasteSectionQuestions($schoolId); 
+      
      ?>
         <table class="table table-bordered display" style="margin-top: 40px;">
           <tr>
@@ -264,6 +266,15 @@ function checkUpdate(){
                                placeholder="<?php if (isset($data['Q1B1'])) echo $data['Q1B1'] ?>" 
                                value="<?php if (isset($data['Q1B1'])) echo $data['Q1B1'] ?>"/>
          </div>
+         <?php
+      // echo '<pre>';
+      // print_r($wasteSection);
+      // echo '<pre>';
+      
+      echo !empty($wasteSection[0]->audit_year)?$wasteSection[0]->audit_year:"NA";
+      echo !empty($wasteSection[$i]->total_biodegradable_waste_generated)?$wasteSection[$i]->total_biodegradable_waste_generated:"NA";
+      
+      ?>
          <div class="text-center">
         <button type="button" class="org-btn" id="btnBaselinePrevious">Previous</button>
         <button type="submit" id="movenextbtn" value="movenext" accesskey="n"

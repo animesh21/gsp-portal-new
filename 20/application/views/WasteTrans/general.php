@@ -271,7 +271,7 @@
                                placeholder="<?php if (isset($data['Q5G1'])) echo $data['Q5G1'] ?>" readonly
                                value="00"/>
       </div>
-      <div class="clearfix">&nbsp;</div>
+      <!-- <div class="clearfix">&nbsp;</div>
       <?php
                     if (isset($other['Q1S1']))
 
@@ -283,7 +283,7 @@
         <input class="form-control" id="Q5G2" type="number" min="0" name="Q5G2"
                                        placeholder="<?php if (isset($data['Q5G2'])) echo $data['Q5G2'] ?>" readonly
                                        value="00"/>
-      </div>
+      </div> -->
       <div class="clearfix">&nbsp;</div>
       <?php
                         }
@@ -614,11 +614,11 @@
 
 
 </script>
-	
-<?php
-    if (isset($other['Q1S1']))
+<!-- 	
+//<?php
+    // if (isset($other['Q1S1']))
 
-      if ($other['Q1S1'] == 3 || $other['Q1S1']==5 || $other['Q1S1'] ==6 || $other['Q1S1'] == 7) { ?>
+      // if ($other['Q1S1'] == 3 || $other['Q1S1']==5 || $other['Q1S1'] ==6 || $other['Q1S1'] == 7) { ?>
         <script type="text/javascript">
           $(document).ready(function(){
             $("#movenextbtn").click(function(e){
@@ -639,5 +639,5 @@
             });
         </script>
                            
-       <?php }?>
+       <?php }?> -->
 	
