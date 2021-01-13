@@ -614,30 +614,3 @@
 
 
 </script>
-	
-<?php
-    if (isset($other['Q1S1']))
-
-      if ($other['Q1S1'] == 3 || $other['Q1S1']==5 || $other['Q1S1'] ==6 || $other['Q1S1'] == 7) { ?>
-        <script type="text/javascript">
-          $(document).ready(function(){
-            $("#movenextbtn").click(function(e){
-            
-            var p = $("input[name='Q5G2']").attr("placeholder");
-
-              if(p){
-
-                  }
-            else{
-              alert('Must enter value in Que: 4(c) How many family members stay in the school campus?');
-                e.preventDefault();
-              }
-
-            });
-
-
-            });
-        </script>
-                           
-       <?php }?>
-	
