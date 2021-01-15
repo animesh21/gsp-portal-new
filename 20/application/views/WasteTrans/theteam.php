@@ -165,17 +165,17 @@
           <div class="col-xs-3">
             <input class="form-control space-textbox" id="Q2A2S1" type="text" name="Q2A2S1"
                                placeholder="<?php if (isset($data['Q2A2S1'])) echo $data['Q2A2S1'] ?>"
-                               value="<?php echo set_value('Q2A2S1'); ?>"/>
+                               value="<?php if (isset($data['Q2A2S1'])) echo $data['Q2A2S1'] ?>"/>
           </div>
           <div class="col-xs-3">
             <input class="form-control space-textbox" id="Q2A2S3" type="text" name="Q2A2S3"
                                placeholder="<?php if (isset($data['Q2A2S3'])) echo $data['Q2A2S3'] ?>"
-                               value="<?php echo set_value('Q2A2S3'); ?>"/>
+                               value="<?php if (isset($data['Q2A2S3'])) echo $data['Q2A2S3'] ?>"/>
           </div>
           <div class="col-xs-3">
             <input class="form-control space-textbox" id="Q2A2S2" type="email" name="Q2A2S2"
                                placeholder="<?php if (isset($data['Q2A2S2'])) echo $data['Q2A2S2'] ?>"
-                               value="<?php echo set_value('Q2A2S2'); ?>"/>
+                               value="<?php if (isset($data['Q2A2S2'])) echo $data['Q2A2S2'] ?>"/>
           </div>
         </div>
         <div class="form-group1 row">
