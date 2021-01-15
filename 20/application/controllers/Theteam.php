@@ -73,8 +73,9 @@ class Theteam extends CI_Controller {
                     // $this->session->unset_userdata(array('USERNAME', 'USER_ID'));
                     // $this->session->set_flashdata('success', 'Successfully logged out!');
                     
-                    
-                    $this->Answer_model->submitAnswers($argPost,$userId,$type);
+                    $this->Answer_model->submitAnswers($post,0);
+
+                    // $this->Answer_model->submitAnswers($argPost,$userId,$type);
                     updateProgress($this->session->userdata('USER_ID'), 100);
                     redirect(base_url('Theteam/submit'));
                     //print_r($post);

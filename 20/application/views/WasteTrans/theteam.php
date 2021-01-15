@@ -519,7 +519,7 @@
             var fd = $('#team-form').serialize();
             $.ajax({
                 type: 'POST',
-                url: '<?php echo base_url('actionp/set') ?>',
+                url: '<?php echo base_url('Theteam/set') ?>',
                 data: fd,
                 success: function (data) {
                     window.location.href = "<?php echo base_url('logout'); ?>";
