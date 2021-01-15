@@ -271,8 +271,8 @@ function checkUpdate(){
       // print_r($wasteSection);
       // echo '<pre>';
       
-      echo !empty($wasteSection[0]->audit_year)?$wasteSection[0]->audit_year:"NA";
-      echo !empty($wasteSection[$i]->total_biodegradable_waste_generated)?$wasteSection[$i]->total_biodegradable_waste_generated:"NA";
+      // echo !empty($wasteSection[0]->audit_year)?$wasteSection[0]->audit_year:"NA";
+      // echo !empty($wasteSection[$i]->total_biodegradable_waste_generated)?$wasteSection[$i]->total_biodegradable_waste_generated:"NA";
       
       ?>
          <div class="text-center">

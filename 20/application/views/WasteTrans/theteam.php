@@ -442,7 +442,7 @@
 
 <script>
 
-                $(document).ready(function () {
+    $(document).ready(function () {
                 $('#teamplanp').on('click', function (data) {
                     var fd = $('#team-form').serialize();
                     //console.log(fd);
@@ -459,73 +459,73 @@
                         }
                     });
                 });
+                jQuery(document).ready(function(){
+                
+                            jQuery('#team-form').validate({
+                              rules:{
+                                      Q1A1S1:{
+                                            required:true,
+                                        },
+                                        Q1A1S3:{
+                                            required:true,
+                                        },
+                                        Q1A1S2:{
+                                            required:true,
+                                        },
+                                        Q2A1S1:{
+                                            required:true,
+                                        },
+                                        Q2A1S3:{
+                                            required:true,
+                                        },
+                                        Q2A1S2:{
+                                            required:true,
+                                        },
+                                        Q3A1S1:{
+                                            required:true,
+                                        },
+                                        Q3A1S2:{
+                                            required:true,
+                                        },
+                                        Q3A1S3:{
+                                            required:true,
+                                        }
+
+                                      
+                                  }
+                            
+                            });
+                
+	
+                jQuery('#team-form').submit(function(e){
+                    
+                    
+                    $r=jQuery('#team-form').valid();
+                    if($r == false)
+                    {
+                        e.preventDefault();
+                        jQuery('#team-form').valid();
+                    }
+                    
+                    
                 });
-    jQuery(document).ready(function(){
+
+
+
+	            /**This Function Used For Save & Logout**/
+                $('#teamresume').on('click', function (data) {
+                    var fd = $('#team-form').serialize();
+                    $.ajax({
+                        type: 'POST',
+                        url: '<?php echo base_url('Theteam/set') ?>',
+                        data: fd,
+                        success: function (data) {
+                            window.location.href = "<?php echo base_url('logout'); ?>";
+                        }
+                    });
+                });
+                
     
-    jQuery('#team-form').validate({
-        rules:{
-            Q1A1S1:{
-                  required:true,
-              },
-              Q1A1S3:{
-                  required:true,
-              },
-              Q1A1S2:{
-                  required:true,
-              },
-              Q2A1S1:{
-                  required:true,
-              },
-              Q2A1S3:{
-                  required:true,
-              },
-              Q2A1S2:{
-                  required:true,
-              },
-              Q3A1S1:{
-                  required:true,
-              },
-              Q3A1S2:{
-                  required:true,
-              },
-              Q3A1S3:{
-                  required:true,
-              }
-
-             
-        }
-       
-    });
-    
-    
-    jQuery('#team-form').submit(function(e){
-        
-        
-        $r=jQuery('#team-form').valid();
-        if($r == false)
-        {
-               e.preventDefault();
-               jQuery('#team-form').valid();
-        }
-        
-        
-    });
-    });
-
-
-
-    /**This Function Used For Save & Logout**/
-        $('#teamresume').on('click', function (data) {
-            var fd = $('#team-form').serialize();
-            $.ajax({
-                type: 'POST',
-                url: '<?php echo base_url('Theteam/set') ?>',
-                data: fd,
-                success: function (data) {
-                    window.location.href = "<?php echo base_url('logout'); ?>";
-                }
             });
         });
-         //delete air files
-        
 </script>
