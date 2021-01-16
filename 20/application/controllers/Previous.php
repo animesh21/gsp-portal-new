@@ -13,6 +13,12 @@ class Previous extends CI_Controller {
         }
     }
 
+    public function wastetrans() {
+        $staus = 'success';
+        $post = $this->input->post();
+        $this->Answer_model->submitAnswers($post,0);
+        echo $staus;
+    }
     /*
      * Air Ajax
      */

@@ -448,7 +448,7 @@
                     //console.log(fd);
                     $.ajax({
                         type: 'POST',
-                        url: '<?php echo base_url('previous/generalajax') ?>',
+                        url: '<?php echo base_url('previous/wastetrans') ?>',
                         data: fd,
                         success: function (data)
                         {

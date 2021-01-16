@@ -78,7 +78,7 @@ class Theteam extends CI_Controller {
                     // $this->Answer_model->submitAnswers($argPost,$userId,$type);
                     updateProgress($this->session->userdata('USER_ID'), 100);
                     redirect(base_url('Theteam/submit'));
-                    //print_r($post);
+                    // print_r($post);
     }
     public function submit(){
         $this->session->unset_userdata(array('USERNAME', 'USER_ID'));
