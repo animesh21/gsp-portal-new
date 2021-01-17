@@ -145,7 +145,7 @@ class Wastet extends CI_Controller {
 		'codinator_mobile' => $uArray[$i]['comobile'],
 		'codinator_mobile' => $uArray[$i]['comobile'],
 		'category' => ($vale != '') ? $arr[$vale] : "",
-		'shifts' => ($val_shift != '') ? $shifts[$val_shift] : "",
+		'shifts' => ($val_shift != '') ? $shifts[$val_shift] : "NA",
 		'lowest_level' => (getFiled('Q1G1', $uArray[$i]['userid']) != '') ? getFiled('Q1G1', $uArray[$i]['userid']) : "",
 		'higest_level' => (getFiled('Q1G2', $uArray[$i]['userid']) != '') ? getFiled('Q1G2', $uArray[$i]['userid']) : "",
 		'gender' => ($gender != '') ? $gender : "",
