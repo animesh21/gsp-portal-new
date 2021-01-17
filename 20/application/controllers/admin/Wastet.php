@@ -33,7 +33,7 @@ class Wastet extends CI_Controller {
 
     public function schoolprofilegenral() {
 	$data = array();
-	$query = $this->db->query("SELECT gsp_school.*,gsp_school.id AS school_id FROM `gsp_school` INNER JOIN gsp_waste_submitted ON gsp_school.userid=gsp_aduit_submitted.userid WHERE gsp_school.progress ='100' && gsp_aduit_submitted.status='1'");
+	$query = $this->db->query("SELECT gsp_school.*,gsp_school.id AS school_id FROM `gsp_school` INNER JOIN gsp_waste_submitted ON gsp_school.userid=gsp_waste_submitted.userid WHERE gsp_school.progress ='100' && gsp_waste_submitted.status='1'");
 	$uArray=$query->result_array();
 	//echo '<pre>'; print_r($uArray);
 	
