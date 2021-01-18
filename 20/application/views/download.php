@@ -142,8 +142,8 @@ $allyoydata = getYOYComparisonAllData($schoolId);
     <div class="container">
       <div class="col-md-12" >
 
-      <a href="<?php echo base_url('WasteTransformers') ;?>" target="blank"><button class="btn btn-primary" style="float: right; background-color: #e86549; border-color: #e86549; margin-right: 6%; height: 50px; width: 25%; margin-top: 8px; color: black; font-size: 21px;
-"><b>Waste Transformers</b></button></a> 
+      <!-- <a href="<?php echo base_url('WasteTransformers') ;?>" target="blank"><button class="btn btn-primary" style="float: right; background-color: #e86549; border-color: #e86549; margin-right: 6%; height: 50px; width: 25%; margin-top: 8px; color: black; font-size: 21px;
+"><b>Waste Transformers</b></button></a>  -->
         <h3><strong><?php echo $schoolName[0]->name.', &nbsp';?> <?php echo ' &nbsp'. $dataYoy3[0]->name.',';  echo ' &nbsp &nbsp' .$dataYoy2[0]->name;?> </strong> </h3> 
         
 
