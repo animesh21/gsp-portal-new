@@ -16,7 +16,8 @@ class GspWorkshopsikkim extends CI_Controller{
      * Index function
      */
     public function index(){
-        $this->load->view('certificates/gspworkshopsikkim');
+        // $this->load->view('certificates/gspworkshopsikkim');
+        $this->load->view('certificates/closed');
     }
 
 
