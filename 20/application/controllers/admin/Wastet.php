@@ -123,8 +123,8 @@ class Wastet extends CI_Controller {
 	    $val_aid = (getFiled('Q9G1', $uArray[$i]['userid']) != '') ? getFiled('Q9G1', $uArray[$i]['userid']) : "";
 	    //echo $vale;
 	    $data[$i] = array(
-		'userid' => $uArray[$i]['userid'],
-		//'school_id'=>$uArray[$i]['school_id'],
+		// 'userid' => $uArray[$i]['userid'],
+		'school_id'=>$uArray[$i]['school_id'],
 		'name' => $uArray[$i]['name'],
 		'address1' => $uArray[$i]['address1'],
 		'address2' => $uArray[$i]['address2'],
@@ -173,6 +173,8 @@ class Wastet extends CI_Controller {
 		'Q4AP6' => (getFiled('Q4AP6', $uArray[$i]['userid']) != '') ? getFiled('Q4AP6', $uArray[$i]['userid']) : "",
 		'Q5AP1' => (getFiled('Q5AP1', $uArray[$i]['userid']) != '') ? getFiled('Q5AP1', $uArray[$i]['userid']) : "",
 		'Q6AP1' => (getFiled('Q6AP1', $uArray[$i]['userid']) != '') ? getFiled('Q6AP1', $uArray[$i]['userid']) : "",
+		'Q6AP11' => (getFiled('Q6AP11', $uArray[$i]['userid']) != '') ? getFiled('Q6AP11', $uArray[$i]['userid']) : "",
+		'Q6AP12' => (getFiled('Q6AP12', $uArray[$i]['userid']) != '') ? getFiled('Q6AP12', $uArray[$i]['userid']) : "",
 		'Q7AP1' => (getFiled('Q7AP1', $uArray[$i]['userid']) != '') ? getFiled('Q7AP1', $uArray[$i]['userid']) : "",
 		'Q8AP1' => (getFiled('Q8AP1', $uArray[$i]['userid']) != '') ? getFiled('Q8AP1', $uArray[$i]['userid']) : "",
 		'Q9AP1' => (getFiled('Q9AP1', $uArray[$i]['userid']) != '') ? getFiled('Q9AP1', $uArray[$i]['userid']) : "",
@@ -239,7 +241,6 @@ class Wastet extends CI_Controller {
 	$this->load->dbforge();
 	$key = array(
 	    'id', 
-	    'userid',
 		'school_id',/*** General Part Table Start ***/
 	    'name',
 	    'address1',
@@ -289,6 +290,8 @@ class Wastet extends CI_Controller {
 		'Q4AP6',
 		'Q5AP1',
 		'Q6AP1',
+		'Q6AP11',
+		'Q6AP12',
 		'Q7AP1',
 		'Q8AP1',
 		'Q9AP1',
