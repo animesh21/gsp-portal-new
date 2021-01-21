@@ -35,7 +35,7 @@ class Wastet extends CI_Controller {
 	$data = array();
 	$query = $this->db->query("SELECT gsp_school.*,gsp_school.id AS school_id FROM `gsp_school` INNER JOIN gsp_waste_submitted ON gsp_school.userid=gsp_waste_submitted.userid WHERE gsp_school.progress ='100' && gsp_waste_submitted.status='1'");
 	$query1 = $this->db->query("SELECT all_yoy_presentation.*,all_yoy_presentation.school_id AS school_id FROM `all_yoy_presentation` INNER JOIN gsp_school ON all_yoy_presentation.id=gsp_school.id WHERE audit_year = '2019'");
-	$query2 = $this->db->query("SELECT all_yoy_presentation.*,all_yoy_presentation.school_id AS school_id FROM `all_yoy_presentation` INNER JOIN gsp_school ON all_yoy_presentation.id=gsp_school.id WHERE audit_year = '2019'");
+	$query2 = $this->db->query("SELECT all_yoy_presentation.*,all_yoy_presentation.school_id AS school_id FROM `all_yoy_presentation` INNER JOIN gsp_school ON all_yoy_presentation.id=gsp_school.id WHERE audit_year = '2018'");
 
 	$t2018 = $query2->result_array();
 	$tAry = $query1->result_array();
