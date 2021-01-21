@@ -13,15 +13,15 @@ class Download extends CI_Controller {
         $this->load->model(array('Answer_model', 'file','User_model'));
         $this->load->helper(array('download', 'common_helper', 'form'));
         $this->load->model('admin/Audit_started_model');
-	$this->load->library('pagination');
-	$this->load->model(array('School_model', 'admin/Dashboard_model'));
-	$this->load->model('admin/Performance_model');    
+        $this->load->library('pagination');
+        $this->load->model(array('School_model', 'admin/Dashboard_model'));
+        $this->load->model('admin/Performance_model');    
     }
 
     public function index() {
         $data['main'] = 'All School List Complete & Submit The Audit';
         $data['title'] = 'Home | Response Report 2017';
-	    $this->load->view('list-school');
+	      $this->load->view('list-school');
     }
 	public function downloadFiles() {
 	    if ($this->session->userdata('USER_ID') == '') {

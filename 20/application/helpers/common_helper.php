@@ -666,6 +666,27 @@ if (!function_exists('getFiled')) {
 
 }
 
+/*
+*THis is code writted by HY
+*/
+
+if (!function_exists('getWaste')) {
+
+  function getWaste($argWhere, $argUserID) {
+      $test = '';
+      $CI = & get_instance();
+      $temp = $CI->db->get_where('all_yoy_presentation', array('questionid' => $argWhere, 'userid' => $argUserID))->row();
+      //echo $CI->db->last_query();
+      //print_r($temp);
+      if (!empty($temp)) {
+          $test = $temp->answer;
+          
+      }
+      return $test;
+  }
+
+}
+
 if (!function_exists('getFiledNum')) {
 function getFiledNum($argWhere, $argUserID) {
         $test = 0;
