@@ -34,13 +34,13 @@ class Wastet extends CI_Controller {
     public function schoolprofilegenral() {
 	$data = array();
 	$query = $this->db->query("SELECT gsp_school.*,gsp_school.id AS school_id FROM `gsp_school` INNER JOIN gsp_waste_submitted ON gsp_school.userid=gsp_waste_submitted.userid WHERE gsp_school.progress ='100' && gsp_waste_submitted.status='1'");
-	$query1 = $this->db->query("SELECT all_yoy_presentation.*,all_yoy_presentation.school_id AS school_id FROM `all_yoy_presentation` INNER JOIN gsp_school ON all_yoy_presentation.id=gsp_school.id WHERE audit_year = '2019'");
-	$query2 = $this->db->query("SELECT all_yoy_presentation.*,all_yoy_presentation.school_id AS school_id FROM `all_yoy_presentation` INNER JOIN gsp_school ON all_yoy_presentation.id=gsp_school.id WHERE audit_year = '2018'");
+	$query1 = $this->db->query("SELECT all_yoy_presentation.*,all_yoy_presentation.school_id AS school_id FROM `all_yoy_presentation` INNER JOIN gsp_school ON all_yoy_presentation.school_id=gsp_school.id WHERE audit_year = '2019'");
+	$query2 = $this->db->query("SELECT all_yoy_presentation.*,all_yoy_presentation.school_id AS school_id FROM `all_yoy_presentation` INNER JOIN gsp_school ON all_yoy_presentation.school_id=gsp_school.id WHERE audit_year = '2018'");
 
 	$t2018 = $query2->result_array();
 	$tAry = $query1->result_array();
 	$uArray=$query->result_array();
-	// echo '<pre>'; print_r($tAry);
+	// echo '<pre>'; print_r($t2018);
 	// end;
 	
 	
@@ -186,25 +186,25 @@ class Wastet extends CI_Controller {
 		'reuse_textbooks' => $tAry[$i]['reuse_textbooks'],
 		'what_is_the_final_destination_for_waste_from_your' => $tAry[$i]['what_is_the_final_destination_for_waste_from_your'],
 		'does_your_school_burn_waste' => $tAry[$i]['does_your_school_burn_waste'],
-		'18school_segregated_solid_waste' => $t2018[$i]['18school_segregated_solid_waste'],
-		'18composting_facility' => $t2018[$i]['18composting_facility'],
-		'18total_biodegradable_waste_generated' => $t2018[$i]['18total_biodegradable_waste_generated'],	
-	    '18total_dry_recyclable_waste_generated' => $t2018[$i]['18total_dry_recyclable_waste_generated'],
-		'18total_domestic_waste_generated' => $t2018[$i]['18total_domestic_waste_generated'],
-		'18e_waste_generated' => $t2018[$i]['18e_waste_generated'],
-		'18biomedical_waste_generated' => $t2018[$i]['18biomedical_waste_generated'],
-		'18sanitary_waste_generated' => $t2018[$i]['18sanitary_waste_generated'],
-		'18cd_waste_generated' => $t2018[$i]['18cd_waste_generated'],
-		'18total_biodegradable_waste_recycled' => $t2018[$i]['18total_biodegradable_waste_recycled'],
-		'18total_dry_recyclable_waste_recycled' => $t2018[$i]['18total_dry_recyclable_waste_recycled'],
-		'18pcpd_domestic_waste_recycled' => $t2018[$i]['18pcpd_domestic_waste_recycled'],
-		'18e_waste_recycled' => $t2018[$i]['18e_waste_recycled'],
-		'18biomedical_waste_recycled' => $t2018[$i]['18biomedical_waste_recycled'],	
-	    '18sanitary_waste_recycled' => $t2018[$i]['18sanitary_waste_recycled'],
-		'18cd_waste_recycled' => $t2018[$i]['18cd_waste_recycled'],
-		'18reuse_textbooks' => $t2018[$i]['18reuse_textbooks'],
-		'18what_is_the_final_destination_for_waste_from_your' => $t2018[$i]['18what_is_the_final_destination_for_waste_from_your'],
-		'18does_your_school_burn_waste' => $t2018[$i]['18does_your_school_burn_waste'],
+		'18school_segregated_solid_waste' => $t2018[$i]['school_segregated_solid_waste'],
+		'18composting_facility' => $t2018[$i]['composting_facility'],
+		'18total_biodegradable_waste_generated' => $t2018[$i]['total_biodegradable_waste_generated'],	
+	    '18total_dry_recyclable_waste_generated' => $t2018[$i]['total_dry_recyclable_waste_generated'],
+		'18total_domestic_waste_generated' => $t2018[$i]['total_domestic_waste_generated'],
+		'18e_waste_generated' => $t2018[$i]['e_waste_generated'],
+		'18biomedical_waste_generated' => $t2018[$i]['biomedical_waste_generated'],
+		'18sanitary_waste_generated' => $t2018[$i]['sanitary_waste_generated'],
+		'18cd_waste_generated' => $t2018[$i]['cd_waste_generated'],
+		'18total_biodegradable_waste_recycled' => $t2018[$i]['total_biodegradable_waste_recycled'],
+		'18total_dry_recyclable_waste_recycled' => $t2018[$i]['total_dry_recyclable_waste_recycled'],
+		'18pcpd_domestic_waste_recycled' => $t2018[$i]['pcpd_domestic_waste_recycled'],
+		'18e_waste_recycled' => $t2018[$i]['e_waste_recycled'],
+		'18biomedical_waste_recycled' => $t2018[$i]['biomedical_waste_recycled'],	
+	    '18sanitary_waste_recycled' => $t2018[$i]['sanitary_waste_recycled'],
+		'18cd_waste_recycled' => $t2018[$i]['cd_waste_recycled'],
+		'18reuse_textbooks' => $t2018[$i]['reuse_textbooks'],
+		'18what_is_the_final_destination_for_waste_from_your' => $t2018[$i]['what_is_the_final_destination_for_waste_from_your'],
+		'18does_your_school_burn_waste' => $t2018[$i]['does_your_school_burn_waste'],
 		'Q1B1' => (getFiled('Q1B1', $uArray[$i]['userid']) != '') ? getFiled('Q1B1', $uArray[$i]['userid']) : "",
 		'Q1AP2' => (getFiled('Q1AP2', $uArray[$i]['userid']) != '') ? getFiled('Q1AP2', $uArray[$i]['userid']) : "",
 		'Q2AP1' => (getFiled('Q2AP1', $uArray[$i]['userid']) != '') ? getFiled('Q2AP1', $uArray[$i]['userid']) : "",
