@@ -45,7 +45,7 @@ body{
   font-family: mtcorsva; font-size: 20px;
 } 
 
-.certificateno{ position:absolute; top:670px; left: 10px;}
+.certificateno{ position:absolute; top:630px; left: 10px;}
 .principal{ position:relative; text-align: center; top:345px;}
 .school_name1{ position:relative; text-align: center; top:355px; font-size: 20px; margin-left: 25px;}
 .school_name{ position:relative; text-align: center; top:355px; margin-left: 25px;}
