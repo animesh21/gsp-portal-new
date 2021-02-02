@@ -26,7 +26,7 @@
 
 <div class="container" style="padding: 20px">
   <div class="home_container" style="padding: 30px 15px 30px 15px; width: 55%;">
-    <h1>DIGITAL CERTIFICATE FOR GSP SKILL BUILDING E-CAMP 29-30 JUNE, 2020</h1>
+    <h1> APNGC Online Capacity Building Workshop - 20 & 21 January, 2020</h1>
     <?php if(!empty($this->session->flashdata('data_name'))) { ?>
      <div class="alert alert-dismissible alert-danger">
       <button type="button" class="close" data-dismiss="alert">&times;</button>

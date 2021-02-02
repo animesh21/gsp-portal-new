@@ -12,7 +12,7 @@
 
     if ($teacher->name_of_participant !="") {
         echo "<div class='container'>
-        <div class='image'><img src='assets/img/images/certificate_gsp_ecamp.jpg' width='1000' height='700'></div>";
+        <div class='image'><img src='assets/img/images/hh.jpg' width='1000' height='700'></div>";
 
   echo "<div class='principal'>" . strtoupper($teacher->school_name) ."</div>&nbsp;";
     $length = strlen($teacher->school_name);
@@ -23,7 +23,7 @@
     echo "<div class='school_name'>". strtoupper($teacher->name_of_participant). "</div>";
      
   }  
-        echo "<div class='certificateno'>Certificate No : "."GSP Skill Building E-Camp/2020/0".$teacher->id." </div>
+        echo "<div class='certificateno'>Certificate No : "."APNGC Online Capacity Building Workshop/2021/0".$teacher->id." </div>
    </div> ";
     }
     }
