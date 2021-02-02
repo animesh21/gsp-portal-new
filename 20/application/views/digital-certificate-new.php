@@ -45,10 +45,10 @@ body{
   font-family: mtcorsva; font-size: 20px;
 } 
 
-.certificateno{ position:absolute; top:630px; left: 10px;}
-.principal{ position:relative; text-align: center; top:345px;}
-.school_name1{ position:relative; text-align: center; top:355px; font-size: 20px; margin-left: 25px;}
-.school_name{ position:relative; text-align: center; top:355px; margin-left: 25px;}
+.certificateno{ position:absolute; top:650px; left: 10px;}
+.principal{ position:relative; text-align: center; top:315px;}
+.school_name1{ position:relative; text-align: center; top:325px; font-size: 20px; margin-left: 25px;}
+.school_name{ position:relative; text-align: center; top:325px; margin-left: 25px;}
 .image{position:absolute; margin-left: -40px; margin-top: -20px;}
 </style>
 
