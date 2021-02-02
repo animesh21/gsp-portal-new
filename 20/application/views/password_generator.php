@@ -37,20 +37,20 @@
     <p style="color: red"></p>
      <div class="row" style="padding: 30px; margin: 0px; text-align: center;">
     <?php echo form_open('GetCertificate/getCertificate', array('class'=>'form-inline')); ?>
-    <p style="font-weight: bold;">The link to download the GSP-Skill Building E-Camp certificate is now closed. For any questions, please write to: <a href = "mailto: support@greenschoolsprogramme.org">support@greenschoolsprogramme.org</a>. </p>
-        <!-- <div class="form-group" style="width: 100%">
+    <!-- <p style="font-weight: bold;">The link to download the GSP-Skill Building E-Camp certificate is now closed. For any questions, please write to: <a href = "mailto: support@greenschoolsprogramme.org">support@greenschoolsprogramme.org</a>. </p> -->
+        <div class="form-group" style="width: 100%">
             <label for="number">Registered Mobile Number<a class="tt" data-tooltip="Please enter the mobile number used at the time of online registration."><span
                             class="badge">?</span></a></label> &nbsp; &nbsp;
             <input type="text" class="form-control" id="number" name="mobile" required="" placeholder="14845551324">
         </div> <br/>  <br/> 
-        <button type="submit" class="btn org-btn width100" style="padding: 12px">Login</button> -->
+        <button type="submit" class="btn org-btn width100" style="padding: 12px">Login</button>
     <?php echo form_close(); ?>
 
 </div>
          
   </div>  
 
-<!--   <p class="log-p text-center">Access to the dashboard is restricted to authorized personnel only.</p> -->
+  <p class="log-p text-center">Access to the dashboard is restricted to authorized personnel only.</p>
 </div>
 
 
