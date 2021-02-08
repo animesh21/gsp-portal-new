@@ -19,7 +19,7 @@
     <div class="card mt-2 mx-auto p-4 bg-light">
         <div class="card-body bg-light">
             <div class="container">
-                <?php echo form_open('Feedback/set', array('id'=>'feedback')); ?>
+                <?php echo form_open('feb/Feedback/set', array('id'=>'feedback')); ?>
                     <div class="controls">
                         <div class="row">
 
@@ -118,7 +118,7 @@ $(document).ready(function () {
                 url: '<?php echo base_url('previous/airprevious') ?>',
                 data: fd,
                 success: function (data) {
-                    window.location.href = "<?php echo base_url('waste'); ?>";
+                    window.location.href = "<?php echo base_url('feb/Wastem'); ?>";
                 }
             });
         });

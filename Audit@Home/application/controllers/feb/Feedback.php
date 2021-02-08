@@ -63,7 +63,7 @@ class Feedback extends CI_Controller {
 
                 if($this->form_validation->run() == false)
                 {
-                    $this->load->view('feedback');
+                    $this->load->view('auditfeb/feedback');
                 }
                 else
                 {

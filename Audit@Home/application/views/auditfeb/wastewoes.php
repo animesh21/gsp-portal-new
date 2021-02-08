@@ -19,7 +19,7 @@
     <div class="card mt-2 mx-auto p-4 bg-light">
         <div class="card-body bg-light">
             <div class="container">
-                <?php echo form_open('feb/WasteWoes/set', array('id'=>'Waste Woes')); ?>
+                <?php echo form_open('feb/WasteWoes/set', array('id'=>'wastewose')); ?>
                     <div class="controls">
                         <div class="row">
                             
@@ -217,20 +217,13 @@ margin-bottom: 20px;
 </style>
 
 
-<!-- <script type="text/javascript">
-    $(document).ready(function(){
-      $("#previous").click(function(){
-        alert('dd');
-         window.location.href = "<?php echo base_url('general'); ?>";
-      })  
-    })
-</script> -->
+
 
 <script>
 
 $(document).ready(function () {
         $('#btnAirPrevious').on('click', function (data) {
-            var fd = $('#air').serialize();
+            var fd = $('#wastewose').serialize();
             //console.log(fd);
             $.ajax({
                 type: 'POST',
@@ -244,7 +237,7 @@ $(document).ready(function () {
     });
 </script>
 
-<script>
+<!-- <script>
 $("#foodnext").click(function(e){
   if($('input[name="Q1A1"]:checked').length == 0){
         alert("Q10 Is cooking part of any regular subjects or extracurricular activities?.."); 
@@ -254,4 +247,4 @@ $("#foodnext").click(function(e){
     }
  }
 }
-</script>
+</script> -->
