@@ -405,7 +405,7 @@ p{
         <input type="hidden" name="browser_version" id="browser_version" value="<?php echo $user['browser_version']; ?>">
         <input type="hidden" name="user_ip_address" id="user_ip_address" value="<?php echo $user['user_ip_address']; ?>">  
 
-         <div class="captcha" style="text-align: center; margin-top:50px" > 
+    <div class="captcha" style="text-align: center; margin-top:50px" > 
       <p id="question"></p><input id="ans" type="text" required="true">
       <div id="message">Please verify.</div>
       <div id="success">Validation complete :</div>

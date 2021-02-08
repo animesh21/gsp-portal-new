@@ -28,7 +28,7 @@ class Login extends CI_Controller {
             $checkSubmitted = $this->User_model->UserSubmitted($post);
              
             if (!empty($varCheckLogin)) { 		  
-                redirect(base_url('general'));
+                redirect(base_url('feb/general'));
             } elseif($checkSubmitted) { 
                 $this->session->set_flashdata('error', 'You have already submitted the survey. Please stay tuned to our emails for further updates on your scorecard! ');
             } 
@@ -37,8 +37,10 @@ class Login extends CI_Controller {
                 $this->session->set_flashdata('error', 'Invalid Email/Password!');
             }
         }
-		$this->load->view('close');
-	}
+		// $this->load->view('close');
+		$this->load->view('login');
+
+    }
 
 	public function logout(){
         $this->session->unset_userdata(array('USERNAME', 'USER_ID'));
