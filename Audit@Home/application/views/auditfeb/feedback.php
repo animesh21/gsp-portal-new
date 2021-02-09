@@ -42,7 +42,7 @@
                                     <!-- <p style="font-size:20px;">Now that we know how impactful our environmental practices at home can be, let us
                                     adopt a few greener ones. So which practices will you choose?</p> -->
 
-                                    <div style="background-image: url('<?php echo base_url(); ?>assets/img/Picture3.PNG'); height:580px; width:100%;  background-repeat: no-repeat;background-size: cover;">
+                                    <div style="background-image: url('<?php echo base_url(); ?>assets/img/Picture3.png'); height:580px; width:100%;  background-repeat: no-repeat;background-size: cover;">
                                         <div style="margin-left: 17%;">
                                             <div class="form-group" style="background-color: lightgray;width: 80%;">
                                             <label class="radio">
@@ -94,7 +94,7 @@
                             </div>
 
                             <div class="col-md-6"> <input type="button" id="btnAirPrevious" class="btn btn-success btn-send pt-2 btn-block " value="Previous"> </div>
-                            <div class="col-md-6"> <input type="submit" class="btn btn-success btn-send pt-2 btn-block " value="Next"> </div>
+                            <!-- <div class="col-md-6"> <input type="submit" class="btn btn-success btn-send pt-2 btn-block " value="Next"> </div> -->
                             
 
                         
