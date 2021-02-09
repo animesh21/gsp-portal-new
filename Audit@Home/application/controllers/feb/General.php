@@ -7,7 +7,7 @@ class General extends CI_Controller {
         $this->load->helper(array('form', 'security', 'common_helper'));
         $this->load->library('form_validation');
         $this->load->model('Answer_model');
-       
+        $this->load->model('School_model');
         if ($this->session->userdata('USER_ID') == '') {        
             redirect('login');
         }      
@@ -23,8 +23,26 @@ class General extends CI_Controller {
            {
             $userId = $this->session->userdata('USER_ID');
             $type = 1; 
-            $records['records'] = $this->Answer_model->getAllAnswers($userId,$type);
+            
+            $school = $this->Answer_model->getAllAnswers($userId,$type);
+            $school1 = $this->School_model->getSchool($this->session->userdata('USER_ID'));
+            $schoolname = $school1['school_name'];
+            if(is_numeric($schoolname)){
+                $school2 = $this->School_model->getSchoolname($schoolname);
+            }else{
+                $school2 = array(
+                    'id' => 0,     
+                    
+                    'dc' => 'lorem',
+                    
+                );
+            }
+        	$records['records'] = array_merge($school, $school1, $school2);
+
             $this->load->view('auditfeb/general',$records);
+            echo '<pre>';
+            print_r($records);
+            echo '<pre>';
       	    }
     }
     

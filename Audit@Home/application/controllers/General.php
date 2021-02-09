@@ -7,7 +7,9 @@ class General extends CI_Controller {
         $this->load->helper(array('form', 'security', 'common_helper'));
         $this->load->library('form_validation');
         $this->load->model('Answer_model');
-       
+
+        $this->load->model('School_model');
+
         if ($this->session->userdata('USER_ID') == '') {        
             redirect('login');
         }      

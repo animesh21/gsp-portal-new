@@ -9,36 +9,52 @@ class School_model extends CI_Model
         parent::__construct();
     }
 
+    public function getSchoolname($argPost)
+    {
+        $this->db2 = $this->load->database('db2', TRUE);
+
+        $query = $this->db2->select('*')
+            ->from('gsp_school')
+            ->where(array('id' => $argPost))
+            ->get();
+        
+            if ($query->num_rows() > 0) {
+                $row = $query->row();
+                // $row1 = $query1->row();
+                $school = array(
+                    'id' => $row->id,     
+                    
+                    'school_name' => $row->name,
+                    
+                );
+                return $school;
+            }
+
+    }
+
     public function getSchool($argPost)
     {
         $query = $this->db->select('*')
-            ->from('user')
-            ->where(array('userid' => $argPost))
+            ->from('users')
+            ->where(array('id' => $argPost))
             ->get();
+        // $this->db2 = $this->load->database('db2', TRUE);
+
+        // $query1 = $this->db2->select('*')
+        //     ->from('gsp_school')
+        //     ->where(array('id' => $argPost))
+        //     ->get();
+
         if ($query->num_rows() > 0) {
             $row = $query->row();
+            // $row1 = $query1->row();
             $school = array(
-		'userid' => $row->userid,     
-                'udise' => $row->udise,
-                'name' => $row->name,
-                'address1' => $row->address1,
-                'address2' => $row->address2,
-                'country' => $row->country,
-                'state' => $row->state,
-                'district' => $row->district,
-                'city' => $row->city,
+		        'id' => $row->id,     
+                
+                'school_name' => $row->school_name,
+                'school_address' => $row->school_address,
                 'pincode' => $row->pincode,
-                'std' => $row->std,
-                'telephone' => $row->telephone,
-                'country_code' => $row->country_code,
-                'schoolemail' => $row->schoolemail,
-                'principle_name' => $row->principle_name,
-                'mobile' => $row->mobile,
-                'coname' => $row->coname,
-                'coemail' => $row->coemail,
-                'comobile' => $row->comobile,
-                'progress'=>$row->progress,
-
+                'city'    => $row->city,
 
             );
             return $school;

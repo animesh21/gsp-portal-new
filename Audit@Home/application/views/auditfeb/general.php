@@ -116,13 +116,13 @@
                               </div>
                            
                               <div class="col-md-12">
-                                  <div class="form-group"> <label>7. School Name</label> <input id="school_name" type="text" name="school_name" class="form-control" placeholder="School Name" value="<?php if (isset($records['school_name'])) echo $records['school_name']; ?>"> </div>
+                                  <div class="form-group"> <label>7. School Name</label> <input id="school_name" type="text" name="school_name" class="form-control" placeholder="School Name" value="<?php if (isset($records['school_name'])) echo $records['school_name']; ?>" readonly> </div>
                               </div>
                               <div class="col-md-12">
-                                  <div class="form-group"> <label>8. School Address</label> <input id="school_address" type="text" name="school_address" class="form-control" placeholder="School Address" value="<?php if (isset($records['school_address'])) echo $records['school_address'];?>"> </div>
+                                  <div class="form-group"> <label>8. School Address</label> <input id="school_address" type="text" name="school_address" class="form-control" placeholder="School Address" value="<?php if (isset($records['school_address'])) echo $records['school_address'];?>" readonly> </div>
                               </div>
                               <div class="col-md-12">
-                                  <div class="form-group"> <label>9. Pincode of the school</label> <input id="pincode" type="text" name="pincode" class="form-control" placeholder="Pincode" value="<?php if (isset($records['pincode'])) echo $records['pincode'];?>"> </div>
+                                  <div class="form-group"> <label>9. Pincode of the school</label> <input id="pincode" type="text" name="pincode" class="form-control" placeholder="Pincode" value="<?php if (isset($records['pincode'])) echo $records['pincode'];?>" readonly> </div>
                               </div>
                               <div class="col-md-12">
                                   <div class="form-group"> <label for="form_email">10. Did your school participate in the GSP Audit 2019?</label> <br/>
