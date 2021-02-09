@@ -35,11 +35,11 @@
                           <div class="col-md-12">
                                 <div class="form-group"> <label>1. Do you segregate solid waste into wet and dry?</label><br/>
                                 <input type="radio" id="Q1WS1" name="Q1WS1" value="<?php  echo set_value('Q1WS1',1)?>"<?php if (isset($records['Q1WS1'])) echo $records['Q1WS1'] == 1 ? "checked" : "" ?>>
-                                <label> &nbsp; A. Always</label><br>
+                                <label> &nbsp; A.	Rarely</label><br>
                                 <input type="radio" id="Q1WS1" name="Q1WS1" value="<?php  echo set_value('Q1WS1',2)?>"<?php if (isset($records['Q1WS1'])) echo $records['Q1WS1'] == 2 ? "checked" : "" ?>>
                                 <label> &nbsp; B. Sometimes</label><br>
                                 <input type="radio" id="Q1WS1" name="Q1WS1" value="<?php  echo set_value('Q1WS1',3)?>"<?php if (isset($records['Q1WS1'])) echo $records['Q1WS1'] == 3 ? "checked" : "" ?>>
-                                <label> &nbsp; C. Rarely</label>                           
+                                <label> &nbsp; C.	Always</label>                           
                                 </div>
                             </div>
 
@@ -47,22 +47,22 @@
                                 <div class="form-group"> <label>2. How many dustbins are there in your house to collect different types of waste?</label>
                                 <br/>
                                 <input type="radio" id="Q2WS1" name="Q2WS1" value="<?php  echo set_value('Q2WS1',1)?>"<?php if (isset($records['Q2WS1'])) echo $records['Q2WS1'] == 1 ? "checked" : "" ?>>
-                                <label> &nbsp; A. More than three</label><br>
+                                <label> &nbsp; A.	One common dustbin</label><br>
                                 <input type="radio" id="Q2WS1" name="Q2WS1" value="<?php  echo set_value('Q2WS1',2)?>"<?php if (isset($records['Q2WS1'])) echo $records['Q2WS1'] == 2 ? "checked" : "" ?>>
                                 <label> &nbsp; B. Two to three</label><br>
                                 <input type="radio" id="Q2WS1" name="Q2WS1" value="<?php  echo set_value('Q2WS1',3)?>"<?php if (isset($records['Q2WS1'])) echo $records['Q2WS1'] == 3 ? "checked" : "" ?>>
-                                <label> &nbsp; C. One common dustbin</label>                               
+                                <label> &nbsp; C.	More than three</label>                               
                                 </div>
                             </div>
 
                             <div class="col-md-12">
                                 <div class="form-group"> <label>3. How frequently do you or your parents get new mobile phones?</label> <br/> 
                                 <input type="radio" id="Q3WS1" name="Q3WS1" value="<?php  echo set_value('Q3WS1',1)?>"<?php if (isset($records['Q3WS1'])) echo $records['Q3WS1'] == 1 ? "checked" : "" ?>>
-                                <label> &nbsp; A. Every 2-3 years</label><br>
+                                <label> &nbsp;A.	Every six months</label><br>
                                 <input type="radio" id="Q3WS1" name="Q3WS1" value="<?php  echo set_value('Q3WS1',2)?>"<?php if (isset($records['Q3WS1'])) echo $records['Q3WS1'] == 2 ? "checked" : "" ?>>
-                                <label> &nbsp; B. Every year</label><br>
+                                <label> &nbsp;B. Every year</label><br>
                                 <input type="radio" id="Q3WS1" name="Q3WS1" value="<?php  echo set_value('Q3WS1',3)?>"<?php if (isset($records['Q3WS1'])) echo $records['Q3WS1'] == 3 ? "checked" : "" ?>>
-                                <label> &nbsp; C. Every six months</label>               
+                                <label> &nbsp;C.	Every 2-3 years</label>               
                                 </div>
                             </div>
 
@@ -74,11 +74,11 @@
                                 </div>
                                 </br>
                                 <input type="radio" id="Q4WS1" name="Q4WS1" value="<?php  echo set_value('Q4WS1',1)?>"<?php if (isset($records['Q4WS1'])) echo $records['Q4WS1'] == 1 ? "checked" : "" ?>>
-                                <label> &nbsp; A. Give to local scrap collector or authorized dealer</label><br>
+                                <label> &nbsp;A.	Dump with the rest of the waste</label><br>
                                 <input type="radio" id="Q4WS1" name="Q4WS1" value="<?php  echo set_value('Q4WS1',2)?>"<?php if (isset($records['Q4WS1'])) echo $records['Q4WS1'] == 2 ? "checked" : "" ?>>
-                                <label> &nbsp; B. Store items for later use</label><br>
+                                <label> &nbsp;B. Store items for later use</label><br>
                                 <input type="radio" id="Q4WS1" name="Q4WS1" value="<?php  echo set_value('Q4WS1',3)?>"<?php if (isset($records['Q4WS1'])) echo $records['Q4WS1'] == 3 ? "checked" : "" ?>>
-                                <label> &nbsp; C. Dump with the rest of the waste</label>                           
+                                <label> &nbsp;C.	Give to local scrap collector or authorized dealer</label>                           
                                 </div>
                             </div>
 
@@ -86,30 +86,30 @@
                                 <div class="form-group"> <label>5. How do you dispose of sanitary waste?</label>
                                 <br/>
                                 <input type="radio" id="Q5WS1" name="Q5WS1" value="<?php  echo set_value('Q5WS1',1)?>"<?php if (isset($records['Q5WS1'])) echo $records['Q5WS1'] == 1 ? "checked" : "" ?>>
-                                <label> &nbsp; A. Not applicable</label><br>
+                                <label> &nbsp;A.	Incinerate it</label><br>
                                 <input type="radio" id="Q5WS1" name="Q5WS1" value="<?php  echo set_value('Q5WS1',2)?>"<?php if (isset($records['Q5WS1'])) echo $records['Q5WS1'] == 2 ? "checked" : "" ?>>
-                                <label> &nbsp; B. Give to authorised biomedical unit for processing</label><br>
+                                <label> &nbsp;B.	Dump with the rest of the solid waste</label><br>
                                 <input type="radio" id="Q5WS1" name="Q5WS1" value="<?php  echo set_value('Q5WS1',3)?>"<?php if (isset($records['Q5WS1'])) echo $records['Q5WS1'] == 3 ? "checked" : "" ?>>
-                                <label> &nbsp; C. Incinerate it</label><br>
+                                <label> &nbsp;C.	Not applicable</label><br>
                                 <input type="radio" id="Q5WS1" name="Q5WS1" value="<?php  echo set_value('Q5WS1',4)?>"<?php if (isset($records['Q5WS1'])) echo $records['Q5WS1'] == 4 ? "checked" : "" ?>>
-                                <label> &nbsp; D. Dump with the rest of the solid waste</label>                     
+                                <label> &nbsp;D.	Give to authorised biomedical unit for processing</label>                     
                                 </div>
                             </div>
 
                             <div class="col-md-12">
                                 <div class="form-group"> <label>6. Do you practise composting at home?</label>
-                                <p style="font-size: 14px; margin-left:25px;">To know more about how composting can be done, you can visit https://www.greenschoolsprogramme.org/students/what-can-i-do/</p>
+                                <p style="font-size: 14px; margin-left:25px;">To know more about how composting can be done, you can visit <a href="https://www.greenschoolsprogramme.org/students/what-can-i-do/" style="color:blue;">https://www.greenschoolsprogramme.org/students/what-can-i-do/</a> </p>
                                 <br/>
                                 <div style="margin-right:19px;">
                                   <img src="<?php echo base_url(); ?>assets/img/Picture1.png" alt="AQI" style="margin-right:10px;">
                                 </div>
                                 </br>
                                 <input type="radio" id="Q6WS1" name="Q6WS1" value="<?php  echo set_value('Q6WS1',1)?>"<?php if (isset($records['Q6WS1'])) echo $records['Q6WS1'] == 1 ? "checked" : "" ?>>
-                                <label> &nbsp; A. Yes</label><br>
+                                <label> &nbsp;A.	Don't know about composting</label><br>
                                 <input type="radio" id="Q6WS1" name="Q6WS1" value="<?php  echo set_value('Q6WS1',2)?>"<?php if (isset($records['Q6WS1'])) echo $records['Q6WS1'] == 2 ? "checked" : "" ?>>
-                                <label> &nbsp; B. No</label><br>
+                                <label> &nbsp;B.	No</label><br>
                                 <input type="radio" id="Q6WS1" name="Q6WS1" value="<?php  echo set_value('Q6WS1',3)?>"<?php if (isset($records['Q6WS1'])) echo $records['Q6WS1'] == 3 ? "checked" : "" ?>>
-                                <label> &nbsp; C. Don't know about composting</label>                     
+                                <label> &nbsp;C.	Yes</label>                     
                                 </div>
                             </div>
 
@@ -117,23 +117,25 @@
                                 <div class="form-group"> <label>7. Do you share and reuse books rather than buying every time?</label>
                                 <br/>
                                 <input type="radio" id="Q7WS1" name="Q7WS1" value="<?php  echo set_value('Q7WS1',1)?>"<?php if (isset($records['Q7WS1'])) echo $records['Q7WS1'] == 1 ? "checked" : "" ?>>
-                                <label> &nbsp; A. Most times</label><br>
+                                <label> &nbsp;A.	Rarely</label><br>
                                 <input type="radio" id="Q7WS1" name="Q7WS1" value="<?php  echo set_value('Q7WS1',2)?>"<?php if (isset($records['Q7WS1'])) echo $records['Q7WS1'] == 2 ? "checked" : "" ?>>
-                                <label> &nbsp; B. Sometimes</label><br>
+                                <label> &nbsp;B.	Sometimes</label><br>
                                 <input type="radio" id="Q7WS1" name="Q7WS1" value="<?php  echo set_value('Q7WS1',3)?>"<?php if (isset($records['Q7WS1'])) echo $records['Q7WS1'] == 3 ? "checked" : "" ?>>
-                                <label> &nbsp; C. Rarely</label>                     
+                                <label> &nbsp;C.	Most times</label>                     
                                 </div>
                             </div>
 
                             <div class="col-md-12">
-                                <div class="form-group"> <label>8. Where do you dispose of the single-use masks and gloves used to protect yourself from the coronavirus?</label>
+                                <div class="form-group"> <label>7. What do you do with the leftover food? </label>
                                 <br/>
                                 <input type="radio" id="Q8WS1" name="Q8WS1" value="<?php  echo set_value('Q8WS1',1)?>"<?php if (isset($records['Q8WS1'])) echo $records['Q8WS1'] == 1 ? "checked" : "" ?>>
-                                <label> &nbsp; A. Separate/ Yellow bin for biomedical waste</label><br>
+                                <label> &nbsp;A.	Throw it</label><br>
                                 <input type="radio" id="Q8WS1" name="Q8WS1" value="<?php  echo set_value('Q8WS1',2)?>"<?php if (isset($records['Q8WS1'])) echo $records['Q8WS1'] == 2 ? "checked" : "" ?>>
-                                <label> &nbsp; B. With other solid waste</label><br>
+                                <label> &nbsp;B.	Clean and compost it</label><br>
                                 <input type="radio" id="Q8WS1" name="Q8WS1" value="<?php  echo set_value('Q8WS1',3)?>"<?php if (isset($records['Q8WS1'])) echo $records['Q8WS1'] == 3 ? "checked" : "" ?>>
-                                <label> &nbsp; C. Mixed bin</label>                     
+                                <label> &nbsp;C.	Give away to the needy</label>  <br> 
+                                <input type="radio" id="Q8WS1" name="Q8WS1" value="<?php  echo set_value('Q8WS1',4)?>"<?php if (isset($records['Q8WS1'])) echo $records['Q8WS1'] == 4 ? "checked" : "" ?>>
+                                <label> &nbsp;D.	Repurpose it into cooking</label>                     
                                 </div>
                             </div>
 
@@ -146,11 +148,11 @@
                                 </div>
                                 </br>
                                 <input type="radio" id="Q9WS1" name="Q9WS1" value="<?php  echo set_value('Q9WS1',1)?>"<?php if (isset($records['Q9WS1'])) echo $records['Q9WS1'] == 1 ? "checked" : "" ?>>
-                                <label> &nbsp;A.	Wet waste</label><br>
+                                <label> &nbsp;A.	Mixed bin</label><br>
                                 <input type="radio" id="Q9WS1" name="Q9WS1" value="<?php  echo set_value('Q9WS1',2)?>"<?php if (isset($records['Q9WS1'])) echo $records['Q9WS1'] == 2 ? "checked" : "" ?>>
-                                <label> &nbsp;B.	Mixed waste</label><br>
+                                <label> &nbsp;B.	With other dry waste</label><br>
                                 <input type="radio" id="Q9WS1" name="Q9WS1" value="<?php  echo set_value('Q9WS1',3)?>"<?php if (isset($records['Q9WS1'])) echo $records['Q9WS1'] == 3 ? "checked" : "" ?>>
-                                <label> &nbsp;C.	Dry waste</label>                     
+                                <label> &nbsp;C.	Separate/ Yellow bin for biomedical waste</label>                     
                                 </div>
                             </div>
 

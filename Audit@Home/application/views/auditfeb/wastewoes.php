@@ -52,9 +52,13 @@
 
                             </div>
                             </div>
+                            <div class="col-md-12">
+                            <div class="form-group">
+                            <h1>WASTE-O-PEDIA</h1>
+                            </div>
+                            </div>
 
-
-                          <div class="col-md-12">
+                          <div class="col-md-12" id="chk">
                                 <div class="form-group"> <label>1. Which of the following materials is difficult to recycle?</label> <br/>
                                 <input type="radio" id="Q1A1" name="Q1A1" value="<?php  echo set_value('Q1A1',1)?>"<?php if (isset($records['Q1A1'])) echo $records['Q1A1'] == 1 ? "checked" : "" ?>>
                                 <label> &nbsp; A. Glass bottle</label><br>
@@ -136,15 +140,15 @@
                             </div>
 
                             <div class="col-md-12">
-                                <div class="form-group"> <label>7. In which type of waste will you put single-use masks and gloves from a non-quarantined household?</label> <br/>
+                                <div class="form-group"> <label>In which bin will you put single-use masks and gloves at home?</label> <br/>
                                 <input type="radio" id="Q7A1" name="Q7A1" value="<?php  echo set_value('Q7A1',1)?>"<?php if (isset($records['Q7A1'])) echo $records['Q7A1'] == 1 ? "checked" : "" ?>>
-                                <label> &nbsp;A.	Wet waste</label><br>
+                                <label> &nbsp;A.	Green for wet waste</label><br>
                                 <input type="radio" id="Q7A1" name="Q7A1" value="<?php  echo set_value('Q7A1',2)?>"<?php if (isset($records['Q7A1'])) echo $records['Q7A1'] == 2 ? "checked" : "" ?>>
-                                <label> &nbsp; B.	Dry waste</label><br>
+                                <label> &nbsp;B.	Blue for dry waste</label><br>
                                 <input type="radio" id="Q7A1" name="Q7A1" value="<?php  echo set_value('Q7A1',3)?>"<?php if (isset($records['Q7A1'])) echo $records['Q7A1'] == 3 ? "checked" : "" ?>>
-                                <label> &nbsp; C.	Sanitary waste</label><br>   
+                                <label> &nbsp;C.	Red for domestic hazardous waste</label><br>   
                                 <input type="radio" id="Q7A1" name="Q7A1" value="<?php  echo set_value('Q7A1',4)?>"<?php if (isset($records['Q7A1'])) echo $records['Q7A1'] == 4 ? "checked" : "" ?>>
-                                <label> &nbsp; D.	Mixed bin with all types of waste</label>                        
+                                <label> &nbsp;D.	Mixed bin with all types of waste</label>                        
                                 </div>
                             </div>
                             <div class="col-md-12">
@@ -243,3 +247,99 @@ $("#foodnext").click(function(e){
  }
 }
 </script> -->
+
+<script>
+$(document).ready(function() {
+  $("select.country").change(function() {
+    var selectedCountry = $(".country option:selected").text();
+    if (selectedCountry == "India") {
+      alert("You have selected the language - Hindi");
+    } else if (selectedCountry == "Nepal") {
+      alert("You have selected the language - Nepali");
+    }
+  });
+});
+
+$(document).ready(function() {
+  $('input[name=Q1A1]').click(function(){
+    if($(this).is(':checked')){
+        alert('Correct Answer: D. Pen \nExplanation: A pen contains bits of metal, plastic and ink. Therefore, it is difficult to separate the elements of a pen and recycle.');
+    }
+  });   
+});
+
+$(document).ready(function() {
+  $('input[name=Q2A1]').click(function(){
+    if($(this).is(':checked')){
+        alert('Correct Answer: B. Walnut \nExplanation: Walnut releases a chemical that could be toxic for other plants and vegetables in the compost bin.');
+    }
+  });   
+});
+
+$(document).ready(function() {
+  $('input[name=Q3A1]').click(function(){
+    if($(this).is(':Correct Answer: D. All of the above \nExplanation: Paper can be recycled to form a range of things. Some more examples are egg trays, paper towels and newspaper.')){
+        alert('Hello');
+    }
+  });   
+});
+
+
+$(document).ready(function() {
+  $('input[name=Q4A1]').click(function(){
+    if($(this).is(':checked')){
+        alert('Correct Answer: C. Pack the lunch in a reusable and durable box \nExplanation: A lunch box that can be reused for a long period of time ensures less waste. Packing too many non-native food items or using plastic generates more waste and pollution.');
+    }
+  });   
+});
+
+
+$(document).ready(function() {
+  $('input[name=Q5A1]').click(function(){
+    if($(this).is(':checked')){
+        alert('Correct Answer: B. Methane and carbon dioxide \nExplanation: Methane and carbon amount to 90 per cent of the harmful gases released in landfills. In fact, methane is even more than 80 times more potent and dangerous than carbon dioxide.');
+    }
+  });   
+});
+
+
+$(document).ready(function() {
+  $('input[name=Q6A1]').click(function(){
+    if($(this).is(':checked')){
+        alert('Correct Answer: A. Buy a big glass jar \nExplanation: A big glass jar can be reused for storage purposes later as well. Small packaging will generate more waste and add to the existing plastic and metal waste. ');
+    }
+  });   
+});
+
+$(document).ready(function() {
+  $('input[name=Q7A1]').click(function(){
+    if($(this).is(':checked')){
+        alert('Correct Answer: B. Dry waste \nExplanation: Single-use masks and gloves from non-quarantined households—households with no infected person—should be stored separately for 72 hours, shredded and then disposed of with the rest of the dry waste. It can then be given to the waste collector.');
+    }
+  });   
+});
+
+$(document).ready(function() {
+  $('input[name=Q8A1]').click(function(){
+    if($(this).is(':checked')){
+        alert('Correct Answer: D. Return to the store \nExplanation: It is best to buy electronic products with a buy-back policy. Then, the products can be given to the dealer in exchange for another product or money. The second best way is to give it to an authorised E-waste dealer.');
+    }
+  });   
+});
+
+$(document).ready(function() {
+  $('input[name=Q9A1]').click(function(){
+    if($(this).is(':checked')){
+        alert('Correct Answer: B. Wet, dry, domestic hazardous \nExplanation: The household solid waste should be segregated into three categories: wet and/or biodegradable waste; dry and/or recyclable waste; and domestic hazardous waste. You can also read the Solid Waste Management Rules 2016 document for more information. ');
+    }
+  });   
+});
+
+$(document).ready(function() {
+  $('input[name=Q10A1]').click(function(){
+    if($(this).is(':checked')){
+        alert('Correct Answer: D. All of the above \nExplanation: We can take many small steps at home and school to ensure that less waste is generated. Some more examples are not using disposable dishes; avoiding online shopping that involves heavy packaging; and using electronics till the end of their life cycle.');
+    }
+  });   
+});
+</script>

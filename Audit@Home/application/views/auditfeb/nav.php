@@ -6,13 +6,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <div class="container">
     <ul class="nav justify-content-center">
   <li class="nav-item">
-    <a class="nav-link" href="#" style="color: white">STUDENT PROFILE</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#" style="color: white">WASTE WOES</a>
+    <a class="nav-link" href="<?php echo base_url(); ?>feb/General" style="color: white">STUDENT PROFILE</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="#" style="color: white">WASTE-O-PEDIA</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#" style="color: white">WASTE MANAGEMENT AT HOME</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="#" style="color: white">FINAL SCORE</a>
