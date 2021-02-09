@@ -23,6 +23,15 @@
                     <div class="controls">
                         <div class="row">
 
+                            <div class="col-md-12">
+                            <div class="form-group">
+                            <h1>WASTE MANAGEMENT AT HOME</h1>
+                                <p>The waste generated at our houses can be a resource or a menace depending on how we treat it. Separating different types of waste and treating each one appropriately can help greatly in reducing carbon emissions, plastic pollution and the load on landfills.</p>
+
+
+                            </div>
+                            </div>
+
                           <div class="col-md-12">
                                 <div class="form-group"> <label>1. Do you segregate solid waste into wet and dry?</label><br/>
                                 <input type="radio" id="Q1WS1" name="Q1WS1" value="<?php  echo set_value('Q1WS1',1)?>"<?php if (isset($records['Q1WS1'])) echo $records['Q1WS1'] == 1 ? "checked" : "" ?>>

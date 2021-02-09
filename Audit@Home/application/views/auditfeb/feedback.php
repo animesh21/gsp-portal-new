@@ -29,7 +29,13 @@
                                 <p style="font-size:12px;">Add your scores from all the sections and enter here. </p>
                                 <input type="number" id="fiscore" name="fiscore" class="form-control" placeholder="Final score" value="<?php if (isset($records['fiscore'])) echo $records['fiscore'];?>"> </div>
                             </div> -->
+                            <div class="col-md-12">
+                            <div class="form-group">
+                            <h1>FINAL SUBMISSION</h1>
+                                <p>Now that we know how impactful our environmental practices at home can be, let us adopt a few greener ones. So which practices will you choose?</p>
 
+                            </div>
+                            </div>
                             <div class="col-md-12">
                                 <div class="form-group">
                                   

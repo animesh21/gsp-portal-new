@@ -23,40 +23,35 @@
                     <div class="controls">
                         <div class="row">
                             
-                            <!-- <div class="col-md-12">
+                            <div class="col-md-12">
                             <div class="form-group">
-                            <p><strong>The ideal way to take Audit@Home is to observe practices at your home for a few days</br>
-                               and then begin the survey. Here is a plan that you can follow to answer accurately:</strong></p>
-                               <p>
-                                <strong>STEP 1:</strong> For the first two days, observe the consumption of resources: Quantity of water</br>
-                                being used in activities; management of food leftovers; amount of electricity consumed </br>
-                                in the last months; usage of electrical appliances in the house, and so on.</p>
+                            <h1>WASTE WOES</h1>
+                                <p>Do you know that globally more than 8 billion metric tons of plastic has been produced from 1950 to 2015? Of this, 80 per cent is now plastic waste! </p>
+                                <p>While plastic waste is just one component of the waste generated, there are many other streams of waste, such as wet, dry (includes plastic), electronic, domestic hazardous, sanitary and biomedical. The biggest landfills in India have exceeded their capacity. They can’t accommodate more waste. Have you wondered where the waste that we generate every day will go?</p>
+                                <p>Solid waste management (SWM) has become a big environmental issue for the country as our waste remains largely mismanaged. According to the CPCB (Central Pollution Control Board) Annual Report, 2016, more than 50 per cent of the waste from our homes ends up in landfills that are already beyond their storage capacity. Waste dumped in landfills then releases harmful greenhouse gases, such as methane and carbon dioxide. Moreover, open waste burning also directly contributes to harmful particulate matter and other toxins in the air. All these factors worsen global warming and eventually add to climate change.</p>
+                                <p>As young environmentalists, it has now become crucial that we all understand the long-term impacts of poor waste management and start adopting sustainable practices to improve the SWM scenario at our homes. </p>
+                                <p><strong>GSP Audit@Home: Waste Warriors</strong> is an environmental survey that will help you understand the current waste management practices in your household and what you can do to improve those. It is meant for students of Grades 5 to 10. Students from Grades 11 to 12 are also welcome to participate. You may take the help of your family members to do the survey.</p>
+                                <p>The ideal way to take Audit@Home: Waste Warriors is to observe waste management practices at your home for a few days and then answer the questions. Here is a plan that you can follow to answer accurately:</p>
+                                <p>
+                                <strong>STEP 1:</strong> For the first two-three days, read up on the existing waste management issues in the country and in your state. Then, observe the practices in your house: How many dustbins are there in the house? Are all types of waste dumped into the same bin? How are old electronic items disposed of? What happens to the leftover food? Don’t forget to take notes while you observe. </p>
 
                                 <p>
                                 <strong>STEP 2:</strong> 
-                                For the third and fourth days, record observations for each practice and try to </br>
-                                find a pattern: Are we using more electricity these days as compared to, lets say, </br>
-                                March? What is the average amount of water that gets consumed every day? Where do </br>
-                                different types of waste go?
+                                For the fourth and fifth days, document your observations and notes for each practice and try to summarise what is done with each type of waste at home.
                                 </p>
 
                                 <p>
                                 <strong>STEP 3:</strong> 
-                                        On the fifth day, take the survey! Every question has 2-4 options: A, B, C and</br>
-                                        D. Starting from the Air section, you will also keep a track of your score:</br>
-                                        For every A: Give yourself 1 point</br>
-                                        For every B: Give yourself 2 points</br>
-                                        For every C: Give yourself 3 points</br>
-                                        For every D (where applicable): Give yourself 4 points</br>
+                                Log in again and start answering the questions.
                                 </p>
                                 <p>
-                                The last date to submit the survey is <strong>11 December 2020.</strong> All the best!</br>
-                                For any queries, write to <strong>gsphomeaudit@gmail.com</strong> 
+                                The last date to submit the survey is 26 February 2021. All the best! </br>
+                                For any queries, please write to<strong> gsphomeaudit@gmail.com</strong> 
                                 </p>
 
 
                             </div>
-                            </div> -->
+                            </div>
 
 
                           <div class="col-md-12">
