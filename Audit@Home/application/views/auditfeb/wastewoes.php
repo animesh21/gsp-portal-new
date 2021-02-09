@@ -7,7 +7,7 @@
 <br/>
 
 <div class="progress" style="height: 35px;">
-<div class="progress-bar bg-success" role="progressbar" style="width: 50%; font-size: 20px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</div>
+<div class="progress-bar bg-success" role="progressbar" style="width: 10%; font-size: 20px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">10%</div>
 </div>
 
 <br/> <br/>
@@ -278,8 +278,8 @@ $(document).ready(function() {
 
 $(document).ready(function() {
   $('input[name=Q3A1]').click(function(){
-    if($(this).is(':Correct Answer: D. All of the above \nExplanation: Paper can be recycled to form a range of things. Some more examples are egg trays, paper towels and newspaper.')){
-        alert('Hello');
+    if($(this).is(':checked')){
+        alert('Correct Answer: D. All of the above \nExplanation: Paper can be recycled to form a range of things. Some more examples are egg trays, paper towels and newspaper.');
     }
   });   
 });

@@ -7,7 +7,7 @@
 <br/>
 
 <div class="progress" style="height: 35px;">
-<div class="progress-bar bg-success" role="progressbar" style="width: 100%; font-size: 20px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">100%</div>
+<div class="progress-bar bg-success" role="progressbar" style="width: 90%; font-size: 20px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">90%</div>
 </div>
 
 <br/> <br/>
@@ -94,6 +94,8 @@
                             </div>
 
                             <div class="col-md-6"> <input type="button" id="btnAirPrevious" class="btn btn-success btn-send pt-2 btn-block " value="Previous"> </div>
+                            <div class="col-md-6"> <input type="button" onclick="myFunction()"class="btn btn-success btn-send pt-2 btn-block " value="Submit"> </div>
+
                             <!-- <div class="col-md-6"> <input type="submit" class="btn btn-success btn-send pt-2 btn-block " value="Next"> </div> -->
                             
 
@@ -129,4 +131,10 @@ $(document).ready(function () {
             });
         });
     });
+</script>
+
+<script>
+function myFunction() {
+  alert("Hello there! What's the hurry?\nIt looks like you have some household practices that you may want to observe first and then answer the questions. The 'submit' button will become active on 18 February 2021. We hope that you will diligently observe your household practices till then and submit accurate answers. \nAll the best!");
+}
 </script>

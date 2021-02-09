@@ -7,7 +7,7 @@
 <br/>
 
 <div class="progress" style="height: 35px;">
-<div class="progress-bar bg-success" role="progressbar" style="width: 90%; font-size: 20px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">90%</div>
+<div class="progress-bar bg-success" role="progressbar" style="width: 50%; font-size: 20px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</div>
 </div>
 
 <br/> <br/>
@@ -113,17 +113,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-12">
-                                <div class="form-group"> <label>7. Do you share and reuse books rather than buying every time?</label>
-                                <br/>
-                                <input type="radio" id="Q7WS1" name="Q7WS1" value="<?php  echo set_value('Q7WS1',1)?>"<?php if (isset($records['Q7WS1'])) echo $records['Q7WS1'] == 1 ? "checked" : "" ?>>
-                                <label> &nbsp;A.	Rarely</label><br>
-                                <input type="radio" id="Q7WS1" name="Q7WS1" value="<?php  echo set_value('Q7WS1',2)?>"<?php if (isset($records['Q7WS1'])) echo $records['Q7WS1'] == 2 ? "checked" : "" ?>>
-                                <label> &nbsp;B.	Sometimes</label><br>
-                                <input type="radio" id="Q7WS1" name="Q7WS1" value="<?php  echo set_value('Q7WS1',3)?>"<?php if (isset($records['Q7WS1'])) echo $records['Q7WS1'] == 3 ? "checked" : "" ?>>
-                                <label> &nbsp;C.	Most times</label>                     
-                                </div>
-                            </div>
+                            
 
                             <div class="col-md-12">
                                 <div class="form-group"> <label>7. What do you do with the leftover food? </label>
@@ -136,6 +126,18 @@
                                 <label> &nbsp;C.	Give away to the needy</label>  <br> 
                                 <input type="radio" id="Q8WS1" name="Q8WS1" value="<?php  echo set_value('Q8WS1',4)?>"<?php if (isset($records['Q8WS1'])) echo $records['Q8WS1'] == 4 ? "checked" : "" ?>>
                                 <label> &nbsp;D.	Repurpose it into cooking</label>                     
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-12">
+                                <div class="form-group"> <label>8. Do you share and reuse books rather than buying every time?</label>
+                                <br/>
+                                <input type="radio" id="Q7WS1" name="Q7WS1" value="<?php  echo set_value('Q7WS1',1)?>"<?php if (isset($records['Q7WS1'])) echo $records['Q7WS1'] == 1 ? "checked" : "" ?>>
+                                <label> &nbsp;A.	Rarely</label><br>
+                                <input type="radio" id="Q7WS1" name="Q7WS1" value="<?php  echo set_value('Q7WS1',2)?>"<?php if (isset($records['Q7WS1'])) echo $records['Q7WS1'] == 2 ? "checked" : "" ?>>
+                                <label> &nbsp;B.	Sometimes</label><br>
+                                <input type="radio" id="Q7WS1" name="Q7WS1" value="<?php  echo set_value('Q7WS1',3)?>"<?php if (isset($records['Q7WS1'])) echo $records['Q7WS1'] == 3 ? "checked" : "" ?>>
+                                <label> &nbsp;C.	Most times</label>                     
                                 </div>
                             </div>
 
