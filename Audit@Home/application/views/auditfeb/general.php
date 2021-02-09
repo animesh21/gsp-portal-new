@@ -58,14 +58,12 @@
                               <div class="col-md-12">
                                   <div class="form-group"> <label>4. Guardian's 10-digit mobile number:</label> <input id="mobile" type="text" name="mobile" class="form-control" placeholder="Guardian's 10-digit mobile number" value="<?php if (isset($records['mobile'])) echo $records['mobile'];?>"> </div>
                               </div>                              
-                              <div class="col-md-12">
+                              <!-- <div class="col-md-12">
                                   <div class="form-group"> <label>5. Email *</label> <input id="email" type="email" name="email" class="form-control" placeholder="Please enter your email" value="<?php if (isset($records['email'])) echo $records['email'];?>"> </div>
-                              </div>
+                              </div> -->
+
                               <div class="col-md-12">
-                                  <div class="form-group"> <label>6. District</label> <input id="district" type="text" name="district" class="form-control" placeholder="District" value="<?php if (isset($records['district'])) echo $records['district']; ?>"> </div>
-                              </div>
-                              <div class="col-md-12">
-                                  <div class="form-group"> <label for="form_need">7. State *</label> <select id="state" name="state" class="form-control" required="required" data-error="State">
+                                  <div class="form-group"> <label for="form_need">5. State *</label> <select id="state" name="state" class="form-control" required="required" data-error="State">
                                           <option value="" selected disabled>Select Your State</option>
                                           <option <?php echo set_value('state', 'Andhra Pradesh'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Andhra Pradesh' ? "selected" : ""; ?>>Andhra Pradesh</option>
                                           <option <?php echo set_value('state', 'Arunachal Pradesh'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'Arunachal Pradesh' ? "selected" : ""; ?>>Arunachal Pradesh</option>
@@ -105,21 +103,28 @@
                                           <option <?php echo set_value('state', 'West Bengal'); ?> <?php if (isset($records['state'])) echo $records['state'] == 'West Bengal' ? "selected" : ""; ?>>West Bengal</option>
                                       </select> </div>
                               </div>
+
                               <div class="col-md-12">
-                                  <div class="form-group"> <label>8. School Name</label> <input id="school_name" type="text" name="school_name" class="form-control" placeholder="School Name" value="<?php if (isset($records['school_name'])) echo $records['school_name']; ?>"> </div>
+                                  <div class="form-group"> <label>6. District</label> <input id="district" type="text" name="district" class="form-control" placeholder="District" value="<?php if (isset($records['district'])) echo $records['district']; ?>"> </div>
+                              </div>
+                           
+                              <div class="col-md-12">
+                                  <div class="form-group"> <label>7. School Name</label> <input id="school_name" type="text" name="school_name" class="form-control" placeholder="School Name" value="<?php if (isset($records['school_name'])) echo $records['school_name']; ?>"> </div>
                               </div>
                               <div class="col-md-12">
-                                  <div class="form-group"> <label>9. School Address</label> <input id="school_address" type="text" name="school_address" class="form-control" placeholder="School Address" value="<?php if (isset($records['school_address'])) echo $records['school_address'];?>"> </div>
+                                  <div class="form-group"> <label>8. School Address</label> <input id="school_address" type="text" name="school_address" class="form-control" placeholder="School Address" value="<?php if (isset($records['school_address'])) echo $records['school_address'];?>"> </div>
                               </div>
                               <div class="col-md-12">
-                                  <div class="form-group"> <label>10. Pincode of the school</label> <input id="pincode" type="text" name="pincode" class="form-control" placeholder=Pincode" value="<?php if (isset($records['pincode'])) echo $records['pincode'];?>"> </div>
+                                  <div class="form-group"> <label>9. Pincode of the school</label> <input id="pincode" type="text" name="pincode" class="form-control" placeholder=Pincode" value="<?php if (isset($records['pincode'])) echo $records['pincode'];?>"> </div>
                               </div>
                               <div class="col-md-12">
-                                  <div class="form-group"> <label for="form_email">11. Did your school participate in the GSP Audit 2019?</label> <br/>
+                                  <div class="form-group"> <label for="form_email">10. Did your school participate in the GSP Audit 2019?</label> <br/>
                                   <input type="radio"  name="participate" value="<?php echo set_value('participate', 'Y') ?>" <?php if (isset($records['participate'])) echo $records['participate'] == 'Y' ? "checked" : "" ?>/>
                                   <label for="male"> &nbsp; Yes</label><br>
                                   <input type="radio"  name="participate" value="<?php echo set_value('participate', 'N') ?>" <?php if (isset($records['participate'])) echo $records['participate'] == 'N' ? "checked" : "" ?>/>
                                   <label for="female"> &nbsp; No</label><br> 
+                                  <input type="radio"  name="participate" value="<?php echo set_value('participate', 'No') ?>" <?php if (isset($records['participate'])) echo $records['participate'] == 'No' ? "checked" : "" ?>/>
+                                  <label for="female"> &nbsp; Not sure</label><br> 
                                   </div>
                               </div>
                               
