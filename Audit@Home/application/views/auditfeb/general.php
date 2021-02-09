@@ -21,7 +21,14 @@
               <div class="container">
                   <?php echo form_open('feb/general/set', array('id'=>'general')); ?>
                       <div class="controls">
-                          <div class="row">  
+                          <div class="row"> 
+
+                           <div class="col-md-12">
+                            <div class="form-group">
+                            <h1>GENERAL</h1>
+
+                            </div>
+                            </div> 
                             
                               <div class="col-md-12">
                                   <div class="form-group"> <label>1. Name of the participant *</label> <input id="name" type="text" name="name" class="form-control" placeholder="Name of the participant" value="<?php if (isset($records['name'])) echo $records['name'];?>"/> </div>
