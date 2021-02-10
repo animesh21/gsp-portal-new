@@ -135,6 +135,6 @@ $(document).ready(function () {
 
 <script>
 function myFunction() {
-  alert("Hello there! What's the hurry?\nIt looks like you have some household practices that you may want to observe first and then answer the questions. The 'submit' button will become active on 18 February 2021. We hope that you will diligently observe your household practices till then and submit accurate answers. \nAll the best!");
+  alert("Hello there! What's the hurry?\nIt looks like you have some household practices that you may want to observe first and then answer the questions. The 'submit' button will become active on 18 February 2021. We hope that you will diligently observe your household practices till then and submit accurate answers. As your answers have been saved, you can log out and submit anytime after 18 February, 2021. \nAll the best!");
 }
 </script>
