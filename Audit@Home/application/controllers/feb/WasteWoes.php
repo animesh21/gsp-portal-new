@@ -33,29 +33,29 @@ class WasteWoes extends CI_Controller {
     {
         $userId = $this->session->userdata('USER_ID');
         $type = 1;
-        // $this->form_validation->set_rules('Q1A1','Q1A1','required|trim');
-        // $this->form_validation->set_rules('Q2A1','Q2A1','required|trim');
-        // $this->form_validation->set_rules('Q3A1','Q3A1','required|trim');
-        // $this->form_validation->set_rules('Q4A1','Q4A1','required|trim');
-        // $this->form_validation->set_rules('Q5A1','Q5A1','required|trim');
-        // $this->form_validation->set_rules('Q6A1','Q6A1','required|trim');
-        // $this->form_validation->set_rules('Q7A1','Q7A1','required|trim');
-        // $this->form_validation->set_rules('Q8A1','Q8A1','required|trim');
-        // $this->form_validation->set_rules('Q9A1','Q9A1','required|trim');
-        // $this->form_validation->set_rules('Q10A1','Q10A1','required|trim');
+        $this->form_validation->set_rules('Q1A1','Q1A1','required|trim');
+        $this->form_validation->set_rules('Q2A1','Q2A1','required|trim');
+        $this->form_validation->set_rules('Q3A1','Q3A1','required|trim');
+        $this->form_validation->set_rules('Q4A1','Q4A1','required|trim');
+        $this->form_validation->set_rules('Q5A1','Q5A1','required|trim');
+        $this->form_validation->set_rules('Q6A1','Q6A1','required|trim');
+        $this->form_validation->set_rules('Q7A1','Q7A1','required|trim');
+        $this->form_validation->set_rules('Q8A1','Q8A1','required|trim');
+        $this->form_validation->set_rules('Q9A1','Q9A1','required|trim');
+        $this->form_validation->set_rules('Q10A1','Q10A1','required|trim');
 
-    if($this->form_validation->run() == false)
-    {
-        $this->load->view('auditfeb/wastewoes');
-    }
-    else
-    {
+    // if($this->form_validation->run() == false)
+    // {
+    //     $this->load->view('auditfeb/wastewoes');
+    // }
+    // else
+    // {
         $argPost = $this->input->post();
         
         $this->Answer_model->submitAnswers($argPost,$userId,$type);
         // updateProgress($this->session->userdata('USER_ID'), 60);
         redirect(base_url('feb/Wastem'));
-    }
+    // }
 
 
     }

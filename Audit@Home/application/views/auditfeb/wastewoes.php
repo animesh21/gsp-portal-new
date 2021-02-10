@@ -58,7 +58,7 @@
                             </div>
                             </div>
 
-                          <div class="col-md-12" id="chk">
+                          <div class="col-md-12" id="chk"><?php echo form_error('name'); ?>
                                 <div class="form-group"> <label>1. Which of the following materials is difficult to recycle?</label> <br/>
                                 <input type="radio" id="Q1A1" name="Q1A1" value="<?php  echo set_value('Q1A1',1)?>"<?php if (isset($records['Q1A1'])) echo $records['Q1A1'] == 1 ? "checked" : "" ?>>
                                 <label> &nbsp; A. Glass bottle</label><br>
@@ -140,7 +140,7 @@
                             </div>
 
                             <div class="col-md-12">
-                                <div class="form-group"> <label>In which bin will you put single-use masks and gloves at home?</label> <br/>
+                                <div class="form-group"> <label>7. In which bin will you put single-use masks and gloves at home?</label> <br/>
                                 <input type="radio" id="Q7A1" name="Q7A1" value="<?php  echo set_value('Q7A1',1)?>"<?php if (isset($records['Q7A1'])) echo $records['Q7A1'] == 1 ? "checked" : "" ?>>
                                 <label> &nbsp;A.	Green for wet waste</label><br>
                                 <input type="radio" id="Q7A1" name="Q7A1" value="<?php  echo set_value('Q7A1',2)?>"<?php if (isset($records['Q7A1'])) echo $records['Q7A1'] == 2 ? "checked" : "" ?>>
@@ -188,9 +188,8 @@
                                 </div>
                             </div>
 
-
                             <div class="col-md-6"> <input type="button" id="btnAirPrevious" class="btn btn-success btn-send pt-2 btn-block " value="Previous"> </div>
-                            <div class="col-md-6"> <input type="submit" class="btn btn-success btn-send pt-2 btn-block " value="Next"> </div>
+                            <div class="col-md-6"> <input type="submit" id="wastenext" class="btn btn-success btn-send pt-2 btn-block " value="Next"> </div>
                             
 
                         
@@ -525,4 +524,81 @@ $('input[type="radio"][name="Q10A1"]').click(function() {
                             </script>
                            <?php
                             }
-                           ?>
+                           ?> 
+
+
+<script>
+  $(document).ready(function(){
+  
+  $('#wastewose').validate({
+    rules:{
+        Q1A1:{
+          required:true,
+        },
+        Q2A1:{
+          required:true,
+        },
+        Q3A1:{
+          required:true,
+        },
+        Q4A1:{
+          required:true,
+        },
+        Q5A1:{
+          required:true,
+        },
+        Q6A1:{
+          required:true,
+        },
+        Q7A1:{
+          required:true,
+        },
+        Q8A1:{
+          required:true,
+        },
+        Q9A1:{
+          required:true,
+        },
+        Q10A1:{
+          required:true,
+        },
+        
+        
+
+    }
+       
+  });
+  });
+  
+  $('#wastenext').click(function(e){
+    
+    
+    $r=$('#wastewose').valid();
+    if($r == false)
+    {
+       
+         e.preventDefault();
+      alert('You will need to enter data in all fields to move forward. Please scroll above to check again.');
+         $('#wastewose').valid();
+    }
+    
+    
+  });
+  
+  </script>
+<script src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/jquery.dataTables.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/dataTables.buttons.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/buttons.flash.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/vfs_fonts.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/buttons.html5.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/buttons.print.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/yui-utilities.js" type="text/javascript"></script>
+<script src="<?php echo base_url(); ?>assets/js/shadowbox-yui.js" type="text/javascript"></script>
+<script src="<?php echo base_url(); ?>assets/js/shadowbox.js" type="text/javascript"></script>
+<script src="<?php echo base_url(); ?>assets/js/admin.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/AC_RunActiveContent.js" type="text/javascript"></script>
+<script src="<?php echo base_url(); ?>assets/js/validatorr.js" type="text/javascript"></script>
+<script src="<?php echo base_url(); ?>assets/CrossLink.js" type="text/javascript"></script> 
+<script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery.validate.js"></script>
