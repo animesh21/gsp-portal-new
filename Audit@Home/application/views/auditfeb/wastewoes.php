@@ -86,13 +86,13 @@
 
                             <div class="col-md-12">
                                 <div class="form-group"> <label>3. Which product can paper be recycled into?</label> <br/>
-                                <input type="radio" name="Q3A1" value="<?php  echo set_value('Q3A1',1)?>"<?php if (isset($records['Q3A1'])) echo $records['Q3A1'] == 1 ? "checked" : "" ?>>
+                                <input type="radio" id="Q3A1" name="Q3A1" value="<?php  echo set_value('Q3A1',1)?>"<?php if (isset($records['Q3A1'])) echo $records['Q3A1'] == 1 ? "checked" : "" ?>>
                                 <label> &nbsp; A.	Cardboard</label><br>
-                                <input type="radio" name="Q3A1" value="<?php  echo set_value('Q3A1',2)?>"<?php if (isset($records['Q3A1'])) echo $records['Q3A1'] == 2 ? "checked" : "" ?>>
+                                <input type="radio" id="Q3A1" name="Q3A1" value="<?php  echo set_value('Q3A1',2)?>"<?php if (isset($records['Q3A1'])) echo $records['Q3A1'] == 2 ? "checked" : "" ?>>
                                 <label> &nbsp; B.	Magazine</label><br>
-                                <input type="radio" name="Q3A1" value="<?php  echo set_value('Q3A1',3)?>"<?php if (isset($records['Q3A1'])) echo $records['Q3A1'] == 3 ? "checked" : "" ?>>
+                                <input type="radio" id="Q3A1" name="Q3A1" value="<?php  echo set_value('Q3A1',3)?>"<?php if (isset($records['Q3A1'])) echo $records['Q3A1'] == 3 ? "checked" : "" ?>>
                                 <label> &nbsp; C.	bags</label><br>
-                                <input type="radio" name="Q3A1" value="<?php  echo set_value('Q3A1',4)?>"<?php if (isset($records['Q3A1'])) echo $records['Q3A1'] == 4 ? "checked" : "" ?>>
+                                <input type="radio" id="Q3A1" name="Q3A1" value="<?php  echo set_value('Q3A1',4)?>"<?php if (isset($records['Q3A1'])) echo $records['Q3A1'] == 4 ? "checked" : "" ?>>
                                 <label> &nbsp; D.	All of the above</label>                          
                                 </div>
                             </div>
@@ -408,7 +408,7 @@ $('input[type="radio"][name="Q10A1"]').click(function() {
                            <?php
                             }
                            ?>
-                                                      <?php
+                         <?php
                             $test = isset($records['Q2A1']);
                             if($test == 1){
                               ?>
@@ -421,7 +421,7 @@ $('input[type="radio"][name="Q10A1"]').click(function() {
                            <?php
                             }
                            ?>
-                                                      <?php
+                           <?php
                             $test = isset($records['Q3A1']);
                             if($test == 1){
                               ?>
@@ -434,7 +434,7 @@ $('input[type="radio"][name="Q10A1"]').click(function() {
                            <?php
                             }
                            ?>
-                                                      <?php
+                          <?php
                             $test = isset($records['Q4A1']);
                             if($test == 1){
                               ?>
