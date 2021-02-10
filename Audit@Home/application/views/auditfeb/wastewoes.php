@@ -3,7 +3,23 @@
 <?php $this->load->view('auditfeb/nav'); ?>
 
 <div class="container"><div class=" text-center mt-5 ">
-      
+<style>
+.error{
+  color: #fb4f2a !important;
+              font-size: 18px !important;
+ text-shadow: 1px 1px 1px #000;
+}
+
+#Q4Wa1-error
+{
+  color: #fb4f2a !important;
+    font-size: 18px !important;
+    margin-top: -39px !important;
+    position: absolute;
+    margin-left: 319px;
+    text-shadow: 1px 1px 1px #000;
+}
+</style>
 <br/>
 
 <div class="progress" style="height: 35px;">

@@ -59,7 +59,7 @@ class General extends CI_Controller {
 		$this->form_validation->set_rules('mobile', 'Mobile', 'required|trim');
 		// $this->form_validation->set_rules('email', 'Email', 'required|trim');
 		$this->form_validation->set_rules('district', 'District', 'required|trim');
-		$this->form_validation->set_rules('state', 'State', 'required|trim');
+		// $this->form_validation->set_rules('state', 'State', 'required|trim');
 		$this->form_validation->set_rules('school_name', 'School Name', 'required|trim');
 		$this->form_validation->set_rules('school_address', 'School Address', 'required|trim');
 		$this->form_validation->set_rules('pincode', 'Pincode', 'required|trim');
