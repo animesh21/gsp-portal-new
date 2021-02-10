@@ -189,11 +189,6 @@
                             </div>
 
 
-
-
-
-
-
                             <div class="col-md-6"> <input type="button" id="btnAirPrevious" class="btn btn-success btn-send pt-2 btn-block " value="Previous"> </div>
                             <div class="col-md-6"> <input type="submit" class="btn btn-success btn-send pt-2 btn-block " value="Next"> </div>
                             
@@ -392,9 +387,142 @@ $('input[type="radio"][name="Q9A1"]').click(function() {
 $('input[type="radio"][name="Q10A1"]').click(function() {
   var radioName = "Q10A1"; 
   $('input[name="' + radioName + '"]:not(:checked)').attr("disabled", true); 
+  
 });
 
 
-    
+
+
 </script>
 
+                            <?php
+                            $test = isset($records['Q1A1']);
+                            if($test == 1){
+                              ?>
+                            <script>
+                            var inputs = document.querySelectorAll('input[id="Q1A1"]');
+                                for (var i = 0; i < inputs.length; i++) {
+                                  inputs[i].disabled = 'true';
+                                }
+                            </script>
+                           <?php
+                            }
+                           ?>
+                                                      <?php
+                            $test = isset($records['Q2A1']);
+                            if($test == 1){
+                              ?>
+                            <script>
+                            var inputs = document.querySelectorAll('input[id="Q2A1"]');
+                                for (var i = 0; i < inputs.length; i++) {
+                                  inputs[i].disabled = 'true';
+                                }
+                            </script>
+                           <?php
+                            }
+                           ?>
+                                                      <?php
+                            $test = isset($records['Q3A1']);
+                            if($test == 1){
+                              ?>
+                            <script>
+                            var inputs = document.querySelectorAll('input[id="Q3A1"]');
+                                for (var i = 0; i < inputs.length; i++) {
+                                  inputs[i].disabled = 'true';
+                                }
+                            </script>
+                           <?php
+                            }
+                           ?>
+                                                      <?php
+                            $test = isset($records['Q4A1']);
+                            if($test == 1){
+                              ?>
+                            <script>
+                            var inputs = document.querySelectorAll('input[id="Q4A1"]');
+                                for (var i = 0; i < inputs.length; i++) {
+                                  inputs[i].disabled = 'true';
+                                }
+                            </script>
+                           <?php
+                            }
+                           ?>
+                                                      <?php
+                            $test = isset($records['Q5A1']);
+                            if($test == 1){
+                              ?>
+                            <script>
+                            var inputs = document.querySelectorAll('input[id="Q5A1"]');
+                                for (var i = 0; i < inputs.length; i++) {
+                                  inputs[i].disabled = 'true';
+                                }
+                            </script>
+                           <?php
+                            }
+                           ?>
+                                                      <?php
+                            $test = isset($records['Q6A1']);
+                            if($test == 1){
+                              ?>
+                            <script>
+                            var inputs = document.querySelectorAll('input[id="Q6A1"]');
+                                for (var i = 0; i < inputs.length; i++) {
+                                  inputs[i].disabled = 'true';
+                                }
+                            </script>
+                           <?php
+                            }
+                           ?>
+                                                      <?php
+                            $test = isset($records['Q7A1']);
+                            if($test == 1){
+                              ?>
+                            <script>
+                            var inputs = document.querySelectorAll('input[id="Q7A1"]');
+                                for (var i = 0; i < inputs.length; i++) {
+                                  inputs[i].disabled = 'true';
+                                }
+                            </script>
+                           <?php
+                            }
+                           ?>
+                                                      <?php
+                            $test = isset($records['Q8A1']);
+                            if($test == 1){
+                              ?>
+                            <script>
+                            var inputs = document.querySelectorAll('input[id="Q8A1"]');
+                                for (var i = 0; i < inputs.length; i++) {
+                                  inputs[i].disabled = 'true';
+                                }
+                            </script>
+                           <?php
+                            }
+                           ?>
+                                                      <?php
+                            $test = isset($records['Q9A1']);
+                            if($test == 1){
+                              ?>
+                            <script>
+                            var inputs = document.querySelectorAll('input[id="Q9A1"]');
+                                for (var i = 0; i < inputs.length; i++) {
+                                  inputs[i].disabled = 'true';
+                                }
+                            </script>
+                           <?php
+                            }
+                           ?>
+
+                           <?php
+                            $test = isset($records['Q10A1']);
+                            if($test == 1){
+                              ?>
+                            <script>
+                            var inputs = document.querySelectorAll('input[id="Q10A1"]');
+                                for (var i = 0; i < inputs.length; i++) {
+                                  inputs[i].disabled = 'true';
+                                }
+                            </script>
+                           <?php
+                            }
+                           ?>

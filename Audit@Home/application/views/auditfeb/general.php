@@ -38,14 +38,14 @@
                                           <option value="" selected disabled>--Select Grade--</option>
 
 
-<option value="5" <?php if (isset($records['grade'])) echo $records['grade'] == '5' ? "selected" : ""; ?>>Grade 5</option>
-<option value="6" <?php if (isset($records['grade'])) echo $records['grade'] == '6' ? "selected" : ""; ?>>Grade 6</option>
-<option value="7" <?php if (isset($records['grade'])) echo $records['grade'] == '7' ? "selected" : ""; ?>>Grade 7</option>
-<option value="8" <?php if (isset($records['grade'])) echo $records['grade'] == '8' ? "selected" : ""; ?>>Grade 8</option>
-<option value="9" <?php if (isset($records['grade'])) echo $records['grade'] == '9' ? "selected" : ""; ?>>Grade 9</option>
-<option value="10" <?php if (isset($records['grade'])) echo $records['grade'] == '10' ? "selected" : ""; ?>>Grade 10</option>
-<option value="11" <?php if (isset($records['grade'])) echo $records['grade'] == '11' ? "selected" : ""; ?>>Grade 11</option>
-<option value="12" <?php if (isset($records['grade'])) echo $records['grade'] == '12' ? "selected" : ""; ?>>Grade 12</option>
+                                            <option value="5" <?php if (isset($records['grade'])) echo $records['grade'] == '5' ? "selected" : ""; ?>>Grade 5</option>
+                                            <option value="6" <?php if (isset($records['grade'])) echo $records['grade'] == '6' ? "selected" : ""; ?>>Grade 6</option>
+                                            <option value="7" <?php if (isset($records['grade'])) echo $records['grade'] == '7' ? "selected" : ""; ?>>Grade 7</option>
+                                            <option value="8" <?php if (isset($records['grade'])) echo $records['grade'] == '8' ? "selected" : ""; ?>>Grade 8</option>
+                                            <option value="9" <?php if (isset($records['grade'])) echo $records['grade'] == '9' ? "selected" : ""; ?>>Grade 9</option>
+                                            <option value="10" <?php if (isset($records['grade'])) echo $records['grade'] == '10' ? "selected" : ""; ?>>Grade 10</option>
+                                            <option value="11" <?php if (isset($records['grade'])) echo $records['grade'] == '11' ? "selected" : ""; ?>>Grade 11</option>
+                                            <option value="12" <?php if (isset($records['grade'])) echo $records['grade'] == '12' ? "selected" : ""; ?>>Grade 12</option>
 
                                       </select> </div>
                               </div>                         
@@ -112,7 +112,7 @@
                               </div>
 
                               <div class="col-md-12">
-                                  <div class="form-group"> <label>6. District</label> <input id="district" type="text" name="district" class="form-control" placeholder="District" value="<?php if (isset($records['district'])) echo $records['district']; ?>"> </div>
+                                  <div class="form-group"> <label>6. District</label> <input id="district" type="text" name="district" class="form-control" placeholder="District" value="<?php if (isset($records['school_district'])) echo $records['school_district']; ?>" readonly> </div>
                               </div>
                            
                               <div class="col-md-12">

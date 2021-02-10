@@ -31,7 +31,33 @@ class School_model extends CI_Model
             }
 
     }
+    public function getdistricts($argPost)
+    {
+        $query = $this->db->select('*')
+            ->from('states')
+            ->where(array('id' => $argPost))
+            ->get();
+        // $this->db2 = $this->load->database('db2', TRUE);
 
+        // $query1 = $this->db2->select('*')
+        //     ->from('gsp_school')
+        //     ->where(array('id' => $argPost))
+        //     ->get();
+
+        if ($query->num_rows() > 0) {
+            $row = $query->row();
+            // $row1 = $query1->row();
+            $school = array(
+		        'id' => $row->id,     
+                
+                'school_district' => $row->name,
+                
+
+            );
+            return $school;
+        }
+        return $school = array("name" => "Sunil");
+    }
     public function getSchool($argPost)
     {
         $query = $this->db->select('*')
