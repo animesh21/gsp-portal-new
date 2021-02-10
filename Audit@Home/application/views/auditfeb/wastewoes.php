@@ -342,4 +342,58 @@ $(document).ready(function() {
     }
   });   
 });
+
+// Disable button code
+$('input[type="radio"][name="Q1A1"]').click(function() {
+  var radioName = "Q1A1"; 
+  $('input[name="' + radioName + '"]:not(:checked)').attr("disabled", true); 
+});
+
+$('input[type="radio"][name="Q2A1"]').click(function() {
+  var radioName = "Q2A1"; 
+  $('input[name="' + radioName + '"]:not(:checked)').attr("disabled", true); 
+});
+
+$('input[type="radio"][name="Q3A1"]').click(function() {
+  var radioName = "Q3A1"; 
+  $('input[name="' + radioName + '"]:not(:checked)').attr("disabled", true); 
+});
+
+$('input[type="radio"][name="Q4A1"]').click(function() {
+  var radioName = "Q4A1"; 
+  $('input[name="' + radioName + '"]:not(:checked)').attr("disabled", true); 
+});
+
+$('input[type="radio"][name="Q5A1"]').click(function() {
+  var radioName = "Q5A1"; 
+  $('input[name="' + radioName + '"]:not(:checked)').attr("disabled", true); 
+});
+
+$('input[type="radio"][name="Q6A1"]').click(function() {
+  var radioName = "Q6A1"; 
+  $('input[name="' + radioName + '"]:not(:checked)').attr("disabled", true); 
+});
+
+$('input[type="radio"][name="Q7A1"]').click(function() {
+  var radioName = "Q7A1"; 
+  $('input[name="' + radioName + '"]:not(:checked)').attr("disabled", true); 
+});
+
+$('input[type="radio"][name="Q8A1"]').click(function() {
+  var radioName = "Q8A1"; 
+  $('input[name="' + radioName + '"]:not(:checked)').attr("disabled", true); 
+});
+
+$('input[type="radio"][name="Q9A1"]').click(function() {
+  var radioName = "Q9A1"; 
+  $('input[name="' + radioName + '"]:not(:checked)').attr("disabled", true); 
+});
+
+$('input[type="radio"][name="Q10A1"]').click(function() {
+  var radioName = "Q10A1"; 
+  $('input[name="' + radioName + '"]:not(:checked)').attr("disabled", true); 
+});
+
+
+    
 </script>
