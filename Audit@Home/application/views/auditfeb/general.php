@@ -112,7 +112,7 @@
                               </div>
 
                               <div class="col-md-12">
-                                  <div class="form-group"> <label>6. District</label> <input id="district" type="text" name="district" class="form-control" placeholder="District" value="<?php if (isset($records['school_district'])) echo $records['school_district']; ?>" readonly> </div>
+                                  <div class="form-group"> <label>6. District</label> <input id="district" type="text" name="district" class="form-control" placeholder="District" value="<?php if (isset($records['district'])) echo $records['district']; ?>" readonly> </div>
                               </div>
                            
                               <div class="col-md-12">

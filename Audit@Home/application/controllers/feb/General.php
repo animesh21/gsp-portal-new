@@ -43,9 +43,9 @@ class General extends CI_Controller {
         	$records['records'] = array_merge($school, $school1, $school2, $school3);
 
             $this->load->view('auditfeb/general',$records);
-            echo '<pre>';
-            print_r($records);
-            echo '<pre>';
+            // echo '<pre>';
+            // print_r($records);
+            // echo '<pre>';
       	    }
     }
     
