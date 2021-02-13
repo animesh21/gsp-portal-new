@@ -39,13 +39,13 @@ class General extends CI_Controller {
             }
             $city = $school1['city'];
             
-            $school3 = $this->School_model->getdistricts($city);
+            $school3 = $this->School_model->getSchoolcity($city);
         	$records['records'] = array_merge($school, $school1, $school2, $school3);
 
             $this->load->view('auditfeb/general',$records);
-            // echo '<pre>';
-            // print_r($records);
-            // echo '<pre>';
+            echo '<pre>';
+            print_r($records);
+            echo '<pre>';
       	    }
     }
     

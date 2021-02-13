@@ -26,6 +26,7 @@ class Wastem extends CI_Controller {
                     $type = 1;
                     $records['records'] = $this->Answer_model->getAllAnswers($userId,$type);
                     $this->load->view('auditfeb/wastem',$records);
+                    
             }
         }	
 
