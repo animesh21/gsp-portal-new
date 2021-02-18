@@ -30,7 +30,7 @@ class Login extends CI_Controller {
             if (!empty($varCheckLogin)) { 		  
                 redirect(base_url('feb/general'));
             } elseif($checkSubmitted) { 
-                $this->session->set_flashdata('error', 'You have already submitted the survey. Please stay tuned to our emails for further updates on your scorecard! ');
+                $this->session->set_flashdata('error', 'You have already submitted the survey and will not be able to login again. Please stay tuned to our emails for further updates on your scorecard! ');
             } 
             else 
             { 

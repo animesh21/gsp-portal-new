@@ -94,9 +94,9 @@
                             </div>
 
                             <div class="col-md-6"> <input type="button" id="btnAirPrevious" class="btn btn-success btn-send pt-2 btn-block " value="Previous"> </div>
-                            <div class="col-md-6"> <input type="button" onclick="myFunction()"class="btn btn-success btn-send pt-2 btn-block " value="Submit"> </div>
+                            <!-- <div class="col-md-6"> <input type="button" class="btn btn-success btn-send pt-2 btn-block " value="Submit"> </div> -->
 
-                            <!-- <div class="col-md-6"> <input type="submit" class="btn btn-success btn-send pt-2 btn-block " value="Next"> </div> -->
+                            <div class="col-md-6"> <input type="submit" class="btn btn-success btn-send pt-2 btn-block " value="Next"> </div>
                             
 
                         

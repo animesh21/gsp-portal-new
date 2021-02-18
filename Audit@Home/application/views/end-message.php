@@ -66,7 +66,7 @@ $(document).ready(function () {
                 url: '<?php echo base_url('previous/airprevious') ?>',
                 data: fd,
                 success: function (data) {
-                    window.location.href = "<?php echo base_url('feedback'); ?>";
+                    window.location.href = "<?php echo base_url('feb/Feedback'); ?>";
                 }
             });
         });

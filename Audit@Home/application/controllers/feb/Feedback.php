@@ -61,29 +61,29 @@ class Feedback extends CI_Controller {
         //   redirect(base_url("Feedback/end_aduit")); 
         //  }
 
-                if($this->form_validation->run() == false)
-                {
-                    $this->load->view('auditfeb/feedback');
-                }
-                else
-                {
+                // if($this->form_validation->run() == false)
+                // {
+                //     $this->load->view('auditfeb/feedback');
+                // }
+                // else
+                // {
                     $argPost = $this->input->post();
                     // $shool_record=array("school_id"=>$get_current_user,"userid"=>$get_current_user,"year"=>$get_current_year,"status"=>'1');
                     // $this->db->insert('gsp_aduit_home',$shool_record);
                     // $this->db->where(array("userid"=>$get_current_user));
                     // $this->db->update("users",array("is_submitted"=>'1'));     
-                    $argPost = $this->input->post();
-                    $shool_record=array("school_id"=>$get_current_user,"userid"=>$get_current_user,"year"=>$get_current_year,"status"=>'1');
-                    $this->db->insert('gsp_aduit_home',$shool_record);
-                    $this->db->where(array("id"=>$get_current_user));
-                    $this->db->update("users",array("is_submitted"=>'1'));     
+                    // $argPost = $this->input->post();
+                    // $shool_record=array("school_id"=>$get_current_user,"userid"=>$get_current_user,"year"=>$get_current_year,"status"=>'1');
+                    // $this->db->insert('gsp_aduit_home',$shool_record);
+                    // $this->db->where(array("id"=>$get_current_user));
+                    // $this->db->update("users",array("is_submitted"=>'1'));     
 
                     
                     $this->Answer_model->submitAnswers($argPost,$userId,$type);
                     // $this->Answer_model->submitAnswers($argPost,$userId,$type);
                     // updateProgress($this->session->userdata('USER_ID'), 60);
                     redirect(base_url('End_audit'));
-                }
+                // }
 
 
     }

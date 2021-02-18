@@ -306,7 +306,7 @@ class Dashboard extends CI_Controller {
 	$data['main']='admin/dashboard/year19_phase1';
         $data['title']='Home | Dashboard';
 	$db2 = $this->load->database('db2', TRUE);
-   	$data['records'] = $db2->select('*')->from('users')->where(array('user_type'=>'Student', 'is_deleted'=>0))->order_by('created_at', 'DESC')->get()->result();
+   	$data['records'] = $db2->select('*')->from('users')->where(array('user_type'=>'Student','new_sc'=> 0 , 'is_deleted'=>0))->order_by('created_at', 'DESC')->get()->result();
 	$data['total_school']=$this->Dashboard_model->getSchool_alldata();
         $data['school']=$this->Dashboard_model->getSchool_18data();
         $data['startedtheaudit']=$this->Dashboard_model->getstartedtheaudit_19data();
