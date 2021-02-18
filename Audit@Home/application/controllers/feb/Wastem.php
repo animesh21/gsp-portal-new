@@ -6,7 +6,7 @@ class Wastem extends CI_Controller {
 
     public function __construct() {
     parent::__construct();
-    $this->load->helper(array('form', 'security'));
+    $this->load->helper(array('form', 'security','common_helper'));
     $this->load->library('form_validation');		
     $this->load->model('Answer_model');
     if($this->session->userdata('USER_ID') == ''){
@@ -57,6 +57,8 @@ class Wastem extends CI_Controller {
             $argPost = $this->input->post();
             
             $this->Answer_model->submitAnswers($argPost,$userId,$type);
+            updateProgress($this->session->userdata('USER_ID'), 90);
+
             redirect(base_url('feb/feedback'));
         }
 

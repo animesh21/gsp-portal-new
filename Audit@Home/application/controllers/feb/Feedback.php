@@ -82,6 +82,7 @@ class Feedback extends CI_Controller {
                     $this->Answer_model->submitAnswers($argPost,$userId,$type);
                     // $this->Answer_model->submitAnswers($argPost,$userId,$type);
                     // updateProgress($this->session->userdata('USER_ID'), 60);
+                    updateProgress($this->session->userdata('USER_ID'), 100);
                     redirect(base_url('End_audit'));
                 // }
 

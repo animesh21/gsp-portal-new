@@ -54,6 +54,8 @@ class WasteWoes extends CI_Controller {
         
         $this->Answer_model->submitAnswers($argPost,$userId,$type);
         // updateProgress($this->session->userdata('USER_ID'), 60);
+        updateProgress($this->session->userdata('USER_ID'), 50);
+
         redirect(base_url('feb/Wastem'));
     // }
 

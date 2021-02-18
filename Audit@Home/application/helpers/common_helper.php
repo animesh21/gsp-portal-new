@@ -1037,10 +1037,10 @@ if (!function_exists('updateProgress')) {
     function updateProgress($argID, $argProgress) {
         $arr = array('progress' => $argProgress);
         $CI = & get_instance();
-        $temp = $CI->db->get_where('gsp_school', array('userid' => $argID))->row();
+        $temp = $CI->db->get_where('users', array('id' => $argID))->row();
         if ($argProgress > $temp->progress) {
-            $CI->db->where('userid', $argID);
-            $CI->db->update('gsp_school', $arr);
+            $CI->db->where('id', $argID);
+            $CI->db->update('users', $arr);
         }
         //print_r($temp); exit;
     }

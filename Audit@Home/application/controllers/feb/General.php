@@ -75,6 +75,8 @@ class General extends CI_Controller {
 		 $argPost = $this->input->post();
 
 		 $this->Answer_model->submitAnswers($argPost,$userId,$type);
+         updateProgress($this->session->userdata('USER_ID'), 10);
+
 		 redirect(base_url("feb/WasteWoes"));		 
 	}
       	
