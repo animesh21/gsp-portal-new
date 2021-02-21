@@ -159,8 +159,8 @@
                   <li><a href="<?php echo base_url('admin/audit_started/statewise'); ?>">REGISTRATIONS BY STATE</a></li>
                   <li><a href="<?php echo base_url('admin/audit_started/feedback'); ?>">E-Mail Blast</a></li>
                   <li><a href="<?php echo base_url('admin/audit_started_2017/partnersList'); ?>">Master List Partners</a></li>
-		  <li><a href="<?php echo base_url('admin/audit_started/getSummary'); ?>">Summary of Audit</a></li>															
-		  <li><a href="<?php echo base_url('admin/dashboard/masterList'); ?>">Master list Y-O-Y</a></li>
+                  <li><a href="<?php echo base_url('admin/audit_started/getSummary'); ?>">Summary of Audit</a></li>															
+                  <li><a href="<?php echo base_url('admin/dashboard/masterList'); ?>">Master list Y-O-Y</a></li>
                 </ul>
               </li>
               <li class=""><a href="#">AUDIT COMPLETED<span class="caret"></span></a>

@@ -50,6 +50,7 @@ class End_audit extends CI_Controller {
                     $this->db->insert('gsp_aduit_home',$shool_record);
                     $this->db->where(array("id"=>$get_current_user));
                     $this->db->update("users",array("is_submitted"=>'1'));     
+                    updateProgress($this->session->userdata('USER_ID'), 100);
 
                     
                     $this->Answer_model->submitAnswers($argPost,$userId,$type);
