@@ -6,7 +6,7 @@ class End_audit extends CI_Controller {
 
     public function __construct() {
     parent::__construct();
-    $this->load->helper(array('form', 'security'));
+    $this->load->helper(array('form', 'security','common_helper'));
     $this->load->library('form_validation');		
     $this->load->model('Answer_model');
     if($this->session->userdata('USER_ID') == ''){
@@ -43,18 +43,19 @@ class End_audit extends CI_Controller {
                     $get_current_user=$this->session->userdata('USER_ID');
                     $get_current_year=date('Y');
                     $type = 1;
-                       
+                    $userId = $this->session->userdata('USER_ID');
+
                     
                     $argPost = $this->input->post();
                     $shool_record=array("school_id"=>$get_current_user,"userid"=>$get_current_user,"year"=>$get_current_year,"status"=>'1');
                     $this->db->insert('gsp_aduit_home',$shool_record);
                     $this->db->where(array("id"=>$get_current_user));
                     $this->db->update("users",array("is_submitted"=>'1'));     
-                    updateProgress($this->session->userdata('USER_ID'), 100);
 
                     
                     $this->Answer_model->submitAnswers($argPost,$userId,$type);
-                    
+                    updateProgress($this->session->userdata('USER_ID'), 100);
+
 
                     $this->session->unset_userdata(array('USERNAME', 'USER_ID'));
                     $this->session->set_flashdata('success', 'Successfully logged out!');
