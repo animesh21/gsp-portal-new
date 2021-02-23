@@ -17,7 +17,7 @@ class Audit_home_scorecard extends CI_Controller{
      */
     public function index(){
     //   $this->load->view('audit_home');
-    $this->load->view('certificates/closed');
+    $this->load->view('certificates/closedcer');
     }
 
 
