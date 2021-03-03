@@ -61,12 +61,13 @@ class Home extends CI_Controller {
 		'Q7WS1' => ($this->getFiled('Q7WS1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q7WS1', $uArray[$i]['userid']) : "NA",
 		'Q8WS1' => ($this->getFiled('Q8WS1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q8WS1', $uArray[$i]['userid']) : "NA",
 		'Q9WS1' => ($this->getFiled('Q9WS1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q9WS1', $uArray[$i]['userid']) : "NA",
+		'Q10WS1' => ($this->getFiled('Q10WS1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q10WS1', $uArray[$i]['userid']) : "NA",
 		'Q1FF1' => ($this->getFiled('Q1FF1', $uArray[$i]['userid']) != '') ? $this->getFiled('Q1FF1', $uArray[$i]['userid']) : "NA",
 		'Q1FF2' => ($this->getFiled('Q1FF2', $uArray[$i]['userid']) != '') ? $this->getFiled('Q1FF2', $uArray[$i]['userid']) : "NA",
 		'Q1FF3' => ($this->getFiled('Q1FF3', $uArray[$i]['userid']) != '') ? $this->getFiled('Q1FF3', $uArray[$i]['userid']) : "NA",
 		'Q1FF4' => ($this->getFiled('Q1FF4', $uArray[$i]['userid']) != '') ? $this->getFiled('Q1FF4', $uArray[$i]['userid']) : "NA",
 		'Q1FF5' => ($this->getFiled('Q1FF5', $uArray[$i]['userid']) != '') ? $this->getFiled('Q1FF5', $uArray[$i]['userid']) : "NA",
-		'Q1FF6' => ($this->getFiled('Q1FF6', $uArray[$i]['userid']) != '') ? $this->getFiled('Q1FF4', $uArray[$i]['userid']) : "NA",
+		'Q1FF6' => ($this->getFiled('Q1FF6', $uArray[$i]['userid']) != '') ? $this->getFiled('Q1FF6', $uArray[$i]['userid']) : "NA",
 
 	
 	
@@ -146,7 +147,7 @@ class Home extends CI_Controller {
 //	print_r($test->fields);
 //	exit;
 	$this->dbforge->add_key('userid', TRUE);
-	$this->dbforge->create_table('tbl_home');
+	$this->dbforge->create_table('tbl_feb');
     }
 
     public function Air_performance($argUserID) {

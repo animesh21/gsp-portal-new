@@ -1079,7 +1079,17 @@ public function digital_certificate_for_principal_coordinator($argID)
            redirect('/admin/audit_started');
       }
     }
+
     
+
+    public function disable_schoolapp(){
+        $argID=$this->input->post("school_id");
+        $check1= $this->Audit_started_model->disable_schoolapp($argID);
+        if($check1){
+             redirect(base_url('/admin/audit_started'));
+        }
+      }
+
     public function disable_school(){
       $argID=$this->input->post("school_id");
       $check1= $this->Audit_started_model->disable_school($argID);

@@ -2085,7 +2085,12 @@ public function getExcel2017Data() {
       $this->db->where('userid', $argID);
       return $this->db->update("gsp_school",array("make_school_disabled"=>"1"));
     }
-    
+
+    public function disable_schoolapp($argID)
+    {
+      $this->db->where('id', $argID);
+      return $this->db->update("gsp_school",array("make_school_disabled"=>"0"));
+    }
     
     
     public function disable_school($argID)
