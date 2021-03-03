@@ -47,8 +47,10 @@
       <td><?php echo $record->date_added; ?></td>
       <td>
       <button class="btn btn-success" onclick="get_aprove(<?php echo $record->id; ?>)" >APPROVE</button>
-      
+
+      </br>
       <button style="margin-top:10px" class="btn btn-success"  onclick="makeSchoolDisable(<?php echo $record->id; ?>)" >DISABLE</button>
+      </br>
       <!-- <button class="btn btn-primary" onclick="get_merge(<?php echo $record->id;?>)" style="width: 90px; margin-top: 10px;">MERGE</button> -->
       <a onclick="get_merge(<?php echo $record->id; ?>)" id="mymodal122" data-toggle="modal" data-target="#myModal12e" class="btn btn-primary" style="width: 90px; margin-top: 10px;" >MERGE</a>
 
