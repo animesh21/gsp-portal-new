@@ -23,7 +23,7 @@
     echo "<div class='school_name'>". strtoupper($teacher->name_of_participant). "</div>";
      
   }  echo "<div class='date'>"  . strtoupper($teacher->date). "</div> ";
-        echo "<div class='certificateno'>Certificate No : "."APNGC Online Capacity Building Workshop/2021/0".$teacher->id." </div>
+        echo "<div class='certificateno'>Certificate No : "."GSP- HIMCOSTE Online Capacity Building Workshop MANDI/2021/0".$teacher->id." </div>
    </div> ";
     }
     }
