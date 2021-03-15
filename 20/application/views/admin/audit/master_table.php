@@ -39,12 +39,10 @@
         <td <?php if(floor($record[$i]->data_2016)>=70){?>style='background-color: Green; color:#000;' <?php }elseif(floor($record[$i]->data_2016)>=50 && floor($record[$i]->data_2016)<=69.9){ ?>style='background:yellow; color:000;' <?php }elseif($record[$i]->data_2016>=35 && floor($record[$i]->data_2016)<=49.9){ ?> style='background:orange; color:000;'  <?php }elseif(floor($record[$i]->data_2016)<=34.9 && floor($record[$i]->data_2016)!="NA"){?> style='background:red; color:000;' <?php } ?> >
         <?php echo $record[$i]->data_2016; ?>
         </td>
-        <td <?php  if($record[$i]->data_2016>=70){?>style='background-color: Green; color:#000;' <?php }elseif($record[$i]->data_2016>=50 && $record[$i]->data_2016<=69.9){ ?>style='background:yellow; color:000;' <?php }elseif($record[$i]->data_2016>=35 && $record[$i]->data_2016<=49.9){ ?> style='background:orange; color:000;'  <?php }elseif($record[$i]->data_2016<=34.9 && $record[$i]->data_2016!="NA"){?> style='background:red; color:000;' <?php } ?> >
-        <?php echo $record[$i]->data_2016; ?>
-        </td>
-        <td <?php if($record[$i]->data_2015>=70){?>style='background-color: Green; color:#000;' <?php }elseif($record[$i]->data_2015>=50 && $record[$i]->data_2015<=69.9){ ?>style='background:yellow; color:000;' <?php }elseif($record[$i]->data_2015>=35 && $record[$i]->data_2015<=49.9){ ?> style='background:orange; color:000;'  <?php }elseif($record[$i]->data_2015<=34.9 && $record[$i]->data_2015!="NA"){?> style='background:red; color:000;' <?php } ?>>
+        <td <?php if(floor($record[$i]->data_2015)>=70){?>style='background-color: Green; color:#000;' <?php }elseif(floor($record[$i]->data_2015)>=50 && floor($record[$i]->data_2015)<=69.9){ ?>style='background:yellow; color:000;' <?php }elseif($record[$i]->data_2015>=35 && floor($record[$i]->data_2015)<=49.9){ ?> style='background:orange; color:000;'  <?php }elseif(floor($record[$i]->data_2015)<=34.9 && floor($record[$i]->data_2015)!="NA"){?> style='background:red; color:000;' <?php } ?> >
         <?php echo $record[$i]->data_2015; ?>
         </td>
+      
       </tr>
       <?php } ?>
     </tbody>
