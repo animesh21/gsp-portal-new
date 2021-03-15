@@ -22,7 +22,7 @@
   }else{
     echo "<div class='school_name'>". strtoupper($teacher->name_of_participant). "</div>";
      
-  }  
+  }  echo "<div class='date'>"  . strtoupper($teacher->date). "</div> ";
         echo "<div class='certificateno'>Certificate No : "."APNGC Online Capacity Building Workshop/2021/0".$teacher->id." </div>
    </div> ";
     }
@@ -44,7 +44,7 @@
 body{
   font-family: mtcorsva; font-size: 20px;
 } 
-
+.date{position:relative; text-align: center; top:490px; margin-left: 480px;}
 .certificateno{ position:absolute; top:680px; left: 10px;}
 .principal{ position:relative; text-align: center; top:260px;}
 .school_name1{ position:relative; text-align: center; top:250px; font-size: 20px; margin-left: 25px;}
