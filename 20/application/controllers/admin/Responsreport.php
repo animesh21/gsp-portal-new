@@ -78,7 +78,7 @@ class Responsreport extends CI_Controller {
         $rank=getFiled('Q1G2',$data['schoolUserID']);
         
         if ($rank >= 6 ) { 
-           $html1 = $this->load->view('admin/survey/school_pdf', $data, true);
+           $html1 = $this->load->view('admin/survey/school_wt', $data, true);
              
             } else {
                $html1 = $this->load->view('admin/survey/primary-school-pdf', $data, true);
