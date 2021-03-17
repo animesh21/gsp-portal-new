@@ -458,7 +458,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
       </li>
     </ul>
 
-    <ul>
+    <ul class="list">
     <li>
       <p class="orange"><span>4</span><span>In the past years, what was the frequency of waste collection from the school?</span></p>
       <p class="orange"><span>4(a)</span><span>Wet / biodegradable / organic waste</span></p>
