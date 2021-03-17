@@ -405,13 +405,13 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
     <p>The first step to efficient solid waste management (SWM) is to become aware of what we do - benchmarking how much waste we generate and how much is processed. It is only then that we can find more sustainable ways to manage waste.</p>
     <p>The Baseline section of GSP Waste Transformers motivates schools to find out the types of waste generated in previous years' audits and measure the actual volume. The Baseline will help schools chalk out their solid waste management plan better. The school's waste management programme has the potential to transform the school environment, and therefore, the objective is to create a plan for zero-waste zones in every school that can be implemented once schools reopen.</p>
     <p class="orange" style="margin-top:12px;"><span>For Baseline:</span></p>
-    <p>1.Choose your SWM Action Plan team. A teacher with interest in waste and five to 10 students from Grades 6 to 12 will be ideal for your team.</p>                  
-    <p>2.With schools closed, the Administrative staff is important as they will provide the permissions required for the housekeeping and cleaning staff to help you with the plan.</p>                 
-    <p>3.The details of the Action Plan team members will need to be provided in the last section 'The Team'.</p>                   
-    <p>4.As a team, study the latest baseline data in comparison to previous years, where applicable.</p>                   
-    <p>5.Based on the study, design an Action Plan for SWM in school as per the questions asked in the next section.</p>
-    <p>6.The section on Action Plan will open on 23 Dec 2020, and you will only be able to access it once you answer all the questions in the previous sections.</p>
-    <p>7.As always, the Action Plan will be submitted online by the school.</p>
+    <p>1. Choose your SWM Action Plan team. A teacher with interest in waste and five to 10 students from Grades 6 to 12 will be ideal for your team.</p>                  
+    <p>2. With schools closed, the Administrative staff is important as they will provide the permissions required for the housekeeping and cleaning staff to help you with the plan.</p>                 
+    <p>3. The details of the Action Plan team members will need to be provided in the last section 'The Team'.</p>                   
+    <p>4. As a team, study the latest baseline data in comparison to previous years, where applicable.</p>                   
+    <p>5. Based on the study, design an Action Plan for SWM in school as per the questions asked in the next section.</p>
+    <p>6. The section on Action Plan will open on 23 Dec 2020, and you will only be able to access it once you answer all the questions in the previous sections.</p>
+    <p>7. As always, the Action Plan will be submitted online by the school.</p>
 
 
 
@@ -425,224 +425,32 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
         <li>
         <p><?php echo (getFiled('Q1B1', $schoolUserID) != "") ? getFiled('Q1B1', $schoolUserID) : "N/A"; ?></p>
       </li>
+    </ul>
         
   <div class="task-area">
     <h3 class="task">ACTION PLAN</h3>
     <p><b>Please read the following carefully before answering the questions:</b></p>
-    <p>1.GSP Waste Transformers aims at reinforcing the concept of circular economy in schools where the focus is on use, reuse and restoration of materials, rather than linear use and disposal.</p>
-    <p>2.The plan by the students will be assessed on the following: feasibility, cost effectiveness, localised to school needs, data clarity, specificity of strategies. Provide data to strengthen your Action Plan.</p>
-    <p>3.Descriptive responses will have a character limit, as mentioned for each question below.</p>
-    <p>4.Student involvement is essential as school teams who make it to the final round will need to present the plan online to a jury.</p>
-    <p>5.Please document all the data and responses at your end in case the GSP team requests it for further clarity.</p>
+    <p>1. GSP Waste Transformers aims at reinforcing the concept of circular economy in schools where the focus is on use, reuse and restoration of materials, rather than linear use and disposal.</p>
+    <p>2. The plan by the students will be assessed on the following: feasibility, cost effectiveness, localised to school needs, data clarity, specificity of strategies. Provide data to strengthen your Action Plan.</p>
+    <p>3. Descriptive responses will have a character limit, as mentioned for each question below.</p>
+    <p>4. Student involvement is essential as school teams who make it to the final round will need to present the plan online to a jury.</p>
+    <p>5. Please document all the data and responses at your end in case the GSP team requests it for further clarity.</p>
+    <div class="task-area">
     <ul class="list">
       <li>
-        <p class="orange">
-          <label><span class="cube">3</span>Determine the quantity of waste generated in your school. (in kilogram) </label></p>
-        <strong style="font-size:15px;">A: Biodegradable/Wet Waste</strong>
-        <table class="table">
-          <thead>
-          </thead>
-          <tr>
-            <th> HOW MUCH WASTE DOES YOUR SCHOOL GENERATE?</th>
-            <th>Quantity of solid waste generated(monthly average in kg) </th>
-          </tr>
-          <tr>
-            <td> Garden/horticulture waste </td>
-            <td><?php echo (getFiled('Q6Wa1S1', $schoolUserID) != "") ? getFiled('Q6Wa1S1', $schoolUserID) : "N/A"; ?></td>
-          </tr>
-          <tr>
-            <td> Kitchen waste—Raw </td>
-            <td><?php echo (getFiled('Q6Wa1S2', $schoolUserID) != "") ? getFiled('Q6Wa1S2', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-          <tr>
-            <td> Kitchen waste—Cooked </td>
-            <td><?php echo (getFiled('Q6Wa1S3', $schoolUserID) != "") ? getFiled('Q6Wa1S3', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-          <tr>
-            <td> Wet waste from classrooms etc.</td>
-            <td><?php echo (getFiled('Q6Wa1S4', $schoolUserID) != "") ? getFiled('Q6Wa1S4', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-          <tr>
-            <td> Total amount of waste </td>
-            <td><?php echo (getFiled('Q6Wa1S5', $schoolUserID) != "") ? getFiled('Q6Wa1S5', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-          <tr>
-            <td> Per capita waste generation (a):</td>
-            <td><?php echo (getFiled('Q6Wa1S6', $schoolUserID) != "") ? getFiled('Q6Wa1S6', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-        </table>
-        <strong style="font-size:15px;">B: Dry/recyclable waste</strong>
-        <table class="table ">
-          <thead>
-          </thead>
-          <tr>
-            <th> HOW MUCH WASTE DOES YOUR SCHOOL GENERATE?</th>
-            <th>Quantity of solid waste generated(monthly average in kg) </th>
-          </tr>
-          <tr>
-            <td> Plastic</td>
-            <td><?php echo (getFiled('Q6Wa2S1', $schoolUserID) != "") ? getFiled('Q6Wa2S1', $schoolUserID) : "N/A"; ?></td>
-          </tr>
-          <tr>
-            <td> Paper </td>
-            <td><?php echo (getFiled('Q6Wa2S2', $schoolUserID) != "") ? getFiled('Q6Wa2S2', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-          <tr>
-            <td> Wood or classroom furniture </td>
-            <td><?php echo (getFiled('Q6Wa2S3', $schoolUserID) != "") ? getFiled('Q6Wa2S3', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-          <tr>
-            <td> Glass</td>
-            <td><?php echo (getFiled('Q6Wa2S4', $schoolUserID) != "") ? getFiled('Q6Wa2S4', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-          <tr>
-            <td> Metal </td>
-            <td><?php echo (getFiled('Q6Wa2S5', $schoolUserID) != "") ? getFiled('Q6Wa2S5', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-          <tr>
-            <td> Thermocol</td>
-            <td><?php echo (getFiled('Q6Wa2S6', $schoolUserID) != "") ? getFiled('Q6Wa2S6', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-          <tr>
-            <td> Tetra packs</td>
-            <td><?php echo (getFiled('Q6Wa2S7', $schoolUserID) != "") ? getFiled('Q6Wa2S7', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-          <tr>
-            <td> Total amount of waste</td>
-            <td><?php echo (getFiled('Q6Wa2S8', $schoolUserID) != "") ? getFiled('Q6Wa2S8', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-          <tr>
-            <td> Per capita waste generation (b):</td>
-            <td><?php echo (getFiled('Q6Wa2S9', $schoolUserID) != "") ? getFiled('Q6Wa2S9', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-        </table>
-        <strong style="font-size:15px;">C: Domestic hazardous waste</strong>
-        <table class="table">
-          <thead>
-          </thead>
-          <tr>
-            <th> HOW MUCH WASTE DOES YOUR SCHOOL GENERATE?</th>
-            <th>Quantity of solid waste generated(monthly average in kg) </th>
-          </tr>
-          <tr>
-            <td> Hazardous and toxic waste (Paints, lab waste, etc)</td>
-            <td><?php echo (getFiled('Q6Wa3S1', $schoolUserID) != "") ? getFiled('Q6Wa3S1', $schoolUserID) : "N/A"; ?></td>
-          </tr>
-          <tr>
-            <td> Oil from diesel generator sets </td>
-            <td><?php echo (getFiled('Q6Wa3S2', $schoolUserID) != "") ? getFiled('Q6Wa3S2', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-          <tr>
-            <td> Total amount of waste </td>
-            <td><?php echo (getFiled('Q6Wa3S3', $schoolUserID) != "") ? getFiled('Q6Wa3S3', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-          <tr>
-            <td> Per capita waste generation (c).</td>
-            <td><?php echo (getFiled('Q6Wa3S4', $schoolUserID) != "") ? getFiled('Q6Wa3S4', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-        </table>
-        <strong style="font-size:15px;">D: E-Waste</strong>
-        <table class="table">
-          <thead>
-          </thead>
-          <tr>
-            <th> HOW MUCH WASTE DOES YOUR SCHOOL GENERATE?</th>
-            <th>Quantity of solid waste generated(monthly average in kg) </th>
-          </tr>
-          <tr>
-            <td> E-waste</td>
-            <td><?php echo (getFiled('Q6Wa4S1', $schoolUserID) != "") ? getFiled('Q6Wa4S1', $schoolUserID) : "N/A"; ?></td>
-          </tr>
-          <tr>
-            <td> Per capita waste generation (d): </td>
-            <td><?php echo (getFiled('Q6Wa4S2', $schoolUserID) != "") ? getFiled('Q6Wa4S2', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-        </table>
-        <strong style="font-size:15px;">E: Biomedical waste</strong>
-        <table class="table">
-          <thead>
-          </thead>
-          <tr>
-            <th> HOW MUCH WASTE DOES YOUR SCHOOL GENERATE?</th>
-            <th>Quantity of solid waste generated(monthly average in kg) </th>
-          </tr>
-          <tr>
-            <td> Biomedical waste such as syringes, band–aids, expired medicines etc.</td>
-            <td><?php echo (getFiled('Q6Wa5S1', $schoolUserID) != "") ? getFiled('Q6Wa5S1', $schoolUserID) : "N/A"; ?></td>
-          </tr>
-          <tr>
-            <td> Per capita waste generation (e): </td>
-            <td><?php echo (getFiled('Q6Wa5S2', $schoolUserID) != "") ? getFiled('Q6Wa5S2', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-        </table>
-        <strong style="font-size:15px;">F: Sanitary waste</strong>
-        <table class="table">
-          <thead>
-          </thead>
-          <tr>
-            <th> HOW MUCH WASTE DOES YOUR SCHOOL GENERATE?</th>
-            <th>Quantity of solid waste generated(monthly average in kg) </th>
-          </tr>
-          <tr>
-            <td> Sanitary waste</td>
-            <td><?php echo (getFiled('Q6Wa6S1', $schoolUserID) != "") ? getFiled('Q6Wa6S1', $schoolUserID) : "N/A"; ?></td>
-          </tr>
-          <tr>
-            <td> Per capita waste generation (f): </td>
-            <td><?php echo (getFiled('Q6Wa6S2', $schoolUserID) != "") ? getFiled('Q6Wa6S2', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-        </table>
-        <strong style="font-size:15px;">G: C & D Waste</strong>
-        <table class="table">
-          <thead>
-          </thead>
-          <tr>
-            <th> HOW MUCH WASTE DOES YOUR SCHOOL GENERATE?</th>
-            <th>Quantity of solid waste generated(monthly average in kg) </th>
-          </tr>
-          <tr>
-            <td> Construction and demolition waste</td>
-            <td><?php echo (getFiled('Q6Wa7S1', $schoolUserID) != "") ? getFiled('Q6Wa7S1', $schoolUserID) : "N/A"; ?></td>
-          </tr>
-          <tr>
-            <td> Per capita waste generation (f): </td>
-            <td><?php echo (getFiled('Q6Wa7S2', $schoolUserID) != "") ? getFiled('Q6Wa7S2', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-        </table>
-        <?php
-        if (!empty($solidWaste)) {
-            ?>
-        <div>
-          <table class="table">
-            <tr>
-              <th>image</th>
-              <th>File name</th>
-            </tr>
-            <?php foreach ($solidWaste as $a) { 
-
-               $file_parts = pathinfo($a->file_name);
-        $file_extension = $file_parts['extension']; ?>
-        <tr>
-          <td>
-            <?php if($file_extension=="pdf") { ?>
-            <img src="assets/img/performance/pdficon.png" lass="img-responsive" width="100" height="100">
-          <?php } elseif($file_extension=="docx"){ ?>
-             <img src="assets/img/performance/wordicon.png" lass="img-responsive" width="100" height="100">
-           <?php }  else {?>
-            <img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" />
-          <?php } ?>
-          </td>
-              <td><?php $solidWaste =  str_replace(str_replace(' ', '_', $school[0]->name . "_Audit_Team_Weighing_Solid_Waste_"), " ", $a->file_name); echo wordwrap($solidWaste, 70, '<br />', true);?></td>
-            </tr>
-            <?php } ?>
-          </table>
-        </div>
-        <?php } else { ?>
-        <div class="support_files">No documents uploaded by the school.</div>
-        <?php } ?>
-         
+        <p class="orange"><span class="cube">1</span><span>1Title of the plan: Make sure your title is short, catchy & conveys the idea behind your Action Plan. (Max 150 characters)</span></p> </li>
+        <li>
+        <p><?php echo (getFiled('Q1AP2', $schoolUserID) != "") ? getFiled('Q1AP2', $schoolUserID) : "N/A"; ?></p>
       </li>
     </ul>
+    <ul class="list">
+      <li>
+        <p class="orange"><span class="cube">1</span><span>Per capita waste generation in school</span></p> </li>
+        <li>
+        <p><?php echo (getFiled('Q2AP1', $schoolUserID) != "") ? getFiled('Q2AP1', $schoolUserID) : "N/A"; ?></p>
+      </li>
+    </ul>
+    </div>
   </div>
   <div class="task-area">
     <h3 class="task">Task 4: How much waste does your school treat/recycle?</h3>
