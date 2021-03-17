@@ -292,7 +292,7 @@
 </div>
 <div style="text-align: center; margin-top:600px;">&nbsp;&nbsp;&nbsp;&nbsp;</div>
 <div style="text-align: center; padding: 0;">&nbsp;&nbsp;&nbsp;&nbsp;</div>
-<h2 class="heading section waste page_break"><img src="assets/img/images/waste.png" width="94" height="94">Waste</h2>
+<h2 class="heading section air page_break"><img src="assets/img/images/waste.png" width="94" height="94">Waste</h2>
 <div class="wrapper">
   <div class="task-area">
     <h3 class="task">BASELINE</h3>
