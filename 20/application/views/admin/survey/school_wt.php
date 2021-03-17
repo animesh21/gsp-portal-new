@@ -438,8 +438,9 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
     <div class="task-area">
     <ul class="list">
       <li>
-        <p class="orange"><span class="cube">1</span><span>1Title of the plan: Make sure your title is short, catchy & conveys the idea behind your Action Plan. (Max 150 characters)</span></p> </li>
+        <p class="orange"><span class="cube">1</span><span>Title of the plan: Make sure your title is short, catchy & conveys the idea behind your Action Plan. (Max 150 characters)</span></p> </li>
         <li>
+        <p></p>
         <p><?php echo (getFiled('Q1AP2', $schoolUserID) != "") ? getFiled('Q1AP2', $schoolUserID) : "N/A"; ?></p>
       </li>
     </ul>
