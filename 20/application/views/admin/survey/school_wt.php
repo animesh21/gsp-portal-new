@@ -487,1240 +487,186 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
     </li>
     </ul>
 
-
+    <ul class="list">
+    <li>
+      <p class="orange"><span>4(b)</span><span>Dry / recyclable waste</span></p>
+      <p class="formanswertext">
+        <?php
+                        if (getFiled('Q4AP2', $schoolUserID) == 1) {
+                            echo "Not Applicable";
+                        }
+                        if (getFiled('Q4AP2', $schoolUserID) == 2) {
+                            echo "Every day";
+                        }
+                        if (getFiled('Q4AP2', $schoolUserID) == 3) {
+                            echo "Twice a week";
+                        }
+                        if (getFiled('Q4AP2', $schoolUserID) == 4) {
+                          echo "Weekly";
+                        }
+                        if (getFiled('Q4AP2', $schoolUserID) == 5) {
+                          echo "Fortnightly";
+                        }
+                        if (getFiled('Q4AP2', $schoolUserID) == 6) {
+                          echo "Monthly";
+                        }
+                        ?>
+      </p>
+    </li>
+    </ul>
+    <ul class="list">
+    <li>
+      <p class="orange"><span>4(c)</span><span>Domestic hazardous waste</span></p>
+      <p class="formanswertext">
+        <?php
+                        if (getFiled('Q4AP3', $schoolUserID) == 1) {
+                            echo "Not Applicable";
+                        }
+                        if (getFiled('Q4AP3', $schoolUserID) == 2) {
+                            echo "Every day";
+                        }
+                        if (getFiled('Q4AP3', $schoolUserID) == 3) {
+                            echo "Twice a week";
+                        }
+                        if (getFiled('Q4AP3', $schoolUserID) == 4) {
+                          echo "Weekly";
+                        }
+                        if (getFiled('Q4AP3', $schoolUserID) == 5) {
+                          echo "Fortnightly";
+                        }
+                        if (getFiled('Q4AP3', $schoolUserID) == 6) {
+                          echo "Monthly";
+                        }
+                        ?>
+      </p>
+    </li>
+    </ul>
+    <ul class="list">
+    <li>
+      <p class="orange"><span>4(d)</span><span>E-waste</span></p>
+      <p class="formanswertext">
+        <?php
+                        if (getFiled('Q4AP4', $schoolUserID) == 1) {
+                            echo "Not Applicable";
+                        }
+                        if (getFiled('Q4AP4', $schoolUserID) == 2) {
+                            echo "Every day";
+                        }
+                        if (getFiled('Q4AP4', $schoolUserID) == 3) {
+                            echo "Twice a week";
+                        }
+                        if (getFiled('Q4AP4', $schoolUserID) == 4) {
+                          echo "Weekly";
+                        }
+                        if (getFiled('Q4AP4', $schoolUserID) == 5) {
+                          echo "Fortnightly";
+                        }
+                        if (getFiled('Q4AP4', $schoolUserID) == 6) {
+                          echo "Monthly";
+                        }
+                        ?>
+      </p>
+    </li>
+    </ul>
+    <ul class="list">
+    <li>
+      <p class="orange"><span>4(e)</span><span>Biomedical waste including sanitary waste</span></p>
+      <p class="formanswertext">
+        <?php
+                        if (getFiled('Q4AP5', $schoolUserID) == 1) {
+                            echo "Not Applicable";
+                        }
+                        if (getFiled('Q4AP5', $schoolUserID) == 2) {
+                            echo "Every day";
+                        }
+                        if (getFiled('Q4AP5', $schoolUserID) == 3) {
+                            echo "Twice a week";
+                        }
+                        if (getFiled('Q4AP5', $schoolUserID) == 4) {
+                          echo "Weekly";
+                        }
+                        if (getFiled('Q4AP5', $schoolUserID) == 5) {
+                          echo "Fortnightly";
+                        }
+                        if (getFiled('Q4AP5', $schoolUserID) == 6) {
+                          echo "Monthly";
+                        }
+                        ?>
+      </p>
+    </li>
+    </ul>
+    <ul class="list">
+    <li>
+      <p class="orange"><span>4(f)</span><span>Construction & Demolition waste</span></p>
+      <p class="formanswertext">
+        <?php
+                        if (getFiled('Q4AP6', $schoolUserID) == 1) {
+                            echo "Not Applicable";
+                        }
+                        if (getFiled('Q4AP6', $schoolUserID) == 2) {
+                            echo "Every day";
+                        }
+                        if (getFiled('Q4AP6', $schoolUserID) == 3) {
+                            echo "Twice a week";
+                        }
+                        if (getFiled('Q4AP6', $schoolUserID) == 4) {
+                          echo "Weekly";
+                        }
+                        if (getFiled('Q4AP6', $schoolUserID) == 5) {
+                          echo "Fortnightly";
+                        }
+                        if (getFiled('Q4AP6', $schoolUserID) == 6) {
+                          echo "Monthly";
+                        }
+                        ?>
+      </p>
+    </li>
+    </ul>
 
 
     <ul class="list">
       <li>
-        <p class="orange"><span class="cube">2</span><span>Per capita waste generation in school</span></p> </li>
+        <p class="orange"><span class="cube">5</span><span>What strategies do you propose to improve SWM in the school? (Max 750 characters)</span></p> </li>
+        <p>Explain and elaborate on the specific steps to be taken to reduce and manage each type of waste stream mentioned in Q4.( How will the changes be introduced and implemented, as and when schools open in 2021? Also include the possibility of continuation of COVID-19 related materials, such as masks and gloves. How long will the process take – from issue identification to implementation? What will be the challenges and their solutions? Include statistics like cost effectiveness, infrastructural requirement if any, ease of replication if desired. Please give numerical data wherever possible.)</p>
         <li>
-        <p style="padding-top:1px;"><?php echo (getFiled('Q2AP1', $schoolUserID) != "") ? getFiled('Q2AP1', $schoolUserID) : "N/A"; ?></p>
+        <p style="padding-top:1px;"><?php echo (getFiled('Q5AP1', $schoolUserID) != "") ? getFiled('Q5AP1', $schoolUserID) : "N/A"; ?></p>
       </li>
     </ul>
-    </div>
-  </div>
-  <div class="task-area">
-    <h3 class="task">Task 4: How much waste does your school treat/recycle?</h3>
-    <p><b>To Collect Data:</b> Find out whether your school has any waste recycling facility like compost
-      pit, paper recycling machine, etc. If you have a paper recycling unit, the person in charge will
-      definitely be recording the input and output from the unit. If the school is selling newspapers or
-      bottles or metal scrap to the local waste dealer (kabadiwala), that can also be included in the
-      quantity recycled.</p>
+
     <ul class="list">
       <li>
-        <p class="orange"> <span class="cube">4</span><span>Does your school recycle any generated waste? </span> </p>
-        <p> <?php echo (getFiled('Q8Wa1', $schoolUserID) != "") ? (getFiled('Q8Wa1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
+        <p class="orange"><span class="cube">7</span><span>How will you ensure student and community involvement in the action plan? Please include curriculum interventions, if any. (Max 250 characters)</span></p> </li>
+        <li>
+        <p style="padding-top:1px;"><?php echo (getFiled('Q7AP1', $schoolUserID) != "") ? getFiled('Q7AP1', $schoolUserID) : "N/A"; ?></p>
       </li>
-      <?php if(strcmp(getFiled('Q8Wa1', $schoolUserID),'Y')==0): ?>
-      <li>
-        <p class="orange">
-          <label><span class="cube">4(a)</span><span>Please provide quantity of which is applicable</label><span></p>
-        <strong style="font-size:15px;">a. Biodegradable/Wet Waste</strong>
-        <table class="table">
-          <thead>
-          </thead>
-          <tr>
-            <th> HOW MUCH WASTE DOES YOUR SCHOOL REUSE/RECYCLE? </th>
-            <th>Quantity of solid waste reuse/recycled (monthly average in kg) </th>
-          </tr>
-          <tr>
-            <td> Garden/horticulture waste </td>
-            <td><?php echo (getFiled('Q8Wa1S1', $schoolUserID) != "") ? getFiled('Q8Wa1S1', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-          <tr>
-            <td> Kitchen waste—Raw</td>
-            <td><?php echo (getFiled('Q8Wa1S2', $schoolUserID) != "") ? getFiled('Q8Wa1S2', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-          <tr>
-            <td> Kitchen waste—Cooked </td>
-            <td><?php echo (getFiled('Q8Wa1S3', $schoolUserID) != "") ? getFiled('Q8Wa1S3', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-          <tr>
-            <td> Wet waste from classrooms etc.</td>
-            <td><?php echo (getFiled('Q8Wa1S4', $schoolUserID) != "") ? getFiled('Q8Wa1S4', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-          <tr>
-            <td> Total amount of waste</td>
-            <td><?php echo (getFiled('Q8Wa1S5', $schoolUserID) != "") ? getFiled('Q8Wa1S5', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-          <tr>
-            <td> Per capita waste reused/recycled (a):</td>
-            <td><?php echo (getFiled('Q8Wa1S6', $schoolUserID) != "") ? getFiled('Q8Wa1S6', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-        </table>
-        <strong style="font-size:15px;">b. Dry/recyclable waste</strong>
-        <table class="table">
-          <thead>
-          </thead>
-          <tr>
-            <th> HOW MUCH WASTE DOES YOUR SCHOOL REUSE/RECYCLE? </th>
-            <th>Quantity of solid waste reuse/recycled (monthly average in kg) </th>
-          </tr>
-          <tr>
-            <td> Plastic </td>
-            <td><?php echo (getFiled('Q8Wa2S1', $schoolUserID) != "") ? getFiled('Q8Wa2S1', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-          <tr>
-            <td> Paper</td>
-            <td><?php echo (getFiled('Q8Wa2S2', $schoolUserID) != "") ? getFiled('Q8Wa2S2', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-          <tr>
-            <td> Wood or classroom furniture </td>
-            <td><?php echo (getFiled('Q8Wa2S3', $schoolUserID) != "") ? getFiled('Q8Wa2S3', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-          <tr>
-            <td> Glass</td>
-            <td><?php echo (getFiled('Q8Wa2S4', $schoolUserID) != "") ? getFiled('Q8Wa2S4', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-          <tr>
-            <td> Metal</td>
-            <td><?php echo (getFiled('Q8Wa2S5', $schoolUserID) != "") ? getFiled('Q8Wa2S5', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-          <tr>
-            <td> Thermocol</td>
-            <td><?php echo (getFiled('Q8Wa2S6', $schoolUserID) != "") ? getFiled('Q8Wa2S6', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-          <tr>
-            <td> Tetra packs</td>
-            <td><?php echo (getFiled('Q8Wa2S7', $schoolUserID) != "") ? getFiled('Q8Wa2S7', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-          <tr>
-            <td> Total amount of waste</td>
-            <td><?php echo (getFiled('Q8Wa2S8', $schoolUserID) != "") ? getFiled('Q8Wa2S8', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-          <tr>
-            <td> Per capita waste reused/recycled (b):</td>
-            <td><?php echo (getFiled('Q8Wa2S9', $schoolUserID) != "") ? getFiled('Q8Wa2S9', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-        </table>
-        <strong style="font-size:15px;">c. Domestic hazardous waste</strong>
-        <table class="table">
-          <thead>
-          </thead>
-          <tr>
-            <th> HOW MUCH WASTE DOES YOUR SCHOOL REUSE/RECYCLE? </th>
-            <th>Quantity of solid waste reuse/recycled (monthly average in kg) </th>
-          </tr>
-          <tr>
-            <td> Hazardous and toxic waste(Paints, lab waste, etc) </td>
-            <td><?php echo (getFiled('Q8Wa3S1', $schoolUserID) != "") ? getFiled('Q8Wa3S1', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-          <tr>
-            <td> Oil from DG sets </td>
-            <td><?php echo (getFiled('Q8Wa3S2', $schoolUserID) != "") ? getFiled('Q8Wa3S2', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-          <tr>
-            <td> Total amount of waste </td>
-            <td><?php echo (getFiled('Q8Wa3S3', $schoolUserID) != "") ? getFiled('Q8Wa3S3', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-          <tr>
-            <td> Per capita waste reused/recycled (c).</td>
-            <td><?php echo (getFiled('Q8Wa3S4', $schoolUserID) != "") ? getFiled('Q8Wa3S4', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-        </table>
-        <strong style="font-size:15px;">d. E-Waste</strong>
-        <table class="table">
-          <thead>
-          </thead>
-          <tr>
-            <th> HOW MUCH WASTE DOES YOUR SCHOOL REUSE/RECYCLE? </th>
-            <th>Quantity of solid waste reuse/recycled (monthly average in kg) </th>
-          </tr>
-          <tr>
-            <td> E-waste </td>
-            <td><?php echo (getFiled('Q8Wa4S1', $schoolUserID) != "") ? getFiled('Q8Wa4S1', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-          <tr>
-            <td> Per capita waste reused/recycled (d): </td>
-            <td><?php echo (getFiled('Q8Wa4S2', $schoolUserID) != "") ? getFiled('Q8Wa4S2', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-        </table>
-        <strong style="font-size:15px;">e. Biomedical waste</strong>
-        <table class="table">
-          <thead>
-          </thead>
-          <tr>
-            <th> HOW MUCH WASTE DOES YOUR SCHOOL REUSE/RECYCLE? </th>
-            <th>Quantity of solid waste reuse/recycled (monthly average in kg) </th>
-          </tr>
-          <tr>
-            <td>Biomedical waste such as syringes, band–aids, expired medicines etc. </td>
-            <td><?php echo (getFiled('Q8Wa5S1', $schoolUserID) != "") ? getFiled('Q8Wa5S1', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-          <tr>
-            <td> Per capita waste reused/recycled (e): </td>
-            <td><?php echo (getFiled('Q8Wa5S2', $schoolUserID) != "") ? getFiled('Q8Wa5S2', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-        </table>
-        <strong style="font-size:15px;">f. Sanitary waste</strong>
-        <table class="table">
-          <thead>
-          </thead>
-          <tr>
-            <th> HOW MUCH WASTE DOES YOUR SCHOOL REUSE/RECYCLE? </th>
-            <th>Quantity of solid waste reuse/recycled (monthly average in kg) </th>
-          </tr>
-          <tr>
-            <td>Sanitary waste </td>
-            <td><?php echo (getFiled('Q8Wa6S1', $schoolUserID) != "") ? getFiled('Q8Wa6S1', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-          <tr>
-            <td> Per capita waste reused/recycled (f): </td>
-            <td><?php echo (getFiled('Q8Wa6S2', $schoolUserID) != "") ? getFiled('Q8Wa6S2', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-        </table>
-        <strong style="font-size:15px;">g. C &amp; D Waste</strong>
-        <table class="table">
-          <thead>
-          </thead>
-          <tr>
-            <th> HOW MUCH WASTE DOES YOUR SCHOOL REUSE/RECYCLE? </th>
-            <th>Quantity of solid waste reuse/recycled (monthly average in kg) </th>
-          </tr>
-          <tr>
-            <td>Construction and demolition waste </td>
-            <td><?php echo (getFiled('Q8Wa7S1', $schoolUserID) != "") ? getFiled('Q8Wa7S1', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-          <tr>
-            <td> Per capita waste reused/recycled (g): </td>
-            <td><?php echo (getFiled('Q8Wa7S2', $schoolUserID) != "") ? getFiled('Q8Wa7S2', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-        </table>
-      </li>
-      <?php endif; ?>
     </ul>
-  </div>
-  <ul class="list">
-    <li>
-      <p class="orange">
-        <label><span class="cube">5</span><span>Does your school have a composting facility?</label></span> </p>
-      <p> <?php echo (getFiled('Q9Wa1', $schoolUserID) != "") ? (getFiled('Q9Wa1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
 
-<p class="orange" style="font-size: 16px;">Please upload supporting documents</p>
+    <ul class="list">
+      <li>
+        <p class="orange"><span class="cube">8</span><span>Provide 3-5 indicators on which the implementation of the plan will be assessed. Include at least one example of all types of indicators: environmental (estimated quantity of waste reduction; management), infrastructural (minor to major changes), and behavioural (culture of SWM within the school community). (Max 350 characters)</span></p> </li>
+        <li>
+        <p style="padding-top:5px;"><?php echo (getFiled('Q8AP1', $schoolUserID) != "") ? getFiled('Q8AP1', $schoolUserID) : "N/A"; ?></p>
+      </li>
+    </ul>
 
-  <?php
-       
-        if (!empty($composingPit)) {
-            ?>
-    <div>
-      <table  class="table">
-        <tr>
-          <th>Image</th>
-          <th>File Name</th>
-        </tr>
-        <?php foreach ($composingPit as $a) { 
+    <ul class="list">
+      <li>
+        <p class="orange"><span class="cube">9</span><span>What are the plan’s estimated costs? (Max 250 characters)</span></p> </li>
+        <li>
+        <p style="padding-top:1px;"><?php echo (getFiled('Q9AP1', $schoolUserID) != "") ? getFiled('Q9AP1', $schoolUserID) : "N/A"; ?></p>
+      </li>
+    </ul>
 
-           $file_parts = pathinfo($a->file_name);
-        $file_extension = $file_parts['extension']; ?>
-        <tr>
-          <td>
-            <?php if($file_extension=="pdf") { ?>
-            <img src="assets/img/performance/pdficon.png" lass="img-responsive" width="100" height="100">
-          <?php } elseif($file_extension=="docx"){ ?>
-             <img src="assets/img/performance/wordicon.png" lass="img-responsive" width="100" height="100">
-           <?php }  else {?>
-            <img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" />
-          <?php } ?>
-          </td>
-          <td><?php $composingPit =  str_replace(str_replace(' ', '_', $school[0]->name . "_Composting_Pit_"), " ", $a->file_name); echo wordwrap($composingPit, 70, '<br />', true);?></td>
-        </tr>
-        <?php } ?>
-      </table>
+    <ul class="list">
+      <li>
+        <p class="orange"><span class="cube">10</span><span>Please mention two short-term and two long-term benefits of your plan with reference to Q5 above. (Max 250 characters)</span></p> </li>
+        <li>
+        <p style="padding-top:1px;"><?php echo (getFiled('Q10AP1', $schoolUserID) != "") ? getFiled('Q10AP1', $schoolUserID) : "N/A"; ?></p>
+      </li>
+    </ul>
     </div>
-    <?php } else { ?>
-    <div class="support_files">No documents uploaded by the school. </div>
-    <?php } ?>
-
-
-    </li>
-    <?php if(strcmp(getFiled('Q9Wa1', $schoolUserID),'Y')==0): ?>
-    <li>
-      <p class="orange">
-        <label><span class="cube">5(a)</span><span>What is the methodology used?</label>
-      </span></p>
-      <p class="formanswertext">
-        <?php
-        if (getFiled('Q9Wa2S1', $schoolUserID) == 1):
-            echo "Natural composting without added microbes";
-            echo "<br/>";
-        endif;
-        if (getFiled('Q9Wa2S2', $schoolUserID) == 1):
-            echo "Vermi composting";
-            echo "<br/>";
-        endif;
-        if (getFiled('Q9Wa2S3', $schoolUserID) == 1):
-            echo "Mechanical composting";
-            echo "<br/>";
-        endif;
-        if (getFiled('Q9Wa2S4', $schoolUserID) == 1):
-            echo " Other: &nbsp;";
-            echo "<br/>";
-        endif;
-        ?>
-      </p>
-    </li>
-    <li>
-      <p class="orange">
-        <label for="username"><span class="cube">5(b)</span><span>What is the quantity of compost that is generated per month (in kilogram)?</label></span>
-      </p>
-      <p class="formanswertext"><?php echo (getFiled('Q9Wa3', $schoolUserID) != "") ? getFiled('Q9Wa3', $schoolUserID) : "N/A"; ?></p>
-    </li>
-    <li>
-      <p class="orange">
-        <label><span class="cube">5(c)</span><span>What is the purpose of the compost that is generated per month? </label></span>
-      </p>
-      <p class="formanswertext">
-        <?php
-    if (getFiled('Q9Wa4S1', $schoolUserID) == 1):
-        echo "For horticultural purposes";
-        echo "<br/>";
-    endif;
-    if (getFiled('Q9Wa4S2', $schoolUserID) == 1):
-        echo "For school garden";
-        echo "<br/>";
-    endif;
-    if (getFiled('Q9Wa4S3', $schoolUserID) == 1):
-        echo "For sale";
-        echo "<br/>";
-    endif;
-    if (getFiled('Q9Wa4S4', $schoolUserID) == 1):
-        echo "For charity";
-        echo "<br/>";
-    endif;
-    ?>
-      </p>
-    </li>
-    <?php endif; ?>
-    <li>
-      <p class="orange">
-        <label><span class="cube">6</span><span>Does your school encourage students &amp; teachers to reuse textbooks? <a class="kplink" href="http://www.greenschoolsprogramme.org/knowledge-bank/waste/#chomp" target="_blank"></a></label></span>
-      </p>
-      <p class="formanswertext"> <?php echo (getFiled('Q10Wa1', $schoolUserID) != "") ? (getFiled('Q10Wa1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
-    </li>
-    <li>
-      <p class="orange">
-        <label><span class="cube">7</span>Please fill the table to understand whether waste recycling procedures are applied to waste. <a class="kplink" href="http://www.greenschoolsprogramme.org/knowledge-bank/waste/#whatWeDo" target="_blank"> </a></label>
-      </p>
-      <table class="table">
-        <tr>
-          <td> Category of waste </td>
-          <td> Local scrap collector (kabadiwala) </td>
-          <td> Authorized dealer </td>
-          <td> Dumped at a designated community site </td>
-          <td> Internal procedure </td>
-        </tr>
-        <tr>
-          <td> Paper </td>
-          <td><?php
-                if (getFiled('Q11Wa1S1', $schoolUserID) == 1):
-                    echo "1";
-                else:
-                    echo "0";
-                endif;
-                ?>
-          </td>
-          <td><?php
-                if (getFiled('Q11Wa1S2', $schoolUserID) == 1):
-                    echo "1";
-                else:
-                    echo "0";
-                endif;
-                ?>
-          </td>
-          <td><?php
-                if (getFiled('Q11Wa1S3', $schoolUserID) == 1):
-                    echo "1";
-                else:
-                    echo "0";
-                endif;
-                ?>
-          </td>
-          <td><?php
-                if (getFiled('Q11Wa1S4', $schoolUserID) == 1):
-                    echo "1";
-                else:
-                    echo "0";
-                endif;
-                ?>
-          </td>
-        </tr>
-        <tr>
-          <td> Plastic </td>
-          <td><?php
-                if (getFiled('Q11Wa2S1', $schoolUserID) == 1):
-                    echo "1";
-                else:
-                    echo "0";
-                endif;
-                ?>
-          </td>
-          <td><?php
-                if (getFiled('Q11Wa2S2', $schoolUserID) == 1):
-                    echo "1";
-                else:
-                    echo "0";
-                endif;
-                ?>
-            <!--<input class="form-control space-textbox" id="Q11Wa2S2" type="checkbox" name="Q11Wa2S2" value="1">-->
-          </td>
-          <td><?php
-                if (getFiled('Q11Wa2S3', $schoolUserID) == 1):
-                    echo "1";
-                else:
-                    echo "0";
-                endif;
-                ?>
-            <!--<input class="form-control space-textbox" id="Q11Wa2S3" type="checkbox" name="Q11Wa2S3" value="1">-->
-          </td>
-          <td><?php
-                if (getFiled('Q11Wa2S4', $schoolUserID) == 1):
-                    echo "1";
-                else:
-                    echo "0";
-                endif;
-                ?>
-            <!--<input class="form-control space-textbox" id="Q11Wa2S4" type="checkbox" name="Q11Wa2S4" value="1">-->
-          </td>
-        </tr>
-        <tr>
-          <td> Horticultural waste </td>
-          <td><?php
-                if (getFiled('Q11Wa3S1', $schoolUserID) == 1):
-                    echo "1";
-                else:
-                    echo "0";
-                endif;
-                ?>
-            <!--<input class="form-control space-textbox" id="Q11Wa3S1" type="checkbox" name="Q11Wa3S1" value="1">-->
-          </td>
-          <td><?php
-                if (getFiled('Q11Wa3S2', $schoolUserID) == 1):
-                    echo "1";
-                else:
-                    echo "0";
-                endif;
-                ?>
-            <!--<input class="form-control space-textbox" id="Q11Wa3S2" type="checkbox" name="Q11Wa3S2" value="1">-->
-          </td>
-          <td><?php
-                if (getFiled('Q11Wa3S3', $schoolUserID) == 1):
-                    echo "1";
-                else:
-                    echo "0";
-                endif;
-                ?>
-            <!--<input class="form-control space-textbox" id="Q11Wa3S3" type="checkbox" name="Q11Wa3S3" value="1">-->
-          </td>
-          <td><?php
-                if (getFiled('Q11Wa3S4', $schoolUserID) == 1):
-                    echo "1";
-                else:
-                    echo "0";
-                endif;
-                ?>
-            <!-- <input class="form-control space-textbox" id="Q11Wa3S4" type="checkbox" name="Q11Wa3S4" value="1">-->
-          </td>
-        </tr>
-        <tr>
-          <td> E-waste </td>
-          <td><?php
-                if (getFiled('Q11Wa4S1', $schoolUserID) == 1):
-                    echo "1";
-                else:
-                    echo "0";
-                endif;
-                ?>
-            <!--<input class="form-control space-textbox" id="Q11Wa4S1" type="checkbox" name="Q11Wa4S1" value="1">-->
-          </td>
-          <td><?php
-                if (getFiled('Q11Wa4S2', $schoolUserID) == 1):
-                    echo "1";
-                else:
-                    echo "0";
-                endif;
-                ?>
-            <!-- <input class="form-control space-textbox" id="Q11Wa4S2" type="checkbox" name="Q11Wa4S2" value="1">-->
-          </td>
-          <td><?php
-                if (getFiled('Q11Wa4S3', $schoolUserID) == 1):
-                    echo "1";
-                else:
-                    echo "0";
-                endif;
-                ?>
-            <!-- <input class="form-control space-textbox" id="Q11Wa4S3" type="checkbox" name="Q11Wa4S3" value="1">-->
-          </td>
-          <td><?php
-                if (getFiled('Q11Wa4S4', $schoolUserID) == 1):
-                    echo "1";
-                else:
-                    echo "0";
-                endif;
-                ?>
-            <!--<input class="form-control space-textbox" id="Q11Wa4S4" type="checkbox" name="Q11Wa4S4" value="1">-->
-          </td>
-        </tr>
-        <tr>
-          <td> Hazardous waste </td>
-          <td><?php
-                if (getFiled('Q11Wa5S1', $schoolUserID) == 1):
-                    echo "1";
-                else:
-                    echo "0";
-                endif;
-                ?>
-            <!--<input class="form-control space-textbox" id="Q11Wa5S1" type="checkbox" name="Q11Wa5S1" value="1">-->
-          </td>
-          <td><?php
-                if (getFiled('Q11Wa5S2', $schoolUserID) == 1):
-                    echo "1";
-                else:
-                    echo "0";
-                endif;
-                ?>
-            <!--<input class="form-control space-textbox" id="Q11Wa5S2" type="checkbox" name="Q11Wa5S2" value="1">-->
-          </td>
-          <td><?php
-                if (getFiled('Q11Wa5S3', $schoolUserID) == 1):
-                    echo "1";
-                else:
-                    echo "0";
-                endif;
-                ?>
-            <!--<input class="form-control space-textbox" id="Q11Wa5S3" type="checkbox" name="Q11Wa5S3" value="1">-->
-          </td>
-          <td><?php
-                if (getFiled('Q11Wa5S4', $schoolUserID) == 1):
-                    echo "1";
-                else:
-                    echo "0";
-                endif;
-                ?>
-            <!--<input class="form-control space-textbox" id="Q11Wa5S4" type="checkbox" name="Q11Wa5S4" value="1">-->
-          </td>
-        </tr>
-        <tr>
-          <td> Wood, glass, metal </td>
-          <td><?php
-                if (getFiled('Q11Wa6S1', $schoolUserID) == 1):
-                    echo "1";
-                else:
-                    echo "0";
-                endif;
-                ?>
-            <!--<input class="form-control space-textbox" id="Q11Wa6S1" type="checkbox" name="Q11Wa6S1" value="1">-->
-          </td>
-          <td><?php
-                if (getFiled('Q11Wa6S2', $schoolUserID) == 1):
-                    echo "1";
-                else:
-                    echo "0";
-                endif;
-                ?>
-            <!--<input class="form-control space-textbox" id="Q11Wa6S2" type="checkbox" name="Q11Wa6S2" value="1">-->
-          </td>
-          <td><?php
-                if (getFiled('Q11Wa6S3', $schoolUserID) == 1):
-                    echo "1";
-                else:
-                    echo "0";
-                endif;
-                ?>
-            <!--<input class="form-control space-textbox" id="Q11Wa6S3" type="checkbox" name="Q11Wa6S3" value="1">-->
-          </td>
-          <td><?php
-                if (getFiled('Q11Wa6S4', $schoolUserID) == 1):
-                    echo "1";
-                else:
-                    echo "0";
-                endif;
-                ?>
-            <!-- <input class="form-control space-textbox" id="Q11Wa6S4" type="checkbox" name="Q11Wa6S4" value="1">-->
-          </td>
-        </tr>
-        <tr>
-          <td> Biomedical waste </td>
-          <td><?php
-                if (getFiled('Q11Wa7S1', $schoolUserID) == 1):
-                    echo "1";
-                else:
-                    echo "0";
-                endif;
-                ?>
-            <!--<input class="form-control space-textbox" id="Q11Wa7S1" type="checkbox" name="Q11Wa7S1" value="1">-->
-          </td>
-          <td><?php
-                if (getFiled('Q11Wa7S2', $schoolUserID) == 1):
-                    echo "1";
-                else:
-                    echo "0";
-                endif;
-                ?>
-            <!--<input class="form-control space-textbox" id="Q11Wa7S2" type="checkbox" name="Q11Wa7S2" value="1">-->
-          </td>
-          <td><?php
-                if (getFiled('Q11Wa7S3', $schoolUserID) == 1):
-                    echo "1";
-                else:
-                    echo "0";
-                endif;
-                ?>
-            <!--<input class="form-control space-textbox" id="Q11Wa7S3" type="checkbox" name="Q11Wa7S3" value="1">-->
-          </td>
-          <td><?php
-                if (getFiled('Q11Wa7S4', $schoolUserID) == 1):
-                    echo "1";
-                else:
-                    echo "0";
-                endif;
-                ?>
-            <!-- <input class="form-control space-textbox" id="Q11Wa7S4" type="checkbox" name="Q11Wa7S4" value="1">-->
-          </td>
-        </tr>
-        <tr>
-          <td> Others </td>
-          <td><?php
-                if (getFiled('Q11Wa8S1', $schoolUserID) == 1):
-                    echo "1";
-                else:
-                    echo "0";
-                endif;
-                ?>
-            <!--<input class="form-control space-textbox" id="Q11Wa8S1" type="checkbox" name="Q11Wa8S1" value="1">-->
-          </td>
-          <td><?php
-                if (getFiled('Q11Wa8S2', $schoolUserID) == 1):
-                    echo "1";
-                else:
-                    echo "0";
-                endif;
-                ?>
-            <!--<input class="form-control space-textbox" id="Q11Wa8S2" type="checkbox" name="Q11Wa8S2" value="1">-->
-          </td>
-          <td><?php
-                if (getFiled('Q11Wa8S3', $schoolUserID) == 1):
-                    echo "1";
-                else:
-                    echo "0";
-                endif;
-                ?>
-            <!--<input class="form-control space-textbox" id="Q11Wa8S3" type="checkbox" name="Q11Wa8S3" value="1">-->
-          </td>
-          <td><?php
-                if (getFiled('Q11Wa8S4', $schoolUserID) == 1):
-                    echo "1";
-                else:
-                    echo "0";
-                endif;
-                ?>
-            <!--<input class="form-control space-textbox" id="Q11Wa8S4" type="checkbox" name="Q11Wa8S4" value="1">-->
-          </td>
-        </tr>
-      </table>
-    </li>
-  </ul>
-  <?php
-    if (!empty($recycleMachine)) {
-        ?>
-  <div>
-    <table class="table">
-      <tr>
-        <th>image</th>
-        <th>File name</th>
-      </tr>
-      <?php foreach ($recycleMachine as $a) { 
-
-         $file_parts = pathinfo($a->file_name);
-        $file_extension = $file_parts['extension']; ?>
-        <tr>
-          <td>
-            <?php if($file_extension=="pdf") { ?>
-            <img src="assets/img/performance/pdficon.png" lass="img-responsive" width="100" height="100">
-          <?php } elseif($file_extension=="docx"){ ?>
-             <img src="assets/img/performance/wordicon.png" lass="img-responsive" width="100" height="100">
-           <?php }  else {?>
-            <img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" />
-          <?php } ?>
-          </td>
-        <td><?php $recycleMachine =  str_replace(str_replace(' ', '_', $school[0]->name . "_Recycling_Machine_"), " ", $a->file_name); echo wordwrap($recycleMachine, 70, '<br />', true);?></td>
-      </tr>
-      <?php } ?>
-    </table>
   </div>
-  <?php } else { ?>
-  <div class="support_files"> No documents uploaded by the school.</div>
-  <?php } ?>
-  <ul class="list">
-    <li>
-      <p class="orange">
-        <label><span class="cube">8</span><span>Does your school have the following? If yes, please give the numbers of items in working condition and those that are not.</span></label>
-      </p>
-      <table class="table">
-        <tr>
-          <td> Item </td>
-          <td> BEE star rating </td>
-          <td> Working condition </td>
-          <td> Non-working condition </td>
-          <td> Total no. of items </td>
-        </tr>
-        <tr>
-          <td> TVs </td>
-          <td><?php echo (getFiled('Q12Wa1S1', $schoolUserID) != "") ? getFiled('Q12Wa1S1', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa1S2', $schoolUserID) != "") ? getFiled('Q12Wa1S2', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa1S3', $schoolUserID) != "") ? getFiled('Q12Wa1S3', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa1S4', $schoolUserID) != "") ? getFiled('Q12Wa1S4', $schoolUserID) : "N/A"; ?> </td>
-        </tr>
-        <tr>
-          <td> VCR or DVD players </td>
-          <td><?php echo (getFiled('Q12Wa2S1', $schoolUserID) != "") ? getFiled('Q12Wa2S1', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa2S2', $schoolUserID) != "") ? getFiled('Q12Wa2S2', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa2S3', $schoolUserID) != "") ? getFiled('Q12Wa2S3', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa2S4', $schoolUserID) != "") ? getFiled('Q12Wa2S4', $schoolUserID) : "N/A"; ?> </td>
-        </tr>
-        <tr>
-          <td> Refrigerators and freezers </td>
-          <td><?php echo (getFiled('Q12Wa3S1', $schoolUserID) != "") ? getFiled('Q12Wa3S1', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa3S2', $schoolUserID) != "") ? getFiled('Q12Wa3S2', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa3S3', $schoolUserID) != "") ? getFiled('Q12Wa3S3', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa3S4', $schoolUserID) != "") ? getFiled('Q12Wa3S4', $schoolUserID) : "N/A"; ?> </td>
-        </tr>
-        <tr>
-          <td> Washing machines </td>
-          <td><?php echo (getFiled('Q12Wa4S1', $schoolUserID) != "") ? getFiled('Q12Wa4S1', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa4S2', $schoolUserID) != "") ? getFiled('Q12Wa4S2', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa4S3', $schoolUserID) != "") ? getFiled('Q12Wa4S3', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa4S4', $schoolUserID) != "") ? getFiled('Q12Wa4S4', $schoolUserID) : "N/A"; ?> </td>
-        </tr>
-        <tr>
-          <td> Air conditioners </td>
-          <td><?php echo (getFiled('Q12Wa5S1', $schoolUserID) != "") ? getFiled('Q12Wa5S1', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa5S2', $schoolUserID) != "") ? getFiled('Q12Wa5S2', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa5S3', $schoolUserID) != "") ? getFiled('Q12Wa5S3', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa5S4', $schoolUserID) != "") ? getFiled('Q12Wa5S4', $schoolUserID) : "N/A"; ?> </td>
-        </tr>
-        <tr>
-          <td> Heaters </td>
-          <td><?php echo (getFiled('Q12Wa6S1', $schoolUserID) != "") ? getFiled('Q12Wa6S1', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa6S2', $schoolUserID) != "") ? getFiled('Q12Wa6S2', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa6S3', $schoolUserID) != "") ? getFiled('Q12Wa6S3', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa6S4', $schoolUserID) != "") ? getFiled('Q12Wa6S4', $schoolUserID) : "N/A"; ?> </td>
-        </tr>
-        <tr>
-          <td> Microwaves </td>
-          <td><?php echo (getFiled('Q12Wa7S1', $schoolUserID) != "") ? getFiled('Q12Wa7S1', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa7S2', $schoolUserID) != "") ? getFiled('Q12Wa7S2', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa7S3', $schoolUserID) != "") ? getFiled('Q12Wa7S3', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa7S4', $schoolUserID) != "") ? getFiled('Q12Wa7S4', $schoolUserID) : "N/A"; ?> </td>
-        </tr>
-        <tr>
-          <td> Ovens </td>
-          <td><?php echo (getFiled('Q12Wa8S1', $schoolUserID) != "") ? getFiled('Q12Wa8S1', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa8S2', $schoolUserID) != "") ? getFiled('Q12Wa8S2', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa8S3', $schoolUserID) != "") ? getFiled('Q12Wa8S3', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa8S4', $schoolUserID) != "") ? getFiled('Q12Wa8S4', $schoolUserID) : "N/A"; ?> </td>
-        </tr>
-        <tr>
-          <td> Toasters </td>
-          <td><?php echo (getFiled('Q12Wa9S1', $schoolUserID) != "") ? getFiled('Q12Wa9S1', $schoolUserID) : "N/A"; ?>
-            <!--  <input class="form-control space-textbox" onkeyup="computeItems()" id="Q12Wa9S1" type="number" name="Q12Wa9S1" placeholder="" value="">-->
-          </td>
-          <td><?php echo (getFiled('Q12Wa9S2', $schoolUserID) != "") ? getFiled('Q12Wa9S2', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa9S3', $schoolUserID) != "") ? getFiled('Q12Wa9S3', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa9S4', $schoolUserID) != "") ? getFiled('Q12Wa9S4', $schoolUserID) : "N/A"; ?> </td>
-        </tr>
-        <tr>
-          <td> Electric kettles </td>
-          <td><?php echo (getFiled('Q12Wa10S1', $schoolUserID) != "") ? getFiled('Q12Wa10S1', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa10S2', $schoolUserID) != "") ? getFiled('Q12Wa10S2', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa10S3', $schoolUserID) != "") ? getFiled('Q12Wa10S3', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa10S4', $schoolUserID) != "") ? getFiled('Q12Wa10S4', $schoolUserID) : "N/A"; ?> </td>
-        </tr>
-        <tr>
-          <td> Personal computers (CPU, mouse, screen and keyboard included) </td>
-          <td><?php echo (getFiled('Q12Wa11S1', $schoolUserID) != "") ? getFiled('Q12Wa11S1', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa11S2', $schoolUserID) != "") ? getFiled('Q12Wa11S2', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa11S3', $schoolUserID) != "") ? getFiled('Q12Wa11S3', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa11S4', $schoolUserID) != "") ? getFiled('Q12Wa11S4', $schoolUserID) : "N/A"; ?> </td>
-        </tr>
-        <tr>
-          <td> Laptop computer (CPU, mouse, screen and keyboard included) </td>
-          <td><?php echo (getFiled('Q12Wa12S1', $schoolUserID) != "") ? getFiled('Q12Wa12S1', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa12S2', $schoolUserID) != "") ? getFiled('Q12Wa12S2', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa12S3', $schoolUserID) != "") ? getFiled('Q12Wa12S3', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa12S4', $schoolUserID) != "") ? getFiled('Q12Wa12S4', $schoolUserID) : "N/A"; ?> </td>
-        </tr>
-        <tr>
-          <td> Notebook computers </td>
-          <td><?php echo (getFiled('Q12Wa13S1', $schoolUserID) != "") ? getFiled('Q12Wa13S1', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa13S2', $schoolUserID) != "") ? getFiled('Q12Wa13S2', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa13S3', $schoolUserID) != "") ? getFiled('Q12Wa13S3', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa13S4', $schoolUserID) != "") ? getFiled('Q12Wa13S4', $schoolUserID) : "N/A"; ?> </td>
-        </tr>
-        <tr>
-          <td> Notepad computers </td>
-          <td><?php echo (getFiled('Q12Wa14S1', $schoolUserID) != "") ? getFiled('Q12Wa14S1', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa14S2', $schoolUserID) != "") ? getFiled('Q12Wa14S2', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa14S3', $schoolUserID) != "") ? getFiled('Q12Wa14S3', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa14S4', $schoolUserID) != "") ? getFiled('Q12Wa14S4', $schoolUserID) : "N/A"; ?> </td>
-        </tr>
-        <tr>
-          <td> Printers </td>
-          <td><?php echo (getFiled('Q12Wa15S1', $schoolUserID) != "") ? getFiled('Q12Wa15S1', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa15S2', $schoolUserID) != "") ? getFiled('Q12Wa15S2', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa15S3', $schoolUserID) != "") ? getFiled('Q12Wa15S3', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa15S4', $schoolUserID) != "") ? getFiled('Q12Wa15S4', $schoolUserID) : "N/A"; ?> </td>
-        </tr>
-        <tr>
-          <td> Copying equipment (photocopiers) </td>
-          <td><?php echo (getFiled('Q12Wa16S1', $schoolUserID) != "") ? getFiled('Q12Wa16S1', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa16S2', $schoolUserID) != "") ? getFiled('Q12Wa16S2', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa16S3', $schoolUserID) != "") ? getFiled('Q12Wa16S3', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa16S4', $schoolUserID) != "") ? getFiled('Q12Wa16S4', $schoolUserID) : "N/A"; ?> </td>
-        </tr>
-        <tr>
-          <td> Projectors </td>
-          <td><?php echo (getFiled('Q12Wa17S1', $schoolUserID) != "") ? getFiled('Q12Wa17S1', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa17S2', $schoolUserID) != "") ? getFiled('Q12Wa17S2', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa17S3', $schoolUserID) != "") ? getFiled('Q12Wa17S3', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa17S4', $schoolUserID) != "") ? getFiled('Q12Wa17S4', $schoolUserID) : "N/A"; ?> </td>
-        </tr>
-        <tr>
-          <td> Whiteboards </td>
-          <td><?php echo (getFiled('Q12Wa18S1', $schoolUserID) != "") ? getFiled('Q12Wa18S1', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa18S2', $schoolUserID) != "") ? getFiled('Q12Wa18S2', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa18S3', $schoolUserID) != "") ? getFiled('Q12Wa18S3', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa18S4', $schoolUserID) != "") ? getFiled('Q12Wa18S4', $schoolUserID) : "N/A"; ?> </td>
-        </tr>
-        <tr>
-          <td> Electrical and electronic typewriters </td>
-          <td><?php echo (getFiled('Q12Wa19S1', $schoolUserID) != "") ? getFiled('Q12Wa19S1', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa19S2', $schoolUserID) != "") ? getFiled('Q12Wa19S2', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa19S3', $schoolUserID) != "") ? getFiled('Q12Wa19S3', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa19S4', $schoolUserID) != "") ? getFiled('Q12Wa19S4', $schoolUserID) : "N/A"; ?> </td>
-        </tr>
-        <tr>
-          <td> Pocket and desk calculators </td>
-          <td><?php echo (getFiled('Q12Wa20S1', $schoolUserID) != "") ? getFiled('Q12Wa20S1', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa20S2', $schoolUserID) != "") ? getFiled('Q12Wa20S2', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa20S3', $schoolUserID) != "") ? getFiled('Q12Wa20S3', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa20S4', $schoolUserID) != "") ? getFiled('Q12Wa20S4', $schoolUserID) : "N/A"; ?> </td>
-        </tr>
-        <tr>
-          <td> Fax machines </td>
-          <td><?php echo (getFiled('Q12Wa21S1', $schoolUserID) != "") ? getFiled('Q12Wa21S1', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa21S2', $schoolUserID) != "") ? getFiled('Q12Wa21S2', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa21S3', $schoolUserID) != "") ? getFiled('Q12Wa21S3', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa21S4', $schoolUserID) != "") ? getFiled('Q12Wa21S4', $schoolUserID) : "N/A"; ?> </td>
-        </tr>
-        <tr>
-          <td> Telex </td>
-          <td><?php echo (getFiled('Q12Wa22S1', $schoolUserID) != "") ? getFiled('Q12Wa22S1', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa22S2', $schoolUserID) != "") ? getFiled('Q12Wa22S2', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa22S3', $schoolUserID) != "") ? getFiled('Q12Wa22S3', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa22S4', $schoolUserID) != "") ? getFiled('Q12Wa22S4', $schoolUserID) : "N/A"; ?> </td>
-        </tr>
-        <tr>
-          <td> Telephones </td>
-          <td><?php echo (getFiled('Q12Wa23S1', $schoolUserID) != "") ? getFiled('Q12Wa23S1', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa23S2', $schoolUserID) != "") ? getFiled('Q12Wa23S2', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa23S3', $schoolUserID) != "") ? getFiled('Q12Wa23S3', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa23S4', $schoolUserID) != "") ? getFiled('Q12Wa23S4', $schoolUserID) : "N/A"; ?> </td>
-        </tr>
-        <tr>
-          <td> Pay telephones </td>
-          <td><?php echo (getFiled('Q12Wa24S1', $schoolUserID) != "") ? getFiled('Q12Wa24S1', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa24S2', $schoolUserID) != "") ? getFiled('Q12Wa24S2', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa24S3', $schoolUserID) != "") ? getFiled('Q12Wa24S3', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa24S4', $schoolUserID) != "") ? getFiled('Q12Wa24S4', $schoolUserID) : "N/A"; ?> </td>
-        </tr>
-        <tr>
-          <td> Mobiles </td>
-          <td><?php echo (getFiled('Q12Wa25S1', $schoolUserID) != "") ? getFiled('Q12Wa25S1', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa25S2', $schoolUserID) != "") ? getFiled('Q12Wa25S2', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa25S3', $schoolUserID) != "") ? getFiled('Q12Wa25S3', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa25S4', $schoolUserID) != "") ? getFiled('Q12Wa25S4', $schoolUserID) : "N/A"; ?> </td>
-        </tr>
-        <tr>
-          <td> Answering systems </td>
-          <td><?php echo (getFiled('Q12Wa26S1', $schoolUserID) != "") ? getFiled('Q12Wa26S1', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa26S2', $schoolUserID) != "") ? getFiled('Q12Wa26S2', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa26S3', $schoolUserID) != "") ? getFiled('Q12Wa26S3', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa26S4', $schoolUserID) != "") ? getFiled('Q12Wa26S4', $schoolUserID) : "N/A"; ?> </td>
-        </tr>
-        <tr>
-          <td> Induction cookers </td>
-          <td><?php echo (getFiled('Q12Wa27S1', $schoolUserID) != "") ? getFiled('Q12Wa27S1', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa27S2', $schoolUserID) != "") ? getFiled('Q12Wa27S2', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa27S3', $schoolUserID) != "") ? getFiled('Q12Wa27S3', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa27S4', $schoolUserID) != "") ? getFiled('Q12Wa27S4', $schoolUserID) : "N/A"; ?> </td>
-        </tr>
-        <tr>
-          <td> Geysers/water heaters </td>
-          <td><?php echo (getFiled('Q12Wa28S1', $schoolUserID) != "") ? getFiled('Q12Wa28S1', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa28S2', $schoolUserID) != "") ? getFiled('Q12Wa28S2', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa28S3', $schoolUserID) != "") ? getFiled('Q12Wa28S3', $schoolUserID) : "N/A"; ?> </td>
-          <td><?php echo (getFiled('Q12Wa28S4', $schoolUserID) != "") ? getFiled('Q12Wa28S4', $schoolUserID) : "N/A"; ?> </td>
-        </tr>
-      </table>
-    </li>
-    <li>
-      <?php if (!empty($eWaste)) { ?>
-      <table class="table">
-        <tr>
-          <th>Image</th>
-          <th>File Name</th>
-        </tr>
-        <?php foreach ($eWaste as $a) { 
-
-           $file_parts = pathinfo($a->file_name);
-        $file_extension = $file_parts['extension']; ?>
-        <tr>
-          <td>
-            <?php if($file_extension=="pdf") { ?>
-            <img src="assets/img/performance/pdficon.png" lass="img-responsive" width="100" height="100">
-          <?php } elseif($file_extension=="docx"){ ?>
-             <img src="assets/img/performance/wordicon.png" lass="img-responsive" width="100" height="100">
-           <?php }  else {?>
-            <img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" />
-          <?php } ?>
-          </td>
-          <td><?php $eWaste =  str_replace(str_replace(' ', '_', $school[0]->name . "_E-Waste_"), " ", $a->file_name); echo wordwrap($eWaste, 70, '<br />', true);?></td>
-        </tr>
-        <?php } ?>
-      </table>
-      <?php } else { ?>
-      <div class="support_files">No documents uploaded by the school.</div>
-      <?php } ?>
-    </li>
-  </ul>
-  <ul class="list">
-    <li>
-      <p class="orange"> <span class="cube">9</span><span>Do you know that your e-waste can be collected by an authorized dealer or dismantler? </span> </p>
-      <p> <?php echo (getFiled('Q13Wa1', $schoolUserID) != "") ? (getFiled('Q13Wa1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
-    </li>
-    <?php if(strcmp(getFiled('Q13Wa1', $schoolUserID),'Y')==0): ?>
-    <li>
-      <p class="orange"> <span class="cube">9(a)</span><span>Who collects your e-waste, when not in working condition? </span></p>
-      <p>
-        <?php
-    if (getFiled('Q13Wa2', $schoolUserID) == 1):
-        echo "Kabadiwalla/ Scrapdealer";
-    elseif (getFiled('Q13Wa2', $schoolUserID) == 2):
-        echo "Taken back by manufacturer/vendor";
-    elseif (getFiled('Q13Wa2', $schoolUserID) == 3):
-        echo " Authorised dealer";
-    elseif (getFiled('Q13Wa2', $schoolUserID) == 4):
-        echo " Authorised dismantler";
-    elseif (getFiled('Q13Wa2O', $schoolUserID) == 4):
-        echo getFiled('Q13Wa2O', $schoolUserID);
-    endif;
-    ?>
-      </p>
-    </li>
-    <?php endif; ?>
-    <li>
-      <?php if (!empty($authorised_dealer)) { ?>
-      <table class="table">
-        <tr>
-          <th>Image</th>
-          <th>File Name</th>
-        </tr>
-        <?php foreach ($authorised_dealer as $a) {
-
-         $file_parts = pathinfo($a->file_name);
-        $file_extension = $file_parts['extension']; ?>
-        <tr>
-          <td>
-            <?php if($file_extension=="pdf") { ?>
-            <img src="assets/img/performance/pdficon.png" lass="img-responsive" width="100" height="100">
-          <?php } elseif($file_extension=="docx"){ ?>
-             <img src="assets/img/performance/wordicon.png" lass="img-responsive" width="100" height="100">
-           <?php }  else {?>
-            <img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" />
-          <?php } ?>
-          </td>
-          <td> <?php $authorised_dealer =  str_replace(str_replace(' ', '_', $school[0]->name . "_E-waste_authorised_dealer_"), " ", $a->file_name); echo wordwrap($authorised_dealer, 70, '<br />', true);?></td>
-        </tr>
-        <?php } ?>
-      </table>
-      <?php } else { ?>
-      <div class="support_files"> No documents uploaded by the school. </div>
-      <?php } ?>
-    </li>
-  </ul>
-</div>
-<div class="task-area">
-  <h3 class="task">Task 5: How does your school dispose of waste?</h3>
-  <ul class="list">
-    <li>
-      <p class="orange"><span>10</span><span>What is the final destination for waste from your school that is disposed of externally? </span> </p>
-      <p>
-        <?php
-    if (getFiled('Q14Wa1', $schoolUserID) == 1):
-        echo "Open dumping";
-    elseif (getFiled('Q14Wa1', $schoolUserID) == 2):
-        echo "Designated dumping site (Dhalao)";
-    elseif (getFiled('Q14Wa1', $schoolUserID) == 3):
-        echo " Landfill Site";
-    elseif (getFiled('Q14Wa1', $schoolUserID) == 4):
-        echo "Don’t know";
-
-    endif;
-    ?>
-      </p>
-    </li>
-    <li>
-      <?php
-    if (!empty($houseKeeping)) {
-        ?>
-      <div>
-        <table class="table">
-          <tr>
-            <th>image</th>
-            <th>File name</th>
-          </tr>
-          <?php foreach ($houseKeeping as $a) { 
-
-             $file_parts = pathinfo($a->file_name);
-        $file_extension = $file_parts['extension']; ?>
-        <tr>
-          <td>
-            <?php if($file_extension=="pdf") { ?>
-            <img src="assets/img/performance/pdficon.png" lass="img-responsive" width="100" height="100">
-          <?php } elseif($file_extension=="docx"){ ?>
-             <img src="assets/img/performance/wordicon.png" lass="img-responsive" width="100" height="100">
-           <?php }  else {?>
-            <img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" />
-          <?php } ?>
-          </td>
-            <td> <?php $houseKeeping =  str_replace(str_replace(' ', '_', $school[0]->name . "_Housekeeping_"), " ", $a->file_name); echo wordwrap($houseKeeping, 70, '<br />', true);?></td>
-          </tr>
-          <?php } ?>
-        </table>
-      </div>
-      <?php } else { ?>
-      <div class="support_files">No documents uploaded by the school. </div>
-      <?php } ?>
-    </li>
-    <li>
-      <p class="orange">
-        <label class="control-label"><span class="cube">11</span><span>Does your school burn waste? </label></span>
-      </p>
-      <p> <?php echo (getFiled('Q15Wa1', $schoolUserID) != "") ? (getFiled('Q15Wa1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
-    </li>
-    <li>
-      <?php
-    if (!empty($burningWaste)) {
-        ?>
-      <div>
-        <table class="table">
-          <tr>
-            <th>image</th>
-            <th>File name</th>
-          </tr>
-          <?php foreach ($burningWaste as $a) { 
-
-             $file_parts = pathinfo($a->file_name);
-        $file_extension = $file_parts['extension']; ?>
-        <tr>
-          <td>
-            <?php if($file_extension=="pdf") { ?>
-            <img src="assets/img/performance/pdficon.png" lass="img-responsive" width="100" height="100">
-          <?php } elseif($file_extension=="docx"){ ?>
-             <img src="assets/img/performance/wordicon.png" lass="img-responsive" width="100" height="100">
-           <?php }  else {?>
-            <img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" />
-          <?php } ?>
-          </td>
-            <td><?php $burningWaste =  str_replace(str_replace(' ', '_', $school[0]->name . "_Buring_Waste_"), " ", $a->file_name); echo wordwrap($burningWaste, 70, '<br />', true);?></td>
-          </tr>
-          <?php } ?>
-        </table>
-      </div>
-      <?php } else { ?>
-      <div class="support_files"> No documents uploaded by the school. </div>
-      <?php } ?>
-    </li>
-    <?php if(strcmp(getFiled('Q15Wa1', $schoolUserID),'Y')==0): ?>
-    <li>
-      <p class="orange"><span>11(a)</span><span>Where does your school burn
-        waste? </span></p>
-      <p>
-        <?php
-    if (getFiled('Q15Wa2', $schoolUserID) == 1):
-        echo "Inside the school";
-    elseif (getFiled('Q15Wa2', $schoolUserID) == 2):
-        echo "Outside the school";
-
-    endif;
-    ?>
-      </p>
-    </li>
-    <li>
-      <p class="orange"><span>11(b)</span><span>What kind of waste is burnt/incinerated? </span></p>
-      <p>
-        <?php
-    if (getFiled('Q15Wa2S1', $schoolUserID) == 1):
-        echo " Horticultural";
-        echo "<br/>";
-    endif;
-    if (getFiled('Q15Wa2S2', $schoolUserID) == 1):
-        echo "Plastic";
-        echo "<br/>";
-    endif;
-    if (getFiled('Q15Wa2S3', $schoolUserID) == 1):
-        echo "Tyres";
-        echo "<br/>";
-    endif;
-    if (getFiled('Q15Wa2S4', $schoolUserID) == 1):
-        echo " Paper";
-        echo "<br/>";
-    endif;
-    ?>
-      </p>
-    </li>
-    <?php endif; ?>
-    <!--<li>
-      <p class="orange"><span>12</span>Do you know that your E-waste can be collected by an authorised dealer or dismantler? </p>
-      <p> <?php //echo (getFiled('Q16Wa1', $schoolUserID) != "") ? (getFiled('Q16Wa1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
-    </li>-->
-  </ul>
-</div>
-<div class="task-area">
-  <h3 class="task">Task 6: School's initiatives.</h3>
-  <p>It is important to appreciate the initiatives taken by the management on issues related to waste. The
-    management's approach to these issues can be assessed in the following way:
-    Seek an appointment with the Chairperson, Manager and Principal of your school and ask them the following
-    questions:</p>
-  <ul class="list">
-    <li>
-      <p class="orange"><span>12</span><span>Does the school have a policy on waste? </span></p>
-      <p> <?php echo (getFiled('Q17Wa1', $schoolUserID) != "") ? (getFiled('Q17Wa1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
-    </li>
-     <li> <br/>
-      <p class="orange" style="font-size: 16px;">Please upload supporting documents:</p>
-      <?php
-    if (!empty($chikoo)) {
-        ?>
-      <div>
-        <table class="table">
-          <tr>
-            <th>image</th>
-            <th>File name</th>
-          </tr>
-          <?php foreach ($chikoo as $a) { 
-
-             $file_parts = pathinfo($a->file_name);
-        $file_extension = $file_parts['extension']; ?>
-        <tr>
-          <td>
-            <?php if($file_extension=="pdf") { ?>
-            <img src="assets/img/performance/pdficon.png" lass="img-responsive" width="100" height="100">
-          <?php } elseif($file_extension=="docx"){ ?>
-             <img src="assets/img/performance/wordicon.png" lass="img-responsive" width="100" height="100">
-           <?php }  else {?>
-            <img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" />
-          <?php } ?>
-          </td>
-            <td><?php $chikoo =  str_replace(str_replace(' ', '_', $school[0]->name . "_Waste_Policy_"), " ", $a->file_name); echo wordwrap($chikoo, 70, '<br />', true);?></td>
-          </tr>
-          <?php } ?>
-        </table>
-      </div>
-      <?php } else { ?>
-      <div class="support_files"> No documents uploaded by the school. </div>
-      <?php } ?>
-    </li>
-    <li>
-      <p class="orange"><span>13</span><span>Are there awareness drives with regard to Reduce,Recycle and Reuse? <a class="kplink" href="http://www.greenschoolsprogramme.org/knowledge-bank/waste/#partnerInOperation" target="_blank"></a></span></p>
-      <p> <?php echo (getFiled('Q18Wa1', $schoolUserID) != "") ? (getFiled('Q18Wa1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
-    </li>
-   
-    <?php if(getFiled('Q18Wa1', $schoolUserID) == "Y"){ ?>
-    <li>
-      <p class="orange" style="font-size: 16px;">Please upload supporting documents:</p>
-     
-      <br/>
-      <?php
-    if (!empty($Initiatives)) {
-        ?>
-      <div>
-        <table class="table">
-          <tr>
-            <th>image</th>
-            <th>File name</th>
-          </tr>
-          <?php foreach ($Initiatives as $a) { 
-
-             $file_parts = pathinfo($a->file_name);
-        $file_extension = $file_parts['extension']; ?>
-        <tr>
-          <td>
-            <?php if($file_extension=="pdf") { ?>
-            <img src="assets/img/performance/pdficon.png" lass="img-responsive" width="100" height="100">
-          <?php } elseif($file_extension=="docx"){ ?>
-             <img src="assets/img/performance/wordicon.png" lass="img-responsive" width="100" height="100">
-           <?php }  else {?>
-            <img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" />
-          <?php } ?>
-          </td>
-            <td><?php $Initiatives =  str_replace(str_replace(' ', '_', $school[0]->name . "_School_Initiatives_"), " ", $a->file_name); echo wordwrap($Initiatives, 70, '<br />', true);?></td>
-          </tr>
-          <?php } ?>
-        </table>
-      </div>
-      <?php } else { ?>
-      <div class="support_files"> No documents uploaded by the school. </div>
-      <?php } ?>
-      <br/>
-      <p class="orange"><span>13(a)</span><span>What form do these awareness drives
-        take? </span></p>
-      <p>
-        <?php
-     if (getFiled('Q18Wa2S1', $schoolUserID) == 1){
-        echo "As part of the curriculum <br/>";}
-     if (getFiled('Q18Wa2S2', $schoolUserID) == 1){
-        echo " As part of extracurricular activities such as guest lectures <br/>";}
-      if (getFiled('Q18Wa2S3', $schoolUserID) == 1){
-        echo " By the showcasing of posters and stickers  ";}
-  ?>
-      </p>
-    </li>
-    <?php } ?>
-    <li>
-      <p class="orange"><span>14</span><span>Is the study of the environment integrated into the curriculum? </span></p>
-      <p> <?php echo (getFiled('Q19Wa1', $schoolUserID) != "") ? (getFiled('Q19Wa1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
-    </li>
-    <li>
-      <?php if (!empty($teamDoingWaste)) { ?>
-      <table  class="table">
-        <tr>
-          <th>Image</th>
-          <th>File Name</th>
-        </tr>
-        <?php foreach ($teamDoingWaste as $a) { 
-
-        $file_parts = pathinfo($a->file_name);
-        $file_extension = $file_parts['extension']; ?>
-        <tr>
-          <td>
-            <?php if($file_extension=="pdf") { ?>
-            <img src="assets/img/performance/pdficon.png" lass="img-responsive" width="100" height="100">
-          <?php } elseif($file_extension=="docx"){ ?>
-             <img src="assets/img/performance/wordicon.png" lass="img-responsive" width="100" height="100">
-           <?php }  else {?>
-            <img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" />
-          <?php } ?>
-          </td>
-          <td><div class="break-text"><?php $teamDoingWaste =  str_replace(str_replace(' ', '_', $school[0]->name . "_Audit_Team_Doing_Survey_"), " ", $a->file_name); echo wordwrap($teamDoingWaste, 70, '<br />', true);?></div></td>
-        </tr>
-        <?php } ?>
-      </table>
-      <?php } else { ?>
-      <div class="support_files"> No documents uploaded by the school. </div>
-      <?php } ?>
-    </li>
-  </ul>
+  
   <table class="table">
       <tr>
         <th></th>
