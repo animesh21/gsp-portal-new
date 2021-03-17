@@ -627,7 +627,6 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
     <ul class="list">
       <li>
         <p class="orange"><span class="cube">5</span><span>What strategies do you propose to improve SWM in the school? (Max 750 characters)</span></p> </li>
-        <p>Explain and elaborate on the specific steps to be taken to reduce and manage each type of waste stream mentioned in Q4.( How will the changes be introduced and implemented, as and when schools open in 2021? Also include the possibility of continuation of COVID-19 related materials, such as masks and gloves. How long will the process take – from issue identification to implementation? What will be the challenges and their solutions? Include statistics like cost effectiveness, infrastructural requirement if any, ease of replication if desired. Please give numerical data wherever possible.)</p>
         <li>
         <p style="padding-top:1px;"><?php echo (getFiled('Q5AP1', $schoolUserID) != "") ? getFiled('Q5AP1', $schoolUserID) : "N/A"; ?></p>
       </li>
