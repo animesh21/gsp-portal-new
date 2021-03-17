@@ -436,6 +436,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
     <p>4. Student involvement is essential as school teams who make it to the final round will need to present the plan online to a jury.</p>
     <p>5. Please document all the data and responses at your end in case the GSP team requests it for further clarity.</p>
     <div class="task-area">
+    
     <ul class="list">
       <li>
         <p class="orange"><span class="cube">1</span><span>Title of the plan: Make sure your title is short, catchy & conveys the idea behind your Action Plan. (Max 150 characters)</span></p> </li>
@@ -443,13 +444,15 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
         <p style="padding-top:1px;"><?php echo (getFiled('Q1AP2', $schoolUserID) != "") ? getFiled('Q1AP2', $schoolUserID) : "N/A"; ?></p>
       </li>
     </ul>
+    
     <ul class="list">
       <li>
-        <p class="orange"><span class="cube">2</span><span>Area Profile: Where is the nearest dumping site or landfill? What are the prominent waste management issues in the vicinity of the school? (Max 250 characters)</span></p> </li>
+        <p class="orange"><span class="cube">3</span><span>What are the existing major solid waste management (SWM) issues in school that need an action plan? (Max 250 characters)</span></p> </li>
         <li>
-        <p style="padding-top:1px;"> <?php echo (getFiled('Q2AP1', $schoolUserID) != "") ? getFiled('Q2AP1', $schoolUserID) : "N/A"; ?></p>
+        <p style="padding-top:1px;"><?php echo (getFiled('Q3AP1', $schoolUserID) != "") ? getFiled('Q3AP1', $schoolUserID) : "N/A"; ?></p>
       </li>
     </ul>
+    
     <ul class="list">
       <li>
         <p class="orange"><span class="cube">3</span><span>What are the existing major solid waste management (SWM) issues in school that need an action plan? (Max 250 characters)</span></p> </li>
