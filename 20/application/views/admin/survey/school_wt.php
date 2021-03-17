@@ -685,7 +685,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
     </ul>
     </div>
   </div>
-  <div style="padding-top:10px;"></div>
+  <p style="padding-top:10px;"></p>
   <div class="task-area">
   <h3 class="task">THE TEAM</h3>
   <p>Please provide the details of the SWM Action Plan team. A teacher with interest in waste and five to 10 students from Grades 6 to 12 will be ideal for your team. With schools closed, the Administrative staff is important as they will provide the permissions required for the housekeeping and cleaning staff to help you with the plan.</p>
