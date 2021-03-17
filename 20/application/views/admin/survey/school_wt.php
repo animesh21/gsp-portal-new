@@ -418,197 +418,22 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
     
   </div>
   <div class="task-area">
-    <h3 class="task">Task 2: What is the waste segregation system in your school?</h3>
-    <p>Segregation means sorting. Let’s understand the waste segregation system because the amount of waste
-      recycled or reused will depend on the method of collection. To understand the waste segregation system
-      of your school, fill the table below.<br>
-      <br>
-      <b>To collect data:</b> Students will have to survey the waste collection area and talk to the
-      house-keeping staff to know whether waste is segregated in the school and in what quantity. </p>
+    
     <ul class="list">
       <li>
         <p class="orange"><span class="cube">1</span><span>Per capita waste generation in school</span></p> </li>
         <li>
         <p><?php echo (getFiled('Q1B1', $schoolUserID) != "") ? getFiled('Q1B1', $schoolUserID) : "N/A"; ?></p>
       </li>
-        <div style="margin-top:40px;"></div>
-        <p class="orange"><span class="cube">2</span><span>How many categories does your school segregate waste into? </span></p>
-        <p class="formanswertext">
-          <?php
-        if (getFiled('Q4Wa2', $schoolUserID) == 1):
-            echo "Two";
-        elseif (getFiled('Q4Wa2', $schoolUserID) == 2):
-            echo "Three";
-        elseif (getFiled('Q4Wa2', $schoolUserID) == 3):
-            echo "More than three";
-
-        endif;
-        ?>
-        </p>
-      </li>
-      <?php if(!empty(getFiled('Q4Wa2', $schoolUserID))): ?>
-      <li>
-        <p class="orange"><span class="cube">2(a)</span> How many categories does your school segregate waste into?</p>
-        <table class="table">
-          <tr>
-            <th>Area</th>
-            <th>No. of waste collection points with no bin</th>
-            <th>with one bin (mixed waste)</th>
-            <th>with one bin (for only dry waste)</th>
-            <th>with two bins (wet &amp; dry)</th>
-            <th>with three bins or more</th>
-            <th>Total no. of waste collection points</th>
-          </tr>
-          <tr>
-            <td>Classrooms</td>
-            <td><?php echo (getFiled('Q5Wa1S1', $schoolUserID) != "") ? getFiled('Q5Wa1S1', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa1S2', $schoolUserID) != "") ? getFiled('Q5Wa1S2', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa1S3', $schoolUserID) != "") ? getFiled('Q5Wa1S3', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa1S6', $schoolUserID) != "") ? getFiled('Q5Wa1S6', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa1S4', $schoolUserID) != "") ? getFiled('Q5Wa1S4', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa1S5', $schoolUserID) != "") ? getFiled('Q5Wa1S5', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-          <tr>
-            <td> Playgrounds </td>
-            <td><?php echo (getFiled('Q5Wa2S1', $schoolUserID) != "") ? getFiled('Q5Wa2S1', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa2S2', $schoolUserID) != "") ? getFiled('Q5Wa2S2', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa2S3', $schoolUserID) != "") ? getFiled('Q5Wa2S3', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa2S6', $schoolUserID) != "") ? getFiled('Q5Wa2S6', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa2S4', $schoolUserID) != "") ? getFiled('Q5Wa2S4', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa2S5', $schoolUserID) != "") ? getFiled('Q5Wa2S5', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-          <tr>
-            <td> Common area </td>
-            <td><?php echo (getFiled('Q5Wa3S1', $schoolUserID) != "") ? getFiled('Q5Wa3S1', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa3S2', $schoolUserID) != "") ? getFiled('Q5Wa3S2', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa3S3', $schoolUserID) != "") ? getFiled('Q5Wa3S3', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa3S6', $schoolUserID) != "") ? getFiled('Q5Wa3S6', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa3S4', $schoolUserID) != "") ? getFiled('Q5Wa3S4', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa3S5', $schoolUserID) != "") ? getFiled('Q5Wa3S5', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-          <tr>
-            <td> Staffroom </td>
-            <td><?php echo (getFiled('Q5Wa4S1', $schoolUserID) != "") ? getFiled('Q5Wa4S1', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa4S2', $schoolUserID) != "") ? getFiled('Q5Wa4S2', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa4S3', $schoolUserID) != "") ? getFiled('Q5Wa4S3', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa4S6', $schoolUserID) != "") ? getFiled('Q5Wa4S6', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa4S4', $schoolUserID) != "") ? getFiled('Q5Wa4S4', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa4S5', $schoolUserID) != "") ? getFiled('Q5Wa4S5', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-          <tr>
-            <td> Laboratory </td>
-            <td><?php echo (getFiled('Q5Wa5S1', $schoolUserID) != "") ? getFiled('Q5Wa5S1', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa5S2', $schoolUserID) != "") ? getFiled('Q5Wa5S2', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa5S3', $schoolUserID) != "") ? getFiled('Q5Wa5S3', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa5S6', $schoolUserID) != "") ? getFiled('Q5Wa5S6', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa5S4', $schoolUserID) != "") ? getFiled('Q5Wa5S4', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa5S5', $schoolUserID) != "") ? getFiled('Q5Wa5S5', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-          <tr>
-            <td> Canteen </td>
-            <td><?php echo (getFiled('Q5Wa6S1', $schoolUserID) != "") ? getFiled('Q5Wa6S1', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa6S2', $schoolUserID) != "") ? getFiled('Q5Wa6S2', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa6S3', $schoolUserID) != "") ? getFiled('Q5Wa6S3', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa6S6', $schoolUserID) != "") ? getFiled('Q5Wa6S6', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa6S4', $schoolUserID) != "") ? getFiled('Q5Wa6S4', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa6S5', $schoolUserID) != "") ? getFiled('Q5Wa6S5', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-          <tr>
-            <td> Clinic/sick room </td>
-            <td><?php echo (getFiled('Q5Wa7S1', $schoolUserID) != "") ? getFiled('Q5Wa7S1', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa7S2', $schoolUserID) != "") ? getFiled('Q5Wa7S2', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa7S3', $schoolUserID) != "") ? getFiled('Q5Wa7S3', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa7S6', $schoolUserID) != "") ? getFiled('Q5Wa7S6', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa7S4', $schoolUserID) != "") ? getFiled('Q5Wa7S4', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa7S5', $schoolUserID) != "") ? getFiled('Q5Wa7S5', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-          <tr>
-            <td> Library </td>
-            <td><?php echo (getFiled('Q5Wa8S1', $schoolUserID) != "") ? getFiled('Q5Wa8S1', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa8S2', $schoolUserID) != "") ? getFiled('Q5Wa8S2', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa8S3', $schoolUserID) != "") ? getFiled('Q5Wa8S3', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa8S6', $schoolUserID) != "") ? getFiled('Q5Wa8S6', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa8S4', $schoolUserID) != "") ? getFiled('Q5Wa8S4', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa8S5', $schoolUserID) != "") ? getFiled('Q5Wa8S5', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-          <tr>
-            <td> Toilets </td>
-            <td><?php echo (getFiled('Q5Wa9S1', $schoolUserID) != "") ? getFiled('Q5Wa9S1', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa9S2', $schoolUserID) != "") ? getFiled('Q5Wa9S2', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa9S3', $schoolUserID) != "") ? getFiled('Q5Wa9S3', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa9S6', $schoolUserID) != "") ? getFiled('Q5Wa9S6', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa9S4', $schoolUserID) != "") ? getFiled('Q5Wa9S4', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa9S5', $schoolUserID) != "") ? getFiled('Q5Wa9S5', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-          <tr>
-            <td> Others </td>
-            <td><?php echo (getFiled('Q5Wa10S1', $schoolUserID) != "") ? getFiled('Q5Wa10S1', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa10S2', $schoolUserID) != "") ? getFiled('Q5Wa10S2', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa10S3', $schoolUserID) != "") ? getFiled('Q5Wa10S3', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa10S6', $schoolUserID) != "") ? getFiled('Q5Wa10S6', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa10S4', $schoolUserID) != "") ? getFiled('Q5Wa10S4', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa10S5', $schoolUserID) != "") ? getFiled('Q5Wa10S5', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-          <tr>
-            <td> Total </td>
-            <td><?php echo (getFiled('Q5Wa11S1', $schoolUserID) != "") ? getFiled('Q5Wa11S1', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa11S2', $schoolUserID) != "") ? getFiled('Q5Wa11S2', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa11S3', $schoolUserID) != "") ? getFiled('Q5Wa11S3', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa11S6', $schoolUserID) != "") ? getFiled('Q5Wa11S6', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa11S4', $schoolUserID) != "") ? getFiled('Q5Wa11S4', $schoolUserID) : "N/A"; ?> </td>
-            <td><?php echo (getFiled('Q5Wa11S5', $schoolUserID) != "") ? getFiled('Q5Wa11S5', $schoolUserID) : "N/A"; ?> </td>
-          </tr>
-        </table>
-      </li>
-      <?php endif; ?>
-    </ul>
-    <?php
-       
-        if (!empty($segregationClassroom)) {
-            ?>
-    <div>
-      <table  class="table">
-        <tr>
-          <th>Image</th>
-          <th>File Name</th>
-        </tr>
-        <?php foreach ($segregationClassroom as $a) { 
-
-           $file_parts = pathinfo($a->file_name);
-        $file_extension = $file_parts['extension']; ?>
-        <tr>
-          <td>
-            <?php if($file_extension=="pdf") { ?>
-            <img src="assets/img/performance/pdficon.png" lass="img-responsive" width="100" height="100">
-          <?php } elseif($file_extension=="docx"){ ?>
-             <img src="assets/img/performance/wordicon.png" lass="img-responsive" width="100" height="100">
-           <?php }  else {?>
-            <img src="uploads/files/<?php echo $a->file_name ?>" class="img-responsive" width="100" height="100" />
-          <?php } ?>
-          </td>
-          <td><?php $segregationClassroom =  str_replace(str_replace(' ', '_', $school[0]->name . "_Segregation_Source_Classrooms_"), " ", $a->file_name); echo wordwrap($segregationClassroom, 70, '<br />', true);?></td>
-        </tr>
-        <?php } ?>
-      </table>
-    </div>
-    <?php } else { ?>
-    <div class="support_files">No documents uploaded by the school. </div>
-    <?php } ?>
-  </div>
+        
   <div class="task-area">
-    <h3 class="task">Task 3: How much waste does your school generate?</h3>
-    <p>There is nothing known as waste is just a misplaced resource. Therefore ideally, a school should
-      not generate any waste. But there is waste, as most human activities result in some waste. Wastes are of
-      many types such as bio-degradable and non-biodegradable, hazardous and non-hazardous, etc. Each of these
-      categories has to be handled carefully. Please wear gloves, masks while handling waste. E-waste should
-      be handled by adults.<br>
-      <br>
-      <b>To collect data:</b> Arrange a meeting between the student audit team and the key people in your
-      house-keeping staff. Let the students describe the project with them. Segregate all waste, put them in
-      small packs and weigh using a spring balance. If the practice of segregation of waste has already been
-      adopted, then it will be easy to find out the amount of waste paper and other common trash. For Silt and
-      Soil – Put a small mesh wire under the dustbin. And find the amount collected beneath. Or pour the waste
-      on a mesh, so that the dust and silt passes through and then weigh the silt.</p>
+    <h3 class="task">ACTION PLAN</h3>
+    <p><b>Please read the following carefully before answering the questions:</b></p>
+    <p>1.GSP Waste Transformers aims at reinforcing the concept of circular economy in schools where the focus is on use, reuse and restoration of materials, rather than linear use and disposal.</p>
+    <p>2.The plan by the students will be assessed on the following: feasibility, cost effectiveness, localised to school needs, data clarity, specificity of strategies. Provide data to strengthen your Action Plan.</p>
+    <p>3.Descriptive responses will have a character limit, as mentioned for each question below.</p>
+    <p>4.Student involvement is essential as school teams who make it to the final round will need to present the plan online to a jury.</p>
+    <p>5.Please document all the data and responses at your end in case the GSP team requests it for further clarity.</p>
     <ul class="list">
       <li>
         <p class="orange">
