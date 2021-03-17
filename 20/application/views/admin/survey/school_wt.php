@@ -401,12 +401,20 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
 <h2 class="heading section waste page_break"><img src="assets/img/images/waste.png" width="94" height="94">Waste</h2>
 <div class="wrapper">
   <div class="task-area">
-    <h3 class="task">Task 1: Choose your Waste Audit Team</h3>
-    <p>The housekeeping and cleaning staff of your school shall be the core members of your team, as you will have
-      to enlist their help at every task. A teacher with interest in waste and five to 10 students will be ideal
-      for your team. Administrative staff is important as they will provide the permissions required for the
-      housekeeping staff to work with you</p>
-    <p class="orange" style="margin-top:12px;"><span>Teachers:</span></p>
+    <h3 class="task">BASELINE</h3>
+    <p>The first step to efficient solid waste management (SWM) is to become aware of what we do - benchmarking how much waste we generate and how much is processed. It is only then that we can find more sustainable ways to manage waste.</p>
+    <p>The Baseline section of GSP Waste Transformers motivates schools to find out the types of waste generated in previous years' audits and measure the actual volume. The Baseline will help schools chalk out their solid waste management plan better. The school's waste management programme has the potential to transform the school environment, and therefore, the objective is to create a plan for zero-waste zones in every school that can be implemented once schools reopen.</p>
+    <p class="orange" style="margin-top:12px;"><span>For Baseline:</span></p>
+    <p>1.Choose your SWM Action Plan team. A teacher with interest in waste and five to 10 students from Grades 6 to 12 will be ideal for your team.</p>                  
+    <p>2.With schools closed, the Administrative staff is important as they will provide the permissions required for the housekeeping and cleaning staff to help you with the plan.</p>                 
+    <p>3.The details of the Action Plan team members will need to be provided in the last section 'The Team'.</p>                   
+    <p>4.As a team, study the latest baseline data in comparison to previous years, where applicable.</p>                   
+    <p>5.Based on the study, design an Action Plan for SWM in school as per the questions asked in the next section.</p>
+    <p>6.The section on Action Plan will open on 23 Dec 2020, and you will only be able to access it once you answer all the questions in the previous sections.</p>
+    <p>7.As always, the Action Plan will be submitted online by the school.</p>
+
+
+
     <table class="table">
       <tr>
         <th></th>
