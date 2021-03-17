@@ -81,7 +81,7 @@ class Responsreport extends CI_Controller {
            $html1 = $this->load->view('admin/survey/school_wt', $data, true);
              
             } else {
-               $html1 = $this->load->view('admin/survey/primary-school-pdf', $data, true);
+               $html1 = $this->load->view('admin/survey/school_wt', $data, true);
             }
             
               $this->load->library('dompdf_lib');
