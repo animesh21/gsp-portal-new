@@ -427,40 +427,11 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
       house-keeping staff to know whether waste is segregated in the school and in what quantity. </p>
     <ul class="list">
       <li>
-        <p class="orange"><span class="cube">1</span><span> Does your school segregate solid waste?</span></p> </li>
+        <p class="orange"><span class="cube">1</span><span>Per capita waste generation in school</span></p> </li>
         <li>
-        <p class="formanswertext"> <?php echo (getFiled('Q4Wa1', $schoolUserID) != "") ? (getFiled('Q4Wa1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
+        <p><?php echo (getFiled('Q1B1', $schoolUserID) != "") ? getFiled('Q1B1', $schoolUserID) : "N/A"; ?></p>
       </li>
-      <?php if(strcmp(getFiled('Q4Wa1', $schoolUserID),'Y')==0): ?>
-      <li>
-        <p class="orange"><span class="cube">1(a)</span><span> Who segregates the waste at source?</span></p>
-        <p class="formanswertext">
-        <?php
-        if (getFiled('Q4Wa2S1', $schoolUserID) == 1):
-            echo "Students and teachers, ";
-            echo "<br/>";
-        endif;
-        if (getFiled('Q4Wa2S2', $schoolUserID) == 1):
-            echo "Housekeeping (Sweeper), ";
-            echo "<br/>";
-        endif;
-        if (getFiled('Q4Wa2S3', $schoolUserID) == 1):
-            echo "Gardener, ";
-            echo "<br/>";
-        endif;
-        if (getFiled('Q4Wa2S4', $schoolUserID) == 1):
-            echo "Ragpickers, ";
-            echo "<br/>";
-        endif;
-        if (getFiled('Q4Wa2S5', $schoolUserID) !=''):
-            echo "Other and Value: ".getFiled('Q4Wa2S5', $schoolUserID);
-            echo "<br/>";
-        endif;
-        ?>
-      </p>
-      </li>
-      <?php endif; ?>
-      <li>
+        <div style="margin-top:40px;"></div>
         <p class="orange"><span class="cube">2</span><span>How many categories does your school segregate waste into? </span></p>
         <p class="formanswertext">
           <?php
