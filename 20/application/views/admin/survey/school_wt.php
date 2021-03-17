@@ -634,6 +634,26 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
 
     <ul class="list">
       <li>
+        <p class="orange"><span class="cube">6</span><span> Is your school a single-use plastic-free zone?</span></p> </li>
+        <li>
+        <p class="formanswertext"> <?php echo (getFiled('Q6AP1', $schoolUserID) != "") ? (getFiled('Q6AP1', $schoolUserID) == "Y") ? "Yes" : "No" : "N/A"; ?></p>
+      </li>
+      <?php if(strcmp(getFiled('Q6AP1', $schoolUserID),'Y')==0): ?>
+      <li>
+        <p class="orange"><span class="cube">6(a)</span><span> Please mention 2 ways in which plastic ban is ensured. (Max 150 characters)</span></p>
+        <p style="padding-top:1px;"><?php echo (getFiled('Q6AP11', $schoolUserID) != "") ? getFiled('Q6AP11', $schoolUserID) : "N/A"; ?></p>
+      </li>
+      <?php endif; ?>
+      <?php if(strcmp(getFiled('Q6AP1', $schoolUserID),'N')==0): ?>
+      <li>
+        <p class="orange"><span class="cube">6(a)</span><span>Please mention 2 specific ways to phase out single-use plastics in school. (Max 150 characters)</span></p>
+        <p style="padding-top:1px;"><?php echo (getFiled('Q6AP12', $schoolUserID) != "") ? getFiled('Q6AP12', $schoolUserID) : "N/A"; ?></p>
+      </li>
+      <?php endif; ?>
+    
+    </ul>
+    <ul class="list">
+      <li>
         <p class="orange"><span class="cube">7</span><span>How will you ensure student and community involvement in the action plan? Please include curriculum interventions, if any. (Max 250 characters)</span></p> </li>
         <li>
         <p style="padding-top:1px;"><?php echo (getFiled('Q7AP1', $schoolUserID) != "") ? getFiled('Q7AP1', $schoolUserID) : "N/A"; ?></p>
