@@ -440,32 +440,61 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
       <li>
         <p class="orange"><span class="cube">1</span><span>Title of the plan: Make sure your title is short, catchy & conveys the idea behind your Action Plan. (Max 150 characters)</span></p> </li>
         <li>
-        <p style="padding-top:5px;"><?php echo (getFiled('Q1AP2', $schoolUserID) != "") ? getFiled('Q1AP2', $schoolUserID) : "N/A"; ?></p>
+        <p style="padding-top:3px;"><?php echo (getFiled('Q1AP2', $schoolUserID) != "") ? getFiled('Q1AP2', $schoolUserID) : "N/A"; ?></p>
       </li>
     </ul>
     <ul class="list">
       <li>
         <p class="orange"><span class="cube">2</span><span>Area Profile: Where is the nearest dumping site or landfill? What are the prominent waste management issues in the vicinity of the school? (Max 250 characters)</span></p> </li>
         <li>
-        <p style="padding-top:5px;"> <?php echo (getFiled('Q2AP1', $schoolUserID) != "") ? getFiled('Q2AP1', $schoolUserID) : "N/A"; ?></p>
+        <p style="padding-top:3px;"> <?php echo (getFiled('Q2AP1', $schoolUserID) != "") ? getFiled('Q2AP1', $schoolUserID) : "N/A"; ?></p>
       </li>
     </ul>
     <ul class="list">
       <li>
         <p class="orange"><span class="cube">3</span><span>What are the existing major solid waste management (SWM) issues in school that need an action plan? (Max 250 characters)</span></p> </li>
         <li>
-        <p style="padding-top:5px;"><?php echo (getFiled('Q3AP1', $schoolUserID) != "") ? getFiled('Q3AP1', $schoolUserID) : "N/A"; ?></p>
+        <p style="padding-top:3px;"><?php echo (getFiled('Q3AP1', $schoolUserID) != "") ? getFiled('Q3AP1', $schoolUserID) : "N/A"; ?></p>
       </li>
+    </ul>
+
+    <ul>
+    <li>
+      <p class="orange"><span>4</span><span>In the past years, what was the frequency of waste collection from the school?</span></p>
+      <p class="orange"><span>4(a)</span><span>Wet / biodegradable / organic waste</span></p>
+      <p class="formanswertext">
+        <?php
+                        if (getFiled('Q4AP1', $schoolUserID) == 1) {
+                            echo "Not Applicable";
+                        }
+                        if (getFiled('Q4AP1', $schoolUserID) == 2) {
+                            echo "Every day";
+                        }
+                        if (getFiled('Q4AP1', $schoolUserID) == 3) {
+                            echo "Twice a week";
+                        }
+                        if (getFiled('Q4AP1', $schoolUserID) == 4) {
+                          echo "Weekly";
+                        }
+                        if (getFiled('Q4AP1', $schoolUserID) == 5) {
+                          echo "Fortnightly";
+                        }
+                        if (getFiled('Q4AP1', $schoolUserID) == 6) {
+                          echo "Monthly";
+                        }
+                        ?>
+      </p>
+    </li>
     </ul>
 
 
 
-    
+
     <ul class="list">
       <li>
         <p class="orange"><span class="cube">2</span><span>Per capita waste generation in school</span></p> </li>
         <li>
-        <p style="padding-top:5px;"><?php echo (getFiled('Q2AP1', $schoolUserID) != "") ? getFiled('Q2AP1', $schoolUserID) : "N/A"; ?></p>
+        <p style="padding-top:3px;"><?php echo (getFiled('Q2AP1', $schoolUserID) != "") ? getFiled('Q2AP1', $schoolUserID) : "N/A"; ?></p>
       </li>
     </ul>
     </div>
