@@ -566,7 +566,6 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
     <p>3. Descriptive responses will have a character limit, as mentioned for each question below.</p>
     <p>4. Student involvement is essential as school teams who make it to the final round will need to present the plan online to a jury.</p>
     <p>5. Please document all the data and responses at your end in case the GSP team requests it for further clarity.</p>
-    <div class="task-area">
     
     <ul class="list">
       <li>
@@ -818,7 +817,6 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
       </li>
     </ul>
     </div>
-  </div>
   </div>
 
   <div style="text-align: center; padding: 0;">&nbsp;&nbsp;&nbsp;&nbsp;</div>
