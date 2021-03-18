@@ -556,10 +556,10 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
       </li>
     </ul>
   <div style="text-align: center; padding: 0;">&nbsp;&nbsp;&nbsp;&nbsp;</div>
-  <h2 class="heading section waste page_break"><img src="assets/img/images/waste.png" width="94" height="94">ACTION PLAN</h2>
+  <h2 class="heading section waste page_break"><img src="assets/img/images/waste.png" width="94" height="94">WASTE</h2>
   <div class="wrapper">
   <div class="task-area">
-    <h3 class="task"></h3>
+    <h3 class="task">ACTION PLAN</h3>
     <p><b>Please read the following carefully before answering the questions:</b></p>
     <p>1. GSP Waste Transformers aims at reinforcing the concept of circular economy in schools where the focus is on use, reuse and restoration of materials, rather than linear use and disposal.</p>
     <p>2. The plan by the students will be assessed on the following: feasibility, cost effectiveness, localised to school needs, data clarity, specificity of strategies. Provide data to strengthen your Action Plan.</p>
@@ -822,10 +822,10 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
   </div>
 
   <div style="text-align: center; padding: 0;">&nbsp;&nbsp;&nbsp;&nbsp;</div>
-  <h2 class="heading section waste page_break"><img src="assets/img/images/waste.png" width="94" height="94">THE TEAM</h2>
+  <h2 class="heading section waste page_break"><img src="assets/img/images/waste.png" width="94" height="94">WASTE</h2>
   <div class="wrapper">
   <div class="task-area">
-  <h3 class="task"></h3>
+  <h3 class="task">THE TEAM</h3>
   <p>Please provide the details of the SWM Action Plan team. A teacher with interest in waste and five to 10 students from Grades 6 to 12 will be ideal for your team. With schools closed, the Administrative staff is important as they will provide the permissions required for the housekeeping and cleaning staff to help you with the plan.</p>
   <p>Please enter the details below carefully as the same will be printed on the digital certificates.</p>
   
