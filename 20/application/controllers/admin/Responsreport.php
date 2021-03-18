@@ -14,6 +14,12 @@ class Responsreport extends CI_Controller {
         $this->load->helper(array('download', 'common_helper', 'form'));
         $this->load->model('admin/Audit_started_model');
 	    $this->load->library('pagination');
+        $this->load->model(array('School_model', 'admin/Dashboard_model'));
+        $this->load->model('admin/Performance_model');
+        $this->load->library('form_validation');
+        $this->load->model('Answer_model');
+        $this->load->model('School_model');        
+        $this->load->model('User_model'); 
     }
 
     public function index() {
@@ -75,6 +81,10 @@ class Responsreport extends CI_Controller {
         $data['flowChartHandDrawn'] = uploadHelper($this->session->userdata('USER_ID'), 'Flow_Chart_Hand_Drwan');
         $data['supportDocWater'] = $this->file->SupportingWater($this->session->userdata('USER_ID'));
         //echo '<pre>'; print_r($data);die;
+        $schoolId=getSchoolId($this->session->userdata('USER_ID'));
+        $phase2 = $this->db->select('school_id')->from('tbl_total_phase2')->where('school_id',$schoolId)->get()->result();
+        
+        
         $rank=getFiled('Q1G2',$data['schoolUserID']);
         
         if ($rank >= 6 ) { 

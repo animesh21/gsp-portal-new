@@ -417,6 +417,135 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
 
     
   </div>
+  <div class="col-md-12">
+        <?php 
+          $schoolId=getSchoolId($this->session->userdata('USER_ID')); 
+      $wasteSection=downloadWasteSectionQuestions($schoolId); 
+      
+     ?>
+        <table class="table table-bordered display" style="margin-top: 40px;">
+          <tr>
+            <td>Audit Year</td>
+            <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
+            <td><?php echo !empty($wasteSection[$i]->audit_year)?$wasteSection[$i]->audit_year:"NA"; ?></td>
+            <?php } ?>
+          </tr>
+          <tr>
+            <td>1. School segregates solid waste</td>
+            <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
+            <td><?php echo !empty($wasteSection[$i]->school_segregated_solid_waste)?$wasteSection[$i]->school_segregated_solid_waste:"NA"; ?></td>
+            <?php } ?>
+          </tr>
+          <tr>
+            <td>2. Composting facility</td>
+            <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
+            <td><?php echo !empty($wasteSection[$i]->composting_facility)?$wasteSection[$i]->composting_facility:"NA"; ?></td>
+            <?php } ?>
+          </tr>          
+          <tr>
+            <td>3. Total biodegradable waste generated (kg/month)</td>
+            <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
+            <td><?php echo !empty($wasteSection[$i]->total_biodegradable_waste_generated)?$wasteSection[$i]->total_biodegradable_waste_generated:"NA"; ?></td>
+            <?php } ?>
+          </tr>
+          <tr>
+            <td>4. Total Dry/recyclable waste generated (kg/month)</td>
+            <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
+            <td><?php echo !empty($wasteSection[$i]->total_dry_recyclable_waste_generated)?$wasteSection[$i]->total_dry_recyclable_waste_generated:"NA"; ?></td>
+            <?php } ?>
+          </tr>
+          <tr>
+            <td>5. Total Domestic waste generated (kg/month)</td>
+            <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
+            <td><?php echo !empty($wasteSection[$i]->total_domestic_waste_generated)?$wasteSection[$i]->total_domestic_waste_generated:"NA"; ?></td>
+            <?php } ?>
+          </tr>
+          <tr>
+            <td>6. E-waste generated (kg/month)</td>
+            <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
+            <td><?php echo !empty($wasteSection[$i]->e_waste_generated)?$wasteSection[$i]->e_waste_generated:"NA"; ?></td>
+            <?php } ?>
+          </tr>
+          <tr>
+            <td>7. Biomedical waste generated (kg/month)</td>
+            <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
+            <td><?php echo !empty($wasteSection[$i]->biomedical_waste_generated)?$wasteSection[$i]->biomedical_waste_generated:"NA"; ?></td>
+            <?php } ?>
+          </tr>
+          <tr>
+            <td>8. Sanitary Waste generated (kg/month)</td>
+            <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
+            <td><?php echo !empty($wasteSection[$i]->sanitary_waste_generated)?$wasteSection[$i]->sanitary_waste_generated:"NA"; ?></td>
+            <?php } ?>
+          </tr>
+          <tr>
+            <td>9. C&D waste generated (kg/month)</td>
+            <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
+            <td><?php echo !empty($wasteSection[$i]->cd_waste_generated)?$wasteSection[$i]->cd_waste_generated:"NA"; ?></td>
+            <?php } ?>
+          </tr>
+          <tr>
+            <td>10. Total biodegradable waste recycled (kg/month)</td>
+            <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
+            <td><?php echo !empty($wasteSection[$i]->total_biodegradable_waste_recycled)?$wasteSection[$i]->total_biodegradable_waste_recycled:"NA"; ?></td>
+            <?php } ?>
+          </tr>
+          <tr>
+            <td>11. Total Dry/recyclable waste recycled (kg/month)</td>
+            <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
+            <td><?php echo !empty($wasteSection[$i]->total_dry_recyclable_waste_recycled)?$wasteSection[$i]->total_dry_recyclable_waste_recycled:"NA"; ?></td>
+            <?php } ?>
+          </tr>
+      <tr>
+            <td>12. Total Domestic waste recycled (kg/month)</td>
+            <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
+            <td><?php echo !empty($wasteSection[$i]->total_domestic_waste_recycled)?$wasteSection[$i]->total_domestic_waste_recycled:"NA"; ?></td>
+            <?php } ?>
+          </tr>
+      <tr>
+            <td>13. E-waste recycled (kg/month)</td>
+            <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
+            <td><?php echo !empty($wasteSection[$i]->e_waste_recycled)?$wasteSection[$i]->e_waste_recycled:"NA"; ?></td>
+            <?php } ?>
+          </tr>
+      <tr>
+            <td>14. Biomedical waste recycled (kg/month)</td>
+            <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
+            <td><?php echo !empty($wasteSection[$i]->biomedical_waste_recycled)?$wasteSection[$i]->biomedical_waste_recycled:"NA"; ?></td>
+            <?php } ?>
+          </tr>
+      <tr>
+            <td>15. Sanitary Waste recycled (kg/month)</td>
+            <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
+            <td><?php echo !empty($wasteSection[$i]->sanitary_waste_recycled)?$wasteSection[$i]->sanitary_waste_recycled:"NA"; ?></td>
+            <?php } ?>
+          </tr>
+     <tr>
+            <td>16. C&D waste recycled (kg/month)</td>
+            <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
+            <td><?php echo !empty($wasteSection[$i]->cd_waste_recycled)?$wasteSection[$i]->cd_waste_recycled:"NA"; ?></td>
+            <?php } ?>
+          </tr>
+    <tr>
+            <td> 17. Does your school reuse textbooks?</td>
+            <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
+            <td><?php echo !empty($wasteSection[$i]->reuse_textbooks)?$wasteSection[$i]->reuse_textbooks:"NA"; ?></td>
+            <?php } ?>
+          </tr>
+  <tr>
+            <td>18. Ewaste disposal?</td>
+            <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
+            <td><?php echo !empty($wasteSection[$i]->what_is_the_final_destination_for_waste_from_your)?$wasteSection[$i]->what_is_the_final_destination_for_waste_from_your:"NA"; ?></td>
+            <?php } ?>
+          </tr>
+
+    <tr>
+            <td>19. Does your school burn waste?</td>
+            <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
+            <td><?php echo !empty($wasteSection[$i]->does_your_school_burn_waste)?$wasteSection[$i]->does_your_school_burn_waste:"NA"; ?></td>
+            <?php } ?>
+          </tr>
+        </table>
   <div class="task-area">
     
     <ul class="list">
@@ -447,9 +576,9 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
     
     <ul class="list">
       <li>
-        <p class="orange"><span class="cube">3</span><span>What are the existing major solid waste management (SWM) issues in school that need an action plan? (Max 250 characters)</span></p> </li>
+        <p class="orange"><span class="cube">2</span><span>Area Profile: Where is the nearest dumping site or landfill? What are the prominent waste management issues in the vicinity of the school? (Max 250 characters)</span></p> </li>
         <li>
-        <p style="padding-top:1px;"><?php echo (getFiled('Q3AP1', $schoolUserID) != "") ? getFiled('Q3AP1', $schoolUserID) : "N/A"; ?></p>
+        <p style="padding-top:1px;"><?php echo (getFiled('Q2AP1', $schoolUserID) != "") ? getFiled('Q2AP1', $schoolUserID) : "N/A"; ?></p>
       </li>
     </ul>
     
