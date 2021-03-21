@@ -548,7 +548,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
         </table>
   <div class="task-area">
     
-    <ul class="list" style="padding-top:2px;">
+    <ul class="list" style="padding-top:10px;">
       <li>
         <p class="orange"><span class="cube">1</span><span>Per capita waste generation in school</span></p> </li>
         <li>
