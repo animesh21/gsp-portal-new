@@ -184,10 +184,10 @@ $allyoydata = getYOYComparisonAllData($schoolId);
     <td><?php echo $schoolName[0]->city;?></td>
     <td><?php echo $schoolName[0]->district;?></td>
     <td><?php echo $schoolName[0]->telephone;?></td>
-    <td><?php echo $allyoydata[0]->state;?></td>
-    <td><?php echo $allyoydata[0]->pin_code;?></td>
-    <td><?php echo $allyoydata[0]->principals_name;?></td>
-    <td><?php echo $allyoydata[0]->principal_mobile;?></td>    
+    <td><?php echo $schoolName[0]->state;?></td>
+    <td><?php echo $schoolName[0]->pincode;?></td>
+    <td><?php echo $schoolName[0]->principals_name;?></td>
+    <td><?php echo $schoolName[0]->	mobile;?></td>    
     
   </tr>
   
@@ -209,9 +209,9 @@ $allyoydata = getYOYComparisonAllData($schoolId);
     <th>Total Population</th>    
   </tr>
   <tr>
-    <td><?php echo $allyoydata[0]->gsp_coordintor_name;?></td>
-    <td><?php echo $allyoydata[0]->gsp_coordintor_email;?></td>
-    <td><?php echo $allyoydata[0]->gsp_coordintor_mobile;?></td>
+    <td><?php echo $schoolName[0]->coname;?></td>
+    <td><?php echo $schoolName[0]->coemail;?></td>
+    <td><?php echo $schoolName[0]->comobile;?></td>
     <td><?php echo $allyoydata[0]->school_category;?></td>
     <td><?php echo $allyoydata[0]->no_of_shifts;?></td>
     <td><?php echo $allyoydata[0]->lowest_level;?></td>
