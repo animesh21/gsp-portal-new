@@ -186,7 +186,7 @@ $allyoydata = getYOYComparisonAllData($schoolId);
     <td><?php echo $schoolName[0]->telephone;?></td>
     <td><?php echo $schoolName[0]->state;?></td>
     <td><?php echo $schoolName[0]->pincode;?></td>
-    <td><?php echo $schoolName[0]->principals_name;?></td>
+    <td><?php echo $schoolName[0]->principle_name;?></td>
     <td><?php echo $schoolName[0]->	mobile;?></td>    
     
   </tr>
