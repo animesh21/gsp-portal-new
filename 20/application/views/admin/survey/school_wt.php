@@ -546,6 +546,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
             <?php } ?>
           </tr>
         </table>
+    </div>
   <div class="task-area">
     
     <ul class="list" >
@@ -555,6 +556,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
         <p><?php echo (getFiled('Q1B1', $schoolUserID) != "") ? getFiled('Q1B1', $schoolUserID) : "N/A"; ?></p>
       </li>
     </ul>
+  </div>
 
   <div style="text-align: center; padding: 0;">&nbsp;&nbsp;&nbsp;&nbsp;</div>
   <h2 class="heading section waste page_break"><img src="assets/img/images/waste.png" width="94" height="94">WASTE</h2>
