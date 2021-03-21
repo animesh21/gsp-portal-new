@@ -764,7 +764,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
       <li>
         <p class="orange"><span class="cube">5</span><span>What strategies do you propose to improve SWM in the school? (Max 750 characters)</span></p> </li>
         <li>
-        <p style="padding-top:1px;"><?php echo (getFiled('Q5AP1', $schoolUserID) != "") ? getFiled('Q5AP1', $schoolUserID) : "N/A"; ?></p>
+        <p><?php echo (getFiled('Q5AP1', $schoolUserID) != "") ? getFiled('Q5AP1', $schoolUserID) : "N/A"; ?></p>
       </li>
     </ul>
 
