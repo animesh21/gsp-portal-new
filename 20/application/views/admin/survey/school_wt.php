@@ -548,13 +548,14 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
         </table>
   <div class="task-area">
     
-    <ul class="list">
+    <ul class="list" style="padding-top:2px;">
       <li>
         <p class="orange"><span class="cube">1</span><span>Per capita waste generation in school</span></p> </li>
         <li>
         <p><?php echo (getFiled('Q1B1', $schoolUserID) != "") ? getFiled('Q1B1', $schoolUserID) : "N/A"; ?></p>
       </li>
     </ul>
+
   <div style="text-align: center; padding: 0;">&nbsp;&nbsp;&nbsp;&nbsp;</div>
   <h2 class="heading section waste page_break"><img src="assets/img/images/waste.png" width="94" height="94">WASTE</h2>
   <div class="wrapper">
