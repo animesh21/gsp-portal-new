@@ -777,13 +777,13 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
       <?php if(strcmp(getFiled('Q6AP1', $schoolUserID),'Y')==0): ?>
       <li>
         <p class="orange"><span class="cube">6(a)</span><span> Please mention 2 ways in which plastic ban is ensured. (Max 150 characters)</span></p>
-        <p style="padding-top:1px;"><?php echo (getFiled('Q6AP11', $schoolUserID) != "") ? getFiled('Q6AP11', $schoolUserID) : "N/A"; ?></p>
+        <p style="padding-top:0px;"><?php echo (getFiled('Q6AP11', $schoolUserID) != "") ? getFiled('Q6AP11', $schoolUserID) : "N/A"; ?></p>
       </li>
       <?php endif; ?>
       <?php if(strcmp(getFiled('Q6AP1', $schoolUserID),'N')==0): ?>
       <li>
         <p class="orange"><span class="cube">6(a)</span><span>Please mention 2 specific ways to phase out single-use plastics in school. (Max 150 characters)</span></p>
-        <p style="padding-top:1px;"><?php echo (getFiled('Q6AP12', $schoolUserID) != "") ? getFiled('Q6AP12', $schoolUserID) : "N/A"; ?></p>
+        <p style="padding-top:0px;"><?php echo (getFiled('Q6AP12', $schoolUserID) != "") ? getFiled('Q6AP12', $schoolUserID) : "N/A"; ?></p>
       </li>
       <?php endif; ?>
     
