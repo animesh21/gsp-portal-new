@@ -548,9 +548,9 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
         </table>
   <div class="task-area">
     
-    <ul class="list" style="padding-top:10px;">
+    <ul class="list" >
       <li>
-        <p class="orange"><span class="cube">1</span><span>Per capita waste generation in school</span></p> </li>
+        <p class="orange" style="padding-top:10px;"><span class="cube">1</span><span>Per capita waste generation in school</span></p> </li>
         <li>
         <p><?php echo (getFiled('Q1B1', $schoolUserID) != "") ? getFiled('Q1B1', $schoolUserID) : "N/A"; ?></p>
       </li>
