@@ -806,9 +806,9 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
 
     <ul class="list">
       <li>
-        <p class="orange" style="padding-top:20px"><span class="cube">9</span><span>What are the plan’s estimated costs? (Max 250 characters)</span></p> </li>
+        <p class="orange" style="padding-top:50px"><span class="cube">9</span><span>What are the plan’s estimated costs? (Max 250 characters)</span></p> </li>
         <li>
-        <p ><?php echo (getFiled('Q9AP1', $schoolUserID) != "") ? getFiled('Q9AP1', $schoolUserID) : "N/A"; ?></p>
+        <p style="padding-top:1px;"><?php echo (getFiled('Q9AP1', $schoolUserID) != "") ? getFiled('Q9AP1', $schoolUserID) : "N/A"; ?></p>
       </li>
     </ul>
 
