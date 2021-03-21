@@ -792,7 +792,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
       <li>
         <p class="orange"><span class="cube">7</span><span>How will you ensure student and community involvement in the action plan? Please include curriculum interventions, if any. (Max 250 characters)</span></p> </li>
         <li>
-        <p><?php echo (getFiled('Q7AP1', $schoolUserID) != "") ? getFiled('Q7AP1', $schoolUserID) : "N/A"; ?></p>
+        <p style="padding-top:1px;"><?php echo (getFiled('Q7AP1', $schoolUserID) != "") ? getFiled('Q7AP1', $schoolUserID) : "N/A"; ?></p>
       </li>
     </ul>
 
