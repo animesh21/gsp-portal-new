@@ -533,7 +533,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
             <?php } ?>
           </tr>
   <tr>
-            <td><b>18. Ewaste disposal?</b></td>
+            <td><b>18. Final destination for waste disposed of externally?</b></td>
             <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
             <td><?php echo !empty($wasteSection[$i]->what_is_the_final_destination_for_waste_from_your)?$wasteSection[$i]->what_is_the_final_destination_for_waste_from_your:"NA"; ?></td>
             <?php } ?>
@@ -830,7 +830,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
   <p>Please provide the details of the SWM Action Plan team. A teacher with interest in waste and five to 10 students from Grades 6 to 12 will be ideal for your team. With schools closed, the Administrative staff is important as they will provide the permissions required for the housekeeping and cleaning staff to help you with the plan.</p>
   <p>Please enter the details below carefully as the same will be printed on the digital certificates.</p>
   
-  <p class="orange"><span>GSP Coordinator:</span></p>
+  <p class="orange" style="margin-top:2px;"><span>GSP Coordinator:</span></p>
 
   <table class="table">
       <tr>
