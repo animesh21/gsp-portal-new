@@ -178,12 +178,12 @@ $allyoydata = getYOYComparisonAllData($schoolId);
   
   <tr>
     <td><?php echo $schoolName[0]->name;?></td>
-    <td><?php echo $allyoydata[0]->address_line_1;?></td>
-    <td><?php echo $allyoydata[0]->address_line_2;?></td>
-    <td><?php echo $allyoydata[0]->std_code;?></td>
-    <td><?php echo $allyoydata[0]->city;?></td>
-    <td><?php echo $allyoydata[0]->district;?></td>
-    <td><?php echo $allyoydata[0]->landline_no;?></td>
+    <td><?php echo $schoolName[0]->address1;?></td>
+    <td><?php echo $schoolName[0]->address2;?></td>
+    <td><?php echo $schoolName[0]->std;?></td>
+    <td><?php echo $schoolName[0]->city;?></td>
+    <td><?php echo $schoolName[0]->district;?></td>
+    <td><?php echo $schoolName[0]->telephone;?></td>
     <td><?php echo $allyoydata[0]->state;?></td>
     <td><?php echo $allyoydata[0]->pin_code;?></td>
     <td><?php echo $allyoydata[0]->principals_name;?></td>
