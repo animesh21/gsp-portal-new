@@ -127,7 +127,7 @@ $allyoydata = getYOYComparisonAllData($schoolId);
               </ul>
             </li>-->
   <!-- <li class=""><a href="">YEAR OF YEAR</a></li> -->
-            <li class=""><a href="https://greenschoolsprogramme.org/audit/19/downloadLogin">Downloads</a></li>
+            <li class=""><a href="<?php echo base_url('download/downloadReportsSection'); ?>">Downloads</a></li>
       <?php  if($dataYoy[0]['year']=='Year of 2019' && $dataYoy[0]['percentage']>=70) { ?>
       <li class=""><a href="<?php echo base_url('download/badgecodeview'); ?>">GSP Logo</a></li>
       <?php } ?>
