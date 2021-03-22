@@ -90,7 +90,7 @@
 	$schoolId=getSchoolId($this->session->userdata('USER_ID')); 
  	$dataYoy=download_YOY($schoolId);
 		    ?>
-		    <li class=""><a href="https://greenschoolsprogramme.org/audit/19/download/downloadReportsSection">Downloads</a></li>
+		    <li class=""><a href="<?php echo base_url('download/downloadReportsSection'); ?>">Downloads</a></li>
 		    <?php  if($dataYoy[0]['year']=='Year of 2019' && $dataYoy[0]['percentage']>=70) { ?>
              <li class=""><a href="<?php echo base_url('download/badgecodeview'); ?>">GSP Logo</a></li>
 		    <?php } ?>
