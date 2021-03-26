@@ -40,8 +40,8 @@ class WasteTransformers extends CI_Controller {
         	$data['states'] = $this->User_model->getStates();
         	//New Added Code
         	$data['cities'] = $this->User_model->getCitiesAll($data['data']['state']);
-            // $this->load->view('WasteTrans/wastet',$data);
-            $this->load->view('certificates/closed');
+            $this->load->view('WasteTrans/wastet',$data);
+            // $this->load->view('certificates/closed');
         }
     }
 
