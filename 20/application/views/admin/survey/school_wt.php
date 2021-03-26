@@ -96,7 +96,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
   } 
   ?>
 </script>
-<div class="cover"> <img src="assets/img/images/logo.png" width="436" height="100" class="logo">
+<div class="cover"> <img src="assets/img/images/logo.png" width="436" height="189" class="logo">
   <h1>Responses For Green Schools Programme Audit 2019</h1>
   <div class="school-detail">
     <p><span>School Name:</span><span style="font-size:18px;"><?php echo $school[0]->name; ?></span></p>
