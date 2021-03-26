@@ -103,7 +103,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
     <p><span>Address:</span><span style="font-size:18px;"><?php echo $school[0]->address1; ?></span></p>
     <p><span>Coordinator Name:</span><span style="font-size:18px;"><?php echo $school[0]->coname; ?></span></p>
   </div>
-  <div class="address-wrap" style="margin-top: 80px"> <img src="assets/img/images/cover4.png" width="100%" style="margin-top:-50px;">
+  <div class="address-wrap" style="margin-top: 80px"> <img src="assets/img/images/cover4.png" width="100%" style="margin-top:-55px;">
     <div class="address" style="margin-top: 40px">
       <p>Green Schools Programme <br />
         Centre for Science and Environment</p><span>41, Tughlakabad Institutional Area, New Delhi. India - 110062<br/>
