@@ -104,7 +104,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
     <p><span>Coordinator Name:</span><span style="font-size:18px;"><?php echo $school[0]->coname; ?></span></p>
   </div>
   <div class="address-wrap" style="margin-top: 20px"> <img src="assets/img/images/cover4.png" width="100%" style="margin-top:-55px;">
-    <div class="address" style="margin-top: 150px">
+    <div class="address" style="margin-top: 170px">
       <p>Green Schools Programme <br />
         Centre for Science and Environment</p>
     </div>
