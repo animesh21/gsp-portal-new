@@ -97,7 +97,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
   ?>
 </script>
 <div class="cover"> <img src="assets/img/images/logo.png" width="436" height="189" class="logo">
-  <h1>Responses For Green Schools Programme Audit 2020</h1>
+  <h1>Responses For GSP Waste Transformers 2020-21</h1>
   <div class="school-detail">
     <p><span>School Name:</span><span style="font-size:18px;"><?php echo $school[0]->name; ?></span></p>
     <p><span>Address:</span><span style="font-size:18px;"><?php echo $school[0]->address1; ?></span></p>
@@ -106,9 +106,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
   <div class="address-wrap" style="margin-top: 20px"> <img src="assets/img/images/cover4.png" width="100%" style="margin-top:-55px;">
     <div class="address" style="margin-top: 40px">
       <p>Green Schools Programme <br />
-        Centre for Science and Environment</p><span>41, Tughlakabad Institutional Area, New Delhi. India - 110062<br/>
-        Tel: +91-11 29955124, 29956110, 40616000<br/>
-        http://www.greenschoolsprogramme.org/</span>
+        Centre for Science and Environment</p>
     </div>
   </div>
 </div>
