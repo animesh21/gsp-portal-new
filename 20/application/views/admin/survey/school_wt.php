@@ -18,7 +18,7 @@ ul {list-style-type: none;}
 .school-detail {width: 90%; margin: 50px auto 10px;}
 .school-detail p {font-size: 20px; margin-bottom: 5px;}
 .school-detail p span {display: inline-block; vertical-align: top;}
-.school-detail p span:first-child {color: #e86549; width: 200px;}
+.school-detail p span:first-child {color: #00af4c; width: 200px;}
 .school-detail p span:last-child {max-width: 62%;}
 .cover .address-wrap {width: 100%; height: 410px; position: relative;}
 .cover .address {width: 70%; text-align: center; color: #fff; position: absolute; top: 42%; left: 17%; display: inline-block;}
@@ -26,9 +26,9 @@ ul {list-style-type: none;}
 
 
 .container {width: 100%; padding: 30px 0 30px;}
-.auditor-detail h1 {font-size: 24px; color: #e86549; margin-bottom: 20px;}
+.auditor-detail h1 {font-size: 24px; color: #00af4c; margin-bottom: 20px;}
 .auditor-detail p {font-size: 18px; margin-bottom: 5px;}
-.auditor-detail p span:first-child {color: #e86549; margin-right: 5px;}
+.auditor-detail p span:first-child {color: #00af4c; margin-right: 5px;}
 .heading {text-transform: uppercase; color: #fff; background: #9397a0; padding: 8px 20px; margin: 0px; font-size: 18px; position: relative;}
 .heading.section {padding-left: 100px; margin: 20px 0 10px;}
 .heading.section > img {margin-left: -10px;}
@@ -43,21 +43,21 @@ ul {list-style-type: none;}
 .list {padding: 0;}
 .list li {margin-bottom: 20px;}
 .list li p {padding:-20 0 0 75px; font-size: 14px; margin: 0px;}
-.list li p span:first-child {display: inline-block; text-align: center; font-size: 13px; width:60px; height: 25px; padding-top: 7px; background: #e86549; color: #fff; vertical-align: baseline; margin: 0 15px 0 0;}
-.list li p.orange {color: #e86549; padding: 0;}
+.list li p span:first-child {display: inline-block; text-align: center; font-size: 13px; width:60px; height: 25px; padding-top: 7px; background: #00af4c; color: #fff; vertical-align: baseline; margin: 0 15px 0 0;}
+.list li p.orange {color: #00af4c; padding: 0;}
 .list li ol { margin-left: 25px; font-size: 14px; }
 
 .page-number {text-align: right; padding-right: 75px; background: url(images/row-dot.png) left center repeat-x; margin-bottom: 30px;}
-.page-number p {display: inline-block; vertical-align: middle; background: #fff; padding: 0 5px; color: #e86549;}
-.page-number p span {width: 36px; height: 36px; background: #e86549; color: #fff; line-height: 36px; margin-left: 5px; text-align: center; border-radius: 50%; font-size: 15px; display: inline-block;}
+.page-number p {display: inline-block; vertical-align: middle; background: #fff; padding: 0 5px; color: #00af4c;}
+.page-number p span {width: 36px; height: 36px; background: #00af4c; color: #fff; line-height: 36px; margin-left: 5px; text-align: center; border-radius: 50%; font-size: 15px; display: inline-block;}
 
-.task {font-size: 18px; color: #e86549; margin-bottom: 15px;}
+.task {font-size: 18px; color: #00af4c; margin-bottom: 15px;}
 .task-area {padding: 10px 0 10px; font-size: 14px; line-height: 16px;}
 .task-area p { margin: 0px; padding: 0px; }
-.task-area p span:first-child {display: inline-block; color: #e86549; margin-right: 5px; width: 30%;}
+.task-area p span:first-child {display: inline-block; color: #00af4c; margin-right: 5px; width: 30%;}
 .table {font-size: 13px; margin: 10px 0; width: 100% }
 .table.tick img { height: 10px; width: 10px; }
-.table th {color: #fff; background: #e86549; padding: 10px 10px; text-align: center; border-left: 1px solid #fff; font-weight: normal;}
+.table th {color: #fff; background: #00af4c; padding: 10px 10px; text-align: center; border-left: 1px solid #fff; font-weight: normal;}
 .table th:first-child, .table td:first-child {text-align: left; border-left: none;}
 .table td {padding: 8px 20px; background: #dee1e7; border: 1px solid #fff; border-right: none; text-align: center; border-bottom: none;}
 .table tr.total td {background: #9397a0; text-transform: uppercase; color: #fff;}
@@ -97,7 +97,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
   ?>
 </script>
 <div class="cover"> <img src="assets/img/images/logo.png" width="436" height="189" class="logo">
-  <h1>Responses For Green Schools Programme Audit 2019</h1>
+  <h1>Responses For Green Schools Programme Audit 2020</h1>
   <div class="school-detail">
     <p><span>School Name:</span><span style="font-size:18px;"><?php echo $school[0]->name; ?></span></p>
     <p><span>Address:</span><span style="font-size:18px;"><?php echo $school[0]->address1; ?></span></p>
