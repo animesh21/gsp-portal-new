@@ -29,7 +29,7 @@ ul {list-style-type: none;}
 .auditor-detail h1 {font-size: 24px; color: #00af4c; margin-bottom: 20px;}
 .auditor-detail p {font-size: 18px; margin-bottom: 5px;}
 .auditor-detail p span:first-child {color: #00af4c; margin-right: 5px;}
-.heading {text-transform: uppercase; color: #fff; background: #9397a0; padding: 8px 20px; margin: 0px; font-size: 18px; position: relative;}
+.heading {text-transform: uppercase; color: #fff; background: #00af4c; padding: 8px 20px; margin: 0px; font-size: 18px; position: relative;}
 .heading.section {padding-left: 100px; margin: 20px 0 10px;}
 .heading.section > img {margin-left: -10px;}
 .heading.section:before {content: ''; width: 15px; height: 100%; position: absolute; left: 0; top: 0;}
@@ -38,7 +38,7 @@ ul {list-style-type: none;}
 .heading.food {background: #f153a8;}
 .heading.land {background: #a5b642;}
 .heading.water {background: #0072bc;}
-.heading.waste {background: #7265ad;}
+.heading.waste {background: #00af4c;}
 .heading.section > img {position: absolute; left: 0; top: -25px;}
 .list {padding: 0;}
 .list li {margin-bottom: 20px;}
