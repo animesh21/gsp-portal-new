@@ -106,7 +106,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
   <div class="address-wrap" style="margin-top: 20px"> <img src="assets/img/images/cover4.png" width="100%" style="margin-top:-55px;">
     <div class="address" style="margin-top: 170px">
       <p>Green Schools Programme <br />
-        Centre for Science and Environment</p>
+        <span style="font-color:black;">Centre for Science and Environment</span></p>
     </div>
   </div>
 </div>
