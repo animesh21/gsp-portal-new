@@ -24,6 +24,7 @@
 		    $varCheckLogin = $this->User_model->UserLogin($post);
 		    if ($varCheckLogin) {
 				    if($varCheckLogin=="success"){
+			// redirect(base_url('school'));
 			redirect(base_url('WasteTransformers'));
 					}
 					elseif($varCheckLogin=="warning")
