@@ -106,6 +106,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
   <div class="address-wrap" style="margin-top: 20px"> <img src="assets/img/images/cover4.png" width="100%" style="margin-top:-55px;">
     <div class="address" style="margin-top: 170px">
       <p>Green Schools Programme <br />
+      <a href="https://www.greenschoolsprogramme.org/">www.greenschoolsprogramme.org/</a></br>
         <span style="color:black;">Centre for Science and Environment</span></p>
     </div>
   </div>
@@ -459,7 +460,7 @@ ol.support-docs { margin: 0px; padding:0 0 15px 15px;  }
             <?php } ?>
           </tr>
           <tr>
-            <td><b>6. E-waste generated (kg/month)<</b>/td>
+            <td><b>6. E-waste generated (kg/month)</b></td>
             <?php for($i=0;$i<sizeof($wasteSection);++$i){ ?>
             <td><?php echo !empty($wasteSection[$i]->e_waste_generated)?$wasteSection[$i]->e_waste_generated:"NA"; ?></td>
             <?php } ?>
