@@ -233,16 +233,17 @@ public function kvs_school_merge() {
             'id'=>$record->id,
             'udise'=>$record->udise,
             'name'=>$record->name,
-           'userid'=>$record->userid,
+            'userid'=>$record->userid,
             'state_name'=>$record->state_name,
             'district_name'=>$record->district_name,
             'city'=>$record->city,
             'coname'=>$record->coname,
             'coemail'=>$record->coemail,
+            'user_password' => $record->user_password,
             'comobile'=>$record->comobile,
             'progress'=>$record->progress,
-             'partner_status'=>$record->partner_status,
-                  'satya_foundation_status'=>$record->satya_foundation_status,
+            'partner_status'=>$record->partner_status,
+            'satya_foundation_status'=>$record->satya_foundation_status,
             'date_added'=>$record->date_added);
        }
         $data['record']=array(

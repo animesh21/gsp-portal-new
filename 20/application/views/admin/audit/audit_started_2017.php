@@ -17,6 +17,7 @@
       <th>City</th>
       <th>Co-ord. Name</th>
       <th>Co-ord. Email</th>
+      <th>Password</th>
       <th>Co-ord. Mobile</th>
       <th>Completeness</th>
       <th>Reg. Date</th>
@@ -106,13 +107,14 @@ function getBadgeCode(userid)
 				        { mData: 'sr_no'},
 				        { mData: 'id' },
 					 { mData: 'udise' },
-                        		{ mData: 'name' },
+            { mData: 'name' },
 						{ mData: 'state_name' },
 						{ mData: 'district_name' },
 						{ mData: 'city' },
 						{ mData: 'coname' },
 						{ mData: 'coemail' },
-						{ mData: 'comobile' },
+						{ mData: 'user_password'},
+            { mData: 'comobile' },
 						{ mData: 'progress'},
 						{ mData: 'date_added' },
 						{ mData: 'partner_status',
