@@ -109,18 +109,20 @@ class School_model extends CI_Model
             $subject = "GSP Audit Registration".$date;
             $msg = "Dear &nbsp;";
             $msg .= $query->coname . "," . "<br/><br/>";
-            $msg .= "Thank you for registering your school '" . $query->name . "', for GSP (Green Schools Programme) Audit 2021. This is a one-time process and now that your school's account has been successfully created, you need not register your school again.<br><br>";
-            $msg .= "Under the GSP programme, we have been organising a range of offline and online environmental activities for students and teachers.<br><br>";
-           $msg .= "Going ahead, you will be notified of our new initiatives as and when they are launched on the email ids provided in the registration form.<br><br>";
-           $msg .= "We request you to save your username and password given below, for future reference and participation in GSP initiatives.<br><br>";
+            $msg .= "Thank you for registering your school '" . $query->name . "', for GSP (Green Schools Programme) network. This is a one-time process and now that your school's account has been successfully created, you need not register your school again.<br><br>";
+            $msg .= "Under the GSP programme, we have been organising a range of offline and online environmental <a href='https://www.greenschoolsprogramme.org/schools/online-events/'> activities </a> for students and teachers.<br><br>";
+            $msg .= "Going ahead, you will be notified of our new initiatives as and when they are launched on the email ids provided in the registration form.<br><br>";
+           $msg .= "Please save your login credentials to be used when you want to participate in the GSP initiatives. There is no fee for participation.<br><br>";
+           $msg .= "<strong>Please spell the name of your school correctly the name provided by you will appear on the digital certificates and other documents.</strong><br><br>";
+
            $msg .= "Should the principal or the GSP coordinator change, please inform us at support@greenschoolsprogramme.org and we will update the database. <br><br>";           
-        //    $msg .= "URL: http://www.greenschoolsprogramme.org/audit/20 <br/><br/>";
+           $msg .= "URL: http://www.greenschoolsprogramme.org/ <br/><br/>";
             $msg .= "Username: " . $query->coemail . "<br><br>";
             $msg .= "Password: " . $query->password . "<br><br>";
             $msg .= "In case of any further queries please feel free to write back to us.<br><br>";
             $msg .= "Thanks,<br><br>";
             $msg .= "The Green Schools Programme Team <br><br>";
-            $msg .= "<strong>Also sharing your account details as entered by you in the registration form: </strong><br><br>";
+            $msg .= "<strong>Your registration details are as follows: </strong><br><br>";
             $msg .= "UDISE Code: " . $query->udise . "<br><br>";
             $msg .= "Name of School: " . $query->name . "<br><br>";
             $msg .= "Address Line 1: " . $query->address1 . "<br><br>";
