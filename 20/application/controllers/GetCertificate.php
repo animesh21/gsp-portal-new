@@ -55,6 +55,45 @@ class GetCertificate extends CI_Controller{
     }
 
 
+    public function getPoster($argID){
+        ini_set('memory_limit', '-1');      
+        ini_set('max_execution_time', 300);   
+           $data['title'] = 'Home';
+           $data['id'] = $argID;
+        $schoolId=getSchoolId($this->session->userdata('USER_ID'));
+        $phase2 = $this->db->select('schoolno')->from('poster')->where('schoolno',$schoolId)->get()->result();
+        
+        print_r($phase2);
+        
+        // $this->session->set_flashdata('data_name', 'The link to download the GSP Online Air Seminar April 2020 certificate is now closed.');
+        //     return redirect('GetCertificate');
+
+        if(!empty($dataCertificate)){
+
+        $data['teachers'] = $dataCertificate;
+
+        $data['title']="GSP Digital Certificates";
+        $this->load->library('dompdf_lib');
+        ini_set('memory_limit', '-1');
+       
+        $html = $this->load->view('digital-certificate-new', $data, true);
+         $html = preg_replace('/>\s+</', "><", $html);
+
+        $this->dompdf->load_html($html);
+        $this->dompdf->set_paper(array(0, 0, 380, 560), 'portrait');
+        $this->dompdf->render();
+        $this->dompdf->stream("Digital Certificate.pdf", array("Attachment" => false));
+		$this->db->where('id', $dataCertificate[0]->id);
+        $this->db->update('gsp_skill_building_camp', array('download_count'=>$dataCertificate[0]->download_count+1));
+        }
+        else{
+            $this->session->set_flashdata('data_name', 'Your password is incorrect. Please try again. For any assistance, write to us at : support@greenschoolprogramme.org');
+            return redirect('GetCertificate');
+        }
+
+    }
+
+
 
 }
 

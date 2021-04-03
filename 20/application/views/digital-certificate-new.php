@@ -12,7 +12,7 @@
 
     if ($teacher->name_of_participant !="") {
         echo "<div class='container'>
-        <div class='image'><img src='assets/img/images/Mandi_HP workshop_certificate-Mar 3-5.jpg' width='1000' height='700'></div>";
+        <div class='image'><img src='assets/img/images/poster.png' width='500' height='707'></div>";
 
   echo "<div class='principal'>" . strtoupper($teacher->school_name) ."</div>&nbsp;";
     $length = strlen($teacher->school_name);
@@ -23,8 +23,8 @@
     echo "<div class='school_name'>". strtoupper($teacher->name_of_participant). "</div>";
      
   }  echo "<div class='date'>"  . strtoupper($teacher->date). "</div> ";
-        echo "<div class='certificateno'>Certificate No : "."GSP- HIMCOSTE Online Capacity Building Workshop MANDI/2021/0".$teacher->id." </div>
-   </div> ";
+  //       echo "<div class='certificateno'>Certificate No : "."GSP- HIMCOSTE Online Capacity Building Workshop MANDI/2021/0".$teacher->id." </div>
+  //  </div> ";
     }
     }
   }
