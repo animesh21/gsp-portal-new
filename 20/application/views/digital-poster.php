@@ -31,7 +31,10 @@
     echo "<div class='sc_ap'><p>" . html_entity_decode($teacher->ap) ."</p></div>&nbsp;";
     echo "<div class='sc_pw'><p>" . html_entity_decode($teacher->pw) ."</p></div>&nbsp;";
     echo "<div class='sc_si'><p>" . html_entity_decode($teacher->si) ."</p></div>&nbsp;";
-
+    $out = html_entity_decode($teacher->tw);
+    if($out=="YELLOW"){
+    echo "<div class='sc_20'><p><img alt='2020' src = 'assets/img/images/2021.jpg' style='width:50%;'></p></div>&nbsp;";
+    }
 
   echo "<div class='principal'>" . strtoupper($teacher->school_name) ."</div>&nbsp;";
     $length = strlen($teacher->school_name);
@@ -49,8 +52,7 @@
 }
 
   ?>
-
-    </body>
+      </body>
 </html>
 
 
@@ -82,6 +84,7 @@ body{
 .sc_ap{position:absolute;text-align:left;top:423px; margin-left: 22px;width:270px;height:115px;font-size: 9px;}
 .sc_pw{position:absolute;text-align:left;top:543px; margin-left: 22px;width:270px;height:55px;font-size: 9px;}
 .sc_si{position:absolute;text-align:left;top:597px; margin-left: 22px;width:270px;height:55px;font-size: 9px;}
+.sc_20{position:absolute;text-align:center;top:157px; margin-left: 370px;}
 
 
 
