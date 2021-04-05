@@ -254,7 +254,7 @@ class School_model extends CI_Model
             $date = date('d M Y');
             $to = $arrMails;
             $subject = "GSP Audit Registration".$date;
-            $msg = "Dear &nbsp;";
+            $msg = "Dear&nbsp;";
             $msg .= $query->coname . "," . "<br/><br/>";
         //     $msg .= "Thank you for registering your school '" . $query->name . "', for GSP (Green Schools Programme) Audit 2020. Your account has been successfully created.<br><br>";
         //     $msg .= "GSP Audit 2020 will be launched as and when the schools reopen and you will then be informed.<br><br>";
