@@ -32,9 +32,53 @@
     echo "<div class='sc_pw'><p>" . html_entity_decode($teacher->pw) ."</p></div>&nbsp;";
     echo "<div class='sc_si'><p>" . html_entity_decode($teacher->si) ."</p></div>&nbsp;";
     $out = html_entity_decode($teacher->tw);
-    if($out=="YELLOW"){
+    if($out=="GREEN"){
     echo "<div class='sc_20'><p><img alt='2020' src = 'assets/img/images/2021.jpg' style='width:50%;'></p></div>&nbsp;";
+    }elseif($out=="ORANGE"){
+    echo "<div class='sc_20'><p><img alt='2020' src = 'assets/img/images/orange.jpg' style='width:50%;'></p></div>&nbsp;";
+    }elseif($out=="YELLOW"){
+    echo "<div class='sc_20'><p><img alt='2020' src = 'assets/img/images/yellow.jpg' style='width:50%;'></p></div>&nbsp;";
+    }else{
+      echo "<div class='sc_20'><p><img alt='2020' src = 'assets/img/images/red.jpg' style='width:50%;'></p></div>&nbsp;";
     }
+
+    // leaf 2019
+    $out = html_entity_decode($teacher->tn);
+    if($out=="GREEN"){
+    echo "<div class='sc_19'><p><img alt='2020' src = 'assets/img/images/2021.jpg' style='width:50%;'></p></div>&nbsp;";
+    }elseif($out=="ORANGE"){
+    echo "<div class='sc_19'><p><img alt='2020' src = 'assets/img/images/orange.jpg' style='width:50%;'></p></div>&nbsp;";
+    }elseif($out=="YELLOW"){
+    echo "<div class='sc_19'><p><img alt='2020' src = 'assets/img/images/yellow.jpg' style='width:50%;'></p></div>&nbsp;";
+    }else{
+      echo "<div class='sc_19'><p><img alt='2020' src = 'assets/img/images/red.jpg' style='width:50%;'></p></div>&nbsp;";
+    }
+    //..........
+     // leaf 2018
+     $out = html_entity_decode($teacher->te);
+     if($out=="GREEN"){
+     echo "<div class='sc_18'><p><img alt='2020' src = 'assets/img/images/2021.jpg' style='width:50%;'></p></div>&nbsp;";
+     }elseif($out=="ORANGE"){
+     echo "<div class='sc_18'><p><img alt='2020' src = 'assets/img/images/orange.jpg' style='width:50%;'></p></div>&nbsp;";
+     }elseif($out=="YELLOW"){
+     echo "<div class='sc_18'><p><img alt='2020' src = 'assets/img/images/yellow.jpg' style='width:50%;'></p></div>&nbsp;";
+     }else{
+       echo "<div class='sc_18'><p><img alt='2020' src = 'assets/img/images/red.jpg' style='width:50%;'></p></div>&nbsp;";
+     }
+     //..........
+
+     // leaf 2017
+     $out = html_entity_decode($teacher->ts);
+     if($out=="GREEN"){
+     echo "<div class='sc_17'><p><img alt='2020' src = 'assets/img/images/2021.jpg' style='width:50%;'></p></div>&nbsp;";
+     }elseif($out=="ORANGE"){
+     echo "<div class='sc_17'><p><img alt='2020' src = 'assets/img/images/orange.jpg' style='width:50%;'></p></div>&nbsp;";
+     }elseif($out=="YELLOW"){
+     echo "<div class='sc_17'><p><img alt='2020' src = 'assets/img/images/yellow.jpg' style='width:50%;'></p></div>&nbsp;";
+     }else{
+       echo "<div class='sc_17'><p><img alt='2020' src = 'assets/img/images/red.jpg' style='width:50%;'></p></div>&nbsp;";
+     }
+     //..........
 
   echo "<div class='principal'>" . strtoupper($teacher->school_name) ."</div>&nbsp;";
     $length = strlen($teacher->school_name);
@@ -84,7 +128,10 @@ body{
 .sc_ap{position:absolute;text-align:left;top:423px; margin-left: 22px;width:270px;height:115px;font-size: 9px;}
 .sc_pw{position:absolute;text-align:left;top:543px; margin-left: 22px;width:270px;height:55px;font-size: 9px;}
 .sc_si{position:absolute;text-align:left;top:597px; margin-left: 22px;width:270px;height:55px;font-size: 9px;}
-.sc_20{position:absolute;text-align:center;top:157px; margin-left: 370px;}
+.sc_20{position:absolute;text-align:center;top:163px; margin-left: 370px;}
+.sc_19{position:absolute;text-align:center;top:185px; margin-left: 370px;}
+.sc_18{position:absolute;text-align:center;top:206px; margin-left: 370px;}
+.sc_17{position:absolute;text-align:center;top:227px; margin-left: 370px;}
 
 
 
