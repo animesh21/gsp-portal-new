@@ -109,11 +109,11 @@ class School_model extends CI_Model
             $subject = "GSP Audit Registration".$date;
             $msg = "Dear &nbsp;";
             $msg .= $query->coname . "," . "<br/><br/>";
-            $msg .= "Thank you for registering your school '" . $query->name . "', for GSP (Green Schools Programme) network. This is a one-time process and now that your school's account has been successfully created, you need not register your school again.<br><br>";
+            $msg .= "Thank you for registering your school '" . $query->name . "', for the GSP (Green Schools Programme) network. This is a one-time process and now that your school's account has been successfully created, you need not register your school again.<br><br>";
             $msg .= "Under the GSP programme, we have been organising a range of offline and online environmental <a href=\'https://www.greenschoolsprogramme.org/schools/online-events/'> activities </a> for students and teachers.<br><br>";
             $msg .= "Going ahead, you will be notified of our new initiatives as and when they are launched on the email ids provided in the registration form.<br><br>";
            $msg .= "Please save your login credentials to be used when you want to participate in the GSP initiatives. There is no fee for participation.<br><br>";
-           $msg .= "<strong>Please spell the name of your school correctly the name provided by you will appear on the digital certificates and other documents.</strong><br><br>";
+           $msg .= "<strong>Please spell the name of your school correctly as the name provided by you will appear on the digital certificates and other documents.</strong><br><br>";
 
            $msg .= "Should the principal or the GSP coordinator change, please inform us at support@greenschoolsprogramme.org and we will update the database. <br><br>";           
            $msg .= "URL: http://www.greenschoolsprogramme.org/ <br/><br/>";
@@ -261,11 +261,11 @@ class School_model extends CI_Model
         //     $msg .= "We request you to save your username and password given below for future reference. We will keep you posted on the GSP Audit 2020 launch.<br><br>";
         //    $msg .= "To participate, please remember to save your username and password given below.<br><br>";
         //     $msg .= "URL: http://www.greenschoolsprogramme.org/audit/20 <br/><br/>";
-        $msg .= "Thank you for registering your school '" . $query->name . "', for GSP (Green Schools Programme) network. This is a one-time process and now that your school's account has been successfully created, you need not register your school again.<br><br>";
+        $msg .= "Thank you for registering your school '" . $query->name . "', for the GSP (Green Schools Programme) network. This is a one-time process and now that your school's account has been successfully created, you need not register your school again.<br><br>";
         $msg .= "Under the GSP programme, we have been organising a range of offline and online environmental <a href='https://www.greenschoolsprogramme.org/schools/online-events/'> activities </a> for students and teachers.<br><br>";
         $msg .= "Going ahead, you will be notified of our new initiatives as and when they are launched on the email ids provided in the registration form.<br><br>";
        $msg .= "Please save your login credentials to be used when you want to participate in the GSP initiatives. There is no fee for participation.<br><br>";
-       $msg .= "<strong>Please spell the name of your school correctly the name provided by you will appear on the digital certificates and other documents.</strong><br><br>";
+       $msg .= "<strong>Please spell the name of your school correctly as the name provided by you will appear on the digital certificates and other documents.</strong><br><br>";
 
        $msg .= "Should the principal or the GSP coordinator change, please inform us at support@greenschoolsprogramme.org and we will update the database. <br><br>";           
        $msg .= "URL: http://www.greenschoolsprogramme.org/ <br/><br/>";
