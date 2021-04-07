@@ -12,7 +12,7 @@
 
     if ($teacher->school !="") {
         echo "<div class='container'>
-        <div class='image'><img src='assets/img/images/poster.png' width='500' height='707'></div>";
+        <div class='image'><img src='assets/img/images/poster.jpg' width='500' height='707'></div>";
 
     echo "<div class='sc_name'>" . strtoupper($teacher->school) ."</div>&nbsp;";
     echo "<div class='sc_state'>" . strtoupper($teacher->district) .",". strtoupper($teacher->state) ."</div>&nbsp;";
