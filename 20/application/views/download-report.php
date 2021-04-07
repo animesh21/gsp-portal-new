@@ -129,14 +129,14 @@
           </div>
           <div class="col-md-4">
             <div class="schools-statics" style="width:100%;" id="flat">
-             <a href="" target="_blank">
+             <!-- <a href="" target="_blank"> -->
               <div class="statics-circle"> <span><i class="fa fa-file-text-o fa-2x"></i></span> </div>
               
               <div class="title"><strong>Performance Report</strong></div>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="schools-statics" style="width:100%;" id="flat">
+            <div class="schools-statics" style="width:100%;" id="flat1">
 	         	<!-- <a href="<?php echo base_url('/download/getdigitalCertificate/').$this->
               session->userdata('USER_ID') ?>" target="_blank"> -->
               <div class="statics-circle"> <span><i class="fa fa-file-text-o fa-2x"></i></span> </div>
@@ -203,7 +203,7 @@ ul.nav li:hover > ul.dropdown-menu { display: block; z-index:10000;}
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
 <script type="text/javascript">
   $(document).ready (function(){
-    $('#flat').click(function(){
+    $('#flat,#flat1').click(function(){
       alert('Coming Soon');
     });
   });
