@@ -103,11 +103,11 @@
 <style type="text/css">
           @font-face {
   font-family: myFirstFont;
-  src: url(18/assets/scriptina/mtcorsva.ttf);
+  src: url(20/assets/scriptina/CalibriRegular.ttf);
 }
 
 body{
-  font-family: mtcorsva; font-size: 20px;
+  font-family: CalibriRegular; font-size: 20px;
 } 
 
 
@@ -126,7 +126,7 @@ body{
 .sc_towg{position:absolute;text-align:center;top:342px; margin-left: 220px;font-size: 9px;color:#41ad49;}
 .sc_pow{position:absolute;text-align:center;top:367px; margin-left: 220px;font-size: 9px;color:#41ad49;}
 .sc_ap{position:absolute;text-align:left;top:423px; margin-left: 22px;width:270px;height:115px;font-size: 9px;}
-.sc_pw{position:absolute;text-align:left;top:543px; margin-left: 22px;width:270px;height:55px;font-size: 9px;}
+.sc_pw{position:absolute;text-align:left;top:513px; margin-left: 22px;width:270px;height:55px;font-size: 9px;}
 .sc_si{position:absolute;text-align:left;top:597px; margin-left: 22px;width:270px;height:55px;font-size: 9px;}
 .sc_20{position:absolute;text-align:center;top:163px; margin-left: 370px;}
 .sc_19{position:absolute;text-align:center;top:185px; margin-left: 370px;}
