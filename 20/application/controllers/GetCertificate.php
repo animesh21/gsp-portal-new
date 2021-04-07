@@ -63,7 +63,7 @@ class GetCertificate extends CI_Controller{
            $data['title'] = 'Home';
         //    $data['id'] = $argID;
         // $schoolId=getSchoolId($this->session->userdata('USER_ID'));
-        $mobile=30;
+        $mobile=42;
 
 
         $this->db->where("schoolno",$mobile);

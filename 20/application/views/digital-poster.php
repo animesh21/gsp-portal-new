@@ -107,12 +107,12 @@
 }
 
 body{
-  font-family: CalibriRegular; font-size: 20px;
+  font-family: Calibri; font-size: 20px;
 } 
 
 
 .sc_sc{position:absolute;text-align:center;top:208px; margin-left: 50px;font-size: 9px;color:#41ad49;}
-.sc_st{position:absolute;text-align:center;top:233px; margin-left: 50px;font-size: 9px;color:#41ad49;}
+.sc_st{position:absolute;text-align:center;top:233px; margin-left: 50px;font-size: 7px;color:#41ad49;}
 .sc_ll_hl{position:absolute;text-align:center;top:183px; margin-left: 147px;font-size: 10px;color:#41ad49;}
 .sc_p{position:absolute;text-align:center;top:212px; margin-left: 147px;font-size: 10px;color:#41ad49;}
 .sc_sw{position:absolute;text-align:center;top:192px; margin-left: 243px;font-size: 9px;color:#41ad49;}
