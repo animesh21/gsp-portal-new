@@ -63,7 +63,56 @@ class GetCertificate extends CI_Controller{
            $data['title'] = 'Home';
         //    $data['id'] = $argID;
         // $schoolId=getSchoolId($this->session->userdata('USER_ID'));
-        $mobile=42;
+        $mobile=2088;
+
+
+        $this->db->where("schoolno",$mobile);
+        $phase2=$this->db->select("*")->from("poster")->get()->result();
+        
+
+
+        if(!empty($phase2)){
+
+        $data['teachers'] = $phase2;
+        // echo'<pre>';
+        // print_r($phase2);
+
+
+        $data['title']="GSP Poster";
+        $this->load->library('dompdf_lib');
+        ini_set('memory_limit', '-1');
+       
+        $html = $this->load->view('digital-poster', $data, true);
+         $html = preg_replace('/>\s+</', "><", $html);
+       
+        $this->dompdf->load_html($html);
+        $this->dompdf->set_paper(array(0, 0, 380, 560), 'portrait');
+        $this->dompdf->render();
+        $this->dompdf->stream("Digital Certificate.pdf", array("Attachment" => false));
+		// $this->db->where('id', $dataCertificate[0]->id);
+        // $this->db->update('gsp_skill_building_camp', array('download_count'=>$dataCertificate[0]->download_count+1));
+        }
+        else{
+            $this->session->set_flashdata('data_name', 'Your password is incorrect. Please try again. For any assistance, write to us at : support@greenschoolprogramme.org');
+            return redirect('GetCertificate');
+
+            
+        }
+
+    }
+
+    public function wasteWarriors(){
+    	// $this->load->view('password_generator');
+        $this->load->view('certificates/closed');
+    }
+
+    public function getWaste($argsID){
+        // ini_set('memory_limit', '-1');      
+        // ini_set('max_execution_time', 300);   
+           $data['title'] = 'Home';
+        //    $data['id'] = $argID;
+        // $schoolId=getSchoolId($this->session->userdata('USER_ID'));
+        $mobile=5828;
 
 
         $this->db->where("schoolno",$mobile);

@@ -53,6 +53,7 @@ class User_model extends CI_Model
             $row = $query->row();
 			if($row->login_status==0)
 			{
+                 
 				$userData = array(
 					'USERNAME' => $row->username,
 					'USER_ID' => $row->id,
