@@ -15,7 +15,7 @@ ul {list-style-type: none;}
 .cover {background: #e0e0e0; width: 100%;}
 .cover .logo {padding: 30px 0 30px 110px;}
 .cover h1 {font-size: 24px; color: #fff; background: #9397a0; text-align: center; padding: 25px 0;}
-.school-detail {width: 90%; margin: 50px auto 10px;}
+.school-detail {width: 90%; margin: 20px auto 10px;}
 .school-detail p {font-size: 20px; margin-bottom: 5px;}
 .school-detail p span {display: inline-block; vertical-align: top;}
 .school-detail p span:first-child {color: #00af4c; width: 200px;}
