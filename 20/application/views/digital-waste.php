@@ -118,7 +118,7 @@ body{
 .link-5{ position:absolute; top:425px; left: 315px; font-size:16px; font-weight:bold;}
 .principal{ position:relative; text-align: center; top:565px; font-size: 18px;}
 .principal1{ position:relative; text-align: center; top:565px; font-size: 15px;}
-.finalScore{ position:relative;top:295px; left: 242px; font-weight: bold; font-size: 25px;}
+.finalScore{ position:relative;top:255px; left: 242px; font-weight: bold; font-size: 25px;}
 .school_name1{ position:relative; text-align: center; top:562px; font-size: 14px;}
 .school_name{ position:relative; text-align: center; top:562px; font-size: 18px;}
 .image{position:absolute; margin-left: -45px; margin-top: -45px;}
