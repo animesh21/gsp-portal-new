@@ -7,9 +7,16 @@
       <tr>
         <th>S.No</th>
         <th>School Id</th>
-        <th>Name of the Schools submitting GSP Audit in 2018</th>
+        <th>Name of the Schools</th>
         <th>State</th>
         <th>District</th>
+        <th>Principle Name</th>
+        <th>School Email</th>
+        <th>Priciple Mobile</th>
+        <th>Coordinator Name</th>
+        <th>Coordinator Email</th>
+        <th>Coordinator Mobile</th>
+        <th>2020 WT Submission</th>
 				<th>2019 Submission</th>
         <th>2018 Submission</th>
         <th>2017 Submission</th>
@@ -27,6 +34,13 @@
         <td><?php echo ($record[$i]->name)? $record[$i]->name : $record[$i]->school_name; ?></td>
         <td><?php echo $record[$i]->state; ?></td>
         <td><?php echo $record[$i]->district; ?></td>
+        <td><?php echo $record[$i]->principle_name; ?></td>
+        <td><?php echo $record[$i]->schoolemail; ?></td>
+        <td><?php echo $record[$i]->mobile; ?></td>
+        <td><?php echo $record[$i]->coname; ?></td>
+        <td><?php echo $record[$i]->coemail; ?></td>
+        <td><?php echo $record[$i]->comobile; ?></td>
+        <td><?php echo $record[$i]->wt; ?></td>
         <td <?php  if(floor($record[$i]->data_2019)>=70){?>style='background-color: Green; color:#000;' <?php }elseif(floor($record[$i]->data_2019)>=50 && floor($record[$i]->data_2019)<=69.9){ ?>style='background:yellow; color:000;' <?php }elseif(floor($record[$i]->data_2019)>=35 && floor($record[$i]->data_2019)<=49.9){ ?> style='background:orange; color:000;'  <?php }elseif(floor($record[$i]->data_2019)<=34.9 && floor($record[$i]->data_2019)!="NA" & floor($record[$i]->data_2019)!=""){?> style='background:red; color:000;' <?php } ?> >
         <?php if(!empty($record[$i]->data_2019)){echo $record[$i]->data_2019;}else{echo "NA";} ?>
         </td>
