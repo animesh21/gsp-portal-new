@@ -23,8 +23,8 @@ class Audit_home_scorecard extends CI_Controller{
 
     public function getAuditScore(){
         $mobile = $this->input->post('parent_mob');
-        $this->db->where("parent_mob",$mobile);
-        $dataCertificate=$this->db->select("*")->from("gsp_audit_home_scorecard_bihar")->get()->result();
+        $this->db->where("mobile",$mobile);
+        $dataCertificate=$this->db->select("*")->from("ww")->get()->result();
          
 
         // $this->session->set_flashdata('data_name', 'The link to download the GSP Online Air Seminar April 2020 certificate is now closed.');
@@ -34,11 +34,11 @@ class Audit_home_scorecard extends CI_Controller{
        if(count($dataCertificate)==1){
         $data['teachers'] = $dataCertificate;
 
-        $data['title']="GSP Student Audit Home Score";
+        $data['title']="Waste Warriors";
         $this->load->library('dompdf_lib');
         ini_set('memory_limit', '-1');
        
-        $html = $this->load->view('gsp_audit_home_scorecard', $data, true);
+        $html = $this->load->view('digital-waste', $data, true);
         $html = preg_replace('/>\s+</', "><", $html);
 
         $this->dompdf->load_html($html);
