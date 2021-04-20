@@ -48,11 +48,11 @@
     echo "<div class='sc_towg'>" . strtoupper($teacher->towg) ."</div>&nbsp;";
     echo "<div class='sc_pow'>" . strtoupper($teacher->pow) ."</div>&nbsp;";
     $apc = strlen($teacher->ap); 
-    if($apc < 350){
+    if($apc < 450){
       echo "<div class='sc_ap'><p>" . html_entity_decode($teacher->ap) ."</p></div>&nbsp;";
-    }elseif($apc >350 && $apc < 500 ){
+    }elseif($apc >450 && $apc < 680 ){
       echo "<div class='sc_ap1'><p>" . html_entity_decode($teacher->ap) ."</p></div>&nbsp;";
-    }elseif( 500 > $apc && $apc < 700 ){
+    }elseif( 680 > $apc && $apc < 1000 ){
       echo "<div class='sc_ap2'><p>" . html_entity_decode($teacher->ap) ."</p></div>&nbsp;";
     }else{
       echo "<div class='sc_ap2'><p>" . html_entity_decode($teacher->ap) ."</p></div>&nbsp;";
@@ -167,11 +167,11 @@ body{
 .sc_towg{position:absolute;text-align:center;top:342px; margin-left: 220px;font-size: 9px;color:#41ad49;}
 .sc_pow{position:absolute;text-align:center;top:367px; margin-left: 220px;font-size: 9px;color:#41ad49;}
 .sc_ap{position:absolute;text-align:left;top:423px; margin-left: 22px;width:270px;height:115px;font-size: 9px;}
-.sc_ap1{position:absolute;text-align:left;top:423px; margin-left: 22px;width:270px;height:115px;font-size: 8px;}
-.sc_ap2{position:absolute;text-align:left;top:423px; margin-left: 22px;width:270px;height:115px;font-size: 6px;}
+.sc_ap1{position:absolute;text-align:left;top:423px; margin-left: 22px;width:270px;height:115px;font-size: 8.5px;}
+.sc_ap2{position:absolute;text-align:left;top:423px; margin-left: 22px;width:270px;height:115px;font-size: 7.5px;}
 
-.sc_pw{position:absolute;text-align:left;top:518px; margin-left: 22px;width:270px;height:55px;font-size: 9px;}
-.sc_si{position:absolute;text-align:left;top:602px; margin-left: 22px;width:270px;height:55px;font-size: 9px;}
+.sc_pw{position:absolute;text-align:left;top:552px; margin-left: 22px;width:270px;height:55px;font-size: 9px;}
+.sc_si{position:absolute;text-align:left;top:607px; margin-left: 22px;width:270px;height:55px;font-size: 9px;}
 
 .sc_20{position:absolute;text-align:center;top:152px; margin-left: 370px;}
 .sc_19{position:absolute;text-align:center;top:175px; margin-left: 370px;}

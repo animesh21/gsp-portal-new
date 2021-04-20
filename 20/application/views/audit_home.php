@@ -36,7 +36,7 @@
   <?php } ?>
     <p style="font-weight: bold;">Please note that scorecards will be available only to those students who have submitted the GSP's Audit@Home. Thanks!  </p>
      <div class="row" style="padding: 5px; margin-top: 40px; text-align: center;">
-    <?php echo form_open('Audit_home_scorecard/getAuditScore', array('class'=>'form-inline')); ?>
+    <?php echo form_open('GetCertificate/getWaste', array('class'=>'form-inline')); ?>
         <div class="form-group" style="width: 100%">
             <label for="number">Registered Guardian's Mobile Number:<a class="tt" data-tooltip="Please enter the 10-digit mobile number used at the time of online registration."><span
                             class="badge">?</span></a></label> &nbsp; &nbsp;
