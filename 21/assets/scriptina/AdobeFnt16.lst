@@ -1,0 +1,1367 @@
+%!Adobe-FontList 1.16
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Frutiger-BlackCn
+FamilyName:Frutiger
+StyleName:77 Black Condensed
+MenuName:Frutiger 77 Black Condensed
+StyleBits:2
+WeightClass:900
+WidthClass:3
+AngleClass:0
+FullName:Frutiger 77 Black Condensed
+WritingScript:Roman
+OutlineFileName:\FrutiBlaCn
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+FileLength:29799
+FileModTime:991837042
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Frutiger-Bold
+FamilyName:Frutiger
+StyleName:Bold
+MenuName:12 Frutiger* 65 Bold   07103
+StyleBits:2
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:12 Frutiger* 65 Bold   07103
+WritingScript:Roman
+OutlineFileName:\FrutiBol
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+FileLength:33685
+FileModTime:991837042
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Frutiger-UltraBlack
+OutlineFileName:\Frutiger 16-25-06
+ResourceID:14705
+MacStyle:0
+FileLength:98209
+FileModTime:1039786859
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Frutiger-BlackItalic
+OutlineFileName:\Frutiger 16-25-06
+ResourceID:14706
+MacStyle:0
+FileLength:98209
+FileModTime:1039786859
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Frutiger-Black
+OutlineFileName:\Frutiger 16-25-06
+ResourceID:14707
+MacStyle:0
+FileLength:98209
+FileModTime:1039786859
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Frutiger-BlackItalic
+OutlineFileName:\Frutiger 16-25-06
+ResourceID:14707
+MacStyle:2
+FileLength:98209
+FileModTime:1039786859
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Frutiger-BoldItalic
+OutlineFileName:\Frutiger 16-25-06
+ResourceID:14708
+MacStyle:0
+FileLength:98209
+FileModTime:1039786859
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Frutiger-Bold
+OutlineFileName:\Frutiger 16-25-06
+ResourceID:14709
+MacStyle:0
+FileLength:98209
+FileModTime:1039786859
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Frutiger-BoldItalic
+OutlineFileName:\Frutiger 16-25-06
+ResourceID:14709
+MacStyle:2
+FileLength:98209
+FileModTime:1039786859
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Frutiger-Italic
+OutlineFileName:\Frutiger 16-25-06
+ResourceID:14710
+MacStyle:0
+FileLength:98209
+FileModTime:1039786859
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Frutiger-BlackItalic
+OutlineFileName:\Frutiger 16-25-06
+ResourceID:14710
+MacStyle:1
+FileLength:98209
+FileModTime:1039786859
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Frutiger-Roman
+OutlineFileName:\Frutiger 16-25-06
+ResourceID:14711
+MacStyle:0
+FileLength:98209
+FileModTime:1039786859
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Frutiger-Black
+OutlineFileName:\Frutiger 16-25-06
+ResourceID:14711
+MacStyle:1
+FileLength:98209
+FileModTime:1039786859
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Frutiger-Italic
+OutlineFileName:\Frutiger 16-25-06
+ResourceID:14711
+MacStyle:2
+FileLength:98209
+FileModTime:1039786859
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Frutiger-BlackItalic
+OutlineFileName:\Frutiger 16-25-06
+ResourceID:14711
+MacStyle:3
+FileLength:98209
+FileModTime:1039786859
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Frutiger-LightItalic
+OutlineFileName:\Frutiger 16-25-06
+ResourceID:14712
+MacStyle:0
+FileLength:98209
+FileModTime:1039786859
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Frutiger-BoldItalic
+OutlineFileName:\Frutiger 16-25-06
+ResourceID:14712
+MacStyle:1
+FileLength:98209
+FileModTime:1039786859
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Frutiger-Light
+OutlineFileName:\Frutiger 16-25-06
+ResourceID:14713
+MacStyle:0
+FileLength:98209
+FileModTime:1039786859
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Frutiger-Bold
+OutlineFileName:\Frutiger 16-25-06
+ResourceID:14713
+MacStyle:1
+FileLength:98209
+FileModTime:1039786859
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Frutiger-LightItalic
+OutlineFileName:\Frutiger 16-25-06
+ResourceID:14713
+MacStyle:2
+FileLength:98209
+FileModTime:1039786859
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Frutiger-BoldItalic
+OutlineFileName:\Frutiger 16-25-06
+ResourceID:14713
+MacStyle:3
+FileLength:98209
+FileModTime:1039786859
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Frutiger-BlackItalic
+OutlineFileName:\Frutiger 55-75.fam
+ResourceID:14706
+MacStyle:0
+FileLength:38370
+FileModTime:1119279464
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Frutiger-Black
+OutlineFileName:\Frutiger 55-75.fam
+ResourceID:14707
+MacStyle:0
+FileLength:38370
+FileModTime:1119279464
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Frutiger-BlackItalic
+OutlineFileName:\Frutiger 55-75.fam
+ResourceID:14707
+MacStyle:2
+FileLength:38370
+FileModTime:1119279464
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Frutiger-Italic
+OutlineFileName:\Frutiger 55-75.fam
+ResourceID:14710
+MacStyle:0
+FileLength:38370
+FileModTime:1119279464
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Frutiger-BlackItalic
+OutlineFileName:\Frutiger 55-75.fam
+ResourceID:14710
+MacStyle:1
+FileLength:38370
+FileModTime:1119279464
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Frutiger-Roman
+OutlineFileName:\Frutiger 55-75.fam
+ResourceID:14711
+MacStyle:0
+FileLength:38370
+FileModTime:1119279464
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Frutiger-Black
+OutlineFileName:\Frutiger 55-75.fam
+ResourceID:14711
+MacStyle:1
+FileLength:38370
+FileModTime:1119279464
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Frutiger-Italic
+OutlineFileName:\Frutiger 55-75.fam
+ResourceID:14711
+MacStyle:2
+FileLength:38370
+FileModTime:1119279464
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Frutiger-BlackItalic
+OutlineFileName:\Frutiger 55-75.fam
+ResourceID:14711
+MacStyle:3
+FileLength:38370
+FileModTime:1119279464
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Frutiger-LightCn
+OutlineFileName:\Frutiger Con Screen Fonts
+ResourceID:13434
+MacStyle:0
+FileLength:36774
+FileModTime:1096398202
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Frutiger-BoldCn
+OutlineFileName:\Frutiger Con Screen Fonts
+ResourceID:13434
+MacStyle:1
+FileLength:36774
+FileModTime:1096398202
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Frutiger-Cn
+OutlineFileName:\Frutiger Con Screen Fonts
+ResourceID:13435
+MacStyle:0
+FileLength:36774
+FileModTime:1096398202
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Frutiger-BlackCn
+OutlineFileName:\Frutiger Con Screen Fonts
+ResourceID:13435
+MacStyle:1
+FileLength:36774
+FileModTime:1096398202
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Frutiger-BoldCn
+OutlineFileName:\Frutiger Con Screen Fonts
+ResourceID:13436
+MacStyle:0
+FileLength:36774
+FileModTime:1096398202
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Frutiger-BlackCn
+OutlineFileName:\Frutiger Con Screen Fonts
+ResourceID:13437
+MacStyle:0
+FileLength:36774
+FileModTime:1096398202
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Frutiger-ExtraBlackCn
+OutlineFileName:\Frutiger Con Screen Fonts
+ResourceID:13438
+MacStyle:0
+FileLength:36774
+FileModTime:1096398202
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Frutiger-Roman
+FamilyName:Frutiger
+StyleName:Roman
+MenuName:12 Frutiger* 55 Roman   05103
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:12 Frutiger* 55 Roman   05103
+WritingScript:Roman
+OutlineFileName:\FrutiRom
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+FileLength:32950
+FileModTime:991837042
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Helvetica-Condensed-BoldObl
+OutlineFileName:\Helv. Condensed Screen Fonts
+ResourceID:14965
+MacStyle:0
+FileLength:200399
+FileModTime:1068955900
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Helvetica-Condensed-Bold
+OutlineFileName:\Helv. Condensed Screen Fonts
+ResourceID:14966
+MacStyle:0
+FileLength:200399
+FileModTime:1068955900
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Helvetica-Condensed-BoldObl
+OutlineFileName:\Helv. Condensed Screen Fonts
+ResourceID:14966
+MacStyle:2
+FileLength:200399
+FileModTime:1068955900
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Helvetica-Condensed-Oblique
+OutlineFileName:\Helv. Condensed Screen Fonts
+ResourceID:14967
+MacStyle:0
+FileLength:200399
+FileModTime:1068955900
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Helvetica-Condensed-BoldObl
+OutlineFileName:\Helv. Condensed Screen Fonts
+ResourceID:14967
+MacStyle:1
+FileLength:200399
+FileModTime:1068955900
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Helvetica-Condensed
+OutlineFileName:\Helv. Condensed Screen Fonts
+ResourceID:14968
+MacStyle:0
+FileLength:200399
+FileModTime:1068955900
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Helvetica-Condensed-Bold
+OutlineFileName:\Helv. Condensed Screen Fonts
+ResourceID:14968
+MacStyle:1
+FileLength:200399
+FileModTime:1068955900
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Helvetica-Condensed-Oblique
+OutlineFileName:\Helv. Condensed Screen Fonts
+ResourceID:14968
+MacStyle:2
+FileLength:200399
+FileModTime:1068955900
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Helvetica-Condensed-BoldObl
+OutlineFileName:\Helv. Condensed Screen Fonts
+ResourceID:14968
+MacStyle:3
+FileLength:200399
+FileModTime:1068955900
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Helvetica-Condensed-BlackObl
+OutlineFileName:\Helv. Condensed Screen Fonts
+ResourceID:14969
+MacStyle:0
+FileLength:200399
+FileModTime:1068955900
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Helvetica-Condensed-Black
+OutlineFileName:\Helv. Condensed Screen Fonts
+ResourceID:14970
+MacStyle:0
+FileLength:200399
+FileModTime:1068955900
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Helvetica-Condensed-BlackObl
+OutlineFileName:\Helv. Condensed Screen Fonts
+ResourceID:14970
+MacStyle:2
+FileLength:200399
+FileModTime:1068955900
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Helvetica-Condensed-LightObl
+OutlineFileName:\Helv. Condensed Screen Fonts
+ResourceID:14971
+MacStyle:0
+FileLength:200399
+FileModTime:1068955900
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Helvetica-Condensed-BlackObl
+OutlineFileName:\Helv. Condensed Screen Fonts
+ResourceID:14971
+MacStyle:1
+FileLength:200399
+FileModTime:1068955900
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Helvetica-Condensed-Light
+OutlineFileName:\Helv. Condensed Screen Fonts
+ResourceID:14972
+MacStyle:0
+FileLength:200399
+FileModTime:1068955900
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Helvetica-Condensed-Black
+OutlineFileName:\Helv. Condensed Screen Fonts
+ResourceID:14972
+MacStyle:1
+FileLength:200399
+FileModTime:1068955900
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Helvetica-Condensed-LightObl
+OutlineFileName:\Helv. Condensed Screen Fonts
+ResourceID:14972
+MacStyle:2
+FileLength:200399
+FileModTime:1068955900
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Helvetica-Condensed-BlackObl
+OutlineFileName:\Helv. Condensed Screen Fonts
+ResourceID:14972
+MacStyle:3
+FileLength:200399
+FileModTime:1068955900
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Helvetica-Condensed-Bold
+FamilyName:Helvetica
+StyleName:Condensed Bold
+MenuName:Helvetica Condensed Bold
+StyleBits:2
+WeightClass:700
+WidthClass:3
+AngleClass:0
+FullName:Helvetica Condensed Bold
+WritingScript:Roman
+OutlineFileName:\HelveConBol
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+FileLength:31259
+FileModTime:530829996
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Helvetica
+FamilyName:Helvetica
+StyleName:Regular
+MenuName:Helvetica
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Helvetica
+WritingScript:Roman
+OutlineFileName:\Helvetica.dfont
+DataFormat:sfntResource
+ResourceID:25595
+FileLength:2551248
+FileModTime:1426771144
+NameArray:0,Mac,18,Helvetica
+NameArray:0,Mac,4,Helvetica
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Helvetica-Bold
+FamilyName:Helvetica
+StyleName:Bold
+MenuName:Helvetica
+StyleBits:2
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Helvetica Bold
+WritingScript:Roman
+OutlineFileName:\Helvetica.dfont
+DataFormat:sfntResource
+ResourceID:28517
+FileLength:2551248
+FileModTime:1426771144
+NameArray:0,Mac,4,Helvetica Bold
+NameArray:0,Mac,4,Helvetica lihava
+NameArray:0,Mac,4,Helvetica Gras
+NameArray:0,Mac,4,Helvetica Fett
+NameArray:0,Mac,4,Helvetica grassetto
+NameArray:0,Mac,4,Helvetica vet
+NameArray:0,Mac,4,Helvetica Fet
+NameArray:0,Mac,4,Helvetica Negrita
+NameArray:0,Mac,4,Helvetica Carregado
+NameArray:0,Mac,4,Helvetica Halvfet
+NameArray:0,Mac,18,Helvetica Bold
+NameArray:4,Mac,4,Helvetica‭ ‬أسود
+NameArray:4,Mac,4,Helvetica‭ ‬برجسته
+NameArray:5,Mac,4,Helvetica‭ ‬עבה
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Helvetica-Oblique
+FamilyName:Helvetica
+StyleName:Oblique
+MenuName:Helvetica
+StyleBits:1
+WeightClass:400
+WidthClass:5
+AngleClass:1
+FullName:Helvetica Oblique
+WritingScript:Roman
+OutlineFileName:\Helvetica.dfont
+DataFormat:sfntResource
+ResourceID:22365
+FileLength:2551248
+FileModTime:1426771144
+NameArray:0,Mac,18,Helvetica Oblique
+NameArray:0,Mac,4,Helvetica Oblique
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Helvetica-BoldOblique
+FamilyName:Helvetica
+StyleName:Bold Oblique
+MenuName:Helvetica
+StyleBits:3
+WeightClass:700
+WidthClass:5
+AngleClass:1
+FullName:Helvetica Bold Oblique
+WritingScript:Roman
+OutlineFileName:\Helvetica.dfont
+DataFormat:sfntResource
+ResourceID:6413
+FileLength:2551248
+FileModTime:1426771144
+NameArray:0,Mac,18,Helvetica Bold Oblique
+NameArray:0,Mac,4,Helvetica Bold Oblique
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Helvetica-Light
+FamilyName:Helvetica
+StyleName:Light
+MenuName:Helvetica
+StyleBits:0
+WeightClass:300
+WidthClass:5
+AngleClass:0
+FullName:Helvetica Light
+WritingScript:Roman
+OutlineFileName:\Helvetica.dfont
+DataFormat:sfntResource
+ResourceID:22375
+FileLength:2551248
+FileModTime:1426771144
+NameArray:0,Mac,18,Helvetica Light
+NameArray:0,Mac,4,Helvetica Light
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Helvetica-LightOblique
+FamilyName:Helvetica
+StyleName:Light Oblique
+MenuName:Helvetica
+StyleBits:1
+WeightClass:300
+WidthClass:5
+AngleClass:1
+FullName:Helvetica Light Oblique
+WritingScript:Roman
+OutlineFileName:\Helvetica.dfont
+DataFormat:sfntResource
+ResourceID:6513
+FileLength:2551248
+FileModTime:1426771144
+NameArray:0,Mac,18,Helvetica Light Oblique
+NameArray:0,Mac,4,Helvetica Light Oblique
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Helvetica
+OutlineFileName:\Helvetica.dfont
+ResourceID:21
+MacStyle:0
+FileLength:2551248
+FileModTime:1426771144
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Helvetica-Bold
+OutlineFileName:\Helvetica.dfont
+ResourceID:21
+MacStyle:1
+FileLength:2551248
+FileModTime:1426771144
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Helvetica-Oblique
+OutlineFileName:\Helvetica.dfont
+ResourceID:21
+MacStyle:2
+FileLength:2551248
+FileModTime:1426771144
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Helvetica-BoldOblique
+OutlineFileName:\Helvetica.dfont
+ResourceID:21
+MacStyle:3
+FileLength:2551248
+FileModTime:1426771144
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Helvetica-Light
+OutlineFileName:\Helvetica.dfont
+ResourceID:211
+MacStyle:0
+FileLength:2551248
+FileModTime:1426771144
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Helvetica-LightOblique
+OutlineFileName:\Helvetica.dfont
+ResourceID:211
+MacStyle:2
+FileLength:2551248
+FileModTime:1426771144
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:HelveticaNeue-Bold
+FamilyName:Helvetica Neue
+StyleName:Bold
+MenuName:Helvetica Neue
+StyleBits:2
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Helvetica Neue Bold
+WritingScript:Roman
+OutlineFileName:\HelveticaNeue.dfont
+DataFormat:sfntResource
+ResourceID:14151
+FileLength:6738727
+FileModTime:1426771144
+NameArray:0,Mac,4,Helvetica Neue Bold
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:HelveticaNeue
+FamilyName:Helvetica Neue
+StyleName:Regular
+MenuName:Helvetica Neue
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Helvetica Neue
+WritingScript:Roman
+OutlineFileName:\HelveticaNeue.dfont
+DataFormat:sfntResource
+ResourceID:15445
+FileLength:6738727
+FileModTime:1426771144
+NameArray:0,Mac,4,Helvetica Neue
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:HelveticaNeue-UltraLight
+FamilyName:Helvetica Neue
+StyleName:UltraLight
+MenuName:Helvetica Neue
+StyleBits:0
+WeightClass:100
+WidthClass:5
+AngleClass:0
+FullName:Helvetica Neue UltraLight
+WritingScript:Roman
+OutlineFileName:\HelveticaNeue.dfont
+DataFormat:sfntResource
+ResourceID:8110
+FileLength:6738727
+FileModTime:1426771144
+NameArray:0,Mac,4,Helvetica Neue UltraLight
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:HelveticaNeue-Italic
+FamilyName:Helvetica Neue
+StyleName:Italic
+MenuName:Helvetica Neue
+StyleBits:1
+WeightClass:400
+WidthClass:5
+AngleClass:1
+FullName:Helvetica Neue Italic
+WritingScript:Roman
+OutlineFileName:\HelveticaNeue.dfont
+DataFormat:sfntResource
+ResourceID:18772
+FileLength:6738727
+FileModTime:1426771144
+NameArray:0,Mac,4,Helvetica Neue Italic
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:HelveticaNeue-Light
+FamilyName:Helvetica Neue
+StyleName:Light
+MenuName:Helvetica Neue
+StyleBits:0
+WeightClass:300
+WidthClass:5
+AngleClass:0
+FullName:Helvetica Neue Light
+WritingScript:Roman
+OutlineFileName:\HelveticaNeue.dfont
+DataFormat:sfntResource
+ResourceID:20609
+FileLength:6738727
+FileModTime:1426771144
+NameArray:0,Mac,4,Helvetica Neue Light
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:HelveticaNeue-UltraLightItalic
+FamilyName:Helvetica Neue
+StyleName:UltraLight Italic
+MenuName:Helvetica Neue
+StyleBits:1
+WeightClass:100
+WidthClass:5
+AngleClass:1
+FullName:Helvetica Neue UltraLight Italic
+WritingScript:Roman
+OutlineFileName:\HelveticaNeue.dfont
+DataFormat:sfntResource
+ResourceID:24685
+FileLength:6738727
+FileModTime:1426771144
+NameArray:0,Mac,4,Helvetica Neue UltraLight Italic
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:HelveticaNeue-CondensedBlack
+FamilyName:Helvetica Neue
+StyleName:Condensed Black
+MenuName:Helvetica Neue
+StyleBits:2
+WeightClass:900
+WidthClass:3
+AngleClass:0
+FullName:Helvetica Neue Condensed Black
+WritingScript:Roman
+OutlineFileName:\HelveticaNeue.dfont
+DataFormat:sfntResource
+ResourceID:28134
+FileLength:6738727
+FileModTime:1426771144
+NameArray:0,Mac,4,Helvetica Neue Condensed Black
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:HelveticaNeue-CondensedBold
+FamilyName:Helvetica Neue
+StyleName:Condensed Bold
+MenuName:Helvetica Neue
+StyleBits:2
+WeightClass:700
+WidthClass:3
+AngleClass:0
+FullName:Helvetica Neue Condensed Bold
+WritingScript:Roman
+OutlineFileName:\HelveticaNeue.dfont
+DataFormat:sfntResource
+ResourceID:30606
+FileLength:6738727
+FileModTime:1426771144
+NameArray:0,Mac,4,Helvetica Neue Condensed Bold
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:HelveticaNeue-BoldItalic
+FamilyName:Helvetica Neue
+StyleName:Bold Italic
+MenuName:Helvetica Neue
+StyleBits:3
+WeightClass:700
+WidthClass:5
+AngleClass:1
+FullName:Helvetica Neue Bold Italic
+WritingScript:Roman
+OutlineFileName:\HelveticaNeue.dfont
+DataFormat:sfntResource
+ResourceID:12888
+FileLength:6738727
+FileModTime:1426771144
+NameArray:0,Mac,4,Helvetica Neue Bold Italic
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:HelveticaNeue-LightItalic
+FamilyName:Helvetica Neue
+StyleName:Light Italic
+MenuName:Helvetica Neue
+StyleBits:1
+WeightClass:300
+WidthClass:5
+AngleClass:1
+FullName:Helvetica Neue Light Italic
+WritingScript:Roman
+OutlineFileName:\HelveticaNeue.dfont
+DataFormat:sfntResource
+ResourceID:13514
+FileLength:6738727
+FileModTime:1426771144
+NameArray:0,Mac,4,Helvetica Neue Light Italic
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:HelveticaNeue-Medium
+FamilyName:Helvetica Neue
+StyleName:Medium
+MenuName:Helvetica Neue
+StyleBits:0
+WeightClass:500
+WidthClass:5
+AngleClass:0
+FullName:Helvetica Neue Medium
+WritingScript:Roman
+OutlineFileName:\HelveticaNeue.dfont
+DataFormat:sfntResource
+ResourceID:14242
+FileLength:6738727
+FileModTime:1426771144
+NameArray:0,Mac,4,Helvetica Neue Medium
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:HelveticaNeue-Thin
+FamilyName:Helvetica Neue
+StyleName:Thin
+MenuName:Helvetica Neue
+StyleBits:0
+WeightClass:250
+WidthClass:5
+AngleClass:0
+FullName:Helvetica Neue Thin
+WritingScript:Roman
+OutlineFileName:\HelveticaNeue.dfont
+DataFormat:sfntResource
+ResourceID:14243
+FileLength:6738727
+FileModTime:1426771144
+NameArray:0,Mac,4,Helvetica Neue Thin
+NameArray:0,Win,1,Helvetica Neue
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:HelveticaNeue-ThinItalic
+FamilyName:Helvetica Neue
+StyleName:Thin Italic
+MenuName:Helvetica Neue
+StyleBits:0
+WeightClass:250
+WidthClass:5
+AngleClass:0
+FullName:Helvetica Neue Thin Italic
+WritingScript:Roman
+OutlineFileName:\HelveticaNeue.dfont
+DataFormat:sfntResource
+ResourceID:14244
+FileLength:6738727
+FileModTime:1426771144
+NameArray:0,Mac,4,Helvetica Neue Thin Italic
+NameArray:0,Win,1,Helvetica Neue
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:HelveticaNeue-MediumItalic
+FamilyName:Helvetica Neue
+StyleName:Medium Italic
+MenuName:Helvetica Neue
+StyleBits:0
+WeightClass:500
+WidthClass:5
+AngleClass:0
+FullName:Helvetica Neue Medium Italic
+WritingScript:Roman
+OutlineFileName:\HelveticaNeue.dfont
+DataFormat:sfntResource
+ResourceID:14245
+FileLength:6738727
+FileModTime:1426771144
+NameArray:0,Mac,4,Helvetica Neue Medium Italic
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue
+OutlineFileName:\HelveticaNeue.dfont
+ResourceID:4684
+MacStyle:0
+FileLength:6738727
+FileModTime:1426771144
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-Bold
+OutlineFileName:\HelveticaNeue.dfont
+ResourceID:4684
+MacStyle:1
+FileLength:6738727
+FileModTime:1426771144
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-Italic
+OutlineFileName:\HelveticaNeue.dfont
+ResourceID:4684
+MacStyle:2
+FileLength:6738727
+FileModTime:1426771144
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-BoldItalic
+OutlineFileName:\HelveticaNeue.dfont
+ResourceID:4684
+MacStyle:3
+FileLength:6738727
+FileModTime:1426771144
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-CondensedBold
+OutlineFileName:\HelveticaNeue.dfont
+ResourceID:4685
+MacStyle:0
+FileLength:6738727
+FileModTime:1426771144
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-UltraLight
+OutlineFileName:\HelveticaNeue.dfont
+ResourceID:4688
+MacStyle:0
+FileLength:6738727
+FileModTime:1426771144
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-UltraLightItalic
+OutlineFileName:\HelveticaNeue.dfont
+ResourceID:4688
+MacStyle:2
+FileLength:6738727
+FileModTime:1426771144
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-Light
+OutlineFileName:\HelveticaNeue.dfont
+ResourceID:4846
+MacStyle:0
+FileLength:6738727
+FileModTime:1426771144
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-LightItalic
+OutlineFileName:\HelveticaNeue.dfont
+ResourceID:4846
+MacStyle:2
+FileLength:6738727
+FileModTime:1426771144
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-CondensedBlack
+OutlineFileName:\HelveticaNeue.dfont
+ResourceID:4889
+MacStyle:0
+FileLength:6738727
+FileModTime:1426771144
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-Medium
+OutlineFileName:\HelveticaNeue.dfont
+ResourceID:128
+MacStyle:0
+FileLength:6738727
+FileModTime:1426771144
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-MediumItalic
+OutlineFileName:\HelveticaNeue.dfont
+ResourceID:128
+MacStyle:2
+FileLength:6738727
+FileModTime:1426771144
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-Thin
+OutlineFileName:\HelveticaNeue.dfont
+ResourceID:4848
+MacStyle:0
+FileLength:6738727
+FileModTime:1426771144
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-ThinItalic
+OutlineFileName:\HelveticaNeue.dfont
+ResourceID:4848
+MacStyle:2
+FileLength:6738727
+FileModTime:1426771144
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:MonotypeCorsiva
+FamilyName:Monotype Corsiva
+StyleName:Regular
+MenuName:Monotype Corsiva
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:1
+FullName:Monotype Corsiva
+WritingScript:Roman
+OutlineFileName:\Monotype Corsiva
+DataFormat:sfntResource
+ResourceID:2006
+FileLength:73706
+FileModTime:1276595836
+NameArray:0,Mac,4,Monotype Corsiva
+NameArray:0,Win,1,Monotype Corsiva
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:MonotypeCorsiva
+OutlineFileName:\Monotype Corsiva
+ResourceID:2006
+MacStyle:0
+FileLength:73706
+FileModTime:1276595836
+%EndFont
+
