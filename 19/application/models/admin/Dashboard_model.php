@@ -551,7 +551,7 @@ class Dashboard_model extends CI_Model {
       }
    
    public function getMasterData(){
-        return $this->db->select('a.name,b.school_id,b.school_name,b.state,b.district,b.data_2019,b.data_2018,b.data_2017,b.data_2016,b.data_2015')
+        return $this->db->select('a.name,b.school_id,b.school_name,b.state,b.district,b.data_2020,b.data_2019,b.data_2018,b.data_2017,b.data_2016,b.data_2015')
         ->from('gsp_school AS a')
         ->join('tbl_yoy as b', 'a.id=b.school_id', 'right')
         ->get()->result();
