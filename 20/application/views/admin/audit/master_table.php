@@ -40,8 +40,8 @@
         <td><?php echo $record[$i]->coname; ?></td>
         <td><?php echo $record[$i]->coemail; ?></td>
         <td><?php echo $record[$i]->comobile; ?></td>
-        <td <?php  if($record[$i]->data_2020=="GREEN"){?>style='background-color: Green; color:#000;' <?php }elseif($record[$i]->data_2020=="YELLOW"){ ?>style='background:yellow; color:000;' <?php }elseif($record[$i]->data_2020=="ORANGE"){ ?> style='background:orange; color:000;'  <?php }elseif($record[$i]->data_2020=="RED"){?> style='background:red; color:000;' <?php } ?> >
-        <?php if(!empty($record[$i]->data_2020)){echo $record[$i]->data_2020;}else{echo "";} ?>
+        <td <?php  if(floor($record[$i]->data_2020)>=70){?>style='background-color: Green; color:#000;' <?php }elseif(floor($record[$i]->data_2020)>=50 && floor($record[$i]->data_2020)<=69.9){ ?>style='background:yellow; color:000;' <?php }elseif(floor($record[$i]->data_2020)>=35 && floor($record[$i]->data_2020)<=49.9){ ?> style='background:orange; color:000;'  <?php }elseif(floor($record[$i]->data_2020)<=34.9 && floor($record[$i]->data_2020)!="NA" & floor($record[$i]->data_2020)!=""){?> style='background:red; color:000;' <?php } ?> >
+        <?php if(!empty($record[$i]->data_2020)){echo $record[$i]->data_2020;}else{echo "NA";} ?>
         </td>
         <td <?php  if(floor($record[$i]->data_2019)>=70){?>style='background-color: Green; color:#000;' <?php }elseif(floor($record[$i]->data_2019)>=50 && floor($record[$i]->data_2019)<=69.9){ ?>style='background:yellow; color:000;' <?php }elseif(floor($record[$i]->data_2019)>=35 && floor($record[$i]->data_2019)<=49.9){ ?> style='background:orange; color:000;'  <?php }elseif(floor($record[$i]->data_2019)<=34.9 && floor($record[$i]->data_2019)!="NA" & floor($record[$i]->data_2019)!=""){?> style='background:red; color:000;' <?php } ?> >
         <?php if(!empty($record[$i]->data_2019)){echo $record[$i]->data_2019;}else{echo "NA";} ?>
