@@ -63,10 +63,10 @@ class GetCertificate extends CI_Controller{
            $data['title'] = 'Home';
         //    $data['id'] = $argID;
         // $schoolId=getSchoolId($this->session->userdata('USER_ID'));
-        $mobile=1188;
+        // $mobile=1188;
 
-
-        $this->db->where("schoolno",$mobile);
+        $schoolId=getSchoolId($this->session->userdata('USER_ID'));
+        $this->db->where("schoolno",$schoolId);
         $phase2=$this->db->select("*")->from("poster")->get()->result();
         
 
