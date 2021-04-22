@@ -10,9 +10,9 @@
         <th>Name of the Schools</th>
         <th>State</th>
         <th>District</th>
-        <th>Principle Name</th>
+        <th>principal Name</th>
         <th>School Email</th>
-        <th>Priciple Mobile</th>
+        <th>principal Mobile</th>
         <th>Coordinator Name</th>
         <th>Coordinator Email</th>
         <th>Coordinator Mobile</th>
