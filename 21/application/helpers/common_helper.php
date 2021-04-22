@@ -3377,7 +3377,7 @@ if (!function_exists('download_YOY')){
        $dataYoy=array();
          $CI = & get_instance();
          $CI->db->where("school_id",$school_id);
-         $dataYoy=$CI->db->select("data_2019,data_2018,data_2017,data_2016,data_2015")->from("tbl_yoy")->get()->row();
+         $dataYoy=$CI->db->select("data_2020,data_2019,data_2018,data_2017,data_2016,data_2015")->from("tbl_yoy")->get()->row();
          $array = json_decode(json_encode($dataYoy), true);
          $numerical = array(); 
      foreach($array as $k=>$v)

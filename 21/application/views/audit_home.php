@@ -26,7 +26,7 @@
 
 <div class="container" style="padding: 20px">
   <div class="home_container" style="padding: 30px 15px 30px 15px; width: 55%;">
-    <h1 style="text-align: center;">GSP'S Audit@Home Scorecard December 2020</h1>
+    <h1 style="text-align: center;">GSP'S Audit@Home Scorecard February 2021</h1>
     <?php if(!empty($this->session->flashdata('data_name'))) { ?>
      <div class="alert alert-dismissible alert-danger">
       <button type="button" class="close" data-dismiss="alert">&times;</button>

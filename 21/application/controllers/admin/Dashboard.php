@@ -22,8 +22,6 @@ class Dashboard extends CI_Controller {
         $data['title']='Home | Dashboard';
 	
         $this->load->view('admin/includes/template', $data);    
-	    
-       
     }
 	
     public function year() {
@@ -368,6 +366,8 @@ class Dashboard extends CI_Controller {
 		$data['uncomplete']=$this->Dashboard_model->combinded_uncompletecount();
 		$this->load->view('admin/includes/template', $data);
 	}
+
+	
 
 	
     

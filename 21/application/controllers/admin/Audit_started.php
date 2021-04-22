@@ -237,6 +237,7 @@ public function kvs_school_merge() {
             'state_name'=>$record->state_name,
             'district_name'=>$record->district_name,
             'city'=>$record->city,
+            'region'=>$record->region,
             'coname'=>$record->coname,
             'coemail'=>$record->coemail,
             'user_password' => $record->user_password,

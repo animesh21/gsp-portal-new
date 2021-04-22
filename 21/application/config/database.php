@@ -51,7 +51,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |				'ssl_cipher' - List of *allowed* ciphers to be used for the encryption, separated by colons (':')
 |				'ssl_verify' - TRUE/FALSE; Whether verify the server certificate or not ('mysqli' only)
 |
-
 |	['compress'] Whether or not to use client compression (MySQL only)
 |	['stricton'] TRUE/FALSE - forces 'Strict Mode' connections
 |							- good for ensuring strict SQL while developing
