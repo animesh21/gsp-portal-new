@@ -12,7 +12,7 @@
         <th>District</th>
         <th>principal Name</th>
         <th>School Email</th>
-        <th>principal Mobile</th>
+        <th>Principal Mobile</th>
         <th>Coordinator Name</th>
         <th>Coordinator Email</th>
         <th>Coordinator Mobile</th>
