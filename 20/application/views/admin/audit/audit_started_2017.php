@@ -15,6 +15,7 @@
       <th style="width:150px">State</th>
       <th>District</th>
       <th>City</th>
+      <th>Region</th>
       <th>Co-ord. Name</th>
       <th>Co-ord. Email</th>
       <th>Password</th>
@@ -111,6 +112,7 @@ function getBadgeCode(userid)
 						{ mData: 'state_name' },
 						{ mData: 'district_name' },
 						{ mData: 'city' },
+            { mData: 'region' },
 						{ mData: 'coname' },
 						{ mData: 'coemail' },
 						{ mData: 'user_password'},

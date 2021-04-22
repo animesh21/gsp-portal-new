@@ -16,11 +16,12 @@ class Audit_started_model extends CI_Model {
      */
 
     public function getData() {
-        return $this->db->select('a.*, b.name AS state_name,c.name As district_name,d.password AS user_password')
+        return $this->db->select('a.*, b.name AS state_name,c.name As district_name,d.password AS user_password,e.region AS region')
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
                         ->join('cities AS c', 'a.district=c.id', 'left')
                         ->join('gsp_user AS d', 'a.userid=d.id','left')
+                        ->join('region AS e', 'a.id=e.schoolid','left')
                         ->where("a.make_school_disabled","1")
                         ->where("a.kvs_school_status",NULL)
                         ->order_by('a.id', 'desc')
