@@ -501,7 +501,7 @@ class Audit_started_model extends CI_Model {
         $output .= '"State",';
         $output .= '"District",';
         $output .= '"City",';
-        $output .= '"Regions"';
+        $output .= '"Regions",';
         $output .= '"Pincode",';
         $output .= '"ISD Code",';
         $output .= '"STD Code",';
