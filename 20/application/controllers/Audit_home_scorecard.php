@@ -22,6 +22,7 @@ class Audit_home_scorecard extends CI_Controller{
 
 
     public function getAuditScore(){
+        
         $mobile = $this->input->post('parent_mob');
         $this->db->where("mobile",$mobile);
         $dataCertificate=$this->db->select("*")->from("ww")->get()->result();
@@ -67,7 +68,7 @@ class Audit_home_scorecard extends CI_Controller{
 
          // $mobile = $this->input->post('parent_mob');
         $this->db->where("id",$id);
-        $dataCertificate=$this->db->select("*")->from("gsp_audit_home_scorecard_bihar")->get()->result(); 
+        $dataCertificate=$this->db->select("*")->from("ww")->get()->result(); 
 
         if(!empty($dataCertificate)){
        if(count($dataCertificate)==1){
@@ -77,7 +78,7 @@ class Audit_home_scorecard extends CI_Controller{
         $this->load->library('dompdf_lib');
         ini_set('memory_limit', '-1');
        
-        $html = $this->load->view('gsp_audit_home_scorecard', $data, true);
+        $html = $this->load->view('digital_waste', $data, true);
         $html = preg_replace('/>\s+</', "><", $html);
 
         $this->dompdf->load_html($html);
