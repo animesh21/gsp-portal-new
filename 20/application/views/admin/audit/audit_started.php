@@ -6,7 +6,7 @@
           <tr role="row">
             <th>S.No</th>
             <th>Sch.Id</th>
-											 <th>UDISE Code</th>
+						<th>UDISE Code</th>
             <th>School Name</th>
             <th>State</th>
             <th>City</th>

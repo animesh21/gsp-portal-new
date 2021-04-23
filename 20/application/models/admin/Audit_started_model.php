@@ -476,13 +476,14 @@ class Audit_started_model extends CI_Model {
 
      public function getExcelData_phase1() {
         $output = "";
-        $arrRecord = $this->db->select('a.*, b.name AS state_name, c.name AS district_name , d.password')
+        $arrRecord = $this->db->select('a.*, b.name AS state_name, c.name AS district_name , d.password,e.region')
                         ->from('gsp_school AS a')
                         ->join('states AS b', 'a.state=b.id', 'left')
                         ->join('cities AS c', 'a.district=c.id', 'left')
                         ->join('gsp_user AS d', 'a.userid=d.id', 'left')
+                        ->join('region AS e', 'a.id = e.schoolid')
                         ->where(array('make_school_disabled'=>"1"))
-		        ->where("a.kvs_school_status",NULL)
+		                    ->where("a.kvs_school_status",NULL)
                         ->order_by('a.id', 'desc')
                         ->get()->result();
          
@@ -500,6 +501,7 @@ class Audit_started_model extends CI_Model {
         $output .= '"State",';
         $output .= '"District",';
         $output .= '"City",';
+        $output .= '"Regions"';
         $output .= '"Pincode",';
         $output .= '"ISD Code",';
         $output .= '"STD Code",';
@@ -526,6 +528,7 @@ class Audit_started_model extends CI_Model {
             $output .= '"' . $a->state_name . '",';
             $output .= '"' . $a->district_name . '",';
             $output .= '"' . $a->city . '",';
+            $output .= '"' . $a->region .'",';
             $output .= '"' . $a->pincode . '",';
             $output .= '"' . $isdCode . '",';
             $output .= '"' . $a->std . '",';
