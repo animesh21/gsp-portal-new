@@ -78,7 +78,7 @@ class Audit_home_scorecard extends CI_Controller{
         $this->load->library('dompdf_lib');
         ini_set('memory_limit', '-1');
        
-        $html = $this->load->view('digital_waste', $data, true);
+        $html = $this->load->view('digital-waste', $data, true);
         $html = preg_replace('/>\s+</', "><", $html);
 
         $this->dompdf->load_html($html);
