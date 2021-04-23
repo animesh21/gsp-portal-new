@@ -26,7 +26,7 @@
 
 <div class="container" style="padding: 20px">
   <div class="home_container"  >
-    <h1>GSP'S Audit@Home Scorecard 2020</h1>
+    <h1>GSP'S Audit@Home Scorecard 2021</h1>
      
      <div class="row">
         <div class="form-group" style="padding-left: 50px;"><label for="number">Click on your name below to get the Audit@Home scorecard.</label></div> 
@@ -34,7 +34,7 @@
         <div class="list">
             <ul style="text-align: left; padding-left: 50px;  ">
               <?php $i=1; foreach($fullstudent as $fullstudent){ ?>
-              <li><a href="<?php echo base_url("Audit_home_scorecard/getAuditScoreByName?id=").$fullstudent->id; ?>" target='_blank'><?php echo $i++; echo ". "; echo $fullstudent->participant_name; ?></a></li>
+              <li><a href="<?php echo base_url("Audit_home_scorecard/getAuditScoreByName?id=").$fullstudent->id; ?>" target='_blank'><?php echo $i++; echo ". "; echo $fullstudent->name; ?></a></li>
             <?php } ?>
           </ul> 
         </div>
