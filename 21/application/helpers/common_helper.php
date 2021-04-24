@@ -35,7 +35,7 @@ if(!function_exists('checkDigitalCertificate')) {
      $CI = & get_instance();
    $CI->db->like("certificate_username",$username);
    $CI->db->like("certificate_schoolname",$schoolname);
-   $temp = $CI->db->select("*")->from("tblcertificate")->get()->result();
+   $temp = $CI->db->select("*")->from("download_YOY")->get()->result();
    if($temp){ 
        return 1;
      }
@@ -3390,9 +3390,9 @@ if (!function_exists('download_YOY')){
       if($v!='NA' && $v!=''){
        if($v>=70){
          $numerical[] = array("percentage"=>$v,"color"=>"#3c763d","range"=>"GREEN <br/> 70%  & Above","year"=>'Year of '.$r);}
-         elseif($v>=50 && $v<=69.9){
+         elseif($v>=49.1 && $v<=69.9){
           $numerical[] = array("percentage"=>$v,"color"=>"#e2dc15","range"=>"YELLOW <br/> BETWEEN (50-69.9%)","year"=>'Year of '.$r);}
-         elseif($v>=35 && $v<=49.9){
+         elseif($v>=35 && $v<=49){
           $numerical[] = array("percentage"=>$v,"color"=>"#e29e15","range"=>"ORANGE <br/> BETWEEN (35-49.9%)","year"=>'Year of '.$r);}
          elseif($v<=34.9){
           $numerical[] = array("percentage"=>$v,"color"=>"#b73418","range"=>"RED <br/> (BELOW 34.9%)","year"=>'Year of '.$r);}    

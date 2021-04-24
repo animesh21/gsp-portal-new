@@ -22,6 +22,7 @@ class Audit_home_scorecard extends CI_Controller{
 
 
     public function getAuditScore(){
+        
         $mobile = $this->input->post('parent_mob');
         $this->db->where("mobile",$mobile);
         $dataCertificate=$this->db->select("*")->from("ww")->get()->result();
@@ -46,7 +47,7 @@ class Audit_home_scorecard extends CI_Controller{
         $this->dompdf->render();
         $this->dompdf->stream("Student Audit Home Score.pdf", array("Attachment" => false));
         $this->db->where('id', $dataCertificate[0]->id);
-        $this->db->update('gsp_audit_home_scorecard_bihar', array('download_count'=>$dataCertificate[0]->download_count+1));
+        $this->db->update('ww', array('download_count'=>$dataCertificate[0]->download_count+1));
         }else{
             $data['fullstudent'] = $dataCertificate;
             $this->load->view('audit_home_link', $data);
@@ -67,7 +68,7 @@ class Audit_home_scorecard extends CI_Controller{
 
          // $mobile = $this->input->post('parent_mob');
         $this->db->where("id",$id);
-        $dataCertificate=$this->db->select("*")->from("gsp_audit_home_scorecard_bihar")->get()->result(); 
+        $dataCertificate=$this->db->select("*")->from("ww")->get()->result(); 
 
         if(!empty($dataCertificate)){
        if(count($dataCertificate)==1){
@@ -77,7 +78,7 @@ class Audit_home_scorecard extends CI_Controller{
         $this->load->library('dompdf_lib');
         ini_set('memory_limit', '-1');
        
-        $html = $this->load->view('gsp_audit_home_scorecard', $data, true);
+        $html = $this->load->view('digital-waste', $data, true);
         $html = preg_replace('/>\s+</', "><", $html);
 
         $this->dompdf->load_html($html);
@@ -85,7 +86,7 @@ class Audit_home_scorecard extends CI_Controller{
         $this->dompdf->render();
         $this->dompdf->stream("Student Audit Home Score.pdf", array("Attachment" => false));
         $this->db->where('id', $dataCertificate[0]->id);
-        $this->db->update('gsp_audit_home_scorecard_bihar', array('download_count'=>$dataCertificate[0]->download_count+1));
+        $this->db->update('ww', array('download_count'=>$dataCertificate[0]->download_count+1));
         }
 }
 
