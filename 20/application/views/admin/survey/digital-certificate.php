@@ -222,11 +222,11 @@ body{
 
         .certificateno{ position:absolute; top:670px; left: 10px;}
         .certificateno1{ position:absolute; top:690px; left: 10px;}
-        .first_name{ position:relative; text-align: center; top:350px;}
+        .first_name{ position:relative; text-align: center; top:325px;}
         .principal{ position:relative; text-align: center; top:270px;}
-	    .school_name{ position:relative; text-align: center; top:400px;}
+	    .school_name{ position:relative; text-align: center; top:415px;}
 		.first_name1{ position:relative; text-align: center; top:265px;}
-	    .school_name1{ position:relative; text-align: center; top:350px;}
+	    .school_name1{ position:relative; text-align: center; top:325px;}
         .grade{position:absolute; top:205px; left:650px}
         .image{position:absolute; margin-left: -40px; margin-top: -20px;}
 </style>
