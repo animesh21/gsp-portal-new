@@ -23,14 +23,14 @@ class Digitalcertificate extends CI_Controller {
 		   echo "Count Unique Id:".count($dataUserIds);
 		   $certificate=array();
 		   foreach($dataUserIds as $userId){
-	        //   $certificate[]=$this->digital_certificate_for_principal_coordinator($userId->userid);
+	           $certificate[]=$this->digital_certificate_for_principal_coordinator($userId->userid);
 			//   $certificate[]=$this->studentDigitalcertificate($userId->userid);
-		      $certificate[]=$this->count_certificates_staffamin($userId->userid);
+		    //   $certificate[]=$this->count_certificates_staffamin($userId->userid);
 
 		   } 
 		   for($t=0; $t<sizeof($certificate);++$t){
 		     for($r=0;$r<sizeof($certificate[$t]);++$r){
-			   $this->db->insert("tblcertificate",array("userid"=>$certificate[$t][$r]['userid'],"certificate_username"=>$certificate[$t][$r]['name'],"certificate_schoolname"=>$certificate[$t][$r]['schoolname'],"certificate_srno"=>""));
+			   $this->db->insert("tblcertificate",array("userid"=>$certificate[$t][$r]['userid'],"certificate_username"=>$certificate[$t][$r]['name'],"certificate_schoolname"=>$certificate[$t][$r]['schoolname'],"certificate_srno"=>"","leader"=>"1"));
 		       //echo $certificate[$t][$r]['name'];
 			 }
 			//echo $certificate[$t]->userid;
@@ -54,7 +54,7 @@ class Digitalcertificate extends CI_Controller {
 	    $arrStudents[] = array(
         'name' => getFiled("Q3".$q. $i . "S1", $argID) . " " . getFiled("Q3" .$q.$i . "S2",$argID)." (".getFiled("Q3" .$q.$i . "S3", $argID).")",
 		"userid"=>$argID
-		,'school_name'=>$username->name);
+		,'schoolname'=>$username->name);
 	  }
      }
 	}
@@ -100,8 +100,8 @@ class Digitalcertificate extends CI_Controller {
     //    }
        //Staff
        for ($i = 1; $i <= 5; $i++) {
-       if((getFiled("Q2".$q. $i . "S1", $argID)!="" && getFiled("Q2" .$q.$i . "S2", $argID) !="")){
-       $arrStaff[] = array('userid'=>$argID,"teacher"=>getFiled("Q2" . $q . $i . "S1", $argID) . " " . getFiled("Q2" . $q . $i . "S3", $argID),"school"=>$username->name);
+       if((getFiled("Q2".$q. $i . "S1", $argID)!="" && getFiled("Q2" .$q.$i . "S3", $argID) !="")){
+       $arrStaff[] = array('userid'=>$argID,"name"=>getFiled("Q2" . $q . $i . "S1", $argID) . " " . getFiled("Q2" . $q . $i . "S3", $argID),"schoolname"=>$username->name);
 	
        }
        }
