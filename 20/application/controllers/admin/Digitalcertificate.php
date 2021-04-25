@@ -30,15 +30,15 @@ class Digitalcertificate extends CI_Controller {
 		   } 
 		   for($t=0; $t<sizeof($certificate);++$t){
 		     for($r=0;$r<sizeof($certificate[$t]);++$r){
-			   $this->db->insert("tblcertificate",array("userid"=>$certificate[$t][$r]['userid'],"certificate_username"=>$certificate[$t][$r]['name'],"certificate_schoolname"=>$certificate[$t][$r]['schoolname'],"certificate_srno"=>"","leader"=>"0"));
+			   $this->db->insert("tblcertificate",array("userid"=>$certificate[$t][$r]['userid'],"certificate_username"=>$certificate[$t][$r]['name'],"certificate_schoolname"=>$certificate[$t][$r]['schoolname'],"certificate_srno"=>"","leader"=>""));
 		       //echo $certificate[$t][$r]['name'];
 			 }
 			// echo $certificate[$t]->userid;
 			// echo $certificate[$t]->school_name;
 		   }
 		   
-		   echo "<pre>";
-		  print_r(array_filter($certificate));               
+		//    echo "<pre>";
+		//   print_r(array_filter($certificate));               
 	}
     public function studentDigitalcertificate($argID) {
 	  $arrStudents = array();
