@@ -155,7 +155,7 @@ $string = strtoupper($certificate->certificate_schoolname.', '.getdistrictById($
  
 		if ($staffadmin !="") {
 		   echo "<div class='container'>
-		    <div class='image'><img src='assets/img/images/Certificate201.jpg' width='1000' height='700'></div>
+		    <div class='image'><img src='assets/img/images/cer/leadership.jpg' width='1000' height='700'></div>
 
   <div class='principal'>" . strtoupper($staffadmin)  ."</div>&nbsp;
   <div class='school_name'>".$school."</div>
