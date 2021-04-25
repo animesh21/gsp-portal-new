@@ -121,7 +121,7 @@ $string = strtoupper($certificate->certificate_schoolname.', '.getdistrictById($
 		    <div class='image'><img src='assets/img/images/cer/leadership.jpg' width='1000' height='700'></div>
 
   <div class='principal'>" . strtoupper($principal->principle_name) ."</div>&nbsp;
-  <div class='school_name'>".$school."</div>
+  <div class='school_name'><i>".$school."</i></div>
   
   <div class='certificateno1'>Certificate No: "."GSPAudit/2020/".($certificate->id-1)." </div>
     </div><div class='page'><strong></strong></div>";
