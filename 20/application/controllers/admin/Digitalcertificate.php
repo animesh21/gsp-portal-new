@@ -6,7 +6,7 @@ class Digitalcertificate extends CI_Controller {
     /****  Constructor****/ 
     public function __construct() {
         parent::__construct();
-		$this->load->helper(array('form', 'security', 'common_helper'));
+		$this->load->helper(array('form', 'secu	rity', 'common_helper'));
     }
     public function index() {
 	
