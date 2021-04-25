@@ -23,8 +23,8 @@ class Digitalcertificate extends CI_Controller {
 		   echo "Count Unique Id:".count($dataUserIds);
 		   $certificate=array();
 		   foreach($dataUserIds as $userId){
-	            $certificate[]=$this->digital_certificate_for_principal_coordinator($userId->userid);
-			//   $certificate[]=$this->studentDigitalcertificate($userId->userid);
+	            // $certificate[]=$this->digital_certificate_for_principal_coordinator($userId->userid);
+			  $certificate[]=$this->studentDigitalcertificate($userId->userid);
 		    //   $certificate[]=$this->count_certificates_staffamin($userId->userid);
 
 		   } 
