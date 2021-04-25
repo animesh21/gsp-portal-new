@@ -224,7 +224,7 @@ body{
         .certificateno1{ position:absolute; top:690px; left: 10px;}
         .first_name{ position:relative; text-align: center; top:350px;}
         .principal{ position:relative; text-align: center; top:270px;}
-	    .school_name{ position:relative; text-align: center; top:365px;}
+	    .school_name{ position:relative; text-align: center; top:400px;}
 		.first_name1{ position:relative; text-align: center; top:265px;}
 	    .school_name1{ position:relative; text-align: center; top:350px;}
         .grade{position:absolute; top:205px; left:650px}
