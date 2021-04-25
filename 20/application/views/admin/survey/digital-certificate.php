@@ -120,10 +120,10 @@ $string = strtoupper($certificate->certificate_schoolname.', '.getdistrictById($
 		    echo "<div class='container'>
 		    <div class='image'><img src='assets/img/images/cer/leadership.jpg' width='1000' height='700'></div>
 
-  <div class='principal'>" . strtoupper($principal->principle_name) ."</div>&nbsp;
+  <div class='principal'><i>" . strtoupper($principal->principle_name) ."</i></div>&nbsp;
   <div class='school_name'><i>".$school."</i></div>
   
-  <div class='certificateno1'>Certificate No: "."GSPAudit/2020/".($certificate->id-1)." </div>
+  <div class='certificateno1'>Certificate No: "."GSPAudit/2021/".($certificate->id-1)." </div>
     </div><div class='page'><strong></strong></div>";
 		}
 	  }
@@ -138,10 +138,10 @@ $string = strtoupper($certificate->certificate_schoolname.', '.getdistrictById($
 		    echo "<div class='container'>
 		    <div class='image'><img src='assets/img/images/cer/leadership.jpg' width='1000' height='700'></div>
 
-  <div class='principal'>" . strtoupper($coname->coname) ."</div>&nbsp;
-  <div class='school_name'>".$school."</div>
+  <div class='principal'><i>" . strtoupper($coname->coname) ."</i></div>&nbsp;
+  <div class='school_name'><i>".$school."</i></div>
   
-  <div class='certificateno1'>Certificate No: "."GSPAudit/2020/".($certificate->id-2)." </div>
+  <div class='certificateno1'>Certificate No: "."GSPAudit/2021/".($certificate->id-2)." </div>
     </div><div class='page'><strong></strong></div>";
 		}
 	  }
@@ -157,10 +157,10 @@ $string = strtoupper($certificate->certificate_schoolname.', '.getdistrictById($
 		   echo "<div class='container'>
 		    <div class='image'><img src='assets/img/images/cer/leadership.jpg' width='1000' height='700'></div>
 
-  <div class='principal'>" . strtoupper($staffadmin)  ."</div>&nbsp;
-  <div class='school_name'>".$school."</div>
+  <div class='principal'><i>" . strtoupper($staffadmin)  ."</i></div>&nbsp;
+  <div class='school_name'><i>".$school."</i></div>
   
-  <div class='certificateno'>Certificate No: "."GSPAudit/2020/".$certificateNo1[$i++]." </div>
+  <div class='certificateno'>Certificate No: "."GSPAudit/2021/".$certificateNo1[$i++]." </div>
     </div><div class='page'><strong></strong></div>";
 		}
 	  }
@@ -175,10 +175,10 @@ $string = strtoupper($certificate->certificate_schoolname.', '.getdistrictById($
 		   echo "<div class='container'>
 		    <div class='image'><img src='assets/img/images/cer/student.jpg' width='1000' height='700'></div>
 
-  <div class='first_name'>" . strtoupper($students['name'])  . ' &nbsp;&nbsp;&nbsp;  CLASS '. integerToRoman($students['grade'])  ."</div>&nbsp;
-  <div class='school_name1'>".$school."</div>
+  <div class='first_name'><i>" . strtoupper($students['name'])  . ' &nbsp;&nbsp;&nbsp;  CLASS '. integerToRoman($students['grade'])  ."</i></div>&nbsp;
+  <div class='school_name1'><i>".$school."</i></div>
   
-  <div class='certificateno'>Certificate No: "."GSPAudit/2020/".$certificateNo2[$i++]." </div>
+  <div class='certificateno'>Certificate No: "."GSPAudit/2021/".$certificateNo2[$i++]." </div>
     </div><div class='page'><strong></strong></div>";
 		}
 	  }
