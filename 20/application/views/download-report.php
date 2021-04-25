@@ -137,7 +137,7 @@
               <div class="title"><strong>Performance Report</strong></div>
             </div>
           </div>
-          </div>
+          
           <div class="col-md-4">
             <div class="schools-statics" style="width:100%;" id="flat">
 	         	<!-- <a href="<?php echo base_url('/download/getdigitalCertificate/').$this->
@@ -147,7 +147,7 @@
               <div class="title"><strong>Digital Certificate</strong></div>
             </div>
           </div>
-          
+          </div>
           <!-- <div class="col-md-4">
             <div class="schools-statics" style="width:100%;">
              <a href="<?php 
