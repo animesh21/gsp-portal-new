@@ -10,8 +10,10 @@ class Digitalcertificate extends CI_Controller {
     }
     public function index() {
 	
-		$this->db->like(array("a.progress"=>"100"));
-		$this->db->like(array("a.complete_status"=>"1"));
+		// $this->db->like(array("a.progress"=>"100"));
+		// $this->db->like(array("a.complete_status"=>"1"));
+		$this->db->like(array("a.wt"=>"1"));
+
 	  $dataUserIds=$this->db->select("a.userid")
 	       ->from("gsp_school as a")
 		   //->join("tblcertificate as b","a.userid=b.userid","LEFT")
