@@ -23,14 +23,14 @@ class Digitalcertificate extends CI_Controller {
 		   echo "Count Unique Id:".count($dataUserIds);
 		   $certificate=array();
 		   foreach($dataUserIds as $userId){
-	        //    $certificate[]=$this->digital_certificate_for_principal_coordinator($userId->userid);
-			  $certificate[]=$this->studentDigitalcertificate($userId->userid);
+	           $certificate[]=$this->digital_certificate_for_principal_coordinator($userId->userid);
+			//   $certificate[]=$this->studentDigitalcertificate($userId->userid);
 		    //   $certificate[]=$this->count_certificates_staffamin($userId->userid);
 
 		   } 
 		   for($t=0; $t<sizeof($certificate);++$t){
 		     for($r=0;$r<sizeof($certificate[$t]);++$r){
-			   $this->db->insert("tblcertificate",array("userid"=>$certificate[$t][$r]['userid'],"certificate_username"=>$certificate[$t][$r]['name'],"certificate_schoolname"=>$certificate[$t][$r]['schoolname'],"certificate_srno"=>"","leader"=>""));
+			   $this->db->insert("tblcertificate",array("userid"=>$certificate[$t][$r]['userid'],"certificate_username"=>$certificate[$t][$r]['name'],"certificate_schoolname"=>$certificate[$t][$r]['schoolname'],"certificate_srno"=>"","leader"=>"1"));
 		       //echo $certificate[$t][$r]['name'];
 			 }
 			//echo $certificate[$t]->userid;
