@@ -281,7 +281,7 @@ public function count_certificates_stuents($argID) {
 //    print_r($temp);
    //echo '<pre>'; print_r($airTeacher['school']); exit;
    //echo '<pre>'; print_r($arrStaff);
-   return array_merge($airTeachers);
+   return array_merge($arrStaff);
   }
   
   public function digital_certificate_for_principal_coordinator($argID)
