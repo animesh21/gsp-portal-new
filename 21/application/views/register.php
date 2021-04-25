@@ -243,8 +243,8 @@ p{
 <div class="wrapper" style="display: block;">
   <div class="top-area">
     <h2>REGISTRATION Form</h2>
-    <p>Please complete and submit this form to register for the CSE's Green Schools Programme Audit 2020. On submission of the registration form, you will receive an email with login credentials (username and password). Please save your login credentials to be used when you want to access the GSP Audit 2020. There is no fee for participation.</p>
-    <strong>Please spell the name of your school correctly – the name provided by you will appear on the digital certificates and other documents. </strong>
+    <p>Please complete and submit this form to register for the CSE's Green Schools Programme (GSP) network. On submission of the registration form, you will receive an email with login credentials (username and password). Please save your login credentials to be used when you want to participate in the GSP initiatives. There is no fee for participation.</p>
+    <strong>Please spell the name of your school correctly. The name provided by you will appear on the digital certificates and other documents, wherever applicable.  </strong>
     <p class="required">All fields marked * are required.</p>
   </div>
   <?php if ($this->session->flashdata('success')) { ?>

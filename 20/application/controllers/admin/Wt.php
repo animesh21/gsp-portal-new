@@ -27,7 +27,7 @@ class Wt extends CI_Controller {
     }
 
     public function index() {
-        $data['main'] = 'admin/audit/audit_started';
+        $data['main'] = 'admin/audit/audit_started_wt';
         $data['title'] = 'Home | Audit Started';
         $data['record'] = $this->Audit_started_model->getDatawt();
         $this->load->view('admin/includes/template', $data);

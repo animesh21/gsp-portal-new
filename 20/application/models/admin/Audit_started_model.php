@@ -29,10 +29,11 @@ class Audit_started_model extends CI_Model {
     }
 
     public function getDatawt() {
-      return $this->db->select('a.*, b.name AS state_name,c.name As district_name')
+      return $this->db->select('a.*, b.name AS state_name,c.name As district_name,d.year_2020 AS year_progress')
                       ->from('gsp_school AS a')
                       ->join('states AS b', 'a.state=b.id', 'left')
                       ->join('cities AS c', 'a.district=c.id', 'left')
+                      ->join('progress_year AS d', 'a.id=d.school_id', 'left')
                       ->where("a.make_school_disabled","1")
                       ->where("a.complete_status","1")
                       ->where("a.kvs_school_status",NULL)
