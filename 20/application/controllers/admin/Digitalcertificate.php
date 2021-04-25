@@ -24,8 +24,8 @@ class Digitalcertificate extends CI_Controller {
 		   $certificate=array();
 		   foreach($dataUserIds as $userId){
 	        //    $certificate[]=$this->digital_certificate_for_principal_coordinator($userId->userid);
-			  $certificate[]=$this->studentDigitalcertificate($userId->userid);
-		    //   $certificate[]=$this->count_certificates_staffamin($userId->userid);
+			//   $certificate[]=$this->studentDigitalcertificate($userId->userid);
+		      $certificate[]=$this->count_certificates_staffamin($userId->userid);
 
 		   } 
 		   for($t=0; $t<sizeof($certificate);++$t){
