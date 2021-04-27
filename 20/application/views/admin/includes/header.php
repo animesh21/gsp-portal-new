@@ -237,7 +237,7 @@
                   <li class=""><a href="<?php echo base_url('admin/performance_report/totalCalculation'); ?>">Total Points Calculation</a> </li>
                   <li class=""><a href="<?php echo base_url('admin/performance_report/allExcelHome'); ?>">Audit@Home</a> </li>
                   <li>    
-                   <a href="<?php echo base_url('uploads/Waste.jpg'); ?>">WT</a>
+                   <a href="https://drive.google.com/file/d/11FN9N-89_vkFWXhrumUrO04FjRZPHee6/view?usp=sharing">Waste Transformers</a>
                   </li>
                  <!-- <li><a href="analysis_report_all_question.php">All Responses</a></li> -->
                 </ul>
