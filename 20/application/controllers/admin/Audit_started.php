@@ -2321,10 +2321,10 @@ public function getSummary(){
 
     public function downloadwt(){
         // $this->load->helper('downlaod');
-        force_download(base_url('/assets/Waste.csv.zip'), NULL);
-        // $filepath = 
-        // $this->zip->read_file([]);
-        // $this->zip->download([]);
+        // force_download(base_url('/assets/Waste.csv.zip'), NULL);
+        $filepath = base_url('/admin/Audit_started/downloadwt');
+        $this->zip->read_file([$filepath]);
+        $this->zip->download([gile]);
     }
     
 }
