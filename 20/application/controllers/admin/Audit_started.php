@@ -2326,7 +2326,7 @@ public function getSummary(){
         // $this->zip->read_file($filepath,TRUE);
         // $this->zip->download('Waste.csv.zip');
         $data = file_get_contents($filepath);
-        $name = 'twct.jpg';
+        $name = 'test.jpg';
         force_download($name,$data);
         // force_download($name,$data)
         // echo $filepath;
