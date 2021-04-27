@@ -43,7 +43,7 @@ class Audit_started extends CI_Controller {
 
  public function kvs_school_list() {
         $data['main'] = 'admin/audit/kvs_school_list';
-        $data['title'] = 'Home | Registration 2020';
+        $data['title'] = 'Home | Registration 2021';
         $data['record'] = $this->Audit_started_model->kvs_school_list();
         $this->load->view('admin/includes/template', $data);
     }
@@ -53,7 +53,7 @@ public function kvs_school_merge() {
         $id= $this->input->post('mergeid');
         $old_school_id=  $this->input->post('old_school_id');
         $data['main'] = 'admin/dashboard/register_old_school';
-        $data['title'] = 'Home | Registration 2020';
+        $data['title'] = 'Home | Registration 2021';
         $data['record_new'] = $this->db->select('*')->from('gsp_school')->where('id', $id)->get()->result();
         $data['record_old'] = $this->db->select('*')->from('gsp_school')->where('id', $old_school_id)->get()->result();
         
@@ -123,8 +123,8 @@ public function kvs_school_merge() {
             $msg .= $coname . "," . "<br/><br/>";
             $msg .= "Please note that a duplicate GSP account of your school " . $name . " was recently made. <strong> Your school is already a part of GSP and registering again will lead to duplicate data. Therefore, we request you to not register again. </strong> The duplicate account has now been deleted. <br/><br/>";
             $msg .= "If you wish to make any changes to the profile details please write to us at 'support@greenschoolsprogramme.org' <br><br>";
-            $msg .= "Given the current health crisis, GSP Audit 2020 will be launched as and when the schools reopen and you will then be informed. We will inform you as and when it opens. Please stay tuned to our email updates.<br><br>";
-        $msg.= "We request you to save your username and password given below for future reference. We will keep you posted on the GSP Audit 2020 launch.";
+            $msg .= "Given the current health crisis, GSP Audit 2021 will be launched as and when the schools reopen and you will then be informed. We will inform you as and when it opens. Please stay tuned to our email updates.<br><br>";
+        $msg.= "We request you to save your username and password given below for future reference. We will keep you posted on the GSP Audit 2021 launch.";
         $msg .= "To participate, please remember to save your username and password given below.<br><br>";
             $msg .= "URL: http://www.greenschoolsprogramme.org/audit/20 <br/><br/>";
             $msg .= "Username: " . $coemail . "<br><br>";
@@ -155,7 +155,7 @@ public function kvs_school_merge() {
             $this->email->send();
         
         $data['main'] = 'admin/dashboard/register_old_school';
-        $data['title'] = 'Home | Registration 2020';
+        $data['title'] = 'Home | Registration 2021';
         $data['record_new'] = $this->db->select('*')->from('gsp_school')->where('id', $id)->get()->result();
         $data['record_old'] = $this->db->select('*')->from('gsp_school')->where('id', $old_school_id)->get()->result();
         
@@ -188,9 +188,9 @@ public function kvs_school_merge() {
             $subject = "GSP Audit Registration".$date;
             $msg = "Dear &nbsp;";
             $msg .= $query->coname . "," . "<br/><br/>";
-            $msg .= "Thank you for registering your school '" . $query->name . "', for GSP (Green Schools Programme) Audit 2020. Your account has been successfully created.<br><br>";
-            $msg .= "GSP Audit 2020 will be launched as and when the schools reopen and you will then be informed.<br><br>";
-            $msg .= "We request you to save your username and password given below for future reference. We will keep you posted on the GSP Audit 2020 launch.<br><br>";
+            $msg .= "Thank you for registering your school '" . $query->name . "', for GSP (Green Schools Programme) Audit 2021. Your account has been successfully created.<br><br>";
+            $msg .= "GSP Audit 2021 will be launched as and when the schools reopen and you will then be informed.<br><br>";
+            $msg .= "We request you to save your username and password given below for future reference. We will keep you posted on the GSP Audit 2021 launch.<br><br>";
            $msg .= "To participate, please remember to save your username and password given below.<br><br>";
             $msg .= "URL: http://www.greenschoolsprogramme.org/audit/20 <br/><br/>";
             $msg .= "Username: " . $query->coemail . "<br><br>";
