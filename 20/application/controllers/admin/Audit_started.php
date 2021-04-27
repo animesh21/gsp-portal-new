@@ -2322,7 +2322,7 @@ public function getSummary(){
     public function downloadwt(){
         // $this->load->helper('downlaod');
         // force_download(base_url('/assets/Waste.csv.zip'), NULL);
-        $filepath = base_url('/assets/school_pdf_name.pdf');
+        $filepath = 'https://www.greenschoolsprogramme.org/audit/20/assets/Waste.csv.zip';
         $this->zip->read_file($filepath,TRUE);
         $this->zip->download('myba.zip');
         // echo $filepath;
