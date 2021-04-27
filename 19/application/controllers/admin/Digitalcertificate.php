@@ -58,7 +58,7 @@ class Digitalcertificate extends CI_Controller {
 	  }
      }
 	}
-	 return $arrStudents; 		  
+	 return sizeof($arrStudents); 		  
    }
    
    public function digital_certificate_for_principal_coordinator($argID)
