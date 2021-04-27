@@ -2321,10 +2321,14 @@ public function getSummary(){
 
     public function downloadwt(){
         // $this->load->helper('downlaod');
-        // force_download(base_url('/assets/Waste.csv.zip'), NULL);
-        $filepath = 'https://www.greenschoolsprogramme.org/audit/20/assets/';
-        $this->zip->read_file($filepath,TRUE);
-        $this->zip->download('Waste.csv.zip');
+        
+        $filepath = 'https://www.greenschoolsprogramme.org/audit/20/assets/Waste.csv.zip';
+        // $this->zip->read_file($filepath,TRUE);
+        // $this->zip->download('Waste.csv.zip');
+        $data = file_get_contents($filepath);
+        $name = 'twct.csv';
+        force_download($name,$data);
+        // force_download($name,$data)
         // echo $filepath;
     }
     
