@@ -2318,7 +2318,10 @@ public function getSummary(){
     }
 
     public function downloadwt(){
-        force_download('/assets/Waste.csv.zip', NULL);
+        force_download(base_url('/assets/Waste.csv.zip'), NULL);
+        // $filepath = 
+        // $this->zip->read_file([]);
+        // $this->zip->download([]);
     }
     
 }
