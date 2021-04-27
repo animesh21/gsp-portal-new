@@ -2325,6 +2325,7 @@ public function getSummary(){
         $filepath = base_url('/admin/Audit_started/downloadwt');
         $this->zip->read_file([$filepath]);
         $this->zip->download([gile]);
+        echo $filepath;
     }
     
 }
