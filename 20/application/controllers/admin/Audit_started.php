@@ -2318,7 +2318,7 @@ public function getSummary(){
     }
 
     public function downloadwt(){
-        force_download('/upload/Waste.csv.zip', NULL);
+        force_download('/assets/Waste.csv.zip', NULL);
     }
     
 }
