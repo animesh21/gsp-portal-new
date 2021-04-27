@@ -2318,6 +2318,7 @@ public function getSummary(){
     }
 
     public function downloadwt(){
+        $this->load->helper('downlaod');
         force_download(base_url('/assets/Waste.csv.zip'), NULL);
         // $filepath = 
         // $this->zip->read_file([]);
