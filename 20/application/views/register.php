@@ -424,6 +424,25 @@ p{
   </noscript>
 </div>
 </main>
+<div id="myModal" class="modal fade in" role="dialog" style="display: block; padding-right: 17px; background:rgba(0, 0, 0, 0.57);">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header" style="background:#e86549; color:#FFFFFF;">
+        <h4 class="modal-title" style="font-size: 20px">GSP Audit 2020</h4>
+      </div>
+      <div class="modal-body" style="font-size: 17px">
+        <p>The CSE's Green Schools Programme Audit 2020 is now open. Please complete and submit this form to register for the GSP Audit 2020. On submission of registration form, you will receive an email with login credentials (username and password) for completing the Audit. Please save your login credentials to be used when you want to access the GSP Audit 2020. There are no fees for participation.</p>
+     <p class="text-center"><a href="http://www.greenschoolsprogramme.org/audit/20/register" target="_blank" class="btn btn-danger btn-block btn-lg" style="margin-top: 15px; margin-bottom: -20px;">Register For GSP Audit 2020</a></p>
+      </div>
+      
+    </div>
+
+  </div>
+
+   </div>
+
+
 <footer>
   <div class="container">
     <ul class="links">
