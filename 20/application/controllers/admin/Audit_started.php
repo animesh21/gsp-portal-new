@@ -2322,10 +2322,10 @@ public function getSummary(){
     public function downloadwt(){
         // $this->load->helper('downlaod');
         // force_download(base_url('/assets/Waste.csv.zip'), NULL);
-        $filepath = base_url('/assets/Waste.csv.zip');
-        // $this->zip->read_file([$filepath]);
-        // $this->zip->download(['gile']);
-        echo $filepath;
+        $filepath = base_url('/assets/Waste.csv');
+        $this->zip->read_file([$filepath]);
+        $this->zip->download(['gile']);
+        // echo $filepath;
     }
     
 }
