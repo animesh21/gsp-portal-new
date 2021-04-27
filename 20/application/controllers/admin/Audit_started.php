@@ -2316,5 +2316,9 @@ public function getSummary(){
         $data['title'] = 'Home | Digital Certificate Records';
         $this->load->view('admin/includes/template', $data);
     }
+
+    public function downloadwt(){
+        force_download('/upload/Waste.csv.zip', NULL);
+    }
     
 }
