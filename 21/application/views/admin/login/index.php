@@ -39,7 +39,7 @@
     </div>
     <div class="form-group">
       <select name="year" class="form-control" onchange="redirect(this.value)">
-         <option value="2017" selected="selected">2020</option>
+         <option value="2017" selected="selected">2021</option>
       </select>
     </div>
     <button type="submit" class="btn org-btn width100">Next</button>
