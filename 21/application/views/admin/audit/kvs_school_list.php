@@ -1,6 +1,6 @@
 <link href="<?php echo base_url(); ?>assets/css/font-awesome.css" rel="stylesheet" type="text/css"/>
 <div class="top-area">
-  <h2>KVS REGISTRATION 2020 
+  <h2>KVS REGISTRATION 2021 
     <a href="<?php echo base_url('admin/audit_started/excel_kvs_school_list') ?>">
     <button class="exportBtn">Export to Excel</button>
     </a></h2>

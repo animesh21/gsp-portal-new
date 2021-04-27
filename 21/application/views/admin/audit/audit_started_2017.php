@@ -1,6 +1,6 @@
 <link href="<?php echo base_url(); ?>assets/css/font-awesome.css" rel="stylesheet" type="text/css"/>
 <div class="top-area">
-  <h2>REGISTRATION 2020 <a href="<?php echo base_url('admin/audit_started/excel_phase1') ?>">
+  <h2>REGISTRATION 2021 <a href="<?php echo base_url('admin/audit_started/excel_phase1') ?>">
     <button class="exportBtn">Export to Excel</button>
     </a></h2>
 </div>

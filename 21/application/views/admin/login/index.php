@@ -61,7 +61,7 @@
 <div class='badges' style='height:200px; height:200px;'></div>
 <footer class="mrg30">
   <div class="container">
-    <p>Copyright © 2020 Centre for Science and Environment</p>
+    <p>Copyright © 2021 Centre for Science and Environment</p>
   </div>
   <!--close container-->
 </footer>

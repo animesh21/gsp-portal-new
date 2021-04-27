@@ -94,6 +94,6 @@ $("ol li").click(function(){
    <li class="times"><a href="https://www.downtoearth.org.in/category/young" target="_blank"><img src="<?php echo base_url(); ?>assets/img/times.jpg" class="img-responsive"></a></li>
   </ul>
  </div-->
-  <div class="text-center" id="copyright">Copyright © 2020 Centre for Science and Environment</div>
+  <div class="text-center" id="copyright">Copyright © 2021 Centre for Science and Environment</div>
 </footer>
 </body></html>

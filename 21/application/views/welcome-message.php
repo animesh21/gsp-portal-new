@@ -249,7 +249,7 @@ function redirect_phase(){
                             src="<?php echo base_url(); ?>assets/img/times.jpg" class="img-responsive"></a></li>
     </ul>
   </div>
-  <div class="text-center">Copyright © 2020 Centre for Science and Environment</div>
+  <div class="text-center">Copyright © 2021 Centre for Science and Environment</div>
 </footer>
 </body>
 </html>

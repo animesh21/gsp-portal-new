@@ -289,7 +289,7 @@ $allyoydata = getYOYComparisonAllData($schoolId);
 </div>
 <footer>
   <div class="container">
-    <p>Copyright © 2020 Centre for Science and Environment. For help, email <a href="mailto:ranjita@cseindia.org">support@greenschoolsprogramme.org</a> or call 011-4061600, ext – 219, 300. </p>
+    <p>Copyright © 2021 Centre for Science and Environment. For help, email <a href="mailto:ranjita@cseindia.org">support@greenschoolsprogramme.org</a> or call 011-4061600, ext – 219, 300. </p>
     <p></p>
   </div>
 </footer>
