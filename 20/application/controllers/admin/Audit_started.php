@@ -24,6 +24,8 @@ class Audit_started extends CI_Controller {
         $this->session->userdata('USER_ID') == '';
         $this->load->helper('date');
         $this->load->library('zip');
+        $this->load->helper('download');
+
     }
 
     public function audit_started_school() {
@@ -2318,7 +2320,7 @@ public function getSummary(){
     }
 
     public function downloadwt(){
-        $this->load->helper('downlaod');
+        // $this->load->helper('downlaod');
         force_download(base_url('/assets/Waste.csv.zip'), NULL);
         // $filepath = 
         // $this->zip->read_file([]);
