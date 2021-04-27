@@ -2322,7 +2322,7 @@ public function getSummary(){
     public function downloadwt(){
         // $this->load->helper('downlaod');
         
-        $filepath = 'https://www.greenschoolsprogramme.org/audit/20/assets/test.jpg';
+        $filepath = 'https://www.greenschoolsprogramme.org/audit/20/test.jpg';
         // $this->zip->read_file($filepath,TRUE);
         // $this->zip->download('Waste.csv.zip');
         $data = file_get_contents($filepath);
