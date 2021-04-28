@@ -235,7 +235,6 @@
       <li><a href="<?php echo base_url('admin/performance_report/AllExcelSecondaryPhase_2'); ?>">Phase-2 All Secondary Excel Dump</a></li> 
 <!--                   <li><a href="<?php //echo base_url('admin/performance_report/allExcelDump_phase_2'); ?>">Phase-2 All Excel Dump</a></li> -->
                   <li class=""><a href="<?php echo base_url('admin/performance_report/totalCalculation'); ?>">Total Points Calculation</a> </li>
-                  <li class=""><a href="<?php echo base_url('admin/performance_report/allExcelHome'); ?>">Audit@Home</a> </li>
                   <li>    
                    <a href="https://drive.google.com/file/d/11FN9N-89_vkFWXhrumUrO04FjRZPHee6/view?usp=sharing">Waste Transformers</a>
                   </li>
