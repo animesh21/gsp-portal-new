@@ -105,7 +105,7 @@ public function kvs_school_merge() {
             $config['mailtype'] = 'html';
             $this->email->initialize($config);
             $from = "support@greenschoolsprogramme.org";
-            $arrMails = array($schoolemail, $query->coemail, 'ranjita@cseindia.org', 'aditi.sharma@cseindia.org', 'studiotesseractst@gmail.com', 'srishti.jha@cseindia.org', 'tushita.rawat@cseindia.org', 'neeraj.kumar@cseindia.org');
+            $arrMails = array($schoolemail, $query->coemail,'souparno@cseindia.org', 'tushita.rawat@cseindia.org', 'neeraj.kumar@cseindia.org');
             $date = date('d M Y');
             $to = $arrMails;
             $subject = "GSP Audit Registration".$date;
@@ -173,7 +173,7 @@ public function kvs_school_merge() {
             $config['mailtype'] = 'html';
             $this->email->initialize($config);
             $from = "support@greenschoolsprogramme.org";
-            $arrMails = array($query->schoolemail, $query->coemail, 'ranjita@cseindia.org', 'aditi.sharma@cseindia.org', 'studiotesseractst@gmail.com', 'srishti.jha@cseindia.org', 'tushita.rawat@cseindia.org', 'neeraj.kumar@cseindia.org');
+            $arrMails = array($query->schoolemail, $query->coemail, 'souparno@cseindia.org', 'tushita.rawat@cseindia.org', 'neeraj.kumar@cseindia.org');
             $date = date('d M Y');
             $to = $arrMails;
             $subject = "GSP Audit Registration".$date;
