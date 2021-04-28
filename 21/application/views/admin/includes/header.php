@@ -160,7 +160,7 @@
       </li>
       <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">PREVIOUS AUDITS</a>
          <ul class="dropdown-menu">
-         <li> <a href="http://greenschoolsprogramme.org/audit/20/admin/dashboard" target="_blank">GSP AUDIT 2020</a> </li>
+         <li> <a href="http://greenschoolsprogramme.org/audit/20/admin/dashboard" target="_blank">GSP WT 2020</a> </li>
           <li> <a href="http://greenschoolsprogramme.org/audit/19/admin/dashboard" target="_blank">GSP AUDIT 2019</a> </li>
 	  <li> <a href="http://greenschoolsprogramme.org/audit/18/admin/dashboard" target="_blank">GSP AUDIT 2018</a> </li>
           <li> <a href="http://greenschoolsprogramme.org/audit/admin/dashboard" target="_blank">GSP AUDIT 2017</a> </li>
