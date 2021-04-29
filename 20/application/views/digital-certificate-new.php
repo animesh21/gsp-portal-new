@@ -22,7 +22,8 @@
   }else{
     echo "<div class='school_name'>". strtoupper($teacher->name_of_participant). "</div>";
      
-  // }  echo "<div class='date'>"  . strtoupper($teacher->date). "</div> ";
+   }  
+  // echo "<div class='date'>"  . strtoupper($teacher->date). "</div> ";
         echo "<div class='certificateno'>Certificate No : "."GSP- JNV Digital Certificate/2021/0".$teacher->id." </div>
    </div> ";
     }
