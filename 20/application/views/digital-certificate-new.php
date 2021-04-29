@@ -22,8 +22,8 @@
   }else{
     echo "<div class='school_name'>". strtoupper($teacher->name_of_participant). "</div>";
      
-  }  echo "<div class='date'>"  . strtoupper($teacher->date). "</div> ";
-        echo "<div class='certificateno'>Certificate No : "."GSP- HIMCOSTE Online Capacity Building Workshop MANDI/2021/0".$teacher->id." </div>
+  // }  echo "<div class='date'>"  . strtoupper($teacher->date). "</div> ";
+        echo "<div class='certificateno'>Certificate No : "."GSP- JNV Digital Certificate/2021/0".$teacher->id." </div>
    </div> ";
     }
     }
@@ -46,9 +46,9 @@ body{
 } 
 .date{position:relative; text-align: center; top:510px; margin-left: 480px;}
 .certificateno{ position:absolute; top:680px; left: 10px;}
-.principal{ position:relative; text-align: center; top:260px;}
-.school_name1{ position:relative; text-align: center; top:250px; font-size: 20px; margin-left: 25px;}
-.school_name{ position:relative; text-align: center; top:250px; margin-left: 25px;}
+.principal{ position:relative; text-align: center; top:280px;}
+.school_name1{ position:relative; text-align: center; top:270px; font-size: 20px; margin-left: 25px;}
+.school_name{ position:relative; text-align: center; top:270px; margin-left: 25px;}
 .image{position:absolute; margin-left: -40px; margin-top: -20px;}
 </style>
 
