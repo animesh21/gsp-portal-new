@@ -12,7 +12,7 @@
 
     if ($teacher->name_of_participant !="") {
         echo "<div class='container'>
-        <div class='image'><img src='assets/img/images/Mandi_HP workshop_certificate-Mar 3-5.jpg' width='1000' height='700'></div>";
+        <div class='image'><img src='assets/img/images/cer/jnv.jpg' width='1000' height='700'></div>";
 
   echo "<div class='principal'>" . strtoupper($teacher->school_name) ."</div>&nbsp;";
     $length = strlen($teacher->school_name);
