@@ -47,9 +47,9 @@ body{
 } 
 .date{position:relative; text-align: center; top:510px; margin-left: 480px;}
 .certificateno{ position:absolute; top:680px; left: 10px;}
-.principal{ position:relative; text-align: center; top:280px;}
-.school_name1{ position:relative; text-align: center; top:270px; font-size: 20px; margin-left: 25px;}
-.school_name{ position:relative; text-align: center; top:270px; margin-left: 25px;}
+.principal{ position:relative; text-align: center; top:290px;}
+.school_name1{ position:relative; text-align: center; top:280px; font-size: 20px; margin-left: 25px;}
+.school_name{ position:relative; text-align: center; top:280px; margin-left: 25px;}
 .image{position:absolute; margin-left: -40px; margin-top: -20px;}
 </style>
 
