@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Registration Form - Green Schools Programme Audit 2020</title>
+<title>Registration Form - Green Schools Programme Audit 2021</title>
 <link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>assets/css/style.css" rel="stylesheet">
 <script src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script>
@@ -224,11 +224,11 @@ function redirect_phase(){
   <div class="top-area">
     <h2 class="text-center">Welcome To Green Schools Programme </h2>
     <div class="well col-md-8 col-md-offset-2">
-      <p class="text-center">You have successfully registered your school for GSP Audit 2020. Kindly add <a href="" style="">support@greenschoolsprogramme.org</a> to your Contact list so that emails from GSP do not go into your spam box. Good luck! GSP Team. <br/><br/>
+      <p class="text-center">You have successfully registered your school for the GSP Network. Kindly add <a href="" style="">support@greenschoolsprogramme.org</a> to your Contact list so that emails from GSP do not go into your spam box. Good luck! GSP Team. <br/><br/>
         <a class="btn-group" href="<?php echo base_url('login'); ?>"> Login </a></p>
 	  <br/>	
-      <p class="help text-center">Need help? Email: <a href="mailto:support@greenschoolsprogramme.org">support@greenschoolsprogramme.org</a> or call 011-4061600, <br/>ext – 321, 300. <br>
-        Call between 10am to 5:30pm - Monday to Friday. </p>
+      <p class="help text-center">Need help? Email: <a href="mailto:support@greenschoolsprogramme.org">support@greenschoolsprogramme.org</a><br/><br>
+         </p>
     </div>
   </div>
 </div>
