@@ -108,7 +108,7 @@
             $schoolId=getSchoolId($this->session->userdata('USER_ID'));
             $date = getUserRegisterDate($schoolId);
             $date2 = $date[0]->date_added;
-	if($date1 > $date2){ ?>
+	          if($date1 > $date2){ ?>
           <a href="http://greenschoolsprogramme.org/audit/downloadLogin" target="blank"><button class="btn btn-primary" style="float: right; background-color: #e86549; border-color: #e86549;">Download Report 2017</button></a> 
 
           <a href="<?php echo base_url('DownloadLogin/index18') ;?>" target="blank"><button class="btn btn-primary" style="float: right; background-color: #e86549; border-color: #e86549; margin-right: 6px;">Download Report 2018</button></a> 
@@ -129,11 +129,10 @@
           </div>
           <div class="col-md-4">
             <div class="schools-statics" style="width:100%;" >
-             <!-- <a href="" target="_blank"> -->
              <a href="<?php echo base_url("/GetCertificate/getPoster/").getSchoolId($this->session->userdata('USER_ID')); ?>" target="_blank">
 
               <div class="statics-circle"> <span><i class="fa fa-file-text-o fa-2x"></i></span> </div>
-              
+                </a>              
               <div class="title"><strong>Performance Report</strong></div>
             </div>
           </div>
