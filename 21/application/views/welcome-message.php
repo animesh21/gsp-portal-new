@@ -188,7 +188,7 @@
             color: #aaa;
         }
    .btn-group{
-     background: #e86549;
+     background: #24a5a0;
      border: none;
      color: #fff;
      min-width: 138px;
@@ -216,7 +216,7 @@ function redirect_phase(){
 <body onLoad="redirect_phase();">
 <div id="loader"><img src="<?php echo base_url(); ?>assets/img/loader.gif" width="64" height="64"></div>
 <div class="container">
-  <header> <a href="http://www.greenschoolsprogramme.org/registration/"> <img src="<?php echo base_url(); ?>assets/img/header-2.jpg" width="1028" height="117"></a> <img src="<?php echo base_url(); ?>assets/img/icons.png" width="205" height="94" class="icon"> </header>
+  <header> <a href="http://www.greenschoolsprogramme.org/registration/"> <img src="<?php echo base_url(); ?>assets/img/logo.jpg" width="1028" height="117"></a> <img src="<?php echo base_url(); ?>assets/img/icons.png" width="205" height="94" class="icon"> </header>
 </div>
 <main class="bdr">
 <div class="container">
