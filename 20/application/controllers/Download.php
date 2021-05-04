@@ -180,7 +180,7 @@ function getdigitalCertificate($argID) {
    $dataCertificate=$this->db->select("certificate_username,certificate_schoolname,id")
    ->from("tblcertificate")->group_by("certificate_username")->order_by('id','ASC')->get()->result();
    $data['school_certificates']=$dataCertificate;
-   $principal = $this->db->select("a.userid,a.principle_name")
+   $principal = $this->db->select("a.userid,a.principle_name,a.name,a.district,a.state")
                                  ->from("gsp_school AS a")
                                  ->where("userid", $argID)
                                  ->get()
