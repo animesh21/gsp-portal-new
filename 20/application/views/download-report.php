@@ -108,7 +108,10 @@ $allyoydata = getYOYComparisonAllData($schoolId);
 	$schoolId=getSchoolId($this->session->userdata('USER_ID')); 
  	$dataYoy=download_YOY($schoolId);
 		    ?>
+        <?php  if($dataYoy[0]['year']=='Year of 2019' && $dataYoy[0]['percentage']>=70) { ?>
+
 		    <li class=""><a href="<?php echo base_url('download/downloadReportsSection'); ?>">Downloads</a></li>
+        <?php } ?>
 		    <?php  if($dataYoy[0]['year']=='Year of 2019' && $dataYoy[0]['percentage']>=70) { ?>
              <li class=""><a href="<?php echo base_url('download/badgecodeview'); ?>">GSP Logo</a></li>
 		    <?php } ?>
@@ -146,7 +149,8 @@ $allyoydata = getYOYComparisonAllData($schoolId);
               <div class="title"><strong>Response Report</strong></div>
             </div>
           </div>
-          <?php  if($dataYoy[0]['percentage']>=5) { ?>
+
+          <?php  if($dataYoy[0]['percentage'] >=5) { ?>
 
           <div class="col-md-4">
             <div class="schools-statics" style="width:100%;" >
