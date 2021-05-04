@@ -56,6 +56,24 @@
 </style>
 </head>
 <body class="lang-en groupbygroup showqnumcode-X">
+<?php 
+ $schoolId=getSchoolId($this->session->userdata('USER_ID')); 
+ $dataYoy=download_YOY($schoolId);
+ $dataYoy1=get_state($schoolId);
+ 
+  $state=  $dataYoy1[0]->state;
+
+  $district= $dataYoy1[0]->district;
+
+  $dataYoy2=get_stateById($state);
+  
+  $dataYoy3 = get_districtById($district);
+$allyoydata = getYOYComparisonAllData($schoolId);
+  $schoolName = getSchoolDaTaByScHooLId($schoolId);
+  
+
+
+ ?>
 <div id="loader"><img src="<?php echo base_url(''); ?>assets/img/loader.gif" width="64" height="64"></div>
 <div class="main-wrapper">
   <div class="main" role="main">
