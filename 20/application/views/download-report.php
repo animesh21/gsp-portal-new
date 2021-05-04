@@ -148,7 +148,7 @@ $allyoydata = getYOYComparisonAllData($schoolId);
             </div>
           </div>
 
-          <?php  if($dataYoy[0]['year']=='Year of 2019' && $dataYoy[0]['percentage']>=70) { ?>
+          <?php  if($dataYoy[0]['year']=='Year of 2019' && $dataYoy[0]['percentage']>=5) { ?>
 
           <div class="col-md-4">
             <div class="schools-statics" style="width:100%;" >
