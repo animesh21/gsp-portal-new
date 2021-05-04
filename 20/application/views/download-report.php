@@ -118,6 +118,8 @@
           <hr/>
 	<?php } else{ }  ?>
         </div>
+        <?php  if($dataYoy[0]['percentage']>=5) { ?>
+
         <div class="col-md-12">
           <div class="col-md-4">
             <div class="schools-statics" style="width:100%;">
@@ -145,6 +147,7 @@
               <div class="title"><strong>Digital Certificate</strong></div>
             </div>
           </div>
+          <?php } ?>
           
           <!-- <div class="col-md-4">
             <div class="schools-statics" style="width:100%;">
