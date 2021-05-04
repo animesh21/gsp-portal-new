@@ -243,9 +243,9 @@ public function count_certificates_stuents($argID) {
       if(getFiled("Q3".$q. $i . "S1", $argID)!="" && getFiled("Q3" .$q.$i . "S2", $argID) !="")
        {
        $arrStudents[] = array(
-       'name' => strtoupper( trim(getFiled("Q3".$q. $i . "S1", $argID))) . " " .strtoupper(trim( getFiled("Q3" .$q.$i . "S2", $argID))),
+       'student_name' => strtoupper( trim(getFiled("Q3".$q. $i . "S1", $argID))) . " " .strtoupper(trim( getFiled("Q3" .$q.$i . "S2", $argID))),
        'grade' => getFiled("Q3" .$q.$i . "S3", $argID),
-     'student_name'=>$username->name, 'state'=>$username->state, 'district'=>$username->district,
+     'name'=>$username->name, 'state'=>$username->state, 'district'=>$username->district,
      );
   }
        }
