@@ -83,12 +83,15 @@ $certificateNo2 = array();
 	    		
 	    	}
 	    }
-
-  
-		if (!empty($school_certificates)) {
+		if (!empty($principal)) {
 		
-	    $i=0;
-	    foreach($school_certificates as $certificate) {
+			$i=0;
+			foreach($principal as $certificate) {
+  
+		// if (!empty($school_certificates)) {
+		
+	    // $i=0;
+	    // foreach($school_certificates as $certificate) {
 // 		if ($certificate->certificate_username !="") {
 // 		    echo "<div class='container' 
 // style='background:url(assets/img/images/Certificate_new_19_1.jpg); 0% -10%  no-repeat; width:1000px; height:720px; margin:-40px;'>
@@ -100,8 +103,9 @@ $certificateNo2 = array();
 // 		}
 	  }
 	}
-$string = strtoupper($certificate->certificate_schoolname.', '.getdistrictById($students[0]['district']).', '.getStateById($students[0]['state']));
- $school = '';
+// $string = strtoupper($certificate->certificate_schoolname.', '.getdistrictById($students[0]['district']).', '.getStateById($students[0]['state']));
+$string = strtoupper($certificate->name.', '.$certificate->district.', '.$certificate->state);
+$school = '';
  if(strlen($string)<=70){
  	 $school = '<span>'.$string.'</span>';
  }else{
@@ -121,7 +125,7 @@ $string = strtoupper($certificate->certificate_schoolname.', '.getdistrictById($
 		    <div class='image'><img src='assets/img/images/cer/leadership.jpg' width='1000' height='700'></div>
 
   <div class='principal'><i>" . strtoupper($principal->principle_name) ."</i></div>&nbsp;
-  <div class='school_name'><i>". strtoupper($principal->name) ."</i></div>
+  <div class='school_name'><i>".$school."</i></div>
   
   <div class='certificateno1'>Certificate No: "."GSPAudit/2021/".($certificate->id-1)." </div>
     </div><div class='page'><strong></strong></div>";
