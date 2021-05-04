@@ -68,7 +68,7 @@ $certificateNo1 = array();
  
 
 $certificateNo2 = array();
- $students2 = array_column($students, 'name');
+ $students2 = array_column($students, 'student_name');
   
 
   foreach($students2 as $students2) {
