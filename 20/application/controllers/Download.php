@@ -183,7 +183,7 @@ function getdigitalCertificate($argID) {
    $principal = $this->db->select("a.userid,a.principle_name,a.name,c.name as district_name,b.name as state_name")
                                  ->from("gsp_school AS a")
                                  ->join('states as b','a.state=b.id','left')
-                                 ->join('cities as c','a.district=b.id','left')
+                                 ->join('cities as c','a.district=c.id','left')
                                  ->where("userid", $argID)
                                  ->get()
                                  ->result();
