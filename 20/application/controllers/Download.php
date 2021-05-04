@@ -187,7 +187,7 @@ function getdigitalCertificate($argID) {
                                  ->result();
   // $data['principal']=$principal;
   $data['principal']=$principal;
-  $coname = $this->db->select("a.userid,a.coname")
+  $coname = $this->db->select("a.userid,a.coname,a.name")
                                  ->from("gsp_school AS a")
                                  ->where("userid", $argID)
                                  ->get()
