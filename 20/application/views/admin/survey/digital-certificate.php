@@ -100,7 +100,7 @@ $certificateNo2 = array();
 // 		}
 	  }
 	}
-$string = strtoupper($principle->name.', '.getdistrictById($students[0]['district']).', '.getStateById($students[0]['state']));
+$string = strtoupper($certificate->certificate_schoolname.', '.getdistrictById($students[0]['district']).', '.getStateById($students[0]['state']));
  $school = '';
  if(strlen($string)<=70){
  	 $school = '<span>'.$string.'</span>';
@@ -121,7 +121,7 @@ $string = strtoupper($principle->name.', '.getdistrictById($students[0]['distric
 		    <div class='image'><img src='assets/img/images/cer/leadership.jpg' width='1000' height='700'></div>
 
   <div class='principal'><i>" . strtoupper($principal->principle_name) ."</i></div>&nbsp;
-  <div class='school_name'><i>".$school."</i></div>
+  <div class='school_name'><i>".$principle->name."</i></div>
   
   <div class='certificateno1'>Certificate No: "."GSPAudit/2021/".($certificate->id-1)." </div>
     </div><div class='page'><strong></strong></div>";
