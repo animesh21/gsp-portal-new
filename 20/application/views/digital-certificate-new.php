@@ -14,7 +14,7 @@
         echo "<div class='container'>
         <div class='image'><img src='assets/img/images/cer/jnv.jpg' width='1000' height='700'></div>";
 
-  echo "<div class='principal'>" . strtoupper($teacher->school_name) ."</div>&nbsp;";
+  echo "<div class='principal'>" . strtoupper($teacher->name) ."</div>&nbsp;";
     $length = strlen($teacher->school_name);
   if($length > 61) {
   echo  "<div class='school_name1'>". strtoupper($teacher->name_of_participant)."</div>";
