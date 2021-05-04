@@ -118,7 +118,6 @@
           <hr/>
 	<?php } else{ }  ?>
         </div>
-        <?php  if($dataYoy[0]['percentage']>=5) { ?>
 
         <div class="col-md-12">
           <div class="col-md-4">
@@ -129,6 +128,8 @@
               <div class="title"><strong>Response Report</strong></div>
             </div>
           </div>
+          <?php  if($dataYoy[0]['percentage']>=5) { ?>
+
           <div class="col-md-4">
             <div class="schools-statics" style="width:100%;" >
              <a href="<?php echo base_url("/GetCertificate/getPoster/").getSchoolId($this->session->userdata('USER_ID')); ?>" target="_blank">
@@ -138,7 +139,8 @@
               <div class="title"><strong>Performance Report</strong></div>
             </div>
           </div>
-          
+          <?php } ?>
+
           <div class="col-md-4">
             <div class="schools-statics" style="width:100%;">
 	         	 <a href="<?php echo base_url('/download/getdigitalCertificate/').$this->session->userdata('USER_ID') ?>" target="_blank">
@@ -147,7 +149,6 @@
               <div class="title"><strong>Digital Certificate</strong></div>
             </div>
           </div>
-          <?php } ?>
           
           <!-- <div class="col-md-4">
             <div class="schools-statics" style="width:100%;">
