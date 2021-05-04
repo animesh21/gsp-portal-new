@@ -179,7 +179,7 @@ $school = '';
 		   echo "<div class='container'>
 		    <div class='image'><img src='assets/img/images/cer/student.jpg' width='1000' height='700'></div>
 
-  <div class='first_name'><i>" . strtoupper($students['name'])  . ' &nbsp;&nbsp;&nbsp;  CLASS '. integerToRoman($students['grade'])  ."</i></div>&nbsp;
+  <div class='first_name'><i>" . strtoupper($students['student_name'])  . ' &nbsp;&nbsp;&nbsp;  CLASS '. integerToRoman($students['grade'])  ."</i></div>&nbsp;
   <div class='school_name1'><i>".$school."</i></div>
   
   <div class='certificateno'>Certificate No: "."GSPAudit/2021/".$certificateNo2[$i++]." </div>

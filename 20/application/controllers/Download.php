@@ -245,7 +245,7 @@ public function count_certificates_stuents($argID) {
        $arrStudents[] = array(
        'name' => strtoupper( trim(getFiled("Q3".$q. $i . "S1", $argID))) . " " .strtoupper(trim( getFiled("Q3" .$q.$i . "S2", $argID))),
        'grade' => getFiled("Q3" .$q.$i . "S3", $argID),
-     'name'=>$username->name, 'state'=>$username->state, 'district'=>$username->district,
+     'name'=>$username->student_name, 'state'=>$username->state, 'district'=>$username->district,
      );
   }
        }
