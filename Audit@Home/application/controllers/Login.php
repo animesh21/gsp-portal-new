@@ -37,8 +37,8 @@ class Login extends CI_Controller {
                 $this->session->set_flashdata('error', 'Invalid Email/Password!');
             }
         }
-		// $this->load->view('close');
-		$this->load->view('login');
+		$this->load->view('close');
+		// $this->load->view('login');
 
     }
 
