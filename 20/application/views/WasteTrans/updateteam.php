@@ -1,3 +1,4 @@
+<?php $this->load->view('WasteTrans/headerw'); ?>
 
 <style>
 
