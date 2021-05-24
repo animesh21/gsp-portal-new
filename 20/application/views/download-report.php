@@ -170,6 +170,8 @@ $allyoydata = getYOYComparisonAllData($schoolId);
             </div>
           </div>
 
+          <?php  if($dataYoy[0]['year']=='Year of 2020' && $dataYoy[0]['percentage']>=5) { ?>
+
           <div class="col-md-4">
             <div class="schools-statics" style="width:100%;">
 	         	 <a href="<?php echo base_url('/Theteam/update/') ?>" target="_blank">
@@ -178,6 +180,8 @@ $allyoydata = getYOYComparisonAllData($schoolId);
               <div class="title"><strong>Update Certificate</strong></div>
             </div>
           </div>
+          <?php } ?>
+
           <!-- <div class="col-md-4">
             <div class="schools-statics" style="width:100%;">
              <a href="<?php 
