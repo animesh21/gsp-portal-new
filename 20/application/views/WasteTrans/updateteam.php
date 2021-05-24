@@ -431,8 +431,9 @@
    </div>
             
     <div class="text-center">
-    
-     <input type="button" class="org-btn submit button" value="Update" id="teamresume" style="border:none;" />
+    <button type="button" class="org-btn" id="teamplanp">Update</button>
+
+      
     </div> 
     <?php echo form_close(); ?> </div>
 </div>
@@ -446,12 +447,12 @@
                     //console.log(fd);
                     $.ajax({
                         type: 'POST',
-                        url: '<?php echo base_url('download/downloadReportsSection') ?>',
+                        url: '<?php echo base_url('previous/wastetrans') ?>',
                         data: fd,
                         success: function (data)
                         {
               
-                             window.location.href = "<?php echo base_url('Actionp'); ?>";
+                             window.location.href = "<?php echo base_url('download/downloadReportsSection'); ?>";
                             
                             
                         }
