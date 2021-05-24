@@ -85,6 +85,35 @@ class Theteam extends CI_Controller {
         $this->session->set_flashdata('success', 'Successfully logged out!');
         $this->load->view('WasteTrans/areyou',$data);
     }
+
+    
+    public function update() {
+    	$data['title'] = 'The Team';
+    	if ($this->session->userdata('USER_ID') == '') {
+        
+            redirect('downloadLogin');
+
+        }
+        else
+        { 
+        	$school1 = $this->School_model->getSchool($this->session->userdata('USER_ID'));
+
+	        $argPost['userid'] = $this->session->userdata('USER_ID');
+       	 	$argPost['type'] = 0;
+        	$school2 = $this->Answer_model->getAnswers($argPost);
+        	$data['data'] = array_merge($school1, $school2);
+            $data['states'] = $this->User_model->getStates();
+            $data['files']=$this->file->getFilesData($this->session->userdata('USER_ID'));
+            $data['filesfules']=$this->file->getFilesDatafules($this->session->userdata('USER_ID'));
+            $data['airQualityMonitering']=$this->file->AirQuality($this->session->userdata('USER_ID'));
+            $data['pucCertificate']=$this->file->pucCertificate($this->session->userdata('USER_ID'));
+        	//New Added Code
+        	$data['cities'] = $this->User_model->getCitiesAll($data['data']['state']);
+        	$this->load->view('WasteTrans/theteam',$data);
+        }
+    }
+    
+
 	
       
 
