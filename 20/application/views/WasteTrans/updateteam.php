@@ -431,9 +431,7 @@
    </div>
             
     <div class="text-center">
-    <button type="button" class="org-btn" id="teamplanp">Previous</button>
-
-      <button type="submit" class="org-btn" id="teamnext" value="movenext">Submit</button>
+    
      <input type="button" class="org-btn submit button" value="Save and Resume Later" id="teamresume" style="border:none;" />
     </div> 
     <?php echo form_close(); ?> </div>
@@ -448,7 +446,7 @@
                     //console.log(fd);
                     $.ajax({
                         type: 'POST',
-                        url: '<?php echo base_url('previous/wastetrans') ?>',
+                        url: '<?php echo base_url('download/downloadReportsSection') ?>',
                         data: fd,
                         success: function (data)
                         {
