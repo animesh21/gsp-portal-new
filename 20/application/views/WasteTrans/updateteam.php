@@ -432,7 +432,7 @@
             
     <div class="text-center">
     
-     <input type="button" class="org-btn submit button" value="Value" id="teamresume" style="border:none;" />
+     <input type="button" class="org-btn submit button" value="Update" id="teamresume" style="border:none;" />
     </div> 
     <?php echo form_close(); ?> </div>
 </div>
