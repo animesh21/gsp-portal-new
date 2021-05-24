@@ -156,16 +156,8 @@ left: -208px; color: #e86549;  text-align: center; top: 28px; display:none;">Ext
   <div class="index-body">
     <h2>Question index</h2>
     <ol>
-      <li id="Nav" class="row  <?php echo ($this->router->fetch_class() == 'WasteTransformers') ? "current" : "missing"; ?>"onClick="javascript:window.location.href='<?php echo base_url("WasteTransformers") ?>';">School
-        Profile </li>
-		<li id="Nav" class="row  <?php echo ($this->router->fetch_class() == 'WasteTransformers') ? "current" : "missing"; ?>"onClick="javascript:window.location.href='<?php echo base_url("WasteTransformers") ?>';">General
-        </li>
-		<li id="Nav" class="row  <?php echo ($this->router->fetch_class() == 'WasteTransformers') ? "current" : "missing"; ?>"onClick="javascript:window.location.href='<?php echo base_url("WasteTransformers") ?>';">Baseline
-        </li>
-		<li id="Nav" class="row  <?php echo ($this->router->fetch_class() == 'WasteTransformers') ? "current" : "missing"; ?>"onClick="javascript:window.location.href='<?php echo base_url("WasteTransformers") ?>';">Action Plan
-        </li>
-		<li id="Nav" class="row  <?php echo ($this->router->fetch_class() == 'WasteTransformers') ? "current" : "missing"; ?>"onClick="javascript:window.location.href='<?php echo base_url("WasteTransformers") ?>';">The Team
-        </li>
+
+
 		
       
     </ol>
