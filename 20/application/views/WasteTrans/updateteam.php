@@ -1,4 +1,4 @@
-<?php $this->load->view('WasteTrans/headerw'); ?>
+<?php $this->load->view('WasteTrans/headerupdate'); ?>
 
 <style>
 
