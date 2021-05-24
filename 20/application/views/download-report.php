@@ -169,7 +169,15 @@ $allyoydata = getYOYComparisonAllData($schoolId);
               <div class="title"><strong>Digital Certificate</strong></div>
             </div>
           </div>
-          
+
+          <div class="col-md-4">
+            <div class="schools-statics" style="width:100%;">
+	         	 <a href="<?php echo base_url('/Theteam/update/') ?>" target="_blank">
+              <div class="statics-circle"> <span><i class="fa fa-file-text-o fa-2x"></i></span> </div>
+             </a>
+              <div class="title"><strong>Update Certificate</strong></div>
+            </div>
+          </div>
           <!-- <div class="col-md-4">
             <div class="schools-statics" style="width:100%;">
              <a href="<?php 

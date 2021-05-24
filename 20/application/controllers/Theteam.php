@@ -109,7 +109,7 @@ class Theteam extends CI_Controller {
             $data['pucCertificate']=$this->file->pucCertificate($this->session->userdata('USER_ID'));
         	//New Added Code
         	$data['cities'] = $this->User_model->getCitiesAll($data['data']['state']);
-        	$this->load->view('WasteTrans/theteam',$data);
+        	$this->load->view('WasteTrans/updateteam',$data);
         }
     }
     
