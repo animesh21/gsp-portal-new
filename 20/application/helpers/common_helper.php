@@ -3521,7 +3521,7 @@ if(!function_exists('get_districtById')){
 if(!function_exists('get_progress')){
   function get_progress($userid){
     $CI = &get_instance();
-    $temp = $CI->db->select('*')->from('progress')
+    $temp = $CI->db->select('*')->from('progress_year')
     ->where('userid',$user_id)
     ->get()
     ->result();
