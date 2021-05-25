@@ -72,10 +72,10 @@
   $schoolName = getSchoolDaTaByScHooLId($schoolId);
   $progress =  get_progress($schoolId); 
   $pra =  $progress[0]->year_2020;
-  
+  $up = $progress[0]->year_2021;
 
   // echo "<pre>";
-  // print_r($pra);
+  // print_r($progress);
   // echo "<pre>";
  
   
@@ -176,7 +176,7 @@
             </div>
           </div>
 
-          <?php  if($pra == 100) {?>
+          <?php  if($pra == 100 && $up == 0) {?>
 
           <div class="col-md-4">
             <div class="schools-statics" style="width:100%;">

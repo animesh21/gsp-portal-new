@@ -24,8 +24,6 @@ class Previous extends CI_Controller {
         $staus = 'success';
         $post = $this->input->post();
         $this->Answer_model->submitAnswers($post,0);
-        $this->Answer_model->updateteam();
-
         echo $staus;
     }
     /*

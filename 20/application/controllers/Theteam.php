@@ -57,18 +57,20 @@ class Theteam extends CI_Controller {
         //print_r($post);
         // $post = $this->input->post();
         // $this->Answer_model->submitAnswers($post,0);
-        $get_current_user=$this->session->userdata('USER_ID');
-        $get_current_year=date('Y');
-        $data=$this->db->select("id")->from('gsp_school')->where("userid=".$get_current_user)->get()->result();
-        $get_school_id=$data[0]->id;
+        $get_current_user=getSchoolId($this->session->userdata('USER_ID'));
+        // $get_current_year=date('Y');
+        // $data=$this->db->select("id")->from('gsp_school')->where("userid=".$get_current_user)->get()->result();
+        // $get_school_id=$data[0]->id;
 
-                    $shool_record=array("school_id"=>$get_school_id,"userid"=>$get_current_user,"year"=>$get_current_year,"status"=>'1');
-                    $this->db->insert('gsp_waste_submitted',$shool_record);
+                    // $shool_record=array("school_id"=>$get_school_id,"userid"=>$get_current_user,"year"=>$get_current_year,"status"=>'1');
+                    // $this->db->insert('gsp_waste_submitted',$shool_record);
                     
                     // $this->db->where(array("id"=>$get_current_user));
                     // $this->db->update("gsp_user",array("status"=>'1'));     
-                    
-                    
+                    $data=$this->db->select("*")->from('progress_year')->where("school_id=".$get_current_user)->get()->result();
+
+                    $this->db->update("progress_year",array("year_2021"=>'1'));     
+
                     
                     // $this->session->unset_userdata(array('USERNAME', 'USER_ID'));
                     // $this->session->set_flashdata('success', 'Successfully logged out!');
@@ -76,8 +78,8 @@ class Theteam extends CI_Controller {
                     $this->Answer_model->submitAnswers($post,0);
 
                     // $this->Answer_model->submitAnswers($argPost,$userId,$type);
-                    updateProgress($this->session->userdata('USER_ID'), 100);
-                    redirect(base_url('Theteam/submit'));
+                    // updateProgress($this->session->userdata('USER_ID'), 100);
+                    redirect(base_url('download/downloadReportsSection'));
                     // print_r($post);
     }
     public function submit(){
