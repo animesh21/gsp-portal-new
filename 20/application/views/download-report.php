@@ -171,7 +171,7 @@
             </div>
           </div>
 
-          <?php  if($dataYoy[0]['year']=='Year of 2027' && $dataYoy[0]['percentage']>=5) {
+          <?php  if($progress == 100) {
             
             
           ?>
