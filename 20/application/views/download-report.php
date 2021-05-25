@@ -72,7 +72,7 @@
   $schoolName = getSchoolDaTaByScHooLId($schoolId);
   $progress =  get_progress($schoolId); 
   echo "<pre>";
-  print_r($progress);
+  print_r($schoolId);
   echo "<pre>";
  ?>
 <div id="loader"><img src="<?php echo base_url(''); ?>assets/img/loader.gif" width="64" height="64"></div>
