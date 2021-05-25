@@ -67,12 +67,12 @@
 
   $dataYoy2=get_stateById($state);
   
-  $dataYoy3 = get_districtById($district);
+  $dataYoy3 =   get_districtById($district);
   $allyoydata = getYOYComparisonAllData($schoolId);
   $schoolName = getSchoolDaTaByScHooLId($schoolId);
   $progress =  get_progress($schoolId); 
   echo "<pre>";
-  print_r($progress);
+  print_r($schoolId);
   echo "<pre>";
  ?>
 <div id="loader"><img src="<?php echo base_url(''); ?>assets/img/loader.gif" width="64" height="64"></div>
