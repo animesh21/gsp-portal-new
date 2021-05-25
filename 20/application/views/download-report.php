@@ -68,10 +68,10 @@
   $dataYoy2=get_stateById($state);
   
   $dataYoy3 = get_districtById($district);
-$allyoydata = getYOYComparisonAllData($schoolId);
+  $allyoydata = getYOYComparisonAllData($schoolId);
   $schoolName = getSchoolDaTaByScHooLId($schoolId);
-  
-
+  $progress =  get_progress($schoolId); 
+  echo $progress;
 
  ?>
 <div id="loader"><img src="<?php echo base_url(''); ?>assets/img/loader.gif" width="64" height="64"></div>
@@ -170,7 +170,10 @@ $allyoydata = getYOYComparisonAllData($schoolId);
             </div>
           </div>
 
-          <?php  if($dataYoy[0]['year']=='Year of 2020' && $dataYoy[0]['percentage']>=5) { ?>
+          <?php  if($dataYoy[0]['year']=='Year of 2020' && $dataYoy[0]['percentage']>=5) {
+            
+            
+          ?>
 
           <div class="col-md-4">
             <div class="schools-statics" style="width:100%;">
