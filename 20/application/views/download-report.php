@@ -71,9 +71,9 @@
   $allyoydata = getYOYComparisonAllData($schoolId);
   $schoolName = getSchoolDaTaByScHooLId($schoolId);
   $progress =  get_progress($schoolId); 
-  echo "<pre>";
-  print_r($progress);
-  echo "<pre>";
+  // echo "<pre>";
+  // print_r($progress);
+  // echo "<pre>";
  ?>
 <div id="loader"><img src="<?php echo base_url(''); ?>assets/img/loader.gif" width="64" height="64"></div>
 <div class="main-wrapper">
