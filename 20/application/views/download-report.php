@@ -171,7 +171,7 @@
             </div>
           </div>
 
-          <?php  if($progress['year_2020'] == 100) {
+          <?php  if($progress[0]['year_2020'] == 100) {
             
             
           ?>
