@@ -171,10 +171,7 @@
             </div>
           </div>
 
-          <?php  if($progress['year_2020'] == 100) {
-            
-            
-          ?>
+          <?php  if($progress['year_2020'] == 100) {?>
 
           <div class="col-md-4">
             <div class="schools-statics" style="width:100%;">
