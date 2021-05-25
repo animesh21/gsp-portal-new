@@ -75,7 +75,20 @@ class Answer_model extends CI_Model {
         }
       
     }	
-	
+	if (!function_exists('updateteam')) {
+
+        function updateteam() {
+            $CI = & get_instance();
+            $argID = getSchoolId($this->session->userdata('USER_ID'));
+            $temp = $CI->db->get_where('progress_year', array('school_id' => $argID))->row();
+            if ($argID) {
+                $CI->db->where('school_id', $argID);
+                $CI->db->update('year_2021', 1);
+            }
+            //print_r($temp); exit;
+        }
+      
+      }
 	
     public function submitAnswers($post,$type)
     {

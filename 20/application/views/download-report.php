@@ -71,9 +71,14 @@
   $allyoydata = getYOYComparisonAllData($schoolId);
   $schoolName = getSchoolDaTaByScHooLId($schoolId);
   $progress =  get_progress($schoolId); 
+  $pra =  $progress[0]->year_2020;
+  
+
   // echo "<pre>";
-  // print_r($schoolId);
+  // print_r($pra);
   // echo "<pre>";
+ 
+  
  ?>
 <div id="loader"><img src="<?php echo base_url(''); ?>assets/img/loader.gif" width="64" height="64"></div>
 <div class="main-wrapper">
@@ -171,7 +176,7 @@
             </div>
           </div>
 
-          <?php  if($progress['year_2020'] == 100) {?>
+          <?php  if($pra == 100) {?>
 
           <div class="col-md-4">
             <div class="schools-statics" style="width:100%;">

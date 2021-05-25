@@ -1061,6 +1061,8 @@ if (!function_exists('updateProgress')) {
 
 }
 
+
+
 /*
  * Progress Bar Value
  */
@@ -3525,6 +3527,7 @@ if(!function_exists('get_progress')){
     ->where('school_id',$school_id)
     ->get()
     ->result();
+    
     return $temp;    
 
   }
