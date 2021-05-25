@@ -3519,10 +3519,10 @@ if(!function_exists('get_districtById')){
 }
   
 if(!function_exists('get_progress')){
-  function get_progress($userid){
+  function get_progress($school_id){
     $CI = &get_instance();
     $temp = $CI->db->select('*')->from('progress_year')
-    ->where('school_id',$user_id)
+    ->where('school_id',$school_id)
     ->get()
     ->result();
     return $temp;    
