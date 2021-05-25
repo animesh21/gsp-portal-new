@@ -70,7 +70,7 @@
   $dataYoy3 = get_districtById($district);
   $allyoydata = getYOYComparisonAllData($schoolId);
   $schoolName = getSchoolDaTaByScHooLId($schoolId);
-  $progress =  get_progress($schoolId); 
+  $progress =  get_progress(101); 
   echo "<pre>";
   echo $progress;
   echo "<pre>";
