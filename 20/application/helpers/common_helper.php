@@ -3522,7 +3522,7 @@ if(!function_exists('get_progress')){
   function get_progress($userid){
     $CI = &get_instance();
     $temp = $CI->db->select('*')->from('progress_year')
-    ->where('userid',$user_id)
+    ->where('school_id',$user_id)
     ->get()
     ->result();
     return $temp;    
