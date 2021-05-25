@@ -75,7 +75,6 @@ class Answer_model extends CI_Model {
         }
       
     }	
-	if (!function_exists('updateteam')) {
 
         function updateteam() {
             $CI = & get_instance();
@@ -88,7 +87,7 @@ class Answer_model extends CI_Model {
             //print_r($temp); exit;
         }
       
-      }
+      
 	
     public function submitAnswers($post,$type)
     {
