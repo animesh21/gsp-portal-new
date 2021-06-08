@@ -1061,6 +1061,8 @@ if (!function_exists('updateProgress')) {
 
 }
 
+
+
 /*
  * Progress Bar Value
  */
@@ -3521,10 +3523,11 @@ if(!function_exists('get_districtById')){
 if(!function_exists('get_progress')){
   function get_progress($school_id){
     $CI = &get_instance();
-    $temp = $CI->db->select('year_2020')->from('progress_year')
+    $temp = $CI->db->select('*')->from('progress_year')
     ->where('school_id',$school_id)
     ->get()
     ->result();
+    
     return $temp;    
 
   }

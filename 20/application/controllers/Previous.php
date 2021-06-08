@@ -19,6 +19,13 @@ class Previous extends CI_Controller {
         $this->Answer_model->submitAnswers($post,0);
         echo $staus;
     }
+
+    public function teamupdate() {
+        $staus = 'success';
+        $post = $this->input->post();
+        $this->Answer_model->submitAnswers($post,0);
+        echo $staus;
+    }
     /*
      * Air Ajax
      */

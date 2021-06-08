@@ -431,7 +431,8 @@
    </div>
             
     <div class="text-center">
-    <button type="button" class="org-btn" id="teamplanp">Update</button>
+    <!-- <button type="button" class="org-btn" id="teamplanp">Update</button> -->
+    <button type="submit" class="org-btn" id="teamnext" value="movenext">Submit</button>
 
       
     </div> 
@@ -447,7 +448,7 @@
                     //console.log(fd);
                     $.ajax({
                         type: 'POST',
-                        url: '<?php echo base_url('previous/wastetrans') ?>',
+                        url: '<?php echo base_url('previous/teamupdate') ?>',
                         data: fd,
                         success: function (data)
                         {
