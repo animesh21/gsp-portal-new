@@ -181,7 +181,7 @@
               <div class="title"><strong>Update Certificate</strong></div>
             </div>
           </div>
-          <?php } ?>
+        <?php } ?>
 
           <!-- <div class="col-md-4">
             <div class="schools-statics" style="width:100%;">
