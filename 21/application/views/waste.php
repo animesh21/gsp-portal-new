@@ -2279,7 +2279,7 @@
     <div class="form-group" id="Q9Wa3">
       <label for="username" class="control-label"><span class="cube">5(b)</span>What is the quantity of compost that is generated per month (in kilogram)?</label>
       <br>
-      <input type="number" onkeypress="return /[a-z]/i.test(event.key)" name="Q9Wa3" id="Q9Wa31" class="form-control space-textbox"
+      <input type="number" name="Q9Wa3" id="Q9Wa31" class="form-control space-textbox"
                    placeholder="<?php if (isset($data['Q9Wa3'])) echo $data['Q9Wa3'] ?>"
                    value="<?php if (isset($data['Q9Wa3'])) echo $data['Q9Wa3'] ?>">
     </div>
